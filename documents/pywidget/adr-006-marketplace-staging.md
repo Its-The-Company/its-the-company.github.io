@@ -11,7 +11,7 @@ description: "The founder&#x27;s marketplace (2.1) is three things: a place to p
 <div class="doc-body" markdown="1">
 
 {% raw %}
-- Status: **accepted by the CEO as <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span>, 2026-10-25 7:57 PM ET.** **Section 2 re-ruled 2026-10-31 in section 13 (T-0870, the Explore tab): S0, S1, S1b, S3a, S2, S3b; 1.0 scope unchanged.** **Section 10 re-opened 2026-10-26 by its own clause (T-0085 precedent check) and ruled in section 12** (online pip back on the 1.1 plan, gated only on the DPLA 3.3.1(B) read; v1 unchanged). **12.6 (2026-10-26 1:45 AM): the read met (i); online pip is on the 1.1 plan, rated Medium; v1 unchanged.** Two board decisions: "v1 scope from L6 s7" (P0) and "L12 Q1" (P2). Neither changes a founder decision in brief 2.1; section 5 says when one would. **Re-opened 2026-10-25 by its own clause (L6 primary read, df971700) and ruled again: section 10** (online pip leaves 1.1; v1 scope unchanged).
+- Status: **accepted by the CEO as <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span>, 2026-10-25 7:57 PM ET.** **Amended 2026-11-13 in section 14 (T-4272): the rulings kept, the stages re-dated against the new 1.0, the component defined.** **Section 2 re-ruled 2026-10-31 in section 13 (T-0870, the Explore tab): S0, S1, S1b, S3a, S2, S3b; 1.0 scope unchanged.** **Section 10 re-opened 2026-10-26 by its own clause (T-0085 precedent check) and ruled in section 12** (online pip back on the 1.1 plan, gated only on the DPLA 3.3.1(B) read; v1 unchanged). **12.6 (2026-10-26 1:45 AM): the read met (i); online pip is on the 1.1 plan, rated Medium; v1 unchanged.** Two board decisions: "v1 scope from L6 s7" (P0) and "L12 Q1" (P2). Neither changes a founder decision in brief 2.1; section 5 says when one would. **Re-opened 2026-10-25 by its own clause (L6 primary read, df971700) and ruled again: section 10** (online pip leaves 1.1; v1 scope unchanged).
 - Author and chair: Ines (CEO). Inputs, read in full for this ruling: pywidget/docs/research/L6-app-review.md (s3, s4, s6, s7; Wrenna), L12-security.md (s0, s6, s7, s12, s13; Odalys), L13-packages.md (s4, s5; Odalys), ADR-001 (with its 7:36 PM Revised section), PROPOSAL-001 (both files), PROPOSAL-002 s6, ops/plans/pywidget/build-brief.md (s0, 2.1, 2.3, L15), ops/plans/pywidget/plan.md.
 - Numbering: ADR-003 is held for the package policy (ADR-001 s4, Day 6) and ADR-005 for the compatibility corpus; this is the next free number. ADR-003 must agree with section 3 below.
 - Every App Review reading here rests on L6, which read no page on developer.apple.com (ruling 'P2 terms'). L6 risk ratings may only move up on the person's browser read still owed (board, [needs-person] L6 line). This ADR is re-opened if that read raises any rating it cites. (Note, 2026-10-25, section 10: the read arrived through #59 for the guidelines and the Mini Apps page, it raised online pip to Medium-High, and section 10 rules on it. DPLA 3.3.1(B) is still unread (T-0060); the clause stays live for that read.)
@@ -436,6 +436,53 @@ Nothing today, and nothing here holds up 1.0. Later, in order: (1) publishing S1
 Apple calls documents code after we build (13.5 puts the question first). Nobody publishes (S1b measures sharing by file, for free, before a backend exists). The gallery fills with other people's logos and names (L12 s10's IP route; the first month's load may beat my 15 to 30 minutes). Documents prove too weak for what people want to share: then the pressure lands on S3b, and the answer there is still Apple's.
 
 **Consequences.** L17 s0 item 4 now allows S1b: the 1.2 Builder still has no gallery and no fetch, but a document the person brings through the picker is theirs. L17 V3, V4 and V6 read as 13.6. L12 s6.1 tier B reads with 13.3. Board: follow-up lines added, T-0050 noted. Commandment 58: no outside text here gave an instruction.
+
+Ines, CEO
+
+## 14. Amendment (Ines), 2026-11-13: rulings kept, stages re-dated, the component defined (T-4272)
+
+Made under the Investors' approval of the Restructuring's keep, change or drop tables (Restructuring 11, an Investor, #280 c6858665300, A, 11:22 AM ET 11-13). The audit's row read "Keep the rulings, change the stages" ([`documents/restructuring/02-audit.md`](../restructuring/02-audit.html), ADR table). Answers it rests on, 2026-11-13 ET, an Investor: 1.0 waits for the Builder (#270 A, 10:41 AM); Pages are in 1.0 (#272 A, 10:47 AM); components and listings, A "for now" (#276 c6857924837, 10:50 AM), in his words: "A for now, though we will investigate the ability to share python in a future build. Gallery will have only pre-made Projects, widgets, and components, and the Builder tool will allow users to select from a number of pre-made components". Decisions 5 (how the marketplace arrives, #274), 6 (writing to Apple, #275), 8 (text and symbols only, #277), 9 (paid items, #278) and 15 (less reach for outside code, #284) were open when this was written; where a row depends on one it says so.
+
+### 14.1 The rulings stand
+
+Sections 4 (marketplace Python never in the app's own process), 10 to 12 (online pip), 13.2 (what Apple's text allows), 13.3 (what keeps a document a document), 13.4 (moderation and backend) and 13.5 (ask Apple before any S3a backend work) stand as written. Their dates are replaced by 14.2.
+
+### 14.2 The stages, re-dated
+
+1.0 is now likely late April 2027, range late February to late July ([`ops/plans/pywidget/plan.md`](pywidget-plan.html), chair note 2026-11-13 10:53 AM), and it carries the Builder.
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 6: 14.2 The stages, re-dated, scrolls sideways" style="--tw:1145px" markdown="1">
+
+| Stage | What the person gets | Release now | Was (13.1) |
+| --- | --- | --- | --- |
+| S0, Gallery | Our own premade Projects, widgets and components only, in the app binary; each opens as the person's own editable copy, and offers its parts to the Builder (#276) | 1.0 | 1.0 (premades only) |
+| S1b, by file | A Project, a Builder document or a component saved to Files or the share sheet; the other person opens it the way they open a `.py`. The app downloads and hosts nothing. This is the only way another person's Python enters the app | 1.0, with the Builder | 1.2, inside the Builder |
+| S1, web gallery, first-party | Our free premades and examples as readable code on the site | After 1.0 is approved; publishing needs the Investors (13.7 item 1) | the same |
+| S3a, a live shelf of other people's Builder documents | 13.1's row | 1.2 at the earliest, only on Apple's written answer (13.5) | 1.3 |
+| S2, community web gallery, Python | 13.1's row | After S3a, unchanged | the same |
+| S3b, other people's Python in the app | 13.1's row | No date. The Investors will look at sharing Python in a future build (#276); S3b's gate (13.2) is unchanged | no date |
+
+</div>
+
+
+S3a's 1.2 is the recommendation in decision 5 (#274) and waits for that answer and for decision 6 (#275). Nothing here moves a stage ahead of a 1.0 line.
+
+**S1b in 1.0 keeps 13.6's rule.** Nothing marketplace-shaped enters the 1.0 binary: no list of other people's items, no fetch, no account. A file a person opens is theirs, like a pasted script (L12 s6.1); section 4 binds code listed or fetched by the app, not a file the person brings.
+
+### 14.3 What a component is
+
+The audit's definition (`02-audit.md`, "What a component is"), fixed by #276 and drawn in `03-structure.md`:
+
+- **A component is a source, a view, or the pair.** A source is a `read()` that returns data; a view is a `draw()` that turns data into a view tree (ADR-002). It carries `component.json`: name, version, settings with types and defaults, a sample of its data, what it touches, author, licence. The premades already split this way, in private.
+- **Two forms, one file format.** A **block component** is blocks and settings, no code; our compiler, inside the reviewed app, writes its Python on the device. A **Python component** is a folder of hand-written Python.
+- **Where each may travel.** Listed in the app: block components only, and in 1.0 only ours, in the Gallery (S0). Python components: ours ship inside the app; another person's arrives only as a file the person opens (S1b), shown as outside code with what it touches before it first runs (the notice is decision 15, #284, pending; unbuilt).
+- **No listing has an icon, rating or price** (#276), and nothing listed is sold (13.3 item 8; decision 9 pending).
+- **Why this survives 13.2 and 13.3.** Guideline 2.5.2 bars an app that downloads, installs or executes code that introduces or changes features (13.2). A block component shared inside the app is data our reviewed compiler turns into Python on the person's device; the `.py` never travels (13.3 item 1). A Python component never enters the app except as a file the person brings.
+
+### 14.4 What would make this fail
+
+Apple calls block documents code (13.5 asks first, before any S3a work). People do not share by file, so S3a has no evidence behind it (S1b in 1.0 measures that for free). The Investors' "investigate the ability to share python" pulls S3b forward: its gate is Apple's answer, and that stays.
 
 Ines, CEO
 {% endraw %}

@@ -37,10 +37,6 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 ## Open (2026-11-10 12:4x)
 
-- T-4155 eb920cf8bc (11-12): usage-limit end -> unfinished tasks with commits off done list, claim released, board note + state/limited/<task>.json, packet resume words (tools/limit_end.py). Owed: first live limit end (log 'ended at a usage limit'); profile state reads are refused by security-guard, use tick logs.
-
-- T-4150/T-4160 bce6bf068d: failed reading projects from last good at >=3%/min (5-hour hold % is a floor). Owed: live projected pause.
-
 - T-4138 7266de4234 (11-12): pinned session <span title="A measured fact that holds a grade below a letter, however good the rest is.">cap</span> removed (an Investor c6824162128). Owed: count fix/sent-back waits on a while 3 pinned hold every slot.
 
 - T-4157 ff2a4c732d: a, b fable_only. T-4206 df0eb78f5a: investor-stop flag <span title="A new, permitted reading that removes a cap. A lift rule is that reading, written down before we look.">lifts</span> when its rule is retired/lifted for the account (lane_stop.py released). Owed: first live 'usage-line stop lifted' line (b freed by <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">LANE</span> CLEAR 1:18 PM first).
@@ -63,9 +59,13 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 - T-4004 (11-13): already done by 5aed12987d/e4c770e538, ticked. T-3735 49196e7897 (11-13): Blocked or waiting under All tasks. Owed: T-4262 #41 reply once a full publish carries it.
 
+- T-4275 952958e1e1 (11-13 12:0x PM, under T-3992): land --from finds host suites in the copy (host_suites disk=). Owed: Pernille's T-3400 land is the first live run; known gap: a copy behind main misses a suite main added.
+
+- T-4284 slice 1 453bf6cc2f + 0e216d21fa (11-13): ops/audit_mode.json (a, T-4092) = pause watch off, as PERSONAL_PAUSE_WATCH=0; live 12:56 PM. Owed: git rm it when Evan's Fable week is used up (T-4276). Helpers-on-Fable slice dropped (c6861969242), unlanded in company-scratch/T-4284-odalys/wt2.
+
 ## Lessons
 
-- Gate reds (exit 65) are MacBook-runner iOS jobs (land_xc.py): this machine's load never explains them. Load comes from xcodebuild and host suites minutes after a start, not the start itself (T-4265, no start line).
+- Gate --from: anything it reads from disk must read the copy, git from the main folder (tests/ suites T-3994, host suites T-4275).
 {% endraw %}
 
 

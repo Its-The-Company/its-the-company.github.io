@@ -5,14 +5,16 @@ section: "documents"
 description: "Not option B (measure G1-G3 through the margin rule). The only way a first run gets through the margin on a 30 MB phone is to give it a lastPeak no run measured. That is a made-up figure in the run that measures the\u2026"
 ---
 <div class="crumbs" role="navigation" aria-label="Back"><a class="back" href="{{ '/documents/pywidget/build-plan/decisions/' | relative_url }}">← Decisions</a><a href="{{ '/documents/pywidget/gate-session-build.html' | relative_url }}" rel="bookmark">Permanent link</a></div>
-<div class="page-head"><div class="kicker"><span class="kind blue">Decision</span><span>Day 14 · Wed Nov 4</span><span><code>pywidget/docs/decisions/gate-session-build.md</code></span></div><h1>The device gate session's build: a Release switch with a record-only margin</h1><div class="byline"><img class="avatar" src="{{ '/assets/portraits/idris.svg' | relative_url }}" alt="Idris" title="Idris"><span>By <a href="{{ '/cast/idris.html' | relative_url }}">Idris</a>, Senior iOS engineer</span></div></div>
+<div class="page-head"><div class="kicker"><span class="kind blue">Decision</span><span>Day 23 · Fri Nov 13</span><span><code>pywidget/docs/decisions/gate-session-build.md</code></span></div><h1>The device gate session's build: a Release switch with a record-only margin</h1><div class="byline"><img class="avatar" src="{{ '/assets/portraits/idris.svg' | relative_url }}" alt="Idris" title="Idris"><span>By <a href="{{ '/cast/idris.html' | relative_url }}">Idris</a>, Senior iOS engineer</span></div></div>
 
 <style>.doc-body{overflow-wrap:break-word}.doc-src{overflow-wrap:anywhere}.tbl[data-n~="1"] tr>:nth-child(1),.tbl[data-n~="2"] tr>:nth-child(2),.tbl[data-n~="3"] tr>:nth-child(3),.tbl[data-n~="4"] tr>:nth-child(4),.tbl[data-n~="5"] tr>:nth-child(5),.tbl[data-n~="6"] tr>:nth-child(6),.tbl[data-n~="7"] tr>:nth-child(7),.tbl[data-n~="8"] tr>:nth-child(8),.tbl[data-n~="9"] tr>:nth-child(9),.tbl[data-n~="10"] tr>:nth-child(10),.tbl[data-n~="11"] tr>:nth-child(11),.tbl[data-n~="12"] tr>:nth-child(12){min-width:0;overflow-wrap:normal}.tbl[data-o="1"] tr>:nth-child(1),.tbl[data-o="2"] tr>:nth-child(2),.tbl[data-o="3"] tr>:nth-child(3),.tbl[data-o="4"] tr>:nth-child(4),.tbl[data-o="5"] tr>:nth-child(5),.tbl[data-o="6"] tr>:nth-child(6),.tbl[data-o="7"] tr>:nth-child(7),.tbl[data-o="8"] tr>:nth-child(8),.tbl[data-o="9"] tr>:nth-child(9),.tbl[data-o="10"] tr>:nth-child(10),.tbl[data-o="11"] tr>:nth-child(11),.tbl[data-o="12"] tr>:nth-child(12){position:sticky;right:0;overflow-wrap:normal;background:var(--page);box-shadow:-1px 0 var(--line),-9px 0 8px -8px var(--sh)}</style>
 <div class="doc-body" markdown="1">
 
 {% raw %}
+**Status (Ines, 2026-11-13, T-4272): history at its verdict.** Under the Investors' approval of the Restructuring's keep, change or drop tables (Restructuring 11, #280 c6858665300, A, 11:22 AM ET 11-13; [`documents/restructuring/02-audit.md`](../restructuring/02-audit.html), ADR table: "Keep until the verdict, then history"), this record governs the internal gate build only, and becomes history when the phone sitting's <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span> line is written (T-4282, from T-0680; ADR-007 revision 2, s15). No verdict is in yet. Its <span title="The starting recipe a lane uses to look for ideas. G2, for example, starts from public datasets.">G1</span> to G3 figures now feed ADR-007's size rule rather than deciding whether the widget <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> exists.
+
 Idris, 2026-11-04. Board T-1853, from Pernille's review of T-0675's Swift half, F4
-(`docs/reviews/t0675-swift-pernille.md`). Applies to T-0680 (the device gate session, ADR-007 <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span> line 2026-10-29
+(`docs/reviews/t0675-swift-pernille.md`). Applies to T-0680 (the device gate session, ADR-007 chair line 2026-10-29
 8:03 AM item 5). This is an engineering decision inside T-0680's plan. The flag default stays with the chair line that
 T-0680 ends with.
 
@@ -20,8 +22,8 @@ T-0680 ends with.
 
 As built, the session measures refusals, not runs:
 
-- The <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> can only be forced on in a Debug build (`Shared/LaneGuard.swift:11-18`, `PYWIDGET_LANE_FORCED && DEBUG`).
-  T-0680 and item 5 call for Release. Debug overstates the Swift side's footprint and time, and <span title="The starting recipe a lane uses to look for ideas. G2, for example, starts from public datasets.">G1</span>-G3 are thresholds
+- The lane can only be forced on in a Debug build (`Shared/LaneGuard.swift:11-18`, `PYWIDGET_LANE_FORCED && DEBUG`).
+  T-0680 and item 5 call for Release. Debug overstates the Swift side's footprint and time, and G1-G3 are thresholds
   on the shipping build.
 - Even in that build, `LaneMargin.firstRunNeed` is 2 x 21 MiB = 42 MiB, and the recalled C is 30 MB. A phone's
   `os_proc_available_memory()` in the extension cannot reach 42 MiB, so every first run is `oom_guard`, and the next

@@ -285,6 +285,271 @@ write-and-commit, not the name.
 - T-4116: 2.2 and 2.7 (one build per feature session).
 - Odalys: 2.3 (park_batch, T-3974 fix), 2.8 (devices and worktrees).
 - Ines: 2.6 Handbook note, 2.10 through the T-4092 ledger.
+
+---
+
+# Addendum, 2026-11-13: the faster path, usage outside the workers, and the ten items a day and a half on (T-4124)
+
+Ines, 11:27 AM to 11:50 AM ET 11-13, on lane b2 (Fable). Asks: an Investor #41 c6816980644 (1:55 AM 11-12, include
+the faster path that c6816589101 offered); c6816434915 left the "No task ID" usage to this review; an Investor
+c6854106654 (8:18 AM 11-13): what relies on a Restructuring decision is marked and left undecided; an Investor
+c6858186395 (11:01 AM 11-13): "No need to build any special infrastructure!", said of the queue audit and weighed
+here. The 11-12 text above stands as written. I recommend; nothing here changes a tool, a prompt or a rule.
+
+Windows: "the week" is 11-05 12:00 AM to 11-12 12:00 AM ET; "since" is 11-12 12:00 AM to 11:30 AM 11-13, 35.5
+hours (1.48 days). Every count names its script; the seven scripts are kept as ops/plans/T-4124-*.py. One and a half
+days is a short window, and most of its work was plans and documents (A.3), so "since" numbers show direction, not a
+settled rate.
+
+## A.0 Three corrections to my 11-12 text
+
+1. **The record-only share was 53%, not 60%.** I wrote 2,024 of 3,383 commits (60%) and did not keep the filter as a
+   script. Today's script, with its record paths listed in its header, gives 1,805 of 3,400 (53.1%) for the same
+   week. The other rows of section 1 reproduce: app 285 against 282, tools and tests 529 against 520, ops/ 2,135
+   against 2,129, memory 585 against 580, board 686 against 685 (`T-4124-commit-shares.py`). Comparisons below use
+   53.1%. The ranking does not change.
+2. **A thin Operator saves less than "up to half".** Item 2.4 sized the Operator's own thread by tokens read in one
+   session (45%). By cost, the usage ledger puts the Operator's own share of that same session at 19.4% ($4.84 of
+   $24.94) and of the week's 63 measured work runs at 13.5% (A.2). Cached re-reads are cheap, so tokens read
+   overstate cost. The saving of item 4 is bounded by 13.5 to 16.7% of the company account's work-run cost.
+3. **One host run was cut at the 30-minute limit, not 21 suites, and the 900 s limit is withdrawn.** Item 2.3 said
+   21 suite reds hit the 1,800 s limit, 10.5 hours lost in 4 days. I misread the file: a suite row's `seconds` is
+   the time of its whole host run, written once on every suite's row. Today's file holds 18 such rows, all with one
+   stamp (10:43 PM 11-09, T-3818): one run, 30 minutes lost, not 10.5 hours. The "287-680 s each" in the same item
+   are host-run times too, not per-suite times. Counted by run (`T-4124-metrics-windows.py`, fixed to group rows),
+   20 host runs were timed 11-07 to 11-12: median 301 s, one cut at 1,800 s, and one that passed at 1,279 s. A
+   900 s limit would have saved 15 minutes once and failed that honest pass. I withdraw the 900 s recommendation.
+   task-process-redesign.md 3.6 took it in; a note on T-4103 says not to build it. The rest of item 2.3 stands:
+   its lock-hours come from ops/runs/t3963-throughput.md, not from this file.
+
+## A.1 The faster path for a lane's board changes and records
+
+**Today's mechanism** (c6816589101; tools/lane_outbox.py header). A lane session's tick, note, hold and event are
+each written as one file in ops/lane-outbox/ on the lane's branch. They are replayed on main, through the real
+tools, after the branch lands. One kind already goes at once: a new line (`board_tick.py add`) is written to main's
+board under its lock since 3:07 AM 11-07 (T-3209, 0d63fb9dc1, asked by an Investor #211 c6702455812).
+
+**The lag, measured.** Write time is the nanosecond stamp in a record's file name; arrival is the committer time of
+the commit on main that takes the file out of the queue (`T-4124-outbox-lag.py`, main's git history). For anything
+else a lane commits, arrival is the move of main that brought the commit, from main's reflog, against the commit's
+author time (`T-4124-land-lag.py`).
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 2: A.1 The faster path for a lane&#x27;s board changes and records, scrolls sideways" style="--tw:960px" markdown="1">
+
+| Measure | The week (11-05 to 11-12) | Since 11-12 |
+|---|---|---|
+| Outbox records that left the queue | 622: 577 replayed, 36 refused by main, 9 retired (main already had the tick) | 366: 362 replayed, 3 refused, 1 retired |
+| Write to replay, per record | median 88 min; a quarter over 23.9 h; 336 of 577 over an hour | median 14 min; 221 of the 362 came in one landing at 14 min; without it median 15 min, 38 of 141 over an hour |
+| Write to replay, per landing (its oldest record) | 196 landings: median 5.1 h, a quarter under 71 min, a quarter over 33.0 h, 92 over 6 h | 59 landings: median 21 min, a quarter under 3 min, a quarter over 73 min, 5 over 6 h, longest 21.4 h |
+| Ticks, per record | median 57 min (n=337) | median 14 min (n=290) |
+| Notes, per record | median 194 min (n=129), 83 over an hour | median 26 min (n=45), 17 over an hour |
+| Events, per record | median 548 min (n=51) | median 11 min (n=12) |
+| Any lane commit, author time to main, per landing (its oldest commit) | 335 landings, 750 commits: median 9.9 h; records-only landings (155) 9.1 h; landings with app code (86) 71.2 h | 90 landings, 253 commits: median 9 min; records-only (60) 6 min; with any code (30) 22 min; with app code (3) 21 min |
+| The same, by day (landings) | 11-05 12.6 h (27); 11-06 2.9 h (66); 11-07 6.7 h (57); 11-08 5.1 h (88); 11-09 9.7 h (57); 11-10 78.6 h (36); 11-11 18 min (4) | 11-12 8 min (86); 11-13 to 11:30 AM 37 min (4) |
+
+</div>
+
+
+Still waiting, counted at 11:31 AM 11-13 (`T-4124-outbox-waiting.py`): 227 records sit at the tip of a lane or parked
+branch and have never reached main (104 ticks, 59 notes, 41 adds from before T-3209, 12 events, 11 others). 163 are
+older than 7 days, 51 are 1 to 7 days old, 13 are under a day (10 of those were written in the hour of the count).
+They are the parked work the queue audit is judging (T-4092).
+
+**Reading.** The lag is the land queue's wait, not a property of the records. In the week a record waited as long
+as the branch that carried it, and branches waited hours to days while the parked backlog was worked off (the
+landings of 11-10 had waited a median 78.6 hours). Since 11-12 a record reaches main in a median 8 to 21 minutes.
+The outbox did not change between the windows (one commit to tools/lane_outbox.py since 11-09, a notes reader). The
+land did (T-3975 stop at the first red, T-4011, T-4012 and T-3953, 11-10 to 11-12), and the work did: 23.2% of
+commits since 11-12 touched documents/ or ops/plans/ against 4.3% in the week, and 3 landings carried app code
+against 86. With a day and a half of data I cannot separate the land fixes from the mix.
+
+**What the lag costs, measured.** Of the 988 records that left the queue in the two windows, 39 were refused by main
+and 10 were ticks of tasks main had already ticked: 5% together. No usage, Simulator space or Xcode run is spent on
+the lag itself. The rest of the cost is a board on main that is behind for whoever reads it: the dispatcher, the
+site and the Investors.
+
+**Options, ranked.**
+
+1. **Build nothing; keep the land queue short. Recommended.** What exists already covers it when the queue is
+   short: new lines at once (T-3209), record-only branches landing together with no check to wait for (T-3069, up
+   to 20 a train), and the outbox. Saves: nothing new to build, test or keep. Risk: when app work returns at volume
+   the lag follows the queue back up, as the week shows (9.9 h a landing, 71.2 h with app code). The guard is a
+   number with a date: I re-run the two scripts on 11-20 (T-4283, A.6).
+2. **If the per-landing median passes one hour on two days running: notes and holds at once, as adds already go.**
+   Extend T-3209's path from `add` to `note`, `block`, `unblock` and `wait`: the same tool, the same lock, no new
+   part. Saves the notes' lag (194 min a record in the week, 26 min since). Risk: a note on main that names a commit
+   or a file still on the branch; the tool already spots a record that names a branch commit and holds it for the
+   sync, and such a note would stay queued. A change to two company tools, built only if the number asks for it.
+3. **Not ticks.** A tick at once would save a median 57 minutes (the week) and would put "done" on main before the
+   work is there; a branch that parks or fails would leave a false tick. The audit already found 56 of 383 judged
+   lines wrong in the mild direction (finished, shown open). This would add the harmful direction.
+4. **Not a separate records channel** (the tick pushing each lane's outbox to main every 15 minutes apart from its
+   branch). It caps the lag at 15 minutes in any queue state, and it is new machinery in two pipeline files that
+   separates a record from the work it describes. c6858186395 applies.
+
+## A.2 Usage outside the workers (the "No task ID" group)
+
+**The company account, measured** (ops/usage.json `runs`: 400 supervisor runs, 6:38 AM 10-23 to 11:21 AM 11-13,
+list-price basis; `T-4124-ledger-no-task.py`). The ledger does split a work run: `kinds.operations` is the
+Operator thread's own model calls, priced per message and scaled to the run's recorded cost (tools/ops_metrics.py
+`analyse_run`).
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 3: A.2 Usage outside the workers (the &quot;No task ID&quot; group), scrolls sideways" style="--tw:1280px" markdown="1">
+
+| Kind of run | All 400 runs | The week | Since 11-12 |
+|---|---|---|---|
+| Work runs | 278, $7,166.68 (99.1%) | 78, $2,200.22 | 10, $471.64 |
+| The Operator's own share of measured work runs | $930.23 of $6,987.23, 13.3% (258 runs; median 14% a run) | $285.80 of $2,113.27, 13.5% (63 runs; median 18%) | $78.78 of $471.64, 16.7% (10 runs; median 16%) |
+| Inbox runs | 81, $26.69 | 37, $7.43 | 12, $1.90 |
+| Morning, evening and weekly reports | 41, $37.82 | 12, $8.36 | 4, $1.94 |
+| No task ID in all (Operator's share of work runs, inbox, reports) | $1,023.52, 14.2% of the ledger | $322.23, 14.5% | $82.62, 17.4% |
+| Mean cost of a measured work run; the Operator's part of it | $27.08; $3.61 | $33.54; $4.54 | $47.16; $7.88 |
+
+</div>
+
+
+15 work runs ($179.45) have no stream and are left out of the share. Inbox and report runs are $64.51 over the whole
+project: nothing to save there. The Operator's own share is about a seventh of the company account, and the cost of
+a work run has risen with the number of workers it hands to (median 8 agents a run in the week, 11 since).
+
+**Lane sessions on the two personal accounts: counted, not costed** (main checkout ops/runs/personal-tick-a.log and
+-b.log, the `session:` lines; `T-4124-lane-sessions.py`).
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 4: A.2 Usage outside the workers (the &quot;No task ID&quot; group), scrolls sideways" style="--tw:902px" markdown="1">
+
+| | The week | Since 11-12 |
+|---|---|---|
+| Sessions with a shape line | 221 (124 on a, 97 on b) | 58 (28, 30) |
+| Elapsed, summed | 205.4 hours | 30.4 hours |
+| Model replies | 54,267 | 11,806 |
+| Replies by model (logged from 3:47 PM 11-12, T-4161) | not logged | Fable 1,390, Opus 764, Sonnet 5 |
+| Ticks that started no session | 538, at least 151 of them for a usage limit | 151, 128 of them for a usage limit |
+
+</div>
+
+
+No readable record holds a lane session's cost, its token counts, or the split between the lane's Operator and its
+workers: the streams sit in each account's own folder, refused by design. The only money-like reading is each
+account's plan meter at 11:29 AM to 11:32 AM 11-13: account a's week at 95%, b's at 70%, the company account's at 90%
+(ops/personal_meter/a.json, ops/metrics/dispatch_meters.jsonl, ops/usage.json `meter`). Since 11-12 the usage limit,
+not the process, is what most often stops a lane from starting a session.
+
+**Typed sessions: no record of their own.** tools/unowned_usage.py reads the ledger's 300 meter readings (4:57 PM
+11-01 to 11:31 AM 11-13) and flags 14 stretches, all from 12:22 AM to 8:55 AM on 11-10: 134 points of the company
+account's 5-hour meter with $0 in the ledger. The meter cannot say whose use it was; the board's T-3992 line names
+an Investor-authorized session typed at 12:12 AM that night. At the ledger's own estimate of $313.86 for a 5-hour
+window, 134 points is about $420: an estimate, not a measurement. On the personal accounts a typed session (the
+Restructuring, this audit when typed) cannot be told from a lane session on the meter at all. The start and end
+record for typed sessions is T-4222, which waits on a settings commit that is the Investors' to make.
+
+**What can go.** Nothing in the inbox or report runs. The Operator's share is item 4. The one number worth having
+and missing is the lane sessions' cost: tools/personal_stream_shape.py already reads each lane stream to print
+counts into the tick log, and one more counts-only line (the stream's own cost and token totals, and the share of
+replies made by the lane's Operator) would turn the largest block of the company's usage from unknown into
+measured. It is one line in an existing tool, no new part, and I have not put it on the board: it is an offer to
+the Investors, given c6858186395.
+
+## A.3 The ten items of 11-12, a day and a half on
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 5: A.3 The ten items of 11-12, a day and a half on, scrolls sideways" data-n="1" style="--tw:991px" markdown="1">
+
+| # | Item | State | What has measurably changed (the week, then since 11-12) |
+|---|---|---|---|
+| 1 | Records committed one at a time | Still open. Designed (task-process-redesign.md 3.6); the build, T-4103, waits on T-4100 | Record-only commits 53.1% of 3,400 (258 a day), then 39.0% of 633 (167 a day). Main moved 384 to 611 times a day 11-05 to 11-10, 382 times on 11-12 (reflog). The mechanism is unchanged: 62 "lane records" commits in the day and a half. The drop is the mix of work |
+| 2 | One task per line for app work | Under way. T-4116 ticked: 14 feature lines (T-4180 to T-4193), 194 step lines on the board linked to one. One feature in trial, the launcher (T-4185): 15 steps ticked, reviewed in 2 group reviews (T-4214, T-4217). The feature-session tools (T-4194, T-4195, T-4196, T-4228) were unblocked on this lane's branch at 11:29 AM today (b6ba5d6fc4) | Being built to merged: median 13.0 h (427 tasks, 11-07 to 11-12), then 0.7 h (118 tasks), mostly not app work. Sessions per feature: no count yet; T-4223 reads a week on 11-19 |
+| 3 | Checks on work that does not merge | Partly. T-3975 (stop at the first red) landed 11-10. T-3974 (never idle while work waits) still open. The host-run limit stays at 1,800 s (tools/main_gate.py `HOST_RUN_S`; A.0) | Gate suites per change 7.0 (1,549 rows, 221 changes), then 5.6 (558, 100). Timed host runs: 20 with a median of 301 s and one cut at the limit, then 57 with a median of 207 s, the longest 538 s, none cut. MacBook land checks 20 a day, then 36; median 387 s, then 392 s; not green 26%, then 25% |
+| 4 | The Operator's own context | Still open, and resized (A.0). T-4122 made the card the packet; the prompt is not trimmed | ops/prompts/work.md 30,167 bytes on 11-12, 30,419 now. The Operator's share of work-run cost 13.5%, then 16.7% (A.2) |
+| 5 | Machine-made retry, redo and "look" lines | Partly, by the audit's removals. T-4012 (retire the retry routes) still open | Runnable lines that mention a retry: 111 of 670 on 11-12, 72 of 564 now. "Look" lines: 18, and 18. Send-backs 59 a day, then 30; resets 210 in five days, then 25 |
+| 6 | A review line for every change | Still open. The Handbook note is mine and is not written | Open [review] lines 80, then 76; 23 more finished (320 to 343). The launcher trial used one review per group of steps |
+| 7 | Xcode runs | Still open; waits for the feature session (T-4194) | Mac mini runs 6 a day (28 in five days), then 22 a day (32). Failed builds with no test run: 7 of 28, then 12 of 32. Test runs of 5 tests or fewer: 13 of 14, then 4 of 15 |
+| 8 | Simulator and lane disk | Worse, and one recommendation withdrawn (A.5) | Simulator devices 32 GB in 15, now 38.6 GB in 17. /private/tmp/company-scratch 19.9 GB, now 28.1 GB, plus 11.6 GB of scratch on the SanDisk SSD. 16.7 GB free on the internal disk at 11:43 AM (ops/disk.json). Lane folders 189, unchanged |
+| 9 | Memory written and committed per task | Still open. Designed (3.6); the build is T-4103 | Commits touching a memory file 84 a day (585), then 61 a day (90); 81 of the 90 changed nothing else |
+| 10 | Process tools that serve the process | Under way through the audit; no freeze has been called | Open lines 682, now 584; open [tools] 275 (40%), now 217 (37%). Commits touching tools/ or tests/ 15.6%, then 10.4%; touching the app 8.4%, then 9.6% |
+
+</div>
+
+
+Sources: `T-4124-commit-shares.py` (items 1, 9, 10), `T-4124-metrics-windows.py` on the main checkout's
+ops/metrics/main_gate.jsonl, land_xc.jsonl, xc.jsonl and flow.jsonl (items 2, 3, 5, 7), `grep -c` on ops/board.md
+and log/board-archive*.md and `tools/board.py open 400` (items 5, 6, 10), `du -sm` and ops/disk.json (item 8), `wc -c`
+(item 4), `git reflog show main` (item 1).
+
+One line of reading: two of the ten are under way (2 and 10), two are partly done (3 and 5), six are open, and
+nothing built since 11-12 accounts for the better numbers. The plans exist; the builds wait on T-4100 and T-4103.
+
+## A.4 New since 11-12, ranked into the list
+
+- **After item 4: the personal accounts carry most of the sessions and none of the cost record** (A.2). 221 lane
+  sessions and 205 hours in the week, against 78 work runs on the company account, with no cost, no token count
+  and no Operator share in any readable record. It cannot be ranked by cost because the cost is the missing number.
+- **Inside item 8: the disk is filling.** 6.6 GB more Simulator devices and 8.2 GB more scratch in a day and a half,
+  with 16.7 GB free on the internal disk at 11:43 AM. The disk guard closes at 10 GB free and reopens at
+  20 GB (ops/disk.json `stop_gb`, `resume_gb`; its gate was open at that reading). This is the item most likely to stop
+  work this week. Odalys's disk lines (T-3549,
+  T-3859) hold it; I add no line.
+- **Last: the records' lag** (A.1). Minutes today. Build nothing.
+- **T-4122's dates.** Its "freeze on 11-30" rested on a Day 60 release. Restructuring decisions 1 and 2 were both
+  answered A (10:41 AM and 10:42 AM 11-13): 1.0 waits for the Builder and nothing goes out near Day 60. The freeze date
+  is gone. The dates are mine to move, and I move them in A.6.
+
+## A.5 What relies on a Restructuring decision
+
+- **Item 2, the new feature lines.** The 14 feature lines stand (decision 11, answered A at 11:22 AM 11-13, #280
+  c6858665300). Which new features exist is not mine to settle here: the tab shell and first run **wait on
+  Restructuring decision 17**; the Builder's block editor, code view and custom block **wait on Restructuring
+  decision 18**; what T-4190 (Settings and Pro) must hold **waits on Restructuring decision 9**. Left undecided.
+- **Item 8, the iPad Simulator device.** On 11-12 I recommended deleting the iPad Pro 11-inch device (6.2 GB, 4
+  runs). Decision 27 was answered at 11:26 AM 11-13 (#296 c6858751865): until the Investors own an iPad, the
+  Simulator and iPhone tests stand in. The iPad device stays; I withdraw that line. The per-task clone T3783-idris
+  (3.4 GB) also stays while T-3783 is open. Two of the four devices are left to delete, iPhone Air and the check
+  device, 5.2 GB at their 11-12 sizes, not the "about 15 GB" I wrote.
+- **Item 10, the freeze on process tools.** Decision 29 was answered A at 11:24 AM 11-13 (#297 c6858715463), with a
+  new site page, App: a documentation page and diagram become a done condition of every app part. That step is the
+  Investors' decision and sits outside any freeze. The freeze itself is still the Investors' to call.
+- Nothing in A.1 or A.2 relies on a Restructuring decision.
+
+## A.6 Dates and follow-ups
+
+- T-4122's targets, moved in the open: the card and the replay test by Monday 11-16 (was Saturday 11-14; T-4103
+  waits on T-4100, which is free to run today); the dry run read and the sweep on by Wednesday 11-18 (was 11-16);
+  the grouped iPhone run on by Friday 11-20 (was 11-18) and measured for a week, to 11-27. No freeze date follows:
+  the next fixed point is phase A's phone proof. What would make these fail: the personal accounts' weekly limits
+  (a at 95%, b at 70% this morning) and the disk.
+- T-4283 (Ines, waits until 11-20): re-run `T-4124-outbox-lag.py` and `T-4124-land-lag.py` for 11-13 to 11-20 and
+  the ten items' counts; if the per-landing median passed one hour on two days running, propose option 2 of A.1.
+- A note on T-4103 carries the withdrawn 900 s limit (A.0) and these dates to its builder.
+- The Handbook note for item 6 is mine and still owed.
+
+## A.7 Not measured
+
+1. A lane session's cost, tokens and Operator share (A.2): no readable record.
+2. A typed session's cost on any account: the meter moves and names no one.
+3. The effect of the land fixes of 11-10 to 11-12 apart from the mix of work: one and a half days is too short.
+4. Sessions per feature and iPhone runs per feature: T-4223 reads the first week on 11-19.
+5. Whether the 227 waiting records are still wanted: that is the audit's ledger, not this review.
+
+Comment: ops/plans/efficiency-review-addendum-comment.md, posted on #41 as c6859221765 at 11:47 AM ET 11-13
+((private)). Follow-up line: T-4283.
+
+**Closed out, 1:04 PM ET 11-13, on lane a (Ines).** Two things in the text above were not yet true when the comment
+went up at 11:47 AM, and I own both.
+
+1. A.0 item 3 and A.6 say a note on T-4103 carries the withdrawn 900 s limit and the moved dates. No such note
+   existed until 1:03 PM today, when I wrote it (queued on this branch; it reaches the board when the branch lands).
+   The same marks are now in task-process-redesign.md 3.6, 4.3 and 5, dated, with the old text left as written.
+2. Three counts in A.3 row 3 were read at about 11:43 AM with the window's end left open, 7 rows past the 11:30 AM
+   the text names: 558 suite rows, 100 changes and 57 timed host runs. Cut at 11:30 AM exactly they are 551, 98 and
+   55. The ratio (5.6 suites a change), the median (207 s), the longest run (538 s) and "none cut" are the same, and
+   the comment carries only the ratio. `T-4124-metrics-windows.py` and `T-4124-ledger-no-task.py` now end their
+   last window at 11:30 AM 11-13, so both reproduce after their files grow; the ledger's numbers did not change.
+
+Read once more against the repo at 1:00 PM: the seven scripts parse and the three I re-ran give the week's numbers
+above; T-4283 is on main's board, waiting until 11-20; decisions 1, 2, 11, 27 and 29 are answered as cited and 9, 17
+and 18 are still open.
 {% endraw %}
 
 </div>

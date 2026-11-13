@@ -22,8 +22,8 @@ a=document.createElement('a');a.className='lk-iss';a.href='https://github.com/'+
 // sort (lk-sort) and one category filter (lk-cat) for both parts. SO: 'def' the order Home had (in flight last step
 // first, Queued in the order they start), 'first' by stage as the columns run, left to right (Queued goes on top),
 // 'long' longest in its stage, 'cat' by category, 'who' by worker. Starred tasks stay first in every order. CF: a
-// category's first word ('App'), '' for all. With a category chosen, or a sort that reorders Queued, every queued task
-// past the page's 30 is drawn too, as a search draws its matches.
+// category's first word ('App'), '' for all. T-4287: every queued task past the page's 30 is drawn from the index too,
+// always, so the box holds them all; the search, category and worker filters hide rows rather than draw them.
 // T-4094 (friesevan #41 c6804999684): the sorts are Stage, Time on Stage, Category, Worker, Time Created, Time Started
 // and Retries (home_look.SORTS), each ascending (SD 1) or descending (-1), its first direction DF's; S2 and D2 an optional
 // second sort for ties. by() compares two records {stage, time, cat, who, created, started, retries}, In flight's and
@@ -45,7 +45,6 @@ function txt(a,b){a=String(a||'').toLowerCase();b=String(b||'').toLowerCase();re
 function tnum(i){var m=/^T-(\d+)/.exec(String(i||''));return m?+m[1]:null}
 function cmpk(k,d,a,b){var x=a[k],y=b[k],nx=x==null||x===''||x!==x,ny=y==null||y===''||y!==y;if(nx||ny)return nx&&ny?0:nx?1:-1;return (typeof x==='string'?txt(x,y):x-y)*d}
 function by(a,b){return (SO==='def'?0:cmpk(SO,SD,a,b))||(S2&&S2!==SO?cmpk(S2,D2,a,b):0)}
-function reorders(k){return ['cat','who','created','requested','started','retries'].indexOf(k)>=0}
 function qrec(c){return {stage:null,time:null,cat:qc(c)||null,who:c.getAttribute('data-w')||null,created:tnum(c.getAttribute('data-id')),requested:rq(c.getAttribute('data-id')),started:Date.parse(c.getAttribute('data-ps')||'')||null,retries:+(c.getAttribute('data-r')||0)}}
 function dword(b,d){if(!b)return;b.textContent=d>0?'Ascending':'Descending';b.setAttribute('aria-label',(d>0?'Ascending':'Descending')+'; tap for '+(d>0?'descending':'ascending'))}
 function sorts(){if(dr){dr.hidden=SO==='def';dword(dr,SD)}if(sb2)sb2.hidden=SO==='def';if(so2){[].forEach.call(so2.options,function(o){o.disabled=!!o.value&&o.value===SO});if(S2===SO){S2='';so2.value=''}}
@@ -83,7 +82,7 @@ function toggle(c){var k=key(c),on=!c.classList.contains('lk-open');c.classList.
 // lineage.rows: each task once in full, a later meeting one row marked again, so a cycle ends. A relative with a card here
 // is a link to it (go); one with none is its name and a word, never a dead link. The tree is drawn when a card first
 // opens. Text goes in as textContent.
-var G={n:{},u:{},a:{},d:{}},J={},LS={q:'Queued',w:'Waiting',b:'Blocked',d:'Done',a:'Archived',c:'Cancelled',u:'Not on the board'},LMAX=40;
+var G={n:{},u:{},a:{},d:{}},LS={q:'Queued',w:'Waiting',b:'Blocked',d:'Done',a:'Archived',c:'Cancelled',u:'Not on the board'},LMAX=40;
 try{var g0=JSON.parse(H.getAttribute('data-lin')||'{}');G.n=g0.n||{};G.u=g0.u||{};G.a=g0.a||{}}catch(e){}
 Object.keys(G.u).sort().forEach(function(c){G.u[c].forEach(function(p){(G.d[p]=G.d[p]||[]).push(c)})});
 function lid(i){i=String(i||'').replace(/\.\d+$/,'');return G.a[i]||i}
@@ -105,8 +104,7 @@ function tree(c){var i=lid(c.getAttribute('data-id')),o;if(!c.matches('.lk-run,.
 [['up','Parents',G.u],['down','Children',G.d]].forEach(function(s){var rs=walk(i,s[2]),ul;if(!rs.length)return;mk(o,'h4','',s[1]);ul=mk(o,'ul');ul.setAttribute('data-way',s[0]);
 rs.forEach(function(r){lrow(ul,r,i)});if(rs.left>0)mk(ul,'li','lk-tm','+'+rs.left+' more on the board')})}
 function go(i){var c,n,b;if((Q&&inp)||CF||IV){if(inp)inp.value='';Q='';if(cf)cf.value='';CF='';chips();if(iv)iv.value='';IV='';H.classList.remove('lk-searching');fire()}
-c=S.lk.run&&S.lk.run(i);if(!c){if(S.lk.all)S.lk.all();J[i]=1;queued();c=qcard(i);b=document.getElementById('lk-q-more');
-if(c&&c.classList.contains('lk-fold')&&b&&c.parentNode.classList.contains('lk-qshort'))b.click()}
+c=S.lk.run&&S.lk.run(i);if(!c){if(S.lk.all)S.lk.all();queued();c=qcard(i)}
 if(!c){c=document.getElementById('bk-'+i);b=document.getElementById('lk-bk-more');  // T-3735: a held task's row, unfolded first
 if(c&&c.classList.contains('lk-fold')&&b&&c.parentNode.classList.contains('lk-qshort'))b.click();
 if(c){c.classList.add('lk-hit');setTimeout(function(){c.classList.remove('lk-hit')},2000);c.scrollIntoView({block:'center'});return}}
@@ -119,19 +117,18 @@ function mk(p,t,c,x){var e=document.createElement(t);if(c)e.className=c;if(x!=nu
 function qrow(a){var c=document.createElement('div'),p=fc[String(a[3]||'').toLowerCase()],g,t;c.className='lk-card lk-q lk-x';c.setAttribute('data-id',a[0]);c.setAttribute('data-n',a[1]);
 c.setAttribute('data-q',[a[2],a[0],a[3]].join(' '));c.setAttribute('data-w',a[3]||'');if(a[6])c.setAttribute('data-ps',a[6]);if(a[7])c.setAttribute('data-r',a[7]);mk(c,'span','lk-n',String(a[1]));if(p&&pic[p]){g=mk(c,'img');g.src=pic[p];g.alt='';g.width=g.height=24}else mk(c,'span').style.width='24px';
 t=mk(c,'span','t');mk(t,'b','lk-tn',a[2]);badge(t,a[0]);if(a[7])mk(c,'span','lk-rty','retry '+a[7]);if(a[4]){g=mk(c,'span','lk-cat',a[4]);g.title='Category: '+a[4]}mk(c,'span','idb',a[0]);aria(c);return c}
-// T-4007: the fold counts the rows on show (k), so a category that leaves three rows shows three and no Show more
-function queued(){var q=document.getElementById('lk-q'),rows,mx,qb,k=0,wide=!!CF||!!IV||(SO!=='def'&&(reorders(SO)||reorders(S2)));if(!q)return;if(!A){A=[];try{A=JSON.parse(q.getAttribute('data-all')||'[]')}catch(e){}}
+// T-4007: k counts the rows on show, for the no-match line; T-4287: every row shows, in the scroll box (no fold)
+function queued(){var q=document.getElementById('lk-q'),rows,k=0;if(!q)return;if(!A){A=[];try{A=JSON.parse(q.getAttribute('data-all')||'[]')}catch(e){}}
 [].slice.call(q.querySelectorAll('.lk-x')).forEach(function(c){q.removeChild(c)});
-A.forEach(function(a){if(okId(a[0])&&inq(a[0],a[5])&&(F[a[0]]||J[a[0]]||(Q?match([a[2],a[0],a[3]].join(' ')):wide&&catok(a[4],a[0]))||(a[5]&&+a[1]<=(+q.getAttribute('data-last')||0))))q.appendChild(qrow(a))});
-rows=[].slice.call(q.children);mx=+q.getAttribute('data-max')||4;qb=document.getElementById('lk-q-more');
+A.forEach(function(a){if(okId(a[0])&&inq(a[0],a[5]))q.appendChild(qrow(a))});  // T-4287: every row, the filters below hide
+rows=[].slice.call(q.children);
 rows.sort(function(a,b){return (F[b.getAttribute('data-id')]?1:0)-(F[a.getAttribute('data-id')]?1:0)
 ||by(qrec(a),qrec(b))||(+a.getAttribute('data-n')-+b.getAttribute('data-n'))});
-rows.forEach(function(c){var s=c.querySelector('.lk-star'),on=match(c.getAttribute('data-q'))&&catok(qc(c),c.getAttribute('data-id'))&&!fly(c.getAttribute('data-id'));q.appendChild(c);c.classList.toggle('lk-fold',on&&k++>=mx);if(s)s.parentNode.removeChild(s);tok&&up(c,c.getAttribute('data-id'));star(c,c.getAttribute('data-id'));
+rows.forEach(function(c){var s=c.querySelector('.lk-star'),on=match(c.getAttribute('data-q'))&&catok(qc(c),c.getAttribute('data-id'))&&!fly(c.getAttribute('data-id'));q.appendChild(c);if(on)k++;if(s)s.parentNode.removeChild(s);tok&&up(c,c.getAttribute('data-id'));star(c,c.getAttribute('data-id'));
 c.hidden=!on});
-if(qb){if(/^Show \d+ more/.test(qb.textContent))qb.textContent='Show '+Math.max(0,k-mx)+' more ▾';qb.hidden=k<=mx}
 var no=document.getElementById('lk-q-none');if(!no&&(Q||CF||IV)){no=document.createElement('p');no.id='lk-q-none';no.className='meta';q.parentNode.insertBefore(no,q.nextSibling)}
 if(no){no.textContent=Q?'No queued task matches.':IV?'No queued task '+fw()+'.':'No queued task in this category.';no.hidden=!(Q||CF||IV)||k>0}
-no=document.getElementById('lk-q-rest');if(no)no.hidden=wide||!!Q}
+no=document.getElementById('lk-q-rest');if(no)no.hidden=true}
 function count(){if(!fn2)return;if(!Q&&!CF&&!IV){fn2.textContent='';return}
 var r=document.querySelectorAll('#lk-run .lk-run').length,q=document.querySelectorAll('#lk-q>.lk-q:not([hidden])').length;
 fn2.textContent=r+' in flight, '+q+' in Queued '+(Q?'match':fw())}
@@ -255,7 +252,7 @@ CL={being_built:'Building',waiting_to_merge:'Merge Queue',mac_tests:'Testing',si
 MK={waiting_to_merge:'q',sim_queue:'q',sent_back:'f'},SN={review:'review',testq:'waiting for its own test run'},
 HW={coding:'Building',review:'Review',testq:'Waiting for its own test run',testing:'Testing',mergeq:'Merge Queue',merging:'Testing',simq:'Simulator Queue',mergetest:'Simulator',parked:'Retry Queue',merged:'Merged'};
 var pic={};[].forEach.call(document.querySelectorAll('.lk-team a'),function(a){var m=/cast\/([^/.]+)\.html/.exec(a.getAttribute('href')||''),g=a.querySelector('img');if(m&&g)pic[m[1]]=g.getAttribute('src')});
-var K='lk-run-more',fl='all',all=false,items=L.init||[],IN={};try{all=localStorage.getItem(K)==='1'}catch(e){}
+var fl='all',items=L.init||[],IN={};
 items.forEach(function(x){if(x.id)IN[x.id]=x});
 var CT={};Object.keys(L.cat||{}).forEach(function(k){String(L.cat[k]).split(' ').forEach(function(n){if(n)CT['T-'+n]=k})});  // T-3427: {label: "numbers"}
 function mk(p,t,c,x){var e=document.createElement(t);if(c)e.className=c;if(x)e.textContent=x;p.appendChild(e);return e}
@@ -330,7 +327,7 @@ created:K3&&K3.tnum?K3.tnum(x.id):null,requested:K3&&K3.rq?K3.rq(x.id):null,star
 function order(a,b){var d=ST.indexOf(a.s)-ST.indexOf(b.s),fa=K3&&K3.fav(a.id)?1:0,fb=K3&&K3.fav(b.id)?1:0,sm=K3&&K3.sort?K3.sort():'def',z=(a.z||0)-(b.z||0);
 return (fb-fa)||(K3&&K3.by?K3.by(rec(a),rec(b)):0)||(sm==='stage'?0:(sm==='def'?(PC[a.s]||0)-(PC[b.s]||0):0)||z||d)||((b.min||0)-(a.min||0))}
 function hit(x){return !K3||K3.match([x.t,x.id,(x.w||[]).join(' '),LB[x.s],CL[COL[x.s]],x.n,x.a,x.g].map(function(s){return s||''}).join(' '))}
-function render(){var flt=document.getElementById('lk-flt'),cnt={},v,mo,c,qn=K3&&K3.qn?K3.qn():0,pf=document.getElementById('lk-pf'),pq=document.getElementById('lk-pq');
+function render(){var flt=document.getElementById('lk-flt'),cnt={},v,c,qn=K3&&K3.qn?K3.qn():0,pf=document.getElementById('lk-pf'),pq=document.getElementById('lk-pq');
 items.forEach(function(x){var k=COL[x.s];cnt[k]=(cnt[k]||0)+1});if(fl!=='all'&&!(fl==='queued'?qn:cnt[fl]))fl='all';
 // the chips filter, each with its count as before T-3996 (T-4007, friesevan #41 c6772135629)
 if(flt){flt.textContent='';[['all','All',items.length+qn]].concat(qn?[['queued','Queued',qn]]:[]).concat(CK.concat(['merged']).filter(function(k){return cnt[k]}).map(function(k){return[k,CL[k],cnt[k]]})).forEach(function(c){
@@ -341,12 +338,7 @@ if(pf)pf.hidden=fl==='queued';if(pq)pq.hidden=fl!=='all'&&fl!=='queued';
 if(pf&&pq&&pf.parentNode===pq.parentNode){if(K3&&K3.sort&&K3.sort()==='stage'&&K3.dir&&K3.dir()>0){if(pq.nextElementSibling!==pf)pf.parentNode.insertBefore(pq,pf)}else if(pf.nextElementSibling!==pq)pf.parentNode.insertBefore(pf,pq)}
 var sq=!!(K3&&K3.q());box.textContent='';v=items.filter(function(x){return (fl==='all'||COL[x.s]===fl)&&hit(x)&&(!K3||!K3.catok||K3.catok(x.c,x.id))}).sort(order);v.forEach(card);
 if(!items.length)mk(box,'p','','Nothing in flight.');else if(!v.length&&sq)mk(box,'p','meta','No task in flight matches.');
-box.classList.toggle('lk-short',!all&&!sq);
-['lk-run-more','lk-run-more-top'].forEach(function(k){mo=document.getElementById(k);
-if(mo){mo.hidden=v.length<=3||sq;mo.textContent='';mo.classList.toggle('lk-o3',!all&&v.length<=4);mo.setAttribute('aria-expanded',all);
-if(all)mo.textContent='Show fewer ▴';else{mk(mo,'span','lk-m4','Show '+(v.length-4)+' more ▾');mk(mo,'span','lk-m3','Show '+(v.length-3)+' more ▾')}}});
 c=document.getElementById('lk-run-n');if(c)c.textContent=items.length;c=document.getElementById('lk-all-n');if(c)c.textContent=items.length+qn}
-['lk-run-more','lk-run-more-top'].forEach(function(k){var m=document.getElementById(k);if(m)m.onclick=function(){all=!all;try{localStorage.setItem(K,all?'1':'0')}catch(e){}render()}});
 // T-2833: the idle alarm (no work session for 15+ minutes while work is allowed) follows every status too.
 function idle(st){var q=st.idle,sf=document.getElementById('lk-sf'),ie=document.getElementById('lk-idle');if(sf&&!ie){ie=document.createElement('p');ie.id='lk-idle';ie.className='meta lk-idle';sf.insertBefore(ie,sf.firstChild)}
 if(ie){if(q&&q.why&&q.since){var mn=Math.max(0,Math.round((Date.now()-Date.parse(q.since))/6e4));ie.textContent='No work session for '+(mn>=60?Math.floor(mn/60)+' h '+(mn%60)+' m':mn+' min')+' while work is allowed: '+q.why+'.'+(q.healed&&q.healed.length?' Done: '+q.healed.join('; ')+'.':'');ie.hidden=false}else ie.hidden=true}}
@@ -373,10 +365,11 @@ if(LS)Object.keys(LS).forEach(function(id){var v=LS[id],b=IN[id]||{};if(seen[id]
 u.push({id:id,t:nm((L.nm||{})[id])||snm(st,id)||'Name not recorded',w:b.w||['worker not recorded'],m:b.m||'model not recorded',e:b.e||'',min:v[2]?Math.max(0,Math.round((now-v[2])/6e4)):-1,s:v[0],n:v[1],h:b.h,x:b.x,c:b.c||CT[id]||'',g:b.g||'',y:b.y||0,ps:b.ps||''})});
 items=u;render();if(K3&&K3.requeue)K3.requeue();wk=document.getElementById('lk-working');if(wk)wk.textContent=Object.keys(o).length+' working';idle(st);fin(st)}
 // T-3316: a tree's link to an In flight card shows the whole list, then hands back the card
-if(K3){K3.has=function(i){return items.some(function(x){return K3.id(x.id)===i})};K3.all=function(){if(fl!=='all'){fl='all';render()}};K3.run=function(i){if(!K3.has(i))return null;fl='all';all=true;render();
+if(K3){K3.has=function(i){return items.some(function(x){return K3.id(x.id)===i})};K3.all=function(){if(fl!=='all'){fl='all';render()}};K3.run=function(i){if(!K3.has(i))return null;fl='all';render();
 return [].filter.call(box.children,function(c){return K3.id(c.getAttribute('data-id'))===i})[0]||null}}
 render();if(K3)K3.on(render);if(S&&S.onStatus&&S.lane){S.onStatus.push(draw);if(S.status&&S.status())draw(S.status(),true)}});
-// T-2940: Queued (and T-3094 the Merge queue) folds behind a button at the top of its list: rows past data-max carry lk-fold.
+// T-2940: Blocked or waiting (T-3735) folds behind a button at the top of its list: rows past data-max carry lk-fold.
+// T-4287: Queued no longer folds; it scrolls in its box.
 // T-4232 (friesevan #41 c6841754758): Home's Mode block (mode_html), first on the page. Each account's mode follows the
 // live status (lock_in.modes, through lockin.js's S.modes). A token holder picks an account (All accounts first) and a
 // mode; a second tap within 5 seconds posts MODE <account> <mode> on the Chat issue through lockin.js's S.modeSet, the
@@ -386,7 +379,7 @@ render();if(K3)K3.on(render);if(S&&S.onStatus&&S.lane){S.onStatus.push(draw);if(
 // closes them and puts the focus back on the bubble.
 document.addEventListener('DOMContentLoaded',function(){var S=window.CompanySite,d=document.getElementById('lk-modeset'),ml=document.getElementById('lk-modelist'),
 mb=document.getElementById('lk-mb'),mp=document.getElementById('lk-modes'),mt=document.getElementById('lk-mbt');
-[['lk-q','lk-q-more'],['lk-bk','lk-bk-more']].forEach(function(k){var q=document.getElementById(k[0]),qb=document.getElementById(k[1]),qa=false,mx,n;if(!q||!qb)return;
+[['lk-bk','lk-bk-more']].forEach(function(k){var q=document.getElementById(k[0]),qb=document.getElementById(k[1]),qa=false,mx,n;if(!q||!qb)return;
 mx=+q.getAttribute('data-max')||4;n=q.children.length;[].forEach.call(q.children,function(c,i){c.classList.toggle('lk-fold',i>=mx)});
 function pq(){q.classList.toggle('lk-qshort',!qa);qb.hidden=n<=mx;qb.setAttribute('aria-expanded',qa);qb.textContent=qa?'Show fewer ▴':'Show '+(n-mx)+' more ▾'}
 qb.onclick=function(){qa=!qa;pq()};pq()});

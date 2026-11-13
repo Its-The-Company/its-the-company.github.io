@@ -618,6 +618,14 @@ The Effect lines of the amendments.md entries the charter retired (2026-11-04 12
 - **2026-11-13 10:46 AM ET** ((private)): Running a widget's Python inside the widget stays the first priority and is parked only if proven impossible on a phone; where small scripts fit and large ones do not, those widgets run in the app instead, and which lane a widget will use, with its measured memory and time, is shown to the person while they develop it.
 - **2026-11-13 10:47 AM ET** ((private)): Pages (full screens a project shows, running Python) are in version 1.0: about 5 more weeks of work (3 to 8, estimated) before release, with App Review's higher risk for app-like Pages taken on; the release estimate is re-worked to include them.
 - **2026-11-13 10:50 AM ET** ((private)): Components are listed in the app as blocks and Python passes only by a file the person brings in; the Gallery holds only the company's pre-made Projects, widgets and components; the Builder lets people pick from a set of pre-made components; sharing Python in the app is to be investigated for a future build, not 1.0.
+- **2026-11-13 11:22 AM ET** ((private)): Restructuring 11, option A: the keep, change or drop tables stand; the design records are rewritten to them (T-4272, landed 8f3db3bcd5).
+- **2026-11-13 11:24 AM ET** ((private)): Restructuring 29, option A with a change: every app part gets a plain-English page and a diagram from its code, and they live on a new main site page, App (not under Documents).
+- **2026-11-13 11:35 AM ET** ((private)): The Fable pause guard and its fixed line stay unchanged; for the one-time queue audit, Evan's account runs its audit sessions without the pause (T-4276, done through Audit mode's first slice).
+- **2026-11-13 11:43 AM ET** ((private)): The company may build an Audit mode: set for one or more accounts and one named audit or task, it applies no usage guards, forces Fable, and saves work safely just before the Fable or 5-hour limit.
+- **2026-11-13 11:51 AM ET** ((private)): An account in Audit mode spends all its usage on its audit and takes no other task; it switches itself back to Spread when the audit is fully done or when the only audit steps left are assigned to another Audit-mode account.
+- **2026-11-13 12:27 PM ET** ((private)): The company may itself turn off the Fable pause on Evan's account for the one-time audit; the hand-run Mac mini command is not needed.
+- **2026-11-13 1:15 PM ET** ((private)): Every step of a Fable audit, its helper agents included, runs on Fable; a step that needs Opus is handed to the main session as its own board line instead of running on the audit account.
+- **2026-11-13 1:48 PM ET** ((private)): Audit mode is not to enforce the 1:15 PM ruling: the helpers-on-Fable slice of T-4284 is dropped.
 {% endraw %}
 
 </div>

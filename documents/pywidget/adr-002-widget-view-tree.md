@@ -11,7 +11,7 @@ description: "C4 needs Python to describe widget UI that WidgetKit renders with 
 <div class="doc-body" markdown="1">
 
 {% raw %}
-Status: **accepted** for v1 (Ines, <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span> line 2026-10-26 8:01 PM ET, at the end: option 1, rulings 1-6; Maren's four additive changes are in; the L3 dependency is closed by ADR-007). Proposed by Idris 2026-10-25; Maren's design read 2026-10-26 7:54 PM (section before the chair line). The Decision text above the design read is kept as proposed; where the chair line changes it, the chair line wins.
+Status: **accepted** for v1 (Ines, <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span> line 2026-10-26 8:01 PM ET, at the end: option 1, rulings 1-6; Maren's four additive changes are in; the L3 dependency is closed by ADR-007). Proposed by Idris 2026-10-25; Maren's design read 2026-10-26 7:54 PM (section before the chair line). The Decision text above the design read is kept as proposed; where the chair line changes it, the chair line wins. **Amended 2026-11-13 (T-4272), at the end: kept, and extended to Pages; a checker per output; the key that ties a drawn view to its block.**
 
 ## Context
 
@@ -103,6 +103,19 @@ Asked for by ADR-007 chair line 2026-10-29 8:03 AM, item 3 ii. Proposed until th
 
 
 Not a new node, so the "one of the 12 premades" rule does not apply. No premade uses it. `Gauge` is left out as the chair's line leaves it out; that is an open item in the spec's s11.
+
+## Amendment (Ines), 2026-11-13: Pages, a checker per output, and the key that ties a view to its block (T-4272)
+
+Made under the Investors' approval of the Restructuring's keep, change or drop tables (Restructuring 11, an Investor, #280 c6858665300, A, 11:22 AM ET 11-13). The audit's row for this ADR read "Keep, extend" ([`documents/restructuring/02-audit.md`](../restructuring/02-audit.html), ADR table); the approved change list reads "kept; gains Page-only parts, a checker per output, the key tying a view to its block" (`06-decisions.md`). Pages are in 1.0 (Restructuring 03, #272 A). Rulings 1 to 6 stand, read with the four items below. Nothing here was measured; no schema or code changes in this commit.
+
+1. **One format for every screen Python makes.** A Page is drawn from the same versioned view tree, major 1, additive. A Page may use parts a widget may not: scrolling, lists, text entry, and taps that call Python (the handler runs on the app's one run queue, ADR-007 s4.2). These are added node types that only the app draws. The widget catalog's rule from Ruling 1 stands for widgets: a node enters only when a premade needs it. A Page-only part enters when the Pages design needs it, each with its schema row, DSL name (names review as usual) and a renderer test. Which parts, and their names, are the Pages design's, after phase D (`plan.md`); no board line carries it yet.
+2. **A checker per output.** The writer's validation (`validate` in `pywidget_ui`, and Swift's check before `tree.json` is written) is given the output a tree is for (widget, Page, later a message card) and refuses any node that output may not draw, with a plain message naming the node and the output. The widget renderer stays tolerant (L4 s14.1): a Page-only node that reaches it anyway draws its `alt`, like any unknown node. A Builder block is offered only for the outputs whose checker allows its nodes.
+3. **The key that ties a drawn view to its block or code line.** L17 s6 V1 is adopted: the node key **`k`** is reserved (a string of at most 64 characters, such as a source location `"widget.py:14"` or a block's id), `$defs/node` never gains `additionalProperties: false`, renderers ignore `k`, and a node with `k` draws exactly as the same node without it. It is emitted on preview runs, so tapping a view in the preview selects its block or jumps to its line. It is never shown to a person and never used for logic. Owners when the Builder work starts: the renderer's fixture test (a node with `k` and with an unknown key), and one sentence in L4 s1 and the schema's `description`.
+4. **Ruling 2's premise has changed; its conclusion stands.** "No Python runs in any extension" is no longer true: ADR-007 revision 2 (2026-11-13) puts each widget's Python in the widget first. The renderer still draws nothing but the tree, so `When` and per-family `views` stay required parts of the format, and the stale mark, snapshot and placeholder rules stand as written. Ruling 6's Day 13 freeze date is history; a format change after this needs a dated line here, as Ruling 6 says.
+
+What would make this fail: Page parts that cannot be expressed as additive nodes inside major 1 (a Page that needs live state the tree cannot carry). Then the Pages design comes back here before any code, and a major 2 is a chair decision with its migration written first.
+
+Ines, CEO
 {% endraw %}
 
 </div>

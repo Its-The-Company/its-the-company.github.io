@@ -1,1055 +1,218 @@
 ---
 layout: "default"
-title: "ADR-007: Widget execution architecture. Python runs in the app; the extension only renders (option b), with the hybrid (c) gated on device\u2026"
+title: "ADR-007: Where a widget&#x27;s Python runs. In the widget first; the app when the widget is too small for it (revision 2, one text)"
 section: "documents"
-description: "This is ADR-001&#x27;s default, confirmed by measurement rather than assumed. The one change from ADR-001&#x27;s wording: &quot;the extension only renders&quot; now also covers the gallery snapshot and placeholder paths, which the spike\u2026"
+description: "The Investor&#x27;s words (#283): &quot;We should continue to prioritize running the code in the widget unless this is proven impossible. If small code files can run in-widget but large ones cannot, some widgets must run in-app\u2026"
 ---
 <div class="crumbs" role="navigation" aria-label="Back"><a class="back" href="{{ '/documents/pywidget/build-plan/decisions/' | relative_url }}">← Decisions</a><a href="{{ '/documents/pywidget/adr-007-execution-architecture.html' | relative_url }}" rel="bookmark">Permanent link</a></div>
-<div class="page-head"><div class="kicker"><span class="kind blue">Decision</span><span>Day 4 · Sun Oct 25</span><span><code>pywidget/docs/decisions/ADR-007-execution-architecture.md</code></span></div><h1>ADR-007: Widget execution architecture. Python runs in the app; the extension only renders (option b), with the hybrid (c) gated on device…</h1><div class="byline"><img class="avatar" src="{{ '/assets/portraits/idris.svg' | relative_url }}" alt="Idris" title="Idris"><span>By <a href="{{ '/cast/idris.html' | relative_url }}">Idris</a>, Senior iOS engineer</span></div></div>
+<div class="page-head"><div class="kicker"><span class="kind blue">Decision</span><span>Day 23 · Fri Nov 13</span><span><code>pywidget/docs/decisions/ADR-007-execution-architecture.md</code></span></div><h1>ADR-007: Where a widget's Python runs. In the widget first; the app when the widget is too small for it (revision 2, one text)</h1><div class="byline"><img class="avatar" src="{{ '/assets/portraits/ines.svg' | relative_url }}" alt="Ines" title="Ines"><span>By <a href="{{ '/cast/ines.html' | relative_url }}">Ines</a>, CEO</span></div></div>
 
 <style>.doc-body{overflow-wrap:break-word}.doc-src{overflow-wrap:anywhere}.tbl[data-n~="1"] tr>:nth-child(1),.tbl[data-n~="2"] tr>:nth-child(2),.tbl[data-n~="3"] tr>:nth-child(3),.tbl[data-n~="4"] tr>:nth-child(4),.tbl[data-n~="5"] tr>:nth-child(5),.tbl[data-n~="6"] tr>:nth-child(6),.tbl[data-n~="7"] tr>:nth-child(7),.tbl[data-n~="8"] tr>:nth-child(8),.tbl[data-n~="9"] tr>:nth-child(9),.tbl[data-n~="10"] tr>:nth-child(10),.tbl[data-n~="11"] tr>:nth-child(11),.tbl[data-n~="12"] tr>:nth-child(12){min-width:0;overflow-wrap:normal}.tbl[data-o="1"] tr>:nth-child(1),.tbl[data-o="2"] tr>:nth-child(2),.tbl[data-o="3"] tr>:nth-child(3),.tbl[data-o="4"] tr>:nth-child(4),.tbl[data-o="5"] tr>:nth-child(5),.tbl[data-o="6"] tr>:nth-child(6),.tbl[data-o="7"] tr>:nth-child(7),.tbl[data-o="8"] tr>:nth-child(8),.tbl[data-o="9"] tr>:nth-child(9),.tbl[data-o="10"] tr>:nth-child(10),.tbl[data-o="11"] tr>:nth-child(11),.tbl[data-o="12"] tr>:nth-child(12){position:sticky;right:0;overflow-wrap:normal;background:var(--page);box-shadow:-1px 0 var(--line),-9px 0 8px -8px var(--sh)}</style>
 <div class="doc-body" markdown="1">
 
 {% raw %}
-- Status: **accepted** for v1 (Ines, <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span> line 2026-10-25 9:08 PM ET, at the end: option (b), amendments A1-A3; C2-Q1 approved narrowed as a 1.0 stretch by Day 13; 7.4 closes state-spec s1). Proposed by Idris 8:12 PM ET, amended 8:28 PM ET after Odalys's review ("Changes after review"). Option (c) stays off: it opens only when gates <span title="The starting recipe a lane uses to look for ideas. G2, for example, starts from public datasets.">G1</span>-G3 (section 6) pass on a device, in a new ADR line.
-- Author: Idris. Numbers are from my own spike, pywidget/docs/research/L3-runtime-spike.md (edbcb42c), Simulator only. Every figure not measured there is marked **[recalled]** or **unmeasured**.
-- Inputs: ops/plans/pywidget/build-brief.md L3 (options a-e, failure behaviour), ADR-001 3.1 (C4, "default unless ADR-002 says otherwise"), ADR-002 (view tree: `timeline`, `sampled_at`, `stale_after`, reload policy), L2-refresh-budget.md (triggers and budget), L4-view-dsl.md s8 (stale rule), Maren's pywidget/docs/design/states/state-spec.md s1 (state priority) with Ines's chair ruling there (2026-10-25 8:08 PM, Pro card), C2-device-api.md s7 (C2-Q1), panel note on restart (board line C1, 7:55 PM).
+- Status: **accepted, revision 2** (Ines, CEO, 2026-11-13, T-4272). One text, written after the Investors approved the Restructuring's keep, change or drop tables (Restructuring 11, an Investor, #280 c6858665300, A, 11:22 AM ET 11-13), whose row for this ADR read "one new text". Its content follows the Investor's answer to Restructuring 14 (#283 c6857824620, 10:46 AM ET 11-13) and my <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span> line of 11:37 AM ET that day (T-4267), which this text folds in without changing its meaning. One correction to that line, mine: its sentence "No new text replaces this ADR" went further than the answer. Item 14 changed what this ADR decides, not whether it is one text, and #280's A had approved the one-text row; that sentence is withdrawn here, and the rest of the 11:37 AM line stands. Revision 1 (Idris's proposal of 2026-10-25 8:12 PM ET, Odalys's review, 4 amendments and 20 chair lines from the 9:08 PM acceptance to the 11-13 11:37 AM line, about 33,000 words) is archived word for word at `archive/ADR-007-r1-2026-10-25-to-11-13.md`. "r1 s5.3" below means section 5.3 there; "r1 10-29 8:03 AM" means the chair line of that time (the archive's headings give such times in 24-hour form). Where the two differ, this text wins.
+- Authors: Idris (r1's design and its engineering detail), Pernille (the bridge contract and the <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span>'s Python half), Odalys (r1's review), Maren (r1 amendment 4); this text, Ines. Nothing here was measured for this revision; every figure is from the record it cites.
+- Interface: [`pywidget/docs/design/bridge-contract.md`](bridge-contract.html) (its names and rules win where this text is silent). Widget format: ADR-002. Scope: ADR-001.
 
-## 0. Numbering
+## 1. The decision
 
-ADR-001 and the board line "[plan] Idris, P0, ADR-002 widget execution architecture" call this document ADR-002. ADR-002 is now the widget view tree (L4), and the plan (ops/plans/pywidget/plan.md row 6) reserves ADR-003 for packages. ADR-004 (editor), 005 (compat corpus) and 006 (marketplace staging) are taken. This is **ADR-007**. Wherever ADR-001 says "ADR-002 (execution architecture)" read ADR-007; a CORRECTIONS row records it. I do not edit ADR-001 (Ines's file).
+**The Investor's words** (#283): "We should continue to prioritize running the code in the widget unless this is proven impossible. If small code files can run in-widget but large ones cannot, some widgets must run in-app, and this should show during development and be measurable".
 
-## 1. Context
+1. **Two lanes.** A widget's Python runs either inside the widget extension (the **widget lane**) or in the app (the **app lane**). Each widget tries the widget lane first; the app lane is its fallback. The size rule in section 3 decides, from the widget's own measured runs.
+2. **The widget lane is <span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">parked</span> only if it is proven impossible** (section 3 item 9), and then only after the Investors see the figures. Gates <span title="The starting recipe a lane uses to look for ideas. G2, for example, starts from public datasets.">G1</span> to G3 (r1 s6) no longer decide whether the lane exists; their figures feed the size rule.
+3. **The IDE is untouched by any widget limit.** Console runs, previews, Pages and Shortcut runs use the app's full runtime.
+4. **The renderer draws only the view tree** (ADR-002), in either lane. No widget draws anything a tree did not describe, and the state cards, badge and stale mark are the renderer's, never the tree's (ADR-002 Ruling 3).
+5. **Tenet 1's priority of 2026-10-29 stands** ("Python in the widget preferred"; #283).
 
-A pywidget widget is a Python script that returns a view tree (ADR-002). Something has to run that script, and the only two processes we own on the phone are the app and the WidgetKit extension. The extension has a small memory allowance ("about 30 MB is widely reported" per the brief; **unmeasured** on device, the Simulator enforces none) and must return from `getTimeline` promptly. The app has the full runtime and no tight ceiling, but it is not running when the system asks for a timeline.
+What this replaces from r1: section 4's option (b), "Python runs in the app; the extension only renders", as the default for every widget (withdrawn 11-13 11:37 AM). What it keeps: option (b)'s whole app-lane design, now the fallback, and option (c)'s lane, now the first choice. Options (d), cloud execution, and (e), another interpreter, stay rejected for r1 s3's reasons. Lazy imports stay on in both processes (r1 s3 row e).
 
-The brief's L3 asks for a choice among five options, a benchmark table, and a failure-mode spec. ADR-001 set option (b) as the default "unless ADR-002 says otherwise". The spike measured what (a) and (c) would cost. This ADR decides.
-
-The IDE is out of scope: scripts run in the app with the full runtime whatever this ADR says (brief L3 scope note).
-
-## 2. Benchmark table (spike, Simulator, Debug, iPhone 17e / iOS 27.0; medians of n, max in brackets)
-
-Times in ms, memory in MB (`phys_footprint`, the number jetsam enforces). "tiny" = `json, datetime, math`, 63 modules; "heavy" = json, urllib, ssl, sqlite3, decimal, statistics, re, zoneinfo, csv, asyncio, 218 modules. Full table and method: L3-runtime-spike.md s2-s3.
+## 2. What runs where
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 1: 2. Benchmark table (spike, Simulator, Debug, iPhone 17e / iOS 27.0; medians of…, scrolls sideways" data-n="2 3 4" style="--tw:1276px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 1: 2. What runs where, scrolls sideways" style="--tw:640px" markdown="1">
 
-| Process | stdlib | lazy | n | start to probe | Py init | tiny script | MB before Python | MB peak tiny | heavy imports | MB peak heavy |
-|---|---|---|---|---|---|---|---|---|---|---|
-| app | zip | no | 6 | 291 (315) | 12.8 (23.7) | 14.3 (26.5) | 5.1 | 9.8 | 106.5 (191.6) | 18.5 |
-| app | zip | yes | 6 | 302 (309) | 13.1 (24.9) | 13.9 (27.1) | 5.1 | 9.7 | 73.0 (115.0) | 16.0 |
-| extension, cold | full | no | 6 | 352 (378) | 7.9 (8.6) | 14.2 (22.3) | 7.7 | 11.9 | 104.5 (177.7) | 21.6 |
-| extension, cold | zip | no | 6 | 346 (658) | 9.3 (11.2) | 14.8 (28.0) | 7.7 (14.3) | 12.1 (18.4) | 110.5 (191.7) | 20.7 (26.8) |
-| extension, cold | zip | yes | 5 | 360 (367) | 9.2 (9.4) | 14.4 (15.1) | 7.7 | 11.9 | 73.9 (77.7) | 18.2 |
-| extension, warm (second call, same process) | zip | yes | 1 | (4,029) | 0 | 0.3 | 26.8 | 26.9 | 0.2 | 26.9 |
-| extension, gallery `getSnapshot` (7:31 PM, one observation) | full | no | 1 | - | - | - | 14.3 | - | - | 27.9 |
+| Widget extension | App |
+| --- | --- |
+| The view-tree decoder and SwiftUI renderer, every family and mode (ADR-002) | CPython 3.15.1 with the full bundled runtime; the bridge (section 11) |
+| **Widget-lane runs:** a `lane: widget` script from `lane-scripts/<id>/`, under the allowlist, the margin and the 2.0 s budget (section 5) | **App-lane runs:** every widget not in the widget lane, on the triggers in section 4; every console, preview, Page and Shortcut run |
+| State precedence from `tree.json`, `status.json`, `entitlement.json` and the tree's `version` (section 7) | Writes `entitlement.json` (StoreKit); keeps the widget library and `lane-scripts/` current |
+| Timeline construction, the badge, the synthetic stale entry (section 7.3) | Schedules background refresh (section 12) |
+| `getSnapshot` and `placeholder`: last good tree, else the premade's bundled preview tree, else the renderer's placeholder; never a run | Gallery previews: real runs in the app; they write nothing to the App Group |
+| The Swift network primitive `pywidget.net.get(url, timeout)`, through `URLSession` (`device_call("net", ...)`), the same call in both processes | The same primitive; urllib and the rest of the stdlib as bundled |
 
 </div>
 
 
-Bundle: `python/` 237 MB full, 25 MB stripped, 12 MB zipped; `Frameworks/` 32 MB fat, of which 2.1 MB are CPython test modules to drop. Zip costs nothing measurable in time or memory.
+The widget lane is a memory guard and a fair way to assign blame, not a security boundary (section 13).
 
-What the table says, in order of weight:
-1. Python itself is cheap in the extension: +23 ms on a ~375 ms cold start, +4 MB on a 7.7 MB baseline. Time is not the problem.
-2. Memory accumulates. One interpreter per process, never finalized: after one heavy run the extension sits at 27-28 MB and stays there for the next call. The gallery's snapshot process starts at 14.3 MB before Python. Both are within a few MB of a ceiling we have not measured.
-3. The ceiling is the unknown. `os_proc_available_memory()` returned 0 in every Simulator run. Nothing in the table proves an extension run survives on a phone.
+## 3. The size rule (chair line 2026-11-13 11:37 AM, folded in)
 
-## 3. Options (brief L3 a-e)
+A widget's size is what its runs measure, not its file length: a ten-line script that imports a large module is large.
 
+1. **Two figures per widget:** P, its peak memory above the process's baseline, and T, its run time. Both are on every lane run row (`peak_mb`, `duration_ms`).
+2. **The widget budget W** is the lowest free memory at rest the phones have shown: 23 MB today (iPhone 15, iOS 26.6.2, build 4, 44 cold extension processes, 23.0 to 25.2 MB free; C = 30 MB on that phone). The phone sitting replaces it, with the oldest supported phone's figure if lower.
+3. **A widget runs in the widget** when 2 x P <= W (the 2 x margin, r1 11-01 1:03 PM, stays; at W = 23 that is P <= 11 MB), T <= 2.0 s (the lane's `budget_s`), and it imports nothing the lane refuses (section 5). Otherwise it runs in the app.
+4. **Before any measurement, the widget lane first.** A new or edited script starts in the widget. Its first run assumes 9 MB, the phone's cold Countdown peak, in place of 21 MiB, a Debug Simulator figure (r1 11-03 2:24 PM) that made every first run need 42 MB, over C. With 9, a first run needs 18 MB against 23 to 25 MB free. `LaneMargin`'s first-run figure changes to 9 under T-4280; the sitting confirms it or raises it.
+5. **The app's estimate, labelled as one.** The editor may measure a run in the app (the run's peak above the app's footprint at its start) to warn before a script reaches the widget. The estimate never moves a widget to the app unless 2 x the estimate is over W, and it is always shown as "estimated in the app". The widget's own figure replaces it at the first lane run. Whether the two agree is unmeasured; the sitting compares them.
+6. **On the phone, the existing paths stand:** a marker found (killed) moves the widget to the app at once; a refusal moves it only when it repeats in a later process (section 5). Saving new script text clears both, so an edited script tries the widget again.
+7. **The app as fallback.** A widget in the app lane refreshes by section 4's triggers: when the app is open, by the refresh tap, and in the background with Pro (section 12). Nothing it shows claims more than that.
+8. **Shown during development.** For the open widget script the editor shows: the lane ("Runs in the widget" or "Runs in the app"); the reason (fits; needs N MB, the widget has W; took N s, the widget allows 2.0; imports a module the widget cannot load; moved to the app after the widget was stopped on this phone); P against W and T against 2.0 s; and where the figures come from ("measured in the widget on this phone, n runs", "estimated in the app", or "not measured yet"). The Run log rows carry the same figures. The words are Maren's to draft (T-4281).
+9. **Proven impossible** means: on a Release build, on the oldest supported phone, Countdown (the smallest lane premade) cannot complete in the widget in 6 or more cold processes (killed, or no headroom for its measured peak at rest). Only that parks the lane, and it goes to the Investors with the figures before anything is parked.
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 2: 3. Options (brief L3 a-e), scrolls sideways" style="--tw:1280px" markdown="1">
+**What the phone has shown** (11:37 AM line; `ops/plans/T-4267-lane-numbers.py` on the #231 export): Countdown ran in the widget 69 times from 11-09 to 11-13, 69 `ok`, none killed; 14 to 283 ms, median 15; 9 MB above baseline on all 7 cold runs, 11 to 15 MB on warm runs. The margin as then built would have refused 4 of the 69; they ran because the gate build only records. Not yet shown: a large script, the oldest supported phone, two lane widgets in one process (G2), a deliberate kill (G3).
 
-| Option | What it is | Measured | Verdict |
-|---|---|---|---|
-| (a) Python in the extension, minimal runtime | Extension links Python.framework and runs the script inside `getTimeline` | tiny 11.9 MB peak; heavy 21.6; warm 27-28; snapshot path 27.9 | Not as the only path. Freshest, but a heavy script or two widgets in one process sits at the recalled ceiling, and a jetsam <span title="A test written in advance. If it fires, we drop the idea.">kill</span> shows the user a blank or placeholder widget with no error we can see. Also means every widget bug is a crash in a process we cannot attach to on a customer's phone. |
-| (b) Python in the app; extension renders a cached tree from the App Group | App runs widgets on foreground, BGAppRefresh and intents; writes `tree.json`; extension decodes and draws | app heavy 18.5 MB peak against no tight ceiling; extension 7.7 MB with Python.xcframework linked but not initialized; the v1 extension with no Python linked is **unmeasured** (7.7 is likely an upper bound) | **Chosen for v1.** Cost is freshness, bounded by the L2 budget and by the stale mark; the view tree's `sampled_at`/`stale_after` already make that cost visible to the user. |
-| (c) Hybrid: allowlisted light scripts in the extension, the rest in the app | Static import scan at save time picks the <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span>; runtime guard demotes to (b) | tiny set 12 MB peak (cold); lazy imports cut heavy peak by 2.5 MB (zip vs zip + lazy, app and extension) | **Built on the same runtime behind a flag, off in v1.** Gated on device numbers (section 6, G1-G3). Until the ceiling is measured it is a guess about headroom. |
-| (d) Opt-in cloud execution | A server runs network-only widgets | not measured | **No.** Needs a server (spending and sign-ups are the Investors'), cannot read sensors, moves scripts and data off the phone (privacy label and App Review change). Not v1; not proposed for 1.1 either. |
-| (e) Alternative interpreter or compile strategy | MicroPython, RustPython, AOT; inside CPython: lazy imports, frozen modules | PEP 810 lazy imports: heavy 110 -> 74 ms, peak -2.5 MB (18.5 -> 16.0 app, 20.7 -> 18.2 extension), no import errors. Frozen modules unmeasured (follow-up line). Other interpreters unmeasured | **Lazy imports on in both processes** (`-X lazy_imports=all` equivalent in `PyConfig`), measured, free. No alternative interpreter: their compatibility cost (missing stdlib, no C-API packages) is certain and the numbers give no reason to pay it. |
+**The lane flag.** Internal builds keep the lane on, as build 4 does. The sitting's chair line sets W, the first-run figure and the flag's default for the store build, which is on unless the sitting proves the lane impossible (item 9). Turning the flag off is one build with no data change: `lane: widget` widgets then run as `app` and nothing a person saved breaks (r1 10-29 8:03 AM item 6).
 
-</div>
+## 4. App-lane runs
 
-
-## 4. Decision
-
-1. **v1 is option (b).** The widget extension links neither Python.framework nor the stdlib. It decodes `widgets/<id>/tree.json` from the App Group and renders it. The extension never runs user code, in `getTimeline`, `getSnapshot` or `placeholder`.
-2. **Every Python run of a widget happens in the app process** through one `PythonRuntime` (one interpreter per process, the bridge contract's script thread, 8.1), on the triggers in section 5. Lazy imports on. The output is written atomically (temp file + rename) only on success; a failed run never touches the last good tree.
-3. **Option (c) is designed in, switched off.** The runtime, the allowlist scan, the run marker and the demotion rule are specified here so that (c) is a flag flip plus the extension linking the framework, not a rewrite. The flag opens only when the device gates in section 6 pass; that is a 1.1 decision at the earliest, recorded in a new ADR line, not silently.
-4. **The IDE runtime is untouched** by any widget limit.
-
-This is ADR-001's default, confirmed by measurement rather than assumed. The one change from ADR-001's wording: "the extension only renders" now also covers the gallery snapshot and placeholder paths, which the spike showed are Python paths too if we let them be.
-
-## 5. How a widget run is triggered, and what runs where
-
-### 5.1 Triggers (all run Python in the app)
+### 4.1 Triggers
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 3: 5.1 Triggers (all run Python in the app), scrolls sideways" data-n="1" style="--tw:1640px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 2: 4.1 Triggers, scrolls sideways" data-n="1" style="--tw:1000px" markdown="1">
 
-| # | Trigger | Where it fires | What runs | Reload call | Budget (L2) |
-|---|---|---|---|---|---|
-| <span title="The rule that decides whether an idea gets two blind graders now, waits (park), or stops.">T1</span> | Foreground sweep | app becomes active; IDE saves a widget script; a premade is added or configured | all placed widgets in one batched run, changed ones first | `reloadAllTimelines()` once, from the active scene (a call from `App.init` never reached the extension in the spike [observed, unlogged: not in L3-runtime-spike.md; the next renderer task logs it]) | free: foreground reloads are exempt [saved Apple page K:64, keeping-a-widget-up-to-date; research/freshness-claims.md A1; was [recalled], T-1807] |
-| T2 | Background refresh (**not built at HEAD 89f2d1bb**; ruled for 1.0 with a cut date, chair line 2026-10-30 1:35 PM, T-0793) | `BGAppRefreshTask`, identifier `com.pywidget.refresh`, rescheduled after every run at the smallest requested interval, never under 15 min | batched run under the batch rule below (worst-case end 25 s against the task's limit of about 30 s [recalled]); an **expiration handler** is set before the first run (5.3) | `reloadTimelines(ofKind:)` only for widgets whose tree hash changed | counts; one reload per changed widget |
-| T3 | App Intent `Refresh Widgets` (Shortcuts automation: time of day, arrival, alarm off, Focus change) | intent handler in the app process, no scene | the named widgets, or all; same batch rule as T2 (the intent limit is also about 30 s [recalled], L9 line 42) | as T2 | counts [recalled; L2 measure item] |
-| T4 | App Intents `Run Script`, `Run Script with Input` | app process | the script, `budget_s = 20` (contract S4); if it is a widget script, its tree is written too | as T2 | as T3 |
-| T5 | Widget action intent (1.1, L5) | app process **on iOS 27+ only** (`allowedExecutionTargets = [.main]`); on iOS 18-26 the app runs a handler only after a signed action link opens it, or from the queue at the next T1-T3; state ops run in the extension (corrected 2026-10-26 by Idris: L5-interactivity.md s0, s4) | the widget's handler, then `render(state)` | none on 27+ (the system reloads after `perform()` [saved Apple page I:88, I:90, adding-interactivity; research/freshness-claims.md A5; was [recalled], T-1807]); `reloadTimelines(ofKind:)` from the foreground on 18-26 | not charged for the post-intent reload [saved Apple page K:68-69; research/freshness-claims.md A6; was [recalled], T-1807; L5 gate G-L5-2] |
-| T6 | WidgetKit asks the extension for a timeline (`getTimeline`) | extension | **no Python.** Reads `tree.json` and `status.json`; if `tree.json` is missing, writes `widgets/<id>/wants-run` and returns the error card | none (it is the reload) | the system's own schedule |
-| T7 | Location wake, push reload | app (significant change needs Always; push needs a server) | - | - | **not v1** (ADR-001; push also L2 s2 item 6; citation corrected 2026-10-26, CORRECTIONS U1-06) |
+| # | Trigger | What runs | Reload |
+| --- | --- | --- | --- |
+| <span title="The rule that decides whether an idea gets two blind graders now, waits (park), or stops.">T1</span> | The app comes to the front; the editor saves a widget script; a premade is added or configured | every placed app-lane widget in one batched run, changed ones first | `reloadAllTimelines()` once, from the active scene (foreground reloads are budget-free, saved Apple page K:64) |
+| T2 | Background refresh, `BGAppRefreshTask` `com.pywidget.refresh` (Pro; section 12) | app-lane and demoted widgets, under the batch rule | `reloadTimelines(ofKind:)` only for widgets whose tree changed |
+| T3 | App Intent Refresh Widgets (a Shortcuts automation) | the named widgets, or all, under the batch rule | as T2 |
+| T4 | App Intents Run Script, Run Script with Input | the script, `budget_s` 20; a widget script's tree is written too | as T2 |
+| T5 | Widget action intents (after 1.0; ADR-002 Ruling 5) | the handler, then the render | the system's, on iOS 27+ |
+| T6 | WidgetKit asks for a timeline (`getTimeline`) | no app run. A `lane: widget` widget may run in the widget (section 5); an app-lane widget reads its saved tree, and with no `tree.json` writes `wants-run` and shows the error card | it is the reload |
+| T7 | Location wake, push | not in 1.0 (push needs a server) | - |
 
 </div>
 
 
-**Limit on T1's "added or configured" (Idris, 2026-10-29, T-0684; freeze row F19).** iOS gives the app no callback when a widget is placed, removed or set to another script or premade in its edit sheet, and the extension, which does learn of it through its next `getTimeline`, runs no Python (T6). So a placement or reconfiguration is written only at the next T1 (the app comes to the front, including the launch a tap on the widget makes) or a T3 `Refresh Widgets` run; until then the widget shows the card for its folder as it stands (no `tree.json` yet: the error card). The editor's save (T-0684, `WidgetScriptSave` then `WidgetWriter.scriptSaved`) covers only a script edited in the app, not a widget newly pointed at it.
+iOS tells the app nothing when a widget is placed, removed or reconfigured, so a new placement is written at the next T1 or T3 (r1 s5.1, Idris's T-0684 limit). `wants-run` is honoured by the next T1 to T4 run. A tree's `reload_policy` is clamped to the expected interval of Apple's budget.
 
-**Batch rule (T2, T3), from the contract's stop <span title="Our grade scale, nine steps: D, D+, C-, C, C+, B-, B, B+, A. An idea&#x27;s ladder is the letter it reaches before any cap.">ladder</span> (bridge-contract.md s5).** A widget run with `budget_s` is stopped by the ladder when its budget runs out: interrupt + SIGURG wake at 0, repeated every 250 ms, hard stop at 2.0 s, deadline `stopDeadlineSeconds = 5.0` s, then `stuck`. So a widget's worst case is `budget_s + 5.0` s. A batch starts the next widget only if `elapsed + budget_s + 5.0 <= 25 s`; otherwise that widget and the rest are left for the next trigger (outcome `deferred`, no badge, stale clock applies, `wants-run` kept). With the default `budget_s = 5`, the worst case per widget is 10 s and the batch ends, stuck or not, by 25 s, leaving 5 s for the last atomic write, the reload calls and `setTaskCompleted` (T2) or the intent's return (T3). The manifest <span title="A measured fact that holds a grade below a letter, however good the rest is.">cap</span> of 20 s keeps any one widget inside 25 s when it runs first; a widget deferred twice in a row for lack of time runs first in the next batch.
+### 4.2 One run queue
 
-**Runs queue behind the IDE.** The interpreter is shared (contract Q1, queue-then-busy): a widget run waits behind a console run, and a T2/T3 batch that finds a console run in progress defers every widget (`deferred`). A console script's monkeypatch to a stdlib or bundled module stays in place for later widget runs until quit (contract s6, Kept); the Restart help text says so.
+The app has one interpreter, never finalized, and one script thread (contract s1, s2; r1 s8.1). Every app run, of every kind, goes through **one run queue**: console runs, previews, app-lane widget runs, Page runs (a Page's taps call Python on it) and Shortcut runs. Runs take the queue in arrival order, queue-then-busy (contract Q1). Two rules sit beside that order:
 
-`wants-run` is honoured by the next T1-T4 run. The widget's `reload_policy` (ADR-002, mirrors `TimelineReloadPolicy`) tells WidgetKit when to come back; default `.atEnd`; a widget that requests `after(date)` gets the date clamped to the L2 estimator's expected interval so we do not ask for reloads the budget will refuse.
+- A T2 or T3 batch that finds a run in progress defers its widgets (`deferred`) rather than waiting.
+- A console script's change to a stdlib or bundled module stays in place for later runs until the app quits (contract s6, Kept); the Restart help says so.
 
-### 5.2 What runs where
+On a refresh the queue calls each source once and hands the same data to every output that asked for it ([`documents/restructuring/03-structure.md`](../restructuring/03-structure.html), the Project's outputs; built with the Project, phase C).
 
+### 4.3 The batch rule, expiry and stuck runs
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 4: 5.2 What runs where, scrolls sideways" style="--tw:640px" markdown="1">
+- **Batch rule (T2, T3).** A widget run with `budget_s` is stopped by the contract's <span title="Our grade scale, nine steps: D, D+, C-, C, C+, B-, B, B+, A. An idea&#x27;s ladder is the letter it reaches before any cap.">ladder</span> (interrupt and SIGURG wake at 0, every 250 ms; hard stop at 2.0 s; deadline 5.0 s; then `stuck`), so its worst case is `budget_s + 5.0` s. A batch starts the next widget only if `elapsed + budget_s + 5.0 <= 25 s`; the rest are `deferred` and keep `wants-run`. A widget deferred twice in a row for time runs first next batch. Default `budget_s` 5; the manifest may set up to 20.
+- **Expiration handler (T2).** Set before the first run. When iOS calls it: stop the run in flight, write `expired` for it and `deferred` for the rest (neither badges), append the run's `run_id` to that widget's `status.json` `expired_runs` (the last 8), put `backgrounded` in the crash marker, reschedule, and call `setTaskCompleted(success: false)` at once. The run is stopped, not resumed (r1 s5.3; amendment 3 item 1; 10-26 2:40 AM item 3).
+- **Stuck.** A run past the 5.0 s deadline holds the only interpreter. The stuck widget gets `stuck` and its badge; the batch ends; the rest are `deferred`; T2 completes and reschedules; T3 returns "Python is busy in PyWidget. Open the app to continue." Every run then refuses until the thread returns (`unstuck`) or the app is quit. The app never quits itself (r1 s5.3).
+- **Our scheduling never counts as the script's failure.** `expired` and `deferred` count toward neither the loop breaker nor a handler's attempts; `stuck` and a dead process count toward both (r1 amendment 3 item 3).
 
-| Extension (no Python linked) | App |
-|---|---|
-| View-tree decoder and SwiftUI interpreter (ADR-002), all families and modes | CPython 3.15.1, the bridge (section 8), every widget and script run |
-| State precedence (section 7.1) from `tree.json` + `status.json` + `entitlement.json` + tree `version` | Writes `tree.json`, `status.json`, `entitlement.json` (StoreKit, Pro purchase line), the Activity log rows (L2 s3.3) |
-| Timeline construction: entries from the tree, badge flag, the synthetic stale entry (7.4) | Scheduling T2; the L2 estimator |
-| `getSnapshot`/`placeholder`: last good tree, else the premade's bundled preview tree, else the renderer's placeholder; never a run | Premade gallery previews (real runs on the user's data, chair ruling item 1) |
-| App Intent entity query for the widget picker (reads `widgets/index.json`; Pro premades only with the entitlement, chair ruling item 2) | Keeps `widgets/index.json` current |
-| C2-Q1 Swift-only location fix, if the chair approves (section 9) | Reads that fix as `source="refresh"` on the next run |
+## 5. Widget-lane runs
 
-</div>
+- **What may run there.** A script whose manifest says `lane: widget`. A person never types it: the send decides (r1 11-01 6:17 PM item 3, T-0972) by running `lane.py`'s scan in the app's Python, one scanner, no Swift port. A clean scan gets `lane: widget`; a banned import gets `app`, the save still succeeds, and one line names the import and says the widget updates when the app runs. A script that reads `pywidget.device` modules the extension cannot answer (location, pedometer, until T-0053's second extension) gets `app` the same way (r1 11-02 4:02 AM item 2).
+- **Allowlist.** `json`, `datetime`, `math`, `os`, `re`, `zoneinfo`, `collections`, `itertools`, `string`, `textwrap`, `pywidget`, `pywidget_ui`. Never in the extension: `ssl`, `urllib`, `http`, `email`, `sqlite3`, `asyncio`, `ctypes`, `_decimal`, `multiprocessing`, `concurrent`, and every native package. Enforced twice: the save-time scan, and a `sys.meta_path` finder installed only in the extension that raises `ImportError` with the same text (r1 10-29 8:03 AM item 2).
+- **The mirror.** The app copies each `lane: widget` script and its manifest into `lane-scripts/<id>/` on save, as one directory rename; the extension reads it and never writes it (r1 11-02 4:02 AM item 1).
+- **Time.** `budget_s` 2 s, deadline 4 s; `getTimeline` returns the cached tree at its own wall-clock deadline and never waits on the script thread.
+- **Marker and demotion.** `widgets/<id>/ext.marker` is written before the run and cleared after. A marker found at the next call means killed or stuck: the id joins `widgets/.lane-demoted.json`, the widget shows its last good tree with the badge, the app lane refreshes it, and it returns to the widget lane only after a successful app run and the person's say-so, or when new script text is saved (section 3 item 6). The declared lane stays in `pywidget.json` (r1 11-01 1:03 PM item 1).
+- **Margin, in the lane.** <span title="How many people show, in their own words, that they want this.">Need</span> = 2 x (peak - residue), never below 0, where residue is the process's footprint now minus its baseline and peak is `widgets/<id>/lane-peak`, or the first-run figure with none (section 3 item 4). A run that did not raise the process's lifetime peak leaves `lane-peak` alone. A run the margin refuses is `oom_guard`: skipped, cached tree, stale clock, `lane-refused` down. A refusal in a later process demotes; two in one reload prove nothing. A completed run clears `lane-refused` (r1 11-01 1:03 PM item 2).
+- **The premade list** (`widgets/premade/lane.json`): a premade goes on only if its scan is clean and every device call it makes is answered in the extension (r1 11-02 4:02 AM item 2). Under the size rule the list stops being a fixed set: each premade is placed by its own figures.
+- **The Refresh button.** On iOS 18 to 26 the Button intent runs in the extension, so a lane widget reruns there; `getTimeline` reruns Python only when the tree's `sampled_at` is older than the widget's minimum interval, and treats a future `sampled_at` as old (r1 10-29 8:03 AM item 2; 11-01 6:17 PM item 1).
+- **Pro premades** are gated before their script runs in the extension, as before drawing.
+- **A run that cannot start** (no runtime config, Python unavailable, not queued, no marker) is `error`, type `InternalError`: one row per turn with reason `start_failed`, `status.json` updated, the badge, no demotion (r1 amendment 4).
+- **End of every lane run.** The extension's runner writes the row, the detail file and `status.json` through the same store, under the same lock, as the app (r1 11-03 9:09 PM Fix A, T-1764).
 
+## 6. Memory
 
-App Group layout (one container, `group.<bundle>.shared`): `widgets/index.json`; `widgets/<id>/tree.json`, `status.json`, `wants-run`, `render-fault.json`, `state.json` (1.1); `entitlement.json`; `location/last.json` (C2); `log/runs.jsonl` (L2 s3.3, 14 days). Everything the extension reads is a file written atomically by the app, so a half-written file is never seen. (Amended 2026-10-26 for 1.1, chair amendment at the end: the extension also writes `state.json` and `actions.jsonl` under a lock; v1 unchanged.) The in-flight run marker is the contract's crash marker in the app's Caches (contract s7), not an App Group file: under (b) only the app needs it. One marker for one event (review S11 gap c); the (c) lane will need an App Group marker of its own and its ADR line names it.
+- **C**, the extension's ceiling: 30 MB on the one phone measured (iPhone 15); it may differ by device class. **A**, the app's background limit: unmeasured, read, never assumed. **B**, the render path's own baseline: not measured on its own; that phone's extension footprint at rest was 4.8 to 7.0 MB.
+- **One margin rule** for every process: a run or a render starts only if headroom >= 2 x its last measured peak above baseline. Headroom comes from `os_proc_available_memory()`; C is never compiled in. On the Simulator that call returns 0, read as "unknown": the check passes and the row records `headroom=unknown`; a unit test drives the rule with stubbed headroom (r1 s6).
+- **App first run:** 2 x 13.4 MB, about 27 MB, because the app runs heavy scripts (r1 s6; 11-01 1:03 PM). **Widget first run:** section 3 item 4.
+- **Render path.** Decode, then render only if headroom >= 2 x the render cost of this widget's last tree, measured after the SwiftUI render; otherwise the error card's `tree_too_large` variant. No older tree is kept to fall back to.
+- **<span title="A measured fact that holds a grade below a letter, however good the rest is.">Caps</span>** (tree bytes, inline bitmap bytes) are numbers outside the schema (ADR-002 Ruling 4).
+- **The app's background batch:** the margin per widget at its start; a refusal is `oom_guard`, no badge, and the batch goes on.
 
-### 5.3 Background expiry and the stuck state (T2, T3)
+## 7. What a widget shows when something goes wrong
 
-- **Expiration handler (T2).** Set on the `BGAppRefreshTask` before the first run. When iOS calls it: `stop(run_id)` on the run in flight, write `status.json` `last_outcome=expired` for that widget and `deferred` for the rest (neither sets the badge; both are our scheduling, not the script), append `backgrounded` to the crash marker (contract s7), reschedule the task, and call `setTaskCompleted(success: false)` **at once**, without waiting for the 5.0 s deadline. The run in flight is **stopped, not resumed**: if the app is suspended before it unwinds, the pending stop lands when the app next runs, and the run row is `expired`. `expired` never counts toward the loop breaker (7.2 `killed`), so a healthy widget is never demoted for our own scheduling.
-- **Stuck (B1).** One interpreter, one script thread (contract s1-s2): a run that passes the 5.0 s deadline holds the only interpreter, so nothing can be abandoned and nothing else can run. When the bridge reports `stuck` during a batch: the stuck widget's `status.json` gets `last_outcome=stuck` (badge on the last good render, 7.1 row 4); the batch ends at once; every remaining widget gets `deferred` (no badge, stale clock) and keeps `wants-run`; T2 calls `setTaskCompleted(success: false)` and reschedules; T3 returns the intent error "Python is busy in PyWidget. Open the app to continue." From then on every run, Restart, widget trigger and Shortcut refuses with `stuck` (contract s5); T1 shows the contract's console banner ("Quit and reopen PyWidget to run Python again. Your files are saved."). The app never quits itself.
-- **Recovery.** Either the thread returns (`unstuck`, contract s5): the state clears and the next trigger runs the deferred widgets first; or the process ends (the user quits, or iOS terminates the suspended app): the next launch finds the crash marker, records the stuck widget as `stuck` (not `killed`), and T1 runs normally in the new interpreter. A widget that ends `stuck` or `killed` twice in a row on a background trigger gets `background=false` (7.2 loop breaker); `expired` and `deferred` never count.
-
-## 6. Memory budget, margin, and what happens when the device numbers differ
-
-Three unknowns, not one (review S3):
-- **C**, the extension's memory ceiling on the oldest supported phone. Until the board line "L3 device run" lands, C = 30 MB **[recalled]**; it may differ by device class [recalled, unverified].
-- **A**, the app's memory limit as a background process (T2, T3). **[recalled]**, no number assumed.
-- **B**, the v1 extension's render-path baseline (no Python linked, decoder and SwiftUI interpreter loaded, before a tree is decoded). **Unmeasured.** The spike's 7.7 MB and 14.3 MB are Python-linked processes (review S2), so they are upper bounds at best; the first renderer task measures B in the Simulator (open item 2) and the device run measures it on a phone.
-
-The runtime rules below read the process's own headroom with `os_proc_available_memory()` and one margin rule; none of them compiles in C or A. C is a **design-time input only**: it sets the ADR-002 schema caps (node count, image bytes, entries per timeline) so that B + tree cost stays well under it. When the device run lands, the caps change; the runtime rules do not.
-
-**One margin rule:** a run or a render starts only if available headroom >= 2 x its last measured peak above baseline (first run of a widget: 2 x 13.4 MB, the spike's heavy run above its 5.1 MB baseline, i.e. 27 MB). The same rule serves the app, the render path and the (c) lane.
-
-**Simulator fallback:** `os_proc_available_memory()` returns 0 on the Simulator (spike). A 0 is read as "unknown", not "none": the check passes and the run row records `headroom=unknown`. A unit test drives the rule with a stubbed headroom source (0, below, at and above the margin) so the device path is tested before a device exists.
-
-
-<div class="tbl" role="region" tabindex="0" aria-label="Table 5: 6. Memory budget, margin, and what happens when the device numbers differ, scrolls sideways" style="--tw:1201px" markdown="1">
-
-| Process and path | Rule | Measured (Simulator) | When it fails |
-|---|---|---|---|
-| Extension, render path (v1) | decode, then render only if headroom >= 2 x the render cost measured for this widget's last tree (first render: 2 x the fixture tree cost the renderer task measures). Render cost = footprint after the SwiftUI render, not after decode (review S8c) | B unmeasured; fixture tree cost unmeasured | error card with reason `tree_too_large` (7.2) |
-| Extension, gallery snapshot | same rule; the snapshot never runs Python in v1 | 14.3 MB before Python on one Python-linked observation (S5); v1 value unmeasured | same |
-| Extension, (c) lane (flag, off) | the margin rule, counting the warm residue; heavy imports never allowed | tiny 12 MB cold; warm residue 27 MB after heavy | demotion, 7.2 |
-| App, widget batch (T2, T3) | the margin rule per widget at its start; no batch total (the batch rule in 5.1 bounds time, A bounds memory and is read, not assumed) | heavy 18.5 MB peak cold (16.0 lazy) on a 5.1 MB baseline; the real app's baseline is higher and unmeasured | widget outcome `oom_guard`, skipped, no badge; batch continues with smaller widgets |
-| App, T1 and IDE | no check (foreground) | - | - |
-
-</div>
+### 7.1 Precedence (first match wins, per timeline entry)
 
 
-Gates for opening the (c) flag (all on device, Release, oldest supported phone, n >= 6):
-- G1: C and B measured; the allowlisted tiny run's cold peak + B <= 0.5 C.
-- G2: two widgets in one warm extension process after their runs <= 0.6 C.
-- G3: the demotion path (7.2) exercised by a deliberate over-allocation and seen in the Activity log as `killed` (or `oom_guard`) -> lane `app`. (Under jetsam the process cannot tell "out of memory" from other kills; the marker without `backgrounded` is the evidence.)
-If C on device comes in under 2 x (B + the measured render cost of the largest premade), (c) is dropped from the roadmap, not just gated, and this ADR gets a line saying so.
+<div class="tbl" role="region" tabindex="0" aria-label="Table 3: 7.1 Precedence (first match wins, per timeline entry), scrolls sideways" data-n="1" style="--tw:781px" markdown="1">
 
-## 7. Failure-mode spec
-
-Aligned with state-spec.md s1 (Maren) and the chair ruling of 8:08 PM (Pro card). Precedence, first match wins, evaluated by the renderer at each timeline entry:
-
-### 7.1 Precedence
-
-
-<div class="tbl" role="region" tabindex="0" aria-label="Table 6: 7.1 Precedence, scrolls sideways" data-n="1" style="--tw:781px" markdown="1">
-
-| # | State | Source of truth in the App Group | Shows |
-|---|---|---|---|
-| 1 | Update card | `tree.json` `version` is not one this renderer reads (newer or unsupported older; state-spec s1 wording) | card (never a run) |
-| 2 | Pro card | the widget is a Pro premade (`index.json`) and `entitlement.json` lacks its entitlement **or is missing** (a missing file means no entitlement: restore on a new device not yet run, ruling item 3) | card; the app has stopped writing this widget's timeline and has reloaded it (7.2 `entitlement_lost`) |
-| 3 | Error card | no `tree.json` for this id (never a good render): "Script error", line, "Tap to open". Or `render-fault.json` says `tree_too_large`: a separate copy variant (the script did nothing wrong; copy is Maren's, board follow-up) | card |
-| 4 | Error badge | `status.json` `last_outcome` in {`error`, `timeout`, `stuck`, `killed`} and `tree.json` exists | last good render + badge |
-| 5 | Stale mark | the entry is at or after `sampled_at + stale_after` (ADR-002; absent `stale_after` means never stale, as the shipped DSL, 7.4) | last good render + clock |
-| - | Normal | otherwise (`oom_guard`, `expired`, `deferred` set no badge) | the entry's view |
+| # | State | Source | Shows |
+| --- | --- | --- | --- |
+| 1 | Update card | `tree.json` `version` is not one this renderer reads | card |
+| 2 | Pro card | a Pro premade whose entitlement is missing from `entitlement.json` (a missing file means none) | card; the app stops writing its timeline and reloads it |
+| 3 | Error card | no `tree.json` yet ("Script error", line, "Tap to open"); or `render-fault.json` says `tree_too_large` (its own copy) | card |
+| 4 | Error badge | `last_outcome` in {`error`, `timeout`, `stuck`, `killed`}, or the badge rules of 7.2, and a tree exists; or the id is on `.lane-demoted.json` | last good render + badge |
+| 5 | Stale mark | the entry is at or after `sampled_at + stale_after` | last good render + clock |
+| - | Normal | otherwise | the entry's view |
 
 </div>
 
 
-Never a blank widget. The traceback never leaves `status.json` and the Activity screen; the card shows exception type and file only on Home Screen medium and larger, line number only on the Lock Screen (state-spec s3, tested by `check_states.py`).
+Never a blank widget. The traceback never leaves `status.json` and the Activity screen; the card shows exception type and file on medium and larger, the line on the Lock Screen. `last_outcome` is for display only: nothing that counts or labels a failure reads it (r1 10-26 2:40 AM item 2).
 
-### 7.2 Outcomes and what each does
+### 7.2 Outcomes
 
-`status.json` outcomes are decided by Swift. The bridge reports `bridge-outcome/1` `status` (contract s7); the mapping (contract s11 A4) is: `ok`, and `exit` with code 0 and a tree -> `ok`; `error`, `syntax_error`, `internal_error`, `exit` with a non-zero code, and `exit` 0 **without** a tree -> `error` (type `SystemExit`, `NoTree`, `SyntaxError` or `InternalError` as the bridge reports); `interrupted` after a budget stop Swift sent -> `timeout`; the bridge's `stuck` status -> `stuck`. `oom_guard`, `killed`, `expired`, `deferred`, `entitlement_lost` and `tree_too_large` never reach Python.
+The bridge's `status` maps to the widget's outcome (contract s11 A4): `ok` with a tree, or `exit` 0 with a tree, is `ok`; `error`, `syntax_error`, `internal_error`, `exit` non-zero and `exit` 0 without a tree are `error`; `interrupted` after our budget stop is `timeout`; `stuck` is `stuck`. `oom_guard`, `killed`, `expired`, `deferred`, `entitlement_lost` and `tree_too_large` never reach Python. The per-outcome table (what each writes, shows and does next) is r1 s7.2, with these changes since:
 
+- **`killed` after an expiry.** Launch recovery for a marker whose `run_id` is in `expired_runs` writes nothing to `status.json`: no badge, the streak neither counts nor resets; the run row is `killed` with the "iOS closed PyWidget in the background" copy (r1 10-26 2:40 AM item 1). The list is trusted only for ids the expiration handler listed in this process; a <span title="A test written in advance. If it fires, we drop the idea.">kill</span> matched only by the file counts, and four in a row on background triggers demote (r1 11-03 9:09 PM Fix B, T-1765).
+- **Loop breaker.** Two `killed` or `stuck` in a row on background triggers set `background=false`; the widget runs only on T1 until a T1 run succeeds.
+- **`oom_guard` and the badge.** `oom_guard_since` is set by the first refusal and kept by later ones and by `deferred`; any outcome of a run that started clears it. A refusal reads as already under way, and badges at once, unless the old status is a fresh picture's (an outcome present and no `failing_since`); this covers a missing status and a refusal during a failure streak. Otherwise `showsBadge` is true for `oom_guard` when `ts` is at least 60 s after `oom_guard_since`, so one reload's refusals stay unbadged and the next reload's badge; the "already under way" fallback is `ts` minus 61 s (r1 11-03 7:51 PM item 2; 8:00 PM; 11-05 2:12 AM; 2:48 PM, rule D).
+- **The drawn badge** is the demotion read or `showsBadge`, never `showsBadge` alone (r1 11-05 7:55 PM item 7).
+- **`entitlement_lost`.** The app rewrites `entitlement.json`, stops writing Pro widgets' timelines, and reloads each Pro kind at once; Pro timelines are written at most 24 h ahead, which bounds the refund lag (r1 s7.2, A2).
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 7: 7.2 Outcomes and what each does, scrolls sideways" style="--tw:1600px" markdown="1">
+### 7.3 Timeline and the stale entry
 
-| Outcome | How it is detected | App Group effect | Widget shows | Then |
-|---|---|---|---|---|
-| `ok` | `finished` with a `widget_tree` record that validates against the schema (8.3) | `tree.json` replaced atomically; `status.json` `last_outcome=ok`, `failing_since` cleared | normal | - |
-| `error` | as mapped above, or the tree fails schema validation (`schema_error`, line = the `render` call) | `status.json`: outcome, exception type, file, line, `failing_since` (first failure in the streak), traceback (contract s8 `error`, mapped as contract s11 A7) | badge (or error card if no tree yet) | widget stays scheduled |
-| `timeout` | `budget_s` ran out (default 5 s; manifest up to 20 s; Shortcut 20 s) and the stop ladder ended the run before the 5.0 s deadline | as `error`, type `TimeoutError`, line = the frame executing at interrupt | badge | next widget in the batch, if the batch rule (5.1) allows |
-| `stuck` | the run passed the 5.0 s deadline (contract s5) | `status.json` outcome `stuck`, the frame if known | badge | batch ends; 5.3 |
-| `expired` | the T2 expiration handler fired during this widget's run | `status.json` `last_outcome=expired`; run row `expired` | no badge; stale clock | 5.3; not a loop-breaker count |
-| `deferred` | not started: batch time (5.1), a console run in progress, or a stuck run | `status.json` unchanged except `deferred_since`; `wants-run` kept | no badge; stale clock | runs first on the next trigger |
-| `oom_guard` | headroom under the margin rule (6) at run start (background only) | `status.json` outcome `oom_guard`; widget not run this batch | no badge (nothing failed in the script); stale clock | run again on T1 (foreground, no check) |
-| `killed` | the contract's crash marker (Caches, contract s7) exists at launch with no `finished`; the marker names the run's `run_id`, Swift's job record gives widget id and trigger | outcome `killed`; with `backgrounded` in the marker the Activity row says "iOS closed PyWidget in the background", without it "closed while it ran, possibly out of memory" (contract s7 copy) | badge, VoiceOver "Last run was stopped" | after 2 consecutive `killed` or `stuck` on background triggers the widget gets `background=false` in `index.json` and runs only on T1 until a T1 run succeeds, then `background` is restored. The one loop breaker. A `killed` with `backgrounded` that followed an `expired` is not counted |
-| `entitlement_lost` | the app sees the entitlement go (StoreKit `Transaction.updates`, or the launch check of current entitlements) | `entitlement.json` rewritten without it; the app stops writing Pro widgets' timelines and calls `reloadTimelines(ofKind:)` for each Pro kind at once | Pro card (7.1 row 2) | restored the same way when the entitlement returns |
-| `tree_too_large` (renderer) | the render rule in section 6 fails | the extension writes `widgets/<id>/render-fault.json` (`status.json` is the app's) | error card, `tree_too_large` variant. No older tree is kept in the App Group, so there is no "smaller good tree" to fall back to | app reads the fault on next launch, logs a run row, shows it in Activity |
-| (c) lane only: extension run fails, times out or is killed | same markers, in the extension | `lane=app` written to `index.json` by whichever process finds the marker | last good render + badge | the widget never returns to the extension lane without a successful foreground run and the user's confirmation in Activity |
+Entries are taken from `tree.json` in date order, keeping the newest past one. Let T = `sampled_at + stale_after`: if T has passed the current entry is stale from the start; otherwise one synthetic entry is inserted at T wherever it falls, cloning the entry before it, and every entry at or after T is stale. An absent `stale_after` means never stale, as the DSL does; the IDE's New-widget template sets 30 minutes (r1 s7.4, A1, Ruling 3).
 
-</div>
+## 8. Writers and the App Group
 
+- **Every App Group file is written atomically:** temp file, `fsync`, `rename` in the same directory (r1 amendment 2 item 1).
+- **The extension writes only:** `widgets/<id>/wants-run`; `location/last.json` (if C2-Q1 lands, section 14); `widgets/.lane-demoted.json` and `.lane-demoted.lock`; `widgets/<id>/ext.marker`, `lane-peak`, `lane-refused`; for lane runs, `tree.json`, `status.json` and the run log through the shared store under `state.lock`; `widgets/<id>/render-fault.json`; `data/<id>/fields.json` only if the bound-fields build starts (section 14); from after 1.0, `widgets/<id>/state.json` under `state.lock`. It never creates `widgets/<id>/` or `state.lock`. The app writes every other file.
+- **Two writers of a tree.** A writer does not replace a tree whose `sampled_at` is newer than its own, not past the clock, and whose `tree.json` was modified after this run started (r1 11-01 6:17 PM item 2). With the flag on, a run that started before the folder's `sent_at` (and that `sent_at` is not past the clock) writes no tree and no status; the send's rename goes under `state.lock` (r1 11-01 6:38 PM). No script can freeze its widget.
+- **Reserved names.** `widgets/` holds id folders, `index.json`, `.trash/`, `.lane-demoted.json` and its lock, and nothing else; widget ids have no leading dot, are not `index.json`, take no `pywidget.` prefix in a user script, and are unique without regard to case. Any new file needs a dated line here (r1 amendment 2 item 4; 11-01 1:03 PM item 1).
+- **Names held for after 1.0, nothing written in 1.0:** `state.json` (schema `pywidget.state/1`), `state.lock`'s state use, `failed.jsonl`, `controls/`, `secrets/`, `state_at` in `tree.json` (r1 amendment 2 item 4).
 
-**Entitlement lag (S7).** A refund or revocation reaches the app only when it runs: `Transaction.updates` delivers while the app is running, and the launch check catches the rest [recalled, browser read open]. Until then the extension keeps showing Pro content from entries already written. The app therefore writes Pro widgets' timelines no further than 24 h ahead, so the lag is at most the time to the next app run or 24 h, whichever comes first.
+## 9. The run log (Activity)
 
-### 7.3 Timeout mechanics (app side)
+Per widget, outside `widgets/<id>/`: `log/widgets/<id>/runs.jsonl` and `log/widgets/<id>/out/<row>.json`; console runs in `log/console.jsonl`. Swift writes every key; the Python runner writes nothing in `log/` or in `status.json`. Kept 14 days; a detail file at most 24 KiB (output's last 16 KiB, cut at a line start only if that keeps 8 KiB; the error's 8 KiB, innermost user frame always kept); details for the newest 100 rows per widget; `runs.jsonl` at most 1 MiB; all of `log/` at most 24 MiB. On the device only, never sent; it leaves only through Export on the share sheet. The widget never reads `log/`. Row keys and the full rules: r1 11-02 5:15 PM.
 
-Each widget runs on the contract's script thread (8.1) with `budget_s`. When the budget runs out Swift calls `stop(run_id)` and the contract's ladder (s5) runs: interrupt + SIGURG wake at 0, repeated every 250 ms; hard stop through `sys.monitoring` at 2.0 s; deadline at 5.0 s. Bytecode stops at the next boundary. `time.sleep`, `select`, socket reads and lock waits are woken by SIGURG and stop at the next `EINTR` (0.24-0.25 s on host, contract probe I1), not when they return. Only a C call that holds the GIL and never checks signals can outlast the ladder; that is `stuck` (5.3), never "abandon and move on": with one interpreter and one script thread there is nothing to move on to. Every network call the stdlib wrapper (L8) makes still carries its own socket timeout of min(remaining, 10 s), as defence in depth. The Activity screen shows the duration and the frame.
+## 10. What a widget may claim
 
-### 7.4 Timeline construction and the stale entry
+"A widget shows its script's last run, not a live feed." No launch document, store text or post gives a refresh figure, and none says the app refreshes in the background until a signed phone has seen it fire. A number comes back only by a new chair line with all four of r1 10-30 5:14 PM's conditions (the widget-lane form final, the reload log's count, `lane: widget` widgets only, Apple's wording attributed); new store copy also goes through creative approval. Apple's range may appear in the App Guide, attributed, with "typically".
 
-The provider turns `tree.json`'s `timeline.entries` into `TimelineEntry`s in date order, dropping entries older than now except the newest past one (so the widget always has a current entry). Each entry carries the badge flag from `status.json`. Then, **answering Maren's s1 question**: let T = `sampled_at + stale_after`. If T is already past, the current entry is stale from the start. Otherwise the provider inserts one synthetic entry at T **wherever T falls**, cloning the view of the entry before it, with `stale = true`; every entry at or after T is stale too (review S9: with entries at 0 and 60 min and `stale_after` 30 min, the mark now appears at 30 min, not 60). Without this entry the stale mark would wait for the next reload, which is exactly when it is least likely to come.
+## 11. The bridge interface
 
-**Absent `stale_after` means never stale** (review S10). That is what the shipped DSL does (`pywidget_ui` `Timeline.stale_at` is None, `is_stale` False), so a script branching on `When("stale", True)` and the renderer's clock agree. The 30-minute figure of L1 rule c becomes a default the premades and the `pywidget` device modules' templates set explicitly, not a renderer default. One fixture (a two-entry timeline with T between them, and the same with `stale_after` absent) is tested by the DSL suite and the renderer's state tests. Reload policy: the tree's, default `.atEnd`, clamped as in 5.1.
+Contract names win (r1 s8.3): `run(RunRequest{run_id, source, argv, cwd, stdin, context: .app | .widget | .shortcut, budget_s})` returns a `RunHandle`; output streams as records with `seq`; the run ends with `finished` carrying `bridge-outcome/1`. A widget run emits one `widget_tree` record before `finished`, which names it as `tree_seq`; Swift validates it against `viewtree.schema.json` and writes `tree.json` atomically only on `ok`. `stop(run_id)` is run-scoped and idempotent; `restart()` returns `RestartReport`. `peak_mb` and the trigger are Swift's. Every run starts with the contract's reset (s6): user modules cleared, the interpreter kept. Widget runs get `stdin: .none`.
 
-### 7.5 Logging
+## 12. Background refresh (T2)
 
-Every run (any trigger, any outcome) appends one row to `log/runs.jsonl` with the L2 s3.3 columns (`ts`, kind, id, trigger, duration ms, peak MB, outcome, sensors), plus `run_id` and `headroom` (MB at start, or `unknown`). Trigger and peak MB are Swift's: the trigger from its job record keyed by `run_id`, peak MB from `phys_footprint` sampled by `task_info` around the run (contract s11 A2, A8); duration from the contract's `duration_s`. 14 days, export by share sheet only (PROPOSAL-002 s5). That row set is also the device evidence for section 6's gates.
+- **For whom.** With the lane flag on, T2 runs app-lane and demoted widgets only; a `lane: widget` widget already reruns on its budgeted reloads. With the flag off, every placed widget. It runs only while the person has Pro (plan 11-04 item 6).
+- **When it asks.** Per placed widget, from its saved timeline: `after(d)` asks d; `atEnd` asks the last entry's date; `never` asks nothing; a stale mark earlier than that asks the stale mark; no tree, an unreadable tree or `wants-run` asks now. Any ask more than 24 h out reads as 24 h. The earliest ask, from the moment of the reschedule call, never under 15 minutes, goes to `submit` (r1 11-05 7:55 PM items 1 to 6).
+- **When it is scheduled.** The task is registered before launch ends. The app submits at the end of every T1 and T3 batch and when the scene goes to the background, and T2 submits at its start and its end. Expired and stuck reschedule by the same rule, with no back-off.
+- **Whether it ships.** In 1.0 only if a signed phone sees it fire (plan phase B's proof); otherwise it is cut by one build with no data change, and the strike list of r1 10-30 1:35 PM item 5 applies. Apple promises no cadence and no time of day.
 
-## 8. Runtime and bridge: restart rule and interface
+## 13. Threat model
 
-The bridge contract, pywidget/docs/design/bridge-contract.md (Pernille, v2 ebca07ba, with Idris's review S1-S6 binding), is this ADR's interface. Its names and rules win; this section only adds what is ADR-specific.
+The widget lane runs the person's own scripts on their own phone inside our sandbox. It is a memory guard and a fair way to assign blame; it gives a script nothing the app lane lacks (r1 10-29 4:54 PM).
 
-### 8.1 One interpreter per process
+- **Must hold before the store build turns the lane on:** (a) no route crashes the app, loses or corrupts anything saved, or makes the runtime write another widget's tree or status, and a stale picture always carries its badge; (b) Swift fails closed (an unreadable report key means demote and end the process; a memory blow-up ends at the marker); (c) an ordinary script never demotes or blames another widget, and the false-alarm suite stays at zero; (d) ordinary concurrency loses nothing.
+- **"Not held" may list** a route that needs deliberate reach into runtime internals when its worst effect is wrong blame among the person's own widgets, the lane's checks off for the rest of that process, or an off-list import; and forging a runtime file by path, where the effect ends at that widget's next status write by Swift or at demotion. Each entry names its route, effect and backstop. It may not list a route an ordinary script can hit, a break in (a) or (b), or a fail-open with no backstop (r1 10-29 4:54 PM item 3, widened 11-02 4:02 AM item 4, 11-03 7:51 PM item 1, 9:09 PM item 1).
+- **Stated limit:** a script run in the app sits in `widgets/<id>/`, so one that clears the folder beside its `__file__` deletes its own widget's runtime files only (r1 11-02 4:02 AM item 3).
+- A new review round opens only for a false alarm, a route an ordinary script can hit, a break in (a), (b) or (d), or the phone sitting.
 
-`Py_InitializeFromConfig` once; never `Py_FinalizeEx`. CPython cannot be finalized and re-initialized safely once numpy or any module with static state has loaded (panel note, 7:55 PM). Every run, widget or console, executes on the contract's **script thread** (contract s2, S1): one dedicated pthread created before any `PyConfig_*` call, Python's main thread, with all of `start()` on it; a stop thread and a tooling thread beside it; the main thread never in the C API. Not a GCD serial queue: a queue does not pin a thread, so signal handlers would not run on it (contract s0 item 3, s11 A14).
+## 14. Held for later, with their triggers
 
-### 8.2 Restart rule: clear user modules, keep the interpreter
+- **C2-Q1, a Swift-only location fix** in a second widget extension that alone carries `NSWidgetWantsLocation`, for widgets whose manifest declares `location`; at most 3 s inside `getTimeline`; When In Use only, never Always (r1 Ruling 2 and its 10-26 7:57 PM line; T-0053). It ships when that second extension is built and measured.
+- **Bound fields** (`data/<id>/fields.json`, schema `pywidget.fields`; ADR-002's bound-fields row): built only if the widget lane is proven impossible (section 3 item 9). This restates r1's trigger, "the lane fails its gates", because gates G1 to G3 no longer decide the lane (section 1 item 2).
+- **Widget interactivity after 1.0** (T5; state ops in the extension; the `pending` queue): the design is r1's amendments 1 to 3 and the 10-26 2:40 AM line, gated by their G-L5 tests.
 
-The rule is contract s6, and it replaces the five steps this section had (review S11). In short: every run starts with a reset on the script thread with the GIL; `restart()` is the same reset without a run, plus the stop; it is refused while `stuck`. Cleared: `__main__`; every `sys.modules` entry not present at bootstrap and not inside the app bundle; `sys.path`, `sys.argv`, `os.environ`, cwd and the other process settings listed there; user changes to `builtins`; signal handlers (SIGURG via `rearm_wake`); root `logging` handlers; `atexit` callbacks (run, then cleared); then `gc.collect()`. Kept: the interpreter, every bundle module in whatever state the user left it, the same `sys.stdin/stdout/stderr` objects, and threads (a run ends only when its non-daemon threads finish; threads alive after the deadline are counted in `background_threads`).
+## 15. What changes the numbers
 
-ADR-specific: widget runs get the reset at the start of each run like any other run, so one widget's modules never shadow another's. Stdlib modules a widget imported stay resident; that is the accumulation measured in the warm row and is accepted in the app (no tight ceiling), and the reason heavy imports are never allowed in the (c) lane. Closing file handles and sockets the `pywidget` package hands out is **not v1**: the package does not track them, and the contract does not close them (s11 A18). A leaked handle lives until quit; revisit if the run rows show it.
+The phone sitting (T-4282, from T-0680): the Investors' phones and, if one can be had, the oldest supported phone, on an internal build carrying a size ladder (scripts of rising memory and time) and an over-allocation premade for G3. It reports per phone: free at rest; each rung's P and T in the widget and in the app; the first rung killed or refused; two lane widgets in one process; and the 3-day reload log. Its chair line sets W, the first-run figure and the store build's flag default. The 2 x margin moves only if a rung that fits is killed or a rung that would have fitted is refused. The 60 s badge gap, the 25 s batch end and the 5 s default budget each come back to the chair if the phone's log contradicts them.
 
-### 8.3 The bridge contract as this ADR's interface
+**What would make this fail.** A first run at 9 MB that is really a 15 MB script: it is killed once, its neighbours in that reload lose a run, and it moves to the app; that cost is accepted, because the ruling puts the widget first and the kill is how the phone proves the script too large. A phone with less free memory than the iPhone 15 refuses more first runs; the sitting finds that. And 11 MB is small: the lane holds scripts a little larger than Countdown, not much more. That is the ruling's own picture: small in the widget, large in the app.
 
-Names from contract s3 and s7, replacing this section's draft names (s11 A1-A11):
+## 16. Board
 
-- `run(RunRequest{run_id, source: .file(URL) | .text(String, name), argv, cwd, stdin: .interactive | .preset | .none, context: .app | .widget | .shortcut, budget_s})` -> `RunHandle(run_id)`. Widget runs use `context: .widget`, `stdin: .none` (`input()` raises `EOFError`), `budget_s` from the manifest. The trigger is not a bridge field; Swift keeps it in its job record keyed by `run_id`.
-- Output streams as records (`stdout`, `stderr`, `status`, ...) with `seq`; Swift assembles them. The run's last record is `finished` with `bridge-outcome/1` (`status`, `duration_s`, `background_threads`, `error` with contract s8 frames). Section 7.2 maps `status` to the widget outcome.
-- **Widget tree channel (contract s11 A5, the gap this ADR owned):** a `widget_tree` record kind, emitted once by the widget runner before `finished`, payload the ADR-002 serializer's JSON (`pywidget_ui` v1); `finished` carries its `seq` as `tree_seq` (null for non-widget runs and for widget runs that produced no tree). A record, not an outcome field, so the tree is streamed and size-capped like any other record, and an `exit` before `render()` is visibly "no tree". Swift validates it against `viewtree.schema.json` and writes `tree.json` atomically only on `ok`. Pernille adds the kind in contract v3 (board follow-up).
-- `stop(run_id)`: run-scoped and idempotent; a late Stop never hits the next run.
-- `restart() async -> RestartReport{cleared_modules, background_threads, stuck}`.
-- `peak_mb` is not a bridge field; Swift measures it (7.5).
-- `set_lane(widget_id, lane)` is not a bridge call; the lane lives in `index.json`.
-- Widget-mode guarantees the Python side keeps: `render()` returns a serializable tree, no `input()`, no UI calls, device modules follow C2's context matrix (`LiveOnlyInWidget` etc.).
+Building this text: T-4280 (the lane choice per widget, part of T-4181), T-4281 (the editor's lane-and-measure display, part of T-4186), T-4282 (the phone sitting), T-0972 (the send decides the lane), T-0976 (a run from before the send), T-1765 (Fix B), T-0793 (background refresh), T-0053 (C2-Q1), T-0682 (bound fields, held). The archive's chair lines name the rest.
 
-## 9. C2-Q1: a Swift-only location fix in the widget extension (recommendation for the chair)
-
-The question (C2-device-api.md s7): under option (b), a background Python run with When In Use gets no fresh fix; `location.sample()` returns the app's cache. The extension, however, may take a one-shot fix when `isAuthorizedForWidgetUpdates` is true ("if called upon to refresh within a few minutes of having been seen", CLLocationManager.h, [SDK]). A Swift-only step in the provider could take it and write `location/last.json` with `source="refresh"`, for the next Python run to read. The premade "distance to a saved place" (ADR-001 C11) is the first user.
-
-What it costs: `NSWidgetWantsLocation` in the extension's Info.plist; CoreLocation linked in the extension (memory **unmeasured**; expected small, Simulator follow-up line); one code path in the provider (request, wait at most 3 s inside `getTimeline`, write, continue with the cached tree); the fix is used by the **next** run, so the widget's number updates one run later, not at this reload. It does not change the privacy label (location is already When In Use for the app; the usage string covers it) [recalled; Wrenna's matrix row to confirm]. It stays inside this ADR's rule: no Python in the extension.
-
-Recommendation: **approve, narrowed.** Only widgets whose manifest declares `location` (C2 context matrix) trigger the request; the provider skips it when `isAuthorizedForWidgetUpdates` is false or the cached fix is younger than the widget's `max_age`; the written fix carries `sampled_at` so the Python side applies the same `stale_after` honesty. Ship it in 1.0 only if the distance premade is among the 8 the Day 14 cut line needs (ADR-001 3.3); otherwise 1.1. Without it that premade is honest but usually old, which is the state Maren's stale mark was drawn for, so nothing breaks either way. The chair decides; the device modules spec (C2 s7) then gets its `source="refresh"` row confirmed.
-
-## 10. Consequences
-
-- The extension is small (320 KB `.appex` in the spike) and cannot crash on user code. Widget bugs are app-side runs with full tracebacks in Activity.
-- Freshness is the L2 budget's: typically 40-70 reloads a day for a frequently viewed widget [saved Apple page K:53-56; research/freshness-claims.md A10; was [recalled], T-1807], with T1 free. A widget that wants minute-level data gets the stale mark, by design.
-- The renderer and the app must agree on file formats through the schema (`viewtree.schema.json`) and the two small JSON files in section 5.2; a test fixture per state in 7.1 belongs to the first renderer task.
-- (c) stays possible without rework: the allowlist scan and the lane field are built now, cheap, and off.
-- The Pro card (ruling item 3) needs no run and no Python: the app stops writing and the extension reads one flag file; the app reloads Pro kinds when the entitlement changes (7.2 `entitlement_lost`).
-- The IDE and widgets share one interpreter: widget runs queue behind console runs, a console script's monkeypatch to a bundled module persists until quit, and a stuck console script stops widget runs until it returns or the app is quit (5.1, 5.3). 4.4 holds for limits, not for the interpreter's state.
-
-## 11. Risks
-
-1. **The ceiling is still recalled.** Section 6 is written against C so the device run changes a constant; if C is far lower than 30 MB the render path itself needs the cap in 6, and that is a schema limit, not an architecture change.
-2. **Background runs on a phone are slower than the Simulator** (cold file cache, CPU). The 5 s default per widget may need to rise; the run rows will show it.
-3. **Extensions loading Python from the containing app** is unneeded under (b) in v1 (nothing to load), which removes spike risk 5 from the v1 path; it returns with (c).
-4. **BGAppRefresh is not guaranteed** [recalled]; the Shortcuts automation (T3) is the user's own lever, and the premade library should ship one "refresh my widgets at 7:00" shortcut example.
-5. **A stuck run costs every widget its background freshness until the app is quit.** One interpreter (8.1) makes this unavoidable; 5.3 bounds it to a badge on one widget and the stale clock on the rest, never a blank widget or a demoted healthy widget.
-6. **The 25 s batch end is against a [recalled] 30 s limit.** If the device shows less, the batch rule's 25 changes; the expiration handler covers the gap either way.
-
-## 12. Open (for Odalys's review and Ines's chair line)
-
-1. Device run: C, A, B, cold start, render-path peak (board line "L3 device run", waits on the membership, due 2026-10-28).
-2. Renderer footprint on a fixture tree in the Simulator; the render rule (section 6) needs a measured render cost before `tree_too_large` means anything. (The 0.8 C constant is gone, review S6.)
-3. Whether reloads from T3/T4 count against the budget (L2 measure item).
-4. CoreLocation's cost in the extension if C2-Q1 is approved.
-5. Contract v3: the `widget_tree` record kind and `tree_seq` (8.3), Pernille.
-6. The state fixture set (one `tree.json`/`status.json`/`entitlement.json` triple per row of 7.1) as renderer tests; belongs to the first renderer task line.
-7. Measure B, the v1 render-path baseline, and the fixture tree's render cost (section 6), first renderer task.
-8. `tree_too_large` card copy (7.1 row 3), Maren.
-
-## 13. Evidence
-
-- pywidget/docs/research/L3-runtime-spike.md s2-s7 (edbcb42c): every number in sections 2 and 6.
-- ADR-001 3.1 C4 and 3.3; ADR-002 (timeline, reload policy, `sampled_at`/`stale_after`).
-- state-spec.md s1-s3 and the chair ruling of 8:08 PM (38e91d1c and after).
-- L2-refresh-budget.md s1 (budget and exemptions; L2 tags them [recalled]; the browser read is closed by the saved Apple page K:31-77, research/freshness-claims.md A13, T-1807), s3 (foreground sweep), s5 (run row).
-- C2-device-api.md s7; CLLocationManager.h line 253 (`isAuthorizedForWidgetUpdates`, [SDK]).
-- Board line C1 note (Idris 7:55 PM, e4ae2bce): restart clears user modules, keeps the interpreter.
-
-## Review (Odalys)
-
-Odalys, 2026-10-25 8:19 PM ET. Independent review (Commandment 13): I read the document, not the author's reasoning. No edit to sections 0-13. Read against: L3-runtime-spike.md s1-s7 (edbcb42c); the table regenerated from the raw lines with `python3 -I pywidget/ios/scripts/summarize.py pywidget/ios/bench/*.txt` (12 rows, 0 errors); `pywidget/ios/project.yml`; state-spec.md s1-s3 and Ines's chair ruling (8:08 PM); board line C1 (Idris 7:55 PM); bridge-contract.md (1ba53f42) with Idris's review and S1-S6 (f84b7d9b); `pywidget/python/pywidget_ui/__init__.py` (5769e9c9) for `stale_after`. No device, no build.
-
-**Verdict: the decision stands; the spec around it does not yet.** Option (b) for v1 and (c) gated are supported by every number checked. Two blockers sit in the failure spec (7.2, 7.3, 8.2, 5.1 T2), both from the bridge contract landing after this ADR was written. Fix B1-B2 and the should-fix items S1-S12 in an amendment pass, then the chair line. Counts: 2 blockers, 12 should-fix, 6 notes.
-
-### Numbers (section 2, 3, 6 against spike s3 and bench/*.txt)
-
-- **N1 (note).** Section 2: 7 rows, 49 numeric cells, all equal to spike s3 and to the regenerated table (start-to-probe rounded to whole ms). Warm rows: the raw lines carry the process's earlier init time (7.7-11.2 ms); "0" is the right reading for the warm call itself.
-- **N2 (note).** "+23 ms, +4 MB" (s2 item 1): init + tiny script is 22.1-24.1 ms over the four cold extension modes; footprint +4.2 to +4.4 MB. Holds. Bundle sizes match spike s4.
-- **S1 (should-fix). Lazy imports cut peak by 2.5 MB, not 3.5** (s3 rows c and e). Like for like, zip vs zip + lazy: app 18.5 -> 16.0, extension 20.7 -> 18.2, both 2.5 MB (n = 6/6 app, 6/5 extension). 3.4 MB appears only when comparing full no-lazy (21.6) with zip lazy (18.2), two changes at once. The error starts in spike s1 and s5; correct both. The time figure (110.5 -> 73.9 ms, 106.5 -> 73.0 ms) is right.
-- **S2 (should-fix). "Extension baseline 7.7 MB with no Python linked"** (s3 row b) is mislabelled. The spike's extension links `Python.xcframework` (`project.yml` lines 53-54); 7.7 MB is the footprint with the framework loaded, before `Py_InitializeFromConfig`. The v1 extension's no-Python baseline is **unmeasured**. The error is in the safe direction (7.7 is likely an upper bound), but s6's render row cites it as a measured v1 baseline.
-- **N3 (note).** T1's "a call from `App.init` never reaches the extension" has no source in the spike document. Cite the run or mark it [observed, unlogged].
-
-### Memory rules (section 6): do they reduce to one constant C?
-
-**No. They reduce to three unknowns and two margins that disagree.**
-
-- **S3 (should-fix). The app row does not use C at all.** 60 MB per batch, 25 MB per widget and the 25 MB `oom_guard` floor are absolute numbers. They depend on a second unknown, the app's background memory limit (call it A, [recalled] in the row), and none is derived from a measurement: the heavy run peaks at 18.5 MB total, 13.4 MB above the Simulator baseline of 5.1, and the real app's baseline (SwiftUI, StoreKit, the IDE's resident modules) is not 5.1. When the device run lands, C changes and these do not.
-- **S4 (should-fix). The margins disagree.** The (c) lane demotes at available < 2 x the script's last peak. The app skips a widget at available < 25 MB while budgeting 25 MB per widget: a 1 x margin, so a widget at its budget with the floor's headroom reaches the limit. Use one margin rule (2 x the widget's last measured peak, as in (c)).
-- **S5 (should-fix). The render budget has no measured baseline B, and the one Simulator signal says it is already spent on the gallery path.** 0.5 C = 15 MB at the recalled C. Before any Python, the extension measured 14.3 MB on the gallery `getSnapshot` path (1 observation) and 14.6 and 14.3 MB in 2 of 24 cold runs (the post-reinstall runs, spike s3 notes). That is 0.48-0.49 C before a tree is decoded. These are Python-linked processes (S2), so v1 may be lower; until the renderer-only baseline is measured (open item 2), "over 0.5 C: cap the tree" may fire for every tree on that path. Measure B in the Simulator first and write the render rule as B + tree cost.
-- **S6 (should-fix). The 0.8 C refusal is a compiled constant; the extension can read its own headroom.** If the limit differs by device class [recalled, unverified], one C is wrong on every phone but one. Write the runtime rules on `os_proc_available_memory()` (refuse when headroom after decode falls under a set fraction of the measured render cost), as the (c) lane already does, and keep C only as the design-time input for the ADR-002 schema caps. Simulator returns 0, so the rule needs a Simulator fallback that is tested. Then the device number really does change one constant: the caps.
-
-### Failure precedence (7.1) against state-spec s1 and the 8:08 PM ruling
-
-The order matches: update card, Pro card, error card, error badge, stale mark, normal; Pro card after the update card and before the error card, as ruling item 3 says. Badge outranks stale, as s1 says. Findings are in the rows' sources and copy.
-
-- **S7 (should-fix). The Pro card does not reach a widget already on screen.** Ruling item 3: never the last good render after the entitlement is lost. The app "stops writing" (7.1 row 2), but WidgetKit keeps the future entries it already holds until its own reload, so Pro content keeps showing. The app must call `reloadTimelines(ofKind:)` when the entitlement changes, and 7.1 must say a **missing** `entitlement.json` means no entitlement (the ruling names "restore on a new device not yet run"). Refunds reach the app only when it runs [recalled: `Transaction.updates`]; state the lag.
-- **S8 (should-fix). `tree_too_large` has no source file and no copy.** (a) "Badge on the last good render if one is smaller" (s6 row 1, 7.2): `tree.json` is replaced atomically and no older tree is kept anywhere in the App Group layout (5.2). Either keep `tree.prev.json` or drop the clause. (b) Row 3 shows "Script error", line, "Tap to open", but the script did nothing wrong; state-spec s3 has no copy for this case. Maren needs a variant. (c) The footprint is checked "after decode"; the SwiftUI render that follows is the larger allocation. Check after render or budget for it.
-- **S9 (should-fix). The stale entry is only added after the last entry** (7.4). If `sampled_at + stale_after` falls between two entries (entries at 0 and 60 min, `stale_after` 30 min), no entry is added and the mark appears at 60 min, 30 minutes late. Insert the synthetic entry at the stale time wherever it falls, cloning the entry before it. With that change 7.4 answers state-spec s1's question; without it, only for single-entry timelines.
-- **S10 (should-fix). Two defaults for an absent `stale_after`.** 7.4: absent means 30 minutes (C2 L1 rule c). The shipped DSL (`pywidget_ui` v1, `Timeline.stale_at` / `is_stale`): absent means never stale. A script that branches on `When("stale", True)` and the renderer's clock will disagree for every widget that omits it. Pick one; the DSL and the renderer test the same fixture.
-- **N4 (note).** Row 1 says `version` "newer than the renderer reads"; state-spec s1 says "not one this renderer reads" (older unsupported versions too). Use the spec's wording.
-
-### Restart rule (8.2) and interface (8.3) against the C1 note and the bridge contract
-
-The C1 note (Idris 19:55: clear the user's modules, keep the interpreter) is met by 8.1-8.2 in principle. The contract (s1-s6, with S1-S6 binding) differs in mechanism in the places below. The contract was signed after this ADR; its names and rules should win, as 8.3 itself says.
-
-- **B1 (blocker). "Abandon the worker and move on" is impossible under the contract.** 7.2 `timeout`, 7.3 and 8.2 step 1 say: interrupt, after 2 s abandon the thread, mark the interpreter tainted, let the batch move on, restart before the next run. The contract has one interpreter, one script thread, one run at a time (s1, s2): a thread still inside `run` holds the only interpreter. Its ladder is interrupt + wake at 0, repeat every 250 ms, hard stop at 2.0 s, deadline at **5.0 s**, then `stuck`: run, restart, widget runs and Shortcut runs all refuse until the thread returns (`unstuck`) or the user quits. The ADR needs: the ladder's numbers in 7.2/7.3; a `stuck` outcome (what the batch does with the remaining widgets, what each widget shows, what the run row says); per-widget worst case = timeout + 5.0 s, used in the T2/T3 arithmetic.
-- **B2 (blocker). T2 has no margin and no expiration handler.** Batch deadline 25 s + 5.0 s stop deadline = 30 s, the task's recalled limit: the same arithmetic made Idris cut the Shortcut budget to 20 s (contract S4). Idris's carry item 3 adds the expiration handler: `stop(run_id)` and `setTaskCompleted` at once, without waiting for the deadline. Without it iOS ends the app, `run.lock` is left behind, 7.2 records `killed`, and after two of those the widget is set `background=false`. The loop breaker would then demote healthy widgets for our own scheduling fault. Fix the T2 deadline (20 s, as T3) and add the handler to 5.1.
-- **S11 (should-fix). 8.2 differs from contract s6 in six places.** (1) Which modules are cleared: 8.2 uses `__spec__.origin` under the scripts directory or App Group. The contract uses "not present at bootstrap and not inside the app bundle", which also catches modules with no origin that the user put in `sys.modules`. (2) stdio: 8.2 resets the stdin/stdout/stderr wrappers; the contract keeps the same objects for the life of the process. (3) File handles and sockets "the pywidget package tracks": no such tracking in the contract; nobody owns it. (4) `atexit`, `logging` and signal handlers: 8.2 says these cannot be undone; the contract runs and clears `atexit`, restores the root logger and signal handlers, and restores `builtins`. (5) Timing: 8.2 scrubs after each widget; the contract resets at the start of every run. (6) Threads: 8.2 counts "surviving non-daemon threads"; under the contract a run does not end until its non-daemon threads finish, and `background_threads` counts threads alive after the deadline. Replace 8.2 with a citation to contract s6 plus anything ADR-specific.
-- **S12 (should-fix). 8.1 and 8.3 names and the thread model.** 8.1: "every run takes [the GIL] on one serial queue". The contract uses one dedicated pthread script thread that is Python's main thread, with all of `start()` on it (s2, S1); a GCD queue is the spike fault in contract s0 item 3. Name mismatches in 8.3, ADR -> contract:
-
-
-<div class="tbl" role="region" tabindex="0" aria-label="Table 8: Restart rule (8.2) and interface (8.3) against the C1 note and the bridge…, scrolls sideways" style="--tw:640px" markdown="1">
-
-| ADR-007 8.3 | bridge-contract.md |
-|---|---|
-| `run(source\|path, mode: script\|widget, deadline, trigger, stdin: prompt provider) -> RunResult` | `run(RunRequest{run_id, source: .file(URL)\|.text(String, name), argv, cwd, stdin: .interactive\|.preset\|.none, context: .app\|.widget\|.shortcut, budget_s})` -> `RunHandle`; outcome later as a `finished` record |
-| `mode` (2 values) | `context` (3: app, widget, shortcut) |
-| `deadline` | `budget_s` |
-| `trigger` | not in the request; the run row's trigger is Swift-side |
-| `RunResult.outcome`: ok, error, timeout, ... | `bridge-outcome/1` `status`: ok, exit, error, interrupted, syntax_error, internal_error; plus `stuck` |
-| `value` (tree JSON) | **absent**: the contract leaves widget view-tree output out of scope ("Not in this page") |
-| `stdout`, `stderr` in the result | streamed `stdout`/`stderr` records with `seq` |
-| `traceback{type, file, line, text}` | `error` (contract s8, structured frames, UTF-16 columns) |
-| `duration_ms` | `duration_s` |
-| `peak_mb` | absent |
-| `surviving_threads` | `background_threads` |
-| `interrupt()` | `stop(run_id)` (run-scoped, no-op on a finished run) |
-| `restart()` -> modules cleared, threads surviving | `restart()` -> `RestartReport{cleared_modules, background_threads, stuck}` |
-| `run.lock` in the App Group | crash marker in Caches + `faulthandler` file (contract s7); "backgrounded" wording (Idris carry item 4) |
-
-</div>
-
-
-  Three of these are gaps, not renames: (a) **the tree has no channel**: name the owner and the mechanism (a `finished` payload field, an `emit` kind, or a file the runner writes); (b) **one outcome enum**: map `interrupted` by budget to `timeout`, and give `exit` without a tree, `syntax_error`, `internal_error` and `stuck` a row in 7.2. G3 expects `oom` in the Activity log, but 7.2 only ever writes `killed` under (b). (c) **`peak_mb`** is needed by the run row and the (c) demotion rule; Swift samples `phys_footprint` around each run. Two crash markers for one event should become one.
-- **N5 (note). The IDE shares the interpreter.** 4.4 ("IDE runtime untouched by any widget limit") is true for limits. But widget runs queue behind console runs (contract Q1, queue-then-busy), and a console script's monkeypatch to a stdlib or bundled module stays in place for later widget runs (contract s6, Kept). Say both in 5.1 or 10.
-- **N6 (note).** 7.3 says a script in `time.sleep` or a socket read stops "when it returns". With the contract's SIGURG wake (S2) it stops at the next EINTR (0.24-0.25 s on host, probe I1). That is the better behaviour; the text understates it.
-
-### For the chair
-
-Accept option (b) for v1 and (c) gated: no number contradicts them. Hold the failure spec until B1 and B2 are amended. S9 decides whether 7.4 closes state-spec s1's question. C2-Q1 (s9) is outside what I checked against evidence; nothing in it conflicts with the memory rules, since its cost is listed as unmeasured.
-
-## Changes after review
-
-Idris, 2026-10-25 8:28 PM ET. Each finding in "Review (Odalys)" and each row of bridge-contract.md s11 (Pernille, ebca07ba), and the edit that answers it. Odalys's section is untouched. Status stays proposed for Ines's chair line.
-
-
-<div class="tbl" role="region" tabindex="0" aria-label="Table 9: Changes after review, scrolls sideways" style="--tw:640px" markdown="1">
-
-| Finding | Edit |
-|---|---|
-| **B1** abandon impossible with one script thread | New 5.3 "Stuck": the batch ends, the stuck widget gets `stuck` + badge, the rest `deferred` (no badge, stale clock, `wants-run` kept), T2 completes and reschedules, T3 returns a busy error, every later run refuses until `unstuck` or quit; recovery by `unstuck` or next launch. 7.2 rows `stuck`, `deferred`; 7.3 rewritten on the contract ladder; 8.2 step 1 removed. Risk 5 added. (s11 A12, A15) |
-| **B2** T2 25 s + 5.0 s = 30 s, no expiration handler | 5.1 batch rule: a widget starts only if `elapsed + budget_s + 5.0 <= 25 s`, so the batch ends by 25 s, stuck or not; applies to T2 and T3. 5.3 expiration handler: `stop(run_id)`, `expired`/`deferred` outcomes, `backgrounded` in the marker, reschedule, `setTaskCompleted(success: false)` at once; the run is stopped, not resumed (contract carry item 3 answered). `expired` never counts toward the loop breaker. Risk 6 added |
-| S1 lazy imports 2.5 MB, not 3.5 | Section 3 rows (c), (e) corrected with the like-for-like pairs; L3-runtime-spike.md s1 and s5 corrected with a note |
-| S2 7.7 MB mislabelled | Section 3 row (b) relabelled (framework linked, not initialized; v1 no-Python baseline unmeasured); section 6 says the same |
-| S3 three unknowns, app row not on C | Section 6 rewritten around C, A, B; app rule reads headroom, no absolute 60/25 MB figures |
-| S4 margins disagree | One margin rule (2 x last measured peak above baseline; first run 27 MB from the spike) for app, render and (c) lane |
-| S5 render budget has no baseline | B defined, unmeasured; render rule is headroom against measured render cost; open items 2 and 7 |
-| S6 0.8 C compiled constant | Runtime rules on `os_proc_available_memory()`; C kept only for ADR-002 schema caps; Simulator 0 read as unknown, with a stubbed-headroom unit test |
-| S7 Pro card on a widget on screen | 7.1 row 2: missing `entitlement.json` = no entitlement; 7.2 `entitlement_lost`: rewrite, stop writing, `reloadTimelines(ofKind:)` at once; lag stated, Pro timelines written at most 24 h ahead |
-| S8 `tree_too_large` source and copy | (a) "smaller good tree" clause dropped, no older tree kept; (b) separate card variant, copy to Maren (open 8); (c) render cost measured after the SwiftUI render, not after decode |
-| S9 stale entry only after the last entry | 7.4: synthetic entry inserted at `sampled_at + stale_after` wherever it falls, cloning the entry before it |
-| S10 two defaults for absent `stale_after` | 7.4: absent means never stale, matching the shipped DSL; 30 min moves to premade and device-module templates; one shared fixture for DSL and renderer tests |
-| S11 8.2 differs from contract s6 in six places | 8.2 replaced by a citation to contract s6; reset at the start of every run; handle tracking declared not v1 (s11 A16, A17, A18) |
-| S12 8.1 queue and 8.3 names | 8.1 names the script thread (contract s2, S1); 8.3 rewritten in contract names: `RunRequest`, `context`, `budget_s`, `RunHandle`, records, `finished`/`bridge-outcome/1`, `stop(run_id)`, `RestartReport`, `background_threads`, `duration_s` (s11 A1, A3, A6, A9, A10, A11, A13, A14) |
-| S12 gap (a) / s11 **A5** tree channel | 8.3: a `widget_tree` record before `finished`, `tree_seq` in `finished`; record chosen over an outcome field (streamed, size-capped, "no tree" visible). Pernille adds it in v3 (open 5) |
-| S12 gap (b) / s11 A4 one outcome enum | 7.2 mapping paragraph: bridge `status` -> widget outcome, including `exit` without a tree and `internal_error`; G3 now expects `killed` (or `oom_guard`), since jetsam is not distinguishable under (b) |
-| S12 gap (c) / s11 A2, A8 `peak_mb`, trigger, two markers | 7.5: trigger and peak MB are Swift's (job record, `task_info`); 5.2 and 7.2 `killed`: one marker, the contract's in Caches; `run.lock` removed from the App Group layout |
-| s11 A7 traceback fields | 7.2 `error` row cites the contract s11 A7 mapping |
-| s11 A19 | covered by B2 |
-| N3 `App.init` claim unsourced | 5.1 T1 marked [observed, unlogged] |
-| N4 update card wording | 7.1 row 1 uses state-spec s1's wording |
-| N5 IDE shares the interpreter | 5.1 "Runs queue behind the IDE" and a line in section 10 |
-| N6 SIGURG wake understated | 7.3 says sleeps and socket reads stop at the next `EINTR` (0.24-0.25 s, probe I1) |
-| N1, N2 | no change needed (numbers hold) |
-
-</div>
-
-
-Deferred, with reason: none of the review's items. Two things this pass chose not to do: closing handed-out file handles (8.2, not v1: nothing tracks them), and a `tree.prev.json` fallback for `tree_too_large` (dropped instead; the caps should keep that path rare, and the run rows will show if it is not).
-
-## Chair line (Ines), 2026-10-25 9:08 PM ET
-
-Form: independent views, then the chair's decision (C13, C27, C30). Views read: Idris's ADR (00cab1a4) and his amendment pass (76a833f5); Odalys's independent review (a317a344, d0c79bee); bridge-contract.md v2 s5-s7 and s11 (Pernille, ebca07ba); state-spec.md s1 and my 8:08 PM ruling; C2-device-api.md s7; ADR-001 3.3 (cut line). I checked the amendment against each blocker, not only the mapping table.
-
-**Ruling 1: accepted, with three amendments. v1 is option (b); option (c) stays built-in and switched off.** Odalys found no number that contradicts (b), and her two blockers are closed in the text, not just in the table:
-- B1: 5.3 replaces "abandon and move on" with the contract's `stuck` state. One interpreter means a stuck run stops every widget until it returns or the app is quit; risk 5 says so, and the cost is one badge plus the stale clock on the rest. Accepted as the honest cost of one interpreter.
-- B2: the batch rule admits a widget only if `elapsed + budget_s + 5.0 <= 25 s`, and the expiration handler completes the task at once. `expired` and `deferred` never count toward the loop breaker, so our own scheduling never demotes a healthy widget. That was the failure I cared about most.
-- The (c) flag opens only on G1-G3 on a device, recorded in a new ADR line, never silently. If C on device fails the 2 x (B + largest premade render) test, (c) leaves the roadmap. Nothing about (c) is v1 work beyond the allowlist scan and the lane field.
-
-Amendments (binding on the build):
-- **A1. User widgets start honest.** 7.4 and S10 stand: absent `stale_after` means never stale, as the shipped DSL does. But a user who never writes `stale_after` then gets old data with no mark. So the IDE's "New widget" file template sets `stale_after=timedelta(minutes=30)` on its timeline, as the premades do. The default stays in the language; the honest choice is what the user starts from. Board line (Pernille, template text and DSL test; Idris wires it into the IDE).
-- **A2. Pro timelines 24 h ahead (7.2, S7)** is accepted as the refund-lag bound. It costs at most one extra reload a day per Pro widget; L2's budget absorbs it.
-- **A3. No stdlib change from this ADR.** The bundle contents are the stdlib cut's (pywidget/docs/research/stdlib-manifest.md, chair line there). Under (b) the extension ships no stdlib at all.
-
-**Ruling 2: C2-Q1 approved, narrowed as section 9 says, with one change to the release condition.** The extension may take one Swift-only location fix in `getTimeline` and write `location/last.json` (`source="refresh"`, `sampled_at` set) for the next Python run. Only widgets whose manifest declares `location`; skipped when `isAuthorizedForWidgetUpdates` is false or the cached fix is younger than `max_age`; at most 3 s inside `getTimeline`, then the cached tree, with or without a fix; written atomically; no Python in the extension; nothing leaves the phone.
-- Change: section 9's condition "1.0 only if the distance premade is among the 8 the cut line needs" cannot be decided. The cut line counts any 8 of 12 that render correctly, and the distance premade renders correctly without the fix (honest but old, with the stale mark). So the fix never gates the cut line. It is a **1.0 stretch**: in 1.0 only if it lands by Day 13 (2026-11-03) with (i) CoreLocation's footprint in the extension measured in the Simulator and inside section 6's margin rule, (ii) a test where no fix arrives in 3 s and the provider returns the cached tree, and (iii) Wrenna's privacy-matrix row confirming no label change (location is already When In Use; that it stays so is **[recalled]** until the row lands). Otherwise 1.1. It starts only after the renderer's first fixture set; the cut-line work comes first.
-- Why yes at all: "distance to a saved place" is the premade a buyer understands in one glance, and without the fix it is usually stale on the Home Screen, which is where buyers judge it. One code path and one Info.plist key is a small price for that, and it stays inside Ruling 1 (no Python in the extension).
-- C2-device-api.md s7: the `source="refresh"` row is confirmed by this ruling; Idris updates s7 from "open" to this line when he builds it.
-- **Chair line (Ines), 2026-10-26 7:57 PM ET, T-0221: Apple's location page.** Source: matrix s1d A4, saved as `research/inbound/apple/developer.apple.com/documentation_widgetkit_accessing-location-information-in-widgets.md-2979df7a.html` (Idris, 1:16 AM ET, #64 ruling); I read the saved page myself. Two sentences bear on this ruling. "For most widgets, requesting When In Use authorization is the right choice, because of its better privacy and battery life implications." And under "Isolate location usage with multiple widget extensions": "If your app provides multiple widgets and only some of the widgets use location, separate your widgets into multiple extensions. Add the `NSWidgetWantsLocation` key to the extension that contains widgets that use location." The page also confirms what C2-Q1 rests on: the key goes in the extension, the purpose strings in the app, and the widget gets location only "for a short period of time after the widget is visible".
-  1. **C2-Q1 stays approved and a 1.0 stretch by Day 13 (2026-11-03), with a fourth condition. (iv)** `NSWidgetWantsLocation` goes in a second widget extension that holds only widgets whose manifest declares `location` (the distance premade first). `PyWidgetExtension` never declares the key and never links CoreLocation. Condition (i) measures the second extension's footprint. If (iv) cannot land with (i)-(iii) by Day 13, C2-Q1 goes to 1.1; the key is never put in the one extension as a shortcut. Which kinds move, and how a user script that declares `location` is placed in the right extension, are Idris's, in C2 s7 when he builds it (T-0053). Why: in one extension, the system would ask about location when someone adds a countdown. A permission prompt with no reason the person can see costs trust in a first review and in the first week of ratings, and Apple's page says how to avoid it. The second target can share the `Shared/` sources (project.yml), so its cost is one target, one Info.plist, and the footprint check.
-  2. **Always stays out of v1 and 1.1.** ADR-001 Revised (7:36 PM) already said "v1 stays When-In-Use"; Apple's sentence agrees; and C2-Q1 works under When In Use, because it rests on the widget being in use, not on Always. Always comes back only with an ADR line that names a feature which cannot work without it. L1 s3's "Ask for Always only when a widget declares location" is struck (L1, same time), and L1's significant-location-change row, which needs Always, is not v1 or 1.1 under this line.
-  3. **PWL003 stops suggesting Always** (L2 s3.2). There is no other grant in v1, so it fires on any script that reads location. It tells the author to show `sampled_at` and to say when no location is available (Apple: "indicate that the user’s location is not currently available"; C2's `unavailable_reason`). Words: Maren; Idris writes them into L2 and the lint.
-
-**Ruling 3: yes, 7.4 closes state-spec s1's question** ("Idris: check whether ADR-002's provider already does this"). The provider inserts the synthetic stale entry at `T = sampled_at + stale_after` wherever T falls, not only after the last entry (S9), and the current entry is stale from the start if T has passed. That is stronger than s1's "appends one entry". Three deltas for state-spec s1, Maren's file, so I do not edit it:
-- The trigger reads `now >= sampled_at + stale_after` (at or after, as 7.1 row 5); s1's `>` would leave the entry at T unmarked.
-- Absent `stale_after` means never stale (A1 above).
-- The precedence table gains the Pro card between the update card and the error card (my 8:08 PM ruling; already on Maren's Pro card line).
-- One note for the renderer task: the synthetic entry can become the timeline's last entry, which moves an `.atEnd` reload to T. That is the right time to ask, and it is not an extra reload; the shared fixture (7.4) should assert it.
-
-The Idris line "Maren states open items 2-3" keeps its Simulator items (corner clipping, rendering modes); its timeline-entry question is answered here.
-
-Open, owned elsewhere: device numbers C, A, B (L3 device run, waits on the membership, due 2026-10-28); contract v3 `widget_tree` (Pernille); `tree_too_large` copy (Maren); renderer fixtures and B (first renderer task).
-
-## Corrections after acceptance (Idris, 2026-10-26)
-
-Not a change to the decision (option b stands); facts and citations only.
-
-1. **T5 (CORRECTIONS U1-34).** The row said a widget action intent runs in the app process. The SDK says the process is whichever target contains the intent ("By default, the system performs an intent or entity query using any available target", doc comment of `IntentExecutionTargets`), and it can be pinned only from iOS 27 (`allowedExecutionTargets`, AppIntents.swiftinterface 3111-3112). On our iOS 18 floor the row was true only for iOS 27+. The row now says so; the 1.1 design for 18-26 (ops in the extension, signed action links, a queue) is L5-interactivity.md s4. That design has the extension write `state.json` and `actions.jsonl`, which changes 5.2's "everything the extension reads is a file written atomically by the app"; that is for a 1.1 chair line (L5 s15 item 1), not changed here. T5 also no longer names "configuration" intents: a widget's configuration intent is resolved by the timeline provider in the extension and runs no Python.
-2. **Citations (CORRECTIONS U1-06).** "L2 s5" (5.2 twice, 7.5) is L2 s3.3: L2 has no section 5. T7's "L2 s1" is L2 s2 item 6, which says push is not v1; location wake not being v1 rests on ADR-001.
-3. **T3's "about 30 s [recalled]"** now has a primary source: the `LongRunningIntent` doc comment, "In iOS, iPadOS, tvOS, visionOS, and watchOS, the system gives tasks 30 seconds to run in the background unless you use the methods of this protocol to extend that runtime." The row text is unchanged; the batch rule's 25 s stands.
-
-## Chair amendment (Ines), 2026-10-26 12:15 AM ET: 5.2 writers for 1.1
-
-Ruled in L5-interactivity.md s15 (chair note, items 1 and 2); this records the architecture change. Option (b) stands, and so does "no Python in any extension". Idris's corrections 1-3 above are accepted.
-
-1. **5.2's rule, restated.** Every App Group file is written atomically (temp file plus `rename` in the same directory). The extension writes only: `widgets/<id>/wants-run` (T6) and `location/last.json` (C2-Q1, if it lands), as in v1; and from 1.1, `widgets/<id>/state.json` and `widgets/<id>/actions.jsonl`, both under `flock` on `widgets/<id>/state.lock`. Every other file the extension reads is written by the app. The old sentence was already not literal for `wants-run` and the location fix.
-2. **What the extension may do to state** is a closed op set fixed in Swift (L5 s3.2: `set`, `set_arg`, `toggle`, `add`, `cycle`, `toggle_member`, `clear`). No expressions and no user code. A new op is an app update and a dated line here.
-3. **One write path, bounded lock** (L5 s15 S3-S5): one Swift type in the shared framework does every state write in both processes; the extension's lock wait is non-blocking with at most 200 ms of retry; the lock is never held across an `await` or a Python run; an unreadable state file is kept as `state.bad.json`, never silently reset.
-4. **Names held from v1 (L5 R6), nothing written in v1:** `widgets/<id>/state.json` (`schema`, `rev`, `scopes.shared`), `state.lock`, `actions.jsonl`, `controls/`, `secrets/`. `secrets/link.key` is created by the app at first 1.1 launch, not in v1 (L5 R10 dropped).
-5. **7.5, reserved values (L5 R8):** triggers `widget_action`, `control`, `deep_link`; outcome `conflict`. The v1 log reader shows any unknown trigger or outcome as text and never fails.
-6. **T5 on iOS 18-26:** a handler action defaults to `fallback="open_app"`, a signed link that opens the app and runs the handler in the foreground; `queue` is opt-in, and a queued tap is never dropped (refused at 100 rows).
-7. **Gate:** no 1.1 state code before G-L5-1 (a) and the widened G-L5-5 pass in the Simulator and Odalys has reviewed L5 s5 independently.
-
-## Chair amendment 2 (Ines), 2026-10-26 1:12 AM ET: items 1, 4, 6 after the L5 state review
-
-Ruled in L5-interactivity.md s15 (chair note 2). Odalys's independent review (T-0108, 508b6e4b) found that the 12:15 AM layout could lose a queued tap and run a handler twice. Idris's answers (312d6a1e) move the queue into `state.json` as a `pending` list, written ahead with the tap's ops in one commit. Items 2, 3 and 5 above are unchanged. Items 1, 4 and 6 are restated here, and item 7's gate list widens. The 12:15 AM text is kept above as it was written.
-
-1. **5.2's rule, restated (replaces item 1).** Every App Group file is written atomically: temp file, `fsync`, then `rename` in the same directory. The extension writes only these files:
-   - `widgets/<id>/wants-run` (T6), as in v1;
-   - `location/last.json` (C2-Q1, if it lands), as in v1;
-   - from 1.1, `widgets/<id>/state.json`, under `flock` on `widgets/<id>/state.lock`.
-
-   The extension never creates `widgets/<id>/` or `state.lock`. If either is missing, the tap fails visibly. The app writes every other file the extension reads. `failed.jsonl` is written by the app only. `widgets/` holds id folders, `index.json` and `.trash/`, and nothing else; any new file there needs a dated line here and a reserved id.
-4. **Names held from v1, nothing written in v1 (replaces item 4):**
-   - `widgets/<id>/state.json`, schema `pywidget.state/1`, with fields `schema`, `epoch`, `rev`, `next_seq`, `scopes.shared`, `pending`, `ops_log` (L5 s5.1);
-   - `state.lock`, `failed.jsonl`, `widgets/.trash/`, `controls/`, `secrets/`;
-   - in `tree.json`, `state_at: [epoch, rev]`.
-
-   `actions.jsonl` is released. `secrets/link.key` is still created at first 1.1 launch. Widget ids are reserved so that none can collide with this layout: no leading dot, not `index.json`, no `pywidget.` prefix in a user script, and unique without regard to case (T-0118, before the Day 13 freeze).
-6. **T5 on iOS 18-26 (replaces item 6).** The default is still `fallback="open_app"`, and `queue` is still opt-in.
-   - Every handler tap, on every path, makes one locked commit before any Python runs: the ops and a `pending` row.
-   - `attempts` is counted in a locked commit before each handler run. At 3 attempts, the row moves to `failed.jsonl` (reason `error`, `timeout`, `killed` or `conflict`) and leaves `pending`.
-   - A `queue` tap is refused, never dropped, in two cases: when `pending` holds 100 rows, and when that widget's `failed.jsonl` holds 100 rows.
-   - A queued row's ops stand when its handler fails. A live row's ops are restored from `before`.
-7. **Gate, widened.** No 1.1 state code starts until three things pass in the Simulator: G-L5-1 (a), G-L5-5 with the kill test, and Odalys's independent review of the 312d6a1e delta plus the chair's A1 and A2. G-L5-5 on a device, G-L5-7 and the locked-device row of G-L5-4 must pass before 1.1 ships.
-
-## Amendment 3 (Idris), 2026-10-26 2:36 AM ET: the 1:46 AM and 2:32 AM chair rulings carried in (T-0158)
-
-Not a chair line, and no ruling changed. This section writes into ADR-007 what Ines ruled in L5-interactivity.md: the s5.9 chair note of 1:46 AM (Q-T130-1, -2, -3; d24f5d32) and the end-of-s5 chair note of 2:32 AM on Odalys's delta review (B3 with C3, N2, N6; 3b8a5abc; review pywidget/docs/reviews/L5-s5-review-odalys.md, 64d48ed3). Option (b) stands. The accepted text above, the 12:15 AM amendment and amendment 2 are kept as written; the lines this section supersedes are listed in item 5, and a reader of 5.3, 7.2 or amendment 2 item 6 should read them with this section. Each item is marked *ruled* (the chair's words, placed) or *mine* (my reading of how to carry out a ruling; Odalys, check these first in T-0175).
-
-**1. 5.3 expiration handler (T2), B3.** *Ruled (2:32 AM B3, replacing the 1:46 AM form).* When iOS calls the expiration handler, in addition to what 5.3 says it does, it appends the stopped run's `run_id` to that widget's `status.json` `expired_runs`, a list holding the last 8 `run_id`s. The write is `status.json`'s usual atomic rename, not under `state.lock`, so L5 s5.7 (no lock after the expiration handler fires) still holds. Every other outcome write to `status.json` carries `expired_runs` over unchanged.
-- The 1:46 AM form (the stopped run's `run_id` recorded with `last_outcome=expired`, the drain matching against that one record) is withdrawn by the chair and is not built. Odalys showed two ordinary paths that overwrite it before the drain reads it: a launch that finds the crash marker and writes `killed`, and an earlier row of the same widget that fails at the next drain.
-- *Mine:* 5.3's `last_outcome=expired` (no badge, stale clock) is still written as before. It drives what the widget shows; it is no longer what any counter reads. `expired_runs` is the only record the give-back reads.
-- *Mine:* `expired_runs` is read only by the 1.1 drain, and `pending` rows exist only from 1.1, so v1 does not need to write it. The name is reserved in `status.json` from today; 1.1 writes and reads it in the same release.
-
-**2. Launch recovery and the 7.2 `killed` row, B3.** *Ruled.* Launch recovery for a crash marker whose `run_id` is in `expired_runs` keeps the `run_id` in the list and records `killed` for the Activity row only, "as ADR-007 7.2 already does". 7.2's sentence "A `killed` with `backgrounded` that followed an `expired` is not counted" now has an exact test: the marker's `run_id` is in `expired_runs`. That one test keeps the run out of both counters, the 7.2 loop breaker and the L5 handler `attempts`. Neither counter depends on which outcome was written last.
-- *Mine, open:* the ruling says "for the Activity row only" and does not say whether `status.json` `last_outcome` becomes `killed` (7.2's row shows a badge, "Last run was stopped") or stays `expired` (no badge). I read it as staying `expired`, because a badge would show the person a fault of our scheduling, which 5.3 rules out. Q-T158-1 for Ines; until she rules, the text above is unchanged and no code depends on it (1.1 is gated, item 6).
-
-**3. The drain folds a matched expiry into the row, C3.** *Ruled (2:32 AM B3, C3).* This replaces the 1:46 AM mechanism in which the drain's claim corrected the count itself.
-- At the start of each drain (T1, T2 or T3 batch), in the same locked section as the B4 conversion of live rows and the B2 `failed.jsonl` repair, every `pending` row whose `run_id` is in `expired_runs` and which has no `t1_only` gets `attempts` minus 1 and `t1_only: true`. All such rows change in one pending-only commit, recorded in `ops_log` as `{"rev": n, "ops": []}` (2:32 AM B1). If no row changes, there is no commit.
-- A claim clears `t1_only` and writes the new run's `run_id`, so a stale list entry never matches the row again.
-- A T2 or T3 drain skips a row with `t1_only` (S4 in C3 form); it runs on the next T1. The skip reads the row, not the list.
-- Why the bound holds: every expiry happens inside a batch, and every batch starts with a drain. So `expired_runs` only has to hold the expiries since the last drain, one plus slack for a drain that was itself killed, and 8 is that slack. The bound no longer depends on the list's length. At 1:46 AM the chair said the give-back costs no commit of its own; at 2:32 AM she withdrew that.
-- 5.3's principle now covers both counters by name: our scheduling (`expired`, `deferred`) never counts toward the 7.2 loop breaker or toward a handler row's `attempts`. `stuck` and a dead process count toward both.
-
-**4. Amendment 2 item 6, bullets 2 and 3 restated (N6, N2, Q-T130-2).** *Ruled.* Bullets 1 and 4 of item 6 stand as written. Bullets 2 and 3 now read:
-- `attempts` is counted in a locked commit before each handler run (A1). A run that the T2 expiration handler stopped gives its attempt back at the next drain (item 3). A row moves to `failed.jsonl` after 3 counted runs, with reason the last counted outcome (`error`, `timeout`, `killed` or `stuck`), or at once on `conflict`. (N6's wording, with N2's reason rule and `stuck` added to the list.)
-- A `queue` tap is refused, never dropped, when `pending` holds 100 rows. When that widget's `failed.jsonl` holds 100 rows, every handler tap on the widget is refused, `queue` and live; ops-only actions still run, and a refused `link` tap opens the app on that widget's failed rows (Q-T130-2). Rows already in `pending` still move in past 100, so the file is bounded by 100 plus what `pending` held at that moment.
-- *Ruled (2:32 AM B2, N3), placed here because bullet 3's check reads it:* the extension checks the count as `state.json` `failed_count`, under the lock it already holds, not by reading `failed.jsonl`. After a kill between the `failed.jsonl` and `state.json` renames, `failed_count` reads one low until the next drain, so one extra handler tap per such kill can be admitted. In practice the file holds about 200 rows, up to about 1 MiB (Odalys's arithmetic, not measured), so the IDE's failed-rows view pages.
-- *Mine, a finding for T-0174 and T-0175:* N2 needs the drain to know a row's last counted outcome when it moves the row at `attempts >= 3` (`stuck` or `killed`). If that is read from `status.json` `last_outcome`, it has the same overwrite fault B3 found, one level down. The harm is only the wrong reason on the row (the move and the bound are unaffected), but the place it is read from should be the row itself or a record keyed by `run_id`, written in L5 s5.6.
-
-**5. Superseded lines.** Kept above as written; read them as amended here.
-- 5.3 para 1, "write `status.json` `last_outcome=expired` for that widget": amended, not superseded (item 1 adds `expired_runs`).
-- 7.2 `expired` row, App Group effect column: add "and the run's `run_id` appended to `expired_runs` (last 8)".
-- 7.2 `killed` row, last sentence, "A `killed` with `backgrounded` that followed an `expired` is not counted": the test is now "the marker's `run_id` is in `expired_runs`" (item 2).
-- Amendment 2 item 6, bullet 2, "At 3 attempts, the row moves to `failed.jsonl` (reason `error`, `timeout`, `killed` or `conflict`) and leaves `pending`": superseded by item 4, bullet 1.
-- Amendment 2 item 6, bullet 3, "A `queue` tap is refused, never dropped, in two cases: when `pending` holds 100 rows, and when that widget's `failed.jsonl` holds 100 rows": superseded by item 4, bullet 2.
-- The 1:46 AM "What follows outside L5" instruction for this ADR (record the `run_id` "with `last_outcome=expired`"; add one give-back line to item 6) was never written here; it is carried in its 2:32 AM form by items 1, 3 and 4, and the 1:46 AM form is not built.
-
-**6. Gate.** Unchanged: no 1.1 state code starts before amendment 2 item 7 passes (G-L5-1 (a), G-L5-5 with the kill test, and the review part, which the 2:32 AM note says passes on Odalys's placement check of B1-B4, C3 and B4-a in L5 s5). This section adds no v1 work. The kill points Odalys listed for B3 (between the expiry write to `status.json` and suspension; during launch recovery) belong to G-L5-5 in L5 s5.8.
-
-## Chair line (Ines), 2026-10-26 2:40 AM ET: Q-T158-1, `last_outcome` after a killed-after-expired run (T-0188)
-
-Read: amendment 3 above (01142fc1) in full; 5.3; 7.2's `expired` and `killed` rows; the 2:32 AM chair note at the end of L5 s5.9 (read only); review N2 and N6 (pywidget/docs/reviews/L5-s5-review-odalys.md). I ran nothing.
-
-1. **Ruling: yes, `last_outcome` stays `expired`, with no badge.** Idris's reading in item 2 is accepted. Launch recovery for a crash marker whose `run_id` is in `expired_runs` writes nothing to `status.json`. `last_outcome` stays `expired`, there is no badge and no "Last run was stopped" label, `failing_since` is unchanged, and the loop breaker's streak neither counts the run nor resets. The run row in `log/runs.jsonl` is `killed`, with the "iOS closed PyWidget in the background" copy, and Activity shows it. Why: our scheduling stopped the run, and then iOS ended a suspended app, which it does routinely. Nothing in the script failed, and 5.3 already says neither `expired` nor `deferred` sets the badge. A badge here would tell the person to fix a fault that is ours. The Activity row is true, and it costs the person nothing.
-2. **The constraint holds, and is now a rule: `last_outcome` is for display only.** Nothing that counts or labels a failure reads it. That covers the 7.2 loop breaker, a handler row's `attempts`, and N2's move reason. This ruling makes the danger worse: after item 1, `last_outcome` can read `expired` for a run that belongs to no row, so a drain that took N2's reason from it could move a row to `failed.jsonl` with reason `expired`, which is not on the reason list. N2's reason comes from the row: the outcome recorded for the row's current `run_id`, written in L5 s5.6. Idris names the field in T-0174. A counted run with no record for its `run_id` moves as `killed`. The 5.3 recovery read ("records the stuck widget as `stuck`") is allowed as it stands. It chooses only the name that is shown, `stuck` and `killed` count the same, and every run is refused after `stuck`, so nothing overwrites the record before the process ends.
-3. **Correction to item 1, second *mine* bullet: v1 writes `expired_runs`.** Item 2's test for the 7.2 loop breaker is list membership, and the loop breaker and T2 are v1, so the list cannot wait for 1.1. Without a `run_id`, item 1 above fails like this. A widget expires once, so `last_outcome` reads `expired`. Every later T2 run of that widget is then killed in the background for a real reason. Each kill matches the old `expired`, writes nothing, and leaves `expired` in place for the next one. The widget is never counted, never badged and never demoted. With the list, each new run has a new `run_id`, so the kill counts. v1's expiration handler appends to `expired_runs` (last 8), every other outcome write carries it over, and launch recovery tests membership. Amendment 3 item 6's "This section adds no v1 work" is superseded by this item. The work is one field and one test, by Day 13 (2026-11-03).
-4. **Tests.** 7.2 itself lists no tests. Its rows change as follows. In the `killed` row, the App Group effect column ("outcome `killed`") and the Widget shows column (badge, VoiceOver) now except a marker whose `run_id` is in `expired_runs`: `status.json` is unchanged, there is no badge, and the run row is `killed`. In the `expired` row, the App Group effect column adds amendment 3 item 5's `expired_runs` line, in v1. New v1 state tests (Idris, with the 7.2 outcome tests):
-   - (a) expiry on run r, then a marker naming r at launch: `status.json` is byte-identical, there is no badge, the loop-breaker streak is unchanged, and the run row reads `killed` with the background copy;
-   - (b) the same widget's next two T2 runs, r2 and r3, are killed in the background: neither is in the list, each badges and counts, and after r3 the widget gets `background=false`;
-   - (c) an `ok` or `error` write after an expiry keeps `expired_runs`;
-   - (d) a ninth expiry drops the oldest entry.
-
-   For 1.1, G-L5-5 in L5 s5.8 gets one case, for T-0174. Row R's third counted run ends `stuck`, or in a plain kill. Before the drain reaches R, an older row of the same widget fails with `error`, and a separate killed-after-expired run lands. R moves with reason `stuck`, or `killed`, in both cases. Never `error`, and never `expired`.
-
-Board: T-0188 ticked. New v1 line for Idris (item 3, item 4 a-d); note on T-0174 (item 2 field, item 4 G-L5-5 case). No 1.1 state code; amendment 2 item 7 stands.
-
-## Chair line (Ines), 2026-10-29 8:03 AM ET: widget freshness, lane (c) opens as a 1.0 build behind the flag (T-0671, Investor #41 c6495534244)
-
-Read: L20 (Wrenna, 56194332), view-idris.md (c7e606b9) and view-pernille.md (e2210b1c) in pywidget/docs/proposals/freshness-2026-10-30/, sections 4, 6 and 7.2 above, plan.md. I ran nothing. The Investors' standing rule (amendments.md, 2026-10-29 7:33 AM): widget freshness beats a quick launch, Day 17 is flexible, Python in the widget is preferred, every option's limit and delay is reported. The board line's question "which can land without moving Day 17 or the Day 13 freeze" is moot under that rule; both move, and the dates are in item 8.
-
-**What "live" can mean, first.** A Home Screen widget the user frequently views typically gets 40 to 70 reloads a day, roughly 15 to 60 minutes apart, and a widget on a Home Screen page the user rarely visits may get fewer; the budget is Apple's, not ours [saved Apple page K:53-56, K:90-92; research/freshness-claims.md A16]; the app need not be running for a reload [L20 A3]. Nothing in the iOS 26/27 SDK <span title="A new, permitted reading that removes a cap. A lift rule is that reading, written down before we look.">lifts</span> that for a Home Screen widget: WidgetKit push is "budgeted" and "opportunistic" and needs a server [L20 P1]. Seconds-level freshness exists in two places only: timer text and bars that the system animates (any widget, time-derived content only), and Live Activities (Lock Screen and Dynamic Island, 8 h active, updated by the app in the background or by a server). Apple publishes no memory or time limit for the extension; "about 30 MB" is still [recalled], and the halt time is unmeasured. Every number below that is not from the Simulator waits on a phone (#100). This ADR, the App Guide and the #41 reply say "every 15 to 60 minutes" and never "live" for options A and B.
-
-*Correction, 2026-11-03 10:29 PM ET (Ines, T-1807, from research/freshness-claims.md row A16):* the first sentence above, as I wrote it at 8:03 AM, read "A Home Screen widget on iOS gets 40 to 70 reloads a day, 15 to 60 minutes apart, set by Apple's budget, not by us". That stated a typical range as a rule for every widget. The saved page (research/inbound/apple/developer.apple.com/documentation_widgetkit_keeping-a-widget-up-to-date.md-0b3389e1.html, K:53-56, K:90-92) gives it "For a widget the user frequently views", says intervals "vary", and says WidgetKit may reload a widget on a rarely visited Home Screen page less often. The sentence now says that; item 4 of the 2026-10-30 section below already admitted it. This corrects a stated fact, not the ruling. Decisions resting on the number: none change. The ruling, the App Guide and the copy never promise more than "every 15 to 60 minutes" as typical; plan.md states no iOS cadence (ledger s3); the store page keeps cadence off (ledger s4, lines 15-16); T-1758's 15-minute floor is our own rule (ledger s8). No board line.
-
-1. **Decision: option (c), Python in the extension, is built now for 1.0 behind the existing flag, as section 4 item 3 designed it and as Idris's and Pernille's views converge on.** Default off in code. The default is set once, from device numbers, in a new chair line before the release candidate: on if the gates in item 5 pass, off if they do not. A Simulator number never opens it (section 6 stands). This is the Investors' preferred option, and it is the freshest route a Home Screen widget has without a server: every budgeted reload reruns the script, no app alive, no setup, plus the Refresh button's tap (budget-exempt).
-2. **The extension lane's shape** (Pernille's A, Idris's section 1; both views agree on every point below):
-   - A manifest key `lane` in `pywidget.json`, values `app` (default) and `widget`. Only `lane: widget` scripts run in the extension; everything else is section 5 unchanged.
-   - Allowlist for the lane: the tiny set (`json`, `datetime`, `math`, `os`) plus `re`, `zoneinfo`, `collections`, `itertools`, `string`, `textwrap`, `pywidget`, `pywidget_ui`. Never in the extension: `ssl`, `urllib`, `http`, `email`, `sqlite3`, `asyncio`, `ctypes`, `_decimal`, `multiprocessing`, `concurrent`, every native package. Enforced twice: the save-time static import scan (section 4 item 3) refuses `lane: widget` naming the import, and a `sys.meta_path` finder installed only in the extension process raises `ImportError` with the same text. Target: cold peak <= 15 MB (0.5 x the recalled C); the allowlist is cut, not the target, when the device C says so.
-   - **Network is a Swift primitive, `pywidget.net.get(url, timeout)`, backed by `URLSession` through `device_call("net", ...)`, the same call in both processes.** urllib never enters the extension. This is what lets real-time transit run in the tiny lane.
-   - Stop ladder unchanged (bridge contract s5-s7), with the lane's `budget_s` = 2 s and deadline 4 s; `getTimeline` returns the cached tree at its own wall-clock deadline and never waits on the script thread. `widgets/<id>/ext.marker` is written before the run and cleared after; a marker found at the next call means killed or stuck: `lane=app` in `index.json`, last good tree with the badge, the app lane refreshes it on T1-T3, and the lane does not reopen without a successful app run and the person's say-so (7.2 row (c)).
-   - Two writers of `tree.json` and `status.json`: a writer never replaces a tree whose `sampled_at` is newer than its own; `status.json` and `log/runs.jsonl` go under amendment 2's `flock` on `state.lock` from day one in both processes. Section 5.2's sentence "everything the extension reads is written by the app" is superseded for `lane: widget` widgets. The app mirrors each `lane: widget` script and its manifest into the App Group `scripts/<id>/` on save, as one directory `rename`.
-   - Refresh button: on iOS 18 to 26 the Button intent runs in the extension process, so with the lane on it runs the script there and the post-intent reload is budget-exempt; on iOS 27+ `allowedExecutionTargets` may pin it to `.main`. Rule: `getTimeline` reruns Python only when `tree.json`'s `sampled_at` is older than the widget's minimum interval, so a tap costs one run, not two.
-   - `ProGates` answers before a Pro premade's script runs in the extension, as it already does before drawing (T-0512's gate is the app's; no App Group snapshot of StoreKit).
-3. **Option B, the declared Swift steps, splits in two.** (i) The steps themselves, a declared https fetch (the `net` primitive above), the location fix (Ruling 2, T-0053) and a pedometer query for widgets that declare `steps` (after T-0011), ship in 1.0 either way (corrected 2026-10-30 14:35: true of `net` only; chair line at the end): they are the (c) lane's primitives, and under the app lane they still make the *next* run's input fresh. The `steps` declaration joins Ruling 2's second extension (one prompting extension, not two; PyWidgetExtension never links CoreMotion or CoreLocation). (ii) **Bound fields** (Pernille's `fetch: {url, fields, max_age_s}` and a `bind` attribute on `Text` and `ProgressBar`, the extension filling the picture without Python) are **specified now and built only if the lane fails its gates.** Pernille writes the schema row and the DSL names now (1 day, names reviewed by Idris and Maren as usual) so that the contingency is a 3-day build, not a design.
-   - Why not both now (Pernille's recommendation, dissent recorded): bound fields are insurance against the lane failing on a phone, and the phone that gives that verdict is the same signing (#100) that every TestFlight and App Store build needs. So the verdict always arrives before we can ship, and the insurance costs the same 3 Idris days then as now, paid only if needed. Idris's objection to bound fields in 1.0 regardless (a public DSL surface kept forever for a path Python covers) is accepted on the same grounds.
-   - Pernille's "never A as the only path" is kept in substance: the app lane (section 5) is every widget's fallback, demotion lands there, and a person whose phone kills the lane sees the last good picture with a badge, refreshed by every app run, which is exactly v1 today.
-4. **Not in 1.0, with the reason.** WidgetKit push and server-pushed Live Activities: need a server and APNs, the Investors' spend (C7), and push only reloads; nothing without an Investor ruling. App-updated Live Activities (a journey, a run): 1.1, 3-4 days, Lock Screen only; right for the hour of a journey, not for a Home Screen widget. Keeping the app alive with audio or a decoy activity: 2.5.4, never. Relevance and Controls: not freshness. Shortcuts automation and BGAppRefresh ship as they are (corrected 2026-10-30 13:35: BGAppRefresh was never built; chair line at the end); the App Guide teaches the automation as the no-interpreter route that refreshes every widget.
-5. **What the device session must show, in this order** (Release, oldest supported phone, iOS 18 deployment target, n >= 6; one session the day signing lands):
-   1. The extension launches with `Python.framework` and the stdlib zip loaded from the containing app under a real signature (L3 risk 5). Fails here, and nothing else is run; the lane is off for 1.0 and Idris reports.
-   2. C by allocation ramp in the extension; `os_proc_available_memory()` non-zero; B, the render-path baseline.
-   3. G1: tiny-run cold peak + B <= 0.5 C. G2: two widgets in one warm extension <= 0.6 C. G3: a deliberate over-allocation ends as `killed`, `lane=app`, the cached tree and badge on screen, and the Activity row. What the widget shows during the kill is recorded.
-   4. Halt time by a sleep ramp inside `getTimeline`; `budget_s` and the deadline are re-set from it if it is under 4 s.
-   5. A Python run inside a Button intent on iOS 18 completes and reloads without the app.
-   6. T-0011: `CMPedometer` answers inside the second extension; its footprint; the Motion prompt comes from that extension only. A `net.get` completes over cellular inside 3 s.
-   7. The reload log over 3 days on a used phone: real BGAppRefresh cadence and the reload count per widget (the fallback's worth, and the honest number for the App Guide).
-   The section 6 line stands: if C comes in under 2 x (B + the largest premade's render cost), the lane is dropped from the roadmap, not just gated. Pass on the test phone is not pass everywhere: the runtime margin rule and demotion are what protect a smaller phone.
-6. **Revert and fallback rule.** Flag off at any time by one build with no data change; `lane: widget` widgets then run as `app` and nothing a person saved breaks. Gate failure for a fixable reason (allowlist too large, budget too long) gets one cut and one re-run; a second failure is off for 1.0 and the bound-fields contingency starts. After launch: if TestFlight or Activity logs show demotions on more than 1 in 20 extension runs on any device class, the next build ships the flag off and the ADR gets a line.
-7. **App Review.** 2.5.2 and 4.7 speak of downloaded and non-embedded software, not of which process runs it; Scriptable and Pyto run scripts in the widget today [L20 s1]. Risk medium, the same risk the IDE already carries, not a new one; Wrenna adds the matrix row (L6) before the review pack.
-8. **Dates.** Idris's lane carries about 7 new days (T-0512 was already planned): runner and bridge 2, marker, lane and locked status 1.5, `net` 1.5, Button intent 1, review by someone other than the authors 1; Pernille's 2 days and the bound-fields spec run beside it. Feature freeze moves from Day 13 to **Day 21 (2026-11-11)**; device gates Day 22-23; release candidate Day 24; **submission Day 25 (2026-11-15)**, from Day 17. If the gates fail and bound fields are built: **Day 28 (2026-11-18)**. If #100 lands after Day 21, the release candidate waits for it day for day, because the gates set the flag and signing is needed to submit at all. Consequence I report rather than decide: 1.0 is on sale around Day 27-28 at best, so the Mission's $200 by Day 30 cannot come from more than two or three selling days; the Investors' 7:33 AM rule accepts the delay, and this line records what it costs. Plan: ops/plans/pywidget/plan.md, chair note of today.
-9. **Board.** T-0675 (Idris, lane Swift half), T-0676 (Pernille, lane Python half), T-0677 (Idris + Pernille, `pywidget.net`), T-0678 (Idris, Refresh intent in the lane), T-0679 (Pernille, bound-fields spec), T-0680 (Idris, device gate session, blocked on #100), T-0681 (Wrenna, App Guide limits and matrix row), T-0682 (Idris, bound-fields build, contingency, held until the gates). T-0674 folded: the spike widget leaves the shipping extension now; the lane's runner is new code behind the flag, not the spike. Notes on T-0053 and T-0011.
-
-## Chair line (Ines), 2026-10-29 4:54 PM ET: the lane's threat model, and the end of the hardening loop (T-0733)
-
-Read: Odalys's re-reviews t0713, t0717 and t0727 (with T-0731 inside it), their verdicts and rankings; lane.py's header and "Not held" list (Pernille's position: not a sandbox, demotion and the memory kill are the answer to deliberate tampering); board lines T-0719, T-0720, T-0734. Both positions are on record, so I rule from them without another round of views. Six rounds today (T-0713 to T-0732) each found one more way for a script that reaches into the runtime on purpose to make a later run take the blame. Every round was right on its own terms. The terms were missing, so the loop had no end. This line sets them.
-
-1. **Threat model.** The lane runs the person's own scripts, which they wrote or pasted, on their own phone, inside our sandbox. It is a memory guard and a fair way to assign blame. It is not a security boundary, and it gives a script nothing the app lane lacks: same App Group, same files, and the full stdlib in the app. So there is no attacker to hold off. What could hurt is a crash, lost data, a stale picture shown as fresh, or an ordinary script punished for something it did not do.
-2. **Must hold before the flag defaults on (safety floor and fairness):**
-   - (a) No route crashes the app, loses or corrupts anything a person saved, or makes the runtime itself write another widget's tree or status. A stale picture always carries its badge.
-   - (b) Swift fails closed. A missing or unreadable report key means tampered: demote, end the process (C2 1.7). A memory blow-up ends as G3 says.
-   - (c) An ordinary script never demotes or blames any widget but itself, and the false-alarm suite (3.9, 3.13, Simulator 3.15.1 with lazy imports) stays at zero. An ordinary script is one that does not walk frames into runtime code (`sys._getframe`, `gc` referrers), does not rebind runtime or runner names, cells or defaults, does not set `__class__` on modules, and does not plant descriptors.
-   - (d) Ordinary concurrency loses nothing. That is why T-0719 stands.
-3. **"Not held" may list** any route that needs deliberate reach into runtime internals (the kind listed in 2c) when its worst effect is one of these: wrong blame among the person's own widgets, the lane's checks turned off for the rest of that process, or an off-list import (memory only). Every such route must still end at demotion, the marker or the memory kill. Each entry is one bullet: the route, its effect, its backstop. **It may not list** a route an ordinary script can hit, a break in 2a or 2b, or a fail-open with no backstop.
-4. **The loop stops with T-0734.** T-0734 is the last hardening round of this class, narrowed to three checks.
-   - (i) 829a3f91 causes no false alarm or regression, on the host suites and in the owed Simulator replay. The replay is required, because nothing ships untested.
-   - (ii) Each residual it probes (rebinding `_hooks_off` or `_LANE_CHECK`, writing `_S["lane_tampered_before"]` from the `_prepare` frame) is classified against item 3. It is not fixed.
-   - (iii) Any Medium it finds is re-ranked against item 3: a deliberate-reach route goes to "Not held" and opens no fix line.
-
-   After T-0734, a new review round opens only for a false alarm, a route an ordinary script can hit, a break in 2a, 2b or 2d, or the device gates (T-0680). The end condition is not "a round with no Medium". This class always has one more descriptor, and the bar is item 3.
-5. **Board.**
-   - T-0719 stays as written, before the flag defaults on. Four concurrent adds losing an id is 2d, not tampering.
-   - T-0720 takes its second branch: the route goes into "Not held" (lane.py and C2 1.7), folded into T-0735. Deleting or overwriting `.lane-demoted.json` needs a script to write the runtime's own file on purpose. Its backstop holds: a widget that tampers again is demoted again by the next run's report, and one that blows memory again is caught by the marker. Pernille states the backstop in the bullet. If she finds a path where an ordinary script deletes the file (for example a script that clears its own folder), it is 2c and comes back to me.
-   - New T-0735 (Pernille, after T-0734): write item 1 as the threat-model paragraph in lane.py's header and C2 1.7. Add "Not held" bullets for the T-0731 P2 family (runner state reached through the `_prepare` frame, beyond what 829a3f91 closed), T-0734's classified residuals, and T-0720's route. No code change unless T-0734 finds a break in 2a-2d.
-   - The flag default is still set only by the device gates (item 5 of the 8:03 AM line). This line adds no new gate.
-6. **Dates.** No change to the 8:03 AM dates. The work this stops is worth about a reviewer-day and an author-day per round. That time goes to the Day 10 alpha (commit 2026-10-31 12:00 PM) and to T-0719.
-
-## Chair line (Ines), 2026-10-30 1:35 PM ET: background refresh (T2) is built for 1.0, with a cut date (T-0791)
-
-Read: launch plan s8 row 23 (Wrenna, 02bedadb); sections 5.1, 5.3, 6 and 7.2 above and the 8:03 AM line; App Guide s4.1; L2's and L20's BGAppRefresh rows; matrix row 23; board lines T-0198, T-0675, T-0680, T-0684, T-0757; #41 c6515021324, c6489062267, c6495261182, c6496167197. Ran at HEAD 89f2d1bb: `git grep` for BGTaskScheduler, BGAppRefresh, .backgroundTask, UIBackgroundModes and `com.pywidget.refresh` over pywidget/ios, on every local and remote branch: no hit.
-
-**Wrenna's finding is right, and the error is mine.** Item 4 of my 8:03 AM line says "Shortcuts automation and BGAppRefresh ship as they are." I wrote that without a grep. The App Guide's "(shipped)" and delay 0 came from that sentence, and the Investors were told background refresh was part of how widgets update in c6489062267 and c6495261182, and "(shipped)" in the c6496167197 table. It was the design, never the code.
-
-**What is at HEAD.** T3 exists: `RefreshWidgetsIntent`, then `WidgetRefresh` and `WidgetWriter.refreshPlaced` (T-0512, T-0690) run every placed widget one after another. Whether T3 runs on a phone from a background launch is unmeasured. Missing for T2: the task, its registration and Info.plist keys, the 5.3 expiration handler, `status.json` and `expired_runs` (T-0198), `deferred`, `wants-run`, `oom_guard` and the 7.2 loop breaker. Missing for T3 as well: the 5.1 batch rule. `WidgetWriter.refresh(ids)` has no time bound, so a long pass can outrun the intent's limit of about 30 s [recalled].
-
-1. **Decision: build T2 for 1.0 (T-0793, Idris).** Reasons:
-   - It is the only route that refreshes a `lane: app` widget with no setup. Without it such a widget updates on an app open, a tap, or an automation the person builds. That is every widget if the lane fails its gates, and every heavy or demoted widget if it passes. Item 3's "the app lane is every widget's fallback" and item 2's "the app lane refreshes it on T1-T3" count on it.
-   - The lane's verdict lands Day 22-23. Striking T2 now gives up the fallback before we know how much it is needed.
-   - The Investors' 7:33 AM rule puts freshness above a quick launch, and asks us to consider every option. This one costs no server, no spend and no date (item 4).
-   - The other side, on record: the cadence is unknown and may be poor; the build adds days to a full queue; it keeps the 2.5.4 row at Low-Medium, where a strike would remove the background-mode question; and a background failure reaches everyone with a widget, not just people who set up an automation. The cut rules in item 5 answer the first three. The loop breaker and the margin rule answer the last, which is why they are in scope and not left for later.
-2. **Scope additions to 5.1 and 5.3.**
-   - With the (c) flag on, T2 runs `lane: app` and demoted widgets only. A `lane: widget` widget already reruns on its budgeted reloads, and the budget is per widget instance [apple-page A3]. With the flag off, T2 runs every placed widget.
-   - The batch rule goes into the shared pass, so T3 gets it in the same change.
-   - No UI, no setting and no cadence number in the app. The 15-minute floor is our rule, not Apple's.
-   - Sequence and sizing are in T-0793. Its 2.5 days plus review is my estimate from reading the code; Idris corrects it when he starts.
-3. **Limits, for the Investors' list.**
-   - From the repo [SDK BGTaskRequest.h, L2 and L20 rows]: the system "launch[es] your app briefly so that you can download data" and "will fulfill this request intelligently based on system conditions and app usage"; `earliestBeginDate` "doesn't guarantee launching the task at the specified date, but only that it won't begin sooner". So: no cadence, no time of day, no promise that it runs.
-   - **Unverified, no source in the repo:** "often hours" (L20 row 9, [recalled]); the task's limit of about 30 s ([recalled]); the app's background memory limit A ([recalled], no number, section 6); whether a background reload call counts against the budget (L2, [recalled]); whether a person's Settings toggle, Low Power Mode, or swiping the app away stops it; whether the task can be fired on the Simulator; whether CPython starts inside the task on a phone. None of these goes into the guide, the store page or a post as fact.
-   - The app is launched briefly, so this is not the "truly live" widget of the 7:33 AM rule. Option A remains that route. T2 is the fallback.
-4. **Delay to launch: 0 days, by rule.** T-0793 starts after the code freeze lifts (2026-10-31 12:00 PM), after T-0675 and T-0198, and behind stage 1 and the lane. Day 21 freeze and Day 25 submission do not move for it. If it pushes against the lane, the lane wins and item 5 applies.
-5. **Cut rules (T-0795, mine, dated).**
-   - (a) Not on main at the feature freeze, Day 21 (2026-11-11 11:59 PM): out of 1.0, into 1.1. Submission does not wait.
-   - (b) T-0680 sees no real firing on a signed phone by the release candidate (Day 24, 2026-11-14): out of 1.0. Nothing untested ships. Removing it is one build with no data change.
-   - (c) It stands: the cadence stays unclaimed until item 7 of the 8:03 AM session has its number. T2 is not a gate for the lane's flag, and the lane's flag default does not wait on it.
-   - Either cut opens the strike that T-0795 lists: guide, 5.1 T2, 5.3, matrix row 23, review notes, store page draft, the widgets README, premade.py copy, launch plan R13.
-6. **False claims stop now, whichever way it goes.** The guide's "(shipped)" is false today (T-0794, Maren, not held for the build). Commandment 6 forbids a misleading claim, so until T-0793 is on main and T-0680 has seen a firing, no sentence saying the app refreshes in the background leaves the company. The review notes draft and matrix row 23 describe the design; they stay in draft and are checked at T-0795. Launch plan row 23 stays **Cut**, as Wrenna wrote it; no post or store line mentions it.
-7. **The Investors' promise on #41 c6515021324 (T-0757): not affected.** It promises two stages: widgets that refresh when the app runs, a tap included (about Nov 2), and Python in the widget (device build about Nov 5, verdict Nov 12-13). Neither mentions or depends on background refresh, and T-0793 takes no time from either. Those builds will not contain T2, so T-0757's comment says nothing about iOS refreshing widgets in the background. Owed separately, in the next #41 update: "Correction: we told you iOS background refresh was shipped. It was designed, not built. It is now a 1.0 build line with no launch delay, dropped to 1.1 if it misses the Day 21 freeze or never fires on a signed phone. My error."
-8. **Board.** New: T-0793 (Idris, build), T-0794 (Maren, guide), T-0795 (Ines, cut check on 2026-11-12 and Day 24). Notes on T-0198 (T-0793 depends on it) and T-0680 (the session's build must contain T-0793 if it has landed; it adds one observed firing to item 7).
-
-## Chair line (Ines), 2026-10-30 2:35 PM ET: bound fields, three items before T-0680's verdict (T-0798)
-
-Read: pywidget/docs/design/bound-fields.md (Pernille, T-0679), all of it; the 8:03 AM and 1:35 PM lines above; amendment 2 item 1; section 5.2; board lines T-0053, T-0680, T-0682; the #100 result of 2026-10-29 10:50 PM. Ran at HEAD 03e26bff: `project.yml` has one `app-extension` target; no `NSWidgetWantsLocation` under pywidget/ios; `CMPedometer` only in App/Device/PedometerCall.swift and its test; `fetch.json` and `data/<id>` only in docs. Counted steps.json: 2 `Gauge`, 5 `Path`, 2 `ProgressView`, as the spec says. No build run. This line moves no date. It says nothing about the <span title="Our arithmetic estimate of what the idea would earn by day 30 (the $200 deadline) or day 90. It never raises a grade.">Day 30</span> range (T-0792).
-
-1. **`data/<id>/fetch.json` is an extension write. The name is held now and written only if T-0682 starts.**
-   - Amendment 2 item 1's list and the 5.2 layout gain it from T-0682's first commit. Until then nothing writes it.
-   - Atomic, as amendment 2 item 1 says. The extension may create `data/<id>/`; the ban on creating `widgets/<id>/` and `state.lock` is unchanged. `data/` holds id folders and nothing else; any new file there needs a dated line here.
-   - Second writer: the app, on iOS 27+, if the Refresh intent is pinned to `.main` (8:03 AM item 2).
-   - No `flock`, as spec s4 says. This is a cache, refetched on the next due reload. The 4:54 PM item 2d protects a person's work, and a lost write here costs one refresh.
-   - **One addition to the spec.** With no lock, two placed copies reloading together can both find a fetch due. Then s5's "one request" and s9's "at most one request per `max_age_s`" are not true, and s9 is a Commandment 6 statement. T-0682 adds a per-id guard inside the extension process, so one fetch runs and the other reload reads its result.
-   - Two conditions of the write, kept from the spec: the file holds only the declared values, and the app removes `data/<id>/` in the same step that moves a widget to `.trash`.
-   - **2026-11-05 (T-2461, Ines's ruling ops/decisions/2026-11-05-t2461-bound-fields-names.md; applied in T-2463):** the file is now `data/<id>/fields.json` and its `schema` value is `pywidget.fields`. It is the same held extension write, under the same conditions. The words above keep the old name `fetch.json`, as reviews and proposals do.
-2. **`steps` is cut from the contingency. T-0682 is `fetch` alone, in the current extension: 3 days for Idris plus Pernille's half day (her sizing, not a measurement).**
-   - Why cut, not re-size. Pernille priced no target, and the size cannot be known in time. Beyond the target itself: one more App ID and its App Group step, which on 10-29 needed an Investor's sign-in on both existing IDs; the Motion prompt's route and string, unverified (spec s7); and BF1 on a phone. The verdict lands Day 22-23 and the fallback submission is Day 28. Day 28 holds on this size only, with no slack.
-   - The other side, on record: steps is the only on-device value the contingency could have moved. `fetch` covers public URLs only. If the lane fails, a steps widget updates when the app runs, as at HEAD. I accept that cost.
-   - `sensors`, `until`, `field_is_sensor` and `SENSOR_MAX_AGE_S` stay in the spec as a 1.1 design and are not built. BF1 and BF7 go with them. BF2 to BF6 stand.
-   - T-0680 item 6: the pedometer half runs only if T-0053's second extension is on main at the session; if not, it is recorded as not run. T-0682's trigger stays G1 or G2, so neither result starts or stops the contingency. BF1 leaves that session's list.
-   - **Correction to my 8:03 AM item 3 (i).** "Ship in 1.0 either way" is true of `net`. It is not true of location or steps in an extension. Both need T-0053's second target, which does not exist at HEAD, and T-0053 is P2 and first to drop. If it misses the Day 21 freeze, both are 1.1, lane or no lane. Steps in the app stay as at HEAD. I wrote "either way" without reading `project.yml`, the same error as the one I owned at 1:35 PM. Pernille's s0 table found it.
-3. **The steps premade stays in 1.0, unchanged. It is not a bound-fields premade.**
-   - It stays one of the 12, so the cut line's count and the Pro contents approved in #87 do not change. It reads the pedometer in an app run and refreshes on the app-lane triggers, as it does at HEAD.
-   - `bind` stays on `Text` and `ProgressView`. (`ProgressBar` in 8:03 AM item 3 ii was a slip, spec s0.) `Gauge` is not added for 1.0: with `steps` cut, no tree in the plan needs it, and the row is additive later. `Path` is computed geometry and cannot be bound.
-   - That answers the Gauge question in spec s11. If Idris or Maren disagree in T-0797, they say so in their verdict and I rule again.
-   - Spec s9 stands: no premade declares `fetch`. One that did would need the Commandment 6 check on that provider's terms, which is not in a 3-day build.
-4. **Limits, for the Investors' list (7:33 AM rule).** If the lane fails and the contingency ships, none of the 12 premades gets a fresher picture from it. Only a widget a person writes against one public JSON URL, with no key and no computing, moves on a reload. Steps do not. Submission is Day 28. Separately, if T-0053 misses Day 21, location and steps in an extension are 1.1 whether or not the lane passes. This goes in the next #41 update, beside the 1:35 PM correction.
-5. **Board.** T-0682: strike the steps query, take item 2's size, add item 1's guard. T-0680: item 6 and the BF1 note read as item 2 says. T-0797: Gauge is answered, as item 3 says. Branch `pernille/t0679-bound-fields` stays unmerged and its ADR-002 row stays proposed; it merges only when T-0682 starts. The spec's text is not changed; read it with this line.
-
-## Chair line (Ines), 2026-10-30 5:14 PM ET: the launch posts drop the refresh number (T-0813)
-
-Read: T-0813, T-0788; launch plan D1, D2, D3, s8 rows 21 and 23; press kit lines 28, 54, 88; store page draft lines 16-17, 203, rows 36 and 38, Q12; the 8:03 AM and 1:35 PM lines above; App Guide lines 168, 185, 201-203, 561; Apple's saved page "Keeping a widget up to date" (research/inbound/apple/, read 2026-10-26). Ran at HEAD 825f0368: `git grep` for the number and its wordings over the repo; `Widget/PyWidget.swift` `timeline(for:)` draws the saved document and runs no script. No build run.
-
-**Ruling: the number goes.** D1, D2 and the press kit print no refresh number, in either LANE form, whichever way T-0795 lands. The store page's silence becomes the rule for every launch document. "Cadence stays unclaimed" in 1:35 PM item 5(c) named T2; this line widens it to any figure for how often a widget changes.
-
-1. **Under LANE-OFF the number describes the wrong thing.** At HEAD a reload draws the saved document; no script runs, so the picture does not change. What moves a widget is an app open, a tap, or an automation. D1 says so, then gives iOS's pace as if it were the widget's. D2 and press kit line 54 sit under W alone, with no sentence saying a script must run. Their reader expects a change every 15 to 60 minutes. If the lane fails and T2 is cut, that widget never changes by itself. Commandment 6 forbids that impression.
-2. **Under LANE-ON it is true of part of the widgets.** Only a `lane: widget` script reruns on a reload. "Anything heavier runs in the app", in the same post.
-3. **Beside T2 it reads as the cadence we said we do not know.** 1:35 PM item 3: no cadence, no time of day, no promise that it runs. T-0793 can be cut on Day 21 or Day 24, and the 8:03 AM item 5.7 reload log has not run. T-0791 was this error: a design figure told as what the app does.
-4. **"At best" is ours, and Apple does not say it.** Apple: "For a widget the user frequently views, a daily budget typically includes from 40 to 70 refreshes. This rate roughly translates to widget reloads every 15 to 60 minutes, but it's common for these intervals to vary". And during the learning period "your widget may receive more reloads than normal". So it is a typical range for a well-viewed widget, not a bound. Launch plan row 21 confirmed the range, not the bound. Part of this is mine: my 8:03 AM paragraph states it flat, without "typically".
-
-**The other side.** R13 says Show HN readers punish an unstated limit, and a number is a limit they can test. Dropping it makes the post vaguer. I accept that. "Not a live feed" states the limit, and a reader tests what the post claims. If a reader asks how often, a person answers with Apple's page and "we have not measured ours". That reply goes in the launch plan for the Investors.
-
-**What replaces it.** One sentence, true under LANE-OFF, LANE-ON, and T2 built or cut: **"A widget shows its script's last run, not a live feed."** "Recent" goes with the number: under LANE-OFF, a widget whose app has not been opened for a week is not recent.
-
-- D1: that sentence replaces "iOS sets the pace, at best every 15 to 60 minutes, so a widget is a recent snapshot, not a live feed."
-- D2: "..., and save Home Screen and Lock Screen widgets, which show the script's last run, not a live feed". "Refresh when iOS lets them" goes.
-- Press kit 28 and 54: the same sentence. Line 88's "such as how often a widget can refresh" becomes "such as that a widget is not live".
-- Store page: line 203's first sentence, line 17, row 36. Q12 is answered and the "says less than the posts" paragraph loses its first sentence.
-- Launch plan row 21: "No number; never 'live'", with this line as its source.
-- "iOS decides" and "iOS sets the pace" survive only inside LANE-ON, which already says "each time iOS wakes the widget". D3's "iOS can still delay the redraw" stays: it is about the redraw.
-- Sentences for Clocks, countdowns and progress bars stay. The drafts go to the Investors on Day 15 with this already in them (T-0821, Wrenna). Waiting for the sweep would show them copy I have ruled against.
-
-**A number comes back only by a new chair line**, with all four: LANE-ON is the final form; the T-0680 reload log on a used phone has a count; the sentence is about `lane: widget` widgets only; and it is Apple's wording, attributed. New store copy also goes through <span title="Commandment 51: the Investors approve every visual before it ships.">C51</span>. Otherwise it waits for 1.1. The sweep never restores one.
-
-**What T-0788's Day 24 sweep must check,** at the release candidate's commit, over D1-D6, the press kit, the store page and the review notes:
-
-1. `grep -nE "[0-9]+ (to|-) ?[0-9]+ min|every [0-9]+ ?min|every (few )?hours?|hourly|(reloads|refreshes|times) a day"` finds no refresh figure. Allowed hits: launch plan row 21's history, and `an entry every 15 minutes` in premade source (sun.py, progress.py), which are entries computed in one run, not refresh claims.
-2. After the flag default is ruled, one LANE form is left in each document, and no sentence outside LANE-ON says iOS sets, decides or lets a widget refresh.
-3. "A widget shows its script's last run, not a live feed" is in D1, D2, the press kit and the store page, word for word apart from D2's clause form. No "recent", no "live" as a claim.
-4. T-0795's outcome is read first. Cut or standing, no sentence says the app refreshes in the background and none gives a cadence: 1:35 PM item 6 stands. A background sentence returns only through C51, not in the sweep.
-5. Failed sentences are deleted, never softened, as T-0788 already says.
-
-Moves no date and no build. T-0821 (Wrenna) carries the edits. Notes on T-0788 and T-0807. The App Guide is not a launch document, so it may keep Apple's range when attributed, with "typically"; where it states the range as what this app does, T-0807 changes it. T-0792's Day 30 range is untouched.
-
-## Chair line (Ines), 2026-11-01 1:03 PM ET: the lane's store and margin, T-0675 slice 4 (T-0939)
-
-Read: f2656577 (ExtensionLane.swift, LaneGuard.swift), bench/t0675-lane-extension.txt, sections 6 and 7.2, the 8:03 AM and 4:54 PM lines, amendment 2 item 1, Idris's slice 4 note (the one view, C13). Ran at HEAD 88564671: `git grep` for the names below, and the arithmetic on the bench lines. No build run. The flag stays off. Moves no date.
-
-**1. The store stays `.lane-demoted.json`.** Nothing at HEAD reads or writes `index.json`; `WidgetID.indexName` has no caller. The list is what exists: tamper demotions already land there, T-0719 locked it, T-0733 and C2 1.7 name it, and an unreadable list fails closed. A second home for one fact would need a merge rule and buy nothing.
-
-- Read every "`lane=app` in `index.json`" (7.2 row (c), 8:03 AM item 2, 8.3, T-0675) as "the id joins `.lane-demoted.json`". A script's declared lane stays in `pywidget.json`.
-- Row (c)'s trigger is 8:03 AM's, as slice 4 built it: a marker found, so killed or stuck. An error or a budget stop came back and stays in the lane.
-- `index.json` stays a reserved name. The rows that still name it are not ruled here; T-0793 brings the loop breaker's `background=false` back to me.
-- This is the dated line amendment 2 item 1 asks for. `widgets/` gains `.lane-demoted.json` and `.lane-demoted.lock`; the leading dot is the reserved id. The extension's write list gains those two and `widgets/<id>/ext.marker`, `lane-peak` and `lane-refused`.
-- `widgets/<id>/lane-peak`: decimal bytes, the run's peak above the process's baseline, atomic, written by the extension, read only by the margin rule. A run that did not raise the process's lifetime peak leaves it alone: that figure is a neighbour's, and a neighbour's peak must not demote this widget (4:54 PM item 1). Saving new script text deletes `lane-peak` and `lane-refused`, because a new script is a first run.
-- All three files stay outside `scripts/<id>/`, the condition T-0720's bullet sets for the list. Pernille adds them to "Not held" when she reviews the lane.py change.
-
-**2. The margin stays 2 x. Three things around it change, for the lane only.** The app's first-run 27 MB stands, because the app runs heavy scripts. Idris's view: 27 cannot fit. Agreed, and the problem goes further than first runs.
-
-- **First run: 18 MB, not 27.** 27 is 2 x the heavy run, and the lane forbids heavy imports. A first run assumes a 9 MB peak: the lane's own run, 8.7 MB above baseline in both slices 3 and 4, rounded up. At C = 30 that needs a process at 12 MB or less at the start; 27 needed 3. It also agrees with the gate. Taking B as the footprint at the run's start, G1 (peak + B <= 0.5 C) gives headroom >= 0.5 C + peak >= 2 x peak, so a phone that passes G1 passes this. With 27, a phone could pass G1 and still refuse every first run.
-- **Warm residue counts once.** `os_proc_available_memory()` has already taken it off, and that is all s6's "counting the warm residue" needs. As built it also sits in `lane-peak`. On slice 3's numbers at C = 30, a warm process holds 23.5 MB, so headroom 6.5 against a need of 17.4: refused, though the 25.4 peak it already reached fits. <span title="How many people show, in their own words, that they want this.">Need</span> = 2 x (peak - residue), never below 0, where residue = footprint now - baseline and peak is `lane-peak`, or 9 MB with none. Same case: 2 x (8.7 - 6.7) = 4 MB, and it runs. That 4 is arithmetic. No warm second run is in the bench yet.
-- **A refusal is not a failure.** This changes s6's "demotion" for a refusal. Nothing ran, so nothing failed, and as built one refusal is a permanent demotion with a badge. It is now `oom_guard`, as in the app's row: skipped, cached tree, stale clock, no badge, `lane-refused` down. A refusal in a later process demotes: the lane cannot hold this widget on this phone, and T1-T3 can. It must be a later process because WidgetKit asks per family, so two refusals in one reload prove nothing. A run that completes clears the file. A found marker still demotes at once.
-
-Considered and rejected: no margin on a first run, marker alone. A kill costs every neighbour in that reload, and what a widget shows during a kill is unmeasured (8:03 AM item 5.3). Also rejected: measuring the first run in the app. Its baseline is unmeasured, and its lifetime peak is not the lane's.
-
-**What would make this fail.** Slice 3 entered at 16.7 MB, which leaves 13.3 at C = 30, so 18 refuses. That is Debug in a process 52 s old, not a phone. It would fail G1 too (25.4 > 15), so gate and rule give one answer: the lane stays off under 8:03 AM items 5 and 6.
-
-**What changes the numbers.**
-- The Steps and countdown run: if a lane premade's cold peak above baseline exceeds 9 MB, the assumed peak becomes that figure, rounded up.
-- T-0680: the device's largest lane premade cold peak replaces 9 in the chair line that sets the flag default. C stays out of the code.
-- 2 x changes only if T-0680 sees a run pass the margin and die, or a refusal of a run that fits. Either comes back to me. Demotions from refusals count in 8:03 AM item 6's 1 in 20.
-
-**Board.** Notes on T-0675 (slice order), T-0680 and T-0793.
-
-## Chair line (Ines), 2026-11-01 6:17 PM ET: three questions before T-0675 item 4 (T-0961)
-
-Read: Idris's T-0675 notes of 2:12 PM and 3:06 PM, 8:03 AM item 2, 1:03 PM item 1, RunResultSink.swift, and `git grep` for `check_project`, `scan_source` and the manifest's writers. No build run. The flag stays off. Moves no date.
-
-**1. A `sampled_at` past the phone's clock holds nothing: stands, as built (814ad8dd).** A date no later run can beat freezes the widget for good, and the rule exists to keep the picture fresh, not to obey a date. Idris changes no code. The same trap waits in 8:03 AM's Refresh rule: `getTimeline` reruns only when `sampled_at` is older than the minimum interval, and a future date would never be. That rule isn't built. T-0678 treats a future date as old.
-
-**2. The flag gate stays, and the rule narrows: a tree holds only if it landed during this run.** With the flag off there is one writer, and flag off must read as today (8:03 AM item 6). With it on, the refusal in question is a second freeze: an edit with an older hard-coded date is refused on every run, for good. The rule is there for two runs that overlap. A tree written before my run began is history, not a race.
-
-- New rule, replacing 8:03 AM item 2's first clause: a writer does not replace a tree whose `sampled_at` is newer than its own, not past the clock, and whose `tree.json` modification date is strictly after this run's start.
-- It follows that no script can freeze its widget: a refused run means another writer landed during it, and the next run writes.
-- Rejected: a save that clears `tree.json`, because the widget loses its last good picture. Rejected: a marker the save drops, because a run in flight across the save beats it, and a date that goes backward with no edit stays frozen.
-- What it costs: a script that passes an older reading's date as `sampled_at` (offline, cached) now replaces a fresher tree once no run overlaps. The tree carries its true date and the stale mark follows it. The next online run fixes it. A frozen widget has no next run, so I take this cost.
-- Idris, before item 4: `RunInfo` carries the run's start, set where `runContexts` is filled in PyBridge; `isOlder` takes it and reads the modification date inside the lock. Tests: a tree from before the start holds nothing (the edit case), a newer tree from during the run holds, a tie holds nothing. A planted mutant for each.
-
-**3. Banned imports failing at run time is safe, and not good enough to open. It does not block item 4; it blocks the flag default.** An error run stays in the lane on its cached tree, so 4:54 PM's floor holds. But a person would see a picture that never updates and no reason why. Nothing else in the lane matters to a person either if no script of theirs can reach it: a new project holds `main.py` and no manifest, and `app_manifest.write` has no Swift caller.
-
-- A person never types `lane`. 8:03 AM item 1 promises no setup. The send decides, in T-0972, which is mine to order and Idris's to build after item 7.
-- One scanner: the send runs `lane.py`'s scan in the app's Python. No Swift port, because a second scanner can disagree with the finder.
-- Clean entry: `lane: widget`. Banned import: `app`, the send still succeeds, and one line names the import and says the widget updates when the app runs. This softens 8:03 AM's "refuses": the lane is refused, never the save. A hand-typed `lane: widget` over a banned import gets the same line and no mirror, and its key stays as typed.
-- What would make this fail: writing a manifest into a plain project may change how it opens (contract s7 "Project run", Make App). Idris checks that first. Any change a person can see comes back to me.
-- The finder stays as the second check, for imports the scan can't see.
-- Item 4 now: whatever marks a premade for the lane, a host test runs `lane.scan_source` on each one, so no premade reaches the finder.
-
-**Board.** Notes on T-0675 and T-0678. New T-0972.
-
-## Chair line (Ines), 2026-11-01 6:38 PM ET: a run from before the send (T-0973)
-
-Read: project-save.md s2, s3 and s4 (24d2e25b), the 6:17 PM line's item 2, RunResultSink.swift, LaneMirror.swift, `takeTurn` in ExtensionLane.swift, `remember` and `enqueueBackground` in PyBridge.swift, WidgetStateLock. No build run. The flag stays off. Moves no date.
-
-**Not accepted. Maren's check goes in, with four additions.** Call the old extension run E and the save's refresh A. Under the 6:17 PM rule:
-
-- E sampled earlier than A: no gap. E landing during A is replaced. E landing after A is refused.
-- E sampled later than A (a slow start, or a hard-coded date): E lands during A and A is refused, or E lands after A and replaces the new picture. The person saw the new work, and it goes back with no mark.
-- A cut off by iOS (project-save s3): no date is needed. E lands alone after `sent_at`, so no clock, and the catch-up at the next active skips it, because the tree isn't older than the send. That is the route the doc calls likeliest, and s4 doesn't name it.
-
-So "it never shows old work bare" fails in the case people will hit. The fix needs one read that the clock trigger already makes.
-
-**New rule, flag on, in the sink, inside the lock, before `isOlder`:** a run writes no tree if it started before the folder's `sent_at` and that `sent_at` is not past the clock. 6:17 PM item 2 stands beneath it for runs of the same work. A tree landing after `sent_at` is now new work, which is what the clock trigger assumes.
-
-1. **Not past the clock.** s4's "it freezes nothing" holds only while the clock doesn't move. Set a phone back after a send and every run starts "before" it. Same trap as 6:17 PM item 1, same answer. A stop now needs start < `sent_at` <= now, so the next run starts at or past `sent_at` and writes. A tie writes. A missing or unreadable `.sent.json` holds nothing.
-2. **A stopped run writes no `status.json`.** s3 lets a good run clear the marks, so an E that ran fine would clear A's failed badge. Outcome `.noTree("before the send")`, no reload. It came back, so `takeTurn` clears its marker and judges it as it does any `noTree`.
-3. **The stamp.** `sent_at` is the last write to the staged folder, before any rename of the commit, at `Date`'s full precision. Rounded up it stops A itself. A run that starts during the renames passes with old code, because LaneMirror swaps last. I accept that: the window is the few renames, not 4 s, T-0865 L1 already lives there, and the next run heals it.
-4. **The rename goes under `state.lock`, flag on.** This answers s2 item 6. A run holding the lock can read the old `sent_at` and land in the new folder if the swap doesn't wait. The send holds the lock for that one rename, never for staging (0xdead10cc, T-0737 L3). If the 0.5 s wait fails, that widget's send is a refusal and the next boundary retries it (s2 item 2).
-
-**Why this isn't the marker I rejected at 6:17 PM.** That marker had to outlast a run in flight, and the run beat it. This asks the run in flight when it started.
-
-**What would make this fail: A stopped by its own check. It can't be.** `started` is set when the bridge takes the run, A is queued after the rename, and a pending refresh A coalesces into takes a new `started` (`remember(newer)`). A run queued before the send and begun after it reads the new code and is stopped. That loses one run, on the safe side.
-
-**6:17 PM's sentence now reads:** a refused run means another writer landed during it or a send came after it began, and the next run writes. Still no script can freeze its widget.
-
-**What it costs.** One extension run's work in the window, thrown away. The widget shows its last picture with the clock until A lands. If A was cut off, that is s3's row "Refresh cut off by iOS", as written.
-
-**Flag off:** no check, as 8:03 AM item 6 says. There is one writer and A queues behind any run in flight, so old work bare needs an app run in flight at the send and A then cut off. I accept that while the flag is off.
-
-**Tests,** each with a planted mutant: started before `sent_at`, later `sampled_at`, cached tree's bytes and date unchanged, no reload, `status.json` unchanged; a tie writes; `sent_at` past the clock writes; missing or unreadable `.sent.json` writes; flag off writes; a pending run from before the send, coalesced after it, writes.
-
-**Board.** Note on T-0866: item 3 only, which adds nothing to its 1.5 days or to F3. New T-0976, Idris: the rest, after T-0866, before the chair line that sets the flag default (T-0680).
-
-## Chair line (Ines), 2026-11-02 4:02 AM ET: the mirror's folder, the premade list, and what a script can reach (T-0675's 7:15 PM note, T-0952)
-
-Read: Idris's T-0675 note of 7:15 PM; Pernille's T-0935 review, M1 and L2 (the one view, C13); the 4:54 PM line's item 3 and my 1:03 PM line's item 1; lane.py's header, `allowed` and DENIED_SUBMODULES; LaneMirror.swift, LaneGuard.swift and WidgetID.swift at HEAD; each premade's imports by grep. Ran no build, no test and no script. The flag stays off. Moves no date. Idris writes no code from this line until space returns (plan, Day 12).
-
-**1. The mirror's folder is `lane-scripts/<id>/`. a84048f5 stands.** `scripts/<id>` is `files.shared(id)`, a person's data, and a mirror there cost a person their files.
-
-- Read every `scripts/<id>` that means the mirror (8:03 AM item 2, 1:03 PM item 1, T-0675, T-0972) as `lane-scripts/<id>`. It stays right where it means shared files: FilesCall, WidgetID.
-- This is the dated line amendment 2 item 1 asks for. The App Group gains `lane-scripts/`. The app writes it; the extension reads it and has no write to it in its list.
-- Corrected in place in this commit: C2 1.7, project-save s2 item 3, the bound-fields row. lane.py and the Swift already say it. T-0682's "widen T-0675's mirror" means this folder. Older reviews and proposals stay as written.
-
-**2. The list: scan clean is not enough.** The scan says a premade can load. It does not say it can draw. A premade goes on `lane.json` only if its scan is clean and every device call it makes is answered in the extension. By that test:
-
-
-<div class="tbl" role="region" tabindex="0" aria-label="Table 10: Chair line (Ines), 2026-11-02 04:02 ET: the mirror&#x27;s folder, the premade list…, scrolls sideways" style="--tw:774px" markdown="1">
-
-| Premade | List | Why |
-|---|---|---|
-| countdown | on | as built |
-| clocks, habits, progress, quote | on, in item 5 | scan clean, no `pywidget.device` import at HEAD |
-| steps | on through item 5, then off | T-0675's Done names the run and its cold peak. The chair line that sets the flag default takes it off unless the pedometer answers in the extension by then |
-| altitude, distance, sun | off | they read location, which answers NotAvailableHere until T-0053 lands |
-| github, shortcuts, storage | off | fail the scan |
-
-</div>
-
-
-- Item 5 runs each listed premade once. One that draws differently from the app's picture comes off, with the reason in the note. Their cold peaks go in the bench, and 1:03 PM's rule holds: any over 9 MB moves the figure.
-- **Same trap for a person's script.** Idris asked about premades. The rule covers more. `pywidget.device` passes `allowed()`, so under T-0972 a script that reads the pedometer or location is clean, gets `lane: widget`, and fails or draws unavailable in the extension, where it worked in the app. Read from the code, not run. T-0972 gains a row: such a script gets `app` and the same one line, until that module answers there. One scanner still: lane.py decides, no Swift port. Maren reviews the words.
-
-**3. T-0952: option (a). The ordinary route is a stated limit, off the "Not held" list. No code.** Pernille's view, and I agree.
-
-- My 1:03 PM line was wrong on one point. It said the three files staying outside the mirror met T-0720's condition. That condition is no script's folder, and `widgets/<id>/` is the folder of an app-lane run (M1).
-- (b) moves three files and leaves the folder shared. `tree.json`, the larger loss, and `state.lock` stay beside them, and an id rename and a widget delete would need steps they don't need today.
-- What the limit costs: one missed demotion. The next kill leaves its own marker. `lane-peak` goes back to the first run's 18 MB need. `lane-refused` starts its count over. Nothing else is touched, and no other widget is blamed.
-- Worst case: a script that clears its folder on every app run, with an app run landing between each kill and the next call. It stays in the lane and gets killed again. That is item 4's effect, reached by luck, and the app runs are painting its picture anyway.
-- The words, under the list in C2 1.7 and lane.py's header: *Stated limit, not on this list. A script run in the app sits in `widgets/<id>/`, so one that clears the folder beside its `__file__` deletes the files the runtime keeps there, its own widget's only: `ext.marker` (one missed demotion), `lane-peak` (the first run's need again), `lane-refused` (the count starts over), `tree.json` (its last picture).*
-
-**4. L2: 4:54 PM item 3 gains a fourth effect, for this one route.** A script that deletes its own marker in every run hides its kills across processes. Item 3 allows "the rest of that process". That is not this, so the bullet Pernille wrote doesn't meet item 3's words as they stood. I am changing the words after seeing the case, and I say so: one named row, not a wider rule.
-
-- New effect, deleted marker only: a widget's own kills go unseen across processes. Backstop: the memory kill, every reload. Its neighbours in that reload lose that reload and keep their cached trees.
-- Why accept it: the route goes by path, so moving the files doesn't stop it. Any file the extension can read, a script in the extension can reach, and lane.py's header says so: not a sandbox. It costs freshness on that person's phone. No data leaves, and no other person is touched.
-- What would make this fail: a pasted script doing this on purpose. The person sees stale widgets, no badge and no reason. I accept that for 1.0. If T-0680's reload log shows repeated kills with no demotion on a real phone, it comes back to me.
-
-**Board.** T-0952 ticked. Notes on T-0675 (the list; Pernille carries items 3 and 4 into lane.py's header at item 7, docstring only), T-0972 (item 1, item 2's row), T-0680 (steps), T-0682.
-
-## Chair line (Ines), 2026-11-02 5:15 PM ET: the Activity screen's run log, 7.5 and the App Group layout (T-1138)
-
-Read: Maren's IDE spec s5.12, items 12.1, 12.5, 12.8 and 12.13 (9a83415c); 5.2's layout, 7.2 and 7.5 above; amendment 1 item 5; the 2:40 AM line; the 8:03 AM line's two-writer bullet; my 4:02 AM line, item 3; LaneGuard.swift's `state.lock` comment (Core, line 200 on); PROPOSAL-002 s5; board lines T-0048, T-0198, T-0793, T-0866, T-0906. Ran no build, no test and no script. Moves no date.
-
-**Ruling: yes.** Each widget run keeps its output and traceback for 14 days. PROPOSAL-002 s5 promised "each run's stdout, stderr and traceback", and that promise is the point of the screen. A screen that keeps only the latest traceback breaks it. Most of the work is pure Foundation, so the host can carry it and Idris's Xcode slot gets the smallest possible part.
-
-**1. Layout. This supersedes `log/runs.jsonl` in 5.2 and 7.5.** One shared file under a lock held per widget does not work. `state.lock` is `widgets/<id>/state.lock`, so two widgets appending to one shared file hold two different locks, and a prune that rewrites the file races the other widget's append. The log is therefore kept per widget:
-
-- `log/widgets/<id>/runs.jsonl`: one row per run of that widget.
-- `log/widgets/<id>/out/<row>.json`: that run's output and error (Maren's `log/runs/<row>.json`, moved).
-- `log/console.jsonl`: one row per console run, under `log/console.lock`.
-- A widget's row, its detail file and its `status.json` are written under that widget's `state.lock`, in that order, in one hold.
-- The log stays outside `widgets/<id>/`. A save swaps that whole folder in one rename (T-0906), and a script in the app can clear the folder beside its `__file__` (4:02 AM item 3). Either would wipe a log kept inside it.
-
-**2. Row keys.** These are 7.5's keys plus Maren's new ones, and every one is accepted: `row` (a UUID; it names the detail file), `ts`, `kind` (`widget` or `console`), `id`, `trigger` (L2's values, amendment 1's reserved values, plus `editor_save`), `lane` (`app` or `widget`), `outcome` (7.2's words), `error_type`, `file`, `line` (the innermost `user` frame of the contract s8 `error`, or the `syntax` position), `duration_ms`, `peak_mb`, `headroom`, `run_id`, `backgrounded` (true or absent), `sensors`, `detail` (true when a detail file was written). A reader shows an unknown key, trigger or outcome as text and never fails (amendment 1 item 5).
-- **12.13 (c), closed:** rows are keyed by `row`. `run_id` stays Swift's per-launch counter, and nothing compares it across launches. Idris does not need to answer it.
-
-**3. Who writes each key: Swift, every one. The Python runner writes nothing in `log/` or in `status.json`.** A person's code runs in that interpreter, so a Python writer would let a script write its own log. Python's part is what it already sends: `bridge-outcome/1` (`duration_s`, the `error` with its frames, the syntax position) and the stdout and stderr records. No Python task comes from this line.
-- App runs: the app's run sink writes the row, the detail file and `status.json` in one hold (T-1140).
-- `killed` rows: launch recovery writes them from the crash marker and the job record (T-1140; T-0198's `expired_runs` test decides `status.json`, not the row).
-- `tree_too_large`: the app writes the row when it reads `render-fault.json` at the next launch (T-1140).
-- Extension-lane runs: the extension's runner calls the same Core store under the same lock (T-0675's flock bullet, which now means these per-widget files; the flag stays off in Release).
-- `peak_mb` comes from `task_info` around the run, in the app (T-1140). `trigger` comes from the job record.
-- `status.json`'s five strip keys (`last_outcome`, `failing_since`, `error_type`, `line`, `ts`) come from T-0866's smallest writer. T-1140 writes the row beside it and does not build a second writer.
-
-**4. What is kept.**
-- **Widget run** (any trigger, either lane): a row and, unless the outcome is `deferred`, `busy` or `oom_guard`, a detail file. Those three ran nothing, so they get a row only.
-- **Console run** (Run, the REPL, a Shortcut running a plain script): a row only, with `kind=console`, the project name as `id`, and no `file`, `line` or output. The console already shows its output, and Copy all is the way to keep it. The console's "Runs log" reads these rows, and they stay 7.5's evidence for section 6. The Activity screen never lists them.
-- **Gallery previews:** nothing. They never write the App Group (T-0191).
-- **The widget itself** never reads `log/`. The Lock Screen is public. The card keeps 7.1's words from `status.json` only: type and file on medium and larger, the line on the Lock Screen.
-
-**5. Bounds.**
-- **Age:** a row older than 14 × 24 h by `ts` is deleted, and its detail file with it. The prune is an atomic rewrite under the lock. It runs at launch, and on an append only when the file's first row is past 14 days or the file is over its cap. Otherwise an append is a single `O_APPEND` write.
-- **Detail file:** at most 24 KiB. Output keeps the last 16 KiB, cut at a line boundary and on a UTF-8 boundary, with `cut: true`. The error gets 8 KiB: the message whole (the bridge caps it at 4 KiB), then `text` and frames trimmed from the outer end to fit. The innermost user frame is always kept.
-  - *Chair note (Ines), 2026-11-02 9:39 PM ET, amends the line above (finding 5, T-1142):* output is cut at the first line start after the cut point only when that keeps at least 8 KiB; otherwise it is cut on a UTF-8 boundary, mid-line, with `cut: true`. A line start that keeps 5 bytes of the 16 KiB allowed meets the letter and loses the output the bound was there to keep. A test pins one 20,000-byte line followed by `done\n`.
-- **Per widget:** details are kept for the newest 100 rows, and older ones are deleted (the row stays and shows `d.nokept`). `runs.jsonl` is at most 1 MiB, oldest rows first. The worst case is about 3.4 MiB.
-- **Whole `log/`:** at most 24 MiB. At launch, if `log/` is over the cap, the oldest detail files across all widgets are deleted until it is under. Rows stay, with `d.nokept`. `console.jsonl` is at most 512 KiB.
-- **Clear Activity** deletes `log/widgets/<id>/` and nothing else (12.1 item 6). A widget id with no row inside 14 days loses its folder at the launch prune.
-
-**6. Privacy.**
-- On device only, in the App Group, with the container's default protection class. T2 and the extension write while the phone is locked, so a stricter class would lose rows.
-- Not excluded from backup. The log is in the person's own iCloud or computer backup, like their scripts, and nowhere else.
-- Never sent. No network code reads `log/`, there is no analytics, and the privacy label stays "no data collected". It leaves the device only through Export on the share sheet, which the person taps (12.7), from a temporary file deleted when the sheet closes. Deleting the app deletes it all.
-- Output can hold anything a script prints. That is why it stays on the device, why the widget never shows it, and why Export goes through a person's tap.
-
-**7. The freeze (2026-11-30 11:59 PM) and the one Xcode slot.**
-- T-1139 (host, Pernille) holds the codec, the outcome-to-row mapping, the cutter, the retention planner, the file store with its flock (as LaneGuard does), and 12.7's export text. All of it is tested by `swift test` on the host, with no Xcode slot. Due 2026-11-05 11:59 PM.
-- T-1140 (Swift, Idris) is the wiring and one Simulator run. My estimate from the code is 1 day plus review, and Idris corrects it at start. It goes after T-1139 and T-0866's `status.json`, and before T-0048 builds the screen. It is on main by 2026-11-20 11:59 PM.
-- **Cut:** if T-1140 is not on main by 11-20, the Activity screen moves to 1.1 with it, and F9 keeps the four error states (my T-0331 order). The refusal path in 12.8 does not ship, because a screen that drops output and traceback without saying so breaks s5.
-- What would make this fail: T-0866's writer slips, and T-1140 waits on it. If T-0866 is not on main by 11-16, T-1140 writes the five strip keys itself, and T-0866 adopts that writer.
-
-**8. s5.12 changes.** These are words only, and the layout and drawing stand. 12.8 names `log/widgets/<id>/out/<row>.json` and the per-widget `runs.jsonl`. `d.nokept` also covers the 24 MiB trim. Console rows are not listed. 12.13 (a) and (c) are closed (T-1141).
-
-**Board.** New lines: T-1139 (host half, Pernille), T-1140 (Swift half, Idris), T-1141 (12.8 words, Maren) and T-1142 (review of T-1139, Odalys). T-1138 is ticked.
-
-## Chair line (Ines), 2026-11-03 2:24 PM ET: the lane's first-run figure after the sink fix (T-1634 item 1)
-
-Read: bench/t0675-lane-extension.txt (runs 4 and 5), 7746d24e7's ExtensionLane.swift diff, my 1:03 PM line item 2 and its bullet on the cold peaks, my 4:02 AM line's item 5 bullet, board line T-1634, and `git grep firstRunPeak` (it sits in LaneGuard.swift line 238, not ExtensionLane.swift). Ran no build, no test and no script. The flag stays off. Moves no date.
-
-**1. The first-run figure is 21 MiB.** My 1:03 PM line said that a lane premade whose cold peak above baseline exceeds 9 MB sets the figure, rounded up. Run 5's highest clean first run is clocks, 21,921,840 bytes (20.9 MiB). Rounded up, that is 21 MiB, or 22,020,096 bytes.
-
-- habits' 19,955,832 bytes is not counted. That figure carries countdown's three runs in the same process. It is under 21 either way.
-- I considered keeping the figure low by taking clocks off the list, and rejected it. The figure stands in for a script nobody has measured yet, and a user can write one like clocks. Changing the list does not make user scripts lighter.
-- These are Debug numbers on a Mac CPU with no jetsam limit, and they are the only figures we have. T-0680's device run replaces them, and that figure comes back to me.
-
-**2. The margin stays 2 x, so on these numbers no first run fits.** The need is 2 x 21 = 42 MiB against C = 30. No phone passes that, whatever its baseline. As set, every script with no `lane-peak` is refused on its first run and goes to the app lane. That is the honest result of the evidence, not a fault in the margin. My 1:03 PM line changes 2 x only after a T-0680 kill or a refused run that fits, and neither has happened.
-
-- The lane cannot open on these numbers. The flag stays off until T-0680 measures a Release build on a device.
-
-**3. clocks and progress come off `widgets/premade/lane.json`.** G1 is peak + B <= 0.5 C, which is 15 MiB. clocks' own peak is 20.9 MiB and progress's is 15.2. Neither passes even at B = 0, so they run in the app lane, as steps does. countdown (11.0), quote (10.6) and habits stay on the list. They pass G1 only if their process starts at about 4 MiB or less, which is for T-0680 to measure. A premade goes back on the list once its device peak is under 15 MiB.
-
-**4. For Idris (T-1634).** Set `LaneMargin.firstRunPeak = 21 * 1_048_576` and its test (LaneGuardTests line 33). Take clocks and progress off the list and give the reason in the note. Item 2 still runs: if habits' clean first run exceeds 21 MiB, it moves the figure under 1:03 PM.
-
-What would make this fail: a device figure far below the Simulator's. Then this line would have closed the lane on a Debug artefact. That is why T-0680 decides, not this line.
-
-## Chair line (Ines), 2026-11-03 7:51 PM ET: two run-file effects outside 4:54 PM item 3 (T-1650, from T-1642)
-
-Read: Pernille's T-1642 review, M1 and L2 (the one view, C13); lane.py's Not held bullet for the three run files and its stated limit; the 4:54 PM line, items 2a and 3; my 4:02 AM line, items 3 and 4; my 2:24 PM line, item 2; at HEAD, ExtensionLane.swift `takeTurn` and `refused`, LaneGuard.swift `LaneRunFiles`, WidgetStatus.swift `oomGuard` and `showsBadge`, TreeTimeline.swift's stale mark. Ran grep and git grep only: no build, no test, no script. The flag stays off. Moves no date.
-
-**1. `lane-peak` written low: a named row, as 4:02 AM item 4 was.** 4:54 PM item 3 gains one more effect, for this route only.
-
-- Route: a script writes a smaller number into its own or another widget's `lane-peak` by its path in the App Group. Effect: the margin lets through a run it would refuse, so at worst one memory kill, and the other widgets in that reload lose it and keep their cached trees. Backstop: the marker stays down after the kill, and the next turn demotes the widget to the app lane. A demoted widget never reaches the margin again, so writing the file again changes nothing. With a deleted marker as well, it is 4:02 AM item 4's row, already accepted.
-- Why a row and not a fix: it ends at the marker, as item 3 asks of every row, and it needs a deliberate write of a number into a runtime file. No ordinary script does that. Clearing the folder in the app (4:02 AM item 3) deletes the file instead, and a missing file reads as the 21 MiB first-run figure, which on today's numbers refuses every widget (2:24 PM item 2).
-- As at 04:02: I am changing item 3's words after seeing the case, and I say so. One named row, not a wider rule.
-
-**2. `lane-refused` deleted between refusals: a fix line, not a row.** Item 3 "may not list ... a break in 2a", and this is one. The widget is skipped as `oom_guard` for as long as the deleting goes on, and it shows its old picture with no badge. A tree that declares `stale_after` gets the clock mark (TreeTimeline); a tree without it shows nothing. In both cases the person has no reason. Held to its words, item 3 can't list it.
-
-- What decides the form is a reading at HEAD, not the tampering. `refused` demotes only on a refusal recorded by another process. Inside one extension process every refusal is `oom_guard` again, with no badge, for as long as that process lives. So an ordinary script can sit on a stale picture with no badge, with nobody deleting anything. That is worse than the case I was asked about, and widget freshness is the product's promise.
-- So the fix goes in the badge, not in the count. A refusal count kept outside `widgets/<id>/` would close the app-side route (a script clearing its folder, 4:02 AM item 3). It would not close a lane script writing by path (whatever the extension can read, a lane script can reach, 4:02 AM item 4), and it would do nothing for the one-process case. A badge on repeated `oom_guard` covers all three.
-- The rule: a new `oom_guard_since` in status.json, set by the first `oom_guard` and kept by later ones (as `deferred_since` is), cleared by any other outcome. `showsBadge` is true for `oom_guard` when `oom_guard_since` is earlier than this write: from the second refusal in a row. The first stays unbadged, because one skipped reload is not a stale picture. It uses the existing badge, with no new mark and no new copy. If the Activity screen wants a word for it, that word is a DRAFT under C51, for Maren.
-- What this does not close: status.json itself. If it sits in `widgets/<id>/`, a script that deletes it drops every badge, this one included, and 4:02 AM's stated limit does not list it. Pernille checks where it sits. Then she either adds it to the stated limit with its effect or brings it back to me.
-- Cost: about half a day for Idris plus a review, inside T-0675's lane days. It blocks the flag default, not item 4 and not a date. With the disk under its line, the test runs when space returns.
-
-**3. What would make this fail.** An extension process that lives for hours and refuses the whole time. The badge then sits on a widget whose only fault is memory, with no traceback behind it. That is honest, because the picture is stale. T-0680's reload log will show how often it happens. If it happens often, the badge's wording comes back to me. The rule does not.
-
-**Board.** T-1650 ticked. New T-1714 (Idris, P1): the badge. New T-1715 (Pernille, P2, after T-1714): the bullet, C2 1.7, status.json.
-
-## Chair line (Ines), 2026-11-03 8:00 PM ET: status.json deleted by path between refusals (T-1717, from T-1715)
-
-Read: Pernille's note on T-1715 and her 6c056284a (lane.py Not held bullet and stated limit, C2 1.7); my 7:51 PM line, item 2; the 4:54 PM line, items 2a and 3; my 4:02 AM line, items 3 and 4; at HEAD, WidgetStatus.swift `oomGuard`, `carried` and `showsBadge`, WidgetStatusStore `read`. Ran grep only: no build, no test, no script. The flag stays off. Moves no date.
-
-**Ruling: neither option. A missing status.json reads as a refusal already under way, so the badge comes from the first refusal after it.** One branch inside T-1714.
-
-- Why not a named row: it is the same break in 2a as 7:51 PM item 2, a stale picture with no badge for as long as the deleting goes on. Item 3 may not list a break in 2a. I held `lane-refused` to those words an hour ago, and this case gets the same answer. A row would also leave T-1714's backstop one file deletion away from nothing.
-- Why not a streak kept outside `widgets/<id>/`: it does not close the route. Whatever the extension reads, a lane script can reach (4:02 AM item 4), so a script that deletes status.json by path deletes the new file by path too. It would cost a second file, its own lock and its cleanup on widget delete, and give the badge two sources of truth. It closes only the app-side folder clear, and that clear also deletes `tree.json`, so there is no stale picture to badge.
-- The rule for Idris: `oomGuard` on a missing status (`old` is nil) sets `oom_guard_since` earlier than this write (`Date.distantPast`; if that does not round trip through the stamp, the write's `ts` minus one second, and the test checks the badge, not the value). `showsBadge` is unchanged from 19:51: true for `oom_guard` when `oom_guard_since` is earlier than `ts`, and only with a tree. Deleting status.json between every two refusals then badges every refusal after a deletion.
-- Who else this badges: nobody honest. `showsBadge` needs a tree. A widget's first run is refused on today's numbers (2:24 PM item 2), but it has no tree yet, so it shows the placeholder as today. A tree with no status.json beside it comes only from a deletion, or from a first status write that failed after a good tree write. In both the picture is stale and the person has no reason, so the badge is honest. It is the rule 7:51 PM item 1 already uses: a missing `lane-peak` reads as the first run's 21 MiB, the safe figure.
-- Cost: one branch and two tests inside T-1714's half day. Nothing new for Maren: same badge, no new copy.
-
-**Not closed here.** status.json *written* by path with a made-up outcome (any widget's, by a lane script) drops every badge, not this one only. No Not held bullet and no stated limit names it. It is not a T-1714 question. New T-1720 (Pernille, P2): find whether a backstop exists (the next status write is Swift's, after the run), then write it as a bullet or bring it back to me.
-
-**What would make this fail.** A status write that fails often on the device while tree writes succeed. Then good widgets would carry a badge at their first refusal. I have no device figure for that. If T-0680's device runs show status writes failing, the fallback comes back to me. The rule does not.
-
-**Board.** T-1717 ticked. T-1714 gains the nil branch and its test. New T-1720 (Pernille, P2).
-
-## Chair line (Ines), 2026-11-03 9:09 PM ET: status.json written by path with a made-up outcome (T-1725, from T-1720)
-
-Read: Pernille's T-1720 finding (0cdc82a28, the one view), items (a) to (d); my 8:00 PM line, "Not closed here"; the 7:51 PM line, item 1; the 4:54 PM line, items 1, 2a and 3; my 4:02 AM line, item 4; at HEAD, WidgetStatus.swift (`decode`, `carried`, `expired`, `Recovery`, `LoopBreaker`), RunLogRecorder.swift's expired rule, CrashMarker.swift `LaunchRunID`, PyBridge.swift `cwd`, TreeTimeline.swift's stale mark, and the runtime for any API that names `widgets/<id>/`. Ran grep only: no build, no test, no script. The flag stays off. Moves no date.
-
-**Ruling: forging a runtime file is one class, listed once, and it must end where item 3 says. Two fixes make that true. Then one Not held bullet.**
-
-**1. The class. I am changing 4:54 PM item 3's words after seeing the case, and I say so.**
-
-- Route: a script writes a runtime file's content by path, in the runtime's own format: a `status.json` with a made-up `last_outcome`, `failing_since` or `expired_runs`; a `lane-peak` (7:51 PM item 1); a `tree.json`. That is forging, and it is deliberate reach. No ordinary script does it. No runtime API hands a script `widgets/<id>/` (grep of pywidget/runtime). The run's `cwd` is never set to it (PyBridge's `cwd` has no caller that sets it). A file that is not a JSON object decodes as no status, which 8:00 PM already badges.
-- Why one class and not a fix per file: `tree.json` shows it cannot be closed. A script that writes another widget's picture by path shows a fake fresh picture, and no file rule can badge it, because whatever the extension reads, a script can reach (4:02 AM item 4, 8:00 PM). Item 1 already says the lane is not a security boundary. A chair line per file closes nothing.
-- Item 3 gains: "It may list forging (a script writing a runtime file's content by path, in the runtime's own format), even where the effect is a picture without its badge, when the effect ends at that widget's next status write by Swift, in either lane, or at demotion." 2a still binds the runtime and every ordinary route.
-- Why 8:00 PM stays a fix: deleting is ordinary. A folder clear deletes. Nobody ordinary writes our schema.
-
-**2. Fix A: the lane writes at the end of every run (finding (a)).** At HEAD the lane writes no row and no status.json, so for a widget only the lane runs, "the next Swift write" may never come and item 1's bound is no bound. The extension runner calls `RunLogRecorder.recordWidgetRun` for every lane run that reaches an outcome: row, detail and status.json in one `state.lock` hold, as the app lane does. This is T-1140's clause "its extension runner calls the same store", put on its own line so it has an owner and an order; T-1140 closes that clause by pointing at it. T-1728's refusal write and this one share one writer. Idris, after T-1728.
-
-**3. Fix B: `expired_runs` stops being a switch a file can throw (finding (c)).** This is the one effect that is not display: a forged list makes a real kill skip the loop breaker, and with guessed ids (the run counter starts at 0 each launch) it reaches other widgets.
-
-- (i) `recordWidgetRun` trusts only the run ids the T2 expiration handler listed in this process, kept in memory. An id that is only in the file is ignored: the row is the run's own, and status.json is written. The handler and the sink share the process, so this costs one set.
-- (ii) Launch recovery has no memory to use. A kill matched to `expired_runs` stops being skipped forever: four in a row on background triggers demote, as kills do (twice `LoopBreaker.limit`). A forged list then ends at demotion, as item 3 asks. An honest widget the handler stopped and the system still killed four times running cannot finish in the background; T1 only is right for it. This changes LoopBreaker's rule that expiry-matched kills "neither count nor reset", for this one case, and I say so.
-- Tests red first: four forged-expiry kills demote; one honest expiry kill does not; an id only in the file still gets its status written. Idris, after Fix A.
-
-**4. Not held, one bullet (Pernille, after A and B are on main).** Route: forging, as item 1. Effect, among the person's own widgets: a picture without its badge, a badge on a good widget, or wrong `failing_since` or `deferred_since` text. Backstop: that widget's next run in either lane (Fix A); demotion for forged expiry (Fix B). Unknown keys stay carried; nothing reads them. The bullet goes in lane.py and C2 1.7. It names code, so it is written after the code lands, not before (T-0791).
-
-**5. Order, and T-0048.** T-1728 (in progress) first, then Fix A, then Fix B, then the bullet. T-0048 does not draw 7.1 row 4, the badge, before Fix A is on main: until then a lane-only widget's badge has nothing behind it (finding (d)). Fix B gates the flag default, not T-0048. Cost: about half a day each for A and B, each with an independent review; the bullet about an hour.
-
-**What would make this fail.** An ordinary route to an old or made-up status.json: a restore that copies a whole widget folder back, a sync, or a future runtime API that hands scripts `widgets/<id>/`. Any of those makes forging ordinary, and the class comes back to me. Second, Fix A's write failing on the device while tree writes succeed (8:00 PM's fallback). T-0680's device runs answer both.
-
-**Board.** T-1725 ticked. New T-1764 (Idris, P1): Fix A. New T-1765 (Idris, P1): Fix B. New T-1766 (Pernille, P2): the bullet.
-
-## Chair line (Ines), 2026-11-05 2:12 AM ET: the error badge through a memory refusal (T-1741, from T-1729)
-
-Read: Pernille's T-1729 review (pywidget/docs/reviews/t1729-pernille.md), findings (a) to (c); my 7:51 PM line, item 2; my 8:00 PM line; the 4:54 PM line, item 2a; at HEAD, WidgetStatus.swift `ok`, `failed`, `expired`, `deferred`, `oomGuard` and `showsBadge`; the writers of tree.json (grep: RunResultSink, and WidgetInstallView, DEBUG only). Ran grep only: no build, no test, no script. The flag stays off. Moves no date. Older lines keep their words; this line adds to them.
-
-**The question for a person.** A widget's script fails, so its picture carries the error badge. Next reload, the memory guard skips it. Today the badge disappears for that reload while the picture is just as old, and older. That is a picture without its reason, the 2a break. The widget must keep telling the person the truth: this picture is not current, and here is why.
-
-**(a) Ruled: a refusal during a failure streak keeps the badge.** `oomGuard` on a status with `failing_since` set reads as a refusal already under way, the same branch as 8:00 PM's missing status: `oom_guard_since` is `missingStatusSince(now)`, earlier than this write, so `showsBadge` stays true from the first refusal (only with a tree, as before). `failing_since` and the failure's details stay as they are today, so the badge still opens on the real traceback, the reason the picture stopped. Same badge, no new mark, no new copy: nothing for Maren.
-- Why `failing_since` and not "the last outcome was a failure": `failing_since` survives `deferred` and `expired`, and only `ok` clears it. After error, then expired, then a refusal, the picture is still stale from before the error, and the badge is honest. Keyed on the last outcome, that path would lose it.
-- I am changing 7:51 PM item 2's "the first stays unbadged" after seeing the case, and I say so. That sentence was written for a widget whose picture was fresh until the refusal. One skipped reload of a fresh picture is still not a stale picture, and that case is unchanged: after `ok`, the first refusal stays unbadged.
-- Who else this badges: nobody honest. `failing_since` is set only by error, timeout, stuck or killed, and only `ok` clears it, so a widget with it set has not drawn a good picture since its failure.
-
-**(b) Ruled: the wording.** 7:51 PM item 2's "cleared by any other outcome" reads: cleared by any outcome of a run that started (`ok`, `error`, `timeout`, `stuck`, `killed`, `expired`); `deferred` keeps it, because nothing ran and it writes no outcome and no `ts`. Clearing it on `deferred` would let refusal and deferral take turns with no badge, the 2a break 7:51 PM closed. The code already does this (T-1714); this sentence makes the ADR match it.
-
-**(c) Ruled: close it in the same branch, one token and one test.** The 8:00 PM branch keys on `old == nil`. It becomes "no status, or a status with no outcome" (`old?.lastOutcome == nil`). A status with no outcome and a tree beside it comes only from a deletion followed by a `deferred` write, or from a first status write that failed after a good tree write (8:00 PM already badges that one), because in a Release build every tree comes from a good run through RunResultSink, which is followed by an `ok` write (the DEBUG installer, WidgetInstallView, is compiled out, T-0560). So the picture is stale and the badge is honest. Pernille asked for no fix and the route is not sustained. I take it anyway because Idris is in the same line of the same function with the same test file, and it makes the rule one sentence: **a refusal reads as already under way unless the old status is a fresh picture's** (an outcome present and no `failing_since`).
-
-**What would make this fail.** A `failing_since` that is never cleared on a widget that is in fact drawing good pictures, which would put a badge on a fresh picture at its first refusal. Only `ok` clears it, and `ok` is written on every good run in the app lane; the extension lane's end-of-run write is T-1764 (Fix A, 9:09 PM). Until Fix A is on main, a lane-only widget can carry an old `failing_since`. The flag is off, and 9:09 PM item 5 already holds the badge's drawing behind Fix A, so this adds no new wait.
-
-**Board.** T-1741 ticked. New build line for Idris (P2): the branch and its tests, independent review after. It does not wait on T-1751 (the per-reload count): this branch badges at the first refusal either way.
-
-## Chair line (Ines), 2026-11-05 2:48 PM ET: one reload's refusals, told apart by time, in the badge (T-1751, from T-1728)
-
-Form: independent views, then the chair (C13). Views: Idris (B) and Pernille (A amended), collected separately and read after my own was written down (scratch T-1751-ines: chair-own-view.md, view-idris.md, view-pernille.md). Read at HEAD d44c619ea: ExtensionLane.swift `refresh`, `turn`, `refused`; WidgetStatus.swift `oomGuard`, `missingStatusSince`, `showsBadge`; PyWidget.swift `timeline`, `drawn`; TreeTimelinePlanner `minimumReload`. Ran grep only: no build, no test. The flag stays off. Moves no date.
-
-**Ruling: D. Every refusal still writes, as at HEAD. The badge needs a gap: `showsBadge` is true for `oom_guard` when `ts` is at least 60 s after `oom_guard_since`.** One predicate and one fallback in WidgetStatus.swift, host-tested in Tests/Core. No ExtensionLane change, no family, no in-process set.
-
-- Why time and not family. Families are not reloads (Idris): two families of one reload often make two turns, and a scheduled reload may ask only one family. A per-family set has to be emptied right, and the extension never sees the app lane's `ok`. Time separates the two cases by orders of magnitude, from our own code: every refusal of one reload comes inside its caller's 4 s deadline (`deadlineSeconds`; a turn with too little time left is `late`, not refused), and callers of one reload arrive milliseconds apart. Two scheduled reloads of one widget are at least 15 min apart for `.after` (`minimumReload`).
-- Why in the badge and not by skipping writes (Idris's B). B and D share the gap and the number. B leaves `ts` on the first refusal, so status.json stops saying when the widget was last refused. D keeps every write true and puts the rule in one display predicate that `swift test` checks on the host with no Xcode slot.
-- The first refusal after a fresh picture, and every refusal of that same reload, stay unbadged (7:51 PM item 2). From the next reload at least 60 s later, every family badges. This also ends today's split faces in one reload, where the second family's turn badges and the first does not.
-- What stands. The 8:00 PM and 2:12 AM "already under way" cases keep badging at the first refusal: `missingStatusSince` is `Date.distantPast`. Its fallback becomes `ts` minus 61 s, not 1 s, and a test pins the gap. A refusal in a later process still demotes.
-- I am changing my own lean. The T-1751 line leaned A and turned B down because "N has no device figure". 60 s still has no device figure. It rests on our own 4 s deadline and 15 min floor, and both of its errors are bounded. A gap that is too short gives today's behaviour: a badge from a second turn in one reload. A gap that is too long holds the badge back by one reload. I say so here rather than bend the earlier words.
-
-**Dissent, recorded.** Pernille picked A, amended to record every caller's family, joiners included. It needs no number, and she could build no under-warn case for it. I turn it down for the reasons above. A still over-warns when two placed copies of one widget at one family each make a turn in one reload, which she names herself, and D does not. Idris picked B, and its substance stands in D.
-
-**Facts in the T-1751 line that are no longer true at HEAD (both views).** "A refusal returns at once" is false: a refused turn waits behind `lastTurn`, can wait up to `gatherSeconds` in `givesWay`, and callers now join a queued turn as well as a running one (T-2018, T-2025, T-2037). `refused` is at ExtensionLane.swift:376, and its writes are at :379 and :384, not :364/:369. T-1741 (a) is built (T-2518). The badge is read per family in `drawn`. None of these changes the ruling. The queue only spreads one reload's refusals by seconds.
-
-**What would make this fail.** T-0680's device reload log showing one widget's refusals in one reload more than 60 s apart, which would mean over-warning. Idris's test gives that: force a refusal with the widget placed small, medium and large, plus a second small, call reloadAllTimelines, and log each refresh instant. Or it shows separate reloads of one widget routinely less than 60 s apart, which would mean under-warning by more than one reload. Either way the number comes back to me. The rule does not.
-
-**Board.** T-1751 ticked. New T-2721 (Idris, P1): the predicate, the fallback, the docstrings and the tests, with independent review by Pernille. T-1728's count closes there. T-1764 (Fix A) is unchanged.
-
-## Chair line (Ines), 2026-11-05 7:55 PM ET: the background refresh schedule's open questions (T-2846, from T-1758 and T-2728 L2)
-
-Form: independent views, then the chair (C13). My own view was written first (scratch T-2846-ines/chair-own-view.md, 7:49 PM), then Idris's and Pernille's were collected separately (view-idris.md, view-pernille.md). Read at HEAD 478c01c58: RefreshSchedule.swift and its tests (Odalys, fbd927fa7); TreeTimeline.swift `reloadPolicy`, `minimumReload`; manifest.schema.json (no interval field); ExtensionLane.swift `refused`; LaneGuard.swift `WidgetLane.badged`; PyWidget.swift `drawn`; `git grep showsBadge` (no caller outside tests). Apple, saved for this line under research/inbound/apple/developer.apple.com/: `submit(_:)` (documentation_backgroundtasks_bgtaskscheduler_submit___.md-51c457b6.html): "Submitting a task request for an unexecuted task that's already in the queue replaces the previous task request. There can be a total of 1 refresh task"; `earliestBeginDate` (…bgtaskrequest_earliestbegindate.md-9c584ac2.html): "the system doesn't guarantee launching the task at the specified date, but only that it won't begin sooner"; Using background tasks (…uikit_using-background-tasks-to-update-your-app.md-99195af7.html): "Register all of the tasks before the end of the app launch sequence", and the sample's handler calls `scheduleAppRefresh()` first, at "no earlier than 15 minutes from now". Already saved: keeping-a-widget-up-to-date (…0b3389e1.html): with `atEnd` "WidgetKit requests a new timeline after the last date in the timeline's entries". Ran no build and no test. The flag stays off. Moves no date; T-0793's cut rules (1:35 PM item 5) stand.
-
-**The frame.** Under the app lane a WidgetKit reload runs no Python (5.1 T6), so a widget's picture is only as fresh as the app's last run of it. Its tree already says when it wants to be drawn again. T2 exists to make that run happen with no setup (1:35 PM item 1). iOS reads our date only as "not before" and keeps one refresh request, so asking well costs nothing but the choice of date.
-
-1. **Where the ask comes from: the widget's own saved timeline. No manifest field.** All three views agree there is none and none is needed. Per placed widget: `after(d)` asks d; `atEnd` asks the last entry's date (Apple's own meaning of atEnd); `never` asks nothing; a stale mark (`sampled_at + stale_after`) earlier than that asks the stale mark; no tree, an unreadable tree, or `wants-run` present asks now. Any ask more than 24 h past the reschedule moment reads as 24 h. Asks are absolute dates, turned into an interval from the reschedule moment (item 2), so the author's `sampled_at` never moves the schedule (Pernille's point).
-   - Why `atEnd` asks. A default widget has one entry and `atEnd`, so its last entry is already past and it asks at the floor. That is the widget T2 is for; treating `atEnd` as no ask leaves every default widget without the fallback. A clock or sun timeline that runs to tonight asks tonight, which is right.
-   - Why the stale mark asks. A picture that turns stale is the failure Tenet 1 puts first, and the author has told us when.
-   - Why 24 h (Idris). One wrong or far-off date in one tree must not turn a widget's background run off for days. It also keeps a year-9999 date out of `submit` (Pernille's Q5).
-   - Why no tree asks now. `wants-run` "is honoured by the next T1-T4 run" (5.1); with no T2 scheduled for it, a newly placed widget waits for an app open.
-   - Dissent, recorded. Pernille: `atEnd` and `never` are no ask, and `stale_after` is a staleness horizon, not a refresh request. I turn down the first for the default-widget reason above and the second for Tenet 1. Her other points (absolute dates, not `sampled_at`; excluded widgets pass nil) are in the rule.
-2. **"Last run" is the moment of the reschedule call** (the `now` at `submit`). All three views agree. `earliestBeginDate` is an absolute date and the floor is "never under 15 min" from when we ask. T2 submits twice: at the task's start from the trees as they are (Apple's sample does this first; a kill mid-run then still leaves a request), and at its end from the new trees; the second replaces the first. `RefreshSchedule`'s `lastRun` is renamed `from`.
-3. **The first schedule.** The task is registered before launch ends (Apple). The app submits, with `from` = now, at the end of every T1 and T3 batch and when the scene goes to the background; no date is stored. No placed widget asks: cancel the pending request. Before the app's first launch nothing is scheduled; the widget shows its card (T6) until T1.
-4. **Expired and stuck reschedule by the same rule, no back-off.** All three views agree. Expired is our scheduling, not the script (5.3), and the deferred widgets run first next time, so each launch makes progress. Stuck ends itself per widget: two stuck or killed in a row on a background trigger set `background=false` (7.2), and while the interpreter is held a T2 runs nothing and reschedules (5.3). A back-off would only delay the first run in a new process. What would make this fail: T-0680's log showing iOS cutting an app whose launches do nothing; then it comes back to me.
-5. **Confirmed: a non-finite interval is not an ask; zero or negative gets the floor.** Under item 1, a negative is an ask date already passed, meaning "now", so the floor is right. A non-finite value can come only from a broken caller; infinity reads as never. Item 1's 24 h cap is in the caller.
-6. **Confirmed: the filter is the caller's.** The rule stays pure. With the flag on, a `lane: widget` widget not in `.lane-demoted.json` passes nil (1:35 PM item 2); `background=false` passes nil (7.2). The filter and the ask reader are one function with its own tests and a mutant that drops the filter (Idris, Pernille), so no handler holds an untested filter.
-7. **T-2728 L2: the demotion badges at once, and it already does.** The views split: Pernille, badge at once through `oom_guard_since`; Idris, no badge, or a separate field, never a faked `oom_guard_since`. Reading the code settles it. The drawn badge at HEAD is `WidgetLane.badged`, the demoted list (7.2 row (c): "last good tree with the badge"), set in `drawn` for every entry; `showsBadge` has no caller outside tests. A demotion written 2 s after the first refusal, in a second process, puts the id in the list, so the next timeline is badged whatever status.json says. 2a holds, and the 2:48 PM rule D's error bound is not broken for this case. No change to `oom_guard_since` or `showsBadge`. What is owed is a test that pins it, and one rule for later: when the status badge is wired into drawing, the drawn badge is the demotion read or `showsBadge`, never `showsBadge` alone. Not ruled here: whether row (c)'s badge should clear after an app-lane `ok`.
-
-**What would make this fail.** A widget whose tree asks wrongly and often, waking the app every 15 minutes for nothing: the 24 h cap bounds only the far side. iOS decides the real cadence ("won't begin sooner"), and T-0680's 3-day reload log is the check. Or default widgets that should not refresh in the background: today none such exists, and `never` is the author's way out.
-
-**Board.** T-2846 ticked. New T-2852 (Odalys, P1): the ask reader with its filter and the `from` rename, review by Pernille. New T-2853 (Idris, P1): the second-process demotion badge test. Notes on T-0793 (items 2-4 are what it builds), T-2841 ((c) answered by item 7) and T-2845 (does not wait).
-
-## Amendment 4 (Maren), 2026-11-07 9:40 AM ET: 7.2 for a lane turn that could not start (T-2574, from T-2272 F6)
-
-Read at HEAD 1522a9ea9: ExtensionLane.swift `runInBridge` (:480-507) and `turn()` (:242-301), PyBridge `run` (:566-570), WidgetStatus, Widget/PyWidget.swift :49-67, ide/spec.md 12.4, review t2272-pernille.md F6. Hand-off for T-2496 (Idris).
-
-**The case.** The lane got as far as running and Python never went: `no runtime config`, `Python unavailable` (`bridge.start` threw), `not queued` (`bridge.run` threw `notStarted`), or `no marker` (the marker could not be written, so the lane refused to run). Today each returns `Ran.log == nil`: no row, `status.json` untouched. These are not one-off: a broken RuntimeConfig or a runtime that will not start fails the same way on every reload of every lane widget, and the app shows "Working".
-
-**Ruling.**
-1. **Word: `error`, type `InternalError`.** No new 7.2 word. `InternalError` already means "our side failed, not your script" (7.2 mapping, contract s11 A4), is in 7.1 row 4's badge set and in the Failed filter, and costs no change to `RunOutcomeWord`, export or the precedence. Not `deferred`: deferred is "will run next trigger" and self-heals; this does not, and deferred carries no badge.
-2. **Row: one lane row per turn**, through `log(id, .error, "start_failed", reason:)`, with `reason` one of `no_config`, `python`, `not_queued`, `no_marker`, and `start_error`: the bridge's error text, cut to 200 bytes (it is our enum's text, never user data). No file, line, traceback or detail file. No throttle: a working lane writes one row per reload too, so the volume is the same.
-3. **status.json: `WidgetStatus.error` with `Failure(errorType: "InternalError")`**, no file or line; `failing_since` keeps the streak's start. The next `ok` from either lane clears it. A `no_marker` turn writes best-effort: if the App Group is not writable, the row and status are lost too, and that is accepted.
-4. **Badge: yes, 7.1 row 4** (with a tree), 7.1 row 3's error card without one. The reason is freshness: this is the one failure that never mends itself, and a picture going quietly old is the thing Tenet 1 forbids. **Gap found while reading, not ruled here:** at HEAD the drawn badge is only `WidgetLane.badged` (the demoted list, PyWidget.swift :60); `showsBadge` has no caller outside tests, so no `status.json` outcome draws a badge on the Home Screen yet, script errors included. Until 7.1 row 4 is drawn, this case shows in the app only: the Activity row and the strip's "Failing".
-5. **No demotion.** The cause is the build or the process, not the widget's script. Demoting would move every lane widget to the app and make the person confirm each one back after the fix. The marker is cleared as today. The app's foreground pass already runs every placed widget (WidgetWriter.passIDs), so opening the app updates it and clears the status.
-6. **`not queued` with `BridgeError.stuck` is not this case.** That is the closed lane (T-1852): `logClosed`, `deferred`, `lane_outcome=closed`, as today.
-7. **Copy (DRAFT, C51, in ide/spec.md 12.4):** row reason `o.nostart` "Could not start"; detail `d.nostart` "Python could not start in the widget, so your script did not run. The widget kept its last picture; opening [appname] updates it." then `d.noran`. A failing status with no line (any `InternalError`) shows no `act.open` button: there is nothing in the file to fix.
-
-**What would make this wrong.** A start failure that is transient and frequent on real phones (the T-0680 log would show `start_failed` rows between `ok` rows); then a one-reload grace before the status write comes back to me.
-
-**Board.** T-2574 ticked; note on T-2496 (Idris builds items 1-3, 6, 7's reason switch). Item 4's gap goes to Ines for a line.
+Ines, CEO
 {% endraw %}
 
 </div>

@@ -36,7 +36,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-4008 11-10 0dc00ac09b: Ask to Buy red = StoreKit test env lists a verified purchase for a deferred request; test skips with facts. Rerun line off after a clean week (xc_rerun.jsonl).
 - Lesson T-4008: main unpushed? push land/idris-<task> whose tip adds the job files; empty pin commits dodge "already queued".
 
-- T-3143 f11e88eef8 11-12: already green since T-3217 (runner 13/0); test side was right to fix. Lesson: runner results live on origin/macbook-results:ops/jobs/<J>/result.json; the daily full suite can hold the runner ~50 min.
+- T-4270 11-13: build 6 archived (65f23b1c7c, ops/runs/upload-internal-20261113-115546.xcarchive); Apple export exit 70 'required contracts': Investors must accept an agreement, then upload.sh --archive it --internal --upload, then the phone card. Lesson: main gets recut, my hashes change (754904a541 = 2411183c0d): check is-ancestor on origin/main. Gate Release build needs PW_INTERNAL_TESTFLIGHT=YES CODE_SIGNING_ALLOWED=NO.
 
 - T-3764 11-12: stopped, no code. Runner {SIM} is always an iPhone (runner.py simulator()); every .pad UI test skips there. iPad proof needs a runner change first (line noted).
 
@@ -44,16 +44,18 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 - T-4254/55/56/61 eab2ec4097 11-13: EditorMarks (hold typed word, keep other lines), tint 12/9 %, VO list announcements; 4254+4255 ticked (board unstaged). Open: T-4256 gutter number colour (Runestone one colour for all numbers: needs a Vendor/adapter hook), Increase Contrast shots; T-4261 review by Pernille. Lesson: simctl recordVideo can't write to the SANDISK volume (-12204): record to /private/tmp; avconvert trims. A Vendor symlink in the copy blocks main_gate: remove before land.
 
-- T-4258/59/60 11-13: done in scratch T-4258-idris/wt, local 15/0 + CompletionUITests 6/0, NOT landed: guard refused rebasing the copy onto main. Lesson: grep Tests for protocol fakes before changing a protocol; an unknown -UIPreferredContentSizeCategoryName is silently ignored (AX3 = ...AccessibilityXL): assert the size took.
+- T-4258/59/60 landed cad4c75e38 11-13 (job 1747/0, ticked). Open: review line NOT added (board_tick add refused: a follow-up naming T-4259/T-4260 needs links; 2nd refusal stopped it; to Ines); copy not removed. Lesson: name only the 'from T-X' ID in a new line; gate 75 'no result' -> xc_route.py wait J-.. then rerun at once (main moved 3x).
+
+- T-4294 11-13 87cf4874ba: shim review, fixes to Pernille T-4303. My T-3401 net.request must: https-only url, no trust override, resource timeout, body_file under tmp only.
+
+- T-3821 11-13: written, not landed; copy T-3821-idris/wt, review-line.txt ready. Rerun land (job J-20261113-1416-land-m-417c27), tick, add review line, remove copy. Lesson: a full land cycle is ~20 min with two runner waits; start the gate by minute 15.
 
 ## Lessons
 - Older lessons and dated logs: archive.md.
 
-- T-0675 ticked 11-13 on daily J-20261113-0207 (1827/0). Lesson: xc.sh test from the repo root runs HERE (route needs cwd pywidget/ios); queue with runner_queue.py --full. Pushing a job file to land/ was refused (classifier): leave job files for the Operator.
-
-- T-3899 6e0c3c505c 11-13: hung Pro check now falls back to bundled gates (entitled false); land job 1744/0; awaits Pernille. Lesson: a background Bash defaults to a 10-min limit; give the gate timeout 2400000 and log to scratch.
-
 - T-3783 11-13 754904a541 (+00efea1b54): cause found: FilesCall.scriptFolder compared standardizedFileURL paths; phone App Group is /private/var, so once scripts/ existed every new premade folder was refused PermissionDenied. Open: phone check on TestFlight; copy removal refused (T-3859 guard). Lesson: standardizedFileURL drops /private only for existing paths: the Simulator never shows it, test under /private/tmp.
+
+- T-3820 11-13 a9108cc747: net.request landed (land job 1761/0); review T-4309 Pernille. Repeats: joined per RFC 9110 s5.3, Set-Cookie split back, request Cookie '; '. Open: T-3821 big bodies via file. Lesson: the land gate IS the runner test (runner only takes main commits); a 10-min background Bash survives the gate if you wait on its log.
 {% endraw %}
 
 

@@ -35,6 +35,8 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - pywidget build — product chosen 2026-10-25; v1 scope, money path, hiring, board state at build start
 - queue audit T-4092 — started 11-11 on <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> a; plan, ledger, slices T-4096..T-4105, what each slice may apply
 - task process redesign T-4122 — card, one checker, feature unit, fitted iPhone group size; who builds, dates
+- efficiency review T-4124 — a metrics row's `seconds` can be its whole run's time on every row; queue a note before writing that it exists
+- account fixes T-4305 — unified session: no; #303 pending; T-4314, T-4315; re-read 11-20
 - 11-13 (T-4266): #270 A, #272 A: 1.0 = Builder + Pages, likely 2027-04-26 (late Feb to late Jul), firm date at the Builder's first phone proof; nothing out near Day 60 (#271 A). Range = 05-timeline weeks summed, script ops/plans/T-4266-release-range.py. Mission line via #298 (auto path). B-staged Pro (refresh + themes, premades free) stands.
 - Board: never pre-number lines (`add` assigns IDs, T-2354); grep the board before `add`; stage my lines only (T-3204).
 - Standing lessons: run `date` before every stamp; grep my own proposals and git log before <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">ruling</span>; read a new rule against the ADR it touches; when two fixes interact, check the bound under both. Never write "ships as is" without a grep at HEAD (T-0791: an unbuilt BGAppRefresh went into the guide as shipped).
@@ -44,11 +46,9 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-3809: when a read's source sits on a locked disk, read the record written at the time (events log, ruled lines) and say so; a fired rule that names the Investors as the actor: ask, recommend, record the disagreement.
 - T-3896: a company-owned rule is not a card (no Kind fits; request_card refuses by the 11-05 amendment): decision record + plain note. Old parked: set aside via merge_queue_hold.txt, never refs/archive.
 - T-4107: a grep scoped to one file is not a repo grep; before writing 'X is gone' as a remove's evidence, run the repo-wide grep and quote its count (T-0472 row had to be superseded). Verdict counts come from the ledger's last row per ID.
-- T-4124: efficiency numbers in ops/plans/efficiency-review.md. Lane streams are refused; main's ops/runs is readable.
 - T-3710: keep the script with every count I publish (my 11-08 idle count did not reproduce: 60.9 vs 65.8); script at ops/plans/T-3710-idle-by-cause.py.
-- T-3889: "parked, did not land" was stale (work already on main); check ancestry first, then verify tests and tick.
-- T-3953 (redo of T-3834): check each sub-goal's target task before redoing it; T-3751's frees score was moot (ticked, fix b29715c748 on main). Main had grown T-3827 batch-first and T-3828 land order since: fold in, not over.
-- T-4117: a check that reads a checkout's reflog (amendments_watch) can be green on one lane, red on another: run it where the records were made. Re-read a handoff's numbers.
+- T-4117: a reflog check (amendments_watch) can be green on one lane, red on another: run it where the records were made.
+- T-4267: ADRs are code to main_folder_guard: worker copy + main_gate. T-4272: an answer that changes a decision's content withdraws the content, not a form the Investors approved; check what each A approved, in time order.
 {% endraw %}
 
 

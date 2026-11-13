@@ -11,7 +11,7 @@ description: "Option (b). The three recipes in pywidget/widgets/recipes/ (next_e
 <div class="doc-body" markdown="1">
 
 {% raw %}
-- Status: **decided** (T-2896, Ines, 2026-11-08 2:51 AM ET). Build: Idris, the board line after T-0901.
+- Status: **decided** (T-2896, Ines, 2026-11-08 2:51 AM ET). **2026-11-13 (T-4272): R5 and R6 retire with the manifest**, below. Build: Idris, the board line after T-0901.
 - Asked by: Pernille in T-2376 (4b123c9b1). Numbering: ADR-008 stays held for the builder ADR (ADR-009 line 3), so this is ADR-010.
 - Checked at 0ed644707, plus T-2857's run (cf5a6527c, `ios/Tests/ShortcutRecipeTests.swift`, on <span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">parked</span>/a/20261107-205309-q33 and not on main yet).
 
@@ -34,6 +34,7 @@ description: "Option (b). The three recipes in pywidget/widgets/recipes/ (next_e
 - **R4 Open makes the copy and saves it at once.** Open source goes through T-0901's path. It creates a new project named after the tile (ProjectStore's clash naming). The project's `main.py` holds the bundled bytes exactly. The copy is then sent once through `WidgetScriptSave` straight away, so `widgets/<id>/main.py` exists before the person leaves for Shortcuts.
 - **R5 Id match.** The library id is always the id the script declares, never the project name or the file name.
 - **R6 Name taken.** Before writing, the copy checks `WidgetLibrary.ids()` by `WidgetID.key`, which ignores case. If the id is held, the existing widget stays as it is. The copy rewrites its one id literal to the first free `<id>_2`, `<id>_3`, and so on, and the sheet says so (draft): "You already have a widget called next_event, so this copy is next_event_2. In your Shortcut, choose next_event_2 in Run Script with Input." If the send is refused for any other reason, the sheet shows the refusal line and the project copy stays. One simplification is allowed if the rewrite proves risky: refuse the copy with the same message. A silent overwrite is never allowed.
+  - *Retire with the manifest (Ines, 2026-11-13, T-4272):* R5 and R6 exist because a widget's identity is a name typed in its code. The Project's manifest gives every Project one ID that never changes and the widget library becomes a cache of the Project (ADR-001 revision 2, s2; Restructuring 12, #281 A), so neither rule is needed once the manifest and its migration land (phase C; the manifest ADR). Until then both bind as written, with T2. The manifest ADR says what replaces them; they are struck when it lands. Approved under the Restructuring's keep, change or drop tables (Restructuring 11, #280 c6858665300, A, 11:22 AM ET 11-13; `02-audit.md`, ADR table, row 010).
 - **R7 Unchanged.** The bundled recipe never changes. The copy survives an app restart, as T-0901 requires.
 - **R8 Guide.** Section 9.5's sentence "The app does not offer these scripts as ready-made starting points yet" is replaced by the Gallery route in the same commit. The [unverified] note on whether the name must match is replaced by T-2857's answer.
 

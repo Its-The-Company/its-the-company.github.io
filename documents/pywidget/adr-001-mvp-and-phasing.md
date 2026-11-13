@@ -1,317 +1,147 @@
 ---
 layout: "default"
-title: "ADR-001: Version 1 scope and phasing"
+title: "ADR-001: Version 1.0 scope, and the versions after it (revision 2)"
 section: "documents"
-description: "The promise v1 proves. You can write and run real Python on iPhone and iPad in a polished, current environment, and the same Python can put a beautiful widget on your home screen."
+description: "r1 decided a programmer&#x27;s product: an IDE first, widgets behind a cut line, the Builder in a later version, sharing later still. The Investors&#x27; product statement asks for three audiences served equally, with the Builder\u2026"
 ---
 <div class="crumbs" role="navigation" aria-label="Back"><a class="back" href="{{ '/documents/pywidget/build-plan/decisions/' | relative_url }}">← Decisions</a><a href="{{ '/documents/pywidget/adr-001-mvp-and-phasing.html' | relative_url }}" rel="bookmark">Permanent link</a></div>
-<div class="page-head"><div class="kicker"><span class="kind blue">Decision</span><span>Day 4 · Sun Oct 25</span><span><code>pywidget/docs/decisions/ADR-001-mvp-and-phasing.md</code></span></div><h1>ADR-001: Version 1 scope and phasing</h1><div class="byline"><img class="avatar" src="{{ '/assets/portraits/ines.svg' | relative_url }}" alt="Ines" title="Ines"><span>By <a href="{{ '/cast/ines.html' | relative_url }}">Ines</a>, CEO</span></div></div>
+<div class="page-head"><div class="kicker"><span class="kind blue">Decision</span><span>Day 23 · Fri Nov 13</span><span><code>pywidget/docs/decisions/ADR-001-mvp-and-phasing.md</code></span></div><h1>ADR-001: Version 1.0 scope, and the versions after it (revision 2)</h1><div class="byline"><img class="avatar" src="{{ '/assets/portraits/ines.svg' | relative_url }}" alt="Ines" title="Ines"><span>By <a href="{{ '/cast/ines.html' | relative_url }}">Ines</a>, CEO</span></div></div>
 
 <style>.doc-body{overflow-wrap:break-word}.doc-src{overflow-wrap:anywhere}.tbl[data-n~="1"] tr>:nth-child(1),.tbl[data-n~="2"] tr>:nth-child(2),.tbl[data-n~="3"] tr>:nth-child(3),.tbl[data-n~="4"] tr>:nth-child(4),.tbl[data-n~="5"] tr>:nth-child(5),.tbl[data-n~="6"] tr>:nth-child(6),.tbl[data-n~="7"] tr>:nth-child(7),.tbl[data-n~="8"] tr>:nth-child(8),.tbl[data-n~="9"] tr>:nth-child(9),.tbl[data-n~="10"] tr>:nth-child(10),.tbl[data-n~="11"] tr>:nth-child(11),.tbl[data-n~="12"] tr>:nth-child(12){min-width:0;overflow-wrap:normal}.tbl[data-o="1"] tr>:nth-child(1),.tbl[data-o="2"] tr>:nth-child(2),.tbl[data-o="3"] tr>:nth-child(3),.tbl[data-o="4"] tr>:nth-child(4),.tbl[data-o="5"] tr>:nth-child(5),.tbl[data-o="6"] tr>:nth-child(6),.tbl[data-o="7"] tr>:nth-child(7),.tbl[data-o="8"] tr>:nth-child(8),.tbl[data-o="9"] tr>:nth-child(9),.tbl[data-o="10"] tr>:nth-child(10),.tbl[data-o="11"] tr>:nth-child(11),.tbl[data-o="12"] tr>:nth-child(12){position:sticky;right:0;overflow-wrap:normal;background:var(--page);box-shadow:-1px 0 var(--line),-9px 0 8px -8px var(--sh)}</style>
 <div class="doc-body" markdown="1">
 
 {% raw %}
-- Status: accepted by the CEO, 2026-10-25 7:27 PM ET. Changes to founder decisions (brief 2.1) are not made here; they are in PROPOSAL-001 and wait for the Investors.
-- Author: Ines (CEO). Review: Idris reads it for engineering feasibility when the L3 spike lands; ADR-002 (execution architecture) may move the widget cut line, never the IDE scope.
-- Inputs: ops/plans/pywidget/build-brief.md (sections 0, 2.1, 2.3, 2.5, 5 L10, 6); ops/plans/apple-day7.md; <span title="A memo that proposes one idea to the Investors as the product. Only a B or better becomes one.">pitches</span>/PITCH-12.md and research/hunt/H134.md, H150.md, H154.md (the Runpy evidence).
+- Status: **accepted, revision 2** (Ines, CEO, 2026-11-13, T-4272). Written after the Investors approved the Restructuring's keep, change or drop tables (Restructuring 11, an Investor, #280 c6858665300, A, 11:22 AM ET 11-13). It replaces revision 1 (accepted 2026-10-25 7:27 PM ET, with nine <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">rulings</span> and three re-datings appended through 2026-10-31), which is archived word for word at `archive/ADR-001-r1-2026-10-25-to-10-31.md`. Where the two differ, this text wins. "r1" below means that archived text.
+- Author: Ines. Inputs: [`documents/restructuring/02-audit.md`](../restructuring/02-audit.html) (the ADR table, row 001), `03-structure.md`, `05-timeline.md`, `06-decisions.md` with the Investors' answers; [`ops/plans/pywidget/plan.md`](pywidget-plan.html), chair notes of 2026-11-13 10:31 AM and 10:53 AM; ADR-002, ADR-006 and ADR-007 as changed the same day.
+- What this text decides: scope and versions. Dates live in `plan.md` and `ops/milestones.json`; how Python runs, in ADR-007; the widget format, in ADR-002; sharing, in ADR-006.
 
-## 1. Context
+## 1. What changed, and why a new text
 
-The Investors chose the product at 6:39 PM ET on 2026-10-25 (#41 c6404397645). The brief is honest about its size: it is three to five products (L10). Read as written, it is a Python IDE, a widget engine, a block builder, a compatibility layer for another app's scripts, a web IDE with sync, a moderated code marketplace with billing, Shortcut Lab, and a possible iMessage extension.
+r1 decided a programmer's product: an IDE first, widgets behind a cut line, the Builder in a later version, sharing later still. The Investors' product statement asks for three audiences served equally, with the Builder in 1.0. The Restructuring's audit found that r1's section 3 described the narrower product, and that nine appended rulings and three re-datings made it hard to build from (`02-audit.md`, ADR table). The Investors approved one clean revision with the old text archived (#280 A).
 
-What we have: 26 days to <span title="Our arithmetic estimate of what the idea would earn by day 30 (the $200 deadline) or day 90. It never raises a grade.">Day 30</span> (2026-11-20). One iOS engineer (Idris) and one Xcode task at a time on the Mac mini. Apple membership pending, due Day 7 (2026-10-28); Paid Apps Agreement, tax and banking due Day 12 (2026-11-02). Day 20 (2026-11-10) is the last safe submission day (ops/plans/apple-day7.md). Nothing is built yet; the CPython embed spike (L3/L13) started tonight.
+The answers this text rests on, all 2026-11-13 ET, an Investor:
 
-What would make this fail: trying to ship the brief. A code-running app gets a careful first review; one rejection costs about a week; a version 1 that tries to carry widgets, blocks, compatibility and a marketplace at once will be late, rough, or both, and the founder's quality bar ("very aesthetic and polished") rules out rough.
 
-## 2. Options considered
+<div class="tbl" role="region" tabindex="0" aria-label="Table 1: 1. What changed, and why a new text, scrolls sideways" style="--tw:909px" markdown="1">
 
-
-<div class="tbl" role="region" tabindex="0" aria-label="Table 1: 2. Options considered, scrolls sideways" style="--tw:1600px" markdown="1">
-
-| Option | What v1 holds | By Day 17-20 | Earns by Day 30 | Verdict |
-| --- | --- | --- | --- | --- |
-| A. The brief's Phase 1 as written | C1, C2, full C5, C4 with every family and interactivity, C7 basics, about 10 widgets and 10 scripts | Not at review quality. C5 alone (editor, REPL, debugger, packages, iPad multi-window) is weeks; C4 is blocked by L1-L5 | Nothing (billing is Phase 4) | Rejected |
-| B. IDE only | C1, C5 core, C7 Run Script | Yes, with margin | Nothing under 2.1 (base app free, no marketplace to pay for) | Rejected as the plan; kept as the fallback if widgets miss the cut line |
-| C. IDE core plus a narrow widget engine, with a paid tier whose v1 content is the premade library | C1, C5 core, C2 subset, C4 static widgets rendered from a view tree, C7 Run Script, 12 premade widgets, C12 one Pro unlock | Yes if the widget engine stays narrow (section 3) and Python never has to run in the widget extension for v1 | Yes, inside 2.1 (section 5; pricing is the Investors' call) | **Chosen** |
-| D. Option C with the paid tier also carrying IDE power features | As C | As C | More, and it survives a widget slip | Recommended to the Investors in PROPOSAL-001; departs from 2.1, so not assumed |
-
-</div>
-
-
-## 3. Decision: version 1.0
-
-**The promise v1 proves.** You can write and run real Python on iPhone and iPad in a polished, current environment, and the same Python can put a beautiful widget on your home screen.
-
-**IDE pillar first** (brief 2.3: "the IDE must be usable and shippable for script-only users, even if widgets slip"). The IDE scope is fixed; the widget scope has a cut line.
-
-### 3.1 In version 1.0
-
-C1 Python runtime
-- Upstream CPython for iOS (PEP 730; version per the spike, 3.13 or later), no fork. Standard library. Pure-Python packages bundled in the binary per the L13 policy ADR (candidates: requests and its pure-Python dependencies, jedi, pyflakes). Native packages (Pillow, NumPy) only if ADR-003 shows prebuilt iOS wheels working by Day 10; otherwise 1.1.
-- Swift-Python bridge: run a file or a string, stream stdout and stderr, `input()`, stop (interrupt), restart, tracebacks with file and line.
-
-C5 Python IDE, core (brief 2.5)
-- Projects: folders and multi-file projects in the app container and in a user-chosen Files or iCloud Drive folder (open in place); import and export `.py` and zip.
-- Editor: syntax highlighting with design-system themes (light and dark), an extra key row on iPhone, find and replace, tabs, line numbers, go to line from a traceback; hardware keyboard shortcuts on iPad (run, stop, find, tabs).
-- Completion for the standard library, bundled packages and our modules (jedi in the embedded interpreter, if Odalys's tooling read shows it is fast enough; else keyword and module-member completion only).
-- Inline errors from pyflakes on save.
-- Run in the foreground with a console: `input()`, stop, restart, script arguments, a log of past runs, plain-text and table output.
-- Native UI from scripts, modern API only: alerts, text and number prompts, forms, lists, pickers, HUD (`pywidget.ui`, name provisional).
-- Built-in docs for our modules; 10 example scripts and a short first-run tour.
-- iPhone and iPad, universal; iPad gets a sidebar and editor split. Dynamic Type, VoiceOver labels, light and dark throughout.
-
-C2 device modules, subset
-- clipboard, files, notifications (local), http (through the standard library and requests), location (when in use), motion history (pedometer steps, floors, distance from CMPedometer), keychain (the user's own secrets).
-- Not in v1: HealthKit, contacts, photos, calendar and reminders (each adds a permission screen, a privacy-label line and review questions; they come in 1.1 and 1.2).
-
-C7 Shortcuts
-- App Intents: Run Script, Run Script with Input (returns the script's output), Refresh Widgets; an AppShortcutsProvider so they show with no setup.
-
-C4 widget engine, narrow (behind the cut line in 3.3)
-- A Python view DSL that mirrors widget-safe SwiftUI: stacks, text (including date styles that tick without code), SF Symbols, gauges, progress views, shapes, gradients, container background. Serialised to a versioned JSON view tree (L4) and drawn by one SwiftUI interpreter in the widget extension.
-- Families: small, medium, large, and the Lock Screen accessory families (circular, rectangular, inline). Full-color and accented rendering modes handled by the renderer.
-- Execution, default unless ADR-002 says otherwise: Python runs in the main app (foreground, background refresh, or the Refresh Widgets intent from a Shortcuts automation) and writes a timeline of view trees to the App Group; the extension only renders (L3 option b). This keeps the extension inside its memory limit whatever the spike measures, and keeps the IDE's runtime full-size.
-- The time model is explicit in the API (`sampled_at`, `stale_after`), so no widget promises live data (L1).
-- No interactive buttons in v1 (L5 is 1.1).
-
-C11 premade library
-- 12 first-party widgets, written in our own Python DSL and shipped inside the binary, source viewable and editable by the user: time and countdowns, sunrise and sunset, steps and floors (motion history), distance to a saved place, altitude, a habit tracker, a Shortcuts launcher, storage (was "battery and storage"; <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span> ruling 2026-10-25 9:16 PM below, 09dc55c8), calendar-free day progress, a quote of the day from a bundled public-domain list, world clocks, a GitHub repository status widget (official public API, user's own token in the Keychain). Weather only if a data source with commercial-use terms and no cost is found (Wrenna's data-source line); WeatherKit needs the membership.
-
-C12 billing
-- One in-app purchase, "Pro", StoreKit 2, tested with a StoreKit configuration file in Xcode until App Store Connect exists. Contents and price per section 5 and the Investors' answer.
-
-C13 design system
-- Maren's v0 tokens, type, color, editor themes and widget templates, applied to every screen and every premade widget. Design is a deliverable with review screenshots, not a finishing pass.
-
-Privacy
-- No account, no server, no analytics, no tracking. Scripts and widgets stay on the device and in the user's chosen folders. The privacy label and policy are drafted against the fact that the user's own code can make network requests (Wrenna's privacy line).
-
-### 3.2 Not in version 1.0, and where it goes
-
-
-<div class="tbl" role="region" tabindex="0" aria-label="Table 2: 3.2 Not in version 1.0, and where it goes, scrolls sideways" style="--tw:1047px" markdown="1">
-
-| Item | Component | Moves to | Why |
-| --- | --- | --- | --- |
-| Debugger (breakpoints, stepping, variables) | C5 | 1.1 (Day 30-40) | bdb in an embedded interpreter with a UI is a week of work by itself |
-| Formatter | C5 | 1.1 | Ruff is native code; Black is large; neither is needed to prove the promise |
-| Share sheet / Action extension "Run Python on this" | C5, C7 | 1.1 | A second extension with its own memory limit; v1.1 hands off to the main app |
-| Compatibility modules for the abandoned app's scripts (console, dialogs, clipboard first) | C3 | 1.1 at the earliest | Needs the human legal review of API compatibility first (brief L15, a human checkpoint) and a corpus ruling under our GitHub hold (#53) |
-| Interactive widgets, Control Center controls, Live Activities | C4 | 1.1 | L5 and L1 work; v1 widgets are static timelines |
-| HealthKit, contacts, photos, calendar, reminders modules | C2 | 1.1-1.2 | Review and privacy weight; each needs its own permission flow |
-| Package browser and pure-Python installs | C5, L13 | 1.2, after an App Review read | 2.5.2 risk; v1 ships a fixed bundled set |
-| Block builder (Builder mode) | C6 | 1.2 (Phase 2) | Founder decision kept; blocked by L4 and L17 |
-| Web IDE and sync | C8, C9 | Phase 3 | Needs a backend or CloudKit decision and the L14 fidelity work |
-| Marketplace, publishing, community widgets | C10 | Phase 4, in a later update with its own review notes | L6 (2.5.2, 4.7), L11, L12, L16 are blocking; staged release is the brief's own option (c) |
-| Shortcut Lab (flow view, history, diff, lint) | C7 | Phase 5 | L9: no supported access to the user's shortcuts library |
-| iMessage extension | C14 | Phase 6, only on an L19 "go" and Investor approval | Human checkpoint |
-| Apple Watch, Mac, visionOS, CarPlay, StandBy-specific layouts | surfaces | Not before Day 30 | Proposed in the L18 proposal |
-
-</div>
-
-
-### 3.3 The widget cut line
-
-On **Day 14 (2026-11-04)**, the cut date in ops/plans/apple-day7.md, the widget engine is in v1.0 only if: (a) at least 8 of the 12 premade widgets render correctly in every family they claim, in light and dark, full-color and accented; (b) a user-written widget goes from the editor to the home screen in the Simulator; (c) Maren's review screenshots pass. If not, v1.0 ships IDE-only, the widget extension is removed from the build, and widgets ship in 1.1. Recorded here so the call on Day 14 is not made under pressure.
-
-If widgets are cut, the Pro tier has no v1 content under the 2.1 reading in section 5, which is the main reason PROPOSAL-001 exists.
-
-## 4. Milestones (Day 5 to Day 20)
-
-Owners in ops/plans/pywidget/plan.md. All builds Simulator-only until membership is active. TestFlight and App Store submission are human checkpoints: the company asks, the Investors approve.
-
-
-<div class="tbl" role="region" tabindex="0" aria-label="Table 3: 4. Milestones (Day 5 to Day 20), scrolls sideways" style="--tw:795px" markdown="1">
-
-| Day | Date | Milestone | Done means |
-| --- | --- | --- | --- |
-| 5 | 2026-10-26 | Spike numbers; research drafts | L3 cold start and memory in app and extension; L1, L2, L6, L7, L13 drafts; C13 v0 |
-| 6 | 2026-10-27 | Architecture decided | ADR-002 execution architecture (Fable); ADR-003 package policy; ADR-004 editor engine; L4 view-tree schema v1 |
-| 7 | 2026-10-28 | Runs Python | App, widget extension and App Group in pywidget/ios; a script runs with console and `input()`; Apple membership due |
-| 8 | 2026-10-29 | Edits and renders | Editor with highlighting and key row; a fixture view tree renders in the extension; Run Script intent |
-| 9 | 2026-10-30 | End to end | A Python widget written in the editor reaches the home screen; Pro purchase works in StoreKit testing |
-| 10 | 2026-10-31 | Alpha | Projects and Files, device modules, 6 premade widgets, 10 example scripts; native-package go/no-go |
-| 11 | 2026-11-01 | Review pack v1 | App Review readiness matrix, privacy policy and label drafts, store page draft |
-| 12 | 2026-11-02 | Paid Apps due; iPad | iPad layout and shortcuts; 12 premade widgets; accessibility pass; Investors' pricing answer needed |
-| 13 | 2026-11-03 | Feature freeze | No new features; bug list only; TestFlight build asked for if membership is active |
-| 14 | 2026-11-04 | Cut date | Widget cut line applied (3.3); device pass on TestFlight if the Investors approved it |
-| 15 | 2026-11-05 | Store assets | Code-drawn icon and screenshots, store page and review notes; creative approval asked (<span title="Commandment 51: the Investors approve every visual before it ships.">C51</span>) |
-| 16 | 2026-11-06 | Release candidate | Fable whole-product review; regression; Investors asked to approve submission |
-| 17 | 2026-11-07 | Submit | Submitted, with Investor approval |
-| 18-20 | 2026-11-08 to 11-10 | Review window | Rejection replies on Fable; Day 20 is the last safe resubmission |
-| 20-30 | 2026-11-10 to 11-20 | Selling; 1.1 | Bug fixes first; then the 1.1 list |
-
-</div>
-
-
-## 5. Money (summary; details in PROPOSAL-001)
-
-As written, 2.1 makes the base app free and charges a paid tier to publish and to access marketplace widgets, and the marketplace is Phase 4. So v1 as the brief phases it earns nothing by Day 30.
-
-The closest reading that stays inside 2.1: the first-party premade widgets are, in 2.1's own words, "offered there too" (in the marketplace). In v1 the marketplace exists only as its first-party <span title="The App Store results a buyer sees for a search phrase. The top 10 is the first ten, dated the day we read them.">shelf</span>, inside the app binary: Pro unlocks the premade library, and later the same Pro tier adds publishing and community widgets when Phase 4 ships. The base app stays free and complete for anyone writing their own Python and their own widgets. Whether premade widgets are free or paid is one of the brief's open L18 questions, so this is a resolution of an open question, not a change; pricing stays the Investors' call (brief section 0).
-
-PROPOSAL-001 recommends adding IDE power features to Pro, because the counted paying buyer we have (the Runpy evidence) pays for a Python environment, not for widgets, and because a widget slip would otherwise leave nothing to sell.
-
-## 6. Consequences
-
-- C12 billing moves from Phase 4 to v1 (one non-consumable, no server). Phase order otherwise as the brief, with C3 moved behind the legal checkpoint.
-- The repo tree stays as the Operator set it: pywidget/ with docs/{research,decisions,proposals,design}, ios/, web/, widgets/, tests/. Added: pywidget/examples/ (example scripts), pywidget/docs/release/ (review matrix, privacy drafts, store page). No backend/ until Phase 3.
-- Every v1 feature must appear in the App Review readiness matrix before Day 15.
-- The IDE gets no widget-driven limits: scripts in the app use the full runtime (brief 1.1a).
-
-## 7. Risks
-
-
-<div class="tbl" role="region" tabindex="0" aria-label="Table 4: 7. Risks, scrolls sideways" style="--tw:1054px" markdown="1">
-
-| Risk | Likelihood | What it costs | Mitigation |
-| --- | --- | --- | --- |
-| App Review on a code-running app (2.5.2) | Medium | A week per rejection; past Day 30 | User's own code only, fully viewable and editable; no downloaded code, no pip, no gallery in v1; precedent Pythonista, Pyto, Juno, a-Shell, Scriptable; matrix and notes by Day 11; submit Day 17 |
-| Apple membership after Day 7 | Medium | No TestFlight device pass; later product setup | Simulator and StoreKit testing until then; ops/plans/apple-day7.md cut dates |
-| CPython embed or bridge harder than expected | Medium | The whole schedule | Upstream builds, BeeWare support; spike first; the hire in plan.md |
-| Widget engine misses Day 14 | Medium | Pro has no v1 content under 2.1 | Cut line 3.3; PROPOSAL-001 |
-| One Xcode task at a time | High | Serialises the iOS build | Python-side work (DSL, tooling, examples, premade widget code) is testable in host Python and runs in parallel |
-| Sales: a free app, zero ratings, about 10 selling days | High | Day 30 target | Pro priced and scoped by the Investors; store page on Opus; the Investors' own reach (the company does no outreach) |
-| Polish below the founder's bar | Medium | Rejection by the founder, poor conversion | Design first (C13 v0 before screens), review screenshots per milestone, Maren signs off each screen |
-| Platform facts in the brief are stale | Medium | Rework | Every L-doc checks Apple's current docs; contradictions in pywidget/docs/research/CORRECTIONS.md |
-| Incumbent Python app updates | Low | Weakens the switcher story | The IDE stands on its own; widgets are the second reason to buy |
-
-</div>
-
-
-## 8. Evidence
-
-- Brief sections 2.3, 2.5, 5 L10 (scope), 6 (dependencies).
-- Runpy: pitches/PITCH-12.md (incumbent $9.99 paid up front, 1,528 US ratings, last update 2023-04-27; 11 of 11 2026 low reviews on 3.4; Day 30 ruled C on the paid <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span>), research/hunt/H154.md (0 of 27 2026 forum posts asking where to move scripts; the stranded buyer is not counted asking).
-- ops/plans/apple-day7.md (Day 14 cut date, Day 20 last safe submission).
-
-## Revised, 2026-10-25 7:36 PM ET (Ines)
-
-Tonight's research landed after the 7:27 PM acceptance. These facts change the text above; where they conflict, this section wins. Scope and the cut date do not change.
-
-
-<div class="tbl" role="region" tabindex="0" aria-label="Table 5: Revised, 2026-10-25 19:36 ET (Ines), scrolls sideways" style="--tw:1280px" markdown="1">
-
-| Section | Was | Now | Source |
-| --- | --- | --- | --- |
-| 3.1 C1 | "version per the spike, 3.13 or later" | CPython **3.15.1**, upstream python.org iOS XCframework, pinned with checksum and signature. Native wheels are cp315 or abi3, built by us with cibuildwheel; BeeWare's mobile-forge cannot build 3.15 | pywidget/ios/scripts/fetch_python.sh; L13 s1-s2; CORRECTIONS (Odalys) |
-| 3.1 (new) | No deployment floor stated | **iOS 18.0** floor; iOS 26 and 27 APIs behind `#available`. Clears numpy's iOS 17.0 wheel tag. Install share unread; reviewed each WWDC | L9 s2.1; L13 s2; PROPOSAL-002 s4 |
-| 3.1 C1 native packages | Pillow, NumPy "only if ADR-003 shows prebuilt iOS wheels working by Day 10" | Same Day 10 gate, but the wheels are built here, order numpy, Pillow, matplotlib (Agg). The primary audience (PROPOSAL-002 s1) raises their priority | L13 s3 |
-| 3.1 C4 and 3.3 (a) | "Full-color and accented rendering modes" | Rendering modes are exactly full color, accented and **vibrant** (Lock Screen, StandBy). The iOS 18 tinted and iOS 26 clear looks arrive as accented. The cut line checks all three; there is no glass API on iOS | L4 s7; CORRECTIONS (Idris) |
-| 3.1 C4 families | small, medium, large, accessory three | Plus `systemExtraLarge` on iPad in the renderer (premades claim it only where designs pass). `systemExtraLargePortrait` (iOS 27) goes to 1.1 | L4 s7; PROPOSAL-002 s2 |
-| 3.1 C2 location and the "distance to a saved place" premade | location (when in use) | Under When-In-Use a widget gets a fix only if it was seen in the last few minutes. v1 stays When-In-Use (no Always prompt in a first review); that premade shows `sampled_at`, and PWL003 warns users | CORRECTIONS (Idris, L1); L2 s3.2 |
-| 3.1 C11 weather | "only if a data source with commercial-use terms and no cost is found" | Zero-cost route found: Apple Weather through the user's own Shortcut feeding Run Script with Input. It ships as an example recipe, not a premade (it needs the user to build an automation) | L16 |
-| PROPOSAL-001 s6 and 3.1 C12 flags | "every Pro gate behind a flag" | Guideline 2.5.19 (2026-10-16) bars hidden or dormant features. Unreleased capabilities (marketplace, online pip, sync, iMessage) are **compiled out** of release builds; the Pro contents are a build setting fixed before submission, visible in the app and the store text, never a remote switch | CORRECTIONS (Wrenna, L6); L10 s4 |
-| 3.2 formatter | "Black is large" | Black ships a pure-Python wheel and can be bundled; still 1.1, and a candidate Pro power feature | L13 s3 |
-| 3.2 C3 compatibility | 1.1 at the earliest | Unchanged, and note: an objc_util-style bridge (ctypes) for local scripts and in-process marketplace code exclude each other (L12 Q1). Decided before Phase 4 | L12; CORRECTIONS (Odalys) |
-| 7 Risks | "Incumbent Python app updates: Low" | Replaced by **"Juno adds widgets: Medium"**. Juno is maintained (Python 3.13, App Intents, native pickers, 2026-10-20) and is the main threat to the IDE pillar; Pythonista, Pyto and Scriptable are stale. Mitigation: free to run, Python 3.15, Lock Screen and StandBy widgets, Pro carrying IDE power features (PROPOSAL-001 option 3) | L7 s1; CORRECTIONS (Wrenna) |
-| 3.2 surfaces row | "Proposed in the L18 proposal" | See PROPOSAL-002 s2: Control Center Run Script control is a dated stretch (Day 12), else first in 1.1 | PROPOSAL-002 |
-
-</div>
-
-
-## Chair rulings, 2026-10-25 7:57 PM ET (Ines): marketplace staging and L12 Q1
-
-Full text, reasons and risks: pywidget/docs/decisions/ADR-006-marketplace-staging.md. Where they conflict with the text above, ADR-006 wins. Scope, cut line and dates in sections 3.3 and 4 do not change.
-
-
-<div class="tbl" role="region" tabindex="0" aria-label="Table 6: Chair rulings, 2026-10-25 19:57 ET (Ines): marketplace staging and L12 Q1, scrolls sideways" style="--tw:960px" markdown="1">
-
-| Section | Was | Now |
+| Decision | Answer | Link |
 | --- | --- | --- |
-| 3.2 Marketplace row | "Phase 4, in a later update" | Staged: S0 v1.0 has no gallery of others' code (premades compiled in, export to `.py`, marketplace code compiled out); S1 first-party web gallery after v1 approval (publishing needs the Investors); S2 community web gallery not before Day 30; S3 in-app marketplace in Phase 4 only after the person's guideline read, L12 Q4 and Apple's answer if the Investors choose to ask. No Day 30 revenue rests on any stage, so no new PROPOSAL under brief rule 4; PROPOSAL-001 carries the money question |
-| 3.2 Package row | "Package browser and pure-Python installs: 1.2" | Install from file (pure-Python `any` wheels only) is a v1 stretch: in only if landed by Day 13 and rated Low or Low-Medium in the readiness matrix, else 1.1. Online pip: 1.1, on the person's read of 2.5.2 and 3.3.1(B) and a PyPI index ruling; compiled out of release builds until then |
-| 3.2 C3 row, and the Revised table's L12 Q1 line | "Decided before Phase 4" | Decided: marketplace Python never runs in the app's process (M1 struck); Builder documents first, Pyodide in a WKWebView only after its spike. objc_util stays out of v1 and needs the L15 legal review, a 2.5.1 reading and its own ADR before any later release |
+| 1. Does 1.0 wait for the Builder? | A: yes; the firm date is fixed at the Builder's first phone proof | #270 c6857711513, 10:41 AM |
+| 2. Near Day 60 (12-20) | A: nothing goes out; internal TestFlight builds for phone proofs continue | #271 c6857734527, 10:42 AM |
+| 3. Pages | A: in 1.0, with App Review's higher risk for app-like Pages taken on | #272 c6857855411, 10:47 AM |
+| 7. Components and listings | A "for now": the Gallery holds only our premade Projects, widgets and components; the Builder lets a person pick from premade components; sharing Python is to be looked at for a future build | #276 c6857924837, 10:50 AM |
+| 11. The keep, change or drop tables | A | #280 c6858665300, 11:22 AM |
+| 12. The Project is the unit | A: first in phase C, with a tested move of existing projects | #281 c6857762837, 10:43 AM |
+| 13. Phone first | A: the premades failure is closed first; every phase ends with a phone proof; phase B continues beside the fix | #282 c6857295904, 10:23 AM; c6857553642, 10:34 AM |
+| 14. Where a widget's Python runs | In the widget first, unless proven impossible; a widget too large for it runs in the app, shown and measured during development | #283 c6857824620, 10:46 AM; ADR-007 |
+| 29. Documentation | A, with a change: the app's workflow diagrams and documentation get their own place on the site, a new main page, App | #297 c6858715463, 11:24 AM |
 
 </div>
 
 
-## Note, 2026-10-25 8:15 PM ET (Idris): numbering of the execution-architecture ADR
+Decisions 4, 5, 6, 8, 9, 10 and 15 to 28 were still open when this was written. Where a section below depends on one, it says "pending" with the issue number, and the company's recommendation is the working assumption until the answer comes. An answer that differs changes this text by a dated line.
 
-Where this document says "ADR-002 (execution architecture)" (header, 3.1 C4, milestone row 6), read **ADR-007**: pywidget/docs/decisions/ADR-007-execution-architecture.md (proposed 8:12 PM). ADR-002 is the widget view tree; ADR-003 stays reserved for packages (plan.md row 6). ADR-007 confirms this document's option-(b) default from the L3 spike's numbers and does not move the widget cut line.
+## 2. The product: three audiences, one Project
 
-## Chair rulings, 2026-10-25 9:16 PM ET (Ines): battery premade and MET Norway weather
+**Three audiences, served equally** (`01-questions-and-limits.md` s5): each has its own first screen, a complete path to a finished thing without another audience's tools, and a share of every release.
 
-Settles CORRECTIONS U1-11 and U1-12. Scope list in 3.1 changes as below; the cut line (3.3: 8 of 12 render correctly, Day 14) does not.
-- **Battery and storage becomes "Storage" in v1.** C2 has no battery call, and with `_ctypes` stripped (ADR-006 s4) Python cannot reach UIDevice. Under option (b) any battery read would come from the app's last run, often hours old, beside Apple's own live Batteries widget; a stale battery number loses that comparison on sight. Storage needs no new API (`shutil.disk_usage` from the stdlib). Battery goes to 1.1 with a C2 module and the same freshness question C2-Q1 answered for location. Still 12 premades. Maren's R3 ("battery in extension") is dropped for v1.
-- **No MET Norway in 1.0.** The 7:36 PM Revised row stands and is now the ruling: weather ships as the example Shortcut recipe through Run Script with Input (a v1 intent), not as a premade. A premade calling api.met.no by default would send the user's coordinates and IP to a third party, break the privacy drafts' "no weather source" condition, and need a policy line, a credit line and at scale a proxy (a server: Investors). Day 30 rests on Pro, not weather. A user's own script may call any weather API through `pywidget.http`; that is their choice, not ours. MET Norway returns for 1.1 only with Wrenna's privacy-label read.
+- **Programmers:** a real editor and real Python. The code behind every Builder block and every Gallery item is visible and editable.
+- **People who make without code:** a finished widget on the Home Screen without seeing code; errors that say what to change; editing the code is an offer, never a step.
+- **People who use finished things:** pick a ready-made item in a few taps, with no account, and see who made it and what it can reach.
 
-## Chair note, 2026-10-25 (Ines): online pip leaves 1.1
+**The Project is the unit** (#281 A; `03-structure.md`). One folder, one manifest that is the truth, one ID that never changes. A Project holds Python, data and media, and feeds one or more outputs: a widget, a Page, a Shortcuts action, later others. Shared code sits in the same folder and is imported by each output. The widget library becomes a cache built from the Project, never a second source. A premade is a Project. The manifest and its migration get their own ADR (section 6); this text fixes none of its fields.
 
-ADR-006 section 10 supersedes the "Online pip: 1.1" clause of the 3.2 Package row above. The primary read of the guidelines (L6 s8, df971700) raised online pip to Medium-High, and ADR-006 s3 item 3 condition (a) is not met (DPLA 3.3.1(B) unread; 2.5.2's only download exception is for educational apps). Online pip has no date until that read, Apple's position or a post-2025-11-13 precedent, and a new chair ruling. The 1.1 package story is the bundled set, Install from file, and wheels downloaded in a browser and added from Files. v1 scope, the cut line and the dates do not change.
+**One engine.** Python makes data; our SwiftUI draws it (ADR-002). Blocks compile to the same Python a programmer writes, through Python's own syntax tree (L17 s2). Whether a widget's Python runs in the widget or in the app is ADR-007's, by the size rule there.
 
-## Chair ruling, 2026-10-26 12:04 AM ET (Ines): the share extension stays in 1.1
+## 3. Version 1.0
 
-Settles the scope question in Wrenna's readiness matrix (pywidget/docs/release/app-review-matrix.md row 39, section 2b, gate <span title="The starting recipe a lane uses to look for ideas. G2, for example, starts from public datasets.">G12</span>; T-0061, 81ab40a7) and CORRECTIONS U1-24. Read: 3.2 above (the "Share sheet / Action extension" row), L6 s3 share-extension row, s5 notes, s7 and s8 (df971700), CORRECTIONS (Idris 7:26 PM and U1-24), ADR-007 Ruling 1, L8 ground rule 2 and its Share extension row, and the open Idris lines on the board.
+**The promise 1.0 proves.** Anyone can make a working widget or Page on iPhone and iPad, by writing Python, by building with blocks, or by picking one ready-made, and one Project serves all three ways.
 
-**Ruling: 3.2 stands. No share or action extension in v1.0. It is 1.1.** L6 s7 and s3 ("Ship, handing off to the app when memory runs short") are stale on this point, as U1-24 already says; L6 s8, the v1 verdict, does not name the share extension in its scope line, so nothing in Idris's primary read argues for it. v1 has one app extension, the widget extension.
+**When.** Likely late April 2027 (Monday 2027-04-26 on the likely line), range late February to late July 2027. The firm date is fixed when the Builder first works on a phone (#270 A). Phases A to E and their phone proofs: `plan.md`, chair note 2026-11-13 10:53 AM. Nothing goes out near Day 60 (#271 A).
 
-Why:
-1. **It cannot do what its row promises inside the architecture we accepted.** ADR-007 Ruling 1 puts no Python in any extension. A share extension that obeys it can only queue the shared item in the App Group and ask the user to open the app (CORRECTIONS, Idris 19:26: an extension cannot open its app). Running Python inside it instead means a second embedded CPython under a memory ceiling nobody has measured (L8: about 120 MB, unverified; T-0008 is blocked on a device until the membership).
-2. **The use case is already in v1 without it.** A Shortcut that receives share-sheet input and calls Run Script with Input (L8 recipe 5; a v1 App Intent) puts "share anything into Python" in the share sheet today, with no second extension for App Review to test.
-3. **Cost to the Day 17 submission, if it were in.** A second extension target, its App Group and entitlement wiring, a queue format with tests, its own 4.4 duties (help, settings, no offer) and the matrix rows, store sentence and review-note line that go with it. That lands on Idris, whose open lines before the Day 13 freeze are already the renderer (T-0037, P0), the app skeleton (T-0016), the Pro purchase and its placement rules (T-0031, T-0051), the editor spike (T-0041), the stdlib cut (T-0052), widget debugging (T-0048) and Pernille's bridge slices that need his review. My estimate is one to two working days of his time plus a review round, none of it earning anything by Day 30. Which earns money by Day 30: the renderer and the Pro purchase. Not this.
+### 3.1 In 1.0
 
-What follows:
-- Store page and review notes stay silent on a share extension; the held sentence in store-page-draft.md s6a is kept for 1.1 only. Matrix row 39's extension list stays at one.
-- T-0032 (Idris's L9 probe: a share-extension stub that records what the Shortcuts share sheet hands it) may run, but its target lives in a debug scheme and is never in the release build (G8 checks the target list; 2.5.19).
-- What would make this fail: reviewers or early buyers ask for the share sheet. The Shortcut recipe answers both until 1.1.
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 2: 3.1 In 1.0, scrolls sideways" style="--tw:769px" markdown="1">
+
+| Part | What 1.0 holds | Rests on |
+| --- | --- | --- |
+| Python runtime | Upstream CPython 3.15.1 for iOS, pinned with checksum and signature; the stdlib cut; the bundled pure-Python set (ADR-003); lazy imports on. iOS 18.0 floor; newer APIs behind `#available` | r1 Revised table (10-25 7:36 PM); ADR-003; ADR-007 |
+| The IDE | Projects, the editor (ADR-004), a console with `input()`, stop and restart, inline errors, completion as ADR-004 allows, native prompts from scripts, the editor preview pane with "Run as widget" and the entry stepper, built-in docs and examples. iPhone and iPad | r1 3.1 C5; plan 11-04 item 5 |
+| Widgets | The view tree (ADR-002) in every family the renderer supports, light and dark, every rendering mode. Python in the widget first, the app as fallback, by ADR-007's size rule; the editor shows each widget's <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> with its measured memory and time (#283) | ADR-002; ADR-007 |
+| 12 premades | All free, none marked Pro (plan 11-04 item 6). Each is a Project, and each opens as the person's own editable copy | plan 11-04; ADR-006 13.6 |
+| The Project | One folder, one manifest, one ID, and a tested migration of existing projects, before any public release (#281 A) | section 6 |
+| The Builder | The block format, catalog and compiler; premades as blocks; the block editor; a code view and "Edit as code"; a custom block; "Save as component" and sharing by file. The person picks from our premade components (#276) | ADR-008, written first (section 6); `06-decisions.md`, board list |
+| Pages | A Project's full-screen output, drawn by the app from the view-tree format with Page-only parts (ADR-002, amendment of 11-13). A Page answers taps by calling Python on the app's one run queue (ADR-007 s4) | #272 A |
+| Gallery | Our own premade Projects, widgets and components only, inside the app binary, with the three ways to use an item in `03-structure.md` | #276; ADR-006 S0 |
+| Sharing by file | A Project, a Builder document or a component saved to Files or the share sheet, opened by the other person the way they open a `.py`. The app downloads and hosts nothing. Someone else's Python arrives only this way | ADR-006 (amended 11-13: S1b and the component) |
+| Shortcuts | App Intents: Run Script, Run Script with Input, Refresh Widgets, and Open (r1's 10-27 Home Screen route, now opening a Project's Page or its plain run screen); the three Shortcut recipes in the Gallery (ADR-010) | r1 3.1 C7 and 10-27 ruling; ADR-010 |
+| Device modules | clipboard, files, local notifications, http, location (When In Use), motion history, keychain | r1 3.1 C2 and its Revised rows |
+| Pro | One purchase, $14.99 once (#87): background refresh of widgets, and the themes (B-staged, #142, read as 6a). The Pro screen lists only what the build has | plan 11-04 item 6 |
+| Design | The approved look (`creative/approved.md` item 2) until decision 22 (#291, pending) is answered | creative/approved.md |
+| Documentation | A plain page and a code-drawn diagram are part of every app part's Done; they live under the site's App page (#297) | decision 29 |
+| Privacy | No account, no server, no analytics, no tracking in 1.0. Scripts and their output stay on the device and in folders the person chooses | r1 3.1 Privacy; decision 19 (#288, pending) |
+
+</div>
+
+
+### 3.2 Rules carried from r1 that still bind
+
+- **Nothing hidden in a release build.** Unreleased capabilities are compiled out, never dormant behind a switch (guideline 2.5.19; r1 Revised table).
+- **The IDE gets no widget-driven limits.** Scripts in the app use the full runtime (r1 s6; ADR-007).
+- **Words.** A person's Projects are not "apps" or "mini apps" in any store text, review note or interface (r1 10-27 ruling, item 5). The manifest file is `pywidget.json` (r1 10-29 line). A widget shows its script's last run and is never called live (ADR-007 s10).
+- **Storage, not battery,** among the premades; weather only as a Shortcut recipe, with no third-party weather source by default (r1 10-25 9:16 PM rulings).
+- **Online pip** has no date until the reads in ADR-006 s10 and s12; install from file is not in 1.0 (plan 11-04).
+- **Every 1.0 part has a row in the App Review readiness matrix** before submission (r1 s6).
+
+### 3.3 Not in 1.0
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 3: 3.3 Not in 1.0, scrolls sideways" style="--tw:930px" markdown="1">
+
+| Item | Where it goes | Status |
+| --- | --- | --- |
+| Other people's block documents listed in the app (a live <span title="The App Store results a buyer sees for a search phrase. The top 10 is the first ten, dated the day we read them.">shelf</span>) | 1.2 at the earliest, only on Apple's written answer | pending decisions 5 and 6 (#274, #275) |
+| Other people's Python listed in the app | No version until Apple answers | #276 ("for now"); ADR-006 S3b |
+| iMessage | After a Messages extension is measured on a phone; not before 1.2 | pending decision 4 (#273) |
+| Paid items, paying creators | Not planned | pending decision 9 (#278) |
+| The web IDE and sync, the compatibility layer for the old app's scripts, Shortcut Lab, and the 11-04 plan's AI key, Control Center button and Share extension | "Maybe later" | pending decision 10 (#279) |
+| Interactive widget buttons; advanced libraries (numpy, Pillow, matplotlib) | After 1.0 (plan 11-04, the 1.2 row) | dated when 1.0's date is firm |
+| Debugger, formatter and r1's other 3.2 rows | After 1.0, as r1 3.2 placed them | unchanged |
+
+</div>
+
+
+## 4. The versions
+
+Three versions are planned. Only 1.0 is fixed; 1.1 and 1.2 are working assumptions from the recommendations until their decisions are answered.
+
+1. **1.0:** section 3.
+2. **1.1:** fixes, whatever 1.0's fallbacks move out, the "maybe later" items the Investors bring back (decision 10, #279), and updates to installed items offered, never silent (decision 16, #285, pending).
+3. **1.2:** a live shelf of other people's block documents, only if Apple says yes in writing (decisions 5 and 6); iMessage only after its phone measurement (decision 4); advanced libraries and widget buttons.
+
+No version holds anything Apple's text rates High (other people's Python listed in the app) before Apple answers (ADR-006 13.2, S3b's gate).
+
+## 5. Order of work, and what would make this fail
+
+**Order** (#282 A; `plan.md` phases). A: the 12 premades draw on an Investor's iPhone, and one sitting reads the widget's memory. B: the IDE and widgets finished, beside A. C, after A's proof: the Project first, then the `read()` and `draw()` contract, permissions and the outside-code notice, the tab shell, the Gallery's three choices. D: the Builder, whose first phone proof fixes the date. Then Pages, then E, the release. Each phase ends with a phone proof on a TestFlight build in an Investor's hands.
+
+**What would make this fail.**
+- Phase A's cause is not found, and everything waits behind it (T-4180, T-3783).
+- The Builder runs long: about 6.5 weeks on the Xcode slot and 3.5 beside it, 5 to 15 in all, an estimate (`05-timeline.md`).
+- App Review refuses app-like Pages, or reads the Gallery as a storefront. Pages were taken on with that risk (#272); the review notes and ADR-006 13.2 carry the answer.
+- Bank and tax details and the name (#90) stay open, so nothing can be sold or test-bought.
+
+## 6. Records this depends on
+
+- **ADR-008, the Builder:** written before any Builder code (`02-audit.md`; `06-decisions.md`). L17 is its draft. Not yet written.
+- **A new ADR, the manifest and its migration** (#281 A). Not yet written.
+- **ADR-002 and ADR-006** amended, and **ADR-007** rewritten as one text, on 2026-11-13 under the same approval (T-4272).
+- **ADR-005:** history; its subject, the compatibility layer, is set aside (pending #279).
+- **ADR-003, ADR-004, ADR-009:** unchanged.
+- **ADR-010:** stands; its rules R5 and R6 retire with the manifest.
 
 Ines, CEO
-
-## Chair note, 2026-10-26 12:12 AM ET (Ines): online pip back on the 1.1 plan, gated on one read
-
-ADR-006 section 12 re-opens section 10 by its own clause (Wrenna's T-0085: 14 apps from 11 developers state on-device pure-Python installs with a version dated after 2025-11-13). Online pip returns to the 1.1 plan, gated only on a person's read of DPLA 3.3.1(B) (T-0060, now an <span title="A GitHub issue asking the Investors for something that is blocking work.">Urgent Request</span>). Not v1 and not a v1 stretch: Day 17 review risk, no Day 30 revenue, no capacity before Day 20. The 2026-10-25 note above stays as written; one reason in the ADR-006 s10 ruling it summarises (stale precedents) was wrong and is corrected in s10.2 with a dated note. v1 scope, the cut line and the dates do not change.
-
-## Chair ruling, 2026-10-26 2:36 AM ET (Ines): the editor-side widget preview
-
-Ruled in pywidget/docs/design/ide/editor-preview-note.md s6 (T-0173). 3.1 C5 gains, in v1: a widget preview pane in the editor, redrawn on Run and on save, with family and mode switches and the entry stepper (iPad right pane, iPhone a tab in the console sheet); it is where PROPOSAL-002 s5's "Run as widget" lives. The first-run tour's page 3 runs on the gallery path. 3.2 gains two rows, both 1.1: redraw as you type (C5), and the network-off switch (C5), which leaves PROPOSAL-002 s5's v1 list. A is due with the Day 12 iPad milestone; if it is not in that build it goes to 1.1 and store shot iPad 1 comes out. The preview queue-key fix comes before any preview code. Dates, freeze and the cut line do not change.
-
-## Chair ruling, 2026-10-27 10:05 AM ET (Ines): scripts that open from the Home Screen (Investor request #41 c6443662711, T-0441)
-
-The request (an Investor, 9:53 AM): users can make apps that run inside pywidget and put a shortcut to one on the Home Screen, like a real app. The Operator's reply (c6443690022) named the route. I hold to it, with one narrowing it did not name: in 1.0 an app's screen is its console and native prompts, not a custom layout. Read: brief 1.1a ("native-UI mini apps"), 3.1 C5 and C7 above, L6 s1 and s8, L9 s2.3 (its Open Script row is an `OpenIntent`), bridge contract s4 (the DeviceCall channel; Context `.app` already exists), T-0208's `ScriptEntity`/`ScriptQuery` (RunScriptIntents.swift), T-0355, T-0430.
-
-**Ruling: a minimal Home Screen route is in 1.0, behind its own freeze rule. Custom app screens are 1.1. The editor preview pane (T-0192) moves to 1.1 to pay for it. Day 13 freeze, Day 14 cut line and Day 17 submission do not move.**
-
-**1. What an "app" is in 1.0.** A project in the app container that holds a manifest, `app.json`: schema `pywidget.app`, version 1, a stable `id` (UUID written once, so a Home Screen shortcut survives a rename), a `name`, and an `entry` file (a relative `.py` path inside the project). Unknown keys are ignored (additive, as ADR-002); a higher version is refused with a plain message. "Make App" in a project's menu writes it; on a lone script it first offers to put the script in a new project.
-- Surface: a full-screen **run screen**. The app's name as the title, its console output as the body, native prompts (alerts, text and number fields, choices, lists, HUD) over it; Stop while running; Run Again and Close when finished; Edit opens the entry file. No editor, tabs or file list. The renderer draws nothing here in 1.0: widget trees are static and their Buttons do not respond to taps until 1.1 (T-0430), so a tree screen would be a picture, not an app.
-- State: the project folder is the working directory and the first `sys.path` entry, so files the app writes persist there, and the keychain module holds secrets. No state API in 1.0.
-- Runs: each open starts a fresh run of `entry` in Context `.app`, on the one run queue. Opening the app that is already running brings its run screen forward. Opening another while a run is in progress asks first ("Stop X and open Y?").
-
-**2. The Home Screen route.**
-- In 1.0: an App Intent, "Open [app] in PyWidget" (an `OpenIntent`; `supportedModes = .foreground` on iOS 26, `openAppWhenRun` before it), over an `AppEntity` whose query lists only container projects with a valid manifest. One App Shortcut phrase with the entity as its parameter, so it shows in Shortcuts and Spotlight with no setup. The user puts it on the Home Screen with Shortcuts' own "Add to Home Screen", where iOS lets them pick the name and icon.
-- In 1.0: an in-app **"Add to Home Screen" walkthrough**, a sheet of three or four steps with a code-drawn diagram, reached from the run screen's menu and the project menu. iOS gives an app no way to place an icon itself, so without this the feature cannot be found.
-- Not in 1.0: the deep link `pywidget://open/<id>`. The intent covers the route with a picker, while a URL scheme lets any web page or app start a user's code, and needs its own validation, tests and a review-note line. It comes in 1.1 with a launcher widget (a Link node that opens an app), which is the one place it earns its cost.
-- Exactly what iOS shows on launch from a Home Screen shortcut (a banner, or a pass through Shortcuts) is checked on the Simulator before the walkthrough's copy is final. Nothing in the copy promises "just like a real app" until that check.
-
-**3. 1.0 and 1.1.**
-- 1.0: manifest, Make App, the entity and Open intent, the App Shortcut phrase, the run screen, the walkthrough. Apps from projects in the app container only.
-- 1.0, already in 3.1 C5 and unowned until now: native prompts from scripts. 3.1 lists them ("alerts, text and number prompts, forms, lists, pickers, HUD"), tour page 2 needs one, and no build line or code existed. **That is my miss**, the same kind as Projects and C2 in T-0332. Lines T-0446 and T-0447. Module name to be proposed by Pernille; not `pywidget.ui` (it reads as the widget DSL `pywidget_ui`), and not `dialogs` or `console` (L15 is a human checkpoint). Forms drop first if Day 12 runs short.
-- 1.1, in order: custom app screens (a full-screen view tree whose Buttons and Toggles call Python handlers, designed with L5 interactivity) with a small state store; the deep link and a launcher widget; apps from Files and iCloud folders opened in place; an Open App control for Control Center and the Lock Screen (3.2 already puts controls in 1.1); an icon field in the manifest.
-- Not planned: sharing apps between people. That is the marketplace (Phase 4, L6) and stays out.
-
-**4. What it displaces.** About two Xcode days on Idris's main slot on Days 11-12: about one for native prompts (owed to 3.1 regardless) and about one for the app route. The Day 12 list was already over-full (xcode-queue-day6-10.md names a drop order for it). So I rule the cut now, not under pressure on Day 12: **T-0192 (editor preview pane, part A, 2 to 2.5 Xcode days) goes to 1.1**, with its own pre-written consequence: store shot iPad 1 comes out (PROPOSAL-003 s2.6), and T-0048's "Run as widget" and entry stepper go with it. Why this line and not the app route: it is company work I added (T-0173), the app route is an Investor request ahead of company work, the widget authoring loop still closes without it (run, then the Home Screen; the gallery still previews the premades), and "put your script on your Home Screen" is a store sentence a buyer reads, where the preview pane is a convenience after purchase. Tenet 4 points the other way (refine before expanding), and that is why the app route is the narrow slice above and nothing more.
-- Day 12 main order: T-0355 projects, T-0447 prompts, T-0449 app route, then T-0193, T-0048 (without Run as widget) and the wiring items as written. Pernille's halves (T-0446, T-0448) and Maren's design (T-0450) land before Day 11 without the Xcode slot.
-- Freeze rows F17 (prompts) and F18 (the app route) are added to ops/plans/pywidget/alpha-day10-checklist.md s7 now, before any evidence. If F18 fails at 11-03 11:59 PM, the app route is removed from the build (no dormant code, 2.5.19) and is 1.1's first line. Nothing here touches the Day 10 alpha rows.
-
-**5. App Review exposure: Low-Medium, the same as running user code, on one condition about words.**
-- 2.5.2: the code is the user's own, written or imported by them, fully viewable and editable, nothing downloaded by us; the app's stated function is to run it (L6 s8 row 1). The Home Screen route adds no new code path, only a new way to start one.
-- 4.7 and the Mini Apps definition ("software packages, scripts ... added after app installation and executed on the device"): 4.7 covers software "offered in your app" and lists HTML5 and JavaScript only. User-written projects are not offered, listed, shared or sold, so it does not apply, as for the IDE. **The risk is the word.** A store page or UI that says "build apps that run inside PyWidget" invites a reviewer to read the feature as an unapproved mini-app host. So the store page, the review notes and the interface describe the action in plain words ("open a script from your Home Screen") and never "apps" or "mini apps". Internal names (`app.json`, T-lines) may keep the word.
-- 2.5.11: the Open intent does exactly what it says, with nothing between the tap and the run (no offer, no Pro prompt). 2.5.19: if cut, it is removed, not hidden. 4.4 does not apply (no new extension).
-- Review note gains one sentence (T-0451). Readiness matrix gains one row.
-
-**C51.** No new identity element: no icon set (the user picks the Home Screen icon in Shortcuts; we ship none), and no feature name. Plain descriptive interface text sits inside the style guide. If Maren finds plain words do not work and proposes a coined name, it goes to the Investors as a C51 request with options; until then nothing is named. The store page carries the feature through the usual pre-submission review.
-
-**Money.** Free in 1.0, like everything that runs the user's own code (PROPOSAL-001 s4). Whether any part of it belongs in Pro is the Investors' call in PROPOSAL-001; I do not assume it.
-
-**What would make this fail.** (a) Day 12 overruns even with T-0192 gone: then F18's rule removes the route, and the plan is no worse than before the request. (b) iOS launches the shortcut through Shortcuts with a visible detour, and the feature feels second-rate: the walkthrough says so honestly and the 1.1 launcher widget is the better route. (c) A reviewer reads it as 4.7 anyway: the review note explains it, and the fallback is to remove the App Shortcut phrase and keep only the user-built shortcut.
-
-Lines: T-0446 (Pernille, prompts, Python), T-0447 (Idris, prompts, Swift), T-0448 (Pernille, manifest and runner), T-0449 (Idris, the app route), T-0450 (Maren, design), T-0451 (Wrenna, review row and note).
-
-Ines, CEO
-
-**Chair line, 2026-10-29 4:08 AM ET (Ines, T-0506): the manifest file is renamed `pywidget.json`, and the messages keep naming it.** Option (b). The file name is user-facing: it is printed in eleven of `app_manifest.py`'s messages and travels in every exported project zip, so s5's carve-out for internal names does not cover it; I wrote that carve-out and hold it to its words. Hiding the name (c) fails the user: a hand-edited file that is not valid JSON can only be fixed by someone told which file to open. Keeping it (a) also keeps a real fault: `app.json` is already the manifest of Expo and Heroku projects, so an imported one is refused (`wrong_schema`, T-0453) until the user deletes someone else's file. Cost now: Swift nothing (T-0449 is not built and no Swift reads the name); Python one constant, the messages, the test and fixture names, the schema title and bridge contract s7, under an hour for Pernille plus a review (T-0653). Nothing shipped reads `app.json`; after Day 12 the same change would also touch the Swift reader and F18's screenshots. The schema value `pywidget.app` stays: it is never shown. Item 1's "app.json" reads `pywidget.json` from here; everything else in this ruling stands.
-
-**Chair line, 2026-10-31 1:02 PM ET (Ines, T-0888, closes T-0805): dates, no scope.** Investor rule, amendment 2026-10-31 12:43 PM. The 3.3 cut line applies at the feature freeze, Day 40 (2026-11-30), with the same test (it read Day 14, then Days 22-23). Section 4's table is history; current dates are in ops/plans/pywidget/plan.md, chair note of this time: submit Day 48 (12-08), release Day 55 (12-15). Scope in 3.1 and 3.2 does not move. The "Day 30" and "$200" reasoning in sections 1, 2, 5 and 7 records why the scope was set; it no longer drives anything.
 {% endraw %}
 
 </div>

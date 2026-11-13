@@ -294,6 +294,8 @@ archive.
 - **2.2, the line form for a feature.** Section 4.1.
 - **2.3, checks per batch, suite limit 900 s.** Section 4.3: the group is the batch, and a shorter red run is what
   makes a group cheaper to fail.
+  *Withdrawn by Ines, 11-13: the 900 s limit is not to be built; the host-run limit stays at 1,800 s. Checks per
+  batch stands. See efficiency-review.md A.0 item 3.*
 - **2.4, a thin Operator.** The card is the packet. The Operator hands a worker the card and the rules that apply,
   and adds only what code cannot know; it does not read the task's files into its own thread to write a packet.
   Trimming ops/prompts/work.md (30,167 bytes) is a separate change to a company-owned prompt, not made here.
@@ -396,6 +398,10 @@ only while its replay beats one at a time. Today that turns the iPhone step on a
 900 s suite limit (efficiency-review.md 2.3; 21 suite reds hit the 1,800 s limit in 4 days) shortens the red host
 run, and the next day's fit decides again.
 
+*Withdrawn by Ines, 11-13: no 900 s limit. The "21 suite reds" were one host run cut once and written on 18 rows; a
+900 s limit would have failed a run that passed at 1,279 s. The daily fit still decides the host step. See
+efficiency-review.md A.0 item 3.*
+
 Three more rules, all from the record:
 - A runner error (6 of 124) reruns the group once. It is not a red and is not split.
 - The stop rule is the one runner_watch has: two tasks failing on the same first error at the same base hold the
@@ -439,6 +445,10 @@ T-3992, T-3995 and T-3996 are open (ops/state.md), and lands in the day's one ba
 Target dates, mine to hold or move in the open: the card and the replay test by Saturday 11-14; the dry run read
 and the sweep on by Monday 11-16; features in use as T-4116's list is accepted; the grouped iPhone run on by
 Wednesday 11-18 and measured for a week, to 11-25, before the freeze on 11-30.
+
+*Moved by Ines, 11-13 (efficiency-review.md A.6): the card and the replay test by Monday 11-16; the dry run read and
+the sweep on by Wednesday 11-18; the grouped iPhone run on by Friday 11-20 and measured to 11-27. No freeze date
+follows: Restructuring decisions 1 and 2 were answered A on 11-13.*
 
 ## 6. What it should change, and how each is counted
 

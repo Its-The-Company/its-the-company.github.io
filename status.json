@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-13T17:49:37.633617+00:00",
+ "at": "2026-11-13T17:52:39.383859+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -82,7 +82,7 @@
    "task": "[design] T-4287 Home lists in scroll boxes",
    "model": "opus",
    "started": "2026-11-13T17:03:21.535Z",
-   "seconds": 2776,
+   "seconds": 2957,
    "finished": null,
    "effort": "high"
   },
@@ -91,7 +91,7 @@
    "task": "[build] T-4277 offer free premades on store hang",
    "model": "opus",
    "started": "2026-11-13T17:03:29.368Z",
-   "seconds": 2768,
+   "seconds": 2950,
    "finished": null,
    "effort": "high"
   },
@@ -100,7 +100,7 @@
    "task": "[tools] T-4284 Audit mode slice 1 pause off",
    "model": "opus",
    "started": "2026-11-13T17:29:09.476Z",
-   "seconds": 1228,
+   "seconds": 1409,
    "finished": null,
    "effort": "high"
   }
@@ -148,19 +148,19 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 22.0,
+   "pct": 23.0,
    "resets_at": "2026-11-13T15:50:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-13T12:43:17.912992-05:00",
+   "read_at": "2026-11-13T12:49:44.680570-05:00",
    "source": "live",
-   "left": 78.0,
+   "left": 77.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 92.0,
    "resets_at": "2026-11-15T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-13T12:43:17.912992-05:00",
+   "read_at": "2026-11-13T12:49:44.680570-05:00",
    "source": "live",
    "left": 8.0,
    "left_words": "of your weekly allowance left"
@@ -172,7 +172,7 @@
    "read_at": "2026-11-13T11:31:45.194382-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-13T12:43:17.912992-05:00"
+  "read_at": "2026-11-13T12:49:44.680570-05:00"
  },
  "ui": {
   "week_pct": 0.297,
@@ -192,7 +192,7 @@
   "week_pct": 43.7,
   "usage_pct": 32.7,
   "work_pct": 78.9,
-  "read_at": "2026-11-13T17:49:00+00:00",
+  "read_at": "2026-11-13T17:52:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -222,14 +222,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-13T12:49:00-05:00",
+   "at": "2026-11-13T12:52:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-13T12:49:00-05:00",
+  "at": "2026-11-13T12:52:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -495,58 +495,73 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-13T17:49:37Z",
+  "at": "2026-11-13T17:52:23Z",
   "s": {
    "T-4274": [
+    "merging",
+    "Merging onto main",
+    1794592343732
+   ],
+   "T-4194": [
     "mergeq",
     "1st to merge",
-    1794592177633
+    1794592343732
    ],
    "T-4284": [
     "merging",
     "Mac tests at the main gate",
-    1794591937633
+    1794591923732
    ],
    "T-4277": [
     "testing",
     "its own tests, in its copy",
-    1794591217633
+    1794591203732
    ],
    "T-4287": [
     "testing",
     "its own tests, in its copy",
-    1794591217633
+    1794591203732
    ]
   },
   "nm": {
    "T-4274": "Let Evan's account use its weekly Fable to the limit",
+   "T-4194": "Build the feature session for app work",
    "T-4284": "Add an Audit mode for one audit on chosen accounts",
    "T-4277": "Offer free premades when the store check hangs",
    "T-4287": "Show all Queued and In flight tasks in scroll boxes"
   }
  },
  "ln": {
-  "at": "2026-11-13T17:49:37Z",
+  "at": "2026-11-13T17:52:23Z",
   "mq": {
    "n": {
-    "checking": 0,
+    "checking": 1,
     "inline": 1,
     "conflicted": 2,
     "failed": 0,
     "held": 0,
-    "retry": 2,
+    "retry": 0,
     "parked": 7
    },
    "m": {
-    "checking": null,
+    "checking": 0,
     "inline": 0,
-    "conflicted": 1572,
+    "conflicted": 1575,
     "failed": null,
     "held": null,
-    "retry": 29,
-    "parked": 56
+    "retry": null,
+    "parked": 59
    },
-   "cur": [],
+   "cur": [
+    [
+     [
+      "T-4274"
+     ],
+     "going onto main",
+     "Mac mini",
+     0
+    ]
+   ],
    "ld": [
     6,
     "2026-11-13T17:48:58Z"
@@ -554,12 +569,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-13T17:48:50Z",
-    "ld": 9.69,
+    "at": "2026-11-13T17:52:24Z",
+    "ld": 9.23,
     "c": 8,
     "sb": 0,
     "dk": [
-     14.6,
+     14.8,
      228.3
     ],
     "ss": [
@@ -589,12 +604,12 @@
    "m": "opus",
    "e": "high",
    "t": "Work session \u2013 10 tasks",
-   "at": "2026-11-13T12:47:09-05:00"
+   "at": "2026-11-13T12:50:47-05:00"
   }
  ],
  "reply": {
-  "sent": "2026-11-13T17:46:29Z",
-  "seconds": 39.0
+  "sent": "2026-11-13T17:50:20Z",
+  "seconds": 26.0
  },
  "inbox": [],
  "trimmed": [
@@ -614,10 +629,10 @@
   "main": 3,
   "lanes": 0,
   "total": 3,
-  "at": "12:49 PM",
+  "at": "12:52 PM",
   "why": "",
-  "at_iso": "2026-11-13T17:49:00+00:00",
+  "at_iso": "2026-11-13T17:52:00+00:00",
   "started": "11:32 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 11:32 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 12:49 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 11:32 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 12:52 PM ET</p></section>"
  }
 }

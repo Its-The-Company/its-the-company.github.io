@@ -9,7 +9,7 @@
    .lite = C in light, standing on Paper's colours; .dark = C in dark, standing on Studio's.
    Copied by value from pywidget/docs/design/tokens.css: every ground, line, text, accent and status colour,
    the widget card colours and the syntax themes. New in C, and in no token file: the six tile tints
-   (--t-*) in each appearance, the rounded title face in light, the larger type scale, the 28 px corners.
+   (--t-*) in each appearance, the rounded title face in light, the larger type scale. The 28 px corners are the approved r5.
    Each screen is drawn once in <defs> and shown twice; the appearance comes from the class on the frame. */
 html{color-scheme:light dark}
 body{margin:0;padding:16px 16px 56px;background:#F7F5F0;color:#1C1B19;font:16px/1.5 system-ui,-apple-system,'Segoe UI',Roboto,sans-serif}
@@ -296,8 +296,9 @@ svg.frame{fill:var(--tx);font-family:system-ui,-apple-system,'Segoe UI',Roboto,s
       <rect class="sky" x="20" y="118" width="350" height="180" rx="28"/>
       <use href="#w-weather-s" x="36" y="129"/><rect class="ring" x="45" y="182" width="88" height="44" rx="10"/>
       <text class="hl" x="214" y="156">Today</text><text class="c1 s" x="214" y="176">Widget · live</text>
-      <rect class="soft" x="214" y="190" width="68" height="44" rx="22"/><text class="c1 sm a mid" x="248" y="217">Small</text>
-      <rect class="tile" x="288" y="190" width="72" height="44" rx="22"/><text class="c1 sm mid" x="324" y="217">Medium</text>
+      <!-- the size switch is the same control as Blocks and Code: a sunken track, the chosen side raised -->
+      <rect class="sunken" x="214" y="190" width="146" height="44" rx="22"/><rect class="tile" x="218" y="194" width="66" height="36" rx="18"/>
+      <text class="c1 sm mid" x="251" y="217">Small</text><text class="c1 s mid" x="322" y="217">Medium</text>
       <text class="c1 s" x="214" y="260">The ring marks the</text><text class="c1 s" x="214" y="278">block you chose.</text>
       <text class="hl" x="20" y="330">What it shows</text><text class="c1 s end" x="370" y="330">5 blocks, top to bottom</text>
       <use href="#blocks-stack" x="20" y="342"/>
@@ -315,9 +316,9 @@ svg.frame{fill:var(--tx);font-family:system-ui,-apple-system,'Segoe UI',Roboto,s
       <!-- the blocks to pick from, as tiles -->
       <text class="hl" x="32" y="132">Add a block</text>
       <rect class="sand" x="32" y="148" width="132" height="76" rx="20"/><circle class="surface" cx="56" cy="172" r="14"/><use href="#i-cloud" transform="translate(56 172) scale(1.4)"/><text class="c1 sm" x="46" y="210">Local weather</text>
-      <rect class="sand" x="180" y="148" width="132" height="76" rx="20"/><circle class="surface" cx="204" cy="172" r="14"/><text class="tab mid" x="204" y="176">31</text><text class="c1 sm" x="194" y="210">Calendar</text>
+      <rect class="sand" x="180" y="148" width="132" height="76" rx="20"/><circle class="surface" cx="204" cy="172" r="14"/><text class="c1 sm mid" x="204" y="177">31</text><text class="c1 sm" x="194" y="210">Calendar</text>
       <rect class="mint" x="32" y="236" width="132" height="76" rx="20"/><circle class="surface" cx="56" cy="260" r="14"/><text class="c1 sm mid" x="56" y="265">T</text><text class="c1 sm" x="46" y="298">Text</text>
-      <rect class="sun" x="180" y="236" width="132" height="76" rx="20"/><circle class="surface" cx="204" cy="260" r="14"/><text class="tab mid" x="204" y="264">18</text><text class="c1 sm" x="194" y="298">Big number</text>
+      <rect class="sun" x="180" y="236" width="132" height="76" rx="20"/><circle class="surface" cx="204" cy="260" r="14"/><text class="c1 sm mid" x="204" y="265">18</text><text class="c1 sm" x="194" y="298">Big number</text>
       <rect class="lilac" x="32" y="324" width="132" height="76" rx="20"/><circle class="surface" cx="56" cy="348" r="14"/><circle class="ink" cx="50" cy="348" r="1.8"/><circle class="ink" cx="56" cy="348" r="1.8"/><circle class="ink" cx="62" cy="348" r="1.8"/><text class="c1 sm" x="46" y="386">Row of hours</text>
       <rect class="rose" x="180" y="324" width="132" height="76" rx="20"/><circle class="surface" cx="204" cy="348" r="14"/><use href="#i-sun" transform="translate(204 348) scale(1.5)"/><text class="c1 sm" x="194" y="386">Symbol</text>
       <rect class="sky" x="32" y="412" width="132" height="76" rx="20"/><circle class="surface" cx="56" cy="436" r="14"/><rect class="acc" x="48" y="433.5" width="16" height="5" rx="2.5"/><text class="c1 sm" x="46" y="474">Bar</text>
@@ -347,12 +348,12 @@ svg.frame{fill:var(--tx);font-family:system-ui,-apple-system,'Segoe UI',Roboto,s
       <rect class="tile" x="132" y="116" width="92" height="40" rx="20"/><text class="fn mid" x="178" y="141">today.py</text>
       <rect class="tile" x="232" y="116" width="160" height="40" rx="20"/><text class="fn" x="250" y="141">today.blocks.json</text>
       <text class="c1 s" x="20" y="180">sources/weather.py · used by the Today widget</text>
-      <rect class="edcard" x="12" y="192" width="366" height="368" rx="22"/>
+      <rect class="edcard" x="12" y="192" width="366" height="442" rx="22"/>
       <use href="#code-weather" x="12" y="200"/>
-      <!-- the finished thing stays in view: a floating live picture, 62% of real size -->
-      <use href="#w-weather-s" transform="translate(268 496) scale(.62)"/>
-      <rect class="console" x="12" y="606" width="366" height="96" rx="22"/>
-      <text class="c1 s" x="32" y="634">Console</text><text class="mono fn" x="32" y="660">run 14 · 0.21 s</text><text class="mono fn ok" x="32" y="684">6 hours returned</text>
+      <!-- the finished thing stays in view: a floating live picture, 62% of real size, resting 12 px inside the editor's corner -->
+      <use href="#w-weather-s" transform="translate(268 524) scale(.62)"/>
+      <rect class="console" x="12" y="646" width="366" height="96" rx="22"/>
+      <text class="c1 s" x="32" y="674">Console</text><text class="mono fn" x="32" y="700">run 14 · 0.21 s</text><text class="mono fn ok" x="32" y="724">6 hours returned</text>
       <use href="#bottom-phone"/>
       <use href="#i-play" class="co" transform="translate(172 797) scale(.7)"/><text class="sb sm oa mid" x="203" y="803">Run</text>
     </g>
@@ -372,16 +373,18 @@ svg.frame{fill:var(--tx);font-family:system-ui,-apple-system,'Segoe UI',Roboto,s
       <rect class="tile" x="32" y="358" width="280" height="60" rx="20"/><use href="#i-sliders" class="cs" transform="translate(60 388) scale(.7)"/><text class="fn sm" x="84" y="384">pywidget.json</text><text class="c1 s" x="84" y="403">what the project touches</text>
       <rect class="dash" x="32.75" y="428.75" width="278.5" height="54.5" rx="20"/><use href="#i-plus" class="ca" transform="translate(60 456) scale(.7)"/><text class="fn sm a" x="84" y="461">New file</text>
       <!-- the editor and the console -->
-      <rect class="edcard" x="344" y="100" width="350" height="440" rx="22"/>
+      <rect class="edcard" x="344" y="100" width="350" height="576" rx="22"/>
       <text class="c1 sm" x="364" y="130">sources/weather.py</text><text class="c1 s end" x="674" y="130">yours</text>
       <use href="#code-weather" x="344" y="140"/>
-      <rect class="console" x="344" y="556" width="350" height="104" rx="22"/>
-      <text class="c1 s" x="364" y="584">Console</text><text class="mono fn" x="364" y="612">run 14 · 0.21 s</text><text class="mono fn ok" x="364" y="638">6 hours returned</text>
-      <!-- the stage, and who uses this file -->
+      <rect class="console" x="344" y="692" width="350" height="104" rx="22"/>
+      <text class="c1 s" x="364" y="720">Console</text><text class="mono fn" x="364" y="748">run 14 · 0.21 s</text><text class="mono fn ok" x="364" y="774">6 hours returned</text>
+      <!-- the stage, who uses this file and what it touches; the last card sits where the Builder's does -->
       <use href="#stage-pad" x="726" y="100"/>
-      <rect class="tile" x="726" y="486" width="422" height="112" rx="28"/>
-      <text class="hl" x="750" y="522">Used by</text><text class="fn" x="750" y="550">Today widget</text><text class="fn s" x="750" y="576">Forecast page · planned for 1.1</text>
-      <use href="#fits" x="726" y="614"/>
+      <rect class="tile" x="726" y="486" width="422" height="234" rx="28"/>
+      <text class="hl" x="750" y="522">Used by</text><text class="fn" x="750" y="550">Today widget</text><text class="c1 s end" x="1124" y="550">Small and medium</text><text class="fn s" x="750" y="576">Forecast page · planned for 1.1</text>
+      <path class="hair" d="M750 598.5H1124"/>
+      <text class="hl" x="750" y="634">Touches</text><text class="fn" x="750" y="662">Your location, while the app is in use</text><text class="fn" x="750" y="688">The network: one named host</text>
+      <use href="#fits" x="726" y="736"/>
     </g>
   </g>
 </defs>
@@ -438,7 +441,7 @@ svg.frame{fill:var(--tx);font-family:system-ui,-apple-system,'Segoe UI',Roboto,s
 </ul>
 
 <h2>The editor, iPad</h2>
-<p>The same three columns as the Builder, so the switch moves nothing: files as cards on the left, the editor and console in the middle, the stage on the right. Under the stage, "Used by" says which outputs read the open file.</p>
+<p>The same three columns as the Builder, so the switch moves nothing: files as cards on the left, the editor and console in the middle, the stage on the right. Under the stage, one card says which outputs read the open file and what the file touches.</p>
 <figure>
   <svg class="frame pad lite" viewBox="0 0 1180 820" role="img" aria-label="The editor on iPad in direction C, light: file cards on the left, the Python editor and console in the middle, and the stage with both widget sizes on the right."><use href="#editor-pad"/></svg>
   <figcaption>The editor, iPad, C in light. Proposal, not approved.</figcaption>

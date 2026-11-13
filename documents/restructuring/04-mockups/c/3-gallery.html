@@ -1,0 +1,397 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Direction C, screen 4: the Gallery (proposal, not approved)</title>
+<style>
+/* Direction C, "creative-first". Hand-written HTML and SVG, no images, no script, system fonts only.
+   .lite = C in light, standing on Paper's colours; .dark = C in dark, standing on Studio's.
+   Copied by value from pywidget/docs/design/tokens.css: every ground, line, text, accent and status colour,
+   the widget card colours and the syntax themes. New in C, and in no token file: the six tile tints
+   (--t-*) in each appearance, the rounded title face in light, the larger type scale. The 28 px corners are the approved r5.
+   Each screen is drawn once in <defs> and shown twice; the appearance comes from the class on the frame. */
+html{color-scheme:light dark}
+body{margin:0;padding:16px 16px 56px;background:#F7F5F0;color:#1C1B19;font:16px/1.5 system-ui,-apple-system,'Segoe UI',Roboto,sans-serif}
+main{max-width:1180px;margin:0 auto}
+h1{font:700 30px/1.2 ui-rounded,'SF Pro Rounded',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;margin:20px 0 6px}
+h2{font:700 21px/1.25 ui-rounded,'SF Pro Rounded',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;margin:36px 0 10px}
+p,li{max-width:70ch}
+p{margin:0 0 10px}
+ul{margin:0 0 10px;padding-left:20px}
+.mark{display:inline-block;border:1.5px solid #8F5400;color:#8F5400;border-radius:999px;padding:3px 12px;font-weight:600;font-size:14px}
+.phones{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,390px));gap:24px;align-items:start}
+figure{margin:0 0 24px}
+figcaption{font-size:14px;color:#5C5850;margin-top:8px}
+table{border-collapse:collapse;margin:0 0 14px;font-size:15px}
+th,td{text-align:left;vertical-align:top;padding:7px 14px 7px 0;border-bottom:1px solid #E3DFD6}
+svg.frame{display:block;width:100%;height:auto}
+svg.pad{max-width:1180px}
+svg.defs{position:absolute;width:0;height:0;overflow:hidden}
+@media (prefers-color-scheme:dark){
+  body{background:#0A0C13;color:#EEF0F8}
+  .mark{border-color:#FFC266;color:#FFC266}
+  figcaption{color:#A9AFC5}
+  th,td{border-color:#262C3E}
+}
+
+/* tokens: approved values first, then C's own tints */
+.lite{--canvas:#F7F5F0;--surface:#FFFFFF;--sunken:#EEEBE4;--editor:#FCFBF8;--console:#F3F1EB;
+  --hair:#E3DFD6;--strong:#C9C4B8;--tx:#1C1B19;--tx2:#5C5850;--tx3:#6A665D;--on:#FFFFFF;
+  --accent:#2350B0;--soft:#E4EBF8;--ok:#1D7442;--warn:#8F5400;
+  --card-primary:#1C1B19;--card-secondary:#5C5850;--card-accent:#2350B0;--card-ground:#EEEBE4;--card-stroke:#E3DFD6;
+  --wfont:ui-serif,'New York',Georgia,serif;--wnum:500;
+  --sx-text:#1C1B19;--sx-comment:#6B675E;--sx-keyword:#8A2F8F;--sx-string:#1D6B40;--sx-number:#9A4500;--sx-function:#2350B0;--sx-builtin:#0B6670;--sx-gutter:#6A665D;--sx-currentLine:#F6F4EE;
+  --t-sky:#DCE8FA;--t-mint:#D9EFE1;--t-sun:#FBEBC8;--t-rose:#F9DDD8;--t-lilac:#E6DFF8;--t-sand:#ECE6D8;
+  --shadow:rgba(28,27,25,.10);--d-l:inline;--d-d:none}
+.dark{--canvas:#0A0C13;--surface:#151926;--sunken:#06070C;--editor:#0E1120;--console:#080A12;
+  --hair:#262C3E;--strong:#394158;--tx:#EEF0F8;--tx2:#A9AFC5;--tx3:#8A91AA;--on:#120A33;
+  --accent:#A08BFF;--soft:#2A2350;--ok:#4FD39A;--warn:#FFC266;
+  --card-primary:#FFFFFF;--card-secondary:rgba(255,255,255,.78);--card-accent:#B0A3FD;--card-ground:rgba(255,255,255,.28);--card-stroke:rgba(255,255,255,.14);
+  --wfont:ui-rounded,'SF Pro Rounded',system-ui,sans-serif;--wnum:600;
+  --sx-text:#E6E9F5;--sx-comment:#9198B5;--sx-keyword:#C59BFF;--sx-string:#7FE3BA;--sx-number:#FFB86E;--sx-function:#72BBFF;--sx-builtin:#FF93B6;--sx-gutter:#8089A6;--sx-currentLine:#151929;
+  --t-sky:#1B2A4A;--t-mint:#16342B;--t-sun:#3A2E14;--t-rose:#3D1F27;--t-lilac:#2A2350;--t-sand:#262A36;
+  --shadow:rgba(0,0,0,0);--d-l:none;--d-d:inline}
+
+/* type: C's scale, one step up from the approved one. Nothing C draws itself is under 13 px;
+   the system tab bar's labels and the text inside a widget keep their own sizes.
+   Inside a <use> copy only single-class selectors are safe (Chromium drops descendant selectors there). */
+svg.frame{fill:var(--tx);font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;font-size:17px}
+.lt{font-family:ui-rounded,'SF Pro Rounded',system-ui,sans-serif;font-weight:700;font-size:40px}
+.t1{font-family:ui-rounded,'SF Pro Rounded',system-ui,sans-serif;font-weight:700;font-size:30px}
+.t2{font-family:ui-rounded,'SF Pro Rounded',system-ui,sans-serif;font-weight:700;font-size:24px}
+.hl{font-family:ui-rounded,'SF Pro Rounded',system-ui,sans-serif;font-weight:600;font-size:20px}
+.bd{font-size:19px}
+.sb{font-size:17px}
+.fn{font-size:15px}
+.c1{font-size:13px}
+.tab{font-size:11px;font-weight:500}
+.md{font-weight:500}.sm{font-weight:600}
+.mono{font-family:ui-monospace,Menlo,Consolas,'Roboto Mono',monospace;white-space:pre}
+.num{font-variant-numeric:tabular-nums}
+.end{text-anchor:end}.mid{text-anchor:middle}
+.s{fill:var(--tx2)}
+.t{fill:var(--tx3)}
+.a{fill:var(--accent)}
+.oa{fill:var(--on)}
+.ok{fill:var(--ok)}
+.wn{fill:var(--warn)}
+/* inside a widget: the approved drawing's faces and sizes */
+.hero{font-family:var(--wfont);font-weight:var(--wnum);font-size:46px}
+.w13{font-size:13px}.w12{font-size:12px;font-weight:600}.w11{font-size:11px;font-weight:500}
+.wp{fill:var(--card-primary)}
+.ws{fill:var(--card-secondary)}
+
+/* surfaces and marks */
+.canvas{fill:var(--canvas)}.surface{fill:var(--surface)}.sunken{fill:var(--sunken)}
+.editor{fill:var(--editor)}.console{fill:var(--console);stroke:var(--hair)}
+.tile{fill:var(--surface);stroke:var(--hair)}
+.dash{fill:none;stroke:var(--strong);stroke-width:1.5;stroke-dasharray:6 6}
+.hair{stroke:var(--hair);stroke-width:1;fill:none}
+.acc{fill:var(--accent)}.soft{fill:var(--soft)}.ink{fill:var(--tx)}
+.onfill{fill:var(--on)}
+.onstroke{fill:none;stroke:var(--on);stroke-width:2}
+.ring{fill:none;stroke:var(--accent);stroke-width:3}
+.sky{fill:var(--t-sky)}.mint{fill:var(--t-mint)}.sun{fill:var(--t-sun)}.rose{fill:var(--t-rose)}.lilac{fill:var(--t-lilac)}.sand{fill:var(--t-sand)}
+.sh{fill:var(--shadow)}
+.ico{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.cp{color:var(--tx)}.cs{color:var(--tx2)}.ca{color:var(--accent)}.co{color:var(--on)}
+.wcard{fill:var(--surface);stroke:var(--card-stroke)}
+.wacc{fill:var(--card-accent)}.wgr{fill:var(--card-ground)}
+.wline{fill:none;stroke:var(--card-accent);stroke-width:1.4;stroke-linecap:round}
+.whair{fill:none;stroke:var(--card-ground);stroke-width:1}
+.ol{display:var(--d-l)}.od{display:var(--d-d)}
+.grip{fill:none;stroke:var(--tx3);stroke-width:2;stroke-linecap:round}
+/* code: Quill in light, Lumen in dark, as approved; 15 px, numbers 13 px */
+.cd{font-family:ui-monospace,Menlo,Consolas,'Roboto Mono',monospace;font-size:15px;fill:var(--sx-text);white-space:pre}
+.gu{font-family:ui-monospace,Menlo,Consolas,'Roboto Mono',monospace;font-size:13px;fill:var(--sx-gutter);text-anchor:end}
+.gl{font-family:ui-monospace,Menlo,Consolas,'Roboto Mono',monospace;font-size:13px;fill:var(--sx-text);text-anchor:end}
+.xc{fill:var(--sx-comment)}.xk{fill:var(--sx-keyword)}.xs{fill:var(--sx-string)}.xn{fill:var(--sx-number)}.xf{fill:var(--sx-function)}.xb{fill:var(--sx-builtin)}
+.lit{fill:var(--sx-currentLine)}
+.edcard{fill:var(--editor);stroke:var(--hair)}
+.okline{fill:none;stroke:var(--ok);stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+</style>
+</head>
+<body>
+<div role="note" class="rs-proposal" style="position:sticky;top:0;z-index:2147483647;margin:0;padding:6px 10px;background:#7a4b00;color:#fff;font:600 14px/1.4 -apple-system,system-ui,sans-serif;text-align:center">Proposal, not approved: the mock-ups are options for the Investors to review. Nothing here is adopted until the Investors approve it.</div>
+<main>
+<p><span class="mark">Proposal, not approved</span></p>
+<h1>Direction C, screen 4: the Gallery</h1>
+<p>The Gallery is where a marketplace would live. In direction C it is shelves of tiles, and every tile holds a finished thing drawn live by the app. The three shelves are named for the act: get a widget, make a starter your own in the Builder, add a part to a project. A part is drawn as the same block card the Builder uses. The programmer is one tap from the Python on every widget tile, before anything is installed. Drawn as 1.0 would have it under 03's working assumptions: every item is the company's own and ships inside the app, with no account, no rating and no price. Sample data throughout. Gallery, Builder and Project are placeholder names.</p>
+
+<svg class="defs" aria-hidden="true" focusable="false">
+<defs>
+<!-- shared:begin -->
+  <linearGradient id="g-pill" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#A08BFF"/><stop offset="1" stop-color="#FF9B6A"/></linearGradient>
+  <linearGradient id="g-card" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#5B33E6"/><stop offset="1" stop-color="#1E1450"/></linearGradient>
+  <filter id="f-soft" x="-30%" y="-30%" width="160%" height="180%"><feGaussianBlur stdDeviation="7"/></filter>
+  <clipPath id="clip-phone"><rect width="390" height="844" rx="40"/></clipPath>
+  <clipPath id="clip-pad"><rect width="1180" height="820" rx="24"/></clipPath>
+
+  <!-- icons, 22 px box, centred on 0,0; the colour comes from the class on each use -->
+  <g id="i-tiles" class="ico"><rect x="-10" y="-10" width="8.5" height="8.5" rx="2.5"/><rect x="1.5" y="-10" width="8.5" height="8.5" rx="2.5"/><rect x="-10" y="1.5" width="8.5" height="8.5" rx="2.5"/><rect x="1.5" y="1.5" width="8.5" height="8.5" rx="2.5"/></g>
+  <g id="i-stack" class="ico"><rect x="-10" y="-4" width="20" height="14" rx="3.5"/><path d="M-7-7.5H7M-4-11H4"/></g>
+  <g id="i-book" class="ico"><path d="M0-7.5C-3-9.5-7-9.5-10-8.5V7.5C-7 6.5-3 6.5 0 8.5 3 6.5 7 6.5 10 7.5V-8.5C7-9.5 3-9.5 0-7.5ZM0-7.5V8.5"/></g>
+  <g id="i-sliders" class="ico"><path d="M-10-6H-2M4-6H10M-10 6H-4M2 6H10"/><circle cx="1" cy="-6" r="3"/><circle cx="-1" cy="6" r="3"/></g>
+  <g id="i-code" class="ico"><path d="M-4-6L-10 0L-4 6M4-6L10 0L4 6"/></g>
+  <g id="i-search" class="ico"><circle cx="-1.5" cy="-1.5" r="6.5"/><path d="M3.5 3.5L9 9"/></g>
+  <g id="i-plus" class="ico"><path d="M0-8V8M-8 0H8"/></g>
+  <g id="i-back" class="ico"><path d="M3-8L-5 0L3 8"/></g>
+  <g id="i-play" class="ico"><path d="M-5-8L8 0L-5 8Z"/></g>
+  <!-- the code button: one tap from any tile to its Python -->
+  <g id="b-code"><circle class="tile" r="16"/><use href="#i-code" class="cp" transform="scale(.62)"/></g>
+
+  <g id="i-sun"><circle r="2.6" class="wacc"/><path class="wline" d="M0-5.6V-4.4M0 4.4V5.6M-5.6 0H-4.4M4.4 0H5.6M-4-4L-3.1-3.1M3.1 3.1L4 4M-4 4L-3.1 3.1M3.1-3.1L4-4"/></g>
+  <g id="i-cloud"><path class="wacc" d="M-5 3.5a3 3 0 0 1 .4-6 4 4 0 0 1 7.6 1 2.6 2.6 0 0 1-.4 5z"/></g>
+  <g id="i-moon"><path class="wacc" d="M2.5 4.6A5 5 0 0 1 .2-4.9 4 4 0 1 0 4.9 1.4a5 5 0 0 1-2.4 3.2z"/></g>
+
+  <!-- status bars -->
+  <g id="sb-phone">
+    <text class="sb sm" x="42" y="34">9:41</text>
+    <rect class="ink" x="291" y="30" width="3" height="5" rx="1"/><rect class="ink" x="296" y="28" width="3" height="7" rx="1"/><rect class="ink" x="301" y="25.5" width="3" height="9.5" rx="1"/><rect class="ink" x="306" y="23" width="3" height="12" rx="1"/>
+    <path d="M316 28.5a9 9 0 0 1 14 0M318.6 31.2a5.6 5.6 0 0 1 8.8 0" fill="none" stroke="var(--tx)" stroke-width="1.8" stroke-linecap="round"/><circle class="ink" cx="323" cy="34" r="1.4"/>
+    <rect x="338.5" y="23.5" width="24" height="11.5" rx="3.5" fill="none" stroke="var(--tx3)"/><rect class="ink" x="340.5" y="25.5" width="20" height="7.5" rx="2"/>
+  </g>
+  <g id="sb-pad">
+    <text class="c1 sm" x="28" y="22">9:41</text><text class="c1 s" x="66" y="22">Fri 13 Nov</text>
+    <rect x="1128.5" y="11.5" width="24" height="11.5" rx="3.5" fill="none" stroke="var(--tx3)"/><rect class="ink" x="1130.5" y="13.5" width="20" height="7.5" rx="2"/>
+  </g>
+
+  <!-- the widgets, at their own size and in the approved look; tiles show them smaller -->
+  <g id="w-weather-s">
+    <rect class="sh" y="4" width="158" height="158" rx="22" filter="url(#f-soft)"/>
+    <rect class="wcard" width="158" height="158" rx="22"/><rect class="od" width="158" height="158" rx="22" fill="url(#g-card)"/>
+    <text class="w12 ws" x="16" y="32">Home</text>
+    <text class="hero wp num" x="14" y="88">18°</text>
+    <text class="w13 wp" x="16" y="116">Mostly sunny</text>
+    <text class="w11 ws" x="16" y="134">H 19° · L 11°</text>
+  </g>
+  <g id="w-weather-m">
+    <rect class="sh" y="4" width="338" height="158" rx="22" filter="url(#f-soft)"/>
+    <rect class="wcard" width="338" height="158" rx="22"/><rect class="od" width="338" height="158" rx="22" fill="url(#g-card)"/>
+    <text class="w12 ws" x="16" y="32">Home</text>
+    <text class="hero wp num" x="14" y="88">18°</text>
+    <text class="w13 wp" x="16" y="116">Mostly sunny</text>
+    <text class="w11 ws" x="16" y="134">H 19° · L 11°</text>
+    <text class="w11 ws mid" x="172" y="38">Now</text><text class="w11 ws mid" x="201" y="38">13</text><text class="w11 ws mid" x="230" y="38">14</text><text class="w11 ws mid" x="259" y="38">15</text><text class="w11 ws mid" x="288" y="38">16</text><text class="w11 ws mid" x="317" y="38">17</text>
+    <use href="#i-sun" x="172" y="58"/><use href="#i-sun" x="201" y="58"/><use href="#i-sun" x="230" y="58"/><use href="#i-sun" x="259" y="58"/><use href="#i-cloud" x="288" y="58"/><use href="#i-moon" x="317" y="58"/>
+    <text class="w12 wp mid num" x="172" y="86">18°</text><text class="w12 wp mid num" x="201" y="86">19°</text><text class="w12 wp mid num" x="230" y="86">19°</text><text class="w12 wp mid num" x="259" y="86">18°</text><text class="w12 wp mid num" x="288" y="86">16°</text><text class="w12 wp mid num" x="317" y="86">14°</text>
+    <path class="whair" d="M160 106.5H322"/>
+    <text class="w11 ws" x="160" y="134">Cloud from 16:00</text>
+  </g>
+  <g id="w-habit-s">
+    <rect class="sh" y="4" width="158" height="158" rx="22" filter="url(#f-soft)"/>
+    <rect class="wcard" width="158" height="158" rx="22"/><rect class="od" width="158" height="158" rx="22" fill="url(#g-card)"/>
+    <text class="w12 ws" x="16" y="32">Read 20 min</text>
+    <text class="hero wp num" x="14" y="88">5</text>
+    <text class="w13 wp" x="16" y="114">of 7 days</text>
+    <circle class="wacc" cx="22" cy="136" r="6"/><circle class="wacc" cx="41" cy="136" r="6"/><circle class="wacc" cx="60" cy="136" r="6"/><circle class="wacc" cx="79" cy="136" r="6"/><circle class="wacc" cx="98" cy="136" r="6"/><circle class="wgr" cx="117" cy="136" r="6"/><circle class="wgr" cx="136" cy="136" r="6"/>
+  </g>
+  <g id="w-trip-s">
+    <rect class="sh" y="4" width="158" height="158" rx="22" filter="url(#f-soft)"/>
+    <rect class="wcard" width="158" height="158" rx="22"/><rect class="od" width="158" height="158" rx="22" fill="url(#g-card)"/>
+    <text class="w12 ws" x="16" y="32">Lisbon</text>
+    <text class="hero wp num" x="14" y="88">12</text>
+    <text class="w13 wp" x="16" y="114">days to go</text>
+    <rect class="wgr" x="16" y="131" width="126" height="6" rx="3"/><rect class="wacc" x="16" y="131" width="88" height="6" rx="3"/>
+  </g>
+  <g id="w-moon-s">
+    <rect class="sh" y="4" width="158" height="158" rx="22" filter="url(#f-soft)"/>
+    <rect class="wcard" width="158" height="158" rx="22"/><rect class="od" width="158" height="158" rx="22" fill="url(#g-card)"/>
+    <text class="w12 ws" x="16" y="32">Moon</text>
+    <circle class="wgr" cx="128" cy="30" r="12"/><path class="wacc" d="M128 18a12 12 0 0 1 0 24a6 12 0 0 0 0-24z"/>
+    <text class="hero wp num" x="14" y="88">62%</text>
+    <text class="w13 wp" x="16" y="114">Waxing gibbous</text>
+    <text class="w11 ws" x="16" y="134">Full in 5 days</text>
+  </g>
+  <!-- a script's picture is its last lines -->
+  <g id="th-console">
+    <rect class="console" width="158" height="158" rx="22"/>
+    <text class="w12 s" x="16" y="32">Console</text>
+    <text class="mono fn num" x="16" y="68">Dune     412</text>
+    <text class="mono fn num" x="16" y="92">Emma     320</text>
+    <text class="mono fn num ok" x="16" y="116">Total    732</text>
+  </g>
+<!-- shared:end -->
+
+  <!-- a starter with nothing in it yet: an empty card, 88 px, the size a starter's picture is shown at -->
+  <g id="th-blank">
+    <rect class="tile" x=".5" y=".5" width="87" height="87" rx="12"/><use href="#i-plus" class="ca" transform="translate(44 44) scale(.9)"/>
+  </g>
+
+  <g id="gallery-phone">
+    <g clip-path="url(#clip-phone)">
+      <rect class="canvas" width="390" height="844"/>
+      <use href="#sb-phone"/>
+      <text class="lt" x="20" y="106">Gallery</text>
+      <circle class="tile" cx="346" cy="92" r="22"/><use href="#i-search" class="cp" transform="translate(346 92) scale(.9)"/>
+      <!-- what to show: chips, as the editor's file pills -->
+      <rect class="soft" x="20" y="128" width="60" height="40" rx="20"/><text class="fn sm a mid" x="50" y="153">All</text>
+      <rect class="tile" x="88" y="128" width="94" height="40" rx="20"/><text class="fn mid" x="135" y="153">Widgets</text>
+      <rect class="tile" x="190" y="128" width="94" height="40" rx="20"/><text class="fn mid" x="237" y="153">Starters</text>
+      <rect class="tile" x="292" y="128" width="78" height="40" rx="20"/><text class="fn mid" x="331" y="153">Parts</text>
+      <!-- shelf 1: finished things; the row scrolls sideways -->
+      <text class="hl" x="20" y="206">Ready to use</text><text class="fn a end" x="370" y="206">See all 12</text>
+      <rect class="sky" x="20" y="220" width="169" height="244" rx="28"/>
+      <use href="#w-weather-s" transform="translate(43.5 234) scale(.772)"/>
+      <text class="sb sm" x="36" y="384">Weather</text><text class="c1 s" x="36" y="404">Location, network</text>
+      <rect class="acc" x="36" y="414" width="72" height="36" rx="18"/><text class="fn sm oa mid" x="72" y="437">Get</text><use href="#b-code" x="157" y="432"/>
+      <rect class="sand" x="201" y="220" width="169" height="244" rx="28"/>
+      <use href="#w-moon-s" transform="translate(224.5 234) scale(.772)"/>
+      <text class="sb sm" x="217" y="384">Moon</text><text class="c1 s" x="217" y="404">Touches nothing</text>
+      <rect class="acc" x="217" y="414" width="72" height="36" rx="18"/><text class="fn sm oa mid" x="253" y="437">Get</text><use href="#b-code" x="338" y="432"/>
+      <rect class="sun" x="382" y="220" width="169" height="244" rx="28"/>
+      <!-- shelf 2: starters open in the Builder -->
+      <text class="hl" x="20" y="502">Make it your own</text><text class="c1 s end" x="370" y="502">Opens in the Builder</text>
+      <rect class="mint" x="20" y="516" width="300" height="112" rx="28"/>
+      <use href="#w-habit-s" transform="translate(32 528) scale(.557)"/>
+      <text class="sb sm" x="136" y="548">Habit check-off</text><text class="c1 s" x="136" y="568">Blocks · touches nothing</text>
+      <rect class="tile" x="136" y="578" width="124" height="36" rx="18"/><text class="fn sm mid" x="198" y="601">Make it mine</text>
+      <rect class="rose" x="332" y="516" width="300" height="112" rx="28"/>
+      <use href="#th-blank" x="344" y="528"/>
+      <!-- shelf 3: parts, drawn as the Builder's block cards -->
+      <text class="hl" x="20" y="666">Parts for a project</text>
+      <rect class="sand" x="20" y="680" width="350" height="56" rx="20"/><circle class="surface" cx="48" cy="708" r="16"/><use href="#i-cloud" transform="translate(48 708) scale(1.5)"/>
+      <text class="sb sm" x="76" y="704">Local weather</text><text class="c1 s" x="76" y="723">Data · location, network</text>
+      <rect class="tile" x="298" y="690" width="60" height="36" rx="18"/><text class="fn sm mid" x="328" y="713">Add</text>
+      <rect class="lilac" x="20" y="746" width="350" height="56" rx="20"/><circle class="surface" cx="48" cy="774" r="16"/>
+      <!-- the system tab bar, four tabs as approved -->
+      <rect class="surface" y="761" width="390" height="83"/><path class="hair" d="M0 761.5H390"/>
+      <use href="#i-tiles" class="cs" x="49" y="786"/><text class="tab s mid" x="49" y="812">Projects</text>
+      <use href="#i-stack" class="ca" x="146" y="786"/><text class="tab a mid" x="146" y="812">Gallery</text>
+      <use href="#i-book" class="cs" x="244" y="786"/><text class="tab s mid" x="244" y="812">Docs</text>
+      <use href="#i-sliders" class="cs" x="341" y="786"/><text class="tab s mid" x="341" y="812">Settings</text>
+      <rect class="ink" x="128" y="830" width="134" height="5" rx="2.5"/>
+    </g>
+  </g>
+
+  <g id="gallery-pad">
+    <g clip-path="url(#clip-pad)">
+      <rect class="canvas" width="1180" height="820"/>
+      <use href="#sb-pad"/>
+      <rect class="sunken" x="418" y="34" width="344" height="44" rx="22"/><rect class="tile" x="516" y="38" width="88" height="36" rx="18"/>
+      <text class="fn s mid" x="470" y="61">Projects</text><text class="fn sm mid" x="560" y="61">Gallery</text><text class="fn s mid" x="636" y="61">Docs</text><text class="fn s mid" x="712" y="61">Settings</text>
+      <text class="lt" x="32" y="128">Gallery</text>
+      <circle class="tile" cx="672" cy="112" r="22"/><use href="#i-search" class="cp" transform="translate(672 112) scale(.9)"/>
+      <rect class="soft" x="32" y="150" width="60" height="40" rx="20"/><text class="fn sm a mid" x="62" y="175">All</text>
+      <rect class="tile" x="100" y="150" width="94" height="40" rx="20"/><text class="fn mid" x="147" y="175">Widgets</text>
+      <rect class="tile" x="202" y="150" width="94" height="40" rx="20"/><text class="fn mid" x="249" y="175">Starters</text>
+      <rect class="tile" x="304" y="150" width="78" height="40" rx="20"/><text class="fn mid" x="343" y="175">Parts</text>
+      <!-- shelf 1: finished things; the ringed tile is the one open on the right -->
+      <text class="hl" x="32" y="226">Ready to use</text><text class="fn a end" x="694" y="226">See all 12</text>
+      <rect class="sky" x="32" y="242" width="210" height="244" rx="28"/><rect class="ring" x="33.5" y="243.5" width="207" height="241" rx="26.5"/>
+      <use href="#w-weather-s" transform="translate(76 256) scale(.772)"/>
+      <text class="sb sm" x="50" y="406">Weather</text><text class="c1 s" x="50" y="426">Location, network</text>
+      <rect class="acc" x="50" y="436" width="72" height="36" rx="18"/><text class="fn sm oa mid" x="86" y="459">Get</text><use href="#b-code" x="208" y="454"/>
+      <rect class="sand" x="258" y="242" width="210" height="244" rx="28"/>
+      <use href="#w-moon-s" transform="translate(302 256) scale(.772)"/>
+      <text class="sb sm" x="276" y="406">Moon</text><text class="c1 s" x="276" y="426">Touches nothing</text>
+      <rect class="acc" x="276" y="436" width="72" height="36" rx="18"/><text class="fn sm oa mid" x="312" y="459">Get</text><use href="#b-code" x="434" y="454"/>
+      <rect class="sun" x="484" y="242" width="210" height="244" rx="28"/>
+      <use href="#w-trip-s" transform="translate(528 256) scale(.772)"/>
+      <text class="sb sm" x="502" y="406">Trip countdown</text><text class="c1 s" x="502" y="426">Touches nothing</text>
+      <rect class="acc" x="502" y="436" width="72" height="36" rx="18"/><text class="fn sm oa mid" x="538" y="459">Get</text><use href="#b-code" x="660" y="454"/>
+      <!-- shelf 2: starters open in the Builder -->
+      <text class="hl" x="32" y="528">Make it your own</text><text class="c1 s end" x="694" y="528">Starters open in the Builder</text>
+      <rect class="mint" x="32" y="544" width="323" height="112" rx="28"/>
+      <use href="#w-habit-s" transform="translate(44 556) scale(.557)"/>
+      <text class="sb sm" x="148" y="576">Habit check-off</text><text class="c1 s" x="148" y="596">Blocks · touches nothing</text>
+      <rect class="tile" x="148" y="606" width="124" height="36" rx="18"/><text class="fn sm mid" x="210" y="629">Make it mine</text>
+      <rect class="rose" x="371" y="544" width="323" height="112" rx="28"/>
+      <use href="#th-blank" x="383" y="556"/>
+      <text class="sb sm" x="487" y="576">Blank widget</text><text class="c1 s" x="487" y="596">Blocks · one block to start</text>
+      <rect class="tile" x="487" y="606" width="124" height="36" rx="18"/><text class="fn sm mid" x="549" y="629">Make it mine</text>
+      <!-- shelf 3: parts, drawn as the Builder's block cards -->
+      <text class="hl" x="32" y="696">Parts for a project</text><text class="c1 s end" x="694" y="696">The blocks the Builder uses</text>
+      <rect class="sand" x="32" y="712" width="323" height="56" rx="20"/><circle class="surface" cx="60" cy="740" r="16"/><use href="#i-cloud" transform="translate(60 740) scale(1.5)"/>
+      <text class="sb sm" x="88" y="736">Local weather</text><text class="c1 s" x="88" y="755">Data · location, network</text>
+      <rect class="tile" x="283" y="722" width="60" height="36" rx="18"/><text class="fn sm mid" x="313" y="745">Add</text>
+      <rect class="lilac" x="371" y="712" width="323" height="56" rx="20"/><circle class="surface" cx="399" cy="740" r="16"/><circle class="ink" cx="392" cy="740" r="2"/><circle class="ink" cx="399" cy="740" r="2"/><circle class="ink" cx="406" cy="740" r="2"/>
+      <text class="sb sm" x="427" y="736">Row of hours</text><text class="c1 s" x="427" y="755">View · touches nothing</text>
+      <rect class="tile" x="622" y="722" width="60" height="36" rx="18"/><text class="fn sm mid" x="652" y="745">Add</text>
+      <text class="c1 s" x="32" y="796">Every item ships inside the app. No account.</text>
+      <!-- the chosen item, where the Builder and the editor keep their stage -->
+      <rect class="sky" x="726" y="100" width="422" height="190" rx="28"/>
+      <use href="#w-weather-m" x="768" y="116"/>
+      <text class="t2" x="726" y="330">Weather</text><text class="c1 s" x="726" y="352">Now and the next six hours</text>
+      <rect class="sunken" x="1002" y="308" width="146" height="44" rx="22"/><rect class="tile" x="1076" y="312" width="68" height="36" rx="18"/>
+      <text class="c1 s mid" x="1040" y="335">Small</text><text class="c1 sm mid" x="1110" y="335">Medium</text>
+      <!-- 03's three choices -->
+      <rect class="acc" x="726" y="368" width="92" height="44" rx="22"/><rect class="od" x="726" y="368" width="92" height="44" rx="22" fill="url(#g-pill)"/><text class="fn sm oa mid" x="772" y="395">Get</text>
+      <rect class="tile" x="830" y="368" width="136" height="44" rx="22"/><text class="fn sm mid" x="898" y="395">Make it mine</text>
+      <rect class="tile" x="978" y="368" width="170" height="44" rx="22"/><text class="fn sm mid" x="1063" y="395">Add to project…</text>
+      <rect class="tile" x="726" y="428" width="422" height="180" rx="28"/>
+      <text class="hl" x="750" y="464">Touches</text><text class="fn" x="750" y="492">Your location, while the app is in use</text><text class="fn" x="750" y="518">The network: one named host</text>
+      <path class="hair" d="M750 536.5H1124"/>
+      <text class="fn" x="750" y="564">Made by pywidget</text><text class="c1 s end" x="1124" y="564">Version 1.3</text>
+      <text class="c1 s" x="750" y="588">A newer version is offered, never installed for you.</text>
+      <!-- its blocks, and its Python one tap away -->
+      <text class="hl" x="726" y="646">What is inside</text><text class="c1 sm a end" x="1104" y="645">Its Python</text><use href="#b-code" x="1132" y="640"/>
+      <rect class="sand" x="726" y="662" width="132" height="76" rx="20"/><circle class="surface" cx="750" cy="686" r="14"/><use href="#i-cloud" transform="translate(750 686) scale(1.4)"/><text class="c1 sm" x="740" y="724">Local weather</text>
+      <rect class="sun" x="871" y="662" width="132" height="76" rx="20"/><circle class="surface" cx="895" cy="686" r="14"/><text class="c1 sm mid" x="895" y="691">18</text><text class="c1 sm" x="885" y="724">Big number</text>
+      <rect class="lilac" x="1016" y="662" width="132" height="76" rx="20"/><circle class="surface" cx="1040" cy="686" r="14"/><circle class="ink" cx="1034" cy="686" r="1.8"/><circle class="ink" cx="1040" cy="686" r="1.8"/><circle class="ink" cx="1046" cy="686" r="1.8"/><text class="c1 sm" x="1030" y="724">Row of hours</text>
+      <text class="c1 s" x="726" y="766">Add to project copies one part into a project you pick.</text>
+      <text class="c1 s" x="726" y="784">It asks first if the part touches more than the project does.</text>
+    </g>
+  </g>
+</defs>
+</svg>
+
+<h2>iPhone, 390 wide</h2>
+<div class="phones">
+<figure>
+  <svg class="frame lite" viewBox="0 0 390 844" role="img" aria-label="The Gallery on iPhone in direction C, light: filter chips, then three shelves. Ready to use: tinted tiles, each with a live picture of a widget, what it touches, a Get button and a round code button. Make it your own: a starter card with Make it mine. Parts for a project: block cards with Add."><use href="#gallery-phone"/></svg>
+  <figcaption>The Gallery, iPhone, C in light (on Paper's colours). Proposal, not approved.</figcaption>
+</figure>
+<figure>
+  <svg class="frame dark" viewBox="0 0 390 844" role="img" aria-label="The Gallery on iPhone in direction C, dark."><use href="#gallery-phone"/></svg>
+  <figcaption>The Gallery, iPhone, C in dark (on Studio's colours). Proposal, not approved.</figcaption>
+</figure>
+</div>
+<p>What to look at:</p>
+<ul>
+<li>Three shelves, each named for what a person does there, each scrolling sideways. Finished widgets come first and are the largest things on the screen.</li>
+<li>Every picture is the app's own live drawing of the widget, at 77% of its real size on the first shelf. No picture comes from an item's maker (03 question 8).</li>
+<li>The line under each name says what the item touches, before a tap.</li>
+<li>One filled button on each widget tile: Get. The round button beside it opens the item's Python, read only, before anything is installed.</li>
+<li>A starter opens in the Builder. A part is the same card, with the same tint by kind, as the block it becomes there.</li>
+<li>The cost, measured: 4 items are whole on this screen (2 widgets, 1 starter, 1 part) with 3 more peeking. Direction A's list shows 5 rows and B's shows 10.</li>
+</ul>
+
+<h2>iPad</h2>
+<p>The shelves keep the left 60% of the screen. The chosen item opens on the right, in the place where the Builder and the editor keep their stage: the widget at real size, 03's three choices, what it touches, who made it and its version, then what is inside it as blocks. Its Python is one tap away, through the round button.</p>
+<figure>
+  <svg class="frame pad lite" viewBox="0 0 1180 820" role="img" aria-label="The Gallery on iPad in direction C, light: on the left three shelves of tiles, with the Weather tile ringed; on the right the Weather item: its medium widget at real size, Get, Make it mine and Add to project, what it touches, its maker and version, and its three blocks with a button to its Python."><use href="#gallery-pad"/></svg>
+  <figcaption>The Gallery, iPad, C in light. Proposal, not approved.</figcaption>
+</figure>
+<figure>
+  <svg class="frame pad dark" viewBox="0 0 1180 820" role="img" aria-label="The Gallery on iPad in direction C, dark."><use href="#gallery-pad"/></svg>
+  <figcaption>The Gallery, iPad, C in dark. Proposal, not approved.</figcaption>
+</figure>
+<p>What to look at:</p>
+<ul>
+<li>The ring marks the tile that is open on the right, as it marks the chosen block in the Builder.</li>
+<li>The widget on the stage is at real size. The switch beside its name shows the other size, and is the same control as Blocks and Code.</li>
+<li>The three choices sit in one row: Get keeps a copy, Make it mine opens that copy in the Builder, Add to project copies one part.</li>
+<li>A newer version is offered and never installed for the person (03 question 3).</li>
+<li>Directions A and B show the item's Python on this screen. C shows its blocks and keeps the Python one tap away. That is C's choice everywhere, and here it has a cost: a person must tap once to read the code before they install.</li>
+</ul>
+
+<h2>Open, for the Investors</h2>
+<ul>
+<li>No tile carries a price or a Pro mark. The approved Pro purchase holds 7 of the premades (#87), and phase 2's question 8 recommends that installing stays free. How a Pro premade should look on a shelf is not a layout choice, so C draws neither, as A and B do not.</li>
+<li>No Python is drawn on this screen. Where the round button leads, the sample Python on <a href="2-builder-editor.html">screens 2 and 3</a> is placeholder, not the app's API.</li>
+<li>Names, versions, counts and the maker line are sample content. No licence is named because none is chosen.</li>
+</ul>
+
+<h2>Where this screen departs, and what it keeps</h2>
+<ul>
+<li>Kept: the Gallery as the second of the four approved tabs, the approved widget card inside every picture, every approved colour. The full table is on <a href="1-projects.html">screen 1</a>.</li>
+<li>Departs from the approved drawings: shelves of tinted tiles that scroll sideways. The Gallery tab and an item's page have no approved drawing; the approved "gallery" drawing is the sheet of widgets.</li>
+<li>Departs from 03: the item's blocks stand where 03 allows "its blocks or code"; the code is behind one tap.</li>
+<li>New here and in no token file: the six tile tints, used for widget tiles and, by kind, for parts.</li>
+</ul>
+
+</main>
+</body>
+</html>

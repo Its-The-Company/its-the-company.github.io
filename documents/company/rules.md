@@ -608,6 +608,8 @@ The Effect lines of the amendments.md entries the charter retired (2026-11-04 12
 - **2026-11-12 9:02 PM ET** ((private)): Two workers at a time stays acceptable, and is the fallback whenever usage is burning too fast; more than two only while the account's usage allows it.
 - **2026-11-12 9:43 PM ET** ((private)): Fable audit sessions on the personal accounts run until the 5-hour window is used up; a session stops only at the last moment its work can still be committed and handed to the next session, never earlier.
 - **2026-11-12 9:47 PM ET** ((private)): For the one-time Fable audits (the Restructuring, the queue audit) the company carries out the Investors' instructions directly with the smallest change that does it, building no new infrastructure for them.
+- **2026-11-13 7:12 AM ET** ((private)): The Restructuring runs on Evan's account (a) now; how fast usage burns is no reason to hold, slow or cut it (no Spread hold, no two-worker fallback for speed); the only stop is the usage limit itself, at the last point the work can be handed off; done with no new infrastructure.
+- **2026-11-13 8:18 AM ET** ((private)): Each Restructuring decision that needs the Investors becomes its own Urgent issue labelled restructuring; meanwhile the personal accounts return to the task queue audit on Fable, and any audit step whose direction depends on a Restructuring decision waits for the Investors' instructions.
 {% endraw %}
 
 </div>

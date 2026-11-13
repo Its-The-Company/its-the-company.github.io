@@ -37,21 +37,13 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 ## Open (2026-11-10 12:4x)
 
-- T-4132 7155e22b37 (11-12): 8 OPTs closed; letter-met reverts 077/081/082/083/084 await a decision. Dup ids now OPT-131/132; merge_queue.py comments still say OPT-125.
-- T-3974 df40f13ef4 after-number owed. T-3963 merge_rate.py untracked. T-3979 (3) lease warning, (5) Home panel.
-- Item 4: sweep in supervisor; guard tools/main_folder_guard.py landed 842051d6c9 (76/0), NOT active until Investors apply settings.diff (company-scratch/T-3995h-odalys; Operator posts). After-number: .git/main-folder-guard.jsonl rows, false refusals.
-
-- T-3887 32d57c9c12 (11-12): Live step in task_stages (redo of T-3704), ticks b375d789cd. Owed: Live ends once a TestFlight upload follows 11-08 (13 app steps open).
-
-- T-4154 379c9842b0 (11-12): pinned line silent = on a <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> done list (pause with no handoff -> done); pin_done logs it; only ops/personal_requeue.txt restarts. own_retry_lanes counts due retries only. Owed: requeue decision (Operator).
-
 - T-4155 eb920cf8bc (11-12): usage-limit end -> unfinished tasks with commits off done list, claim released, board note + state/limited/<task>.json, packet resume words (tools/limit_end.py). Owed: first live limit end (log 'ended at a usage limit'); profile state reads are refused by security-guard, use tick logs.
 
 - T-4150/T-4160 bce6bf068d: failed reading projects from last good at >=3%/min (5-hour hold % is a floor). Owed: live projected pause.
 
 - T-4138 7266de4234 (11-12): pinned session <span title="A measured fact that holds a grade below a letter, however good the rest is.">cap</span> removed (an Investor c6824162128). Owed: count fix/sent-back waits on a while 3 pinned hold every slot.
 
-- T-4157 ff2a4c732d: a, b fable_only. T-4206 df0eb78f5a: investor-stop flag <span title="A new, permitted reading that removes a cap. A lift rule is that reading, written down before we look.">lifts</span> when its rule is retired/lifted for the account (lane_stop.py released). Owed: first live 'usage-line stop lifted' line (b freed by LANE CLEAR 1:18 PM first).
+- T-4157 ff2a4c732d: a, b fable_only. T-4206 df0eb78f5a: investor-stop flag <span title="A new, permitted reading that removes a cap. A lift rule is that reading, written down before we look.">lifts</span> when its rule is retired/lifted for the account (lane_stop.py released). Owed: first live 'usage-line stop lifted' line (b freed by <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">LANE</span> CLEAR 1:18 PM first).
 
 - T-4179 30eaa45f58 (11-12): requeued records '<ID> <12-hex line hash>'; bare ID = first line for that ID. T-4127 requeued on a 12:44 PM, no session (a at 93%). Owed: first T-4127 session on a after the window allows. guard_supervisor_test 1 FAIL only from a copy path with a space.
 
@@ -63,11 +55,17 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 - T-4232 (11-12 10 PM): Double Spread + per-account modes (tools/usage_mode.py, ops/usage_mode.json; MODE <ALL|MAIN|A|B> <mode> via inbox) + Home Mode block. NOT landed: main_gate_test red on main (T-4236). Ready in company-scratch/T-4232-odalys/wt (16 paths, msg.txt). site_live_test needs ops/live.json copied into a worktree.
 
+- T-4240 15e820baff (11-13): Documents > How the app works (tools/site/how_it_works.py; words in pywidget/docs/how-it-works/, fingerprints by hand from `python3 tools/site/how_it_works.py`). T-4250 528e4bb390 (11-13): all seven drawn; anchors also C/.json/.storekit; after:/aside: lines. 07 build half + 00-plan -> T-4127.
+
 - T-4230 f054a45347 (branch odalys/t4230-restructuring-docs, unlanded 11-12 22:1x): Restructuring folder under Documents. Owed: land; first live mock-up copy (phase 4).
+
+- T-4246 00d9c58d81 / T-4248 fed92f6db1 (11-13): Mode = bubble in Home's first line; Operators & Direct never hidden (#41 reply 6853925300). T-4005 d01f88988d closed both opens (test reds were T-4005's own title on the live board; bubbles wrap whole figures). #41 6854907191 offers renaming Progress/Work to Costs/Bottlenecks.
+
+- T-4004 (11-13): already done by 5aed12987d/e4c770e538, ticked. T-3735 49196e7897 (11-13): Blocked or waiting under All tasks. Owed: T-4262 #41 reply once a full publish carries it.
 
 ## Lessons
 
-- A "redo" may already be on main under a new hash: grep git log for the old task id first (T-4143: T-3950 was f9c19ea885).
+- The scratch copy's board is HEAD's, not main folder's: a test red only in the copy (site_t3187 40-for-39) may be data, so rerun it in the copy without the change first.
 {% endraw %}
 
 

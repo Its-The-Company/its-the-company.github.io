@@ -33,11 +33,6 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 ## Open (mine)
 
-- Lesson T-3393: git archive builds need pywidget+tools+log/assets.md, Vendor symlinked, xcodegen.
-- Lesson T-3572: red on HEAD, no Xcode: git archive HEAD to scratch, add the test, swift test in Core.
-
-
-
 - T-3666 0eae5043f 11-08: set-up sheet via UIKit presenter; needs review. T-3667 a3415f7c8 11-08: window test (both links, 0/1/2) green with AND without the fix; M2 never reproduced (full-screen). Open: windowed mode, real widget tap, review.
 - Lesson T-3667: a run script phase with no inputFiles can run before ProcessInfoPlistFile, which overwrites its plist edit; input = built plist.
 - Lesson T-3666: SwiftUI queues a root .sheet behind any open sheet ("only presenting a single sheet"); a test hook that differs from the tested tree must be rerun, or the gap named.
@@ -57,13 +52,16 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 - T-3764 11-12: stopped, no code. Runner {SIM} is always an iPhone (runner.py simulator()); every .pad UI test skips there. iPad proof needs a runner change first (line noted).
 
+- T-2261 11-13 17393d231c: problems element + UI test (local 2/0 only), shots t2261/; review T-4252 Pernille. Open: Maren, runner run of the UI test. Lesson: the bundle's own names come from a C embedder (sim clang, -framework Python) run by simctl spawn, PYTHONPATH = lib/python3.15 + lib-arm64; land jobs run unit tests only.
+
+- T-4254/55/56/61 eab2ec4097 11-13: EditorMarks (hold typed word, keep other lines), tint 12/9 %, VO list announcements; 4254+4255 ticked (board unstaged). Open: T-4256 gutter number colour (Runestone one colour for all numbers: needs a Vendor/adapter hook), Increase Contrast shots; T-4261 review by Pernille. Lesson: simctl recordVideo can't write to the SANDISK volume (-12204): record to /private/tmp; avconvert trims. A Vendor symlink in the copy blocks main_gate: remove before land.
+
+- T-4258/59/60 11-13: done in scratch T-4258-idris/wt, local 15/0 + CompletionUITests 6/0, NOT landed: guard refused rebasing the copy onto main. Lesson: grep Tests for protocol fakes before changing a protocol; an unknown -UIPreferredContentSizeCategoryName is silently ignored (AX3 = ...AccessibilityXL): assert the size took.
+
 ## Lessons
 - Older lessons and dated logs: archive.md.
 
-- T-4229 a2237bff00 11-12: PyBridge runPending gap (dequeued, not yet current) closed; ticked. Lesson: XCTest reports one failure per source line in a loop; print to see every pass. Gate land job = runner proof (land/m*).
-- T-4236 b99902435e 11-12: BuildReads tripwire (in the test, not the gate) now drops error:/warning:/note: literals; T-4232 landed 1aa720198c. Lesson: the gate runs suites in the --from copy, so move it onto main first; a flake's green rerun goes in via known_red.py clear.
-- T-3900 8624ba85ad 11-12: shared-step hang waited once a pass, pass limit resets on progress; ticked, review T-4238 (Pernille). Lesson: red for a test-only change = main_gate check --from a 2nd worktree; read the red reason (my first was 'no script', wrong).
-- T-3895 8b567d1a86 11-12: <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> start failures write error/InternalError start_failed rows + status; T-2496 merged; review T-4242 (Pernille). Lesson: a deferred status writes no last_outcome, only deferred_since; red-first for a test-only change = gate check --from the copy, then edit once its job is queued (pinned commit).
+- T-0675 ticked 11-13 on daily J-20261113-0207 (1827/0). Lesson: xc.sh test from the repo root runs HERE (route needs cwd pywidget/ios); queue with runner_queue.py --full. Pushing a job file to land/ was refused (classifier): leave job files for the Operator.
 {% endraw %}
 
 

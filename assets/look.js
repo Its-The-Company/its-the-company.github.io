@@ -14,6 +14,10 @@ var F={},fn=[],O={},Q='',P='investors/favorites.json',repo=H.getAttribute('data-
 CARD='.lk-run,.lk-q,.lk-qr,.lk-blk',inp=document.getElementById('lk-find'),fb=document.getElementById('lk-findbox'),
 fn2=document.getElementById('lk-find-n'),fv=document.getElementById('lk-fav-n'),tok=!!(S.getToken&&S.getToken()&&/^[\w.-]+\/[\w.-]+$/.test(repo));
 try{JSON.parse(H.getAttribute('data-fav')||'[]').forEach(function(i){F[i]=1})}catch(e){}
+// T-3735: an issue number in Blocked or waiting that Issues does not list becomes a GitHub link for a token holder only
+// (the build carries no URL into the private repository)
+if(tok)[].forEach.call(H.querySelectorAll('span.lk-iss[data-iss]'),function(x){var n=x.getAttribute('data-iss'),a;if(!/^\d{1,6}$/.test(n))return;
+a=document.createElement('a');a.className='lk-iss';a.href='https://github.com/'+repo+'/issues/'+n;a.target='_blank';a.rel='noopener';a.textContent='#'+n;x.parentNode.replaceChild(a,x)});
 // T-4007 (JeremyFries and friesevan, #41, 2026-11-10): In flight and Queued are one list under Flow, with one search, one
 // sort (lk-sort) and one category filter (lk-cat) for both parts. SO: 'def' the order Home had (in flight last step
 // first, Queued in the order they start), 'first' by stage as the columns run, left to right (Queued goes on top),
@@ -103,6 +107,9 @@ rs.forEach(function(r){lrow(ul,r,i)});if(rs.left>0)mk(ul,'li','lk-tm','+'+rs.lef
 function go(i){var c,n,b;if((Q&&inp)||CF||IV){if(inp)inp.value='';Q='';if(cf)cf.value='';CF='';chips();if(iv)iv.value='';IV='';H.classList.remove('lk-searching');fire()}
 c=S.lk.run&&S.lk.run(i);if(!c){if(S.lk.all)S.lk.all();J[i]=1;queued();c=qcard(i);b=document.getElementById('lk-q-more');
 if(c&&c.classList.contains('lk-fold')&&b&&c.parentNode.classList.contains('lk-qshort'))b.click()}
+if(!c){c=document.getElementById('bk-'+i);b=document.getElementById('lk-bk-more');  // T-3735: a held task's row, unfolded first
+if(c&&c.classList.contains('lk-fold')&&b&&c.parentNode.classList.contains('lk-qshort'))b.click();
+if(c){c.classList.add('lk-hit');setTimeout(function(){c.classList.remove('lk-hit')},2000);c.scrollIntoView({block:'center'});return}}
 if(!c)return;if(!c.classList.contains('lk-open'))toggle(c);c.classList.add('lk-hit');setTimeout(function(){c.classList.remove('lk-hit')},2000);
 c.scrollIntoView({block:'center'});n=c.querySelector('.lk-tn');if(n)n.focus({preventScroll:true})}
 var A=null,pic={},fc={};[].forEach.call(document.querySelectorAll('.lk-team a'),function(a){var m=/cast\/([^/.]+)\.html/.exec(a.getAttribute('href')||''),g=a.querySelector('img');if(m&&g)pic[m[1]]=g.getAttribute('src')});
@@ -374,15 +381,26 @@ render();if(K3)K3.on(render);if(S&&S.onStatus&&S.lane){S.onStatus.push(draw);if(
 // live status (lock_in.modes, through lockin.js's S.modes). A token holder picks an account (All accounts first) and a
 // mode; a second tap within 5 seconds posts MODE <account> <mode> on the Chat issue through lockin.js's S.modeSet, the
 // Lock In write path (T-3325's Lock In menu in Usage is gone). The Queued fold rides in the same handler, as before.
-document.addEventListener('DOMContentLoaded',function(){var S=window.CompanySite,d=document.getElementById('lk-modeset'),ml=document.getElementById('lk-modelist');
-[['lk-q','lk-q-more']].forEach(function(k){var q=document.getElementById(k[0]),qb=document.getElementById(k[1]),qa=false,mx,n;if(!q||!qb)return;
+// T-4246 (friesevan #41 c6850703999): the block is the Mode bubble's controls now (#lk-modes, hidden); the bubble in the
+// first line (#lk-mb) says each account's mode (bw(), home_look.mode_words' words) and opens or closes them; Escape
+// closes them and puts the focus back on the bubble.
+document.addEventListener('DOMContentLoaded',function(){var S=window.CompanySite,d=document.getElementById('lk-modeset'),ml=document.getElementById('lk-modelist'),
+mb=document.getElementById('lk-mb'),mp=document.getElementById('lk-modes'),mt=document.getElementById('lk-mbt');
+[['lk-q','lk-q-more'],['lk-bk','lk-bk-more']].forEach(function(k){var q=document.getElementById(k[0]),qb=document.getElementById(k[1]),qa=false,mx,n;if(!q||!qb)return;
 mx=+q.getAttribute('data-max')||4;n=q.children.length;[].forEach.call(q.children,function(c,i){c.classList.toggle('lk-fold',i>=mx)});
 function pq(){q.classList.toggle('lk-qshort',!qa);qb.hidden=n<=mx;qb.setAttribute('aria-expanded',qa);qb.textContent=qa?'Show fewer ▴':'Show '+(n-mx)+' more ▾'}
 qb.onclick=function(){qa=!qa;pq()};pq()});
+if(mb&&mp){mb.onclick=function(){var o=mp.hidden;mp.hidden=!o;mb.setAttribute('aria-expanded',o?'true':'false')};
+mp.addEventListener('keydown',function(e){if(e.key==='Escape'){mp.hidden=true;mb.setAttribute('aria-expanded','false');mb.focus()}})}
 if(!S)return;
-var NM={spread:'Spread','double-spread':'Double Spread',midnight:'Lock In until midnight',daily:'Lock In until daily usage'};
+var NM={spread:'Spread','double-spread':'Double Spread',midnight:'Lock In until midnight',daily:'Lock In until daily usage'},
+SH={spread:'Spread','double-spread':'Double Spread',midnight:'Lock In',daily:'Lock In daily'};
 function lis(){return ml?[].slice.call(ml.querySelectorAll('li[data-acct]')):[]}
-function show(){var m=S.modes?S.modes():null;if(m)lis().forEach(function(li){var v=m[li.getAttribute('data-acct')],e=li.querySelector('.lk-mn');if(e&&NM[v]){e.textContent=NM[v];e.setAttribute('data-mode',v)}})}
+function bw(){var v=lis().map(function(li){var e=li.querySelector('.lk-mn'),m=e?e.getAttribute('data-mode'):'';return [li.getAttribute('data-acct'),NM[m]?m:'']});
+if(!v.some(function(x){return x[1]}))return 'not recorded';if(v.every(function(x){return x[1]===v[0][1]}))return NM[v[0][1]];
+return v.map(function(x){return (x[0]==='main'?'Main':x[0].toUpperCase())+' '+(SH[x[1]]||'not recorded')}).join(' · ')}
+function show(){var m=S.modes?S.modes():null;if(m)lis().forEach(function(li){var v=m[li.getAttribute('data-acct')],e=li.querySelector('.lk-mn');if(e&&NM[v]){e.textContent=NM[v];e.setAttribute('data-mode',v)}});
+if(mt&&lis().length)mt.textContent=bw()}
 if(S.onStatus)S.onStatus.push(show);show();
 if(!d||!S.getToken||!S.getToken()||!S.modeSet)return;d.hidden=false;
 var sel=document.getElementById('lk-macct'),note=document.getElementById('lk-mnote'),bs=[].slice.call(d.querySelectorAll('button[data-m]')),arm=null,armT=0,tm;
@@ -446,5 +464,5 @@ c.setAttribute('data-w',w.toLowerCase());if(F[w]){g=mk(mk(q,'span','lk-faces'),'
 t=mk(q,'span','t');mk(t,'b','',r.t||'');m=mk(t,'span','',[w,r.m?[cap(r.m),r.e].filter(Boolean).join(' '):''].filter(Boolean).join(' · '));
 if(!isNaN(x)){m.appendChild(document.createTextNode(' · '));mk(m,'span','lk-nw',mins(Math.max(0,Math.floor((Date.now()-x)/6e4))))}
 if(r.a){m.appendChild(document.createTextNode(' '));a=mk(m,'span','lk-tag'+(r.sr?' lk-src':''),r.a);if(r.sr)a.title='Runs on: '+r.a}});
-n.textContent=o.length;sec.hidden=!o.length}
+if(!o.length)mk(box,'p','meta lk-opz','None running now.');n.textContent=o.length;sec.hidden=false}
 S.onStatus.push(draw);if(S.status&&S.status())draw(S.status())});

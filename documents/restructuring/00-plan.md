@@ -5,7 +5,7 @@ section: "documents"
 description: "Kept current by the Operator at each step; every step commits its own files by path on its lane&#x27;s branch (personal/a, or personal/b when account b runs it) with the ID first. Hashes cited here are the commits as made on\u2026"
 ---
 <div class="crumbs" role="navigation" aria-label="Back"><a class="back" href="{{ '/documents/restructuring/' | relative_url }}">← The Restructuring</a><a href="{{ '/documents/restructuring/00-plan.html' | relative_url }}" rel="bookmark">Permanent link</a></div>
-<div class="page-head"><div class="kicker"><span class="kind grey">Restructuring</span><span>Day 23 · Fri Nov 13, 5:19 AM ET</span><span><code>documents/restructuring/00-plan.md</code></span></div><h1>The Restructuring (T-4127): run plan</h1></div>
+<div class="page-head"><div class="kicker"><span class="kind grey">Restructuring</span><span>Day 23 · Fri Nov 13, 8:07 AM ET</span><span><code>documents/restructuring/00-plan.md</code></span></div><h1>The Restructuring (T-4127): run plan</h1></div>
 
 <style>.doc-body{overflow-wrap:break-word}.doc-src{overflow-wrap:anywhere}.tbl[data-n~="1"] tr>:nth-child(1),.tbl[data-n~="2"] tr>:nth-child(2),.tbl[data-n~="3"] tr>:nth-child(3),.tbl[data-n~="4"] tr>:nth-child(4),.tbl[data-n~="5"] tr>:nth-child(5),.tbl[data-n~="6"] tr>:nth-child(6),.tbl[data-n~="7"] tr>:nth-child(7),.tbl[data-n~="8"] tr>:nth-child(8),.tbl[data-n~="9"] tr>:nth-child(9),.tbl[data-n~="10"] tr>:nth-child(10),.tbl[data-n~="11"] tr>:nth-child(11),.tbl[data-n~="12"] tr>:nth-child(12){min-width:0;overflow-wrap:normal}.tbl[data-o="1"] tr>:nth-child(1),.tbl[data-o="2"] tr>:nth-child(2),.tbl[data-o="3"] tr>:nth-child(3),.tbl[data-o="4"] tr>:nth-child(4),.tbl[data-o="5"] tr>:nth-child(5),.tbl[data-o="6"] tr>:nth-child(6),.tbl[data-o="7"] tr>:nth-child(7),.tbl[data-o="8"] tr>:nth-child(8),.tbl[data-o="9"] tr>:nth-child(9),.tbl[data-o="10"] tr>:nth-child(10),.tbl[data-o="11"] tr>:nth-child(11),.tbl[data-o="12"] tr>:nth-child(12){position:sticky;right:0;overflow-wrap:normal;background:var(--page);box-shadow:-1px 0 var(--line),-9px 0 8px -8px var(--sh)}</style>
 <div class="doc-body" markdown="1">
@@ -56,7 +56,19 @@ Kept current by the Operator at each step; every step commits its own files by p
   ops/plans/T-4127-handoff.md says what is left.
 - Seventh run: started 4:4x AM ET 11-13 on account a (its window had reset) at 57eda46078, from the 12:16 AM ET
   handoff. Two Fable 5.2 workers: 4C (Maren) finishes direction C; step 6 (Ines) drafts the decisions from the final
-  phases at once and folds C in when 4C is final.
+  phases at once and folds C in when 4C is final. The session was stopped by a check at 4:47 AM ET with one agent
+  failed and one running; only a fix to `c/2-builder-editor.html` was saved (parked, restored as debf6c6926); step 6's
+  draft was lost.
+- Eighth run (an Investor #41 c6852529471, 7:12 AM ET 11-13: "Run the restructuring on evan's account now. ignore how
+  quickly we are using usage, only focus on when we will hit the limit. No more infrastructure. Just do it"; recorded
+  in log/rulings.md): started 7:3x AM ET 11-13 on account a at a458bf1a42, from the 12:16 AM ET handoff. How fast usage
+  burns no longer limits the number of workers; only the limit does. Three Fable 5.2 workers at once: 4C part 1
+  (Maren: read C's files 1 and 2 by eye, draw `c/3-gallery.html`), 4C part 2 (Maren: `c/4-preview.html`), step 6
+  (Ines: [`06-decisions.md`](06-decisions.html) and [`06-summary.md`](06-summary.html), C folded in when final). 4C part 3 (Maren: index.md's Direction C
+  section, the shared style block in all four C files, contrast across them) follows parts 1 and 2.
+  Every step final by 8:05 AM ET 11-13; the pause file came at the same time (the 5-hour row near its limit), with
+  no worker running. D2 is T-4240, on main in part (15e820baff, 7:41 AM ET). The Restructuring is done: round 2 of
+  the mock-ups and every decision in [`06-decisions.md`](06-decisions.html) wait for the Investors.
 - Documentation part (an Investor #41 c6837559986 and c6837583046, 5:22 and 5:23 PM ET 11-12): documentation becomes a
   standing step of designing each app part; diagrams of how everything in the app works (screens, the Python run, the
   widget path from script to Home Screen, storage, the extension, purchases) are drawn by code from the code itself
@@ -84,9 +96,9 @@ Kept current by the Operator at each step; every step commits its own files by p
 | D1 | Documentation part: how other companies keep docs and diagrams current with code; tools and services compared, licences checked; writes [`07-documentation.md`](07-documentation.html) (research half) | Wrenna | none | final 11:5x PM ET 11-12 (9957342d3c), 1,986 words: the recommendation for D2 unchanged in substance, six questions; four quotes corrected on re-reading; GitLab's and GitBook's terms bar automated retrieval, so neither is fetched again (T-4241 adds them to tools/terms_guard.py) |
 | D2 | Documentation part: build the chosen generator, a first set of code-drawn diagrams of the whole app, shown on the site, regenerated on code change; finishes [`07-documentation.md`](07-documentation.html) | Odalys | D1, S (T-4230) | passed to the main session on Opus as T-4240 at 11:5x PM ET 11-12 (c6841572370), so account b's Fable room goes to phases 4 and 6; it writes the build half at the end of 07 |
 | 3 | Phase 3 structure, [`03-structure.md`](03-structure.html) | Ines | 2a, 2b, 1a and 1b final (step 1's questions) | final 10:3x PM ET 11-12 (af19dceb7d; on main 65183431b9), 3,488 words, nine questions; read commit 3cc4481247 |
-| 4A, 4B, 4C | Phase 4 round 1: one style direction each, five main screens, in `04-mockups/a/`, `b/`, `c/` with one `index.md` | Maren | 3 | 4A final 12:0x AM ET 11-13 (bd9fc5fd2c; inside Paper and Studio, 22 frames) with index.md; 4B final 12:1x AM ET (3ec530cbba; programmer-first workbench, 20 frames); 4C (creative-first, tiles and cards) paused 12:16 AM ET with files 1 and 2 committed (e4fbbd1fd9), files 3 and 4 and its index section left; running again 4:4x AM ET 11-13 |
+| 4A, 4B, 4C | Phase 4 round 1: one style direction each, five main screens, in `04-mockups/a/`, `b/`, `c/` with one `index.md` | Maren | 3 | 4A final 12:0x AM ET 11-13 (bd9fc5fd2c; inside Paper and Studio, 22 frames) with index.md; 4B final 12:1x AM ET (3ec530cbba; programmer-first workbench, 20 frames); 4C (creative-first, tiles and cards) paused 12:16 AM ET with files 1 and 2 committed (e4fbbd1fd9), files 3 and 4 and its index section left; the 4:4x AM ET 11-13 run saved one fix (debf6c6926); 7:3x AM ET 11-13: part 1 final 89b1bfde87 (files 1 and 2 read by eye and fixed, 3-gallery drawn; 79 pairs, none under 4.5:1) and part 2 final f4edb334aa (4-preview, 6 frames; 42 pairs, none under 4.5:1); part 3 final bd80ff3a28 (index.md's C section; the shared block byte-identical in all four files; 79 pairs, none under 4.5:1; C re-read in WebKit, 17 of 22 frames); two wrong lines it flagged corrected (429fc6db63) |
 | 5 | Phase 5 timeline | Ines | 3 | final 11:5x PM ET 11-12 (428a009a57), 2,487 words, eight questions; 1.0 with the Builder likely late March 2027 (early February to early June); the custom block 1.25 weeks |
-| 6 | Phase 6 decisions, hand-over and the #41 summary | Ines | 4, 5 | drafting from 4:4x AM ET 11-13 beside 4C (5 is final); C folded in when 4C is final |
+| 6 | Phase 6 decisions, hand-over and the #41 summary | Ines | 4, 5 | the 4:4x AM ET draft was lost; drafted again 7:3x to 7:5x AM ET 11-13: [`06-decisions.md`](06-decisions.html) (a4d491c91f, 1,482 words, 29 decisions) and [`06-summary.md`](06-summary.html) (e796829e6f, 793 words); three Apple pages read (4e5dc407c6: App Review times, the $99 fee); C folded in, final 7:50 AM ET (ad384991ba; 1,495 and 797 words): A stays the base, C's run card joins the pieces taken |
 
 </div>
 
@@ -96,7 +108,7 @@ Kept current by the Operator at each step; every step commits its own files by p
 - [`work/01a-platform-limits.md`](01a-platform-limits.html), [`work/01b-review-and-marketplace.md`](01b-review-and-marketplace.html): the phase 1 parts; [`work/02b-code-and-design.md`](02b-code-and-design.html):
   the code part of phase 2.
 - [`01-questions-and-limits.md`](01-questions-and-limits.html), [`02-audit.md`](02-audit.html), [`03-structure.md`](03-structure.html), `04-mockups/` (with `index.md`), [`05-timeline.md`](05-timeline.html),
-  `06-decisions.md`: the deliverables the prompt names; [`07-documentation.md`](07-documentation.html) and its diagrams: the documentation part
+  [`06-decisions.md`](06-decisions.html) with [`06-summary.md`](06-summary.html) (the #41 summary): the deliverables the prompt names; [`07-documentation.md`](07-documentation.html) and its diagrams: the documentation part
   the Investors added at 5:22 PM ET 11-12.
 {% endraw %}
 

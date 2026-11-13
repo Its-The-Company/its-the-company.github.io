@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-13T18:48:14.898836+00:00",
+ "at": "2026-11-13T18:51:15.441235+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -104,7 +104,7 @@
    "task": "[design] T-4287 Home lists in scroll boxes",
    "model": "opus",
    "started": "2026-11-13T17:03:21.535Z",
-   "seconds": 6293,
+   "seconds": 6473,
    "finished": null,
    "effort": "high"
   },
@@ -113,7 +113,7 @@
    "task": "[tools] T-4284 Audit mode slice 1 pause off",
    "model": "opus",
    "started": "2026-11-13T17:29:09.476Z",
-   "seconds": 4745,
+   "seconds": 4925,
    "finished": null,
    "effort": "high"
   },
@@ -122,7 +122,7 @@
    "task": "[build] T-4303 fix https shim before switch-on",
    "model": "opus",
    "started": "2026-11-13T18:07:27.081Z",
-   "seconds": 2447,
+   "seconds": 2628,
    "finished": null,
    "effort": "high"
   },
@@ -131,7 +131,7 @@
    "task": "[review] T-4309 review net.request",
    "model": "opus",
    "started": "2026-11-13T18:43:55.355Z",
-   "seconds": 259,
+   "seconds": 440,
    "finished": null,
    "effort": "high"
   },
@@ -140,7 +140,7 @@
    "task": "[build] T-3821 large web bodies via file",
    "model": "opus",
    "started": "2026-11-13T18:44:01.508Z",
-   "seconds": 253,
+   "seconds": 433,
    "finished": null,
    "effort": "high"
   }
@@ -188,19 +188,19 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 34.0,
+   "pct": 36.0,
    "resets_at": "2026-11-13T15:50:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-13T13:41:58.526503-05:00",
+   "read_at": "2026-11-13T13:48:27.166905-05:00",
    "source": "live",
-   "left": 66.0,
+   "left": 64.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 93.0,
    "resets_at": "2026-11-15T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-13T13:41:58.526503-05:00",
+   "read_at": "2026-11-13T13:48:27.166905-05:00",
    "source": "live",
    "left": 7.0,
    "left_words": "of your weekly allowance left"
@@ -212,7 +212,7 @@
    "read_at": "2026-11-13T11:31:45.194382-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-13T13:41:58.526503-05:00"
+  "read_at": "2026-11-13T13:48:27.166905-05:00"
  },
  "ui": {
   "week_pct": 0.297,
@@ -232,8 +232,21 @@
   "week_pct": 43.7,
   "usage_pct": 32.7,
   "work_pct": 78.9,
-  "read_at": "2026-11-13T18:48:00+00:00",
-  "running": []
+  "read_at": "2026-11-13T18:51:00+00:00",
+  "running": [
+   {
+    "lane": "a3",
+    "task": "T-4097",
+    "w": "Ines",
+    "k": "ops",
+    "t": "Judge the efficiency and other lines of the queue",
+    "m": "opus",
+    "e": "xhigh",
+    "at": "2026-11-13T13:48:25-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   }
+  ]
  },
  "api_credits": [
   {
@@ -253,23 +266,23 @@
   }
  ],
  "disk": {
-  "free_gb": 13,
+  "free_gb": 18,
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 184
+   "free_gb": 187
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-13T13:41:00-05:00",
+   "at": "2026-11-13T13:48:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-13T13:48:00-05:00",
+  "at": "2026-11-13T13:51:00-05:00",
   "mode": null,
   "modes": {
    "main": "spread",
@@ -466,6 +479,11 @@
   ],
   "done": [
    {
+    "w": "Pernille",
+    "t": "Checked Idris's new web request call, which Python's https uses on the phone. It never reaches a...",
+    "at": "2026-11-13T13:50:00-05:00"
+   },
+   {
     "w": "Maren",
     "t": "Home's In flight and Queued lists now show every task, with no Show more or Show fewer buttons;...",
     "at": "2026-11-13T13:45:00-05:00"
@@ -474,11 +492,6 @@
     "w": "Idris",
     "t": "Scripts can now make any kind of web request (send data, get images or files back) through the...",
     "at": "2026-11-13T13:42:00-05:00"
-   },
-   {
-    "w": "Ines",
-    "t": "The efficiency review now has its 11-13 follow-up: lane records reach the board in minutes while...",
-    "at": "2026-11-13T13:07:00-05:00"
    }
   ],
   "count": {
@@ -488,8 +501,12 @@
    "you": 19
   },
   "fin": {
-   "n": 18,
+   "n": 19,
    "rows": [
+    [
+     "T-4309",
+     "Review the general web..."
+    ],
     [
      "T-4287",
      "Show all Queued and In..."
@@ -509,10 +526,6 @@
     [
      "T-4300",
      "Review the one Pro gates..."
-    ],
-    [
-     "T-4277",
-     "Offer free premades when the..."
     ]
    ]
   }
@@ -556,32 +569,38 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-13T18:48:14Z",
+  "at": "2026-11-13T18:51:15Z",
   "s": {
    "T-4124": [
     "merging",
     "Merging onto main",
-    1794595694898
-   ],
-   "T-4284": [
-    "merging",
-    "Mac tests at the main gate",
-    1794594674898
+    1794595875441
    ],
    "T-4303": [
     "merging",
     "Mac tests at the main gate",
-    1794595574898
+    1794595575441
+   ],
+   "T-3821": [
+    "testing",
+    "Mac Mini \u00b7 test",
+    null
    ],
    "T-4288": [
     "testing",
     "its own tests, in its copy",
-    1794595634898
+    1794595635441
    ],
-   "T-3821": [
+   "T-4284": [
     "testing",
     "its own tests, in its copy",
-    1794595694898
+    1794594675441
+   ],
+   "T-4309": [
+    "merged",
+    "on main 1:50 PM ET",
+    1794595803000,
+    "Pernille"
    ],
    "T-4287": [
     "merged",
@@ -592,15 +611,16 @@
   },
   "nm": {
    "T-4124": "Find every slowdown the company built into its own process",
-   "T-4284": "Add an Audit mode for one audit on chosen accounts",
    "T-4303": "Fix the https shim before it turns on",
-   "T-4288": "Fold the colour key on Home into a dropdown",
    "T-3821": "Pass large web bodies through a file",
+   "T-4288": "Fold the colour key on Home into a dropdown",
+   "T-4284": "Add an Audit mode for one audit on chosen accounts",
+   "T-4309": "Review the general web request call",
    "T-4287": "Show all Queued and In flight tasks in scroll boxes"
   }
  },
  "ln": {
-  "at": "2026-11-13T18:48:14Z",
+  "at": "2026-11-13T18:51:15Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -614,11 +634,11 @@
    "m": {
     "checking": 0,
     "inline": null,
-    "conflicted": 1597,
+    "conflicted": 1600,
     "failed": null,
     "held": null,
-    "retry": 114,
-    "parked": 115
+    "retry": 117,
+    "parked": 118
    },
    "cur": [
     [
@@ -637,19 +657,21 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-13T18:47:49Z",
-    "ld": 4.71,
+    "at": "2026-11-13T18:51:03Z",
+    "ld": 28.87,
     "c": 8,
-    "sb": 0,
+    "sb": 1,
     "dk": [
-     18.2,
+     17.9,
      228.3
     ],
     "ss": [
      186.6,
      953.7
     ],
-    "sn": []
+    "sn": [
+     "iPhone 18 Pro"
+    ]
    },
    "macbook": {
     "at": "2026-11-13T18:34:38Z",
@@ -672,12 +694,21 @@
    "m": "opus",
    "e": "high",
    "t": "Work session \u2013 16 tasks",
-   "at": "2026-11-13T13:47:58-05:00"
+   "at": "2026-11-13T13:50:34-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Evan",
+   "sr": 1,
+   "m": "opus",
+   "e": "xhigh",
+   "t": "Work session \u2013 1 task",
+   "at": "2026-11-13T13:48:25-05:00"
   }
  ],
  "reply": {
-  "sent": "2026-11-13T18:46:43Z",
-  "seconds": 74.0
+  "sent": "2026-11-13T18:48:37Z",
+  "seconds": 116.0
  },
  "inbox": [],
  "trimmed": [
@@ -695,12 +726,12 @@
  ],
  "agents_now": {
   "main": 5,
-  "lanes": 0,
-  "total": 5,
-  "at": "1:48 PM",
+  "lanes": 1,
+  "total": 6,
+  "at": "1:51 PM",
   "why": "",
-  "at_iso": "2026-11-13T18:48:00+00:00",
+  "at_iso": "2026-11-13T18:51:00+00:00",
   "started": "11:32 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 5, started 11:32 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 1:48 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 5, started 11:32 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 1:51 PM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-13T13:31:53.520235+00:00",
+ "at": "2026-11-13T13:34:55.027173+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -71,26 +71,25 @@
  },
  "workers": [
   {
-   "name": "idris",
-   "task": "[build] T-2261 editor completion list UI",
-   "model": "opus",
-   "started": "2026-11-13T13:02:06.520Z",
-   "seconds": 1787,
-   "finished": null,
-   "effort": "high"
-  },
-  {
    "name": "odalys",
    "task": "[site] T-4005 Home drop Needs you, restore panels",
    "model": "opus",
    "started": "2026-11-13T13:13:46.645Z",
-   "seconds": 1086,
+   "seconds": 1268,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Idris, Odalys",
+ "who": "Odalys",
  "recent": [
+  {
+   "name": "idris",
+   "task": "[build] T-2261 editor completion list UI",
+   "model": "opus",
+   "started": "2026-11-13T13:02:06.520Z",
+   "seconds": null,
+   "finished": "2026-11-13T13:34:54.009000+00:00"
+  },
   {
    "name": "ines",
    "task": "[plan] T-4251 Restructuring decisions as Urgent issues",
@@ -114,14 +113,6 @@
    "started": "2026-11-13T12:32:55.560Z",
    "seconds": null,
    "finished": "2026-11-13T13:11:29.806000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-2261 editor completions build and test",
-   "model": "opus",
-   "started": "2026-11-13T12:42:29.647Z",
-   "seconds": null,
-   "finished": "2026-11-13T13:09:56.432000+00:00"
   }
  ],
  "queue": {
@@ -132,19 +123,19 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 11.0,
+   "pct": 12.0,
    "resets_at": "2026-11-13T10:50:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-13T08:27:57.139529-05:00",
+   "read_at": "2026-11-13T08:33:59.974010-05:00",
    "source": "live",
-   "left": 89.0,
+   "left": 88.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 87.0,
    "resets_at": "2026-11-15T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-13T08:27:57.139529-05:00",
+   "read_at": "2026-11-13T08:33:59.974010-05:00",
    "source": "live",
    "left": 13.0,
    "left_words": "of your weekly allowance left"
@@ -156,7 +147,7 @@
    "read_at": "2026-11-13T04:58:50.100124-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-13T08:27:57.139529-05:00"
+  "read_at": "2026-11-13T08:33:59.974010-05:00"
  },
  "ui": {
   "week_pct": 0.3,
@@ -176,7 +167,7 @@
   "week_pct": 42.8,
   "usage_pct": 33.2,
   "work_pct": 79.5,
-  "read_at": "2026-11-13T13:31:00+00:00",
+  "read_at": "2026-11-13T13:34:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -206,14 +197,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-13T08:27:00-05:00",
+   "at": "2026-11-13T08:33:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-13T08:31:00-05:00",
+  "at": "2026-11-13T08:34:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -230,15 +221,6 @@
  },
  "lanes": [
   {
-   "name": "Idris",
-   "state": "running",
-   "task": "[build] T-2261 editor completion list UI",
-   "model": "opus",
-   "since": "2026-11-13T13:02:06.520Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
    "name": "Odalys",
    "state": "running",
    "task": "[site] T-4005 Home drop Needs you, restore panels",
@@ -246,6 +228,14 @@
    "since": "2026-11-13T13:13:46.645Z",
    "next": [],
    "effort": "high"
+  },
+  {
+   "name": "Idris",
+   "state": "next",
+   "task": "Idris, P2, from T-4238 (Pernille's review, from T-3900,...",
+   "model": null,
+   "since": null,
+   "next": []
   },
   {
    "name": "Pernille",
@@ -282,16 +272,6 @@
  ],
  "tasks": {
   "run": [
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "Build and test the editor completion changes",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-13T13:02:06.520Z",
-    "o": "c",
-    "task": "T-2261"
-   },
    {
     "w": "Odalys",
     "k": "site",
@@ -468,7 +448,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-13T13:31:53Z",
+  "at": "2026-11-13T13:34:55Z",
   "s": {
    "T-2261": [
     "mergetest",
@@ -478,7 +458,7 @@
    "T-4005": [
     "testing",
     "its own tests, in its copy",
-    1794576353520
+    1794576355027
    ]
   },
   "nm": {
@@ -487,7 +467,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-13T13:31:53Z",
+  "at": "2026-11-13T13:34:55Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -501,11 +481,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 1314,
+    "conflicted": 1317,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 6966
+    "parked": 6969
    },
    "cur": [],
    "ld": [
@@ -515,12 +495,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-13T13:31:04Z",
-    "ld": 0.72,
+    "at": "2026-11-13T13:34:10Z",
+    "ld": 0.66,
     "c": 8,
     "sb": 0,
     "dk": [
-     24.9,
+     24.8,
      228.3
     ],
     "ss": [
@@ -572,13 +552,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 2,
+  "main": 1,
   "lanes": 0,
-  "total": 2,
-  "at": "8:31 AM",
+  "total": 1,
+  "at": "8:34 AM",
   "why": "",
-  "at_iso": "2026-11-13T13:31:00+00:00",
+  "at_iso": "2026-11-13T13:34:00+00:00",
   "started": "7:21 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 7:21 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 8:31 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 7:21 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 8:34 AM ET</p></section>"
  }
 }

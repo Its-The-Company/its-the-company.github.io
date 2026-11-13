@@ -1,10 +1,10 @@
 {
  "schema": 1,
- "at": "2026-11-13T01:54:56.360960+00:00",
+ "at": "2026-11-13T02:01:00.892837+00:00",
  "session": {
-  "active": true,
-  "kind": "inbox",
-  "started": "2026-11-12T20:54:03-05:00",
+  "active": false,
+  "kind": "",
+  "started": null,
   "flow": [
    {
     "t": "T-4215",
@@ -134,34 +134,34 @@
  "meter": {
   "five_hour": {
    "pct": 21.0,
-   "resets_at": "2026-11-13T02:59:59.913108+00:00",
+   "resets_at": "2026-11-13T03:00:00.167402+00:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-12T20:45:59.689258-05:00",
+   "read_at": "2026-11-12T21:00:51.158212-05:00",
    "source": "usage",
    "left": 79.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 83.0,
-   "resets_at": "2026-11-15T06:59:58.913133+00:00",
+   "resets_at": "2026-11-15T06:59:59.167420+00:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-12T20:45:59.689258-05:00",
+   "read_at": "2026-11-12T21:00:51.158212-05:00",
    "source": "usage",
    "left": 17.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 4.0,
-   "resets_at": "2026-11-15T06:59:59.913283+00:00",
+   "resets_at": "2026-11-15T07:00:00.167543+00:00",
    "used_words": "of the Fable weekly allowance used",
-   "read_at": "2026-11-12T20:45:59.689258-05:00",
+   "read_at": "2026-11-12T21:00:51.158212-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-12T20:45:59.689258-05:00"
+  "read_at": "2026-11-12T21:00:51.158212-05:00"
  },
  "ui": {
-  "week_pct": 0.247,
-  "five_hour_pct": 0.048,
+  "week_pct": 0.257,
+  "five_hour_pct": 0.107,
   "caps_pct": {
    "week": 3.0,
    "five_hour": 5.0
@@ -172,12 +172,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": null,
+ "next_tick": "2026-11-12T21:15:51-05:00",
  "personal": {
   "week_pct": 39.57,
   "usage_pct": 32.3,
   "work_pct": 79.1,
-  "read_at": "2026-11-13T01:57:00+00:00",
+  "read_at": "2026-11-13T02:01:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -189,6 +189,7 @@
     "e": "xhigh",
     "at": "2026-11-12T20:57:18-05:00",
     "n": "Evan",
+    "d": 1,
     "src": "plan-a"
    },
    {
@@ -243,23 +244,19 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-12T20:53:00-05:00",
+   "at": "2026-11-12T21:00:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T20:57:00-05:00",
+  "at": "2026-11-12T21:01:00-05:00",
   "mode": "midnight"
  },
- "next_tick_why": "session",
+ "next_tick_why": "last_tick",
  "idle": null,
- "pool": {
-  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 8 (held: too few lands in 3 hours to judge a raise)",
-  "n": 8,
-  "at": "2026-11-12T20:53:48.446850-05:00"
- },
+ "pool": null,
  "lanes": [
   {
    "name": "Idris",
@@ -312,7 +309,6 @@
  ],
  "tasks": {
   "run": [],
-  "src": "plan",
   "open": [
    {
     "w": "Idris",
@@ -407,10 +403,6 @@
    "wait": 40,
    "blocked": 46,
    "you": 14
-  },
-  "fin": {
-   "n": 0,
-   "rows": []
   }
  },
  "qr": [
@@ -452,11 +444,28 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-13T01:54:50Z",
-  "s": {}
+  "at": "2026-11-13T02:01:00Z",
+  "s": {
+   "T-4196": [
+    "merged",
+    "on main 7:41 PM ET",
+    1794530497000,
+    ""
+   ],
+   "T-4127": [
+    "merged",
+    "on main 3:55 PM ET",
+    1794516920000,
+    ""
+   ]
+  },
+  "nm": {
+   "T-4196": "Let app changes waiting to merge share one iPhone run",
+   "T-4127": "Run the Restructuring on Evan's account"
+  }
  },
  "ln": {
-  "at": "2026-11-13T01:54:50Z",
+  "at": "2026-11-13T02:01:00Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -470,11 +479,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 617,
+    "conflicted": 623,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 661
+    "parked": 667
    },
    "cur": [],
    "ld": [
@@ -484,12 +493,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-13T01:54:50Z",
-    "ld": 0.43,
+    "at": "2026-11-13T02:01:00Z",
+    "ld": 0.54,
     "c": 8,
     "sb": 0,
     "dk": [
-     22.7,
+     22.6,
      228.3
     ],
     "ss": [
@@ -499,12 +508,12 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-13T01:23:54Z",
-    "ld": 2.23,
+    "at": "2026-11-13T01:54:33Z",
+    "ld": 0.35,
     "c": 12,
     "sb": 0,
     "dk": [
-     377.0,
+     376.8,
      926.4
     ],
     "sn": []
@@ -514,23 +523,54 @@
  "operators": [
   {
    "w": "Operator",
-   "a": "Main plan",
+   "a": "Evan",
    "sr": 1,
-   "m": "sonnet",
-   "e": "low",
-   "t": "Inbox session",
-   "at": "2026-11-12T20:54:37-05:00"
+   "m": "opus",
+   "e": "xhigh",
+   "t": "Work session \u2013 1 task",
+   "at": "2026-11-12T20:57:18-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Evan",
+   "sr": 1,
+   "m": "opus",
+   "e": "xhigh",
+   "t": "Work session \u2013 1 task",
+   "at": "2026-11-12T20:57:18-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Evan",
+   "sr": 1,
+   "m": "opus",
+   "e": "xhigh",
+   "t": "Inbox \u2013 Evan's 9:00 PM Message on GitHub",
+   "at": "2026-11-12T21:00:39-05:00"
   }
  ],
  "reply": {
   "sent": "2026-11-13T01:50:24Z",
   "seconds": 252.0
  },
- "inbox": [],
+ "inbox": [
+  {
+   "id": "c6841572370",
+   "state": "received",
+   "position": 1,
+   "eta": "2026-11-12T21:15:51-05:00",
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "Perfect! Start the Restructuring on..."
+  }
+ ],
  "trimmed": [
   "lane_next",
   "queue_text",
   "task_done",
+  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -541,10 +581,10 @@
   "main": 0,
   "lanes": 3,
   "total": 3,
-  "at": "8:57 PM",
+  "at": "9:01 PM",
   "why": "",
-  "at_iso": "2026-11-13T01:57:00+00:00",
+  "at_iso": "2026-11-13T02:01:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 8:57 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 9:01 PM ET</p></section>"
  }
 }

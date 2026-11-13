@@ -1,11 +1,22 @@
 {
  "schema": 1,
- "at": "2026-11-13T18:42:06.252528+00:00",
+ "at": "2026-11-13T18:45:09.224242+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-13T11:32:07-05:00",
   "flow": [
+   {
+    "t": "T-4100",
+    "name": "Build the typed Links field and the ledger apply",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "testq",
+      "at": 1794595471
+     }
+    ]
+   },
    {
     "t": "T-4252",
     "w": "Pernille",
@@ -95,7 +106,7 @@
    "task": "[design] T-4287 Home lists in scroll boxes",
    "model": "opus",
    "started": "2026-11-13T17:03:21.535Z",
-   "seconds": 5924,
+   "seconds": 6107,
    "finished": null,
    "effort": "high"
   },
@@ -104,16 +115,7 @@
    "task": "[tools] T-4284 Audit mode slice 1 pause off",
    "model": "opus",
    "started": "2026-11-13T17:29:09.476Z",
-   "seconds": 4376,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-3820 add net.request to the app",
-   "model": "opus",
-   "started": "2026-11-13T17:57:25.005Z",
-   "seconds": 2681,
+   "seconds": 4559,
    "finished": null,
    "effort": "high"
   },
@@ -122,13 +124,39 @@
    "task": "[build] T-4303 fix https shim before switch-on",
    "model": "opus",
    "started": "2026-11-13T18:07:27.081Z",
-   "seconds": 2079,
+   "seconds": 2262,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "pernille",
+   "task": "[review] T-4309 review net.request",
+   "model": "opus",
+   "started": "2026-11-13T18:43:55.355Z",
+   "seconds": 73,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "idris",
+   "task": "[build] T-3821 large web bodies via file",
+   "model": "opus",
+   "started": "2026-11-13T18:44:01.508Z",
+   "seconds": 67,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Maren, Odalys, Idris, Pernille",
+ "who": "Maren, Odalys, Pernille x2, Idris",
  "recent": [
+  {
+   "name": "idris",
+   "task": "[build] T-3820 add net.request to the app",
+   "model": "opus",
+   "started": "2026-11-13T17:57:25.005Z",
+   "seconds": null,
+   "finished": "2026-11-13T18:43:39.262000+00:00"
+  },
   {
    "name": "idris",
    "task": "[review] T-4294 review system https shim",
@@ -152,20 +180,12 @@
    "started": "2026-11-13T17:03:29.368Z",
    "seconds": null,
    "finished": "2026-11-13T17:56:39.740000+00:00"
-  },
-  {
-   "name": "pernille",
-   "task": "[build] T-3400 land https shim",
-   "model": "opus",
-   "started": "2026-11-13T17:03:09.881Z",
-   "seconds": null,
-   "finished": "2026-11-13T17:34:36.670000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 547,
+  "runnable_count": 548,
   "blocked_count": 106
  },
  "meter": {
@@ -214,22 +234,8 @@
   "week_pct": 43.7,
   "usage_pct": 32.7,
   "work_pct": 78.9,
-  "read_at": "2026-11-13T18:42:00+00:00",
-  "running": [
-   {
-    "lane": "a2",
-    "task": "T-4100",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Build the typed Links field and the ledger apply",
-    "m": "opus",
-    "e": "xhigh",
-    "at": "2026-11-13T13:02:36-05:00",
-    "n": "Evan",
-    "d": 1,
-    "src": "plan-a"
-   }
-  ]
+  "read_at": "2026-11-13T18:45:00+00:00",
+  "running": []
  },
  "api_credits": [
   {
@@ -265,7 +271,7 @@
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-13T13:42:00-05:00",
+  "at": "2026-11-13T13:45:00-05:00",
   "mode": null,
   "modes": {
    "main": "spread",
@@ -300,20 +306,20 @@
    "effort": "high"
   },
   {
-   "name": "Idris",
-   "state": "running",
-   "task": "[build] T-3820 add net.request to the app",
-   "model": "opus",
-   "since": "2026-11-13T17:57:25.005Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
    "name": "Pernille",
    "state": "running",
    "task": "[build] T-4303 fix https shim before switch-on",
    "model": "opus",
    "since": "2026-11-13T18:07:27.081Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
+   "name": "Idris",
+   "state": "running",
+   "task": "[build] T-3821 large web bodies via file",
+   "model": "opus",
+   "since": "2026-11-13T18:44:01.508Z",
    "next": [],
    "effort": "high"
   },
@@ -357,16 +363,6 @@
     "task": "T-4284"
    },
    {
-    "w": "Idris",
-    "k": "build",
-    "t": "Add the general web request call to the app",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-13T17:57:25.005Z",
-    "o": "c",
-    "task": "T-3820"
-   },
-   {
     "w": "Pernille",
     "k": "build",
     "t": "Fix the https shim before it turns on",
@@ -375,6 +371,26 @@
     "at": "2026-11-13T18:07:27.081Z",
     "o": "c",
     "task": "T-4303"
+   },
+   {
+    "w": "Pernille",
+    "k": "review",
+    "t": "Review the general web request call",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-13T18:43:55.355Z",
+    "o": "c",
+    "task": "T-4309"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "Pass large web bodies through a file",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-13T18:44:01.508Z",
+    "o": "c",
+    "task": "T-3821"
    }
   ],
   "src": "plan",
@@ -452,6 +468,11 @@
   ],
   "done": [
    {
+    "w": "Idris",
+    "t": "Scripts can now make any kind of web request (send data, get images or files back) through the...",
+    "at": "2026-11-13T13:42:00-05:00"
+   },
+   {
     "w": "Ines",
     "t": "The efficiency review now has its 11-13 follow-up: lane records reach the board in minutes while...",
     "at": "2026-11-13T13:07:00-05:00"
@@ -460,22 +481,21 @@
     "w": "Idris",
     "t": "Checked Pernille's new route for scripts' secure (https) web requests through the iPhone's own...",
     "at": "2026-11-13T13:05:00-05:00"
-   },
-   {
-    "w": "Pernille",
-    "t": "Checked Idris's fix that makes the app ask the App Store once per widget refresh; it works and...",
-    "at": "2026-11-13T13:03:00-05:00"
    }
   ],
   "count": {
-   "next": 547,
+   "next": 548,
    "wait": 59,
    "blocked": 47,
    "you": 19
   },
   "fin": {
-   "n": 16,
+   "n": 17,
    "rows": [
+    [
+     "T-3820",
+     "Add the general web request..."
+    ],
     [
      "T-4124",
      "Find every slowdown the..."
@@ -495,10 +515,6 @@
     [
      "T-3400",
      "Send Python's https through..."
-    ],
-    [
-     "T-4289",
-     "Review the completion list..."
     ]
    ]
   }
@@ -542,48 +558,47 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-13T18:41:51Z",
+  "at": "2026-11-13T18:45:03Z",
   "s": {
+   "T-4100": [
+    "merging",
+    "Host checks on the Mac mini \u00b7 1 group of tests done",
+    1794595503217
+   ],
    "T-4124": [
     "mergeq",
     "1st to merge",
-    1794593331298
+    1794593343217
    ],
    "T-4284": [
     "merging",
     "Mac tests at the main gate",
-    1794594711298
+    1794594723217
    ],
    "T-4287": [
     "merging",
     "Mac tests at the main gate",
-    1794595191298
+    1794595203217
    ],
    "T-4303": [
     "testing",
     "its own tests, in its copy",
-    1794594231298
-   ],
-   "T-3820": [
-    "merged",
-    "on main 1:34 PM ET",
-    1794594897000,
-    "Idris"
+    1794594243217
    ]
   },
   "nm": {
+   "T-4100": "Build the typed Links field and the ledger apply",
    "T-4124": "Find every slowdown the company built into its own process",
    "T-4284": "Add an Audit mode for one audit on chosen accounts",
    "T-4287": "Show all Queued and In flight tasks in scroll boxes",
-   "T-4303": "Fix the https shim before it turns on",
-   "T-3820": "Add the general web request call to the app"
+   "T-4303": "Fix the https shim before it turns on"
   }
  },
  "ln": {
-  "at": "2026-11-13T18:41:51Z",
+  "at": "2026-11-13T18:45:03Z",
   "mq": {
    "n": {
-    "checking": 0,
+    "checking": 1,
     "inline": 1,
     "conflicted": 2,
     "failed": 0,
@@ -592,15 +607,24 @@
     "parked": 6
    },
    "m": {
-    "checking": null,
-    "inline": 33,
-    "conflicted": 1624,
+    "checking": 0,
+    "inline": 36,
+    "conflicted": 1627,
     "failed": null,
     "held": null,
-    "retry": 108,
-    "parked": 109
+    "retry": 111,
+    "parked": 112
    },
-   "cur": [],
+   "cur": [
+    [
+     [
+      "T-4100"
+     ],
+     "Mac tests",
+     "Mac mini",
+     0
+    ]
+   ],
    "ld": [
     9,
     "2026-11-13T18:07:44Z"
@@ -608,16 +632,16 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-13T18:41:30Z",
-    "ld": 7.07,
+    "at": "2026-11-13T18:44:20Z",
+    "ld": 5.52,
     "c": 8,
     "sb": 0,
     "dk": [
-     13.3,
+     18.1,
      228.3
     ],
     "ss": [
-     184.5,
+     186.6,
      953.7
     ],
     "sn": []
@@ -642,33 +666,24 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Inbox \u2013 Evan's 1:41 PM Message on GitHub",
-   "at": "2026-11-13T13:41:28-05:00"
-  },
-  {
-   "w": "Operator",
-   "a": "Evan",
-   "sr": 1,
-   "m": "opus",
-   "e": "xhigh",
-   "t": "Work session \u2013 1 task",
-   "at": "2026-11-13T13:37:37-05:00"
+   "t": "Inbox \u2013 Evan's 1:44 PM Message on GitHub",
+   "at": "2026-11-13T13:44:55-05:00"
   }
  ],
  "reply": {
-  "sent": "2026-11-13T18:35:57Z",
-  "seconds": 98.0
+  "sent": "2026-11-13T18:41:15Z",
+  "seconds": 91.0
  },
  "inbox": [
   {
-   "id": "c6861814529",
+   "id": "c6861885015",
    "state": "received",
    "position": 1,
    "tasks": {
     "open": 0,
     "done": 0
    },
-   "title": "T-4100 no longer shows on the board...."
+   "title": "Are you still working on Evan's..."
   }
  ],
  "trimmed": [
@@ -686,13 +701,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 4,
-  "lanes": 1,
+  "main": 5,
+  "lanes": 0,
   "total": 5,
-  "at": "1:42 PM",
+  "at": "1:45 PM",
   "why": "",
-  "at_iso": "2026-11-13T18:42:00+00:00",
+  "at_iso": "2026-11-13T18:45:00+00:00",
   "started": "11:32 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 4, started 11:32 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 1:42 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 5, started 11:32 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 1:45 PM ET</p></section>"
  }
 }

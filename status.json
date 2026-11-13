@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-13T18:20:17.522056+00:00",
+ "at": "2026-11-13T18:23:42.506525+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -95,7 +95,7 @@
    "task": "[design] T-4287 Home lists in scroll boxes",
    "model": "opus",
    "started": "2026-11-13T17:03:21.535Z",
-   "seconds": 4615,
+   "seconds": 4820,
    "finished": null,
    "effort": "high"
   },
@@ -104,7 +104,7 @@
    "task": "[tools] T-4284 Audit mode slice 1 pause off",
    "model": "opus",
    "started": "2026-11-13T17:29:09.476Z",
-   "seconds": 3068,
+   "seconds": 3273,
    "finished": null,
    "effort": "high"
   },
@@ -113,7 +113,7 @@
    "task": "[build] T-3820 add net.request to the app",
    "model": "opus",
    "started": "2026-11-13T17:57:25.005Z",
-   "seconds": 1372,
+   "seconds": 1577,
    "finished": null,
    "effort": "high"
   },
@@ -122,7 +122,7 @@
    "task": "[build] T-4303 fix https shim before switch-on",
    "model": "opus",
    "started": "2026-11-13T18:07:27.081Z",
-   "seconds": 770,
+   "seconds": 975,
    "finished": null,
    "effort": "high"
   }
@@ -165,7 +165,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 545,
+  "runnable_count": 547,
   "blocked_count": 106
  },
  "meter": {
@@ -214,7 +214,7 @@
   "week_pct": 43.7,
   "usage_pct": 32.7,
   "work_pct": 78.9,
-  "read_at": "2026-11-13T18:20:00+00:00",
+  "read_at": "2026-11-13T18:23:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -248,7 +248,7 @@
   }
  ],
  "disk": {
-  "free_gb": 13,
+  "free_gb": 14,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -257,14 +257,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-13T13:18:00-05:00",
+   "at": "2026-11-13T13:22:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-13T13:20:00-05:00",
+  "at": "2026-11-13T13:23:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -435,16 +435,16 @@
     "o": "i"
    },
    {
-    "w": "Idris",
-    "k": "build",
-    "t": "Every premade widget draws on the iPhone",
+    "w": "Operator",
+    "k": "ops",
+    "t": "Star every open task of the queue audit",
     "s": "next",
     "o": "i"
    },
    {
     "w": "Idris",
     "k": "build",
-    "t": "Widgets refresh on their own and by a tap",
+    "t": "Every premade widget draws on the iPhone",
     "s": "next",
     "o": "i"
    }
@@ -467,7 +467,7 @@
    }
   ],
   "count": {
-   "next": 545,
+   "next": 547,
    "wait": 59,
    "blocked": 47,
    "you": 19
@@ -541,48 +541,48 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-13T18:20:17Z",
+  "at": "2026-11-13T18:23:35Z",
   "s": {
    "T-4124": [
-    "mergeq",
-    "1st to merge",
-    1794593357522
+    "merging",
+    "Rebasing onto current main",
+    1794594215092
    ],
    "T-3820": [
-    "testing",
-    "Mac Mini \u00b7 test",
-    null
+    "merging",
+    "Mac tests at the main gate",
+    1794594155092
+   ],
+   "T-4287": [
+    "merging",
+    "Mac tests at the main gate",
+    1794594215092
    ],
    "T-4303": [
     "testing",
     "its own tests, in its copy",
-    1794593957522
+    1794593975092
    ],
    "T-4284": [
     "testing",
     "its own tests, in its copy",
-    1794593957522
-   ],
-   "T-4287": [
-    "testing",
-    "its own tests, in its copy",
-    1794593957522
+    1794593975092
    ]
   },
   "nm": {
    "T-4124": "Find every slowdown the company built into its own process",
    "T-3820": "Add the general web request call to the app",
+   "T-4287": "Show all Queued and In flight tasks in scroll boxes",
    "T-4303": "Fix the https shim before it turns on",
-   "T-4284": "Add an Audit mode for one audit on chosen accounts",
-   "T-4287": "Show all Queued and In flight tasks in scroll boxes"
+   "T-4284": "Add an Audit mode for one audit on chosen accounts"
   }
  },
  "ln": {
-  "at": "2026-11-13T18:20:17Z",
+  "at": "2026-11-13T18:23:35Z",
   "mq": {
    "n": {
-    "checking": 0,
-    "inline": 1,
+    "checking": 1,
+    "inline": 0,
     "conflicted": 2,
     "failed": 0,
     "held": 0,
@@ -590,15 +590,24 @@
     "parked": 6
    },
    "m": {
-    "checking": null,
-    "inline": 11,
-    "conflicted": 1603,
+    "checking": 0,
+    "inline": null,
+    "conflicted": 1606,
     "failed": null,
     "held": null,
-    "retry": 87,
-    "parked": 87
+    "retry": 90,
+    "parked": 90
    },
-   "cur": [],
+   "cur": [
+    [
+     [
+      "T-4124"
+     ],
+     "lining up with main",
+     "Mac mini",
+     0
+    ]
+   ],
    "ld": [
     9,
     "2026-11-13T18:07:44Z"
@@ -606,29 +615,27 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-13T18:20:35Z",
-    "ld": 35.66,
+    "at": "2026-11-13T18:22:53Z",
+    "ld": 39.24,
     "c": 8,
-    "sb": 1,
+    "sb": 0,
     "dk": [
-     13.5,
+     13.6,
      228.3
     ],
     "ss": [
      184.5,
      953.7
     ],
-    "sn": [
-     "iPhone 18 Pro"
-    ]
+    "sn": []
    },
    "macbook": {
-    "at": "2026-11-13T17:48:15Z",
-    "ld": 2.66,
+    "at": "2026-11-13T18:18:57Z",
+    "ld": 0.51,
     "c": 12,
     "sb": 0,
     "dk": [
-     372.2,
+     372.3,
      926.4
     ],
     "sn": []
@@ -642,8 +649,8 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session",
-   "at": "2026-11-13T13:17:24-05:00"
+   "t": "Work session \u2013 14 tasks",
+   "at": "2026-11-13T13:22:00-05:00"
   },
   {
    "w": "Operator",
@@ -652,32 +659,20 @@
    "m": "opus",
    "e": "xhigh",
    "t": "Work session \u2013 1 task",
-   "at": "2026-11-13T13:17:13-05:00"
+   "at": "2026-11-13T13:22:59-05:00"
   }
  ],
  "reply": {
-  "sent": "2026-11-13T18:15:37Z",
-  "seconds": 93.0
+  "sent": "2026-11-13T18:19:56Z",
+  "seconds": 122.0
  },
- "inbox": [
-  {
-   "id": "c6861319605",
-   "state": "received",
-   "position": 1,
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "Home should display the model and..."
-  }
- ],
+ "inbox": [],
  "trimmed": [
   "lane_next",
   "queue_text",
   "recent",
   "task_done",
   "fin_short",
-  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -689,10 +684,10 @@
   "main": 4,
   "lanes": 1,
   "total": 5,
-  "at": "1:20 PM",
+  "at": "1:23 PM",
   "why": "",
-  "at_iso": "2026-11-13T18:20:00+00:00",
+  "at_iso": "2026-11-13T18:23:00+00:00",
   "started": "11:32 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 4, started 11:32 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 1:20 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 4, started 11:32 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 1:23 PM ET</p></section>"
  }
 }

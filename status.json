@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-13T13:04:22.849629+00:00",
+ "at": "2026-11-13T13:07:24.567416+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -75,7 +75,7 @@
    "task": "[site] T-4246 then T-4248 Home mode bubble and Operator tab",
    "model": "opus",
    "started": "2026-11-13T12:32:55.560Z",
-   "seconds": 1887,
+   "seconds": 2069,
    "finished": null,
    "effort": "high"
   },
@@ -84,7 +84,7 @@
    "task": "[build] T-3400 iOS https shim land",
    "model": "opus",
    "started": "2026-11-13T12:56:01.668Z",
-   "seconds": 501,
+   "seconds": 682,
    "finished": null,
    "effort": "high"
   },
@@ -93,7 +93,7 @@
    "task": "[build] T-2261 editor completion list UI",
    "model": "opus",
    "started": "2026-11-13T13:02:06.520Z",
-   "seconds": 136,
+   "seconds": 318,
    "finished": null,
    "effort": "high"
   }
@@ -136,7 +136,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 526,
+  "runnable_count": 525,
   "blocked_count": 103
  },
  "meter": {
@@ -185,7 +185,7 @@
   "week_pct": 42.8,
   "usage_pct": 33.2,
   "work_pct": 79.5,
-  "read_at": "2026-11-13T13:04:00+00:00",
+  "read_at": "2026-11-13T13:07:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -236,7 +236,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-13T08:04:00-05:00",
+  "at": "2026-11-13T08:07:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -413,6 +413,11 @@
   "done": [
    {
     "w": "Odalys",
+    "t": "Home's Mode panel is now a small pill in the top line, the old Lock In button's size, saying...",
+    "at": "2026-11-13T08:07:00-05:00"
+   },
+   {
+    "w": "Odalys",
     "t": "The site's 'How the app works' page now draws all seven diagrams from the app's code: how a...",
     "at": "2026-11-13T07:54:00-05:00"
    },
@@ -420,22 +425,21 @@
     "w": "Odalys",
     "t": "Dropped, done another way: the promise to hand-install a signed test build on the Investors'...",
     "at": "2026-11-13T07:39:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "Dropped, not done: the last part of the old site additions page (an Unrelated mode the Investors...",
-    "at": "2026-11-13T07:39:00-05:00"
    }
   ],
   "count": {
-   "next": 526,
+   "next": 525,
    "wait": 38,
    "blocked": 65,
    "you": 18
   },
   "fin": {
-   "n": 7,
+   "n": 8,
    "rows": [
+    [
+     "T-4246",
+     "Shrink the mode panel to a..."
+    ],
     [
      "T-4250",
      "Draw the app's remaining..."
@@ -455,10 +459,6 @@
     [
      "T-4166",
      "Redo keep long Issues..."
-    ],
-    [
-     "T-4167",
-     "Redo show the merge queue on..."
     ]
    ]
   }
@@ -502,23 +502,22 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-13T13:04:05Z",
+  "at": "2026-11-13T13:07:06Z",
   "s": {
    "T-4246": [
     "merging",
     "Mac tests at the main gate",
-    1794574985921
+    1794574986297
    ],
    "T-3400": [
     "merging",
     "Mac tests at the main gate",
-    1794575045921
+    1794575046297
    ],
    "T-2261": [
-    "merged",
-    "on main 8:01 AM ET",
-    1794574878000,
-    "Idris"
+    "testing",
+    "its own tests, in its copy",
+    1794575226297
    ],
    "T-4127": [
     "merged",
@@ -535,7 +534,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-13T13:04:05Z",
+  "at": "2026-11-13T13:07:06Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -549,11 +548,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 1286,
+    "conflicted": 1289,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1310
+    "parked": 1313
    },
    "cur": [],
    "ld": [
@@ -563,16 +562,16 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-13T13:03:42Z",
-    "ld": 1.25,
+    "at": "2026-11-13T13:06:46Z",
+    "ld": 1.04,
     "c": 8,
     "sb": 0,
     "dk": [
-     24.8,
+     24.5,
      228.3
     ],
     "ss": [
-     182.9,
+     182.8,
      953.7
     ],
     "sn": []
@@ -599,15 +598,6 @@
    "e": "high",
    "t": "Work session \u2013 4 tasks",
    "at": "2026-11-13T07:25:00-05:00"
-  },
-  {
-   "w": "Operator",
-   "a": "Evan",
-   "sr": 1,
-   "m": "opus",
-   "e": "xhigh",
-   "t": "Work session \u2013 1 task",
-   "at": "2026-11-13T07:27:41-05:00"
   }
  ],
  "reply": {
@@ -632,10 +622,10 @@
   "main": 3,
   "lanes": 1,
   "total": 4,
-  "at": "8:04 AM",
+  "at": "8:07 AM",
   "why": "",
-  "at_iso": "2026-11-13T13:04:00+00:00",
+  "at_iso": "2026-11-13T13:07:00+00:00",
   "started": "7:21 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 3, started 7:21 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 8:04 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 3, started 7:21 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 8:07 AM ET</p></section>"
  }
 }

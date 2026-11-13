@@ -5,7 +5,7 @@ section: "documents"
 description: "Kept current by the Operator at each step; every step commits its own files by path on its lane&#x27;s branch (personal/a, or personal/b when account b runs it) with the ID first. Hashes cited here are the commits as made on\u2026"
 ---
 <div class="crumbs" role="navigation" aria-label="Back"><a class="back" href="{{ '/documents/restructuring/' | relative_url }}">← The Restructuring</a><a href="{{ '/documents/restructuring/00-plan.html' | relative_url }}" rel="bookmark">Permanent link</a></div>
-<div class="page-head"><div class="kicker"><span class="kind grey">Restructuring</span><span>Day 23 · Fri Nov 13, 12:19 AM ET</span><span><code>documents/restructuring/00-plan.md</code></span></div><h1>The Restructuring (T-4127): run plan</h1></div>
+<div class="page-head"><div class="kicker"><span class="kind grey">Restructuring</span><span>Day 23 · Fri Nov 13, 5:19 AM ET</span><span><code>documents/restructuring/00-plan.md</code></span></div><h1>The Restructuring (T-4127): run plan</h1></div>
 
 <style>.doc-body{overflow-wrap:break-word}.doc-src{overflow-wrap:anywhere}.tbl[data-n~="1"] tr>:nth-child(1),.tbl[data-n~="2"] tr>:nth-child(2),.tbl[data-n~="3"] tr>:nth-child(3),.tbl[data-n~="4"] tr>:nth-child(4),.tbl[data-n~="5"] tr>:nth-child(5),.tbl[data-n~="6"] tr>:nth-child(6),.tbl[data-n~="7"] tr>:nth-child(7),.tbl[data-n~="8"] tr>:nth-child(8),.tbl[data-n~="9"] tr>:nth-child(9),.tbl[data-n~="10"] tr>:nth-child(10),.tbl[data-n~="11"] tr>:nth-child(11),.tbl[data-n~="12"] tr>:nth-child(12){min-width:0;overflow-wrap:normal}.tbl[data-o="1"] tr>:nth-child(1),.tbl[data-o="2"] tr>:nth-child(2),.tbl[data-o="3"] tr>:nth-child(3),.tbl[data-o="4"] tr>:nth-child(4),.tbl[data-o="5"] tr>:nth-child(5),.tbl[data-o="6"] tr>:nth-child(6),.tbl[data-o="7"] tr>:nth-child(7),.tbl[data-o="8"] tr>:nth-child(8),.tbl[data-o="9"] tr>:nth-child(9),.tbl[data-o="10"] tr>:nth-child(10),.tbl[data-o="11"] tr>:nth-child(11),.tbl[data-o="12"] tr>:nth-child(12){position:sticky;right:0;overflow-wrap:normal;background:var(--page);box-shadow:-1px 0 var(--line),-9px 0 8px -8px var(--sh)}</style>
 <div class="doc-body" markdown="1">
@@ -54,6 +54,9 @@ Kept current by the Operator at each step; every step commits its own files by p
   D1 and 5 were final by 11:5x PM ET; D2 went to the main session on Opus as T-4240; 4A and 4B final, 4C half drawn.
   Paused 12:16 AM ET 11-13 by the pause file (the 5-hour row projected at 94.6%); every draft committed;
   ops/plans/T-4127-handoff.md says what is left.
+- Seventh run: started 4:4x AM ET 11-13 on account a (its window had reset) at 57eda46078, from the 12:16 AM ET
+  handoff. Two Fable 5.2 workers: 4C (Maren) finishes direction C; step 6 (Ines) drafts the decisions from the final
+  phases at once and folds C in when 4C is final.
 - Documentation part (an Investor #41 c6837559986 and c6837583046, 5:22 and 5:23 PM ET 11-12): documentation becomes a
   standing step of designing each app part; diagrams of how everything in the app works (screens, the Python run, the
   widget path from script to Home Screen, storage, the extension, purchases) are drawn by code from the code itself
@@ -81,9 +84,9 @@ Kept current by the Operator at each step; every step commits its own files by p
 | D1 | Documentation part: how other companies keep docs and diagrams current with code; tools and services compared, licences checked; writes [`07-documentation.md`](07-documentation.html) (research half) | Wrenna | none | final 11:5x PM ET 11-12 (9957342d3c), 1,986 words: the recommendation for D2 unchanged in substance, six questions; four quotes corrected on re-reading; GitLab's and GitBook's terms bar automated retrieval, so neither is fetched again (T-4241 adds them to tools/terms_guard.py) |
 | D2 | Documentation part: build the chosen generator, a first set of code-drawn diagrams of the whole app, shown on the site, regenerated on code change; finishes [`07-documentation.md`](07-documentation.html) | Odalys | D1, S (T-4230) | passed to the main session on Opus as T-4240 at 11:5x PM ET 11-12 (c6841572370), so account b's Fable room goes to phases 4 and 6; it writes the build half at the end of 07 |
 | 3 | Phase 3 structure, [`03-structure.md`](03-structure.html) | Ines | 2a, 2b, 1a and 1b final (step 1's questions) | final 10:3x PM ET 11-12 (af19dceb7d; on main 65183431b9), 3,488 words, nine questions; read commit 3cc4481247 |
-| 4A, 4B, 4C | Phase 4 round 1: one style direction each, five main screens, in `04-mockups/a/`, `b/`, `c/` with one `index.md` | Maren | 3 | 4A final 12:0x AM ET 11-13 (bd9fc5fd2c; inside Paper and Studio, 22 frames) with index.md; 4B final 12:1x AM ET (3ec530cbba; programmer-first workbench, 20 frames); 4C (creative-first, tiles and cards) paused 12:16 AM ET with files 1 and 2 committed (e4fbbd1fd9), files 3 and 4 and its index section left |
+| 4A, 4B, 4C | Phase 4 round 1: one style direction each, five main screens, in `04-mockups/a/`, `b/`, `c/` with one `index.md` | Maren | 3 | 4A final 12:0x AM ET 11-13 (bd9fc5fd2c; inside Paper and Studio, 22 frames) with index.md; 4B final 12:1x AM ET (3ec530cbba; programmer-first workbench, 20 frames); 4C (creative-first, tiles and cards) paused 12:16 AM ET with files 1 and 2 committed (e4fbbd1fd9), files 3 and 4 and its index section left; running again 4:4x AM ET 11-13 |
 | 5 | Phase 5 timeline | Ines | 3 | final 11:5x PM ET 11-12 (428a009a57), 2,487 words, eight questions; 1.0 with the Builder likely late March 2027 (early February to early June); the custom block 1.25 weeks |
-| 6 | Phase 6 decisions, hand-over and the #41 summary | Ines | 4, 5 | waiting on 4C (5 is final) |
+| 6 | Phase 6 decisions, hand-over and the #41 summary | Ines | 4, 5 | drafting from 4:4x AM ET 11-13 beside 4C (5 is final); C folded in when 4C is final |
 
 </div>
 

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-13T12:36:57.281493+00:00",
+ "at": "2026-11-13T12:39:55.138209+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -72,7 +72,7 @@
    "task": "[site] T-4240 app diagrams page",
    "model": "opus",
    "started": "2026-11-13T12:27:33.182Z",
-   "seconds": 564,
+   "seconds": 741,
    "finished": null,
    "effort": "high"
   },
@@ -81,7 +81,7 @@
    "task": "[site] T-4246 then T-4248 Home mode bubble and Operator tab",
    "model": "opus",
    "started": "2026-11-13T12:32:55.560Z",
-   "seconds": 241,
+   "seconds": 419,
    "finished": null,
    "effort": "high"
   },
@@ -90,7 +90,7 @@
    "task": "[plan] T-3230 board prune slice 4",
    "model": "opus",
    "started": "2026-11-13T12:35:41.575Z",
-   "seconds": 75,
+   "seconds": 253,
    "finished": null,
    "effort": "high"
   }
@@ -117,24 +117,24 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 527,
-  "blocked_count": 104
+  "runnable_count": 526,
+  "blocked_count": 103
  },
  "meter": {
   "five_hour": {
-   "pct": 3.0,
+   "pct": 4.0,
    "resets_at": "2026-11-13T10:50:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-13T07:32:50.758020-05:00",
+   "read_at": "2026-11-13T07:39:00.742551-05:00",
    "source": "live",
-   "left": 97.0,
+   "left": 96.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 86.0,
    "resets_at": "2026-11-15T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-13T07:32:50.758020-05:00",
+   "read_at": "2026-11-13T07:39:00.742551-05:00",
    "source": "live",
    "left": 14.0,
    "left_words": "of your weekly allowance left"
@@ -146,7 +146,7 @@
    "read_at": "2026-11-13T04:58:50.100124-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-13T07:32:50.758020-05:00"
+  "read_at": "2026-11-13T07:39:00.742551-05:00"
  },
  "ui": {
   "week_pct": 0.3,
@@ -166,7 +166,7 @@
   "week_pct": 42.8,
   "usage_pct": 33.2,
   "work_pct": 79.5,
-  "read_at": "2026-11-13T12:36:00+00:00",
+  "read_at": "2026-11-13T12:40:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -210,14 +210,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-13T07:32:00-05:00",
+   "at": "2026-11-13T07:38:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-13T07:36:00-05:00",
+  "at": "2026-11-13T07:40:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -392,24 +392,24 @@
   "done": [
    {
     "w": "Odalys",
+    "t": "Dropped, done another way: the promise to hand-install a signed test build on the Investors'...",
+    "at": "2026-11-13T07:39:00-05:00"
+   },
+   {
+    "w": "Odalys",
+    "t": "Dropped, not done: the last part of the old site additions page (an Unrelated mode the Investors...",
+    "at": "2026-11-13T07:39:00-05:00"
+   },
+   {
+    "w": "Odalys",
     "t": "Dropped: these were the last checks before the very first test build; builds 2 to 5 have since...",
     "at": "2026-11-13T07:33:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "Closed: an automatic notice that an account stopped mid-task; every task its saved branch worked...",
-    "at": "2026-11-13T07:32:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "Closed: an automatic notice that an account stopped mid-task; every change on the branch it...",
-    "at": "2026-11-13T07:32:00-05:00"
    }
   ],
   "count": {
-   "next": 527,
+   "next": 526,
    "wait": 38,
-   "blocked": 66,
+   "blocked": 65,
    "you": 18
   },
   "fin": {
@@ -481,12 +481,17 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-13T12:36:50Z",
+  "at": "2026-11-13T12:39:55Z",
   "s": {
    "T-4240": [
+    "merging",
+    "Mac tests at the main gate",
+    1794573535138
+   ],
+   "T-4246": [
     "testing",
     "its own tests, in its copy",
-    1794573230614
+    1794573595138
    ],
    "T-3230": [
     "merged",
@@ -503,12 +508,13 @@
   },
   "nm": {
    "T-4240": "Draw the app's diagrams from its code on the site",
+   "T-4246": "Shrink the mode panel to a small bubble",
    "T-3230": "Prune stale tasks from the board",
    "T-4127": "Run the Restructuring on Evan's account"
   }
  },
  "ln": {
-  "at": "2026-11-13T12:36:50Z",
+  "at": "2026-11-13T12:39:55Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -522,11 +528,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 1259,
+    "conflicted": 1262,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1283
+    "parked": 1286
    },
    "cur": [],
    "ld": [
@@ -536,12 +542,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-13T12:36:03Z",
-    "ld": 2.27,
+    "at": "2026-11-13T12:39:35Z",
+    "ld": 1.69,
     "c": 8,
     "sb": 0,
     "dk": [
-     25.1,
+     25.0,
      228.3
     ],
     "ss": [
@@ -603,10 +609,10 @@
   "main": 3,
   "lanes": 1,
   "total": 4,
-  "at": "7:36 AM",
+  "at": "7:40 AM",
   "why": "",
-  "at_iso": "2026-11-13T12:36:00+00:00",
+  "at_iso": "2026-11-13T12:40:00+00:00",
   "started": "7:21 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 3, started 7:21 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 7:36 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 3, started 7:21 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 7:40 AM ET</p></section>"
  }
 }

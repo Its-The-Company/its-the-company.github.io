@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-13T15:13:49.530953+00:00",
+ "at": "2026-11-13T15:16:54.622259+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -84,24 +84,24 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 526,
+  "runnable_count": 527,
   "blocked_count": 103
  },
  "meter": {
   "five_hour": {
-   "pct": 24.0,
+   "pct": 25.0,
    "resets_at": "2026-11-13T10:50:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-13T09:53:53.689955-05:00",
+   "read_at": "2026-11-13T10:14:12.198171-05:00",
    "source": "live",
-   "left": 76.0,
+   "left": 75.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 88.0,
    "resets_at": "2026-11-15T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-13T09:53:53.689955-05:00",
+   "read_at": "2026-11-13T10:14:12.198171-05:00",
    "source": "live",
    "left": 12.0,
    "left_words": "of your weekly allowance left"
@@ -113,7 +113,7 @@
    "read_at": "2026-11-13T04:58:50.100124-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-13T09:53:53.689955-05:00"
+  "read_at": "2026-11-13T10:14:12.198171-05:00"
  },
  "ui": {
   "week_pct": 0.3,
@@ -133,7 +133,7 @@
   "week_pct": 42.8,
   "usage_pct": 33.2,
   "work_pct": 79.5,
-  "read_at": "2026-11-13T15:13:00+00:00",
+  "read_at": "2026-11-13T15:16:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -163,14 +163,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-13T10:07:00-05:00",
+   "at": "2026-11-13T10:14:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-13T10:13:00-05:00",
+  "at": "2026-11-13T10:16:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -328,7 +328,7 @@
    }
   ],
   "count": {
-   "next": 526,
+   "next": 527,
    "wait": 49,
    "blocked": 54,
    "you": 18
@@ -402,11 +402,11 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-13T15:13:43Z",
+  "at": "2026-11-13T15:16:48Z",
   "s": {}
  },
  "ln": {
-  "at": "2026-11-13T15:13:43Z",
+  "at": "2026-11-13T15:16:48Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -420,11 +420,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 1416,
+    "conflicted": 1419,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 7068
+    "parked": 7071
    },
    "cur": [],
    "ld": [
@@ -434,8 +434,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-13T15:13:44Z",
-    "ld": 10.94,
+    "at": "2026-11-13T15:16:26Z",
+    "ld": 6.63,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -443,7 +443,7 @@
      228.3
     ],
     "ss": [
-     180.2,
+     184.3,
      953.7
     ],
     "sn": []
@@ -494,10 +494,10 @@
   "main": 0,
   "lanes": 0,
   "total": 0,
-  "at": "10:13 AM",
+  "at": "10:16 AM",
   "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
-  "at_iso": "2026-11-13T15:13:00+00:00",
+  "at_iso": "2026-11-13T15:16:00+00:00",
   "started": "7:21 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0, started 7:21 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 10:13 AM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0, started 7:21 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 10:16 AM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
  }
 }

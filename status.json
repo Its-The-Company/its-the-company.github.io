@@ -1,11 +1,23 @@
 {
  "schema": 1,
- "at": "2026-11-13T12:27:47.439572+00:00",
+ "at": "2026-11-13T12:30:53.143241+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-13T07:21:41-05:00",
-  "flow": [],
+  "flow": [
+   {
+    "t": "T-0675",
+    "name": "Run Python widget scripts inside the widget extension",
+    "w": "Idris",
+    "steps": [
+     {
+      "s": "testq",
+      "at": 1794572922
+     }
+    ]
+   }
+  ],
   "done": [
    {
     "t": "T-4127",
@@ -80,7 +92,7 @@
    "task": "[site] T-4240 app diagrams page",
    "model": "opus",
    "started": "2026-11-13T12:27:33.182Z",
-   "seconds": 14,
+   "seconds": 199,
    "finished": null,
    "effort": "high"
   },
@@ -89,17 +101,26 @@
    "task": "[build] T-0675 extension lane finish check",
    "model": "opus",
    "started": "2026-11-13T12:27:45.883Z",
-   "seconds": 1,
+   "seconds": 187,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "odalys",
+   "task": "[plan] T-3230 board prune slice",
+   "model": "opus",
+   "started": "2026-11-13T12:27:57.387Z",
+   "seconds": 175,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Odalys, Idris",
+ "who": "Odalys x2, Idris",
  "recent": [],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 578,
+  "runnable_count": 563,
   "blocked_count": 104
  },
  "meter": {
@@ -148,7 +169,7 @@
   "week_pct": 42.8,
   "usage_pct": 33.2,
   "work_pct": 79.5,
-  "read_at": "2026-11-13T12:27:00+00:00",
+  "read_at": "2026-11-13T12:30:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -199,7 +220,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-13T07:27:00-05:00",
+  "at": "2026-11-13T07:30:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -287,6 +308,16 @@
     "at": "2026-11-13T12:27:45.883Z",
     "o": "c",
     "task": "T-0675"
+   },
+   {
+    "w": "Odalys",
+    "k": "plan",
+    "t": "Prune stale tasks from the board",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-13T12:27:57.387Z",
+    "o": "c",
+    "task": "T-3230"
    }
   ],
   "src": "plan",
@@ -364,30 +395,47 @@
   ],
   "done": [
    {
-    "w": "Pernille",
-    "t": "Checked the change that makes a widget log a 'could not start' entry when Python fails to start...",
-    "at": "2026-11-13T00:03:00-05:00"
+    "w": "Odalys",
+    "t": "Dropped: the same work as item 2 of T-3412 (twelve-hour times: a browser check for 24-hour...",
+    "at": "2026-11-13T07:30:00-05:00"
    },
    {
-    "w": "Idris",
-    "t": "Merged into T-3895 (recording widget runs that never start in the extension), which landed this...",
-    "at": "2026-11-12T23:58:00-05:00"
+    "w": "Odalys",
+    "t": "Dropped: a redo of T-3412 (twelve-hour times on the site) whose copy never landed; that line...",
+    "at": "2026-11-13T07:30:00-05:00"
    },
    {
-    "w": "Idris",
-    "t": "When Python could not start inside a widget, the widget used to go quietly out of date with...",
-    "at": "2026-11-12T23:58:00-05:00"
+    "w": "Odalys",
+    "t": "Dropped: a second redo of T-3412 (twelve-hour times on the site) that never landed; that line...",
+    "at": "2026-11-13T07:30:00-05:00"
    }
   ],
   "count": {
-   "next": 578,
+   "next": 563,
    "wait": 38,
    "blocked": 66,
    "you": 18
   },
   "fin": {
-   "n": 0,
-   "rows": []
+   "n": 4,
+   "rows": [
+    [
+     "T-3430",
+     "Search Home tasks by number..."
+    ],
+    [
+     "T-4166",
+     "Redo keep long Issues..."
+    ],
+    [
+     "T-4167",
+     "Redo show the merge queue on..."
+    ],
+    [
+     "T-4170",
+     "Redo search Home tasks by..."
+    ]
+   ]
   }
  },
  "qr": [
@@ -429,7 +477,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-13T12:27:47Z",
+  "at": "2026-11-13T12:30:53Z",
   "s": {
    "T-4127": [
     "merged",
@@ -443,7 +491,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-13T12:27:47Z",
+  "at": "2026-11-13T12:30:53Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -452,16 +500,16 @@
     "failed": 0,
     "held": 0,
     "retry": 0,
-    "parked": 4
+    "parked": 3
    },
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 1250,
+    "conflicted": 1253,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1284
+    "parked": 1277
    },
    "cur": [],
    "ld": [
@@ -471,8 +519,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-13T12:27:04Z",
-    "ld": 0.43,
+    "at": "2026-11-13T12:30:07Z",
+    "ld": 0.71,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -527,6 +575,7 @@
   "lane_next",
   "queue_text",
   "task_done",
+  "fin_short",
   "task_title",
   "done_text",
   "task_open",
@@ -534,13 +583,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 2,
+  "main": 3,
   "lanes": 1,
-  "total": 3,
-  "at": "7:27 AM",
+  "total": 4,
+  "at": "7:30 AM",
   "why": "",
-  "at_iso": "2026-11-13T12:27:00+00:00",
+  "at_iso": "2026-11-13T12:30:00+00:00",
   "started": "7:21 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 7:21 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 7:27 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 3, started 7:21 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 7:30 AM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-13T08:44:47.361875+00:00",
+ "at": "2026-11-13T09:03:14.006106+00:00",
  "session": {
   "active": false,
   "kind": "",
@@ -48,6 +48,14 @@
   ],
   "done": [
    {
+    "t": "T-4127",
+    "name": "Run the Restructuring on Evan's account",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794543534
+   },
+   {
     "t": "T-3696",
     "acct": "Personal a",
     "steps": [],
@@ -63,11 +71,36 @@
     "end_at": 1794543527
    },
    {
+    "t": "T-4127",
+    "name": "Run the Restructuring on Evan's account",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "failed",
+    "end_at": 1794536337,
+    "why": "did not merge cleanly"
+   },
+   {
+    "t": "T-4117",
+    "name": "Judge the next hundred efficiency lines",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794536316
+   },
+   {
     "t": "T-4116",
     "acct": "Personal b",
     "steps": [],
     "end": "landed",
     "end_at": 1794534343
+   },
+   {
+    "t": "T-4196",
+    "name": "Let app changes waiting to merge share one iPhone run",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794530507
    },
    {
     "t": "T-4195",
@@ -84,34 +117,10 @@
     "steps": [],
     "end": "landed",
     "end_at": 1794528092
-   },
-   {
-    "t": "T-4127",
-    "name": "Run the Restructuring on Evan's account",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794516928
-   },
-   {
-    "t": "T-4196",
-    "name": "Let app changes waiting to merge share one iPhone run",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794516507
-   },
-   {
-    "t": "T-4117",
-    "name": "Judge the next hundred efficiency lines",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794516503
    }
   ],
   "landed": 8,
-  "failed": 0
+  "failed": 1
  },
  "workers": [],
  "who": "",
@@ -160,28 +169,28 @@
    "pct": 0.0,
    "resets_at": null,
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-13T03:26:09.011392-05:00",
+   "read_at": "2026-11-13T03:45:42.575632-05:00",
    "source": "usage",
    "left": 100.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 86.0,
-   "resets_at": "2026-11-15T06:59:58.937308+00:00",
+   "resets_at": "2026-11-15T06:59:58.872822+00:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-13T03:26:09.011392-05:00",
+   "read_at": "2026-11-13T03:45:42.575632-05:00",
    "source": "usage",
    "left": 14.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 4.0,
-   "resets_at": "2026-11-15T06:59:59.937472+00:00",
+   "resets_at": "2026-11-15T06:59:59.872953+00:00",
    "used_words": "of the Fable weekly allowance used",
-   "read_at": "2026-11-13T03:26:09.011392-05:00",
+   "read_at": "2026-11-13T03:45:42.575632-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-13T03:26:09.011392-05:00"
+  "read_at": "2026-11-13T03:45:42.575632-05:00"
  },
  "ui": {
   "week_pct": 0.263,
@@ -196,12 +205,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-13T03:41:09-05:00",
+ "next_tick": "2026-11-13T04:00:42-05:00",
  "personal": {
   "week_pct": 42.56,
   "usage_pct": 33.1,
   "work_pct": 79.4,
-  "read_at": "2026-11-13T08:45:00+00:00",
+  "read_at": "2026-11-13T09:04:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -231,14 +240,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-13T03:42:00-05:00",
+   "at": "2026-11-13T04:02:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-13T03:45:00-05:00",
+  "at": "2026-11-13T04:04:00-05:00",
   "mode": null,
   "modes": {
    "main": "spread",
@@ -436,11 +445,11 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-13T08:44:47Z",
+  "at": "2026-11-13T09:03:14Z",
   "s": {}
  },
  "ln": {
-  "at": "2026-11-13T08:44:47Z",
+  "at": "2026-11-13T09:03:14Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -454,11 +463,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 1027,
+    "conflicted": 1046,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1051
+    "parked": 1069
    },
    "cur": [],
    "ld": [
@@ -468,12 +477,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-13T08:44:47Z",
-    "ld": 0.67,
+    "at": "2026-11-13T09:03:14Z",
+    "ld": 0.53,
     "c": 8,
     "sb": 0,
     "dk": [
-     22.7,
+     20.8,
      228.3
     ],
     "ss": [
@@ -495,17 +504,7 @@
    }
   }
  },
- "operators": [
-  {
-   "w": "Operator",
-   "a": "Evan",
-   "sr": 1,
-   "m": "sonnet",
-   "e": "medium",
-   "t": "Work session",
-   "at": "2026-11-13T03:44:45-05:00"
-  }
- ],
+ "operators": [],
  "reply": {
   "sent": "2026-11-13T02:51:09Z",
   "seconds": 125.0
@@ -526,10 +525,10 @@
   "main": 0,
   "lanes": 0,
   "total": 0,
-  "at": "3:45 AM",
-  "why": "Waiting for the week's line: this week's usage is ahead of its even pace. Last check 3:45 AM ET.",
-  "at_iso": "2026-11-13T08:45:00+00:00",
+  "at": "4:04 AM",
+  "why": "Waiting for the week's line: this week's usage is ahead of its even pace. Last check 4:04 AM ET.",
+  "at_iso": "2026-11-13T09:04:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 3:45 AM ET</p><p class=\"an-why\">Waiting for the week's line: this week's usage is ahead of its even pace. Last check 3:45 AM ET.</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 4:04 AM ET</p><p class=\"an-why\">Waiting for the week's line: this week's usage is ahead of its even pace. Last check 4:04 AM ET.</p></section>"
  }
 }

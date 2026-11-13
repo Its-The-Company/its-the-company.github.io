@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-13T13:22:39.192175+00:00",
+ "at": "2026-11-13T13:25:44.366200+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -75,7 +75,7 @@
    "task": "[build] T-2261 editor completion list UI",
    "model": "opus",
    "started": "2026-11-13T13:02:06.520Z",
-   "seconds": 1232,
+   "seconds": 1417,
    "finished": null,
    "effort": "high"
   },
@@ -84,12 +84,21 @@
    "task": "[site] T-4005 Home drop Needs you, restore panels",
    "model": "opus",
    "started": "2026-11-13T13:13:46.645Z",
-   "seconds": 532,
+   "seconds": 717,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "ines",
+   "task": "[plan] T-4251 Restructuring decisions as Urgent issues",
+   "model": "opus",
+   "started": "2026-11-13T13:22:52.242Z",
+   "seconds": 172,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Idris, Odalys",
+ "who": "Idris, Odalys, Ines",
  "recent": [
   {
    "name": "pernille",
@@ -176,7 +185,7 @@
   "week_pct": 42.8,
   "usage_pct": 33.2,
   "work_pct": 79.5,
-  "read_at": "2026-11-13T13:22:00+00:00",
+  "read_at": "2026-11-13T13:25:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -213,7 +222,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-13T08:22:00-05:00",
+  "at": "2026-11-13T08:25:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -248,17 +257,18 @@
    "effort": "high"
   },
   {
+   "name": "Ines",
+   "state": "running",
+   "task": "[plan] T-4251 Restructuring decisions as Urgent issues",
+   "model": "opus",
+   "since": "2026-11-13T13:22:52.242Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
    "name": "Pernille",
    "state": "next",
    "task": "Pernille, P1, premades and gallery take the age line...",
-   "model": null,
-   "since": null,
-   "next": []
-  },
-  {
-   "name": "Ines",
-   "state": "next",
-   "task": "Ines, P0, Investor an Investor c6854106654 (8:18 AM 11-13;...",
    "model": null,
    "since": null,
    "next": []
@@ -301,6 +311,16 @@
     "at": "2026-11-13T13:13:46.645Z",
     "o": "c",
     "task": "T-4005"
+   },
+   {
+    "w": "Ines",
+    "k": "plan",
+    "t": "Open an Urgent issue for each Restructuring decision",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-13T13:22:52.242Z",
+    "o": "c",
+    "task": "T-4251"
    }
   ],
   "src": "plan",
@@ -468,27 +488,26 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-13T13:22:39Z",
+  "at": "2026-11-13T13:25:44Z",
   "s": {
+   "T-2261": [
+    "merging",
+    "Mac tests at the main gate",
+    1794576224366
+   ],
    "T-4005": [
     "testing",
     "its own tests, in its copy",
-    1794575919192
-   ],
-   "T-2261": [
-    "merged",
-    "on main 8:01 AM ET",
-    1794574878000,
-    "Idris"
+    1794576344366
    ]
   },
   "nm": {
-   "T-4005": "Home: drop Needs you, restore old panels",
-   "T-2261": "Build and test the editor completion changes"
+   "T-2261": "Build and test the editor completion changes",
+   "T-4005": "Home: drop Needs you, restore old panels"
   }
  },
  "ln": {
-  "at": "2026-11-13T13:22:39Z",
+  "at": "2026-11-13T13:25:44Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -502,11 +521,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 1305,
+    "conflicted": 1308,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 6956
+    "parked": 6960
    },
    "cur": [],
    "ld": [
@@ -516,12 +535,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-13T13:22:16Z",
-    "ld": 1.3,
+    "at": "2026-11-13T13:24:59Z",
+    "ld": 1.04,
     "c": 8,
     "sb": 0,
     "dk": [
-     24.9,
+     24.8,
      228.3
     ],
     "ss": [
@@ -573,13 +592,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 2,
+  "main": 3,
   "lanes": 0,
-  "total": 2,
-  "at": "8:22 AM",
+  "total": 3,
+  "at": "8:25 AM",
   "why": "",
-  "at_iso": "2026-11-13T13:22:00+00:00",
+  "at_iso": "2026-11-13T13:25:00+00:00",
   "started": "7:21 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 7:21 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 8:22 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 7:21 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 8:25 AM ET</p></section>"
  }
 }

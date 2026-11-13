@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-13T17:58:42.302511+00:00",
+ "at": "2026-11-13T18:01:41.578742+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -87,7 +87,7 @@
    "task": "[design] T-4287 Home lists in scroll boxes",
    "model": "opus",
    "started": "2026-11-13T17:03:21.535Z",
-   "seconds": 3320,
+   "seconds": 3500,
    "finished": null,
    "effort": "high"
   },
@@ -96,7 +96,7 @@
    "task": "[tools] T-4284 Audit mode slice 1 pause off",
    "model": "opus",
    "started": "2026-11-13T17:29:09.476Z",
-   "seconds": 1772,
+   "seconds": 1952,
    "finished": null,
    "effort": "high"
   },
@@ -105,7 +105,7 @@
    "task": "[review] T-4300 review one Pro gates read",
    "model": "opus",
    "started": "2026-11-13T17:57:11.107Z",
-   "seconds": 91,
+   "seconds": 270,
    "finished": null,
    "effort": "high"
   },
@@ -114,7 +114,7 @@
    "task": "[review] T-4294 review system https shim",
    "model": "opus",
    "started": "2026-11-13T17:57:17.914Z",
-   "seconds": 84,
+   "seconds": 263,
    "finished": null,
    "effort": "high"
   },
@@ -123,7 +123,7 @@
    "task": "[build] T-3820 add net.request to the app",
    "model": "opus",
    "started": "2026-11-13T17:57:25.005Z",
-   "seconds": 77,
+   "seconds": 256,
    "finished": null,
    "effort": "high"
   }
@@ -215,7 +215,7 @@
   "week_pct": 43.7,
   "usage_pct": 32.7,
   "work_pct": 78.9,
-  "read_at": "2026-11-13T17:58:00+00:00",
+  "read_at": "2026-11-13T18:01:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -265,7 +265,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-13T12:58:00-05:00",
+  "at": "2026-11-13T13:01:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -552,26 +552,32 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-13T17:58:22Z",
+  "at": "2026-11-13T18:01:41Z",
   "s": {
+   "T-3820": [
+    "testing",
+    "Mac Mini \u00b7 test",
+    null
+   ],
    "T-4284": [
     "testing",
     "its own tests, in its copy",
-    1794592642881
+    1794592661578
    ],
    "T-4287": [
     "testing",
     "its own tests, in its copy",
-    1794591202881
+    1794591221578
    ]
   },
   "nm": {
+   "T-3820": "Add the general web request call to the app",
    "T-4284": "Add an Audit mode for one audit on chosen accounts",
    "T-4287": "Show all Queued and In flight tasks in scroll boxes"
   }
  },
  "ln": {
-  "at": "2026-11-13T17:58:22Z",
+  "at": "2026-11-13T18:01:41Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -585,11 +591,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 1581,
+    "conflicted": 1584,
     "failed": null,
     "held": null,
-    "retry": 65,
-    "parked": 65
+    "retry": 68,
+    "parked": 68
    },
    "cur": [],
    "ld": [
@@ -599,16 +605,16 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-13T17:57:39Z",
-    "ld": 6.62,
+    "at": "2026-11-13T18:01:21Z",
+    "ld": 8.19,
     "c": 8,
     "sb": 0,
     "dk": [
-     14.8,
+     14.9,
      228.3
     ],
     "ss": [
-     186.6,
+     184.5,
      953.7
     ],
     "sn": []
@@ -668,10 +674,10 @@
   "main": 5,
   "lanes": 1,
   "total": 6,
-  "at": "12:58 PM",
+  "at": "1:01 PM",
   "why": "",
-  "at_iso": "2026-11-13T17:58:00+00:00",
+  "at_iso": "2026-11-13T18:01:00+00:00",
   "started": "11:32 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 5, started 11:32 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 12:58 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 5, started 11:32 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 1:01 PM ET</p></section>"
  }
 }

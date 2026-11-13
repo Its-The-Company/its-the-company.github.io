@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-13T01:24:30.263999+00:00",
+ "at": "2026-11-13T01:27:34.677936+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -64,6 +64,15 @@
     "end_at": 1794498425
    },
    {
+    "t": "T-3430",
+    "name": "Search Home tasks by number and filter by category",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "failed",
+    "end_at": 1794495739,
+    "why": "did not merge cleanly"
+   },
+   {
     "t": "T-3990",
     "name": "Let finished task copies be deleted safely",
     "acct": "Personal a",
@@ -79,41 +88,32 @@
     "end": "failed",
     "end_at": 1794495739,
     "why": "did not merge cleanly"
-   },
-   {
-    "t": "T-3753",
-    "name": "Callers pass the task to each Mac mini build",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794495702
    }
   ],
-  "landed": 18,
-  "failed": 7
+  "landed": 16,
+  "failed": 8
  },
  "workers": [
-  {
-   "name": "idris",
-   "task": "[build] T-4218 redraw launcher after slot edit",
-   "model": "opus",
-   "started": "2026-11-12T23:21:24.535Z",
-   "seconds": 7385,
-   "finished": null,
-   "effort": "high"
-  },
   {
    "name": "odalys",
    "task": "[tools] T-4213 land account restart fix",
    "model": "opus",
    "started": "2026-11-13T00:14:33.768Z",
-   "seconds": 4196,
+   "seconds": 4380,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Idris, Odalys",
+ "who": "Odalys",
  "recent": [
+  {
+   "name": "idris",
+   "task": "[build] T-4218 redraw launcher after slot edit",
+   "model": "opus",
+   "started": "2026-11-12T23:21:24.535Z",
+   "seconds": null,
+   "finished": "2026-11-13T01:24:36.193000+00:00"
+  },
   {
    "name": "idris",
    "task": "[release] T-4219 mark launcher builds, refuse upload",
@@ -137,14 +137,6 @@
    "started": "2026-11-12T23:32:10.601Z",
    "seconds": null,
    "finished": "2026-11-13T00:10:13.346000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-4216 add-app slot overwrite race",
-   "model": "opus",
-   "started": "2026-11-12T22:33:49.320Z",
-   "seconds": null,
-   "finished": "2026-11-12T23:50:40.366000+00:00"
   }
  ],
  "queue": {
@@ -199,7 +191,7 @@
   "week_pct": 38.42,
   "usage_pct": 32.4,
   "work_pct": 79.1,
-  "read_at": "2026-11-13T01:24:00+00:00",
+  "read_at": "2026-11-13T01:27:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -236,7 +228,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T20:24:00-05:00",
+  "at": "2026-11-12T20:27:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -248,15 +240,6 @@
  },
  "lanes": [
   {
-   "name": "Idris",
-   "state": "running",
-   "task": "[build] T-4218 redraw launcher after slot edit",
-   "model": "opus",
-   "since": "2026-11-12T23:21:24.535Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
    "name": "Odalys",
    "state": "running",
    "task": "[tools] T-4213 land account restart fix",
@@ -264,6 +247,14 @@
    "since": "2026-11-13T00:14:33.768Z",
    "next": [],
    "effort": "high"
+  },
+  {
+   "name": "Idris",
+   "state": "next",
+   "task": "Idris, P0, reopens T-3393 c6713953911, c6725543994),...",
+   "model": null,
+   "since": null,
+   "next": []
   },
   {
    "name": "Pernille",
@@ -300,16 +291,6 @@
  ],
  "tasks": {
   "run": [
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "Redraw a placed launcher after a slot edit",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-12T23:21:24.535Z",
-    "o": "c",
-    "task": "T-4218"
-   },
    {
     "w": "Odalys",
     "k": "tools",
@@ -486,17 +467,17 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-13T01:24:30Z",
+  "at": "2026-11-13T01:27:34Z",
   "s": {
    "T-4116": [
     "mergeq",
     "1st to merge",
-    1794527370263
+    1794527374677
    ],
    "T-4213": [
     "merging",
     "Mac tests at the main gate",
-    1794533070263
+    1794533074677
    ]
   },
   "nm": {
@@ -505,7 +486,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-13T01:24:30Z",
+  "at": "2026-11-13T01:27:34Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -518,12 +499,12 @@
    },
    "m": {
     "checking": null,
-    "inline": 95,
-    "conflicted": 587,
+    "inline": 98,
+    "conflicted": 590,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 631
+    "parked": 634
    },
    "cur": [],
    "ld": [
@@ -533,8 +514,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-13T01:24:04Z",
-    "ld": 0.46,
+    "at": "2026-11-13T01:27:35Z",
+    "ld": 0.51,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -569,15 +550,6 @@
    "e": "high",
    "t": "Work session \u2013 13 tasks",
    "at": "2026-11-12T20:05:53-05:00"
-  },
-  {
-   "w": "Operator",
-   "a": "Evan",
-   "sr": 1,
-   "m": "sonnet",
-   "e": "medium",
-   "t": "Work session",
-   "at": "2026-11-12T20:24:28-05:00"
   }
  ],
  "reply": {
@@ -599,13 +571,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 2,
+  "main": 1,
   "lanes": 0,
-  "total": 2,
-  "at": "8:24 PM",
+  "total": 1,
+  "at": "8:27 PM",
   "why": "",
-  "at_iso": "2026-11-13T01:24:00+00:00",
+  "at_iso": "2026-11-13T01:27:00+00:00",
   "started": "5:19 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 5:19 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 8:24 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 5:19 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 8:27 PM ET</p></section>"
  }
 }

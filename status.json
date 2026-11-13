@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-13T18:01:41.578742+00:00",
+ "at": "2026-11-13T18:04:50.023919+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -87,7 +87,7 @@
    "task": "[design] T-4287 Home lists in scroll boxes",
    "model": "opus",
    "started": "2026-11-13T17:03:21.535Z",
-   "seconds": 3500,
+   "seconds": 3688,
    "finished": null,
    "effort": "high"
   },
@@ -96,7 +96,7 @@
    "task": "[tools] T-4284 Audit mode slice 1 pause off",
    "model": "opus",
    "started": "2026-11-13T17:29:09.476Z",
-   "seconds": 1952,
+   "seconds": 2140,
    "finished": null,
    "effort": "high"
   },
@@ -105,7 +105,7 @@
    "task": "[review] T-4300 review one Pro gates read",
    "model": "opus",
    "started": "2026-11-13T17:57:11.107Z",
-   "seconds": 270,
+   "seconds": 458,
    "finished": null,
    "effort": "high"
   },
@@ -114,7 +114,7 @@
    "task": "[review] T-4294 review system https shim",
    "model": "opus",
    "started": "2026-11-13T17:57:17.914Z",
-   "seconds": 263,
+   "seconds": 452,
    "finished": null,
    "effort": "high"
   },
@@ -123,7 +123,7 @@
    "task": "[build] T-3820 add net.request to the app",
    "model": "opus",
    "started": "2026-11-13T17:57:25.005Z",
-   "seconds": 256,
+   "seconds": 445,
    "finished": null,
    "effort": "high"
   }
@@ -167,23 +167,23 @@
   "runnable": [],
   "blocked": [],
   "runnable_count": 544,
-  "blocked_count": 105
+  "blocked_count": 106
  },
  "meter": {
   "five_hour": {
-   "pct": 25.0,
+   "pct": 27.0,
    "resets_at": "2026-11-13T15:50:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-13T12:56:10.660380-05:00",
+   "read_at": "2026-11-13T13:02:55.252936-05:00",
    "source": "live",
-   "left": 75.0,
+   "left": 73.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 92.0,
    "resets_at": "2026-11-15T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-13T12:56:10.660380-05:00",
+   "read_at": "2026-11-13T13:02:55.252936-05:00",
    "source": "live",
    "left": 8.0,
    "left_words": "of your weekly allowance left"
@@ -195,7 +195,7 @@
    "read_at": "2026-11-13T11:31:45.194382-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-13T12:56:10.660380-05:00"
+  "read_at": "2026-11-13T13:02:55.252936-05:00"
  },
  "ui": {
   "week_pct": 0.297,
@@ -215,7 +215,7 @@
   "week_pct": 43.7,
   "usage_pct": 32.7,
   "work_pct": 78.9,
-  "read_at": "2026-11-13T18:01:00+00:00",
+  "read_at": "2026-11-13T18:05:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -226,6 +226,18 @@
     "m": "opus",
     "e": "xhigh",
     "at": "2026-11-13T12:56:42-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a2",
+    "task": "T-4100",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Build the typed Links field and the ledger apply",
+    "m": "opus",
+    "e": "xhigh",
+    "at": "2026-11-13T13:02:36-05:00",
     "n": "Evan",
     "src": "plan-a"
    }
@@ -249,23 +261,23 @@
   }
  ],
  "disk": {
-  "free_gb": 14,
+  "free_gb": 15,
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 187
+   "free_gb": 185
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-13T12:56:00-05:00",
+   "at": "2026-11-13T13:02:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-13T13:01:00-05:00",
+  "at": "2026-11-13T13:05:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -462,6 +474,11 @@
   ],
   "done": [
    {
+    "w": "Pernille",
+    "t": "Checked Idris's fix that makes the app ask the App Store once per widget refresh; it works and...",
+    "at": "2026-11-13T13:03:00-05:00"
+   },
+   {
     "w": "Idris",
     "t": "When Apple's store check hangs, the app now still prepares the free ready-made widgets, so one...",
     "at": "2026-11-13T12:56:00-05:00"
@@ -470,22 +487,21 @@
     "w": "Pernille",
     "t": "Python's secure web requests can now go through Apple's own network security instead of a...",
     "at": "2026-11-13T12:33:00-05:00"
-   },
-   {
-    "w": "Pernille",
-    "t": "An independent check of Idris's fixes to the code editor's suggestion list and its spoken error...",
-    "at": "2026-11-13T12:16:00-05:00"
    }
   ],
   "count": {
    "next": 544,
-   "wait": 58,
+   "wait": 59,
    "blocked": 47,
    "you": 19
   },
   "fin": {
-   "n": 13,
+   "n": 14,
    "rows": [
+    [
+     "T-4300",
+     "Review the one Pro gates..."
+    ],
     [
      "T-4277",
      "Offer free premades when the..."
@@ -505,10 +521,6 @@
     [
      "T-4259",
      "Make completion rows 44..."
-    ],
-    [
-     "T-4260",
-     "Say syntax errors as errors..."
     ]
    ]
   }
@@ -552,7 +564,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-13T18:01:41Z",
+  "at": "2026-11-13T18:04:50Z",
   "s": {
    "T-3820": [
     "testing",
@@ -562,22 +574,29 @@
    "T-4284": [
     "testing",
     "its own tests, in its copy",
-    1794592661578
+    1794592670023
    ],
    "T-4287": [
     "testing",
     "its own tests, in its copy",
-    1794591221578
+    1794591230023
+   ],
+   "T-4300": [
+    "merged",
+    "on main 1:04 PM ET",
+    1794593057000,
+    "Pernille"
    ]
   },
   "nm": {
    "T-3820": "Add the general web request call to the app",
    "T-4284": "Add an Audit mode for one audit on chosen accounts",
-   "T-4287": "Show all Queued and In flight tasks in scroll boxes"
+   "T-4287": "Show all Queued and In flight tasks in scroll boxes",
+   "T-4300": "Review the one Pro gates read per pass"
   }
  },
  "ln": {
-  "at": "2026-11-13T18:01:41Z",
+  "at": "2026-11-13T18:04:50Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -591,11 +610,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 1584,
+    "conflicted": 1587,
     "failed": null,
     "held": null,
-    "retry": 68,
-    "parked": 68
+    "retry": 71,
+    "parked": 72
    },
    "cur": [],
    "ld": [
@@ -605,12 +624,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-13T18:01:21Z",
-    "ld": 8.19,
+    "at": "2026-11-13T18:04:31Z",
+    "ld": 8.2,
     "c": 8,
     "sb": 0,
     "dk": [
-     14.9,
+     14.6,
      228.3
     ],
     "ss": [
@@ -649,12 +668,21 @@
    "m": "opus",
    "e": "xhigh",
    "t": "Work session \u2013 1 task",
-   "at": "2026-11-13T12:56:42-05:00"
+   "at": "2026-11-13T13:03:24-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Evan",
+   "sr": 1,
+   "m": "opus",
+   "e": "xhigh",
+   "t": "Work session \u2013 1 task",
+   "at": "2026-11-13T13:02:36-05:00"
   }
  ],
  "reply": {
-  "sent": "2026-11-13T17:57:27Z",
-  "seconds": 70.0
+  "sent": "2026-11-13T18:01:48Z",
+  "seconds": 94.0
  },
  "inbox": [],
  "trimmed": [
@@ -672,12 +700,12 @@
  ],
  "agents_now": {
   "main": 5,
-  "lanes": 1,
-  "total": 6,
-  "at": "1:01 PM",
+  "lanes": 2,
+  "total": 7,
+  "at": "1:05 PM",
   "why": "",
-  "at_iso": "2026-11-13T18:01:00+00:00",
+  "at_iso": "2026-11-13T18:05:00+00:00",
   "started": "11:32 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 5, started 11:32 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 1:01 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 5, started 11:32 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 1:05 PM ET</p></section>"
  }
 }

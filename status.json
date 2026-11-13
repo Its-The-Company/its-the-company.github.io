@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-13T00:29:31.896179+00:00",
+ "at": "2026-11-13T00:32:32.646458+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -97,7 +97,7 @@
    "task": "[build] T-4218 redraw launcher after slot edit",
    "model": "opus",
    "started": "2026-11-12T23:21:24.535Z",
-   "seconds": 4087,
+   "seconds": 4268,
    "finished": null,
    "effort": "high"
   },
@@ -106,7 +106,7 @@
    "task": "[release] T-4219 mark launcher builds, refuse upload",
    "model": "opus",
    "started": "2026-11-12T23:50:57.870Z",
-   "seconds": 2314,
+   "seconds": 2494,
    "finished": null,
    "effort": "high"
   },
@@ -115,7 +115,7 @@
    "task": "[tools] T-4213 land account restart fix",
    "model": "opus",
    "started": "2026-11-13T00:14:33.768Z",
-   "seconds": 898,
+   "seconds": 1078,
    "finished": null,
    "effort": "high"
   }
@@ -207,7 +207,7 @@
   "week_pct": 38.42,
   "usage_pct": 32.4,
   "work_pct": 79.1,
-  "read_at": "2026-11-13T00:29:00+00:00",
+  "read_at": "2026-11-13T00:32:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -270,7 +270,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T19:29:00-05:00",
+  "at": "2026-11-12T19:32:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -530,22 +530,27 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-13T00:29:11Z",
+  "at": "2026-11-13T00:32:24Z",
   "s": {
    "T-4116": [
     "merging",
     "Merging onto main",
-    1794529751847
+    1794529944783
+   ],
+   "T-4195": [
+    "mergeq",
+    "2nd to merge",
+    1794529944783
    ],
    "T-4218": [
     "merging",
     "Mac tests at the main gate",
-    1794529451847
+    1794529464783
    ],
    "T-4219": [
     "mergeq",
     "waiting for the main gate",
-    1794529571847
+    1794529524783
    ],
    "T-4215": [
     "testing",
@@ -555,7 +560,7 @@
    "T-4213": [
     "testing",
     "its own tests, in its copy",
-    1794528911847
+    1794528924783
    ],
    "T-4196": [
     "merged",
@@ -566,6 +571,7 @@
   },
   "nm": {
    "T-4116": "Regroup the app queue into feature-sized pieces",
+   "T-4195": "Reuse an iPhone pass when the app's inputs are unchanged",
    "T-4218": "Redraw a placed launcher after a slot edit",
    "T-4219": "Mark launcher builds so uploads refuse them",
    "T-4215": "Keep the launcher editor out of Release builds",
@@ -574,11 +580,11 @@
   }
  },
  "ln": {
-  "at": "2026-11-13T00:29:11Z",
+  "at": "2026-11-13T00:32:24Z",
   "mq": {
    "n": {
     "checking": 1,
-    "inline": 0,
+    "inline": 1,
     "conflicted": 2,
     "failed": 0,
     "held": 0,
@@ -587,12 +593,12 @@
    },
    "m": {
     "checking": 0,
-    "inline": null,
-    "conflicted": 532,
+    "inline": 0,
+    "conflicted": 535,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 575
+    "parked": 579
    },
    "cur": [
     [
@@ -611,12 +617,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-13T00:28:31Z",
-    "ld": 1.9,
+    "at": "2026-11-13T00:31:57Z",
+    "ld": 3.24,
     "c": 8,
     "sb": 0,
     "dk": [
-     22.7,
+     20.7,
      228.3
     ],
     "ss": [
@@ -645,17 +651,8 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 12 tasks",
-   "at": "2026-11-12T19:14:42-05:00"
-  },
-  {
-   "w": "Operator",
-   "a": "Jeremy",
-   "sr": 1,
-   "m": "opus",
-   "e": "xhigh",
-   "t": "Inbox \u2013 Evan's 7:28 PM Message on GitHub",
-   "at": "2026-11-12T19:28:58-05:00"
+   "t": "Inbox \u2013 Jeremy's 7:32 PM Message on GitHub",
+   "at": "2026-11-12T19:32:19-05:00"
   },
   {
    "w": "Operator",
@@ -664,23 +661,32 @@
    "m": "opus",
    "e": "xhigh",
    "t": "Work session \u2013 1 task",
+   "at": "2026-11-12T19:30:43-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Jeremy",
+   "sr": 1,
+   "m": "opus",
+   "e": "xhigh",
+   "t": "Work session",
    "at": "2026-11-12T18:38:25-05:00"
   }
  ],
  "reply": {
-  "sent": "2026-11-13T00:14:24Z",
-  "seconds": 69.0
+  "sent": "2026-11-13T00:28:19Z",
+  "seconds": 142.0
  },
  "inbox": [
   {
-   "id": "c6840048349",
+   "id": "c6840111083",
    "state": "received",
    "position": 1,
    "tasks": {
     "open": 0,
     "done": 0
    },
-   "title": "Why does it say Jeremy's operator is..."
+   "title": "Does it make sense for \u201cOperators &..."
   }
  ],
  "trimmed": [
@@ -701,10 +707,10 @@
   "main": 3,
   "lanes": 2,
   "total": 5,
-  "at": "7:29 PM",
+  "at": "7:32 PM",
   "why": "",
-  "at_iso": "2026-11-13T00:29:00+00:00",
+  "at_iso": "2026-11-13T00:32:00+00:00",
   "started": "5:19 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 3, started 5:19 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 7:29 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 3, started 5:19 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 7:32 PM ET</p></section>"
  }
 }

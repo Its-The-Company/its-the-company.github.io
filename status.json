@@ -1,22 +1,11 @@
 {
  "schema": 1,
- "at": "2026-11-13T14:12:12.759771+00:00",
+ "at": "2026-11-13T14:15:15.948853+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-13T07:21:41-05:00",
   "flow": [
-   {
-    "t": "T-4252",
-    "name": "Review the editor's completion list and inline errors",
-    "w": "Pernille",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1794578863
-     }
-    ]
-   },
    {
     "t": "T-2261",
     "name": "Build and test the editor completion changes",
@@ -79,16 +68,7 @@
    "task": "[site] T-4004 then T-3735 Home in flight and blocked",
    "model": "opus",
    "started": "2026-11-13T13:53:09.418Z",
-   "seconds": 1143,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "pernille",
-   "task": "[review] T-4252 completion list review",
-   "model": "opus",
-   "started": "2026-11-13T14:01:01.724Z",
-   "seconds": 671,
+   "seconds": 1326,
    "finished": null,
    "effort": "high"
   },
@@ -97,13 +77,21 @@
    "task": "[build] T-4254 T-4255 T-4256 T-4261 editor mark fixes",
    "model": "opus",
    "started": "2026-11-13T14:11:26.887Z",
-   "seconds": 45,
+   "seconds": 229,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Odalys, Pernille, Idris",
+ "who": "Odalys, Idris",
  "recent": [
+  {
+   "name": "pernille",
+   "task": "[review] T-4252 completion list review",
+   "model": "opus",
+   "started": "2026-11-13T14:01:01.724Z",
+   "seconds": null,
+   "finished": "2026-11-13T14:14:44.892000+00:00"
+  },
   {
    "name": "maren",
    "task": "[design] T-4253 completion list design read",
@@ -127,20 +115,12 @@
    "started": "2026-11-13T13:35:19.101Z",
    "seconds": null,
    "finished": "2026-11-13T13:59:07.343000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[site] T-4005 Home drop Needs you, restore panels",
-   "model": "opus",
-   "started": "2026-11-13T13:13:46.645Z",
-   "seconds": null,
-   "finished": "2026-11-13T13:52:43.905000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 530,
+  "runnable_count": 529,
   "blocked_count": 103
  },
  "meter": {
@@ -189,7 +169,7 @@
   "week_pct": 42.8,
   "usage_pct": 33.2,
   "work_pct": 79.5,
-  "read_at": "2026-11-13T14:12:00+00:00",
+  "read_at": "2026-11-13T14:15:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -226,7 +206,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-13T09:12:00-05:00",
+  "at": "2026-11-13T09:15:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -252,15 +232,6 @@
    "effort": "high"
   },
   {
-   "name": "Pernille",
-   "state": "running",
-   "task": "[review] T-4252 completion list review",
-   "model": "opus",
-   "since": "2026-11-13T14:01:01.724Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
    "name": "Idris",
    "state": "running",
    "task": "[build] T-4254 T-4255 T-4256 T-4261 editor mark fixes",
@@ -268,6 +239,14 @@
    "since": "2026-11-13T14:11:26.887Z",
    "next": [],
    "effort": "high"
+  },
+  {
+   "name": "Pernille",
+   "state": "next",
+   "task": "Pernille, P1, premades and gallery take the age line...",
+   "model": null,
+   "since": null,
+   "next": []
   },
   {
    "name": "Ines",
@@ -305,16 +284,6 @@
     "at": "2026-11-13T13:53:09.418Z",
     "o": "c",
     "task": "T-4004"
-   },
-   {
-    "w": "Pernille",
-    "k": "review",
-    "t": "Review the editor's completion list and inline errors",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-13T14:01:01.724Z",
-    "o": "c",
-    "task": "T-4252"
    },
    {
     "w": "Idris",
@@ -402,6 +371,11 @@
   ],
   "done": [
    {
+    "w": "Pernille",
+    "t": "The review of the editor's word suggestions and error marks passed with notes; one fix for...",
+    "at": "2026-11-13T09:14:00-05:00"
+   },
+   {
     "w": "Maren",
     "t": "Read the editor's new suggestion list and problem marks against the design: the marks are too...",
     "at": "2026-11-13T09:08:00-05:00"
@@ -410,22 +384,21 @@
     "w": "Odalys",
     "t": "Home again lists the tasks being worked on, each with its stage, under All tasks on phone and...",
     "at": "2026-11-13T08:54:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "Home has no Needs you section and the four panels (Usage, Progress, Machine, Work) sit at the...",
-    "at": "2026-11-13T08:52:00-05:00"
    }
   ],
   "count": {
-   "next": 530,
+   "next": 529,
    "wait": 49,
    "blocked": 54,
    "you": 18
   },
   "fin": {
-   "n": 14,
+   "n": 15,
    "rows": [
+    [
+     "T-4252",
+     "Review the editor's..."
+    ],
     [
      "T-4253",
      "Design read of the..."
@@ -445,10 +418,6 @@
     [
      "T-4127",
      "Run the Restructuring on..."
-    ],
-    [
-     "T-4248",
-     "Bring back the Operator and..."
     ]
    ]
   }
@@ -492,26 +461,20 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-13T14:12:00Z",
+  "at": "2026-11-13T14:15:08Z",
   "s": {
    "T-3735": [
     "testing",
     "its own tests, in its copy",
-    1794578280931
-   ],
-   "T-4252": [
-    "testq",
-    "1st for a Simulator",
-    1794578940931
+    1794579188711
    ]
   },
   "nm": {
-   "T-3735": "Show what blocks each blocked task on Home",
-   "T-4252": "Review the editor's completion list and inline errors"
+   "T-3735": "Show what blocks each blocked task on Home"
   }
  },
  "ln": {
-  "at": "2026-11-13T14:12:00Z",
+  "at": "2026-11-13T14:15:08Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -525,11 +488,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 1354,
+    "conflicted": 1357,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 7006
+    "parked": 7009
    },
    "cur": [],
    "ld": [
@@ -539,8 +502,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-13T14:11:11Z",
-    "ld": 1.46,
+    "at": "2026-11-13T14:14:44Z",
+    "ld": 2.5,
     "c": 8,
     "sb": 1,
     "dk": [
@@ -556,12 +519,12 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-13T13:57:36Z",
-    "ld": 0.85,
+    "at": "2026-11-13T14:14:00Z",
+    "ld": 2.54,
     "c": 12,
     "sb": 0,
     "dk": [
-     374.8,
+     374.6,
      926.4
     ],
     "sn": []
@@ -575,7 +538,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 7 tasks",
+   "t": "Work session \u2013 6 tasks",
    "at": "2026-11-13T08:19:15-05:00"
   }
  ],
@@ -598,13 +561,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 3,
+  "main": 2,
   "lanes": 0,
-  "total": 3,
-  "at": "9:12 AM",
+  "total": 2,
+  "at": "9:15 AM",
   "why": "",
-  "at_iso": "2026-11-13T14:12:00+00:00",
+  "at_iso": "2026-11-13T14:15:00+00:00",
   "started": "7:21 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 7:21 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:12 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 7:21 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:15 AM ET</p></section>"
  }
 }

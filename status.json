@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-13T18:15:11.473402+00:00",
+ "at": "2026-11-13T18:20:17.522056+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -95,7 +95,7 @@
    "task": "[design] T-4287 Home lists in scroll boxes",
    "model": "opus",
    "started": "2026-11-13T17:03:21.535Z",
-   "seconds": 4309,
+   "seconds": 4615,
    "finished": null,
    "effort": "high"
   },
@@ -104,7 +104,7 @@
    "task": "[tools] T-4284 Audit mode slice 1 pause off",
    "model": "opus",
    "started": "2026-11-13T17:29:09.476Z",
-   "seconds": 2761,
+   "seconds": 3068,
    "finished": null,
    "effort": "high"
   },
@@ -113,7 +113,7 @@
    "task": "[build] T-3820 add net.request to the app",
    "model": "opus",
    "started": "2026-11-13T17:57:25.005Z",
-   "seconds": 1066,
+   "seconds": 1372,
    "finished": null,
    "effort": "high"
   },
@@ -122,7 +122,7 @@
    "task": "[build] T-4303 fix https shim before switch-on",
    "model": "opus",
    "started": "2026-11-13T18:07:27.081Z",
-   "seconds": 464,
+   "seconds": 770,
    "finished": null,
    "effort": "high"
   }
@@ -170,21 +170,21 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 28.0,
+   "pct": 30.0,
    "resets_at": "2026-11-13T15:50:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-13T13:10:30.987144-05:00",
+   "read_at": "2026-11-13T13:18:50.823954-05:00",
    "source": "live",
-   "left": 72.0,
+   "left": 70.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 92.0,
+   "pct": 93.0,
    "resets_at": "2026-11-15T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-13T13:10:30.987144-05:00",
+   "read_at": "2026-11-13T13:18:50.823954-05:00",
    "source": "live",
-   "left": 8.0,
+   "left": 7.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
@@ -194,7 +194,7 @@
    "read_at": "2026-11-13T11:31:45.194382-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-13T13:10:30.987144-05:00"
+  "read_at": "2026-11-13T13:18:50.823954-05:00"
  },
  "ui": {
   "week_pct": 0.297,
@@ -214,7 +214,7 @@
   "week_pct": 43.7,
   "usage_pct": 32.7,
   "work_pct": 78.9,
-  "read_at": "2026-11-13T18:16:00+00:00",
+  "read_at": "2026-11-13T18:20:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -248,23 +248,23 @@
   }
  ],
  "disk": {
-  "free_gb": 14,
+  "free_gb": 13,
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 185
+   "free_gb": 184
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-13T13:10:00-05:00",
+   "at": "2026-11-13T13:18:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-13T13:16:00-05:00",
+  "at": "2026-11-13T13:20:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -541,38 +541,44 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-13T18:15:11Z",
+  "at": "2026-11-13T18:20:17Z",
   "s": {
    "T-4124": [
     "mergeq",
     "1st to merge",
-    1794593351473
+    1794593357522
    ],
    "T-3820": [
     "testing",
     "Mac Mini \u00b7 test",
     null
    ],
+   "T-4303": [
+    "testing",
+    "its own tests, in its copy",
+    1794593957522
+   ],
    "T-4284": [
     "testing",
     "its own tests, in its copy",
-    1794592691473
+    1794593957522
    ],
    "T-4287": [
     "testing",
     "its own tests, in its copy",
-    1794591251473
+    1794593957522
    ]
   },
   "nm": {
    "T-4124": "Find every slowdown the company built into its own process",
    "T-3820": "Add the general web request call to the app",
+   "T-4303": "Fix the https shim before it turns on",
    "T-4284": "Add an Audit mode for one audit on chosen accounts",
    "T-4287": "Show all Queued and In flight tasks in scroll boxes"
   }
  },
  "ln": {
-  "at": "2026-11-13T18:15:11Z",
+  "at": "2026-11-13T18:20:17Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -585,12 +591,12 @@
    },
    "m": {
     "checking": null,
-    "inline": 6,
-    "conflicted": 1598,
+    "inline": 11,
+    "conflicted": 1603,
     "failed": null,
     "held": null,
-    "retry": 81,
-    "parked": 82
+    "retry": 87,
+    "parked": 87
    },
    "cur": [],
    "ld": [
@@ -600,12 +606,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-13T18:16:19Z",
-    "ld": 30.56,
+    "at": "2026-11-13T18:20:35Z",
+    "ld": 35.66,
     "c": 8,
     "sb": 1,
     "dk": [
-     13.8,
+     13.5,
      228.3
     ],
     "ss": [
@@ -636,8 +642,8 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 14 tasks",
-   "at": "2026-11-13T13:13:54-05:00"
+   "t": "Work session",
+   "at": "2026-11-13T13:17:24-05:00"
   },
   {
    "w": "Operator",
@@ -645,24 +651,24 @@
    "sr": 1,
    "m": "opus",
    "e": "xhigh",
-   "t": "Inbox \u2013 Evan's 1:14 PM Message on GitHub",
-   "at": "2026-11-13T13:15:00-05:00"
+   "t": "Work session \u2013 1 task",
+   "at": "2026-11-13T13:17:13-05:00"
   }
  ],
  "reply": {
-  "sent": "2026-11-13T18:12:31Z",
-  "seconds": 81.0
+  "sent": "2026-11-13T18:15:37Z",
+  "seconds": 93.0
  },
  "inbox": [
   {
-   "id": "c6861185653",
+   "id": "c6861319605",
    "state": "received",
    "position": 1,
    "tasks": {
     "open": 0,
     "done": 0
    },
-   "title": "T-4100 displays as Opus xhigh on..."
+   "title": "Home should display the model and..."
   }
  ],
  "trimmed": [
@@ -683,10 +689,10 @@
   "main": 4,
   "lanes": 1,
   "total": 5,
-  "at": "1:16 PM",
+  "at": "1:20 PM",
   "why": "",
-  "at_iso": "2026-11-13T18:16:00+00:00",
+  "at_iso": "2026-11-13T18:20:00+00:00",
   "started": "11:32 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 4, started 11:32 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 1:16 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 4, started 11:32 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 1:20 PM ET</p></section>"
  }
 }

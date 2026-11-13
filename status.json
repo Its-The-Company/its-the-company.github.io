@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-13T14:45:48.713290+00:00",
+ "at": "2026-11-13T14:48:54.456556+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -51,7 +51,7 @@
    "task": "[site] T-4004 then T-3735 Home in flight and blocked",
    "model": "opus",
    "started": "2026-11-13T13:53:09.418Z",
-   "seconds": 3159,
+   "seconds": 3345,
    "finished": null,
    "effort": "high"
   },
@@ -60,7 +60,7 @@
    "task": "[build] T-4258 T-4259 T-4260 completion list fixes",
    "model": "opus",
    "started": "2026-11-13T14:43:07.515Z",
-   "seconds": 161,
+   "seconds": 346,
    "finished": null,
    "effort": "high"
   },
@@ -69,7 +69,7 @@
    "task": "[review] T-4261 VoiceOver announcement review",
    "model": "opus",
    "started": "2026-11-13T14:43:15.010Z",
-   "seconds": 153,
+   "seconds": 339,
    "finished": null,
    "effort": "high"
   }
@@ -112,24 +112,24 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 527,
+  "runnable_count": 526,
   "blocked_count": 103
  },
  "meter": {
   "five_hour": {
-   "pct": 21.0,
+   "pct": 23.0,
    "resets_at": "2026-11-13T10:50:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-13T09:34:56.820559-05:00",
+   "read_at": "2026-11-13T09:47:12.318336-05:00",
    "source": "live",
-   "left": 79.0,
+   "left": 77.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 88.0,
    "resets_at": "2026-11-15T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-13T09:34:56.820559-05:00",
+   "read_at": "2026-11-13T09:47:12.318336-05:00",
    "source": "live",
    "left": 12.0,
    "left_words": "of your weekly allowance left"
@@ -141,7 +141,7 @@
    "read_at": "2026-11-13T04:58:50.100124-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-13T09:34:56.820559-05:00"
+  "read_at": "2026-11-13T09:47:12.318336-05:00"
  },
  "ui": {
   "week_pct": 0.3,
@@ -161,7 +161,7 @@
   "week_pct": 42.8,
   "usage_pct": 33.2,
   "work_pct": 79.5,
-  "read_at": "2026-11-13T14:45:00+00:00",
+  "read_at": "2026-11-13T14:48:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -191,14 +191,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-13T09:41:00-05:00",
+   "at": "2026-11-13T09:47:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-13T09:45:00-05:00",
+  "at": "2026-11-13T09:48:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -374,6 +374,11 @@
   ],
   "done": [
    {
+    "w": "Idris+pernille",
+    "t": "With VoiceOver on, the editor now says how many suggestions appeared and which word was...",
+    "at": "2026-11-13T09:48:00-05:00"
+   },
+   {
     "w": "Idris",
     "t": "The editor no longer marks a word as a mistake while you are still typing it; the mark appears...",
     "at": "2026-11-13T09:42:00-05:00"
@@ -382,22 +387,21 @@
     "w": "Idris",
     "t": "Marks on other lines no longer blink off and on while you type; they stay put and move with the...",
     "at": "2026-11-13T09:42:00-05:00"
-   },
-   {
-    "w": "Pernille",
-    "t": "The review of the editor's word suggestions and error marks passed with notes; one fix for...",
-    "at": "2026-11-13T09:14:00-05:00"
    }
   ],
   "count": {
-   "next": 527,
+   "next": 526,
    "wait": 49,
    "blocked": 54,
    "you": 18
   },
   "fin": {
-   "n": 17,
+   "n": 18,
    "rows": [
+    [
+     "T-4261",
+     "Tell VoiceOver when the..."
+    ],
     [
      "T-4254",
      "Never mark the word being typed"
@@ -417,10 +421,6 @@
     [
      "T-4004",
      "Bring In flight back on Home"
-    ],
-    [
-     "T-4005",
-     "Home: drop Needs you,..."
     ]
    ]
   }
@@ -464,20 +464,32 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-13T14:45:48Z",
+  "at": "2026-11-13T14:48:41Z",
   "s": {
+   "T-4258": [
+    "merging",
+    "Mac tests at the main gate",
+    1794581201476
+   ],
+   "T-4261": [
+    "merging",
+    "Mac tests at the main gate",
+    1794581321476
+   ],
    "T-3735": [
     "testing",
     "its own tests, in its copy",
-    1794579168713
+    1794579161476
    ]
   },
   "nm": {
+   "T-4258": "Pin the completion list under the typed word",
+   "T-4261": "Tell VoiceOver when the completion list opens",
    "T-3735": "Show what blocks each blocked task on Home"
   }
  },
  "ln": {
-  "at": "2026-11-13T14:45:48Z",
+  "at": "2026-11-13T14:48:41Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -491,11 +503,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 1388,
+    "conflicted": 1391,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 7040
+    "parked": 7042
    },
    "cur": [],
    "ld": [
@@ -505,8 +517,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-13T14:45:25Z",
-    "ld": 1.48,
+    "at": "2026-11-13T14:47:53Z",
+    "ld": 2.15,
     "c": 8,
     "sb": 1,
     "dk": [
@@ -567,10 +579,10 @@
   "main": 3,
   "lanes": 0,
   "total": 3,
-  "at": "9:45 AM",
+  "at": "9:48 AM",
   "why": "",
-  "at_iso": "2026-11-13T14:45:00+00:00",
+  "at_iso": "2026-11-13T14:48:00+00:00",
   "started": "7:21 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 7:21 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:45 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 7:21 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:48 AM ET</p></section>"
  }
 }

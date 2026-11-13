@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-13T00:35:37.478093+00:00",
+ "at": "2026-11-13T00:38:37.686455+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -89,7 +89,7 @@
    }
   ],
   "landed": 25,
-  "failed": 7
+  "failed": 6
  },
  "workers": [
   {
@@ -97,7 +97,7 @@
    "task": "[build] T-4218 redraw launcher after slot edit",
    "model": "opus",
    "started": "2026-11-12T23:21:24.535Z",
-   "seconds": 4452,
+   "seconds": 4633,
    "finished": null,
    "effort": "high"
   },
@@ -106,7 +106,7 @@
    "task": "[release] T-4219 mark launcher builds, refuse upload",
    "model": "opus",
    "started": "2026-11-12T23:50:57.870Z",
-   "seconds": 2679,
+   "seconds": 2859,
    "finished": null,
    "effort": "high"
   },
@@ -115,7 +115,7 @@
    "task": "[tools] T-4213 land account restart fix",
    "model": "opus",
    "started": "2026-11-13T00:14:33.768Z",
-   "seconds": 1263,
+   "seconds": 1443,
    "finished": null,
    "effort": "high"
   },
@@ -124,7 +124,7 @@
    "task": "[tools] T-4224 why audit sessions use Opus",
    "model": "opus",
    "started": "2026-11-13T00:33:22.902Z",
-   "seconds": 134,
+   "seconds": 314,
    "finished": null,
    "effort": "high"
   }
@@ -216,7 +216,7 @@
   "week_pct": 38.42,
   "usage_pct": 32.4,
   "work_pct": 79.1,
-  "read_at": "2026-11-13T00:35:00+00:00",
+  "read_at": "2026-11-13T00:38:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -228,6 +228,7 @@
     "e": "xhigh",
     "at": "2026-11-12T19:04:48-05:00",
     "n": "Jeremy",
+    "d": 1,
     "src": "plan-b"
    }
   ]
@@ -266,7 +267,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T19:35:00-05:00",
+  "at": "2026-11-12T19:38:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -536,32 +537,32 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-13T00:35:18Z",
+  "at": "2026-11-13T00:38:37Z",
   "s": {
    "T-4116": [
     "merging",
-    "Merging onto main",
-    1794530118566
+    "Rebasing onto current main",
+    1794530317686
    ],
    "T-4219": [
     "merging",
     "Mac tests at the main gate \u00b7 5 groups of tests done",
-    1794529998566
+    1794530017686
    ],
    "T-4218": [
     "mergeq",
     "waiting for the main gate",
-    1794529998566
+    1794530017686
+   ],
+   "T-4213": [
+    "mergeq",
+    "waiting for the main gate",
+    1794530137686
    ],
    "T-4215": [
     "testing",
     "MacBook \u00b7 test",
     null
-   ],
-   "T-4213": [
-    "testing",
-    "its own tests, in its copy",
-    1794528918566
    ],
    "T-4196": [
     "merged",
@@ -574,13 +575,13 @@
    "T-4116": "Regroup the app queue into feature-sized pieces",
    "T-4219": "Mark launcher builds so uploads refuse them",
    "T-4218": "Redraw a placed launcher after a slot edit",
-   "T-4215": "Keep the launcher editor out of Release builds",
    "T-4213": "Let the accounts restart and use their full window",
+   "T-4215": "Keep the launcher editor out of Release builds",
    "T-4196": "Let app changes waiting to merge share one iPhone run"
   }
  },
  "ln": {
-  "at": "2026-11-13T00:35:18Z",
+  "at": "2026-11-13T00:38:37Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -594,18 +595,18 @@
    "m": {
     "checking": 0,
     "inline": null,
-    "conflicted": 538,
+    "conflicted": 541,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 582
+    "parked": 585
    },
    "cur": [
     [
      [
       "T-4116"
      ],
-     "going onto main",
+     "lining up with main",
      "Mac mini",
      0
     ]
@@ -617,12 +618,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-13T00:34:56Z",
-    "ld": 3.94,
+    "at": "2026-11-13T00:38:12Z",
+    "ld": 4.44,
     "c": 8,
     "sb": 0,
     "dk": [
-     20.8,
+     22.7,
      228.3
     ],
     "ss": [
@@ -686,10 +687,10 @@
   "main": 4,
   "lanes": 1,
   "total": 5,
-  "at": "7:35 PM",
+  "at": "7:38 PM",
   "why": "",
-  "at_iso": "2026-11-13T00:35:00+00:00",
+  "at_iso": "2026-11-13T00:38:00+00:00",
   "started": "5:19 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 4, started 5:19 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 7:35 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 4, started 5:19 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 7:38 PM ET</p></section>"
  }
 }

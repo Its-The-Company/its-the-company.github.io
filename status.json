@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-13T12:33:55.696098+00:00",
+ "at": "2026-11-13T12:36:57.281493+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -61,17 +61,9 @@
     "steps": [],
     "end": "landed",
     "end_at": 1794530507
-   },
-   {
-    "t": "T-4195",
-    "name": "Reuse an iPhone pass when the app's inputs are unchanged",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794530056
    }
   ],
-  "landed": 7,
+  "landed": 6,
   "failed": 1
  },
  "workers": [
@@ -80,16 +72,7 @@
    "task": "[site] T-4240 app diagrams page",
    "model": "opus",
    "started": "2026-11-13T12:27:33.182Z",
-   "seconds": 382,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "odalys",
-   "task": "[plan] T-3230 board prune slice",
-   "model": "opus",
-   "started": "2026-11-13T12:27:57.387Z",
-   "seconds": 358,
+   "seconds": 564,
    "finished": null,
    "effort": "high"
   },
@@ -98,13 +81,30 @@
    "task": "[site] T-4246 then T-4248 Home mode bubble and Operator tab",
    "model": "opus",
    "started": "2026-11-13T12:32:55.560Z",
-   "seconds": 60,
+   "seconds": 241,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "odalys",
+   "task": "[plan] T-3230 board prune slice 4",
+   "model": "opus",
+   "started": "2026-11-13T12:35:41.575Z",
+   "seconds": 75,
    "finished": null,
    "effort": "high"
   }
  ],
  "who": "Odalys x3",
  "recent": [
+  {
+   "name": "odalys",
+   "task": "[plan] T-3230 board prune slice",
+   "model": "opus",
+   "started": "2026-11-13T12:27:57.387Z",
+   "seconds": null,
+   "finished": "2026-11-13T12:35:24.849000+00:00"
+  },
   {
    "name": "idris",
    "task": "[build] T-0675 extension lane finish check",
@@ -166,7 +166,7 @@
   "week_pct": 42.8,
   "usage_pct": 33.2,
   "work_pct": 79.5,
-  "read_at": "2026-11-13T12:33:00+00:00",
+  "read_at": "2026-11-13T12:36:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -217,7 +217,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-13T07:33:00-05:00",
+  "at": "2026-11-13T07:36:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -297,16 +297,6 @@
    },
    {
     "w": "Odalys",
-    "k": "plan",
-    "t": "Prune stale tasks from the board",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-13T12:27:57.387Z",
-    "o": "c",
-    "task": "T-3230"
-   },
-   {
-    "w": "Odalys",
     "k": "site",
     "t": "Shrink the mode panel to a small bubble",
     "m": "opus",
@@ -314,6 +304,16 @@
     "at": "2026-11-13T12:32:55.560Z",
     "o": "c",
     "task": "T-4246"
+   },
+   {
+    "w": "Odalys",
+    "k": "plan",
+    "t": "Prune stale tasks from the board",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-13T12:35:41.575Z",
+    "o": "c",
+    "task": "T-3230"
    }
   ],
   "src": "plan",
@@ -481,12 +481,18 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-13T12:33:43Z",
+  "at": "2026-11-13T12:36:50Z",
   "s": {
    "T-4240": [
     "testing",
     "its own tests, in its copy",
-    1794573223096
+    1794573230614
+   ],
+   "T-3230": [
+    "merged",
+    "on main 7:35 AM ET",
+    1794573311000,
+    "Odalys"
    ],
    "T-4127": [
     "merged",
@@ -497,11 +503,12 @@
   },
   "nm": {
    "T-4240": "Draw the app's diagrams from its code on the site",
+   "T-3230": "Prune stale tasks from the board",
    "T-4127": "Run the Restructuring on Evan's account"
   }
  },
  "ln": {
-  "at": "2026-11-13T12:33:43Z",
+  "at": "2026-11-13T12:36:50Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -515,11 +522,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 1256,
+    "conflicted": 1259,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1279
+    "parked": 1283
    },
    "cur": [],
    "ld": [
@@ -529,8 +536,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-13T12:33:17Z",
-    "ld": 1.45,
+    "at": "2026-11-13T12:36:03Z",
+    "ld": 2.27,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -596,10 +603,10 @@
   "main": 3,
   "lanes": 1,
   "total": 4,
-  "at": "7:33 AM",
+  "at": "7:36 AM",
   "why": "",
-  "at_iso": "2026-11-13T12:33:00+00:00",
+  "at_iso": "2026-11-13T12:36:00+00:00",
   "started": "7:21 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 3, started 7:21 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 7:33 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 3, started 7:21 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 7:36 AM ET</p></section>"
  }
 }

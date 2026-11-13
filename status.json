@@ -1,10 +1,10 @@
 {
  "schema": 1,
- "at": "2026-11-13T16:19:11.098328+00:00",
+ "at": "2026-11-13T16:26:16.559617+00:00",
  "session": {
-  "active": true,
-  "kind": "work",
-  "started": "2026-11-13T10:26:15-05:00",
+  "active": false,
+  "kind": "",
+  "started": null,
   "flow": [
    {
     "t": "T-4252",
@@ -96,8 +96,8 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 530,
-  "blocked_count": 103
+  "runnable_count": 533,
+  "blocked_count": 102
  },
  "meter": {
   "five_hour": {
@@ -140,13 +140,62 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": null,
+ "next_tick": "2026-11-13T10:40:57-05:00",
  "personal": {
   "week_pct": 43.94,
-  "usage_pct": 32.9,
-  "work_pct": 79.1,
-  "read_at": "2026-11-13T16:19:00+00:00",
-  "running": []
+  "usage_pct": 32.6,
+  "work_pct": 78.7,
+  "read_at": "2026-11-13T16:26:00+00:00",
+  "running": [
+   {
+    "lane": "a",
+    "task": "T-4117",
+    "w": "Ines",
+    "k": "ops",
+    "t": "Judge the next hundred efficiency lines",
+    "m": "fable",
+    "e": "xhigh",
+    "at": "2026-11-13T11:25:26-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "b",
+    "task": "T-4197",
+    "w": "Ines",
+    "k": "ops",
+    "t": "Redo judge the second hundred efficiency lines",
+    "m": "fable",
+    "e": "xhigh",
+    "at": "2026-11-13T11:20:37-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
+   },
+   {
+    "lane": "b2",
+    "task": "T-4124",
+    "w": "Ines",
+    "k": "plan",
+    "t": "Find every slowdown the company built into its own process",
+    "m": "fable",
+    "e": "xhigh",
+    "at": "2026-11-13T11:25:37-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
+   },
+   {
+    "lane": "b3",
+    "task": "T-4097",
+    "w": "Ines",
+    "k": "ops",
+    "t": "Judge the efficiency and other lines of the queue",
+    "m": "fable",
+    "e": "xhigh",
+    "at": "2026-11-13T11:25:39-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
+   }
+  ]
  },
  "api_credits": [
   {
@@ -175,14 +224,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-13T11:16:00-05:00",
+   "at": "2026-11-13T11:20:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-13T11:19:00-05:00",
+  "at": "2026-11-13T11:26:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -190,13 +239,9 @@
    "b": "midnight"
   }
  },
- "next_tick_why": "session",
+ "next_tick_why": "last_tick",
  "idle": null,
- "pool": {
-  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 8 (held: too few lands in 3 hours to judge a raise)",
-  "n": 8,
-  "at": "2026-11-13T10:25:57.130600-05:00"
- },
+ "pool": null,
  "lanes": [
   {
    "name": "Idris",
@@ -249,7 +294,6 @@
  ],
  "tasks": {
   "run": [],
-  "src": "plan",
   "open": [
    {
     "w": "Odalys",
@@ -340,31 +384,10 @@
    }
   ],
   "count": {
-   "next": 530,
+   "next": 533,
    "wait": 53,
-   "blocked": 50,
+   "blocked": 49,
    "you": 18
-  },
-  "fin": {
-   "n": 4,
-   "rows": [
-    [
-     "T-4269",
-     "Get the queue audit back..."
-    ],
-    [
-     "T-4266",
-     "Re-date the plan now that..."
-    ],
-    [
-     "T-4265",
-     "Propose a busy-machine line..."
-    ],
-    [
-     "T-4264",
-     "Bring the plan in line with..."
-    ]
-   ]
   }
  },
  "qr": [
@@ -406,11 +429,21 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-13T16:18:58Z",
-  "s": {}
+  "at": "2026-11-13T16:26:16Z",
+  "s": {
+   "T-4117": [
+    "merged",
+    "on main 11:09 AM ET",
+    1794586153000,
+    ""
+   ]
+  },
+  "nm": {
+   "T-4117": "Judge the next hundred efficiency lines"
+  }
  },
  "ln": {
-  "at": "2026-11-13T16:18:58Z",
+  "at": "2026-11-13T16:26:16Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -424,11 +457,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 1481,
+    "conflicted": 1489,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 7133
+    "parked": 7140
    },
    "cur": [],
    "ld": [
@@ -438,12 +471,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-13T16:18:36Z",
-    "ld": 0.64,
+    "at": "2026-11-13T16:26:17Z",
+    "ld": 0.72,
     "c": 8,
     "sb": 0,
     "dk": [
-     18.7,
+     18.6,
      228.3
     ],
     "ss": [
@@ -468,17 +501,44 @@
  "operators": [
   {
    "w": "Operator",
-   "a": "Main plan",
+   "a": "Evan",
    "sr": 1,
    "m": "opus",
-   "e": "high",
-   "t": "Work session",
-   "at": "2026-11-13T11:17:16-05:00"
+   "e": "xhigh",
+   "t": "Work session \u2013 1 task",
+   "at": "2026-11-13T11:25:26-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Jeremy",
+   "sr": 1,
+   "m": "opus",
+   "e": "xhigh",
+   "t": "Work session \u2013 1 task",
+   "at": "2026-11-13T11:26:03-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Jeremy",
+   "sr": 1,
+   "m": "opus",
+   "e": "xhigh",
+   "t": "Work session \u2013 1 task",
+   "at": "2026-11-13T11:25:37-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Jeremy",
+   "sr": 1,
+   "m": "opus",
+   "e": "xhigh",
+   "t": "Work session \u2013 1 task",
+   "at": "2026-11-13T11:25:39-05:00"
   }
  ],
  "reply": {
-  "sent": "2026-11-13T16:15:27Z",
-  "seconds": 108.0
+  "sent": "2026-11-13T16:24:51Z",
+  "seconds": 71.0
  },
  "inbox": [],
  "trimmed": [
@@ -486,7 +546,6 @@
   "queue_text",
   "recent",
   "task_done",
-  "fin_short",
   "task_title",
   "done_text",
   "task_open",
@@ -495,12 +554,12 @@
  ],
  "agents_now": {
   "main": 0,
-  "lanes": 0,
-  "total": 0,
-  "at": "11:19 AM",
-  "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
-  "at_iso": "2026-11-13T16:19:00+00:00",
-  "started": "10:26 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0, started 10:26 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 11:19 AM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
+  "lanes": 4,
+  "total": 4,
+  "at": "11:26 AM",
+  "why": "",
+  "at_iso": "2026-11-13T16:26:00+00:00",
+  "started": "",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 11:26 AM ET</p></section>"
  }
 }

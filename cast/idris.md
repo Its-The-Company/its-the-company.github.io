@@ -33,18 +33,6 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 ## Open (mine)
 
-- T-3666 0eae5043f 11-08: set-up sheet via UIKit presenter; needs review. T-3667 a3415f7c8 11-08: window test (both links, 0/1/2) green with AND without the fix; M2 never reproduced (full-screen). Open: windowed mode, real widget tap, review.
-- Lesson T-3667: a run script phase with no inputFiles can run before ProcessInfoPlistFile, which overwrites its plist edit; input = built plist.
-- Lesson T-3666: SwiftUI queues a root .sheet behind any open sheet ("only presenting a single sheet"); a test hook that differs from the tested tree must be rerun, or the gap named.
-
-
-- Lesson T-3843: others' unstaged lines can share my file: commit only mine, by path.
-
-- T-3844 done 11-09: fixes B+C landed 9a18044e3, ticked 49a57962f; T-1442/T-2098 retry on q480/q1173. Open: main_red doesn't fold xc (T-3751).
-- Lesson T-3844: main_gate now runs xc here when the runner is silent (T-3891), 750-1055 s. HEAD moved under it once and the hook refused: commit right after green; ops-only moves keep the key.
-
-- T-3877 11-09 6d3ce7431: 6 recuts handed (ops/runs/t3877-retry-lines.txt, Operator copies; board note unstaged, others' lines share the hunk). Left T-1672 redo, T-2538 xc.sh, T-2612 after T-3350, T-0272. Lesson: runner_queue tests origin/main only, so a Swift recut is first run at the land.
-
 - T-4008 11-10 0dc00ac09b: Ask to Buy red = StoreKit test env lists a verified purchase for a deferred request; test skips with facts. Rerun line off after a clean week (xc_rerun.jsonl).
 - Lesson T-4008: main unpushed? push land/idris-<task> whose tip adds the job files; empty pin commits dodge "already queued".
 
@@ -62,6 +50,10 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - Older lessons and dated logs: archive.md.
 
 - T-0675 ticked 11-13 on daily J-20261113-0207 (1827/0). Lesson: xc.sh test from the repo root runs HERE (route needs cwd pywidget/ios); queue with runner_queue.py --full. Pushing a job file to land/ was refused (classifier): leave job files for the Operator.
+
+- T-3899 6e0c3c505c 11-13: hung Pro check now falls back to bundled gates (entitled false); land job 1744/0; awaits Pernille. Lesson: a background Bash defaults to a 10-min limit; give the gate timeout 2400000 and log to scratch.
+
+- T-3783 11-13 754904a541 (+00efea1b54): cause found: FilesCall.scriptFolder compared standardizedFileURL paths; phone App Group is /private/var, so once scripts/ existed every new premade folder was refused PermissionDenied. Open: phone check on TestFlight; copy removal refused (T-3859 guard). Lesson: standardizedFileURL drops /private only for existing paths: the Simulator never shows it, test under /private/tmp.
 {% endraw %}
 
 

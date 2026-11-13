@@ -2,7 +2,7 @@
 layout: "default"
 title: "pywidget build plan (one page)"
 section: "documents"
-description: "Goal. Release version 1.0 on Tuesday 2026-12-15 (Day 55), inside the Investors&#x27; goal of release by Day 60 (2026-12-20). Feature freeze Monday 2026-11-30 (Day 40). Submit Tuesday 2026-12-08 (Day 48), with the Investors&#x27;\u2026"
+description: "Goal (11-04, replaced by the chair note of 2026-11-13 10:53 AM below; kept as written). Release version 1.0 on Tuesday 2026-12-15 (Day 55), inside the Investors&#x27; goal of release by Day 60 (2026-12-20). Feature freeze\u2026"
 ---
 <div class="crumbs" role="navigation" aria-label="Back"><a class="back" href="{{ '/documents/pywidget/build-plan/' | relative_url }}">← Build Plan</a><a href="{{ '/documents/pywidget/pywidget-plan.html' | relative_url }}" rel="bookmark">Permanent link</a></div>
 <div class="page-head"><div class="kicker"><span class="kind blue">Plan</span><span>Day 4 · Sun Oct 25</span><span><code>ops/plans/pywidget/plan.md</code></span></div><h1>pywidget build plan (one page)</h1><div class="byline"><img class="avatar" src="{{ '/assets/portraits/ines.svg' | relative_url }}" alt="Ines" title="Ines"><span>By <a href="{{ '/cast/ines.html' | relative_url }}">Ines</a>, CEO</span></div></div>
@@ -13,16 +13,45 @@ description: "Goal. Release version 1.0 on Tuesday 2026-12-15 (Day 55), inside t
 {% raw %}
 Ines, 2026-10-25 7:27 PM ET; redrawn 2026-10-31 1:02 PM ET (T-0888). Scope: pywidget/docs/decisions/ADR-001-mvp-and-phasing.md. Money: ops/requests/PROPOSAL-001-card.md "Decided" (#87). Brief: ops/plans/pywidget/build-brief.md. Every task is a line under "## Build: pywidget" on ops/board.md. Current dates and status: ops/milestones.json.
 
-**Goal.** Release version 1.0 on Tuesday 2026-12-15 (Day 55), inside the Investors' goal of release by Day 60 (2026-12-20). Feature freeze Monday 2026-11-30 (Day 40). Submit Tuesday 2026-12-08 (Day 48), with the Investors' approval. The date can move either way; every move goes in the next report and a comment on #41. v1 = the IDE (runtime, editor, console, projects, native prompts, Shortcuts) plus a narrow widget engine and 12 premade widgets, with one Pro purchase. Widget freshness is the first product priority (amendment 2026-10-29 7:33 AM).
+**Goal (11-04, replaced by the <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span> note of 2026-11-13 10:53 AM below; kept as written).** Release version 1.0 on Tuesday 2026-12-15 (Day 55), inside the Investors' goal of release by Day 60 (2026-12-20). Feature freeze Monday 2026-11-30 (Day 40). Submit Tuesday 2026-12-08 (Day 48), with the Investors' approval. The date can move either way; every move goes in the next report and a comment on #41. v1 = the IDE (runtime, editor, console, projects, native prompts, Shortcuts) plus a narrow widget engine and 12 premade widgets, with one Pro purchase. Widget freshness is the first product priority (amendment 2026-10-29 7:33 AM).
 
-## <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">Chair</span> note, 2026-10-31 1:02 PM ET (Ines, T-0888): release by Day 60
+## Chair note, 2026-11-13 10:53 AM ET (Ines, T-4266): 1.0 waits for the Builder; the plan re-dated to phases A to E
+
+an Investor answered Restructuring 01 with **A** (10:41 AM ET 11-13, #270 c6857711513): version 1.0 waits for the Builder. He answered 02 with **A** (10:42 AM, #271 c6857734527): nothing goes out near Day 60. He answered 03 with **A** (10:47 AM, #272 c6857855411): Pages are in 1.0. Rulings in log/rulings.md, effects in the Handbook. Recorded as chair; this note is the record. It replaces every date in this plan from Day 23 on: the 11-04 note's freeze (11-30), beta, submit (12-08), Dec 15 release and "1.1 early March", and the 10-31 note's Day 60 goal. There is no store release on Day 60 (2026-12-20). Dates and status: `ops/milestones.json`.
+
+**The phases** ([`documents/restructuring/05-timeline.md`](../restructuring/05-timeline.html) s1; weeks on the single Xcode slot; dates on the likely line, counted from 11-13):
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 1: Chair note, 2026-11-13 10:53 AM ET (Ines, T-4266): 1.0 waits for the Builder…, scrolls sideways" style="--tw:1082px" markdown="1">
+
+| Phase | What a phone must show to close it | Weeks (range) | Likely end |
+| --- | --- | --- | --- |
+| A. Prove what exists | All 12 premades draw on an Investor's iPhone (T-4180, T-3783); one sitting reads the widget extension's memory (T-0680). Python in the widget stays first priority unless proven impossible (#283, T-4267) | 1 (0.5 to 2) | Fri 11-20 |
+| B. Finish the IDE and widgets (T-4181 to T-4192), beside A | Five days on phones on an **internal** TestFlight build: editor, console, Shortcuts action, refresh; background refresh seen firing or cut; one test purchase of Pro (needs bank and tax). No outside-tester build (#271 A) | 3 (2.5 to 5) | Fri 12-11 |
+| C. Foundations, after A's proof (#282 A) | The Project first (one folder, one manifest, one ID, a tested migration; #281 A), then the read() and draw() contract, permissions and the outside-code notice, the tab shell, the Gallery's three choices | 5 (3 to 8) | Fri 2027-01-15 |
+| D. The Builder | Three proofs in order: the compiler in the app's own Python, preview speed, a non-coder makes and places a widget. **The firm release date is fixed at the first of these** (#270) | 6.5 on the slot, 3.5 beside (5 to 15 in all) | Mon 2027-03-01 |
+| Pages (#272 A) | A Page answers a tap while a widget refresh waits on the same run queue | 5 (3 to 8) | Mon 2027-04-05 |
+| E. Release 1.0 | The release candidate over the last beta keeps every project; purchase and restore work | 3 calendar (2 to 4) | **Mon 2027-04-26** |
+
+</div>
+
+
+**The release.** Likely late April 2027; range late February to late July 2027. How it is built: 05-timeline.md's own figures, its own method. 1.0's 15.5 slot weeks (9 to 25), plus Pages' 5 (3 to 8), plus phase E's 3 calendar weeks (2 to 4), counted from 11-13; best adds every low end, worst every high end. The same sum without Pages gives the 10:41 AM answer's late March (early February to early June), so the method reproduces it. Script: `ops/plans/T-4266-release-range.py`. The worst end assumes every phase runs long together, so the range is wide on purpose; the timeline leans to the upper half of every range, and so do I.
+
+**Near Day 60.** Nothing goes out (#271 A): no outside testers, no store release. Internal TestFlight builds for the Investors' phone proofs continue. The Final Report moves with the release (Commandment 48). The charter's Mission line still reads "by Day 60, 2026-12-20"; it is the Investors' text, so the company sent new wording as a proposal through the applier. The `release-goal` row stays in the milestones, marked late, until the Mission line changes.
+
+**What stands.** The 11-04 note's Pro (background refresh and themes, every premade free) and the #282 chair note above. The 11-04 table's 1.1 and 1.2 are replaced: the Builder and Pages are in 1.0, and what follows waits on decisions 4, 5 and 10. T-3386 (re-date the milestones) is covered by this note.
+
+What would make this fail: phase A's cause is not found and everything waits behind it; bank and tax and the name stay open; the block editor runs long; a second App Review rejection. Each moves the likely line, and each move goes in that day's report and on #41.
+
+## Chair note, 2026-10-31 1:02 PM ET (Ines, T-0888): release by Day 60
 
 Investor rule (an Investor, #41 c6546244045, amendment 2026-10-31 12:43 PM): no hard 30-day deadline, no $200 target or need date, release by Day 60, movable, moves reported. Decided alone, as chair; this note is the record (Commandment 30). It replaces every date in the chair note of 2026-10-29 8:03 AM from Day 21 on. The architecture in that note stands.
 
 **The dates.**
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 1: Chair note, 2026-10-31 13:02 ET (Ines, T-0888): release by Day 60, scrolls sideways" style="--tw:760px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 2: Chair note, 2026-10-31 13:02 ET (Ines, T-0888): release by Day 60, scrolls sideways" style="--tw:760px" markdown="1">
 
 | Day | Date | Milestone | Owner |
 | --- | --- | --- | --- |
@@ -59,7 +88,7 @@ Investor rule (an Investor, #41 c6546244045, amendment 2026-10-31 12:43 PM): no 
 **Day 30 items.**
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 2: Chair note, 2026-10-31 13:02 ET (Ines, T-0888): release by Day 60, scrolls sideways" style="--tw:498px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 3: Chair note, 2026-10-31 13:02 ET (Ines, T-0888): release by Day 60, scrolls sideways" style="--tw:498px" markdown="1">
 
 | Item | Ruling |
 | --- | --- |
@@ -86,7 +115,7 @@ What would make this fail: the lane fails its gates and T-0682 eats all the slac
 **History.** The rows for Days 5-8 stand. The rows for Days 9-17 are the plan of 2026-10-25, kept as written and no longer current: they were replaced by the chair note of 2026-10-29 8:03 AM below, and that table's rows from Day 21 on by the chair note of 2026-10-31 1:02 PM above.
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 3: Milestones and owners (2026-10-25, history), scrolls sideways" data-n="1" style="--tw:769px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 4: Milestones and owners (2026-10-25, history), scrolls sideways" data-n="1" style="--tw:769px" markdown="1">
 
 | Day | Date | Milestone | Owner |
 | --- | --- | --- | --- |
@@ -110,7 +139,7 @@ What would make this fail: the lane fails its gates and T-0682 eats all the slac
 ## Model per kind of work (Tenet 6)
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 4: Model per kind of work (Tenet 6), scrolls sideways" style="--tw:640px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 5: Model per kind of work (Tenet 6), scrolls sideways" style="--tw:640px" markdown="1">
 
 | Work | Model, effort |
 | --- | --- |
@@ -139,7 +168,7 @@ Ruled in ops/plans/pywidget/xcode-queue-day6-10.md. Main slot order: T-0206 (run
 Investor rule (amendments.md, 2026-10-29 7:33 AM): widget freshness beats a quick launch, Day 17 is flexible. Ruled in ADR-007's chair line of 2026-10-29 08:03: Python runs in the widget extension for `lane: widget` scripts (ADR-007 option c), built now behind the flag, the flag's default set from device numbers before the release candidate; the declared Swift steps (net fetch, location, steps) ship either way; bound fields are a specified contingency built only if the lane fails its gates. About 7 new days on Idris's lane. New milestones; rows above Day 9 stand.
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 5: Chair note, 2026-10-29 08:03 ET (Ines, T-0671): widget freshness moves the dates, scrolls sideways" style="--tw:760px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 6: Chair note, 2026-10-29 08:03 ET (Ines, T-0671): widget freshness moves the dates, scrolls sideways" style="--tw:760px" markdown="1">
 
 | Day | Date | Milestone | Owner |
 | --- | --- | --- | --- |
@@ -197,7 +226,7 @@ Investor an Investor chose **B-staged** on #142 (c6648346528, 2026-11-04 9:50 PM
 **Version 1.0, release Tuesday 2026-12-15 (holds).**
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 6: Chair note, 2026-11-04 22:03 ET (Ines, T-2354): version 1.0 re-planned around…, scrolls sideways" style="--tw:1129px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 7: Chair note, 2026-11-04 22:03 ET (Ines, T-2354): version 1.0 re-planned around…, scrolls sideways" style="--tw:1129px" markdown="1">
 
 | Item | What 1.0 holds | Lines | Cost |
 | --- | --- | --- | --- |
@@ -215,7 +244,7 @@ Investor an Investor chose **B-staged** on #142 (c6648346528, 2026-11-04 9:50 PM
 **After 1.0.**
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 7: Chair note, 2026-11-04 22:03 ET (Ines, T-2354): version 1.0 re-planned around…, scrolls sideways" style="--tw:960px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 8: Chair note, 2026-11-04 22:03 ET (Ines, T-2354): version 1.0 re-planned around…, scrolls sideways" style="--tw:960px" markdown="1">
 
 | Version | Holds | Needs from the Investors first |
 | --- | --- | --- |
@@ -229,6 +258,16 @@ Investor an Investor chose **B-staged** on #142 (c6648346528, 2026-11-04 9:50 PM
 **Date effect.** 1.0 gains about 4 of Idris's days (previews 2.5, all-free gallery and the Pro check 1.5) against the 5 days of slack in the 10-31 note; about one day is left. The site and copy work falls outside his lane. Dec 15 holds. The pull-in check (Day 30) stays as written, but with one day of slack it has no room to move release in by seven days; I expect the table to stand and will report the check anyway. Nothing B-staged moved out of 1.0 gets built for 1.0: Builder, AI keys, web projects, buttons, advanced libraries, sharing.
 
 What would make this fail: the device test fails and the previews go again; background refresh misses 1.0 and Pro at launch is themes only; a free app with a thin Pro sells little, which is the price of a clean first submission.
+
+## Chair note, 2026-11-13 10:31 AM ET (Ines, T-4264): phone first (Restructuring 13, #282)
+
+an Investor answered Restructuring decision 13 with **A** (10:23 AM ET 11-13, #282 c6857295904; log/rulings.md 2026-11-13 10:23 AM; the Handbook's standing instructions). Recorded as chair; this note is the record. Phases A to E are those of [`documents/restructuring/05-timeline.md`](../restructuring/05-timeline.html) section 1.
+
+- **Phase A first.** Phases C (foundations) and D (the Builder) start only after phase A's phone proof passes: all 12 premades draw on an Investor's iPhone (T-4180, closing the premades phone failure T-3783). No restructuring work starts before then.
+- **Every phase's done condition includes test point 4** of `05-timeline.md`: the phone proof, on a TestFlight build in an Investor's hands. Tests on the Mac, the Simulator suite and review (points 1 to 3) do not close a phase alone. Each phone sitting is still asked for on its own.
+- **Phase B continues beside the fix.** an Investor answered the Operator's follow-up (#282 c6857389786) with "B continues" (10:34 AM ET 11-13, #282 c6857553642; log/rulings.md 2026-11-13 10:34 AM): phase B (T-4181 to T-4192, finishing the existing IDE and widgets) runs alongside phase A; only phases C and D wait for phase A's phone proof.
+
+The 11-04 dates above are not re-dated here; that waits on decisions 1 and 2 (#270, #271). What would make this fail: the premades proof needs a device export (#231, due about 11-15) and an Investor's sitting; if either slips, C and D slip with it, and I say so in that day's report.
 {% endraw %}
 
 </div>

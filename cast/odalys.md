@@ -65,7 +65,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 ## Lessons
 
-- The scratch copy's board is HEAD's, not main folder's: a test red only in the copy (site_t3187 40-for-39) may be data, so rerun it in the copy without the change first.
+- Gate reds (exit 65) are MacBook-runner iOS jobs (land_xc.py): this machine's load never explains them. Load comes from xcodebuild and host suites minutes after a start, not the start itself (T-4265, no start line).
 {% endraw %}
 
 

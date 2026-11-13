@@ -1,22 +1,11 @@
 {
  "schema": 1,
- "at": "2026-11-13T18:45:09.224242+00:00",
+ "at": "2026-11-13T18:48:14.898836+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-13T11:32:07-05:00",
   "flow": [
-   {
-    "t": "T-4100",
-    "name": "Build the typed Links field and the ledger apply",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1794595471
-     }
-    ]
-   },
    {
     "t": "T-4252",
     "w": "Pernille",
@@ -49,6 +38,15 @@
    }
   ],
   "done": [
+   {
+    "t": "T-4100",
+    "name": "Build the typed Links field and the ledger apply",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "failed",
+    "end_at": 1794595610,
+    "why": "did not merge cleanly"
+   },
    {
     "t": "T-4124",
     "name": "Find every slowdown the company built into its own process",
@@ -98,7 +96,7 @@
    }
   ],
   "landed": 6,
-  "failed": 0
+  "failed": 1
  },
  "workers": [
   {
@@ -106,7 +104,7 @@
    "task": "[design] T-4287 Home lists in scroll boxes",
    "model": "opus",
    "started": "2026-11-13T17:03:21.535Z",
-   "seconds": 6107,
+   "seconds": 6293,
    "finished": null,
    "effort": "high"
   },
@@ -115,7 +113,7 @@
    "task": "[tools] T-4284 Audit mode slice 1 pause off",
    "model": "opus",
    "started": "2026-11-13T17:29:09.476Z",
-   "seconds": 4559,
+   "seconds": 4745,
    "finished": null,
    "effort": "high"
   },
@@ -124,7 +122,7 @@
    "task": "[build] T-4303 fix https shim before switch-on",
    "model": "opus",
    "started": "2026-11-13T18:07:27.081Z",
-   "seconds": 2262,
+   "seconds": 2447,
    "finished": null,
    "effort": "high"
   },
@@ -133,7 +131,7 @@
    "task": "[review] T-4309 review net.request",
    "model": "opus",
    "started": "2026-11-13T18:43:55.355Z",
-   "seconds": 73,
+   "seconds": 259,
    "finished": null,
    "effort": "high"
   },
@@ -142,7 +140,7 @@
    "task": "[build] T-3821 large web bodies via file",
    "model": "opus",
    "started": "2026-11-13T18:44:01.508Z",
-   "seconds": 67,
+   "seconds": 253,
    "finished": null,
    "effort": "high"
   }
@@ -234,7 +232,7 @@
   "week_pct": 43.7,
   "usage_pct": 32.7,
   "work_pct": 78.9,
-  "read_at": "2026-11-13T18:45:00+00:00",
+  "read_at": "2026-11-13T18:48:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -271,7 +269,7 @@
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-13T13:45:00-05:00",
+  "at": "2026-11-13T13:48:00-05:00",
   "mode": null,
   "modes": {
    "main": "spread",
@@ -468,6 +466,11 @@
   ],
   "done": [
    {
+    "w": "Maren",
+    "t": "Home's In flight and Queued lists now show every task, with no Show more or Show fewer buttons;...",
+    "at": "2026-11-13T13:45:00-05:00"
+   },
+   {
     "w": "Idris",
     "t": "Scripts can now make any kind of web request (send data, get images or files back) through the...",
     "at": "2026-11-13T13:42:00-05:00"
@@ -476,11 +479,6 @@
     "w": "Ines",
     "t": "The efficiency review now has its 11-13 follow-up: lane records reach the board in minutes while...",
     "at": "2026-11-13T13:07:00-05:00"
-   },
-   {
-    "w": "Idris",
-    "t": "Checked Pernille's new route for scripts' secure (https) web requests through the iPhone's own...",
-    "at": "2026-11-13T13:05:00-05:00"
    }
   ],
   "count": {
@@ -490,8 +488,12 @@
    "you": 19
   },
   "fin": {
-   "n": 17,
+   "n": 18,
    "rows": [
+    [
+     "T-4287",
+     "Show all Queued and In..."
+    ],
     [
      "T-3820",
      "Add the general web request..."
@@ -511,10 +513,6 @@
     [
      "T-4277",
      "Offer free premades when the..."
-    ],
-    [
-     "T-3400",
-     "Send Python's https through..."
     ]
    ]
   }
@@ -558,69 +556,76 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-13T18:45:03Z",
+  "at": "2026-11-13T18:48:14Z",
   "s": {
-   "T-4100": [
-    "merging",
-    "Host checks on the Mac mini \u00b7 1 group of tests done",
-    1794595503217
-   ],
    "T-4124": [
-    "mergeq",
-    "1st to merge",
-    1794593343217
+    "merging",
+    "Merging onto main",
+    1794595694898
    ],
    "T-4284": [
     "merging",
     "Mac tests at the main gate",
-    1794594723217
-   ],
-   "T-4287": [
-    "merging",
-    "Mac tests at the main gate",
-    1794595203217
+    1794594674898
    ],
    "T-4303": [
+    "merging",
+    "Mac tests at the main gate",
+    1794595574898
+   ],
+   "T-4288": [
     "testing",
     "its own tests, in its copy",
-    1794594243217
+    1794595634898
+   ],
+   "T-3821": [
+    "testing",
+    "its own tests, in its copy",
+    1794595694898
+   ],
+   "T-4287": [
+    "merged",
+    "on main 1:45 PM ET",
+    1794595529000,
+    "Maren"
    ]
   },
   "nm": {
-   "T-4100": "Build the typed Links field and the ledger apply",
    "T-4124": "Find every slowdown the company built into its own process",
    "T-4284": "Add an Audit mode for one audit on chosen accounts",
-   "T-4287": "Show all Queued and In flight tasks in scroll boxes",
-   "T-4303": "Fix the https shim before it turns on"
+   "T-4303": "Fix the https shim before it turns on",
+   "T-4288": "Fold the colour key on Home into a dropdown",
+   "T-3821": "Pass large web bodies through a file",
+   "T-4287": "Show all Queued and In flight tasks in scroll boxes"
   }
  },
  "ln": {
-  "at": "2026-11-13T18:45:03Z",
+  "at": "2026-11-13T18:48:14Z",
   "mq": {
    "n": {
     "checking": 1,
-    "inline": 1,
-    "conflicted": 2,
+    "inline": 0,
+    "conflicted": 3,
     "failed": 0,
     "held": 0,
     "retry": 1,
-    "parked": 6
+    "parked": 7
    },
    "m": {
     "checking": 0,
-    "inline": 36,
-    "conflicted": 1627,
+    "inline": null,
+    "conflicted": 1597,
     "failed": null,
     "held": null,
-    "retry": 111,
-    "parked": 112
+    "retry": 114,
+    "parked": 115
    },
    "cur": [
     [
      [
-      "T-4100"
+      "T-4124"
      ],
-     "Mac tests",
+     "going onto main",
      "Mac mini",
      0
     ]
@@ -632,12 +637,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-13T18:44:20Z",
-    "ld": 5.52,
+    "at": "2026-11-13T18:47:49Z",
+    "ld": 4.71,
     "c": 8,
     "sb": 0,
     "dk": [
-     18.1,
+     18.2,
      228.3
     ],
     "ss": [
@@ -666,33 +671,21 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Inbox \u2013 Evan's 1:44 PM Message on GitHub",
-   "at": "2026-11-13T13:44:55-05:00"
+   "t": "Work session \u2013 16 tasks",
+   "at": "2026-11-13T13:47:58-05:00"
   }
  ],
  "reply": {
-  "sent": "2026-11-13T18:41:15Z",
-  "seconds": 91.0
+  "sent": "2026-11-13T18:46:43Z",
+  "seconds": 74.0
  },
- "inbox": [
-  {
-   "id": "c6861885015",
-   "state": "received",
-   "position": 1,
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "Are you still working on Evan's..."
-  }
- ],
+ "inbox": [],
  "trimmed": [
   "lane_next",
   "queue_text",
   "recent",
   "task_done",
   "fin_short",
-  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -704,10 +697,10 @@
   "main": 5,
   "lanes": 0,
   "total": 5,
-  "at": "1:45 PM",
+  "at": "1:48 PM",
   "why": "",
-  "at_iso": "2026-11-13T18:45:00+00:00",
+  "at_iso": "2026-11-13T18:48:00+00:00",
   "started": "11:32 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 5, started 11:32 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 1:45 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 5, started 11:32 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 1:48 PM ET</p></section>"
  }
 }

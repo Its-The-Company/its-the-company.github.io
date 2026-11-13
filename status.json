@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-13T16:47:29.880473+00:00",
+ "at": "2026-11-13T16:50:30.917126+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -63,16 +63,7 @@
    "task": "[release] T-4270 build 6 to TestFlight",
    "model": "opus",
    "started": "2026-11-13T16:33:29.474Z",
-   "seconds": 840,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "maren",
-   "task": "[design] T-4271 Builder drag-and-drop mock-ups",
-   "model": "opus",
-   "started": "2026-11-13T16:33:37.534Z",
-   "seconds": 832,
+   "seconds": 1021,
    "finished": null,
    "effort": "high"
   },
@@ -81,7 +72,7 @@
    "task": "[build] T-4258 land completion list fixes",
    "model": "opus",
    "started": "2026-11-13T16:35:40.793Z",
-   "seconds": 709,
+   "seconds": 890,
    "finished": null,
    "effort": "high"
   },
@@ -90,22 +81,38 @@
    "task": "[tools] T-4275 gate runs new app suites",
    "model": "opus",
    "started": "2026-11-13T16:38:14.339Z",
-   "seconds": 555,
+   "seconds": 736,
    "finished": null,
    "effort": "high"
+  },
+  {
+   "name": "ines",
+   "task": "[plan] T-4272 design records to approved tables",
+   "model": "opus",
+   "started": "2026-11-13T16:48:45.801Z",
+   "seconds": 105,
+   "finished": null,
+   "effort": "high"
+  }
+ ],
+ "who": "Idris x2, Odalys, Ines",
+ "recent": [
+  {
+   "name": "maren",
+   "task": "[design] T-4271 Builder drag-and-drop mock-ups",
+   "model": "opus",
+   "started": "2026-11-13T16:33:37.534Z",
+   "seconds": null,
+   "finished": "2026-11-13T16:50:14.600000+00:00"
   },
   {
    "name": "ines",
    "task": "[plan] T-4267 land ADR-007 addendum",
    "model": "opus",
    "started": "2026-11-13T16:41:59.826Z",
-   "seconds": 330,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Idris x2, Maren, Odalys, Ines",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-13T16:48:22.444000+00:00"
+  },
   {
    "name": "ines",
    "task": "[plan] T-4267 in-widget Python first plan",
@@ -121,14 +128,6 @@
    "started": "2026-11-13T16:33:43.235Z",
    "seconds": null,
    "finished": "2026-11-13T16:39:29.097000+00:00"
-  },
-  {
-   "name": "ines",
-   "task": "[plan] T-3400 route past the gate gap",
-   "model": "opus",
-   "started": "2026-11-13T16:35:08.528Z",
-   "seconds": null,
-   "finished": "2026-11-13T16:37:59.420000+00:00"
   }
  ],
  "queue": {
@@ -183,7 +182,7 @@
   "week_pct": 43.7,
   "usage_pct": 32.7,
   "work_pct": 78.9,
-  "read_at": "2026-11-13T16:47:00+00:00",
+  "read_at": "2026-11-13T16:50:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -259,7 +258,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-13T11:47:00-05:00",
+  "at": "2026-11-13T11:50:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -285,15 +284,6 @@
    "effort": "high"
   },
   {
-   "name": "Maren",
-   "state": "running",
-   "task": "[design] T-4271 Builder drag-and-drop mock-ups",
-   "model": "opus",
-   "since": "2026-11-13T16:33:37.534Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
    "name": "Odalys",
    "state": "running",
    "task": "[tools] T-4275 gate runs new app suites",
@@ -305,9 +295,9 @@
   {
    "name": "Ines",
    "state": "running",
-   "task": "[plan] T-4267 land ADR-007 addendum",
+   "task": "[plan] T-4272 design records to approved tables",
    "model": "opus",
-   "since": "2026-11-13T16:41:59.826Z",
+   "since": "2026-11-13T16:48:45.801Z",
    "next": [],
    "effort": "high"
   },
@@ -326,6 +316,14 @@
    "model": null,
    "since": null,
    "next": []
+  },
+  {
+   "name": "Maren",
+   "state": "next",
+   "task": "Maren, P3, PROPOSAL-003 store captions, after Ines or...",
+   "model": null,
+   "since": null,
+   "next": []
   }
  ],
  "tasks": {
@@ -339,16 +337,6 @@
     "at": "2026-11-13T16:33:29.474Z",
     "o": "c",
     "task": "T-4270"
-   },
-   {
-    "w": "Maren",
-    "k": "design",
-    "t": "Draw a drag-and-drop front end for the Builder",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-13T16:33:37.534Z",
-    "o": "i",
-    "task": "T-4271"
    },
    {
     "w": "Idris",
@@ -373,12 +361,12 @@
    {
     "w": "Ines",
     "k": "plan",
-    "t": "Plan in-widget Python first with a shown fallback",
+    "t": "Rewrite the design records to the approved tables",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-13T16:41:59.826Z",
+    "at": "2026-11-13T16:48:45.801Z",
     "o": "c",
-    "task": "T-4267"
+    "task": "T-4272"
    }
   ],
   "src": "plan",
@@ -456,19 +444,19 @@
   ],
   "done": [
    {
+    "w": "Ines",
+    "t": "Widget scripts now run inside the widget first, as the Investor ruled; ADR-007 (the app's...",
+    "at": "2026-11-13T11:48:00-05:00"
+   },
+   {
+    "w": "Maren",
+    "t": "Drew two drag-and-drop designs for the Builder (pieces that snap into rows and columns on the...",
+    "at": "2026-11-13T11:48:00-05:00"
+   },
+   {
     "w": "Pernille",
     "t": "Independent check of the fix that keeps free widgets drawing when the App Store purchase check...",
     "at": "2026-11-13T11:38:00-05:00"
-   },
-   {
-    "w": "Idris",
-    "t": "When the App Store purchase check hangs, the person's own widgets and the free ready-made...",
-    "at": "2026-11-13T11:38:00-05:00"
-   },
-   {
-    "w": "Operator",
-    "t": "The task queue clean-up was not reaching Evan's or Jeremy's accounts because each step's 'run...",
-    "at": "2026-11-13T11:16:00-05:00"
    }
   ],
   "count": {
@@ -478,8 +466,16 @@
    "you": 18
   },
   "fin": {
-   "n": 2,
+   "n": 4,
    "rows": [
+    [
+     "T-4267",
+     "Plan in-widget Python first..."
+    ],
+    [
+     "T-4271",
+     "Draw a drag-and-drop front..."
+    ],
     [
      "T-4268",
      "Review the hung store check fix"
@@ -530,46 +526,26 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-13T16:47:14Z",
+  "at": "2026-11-13T16:50:20Z",
   "s": {
    "T-4258": [
-    "merging",
-    "Mac tests at the main gate \u00b7 5 groups of tests done",
-    1794587834912
-   ],
-   "T-4267": [
-    "testing",
-    "its own tests, in its copy",
-    1794588194912
-   ],
-   "T-4275": [
-    "testing",
-    "its own tests, in its copy",
-    1794588194912
-   ],
-   "T-4271": [
-    "merged",
-    "on main 11:47 AM ET",
-    1794588434000,
-    "Maren"
+    "mergetest",
+    "iPhone tests on the MacBook",
+    null
    ],
    "T-4270": [
-    "merged",
-    "on main 11:45 AM ET",
-    1794588350000,
-    ""
+    "testing",
+    "Mac Mini \u00b7 test",
+    null
    ]
   },
   "nm": {
    "T-4258": "Pin the completion list under the typed word",
-   "T-4267": "Plan in-widget Python first with a shown fallback",
-   "T-4275": "Gate runs a new app test suite when landing",
-   "T-4271": "Draw a drag-and-drop front end for the Builder",
    "T-4270": "Send build 6 with the premades fix to TestFlight"
   }
  },
  "ln": {
-  "at": "2026-11-13T16:47:14Z",
+  "at": "2026-11-13T16:50:20Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -583,11 +559,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 1510,
+    "conflicted": 1513,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 7161
+    "parked": 7164
    },
    "cur": [],
    "ld": [
@@ -597,8 +573,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-13T16:46:52Z",
-    "ld": 8.09,
+    "at": "2026-11-13T16:50:23Z",
+    "ld": 6.77,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -612,8 +588,8 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-13T16:45:46Z",
-    "ld": 1.2,
+    "at": "2026-11-13T16:47:52Z",
+    "ld": 0.87,
     "c": 12,
     "sb": 0,
     "dk": [
@@ -631,7 +607,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 6 tasks",
+   "t": "Work session \u2013 7 tasks",
    "at": "2026-11-13T11:32:07-05:00"
   },
   {
@@ -649,8 +625,8 @@
    "sr": 1,
    "m": "opus",
    "e": "xhigh",
-   "t": "Inbox \u2013 Evan's 11:46 AM Message on GitHub",
-   "at": "2026-11-13T11:46:58-05:00"
+   "t": "Work session \u2013 1 task",
+   "at": "2026-11-13T11:47:36-05:00"
   },
   {
    "w": "Operator",
@@ -663,27 +639,16 @@
   }
  ],
  "reply": {
-  "sent": "2026-11-13T16:43:11Z",
-  "seconds": 96.0
+  "sent": "2026-11-13T16:46:45Z",
+  "seconds": 23.0
  },
- "inbox": [
-  {
-   "id": "c6859212577",
-   "state": "received",
-   "position": 1,
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "Thank you, this is exactly what I am..."
-  }
- ],
+ "inbox": [],
  "trimmed": [
   "lane_next",
   "queue_text",
+  "recent",
   "task_done",
   "fin_short",
-  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -691,13 +656,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 5,
+  "main": 4,
   "lanes": 3,
-  "total": 8,
-  "at": "11:47 AM",
+  "total": 7,
+  "at": "11:50 AM",
   "why": "",
-  "at_iso": "2026-11-13T16:47:00+00:00",
+  "at_iso": "2026-11-13T16:50:00+00:00",
   "started": "11:32 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>8</b> agents running now</p><p class=\"an-sub\">Main session 5, started 11:32 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 11:47 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 4, started 11:32 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 11:50 AM ET</p></section>"
  }
 }

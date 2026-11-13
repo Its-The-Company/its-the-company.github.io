@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-13T14:18:16.307478+00:00",
+ "at": "2026-11-13T14:21:21.031545+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -40,27 +40,10 @@
     "steps": [],
     "end": "landed",
     "end_at": 1794543527
-   },
-   {
-    "t": "T-4127",
-    "name": "Run the Restructuring on Evan's account",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "failed",
-    "end_at": 1794536337,
-    "why": "did not merge cleanly"
-   },
-   {
-    "t": "T-4117",
-    "name": "Judge the next hundred efficiency lines",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794536316
    }
   ],
-  "landed": 4,
-  "failed": 1
+  "landed": 3,
+  "failed": 0
  },
  "workers": [
   {
@@ -68,7 +51,7 @@
    "task": "[site] T-4004 then T-3735 Home in flight and blocked",
    "model": "opus",
    "started": "2026-11-13T13:53:09.418Z",
-   "seconds": 1506,
+   "seconds": 1691,
    "finished": null,
    "effort": "high"
   },
@@ -77,7 +60,7 @@
    "task": "[build] T-4254 T-4255 T-4256 T-4261 editor mark fixes",
    "model": "opus",
    "started": "2026-11-13T14:11:26.887Z",
-   "seconds": 409,
+   "seconds": 594,
    "finished": null,
    "effort": "high"
   }
@@ -169,7 +152,7 @@
   "week_pct": 42.8,
   "usage_pct": 33.2,
   "work_pct": 79.5,
-  "read_at": "2026-11-13T14:18:00+00:00",
+  "read_at": "2026-11-13T14:21:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -199,14 +182,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-13T09:16:00-05:00",
+   "at": "2026-11-13T09:18:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-13T09:18:00-05:00",
+  "at": "2026-11-13T09:21:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -461,20 +444,26 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-13T14:18:16Z",
+  "at": "2026-11-13T14:21:02Z",
   "s": {
+   "T-4254": [
+    "testing",
+    "Mac Mini \u00b7 test",
+    null
+   ],
    "T-3735": [
     "testing",
     "its own tests, in its copy",
-    1794579136307
+    1794579182082
    ]
   },
   "nm": {
+   "T-4254": "Never mark the word being typed",
    "T-3735": "Show what blocks each blocked task on Home"
   }
  },
  "ln": {
-  "at": "2026-11-13T14:18:16Z",
+  "at": "2026-11-13T14:21:02Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -488,11 +477,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 1361,
+    "conflicted": 1363,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 7012
+    "parked": 7015
    },
    "cur": [],
    "ld": [
@@ -502,12 +491,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-13T14:18:16Z",
-    "ld": 2.83,
+    "at": "2026-11-13T14:21:02Z",
+    "ld": 2.18,
     "c": 8,
     "sb": 1,
     "dk": [
-     25.2,
+     24.8,
      228.3
     ],
     "ss": [
@@ -564,10 +553,10 @@
   "main": 2,
   "lanes": 0,
   "total": 2,
-  "at": "9:18 AM",
+  "at": "9:21 AM",
   "why": "",
-  "at_iso": "2026-11-13T14:18:00+00:00",
+  "at_iso": "2026-11-13T14:21:00+00:00",
   "started": "7:21 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 7:21 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:18 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 7:21 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:21 AM ET</p></section>"
  }
 }

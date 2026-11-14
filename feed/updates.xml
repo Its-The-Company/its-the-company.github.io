@@ -4,8 +4,15 @@
 <link href="https://its-the-company.github.io/feed/updates.xml" rel="self"/>
 <link href="https://its-the-company.github.io/"/>
 <id>https://its-the-company.github.io/feed/updates.xml</id>
-<updated>2026-11-14T09:11:22-05:00</updated>
+<updated>2026-11-14T14:14:21-05:00</updated>
 <author><name>The Company</name></author>
+<entry>
+<title>Decision: T-4437 (queue audit, slice 7): the app-first order is queued as 146 board moves for 143 ap</title>
+<link href="https://its-the-company.github.io/"/>
+<id>tag:its-the-company.github.io,2026-11-14:event/2026-11-14t14-14-21-05-00-decision-t-4437-queue-audit-slice-7-the-app-f</id>
+<updated>2026-11-14T14:14:21-05:00</updated>
+<summary type="text">T-4437 (queue audit, slice 7): the app-first order is queued as 146 board moves for 143 app lines; 19 app lines stay with a reason (8 on an open Restructuring decision, 3 behind T-4186, 4 active, 4 whose move would raise a parent&#x27;s priority). T-3675 ticked on evidence, so the feature list&#x27;s check is</summary>
+</entry>
 <entry>
 <title>Review: T-4439 landed a1d5dc5e46: T-3279 review PASS with findings (0 High, M1-M3, L1-L3); follow-</title>
 <link href="https://its-the-company.github.io/"/>
@@ -348,12 +355,5 @@
 <id>tag:its-the-company.github.io,2026-11-08:event/2026-11-08t02-59-01-05-00-decision-t-3406-restart-under-t-0848-the-refused</id>
 <updated>2026-11-08T02:59:01-05:00</updated>
 <summary type="text">T-3406 restart under T-0848: the refused effect was a test deleting a temp path named log (rm -rf &quot;$T/log&quot;). Dropped: the new test is its own file, deletes nothing, names no log path; its temp tree sits in the scratch folder. A second refusal goes to Ines.</summary>
-</entry>
-<entry>
-<title>Decision: ADR-009 accepted: scripts lose import ssl in 1.0; Python https moves to Apple&#x27;s encryption</title>
-<link href="https://its-the-company.github.io/"/>
-<id>tag:its-the-company.github.io,2026-11-07:event/2026-11-07t23-03-47-05-00-decision-adr-009-accepted-scripts-lose-import-ss</id>
-<updated>2026-11-07T23:03:47-05:00</updated>
-<summary type="text">ADR-009 accepted: scripts lose import ssl in 1.0; Python https moves to Apple&#x27;s encryption and OpenSSL leaves, if done by the 2026-11-30 freeze, else 1.0.1. Export answer card drafted for #138.</summary>
 </entry>
 </feed>

@@ -1,19 +1,23 @@
 {
  "schema": 1,
- "at": "2026-11-14T23:29:13.261884+00:00",
+ "at": "2026-11-14T23:48:26.561571+00:00",
  "session": {
   "active": false,
   "kind": "",
   "started": null,
   "flow": [
    {
-    "t": "T-4437",
-    "name": "Finish the queue audit's order and last refused rows",
-    "acct": "Personal b",
+    "t": "T-4445",
+    "name": "Show task states in place of new lines",
+    "acct": "Personal a",
     "steps": [
      {
+      "s": "testq",
+      "at": 1794699269
+     },
+     {
       "s": "landing",
-      "at": 1794684076
+      "at": 1794699312
      }
     ]
    },
@@ -29,6 +33,39 @@
    }
   ],
   "done": [
+   {
+    "t": "T-4447",
+    "name": "Replay the queue check against the audit's verdicts",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "failed",
+    "end_at": 1794699896,
+    "why": "did not merge cleanly"
+   },
+   {
+    "t": "T-3399",
+    "name": "Add the Investors' encryption answer to the app's settings",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794699486
+   },
+   {
+    "t": "T-4228",
+    "name": "Group new app tasks into features automatically",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794699486
+   },
+   {
+    "t": "T-4437",
+    "name": "Finish the queue audit's order and last refused rows",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794699261
+   },
    {
     "t": "T-4458",
     "name": "Stop the other tools committing each record they write",
@@ -76,42 +113,10 @@
     "steps": [],
     "end": "landed",
     "end_at": 1794680490
-   },
-   {
-    "t": "T-4188",
-    "name": "Location, steps and notifications work in scripts and widgets",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794680453
-   },
-   {
-    "t": "T-4446",
-    "name": "Commit the company's records once per supervisor round",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794680443
-   },
-   {
-    "t": "T-4194",
-    "name": "Build the feature session for app work",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794668680
-   },
-   {
-    "t": "T-4103",
-    "name": "Build the queue-check sweep into the sweep system",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794667042
    }
   ],
-  "landed": 12,
-  "failed": 0
+  "landed": 15,
+  "failed": 1
  },
  "workers": [],
  "who": "",
@@ -153,35 +158,35 @@
   "runnable": [],
   "blocked": [],
   "runnable_count": 364,
-  "blocked_count": 86
+  "blocked_count": 85
  },
  "meter": {
   "five_hour": {
    "pct": 0.0,
    "resets_at": null,
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-14T17:52:40.737405-05:00",
+   "read_at": "2026-11-14T18:30:07.538352-05:00",
    "source": "usage",
    "left": 100.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 100.0,
-   "resets_at": "2026-11-15T06:59:59.554219+00:00",
+   "resets_at": "2026-11-15T06:59:59.061894+00:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-14T17:52:40.737405-05:00",
+   "read_at": "2026-11-14T18:30:07.538352-05:00",
    "source": "usage",
    "left": 0.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 5.0,
-   "resets_at": "2026-11-15T06:59:59.554364+00:00",
+   "resets_at": "2026-11-15T07:00:00.062029+00:00",
    "used_words": "of the Fable weekly allowance used",
-   "read_at": "2026-11-14T17:52:40.737405-05:00",
+   "read_at": "2026-11-14T18:30:07.538352-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-14T17:52:40.737405-05:00"
+  "read_at": "2026-11-14T18:30:07.538352-05:00"
  },
  "ui": {
   "week_pct": 0.462,
@@ -196,26 +201,13 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-14T18:07:41-05:00",
+ "next_tick": "2026-11-14T18:45:08-05:00",
  "personal": {
-  "week_pct": 56.44,
-  "usage_pct": 36.1,
-  "work_pct": 81.2,
-  "read_at": "2026-11-14T23:31:00+00:00",
-  "running": [
-   {
-    "lane": "a3",
-    "task": "T-4447",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Replay the queue check against the audit's verdicts",
-    "m": "opus",
-    "e": "xhigh",
-    "at": "2026-11-14T18:00:17-05:00",
-    "n": "Evan",
-    "src": "plan-a"
-   }
-  ]
+  "week_pct": 57.14,
+  "usage_pct": 36.4,
+  "work_pct": 81.4,
+  "read_at": "2026-11-14T23:50:00+00:00",
+  "running": []
  },
  "api_credits": [
   {
@@ -235,23 +227,23 @@
   }
  ],
  "disk": {
-  "free_gb": 18,
+  "free_gb": 20,
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 186
+   "free_gb": 188
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-14T18:24:00-05:00",
+   "at": "2026-11-14T18:48:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-14T18:31:00-05:00",
+  "at": "2026-11-14T18:50:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -282,7 +274,23 @@
   {
    "name": "Odalys",
    "state": "next",
-   "task": "Odalys, P1, build T-1776 stages 2-4 now (T-2073, T-2074,...",
+   "task": "A lane record main refused: failed...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
+   "name": "Wrenna",
+   "state": "next",
+   "task": "Wrenna, P2, T-2375 continuation (B-staged item 3...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
+   "name": "Maren",
+   "state": "next",
+   "task": "Maren, P2, found on T-3366 (11-07): in...",
    "model": null,
    "since": null,
    "next": []
@@ -294,27 +302,39 @@
    "model": null,
    "since": null,
    "next": []
-  },
-  {
-   "name": "Maren",
-   "state": "next",
-   "task": "Maren, P1, from Investor an Investor c6860226572 (12:31 PM...",
-   "model": null,
-   "since": null,
-   "next": []
-  },
-  {
-   "name": "Wrenna",
-   "state": "next",
-   "task": "Read developer.apple.com \"Keeping a widget up to date\",...",
-   "model": null,
-   "since": null,
-   "next": []
   }
  ],
  "tasks": {
   "run": [],
   "open": [
+   {
+    "w": "Pernille",
+    "k": "build",
+    "t": "Keep real packages out until the sandbox is...",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "Every premade widget draws on the iPhone",
+    "s": "next",
+    "o": "i"
+   },
+   {
+    "w": "Idris",
+    "k": "measure",
+    "t": "Run the device test session for the widget...",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "fix",
+    "t": "Fix the location bridge test that failed on...",
+    "s": "next",
+    "o": "c"
+   },
    {
     "w": "Odalys",
     "k": "tools",
@@ -337,13 +357,6 @@
     "o": "i"
    },
    {
-    "w": "Pernille",
-    "k": "build",
-    "t": "Keep real packages out until the sandbox is...",
-    "s": "next",
-    "o": "c"
-   },
-   {
     "w": "Odalys",
     "k": "site",
     "t": "Draw the app's diagrams from its code on the...",
@@ -363,51 +376,30 @@
     "t": "Retire the Set aside stage on Home",
     "s": "next",
     "o": "i"
-   },
-   {
-    "w": "Ines",
-    "k": "ops",
-    "t": "Finish the queue audit's order and last...",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "ops",
-    "t": "Open the audit lines to every account and...",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Add the task card slots when a line is made",
-    "s": "next",
-    "o": "i"
    }
   ],
   "done": [
    {
+    "w": "Ines",
+    "t": "New app tasks are now sorted into the app's features by code. When a task is added the board...",
+    "at": "2026-11-14T18:38:00-05:00"
+   },
+   {
+    "w": "Idris",
+    "t": "The app list a person saves in the launcher editor now reaches every installed launcher widget...",
+    "at": "2026-11-14T18:34:00-05:00"
+   },
+   {
     "w": "Odalys",
     "t": "Each time a task line is added, finished, blocked or given to another worker, the queue check...",
     "at": "2026-11-14T16:01:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "A task that was set aside and later brought back to the board is no longer marked finished by...",
-    "at": "2026-11-14T14:46:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "A new task line, or a finished one, can now name the older lines it replaces; those lines leave...",
-    "at": "2026-11-14T14:21:00-05:00"
    }
   ],
   "count": {
    "next": 364,
    "wait": 41,
-   "blocked": 45,
-   "you": 15
+   "blocked": 44,
+   "you": 14
   }
  },
  "qr": [
@@ -449,78 +441,69 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-14T23:29:13Z",
+  "at": "2026-11-14T23:48:26Z",
   "s": {
    "T-4458": [
-    "merging",
-    "Rebasing onto current main",
-    1794698773261
-   ],
-   "T-4437": [
     "mergeq",
     "1st to merge",
-    1794683893261
+    1794698726561
+   ],
+   "T-4445": [
+    "mergeq",
+    "2nd to merge",
+    1794699026561
    ]
   },
   "nm": {
    "T-4458": "Stop the other tools committing each record they write",
-   "T-4437": "Finish the queue audit's order and last refused rows"
+   "T-4445": "Show task states in place of new lines"
   }
  },
  "ln": {
-  "at": "2026-11-14T23:29:13Z",
+  "at": "2026-11-14T23:48:26Z",
   "mq": {
    "n": {
-    "checking": 1,
-    "inline": 1,
-    "conflicted": 0,
+    "checking": 0,
+    "inline": 2,
+    "conflicted": 1,
     "failed": 0,
     "held": 0,
-    "retry": 2,
+    "retry": 0,
     "parked": 3
    },
    "m": {
-    "checking": 3,
-    "inline": 251,
-    "conflicted": null,
+    "checking": null,
+    "inline": 20,
+    "conflicted": 3,
     "failed": null,
     "held": null,
-    "retry": 1,
-    "parked": 1830
+    "retry": null,
+    "parked": 1850
    },
-   "cur": [
-    [
-     [
-      "T-4458"
-     ],
-     "lining up with main",
-     "Mac mini",
-     3
-    ]
-   ],
+   "cur": [],
    "ld": [
-    18,
-    "2026-11-14T23:22:21Z"
+    20,
+    "2026-11-14T23:38:06Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-14T23:29:14Z",
-    "ld": 2.04,
+    "at": "2026-11-14T23:48:23Z",
+    "ld": 2.62,
     "c": 8,
     "sb": 0,
     "dk": [
-     17.7,
+     19.7,
      228.3
     ],
     "ss": [
-     188.1,
+     188.0,
      953.7
     ],
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-14T22:59:06Z",
+    "at": "2026-11-14T23:29:40Z",
     "ld": 0.2,
     "c": 12,
     "sb": 0,
@@ -532,26 +515,7 @@
    }
   }
  },
- "operators": [
-  {
-   "w": "Operator",
-   "a": "Evan",
-   "sr": 1,
-   "m": "opus",
-   "e": "xhigh",
-   "t": "Work session \u2013 1 task",
-   "at": "2026-11-14T18:27:39-05:00"
-  },
-  {
-   "w": "Operator",
-   "a": "Evan",
-   "sr": 1,
-   "m": "opus",
-   "e": "xhigh",
-   "t": "Work session \u2013 1 task",
-   "at": "2026-11-14T18:18:59-05:00"
-  }
- ],
+ "operators": [],
  "reply": {
   "sent": "2026-11-14T23:27:05Z",
   "seconds": 32.0
@@ -570,12 +534,12 @@
  ],
  "agents_now": {
   "main": 0,
-  "lanes": 1,
-  "total": 1,
-  "at": "6:31 PM",
-  "why": "",
-  "at_iso": "2026-11-14T23:31:00+00:00",
+  "lanes": 0,
+  "total": 0,
+  "at": "6:50 PM",
+  "why": "Plan limit: the weekly allowance is used up; it resets Sun 1:59 AM ET. Last check 6:50 PM ET.",
+  "at_iso": "2026-11-14T23:50:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 6:31 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 6:50 PM ET</p><p class=\"an-why\">Plan limit: the weekly allowance is used up; it resets Sun 1:59 AM ET. Last check 6:50 PM ET.</p></section>"
  }
 }

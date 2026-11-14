@@ -1,24 +1,20 @@
 {
  "schema": 1,
- "at": "2026-11-14T07:37:03.022945+00:00",
+ "at": "2026-11-14T07:39:43.749622+00:00",
  "session": {
   "active": false,
   "kind": "",
   "started": null,
-  "flow": [
+  "flow": [],
+  "done": [
    {
     "t": "T-4101",
     "name": "Apply the queue audit ledger to the board",
     "acct": "Personal a",
-    "steps": [
-     {
-      "s": "landing",
-      "at": 1794639291
-     }
-    ]
-   }
-  ],
-  "done": [
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794641952
+   },
    {
     "t": "T-4412",
     "acct": "Personal a",
@@ -81,16 +77,9 @@
     "steps": [],
     "end": "landed",
     "end_at": 1794627020
-   },
-   {
-    "t": "T-4118",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794620497
    }
   ],
-  "landed": 15,
+  "landed": 16,
   "failed": 0
  },
  "workers": [],
@@ -99,36 +88,36 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 435,
-  "blocked_count": 93
+  "runnable_count": 346,
+  "blocked_count": 87
  },
  "meter": {
   "five_hour": {
    "pct": 18.0,
-   "resets_at": "2026-11-14T07:40:00.105606+00:00",
+   "resets_at": "2026-11-14T07:39:59.835838+00:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-14T02:27:01.711897-05:00",
+   "read_at": "2026-11-14T02:39:26.685739-05:00",
    "source": "usage",
    "left": 82.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 98.0,
-   "resets_at": "2026-11-15T06:59:59.105632+00:00",
+   "resets_at": "2026-11-15T06:59:58.835858+00:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-14T02:27:01.711897-05:00",
+   "read_at": "2026-11-14T02:39:26.685739-05:00",
    "source": "usage",
    "left": 2.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 4.0,
-   "resets_at": "2026-11-15T07:00:00.105807+00:00",
+   "resets_at": "2026-11-15T06:59:59.836003+00:00",
    "used_words": "of the Fable weekly allowance used",
-   "read_at": "2026-11-14T02:27:01.711897-05:00",
+   "read_at": "2026-11-14T02:39:26.685739-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-14T02:27:01.711897-05:00"
+  "read_at": "2026-11-14T02:39:26.685739-05:00"
  },
  "ui": {
   "week_pct": 0.368,
@@ -143,12 +132,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-14T02:46:37-05:00",
+ "next_tick": "2026-11-14T02:54:27-05:00",
  "personal": {
-  "week_pct": 50.8,
+  "week_pct": 50.79,
   "usage_pct": 34.1,
   "work_pct": 80.3,
-  "read_at": "2026-11-14T07:37:00+00:00",
+  "read_at": "2026-11-14T07:39:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -169,7 +158,7 @@
   }
  ],
  "disk": {
-  "free_gb": 17,
+  "free_gb": 16,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -178,14 +167,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-14T02:31:00-05:00",
+   "at": "2026-11-14T02:39:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-14T02:37:00-05:00",
+  "at": "2026-11-14T02:39:00-05:00",
   "mode": null,
   "modes": {
    "main": "spread",
@@ -216,7 +205,7 @@
   {
    "name": "Odalys",
    "state": "next",
-   "task": "Odalys, P1, T-1776 stage 3, Reports with every document...",
+   "task": "Odalys, P1, build T-1776 stages 2-4 now (T-2073, T-2074,...",
    "model": null,
    "since": null,
    "next": []
@@ -323,6 +312,11 @@
   "done": [
    {
     "w": "Ines",
+    "t": "The queue audit's verdicts are now on the task board: 90 stale lines were removed and 4 merged...",
+    "at": "2026-11-14T02:39:00-05:00"
+   },
+   {
+    "w": "Ines",
     "t": "The audit's record now says which feature each of eight waiting code reviews belongs to, and...",
     "at": "2026-11-14T01:35:00-05:00"
    },
@@ -330,17 +324,12 @@
     "w": "Ines",
     "t": "The audit checked again which queued tasks someone is still working on: 38 old notices are now...",
     "at": "2026-11-14T01:11:00-05:00"
-   },
-   {
-    "w": "Ines",
-    "t": "Every app task the audit decided to keep now sits in one of the 14 app features, or is listed...",
-    "at": "2026-11-14T01:01:00-05:00"
    }
   ],
   "count": {
-   "next": 435,
-   "wait": 46,
-   "blocked": 47,
+   "next": 346,
+   "wait": 43,
+   "blocked": 44,
    "you": 15
   }
  },
@@ -383,23 +372,14 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-14T07:37:03Z",
-  "s": {
-   "T-4101": [
-    "merging",
-    "Rebasing onto current main",
-    1794641643022
-   ]
-  },
-  "nm": {
-   "T-4101": "Apply the queue audit ledger to the board"
-  }
+  "at": "2026-11-14T07:39:43Z",
+  "s": {}
  },
  "ln": {
-  "at": "2026-11-14T07:37:03Z",
+  "at": "2026-11-14T07:39:43Z",
   "mq": {
    "n": {
-    "checking": 1,
+    "checking": 0,
     "inline": 0,
     "conflicted": 1,
     "failed": 0,
@@ -408,37 +388,28 @@
     "parked": 3
    },
    "m": {
-    "checking": 3,
+    "checking": null,
     "inline": null,
-    "conflicted": 2434,
+    "conflicted": 2437,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 883
+    "parked": 886
    },
-   "cur": [
-    [
-     [
-      "T-4101"
-     ],
-     "lining up with main",
-     "Mac mini",
-     3
-    ]
-   ],
+   "cur": [],
    "ld": [
-    3,
-    "2026-11-14T06:35:02Z"
+    4,
+    "2026-11-14T07:39:12Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-14T07:37:03Z",
-    "ld": 0.7,
+    "at": "2026-11-14T07:39:12Z",
+    "ld": 0.76,
     "c": 8,
     "sb": 0,
     "dk": [
-     13.8,
+     15.8,
      228.3
     ],
     "ss": [
@@ -470,7 +441,7 @@
    "id": "c6873915614",
    "state": "received",
    "position": 1,
-   "eta": "2026-11-14T02:46:37-05:00",
+   "eta": "2026-11-14T02:54:27-05:00",
    "tasks": {
     "open": 0,
     "done": 0
@@ -493,10 +464,10 @@
   "main": 0,
   "lanes": 0,
   "total": 0,
-  "at": "2:37 AM",
-  "why": "Between sessions: no session is running. Last check 2:31 AM ET.",
-  "at_iso": "2026-11-14T07:37:00+00:00",
+  "at": "2:39 AM",
+  "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
+  "at_iso": "2026-11-14T07:39:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 2:37 AM ET</p><p class=\"an-why\">Between sessions: no session is running. Last check 2:31 AM ET.</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 2:39 AM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
  }
 }

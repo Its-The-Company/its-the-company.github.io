@@ -25,6 +25,11 @@ step anyone finished). Every count here is that script's output at 1:3x PM ET 11
 source. Sections 1 and 2 are its `--table` and `--md` output and go stale as steps finish; run the script for the
 live list.
 
+**Updated 12:5x AM ET 11-14 (Ines, T-4413).** The audit has judged 45 more open app lines keep since the list
+was written. 40 of them are now steps of the feature they belong to, and 5 are listed outside with a reason
+(section 8). The table in section 1 and all of section 2 are the script's output at that time. The counts in the
+prose of sections 0, 1, 3 and 5 are still those of 11-12.
+
 ## 0. In five lines
 
 1. **The open app lines are now 14 features.** 206 of the 300 open app lines sit inside a feature as its steps.
@@ -46,23 +51,27 @@ live list.
 
 | # | Feature | Owner | Reviewer | P | Steps | Held |
 |---|---|---|---|---|---|---|
-| 2.1 | T-4180: Every premade widget draws on the iPhone | Idris | Pernille | P0 | 19 | 1 |
-| 2.2 | T-4181: Widgets refresh on their own and by a tap | Idris | Pernille | P0 | 27 | 3 |
-| 2.3 | T-4182: A failing widget says so and can recover | Idris | Pernille | P1 | 23 | 0 |
-| 2.4 | T-4183: The Gallery shows, previews and opens every premade | Idris | Pernille | P1 | 12 | 0 |
-| 2.5 | T-4184: A person's own script becomes a Home Screen widget | Idris | Pernille | P1 | 16 | 1 |
-| 2.6 | T-4185: Launcher widgets open the apps a person chose | Idris | Pernille | P1 | 11 | 0 |
-| 2.7 | T-4186: The editor completes code, shows errors and previews | Idris | Pernille | P1 | 12 | 3 |
-| 2.8 | T-4187: Scripts run, ask questions and stop cleanly | Idris | Pernille | P1 | 11 | 1 |
-| 2.9 | T-4188: Location, steps and notifications work in scripts and widgets | Idris | Odalys | P1 | 17 | 3 |
-| 2.10 | T-4189: Scripts reach any https service through iOS | Pernille | Idris | P1 | 9 | 1 |
-| 2.11 | T-4190: Settings and Pro: buy, restore, themes | Idris | Odalys | P1 | 18 | 1 |
+| 2.1 | T-4180: Every premade widget draws on the iPhone | Idris | Pernille | P0 | 22 | 1 |
+| 2.2 | T-4181: Widgets refresh on their own and by a tap | Idris | Pernille | P0 | 35 | 3 |
+| 2.3 | T-4182: A failing widget says so and can recover | Idris | Pernille | P1 | 25 | 0 |
+| 2.4 | T-4183: The Gallery shows, previews and opens every premade | Idris | Pernille | P1 | 15 | 0 |
+| 2.5 | T-4184: A person's own script becomes a Home Screen widget | Idris | Pernille | P1 | 19 | 1 |
+| 2.6 | T-4185: Launcher widgets open the apps a person chose | Idris | Pernille | P1 | 15 | 0 |
+| 2.7 | T-4186: The editor completes code, shows errors and previews | Idris | Pernille | P1 | 19 | 3 |
+| 2.8 | T-4187: Scripts run, ask questions and stop cleanly | Idris | Pernille | P1 | 12 | 1 |
+| 2.9 | T-4188: Location, steps and notifications work in scripts and widgets | Idris | Odalys | P1 | 18 | 3 |
+| 2.10 | T-4189: Scripts reach any https service through iOS | Pernille | Idris | P1 | 12 | 1 |
+| 2.11 | T-4190: Settings and Pro: buy, restore, themes | Idris | Odalys | P1 | 21 | 1 |
 | 2.12 | T-4191: VoiceOver and large text work on every screen | Idris | Maren | P2 | 6 | 0 |
 | 2.13 | T-4192: Python in the app: smaller bundle, installable packages | Pernille | Odalys | P1 | 9 | 3 |
-| 2.14 | T-4193: TestFlight builds and the App Store page are ready | Ines | Odalys | P1 | 16 | 7 |
+| 2.14 | T-4193: TestFlight builds and the App Store page are ready | Ines | Odalys | P1 | 18 | 7 |
 
 </div>
 
+
+The table is the script's `--table` output at 12:5x AM ET 11-14 (T-4413): 246 steps, 226 of them open. What
+follows, down to the list of shared Targets, is the count of 11-12, kept as written; section 8 has the count of
+11-14.
 
 Where the 300 open app lines are (the script's default output):
 
@@ -107,16 +116,18 @@ area. A session takes a feature's open steps P0 first, then in the order listed.
 - **Targets:** `pywidget/ios/Shared/TreeView.swift`, `pywidget/ios/Shared/TreeNodes.swift`, `pywidget/ios/Shared/TreeTimeline.swift`, `pywidget/ios/Shared/TreeRules.swift`, `pywidget/ios/Shared/Premades.swift`, `pywidget/ios/Shared/FirstRender.swift`, `pywidget/ios/Widget/PyWidget.swift`, `pywidget/ios/App/Bridge/WidgetWriter.swift`.
 - **Test classes for a step:** PremadeFirstRenderTests, PremadeSnapshotTests, PremadesTests, TreeNodesTests, TreeTimelineTests, FirstRenderTests, WidgetStepTimeoutTests, WidgetKitCheckTests.
 - **Base:** `a42f0cc866`. **By:** Ines, T-4116 (Investor an Investor #41 c6814024711; an Investor #41 c6814286499).
-- **Checklist:** 19 lines, 1 of them held.
+- **Checklist:** 22 lines, 1 of them held, 4 done since the list was written.
 
 - T-3783 [build] Idris, P0, open: Keep finding why only Countdown draws on the iPhone
-- T-3814 [build] Idris, P0, open: Keep the bundled Countdown picture from hiding the bug
-- T-4088 [fix] Idris, P0, open: Fix the refused MacBook test job of the iPhone hunt
+- T-3814 [build] done, ticked 2026-11-12 17:40: Keep the bundled Countdown picture from hiding the bug
+- T-4088 [fix] done, ticked 2026-11-13 10:29: Fix the refused MacBook test job of the iPhone hunt
 - T-3279 [build] Idris, P1, open: Draw a premade picked before the first app open
 - T-3280 [test] Idris, P2, open: Test the placed widget path in the premade suite again
 - T-3560 [test] Idris, P2, open: Tighten the per-premade first-render tests
-- T-3899 [fix] Idris, P1, open: Let free widgets draw when the store check hangs
-- T-3900 [fix] Idris, P1, open: Wait once per refresh when a shared step hangs
+- T-3899 [fix] done, ticked 2026-11-13 11:38: Let free widgets draw when the store check hangs
+- T-3900 [fix] done, ticked 2026-11-12 23:16: Wait once per refresh when a shared step hangs
+- T-4239 [build] Idris, P2, open: Tidy the five small points from the refresh review
+- T-4302 [test] Idris, P3, open: Pin own-widget saves not waiting on StoreKit
 - T-0306 [build] Idris, P2, open: Check the gallery trees in every widget family
 - T-0024 [build] Idris, P2, open: Check Lock Screen corner clipping in the Simulator
 - T-0472 [build] Idris, P2, open: Fix the stale clock size on Lock Screen widgets
@@ -128,6 +139,7 @@ area. A session takes a feature's open steps P0 first, then in the order listed.
 - T-1181 [fix] Idris, P2, open: Fix a held finding from the Pernille review
 - T-0245 [build] Pernille, P3, open: <span title="A measured fact that holds a grade below a letter, however good the rest is.">Cap</span> the size of widget view trees
 - T-1290 [build] Idris, P2, open: Stop test runs rewriting time-based snapshot images
+- T-4043 [review] Pernille, P1, open: Check finished work before it ships
 
 ### 2.2 T-4181: Widgets refresh on their own and by a tap
 
@@ -138,11 +150,12 @@ area. A session takes a feature's open steps P0 first, then in the order listed.
 - **Targets:** `pywidget/ios/Shared/ExtensionLane.swift`, `pywidget/ios/Shared/RefreshAsks.swift`, `pywidget/ios/Shared/RefreshOutcomeRule.swift`, `pywidget/ios/Shared/RefreshSchedule.swift`, `pywidget/ios/Shared/RefreshWidgetsIntent.swift`, `pywidget/ios/Shared/AgeLine.swift`, `pywidget/ios/Shared/PythonRuntime.swift`, `pywidget/ios/App/Runtime/_pywidget_runtime`.
 - **Test classes for a step:** ExtensionLaneTests, ExtensionBridgeTests, ExtensionRuntimeTests, RefreshAgeRendererTests, LaneRestBenchTests, LaneWarmWindowTests.
 - **Base:** `a42f0cc866`. **By:** Ines, T-4116 (Investor an Investor #41 c6814024711; an Investor #41 c6814286499).
-- **Checklist:** 27 lines, 3 of them held.
+- **Checklist:** 35 lines, 3 of them held, 1 done since the list was written.
 
-- T-0675 [build] Idris, P0, open: Run Python widget scripts inside the widget extension
+- T-0675 [build] done, ticked 2026-11-13 07:31: Run Python widget scripts inside the widget extension
 - T-0678 [build] Idris, P1, open: Run the refresh button inside the widget extension
 - T-0972 [build] Idris, P1, open: Decide how a script's refresh path is chosen on send
+- T-4280 [build] Idris, P1, open: Run each widget in the widget or app by size
 - T-1440 [build] Idris, P1, open: Add a refresh control and age line to widgets
 - T-1441 [build] Pernille, P1, held: Show the age line in premade widgets and gallery
 - T-1457 [build] Idris, P2, open: Match the corner glyphs to the app's accent colors
@@ -155,6 +168,9 @@ area. A session takes a feature's open steps P0 first, then in the order listed.
 - T-0696 [build] Idris, P1, open: Measure peak memory for fetches in the extension
 - T-0700 [build] Idris, P3, open: Use one check for being in the extension
 - T-2260 [fix] Idris, P1, open: Make closed widget turns draw their timeline
+- T-4404 [build] Idris, P2, open: Stop late widget reloads writing as the extension ends
+- T-4405 [build] Idris, P3, open: Make the lane's ended flag cover the guard's exit
+- T-4406 [build] Idris, P3, open: Stop the closed-row race test failing on a slow runner
 - T-0793 [build] Idris, P1, held: Add background refresh for widgets in version 1.0
 - T-0795 [plan] Ines, P1, held: Decide whether background refresh stays in 1.0
 - T-2373 [build] Idris, P1, open: Gate background refresh behind Pro, not premades
@@ -167,6 +183,10 @@ area. A session takes a feature's open steps P0 first, then in the order listed.
 - T-2099 [build] Idris, P3, open: Tidy the widget test defaults for memory headroom
 - T-0956 [build] Pernille, P1, open: Replay the widget tests with the shipped Python layout
 - T-1033 [fix] Pernille, P2, open: Rewrite four stale tests after the lock fix
+- T-2938 [review] Pernille, P2, open: Review the shared wait for the widget burst
+- T-4032 [review] Pernille, P1, open: Check finished work before it ships
+- T-4046 [review] Pernille, P1, open: Check finished work before it ships
+- T-4049 [review] Pernille, P1, open: Check finished work before it ships
 
 ### 2.3 T-4182: A failing widget says so and can recover
 
@@ -177,11 +197,12 @@ area. A session takes a feature's open steps P0 first, then in the order listed.
 - **Targets:** `pywidget/ios/Shared/LaneGuard.swift`, `pywidget/ios/Shared/WidgetStatus.swift`, `pywidget/ios/Shared/RunLog`, `pywidget/ios/Shared/Bridge/WidgetRunLog.swift`, `pywidget/ios/App/Bridge/LaunchRunLog.swift`, `pywidget/ios/App/WidgetRunView.swift`.
 - **Test classes for a step:** WidgetRunReasonTests, LaunchRunLogTests, CardMarksTests, WidgetWriterTests, ShortcutRunLogTests, RunLogUITests.
 - **Base:** `a42f0cc866`. **By:** Ines, T-4116 (Investor an Investor #41 c6814024711; an Investor #41 c6814286499).
-- **Checklist:** 23 lines, 0 of them held.
+- **Checklist:** 25 lines, 0 of them held, 3 done since the list was written.
 
 - T-0048 [plan] Idris, P1, open: Add the per-widget Activity screen and Run as widget
 - T-1764 [build] Idris, P1, open: Write each widget run record when the run ends
-- T-3895 [build] Idris, P1, open: Record widget runs that never start in the extension
+- T-3895 [build] done, ticked 2026-11-12 23:58: Record widget runs that never start in the extension
+- T-4244 [build] Idris, P2, open: Show could not start in the Run log
 - T-1765 [build] Idris, P1, open: Stop a file from forging expired run records
 - T-1766 [docs] Pernille, P2, open: Document the forging risk in the widget runtime header
 - T-1643 [build] Idris, P1, open: Let a person's say-so lift a widget demotion
@@ -199,9 +220,10 @@ area. A session takes a feature's open steps P0 first, then in the order listed.
 - T-2493 [build] Idris, P2, open: Keep locked premades out of the run log
 - T-2497 [build] Idris, P3, open: Fix the stuck-row test that cannot fail
 - T-1677 [build] Idris, P1, open: Finish recording the last run report at launch
-- T-3758 [fix] Idris, P1, open: Prune run history while the app stays open
-- T-4205 [fix] Idris, P2, open: Prune run history when a background start times out
+- T-3758 [fix] done, ticked 2026-11-12 15:23: Prune run history while the app stays open
+- T-4205 [fix] done, ticked 2026-11-12 15:23: Prune run history when a background start times out
 - T-3294 [test] Idris, P3, open: Close four small holes in the widget safety tests
+- T-4076 [review] Pernille, P1, open: Check finished work before it ships
 
 ### 2.4 T-4183: The Gallery shows, previews and opens every premade
 
@@ -212,7 +234,7 @@ area. A session takes a feature's open steps P0 first, then in the order listed.
 - **Targets:** `pywidget/ios/App/Gallery`, `pywidget/ios/App/GalleryTileRule.swift`, `pywidget/ios/App/Examples.swift`, `pywidget/examples`, `pywidget/widgets`.
 - **Test classes for a step:** GalleryFaceTests, GalleryModelRunAllTests, GalleryModesSnapshotTests, GalleryPagerTests, GalleryPreviewTests, GalleryPushTests, ExamplesBundleTests, GalleryUITests, ExamplesUITests.
 - **Base:** `a42f0cc866`. **By:** Ines, T-4116 (Investor an Investor #41 c6814024711; an Investor #41 c6814286499).
-- **Checklist:** 12 lines, 0 of them held.
+- **Checklist:** 15 lines, 0 of them held, 1 done since the list was written.
 
 - T-0191 [build] Idris, P1, open: Build the gallery screen and its preview route
 - T-2268 [build] Idris, P1, open: Finish the gallery screens and pictures
@@ -225,7 +247,10 @@ area. A session takes a feature's open steps P0 first, then in the order listed.
 - T-2723 [test] Idris, P2, open: Run the new earthquakes example in the Simulator
 - T-2409 [release] Wrenna, P2, open: Check the USGS earthquake feed before building on it
 - T-4139 [fix] Idris, P2, open: Check the gallery well's clipped left edge
-- T-4148 [fix] Operator, P0, open: Fix a MacBook test job that failed
+- T-4148 [fix] done, ticked 2026-11-12 20:45: Fix a MacBook test job that failed
+- T-4047 [review] Pernille, P1, open: Check finished work before it ships
+- T-4060 [review] Pernille, P1, open: Check finished work before it ships
+- T-4082 [review] Pernille, P1, open: Check finished work before it ships
 
 ### 2.5 T-4184: A person's own script becomes a Home Screen widget
 
@@ -236,7 +261,7 @@ area. A session takes a feature's open steps P0 first, then in the order listed.
 - **Targets:** `pywidget/ios/App/Projects`, `pywidget/ios/App/Intents`, `pywidget/ios/App/WidgetInstallView.swift`, `pywidget/ios/Shared/WidgetPlacement.swift`.
 - **Test classes for a step:** WidgetScriptSaveTests, WidgetScriptSavedPlacementTests, ProjectStoreTests, ProjectTransferTests, WidgetCardTests, AppIntentsTests, ShortcutRecipeTests, PreviewQueueTests, ProjectsUITests, AddWidgetTests.
 - **Base:** `a42f0cc866`. **By:** Ines, T-4116 (Investor an Investor #41 c6814024711; an Investor #41 c6814286499).
-- **Checklist:** 16 lines, 1 of them held.
+- **Checklist:** 19 lines, 1 of them held.
 
 - T-0906 [build] Idris, P1, open: Fix project send failures on a full disk
 - T-1905 [build] Idris, P1, open: Send project files in one safe swap
@@ -254,6 +279,9 @@ area. A session takes a feature's open steps P0 first, then in the order listed.
 - T-0790 [build] Idris, P1, open: List saved scripts in the Shortcuts run picker
 - T-0510 [build] Idris, P2, open: Save widget scripts where Shortcuts expects them
 - T-0032 [build] Idris, P1, open: Probe what the Shortcuts share sheet hands the app
+- T-4022 [review] Pernille, P1, open: Check finished work before it ships
+- T-4024 [review] Pernille, P1, open: Check finished work before it ships
+- T-4040 [review] Pernille, P1, open: Check finished work before it ships
 
 ### 2.6 T-4185: Launcher widgets open the apps a person chose
 
@@ -264,19 +292,23 @@ area. A session takes a feature's open steps P0 first, then in the order listed.
 - **Targets:** `pywidget/ios/App/Launcher`, `pywidget/ios/App/LauncherTapHandling.swift`, `pywidget/ios/App/WidgetTapRouting.swift`, `pywidget/ios/Shared/LauncherSlots.swift`, `pywidget/ios/Shared/LauncherPremadeSlots.swift`, `pywidget/ios/Shared/WidgetTapLink.swift`, `pywidget/ios/scripts/debug_url_scheme.sh`.
 - **Test classes for a step:** WidgetTapRoutingTests, LauncherTapUITests, LauncherWindowsUITests.
 - **Base:** `a42f0cc866`. **By:** Ines, T-4116 (Investor an Investor #41 c6814024711; an Investor #41 c6814286499).
-- **Checklist:** 11 lines, 0 of them held.
+- **Checklist:** 15 lines, 0 of them held, 6 done since the list was written.
 
 - T-2551 [build] Pernille, P1, open: Build all six app launcher premades
-- T-3664 [build] Idris, P1, open: Let people choose the app behind each launcher slot
-- T-3688 [build] Idris, P1, open: Build the launcher editor screens and their UI test
-- T-3674 [research] Wrenna, P2, open: Fill the launcher's list of known apps
-- T-3852 [build] Idris, P2, open: Call the launcher slot writer from the editor, reload widgets
+- T-3664 [build] done, ticked 2026-11-12 14:58: Let people choose the app behind each launcher slot
+- T-3688 [build] done, ticked 2026-11-12 14:58: Build the launcher editor screens and their UI test
+- T-3674 [research] done, ticked 2026-11-12 18:20: Fill the launcher's list of known apps
+- T-3852 [build] done, ticked 2026-11-12 16:02: Call the launcher slot writer from the editor, reload widgets
 - T-3847 [fix] Idris, P2, open: Test the launcher link through the real URL entry point
-- T-3848 [fix] Idris, P2, open: Keep a second launcher tap from dropping a script's prompt
+- T-3848 [fix] done, ticked 2026-11-12 19:09: Keep a second launcher tap from dropping a script's prompt
 - T-3849 [test] Pernille, P2, open: Rerun the launcher sheet UI test on its own commit
+- T-4220 [test] Idris, P2, open: Run the launcher build's tests on a schedule
 - T-3764 [build] Idris, P1, open: Make the iPad window test fail without the fix
 - T-3765 [build] Idris, P1, open: Check a real widget tap on the TestFlight build
-- T-3766 [build] Idris, P1, open: Let the Debug scheme step remove only its own entry
+- T-3766 [build] done, ticked 2026-11-12 16:09: Let the Debug scheme step remove only its own entry
+- T-3970 [review] Pernille, P1, open: Check finished work before it ships
+- T-4020 [review] Pernille, P1, open: Check finished work before it ships
+- T-4068 [review] Pernille, P1, open: Check finished work before it ships
 
 ### 2.7 T-4186: The editor completes code, shows errors and previews
 
@@ -287,7 +319,7 @@ area. A session takes a feature's open steps P0 first, then in the order listed.
 - **Targets:** `pywidget/ios/App/Editor`, `pywidget/ios/Shared/RunLog/TracebackFold.swift`, `pywidget/ios/App/Runtime/pywidget`.
 - **Test classes for a step:** EditorToolingTests, EditorGateTests, EditorCaptureMapTests, ConsoleEditorOpenTests, ConsoleEditorUITests, EditorGateUITests.
 - **Base:** `a42f0cc866`. **By:** Ines, T-4116 (Investor an Investor #41 c6814024711; an Investor #41 c6814286499).
-- **Checklist:** 12 lines, 3 of them held.
+- **Checklist:** 19 lines, 3 of them held.
 
 - T-0656 [build] Idris, P1, open: Add completions and inline errors to the editor
 - T-2261 [build] Idris, P1, open: Build and test the editor completion changes
@@ -295,12 +327,19 @@ area. A session takes a feature's open steps P0 first, then in the order listed.
 - T-2513 [runtime] Idris, P2, open: Completion sees the same modules during a run
 - T-2869 [build] Idris, P1, open: Test completion with the stdlib as compiled-only files
 - T-2870 [build] Idris, P2, open: Close the small gaps left in the completion import guard
+- T-4256 [build] Idris, P1, open; a session is on it now: Lighten the marks and colour their line numbers
+- T-4257 [build] Idris, P2, open: Show problem words beside the marked line
+- T-4290 [build] Idris, P3, open: Measure the list text inset per size
+- T-4291 [build] Idris, P3, open: Prove AX rows grow to fit
+- T-4292 [build] Idris, P3, open: Add the spoken problem strings to the catalog
 - T-0192 [build] Idris, P1, open: Add the editor preview pane
 - T-0389 [build] Idris, P1, open: Show a folded traceback with tappable frames
 - T-0635 [build] Idris, P2, open: Tint editor search matches amber
+- T-4281 [build] Idris, P1, open: Show where a widget runs, its memory and time
 - T-0630 [build] Idris, P3, held: Add alternates to the quote key in the key row
 - T-0588 [test] Idris, P3, held: Test the on-screen keyboard's delete key
 - T-0863 [test] Idris, P2, held: Fix a 2,000-line file picture test failing palette check
+- T-4048 [review] Pernille, P1, open: Check finished work before it ships
 
 ### 2.8 T-4187: Scripts run, ask questions and stop cleanly
 
@@ -311,7 +350,7 @@ area. A session takes a feature's open steps P0 first, then in the order listed.
 - **Targets:** `pywidget/ios/Shared/Bridge/PyBridge.swift`, `pywidget/ios/Shared/Bridge/pwbridge.c`, `pywidget/ios/App/Device/PromptDesk.swift`, `pywidget/ios/App/PromptsCodec.swift`, `pywidget/ios/App/ReplBar.swift`, `pywidget/tests/bridge`, `pywidget/examples/tip_splitter.py`.
 - **Test classes for a step:** BridgeTests, BridgeSlice2Tests, BridgeFixtureTests, PromptDeskTests, PromptPlacementTests, ConsoleModelsTests, InputHoldUITests.
 - **Base:** `a42f0cc866`. **By:** Ines, T-4116 (Investor an Investor #41 c6814024711; an Investor #41 c6814286499).
-- **Checklist:** 11 lines, 1 of them held.
+- **Checklist:** 12 lines, 1 of them held.
 
 - T-0447 [build] Idris, P1, open: Show native prompts when a script asks the user
 - T-0458 [build] Pernille, P2, open: Make the tip splitter use native prompts
@@ -324,6 +363,7 @@ area. A session takes a feature's open steps P0 first, then in the order listed.
 - T-2717 [fix] Idris, P3, open: Close two small Restart races around the stuck mark
 - T-0518 [build] Idris, P3, open: Draw the idle console input bar when ready
 - T-0392 [build] Pernille, P3, held: Move test sources into fixture files
+- T-2629 [review] Pernille, P1, open: Finish the prompt alert checks once the suite is green
 
 ### 2.9 T-4188: Location, steps and notifications work in scripts and widgets
 
@@ -334,14 +374,14 @@ area. A session takes a feature's open steps P0 first, then in the order listed.
 - **Targets:** `pywidget/ios/App/Device`, `pywidget/ios/Shared/Bridge/LaneDevice.swift`, `pywidget/ios/Shared/Bridge/DeviceSupport.swift`, `pywidget/ios/Shared/ZoneProbe.swift`, `pywidget/ios/Privacy`, `pywidget/ios/App/Runtime/pywidget`.
 - **Test classes for a step:** DeviceModulesTests, DeviceModulesSlice2Tests, LocationAuthorizationChangeTests, LocationCacheFollowUpTests, PremadeSensorStallTests, ZoneProbeTests, BridgeTests.
 - **Base:** `a42f0cc866`. **By:** Ines, T-4116 (Investor an Investor #41 c6814024711; an Investor #41 c6814286499).
-- **Checklist:** 17 lines, 3 of them held.
+- **Checklist:** 18 lines, 3 of them held, 1 done since the list was written.
 
 - T-0053 [build] Idris, P2, open: Fix widget extension location updates
 - T-0063 [build] Idris, P3, held: Add a location-off state to the distance premade
 - T-0047 [build] no owner, P3, held: Add the privacy strings for location and motion
 - T-0046 [research] no owner, P3, held: Read Apple pages to confirm 24 device API facts
 - T-3564 [build] Idris, P2, open: Stop other errors saying a sensor is missing
-- T-4201 [fix] Idris, P2, open: Keep today's sensor reading after a timeout
+- T-4201 [fix] done, ticked 2026-11-12 14:32: Keep today's sensor reading after a timeout
 - T-3552 [test] Idris, P1, open: Test gallery and widget runs together with a stalled sensor
 - T-3554 [build] Idris, P2, open: Tidy the time reserve's edge cases and docs
 - T-3716 [test] Idris, P2, open: Find why the Simulator location test now fails
@@ -353,6 +393,7 @@ area. A session takes a feature's open steps P0 first, then in the order listed.
 - T-1671 [fix] Idris, P3, open: Fix the notification thread type check order
 - T-1672 [fix] Idris, P2, open: Fix the per-run notification cap resetting
 - T-2027 [build] Idris, P2, open: Re-run the notification test on a fresh Simulator
+- T-4058 [review] Idris, P1, open: Check finished work before it ships
 
 ### 2.10 T-4189: Scripts reach any https service through iOS
 
@@ -363,17 +404,20 @@ area. A session takes a feature's open steps P0 first, then in the order listed.
 - **Targets:** `pywidget/ios/Shared/NetFetch.swift`, `pywidget/ios/Shared/Bridge/NetCall.swift`, `pywidget/ios/App/Runtime/_pywidget_runtime`, `pywidget/ios/App/Runtime/pywidget`, `tools/openssl_gate.py`, `pywidget/ios/project.yml`.
 - **Test classes for a step:** NetFetchTests, NetFetchCharsetTests, HTTPDeviceTests.
 - **Base:** `a42f0cc866`. **By:** Ines, T-4116 (Investor an Investor #41 c6814024711; an Investor #41 c6814286499).
-- **Checklist:** 9 lines, 1 of them held.
+- **Checklist:** 12 lines, 1 of them held, 2 done since the list was written.
 
-- T-3400 [build] Pernille, P1, open: Send Python's https through iOS and drop the OpenSSL modules
+- T-3400 [build] done, ticked 2026-11-13 12:33: Send Python's https through iOS and drop the OpenSSL modules
 - T-3401 [build] Idris, P2, open: Add a general web request call and an OpenSSL check
 - T-4202 [build] Pernille, P1, open: Strip OpenSSL from the app with system https
 - T-4203 [build] Pernille, P1, open: Device test of every https host we call
-- T-3820 [build] Idris, P2, open: Add the general web request call to the app
+- T-3820 [build] done, ticked 2026-11-13 13:42: Add the general web request call to the app
 - T-3821 [build] Idris, P2, open: Pass large web bodies through a file
+- T-4311 [ios] Idris, P1, open: Name certificate failures right in net.request
 - T-3822 [build] Idris, P2, open: Turn on the OpenSSL check in the app build
 - T-4142 [fix] Idris, P2, open: Make the OpenSSL check fail on unreadable files
+- T-3823 [review] Pernille, P2, open: Review the OpenSSL symbol check
 - T-3399 [release] Idris, P1, held: Add the Investors' encryption answer to the app's settings
+- T-4312 [review] Idris, P1, open: Review the https shim fixes
 
 ### 2.11 T-4190: Settings and Pro: buy, restore, themes
 
@@ -384,10 +428,10 @@ area. A session takes a feature's open steps P0 first, then in the order listed.
 - **Targets:** `pywidget/ios/App/Settings`, `pywidget/ios/App/Store`, `pywidget/ios/App/SettingsProRowRule.swift`, `pywidget/ios/Shared/ProFlags.swift`, `pywidget/ios/Shared/ProEntitlement.swift`, `pywidget/ios/Shared/ProCardView.swift`, `pywidget/ios/App/Acknowledgements.swift`, `pywidget/ios/App/RatingRequestRule.swift`, `pywidget/ios/StoreKit`.
 - **Test classes for a step:** ProPaywallTests, ProStoreTests, ProFlagsContractTests, SettingsLookTests, ThemeTests, EditorThemeCatalogTests, AcknowledgementsTests, ProPaywallUITests, SettingsUITests, AcknowledgementsUITests.
 - **Base:** `a42f0cc866`. **By:** Ines, T-4116 (Investor an Investor #41 c6814024711; an Investor #41 c6814286499).
-- **Checklist:** 18 lines, 1 of them held.
+- **Checklist:** 21 lines, 1 of them held, 1 done since the list was written.
 
 - T-0657 [build] Idris, P1, open: Build the Settings screen
-- T-4199 [build] Idris, P2, open: Retake the Settings shots with the Testers group
+- T-4199 [build] done, ticked 2026-11-12 13:53: Retake the Settings shots with the Testers group
 - T-2498 [test] Idris, P2, open: Test the waiting-for-approval and failed-restore Settings rows
 - T-2500 [build] Idris, P3, open: Settings cleanups: Copy string, spec words, strings check
 - T-2914 [build] Idris, P3, open: Close the hairline gap in the About card
@@ -404,6 +448,9 @@ area. A session takes a feature's open steps P0 first, then in the order listed.
 - T-0042 [build] Idris, P2, open: Add an Acknowledgements screen for vendored packages
 - T-0623 [build] Idris, P3, open: Fix the licence wording in Acknowledgements rows
 - T-0273 [build] Idris, P2, open: Ask for an App Store rating after a real success
+- T-4031 [review] Pernille, P1, open: Check finished work before it ships
+- T-4067 [review] Pernille, P1, open: Check finished work before it ships
+- T-4077 [review] Pernille, P1, open: Check finished work before it ships
 
 ### 2.12 T-4191: VoiceOver and large text work on every screen
 
@@ -453,7 +500,7 @@ area. A session takes a feature's open steps P0 first, then in the order listed.
 - **Targets:** `tools/upload.sh`, `pywidget/ios/scripts/gate_session_build.sh`, `pywidget/docs/release`, `ops/testflight-internal.tsv`, `pywidget/app-guide-shots`.
 - **Test classes for a step:** MeasurementExportTests, SettingsUITests.
 - **Base:** `a42f0cc866`. **By:** Ines, T-4116 (Investor an Investor #41 c6814024711; an Investor #41 c6814286499).
-- **Checklist:** 16 lines, 7 of them held.
+- **Checklist:** 18 lines, 7 of them held, 1 done since the list was written.
 
 - T-2943 [build] Idris, P1, open: Send up the gate build and confirm it stays internal
 - T-2691 [build] Idris, P1, open: Check every archive for the phone test marker, Organizer too
@@ -461,7 +508,7 @@ area. A session takes a feature's open steps P0 first, then in the order listed.
 - T-2612 [build] Idris, P3, open: Tidy the upload pin reading edge cases
 - T-3081 [release] Idris, P2, open: Add the Python frameworks' debug symbols to test builds
 - T-3350 [release] Idris, P1, open: Describe each TestFlight build in detail
-- T-0757 [build] Idris, P1, open: Install a signed build on the Investors' iPhone
+- T-0757 [build] done, ticked 2026-11-13 07:39: Install a signed build on the Investors' iPhone
 - T-0556 [test] Idris, P2, open: Take the app pictures that were missing
 - T-0261 [design] Maren, P3, open: Apply the chosen store caption wording
 - T-0045 [research] Person, P2, held: Search trademarks and domains for three product names
@@ -471,6 +518,8 @@ area. A session takes a feature's open steps P0 first, then in the order listed.
 - T-1216 [plan] Ines, P2, held: Ask Investors for App Store Connect contact details
 - T-1154 [plan] Ines, P2, held: Ask the Investors to approve PyWidget's voice
 - T-0788 [release] Wrenna, P1, held: Do the final sweep of launch posts and press kit
+- T-3349 [review] Odalys, P2, open: Review the Release privacy scan before TestFlight
+- T-4063 [review] Pernille, P1, open: Check finished work before it ships
 
 ## 3. How app work is sliced: the proposal
 
@@ -589,8 +638,20 @@ changes today.
 - T-2377: the version 1.1 plan, held.
 - T-2378: the plan for 1.2 and later, held.
 
+Added 12:5x AM ET 11-14 (T-4413), from the lines the audit judged keep after the list was written:
+
+- T-4092: the queue audit's umbrella line, mine: a process line, not app building. The inventory files it under the app by its words.
+- T-4221: a tool fix (tools/task_names_store.py), not app work; the inventory files it under the app by its kind tag.
+- T-4304: a Handbook note on which changes get a review line: a process note, not app building. The inventory files it under the app by its words (TestFlight, App Store).
+- T-4286: waits on the Restructuring's new feature list: a one-day phone probe for the Builder (does an imported font draw in a widget), and the Builder is none of the 14 features. Not placed and not decided here.
+- T-4301: waits on Restructuring decision 9 (are any premades Pro). As written it follows T-3899, a step of T-4180, in WidgetWriter.swift; if every premade is free, what is left of it is background refresh's, T-4181. Not placed until 9 is answered.
+
 The 76 open review lines are not placed. T-4098 judges them. My recommendation to that slice: a review line on a
 step of a feature folds into that feature's one review at its merge.
+
+*12:5x AM ET 11-14 (T-4413):* T-4098 and the judging slices have judged them. Of the 75 open app review lines,
+25 are kept and are now steps of the feature whose code they read (section 8); 45 are marked remove, 1 merge and
+3 tick, and leave the board at the apply; 1 (T-4418) has no ledger row yet.
 
 ## 5. On the board now, and what comes next
 
@@ -756,6 +817,157 @@ condition's first half is met: a land's record that shows a reused pass by its k
 - The land's rule for when a branch needs the iPhone run at all (`personal_land.sh`, floor) names fewer paths than
   the build reads. It leaves out `pywidget/tests/` fixtures, `pywidget/licenses/`, `log/assets.md` and the
   top-level tools the build runs. That is in the same note; I changed nothing there.
+
+## 8. T-4413: the lines judged after the list was written (12:5x AM ET 11-14)
+
+Ines, lane a2. The list was the state of 11-12. On 11-13 the audit wrote a verdict for the lines the list had left
+alone, most of them review lines, and for lines written during the Restructuring (ledger rows of slices 2, 3 and
+4, all dated 11-13). At 12:35 AM ET 11-14 the check showed 47 faults: 45 lines judged keep that sat in no
+feature and were not listed outside, and 2 entries in "added" that the ledger had judged since. It now shows none.
+
+### 8.1 What was done
+
+- **40 lines are steps of a feature.** 15 are app work (12 build, 2 test, 1 ios) and 25 are review lines. No
+  feature was renamed, split or joined, and no Target, test class or done condition changed: the grouping waits
+  on the Restructuring (an Investor #41 c6854106654; the Operator's note on T-4092, 08:4x 11-13).
+- **5 lines are listed outside,** each with its reason in section 4: three are not app work (T-4092, T-4221,
+  T-4304) and two wait on the Restructuring and are not decided here (8.3).
+- **T-4202 and T-4203 left "added".** The ledger judged both keep on 11-13. Both stay steps of T-4189.
+- **The check has two new parts.** It now fails on a "placed" entry whose line is a step of no feature, so a
+  reason cannot outlive its line. It also prints the lines whose ledger verdict is tick (3 now: T-3495, T-3680,
+  T-3718), which it used to leave out, so the counts add up: 298 open app lines are 242 kept (226 in a feature,
+  16 outside), 48 marked remove or merge, 3 marked tick and 5 with no ledger row.
+
+### 8.2 How each line was placed
+
+In this order, and the first that answers decides:
+
+1. The line's own Links field, where its author set one (6 lines: T-4220, T-4280, T-4281, T-4404 to T-4406).
+2. The link in its ledger row, where the judging or the links step (T-4098) had set one (13 more lines). For a
+   review line the rule is T-4409's: a kept review line is part of the feature whose code it reads.
+3. The step it comes from. A fix that came out of the review of a step sits in that step's feature, as the
+   lines in "added" do.
+4. The files it changes or reads, matched against the features' Targets.
+
+The other 21 lines had no feature in their ledger row and were placed by 3 and 4. For two of them the row's flag
+had named another feature by subject: T-4239 (T-4181) and T-4291 (T-4191). Two more flags named two features and
+the list took one of them: T-4290 (T-4186 or T-4191) and T-4244 (T-4182 or T-4187). The list follows the step and
+the file. A feature's Targets are what keeps two features from being built at the same time, and a step whose
+files sit in another feature's Targets would break that without the table showing it.
+
+The counts in this section, and the files behind rule 4, are the output of `ops/plans/T-4413-placed-counts.py`
+(`--match` prints each line's files and the features whose Targets hold them).
+
+Each reason is in ops/plans/app-features.json under "placed". This is their copy:
+
+**T-4180: Every premade widget draws on the iPhone** (3)
+
+- T-4239: from T-4238, Pernille's review of T-3900, a step of this feature; its five points are in App/Bridge/WidgetWriter.swift, a Target here. The ledger's flag named T-4181 by content; the list goes by the step a line comes from and by its file.
+- T-4302: from T-4300, the review of T-4277, a fix that came out of the review of T-3899, a step of this feature; the missing test is on App/Bridge/WidgetWriter.swift:406, a Target here, beside the hung-store tests in WidgetStepTimeoutTests, a test class on this card.
+- T-4043: review of T-1289 (a703a964ae: Shared/TreeNodes.swift, TreeRules.swift and TreeView.swift, all Targets here). A kept review line is part of the feature whose code it reads (T-4409's rule).
+
+**T-4181: Widgets refresh on their own and by a tap** (8)
+
+- T-4280: its own Links field says part of T-4181, and Restructuring decision 14's answer names it: 'the lane choice per widget (refresh feature, T-4181)' (06-decisions.md, Changes).
+- T-4404: its own Links field says part of T-4181; from T-3825, Pernille's re-check of T-2494; the code is Shared/ExtensionLane.swift, a Target here.
+- T-4405: its own Links field says part of T-4181; from T-3825 (L2); the code is Shared/ExtensionLane.swift, a Target here.
+- T-4406: its own Links field says part of T-4181; from T-3825 (L3); the test is in ExtensionLaneTests, a test class on this card.
+- T-2938: review of T-2048's change to Shared/ExtensionLane.swift (29b7d6165), a Target here. That commit is not on main (ledger row, 11-13), so the read waits until the fix lands again.
+- T-4032: review of T-2230 (749b555036: Shared/ExtensionLane.swift, a Target here).
+- T-4046: review of T-1972, an open step of this feature (ledger link, 11-13).
+- T-4049: review of T-1732 (1e8077ff42: App/Runtime/_pywidget_runtime/lane.py, the Python half of the widget lane). The folder is a Target here and of T-4189; the lane is this feature's.
+
+**T-4182: A failing widget says so and can recover** (2)
+
+- T-4244: from T-4242, Pernille's review of T-3895, a step of this feature; the fix is in Shared/RunLog/RunLogExport.swift, inside a Target here.
+- T-4076: review of T-1643, an open step of this feature (ledger link, 11-13).
+
+**T-4183: The Gallery shows, previews and opens every premade** (3)
+
+- T-4047: review of T-2409, an open step of this feature (ledger link, 11-13).
+- T-4060: review of T-2296, an open step of this feature (ledger link, 11-13).
+- T-4082: review of T-3563 (pywidget/widgets/premade, inside a Target here; ledger link, 11-13). By subject (sensors) T-4188 would also fit; the feature session may move it.
+
+**T-4184: A person's own script becomes a Home Screen widget** (3)
+
+- T-4022: review of T-1442 (c70fdd74f5: the words iOS shows outside the app). Two of its four app files are Targets here (App/Intents/RunScriptIntents.swift, Shared/WidgetPlacement.swift); one is T-4181's and one T-4180's, and its test class (SystemStringsTests) is on T-4191's card. Most files decide; the feature session may move it.
+- T-4024: review of T-2316 (0e3126a7a3: App/Intents/RunScriptIntents.swift, inside a Target here). Restructuring decision 9 decides whether the gate it reads stays as written (ledger row); the file is this feature's either way.
+- T-4040: review of T-0945 (8c1bbebdc2: App/Projects/WidgetScriptSave.swift, inside a Target here, and Shared/WidgetPlacement.swift, a Target here).
+
+**T-4185: Launcher widgets open the apps a person chose** (4)
+
+- T-4220: its own Links field says part of T-4185; from T-4217, Pernille's review of this feature's steps (t4185-steps-pernille.md, S8).
+- T-3970: review of T-3675 (Shared/LauncherSlots.swift and LauncherPremadeSlots.swift, Targets here; ledger link, 11-13).
+- T-4020: review of T-3664, a step of this feature (ledger link, 11-13).
+- T-4068: review of T-3763 (App/WidgetTapRouting.swift, a Target here; ledger link, 11-13).
+
+**T-4186: The editor completes code, shows errors and previews** (7)
+
+- T-4256: from T-4253, Maren's design read of T-2261, a step of this feature; the marks are drawn in App/Editor, a Target here. A worker copy is held for it (ledger: active), so it is listed and not changed.
+- T-4257: from T-4253 (finding 5), Maren's design read of T-2261, a step of this feature; the label is the editor's (spec s3.3).
+- T-4290: from T-4289, Pernille's review of T-4258, which comes from T-4253 and so from T-2261, a step of this feature; the fix is in App/Editor/CompletionList.swift, inside a Target here. Large text is also T-4191's subject, but no Target of T-4191 holds an editor file.
+- T-4291: from T-4289 (L2); the test is CompletionUITests, on the editor's completion list (App/Editor/CompletionPopover.swift, inside a Target here). The ledger's flag named T-4191 by subject; the list goes by the step a line comes from and by its file.
+- T-4292: from T-4289 (L3); the two strings are in App/Editor/EditorMarks.swift, inside a Target here.
+- T-4281: its own Links field says part of T-4186 and needs T-4280, and Restructuring decision 14's answer names it: 'the editor's lane, memory and time display (editor feature, T-4186)' (06-decisions.md, Changes).
+- T-4048: review of T-0622 (50a8e26197: App/Editor/EditorBench.swift, inside a Target here, with EditorGateUITests, a test class on this card).
+
+**T-4187: Scripts run, ask questions and stop cleanly** (1)
+
+- T-2629: the re-review of T-2603 and T-2604, findings F1 and F2 of the re-review of T-2583, a step of this feature (74fba4bd3: App/Device/PromptDesk.swift, a Target here; PromptPlacementTests, a test class on this card).
+
+**T-4188: Location, steps and notifications work in scripts and widgets** (1)
+
+- T-4058: review of T-0703, an open step of this feature (ledger link, 11-13).
+
+**T-4189: Scripts reach any https service through iOS** (3)
+
+- T-4311: from T-4309, Pernille's review of T-3820, a step of this feature; the fix is in Shared/NetFetch.swift, a Target here.
+- T-3823: review of T-3401's first slice (tools/openssl_gate.py, a Target here); T-3401 is a step of this feature. It closes when T-4142, also a step here, lands (ledger link: needs T-4142).
+- T-4312: review of the https shim fixes (cff2e415eb: App/Runtime/_pywidget_runtime/systls.py); the shim is T-3400's, a step of this feature. The folder is also a Target of T-4181; the shim is this feature's.
+
+**T-4190: Settings and Pro: buy, restore, themes** (3)
+
+- T-4031: review of T-0444 (1f342fb236: App/Acknowledgements.swift, a Target here).
+- T-4067: review of T-2715 (the Settings title: App/SceneFile.swift and SettingsUITests, a test class on this card; ledger link, 11-13).
+- T-4077: review of T-2499 (App/Settings/SettingsView.swift, inside a Target here; ledger link, 11-13).
+
+**T-4193: TestFlight builds and the App Store page are ready** (2)
+
+- T-3349: review of T-1839, the Release-only privacy scan build phase, which decides whether a Release build fails before upload (ledger link, 11-13).
+- T-4063: review of T-2318 (what the Release app carries: ProjectManifestReader.swift moved to Core, project.yml; ledger link, 11-13).
+
+### 8.3 Waiting on the Restructuring, not decided
+
+- **T-4301** waits on Restructuring decision 9 (are any premades Pro). As written it follows T-3899, a step of
+  T-4180, in WidgetWriter.swift; if every premade is free, what is left of it is background refresh's, T-4181.
+  Not placed until 9 is answered.
+- **T-4286** waits on the Restructuring's new feature list. It is a one-day phone probe for the Builder, and the
+  Builder is none of the 14 features (06-decisions.md, Changes: "New features ... The Builder").
+
+Three placed lines carry an open decision in their ledger row that does not move them: T-4024 (decision 9 decides
+whether the gate it reads stays; the file is T-4184's either way), and T-4257 and T-4281 (decision 22 may change
+how they look, not which feature builds them).
+
+### 8.4 Left open
+
+- **The board's Links fields are not changed.** 34 of the 40 lines do not yet say "part of" their feature on this
+  lane's copy of the board. The script's `--links` output holds the value for each (no cycle). Setting them is
+  the links step's work (T-4412, T-4098) and the apply's.
+- **21 ledger rows name no feature yet.** Eight are the review lines of step 2 of ops/plans/T-4098-handoff.md
+  (T-4022, T-4024, T-4031, T-4032, T-4040, T-4043, T-4048, T-4049). The other 13 are the lines placed by rules 3
+  and 4 above. Their features are decided here; the links step takes them from "placed".
+- **Five app lines have no ledger row** and are not in the list: T-4414 to T-4418, written on 11-13 from T-0678
+  and T-1440. Each already says "part of T-4181" on the board. They are placed when they are judged.
+- **The two P0 features grew.** T-4180 has 3 more lines (P1, P2, P3) and T-4181 has 8 more. Whether phase A's
+  phone proof waits for every step of T-4180 is not decided by this list.
+- **Two placements are close calls** and say so in their reason: T-4022 (its files span three features) and
+  T-4082 (premade files, sensor subject). The feature session may move either.
+- **A review line is a step like any other to the feature session tool** (`tools/feature_session.py packet`
+  lists T-4312 among Idris's steps of T-4189). Whether a session takes a review beside its build steps is
+  T-4194's to settle.
+- **The merge estimate counts review lines.** "One merge for every ten steps" now gives 31 at the fewest; with
+  the 25 review lines left out it is 29. Under 3.2 point 5, still a proposal, a kept review folds into the
+  feature's one review.
 {% endraw %}
 
 </div>

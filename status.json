@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-14T05:13:33.306373+00:00",
+ "at": "2026-11-14T05:16:39.835347+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -94,7 +94,7 @@
    "task": "[site] T-4313 Merged section on Home",
    "model": "opus",
    "started": "2026-11-14T04:04:21.376Z",
-   "seconds": 4151,
+   "seconds": 4338,
    "finished": null,
    "effort": "high"
   },
@@ -103,7 +103,7 @@
    "task": "[tools] T-4411 start accounts when usage returns",
    "model": "opus",
    "started": "2026-11-14T04:17:33.902Z",
-   "seconds": 3359,
+   "seconds": 3545,
    "finished": null,
    "effort": "high"
   },
@@ -112,7 +112,7 @@
    "task": "[build] T-4414 rerun rule ages last run",
    "model": "opus",
    "started": "2026-11-14T04:58:58.328Z",
-   "seconds": 874,
+   "seconds": 1061,
    "finished": null,
    "effort": "high"
   }
@@ -204,7 +204,7 @@
   "week_pct": 47.87,
   "usage_pct": 33.5,
   "work_pct": 79.6,
-  "read_at": "2026-11-14T05:13:00+00:00",
+  "read_at": "2026-11-14T05:16:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -241,7 +241,7 @@
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-14T00:13:00-05:00",
+  "at": "2026-11-14T00:16:00-05:00",
   "mode": null,
   "modes": {
    "main": "spread",
@@ -507,32 +507,32 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-14T05:13:26Z",
+  "at": "2026-11-14T05:16:32Z",
   "s": {
    "T-4414": [
+    "mergetest",
+    "iPhone tests on the MacBook",
+    null
+   ],
+   "T-4313": [
     "merging",
-    "Mac tests at the main gate \u00b7 4 groups of tests done",
-    1794632966998
+    "Mac tests at the main gate",
+    1794633332146
    ],
    "T-4411": [
     "testing",
     "its own tests, in its copy",
-    1794630206998
-   ],
-   "T-4313": [
-    "testing",
-    "its own tests, in its copy",
-    1794633026998
+    1794630212146
    ]
   },
   "nm": {
    "T-4414": "Make the rerun rule age the last run",
-   "T-4411": "Start accounts on the audit when usage returns",
-   "T-4313": "Add a Merged section and fold sections on Home"
+   "T-4313": "Add a Merged section and fold sections on Home",
+   "T-4411": "Start accounts on the audit when usage returns"
   }
  },
  "ln": {
-  "at": "2026-11-14T05:13:26Z",
+  "at": "2026-11-14T05:16:32Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -546,11 +546,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 2291,
+    "conflicted": 2294,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 740
+    "parked": 743
    },
    "cur": [],
    "ld": [
@@ -560,12 +560,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-14T05:13:27Z",
-    "ld": 6.78,
+    "at": "2026-11-14T05:15:48Z",
+    "ld": 6.44,
     "c": 8,
     "sb": 0,
     "dk": [
-     16.9,
+     16.7,
      228.3
     ],
     "ss": [
@@ -575,8 +575,8 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-14T05:07:59Z",
-    "ld": 1.66,
+    "at": "2026-11-14T05:14:08Z",
+    "ld": 0.59,
     "c": 12,
     "sb": 0,
     "dk": [
@@ -620,10 +620,10 @@
   "main": 3,
   "lanes": 0,
   "total": 3,
-  "at": "12:13 AM",
+  "at": "12:16 AM",
   "why": "",
-  "at_iso": "2026-11-14T05:13:00+00:00",
+  "at_iso": "2026-11-14T05:16:00+00:00",
   "started": "9:30 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 9:30 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 12:13 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 9:30 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 12:16 AM ET</p></section>"
  }
 }

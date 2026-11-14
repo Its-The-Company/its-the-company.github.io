@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-14T01:29:01.409406+00:00",
+ "at": "2026-11-14T01:32:03.109676+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -99,19 +99,18 @@
   "landed": 9,
   "failed": 2
  },
- "workers": [
+ "workers": [],
+ "who": "",
+ "recent": [
   {
    "name": "odalys",
    "task": "[tools] T-4317 union merge for the audit ledger",
    "model": "opus",
    "started": "2026-11-14T01:15:15.882Z",
-   "seconds": 825,
-   "finished": null,
-   "effort": "high"
+   "seconds": null,
+   "finished": "2026-11-14T01:30:02.227000+00:00"
   }
  ],
- "who": "Odalys",
- "recent": [],
  "queue": {
   "runnable": [],
   "blocked": [],
@@ -164,7 +163,7 @@
   "week_pct": 47.45,
   "usage_pct": 33.5,
   "work_pct": 79.8,
-  "read_at": "2026-11-14T01:29:00+00:00",
+  "read_at": "2026-11-14T01:32:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -201,7 +200,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-13T20:29:00-05:00",
+  "at": "2026-11-13T20:32:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -218,15 +217,6 @@
  },
  "lanes": [
   {
-   "name": "Odalys",
-   "state": "running",
-   "task": "[tools] T-4317 union merge for the audit ledger",
-   "model": "opus",
-   "since": "2026-11-14T01:15:15.882Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
    "name": "Idris",
    "state": "next",
    "task": "Idris, P0, reopens T-3393 c6713953911, c6725543994),...",
@@ -238,6 +228,14 @@
    "name": "Pernille",
    "state": "next",
    "task": "Pernille, P1, premades and gallery take the age line...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
+   "name": "Odalys",
+   "state": "next",
+   "task": "Odalys, P1, T-1776 stage 3, Reports with every document...",
    "model": null,
    "since": null,
    "next": []
@@ -268,18 +266,7 @@
   }
  ],
  "tasks": {
-  "run": [
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Keep both sides' rows when the audit ledger merges",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-14T01:15:15.882Z",
-    "o": "c",
-    "task": "T-4317"
-   }
-  ],
+  "run": [],
   "src": "plan",
   "open": [
    {
@@ -332,13 +319,6 @@
     "o": "i"
    },
    {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Keep both sides' rows when the audit ledger...",
-    "s": "next",
-    "o": "c"
-   },
-   {
     "w": "Operator",
     "k": "ops",
     "t": "Star every open task of the queue audit",
@@ -351,9 +331,21 @@
     "t": "Every premade widget draws on the iPhone",
     "s": "next",
     "o": "i"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "Widgets refresh on their own and by a tap",
+    "s": "next",
+    "o": "i"
    }
   ],
   "done": [
+   {
+    "w": "Odalys",
+    "t": "When two audit sessions add rows to the shared audit ledger at once, git now keeps both sides'...",
+    "at": "2026-11-13T20:29:00-05:00"
+   },
    {
     "w": "Odalys",
     "t": "Each task now has one Links field saying which bigger job it belongs to and what it waits on,...",
@@ -363,11 +355,6 @@
     "w": "Odalys",
     "t": "Home now shows how each task links to others (which bigger job it is part of, and what it...",
     "at": "2026-11-13T20:13:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "The Investors can now name a weekly usage percent at which a personal account stops: it is dealt...",
-    "at": "2026-11-13T18:50:00-05:00"
    }
   ],
   "count": {
@@ -377,8 +364,12 @@
    "you": 18
   },
   "fin": {
-   "n": 2,
+   "n": 3,
    "rows": [
+    [
+     "T-4317",
+     "Keep both sides' rows when..."
+    ],
     [
      "T-4100",
      "Build the typed Links field..."
@@ -429,20 +420,11 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-14T01:28:44Z",
-  "s": {
-   "T-4317": [
-    "testing",
-    "its own tests, in its copy",
-    1794619424345
-   ]
-  },
-  "nm": {
-   "T-4317": "Keep both sides' rows when the audit ledger merges"
-  }
+  "at": "2026-11-14T01:31:51Z",
+  "s": {}
  },
  "ln": {
-  "at": "2026-11-14T01:28:44Z",
+  "at": "2026-11-14T01:31:51Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -456,11 +438,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 1211,
+    "conflicted": 1214,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 2055
+    "parked": 2058
    },
    "cur": [],
    "ld": [
@@ -470,12 +452,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-14T01:28:44Z",
-    "ld": 0.93,
+    "at": "2026-11-14T01:31:07Z",
+    "ld": 0.81,
     "c": 8,
     "sb": 0,
     "dk": [
-     14.5,
+     14.7,
      228.3
     ],
     "ss": [
@@ -504,7 +486,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 1 task",
+   "t": "Work session",
    "at": "2026-11-13T20:14:15-05:00"
   }
  ],
@@ -525,13 +507,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 1,
+  "main": 0,
   "lanes": 0,
-  "total": 1,
-  "at": "8:29 PM",
-  "why": "",
-  "at_iso": "2026-11-14T01:29:00+00:00",
+  "total": 0,
+  "at": "8:32 PM",
+  "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
+  "at_iso": "2026-11-14T01:32:00+00:00",
   "started": "8:10 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 8:10 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 8:29 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0, started 8:10 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 8:32 PM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
  }
 }

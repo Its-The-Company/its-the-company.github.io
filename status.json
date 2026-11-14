@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-14T04:27:35.476229+00:00",
+ "at": "2026-11-14T04:30:37.614358+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -94,7 +94,7 @@
    "task": "[site] T-4313 Merged section on Home",
    "model": "opus",
    "started": "2026-11-14T04:04:21.376Z",
-   "seconds": 1394,
+   "seconds": 1576,
    "finished": null,
    "effort": "high"
   },
@@ -103,7 +103,7 @@
    "task": "[tools] T-4411 start accounts when usage returns",
    "model": "opus",
    "started": "2026-11-14T04:17:33.902Z",
-   "seconds": 601,
+   "seconds": 783,
    "finished": null,
    "effort": "high"
   },
@@ -112,22 +112,21 @@
    "task": "[build] T-1440 refresh control and age line",
    "model": "opus",
    "started": "2026-11-14T04:20:03.586Z",
-   "seconds": 451,
+   "seconds": 634,
    "finished": null,
    "effort": "high"
-  },
+  }
+ ],
+ "who": "Maren, Odalys, Idris",
+ "recent": [
   {
    "name": "pernille",
    "task": "[review] T-0678 review of refresh slices",
    "model": "opus",
    "started": "2026-11-14T04:20:10.142Z",
-   "seconds": 445,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Maren, Odalys, Idris, Pernille",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-14T04:28:07.700000+00:00"
+  },
   {
    "name": "idris",
    "task": "[build] T-0678 slice 2 wire rule and intent",
@@ -151,14 +150,6 @@
    "started": "2026-11-14T02:33:55.419Z",
    "seconds": null,
    "finished": "2026-11-14T04:04:00.429000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-0678 refresh button in extension",
-   "model": "opus",
-   "started": "2026-11-14T02:33:42.801Z",
-   "seconds": null,
-   "finished": "2026-11-14T03:11:24.474000+00:00"
   }
  ],
  "queue": {
@@ -213,7 +204,7 @@
   "week_pct": 47.87,
   "usage_pct": 33.5,
   "work_pct": 79.6,
-  "read_at": "2026-11-14T04:27:00+00:00",
+  "read_at": "2026-11-14T04:30:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -250,7 +241,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-13T23:27:00-05:00",
+  "at": "2026-11-13T23:30:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -295,12 +286,11 @@
   },
   {
    "name": "Pernille",
-   "state": "running",
-   "task": "[review] T-0678 review of refresh slices",
-   "model": "opus",
-   "since": "2026-11-14T04:20:10.142Z",
-   "next": [],
-   "effort": "high"
+   "state": "next",
+   "task": "Pernille, P1, premades and gallery take the age line...",
+   "model": null,
+   "since": null,
+   "next": []
   },
   {
    "name": "Ines",
@@ -350,16 +340,6 @@
     "at": "2026-11-14T04:20:03.586Z",
     "o": "c",
     "task": "T-1440"
-   },
-   {
-    "w": "Pernille",
-    "k": "review",
-    "t": "Run the refresh button inside the widget extension",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-14T04:20:10.142Z",
-    "o": "c",
-    "task": "T-0678"
    }
   ],
   "src": "plan",
@@ -527,33 +507,32 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-14T04:27:27Z",
+  "at": "2026-11-14T04:30:29Z",
   "s": {
+   "T-1440": [
+    "merging",
+    "Mac tests at the main gate",
+    1794630509139
+   ],
    "T-4411": [
     "testing",
     "its own tests, in its copy",
-    1794630207268
+    1794630209139
    ],
    "T-4313": [
     "testing",
     "its own tests, in its copy",
-    1794629667268
-   ],
-   "T-0678": [
-    "merged",
-    "on main 11:26 PM ET",
-    1794630389000,
-    ""
+    1794630629139
    ]
   },
   "nm": {
+   "T-1440": "Add a refresh control and age line to widgets",
    "T-4411": "Start accounts on the audit when usage returns",
-   "T-4313": "Add a Merged section and fold sections on Home",
-   "T-0678": "Run the refresh button inside the widget extension"
+   "T-4313": "Add a Merged section and fold sections on Home"
   }
  },
  "ln": {
-  "at": "2026-11-14T04:27:27Z",
+  "at": "2026-11-14T04:30:29Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -567,11 +546,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 2245,
+    "conflicted": 2248,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 694
+    "parked": 697
    },
    "cur": [],
    "ld": [
@@ -581,12 +560,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-14T04:26:38Z",
-    "ld": 7.25,
+    "at": "2026-11-14T04:30:04Z",
+    "ld": 6.83,
     "c": 8,
     "sb": 0,
     "dk": [
-     16.7,
+     16.9,
      228.3
     ],
     "ss": [
@@ -615,7 +594,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 4 tasks",
+   "t": "Work session \u2013 3 tasks",
    "at": "2026-11-13T21:59:25-05:00"
   }
  ],
@@ -638,13 +617,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 4,
+  "main": 3,
   "lanes": 0,
-  "total": 4,
-  "at": "11:27 PM",
+  "total": 3,
+  "at": "11:30 PM",
   "why": "",
-  "at_iso": "2026-11-14T04:27:00+00:00",
+  "at_iso": "2026-11-14T04:30:00+00:00",
   "started": "9:30 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 4, started 9:30 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 11:27 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 9:30 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 11:30 PM ET</p></section>"
  }
 }

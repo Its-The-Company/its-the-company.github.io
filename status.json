@@ -1,22 +1,11 @@
 {
  "schema": 1,
- "at": "2026-11-14T14:07:53.872863+00:00",
+ "at": "2026-11-14T14:12:45.350706+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-14T08:56:15-05:00",
   "flow": [
-   {
-    "t": "T-4195",
-    "name": "Reuse an iPhone pass when the app's inputs are unchanged",
-    "acct": "Personal b",
-    "steps": [
-     {
-      "s": "landing",
-      "at": 1794665170
-     }
-    ]
-   },
    {
     "t": "T-3279",
     "name": "Draw a premade picked before the first app open",
@@ -30,6 +19,14 @@
    }
   ],
   "done": [
+   {
+    "t": "T-4195",
+    "name": "Reuse an iPhone pass when the app's inputs are unchanged",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794665528
+   },
    {
     "t": "T-4422",
     "acct": "Personal a",
@@ -92,16 +89,9 @@
     "steps": [],
     "end": "landed",
     "end_at": 1794627466
-   },
-   {
-    "t": "T-4104",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794627456
    }
   ],
-  "landed": 13,
+  "landed": 14,
   "failed": 0
  },
  "workers": [
@@ -110,7 +100,7 @@
    "task": "[build] T-4434 refresh tap wiring test",
    "model": "opus",
    "started": "2026-11-14T14:01:15.595Z",
-   "seconds": 398,
+   "seconds": 689,
    "finished": null,
    "effort": "high"
   }
@@ -123,7 +113,7 @@
    "model": "opus",
    "started": "2026-11-14T14:01:03.863Z",
    "seconds": null,
-   "finished": "2026-11-14T14:07:30.392000+00:00"
+   "finished": "2026-11-14T14:11:31.795000+00:00"
   },
   {
    "name": "idris",
@@ -137,7 +127,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 341,
+  "runnable_count": 343,
   "blocked_count": 86
  },
  "meter": {
@@ -186,7 +176,7 @@
   "week_pct": 52.14,
   "usage_pct": 34.5,
   "work_pct": 80.2,
-  "read_at": "2026-11-14T14:09:00+00:00",
+  "read_at": "2026-11-14T14:12:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -248,7 +238,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-14T09:09:00-05:00",
+  "at": "2026-11-14T09:12:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -402,6 +392,11 @@
   ],
   "done": [
    {
+    "w": "Pernille",
+    "t": "An independent review found that a premade placed before the app's first open now draws its own...",
+    "at": "2026-11-14T09:10:00-05:00"
+   },
+   {
     "w": "Operator",
     "t": "Main passes its Xcode checks again: job J-20261114-0751-land-m-269dc7 on the MacBook no longer...",
     "at": "2026-11-14T08:54:00-05:00"
@@ -410,22 +405,22 @@
     "w": "Ines",
     "t": "The task list clean-up took its last ten stale notices off the board, after noting on 22 open...",
     "at": "2026-11-14T08:47:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "When a held task is released, its waiting mark is now crossed out, so it can't keep the task off...",
-    "at": "2026-11-14T08:42:00-05:00"
    }
   ],
   "count": {
-   "next": 341,
-   "wait": 42,
-   "blocked": 44,
+   "next": 343,
+   "wait": 41,
+   "blocked": 45,
    "you": 15
   },
   "fin": {
-   "n": 0,
-   "rows": []
+   "n": 1,
+   "rows": [
+    [
+     "T-4439",
+     "Review the first draw of..."
+    ]
+   ]
   }
  },
  "qr": [
@@ -466,12 +461,31 @@
    "ok"
   ]
  ],
+ "stg": {
+  "at": "2026-11-14T14:12:29Z",
+  "s": {
+   "T-4195": [
+    "mergeq",
+    "1st to merge",
+    1794665189754
+   ],
+   "T-4434": [
+    "testing",
+    "Mac Mini \u00b7 test",
+    null
+   ]
+  },
+  "nm": {
+   "T-4195": "Reuse an iPhone pass when the app's inputs are unchanged",
+   "T-4434": "Test the refresh tap's wiring in the view"
+  }
+ },
  "ln": {
-  "at": "2026-11-14T14:07:53Z",
+  "at": "2026-11-14T14:12:29Z",
   "mq": {
    "n": {
-    "checking": 1,
-    "inline": 0,
+    "checking": 0,
+    "inline": 1,
     "conflicted": 1,
     "failed": 0,
     "held": 0,
@@ -479,41 +493,36 @@
     "parked": 4
    },
    "m": {
-    "checking": 0,
-    "inline": null,
-    "conflicted": 2825,
+    "checking": null,
+    "inline": 6,
+    "conflicted": 2830,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1271
+    "parked": 1276
    },
-   "cur": [
-    [
-     [
-      "T-4195"
-     ],
-     "going onto main",
-     "Mac mini",
-     0
-    ]
-   ],
+   "cur": [],
    "ld": [
-    5,
-    "2026-11-14T13:47:23Z"
+    6,
+    "2026-11-14T14:12:08Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-14T14:09:06Z",
-    "ld": 14.33,
+    "at": "2026-11-14T14:12:31Z",
+    "ld": 42.29,
     "c": 8,
+    "sb": 1,
     "dk": [
-     18.4,
+     16.4,
      228.3
     ],
     "ss": [
      185.9,
      953.7
+    ],
+    "sn": [
+     "iPhone 18 Pro"
     ]
    },
    "macbook": {
@@ -567,6 +576,7 @@
   "lane_next",
   "queue_text",
   "task_done",
+  "fin_short",
   "task_title",
   "done_text",
   "task_open",
@@ -577,10 +587,10 @@
   "main": 1,
   "lanes": 2,
   "total": 3,
-  "at": "9:09 AM",
+  "at": "9:12 AM",
   "why": "",
-  "at_iso": "2026-11-14T14:09:00+00:00",
+  "at_iso": "2026-11-14T14:12:00+00:00",
   "started": "8:56 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 1, started 8:56 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 9:09 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 1, started 8:56 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 9:12 AM ET</p></section>"
  }
 }

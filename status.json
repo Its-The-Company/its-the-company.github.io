@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-14T05:25:42.384815+00:00",
+ "at": "2026-11-14T05:28:43.571216+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -90,26 +90,25 @@
  },
  "workers": [
   {
-   "name": "odalys",
-   "task": "[tools] T-4411 start accounts when usage returns",
-   "model": "opus",
-   "started": "2026-11-14T04:17:33.902Z",
-   "seconds": 4088,
-   "finished": null,
-   "effort": "high"
-  },
-  {
    "name": "idris",
    "task": "[build] T-4414 rerun rule ages last run",
    "model": "opus",
    "started": "2026-11-14T04:58:58.328Z",
-   "seconds": 1604,
+   "seconds": 1785,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Odalys, Idris",
+ "who": "Idris",
  "recent": [
+  {
+   "name": "odalys",
+   "task": "[tools] T-4411 start accounts when usage returns",
+   "model": "opus",
+   "started": "2026-11-14T04:17:33.902Z",
+   "seconds": null,
+   "finished": "2026-11-14T05:28:38.913000+00:00"
+  },
   {
    "name": "maren",
    "task": "[site] T-4313 Merged section on Home",
@@ -133,14 +132,6 @@
    "started": "2026-11-14T04:20:10.142Z",
    "seconds": null,
    "finished": "2026-11-14T04:28:07.700000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-0678 slice 2 wire rule and intent",
-   "model": "opus",
-   "started": "2026-11-14T03:11:48.167Z",
-   "seconds": null,
-   "finished": "2026-11-14T04:19:41.370000+00:00"
   }
  ],
  "queue": {
@@ -195,7 +186,7 @@
   "week_pct": 47.87,
   "usage_pct": 33.5,
   "work_pct": 79.6,
-  "read_at": "2026-11-14T05:25:00+00:00",
+  "read_at": "2026-11-14T05:28:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -216,7 +207,7 @@
   }
  ],
  "disk": {
-  "free_gb": 16,
+  "free_gb": 17,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -225,14 +216,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-14T00:22:00-05:00",
+   "at": "2026-11-14T00:26:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-14T00:25:00-05:00",
+  "at": "2026-11-14T00:28:00-05:00",
   "mode": null,
   "modes": {
    "main": "spread",
@@ -249,15 +240,6 @@
  },
  "lanes": [
   {
-   "name": "Odalys",
-   "state": "running",
-   "task": "[tools] T-4411 start accounts when usage returns",
-   "model": "opus",
-   "since": "2026-11-14T04:17:33.902Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
    "name": "Idris",
    "state": "running",
    "task": "[build] T-4414 rerun rule ages last run",
@@ -270,6 +252,14 @@
    "name": "Pernille",
    "state": "next",
    "task": "Pernille, P1, from T-1440 (Idris 39ea7fc60d, land job...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
+   "name": "Odalys",
+   "state": "next",
+   "task": "Odalys, P1, T-1776 stage 3, Reports with every document...",
    "model": null,
    "since": null,
    "next": []
@@ -301,16 +291,6 @@
  ],
  "tasks": {
   "run": [
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Start accounts on the audit when usage returns",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-14T04:17:33.902Z",
-    "o": "c",
-    "task": "T-4411"
-   },
    {
     "w": "Idris",
     "k": "build",
@@ -487,12 +467,12 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-14T05:25:34Z",
+  "at": "2026-11-14T05:28:24Z",
   "s": {
    "T-4414": [
     "merging",
-    "Mac tests at the main gate",
-    1794633754965
+    "Mac tests at the main gate \u00b7 4 groups of tests done",
+    1794633744776
    ]
   },
   "nm": {
@@ -500,7 +480,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-14T05:25:34Z",
+  "at": "2026-11-14T05:28:24Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -514,11 +494,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 2303,
+    "conflicted": 2306,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 752
+    "parked": 755
    },
    "cur": [],
    "ld": [
@@ -528,12 +508,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-14T05:24:46Z",
-    "ld": 12.91,
+    "at": "2026-11-14T05:27:49Z",
+    "ld": 9.22,
     "c": 8,
     "sb": 0,
     "dk": [
-     16.5,
+     16.4,
      228.3
     ],
     "ss": [
@@ -585,13 +565,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 2,
+  "main": 1,
   "lanes": 0,
-  "total": 2,
-  "at": "12:25 AM",
+  "total": 1,
+  "at": "12:28 AM",
   "why": "",
-  "at_iso": "2026-11-14T05:25:00+00:00",
+  "at_iso": "2026-11-14T05:28:00+00:00",
   "started": "9:30 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 9:30 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 12:25 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 9:30 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 12:28 AM ET</p></section>"
  }
 }

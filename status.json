@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-14T13:01:27.710758+00:00",
+ "at": "2026-11-14T13:04:23.870985+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -87,22 +87,21 @@
    "task": "[tools] T-4432 released wait hides pinned line",
    "model": "opus",
    "started": "2026-11-14T12:40:55.020Z",
-   "seconds": 1232,
+   "seconds": 1408,
    "finished": null,
    "effort": "high"
-  },
+  }
+ ],
+ "who": "Odalys",
+ "recent": [
   {
    "name": "idris",
    "task": "[build] T-4431 main red completion row inset",
    "model": "opus",
    "started": "2026-11-14T12:41:08.248Z",
-   "seconds": 1219,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Odalys, Idris",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-14T13:04:21.490000+00:00"
+  },
   {
    "name": "idris",
    "task": "[fix] T-4431 main red completion row inset",
@@ -164,7 +163,7 @@
   "week_pct": 50.73,
   "usage_pct": 34.1,
   "work_pct": 80.3,
-  "read_at": "2026-11-14T13:01:00+00:00",
+  "read_at": "2026-11-14T13:04:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -237,7 +236,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-14T08:01:00-05:00",
+  "at": "2026-11-14T08:04:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -264,12 +263,11 @@
   },
   {
    "name": "Idris",
-   "state": "running",
-   "task": "[build] T-4431 main red completion row inset",
-   "model": "opus",
-   "since": "2026-11-14T12:41:08.248Z",
-   "next": [],
-   "effort": "high"
+   "state": "next",
+   "task": "Idris, P2, from T-4238 (Pernille's review, from T-3900,...",
+   "model": null,
+   "since": null,
+   "next": []
   },
   {
    "name": "Pernille",
@@ -315,16 +313,6 @@
     "at": "2026-11-14T12:40:55.020Z",
     "o": "c",
     "task": "T-4432"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "Make main pass its Xcode checks again",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-14T12:41:08.248Z",
-    "o": "c",
-    "task": "T-4431"
    }
   ],
   "src": "plan",
@@ -472,26 +460,20 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-14T13:00:58Z",
+  "at": "2026-11-14T13:04:23Z",
   "s": {
-   "T-4431": [
-    "testing",
-    "its own tests, in its copy",
-    1794660298846
-   ],
    "T-4432": [
     "testing",
     "its own tests, in its copy",
-    1794660358846
+    1794660383870
    ]
   },
   "nm": {
-   "T-4431": "Make main pass its Xcode checks again",
    "T-4432": "Stop a released wait from hiding a pinned line"
   }
  },
  "ln": {
-  "at": "2026-11-14T13:00:58Z",
+  "at": "2026-11-14T13:04:23Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -505,11 +487,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 2758,
+    "conflicted": 2762,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1207
+    "parked": 1211
    },
    "cur": [],
    "ld": [
@@ -519,12 +501,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-14T13:01:07Z",
-    "ld": 12.84,
+    "at": "2026-11-14T13:03:58Z",
+    "ld": 13.87,
     "c": 8,
     "sb": 0,
     "dk": [
-     19.9,
+     19.8,
      228.3
     ],
     "ss": [
@@ -580,32 +562,20 @@
    "sr": 1,
    "m": "opus",
    "e": "xhigh",
-   "t": "Inbox \u2013 Jeremy's 7:59 AM Message on GitHub",
-   "at": "2026-11-14T08:00:31-05:00"
+   "t": "Work session \u2013 1 task",
+   "at": "2026-11-14T08:02:40-05:00"
   }
  ],
  "reply": {
-  "sent": "2026-11-14T12:32:55Z",
-  "seconds": 360.0
+  "sent": "2026-11-14T12:59:59Z",
+  "seconds": 157.0
  },
- "inbox": [
-  {
-   "id": "c6877614127",
-   "state": "received",
-   "position": 1,
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "All of the preview widgets now..."
-  }
- ],
+ "inbox": [],
  "trimmed": [
   "lane_next",
   "queue_text",
   "task_done",
   "fin_short",
-  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -613,13 +583,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 2,
+  "main": 1,
   "lanes": 3,
-  "total": 5,
-  "at": "8:01 AM",
+  "total": 4,
+  "at": "8:04 AM",
   "why": "",
-  "at_iso": "2026-11-14T13:01:00+00:00",
+  "at_iso": "2026-11-14T13:04:00+00:00",
   "started": "7:33 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 2, started 7:33 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 8:01 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 1, started 7:33 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 8:04 AM ET</p></section>"
  }
 }

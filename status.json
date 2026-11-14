@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-14T04:21:31.091581+00:00",
+ "at": "2026-11-14T04:24:33.830229+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -94,7 +94,7 @@
    "task": "[site] T-4313 Merged section on Home",
    "model": "opus",
    "started": "2026-11-14T04:04:21.376Z",
-   "seconds": 1029,
+   "seconds": 1212,
    "finished": null,
    "effort": "high"
   },
@@ -103,7 +103,7 @@
    "task": "[tools] T-4411 start accounts when usage returns",
    "model": "opus",
    "started": "2026-11-14T04:17:33.902Z",
-   "seconds": 237,
+   "seconds": 419,
    "finished": null,
    "effort": "high"
   },
@@ -112,7 +112,7 @@
    "task": "[build] T-1440 refresh control and age line",
    "model": "opus",
    "started": "2026-11-14T04:20:03.586Z",
-   "seconds": 87,
+   "seconds": 270,
    "finished": null,
    "effort": "high"
   },
@@ -121,7 +121,7 @@
    "task": "[review] T-0678 review of refresh slices",
    "model": "opus",
    "started": "2026-11-14T04:20:10.142Z",
-   "seconds": 80,
+   "seconds": 263,
    "finished": null,
    "effort": "high"
   }
@@ -169,19 +169,19 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 9.0,
+   "pct": 10.0,
    "resets_at": "2026-11-14T02:40:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-13T23:17:56.940223-05:00",
+   "read_at": "2026-11-13T23:24:14.005836-05:00",
    "source": "live",
-   "left": 91.0,
+   "left": 90.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 96.0,
    "resets_at": "2026-11-15T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-13T23:17:56.940223-05:00",
+   "read_at": "2026-11-13T23:24:14.005836-05:00",
    "source": "live",
    "left": 4.0,
    "left_words": "of your weekly allowance left"
@@ -193,7 +193,7 @@
    "read_at": "2026-11-13T21:29:37.729013-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-13T23:17:56.940223-05:00"
+  "read_at": "2026-11-13T23:24:14.005836-05:00"
  },
  "ui": {
   "week_pct": 0.36,
@@ -213,7 +213,7 @@
   "week_pct": 47.87,
   "usage_pct": 33.5,
   "work_pct": 79.6,
-  "read_at": "2026-11-14T04:21:00+00:00",
+  "read_at": "2026-11-14T04:24:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -243,14 +243,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-13T23:20:00-05:00",
+   "at": "2026-11-13T23:24:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-13T23:21:00-05:00",
+  "at": "2026-11-13T23:24:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -527,12 +527,17 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-14T04:21:12Z",
+  "at": "2026-11-14T04:24:18Z",
   "s": {
+   "T-4411": [
+    "testing",
+    "its own tests, in its copy",
+    1794630198973
+   ],
    "T-4313": [
     "testing",
     "its own tests, in its copy",
-    1794629652793
+    1794629658973
    ],
    "T-0678": [
     "merged",
@@ -542,12 +547,13 @@
    ]
   },
   "nm": {
+   "T-4411": "Start accounts on the audit when usage returns",
    "T-4313": "Add a Merged section and fold sections on Home",
    "T-0678": "Run the refresh button inside the widget extension"
   }
  },
  "ln": {
-  "at": "2026-11-14T04:21:12Z",
+  "at": "2026-11-14T04:24:18Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -561,11 +567,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 2238,
+    "conflicted": 2242,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 687
+    "parked": 691
    },
    "cur": [],
    "ld": [
@@ -575,12 +581,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-14T04:21:08Z",
-    "ld": 5.17,
+    "at": "2026-11-14T04:24:20Z",
+    "ld": 5.41,
     "c": 8,
     "sb": 0,
     "dk": [
-     16.6,
+     16.7,
      228.3
     ],
     "ss": [
@@ -635,10 +641,10 @@
   "main": 4,
   "lanes": 0,
   "total": 4,
-  "at": "11:21 PM",
+  "at": "11:24 PM",
   "why": "",
-  "at_iso": "2026-11-14T04:21:00+00:00",
+  "at_iso": "2026-11-14T04:24:00+00:00",
   "started": "9:30 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 4, started 9:30 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 11:21 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 4, started 9:30 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 11:24 PM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-14T15:42:13.265177+00:00",
+ "at": "2026-11-14T15:45:15.681915+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -81,22 +81,20 @@
     "end_at": 1794628060
    }
   ],
-  "landed": 11,
+  "landed": 10,
   "failed": 0
  },
- "workers": [
+ "workers": [],
+ "who": "",
+ "recent": [
   {
    "name": "maren",
    "task": "[site] T-4316 scroll boxes pointer inside",
    "model": "opus",
    "started": "2026-11-14T14:13:10.608Z",
-   "seconds": 5342,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Maren",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-14T15:45:03.183000+00:00"
+  },
   {
    "name": "idris",
    "task": "[build] T-4440 bundled render guard + T-4441 test",
@@ -120,14 +118,6 @@
    "started": "2026-11-14T14:01:03.863Z",
    "seconds": null,
    "finished": "2026-11-14T14:11:31.795000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-3279 premade before first open",
-   "model": "opus",
-   "started": "2026-11-14T13:58:06.088Z",
-   "seconds": null,
-   "finished": "2026-11-14T14:00:21.294000+00:00"
   }
  ],
  "queue": {
@@ -182,7 +172,7 @@
   "week_pct": 52.14,
   "usage_pct": 34.5,
   "work_pct": 80.2,
-  "read_at": "2026-11-14T15:42:00+00:00",
+  "read_at": "2026-11-14T15:45:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -219,7 +209,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-14T10:42:00-05:00",
+  "at": "2026-11-14T10:45:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -235,15 +225,6 @@
   "at": "2026-11-14T08:55:56.935462-05:00"
  },
  "lanes": [
-  {
-   "name": "Maren",
-   "state": "running",
-   "task": "[site] T-4316 scroll boxes pointer inside",
-   "model": "opus",
-   "since": "2026-11-14T14:13:10.608Z",
-   "next": [],
-   "effort": "high"
-  },
   {
    "name": "Idris",
    "state": "next",
@@ -277,6 +258,14 @@
    "next": []
   },
   {
+   "name": "Maren",
+   "state": "next",
+   "task": "Maren, P1, from Investor an Investor c6860226572 (12:31 PM...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
    "name": "Wrenna",
    "state": "next",
    "task": "Read developer.apple.com \"Keeping a widget up to date\",...",
@@ -286,18 +275,7 @@
   }
  ],
  "tasks": {
-  "run": [
-   {
-    "w": "Maren",
-    "k": "site",
-    "t": "Scroll boxes scroll only with the pointer inside them",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-14T14:13:10.608Z",
-    "o": "c",
-    "task": "T-4316"
-   }
-  ],
+  "run": [],
   "src": "plan",
   "open": [
    {
@@ -373,6 +351,11 @@
   ],
   "done": [
    {
+    "w": "Maren",
+    "t": "On Home, scrolling the page no longer gets caught by the In flight or Queued box when it slides...",
+    "at": "2026-11-14T10:44:00-05:00"
+   },
+   {
     "w": "Idris",
     "t": "A countdown or habits widget placed before the app opens shows the ready-made empty screen only...",
     "at": "2026-11-14T10:21:00-05:00"
@@ -381,11 +364,6 @@
     "w": "Idris",
     "t": "The widget extension's own decision is now tested directly with its real bundled files,...",
     "at": "2026-11-14T10:21:00-05:00"
-   },
-   {
-    "w": "Idris+pernille",
-    "t": "A premade widget placed on the Home Screen before the app is first opened now shows a real first...",
-    "at": "2026-11-14T09:42:00-05:00"
    }
   ],
   "count": {
@@ -395,8 +373,12 @@
    "you": 15
   },
   "fin": {
-   "n": 5,
+   "n": 6,
    "rows": [
+    [
+     "T-4316",
+     "Scroll boxes scroll only..."
+    ],
     [
      "T-4440",
      "Bundled first render only..."
@@ -459,12 +441,13 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-14T15:42:13Z",
+  "at": "2026-11-14T15:45:02Z",
   "s": {
    "T-4316": [
-    "merging",
-    "Mac tests at the main gate",
-    1794670933265
+    "merged",
+    "on main 10:44 AM ET",
+    1794671075000,
+    ""
    ]
   },
   "nm": {
@@ -472,7 +455,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-14T15:42:13Z",
+  "at": "2026-11-14T15:45:02Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -486,11 +469,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 2919,
+    "conflicted": 2922,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1363
+    "parked": 1366
    },
    "cur": [],
    "ld": [
@@ -500,12 +483,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-14T15:41:27Z",
-    "ld": 1.77,
+    "at": "2026-11-14T15:44:13Z",
+    "ld": 1.48,
     "c": 8,
     "sb": 1,
     "dk": [
-     12.3,
+     13.1,
      228.3
     ],
     "ss": [
@@ -548,6 +531,7 @@
  "trimmed": [
   "lane_next",
   "queue_text",
+  "recent",
   "task_done",
   "fin_short",
   "task_title",
@@ -557,13 +541,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 1,
+  "main": 0,
   "lanes": 0,
-  "total": 1,
-  "at": "10:42 AM",
-  "why": "",
-  "at_iso": "2026-11-14T15:42:00+00:00",
+  "total": 0,
+  "at": "10:45 AM",
+  "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
+  "at_iso": "2026-11-14T15:45:00+00:00",
   "started": "8:56 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 8:56 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 10:42 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0, started 8:56 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 10:45 AM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
  }
 }

@@ -37,17 +37,11 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 ## Open (2026-11-10 12:4x)
 
-- T-4161 bd24d50c7a (11-12 12:57 PM): b on Fable 5.2 (FABLE_MODEL_B); tick logs 'session: models:'. Owed: first models line in ops/runs/personal-tick-a/b.log.
-
 - T-4213 8094fd2d56: held window -> one Fable restart. T-4235 db5c635452 (11-12 10 PM): pause reserve fixed 3 pts 5h / 1 Fable (was burn x wrap). Owed: first live line ~91%; >90% readings are refused by the <span title="What keeps an idea below the top: the cap that applies to it now.">hold</span> (projection only).
-
-- T-4224 51744a9075 (11-12): <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> Opus = the session's coordinator (main replies all opus, agent replies all fable); Home now says Fable. Open: coordinator could run cheaper (tick change).
 
 - T-4232 (11-12 10 PM): Double Spread + per-account modes (tools/usage_mode.py, ops/usage_mode.json; MODE <ALL|MAIN|A|B> <mode> via inbox) + Home Mode block. NOT landed: main_gate_test red on main (T-4236). Ready in company-scratch/T-4232-odalys/wt (16 paths, msg.txt). site_live_test needs ops/live.json copied into a worktree.
 
 - T-4230 f054a45347 (branch odalys/t4230-restructuring-docs, unlanded 11-12 22:1x): Restructuring folder under Documents. Owed: land; first live mock-up copy (phase 4).
-
-- T-4004 (11-13): already done by 5aed12987d/e4c770e538, ticked. T-3735 49196e7897 (11-13): Blocked or waiting under All tasks. Owed: T-4262 #41 reply once a full publish carries it.
 
 - T-4275 952958e1e1 (11-13 12:0x PM, under T-3992): land --from finds host suites in the copy (host_suites disk=). Owed: Pernille's T-3400 land is the first live run; known gap: a copy behind main misses a suite main added.
 
@@ -55,18 +49,21 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 - T-4129 2c93b342af (11-13): <span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">parked</span> reader confirms by git cherry. Owed: 2b patch in company-scratch/T-4129-odalys (pipeline hold), then tick.
 
-- T-4317 1fc5ad43a8 + T-4402 9f7eb648d0 (11-13): ledger rows via tools/ledger_row.py (fills prev; plan, lane.md, slice notes say so). Owed: tick T-4402 when the next slice's rows all carry prev; then the apply refuses rows without prev.
+- T-4317 1fc5ad43a8 + T-4402 9f7eb648d0 (11-13): ledger rows via tools/ledger_row.py (fills prev; plan, <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span>.md, slice notes say so). Owed: tick T-4402 when the next slice's rows all carry prev; then the apply refuses rows without prev.
 
 - T-4314 fcb1782366 (11-13 23:1x): personal_stream_shape.py cost + T-4124 sums. Tick lines = patch in company-scratch/T-4314-odalys (audit owner; reviewer Pernille). Owed: first real 'session: cost:' line, then tick.
 
 - T-4411 (11-14 00:1x): dispatch.py patch in company-scratch/T-4411-odalys/T-4411-dispatch.patch, handed by note on T-4092 (audit-owned). Owed: after it lands, dispatch.log shows an audit line dealt within one tick of a 5-hour reset; then tick T-4411.
 
-- T-4103 31b4b962fb (11-14): queue check core, dry only (tools/queue_check.py; switch ops/queue_check.json absent). Rest on T-4443..T-4453. Owed: T-4447 replay narrows the signals (265 of 426 flagged on b); T-4444 cheap copies read (on_change 98 s, scratch sweep ~100 s); Ines's read decides the date-wait act.
+
+- T-4446 slice 1 (11-14): tools/records_round.py, one records commit per 900 s, never memory alone; memory_commit.py hands over (old path MEMORY_WITH_RECORDS=0). Baseline 1,336 record-only, 432 memory-only in 7 d. ops/plans/t4446-supervisor.patch noted on T-3995; its suite not run (refusal). Rest: T-4457, T-4458. Owed: 7-day count <= 672 and wait lines not up; then tick.
 
 ## Lessons
 
 - Gate runs of the personal suites take ~55 min under load: run land in background with a 2 h limit, not 10 min.
-- Run a new act-alone rule dry on the real board before trusting a design's proof list: 25 date waits were not proofs (T-4103).
+- T-4103 31b4b962fb (11-14): queue check core, dry only (switch absent). Rest on T-4444..T-4453. Owed: T-4447 replay narrows the signals (265 of 426 flagged on b); T-4444 cheap copies read (on_change 98 s); Ines's read decides the date-wait act.
+- T-4443 slice 1 14f086c7d8 (11-14): add takes the task card (board_card.py; switch ops/board_card.json; --by, --card-warn). NOT ticked. Owed: five card rules in queue_check (plan in my line note); T-4459 machine callers.
+- Run a new act-alone rule dry on the real board first: 25 date waits were not proofs (T-4103).
 {% endraw %}
 
 

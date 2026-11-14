@@ -1,22 +1,11 @@
 {
  "schema": 1,
- "at": "2026-11-14T18:18:41.486629+00:00",
+ "at": "2026-11-14T18:23:30.596214+00:00",
  "session": {
   "active": false,
   "kind": "",
   "started": null,
   "flow": [
-   {
-    "t": "T-4446",
-    "name": "Commit the company's records once per supervisor round",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1794680291
-     }
-    ]
-   },
    {
     "t": "T-3279",
     "w": "Idris",
@@ -29,6 +18,30 @@
    }
   ],
   "done": [
+   {
+    "t": "T-4443",
+    "name": "Add the task card slots when a line is made",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794680490
+   },
+   {
+    "t": "T-4188",
+    "name": "Location, steps and notifications work in scripts and widgets",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794680453
+   },
+   {
+    "t": "T-4446",
+    "name": "Commit the company's records once per supervisor round",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794680443
+   },
    {
     "t": "T-4194",
     "name": "Build the feature session for app work",
@@ -75,7 +88,7 @@
     "end_at": 1794638102
    }
   ],
-  "landed": 6,
+  "landed": 9,
   "failed": 0
  },
  "workers": [],
@@ -166,7 +179,7 @@
   "week_pct": 53.57,
   "usage_pct": 34.9,
   "work_pct": 80.3,
-  "read_at": "2026-11-14T18:18:00+00:00",
+  "read_at": "2026-11-14T18:25:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -174,18 +187,6 @@
     "w": "Odalys",
     "k": "tools",
     "t": "Run the queue check on each change and between sessions",
-    "m": "opus",
-    "e": "xhigh",
-    "at": "2026-11-14T12:51:41-05:00",
-    "n": "Evan",
-    "src": "plan-a"
-   },
-   {
-    "lane": "a3",
-    "task": "T-4446",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Commit the company's records once per supervisor round",
     "m": "opus",
     "e": "xhigh",
     "at": "2026-11-14T12:51:41-05:00",
@@ -222,14 +223,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-14T13:14:00-05:00",
+   "at": "2026-11-14T13:22:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-14T13:18:00-05:00",
+  "at": "2026-11-14T13:25:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -427,36 +428,15 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-14T18:18:41Z",
-  "s": {
-   "T-4446": [
-    "merging",
-    "Host checks on the Mac mini \u00b7 2 groups of tests done",
-    1794680321486
-   ],
-   "T-4443": [
-    "mergeq",
-    "1st to merge",
-    1794680321486
-   ],
-   "T-4188": [
-    "mergeq",
-    "2nd to merge",
-    1794680321486
-   ]
-  },
-  "nm": {
-   "T-4446": "Commit the company's records once per supervisor round",
-   "T-4443": "Add the task card slots when a line is made",
-   "T-4188": "Location, steps and notifications work in scripts and..."
-  }
+  "at": "2026-11-14T18:23:30Z",
+  "s": {}
  },
  "ln": {
-  "at": "2026-11-14T18:18:41Z",
+  "at": "2026-11-14T18:23:30Z",
   "mq": {
    "n": {
-    "checking": 1,
-    "inline": 2,
+    "checking": 0,
+    "inline": 0,
     "conflicted": 0,
     "failed": 0,
     "held": 0,
@@ -464,46 +444,35 @@
     "parked": 4
    },
    "m": {
-    "checking": 0,
-    "inline": 0,
+    "checking": null,
+    "inline": null,
     "conflicted": null,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 897
+    "parked": 902
    },
-   "cur": [
-    [
-     [
-      "T-4446"
-     ],
-     "Mac tests",
-     "Mac mini",
-     0
-    ]
-   ],
+   "cur": [],
    "ld": [
-    8,
-    "2026-11-14T15:04:40Z"
+    11,
+    "2026-11-14T18:21:30Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-14T18:18:43Z",
-    "ld": 8.15,
+    "at": "2026-11-14T18:23:09Z",
+    "ld": 6.15,
     "c": 8,
-    "sb": 1,
+    "sb": 0,
     "dk": [
-     13.0,
+     11.4,
      228.3
     ],
     "ss": [
      188.1,
      953.7
     ],
-    "sn": [
-     "iPhone 18 Pro"
-    ]
+    "sn": []
    },
    "macbook": {
     "at": "2026-11-14T17:53:25Z",
@@ -525,20 +494,33 @@
    "sr": 1,
    "m": "opus",
    "e": "xhigh",
-   "t": "Work session \u2013 1 task",
-   "at": "2026-11-14T12:51:41-05:00"
+   "t": "Inbox \u2013 Jeremy's 1:22 PM Message on GitHub",
+   "at": "2026-11-14T13:23:10-05:00"
   }
  ],
  "reply": {
   "sent": "2026-11-14T17:30:59Z",
   "seconds": 1257.0
  },
- "inbox": [],
+ "inbox": [
+  {
+   "id": "c6882155483",
+   "state": "received",
+   "position": 1,
+   "eta": "2026-11-14T13:33:20-05:00",
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "Ok! Since my account resets at 2 but..."
+  }
+ ],
  "trimmed": [
   "lane_next",
   "queue_text",
   "recent",
   "task_done",
+  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -547,12 +529,12 @@
  ],
  "agents_now": {
   "main": 0,
-  "lanes": 2,
-  "total": 2,
-  "at": "1:18 PM",
+  "lanes": 1,
+  "total": 1,
+  "at": "1:25 PM",
   "why": "",
-  "at_iso": "2026-11-14T18:18:00+00:00",
+  "at_iso": "2026-11-14T18:25:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 1:18 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 1:25 PM ET</p></section>"
  }
 }

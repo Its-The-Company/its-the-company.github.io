@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-14T07:44:53.995555+00:00",
+ "at": "2026-11-14T07:47:35.051578+00:00",
  "session": {
   "active": false,
   "kind": "",
@@ -132,12 +132,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-14T02:54:27-05:00",
+ "next_tick": "2026-11-14T03:02:25-05:00",
  "personal": {
   "week_pct": 50.79,
   "usage_pct": 34.1,
   "work_pct": 80.3,
-  "read_at": "2026-11-14T07:45:00+00:00",
+  "read_at": "2026-11-14T07:47:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -167,14 +167,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-14T02:44:00-05:00",
+   "at": "2026-11-14T02:47:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-14T02:45:00-05:00",
+  "at": "2026-11-14T02:47:00-05:00",
   "mode": null,
   "modes": {
    "main": "spread",
@@ -372,11 +372,11 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-14T07:44:53Z",
+  "at": "2026-11-14T07:47:35Z",
   "s": {}
  },
  "ln": {
-  "at": "2026-11-14T07:44:53Z",
+  "at": "2026-11-14T07:47:35Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -390,11 +390,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 2442,
+    "conflicted": 2445,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 891
+    "parked": 894
    },
    "cur": [],
    "ld": [
@@ -404,12 +404,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-14T07:44:17Z",
-    "ld": 0.68,
+    "at": "2026-11-14T07:47:16Z",
+    "ld": 0.77,
     "c": 8,
     "sb": 0,
     "dk": [
-     15.8,
+     15.7,
      228.3
     ],
     "ss": [
@@ -436,11 +436,24 @@
   "sent": "2026-11-14T07:36:12Z",
   "seconds": 234.0
  },
- "inbox": [],
+ "inbox": [
+  {
+   "id": "c6874035194",
+   "state": "received",
+   "position": 1,
+   "eta": "2026-11-14T03:02:25-05:00",
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "Remember to keep pushing towards..."
+  }
+ ],
  "trimmed": [
   "lane_next",
   "queue_text",
   "task_done",
+  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -451,10 +464,10 @@
   "main": 0,
   "lanes": 0,
   "total": 0,
-  "at": "2:45 AM",
-  "why": "Waiting for the week's line: this week's usage is ahead of its even pace. Last check 2:45 AM ET.",
-  "at_iso": "2026-11-14T07:45:00+00:00",
+  "at": "2:47 AM",
+  "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
+  "at_iso": "2026-11-14T07:47:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 2:45 AM ET</p><p class=\"an-why\">Waiting for the week's line: this week's usage is ahead of its even pace. Last check 2:45 AM ET.</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 2:47 AM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-14T20:59:14.832481+00:00",
+ "at": "2026-11-14T21:04:02.204778+00:00",
  "session": {
   "active": false,
   "kind": "",
@@ -158,30 +158,30 @@
  "meter": {
   "five_hour": {
    "pct": 1.0,
-   "resets_at": "2026-11-14T22:39:59.564833+00:00",
+   "resets_at": "2026-11-14T22:39:59.513543+00:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-14T15:23:47.454762-05:00",
+   "read_at": "2026-11-14T15:59:23.005996-05:00",
    "source": "usage",
    "left": 99.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 100.0,
-   "resets_at": "2026-11-15T06:59:59.564855+00:00",
+   "resets_at": "2026-11-15T06:59:59.513564+00:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-14T15:23:47.454762-05:00",
+   "read_at": "2026-11-14T15:59:23.005996-05:00",
    "source": "usage",
    "left": 0.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 5.0,
-   "resets_at": "2026-11-15T06:59:59.565028+00:00",
+   "resets_at": "2026-11-15T06:59:59.513710+00:00",
    "used_words": "of the Fable weekly allowance used",
-   "read_at": "2026-11-14T15:23:47.454762-05:00",
+   "read_at": "2026-11-14T15:59:23.005996-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-14T15:23:47.454762-05:00"
+  "read_at": "2026-11-14T15:59:23.005996-05:00"
  },
  "ui": {
   "week_pct": 0.462,
@@ -196,12 +196,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-14T15:46:13-05:00",
+ "next_tick": "2026-11-14T16:16:58-05:00",
  "personal": {
   "week_pct": 56.11,
   "usage_pct": 35.9,
   "work_pct": 81.1,
-  "read_at": "2026-11-14T21:02:00+00:00",
+  "read_at": "2026-11-14T21:05:00+00:00",
   "running": [
    {
     "lane": "b2",
@@ -244,14 +244,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-14T16:01:00-05:00",
+   "at": "2026-11-14T16:04:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-14T16:02:00-05:00",
+  "at": "2026-11-14T16:05:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -374,19 +374,24 @@
    {
     "w": "Odalys",
     "k": "tools",
-    "t": "Run the queue check on each change and...",
+    "t": "Show task states in place of new lines",
     "s": "next",
     "o": "i"
    },
    {
     "w": "Odalys",
     "k": "tools",
-    "t": "Show task states in place of new lines",
+    "t": "Commit the company's records once per...",
     "s": "next",
     "o": "i"
    }
   ],
   "done": [
+   {
+    "w": "Odalys",
+    "t": "Each time a task line is added, finished, blocked or given to another worker, the queue check...",
+    "at": "2026-11-14T16:01:00-05:00"
+   },
    {
     "w": "Odalys",
     "t": "A task that was set aside and later brought back to the board is no longer marked finished by...",
@@ -396,11 +401,6 @@
     "w": "Odalys",
     "t": "A new task line, or a finished one, can now name the older lines it replaces; those lines leave...",
     "at": "2026-11-14T14:21:00-05:00"
-   },
-   {
-    "w": "Maren",
-    "t": "On Home, scrolling the page no longer gets caught by the In flight or Queued box when it slides...",
-    "at": "2026-11-14T10:44:00-05:00"
    }
   ],
   "count": {
@@ -449,12 +449,12 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-14T20:59:14Z",
+  "at": "2026-11-14T21:04:02Z",
   "s": {
    "T-4437": [
-    "merging",
-    "Rebasing onto current main",
-    1794689954832
+    "mergeq",
+    "1st to merge",
+    1794683882204
    ]
   },
   "nm": {
@@ -462,36 +462,27 @@
   }
  },
  "ln": {
-  "at": "2026-11-14T20:59:14Z",
+  "at": "2026-11-14T21:04:02Z",
   "mq": {
    "n": {
-    "checking": 1,
-    "inline": 0,
+    "checking": 0,
+    "inline": 1,
     "conflicted": 0,
     "failed": 0,
     "held": 0,
     "retry": 0,
-    "parked": 5
+    "parked": 4
    },
    "m": {
-    "checking": 0,
-    "inline": null,
+    "checking": null,
+    "inline": 106,
     "conflicted": null,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 354
+    "parked": 870
    },
-   "cur": [
-    [
-     [
-      "T-4437"
-     ],
-     "lining up with main",
-     "Mac mini",
-     0
-    ]
-   ],
+   "cur": [],
    "ld": [
     17,
     "2026-11-14T20:08:40Z"
@@ -499,12 +490,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-14T20:59:15Z",
-    "ld": 1.14,
+    "at": "2026-11-14T21:04:02Z",
+    "ld": 0.91,
     "c": 8,
     "sb": 0,
     "dk": [
-     21.0,
+     20.9,
      228.3
     ],
     "ss": [
@@ -541,12 +532,36 @@
   "sent": "2026-11-14T20:32:15Z",
   "seconds": 131.0
  },
- "inbox": [],
+ "inbox": [
+  {
+   "id": "c6884125269",
+   "state": "waiting",
+   "position": 1,
+   "eta": "2026-11-14T16:16:58-05:00",
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "A"
+  },
+  {
+   "id": "c6884133984",
+   "state": "waiting",
+   "position": 2,
+   "eta": "2026-11-14T16:16:58-05:00",
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "Ok great. So this can be closed?..."
+  }
+ ],
  "trimmed": [
   "lane_next",
   "queue_text",
   "recent",
   "task_done",
+  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -557,10 +572,10 @@
   "main": 0,
   "lanes": 1,
   "total": 1,
-  "at": "4:02 PM",
+  "at": "4:05 PM",
   "why": "",
-  "at_iso": "2026-11-14T21:02:00+00:00",
+  "at_iso": "2026-11-14T21:05:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 4:02 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 4:05 PM ET</p></section>"
  }
 }

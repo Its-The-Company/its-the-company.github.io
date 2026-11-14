@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-14T03:13:48.984939+00:00",
+ "at": "2026-11-14T03:16:56.197025+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -92,7 +92,7 @@
    "task": "[tools] T-4314 personal session cost line",
    "model": "opus",
    "started": "2026-11-14T02:33:48.956Z",
-   "seconds": 2400,
+   "seconds": 2587,
    "finished": null,
    "effort": "high"
   },
@@ -101,7 +101,7 @@
    "task": "[site] T-4308 account sessions in In flight",
    "model": "opus",
    "started": "2026-11-14T02:33:55.419Z",
-   "seconds": 2393,
+   "seconds": 2580,
    "finished": null,
    "effort": "high"
   },
@@ -110,7 +110,7 @@
    "task": "[build] T-0678 slice 2 wire rule and intent",
    "model": "opus",
    "started": "2026-11-14T03:11:48.167Z",
-   "seconds": 120,
+   "seconds": 308,
    "finished": null,
    "effort": "high"
   }
@@ -145,7 +145,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 433,
+  "runnable_count": 434,
   "blocked_count": 97
  },
  "meter": {
@@ -194,7 +194,7 @@
   "week_pct": 47.87,
   "usage_pct": 33.5,
   "work_pct": 79.6,
-  "read_at": "2026-11-14T03:13:00+00:00",
+  "read_at": "2026-11-14T03:17:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -269,7 +269,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-13T22:13:00-05:00",
+  "at": "2026-11-13T22:17:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -387,6 +387,13 @@
     "o": "i"
    },
    {
+    "w": "Odalys",
+    "k": "ops",
+    "t": "Start accounts on the audit when usage returns",
+    "s": "next",
+    "o": "i"
+   },
+   {
     "w": "Pernille",
     "k": "build",
     "t": "Keep real packages out until the sandbox is...",
@@ -434,13 +441,6 @@
     "t": "Judge unaudited queue lines, group 3 of 4",
     "s": "next",
     "o": "c"
-   },
-   {
-    "w": "Ines",
-    "k": "ops",
-    "t": "Judge unaudited queue lines, group 4 of 4",
-    "s": "next",
-    "o": "c"
    }
   ],
   "done": [
@@ -461,7 +461,7 @@
    }
   ],
   "count": {
-   "next": 433,
+   "next": 434,
    "wait": 50,
    "blocked": 47,
    "you": 15
@@ -519,12 +519,12 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-14T03:13:48Z",
+  "at": "2026-11-14T03:16:33Z",
   "s": {
    "T-4314": [
     "merging",
     "Mac tests at the main gate",
-    1794625368984
+    1794625353467
    ],
    "T-0678": [
     "merged",
@@ -546,7 +546,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-14T03:13:48Z",
+  "at": "2026-11-14T03:16:33Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -560,11 +560,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 2171,
+    "conflicted": 2174,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 617
+    "parked": 620
    },
    "cur": [],
    "ld": [
@@ -574,12 +574,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-14T03:13:25Z",
-    "ld": 6.67,
+    "at": "2026-11-14T03:16:38Z",
+    "ld": 9.67,
     "c": 8,
     "sb": 0,
     "dk": [
-     14.3,
+     14.2,
      228.3
     ],
     "ss": [
@@ -635,32 +635,20 @@
    "sr": 1,
    "m": "opus",
    "e": "xhigh",
-   "t": "Inbox \u2013 Evan's 10:11 PM Message on GitHub",
-   "at": "2026-11-13T22:12:08-05:00"
+   "t": "Work session \u2013 1 task",
+   "at": "2026-11-13T22:14:31-05:00"
   }
  ],
  "reply": {
-  "sent": "2026-11-14T02:57:37Z",
-  "seconds": 107.0
+  "sent": "2026-11-14T03:11:53Z",
+  "seconds": 156.0
  },
- "inbox": [
-  {
-   "id": "c6870768748",
-   "state": "received",
-   "position": 1,
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "Jeremy's account reset once more, so..."
-  }
- ],
+ "inbox": [],
  "trimmed": [
   "lane_next",
   "queue_text",
   "task_done",
   "fin_short",
-  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -671,10 +659,10 @@
   "main": 3,
   "lanes": 3,
   "total": 6,
-  "at": "10:13 PM",
+  "at": "10:17 PM",
   "why": "",
-  "at_iso": "2026-11-14T03:13:00+00:00",
+  "at_iso": "2026-11-14T03:17:00+00:00",
   "started": "9:30 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 3, started 9:30 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 10:13 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 3, started 9:30 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 10:17 PM ET</p></section>"
  }
 }

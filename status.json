@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-14T05:28:43.571216+00:00",
+ "at": "2026-11-14T05:31:47.447118+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -94,7 +94,7 @@
    "task": "[build] T-4414 rerun rule ages last run",
    "model": "opus",
    "started": "2026-11-14T04:58:58.328Z",
-   "seconds": 1785,
+   "seconds": 1969,
    "finished": null,
    "effort": "high"
   }
@@ -186,7 +186,7 @@
   "week_pct": 47.87,
   "usage_pct": 33.5,
   "work_pct": 79.6,
-  "read_at": "2026-11-14T05:28:00+00:00",
+  "read_at": "2026-11-14T05:31:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -223,7 +223,7 @@
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-14T00:28:00-05:00",
+  "at": "2026-11-14T00:31:00-05:00",
   "mode": null,
   "modes": {
    "main": "spread",
@@ -467,20 +467,26 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-14T05:28:24Z",
+  "at": "2026-11-14T05:31:47Z",
   "s": {
    "T-4414": [
+    "mergetest",
+    "iPhone tests on the MacBook",
+    null
+   ],
+   "T-4411": [
     "merging",
-    "Mac tests at the main gate \u00b7 4 groups of tests done",
-    1794633744776
+    "Mac tests at the main gate",
+    1794634187447
    ]
   },
   "nm": {
-   "T-4414": "Make the rerun rule age the last run"
+   "T-4414": "Make the rerun rule age the last run",
+   "T-4411": "Start accounts on the audit when usage returns"
   }
  },
  "ln": {
-  "at": "2026-11-14T05:28:24Z",
+  "at": "2026-11-14T05:31:47Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -494,11 +500,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 2306,
+    "conflicted": 2309,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 755
+    "parked": 758
    },
    "cur": [],
    "ld": [
@@ -508,12 +514,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-14T05:27:49Z",
-    "ld": 9.22,
+    "at": "2026-11-14T05:30:59Z",
+    "ld": 6.84,
     "c": 8,
     "sb": 0,
     "dk": [
-     16.4,
+     16.5,
      228.3
     ],
     "ss": [
@@ -523,12 +529,12 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-14T05:21:35Z",
-    "ld": 1.42,
+    "at": "2026-11-14T05:27:46Z",
+    "ld": 0.53,
     "c": 12,
     "sb": 0,
     "dk": [
-     370.4,
+     370.3,
      926.4
     ],
     "sn": []
@@ -568,10 +574,10 @@
   "main": 1,
   "lanes": 0,
   "total": 1,
-  "at": "12:28 AM",
+  "at": "12:31 AM",
   "why": "",
-  "at_iso": "2026-11-14T05:28:00+00:00",
+  "at_iso": "2026-11-14T05:31:00+00:00",
   "started": "9:30 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 9:30 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 12:28 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 9:30 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 12:31 AM ET</p></section>"
  }
 }

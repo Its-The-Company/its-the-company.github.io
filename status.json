@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-14T21:46:01.957588+00:00",
+ "at": "2026-11-14T21:55:29.450594+00:00",
  "session": {
   "active": false,
   "kind": "",
@@ -158,30 +158,30 @@
  "meter": {
   "five_hour": {
    "pct": 1.0,
-   "resets_at": "2026-11-14T22:40:00.237349+00:00",
+   "resets_at": "2026-11-14T22:40:00.113764+00:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-14T16:37:02.549815-05:00",
+   "read_at": "2026-11-14T16:55:23.823085-05:00",
    "source": "usage",
    "left": 99.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 100.0,
-   "resets_at": "2026-11-15T06:59:59.237366+00:00",
+   "resets_at": "2026-11-15T06:59:59.113783+00:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-14T16:37:02.549815-05:00",
+   "read_at": "2026-11-14T16:55:23.823085-05:00",
    "source": "usage",
    "left": 0.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 5.0,
-   "resets_at": "2026-11-15T07:00:00.237484+00:00",
+   "resets_at": "2026-11-15T07:00:00.113910+00:00",
    "used_words": "of the Fable weekly allowance used",
-   "read_at": "2026-11-14T16:37:02.549815-05:00",
+   "read_at": "2026-11-14T16:55:23.823085-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-14T16:37:02.549815-05:00"
+  "read_at": "2026-11-14T16:55:23.823085-05:00"
  },
  "ui": {
   "week_pct": 0.462,
@@ -196,12 +196,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-14T16:58:08-05:00",
+ "next_tick": "2026-11-14T17:01:19-05:00",
  "personal": {
   "week_pct": 56.44,
   "usage_pct": 36.1,
   "work_pct": 81.2,
-  "read_at": "2026-11-14T21:46:00+00:00",
+  "read_at": "2026-11-14T21:55:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -231,14 +231,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-14T16:46:00-05:00",
+   "at": "2026-11-14T16:54:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-14T16:46:00-05:00",
+  "at": "2026-11-14T16:55:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -436,12 +436,12 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-14T21:46:01Z",
+  "at": "2026-11-14T21:55:29Z",
   "s": {
    "T-4437": [
-    "mergeq",
-    "1st to merge",
-    1794683881957
+    "merging",
+    "Rebasing onto current main",
+    1794693329450
    ]
   },
   "nm": {
@@ -449,11 +449,11 @@
   }
  },
  "ln": {
-  "at": "2026-11-14T21:46:01Z",
+  "at": "2026-11-14T21:55:29Z",
   "mq": {
    "n": {
-    "checking": 0,
-    "inline": 1,
+    "checking": 1,
+    "inline": 0,
     "conflicted": 0,
     "failed": 0,
     "held": 0,
@@ -461,15 +461,24 @@
     "parked": 5
    },
    "m": {
-    "checking": null,
-    "inline": 148,
+    "checking": 0,
+    "inline": null,
     "conflicted": null,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 60
+    "parked": 70
    },
-   "cur": [],
+   "cur": [
+    [
+     [
+      "T-4437"
+     ],
+     "lining up with main",
+     "Mac mini",
+     0
+    ]
+   ],
    "ld": [
     17,
     "2026-11-14T20:08:40Z"
@@ -477,8 +486,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-14T21:46:02Z",
-    "ld": 0.72,
+    "at": "2026-11-14T21:55:06Z",
+    "ld": 0.48,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -514,7 +523,7 @@
    "id": "c6884125269",
    "state": "waiting",
    "position": 1,
-   "eta": "2026-11-14T16:58:08-05:00",
+   "eta": "2026-11-14T17:01:19-05:00",
    "tasks": {
     "open": 0,
     "done": 0
@@ -525,7 +534,7 @@
    "id": "c6884133984",
    "state": "waiting",
    "position": 2,
-   "eta": "2026-11-14T16:58:08-05:00",
+   "eta": "2026-11-14T17:01:19-05:00",
    "tasks": {
     "open": 0,
     "done": 0
@@ -536,7 +545,7 @@
    "id": "c6884234782",
    "state": "waiting",
    "position": 3,
-   "eta": "2026-11-14T16:58:08-05:00",
+   "eta": "2026-11-14T17:01:19-05:00",
    "tasks": {
     "open": 0,
     "done": 0
@@ -547,7 +556,7 @@
    "id": "c6884413186",
    "state": "waiting",
    "position": 4,
-   "eta": "2026-11-14T16:58:08-05:00",
+   "eta": "2026-11-14T17:01:19-05:00",
    "tasks": {
     "open": 0,
     "done": 0
@@ -558,7 +567,7 @@
    "id": "c6884472000",
    "state": "waiting",
    "position": 5,
-   "eta": "2026-11-14T16:58:08-05:00",
+   "eta": "2026-11-14T17:01:19-05:00",
    "tasks": {
     "open": 0,
     "done": 0
@@ -569,12 +578,23 @@
    "id": "c6884544941",
    "state": "waiting",
    "position": 6,
-   "eta": "2026-11-14T16:58:08-05:00",
+   "eta": "2026-11-14T17:01:19-05:00",
    "tasks": {
     "open": 0,
     "done": 0
    },
    "title": "A"
+  },
+  {
+   "id": "c6884749815",
+   "state": "received",
+   "position": 7,
+   "eta": "2026-11-14T17:01:19-05:00",
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "C"
   }
  ],
  "trimmed": [
@@ -593,10 +613,10 @@
   "main": 0,
   "lanes": 0,
   "total": 0,
-  "at": "4:46 PM",
-  "why": "Plan limit: the weekly allowance is used up; it resets Sun 1:59 AM ET. Last check 4:46 PM ET.",
-  "at_iso": "2026-11-14T21:46:00+00:00",
+  "at": "4:55 PM",
+  "why": "Plan limit: the weekly allowance is used up; it resets Sun 1:59 AM ET. Last check 4:55 PM ET.",
+  "at_iso": "2026-11-14T21:55:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 4:46 PM ET</p><p class=\"an-why\">Plan limit: the weekly allowance is used up; it resets Sun 1:59 AM ET. Last check 4:46 PM ET.</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 4:55 PM ET</p><p class=\"an-why\">Plan limit: the weekly allowance is used up; it resets Sun 1:59 AM ET. Last check 4:55 PM ET.</p></section>"
  }
 }

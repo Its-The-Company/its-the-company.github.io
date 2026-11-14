@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-14T13:51:58.833772+00:00",
+ "at": "2026-11-14T13:56:13.511096+00:00",
  "session": {
   "active": false,
   "kind": "",
@@ -120,39 +120,39 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 341,
+  "runnable_count": 340,
   "blocked_count": 86
  },
  "meter": {
   "five_hour": {
-   "pct": 3.0,
-   "resets_at": "2026-11-14T12:40:00-05:00",
+   "pct": 4.0,
+   "resets_at": "2026-11-14T17:39:59.794671+00:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-14T08:09:11.854232-05:00",
-   "source": "live",
-   "left": 97.0,
+   "read_at": "2026-11-14T08:55:56.247331-05:00",
+   "source": "usage",
+   "left": 96.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 98.0,
-   "resets_at": "2026-11-15T02:00:00-05:00",
+   "pct": 99.0,
+   "resets_at": "2026-11-15T06:59:58.794696+00:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-14T08:09:11.854232-05:00",
-   "source": "live",
-   "left": 2.0,
+   "read_at": "2026-11-14T08:55:56.247331-05:00",
+   "source": "usage",
+   "left": 1.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 4.0,
-   "resets_at": "2026-11-15T07:00:00.427661+00:00",
+   "resets_at": "2026-11-15T06:59:59.794874+00:00",
    "used_words": "of the Fable weekly allowance used",
-   "read_at": "2026-11-14T07:33:33.294624-05:00",
+   "read_at": "2026-11-14T08:55:56.247331-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-14T08:09:11.854232-05:00"
+  "read_at": "2026-11-14T08:55:56.247331-05:00"
  },
  "ui": {
-  "week_pct": 0.46,
+  "week_pct": 0.462,
   "five_hour_pct": 0.0,
   "caps_pct": {
    "week": 3.0,
@@ -164,12 +164,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-14T07:48:33-05:00",
+ "next_tick": "2026-11-14T09:10:56-05:00",
  "personal": {
-  "week_pct": 50.73,
-  "usage_pct": 33.9,
-  "work_pct": 79.9,
-  "read_at": "2026-11-14T13:52:00+00:00",
+  "week_pct": 52.14,
+  "usage_pct": 34.5,
+  "work_pct": 80.2,
+  "read_at": "2026-11-14T13:56:00+00:00",
   "running": [
    {
     "lane": "b2",
@@ -203,7 +203,7 @@
   }
  ],
  "disk": {
-  "free_gb": 20,
+  "free_gb": 19,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -212,14 +212,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-14T08:51:00-05:00",
+   "at": "2026-11-14T08:54:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-14T08:52:00-05:00",
+  "at": "2026-11-14T08:56:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -356,6 +356,11 @@
   ],
   "done": [
    {
+    "w": "Operator",
+    "t": "Main passes its Xcode checks again: job J-20261114-0751-land-m-269dc7 on the MacBook no longer...",
+    "at": "2026-11-14T08:54:00-05:00"
+   },
+   {
     "w": "Ines",
     "t": "The task list clean-up took its last ten stale notices off the board, after noting on 22 open...",
     "at": "2026-11-14T08:47:00-05:00"
@@ -364,15 +369,10 @@
     "w": "Odalys",
     "t": "When a held task is released, its waiting mark is now crossed out, so it can't keep the task off...",
     "at": "2026-11-14T08:42:00-05:00"
-   },
-   {
-    "w": "Pernille",
-    "t": "Checked Idris's change that makes the widget's refresh button actually refresh: the logic is...",
-    "at": "2026-11-14T08:13:00-05:00"
    }
   ],
   "count": {
-   "next": 341,
+   "next": 340,
    "wait": 42,
    "blocked": 44,
    "you": 15
@@ -417,23 +417,14 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-14T13:51:58Z",
-  "s": {
-   "T-4422": [
-    "merging",
-    "Rebasing onto current main",
-    1794664078833
-   ]
-  },
-  "nm": {
-   "T-4422": "Apply the queue audit ledger, final pass"
-  }
+  "at": "2026-11-14T13:56:13Z",
+  "s": {}
  },
  "ln": {
-  "at": "2026-11-14T13:51:58Z",
+  "at": "2026-11-14T13:56:13Z",
   "mq": {
    "n": {
-    "checking": 1,
+    "checking": 0,
     "inline": 0,
     "conflicted": 1,
     "failed": 0,
@@ -442,24 +433,15 @@
     "parked": 4
    },
    "m": {
-    "checking": 4,
+    "checking": null,
     "inline": null,
-    "conflicted": 2809,
+    "conflicted": 2813,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1255
+    "parked": 1259
    },
-   "cur": [
-    [
-     [
-      "T-4422"
-     ],
-     "lining up with main",
-     "Mac mini",
-     4
-    ]
-   ],
+   "cur": [],
    "ld": [
     5,
     "2026-11-14T13:47:23Z"
@@ -467,12 +449,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-14T13:51:20Z",
-    "ld": 5.81,
+    "at": "2026-11-14T13:56:14Z",
+    "ld": 4.45,
     "c": 8,
     "sb": 0,
     "dk": [
-     19.5,
+     17.3,
      228.3
     ],
     "ss": [
@@ -524,10 +506,10 @@
   "main": 0,
   "lanes": 1,
   "total": 1,
-  "at": "8:52 AM",
+  "at": "8:56 AM",
   "why": "",
-  "at_iso": "2026-11-14T13:52:00+00:00",
+  "at_iso": "2026-11-14T13:56:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 8:52 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 8:56 AM ET</p></section>"
  }
 }

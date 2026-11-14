@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-14T07:04:24.892890+00:00",
+ "at": "2026-11-14T07:23:07.770942+00:00",
  "session": {
   "active": false,
   "kind": "",
@@ -93,7 +93,7 @@
     "end_at": 1794620497
    }
   ],
-  "landed": 18,
+  "landed": 16,
   "failed": 1
  },
  "workers": [],
@@ -141,30 +141,30 @@
  "meter": {
   "five_hour": {
    "pct": 18.0,
-   "resets_at": "2026-11-14T07:39:59.559377+00:00",
+   "resets_at": "2026-11-14T07:39:59.970384+00:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-14T01:48:30.131092-05:00",
+   "read_at": "2026-11-14T02:07:55.246054-05:00",
    "source": "usage",
    "left": 82.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 98.0,
-   "resets_at": "2026-11-15T06:59:59.559393+00:00",
+   "resets_at": "2026-11-15T06:59:58.970402+00:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-14T01:48:30.131092-05:00",
+   "read_at": "2026-11-14T02:07:55.246054-05:00",
    "source": "usage",
    "left": 2.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 4.0,
-   "resets_at": "2026-11-15T06:59:59.559511+00:00",
+   "resets_at": "2026-11-15T06:59:59.970519+00:00",
    "used_words": "of the Fable weekly allowance used",
-   "read_at": "2026-11-14T01:48:30.131092-05:00",
+   "read_at": "2026-11-14T02:07:55.246054-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-14T01:48:30.131092-05:00"
+  "read_at": "2026-11-14T02:07:55.246054-05:00"
  },
  "ui": {
   "week_pct": 0.359,
@@ -179,12 +179,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-14T02:03:30-05:00",
+ "next_tick": "2026-11-14T02:22:55-05:00",
  "personal": {
-  "week_pct": 50.44,
-  "usage_pct": 34.0,
-  "work_pct": 80.2,
-  "read_at": "2026-11-14T07:08:00+00:00",
+  "week_pct": 50.8,
+  "usage_pct": 34.1,
+  "work_pct": 80.3,
+  "read_at": "2026-11-14T07:27:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -214,14 +214,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-14T02:05:00-05:00",
+   "at": "2026-11-14T02:24:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-14T02:08:00-05:00",
+  "at": "2026-11-14T02:27:00-05:00",
   "mode": null,
   "modes": {
    "main": "spread",
@@ -419,12 +419,12 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-14T07:04:24Z",
+  "at": "2026-11-14T07:23:07Z",
   "s": {
    "T-4101": [
-    "mergeq",
-    "1st to merge",
-    1794639324892
+    "merging",
+    "Merging onto main",
+    1794640987770
    ]
   },
   "nm": {
@@ -432,11 +432,11 @@
   }
  },
  "ln": {
-  "at": "2026-11-14T07:04:24Z",
+  "at": "2026-11-14T07:23:07Z",
   "mq": {
    "n": {
-    "checking": 0,
-    "inline": 1,
+    "checking": 1,
+    "inline": 0,
     "conflicted": 1,
     "failed": 0,
     "held": 0,
@@ -444,15 +444,24 @@
     "parked": 3
    },
    "m": {
-    "checking": null,
-    "inline": 9,
-    "conflicted": 2402,
+    "checking": 0,
+    "inline": null,
+    "conflicted": 2420,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 851
+    "parked": 869
    },
-   "cur": [],
+   "cur": [
+    [
+     [
+      "T-4101"
+     ],
+     "going onto main",
+     "Mac mini",
+     0
+    ]
+   ],
    "ld": [
     3,
     "2026-11-14T06:35:02Z"
@@ -460,12 +469,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-14T07:04:25Z",
-    "ld": 0.51,
+    "at": "2026-11-14T07:23:08Z",
+    "ld": 0.6,
     "c": 8,
     "sb": 0,
     "dk": [
-     16.6,
+     17.0,
      228.3
     ],
     "ss": [
@@ -475,8 +484,8 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-14T06:47:36Z",
-    "ld": 0.23,
+    "at": "2026-11-14T07:07:57Z",
+    "ld": 0.18,
     "c": 12,
     "sb": 0,
     "dk": [
@@ -508,10 +517,10 @@
   "main": 0,
   "lanes": 0,
   "total": 0,
-  "at": "2:08 AM",
-  "why": "Waiting for the week's line: this week's usage is ahead of its even pace. Last check 2:07 AM ET.",
-  "at_iso": "2026-11-14T07:08:00+00:00",
+  "at": "2:27 AM",
+  "why": "Waiting for the week's line: this week's usage is ahead of its even pace. Last check 2:27 AM ET.",
+  "at_iso": "2026-11-14T07:27:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 2:08 AM ET</p><p class=\"an-why\">Waiting for the week's line: this week's usage is ahead of its even pace. Last check 2:07 AM ET.</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 2:27 AM ET</p><p class=\"an-why\">Waiting for the week's line: this week's usage is ahead of its even pace. Last check 2:27 AM ET.</p></section>"
  }
 }

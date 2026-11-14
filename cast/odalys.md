@@ -63,6 +63,8 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 - T-4411 (11-14 00:1x): dispatch.py patch in company-scratch/T-4411-odalys/T-4411-dispatch.patch, handed by note on T-4092 (audit-owned). Owed: after it lands, dispatch.log shows an audit line dealt within one tick of a 5-hour reset; then tick T-4411.
 
+- T-4432 9791e1b905 (11-14 08:4x): unblock -> '(released from #N'; dispatch logs 'held T-ID ...' for pinned lines stuck() holds. Done, ticked.
+
 ## Lessons
 
 - Gate runs of the personal suites take ~55 min under load: run land in background with a 2 h limit, not 10 min.

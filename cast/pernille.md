@@ -38,10 +38,10 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-4268 11-13 (0b0fcf0bb8): T-3899 PASS w/ notes, both ticked; M1 = T-4277 (Idris, offered step hangs). Lesson: main_folder_guard refuses a review file in main even when the packet says commit there; own copy + main_gate land (doc-only: no MacBook run).
 - T-4289 11-13 (a7751b9c76, 3ba970827d): T-4258-60 PASS w/ notes; L1-L3 = T-4290..92 (Idris). UI suite NOT on runner. Lesson: runner_queue takes only PyWidgetTests filters (UI needs --full); xc.sh from repo root routes local and dies 66: run it from pywidget/ios.
 - T-4300 11-13 (d1aad15ca5, e1c650efb): T-4277 PASS w/ notes; L1 = T-4301, L3 = T-4302 (Idris). Lesson: hoisting a read out of a serialised pass moves it before the queue's wait; ask when it is used, not only how often.
-- T-4309 11-13 (2573748709): T-3820 net.request PASS w/ findings; M1 = T-4311 (Idris, -1200 can be a cert failure); shim items noted on T-4303. Lesson: check a clock before stamping a note.
 - T-4303 11-13 LANDED cff2e415eb (ticked, 310a5850bd): shim H1/M1/M2/L1/L3 fixed; review = T-4312 (Idris); L4 device line on T-4203. Lesson: a tool backgrounded at 600 s keeps writing; read the whole output file before calling it empty, and pipe long runs to a file.
 - T-3825 11-13 (168237a736): T-2494 re-check on main PASS w/ fixes; L1-L3 = T-4404..06 (Idris), ticked. Lesson: board add refuses a bare ID in a line's text with no link; drop the ID.
 - T-0678.7 11-13 (feb15a1ceb): T-0678 slices FIX FIRST; H1+M1 = T-4414, M2 = T-4415, M3 = T-4416, L = T-4417 (Idris); agreed iOS 27 .main pin. Lesson: a rule keyed on an author-set field (sampled_at) measures the author, not the run; ask who writes the input.
+- T-4418 11-14 (c267c4ecb3): T-1440 refresh tap PASS w/ notes; M1-M3 = T-4433..35, L = T-4436 (Idris). Lesson: tests hosted in the app see TreeHost.isExtension false, so extension-only branches are never drawn; look for that first.
 - Older entries (2026-10-25 8:12 PM to 2026-10-27 T-0391: bridge contract v1-v4, DSL v1, stdlib manifest, OPS-4/5, installer) are in archive.md; 11-12/13 reviews T-4204, T-4171, T-4238, T-4217, T-4214, T-4242 too.
 
 ## Lessons

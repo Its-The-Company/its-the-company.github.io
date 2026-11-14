@@ -53,11 +53,9 @@ My notes. They are published on the company site, so nothing sensitive goes here
 ## Lessons
 - Older lessons and dated logs: archive.md.
 
-- T-0678 11-13 2b1cbd1634 (slice 2): RefreshWidgetIntent + getTimeline rule landed (job 1785/0). Open: iOS 18 tap test skips (no runtime; runner takes newest), .main pin on 27+ is my call, review Pernille. Lesson: ExtensionBridgeTests needs every ExtensionLane.shared on an `if WidgetLane.extensionFlag` line.
-
-- T-1440 11-13 39ea7fc60d: refresh glyph = Button(intent: RefreshWidgetIntent) in extension; taps-off branch (treeTapsOff, set by nothing yet). Review T-4418 Pernille. Open: WidgetKit Sim shots (no CLI way to place a widget), T-4415. Lesson: a red host suite in the gate can be a parallel-run fault: rerun it alone, then land again.
-
 - T-4414 11-14 9ab6cbe2af: rerun rule ages newest run row (any <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span>/outcome), else tree.json mtime; ticked. Lesson: PreviewQueueTests and FirstDrawCardTests pin who names WidgetFolder.treeName and PyWidget.swift lines exactly; keep tree paths in PyWidget.swift.
+
+- T-4431 11-14 719876e6a6 (local main, land J-..0751-land-m-269dc7 green): completion rows pin 16 pt text inset. Open: push; then queue CompletionUITests on runner (27.2). Lesson: runner is iOS 27.2, local sims 27.1 only; cell margins differ across point releases, pin them and unit-test drawn frames.
 {% endraw %}
 
 

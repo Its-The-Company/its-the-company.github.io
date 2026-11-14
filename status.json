@@ -1,24 +1,19 @@
 {
  "schema": 1,
- "at": "2026-11-14T13:44:24.431818+00:00",
+ "at": "2026-11-14T13:51:58.833772+00:00",
  "session": {
-  "active": true,
-  "kind": "work",
-  "started": "2026-11-14T07:33:45-05:00",
-  "flow": [
+  "active": false,
+  "kind": "",
+  "started": null,
+  "flow": [],
+  "done": [
    {
     "t": "T-4422",
-    "name": "Apply the queue audit ledger, final pass",
     "acct": "Personal a",
-    "steps": [
-     {
-      "s": "landing",
-      "at": 1794663359
-     }
-    ]
-   }
-  ],
-  "done": [
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794664043
+   },
    {
     "t": "T-4101",
     "acct": "Personal a",
@@ -81,16 +76,9 @@
     "steps": [],
     "end": "landed",
     "end_at": 1794627456
-   },
-   {
-    "t": "T-4409",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794627020
    }
   ],
-  "landed": 12,
+  "landed": 13,
   "failed": 0
  },
  "workers": [],
@@ -132,7 +120,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 352,
+  "runnable_count": 341,
   "blocked_count": 86
  },
  "meter": {
@@ -176,25 +164,13 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": null,
+ "next_tick": "2026-11-14T07:48:33-05:00",
  "personal": {
   "week_pct": 50.73,
-  "usage_pct": 34.1,
-  "work_pct": 80.3,
-  "read_at": "2026-11-14T13:44:00+00:00",
+  "usage_pct": 33.9,
+  "work_pct": 79.9,
+  "read_at": "2026-11-14T13:52:00+00:00",
   "running": [
-   {
-    "lane": "a",
-    "task": "T-4196",
-    "w": "Idris",
-    "k": "tools",
-    "t": "Let app changes waiting to merge share one iPhone run",
-    "m": "opus",
-    "e": "xhigh",
-    "at": "2026-11-14T07:50:12-05:00",
-    "n": "Evan",
-    "src": "plan-a"
-   },
    {
     "lane": "b2",
     "task": "T-4195",
@@ -236,14 +212,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-14T08:39:00-05:00",
+   "at": "2026-11-14T08:51:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-14T08:44:00-05:00",
+  "at": "2026-11-14T08:52:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -251,13 +227,9 @@
    "b": "midnight"
   }
  },
- "next_tick_why": "session",
+ "next_tick_why": "last_tick",
  "idle": null,
- "pool": {
-  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 17 (held: too few lands in 3 hours to judge a raise)",
-  "n": 17,
-  "at": "2026-11-14T07:33:33.664100-05:00"
- },
+ "pool": null,
  "lanes": [
   {
    "name": "Idris",
@@ -310,7 +282,6 @@
  ],
  "tasks": {
   "run": [],
-  "src": "plan",
   "open": [
    {
     "w": "Odalys",
@@ -357,13 +328,6 @@
    {
     "w": "Ines",
     "k": "ops",
-    "t": "Apply the queue audit ledger, final pass",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Ines",
-    "k": "ops",
     "t": "Finish the queue audit's order and last...",
     "s": "next",
     "o": "c"
@@ -381,9 +345,21 @@
     "t": "Widgets refresh on their own and by a tap",
     "s": "next",
     "o": "i"
+   },
+   {
+    "w": "Idris",
+    "k": "measure",
+    "t": "Run the device test session for the widget...",
+    "s": "next",
+    "o": "c"
    }
   ],
   "done": [
+   {
+    "w": "Ines",
+    "t": "The task list clean-up took its last ten stale notices off the board, after noting on 22 open...",
+    "at": "2026-11-14T08:47:00-05:00"
+   },
    {
     "w": "Odalys",
     "t": "When a held task is released, its waiting mark is now crossed out, so it can't keep the task off...",
@@ -393,35 +369,13 @@
     "w": "Pernille",
     "t": "Checked Idris's change that makes the widget's refresh button actually refresh: the logic is...",
     "at": "2026-11-14T08:13:00-05:00"
-   },
-   {
-    "w": "Idris",
-    "t": "The ready-made widgets now draw on the Investors' iPhone, not just Countdown: a file check...",
-    "at": "2026-11-14T07:40:00-05:00"
    }
   ],
   "count": {
-   "next": 352,
+   "next": 341,
    "wait": 42,
    "blocked": 44,
    "you": 15
-  },
-  "fin": {
-   "n": 3,
-   "rows": [
-    [
-     "T-4432",
-     "Stop a released wait from..."
-    ],
-    [
-     "T-4418",
-     "Review the refresh tap in..."
-    ],
-    [
-     "T-3783",
-     "Keep finding why only..."
-    ]
-   ]
   }
  },
  "qr": [
@@ -463,12 +417,12 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-14T13:44:06Z",
+  "at": "2026-11-14T13:51:58Z",
   "s": {
    "T-4422": [
     "merging",
     "Rebasing onto current main",
-    1794663846191
+    1794664078833
    ]
   },
   "nm": {
@@ -476,7 +430,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-14T13:44:06Z",
+  "at": "2026-11-14T13:51:58Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -485,16 +439,16 @@
     "failed": 0,
     "held": 0,
     "retry": 0,
-    "parked": 3
+    "parked": 4
    },
    "m": {
-    "checking": 0,
+    "checking": 4,
     "inline": null,
-    "conflicted": 2801,
+    "conflicted": 2809,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1250
+    "parked": 1255
    },
    "cur": [
     [
@@ -503,18 +457,18 @@
      ],
      "lining up with main",
      "Mac mini",
-     0
+     4
     ]
    ],
    "ld": [
-    4,
-    "2026-11-14T07:39:12Z"
+    5,
+    "2026-11-14T13:47:23Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-14T13:44:08Z",
-    "ld": 8.05,
+    "at": "2026-11-14T13:51:20Z",
+    "ld": 5.81,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -543,24 +497,6 @@
  "operators": [
   {
    "w": "Operator",
-   "a": "Main plan",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session",
-   "at": "2026-11-14T07:38:57-05:00"
-  },
-  {
-   "w": "Operator",
-   "a": "Evan",
-   "sr": 1,
-   "m": "opus",
-   "e": "xhigh",
-   "t": "Work session \u2013 1 task",
-   "at": "2026-11-14T07:50:11-05:00"
-  },
-  {
-   "w": "Operator",
    "a": "Jeremy",
    "sr": 1,
    "m": "opus",
@@ -578,7 +514,6 @@
   "lane_next",
   "queue_text",
   "task_done",
-  "fin_short",
   "task_title",
   "done_text",
   "task_open",
@@ -587,12 +522,12 @@
  ],
  "agents_now": {
   "main": 0,
-  "lanes": 2,
-  "total": 2,
-  "at": "8:44 AM",
+  "lanes": 1,
+  "total": 1,
+  "at": "8:52 AM",
   "why": "",
-  "at_iso": "2026-11-14T13:44:00+00:00",
-  "started": "7:33 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0, started 7:33 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 8:44 AM ET</p></section>"
+  "at_iso": "2026-11-14T13:52:00+00:00",
+  "started": "",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 8:52 AM ET</p></section>"
  }
 }

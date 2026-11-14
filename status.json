@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-14T01:53:23.048238+00:00",
+ "at": "2026-11-14T01:56:24.252899+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -105,22 +105,21 @@
    "task": "[tools] T-4129 retire Set aside stage on Home",
    "model": "opus",
    "started": "2026-11-14T01:50:20.520Z",
-   "seconds": 182,
+   "seconds": 363,
    "finished": null,
    "effort": "high"
-  },
+  }
+ ],
+ "who": "Odalys",
+ "recent": [
   {
    "name": "odalys",
    "task": "[tools] T-4402 audit ledger rows carry prev",
    "model": "opus",
    "started": "2026-11-14T01:50:32.266Z",
-   "seconds": 170,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Odalys x2",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-14T01:55:46.728000+00:00"
+  },
   {
    "name": "idris",
    "task": "[release] T-4270 upload build 6 to TestFlight",
@@ -190,7 +189,7 @@
   "week_pct": 47.45,
   "usage_pct": 33.5,
   "work_pct": 79.8,
-  "read_at": "2026-11-14T01:53:00+00:00",
+  "read_at": "2026-11-14T01:56:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -227,7 +226,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-13T20:53:00-05:00",
+  "at": "2026-11-13T20:56:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -304,16 +303,6 @@
     "at": "2026-11-14T01:50:20.520Z",
     "o": "c",
     "task": "T-4129"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Have the audit ledger's writers fill in prev",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-14T01:50:32.266Z",
-    "o": "c",
-    "task": "T-4402"
    }
   ],
   "src": "plan",
@@ -473,11 +462,11 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-14T01:53:05Z",
+  "at": "2026-11-14T01:56:12Z",
   "s": {}
  },
  "ln": {
-  "at": "2026-11-14T01:53:05Z",
+  "at": "2026-11-14T01:56:12Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -491,11 +480,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 1235,
+    "conflicted": 1238,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 2079
+    "parked": 2082
    },
    "cur": [],
    "ld": [
@@ -505,12 +494,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-14T01:52:19Z",
-    "ld": 0.86,
+    "at": "2026-11-14T01:55:48Z",
+    "ld": 0.92,
     "c": 8,
     "sb": 0,
     "dk": [
-     15.9,
+     14.9,
      228.3
     ],
     "ss": [
@@ -539,7 +528,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 2 tasks",
+   "t": "Work session \u2013 1 task",
    "at": "2026-11-13T20:50:41-05:00"
   }
  ],
@@ -560,13 +549,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 2,
+  "main": 1,
   "lanes": 0,
-  "total": 2,
-  "at": "8:53 PM",
+  "total": 1,
+  "at": "8:56 PM",
   "why": "",
-  "at_iso": "2026-11-14T01:53:00+00:00",
+  "at_iso": "2026-11-14T01:56:00+00:00",
   "started": "8:10 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 8:10 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 8:53 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 8:10 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 8:56 PM ET</p></section>"
  }
 }

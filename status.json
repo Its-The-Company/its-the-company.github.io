@@ -1,10 +1,10 @@
 {
  "schema": 1,
- "at": "2026-11-14T11:03:52.437468+00:00",
+ "at": "2026-11-14T11:09:29.141936+00:00",
  "session": {
-  "active": true,
-  "kind": "inbox",
-  "started": "2026-11-14T06:03:05-05:00",
+  "active": false,
+  "kind": "",
+  "started": null,
   "flow": [],
   "done": [
    {
@@ -93,34 +93,34 @@
  "meter": {
   "five_hour": {
    "pct": 0.0,
-   "resets_at": "2026-11-14T12:39:59.519326+00:00",
+   "resets_at": "2026-11-14T12:39:59.991549+00:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-14T05:58:02.505699-05:00",
+   "read_at": "2026-11-14T06:08:58.915712-05:00",
    "source": "usage",
    "left": 100.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 98.0,
-   "resets_at": "2026-11-15T06:59:59.519347+00:00",
+   "resets_at": "2026-11-15T06:59:58.991576+00:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-14T05:58:02.505699-05:00",
+   "read_at": "2026-11-14T06:08:58.915712-05:00",
    "source": "usage",
    "left": 2.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 4.0,
-   "resets_at": "2026-11-15T06:59:59.519506+00:00",
+   "resets_at": "2026-11-15T06:59:59.991813+00:00",
    "used_words": "of the Fable weekly allowance used",
-   "read_at": "2026-11-14T05:58:02.505699-05:00",
+   "read_at": "2026-11-14T06:08:58.915712-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-14T05:58:02.505699-05:00"
+  "read_at": "2026-11-14T06:08:58.915712-05:00"
  },
  "ui": {
-  "week_pct": 0.425,
-  "five_hour_pct": 0.453,
+  "week_pct": 0.433,
+  "five_hour_pct": 0.512,
   "caps_pct": {
    "week": 3.0,
    "five_hour": 5.0
@@ -131,12 +131,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": null,
+ "next_tick": "2026-11-14T06:23:59-05:00",
  "personal": {
-  "week_pct": 50.77,
+  "week_pct": 50.76,
   "usage_pct": 34.1,
   "work_pct": 80.3,
-  "read_at": "2026-11-14T11:06:00+00:00",
+  "read_at": "2026-11-14T11:09:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -166,14 +166,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-14T06:02:00-05:00",
+   "at": "2026-11-14T06:07:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-14T06:06:00-05:00",
+  "at": "2026-11-14T06:09:00-05:00",
   "mode": null,
   "modes": {
    "main": "spread",
@@ -181,13 +181,9 @@
    "b": "midnight"
   }
  },
- "next_tick_why": "session",
+ "next_tick_why": "last_tick",
  "idle": null,
- "pool": {
-  "why": "Spread: usage is ahead of the week's even pace to Sat 23:00, so work waits until the line passes; the machine allows 17 (held: too few lands in 3 hours to judge a raise)",
-  "n": 1,
-  "at": "2026-11-14T06:02:54.271925-05:00"
- },
+ "pool": null,
  "lanes": [
   {
    "name": "Idris",
@@ -240,7 +236,6 @@
  ],
  "tasks": {
   "run": [],
-  "src": "plan",
   "open": [
    {
     "w": "Odalys",
@@ -335,10 +330,6 @@
    "wait": 43,
    "blocked": 44,
    "you": 15
-  },
-  "fin": {
-   "n": 0,
-   "rows": []
   }
  },
  "qr": [
@@ -380,11 +371,11 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-14T11:03:52Z",
+  "at": "2026-11-14T11:09:29Z",
   "s": {}
  },
  "ln": {
-  "at": "2026-11-14T11:03:52Z",
+  "at": "2026-11-14T11:09:29Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -398,11 +389,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 2641,
+    "conflicted": 2647,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1090
+    "parked": 1096
    },
    "cur": [],
    "ld": [
@@ -412,12 +403,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-14T11:03:52Z",
-    "ld": 0.97,
+    "at": "2026-11-14T11:09:30Z",
+    "ld": 1.11,
     "c": 8,
     "sb": 0,
     "dk": [
-     17.7,
+     17.6,
      228.3
     ],
     "ss": [
@@ -439,17 +430,7 @@
    }
   }
  },
- "operators": [
-  {
-   "w": "Operator",
-   "a": "Main plan",
-   "sr": 1,
-   "m": "sonnet",
-   "e": "low",
-   "t": "Inbox session",
-   "at": "2026-11-14T06:03:27-05:00"
-  }
- ],
+ "operators": [],
  "reply": {
   "sent": "2026-11-14T11:01:30Z",
   "seconds": 116.0
@@ -469,10 +450,10 @@
   "main": 0,
   "lanes": 0,
   "total": 0,
-  "at": "6:06 AM",
-  "why": "Between sessions: no session is running. Last check 6:02 AM ET.",
-  "at_iso": "2026-11-14T11:06:00+00:00",
+  "at": "6:09 AM",
+  "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
+  "at_iso": "2026-11-14T11:09:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 6:06 AM ET</p><p class=\"an-why\">Between sessions: no session is running. Last check 6:02 AM ET.</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 6:09 AM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
  }
 }

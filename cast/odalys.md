@@ -54,14 +54,14 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-4446 slice 1 (11-14): tools/records_round.py, one records commit per 900 s, never memory alone; memory_commit.py hands over (old path MEMORY_WITH_RECORDS=0). Baseline 1,336 record-only, 432 memory-only in 7 d. ops/plans/t4446-supervisor.patch noted on T-3995; its suite not run (refusal). Rest: T-4457, T-4458. Owed: 7-day count <= 672 and wait lines not up; then tick.
 
 - T-4452 (11-14): board_tick add and tick take "Supersedes: T-a (reason)"; named lines become '- [~]' with a WITHDRAWN note, board.py tick archives them. Refused: P0, Investor-cited (145 of 437 open lines on 11-14), claimed, linked, not open. Owed: Ines decides whether cited lines get a path; a lane tick's named line can be claimed before the landing (replay then fails to failed/).
+- T-4103 31b4b962fb, T-4443 slice 1 14f086c7d8 (11-14): open, full notes in archive.md. Owed: T-4447 replay narrows the signals; five card rules in queue_check; T-4459 machine callers.
+- T-4453 189f060a92 + weekly fix (11-14), ticked. board_weekly never read T-3233's retry_on_main kind (red since 11-07). Told to the Operator: the land floor runs X_test for tools/X.py only, not suites of tools that load X; board_notes_readers_test red on land_group.py, not mine.
 
 ## Lessons
 
-- Gate runs of the personal suites take ~55 min under load: run land in background with a 2 h limit, not 10 min.
-- T-4103 31b4b962fb (11-14): queue check core, dry only (switch absent). Rest on T-4444..T-4453. Owed: T-4447 replay narrows the signals (265 of 426 flagged on b); T-4444 cheap copies read (on_change 98 s); Ines's read decides the date-wait act.
-- T-4443 slice 1 14f086c7d8 (11-14): add takes the task card (board_card.py; switch ops/board_card.json; --by, --card-warn). NOT ticked. Owed: five card rules in queue_check (plan in my line note); T-4459 machine callers.
-- Run a new act-alone rule dry on the real board first: 25 date waits were not proofs (T-4103).
+- Gate runs of the personal suites take ~55 min under load: run land in background, 2 h limit.
 - In a lane, COMPANY_LANE overrides BOARD: a scratch `board_tick.py add` goes to main's live board. Run scratch calls with `env -u COMPANY_LANE` (T-4452: one smoke add reached main, refused by the card rule, nothing written).
+- A guard refusal on a check stops that check: report it as not measured, never as passed (T-4453).
 {% endraw %}
 
 

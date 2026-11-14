@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-14T04:58:11.079231+00:00",
+ "at": "2026-11-14T05:01:18.703947+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -94,7 +94,7 @@
    "task": "[site] T-4313 Merged section on Home",
    "model": "opus",
    "started": "2026-11-14T04:04:21.376Z",
-   "seconds": 3229,
+   "seconds": 3417,
    "finished": null,
    "effort": "high"
   },
@@ -103,22 +103,30 @@
    "task": "[tools] T-4411 start accounts when usage returns",
    "model": "opus",
    "started": "2026-11-14T04:17:33.902Z",
-   "seconds": 2437,
+   "seconds": 2624,
    "finished": null,
    "effort": "high"
   },
   {
    "name": "idris",
-   "task": "[build] T-1440 refresh control and age line",
+   "task": "[build] T-4414 rerun rule ages last run",
    "model": "opus",
-   "started": "2026-11-14T04:20:03.586Z",
-   "seconds": 2287,
+   "started": "2026-11-14T04:58:58.328Z",
+   "seconds": 140,
    "finished": null,
    "effort": "high"
   }
  ],
  "who": "Maren, Odalys, Idris",
  "recent": [
+  {
+   "name": "idris",
+   "task": "[build] T-1440 refresh control and age line",
+   "model": "opus",
+   "started": "2026-11-14T04:20:03.586Z",
+   "seconds": null,
+   "finished": "2026-11-14T04:58:37.060000+00:00"
+  },
   {
    "name": "pernille",
    "task": "[review] T-0678 review of refresh slices",
@@ -142,14 +150,6 @@
    "started": "2026-11-14T02:33:48.956Z",
    "seconds": null,
    "finished": "2026-11-14T04:16:22.660000+00:00"
-  },
-  {
-   "name": "maren",
-   "task": "[site] T-4308 account sessions in In flight",
-   "model": "opus",
-   "started": "2026-11-14T02:33:55.419Z",
-   "seconds": null,
-   "finished": "2026-11-14T04:04:00.429000+00:00"
   }
  ],
  "queue": {
@@ -204,7 +204,7 @@
   "week_pct": 47.87,
   "usage_pct": 33.5,
   "work_pct": 79.6,
-  "read_at": "2026-11-14T04:58:00+00:00",
+  "read_at": "2026-11-14T05:01:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -225,35 +225,35 @@
   }
  ],
  "disk": {
-  "free_gb": 19,
+  "free_gb": 17,
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 184
+   "free_gb": 186
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-13T23:53:00-05:00",
+   "at": "2026-11-14T00:00:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
-  "on": true,
+  "on": false,
   "pool": 1,
-  "at": "2026-11-13T23:58:00-05:00",
-  "mode": "midnight",
+  "at": "2026-11-14T00:01:00-05:00",
+  "mode": null,
   "modes": {
-   "main": "midnight",
-   "a": "midnight",
-   "b": "midnight"
+   "main": "spread",
+   "a": "spread",
+   "b": "spread"
   }
  },
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 16 (raised a step: load, time-outs, failed lands and redone tasks all under their lines)",
-  "n": 16,
+  "why": "Spread: usage is ahead of the week's even pace to Sat 23:00, so work waits until the line passes; the machine allows 16 (raised a step: load, time-outs, failed lands and redone tasks all under...",
+  "n": 1,
   "at": "2026-11-13T21:29:38.090869-05:00"
  },
  "lanes": [
@@ -278,9 +278,9 @@
   {
    "name": "Idris",
    "state": "running",
-   "task": "[build] T-1440 refresh control and age line",
+   "task": "[build] T-4414 rerun rule ages last run",
    "model": "opus",
-   "since": "2026-11-14T04:20:03.586Z",
+   "since": "2026-11-14T04:58:58.328Z",
    "next": [],
    "effort": "high"
   },
@@ -334,12 +334,12 @@
    {
     "w": "Idris",
     "k": "build",
-    "t": "Add a refresh control and age line to widgets",
+    "t": "Make the rerun rule age the last run",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-14T04:20:03.586Z",
+    "at": "2026-11-14T04:58:58.328Z",
     "o": "c",
-    "task": "T-1440"
+    "task": "T-4414"
    }
   ],
   "src": "plan",
@@ -507,33 +507,26 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-14T04:57:57Z",
+  "at": "2026-11-14T05:01:11Z",
   "s": {
    "T-4411": [
     "testing",
     "its own tests, in its copy",
-    1794630177200
+    1794630191185
    ],
    "T-4313": [
     "testing",
     "its own tests, in its copy",
-    1794631917200
-   ],
-   "T-1440": [
-    "merged",
-    "on main 11:56 PM ET",
-    1794632204000,
-    ""
+    1794631931185
    ]
   },
   "nm": {
    "T-4411": "Start accounts on the audit when usage returns",
-   "T-4313": "Add a Merged section and fold sections on Home",
-   "T-1440": "Add a refresh control and age line to widgets"
+   "T-4313": "Add a Merged section and fold sections on Home"
   }
  },
  "ln": {
-  "at": "2026-11-14T04:57:57Z",
+  "at": "2026-11-14T05:01:11Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -547,30 +540,30 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 2275,
+    "conflicted": 2278,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 724
+    "parked": 727
    },
    "cur": [],
    "ld": [
-    29,
-    "2026-11-14T04:14:02Z"
+    0,
+    null
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-14T04:57:13Z",
-    "ld": 7.28,
+    "at": "2026-11-14T05:00:26Z",
+    "ld": 8.62,
     "c": 8,
     "sb": 0,
     "dk": [
-     16.9,
+     16.8,
      228.3
     ],
     "ss": [
-     184.0,
+     186.0,
      953.7
     ],
     "sn": []
@@ -621,10 +614,10 @@
   "main": 3,
   "lanes": 0,
   "total": 3,
-  "at": "11:58 PM",
+  "at": "12:01 AM",
   "why": "",
-  "at_iso": "2026-11-14T04:58:00+00:00",
+  "at_iso": "2026-11-14T05:01:00+00:00",
   "started": "9:30 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 9:30 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 11:58 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 9:30 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 12:01 AM ET</p></section>"
  }
 }

@@ -631,6 +631,7 @@ The Effect lines of the amendments.md entries the charter retired (2026-11-04 12
 - **2026-11-13 5:04 PM ET** ((private)): Account a is Evan's and account b is Jeremy's; Home and Chat replies name them "Evan's Account" and "Jeremy's Account" from now on, not account a or b.
 - **2026-11-13 9:53 PM ET** ((private)): Every change in the queue audit's applying and building steps is checked against the Restructuring's decisions (documents/restructuring/06-decisions.md) before it lands; a conflict is settled in the Restructuring's favour or raised on #41.
 - **2026-11-13 10:11 PM ET** ((private)): Each personal account starts on the queue audit by itself as soon as its 5-hour usage comes back, and uses all of its Fable limit before the next reset, 5-hour or weekly, whichever is sooner.
+- **2026-11-14 2:45 AM ET** ((private)): Both personal accounts run full speed (Lock In) and aim to use their weekly limit up just before each resets.
 {% endraw %}
 
 </div>

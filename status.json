@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-14T13:13:46.957290+00:00",
+ "at": "2026-11-14T13:16:52.874869+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -87,7 +87,7 @@
    "task": "[tools] T-4432 released wait hides pinned line",
    "model": "opus",
    "started": "2026-11-14T12:40:55.020Z",
-   "seconds": 1971,
+   "seconds": 2157,
    "finished": null,
    "effort": "high"
   }
@@ -171,7 +171,7 @@
   "week_pct": 50.73,
   "usage_pct": 34.1,
   "work_pct": 80.3,
-  "read_at": "2026-11-14T13:13:00+00:00",
+  "read_at": "2026-11-14T13:17:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -244,7 +244,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-14T08:13:00-05:00",
+  "at": "2026-11-14T08:17:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -472,27 +472,20 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-14T13:13:27Z",
+  "at": "2026-11-14T13:16:52Z",
   "s": {
    "T-4432": [
-    "testing",
-    "its own tests, in its copy",
-    1794662007174
-   ],
-   "T-4418": [
-    "merged",
-    "on main 8:12 AM ET",
-    1794661953000,
-    ""
+    "merging",
+    "Mac tests at the main gate",
+    1794662092874
    ]
   },
   "nm": {
-   "T-4432": "Stop a released wait from hiding a pinned line",
-   "T-4418": "Review the refresh tap in the widget renderer"
+   "T-4432": "Stop a released wait from hiding a pinned line"
   }
  },
  "ln": {
-  "at": "2026-11-14T13:13:27Z",
+  "at": "2026-11-14T13:16:52Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -506,11 +499,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 2771,
+    "conflicted": 2774,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1220
+    "parked": 1223
    },
    "cur": [],
    "ld": [
@@ -520,12 +513,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-14T13:13:30Z",
-    "ld": 13.83,
+    "at": "2026-11-14T13:16:27Z",
+    "ld": 11.54,
     "c": 8,
     "sb": 0,
     "dk": [
-     19.8,
+     19.6,
      228.3
     ],
     "ss": [
@@ -554,7 +547,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 2 tasks",
+   "t": "Work session \u2013 1 task",
    "at": "2026-11-14T07:38:57-05:00"
   },
   {
@@ -605,10 +598,10 @@
   "main": 1,
   "lanes": 3,
   "total": 4,
-  "at": "8:13 AM",
+  "at": "8:17 AM",
   "why": "",
-  "at_iso": "2026-11-14T13:13:00+00:00",
+  "at_iso": "2026-11-14T13:17:00+00:00",
   "started": "7:33 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 1, started 7:33 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 8:13 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 1, started 7:33 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 8:17 AM ET</p></section>"
  }
 }

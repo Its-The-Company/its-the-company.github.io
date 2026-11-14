@@ -104,7 +104,7 @@ while(t.length&&o.length<LMAX){n=t.pop();o.push([n[1],n[0],s[n[0]]?1:0]);if(!s[n
 if(t.length)while(t.length){n=t.pop();if(!s[n[0]]){s[n[0]]=1;push(n[0],0)}}
 o.left=Object.keys(s).length-1-o.filter(function(r){return !r[2]}).length;return o}
 function qcard(i){var q=document.getElementById('lk-q');return q?[].filter.call(q.children,function(c){return lid(c.getAttribute('data-id'))===i})[0]:null}
-function carded(i){return !!((S.lk.has&&S.lk.has(i))||qcard(i)||(A||[]).some(function(a){return a[0]===i}))}
+function carded(i){return !!((S.lk.has&&S.lk.has(i))||(S.lk.hm&&S.lk.hm(i))||qcard(i)||(A||[]).some(function(a){return a[0]===i}))}
 function qname(i){var c=qcard(i),a=(A||[]).filter(function(x){return x[0]===i})[0];return c?(c.querySelector('.lk-tn')||{}).textContent:a?a[2]:''}
 function lrow(ul,r,me){var t=r[1],li=mk(ul,'li'),go=!r[2]&&carded(t),n=G.n[t]||['','q'],e=mk(li,go?'a':'span');
 li.setAttribute('data-tid',t);li.setAttribute('data-d',r[0]);if(r[2])li.setAttribute('data-again','1');li.style.paddingLeft=(Math.min(r[0],5)-1)*14+'px';
@@ -118,7 +118,7 @@ c=S.lk.run&&S.lk.run(i);if(!c){if(S.lk.all)S.lk.all();queued();c=qcard(i)}
 if(!c){c=document.getElementById('bk-'+i);b=document.getElementById('lk-bk-more');  // T-3735: a held task's row, unfolded first
 if(c&&c.classList.contains('lk-fold')&&b&&c.parentNode.classList.contains('lk-qshort'))b.click();
 if(c){c.classList.add('lk-hit');setTimeout(function(){c.classList.remove('lk-hit')},2000);c.scrollIntoView({block:'center'});return}}
-if(!c)return;if(!c.classList.contains('lk-open'))toggle(c);c.classList.add('lk-hit');setTimeout(function(){c.classList.remove('lk-hit')},2000);
+if(!c)return;unfold(c);if(!c.classList.contains('lk-open'))toggle(c);c.classList.add('lk-hit');setTimeout(function(){c.classList.remove('lk-hit')},2000);
 c.scrollIntoView({block:'center'});n=c.querySelector('.lk-tn');if(n)n.focus({preventScroll:true})}
 var A=null,pic={},fc={};[].forEach.call(document.querySelectorAll('.lk-team a'),function(a){var m=/cast\/([^/.]+)\.html/.exec(a.getAttribute('href')||''),g=a.querySelector('img');if(m&&g)pic[m[1]]=g.getAttribute('src')});
 try{fc=JSON.parse((document.getElementById('lk-run')||H).getAttribute('data-faces')||'{}')}catch(e){}
@@ -128,6 +128,10 @@ function qrow(a){var c=document.createElement('div'),p=fc[String(a[3]||'').toLow
 c.setAttribute('data-q',[a[2],a[0],a[3]].join(' '));c.setAttribute('data-w',a[3]||'');if(a[6])c.setAttribute('data-ps',a[6]);if(a[7])c.setAttribute('data-r',a[7]);mk(c,'span','lk-n',String(a[1]));if(p&&pic[p]){g=mk(c,'img');g.src=pic[p];g.alt='';g.width=g.height=24}else mk(c,'span').style.width='24px';
 t=mk(c,'span','t');mk(t,'b','lk-tn',a[2]);badge(t,a[0]);if(a[7])mk(c,'span','lk-rty','retry '+a[7]);if(a[4]){g=mk(c,'span','lk-cat',a[4]);g.title='Category: '+a[4]}mk(c,'span','idb',a[0]);aria(c);return c}
 // T-4007: k counts the rows on show, for the no-match line; T-4287: every row shows, in the scroll box (no fold)
+// T-4313: a card in a folded part (Merged, In flight, Queued) opens its part first, so a link to it lands on it
+function unfold(c){var d=c&&c.closest&&c.closest('details.lk-fold');if(d&&!d.open)d.open=true}
+// T-4313: QV, the queued rows on show under the search and the filters (queued() counts them), for every total
+var QV=0;
 function queued(){var q=document.getElementById('lk-q'),rows,k=0;if(!q)return;if(!A){A=[];try{A=JSON.parse(q.getAttribute('data-all')||'[]')}catch(e){}}
 [].slice.call(q.querySelectorAll('.lk-x')).forEach(function(c){q.removeChild(c)});
 A.forEach(function(a){if(okId(a[0])&&inq(a[0],a[5]))q.appendChild(qrow(a))});  // T-4287: every row, the filters below hide
@@ -137,12 +141,13 @@ rows.sort(function(a,b){return (F[b.getAttribute('data-id')]?1:0)-(F[a.getAttrib
 rows.forEach(function(c){var s=c.querySelector('.lk-star'),on=match(c.getAttribute('data-q'))&&catok(qc(c),c.getAttribute('data-id'))&&!fly(c.getAttribute('data-id'));q.appendChild(c);if(on)k++;if(s)s.parentNode.removeChild(s);tok&&up(c,c.getAttribute('data-id'));star(c,c.getAttribute('data-id'));
 c.hidden=!on});
 var no=document.getElementById('lk-q-none');if(!no&&(Q||CF||IV)){no=document.createElement('p');no.id='lk-q-none';no.className='meta';q.parentNode.insertBefore(no,q.nextSibling)}
-if(no){no.textContent=Q?'No queued task matches.':IV?'No queued task '+fw()+'.':'No queued task in this category.';no.hidden=!(Q||CF||IV)||k>0}
+QV=k;if(no){no.textContent=Q?'No queued task matches.':IV?'No queued task '+fw()+'.':'No queued task in this category.';no.hidden=!(Q||CF||IV)||k>0}
 no=document.getElementById('lk-q-rest');if(no)no.hidden=true}
 function count(){if(!fn2)return;if(!Q&&!CF&&!IV){fn2.textContent='';return}
-var r=document.querySelectorAll('#lk-run .lk-run').length,q=document.querySelectorAll('#lk-q>.lk-q:not([hidden])').length;
-fn2.textContent=r+' in flight, '+q+' in Queued '+(Q?'match':fw())}
-function fire(){fn.forEach(function(f){try{f()}catch(e){}});queued();count()}
+var m=document.querySelectorAll('#lk-mg .lk-run').length,r=document.querySelectorAll('#lk-run .lk-run').length,q=document.querySelectorAll('#lk-q>.lk-q:not([hidden])').length;
+fn2.textContent=(m?m+' merged, ':'')+r+' in flight, '+q+' in Queued '+(Q?'match':fw())}
+// T-4313: the queued rows first, so In flight's render (fn) reads their count under the same filters
+function fire(){queued();fn.forEach(function(f){try{f()}catch(e){}});count()}
 function read(){return S.gh(path()+'?ref=main').then(function(r){if(r.status===404)return{list:[],sha:null};if(!r.ok)throw new Error(S.said(r));
 return r.json().then(function(j){var o=null;try{o=JSON.parse(unb64(j.content||''))}catch(e){}
 if(!o||typeof o!=='object'||Array.isArray(o))throw new Error('investors/favorites.json on GitHub is not valid JSON');
@@ -192,6 +197,8 @@ S.lk={fav:function(id){return !!F[id]},on:function(f){fn.push(f)},match:match,q:
 lin:function(c,i){badge(c,i);if(c.classList.contains('lk-open'))tree(c)},
 // T-4007: the sort and the category In flight draws by, and how many tasks are queued (the page's rows and the rest of the index)
 sort:function(){return SO},dir:function(){return SD},by:by,tnum:tnum,rq:rq,catok:catok,txt:txt,requeue:function(){queued();count()},
+// T-4313: whether a search or a filter is on, the queued rows on show under them, the find line's counts
+fon:function(){return !!(Q||CF||IV)},qv:function(){return QV},cnt:count,
 qn:function(){var q=document.getElementById('lk-q');if(q&&!A)queued();return q?[].filter.call(q.querySelectorAll('.lk-q:not(.lk-x)'),function(c){return inq(c.getAttribute('data-id'),0)}).length
 +(A||[]).filter(function(a){return inq(a[0],a[5])}).length:0}};
 H.addEventListener('click',function(e){var t=e.target,c,l=t.closest&&t.closest('a[data-go]');if(l){e.preventDefault();go(l.getAttribute('data-go'));return}
@@ -264,6 +271,9 @@ HW={coding:'Building',review:'Review',testq:'Waiting for its own test run',testi
 var pic={};[].forEach.call(document.querySelectorAll('.lk-team a'),function(a){var m=/cast\/([^/.]+)\.html/.exec(a.getAttribute('href')||''),g=a.querySelector('img');if(m&&g)pic[m[1]]=g.getAttribute('src')});
 var fl='all',items=L.init||[],IN={};
 items.forEach(function(x){if(x.id)IN[x.id]=x});
+// T-4313 (friesevan #41 c6862221970): Merged, its own part above In flight: MG its cards (home_look merged_cards; mgs()
+// from each status), ME how many finished this session past the rows the status names, mbox where they are drawn
+var MG=L.mg||[],ME=+L.me||0,mbox=document.getElementById('lk-mg');MG.forEach(function(x){if(x.id&&!IN[x.id])IN[x.id]=x});
 var CT={};Object.keys(L.cat||{}).forEach(function(k){String(L.cat[k]).split(' ').forEach(function(n){if(n)CT['T-'+n]=k})});  // T-3427: {label: "numbers"}
 function mk(p,t,c,x){var e=document.createElement(t);if(c)e.className=c;if(x)e.textContent=x;p.appendChild(e);return e}
 function cap(s){s=String(s||'');return s.charAt(0).toUpperCase()+s.slice(1)}
@@ -314,16 +324,16 @@ function goto(c,x){var a,u=(document.getElementById('lk-all')||document.body).ge
 a=mk(mk(c,'p','lk-sq meta'),'a','','Open '+x.id+' in the '+GO[x.s]+' on This Session');a.href=u+'#'+encodeURIComponent(x.id)}
 function past(c,x){if(COL[x.s]==='being_built')return;var w=(x.w||[]).filter(function(v){return v&&!/not recorded/.test(v)}).map(cap).join(', '),l=x.m&&!/not recorded/.test(x.m)?lv(x):'';
 mk(c,'p','lk-hw meta lk-past','Building: '+(w?'built by '+w:'worker not recorded')+(l?', '+l:', model not recorded'))}
-function card(x){var c=mk(box,'div','lk-card lk-run'),r=mk(c,'div','lk-r1'),fs=mk(r,'span','lk-faces'),t,m,rt,sc,col=COL[x.s];c.setAttribute('data-stage',x.s);c.setAttribute('data-col',col);
+function card(x,p){var c=mk(p||box,'div','lk-card lk-run'),r=mk(c,'div','lk-r1'),fs=mk(r,'span','lk-faces'),t,m,rt,sc,col=COL[x.s];c.setAttribute('data-stage',x.s);c.setAttribute('data-col',col);
 c.setAttribute('data-id',x.id||x.t);if(K3&&K3.open(x.id||x.t))c.classList.add('lk-open');
 (x.w||[]).slice(0,2).forEach(function(w){var p=f[String(w).toLowerCase()],g;if(p&&pic[p]){g=mk(fs,'img');g.src=pic[p];g.alt='';g.width=g.height=40}});
 t=mk(r,'span','t');mk(t,'b','lk-tn',x.t);m=mk(t,'span','',[(x.w||[]).filter(Boolean).map(cap).join(', '),fact(x)].filter(Boolean).join(' · '));
 if(x.min>=0){if(m.textContent)m.appendChild(document.createTextNode(' · '));mk(m,'span','lk-nw',mins(x.min))}
 if(x.a){m.appendChild(document.createTextNode(' '));sc=mk(m,'span','lk-tag'+(x.sr?' lk-src':''),x.a);if(x.sr)sc.title='Runs on: '+x.a}
 if(x.c){sc=mk(m,'span','lk-cat',x.c);sc.title='Category: '+x.c}
-rt=mk(r,'span','lk-rt');if(x.id)mk(rt,'span','idb',x.id);if(x.n&&col==='being_built')mk(rt,'span','lk-nt',x.n);if(K3){K3.star(r,x.id);K3.aria(c)}
+rt=mk(r,'span','lk-rt');if(x.id)mk(rt,'span','idb',x.id);if(x.n&&col==='being_built'&&x.n!==HN)mk(rt,'span','lk-nt',x.n);if(K3){K3.star(r,x.id);K3.aria(c)}
 track(c,x);past(c,x);goto(c,x);sc=mk(c,'span','lk-ch lk-stc');mark(sc,x.s);sc.appendChild(document.createTextNode(CL[col]));
-m=[x.y>=1?'retry '+x.y:'',SN[x.s],x.g].filter(Boolean).join(' · ');if(m)mk(c,'span','lk-mg',m);if(K3)K3.lin(c,x.id)}
+m=[x.y>=1?'retry '+x.y:'',SN[x.s],x.n===HN?HN:'',x.g].filter(Boolean).join(' · ');if(m)mk(c,'span','lk-mg',m);if(K3)K3.lin(c,x.id)}
 // the worker a card sorts by: its first, a card with none recorded last
 function who(x){var w=String((x.w||[])[0]||'');return /not recorded/.test(w)?'':w}
 // 'def': starred, then moving work, then work waiting in a line, then held work (PC; T-4007, friesevan #41 c6772135629:
@@ -337,26 +347,47 @@ created:K3&&K3.tnum?K3.tnum(x.id):null,requested:K3&&K3.rq?K3.rq(x.id):null,star
 function order(a,b){var d=ST.indexOf(a.s)-ST.indexOf(b.s),fa=K3&&K3.fav(a.id)?1:0,fb=K3&&K3.fav(b.id)?1:0,sm=K3&&K3.sort?K3.sort():'def',z=(a.z||0)-(b.z||0);
 return (fb-fa)||(K3&&K3.by?K3.by(rec(a),rec(b)):0)||(sm==='stage'?0:(sm==='def'?(PC[a.s]||0)-(PC[b.s]||0):0)||z||d)||((b.min||0)-(a.min||0))}
 function hit(x){return !K3||K3.match([x.t,x.id,(x.w||[]).join(' '),LB[x.s],CL[COL[x.s]],x.n,x.a,x.g].map(function(s){return s||''}).join(' '))}
-function render(){var flt=document.getElementById('lk-flt'),cnt={},v,c,qn=K3&&K3.qn?K3.qn():0,pf=document.getElementById('lk-pf'),pq=document.getElementById('lk-pq');
-items.forEach(function(x){var k=COL[x.s];cnt[k]=(cnt[k]||0)+1});if(fl!=='all'&&!(fl==='queued'?qn:cnt[fl]))fl='all';
-// the chips filter, each with its count as before T-3996 (T-4007, friesevan #41 c6772135629)
-if(flt){flt.textContent='';[['all','All',items.length+qn]].concat(qn?[['queued','Queued',qn]]:[]).concat(CK.concat(['merged']).filter(function(k){return cnt[k]}).map(function(k){return[k,CL[k],cnt[k]]})).forEach(function(c){
-var b=mk(flt,'button','lk-ch');b.type='button';b.setAttribute('aria-pressed',fl===c[0]);b.onclick=function(){fl=c[0];render()};
-if(c[0]!=='all')mk(b,'span',c[0]==='queued'||MK[c[0]]?'lk-qm':'lk-dot');b.appendChild(document.createTextNode(c[1]+(c.length>2?' ':'')));if(c.length>2)mk(b,'small','',String(c[2]))})}
-// one part alone under a stage chip; the columns left to right puts Queued, which comes before the first of them, above In flight
-if(pf)pf.hidden=fl==='queued';if(pq)pq.hidden=fl!=='all'&&fl!=='queued';
-if(pf&&pq&&pf.parentNode===pq.parentNode){if(K3&&K3.sort&&K3.sort()==='stage'&&K3.dir&&K3.dir()>0){if(pq.nextElementSibling!==pf)pf.parentNode.insertBefore(pq,pf)}else if(pf.nextElementSibling!==pq)pf.parentNode.insertBefore(pf,pq)}
-var sq=!!(K3&&K3.q());box.textContent='';v=items.filter(function(x){return (fl==='all'||COL[x.s]===fl)&&hit(x)&&(!K3||!K3.catok||K3.catok(x.c,x.id))}).sort(order);v.forEach(card);
-if(!items.length)mk(box,'p','','Nothing in flight.');else if(!v.length&&sq)mk(box,'p','meta','No task in flight matches.');
-c=document.getElementById('lk-run-n');if(c)c.textContent=items.length;c=document.getElementById('lk-all-n');if(c)c.textContent=items.length+qn}
+// T-4313 (friesevan #41 c6862221970: "filtering tasks should update the totals displayed everywhere, both next to the
+// section header and on the Stage toggle buttons"): ok() is the search and the filters (category, Requested by); each
+// chip counts its tasks under them (a stage chip's count does not narrow the others), each part's header counts what
+// it shows, and All tasks counts what the chosen chip shows. With no search or filter the counts are as built: Merged's
+// includes the tasks past the rows the status names (ME), Queued's header the board's ready count (data-n).
+function ok(x){return hit(x)&&(!K3||!K3.catok||K3.catok(x.c,x.id))}
+function put(id,n){var e=document.getElementById(id);if(e)e.textContent=n}
+function render(){var flt=document.getElementById('lk-flt'),all={},cnt={},v,c,w,qn=K3&&K3.qn?K3.qn():0,on=!!(K3&&K3.fon&&K3.fon()),qv=on&&K3.qv?K3.qv():qn,
+pm=document.getElementById('lk-pm'),pf=document.getElementById('lk-pf'),pq=document.getElementById('lk-pq'),vf=items.filter(ok),vm=MG.filter(ok),nmg=on?vm.length:MG.length+ME,od;
+items.forEach(function(x){var k=COL[x.s];all[k]=(all[k]||0)+1});if(MG.length+ME)all.merged=MG.length+ME;
+vf.forEach(function(x){var k=COL[x.s];cnt[k]=(cnt[k]||0)+1});cnt.merged=nmg;cnt.queued=qv;
+if(fl!=='all'&&!(fl==='queued'?qn:all[fl]))fl='all';cnt.all=vf.length+qv+nmg;
+// the chips filter, each with its count as before T-3996 (T-4007, friesevan #41 c6772135629); T-4313: Merged among
+// them, and a chip opens the part it shows if it was folded
+if(flt){flt.textContent='';[['all','All']].concat(qn?[['queued','Queued']]:[]).concat(CK.concat(['merged']).filter(function(k){return all[k]}).map(function(k){return[k,CL[k]]})).forEach(function(c){
+var b=mk(flt,'button','lk-ch');b.type='button';b.setAttribute('aria-pressed',fl===c[0]);b.onclick=function(){var d;fl=c[0];render();d=document.getElementById(fl==='queued'?'lk-qd':fl==='merged'?'lk-mgd':fl==='all'?'':'lk-fd');if(d)d.open=true};
+if(c[0]!=='all')mk(b,'span',c[0]==='queued'||MK[c[0]]?'lk-qm':'lk-dot');b.appendChild(document.createTextNode(c[1]+' '));mk(b,'small','',String(cnt[c[0]]||0))})}
+// one part alone under a chip; the columns left to right (the Stage sort, ascending) put Queued, which comes before the
+// first of them, on top and Merged, the last stage, at the bottom
+if(pm)pm.hidden=fl!=='all'&&fl!=='merged';if(pf)pf.hidden=fl==='queued'||fl==='merged';if(pq)pq.hidden=fl!=='all'&&fl!=='queued';
+od=(K3&&K3.sort&&K3.sort()==='stage'&&K3.dir&&K3.dir()>0?[pq,pf,pm]:[pm,pf,pq]).filter(Boolean);
+if(od.length>1&&od.every(function(e){return e.parentNode===od[0].parentNode})&&od.some(function(e,i){return i&&od[i-1].nextElementSibling!==e}))od.forEach(function(e){e.parentNode.appendChild(e)});
+var sq=!!(K3&&K3.q());box.textContent='';v=vf.filter(function(x){return fl==='all'||COL[x.s]===fl}).sort(order);v.forEach(function(x){card(x)});
+if(!items.length)mk(box,'p','','Nothing in flight.');else if(!v.length&&(sq||on))mk(box,'p','meta','No task in flight matches.');
+if(mbox){mbox.textContent='';w=vm.slice().sort(order);w.forEach(function(x){card(x,mbox)});
+if(!MG.length)mk(mbox,'p','','Nothing merged this session yet.');else if(!w.length)mk(mbox,'p','meta','No merged task matches.')}
+c=document.getElementById('lk-mg-m');if(c){c.hidden=!ME;c.textContent='and '+ME+' merged earlier this session, not listed here'}
+put('lk-run-n',v.length);put('lk-mg-n',nmg);c=document.getElementById('lk-q-n');if(c)c.textContent=on?qv:(c.getAttribute('data-n')||qv);
+put('lk-all-n',cnt[fl]);if(K3&&K3.cnt)K3.cnt()}
 // T-2833: the idle alarm (no work session for 15+ minutes while work is allowed) follows every status too.
 function idle(st){var q=st.idle,sf=document.getElementById('lk-sf'),ie=document.getElementById('lk-idle');if(sf&&!ie){ie=document.createElement('p');ie.id='lk-idle';ie.className='meta lk-idle';sf.insertBefore(ie,sf.firstChild)}
 if(ie){if(q&&q.why&&q.since){var mn=Math.max(0,Math.round((Date.now()-Date.parse(q.since))/6e4));ie.textContent='No work session for '+(mn>=60?Math.floor(mn/60)+' h '+(mn%60)+' m':mn+' min')+' while work is allowed: '+q.why+'.'+(q.healed&&q.healed.length?' Done: '+q.healed.join('; ')+'.':'');ie.hidden=false}else ie.hidden=true}}
-// T-3190: the tasks finished this session, from each status (Home is built far less often than a status is written)
-function fin(st){var d=(st.session||{}).active?(st.tasks||{}).fin:null,e=document.getElementById('lk-dn'),b=document.getElementById('lk-fin'),u=document.getElementById('lk-fin-l'),m=document.getElementById('lk-fin-m'),r=d&&d.rows||[],x=d?d.n-r.length:0;
-if(e){e.hidden=!d;if(d)e.querySelector('b').textContent=d.n}if(!b||!u)return;b.hidden=!r.length;u.textContent='';
-r.forEach(function(a){var li=mk(u,'li');mk(li,'span','idb',a[0]);li.appendChild(document.createTextNode(' '+(nm(a[1])||nm((L.nm||{})[a[0]])||snm(st,a[0])||'Name not recorded')))});
-if(m){m.hidden=x<1;m.textContent='and '+x+' earlier'}}
+// T-4313: Merged's cards from each status: the cards at the Merged stage (U), then the tasks the status says finished this
+// session (tasks.fin, T-3190's list, newest first), each once, drawn as In flight's; a finished task's worker, model,
+// history and category are the build's when it saw the task (IN), its time since the merge the live stages' (LS)
+function mgs(st,u,LS,now){var d=(st.session||{}).active?(st.tasks||{}).fin:null,o=u.filter(function(x){return x.s==='merged'}),sn={};
+o.forEach(function(x){sn[x.id||x.t]=1});ME=d?Math.max(0,(+d.n||0)-(d.rows||[]).length):0;
+(d&&d.rows||[]).forEach(function(a){var id=String(a&&a[0]||''),b,v,m=-1;if(!id||sn[id])return;sn[id]=1;b=IN[id]||{};v=LS&&LS[id];
+if(v&&v[0]==='merged'&&v[2])m=Math.max(0,Math.round((now-v[2])/6e4));else if(b.s==='merged'&&b.min>=0)m=b.min+Math.max(0,Math.round((now-(L.at||now))/6e4));
+o.push({id:id,t:nm(a[1])||nm((L.nm||{})[id])||snm(st,id)||b.t||'Name not recorded',w:b.w||['worker not recorded'],m:b.m||'model not recorded',e:b.e||'',min:m,s:'merged',n:'',h:b.h||[],x:b.x,c:b.c||CT[id]||'',ps:b.ps||''})});
+return o}
 // T-4095 (friesevan #41 c6809316957): the status's stg, the live stages (live_stage.py, read every minute with the same rule
 // as the build, home_look stage_map), wins over the build's L.st once it is newer than the build; a stage it reads that
 // it no longer names has ended (LK). mg(): Merged holds for a row begun before the commit, of the commit's worker.
@@ -365,18 +396,22 @@ function lv0(st){var g=st&&st.stg;return g&&g.s&&Date.parse(g.at)>=(L.at||0)?g.s
 // the build's L.nm names only the tasks the build saw, so T-3807, handed out after it, read "Name not recorded".
 function snm(st,id){var g=st&&st.stg;return nm(g&&g.nm&&g.nm[id])}
 var LK={testq:1,testing:1,mergeq:1,simq:1,mergetest:1,merging:1,merged:1};
+// T-4308: a lane task its session has committed stays Building while the session runs (home_look HELD_NOTE)
+var HN='committed; it joins the merge line when its session ends';
 function sg(LS,id,r){var s=LS&&LS[id]||null,b=(L.st||{})[id],a;if(!s&&b&&!(LS&&LK[b[0]]))s=b;if(s&&s[0]==='merged'){a=Date.parse(r.at||'');if(!(a<s[2])||(s[3]&&r.w&&String(s[3]).toLowerCase()!==String(r.w).toLowerCase()))s=null}return s}
-function draw(st,isPub){var ml=S.lane.main(st,isPub),l=ml.concat(S.lane.rows(st).filter(function(r){return!r.d})),seen={},u=[],now=Date.now(),o={},wk,ms=sw((st.tasks||{}).src),LS=lv0(st);
-l.forEach(function(r){var t=String(r.t||r.task||''),id=r.task||(t.match(/\bT-\d+/)||[''])[0],k=id||nm(t),s=sg(LS,id,r),m,b=IN[id]||{},ln=/^([ab])\d*$/.exec(r.lane||''),mn=ml.indexOf(r)>=0,rs=mn?ms:sw(r.src||(ln?'plan-'+ln[1]:''),r.n);if(s&&s[0]==='parked'&&r.at&&Date.parse(r.at)>s[2])s=[r.k==='review'?'review':'coding','Fix after a failed merge'];if(r.w)o[String(r.w).toLowerCase()]=1;if(!k||seen[k])return;seen[k]=1;
+function draw(st,isPub){var ml=S.lane.main(st,isPub),l=ml.concat(S.lane.rows(st)),seen={},u=[],now=Date.now(),o={},wk,ms=sw((st.tasks||{}).src),LS=lv0(st);
+l.forEach(function(r){var t=String(r.t||r.task||''),id=r.task||(t.match(/\bT-\d+/)||[''])[0],k=id||nm(t),s=sg(LS,id,r),m,b=IN[id]||{},ln=/^([ab])\d*$/.exec(r.lane||''),mn=ml.indexOf(r)>=0,rs=mn?ms:sw(r.src||(ln?'plan-'+ln[1]:''),r.n);if(s&&s[0]==='parked'&&r.at&&Date.parse(r.at)>s[2])s=[r.k==='review'?'review':'coding','Fix after a failed merge'];if(!s&&r.d)s=[r.k==='review'?'review':'coding',HN];if(r.w&&!r.d)o[String(r.w).toLowerCase()]=1;if(!k||seen[k])return;seen[k]=1;
 m=r.at?Math.round((now-Date.parse(r.at))/6e4):NaN;u.push({id:id,t:nm(r.t||r.task)||nm((L.nm||{})[id])||snm(st,id)||'Name not recorded',w:[r.w||(b.w||[])[0]||'worker not recorded'],m:r.m||b.m||'model not recorded',e:r.e&&r.m?r.e:r.m?'':b.e||'',min:m>=0?m:-1,s:s?s[0]:r.k==='review'?'review':'coding',n:s?s[1]:'',
 a:rs||(mn?'Main':ln?'Account '+ln[1].toUpperCase():''),sr:rs?1:0,h:b.h,x:b.x,c:b.c||CT[id]||'',g:b.g||'',y:b.y||0,ps:b.ps||''})});
 (L.init||[]).forEach(function(x){var v;if(x.s==='coding'||x.s==='review'||seen[x.id||x.t])return;if(LS&&x.id&&LK[x.s]){v=LS[x.id];if(!v||v[0]==='merged')return;x=Object.assign({},x,{s:v[0],n:v[1]})}if(x.id&&/^Name not recorded/i.test(x.t||'')&&snm(st,x.id))x=Object.assign({},x,{t:snm(st,x.id)});seen[x.id||x.t]=1;u.push(x)});  // T-3284 item 3
 if(LS)Object.keys(LS).forEach(function(id){var v=LS[id],b=IN[id]||{};if(seen[id]||v[0]==='merged')return;seen[id]=1;  // T-4095: a stage the build had not seen
 u.push({id:id,t:nm((L.nm||{})[id])||snm(st,id)||'Name not recorded',w:b.w||['worker not recorded'],m:b.m||'model not recorded',e:b.e||'',min:v[2]?Math.max(0,Math.round((now-v[2])/6e4)):-1,s:v[0],n:v[1],h:b.h,x:b.x,c:b.c||CT[id]||'',g:b.g||'',y:b.y||0,ps:b.ps||''})});
-items=u;render();if(K3&&K3.requeue)K3.requeue();wk=document.getElementById('lk-working');if(wk)wk.textContent=Object.keys(o).length+' working';idle(st);fin(st)}
+MG=mgs(st,u,LS,now);items=u.filter(function(x){return x.s!=='merged'});if(K3&&K3.requeue)K3.requeue();render();wk=document.getElementById('lk-working');if(wk)wk.textContent=Object.keys(o).length+' working';idle(st)}
 // T-3316: a tree's link to an In flight card shows the whole list, then hands back the card
-if(K3){K3.has=function(i){return items.some(function(x){return K3.id(x.id)===i})};K3.all=function(){if(fl!=='all'){fl='all';render()}};K3.run=function(i){if(!K3.has(i))return null;fl='all';render();
-return [].filter.call(box.children,function(c){return K3.id(c.getAttribute('data-id'))===i})[0]||null}}
+// T-4313: and to a Merged card, in its own box (go() opens its part)
+if(K3){K3.has=function(i){return items.some(function(x){return K3.id(x.id)===i})};K3.hm=function(i){return MG.some(function(x){return K3.id(x.id)===i})};
+K3.all=function(){if(fl!=='all'){fl='all';render()}};K3.run=function(i){var b=K3.has(i)?box:K3.hm(i)?mbox:null;if(!b)return null;fl='all';render();
+return [].filter.call(b.children,function(c){return K3.id(c.getAttribute('data-id'))===i})[0]||null}}
 render();if(K3)K3.on(render);if(S&&S.onStatus&&S.lane){S.onStatus.push(draw);if(S.status&&S.status())draw(S.status(),true)}});
 // T-2940: Blocked or waiting (T-3735) folds behind a button at the top of its list: rows past data-max carry lk-fold.
 // T-4287: Queued no longer folds; it scrolls in its box.

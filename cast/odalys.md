@@ -37,17 +37,11 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 ## Open (2026-11-10 12:4x)
 
-- T-4138 7266de4234 (11-12): pinned session <span title="A measured fact that holds a grade below a letter, however good the rest is.">cap</span> removed (an Investor c6824162128). Owed: count fix/sent-back waits on a while 3 pinned hold every slot.
-
-- T-4157 ff2a4c732d: a, b fable_only. T-4206 df0eb78f5a: investor-stop flag <span title="A new, permitted reading that removes a cap. A lift rule is that reading, written down before we look.">lifts</span> when its rule is retired/lifted for the account (lane_stop.py released). Owed: first live 'usage-line stop lifted' line (b freed by <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">LANE</span> CLEAR 1:18 PM first).
-
-- T-4179 30eaa45f58 (11-12): requeued records '<ID> <12-hex line hash>'; bare ID = first line for that ID. T-4127 requeued on a 12:44 PM, no session (a at 93%). Owed: first T-4127 session on a after the window allows. guard_supervisor_test 1 FAIL only from a copy path with a space.
-
 - T-4161 bd24d50c7a (11-12 12:57 PM): b on Fable 5.2 (FABLE_MODEL_B); tick logs 'session: models:'. Owed: first models line in ops/runs/personal-tick-a/b.log.
 
 - T-4213 8094fd2d56: held window -> one Fable restart. T-4235 db5c635452 (11-12 10 PM): pause reserve fixed 3 pts 5h / 1 Fable (was burn x wrap). Owed: first live line ~91%; >90% readings are refused by the <span title="What keeps an idea below the top: the cap that applies to it now.">hold</span> (projection only).
 
-- T-4224 51744a9075 (11-12): lane Opus = the session's coordinator (main replies all opus, agent replies all fable); Home now says Fable. Open: coordinator could run cheaper (tick change).
+- T-4224 51744a9075 (11-12): <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> Opus = the session's coordinator (main replies all opus, agent replies all fable); Home now says Fable. Open: coordinator could run cheaper (tick change).
 
 - T-4232 (11-12 10 PM): Double Spread + per-account modes (tools/usage_mode.py, ops/usage_mode.json; MODE <ALL|MAIN|A|B> <mode> via inbox) + Home Mode block. NOT landed: main_gate_test red on main (T-4236). Ready in company-scratch/T-4232-odalys/wt (16 paths, msg.txt). site_live_test needs ops/live.json copied into a worktree.
 
@@ -65,9 +59,13 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 - T-4317 1fc5ad43a8 + T-4402 9f7eb648d0 (11-13): ledger rows via tools/ledger_row.py (fills prev; plan, lane.md, slice notes say so). Owed: tick T-4402 when the next slice's rows all carry prev; then the apply refuses rows without prev.
 
+- T-4314 fcb1782366 (11-13 23:1x): personal_stream_shape.py cost + T-4124 sums. Tick lines = patch in company-scratch/T-4314-odalys (audit owner; reviewer Pernille). Owed: first real 'session: cost:' line, then tick.
+
+- T-4411 (11-14 00:1x): dispatch.py patch in company-scratch/T-4411-odalys/T-4411-dispatch.patch, handed by note on T-4092 (audit-owned). Owed: after it lands, dispatch.log shows an audit line dealt within one tick of a 5-hour reset; then tick T-4411.
+
 ## Lessons
 
-- A key match over main's last N commits is not 'on main': past N, confirm by git cherry (T-4129).
+- Gate runs of the personal suites take ~55 min under load: run land in background with a 2 h limit, not 10 min.
 {% endraw %}
 
 

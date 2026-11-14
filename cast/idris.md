@@ -53,9 +53,11 @@ My notes. They are published on the company site, so nothing sensitive goes here
 ## Lessons
 - Older lessons and dated logs: archive.md.
 
-- T-3783 11-13 754904a541 (+00efea1b54): cause found: FilesCall.scriptFolder compared standardizedFileURL paths; phone App Group is /private/var, so once scripts/ existed every new premade folder was refused PermissionDenied. Open: phone check on TestFlight; copy removal refused (T-3859 guard). Lesson: standardizedFileURL drops /private only for existing paths: the Simulator never shows it, test under /private/tmp.
+- T-0678 11-13 2b1cbd1634 (slice 2): RefreshWidgetIntent + getTimeline rule landed (job 1785/0). Open: iOS 18 tap test skips (no runtime; runner takes newest), .main pin on 27+ is my call, review Pernille. Lesson: ExtensionBridgeTests needs every ExtensionLane.shared on an `if WidgetLane.extensionFlag` line.
 
-- T-3820 11-13 a9108cc747: net.request landed (land job 1761/0); review T-4309 Pernille. Repeats: joined per RFC 9110 s5.3, Set-Cookie split back, request Cookie '; '. Open: T-3821 big bodies via file. Lesson: the land gate IS the runner test (runner only takes main commits); a 10-min background Bash survives the gate if you wait on its log.
+- T-1440 11-13 39ea7fc60d: refresh glyph = Button(intent: RefreshWidgetIntent) in extension; taps-off branch (treeTapsOff, set by nothing yet). Review T-4418 Pernille. Open: WidgetKit Sim shots (no CLI way to place a widget), T-4415. Lesson: a red host suite in the gate can be a parallel-run fault: rerun it alone, then land again.
+
+- T-4414 11-14 9ab6cbe2af: rerun rule ages newest run row (any <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span>/outcome), else tree.json mtime; ticked. Lesson: PreviewQueueTests and FirstDrawCardTests pin who names WidgetFolder.treeName and PyWidget.swift lines exactly; keep tree paths in PyWidget.swift.
 {% endraw %}
 
 

@@ -626,8 +626,11 @@ The Effect lines of the amendments.md entries the charter retired (2026-11-04 12
 - **2026-11-13 12:27 PM ET** ((private)): The company may itself turn off the Fable pause on Evan's account for the one-time audit; the hand-run Mac mini command is not needed.
 - **2026-11-13 1:15 PM ET** ((private)): Every step of a Fable audit, its helper agents included, runs on Fable; a step that needs Opus is handed to the main session as its own board line instead of running on the audit account.
 - **2026-11-13 1:48 PM ET** ((private)): Audit mode is not to enforce the 1:15 PM ruling: the helpers-on-Fable slice of T-4284 is dropped.
+- **2026-11-13 1:54 PM ET** ((private)): The 1:15 PM ruling is withdrawn: audit sessions may run their helper agents on Opus as before, and a step that needs Opus no longer has to be handed to the main session.
 - **2026-11-13 5:01 PM ET** ((private)): Jeremy's account (lane b, confirmed by an Investor c6866038303 at 5:03 PM) runs the one-time queue audit T-4092 without the Fable pause watch, as Evan's account a does, until his weekly Fable is used up.
 - **2026-11-13 5:04 PM ET** ((private)): Account a is Evan's and account b is Jeremy's; Home and Chat replies name them "Evan's Account" and "Jeremy's Account" from now on, not account a or b.
+- **2026-11-13 9:53 PM ET** ((private)): Every change in the queue audit's applying and building steps is checked against the Restructuring's decisions (documents/restructuring/06-decisions.md) before it lands; a conflict is settled in the Restructuring's favour or raised on #41.
+- **2026-11-13 10:11 PM ET** ((private)): Each personal account starts on the queue audit by itself as soon as its 5-hour usage comes back, and uses all of its Fable limit before the next reset, 5-hour or weekly, whichever is sooner.
 {% endraw %}
 
 </div>

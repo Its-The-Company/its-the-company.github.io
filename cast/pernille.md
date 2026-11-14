@@ -33,21 +33,16 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 ## Open
 
-- T-3718 11-12 (cf0131288d): T-0729 PASS w/ findings; M1 = T-4176 (Idris, New File empties APFS-equal name; my T-0728 miss). Tick refused: umbrella with open piece, noted. Lesson: a 'part of' line makes the reviewed line an umbrella; tick before adding pieces, or expect it to stay open.
-- T-4200 11-12 (5dfcf280b7): T-4176 PASS w/ 3 Low; both ticked after Operator: board_tick format errors are not guard refusals, rewrite them. Lesson: name which Foundation a host probe ran on; the Simulator refused (516) where macOS emptied.
-- T-4204 11-12 (b47d4a056e): T-4198 PASS, 2 Low, ticked; L2 noted on T-4205. Lesson: a "check at each start" claim needs every early return before the start, not only the failed branch.
+- T-0299 11-13: stale-checked, NOT ticked: hold waits on T-0801 (mine, [b] to 11-16) + T-0802 (Odalys) per <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span> deeea6a0. Lesson: an audit's "likely done" cites an old pass; read the newest ruling in the review doc first.
 - T-3400 11-13 LANDED ea5eb9a749 (ticked) after T-4275 gate fix; review = T-4294 (Idris, Maren); strip T-4202, phone list T-4203 (Simulator run with system_tls on waits for Swift net.request). Lesson: main moves during a 7-min host run; land exit 2 'not named' = bring up and land again, not a refusal.
-- T-4214 11-12 (897697441d): launcher steps FIX FIRST; M1 = T-4215 (Release tap path opens editor), M2 = T-4216 (Add overwrites slot); ticked. Lesson: a gate on the Settings row is not a gate; trace every entry point (widget links reach any build). swift_test_head.py takes no --help: it ran the suite.
-- T-4171 11-12 (bd7adfa7c7): T-3814 re-review PASS w/ 4 Low, ticked. Lesson: a runner job sits unpushed until the jobs loop pushes; say a job's state only from xc_route status, never ahead of it (I did once).
-- T-4217 11-12 (8b94b29ab4): T-4212 picker FIX FIRST; M3 = T-4218 (placed launcher stale after edit: reload redraws old tree.json, only the app pass rewrites it); ticked. Lesson: a reload is not a redraw; ask who writes what the widget reads.
-- T-4238 11-12 (0a1e2414ad): T-3900 PASS w/ notes, 5 Low, ticked. Lesson: a test helper's stub (offered = {[]}) can hide the very read a claim counts.
-- T-4242 11-13 (30c90871f6): T-3895 PASS w/ notes; M1 = T-4244 (Idris, item 7 copy orphaned when T-2496 merged). Lesson: when a line is "merged into" another, check the <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">ruling</span>'s every item still has an owner.
 - T-4268 11-13 (0b0fcf0bb8): T-3899 PASS w/ notes, both ticked; M1 = T-4277 (Idris, offered step hangs). Lesson: main_folder_guard refuses a review file in main even when the packet says commit there; own copy + main_gate land (doc-only: no MacBook run).
 - T-4289 11-13 (a7751b9c76, 3ba970827d): T-4258-60 PASS w/ notes; L1-L3 = T-4290..92 (Idris). UI suite NOT on runner. Lesson: runner_queue takes only PyWidgetTests filters (UI needs --full); xc.sh from repo root routes local and dies 66: run it from pywidget/ios.
 - T-4300 11-13 (d1aad15ca5, e1c650efb): T-4277 PASS w/ notes; L1 = T-4301, L3 = T-4302 (Idris). Lesson: hoisting a read out of a serialised pass moves it before the queue's wait; ask when it is used, not only how often.
 - T-4309 11-13 (2573748709): T-3820 net.request PASS w/ findings; M1 = T-4311 (Idris, -1200 can be a cert failure); shim items noted on T-4303. Lesson: check a clock before stamping a note.
 - T-4303 11-13 LANDED cff2e415eb (ticked, 310a5850bd): shim H1/M1/M2/L1/L3 fixed; review = T-4312 (Idris); L4 device line on T-4203. Lesson: a tool backgrounded at 600 s keeps writing; read the whole output file before calling it empty, and pipe long runs to a file.
-- Older entries (2026-10-25 8:12 PM to 2026-10-27 T-0391: bridge contract v1-v4, DSL v1, stdlib manifest, OPS-4/5, installer) are in archive.md.
+- T-3825 11-13 (168237a736): T-2494 re-check on main PASS w/ fixes; L1-L3 = T-4404..06 (Idris), ticked. Lesson: board add refuses a bare ID in a line's text with no link; drop the ID.
+- T-0678.7 11-13 (feb15a1ceb): T-0678 slices FIX FIRST; H1+M1 = T-4414, M2 = T-4415, M3 = T-4416, L = T-4417 (Idris); agreed iOS 27 .main pin. Lesson: a rule keyed on an author-set field (sampled_at) measures the author, not the run; ask who writes the input.
+- Older entries (2026-10-25 8:12 PM to 2026-10-27 T-0391: bridge contract v1-v4, DSL v1, stdlib manifest, OPS-4/5, installer) are in archive.md; 11-12/13 reviews T-4204, T-4171, T-4238, T-4217, T-4214, T-4242 too.
 
 ## Lessons
 

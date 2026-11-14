@@ -19,6 +19,63 @@ is under review. Line numbers are 8b20e9fb5's ExtensionLane.swift unless another
 I read the diff, ExtensionLane.swift's refresh/takeTurn/turn/logClosed/judge, LaneGuard.swift's carryOut (:219-223), and
 RunLogRecorder.recordLaneTurn. I did not read the author's notes beyond the commit message.
 
+## Re-check on main ba64754724 (Pernille, 2026-11-13 9:45 PM ET)
+
+The first thing that broke was the line numbers: main has moved 183 lines in ExtensionLane.swift since 8b20e9fb5
+(bb26fb7205 is T-2494 as landed; then T-2230, T-2491, T-4152, T-3895). I re-read main's HEAD, not the parked commit.
+Read only, no Swift change, no Xcode run (Idris holds the slot). Line numbers in this section are main's
+ExtensionLane.swift at ba64754724; the sections after it are the 11-09 review at 8b20e9fb5's numbers and stand as written.
+
+**Verdict on main: PASS with fixes, unchanged.** T-2494's mechanism is intact on main: closed check and count in one
+lock hold (:278), both ends ask `endsNow()` (:287, :303), `endsNow()` is unchanged (:427-431). The one new place that
+sets `closed` keeps every invariant below. L1, L2 and L3 are still open on main; they now have board lines (T-4404,
+T-4405, T-4406, all part of T-4181). No Medium or worse.
+
+**Every path that sets `closed` (two now, was one):**
+- :418, a stuck run, as before: after the run's row and status.json (:405-415), inside the turn.
+- :398, new with T-3895: `bridge.run` threw BridgeError.stuck (`Ran.start == .bridgeStuck`, :84). It sets `closed`,
+  then writes the turn's own `closed` row (:399), still inside the turn, so `inFlight[id]` holds and the turn's own end
+  waits for that row. `finished` is nil on this path (:79), so `judge` does not run on the turn that sets `closed` here
+  either. The id is not put in `stuckHere`, which is right (its run did not go stuck), and `closedLogged` stops a later
+  closed caller for the same id writing a second row. `closed` is set before the row here, after it at :418; that order
+  is not observable, because turns run one at a time and a closed caller for this id joins `inFlight[id]` instead.
+- Nothing clears `closed`.
+
+**Every call to `exit` (three, unchanged):** a turn's end (:290), a closed caller's end (:305), and `judge` (:616) into
+WidgetLaneGuard.carryOut (LaneGuard.swift:267-271, the same code as at 8b20e9fb5). carryOut's exit does not set
+`ended`. It runs only on a turn with `finished` set, and both `closed` setters are on turns with `finished` nil; turns
+run one at a time, so `closed` is false and `closedWriters` is 0 whenever carryOut runs. With the real `_exit` that is
+safe (L2 stands as a doc and stub matter). `ExtensionLane.endProcess` is passed nowhere else in Shared.
+
+**A turn ending while a closed caller writes:** as in the 11-09 analysis, on main's numbers: c counts itself at :278,
+b's end gets false while `closedWriters` is 1, c's end after its row and status.json gets true and calls exit. The turn-
+first order still leaves L1's window (:278 never reads `ended`).
+
+**Exactly once:** `ended` is set in the lock hold that returns true (:429). Both lane exits go through it; carryOut's
+does not (L2). Once per process with the real `_exit`.
+
+**What the tests pin on main** (the two T-2494 tests are unchanged since 8b20e9fb5, now at ExtensionLaneTests.swift:1377
+and :1414; by reading, not run):
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 1: Re-check on main ba64754724 (Pernille, 2026-11-13 21:45 ET), scrolls sideways" style="--tw:640px" markdown="1">
+
+| Mutant on main | Test that goes red |
+|---|---|
+| Drop the count (:278 `closedWriters += 1`, :302 `-= 1`) or `closedWriters == 0` in `endsNow` | :1377 (b exits while c is held between row and status) |
+| Count down before `logClosed` (:300 and :302 swapped) | :1377 |
+| Drop `inFlight.isEmpty` from `endsNow` | :1377 (a's end exits while b is still queued: `exitCount` 1 at :1397 where 0 is asserted). testATurnQueuedBehindAStuckRunRunsNothing (:402) does not catch it: it counts exits, not rows at exit |
+| Drop `if ends { exit() }` at :290 | :383 and :1377 |
+| Drop `!ended` / `ended = true` | :1414 (3 exits, not 1) |
+| Drop `closed = true` at :398 | testAStuckBridgeAtQueueingIsTheClosedLane (:1611, `exitCount` 0) |
+| Put the bridgeStuck id in `stuckHere` at :398 | :1611 (no `deferred` row) |
+| Move `closed = true` after `logClosed` at :398-399 | none; equivalent, see above |
+| **Count in a second lock hold** (the closed check returns nil, the else branch takes the lock again to count) | **none**. :1377 holds c at its row step, long after the count, so it pins "counted before the row", not "counted in the <span title="What keeps an idea below the top: the cap that applies to it now.">hold</span> that saw `closed`". A turn ending in the gap between the two holds would exit under c's row. No seam lets a test put b's end in that gap; it is held by code reading only. Not a board line |
+| **A closed caller after `ended`** (L1) | **none**. T-4404 adds the probe |
+
+</div>
+
+
 ## Test runs: none ran
 
 I put the two files from 8b20e9fb5 in the worktree, added a scratch probe for L1 (below), ran `xcodegen generate`, then
@@ -61,7 +118,7 @@ is one gap of the same kind left, much narrower (L1), and one doc claim that is 
 ## Do the tests pin it? (check 4; by reading, not run)
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 1: Do the tests pin it? (check 4; by reading, not run), scrolls sideways" style="--tw:960px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 2: Do the tests pin it? (check 4; by reading, not run), scrolls sideways" style="--tw:960px" markdown="1">
 
 | Mutant | Test that goes red | Why |
 |---|---|---|

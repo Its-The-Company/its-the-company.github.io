@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-14T12:42:48.630615+00:00",
+ "at": "2026-11-14T12:45:52.036319+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -87,7 +87,7 @@
    "task": "[tools] T-4432 released wait hides pinned line",
    "model": "opus",
    "started": "2026-11-14T12:40:55.020Z",
-   "seconds": 113,
+   "seconds": 297,
    "finished": null,
    "effort": "high"
   },
@@ -96,7 +96,7 @@
    "task": "[build] T-4431 main red completion row inset",
    "model": "opus",
    "started": "2026-11-14T12:41:08.248Z",
-   "seconds": 100,
+   "seconds": 283,
    "finished": null,
    "effort": "high"
   }
@@ -120,20 +120,19 @@
  },
  "meter": {
   "five_hour": {
-   "pct": null,
-   "resets_at": null,
+   "pct": 1.0,
+   "resets_at": "2026-11-14T12:40:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-14T07:38:48.030580-05:00",
+   "read_at": "2026-11-14T07:44:56.918808-05:00",
    "source": "live",
-   "last_reset": "2026-11-14T07:40:00-05:00",
-   "left": null,
+   "left": 99.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 98.0,
    "resets_at": "2026-11-15T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-14T07:38:48.030580-05:00",
+   "read_at": "2026-11-14T07:44:56.918808-05:00",
    "source": "live",
    "left": 2.0,
    "left_words": "of your weekly allowance left"
@@ -145,7 +144,7 @@
    "read_at": "2026-11-14T07:33:33.294624-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-14T07:38:48.030580-05:00"
+  "read_at": "2026-11-14T07:44:56.918808-05:00"
  },
  "ui": {
   "week_pct": 0.46,
@@ -165,7 +164,7 @@
   "week_pct": 50.73,
   "usage_pct": 34.1,
   "work_pct": 80.3,
-  "read_at": "2026-11-14T12:42:00+00:00",
+  "read_at": "2026-11-14T12:45:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -186,7 +185,7 @@
   }
  ],
  "disk": {
-  "free_gb": 20,
+  "free_gb": 17,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -195,14 +194,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-14T07:38:00-05:00",
+   "at": "2026-11-14T07:44:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-14T07:42:00-05:00",
+  "at": "2026-11-14T07:45:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -437,11 +436,20 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-14T12:42:37Z",
-  "s": {}
+  "at": "2026-11-14T12:45:40Z",
+  "s": {
+   "T-4431": [
+    "merging",
+    "Mac tests at the main gate",
+    1794660340733
+   ]
+  },
+  "nm": {
+   "T-4431": "Make main pass its Xcode checks again"
+  }
  },
  "ln": {
-  "at": "2026-11-14T12:42:37Z",
+  "at": "2026-11-14T12:45:40Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -455,11 +463,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 2740,
+    "conflicted": 2743,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1189
+    "parked": 1192
    },
    "cur": [],
    "ld": [
@@ -469,8 +477,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-14T12:42:15Z",
-    "ld": 1.06,
+    "at": "2026-11-14T12:45:41Z",
+    "ld": 1.94,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -527,10 +535,10 @@
   "main": 2,
   "lanes": 0,
   "total": 2,
-  "at": "7:42 AM",
+  "at": "7:45 AM",
   "why": "",
-  "at_iso": "2026-11-14T12:42:00+00:00",
+  "at_iso": "2026-11-14T12:45:00+00:00",
   "started": "7:33 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 7:33 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 7:42 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 7:33 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 7:45 AM ET</p></section>"
  }
 }

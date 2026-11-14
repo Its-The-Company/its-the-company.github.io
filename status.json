@@ -1,10 +1,10 @@
 {
  "schema": 1,
- "at": "2026-11-14T07:57:16.856887+00:00",
+ "at": "2026-11-14T07:57:58.688845+00:00",
  "session": {
-  "active": false,
-  "kind": "",
-  "started": null,
+  "active": true,
+  "kind": "inbox",
+  "started": "2026-11-14T02:57:17-05:00",
   "flow": [],
   "done": [
    {
@@ -131,12 +131,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-14T03:12:06-05:00",
+ "next_tick": null,
  "personal": {
   "week_pct": 50.78,
   "usage_pct": 34.1,
   "work_pct": 80.3,
-  "read_at": "2026-11-14T07:57:00+00:00",
+  "read_at": "2026-11-14T08:00:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -157,7 +157,7 @@
   }
  ],
  "disk": {
-  "free_gb": 12,
+  "free_gb": 16,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -166,14 +166,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-14T02:56:00-05:00",
+   "at": "2026-11-14T02:58:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-14T02:57:00-05:00",
+  "at": "2026-11-14T03:00:00-05:00",
   "mode": null,
   "modes": {
    "main": "spread",
@@ -181,9 +181,13 @@
    "b": "midnight"
   }
  },
- "next_tick_why": "last_tick",
+ "next_tick_why": "session",
  "idle": null,
- "pool": null,
+ "pool": {
+  "why": "Spread: usage is ahead of the week's even pace to Sat 23:00, so work waits until the line passes; the machine allows 17 (held: too few lands in 3 hours to judge a raise)",
+  "n": 1,
+  "at": "2026-11-14T02:57:06.922598-05:00"
+ },
  "lanes": [
   {
    "name": "Idris",
@@ -236,6 +240,7 @@
  ],
  "tasks": {
   "run": [],
+  "src": "plan",
   "open": [
    {
     "w": "Odalys",
@@ -330,6 +335,10 @@
    "wait": 43,
    "blocked": 44,
    "you": 15
+  },
+  "fin": {
+   "n": 0,
+   "rows": []
   }
  },
  "qr": [
@@ -371,11 +380,11 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-14T07:57:16Z",
+  "at": "2026-11-14T07:57:41Z",
   "s": {}
  },
  "ln": {
-  "at": "2026-11-14T07:57:16Z",
+  "at": "2026-11-14T07:57:41Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -393,7 +402,7 @@
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 903
+    "parked": 904
    },
    "cur": [],
    "ld": [
@@ -419,29 +428,26 @@
    }
   }
  },
- "operators": [],
- "reply": {
-  "sent": "2026-11-14T07:45:38Z",
-  "seconds": 145.0
- },
- "inbox": [
+ "operators": [
   {
-   "id": "c6874173178",
-   "state": "received",
-   "position": 1,
-   "eta": "2026-11-14T03:12:06-05:00",
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "Question: is it possible to render..."
+   "w": "Operator",
+   "a": "Main plan",
+   "sr": 1,
+   "m": "sonnet",
+   "e": "low",
+   "t": "Inbox session",
+   "at": "2026-11-14T02:57:37-05:00"
   }
  ],
+ "reply": {
+  "sent": "2026-11-14T07:56:39Z",
+  "seconds": 57.0
+ },
+ "inbox": [],
  "trimmed": [
   "lane_next",
   "queue_text",
   "task_done",
-  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -452,10 +458,10 @@
   "main": 0,
   "lanes": 0,
   "total": 0,
-  "at": "2:57 AM",
-  "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
-  "at_iso": "2026-11-14T07:57:00+00:00",
+  "at": "3:00 AM",
+  "why": "Between sessions: no session is running. Last check 2:57 AM ET.",
+  "at_iso": "2026-11-14T08:00:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 2:57 AM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 3:00 AM ET</p><p class=\"an-why\">Between sessions: no session is running. Last check 2:57 AM ET.</p></section>"
  }
 }

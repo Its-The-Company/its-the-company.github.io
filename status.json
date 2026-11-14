@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-14T14:02:20.431053+00:00",
+ "at": "2026-11-14T14:05:25.450250+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -99,7 +99,7 @@
    "task": "[review] T-4439 premade first-draw review",
    "model": "opus",
    "started": "2026-11-14T14:01:03.863Z",
-   "seconds": 76,
+   "seconds": 261,
    "finished": null,
    "effort": "high"
   },
@@ -108,7 +108,7 @@
    "task": "[build] T-4434 refresh tap wiring test",
    "model": "opus",
    "started": "2026-11-14T14:01:15.595Z",
-   "seconds": 64,
+   "seconds": 249,
    "finished": null,
    "effort": "high"
   }
@@ -176,7 +176,7 @@
   "week_pct": 52.14,
   "usage_pct": 34.5,
   "work_pct": 80.2,
-  "read_at": "2026-11-14T14:02:00+00:00",
+  "read_at": "2026-11-14T14:05:00+00:00",
   "running": [
    {
     "lane": "b2",
@@ -188,6 +188,7 @@
     "e": "xhigh",
     "at": "2026-11-14T08:42:04-05:00",
     "n": "Jeremy",
+    "d": 1,
     "src": "plan-b"
    }
   ]
@@ -226,7 +227,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-14T09:02:00-05:00",
+  "at": "2026-11-14T09:05:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -456,20 +457,26 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-14T14:02:08Z",
+  "at": "2026-11-14T14:05:17Z",
   "s": {
+   "T-4434": [
+    "testing",
+    "its own tests, in its copy",
+    1794665117404
+   ],
    "T-3279": [
     "testq",
     "1st for a Simulator",
-    1794664808727
+    1794664817404
    ]
   },
   "nm": {
+   "T-4434": "Test the refresh tap's wiring in the view",
    "T-3279": "Draw a premade picked before the first app open"
   }
  },
  "ln": {
-  "at": "2026-11-14T14:02:08Z",
+  "at": "2026-11-14T14:05:17Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -483,11 +490,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 2819,
+    "conflicted": 2823,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1265
+    "parked": 1269
    },
    "cur": [],
    "ld": [
@@ -497,8 +504,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-14T14:02:09Z",
-    "ld": 3.22,
+    "at": "2026-11-14T14:04:28Z",
+    "ld": 3.37,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -540,7 +547,7 @@
    "sr": 1,
    "m": "opus",
    "e": "xhigh",
-   "t": "Work session \u2013 1 task",
+   "t": "Work session",
    "at": "2026-11-14T08:42:03-05:00"
   }
  ],
@@ -563,10 +570,10 @@
   "main": 2,
   "lanes": 1,
   "total": 3,
-  "at": "9:02 AM",
+  "at": "9:05 AM",
   "why": "",
-  "at_iso": "2026-11-14T14:02:00+00:00",
+  "at_iso": "2026-11-14T14:05:00+00:00",
   "started": "8:56 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 8:56 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 9:02 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 8:56 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 9:05 AM ET</p></section>"
  }
 }

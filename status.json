@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-14T05:47:02.233853+00:00",
+ "at": "2026-11-14T05:50:02.813241+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -88,19 +88,17 @@
   "landed": 17,
   "failed": 2
  },
- "workers": [
+ "workers": [],
+ "who": "",
+ "recent": [
   {
    "name": "idris",
    "task": "[build] T-4414 rerun rule ages last run",
    "model": "opus",
    "started": "2026-11-14T04:58:58.328Z",
-   "seconds": 2883,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Idris",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-14T05:47:33.912000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[tools] T-4411 start accounts when usage returns",
@@ -124,20 +122,12 @@
    "started": "2026-11-14T04:20:03.586Z",
    "seconds": null,
    "finished": "2026-11-14T04:58:37.060000+00:00"
-  },
-  {
-   "name": "pernille",
-   "task": "[review] T-0678 review of refresh slices",
-   "model": "opus",
-   "started": "2026-11-14T04:20:10.142Z",
-   "seconds": null,
-   "finished": "2026-11-14T04:28:07.700000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 435,
+  "runnable_count": 434,
   "blocked_count": 94
  },
  "meter": {
@@ -186,7 +176,7 @@
   "week_pct": 47.87,
   "usage_pct": 33.5,
   "work_pct": 79.6,
-  "read_at": "2026-11-14T05:47:00+00:00",
+  "read_at": "2026-11-14T05:50:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -248,7 +238,7 @@
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-14T00:47:00-05:00",
+  "at": "2026-11-14T00:50:00-05:00",
   "mode": null,
   "modes": {
    "main": "spread",
@@ -266,12 +256,11 @@
  "lanes": [
   {
    "name": "Idris",
-   "state": "running",
-   "task": "[build] T-4414 rerun rule ages last run",
-   "model": "opus",
-   "since": "2026-11-14T04:58:58.328Z",
-   "next": [],
-   "effort": "high"
+   "state": "next",
+   "task": "Idris, P0, reopens T-3393 c6713953911, c6725543994),...",
+   "model": null,
+   "since": null,
+   "next": []
   },
   {
    "name": "Pernille",
@@ -315,18 +304,7 @@
   }
  ],
  "tasks": {
-  "run": [
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "Make the rerun rule age the last run",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-14T04:58:58.328Z",
-    "o": "c",
-    "task": "T-4414"
-   }
-  ],
+  "run": [],
   "src": "plan",
   "open": [
    {
@@ -402,6 +380,11 @@
   ],
   "done": [
    {
+    "w": "Idris",
+    "t": "After a refresh tap, the widget no longer runs the person's script a second time when the script...",
+    "at": "2026-11-14T00:47:00-05:00"
+   },
+   {
     "w": "Maren",
     "t": "Home's task list now has a Merged section above In flight with this session's merged tasks as...",
     "at": "2026-11-14T00:25:00-05:00"
@@ -410,22 +393,21 @@
     "w": "Ines",
     "t": "Every open task in the queue now has a written verdict, and each verdict records which larger...",
     "at": "2026-11-13T23:14:00-05:00"
-   },
-   {
-    "w": "Maren",
-    "t": "Home's In flight list now keeps every task an account session is working on, even after the...",
-    "at": "2026-11-13T23:03:00-05:00"
    }
   ],
   "count": {
-   "next": 435,
+   "next": 434,
    "wait": 47,
    "blocked": 47,
    "you": 15
   },
   "fin": {
-   "n": 11,
+   "n": 12,
    "rows": [
+    [
+     "T-4414",
+     "Make the rerun rule age the..."
+    ],
     [
      "T-4313",
      "Add a Merged section and..."
@@ -445,10 +427,6 @@
     [
      "T-4410",
      "Judge unaudited queue lines,..."
-    ],
-    [
-     "T-4104",
-     "Propose how a new task gets..."
     ]
    ]
   }
@@ -492,20 +470,11 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-14T05:46:55Z",
-  "s": {
-   "T-4414": [
-    "mergetest",
-    "iPhone tests on the MacBook",
-    null
-   ]
-  },
-  "nm": {
-   "T-4414": "Make the rerun rule age the last run"
-  }
+  "at": "2026-11-14T05:49:45Z",
+  "s": {}
  },
  "ln": {
-  "at": "2026-11-14T05:46:55Z",
+  "at": "2026-11-14T05:49:45Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -519,11 +488,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 2324,
+    "conflicted": 2327,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 773
+    "parked": 776
    },
    "cur": [],
    "ld": [
@@ -533,8 +502,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-14T05:46:36Z",
-    "ld": 4.33,
+    "at": "2026-11-14T05:49:47Z",
+    "ld": 4.18,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -548,12 +517,12 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-14T05:39:21Z",
-    "ld": 0.72,
+    "at": "2026-11-14T05:46:32Z",
+    "ld": 2.13,
     "c": 12,
     "sb": 0,
     "dk": [
-     370.1,
+     369.9,
      926.4
     ],
     "sn": []
@@ -567,7 +536,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 1 task",
+   "t": "Work session",
    "at": "2026-11-13T21:59:25-05:00"
   },
   {
@@ -608,13 +577,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 1,
+  "main": 0,
   "lanes": 2,
-  "total": 3,
-  "at": "12:47 AM",
+  "total": 2,
+  "at": "12:50 AM",
   "why": "",
-  "at_iso": "2026-11-14T05:47:00+00:00",
+  "at_iso": "2026-11-14T05:50:00+00:00",
   "started": "9:30 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 1, started 9:30 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 12:47 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0, started 9:30 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 12:50 AM ET</p></section>"
  }
 }

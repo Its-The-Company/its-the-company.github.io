@@ -82,13 +82,23 @@ function toggle(c){var k=key(c),on=!c.classList.contains('lk-open');c.classList.
 // lineage.rows: each task once in full, a later meeting one row marked again, so a cycle ends. A relative with a card here
 // is a link to it (go); one with none is its name and a word, never a dead link. The tree is drawn when a card first
 // opens. Text goes in as textContent.
-var G={n:{},u:{},a:{},d:{}},LS={q:'Queued',w:'Waiting',b:'Blocked',d:'Done',a:'Archived',c:'Cancelled',u:'Not on the board'},LMAX=40;
-try{var g0=JSON.parse(H.getAttribute('data-lin')||'{}');G.n=g0.n||{};G.u=g0.u||{};G.a=g0.a||{}}catch(e){}
-Object.keys(G.u).sort().forEach(function(c){G.u[c].forEach(function(p){(G.d[p]=G.d[p]||[]).push(c)})});
+// T-4100, redone as T-4310 (friesevan #41 c6799650908, c6799769890): the typed Links field, both ways, each kind under its
+// own heading. p {umbrella: [open pieces]} gives G.P and, turned round, G.p (part of); k {id: [needs]} gives G.k and G.K
+// (needed by); m {umbrella: {state: closed pieces}} is a count, never rows; x {child: [parents]} is the prose pairs the
+// field names too, shown once, under the field's heading, and walked only by the move rule (anc). LW is lineage.WAYS. An
+// ID with no entry in n is a queued card whose name is on this page.
+var G={n:{},u:{},a:{},d:{},x:{},P:{},p:{},k:{},K:{},m:{}},LS={q:'Queued',w:'Waiting',b:'Blocked',d:'Done',a:'Archived',c:'Cancelled',u:'Not on the board'},LMAX=40,
+LW=[['part_of','Part of','p'],['pieces','Pieces','P'],['needs','Needs','k'],['needed_by','Needed by','K'],['up','Parents','u'],['down','Children','d']];
+try{var g0=JSON.parse(H.getAttribute('data-lin')||'{}');G.n=g0.n||{};G.u=g0.u||{};G.a=g0.a||{};G.x=g0.x||{};G.P=g0.p||{};G.k=g0.k||{};G.m=g0.m||{}}catch(e){}
+[['u','d'],['P','p'],['k','K']].forEach(function(w){Object.keys(G[w[0]]).sort().forEach(function(c){G[w[0]][c].forEach(function(p){(G[w[1]][p]=G[w[1]][p]||[]).push(c)})})});
 function lid(i){i=String(i||'').replace(/\.\d+$/,'');return G.a[i]||i}
 function pl(n,w,e){return n?n+' '+w+(n===1?'':e):''}
-function lw(i){i=lid(i);return[pl((G.u[i]||[]).length,'parent','s'),pl((G.d[i]||[]).length,'child','ren')].filter(Boolean).join(' · ')}
-function badge(p,i){var w=lw(i);if(w)mk(p,'span','lk-lin',w)}
+function nm(w,l){l=l||[];return l.length?w+' '+(l.length===1?l[0]:l.length):''}
+function mt(i){var m=G.m[i]||{};return['d','a','c','u'].filter(function(s){return m[s]}).map(function(s){return m[s]+' '+LS[s].toLowerCase()})}
+function lws(i){var m,n;i=lid(i);m=G.m[i]||{};n=(G.P[i]||[]).length;Object.keys(m).forEach(function(s){n+=m[s]});
+return[[nm('part of',G.p[i]),pl(n,'piece','s')],[nm('needs',G.k[i]),nm('needed by',G.K[i])],[pl((G.u[i]||[]).length,'parent','s'),pl((G.d[i]||[]).length,'child','ren')]]
+.map(function(k){return k.filter(Boolean).join(' · ')}).filter(Boolean)}
+function badge(p,i){lws(i).forEach(function(w){mk(p,'span','lk-lin',w)})}
 function walk(i,g){var s={},o=[],t=[],n;s[i]=1;function push(x,d){(g[x]||[]).slice().reverse().forEach(function(y){t.push([y,d])})}push(i,1);
 while(t.length&&o.length<LMAX){n=t.pop();o.push([n[1],n[0],s[n[0]]?1:0]);if(!s[n[0]]){s[n[0]]=1;push(n[0],n[1]+1)}}
 if(t.length)while(t.length){n=t.pop();if(!s[n[0]]){s[n[0]]=1;push(n[0],0)}}
@@ -96,13 +106,13 @@ o.left=Object.keys(s).length-1-o.filter(function(r){return !r[2]}).length;return
 function qcard(i){var q=document.getElementById('lk-q');return q?[].filter.call(q.children,function(c){return lid(c.getAttribute('data-id'))===i})[0]:null}
 function carded(i){return !!((S.lk.has&&S.lk.has(i))||qcard(i)||(A||[]).some(function(a){return a[0]===i}))}
 function qname(i){var c=qcard(i),a=(A||[]).filter(function(x){return x[0]===i})[0];return c?(c.querySelector('.lk-tn')||{}).textContent:a?a[2]:''}
-function lrow(ul,r,me){var t=r[1],li=mk(ul,'li'),go=!r[2]&&carded(t),n=G.n[t]||['','u'],e=mk(li,go?'a':'span');
+function lrow(ul,r,me){var t=r[1],li=mk(ul,'li'),go=!r[2]&&carded(t),n=G.n[t]||['','q'],e=mk(li,go?'a':'span');
 li.setAttribute('data-tid',t);li.setAttribute('data-d',r[0]);if(r[2])li.setAttribute('data-again','1');li.style.paddingLeft=(Math.min(r[0],5)-1)*14+'px';
 if(go){e.href='#lk-run';e.setAttribute('data-go',t)}mk(e,'span','idb',t);mk(e,'span','lk-tt',n[0]||qname(t)||'Name not recorded ('+t+')');
 if(r[2])mk(e,'span','lk-ts',t===me?'This task':'Shown above');else if(!go)mk(e,'span','lk-ts',LS[n[1]]||LS.u)}
-function tree(c){var i=lid(c.getAttribute('data-id')),o;if(!c.matches('.lk-run,.lk-q')||c.querySelector('.lk-tree')||!lw(i))return;o=mk(c,'div','lk-tree');
-[['up','Parents',G.u],['down','Children',G.d]].forEach(function(s){var rs=walk(i,s[2]),ul;if(!rs.length)return;mk(o,'h4','',s[1]);ul=mk(o,'ul');ul.setAttribute('data-way',s[0]);
-rs.forEach(function(r){lrow(ul,r,i)});if(rs.left>0)mk(ul,'li','lk-tm','+'+rs.left+' more on the board')})}
+function tree(c){var i=lid(c.getAttribute('data-id')),o;if(!c.matches('.lk-run,.lk-q')||c.querySelector('.lk-tree')||!lws(i).length)return;o=mk(c,'div','lk-tree');
+LW.forEach(function(s){var rs=walk(i,G[s[2]]),m=s[0]==='pieces'?mt(i).join(', '):'',ul;if(!rs.length&&!m)return;mk(o,'h4','',s[1]);ul=mk(o,'ul');ul.setAttribute('data-way',s[0]);
+rs.forEach(function(r){lrow(ul,r,i)});if(rs.left>0)mk(ul,'li','lk-tm','+'+rs.left+' more on the board');if(m)mk(ul,'li','lk-tm lk-tc',m)})}
 function go(i){var c,n,b;if((Q&&inp)||CF||IV){if(inp)inp.value='';Q='';if(cf)cf.value='';CF='';chips();if(iv)iv.value='';IV='';H.classList.remove('lk-searching');fire()}
 c=S.lk.run&&S.lk.run(i);if(!c){if(S.lk.all)S.lk.all();queued();c=qcard(i)}
 if(!c){c=document.getElementById('bk-'+i);b=document.getElementById('lk-bk-more');  // T-3735: a held task's row, unfolded first
@@ -146,7 +156,7 @@ function take(l){F={};l.forEach(function(i){F[i]=1});fire()}
 // tools/inbox_route.py checks the allowlist and runs tools/queue_order.py apply through board_tick.py, which re-checks the
 // lineage on the live board. The new order shows at the next build (the board's order is the queue).
 var QI=null,KIN=['parent','grandparent','great-grandparent'];
-function anc(i){var s={},t=[[lid(i),0]],x;while(t.length){x=t.shift();(G.u[x[0]]||[]).forEach(function(p){p=lid(p);if(!s[p]){s[p]=x[1]+1;t.push([p,x[1]+1])}})}return s}
+function anc(i){var s={},t=[[lid(i),0]],x;while(t.length){x=t.shift();(G.u[x[0]]||[]).concat(G.x[x[0]]||[]).forEach(function(p){p=lid(p);if(!s[p]){s[p]=x[1]+1;t.push([p,x[1]+1])}})}return s}
 function nums(){var m={},q=document.getElementById('lk-q');(A||[]).forEach(function(a){if(okId(a[0]))m[lid(a[0])]=a[1]});
 [].forEach.call(q?q.children:[],function(d){var i=d.getAttribute('data-id');if(okId(i))m[lid(i)]=+d.getAttribute('data-n')});return m}
 function target(x,c){var s=anc(x),m=nums(),by={},n=+c.getAttribute('data-n'),y=null,go=[],may=[];Object.keys(m).forEach(function(i){by[m[i]]=i});

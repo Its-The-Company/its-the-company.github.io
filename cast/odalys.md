@@ -37,7 +37,9 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 ## Open (2026-11-10 12:4x)
 
-- T-4138 7266de4234 (11-12): pinned session <span title="A measured fact that holds a grade below a letter, however good the rest is.">cap</span> removed (an Investor c6824162128). Owed: count fix/sent-back waits on a while 3 pinned hold every slot.
+- T-4310 (11-13): T-4100's last slice (16dc949a92) redone by hand on personal/a: Home cards show typed links both ways, by kind. Page data 35,939 B of 40,000 (35,172 before). Owed: first live 'part of' badge; watch the <span title="A measured fact that holds a grade below a letter, however good the rest is.">cap</span>.
+
+- T-4138 7266de4234 (11-12): pinned session cap removed (an Investor c6824162128). Owed: count fix/sent-back waits on a while 3 pinned hold every slot.
 
 - T-4157 ff2a4c732d: a, b fable_only. T-4206 df0eb78f5a: investor-stop flag <span title="A new, permitted reading that removes a cap. A lift rule is that reading, written down before we look.">lifts</span> when its rule is retired/lifted for the account (lane_stop.py released). Owed: first live 'usage-line stop lifted' line (b freed by <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">LANE</span> CLEAR 1:18 PM first).
 
@@ -54,8 +56,6 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-4240 15e820baff (11-13): Documents > How the app works (tools/site/how_it_works.py; words in pywidget/docs/how-it-works/, fingerprints by hand from `python3 tools/site/how_it_works.py`). T-4250 528e4bb390 (11-13): all seven drawn; anchors also C/.json/.storekit; after:/aside: lines. 07 build half + 00-plan -> T-4127.
 
 - T-4230 f054a45347 (branch odalys/t4230-restructuring-docs, unlanded 11-12 22:1x): Restructuring folder under Documents. Owed: land; first live mock-up copy (phase 4).
-
-- T-4246 00d9c58d81 / T-4248 fed92f6db1 (11-13): Mode = bubble in Home's first line; Operators & Direct never hidden (#41 reply 6853925300). T-4005 d01f88988d closed both opens (test reds were T-4005's own title on the live board; bubbles wrap whole figures). #41 6854907191 offers renaming Progress/Work to Costs/Bottlenecks.
 
 - T-4004 (11-13): already done by 5aed12987d/e4c770e538, ticked. T-3735 49196e7897 (11-13): Blocked or waiting under All tasks. Owed: T-4262 #41 reply once a full publish carries it.
 

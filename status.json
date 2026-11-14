@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-14T00:02:45.195059+00:00",
+ "at": "2026-11-14T00:26:14.090029+00:00",
  "session": {
   "active": false,
   "kind": "",
@@ -38,6 +38,14 @@
    }
   ],
   "done": [
+   {
+    "t": "T-4310",
+    "name": "Redo build the typed Links field and the ledger apply",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794615480
+   },
    {
     "t": "T-4119",
     "name": "Judge the last efficiency lines of the queue",
@@ -107,17 +115,9 @@
     "steps": [],
     "end": "landed",
     "end_at": 1794592138
-   },
-   {
-    "t": "T-4117",
-    "name": "Judge the next hundred efficiency lines",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794586156
    }
   ],
-  "landed": 9,
+  "landed": 10,
   "failed": 2
  },
  "workers": [],
@@ -126,36 +126,36 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 475,
+  "runnable_count": 476,
   "blocked_count": 102
  },
  "meter": {
   "five_hour": {
    "pct": 1.0,
-   "resets_at": "2026-11-14T02:40:00.396734+00:00",
+   "resets_at": "2026-11-14T02:40:00.389236+00:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-13T18:48:38.314835-05:00",
+   "read_at": "2026-11-13T19:07:10.733955-05:00",
    "source": "usage",
    "left": 99.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 94.0,
-   "resets_at": "2026-11-15T06:59:59.396760+00:00",
+   "resets_at": "2026-11-15T06:59:59.389252+00:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-13T18:48:38.314835-05:00",
+   "read_at": "2026-11-13T19:07:10.733955-05:00",
    "source": "usage",
    "left": 6.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 4.0,
-   "resets_at": "2026-11-15T07:00:00.396907+00:00",
+   "resets_at": "2026-11-15T07:00:00.389365+00:00",
    "used_words": "of the Fable weekly allowance used",
-   "read_at": "2026-11-13T18:48:38.314835-05:00",
+   "read_at": "2026-11-13T19:07:10.733955-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-13T18:48:38.314835-05:00"
+  "read_at": "2026-11-13T19:07:10.733955-05:00"
  },
  "ui": {
   "week_pct": 0.336,
@@ -170,26 +170,13 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-13T19:03:38-05:00",
+ "next_tick": "2026-11-13T19:22:11-05:00",
  "personal": {
-  "week_pct": 46.76,
-  "usage_pct": 33.2,
-  "work_pct": 79.5,
-  "read_at": "2026-11-14T00:07:00+00:00",
-  "running": [
-   {
-    "lane": "a",
-    "task": "T-4310",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Redo build the typed Links field and the ledger apply",
-    "m": "opus",
-    "e": "xhigh",
-    "at": "2026-11-13T18:48:03-05:00",
-    "n": "Evan",
-    "src": "plan-a"
-   }
-  ]
+  "week_pct": 47.18,
+  "usage_pct": 33.4,
+  "work_pct": 79.7,
+  "read_at": "2026-11-14T00:28:00+00:00",
+  "running": []
  },
  "api_credits": [
   {
@@ -218,14 +205,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-13T19:05:00-05:00",
+   "at": "2026-11-13T19:24:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-13T19:07:00-05:00",
+  "at": "2026-11-13T19:28:00-05:00",
   "mode": null,
   "modes": {
    "main": "spread",
@@ -378,7 +365,7 @@
    }
   ],
   "count": {
-   "next": 475,
+   "next": 476,
    "wait": 53,
    "blocked": 49,
    "you": 18
@@ -423,11 +410,11 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-14T00:02:45Z",
+  "at": "2026-11-14T00:26:14Z",
   "s": {}
  },
  "ln": {
-  "at": "2026-11-14T00:02:45Z",
+  "at": "2026-11-14T00:26:14Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -441,58 +428,48 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 315,
+    "conflicted": 339,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1969
+    "parked": 1992
    },
    "cur": [],
    "ld": [
-    16,
-    "2026-11-13T23:50:10Z"
+    18,
+    "2026-11-14T00:20:52Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-14T00:02:46Z",
-    "ld": 1.08,
+    "at": "2026-11-14T00:26:14Z",
+    "ld": 0.59,
     "c": 8,
     "sb": 0,
     "dk": [
-     16.0,
+     15.2,
      228.3
     ],
     "ss": [
-     186.4,
+     186.3,
      953.7
     ],
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-13T23:30:33Z",
-    "ld": 0.22,
+    "at": "2026-11-14T00:01:11Z",
+    "ld": 0.25,
     "c": 12,
     "sb": 0,
     "dk": [
-     371.7,
+     371.6,
      926.4
     ],
     "sn": []
    }
   }
  },
- "operators": [
-  {
-   "w": "Operator",
-   "a": "Evan",
-   "sr": 1,
-   "m": "opus",
-   "e": "xhigh",
-   "t": "Work session \u2013 1 task",
-   "at": "2026-11-13T18:48:03-05:00"
-  }
- ],
+ "operators": [],
  "reply": {
   "sent": "2026-11-13T23:20:26Z",
   "seconds": 254.0
@@ -510,12 +487,12 @@
  ],
  "agents_now": {
   "main": 0,
-  "lanes": 1,
-  "total": 1,
-  "at": "7:07 PM",
-  "why": "",
-  "at_iso": "2026-11-14T00:07:00+00:00",
+  "lanes": 0,
+  "total": 0,
+  "at": "7:28 PM",
+  "why": "Waiting for the week's line: this week's usage is ahead of its even pace. Last check 7:28 PM ET.",
+  "at_iso": "2026-11-14T00:28:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 7:07 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 7:28 PM ET</p><p class=\"an-why\">Waiting for the week's line: this week's usage is ahead of its even pace. Last check 7:28 PM ET.</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-14T21:55:29.450594+00:00",
+ "at": "2026-11-14T22:00:12.242786+00:00",
  "session": {
   "active": false,
   "kind": "",
@@ -196,12 +196,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-14T17:01:19-05:00",
+ "next_tick": "2026-11-14T17:13:31-05:00",
  "personal": {
   "week_pct": 56.44,
   "usage_pct": 36.1,
   "work_pct": 81.2,
-  "read_at": "2026-11-14T21:58:00+00:00",
+  "read_at": "2026-11-14T22:01:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -231,14 +231,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-14T16:58:00-05:00",
+   "at": "2026-11-14T17:01:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-14T16:58:00-05:00",
+  "at": "2026-11-14T17:01:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -436,12 +436,12 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-14T21:55:29Z",
+  "at": "2026-11-14T22:00:12Z",
   "s": {
    "T-4437": [
     "merging",
-    "Rebasing onto current main",
-    1794693329450
+    "Merging onto main",
+    1794693612242
    ]
   },
   "nm": {
@@ -449,7 +449,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-14T21:55:29Z",
+  "at": "2026-11-14T22:00:12Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -467,14 +467,14 @@
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 70
+    "parked": 74
    },
    "cur": [
     [
      [
       "T-4437"
      ],
-     "lining up with main",
+     "going onto main",
      "Mac mini",
      0
     ]
@@ -486,12 +486,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-14T21:55:06Z",
-    "ld": 0.48,
+    "at": "2026-11-14T22:00:12Z",
+    "ld": 0.61,
     "c": 8,
     "sb": 0,
     "dk": [
-     19.3,
+     19.2,
      228.3
     ],
     "ss": [
@@ -501,8 +501,8 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-14T21:27:26Z",
-    "ld": 0.21,
+    "at": "2026-11-14T21:57:56Z",
+    "ld": 0.18,
     "c": 12,
     "sb": 0,
     "dk": [
@@ -523,7 +523,7 @@
    "id": "c6884125269",
    "state": "waiting",
    "position": 1,
-   "eta": "2026-11-14T17:01:19-05:00",
+   "eta": "2026-11-14T17:13:31-05:00",
    "tasks": {
     "open": 0,
     "done": 0
@@ -534,7 +534,7 @@
    "id": "c6884133984",
    "state": "waiting",
    "position": 2,
-   "eta": "2026-11-14T17:01:19-05:00",
+   "eta": "2026-11-14T17:13:31-05:00",
    "tasks": {
     "open": 0,
     "done": 0
@@ -545,7 +545,7 @@
    "id": "c6884234782",
    "state": "waiting",
    "position": 3,
-   "eta": "2026-11-14T17:01:19-05:00",
+   "eta": "2026-11-14T17:13:31-05:00",
    "tasks": {
     "open": 0,
     "done": 0
@@ -556,7 +556,7 @@
    "id": "c6884413186",
    "state": "waiting",
    "position": 4,
-   "eta": "2026-11-14T17:01:19-05:00",
+   "eta": "2026-11-14T17:13:31-05:00",
    "tasks": {
     "open": 0,
     "done": 0
@@ -567,7 +567,7 @@
    "id": "c6884472000",
    "state": "waiting",
    "position": 5,
-   "eta": "2026-11-14T17:01:19-05:00",
+   "eta": "2026-11-14T17:13:31-05:00",
    "tasks": {
     "open": 0,
     "done": 0
@@ -578,7 +578,7 @@
    "id": "c6884544941",
    "state": "waiting",
    "position": 6,
-   "eta": "2026-11-14T17:01:19-05:00",
+   "eta": "2026-11-14T17:13:31-05:00",
    "tasks": {
     "open": 0,
     "done": 0
@@ -587,14 +587,47 @@
   },
   {
    "id": "c6884749815",
-   "state": "received",
+   "state": "waiting",
    "position": 7,
-   "eta": "2026-11-14T17:01:19-05:00",
+   "eta": "2026-11-14T17:13:31-05:00",
    "tasks": {
     "open": 0,
     "done": 0
    },
    "title": "C"
+  },
+  {
+   "id": "c6884793369",
+   "state": "waiting",
+   "position": 8,
+   "eta": "2026-11-14T17:13:31-05:00",
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "It works! Though the user should be..."
+  },
+  {
+   "id": "c6884802614",
+   "state": "waiting",
+   "position": 9,
+   "eta": "2026-11-14T17:13:31-05:00",
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "B"
+  },
+  {
+   "id": "c6884824220",
+   "state": "waiting",
+   "position": 10,
+   "eta": "2026-11-14T17:13:31-05:00",
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "A"
   }
  ],
  "trimmed": [
@@ -603,6 +636,7 @@
   "recent",
   "task_done",
   "inbox_title",
+  "inbox",
   "task_title",
   "done_text",
   "task_open",
@@ -613,10 +647,10 @@
   "main": 0,
   "lanes": 0,
   "total": 0,
-  "at": "4:58 PM",
-  "why": "Plan limit: the weekly allowance is used up; it resets Sun 1:59 AM ET. Last check 4:58 PM ET.",
-  "at_iso": "2026-11-14T21:58:00+00:00",
+  "at": "5:01 PM",
+  "why": "Plan limit: the weekly allowance is used up; it resets Sun 1:59 AM ET. Last check 5:01 PM ET.",
+  "at_iso": "2026-11-14T22:01:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 4:58 PM ET</p><p class=\"an-why\">Plan limit: the weekly allowance is used up; it resets Sun 1:59 AM ET. Last check 4:58 PM ET.</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 5:01 PM ET</p><p class=\"an-why\">Plan limit: the weekly allowance is used up; it resets Sun 1:59 AM ET. Last check 5:01 PM ET.</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-14T01:13:50.789074+00:00",
+ "at": "2026-11-14T01:16:52.251912+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -99,31 +99,41 @@
   "landed": 9,
   "failed": 2
  },
- "workers": [],
- "who": "",
+ "workers": [
+  {
+   "name": "odalys",
+   "task": "[tools] T-4317 union merge for the audit ledger",
+   "model": "opus",
+   "started": "2026-11-14T01:15:15.882Z",
+   "seconds": 96,
+   "finished": null,
+   "effort": "high"
+  }
+ ],
+ "who": "Odalys",
  "recent": [],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 476,
-  "blocked_count": 102
+  "runnable_count": 475,
+  "blocked_count": 101
  },
  "meter": {
   "five_hour": {
    "pct": 1.0,
-   "resets_at": "2026-11-14T02:40:00.036928+00:00",
+   "resets_at": "2026-11-13T21:40:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-13T20:06:57.837994-05:00",
-   "source": "usage",
+   "read_at": "2026-11-13T20:15:49.210150-05:00",
+   "source": "live",
    "left": 99.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 94.0,
-   "resets_at": "2026-11-15T06:59:59.036949+00:00",
+   "resets_at": "2026-11-15T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-13T20:06:57.837994-05:00",
-   "source": "usage",
+   "read_at": "2026-11-13T20:15:49.210150-05:00",
+   "source": "live",
    "left": 6.0,
    "left_words": "of your weekly allowance left"
   },
@@ -134,7 +144,7 @@
    "read_at": "2026-11-13T20:06:57.837994-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-13T20:06:57.837994-05:00"
+  "read_at": "2026-11-13T20:15:49.210150-05:00"
  },
  "ui": {
   "week_pct": 0.358,
@@ -154,7 +164,7 @@
   "week_pct": 47.45,
   "usage_pct": 33.5,
   "work_pct": 79.8,
-  "read_at": "2026-11-14T01:13:00+00:00",
+  "read_at": "2026-11-14T01:16:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -184,14 +194,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-13T20:10:00-05:00",
+   "at": "2026-11-13T20:15:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-13T20:13:00-05:00",
+  "at": "2026-11-13T20:16:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -208,6 +218,15 @@
  },
  "lanes": [
   {
+   "name": "Odalys",
+   "state": "running",
+   "task": "[tools] T-4317 union merge for the audit ledger",
+   "model": "opus",
+   "since": "2026-11-14T01:15:15.882Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
    "name": "Idris",
    "state": "next",
    "task": "Idris, P0, reopens T-3393 c6713953911, c6725543994),...",
@@ -219,14 +238,6 @@
    "name": "Pernille",
    "state": "next",
    "task": "Pernille, P1, premades and gallery take the age line...",
-   "model": null,
-   "since": null,
-   "next": []
-  },
-  {
-   "name": "Odalys",
-   "state": "next",
-   "task": "Odalys, P1, T-1776 stage 3, Reports with every document...",
    "model": null,
    "since": null,
    "next": []
@@ -257,7 +268,18 @@
   }
  ],
  "tasks": {
-  "run": [],
+  "run": [
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Keep both sides' rows when the audit ledger merges",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-14T01:15:15.882Z",
+    "o": "c",
+    "task": "T-4317"
+   }
+  ],
   "src": "plan",
   "open": [
    {
@@ -334,29 +356,38 @@
   "done": [
    {
     "w": "Odalys",
-    "t": "The Investors can now name a weekly usage percent at which a personal account stops: it is dealt...",
-    "at": "2026-11-13T18:50:00-05:00"
+    "t": "Each task now has one Links field saying which bigger job it belongs to and what it waits on,...",
+    "at": "2026-11-13T20:13:00-05:00"
    },
    {
     "w": "Odalys",
-    "t": "When the MacBook that runs app checks has been silent for over two hours, waiting app changes...",
-    "at": "2026-11-13T18:50:00-05:00"
+    "t": "Home now shows how each task links to others (which bigger job it is part of, and what it...",
+    "at": "2026-11-13T20:13:00-05:00"
    },
    {
-    "w": "Ines",
-    "t": "The last group of the company's own process tasks in the queue is judged: each of 138 tasks has...",
+    "w": "Odalys",
+    "t": "The Investors can now name a weekly usage percent at which a personal account stops: it is dealt...",
     "at": "2026-11-13T18:50:00-05:00"
    }
   ],
   "count": {
-   "next": 476,
-   "wait": 53,
+   "next": 475,
+   "wait": 52,
    "blocked": 49,
    "you": 18
   },
   "fin": {
-   "n": 0,
-   "rows": []
+   "n": 2,
+   "rows": [
+    [
+     "T-4100",
+     "Build the typed Links field..."
+    ],
+    [
+     "T-4310",
+     "Redo build the typed Links..."
+    ]
+   ]
   }
  },
  "qr": [
@@ -398,16 +429,16 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-14T01:13:44Z",
+  "at": "2026-11-14T01:16:52Z",
   "s": {}
  },
  "ln": {
-  "at": "2026-11-14T01:13:44Z",
+  "at": "2026-11-14T01:16:52Z",
   "mq": {
    "n": {
     "checking": 0,
     "inline": 0,
-    "conflicted": 3,
+    "conflicted": 2,
     "failed": 0,
     "held": 0,
     "retry": 0,
@@ -416,11 +447,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 386,
+    "conflicted": 1199,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 2040
+    "parked": 2043
    },
    "cur": [],
    "ld": [
@@ -430,12 +461,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-14T01:13:45Z",
-    "ld": 0.4,
+    "at": "2026-11-14T01:16:07Z",
+    "ld": 0.67,
     "c": 8,
     "sb": 0,
     "dk": [
-     14.7,
+     13.0,
      228.3
     ],
     "ss": [
@@ -464,31 +495,20 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Inbox \u2013 Evan's 8:10 PM Message on GitHub",
-   "at": "2026-11-13T20:10:54-05:00"
+   "t": "Work session \u2013 1 task",
+   "at": "2026-11-13T20:14:15-05:00"
   }
  ],
  "reply": {
-  "sent": "2026-11-14T01:00:19Z",
-  "seconds": 81.0
+  "sent": "2026-11-14T01:10:02Z",
+  "seconds": 252.0
  },
- "inbox": [
-  {
-   "id": "c6869106614",
-   "state": "in_progress",
-   "position": 1,
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "Is the fable audit back on now on..."
-  }
- ],
+ "inbox": [],
  "trimmed": [
   "lane_next",
   "queue_text",
   "task_done",
-  "inbox_title",
+  "fin_short",
   "task_title",
   "done_text",
   "task_open",
@@ -496,13 +516,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 0,
+  "main": 1,
   "lanes": 0,
-  "total": 0,
-  "at": "8:13 PM",
-  "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
-  "at_iso": "2026-11-14T01:13:00+00:00",
+  "total": 1,
+  "at": "8:16 PM",
+  "why": "",
+  "at_iso": "2026-11-14T01:16:00+00:00",
   "started": "8:10 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0, started 8:10 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 8:13 PM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 8:10 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 8:16 PM ET</p></section>"
  }
 }

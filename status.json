@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-14T02:33:05.274605+00:00",
+ "at": "2026-11-14T02:35:52.444048+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -86,8 +86,45 @@
   "landed": 11,
   "failed": 2
  },
- "workers": [],
- "who": "",
+ "workers": [
+  {
+   "name": "idris",
+   "task": "[build] T-0678 refresh button in extension",
+   "model": "opus",
+   "started": "2026-11-14T02:33:42.801Z",
+   "seconds": 129,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-4314 personal session cost line",
+   "model": "opus",
+   "started": "2026-11-14T02:33:48.956Z",
+   "seconds": 123,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "maren",
+   "task": "[site] T-4308 account sessions in In flight",
+   "model": "opus",
+   "started": "2026-11-14T02:33:55.419Z",
+   "seconds": 117,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "pernille",
+   "task": "[review] T-0299 package hold check",
+   "model": "opus",
+   "started": "2026-11-14T02:34:25.891Z",
+   "seconds": 86,
+   "finished": null,
+   "effort": "high"
+  }
+ ],
+ "who": "Idris, Odalys, Maren, Pernille",
  "recent": [],
  "queue": {
   "runnable": [],
@@ -98,19 +135,19 @@
  "meter": {
   "five_hour": {
    "pct": 5.0,
-   "resets_at": "2026-11-14T02:39:59.712075+00:00",
+   "resets_at": "2026-11-13T21:40:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-13T21:29:37.729013-05:00",
-   "source": "usage",
+   "read_at": "2026-11-13T21:35:05.723782-05:00",
+   "source": "live",
    "left": 95.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 95.0,
-   "resets_at": "2026-11-15T06:59:59.712097+00:00",
+   "resets_at": "2026-11-15T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-13T21:29:37.729013-05:00",
-   "source": "usage",
+   "read_at": "2026-11-13T21:35:05.723782-05:00",
+   "source": "live",
    "left": 5.0,
    "left_words": "of your weekly allowance left"
   },
@@ -121,7 +158,7 @@
    "read_at": "2026-11-13T21:29:37.729013-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-13T21:29:37.729013-05:00"
+  "read_at": "2026-11-13T21:35:05.723782-05:00"
  },
  "ui": {
   "week_pct": 0.36,
@@ -141,7 +178,7 @@
   "week_pct": 47.87,
   "usage_pct": 33.5,
   "work_pct": 79.6,
-  "read_at": "2026-11-14T02:33:00+00:00",
+  "read_at": "2026-11-14T02:36:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -162,7 +199,7 @@
   }
  ],
  "disk": {
-  "free_gb": 18,
+  "free_gb": 16,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -171,14 +208,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-13T21:26:00-05:00",
+   "at": "2026-11-13T21:35:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-13T21:33:00-05:00",
+  "at": "2026-11-13T21:36:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -196,40 +233,44 @@
  "lanes": [
   {
    "name": "Idris",
-   "state": "next",
-   "task": "Idris, P0, reopens T-3393 c6713953911, c6725543994),...",
-   "model": null,
-   "since": null,
-   "next": []
-  },
-  {
-   "name": "Pernille",
-   "state": "next",
-   "task": "Pernille, P1, premades and gallery take the age line...",
-   "model": null,
-   "since": null,
-   "next": []
+   "state": "running",
+   "task": "[build] T-0678 refresh button in extension",
+   "model": "opus",
+   "since": "2026-11-14T02:33:42.801Z",
+   "next": [],
+   "effort": "high"
   },
   {
    "name": "Odalys",
-   "state": "next",
-   "task": "Odalys, P1, T-1776 stage 3, Reports with every document...",
-   "model": null,
-   "since": null,
-   "next": []
+   "state": "running",
+   "task": "[tools] T-4314 personal session cost line",
+   "model": "opus",
+   "since": "2026-11-14T02:33:48.956Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
+   "name": "Maren",
+   "state": "running",
+   "task": "[site] T-4308 account sessions in In flight",
+   "model": "opus",
+   "since": "2026-11-14T02:33:55.419Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
+   "name": "Pernille",
+   "state": "running",
+   "task": "[review] T-0299 package hold check",
+   "model": "opus",
+   "since": "2026-11-14T02:34:25.891Z",
+   "next": [],
+   "effort": "high"
   },
   {
    "name": "Ines",
    "state": "next",
    "task": "Ines, P1, from Investor an Investor c6858715463 (11:24 AM...",
-   "model": null,
-   "since": null,
-   "next": []
-  },
-  {
-   "name": "Maren",
-   "state": "next",
-   "task": "Maren, P1, from Investor an Investor c6862221970 (2:00 PM...",
    "model": null,
    "since": null,
    "next": []
@@ -244,7 +285,48 @@
   }
  ],
  "tasks": {
-  "run": [],
+  "run": [
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "Run the refresh button inside the widget extension",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-14T02:33:42.801Z",
+    "o": "c",
+    "task": "T-0678"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Record what each personal session costs",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-14T02:33:48.956Z",
+    "o": "c",
+    "task": "T-4314"
+   },
+   {
+    "w": "Maren",
+    "k": "site",
+    "t": "Show running account sessions in In flight",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-14T02:33:55.419Z",
+    "o": "c",
+    "task": "T-4308"
+   },
+   {
+    "w": "Pernille",
+    "k": "review",
+    "t": "Keep real packages out until the sandbox is fixed",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-14T02:34:25.891Z",
+    "o": "c",
+    "task": "T-0299"
+   }
+  ],
   "src": "plan",
   "open": [
    {
@@ -390,11 +472,20 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-14T02:32:47Z",
-  "s": {}
+  "at": "2026-11-14T02:35:52Z",
+  "s": {
+   "T-0678": [
+    "testing",
+    "Mac Mini \u00b7 test",
+    null
+   ]
+  },
+  "nm": {
+   "T-0678": "Run the refresh button inside the widget extension"
+  }
  },
  "ln": {
-  "at": "2026-11-14T02:32:47Z",
+  "at": "2026-11-14T02:35:52Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -408,11 +499,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 1275,
+    "conflicted": 1278,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 579
+    "parked": 582
    },
    "cur": [],
    "ld": [
@@ -422,27 +513,29 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-14T02:32:24Z",
-    "ld": 0.78,
+    "at": "2026-11-14T02:36:17Z",
+    "ld": 10.2,
     "c": 8,
-    "sb": 0,
+    "sb": 1,
     "dk": [
-     16.5,
+     16.4,
      228.3
     ],
     "ss": [
      186.3,
      953.7
     ],
-    "sn": []
+    "sn": [
+     "iPhone 18 Pro"
+    ]
    },
    "macbook": {
-    "at": "2026-11-14T02:03:27Z",
-    "ld": 0.2,
+    "at": "2026-11-14T02:34:00Z",
+    "ld": 0.21,
     "c": 12,
     "sb": 0,
     "dk": [
-     371.5,
+     371.4,
      926.4
     ],
     "sn": []
@@ -456,7 +549,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session",
+   "t": "Work session \u2013 4 tasks",
    "at": "2026-11-13T21:30:04-05:00"
   }
  ],
@@ -477,13 +570,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 0,
+  "main": 4,
   "lanes": 0,
-  "total": 0,
-  "at": "9:33 PM",
-  "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
-  "at_iso": "2026-11-14T02:33:00+00:00",
+  "total": 4,
+  "at": "9:36 PM",
+  "why": "",
+  "at_iso": "2026-11-14T02:36:00+00:00",
   "started": "9:30 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0, started 9:30 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:33 PM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 4, started 9:30 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:36 PM ET</p></section>"
  }
 }

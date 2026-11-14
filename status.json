@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-14T07:31:47.766857+00:00",
+ "at": "2026-11-14T07:37:03.022945+00:00",
  "session": {
   "active": false,
   "kind": "",
@@ -21,7 +21,6 @@
   "done": [
    {
     "t": "T-4412",
-    "name": "Fill links on the nine remaining ledger rows",
     "acct": "Personal a",
     "steps": [],
     "end": "landed",
@@ -29,7 +28,6 @@
    },
    {
     "t": "T-4099",
-    "name": "Judge the merge line, parked records and active work",
     "acct": "Personal a",
     "steps": [],
     "end": "landed",
@@ -37,7 +35,6 @@
    },
    {
     "t": "T-4413",
-    "name": "Fix the 34 faults in the feature list",
     "acct": "Personal a",
     "steps": [],
     "end": "landed",
@@ -98,40 +95,7 @@
  },
  "workers": [],
  "who": "",
- "recent": [
-  {
-   "name": "idris",
-   "task": "[build] T-4414 rerun rule ages last run",
-   "model": "opus",
-   "started": "2026-11-14T04:58:58.328Z",
-   "seconds": null,
-   "finished": "2026-11-14T05:47:33.912000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-4411 start accounts when usage returns",
-   "model": "opus",
-   "started": "2026-11-14T04:17:33.902Z",
-   "seconds": null,
-   "finished": "2026-11-14T05:28:38.913000+00:00"
-  },
-  {
-   "name": "maren",
-   "task": "[site] T-4313 Merged section on Home",
-   "model": "opus",
-   "started": "2026-11-14T04:04:21.376Z",
-   "seconds": null,
-   "finished": "2026-11-14T05:25:31.270000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-1440 refresh control and age line",
-   "model": "opus",
-   "started": "2026-11-14T04:20:03.586Z",
-   "seconds": null,
-   "finished": "2026-11-14T04:58:37.060000+00:00"
-  }
- ],
+ "recent": [],
  "queue": {
   "runnable": [],
   "blocked": [],
@@ -167,8 +131,8 @@
   "read_at": "2026-11-14T02:27:01.711897-05:00"
  },
  "ui": {
-  "week_pct": 0.359,
-  "five_hour_pct": 0.0,
+  "week_pct": 0.368,
+  "five_hour_pct": 0.073,
   "caps_pct": {
    "week": 3.0,
    "five_hour": 5.0
@@ -184,7 +148,7 @@
   "week_pct": 50.8,
   "usage_pct": 34.1,
   "work_pct": 80.3,
-  "read_at": "2026-11-14T07:31:00+00:00",
+  "read_at": "2026-11-14T07:37:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -221,7 +185,7 @@
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-14T02:31:00-05:00",
+  "at": "2026-11-14T02:37:00-05:00",
   "mode": null,
   "modes": {
    "main": "spread",
@@ -419,12 +383,12 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-14T07:31:47Z",
+  "at": "2026-11-14T07:37:03Z",
   "s": {
    "T-4101": [
-    "mergeq",
-    "1st to merge",
-    1794639287766
+    "merging",
+    "Rebasing onto current main",
+    1794641643022
    ]
   },
   "nm": {
@@ -432,11 +396,11 @@
   }
  },
  "ln": {
-  "at": "2026-11-14T07:31:47Z",
+  "at": "2026-11-14T07:37:03Z",
   "mq": {
    "n": {
-    "checking": 0,
-    "inline": 1,
+    "checking": 1,
+    "inline": 0,
     "conflicted": 1,
     "failed": 0,
     "held": 0,
@@ -444,15 +408,24 @@
     "parked": 3
    },
    "m": {
-    "checking": null,
-    "inline": 37,
-    "conflicted": 2429,
+    "checking": 3,
+    "inline": null,
+    "conflicted": 2434,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 878
+    "parked": 883
    },
-   "cur": [],
+   "cur": [
+    [
+     [
+      "T-4101"
+     ],
+     "lining up with main",
+     "Mac mini",
+     3
+    ]
+   ],
    "ld": [
     3,
     "2026-11-14T06:35:02Z"
@@ -460,12 +433,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-14T07:31:27Z",
-    "ld": 0.68,
+    "at": "2026-11-14T07:37:03Z",
+    "ld": 0.7,
     "c": 8,
     "sb": 0,
     "dk": [
-     16.9,
+     13.8,
      228.3
     ],
     "ss": [
@@ -489,12 +462,12 @@
  },
  "operators": [],
  "reply": {
-  "sent": "2026-11-14T03:18:56Z",
-  "seconds": 17.0
+  "sent": "2026-11-14T07:29:54Z",
+  "seconds": 145.0
  },
  "inbox": [
   {
-   "id": "c6873839556",
+   "id": "c6873915614",
    "state": "received",
    "position": 1,
    "eta": "2026-11-14T02:46:37-05:00",
@@ -502,13 +475,12 @@
     "open": 0,
     "done": 0
    },
-   "title": "Give me a summary right now of what..."
+   "title": "Is there a way to automatically push..."
   }
  ],
  "trimmed": [
   "lane_next",
   "queue_text",
-  "recent",
   "task_done",
   "inbox_title",
   "task_title",
@@ -521,10 +493,10 @@
   "main": 0,
   "lanes": 0,
   "total": 0,
-  "at": "2:31 AM",
-  "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
-  "at_iso": "2026-11-14T07:31:00+00:00",
+  "at": "2:37 AM",
+  "why": "Between sessions: no session is running. Last check 2:31 AM ET.",
+  "at_iso": "2026-11-14T07:37:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 2:31 AM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 2:37 AM ET</p><p class=\"an-why\">Between sessions: no session is running. Last check 2:31 AM ET.</p></section>"
  }
 }

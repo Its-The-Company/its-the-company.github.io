@@ -633,6 +633,7 @@ The Effect lines of the amendments.md entries the charter retired (2026-11-04 12
 - **2026-11-13 10:11 PM ET** ((private)): Each personal account starts on the queue audit by itself as soon as its 5-hour usage comes back, and uses all of its Fable limit before the next reset, 5-hour or weekly, whichever is sooner.
 - **2026-11-14 2:45 AM ET** ((private)): Both personal accounts run full speed (Lock In) and aim to use their weekly limit up just before each resets.
 - **2026-11-14 5:36 AM ET** ((private)): Both personal accounts go back to the audit work; the 2026-11-12 8:50 PM hold on audits for the Restructuring ends.
+- **2026-11-14 5:51 AM ET** ((private)): The premades failure is closed; all restructuring phases go ahead, and no TestFlight test is asked for until the restructuring is done.
 {% endraw %}
 
 </div>

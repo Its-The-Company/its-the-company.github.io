@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-14T13:10:44.399980+00:00",
+ "at": "2026-11-14T13:13:46.957290+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -87,22 +87,21 @@
    "task": "[tools] T-4432 released wait hides pinned line",
    "model": "opus",
    "started": "2026-11-14T12:40:55.020Z",
-   "seconds": 1789,
+   "seconds": 1971,
    "finished": null,
    "effort": "high"
-  },
+  }
+ ],
+ "who": "Odalys",
+ "recent": [
   {
    "name": "pernille",
    "task": "[review] T-4418 refresh tap in widget renderer",
    "model": "opus",
    "started": "2026-11-14T13:05:52.900Z",
-   "seconds": 291,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Odalys, Pernille",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-14T13:13:43.703000+00:00"
+  },
   {
    "name": "idris",
    "task": "[build] T-4431 main red completion row inset",
@@ -123,7 +122,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 347,
+  "runnable_count": 350,
   "blocked_count": 87
  },
  "meter": {
@@ -172,7 +171,7 @@
   "week_pct": 50.73,
   "usage_pct": 34.1,
   "work_pct": 80.3,
-  "read_at": "2026-11-14T13:10:00+00:00",
+  "read_at": "2026-11-14T13:13:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -245,7 +244,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-14T08:10:00-05:00",
+  "at": "2026-11-14T08:13:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -271,18 +270,17 @@
    "effort": "high"
   },
   {
-   "name": "Pernille",
-   "state": "running",
-   "task": "[review] T-4418 refresh tap in widget renderer",
-   "model": "opus",
-   "since": "2026-11-14T13:05:52.900Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
    "name": "Idris",
    "state": "next",
    "task": "Idris, P2, from T-4238 (Pernille's review, from T-3900,...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
+   "name": "Pernille",
+   "state": "next",
+   "task": "Pernille, P1, premades and gallery take the age line...",
    "model": null,
    "since": null,
    "next": []
@@ -323,16 +321,6 @@
     "at": "2026-11-14T12:40:55.020Z",
     "o": "c",
     "task": "T-4432"
-   },
-   {
-    "w": "Pernille",
-    "k": "review",
-    "t": "Review the refresh tap in the widget renderer",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-14T13:05:52.900Z",
-    "o": "c",
-    "task": "T-4418"
    }
   ],
   "src": "plan",
@@ -410,6 +398,11 @@
   ],
   "done": [
    {
+    "w": "Pernille",
+    "t": "Checked Idris's change that makes the widget's refresh button actually refresh: the logic is...",
+    "at": "2026-11-14T08:13:00-05:00"
+   },
+   {
     "w": "Idris",
     "t": "The ready-made widgets now draw on the Investors' iPhone, not just Countdown: a file check...",
     "at": "2026-11-14T07:40:00-05:00"
@@ -418,22 +411,21 @@
     "w": "Operator",
     "t": "The main folder's read of parked work matches what lane a read last night: ten parked-work...",
     "at": "2026-11-14T07:38:00-05:00"
-   },
-   {
-    "w": "Ines",
-    "t": "The queue audit's verdicts are now on the task board: 90 stale lines were removed and 4 merged...",
-    "at": "2026-11-14T02:39:00-05:00"
    }
   ],
   "count": {
-   "next": 347,
+   "next": 350,
    "wait": 43,
    "blocked": 44,
    "you": 16
   },
   "fin": {
-   "n": 1,
+   "n": 2,
    "rows": [
+    [
+     "T-4418",
+     "Review the refresh tap in..."
+    ],
     [
      "T-3783",
      "Keep finding why only..."
@@ -480,20 +472,27 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-14T13:10:24Z",
+  "at": "2026-11-14T13:13:27Z",
   "s": {
    "T-4432": [
     "testing",
     "its own tests, in its copy",
-    1794660384284
+    1794662007174
+   ],
+   "T-4418": [
+    "merged",
+    "on main 8:12 AM ET",
+    1794661953000,
+    ""
    ]
   },
   "nm": {
-   "T-4432": "Stop a released wait from hiding a pinned line"
+   "T-4432": "Stop a released wait from hiding a pinned line",
+   "T-4418": "Review the refresh tap in the widget renderer"
   }
  },
  "ln": {
-  "at": "2026-11-14T13:10:24Z",
+  "at": "2026-11-14T13:13:27Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -507,11 +506,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 2768,
+    "conflicted": 2771,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1217
+    "parked": 1220
    },
    "cur": [],
    "ld": [
@@ -521,8 +520,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-14T13:09:41Z",
-    "ld": 14.35,
+    "at": "2026-11-14T13:13:30Z",
+    "ld": 13.83,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -603,13 +602,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 2,
+  "main": 1,
   "lanes": 3,
-  "total": 5,
-  "at": "8:10 AM",
+  "total": 4,
+  "at": "8:13 AM",
   "why": "",
-  "at_iso": "2026-11-14T13:10:00+00:00",
+  "at_iso": "2026-11-14T13:13:00+00:00",
   "started": "7:33 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 2, started 7:33 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 8:10 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 1, started 7:33 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 8:13 AM ET</p></section>"
  }
 }

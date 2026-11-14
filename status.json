@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-14T02:45:19.313353+00:00",
+ "at": "2026-11-14T02:48:25.219965+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -92,7 +92,7 @@
    "task": "[build] T-0678 refresh button in extension",
    "model": "opus",
    "started": "2026-11-14T02:33:42.801Z",
-   "seconds": 696,
+   "seconds": 882,
    "finished": null,
    "effort": "high"
   },
@@ -101,7 +101,7 @@
    "task": "[tools] T-4314 personal session cost line",
    "model": "opus",
    "started": "2026-11-14T02:33:48.956Z",
-   "seconds": 690,
+   "seconds": 876,
    "finished": null,
    "effort": "high"
   },
@@ -110,7 +110,7 @@
    "task": "[site] T-4308 account sessions in In flight",
    "model": "opus",
    "started": "2026-11-14T02:33:55.419Z",
-   "seconds": 683,
+   "seconds": 869,
    "finished": null,
    "effort": "high"
   }
@@ -186,7 +186,7 @@
   "week_pct": 47.87,
   "usage_pct": 33.5,
   "work_pct": 79.6,
-  "read_at": "2026-11-14T02:45:00+00:00",
+  "read_at": "2026-11-14T02:49:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -216,14 +216,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-13T21:44:00-05:00",
+   "at": "2026-11-13T21:48:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-13T21:45:00-05:00",
+  "at": "2026-11-13T21:49:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -473,26 +473,26 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-14T02:45:19Z",
+  "at": "2026-11-14T02:48:25Z",
   "s": {
-   "T-0678": [
-    "testing",
-    "Mac Mini \u00b7 test",
-    null
-   ],
    "T-4314": [
     "testing",
     "its own tests, in its copy",
-    1794624019313
+    1794624025219
+   ],
+   "T-0678": [
+    "testing",
+    "its own tests, in its copy",
+    1794623725219
    ]
   },
   "nm": {
-   "T-0678": "Run the refresh button inside the widget extension",
-   "T-4314": "Record what each personal session costs"
+   "T-4314": "Record what each personal session costs",
+   "T-0678": "Run the refresh button inside the widget extension"
   }
  },
  "ln": {
-  "at": "2026-11-14T02:45:19Z",
+  "at": "2026-11-14T02:48:25Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -506,11 +506,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 1288,
+    "conflicted": 1291,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 592
+    "parked": 595
    },
    "cur": [],
    "ld": [
@@ -520,12 +520,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-14T02:45:26Z",
-    "ld": 53.48,
+    "at": "2026-11-14T02:49:24Z",
+    "ld": 48.87,
     "c": 8,
     "sb": 1,
     "dk": [
-     12.9,
+     14.8,
      228.3
     ],
     "ss": [
@@ -556,32 +556,20 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Inbox \u2013 Evan's 9:44 PM Message on GitHub",
-   "at": "2026-11-13T21:45:03-05:00"
+   "t": "Work session \u2013 3 tasks",
+   "at": "2026-11-13T21:48:06-05:00"
   }
  ],
  "reply": {
-  "sent": "2026-11-14T02:40:05Z",
-  "seconds": 282.0
+  "sent": "2026-11-14T02:47:20Z",
+  "seconds": 45.0
  },
- "inbox": [
-  {
-   "id": "c6870415135",
-   "state": "received",
-   "position": 1,
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "Also, explain \"Blocked or Waiting\"..."
-  }
- ],
+ "inbox": [],
  "trimmed": [
   "lane_next",
   "queue_text",
   "task_done",
   "fin_short",
-  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -592,10 +580,10 @@
   "main": 3,
   "lanes": 0,
   "total": 3,
-  "at": "9:45 PM",
+  "at": "9:49 PM",
   "why": "",
-  "at_iso": "2026-11-14T02:45:00+00:00",
+  "at_iso": "2026-11-14T02:49:00+00:00",
   "started": "9:30 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 9:30 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:45 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 9:30 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:49 PM ET</p></section>"
  }
 }

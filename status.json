@@ -1,12 +1,20 @@
 {
  "schema": 1,
- "at": "2026-11-14T03:29:30.440301+00:00",
+ "at": "2026-11-14T03:32:28.960644+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-13T21:30:04-05:00",
   "flow": [],
   "done": [
+   {
+    "t": "T-4409",
+    "name": "Judge unaudited queue lines, group 3 of 4",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794627020
+   },
    {
     "t": "T-4118",
     "acct": "Personal a",
@@ -74,16 +82,9 @@
     "steps": [],
     "end": "landed",
     "end_at": 1794593264
-   },
-   {
-    "t": "T-4274",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794592681
    }
   ],
-  "landed": 11,
+  "landed": 12,
   "failed": 2
  },
  "workers": [
@@ -92,7 +93,7 @@
    "task": "[tools] T-4314 personal session cost line",
    "model": "opus",
    "started": "2026-11-14T02:33:48.956Z",
-   "seconds": 3341,
+   "seconds": 3520,
    "finished": null,
    "effort": "high"
   },
@@ -101,7 +102,7 @@
    "task": "[site] T-4308 account sessions in In flight",
    "model": "opus",
    "started": "2026-11-14T02:33:55.419Z",
-   "seconds": 3335,
+   "seconds": 3513,
    "finished": null,
    "effort": "high"
   },
@@ -110,7 +111,7 @@
    "task": "[build] T-0678 slice 2 wire rule and intent",
    "model": "opus",
    "started": "2026-11-14T03:11:48.167Z",
-   "seconds": 1062,
+   "seconds": 1240,
    "finished": null,
    "effort": "high"
   }
@@ -145,7 +146,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 434,
+  "runnable_count": 433,
   "blocked_count": 96
  },
  "meter": {
@@ -194,7 +195,7 @@
   "week_pct": 47.87,
   "usage_pct": 33.5,
   "work_pct": 79.6,
-  "read_at": "2026-11-14T03:29:00+00:00",
+  "read_at": "2026-11-14T03:32:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -205,19 +206,6 @@
     "m": "opus",
     "e": "xhigh",
     "at": "2026-11-13T22:04:08-05:00",
-    "n": "Evan",
-    "d": 1,
-    "src": "plan-a"
-   },
-   {
-    "lane": "a3",
-    "task": "T-4409",
-    "w": "Ines",
-    "k": "ops",
-    "t": "Judge unaudited queue lines, group 3 of 4",
-    "m": "opus",
-    "e": "xhigh",
-    "at": "2026-11-13T22:04:12-05:00",
     "n": "Evan",
     "d": 1,
     "src": "plan-a"
@@ -294,7 +282,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-13T22:29:00-05:00",
+  "at": "2026-11-13T22:32:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -463,12 +451,17 @@
    {
     "w": "Ines",
     "k": "ops",
-    "t": "Judge unaudited queue lines, group 3 of 4",
+    "t": "Judge unaudited queue lines, group 4 of 4",
     "s": "next",
     "o": "c"
    }
   ],
   "done": [
+   {
+    "w": "Ines",
+    "t": "Forty-two more queue tasks now have a written verdict: 21 stay, 20 can leave the board because...",
+    "at": "2026-11-13T22:30:00-05:00"
+   },
    {
     "w": "Ines",
     "t": "The review of the queue's process, planning and research tasks is closed: 447 have a written...",
@@ -478,22 +471,21 @@
     "w": "Pernille",
     "t": "Checked again on today's code that the widget extension quits only after its last log entry is...",
     "at": "2026-11-13T21:44:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "Jeremy's Account now runs the queue audit on Fable 5.2; tonight it judged and applied the next...",
-    "at": "2026-11-13T21:32:00-05:00"
    }
   ],
   "count": {
-   "next": 434,
+   "next": 433,
    "wait": 49,
    "blocked": 47,
    "you": 15
   },
   "fin": {
-   "n": 3,
+   "n": 4,
    "rows": [
+    [
+     "T-4409",
+     "Judge unaudited queue lines,..."
+    ],
     [
      "T-4097",
      "Judge the efficiency and..."
@@ -548,12 +540,12 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-14T03:29:11Z",
+  "at": "2026-11-14T03:32:28Z",
   "s": {
    "T-4314": [
     "merging",
     "Mac tests at the main gate",
-    1794626591743
+    1794626608960
    ],
    "T-0678": [
     "testing",
@@ -567,7 +559,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-14T03:29:11Z",
+  "at": "2026-11-14T03:32:28Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -581,26 +573,26 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 2186,
+    "conflicted": 2190,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 635
+    "parked": 639
    },
    "cur": [],
    "ld": [
-    22,
-    "2026-11-14T03:24:42Z"
+    24,
+    "2026-11-14T03:30:59Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-14T03:28:38Z",
-    "ld": 12.88,
+    "at": "2026-11-14T03:32:08Z",
+    "ld": 13.64,
     "c": 8,
     "sb": 0,
     "dk": [
-     14.0,
+     13.6,
      228.3
     ],
     "ss": [
@@ -640,15 +632,6 @@
    "e": "xhigh",
    "t": "Work session \u2013 1 task",
    "at": "2026-11-13T22:20:11-05:00"
-  },
-  {
-   "w": "Operator",
-   "a": "Evan",
-   "sr": 1,
-   "m": "opus",
-   "e": "xhigh",
-   "t": "Work session",
-   "at": "2026-11-13T22:14:31-05:00"
   },
   {
    "w": "Operator",
@@ -696,12 +679,12 @@
  ],
  "agents_now": {
   "main": 3,
-  "lanes": 5,
-  "total": 8,
-  "at": "10:29 PM",
+  "lanes": 4,
+  "total": 7,
+  "at": "10:32 PM",
   "why": "",
-  "at_iso": "2026-11-14T03:29:00+00:00",
+  "at_iso": "2026-11-14T03:32:00+00:00",
   "started": "9:30 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>8</b> agents running now</p><p class=\"an-sub\">Main session 3, started 9:30 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 10:29 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 3, started 9:30 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 10:32 PM ET</p></section>"
  }
 }

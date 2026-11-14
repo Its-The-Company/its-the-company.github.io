@@ -53,9 +53,10 @@ My notes. They are published on the company site, so nothing sensitive goes here
 ## Lessons
 - Older lessons and dated logs: archive.md.
 
-- T-4414 11-14 9ab6cbe2af: rerun rule ages newest run row (any <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span>/outcome), else tree.json mtime; ticked. Lesson: PreviewQueueTests and FirstDrawCardTests pin who names WidgetFolder.treeName and PyWidget.swift lines exactly; keep tree paths in PyWidget.swift.
 
-- T-4431 11-14 719876e6a6 (local main, land J-..0751-land-m-269dc7 green): completion rows pin 16 pt text inset. Open: push; then queue CompletionUITests on runner (27.2). Lesson: runner is iOS 27.2, local sims 27.1 only; cell margins differ across point releases, pin them and unit-test drawn frames.
+- T-4434 11-14 5564fd433b ticked. Lesson: ImageRenderer reads a preference via backgroundPreferenceValue; EmptyView drops it. xc_mutants find==replace = baseline.
+
+- T-4440/41 11-14 55054e9edc ticked (land 1803/0, mutants 5/5 in ops/runs/t4440-mutants.txt). Lesson: in a copy, make Vendor/ a real dir of symlinks (ignored; a Vendor symlink is not) and xcodegen there; xc_mutants local is ~3 min a mutant after a ~9 min baseline, so 5 or fewer per foreground call.
 {% endraw %}
 
 

@@ -13,14 +13,21 @@ description: "By Idris, 2026-11-12, for the audit-implementation session. Rule 6
 {% raw %}
 By Idris, 2026-11-12, for the audit-implementation session. Rule 62 keeps these files with that session:
 tools/dispatch.py, tools/personal_tick.sh, tools/personal_land.sh, tools/merge_queue.py. I did not edit them. Each
-patch below names the file, the function and the line at commit 20c7dc5067, and the code to put there. None of it has
-run: it is a suggestion read against the code, not a tested change.
+patch below names the file, the function and the line, and the code to put there. None of it has run: it is a
+suggestion read against the code, not a tested change.
+
+Refreshed 2026-11-14 (Idris): every file and line below was read again at commit 99f8222e6d (branch personal/b3;
+the first write-up used 20c7dc5067). Six of its nine line numbers had moved; the code at each place is as quoted,
+and each of the 30 references now in this file was checked by a script against the file's own line. Target, from
+T-4194's line: the wiring on by Wednesday 2026-11-18, so the first trial (T-4191) can merge by Friday 2026-11-20
+and the week's counts are in by 2026-11-27. New in this refresh: Patch 5 (the counts), the reviewer change in
+Patch 4, and the after-sync note's missing field.
 
 ## What exists
 
 `tools/feature_session.py` is read only: it writes no board line, makes no commit and starts no build.
-`tests/feature_session_test.py` checks it on a fixture repository, and `tests/feature_session_mutants.json` plants 40
-faults in it. Nothing calls the tool yet.
+`tests/feature_session_test.py` checks it on a fixture repository (136 checks), and
+`tests/feature_session_mutants.json` plants 73 faults in it. Nothing calls the tool yet.
 
 
 <div class="tbl" role="region" tabindex="0" aria-label="Table 1: What exists, scrolls sideways" style="--tw:526px" markdown="1">
@@ -34,6 +41,7 @@ faults in it. Nothing calls the tool yet.
 | `bisect T-4191 --test Class` | the `git bisect run` command over the step commits |
 | `due` | the features a dispatcher may hand out now: `<feature> <worker> <steps>` |
 | `on T-4191` | exit 0 when the switch names the feature |
+| `counts --since DATE` | the five counts of app-features.md 3.4, features beside lines (Patch 5) |
 
 </div>
 
@@ -51,8 +59,8 @@ T-4191 alone. "most" is the two sessions at once from app-features.md 3.2 item 1
 
 ## Patch 1: the feature is what is handed out, its steps are not
 
-File: `tools/board.py`, `lanes_view`, the <span title="What keeps an idea below the top: the cap that applies to it now.">hold</span> at line 492. This file is not on rule 62's list, but `dispatch.py
-runnable()` reads its output, so it belongs with the rest. Today an umbrella never starts while a piece is open, so a
+File: `tools/board.py`, `lanes_view` (line 501), the <span title="What keeps an idea below the top: the cap that applies to it now.">hold</span> at line 521, inside the loop that starts at line 517. This
+file is not on rule 62's list, but `dispatch.py runnable()` reads its output, so it belongs with the rest. Today an umbrella never starts while a piece is open, so a
 feature line is never runnable and its steps are.
 
 ```python
@@ -84,14 +92,16 @@ except Exception:
 
 `due` has already left out a feature a session holds, one that shares a Target with a running feature, one with no
 step to take, and any past "most". Check after applying: `python3 tools/board.py lanes 200` lists T-4191 and none of
-its six steps. The conditions above line 492 (`t["runnable"]`, `person_owned`, the Xcode gate) are untested for a
-feature line; if one drops T-4191, that is the next thing to read.
+its six steps. The conditions above the hold (line 519: `stuck(ln)`, and `lane_out` with `person_owned`, the Xcode
+gate and a wait date) are untested for a feature line; if one drops T-4191, that is the next thing to read.
+`pinned_stuck` (line 480, new since 11-12, T-4432) repeats the hold at line 495 for its own report of pinned lines
+that wait. It hands nothing out, so I left it out of the patch.
 
 ## Patch 2: one feature per session, and two sessions at most
 
 File: `tools/dispatch.py`.
 
-`cmd_tick`, after `tasks = open_tasks(menu, lines, busy, done, stale_flags())` (line 1450). `due` counts the claims it
+`cmd_tick` (line 1500), after `tasks = open_tasks(menu, lines, busy, done, stale_flags())` (line 1541). `due` counts the claims it
 is given; this covers two accounts dealt in the same tick and the hand-outs not yet claimed (`busy` holds both):
 
 ```python
@@ -101,7 +111,8 @@ is given; this covers two accounts dealt in the same tick and the hand-outs not 
         tasks = [t for t in tasks if t["id"] not in fs_on or t["id"] in fs_keep]
 ```
 
-`deal`, the batch loop at line 639. A session starts with up to BATCH (4) tasks; a feature must be alone:
+`deal` (line 666), the batch loop at line 689; the first line quoted below is line 692. A session starts with up to
+BATCH (4, line 180) tasks; a feature must be alone:
 
 ```python
                 if t["id"] in taken or not eligible_for(t, s):
@@ -115,7 +126,8 @@ is given; this covers two accounts dealt in the same tick and the hand-outs not 
                     break
 ```
 
-`runnable()`, line 1232, so "files in use" holds a feature's Targets and not only the paths its line happens to name:
+`runnable()`, line 1317, after `t = parse_line(ln)` at line 1324, so "files in use" holds a feature's Targets and not
+only the paths its line happens to name:
 
 ```python
             if t and t["id"] in FS_TARGETS:
@@ -127,8 +139,8 @@ FS_ON}`.
 
 ## Patch 3: a feature is never <span title="A new, permitted reading that removes a cap. A lift rule is that reading, written down before we look.">lifted</span> mid-session
 
-File: `tools/personal_tick.sh`, `lift_finished`, line 1170. `personal_land.sh lift` picks the commits whose subject
-starts with the task's ID (line 2607). For a feature that is only its review fixes; the step commits would stay
+File: `tools/personal_tick.sh`, `lift_finished`, line 1197; its loop starts at line 1200. `personal_land.sh lift`
+(`lift_one`, line 2593) picks the commits whose subject starts with the task's ID (the awk at line 2606). For a feature that is only its review fixes; the step commits would stay
 behind. The branch lands whole when the session ends, which is the merge point.
 
 ```bash
@@ -141,7 +153,7 @@ behind. The branch lands whole when the session ends, which is the merge point.
     fi
 ```
 
-The session's words, for `ops/prompts/lane.md`, where it says what to do with a line from `lane_take.py`:
+The session's words, for `ops/prompts/lane.md`, where it says what to do with a line from `lane_take.py` (line 5):
 
 > When the line is a feature that `python3 tools/feature_session.py on <ID>` accepts, do not split it. Run
 > `python3 tools/feature_session.py packet <ID>` and give the worker it names the whole list in one agent call.
@@ -166,7 +178,7 @@ tick_steps() {
   local before="${1:-}" s note
   [ -n "$before" ] && [ -f "$ROOT/tools/feature_session.py" ] || return 0
   python3 -I "$ROOT/tools/feature_session.py" on "$TASK" 2>/dev/null || return 0
-  python3 -I "$ROOT/tools/feature_session.py" landed "$TASK" --since "$before" --main HEAD --ticks 2>>"$LOG" \
+  python3 -I "$ROOT/tools/feature_session.py" landed "$TASK" --since "$before" --main HEAD --ticks \
     | while IFS=$'\t' read -r s note; do
         board_do "ops: $s ticked from its commit ($TASK landed)" "$s" "$note" \
           || say "$s landed with $TASK and could not be ticked: a person can tick it"
@@ -180,8 +192,32 @@ Called after line 2261, `[ "$LIVE" = 1 ] || review_line`:
     [ "$LIVE" = 1 ] || tick_steps "$MAIN_BEFORE"
 ```
 
-and for a live landing after line 2345 in the after-sync pass, with the main that pass recorded before the merge. I
-did not find where that pass keeps it; `$LOG` above also stands for whatever the land's log variable is.
+and for a live landing in the after-sync pass (`after_sync`, line 2308), after its `review_line` call at line 2345.
+That pass works from a note the landing left: `after_sync_keep` (line 2274) writes `task`, `tip` and `review` at
+line 2277, and no main-before. So the note needs a fourth line, `before $MAIN_BEFORE`, written there and read back
+beside `tip` at line 2340; without it the pass has no revision to give `landed --since`. The land has no log
+variable (`say`, line 419, prints to the land's own output), so the tool's stderr, which names each step that
+landed with no done-note, is left to go there.
+
+The reviewer. `review_line` asks `lane_owner reviewer "$TASK"` at line 1831. Since 11-14 (35c66ab1f6)
+`tools/lane_owner.py reviewer` prints the reviewer a feature's card names when one of the IDs is a feature and
+that person owns none of the IDs: `reviewer T-4191` prints Maren. It can only see the IDs it is given. A session
+of another worker's steps lands under the feature's ID too, and for T-4180 the card's reviewer is Pernille, who
+owns steps there. So for a feature the land names the landed steps beside it:
+
+```bash
+  # in review_line, before the line is built: a feature's review is asked for the feature and the steps that landed
+  local who="$TASK" steps=""
+  if python3 -I "$ROOT/tools/feature_session.py" on "$TASK" 2>/dev/null; then
+    steps="$(python3 -I "$ROOT/tools/feature_session.py" landed "$TASK" --since "$MAIN_BEFORE" --main HEAD --json 2>/dev/null \
+      | python3 -c 'import json, sys; print("+".join(x["id"] for x in json.load(sys.stdin)["landed"]))' 2>/dev/null)"
+    [ -z "$steps" ] || who="$TASK+$steps"
+  fi
+  # ... (owner: $(lane_owner reviewer "$who"), P1)
+```
+
+With the steps named, a card reviewer who wrote one of them is passed over and the choice falls to the built-in
+list, past every owner named (tests/lane_owner_test.py, "the card's reviewer owns one of the steps named").
 
 Nothing else in the land changes. The branch is the account's branch at session end, as now. Its marker's task is the
 feature's ID. The floor already adds host and xc for a branch that touches a product path. `review_line` already
@@ -190,16 +226,53 @@ writes one line for the branch.
 A session may also tick a step itself with `tools/board_tick.py`, as <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lanes</span> do today. Then the line is already ticked
 when the land looks, `landed` reports it as not open, and nothing is ticked twice.
 
+## Patch 5: the counts (nothing to change, three things to keep true)
+
+`python3 tools/feature_session.py counts --since 2026-11-18` prints the five counts of app-features.md 3.4,
+features beside lines, and `--json` gives the same as one object. It reads `ops/metrics/land_xc.jsonl` and
+`flow.jsonl` in the main checkout, `xc.jsonl` in every checkout, and main's log. It writes nothing. With no feature
+merge in the window it says "no feature merge yet" and prints the lines' figures. It needs no patch, but it counts
+a feature merge only if the wiring keeps these true:
+
+1. **The land's task is the feature's ID.** A feature merge is a flow.jsonl row with `task` equal to the feature's
+   ID and `to` "merged" (as `src: land` and `main_gate` write for a line today), and its iPhone results are
+   land_xc.jsonl rows whose `task` names the feature. A branch landed under a step's ID is counted as a line.
+   Check after the first trial merge: the command above must list `T-4191 merged <time>: <n> steps (...)`.
+2. **The feature's own line is claimed when its session starts.** The session's start is the feature's first
+   "being_built" row after its last merge. The steps of a merge are the commits on main whose subject names one
+   step and whose author time lies between that start and the merge. With no such row, every earlier commit of
+   those steps is counted and the output says so on the merge's line.
+3. **Every Xcode line of a session carries `XC_TASK`.** `plan` prints each line with the step's ID and `packet`
+   prints the first build with the feature's. Count 4 (a red at the merge after a session whose last run under
+   each step's ID ended 0) and the feature line of count 5 read xc.jsonl's `task`. A run without it is counted
+   only under "all runs".
+
+What it cannot say: which step caused a red at the merge, and how long the bisect took. That is the bisect's
+answer and stands in no ledger; the feature's next session writes it in its note. Review findings per step (the
+sixth line of 3.4) are counted by hand from the review files.
+
+Found while writing it: `tools/xc.sh` writes a run's row into `ops/metrics/xc.jsonl` of the checkout it ran in
+(line 364, `$ROOT`), so the main checkout's file is not all the runs. From 11-07 on it holds 72 runs, 8% of them
+waited at the lock, mean 15.6 s; all 69 checkouts together hold 137 runs, 30% waited, mean 86.7 s. `counts`
+reads every lane copy under `~/company-personal` and counts a row found in two of them once. A session on
+another machine is not read.
+
+The lines' figures on 11-14, from 11-07 on, for the week's comparison: 1.33 iPhone results per passing change
+(170 results, 128 passes); 36 of 164 results with a verdict red (22%); a median 5.4 hours from a task's first
+"being_built" row to its first "merged" row (588 tasks). The plan's 1.5 and 31% are of 11-06 to 6:48 AM 11-12, and
+the same rules give exactly those there (124 results, 81 passes, 37 of 118 red; a scratch read cut at that
+minute). The plan's 9.1 hours over 188 tasks is not reproduced: the rule here gives 9.6 over 208 for those days,
+and I do not know the review's filter.
+
 ## Left with a question, not a patch
 
 1. **A red feature merge must not be retried as merge runs.** 3.2 item 6 says the next session bisects. Today a
    <span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">parked</span> branch goes to `ops/personal_retry.txt` and `tools/merge_queue.py` runs it again. For a feature whose red
    is a test, that is the series of merge runs the design removes. The retry feed should pass over a parked name
    whose task is an on feature and whose last result is red tests, and leave a conflict or a time-out as now. I have
-   not read merge_queue.py closely enough to name the line.
-2. **The reviewer.** `review_line` asks `tools/lane_owner.py reviewer`, which picks from Pernille, Idris, Ines and
-   Odalys. T-4191's card names Maren. lane_owner.py is not on rule 62's list, so I will change it in T-4194's next
-   slice: for a feature in the plan, the reviewer is the card's.
+   not read merge_queue.py closely enough to name the line; the feed's names are read in `retry_names` (line 170).
+2. **The reviewer.** Answered on 11-14: `tools/lane_owner.py reviewer` prints the card's reviewer for a feature
+   (35c66ab1f6), and what the land must pass it is in Patch 4.
 3. **Subjects.** `lift` and the step check read a subject differently. `lift` wants the ID as the first word.
    `check` accepts the one checklist ID anywhere in the subject. The session words above ask for the ID first, which
    satisfies both.
@@ -212,7 +285,8 @@ These are in the tool's header with the evidence. They change app-features.md 3.
    BridgeTests`. As an `-only-testing` value such a name matches nothing. Alone, tools/xc.sh calls that run red
    because no test ran. Beside other filters, xcodebuild runs the others and the run can be green without it; that
    is xcodebuild's usual behaviour and I did not run it here. The tool resolves a name to its class, or to the
-   classes and test methods its file holds. All ten resolve.
+   classes and test methods its file holds. All ten resolve. Corrected in `ops/plans/app-features.json` on 11-14
+   (35d99ad90a): all 85 names are classes now, and the tool keeps the file rule for a card that names a file again.
 2. "Incremental build when the step changed Swift" is too narrow. A changed resource, C file, bundled Python file
    or project.yml leaves the built bundle just as stale. The build comes first whenever the step touched anything
    the build reads.

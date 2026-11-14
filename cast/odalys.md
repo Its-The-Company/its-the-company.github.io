@@ -45,8 +45,6 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 - T-4232 (11-12 10 PM): Double Spread + per-account modes (tools/usage_mode.py, ops/usage_mode.json; MODE <ALL|MAIN|A|B> <mode> via inbox) + Home Mode block. NOT landed: main_gate_test red on main (T-4236). Ready in company-scratch/T-4232-odalys/wt (16 paths, msg.txt). site_live_test needs ops/live.json copied into a worktree.
 
-- T-4240 15e820baff (11-13): Documents > How the app works (tools/site/how_it_works.py; words in pywidget/docs/how-it-works/, fingerprints by hand from `python3 tools/site/how_it_works.py`). T-4250 528e4bb390 (11-13): all seven drawn; anchors also C/.json/.storekit; after:/aside: lines. 07 build half + 00-plan -> T-4127.
-
 - T-4230 f054a45347 (branch odalys/t4230-restructuring-docs, unlanded 11-12 22:1x): Restructuring folder under Documents. Owed: land; first live mock-up copy (phase 4).
 
 - T-4004 (11-13): already done by 5aed12987d/e4c770e538, ticked. T-3735 49196e7897 (11-13): Blocked or waiting under All tasks. Owed: T-4262 #41 reply once a full publish carries it.
@@ -63,11 +61,12 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 - T-4411 (11-14 00:1x): dispatch.py patch in company-scratch/T-4411-odalys/T-4411-dispatch.patch, handed by note on T-4092 (audit-owned). Owed: after it lands, dispatch.log shows an audit line dealt within one tick of a 5-hour reset; then tick T-4411.
 
-- T-4432 9791e1b905 (11-14 08:4x): unblock -> '(released from #N'; dispatch logs 'held T-ID ...' for pinned lines stuck() holds. Done, ticked.
+- T-4103 31b4b962fb (11-14): queue check core, dry only (tools/queue_check.py; switch ops/queue_check.json absent). Rest on T-4443..T-4453. Owed: T-4447 replay narrows the signals (265 of 426 flagged on b); T-4444 cheap copies read (on_change 98 s, scratch sweep ~100 s); Ines's read decides the date-wait act.
 
 ## Lessons
 
 - Gate runs of the personal suites take ~55 min under load: run land in background with a 2 h limit, not 10 min.
+- Run a new act-alone rule dry on the real board before trusting a design's proof list: 25 date waits were not proofs (T-4103).
 {% endraw %}
 
 

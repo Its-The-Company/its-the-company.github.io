@@ -30,6 +30,18 @@ was written. 40 of them are now steps of the feature they belong to, and 5 are l
 (section 8). The table in section 1 and all of section 2 are the script's output at that time. The counts in the
 prose of sections 0, 1, 3 and 5 are still those of 11-12.
 
+**Corrected 9:4x AM ET 11-14 (Idris, T-4194), for Ines.** Ten of the 85 names under "Test classes for a step"
+were test files, not XCTest classes (`grep -rn "class .*: XCTestCase" pywidget/ios` holds no class by those
+names), so as `-only-testing` values they ran nothing. Each is now the class or classes its file declares or
+extends, on seven cards (2.1, 2.2, 2.3, 2.5, 2.8, 2.9, 2.10); all 85 names are classes now. Six of the ten files
+only add methods to BridgeTests, so four cards that did not name it now do (2.1, 2.3, 2.5, 2.10): a step there
+runs all 170 BridgeTests methods where the file held 4 to 27 of them. That costs run time, not coverage, and is
+yours to weigh; the session tool still takes a file's name and runs only that file's tests. Four lines the check
+showed as judged and in no feature are placed: T-4415, T-4416 and T-4417 in T-4181 (each line's own Links field
+and its ledger row say so), and T-3675 in T-4185 (from T-3664; its ledger row owes it a fresh read, since it may
+be a tick). The reasons are in the JSON under "placed". Only those lines of sections 1 and 2 changed; the rest
+is still the 12:5x AM output. The list holds 250 steps and the check shows no fault.
+
 ## 0. In five lines
 
 1. **The open app lines are now 14 features.** 206 of the 300 open app lines sit inside a feature as its steps.
@@ -52,11 +64,11 @@ prose of sections 0, 1, 3 and 5 are still those of 11-12.
 | # | Feature | Owner | Reviewer | P | Steps | Held |
 |---|---|---|---|---|---|---|
 | 2.1 | T-4180: Every premade widget draws on the iPhone | Idris | Pernille | P0 | 22 | 1 |
-| 2.2 | T-4181: Widgets refresh on their own and by a tap | Idris | Pernille | P0 | 35 | 3 |
+| 2.2 | T-4181: Widgets refresh on their own and by a tap | Idris | Pernille | P0 | 38 | 3 |
 | 2.3 | T-4182: A failing widget says so and can recover | Idris | Pernille | P1 | 25 | 0 |
 | 2.4 | T-4183: The Gallery shows, previews and opens every premade | Idris | Pernille | P1 | 15 | 0 |
 | 2.5 | T-4184: A person's own script becomes a Home Screen widget | Idris | Pernille | P1 | 19 | 1 |
-| 2.6 | T-4185: Launcher widgets open the apps a person chose | Idris | Pernille | P1 | 15 | 0 |
+| 2.6 | T-4185: Launcher widgets open the apps a person chose | Idris | Pernille | P1 | 16 | 0 |
 | 2.7 | T-4186: The editor completes code, shows errors and previews | Idris | Pernille | P1 | 19 | 3 |
 | 2.8 | T-4187: Scripts run, ask questions and stop cleanly | Idris | Pernille | P1 | 12 | 1 |
 | 2.9 | T-4188: Location, steps and notifications work in scripts and widgets | Idris | Odalys | P1 | 18 | 3 |
@@ -114,7 +126,7 @@ area. A session takes a feature's open steps P0 first, then in the order listed.
 - **Seen on:** the iPhone 17e Simulator, then the next TestFlight build on the Investors' iPhone, where the fault was seen.
 - **Evidence:** one Home Screen screenshot per premade in light and in dark, kept under pywidget/app-guide-shots/.
 - **Targets:** `pywidget/ios/Shared/TreeView.swift`, `pywidget/ios/Shared/TreeNodes.swift`, `pywidget/ios/Shared/TreeTimeline.swift`, `pywidget/ios/Shared/TreeRules.swift`, `pywidget/ios/Shared/Premades.swift`, `pywidget/ios/Shared/FirstRender.swift`, `pywidget/ios/Widget/PyWidget.swift`, `pywidget/ios/App/Bridge/WidgetWriter.swift`.
-- **Test classes for a step:** PremadeFirstRenderTests, PremadeSnapshotTests, PremadesTests, TreeNodesTests, TreeTimelineTests, FirstRenderTests, WidgetStepTimeoutTests, WidgetKitCheckTests.
+- **Test classes for a step:** BridgeTests, PremadeSnapshotTests, PremadesTests, TreeNodesTests, TreeTimelineTests, FirstRenderTests, WidgetStepTimeoutTests, WidgetKitCheckTests.
 - **Base:** `a42f0cc866`. **By:** Ines, T-4116 (Investor an Investor #41 c6814024711; an Investor #41 c6814286499).
 - **Checklist:** 22 lines, 1 of them held, 4 done since the list was written.
 
@@ -148,12 +160,15 @@ area. A session takes a feature's open steps P0 first, then in the order listed.
 - **Seen on:** the iPhone 17e Simulator; time and memory inside the widget are then measured on the Investors' iPhone with the internal gate build.
 - **Evidence:** a screen recording of the tap and the new value, and the measured time and memory figures.
 - **Targets:** `pywidget/ios/Shared/ExtensionLane.swift`, `pywidget/ios/Shared/RefreshAsks.swift`, `pywidget/ios/Shared/RefreshOutcomeRule.swift`, `pywidget/ios/Shared/RefreshSchedule.swift`, `pywidget/ios/Shared/RefreshWidgetsIntent.swift`, `pywidget/ios/Shared/AgeLine.swift`, `pywidget/ios/Shared/PythonRuntime.swift`, `pywidget/ios/App/Runtime/_pywidget_runtime`.
-- **Test classes for a step:** ExtensionLaneTests, ExtensionBridgeTests, ExtensionRuntimeTests, RefreshAgeRendererTests, LaneRestBenchTests, LaneWarmWindowTests.
+- **Test classes for a step:** ExtensionLaneTests, ExtensionBridgeTests, ExtensionRuntimeTests, TreeNodesTests, LaneRestBenchTests, LaneWarmWindowTests.
 - **Base:** `a42f0cc866`. **By:** Ines, T-4116 (Investor an Investor #41 c6814024711; an Investor #41 c6814286499).
-- **Checklist:** 35 lines, 3 of them held, 1 done since the list was written.
+- **Checklist:** 38 lines, 3 of them held, 1 done since the list was written.
 
 - T-0675 [build] done, ticked 2026-11-13 07:31: Run Python widget scripts inside the widget extension
 - T-0678 [build] Idris, P1, open: Run the refresh button inside the widget extension
+- T-4415 [build] Idris, P2, open: Decide what the refresh button shows when nothing can run
+- T-4416 [build] Idris, P2, open: Pin the app's refresh-tap install with a test
+- T-4417 [build] Idris, P3, open: Close the rerun rule's test gaps
 - T-0972 [build] Idris, P1, open: Decide how a script's refresh path is chosen on send
 - T-4280 [build] Idris, P1, open: Run each widget in the widget or app by size
 - T-1440 [build] Idris, P1, open: Add a refresh control and age line to widgets
@@ -195,7 +210,7 @@ area. A session takes a feature's open steps P0 first, then in the order listed.
 - **Seen on:** the iPhone 17e Simulator.
 - **Evidence:** screenshots of the badged widget, the Activity screen and the widget after the say-so.
 - **Targets:** `pywidget/ios/Shared/LaneGuard.swift`, `pywidget/ios/Shared/WidgetStatus.swift`, `pywidget/ios/Shared/RunLog`, `pywidget/ios/Shared/Bridge/WidgetRunLog.swift`, `pywidget/ios/App/Bridge/LaunchRunLog.swift`, `pywidget/ios/App/WidgetRunView.swift`.
-- **Test classes for a step:** WidgetRunReasonTests, LaunchRunLogTests, CardMarksTests, WidgetWriterTests, ShortcutRunLogTests, RunLogUITests.
+- **Test classes for a step:** BridgeTests, LaunchRunLogTests, CardMarksTests, WidgetWriterPassTests, ConsoleRunLogTests, ShortcutRunLogTests, RunLogUITests.
 - **Base:** `a42f0cc866`. **By:** Ines, T-4116 (Investor an Investor #41 c6814024711; an Investor #41 c6814286499).
 - **Checklist:** 25 lines, 0 of them held, 3 done since the list was written.
 
@@ -259,7 +274,7 @@ area. A session takes a feature's open steps P0 first, then in the order listed.
 - **Seen on:** the iPhone 17e Simulator.
 - **Evidence:** a screen recording from the editor to the placed widget, and a screenshot of the Shortcuts picker.
 - **Targets:** `pywidget/ios/App/Projects`, `pywidget/ios/App/Intents`, `pywidget/ios/App/WidgetInstallView.swift`, `pywidget/ios/Shared/WidgetPlacement.swift`.
-- **Test classes for a step:** WidgetScriptSaveTests, WidgetScriptSavedPlacementTests, ProjectStoreTests, ProjectTransferTests, WidgetCardTests, AppIntentsTests, ShortcutRecipeTests, PreviewQueueTests, ProjectsUITests, AddWidgetTests.
+- **Test classes for a step:** WidgetScriptSaveTests, WidgetScriptSaveBurstTests, BridgeTests, ProjectStoreTests, ProjectTransferTests, WidgetCardTests, AppIntentsTests, ShortcutRecipeTests, ProjectsUITests, AddWidgetTests.
 - **Base:** `a42f0cc866`. **By:** Ines, T-4116 (Investor an Investor #41 c6814024711; an Investor #41 c6814286499).
 - **Checklist:** 19 lines, 1 of them held.
 
@@ -292,12 +307,13 @@ area. A session takes a feature's open steps P0 first, then in the order listed.
 - **Targets:** `pywidget/ios/App/Launcher`, `pywidget/ios/App/LauncherTapHandling.swift`, `pywidget/ios/App/WidgetTapRouting.swift`, `pywidget/ios/Shared/LauncherSlots.swift`, `pywidget/ios/Shared/LauncherPremadeSlots.swift`, `pywidget/ios/Shared/WidgetTapLink.swift`, `pywidget/ios/scripts/debug_url_scheme.sh`.
 - **Test classes for a step:** WidgetTapRoutingTests, LauncherTapUITests, LauncherWindowsUITests.
 - **Base:** `a42f0cc866`. **By:** Ines, T-4116 (Investor an Investor #41 c6814024711; an Investor #41 c6814286499).
-- **Checklist:** 15 lines, 0 of them held, 6 done since the list was written.
+- **Checklist:** 16 lines, 0 of them held, 6 done since the list was written.
 
 - T-2551 [build] Pernille, P1, open: Build all six app launcher premades
 - T-3664 [build] done, ticked 2026-11-12 14:58: Let people choose the app behind each launcher slot
 - T-3688 [build] done, ticked 2026-11-12 14:58: Build the launcher editor screens and their UI test
 - T-3674 [research] done, ticked 2026-11-12 18:20: Fill the launcher's list of known apps
+- T-3675 [build] Idris, P2, open: Pass the launcher editor's saved apps to the launcher widgets
 - T-3852 [build] done, ticked 2026-11-12 16:02: Call the launcher slot writer from the editor, reload widgets
 - T-3847 [fix] Idris, P2, open: Test the launcher link through the real URL entry point
 - T-3848 [fix] done, ticked 2026-11-12 19:09: Keep a second launcher tap from dropping a script's prompt
@@ -348,7 +364,7 @@ area. A session takes a feature's open steps P0 first, then in the order listed.
 - **Seen on:** the iPhone 17e Simulator.
 - **Evidence:** a screen recording of the tip splitter and of Stop on a looping script.
 - **Targets:** `pywidget/ios/Shared/Bridge/PyBridge.swift`, `pywidget/ios/Shared/Bridge/pwbridge.c`, `pywidget/ios/App/Device/PromptDesk.swift`, `pywidget/ios/App/PromptsCodec.swift`, `pywidget/ios/App/ReplBar.swift`, `pywidget/tests/bridge`, `pywidget/examples/tip_splitter.py`.
-- **Test classes for a step:** BridgeTests, BridgeSlice2Tests, BridgeFixtureTests, PromptDeskTests, PromptPlacementTests, ConsoleModelsTests, InputHoldUITests.
+- **Test classes for a step:** BridgeTests, BridgeFixtureTests, PromptDeskTests, PromptPlacementTests, ConsoleModelsTests, InputHoldUITests.
 - **Base:** `a42f0cc866`. **By:** Ines, T-4116 (Investor an Investor #41 c6814024711; an Investor #41 c6814286499).
 - **Checklist:** 12 lines, 1 of them held.
 
@@ -372,7 +388,7 @@ area. A session takes a feature's open steps P0 first, then in the order listed.
 - **Seen on:** the iPhone 17e Simulator; the time zone read inside the widget needs a real iPhone.
 - **Evidence:** screenshots of the distance and steps premades in each state, and of the delivered notification.
 - **Targets:** `pywidget/ios/App/Device`, `pywidget/ios/Shared/Bridge/LaneDevice.swift`, `pywidget/ios/Shared/Bridge/DeviceSupport.swift`, `pywidget/ios/Shared/ZoneProbe.swift`, `pywidget/ios/Privacy`, `pywidget/ios/App/Runtime/pywidget`.
-- **Test classes for a step:** DeviceModulesTests, DeviceModulesSlice2Tests, LocationAuthorizationChangeTests, LocationCacheFollowUpTests, PremadeSensorStallTests, ZoneProbeTests, BridgeTests.
+- **Test classes for a step:** DeviceModulesFixtureTests, DeviceModulesSlice2Tests, LocationAuthorizationChangeTests, LocationCacheFollowUpTests, ZoneProbeTests, BridgeTests.
 - **Base:** `a42f0cc866`. **By:** Ines, T-4116 (Investor an Investor #41 c6814024711; an Investor #41 c6814286499).
 - **Checklist:** 18 lines, 3 of them held, 1 done since the list was written.
 
@@ -402,7 +418,7 @@ area. A session takes a feature's open steps P0 first, then in the order listed.
 - **Seen on:** the iPhone 17e Simulator.
 - **Evidence:** a screenshot of the widget drawing the fetched answer, and the build check's output.
 - **Targets:** `pywidget/ios/Shared/NetFetch.swift`, `pywidget/ios/Shared/Bridge/NetCall.swift`, `pywidget/ios/App/Runtime/_pywidget_runtime`, `pywidget/ios/App/Runtime/pywidget`, `tools/openssl_gate.py`, `pywidget/ios/project.yml`.
-- **Test classes for a step:** NetFetchTests, NetFetchCharsetTests, HTTPDeviceTests.
+- **Test classes for a step:** NetFetchTests, NetFetchCharsetTests, DeviceCallFixtureTests, BridgeTests.
 - **Base:** `a42f0cc866`. **By:** Ines, T-4116 (Investor an Investor #41 c6814024711; an Investor #41 c6814286499).
 - **Checklist:** 12 lines, 1 of them held, 2 done since the list was written.
 
@@ -805,6 +821,33 @@ Not counted yet: no reuse can exist before this lands. T-4223 (Idris) runs, a we
 It writes here: the window; checks answered by the app key and by the tree key, the gate's apart from the
 lanes'; jobs queued; results; and the saved MacBook minutes as an estimate. It also says whether the done
 condition's first half is met: a land's record that shows a reused pass by its key.
+
+**Live check, 9:10 AM ET 2026-11-14 (Idris). This is not the week's count.** The window runs from the land
+(52aa4b75fb, 7:31 PM 11-12) to the record's last row (8:02 AM 11-14): 66 rows. Jobs: 36 queued, all by the main
+gate's check (slots m, m2, m3 and m5); no lane's land queued one. Results read: 30, of them 24 passes and 6 reds.
+Six jobs had no result read, so nothing was kept for them. Kept passes: 18 are in the store now, one for every pass
+read in its last 24 hours, the newest J-20261114-0751-land-m-269dc7 (T-4431). The 6 older passes are past the 24
+hours and no longer there to read. Each of the 18 rows carries the key I get again from its commit, and has its
+pass row in the record. Reuses: none, by key or by tree, and none should have fired. I took the key of each queued
+job's commit (`python3 -I tools/xc_inputs.py key <commit>`, one rule for the whole window): 36 jobs, 36 keys. Every
+job changed app files against its base, so no job had a pass kept at its key when it was queued. No bug found and
+no tool changed. `tests/xc_inputs_test.py` passes 87 checks and `tests/land_xc_test.py` 50.
+
+The check found two things that the week's count should be read with:
+
+- **The main gate answers a repeat itself, before the key is asked.** `main_gate.py check` looks for its own
+  verdict by its own content key first. T-3900's land at 11:16 PM 11-12 shows it: "already verified:
+  J-20261112-2258-land-m2-5857de passed this content". Every path the gate's key covers is inside the app key
+  (read on three trees: the window's first job, its last, and main), so the same app key is the same gate key, and
+  the gate's verdict is found first. Through the main gate a "reused" row can then only name a pass that another
+  road kept. All 36 jobs were the main gate's, so the row the done condition asks for needs a lane's land or the
+  merge queue's gate, and neither queued a job in this window.
+- **A document under `pywidget/docs` ends a kept pass.** Main took 526 commits after the land, up to 3e2954af2c
+  (8:54 AM 11-14). The key held through 486 of them and changed at 40. At 22 the gate's key changed too. The other
+  18 changed only documents under `pywidget/docs` (reviews, how-it-works, decisions), which the gate's key leaves
+  out and this key keeps in (7.1). T-4431's pass, read at 8:02 AM, stopped matching main two commits after it
+  landed, at a review file (5be3b1f655). It cost no job here: the 36 jobs have 36 different gate keys as well. I
+  propose no change to the rule today; T-4223 weighs it with the week's numbers.
 
 ### 7.5 Not done
 

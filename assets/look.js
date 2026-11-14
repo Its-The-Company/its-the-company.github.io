@@ -3,6 +3,15 @@
 a.setAttribute('aria-expanded',on);var p=document.querySelector(a.hash);if(p)p.classList.toggle('open',on)})}
 b.forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();var h=a.classList.contains('open')?'':a.hash;
 history.replaceState(null,'',h||location.pathname);show(h)})});if(location.hash)show(location.hash)})();
+// T-4316 (friesevan #41 c6862492756): a box (.lk-box) takes the wheel or trackpad only once the pointer has moved inside
+// it. A scroll begun over the page keeps moving the page when a box slides under a still pointer (its wheel is handed to
+// the page here); a finger, the keyboard and VoiceOver send no wheel and work as before. Pinch zoom (ctrl) passes. The
+// wheel listener sits on the boxes only, so the rest of the page still scrolls without waiting on script.
+(function(){var x,y,on=null;document.addEventListener('mousemove',function(e){if(e.clientX===x&&e.clientY===y)return;
+x=e.clientX;y=e.clientY;on=e.target.closest?e.target.closest('.lk-box'):null},{passive:true});
+document.querySelectorAll('.lk-box').forEach(function(b){b.addEventListener('wheel',function(e){
+if(on===b||e.ctrlKey||e.defaultPrevented)return;e.preventDefault();var k=e.deltaMode===1?40:e.deltaMode===2?innerHeight*.9:1;
+scrollBy({left:e.deltaX*k,top:e.deltaY*k,behavior:'instant'})},{passive:false})})})();
 // T-3187 (friesevan #41 c6701678631): (1) a star on each Running and Queued card; the stars are shared by both Investors, in
 // investors/favorites.json on GitHub ({"tasks": [...]}), written with the Investor's own token, one commit a tap, read fresh
 // first and once more if GitHub moved it (as personal.js writes billing.json); no token: the build's stars show, no buttons.

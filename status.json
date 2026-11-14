@@ -1,11 +1,23 @@
 {
  "schema": 1,
- "at": "2026-11-14T06:45:50.158583+00:00",
+ "at": "2026-11-14T07:04:24.892890+00:00",
  "session": {
   "active": false,
   "kind": "",
   "started": null,
-  "flow": [],
+  "flow": [
+   {
+    "t": "T-4101",
+    "name": "Apply the queue audit ledger to the board",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "landing",
+      "at": 1794639291
+     }
+    ]
+   }
+  ],
   "done": [
    {
     "t": "T-4412",
@@ -82,7 +94,7 @@
    }
   ],
   "landed": 18,
-  "failed": 2
+  "failed": 1
  },
  "workers": [],
  "who": "",
@@ -123,36 +135,36 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 434,
+  "runnable_count": 435,
   "blocked_count": 93
  },
  "meter": {
   "five_hour": {
    "pct": 18.0,
-   "resets_at": "2026-11-14T07:40:00.311276+00:00",
+   "resets_at": "2026-11-14T07:39:59.559377+00:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-14T01:30:13.482430-05:00",
+   "read_at": "2026-11-14T01:48:30.131092-05:00",
    "source": "usage",
    "left": 82.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 98.0,
-   "resets_at": "2026-11-15T06:59:59.311295+00:00",
+   "resets_at": "2026-11-15T06:59:59.559393+00:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-14T01:30:13.482430-05:00",
+   "read_at": "2026-11-14T01:48:30.131092-05:00",
    "source": "usage",
    "left": 2.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 4.0,
-   "resets_at": "2026-11-15T07:00:00.311459+00:00",
+   "resets_at": "2026-11-15T06:59:59.559511+00:00",
    "used_words": "of the Fable weekly allowance used",
-   "read_at": "2026-11-14T01:30:13.482430-05:00",
+   "read_at": "2026-11-14T01:48:30.131092-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-14T01:30:13.482430-05:00"
+  "read_at": "2026-11-14T01:48:30.131092-05:00"
  },
  "ui": {
   "week_pct": 0.359,
@@ -167,26 +179,13 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-14T01:45:13-05:00",
+ "next_tick": "2026-11-14T02:03:30-05:00",
  "personal": {
-  "week_pct": 50.24,
-  "usage_pct": 33.9,
-  "work_pct": 80.1,
-  "read_at": "2026-11-14T06:48:00+00:00",
-  "running": [
-   {
-    "lane": "a",
-    "task": "T-4101",
-    "w": "Ines",
-    "k": "ops",
-    "t": "Apply the queue audit ledger to the board",
-    "m": "opus",
-    "e": "xhigh",
-    "at": "2026-11-14T01:18:27-05:00",
-    "n": "Evan",
-    "src": "plan-a"
-   }
-  ]
+  "week_pct": 50.44,
+  "usage_pct": 34.0,
+  "work_pct": 80.2,
+  "read_at": "2026-11-14T07:08:00+00:00",
+  "running": []
  },
  "api_credits": [
   {
@@ -206,7 +205,7 @@
   }
  ],
  "disk": {
-  "free_gb": 19,
+  "free_gb": 17,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -215,14 +214,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-14T01:46:00-05:00",
+   "at": "2026-11-14T02:05:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-14T01:48:00-05:00",
+  "at": "2026-11-14T02:08:00-05:00",
   "mode": null,
   "modes": {
    "main": "spread",
@@ -329,6 +328,13 @@
     "o": "i"
    },
    {
+    "w": "Ines",
+    "k": "ops",
+    "t": "Apply the queue audit ledger, final pass",
+    "s": "next",
+    "o": "c"
+   },
+   {
     "w": "Idris",
     "k": "build",
     "t": "Every premade widget draws on the iPhone",
@@ -346,13 +352,6 @@
     "w": "Idris",
     "k": "measure",
     "t": "Run the device test session for the widget...",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "ops",
-    "t": "Free Mac mini disk by moving data to the SSD",
     "s": "next",
     "o": "c"
    }
@@ -375,7 +374,7 @@
    }
   ],
   "count": {
-   "next": 434,
+   "next": 435,
    "wait": 46,
    "blocked": 47,
    "you": 15
@@ -420,15 +419,24 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-14T06:45:50Z",
-  "s": {}
+  "at": "2026-11-14T07:04:24Z",
+  "s": {
+   "T-4101": [
+    "mergeq",
+    "1st to merge",
+    1794639324892
+   ]
+  },
+  "nm": {
+   "T-4101": "Apply the queue audit ledger to the board"
+  }
  },
  "ln": {
-  "at": "2026-11-14T06:45:50Z",
+  "at": "2026-11-14T07:04:24Z",
   "mq": {
    "n": {
     "checking": 0,
-    "inline": 0,
+    "inline": 1,
     "conflicted": 1,
     "failed": 0,
     "held": 0,
@@ -437,12 +445,12 @@
    },
    "m": {
     "checking": null,
-    "inline": null,
-    "conflicted": 2383,
+    "inline": 9,
+    "conflicted": 2402,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 832
+    "parked": 851
    },
    "cur": [],
    "ld": [
@@ -452,12 +460,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-14T06:45:50Z",
-    "ld": 0.86,
+    "at": "2026-11-14T07:04:25Z",
+    "ld": 0.51,
     "c": 8,
     "sb": 0,
     "dk": [
-     18.9,
+     16.6,
      228.3
     ],
     "ss": [
@@ -467,8 +475,8 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-14T06:17:06Z",
-    "ld": 0.19,
+    "at": "2026-11-14T06:47:36Z",
+    "ld": 0.23,
     "c": 12,
     "sb": 0,
     "dk": [
@@ -479,17 +487,7 @@
    }
   }
  },
- "operators": [
-  {
-   "w": "Operator",
-   "a": "Evan",
-   "sr": 1,
-   "m": "opus",
-   "e": "xhigh",
-   "t": "Work session \u2013 1 task",
-   "at": "2026-11-14T01:18:27-05:00"
-  }
- ],
+ "operators": [],
  "reply": {
   "sent": "2026-11-14T03:18:56Z",
   "seconds": 17.0
@@ -508,12 +506,12 @@
  ],
  "agents_now": {
   "main": 0,
-  "lanes": 1,
-  "total": 1,
-  "at": "1:48 AM",
-  "why": "",
-  "at_iso": "2026-11-14T06:48:00+00:00",
+  "lanes": 0,
+  "total": 0,
+  "at": "2:08 AM",
+  "why": "Waiting for the week's line: this week's usage is ahead of its even pace. Last check 2:07 AM ET.",
+  "at_iso": "2026-11-14T07:08:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 1:48 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 2:08 AM ET</p><p class=\"an-why\">Waiting for the week's line: this week's usage is ahead of its even pace. Last check 2:07 AM ET.</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-14T14:28:30.051234+00:00",
+ "at": "2026-11-14T14:31:31.455337+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -100,7 +100,7 @@
    "task": "[build] T-4434 refresh tap wiring test",
    "model": "opus",
    "started": "2026-11-14T14:01:15.595Z",
-   "seconds": 1634,
+   "seconds": 1815,
    "finished": null,
    "effort": "high"
   },
@@ -109,7 +109,7 @@
    "task": "[site] T-4316 scroll boxes pointer inside",
    "model": "opus",
    "started": "2026-11-14T14:13:10.608Z",
-   "seconds": 919,
+   "seconds": 1100,
    "finished": null,
    "effort": "high"
   }
@@ -185,7 +185,7 @@
   "week_pct": 52.14,
   "usage_pct": 34.5,
   "work_pct": 80.2,
-  "read_at": "2026-11-14T14:28:00+00:00",
+  "read_at": "2026-11-14T14:31:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -248,7 +248,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-14T09:28:00-05:00",
+  "at": "2026-11-14T09:31:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -483,20 +483,26 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-14T14:28:30Z",
+  "at": "2026-11-14T14:31:19Z",
   "s": {
    "T-4434": [
+    "merging",
+    "Mac tests at the main gate",
+    1794666559921
+   ],
+   "T-4316": [
     "testing",
     "its own tests, in its copy",
-    1794665310051
+    1794666679921
    ]
   },
   "nm": {
-   "T-4434": "Test the refresh tap's wiring in the view"
+   "T-4434": "Test the refresh tap's wiring in the view",
+   "T-4316": "Scroll boxes scroll only with the pointer inside them"
   }
  },
  "ln": {
-  "at": "2026-11-14T14:28:30Z",
+  "at": "2026-11-14T14:31:19Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -510,11 +516,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 2846,
+    "conflicted": 2849,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1292
+    "parked": 1295
    },
    "cur": [],
    "ld": [
@@ -524,12 +530,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-14T14:28:04Z",
-    "ld": 45.6,
+    "at": "2026-11-14T14:30:32Z",
+    "ld": 29.08,
     "c": 8,
     "sb": 0,
     "dk": [
-     16.0,
+     16.6,
      228.3
     ],
     "ss": [
@@ -600,10 +606,10 @@
   "main": 2,
   "lanes": 2,
   "total": 4,
-  "at": "9:28 AM",
+  "at": "9:31 AM",
   "why": "",
-  "at_iso": "2026-11-14T14:28:00+00:00",
+  "at_iso": "2026-11-14T14:31:00+00:00",
   "started": "8:56 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 2, started 8:56 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 9:28 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 2, started 8:56 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 9:31 AM ET</p></section>"
  }
 }

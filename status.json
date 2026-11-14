@@ -1,23 +1,11 @@
 {
  "schema": 1,
- "at": "2026-11-14T14:40:38.265303+00:00",
+ "at": "2026-11-14T14:43:43.669082+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-14T08:56:15-05:00",
-  "flow": [
-   {
-    "t": "T-3279",
-    "name": "Draw a premade picked before the first app open",
-    "w": "Idris",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1794664766
-     }
-    ]
-   }
-  ],
+  "flow": [],
   "done": [
    {
     "t": "T-4103",
@@ -97,26 +85,34 @@
  },
  "workers": [
   {
-   "name": "idris",
-   "task": "[build] T-4434 refresh tap wiring test",
-   "model": "opus",
-   "started": "2026-11-14T14:01:15.595Z",
-   "seconds": 2362,
-   "finished": null,
-   "effort": "high"
-  },
-  {
    "name": "maren",
    "task": "[site] T-4316 scroll boxes pointer inside",
    "model": "opus",
    "started": "2026-11-14T14:13:10.608Z",
-   "seconds": 1647,
+   "seconds": 1833,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "idris",
+   "task": "[build] T-4440 bundled render guard + T-4441 test",
+   "model": "opus",
+   "started": "2026-11-14T14:43:01.260Z",
+   "seconds": 42,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Idris, Maren",
+ "who": "Maren, Idris",
  "recent": [
+  {
+   "name": "idris",
+   "task": "[build] T-4434 refresh tap wiring test",
+   "model": "opus",
+   "started": "2026-11-14T14:01:15.595Z",
+   "seconds": null,
+   "finished": "2026-11-14T14:42:21.461000+00:00"
+  },
   {
    "name": "pernille",
    "task": "[review] T-4439 premade first-draw review",
@@ -137,7 +133,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 354,
+  "runnable_count": 352,
   "blocked_count": 86
  },
  "meter": {
@@ -186,8 +182,20 @@
   "week_pct": 52.14,
   "usage_pct": 34.5,
   "work_pct": 80.2,
-  "read_at": "2026-11-14T14:40:00+00:00",
+  "read_at": "2026-11-14T14:43:00+00:00",
   "running": [
+   {
+    "lane": "b",
+    "task": "T-4444",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Run the queue check on each change and between sessions",
+    "m": "opus",
+    "e": "xhigh",
+    "at": "2026-11-14T09:41:25-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
+   },
    {
     "lane": "b2",
     "task": "T-4196",
@@ -249,7 +257,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-14T09:40:00-05:00",
+  "at": "2026-11-14T09:43:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -266,20 +274,20 @@
  },
  "lanes": [
   {
-   "name": "Idris",
-   "state": "running",
-   "task": "[build] T-4434 refresh tap wiring test",
-   "model": "opus",
-   "since": "2026-11-14T14:01:15.595Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
    "name": "Maren",
    "state": "running",
    "task": "[site] T-4316 scroll boxes pointer inside",
    "model": "opus",
    "since": "2026-11-14T14:13:10.608Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
+   "name": "Idris",
+   "state": "running",
+   "task": "[build] T-4440 bundled render guard + T-4441 test",
+   "model": "opus",
+   "since": "2026-11-14T14:43:01.260Z",
    "next": [],
    "effort": "high"
   },
@@ -319,16 +327,6 @@
  "tasks": {
   "run": [
    {
-    "w": "Idris",
-    "k": "build",
-    "t": "Test the refresh tap's wiring in the view",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-14T14:01:15.595Z",
-    "o": "c",
-    "task": "T-4434"
-   },
-   {
     "w": "Maren",
     "k": "site",
     "t": "Scroll boxes scroll only with the pointer inside them",
@@ -337,6 +335,16 @@
     "at": "2026-11-14T14:13:10.608Z",
     "o": "c",
     "task": "T-4316"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "Bundled first render only without a saved premade file",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-14T14:43:01.260Z",
+    "o": "c",
+    "task": "T-4440"
    }
   ],
   "src": "plan",
@@ -414,30 +422,38 @@
   ],
   "done": [
    {
+    "w": "Idris+pernille",
+    "t": "A premade widget placed on the Home Screen before the app is first opened now shows a real first...",
+    "at": "2026-11-14T09:42:00-05:00"
+   },
+   {
+    "w": "Idris",
+    "t": "The refresh button on a placed widget now has a test that fails if the widget stops telling the...",
+    "at": "2026-11-14T09:41:00-05:00"
+   },
+   {
     "w": "Pernille",
     "t": "An independent review found that a premade placed before the app's first open now draws its own...",
     "at": "2026-11-14T09:10:00-05:00"
-   },
-   {
-    "w": "Operator",
-    "t": "Main passes its Xcode checks again: job J-20261114-0751-land-m-269dc7 on the MacBook no longer...",
-    "at": "2026-11-14T08:54:00-05:00"
-   },
-   {
-    "w": "Ines",
-    "t": "The task list clean-up took its last ten stale notices off the board, after noting on 22 open...",
-    "at": "2026-11-14T08:47:00-05:00"
    }
   ],
   "count": {
-   "next": 354,
+   "next": 352,
    "wait": 41,
    "blocked": 45,
    "you": 15
   },
   "fin": {
-   "n": 1,
+   "n": 3,
    "rows": [
+    [
+     "T-3279",
+     "Draw a premade picked before..."
+    ],
+    [
+     "T-4434",
+     "Test the refresh tap's..."
+    ],
     [
      "T-4439",
      "Review the first draw of..."
@@ -484,26 +500,20 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-14T14:40:38Z",
+  "at": "2026-11-14T14:43:26Z",
   "s": {
-   "T-4434": [
-    "mergetest",
-    "iPhone tests on the MacBook",
-    null
-   ],
    "T-4316": [
     "testing",
     "its own tests, in its copy",
-    1794666818265
+    1794666806461
    ]
   },
   "nm": {
-   "T-4434": "Test the refresh tap's wiring in the view",
    "T-4316": "Scroll boxes scroll only with the pointer inside them"
   }
  },
  "ln": {
-  "at": "2026-11-14T14:40:38Z",
+  "at": "2026-11-14T14:43:26Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -517,11 +527,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 2858,
+    "conflicted": 2861,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1304
+    "parked": 1307
    },
    "cur": [],
    "ld": [
@@ -531,12 +541,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-14T14:40:16Z",
-    "ld": 8.0,
+    "at": "2026-11-14T14:43:27Z",
+    "ld": 7.44,
     "c": 8,
     "sb": 0,
     "dk": [
-     16.6,
+     16.5,
      228.3
     ],
     "ss": [
@@ -546,12 +556,12 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-14T14:32:55Z",
-    "ld": 0.31,
+    "at": "2026-11-14T14:40:26Z",
+    "ld": 1.74,
     "c": 12,
     "sb": 0,
     "dk": [
-     369.6,
+     369.7,
      926.4
     ],
     "sn": []
@@ -565,8 +575,17 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 3 tasks",
+   "t": "Work session \u2013 5 tasks",
    "at": "2026-11-14T08:56:15-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Jeremy",
+   "sr": 1,
+   "m": "opus",
+   "e": "xhigh",
+   "t": "Work session \u2013 1 task",
+   "at": "2026-11-14T09:41:25-05:00"
   },
   {
    "w": "Operator",
@@ -605,12 +624,12 @@
  ],
  "agents_now": {
   "main": 2,
-  "lanes": 2,
-  "total": 4,
-  "at": "9:40 AM",
+  "lanes": 3,
+  "total": 5,
+  "at": "9:43 AM",
   "why": "",
-  "at_iso": "2026-11-14T14:40:00+00:00",
+  "at_iso": "2026-11-14T14:43:00+00:00",
   "started": "8:56 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 2, started 8:56 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 9:40 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 2, started 8:56 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 9:43 AM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-14T01:50:17.757170+00:00",
+ "at": "2026-11-14T01:53:23.048238+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -99,8 +99,27 @@
   "landed": 11,
   "failed": 2
  },
- "workers": [],
- "who": "",
+ "workers": [
+  {
+   "name": "odalys",
+   "task": "[tools] T-4129 retire Set aside stage on Home",
+   "model": "opus",
+   "started": "2026-11-14T01:50:20.520Z",
+   "seconds": 182,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-4402 audit ledger rows carry prev",
+   "model": "opus",
+   "started": "2026-11-14T01:50:32.266Z",
+   "seconds": 170,
+   "finished": null,
+   "effort": "high"
+  }
+ ],
+ "who": "Odalys x2",
  "recent": [
   {
    "name": "idris",
@@ -171,7 +190,7 @@
   "week_pct": 47.45,
   "usage_pct": 33.5,
   "work_pct": 79.8,
-  "read_at": "2026-11-14T01:50:00+00:00",
+  "read_at": "2026-11-14T01:53:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -201,14 +220,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-13T20:47:00-05:00",
+   "at": "2026-11-13T20:52:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-13T20:50:00-05:00",
+  "at": "2026-11-13T20:53:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -225,6 +244,15 @@
  },
  "lanes": [
   {
+   "name": "Odalys",
+   "state": "running",
+   "task": "[tools] T-4129 retire Set aside stage on Home",
+   "model": "opus",
+   "since": "2026-11-14T01:50:20.520Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
    "name": "Idris",
    "state": "next",
    "task": "Idris, P0, reopens T-3393 c6713953911, c6725543994),...",
@@ -236,14 +264,6 @@
    "name": "Pernille",
    "state": "next",
    "task": "Pernille, P1, premades and gallery take the age line...",
-   "model": null,
-   "since": null,
-   "next": []
-  },
-  {
-   "name": "Odalys",
-   "state": "next",
-   "task": "Odalys, P1, T-1776 stage 3, Reports with every document...",
    "model": null,
    "since": null,
    "next": []
@@ -274,7 +294,28 @@
   }
  ],
  "tasks": {
-  "run": [],
+  "run": [
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Retire the Set aside stage on Home",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-14T01:50:20.520Z",
+    "o": "c",
+    "task": "T-4129"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Have the audit ledger's writers fill in prev",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-14T01:50:32.266Z",
+    "o": "c",
+    "task": "T-4402"
+   }
+  ],
   "src": "plan",
   "open": [
    {
@@ -432,11 +473,11 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-14T01:50:00Z",
+  "at": "2026-11-14T01:53:05Z",
   "s": {}
  },
  "ln": {
-  "at": "2026-11-14T01:50:00Z",
+  "at": "2026-11-14T01:53:05Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -450,11 +491,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 1232,
+    "conflicted": 1235,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 2076
+    "parked": 2079
    },
    "cur": [],
    "ld": [
@@ -464,8 +505,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-14T01:50:01Z",
-    "ld": 0.35,
+    "at": "2026-11-14T01:52:19Z",
+    "ld": 0.86,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -498,32 +539,20 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Inbox \u2013 Jeremy's 8:49 PM Message on GitHub",
-   "at": "2026-11-13T20:49:42-05:00"
+   "t": "Work session \u2013 2 tasks",
+   "at": "2026-11-13T20:50:41-05:00"
   }
  ],
  "reply": {
-  "sent": "2026-11-14T01:33:40Z",
-  "seconds": 48.0
+  "sent": "2026-11-14T01:49:10Z",
+  "seconds": 90.0
  },
- "inbox": [
-  {
-   "id": "c6869671543",
-   "state": "received",
-   "position": 1,
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "Yes, confirm when you can. All hands..."
-  }
- ],
+ "inbox": [],
  "trimmed": [
   "lane_next",
   "queue_text",
   "task_done",
   "fin_short",
-  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -531,13 +560,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 0,
+  "main": 2,
   "lanes": 0,
-  "total": 0,
-  "at": "8:50 PM",
-  "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
-  "at_iso": "2026-11-14T01:50:00+00:00",
+  "total": 2,
+  "at": "8:53 PM",
+  "why": "",
+  "at_iso": "2026-11-14T01:53:00+00:00",
   "started": "8:10 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0, started 8:10 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 8:50 PM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 8:10 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 8:53 PM ET</p></section>"
  }
 }

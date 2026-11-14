@@ -33,7 +33,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - Lesson: hold a pre-written rule to its words when the evidence lands close ("no input" is not "no answer"); the point of writing it first was to not bend it after. Its words = the committed entry (OPT-049).
 - L5 (T-1012): never accept a standing red; a SKIP with a reason, or it hides the next one.
 - pywidget build — product chosen 2026-10-25; v1 scope, money path, hiring, board state at build start
-- queue audit T-4092 — plan, ledger, slices; group 2 (T-4197) done 11-13, group 1's apply (T-4117) held; how to apply one group
+- queue audit T-4092 — groups 2, 3 done 11-13; group 1's apply (T-4117) held; carry unlanded rows; how to apply one group
 - task process redesign T-4122 — card, one checker, feature unit, fitted iPhone group size; who builds, dates
 - efficiency review T-4124 — a metrics row's `seconds` can be its whole run's time on every row; queue a note before writing that it exists
 - account fixes T-4305 — unified session: no; #303 pending; T-4314, T-4315; re-read 11-20

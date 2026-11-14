@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-14T13:41:21.932868+00:00",
+ "at": "2026-11-14T13:44:24.431818+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -90,22 +90,20 @@
     "end_at": 1794627020
    }
   ],
-  "landed": 13,
+  "landed": 12,
   "failed": 0
  },
- "workers": [
+ "workers": [],
+ "who": "",
+ "recent": [
   {
    "name": "odalys",
    "task": "[tools] T-4432 released wait hides pinned line",
    "model": "opus",
    "started": "2026-11-14T12:40:55.020Z",
-   "seconds": 3626,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Odalys",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-14T13:42:29.956000+00:00"
+  },
   {
    "name": "pernille",
    "task": "[review] T-4418 refresh tap in widget renderer",
@@ -134,8 +132,8 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 351,
-  "blocked_count": 87
+  "runnable_count": 352,
+  "blocked_count": 86
  },
  "meter": {
   "five_hour": {
@@ -183,7 +181,7 @@
   "week_pct": 50.73,
   "usage_pct": 34.1,
   "work_pct": 80.3,
-  "read_at": "2026-11-14T13:41:00+00:00",
+  "read_at": "2026-11-14T13:44:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -198,15 +196,16 @@
     "src": "plan-a"
    },
    {
-    "lane": "a2",
-    "task": "T-4228",
+    "lane": "b2",
+    "task": "T-4195",
+    "w": "Idris",
     "k": "tools",
-    "t": "Group new app tasks into features automatically",
+    "t": "Reuse an iPhone pass when the app's inputs are unchanged",
     "m": "opus",
     "e": "xhigh",
-    "at": "2026-11-14T07:50:03-05:00",
-    "n": "Evan",
-    "src": "plan-a"
+    "at": "2026-11-14T08:42:04-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
    }
   ]
  },
@@ -244,7 +243,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-14T08:41:00-05:00",
+  "at": "2026-11-14T08:44:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -261,15 +260,6 @@
  },
  "lanes": [
   {
-   "name": "Odalys",
-   "state": "running",
-   "task": "[tools] T-4432 released wait hides pinned line",
-   "model": "opus",
-   "since": "2026-11-14T12:40:55.020Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
    "name": "Idris",
    "state": "next",
    "task": "Idris, P2, from T-4238 (Pernille's review, from T-3900,...",
@@ -281,6 +271,14 @@
    "name": "Pernille",
    "state": "next",
    "task": "Pernille, P1, premades and gallery take the age line...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
+   "name": "Odalys",
+   "state": "next",
+   "task": "Odalys, P1, build T-1776 stages 2-4 now (T-2073, T-2074,...",
    "model": null,
    "since": null,
    "next": []
@@ -311,18 +309,7 @@
   }
  ],
  "tasks": {
-  "run": [
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Stop a released wait from hiding a pinned line",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-14T12:40:55.020Z",
-    "o": "c",
-    "task": "T-4432"
-   }
-  ],
+  "run": [],
   "src": "plan",
   "open": [
    {
@@ -398,6 +385,11 @@
   ],
   "done": [
    {
+    "w": "Odalys",
+    "t": "When a held task is released, its waiting mark is now crossed out, so it can't keep the task off...",
+    "at": "2026-11-14T08:42:00-05:00"
+   },
+   {
     "w": "Pernille",
     "t": "Checked Idris's change that makes the widget's refresh button actually refresh: the logic is...",
     "at": "2026-11-14T08:13:00-05:00"
@@ -406,22 +398,21 @@
     "w": "Idris",
     "t": "The ready-made widgets now draw on the Investors' iPhone, not just Countdown: a file check...",
     "at": "2026-11-14T07:40:00-05:00"
-   },
-   {
-    "w": "Operator",
-    "t": "The main folder's read of parked work matches what lane a read last night: ten parked-work...",
-    "at": "2026-11-14T07:38:00-05:00"
    }
   ],
   "count": {
-   "next": 351,
-   "wait": 43,
+   "next": 352,
+   "wait": 42,
    "blocked": 44,
-   "you": 16
+   "you": 15
   },
   "fin": {
-   "n": 2,
+   "n": 3,
    "rows": [
+    [
+     "T-4432",
+     "Stop a released wait from..."
+    ],
     [
      "T-4418",
      "Review the refresh tap in..."
@@ -472,26 +463,20 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-14T13:41:11Z",
+  "at": "2026-11-14T13:44:06Z",
   "s": {
    "T-4422": [
     "merging",
-    "Merging onto main",
-    1794663671731
-   ],
-   "T-4432": [
-    "merging",
-    "Mac tests at the main gate",
-    1794662111731
+    "Rebasing onto current main",
+    1794663846191
    ]
   },
   "nm": {
-   "T-4422": "Apply the queue audit ledger, final pass",
-   "T-4432": "Stop a released wait from hiding a pinned line"
+   "T-4422": "Apply the queue audit ledger, final pass"
   }
  },
  "ln": {
-  "at": "2026-11-14T13:41:11Z",
+  "at": "2026-11-14T13:44:06Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -505,18 +490,18 @@
    "m": {
     "checking": 0,
     "inline": null,
-    "conflicted": 2798,
+    "conflicted": 2801,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1247
+    "parked": 1250
    },
    "cur": [
     [
      [
       "T-4422"
      ],
-     "going onto main",
+     "lining up with main",
      "Mac mini",
      0
     ]
@@ -528,8 +513,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-14T13:41:13Z",
-    "ld": 8.48,
+    "at": "2026-11-14T13:44:08Z",
+    "ld": 8.05,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -562,7 +547,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 1 task",
+   "t": "Work session",
    "at": "2026-11-14T07:38:57-05:00"
   },
   {
@@ -576,12 +561,12 @@
   },
   {
    "w": "Operator",
-   "a": "Evan",
+   "a": "Jeremy",
    "sr": 1,
    "m": "opus",
    "e": "xhigh",
    "t": "Work session \u2013 1 task",
-   "at": "2026-11-14T07:50:02-05:00"
+   "at": "2026-11-14T08:42:03-05:00"
   }
  ],
  "reply": {
@@ -601,13 +586,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 1,
+  "main": 0,
   "lanes": 2,
-  "total": 3,
-  "at": "8:41 AM",
+  "total": 2,
+  "at": "8:44 AM",
   "why": "",
-  "at_iso": "2026-11-14T13:41:00+00:00",
+  "at_iso": "2026-11-14T13:44:00+00:00",
   "started": "7:33 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 1, started 7:33 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 8:41 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0, started 7:33 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 8:44 AM ET</p></section>"
  }
 }

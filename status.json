@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-14T14:22:21.162528+00:00",
+ "at": "2026-11-14T14:25:15.919025+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -100,7 +100,7 @@
    "task": "[build] T-4434 refresh tap wiring test",
    "model": "opus",
    "started": "2026-11-14T14:01:15.595Z",
-   "seconds": 1265,
+   "seconds": 1440,
    "finished": null,
    "effort": "high"
   },
@@ -109,7 +109,7 @@
    "task": "[site] T-4316 scroll boxes pointer inside",
    "model": "opus",
    "started": "2026-11-14T14:13:10.608Z",
-   "seconds": 550,
+   "seconds": 725,
    "finished": null,
    "effort": "high"
   }
@@ -185,7 +185,7 @@
   "week_pct": 52.14,
   "usage_pct": 34.5,
   "work_pct": 80.2,
-  "read_at": "2026-11-14T14:22:00+00:00",
+  "read_at": "2026-11-14T14:25:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -248,7 +248,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-14T09:22:00-05:00",
+  "at": "2026-11-14T09:25:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -483,26 +483,20 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-14T14:22:03Z",
+  "at": "2026-11-14T14:25:15Z",
   "s": {
    "T-4434": [
     "testing",
     "Mac Mini \u00b7 test",
     null
-   ],
-   "T-3279": [
-    "testq",
-    "1st for a Simulator",
-    1794665583045
    ]
   },
   "nm": {
-   "T-4434": "Test the refresh tap's wiring in the view",
-   "T-3279": "Draw a premade picked before the first app open"
+   "T-4434": "Test the refresh tap's wiring in the view"
   }
  },
  "ln": {
-  "at": "2026-11-14T14:22:03Z",
+  "at": "2026-11-14T14:25:15Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -516,11 +510,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 2839,
+    "conflicted": 2842,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1285
+    "parked": 1288
    },
    "cur": [],
    "ld": [
@@ -530,8 +524,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-14T14:21:43Z",
-    "ld": 52.95,
+    "at": "2026-11-14T14:25:26Z",
+    "ld": 54.01,
     "c": 8,
     "sb": 1,
     "dk": [
@@ -547,12 +541,12 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-14T14:04:07Z",
-    "ld": 2.45,
+    "at": "2026-11-14T14:16:35Z",
+    "ld": 2.09,
     "c": 12,
     "sb": 0,
     "dk": [
-     370.1,
+     370.0,
      926.4
     ],
     "sn": []
@@ -573,8 +567,6 @@
    "w": "Operator",
    "a": "Jeremy",
    "sr": 1,
-   "m": "opus",
-   "e": "xhigh",
    "t": "Work session \u2013 1 task",
    "at": "2026-11-14T09:06:03-05:00"
   },
@@ -582,8 +574,6 @@
    "w": "Operator",
    "a": "Jeremy",
    "sr": 1,
-   "m": "opus",
-   "e": "xhigh",
    "t": "Work session \u2013 1 task",
    "at": "2026-11-14T09:06:14-05:00"
   }
@@ -608,10 +598,10 @@
   "main": 2,
   "lanes": 2,
   "total": 4,
-  "at": "9:22 AM",
+  "at": "9:25 AM",
   "why": "",
-  "at_iso": "2026-11-14T14:22:00+00:00",
+  "at_iso": "2026-11-14T14:25:00+00:00",
   "started": "8:56 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 2, started 8:56 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 9:22 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 2, started 8:56 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 9:25 AM ET</p></section>"
  }
 }

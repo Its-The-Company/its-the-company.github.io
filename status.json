@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-14T05:01:18.703947+00:00",
+ "at": "2026-11-14T05:04:23.962980+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -94,7 +94,7 @@
    "task": "[site] T-4313 Merged section on Home",
    "model": "opus",
    "started": "2026-11-14T04:04:21.376Z",
-   "seconds": 3417,
+   "seconds": 3602,
    "finished": null,
    "effort": "high"
   },
@@ -103,7 +103,7 @@
    "task": "[tools] T-4411 start accounts when usage returns",
    "model": "opus",
    "started": "2026-11-14T04:17:33.902Z",
-   "seconds": 2624,
+   "seconds": 2810,
    "finished": null,
    "effort": "high"
   },
@@ -112,7 +112,7 @@
    "task": "[build] T-4414 rerun rule ages last run",
    "model": "opus",
    "started": "2026-11-14T04:58:58.328Z",
-   "seconds": 140,
+   "seconds": 325,
    "finished": null,
    "effort": "high"
   }
@@ -204,7 +204,7 @@
   "week_pct": 47.87,
   "usage_pct": 33.5,
   "work_pct": 79.6,
-  "read_at": "2026-11-14T05:01:00+00:00",
+  "read_at": "2026-11-14T05:04:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -241,7 +241,7 @@
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-14T00:01:00-05:00",
+  "at": "2026-11-14T00:04:00-05:00",
   "mode": null,
   "modes": {
    "main": "spread",
@@ -507,26 +507,32 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-14T05:01:11Z",
+  "at": "2026-11-14T05:04:04Z",
   "s": {
+   "T-4414": [
+    "merging",
+    "Mac tests at the main gate",
+    1794632584446
+   ],
    "T-4411": [
     "testing",
     "its own tests, in its copy",
-    1794630191185
+    1794630184446
    ],
    "T-4313": [
     "testing",
     "its own tests, in its copy",
-    1794631931185
+    1794631924446
    ]
   },
   "nm": {
+   "T-4414": "Make the rerun rule age the last run",
    "T-4411": "Start accounts on the audit when usage returns",
    "T-4313": "Add a Merged section and fold sections on Home"
   }
  },
  "ln": {
-  "at": "2026-11-14T05:01:11Z",
+  "at": "2026-11-14T05:04:04Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -540,11 +546,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 2278,
+    "conflicted": 2281,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 727
+    "parked": 730
    },
    "cur": [],
    "ld": [
@@ -554,8 +560,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-14T05:00:26Z",
-    "ld": 8.62,
+    "at": "2026-11-14T05:04:05Z",
+    "ld": 7.31,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -614,10 +620,10 @@
   "main": 3,
   "lanes": 0,
   "total": 3,
-  "at": "12:01 AM",
+  "at": "12:04 AM",
   "why": "",
-  "at_iso": "2026-11-14T05:01:00+00:00",
+  "at_iso": "2026-11-14T05:04:00+00:00",
   "started": "9:30 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 9:30 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 12:01 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 9:30 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 12:04 AM ET</p></section>"
  }
 }

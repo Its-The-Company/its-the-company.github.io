@@ -1,10 +1,10 @@
 {
  "schema": 1,
- "at": "2026-11-14T07:57:58.688845+00:00",
+ "at": "2026-11-14T08:02:23.852275+00:00",
  "session": {
-  "active": true,
-  "kind": "inbox",
-  "started": "2026-11-14T02:57:17-05:00",
+  "active": false,
+  "kind": "",
+  "started": null,
   "flow": [],
   "done": [
    {
@@ -87,7 +87,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 347,
+  "runnable_count": 348,
   "blocked_count": 87
  },
  "meter": {
@@ -119,8 +119,8 @@
   "read_at": "2026-11-14T02:53:18.626982-05:00"
  },
  "ui": {
-  "week_pct": 0.385,
-  "five_hour_pct": 0.132,
+  "week_pct": 0.391,
+  "five_hour_pct": 0.184,
   "caps_pct": {
    "week": 3.0,
    "five_hour": 5.0
@@ -131,12 +131,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": null,
+ "next_tick": "2026-11-14T03:12:06-05:00",
  "personal": {
   "week_pct": 50.78,
   "usage_pct": 34.1,
   "work_pct": 80.3,
-  "read_at": "2026-11-14T08:00:00+00:00",
+  "read_at": "2026-11-14T08:03:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -157,7 +157,7 @@
   }
  ],
  "disk": {
-  "free_gb": 16,
+  "free_gb": 20,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -166,14 +166,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-14T02:58:00-05:00",
+   "at": "2026-11-14T03:01:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-14T03:00:00-05:00",
+  "at": "2026-11-14T03:03:00-05:00",
   "mode": null,
   "modes": {
    "main": "spread",
@@ -181,13 +181,9 @@
    "b": "midnight"
   }
  },
- "next_tick_why": "session",
+ "next_tick_why": "last_tick",
  "idle": null,
- "pool": {
-  "why": "Spread: usage is ahead of the week's even pace to Sat 23:00, so work waits until the line passes; the machine allows 17 (held: too few lands in 3 hours to judge a raise)",
-  "n": 1,
-  "at": "2026-11-14T02:57:06.922598-05:00"
- },
+ "pool": null,
  "lanes": [
   {
    "name": "Idris",
@@ -240,7 +236,6 @@
  ],
  "tasks": {
   "run": [],
-  "src": "plan",
   "open": [
    {
     "w": "Odalys",
@@ -331,14 +326,10 @@
    }
   ],
   "count": {
-   "next": 347,
+   "next": 348,
    "wait": 43,
    "blocked": 44,
    "you": 15
-  },
-  "fin": {
-   "n": 0,
-   "rows": []
   }
  },
  "qr": [
@@ -380,11 +371,11 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-14T07:57:41Z",
+  "at": "2026-11-14T08:02:23Z",
   "s": {}
  },
  "ln": {
-  "at": "2026-11-14T07:57:41Z",
+  "at": "2026-11-14T08:02:23Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -398,11 +389,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 2455,
+    "conflicted": 2460,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 904
+    "parked": 909
    },
    "cur": [],
    "ld": [
@@ -412,12 +403,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-14T07:56:58Z",
-    "ld": 0.63,
+    "at": "2026-11-14T08:01:42Z",
+    "ld": 0.65,
     "c": 8,
     "sb": 0,
     "dk": [
-     12.1,
+     20.2,
      228.3
     ],
     "ss": [
@@ -428,17 +419,7 @@
    }
   }
  },
- "operators": [
-  {
-   "w": "Operator",
-   "a": "Main plan",
-   "sr": 1,
-   "m": "sonnet",
-   "e": "low",
-   "t": "Inbox session",
-   "at": "2026-11-14T02:57:37-05:00"
-  }
- ],
+ "operators": [],
  "reply": {
   "sent": "2026-11-14T07:56:39Z",
   "seconds": 57.0
@@ -458,10 +439,10 @@
   "main": 0,
   "lanes": 0,
   "total": 0,
-  "at": "3:00 AM",
-  "why": "Between sessions: no session is running. Last check 2:57 AM ET.",
-  "at_iso": "2026-11-14T08:00:00+00:00",
+  "at": "3:03 AM",
+  "why": "Waiting for the week's line: this week's usage is ahead of its even pace. Last check 3:03 AM ET.",
+  "at_iso": "2026-11-14T08:03:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 3:00 AM ET</p><p class=\"an-why\">Between sessions: no session is running. Last check 2:57 AM ET.</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 3:03 AM ET</p><p class=\"an-why\">Waiting for the week's line: this week's usage is ahead of its even pace. Last check 3:03 AM ET.</p></section>"
  }
 }

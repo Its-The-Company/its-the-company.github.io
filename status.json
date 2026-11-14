@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-14T04:15:22.427904+00:00",
+ "at": "2026-11-14T04:18:27.391246+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -90,20 +90,11 @@
  },
  "workers": [
   {
-   "name": "odalys",
-   "task": "[tools] T-4314 personal session cost line",
-   "model": "opus",
-   "started": "2026-11-14T02:33:48.956Z",
-   "seconds": 6093,
-   "finished": null,
-   "effort": "high"
-  },
-  {
    "name": "idris",
    "task": "[build] T-0678 slice 2 wire rule and intent",
    "model": "opus",
    "started": "2026-11-14T03:11:48.167Z",
-   "seconds": 3814,
+   "seconds": 3999,
    "finished": null,
    "effort": "high"
   },
@@ -112,13 +103,30 @@
    "task": "[site] T-4313 Merged section on Home",
    "model": "opus",
    "started": "2026-11-14T04:04:21.376Z",
-   "seconds": 661,
+   "seconds": 846,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-4411 start accounts when usage returns",
+   "model": "opus",
+   "started": "2026-11-14T04:17:33.902Z",
+   "seconds": 53,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Odalys, Idris, Maren",
+ "who": "Idris, Maren, Odalys",
  "recent": [
+  {
+   "name": "odalys",
+   "task": "[tools] T-4314 personal session cost line",
+   "model": "opus",
+   "started": "2026-11-14T02:33:48.956Z",
+   "seconds": null,
+   "finished": "2026-11-14T04:16:22.660000+00:00"
+  },
   {
    "name": "maren",
    "task": "[site] T-4308 account sessions in In flight",
@@ -142,14 +150,6 @@
    "started": "2026-11-14T02:37:18.355Z",
    "seconds": null,
    "finished": "2026-11-14T02:45:03.424000+00:00"
-  },
-  {
-   "name": "pernille",
-   "task": "[review] T-0299 package hold check",
-   "model": "opus",
-   "started": "2026-11-14T02:34:25.891Z",
-   "seconds": null,
-   "finished": "2026-11-14T02:36:45.390000+00:00"
   }
  ],
  "queue": {
@@ -160,19 +160,19 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 8.0,
+   "pct": 9.0,
    "resets_at": "2026-11-14T02:40:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-13T23:11:39.239122-05:00",
+   "read_at": "2026-11-13T23:17:56.940223-05:00",
    "source": "live",
-   "left": 92.0,
+   "left": 91.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 96.0,
    "resets_at": "2026-11-15T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-13T23:11:39.239122-05:00",
+   "read_at": "2026-11-13T23:17:56.940223-05:00",
    "source": "live",
    "left": 4.0,
    "left_words": "of your weekly allowance left"
@@ -184,7 +184,7 @@
    "read_at": "2026-11-13T21:29:37.729013-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-13T23:11:39.239122-05:00"
+  "read_at": "2026-11-13T23:17:56.940223-05:00"
  },
  "ui": {
   "week_pct": 0.36,
@@ -204,7 +204,7 @@
   "week_pct": 47.87,
   "usage_pct": 33.5,
   "work_pct": 79.6,
-  "read_at": "2026-11-14T04:15:00+00:00",
+  "read_at": "2026-11-14T04:18:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -234,14 +234,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-13T23:11:00-05:00",
+   "at": "2026-11-13T23:17:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-13T23:15:00-05:00",
+  "at": "2026-11-13T23:18:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -258,15 +258,6 @@
  },
  "lanes": [
   {
-   "name": "Odalys",
-   "state": "running",
-   "task": "[tools] T-4314 personal session cost line",
-   "model": "opus",
-   "since": "2026-11-14T02:33:48.956Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
    "name": "Idris",
    "state": "running",
    "task": "[build] T-0678 slice 2 wire rule and intent",
@@ -281,6 +272,15 @@
    "task": "[site] T-4313 Merged section on Home",
    "model": "opus",
    "since": "2026-11-14T04:04:21.376Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
+   "name": "Odalys",
+   "state": "running",
+   "task": "[tools] T-4411 start accounts when usage returns",
+   "model": "opus",
+   "since": "2026-11-14T04:17:33.902Z",
    "next": [],
    "effort": "high"
   },
@@ -312,16 +312,6 @@
  "tasks": {
   "run": [
    {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Record what each personal session costs",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-14T02:33:48.956Z",
-    "o": "c",
-    "task": "T-4314"
-   },
-   {
     "w": "Idris",
     "k": "build",
     "t": "Run the refresh button inside the widget extension",
@@ -340,6 +330,16 @@
     "at": "2026-11-14T04:04:21.376Z",
     "o": "c",
     "task": "T-4313"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Start accounts on the audit when usage returns",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-14T04:17:33.902Z",
+    "o": "c",
+    "task": "T-4411"
    }
   ],
   "src": "plan",
@@ -507,32 +507,26 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-14T04:15:22Z",
+  "at": "2026-11-14T04:18:14Z",
   "s": {
    "T-0678": [
     "mergetest",
     "iPhone tests on the MacBook",
     null
    ],
-   "T-4314": [
-    "merging",
-    "Mac tests at the main gate",
-    1794626602427
-   ],
    "T-4313": [
     "testing",
     "its own tests, in its copy",
-    1794629662427
+    1794629654569
    ]
   },
   "nm": {
    "T-0678": "Run the refresh button inside the widget extension",
-   "T-4314": "Record what each personal session costs",
    "T-4313": "Add a Merged section and fold sections on Home"
   }
  },
  "ln": {
-  "at": "2026-11-14T04:15:22Z",
+  "at": "2026-11-14T04:18:14Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -546,11 +540,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 2233,
+    "conflicted": 2235,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 682
+    "parked": 684
    },
    "cur": [],
    "ld": [
@@ -560,12 +554,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-14T04:14:35Z",
-    "ld": 5.37,
+    "at": "2026-11-14T04:17:55Z",
+    "ld": 4.92,
     "c": 8,
     "sb": 0,
     "dk": [
-     16.8,
+     16.7,
      228.3
     ],
     "ss": [
@@ -606,6 +600,7 @@
  "trimmed": [
   "lane_next",
   "queue_text",
+  "recent",
   "task_done",
   "fin_short",
   "task_title",
@@ -619,10 +614,10 @@
   "main": 3,
   "lanes": 0,
   "total": 3,
-  "at": "11:15 PM",
+  "at": "11:18 PM",
   "why": "",
-  "at_iso": "2026-11-14T04:15:00+00:00",
+  "at_iso": "2026-11-14T04:18:00+00:00",
   "started": "9:30 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 9:30 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 11:15 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 9:30 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 11:18 PM ET</p></section>"
  }
 }

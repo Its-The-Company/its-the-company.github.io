@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-14T02:52:05.936645+00:00",
+ "at": "2026-11-14T02:55:29.183478+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -92,7 +92,7 @@
    "task": "[build] T-0678 refresh button in extension",
    "model": "opus",
    "started": "2026-11-14T02:33:42.801Z",
-   "seconds": 1103,
+   "seconds": 1306,
    "finished": null,
    "effort": "high"
   },
@@ -101,7 +101,7 @@
    "task": "[tools] T-4314 personal session cost line",
    "model": "opus",
    "started": "2026-11-14T02:33:48.956Z",
-   "seconds": 1096,
+   "seconds": 1300,
    "finished": null,
    "effort": "high"
   },
@@ -110,7 +110,7 @@
    "task": "[site] T-4308 account sessions in In flight",
    "model": "opus",
    "started": "2026-11-14T02:33:55.419Z",
-   "seconds": 1090,
+   "seconds": 1293,
    "finished": null,
    "effort": "high"
   }
@@ -186,7 +186,7 @@
   "week_pct": 47.87,
   "usage_pct": 33.5,
   "work_pct": 79.6,
-  "read_at": "2026-11-14T02:52:00+00:00",
+  "read_at": "2026-11-14T02:55:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -223,7 +223,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-13T21:52:00-05:00",
+  "at": "2026-11-13T21:55:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -473,7 +473,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-14T02:52:05Z",
+  "at": "2026-11-14T02:55:29Z",
   "s": {
    "T-0678": [
     "testing",
@@ -483,7 +483,7 @@
    "T-4314": [
     "testing",
     "its own tests, in its copy",
-    1794624065936
+    1794624029183
    ]
   },
   "nm": {
@@ -492,7 +492,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-14T02:52:05Z",
+  "at": "2026-11-14T02:55:29Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -506,11 +506,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 1294,
+    "conflicted": 1298,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 598
+    "parked": 602
    },
    "cur": [],
    "ld": [
@@ -520,8 +520,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-14T02:52:27Z",
-    "ld": 41.67,
+    "at": "2026-11-14T02:55:33Z",
+    "ld": 38.32,
     "c": 8,
     "sb": 1,
     "dk": [
@@ -556,20 +556,32 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 3 tasks",
-   "at": "2026-11-13T21:48:06-05:00"
+   "t": "Inbox \u2013 Evan's 9:53 PM Message on GitHub",
+   "at": "2026-11-13T21:53:55-05:00"
   }
  ],
  "reply": {
   "sent": "2026-11-14T02:47:20Z",
   "seconds": 45.0
  },
- "inbox": [],
+ "inbox": [
+  {
+   "id": "c6870537007",
+   "state": "received",
+   "position": 1,
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "Make sure that all changes that are..."
+  }
+ ],
  "trimmed": [
   "lane_next",
   "queue_text",
   "task_done",
   "fin_short",
+  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -580,10 +592,10 @@
   "main": 3,
   "lanes": 0,
   "total": 3,
-  "at": "9:52 PM",
+  "at": "9:55 PM",
   "why": "",
-  "at_iso": "2026-11-14T02:52:00+00:00",
+  "at_iso": "2026-11-14T02:55:00+00:00",
   "started": "9:30 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 9:30 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:52 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 9:30 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:55 PM ET</p></section>"
  }
 }

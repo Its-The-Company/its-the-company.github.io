@@ -1,12 +1,20 @@
 {
  "schema": 1,
- "at": "2026-11-14T06:27:14.201881+00:00",
+ "at": "2026-11-14T06:45:50.158583+00:00",
  "session": {
   "active": false,
   "kind": "",
   "started": null,
   "flow": [],
   "done": [
+   {
+    "t": "T-4412",
+    "name": "Fill links on the nine remaining ledger rows",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794638102
+   },
    {
     "t": "T-4099",
     "name": "Judge the merge line, parked records and active work",
@@ -71,16 +79,9 @@
     "steps": [],
     "end": "landed",
     "end_at": 1794620497
-   },
-   {
-    "t": "T-4097",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794620492
    }
   ],
-  "landed": 17,
+  "landed": 18,
   "failed": 2
  },
  "workers": [],
@@ -122,36 +123,36 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 435,
+  "runnable_count": 434,
   "blocked_count": 93
  },
  "meter": {
   "five_hour": {
    "pct": 18.0,
-   "resets_at": "2026-11-14T07:39:59.563543+00:00",
+   "resets_at": "2026-11-14T07:40:00.311276+00:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-14T01:11:15.166620-05:00",
+   "read_at": "2026-11-14T01:30:13.482430-05:00",
    "source": "usage",
    "left": 82.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 98.0,
-   "resets_at": "2026-11-15T06:59:59.563564+00:00",
+   "resets_at": "2026-11-15T06:59:59.311295+00:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-14T01:11:15.166620-05:00",
+   "read_at": "2026-11-14T01:30:13.482430-05:00",
    "source": "usage",
    "left": 2.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 4.0,
-   "resets_at": "2026-11-15T06:59:59.563691+00:00",
+   "resets_at": "2026-11-15T07:00:00.311459+00:00",
    "used_words": "of the Fable weekly allowance used",
-   "read_at": "2026-11-14T01:11:15.166620-05:00",
+   "read_at": "2026-11-14T01:30:13.482430-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-14T01:11:15.166620-05:00"
+  "read_at": "2026-11-14T01:30:13.482430-05:00"
  },
  "ui": {
   "week_pct": 0.359,
@@ -166,12 +167,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-14T01:26:15-05:00",
+ "next_tick": "2026-11-14T01:45:13-05:00",
  "personal": {
   "week_pct": 50.24,
   "usage_pct": 33.9,
   "work_pct": 80.1,
-  "read_at": "2026-11-14T06:30:00+00:00",
+  "read_at": "2026-11-14T06:48:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -182,18 +183,6 @@
     "m": "opus",
     "e": "xhigh",
     "at": "2026-11-14T01:18:27-05:00",
-    "n": "Evan",
-    "src": "plan-a"
-   },
-   {
-    "lane": "a2",
-    "task": "T-4412",
-    "w": "Ines",
-    "k": "ops",
-    "t": "Fill links on the nine remaining ledger rows",
-    "m": "opus",
-    "e": "xhigh",
-    "at": "2026-11-14T01:18:28-05:00",
     "n": "Evan",
     "src": "plan-a"
    }
@@ -217,7 +206,7 @@
   }
  ],
  "disk": {
-  "free_gb": 17,
+  "free_gb": 19,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -226,14 +215,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-14T01:28:00-05:00",
+   "at": "2026-11-14T01:46:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-14T01:30:00-05:00",
+  "at": "2026-11-14T01:48:00-05:00",
   "mode": null,
   "modes": {
    "main": "spread",
@@ -340,13 +329,6 @@
     "o": "i"
    },
    {
-    "w": "Ines",
-    "k": "ops",
-    "t": "Fill links on the nine remaining ledger rows",
-    "s": "next",
-    "o": "c"
-   },
-   {
     "w": "Idris",
     "k": "build",
     "t": "Every premade widget draws on the iPhone",
@@ -366,9 +348,21 @@
     "t": "Run the device test session for the widget...",
     "s": "next",
     "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "ops",
+    "t": "Free Mac mini disk by moving data to the SSD",
+    "s": "next",
+    "o": "c"
    }
   ],
   "done": [
+   {
+    "w": "Ines",
+    "t": "The audit's record now says which feature each of eight waiting code reviews belongs to, and...",
+    "at": "2026-11-14T01:35:00-05:00"
+   },
    {
     "w": "Ines",
     "t": "The audit checked again which queued tasks someone is still working on: 38 old notices are now...",
@@ -378,15 +372,10 @@
     "w": "Ines",
     "t": "Every app task the audit decided to keep now sits in one of the 14 app features, or is listed...",
     "at": "2026-11-14T01:01:00-05:00"
-   },
-   {
-    "w": "Operator",
-    "t": "The queue audit and each of its open tasks as of 1:19 PM on 11-13 now carry a star on Home, as...",
-    "at": "2026-11-14T00:54:00-05:00"
    }
   ],
   "count": {
-   "next": 435,
+   "next": 434,
    "wait": 46,
    "blocked": 47,
    "you": 15
@@ -431,11 +420,11 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-14T06:27:14Z",
+  "at": "2026-11-14T06:45:50Z",
   "s": {}
  },
  "ln": {
-  "at": "2026-11-14T06:27:14Z",
+  "at": "2026-11-14T06:45:50Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -449,26 +438,26 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 2364,
+    "conflicted": 2383,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 813
+    "parked": 832
    },
    "cur": [],
    "ld": [
-    2,
-    "2026-11-14T06:01:56Z"
+    3,
+    "2026-11-14T06:35:02Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-14T06:27:15Z",
-    "ld": 2.62,
+    "at": "2026-11-14T06:45:50Z",
+    "ld": 0.86,
     "c": 8,
     "sb": 0,
     "dk": [
-     17.1,
+     18.9,
      228.3
     ],
     "ss": [
@@ -476,19 +465,21 @@
      953.7
     ],
     "sn": []
+   },
+   "macbook": {
+    "at": "2026-11-14T06:17:06Z",
+    "ld": 0.19,
+    "c": 12,
+    "sb": 0,
+    "dk": [
+     370.0,
+     926.4
+    ],
+    "sn": []
    }
   }
  },
  "operators": [
-  {
-   "w": "Operator",
-   "a": "Evan",
-   "sr": 1,
-   "m": "opus",
-   "e": "xhigh",
-   "t": "Work session \u2013 1 task",
-   "at": "2026-11-14T01:18:27-05:00"
-  },
   {
    "w": "Operator",
    "a": "Evan",
@@ -517,12 +508,12 @@
  ],
  "agents_now": {
   "main": 0,
-  "lanes": 2,
-  "total": 2,
-  "at": "1:30 AM",
+  "lanes": 1,
+  "total": 1,
+  "at": "1:48 AM",
   "why": "",
-  "at_iso": "2026-11-14T06:30:00+00:00",
+  "at_iso": "2026-11-14T06:48:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 1:30 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 1:48 AM ET</p></section>"
  }
 }

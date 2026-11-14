@@ -11,7 +11,7 @@ description: "T-4408 judged group 2 of the unaudited lines on lane b2 and landed
 <div class="doc-body" markdown="1">
 
 {% raw %}
-STATUS: open
+STATUS: done
 
 
 Written by Ines, 2026-11-13 23:1x ET, <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> b (personal/b), after commit e865a24a87.
@@ -52,6 +52,36 @@ Rows only. No board change: the Links fields reach the board at the apply (T-410
   are in no feature of `ops/plans/app-features.json`. That is the list's to fix (T-4116's file), not the ledger's.
 - The three site keeps of group 2 (T-3906, T-3996, T-4010) carry no link wording: their empty links are right.
 - T-3428 is ticked (log/board-archive.md) and needs no row; T-3425 has its row (remove, R4, T-4407).
+
+## Done, 2026-11-14 1:29 AM ET (Ines, T-4412, lane a2: personal/a2 at e764b8bf77, which holds main's ledger)
+
+19 rows, all keep, written through `tools/ledger_row.py`, each naming the one row before it. A rerun of
+`ops/plans/T-4098-links.py` proposes nothing, on this copy's board and on main's working board; "cycle" is null and
+"file_order_late" is empty. Record: `ops/queue_audit/links-2026-11-14.json`. Script: `ops/plans/T-4412-rows.py`.
+
+- Step 1: T-3823 carries flag 1 (needs T-4142, an open line on both boards).
+- Step 2: the eight review lines are part of the feature T-4413 placed them in (`ops/plans/app-features.json`
+  "placed"), each checked against its commit's files and its row's own flags: T-4022, T-4024 and T-4040 in T-4184,
+  T-4032 and T-4049 in T-4181, T-4031 in T-4190, T-4043 in T-4180, T-4048 in T-4186. Reasons are in
+  `ops/plans/T-4098-links-hand.json`.
+- Ten more rows, because the board and the merge line moved after 23:0x 11-13: T-4101 and T-4123 (their needs on
+  T-4097, T-4098 and T-4099 lapsed), T-4105 (T-4104 lapsed), T-3365, T-3379 and T-4318 (flag 3 no longer names
+  T-4097's ref, which is not among the four refs that wait now, its line being ticked; T-4318's flag 2 lapsed with
+  it), and T-4415, T-4416, T-4417, T-4418 (flag 2, raised now because their first rows are T-4099's; each read
+  here, none is a dependency, the read is on the row).
+- The board was read from the main checkout's working files, not this copy's HEAD: T-4099 and T-4413 are ticked
+  there and no commit held that yet. The two readings differ in T-4101 and T-4123 only (needs T-4099 or not).
+
+## Left, and not this note's
+
+- 13 lines placed in a feature by T-4413 have no feature in their ledger row: T-2629, T-2938, T-4239, T-4244,
+  T-4256, T-4257, T-4290, T-4291, T-4292, T-4302, T-4311, T-4312, and T-3823 (its row says part of T-3401). The
+  script proposes none of them: it converts a line's wording, and these lines do not say it. For the board,
+  `ops/plans/app-features-check.py --links` prints the value of every step (20 still to set).
+- `ops/plans/app-features-check.py` shows 4 faults, before these rows and after: T-4415, T-4416, T-4417 and T-4418
+  were judged keep by T-4099 after the list was written and sit in no feature. Each line's own field says part of
+  T-4181. That is the list's to fix, as on 11-13.
+- Five open lines have no row: T-4411, T-4419, T-4420, T-4421, and T-4412 itself.
 {% endraw %}
 
 </div>

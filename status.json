@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-14T16:06:52.665786+00:00",
+ "at": "2026-11-14T16:21:02.838475+00:00",
  "session": {
   "active": false,
   "kind": "",
@@ -76,16 +76,9 @@
     "steps": [],
     "end": "landed",
     "end_at": 1794636106
-   },
-   {
-    "t": "T-4098",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794629642
    }
   ],
-  "landed": 9,
+  "landed": 8,
   "failed": 0
  },
  "workers": [],
@@ -133,30 +126,30 @@
  "meter": {
   "five_hour": {
    "pct": 9.0,
-   "resets_at": "2026-11-14T17:39:59.826871+00:00",
+   "resets_at": "2026-11-14T17:39:59.675200+00:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-14T10:58:44.307921-05:00",
+   "read_at": "2026-11-14T11:10:13.704228-05:00",
    "source": "usage",
    "left": 91.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 100.0,
-   "resets_at": "2026-11-15T06:59:58.826888+00:00",
+   "resets_at": "2026-11-15T06:59:59.675220+00:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-14T10:58:44.307921-05:00",
+   "read_at": "2026-11-14T11:10:13.704228-05:00",
    "source": "usage",
    "left": 0.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 4.0,
-   "resets_at": "2026-11-15T06:59:59.827017+00:00",
+   "resets_at": "2026-11-15T06:59:59.675351+00:00",
    "used_words": "of the Fable weekly allowance used",
-   "read_at": "2026-11-14T10:58:44.307921-05:00",
+   "read_at": "2026-11-14T11:10:13.704228-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-14T10:58:44.307921-05:00"
+  "read_at": "2026-11-14T11:10:13.704228-05:00"
  },
  "ui": {
   "week_pct": 0.462,
@@ -171,12 +164,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-14T11:18:58-05:00",
+ "next_tick": "2026-11-14T11:25:14-05:00",
  "personal": {
   "week_pct": 53.57,
   "usage_pct": 34.9,
   "work_pct": 80.3,
-  "read_at": "2026-11-14T16:10:00+00:00",
+  "read_at": "2026-11-14T16:24:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -206,19 +199,19 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-14T11:09:00-05:00",
+   "at": "2026-11-14T11:23:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-14T11:10:00-05:00",
+  "at": "2026-11-14T11:24:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
-   "a": "midnight",
-   "b": "midnight"
+   "a": "double-spread",
+   "b": "double-spread"
   }
  },
  "next_tick_why": "last_tick",
@@ -411,11 +404,11 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-14T16:06:52Z",
+  "at": "2026-11-14T16:21:02Z",
   "s": {}
  },
  "ln": {
-  "at": "2026-11-14T16:06:52Z",
+  "at": "2026-11-14T16:21:02Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -433,7 +426,7 @@
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 765
+    "parked": 779
    },
    "cur": [],
    "ld": [
@@ -443,12 +436,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-14T16:06:53Z",
-    "ld": 1.18,
+    "at": "2026-11-14T16:21:03Z",
+    "ld": 0.65,
     "c": 8,
     "sb": 1,
     "dk": [
-     10.3,
+     11.8,
      228.3
     ],
     "ss": [
@@ -482,7 +475,7 @@
    "id": "c6880174328",
    "state": "waiting",
    "position": 1,
-   "eta": "2026-11-14T11:18:58-05:00",
+   "eta": "2026-11-14T11:25:14-05:00",
    "tasks": {
     "open": 0,
     "done": 0
@@ -506,10 +499,10 @@
   "main": 0,
   "lanes": 0,
   "total": 0,
-  "at": "11:10 AM",
-  "why": "Plan limit: the weekly allowance is used up; it resets Sun 1:59 AM ET. Last check 11:10 AM ET.",
-  "at_iso": "2026-11-14T16:10:00+00:00",
+  "at": "11:24 AM",
+  "why": "Plan limit: the weekly allowance is used up; it resets Sun 1:59 AM ET. Last check 11:24 AM ET.",
+  "at_iso": "2026-11-14T16:24:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 11:10 AM ET</p><p class=\"an-why\">Plan limit: the weekly allowance is used up; it resets Sun 1:59 AM ET. Last check 11:10 AM ET.</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 11:24 AM ET</p><p class=\"an-why\">Plan limit: the weekly allowance is used up; it resets Sun 1:59 AM ET. Last check 11:24 AM ET.</p></section>"
  }
 }

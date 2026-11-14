@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-14T15:52:54.277209+00:00",
+ "at": "2026-11-14T15:57:30.793688+00:00",
  "session": {
   "active": false,
   "kind": "",
@@ -127,7 +127,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 351,
+  "runnable_count": 352,
   "blocked_count": 86
  },
  "meter": {
@@ -176,7 +176,7 @@
   "week_pct": 52.14,
   "usage_pct": 34.3,
   "work_pct": 79.8,
-  "read_at": "2026-11-14T15:54:00+00:00",
+  "read_at": "2026-11-14T15:59:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -206,14 +206,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-14T10:53:00-05:00",
+   "at": "2026-11-14T10:55:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-14T10:54:00-05:00",
+  "at": "2026-11-14T10:59:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -366,7 +366,7 @@
    }
   ],
   "count": {
-   "next": 351,
+   "next": 352,
    "wait": 41,
    "blocked": 45,
    "you": 15
@@ -411,29 +411,29 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-14T15:52:54Z",
+  "at": "2026-11-14T15:57:30Z",
   "s": {}
  },
  "ln": {
-  "at": "2026-11-14T15:52:54Z",
+  "at": "2026-11-14T15:57:30Z",
   "mq": {
    "n": {
     "checking": 0,
     "inline": 0,
-    "conflicted": 1,
+    "conflicted": 0,
     "failed": 0,
     "held": 0,
     "retry": 0,
-    "parked": 5
+    "parked": 4
    },
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 2930,
+    "conflicted": null,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1374
+    "parked": 756
    },
    "cur": [],
    "ld": [
@@ -443,16 +443,16 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-14T15:52:54Z",
-    "ld": 1.09,
+    "at": "2026-11-14T15:57:31Z",
+    "ld": 1.22,
     "c": 8,
     "sb": 1,
     "dk": [
-     12.3,
+     10.2,
      228.3
     ],
     "ss": [
-     185.8,
+     188.4,
      953.7
     ],
     "sn": [
@@ -460,12 +460,12 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-14T15:20:36Z",
-    "ld": 1.48,
+    "at": "2026-11-14T15:51:11Z",
+    "ld": 0.19,
     "c": 12,
     "sb": 0,
     "dk": [
-     369.6,
+     369.5,
      926.4
     ],
     "sn": []
@@ -477,12 +477,25 @@
   "sent": "2026-11-14T15:20:15Z",
   "seconds": 106.0
  },
- "inbox": [],
+ "inbox": [
+  {
+   "id": "c6880174328",
+   "state": "received",
+   "position": 1,
+   "eta": "2026-11-14T09:10:56-05:00",
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "Check now. There\u2019s also quite a bit..."
+  }
+ ],
  "trimmed": [
   "lane_next",
   "queue_text",
   "recent",
   "task_done",
+  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -493,10 +506,10 @@
   "main": 0,
   "lanes": 0,
   "total": 0,
-  "at": "10:54 AM",
-  "why": "Between sessions: no session is running. Last check 8:55 AM ET.",
-  "at_iso": "2026-11-14T15:54:00+00:00",
+  "at": "10:59 AM",
+  "why": "Plan limit: the weekly allowance is used up; it resets Sun 2:00 AM ET. Last check 10:58 AM ET.",
+  "at_iso": "2026-11-14T15:59:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 10:54 AM ET</p><p class=\"an-why\">Between sessions: no session is running. Last check 8:55 AM ET.</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 10:59 AM ET</p><p class=\"an-why\">Plan limit: the weekly allowance is used up; it resets Sun 2:00 AM ET. Last check 10:58 AM ET.</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-14T04:00:04.715271+00:00",
+ "at": "2026-11-14T04:03:06.457955+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -95,7 +95,7 @@
    "task": "[tools] T-4314 personal session cost line",
    "model": "opus",
    "started": "2026-11-14T02:33:48.956Z",
-   "seconds": 5175,
+   "seconds": 5357,
    "finished": null,
    "effort": "high"
   },
@@ -104,7 +104,7 @@
    "task": "[site] T-4308 account sessions in In flight",
    "model": "opus",
    "started": "2026-11-14T02:33:55.419Z",
-   "seconds": 5169,
+   "seconds": 5351,
    "finished": null,
    "effort": "high"
   },
@@ -113,7 +113,7 @@
    "task": "[build] T-0678 slice 2 wire rule and intent",
    "model": "opus",
    "started": "2026-11-14T03:11:48.167Z",
-   "seconds": 2896,
+   "seconds": 3078,
    "finished": null,
    "effort": "high"
   }
@@ -197,7 +197,7 @@
   "week_pct": 47.87,
   "usage_pct": 33.5,
   "work_pct": 79.6,
-  "read_at": "2026-11-14T04:00:00+00:00",
+  "read_at": "2026-11-14T04:03:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -247,7 +247,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-13T23:00:00-05:00",
+  "at": "2026-11-13T23:03:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -513,7 +513,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-14T04:00:04Z",
+  "at": "2026-11-14T04:03:00Z",
   "s": {
    "T-0678": [
     "mergetest",
@@ -523,16 +523,22 @@
    "T-4314": [
     "merging",
     "Mac tests at the main gate",
-    1794626584715
+    1794626580322
+   ],
+   "T-4308": [
+    "merging",
+    "Mac tests at the main gate",
+    1794628860322
    ]
   },
   "nm": {
    "T-0678": "Run the refresh button inside the widget extension",
-   "T-4314": "Record what each personal session costs"
+   "T-4314": "Record what each personal session costs",
+   "T-4308": "Show running account sessions in In flight"
   }
  },
  "ln": {
-  "at": "2026-11-14T04:00:04Z",
+  "at": "2026-11-14T04:03:00Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -546,11 +552,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 2217,
+    "conflicted": 2220,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 666
+    "parked": 669
    },
    "cur": [],
    "ld": [
@@ -560,12 +566,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-14T03:59:41Z",
-    "ld": 5.67,
+    "at": "2026-11-14T04:02:11Z",
+    "ld": 6.28,
     "c": 8,
     "sb": 0,
     "dk": [
-     16.8,
+     16.7,
      228.3
     ],
     "ss": [
@@ -628,10 +634,10 @@
   "main": 3,
   "lanes": 1,
   "total": 4,
-  "at": "11:00 PM",
+  "at": "11:03 PM",
   "why": "",
-  "at_iso": "2026-11-14T04:00:00+00:00",
+  "at_iso": "2026-11-14T04:03:00+00:00",
   "started": "9:30 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 3, started 9:30 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 11:00 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 3, started 9:30 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 11:03 PM ET</p></section>"
  }
 }

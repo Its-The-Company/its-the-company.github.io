@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-14T13:29:09.142083+00:00",
+ "at": "2026-11-14T13:32:11.860327+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -87,7 +87,7 @@
    "task": "[tools] T-4432 released wait hides pinned line",
    "model": "opus",
    "started": "2026-11-14T12:40:55.020Z",
-   "seconds": 2894,
+   "seconds": 3076,
    "finished": null,
    "effort": "high"
   }
@@ -122,7 +122,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 350,
+  "runnable_count": 351,
   "blocked_count": 87
  },
  "meter": {
@@ -171,7 +171,7 @@
   "week_pct": 50.73,
   "usage_pct": 34.1,
   "work_pct": 80.3,
-  "read_at": "2026-11-14T13:29:00+00:00",
+  "read_at": "2026-11-14T13:32:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -244,7 +244,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-14T08:29:00-05:00",
+  "at": "2026-11-14T08:32:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -375,6 +375,13 @@
     "o": "c"
    },
    {
+    "w": "Ines",
+    "k": "ops",
+    "t": "Finish the queue audit's order and last...",
+    "s": "next",
+    "o": "c"
+   },
+   {
     "w": "Idris",
     "k": "build",
     "t": "Every premade widget draws on the iPhone",
@@ -387,13 +394,6 @@
     "t": "Widgets refresh on their own and by a tap",
     "s": "next",
     "o": "i"
-   },
-   {
-    "w": "Idris",
-    "k": "measure",
-    "t": "Run the device test session for the widget...",
-    "s": "next",
-    "o": "c"
    }
   ],
   "done": [
@@ -414,7 +414,7 @@
    }
   ],
   "count": {
-   "next": 350,
+   "next": 351,
    "wait": 43,
    "blocked": 44,
    "you": 16
@@ -472,12 +472,12 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-14T13:29:09Z",
+  "at": "2026-11-14T13:32:04Z",
   "s": {
    "T-4432": [
     "merging",
     "Mac tests at the main gate",
-    1794662109142
+    1794662104987
    ]
   },
   "nm": {
@@ -485,7 +485,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-14T13:29:09Z",
+  "at": "2026-11-14T13:32:04Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -499,11 +499,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 2786,
+    "conflicted": 2789,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1235
+    "parked": 1238
    },
    "cur": [],
    "ld": [
@@ -513,12 +513,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-14T13:28:46Z",
-    "ld": 8.71,
+    "at": "2026-11-14T13:31:39Z",
+    "ld": 8.39,
     "c": 8,
     "sb": 0,
     "dk": [
-     19.7,
+     19.6,
      228.3
     ],
     "ss": [
@@ -598,10 +598,10 @@
   "main": 1,
   "lanes": 3,
   "total": 4,
-  "at": "8:29 AM",
+  "at": "8:32 AM",
   "why": "",
-  "at_iso": "2026-11-14T13:29:00+00:00",
+  "at_iso": "2026-11-14T13:32:00+00:00",
   "started": "7:33 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 1, started 7:33 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 8:29 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 1, started 7:33 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 8:32 AM ET</p></section>"
  }
 }

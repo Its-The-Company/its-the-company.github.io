@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-14T04:09:11.313042+00:00",
+ "at": "2026-11-14T04:12:18.238062+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -95,7 +95,7 @@
    "task": "[tools] T-4314 personal session cost line",
    "model": "opus",
    "started": "2026-11-14T02:33:48.956Z",
-   "seconds": 5722,
+   "seconds": 5909,
    "finished": null,
    "effort": "high"
   },
@@ -104,7 +104,7 @@
    "task": "[build] T-0678 slice 2 wire rule and intent",
    "model": "opus",
    "started": "2026-11-14T03:11:48.167Z",
-   "seconds": 3443,
+   "seconds": 3630,
    "finished": null,
    "effort": "high"
   },
@@ -113,7 +113,7 @@
    "task": "[site] T-4313 Merged section on Home",
    "model": "opus",
    "started": "2026-11-14T04:04:21.376Z",
-   "seconds": 289,
+   "seconds": 476,
    "finished": null,
    "effort": "high"
   }
@@ -156,24 +156,24 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 429,
+  "runnable_count": 430,
   "blocked_count": 95
  },
  "meter": {
   "five_hour": {
-   "pct": 7.0,
+   "pct": 8.0,
    "resets_at": "2026-11-14T02:40:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-13T23:05:15.912411-05:00",
+   "read_at": "2026-11-13T23:11:39.239122-05:00",
    "source": "live",
-   "left": 93.0,
+   "left": 92.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 96.0,
    "resets_at": "2026-11-15T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-13T23:05:15.912411-05:00",
+   "read_at": "2026-11-13T23:11:39.239122-05:00",
    "source": "live",
    "left": 4.0,
    "left_words": "of your weekly allowance left"
@@ -185,7 +185,7 @@
    "read_at": "2026-11-13T21:29:37.729013-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-13T23:05:15.912411-05:00"
+  "read_at": "2026-11-13T23:11:39.239122-05:00"
  },
  "ui": {
   "week_pct": 0.36,
@@ -205,7 +205,7 @@
   "week_pct": 47.87,
   "usage_pct": 33.5,
   "work_pct": 79.6,
-  "read_at": "2026-11-14T04:09:00+00:00",
+  "read_at": "2026-11-14T04:12:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -217,6 +217,7 @@
     "e": "xhigh",
     "at": "2026-11-13T22:45:35-05:00",
     "n": "Jeremy",
+    "d": 1,
     "src": "plan-b"
    }
   ]
@@ -239,7 +240,7 @@
   }
  ],
  "disk": {
-  "free_gb": 16,
+  "free_gb": 17,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -248,14 +249,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-13T23:05:00-05:00",
+   "at": "2026-11-13T23:11:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-13T23:09:00-05:00",
+  "at": "2026-11-13T23:12:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -401,6 +402,13 @@
     "o": "i"
    },
    {
+    "w": "Ines",
+    "k": "ops",
+    "t": "Fill links on the nine remaining ledger rows",
+    "s": "next",
+    "o": "c"
+   },
+   {
     "w": "Operator",
     "k": "ops",
     "t": "Star every open task of the queue audit",
@@ -420,13 +428,6 @@
     "t": "Widgets refresh on their own and by a tap",
     "s": "next",
     "o": "i"
-   },
-   {
-    "w": "Idris",
-    "k": "measure",
-    "t": "Run the device test session for the widget...",
-    "s": "next",
-    "o": "c"
    }
   ],
   "done": [
@@ -447,7 +448,7 @@
    }
   ],
   "count": {
-   "next": 429,
+   "next": 430,
    "wait": 48,
    "blocked": 47,
    "you": 15
@@ -521,26 +522,26 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-14T04:08:56Z",
+  "at": "2026-11-14T04:12:04Z",
   "s": {
+   "T-0678": [
+    "mergetest",
+    "iPhone tests on the MacBook",
+    null
+   ],
    "T-4314": [
     "merging",
     "Mac tests at the main gate",
-    1794626576248
-   ],
-   "T-0678": [
-    "merging",
-    "Mac tests at the main gate",
-    1794629156248
+    1794626584475
    ]
   },
   "nm": {
-   "T-4314": "Record what each personal session costs",
-   "T-0678": "Run the refresh button inside the widget extension"
+   "T-0678": "Run the refresh button inside the widget extension",
+   "T-4314": "Record what each personal session costs"
   }
  },
  "ln": {
-  "at": "2026-11-14T04:08:56Z",
+  "at": "2026-11-14T04:12:04Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -554,11 +555,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 2226,
+    "conflicted": 2229,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 675
+    "parked": 678
    },
    "cur": [],
    "ld": [
@@ -568,8 +569,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-14T04:08:58Z",
-    "ld": 5.72,
+    "at": "2026-11-14T04:12:05Z",
+    "ld": 5.33,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -583,12 +584,12 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-14T04:04:41Z",
-    "ld": 1.48,
+    "at": "2026-11-14T04:10:52Z",
+    "ld": 0.53,
     "c": 12,
     "sb": 0,
     "dk": [
-     370.9,
+     371.1,
      926.4
     ],
     "sn": []
@@ -636,10 +637,10 @@
   "main": 3,
   "lanes": 1,
   "total": 4,
-  "at": "11:09 PM",
+  "at": "11:12 PM",
   "why": "",
-  "at_iso": "2026-11-14T04:09:00+00:00",
+  "at_iso": "2026-11-14T04:12:00+00:00",
   "started": "9:30 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 3, started 9:30 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 11:09 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 3, started 9:30 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 11:12 PM ET</p></section>"
  }
 }

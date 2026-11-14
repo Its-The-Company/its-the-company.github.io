@@ -1,11 +1,22 @@
 {
  "schema": 1,
- "at": "2026-11-14T19:15:04.789187+00:00",
+ "at": "2026-11-14T19:38:37.268590+00:00",
  "session": {
   "active": false,
   "kind": "",
   "started": null,
   "flow": [
+   {
+    "t": "T-4437",
+    "name": "Finish the queue audit's order and last refused rows",
+    "acct": "Personal b",
+    "steps": [
+     {
+      "s": "landing",
+      "at": 1794684076
+     }
+    ]
+   },
    {
     "t": "T-3279",
     "w": "Idris",
@@ -18,6 +29,14 @@
    }
   ],
   "done": [
+   {
+    "t": "T-4452",
+    "name": "Let a new line withdraw the lines it replaces",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794684070
+   },
    {
     "t": "T-4444",
     "name": "Run the queue check on each change and between sessions",
@@ -89,7 +108,7 @@
     "end_at": 1794641952
    }
   ],
-  "landed": 9,
+  "landed": 10,
   "failed": 0
  },
  "workers": [],
@@ -131,36 +150,36 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 357,
+  "runnable_count": 356,
   "blocked_count": 86
  },
  "meter": {
   "five_hour": {
    "pct": 1.0,
-   "resets_at": "2026-11-14T22:39:59.918794+00:00",
+   "resets_at": "2026-11-14T22:39:59.710437+00:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-14T13:55:12.409898-05:00",
+   "read_at": "2026-11-14T14:18:52.773469-05:00",
    "source": "usage",
    "left": 99.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 100.0,
-   "resets_at": "2026-11-15T06:59:58.918811+00:00",
+   "resets_at": "2026-11-15T06:59:59.710463+00:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-14T13:55:12.409898-05:00",
+   "read_at": "2026-11-14T14:18:52.773469-05:00",
    "source": "usage",
    "left": 0.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 5.0,
-   "resets_at": "2026-11-15T06:59:59.918948+00:00",
+   "resets_at": "2026-11-15T06:59:59.710599+00:00",
    "used_words": "of the Fable weekly allowance used",
-   "read_at": "2026-11-14T13:55:12.409898-05:00",
+   "read_at": "2026-11-14T14:18:52.773469-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-14T13:55:12.409898-05:00"
+  "read_at": "2026-11-14T14:18:52.773469-05:00"
  },
  "ui": {
   "week_pct": 0.462,
@@ -175,13 +194,36 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-14T14:10:12-05:00",
+ "next_tick": "2026-11-14T14:33:53-05:00",
  "personal": {
-  "week_pct": 54.08,
-  "usage_pct": 35.1,
-  "work_pct": 80.5,
-  "read_at": "2026-11-14T19:19:00+00:00",
+  "week_pct": 54.88,
+  "usage_pct": 35.4,
+  "work_pct": 80.7,
+  "read_at": "2026-11-14T19:40:00+00:00",
   "running": [
+   {
+    "lane": "a",
+    "task": "T-4459",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Give machine-added board lines their task card",
+    "m": "opus",
+    "e": "xhigh",
+    "at": "2026-11-14T14:36:12-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a2",
+    "task": "T-4228",
+    "k": "tools",
+    "t": "Group new app tasks into features automatically",
+    "m": "opus",
+    "e": "xhigh",
+    "at": "2026-11-14T14:36:07-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
    {
     "lane": "b",
     "task": "T-4196",
@@ -197,15 +239,14 @@
    },
    {
     "lane": "b2",
-    "task": "T-4452",
+    "task": "T-4453",
     "w": "Odalys",
     "k": "tools",
-    "t": "Let a new line withdraw the lines it replaces",
+    "t": "Keep a restored line from being closed as finished",
     "m": "opus",
     "e": "xhigh",
-    "at": "2026-11-14T13:48:48-05:00",
+    "at": "2026-11-14T14:24:05-05:00",
     "n": "Jeremy",
-    "d": 1,
     "src": "plan-b"
    }
   ]
@@ -228,7 +269,7 @@
   }
  ],
  "disk": {
-  "free_gb": 24,
+  "free_gb": 22,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -237,14 +278,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-14T14:12:00-05:00",
+   "at": "2026-11-14T14:35:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-14T14:19:00-05:00",
+  "at": "2026-11-14T14:40:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -381,6 +422,11 @@
   ],
   "done": [
    {
+    "w": "Odalys",
+    "t": "A new task line, or a finished one, can now name the older lines it replaces; those lines leave...",
+    "at": "2026-11-14T14:21:00-05:00"
+   },
+   {
     "w": "Maren",
     "t": "On Home, scrolling the page no longer gets caught by the In flight or Queued box when it slides...",
     "at": "2026-11-14T10:44:00-05:00"
@@ -389,15 +435,10 @@
     "w": "Idris",
     "t": "A countdown or habits widget placed before the app opens shows the ready-made empty screen only...",
     "at": "2026-11-14T10:21:00-05:00"
-   },
-   {
-    "w": "Idris",
-    "t": "The widget extension's own decision is now tested directly with its real bundled files,...",
-    "at": "2026-11-14T10:21:00-05:00"
    }
   ],
   "count": {
-   "next": 357,
+   "next": 356,
    "wait": 41,
    "blocked": 45,
    "you": 15
@@ -442,24 +483,24 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-14T19:15:04Z",
+  "at": "2026-11-14T19:38:37Z",
   "s": {
-   "T-4452": [
-    "mergeq",
-    "1st to merge",
-    1794683704789
+   "T-4437": [
+    "merging",
+    "Rebasing onto current main",
+    1794685057268
    ]
   },
   "nm": {
-   "T-4452": "Let a new line withdraw the lines it replaces"
+   "T-4437": "Finish the queue audit's order and last refused rows"
   }
  },
  "ln": {
-  "at": "2026-11-14T19:15:04Z",
+  "at": "2026-11-14T19:38:37Z",
   "mq": {
    "n": {
-    "checking": 0,
-    "inline": 1,
+    "checking": 1,
+    "inline": 0,
     "conflicted": 0,
     "failed": 0,
     "held": 0,
@@ -467,28 +508,37 @@
     "parked": 4
    },
    "m": {
-    "checking": null,
-    "inline": 0,
+    "checking": 1,
+    "inline": null,
     "conflicted": null,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 953
+    "parked": 977
    },
-   "cur": [],
+   "cur": [
+    [
+     [
+      "T-4437"
+     ],
+     "lining up with main",
+     "Mac mini",
+     1
+    ]
+   ],
    "ld": [
-    13,
-    "2026-11-14T19:01:34Z"
+    14,
+    "2026-11-14T19:21:10Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-14T19:15:06Z",
-    "ld": 2.06,
+    "at": "2026-11-14T19:38:39Z",
+    "ld": 3.24,
     "c": 8,
     "sb": 0,
     "dk": [
-     21.4,
+     22.1,
      228.3
     ],
     "ss": [
@@ -498,12 +548,12 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-14T18:54:31Z",
-    "ld": 0.26,
+    "at": "2026-11-14T19:25:08Z",
+    "ld": 0.21,
     "c": 12,
     "sb": 0,
     "dk": [
-     369.5,
+     369.6,
      926.4
     ],
     "sn": []
@@ -511,6 +561,24 @@
   }
  },
  "operators": [
+  {
+   "w": "Operator",
+   "a": "Evan",
+   "sr": 1,
+   "m": "opus",
+   "e": "xhigh",
+   "t": "Work session \u2013 1 task",
+   "at": "2026-11-14T14:36:11-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Evan",
+   "sr": 1,
+   "m": "opus",
+   "e": "xhigh",
+   "t": "Work session \u2013 1 task",
+   "at": "2026-11-14T14:36:07-05:00"
+  },
   {
    "w": "Operator",
    "a": "Jeremy",
@@ -526,17 +594,8 @@
    "sr": 1,
    "m": "opus",
    "e": "xhigh",
-   "t": "Work session",
-   "at": "2026-11-14T13:48:48-05:00"
-  },
-  {
-   "w": "Operator",
-   "a": "Jeremy",
-   "sr": 1,
-   "m": "opus",
-   "e": "xhigh",
    "t": "Work session \u2013 1 task",
-   "at": "2026-11-14T13:48:52-05:00"
+   "at": "2026-11-14T14:24:04-05:00"
   }
  ],
  "reply": {
@@ -557,12 +616,12 @@
  ],
  "agents_now": {
   "main": 0,
-  "lanes": 2,
-  "total": 2,
-  "at": "2:19 PM",
+  "lanes": 4,
+  "total": 4,
+  "at": "2:40 PM",
   "why": "",
-  "at_iso": "2026-11-14T19:19:00+00:00",
+  "at_iso": "2026-11-14T19:40:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 2:19 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 2:40 PM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-14T15:05:27.035750+00:00",
+ "at": "2026-11-14T15:08:29.742092+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -90,7 +90,7 @@
    "task": "[site] T-4316 scroll boxes pointer inside",
    "model": "opus",
    "started": "2026-11-14T14:13:10.608Z",
-   "seconds": 3136,
+   "seconds": 3319,
    "finished": null,
    "effort": "high"
   },
@@ -99,7 +99,7 @@
    "task": "[build] T-4440 bundled render guard + T-4441 test",
    "model": "opus",
    "started": "2026-11-14T14:43:01.260Z",
-   "seconds": 1345,
+   "seconds": 1528,
    "finished": null,
    "effort": "high"
   }
@@ -183,34 +183,8 @@
   "week_pct": 52.14,
   "usage_pct": 34.5,
   "work_pct": 80.2,
-  "read_at": "2026-11-14T15:05:00+00:00",
-  "running": [
-   {
-    "lane": "b2",
-    "task": "T-4196",
-    "w": "Idris",
-    "k": "tools",
-    "t": "Let app changes waiting to merge share one iPhone run",
-    "m": "opus",
-    "e": "xhigh",
-    "at": "2026-11-14T09:33:26-05:00",
-    "n": "Jeremy",
-    "src": "plan-b"
-   },
-   {
-    "lane": "b3",
-    "task": "T-4194",
-    "w": "Idris",
-    "k": "tools",
-    "t": "Build the feature session for app work",
-    "m": "opus",
-    "e": "xhigh",
-    "at": "2026-11-14T09:06:14-05:00",
-    "n": "Jeremy",
-    "d": 1,
-    "src": "plan-b"
-   }
-  ]
+  "read_at": "2026-11-14T15:08:00+00:00",
+  "running": []
  },
  "api_credits": [
   {
@@ -239,14 +213,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-14T10:03:00-05:00",
+   "at": "2026-11-14T10:07:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-14T10:05:00-05:00",
+  "at": "2026-11-14T10:08:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -489,39 +463,32 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-14T15:05:07Z",
+  "at": "2026-11-14T15:08:23Z",
   "s": {
    "T-4440": [
     "testing",
-    "Mac Mini \u00b7 test",
-    null
+    "its own tests, in its copy",
+    1794667643496
    ],
    "T-4441": [
     "testing",
     "its own tests, in its copy",
-    1794667627981
+    1794667643496
    ],
    "T-4316": [
     "testing",
     "its own tests, in its copy",
-    1794667507981
-   ],
-   "T-4194": [
-    "merged",
-    "on main 10:03 AM ET",
-    1794668587000,
-    ""
+    1794668783496
    ]
   },
   "nm": {
    "T-4440": "Bundled first render only without a saved premade file",
    "T-4441": "Test the extension's first-render path and a free countdown",
-   "T-4316": "Scroll boxes scroll only with the pointer inside them",
-   "T-4194": "Build the feature session for app work"
+   "T-4316": "Scroll boxes scroll only with the pointer inside them"
   }
  },
  "ln": {
-  "at": "2026-11-14T15:05:07Z",
+  "at": "2026-11-14T15:08:23Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -535,11 +502,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 2882,
+    "conflicted": 2886,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1326
+    "parked": 1330
    },
    "cur": [],
    "ld": [
@@ -549,12 +516,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-14T15:05:10Z",
-    "ld": 66.81,
+    "at": "2026-11-14T15:07:44Z",
+    "ld": 62.65,
     "c": 8,
     "sb": 1,
     "dk": [
-     14.2,
+     14.3,
      228.3
     ],
     "ss": [
@@ -587,24 +554,6 @@
    "e": "high",
    "t": "Work session \u2013 5 tasks",
    "at": "2026-11-14T08:56:15-05:00"
-  },
-  {
-   "w": "Operator",
-   "a": "Jeremy",
-   "sr": 1,
-   "m": "opus",
-   "e": "xhigh",
-   "t": "Work session \u2013 1 task",
-   "at": "2026-11-14T09:33:26-05:00"
-  },
-  {
-   "w": "Operator",
-   "a": "Jeremy",
-   "sr": 1,
-   "m": "opus",
-   "e": "xhigh",
-   "t": "Work session",
-   "at": "2026-11-14T09:06:14-05:00"
   }
  ],
  "reply": {
@@ -625,12 +574,12 @@
  ],
  "agents_now": {
   "main": 2,
-  "lanes": 2,
-  "total": 4,
-  "at": "10:05 AM",
+  "lanes": 0,
+  "total": 2,
+  "at": "10:08 AM",
   "why": "",
-  "at_iso": "2026-11-14T15:05:00+00:00",
+  "at_iso": "2026-11-14T15:08:00+00:00",
   "started": "8:56 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 2, started 8:56 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 10:05 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 8:56 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 10:08 AM ET</p></section>"
  }
 }

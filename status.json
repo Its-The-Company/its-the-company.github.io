@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-14T17:40:57.635349+00:00",
+ "at": "2026-11-14T17:55:08.206551+00:00",
  "session": {
   "active": false,
   "kind": "",
@@ -170,8 +170,45 @@
   "week_pct": 53.57,
   "usage_pct": 34.9,
   "work_pct": 80.3,
-  "read_at": "2026-11-14T17:41:00+00:00",
-  "running": []
+  "read_at": "2026-11-14T17:57:00+00:00",
+  "running": [
+   {
+    "lane": "a",
+    "task": "T-4443",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Add the task card slots when a line is made",
+    "m": "opus",
+    "e": "xhigh",
+    "at": "2026-11-14T12:51:40-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a2",
+    "task": "T-4444",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Run the queue check on each change and between sessions",
+    "m": "opus",
+    "e": "xhigh",
+    "at": "2026-11-14T12:51:41-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a3",
+    "task": "T-4446",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Commit the company's records once per supervisor round",
+    "m": "opus",
+    "e": "xhigh",
+    "at": "2026-11-14T12:51:41-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   }
+  ]
  },
  "api_credits": [
   {
@@ -200,14 +237,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-14T12:40:00-05:00",
+   "at": "2026-11-14T12:54:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-14T12:41:00-05:00",
+  "at": "2026-11-14T12:57:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -405,11 +442,11 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-14T17:40:57Z",
+  "at": "2026-11-14T17:55:08Z",
   "s": {}
  },
  "ln": {
-  "at": "2026-11-14T17:40:57Z",
+  "at": "2026-11-14T17:55:08Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -418,7 +455,7 @@
     "failed": 0,
     "held": 0,
     "retry": 0,
-    "parked": 4
+    "parked": 5
    },
    "m": {
     "checking": null,
@@ -427,7 +464,7 @@
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 859
+    "parked": 250
    },
    "cur": [],
    "ld": [
@@ -437,12 +474,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-14T17:40:34Z",
-    "ld": 0.8,
+    "at": "2026-11-14T17:55:08Z",
+    "ld": 0.91,
     "c": 8,
     "sb": 1,
     "dk": [
-     14.2,
+     14.0,
      228.3
     ],
     "ss": [
@@ -466,30 +503,45 @@
    }
   }
  },
- "operators": [],
- "reply": {
-  "sent": "2026-11-14T15:56:14Z",
-  "seconds": 5480.0
- },
- "inbox": [
+ "operators": [
   {
-   "id": "c6881487372",
-   "state": "waiting",
-   "position": 1,
-   "eta": "2026-11-14T12:55:47-05:00",
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "As I asked in the Mac Mini, put the..."
+   "w": "Operator",
+   "a": "Evan",
+   "sr": 1,
+   "m": "opus",
+   "e": "xhigh",
+   "t": "Work session \u2013 1 task",
+   "at": "2026-11-14T12:53:04-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Evan",
+   "sr": 1,
+   "m": "opus",
+   "e": "xhigh",
+   "t": "Work session \u2013 1 task",
+   "at": "2026-11-14T12:51:41-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Evan",
+   "sr": 1,
+   "m": "opus",
+   "e": "xhigh",
+   "t": "Work session \u2013 1 task",
+   "at": "2026-11-14T12:51:41-05:00"
   }
  ],
+ "reply": {
+  "sent": "2026-11-14T17:30:59Z",
+  "seconds": 1257.0
+ },
+ "inbox": [],
  "trimmed": [
   "lane_next",
   "queue_text",
   "recent",
   "task_done",
-  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -498,12 +550,12 @@
  ],
  "agents_now": {
   "main": 0,
-  "lanes": 0,
-  "total": 0,
-  "at": "12:41 PM",
-  "why": "Plan limit: the weekly allowance is used up; it resets Sun 1:59 AM ET. Last check 12:40 PM ET.",
-  "at_iso": "2026-11-14T17:41:00+00:00",
+  "lanes": 3,
+  "total": 3,
+  "at": "12:57 PM",
+  "why": "",
+  "at_iso": "2026-11-14T17:57:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 12:41 PM ET</p><p class=\"an-why\">Plan limit: the weekly allowance is used up; it resets Sun 1:59 AM ET. Last check 12:40 PM ET.</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 12:57 PM ET</p></section>"
  }
 }

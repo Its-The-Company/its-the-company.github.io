@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-14T14:31:31.455337+00:00",
+ "at": "2026-11-14T14:34:32.230588+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -100,7 +100,7 @@
    "task": "[build] T-4434 refresh tap wiring test",
    "model": "opus",
    "started": "2026-11-14T14:01:15.595Z",
-   "seconds": 1815,
+   "seconds": 1996,
    "finished": null,
    "effort": "high"
   },
@@ -109,7 +109,7 @@
    "task": "[site] T-4316 scroll boxes pointer inside",
    "model": "opus",
    "started": "2026-11-14T14:13:10.608Z",
-   "seconds": 1100,
+   "seconds": 1281,
    "finished": null,
    "effort": "high"
   }
@@ -136,7 +136,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 343,
+  "runnable_count": 354,
   "blocked_count": 86
  },
  "meter": {
@@ -185,7 +185,7 @@
   "week_pct": 52.14,
   "usage_pct": 34.5,
   "work_pct": 80.2,
-  "read_at": "2026-11-14T14:31:00+00:00",
+  "read_at": "2026-11-14T14:34:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -196,6 +196,19 @@
     "m": "opus",
     "e": "xhigh",
     "at": "2026-11-14T09:06:03-05:00",
+    "n": "Jeremy",
+    "d": 1,
+    "src": "plan-b"
+   },
+   {
+    "lane": "b2",
+    "task": "T-4196",
+    "w": "Idris",
+    "k": "tools",
+    "t": "Let app changes waiting to merge share one iPhone run",
+    "m": "opus",
+    "e": "xhigh",
+    "at": "2026-11-14T09:33:26-05:00",
     "n": "Jeremy",
     "src": "plan-b"
    },
@@ -232,7 +245,7 @@
   }
  ],
  "disk": {
-  "free_gb": 16,
+  "free_gb": 17,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -241,14 +254,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-14T09:28:00-05:00",
+   "at": "2026-11-14T09:34:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-14T09:31:00-05:00",
+  "at": "2026-11-14T09:34:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -390,25 +403,25 @@
     "o": "c"
    },
    {
-    "w": "Idris",
-    "k": "build",
-    "t": "Every premade widget draws on the iPhone",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Add the task card slots when a line is made",
     "s": "next",
     "o": "i"
    },
    {
-    "w": "Idris",
-    "k": "build",
-    "t": "Widgets refresh on their own and by a tap",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Run the queue check on each change and...",
     "s": "next",
     "o": "i"
    },
    {
-    "w": "Idris",
-    "k": "measure",
-    "t": "Run the device test session for the widget...",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Show task states in place of new lines",
     "s": "next",
-    "o": "c"
+    "o": "i"
    }
   ],
   "done": [
@@ -429,7 +442,7 @@
    }
   ],
   "count": {
-   "next": 343,
+   "next": 354,
    "wait": 41,
    "blocked": 45,
    "you": 15
@@ -483,17 +496,17 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-14T14:31:19Z",
+  "at": "2026-11-14T14:34:32Z",
   "s": {
    "T-4434": [
-    "merging",
-    "Mac tests at the main gate",
-    1794666559921
+    "mergetest",
+    "iPhone tests on the MacBook",
+    null
    ],
    "T-4316": [
     "testing",
     "its own tests, in its copy",
-    1794666679921
+    1794666812230
    ]
   },
   "nm": {
@@ -502,7 +515,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-14T14:31:19Z",
+  "at": "2026-11-14T14:34:32Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -516,11 +529,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 2849,
+    "conflicted": 2852,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1295
+    "parked": 1298
    },
    "cur": [],
    "ld": [
@@ -530,8 +543,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-14T14:30:32Z",
-    "ld": 29.08,
+    "at": "2026-11-14T14:34:07Z",
+    "ld": 14.63,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -545,12 +558,12 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-14T14:16:35Z",
-    "ld": 2.09,
+    "at": "2026-11-14T14:32:55Z",
+    "ld": 0.31,
     "c": 12,
     "sb": 0,
     "dk": [
-     370.0,
+     369.6,
      926.4
     ],
     "sn": []
@@ -583,6 +596,15 @@
    "m": "opus",
    "e": "xhigh",
    "t": "Work session \u2013 1 task",
+   "at": "2026-11-14T09:33:26-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Jeremy",
+   "sr": 1,
+   "m": "opus",
+   "e": "xhigh",
+   "t": "Work session \u2013 1 task",
    "at": "2026-11-14T09:06:14-05:00"
   }
  ],
@@ -604,12 +626,12 @@
  ],
  "agents_now": {
   "main": 2,
-  "lanes": 2,
-  "total": 4,
-  "at": "9:31 AM",
+  "lanes": 3,
+  "total": 5,
+  "at": "9:34 AM",
   "why": "",
-  "at_iso": "2026-11-14T14:31:00+00:00",
+  "at_iso": "2026-11-14T14:34:00+00:00",
   "started": "8:56 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 2, started 8:56 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 9:31 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 2, started 8:56 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 9:34 AM ET</p></section>"
  }
 }

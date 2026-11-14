@@ -36,7 +36,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-4008 11-10 0dc00ac09b: Ask to Buy red = StoreKit test env lists a verified purchase for a deferred request; test skips with facts. Rerun line off after a clean week (xc_rerun.jsonl).
 - Lesson T-4008: main unpushed? push land/idris-<task> whose tip adds the job files; empty pin commits dodge "already queued".
 
-- T-4270 11-13: build 6 archived (65f23b1c7c, ops/runs/upload-internal-20261113-115546.xcarchive); Apple export exit 70 'required contracts': Investors must accept an agreement, then upload.sh --archive it --internal --upload, then the phone card. Lesson: main gets recut, my hashes change (754904a541 = 2411183c0d): check is-ancestor on origin/main. Gate Release build needs PW_INTERNAL_TESTFLIGHT=YES CODE_SIGNING_ALLOWED=NO.
+- T-4270 11-13: build 6 uploaded 8:37 PM ET (ledger 1902fe5e84), card #306 (phone check), ticked 9914ab1bd0. Open: What to Test text not set in App Store Connect (signed-in, Investors); #306 answer. Lesson: main gets recut, check is-ancestor on origin/main. Gate Release build needs PW_INTERNAL_TESTFLIGHT=YES CODE_SIGNING_ALLOWED=NO.
 
 - T-3764 11-12: stopped, no code. Runner {SIM} is always an iPhone (runner.py simulator()); every .pad UI test skips there. iPad proof needs a runner change first (line noted).
 

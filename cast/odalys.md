@@ -37,9 +37,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 ## Open (2026-11-10 12:4x)
 
-- T-4310 (11-13): T-4100's last slice (16dc949a92) redone by hand on personal/a: Home cards show typed links both ways, by kind. Page data 35,939 B of 40,000 (35,172 before). Owed: first live 'part of' badge; watch the <span title="A measured fact that holds a grade below a letter, however good the rest is.">cap</span>.
-
-- T-4138 7266de4234 (11-12): pinned session cap removed (an Investor c6824162128). Owed: count fix/sent-back waits on a while 3 pinned hold every slot.
+- T-4138 7266de4234 (11-12): pinned session <span title="A measured fact that holds a grade below a letter, however good the rest is.">cap</span> removed (an Investor c6824162128). Owed: count fix/sent-back waits on a while 3 pinned hold every slot.
 
 - T-4157 ff2a4c732d: a, b fable_only. T-4206 df0eb78f5a: investor-stop flag <span title="A new, permitted reading that removes a cap. A lift rule is that reading, written down before we look.">lifts</span> when its rule is retired/lifted for the account (lane_stop.py released). Owed: first live 'usage-line stop lifted' line (b freed by <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">LANE</span> CLEAR 1:18 PM first).
 
@@ -63,9 +61,13 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 - T-4284 slice 1 453bf6cc2f + 0e216d21fa (11-13): ops/audit_mode.json (a, T-4092) = pause watch off, as PERSONAL_PAUSE_WATCH=0; live 12:56 PM. Owed: git rm it when Evan's Fable week is used up (T-4276). Helpers-on-Fable slice dropped (c6861969242), unlanded in company-scratch/T-4284-odalys/wt2.
 
+- T-4129 2c93b342af (11-13): <span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">parked</span> reader confirms by git cherry. Owed: 2b patch in company-scratch/T-4129-odalys (pipeline hold), then tick.
+
+- T-4317 1fc5ad43a8 + T-4402 9f7eb648d0 (11-13): ledger rows via tools/ledger_row.py (fills prev; plan, lane.md, slice notes say so). Owed: tick T-4402 when the next slice's rows all carry prev; then the apply refuses rows without prev.
+
 ## Lessons
 
-- Gate --from: anything it reads from disk must read the copy, git from the main folder (tests/ suites T-3994, host suites T-4275).
+- A key match over main's last N commits is not 'on main': past N, confirm by git cherry (T-4129).
 {% endraw %}
 
 

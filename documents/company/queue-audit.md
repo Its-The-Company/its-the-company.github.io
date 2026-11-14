@@ -115,6 +115,18 @@ such a row is refused, R3), and the applied record: the tool appends a copy of t
 "rewrite" added to "applied" and "applied_at"/"applied_by" set, so the last row still carries the verdict and a
 second run does nothing.
 
+Two sides (T-4317). Several lanes append to the ledger at once, and git joins both sides' rows in a rebase
+(`ops/queue_audit/*.jsonl merge=union` in .gitattributes), so "the last row counts" alone would let one side win
+without either seeing the other. A new row carries "prev": the hashes of the rows for its ID its writer read last
+(`python3 tools/queue_apply.py --heads T-X` prints them; [] for a first row). The apply refuses an ID whose rows
+end in two heads that disagree on verdict, rewrite, merge_into, active or investors_agreed, until a row names
+both in its "prev". Rows without "prev" read one after another, as before.
+
+Write rows only through `python3 tools/ledger_row.py` (T-4402): one JSON row per line on stdin (or `--row`), never
+by hand or by your own script. It checks every field above, fills "prev" from the rows this copy holds, appends
+under the ledger's lock, and refuses an ID whose rows already disagree until you have read both and pass
+`--settle`. The apply does not yet refuse rows without "prev"; it will once every new row carries one.
+
 ## Slices, in order (every one is part of T-4092; each has its own board line, P0, Account: a)
 
 1. Done in this slice (11-11 evening): this plan, the inventory tool and its test, the ledger started with the 13

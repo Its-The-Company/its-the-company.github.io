@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-15T14:23:46.454110+00:00",
+ "at": "2026-11-15T14:26:53.930677+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -117,7 +117,7 @@
    "task": "[build] T-4504 Clocks Small long city names",
    "model": "opus",
    "started": "2026-11-15T13:29:47.840Z",
-   "seconds": 3238,
+   "seconds": 3426,
    "finished": null
   },
   {
@@ -125,7 +125,7 @@
    "task": "[tools] T-4507 quit apps the company opened",
    "model": "opus",
    "started": "2026-11-15T14:05:18.477Z",
-   "seconds": 1107,
+   "seconds": 1295,
    "finished": null
   },
   {
@@ -133,7 +133,7 @@
    "task": "[ops] T-4509 land reply wording in prompts",
    "model": "opus",
    "started": "2026-11-15T14:05:23.579Z",
-   "seconds": 1102,
+   "seconds": 1290,
    "finished": null
   }
  ],
@@ -224,7 +224,7 @@
   "week_pct": null,
   "usage_pct": null,
   "work_pct": null,
-  "read_at": "2026-11-15T14:23:00+00:00",
+  "read_at": "2026-11-15T14:26:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -248,6 +248,7 @@
     "e": "high",
     "at": "2026-11-15T09:10:17-05:00",
     "n": "Evan",
+    "d": 1,
     "src": "plan-a"
    },
    {
@@ -298,7 +299,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-15T09:23:00-05:00",
+  "at": "2026-11-15T09:26:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -558,17 +559,22 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-15T14:23:46Z",
+  "at": "2026-11-15T14:26:44Z",
   "s": {
    "T-4482": [
     "merging",
-    "Host checks on the Mac mini \u00b7 4 groups of tests done",
-    1794752566454
+    "Host checks on the Mac mini \u00b7 5 groups of tests done",
+    1794752564388
    ],
    "T-4009": [
     "merging",
-    "Host checks on the Mac mini \u00b7 4 groups of tests done",
-    1794752566454
+    "Host checks on the Mac mini \u00b7 5 groups of tests done",
+    1794752564388
+   ],
+   "T-4472": [
+    "mergeq",
+    "3rd to merge",
+    1794752804388
    ],
    "T-4504": [
     "mergetest",
@@ -578,22 +584,23 @@
    "T-4507": [
     "merging",
     "Mac tests at the main gate",
-    1794752326454
+    1794752324388
    ],
    "T-4129": [
     "merging",
     "Mac tests at the main gate",
-    1794751846454
+    1794751844388
    ],
    "T-4509": [
     "testing",
     "its own tests, in its copy",
-    1794751606454
+    1794751604388
    ]
   },
   "nm": {
    "T-4482": "Redo commit queued board records with the records round",
    "T-4009": "Raise the 5-hour stop from 90% toward 100%",
+   "T-4472": "Measure the queue check rules the replay could not",
    "T-4504": "Let long city names give way in Clocks Small",
    "T-4507": "Let the company quit apps it opened itself",
    "T-4129": "Retire the Set aside stage on Home",
@@ -601,11 +608,11 @@
   }
  },
  "ln": {
-  "at": "2026-11-15T14:23:46Z",
+  "at": "2026-11-15T14:26:44Z",
   "mq": {
    "n": {
     "checking": 2,
-    "inline": 0,
+    "inline": 1,
     "conflicted": 2,
     "failed": 0,
     "held": 0,
@@ -613,13 +620,13 @@
     "parked": 3
    },
    "m": {
-    "checking": 1,
-    "inline": null,
-    "conflicted": 861,
+    "checking": 4,
+    "inline": 0,
+    "conflicted": 864,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 2725
+    "parked": 2728
    },
    "cur": [
     [
@@ -628,7 +635,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     1
+     4
     ],
     [
      [
@@ -636,7 +643,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     1
+     4
     ]
    ],
    "ld": [
@@ -646,8 +653,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-15T14:23:48Z",
-    "ld": 5.01,
+    "at": "2026-11-15T14:26:15Z",
+    "ld": 4.92,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -689,7 +696,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 3 tasks",
+   "t": "Work session \u2013 2 tasks",
    "at": "2026-11-15T09:10:17-05:00"
   }
  ],
@@ -715,10 +722,10 @@
   "main": 3,
   "lanes": 1,
   "total": 4,
-  "at": "9:23 AM",
+  "at": "9:26 AM",
   "why": "",
-  "at_iso": "2026-11-15T14:23:00+00:00",
+  "at_iso": "2026-11-15T14:26:00+00:00",
   "started": "6:23 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 3, started 6:23 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 9:23 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 3, started 6:23 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 9:26 AM ET</p></section>"
  }
 }

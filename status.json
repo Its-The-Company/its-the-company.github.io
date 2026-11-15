@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-15T11:38:35.099984+00:00",
+ "at": "2026-11-15T11:41:41.385294+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -91,19 +91,11 @@
  },
  "workers": [
   {
-   "name": "ines",
-   "task": "[plan] T-4467 plan in line with Saturday answers",
-   "model": "opus",
-   "started": "2026-11-15T11:26:47.064Z",
-   "seconds": 708,
-   "finished": null
-  },
-  {
    "name": "odalys",
    "task": "[tools] T-4487 wire task states into land",
    "model": "opus",
    "started": "2026-11-15T11:27:02.366Z",
-   "seconds": 692,
+   "seconds": 879,
    "finished": null
   },
   {
@@ -111,12 +103,20 @@
    "task": "[tools] T-4461 ledger apply last rows",
    "model": "opus",
    "started": "2026-11-15T11:34:56.087Z",
-   "seconds": 219,
+   "seconds": 405,
    "finished": null
   }
  ],
- "who": "Ines, Odalys x2",
+ "who": "Odalys x2",
  "recent": [
+  {
+   "name": "ines",
+   "task": "[plan] T-4467 plan in line with Saturday answers",
+   "model": "opus",
+   "started": "2026-11-15T11:26:47.064Z",
+   "seconds": null,
+   "finished": "2026-11-15T11:41:13.561000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[tools] T-4480 records via records round redo",
@@ -129,7 +129,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 384,
+  "runnable_count": 383,
   "blocked_count": 78
  },
  "meter": {
@@ -178,7 +178,7 @@
   "week_pct": null,
   "usage_pct": null,
   "work_pct": null,
-  "read_at": "2026-11-15T11:38:00+00:00",
+  "read_at": "2026-11-15T11:41:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -250,7 +250,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-15T06:38:00-05:00",
+  "at": "2026-11-15T06:41:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -267,14 +267,6 @@
  },
  "lanes": [
   {
-   "name": "Ines",
-   "state": "running",
-   "task": "[plan] T-4467 plan in line with Saturday answers",
-   "model": "opus",
-   "since": "2026-11-15T11:26:47.064Z",
-   "next": []
-  },
-  {
    "name": "Odalys",
    "state": "running",
    "task": "[tools] T-4487 wire task states into land",
@@ -286,6 +278,14 @@
    "name": "Idris",
    "state": "next",
    "task": "Idris, P2, from T-4238 (Pernille's review, from T-3900,...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
+   "name": "Ines",
+   "state": "next",
+   "task": "Ines, P2, from T-1110 (Wrenna,...",
    "model": null,
    "since": null,
    "next": []
@@ -317,15 +317,6 @@
  ],
  "tasks": {
   "run": [
-   {
-    "w": "Ines",
-    "k": "plan",
-    "t": "Bring the plan in line with the Saturday answers",
-    "m": "opus",
-    "at": "2026-11-15T11:26:47.064Z",
-    "o": "i",
-    "task": "T-4467"
-   },
    {
     "w": "Odalys",
     "k": "tools",
@@ -420,9 +411,9 @@
   ],
   "done": [
    {
-    "w": "Odalys",
-    "t": "Four background tools no longer make a separate commit each time they write a record; the shared...",
-    "at": "2026-11-15T06:33:00-05:00"
+    "w": "Ines",
+    "t": "The release estimate now counts Saturday's two Builder choices: likely early June 2027 instead...",
+    "at": "2026-11-15T06:41:00-05:00"
    },
    {
     "w": "Odalys",
@@ -431,19 +422,23 @@
    },
    {
     "w": "Odalys",
-    "t": "The test for the How the app works page failed on every check because it expected no explanation...",
-    "at": "2026-11-15T05:37:00-05:00"
+    "t": "Four background tools no longer make a separate commit each time they write a record; the shared...",
+    "at": "2026-11-15T06:33:00-05:00"
    }
   ],
   "count": {
-   "next": 384,
+   "next": 383,
    "wait": 37,
    "blocked": 41,
    "you": 12
   },
   "fin": {
-   "n": 2,
+   "n": 3,
    "rows": [
+    [
+     "T-4467",
+     "Bring the plan in line with..."
+    ],
     [
      "T-4458",
      "Stop the other tools..."
@@ -494,12 +489,12 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-15T11:38:35Z",
+  "at": "2026-11-15T11:41:41Z",
   "s": {
    "T-4487": [
     "testing",
     "its own tests, in its copy",
-    1794742475099
+    1794742481385
    ],
    "T-4123": [
     "merged",
@@ -514,7 +509,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-15T11:38:35Z",
+  "at": "2026-11-15T11:41:41Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -528,11 +523,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 680,
+    "conflicted": 683,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 2560
+    "parked": 2563
    },
    "cur": [],
    "ld": [
@@ -542,12 +537,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-15T11:38:42Z",
-    "ld": 9.73,
+    "at": "2026-11-15T11:41:21Z",
+    "ld": 8.48,
     "c": 8,
     "sb": 0,
     "dk": [
-     18.3,
+     18.4,
      228.3
     ],
     "ss": [
@@ -606,13 +601,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 3,
+  "main": 2,
   "lanes": 1,
-  "total": 4,
-  "at": "6:38 AM",
+  "total": 3,
+  "at": "6:41 AM",
   "why": "",
-  "at_iso": "2026-11-15T11:38:00+00:00",
+  "at_iso": "2026-11-15T11:41:00+00:00",
   "started": "6:23 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 3, started 6:23 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 6:38 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 6:23 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 6:41 AM ET</p></section>"
  }
 }

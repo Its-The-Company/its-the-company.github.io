@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-15T15:11:18.750038+00:00",
+ "at": "2026-11-15T15:14:23.913013+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -105,7 +105,7 @@
    "task": "[build] T-2491 stuck extension folders",
    "model": "opus",
    "started": "2026-11-15T15:07:59.962Z",
-   "seconds": 198,
+   "seconds": 383,
    "finished": null,
    "effort": "high"
   },
@@ -114,7 +114,7 @@
    "task": "[build] T-2869 pyc-only completion test",
    "model": "opus",
    "started": "2026-11-15T15:08:06.419Z",
-   "seconds": 192,
+   "seconds": 377,
    "finished": null,
    "effort": "high"
   },
@@ -123,7 +123,7 @@
    "task": "[build] T-4505 Distance Small far values",
    "model": "opus",
    "started": "2026-11-15T15:08:12.068Z",
-   "seconds": 186,
+   "seconds": 371,
    "finished": null,
    "effort": "high"
   }
@@ -133,7 +133,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 385,
+  "runnable_count": 386,
   "blocked_count": 76
  },
  "meter": {
@@ -182,7 +182,7 @@
   "week_pct": 2.36,
   "usage_pct": 27.2,
   "work_pct": 75.0,
-  "read_at": "2026-11-15T15:11:00+00:00",
+  "read_at": "2026-11-15T15:14:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -233,7 +233,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-15T10:11:00-05:00",
+  "at": "2026-11-15T10:14:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -424,7 +424,7 @@
    }
   ],
   "count": {
-   "next": 385,
+   "next": 386,
    "wait": 35,
    "blocked": 41,
    "you": 12
@@ -473,17 +473,22 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-15T15:11:09Z",
+  "at": "2026-11-15T15:14:23Z",
   "s": {
+   "T-2491": [
+    "merging",
+    "Mac tests at the main gate",
+    1794755603913
+   ],
+   "T-4505": [
+    "testing",
+    "its own tests, in its copy",
+    1794755603913
+   ],
    "T-2869": [
     "testing",
     "its own tests, in its copy",
-    1794755409948
-   ],
-   "T-2491": [
-    "testing",
-    "its own tests, in its copy",
-    1794755469948
+    1794755423913
    ],
    "T-4468": [
     "merged",
@@ -493,13 +498,14 @@
    ]
   },
   "nm": {
-   "T-2869": "Test completion with the stdlib as compiled-only files",
    "T-2491": "Stop the stuck extension from recreating deleted widget...",
+   "T-4505": "Fit far distances in Distance Small",
+   "T-2869": "Test completion with the stdlib as compiled-only files",
    "T-4468": "Let people set each premade's place, events and lists"
   }
  },
  "ln": {
-  "at": "2026-11-15T15:11:09Z",
+  "at": "2026-11-15T15:14:23Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -513,11 +519,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 909,
+    "conflicted": 912,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 471
+    "parked": 474
    },
    "cur": [],
    "ld": [
@@ -527,16 +533,16 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-15T15:10:48Z",
-    "ld": 6.68,
+    "at": "2026-11-15T15:13:42Z",
+    "ld": 5.77,
     "c": 8,
     "sb": 0,
     "dk": [
-     13.0,
+     11.9,
      228.3
     ],
     "ss": [
-     181.8,
+     180.9,
      953.7
     ],
     "sn": []
@@ -593,10 +599,10 @@
   "main": 3,
   "lanes": 1,
   "total": 4,
-  "at": "10:11 AM",
+  "at": "10:14 AM",
   "why": "",
-  "at_iso": "2026-11-15T15:11:00+00:00",
+  "at_iso": "2026-11-15T15:14:00+00:00",
   "started": "10:05 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 3, started 10:05 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 10:11 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 3, started 10:05 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 10:14 AM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-15T22:42:11.645874+00:00",
+ "at": "2026-11-15T22:45:16.207928+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -123,7 +123,7 @@
    "task": "[tools] T-3992 land the pipeline batch",
    "model": "opus",
    "started": "2026-11-15T22:17:17.812Z",
-   "seconds": 1493,
+   "seconds": 1678,
    "finished": null,
    "effort": "high"
   },
@@ -132,7 +132,7 @@
    "task": "[tools] T-4538 queue check one-day young limit",
    "model": "opus",
    "started": "2026-11-15T22:34:15.356Z",
-   "seconds": 476,
+   "seconds": 660,
    "finished": null,
    "effort": "high"
   }
@@ -208,7 +208,7 @@
   "week_pct": 3.57,
   "usage_pct": 22.9,
   "work_pct": 71.4,
-  "read_at": "2026-11-15T22:42:00+00:00",
+  "read_at": "2026-11-15T22:45:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -266,7 +266,7 @@
   }
  ],
  "disk": {
-  "free_gb": 11,
+  "free_gb": 9.1,
   "gate": "closed",
   "ssd": {
    "mounted": true,
@@ -275,14 +275,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions wait until 20 GB is free.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-15T17:39:00-05:00",
+   "at": "2026-11-15T17:44:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-15T17:42:00-05:00",
+  "at": "2026-11-15T17:45:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -516,38 +516,38 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-15T22:42:11Z",
+  "at": "2026-11-15T22:45:01Z",
   "s": {
    "T-4227": [
     "merging",
     "Host checks on the Mac mini \u00b7 3 groups of tests done",
-    1794782171645
+    1794782161580
    ],
    "T-4293": [
     "mergeq",
     "1st to merge",
-    1794782171645
+    1794782161580
+   ],
+   "T-4538": [
+    "merging",
+    "Mac tests at the main gate",
+    1794782701580
    ],
    "T-3992": [
     "testing",
     "its own tests, in its copy",
-    1794781211645
-   ],
-   "T-4538": [
-    "testing",
-    "its own tests, in its copy",
-    1794782471645
+    1794781201580
    ]
   },
   "nm": {
    "T-4227": "Run every Operator on Opus high",
    "T-4293": "Show skipped and brief stages on Home",
-   "T-3992": "Clear and merge the unfinished merge fixes",
-   "T-4538": "Let the queue check read new lines after one day"
+   "T-4538": "Let the queue check read new lines after one day",
+   "T-3992": "Clear and merge the unfinished merge fixes"
   }
  },
  "ln": {
-  "at": "2026-11-15T22:42:11Z",
+  "at": "2026-11-15T22:45:01Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -559,13 +559,13 @@
     "parked": 2
    },
    "m": {
-    "checking": 6,
-    "inline": 6,
-    "conflicted": 1344,
+    "checking": 9,
+    "inline": 9,
+    "conflicted": 1346,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 572
+    "parked": 575
    },
    "cur": [
     [
@@ -574,7 +574,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     6
+     9
     ]
    ],
    "ld": [
@@ -584,12 +584,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-15T22:42:12Z",
-    "ld": 3.21,
+    "at": "2026-11-15T22:44:59Z",
+    "ld": 3.18,
     "c": 8,
     "sb": 0,
     "dk": [
-     9.4,
+     9.3,
      228.3
     ],
     "ss": [
@@ -651,10 +651,10 @@
   "main": 2,
   "lanes": 1,
   "total": 3,
-  "at": "5:42 PM",
+  "at": "5:45 PM",
   "why": "",
-  "at_iso": "2026-11-15T22:42:00+00:00",
+  "at_iso": "2026-11-15T22:45:00+00:00",
   "started": "5:14 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 5:14 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 5:42 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 5:14 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 5:45 PM ET</p></section>"
  }
 }

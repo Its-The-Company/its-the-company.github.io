@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-15T19:58:58.844363+00:00",
+ "at": "2026-11-15T20:02:02.252410+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -117,7 +117,7 @@
    "task": "[build] T-4468 premade settings H1 Python half",
    "model": "opus",
    "started": "2026-11-15T19:14:40.149Z",
-   "seconds": 2658,
+   "seconds": 2842,
    "finished": null,
    "effort": "high"
   },
@@ -126,7 +126,7 @@
    "task": "[tools] T-4449 queue check fixes and switch-on",
    "model": "opus",
    "started": "2026-11-15T19:48:34.144Z",
-   "seconds": 624,
+   "seconds": 808,
    "finished": null,
    "effort": "high"
   },
@@ -135,7 +135,7 @@
    "task": "[build] T-4311 net.request certificate errors",
    "model": "opus",
    "started": "2026-11-15T19:51:18.433Z",
-   "seconds": 460,
+   "seconds": 643,
    "finished": null,
    "effort": "high"
   }
@@ -227,7 +227,7 @@
   "week_pct": 3.22,
   "usage_pct": 26.1,
   "work_pct": 75.0,
-  "read_at": "2026-11-15T19:58:00+00:00",
+  "read_at": "2026-11-15T20:02:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -264,7 +264,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-15T14:58:00-05:00",
+  "at": "2026-11-15T15:02:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -530,42 +530,42 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-15T19:58:44Z",
+  "at": "2026-11-15T20:01:54Z",
   "s": {
    "T-4227": [
-    "mergeq",
-    "1st to merge",
-    1794772724288
+    "merging",
+    "Host checks on the Mac mini \u00b7 3 groups of tests done",
+    1794772734776
    ],
-   "T-4468": [
+   "T-4311": [
     "mergetest",
     "iPhone tests on the MacBook",
     null
    ],
-   "T-4311": [
+   "T-4468": [
     "merging",
-    "Mac tests at the main gate \u00b7 4 groups of tests done",
-    1794772544288
+    "Mac tests at the main gate",
+    1794772794776
    ],
    "T-4449": [
     "testing",
     "its own tests, in its copy",
-    1794772484288
+    1794772494776
    ]
   },
   "nm": {
    "T-4227": "Run every Operator on Opus high",
-   "T-4468": "Let people set each premade's place, events and lists",
    "T-4311": "Name certificate failures right in net.request",
+   "T-4468": "Let people set each premade's place, events and lists",
    "T-4449": "Switch the queue check on"
   }
  },
  "ln": {
-  "at": "2026-11-15T19:58:44Z",
+  "at": "2026-11-15T20:01:54Z",
   "mq": {
    "n": {
-    "checking": 0,
-    "inline": 1,
+    "checking": 1,
+    "inline": 0,
     "conflicted": 1,
     "failed": 0,
     "held": 0,
@@ -573,15 +573,24 @@
     "parked": 2
    },
    "m": {
-    "checking": null,
-    "inline": 0,
-    "conflicted": 1180,
+    "checking": 3,
+    "inline": null,
+    "conflicted": 1183,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 409
+    "parked": 412
    },
-   "cur": [],
+   "cur": [
+    [
+     [
+      "T-4227"
+     ],
+     "Mac tests",
+     "Mac mini",
+     3
+    ]
+   ],
    "ld": [
     25,
     "2026-11-15T18:12:48Z"
@@ -589,8 +598,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-15T19:58:44Z",
-    "ld": 2.0,
+    "at": "2026-11-15T20:01:55Z",
+    "ld": 1.42,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -604,12 +613,12 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-15T19:52:00Z",
-    "ld": 1.22,
+    "at": "2026-11-15T20:01:31Z",
+    "ld": 1.67,
     "c": 12,
     "sb": 0,
     "dk": [
-     358.4,
+     358.1,
      926.4
     ],
     "sn": []
@@ -632,8 +641,8 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session",
-   "at": "2026-11-15T14:58:48-05:00"
+   "t": "Inbox session",
+   "at": "2026-11-15T15:02:01-05:00"
   }
  ],
  "reply": {
@@ -657,10 +666,10 @@
   "main": 3,
   "lanes": 0,
   "total": 3,
-  "at": "2:58 PM",
+  "at": "3:02 PM",
   "why": "",
-  "at_iso": "2026-11-15T19:58:00+00:00",
+  "at_iso": "2026-11-15T20:02:00+00:00",
   "started": "2:00 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 2:00 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 2:58 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 2:00 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 3:02 PM ET</p></section>"
  }
 }

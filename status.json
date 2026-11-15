@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-15T12:18:24.609286+00:00",
+ "at": "2026-11-15T12:21:28.977966+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -95,7 +95,7 @@
    "task": "[tools] T-4487 wire task states into land",
    "model": "opus",
    "started": "2026-11-15T11:27:02.366Z",
-   "seconds": 3082,
+   "seconds": 3266,
    "finished": null
   },
   {
@@ -103,20 +103,28 @@
    "task": "[design] T-4468 premade input pages design",
    "model": "opus",
    "started": "2026-11-15T11:55:51.552Z",
-   "seconds": 1353,
+   "seconds": 1537,
    "finished": null
   },
+  {
+   "name": "odalys",
+   "task": "[site] T-4102 nested queue on Home",
+   "model": "opus",
+   "started": "2026-11-15T12:19:27.863Z",
+   "seconds": 121,
+   "finished": null
+  }
+ ],
+ "who": "Odalys x2, Maren",
+ "recent": [
   {
    "name": "idris",
    "task": "[tools] T-4194 feature session slice b",
    "model": "opus",
    "started": "2026-11-15T12:17:52.301Z",
-   "seconds": 32,
-   "finished": null
-  }
- ],
- "who": "Odalys, Maren, Idris",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-15T12:19:05.375000+00:00"
+  },
   {
    "name": "ines",
    "task": "[plan] T-4304 handbook note on reviews",
@@ -140,14 +148,6 @@
    "started": "2026-11-15T11:54:26.814Z",
    "seconds": null,
    "finished": "2026-11-15T12:11:51.030000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-4241 GitLab and GitBook terms guard",
-   "model": "opus",
-   "started": "2026-11-15T11:42:00.619Z",
-   "seconds": null,
-   "finished": "2026-11-15T11:54:32.500000+00:00"
   }
  ],
  "queue": {
@@ -202,7 +202,7 @@
   "week_pct": null,
   "usage_pct": null,
   "work_pct": null,
-  "read_at": "2026-11-15T12:18:00+00:00",
+  "read_at": "2026-11-15T12:21:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -239,7 +239,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-15T07:18:00-05:00",
+  "at": "2026-11-15T07:21:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -273,10 +273,10 @@
   },
   {
    "name": "Idris",
-   "state": "running",
-   "task": "[tools] T-4194 feature session slice b",
-   "model": "opus",
-   "since": "2026-11-15T12:17:52.301Z",
+   "state": "next",
+   "task": "Idris, P2, from T-4238 (Pernille's review, from T-3900,...",
+   "model": null,
+   "since": null,
    "next": []
   },
   {
@@ -325,13 +325,13 @@
     "task": "T-4468"
    },
    {
-    "w": "Idris",
-    "k": "tools",
-    "t": "Build the feature session for app work",
+    "w": "Odalys",
+    "k": "site",
+    "t": "Show the queue nested on Home with search",
     "m": "opus",
-    "at": "2026-11-15T12:17:52.301Z",
+    "at": "2026-11-15T12:19:27.863Z",
     "o": "c",
-    "task": "T-4194"
+    "task": "T-4102"
    }
   ],
   "src": "plan",
@@ -499,7 +499,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-15T12:18:06Z",
+  "at": "2026-11-15T12:21:17Z",
   "s": {
    "T-4468": [
     "mergetest",
@@ -509,7 +509,7 @@
    "T-4487": [
     "testing",
     "its own tests, in its copy",
-    1794743886843
+    1794745217322
    ]
   },
   "nm": {
@@ -518,7 +518,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-15T12:18:06Z",
+  "at": "2026-11-15T12:21:17Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -532,11 +532,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 720,
+    "conflicted": 723,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1448
+    "parked": 1452
    },
    "cur": [],
    "ld": [
@@ -546,12 +546,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-15T12:17:41Z",
-    "ld": 2.99,
+    "at": "2026-11-15T12:20:53Z",
+    "ld": 1.99,
     "c": 8,
     "sb": 0,
     "dk": [
-     20.1,
+     21.4,
      228.3
     ],
     "ss": [
@@ -606,10 +606,10 @@
   "main": 3,
   "lanes": 0,
   "total": 3,
-  "at": "7:18 AM",
+  "at": "7:21 AM",
   "why": "",
-  "at_iso": "2026-11-15T12:18:00+00:00",
+  "at_iso": "2026-11-15T12:21:00+00:00",
   "started": "6:23 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 6:23 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 7:18 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 6:23 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 7:21 AM ET</p></section>"
  }
 }

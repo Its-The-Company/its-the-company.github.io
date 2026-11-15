@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-15T10:19:46.860676+00:00",
+ "at": "2026-11-15T10:24:09.753288+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -102,7 +102,7 @@
    "task": "[tools] T-4485 fix real-tick land rows red",
    "model": "opus",
    "started": "2026-11-15T09:24:59.819Z",
-   "seconds": 3287,
+   "seconds": 3549,
    "finished": null,
    "effort": "high"
   },
@@ -111,7 +111,7 @@
    "task": "[tools] T-4486 refuse Fable without Fable task",
    "model": "opus",
    "started": "2026-11-15T09:39:16.911Z",
-   "seconds": 2429,
+   "seconds": 2692,
    "finished": null,
    "effort": "high"
   },
@@ -120,7 +120,7 @@
    "task": "[tools] T-4488 T-4438 fix main red suites",
    "model": "opus",
    "started": "2026-11-15T09:53:40.312Z",
-   "seconds": 1566,
+   "seconds": 1829,
    "finished": null,
    "effort": "high"
   }
@@ -212,7 +212,7 @@
   "week_pct": null,
   "usage_pct": null,
   "work_pct": null,
-  "read_at": "2026-11-15T10:21:00+00:00",
+  "read_at": "2026-11-15T10:24:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -281,6 +281,7 @@
     "e": "high",
     "at": "2026-11-15T04:53:08-05:00",
     "n": "Evan",
+    "d": 1,
     "src": "plan-a"
    },
    {
@@ -293,6 +294,7 @@
     "e": "high",
     "at": "2026-11-15T04:53:01-05:00",
     "n": "Evan",
+    "d": 1,
     "src": "plan-a"
    },
    {
@@ -355,7 +357,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-15T05:21:00-05:00",
+  "at": "2026-11-15T05:24:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -529,6 +531,11 @@
   ],
   "done": [
    {
+    "w": "Odalys",
+    "t": "A safety test of the overnight landing ticks failed by timing on every run and held up other...",
+    "at": "2026-11-15T05:23:00-05:00"
+   },
+   {
     "w": "Pernille",
     "t": "Re-ran the study of what marks the task lines the queue audit changed, now on the whole audit...",
     "at": "2026-11-15T05:13:00-05:00"
@@ -536,11 +543,6 @@
    {
     "w": "Odalys",
     "t": "A parked branch, a refused record, a return count, a redo, a needed recut and an unmerged review...",
-    "at": "2026-11-15T04:52:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "Redid the landing of the task-states work on today's main, bringing only its own files; the...",
     "at": "2026-11-15T04:52:00-05:00"
    }
   ],
@@ -551,8 +553,12 @@
    "you": 12
   },
   "fin": {
-   "n": 8,
+   "n": 9,
    "rows": [
+    [
+     "T-4485",
+     "Real-tick land rows red on main"
+    ],
     [
      "T-4123",
      "Rerun the audit pattern..."
@@ -572,10 +578,6 @@
     [
      "T-4466",
      "Open the audit lines to..."
-    ],
-    [
-     "T-4479",
-     "Land Evan's account work..."
     ]
    ]
   }
@@ -619,17 +621,12 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-15T10:19:46Z",
+  "at": "2026-11-15T10:24:09Z",
   "s": {
-   "T-4485": [
-    "merging",
-    "Mac tests at the main gate",
-    1794737086860
-   ],
    "T-4438": [
     "merging",
     "Mac tests at the main gate",
-    1794737206860
+    1794737289753
    ],
    "T-4089": [
     "testing",
@@ -649,7 +646,13 @@
    "T-4486": [
     "testing",
     "its own tests, in its copy",
-    1794737026860
+    1794736989753
+   ],
+   "T-4485": [
+    "merged",
+    "on main 5:23 AM ET",
+    1794738225000,
+    ""
    ],
    "T-4123": [
     "merged",
@@ -659,17 +662,17 @@
    ]
   },
   "nm": {
-   "T-4485": "Real-tick land rows red on main",
    "T-4438": "Fix two test suites that fail on main",
    "T-4089": "Fix the location bridge test that failed on the MacBook",
    "T-4280": "Run each widget in the widget or app by size",
    "T-4430": "Answer TestFlight encryption questions by default",
    "T-4486": "Refuse Fable in sessions with no Fable task",
+   "T-4485": "Real-tick land rows red on main",
    "T-4123": "Rerun the audit pattern study on the full ledger"
   }
  },
  "ln": {
-  "at": "2026-11-15T10:19:46Z",
+  "at": "2026-11-15T10:24:09Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -683,11 +686,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 601,
+    "conflicted": 606,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1330
+    "parked": 1334
    },
    "cur": [],
    "ld": [
@@ -697,12 +700,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-15T10:21:09Z",
-    "ld": 55.38,
+    "at": "2026-11-15T10:24:11Z",
+    "ld": 62.86,
     "c": 8,
     "sb": 1,
     "dk": [
-     20.6,
+     20.7,
      228.3
     ],
     "ss": [
@@ -751,7 +754,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 3 tasks",
+   "t": "Work session \u2013 2 tasks",
    "at": "2026-11-15T04:53:08-05:00"
   },
   {
@@ -760,7 +763,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 3 tasks",
+   "t": "Work session \u2013 2 tasks",
    "at": "2026-11-15T04:53:01-05:00"
   }
  ],
@@ -786,10 +789,10 @@
   "main": 3,
   "lanes": 3,
   "total": 6,
-  "at": "5:21 AM",
+  "at": "5:24 AM",
   "why": "",
-  "at_iso": "2026-11-15T10:21:00+00:00",
+  "at_iso": "2026-11-15T10:24:00+00:00",
   "started": "2:07 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 3, started 2:07 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 5:21 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 3, started 2:07 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 5:24 AM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-15T14:02:17.880263+00:00",
+ "at": "2026-11-15T14:05:22.392305+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -93,32 +93,40 @@
  },
  "workers": [
   {
+   "name": "pernille",
+   "task": "[build] T-4504 Clocks Small long city names",
+   "model": "opus",
+   "started": "2026-11-15T13:29:47.840Z",
+   "seconds": 2134,
+   "finished": null
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-4507 quit apps the company opened",
+   "model": "opus",
+   "started": "2026-11-15T14:05:18.477Z",
+   "seconds": 3,
+   "finished": null
+  }
+ ],
+ "who": "Pernille, Odalys",
+ "recent": [
+  {
    "name": "odalys",
    "task": "[tools] T-4487 wire task states into land",
    "model": "opus",
    "started": "2026-11-15T11:27:02.366Z",
-   "seconds": 9315,
-   "finished": null
+   "seconds": null,
+   "finished": "2026-11-15T14:04:08.154000+00:00"
   },
   {
    "name": "idris",
    "task": "[build] T-4468 premade settings Swift slice 1",
    "model": "opus",
    "started": "2026-11-15T13:27:23.628Z",
-   "seconds": 2094,
-   "finished": null
+   "seconds": null,
+   "finished": "2026-11-15T14:03:54.852000+00:00"
   },
-  {
-   "name": "pernille",
-   "task": "[build] T-4504 Clocks Small long city names",
-   "model": "opus",
-   "started": "2026-11-15T13:29:47.840Z",
-   "seconds": 1950,
-   "finished": null
-  }
- ],
- "who": "Odalys, Idris, Pernille",
- "recent": [
   {
    "name": "odalys",
    "task": "[site] T-4102 nested queue on Home",
@@ -134,22 +142,6 @@
    "started": "2026-11-15T12:32:04.296Z",
    "seconds": null,
    "finished": "2026-11-15T13:27:06.411000+00:00"
-  },
-  {
-   "name": "maren",
-   "task": "[design] T-4468 premade input pages design",
-   "model": "opus",
-   "started": "2026-11-15T11:55:51.552Z",
-   "seconds": null,
-   "finished": "2026-11-15T12:31:41.375000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[tools] T-4194 feature session slice b",
-   "model": "opus",
-   "started": "2026-11-15T12:17:52.301Z",
-   "seconds": null,
-   "finished": "2026-11-15T12:19:05.375000+00:00"
   }
  ],
  "queue": {
@@ -204,7 +196,7 @@
   "week_pct": null,
   "usage_pct": null,
   "work_pct": null,
-  "read_at": "2026-11-15T14:02:00+00:00",
+  "read_at": "2026-11-15T14:05:00+00:00",
   "running": [
    {
     "lane": "b3",
@@ -276,7 +268,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-15T09:02:00-05:00",
+  "at": "2026-11-15T09:05:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -293,27 +285,27 @@
  },
  "lanes": [
   {
-   "name": "Odalys",
-   "state": "running",
-   "task": "[tools] T-4487 wire task states into land",
-   "model": "opus",
-   "since": "2026-11-15T11:27:02.366Z",
-   "next": []
-  },
-  {
-   "name": "Idris",
-   "state": "running",
-   "task": "[build] T-4468 premade settings Swift slice 1",
-   "model": "opus",
-   "since": "2026-11-15T13:27:23.628Z",
-   "next": []
-  },
-  {
    "name": "Pernille",
    "state": "running",
    "task": "[build] T-4504 Clocks Small long city names",
    "model": "opus",
    "since": "2026-11-15T13:29:47.840Z",
+   "next": []
+  },
+  {
+   "name": "Odalys",
+   "state": "running",
+   "task": "[tools] T-4507 quit apps the company opened",
+   "model": "opus",
+   "since": "2026-11-15T14:05:18.477Z",
+   "next": []
+  },
+  {
+   "name": "Idris",
+   "state": "next",
+   "task": "Idris, P2, from T-4238 (Pernille's review, from T-3900,...",
+   "model": null,
+   "since": null,
    "next": []
   },
   {
@@ -344,24 +336,6 @@
  "tasks": {
   "run": [
    {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Wire task states into the land",
-    "m": "opus",
-    "at": "2026-11-15T11:27:02.366Z",
-    "o": "c",
-    "task": "T-4487"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "Let people set each premade's place, events and lists",
-    "m": "opus",
-    "at": "2026-11-15T13:27:23.628Z",
-    "o": "c",
-    "task": "T-4468"
-   },
-   {
     "w": "Pernille",
     "k": "build",
     "t": "Let long city names give way in Clocks Small",
@@ -369,6 +343,15 @@
     "at": "2026-11-15T13:29:47.840Z",
     "o": "c",
     "task": "T-4504"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Let the company quit apps it opened itself",
+    "m": "opus",
+    "at": "2026-11-15T14:05:18.477Z",
+    "o": "c",
+    "task": "T-4507"
    }
   ],
   "src": "plan",
@@ -447,6 +430,11 @@
   "done": [
    {
     "w": "Odalys",
+    "t": "When a lane's work is parked, keeps coming back, or has a record refused, the system now marks...",
+    "at": "2026-11-15T09:03:00-05:00"
+   },
+   {
+    "w": "Odalys",
     "t": "No redo was needed: the earlier work that hands the land's record commits to the 15-minute...",
     "at": "2026-11-15T08:37:00-05:00"
    },
@@ -454,11 +442,6 @@
     "w": "Operator+odalys",
     "t": "The cap on audit and Restructuring sessions on Evan's account is gone from code and settings, a...",
     "at": "2026-11-15T08:32:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "Home now shows the whole queue as a tree: the 14 app features first, each opening to its steps...",
-    "at": "2026-11-15T08:28:00-05:00"
    }
   ],
   "count": {
@@ -468,8 +451,12 @@
    "you": 12
   },
   "fin": {
-   "n": 12,
+   "n": 13,
    "rows": [
+    [
+     "T-4487",
+     "Wire task states into the land"
+    ],
     [
      "T-4482",
      "Redo commit queued board..."
@@ -489,10 +476,6 @@
     [
      "T-4501",
      "Settle the GitLab pages read..."
-    ],
-    [
-     "T-4437",
-     "Finish the queue audit's..."
     ]
    ]
   }
@@ -536,22 +519,12 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-15T14:02:17Z",
+  "at": "2026-11-15T14:05:15Z",
   "s": {
-   "T-4487": [
-    "merging",
-    "Mac tests at the main gate",
-    1794750437880
-   ],
    "T-4504": [
-    "testing",
-    "its own tests, in its copy",
-    1794750317880
-   ],
-   "T-4468": [
-    "testing",
-    "its own tests, in its copy",
-    1794750317880
+    "mergetest",
+    "iPhone tests on the MacBook",
+    null
    ],
    "T-4482": [
     "merged",
@@ -561,14 +534,12 @@
    ]
   },
   "nm": {
-   "T-4487": "Wire task states into the land",
    "T-4504": "Let long city names give way in Clocks Small",
-   "T-4468": "Let people set each premade's place, events and lists",
    "T-4482": "Redo commit queued board records with the records round"
   }
  },
  "ln": {
-  "at": "2026-11-15T14:02:17Z",
+  "at": "2026-11-15T14:05:15Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -582,11 +553,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 840,
+    "conflicted": 843,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 2704
+    "parked": 2706
    },
    "cur": [],
    "ld": [
@@ -596,12 +567,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-15T14:02:14Z",
-    "ld": 2.1,
+    "at": "2026-11-15T14:05:16Z",
+    "ld": 2.34,
     "c": 8,
     "sb": 0,
     "dk": [
-     16.8,
+     19.9,
      228.3
     ],
     "ss": [
@@ -611,8 +582,8 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-15T14:01:38Z",
-    "ld": 6.46,
+    "at": "2026-11-15T14:03:42Z",
+    "ld": 4.41,
     "c": 12,
     "sb": 0,
     "dk": [
@@ -630,8 +601,8 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 12 tasks",
-   "at": "2026-11-15T09:00:54-05:00"
+   "t": "Work session \u2013 13 tasks",
+   "at": "2026-11-15T09:04:56-05:00"
   },
   {
    "w": "Operator",
@@ -639,21 +610,33 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 2 tasks",
-   "at": "2026-11-15T08:59:06-05:00"
+   "t": "Inbox \u2013 Jeremy's 9:04 AM Message on GitHub",
+   "at": "2026-11-15T09:05:13-05:00"
   }
  ],
  "reply": {
-  "sent": "2026-11-15T14:00:07Z",
-  "seconds": 46.0
+  "sent": "2026-11-15T14:03:23Z",
+  "seconds": 92.0
  },
- "inbox": [],
+ "inbox": [
+  {
+   "id": "c6895566740",
+   "state": "received",
+   "position": 1,
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "Also the \u201cYou asked\u201d banner at the..."
+  }
+ ],
  "trimmed": [
   "lane_next",
   "queue_text",
   "recent",
   "task_done",
   "fin_short",
+  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -662,13 +645,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 3,
+  "main": 2,
   "lanes": 1,
-  "total": 4,
-  "at": "9:02 AM",
+  "total": 3,
+  "at": "9:05 AM",
   "why": "",
-  "at_iso": "2026-11-15T14:02:00+00:00",
+  "at_iso": "2026-11-15T14:05:00+00:00",
   "started": "6:23 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 3, started 6:23 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 9:02 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 6:23 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 9:05 AM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-15T12:06:17.493263+00:00",
+ "at": "2026-11-15T12:09:17.963658+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -95,7 +95,7 @@
    "task": "[tools] T-4487 wire task states into land",
    "model": "opus",
    "started": "2026-11-15T11:27:02.366Z",
-   "seconds": 2355,
+   "seconds": 2535,
    "finished": null
   },
   {
@@ -103,7 +103,7 @@
    "task": "[plan] T-4437 queue audit order and last rows",
    "model": "opus",
    "started": "2026-11-15T11:54:26.814Z",
-   "seconds": 710,
+   "seconds": 891,
    "finished": null
   },
   {
@@ -111,7 +111,7 @@
    "task": "[design] T-4468 premade input pages design",
    "model": "opus",
    "started": "2026-11-15T11:55:51.552Z",
-   "seconds": 625,
+   "seconds": 806,
    "finished": null
   }
  ],
@@ -202,7 +202,7 @@
   "week_pct": null,
   "usage_pct": null,
   "work_pct": null,
-  "read_at": "2026-11-15T12:06:00+00:00",
+  "read_at": "2026-11-15T12:09:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -239,7 +239,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-15T07:06:00-05:00",
+  "at": "2026-11-15T07:09:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -499,20 +499,26 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-15T12:06:11Z",
+  "at": "2026-11-15T12:08:59Z",
   "s": {
    "T-4487": [
     "testing",
     "its own tests, in its copy",
-    1794743891475
+    1794743879190
+   ],
+   "T-4468": [
+    "testing",
+    "its own tests, in its copy",
+    1794744539190
    ]
   },
   "nm": {
-   "T-4487": "Wire task states into the land"
+   "T-4487": "Wire task states into the land",
+   "T-4468": "Let people set each premade's place, events and lists"
   }
  },
  "ln": {
-  "at": "2026-11-15T12:06:11Z",
+  "at": "2026-11-15T12:08:59Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -526,11 +532,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 708,
+    "conflicted": 710,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1436
+    "parked": 1439
    },
    "cur": [],
    "ld": [
@@ -540,12 +546,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-15T12:06:12Z",
-    "ld": 4.17,
+    "at": "2026-11-15T12:08:34Z",
+    "ld": 3.63,
     "c": 8,
     "sb": 0,
     "dk": [
-     21.0,
+     20.1,
      228.3
     ],
     "ss": [
@@ -598,10 +604,10 @@
   "main": 3,
   "lanes": 0,
   "total": 3,
-  "at": "7:06 AM",
+  "at": "7:09 AM",
   "why": "",
-  "at_iso": "2026-11-15T12:06:00+00:00",
+  "at_iso": "2026-11-15T12:09:00+00:00",
   "started": "6:23 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 6:23 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 7:06 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 6:23 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 7:09 AM ET</p></section>"
  }
 }

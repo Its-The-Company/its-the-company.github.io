@@ -1,10 +1,10 @@
 {
  "schema": 1,
- "at": "2026-11-15T11:05:23.321855+00:00",
+ "at": "2026-11-15T11:08:31.340941+00:00",
  "session": {
-  "active": false,
-  "kind": "",
-  "started": null,
+  "active": true,
+  "kind": "morning",
+  "started": "2026-11-15T06:05:23-05:00",
   "flow": [
    {
     "t": "T-4280",
@@ -106,36 +106,12 @@
  "who": "",
  "recent": [
   {
-   "name": "odalys",
-   "task": "[tools] T-4129 land Set aside part 2b",
+   "name": "idris",
+   "task": "[report] morning",
    "model": "opus",
-   "started": "2026-11-15T10:24:41.627Z",
+   "started": "2026-11-15T11:06:08.090Z",
    "seconds": null,
-   "finished": "2026-11-15T10:44:26.636000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-4485 fix real-tick land rows red",
-   "model": "opus",
-   "started": "2026-11-15T09:24:59.819Z",
-   "seconds": null,
-   "finished": "2026-11-15T10:24:18.413000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-4481 redo task states (T-4445)",
-   "model": "opus",
-   "started": "2026-11-15T09:39:25.162Z",
-   "seconds": null,
-   "finished": "2026-11-15T09:53:11.154000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-4470 take Fable off lines",
-   "model": "opus",
-   "started": "2026-11-15T09:33:07.842Z",
-   "seconds": null,
-   "finished": "2026-11-15T09:38:26.340000+00:00"
+   "finished": "2026-11-15T11:07:04.883Z"
   }
  ],
  "queue": {
@@ -185,12 +161,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-15T06:19:35-05:00",
+ "next_tick": null,
  "personal": {
   "week_pct": null,
   "usage_pct": null,
   "work_pct": null,
-  "read_at": "2026-11-15T11:05:00+00:00",
+  "read_at": "2026-11-15T11:08:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -335,7 +311,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-15T06:05:00-05:00",
+  "at": "2026-11-15T06:08:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -343,9 +319,13 @@
    "b": "double-spread"
   }
  },
- "next_tick_why": "last_tick",
+ "next_tick_why": "session",
  "idle": null,
- "pool": null,
+ "pool": {
+  "why": "Double Spread: 97% of the week left, paced to last until Wed 14:00, the week's halfway point; the machine allows 21 (cut a step: load 11.9 a core is over 10)",
+  "n": 3,
+  "at": "2026-11-15T06:04:35.458883-05:00"
+ },
  "lanes": [
   {
    "name": "Idris",
@@ -398,6 +378,7 @@
  ],
  "tasks": {
   "run": [],
+  "src": "plan",
   "open": [
    {
     "w": "Pernille",
@@ -492,6 +473,10 @@
    "wait": 37,
    "blocked": 41,
    "you": 12
+  },
+  "fin": {
+   "n": 0,
+   "rows": []
   }
  },
  "qr": [
@@ -533,22 +518,22 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-15T11:05:23Z",
+  "at": "2026-11-15T11:08:23Z",
   "s": {
    "T-4280": [
     "merging",
     "Host checks on the Mac mini",
-    1794739883321
+    1794739883991
    ],
    "T-4111": [
     "mergeq",
     "1st to merge",
-    1794740363321
+    1794740363991
    ],
    "T-4438": [
     "testing",
     "its own tests, in its copy",
-    1794739103321
+    1794739103991
    ],
    "T-4430": [
     "merged",
@@ -586,7 +571,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-15T11:05:23Z",
+  "at": "2026-11-15T11:08:23Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -598,13 +583,13 @@
     "parked": 3
    },
    "m": {
-    "checking": 14,
-    "inline": 6,
-    "conflicted": 647,
+    "checking": 17,
+    "inline": 9,
+    "conflicted": 650,
     "failed": null,
     "held": null,
-    "retry": 21,
-    "parked": 2527
+    "retry": 24,
+    "parked": 2530
    },
    "cur": [
     [
@@ -613,7 +598,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     14
+     17
     ]
    ],
    "ld": [
@@ -623,12 +608,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-15T11:05:23Z",
-    "ld": 10.69,
+    "at": "2026-11-15T11:08:25Z",
+    "ld": 8.59,
     "c": 8,
     "sb": 0,
     "dk": [
-     17.8,
+     17.5,
      228.3
     ],
     "ss": [
@@ -651,6 +636,15 @@
   }
  },
  "operators": [
+  {
+   "w": "Operator",
+   "a": "Main plan",
+   "sr": 1,
+   "m": "haiku",
+   "e": "low",
+   "t": "Morning report",
+   "at": "2026-11-15T06:05:23-05:00"
+  },
   {
    "w": "Operator",
    "a": "Evan",
@@ -678,7 +672,6 @@
  "trimmed": [
   "lane_next",
   "queue_text",
-  "recent",
   "task_done",
   "task_title",
   "done_text",
@@ -690,10 +683,10 @@
   "main": 0,
   "lanes": 3,
   "total": 3,
-  "at": "6:05 AM",
+  "at": "6:08 AM",
   "why": "",
-  "at_iso": "2026-11-15T11:05:00+00:00",
-  "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 6:05 AM ET</p></section>"
+  "at_iso": "2026-11-15T11:08:00+00:00",
+  "started": "6:05 AM",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 6:05 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 6:08 AM ET</p></section>"
  }
 }

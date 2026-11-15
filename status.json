@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-15T15:35:45.476967+00:00",
+ "at": "2026-11-15T15:38:47.014892+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -116,7 +116,7 @@
    "task": "[build] T-2491 stuck extension folders",
    "model": "opus",
    "started": "2026-11-15T15:07:59.962Z",
-   "seconds": 1665,
+   "seconds": 1847,
    "finished": null,
    "effort": "high"
   },
@@ -125,7 +125,7 @@
    "task": "[build] T-2869 pyc-only completion test",
    "model": "opus",
    "started": "2026-11-15T15:08:06.419Z",
-   "seconds": 1659,
+   "seconds": 1840,
    "finished": null,
    "effort": "high"
   },
@@ -134,7 +134,7 @@
    "task": "[build] T-4505 Distance Small far values",
    "model": "opus",
    "started": "2026-11-15T15:08:12.068Z",
-   "seconds": 1653,
+   "seconds": 1834,
    "finished": null,
    "effort": "high"
   }
@@ -152,7 +152,7 @@
    "pct": 22.0,
    "resets_at": "2026-11-15T12:00:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-15T10:30:12.695773-05:00",
+   "read_at": "2026-11-15T10:36:53.285456-05:00",
    "source": "live",
    "left": 78.0,
    "left_words": "of your 5-hour allowance left"
@@ -161,7 +161,7 @@
    "pct": 7.0,
    "resets_at": "2026-11-22T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-15T10:30:12.695773-05:00",
+   "read_at": "2026-11-15T10:36:53.285456-05:00",
    "source": "live",
    "left": 93.0,
    "left_words": "of your weekly allowance left"
@@ -173,7 +173,7 @@
    "read_at": "2026-11-15T10:04:49.324363-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-15T10:30:12.695773-05:00"
+  "read_at": "2026-11-15T10:36:53.285456-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -193,7 +193,7 @@
   "week_pct": 2.36,
   "usage_pct": 27.2,
   "work_pct": 75.0,
-  "read_at": "2026-11-15T15:35:00+00:00",
+  "read_at": "2026-11-15T15:38:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -228,7 +228,7 @@
   }
  ],
  "disk": {
-  "free_gb": 15,
+  "free_gb": 16,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -237,14 +237,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-15T10:30:00-05:00",
+   "at": "2026-11-15T10:36:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-15T10:35:00-05:00",
+  "at": "2026-11-15T10:38:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -484,27 +484,27 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-15T15:35:37Z",
+  "at": "2026-11-15T15:38:28Z",
   "s": {
    "T-4468": [
     "merging",
     "Host checks on the Mac mini",
-    1794756457378
+    1794756448342
    ],
    "T-2869": [
     "merging",
     "Mac tests at the main gate \u00b7 19 groups of tests done",
-    1794756217378
+    1794756208342
    ],
    "T-2491": [
     "merging",
     "Mac tests at the main gate",
-    1794756517378
+    1794757048342
    ],
    "T-4505": [
     "merging",
-    "Mac tests at the main gate",
-    1794756697378
+    "Mac tests at the main gate \u00b7 3 groups of tests done",
+    1794756688342
    ]
   },
   "nm": {
@@ -515,7 +515,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-15T15:35:37Z",
+  "at": "2026-11-15T15:38:28Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -527,13 +527,13 @@
     "parked": 4
    },
    "m": {
-    "checking": 8,
+    "checking": 11,
     "inline": null,
-    "conflicted": 933,
+    "conflicted": 936,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1415
+    "parked": 1418
    },
    "cur": [
     [
@@ -542,7 +542,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     8
+     11
     ]
    ],
    "ld": [
@@ -552,12 +552,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-15T15:35:38Z",
-    "ld": 4.86,
+    "at": "2026-11-15T15:38:12Z",
+    "ld": 4.75,
     "c": 8,
     "sb": 0,
     "dk": [
-     14.7,
+     16.0,
      228.3
     ],
     "ss": [
@@ -588,15 +588,6 @@
    "e": "high",
    "t": "Work session \u2013 3 tasks",
    "at": "2026-11-15T10:33:28-05:00"
-  },
-  {
-   "w": "Operator",
-   "a": "Evan",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session",
-   "at": "2026-11-15T09:36:04-05:00"
   }
  ],
  "reply": {
@@ -618,10 +609,10 @@
   "main": 3,
   "lanes": 1,
   "total": 4,
-  "at": "10:35 AM",
+  "at": "10:38 AM",
   "why": "",
-  "at_iso": "2026-11-15T15:35:00+00:00",
+  "at_iso": "2026-11-15T15:38:00+00:00",
   "started": "10:05 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 3, started 10:05 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 10:35 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 3, started 10:05 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 10:38 AM ET</p></section>"
  }
 }

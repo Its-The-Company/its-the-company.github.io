@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-15T22:27:01.411568+00:00",
+ "at": "2026-11-15T22:30:01.212751+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -112,7 +112,7 @@
    "task": "[tools] T-3992 land the pipeline batch",
    "model": "opus",
    "started": "2026-11-15T22:17:17.812Z",
-   "seconds": 583,
+   "seconds": 763,
    "finished": null,
    "effort": "high"
   },
@@ -121,7 +121,7 @@
    "task": "[plan] T-4105 queue audit report draft",
    "model": "opus",
    "started": "2026-11-15T22:17:26.558Z",
-   "seconds": 574,
+   "seconds": 754,
    "finished": null,
    "effort": "high"
   },
@@ -130,7 +130,7 @@
    "task": "[test] T-4527 steady hung Pro check test",
    "model": "opus",
    "started": "2026-11-15T22:17:32.735Z",
-   "seconds": 568,
+   "seconds": 748,
    "finished": null,
    "effort": "high"
   }
@@ -189,7 +189,7 @@
   "week_pct": 3.57,
   "usage_pct": 22.9,
   "work_pct": 71.4,
-  "read_at": "2026-11-15T22:27:00+00:00",
+  "read_at": "2026-11-15T22:30:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -247,7 +247,7 @@
   }
  ],
  "disk": {
-  "free_gb": 12,
+  "free_gb": 11,
   "gate": "closed",
   "ssd": {
    "mounted": true,
@@ -256,14 +256,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions wait until 20 GB is free.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-15T17:26:00-05:00",
+   "at": "2026-11-15T17:29:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-15T17:27:00-05:00",
+  "at": "2026-11-15T17:30:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -504,32 +504,26 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-15T22:26:54Z",
+  "at": "2026-11-15T22:29:44Z",
   "s": {
    "T-4527": [
-    "testing",
-    "MacBook \u00b7 test",
-    null
+    "merging",
+    "Mac tests at the main gate",
+    1794781784380
    ],
    "T-3992": [
     "testing",
     "its own tests, in its copy",
-    1794781194760
-   ],
-   "T-4105": [
-    "testing",
-    "its own tests, in its copy",
-    1794781554760
+    1794781184380
    ]
   },
   "nm": {
    "T-4527": "Steady the hung Pro check timing test",
-   "T-3992": "Clear and merge the unfinished merge fixes",
-   "T-4105": "Post the queue audit report in the main thread"
+   "T-3992": "Clear and merge the unfinished merge fixes"
   }
  },
  "ln": {
-  "at": "2026-11-15T22:26:54Z",
+  "at": "2026-11-15T22:29:44Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -543,11 +537,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 1328,
-    "failed": 0,
+    "conflicted": 1331,
+    "failed": 3,
     "held": null,
     "retry": null,
-    "parked": 557
+    "parked": 560
    },
    "cur": [],
    "ld": [
@@ -557,12 +551,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-15T22:26:32Z",
-    "ld": 3.95,
+    "at": "2026-11-15T22:29:20Z",
+    "ld": 4.43,
     "c": 8,
     "sb": 0,
     "dk": [
-     12.4,
+     11.3,
      228.3
     ],
     "ss": [
@@ -572,12 +566,12 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-15T22:22:34Z",
-    "ld": 0.16,
+    "at": "2026-11-15T22:27:59Z",
+    "ld": 27.7,
     "c": 12,
     "sb": 0,
     "dk": [
-     357.2,
+     356.4,
      926.4
     ],
     "sn": []
@@ -600,15 +594,26 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 3 tasks",
-   "at": "2026-11-15T17:26:32-05:00"
+   "t": "Inbox \u2013 Evan's 5:29 PM Message on GitHub",
+   "at": "2026-11-15T17:30:01-05:00"
   }
  ],
  "reply": {
   "sent": "2026-11-15T22:24:11Z",
   "seconds": 139.0
  },
- "inbox": [],
+ "inbox": [
+  {
+   "id": "c6902433568",
+   "state": "received",
+   "position": 1,
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "approve"
+  }
+ ],
  "trimmed": [
   "lane_next",
   "queue_text",
@@ -623,10 +628,10 @@
   "main": 3,
   "lanes": 1,
   "total": 4,
-  "at": "5:27 PM",
+  "at": "5:30 PM",
   "why": "",
-  "at_iso": "2026-11-15T22:27:00+00:00",
+  "at_iso": "2026-11-15T22:30:00+00:00",
   "started": "5:14 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 3, started 5:14 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 5:27 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 3, started 5:14 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 5:30 PM ET</p></section>"
  }
 }

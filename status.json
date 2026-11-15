@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-15T08:38:30.737647+00:00",
+ "at": "2026-11-15T08:41:33.236235+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -102,7 +102,7 @@
    "task": "[tools] T-4466 open audit lines to all accounts",
    "model": "opus",
    "started": "2026-11-15T07:11:46.805Z",
-   "seconds": 5203,
+   "seconds": 5386,
    "finished": null,
    "effort": "high"
   },
@@ -111,7 +111,7 @@
    "task": "[tools] T-4129 land Set aside part 2b",
    "model": "opus",
    "started": "2026-11-15T07:42:39.983Z",
-   "seconds": 3350,
+   "seconds": 3533,
    "finished": null,
    "effort": "high"
   }
@@ -195,7 +195,7 @@
   "week_pct": null,
   "usage_pct": null,
   "work_pct": null,
-  "read_at": "2026-11-15T08:38:00+00:00",
+  "read_at": "2026-11-15T08:41:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -232,7 +232,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-15T03:38:00-05:00",
+  "at": "2026-11-15T03:41:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -474,17 +474,17 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-15T08:38:18Z",
+  "at": "2026-11-15T08:41:26Z",
   "s": {
    "T-4466": [
-    "testing",
-    "its own tests, in its copy",
-    1794730578718
+    "merging",
+    "Mac tests at the main gate",
+    1794732086265
    ],
    "T-4129": [
     "testing",
     "its own tests, in its copy",
-    1794728838718
+    1794728846265
    ]
   },
   "nm": {
@@ -493,7 +493,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-15T08:38:18Z",
+  "at": "2026-11-15T08:41:26Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -501,17 +501,17 @@
     "conflicted": 4,
     "failed": 0,
     "held": 0,
-    "retry": 0,
-    "parked": 3
+    "retry": 1,
+    "parked": 2
    },
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 289,
+    "conflicted": 292,
     "failed": null,
     "held": null,
-    "retry": null,
-    "parked": 2380
+    "retry": 2,
+    "parked": 2385
    },
    "cur": [],
    "ld": [
@@ -521,12 +521,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-15T08:37:54Z",
-    "ld": 0.95,
+    "at": "2026-11-15T08:41:26Z",
+    "ld": 0.9,
     "c": 8,
     "sb": 0,
     "dk": [
-     25.3,
+     24.4,
      228.3
     ],
     "ss": [
@@ -579,10 +579,10 @@
   "main": 2,
   "lanes": 0,
   "total": 2,
-  "at": "3:38 AM",
+  "at": "3:41 AM",
   "why": "",
-  "at_iso": "2026-11-15T08:38:00+00:00",
+  "at_iso": "2026-11-15T08:41:00+00:00",
   "started": "2:07 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 2:07 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 3:38 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 2:07 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 3:41 AM ET</p></section>"
  }
 }

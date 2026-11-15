@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-15T13:25:40.944285+00:00",
+ "at": "2026-11-15T13:28:41.297622+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -95,15 +95,7 @@
    "task": "[site] T-4102 nested queue on Home",
    "model": "opus",
    "started": "2026-11-15T12:19:27.863Z",
-   "seconds": 3973,
-   "finished": null
-  },
-  {
-   "name": "pernille",
-   "task": "[build] T-4468 premade settings Python half",
-   "model": "opus",
-   "started": "2026-11-15T12:32:04.296Z",
-   "seconds": 3216,
+   "seconds": 4153,
    "finished": null
   },
   {
@@ -111,12 +103,28 @@
    "task": "[tools] T-4487 wire task states into land",
    "model": "opus",
    "started": "2026-11-15T11:27:02.366Z",
-   "seconds": 7118,
+   "seconds": 7298,
+   "finished": null
+  },
+  {
+   "name": "idris",
+   "task": "[build] T-4468 premade settings Swift slice 1",
+   "model": "opus",
+   "started": "2026-11-15T13:27:23.628Z",
+   "seconds": 77,
    "finished": null
   }
  ],
- "who": "Odalys x2, Pernille",
+ "who": "Odalys x2, Idris",
  "recent": [
+  {
+   "name": "pernille",
+   "task": "[build] T-4468 premade settings Python half",
+   "model": "opus",
+   "started": "2026-11-15T12:32:04.296Z",
+   "seconds": null,
+   "finished": "2026-11-15T13:27:06.411000+00:00"
+  },
   {
    "name": "maren",
    "task": "[design] T-4468 premade input pages design",
@@ -140,21 +148,13 @@
    "started": "2026-11-15T12:15:40.640Z",
    "seconds": null,
    "finished": "2026-11-15T12:17:27.129000+00:00"
-  },
-  {
-   "name": "ines",
-   "task": "[plan] T-4501 GitLab pages read against terms",
-   "model": "opus",
-   "started": "2026-11-15T12:12:11.879Z",
-   "seconds": null,
-   "finished": "2026-11-15T12:15:28.669000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 379,
-  "blocked_count": 77
+  "runnable_count": 381,
+  "blocked_count": 76
  },
  "meter": {
   "five_hour": {
@@ -202,7 +202,7 @@
   "week_pct": null,
   "usage_pct": null,
   "work_pct": null,
-  "read_at": "2026-11-15T13:25:00+00:00",
+  "read_at": "2026-11-15T13:28:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -239,7 +239,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-15T08:25:00-05:00",
+  "at": "2026-11-15T08:28:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -264,25 +264,25 @@
    "next": []
   },
   {
-   "name": "Pernille",
-   "state": "running",
-   "task": "[build] T-4468 premade settings Python half",
-   "model": "opus",
-   "since": "2026-11-15T12:32:04.296Z",
-   "next": []
-  },
-  {
    "name": "Idris",
-   "state": "next",
-   "task": "Idris, P2, from T-4238 (Pernille's review, from T-3900,...",
-   "model": null,
-   "since": null,
+   "state": "running",
+   "task": "[build] T-4468 premade settings Swift slice 1",
+   "model": "opus",
+   "since": "2026-11-15T13:27:23.628Z",
    "next": []
   },
   {
    "name": "Ines",
    "state": "next",
    "task": "Ines, P2, from T-1110 (Wrenna,...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
+   "name": "Pernille",
+   "state": "next",
+   "task": "Pernille, P1, premades and gallery take the age line...",
    "model": null,
    "since": null,
    "next": []
@@ -325,11 +325,11 @@
     "task": "T-4102"
    },
    {
-    "w": "Pernille",
+    "w": "Idris",
     "k": "build",
     "t": "Let people set each premade's place, events and lists",
     "m": "opus",
-    "at": "2026-11-15T12:32:04.296Z",
+    "at": "2026-11-15T13:27:23.628Z",
     "o": "c",
     "task": "T-4468"
    }
@@ -409,6 +409,11 @@
   ],
   "done": [
    {
+    "w": "Odalys",
+    "t": "Home now shows the whole queue as a tree: the 14 app features first, each opening to its steps...",
+    "at": "2026-11-15T08:28:00-05:00"
+   },
+   {
     "w": "Ines",
     "t": "The Handbook now says which changes get a separate review: app code going to TestFlight or the...",
     "at": "2026-11-15T07:17:00-05:00"
@@ -417,22 +422,21 @@
     "w": "Ines",
     "t": "A web page we saved from GitLab's documentation was fetched in a way GitLab's terms forbid, so...",
     "at": "2026-11-15T07:15:00-05:00"
-   },
-   {
-    "w": "Ines",
-    "t": "The task-list cleanup is finished except for work people still hold: every clean-up the record...",
-    "at": "2026-11-15T07:10:00-05:00"
    }
   ],
   "count": {
-   "next": 379,
-   "wait": 36,
+   "next": 381,
+   "wait": 35,
    "blocked": 41,
    "you": 12
   },
   "fin": {
-   "n": 9,
+   "n": 10,
    "rows": [
+    [
+     "T-4102",
+     "Show the queue nested on..."
+    ],
     [
      "T-4304",
      "Write the Handbook note on..."
@@ -452,10 +456,6 @@
     [
      "T-4241",
      "Add GitLab and GitBook to..."
-    ],
-    [
-     "T-4461",
-     "Let the ledger apply finish..."
     ]
    ]
   }
@@ -499,32 +499,34 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-15T13:25:40Z",
+  "at": "2026-11-15T13:28:34Z",
   "s": {
-   "T-4468": [
-    "mergetest",
-    "iPhone tests on the MacBook",
-    null
-   ],
-   "T-4102": [
-    "testing",
-    "its own tests, in its copy",
-    1794748780944
-   ],
    "T-4487": [
     "testing",
     "its own tests, in its copy",
-    1794748720944
+    1794748714095
+   ],
+   "T-4102": [
+    "merged",
+    "on main 8:28 AM ET",
+    1794749303000,
+    ""
+   ],
+   "T-4468": [
+    "merged",
+    "on main 8:26 AM ET",
+    1794749175000,
+    ""
    ]
   },
   "nm": {
-   "T-4468": "Let people set each premade's place, events and lists",
+   "T-4487": "Wire task states into the land",
    "T-4102": "Show the queue nested on Home with search",
-   "T-4487": "Wire task states into the land"
+   "T-4468": "Let people set each premade's place, events and lists"
   }
  },
  "ln": {
-  "at": "2026-11-15T13:25:40Z",
+  "at": "2026-11-15T13:28:34Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -538,11 +540,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 787,
+    "conflicted": 790,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 2667
+    "parked": 2670
    },
    "cur": [],
    "ld": [
@@ -552,8 +554,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-15T13:24:56Z",
-    "ld": 2.37,
+    "at": "2026-11-15T13:28:11Z",
+    "ld": 1.94,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -567,12 +569,12 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-15T13:18:24Z",
-    "ld": 0.18,
+    "at": "2026-11-15T13:25:55Z",
+    "ld": 1.51,
     "c": 12,
     "sb": 0,
     "dk": [
-     369.0,
+     368.2,
      926.4
     ],
     "sn": []
@@ -612,10 +614,10 @@
   "main": 3,
   "lanes": 0,
   "total": 3,
-  "at": "8:25 AM",
+  "at": "8:28 AM",
   "why": "",
-  "at_iso": "2026-11-15T13:25:00+00:00",
+  "at_iso": "2026-11-15T13:28:00+00:00",
   "started": "6:23 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 6:23 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 8:25 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 6:23 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 8:28 AM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-15T19:25:05.937649+00:00",
+ "at": "2026-11-15T19:28:09.466148+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -106,7 +106,7 @@
    "task": "[build] T-4468 premade settings H1 Python half",
    "model": "opus",
    "started": "2026-11-15T19:14:40.149Z",
-   "seconds": 625,
+   "seconds": 809,
    "finished": null,
    "effort": "high"
   },
@@ -115,22 +115,30 @@
    "task": "[build] T-4468 premade settings fixes M1-M4",
    "model": "opus",
    "started": "2026-11-15T19:16:25.519Z",
-   "seconds": 520,
+   "seconds": 703,
    "finished": null,
    "effort": "high"
   },
+  {
+   "name": "odalys",
+   "task": "[tools] T-4473 land the queue check rules",
+   "model": "opus",
+   "started": "2026-11-15T19:27:35.286Z",
+   "seconds": 34,
+   "finished": null,
+   "effort": "high"
+  }
+ ],
+ "who": "Pernille, Idris, Odalys",
+ "recent": [
   {
    "name": "ines",
    "task": "[plan] T-4473 decide the queue check bar",
    "model": "opus",
    "started": "2026-11-15T19:24:21.848Z",
-   "seconds": 44,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Pernille, Idris, Ines",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-15T19:27:23.932000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[tools] T-4419 overdue experiment verdicts",
@@ -154,14 +162,6 @@
    "started": "2026-11-15T19:05:28.420Z",
    "seconds": null,
    "finished": "2026-11-15T19:14:26.473000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-3310 land demotion cap",
-   "model": "opus",
-   "started": "2026-11-15T19:05:13.963Z",
-   "seconds": null,
-   "finished": "2026-11-15T19:07:45.170000+00:00"
   }
  ],
  "queue": {
@@ -216,7 +216,7 @@
   "week_pct": 3.22,
   "usage_pct": 26.1,
   "work_pct": 75.0,
-  "read_at": "2026-11-15T19:25:00+00:00",
+  "read_at": "2026-11-15T19:28:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -253,7 +253,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-15T14:25:00-05:00",
+  "at": "2026-11-15T14:28:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -288,18 +288,18 @@
    "effort": "high"
   },
   {
-   "name": "Ines",
+   "name": "Odalys",
    "state": "running",
-   "task": "[plan] T-4473 decide the queue check bar",
+   "task": "[tools] T-4473 land the queue check rules",
    "model": "opus",
-   "since": "2026-11-15T19:24:21.848Z",
+   "since": "2026-11-15T19:27:35.286Z",
    "next": [],
    "effort": "high"
   },
   {
-   "name": "Odalys",
+   "name": "Ines",
    "state": "next",
-   "task": "A lane record main refused: failed...",
+   "task": "Ines, P2, from T-1110 (Wrenna,...",
    "model": null,
    "since": null,
    "next": []
@@ -344,12 +344,12 @@
     "task": "T-4468"
    },
    {
-    "w": "Ines",
-    "k": "plan",
+    "w": "Odalys",
+    "k": "tools",
     "t": "Redo replay the queue check against the audit's verdicts",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-15T19:24:21.848Z",
+    "at": "2026-11-15T19:27:35.286Z",
     "o": "c",
     "task": "T-4473"
    }
@@ -507,20 +507,27 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-15T19:24:58Z",
+  "at": "2026-11-15T19:27:49Z",
   "s": {
    "T-4468": [
     "testing",
-    "its own tests, in its copy",
-    1794770698008
+    "Mac Mini \u00b7 test",
+    null
+   ],
+   "T-4473": [
+    "merged",
+    "on main 2:27 PM ET",
+    1794770822000,
+    "Ines"
    ]
   },
   "nm": {
-   "T-4468": "Let people set each premade's place, events and lists"
+   "T-4468": "Let people set each premade's place, events and lists",
+   "T-4473": "Redo replay the queue check against the audit's verdicts"
   }
  },
  "ln": {
-  "at": "2026-11-15T19:24:58Z",
+  "at": "2026-11-15T19:27:49Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -534,11 +541,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 1163,
-    "failed": 9,
+    "conflicted": 1165,
+    "failed": 12,
     "held": null,
     "retry": null,
-    "parked": 375
+    "parked": 378
    },
    "cur": [],
    "ld": [
@@ -548,12 +555,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-15T19:24:37Z",
-    "ld": 3.61,
+    "at": "2026-11-15T19:27:03Z",
+    "ld": 5.39,
     "c": 8,
     "sb": 0,
     "dk": [
-     16.9,
+     14.9,
      228.3
     ],
     "ss": [
@@ -594,6 +601,7 @@
  "trimmed": [
   "lane_next",
   "queue_text",
+  "recent",
   "task_done",
   "fin_short",
   "task_title",
@@ -606,10 +614,10 @@
   "main": 3,
   "lanes": 0,
   "total": 3,
-  "at": "2:25 PM",
+  "at": "2:28 PM",
   "why": "",
-  "at_iso": "2026-11-15T19:25:00+00:00",
+  "at_iso": "2026-11-15T19:28:00+00:00",
   "started": "2:00 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 2:00 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 2:25 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 2:00 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 2:28 PM ET</p></section>"
  }
 }

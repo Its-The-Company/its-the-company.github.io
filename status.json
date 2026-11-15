@@ -1,10 +1,10 @@
 {
  "schema": 1,
- "at": "2026-11-15T11:23:02.973979+00:00",
+ "at": "2026-11-15T11:26:11.464450+00:00",
  "session": {
-  "active": false,
-  "kind": "",
-  "started": null,
+  "active": true,
+  "kind": "work",
+  "started": "2026-11-15T06:23:05-05:00",
   "flow": [
    {
     "t": "T-4280",
@@ -119,16 +119,7 @@
  },
  "workers": [],
  "who": "",
- "recent": [
-  {
-   "name": "idris",
-   "task": "[report] morning",
-   "model": "opus",
-   "started": "2026-11-15T11:06:08.090Z",
-   "seconds": null,
-   "finished": "2026-11-15T11:07:04.883Z"
-  }
- ],
+ "recent": [],
  "queue": {
   "runnable": [],
   "blocked": [],
@@ -176,12 +167,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-15T06:37:40-05:00",
+ "next_tick": null,
  "personal": {
   "week_pct": null,
   "usage_pct": null,
   "work_pct": null,
-  "read_at": "2026-11-15T11:23:00+00:00",
+  "read_at": "2026-11-15T11:26:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -327,7 +318,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-15T06:23:00-05:00",
+  "at": "2026-11-15T06:26:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -335,9 +326,13 @@
    "b": "double-spread"
   }
  },
- "next_tick_why": "last_tick",
+ "next_tick_why": "session",
  "idle": null,
- "pool": null,
+ "pool": {
+  "why": "Double Spread: 97% of the week left, paced to last until Wed 14:00, the week's halfway point; the machine allows 21 (held: too few lands in 3 hours to judge a raise)",
+  "n": 3,
+  "at": "2026-11-15T06:22:40.536194-05:00"
+ },
  "lanes": [
   {
    "name": "Idris",
@@ -390,6 +385,7 @@
  ],
  "tasks": {
   "run": [],
+  "src": "plan",
   "open": [
    {
     "w": "Pernille",
@@ -484,6 +480,10 @@
    "wait": 37,
    "blocked": 41,
    "you": 12
+  },
+  "fin": {
+   "n": 0,
+   "rows": []
   }
  },
  "qr": [
@@ -525,27 +525,27 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-15T11:23:02Z",
+  "at": "2026-11-15T11:25:57Z",
   "s": {
    "T-4111": [
     "merging",
-    "Host checks on the Mac mini \u00b7 1 group of tests done",
-    1794741662973
+    "Host checks on the Mac mini \u00b7 7 groups of tests done",
+    1794741657584
    ],
    "T-4280": [
     "mergeq",
     "1st to merge",
-    1794739862973
+    1794739857584
    ],
    "T-4226": [
     "mergeq",
     "2nd to merge",
-    1794741542973
+    1794741537584
    ],
    "T-4438": [
     "testing",
     "its own tests, in its copy",
-    1794739082973
+    1794739077584
    ],
    "T-4430": [
     "merged",
@@ -584,7 +584,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-15T11:23:02Z",
+  "at": "2026-11-15T11:25:57Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -596,13 +596,13 @@
     "parked": 3
    },
    "m": {
-    "checking": 2,
-    "inline": 18,
-    "conflicted": 664,
+    "checking": 5,
+    "inline": 21,
+    "conflicted": 667,
     "failed": null,
     "held": null,
-    "retry": 38,
-    "parked": 2544
+    "retry": 41,
+    "parked": 2547
    },
    "cur": [
     [
@@ -611,7 +611,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     2
+     5
     ]
    ],
    "ld": [
@@ -621,12 +621,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-15T11:23:04Z",
+    "at": "2026-11-15T11:25:12Z",
     "ld": 4.72,
     "c": 8,
     "sb": 0,
     "dk": [
-     13.3,
+     15.2,
      228.3
     ],
     "ss": [
@@ -649,6 +649,15 @@
   }
  },
  "operators": [
+  {
+   "w": "Operator",
+   "a": "Main plan",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session",
+   "at": "2026-11-15T06:23:05-05:00"
+  },
   {
    "w": "Operator",
    "a": "Evan",
@@ -687,10 +696,10 @@
   "main": 0,
   "lanes": 3,
   "total": 3,
-  "at": "6:23 AM",
+  "at": "6:26 AM",
   "why": "",
-  "at_iso": "2026-11-15T11:23:00+00:00",
-  "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 6:23 AM ET</p></section>"
+  "at_iso": "2026-11-15T11:26:00+00:00",
+  "started": "6:23 AM",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 6:23 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 6:26 AM ET</p></section>"
  }
 }

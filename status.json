@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-15T21:00:23.539195+00:00",
+ "at": "2026-11-15T21:03:30.025329+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -118,7 +118,7 @@
    "task": "[tools] T-3992 land the pipeline batch",
    "model": "opus",
    "started": "2026-11-15T20:27:24.942Z",
-   "seconds": 1978,
+   "seconds": 2165,
    "finished": null,
    "effort": "high"
   },
@@ -127,7 +127,7 @@
    "task": "[review] T-4532 premade lock review and Swift half",
    "model": "opus",
    "started": "2026-11-15T20:40:40.307Z",
-   "seconds": 1183,
+   "seconds": 1369,
    "finished": null,
    "effort": "high"
   },
@@ -136,7 +136,7 @@
    "task": "[plan] T-4502 close audit held rows",
    "model": "opus",
    "started": "2026-11-15T20:40:58.504Z",
-   "seconds": 1165,
+   "seconds": 1351,
    "finished": null,
    "effort": "high"
   }
@@ -179,7 +179,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 375,
+  "runnable_count": 374,
   "blocked_count": 76
  },
  "meter": {
@@ -228,7 +228,7 @@
   "week_pct": 3.22,
   "usage_pct": 26.1,
   "work_pct": 75.0,
-  "read_at": "2026-11-15T21:00:00+00:00",
+  "read_at": "2026-11-15T21:03:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -265,7 +265,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-15T16:00:00-05:00",
+  "at": "2026-11-15T16:03:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -457,7 +457,7 @@
    }
   ],
   "count": {
-   "next": 375,
+   "next": 374,
    "wait": 35,
    "blocked": 41,
    "you": 12
@@ -531,27 +531,27 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-15T21:00:07Z",
+  "at": "2026-11-15T21:03:13Z",
   "s": {
    "T-4227": [
     "merging",
     "Host checks on the Mac mini \u00b7 3 groups of tests done",
-    1794776227522
+    1794776233299
    ],
    "T-4532": [
-    "merging",
-    "Mac tests at the main gate",
-    1794775927522
+    "mergetest",
+    "iPhone tests on the MacBook",
+    null
    ],
    "T-3992": [
     "testing",
     "its own tests, in its copy",
-    1794774547522
+    1794774553299
    ],
    "T-4502": [
     "testing",
     "its own tests, in its copy",
-    1794776287522
+    1794776473299
    ]
   },
   "nm": {
@@ -562,7 +562,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-15T21:00:07Z",
+  "at": "2026-11-15T21:03:13Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -574,13 +574,13 @@
     "parked": 2
    },
    "m": {
-    "checking": 3,
+    "checking": 6,
     "inline": null,
-    "conflicted": 1242,
+    "conflicted": 1245,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 470
+    "parked": 473
    },
    "cur": [
     [
@@ -589,7 +589,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     3
+     6
     ]
    ],
    "ld": [
@@ -599,8 +599,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-15T20:59:46Z",
-    "ld": 6.5,
+    "at": "2026-11-15T21:02:50Z",
+    "ld": 7.56,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -614,8 +614,8 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-15T20:37:53Z",
-    "ld": 2.19,
+    "at": "2026-11-15T21:02:20Z",
+    "ld": 0.26,
     "c": 12,
     "sb": 0,
     "dk": [
@@ -659,10 +659,10 @@
   "main": 3,
   "lanes": 0,
   "total": 3,
-  "at": "4:00 PM",
+  "at": "4:03 PM",
   "why": "",
-  "at_iso": "2026-11-15T21:00:00+00:00",
+  "at_iso": "2026-11-15T21:03:00+00:00",
   "started": "2:00 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 2:00 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 4:00 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 2:00 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 4:03 PM ET</p></section>"
  }
 }

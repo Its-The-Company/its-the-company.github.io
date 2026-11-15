@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-15T19:34:32.189251+00:00",
+ "at": "2026-11-15T19:37:37.155018+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -108,8 +108,8 @@
     "end_at": 1794749766
    }
   ],
-  "landed": 24,
-  "failed": 4
+  "landed": 23,
+  "failed": 2
  },
  "workers": [
   {
@@ -117,7 +117,7 @@
    "task": "[build] T-4468 premade settings H1 Python half",
    "model": "opus",
    "started": "2026-11-15T19:14:40.149Z",
-   "seconds": 1192,
+   "seconds": 1377,
    "finished": null,
    "effort": "high"
   },
@@ -126,22 +126,30 @@
    "task": "[build] T-4468 premade settings fixes M1-M4",
    "model": "opus",
    "started": "2026-11-15T19:16:25.519Z",
-   "seconds": 1086,
+   "seconds": 1271,
    "finished": null,
    "effort": "high"
   },
   {
    "name": "odalys",
-   "task": "[tools] T-4473 land the queue check rules",
+   "task": "[tools] T-4448 dry-run queue check live",
    "model": "opus",
-   "started": "2026-11-15T19:27:35.286Z",
-   "seconds": 416,
+   "started": "2026-11-15T19:36:33.107Z",
+   "seconds": 64,
    "finished": null,
    "effort": "high"
   }
  ],
  "who": "Pernille, Idris, Odalys",
  "recent": [
+  {
+   "name": "odalys",
+   "task": "[tools] T-4473 land the queue check rules",
+   "model": "opus",
+   "started": "2026-11-15T19:27:35.286Z",
+   "seconds": null,
+   "finished": "2026-11-15T19:36:10.452000+00:00"
+  },
   {
    "name": "ines",
    "task": "[plan] T-4473 decide the queue check bar",
@@ -165,20 +173,12 @@
    "started": "2026-11-15T19:08:13.610Z",
    "seconds": null,
    "finished": "2026-11-15T19:16:11.986000+00:00"
-  },
-  {
-   "name": "pernille",
-   "task": "[review] T-4468 review premade settings slice 1",
-   "model": "opus",
-   "started": "2026-11-15T19:05:28.420Z",
-   "seconds": null,
-   "finished": "2026-11-15T19:14:26.473000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 379,
+  "runnable_count": 377,
   "blocked_count": 76
  },
  "meter": {
@@ -227,7 +227,7 @@
   "week_pct": 3.22,
   "usage_pct": 26.1,
   "work_pct": 75.0,
-  "read_at": "2026-11-15T19:34:00+00:00",
+  "read_at": "2026-11-15T19:37:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -264,7 +264,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-15T14:34:00-05:00",
+  "at": "2026-11-15T14:37:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -301,9 +301,9 @@
   {
    "name": "Odalys",
    "state": "running",
-   "task": "[tools] T-4473 land the queue check rules",
+   "task": "[tools] T-4448 dry-run queue check live",
    "model": "opus",
-   "since": "2026-11-15T19:27:35.286Z",
+   "since": "2026-11-15T19:36:33.107Z",
    "next": [],
    "effort": "high"
   },
@@ -357,12 +357,12 @@
    {
     "w": "Odalys",
     "k": "tools",
-    "t": "Redo replay the queue check against the audit's verdicts",
+    "t": "Dry-run the queue check on the real queue",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-15T19:27:35.286Z",
+    "at": "2026-11-15T19:36:33.107Z",
     "o": "c",
-    "task": "T-4473"
+    "task": "T-4448"
    }
   ],
   "src": "plan",
@@ -441,29 +441,37 @@
   "done": [
    {
     "w": "Odalys",
-    "t": "Two overdue checks are written up: the gate that makes app code pass the MacBook before reaching...",
-    "at": "2026-11-15T14:22:00-05:00"
+    "t": "The daily queue check was replayed against the audit's verdicts and its rules narrowed. It...",
+    "at": "2026-11-15T14:35:00-05:00"
    },
    {
     "w": "Odalys",
-    "t": "Two overdue checks on how work reaches main are now written up: the main-is-red alarm had only...",
-    "at": "2026-11-15T14:13:00-05:00"
+    "t": "The daily queue check now ignores two signals that alone did not tell finished work from live...",
+    "at": "2026-11-15T14:35:00-05:00"
    },
    {
-    "w": "Idris",
-    "t": "The widget now reads at most 1 MiB of its list of scripts sent back to the app, so a huge or...",
-    "at": "2026-11-15T14:07:00-05:00"
+    "w": "Odalys",
+    "t": "Two overdue checks are written up: the gate that makes app code pass the MacBook before reaching...",
+    "at": "2026-11-15T14:22:00-05:00"
    }
   ],
   "count": {
-   "next": 379,
+   "next": 377,
    "wait": 35,
    "blocked": 41,
    "you": 12
   },
   "fin": {
-   "n": 3,
+   "n": 5,
    "rows": [
+    [
+     "T-4447",
+     "Replay the queue check..."
+    ],
+    [
+     "T-4473",
+     "Redo replay the queue check..."
+    ],
     [
      "T-4490",
      "Measure two overdue..."
@@ -518,50 +526,50 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-15T19:34:17Z",
+  "at": "2026-11-15T19:37:23Z",
   "s": {
    "T-4227": [
     "merging",
-    "Host checks on the Mac mini \u00b7 2 groups of tests done",
-    1794771257325
+    "Host checks on the Mac mini \u00b7 3 groups of tests done",
+    1794771203830
    ],
    "T-4468": [
     "merging",
     "Mac tests at the main gate",
-    1794771137325
+    1794771083830
    ],
-   "T-4473": [
+   "T-4448": [
     "testing",
     "its own tests, in its copy",
-    1794771017325
+    1794771443830
    ]
   },
   "nm": {
    "T-4227": "Run every Operator on Opus high",
    "T-4468": "Let people set each premade's place, events and lists",
-   "T-4473": "Redo replay the queue check against the audit's verdicts"
+   "T-4448": "Dry-run the queue check on the real queue"
   }
  },
  "ln": {
-  "at": "2026-11-15T19:34:17Z",
+  "at": "2026-11-15T19:37:23Z",
   "mq": {
    "n": {
     "checking": 1,
     "inline": 0,
-    "conflicted": 2,
+    "conflicted": 1,
     "failed": 0,
     "held": 0,
     "retry": 0,
     "parked": 2
    },
    "m": {
-    "checking": 0,
+    "checking": 4,
     "inline": null,
-    "conflicted": 1172,
+    "conflicted": 1159,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 384
+    "parked": 388
    },
    "cur": [
     [
@@ -570,7 +578,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     0
+     4
     ]
    ],
    "ld": [
@@ -580,21 +588,19 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-15T19:33:55Z",
-    "ld": 24.58,
+    "at": "2026-11-15T19:37:24Z",
+    "ld": 15.26,
     "c": 8,
-    "sb": 1,
+    "sb": 0,
     "dk": [
-     13.5,
+     14.7,
      228.3
     ],
     "ss": [
      186.2,
      953.7
     ],
-    "sn": [
-     "iPhone 18 Pro"
-    ]
+    "sn": []
    },
    "macbook": {
     "at": "2026-11-15T19:13:55Z",
@@ -616,8 +622,17 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 3 tasks",
+   "t": "Work session \u2013 2 tasks",
    "at": "2026-11-15T14:00:40-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Evan",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session",
+   "at": "2026-11-15T14:37:36-05:00"
   }
  ],
  "reply": {
@@ -641,10 +656,10 @@
   "main": 3,
   "lanes": 0,
   "total": 3,
-  "at": "2:34 PM",
+  "at": "2:37 PM",
   "why": "",
-  "at_iso": "2026-11-15T19:34:00+00:00",
+  "at_iso": "2026-11-15T19:37:00+00:00",
   "started": "2:00 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 2:00 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 2:34 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 2:00 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 2:37 PM ET</p></section>"
  }
 }

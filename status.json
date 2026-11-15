@@ -1,19 +1,19 @@
 {
  "schema": 1,
- "at": "2026-11-15T21:46:24.602768+00:00",
+ "at": "2026-11-15T21:49:30.711617+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-15T14:00:40-05:00",
   "flow": [
    {
-    "t": "T-4227",
-    "name": "Run every Operator on Opus high",
-    "acct": "Personal b",
+    "t": "T-4471",
+    "name": "Stop the star notice committing its own record",
+    "acct": "Personal a",
     "steps": [
      {
       "s": "testq",
-      "at": 1794774679
+      "at": 1794779305
      }
     ]
    },
@@ -30,6 +30,23 @@
    }
   ],
   "done": [
+   {
+    "t": "T-4411",
+    "name": "Start accounts on the audit when usage returns",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794779296
+   },
+   {
+    "t": "T-4227",
+    "name": "Run every Operator on Opus high",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "failed",
+    "end_at": 1794779274,
+    "why": "tests failed"
+   },
    {
     "t": "T-4227",
     "name": "Run every Operator on Opus high",
@@ -93,38 +110,22 @@
     "steps": [],
     "end": "landed",
     "end_at": 1794754091
-   },
-   {
-    "t": "T-4472",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794753288
-   },
-   {
-    "t": "T-4482",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794749839
    }
   ],
-  "landed": 20,
-  "failed": 3
+  "landed": 21,
+  "failed": 4
  },
- "workers": [
+ "workers": [],
+ "who": "",
+ "recent": [
   {
    "name": "maren",
    "task": "[site] T-4534 double-tap Chat reactions",
    "model": "opus",
    "started": "2026-11-15T21:21:41.106Z",
-   "seconds": 1483,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Maren",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-15T21:47:54.627000+00:00"
+  },
   {
    "name": "idris",
    "task": "[build] T-4494 widget scripts start in the widget",
@@ -148,20 +149,12 @@
    "started": "2026-11-15T20:40:40.307Z",
    "seconds": null,
    "finished": "2026-11-15T21:10:58.824000+00:00"
-  },
-  {
-   "name": "ines",
-   "task": "[plan] T-4502 close audit held rows",
-   "model": "opus",
-   "started": "2026-11-15T20:40:58.504Z",
-   "seconds": null,
-   "finished": "2026-11-15T21:06:14.195000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 375,
+  "runnable_count": 374,
   "blocked_count": 75
  },
  "meter": {
@@ -210,7 +203,7 @@
   "week_pct": 3.22,
   "usage_pct": 26.1,
   "work_pct": 75.0,
-  "read_at": "2026-11-15T21:46:00+00:00",
+  "read_at": "2026-11-15T21:49:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -247,45 +240,6 @@
     "at": "2026-11-15T16:20:10-05:00",
     "n": "Evan",
     "src": "plan-a"
-   },
-   {
-    "lane": "a3",
-    "task": "T-4411",
-    "w": "Odalys",
-    "k": "ops",
-    "t": "Start accounts on the audit when usage returns",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-15T16:20:15-05:00",
-    "n": "Evan",
-    "d": 1,
-    "src": "plan-a"
-   },
-   {
-    "lane": "a3",
-    "task": "T-4471",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Stop the star notice committing its own record",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-15T16:20:15-05:00",
-    "n": "Evan",
-    "d": 1,
-    "src": "plan-a"
-   },
-   {
-    "lane": "a3",
-    "task": "T-4508",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Alarm when one account's work keeps being refused",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-15T16:20:15-05:00",
-    "n": "Evan",
-    "d": 1,
-    "src": "plan-a"
    }
   ]
  },
@@ -307,7 +261,7 @@
   }
  ],
  "disk": {
-  "free_gb": 11,
+  "free_gb": 8.9,
   "gate": "closed",
   "ssd": {
    "mounted": true,
@@ -316,14 +270,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions wait until 20 GB is free.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-15T16:39:00-05:00",
+   "at": "2026-11-15T16:46:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-15T16:46:00-05:00",
+  "at": "2026-11-15T16:49:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -339,15 +293,6 @@
   "at": "2026-11-15T14:00:25.823772-05:00"
  },
  "lanes": [
-  {
-   "name": "Maren",
-   "state": "running",
-   "task": "[site] T-4534 double-tap Chat reactions",
-   "model": "opus",
-   "since": "2026-11-15T21:21:41.106Z",
-   "next": [],
-   "effort": "high"
-  },
   {
    "name": "Idris",
    "state": "next",
@@ -387,21 +332,18 @@
    "model": null,
    "since": null,
    "next": []
+  },
+  {
+   "name": "Maren",
+   "state": "next",
+   "task": "Maren, P2, found on T-3366 (11-07): in...",
+   "model": null,
+   "since": null,
+   "next": []
   }
  ],
  "tasks": {
-  "run": [
-   {
-    "w": "Maren",
-    "k": "site",
-    "t": "Double-tap a Chat bubble to react, and add fire",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-15T21:21:41.106Z",
-    "o": "c",
-    "task": "T-4534"
-   }
-  ],
+  "run": [],
   "src": "plan",
   "open": [
    {
@@ -455,13 +397,6 @@
    },
    {
     "w": "Odalys",
-    "k": "ops",
-    "t": "Start accounts on the audit when usage returns",
-    "s": "next",
-    "o": "i"
-   },
-   {
-    "w": "Odalys",
     "k": "tools",
     "t": "Answer Investor messages that no session claims",
     "s": "next",
@@ -473,9 +408,21 @@
     "t": "Alarm when one account's work keeps being...",
     "s": "next",
     "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "site",
+    "t": "Move the app's diagrams to a new App page",
+    "s": "next",
+    "o": "c"
    }
   ],
   "done": [
+   {
+    "w": "Odalys",
+    "t": "The two personal accounts now start the queue audit's work by themselves within one 15-minute...",
+    "at": "2026-11-15T16:48:00-05:00"
+   },
    {
     "w": "Idris",
     "t": "The app's settings page and a premade's own run now take turns writing the same settings file,...",
@@ -485,22 +432,21 @@
     "w": "Ines",
     "t": "The queue audit's last held lines are settled: one rewritten, one folded into its twin, four app...",
     "at": "2026-11-15T16:06:00-05:00"
-   },
-   {
-    "w": "Ines",
-    "t": "The release milestones were re-dated after the push ended, the Investors were told on their...",
-    "at": "2026-11-15T16:03:00-05:00"
    }
   ],
   "count": {
-   "next": 375,
+   "next": 374,
    "wait": 35,
    "blocked": 40,
    "you": 11
   },
   "fin": {
-   "n": 11,
+   "n": 12,
    "rows": [
+    [
+     "T-4411",
+     "Start accounts on the audit..."
+    ],
     [
      "T-4532",
      "Review the premade file..."
@@ -520,10 +466,6 @@
     [
      "T-4311",
      "Name certificate failures..."
-    ],
-    [
-     "T-4448",
-     "Dry-run the queue check on..."
     ]
    ]
   }
@@ -567,89 +509,75 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-15T21:46:05Z",
+  "at": "2026-11-15T21:49:15Z",
   "s": {
-   "T-4227": [
+   "T-4471": [
     "merging",
-    "Host checks on the Mac mini \u00b7 4 groups of tests done",
-    1794777785525
+    "Host checks on the Mac mini \u00b7 1 group of tests done",
+    1794779355318
    ],
-   "T-4411": [
+   "T-4508": [
     "mergeq",
     "1st to merge",
-    1794778145525
-   ],
-   "T-4471": [
-    "mergeq",
-    "2nd to merge",
-    1794778385525
-   ],
-   "T-4534": [
-    "merging",
-    "Mac tests at the main gate",
-    1794778565525
+    1794779295318
    ]
   },
   "nm": {
-   "T-4227": "Run every Operator on Opus high",
-   "T-4411": "Start accounts on the audit when usage returns",
    "T-4471": "Stop the star notice committing its own record",
-   "T-4534": "Double-tap a Chat bubble to react, and add fire"
+   "T-4508": "Alarm when one account's work keeps being refused"
   }
  },
  "ln": {
-  "at": "2026-11-15T21:46:05Z",
+  "at": "2026-11-15T21:49:15Z",
   "mq": {
    "n": {
     "checking": 1,
-    "inline": 2,
+    "inline": 1,
     "conflicted": 1,
-    "failed": 0,
+    "failed": 1,
     "held": 0,
     "retry": 0,
     "parked": 2
    },
    "m": {
-    "checking": 23,
-    "inline": 15,
-    "conflicted": 1288,
-    "failed": null,
+    "checking": 0,
+    "inline": 1,
+    "conflicted": 1291,
+    "failed": 1,
     "held": null,
     "retry": null,
-    "parked": 516
+    "parked": 519
    },
    "cur": [
     [
      [
-      "T-4227"
+      "T-4471"
      ],
      "Mac tests",
      "Mac mini",
-     23
+     0
     ]
    ],
    "ld": [
-    25,
-    "2026-11-15T18:12:48Z"
+    26,
+    "2026-11-15T21:48:16Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-15T21:46:07Z",
-    "ld": 49.09,
+    "at": "2026-11-15T21:48:51Z",
+    "ld": 44.55,
     "c": 8,
-    "sb": 1,
+    "sb": 0,
     "dk": [
-     10.1,
+     12.6,
      228.3
     ],
     "ss": [
      183.7,
      953.7
     ],
-    "sn": [
-     "iPhone 18 Pro"
-    ]
+    "sn": []
    },
    "macbook": {
     "at": "2026-11-15T21:37:43Z",
@@ -671,7 +599,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 2 tasks",
+   "t": "Work session \u2013 1 task",
    "at": "2026-11-15T16:21:49-05:00"
   },
   {
@@ -681,21 +609,12 @@
    "m": "opus",
    "e": "high",
    "t": "Work session \u2013 3 tasks",
-   "at": "2026-11-15T16:20:10-05:00"
-  },
-  {
-   "w": "Operator",
-   "a": "Evan",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session",
-   "at": "2026-11-15T16:20:15-05:00"
+   "at": "2026-11-15T16:49:12-05:00"
   }
  ],
  "reply": {
-  "sent": "2026-11-15T21:22:00Z",
-  "seconds": 65.0
+  "sent": "2026-11-15T21:47:46Z",
+  "seconds": 83.0
  },
  "inbox": [],
  "trimmed": [
@@ -712,13 +631,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 1,
-  "lanes": 2,
-  "total": 3,
-  "at": "4:46 PM",
+  "main": 0,
+  "lanes": 1,
+  "total": 1,
+  "at": "4:49 PM",
   "why": "",
-  "at_iso": "2026-11-15T21:46:00+00:00",
+  "at_iso": "2026-11-15T21:49:00+00:00",
   "started": "2:00 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 1, started 2:00 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 4:46 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0, started 2:00 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 4:49 PM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-15T09:51:43.916995+00:00",
+ "at": "2026-11-15T09:54:45.324180+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -102,7 +102,7 @@
    "task": "[tools] T-4485 fix real-tick land rows red",
    "model": "opus",
    "started": "2026-11-15T09:24:59.819Z",
-   "seconds": 1604,
+   "seconds": 1785,
    "finished": null,
    "effort": "high"
   },
@@ -111,22 +111,30 @@
    "task": "[tools] T-4486 refuse Fable without Fable task",
    "model": "opus",
    "started": "2026-11-15T09:39:16.911Z",
-   "seconds": 747,
+   "seconds": 928,
    "finished": null,
    "effort": "high"
   },
   {
    "name": "odalys",
-   "task": "[tools] T-4481 redo task states (T-4445)",
+   "task": "[tools] T-4488 T-4438 fix main red suites",
    "model": "opus",
-   "started": "2026-11-15T09:39:25.162Z",
-   "seconds": 738,
+   "started": "2026-11-15T09:53:40.312Z",
+   "seconds": 65,
    "finished": null,
    "effort": "high"
   }
  ],
  "who": "Odalys x3",
  "recent": [
+  {
+   "name": "odalys",
+   "task": "[tools] T-4481 redo task states (T-4445)",
+   "model": "opus",
+   "started": "2026-11-15T09:39:25.162Z",
+   "seconds": null,
+   "finished": "2026-11-15T09:53:11.154000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[tools] T-4470 take Fable off lines",
@@ -150,14 +158,6 @@
    "started": "2026-11-15T07:42:39.983Z",
    "seconds": null,
    "finished": "2026-11-15T09:24:43.258000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-4479 land stuck lane-a branches",
-   "model": "opus",
-   "started": "2026-11-15T07:19:25.179Z",
-   "seconds": null,
-   "finished": "2026-11-15T07:40:57.121000+00:00"
   }
  ],
  "queue": {
@@ -212,8 +212,117 @@
   "week_pct": null,
   "usage_pct": null,
   "work_pct": null,
-  "read_at": "2026-11-15T09:51:00+00:00",
-  "running": []
+  "read_at": "2026-11-15T09:54:00+00:00",
+  "running": [
+   {
+    "lane": "a",
+    "task": "T-4473",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Redo replay the queue check against the audit's verdicts",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-15T04:53:04-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a",
+    "task": "T-4474",
+    "w": "Idris",
+    "k": "tools",
+    "t": "Redo an Investor request on fresh main",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-15T04:53:04-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a",
+    "task": "T-4123",
+    "w": "Pernille",
+    "k": "research",
+    "t": "Rerun the audit pattern study on the full ledger",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-15T04:53:04-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a2",
+    "task": "T-4111",
+    "w": "Maren",
+    "k": "site",
+    "t": "Cut clutter text on Home and every page",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-15T04:53:08-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a2",
+    "task": "T-4226",
+    "w": "Maren",
+    "k": "site",
+    "t": "Emoji reactions on Chat messages",
+    "m": "sonnet",
+    "e": "medium",
+    "at": "2026-11-15T04:53:08-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a2",
+    "task": "T-3712",
+    "w": "Odalys",
+    "k": "ops",
+    "t": "Erase unused Simulators by tool",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-15T04:53:08-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a3",
+    "task": "T-4089",
+    "w": "Odalys",
+    "k": "fix",
+    "t": "Fix the location bridge test that failed on the MacBook",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-15T04:53:01-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a3",
+    "task": "T-4430",
+    "w": "Idris",
+    "k": "build",
+    "t": "Answer TestFlight encryption questions by default",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-15T04:53:01-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a3",
+    "task": "T-4280",
+    "w": "Idris",
+    "k": "build",
+    "t": "Run each widget in the widget or app by size",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-15T04:53:01-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   }
+  ]
  },
  "api_credits": [
   {
@@ -249,7 +358,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-15T04:51:00-05:00",
+  "at": "2026-11-15T04:54:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -340,12 +449,12 @@
    {
     "w": "Odalys",
     "k": "tools",
-    "t": "Redo show task states in place of new lines",
+    "t": "Fix the How it works page test red on main",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-15T09:39:25.162Z",
+    "at": "2026-11-15T09:53:40.312Z",
     "o": "c",
-    "task": "T-4481"
+    "task": "T-4488"
    }
   ],
   "src": "plan",
@@ -424,18 +533,18 @@
   "done": [
    {
     "w": "Odalys",
-    "t": "Three waiting tasks were still set to run on Fable, the scarcest model, with no reason given;...",
-    "at": "2026-11-15T04:37:00-05:00"
+    "t": "A parked branch, a refused record, a return count, a redo, a needed recut and an unmerged review...",
+    "at": "2026-11-15T04:52:00-05:00"
    },
    {
     "w": "Odalys",
-    "t": "The queue audit's 19 open tasks are no longer tied to the two Investors' own accounts or to the...",
-    "at": "2026-11-15T04:32:00-05:00"
+    "t": "Redid the landing of the task-states work on today's main, bringing only its own files; the...",
+    "at": "2026-11-15T04:52:00-05:00"
    },
    {
-    "w": "Odalys+operator",
-    "t": "Work from Evan's account stopped reaching main yesterday afternoon because the records step...",
-    "at": "2026-11-15T02:42:00-05:00"
+    "w": "Odalys",
+    "t": "Three waiting tasks were still set to run on Fable, the scarcest model, with no reason given;...",
+    "at": "2026-11-15T04:37:00-05:00"
    }
   ],
   "count": {
@@ -445,8 +554,16 @@
    "you": 12
   },
   "fin": {
-   "n": 5,
+   "n": 7,
    "rows": [
+    [
+     "T-4445",
+     "Show task states in place of..."
+    ],
+    [
+     "T-4481",
+     "Redo show task states in..."
+    ],
     [
      "T-4470",
      "Take Fable off every line..."
@@ -462,10 +579,6 @@
     [
      "T-4465",
      "Bring the plan and records..."
-    ],
-    [
-     "T-4469",
-     "Put the audits' efficiency..."
     ]
    ]
   }
@@ -509,56 +622,44 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-15T09:51:30Z",
+  "at": "2026-11-15T09:54:37Z",
   "s": {
-   "T-4445": [
-    "merging",
-    "Mac tests at the main gate",
-    1794736050253
-   ],
    "T-4485": [
     "testing",
     "its own tests, in its copy",
-    1794735450253
+    1794735457742
    ],
    "T-4486": [
     "testing",
     "its own tests, in its copy",
-    1794735750253
-   ],
-   "T-4481": [
-    "testing",
-    "its own tests, in its copy",
-    1794736050253
+    1794735757742
    ]
   },
   "nm": {
-   "T-4445": "Show task states in place of new lines",
    "T-4485": "Real-tick land rows red on main",
-   "T-4486": "Refuse Fable in sessions with no Fable task",
-   "T-4481": "Redo show task states in place of new lines"
+   "T-4486": "Refuse Fable in sessions with no Fable task"
   }
  },
  "ln": {
-  "at": "2026-11-15T09:51:30Z",
+  "at": "2026-11-15T09:54:37Z",
   "mq": {
    "n": {
     "checking": 0,
     "inline": 0,
-    "conflicted": 4,
+    "conflicted": 3,
     "failed": 0,
     "held": 0,
     "retry": 0,
-    "parked": 2
+    "parked": 4
    },
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 362,
+    "conflicted": 576,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 2455
+    "parked": 1305
    },
    "cur": [],
    "ld": [
@@ -568,12 +669,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-15T09:51:30Z",
-    "ld": 3.94,
+    "at": "2026-11-15T09:53:56Z",
+    "ld": 4.75,
     "c": 8,
     "sb": 0,
     "dk": [
-     24.9,
+     23.9,
      228.3
     ],
     "ss": [
@@ -602,8 +703,35 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 8 tasks",
+   "t": "Work session \u2013 9 tasks",
    "at": "2026-11-15T02:10:06-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Evan",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session \u2013 3 tasks",
+   "at": "2026-11-15T04:53:03-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Evan",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session \u2013 3 tasks",
+   "at": "2026-11-15T04:53:08-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Evan",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session \u2013 3 tasks",
+   "at": "2026-11-15T04:53:01-05:00"
   }
  ],
  "reply": {
@@ -620,17 +748,18 @@
   "task_title",
   "done_text",
   "task_open",
+  "fin_six",
   "lane_task",
   "task_next"
  ],
  "agents_now": {
   "main": 3,
-  "lanes": 0,
-  "total": 3,
-  "at": "4:51 AM",
+  "lanes": 3,
+  "total": 6,
+  "at": "4:54 AM",
   "why": "",
-  "at_iso": "2026-11-15T09:51:00+00:00",
+  "at_iso": "2026-11-15T09:54:00+00:00",
   "started": "2:07 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 2:07 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 4:51 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 3, started 2:07 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 4:54 AM ET</p></section>"
  }
 }

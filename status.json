@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-15T22:20:51.004728+00:00",
+ "at": "2026-11-15T22:23:59.074553+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -122,7 +122,7 @@
    "task": "[tools] T-3992 land the pipeline batch",
    "model": "opus",
    "started": "2026-11-15T22:17:17.812Z",
-   "seconds": 213,
+   "seconds": 401,
    "finished": null,
    "effort": "high"
   },
@@ -131,7 +131,7 @@
    "task": "[plan] T-4105 queue audit report draft",
    "model": "opus",
    "started": "2026-11-15T22:17:26.558Z",
-   "seconds": 204,
+   "seconds": 392,
    "finished": null,
    "effort": "high"
   },
@@ -140,7 +140,7 @@
    "task": "[test] T-4527 steady hung Pro check test",
    "model": "opus",
    "started": "2026-11-15T22:17:32.735Z",
-   "seconds": 198,
+   "seconds": 386,
    "finished": null,
    "effort": "high"
   }
@@ -199,7 +199,7 @@
   "week_pct": 3.57,
   "usage_pct": 22.9,
   "work_pct": 71.4,
-  "read_at": "2026-11-15T22:20:00+00:00",
+  "read_at": "2026-11-15T22:24:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -273,7 +273,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-15T17:20:00-05:00",
+  "at": "2026-11-15T17:24:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -514,38 +514,38 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-15T22:20:51Z",
+  "at": "2026-11-15T22:23:39Z",
   "s": {
    "T-4227": [
     "merging",
     "Host checks on the Mac mini",
-    1794780171004
+    1794780159260
    ],
    "T-4471": [
     "mergeq",
     "1st to merge",
-    1794779511004
+    1794779499260
+   ],
+   "T-4527": [
+    "testing",
+    "MacBook \u00b7 test",
+    null
    ],
    "T-3992": [
     "testing",
     "its own tests, in its copy",
-    1794781191004
-   ],
-   "T-4527": [
-    "testing",
-    "its own tests, in its copy",
-    1794781251004
+    1794781179260
    ]
   },
   "nm": {
    "T-4227": "Run every Operator on Opus high",
    "T-4471": "Stop the star notice committing its own record",
-   "T-3992": "Clear and merge the unfinished merge fixes",
-   "T-4527": "Steady the hung Pro check timing test"
+   "T-4527": "Steady the hung Pro check timing test",
+   "T-3992": "Clear and merge the unfinished merge fixes"
   }
  },
  "ln": {
-  "at": "2026-11-15T22:20:51Z",
+  "at": "2026-11-15T22:23:39Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -557,13 +557,13 @@
     "parked": 2
    },
    "m": {
-    "checking": 18,
-    "inline": 29,
-    "conflicted": 1322,
+    "checking": 21,
+    "inline": 32,
+    "conflicted": 1325,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 551
+    "parked": 554
    },
    "cur": [
     [
@@ -572,7 +572,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     18
+     21
     ]
    ],
    "ld": [
@@ -582,12 +582,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-15T22:20:53Z",
-    "ld": 3.22,
+    "at": "2026-11-15T22:22:51Z",
+    "ld": 3.9,
     "c": 8,
     "sb": 0,
     "dk": [
-     9.2,
+     11.4,
      228.3
     ],
     "ss": [
@@ -597,8 +597,8 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-15T22:08:16Z",
-    "ld": 0.21,
+    "at": "2026-11-15T22:22:34Z",
+    "ld": 0.16,
     "c": 12,
     "sb": 0,
     "dk": [
@@ -626,7 +626,7 @@
    "m": "opus",
    "e": "high",
    "t": "Work session",
-   "at": "2026-11-15T17:20:50-05:00"
+   "at": "2026-11-15T17:23:57-05:00"
   }
  ],
  "reply": {
@@ -648,10 +648,10 @@
   "main": 3,
   "lanes": 1,
   "total": 4,
-  "at": "5:20 PM",
+  "at": "5:24 PM",
   "why": "",
-  "at_iso": "2026-11-15T22:20:00+00:00",
+  "at_iso": "2026-11-15T22:24:00+00:00",
   "started": "5:14 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 3, started 5:14 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 5:20 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 3, started 5:14 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 5:24 PM ET</p></section>"
  }
 }

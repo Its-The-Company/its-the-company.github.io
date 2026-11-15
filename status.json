@@ -1,12 +1,20 @@
 {
  "schema": 1,
- "at": "2026-11-15T07:37:27.021236+00:00",
+ "at": "2026-11-15T07:40:29.315384+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-15T02:07:02-05:00",
   "flow": [],
   "done": [
+   {
+    "t": "T-4466",
+    "name": "Open the audit lines to every account and any model",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794728416
+   },
    {
     "t": "T-4457",
     "name": "Commit queued board records with the records round",
@@ -83,17 +91,9 @@
     "steps": [],
     "end": "landed",
     "end_at": 1794699261
-   },
-   {
-    "t": "T-4458",
-    "name": "Stop the other tools committing each record they write",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794698541
    }
   ],
-  "landed": 7,
+  "landed": 8,
   "failed": 5
  },
  "workers": [
@@ -102,7 +102,7 @@
    "task": "[tools] T-4466 open audit lines to all accounts",
    "model": "opus",
    "started": "2026-11-15T07:11:46.805Z",
-   "seconds": 1540,
+   "seconds": 1722,
    "finished": null,
    "effort": "high"
   },
@@ -111,7 +111,7 @@
    "task": "[tools] T-4479 land stuck lane-a branches",
    "model": "opus",
    "started": "2026-11-15T07:19:25.179Z",
-   "seconds": 1081,
+   "seconds": 1264,
    "finished": null,
    "effort": "high"
   }
@@ -187,7 +187,7 @@
   "week_pct": null,
   "usage_pct": null,
   "work_pct": null,
-  "read_at": "2026-11-15T07:37:00+00:00",
+  "read_at": "2026-11-15T07:40:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -224,7 +224,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-15T02:37:00-05:00",
+  "at": "2026-11-15T02:40:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -462,26 +462,27 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-15T07:37:27Z",
+  "at": "2026-11-15T07:40:29Z",
   "s": {
-   "T-4479": [
-    "merging",
-    "Mac tests at the main gate",
-    1794728187021
-   ],
    "T-4466": [
     "testing",
     "its own tests, in its copy",
-    1794727167021
+    1794727169315
+   ],
+   "T-4479": [
+    "merged",
+    "on main 2:38 AM ET",
+    1794728325000,
+    ""
    ]
   },
   "nm": {
-   "T-4479": "Land Evan's account work stuck since yesterday afternoon",
-   "T-4466": "Open the audit lines to every account and any model"
+   "T-4466": "Open the audit lines to every account and any model",
+   "T-4479": "Land Evan's account work stuck since yesterday afternoon"
   }
  },
  "ln": {
-  "at": "2026-11-15T07:37:27Z",
+  "at": "2026-11-15T07:40:29Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -495,22 +496,22 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 228,
+    "conflicted": 231,
     "failed": null,
     "held": null,
-    "retry": 3,
-    "parked": 2321
+    "retry": 6,
+    "parked": 2324
    },
    "cur": [],
    "ld": [
-    1,
-    "2026-11-15T07:36:08Z"
+    2,
+    "2026-11-15T07:40:16Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-15T07:37:00Z",
-    "ld": 3.56,
+    "at": "2026-11-15T07:40:04Z",
+    "ld": 4.23,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -567,10 +568,10 @@
   "main": 2,
   "lanes": 0,
   "total": 2,
-  "at": "2:37 AM",
+  "at": "2:40 AM",
   "why": "",
-  "at_iso": "2026-11-15T07:37:00+00:00",
+  "at_iso": "2026-11-15T07:40:00+00:00",
   "started": "2:07 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 2:07 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 2:37 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 2:07 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 2:40 AM ET</p></section>"
  }
 }

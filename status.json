@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-15T16:18:37.864639+00:00",
+ "at": "2026-11-15T16:21:41.979483+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -19,6 +19,14 @@
    }
   ],
   "done": [
+   {
+    "t": "T-4247",
+    "name": "Stopped pinned task goes back on the menu by itself",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794759682
+   },
    {
     "t": "T-4468",
     "name": "Let people set each premade's place, events and lists",
@@ -87,16 +95,9 @@
     "steps": [],
     "end": "landed",
     "end_at": 1794748286
-   },
-   {
-    "t": "T-4474",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794744220
    }
   ],
-  "landed": 22,
+  "landed": 23,
   "failed": 4
  },
  "workers": [
@@ -105,7 +106,7 @@
    "task": "[build] T-2869 pyc-only completion test",
    "model": "opus",
    "started": "2026-11-15T15:08:06.419Z",
-   "seconds": 4231,
+   "seconds": 4415,
    "finished": null,
    "effort": "high"
   },
@@ -114,7 +115,7 @@
    "task": "[build] T-4505 Distance Small far values",
    "model": "opus",
    "started": "2026-11-15T15:08:12.068Z",
-   "seconds": 4225,
+   "seconds": 4409,
    "finished": null,
    "effort": "high"
   },
@@ -123,7 +124,7 @@
    "task": "[build] T-3282 cap run marker read",
    "model": "opus",
    "started": "2026-11-15T16:13:09.853Z",
-   "seconds": 328,
+   "seconds": 512,
    "finished": null,
    "effort": "high"
   }
@@ -158,7 +159,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 385,
+  "runnable_count": 384,
   "blocked_count": 76
  },
  "meter": {
@@ -207,7 +208,7 @@
   "week_pct": 2.36,
   "usage_pct": 27.2,
   "work_pct": 75.0,
-  "read_at": "2026-11-15T16:18:00+00:00",
+  "read_at": "2026-11-15T16:21:00+00:00",
   "running": [
    {
     "lane": "b3",
@@ -281,7 +282,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-15T11:18:00-05:00",
+  "at": "2026-11-15T11:21:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -456,6 +457,11 @@
   ],
   "done": [
    {
+    "w": "Odalys",
+    "t": "The automatic queue check's closing rules never acted wrongly on ten past boards (53 actions,...",
+    "at": "2026-11-15T11:21:00-05:00"
+   },
+   {
     "w": "Idris",
     "t": "The notes and a test name around the fix for deleted widgets coming back now say exactly what...",
     "at": "2026-11-15T11:12:00-05:00"
@@ -464,22 +470,21 @@
     "w": "Idris",
     "t": "The rule that only the app's own ready-made widgets may have their folder created is now written...",
     "at": "2026-11-15T11:12:00-05:00"
-   },
-   {
-    "w": "Pernille",
-    "t": "Checked Idris's fix so that a widget a person renames or deletes while it waits behind a stuck...",
-    "at": "2026-11-15T10:45:00-05:00"
    }
   ],
   "count": {
-   "next": 385,
+   "next": 384,
    "wait": 35,
    "blocked": 41,
    "you": 12
   },
   "fin": {
-   "n": 4,
+   "n": 5,
    "rows": [
+    [
+     "T-4472",
+     "Measure the queue check..."
+    ],
     [
      "T-4521",
      "Correct the deleted widget..."
@@ -538,32 +543,32 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-15T16:18:37Z",
+  "at": "2026-11-15T16:21:32Z",
   "s": {
-   "T-4505": [
-    "mergetest",
-    "iPhone tests on the MacBook",
-    null
-   ],
    "T-2869": [
     "merging",
     "Mac tests at the main gate \u00b7 4 groups of tests done",
-    1794759157864
+    1794759152373
+   ],
+   "T-4505": [
+    "merging",
+    "Mac tests at the main gate \u00b7 1 group of tests done",
+    1794759272373
    ],
    "T-3282": [
     "merging",
     "Mac tests at the main gate",
-    1794759517864
+    1794759512373
    ]
   },
   "nm": {
-   "T-4505": "Fit far distances in Distance Small",
    "T-2869": "Test completion with the stdlib as compiled-only files",
+   "T-4505": "Fit far distances in Distance Small",
    "T-3282": "Cap how much of the run marker the widget reads"
   }
  },
  "ln": {
-  "at": "2026-11-15T16:18:37Z",
+  "at": "2026-11-15T16:21:32Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -571,32 +576,32 @@
     "conflicted": 2,
     "failed": 0,
     "held": 0,
-    "retry": 2,
+    "retry": 0,
     "parked": 3
    },
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 976,
+    "conflicted": 979,
     "failed": null,
     "held": null,
-    "retry": 12,
-    "parked": 2840
+    "retry": null,
+    "parked": 2843
    },
    "cur": [],
    "ld": [
-    23,
-    "2026-11-15T15:47:21Z"
+    24,
+    "2026-11-15T16:21:22Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-15T16:18:39Z",
-    "ld": 3.59,
+    "at": "2026-11-15T16:21:33Z",
+    "ld": 4.39,
     "c": 8,
     "sb": 0,
     "dk": [
-     15.9,
+     14.7,
      228.3
     ],
     "ss": [
@@ -606,12 +611,12 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-15T16:12:36Z",
-    "ld": 3.76,
+    "at": "2026-11-15T16:20:02Z",
+    "ld": 1.64,
     "c": 12,
     "sb": 0,
     "dk": [
-     361.8,
+     362.4,
      926.4
     ],
     "sn": []
@@ -658,10 +663,10 @@
   "main": 3,
   "lanes": 1,
   "total": 4,
-  "at": "11:18 AM",
+  "at": "11:21 AM",
   "why": "",
-  "at_iso": "2026-11-15T16:18:00+00:00",
+  "at_iso": "2026-11-15T16:21:00+00:00",
   "started": "10:05 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 3, started 10:05 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 11:18 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 3, started 10:05 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 11:21 AM ET</p></section>"
  }
 }

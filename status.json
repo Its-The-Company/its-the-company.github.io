@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-15T12:15:21.053499+00:00",
+ "at": "2026-11-15T12:18:24.609286+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -87,7 +87,7 @@
    }
   ],
   "landed": 13,
-  "failed": 5
+  "failed": 4
  },
  "workers": [
   {
@@ -95,7 +95,7 @@
    "task": "[tools] T-4487 wire task states into land",
    "model": "opus",
    "started": "2026-11-15T11:27:02.366Z",
-   "seconds": 2898,
+   "seconds": 3082,
    "finished": null
   },
   {
@@ -103,20 +103,36 @@
    "task": "[design] T-4468 premade input pages design",
    "model": "opus",
    "started": "2026-11-15T11:55:51.552Z",
-   "seconds": 1169,
+   "seconds": 1353,
    "finished": null
+  },
+  {
+   "name": "idris",
+   "task": "[tools] T-4194 feature session slice b",
+   "model": "opus",
+   "started": "2026-11-15T12:17:52.301Z",
+   "seconds": 32,
+   "finished": null
+  }
+ ],
+ "who": "Odalys, Maren, Idris",
+ "recent": [
+  {
+   "name": "ines",
+   "task": "[plan] T-4304 handbook note on reviews",
+   "model": "opus",
+   "started": "2026-11-15T12:15:40.640Z",
+   "seconds": null,
+   "finished": "2026-11-15T12:17:27.129000+00:00"
   },
   {
    "name": "ines",
    "task": "[plan] T-4501 GitLab pages read against terms",
    "model": "opus",
    "started": "2026-11-15T12:12:11.879Z",
-   "seconds": 189,
-   "finished": null
-  }
- ],
- "who": "Odalys, Maren, Ines",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-15T12:15:28.669000+00:00"
+  },
   {
    "name": "ines",
    "task": "[plan] T-4437 queue audit order and last rows",
@@ -132,28 +148,12 @@
    "started": "2026-11-15T11:42:00.619Z",
    "seconds": null,
    "finished": "2026-11-15T11:54:32.500000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-4461 ledger apply last rows",
-   "model": "opus",
-   "started": "2026-11-15T11:34:56.087Z",
-   "seconds": null,
-   "finished": "2026-11-15T11:54:05.483000+00:00"
-  },
-  {
-   "name": "ines",
-   "task": "[plan] T-4467 plan in line with Saturday answers",
-   "model": "opus",
-   "started": "2026-11-15T11:26:47.064Z",
-   "seconds": null,
-   "finished": "2026-11-15T11:41:13.561000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 379,
+  "runnable_count": 378,
   "blocked_count": 77
  },
  "meter": {
@@ -202,7 +202,7 @@
   "week_pct": null,
   "usage_pct": null,
   "work_pct": null,
-  "read_at": "2026-11-15T12:15:00+00:00",
+  "read_at": "2026-11-15T12:18:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -223,7 +223,7 @@
   }
  ],
  "disk": {
-  "free_gb": 21,
+  "free_gb": 20,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -232,14 +232,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-15T07:11:00-05:00",
+   "at": "2026-11-15T07:17:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-15T07:15:00-05:00",
+  "at": "2026-11-15T07:18:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -272,17 +272,17 @@
    "next": []
   },
   {
-   "name": "Ines",
+   "name": "Idris",
    "state": "running",
-   "task": "[plan] T-4501 GitLab pages read against terms",
+   "task": "[tools] T-4194 feature session slice b",
    "model": "opus",
-   "since": "2026-11-15T12:12:11.879Z",
+   "since": "2026-11-15T12:17:52.301Z",
    "next": []
   },
   {
-   "name": "Idris",
+   "name": "Ines",
    "state": "next",
-   "task": "Idris, P2, from T-4238 (Pernille's review, from T-3900,...",
+   "task": "Ines, P2, from T-1110 (Wrenna,...",
    "model": null,
    "since": null,
    "next": []
@@ -325,13 +325,13 @@
     "task": "T-4468"
    },
    {
-    "w": "Ines",
-    "k": "plan",
-    "t": "Settle the GitLab pages read against its terms",
+    "w": "Idris",
+    "k": "tools",
+    "t": "Build the feature session for app work",
     "m": "opus",
-    "at": "2026-11-15T12:12:11.879Z",
+    "at": "2026-11-15T12:17:52.301Z",
     "o": "c",
-    "task": "T-4501"
+    "task": "T-4194"
    }
   ],
   "src": "plan",
@@ -410,6 +410,11 @@
   "done": [
    {
     "w": "Ines",
+    "t": "The Handbook now says which changes get a separate review: app code going to TestFlight or the...",
+    "at": "2026-11-15T07:17:00-05:00"
+   },
+   {
+    "w": "Ines",
     "t": "A web page we saved from GitLab's documentation was fetched in a way GitLab's terms forbid, so...",
     "at": "2026-11-15T07:15:00-05:00"
    },
@@ -417,22 +422,21 @@
     "w": "Ines",
     "t": "The task-list cleanup is finished except for work people still hold: every clean-up the record...",
     "at": "2026-11-15T07:10:00-05:00"
-   },
-   {
-    "w": "Idris",
-    "t": "The tool that will let waiting app changes share one iPhone check now treats an unreadable task...",
-    "at": "2026-11-15T07:03:00-05:00"
    }
   ],
   "count": {
-   "next": 379,
+   "next": 378,
    "wait": 36,
    "blocked": 41,
    "you": 12
   },
   "fin": {
-   "n": 8,
+   "n": 9,
    "rows": [
+    [
+     "T-4304",
+     "Write the Handbook note on..."
+    ],
     [
      "T-4501",
      "Settle the GitLab pages read..."
@@ -452,10 +456,6 @@
     [
      "T-4461",
      "Let the ledger apply finish..."
-    ],
-    [
-     "T-4467",
-     "Bring the plan in line with..."
     ]
    ]
   }
@@ -499,7 +499,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-15T12:15:08Z",
+  "at": "2026-11-15T12:18:06Z",
   "s": {
    "T-4468": [
     "mergetest",
@@ -509,7 +509,7 @@
    "T-4487": [
     "testing",
     "its own tests, in its copy",
-    1794743888640
+    1794743886843
    ]
   },
   "nm": {
@@ -518,7 +518,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-15T12:15:08Z",
+  "at": "2026-11-15T12:18:06Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -532,11 +532,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 717,
+    "conflicted": 720,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1445
+    "parked": 1448
    },
    "cur": [],
    "ld": [
@@ -546,8 +546,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-15T12:14:43Z",
-    "ld": 3.02,
+    "at": "2026-11-15T12:17:41Z",
+    "ld": 2.99,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -580,7 +580,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 8 tasks",
+   "t": "Work session \u2013 10 tasks",
    "at": "2026-11-15T06:23:05-05:00"
   }
  ],
@@ -606,10 +606,10 @@
   "main": 3,
   "lanes": 0,
   "total": 3,
-  "at": "7:15 AM",
+  "at": "7:18 AM",
   "why": "",
-  "at_iso": "2026-11-15T12:15:00+00:00",
+  "at_iso": "2026-11-15T12:18:00+00:00",
   "started": "6:23 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 6:23 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 7:15 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 6:23 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 7:18 AM ET</p></section>"
  }
 }

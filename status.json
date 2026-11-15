@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-15T21:37:10.905899+00:00",
+ "at": "2026-11-15T21:40:17.535397+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -114,26 +114,25 @@
  },
  "workers": [
   {
-   "name": "idris",
-   "task": "[build] T-4494 widget scripts start in the widget",
-   "model": "opus",
-   "started": "2026-11-15T21:12:13.426Z",
-   "seconds": 1497,
-   "finished": null,
-   "effort": "high"
-  },
-  {
    "name": "maren",
    "task": "[site] T-4534 double-tap Chat reactions",
    "model": "opus",
    "started": "2026-11-15T21:21:41.106Z",
-   "seconds": 929,
+   "seconds": 1116,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Idris, Maren",
+ "who": "Maren",
  "recent": [
+  {
+   "name": "idris",
+   "task": "[build] T-4494 widget scripts start in the widget",
+   "model": "opus",
+   "started": "2026-11-15T21:12:13.426Z",
+   "seconds": null,
+   "finished": "2026-11-15T21:38:18.706000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[tools] T-3992 land the pipeline batch",
@@ -157,14 +156,6 @@
    "started": "2026-11-15T20:40:58.504Z",
    "seconds": null,
    "finished": "2026-11-15T21:06:14.195000+00:00"
-  },
-  {
-   "name": "pernille",
-   "task": "[build] T-4468 premade settings H1 Python half",
-   "model": "opus",
-   "started": "2026-11-15T19:14:40.149Z",
-   "seconds": null,
-   "finished": "2026-11-15T20:40:23.019000+00:00"
   }
  ],
  "queue": {
@@ -219,7 +210,7 @@
   "week_pct": 3.22,
   "usage_pct": 26.1,
   "work_pct": 75.0,
-  "read_at": "2026-11-15T21:37:00+00:00",
+  "read_at": "2026-11-15T21:40:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -315,23 +306,23 @@
   }
  ],
  "disk": {
-  "free_gb": 10,
-  "gate": "open",
+  "free_gb": 11,
+  "gate": "closed",
   "ssd": {
    "mounted": true,
    "free_gb": 184
   },
-  "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
+  "words": "free on the Mac mini. New Xcode runs and personal sessions wait until 20 GB is free.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-15T16:33:00-05:00",
+   "at": "2026-11-15T16:39:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-15T16:37:00-05:00",
+  "at": "2026-11-15T16:40:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -348,15 +339,6 @@
  },
  "lanes": [
   {
-   "name": "Idris",
-   "state": "running",
-   "task": "[build] T-4494 widget scripts start in the widget",
-   "model": "opus",
-   "since": "2026-11-15T21:12:13.426Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
    "name": "Maren",
    "state": "running",
    "task": "[site] T-4534 double-tap Chat reactions",
@@ -364,6 +346,14 @@
    "since": "2026-11-15T21:21:41.106Z",
    "next": [],
    "effort": "high"
+  },
+  {
+   "name": "Idris",
+   "state": "next",
+   "task": "Idris, P2, from T-2869 (Idris's land, 11:4x AM 11-15):...",
+   "model": null,
+   "since": null,
+   "next": []
   },
   {
    "name": "Ines",
@@ -400,16 +390,6 @@
  ],
  "tasks": {
   "run": [
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "Prove widgets move to the app by size",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-15T21:12:13.426Z",
-    "o": "c",
-    "task": "T-4494"
-   },
    {
     "w": "Maren",
     "k": "site",
@@ -586,44 +566,38 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-15T21:37:01Z",
+  "at": "2026-11-15T21:40:17Z",
   "s": {
    "T-4227": [
     "merging",
-    "Host checks on the Mac mini \u00b7 3 groups of tests done",
-    1794777781254
+    "Host checks on the Mac mini \u00b7 4 groups of tests done",
+    1794777797535
    ],
    "T-4411": [
     "mergeq",
     "1st to merge",
-    1794778141254
+    1794778157535
    ],
    "T-4471": [
     "mergeq",
     "2nd to merge",
-    1794778381254
-   ],
-   "T-4494": [
-    "mergetest",
-    "iPhone tests on the MacBook",
-    null
+    1794778397535
    ],
    "T-4534": [
     "merging",
     "Mac tests at the main gate",
-    1794778561254
+    1794778517535
    ]
   },
   "nm": {
    "T-4227": "Run every Operator on Opus high",
    "T-4411": "Start accounts on the audit when usage returns",
    "T-4471": "Stop the star notice committing its own record",
-   "T-4494": "Prove widgets move to the app by size",
    "T-4534": "Double-tap a Chat bubble to react, and add fire"
   }
  },
  "ln": {
-  "at": "2026-11-15T21:37:01Z",
+  "at": "2026-11-15T21:40:17Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -635,13 +609,13 @@
     "parked": 2
    },
    "m": {
-    "checking": 14,
-    "inline": 6,
-    "conflicted": 1278,
+    "checking": 17,
+    "inline": 9,
+    "conflicted": 1282,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 507
+    "parked": 510
    },
    "cur": [
     [
@@ -650,7 +624,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     14
+     17
     ]
    ],
    "ld": [
@@ -660,12 +634,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-15T21:37:03Z",
-    "ld": 54.26,
+    "at": "2026-11-15T21:39:30Z",
+    "ld": 64.38,
     "c": 8,
     "sb": 1,
     "dk": [
-     8.7,
+     10.5,
      228.3
     ],
     "ss": [
@@ -677,12 +651,12 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-15T21:30:14Z",
-    "ld": 0.2,
+    "at": "2026-11-15T21:37:43Z",
+    "ld": 1.52,
     "c": 12,
     "sb": 0,
     "dk": [
-     357.3,
+     357.1,
      926.4
     ],
     "sn": []
@@ -696,7 +670,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 3 tasks",
+   "t": "Work session \u2013 2 tasks",
    "at": "2026-11-15T16:21:49-05:00"
   },
   {
@@ -737,13 +711,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 2,
+  "main": 1,
   "lanes": 2,
-  "total": 4,
-  "at": "4:37 PM",
+  "total": 3,
+  "at": "4:40 PM",
   "why": "",
-  "at_iso": "2026-11-15T21:37:00+00:00",
+  "at_iso": "2026-11-15T21:40:00+00:00",
   "started": "2:00 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 2, started 2:00 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 4:37 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 1, started 2:00 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 4:40 PM ET</p></section>"
  }
 }

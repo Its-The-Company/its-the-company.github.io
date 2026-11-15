@@ -545,6 +545,13 @@ nav.subtabs.hometabs .num{font-weight:400}
 .cv-copy::after{content:"";position:absolute;inset:-14px -6px}
 .cv-copy:hover,.cv-copy.on{color:var(--ink);text-decoration:underline}
 .cv-sys .cv-copy{margin:0;color:inherit}
+.cv-msg{touch-action:manipulation}
+.cv-rx{display:flex;flex-wrap:wrap;gap:var(--s1);padding:0 var(--s1);font-size:var(--fs-0)}
+.cv-msg.cv-inv .cv-rx{justify-content:flex-end}
+.cv-rx1{padding:0 var(--s2);border:1px solid var(--line);border-radius:999px;background:var(--bg);color:var(--ink)}
+.cv-rxp{display:flex;gap:var(--s1);justify-self:end;padding:var(--s1);border:1px solid var(--line);border-radius:999px;background:var(--bg)}
+.cv-rxp button{min-width:44px;min-height:44px;border:0;border-radius:999px;background:none;font-size:1.4rem;line-height:1;cursor:pointer}
+.cv-rxp button:hover,.cv-rxp button:focus-visible{background:var(--line)}
 @media (hover:hover){.cv-copy{opacity:0}.cv-msg:hover .cv-copy,.cv-sys:hover .cv-copy,.cv-copy:focus-visible,.cv-copy.on{opacity:1}}
 .cv-body p,.cv-body ul,.cv-body ol{margin:0 0 var(--s2)}.cv-body>:last-child{margin-bottom:0}
 .cv-body ul,.cv-body ol{padding-left:1.25em}

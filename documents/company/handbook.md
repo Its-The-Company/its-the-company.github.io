@@ -61,6 +61,14 @@ These are the defaults (Commandment 13). The task owner's manager may choose oth
 </div>
 
 
+**Which changes get a review line** (T-4304, from the efficiency review's item 2.6). This applies Commandment 13 as written; it changes no rule.
+
+- **App code.** Code headed to TestFlight or the App Store (the app, under `pywidget/`) gets a separate `[review]` line. Someone other than the author reads the work, not the author's reasoning, and nothing goes to TestFlight while that line is open. Opus does the code review before each TestFlight build and Fable the whole-product review before each submission (Tenet 6).
+- **Its form.** Today the land writes one line for each landed task that touches `pywidget/`. Under the redesign ([`ops/plans/task-process-redesign.md`](task-process-redesign.html) 3.5) it is one review per feature merge, covering the feature's steps. That form is built (`tools/task_states.py`) and starts when T-4487 wires it into the land.
+- **Tools, tests and the site.** The company's own `tools/`, `tests/` and the site get no review line. They rest on `tests/run.sh` and the gate. The manager may still ask for a review in the packet.
+- **Findings.** A finding on work not yet merged is a step on that task (`tools/task_states.py step`). Only a defect in merged work becomes a new line, By: "review of T-X".
+- **Features not yet listed.** Which feature the tab shell and first run are reviewed under waits on Restructuring decision 17. The Builder's block editor, code view and custom block wait on Restructuring decision 18. Both are left undecided here; until a feature is listed, the land reviews such a change as its own task.
+
 ## 4. Meetings
 
 Meetings exist to decide, never to report status. Status goes on the board.
@@ -203,6 +211,7 @@ Every worker call carries its kind tag. Anything a script can do goes to a scrip
 - 2026-10-22, Day 1: first version (Ines).
 - 2026-11-04, Day 14: every board line carries a plain title, checked by a script (T-2402, Ines).
 - 2026-11-10, Day 20: rule 62 in handbook/rules.md, pipeline tools change in one batch a day while the merge line is in use; a fix that stops merging lands at once (audit item 6, cf1debd054, Odalys).
+- 2026-11-15, Day 25: section 3, which changes get a review line: app code headed to TestFlight or the App Store does (Commandment 13); tools, tests and the site rest on tests/run.sh and the gate unless the manager asks (efficiency review 2.6, T-4304, Ines).
 {% endraw %}
 
 </div>

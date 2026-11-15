@@ -5,7 +5,7 @@ section: "documents"
 description: "The project model, the app&#x27;s navigation, the Builder and the marketplace, drawn so that one Project serves the programmer, the casual creator and the person who only wants finished things."
 ---
 <div class="crumbs" role="navigation" aria-label="Back"><a class="back" href="{{ '/documents/restructuring/' | relative_url }}">← The Restructuring</a><a href="{{ '/documents/restructuring/03-structure.html' | relative_url }}" rel="bookmark">Permanent link</a></div>
-<div class="page-head"><div class="kicker"><span class="kind grey">Restructuring</span><span>Day 22 · Thu Nov 12, 11:18 PM ET</span><span><code>documents/restructuring/03-structure.md</code></span></div><h1>The Restructuring, phase 3: structure</h1><div class="byline"><img class="avatar" src="{{ '/assets/portraits/ines.svg' | relative_url }}" alt="Ines" title="Ines"><span>By <a href="{{ '/cast/ines.html' | relative_url }}">Ines</a>, CEO</span></div></div>
+<div class="page-head"><div class="kicker"><span class="kind grey">Restructuring</span><span>Day 25 · Sun Nov 15, 6:37 AM ET</span><span><code>documents/restructuring/03-structure.md</code></span></div><h1>The Restructuring, phase 3: structure</h1><div class="byline"><img class="avatar" src="{{ '/assets/portraits/ines.svg' | relative_url }}" alt="Ines" title="Ines"><span>By <a href="{{ '/cast/ines.html' | relative_url }}">Ines</a>, CEO</span></div></div>
 
 <style>.doc-body{overflow-wrap:break-word}.doc-src{overflow-wrap:anywhere}.tbl[data-n~="1"] tr>:nth-child(1),.tbl[data-n~="2"] tr>:nth-child(2),.tbl[data-n~="3"] tr>:nth-child(3),.tbl[data-n~="4"] tr>:nth-child(4),.tbl[data-n~="5"] tr>:nth-child(5),.tbl[data-n~="6"] tr>:nth-child(6),.tbl[data-n~="7"] tr>:nth-child(7),.tbl[data-n~="8"] tr>:nth-child(8),.tbl[data-n~="9"] tr>:nth-child(9),.tbl[data-n~="10"] tr>:nth-child(10),.tbl[data-n~="11"] tr>:nth-child(11),.tbl[data-n~="12"] tr>:nth-child(12){min-width:0;overflow-wrap:normal}.tbl[data-o="1"] tr>:nth-child(1),.tbl[data-o="2"] tr>:nth-child(2),.tbl[data-o="3"] tr>:nth-child(3),.tbl[data-o="4"] tr>:nth-child(4),.tbl[data-o="5"] tr>:nth-child(5),.tbl[data-o="6"] tr>:nth-child(6),.tbl[data-o="7"] tr>:nth-child(7),.tbl[data-o="8"] tr>:nth-child(8),.tbl[data-o="9"] tr>:nth-child(9),.tbl[data-o="10"] tr>:nth-child(10),.tbl[data-o="11"] tr>:nth-child(11),.tbl[data-o="12"] tr>:nth-child(12){position:sticky;right:0;overflow-wrap:normal;background:var(--page);box-shadow:-1px 0 var(--line),-9px 0 8px -8px var(--sh)}</style>
 <div class="doc-body" markdown="1">
@@ -17,14 +17,16 @@ Model: claude-fable-5-2. Commit read: 3cc4481247 (branch personal/a, 2026-11-12 
 
 Phases 4 to 6 work from the recommendations, as working assumptions.
 
+*Dated line, 2026-11-15 6:34 AM ET (Ines, T-4467).* Questions 4, 5, 6 and 8 were answered on 11-14 (an Investor; `log/rulings.md`); each answer is noted under its question, and the old words stay. Question 6's answer differs from the recommendation, so section 3 and "Maybe later" follow it.
+
 1. **Is the manifest (the one file listing what a project makes) the truth, and the folders only a habit?** Recommend: yes. Templates lay out tidy folders; a programmer may keep a single file.
 2. **What is a component?** Recommend: a source (returns data), a view (draws data), or the pair, with a small file saying what it needs and touches. Shared in the app it is blocks; as Python it travels by file.
 3. **How do updates reach an installed copy?** Recommend: the app offers a newer version and the person chooses. Never silent. A file they changed is kept unless they say otherwise.
-4. **Keep the four approved tabs, with three ways to start on Projects?** Recommend: yes. It stays inside `creative/approved.md` item 2. Any other tab set is a new layout and needs your "approve".
-5. **One first-run question that picks where a person lands?** Recommend: yes. It can be skipped and hides nothing.
-6. **How do blocks and hand-written code live together?** Recommend: the generated Python is always on view, read-only; "Edit as code" detaches a file and can be undone; hand-written code joins a Builder project as a custom block. Editing either side freely comes later.
+4. **Keep the four approved tabs, with three ways to start on Projects?** Recommend: yes. It stays inside `creative/approved.md` item 2. Any other tab set is a new layout and needs your "approve". *Answered A (#286, 4:58 PM ET 11-14): the four approved tabs (Projects as home, Gallery, Docs, Settings), with three ways to start a project on Projects.*
+5. **One first-run question that picks where a person lands?** Recommend: yes. It can be skipped and hides nothing. *Answered A (#286, the same answer): one first-run question that can be skipped.*
+6. **How do blocks and hand-written code live together?** Recommend: the generated Python is always on view, read-only; "Edit as code" detaches a file and can be undone; hand-written code joins a Builder project as a custom block. Editing either side freely comes later. *Answered C, against the recommendation (#287, 4:51 PM ET 11-14): blocks and written code can both be edited freely, each kept in step with the other, in 1.0; about 2.5 to 3 weeks more, estimated. Section 3 follows.*
 7. **May a Gallery item offer its parts in 1.0?** Recommend: yes, for our own items, which ship inside the app: "Get" the whole Weather widget, or "Add to project" only its weather source.
-8. **May items shared with other people carry pictures?** Recommend: a person's own project holds any media; an item listed in the app for others is text and system symbols only at first, so moderation stays a reading job.
+8. **May items shared with other people carry pictures?** Recommend: a person's own project holds any media; an item listed in the app for others is text and system symbols only at first, so moderation stays a reading job. *Answered A (#277, 5:36 PM ET 11-14): items shared with other people carry text and Apple's system symbols only, at first; a person's own projects may hold any pictures.*
 9. **Where does each part's documentation live?** Recommend: one plain-English page per part beside the code, its diagram drawn from the code onto the site. A new part's design starts with that page.
 
 ## Working assumptions
@@ -210,7 +212,7 @@ On iPhone the tool fills the screen, a switch chooses Blocks or Code, and the pr
 - **(b) Round trip.** Edit either side. One loop the Builder has no block for and the file is code only: a rule people meet by surprise. It costs 2.5 to 3 engineer-weeks over (c), an estimate (L17 s4).
 - **(d) Custom block.** Hand-written Python is its own file, a source or a view, which the Builder shows as one block with its settings and never rewrites. New here, and unsized.
 
-Recommend (c) with (d): the hybrid inside a file, the custom block across files. The folder does the work a parser would otherwise do, the statement's "option to edit the underlying code" is met, and neither side can break the other. (b) is the first follow-up, if people are seen detaching and coming back.
+*11-15 (#287 C): the Investors chose (b), editing either side, for 1.0. The custom block (d) stays beside it. ADR-008 must say what a person sees when written code has no block (the surprise (b) describes), before any Builder code.* ~~Recommend (c) with (d): the hybrid inside a file, the custom block across files.~~ The folder does the work a parser would otherwise do, the statement's "option to edit the underlying code" is met, and neither side can break the other. ~~(b) is the first follow-up, if people are seen detaching and coming back.~~
 
 ```
 blocks/today.blocks.json ── compile on the device ──► views/today.py    generated
@@ -318,7 +320,7 @@ In the app, the Docs tab carries each part's help.
 ## Maybe later
 
 - A map of a project inside the app, sources to outputs.
-- Editing blocks and code either way (option b).
+- ~~Editing blocks and code either way (option b).~~ In 1.0 since #287 C (11-14).
 - Other people's Python listed in the app; paid items and paying creators. Each is its own proposal.
 - Pages drawn in a web view; a message card; projects synced between devices.
 - One project using another's code without copying it.

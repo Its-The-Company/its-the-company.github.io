@@ -6,8 +6,6 @@ section: "pitches"
 
 # <span title="A memo that proposes one idea to the Investors as the product. Only a B or better becomes one.">Pitches</span>
 
-<p class="lead">Every product idea pitched to the Investors, and the runners-up: what each is, who it is for, the grade, and the price.</p>
-
 <details class="pc-key"><summary>How to read the grade, sales and status</summary><p>The grade is Wrenna's research grade; B- is the lowest she will pitch. Sales assume Apple's 30% cut, and 15% if the Small Business Program enrollment is accepted. Demographics are judgment, not measured. <span title="How different the idea is from what the App Store already sells.">Novelty</span> and complexity use the same letter scale: A is the most novel or the most complex; a pitch not yet scored or dated sorts last. Status: recommended is the current pick, open is undecided, <span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">parked</span> is stored for a pivot or a side project. Runners-up were never pitched: the idea hunt's best finds that stopped short of the B+ bar, kept here so none is lost.</p></details>
 
 <style>

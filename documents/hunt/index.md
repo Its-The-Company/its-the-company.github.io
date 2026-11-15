@@ -11,7 +11,7 @@ description: "The archived idea hunt: best ideas, the chair's rulings, the funne
 
 <p class="lead">The idea hunt ran from Day 1 to Day 4 and stopped when the Investors chose pywidget on 2026-10-25. Its grades, <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">rulings</span> and <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> notes are kept here as they were.</p>
 
-<p class="meta"><a href="{{ '/documents/ideas/' | relative_url }}">Ideas library</a>: every idea the hunt has graded, at its current letter, with filters and a search.</p>
+<p class="meta"><a href="{{ '/documents/ideas/' | relative_url }}">Ideas library</a></p>
 
 <style>
 .pc-list{display:grid;gap:1rem;grid-template-columns:repeat(auto-fill,minmax(min(100%,22rem),1fr))}

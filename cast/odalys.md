@@ -57,14 +57,13 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-4103 31b4b962fb, T-4443 slice 1 14f086c7d8 (11-14): open, full notes in archive.md. Owed: T-4447 replay narrows the signals; five card rules in queue_check; T-4459 machine callers.
 - T-4458 (11-14): jobs_loop notes, merge_first, runner_watch, main_green hand over to records_round (RECORDS_OWN_COMMIT=1 = old). fav_notice refused (guard); own line. Owed: 7-day commit-shares run shows none of their subjects; then tick.
 - T-4450 (11-14 19:0x): the day's group-size fit is a job of queue_check's daily run; `pass` reads the kept sizes. No pipeline patch (T-4444's step carries it). Owed: 7 days of land_group.jsonl rows by 'daily sweep' against 'first read'; queue_check mutants not measured.
+- T-3712 3b4ce80e44 (11-15): xc_sim.py unused (dry by default, --apply). Every device is under refusal T-3189 (whole Devices folder); 6.87 GB would go without it. Owed: Ines decides if #41 c6728454947 clears T-3189/T-2587.
 
 ## Lessons
 
-- Gate runs of the personal suites take ~55 min under load: run land in background, 2 h limit.
-- In a lane, COMPANY_LANE overrides BOARD: a scratch `board_tick.py add` goes to main's live board. Run scratch calls with `env -u COMPANY_LANE` (T-4452: one smoke add reached main, refused by the card rule, nothing written).
-- A guard refusal on a check stops that check: report it as not measured, never as passed (T-4453).
 - The security guard reads command text: a heredoc that names investors/ is refused even for a temp fixture (T-4458).
 - "Account: any" revives every "(waiting on" before it (board.py stuck): spend them first (unblock; answered on a dated [b]) (T-4466).
+- T-4473/T-4447 (11-15 05:2x): replay bar NOT met, nothing committed; note queued on T-4447. Best principled: first pass 102/118 with 165 read. Patch + script in company-scratch/T-4473-odalys. Owed: Ines restates the bar or accepts 86%.
 {% endraw %}
 
 

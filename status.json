@@ -1,10 +1,10 @@
 {
  "schema": 1,
- "at": "2026-11-15T14:48:38.744468+00:00",
+ "at": "2026-11-15T14:53:32.120910+00:00",
  "session": {
-  "active": true,
-  "kind": "work",
-  "started": "2026-11-15T06:23:05-05:00",
+  "active": false,
+  "kind": "",
+  "started": null,
   "flow": [
    {
     "t": "T-4009",
@@ -37,7 +37,6 @@
   "done": [
    {
     "t": "T-4129",
-    "name": "Retire the Set aside stage on Home",
     "acct": "Personal a",
     "steps": [],
     "end": "landed",
@@ -53,7 +52,6 @@
    },
    {
     "t": "T-4482",
-    "name": "Redo commit queued board records with the records round",
     "acct": "Personal b",
     "steps": [],
     "end": "landed",
@@ -77,7 +75,6 @@
    },
    {
     "t": "T-4156",
-    "name": "Remove the audit session cap on Evan's account",
     "acct": "Personal a",
     "steps": [],
     "end": "landed",
@@ -93,7 +90,6 @@
    },
    {
     "t": "T-4474",
-    "name": "Redo an Investor request on fresh main",
     "acct": "Personal a",
     "steps": [],
     "end": "landed",
@@ -202,12 +198,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": null,
+ "next_tick": "2026-11-15T06:37:40-05:00",
  "personal": {
   "week_pct": null,
   "usage_pct": null,
   "work_pct": null,
-  "read_at": "2026-11-15T14:48:00+00:00",
+  "read_at": "2026-11-15T14:54:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -241,6 +237,7 @@
     "e": "high",
     "at": "2026-11-15T09:10:17-05:00",
     "n": "Evan",
+    "d": 1,
     "src": "plan-a"
    },
    {
@@ -291,7 +288,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-15T09:48:00-05:00",
+  "at": "2026-11-15T09:54:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -299,13 +296,9 @@
    "b": "double-spread"
   }
  },
- "next_tick_why": "session",
+ "next_tick_why": "last_tick",
  "idle": null,
- "pool": {
-  "why": "Double Spread: 94% of the week left, paced to last until Wed 14:00, the week's halfway point; the machine allows 21 (held: too few lands in 3 hours to judge a raise)",
-  "n": 3,
-  "at": "2026-11-15T06:22:40.536194-05:00"
- },
+ "pool": null,
  "lanes": [
   {
    "name": "Idris",
@@ -358,7 +351,6 @@
  ],
  "tasks": {
   "run": [],
-  "src": "plan",
   "open": [
    {
     "w": "Pernille",
@@ -453,35 +445,6 @@
    "wait": 35,
    "blocked": 41,
    "you": 12
-  },
-  "fin": {
-   "n": 17,
-   "rows": [
-    [
-     "T-4129",
-     "Retire the Set aside stage..."
-    ],
-    [
-     "T-4509",
-     "Name the Investor in reply..."
-    ],
-    [
-     "T-4507",
-     "Let the company quit apps it..."
-    ],
-    [
-     "T-4504",
-     "Let long city names give way..."
-    ],
-    [
-     "T-4487",
-     "Wire task states into the land"
-    ],
-    [
-     "T-4482",
-     "Redo commit queued board..."
-    ]
-   ]
   }
  },
  "qr": [
@@ -523,22 +486,22 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-15T14:48:21Z",
+  "at": "2026-11-15T14:53:32Z",
   "s": {
    "T-4482": [
-    "mergeq",
-    "1st to merge",
-    1794752541472
+    "merging",
+    "Host checks on the Mac mini \u00b7 6 groups of tests done",
+    1794754172120
    ],
    "T-4009": [
-    "mergeq",
-    "1st to merge",
-    1794752541472
+    "merging",
+    "Host checks on the Mac mini \u00b7 6 groups of tests done",
+    1794754172120
    ],
    "T-4129": [
     "merging",
     "Mac tests at the main gate",
-    1794751821472
+    1794751832120
    ],
    "T-4468": [
     "testing",
@@ -561,11 +524,11 @@
   }
  },
  "ln": {
-  "at": "2026-11-15T14:48:21Z",
+  "at": "2026-11-15T14:53:32Z",
   "mq": {
    "n": {
-    "checking": 0,
-    "inline": 2,
+    "checking": 2,
+    "inline": 0,
     "conflicted": 2,
     "failed": 0,
     "held": 0,
@@ -573,15 +536,32 @@
     "parked": 3
    },
    "m": {
-    "checking": null,
-    "inline": 26,
-    "conflicted": 886,
+    "checking": 4,
+    "inline": null,
+    "conflicted": 891,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 2750
+    "parked": 2755
    },
-   "cur": [],
+   "cur": [
+    [
+     [
+      "T-4482"
+     ],
+     "Mac tests",
+     "Mac mini",
+     4
+    ],
+    [
+     [
+      "T-4009"
+     ],
+     "Mac tests",
+     "Mac mini",
+     4
+    ]
+   ],
    "ld": [
     20,
     "2026-11-15T14:48:11Z"
@@ -589,12 +569,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-15T14:48:23Z",
-    "ld": 32.4,
+    "at": "2026-11-15T14:53:36Z",
+    "ld": 36.86,
     "c": 8,
     "sb": 1,
     "dk": [
-     18.6,
+     18.5,
      228.3
     ],
     "ss": [
@@ -619,15 +599,6 @@
   }
  },
  "operators": [
-  {
-   "w": "Operator",
-   "a": "Main plan",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session",
-   "at": "2026-11-15T09:10:04-05:00"
-  },
   {
    "w": "Operator",
    "a": "Evan",
@@ -657,11 +628,9 @@
   "queue_text",
   "recent",
   "task_done",
-  "fin_short",
   "task_title",
   "done_text",
   "task_open",
-  "fin_six",
   "lane_task",
   "task_next"
  ],
@@ -669,10 +638,10 @@
   "main": 0,
   "lanes": 2,
   "total": 2,
-  "at": "9:48 AM",
+  "at": "9:54 AM",
   "why": "",
-  "at_iso": "2026-11-15T14:48:00+00:00",
-  "started": "6:23 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0, started 6:23 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 9:48 AM ET</p></section>"
+  "at_iso": "2026-11-15T14:54:00+00:00",
+  "started": "",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 9:54 AM ET</p></section>"
  }
 }

@@ -656,6 +656,8 @@ The Effect lines of the amendments.md entries the charter retired (2026-11-04 12
 - **2026-11-14 5:42 PM ET** ((private)): The app's terms say 13 or over; an age check (Apple's Declared Age Range) gates the marketplace; there are no likes, comments or feeds. The company does not build for children under 13.
 - **2026-11-14 6:16 PM ET** ((private)): Every remaining audit step and Restructuring task runs first, in the usual flow on all three accounts; once they are done, app work comes first. No task runs on Fable unless the task itself needs Fable and its line says why; every other line runs on Opus.
 - **2026-11-14 6:27 PM ET** ((private)): No iPad is bought for now: every iPad step of a phone proof runs in the Simulator, and each task's closing note says so, until the Investors say otherwise.
+- **2026-11-15 8:55 AM ET** ((private)): The company may quit apps it opened itself on the Mac mini, through one tool that keeps a record of what it opened, never an app an Investor opened; the allow rule goes in through the applier.
+- **2026-11-15 9:00 AM ET** ((private)): A reply that names the message it answers says whose it is by first name, e.g. "Answering Jeremy's 8:55 AM ET message" or "Answering Evan's ...", never "Answering your ..."; the rest of the line stays the same.
 {% endraw %}
 
 </div>

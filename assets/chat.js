@@ -176,12 +176,43 @@ var more = mk(b, 'button', 'cv-quoted', 'Show the whole message');
 more.type = 'button';
 more.onclick = () => { inner.className = ''; if (parts[1]) md(parts[1], inner); more.hidden = true; };
 }
-copyBtn(m, x.body);
+copyBtn(m, x.body); reactions(m, x);
 if (!inv && String(x.body || '').indexOf('<!-- plan-questions v1 -->') >= 0) {
 if (S.plan) S.plan(m, b, x);
 else { (S.planQ = S.planQ || []).push([m, b, x]); if (!S.planL && D('plan')) { S.planL = 1; (document.head || root).appendChild(Object.assign(el('script'), { src: D('plan') })); } }
 }
 return m;
+}
+var RX = [['\u2764\uFE0F', 'heart', 'Heart'], ['\uD83D\uDC4D', '+1', 'Thumbs up'], ['\uD83D\uDC4E', '-1', 'Thumbs down'], ['\uD83D\uDE02', 'laugh', 'Haha'], ['\u2753', 'confused', 'Question']], rxDone = {};
+function rxRow(row, x) {
+row.textContent = '';
+RX.forEach((r) => { var n = x.rx && x.rx[r[1]]; if (n > 0) mk(row, 'span', 'cv-rx1', r[0] + (n > 1 ? ' ' + n : '')).title = r[2]; });
+row.hidden = !row.firstChild;
+}
+function reactions(m, x) {
+if (typeof x.id !== 'number') return;
+var row = mk(m, 'div', 'cv-rx'), pick = null, rb = el('button', 'cv-copy', 'React');
+rb.type = 'button'; rxRow(row, x);
+function shut() { if (pick) { pick.remove(); pick = null; } }
+function open() {
+if (pick) return shut();
+pick = put(m, el('div', 'cv-rxp')); attr(pick, 'role', 'group'); attr(pick, 'aria-label', 'React to this message');
+RX.forEach((r) => {
+var q = mk(pick, 'button', null, r[0]); q.type = 'button'; attr(q, 'aria-label', r[2]);
+q.onclick = () => {
+shut();
+post('/repos/' + repo + '/issues/comments/' + x.id + '/reactions', { content: r[1] }).then(() => {
+if (rxDone[x.id + r[1]]) return; rxDone[x.id + r[1]] = 1;
+var c = allComments().filter((k) => k.id === x.id)[0]; if (c) x.rx = c.reactions = Object.assign({}, c.reactions, { [r[1]]: ((c.reactions || {})[r[1]] || 0) + 1 });
+rxRow(row, x);
+}, () => {});
+};
+});
+pick.firstChild.focus();
+}
+on(m, 'dblclick', (ev) => { if (!(ev.target.closest && ev.target.closest('a,button'))) open(); });
+rb.onclick = open; m.insertBefore(rb, row.nextSibling);
+on(m, 'keydown', (ev) => { if (ev.key === 'Escape') shut(); });
 }
 function copyText(t) {
 var nav = W.navigator, fb = () => {
@@ -206,7 +237,7 @@ function sysEl(x) { var s = el('div', 'cv-sys'); mk(s, 'span', 'cv-ok', ''); put
 var log = null, head = null, pin = null, anchor = null, shown = {}, lastDay = '', lastAt = '', waitEl = null, pinObs = null;
 function items(n) {
 var i = issue(n), out = i ? [{ id: 'i' + n, l: login(i), body: i.body, at: i.created_at }] : [];
-return out.concat(msgsOf(n).map((c) => { return { id: c.id, l: login(c), body: c.body, at: c.created_at }; }));
+return out.concat(msgsOf(n).map((c) => { return { id: c.id, l: login(c), body: c.body, at: c.created_at, rx: c.reactions }; }));
 }
 function add(x, clamp) {
 shown[x.id] = 1; lastAt = x.at;

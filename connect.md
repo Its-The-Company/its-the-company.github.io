@@ -7,7 +7,7 @@ description: "How an Investor connects a GitHub token to send messages from the 
 
 # Connect your GitHub token
 
-<p class="lead">Investors send messages from the home page with a fine-grained GitHub token of their own. It takes about five minutes. The token stays in your browser and is sent only to api.github.com; the company never sees it.</p>
+<p class="lead">About five minutes. The token stays in your browser and goes only to api.github.com.</p>
 
 ## Create it
 

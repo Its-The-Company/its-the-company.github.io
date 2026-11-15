@@ -54,9 +54,9 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - Older lessons and dated logs: archive.md.
 
 
-- T-4434 11-14 5564fd433b ticked. Lesson: ImageRenderer reads a preference via backgroundPreferenceValue; EmptyView drops it. xc_mutants find==replace = baseline.
+- T-4474/T-4196 11-15 57f84c603e: card-parser fix redone, patch to T-3995. Open: land_xc slice, GROUP_JOB, switch on, 20 timed runs, week vs 6.00 by 11-30. Lesson: --fast >2 h now (bg limit <span title="A test written in advance. If it fires, we drop the idea.">kills</span> it, no summary; read res/*.log in its tmp dir before it ends); mutants: changed ones only.
 
-- T-4440/41 11-14 55054e9edc ticked (land 1803/0, mutants 5/5 in ops/runs/t4440-mutants.txt). Lesson: in a copy, make Vendor/ a real dir of symlinks (ignored; a Vendor symlink is not) and xcodegen there; xc_mutants local is ~3 min a mutant after a ~9 min baseline, so 5 or fewer per foreground call.
+- T-4468 11-15 slice 1: settings Page core+UI (Pages/), PyBridge.onRunQueue, trigger settings_saved. Open: slice 2 Gallery row, widget-tap route, cities.tsv in app, Use Current Location, phone check; Pernille reviews. Lesson: JSONSerialization prints a Double to 17 digits (38.719999999999999): write NSDecimalNumber.
 {% endraw %}
 
 

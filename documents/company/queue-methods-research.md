@@ -82,9 +82,13 @@ that the red share of whatever enters a group matters more than the grouping rul
 What it is: each queued change is tested on top of main plus every change ahead of it, all at once, in parallel. If
 one fails, it is dropped and only the runs behind it restart.
 
-Evidence: GitLab: "Three merge requests (A, B, and C) are added to a merge train in order, which creates three merged
-results pipelines that run in parallel"; if B fails, "The pipeline for C is canceled, and a new pipeline starts for the
-changes from A and C combined with the target branch". Zuul "Project Gating" does the same, inside a window that
+Evidence: GitLab's merge trains work this way. Each change in the line is tested together with main and every change
+queued ahead of it, and those runs go in parallel; when one change fails, it leaves the line, and the runs behind it
+start again without it. GitLab's documentation page describes it:
+https://docs.gitlab.com/ci/pipelines/merge_trains/ (T-4241: the company's one read of that page, on 11-11, was an
+automated fetch that GitLab's website terms, clause 3.2, do not allow. On 11-15 the quotes were replaced by this
+summary in our own words, and the saved copy was handled as ops/decisions/2026-11-15-t4501-gitlab-pages.md records.
+Do not fetch from GitLab's site again; tools/terms_guard.py now refuses it.) Zuul "Project Gating" does the same, inside a window that
 limits how far ahead jobs run. GitHub: "Build concurrency: The maximum number of merge_group webhooks to dispatch
 (between 1 and 100)". Uber's blog: SubmitQueue does this "while landing thousands of commits per day", and verifying
 "all paths in the speculation tree" for conflicting changes gave "a 74% improvement in the wait time to land code".

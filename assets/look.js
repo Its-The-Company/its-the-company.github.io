@@ -513,3 +513,19 @@ if(!isNaN(x)){m.appendChild(document.createTextNode(' · '));mk(m,'span','lk-nw'
 if(r.a){m.appendChild(document.createTextNode(' '));a=mk(m,'span','lk-tag'+(r.sr?' lk-src':''),r.a);if(r.sr)a.title='Runs on: '+r.a}});
 if(!o.length)mk(box,'p','meta lk-opz','None running now.');n.textContent=o.length;sec.hidden=false}
 S.onStatus.push(draw);if(S.status&&S.status())draw(S.status())});
+
+// T-4102 (tools/site/queue_tree.py): the queue tree's search. Finds a line at any depth by ID or name and opens every
+// ancestor on the way; rows it opened close again when the box is emptied. No script: no box, the tree still opens.
+(function(){var t=document.getElementById('qt-tree'),f=document.getElementById('qt-find');if(!t||!f)return;
+var i=f.querySelector('input'),o=document.getElementById('qt-found');if(!i)return;f.hidden=false;
+function own(li){if(li._qs==null){var c=li.querySelector(':scope>details>summary>.qt-c,:scope>.qt-leaf>.qt-c');var b=c&&c.querySelector(':scope>b'),d=c&&c.querySelector('.idb');li._qs=((d?d.textContent+' ':'')+(b?b.textContent:'')).toLowerCase()}return li._qs}
+function kids(li){var d=li.querySelector(':scope>details');return d?d.querySelector(':scope>ul'):null}
+function walk(ul,q,ids){var any=false;[].forEach.call(ul.children,function(li){var d=li.querySelector(':scope>details'),sub=kids(li),
+me=!!q&&own(li).indexOf(q)>=0,kid=sub?walk(sub,q,ids):false;
+if(me&&!kid&&sub)walk(sub,'',null);var show=!q||me||kid;li.hidden=!show;li.classList.toggle('qt-hit',me);
+if(me&&ids)ids[li.getAttribute('data-id')||own(li)]=1;
+if(d){if(q&&kid){if(!d.open){d.open=true;d.setAttribute('data-qo','1')}}else if(d.hasAttribute('data-qo')){d.open=false;d.removeAttribute('data-qo')}}
+any=any||(!!q&&(me||kid))});return any}
+function go(){var q=i.value.trim().toLowerCase(),ids={};walk(t,q,ids);var n=Object.keys(ids).length;
+if(o)o.textContent=q?(n?n+(n===1?' match':' matches'):'No match'):''}
+i.addEventListener('input',go);i.addEventListener('keydown',function(e){if(e.key==='Escape'){i.value='';go()}})})();

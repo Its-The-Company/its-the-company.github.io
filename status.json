@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-15T11:29:12.996987+00:00",
+ "at": "2026-11-15T11:32:17.100590+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -123,7 +123,7 @@
    "task": "[plan] T-4467 plan in line with Saturday answers",
    "model": "opus",
    "started": "2026-11-15T11:26:47.064Z",
-   "seconds": 145,
+   "seconds": 330,
    "finished": null
   },
   {
@@ -131,7 +131,7 @@
    "task": "[tools] T-4480 records via records round redo",
    "model": "opus",
    "started": "2026-11-15T11:26:54.716Z",
-   "seconds": 138,
+   "seconds": 322,
    "finished": null
   },
   {
@@ -139,7 +139,7 @@
    "task": "[tools] T-4487 wire task states into land",
    "model": "opus",
    "started": "2026-11-15T11:27:02.366Z",
-   "seconds": 130,
+   "seconds": 314,
    "finished": null
   }
  ],
@@ -197,7 +197,7 @@
   "week_pct": null,
   "usage_pct": null,
   "work_pct": null,
-  "read_at": "2026-11-15T11:29:00+00:00",
+  "read_at": "2026-11-15T11:32:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -304,7 +304,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-15T06:29:00-05:00",
+  "at": "2026-11-15T06:32:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -539,32 +539,42 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-15T11:29:12Z",
+  "at": "2026-11-15T11:32:17Z",
   "s": {
    "T-4226": [
     "merging",
-    "Host checks on the Mac mini",
-    1794742092996
+    "Host checks on the Mac mini \u00b7 1 group of tests done",
+    1794742097100
+   ],
+   "T-4111": [
+    "mergeq",
+    "1st to merge",
+    1794742337100
+   ],
+   "T-3712": [
+    "mergeq",
+    "1st to merge",
+    1794742337100
    ],
    "T-4280": [
     "mergeq",
-    "1st to merge",
-    1794739872996
+    "3rd to merge",
+    1794739877100
    ],
    "T-4487": [
     "testing",
     "its own tests, in its copy",
-    1794742092996
+    1794742097100
    ],
    "T-4480": [
     "testing",
     "its own tests, in its copy",
-    1794742152996
+    1794742157100
    ],
    "T-4438": [
     "testing",
     "its own tests, in its copy",
-    1794739092996
+    1794739097100
    ],
    "T-4430": [
     "merged",
@@ -587,6 +597,8 @@
   },
   "nm": {
    "T-4226": "Emoji reactions on Chat messages",
+   "T-4111": "Cut clutter text on Home and every page",
+   "T-3712": "Erase unused Simulators by tool",
    "T-4280": "Run each widget in the widget or app by size",
    "T-4487": "Wire task states into the land",
    "T-4480": "Redo stop the other tools committing each record they write",
@@ -597,11 +609,11 @@
   }
  },
  "ln": {
-  "at": "2026-11-15T11:29:12Z",
+  "at": "2026-11-15T11:32:17Z",
   "mq": {
    "n": {
     "checking": 1,
-    "inline": 1,
+    "inline": 3,
     "conflicted": 3,
     "failed": 0,
     "held": 0,
@@ -609,13 +621,13 @@
     "parked": 3
    },
    "m": {
-    "checking": 1,
-    "inline": 38,
-    "conflicted": 671,
+    "checking": 4,
+    "inline": 0,
+    "conflicted": 674,
     "failed": null,
     "held": null,
-    "retry": 45,
-    "parked": 2550
+    "retry": 48,
+    "parked": 2554
    },
    "cur": [
     [
@@ -624,7 +636,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     1
+     4
     ]
    ],
    "ld": [
@@ -634,16 +646,16 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-15T11:28:47Z",
-    "ld": 5.02,
+    "at": "2026-11-15T11:32:23Z",
+    "ld": 7.25,
     "c": 8,
     "sb": 0,
     "dk": [
-     18.3,
+     18.0,
      228.3
     ],
     "ss": [
-     185.9,
+     185.8,
      953.7
     ],
     "sn": []
@@ -700,10 +712,10 @@
   "main": 3,
   "lanes": 2,
   "total": 5,
-  "at": "6:29 AM",
+  "at": "6:32 AM",
   "why": "",
-  "at_iso": "2026-11-15T11:29:00+00:00",
+  "at_iso": "2026-11-15T11:32:00+00:00",
   "started": "6:23 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 3, started 6:23 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 6:29 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 3, started 6:23 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 6:32 AM ET</p></section>"
  }
 }

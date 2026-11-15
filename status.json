@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-15T22:48:15.478656+00:00",
+ "at": "2026-11-15T22:51:19.613098+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -123,7 +123,7 @@
    "task": "[tools] T-3992 land the pipeline batch",
    "model": "opus",
    "started": "2026-11-15T22:17:17.812Z",
-   "seconds": 1857,
+   "seconds": 2041,
    "finished": null,
    "effort": "high"
   }
@@ -158,7 +158,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 374,
+  "runnable_count": 375,
   "blocked_count": 75
  },
  "meter": {
@@ -207,7 +207,7 @@
   "week_pct": 3.57,
   "usage_pct": 22.9,
   "work_pct": 71.4,
-  "read_at": "2026-11-15T22:48:00+00:00",
+  "read_at": "2026-11-15T22:51:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -281,7 +281,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-15T17:48:00-05:00",
+  "at": "2026-11-15T17:51:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -414,6 +414,13 @@
    {
     "w": "Odalys",
     "k": "tools",
+    "t": "Get both personal accounts taking work again",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
     "t": "Answer Investor messages that no session claims",
     "s": "next",
     "o": "c"
@@ -422,13 +429,6 @@
     "w": "Odalys",
     "k": "tools",
     "t": "Alarm when one account's work keeps being...",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "site",
-    "t": "Move the app's diagrams to a new App page",
     "s": "next",
     "o": "c"
    }
@@ -451,7 +451,7 @@
    }
   ],
   "count": {
-   "next": 374,
+   "next": 375,
    "wait": 35,
    "blocked": 40,
    "you": 11
@@ -509,22 +509,22 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-15T22:48:15Z",
+  "at": "2026-11-15T22:51:12Z",
   "s": {
    "T-4227": [
     "merging",
-    "Host checks on the Mac mini \u00b7 3 groups of tests done",
-    1794782175478
+    "Host checks on the Mac mini \u00b7 4 groups of tests done",
+    1794782172704
    ],
    "T-4293": [
     "mergeq",
     "1st to merge",
-    1794782175478
+    1794782172704
    ],
    "T-3992": [
     "testing",
     "its own tests, in its copy",
-    1794781215478
+    1794781212704
    ]
   },
   "nm": {
@@ -534,7 +534,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-15T22:48:15Z",
+  "at": "2026-11-15T22:51:12Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -546,13 +546,13 @@
     "parked": 2
    },
    "m": {
-    "checking": 12,
-    "inline": 12,
-    "conflicted": 1350,
+    "checking": 15,
+    "inline": 15,
+    "conflicted": 1353,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 578
+    "parked": 581
    },
    "cur": [
     [
@@ -561,7 +561,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     12
+     15
     ]
    ],
    "ld": [
@@ -571,12 +571,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-15T22:48:16Z",
-    "ld": 2.43,
+    "at": "2026-11-15T22:50:24Z",
+    "ld": 1.87,
     "c": 8,
     "sb": 0,
     "dk": [
-     10.5,
+     9.5,
      228.3
     ],
     "ss": [
@@ -606,7 +606,7 @@
    "m": "opus",
    "e": "high",
    "t": "Work session \u2013 3 tasks",
-   "at": "2026-11-15T17:14:43-05:00"
+   "at": "2026-11-15T17:50:01-05:00"
   },
   {
    "w": "Operator",
@@ -619,8 +619,8 @@
   }
  ],
  "reply": {
-  "sent": "2026-11-15T22:30:49Z",
-  "seconds": 46.0
+  "sent": "2026-11-15T22:48:56Z",
+  "seconds": 64.0
  },
  "inbox": [],
  "trimmed": [
@@ -638,10 +638,10 @@
   "main": 1,
   "lanes": 1,
   "total": 2,
-  "at": "5:48 PM",
+  "at": "5:51 PM",
   "why": "",
-  "at_iso": "2026-11-15T22:48:00+00:00",
+  "at_iso": "2026-11-15T22:51:00+00:00",
   "started": "5:14 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 1, started 5:14 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 5:48 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 1, started 5:14 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 5:51 PM ET</p></section>"
  }
 }

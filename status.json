@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-15T19:06:46.413823+00:00",
+ "at": "2026-11-15T19:09:52.923349+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -116,7 +116,7 @@
    "task": "[tools] T-4419 overdue experiment verdicts",
    "model": "opus",
    "started": "2026-11-15T19:05:20.468Z",
-   "seconds": 85,
+   "seconds": 272,
    "finished": null,
    "effort": "high"
   },
@@ -125,26 +125,35 @@
    "task": "[review] T-4468 review premade settings slice 1",
    "model": "opus",
    "started": "2026-11-15T19:05:28.420Z",
-   "seconds": 77,
+   "seconds": 264,
    "finished": null,
    "effort": "high"
   },
   {
    "name": "idris",
-   "task": "[build] T-3310 land demotion cap",
+   "task": "[build] T-4468 premade settings slice 2",
    "model": "opus",
-   "started": "2026-11-15T19:05:13.963Z",
-   "seconds": 92,
+   "started": "2026-11-15T19:08:13.610Z",
+   "seconds": 99,
    "finished": null,
    "effort": "high"
   }
  ],
  "who": "Odalys, Pernille, Idris",
- "recent": [],
+ "recent": [
+  {
+   "name": "idris",
+   "task": "[build] T-3310 land demotion cap",
+   "model": "opus",
+   "started": "2026-11-15T19:05:13.963Z",
+   "seconds": null,
+   "finished": "2026-11-15T19:07:45.170000+00:00"
+  }
+ ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 381,
+  "runnable_count": 380,
   "blocked_count": 76
  },
  "meter": {
@@ -193,7 +202,7 @@
   "week_pct": 3.22,
   "usage_pct": 26.1,
   "work_pct": 75.0,
-  "read_at": "2026-11-15T19:06:00+00:00",
+  "read_at": "2026-11-15T19:09:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -230,7 +239,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-15T14:06:00-05:00",
+  "at": "2026-11-15T14:09:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -247,15 +256,6 @@
  },
  "lanes": [
   {
-   "name": "Idris",
-   "state": "running",
-   "task": "[build] T-3310 land demotion cap",
-   "model": "opus",
-   "since": "2026-11-15T19:05:13.963Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
    "name": "Odalys",
    "state": "running",
    "task": "[tools] T-4419 overdue experiment verdicts",
@@ -270,6 +270,15 @@
    "task": "[review] T-4468 review premade settings slice 1",
    "model": "opus",
    "since": "2026-11-15T19:05:28.420Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
+   "name": "Idris",
+   "state": "running",
+   "task": "[build] T-4468 premade settings slice 2",
+   "model": "opus",
+   "since": "2026-11-15T19:08:13.610Z",
    "next": [],
    "effort": "high"
   },
@@ -301,16 +310,6 @@
  "tasks": {
   "run": [
    {
-    "w": "Idris",
-    "k": "build",
-    "t": "Cap the demotion list read in the widget",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-15T19:05:13.963Z",
-    "o": "c",
-    "task": "T-3310"
-   },
-   {
     "w": "Odalys",
     "k": "tools",
     "t": "Measure two overdue experiments on merge checks",
@@ -327,6 +326,16 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-15T19:05:28.420Z",
+    "o": "c",
+    "task": "T-4468"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "Let people set each premade's place, events and lists",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-15T19:08:13.610Z",
     "o": "c",
     "task": "T-4468"
    }
@@ -406,6 +415,11 @@
   ],
   "done": [
    {
+    "w": "Idris",
+    "t": "The widget now reads at most 1 MiB of its list of scripts sent back to the app, so a huge or...",
+    "at": "2026-11-15T14:07:00-05:00"
+   },
+   {
     "w": "Operator",
     "t": "Main's own tests pass again on a clean copy of main (2e1304e4a), so finished work is no longer...",
     "at": "2026-11-15T14:06:00-05:00"
@@ -414,22 +428,22 @@
     "w": "Pernille",
     "t": "The device API notes now tell a script writer the exact place to find a rejected-certificate...",
     "at": "2026-11-15T13:38:00-05:00"
-   },
-   {
-    "w": "Maren",
-    "t": "The bar at the top of Chat that points back to the latest question now says who asked it, \"Evan...",
-    "at": "2026-11-15T13:37:00-05:00"
    }
   ],
   "count": {
-   "next": 381,
+   "next": 380,
    "wait": 35,
    "blocked": 41,
    "you": 12
   },
   "fin": {
-   "n": 0,
-   "rows": []
+   "n": 1,
+   "rows": [
+    [
+     "T-3310",
+     "Cap the demotion list read..."
+    ]
+   ]
   }
  },
  "qr": [
@@ -471,12 +485,12 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-15T19:06:38Z",
+  "at": "2026-11-15T19:09:35Z",
   "s": {
    "T-4227": [
     "merging",
-    "Host checks on the Mac mini \u00b7 3 groups of tests done",
-    1794769118924
+    "Host checks on the Mac mini",
+    1794769115190
    ],
    "T-4468": [
     "merged",
@@ -491,7 +505,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-15T19:06:38Z",
+  "at": "2026-11-15T19:09:35Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -503,13 +517,13 @@
     "parked": 2
    },
    "m": {
-    "checking": 8,
+    "checking": 11,
     "inline": null,
-    "conflicted": 1144,
+    "conflicted": 1147,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 357
+    "parked": 360
    },
    "cur": [
     [
@@ -518,7 +532,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     8
+     11
     ]
    ],
    "ld": [
@@ -528,12 +542,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-15T19:06:39Z",
-    "ld": 0.96,
+    "at": "2026-11-15T19:09:09Z",
+    "ld": 1.58,
     "c": 8,
     "sb": 0,
     "dk": [
-     15.9,
+     16.1,
      228.3
     ],
     "ss": [
@@ -575,6 +589,7 @@
   "lane_next",
   "queue_text",
   "task_done",
+  "fin_short",
   "task_title",
   "done_text",
   "task_open",
@@ -585,10 +600,10 @@
   "main": 3,
   "lanes": 0,
   "total": 3,
-  "at": "2:06 PM",
+  "at": "2:09 PM",
   "why": "",
-  "at_iso": "2026-11-15T19:06:00+00:00",
+  "at_iso": "2026-11-15T19:09:00+00:00",
   "started": "2:00 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 2:00 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 2:06 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 2:00 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 2:09 PM ET</p></section>"
  }
 }

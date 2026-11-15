@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-15T16:06:18.798316+00:00",
+ "at": "2026-11-15T16:09:22.054383+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -105,7 +105,7 @@
    "task": "[build] T-2869 pyc-only completion test",
    "model": "opus",
    "started": "2026-11-15T15:08:06.419Z",
-   "seconds": 3492,
+   "seconds": 3675,
    "finished": null,
    "effort": "high"
   },
@@ -114,7 +114,7 @@
    "task": "[build] T-4505 Distance Small far values",
    "model": "opus",
    "started": "2026-11-15T15:08:12.068Z",
-   "seconds": 3486,
+   "seconds": 3669,
    "finished": null,
    "effort": "high"
   },
@@ -123,7 +123,7 @@
    "task": "[build] T-4521 T-4522 folder rule tidy",
    "model": "opus",
    "started": "2026-11-15T15:46:23.589Z",
-   "seconds": 1195,
+   "seconds": 1378,
    "finished": null,
    "effort": "high"
   }
@@ -199,7 +199,7 @@
   "week_pct": 2.36,
   "usage_pct": 27.2,
   "work_pct": 75.0,
-  "read_at": "2026-11-15T16:06:00+00:00",
+  "read_at": "2026-11-15T16:09:00+00:00",
   "running": [
    {
     "lane": "b3",
@@ -273,7 +273,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-15T11:06:00-05:00",
+  "at": "2026-11-15T11:09:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -522,7 +522,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-15T16:06:11Z",
+  "at": "2026-11-15T16:09:09Z",
   "s": {
    "T-4522": [
     "mergetest",
@@ -532,12 +532,12 @@
    "T-2869": [
     "merging",
     "Mac tests at the main gate \u00b7 8 groups of tests done",
-    1794757931145
+    1794757929969
    ],
    "T-4505": [
     "merging",
     "Mac tests at the main gate \u00b7 3 groups of tests done",
-    1794758351145
+    1794758349969
    ]
   },
   "nm": {
@@ -547,7 +547,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-15T16:06:11Z",
+  "at": "2026-11-15T16:09:09Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -555,17 +555,17 @@
     "conflicted": 2,
     "failed": 0,
     "held": 0,
-    "retry": 0,
-    "parked": 5
+    "retry": 2,
+    "parked": 3
    },
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 964,
+    "conflicted": 967,
     "failed": null,
     "held": null,
-    "retry": null,
-    "parked": 526
+    "retry": 3,
+    "parked": 2830
    },
    "cur": [],
    "ld": [
@@ -575,12 +575,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-15T16:05:23Z",
-    "ld": 4.86,
+    "at": "2026-11-15T16:08:45Z",
+    "ld": 3.92,
     "c": 8,
     "sb": 0,
     "dk": [
-     15.8,
+     14.5,
      228.3
     ],
     "ss": [
@@ -642,10 +642,10 @@
   "main": 3,
   "lanes": 1,
   "total": 4,
-  "at": "11:06 AM",
+  "at": "11:09 AM",
   "why": "",
-  "at_iso": "2026-11-15T16:06:00+00:00",
+  "at_iso": "2026-11-15T16:09:00+00:00",
   "started": "10:05 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 3, started 10:05 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 11:06 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 3, started 10:05 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 11:09 AM ET</p></section>"
  }
 }

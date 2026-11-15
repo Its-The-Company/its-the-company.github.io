@@ -1,11 +1,22 @@
 {
  "schema": 1,
- "at": "2026-11-15T19:31:26.256322+00:00",
+ "at": "2026-11-15T19:34:32.189251+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-15T14:00:40-05:00",
   "flow": [
+   {
+    "t": "T-4227",
+    "name": "Run every Operator on Opus high",
+    "acct": "Personal b",
+    "steps": [
+     {
+      "s": "testq",
+      "at": 1794771201
+     }
+    ]
+   },
    {
     "t": "T-2266",
     "name": "Run the stuck-signal tests on the MacBook",
@@ -106,7 +117,7 @@
    "task": "[build] T-4468 premade settings H1 Python half",
    "model": "opus",
    "started": "2026-11-15T19:14:40.149Z",
-   "seconds": 1006,
+   "seconds": 1192,
    "finished": null,
    "effort": "high"
   },
@@ -115,7 +126,7 @@
    "task": "[build] T-4468 premade settings fixes M1-M4",
    "model": "opus",
    "started": "2026-11-15T19:16:25.519Z",
-   "seconds": 900,
+   "seconds": 1086,
    "finished": null,
    "effort": "high"
   },
@@ -124,7 +135,7 @@
    "task": "[tools] T-4473 land the queue check rules",
    "model": "opus",
    "started": "2026-11-15T19:27:35.286Z",
-   "seconds": 230,
+   "seconds": 416,
    "finished": null,
    "effort": "high"
   }
@@ -216,7 +227,7 @@
   "week_pct": 3.22,
   "usage_pct": 26.1,
   "work_pct": 75.0,
-  "read_at": "2026-11-15T19:31:00+00:00",
+  "read_at": "2026-11-15T19:34:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -253,7 +264,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-15T14:31:00-05:00",
+  "at": "2026-11-15T14:34:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -507,46 +518,61 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-15T19:31:26Z",
+  "at": "2026-11-15T19:34:17Z",
   "s": {
+   "T-4227": [
+    "merging",
+    "Host checks on the Mac mini \u00b7 2 groups of tests done",
+    1794771257325
+   ],
    "T-4468": [
     "merging",
     "Mac tests at the main gate",
-    1794771086256
+    1794771137325
    ],
    "T-4473": [
     "testing",
     "its own tests, in its copy",
-    1794770966256
+    1794771017325
    ]
   },
   "nm": {
+   "T-4227": "Run every Operator on Opus high",
    "T-4468": "Let people set each premade's place, events and lists",
    "T-4473": "Redo replay the queue check against the audit's verdicts"
   }
  },
  "ln": {
-  "at": "2026-11-15T19:31:26Z",
+  "at": "2026-11-15T19:34:17Z",
   "mq": {
    "n": {
-    "checking": 0,
+    "checking": 1,
     "inline": 0,
     "conflicted": 2,
-    "failed": 1,
+    "failed": 0,
     "held": 0,
     "retry": 0,
     "parked": 2
    },
    "m": {
-    "checking": null,
+    "checking": 0,
     "inline": null,
-    "conflicted": 1169,
-    "failed": 15,
+    "conflicted": 1172,
+    "failed": null,
     "held": null,
     "retry": null,
-    "parked": 382
+    "parked": 384
    },
-   "cur": [],
+   "cur": [
+    [
+     [
+      "T-4227"
+     ],
+     "Mac tests",
+     "Mac mini",
+     0
+    ]
+   ],
    "ld": [
     25,
     "2026-11-15T18:12:48Z"
@@ -554,12 +580,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-15T19:31:29Z",
-    "ld": 15.92,
+    "at": "2026-11-15T19:33:55Z",
+    "ld": 24.58,
     "c": 8,
     "sb": 1,
     "dk": [
-     14.5,
+     13.5,
      228.3
     ],
     "ss": [
@@ -615,10 +641,10 @@
   "main": 3,
   "lanes": 0,
   "total": 3,
-  "at": "2:31 PM",
+  "at": "2:34 PM",
   "why": "",
-  "at_iso": "2026-11-15T19:31:00+00:00",
+  "at_iso": "2026-11-15T19:34:00+00:00",
   "started": "2:00 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 2:00 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 2:31 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 2:00 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 2:34 PM ET</p></section>"
  }
 }

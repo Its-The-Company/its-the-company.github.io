@@ -1,11 +1,23 @@
 {
  "schema": 1,
- "at": "2026-11-15T10:10:21.387280+00:00",
+ "at": "2026-11-15T10:13:25.868363+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-15T02:07:02-05:00",
-  "flow": [],
+  "flow": [
+   {
+    "t": "T-4123",
+    "name": "Rerun the audit pattern study on the full ledger",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "landing",
+      "at": 1794737603
+     }
+    ]
+   }
+  ],
   "done": [
    {
     "t": "T-3806",
@@ -102,7 +114,7 @@
    "task": "[tools] T-4485 fix real-tick land rows red",
    "model": "opus",
    "started": "2026-11-15T09:24:59.819Z",
-   "seconds": 2721,
+   "seconds": 2906,
    "finished": null,
    "effort": "high"
   },
@@ -111,7 +123,7 @@
    "task": "[tools] T-4486 refuse Fable without Fable task",
    "model": "opus",
    "started": "2026-11-15T09:39:16.911Z",
-   "seconds": 1864,
+   "seconds": 2048,
    "finished": null,
    "effort": "high"
   },
@@ -120,7 +132,7 @@
    "task": "[tools] T-4488 T-4438 fix main red suites",
    "model": "opus",
    "started": "2026-11-15T09:53:40.312Z",
-   "seconds": 1001,
+   "seconds": 1185,
    "finished": null,
    "effort": "high"
   }
@@ -163,7 +175,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 378,
+  "runnable_count": 377,
   "blocked_count": 78
  },
  "meter": {
@@ -212,7 +224,7 @@
   "week_pct": null,
   "usage_pct": null,
   "work_pct": null,
-  "read_at": "2026-11-15T10:10:00+00:00",
+  "read_at": "2026-11-15T10:13:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -241,11 +253,7 @@
    {
     "lane": "a",
     "task": "T-4123",
-    "w": "Pernille",
-    "k": "research",
     "t": "Rerun the audit pattern study on the full ledger",
-    "m": "opus",
-    "e": "high",
     "at": "2026-11-15T04:53:04-05:00",
     "n": "Evan",
     "d": 1,
@@ -352,14 +360,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-15T05:03:00-05:00",
+   "at": "2026-11-15T05:10:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-15T05:10:00-05:00",
+  "at": "2026-11-15T05:13:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -549,7 +557,7 @@
    }
   ],
   "count": {
-   "next": 378,
+   "next": 377,
    "wait": 37,
    "blocked": 41,
    "you": 12
@@ -623,17 +631,22 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-15T10:09:57Z",
+  "at": "2026-11-15T10:13:25Z",
   "s": {
+   "T-4123": [
+    "merging",
+    "Merging onto main",
+    1794737605868
+   ],
    "T-4485": [
     "merging",
     "Mac tests at the main gate",
-    1794737157666
+    1794737125868
    ],
    "T-4438": [
     "merging",
     "Mac tests at the main gate",
-    1794737277666
+    1794737245868
    ],
    "T-4089": [
     "testing",
@@ -653,10 +666,11 @@
    "T-4486": [
     "testing",
     "its own tests, in its copy",
-    1794737037666
+    1794737005868
    ]
   },
   "nm": {
+   "T-4123": "Rerun the audit pattern study on the full ledger",
    "T-4485": "Real-tick land rows red on main",
    "T-4438": "Fix two test suites that fail on main",
    "T-4089": "Fix the location bridge test that failed on the MacBook",
@@ -666,10 +680,10 @@
   }
  },
  "ln": {
-  "at": "2026-11-15T10:09:57Z",
+  "at": "2026-11-15T10:13:25Z",
   "mq": {
    "n": {
-    "checking": 0,
+    "checking": 1,
     "inline": 0,
     "conflicted": 3,
     "failed": 0,
@@ -678,15 +692,24 @@
     "parked": 4
    },
    "m": {
-    "checking": null,
+    "checking": 0,
     "inline": null,
-    "conflicted": 591,
+    "conflicted": 595,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1320
+    "parked": 1324
    },
-   "cur": [],
+   "cur": [
+    [
+     [
+      "T-4123"
+     ],
+     "going onto main",
+     "Mac mini",
+     0
+    ]
+   ],
    "ld": [
     3,
     "2026-11-15T08:47:33Z"
@@ -694,12 +717,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-15T10:09:59Z",
-    "ld": 70.58,
+    "at": "2026-11-15T10:12:41Z",
+    "ld": 69.96,
     "c": 8,
     "sb": 1,
     "dk": [
-     21.9,
+     20.0,
      228.3
     ],
     "ss": [
@@ -739,7 +762,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 3 tasks",
+   "t": "Work session \u2013 2 tasks",
    "at": "2026-11-15T04:53:03-05:00"
   },
   {
@@ -783,10 +806,10 @@
   "main": 3,
   "lanes": 3,
   "total": 6,
-  "at": "5:10 AM",
+  "at": "5:13 AM",
   "why": "",
-  "at_iso": "2026-11-15T10:10:00+00:00",
+  "at_iso": "2026-11-15T10:13:00+00:00",
   "started": "2:07 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 3, started 2:07 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 5:10 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 3, started 2:07 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 5:13 AM ET</p></section>"
  }
 }

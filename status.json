@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-15T17:13:44.604730+00:00",
+ "at": "2026-11-15T17:16:47.238001+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -106,7 +106,7 @@
    "task": "[build] T-4524 https host fixes",
    "model": "opus",
    "started": "2026-11-15T16:46:36.927Z",
-   "seconds": 1627,
+   "seconds": 1810,
    "finished": null,
    "effort": "high"
   },
@@ -115,7 +115,7 @@
    "task": "[design] T-4523 Distance design tree",
    "model": "opus",
    "started": "2026-11-15T16:52:57.433Z",
-   "seconds": 1247,
+   "seconds": 1429,
    "finished": null,
    "effort": "high"
   },
@@ -124,7 +124,7 @@
    "task": "[build] T-3282 land from copy",
    "model": "opus",
    "started": "2026-11-15T17:12:40.772Z",
-   "seconds": 63,
+   "seconds": 246,
    "finished": null,
    "effort": "high"
   }
@@ -167,7 +167,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 387,
+  "runnable_count": 386,
   "blocked_count": 76
  },
  "meter": {
@@ -216,7 +216,7 @@
   "week_pct": 2.36,
   "usage_pct": 27.2,
   "work_pct": 75.0,
-  "read_at": "2026-11-15T17:13:00+00:00",
+  "read_at": "2026-11-15T17:16:00+00:00",
   "running": [
    {
     "lane": "b3",
@@ -290,7 +290,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-15T12:13:00-05:00",
+  "at": "2026-11-15T12:16:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -466,6 +466,11 @@
   ],
   "done": [
    {
+    "w": "Pernille",
+    "t": "Python's https over Apple's networking now always sends a request to the server the script...",
+    "at": "2026-11-15T12:16:00-05:00"
+   },
+   {
     "w": "Idris",
     "t": "The editor's code completion is now tested the way the app really ships Python, with its...",
     "at": "2026-11-15T11:52:00-05:00"
@@ -474,22 +479,21 @@
     "w": "Idris",
     "t": "The fixes to the not-yet-switched-on secure web connection layer are checked and hold: proxies...",
     "at": "2026-11-15T11:44:00-05:00"
-   },
-   {
-    "w": "Pernille",
-    "t": "The Distance widget's small size cut off far distances like 5,421.7 km to a place abroad. From...",
-    "at": "2026-11-15T11:31:00-05:00"
    }
   ],
   "count": {
-   "next": 387,
+   "next": 386,
    "wait": 35,
    "blocked": 41,
    "you": 12
   },
   "fin": {
-   "n": 8,
+   "n": 9,
    "rows": [
+    [
+     "T-4524",
+     "Keep every https request on..."
+    ],
     [
      "T-2869",
      "Test completion with the..."
@@ -509,10 +513,6 @@
     [
      "T-4521",
      "Correct the deleted widget..."
-    ],
-    [
-     "T-4522",
-     "Write the premade folder..."
     ]
    ]
   }
@@ -556,32 +556,33 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-15T17:13:26Z",
+  "at": "2026-11-15T17:16:39Z",
   "s": {
-   "T-4524": [
-    "mergetest",
-    "iPhone tests on the MacBook",
-    null
-   ],
    "T-4523": [
     "merging",
     "Mac tests at the main gate",
-    1794762806010
+    1794762819874
    ],
    "T-3282": [
     "merging",
     "Mac tests at the main gate",
-    1794762806010
+    1794762819874
+   ],
+   "T-4524": [
+    "merged",
+    "on main 12:15 PM ET",
+    1794762953000,
+    "Pernille"
    ]
   },
   "nm": {
-   "T-4524": "Keep every https request on its own host",
    "T-4523": "Distance design tree at 0.4 floor",
-   "T-3282": "Cap how much of the run marker the widget reads"
+   "T-3282": "Cap how much of the run marker the widget reads",
+   "T-4524": "Keep every https request on its own host"
   }
  },
  "ln": {
-  "at": "2026-11-15T17:13:26Z",
+  "at": "2026-11-15T17:16:39Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -595,11 +596,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 1031,
+    "conflicted": 1034,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 2895
+    "parked": 2898
    },
    "cur": [],
    "ld": [
@@ -609,12 +610,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-15T17:13:15Z",
-    "ld": 4.31,
+    "at": "2026-11-15T17:16:19Z",
+    "ld": 4.52,
     "c": 8,
     "sb": 0,
     "dk": [
-     14.6,
+     14.5,
      228.3
     ],
     "ss": [
@@ -624,12 +625,12 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-15T17:08:25Z",
-    "ld": 0.21,
+    "at": "2026-11-15T17:15:48Z",
+    "ld": 1.13,
     "c": 12,
     "sb": 0,
     "dk": [
-     361.8,
+     361.4,
      926.4
     ],
     "sn": []
@@ -678,10 +679,10 @@
   "main": 3,
   "lanes": 1,
   "total": 4,
-  "at": "12:13 PM",
+  "at": "12:16 PM",
   "why": "",
-  "at_iso": "2026-11-15T17:13:00+00:00",
+  "at_iso": "2026-11-15T17:16:00+00:00",
   "started": "10:05 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 3, started 10:05 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 12:13 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 3, started 10:05 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 12:16 PM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-15T21:49:30.711617+00:00",
+ "at": "2026-11-15T21:52:34.376686+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -154,7 +154,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 374,
+  "runnable_count": 375,
   "blocked_count": 75
  },
  "meter": {
@@ -203,7 +203,7 @@
   "week_pct": 3.22,
   "usage_pct": 26.1,
   "work_pct": 75.0,
-  "read_at": "2026-11-15T21:49:00+00:00",
+  "read_at": "2026-11-15T21:52:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -277,7 +277,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-15T16:49:00-05:00",
+  "at": "2026-11-15T16:52:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -435,7 +435,7 @@
    }
   ],
   "count": {
-   "next": 374,
+   "next": 375,
    "wait": 35,
    "blocked": 40,
    "you": 11
@@ -509,30 +509,36 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-15T21:49:15Z",
+  "at": "2026-11-15T21:52:25Z",
   "s": {
    "T-4471": [
     "merging",
-    "Host checks on the Mac mini \u00b7 1 group of tests done",
-    1794779355318
+    "Host checks on the Mac mini \u00b7 2 groups of tests done",
+    1794779305484
+   ],
+   "T-4411": [
+    "mergeq",
+    "1st to merge",
+    1794779545484
    ],
    "T-4508": [
     "mergeq",
     "1st to merge",
-    1794779295318
+    1794779545484
    ]
   },
   "nm": {
    "T-4471": "Stop the star notice committing its own record",
+   "T-4411": "Start accounts on the audit when usage returns",
    "T-4508": "Alarm when one account's work keeps being refused"
   }
  },
  "ln": {
-  "at": "2026-11-15T21:49:15Z",
+  "at": "2026-11-15T21:52:25Z",
   "mq": {
    "n": {
     "checking": 1,
-    "inline": 1,
+    "inline": 2,
     "conflicted": 1,
     "failed": 1,
     "held": 0,
@@ -540,13 +546,13 @@
     "parked": 2
    },
    "m": {
-    "checking": 0,
-    "inline": 1,
-    "conflicted": 1291,
-    "failed": 1,
+    "checking": 4,
+    "inline": 0,
+    "conflicted": 1294,
+    "failed": 4,
     "held": null,
     "retry": null,
-    "parked": 519
+    "parked": 523
    },
    "cur": [
     [
@@ -555,7 +561,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     0
+     4
     ]
    ],
    "ld": [
@@ -565,8 +571,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-15T21:48:51Z",
-    "ld": 44.55,
+    "at": "2026-11-15T21:52:27Z",
+    "ld": 24.5,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -609,7 +615,7 @@
    "m": "opus",
    "e": "high",
    "t": "Work session \u2013 3 tasks",
-   "at": "2026-11-15T16:49:12-05:00"
+   "at": "2026-11-15T16:20:10-05:00"
   }
  ],
  "reply": {
@@ -634,10 +640,10 @@
   "main": 0,
   "lanes": 1,
   "total": 1,
-  "at": "4:49 PM",
+  "at": "4:52 PM",
   "why": "",
-  "at_iso": "2026-11-15T21:49:00+00:00",
+  "at_iso": "2026-11-15T21:52:00+00:00",
   "started": "2:00 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0, started 2:00 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 4:49 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0, started 2:00 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 4:52 PM ET</p></section>"
  }
 }

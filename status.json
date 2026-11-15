@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-15T16:15:35.332042+00:00",
+ "at": "2026-11-15T16:18:37.864639+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -105,7 +105,7 @@
    "task": "[build] T-2869 pyc-only completion test",
    "model": "opus",
    "started": "2026-11-15T15:08:06.419Z",
-   "seconds": 4048,
+   "seconds": 4231,
    "finished": null,
    "effort": "high"
   },
@@ -114,7 +114,7 @@
    "task": "[build] T-4505 Distance Small far values",
    "model": "opus",
    "started": "2026-11-15T15:08:12.068Z",
-   "seconds": 4043,
+   "seconds": 4225,
    "finished": null,
    "effort": "high"
   },
@@ -123,7 +123,7 @@
    "task": "[build] T-3282 cap run marker read",
    "model": "opus",
    "started": "2026-11-15T16:13:09.853Z",
-   "seconds": 145,
+   "seconds": 328,
    "finished": null,
    "effort": "high"
   }
@@ -163,19 +163,19 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 25.0,
+   "pct": 26.0,
    "resets_at": "2026-11-15T12:00:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-15T11:02:59.842079-05:00",
+   "read_at": "2026-11-15T11:16:12.168101-05:00",
    "source": "live",
-   "left": 75.0,
+   "left": 74.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 7.0,
    "resets_at": "2026-11-22T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-15T11:02:59.842079-05:00",
+   "read_at": "2026-11-15T11:16:12.168101-05:00",
    "source": "live",
    "left": 93.0,
    "left_words": "of your weekly allowance left"
@@ -187,7 +187,7 @@
    "read_at": "2026-11-15T10:04:49.324363-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-15T11:02:59.842079-05:00"
+  "read_at": "2026-11-15T11:16:12.168101-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -207,7 +207,7 @@
   "week_pct": 2.36,
   "usage_pct": 27.2,
   "work_pct": 75.0,
-  "read_at": "2026-11-15T16:15:00+00:00",
+  "read_at": "2026-11-15T16:18:00+00:00",
   "running": [
    {
     "lane": "b3",
@@ -265,23 +265,23 @@
   }
  ],
  "disk": {
-  "free_gb": 15,
+  "free_gb": 16,
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 183
+   "free_gb": 181
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-15T11:09:00-05:00",
+   "at": "2026-11-15T11:16:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-15T11:15:00-05:00",
+  "at": "2026-11-15T11:18:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -538,7 +538,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-15T16:15:21Z",
+  "at": "2026-11-15T16:18:37Z",
   "s": {
    "T-4505": [
     "mergetest",
@@ -547,17 +547,23 @@
    ],
    "T-2869": [
     "merging",
+    "Mac tests at the main gate \u00b7 4 groups of tests done",
+    1794759157864
+   ],
+   "T-3282": [
+    "merging",
     "Mac tests at the main gate",
-    1794759201943
+    1794759517864
    ]
   },
   "nm": {
    "T-4505": "Fit far distances in Distance Small",
-   "T-2869": "Test completion with the stdlib as compiled-only files"
+   "T-2869": "Test completion with the stdlib as compiled-only files",
+   "T-3282": "Cap how much of the run marker the widget reads"
   }
  },
  "ln": {
-  "at": "2026-11-15T16:15:21Z",
+  "at": "2026-11-15T16:18:37Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -571,11 +577,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 973,
+    "conflicted": 976,
     "failed": null,
     "held": null,
-    "retry": 9,
-    "parked": 2837
+    "retry": 12,
+    "parked": 2840
    },
    "cur": [],
    "ld": [
@@ -585,8 +591,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-15T16:14:57Z",
-    "ld": 4.11,
+    "at": "2026-11-15T16:18:39Z",
+    "ld": 3.59,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -652,10 +658,10 @@
   "main": 3,
   "lanes": 1,
   "total": 4,
-  "at": "11:15 AM",
+  "at": "11:18 AM",
   "why": "",
-  "at_iso": "2026-11-15T16:15:00+00:00",
+  "at_iso": "2026-11-15T16:18:00+00:00",
   "started": "10:05 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 3, started 10:05 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 11:15 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 3, started 10:05 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 11:18 AM ET</p></section>"
  }
 }

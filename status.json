@@ -1,40 +1,32 @@
 {
  "schema": 1,
- "at": "2026-11-15T14:53:32.120910+00:00",
+ "at": "2026-11-15T15:05:10.891558+00:00",
  "session": {
   "active": false,
   "kind": "",
   "started": null,
   "flow": [
    {
-    "t": "T-4009",
-    "name": "Raise the 5-hour stop from 90% toward 100%",
-    "acct": "Personal b",
+    "t": "T-2266",
+    "name": "Run the stuck-signal tests on the MacBook",
+    "w": "Odalys",
     "steps": [
      {
       "s": "testq",
-      "at": 1794751672
-     },
-     {
-      "s": "landing",
-      "at": 1794752269
-     },
-     {
-      "s": "testq",
-      "at": 1794752517
-     },
-     {
-      "s": "landing",
-      "at": 1794753167
-     },
-     {
-      "s": "testq",
-      "at": 1794754116
+      "at": 1794755053
      }
     ]
    }
   ],
   "done": [
+   {
+    "t": "T-4009",
+    "name": "Raise the 5-hour stop from 90% toward 100%",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794754631
+   },
    {
     "t": "T-4129",
     "acct": "Personal a",
@@ -102,17 +94,9 @@
     "steps": [],
     "end": "landed",
     "end_at": 1794742536
-   },
-   {
-    "t": "T-4280",
-    "name": "Run each widget in the widget or app by size",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794742469
    }
   ],
-  "landed": 20,
+  "landed": 21,
   "failed": 4
  },
  "workers": [],
@@ -154,36 +138,36 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 383,
+  "runnable_count": 385,
   "blocked_count": 76
  },
  "meter": {
   "five_hour": {
-   "pct": 19.0,
-   "resets_at": "2026-11-15T12:00:00-05:00",
+   "pct": 20.0,
+   "resets_at": "2026-11-15T17:00:00.097132+00:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-15T09:27:58.424673-05:00",
-   "source": "live",
-   "left": 81.0,
+   "read_at": "2026-11-15T10:04:49.324363-05:00",
+   "source": "usage",
+   "left": 80.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 6.0,
-   "resets_at": "2026-11-22T02:00:00-05:00",
+   "pct": 7.0,
+   "resets_at": "2026-11-22T07:00:00.097153+00:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-15T09:27:58.424673-05:00",
-   "source": "live",
-   "left": 94.0,
+   "read_at": "2026-11-15T10:04:49.324363-05:00",
+   "source": "usage",
+   "left": 93.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 0.0,
    "resets_at": "2026-11-22T07:00:00+00:00",
    "used_words": "of the Fable weekly allowance used",
-   "read_at": "2026-11-15T06:22:39.617562-05:00",
+   "read_at": "2026-11-15T10:04:49.324363-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-15T09:27:58.424673-05:00"
+  "read_at": "2026-11-15T10:04:49.324363-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -198,48 +182,13 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-15T06:37:40-05:00",
+ "next_tick": "2026-11-15T10:19:50-05:00",
  "personal": {
-  "week_pct": null,
-  "usage_pct": null,
-  "work_pct": null,
-  "read_at": "2026-11-15T14:54:00+00:00",
+  "week_pct": 2.36,
+  "usage_pct": 27.2,
+  "work_pct": 75.0,
+  "read_at": "2026-11-15T15:05:00+00:00",
   "running": [
-   {
-    "lane": "a",
-    "task": "T-4129",
-    "t": "Retire the Set aside stage on Home",
-    "at": "2026-11-15T09:10:17-05:00",
-    "n": "Evan",
-    "d": 1,
-    "src": "plan-a"
-   },
-   {
-    "lane": "a",
-    "task": "T-4472",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Measure the queue check rules the replay could not",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-15T09:10:17-05:00",
-    "n": "Evan",
-    "d": 1,
-    "src": "plan-a"
-   },
-   {
-    "lane": "a",
-    "task": "T-4247",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Stopped pinned task goes back on the menu by itself",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-15T09:10:17-05:00",
-    "n": "Evan",
-    "d": 1,
-    "src": "plan-a"
-   },
    {
     "lane": "a2",
     "task": "T-4468",
@@ -250,6 +199,7 @@
     "e": "high",
     "at": "2026-11-15T09:36:04-05:00",
     "n": "Evan",
+    "d": 1,
     "src": "plan-a"
    }
   ]
@@ -272,7 +222,7 @@
   }
  ],
  "disk": {
-  "free_gb": 20,
+  "free_gb": 17,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -281,14 +231,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-15T09:41:00-05:00",
+   "at": "2026-11-15T09:56:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-15T09:54:00-05:00",
+  "at": "2026-11-15T10:05:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -426,22 +376,22 @@
   "done": [
    {
     "w": "Odalys",
-    "t": "When a finished task fails to merge, its work now goes straight into its lane's queue to be...",
-    "at": "2026-11-15T09:48:00-05:00"
-   },
-   {
-    "w": "Odalys+operator",
-    "t": "Every session and lane is now told to start a reply by naming whose message it answers, as in...",
-    "at": "2026-11-15T09:30:00-05:00"
+    "t": "Work on the main account now stops at 95% of the five-hour usage window instead of 90%, keeping...",
+    "at": "2026-11-15T10:04:00-05:00"
    },
    {
     "w": "Odalys",
-    "t": "The company now has a tool that keeps a list of the apps it opened itself and will quit only...",
-    "at": "2026-11-15T09:27:00-05:00"
+    "t": "The company now has its own tool that lists every Simulator, says which ones nothing uses, and...",
+    "at": "2026-11-15T10:04:00-05:00"
+   },
+   {
+    "w": "Odalys",
+    "t": "When a finished task fails to merge, its work now goes straight into its lane's queue to be...",
+    "at": "2026-11-15T09:48:00-05:00"
    }
   ],
   "count": {
-   "next": 383,
+   "next": 385,
    "wait": 35,
    "blocked": 41,
    "you": 12
@@ -486,112 +436,69 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-15T14:53:32Z",
+  "at": "2026-11-15T15:05:10Z",
   "s": {
-   "T-4482": [
-    "merging",
-    "Host checks on the Mac mini \u00b7 6 groups of tests done",
-    1794754172120
-   ],
-   "T-4009": [
-    "merging",
-    "Host checks on the Mac mini \u00b7 6 groups of tests done",
-    1794754172120
-   ],
-   "T-4129": [
-    "merging",
-    "Mac tests at the main gate",
-    1794751832120
-   ],
    "T-4468": [
-    "testing",
-    "Mac Mini \u00b7 test",
-    null
-   ],
-   "T-4472": [
     "merged",
-    "on main 9:34 AM ET",
-    1794753283000,
+    "on main 9:03 AM ET",
+    1794751395000,
     ""
    ]
   },
   "nm": {
-   "T-4482": "Redo commit queued board records with the records round",
-   "T-4009": "Raise the 5-hour stop from 90% toward 100%",
-   "T-4129": "Retire the Set aside stage on Home",
-   "T-4468": "Let people set each premade's place, events and lists",
-   "T-4472": "Measure the queue check rules the replay could not"
+   "T-4468": "Let people set each premade's place, events and lists"
   }
  },
  "ln": {
-  "at": "2026-11-15T14:53:32Z",
+  "at": "2026-11-15T15:05:10Z",
   "mq": {
    "n": {
-    "checking": 2,
+    "checking": 0,
     "inline": 0,
     "conflicted": 2,
     "failed": 0,
     "held": 0,
     "retry": 0,
-    "parked": 3
+    "parked": 5
    },
    "m": {
-    "checking": 4,
+    "checking": null,
     "inline": null,
-    "conflicted": 891,
+    "conflicted": 903,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 2755
+    "parked": 465
    },
-   "cur": [
-    [
-     [
-      "T-4482"
-     ],
-     "Mac tests",
-     "Mac mini",
-     4
-    ],
-    [
-     [
-      "T-4009"
-     ],
-     "Mac tests",
-     "Mac mini",
-     4
-    ]
-   ],
+   "cur": [],
    "ld": [
-    20,
-    "2026-11-15T14:48:11Z"
+    21,
+    "2026-11-15T14:57:11Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-15T14:53:36Z",
-    "ld": 36.86,
+    "at": "2026-11-15T15:05:11Z",
+    "ld": 14.0,
     "c": 8,
-    "sb": 1,
+    "sb": 0,
     "dk": [
-     18.5,
+     13.1,
      228.3
     ],
     "ss": [
      185.2,
      953.7
     ],
-    "sn": [
-     "iPhone 18 Pro"
-    ]
+    "sn": []
    },
    "macbook": {
-    "at": "2026-11-15T14:26:41Z",
-    "ld": 1.36,
+    "at": "2026-11-15T14:57:17Z",
+    "ld": 0.21,
     "c": 12,
     "sb": 0,
     "dk": [
-     363.3,
+     363.2,
      926.4
     ],
     "sn": []
@@ -599,15 +506,6 @@
   }
  },
  "operators": [
-  {
-   "w": "Operator",
-   "a": "Evan",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session \u2013 1 task",
-   "at": "2026-11-15T09:10:17-05:00"
-  },
   {
    "w": "Operator",
    "a": "Evan",
@@ -636,12 +534,12 @@
  ],
  "agents_now": {
   "main": 0,
-  "lanes": 2,
-  "total": 2,
-  "at": "9:54 AM",
+  "lanes": 1,
+  "total": 1,
+  "at": "10:05 AM",
   "why": "",
-  "at_iso": "2026-11-15T14:54:00+00:00",
+  "at_iso": "2026-11-15T15:05:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 9:54 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 10:05 AM ET</p></section>"
  }
 }

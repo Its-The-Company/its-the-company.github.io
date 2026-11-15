@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-15T10:27:16.332829+00:00",
+ "at": "2026-11-15T10:30:24.489207+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -113,7 +113,7 @@
    "task": "[tools] T-4486 refuse Fable without Fable task",
    "model": "opus",
    "started": "2026-11-15T09:39:16.911Z",
-   "seconds": 2879,
+   "seconds": 3067,
    "finished": null,
    "effort": "high"
   },
@@ -122,7 +122,7 @@
    "task": "[tools] T-4488 T-4438 fix main red suites",
    "model": "opus",
    "started": "2026-11-15T09:53:40.312Z",
-   "seconds": 2016,
+   "seconds": 2204,
    "finished": null,
    "effort": "high"
   },
@@ -131,7 +131,7 @@
    "task": "[tools] T-4129 land Set aside part 2b",
    "model": "opus",
    "started": "2026-11-15T10:24:41.627Z",
-   "seconds": 154,
+   "seconds": 342,
    "finished": null,
    "effort": "high"
   }
@@ -223,7 +223,7 @@
   "week_pct": null,
   "usage_pct": null,
   "work_pct": null,
-  "read_at": "2026-11-15T10:27:00+00:00",
+  "read_at": "2026-11-15T10:30:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -369,7 +369,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-15T05:27:00-05:00",
+  "at": "2026-11-15T05:30:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -633,17 +633,22 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-15T10:27:16Z",
+  "at": "2026-11-15T10:30:09Z",
   "s": {
    "T-3712": [
     "merging",
     "Host checks on the Mac mini",
-    1794738376332
+    1794738369600
+   ],
+   "T-4430": [
+    "mergeq",
+    "1st to merge",
+    1794738549600
    ],
    "T-4438": [
     "merging",
     "Mac tests at the main gate",
-    1794737296332
+    1794737289600
    ],
    "T-4089": [
     "testing",
@@ -655,20 +660,15 @@
     "Mac Mini \u00b7 test",
     null
    ],
-   "T-4430": [
-    "testing",
-    "Mac Mini \u00b7 test",
-    null
-   ],
    "T-4129": [
     "testing",
     "its own tests, in its copy",
-    1794738316332
+    1794738309600
    ],
    "T-4486": [
     "testing",
     "its own tests, in its copy",
-    1794736996332
+    1794736989600
    ],
    "T-4123": [
     "merged",
@@ -679,21 +679,21 @@
   },
   "nm": {
    "T-3712": "Erase unused Simulators by tool",
+   "T-4430": "Answer TestFlight encryption questions by default",
    "T-4438": "Fix two test suites that fail on main",
    "T-4089": "Fix the location bridge test that failed on the MacBook",
    "T-4280": "Run each widget in the widget or app by size",
-   "T-4430": "Answer TestFlight encryption questions by default",
    "T-4129": "Retire the Set aside stage on Home",
    "T-4486": "Refuse Fable in sessions with no Fable task",
    "T-4123": "Rerun the audit pattern study on the full ledger"
   }
  },
  "ln": {
-  "at": "2026-11-15T10:27:16Z",
+  "at": "2026-11-15T10:30:09Z",
   "mq": {
    "n": {
     "checking": 1,
-    "inline": 0,
+    "inline": 1,
     "conflicted": 3,
     "failed": 0,
     "held": 0,
@@ -701,13 +701,13 @@
     "parked": 4
    },
    "m": {
-    "checking": 1,
-    "inline": null,
-    "conflicted": 609,
+    "checking": 4,
+    "inline": 1,
+    "conflicted": 612,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1337
+    "parked": 1340
    },
    "cur": [
     [
@@ -716,7 +716,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     1
+     4
     ]
    ],
    "ld": [
@@ -726,12 +726,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-15T10:26:43Z",
-    "ld": 62.38,
+    "at": "2026-11-15T10:29:43Z",
+    "ld": 55.28,
     "c": 8,
     "sb": 1,
     "dk": [
-     19.5,
+     20.1,
      228.3
     ],
     "ss": [
@@ -771,8 +771,8 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session",
-   "at": "2026-11-15T05:27:15-05:00"
+   "t": "Work session \u2013 2 tasks",
+   "at": "2026-11-15T04:53:03-05:00"
   },
   {
    "w": "Operator",
@@ -815,10 +815,10 @@
   "main": 3,
   "lanes": 3,
   "total": 6,
-  "at": "5:27 AM",
+  "at": "5:30 AM",
   "why": "",
-  "at_iso": "2026-11-15T10:27:00+00:00",
+  "at_iso": "2026-11-15T10:30:00+00:00",
   "started": "2:07 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 3, started 2:07 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 5:27 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 3, started 2:07 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 5:30 AM ET</p></section>"
  }
 }

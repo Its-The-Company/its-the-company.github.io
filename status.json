@@ -1,12 +1,28 @@
 {
  "schema": 1,
- "at": "2026-11-15T08:44:36.460333+00:00",
+ "at": "2026-11-15T08:47:37.874270+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-15T02:07:02-05:00",
   "flow": [],
   "done": [
+   {
+    "t": "T-3806",
+    "name": "Answer Investor messages that no session claims",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794732453
+   },
+   {
+    "t": "T-4457",
+    "name": "Commit queued board records with the records round",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794732453
+   },
    {
     "t": "T-4466",
     "name": "Open the audit lines to every account and any model",
@@ -75,25 +91,9 @@
     "steps": [],
     "end": "landed",
     "end_at": 1794699486
-   },
-   {
-    "t": "T-4228",
-    "name": "Group new app tasks into features automatically",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794699486
-   },
-   {
-    "t": "T-4437",
-    "name": "Finish the queue audit's order and last refused rows",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794699261
    }
   ],
-  "landed": 6,
+  "landed": 8,
   "failed": 5
  },
  "workers": [
@@ -102,7 +102,7 @@
    "task": "[tools] T-4466 open audit lines to all accounts",
    "model": "opus",
    "started": "2026-11-15T07:11:46.805Z",
-   "seconds": 5569,
+   "seconds": 5751,
    "finished": null,
    "effort": "high"
   },
@@ -111,7 +111,7 @@
    "task": "[tools] T-4129 land Set aside part 2b",
    "model": "opus",
    "started": "2026-11-15T07:42:39.983Z",
-   "seconds": 3716,
+   "seconds": 3897,
    "finished": null,
    "effort": "high"
   }
@@ -146,7 +146,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 376,
+  "runnable_count": 378,
   "blocked_count": 78
  },
  "meter": {
@@ -195,7 +195,7 @@
   "week_pct": null,
   "usage_pct": null,
   "work_pct": null,
-  "read_at": "2026-11-15T08:44:00+00:00",
+  "read_at": "2026-11-15T08:47:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -232,7 +232,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-15T03:44:00-05:00",
+  "at": "2026-11-15T03:47:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -381,15 +381,15 @@
    },
    {
     "w": "Odalys",
-    "k": "site",
-    "t": "Draw the app's diagrams from its code on the...",
+    "k": "tools",
+    "t": "Answer Investor messages that no session claims",
     "s": "next",
-    "o": "i"
+    "o": "c"
    },
    {
     "w": "Odalys",
-    "k": "tools",
-    "t": "Retire the Set aside stage on Home",
+    "k": "site",
+    "t": "Draw the app's diagrams from its code on the...",
     "s": "next",
     "o": "i"
    }
@@ -412,7 +412,7 @@
    }
   ],
   "count": {
-   "next": 376,
+   "next": 378,
    "wait": 37,
    "blocked": 41,
    "you": 12
@@ -474,46 +474,75 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-15T08:44:18Z",
+  "at": "2026-11-15T08:47:28Z",
   "s": {
+   "T-4457": [
+    "merging",
+    "Merging onto main",
+    1794732448808
+   ],
+   "T-3806": [
+    "merging",
+    "Merging onto main",
+    1794732448808
+   ],
    "T-4466": [
     "merging",
     "Mac tests at the main gate",
-    1794732078454
+    1794732088808
    ],
    "T-4129": [
     "testing",
     "its own tests, in its copy",
-    1794728838454
+    1794732328808
    ]
   },
   "nm": {
+   "T-4457": "Commit queued board records with the records round",
+   "T-3806": "Answer Investor messages that no session claims",
    "T-4466": "Open the audit lines to every account and any model",
    "T-4129": "Retire the Set aside stage on Home"
   }
  },
  "ln": {
-  "at": "2026-11-15T08:44:18Z",
+  "at": "2026-11-15T08:47:28Z",
   "mq": {
    "n": {
-    "checking": 0,
+    "checking": 2,
     "inline": 0,
-    "conflicted": 4,
+    "conflicted": 3,
     "failed": 0,
     "held": 0,
-    "retry": 1,
+    "retry": 0,
     "parked": 2
    },
    "m": {
-    "checking": null,
+    "checking": 0,
     "inline": null,
-    "conflicted": 295,
+    "conflicted": 509,
     "failed": null,
     "held": null,
-    "retry": 5,
-    "parked": 2388
+    "retry": null,
+    "parked": 2391
    },
-   "cur": [],
+   "cur": [
+    [
+     [
+      "T-4457"
+     ],
+     "going onto main",
+     "Mac mini",
+     0
+    ],
+    [
+     [
+      "T-3806"
+     ],
+     "going onto main",
+     "Mac mini",
+     0
+    ]
+   ],
    "ld": [
     2,
     "2026-11-15T07:40:16Z"
@@ -521,12 +550,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-15T08:44:19Z",
-    "ld": 0.94,
+    "at": "2026-11-15T08:46:40Z",
+    "ld": 1.07,
     "c": 8,
     "sb": 0,
     "dk": [
-     24.4,
+     24.6,
      228.3
     ],
     "ss": [
@@ -579,10 +608,10 @@
   "main": 2,
   "lanes": 0,
   "total": 2,
-  "at": "3:44 AM",
+  "at": "3:47 AM",
   "why": "",
-  "at_iso": "2026-11-15T08:44:00+00:00",
+  "at_iso": "2026-11-15T08:47:00+00:00",
   "started": "2:07 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 2:07 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 3:44 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 2:07 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 3:47 AM ET</p></section>"
  }
 }

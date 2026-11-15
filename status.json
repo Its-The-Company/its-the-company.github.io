@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-15T19:49:51.898684+00:00",
+ "at": "2026-11-15T19:52:52.718566+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -117,16 +117,7 @@
    "task": "[build] T-4468 premade settings H1 Python half",
    "model": "opus",
    "started": "2026-11-15T19:14:40.149Z",
-   "seconds": 2111,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-4468 premade settings fixes M1-M4",
-   "model": "opus",
-   "started": "2026-11-15T19:16:25.519Z",
-   "seconds": 2006,
+   "seconds": 2292,
    "finished": null,
    "effort": "high"
   },
@@ -135,13 +126,38 @@
    "task": "[tools] T-4449 queue check fixes and switch-on",
    "model": "opus",
    "started": "2026-11-15T19:48:34.144Z",
-   "seconds": 77,
+   "seconds": 258,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "idris",
+   "task": "[build] T-4311 net.request certificate errors",
+   "model": "opus",
+   "started": "2026-11-15T19:51:18.433Z",
+   "seconds": 94,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Pernille, Idris, Odalys",
+ "who": "Pernille, Odalys, Idris",
  "recent": [
+  {
+   "name": "idris",
+   "task": "[ios] T-4311 net.request certificate errors",
+   "model": "opus",
+   "started": "2026-11-15T19:51:11.422Z",
+   "seconds": null,
+   "finished": "2026-11-15T19:51:11.568Z"
+  },
+  {
+   "name": "idris",
+   "task": "[build] T-4468 premade settings fixes M1-M4",
+   "model": "opus",
+   "started": "2026-11-15T19:16:25.519Z",
+   "seconds": null,
+   "finished": "2026-11-15T19:50:53.027000+00:00"
+  },
   {
    "name": "ines",
    "task": "[plan] T-4448 read the queue check dry run",
@@ -157,22 +173,6 @@
    "started": "2026-11-15T19:36:33.107Z",
    "seconds": null,
    "finished": "2026-11-15T19:44:32.275000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-4473 land the queue check rules",
-   "model": "opus",
-   "started": "2026-11-15T19:27:35.286Z",
-   "seconds": null,
-   "finished": "2026-11-15T19:36:10.452000+00:00"
-  },
-  {
-   "name": "ines",
-   "task": "[plan] T-4473 decide the queue check bar",
-   "model": "opus",
-   "started": "2026-11-15T19:24:21.848Z",
-   "seconds": null,
-   "finished": "2026-11-15T19:27:23.932000+00:00"
   }
  ],
  "queue": {
@@ -183,19 +183,19 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 13.0,
+   "pct": 14.0,
    "resets_at": "2026-11-15T17:00:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-15T14:44:12.724907-05:00",
+   "read_at": "2026-11-15T14:50:25.801383-05:00",
    "source": "live",
-   "left": 87.0,
+   "left": 86.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 10.0,
    "resets_at": "2026-11-22T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-15T14:44:12.724907-05:00",
+   "read_at": "2026-11-15T14:50:25.801383-05:00",
    "source": "live",
    "left": 90.0,
    "left_words": "of your weekly allowance left"
@@ -207,7 +207,7 @@
    "read_at": "2026-11-15T14:00:25.240335-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-15T14:44:12.724907-05:00"
+  "read_at": "2026-11-15T14:50:25.801383-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -227,7 +227,7 @@
   "week_pct": 3.22,
   "usage_pct": 26.1,
   "work_pct": 75.0,
-  "read_at": "2026-11-15T19:49:00+00:00",
+  "read_at": "2026-11-15T19:52:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -257,14 +257,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-15T14:44:00-05:00",
+   "at": "2026-11-15T14:50:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-15T14:49:00-05:00",
+  "at": "2026-11-15T14:52:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -290,20 +290,20 @@
    "effort": "high"
   },
   {
-   "name": "Idris",
-   "state": "running",
-   "task": "[build] T-4468 premade settings fixes M1-M4",
-   "model": "opus",
-   "since": "2026-11-15T19:16:25.519Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
    "name": "Odalys",
    "state": "running",
    "task": "[tools] T-4449 queue check fixes and switch-on",
    "model": "opus",
    "since": "2026-11-15T19:48:34.144Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
+   "name": "Idris",
+   "state": "running",
+   "task": "[build] T-4311 net.request certificate errors",
+   "model": "opus",
+   "since": "2026-11-15T19:51:18.433Z",
    "next": [],
    "effort": "high"
   },
@@ -345,16 +345,6 @@
     "task": "T-4468"
    },
    {
-    "w": "Idris",
-    "k": "build",
-    "t": "Let people set each premade's place, events and lists",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-15T19:16:25.519Z",
-    "o": "c",
-    "task": "T-4468"
-   },
-   {
     "w": "Odalys",
     "k": "tools",
     "t": "Switch the queue check on",
@@ -363,6 +353,16 @@
     "at": "2026-11-15T19:48:34.144Z",
     "o": "c",
     "task": "T-4449"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "Name certificate failures right in net.request",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-15T19:51:18.433Z",
+    "o": "c",
+    "task": "T-4311"
    }
   ],
   "src": "plan",
@@ -530,12 +530,12 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-15T19:49:37Z",
+  "at": "2026-11-15T19:52:45Z",
   "s": {
    "T-4227": [
     "merging",
     "Host checks on the Mac mini",
-    1794771217689
+    1794771225386
    ],
    "T-4468": [
     "mergetest",
@@ -549,7 +549,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-15T19:49:37Z",
+  "at": "2026-11-15T19:52:45Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -561,13 +561,13 @@
     "parked": 2
    },
    "m": {
-    "checking": 16,
+    "checking": 19,
     "inline": null,
-    "conflicted": 1171,
+    "conflicted": 1174,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 400
+    "parked": 403
    },
    "cur": [
     [
@@ -576,7 +576,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     16
+     19
     ]
    ],
    "ld": [
@@ -586,8 +586,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-15T19:48:51Z",
-    "ld": 2.22,
+    "at": "2026-11-15T19:52:45Z",
+    "ld": 2.3,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -601,12 +601,12 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-15T19:42:30Z",
-    "ld": 0.2,
+    "at": "2026-11-15T19:52:00Z",
+    "ld": 1.22,
     "c": 12,
     "sb": 0,
     "dk": [
-     358.6,
+     358.4,
      926.4
     ],
     "sn": []
@@ -620,7 +620,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 2 tasks",
+   "t": "Work session \u2013 3 tasks",
    "at": "2026-11-15T14:00:40-05:00"
   }
  ],
@@ -645,10 +645,10 @@
   "main": 3,
   "lanes": 0,
   "total": 3,
-  "at": "2:49 PM",
+  "at": "2:52 PM",
   "why": "",
-  "at_iso": "2026-11-15T19:49:00+00:00",
+  "at_iso": "2026-11-15T19:52:00+00:00",
   "started": "2:00 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 2:00 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 2:49 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 2:00 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 2:52 PM ET</p></section>"
  }
 }

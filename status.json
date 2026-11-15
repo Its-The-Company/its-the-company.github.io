@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-15T14:08:22.131751+00:00",
+ "at": "2026-11-15T14:11:31.072733+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -109,7 +109,7 @@
    "task": "[build] T-4504 Clocks Small long city names",
    "model": "opus",
    "started": "2026-11-15T13:29:47.840Z",
-   "seconds": 2314,
+   "seconds": 2503,
    "finished": null
   },
   {
@@ -117,7 +117,7 @@
    "task": "[tools] T-4507 quit apps the company opened",
    "model": "opus",
    "started": "2026-11-15T14:05:18.477Z",
-   "seconds": 183,
+   "seconds": 372,
    "finished": null
   },
   {
@@ -125,7 +125,7 @@
    "task": "[ops] T-4509 land reply wording in prompts",
    "model": "opus",
    "started": "2026-11-15T14:05:23.579Z",
-   "seconds": 178,
+   "seconds": 367,
    "finished": null
   }
  ],
@@ -167,7 +167,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 385,
+  "runnable_count": 386,
   "blocked_count": 76
  },
  "meter": {
@@ -216,8 +216,44 @@
   "week_pct": null,
   "usage_pct": null,
   "work_pct": null,
-  "read_at": "2026-11-15T14:08:00+00:00",
+  "read_at": "2026-11-15T14:11:00+00:00",
   "running": [
+   {
+    "lane": "a",
+    "task": "T-4129",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Retire the Set aside stage on Home",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-15T09:10:17-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a",
+    "task": "T-4472",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Measure the queue check rules the replay could not",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-15T09:10:17-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a",
+    "task": "T-4247",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Stopped pinned task goes back on the menu by itself",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-15T09:10:17-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
    {
     "lane": "b3",
     "task": "T-4482",
@@ -288,7 +324,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-15T09:08:00-05:00",
+  "at": "2026-11-15T09:11:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -474,7 +510,7 @@
    }
   ],
   "count": {
-   "next": 385,
+   "next": 386,
    "wait": 35,
    "blocked": 41,
    "you": 12
@@ -548,22 +584,32 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-15T14:08:22Z",
+  "at": "2026-11-15T14:11:17Z",
   "s": {
    "T-4009": [
     "merging",
-    "Host checks on the Mac mini \u00b7 4 groups of tests done",
-    1794751702131
+    "Host checks on the Mac mini \u00b7 5 groups of tests done",
+    1794751697263
    ],
    "T-4504": [
     "mergetest",
     "iPhone tests on the MacBook",
     null
    ],
+   "T-4129": [
+    "merging",
+    "Mac tests at the main gate",
+    1794751817263
+   ],
    "T-4509": [
     "testing",
     "its own tests, in its copy",
-    1794751582131
+    1794751577263
+   ],
+   "T-4507": [
+    "testing",
+    "its own tests, in its copy",
+    1794751757263
    ],
    "T-4482": [
     "merged",
@@ -575,12 +621,14 @@
   "nm": {
    "T-4009": "Raise the 5-hour stop from 90% toward 100%",
    "T-4504": "Let long city names give way in Clocks Small",
+   "T-4129": "Retire the Set aside stage on Home",
    "T-4509": "Name the Investor in reply openings",
+   "T-4507": "Let the company quit apps it opened itself",
    "T-4482": "Redo commit queued board records with the records round"
   }
  },
  "ln": {
-  "at": "2026-11-15T14:08:22Z",
+  "at": "2026-11-15T14:11:17Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -592,13 +640,13 @@
     "parked": 3
    },
    "m": {
-    "checking": 0,
+    "checking": 3,
     "inline": null,
-    "conflicted": 846,
+    "conflicted": 849,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 2710
+    "parked": 2713
    },
    "cur": [
     [
@@ -607,7 +655,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     0
+     3
     ]
    ],
    "ld": [
@@ -617,12 +665,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-15T14:07:35Z",
-    "ld": 2.45,
+    "at": "2026-11-15T14:11:18Z",
+    "ld": 3.49,
     "c": 8,
     "sb": 0,
     "dk": [
-     17.3,
+     18.7,
      228.3
     ],
     "ss": [
@@ -652,7 +700,16 @@
    "m": "opus",
    "e": "high",
    "t": "Work session \u2013 13 tasks",
-   "at": "2026-11-15T09:04:56-05:00"
+   "at": "2026-11-15T09:10:04-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Evan",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session \u2013 3 tasks",
+   "at": "2026-11-15T09:10:17-05:00"
   },
   {
    "w": "Operator",
@@ -665,8 +722,8 @@
   }
  ],
  "reply": {
-  "sent": "2026-11-15T14:04:46Z",
-  "seconds": 9.0
+  "sent": "2026-11-15T14:09:15Z",
+  "seconds": 48.0
  },
  "inbox": [],
  "trimmed": [
@@ -684,12 +741,12 @@
  ],
  "agents_now": {
   "main": 3,
-  "lanes": 1,
-  "total": 4,
-  "at": "9:08 AM",
+  "lanes": 2,
+  "total": 5,
+  "at": "9:11 AM",
   "why": "",
-  "at_iso": "2026-11-15T14:08:00+00:00",
+  "at_iso": "2026-11-15T14:11:00+00:00",
   "started": "6:23 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 3, started 6:23 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 9:08 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 3, started 6:23 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 9:11 AM ET</p></section>"
  }
 }

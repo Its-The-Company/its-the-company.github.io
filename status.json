@@ -1,39 +1,40 @@
 {
  "schema": 1,
- "at": "2026-11-15T11:32:17.100590+00:00",
+ "at": "2026-11-15T11:35:21.840805+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-15T06:23:05-05:00",
   "flow": [
    {
-    "t": "T-4280",
-    "name": "Run each widget in the widget or app by size",
+    "t": "T-1119",
+    "name": "Investors answer two App Store Connect questions",
     "acct": "Personal a",
     "steps": [
      {
-      "s": "testq",
-      "at": 1794739859
-     },
-     {
-      "s": "macbook",
-      "at": 1794741284
-     }
-    ]
-   },
-   {
-    "t": "T-4226",
-    "name": "Emoji reactions on Chat messages",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1794742041
+      "s": "landing",
+      "at": 1794742518
      }
     ]
    }
   ],
   "done": [
+   {
+    "t": "T-4280",
+    "name": "Run each widget in the widget or app by size",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794742469
+   },
+   {
+    "t": "T-4226",
+    "name": "Emoji reactions on Chat messages",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794742371
+   },
    {
     "t": "T-4111",
     "name": "Cut clutter text on Home and every page",
@@ -94,27 +95,9 @@
     "steps": [],
     "end": "landed",
     "end_at": 1794728416
-   },
-   {
-    "t": "T-4457",
-    "name": "Commit queued board records with the records round",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "failed",
-    "end_at": 1794728182,
-    "why": "did not merge cleanly"
-   },
-   {
-    "t": "T-4457",
-    "name": "Commit queued board records with the records round",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "failed",
-    "end_at": 1794728176,
-    "why": "did not merge cleanly"
    }
   ],
-  "landed": 13,
+  "landed": 14,
   "failed": 6
  },
  "workers": [
@@ -123,15 +106,7 @@
    "task": "[plan] T-4467 plan in line with Saturday answers",
    "model": "opus",
    "started": "2026-11-15T11:26:47.064Z",
-   "seconds": 330,
-   "finished": null
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-4480 records via records round redo",
-   "model": "opus",
-   "started": "2026-11-15T11:26:54.716Z",
-   "seconds": 322,
+   "seconds": 514,
    "finished": null
   },
   {
@@ -139,12 +114,29 @@
    "task": "[tools] T-4487 wire task states into land",
    "model": "opus",
    "started": "2026-11-15T11:27:02.366Z",
-   "seconds": 314,
+   "seconds": 499,
+   "finished": null
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-4461 ledger apply last rows",
+   "model": "opus",
+   "started": "2026-11-15T11:34:56.087Z",
+   "seconds": 25,
    "finished": null
   }
  ],
  "who": "Ines, Odalys x2",
- "recent": [],
+ "recent": [
+  {
+   "name": "odalys",
+   "task": "[tools] T-4480 records via records round redo",
+   "model": "opus",
+   "started": "2026-11-15T11:26:54.716Z",
+   "seconds": null,
+   "finished": "2026-11-15T11:33:59.794000+00:00"
+  }
+ ],
  "queue": {
   "runnable": [],
   "blocked": [],
@@ -197,7 +189,7 @@
   "week_pct": null,
   "usage_pct": null,
   "work_pct": null,
-  "read_at": "2026-11-15T11:32:00+00:00",
+  "read_at": "2026-11-15T11:35:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -232,41 +224,6 @@
     "n": "Evan",
     "d": 1,
     "src": "plan-a"
-   },
-   {
-    "lane": "a3",
-    "task": "T-4089",
-    "w": "Odalys",
-    "k": "fix",
-    "t": "Fix the location bridge test that failed on the MacBook",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-15T04:53:01-05:00",
-    "n": "Evan",
-    "d": 1,
-    "src": "plan-a"
-   },
-   {
-    "lane": "a3",
-    "task": "T-4430",
-    "t": "Answer TestFlight encryption questions by default",
-    "at": "2026-11-15T04:53:01-05:00",
-    "n": "Evan",
-    "d": 1,
-    "src": "plan-a"
-   },
-   {
-    "lane": "a3",
-    "task": "T-4280",
-    "w": "Idris",
-    "k": "build",
-    "t": "Run each widget in the widget or app by size",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-15T04:53:01-05:00",
-    "n": "Evan",
-    "d": 1,
-    "src": "plan-a"
    }
   ]
  },
@@ -288,7 +245,7 @@
   }
  ],
  "disk": {
-  "free_gb": 18,
+  "free_gb": 17,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -297,14 +254,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-15T06:28:00-05:00",
+   "at": "2026-11-15T06:35:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-15T06:32:00-05:00",
+  "at": "2026-11-15T06:35:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -331,9 +288,9 @@
   {
    "name": "Odalys",
    "state": "running",
-   "task": "[tools] T-4480 records via records round redo",
+   "task": "[tools] T-4487 wire task states into land",
    "model": "opus",
-   "since": "2026-11-15T11:26:54.716Z",
+   "since": "2026-11-15T11:27:02.366Z",
    "next": []
   },
   {
@@ -383,20 +340,20 @@
    {
     "w": "Odalys",
     "k": "tools",
-    "t": "Redo stop the other tools committing each record they write",
-    "m": "opus",
-    "at": "2026-11-15T11:26:54.716Z",
-    "o": "c",
-    "task": "T-4480"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
     "t": "Wire task states into the land",
     "m": "opus",
     "at": "2026-11-15T11:27:02.366Z",
     "o": "c",
     "task": "T-4487"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Let the ledger apply finish its last rows",
+    "m": "opus",
+    "at": "2026-11-15T11:34:56.087Z",
+    "o": "c",
+    "task": "T-4461"
    }
   ],
   "src": "plan",
@@ -475,18 +432,18 @@
   "done": [
    {
     "w": "Odalys",
-    "t": "The test for the How the app works page failed on every check because it expected no explanation...",
-    "at": "2026-11-15T05:37:00-05:00"
-   },
-   {
-    "w": "Idris",
-    "t": "Apple can load the encryption answers without a setting in the app only through its developer...",
-    "at": "2026-11-15T05:34:00-05:00"
+    "t": "Four background tools no longer make a separate commit each time they write a record; the shared...",
+    "at": "2026-11-15T06:33:00-05:00"
    },
    {
     "w": "Odalys",
-    "t": "A safety test of the overnight landing ticks failed by timing on every run and held up other...",
-    "at": "2026-11-15T05:23:00-05:00"
+    "t": "Four background tools no longer make a separate commit each time they write a record; the shared...",
+    "at": "2026-11-15T06:33:00-05:00"
+   },
+   {
+    "w": "Odalys",
+    "t": "The test for the How the app works page failed on every check because it expected no explanation...",
+    "at": "2026-11-15T05:37:00-05:00"
    }
   ],
   "count": {
@@ -496,8 +453,17 @@
    "you": 12
   },
   "fin": {
-   "n": 0,
-   "rows": []
+   "n": 2,
+   "rows": [
+    [
+     "T-4458",
+     "Stop the other tools..."
+    ],
+    [
+     "T-4480",
+     "Redo stop the other tools..."
+    ]
+   ]
   }
  },
  "qr": [
@@ -539,54 +505,22 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-15T11:32:17Z",
+  "at": "2026-11-15T11:35:21Z",
   "s": {
-   "T-4226": [
+   "T-1119": [
     "merging",
-    "Host checks on the Mac mini \u00b7 1 group of tests done",
-    1794742097100
-   ],
-   "T-4111": [
-    "mergeq",
-    "1st to merge",
-    1794742337100
-   ],
-   "T-3712": [
-    "mergeq",
-    "1st to merge",
-    1794742337100
-   ],
-   "T-4280": [
-    "mergeq",
-    "3rd to merge",
-    1794739877100
+    "Merging onto main",
+    1794742521840
    ],
    "T-4487": [
     "testing",
     "its own tests, in its copy",
-    1794742097100
-   ],
-   "T-4480": [
-    "testing",
-    "its own tests, in its copy",
-    1794742157100
+    1794742461840
    ],
    "T-4438": [
     "testing",
     "its own tests, in its copy",
-    1794739097100
-   ],
-   "T-4430": [
-    "merged",
-    "on main 5:32 AM ET",
-    1794738737000,
-    ""
-   ],
-   "T-4089": [
-    "merged",
-    "on main 5:24 AM ET",
-    1794738297000,
-    ""
+    1794739101840
    ],
    "T-4123": [
     "merged",
@@ -596,62 +530,56 @@
    ]
   },
   "nm": {
-   "T-4226": "Emoji reactions on Chat messages",
-   "T-4111": "Cut clutter text on Home and every page",
-   "T-3712": "Erase unused Simulators by tool",
-   "T-4280": "Run each widget in the widget or app by size",
+   "T-1119": "Investors answer two App Store Connect questions",
    "T-4487": "Wire task states into the land",
-   "T-4480": "Redo stop the other tools committing each record they write",
    "T-4438": "Fix two test suites that fail on main",
-   "T-4430": "Answer TestFlight encryption questions by default",
-   "T-4089": "Fix the location bridge test that failed on the MacBook",
    "T-4123": "Rerun the audit pattern study on the full ledger"
   }
  },
  "ln": {
-  "at": "2026-11-15T11:32:17Z",
+  "at": "2026-11-15T11:35:21Z",
   "mq": {
    "n": {
     "checking": 1,
-    "inline": 3,
+    "inline": 0,
     "conflicted": 3,
     "failed": 0,
     "held": 0,
-    "retry": 1,
+    "retry": 0,
     "parked": 3
    },
    "m": {
-    "checking": 4,
-    "inline": 0,
-    "conflicted": 674,
+    "checking": 0,
+    "inline": null,
+    "conflicted": 677,
     "failed": null,
     "held": null,
-    "retry": 48,
-    "parked": 2554
+    "retry": null,
+    "parked": 2557
    },
    "cur": [
     [
      [
-      "T-4226"
+      "T-1119"
      ],
-     "Mac tests",
+     "going onto main",
      "Mac mini",
-     4
+     0
     ]
    ],
    "ld": [
-    8,
-    "2026-11-15T11:27:14Z"
+    11,
+    "2026-11-15T11:34:29Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-15T11:32:23Z",
-    "ld": 7.25,
+    "at": "2026-11-15T11:35:29Z",
+    "ld": 9.77,
     "c": 8,
     "sb": 0,
     "dk": [
-     18.0,
+     16.9,
      228.3
     ],
     "ss": [
@@ -661,12 +589,12 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-15T11:00:13Z",
-    "ld": 1.06,
+    "at": "2026-11-15T11:30:46Z",
+    "ld": 0.17,
     "c": 12,
     "sb": 0,
     "dk": [
-     369.1,
+     369.2,
      926.4
     ],
     "sn": []
@@ -680,7 +608,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 3 tasks",
+   "t": "Work session \u2013 4 tasks",
    "at": "2026-11-15T06:23:05-05:00"
   },
   {
@@ -702,6 +630,7 @@
   "lane_next",
   "queue_text",
   "task_done",
+  "fin_short",
   "task_title",
   "done_text",
   "task_open",
@@ -710,12 +639,12 @@
  ],
  "agents_now": {
   "main": 3,
-  "lanes": 2,
-  "total": 5,
-  "at": "6:32 AM",
+  "lanes": 1,
+  "total": 4,
+  "at": "6:35 AM",
   "why": "",
-  "at_iso": "2026-11-15T11:32:00+00:00",
+  "at_iso": "2026-11-15T11:35:00+00:00",
   "started": "6:23 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 3, started 6:23 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 6:32 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 3, started 6:23 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 6:35 AM ET</p></section>"
  }
 }

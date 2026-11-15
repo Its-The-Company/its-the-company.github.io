@@ -1,10 +1,10 @@
 {
  "schema": 1,
- "at": "2026-11-15T15:05:10.891558+00:00",
+ "at": "2026-11-15T15:08:14.350684+00:00",
  "session": {
-  "active": false,
-  "kind": "",
-  "started": null,
+  "active": true,
+  "kind": "work",
+  "started": "2026-11-15T10:05:15-05:00",
   "flow": [
    {
     "t": "T-2266",
@@ -99,42 +99,37 @@
   "landed": 21,
   "failed": 4
  },
- "workers": [],
- "who": "",
- "recent": [
+ "workers": [
   {
-   "name": "maren",
-   "task": "[site] T-4513 SSD free space on Machine bubble",
+   "name": "idris",
+   "task": "[build] T-2491 stuck extension folders",
    "model": "opus",
-   "started": "2026-11-15T14:27:32.053Z",
-   "seconds": null,
-   "finished": "2026-11-15T14:44:56.814000+00:00"
+   "started": "2026-11-15T15:07:59.962Z",
+   "seconds": 14,
+   "finished": null,
+   "effort": "high"
   },
   {
-   "name": "odalys",
-   "task": "[ops] T-4509 land reply wording in prompts",
+   "name": "idris",
+   "task": "[build] T-2869 pyc-only completion test",
    "model": "opus",
-   "started": "2026-11-15T14:05:23.579Z",
-   "seconds": null,
-   "finished": "2026-11-15T14:28:30.663000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-4507 quit apps the company opened",
-   "model": "opus",
-   "started": "2026-11-15T14:05:18.477Z",
-   "seconds": null,
-   "finished": "2026-11-15T14:27:52.922000+00:00"
+   "started": "2026-11-15T15:08:06.419Z",
+   "seconds": 7,
+   "finished": null,
+   "effort": "high"
   },
   {
    "name": "pernille",
-   "task": "[build] T-4504 Clocks Small long city names",
+   "task": "[build] T-4505 Distance Small far values",
    "model": "opus",
-   "started": "2026-11-15T13:29:47.840Z",
-   "seconds": null,
-   "finished": "2026-11-15T14:27:12.591000+00:00"
+   "started": "2026-11-15T15:08:12.068Z",
+   "seconds": 2,
+   "finished": null,
+   "effort": "high"
   }
  ],
+ "who": "Idris x2, Pernille",
+ "recent": [],
  "queue": {
   "runnable": [],
   "blocked": [],
@@ -182,12 +177,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-15T10:19:50-05:00",
+ "next_tick": null,
  "personal": {
   "week_pct": 2.36,
   "usage_pct": 27.2,
   "work_pct": 75.0,
-  "read_at": "2026-11-15T15:05:00+00:00",
+  "read_at": "2026-11-15T15:08:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -238,7 +233,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-15T10:05:00-05:00",
+  "at": "2026-11-15T10:08:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -246,30 +241,36 @@
    "b": "double-spread"
   }
  },
- "next_tick_why": "last_tick",
+ "next_tick_why": "session",
  "idle": null,
- "pool": null,
+ "pool": {
+  "why": "Double Spread: 93% of the week left, paced to last until Wed 14:00, the week's halfway point; the machine allows 20 (cut a step: load 15.1 a core is over 10)",
+  "n": 3,
+  "at": "2026-11-15T10:04:50.005764-05:00"
+ },
  "lanes": [
   {
    "name": "Idris",
-   "state": "next",
-   "task": "Idris, P2, from T-4238 (Pernille's review, from T-3900,...",
-   "model": null,
-   "since": null,
-   "next": []
+   "state": "running",
+   "task": "[build] T-2491 stuck extension folders",
+   "model": "opus",
+   "since": "2026-11-15T15:07:59.962Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
+   "name": "Pernille",
+   "state": "running",
+   "task": "[build] T-4505 Distance Small far values",
+   "model": "opus",
+   "since": "2026-11-15T15:08:12.068Z",
+   "next": [],
+   "effort": "high"
   },
   {
    "name": "Ines",
    "state": "next",
    "task": "Ines, P2, from T-1110 (Wrenna,...",
-   "model": null,
-   "since": null,
-   "next": []
-  },
-  {
-   "name": "Pernille",
-   "state": "next",
-   "task": "Pernille, P1, premades and gallery take the age line...",
    "model": null,
    "since": null,
    "next": []
@@ -300,7 +301,39 @@
   }
  ],
  "tasks": {
-  "run": [],
+  "run": [
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "Stop the stuck extension from recreating deleted widget folders",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-15T15:07:59.962Z",
+    "o": "c",
+    "task": "T-2491"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "Test completion with the stdlib as compiled-only files",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-15T15:08:06.419Z",
+    "o": "c",
+    "task": "T-2869"
+   },
+   {
+    "w": "Pernille",
+    "k": "build",
+    "t": "Fit far distances in Distance Small",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-15T15:08:12.068Z",
+    "o": "c",
+    "task": "T-4505"
+   }
+  ],
+  "src": "plan",
   "open": [
    {
     "w": "Pernille",
@@ -395,6 +428,10 @@
    "wait": 35,
    "blocked": 41,
    "you": 12
+  },
+  "fin": {
+   "n": 0,
+   "rows": []
   }
  },
  "qr": [
@@ -436,7 +473,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-15T15:05:10Z",
+  "at": "2026-11-15T15:07:59Z",
   "s": {
    "T-4468": [
     "merged",
@@ -450,7 +487,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-15T15:05:10Z",
+  "at": "2026-11-15T15:07:59Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -464,11 +501,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 903,
+    "conflicted": 906,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 465
+    "parked": 467
    },
    "cur": [],
    "ld": [
@@ -478,8 +515,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-15T15:05:11Z",
-    "ld": 14.0,
+    "at": "2026-11-15T15:07:34Z",
+    "ld": 9.37,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -508,6 +545,15 @@
  "operators": [
   {
    "w": "Operator",
+   "a": "Main plan",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session \u2013 3 tasks",
+   "at": "2026-11-15T10:05:15-05:00"
+  },
+  {
+   "w": "Operator",
    "a": "Evan",
    "sr": 1,
    "m": "opus",
@@ -524,7 +570,6 @@
  "trimmed": [
   "lane_next",
   "queue_text",
-  "recent",
   "task_done",
   "task_title",
   "done_text",
@@ -533,13 +578,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 0,
+  "main": 3,
   "lanes": 1,
-  "total": 1,
-  "at": "10:05 AM",
+  "total": 4,
+  "at": "10:08 AM",
   "why": "",
-  "at_iso": "2026-11-15T15:05:00+00:00",
-  "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 10:05 AM ET</p></section>"
+  "at_iso": "2026-11-15T15:08:00+00:00",
+  "started": "10:05 AM",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 3, started 10:05 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 10:08 AM ET</p></section>"
  }
 }

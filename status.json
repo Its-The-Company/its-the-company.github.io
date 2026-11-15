@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-15T21:27:56.069236+00:00",
+ "at": "2026-11-15T21:30:59.324268+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -118,7 +118,7 @@
    "task": "[tools] T-3992 land the pipeline batch",
    "model": "opus",
    "started": "2026-11-15T20:27:24.942Z",
-   "seconds": 3631,
+   "seconds": 3814,
    "finished": null,
    "effort": "high"
   },
@@ -127,7 +127,7 @@
    "task": "[build] T-4494 widget scripts start in the widget",
    "model": "opus",
    "started": "2026-11-15T21:12:13.426Z",
-   "seconds": 942,
+   "seconds": 1125,
    "finished": null,
    "effort": "high"
   },
@@ -136,7 +136,7 @@
    "task": "[site] T-4534 double-tap Chat reactions",
    "model": "opus",
    "started": "2026-11-15T21:21:41.106Z",
-   "seconds": 374,
+   "seconds": 558,
    "finished": null,
    "effort": "high"
   }
@@ -179,7 +179,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 374,
+  "runnable_count": 375,
   "blocked_count": 75
  },
  "meter": {
@@ -228,7 +228,7 @@
   "week_pct": 3.22,
   "usage_pct": 26.1,
   "work_pct": 75.0,
-  "read_at": "2026-11-15T21:28:00+00:00",
+  "read_at": "2026-11-15T21:31:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -289,6 +289,7 @@
     "e": "high",
     "at": "2026-11-15T16:20:15-05:00",
     "n": "Evan",
+    "d": 1,
     "src": "plan-a"
    },
    {
@@ -339,7 +340,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-15T16:28:00-05:00",
+  "at": "2026-11-15T16:31:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -531,7 +532,7 @@
    }
   ],
   "count": {
-   "next": 374,
+   "next": 375,
    "wait": 35,
    "blocked": 40,
    "you": 11
@@ -605,42 +606,48 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-15T21:27:56Z",
+  "at": "2026-11-15T21:30:43Z",
   "s": {
    "T-4227": [
     "merging",
     "Host checks on the Mac mini \u00b7 3 groups of tests done",
-    1794777776069
+    1794777823240
+   ],
+   "T-4411": [
+    "mergeq",
+    "1st to merge",
+    1794778123240
    ],
    "T-4494": [
     "merging",
-    "Mac tests at the main gate",
-    1794777596069
+    "Mac tests at the main gate \u00b7 7 groups of tests done",
+    1794777583240
    ],
    "T-3992": [
     "testing",
     "its own tests, in its copy",
-    1794776816069
+    1794776863240
    ],
    "T-4534": [
     "testing",
     "its own tests, in its copy",
-    1794777836069
+    1794777883240
    ]
   },
   "nm": {
    "T-4227": "Run every Operator on Opus high",
+   "T-4411": "Start accounts on the audit when usage returns",
    "T-4494": "Prove widgets move to the app by size",
    "T-3992": "Clear and merge the unfinished merge fixes",
    "T-4534": "Double-tap a Chat bubble to react, and add fire"
   }
  },
  "ln": {
-  "at": "2026-11-15T21:27:56Z",
+  "at": "2026-11-15T21:30:43Z",
   "mq": {
    "n": {
     "checking": 1,
-    "inline": 0,
+    "inline": 1,
     "conflicted": 1,
     "failed": 0,
     "held": 0,
@@ -648,13 +655,13 @@
     "parked": 2
    },
    "m": {
-    "checking": 5,
-    "inline": null,
-    "conflicted": 1269,
+    "checking": 7,
+    "inline": 2,
+    "conflicted": 1272,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 498
+    "parked": 501
    },
    "cur": [
     [
@@ -663,7 +670,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     5
+     7
     ]
    ],
    "ld": [
@@ -673,12 +680,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-15T21:27:31Z",
-    "ld": 6.36,
+    "at": "2026-11-15T21:30:21Z",
+    "ld": 5.6,
     "c": 8,
     "sb": 0,
     "dk": [
-     13.5,
+     11.4,
      228.3
     ],
     "ss": [
@@ -725,7 +732,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 2 tasks",
+   "t": "Work session \u2013 1 task",
    "at": "2026-11-15T16:20:15-05:00"
   }
  ],
@@ -751,10 +758,10 @@
   "main": 3,
   "lanes": 2,
   "total": 5,
-  "at": "4:28 PM",
+  "at": "4:31 PM",
   "why": "",
-  "at_iso": "2026-11-15T21:28:00+00:00",
+  "at_iso": "2026-11-15T21:31:00+00:00",
   "started": "2:00 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 3, started 2:00 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 4:28 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 3, started 2:00 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 4:31 PM ET</p></section>"
  }
 }

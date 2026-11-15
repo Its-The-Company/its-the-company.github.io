@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-15T14:36:07.814349+00:00",
+ "at": "2026-11-15T14:39:12.287187+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -132,7 +132,7 @@
    "task": "[site] T-4513 SSD free space on Machine bubble",
    "model": "opus",
    "started": "2026-11-15T14:27:32.053Z",
-   "seconds": 515,
+   "seconds": 700,
    "finished": null
   }
  ],
@@ -223,7 +223,7 @@
   "week_pct": null,
   "usage_pct": null,
   "work_pct": null,
-  "read_at": "2026-11-15T14:36:00+00:00",
+  "read_at": "2026-11-15T14:39:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -311,7 +311,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-15T09:36:00-05:00",
+  "at": "2026-11-15T09:39:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -553,27 +553,38 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-15T14:36:00Z",
+  "at": "2026-11-15T14:38:58Z",
   "s": {
    "T-4129": [
     "merging",
     "Host checks on the Mac mini",
-    1794753300215
+    1794753298427
    ],
    "T-4482": [
     "mergeq",
     "1st to merge",
-    1794752520215
+    1794752518427
    ],
    "T-4009": [
     "mergeq",
     "1st to merge",
-    1794752520215
+    1794752518427
+   ],
+   "T-4513": [
+    "merging",
+    "Mac tests at the main gate",
+    1794753538427
    ],
    "T-4472": [
     "merged",
     "on main 9:34 AM ET",
     1794753283000,
+    ""
+   ],
+   "T-4468": [
+    "merged",
+    "on main 9:03 AM ET",
+    1794751395000,
     ""
    ]
   },
@@ -581,11 +592,13 @@
    "T-4129": "Retire the Set aside stage on Home",
    "T-4482": "Redo commit queued board records with the records round",
    "T-4009": "Raise the 5-hour stop from 90% toward 100%",
-   "T-4472": "Measure the queue check rules the replay could not"
+   "T-4513": "Show the SSD's free space on the Machine bubble",
+   "T-4472": "Measure the queue check rules the replay could not",
+   "T-4468": "Let people set each premade's place, events and lists"
   }
  },
  "ln": {
-  "at": "2026-11-15T14:36:00Z",
+  "at": "2026-11-15T14:38:58Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -597,13 +610,13 @@
     "parked": 3
    },
    "m": {
-    "checking": 1,
-    "inline": 14,
-    "conflicted": 874,
+    "checking": 4,
+    "inline": 17,
+    "conflicted": 877,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 2737
+    "parked": 2740
    },
    "cur": [
     [
@@ -612,7 +625,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     1
+     4
     ]
    ],
    "ld": [
@@ -622,12 +635,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-15T14:36:01Z",
-    "ld": 4.28,
+    "at": "2026-11-15T14:38:31Z",
+    "ld": 4.3,
     "c": 8,
     "sb": 0,
     "dk": [
-     21.2,
+     20.2,
      228.3
     ],
     "ss": [
@@ -700,10 +713,10 @@
   "main": 1,
   "lanes": 2,
   "total": 3,
-  "at": "9:36 AM",
+  "at": "9:39 AM",
   "why": "",
-  "at_iso": "2026-11-15T14:36:00+00:00",
+  "at_iso": "2026-11-15T14:39:00+00:00",
   "started": "6:23 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 1, started 6:23 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 9:36 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 1, started 6:23 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 9:39 AM ET</p></section>"
  }
 }

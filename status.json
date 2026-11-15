@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-15T12:09:17.963658+00:00",
+ "at": "2026-11-15T12:12:18.975147+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -86,7 +86,7 @@
     "end_at": 1794732453
    }
   ],
-  "landed": 14,
+  "landed": 13,
   "failed": 5
  },
  "workers": [
@@ -95,15 +95,7 @@
    "task": "[tools] T-4487 wire task states into land",
    "model": "opus",
    "started": "2026-11-15T11:27:02.366Z",
-   "seconds": 2535,
-   "finished": null
-  },
-  {
-   "name": "ines",
-   "task": "[plan] T-4437 queue audit order and last rows",
-   "model": "opus",
-   "started": "2026-11-15T11:54:26.814Z",
-   "seconds": 891,
+   "seconds": 2716,
    "finished": null
   },
   {
@@ -111,12 +103,28 @@
    "task": "[design] T-4468 premade input pages design",
    "model": "opus",
    "started": "2026-11-15T11:55:51.552Z",
-   "seconds": 806,
+   "seconds": 987,
+   "finished": null
+  },
+  {
+   "name": "ines",
+   "task": "[plan] T-4501 GitLab pages read against terms",
+   "model": "opus",
+   "started": "2026-11-15T12:12:11.879Z",
+   "seconds": 7,
    "finished": null
   }
  ],
- "who": "Odalys, Ines, Maren",
+ "who": "Odalys, Maren, Ines",
  "recent": [
+  {
+   "name": "ines",
+   "task": "[plan] T-4437 queue audit order and last rows",
+   "model": "opus",
+   "started": "2026-11-15T11:54:26.814Z",
+   "seconds": null,
+   "finished": "2026-11-15T12:11:51.030000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[tools] T-4241 GitLab and GitBook terms guard",
@@ -140,14 +148,6 @@
    "started": "2026-11-15T11:26:47.064Z",
    "seconds": null,
    "finished": "2026-11-15T11:41:13.561000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-4480 records via records round redo",
-   "model": "opus",
-   "started": "2026-11-15T11:26:54.716Z",
-   "seconds": null,
-   "finished": "2026-11-15T11:33:59.794000+00:00"
   }
  ],
  "queue": {
@@ -158,19 +158,19 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 0.0,
+   "pct": 2.0,
    "resets_at": "2026-11-15T12:00:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-15T07:05:23.148681-05:00",
+   "read_at": "2026-11-15T07:11:33.871826-05:00",
    "source": "live",
-   "left": 100.0,
+   "left": 98.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 3.0,
    "resets_at": "2026-11-22T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-15T07:05:23.148681-05:00",
+   "read_at": "2026-11-15T07:11:33.871826-05:00",
    "source": "live",
    "left": 97.0,
    "left_words": "of your weekly allowance left"
@@ -182,7 +182,7 @@
    "read_at": "2026-11-15T06:22:39.617562-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-15T07:05:23.148681-05:00"
+  "read_at": "2026-11-15T07:11:33.871826-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -202,7 +202,7 @@
   "week_pct": null,
   "usage_pct": null,
   "work_pct": null,
-  "read_at": "2026-11-15T12:09:00+00:00",
+  "read_at": "2026-11-15T12:12:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -223,7 +223,7 @@
   }
  ],
  "disk": {
-  "free_gb": 22,
+  "free_gb": 21,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -232,14 +232,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-15T07:05:00-05:00",
+   "at": "2026-11-15T07:11:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-15T07:09:00-05:00",
+  "at": "2026-11-15T07:12:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -264,19 +264,19 @@
    "next": []
   },
   {
-   "name": "Ines",
-   "state": "running",
-   "task": "[plan] T-4437 queue audit order and last rows",
-   "model": "opus",
-   "since": "2026-11-15T11:54:26.814Z",
-   "next": []
-  },
-  {
    "name": "Maren",
    "state": "running",
    "task": "[design] T-4468 premade input pages design",
    "model": "opus",
    "since": "2026-11-15T11:55:51.552Z",
+   "next": []
+  },
+  {
+   "name": "Ines",
+   "state": "running",
+   "task": "[plan] T-4501 GitLab pages read against terms",
+   "model": "opus",
+   "since": "2026-11-15T12:12:11.879Z",
    "next": []
   },
   {
@@ -316,15 +316,6 @@
     "task": "T-4487"
    },
    {
-    "w": "Ines",
-    "k": "plan",
-    "t": "Finish the queue audit's order and last refused rows",
-    "m": "opus",
-    "at": "2026-11-15T11:54:26.814Z",
-    "o": "c",
-    "task": "T-4437"
-   },
-   {
     "w": "Maren",
     "k": "design",
     "t": "Let people set each premade's place, events and lists",
@@ -332,6 +323,15 @@
     "at": "2026-11-15T11:55:51.552Z",
     "o": "c",
     "task": "T-4468"
+   },
+   {
+    "w": "Ines",
+    "k": "plan",
+    "t": "Settle the GitLab pages read against its terms",
+    "m": "opus",
+    "at": "2026-11-15T12:12:11.879Z",
+    "o": "c",
+    "task": "T-4501"
    }
   ],
   "src": "plan",
@@ -409,6 +409,11 @@
   ],
   "done": [
    {
+    "w": "Ines",
+    "t": "The task-list cleanup is finished except for work people still hold: every clean-up the record...",
+    "at": "2026-11-15T07:10:00-05:00"
+   },
+   {
     "w": "Idris",
     "t": "The tool that will let waiting app changes share one iPhone check now treats an unreadable task...",
     "at": "2026-11-15T07:03:00-05:00"
@@ -417,11 +422,6 @@
     "w": "Odalys",
     "t": "The company's web-reading tools now refuse GitLab's and GitBook's websites, because both sites'...",
     "at": "2026-11-15T06:54:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "The tool that carries out the task-queue cleanup no longer blocks on lines that were already...",
-    "at": "2026-11-15T06:53:00-05:00"
    }
   ],
   "count": {
@@ -431,8 +431,12 @@
    "you": 12
   },
   "fin": {
-   "n": 6,
+   "n": 7,
    "rows": [
+    [
+     "T-4437",
+     "Finish the queue audit's..."
+    ],
     [
      "T-4474",
      "Redo an Investor request on..."
@@ -452,10 +456,6 @@
     [
      "T-4458",
      "Stop the other tools..."
-    ],
-    [
-     "T-4480",
-     "Redo stop the other tools..."
     ]
    ]
   }
@@ -499,26 +499,26 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-15T12:08:59Z",
+  "at": "2026-11-15T12:12:18Z",
   "s": {
+   "T-4468": [
+    "merging",
+    "Mac tests at the main gate",
+    1794744678975
+   ],
    "T-4487": [
     "testing",
     "its own tests, in its copy",
-    1794743879190
-   ],
-   "T-4468": [
-    "testing",
-    "its own tests, in its copy",
-    1794744539190
+    1794743898975
    ]
   },
   "nm": {
-   "T-4487": "Wire task states into the land",
-   "T-4468": "Let people set each premade's place, events and lists"
+   "T-4468": "Let people set each premade's place, events and lists",
+   "T-4487": "Wire task states into the land"
   }
  },
  "ln": {
-  "at": "2026-11-15T12:08:59Z",
+  "at": "2026-11-15T12:12:18Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -532,11 +532,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 710,
+    "conflicted": 714,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1439
+    "parked": 1443
    },
    "cur": [],
    "ld": [
@@ -546,12 +546,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-15T12:08:34Z",
-    "ld": 3.63,
+    "at": "2026-11-15T12:11:52Z",
+    "ld": 3.35,
     "c": 8,
     "sb": 0,
     "dk": [
-     20.1,
+     21.0,
      228.3
     ],
     "ss": [
@@ -580,7 +580,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 7 tasks",
+   "t": "Work session \u2013 8 tasks",
    "at": "2026-11-15T06:23:05-05:00"
   }
  ],
@@ -592,11 +592,13 @@
  "trimmed": [
   "lane_next",
   "queue_text",
+  "recent",
   "task_done",
   "fin_short",
   "task_title",
   "done_text",
   "task_open",
+  "fin_six",
   "lane_task",
   "task_next"
  ],
@@ -604,10 +606,10 @@
   "main": 3,
   "lanes": 0,
   "total": 3,
-  "at": "7:09 AM",
+  "at": "7:12 AM",
   "why": "",
-  "at_iso": "2026-11-15T12:09:00+00:00",
+  "at_iso": "2026-11-15T12:12:00+00:00",
   "started": "6:23 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 6:23 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 7:09 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 6:23 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 7:12 AM ET</p></section>"
  }
 }

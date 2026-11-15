@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-15T09:30:17.693377+00:00",
+ "at": "2026-11-15T09:33:21.201127+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -99,25 +99,33 @@
  "workers": [
   {
    "name": "odalys",
-   "task": "[tools] T-4466 open audit lines to all accounts",
+   "task": "[tools] T-4485 fix real-tick land rows red",
    "model": "opus",
-   "started": "2026-11-15T07:11:46.805Z",
-   "seconds": 8310,
+   "started": "2026-11-15T09:24:59.819Z",
+   "seconds": 501,
    "finished": null,
    "effort": "high"
   },
   {
    "name": "odalys",
-   "task": "[tools] T-4485 fix real-tick land rows red",
+   "task": "[tools] T-4470 take Fable off lines",
    "model": "opus",
-   "started": "2026-11-15T09:24:59.819Z",
-   "seconds": 317,
+   "started": "2026-11-15T09:33:07.842Z",
+   "seconds": 13,
    "finished": null,
    "effort": "high"
   }
  ],
  "who": "Odalys x2",
  "recent": [
+  {
+   "name": "odalys",
+   "task": "[tools] T-4466 open audit lines to all accounts",
+   "model": "opus",
+   "started": "2026-11-15T07:11:46.805Z",
+   "seconds": null,
+   "finished": "2026-11-15T09:32:54.275000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[tools] T-4129 land Set aside part 2b",
@@ -141,20 +149,12 @@
    "started": "2026-11-15T07:12:03.686Z",
    "seconds": null,
    "finished": "2026-11-15T07:18:16.347000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[ops] T-4469 audit and site steps first",
-   "model": "opus",
-   "started": "2026-11-15T07:11:55.110Z",
-   "seconds": null,
-   "finished": "2026-11-15T07:17:39.403000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 379,
+  "runnable_count": 378,
   "blocked_count": 78
  },
  "meter": {
@@ -203,7 +203,7 @@
   "week_pct": null,
   "usage_pct": null,
   "work_pct": null,
-  "read_at": "2026-11-15T09:30:00+00:00",
+  "read_at": "2026-11-15T09:33:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -233,14 +233,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-15T04:25:00-05:00",
+   "at": "2026-11-15T04:31:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-15T04:30:00-05:00",
+  "at": "2026-11-15T04:33:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -259,9 +259,9 @@
   {
    "name": "Odalys",
    "state": "running",
-   "task": "[tools] T-4466 open audit lines to all accounts",
+   "task": "[tools] T-4485 fix real-tick land rows red",
    "model": "opus",
-   "since": "2026-11-15T07:11:46.805Z",
+   "since": "2026-11-15T09:24:59.819Z",
    "next": [],
    "effort": "high"
   },
@@ -311,22 +311,22 @@
    {
     "w": "Odalys",
     "k": "tools",
-    "t": "Open the audit lines to every account and any model",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-15T07:11:46.805Z",
-    "o": "i",
-    "task": "T-4466"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
     "t": "Real-tick land rows red on main",
     "m": "opus",
     "e": "high",
     "at": "2026-11-15T09:24:59.819Z",
     "o": "c",
     "task": "T-4485"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Take Fable off every line that does not need it",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-15T09:33:07.842Z",
+    "o": "c",
+    "task": "T-4470"
    }
   ],
   "src": "plan",
@@ -404,6 +404,11 @@
   ],
   "done": [
    {
+    "w": "Odalys",
+    "t": "The queue audit's 19 open tasks are no longer tied to the two Investors' own accounts or to the...",
+    "at": "2026-11-15T04:32:00-05:00"
+   },
+   {
     "w": "Odalys+operator",
     "t": "Work from Evan's account stopped reaching main yesterday afternoon because the records step...",
     "at": "2026-11-15T02:42:00-05:00"
@@ -412,22 +417,21 @@
     "w": "Ines",
     "t": "The build plan and the scope record now follow six Investor answers of Saturday: no iMessage...",
     "at": "2026-11-15T02:18:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "Until the 19th, the dispatcher hands out the open queue-audit and Restructuring steps (site...",
-    "at": "2026-11-15T02:17:00-05:00"
    }
   ],
   "count": {
-   "next": 379,
+   "next": 378,
    "wait": 37,
    "blocked": 41,
    "you": 12
   },
   "fin": {
-   "n": 3,
+   "n": 4,
    "rows": [
+    [
+     "T-4466",
+     "Open the audit lines to..."
+    ],
     [
      "T-4479",
      "Land Evan's account work..."
@@ -482,26 +486,20 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-15T09:30:00Z",
+  "at": "2026-11-15T09:33:09Z",
   "s": {
-   "T-4466": [
-    "merging",
-    "Mac tests at the main gate",
-    1794734760671
-   ],
    "T-4485": [
     "testing",
     "its own tests, in its copy",
-    1794734820671
+    1794735069066
    ]
   },
   "nm": {
-   "T-4466": "Open the audit lines to every account and any model",
    "T-4485": "Real-tick land rows red on main"
   }
  },
  "ln": {
-  "at": "2026-11-15T09:30:00Z",
+  "at": "2026-11-15T09:33:09Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -515,11 +513,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 340,
+    "conflicted": 344,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 2433
+    "parked": 2436
    },
    "cur": [],
    "ld": [
@@ -529,12 +527,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-15T09:30:01Z",
-    "ld": 1.82,
+    "at": "2026-11-15T09:32:42Z",
+    "ld": 1.33,
     "c": 8,
     "sb": 0,
     "dk": [
-     25.0,
+     25.1,
      228.3
     ],
     "ss": [
@@ -563,7 +561,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 5 tasks",
+   "t": "Work session \u2013 6 tasks",
    "at": "2026-11-15T02:10:06-05:00"
   }
  ],
@@ -575,6 +573,7 @@
  "trimmed": [
   "lane_next",
   "queue_text",
+  "recent",
   "task_done",
   "fin_short",
   "task_title",
@@ -587,10 +586,10 @@
   "main": 2,
   "lanes": 0,
   "total": 2,
-  "at": "4:30 AM",
+  "at": "4:33 AM",
   "why": "",
-  "at_iso": "2026-11-15T09:30:00+00:00",
+  "at_iso": "2026-11-15T09:33:00+00:00",
   "started": "2:07 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 2:07 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 4:30 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 2:07 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 4:33 AM ET</p></section>"
  }
 }

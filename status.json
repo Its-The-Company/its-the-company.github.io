@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-15T14:26:53.930677+00:00",
+ "at": "2026-11-15T14:29:57.251787+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -113,32 +113,40 @@
  },
  "workers": [
   {
-   "name": "pernille",
-   "task": "[build] T-4504 Clocks Small long city names",
+   "name": "maren",
+   "task": "[site] T-4513 SSD free space on Machine bubble",
    "model": "opus",
-   "started": "2026-11-15T13:29:47.840Z",
-   "seconds": 3426,
+   "started": "2026-11-15T14:27:32.053Z",
+   "seconds": 145,
    "finished": null
+  }
+ ],
+ "who": "Maren",
+ "recent": [
+  {
+   "name": "odalys",
+   "task": "[ops] T-4509 land reply wording in prompts",
+   "model": "opus",
+   "started": "2026-11-15T14:05:23.579Z",
+   "seconds": null,
+   "finished": "2026-11-15T14:28:30.663000+00:00"
   },
   {
    "name": "odalys",
    "task": "[tools] T-4507 quit apps the company opened",
    "model": "opus",
    "started": "2026-11-15T14:05:18.477Z",
-   "seconds": 1295,
-   "finished": null
+   "seconds": null,
+   "finished": "2026-11-15T14:27:52.922000+00:00"
   },
   {
-   "name": "odalys",
-   "task": "[ops] T-4509 land reply wording in prompts",
+   "name": "pernille",
+   "task": "[build] T-4504 Clocks Small long city names",
    "model": "opus",
-   "started": "2026-11-15T14:05:23.579Z",
-   "seconds": 1290,
-   "finished": null
-  }
- ],
- "who": "Pernille, Odalys x2",
- "recent": [
+   "started": "2026-11-15T13:29:47.840Z",
+   "seconds": null,
+   "finished": "2026-11-15T14:27:12.591000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[tools] T-4487 wire task states into land",
@@ -146,53 +154,29 @@
    "started": "2026-11-15T11:27:02.366Z",
    "seconds": null,
    "finished": "2026-11-15T14:04:08.154000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-4468 premade settings Swift slice 1",
-   "model": "opus",
-   "started": "2026-11-15T13:27:23.628Z",
-   "seconds": null,
-   "finished": "2026-11-15T14:03:54.852000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[site] T-4102 nested queue on Home",
-   "model": "opus",
-   "started": "2026-11-15T12:19:27.863Z",
-   "seconds": null,
-   "finished": "2026-11-15T13:28:56.115000+00:00"
-  },
-  {
-   "name": "pernille",
-   "task": "[build] T-4468 premade settings Python half",
-   "model": "opus",
-   "started": "2026-11-15T12:32:04.296Z",
-   "seconds": null,
-   "finished": "2026-11-15T13:27:06.411000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 386,
+  "runnable_count": 385,
   "blocked_count": 76
  },
  "meter": {
   "five_hour": {
-   "pct": 18.0,
+   "pct": 19.0,
    "resets_at": "2026-11-15T12:00:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-15T09:13:59.188985-05:00",
+   "read_at": "2026-11-15T09:27:58.424673-05:00",
    "source": "live",
-   "left": 82.0,
+   "left": 81.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 6.0,
    "resets_at": "2026-11-22T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-15T09:13:59.188985-05:00",
+   "read_at": "2026-11-15T09:27:58.424673-05:00",
    "source": "live",
    "left": 94.0,
    "left_words": "of your weekly allowance left"
@@ -204,7 +188,7 @@
    "read_at": "2026-11-15T06:22:39.617562-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-15T09:13:59.188985-05:00"
+  "read_at": "2026-11-15T09:27:58.424673-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -224,7 +208,7 @@
   "week_pct": null,
   "usage_pct": null,
   "work_pct": null,
-  "read_at": "2026-11-15T14:26:00+00:00",
+  "read_at": "2026-11-15T14:30:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -236,6 +220,7 @@
     "e": "high",
     "at": "2026-11-15T09:10:17-05:00",
     "n": "Evan",
+    "d": 1,
     "src": "plan-a"
    },
    {
@@ -283,7 +268,7 @@
   }
  ],
  "disk": {
-  "free_gb": 21,
+  "free_gb": 20,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -292,14 +277,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-15T09:21:00-05:00",
+   "at": "2026-11-15T09:27:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-15T09:26:00-05:00",
+  "at": "2026-11-15T09:30:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -316,19 +301,11 @@
  },
  "lanes": [
   {
-   "name": "Pernille",
+   "name": "Maren",
    "state": "running",
-   "task": "[build] T-4504 Clocks Small long city names",
+   "task": "[site] T-4513 SSD free space on Machine bubble",
    "model": "opus",
-   "since": "2026-11-15T13:29:47.840Z",
-   "next": []
-  },
-  {
-   "name": "Odalys",
-   "state": "running",
-   "task": "[tools] T-4507 quit apps the company opened",
-   "model": "opus",
-   "since": "2026-11-15T14:05:18.477Z",
+   "since": "2026-11-15T14:27:32.053Z",
    "next": []
   },
   {
@@ -348,17 +325,25 @@
    "next": []
   },
   {
-   "name": "Wrenna",
+   "name": "Pernille",
    "state": "next",
-   "task": "Wrenna, P2, T-2375 continuation (B-staged item 3...",
+   "task": "Pernille, P1, premades and gallery take the age line...",
    "model": null,
    "since": null,
    "next": []
   },
   {
-   "name": "Maren",
+   "name": "Odalys",
    "state": "next",
-   "task": "Maren, P2, found on T-3366 (11-07): in...",
+   "task": "A lane record main refused: failed...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
+   "name": "Wrenna",
+   "state": "next",
+   "task": "Wrenna, P2, T-2375 continuation (B-staged item 3...",
    "model": null,
    "since": null,
    "next": []
@@ -367,31 +352,13 @@
  "tasks": {
   "run": [
    {
-    "w": "Pernille",
-    "k": "build",
-    "t": "Let long city names give way in Clocks Small",
+    "w": "Maren",
+    "k": "site",
+    "t": "Show the SSD's free space on the Machine bubble",
     "m": "opus",
-    "at": "2026-11-15T13:29:47.840Z",
+    "at": "2026-11-15T14:27:32.053Z",
     "o": "c",
-    "task": "T-4504"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Let the company quit apps it opened itself",
-    "m": "opus",
-    "at": "2026-11-15T14:05:18.477Z",
-    "o": "c",
-    "task": "T-4507"
-   },
-   {
-    "w": "Odalys",
-    "k": "ops",
-    "t": "Name the Investor in reply openings",
-    "m": "opus",
-    "at": "2026-11-15T14:05:23.579Z",
-    "o": "c",
-    "task": "T-4509"
+    "task": "T-4513"
    }
   ],
   "src": "plan",
@@ -470,29 +437,37 @@
   "done": [
    {
     "w": "Odalys",
-    "t": "When a lane's work is parked, keeps coming back, or has a record refused, the system now marks...",
-    "at": "2026-11-15T09:03:00-05:00"
+    "t": "The company now has a tool that keeps a list of the apps it opened itself and will quit only...",
+    "at": "2026-11-15T09:27:00-05:00"
+   },
+   {
+    "w": "Pernille",
+    "t": "In the small World clocks widget a long city name now shrinks and then trims at its end, and the...",
+    "at": "2026-11-15T09:27:00-05:00"
    },
    {
     "w": "Odalys",
-    "t": "No redo was needed: the earlier work that hands the land's record commits to the 15-minute...",
-    "at": "2026-11-15T08:37:00-05:00"
-   },
-   {
-    "w": "Operator+odalys",
-    "t": "The cap on audit and Restructuring sessions on Evan's account is gone from code and settings, a...",
-    "at": "2026-11-15T08:32:00-05:00"
+    "t": "When a lane's work is parked, keeps coming back, or has a record refused, the system now marks...",
+    "at": "2026-11-15T09:03:00-05:00"
    }
   ],
   "count": {
-   "next": 386,
+   "next": 385,
    "wait": 35,
    "blocked": 41,
    "you": 12
   },
   "fin": {
-   "n": 13,
+   "n": 15,
    "rows": [
+    [
+     "T-4507",
+     "Let the company quit apps it..."
+    ],
+    [
+     "T-4504",
+     "Let long city names give way..."
+    ],
     [
      "T-4487",
      "Wire task states into the land"
@@ -508,14 +483,6 @@
     [
      "T-4102",
      "Show the queue nested on..."
-    ],
-    [
-     "T-4304",
-     "Write the Handbook note on..."
-    ],
-    [
-     "T-4501",
-     "Settle the GitLab pages read..."
     ]
    ]
   }
@@ -559,56 +526,38 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-15T14:26:44Z",
+  "at": "2026-11-15T14:29:57Z",
   "s": {
    "T-4482": [
     "merging",
     "Host checks on the Mac mini \u00b7 5 groups of tests done",
-    1794752564388
+    1794752517251
    ],
    "T-4009": [
     "merging",
     "Host checks on the Mac mini \u00b7 5 groups of tests done",
-    1794752564388
+    1794752517251
    ],
    "T-4472": [
     "mergeq",
     "3rd to merge",
-    1794752804388
-   ],
-   "T-4504": [
-    "mergetest",
-    "iPhone tests on the MacBook",
-    null
-   ],
-   "T-4507": [
-    "merging",
-    "Mac tests at the main gate",
-    1794752324388
+    1794752817251
    ],
    "T-4129": [
     "merging",
     "Mac tests at the main gate",
-    1794751844388
-   ],
-   "T-4509": [
-    "testing",
-    "its own tests, in its copy",
-    1794751604388
+    1794751857251
    ]
   },
   "nm": {
    "T-4482": "Redo commit queued board records with the records round",
    "T-4009": "Raise the 5-hour stop from 90% toward 100%",
    "T-4472": "Measure the queue check rules the replay could not",
-   "T-4504": "Let long city names give way in Clocks Small",
-   "T-4507": "Let the company quit apps it opened itself",
-   "T-4129": "Retire the Set aside stage on Home",
-   "T-4509": "Name the Investor in reply openings"
+   "T-4129": "Retire the Set aside stage on Home"
   }
  },
  "ln": {
-  "at": "2026-11-15T14:26:44Z",
+  "at": "2026-11-15T14:29:57Z",
   "mq": {
    "n": {
     "checking": 2,
@@ -620,13 +569,13 @@
     "parked": 3
    },
    "m": {
-    "checking": 4,
-    "inline": 0,
-    "conflicted": 864,
+    "checking": 8,
+    "inline": 3,
+    "conflicted": 868,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 2728
+    "parked": 2731
    },
    "cur": [
     [
@@ -635,7 +584,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     4
+     8
     ],
     [
      [
@@ -643,7 +592,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     4
+     8
     ]
    ],
    "ld": [
@@ -653,12 +602,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-15T14:26:15Z",
-    "ld": 4.92,
+    "at": "2026-11-15T14:29:29Z",
+    "ld": 4.67,
     "c": 8,
     "sb": 0,
     "dk": [
-     21.1,
+     20.3,
      228.3
     ],
     "ss": [
@@ -668,12 +617,12 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-15T14:19:24Z",
-    "ld": 0.57,
+    "at": "2026-11-15T14:26:41Z",
+    "ld": 1.36,
     "c": 12,
     "sb": 0,
     "dk": [
-     364.1,
+     363.3,
      926.4
     ],
     "sn": []
@@ -687,7 +636,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 13 tasks",
+   "t": "Work session \u2013 14 tasks",
    "at": "2026-11-15T09:10:04-05:00"
   },
   {
@@ -696,7 +645,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 2 tasks",
+   "t": "Work session \u2013 1 task",
    "at": "2026-11-15T09:10:17-05:00"
   }
  ],
@@ -719,13 +668,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 3,
+  "main": 1,
   "lanes": 1,
-  "total": 4,
-  "at": "9:26 AM",
+  "total": 2,
+  "at": "9:30 AM",
   "why": "",
-  "at_iso": "2026-11-15T14:26:00+00:00",
+  "at_iso": "2026-11-15T14:30:00+00:00",
   "started": "6:23 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 3, started 6:23 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 9:26 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 1, started 6:23 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 9:30 AM ET</p></section>"
  }
 }

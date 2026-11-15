@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-15T16:43:08.665091+00:00",
+ "at": "2026-11-15T16:46:11.360949+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -106,7 +106,7 @@
    "task": "[build] T-2869 pyc-only completion test",
    "model": "opus",
    "started": "2026-11-15T15:08:06.419Z",
-   "seconds": 5702,
+   "seconds": 5884,
    "finished": null,
    "effort": "high"
   },
@@ -115,22 +115,21 @@
    "task": "[build] T-3282 cap run marker read",
    "model": "opus",
    "started": "2026-11-15T16:13:09.853Z",
-   "seconds": 1798,
+   "seconds": 1981,
    "finished": null,
    "effort": "high"
-  },
+  }
+ ],
+ "who": "Idris x2",
+ "recent": [
   {
    "name": "idris",
    "task": "[review] T-4312 https shim fixes",
    "model": "opus",
    "started": "2026-11-15T16:32:26.790Z",
-   "seconds": 641,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Idris x3",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-15T16:45:57.961000+00:00"
+  },
   {
    "name": "pernille",
    "task": "[build] T-4505 Distance Small far values",
@@ -154,20 +153,12 @@
    "started": "2026-11-15T15:40:08.207Z",
    "seconds": null,
    "finished": "2026-11-15T15:46:05.706000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-2491 stuck extension folders",
-   "model": "opus",
-   "started": "2026-11-15T15:07:59.962Z",
-   "seconds": null,
-   "finished": "2026-11-15T15:39:14.167000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 384,
+  "runnable_count": 383,
   "blocked_count": 76
  },
  "meter": {
@@ -216,7 +207,7 @@
   "week_pct": 2.36,
   "usage_pct": 27.2,
   "work_pct": 75.0,
-  "read_at": "2026-11-15T16:43:00+00:00",
+  "read_at": "2026-11-15T16:46:00+00:00",
   "running": [
    {
     "lane": "b3",
@@ -290,7 +281,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-15T11:43:00-05:00",
+  "at": "2026-11-15T11:46:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -377,16 +368,6 @@
     "at": "2026-11-15T16:13:09.853Z",
     "o": "c",
     "task": "T-3282"
-   },
-   {
-    "w": "Idris",
-    "k": "review",
-    "t": "Review the https shim fixes",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-15T16:32:26.790Z",
-    "o": "c",
-    "task": "T-4312"
    }
   ],
   "src": "plan",
@@ -464,6 +445,11 @@
   ],
   "done": [
    {
+    "w": "Idris",
+    "t": "The fixes to the not-yet-switched-on secure web connection layer are checked and hold: proxies...",
+    "at": "2026-11-15T11:44:00-05:00"
+   },
+   {
     "w": "Pernille",
     "t": "The Distance widget's small size cut off far distances like 5,421.7 km to a place abroad. From...",
     "at": "2026-11-15T11:31:00-05:00"
@@ -472,22 +458,21 @@
     "w": "Odalys",
     "t": "The automatic queue check's closing rules never acted wrongly on ten past boards (53 actions,...",
     "at": "2026-11-15T11:21:00-05:00"
-   },
-   {
-    "w": "Idris",
-    "t": "The notes and a test name around the fix for deleted widgets coming back now say exactly what...",
-    "at": "2026-11-15T11:12:00-05:00"
    }
   ],
   "count": {
-   "next": 384,
+   "next": 383,
    "wait": 35,
    "blocked": 41,
    "you": 12
   },
   "fin": {
-   "n": 6,
+   "n": 7,
    "rows": [
+    [
+     "T-4312",
+     "Review the https shim fixes"
+    ],
     [
      "T-4505",
      "Fit far distances in..."
@@ -507,10 +492,6 @@
     [
      "T-4520",
      "Review the deleted widget..."
-    ],
-    [
-     "T-2491",
-     "Stop the stuck extension..."
     ]
    ]
   }
@@ -554,7 +535,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-15T16:42:48Z",
+  "at": "2026-11-15T16:45:59Z",
   "s": {
    "T-2869": [
     "mergetest",
@@ -564,7 +545,7 @@
    "T-3282": [
     "merging",
     "Mac tests at the main gate",
-    1794760968667
+    1794760979388
    ]
   },
   "nm": {
@@ -573,7 +554,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-15T16:42:48Z",
+  "at": "2026-11-15T16:45:59Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -587,11 +568,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 1000,
+    "conflicted": 1004,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 2864
+    "parked": 2867
    },
    "cur": [],
    "ld": [
@@ -601,8 +582,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-15T16:42:53Z",
-    "ld": 5.75,
+    "at": "2026-11-15T16:46:01Z",
+    "ld": 7.04,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -656,22 +637,24 @@
  "trimmed": [
   "lane_next",
   "queue_text",
+  "recent",
   "task_done",
   "fin_short",
   "task_title",
   "done_text",
   "task_open",
+  "fin_six",
   "lane_task",
   "task_next"
  ],
  "agents_now": {
-  "main": 3,
+  "main": 2,
   "lanes": 1,
-  "total": 4,
-  "at": "11:43 AM",
+  "total": 3,
+  "at": "11:46 AM",
   "why": "",
-  "at_iso": "2026-11-15T16:43:00+00:00",
+  "at_iso": "2026-11-15T16:46:00+00:00",
   "started": "10:05 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 3, started 10:05 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 11:43 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 10:05 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 11:46 AM ET</p></section>"
  }
 }

@@ -1,12 +1,20 @@
 {
  "schema": 1,
- "at": "2026-11-15T13:10:24.861967+00:00",
+ "at": "2026-11-15T13:13:26.003266+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-15T06:23:05-05:00",
   "flow": [],
   "done": [
+   {
+    "t": "T-4473",
+    "name": "Redo replay the queue check against the audit's verdicts",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794748286
+   },
    {
     "t": "T-4474",
     "name": "Redo an Investor request on fresh main",
@@ -76,17 +84,9 @@
     "steps": [],
     "end": "landed",
     "end_at": 1794737611
-   },
-   {
-    "t": "T-3806",
-    "name": "Answer Investor messages that no session claims",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794732453
    }
   ],
-  "landed": 13,
+  "landed": 14,
   "failed": 4
  },
  "workers": [
@@ -95,7 +95,7 @@
    "task": "[tools] T-4487 wire task states into land",
    "model": "opus",
    "started": "2026-11-15T11:27:02.366Z",
-   "seconds": 6202,
+   "seconds": 6383,
    "finished": null
   },
   {
@@ -103,7 +103,7 @@
    "task": "[site] T-4102 nested queue on Home",
    "model": "opus",
    "started": "2026-11-15T12:19:27.863Z",
-   "seconds": 3056,
+   "seconds": 3238,
    "finished": null
   },
   {
@@ -111,7 +111,7 @@
    "task": "[build] T-4468 premade settings Python half",
    "model": "opus",
    "started": "2026-11-15T12:32:04.296Z",
-   "seconds": 2300,
+   "seconds": 2481,
    "finished": null
   }
  ],
@@ -153,7 +153,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 378,
+  "runnable_count": 379,
   "blocked_count": 77
  },
  "meter": {
@@ -202,7 +202,7 @@
   "week_pct": null,
   "usage_pct": null,
   "work_pct": null,
-  "read_at": "2026-11-15T13:10:00+00:00",
+  "read_at": "2026-11-15T13:13:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -239,7 +239,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-15T08:10:00-05:00",
+  "at": "2026-11-15T08:13:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -425,7 +425,7 @@
    }
   ],
   "count": {
-   "next": 378,
+   "next": 379,
    "wait": 36,
    "blocked": 41,
    "you": 12
@@ -499,32 +499,32 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-15T13:10:08Z",
+  "at": "2026-11-15T13:13:19Z",
   "s": {
    "T-4487": [
     "merging",
     "Mac tests at the main gate",
-    1794748028495
+    1794748039778
+   ],
+   "T-4468": [
+    "merging",
+    "Mac tests at the main gate",
+    1794748279778
    ],
    "T-4102": [
     "testing",
     "its own tests, in its copy",
-    1794745928495
-   ],
-   "T-4468": [
-    "testing",
-    "its own tests, in its copy",
-    1794746948495
+    1794745939778
    ]
   },
   "nm": {
    "T-4487": "Wire task states into the land",
-   "T-4102": "Show the queue nested on Home with search",
-   "T-4468": "Let people set each premade's place, events and lists"
+   "T-4468": "Let people set each premade's place, events and lists",
+   "T-4102": "Show the queue nested on Home with search"
   }
  },
  "ln": {
-  "at": "2026-11-15T13:10:08Z",
+  "at": "2026-11-15T13:13:19Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -532,32 +532,32 @@
     "conflicted": 3,
     "failed": 0,
     "held": 0,
-    "retry": 1,
+    "retry": 0,
     "parked": 3
    },
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 772,
+    "conflicted": 775,
     "failed": null,
     "held": null,
-    "retry": 16,
-    "parked": 2651
+    "retry": null,
+    "parked": 2655
    },
    "cur": [],
    "ld": [
-    13,
-    "2026-11-15T12:03:40Z"
+    14,
+    "2026-11-15T13:11:26Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-15T13:09:23Z",
-    "ld": 1.64,
+    "at": "2026-11-15T13:12:33Z",
+    "ld": 1.99,
     "c": 8,
     "sb": 0,
     "dk": [
-     18.8,
+     19.7,
      228.3
     ],
     "ss": [
@@ -612,10 +612,10 @@
   "main": 3,
   "lanes": 0,
   "total": 3,
-  "at": "8:10 AM",
+  "at": "8:13 AM",
   "why": "",
-  "at_iso": "2026-11-15T13:10:00+00:00",
+  "at_iso": "2026-11-15T13:13:00+00:00",
   "started": "6:23 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 6:23 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 8:10 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 6:23 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 8:13 AM ET</p></section>"
  }
 }

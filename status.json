@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-15T21:03:30.025329+00:00",
+ "at": "2026-11-15T21:06:35.756177+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -118,7 +118,7 @@
    "task": "[tools] T-3992 land the pipeline batch",
    "model": "opus",
    "started": "2026-11-15T20:27:24.942Z",
-   "seconds": 2165,
+   "seconds": 2350,
    "finished": null,
    "effort": "high"
   },
@@ -127,22 +127,21 @@
    "task": "[review] T-4532 premade lock review and Swift half",
    "model": "opus",
    "started": "2026-11-15T20:40:40.307Z",
-   "seconds": 1369,
+   "seconds": 1555,
    "finished": null,
    "effort": "high"
-  },
+  }
+ ],
+ "who": "Odalys, Idris",
+ "recent": [
   {
    "name": "ines",
    "task": "[plan] T-4502 close audit held rows",
    "model": "opus",
    "started": "2026-11-15T20:40:58.504Z",
-   "seconds": 1351,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Odalys, Idris, Ines",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-15T21:06:14.195000+00:00"
+  },
   {
    "name": "pernille",
    "task": "[build] T-4468 premade settings H1 Python half",
@@ -166,37 +165,29 @@
    "started": "2026-11-15T19:51:18.433Z",
    "seconds": null,
    "finished": "2026-11-15T20:10:41.239000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[ios] T-4311 net.request certificate errors",
-   "model": "opus",
-   "started": "2026-11-15T19:51:11.422Z",
-   "seconds": null,
-   "finished": "2026-11-15T19:51:11.568Z"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 374,
-  "blocked_count": 76
+  "runnable_count": 373,
+  "blocked_count": 75
  },
  "meter": {
   "five_hour": {
-   "pct": 20.0,
+   "pct": 21.0,
    "resets_at": "2026-11-15T17:00:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-15T15:51:34.736542-05:00",
+   "read_at": "2026-11-15T16:05:42.535824-05:00",
    "source": "live",
-   "left": 80.0,
+   "left": 79.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 11.0,
    "resets_at": "2026-11-22T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-15T15:51:34.736542-05:00",
+   "read_at": "2026-11-15T16:05:42.535824-05:00",
    "source": "live",
    "left": 89.0,
    "left_words": "of your weekly allowance left"
@@ -208,7 +199,7 @@
    "read_at": "2026-11-15T14:00:25.240335-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-15T15:51:34.736542-05:00"
+  "read_at": "2026-11-15T16:05:42.535824-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -228,7 +219,7 @@
   "week_pct": 3.22,
   "usage_pct": 26.1,
   "work_pct": 75.0,
-  "read_at": "2026-11-15T21:03:00+00:00",
+  "read_at": "2026-11-15T21:06:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -258,14 +249,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-15T15:58:00-05:00",
+   "at": "2026-11-15T16:05:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-15T16:03:00-05:00",
+  "at": "2026-11-15T16:06:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -301,12 +292,11 @@
   },
   {
    "name": "Ines",
-   "state": "running",
-   "task": "[plan] T-4502 close audit held rows",
-   "model": "opus",
-   "since": "2026-11-15T20:40:58.504Z",
-   "next": [],
-   "effort": "high"
+   "state": "next",
+   "task": "Ines, P2, from T-1110 (Wrenna,...",
+   "model": null,
+   "since": null,
+   "next": []
   },
   {
    "name": "Pernille",
@@ -354,16 +344,6 @@
     "at": "2026-11-15T20:40:40.307Z",
     "o": "c",
     "task": "T-4532"
-   },
-   {
-    "w": "Ines",
-    "k": "plan",
-    "t": "Close the queue audit's last held rows",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-15T20:40:58.504Z",
-    "o": "c",
-    "task": "T-4502"
    }
   ],
   "src": "plan",
@@ -441,30 +421,38 @@
   ],
   "done": [
    {
+    "w": "Ines",
+    "t": "The queue audit's last held lines are settled: one rewritten, one folded into its twin, four app...",
+    "at": "2026-11-15T16:06:00-05:00"
+   },
+   {
+    "w": "Ines",
+    "t": "The release milestones were re-dated after the push ended, the Investors were told on their...",
+    "at": "2026-11-15T16:03:00-05:00"
+   },
+   {
     "w": "Odalys",
     "t": "The automatic check that keeps the task list honest is now switched on: it files stray app fixes...",
     "at": "2026-11-15T15:26:00-05:00"
-   },
-   {
-    "w": "Idris",
-    "t": "When a script's secure web call fails, the app now tells a bad server certificate apart from a...",
-    "at": "2026-11-15T15:10:00-05:00"
-   },
-   {
-    "w": "Odalys+ines",
-    "t": "The queue check ran without changing anything on all 453 open tasks; Ines read the result and...",
-    "at": "2026-11-15T14:47:00-05:00"
    }
   ],
   "count": {
-   "next": 374,
+   "next": 373,
    "wait": 35,
-   "blocked": 41,
-   "you": 12
+   "blocked": 40,
+   "you": 11
   },
   "fin": {
-   "n": 8,
+   "n": 10,
    "rows": [
+    [
+     "T-4502",
+     "Close the queue audit's last..."
+    ],
+    [
+     "T-3386",
+     "Re-date the milestones after..."
+    ],
     [
      "T-4449",
      "Switch the queue check on"
@@ -480,14 +468,6 @@
     [
      "T-4447",
      "Replay the queue check..."
-    ],
-    [
-     "T-4473",
-     "Redo replay the queue check..."
-    ],
-    [
-     "T-4490",
-     "Measure two overdue..."
     ]
    ]
   }
@@ -531,12 +511,12 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-15T21:03:13Z",
+  "at": "2026-11-15T21:06:21Z",
   "s": {
    "T-4227": [
     "merging",
     "Host checks on the Mac mini \u00b7 3 groups of tests done",
-    1794776233299
+    1794776241935
    ],
    "T-4532": [
     "mergetest",
@@ -546,23 +526,17 @@
    "T-3992": [
     "testing",
     "its own tests, in its copy",
-    1794774553299
-   ],
-   "T-4502": [
-    "testing",
-    "its own tests, in its copy",
-    1794776473299
+    1794774561935
    ]
   },
   "nm": {
    "T-4227": "Run every Operator on Opus high",
    "T-4532": "Review the premade file lock, then add Swift's half",
-   "T-3992": "Clear and merge the unfinished merge fixes",
-   "T-4502": "Close the queue audit's last held rows"
+   "T-3992": "Clear and merge the unfinished merge fixes"
   }
  },
  "ln": {
-  "at": "2026-11-15T21:03:13Z",
+  "at": "2026-11-15T21:06:21Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -574,13 +548,13 @@
     "parked": 2
    },
    "m": {
-    "checking": 6,
+    "checking": 9,
     "inline": null,
-    "conflicted": 1245,
+    "conflicted": 1248,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 473
+    "parked": 477
    },
    "cur": [
     [
@@ -589,7 +563,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     6
+     9
     ]
    ],
    "ld": [
@@ -599,12 +573,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-15T21:02:50Z",
-    "ld": 7.56,
+    "at": "2026-11-15T21:06:23Z",
+    "ld": 6.52,
     "c": 8,
     "sb": 0,
     "dk": [
-     14.3,
+     14.4,
      228.3
     ],
     "ss": [
@@ -633,7 +607,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 4 tasks",
+   "t": "Work session \u2013 3 tasks",
    "at": "2026-11-15T15:17:23-05:00"
   }
  ],
@@ -656,13 +630,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 3,
+  "main": 2,
   "lanes": 0,
-  "total": 3,
-  "at": "4:03 PM",
+  "total": 2,
+  "at": "4:06 PM",
   "why": "",
-  "at_iso": "2026-11-15T21:03:00+00:00",
+  "at_iso": "2026-11-15T21:06:00+00:00",
   "started": "2:00 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 2:00 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 4:03 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 2:00 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 4:06 PM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-15T09:36:25.498749+00:00",
+ "at": "2026-11-15T09:39:29.461350+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -102,22 +102,39 @@
    "task": "[tools] T-4485 fix real-tick land rows red",
    "model": "opus",
    "started": "2026-11-15T09:24:59.819Z",
-   "seconds": 685,
+   "seconds": 869,
    "finished": null,
    "effort": "high"
   },
   {
    "name": "odalys",
-   "task": "[tools] T-4470 take Fable off lines",
+   "task": "[tools] T-4486 refuse Fable without Fable task",
    "model": "opus",
-   "started": "2026-11-15T09:33:07.842Z",
-   "seconds": 197,
+   "started": "2026-11-15T09:39:16.911Z",
+   "seconds": 12,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-4481 redo task states (T-4445)",
+   "model": "opus",
+   "started": "2026-11-15T09:39:25.162Z",
+   "seconds": 4,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Odalys x2",
+ "who": "Odalys x3",
  "recent": [
+  {
+   "name": "odalys",
+   "task": "[tools] T-4470 take Fable off lines",
+   "model": "opus",
+   "started": "2026-11-15T09:33:07.842Z",
+   "seconds": null,
+   "finished": "2026-11-15T09:38:26.340000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[tools] T-4466 open audit lines to all accounts",
@@ -141,14 +158,6 @@
    "started": "2026-11-15T07:19:25.179Z",
    "seconds": null,
    "finished": "2026-11-15T07:40:57.121000+00:00"
-  },
-  {
-   "name": "ines",
-   "task": "[plan] T-4465 plan in line with six answers",
-   "model": "opus",
-   "started": "2026-11-15T07:12:03.686Z",
-   "seconds": null,
-   "finished": "2026-11-15T07:18:16.347000+00:00"
   }
  ],
  "queue": {
@@ -159,19 +168,19 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 8.0,
+   "pct": 9.0,
    "resets_at": "2026-11-15T07:00:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-15T04:25:22.972465-05:00",
+   "read_at": "2026-11-15T04:37:45.615169-05:00",
    "source": "live",
-   "left": 92.0,
+   "left": 91.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 1.0,
    "resets_at": "2026-11-22T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-15T04:25:22.972465-05:00",
+   "read_at": "2026-11-15T04:37:45.615169-05:00",
    "source": "live",
    "left": 99.0,
    "left_words": "of your weekly allowance left"
@@ -183,7 +192,7 @@
    "read_at": "2026-11-15T02:06:47.356160-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-15T04:25:22.972465-05:00"
+  "read_at": "2026-11-15T04:37:45.615169-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -203,7 +212,7 @@
   "week_pct": null,
   "usage_pct": null,
   "work_pct": null,
-  "read_at": "2026-11-15T09:36:00+00:00",
+  "read_at": "2026-11-15T09:39:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -233,14 +242,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-15T04:31:00-05:00",
+   "at": "2026-11-15T04:37:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-15T04:36:00-05:00",
+  "at": "2026-11-15T04:39:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -321,12 +330,22 @@
    {
     "w": "Odalys",
     "k": "tools",
-    "t": "Take Fable off every line that does not need it",
+    "t": "Refuse Fable in sessions with no Fable task",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-15T09:33:07.842Z",
+    "at": "2026-11-15T09:39:16.911Z",
     "o": "c",
-    "task": "T-4470"
+    "task": "T-4486"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Redo show task states in place of new lines",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-15T09:39:25.162Z",
+    "o": "c",
+    "task": "T-4481"
    }
   ],
   "src": "plan",
@@ -405,6 +424,11 @@
   "done": [
    {
     "w": "Odalys",
+    "t": "Three waiting tasks were still set to run on Fable, the scarcest model, with no reason given;...",
+    "at": "2026-11-15T04:37:00-05:00"
+   },
+   {
+    "w": "Odalys",
     "t": "The queue audit's 19 open tasks are no longer tied to the two Investors' own accounts or to the...",
     "at": "2026-11-15T04:32:00-05:00"
    },
@@ -412,11 +436,6 @@
     "w": "Odalys+operator",
     "t": "Work from Evan's account stopped reaching main yesterday afternoon because the records step...",
     "at": "2026-11-15T02:42:00-05:00"
-   },
-   {
-    "w": "Ines",
-    "t": "The build plan and the scope record now follow six Investor answers of Saturday: no iMessage...",
-    "at": "2026-11-15T02:18:00-05:00"
    }
   ],
   "count": {
@@ -426,8 +445,12 @@
    "you": 12
   },
   "fin": {
-   "n": 4,
+   "n": 5,
    "rows": [
+    [
+     "T-4470",
+     "Take Fable off every line..."
+    ],
     [
      "T-4466",
      "Open the audit lines to..."
@@ -486,12 +509,12 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-15T09:36:12Z",
+  "at": "2026-11-15T09:39:29Z",
   "s": {
    "T-4485": [
     "testing",
     "its own tests, in its copy",
-    1794735252280
+    1794735449461
    ]
   },
   "nm": {
@@ -499,7 +522,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-15T09:36:12Z",
+  "at": "2026-11-15T09:39:29Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -513,11 +536,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 347,
+    "conflicted": 350,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 2439
+    "parked": 2443
    },
    "cur": [],
    "ld": [
@@ -527,8 +550,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-15T09:35:52Z",
-    "ld": 2.26,
+    "at": "2026-11-15T09:38:52Z",
+    "ld": 2.37,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -538,17 +561,6 @@
     "ss": [
      186.0,
      953.7
-    ],
-    "sn": []
-   },
-   "macbook": {
-    "at": "2026-11-15T08:56:38Z",
-    "ld": 0.26,
-    "c": 12,
-    "sb": 0,
-    "dk": [
-     369.3,
-     926.4
     ],
     "sn": []
    }
@@ -561,7 +573,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 6 tasks",
+   "t": "Work session \u2013 8 tasks",
    "at": "2026-11-15T02:10:06-05:00"
   }
  ],
@@ -583,13 +595,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 2,
+  "main": 3,
   "lanes": 0,
-  "total": 2,
-  "at": "4:36 AM",
+  "total": 3,
+  "at": "4:39 AM",
   "why": "",
-  "at_iso": "2026-11-15T09:36:00+00:00",
+  "at_iso": "2026-11-15T09:39:00+00:00",
   "started": "2:07 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 2:07 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 4:36 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 2:07 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 4:39 AM ET</p></section>"
  }
 }

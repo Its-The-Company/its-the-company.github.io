@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-15T16:46:11.360949+00:00",
+ "at": "2026-11-15T16:49:15.411849+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -106,7 +106,7 @@
    "task": "[build] T-2869 pyc-only completion test",
    "model": "opus",
    "started": "2026-11-15T15:08:06.419Z",
-   "seconds": 5884,
+   "seconds": 6068,
    "finished": null,
    "effort": "high"
   },
@@ -115,12 +115,21 @@
    "task": "[build] T-3282 cap run marker read",
    "model": "opus",
    "started": "2026-11-15T16:13:09.853Z",
-   "seconds": 1981,
+   "seconds": 2165,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "pernille",
+   "task": "[build] T-4524 https host fixes",
+   "model": "opus",
+   "started": "2026-11-15T16:46:36.927Z",
+   "seconds": 158,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Idris x2",
+ "who": "Idris x2, Pernille",
  "recent": [
   {
    "name": "idris",
@@ -158,7 +167,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 383,
+  "runnable_count": 386,
   "blocked_count": 76
  },
  "meter": {
@@ -207,7 +216,7 @@
   "week_pct": 2.36,
   "usage_pct": 27.2,
   "work_pct": 75.0,
-  "read_at": "2026-11-15T16:46:00+00:00",
+  "read_at": "2026-11-15T16:49:00+00:00",
   "running": [
    {
     "lane": "b3",
@@ -281,7 +290,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-15T11:46:00-05:00",
+  "at": "2026-11-15T11:49:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -307,17 +316,18 @@
    "effort": "high"
   },
   {
+   "name": "Pernille",
+   "state": "running",
+   "task": "[build] T-4524 https host fixes",
+   "model": "opus",
+   "since": "2026-11-15T16:46:36.927Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
    "name": "Ines",
    "state": "next",
    "task": "Ines, P2, from T-1110 (Wrenna,...",
-   "model": null,
-   "since": null,
-   "next": []
-  },
-  {
-   "name": "Pernille",
-   "state": "next",
-   "task": "Pernille, P1, premades and gallery take the age line...",
    "model": null,
    "since": null,
    "next": []
@@ -368,6 +378,16 @@
     "at": "2026-11-15T16:13:09.853Z",
     "o": "c",
     "task": "T-3282"
+   },
+   {
+    "w": "Pernille",
+    "k": "build",
+    "t": "Keep every https request on its own host",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-15T16:46:36.927Z",
+    "o": "c",
+    "task": "T-4524"
    }
   ],
   "src": "plan",
@@ -461,7 +481,7 @@
    }
   ],
   "count": {
-   "next": 383,
+   "next": 386,
    "wait": 35,
    "blocked": 41,
    "you": 12
@@ -535,7 +555,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-15T16:45:59Z",
+  "at": "2026-11-15T16:49:02Z",
   "s": {
    "T-2869": [
     "mergetest",
@@ -545,7 +565,7 @@
    "T-3282": [
     "merging",
     "Mac tests at the main gate",
-    1794760979388
+    1794760982048
    ]
   },
   "nm": {
@@ -554,7 +574,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-15T16:45:59Z",
+  "at": "2026-11-15T16:49:02Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -568,11 +588,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 1004,
+    "conflicted": 1007,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 2867
+    "parked": 2870
    },
    "cur": [],
    "ld": [
@@ -582,12 +602,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-15T16:46:01Z",
-    "ld": 7.04,
+    "at": "2026-11-15T16:49:03Z",
+    "ld": 6.65,
     "c": 8,
     "sb": 0,
     "dk": [
-     15.5,
+     14.5,
      228.3
     ],
     "ss": [
@@ -616,7 +636,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 8 tasks",
+   "t": "Work session \u2013 11 tasks",
    "at": "2026-11-15T11:33:48-05:00"
   },
   {
@@ -648,13 +668,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 2,
+  "main": 3,
   "lanes": 1,
-  "total": 3,
-  "at": "11:46 AM",
+  "total": 4,
+  "at": "11:49 AM",
   "why": "",
-  "at_iso": "2026-11-15T16:46:00+00:00",
+  "at_iso": "2026-11-15T16:49:00+00:00",
   "started": "10:05 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 10:05 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 11:46 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 3, started 10:05 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 11:49 AM ET</p></section>"
  }
 }

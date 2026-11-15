@@ -1,19 +1,19 @@
 {
  "schema": 1,
- "at": "2026-11-15T23:00:23.670532+00:00",
+ "at": "2026-11-15T23:03:26.109237+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-15T17:14:43-05:00",
   "flow": [
    {
-    "t": "T-4227",
-    "name": "Run every Operator on Opus high",
-    "acct": "Personal b",
+    "t": "T-4282",
+    "name": "Measure real scripts inside the widget on phones",
+    "acct": "Personal a",
     "steps": [
      {
       "s": "testq",
-      "at": 1794782161
+      "at": 1794783739
      }
     ]
    },
@@ -30,6 +30,23 @@
    }
   ],
   "done": [
+   {
+    "t": "T-4293",
+    "name": "Show skipped and brief stages on Home",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794783674
+   },
+   {
+    "t": "T-4227",
+    "name": "Run every Operator on Opus high",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "failed",
+    "end_at": 1794783663,
+    "why": "tests failed"
+   },
    {
     "t": "T-4227",
     "name": "Run every Operator on Opus high",
@@ -97,25 +114,10 @@
     "end": "failed",
     "end_at": 1794767908,
     "why": "tests failed"
-   },
-   {
-    "t": "T-4284",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794766368
-   },
-   {
-    "t": "T-4247",
-    "name": "Stopped pinned task goes back on the menu by itself",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794759682
    }
   ],
-  "landed": 20,
-  "failed": 5
+  "landed": 21,
+  "failed": 6
  },
  "workers": [
   {
@@ -123,7 +125,7 @@
    "task": "[tools] T-3992 land the pipeline batch",
    "model": "opus",
    "started": "2026-11-15T22:17:17.812Z",
-   "seconds": 2585,
+   "seconds": 2768,
    "finished": null,
    "effort": "high"
   }
@@ -207,45 +209,8 @@
   "week_pct": 3.57,
   "usage_pct": 22.9,
   "work_pct": 71.4,
-  "read_at": "2026-11-15T23:00:00+00:00",
-  "running": [
-   {
-    "lane": "a",
-    "task": "T-4282",
-    "w": "Idris",
-    "k": "measure",
-    "t": "Measure real scripts inside the widget on phones",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-15T16:20:10-05:00",
-    "n": "Evan",
-    "src": "plan-a"
-   },
-   {
-    "lane": "a",
-    "task": "T-4293",
-    "w": "Maren",
-    "k": "site",
-    "t": "Show skipped and brief stages on Home",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-15T16:20:10-05:00",
-    "n": "Evan",
-    "src": "plan-a"
-   },
-   {
-    "lane": "a",
-    "task": "T-4512",
-    "w": "Ines",
-    "k": "tools",
-    "t": "Propose the personal accounts' 5-hour stop at 97",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-15T16:20:10-05:00",
-    "n": "Evan",
-    "src": "plan-a"
-   }
-  ]
+  "read_at": "2026-11-15T23:03:00+00:00",
+  "running": []
  },
  "api_credits": [
   {
@@ -281,7 +246,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-15T18:00:00-05:00",
+  "at": "2026-11-15T18:03:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -509,70 +474,64 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-15T23:00:17Z",
+  "at": "2026-11-15T23:03:26Z",
   "s": {
-   "T-4227": [
+   "T-4282": [
     "merging",
     "Host checks on the Mac mini",
-    1794782177808
-   ],
-   "T-4293": [
-    "mergeq",
-    "1st to merge",
-    1794782117808
+    1794783746109
    ],
    "T-3992": [
     "testing",
     "its own tests, in its copy",
-    1794781217808
+    1794781166109
    ]
   },
   "nm": {
-   "T-4227": "Run every Operator on Opus high",
-   "T-4293": "Show skipped and brief stages on Home",
+   "T-4282": "Measure real scripts inside the widget on phones",
    "T-3992": "Clear and merge the unfinished merge fixes"
   }
  },
  "ln": {
-  "at": "2026-11-15T23:00:17Z",
+  "at": "2026-11-15T23:03:26Z",
   "mq": {
    "n": {
     "checking": 1,
-    "inline": 1,
+    "inline": 0,
     "conflicted": 1,
-    "failed": 0,
+    "failed": 1,
     "held": 0,
     "retry": 0,
     "parked": 2
    },
    "m": {
-    "checking": 24,
-    "inline": 25,
-    "conflicted": 1362,
-    "failed": null,
+    "checking": 1,
+    "inline": null,
+    "conflicted": 1365,
+    "failed": 2,
     "held": null,
     "retry": null,
-    "parked": 590
+    "parked": 594
    },
    "cur": [
     [
      [
-      "T-4227"
+      "T-4282"
      ],
      "Mac tests",
      "Mac mini",
-     24
+     1
     ]
    ],
    "ld": [
-    28,
-    "2026-11-15T22:01:11Z"
+    29,
+    "2026-11-15T23:01:14Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-15T23:00:11Z",
-    "ld": 0.96,
+    "at": "2026-11-15T23:03:26Z",
+    "ld": 0.85,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -627,12 +586,12 @@
  ],
  "agents_now": {
   "main": 1,
-  "lanes": 1,
-  "total": 2,
-  "at": "6:00 PM",
+  "lanes": 0,
+  "total": 1,
+  "at": "6:03 PM",
   "why": "",
-  "at_iso": "2026-11-15T23:00:00+00:00",
+  "at_iso": "2026-11-15T23:03:00+00:00",
   "started": "5:14 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 1, started 5:14 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 6:00 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 5:14 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 6:03 PM ET</p></section>"
  }
 }

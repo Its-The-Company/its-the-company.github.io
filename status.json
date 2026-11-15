@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-15T17:07:41.309559+00:00",
+ "at": "2026-11-15T17:10:42.406013+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -102,20 +102,11 @@
  },
  "workers": [
   {
-   "name": "idris",
-   "task": "[build] T-3282 cap run marker read",
-   "model": "opus",
-   "started": "2026-11-15T16:13:09.853Z",
-   "seconds": 3271,
-   "finished": null,
-   "effort": "high"
-  },
-  {
    "name": "pernille",
    "task": "[build] T-4524 https host fixes",
    "model": "opus",
    "started": "2026-11-15T16:46:36.927Z",
-   "seconds": 1264,
+   "seconds": 1445,
    "finished": null,
    "effort": "high"
   },
@@ -124,13 +115,21 @@
    "task": "[design] T-4523 Distance design tree",
    "model": "opus",
    "started": "2026-11-15T16:52:57.433Z",
-   "seconds": 883,
+   "seconds": 1064,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Idris, Pernille, Maren",
+ "who": "Pernille, Maren",
  "recent": [
+  {
+   "name": "idris",
+   "task": "[build] T-3282 cap run marker read",
+   "model": "opus",
+   "started": "2026-11-15T16:13:09.853Z",
+   "seconds": null,
+   "finished": "2026-11-15T17:10:32.165000+00:00"
+  },
   {
    "name": "idris",
    "task": "[build] T-2869 pyc-only completion test",
@@ -154,14 +153,6 @@
    "started": "2026-11-15T15:08:12.068Z",
    "seconds": null,
    "finished": "2026-11-15T16:35:54.386000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-4521 T-4522 folder rule tidy",
-   "model": "opus",
-   "started": "2026-11-15T15:46:23.589Z",
-   "seconds": null,
-   "finished": "2026-11-15T16:12:43.779000+00:00"
   }
  ],
  "queue": {
@@ -216,7 +207,7 @@
   "week_pct": 2.36,
   "usage_pct": 27.2,
   "work_pct": 75.0,
-  "read_at": "2026-11-15T17:07:00+00:00",
+  "read_at": "2026-11-15T17:10:00+00:00",
   "running": [
    {
     "lane": "b3",
@@ -290,7 +281,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-15T12:07:00-05:00",
+  "at": "2026-11-15T12:10:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -306,15 +297,6 @@
   "at": "2026-11-15T10:04:50.005764-05:00"
  },
  "lanes": [
-  {
-   "name": "Idris",
-   "state": "running",
-   "task": "[build] T-3282 cap run marker read",
-   "model": "opus",
-   "since": "2026-11-15T16:13:09.853Z",
-   "next": [],
-   "effort": "high"
-  },
   {
    "name": "Pernille",
    "state": "running",
@@ -332,6 +314,14 @@
    "since": "2026-11-15T16:52:57.433Z",
    "next": [],
    "effort": "high"
+  },
+  {
+   "name": "Idris",
+   "state": "next",
+   "task": "Idris, P2, from T-2869 (Idris's land, 11:4x AM 11-15):...",
+   "model": null,
+   "since": null,
+   "next": []
   },
   {
    "name": "Ines",
@@ -360,16 +350,6 @@
  ],
  "tasks": {
   "run": [
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "Cap how much of the run marker the widget reads",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-15T16:13:09.853Z",
-    "o": "c",
-    "task": "T-3282"
-   },
    {
     "w": "Pernille",
     "k": "build",
@@ -556,32 +536,26 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-15T17:07:26Z",
+  "at": "2026-11-15T17:10:26Z",
   "s": {
    "T-4524": [
-    "merging",
-    "Mac tests at the main gate \u00b7 6 groups of tests done",
-    1794761666714
-   ],
-   "T-3282": [
-    "merging",
-    "Mac tests at the main gate",
-    1794761666714
+    "mergetest",
+    "iPhone tests on the MacBook",
+    null
    ],
    "T-4523": [
     "testing",
     "its own tests, in its copy",
-    1794761726714
+    1794761726922
    ]
   },
   "nm": {
    "T-4524": "Keep every https request on its own host",
-   "T-3282": "Cap how much of the run marker the widget reads",
    "T-4523": "Distance design tree at 0.4 floor"
   }
  },
  "ln": {
-  "at": "2026-11-15T17:07:26Z",
+  "at": "2026-11-15T17:10:26Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -595,11 +569,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 1025,
+    "conflicted": 1028,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 2889
+    "parked": 2892
    },
    "cur": [],
    "ld": [
@@ -609,12 +583,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-15T17:07:01Z",
-    "ld": 5.98,
+    "at": "2026-11-15T17:10:01Z",
+    "ld": 5.16,
     "c": 8,
     "sb": 0,
     "dk": [
-     14.2,
+     11.4,
      228.3
     ],
     "ss": [
@@ -624,12 +598,12 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-15T16:50:03Z",
-    "ld": 1.25,
+    "at": "2026-11-15T17:08:25Z",
+    "ld": 0.21,
     "c": 12,
     "sb": 0,
     "dk": [
-     361.6,
+     361.8,
      926.4
     ],
     "sn": []
@@ -643,8 +617,8 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 12 tasks",
-   "at": "2026-11-15T11:33:48-05:00"
+   "t": "Inbox \u2013 Evan's 12:10 PM Message on GitHub",
+   "at": "2026-11-15T12:10:39-05:00"
   },
   {
    "w": "Operator",
@@ -660,7 +634,18 @@
   "sent": "2026-11-15T16:32:08Z",
   "seconds": 99.0
  },
- "inbox": [],
+ "inbox": [
+  {
+   "id": "c6898174370",
+   "state": "received",
+   "position": 1,
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "The main account should be running too"
+  }
+ ],
  "trimmed": [
   "lane_next",
   "queue_text",
@@ -675,13 +660,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 3,
+  "main": 2,
   "lanes": 1,
-  "total": 4,
-  "at": "12:07 PM",
+  "total": 3,
+  "at": "12:10 PM",
   "why": "",
-  "at_iso": "2026-11-15T17:07:00+00:00",
+  "at_iso": "2026-11-15T17:10:00+00:00",
   "started": "10:05 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 3, started 10:05 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 12:07 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 10:05 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 12:10 PM ET</p></section>"
  }
 }

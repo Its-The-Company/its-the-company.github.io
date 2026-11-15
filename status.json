@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-15T10:46:03.015926+00:00",
+ "at": "2026-11-15T10:49:07.292010+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -100,7 +100,7 @@
    "task": "[tools] T-4486 refuse Fable without Fable task",
    "model": "opus",
    "started": "2026-11-15T09:39:16.911Z",
-   "seconds": 4006,
+   "seconds": 4190,
    "finished": null,
    "effort": "high"
   },
@@ -109,7 +109,7 @@
    "task": "[tools] T-4488 T-4438 fix main red suites",
    "model": "opus",
    "started": "2026-11-15T09:53:40.312Z",
-   "seconds": 3142,
+   "seconds": 3326,
    "finished": null,
    "effort": "high"
   }
@@ -152,7 +152,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 378,
+  "runnable_count": 380,
   "blocked_count": 78
  },
  "meter": {
@@ -201,7 +201,7 @@
   "week_pct": null,
   "usage_pct": null,
   "work_pct": null,
-  "read_at": "2026-11-15T10:46:00+00:00",
+  "read_at": "2026-11-15T10:49:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -306,6 +306,7 @@
     "e": "high",
     "at": "2026-11-15T04:53:01-05:00",
     "n": "Evan",
+    "d": 1,
     "src": "plan-a"
    }
   ]
@@ -344,7 +345,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-15T05:46:00-05:00",
+  "at": "2026-11-15T05:49:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -524,7 +525,7 @@
    }
   ],
   "count": {
-   "next": 378,
+   "next": 380,
    "wait": 37,
    "blocked": 41,
    "you": 12
@@ -598,32 +599,17 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-15T10:46:03Z",
+  "at": "2026-11-15T10:49:07Z",
   "s": {
    "T-4438": [
     "merging",
     "Mac tests at the main gate",
-    1794739083015
-   ],
-   "T-4089": [
-    "testing",
-    "Mac Mini \u00b7 test",
-    null
-   ],
-   "T-4280": [
-    "testing",
-    "Mac Mini \u00b7 test",
-    null
-   ],
-   "T-4430": [
-    "testing",
-    "Mac Mini \u00b7 test",
-    null
+    1794739087292
    ],
    "T-4486": [
     "testing",
     "its own tests, in its copy",
-    1794737043015
+    1794736987292
    ],
    "T-4488": [
     "merged",
@@ -631,10 +617,22 @@
     1794739031000,
     ""
    ],
+   "T-4430": [
+    "merged",
+    "on main 5:32 AM ET",
+    1794738737000,
+    ""
+   ],
    "T-3712": [
     "merged",
     "on main 5:25 AM ET",
     1794738356000,
+    ""
+   ],
+   "T-4089": [
+    "merged",
+    "on main 5:24 AM ET",
+    1794738297000,
     ""
    ],
    "T-4123": [
@@ -646,17 +644,16 @@
   },
   "nm": {
    "T-4438": "Fix two test suites that fail on main",
-   "T-4089": "Fix the location bridge test that failed on the MacBook",
-   "T-4280": "Run each widget in the widget or app by size",
-   "T-4430": "Answer TestFlight encryption questions by default",
    "T-4486": "Refuse Fable in sessions with no Fable task",
    "T-4488": "Fix the How it works page test red on main",
+   "T-4430": "Answer TestFlight encryption questions by default",
    "T-3712": "Erase unused Simulators by tool",
+   "T-4089": "Fix the location bridge test that failed on the MacBook",
    "T-4123": "Rerun the audit pattern study on the full ledger"
   }
  },
  "ln": {
-  "at": "2026-11-15T10:46:03Z",
+  "at": "2026-11-15T10:49:07Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -670,11 +667,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 627,
+    "conflicted": 631,
     "failed": null,
     "held": null,
-    "retry": 1,
-    "parked": 2507
+    "retry": 5,
+    "parked": 2510
    },
    "cur": [],
    "ld": [
@@ -684,12 +681,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-15T10:45:41Z",
-    "ld": 44.14,
+    "at": "2026-11-15T10:48:41Z",
+    "ld": 42.78,
     "c": 8,
     "sb": 1,
     "dk": [
-     19.1,
+     20.0,
      228.3
     ],
     "ss": [
@@ -747,7 +744,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 1 task",
+   "t": "Work session",
    "at": "2026-11-15T04:53:01-05:00"
   }
  ],
@@ -773,10 +770,10 @@
   "main": 2,
   "lanes": 3,
   "total": 5,
-  "at": "5:46 AM",
+  "at": "5:49 AM",
   "why": "",
-  "at_iso": "2026-11-15T10:46:00+00:00",
+  "at_iso": "2026-11-15T10:49:00+00:00",
   "started": "2:07 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 2, started 2:07 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 5:46 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 2, started 2:07 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 5:49 AM ET</p></section>"
  }
 }

@@ -1,22 +1,11 @@
 {
  "schema": 1,
- "at": "2026-11-15T22:23:59.074553+00:00",
+ "at": "2026-11-15T22:27:01.411568+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-15T17:14:43-05:00",
   "flow": [
-   {
-    "t": "T-4227",
-    "name": "Run every Operator on Opus high",
-    "acct": "Personal b",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1794780125
-     }
-    ]
-   },
    {
     "t": "T-2266",
     "name": "Run the stuck-signal tests on the MacBook",
@@ -30,6 +19,15 @@
    }
   ],
   "done": [
+   {
+    "t": "T-4227",
+    "name": "Run every Operator on Opus high",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "failed",
+    "end_at": 1794781570,
+    "why": "tests failed"
+   },
    {
     "t": "T-4508",
     "name": "Alarm when one account's work keeps being refused",
@@ -103,18 +101,10 @@
     "steps": [],
     "end": "landed",
     "end_at": 1794759682
-   },
-   {
-    "t": "T-4468",
-    "name": "Let people set each premade's place, events and lists",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794757592
    }
   ],
-  "landed": 22,
-  "failed": 4
+  "landed": 21,
+  "failed": 5
  },
  "workers": [
   {
@@ -122,7 +112,7 @@
    "task": "[tools] T-3992 land the pipeline batch",
    "model": "opus",
    "started": "2026-11-15T22:17:17.812Z",
-   "seconds": 401,
+   "seconds": 583,
    "finished": null,
    "effort": "high"
   },
@@ -131,7 +121,7 @@
    "task": "[plan] T-4105 queue audit report draft",
    "model": "opus",
    "started": "2026-11-15T22:17:26.558Z",
-   "seconds": 392,
+   "seconds": 574,
    "finished": null,
    "effort": "high"
   },
@@ -140,7 +130,7 @@
    "task": "[test] T-4527 steady hung Pro check test",
    "model": "opus",
    "started": "2026-11-15T22:17:32.735Z",
-   "seconds": 386,
+   "seconds": 568,
    "finished": null,
    "effort": "high"
   }
@@ -150,24 +140,24 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 374,
+  "runnable_count": 375,
   "blocked_count": 75
  },
  "meter": {
   "five_hour": {
-   "pct": 1.0,
+   "pct": 2.0,
    "resets_at": "2026-11-15T22:10:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-15T17:19:50.203039-05:00",
+   "read_at": "2026-11-15T17:26:46.605314-05:00",
    "source": "live",
-   "left": 99.0,
+   "left": 98.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 12.0,
    "resets_at": "2026-11-22T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-15T17:19:50.203039-05:00",
+   "read_at": "2026-11-15T17:26:46.605314-05:00",
    "source": "live",
    "left": 88.0,
    "left_words": "of your weekly allowance left"
@@ -179,7 +169,7 @@
    "read_at": "2026-11-15T17:14:22.598638-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-15T17:19:50.203039-05:00"
+  "read_at": "2026-11-15T17:26:46.605314-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -199,7 +189,7 @@
   "week_pct": 3.57,
   "usage_pct": 22.9,
   "work_pct": 71.4,
-  "read_at": "2026-11-15T22:24:00+00:00",
+  "read_at": "2026-11-15T22:27:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -257,7 +247,7 @@
   }
  ],
  "disk": {
-  "free_gb": 9.3,
+  "free_gb": 12,
   "gate": "closed",
   "ssd": {
    "mounted": true,
@@ -266,14 +256,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions wait until 20 GB is free.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-15T17:19:00-05:00",
+   "at": "2026-11-15T17:26:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-15T17:24:00-05:00",
+  "at": "2026-11-15T17:27:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -377,6 +367,13 @@
   "src": "plan",
   "open": [
    {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Clean the Mac mini's disk instead of pausing...",
+    "s": "next",
+    "o": "i"
+   },
+   {
     "w": "Pernille",
     "k": "build",
     "t": "Keep real packages out until the sandbox is...",
@@ -438,13 +435,6 @@
     "t": "Move the app's diagrams to a new App page",
     "s": "next",
     "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Build the queue-check sweep into the sweep...",
-    "s": "next",
-    "o": "c"
    }
   ],
   "done": [
@@ -465,7 +455,7 @@
    }
   ],
   "count": {
-   "next": 374,
+   "next": 375,
    "wait": 35,
    "blocked": 40,
    "you": 11
@@ -514,18 +504,8 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-15T22:23:39Z",
+  "at": "2026-11-15T22:26:54Z",
   "s": {
-   "T-4227": [
-    "merging",
-    "Host checks on the Mac mini",
-    1794780159260
-   ],
-   "T-4471": [
-    "mergeq",
-    "1st to merge",
-    1794779499260
-   ],
    "T-4527": [
     "testing",
     "MacBook \u00b7 test",
@@ -534,47 +514,42 @@
    "T-3992": [
     "testing",
     "its own tests, in its copy",
-    1794781179260
+    1794781194760
+   ],
+   "T-4105": [
+    "testing",
+    "its own tests, in its copy",
+    1794781554760
    ]
   },
   "nm": {
-   "T-4227": "Run every Operator on Opus high",
-   "T-4471": "Stop the star notice committing its own record",
    "T-4527": "Steady the hung Pro check timing test",
-   "T-3992": "Clear and merge the unfinished merge fixes"
+   "T-3992": "Clear and merge the unfinished merge fixes",
+   "T-4105": "Post the queue audit report in the main thread"
   }
  },
  "ln": {
-  "at": "2026-11-15T22:23:39Z",
+  "at": "2026-11-15T22:26:54Z",
   "mq": {
    "n": {
-    "checking": 1,
-    "inline": 1,
+    "checking": 0,
+    "inline": 0,
     "conflicted": 1,
-    "failed": 0,
+    "failed": 1,
     "held": 0,
     "retry": 0,
     "parked": 2
    },
    "m": {
-    "checking": 21,
-    "inline": 32,
-    "conflicted": 1325,
-    "failed": null,
+    "checking": null,
+    "inline": null,
+    "conflicted": 1328,
+    "failed": 0,
     "held": null,
     "retry": null,
-    "parked": 554
+    "parked": 557
    },
-   "cur": [
-    [
-     [
-      "T-4227"
-     ],
-     "Mac tests",
-     "Mac mini",
-     21
-    ]
-   ],
+   "cur": [],
    "ld": [
     28,
     "2026-11-15T22:01:11Z"
@@ -582,12 +557,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-15T22:22:51Z",
-    "ld": 3.9,
+    "at": "2026-11-15T22:26:32Z",
+    "ld": 3.95,
     "c": 8,
     "sb": 0,
     "dk": [
-     11.4,
+     12.4,
      228.3
     ],
     "ss": [
@@ -625,13 +600,13 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session",
-   "at": "2026-11-15T17:23:57-05:00"
+   "t": "Work session \u2013 3 tasks",
+   "at": "2026-11-15T17:26:32-05:00"
   }
  ],
  "reply": {
-  "sent": "2026-11-15T21:53:11Z",
-  "seconds": 90.0
+  "sent": "2026-11-15T22:24:11Z",
+  "seconds": 139.0
  },
  "inbox": [],
  "trimmed": [
@@ -648,10 +623,10 @@
   "main": 3,
   "lanes": 1,
   "total": 4,
-  "at": "5:24 PM",
+  "at": "5:27 PM",
   "why": "",
-  "at_iso": "2026-11-15T22:24:00+00:00",
+  "at_iso": "2026-11-15T22:27:00+00:00",
   "started": "5:14 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 3, started 5:14 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 5:24 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 3, started 5:14 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 5:27 PM ET</p></section>"
  }
 }

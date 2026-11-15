@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-15T09:39:29.461350+00:00",
+ "at": "2026-11-15T09:42:32.205347+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -102,7 +102,7 @@
    "task": "[tools] T-4485 fix real-tick land rows red",
    "model": "opus",
    "started": "2026-11-15T09:24:59.819Z",
-   "seconds": 869,
+   "seconds": 1052,
    "finished": null,
    "effort": "high"
   },
@@ -111,7 +111,7 @@
    "task": "[tools] T-4486 refuse Fable without Fable task",
    "model": "opus",
    "started": "2026-11-15T09:39:16.911Z",
-   "seconds": 12,
+   "seconds": 195,
    "finished": null,
    "effort": "high"
   },
@@ -120,7 +120,7 @@
    "task": "[tools] T-4481 redo task states (T-4445)",
    "model": "opus",
    "started": "2026-11-15T09:39:25.162Z",
-   "seconds": 4,
+   "seconds": 187,
    "finished": null,
    "effort": "high"
   }
@@ -212,7 +212,7 @@
   "week_pct": null,
   "usage_pct": null,
   "work_pct": null,
-  "read_at": "2026-11-15T09:39:00+00:00",
+  "read_at": "2026-11-15T09:42:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -249,7 +249,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-15T04:39:00-05:00",
+  "at": "2026-11-15T04:42:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -509,20 +509,32 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-15T09:39:29Z",
+  "at": "2026-11-15T09:42:19Z",
   "s": {
    "T-4485": [
     "testing",
     "its own tests, in its copy",
-    1794735449461
+    1794735499658
+   ],
+   "T-4486": [
+    "testing",
+    "its own tests, in its copy",
+    1794735739658
+   ],
+   "T-4481": [
+    "testing",
+    "its own tests, in its copy",
+    1794735679658
    ]
   },
   "nm": {
-   "T-4485": "Real-tick land rows red on main"
+   "T-4485": "Real-tick land rows red on main",
+   "T-4486": "Refuse Fable in sessions with no Fable task",
+   "T-4481": "Redo show task states in place of new lines"
   }
  },
  "ln": {
-  "at": "2026-11-15T09:39:29Z",
+  "at": "2026-11-15T09:42:19Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -536,11 +548,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 350,
+    "conflicted": 353,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 2443
+    "parked": 2446
    },
    "cur": [],
    "ld": [
@@ -550,12 +562,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-15T09:38:52Z",
-    "ld": 2.37,
+    "at": "2026-11-15T09:42:20Z",
+    "ld": 3.17,
     "c": 8,
     "sb": 0,
     "dk": [
-     25.0,
+     24.9,
      228.3
     ],
     "ss": [
@@ -598,10 +610,10 @@
   "main": 3,
   "lanes": 0,
   "total": 3,
-  "at": "4:39 AM",
+  "at": "4:42 AM",
   "why": "",
-  "at_iso": "2026-11-15T09:39:00+00:00",
+  "at_iso": "2026-11-15T09:42:00+00:00",
   "started": "2:07 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 2:07 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 4:39 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 2:07 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 4:42 AM ET</p></section>"
  }
 }

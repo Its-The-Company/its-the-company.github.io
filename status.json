@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-15T10:42:56.322473+00:00",
+ "at": "2026-11-15T10:46:03.015926+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -100,7 +100,7 @@
    "task": "[tools] T-4486 refuse Fable without Fable task",
    "model": "opus",
    "started": "2026-11-15T09:39:16.911Z",
-   "seconds": 3819,
+   "seconds": 4006,
    "finished": null,
    "effort": "high"
   },
@@ -109,22 +109,21 @@
    "task": "[tools] T-4488 T-4438 fix main red suites",
    "model": "opus",
    "started": "2026-11-15T09:53:40.312Z",
-   "seconds": 2956,
+   "seconds": 3142,
    "finished": null,
    "effort": "high"
-  },
+  }
+ ],
+ "who": "Odalys x2",
+ "recent": [
   {
    "name": "odalys",
    "task": "[tools] T-4129 land Set aside part 2b",
    "model": "opus",
    "started": "2026-11-15T10:24:41.627Z",
-   "seconds": 1094,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Odalys x3",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-15T10:44:26.636000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[tools] T-4485 fix real-tick land rows red",
@@ -148,14 +147,6 @@
    "started": "2026-11-15T09:33:07.842Z",
    "seconds": null,
    "finished": "2026-11-15T09:38:26.340000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-4466 open audit lines to all accounts",
-   "model": "opus",
-   "started": "2026-11-15T07:11:46.805Z",
-   "seconds": null,
-   "finished": "2026-11-15T09:32:54.275000+00:00"
   }
  ],
  "queue": {
@@ -210,7 +201,7 @@
   "week_pct": null,
   "usage_pct": null,
   "work_pct": null,
-  "read_at": "2026-11-15T10:43:00+00:00",
+  "read_at": "2026-11-15T10:46:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -337,7 +328,7 @@
   }
  ],
  "disk": {
-  "free_gb": 20,
+  "free_gb": 19,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -346,14 +337,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-15T05:38:00-05:00",
+   "at": "2026-11-15T05:45:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-15T05:43:00-05:00",
+  "at": "2026-11-15T05:46:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -440,16 +431,6 @@
     "at": "2026-11-15T09:53:40.312Z",
     "o": "c",
     "task": "T-4488"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Retire the Set aside stage on Home",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-15T10:24:41.627Z",
-    "o": "c",
-    "task": "T-4129"
    }
   ],
   "src": "plan",
@@ -617,12 +598,12 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-15T10:42:40Z",
+  "at": "2026-11-15T10:46:03Z",
   "s": {
    "T-4438": [
     "merging",
     "Mac tests at the main gate",
-    1794739060540
+    1794739083015
    ],
    "T-4089": [
     "testing",
@@ -639,15 +620,10 @@
     "Mac Mini \u00b7 test",
     null
    ],
-   "T-4129": [
-    "testing",
-    "its own tests, in its copy",
-    1794738340540
-   ],
    "T-4486": [
     "testing",
     "its own tests, in its copy",
-    1794737020540
+    1794737043015
    ],
    "T-4488": [
     "merged",
@@ -673,7 +649,6 @@
    "T-4089": "Fix the location bridge test that failed on the MacBook",
    "T-4280": "Run each widget in the widget or app by size",
    "T-4430": "Answer TestFlight encryption questions by default",
-   "T-4129": "Retire the Set aside stage on Home",
    "T-4486": "Refuse Fable in sessions with no Fable task",
    "T-4488": "Fix the How it works page test red on main",
    "T-3712": "Erase unused Simulators by tool",
@@ -681,7 +656,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-15T10:42:40Z",
+  "at": "2026-11-15T10:46:03Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -689,17 +664,17 @@
     "conflicted": 3,
     "failed": 0,
     "held": 0,
-    "retry": 0,
-    "parked": 4
+    "retry": 1,
+    "parked": 3
    },
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 624,
+    "conflicted": 627,
     "failed": null,
     "held": null,
-    "retry": null,
-    "parked": 1353
+    "retry": 1,
+    "parked": 2507
    },
    "cur": [],
    "ld": [
@@ -709,12 +684,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-15T10:41:55Z",
-    "ld": 49.37,
+    "at": "2026-11-15T10:45:41Z",
+    "ld": 44.14,
     "c": 8,
     "sb": 1,
     "dk": [
-     18.9,
+     19.1,
      228.3
     ],
     "ss": [
@@ -745,7 +720,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 10 tasks",
+   "t": "Work session \u2013 9 tasks",
    "at": "2026-11-15T02:10:06-05:00"
   },
   {
@@ -754,8 +729,8 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session",
-   "at": "2026-11-15T05:42:54-05:00"
+   "t": "Work session \u2013 2 tasks",
+   "at": "2026-11-15T04:53:03-05:00"
   },
   {
    "w": "Operator",
@@ -795,13 +770,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 3,
+  "main": 2,
   "lanes": 3,
-  "total": 6,
-  "at": "5:43 AM",
+  "total": 5,
+  "at": "5:46 AM",
   "why": "",
-  "at_iso": "2026-11-15T10:43:00+00:00",
+  "at_iso": "2026-11-15T10:46:00+00:00",
   "started": "2:07 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 3, started 2:07 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 5:43 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 2, started 2:07 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 5:46 AM ET</p></section>"
  }
 }

@@ -1,15 +1,26 @@
 {
  "schema": 1,
- "at": "2026-11-15T10:49:07.292010+00:00",
+ "at": "2026-11-15T10:55:46.634971+00:00",
  "session": {
-  "active": true,
-  "kind": "work",
-  "started": "2026-11-15T02:07:02-05:00",
-  "flow": [],
+  "active": false,
+  "kind": "",
+  "started": null,
+  "flow": [
+   {
+    "t": "T-4280",
+    "name": "Run each widget in the widget or app by size",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "testq",
+      "at": 1794739859
+     }
+    ]
+   }
+  ],
   "done": [
    {
     "t": "T-4430",
-    "name": "Answer TestFlight encryption questions by default",
     "acct": "Personal a",
     "steps": [],
     "end": "landed",
@@ -33,7 +44,6 @@
    },
    {
     "t": "T-4123",
-    "name": "Rerun the audit pattern study on the full ledger",
     "acct": "Personal a",
     "steps": [],
     "end": "landed",
@@ -57,7 +67,6 @@
    },
    {
     "t": "T-4466",
-    "name": "Open the audit lines to every account and any model",
     "acct": "Personal a",
     "steps": [],
     "end": "landed",
@@ -83,7 +92,6 @@
    },
    {
     "t": "T-4445",
-    "name": "Show task states in place of new lines",
     "acct": "Personal a",
     "steps": [],
     "end": "failed",
@@ -94,27 +102,8 @@
   "landed": 12,
   "failed": 5
  },
- "workers": [
-  {
-   "name": "odalys",
-   "task": "[tools] T-4486 refuse Fable without Fable task",
-   "model": "opus",
-   "started": "2026-11-15T09:39:16.911Z",
-   "seconds": 4190,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-4488 T-4438 fix main red suites",
-   "model": "opus",
-   "started": "2026-11-15T09:53:40.312Z",
-   "seconds": 3326,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Odalys x2",
+ "workers": [],
+ "who": "",
  "recent": [
   {
    "name": "odalys",
@@ -196,12 +185,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": null,
+ "next_tick": "2026-11-15T02:21:47-05:00",
  "personal": {
   "week_pct": null,
   "usage_pct": null,
   "work_pct": null,
-  "read_at": "2026-11-15T10:49:00+00:00",
+  "read_at": "2026-11-15T10:58:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -247,6 +236,7 @@
     "e": "high",
     "at": "2026-11-15T04:53:08-05:00",
     "n": "Evan",
+    "d": 1,
     "src": "plan-a"
    },
    {
@@ -345,7 +335,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-15T05:49:00-05:00",
+  "at": "2026-11-15T05:58:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -353,23 +343,10 @@
    "b": "double-spread"
   }
  },
- "next_tick_why": "session",
+ "next_tick_why": "last_tick",
  "idle": null,
- "pool": {
-  "why": "Double Spread: 98% of the week left, paced to last until Wed 14:00, the week's halfway point; the machine allows 22 (held: too few lands in 3 hours to judge a raise)",
-  "n": 3,
-  "at": "2026-11-15T02:06:47.779117-05:00"
- },
+ "pool": null,
  "lanes": [
-  {
-   "name": "Odalys",
-   "state": "running",
-   "task": "[tools] T-4486 refuse Fable without Fable task",
-   "model": "opus",
-   "since": "2026-11-15T09:39:16.911Z",
-   "next": [],
-   "effort": "high"
-  },
   {
    "name": "Idris",
    "state": "next",
@@ -395,6 +372,14 @@
    "next": []
   },
   {
+   "name": "Odalys",
+   "state": "next",
+   "task": "A lane record main refused: failed...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
    "name": "Wrenna",
    "state": "next",
    "task": "Wrenna, P2, T-2375 continuation (B-staged item 3...",
@@ -412,29 +397,7 @@
   }
  ],
  "tasks": {
-  "run": [
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Refuse Fable in sessions with no Fable task",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-15T09:39:16.911Z",
-    "o": "c",
-    "task": "T-4486"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Fix the How it works page test red on main",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-15T09:53:40.312Z",
-    "o": "c",
-    "task": "T-4488"
-   }
-  ],
-  "src": "plan",
+  "run": [],
   "open": [
    {
     "w": "Pernille",
@@ -529,35 +492,6 @@
    "wait": 37,
    "blocked": 41,
    "you": 12
-  },
-  "fin": {
-   "n": 11,
-   "rows": [
-    [
-     "T-4488",
-     "Fix the How it works page..."
-    ],
-    [
-     "T-4430",
-     "Answer TestFlight encryption..."
-    ],
-    [
-     "T-4485",
-     "Real-tick land rows red on main"
-    ],
-    [
-     "T-4123",
-     "Rerun the audit pattern..."
-    ],
-    [
-     "T-4445",
-     "Show task states in place of..."
-    ],
-    [
-     "T-4481",
-     "Redo show task states in..."
-    ]
-   ]
   }
  },
  "qr": [
@@ -599,23 +533,22 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-15T10:49:07Z",
+  "at": "2026-11-15T10:55:46Z",
   "s": {
-   "T-4438": [
+   "T-4280": [
     "merging",
-    "Mac tests at the main gate",
-    1794739087292
+    "Host checks on the Mac mini",
+    1794739906634
    ],
    "T-4486": [
     "testing",
     "its own tests, in its copy",
-    1794736987292
+    1794737026634
    ],
-   "T-4488": [
-    "merged",
-    "on main 5:37 AM ET",
-    1794739031000,
-    ""
+   "T-4438": [
+    "testing",
+    "its own tests, in its copy",
+    1794739066634
    ],
    "T-4430": [
     "merged",
@@ -643,9 +576,9 @@
    ]
   },
   "nm": {
-   "T-4438": "Fix two test suites that fail on main",
+   "T-4280": "Run each widget in the widget or app by size",
    "T-4486": "Refuse Fable in sessions with no Fable task",
-   "T-4488": "Fix the How it works page test red on main",
+   "T-4438": "Fix two test suites that fail on main",
    "T-4430": "Answer TestFlight encryption questions by default",
    "T-3712": "Erase unused Simulators by tool",
    "T-4089": "Fix the location bridge test that failed on the MacBook",
@@ -653,10 +586,10 @@
   }
  },
  "ln": {
-  "at": "2026-11-15T10:49:07Z",
+  "at": "2026-11-15T10:55:46Z",
   "mq": {
    "n": {
-    "checking": 0,
+    "checking": 1,
     "inline": 0,
     "conflicted": 3,
     "failed": 0,
@@ -665,15 +598,24 @@
     "parked": 3
    },
    "m": {
-    "checking": null,
+    "checking": 4,
     "inline": null,
-    "conflicted": 631,
+    "conflicted": 637,
     "failed": null,
     "held": null,
-    "retry": 5,
-    "parked": 2510
+    "retry": 11,
+    "parked": 2517
    },
-   "cur": [],
+   "cur": [
+    [
+     [
+      "T-4280"
+     ],
+     "Mac tests",
+     "Mac mini",
+     4
+    ]
+   ],
    "ld": [
     7,
     "2026-11-15T10:34:40Z"
@@ -681,12 +623,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-15T10:48:41Z",
-    "ld": 42.78,
+    "at": "2026-11-15T10:55:48Z",
+    "ld": 43.76,
     "c": 8,
     "sb": 1,
     "dk": [
-     20.0,
+     17.7,
      228.3
     ],
     "ss": [
@@ -711,15 +653,6 @@
   }
  },
  "operators": [
-  {
-   "w": "Operator",
-   "a": "Main plan",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session \u2013 9 tasks",
-   "at": "2026-11-15T02:10:06-05:00"
-  },
   {
    "w": "Operator",
    "a": "Evan",
@@ -758,22 +691,20 @@
   "queue_text",
   "recent",
   "task_done",
-  "fin_short",
   "task_title",
   "done_text",
   "task_open",
-  "fin_six",
   "lane_task",
   "task_next"
  ],
  "agents_now": {
-  "main": 2,
+  "main": 0,
   "lanes": 3,
-  "total": 5,
-  "at": "5:49 AM",
+  "total": 3,
+  "at": "5:58 AM",
   "why": "",
-  "at_iso": "2026-11-15T10:49:00+00:00",
-  "started": "2:07 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 2, started 2:07 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 5:49 AM ET</p></section>"
+  "at_iso": "2026-11-15T10:58:00+00:00",
+  "started": "",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 5:58 AM ET</p></section>"
  }
 }

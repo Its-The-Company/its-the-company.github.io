@@ -35,13 +35,13 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - Site chat plan facts: measured floors behind #24
 - Archive: dated task notes and older lessons (11-07 T-3221 moved the rest there; 11-14 T-4213, T-4232 too; nothing deleted).
 
-## Open (2026-11-14)
+## Open (2026-11-15)
 
 - T-4230 f054a45347 (branch odalys/t4230-restructuring-docs, unlanded 11-12 22:1x): Restructuring folder under Documents. Owed: land; first live mock-up copy (phase 4).
 
 - T-4275 952958e1e1 (11-13 12:0x PM, under T-3992): land --from finds host suites in the copy (host_suites disk=). Owed: Pernille's T-3400 land is the first live run; known gap: a copy behind main misses a suite main added.
 
-- T-4284 slice 1 453bf6cc2f + 0e216d21fa (11-13): ops/audit_mode.json (a, T-4092) = pause watch off, as PERSONAL_PAUSE_WATCH=0; live 12:56 PM. Owed: git rm it when Evan's Fable week is used up (T-4276). Helpers-on-Fable slice dropped (c6861969242), unlanded in company-scratch/T-4284-odalys/wt2.
+- T-4284: ops/audit_mode.json retired by T-4466 (11-15). Helpers-on-Fable slice dropped (c6861969242), unlanded in company-scratch/T-4284-odalys/wt2.
 
 - T-4129 2c93b342af (11-13): <span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">parked</span> reader confirms by git cherry. Owed: 2b patch in company-scratch/T-4129-odalys (pipeline hold), then tick.
 
@@ -64,6 +64,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - In a lane, COMPANY_LANE overrides BOARD: a scratch `board_tick.py add` goes to main's live board. Run scratch calls with `env -u COMPANY_LANE` (T-4452: one smoke add reached main, refused by the card rule, nothing written).
 - A guard refusal on a check stops that check: report it as not measured, never as passed (T-4453).
 - The security guard reads command text: a heredoc that names investors/ is refused even for a temp fixture (T-4458).
+- "Account: any" revives every "(waiting on" before it (board.py stuck): spend them first (unblock; answered on a dated [b]) (T-4466).
 {% endraw %}
 
 

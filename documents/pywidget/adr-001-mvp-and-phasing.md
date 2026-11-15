@@ -12,6 +12,7 @@ description: "r1 decided a programmer&#x27;s product: an IDE first, widgets behi
 
 {% raw %}
 - Status: **accepted, revision 2** (Ines, CEO, 2026-11-13, T-4272). Written after the Investors approved the Restructuring's keep, change or drop tables (Restructuring 11, an Investor, #280 c6858665300, A, 11:22 AM ET 11-13). It replaces revision 1 (accepted 2026-10-25 7:27 PM ET, with nine <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">rulings</span> and three re-datings appended through 2026-10-31), which is archived word for word at `archive/ADR-001-r1-2026-10-25-to-10-31.md`. Where the two differ, this text wins. "r1" below means that archived text.
+- Dated line, 2026-11-15 2:14 AM ET (Ines, T-4465): decisions 4, 5, 10, 15, 16 and 26 were answered on 11-14 (an Investor, 5:23 to 5:39 PM ET; rows added to section 1). Sections 3.1, 3.3, 4, 5 and 6 follow them. Dates and the reasons for the six set-aside items: `plan.md`, chair note 2026-11-15.
 - Author: Ines. Inputs: [`documents/restructuring/02-audit.md`](../restructuring/02-audit.html) (the ADR table, row 001), `03-structure.md`, `05-timeline.md`, `06-decisions.md` with the Investors' answers; [`ops/plans/pywidget/plan.md`](pywidget-plan.html), chair notes of 2026-11-13 10:31 AM and 10:53 AM; ADR-002, ADR-006 and ADR-007 as changed the same day.
 - What this text decides: scope and versions. Dates live in `plan.md` and `ops/milestones.json`; how Python runs, in ADR-007; the widget format, in ADR-002; sharing, in ADR-006.
 
@@ -22,7 +23,7 @@ r1 decided a programmer's product: an IDE first, widgets behind a cut line, the 
 The answers this text rests on, all 2026-11-13 ET, an Investor:
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 1: 1. What changed, and why a new text, scrolls sideways" style="--tw:909px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 1: 1. What changed, and why a new text, scrolls sideways" style="--tw:944px" markdown="1">
 
 | Decision | Answer | Link |
 | --- | --- | --- |
@@ -35,11 +36,17 @@ The answers this text rests on, all 2026-11-13 ET, an Investor:
 | 13. Phone first | A: the premades failure is closed first; every phase ends with a phone proof; phase B continues beside the fix | #282 c6857295904, 10:23 AM; c6857553642, 10:34 AM |
 | 14. Where a widget's Python runs | In the widget first, unless proven impossible; a widget too large for it runs in the app, shown and measured during development | #283 c6857824620, 10:46 AM; ADR-007 |
 | 29. Documentation | A, with a change: the app's workflow diagrams and documentation get their own place on the site, a new main page, App | #297 c6858715463, 11:24 AM |
+| 4. iMessage (11-14) | B: no Messages part in 1.0; considered only after a Messages extension is measured on a phone, not before 1.2 | #273 c6885131684, 5:23 PM 11-14 |
+| 10. Six items set aside (11-14) | A: all six to "maybe later", each with its reason, none deleted | #279 c6885141527, 5:24 PM 11-14 |
+| 26. Outside testers (11-14) | B, against the recommendation: no outside testers; "no code" reaches the store tested only by the company | #295 c6885275925, 5:35 PM 11-14 |
+| 5. The marketplace (11-14) | A: in stages; 1.0 our own Gallery and sharing by file, then our examples on the site, at 1.2 a live <span title="The App Store results a buyer sees for a search phrase. The top 10 is the first ten, dated the day we read them.">shelf</span> only on Apple's written answer | #274 c6885292665, 5:37 PM 11-14 |
+| 15. Outside code's reach (11-14) | A: none of the person's saved keys, no other project's files, only what its project file declares; its code shown before first run | #284 c6885304072, 5:38 PM 11-14 |
+| 16. Updates to an installed copy (11-14) | B: offered, never silent; a file the person changed is kept unless they say otherwise | #285 c6885317294, 5:39 PM 11-14 |
 
 </div>
 
 
-Decisions 4, 5, 6, 8, 9, 10 and 15 to 28 were still open when this was written. Where a section below depends on one, it says "pending" with the issue number, and the company's recommendation is the working assumption until the answer comes. An answer that differs changes this text by a dated line.
+Decisions 4, 5, 6, 8, 9, 10 and 15 to 28 were still open when this was written (*11-15: 4, 5, 10, 15, 16 and 26 are now answered, rows above*). Where a section below depends on one, it says "pending" with the issue number, and the company's recommendation is the working assumption until the answer comes. An answer that differs changes this text by a dated line.
 
 ## 2. The product: three audiences, one Project
 
@@ -70,11 +77,11 @@ Decisions 4, 5, 6, 8, 9, 10 and 15 to 28 were still open when this was written. 
 | The IDE | Projects, the editor (ADR-004), a console with `input()`, stop and restart, inline errors, completion as ADR-004 allows, native prompts from scripts, the editor preview pane with "Run as widget" and the entry stepper, built-in docs and examples. iPhone and iPad | r1 3.1 C5; plan 11-04 item 5 |
 | Widgets | The view tree (ADR-002) in every family the renderer supports, light and dark, every rendering mode. Python in the widget first, the app as fallback, by ADR-007's size rule; the editor shows each widget's <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> with its measured memory and time (#283) | ADR-002; ADR-007 |
 | 12 premades | All free, none marked Pro (plan 11-04 item 6). Each is a Project, and each opens as the person's own editable copy | plan 11-04; ADR-006 13.6 |
-| The Project | One folder, one manifest, one ID, and a tested migration of existing projects, before any public release (#281 A) | section 6 |
+| The Project | One folder, one manifest, one ID, and a tested migration of existing projects, before any public release (#281 A). Version fields per #285 B; an app update never changes a person's copy silently, and a file they changed is kept | section 6 |
 | The Builder | The block format, catalog and compiler; premades as blocks; the block editor; a code view and "Edit as code"; a custom block; "Save as component" and sharing by file. The person picks from our premade components (#276) | ADR-008, written first (section 6); `06-decisions.md`, board list |
 | Pages | A Project's full-screen output, drawn by the app from the view-tree format with Page-only parts (ADR-002, amendment of 11-13). A Page answers taps by calling Python on the app's one run queue (ADR-007 s4) | #272 A |
-| Gallery | Our own premade Projects, widgets and components only, inside the app binary, with the three ways to use an item in `03-structure.md` | #276; ADR-006 S0 |
-| Sharing by file | A Project, a Builder document or a component saved to Files or the share sheet, opened by the other person the way they open a `.py`. The app downloads and hosts nothing. Someone else's Python arrives only this way | ADR-006 (amended 11-13: S1b and the component) |
+| Gallery | Our own premade Projects, widgets and components only, inside the app binary, with the three ways to use an item in `03-structure.md`. The marketplace's first stage; no server, sign-in or reports desk | #276; #274 A; ADR-006 S0 |
+| Sharing by file | A Project, a Builder document or a component saved to Files or the share sheet, opened by the other person the way they open a `.py`. The app downloads and hosts nothing. Someone else's Python arrives only this way, with less reach than the person's own: none of their saved keys, no other project's files, only what its project file declares, and its code shown before it first runs | ADR-006 (amended 11-13: S1b and the component); #284 A |
 | Shortcuts | App Intents: Run Script, Run Script with Input, Refresh Widgets, and Open (r1's 10-27 Home Screen route, now opening a Project's Page or its plain run screen); the three Shortcut recipes in the Gallery (ADR-010) | r1 3.1 C7 and 10-27 ruling; ADR-010 |
 | Device modules | clipboard, files, local notifications, http, location (When In Use), motion history, keychain | r1 3.1 C2 and its Revised rows |
 | Pro | One purchase, $14.99 once (#87): background refresh of widgets, and the themes (B-staged, #142, read as 6a). The Pro screen lists only what the build has | plan 11-04 item 6 |
@@ -97,15 +104,15 @@ Decisions 4, 5, 6, 8, 9, 10 and 15 to 28 were still open when this was written. 
 ### 3.3 Not in 1.0
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 3: 3.3 Not in 1.0, scrolls sideways" style="--tw:930px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 3: 3.3 Not in 1.0, scrolls sideways" style="--tw:960px" markdown="1">
 
 | Item | Where it goes | Status |
 | --- | --- | --- |
-| Other people's block documents listed in the app (a live <span title="The App Store results a buyer sees for a search phrase. The top 10 is the first ten, dated the day we read them.">shelf</span>) | 1.2 at the earliest, only on Apple's written answer | pending decisions 5 and 6 (#274, #275) |
+| Other people's block documents listed in the app (a live shelf) | 1.2 at the earliest, only on Apple's written answer | answered: #274 A; the letter to Apple is decision 6 (#275) |
 | Other people's Python listed in the app | No version until Apple answers | #276 ("for now"); ADR-006 S3b |
-| iMessage | After a Messages extension is measured on a phone; not before 1.2 | pending decision 4 (#273) |
+| iMessage | After a Messages extension is measured on a phone; not before 1.2 | answered: #273 B |
 | Paid items, paying creators | Not planned | pending decision 9 (#278) |
-| The web IDE and sync, the compatibility layer for the old app's scripts, Shortcut Lab, and the 11-04 plan's AI key, Control Center button and Share extension | "Maybe later" | pending decision 10 (#279) |
+| The web IDE and sync, the compatibility layer for the old app's scripts, Shortcut Lab, and the 11-04 plan's AI key, Control Center button and Share extension | "Maybe later", each with its reason (`plan.md`, chair note 2026-11-15) | answered: #279 A |
 | Interactive widget buttons; advanced libraries (numpy, Pillow, matplotlib) | After 1.0 (plan 11-04, the 1.2 row) | dated when 1.0's date is firm |
 | Debugger, formatter and r1's other 3.2 rows | After 1.0, as r1 3.2 placed them | unchanged |
 
@@ -114,11 +121,11 @@ Decisions 4, 5, 6, 8, 9, 10 and 15 to 28 were still open when this was written. 
 
 ## 4. The versions
 
-Three versions are planned. Only 1.0 is fixed; 1.1 and 1.2 are working assumptions from the recommendations until their decisions are answered.
+Three versions are planned. Only 1.0 is fixed; 1.1 and 1.2 are working assumptions from the recommendations until their decisions are answered (*11-15: decisions 4, 5, 10 and 16 are answered and placed below*).
 
 1. **1.0:** section 3.
-2. **1.1:** fixes, whatever 1.0's fallbacks move out, the "maybe later" items the Investors bring back (decision 10, #279), and updates to installed items offered, never silent (decision 16, #285, pending).
-3. **1.2:** a live shelf of other people's block documents, only if Apple says yes in writing (decisions 5 and 6); iMessage only after its phone measurement (decision 4); advanced libraries and widget buttons.
+2. **1.1:** fixes, whatever 1.0's fallbacks move out, any "maybe later" item the Investors bring back by name (#279 A), and the screen that offers a newer version of an installed item, never silent, keeping a file the person changed (#285 B; the version fields it reads are in 1.0, section 6). No Messages part (#273 B).
+3. **1.2:** a live shelf of other people's block projects, only if Apple says yes in writing (#274 A; decision 6); a Messages extension considered only after it is measured on a phone (#273 B); advanced libraries and widget buttons.
 
 No version holds anything Apple's text rates High (other people's Python listed in the app) before Apple answers (ADR-006 13.2, S3b's gate).
 
@@ -131,13 +138,16 @@ No version holds anything Apple's text rates High (other people's Python listed 
 - The Builder runs long: about 6.5 weeks on the Xcode slot and 3.5 beside it, 5 to 15 in all, an estimate (`05-timeline.md`).
 - App Review refuses app-like Pages, or reads the Gallery as a storefront. Pages were taken on with that risk (#272); the review notes and ADR-006 13.2 carry the answer.
 - Bank and tax details and the name (#90) stay open, so nothing can be sold or test-bought.
+- The Builder's "no code" promise is tested only by the company (#295 B), so a failure in the hands of people who don't write Python is first seen in store reviews. The third phone proof is held to its words: blocks only, the code view never opened, VoiceOver finishing every move.
 
 ## 6. Records this depends on
 
-- **ADR-008, the Builder:** written before any Builder code (`02-audit.md`; `06-decisions.md`). L17 is its draft. Not yet written.
-- **A new ADR, the manifest and its migration** (#281 A). Not yet written.
+- **ADR-008, the Builder:** written before any Builder code (`02-audit.md`; `06-decisions.md`). L17 is its draft. Not yet written; the first step of the Builder feature (T-4477).
+- **A new ADR, the manifest and its migration** (#281 A). Not yet written; the first step of the Foundations feature (T-4476). It must carry two answers of 11-14:
+  - **Outside code's reach (#284 A).** Code from a project file someone else made gets none of the person's saved keys, no other project's files, and only what its project file declares; its code is shown to the person before it first runs. Phase C builds the permission check and that notice. No outside code runs in the app before then.
+  - **Updates (#285 B).** When the maker of a Gallery project improves it, the app offers the newer version and the person chooses. Never silent; a file the person changed is kept unless they say otherwise. The version fields are designed to this in phase C. In 1.0 the maker is always the company (#276), and an app update never changes a person's copy; the offer screen is 1.1 (section 4).
 - **ADR-002 and ADR-006** amended, and **ADR-007** rewritten as one text, on 2026-11-13 under the same approval (T-4272).
-- **ADR-005:** history; its subject, the compatibility layer, is set aside (pending #279).
+- **ADR-005:** history; its subject, the compatibility layer, is set aside (#279 A).
 - **ADR-003, ADR-004, ADR-009:** unchanged.
 - **ADR-010:** stands; its rules R5 and R6 retire with the manifest.
 

@@ -1,24 +1,32 @@
 {
  "schema": 1,
- "at": "2026-11-15T10:30:24.489207+00:00",
+ "at": "2026-11-15T10:33:39.468950+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-15T02:07:02-05:00",
   "flow": [
    {
-    "t": "T-3712",
-    "name": "Erase unused Simulators by tool",
+    "t": "T-4430",
+    "name": "Answer TestFlight encryption questions by default",
     "acct": "Personal a",
     "steps": [
      {
       "s": "testq",
-      "at": 1794738360
+      "at": 1794738739
      }
     ]
    }
   ],
   "done": [
+   {
+    "t": "T-3712",
+    "name": "Erase unused Simulators by tool",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794738711
+   },
    {
     "t": "T-4089",
     "name": "Fix the location bridge test that failed on the MacBook",
@@ -94,17 +102,9 @@
     "end": "failed",
     "end_at": 1794701887,
     "why": "did not merge cleanly"
-   },
-   {
-    "t": "T-4450",
-    "name": "Refit the group size once a day",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794701535
    }
   ],
-  "landed": 10,
+  "landed": 11,
   "failed": 5
  },
  "workers": [
@@ -113,7 +113,7 @@
    "task": "[tools] T-4486 refuse Fable without Fable task",
    "model": "opus",
    "started": "2026-11-15T09:39:16.911Z",
-   "seconds": 3067,
+   "seconds": 3262,
    "finished": null,
    "effort": "high"
   },
@@ -122,7 +122,7 @@
    "task": "[tools] T-4488 T-4438 fix main red suites",
    "model": "opus",
    "started": "2026-11-15T09:53:40.312Z",
-   "seconds": 2204,
+   "seconds": 2399,
    "finished": null,
    "effort": "high"
   },
@@ -131,7 +131,7 @@
    "task": "[tools] T-4129 land Set aside part 2b",
    "model": "opus",
    "started": "2026-11-15T10:24:41.627Z",
-   "seconds": 342,
+   "seconds": 537,
    "finished": null,
    "effort": "high"
   }
@@ -223,7 +223,7 @@
   "week_pct": null,
   "usage_pct": null,
   "work_pct": null,
-  "read_at": "2026-11-15T10:30:00+00:00",
+  "read_at": "2026-11-15T10:33:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -353,7 +353,7 @@
   }
  ],
  "disk": {
-  "free_gb": 21,
+  "free_gb": 20,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -362,14 +362,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-15T05:24:00-05:00",
+   "at": "2026-11-15T05:31:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-15T05:30:00-05:00",
+  "at": "2026-11-15T05:33:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -633,42 +633,44 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-15T10:30:09Z",
+  "at": "2026-11-15T10:33:39Z",
   "s": {
-   "T-3712": [
+   "T-4430": [
     "merging",
     "Host checks on the Mac mini",
-    1794738369600
+    1794738759468
    ],
-   "T-4430": [
-    "mergeq",
-    "1st to merge",
-    1794738549600
-   ],
-   "T-4438": [
+   "T-4488": [
     "merging",
     "Mac tests at the main gate",
-    1794737289600
-   ],
-   "T-4089": [
-    "testing",
-    "Mac Mini \u00b7 test",
-    null
-   ],
-   "T-4280": [
-    "testing",
-    "Mac Mini \u00b7 test",
-    null
+    1794738819468
    ],
    "T-4129": [
     "testing",
     "its own tests, in its copy",
-    1794738309600
+    1794738339468
    ],
    "T-4486": [
     "testing",
     "its own tests, in its copy",
-    1794736989600
+    1794737019468
+   ],
+   "T-4438": [
+    "testing",
+    "its own tests, in its copy",
+    1794737259468
+   ],
+   "T-3712": [
+    "merged",
+    "on main 5:25 AM ET",
+    1794738356000,
+    ""
+   ],
+   "T-4089": [
+    "merged",
+    "on main 5:24 AM ET",
+    1794738297000,
+    ""
    ],
    "T-4123": [
     "merged",
@@ -678,22 +680,22 @@
    ]
   },
   "nm": {
-   "T-3712": "Erase unused Simulators by tool",
    "T-4430": "Answer TestFlight encryption questions by default",
-   "T-4438": "Fix two test suites that fail on main",
-   "T-4089": "Fix the location bridge test that failed on the MacBook",
-   "T-4280": "Run each widget in the widget or app by size",
+   "T-4488": "Fix the How it works page test red on main",
    "T-4129": "Retire the Set aside stage on Home",
    "T-4486": "Refuse Fable in sessions with no Fable task",
+   "T-4438": "Fix two test suites that fail on main",
+   "T-3712": "Erase unused Simulators by tool",
+   "T-4089": "Fix the location bridge test that failed on the MacBook",
    "T-4123": "Rerun the audit pattern study on the full ledger"
   }
  },
  "ln": {
-  "at": "2026-11-15T10:30:09Z",
+  "at": "2026-11-15T10:33:39Z",
   "mq": {
    "n": {
     "checking": 1,
-    "inline": 1,
+    "inline": 0,
     "conflicted": 3,
     "failed": 0,
     "held": 0,
@@ -701,33 +703,33 @@
     "parked": 4
    },
    "m": {
-    "checking": 4,
-    "inline": 1,
-    "conflicted": 612,
+    "checking": 1,
+    "inline": null,
+    "conflicted": 615,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1340
+    "parked": 1344
    },
    "cur": [
     [
      [
-      "T-3712"
+      "T-4430"
      ],
      "Mac tests",
      "Mac mini",
-     4
+     1
     ]
    ],
    "ld": [
-    5,
-    "2026-11-15T10:25:48Z"
+    6,
+    "2026-11-15T10:31:51Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-15T10:29:43Z",
-    "ld": 55.28,
+    "at": "2026-11-15T10:33:18Z",
+    "ld": 52.81,
     "c": 8,
     "sb": 1,
     "dk": [
@@ -743,8 +745,8 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-15T09:57:47Z",
-    "ld": 0.22,
+    "at": "2026-11-15T10:28:18Z",
+    "ld": 0.2,
     "c": 12,
     "sb": 0,
     "dk": [
@@ -769,17 +771,13 @@
    "w": "Operator",
    "a": "Evan",
    "sr": 1,
-   "m": "opus",
-   "e": "high",
    "t": "Work session \u2013 2 tasks",
-   "at": "2026-11-15T04:53:03-05:00"
+   "at": "2026-11-15T04:53:04-05:00"
   },
   {
    "w": "Operator",
    "a": "Evan",
    "sr": 1,
-   "m": "opus",
-   "e": "high",
    "t": "Work session \u2013 2 tasks",
    "at": "2026-11-15T04:53:08-05:00"
   },
@@ -787,8 +785,6 @@
    "w": "Operator",
    "a": "Evan",
    "sr": 1,
-   "m": "opus",
-   "e": "high",
    "t": "Work session \u2013 1 task",
    "at": "2026-11-15T04:53:01-05:00"
   }
@@ -815,10 +811,10 @@
   "main": 3,
   "lanes": 3,
   "total": 6,
-  "at": "5:30 AM",
+  "at": "5:33 AM",
   "why": "",
-  "at_iso": "2026-11-15T10:30:00+00:00",
+  "at_iso": "2026-11-15T10:33:00+00:00",
   "started": "2:07 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 3, started 2:07 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 5:30 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 3, started 2:07 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 5:33 AM ET</p></section>"
  }
 }

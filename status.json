@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-15T12:30:40.178798+00:00",
+ "at": "2026-11-15T12:33:46.141556+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -95,15 +95,7 @@
    "task": "[tools] T-4487 wire task states into land",
    "model": "opus",
    "started": "2026-11-15T11:27:02.366Z",
-   "seconds": 3817,
-   "finished": null
-  },
-  {
-   "name": "maren",
-   "task": "[design] T-4468 premade input pages design",
-   "model": "opus",
-   "started": "2026-11-15T11:55:51.552Z",
-   "seconds": 2088,
+   "seconds": 4003,
    "finished": null
   },
   {
@@ -111,12 +103,28 @@
    "task": "[site] T-4102 nested queue on Home",
    "model": "opus",
    "started": "2026-11-15T12:19:27.863Z",
-   "seconds": 672,
+   "seconds": 858,
+   "finished": null
+  },
+  {
+   "name": "pernille",
+   "task": "[build] T-4468 premade settings Python half",
+   "model": "opus",
+   "started": "2026-11-15T12:32:04.296Z",
+   "seconds": 101,
    "finished": null
   }
  ],
- "who": "Odalys x2, Maren",
+ "who": "Odalys x2, Pernille",
  "recent": [
+  {
+   "name": "maren",
+   "task": "[design] T-4468 premade input pages design",
+   "model": "opus",
+   "started": "2026-11-15T11:55:51.552Z",
+   "seconds": null,
+   "finished": "2026-11-15T12:31:41.375000+00:00"
+  },
   {
    "name": "idris",
    "task": "[tools] T-4194 feature session slice b",
@@ -140,14 +148,6 @@
    "started": "2026-11-15T12:12:11.879Z",
    "seconds": null,
    "finished": "2026-11-15T12:15:28.669000+00:00"
-  },
-  {
-   "name": "ines",
-   "task": "[plan] T-4437 queue audit order and last rows",
-   "model": "opus",
-   "started": "2026-11-15T11:54:26.814Z",
-   "seconds": null,
-   "finished": "2026-11-15T12:11:51.030000+00:00"
   }
  ],
  "queue": {
@@ -202,7 +202,7 @@
   "week_pct": null,
   "usage_pct": null,
   "work_pct": null,
-  "read_at": "2026-11-15T12:30:00+00:00",
+  "read_at": "2026-11-15T12:33:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -239,7 +239,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-15T07:30:00-05:00",
+  "at": "2026-11-15T07:33:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -264,11 +264,11 @@
    "next": []
   },
   {
-   "name": "Maren",
+   "name": "Pernille",
    "state": "running",
-   "task": "[design] T-4468 premade input pages design",
+   "task": "[build] T-4468 premade settings Python half",
    "model": "opus",
-   "since": "2026-11-15T11:55:51.552Z",
+   "since": "2026-11-15T12:32:04.296Z",
    "next": []
   },
   {
@@ -288,17 +288,17 @@
    "next": []
   },
   {
-   "name": "Pernille",
+   "name": "Wrenna",
    "state": "next",
-   "task": "Pernille, P1, premades and gallery take the age line...",
+   "task": "Wrenna, P2, T-2375 continuation (B-staged item 3...",
    "model": null,
    "since": null,
    "next": []
   },
   {
-   "name": "Wrenna",
+   "name": "Maren",
    "state": "next",
-   "task": "Wrenna, P2, T-2375 continuation (B-staged item 3...",
+   "task": "Maren, P2, found on T-3366 (11-07): in...",
    "model": null,
    "since": null,
    "next": []
@@ -316,15 +316,6 @@
     "task": "T-4487"
    },
    {
-    "w": "Maren",
-    "k": "design",
-    "t": "Let people set each premade's place, events and lists",
-    "m": "opus",
-    "at": "2026-11-15T11:55:51.552Z",
-    "o": "c",
-    "task": "T-4468"
-   },
-   {
     "w": "Odalys",
     "k": "site",
     "t": "Show the queue nested on Home with search",
@@ -332,6 +323,15 @@
     "at": "2026-11-15T12:19:27.863Z",
     "o": "c",
     "task": "T-4102"
+   },
+   {
+    "w": "Pernille",
+    "k": "build",
+    "t": "Let people set each premade's place, events and lists",
+    "m": "opus",
+    "at": "2026-11-15T12:32:04.296Z",
+    "o": "c",
+    "task": "T-4468"
    }
   ],
   "src": "plan",
@@ -499,17 +499,17 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-15T12:30:26Z",
+  "at": "2026-11-15T12:33:46Z",
   "s": {
    "T-4102": [
     "testing",
     "its own tests, in its copy",
-    1794745586359
+    1794745906141
    ],
    "T-4487": [
     "testing",
     "its own tests, in its copy",
-    1794745226359
+    1794745246141
    ],
    "T-4468": [
     "merged",
@@ -525,7 +525,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-15T12:30:26Z",
+  "at": "2026-11-15T12:33:46Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -539,11 +539,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 732,
+    "conflicted": 735,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1461
+    "parked": 1464
    },
    "cur": [],
    "ld": [
@@ -553,12 +553,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-15T12:30:02Z",
-    "ld": 3.28,
+    "at": "2026-11-15T12:33:47Z",
+    "ld": 3.72,
     "c": 8,
     "sb": 0,
     "dk": [
-     20.1,
+     21.2,
      228.3
     ],
     "ss": [
@@ -613,10 +613,10 @@
   "main": 3,
   "lanes": 0,
   "total": 3,
-  "at": "7:30 AM",
+  "at": "7:33 AM",
   "why": "",
-  "at_iso": "2026-11-15T12:30:00+00:00",
+  "at_iso": "2026-11-15T12:33:00+00:00",
   "started": "6:23 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 6:23 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 7:30 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 6:23 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 7:33 AM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-15T22:30:01.212751+00:00",
+ "at": "2026-11-15T22:33:03.036077+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -112,7 +112,7 @@
    "task": "[tools] T-3992 land the pipeline batch",
    "model": "opus",
    "started": "2026-11-15T22:17:17.812Z",
-   "seconds": 763,
+   "seconds": 945,
    "finished": null,
    "effort": "high"
   },
@@ -121,7 +121,7 @@
    "task": "[plan] T-4105 queue audit report draft",
    "model": "opus",
    "started": "2026-11-15T22:17:26.558Z",
-   "seconds": 754,
+   "seconds": 936,
    "finished": null,
    "effort": "high"
   },
@@ -130,7 +130,7 @@
    "task": "[test] T-4527 steady hung Pro check test",
    "model": "opus",
    "started": "2026-11-15T22:17:32.735Z",
-   "seconds": 748,
+   "seconds": 930,
    "finished": null,
    "effort": "high"
   }
@@ -189,7 +189,7 @@
   "week_pct": 3.57,
   "usage_pct": 22.9,
   "work_pct": 71.4,
-  "read_at": "2026-11-15T22:30:00+00:00",
+  "read_at": "2026-11-15T22:33:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -263,7 +263,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-15T17:30:00-05:00",
+  "at": "2026-11-15T17:33:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -504,26 +504,33 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-15T22:29:44Z",
+  "at": "2026-11-15T22:32:55Z",
   "s": {
    "T-4527": [
-    "merging",
-    "Mac tests at the main gate",
-    1794781784380
+    "mergetest",
+    "iPhone tests on the MacBook",
+    null
    ],
    "T-3992": [
     "testing",
     "its own tests, in its copy",
-    1794781184380
+    1794781195577
+   ],
+   "T-4105": [
+    "merged",
+    "on main 5:32 PM ET",
+    1794781962000,
+    "Ines"
    ]
   },
   "nm": {
    "T-4527": "Steady the hung Pro check timing test",
-   "T-3992": "Clear and merge the unfinished merge fixes"
+   "T-3992": "Clear and merge the unfinished merge fixes",
+   "T-4105": "Post the queue audit report in the main thread"
   }
  },
  "ln": {
-  "at": "2026-11-15T22:29:44Z",
+  "at": "2026-11-15T22:32:55Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -537,11 +544,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 1331,
-    "failed": 3,
+    "conflicted": 1334,
+    "failed": 6,
     "held": null,
     "retry": null,
-    "parked": 560
+    "parked": 563
    },
    "cur": [],
    "ld": [
@@ -551,12 +558,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-15T22:29:20Z",
-    "ld": 4.43,
+    "at": "2026-11-15T22:32:08Z",
+    "ld": 4.14,
     "c": 8,
     "sb": 0,
     "dk": [
-     11.3,
+     11.4,
      228.3
     ],
     "ss": [
@@ -566,12 +573,12 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-15T22:27:59Z",
-    "ld": 27.7,
+    "at": "2026-11-15T22:30:05Z",
+    "ld": 18.31,
     "c": 12,
     "sb": 0,
     "dk": [
-     356.4,
+     357.1,
      926.4
     ],
     "sn": []
@@ -594,26 +601,15 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Inbox \u2013 Evan's 5:29 PM Message on GitHub",
-   "at": "2026-11-15T17:30:01-05:00"
+   "t": "Work session \u2013 3 tasks",
+   "at": "2026-11-15T16:20:10-05:00"
   }
  ],
  "reply": {
-  "sent": "2026-11-15T22:24:11Z",
-  "seconds": 139.0
+  "sent": "2026-11-15T22:30:49Z",
+  "seconds": 46.0
  },
- "inbox": [
-  {
-   "id": "c6902433568",
-   "state": "received",
-   "position": 1,
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "approve"
-  }
- ],
+ "inbox": [],
  "trimmed": [
   "lane_next",
   "queue_text",
@@ -628,10 +624,10 @@
   "main": 3,
   "lanes": 1,
   "total": 4,
-  "at": "5:30 PM",
+  "at": "5:33 PM",
   "why": "",
-  "at_iso": "2026-11-15T22:30:00+00:00",
+  "at_iso": "2026-11-15T22:33:00+00:00",
   "started": "5:14 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 3, started 5:14 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 5:30 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 3, started 5:14 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 5:33 PM ET</p></section>"
  }
 }

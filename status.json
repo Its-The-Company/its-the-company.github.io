@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-15T18:02:40.200579+00:00",
+ "at": "2026-11-15T18:05:40.215220+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -117,7 +117,7 @@
    "task": "[build] T-4524 https host fixes",
    "model": "opus",
    "started": "2026-11-15T16:46:36.927Z",
-   "seconds": 4563,
+   "seconds": 4743,
    "finished": null,
    "effort": "high"
   },
@@ -126,7 +126,7 @@
    "task": "[build] T-3310 cap demotion list read",
    "model": "opus",
    "started": "2026-11-15T17:39:31.767Z",
-   "seconds": 1388,
+   "seconds": 1568,
    "finished": null,
    "effort": "high"
   },
@@ -135,7 +135,7 @@
    "task": "[design] T-4511 T-4513 Investor site asks",
    "model": "opus",
    "started": "2026-11-15T18:01:02.140Z",
-   "seconds": 98,
+   "seconds": 278,
    "finished": null,
    "effort": "high"
   }
@@ -227,20 +227,8 @@
   "week_pct": 2.36,
   "usage_pct": 27.2,
   "work_pct": 75.0,
-  "read_at": "2026-11-15T18:02:00+00:00",
+  "read_at": "2026-11-15T18:05:00+00:00",
   "running": [
-   {
-    "lane": "b2",
-    "task": "T-4284",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Add an Audit mode for one audit on chosen accounts",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-15T13:01:26-05:00",
-    "n": "Jeremy",
-    "src": "plan-b"
-   },
    {
     "lane": "b3",
     "task": "T-4227",
@@ -314,7 +302,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-15T13:02:00-05:00",
+  "at": "2026-11-15T13:05:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -580,22 +568,32 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-15T18:02:20Z",
+  "at": "2026-11-15T18:05:27Z",
   "s": {
    "T-4227": [
     "merging",
     "Host checks on the Mac mini",
-    1794764900183
+    1794764907880
+   ],
+   "T-4284": [
+    "mergeq",
+    "1st to merge",
+    1794765867880
+   ],
+   "T-3310": [
+    "mergetest",
+    "iPhone tests on the MacBook",
+    null
    ],
    "T-4525": [
     "merging",
-    "Mac tests at the main gate",
-    1794765680183
+    "Mac tests at the main gate \u00b7 1 group of tests done",
+    1794765687880
    ],
-   "T-3310": [
+   "T-4511": [
     "testing",
     "its own tests, in its copy",
-    1794764780183
+    1794765807880
    ],
    "T-4524": [
     "merged",
@@ -606,31 +604,33 @@
   },
   "nm": {
    "T-4227": "Run every Operator on Opus high",
-   "T-4525": "Parse https chunk sizes strictly",
+   "T-4284": "Add an Audit mode for one audit on chosen accounts",
    "T-3310": "Cap the demotion list read in the widget",
+   "T-4525": "Parse https chunk sizes strictly",
+   "T-4511": "Name the Investor in Chat's You asked bar",
    "T-4524": "Keep every https request on its own host"
   }
  },
  "ln": {
-  "at": "2026-11-15T18:02:20Z",
+  "at": "2026-11-15T18:05:27Z",
   "mq": {
    "n": {
     "checking": 1,
-    "inline": 0,
+    "inline": 1,
     "conflicted": 2,
     "failed": 0,
     "held": 0,
     "retry": 0,
-    "parked": 3
+    "parked": 2
    },
    "m": {
-    "checking": 14,
-    "inline": null,
-    "conflicted": 1080,
+    "checking": 17,
+    "inline": 1,
+    "conflicted": 1083,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 2944
+    "parked": 1798
    },
    "cur": [
     [
@@ -639,7 +639,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     14
+     17
     ]
    ],
    "ld": [
@@ -649,12 +649,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-15T18:01:59Z",
-    "ld": 1.26,
+    "at": "2026-11-15T18:04:38Z",
+    "ld": 1.82,
     "c": 8,
     "sb": 0,
     "dk": [
-     13.6,
+     16.6,
      228.3
     ],
     "ss": [
@@ -664,8 +664,8 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-15T18:00:18Z",
-    "ld": 6.94,
+    "at": "2026-11-15T18:02:24Z",
+    "ld": 4.63,
     "c": 12,
     "sb": 0,
     "dk": [
@@ -685,15 +685,6 @@
    "e": "high",
    "t": "Work session \u2013 15 tasks",
    "at": "2026-11-15T12:11:09-05:00"
-  },
-  {
-   "w": "Operator",
-   "a": "Jeremy",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session \u2013 1 task",
-   "at": "2026-11-15T13:01:26-05:00"
   },
   {
    "w": "Operator",
@@ -725,12 +716,12 @@
  ],
  "agents_now": {
   "main": 3,
-  "lanes": 2,
-  "total": 5,
-  "at": "1:02 PM",
+  "lanes": 1,
+  "total": 4,
+  "at": "1:05 PM",
   "why": "",
-  "at_iso": "2026-11-15T18:02:00+00:00",
+  "at_iso": "2026-11-15T18:05:00+00:00",
   "started": "10:05 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 3, started 10:05 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 1:02 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 3, started 10:05 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 1:05 PM ET</p></section>"
  }
 }

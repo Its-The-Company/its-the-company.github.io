@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-15T20:35:45.353924+00:00",
+ "at": "2026-11-15T20:38:49.805938+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -118,7 +118,7 @@
    "task": "[build] T-4468 premade settings H1 Python half",
    "model": "opus",
    "started": "2026-11-15T19:14:40.149Z",
-   "seconds": 4865,
+   "seconds": 5049,
    "finished": null,
    "effort": "high"
   },
@@ -127,7 +127,7 @@
    "task": "[tools] T-3992 land the pipeline batch",
    "model": "opus",
    "started": "2026-11-15T20:27:24.942Z",
-   "seconds": 500,
+   "seconds": 684,
    "finished": null,
    "effort": "high"
   }
@@ -219,7 +219,7 @@
   "week_pct": 3.22,
   "usage_pct": 26.1,
   "work_pct": 75.0,
-  "read_at": "2026-11-15T20:35:00+00:00",
+  "read_at": "2026-11-15T20:38:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -256,7 +256,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-15T15:35:00-05:00",
+  "at": "2026-11-15T15:38:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -511,32 +511,33 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-15T20:35:24Z",
+  "at": "2026-11-15T20:38:34Z",
   "s": {
    "T-4227": [
     "merging",
-    "Host checks on the Mac mini \u00b7 2 groups of tests done",
-    1794774684477
-   ],
-   "T-4468": [
-    "mergetest",
-    "iPhone tests on the MacBook",
-    null
+    "Host checks on the Mac mini \u00b7 3 groups of tests done",
+    1794774694369
    ],
    "T-3992": [
     "testing",
     "its own tests, in its copy",
-    1794774564477
+    1794774574369
+   ],
+   "T-4468": [
+    "merged",
+    "on main 3:38 PM ET",
+    1794775097000,
+    "Pernille"
    ]
   },
   "nm": {
    "T-4227": "Run every Operator on Opus high",
-   "T-4468": "Let people set each premade's place, events and lists",
-   "T-3992": "Clear and merge the unfinished merge fixes"
+   "T-3992": "Clear and merge the unfinished merge fixes",
+   "T-4468": "Let people set each premade's place, events and lists"
   }
  },
  "ln": {
-  "at": "2026-11-15T20:35:24Z",
+  "at": "2026-11-15T20:38:34Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -548,13 +549,13 @@
     "parked": 2
    },
    "m": {
-    "checking": 4,
+    "checking": 7,
     "inline": null,
-    "conflicted": 1217,
+    "conflicted": 1220,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 446
+    "parked": 449
    },
    "cur": [
     [
@@ -563,7 +564,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     4
+     7
     ]
    ],
    "ld": [
@@ -573,8 +574,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-15T20:34:56Z",
-    "ld": 6.53,
+    "at": "2026-11-15T20:38:13Z",
+    "ld": 9.7,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -588,12 +589,12 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-15T20:30:20Z",
-    "ld": 1.08,
+    "at": "2026-11-15T20:37:53Z",
+    "ld": 2.19,
     "c": 12,
     "sb": 0,
     "dk": [
-     357.7,
+     357.5,
      926.4
     ],
     "sn": []
@@ -633,10 +634,10 @@
   "main": 2,
   "lanes": 0,
   "total": 2,
-  "at": "3:35 PM",
+  "at": "3:38 PM",
   "why": "",
-  "at_iso": "2026-11-15T20:35:00+00:00",
+  "at_iso": "2026-11-15T20:38:00+00:00",
   "started": "2:00 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 2:00 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 3:35 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 2:00 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 3:38 PM ET</p></section>"
  }
 }

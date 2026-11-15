@@ -1,10 +1,10 @@
 {
  "schema": 1,
- "at": "2026-11-15T07:07:01.046742+00:00",
+ "at": "2026-11-15T07:10:08.215054+00:00",
  "session": {
-  "active": false,
-  "kind": "",
-  "started": null,
+  "active": true,
+  "kind": "work",
+  "started": "2026-11-15T02:07:02-05:00",
   "flow": [
    {
     "t": "T-4457",
@@ -122,40 +122,7 @@
  },
  "workers": [],
  "who": "",
- "recent": [
-  {
-   "name": "maren",
-   "task": "[site] T-4316 scroll boxes pointer inside",
-   "model": "opus",
-   "started": "2026-11-14T14:13:10.608Z",
-   "seconds": null,
-   "finished": "2026-11-14T15:45:03.183000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-4440 bundled render guard + T-4441 test",
-   "model": "opus",
-   "started": "2026-11-14T14:43:01.260Z",
-   "seconds": null,
-   "finished": "2026-11-14T15:21:49.583000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-4434 refresh tap wiring test",
-   "model": "opus",
-   "started": "2026-11-14T14:01:15.595Z",
-   "seconds": null,
-   "finished": "2026-11-14T14:42:21.461000+00:00"
-  },
-  {
-   "name": "pernille",
-   "task": "[review] T-4439 premade first-draw review",
-   "model": "opus",
-   "started": "2026-11-14T14:01:03.863Z",
-   "seconds": null,
-   "finished": "2026-11-14T14:11:31.795000+00:00"
-  }
- ],
+ "recent": [],
  "queue": {
   "runnable": [],
   "blocked": [],
@@ -203,12 +170,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-15T02:21:47-05:00",
+ "next_tick": null,
  "personal": {
   "week_pct": null,
   "usage_pct": null,
   "work_pct": null,
-  "read_at": "2026-11-15T07:07:00+00:00",
+  "read_at": "2026-11-15T07:10:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -245,7 +212,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-15T02:07:00-05:00",
+  "at": "2026-11-15T02:10:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -253,14 +220,13 @@
    "b": "double-spread"
   }
  },
- "next_tick_why": "last_tick",
- "idle": {
-  "since": "2026-11-14T10:48:42-05:00",
-  "minutes": 918,
-  "why": "a finished change has been merging for 0 min",
-  "healed": []
+ "next_tick_why": "session",
+ "idle": null,
+ "pool": {
+  "why": "Double Spread: 100% of the week left, paced to last until Wed 14:00, the week's halfway point; the machine allows 22 (held: too few lands in 3 hours to judge a raise)",
+  "n": 3,
+  "at": "2026-11-15T02:06:47.779117-05:00"
  },
- "pool": null,
  "lanes": [
   {
    "name": "Idris",
@@ -313,6 +279,7 @@
  ],
  "tasks": {
   "run": [],
+  "src": "plan",
   "open": [
    {
     "w": "Pernille",
@@ -407,6 +374,10 @@
    "wait": 41,
    "blocked": 44,
    "you": 14
+  },
+  "fin": {
+   "n": 0,
+   "rows": []
   }
  },
  "qr": [
@@ -448,22 +419,22 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-15T07:07:01Z",
+  "at": "2026-11-15T07:10:08Z",
   "s": {
    "T-4458": [
-    "merging",
-    "Rebasing onto current main",
-    1794726421046
+    "mergeq",
+    "1st to merge",
+    1794698768215
    ],
    "T-4445": [
     "mergeq",
-    "1st to merge",
-    1794699001046
+    "2nd to merge",
+    1794699008215
    ],
    "T-4457": [
     "mergeq",
-    "2nd to merge",
-    1794715201046
+    "3rd to merge",
+    1794715208215
    ]
   },
   "nm": {
@@ -473,11 +444,11 @@
   }
  },
  "ln": {
-  "at": "2026-11-15T07:07:01Z",
+  "at": "2026-11-15T07:10:08Z",
   "mq": {
    "n": {
-    "checking": 1,
-    "inline": 2,
+    "checking": 0,
+    "inline": 3,
     "conflicted": 2,
     "failed": 0,
     "held": 0,
@@ -485,24 +456,15 @@
     "parked": 2
    },
    "m": {
-    "checking": 0,
-    "inline": 322,
-    "conflicted": 425,
+    "checking": null,
+    "inline": 460,
+    "conflicted": 428,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 2290
+    "parked": 2293
    },
-   "cur": [
-    [
-     [
-      "T-4458"
-     ],
-     "lining up with main",
-     "Mac mini",
-     0
-    ]
-   ],
+   "cur": [],
    "ld": [
     0,
     null
@@ -510,12 +472,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-15T07:07:01Z",
-    "ld": 0.69,
+    "at": "2026-11-15T07:09:21Z",
+    "ld": 0.8,
     "c": 8,
     "sb": 0,
     "dk": [
-     24.0,
+     23.9,
      228.3
     ],
     "ss": [
@@ -537,30 +499,26 @@
    }
   }
  },
- "operators": [],
- "reply": {
-  "sent": "2026-11-15T02:59:04Z",
-  "seconds": 1032.0
- },
- "inbox": [
+ "operators": [
   {
-   "id": "c6889971956",
-   "state": "waiting",
-   "position": 1,
-   "eta": "2026-11-15T02:21:47-05:00",
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "I didn't open any! If you aren't..."
+   "w": "Operator",
+   "a": "Main plan",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session",
+   "at": "2026-11-15T02:10:06-05:00"
   }
  ],
+ "reply": {
+  "sent": "2026-11-15T05:50:44Z",
+  "seconds": 4348.0
+ },
+ "inbox": [],
  "trimmed": [
   "lane_next",
   "queue_text",
-  "recent",
   "task_done",
-  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -571,10 +529,10 @@
   "main": 0,
   "lanes": 0,
   "total": 0,
-  "at": "2:07 AM",
+  "at": "2:10 AM",
   "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
-  "at_iso": "2026-11-15T07:07:00+00:00",
-  "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 2:07 AM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
+  "at_iso": "2026-11-15T07:10:00+00:00",
+  "started": "2:07 AM",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0, started 2:07 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 2:10 AM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
  }
 }

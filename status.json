@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-15T08:47:37.874270+00:00",
+ "at": "2026-11-15T08:50:41.365155+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -102,7 +102,7 @@
    "task": "[tools] T-4466 open audit lines to all accounts",
    "model": "opus",
    "started": "2026-11-15T07:11:46.805Z",
-   "seconds": 5751,
+   "seconds": 5934,
    "finished": null,
    "effort": "high"
   },
@@ -111,7 +111,7 @@
    "task": "[tools] T-4129 land Set aside part 2b",
    "model": "opus",
    "started": "2026-11-15T07:42:39.983Z",
-   "seconds": 3897,
+   "seconds": 4081,
    "finished": null,
    "effort": "high"
   }
@@ -195,7 +195,7 @@
   "week_pct": null,
   "usage_pct": null,
   "work_pct": null,
-  "read_at": "2026-11-15T08:47:00+00:00",
+  "read_at": "2026-11-15T08:50:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -216,7 +216,7 @@
   }
  ],
  "disk": {
-  "free_gb": 24,
+  "free_gb": 25,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -225,14 +225,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-15T03:42:00-05:00",
+   "at": "2026-11-15T03:48:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-15T03:47:00-05:00",
+  "at": "2026-11-15T03:50:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -474,84 +474,55 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-15T08:47:28Z",
+  "at": "2026-11-15T08:50:41Z",
   "s": {
-   "T-4457": [
-    "merging",
-    "Merging onto main",
-    1794732448808
-   ],
-   "T-3806": [
-    "merging",
-    "Merging onto main",
-    1794732448808
-   ],
    "T-4466": [
     "merging",
     "Mac tests at the main gate",
-    1794732088808
+    1794732641365
    ],
    "T-4129": [
     "testing",
     "its own tests, in its copy",
-    1794732328808
+    1794732341365
    ]
   },
   "nm": {
-   "T-4457": "Commit queued board records with the records round",
-   "T-3806": "Answer Investor messages that no session claims",
    "T-4466": "Open the audit lines to every account and any model",
    "T-4129": "Retire the Set aside stage on Home"
   }
  },
  "ln": {
-  "at": "2026-11-15T08:47:28Z",
+  "at": "2026-11-15T08:50:41Z",
   "mq": {
    "n": {
-    "checking": 2,
+    "checking": 0,
     "inline": 0,
-    "conflicted": 3,
+    "conflicted": 4,
     "failed": 0,
     "held": 0,
     "retry": 0,
     "parked": 2
    },
    "m": {
-    "checking": 0,
+    "checking": null,
     "inline": null,
-    "conflicted": 509,
+    "conflicted": 301,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 2391
+    "parked": 2394
    },
-   "cur": [
-    [
-     [
-      "T-4457"
-     ],
-     "going onto main",
-     "Mac mini",
-     0
-    ],
-    [
-     [
-      "T-3806"
-     ],
-     "going onto main",
-     "Mac mini",
-     0
-    ]
-   ],
+   "cur": [],
    "ld": [
-    2,
-    "2026-11-15T07:40:16Z"
+    3,
+    "2026-11-15T08:47:33Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-15T08:46:40Z",
-    "ld": 1.07,
+    "at": "2026-11-15T08:50:41Z",
+    "ld": 0.9,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -608,10 +579,10 @@
   "main": 2,
   "lanes": 0,
   "total": 2,
-  "at": "3:47 AM",
+  "at": "3:50 AM",
   "why": "",
-  "at_iso": "2026-11-15T08:47:00+00:00",
+  "at_iso": "2026-11-15T08:50:00+00:00",
   "started": "2:07 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 2:07 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 3:47 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 2:07 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 3:50 AM ET</p></section>"
  }
 }

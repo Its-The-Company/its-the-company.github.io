@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-15T11:54:02.434406+00:00",
+ "at": "2026-11-15T11:57:07.039438+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -95,28 +95,44 @@
    "task": "[tools] T-4487 wire task states into land",
    "model": "opus",
    "started": "2026-11-15T11:27:02.366Z",
-   "seconds": 1620,
+   "seconds": 1804,
    "finished": null
+  },
+  {
+   "name": "ines",
+   "task": "[plan] T-4437 queue audit order and last rows",
+   "model": "opus",
+   "started": "2026-11-15T11:54:26.814Z",
+   "seconds": 160,
+   "finished": null
+  },
+  {
+   "name": "maren",
+   "task": "[design] T-4468 premade input pages design",
+   "model": "opus",
+   "started": "2026-11-15T11:55:51.552Z",
+   "seconds": 75,
+   "finished": null
+  }
+ ],
+ "who": "Odalys, Ines, Maren",
+ "recent": [
+  {
+   "name": "odalys",
+   "task": "[tools] T-4241 GitLab and GitBook terms guard",
+   "model": "opus",
+   "started": "2026-11-15T11:42:00.619Z",
+   "seconds": null,
+   "finished": "2026-11-15T11:54:32.500000+00:00"
   },
   {
    "name": "odalys",
    "task": "[tools] T-4461 ledger apply last rows",
    "model": "opus",
    "started": "2026-11-15T11:34:56.087Z",
-   "seconds": 1146,
-   "finished": null
+   "seconds": null,
+   "finished": "2026-11-15T11:54:05.483000+00:00"
   },
-  {
-   "name": "odalys",
-   "task": "[tools] T-4241 GitLab and GitBook terms guard",
-   "model": "opus",
-   "started": "2026-11-15T11:42:00.619Z",
-   "seconds": 721,
-   "finished": null
-  }
- ],
- "who": "Odalys x3",
- "recent": [
   {
    "name": "ines",
    "task": "[plan] T-4467 plan in line with Saturday answers",
@@ -186,7 +202,7 @@
   "week_pct": null,
   "usage_pct": null,
   "work_pct": null,
-  "read_at": "2026-11-15T11:54:00+00:00",
+  "read_at": "2026-11-15T11:57:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -258,7 +274,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-15T06:54:00-05:00",
+  "at": "2026-11-15T06:57:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -283,17 +299,25 @@
    "next": []
   },
   {
-   "name": "Idris",
-   "state": "next",
-   "task": "Idris, P2, from T-4238 (Pernille's review, from T-3900,...",
-   "model": null,
-   "since": null,
+   "name": "Ines",
+   "state": "running",
+   "task": "[plan] T-4437 queue audit order and last rows",
+   "model": "opus",
+   "since": "2026-11-15T11:54:26.814Z",
    "next": []
   },
   {
-   "name": "Ines",
+   "name": "Maren",
+   "state": "running",
+   "task": "[design] T-4468 premade input pages design",
+   "model": "opus",
+   "since": "2026-11-15T11:55:51.552Z",
+   "next": []
+  },
+  {
+   "name": "Idris",
    "state": "next",
-   "task": "Ines, P2, from T-1110 (Wrenna,...",
+   "task": "Idris, P2, from T-4238 (Pernille's review, from T-3900,...",
    "model": null,
    "since": null,
    "next": []
@@ -313,14 +337,6 @@
    "model": null,
    "since": null,
    "next": []
-  },
-  {
-   "name": "Maren",
-   "state": "next",
-   "task": "Maren, P2, found on T-3366 (11-07): in...",
-   "model": null,
-   "since": null,
-   "next": []
   }
  ],
  "tasks": {
@@ -335,22 +351,22 @@
     "task": "T-4487"
    },
    {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Let the ledger apply finish its last rows",
+    "w": "Ines",
+    "k": "plan",
+    "t": "Finish the queue audit's order and last refused rows",
     "m": "opus",
-    "at": "2026-11-15T11:34:56.087Z",
+    "at": "2026-11-15T11:54:26.814Z",
     "o": "c",
-    "task": "T-4461"
+    "task": "T-4437"
    },
    {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Add GitLab and GitBook to the terms guard",
+    "w": "Maren",
+    "k": "design",
+    "t": "Let people set each premade's place, events and lists",
     "m": "opus",
-    "at": "2026-11-15T11:42:00.619Z",
+    "at": "2026-11-15T11:55:51.552Z",
     "o": "c",
-    "task": "T-4241"
+    "task": "T-4468"
    }
   ],
   "src": "plan",
@@ -429,6 +445,11 @@
   "done": [
    {
     "w": "Odalys",
+    "t": "The company's web-reading tools now refuse GitLab's and GitBook's websites, because both sites'...",
+    "at": "2026-11-15T06:54:00-05:00"
+   },
+   {
+    "w": "Odalys",
     "t": "The tool that carries out the task-queue cleanup no longer blocks on lines that were already...",
     "at": "2026-11-15T06:53:00-05:00"
    },
@@ -436,11 +457,6 @@
     "w": "Ines",
     "t": "The release estimate now counts Saturday's two Builder choices: likely early June 2027 instead...",
     "at": "2026-11-15T06:41:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "Four background tools no longer make a separate commit each time they write a record; the shared...",
-    "at": "2026-11-15T06:33:00-05:00"
    }
   ],
   "count": {
@@ -450,8 +466,12 @@
    "you": 12
   },
   "fin": {
-   "n": 4,
+   "n": 5,
    "rows": [
+    [
+     "T-4241",
+     "Add GitLab and GitBook to..."
+    ],
     [
      "T-4461",
      "Let the ledger apply finish..."
@@ -510,18 +530,12 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-15T11:53:45Z",
+  "at": "2026-11-15T11:56:50Z",
   "s": {
    "T-4487": [
     "testing",
     "its own tests, in its copy",
-    1794742485273
-   ],
-   "T-4461": [
-    "merged",
-    "on main 6:53 AM ET",
-    1794743607000,
-    ""
+    1794742490984
    ],
    "T-4123": [
     "merged",
@@ -532,12 +546,11 @@
   },
   "nm": {
    "T-4487": "Wire task states into the land",
-   "T-4461": "Let the ledger apply finish its last rows",
    "T-4123": "Rerun the audit pattern study on the full ledger"
   }
  },
  "ln": {
-  "at": "2026-11-15T11:53:45Z",
+  "at": "2026-11-15T11:56:50Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -551,11 +564,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 695,
+    "conflicted": 698,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 2575
+    "parked": 2578
    },
    "cur": [],
    "ld": [
@@ -565,12 +578,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-15T11:53:46Z",
-    "ld": 5.85,
+    "at": "2026-11-15T11:56:02Z",
+    "ld": 5.14,
     "c": 8,
     "sb": 0,
     "dk": [
-     18.1,
+     17.5,
      228.3
     ],
     "ss": [
@@ -599,7 +612,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 5 tasks",
+   "t": "Work session \u2013 7 tasks",
    "at": "2026-11-15T06:23:05-05:00"
   },
   {
@@ -632,10 +645,10 @@
   "main": 3,
   "lanes": 1,
   "total": 4,
-  "at": "6:54 AM",
+  "at": "6:57 AM",
   "why": "",
-  "at_iso": "2026-11-15T11:54:00+00:00",
+  "at_iso": "2026-11-15T11:57:00+00:00",
   "started": "6:23 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 3, started 6:23 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 6:54 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 3, started 6:23 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 6:57 AM ET</p></section>"
  }
 }

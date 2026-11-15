@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-15T11:26:11.464450+00:00",
+ "at": "2026-11-15T11:29:12.996987+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -22,18 +22,26 @@
     ]
    },
    {
-    "t": "T-4111",
-    "name": "Cut clutter text on Home and every page",
+    "t": "T-4226",
+    "name": "Emoji reactions on Chat messages",
     "acct": "Personal a",
     "steps": [
      {
       "s": "testq",
-      "at": 1794741606
+      "at": 1794742041
      }
     ]
    }
   ],
   "done": [
+   {
+    "t": "T-4111",
+    "name": "Cut clutter text on Home and every page",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794742034
+   },
    {
     "t": "T-4430",
     "acct": "Personal a",
@@ -104,21 +112,38 @@
     "end": "failed",
     "end_at": 1794728176,
     "why": "did not merge cleanly"
-   },
-   {
-    "t": "T-4458",
-    "name": "Stop the other tools committing each record they write",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794728168
    }
   ],
-  "landed": 12,
+  "landed": 13,
   "failed": 6
  },
- "workers": [],
- "who": "",
+ "workers": [
+  {
+   "name": "ines",
+   "task": "[plan] T-4467 plan in line with Saturday answers",
+   "model": "opus",
+   "started": "2026-11-15T11:26:47.064Z",
+   "seconds": 145,
+   "finished": null
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-4480 records via records round redo",
+   "model": "opus",
+   "started": "2026-11-15T11:26:54.716Z",
+   "seconds": 138,
+   "finished": null
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-4487 wire task states into land",
+   "model": "opus",
+   "started": "2026-11-15T11:27:02.366Z",
+   "seconds": 130,
+   "finished": null
+  }
+ ],
+ "who": "Ines, Odalys x2",
  "recent": [],
  "queue": {
   "runnable": [],
@@ -128,20 +153,20 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 13.0,
-   "resets_at": "2026-11-15T12:00:00.458831+00:00",
+   "pct": 14.0,
+   "resets_at": "2026-11-15T07:00:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-15T06:22:39.617562-05:00",
-   "source": "usage",
-   "left": 87.0,
+   "read_at": "2026-11-15T06:28:08.428309-05:00",
+   "source": "live",
+   "left": 86.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 3.0,
-   "resets_at": "2026-11-22T07:00:00.458849+00:00",
+   "resets_at": "2026-11-22T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-15T06:22:39.617562-05:00",
-   "source": "usage",
+   "read_at": "2026-11-15T06:28:08.428309-05:00",
+   "source": "live",
    "left": 97.0,
    "left_words": "of your weekly allowance left"
   },
@@ -152,7 +177,7 @@
    "read_at": "2026-11-15T06:22:39.617562-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-15T06:22:39.617562-05:00"
+  "read_at": "2026-11-15T06:28:08.428309-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -172,7 +197,7 @@
   "week_pct": null,
   "usage_pct": null,
   "work_pct": null,
-  "read_at": "2026-11-15T11:26:00+00:00",
+  "read_at": "2026-11-15T11:29:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -204,45 +229,6 @@
     "task": "T-4123",
     "t": "Rerun the audit pattern study on the full ledger",
     "at": "2026-11-15T04:53:04-05:00",
-    "n": "Evan",
-    "d": 1,
-    "src": "plan-a"
-   },
-   {
-    "lane": "a2",
-    "task": "T-4111",
-    "w": "Maren",
-    "k": "site",
-    "t": "Cut clutter text on Home and every page",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-15T04:53:08-05:00",
-    "n": "Evan",
-    "d": 1,
-    "src": "plan-a"
-   },
-   {
-    "lane": "a2",
-    "task": "T-4226",
-    "w": "Maren",
-    "k": "site",
-    "t": "Emoji reactions on Chat messages",
-    "m": "sonnet",
-    "e": "medium",
-    "at": "2026-11-15T04:53:08-05:00",
-    "n": "Evan",
-    "d": 1,
-    "src": "plan-a"
-   },
-   {
-    "lane": "a2",
-    "task": "T-3712",
-    "w": "Odalys",
-    "k": "ops",
-    "t": "Erase unused Simulators by tool",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-15T04:53:08-05:00",
     "n": "Evan",
     "d": 1,
     "src": "plan-a"
@@ -302,7 +288,7 @@
   }
  ],
  "disk": {
-  "free_gb": 15,
+  "free_gb": 18,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -311,14 +297,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-15T06:20:00-05:00",
+   "at": "2026-11-15T06:28:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-15T06:26:00-05:00",
+  "at": "2026-11-15T06:29:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -335,6 +321,22 @@
  },
  "lanes": [
   {
+   "name": "Ines",
+   "state": "running",
+   "task": "[plan] T-4467 plan in line with Saturday answers",
+   "model": "opus",
+   "since": "2026-11-15T11:26:47.064Z",
+   "next": []
+  },
+  {
+   "name": "Odalys",
+   "state": "running",
+   "task": "[tools] T-4480 records via records round redo",
+   "model": "opus",
+   "since": "2026-11-15T11:26:54.716Z",
+   "next": []
+  },
+  {
    "name": "Idris",
    "state": "next",
    "task": "Idris, P2, from T-4238 (Pernille's review, from T-3900,...",
@@ -343,25 +345,9 @@
    "next": []
   },
   {
-   "name": "Ines",
-   "state": "next",
-   "task": "Ines, P2, from T-1110 (Wrenna,...",
-   "model": null,
-   "since": null,
-   "next": []
-  },
-  {
    "name": "Pernille",
    "state": "next",
    "task": "Pernille, P1, premades and gallery take the age line...",
-   "model": null,
-   "since": null,
-   "next": []
-  },
-  {
-   "name": "Odalys",
-   "state": "next",
-   "task": "A lane record main refused: failed...",
    "model": null,
    "since": null,
    "next": []
@@ -384,7 +370,35 @@
   }
  ],
  "tasks": {
-  "run": [],
+  "run": [
+   {
+    "w": "Ines",
+    "k": "plan",
+    "t": "Bring the plan in line with the Saturday answers",
+    "m": "opus",
+    "at": "2026-11-15T11:26:47.064Z",
+    "o": "i",
+    "task": "T-4467"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Redo stop the other tools committing each record they write",
+    "m": "opus",
+    "at": "2026-11-15T11:26:54.716Z",
+    "o": "c",
+    "task": "T-4480"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Wire task states into the land",
+    "m": "opus",
+    "at": "2026-11-15T11:27:02.366Z",
+    "o": "c",
+    "task": "T-4487"
+   }
+  ],
   "src": "plan",
   "open": [
    {
@@ -525,38 +539,37 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-15T11:25:57Z",
+  "at": "2026-11-15T11:29:12Z",
   "s": {
-   "T-4111": [
+   "T-4226": [
     "merging",
-    "Host checks on the Mac mini \u00b7 7 groups of tests done",
-    1794741657584
+    "Host checks on the Mac mini",
+    1794742092996
    ],
    "T-4280": [
     "mergeq",
     "1st to merge",
-    1794739857584
+    1794739872996
    ],
-   "T-4226": [
-    "mergeq",
-    "2nd to merge",
-    1794741537584
+   "T-4487": [
+    "testing",
+    "its own tests, in its copy",
+    1794742092996
+   ],
+   "T-4480": [
+    "testing",
+    "its own tests, in its copy",
+    1794742152996
    ],
    "T-4438": [
     "testing",
     "its own tests, in its copy",
-    1794739077584
+    1794739092996
    ],
    "T-4430": [
     "merged",
     "on main 5:32 AM ET",
     1794738737000,
-    ""
-   ],
-   "T-3712": [
-    "merged",
-    "on main 5:25 AM ET",
-    1794738356000,
     ""
    ],
    "T-4089": [
@@ -573,22 +586,22 @@
    ]
   },
   "nm": {
-   "T-4111": "Cut clutter text on Home and every page",
-   "T-4280": "Run each widget in the widget or app by size",
    "T-4226": "Emoji reactions on Chat messages",
+   "T-4280": "Run each widget in the widget or app by size",
+   "T-4487": "Wire task states into the land",
+   "T-4480": "Redo stop the other tools committing each record they write",
    "T-4438": "Fix two test suites that fail on main",
    "T-4430": "Answer TestFlight encryption questions by default",
-   "T-3712": "Erase unused Simulators by tool",
    "T-4089": "Fix the location bridge test that failed on the MacBook",
    "T-4123": "Rerun the audit pattern study on the full ledger"
   }
  },
  "ln": {
-  "at": "2026-11-15T11:25:57Z",
+  "at": "2026-11-15T11:29:12Z",
   "mq": {
    "n": {
     "checking": 1,
-    "inline": 2,
+    "inline": 1,
     "conflicted": 3,
     "failed": 0,
     "held": 0,
@@ -596,37 +609,37 @@
     "parked": 3
    },
    "m": {
-    "checking": 5,
-    "inline": 21,
-    "conflicted": 667,
+    "checking": 1,
+    "inline": 38,
+    "conflicted": 671,
     "failed": null,
     "held": null,
-    "retry": 41,
-    "parked": 2547
+    "retry": 45,
+    "parked": 2550
    },
    "cur": [
     [
      [
-      "T-4111"
+      "T-4226"
      ],
      "Mac tests",
      "Mac mini",
-     5
+     1
     ]
    ],
    "ld": [
-    7,
-    "2026-11-15T10:34:40Z"
+    8,
+    "2026-11-15T11:27:14Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-15T11:25:12Z",
-    "ld": 4.72,
+    "at": "2026-11-15T11:28:47Z",
+    "ld": 5.02,
     "c": 8,
     "sb": 0,
     "dk": [
-     15.2,
+     18.3,
      228.3
     ],
     "ss": [
@@ -655,7 +668,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session",
+   "t": "Work session \u2013 3 tasks",
    "at": "2026-11-15T06:23:05-05:00"
   },
   {
@@ -666,15 +679,6 @@
    "e": "high",
    "t": "Work session \u2013 2 tasks",
    "at": "2026-11-15T04:53:03-05:00"
-  },
-  {
-   "w": "Operator",
-   "a": "Evan",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session",
-   "at": "2026-11-15T04:53:08-05:00"
   }
  ],
  "reply": {
@@ -693,13 +697,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 0,
-  "lanes": 3,
-  "total": 3,
-  "at": "6:26 AM",
+  "main": 3,
+  "lanes": 2,
+  "total": 5,
+  "at": "6:29 AM",
   "why": "",
-  "at_iso": "2026-11-15T11:26:00+00:00",
+  "at_iso": "2026-11-15T11:29:00+00:00",
   "started": "6:23 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 6:23 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 6:26 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 3, started 6:23 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 6:29 AM ET</p></section>"
  }
 }

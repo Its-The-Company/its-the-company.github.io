@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-15T14:29:57.251787+00:00",
+ "at": "2026-11-15T14:33:07.922730+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -22,6 +22,10 @@
      {
       "s": "testq",
       "at": 1794752517
+     },
+     {
+      "s": "landing",
+      "at": 1794753167
      }
     ]
    }
@@ -117,7 +121,7 @@
    "task": "[site] T-4513 SSD free space on Machine bubble",
    "model": "opus",
    "started": "2026-11-15T14:27:32.053Z",
-   "seconds": 145,
+   "seconds": 335,
    "finished": null
   }
  ],
@@ -159,7 +163,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 385,
+  "runnable_count": 384,
   "blocked_count": 76
  },
  "meter": {
@@ -208,7 +212,7 @@
   "week_pct": null,
   "usage_pct": null,
   "work_pct": null,
-  "read_at": "2026-11-15T14:30:00+00:00",
+  "read_at": "2026-11-15T14:33:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -284,7 +288,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-15T09:30:00-05:00",
+  "at": "2026-11-15T09:33:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -436,6 +440,11 @@
   ],
   "done": [
    {
+    "w": "Odalys+operator",
+    "t": "Every session and lane is now told to start a reply by naming whose message it answers, as in...",
+    "at": "2026-11-15T09:30:00-05:00"
+   },
+   {
     "w": "Odalys",
     "t": "The company now has a tool that keeps a list of the apps it opened itself and will quit only...",
     "at": "2026-11-15T09:27:00-05:00"
@@ -444,22 +453,21 @@
     "w": "Pernille",
     "t": "In the small World clocks widget a long city name now shrinks and then trims at its end, and the...",
     "at": "2026-11-15T09:27:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "When a lane's work is parked, keeps coming back, or has a record refused, the system now marks...",
-    "at": "2026-11-15T09:03:00-05:00"
    }
   ],
   "count": {
-   "next": 385,
+   "next": 384,
    "wait": 35,
    "blocked": 41,
    "you": 12
   },
   "fin": {
-   "n": 15,
+   "n": 16,
    "rows": [
+    [
+     "T-4509",
+     "Name the Investor in reply..."
+    ],
     [
      "T-4507",
      "Let the company quit apps it..."
@@ -479,10 +487,6 @@
     [
      "T-4156",
      "Remove the audit session cap..."
-    ],
-    [
-     "T-4102",
-     "Show the queue nested on..."
     ]
    ]
   }
@@ -526,42 +530,42 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-15T14:29:57Z",
+  "at": "2026-11-15T14:32:48Z",
   "s": {
    "T-4482": [
     "merging",
-    "Host checks on the Mac mini \u00b7 5 groups of tests done",
-    1794752517251
+    "Merging onto main",
+    1794753168968
    ],
    "T-4009": [
     "merging",
-    "Host checks on the Mac mini \u00b7 5 groups of tests done",
-    1794752517251
+    "Merging onto main",
+    1794753168968
+   ],
+   "T-4129": [
+    "mergeq",
+    "1st to merge",
+    1794753108968
    ],
    "T-4472": [
     "mergeq",
-    "3rd to merge",
-    1794752817251
-   ],
-   "T-4129": [
-    "merging",
-    "Mac tests at the main gate",
-    1794751857251
+    "4th to merge",
+    1794752808968
    ]
   },
   "nm": {
    "T-4482": "Redo commit queued board records with the records round",
    "T-4009": "Raise the 5-hour stop from 90% toward 100%",
-   "T-4472": "Measure the queue check rules the replay could not",
-   "T-4129": "Retire the Set aside stage on Home"
+   "T-4129": "Retire the Set aside stage on Home",
+   "T-4472": "Measure the queue check rules the replay could not"
   }
  },
  "ln": {
-  "at": "2026-11-15T14:29:57Z",
+  "at": "2026-11-15T14:32:48Z",
   "mq": {
    "n": {
     "checking": 2,
-    "inline": 1,
+    "inline": 2,
     "conflicted": 2,
     "failed": 0,
     "held": 0,
@@ -569,30 +573,30 @@
     "parked": 3
    },
    "m": {
-    "checking": 8,
+    "checking": 0,
     "inline": 3,
-    "conflicted": 868,
+    "conflicted": 870,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 2731
+    "parked": 2734
    },
    "cur": [
     [
      [
       "T-4482"
      ],
-     "Mac tests",
+     "going onto main",
      "Mac mini",
-     8
+     0
     ],
     [
      [
       "T-4009"
      ],
-     "Mac tests",
+     "going onto main",
      "Mac mini",
-     8
+     0
     ]
    ],
    "ld": [
@@ -602,12 +606,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-15T14:29:29Z",
-    "ld": 4.67,
+    "at": "2026-11-15T14:32:49Z",
+    "ld": 4.03,
     "c": 8,
     "sb": 0,
     "dk": [
-     20.3,
+     21.3,
      228.3
     ],
     "ss": [
@@ -636,7 +640,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 14 tasks",
+   "t": "Work session \u2013 1 task",
    "at": "2026-11-15T09:10:04-05:00"
   },
   {
@@ -671,10 +675,10 @@
   "main": 1,
   "lanes": 1,
   "total": 2,
-  "at": "9:30 AM",
+  "at": "9:33 AM",
   "why": "",
-  "at_iso": "2026-11-15T14:30:00+00:00",
+  "at_iso": "2026-11-15T14:33:00+00:00",
   "started": "6:23 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 1, started 6:23 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 9:30 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 1, started 6:23 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 9:33 AM ET</p></section>"
  }
 }

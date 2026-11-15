@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-15T14:33:07.922730+00:00",
+ "at": "2026-11-15T14:36:07.814349+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -28,9 +28,28 @@
       "at": 1794753167
      }
     ]
+   },
+   {
+    "t": "T-4129",
+    "name": "Retire the Set aside stage on Home",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "testq",
+      "at": 1794753293
+     }
+    ]
    }
   ],
   "done": [
+   {
+    "t": "T-4472",
+    "name": "Measure the queue check rules the replay could not",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794753288
+   },
    {
     "t": "T-4482",
     "name": "Redo commit queued board records with the records round",
@@ -102,17 +121,9 @@
     "steps": [],
     "end": "landed",
     "end_at": 1794742371
-   },
-   {
-    "t": "T-4111",
-    "name": "Cut clutter text on Home and every page",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794742034
    }
   ],
-  "landed": 18,
+  "landed": 19,
   "failed": 4
  },
  "workers": [
@@ -121,7 +132,7 @@
    "task": "[site] T-4513 SSD free space on Machine bubble",
    "model": "opus",
    "started": "2026-11-15T14:27:32.053Z",
-   "seconds": 335,
+   "seconds": 515,
    "finished": null
   }
  ],
@@ -212,7 +223,7 @@
   "week_pct": null,
   "usage_pct": null,
   "work_pct": null,
-  "read_at": "2026-11-15T14:33:00+00:00",
+  "read_at": "2026-11-15T14:36:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -251,6 +262,18 @@
     "at": "2026-11-15T09:10:17-05:00",
     "n": "Evan",
     "src": "plan-a"
+   },
+   {
+    "lane": "a2",
+    "task": "T-4468",
+    "w": "Idris",
+    "k": "build",
+    "t": "Let people set each premade's place, events and lists",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-15T09:36:04-05:00",
+    "n": "Evan",
+    "src": "plan-a"
    }
   ]
  },
@@ -272,7 +295,7 @@
   }
  ],
  "disk": {
-  "free_gb": 20,
+  "free_gb": 21,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -281,14 +304,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-15T09:27:00-05:00",
+   "at": "2026-11-15T09:34:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-15T09:33:00-05:00",
+  "at": "2026-11-15T09:36:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -530,41 +553,42 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-15T14:32:48Z",
+  "at": "2026-11-15T14:36:00Z",
   "s": {
-   "T-4482": [
-    "merging",
-    "Merging onto main",
-    1794753168968
-   ],
-   "T-4009": [
-    "merging",
-    "Merging onto main",
-    1794753168968
-   ],
    "T-4129": [
+    "merging",
+    "Host checks on the Mac mini",
+    1794753300215
+   ],
+   "T-4482": [
     "mergeq",
     "1st to merge",
-    1794753108968
+    1794752520215
+   ],
+   "T-4009": [
+    "mergeq",
+    "1st to merge",
+    1794752520215
    ],
    "T-4472": [
-    "mergeq",
-    "4th to merge",
-    1794752808968
+    "merged",
+    "on main 9:34 AM ET",
+    1794753283000,
+    ""
    ]
   },
   "nm": {
+   "T-4129": "Retire the Set aside stage on Home",
    "T-4482": "Redo commit queued board records with the records round",
    "T-4009": "Raise the 5-hour stop from 90% toward 100%",
-   "T-4129": "Retire the Set aside stage on Home",
    "T-4472": "Measure the queue check rules the replay could not"
   }
  },
  "ln": {
-  "at": "2026-11-15T14:32:48Z",
+  "at": "2026-11-15T14:36:00Z",
   "mq": {
    "n": {
-    "checking": 2,
+    "checking": 1,
     "inline": 2,
     "conflicted": 2,
     "failed": 0,
@@ -573,45 +597,37 @@
     "parked": 3
    },
    "m": {
-    "checking": 0,
-    "inline": 3,
-    "conflicted": 870,
+    "checking": 1,
+    "inline": 14,
+    "conflicted": 874,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 2734
+    "parked": 2737
    },
    "cur": [
     [
      [
-      "T-4482"
+      "T-4129"
      ],
-     "going onto main",
+     "Mac tests",
      "Mac mini",
-     0
-    ],
-    [
-     [
-      "T-4009"
-     ],
-     "going onto main",
-     "Mac mini",
-     0
+     1
     ]
    ],
    "ld": [
-    18,
-    "2026-11-15T13:37:19Z"
+    19,
+    "2026-11-15T14:34:48Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-15T14:32:49Z",
-    "ld": 4.03,
+    "at": "2026-11-15T14:36:01Z",
+    "ld": 4.28,
     "c": 8,
     "sb": 0,
     "dk": [
-     21.3,
+     21.2,
      228.3
     ],
     "ss": [
@@ -651,6 +667,15 @@
    "e": "high",
    "t": "Work session \u2013 1 task",
    "at": "2026-11-15T09:10:17-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Evan",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session \u2013 1 task",
+   "at": "2026-11-15T09:36:04-05:00"
   }
  ],
  "reply": {
@@ -673,12 +698,12 @@
  ],
  "agents_now": {
   "main": 1,
-  "lanes": 1,
-  "total": 2,
-  "at": "9:33 AM",
+  "lanes": 2,
+  "total": 3,
+  "at": "9:36 AM",
   "why": "",
-  "at_iso": "2026-11-15T14:33:00+00:00",
+  "at_iso": "2026-11-15T14:36:00+00:00",
   "started": "6:23 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 1, started 6:23 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 9:33 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 1, started 6:23 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 9:36 AM ET</p></section>"
  }
 }

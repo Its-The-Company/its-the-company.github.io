@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-15T11:51:02.348392+00:00",
+ "at": "2026-11-15T11:54:02.434406+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -95,7 +95,7 @@
    "task": "[tools] T-4487 wire task states into land",
    "model": "opus",
    "started": "2026-11-15T11:27:02.366Z",
-   "seconds": 1439,
+   "seconds": 1620,
    "finished": null
   },
   {
@@ -103,7 +103,7 @@
    "task": "[tools] T-4461 ledger apply last rows",
    "model": "opus",
    "started": "2026-11-15T11:34:56.087Z",
-   "seconds": 966,
+   "seconds": 1146,
    "finished": null
   },
   {
@@ -111,7 +111,7 @@
    "task": "[tools] T-4241 GitLab and GitBook terms guard",
    "model": "opus",
    "started": "2026-11-15T11:42:00.619Z",
-   "seconds": 541,
+   "seconds": 721,
    "finished": null
   }
  ],
@@ -137,7 +137,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 383,
+  "runnable_count": 382,
   "blocked_count": 78
  },
  "meter": {
@@ -186,7 +186,7 @@
   "week_pct": null,
   "usage_pct": null,
   "work_pct": null,
-  "read_at": "2026-11-15T11:51:00+00:00",
+  "read_at": "2026-11-15T11:54:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -251,14 +251,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-15T06:44:00-05:00",
+   "at": "2026-11-15T06:52:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-15T06:51:00-05:00",
+  "at": "2026-11-15T06:54:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -428,6 +428,11 @@
   ],
   "done": [
    {
+    "w": "Odalys",
+    "t": "The tool that carries out the task-queue cleanup no longer blocks on lines that were already...",
+    "at": "2026-11-15T06:53:00-05:00"
+   },
+   {
     "w": "Ines",
     "t": "The release estimate now counts Saturday's two Builder choices: likely early June 2027 instead...",
     "at": "2026-11-15T06:41:00-05:00"
@@ -436,22 +441,21 @@
     "w": "Odalys",
     "t": "Four background tools no longer make a separate commit each time they write a record; the shared...",
     "at": "2026-11-15T06:33:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "Four background tools no longer make a separate commit each time they write a record; the shared...",
-    "at": "2026-11-15T06:33:00-05:00"
    }
   ],
   "count": {
-   "next": 383,
+   "next": 382,
    "wait": 37,
    "blocked": 41,
    "you": 12
   },
   "fin": {
-   "n": 3,
+   "n": 4,
    "rows": [
+    [
+     "T-4461",
+     "Let the ledger apply finish..."
+    ],
     [
      "T-4467",
      "Bring the plan in line with..."
@@ -506,22 +510,18 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-15T11:50:45Z",
+  "at": "2026-11-15T11:53:45Z",
   "s": {
-   "T-4461": [
-    "testing",
-    "its own tests, in its copy",
-    1794743085198
-   ],
-   "T-4241": [
-    "testing",
-    "its own tests, in its copy",
-    1794743205198
-   ],
    "T-4487": [
     "testing",
     "its own tests, in its copy",
-    1794742485198
+    1794742485273
+   ],
+   "T-4461": [
+    "merged",
+    "on main 6:53 AM ET",
+    1794743607000,
+    ""
    ],
    "T-4123": [
     "merged",
@@ -531,14 +531,13 @@
    ]
   },
   "nm": {
-   "T-4461": "Let the ledger apply finish its last rows",
-   "T-4241": "Add GitLab and GitBook to the terms guard",
    "T-4487": "Wire task states into the land",
+   "T-4461": "Let the ledger apply finish its last rows",
    "T-4123": "Rerun the audit pattern study on the full ledger"
   }
  },
  "ln": {
-  "at": "2026-11-15T11:50:45Z",
+  "at": "2026-11-15T11:53:45Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -552,11 +551,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 692,
+    "conflicted": 695,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 2572
+    "parked": 2575
    },
    "cur": [],
    "ld": [
@@ -566,12 +565,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-15T11:50:48Z",
-    "ld": 6.39,
+    "at": "2026-11-15T11:53:46Z",
+    "ld": 5.85,
     "c": 8,
     "sb": 0,
     "dk": [
-     17.9,
+     18.1,
      228.3
     ],
     "ss": [
@@ -633,10 +632,10 @@
   "main": 3,
   "lanes": 1,
   "total": 4,
-  "at": "6:51 AM",
+  "at": "6:54 AM",
   "why": "",
-  "at_iso": "2026-11-15T11:51:00+00:00",
+  "at_iso": "2026-11-15T11:54:00+00:00",
   "started": "6:23 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 3, started 6:23 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 6:51 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 3, started 6:23 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 6:54 AM ET</p></section>"
  }
 }

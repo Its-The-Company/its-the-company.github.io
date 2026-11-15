@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-15T15:20:26.273115+00:00",
+ "at": "2026-11-15T15:23:28.482275+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -105,7 +105,7 @@
    "task": "[build] T-2491 stuck extension folders",
    "model": "opus",
    "started": "2026-11-15T15:07:59.962Z",
-   "seconds": 746,
+   "seconds": 928,
    "finished": null,
    "effort": "high"
   },
@@ -114,7 +114,7 @@
    "task": "[build] T-2869 pyc-only completion test",
    "model": "opus",
    "started": "2026-11-15T15:08:06.419Z",
-   "seconds": 739,
+   "seconds": 922,
    "finished": null,
    "effort": "high"
   },
@@ -123,7 +123,7 @@
    "task": "[build] T-4505 Distance Small far values",
    "model": "opus",
    "started": "2026-11-15T15:08:12.068Z",
-   "seconds": 734,
+   "seconds": 916,
    "finished": null,
    "effort": "high"
   }
@@ -182,7 +182,7 @@
   "week_pct": 2.36,
   "usage_pct": 27.2,
   "work_pct": 75.0,
-  "read_at": "2026-11-15T15:20:00+00:00",
+  "read_at": "2026-11-15T15:23:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -233,7 +233,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-15T10:20:00-05:00",
+  "at": "2026-11-15T10:23:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -473,22 +473,22 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-15T15:20:18Z",
+  "at": "2026-11-15T15:23:14Z",
   "s": {
    "T-2491": [
+    "mergetest",
+    "iPhone tests on the MacBook",
+    null
+   ],
+   "T-2869": [
     "merging",
-    "Mac tests at the main gate \u00b7 4 groups of tests done",
-    1794755658418
+    "Mac tests at the main gate",
+    1794756194106
    ],
    "T-4505": [
     "testing",
     "its own tests, in its copy",
-    1794755658418
-   ],
-   "T-2869": [
-    "testing",
-    "its own tests, in its copy",
-    1794755418418
+    1794755654106
    ],
    "T-4468": [
     "merged",
@@ -499,13 +499,13 @@
   },
   "nm": {
    "T-2491": "Stop the stuck extension from recreating deleted widget...",
-   "T-4505": "Fit far distances in Distance Small",
    "T-2869": "Test completion with the stdlib as compiled-only files",
+   "T-4505": "Fit far distances in Distance Small",
    "T-4468": "Let people set each premade's place, events and lists"
   }
  },
  "ln": {
-  "at": "2026-11-15T15:20:18Z",
+  "at": "2026-11-15T15:23:14Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -519,11 +519,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 918,
+    "conflicted": 921,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 480
+    "parked": 483
    },
    "cur": [],
    "ld": [
@@ -533,8 +533,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-15T15:19:37Z",
-    "ld": 5.8,
+    "at": "2026-11-15T15:22:48Z",
+    "ld": 6.23,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -548,12 +548,12 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-15T14:57:17Z",
-    "ld": 0.21,
+    "at": "2026-11-15T15:19:45Z",
+    "ld": 0.18,
     "c": 12,
     "sb": 0,
     "dk": [
-     363.2,
+     364.0,
      926.4
     ],
     "sn": []
@@ -599,10 +599,10 @@
   "main": 3,
   "lanes": 1,
   "total": 4,
-  "at": "10:20 AM",
+  "at": "10:23 AM",
   "why": "",
-  "at_iso": "2026-11-15T15:20:00+00:00",
+  "at_iso": "2026-11-15T15:23:00+00:00",
   "started": "10:05 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 3, started 10:05 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 10:20 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 3, started 10:05 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 10:23 AM ET</p></section>"
  }
 }

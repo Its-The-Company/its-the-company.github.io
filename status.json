@@ -1,22 +1,11 @@
 {
  "schema": 1,
- "at": "2026-11-15T19:12:57.302536+00:00",
+ "at": "2026-11-15T19:15:58.294907+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-15T14:00:40-05:00",
   "flow": [
-   {
-    "t": "T-4227",
-    "name": "Run every Operator on Opus high",
-    "acct": "Personal b",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1794769105
-     }
-    ]
-   },
    {
     "t": "T-2266",
     "name": "Run the stuck-signal tests on the MacBook",
@@ -30,6 +19,15 @@
    }
   ],
   "done": [
+   {
+    "t": "T-4227",
+    "name": "Run every Operator on Opus high",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "failed",
+    "end_at": 1794770139,
+    "why": "tests failed"
+   },
    {
     "t": "T-4227",
     "name": "Run every Operator on Opus high",
@@ -97,18 +95,10 @@
     "steps": [],
     "end": "landed",
     "end_at": 1794749766
-   },
-   {
-    "t": "T-4318",
-    "name": "Let a session settle a conflict before landing",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794749740
    }
   ],
   "landed": 24,
-  "failed": 5
+  "failed": 6
  },
  "workers": [
   {
@@ -116,7 +106,7 @@
    "task": "[tools] T-4419 overdue experiment verdicts",
    "model": "opus",
    "started": "2026-11-15T19:05:20.468Z",
-   "seconds": 456,
+   "seconds": 637,
    "finished": null,
    "effort": "high"
   },
@@ -125,12 +115,21 @@
    "task": "[build] T-4468 premade settings slice 2",
    "model": "opus",
    "started": "2026-11-15T19:08:13.610Z",
-   "seconds": 283,
+   "seconds": 464,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "pernille",
+   "task": "[build] T-4468 premade settings H1 Python half",
+   "model": "opus",
+   "started": "2026-11-15T19:14:40.149Z",
+   "seconds": 78,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Odalys, Idris",
+ "who": "Odalys, Idris, Pernille",
  "recent": [
   {
    "name": "pernille",
@@ -138,7 +137,7 @@
    "model": "opus",
    "started": "2026-11-15T19:05:28.420Z",
    "seconds": null,
-   "finished": "2026-11-15T19:12:44.680000+00:00"
+   "finished": "2026-11-15T19:14:26.473000+00:00"
   },
   {
    "name": "idris",
@@ -201,7 +200,7 @@
   "week_pct": 3.22,
   "usage_pct": 26.1,
   "work_pct": 75.0,
-  "read_at": "2026-11-15T19:12:00+00:00",
+  "read_at": "2026-11-15T19:15:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -238,7 +237,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-15T14:12:00-05:00",
+  "at": "2026-11-15T14:15:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -273,17 +272,18 @@
    "effort": "high"
   },
   {
+   "name": "Pernille",
+   "state": "running",
+   "task": "[build] T-4468 premade settings H1 Python half",
+   "model": "opus",
+   "since": "2026-11-15T19:14:40.149Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
    "name": "Ines",
    "state": "next",
    "task": "Ines, P2, from T-1110 (Wrenna,...",
-   "model": null,
-   "since": null,
-   "next": []
-  },
-  {
-   "name": "Pernille",
-   "state": "next",
-   "task": "Pernille, P1, premades and gallery take the age line...",
    "model": null,
    "since": null,
    "next": []
@@ -324,6 +324,16 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-15T19:08:13.610Z",
+    "o": "c",
+    "task": "T-4468"
+   },
+   {
+    "w": "Pernille",
+    "k": "build",
+    "t": "Let people set each premade's place, events and lists",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-15T19:14:40.149Z",
     "o": "c",
     "task": "T-4468"
    }
@@ -403,6 +413,11 @@
   ],
   "done": [
    {
+    "w": "Odalys",
+    "t": "Two overdue checks on how work reaches main are now written up: the main-is-red alarm had only...",
+    "at": "2026-11-15T14:13:00-05:00"
+   },
+   {
     "w": "Idris",
     "t": "The widget now reads at most 1 MiB of its list of scripts sent back to the app, so a huge or...",
     "at": "2026-11-15T14:07:00-05:00"
@@ -411,11 +426,6 @@
     "w": "Operator",
     "t": "Main's own tests pass again on a clean copy of main (2e1304e4a), so finished work is no longer...",
     "at": "2026-11-15T14:06:00-05:00"
-   },
-   {
-    "w": "Pernille",
-    "t": "The device API notes now tell a script writer the exact place to find a rejected-certificate...",
-    "at": "2026-11-15T13:38:00-05:00"
    }
   ],
   "count": {
@@ -425,8 +435,12 @@
    "you": 12
   },
   "fin": {
-   "n": 1,
+   "n": 2,
    "rows": [
+    [
+     "T-4419",
+     "Measure two overdue..."
+    ],
     [
      "T-3310",
      "Cap the demotion list read..."
@@ -473,27 +487,34 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-15T19:12:44Z",
+  "at": "2026-11-15T19:15:37Z",
   "s": {
    "T-4227": [
     "merging",
     "Host checks on the Mac mini",
-    1794769124769
+    1794769117915
    ],
    "T-4468": [
     "merged",
-    "on main 10:46 AM ET",
-    1794757588000,
-    ""
+    "on main 2:13 PM ET",
+    1794770035000,
+    "Pernille"
+   ],
+   "T-4419": [
+    "merged",
+    "on main 2:13 PM ET",
+    1794770008000,
+    "Odalys"
    ]
   },
   "nm": {
    "T-4227": "Run every Operator on Opus high",
-   "T-4468": "Let people set each premade's place, events and lists"
+   "T-4468": "Let people set each premade's place, events and lists",
+   "T-4419": "Measure two overdue experiments on merge checks"
   }
  },
  "ln": {
-  "at": "2026-11-15T19:12:44Z",
+  "at": "2026-11-15T19:15:37Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -505,13 +526,13 @@
     "parked": 2
    },
    "m": {
-    "checking": 14,
+    "checking": 17,
     "inline": null,
-    "conflicted": 1150,
+    "conflicted": 1153,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 363
+    "parked": 366
    },
    "cur": [
     [
@@ -520,7 +541,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     14
+     17
     ]
    ],
    "ld": [
@@ -530,12 +551,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-15T19:12:22Z",
-    "ld": 2.67,
+    "at": "2026-11-15T19:15:38Z",
+    "ld": 2.96,
     "c": 8,
     "sb": 0,
     "dk": [
-     16.9,
+     15.9,
      228.3
     ],
     "ss": [
@@ -545,12 +566,12 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-15T19:01:30Z",
-    "ld": 2.9,
+    "at": "2026-11-15T19:13:55Z",
+    "ld": 3.23,
     "c": 12,
     "sb": 0,
     "dk": [
-     358.1,
+     358.0,
      926.4
     ],
     "sn": []
@@ -585,13 +606,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 2,
+  "main": 3,
   "lanes": 0,
-  "total": 2,
-  "at": "2:12 PM",
+  "total": 3,
+  "at": "2:15 PM",
   "why": "",
-  "at_iso": "2026-11-15T19:12:00+00:00",
+  "at_iso": "2026-11-15T19:15:00+00:00",
   "started": "2:00 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 2:00 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 2:12 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 2:00 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 2:15 PM ET</p></section>"
  }
 }

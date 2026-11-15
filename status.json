@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-15T18:17:52.622766+00:00",
+ "at": "2026-11-15T18:20:54.745808+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -117,7 +117,7 @@
    "task": "[build] T-4524 https host fixes",
    "model": "opus",
    "started": "2026-11-15T16:46:36.927Z",
-   "seconds": 5475,
+   "seconds": 5657,
    "finished": null,
    "effort": "high"
   },
@@ -126,7 +126,7 @@
    "task": "[build] T-3310 cap demotion list read",
    "model": "opus",
    "started": "2026-11-15T17:39:31.767Z",
-   "seconds": 2300,
+   "seconds": 2482,
    "finished": null,
    "effort": "high"
   },
@@ -135,7 +135,7 @@
    "task": "[design] T-4511 T-4513 Investor site asks",
    "model": "opus",
    "started": "2026-11-15T18:01:02.140Z",
-   "seconds": 1010,
+   "seconds": 1192,
    "finished": null,
    "effort": "high"
   }
@@ -178,7 +178,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 385,
+  "runnable_count": 384,
   "blocked_count": 76
  },
  "meter": {
@@ -227,7 +227,7 @@
   "week_pct": 2.36,
   "usage_pct": 27.2,
   "work_pct": 75.0,
-  "read_at": "2026-11-15T18:17:00+00:00",
+  "read_at": "2026-11-15T18:20:00+00:00",
   "running": [
    {
     "lane": "b3",
@@ -302,7 +302,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-15T13:17:00-05:00",
+  "at": "2026-11-15T13:20:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -478,6 +478,11 @@
   ],
   "done": [
    {
+    "w": "Pernille",
+    "t": "The https layer now reads the size marks in a script's hand-built upload strictly; a malformed...",
+    "at": "2026-11-15T13:19:00-05:00"
+   },
+   {
     "w": "Odalys",
     "t": "Closed as superseded: the Investors ruled that audit work runs in the normal queue on every...",
     "at": "2026-11-15T13:12:00-05:00"
@@ -486,22 +491,21 @@
     "w": "Maren",
     "t": "The Distance widget's design file now lets its big number shrink a little further and drops the...",
     "at": "2026-11-15T13:00:00-05:00"
-   },
-   {
-    "w": "Idris",
-    "t": "A script that writes a huge or odd file where the widget keeps its run records can no longer...",
-    "at": "2026-11-15T12:39:00-05:00"
    }
   ],
   "count": {
-   "next": 385,
+   "next": 384,
    "wait": 35,
    "blocked": 41,
    "you": 12
   },
   "fin": {
-   "n": 12,
+   "n": 13,
    "rows": [
+    [
+     "T-4525",
+     "Parse https chunk sizes strictly"
+    ],
     [
      "T-4284",
      "Add an Audit mode for one..."
@@ -521,10 +525,6 @@
     [
      "T-2869",
      "Test completion with the..."
-    ],
-    [
-     "T-4312",
-     "Review the https shim fixes"
     ]
    ]
   }
@@ -568,27 +568,22 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-15T18:17:36Z",
+  "at": "2026-11-15T18:20:54Z",
   "s": {
    "T-4227": [
     "merging",
     "Host checks on the Mac mini \u00b7 3 groups of tests done",
-    1794766416731
-   ],
-   "T-4525": [
-    "mergetest",
-    "iPhone tests on the MacBook",
-    null
+    1794766434745
    ],
    "T-3310": [
     "merging",
     "Mac tests at the main gate \u00b7 2 groups of tests done",
-    1794766236731
+    1794766254745
    ],
    "T-4511": [
     "testing",
     "its own tests, in its copy",
-    1794765816731
+    1794765834745
    ],
    "T-4524": [
     "merged",
@@ -599,14 +594,13 @@
   },
   "nm": {
    "T-4227": "Run every Operator on Opus high",
-   "T-4525": "Parse https chunk sizes strictly",
    "T-3310": "Cap the demotion list read in the widget",
    "T-4511": "Name the Investor in Chat's You asked bar",
    "T-4524": "Keep every https request on its own host"
   }
  },
  "ln": {
-  "at": "2026-11-15T18:17:36Z",
+  "at": "2026-11-15T18:20:54Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -618,13 +612,13 @@
     "parked": 2
    },
    "m": {
-    "checking": 4,
+    "checking": 7,
     "inline": null,
-    "conflicted": 1095,
+    "conflicted": 1098,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1810
+    "parked": 1813
    },
    "cur": [
     [
@@ -633,7 +627,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     4
+     7
     ]
    ],
    "ld": [
@@ -643,8 +637,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-15T18:16:48Z",
-    "ld": 4.47,
+    "at": "2026-11-15T18:20:12Z",
+    "ld": 4.59,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -658,12 +652,12 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-15T18:11:56Z",
-    "ld": 1.47,
+    "at": "2026-11-15T18:19:16Z",
+    "ld": 1.41,
     "c": 12,
     "sb": 0,
     "dk": [
-     358.5,
+     358.3,
      926.4
     ],
     "sn": []
@@ -712,10 +706,10 @@
   "main": 3,
   "lanes": 1,
   "total": 4,
-  "at": "1:17 PM",
+  "at": "1:20 PM",
   "why": "",
-  "at_iso": "2026-11-15T18:17:00+00:00",
+  "at_iso": "2026-11-15T18:20:00+00:00",
   "started": "10:05 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 3, started 10:05 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 1:17 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 3, started 10:05 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 1:20 PM ET</p></section>"
  }
 }

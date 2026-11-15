@@ -1,11 +1,23 @@
 {
  "schema": 1,
- "at": "2026-11-15T12:00:10.116814+00:00",
+ "at": "2026-11-15T12:03:11.889756+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-15T06:23:05-05:00",
-  "flow": [],
+  "flow": [
+   {
+    "t": "T-4474",
+    "name": "Redo an Investor request on fresh main",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "testq",
+      "at": 1794744183
+     }
+    ]
+   }
+  ],
   "done": [
    {
     "t": "T-1119",
@@ -95,7 +107,7 @@
    "task": "[tools] T-4487 wire task states into land",
    "model": "opus",
    "started": "2026-11-15T11:27:02.366Z",
-   "seconds": 1987,
+   "seconds": 2169,
    "finished": null
   },
   {
@@ -103,7 +115,7 @@
    "task": "[plan] T-4437 queue audit order and last rows",
    "model": "opus",
    "started": "2026-11-15T11:54:26.814Z",
-   "seconds": 343,
+   "seconds": 525,
    "finished": null
   },
   {
@@ -111,7 +123,7 @@
    "task": "[design] T-4468 premade input pages design",
    "model": "opus",
    "started": "2026-11-15T11:55:51.552Z",
-   "seconds": 258,
+   "seconds": 440,
    "finished": null
   }
  ],
@@ -203,7 +215,7 @@
   "week_pct": null,
   "usage_pct": null,
   "work_pct": null,
-  "read_at": "2026-11-15T12:00:00+00:00",
+  "read_at": "2026-11-15T12:03:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -275,7 +287,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-15T07:00:00-05:00",
+  "at": "2026-11-15T07:03:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -531,12 +543,17 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-15T12:00:10Z",
+  "at": "2026-11-15T12:02:56Z",
   "s": {
+   "T-4474": [
+    "mergeq",
+    "1st to merge",
+    1794744176498
+   ],
    "T-4487": [
     "testing",
     "its own tests, in its copy",
-    1794743890116
+    1794743876498
    ],
    "T-4123": [
     "merged",
@@ -546,16 +563,17 @@
    ]
   },
   "nm": {
+   "T-4474": "Redo an Investor request on fresh main",
    "T-4487": "Wire task states into the land",
    "T-4123": "Rerun the audit pattern study on the full ledger"
   }
  },
  "ln": {
-  "at": "2026-11-15T12:00:10Z",
+  "at": "2026-11-15T12:02:56Z",
   "mq": {
    "n": {
     "checking": 0,
-    "inline": 0,
+    "inline": 1,
     "conflicted": 3,
     "failed": 0,
     "held": 0,
@@ -564,12 +582,12 @@
    },
    "m": {
     "checking": null,
-    "inline": null,
-    "conflicted": 702,
+    "inline": 0,
+    "conflicted": 704,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 2581
+    "parked": 2584
    },
    "cur": [],
    "ld": [
@@ -579,12 +597,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-15T12:00:11Z",
-    "ld": 4.43,
+    "at": "2026-11-15T12:02:32Z",
+    "ld": 3.98,
     "c": 8,
     "sb": 0,
     "dk": [
-     19.2,
+     17.7,
      228.3
     ],
     "ss": [
@@ -622,7 +640,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 2 tasks",
+   "t": "Work session \u2013 1 task",
    "at": "2026-11-15T04:53:03-05:00"
   }
  ],
@@ -646,10 +664,10 @@
   "main": 3,
   "lanes": 1,
   "total": 4,
-  "at": "7:00 AM",
+  "at": "7:03 AM",
   "why": "",
-  "at_iso": "2026-11-15T12:00:00+00:00",
+  "at_iso": "2026-11-15T12:03:00+00:00",
   "started": "6:23 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 3, started 6:23 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 7:00 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 3, started 6:23 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 7:03 AM ET</p></section>"
  }
 }

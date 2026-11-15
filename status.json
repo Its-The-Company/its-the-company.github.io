@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-15T19:15:58.294907+00:00",
+ "at": "2026-11-15T19:19:03.700166+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -106,16 +106,7 @@
    "task": "[tools] T-4419 overdue experiment verdicts",
    "model": "opus",
    "started": "2026-11-15T19:05:20.468Z",
-   "seconds": 637,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-4468 premade settings slice 2",
-   "model": "opus",
-   "started": "2026-11-15T19:08:13.610Z",
-   "seconds": 464,
+   "seconds": 823,
    "finished": null,
    "effort": "high"
   },
@@ -124,13 +115,30 @@
    "task": "[build] T-4468 premade settings H1 Python half",
    "model": "opus",
    "started": "2026-11-15T19:14:40.149Z",
-   "seconds": 78,
+   "seconds": 263,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "idris",
+   "task": "[build] T-4468 premade settings fixes M1-M4",
+   "model": "opus",
+   "started": "2026-11-15T19:16:25.519Z",
+   "seconds": 158,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Odalys, Idris, Pernille",
+ "who": "Odalys, Pernille, Idris",
  "recent": [
+  {
+   "name": "idris",
+   "task": "[build] T-4468 premade settings slice 2",
+   "model": "opus",
+   "started": "2026-11-15T19:08:13.610Z",
+   "seconds": null,
+   "finished": "2026-11-15T19:16:11.986000+00:00"
+  },
   {
    "name": "pernille",
    "task": "[review] T-4468 review premade settings slice 1",
@@ -156,19 +164,19 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 9.0,
+   "pct": 10.0,
    "resets_at": "2026-11-15T17:00:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-15T14:12:00.192186-05:00",
+   "read_at": "2026-11-15T14:18:14.180735-05:00",
    "source": "live",
-   "left": 91.0,
+   "left": 90.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 9.0,
    "resets_at": "2026-11-22T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-15T14:12:00.192186-05:00",
+   "read_at": "2026-11-15T14:18:14.180735-05:00",
    "source": "live",
    "left": 91.0,
    "left_words": "of your weekly allowance left"
@@ -180,7 +188,7 @@
    "read_at": "2026-11-15T14:00:25.240335-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-15T14:12:00.192186-05:00"
+  "read_at": "2026-11-15T14:18:14.180735-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -200,7 +208,7 @@
   "week_pct": 3.22,
   "usage_pct": 26.1,
   "work_pct": 75.0,
-  "read_at": "2026-11-15T19:15:00+00:00",
+  "read_at": "2026-11-15T19:19:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -221,23 +229,23 @@
   }
  ],
  "disk": {
-  "free_gb": 16,
+  "free_gb": 14,
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 187
+   "free_gb": 186
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-15T14:11:00-05:00",
+   "at": "2026-11-15T14:18:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-15T14:15:00-05:00",
+  "at": "2026-11-15T14:19:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -263,20 +271,20 @@
    "effort": "high"
   },
   {
-   "name": "Idris",
-   "state": "running",
-   "task": "[build] T-4468 premade settings slice 2",
-   "model": "opus",
-   "since": "2026-11-15T19:08:13.610Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
    "name": "Pernille",
    "state": "running",
    "task": "[build] T-4468 premade settings H1 Python half",
    "model": "opus",
    "since": "2026-11-15T19:14:40.149Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
+   "name": "Idris",
+   "state": "running",
+   "task": "[build] T-4468 premade settings fixes M1-M4",
+   "model": "opus",
+   "since": "2026-11-15T19:16:25.519Z",
    "next": [],
    "effort": "high"
   },
@@ -318,22 +326,22 @@
     "task": "T-4419"
    },
    {
-    "w": "Idris",
-    "k": "build",
-    "t": "Let people set each premade's place, events and lists",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-15T19:08:13.610Z",
-    "o": "c",
-    "task": "T-4468"
-   },
-   {
     "w": "Pernille",
     "k": "build",
     "t": "Let people set each premade's place, events and lists",
     "m": "opus",
     "e": "high",
     "at": "2026-11-15T19:14:40.149Z",
+    "o": "c",
+    "task": "T-4468"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "Let people set each premade's place, events and lists",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-15T19:16:25.519Z",
     "o": "c",
     "task": "T-4468"
    }
@@ -487,13 +495,8 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-15T19:15:37Z",
+  "at": "2026-11-15T19:18:51Z",
   "s": {
-   "T-4227": [
-    "merging",
-    "Host checks on the Mac mini",
-    1794769117915
-   ],
    "T-4468": [
     "merged",
     "on main 2:13 PM ET",
@@ -508,42 +511,32 @@
    ]
   },
   "nm": {
-   "T-4227": "Run every Operator on Opus high",
    "T-4468": "Let people set each premade's place, events and lists",
    "T-4419": "Measure two overdue experiments on merge checks"
   }
  },
  "ln": {
-  "at": "2026-11-15T19:15:37Z",
+  "at": "2026-11-15T19:18:51Z",
   "mq": {
    "n": {
-    "checking": 1,
+    "checking": 0,
     "inline": 0,
     "conflicted": 2,
-    "failed": 0,
+    "failed": 1,
     "held": 0,
     "retry": 0,
     "parked": 2
    },
    "m": {
-    "checking": 17,
+    "checking": null,
     "inline": null,
-    "conflicted": 1153,
-    "failed": null,
+    "conflicted": 1156,
+    "failed": 3,
     "held": null,
     "retry": null,
-    "parked": 366
+    "parked": 369
    },
-   "cur": [
-    [
-     [
-      "T-4227"
-     ],
-     "Mac tests",
-     "Mac mini",
-     17
-    ]
-   ],
+   "cur": [],
    "ld": [
     25,
     "2026-11-15T18:12:48Z"
@@ -551,8 +544,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-15T19:15:38Z",
-    "ld": 2.96,
+    "at": "2026-11-15T19:18:52Z",
+    "ld": 3.19,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -609,10 +602,10 @@
   "main": 3,
   "lanes": 0,
   "total": 3,
-  "at": "2:15 PM",
+  "at": "2:19 PM",
   "why": "",
-  "at_iso": "2026-11-15T19:15:00+00:00",
+  "at_iso": "2026-11-15T19:19:00+00:00",
   "started": "2:00 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 2:00 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 2:15 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 2:00 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 2:19 PM ET</p></section>"
  }
 }

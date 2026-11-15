@@ -1,11 +1,22 @@
 {
  "schema": 1,
- "at": "2026-11-15T20:29:42.750924+00:00",
+ "at": "2026-11-15T20:32:43.129344+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-15T14:00:40-05:00",
   "flow": [
+   {
+    "t": "T-4227",
+    "name": "Run every Operator on Opus high",
+    "acct": "Personal b",
+    "steps": [
+     {
+      "s": "testq",
+      "at": 1794774679
+     }
+    ]
+   },
    {
     "t": "T-2266",
     "name": "Run the stuck-signal tests on the MacBook",
@@ -107,7 +118,7 @@
    "task": "[build] T-4468 premade settings H1 Python half",
    "model": "opus",
    "started": "2026-11-15T19:14:40.149Z",
-   "seconds": 4502,
+   "seconds": 4682,
    "finished": null,
    "effort": "high"
   },
@@ -116,7 +127,7 @@
    "task": "[tools] T-3992 land the pipeline batch",
    "model": "opus",
    "started": "2026-11-15T20:27:24.942Z",
-   "seconds": 137,
+   "seconds": 318,
    "finished": null,
    "effort": "high"
   }
@@ -208,7 +219,7 @@
   "week_pct": 3.22,
   "usage_pct": 26.1,
   "work_pct": 75.0,
-  "read_at": "2026-11-15T20:29:00+00:00",
+  "read_at": "2026-11-15T20:32:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -245,7 +256,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-15T15:29:00-05:00",
+  "at": "2026-11-15T15:32:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -500,46 +511,61 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-15T20:29:23Z",
+  "at": "2026-11-15T20:32:21Z",
   "s": {
-   "T-4468": [
+   "T-4227": [
     "merging",
-    "Mac tests at the main gate",
-    1794774563311
+    "Host checks on the Mac mini \u00b7 2 groups of tests done",
+    1794774681869
+   ],
+   "T-4468": [
+    "mergetest",
+    "iPhone tests on the MacBook",
+    null
    ],
    "T-3992": [
     "testing",
     "its own tests, in its copy",
-    1794774563311
+    1794774561869
    ]
   },
   "nm": {
+   "T-4227": "Run every Operator on Opus high",
    "T-4468": "Let people set each premade's place, events and lists",
    "T-3992": "Clear and merge the unfinished merge fixes"
   }
  },
  "ln": {
-  "at": "2026-11-15T20:29:23Z",
+  "at": "2026-11-15T20:32:21Z",
   "mq": {
    "n": {
-    "checking": 0,
+    "checking": 1,
     "inline": 0,
     "conflicted": 1,
-    "failed": 1,
+    "failed": 0,
     "held": 0,
     "retry": 0,
     "parked": 2
    },
    "m": {
-    "checking": null,
+    "checking": 1,
     "inline": null,
-    "conflicted": 1211,
-    "failed": 5,
+    "conflicted": 1214,
+    "failed": null,
     "held": null,
     "retry": null,
-    "parked": 440
+    "parked": 443
    },
-   "cur": [],
+   "cur": [
+    [
+     [
+      "T-4227"
+     ],
+     "Mac tests",
+     "Mac mini",
+     1
+    ]
+   ],
    "ld": [
     25,
     "2026-11-15T18:12:48Z"
@@ -547,12 +573,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-15T20:28:41Z",
-    "ld": 2.42,
+    "at": "2026-11-15T20:32:03Z",
+    "ld": 4.56,
     "c": 8,
     "sb": 0,
     "dk": [
-     14.6,
+     14.3,
      228.3
     ],
     "ss": [
@@ -562,12 +588,12 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-15T20:28:15Z",
-    "ld": 1.49,
+    "at": "2026-11-15T20:30:20Z",
+    "ld": 1.08,
     "c": 12,
     "sb": 0,
     "dk": [
-     356.3,
+     357.7,
      926.4
     ],
     "sn": []
@@ -607,10 +633,10 @@
   "main": 2,
   "lanes": 0,
   "total": 2,
-  "at": "3:29 PM",
+  "at": "3:32 PM",
   "why": "",
-  "at_iso": "2026-11-15T20:29:00+00:00",
+  "at_iso": "2026-11-15T20:32:00+00:00",
   "started": "2:00 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 2:00 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 3:29 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 2:00 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 3:32 PM ET</p></section>"
  }
 }

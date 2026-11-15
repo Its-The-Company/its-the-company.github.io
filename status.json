@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-15T07:19:11.790401+00:00",
+ "at": "2026-11-15T07:22:11.362035+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -16,24 +16,18 @@
       "at": 1794715272
      }
     ]
-   },
+   }
+  ],
+  "done": [
    {
     "t": "T-4445",
     "name": "Show task states in place of new lines",
     "acct": "Personal a",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1794699269
-     },
-     {
-      "s": "landing",
-      "at": 1794699312
-     }
-    ]
-   }
-  ],
-  "done": [
+    "steps": [],
+    "end": "failed",
+    "end_at": 1794727211,
+    "why": "did not merge cleanly"
+   },
    {
     "t": "T-4196",
     "name": "Let app changes waiting to merge share one iPhone run",
@@ -107,18 +101,10 @@
     "steps": [],
     "end": "landed",
     "end_at": 1794685595
-   },
-   {
-    "t": "T-4452",
-    "name": "Let a new line withdraw the lines it replaces",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794684070
    }
   ],
-  "landed": 8,
-  "failed": 2
+  "landed": 7,
+  "failed": 3
  },
  "workers": [
   {
@@ -126,12 +112,21 @@
    "task": "[tools] T-4466 open audit lines to all accounts",
    "model": "opus",
    "started": "2026-11-15T07:11:46.805Z",
-   "seconds": 444,
+   "seconds": 624,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-4479 land stuck lane-a branches",
+   "model": "opus",
+   "started": "2026-11-15T07:19:25.179Z",
+   "seconds": 166,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Odalys",
+ "who": "Odalys x2",
  "recent": [
   {
    "name": "ines",
@@ -153,7 +148,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 374,
+  "runnable_count": 376,
   "blocked_count": 78
  },
  "meter": {
@@ -202,7 +197,7 @@
   "week_pct": null,
   "usage_pct": null,
   "work_pct": null,
-  "read_at": "2026-11-15T07:19:00+00:00",
+  "read_at": "2026-11-15T07:22:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -239,7 +234,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-15T02:19:00-05:00",
+  "at": "2026-11-15T02:22:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -316,6 +311,16 @@
     "at": "2026-11-15T07:11:46.805Z",
     "o": "i",
     "task": "T-4466"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Land Evan's account work stuck since yesterday afternoon",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-15T07:19:25.179Z",
+    "o": "c",
+    "task": "T-4479"
    }
   ],
   "src": "plan",
@@ -409,7 +414,7 @@
    }
   ],
   "count": {
-   "next": 374,
+   "next": 376,
    "wait": 37,
    "blocked": 41,
    "you": 12
@@ -467,37 +472,31 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-15T07:18:53Z",
+  "at": "2026-11-15T07:22:11Z",
   "s": {
    "T-4457": [
     "merging",
     "Merging onto main",
-    1794727133564
+    1794727331362
    ],
-   "T-4458": [
-    "mergeq",
-    "1st to merge",
-    1794698753564
-   ],
-   "T-4445": [
-    "mergeq",
-    "2nd to merge",
-    1794699053564
+   "T-4466": [
+    "testing",
+    "its own tests, in its copy",
+    1794727151362
    ]
   },
   "nm": {
    "T-4457": "Commit queued board records with the records round",
-   "T-4458": "Stop the other tools committing each record they write",
-   "T-4445": "Show task states in place of new lines"
+   "T-4466": "Open the audit lines to every account and any model"
   }
  },
  "ln": {
-  "at": "2026-11-15T07:18:53Z",
+  "at": "2026-11-15T07:22:11Z",
   "mq": {
    "n": {
     "checking": 1,
-    "inline": 2,
-    "conflicted": 2,
+    "inline": 0,
+    "conflicted": 4,
     "failed": 0,
     "held": 0,
     "retry": 0,
@@ -505,12 +504,12 @@
    },
    "m": {
     "checking": 0,
-    "inline": 470,
-    "conflicted": 436,
+    "inline": null,
+    "conflicted": 213,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 2302
+    "parked": 2305
    },
    "cur": [
     [
@@ -529,12 +528,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-15T07:18:07Z",
-    "ld": 3.06,
+    "at": "2026-11-15T07:21:46Z",
+    "ld": 3.19,
     "c": 8,
     "sb": 0,
     "dk": [
-     24.3,
+     24.2,
      228.3
     ],
     "ss": [
@@ -563,7 +562,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 3 tasks",
+   "t": "Work session \u2013 4 tasks",
    "at": "2026-11-15T02:10:06-05:00"
   }
  ],
@@ -584,13 +583,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 1,
+  "main": 2,
   "lanes": 0,
-  "total": 1,
-  "at": "2:19 AM",
+  "total": 2,
+  "at": "2:22 AM",
   "why": "",
-  "at_iso": "2026-11-15T07:19:00+00:00",
+  "at_iso": "2026-11-15T07:22:00+00:00",
   "started": "2:07 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 2:07 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 2:19 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 2:07 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 2:22 AM ET</p></section>"
  }
 }

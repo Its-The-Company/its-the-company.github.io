@@ -1,19 +1,19 @@
 {
  "schema": 1,
- "at": "2026-11-15T21:57:08.050986+00:00",
+ "at": "2026-11-15T22:14:42.433912+00:00",
  "session": {
   "active": false,
   "kind": "",
   "started": null,
   "flow": [
    {
-    "t": "T-4471",
-    "name": "Stop the star notice committing its own record",
-    "acct": "Personal a",
+    "t": "T-4227",
+    "name": "Run every Operator on Opus high",
+    "acct": "Personal b",
     "steps": [
      {
       "s": "testq",
-      "at": 1794779305
+      "at": 1794780125
      }
     ]
    },
@@ -30,6 +30,22 @@
    }
   ],
   "done": [
+   {
+    "t": "T-4508",
+    "name": "Alarm when one account's work keeps being refused",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794780071
+   },
+   {
+    "t": "T-4471",
+    "name": "Stop the star notice committing its own record",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794779989
+   },
    {
     "t": "T-4411",
     "acct": "Personal a",
@@ -95,23 +111,9 @@
     "steps": [],
     "end": "landed",
     "end_at": 1794757592
-   },
-   {
-    "t": "T-4009",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794754631
-   },
-   {
-    "t": "T-4129",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794754091
    }
   ],
-  "landed": 21,
+  "landed": 22,
   "failed": 4
  },
  "workers": [],
@@ -153,25 +155,25 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 375,
+  "runnable_count": 374,
   "blocked_count": 75
  },
  "meter": {
   "five_hour": {
-   "pct": 23.0,
-   "resets_at": "2026-11-15T17:00:00-05:00",
+   "pct": 0.0,
+   "resets_at": null,
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-15T16:33:04.827839-05:00",
-   "source": "live",
-   "left": 77.0,
+   "read_at": "2026-11-15T17:14:22.598638-05:00",
+   "source": "usage",
+   "left": 100.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 12.0,
-   "resets_at": "2026-11-22T02:00:00-05:00",
+   "resets_at": "2026-11-22T07:00:00.298636+00:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-15T16:33:04.827839-05:00",
-   "source": "live",
+   "read_at": "2026-11-15T17:14:22.598638-05:00",
+   "source": "usage",
    "left": 88.0,
    "left_words": "of your weekly allowance left"
   },
@@ -179,10 +181,10 @@
    "pct": 0.0,
    "resets_at": "2026-11-22T07:00:00+00:00",
    "used_words": "of the Fable weekly allowance used",
-   "read_at": "2026-11-15T14:00:25.240335-05:00",
+   "read_at": "2026-11-15T17:14:22.598638-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-15T16:33:04.827839-05:00"
+  "read_at": "2026-11-15T17:14:22.598638-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -197,12 +199,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-15T14:15:25-05:00",
+ "next_tick": "2026-11-15T17:29:23-05:00",
  "personal": {
-  "week_pct": 3.22,
-  "usage_pct": 21.2,
-  "work_pct": 69.2,
-  "read_at": "2026-11-15T21:58:00+00:00",
+  "week_pct": 3.57,
+  "usage_pct": 22.9,
+  "work_pct": 71.4,
+  "read_at": "2026-11-15T22:14:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -260,7 +262,7 @@
   }
  ],
  "disk": {
-  "free_gb": 8.9,
+  "free_gb": 7.4,
   "gate": "closed",
   "ssd": {
    "mounted": true,
@@ -269,14 +271,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions wait until 20 GB is free.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-15T16:46:00-05:00",
+   "at": "2026-11-15T17:14:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-15T16:58:00-05:00",
+  "at": "2026-11-15T17:14:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -285,7 +287,14 @@
   }
  },
  "next_tick_why": "last_tick",
- "idle": null,
+ "idle": {
+  "since": "2026-11-15T16:52:37-05:00",
+  "minutes": 22,
+  "why": "the last tick ended without starting a session",
+  "healed": [
+   "asked for a fresh main meter reading"
+  ]
+ },
  "pool": null,
  "lanes": [
   {
@@ -363,13 +372,6 @@
    },
    {
     "w": "Odalys",
-    "k": "fix",
-    "t": "Fix the location bridge test that failed on...",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
     "k": "tools",
     "t": "Read runner 18 live and run one build job",
     "s": "next",
@@ -409,9 +411,21 @@
     "t": "Move the app's diagrams to a new App page",
     "s": "next",
     "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Build the queue-check sweep into the sweep...",
+    "s": "next",
+    "o": "c"
    }
   ],
   "done": [
+   {
+    "w": "Operator",
+    "t": "A later MacBook job for the same work (J-20261115-1004-xc-test) passed, so the failed job...",
+    "at": "2026-11-15T17:12:00-05:00"
+   },
    {
     "w": "Odalys",
     "t": "The two personal accounts now start the queue audit's work by themselves within one 15-minute...",
@@ -421,15 +435,10 @@
     "w": "Idris",
     "t": "The app's settings page and a premade's own run now take turns writing the same settings file,...",
     "at": "2026-11-15T16:10:00-05:00"
-   },
-   {
-    "w": "Ines",
-    "t": "The queue audit's last held lines are settled: one rewritten, one folded into its twin, four app...",
-    "at": "2026-11-15T16:06:00-05:00"
    }
   ],
   "count": {
-   "next": 375,
+   "next": 374,
    "wait": 35,
    "blocked": 40,
    "you": 11
@@ -474,74 +483,68 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-15T21:57:08Z",
+  "at": "2026-11-15T22:14:42Z",
   "s": {
-   "T-4471": [
+   "T-4227": [
     "merging",
-    "Host checks on the Mac mini \u00b7 2 groups of tests done",
-    1794779348050
+    "Host checks on the Mac mini",
+    1794780162433
    ],
-   "T-4411": [
+   "T-4471": [
     "mergeq",
     "1st to merge",
-    1794779588050
-   ],
-   "T-4508": [
-    "mergeq",
-    "1st to merge",
-    1794779588050
+    1794779502433
    ]
   },
   "nm": {
-   "T-4471": "Stop the star notice committing its own record",
-   "T-4411": "Start accounts on the audit when usage returns",
-   "T-4508": "Alarm when one account's work keeps being refused"
+   "T-4227": "Run every Operator on Opus high",
+   "T-4471": "Stop the star notice committing its own record"
   }
  },
  "ln": {
-  "at": "2026-11-15T21:57:08Z",
+  "at": "2026-11-15T22:14:42Z",
   "mq": {
    "n": {
     "checking": 1,
-    "inline": 2,
+    "inline": 1,
     "conflicted": 1,
-    "failed": 1,
+    "failed": 0,
     "held": 0,
     "retry": 0,
     "parked": 2
    },
    "m": {
-    "checking": 8,
-    "inline": 4,
-    "conflicted": 1299,
-    "failed": 9,
+    "checking": 12,
+    "inline": 23,
+    "conflicted": 1316,
+    "failed": null,
     "held": null,
     "retry": null,
-    "parked": 527
+    "parked": 545
    },
    "cur": [
     [
      [
-      "T-4471"
+      "T-4227"
      ],
      "Mac tests",
      "Mac mini",
-     8
+     12
     ]
    ],
    "ld": [
-    26,
-    "2026-11-15T21:48:16Z"
+    28,
+    "2026-11-15T22:01:11Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-15T21:57:09Z",
-    "ld": 11.68,
+    "at": "2026-11-15T22:14:43Z",
+    "ld": 2.07,
     "c": 8,
     "sb": 0,
     "dk": [
-     12.5,
+     7.2,
      228.3
     ],
     "ss": [
@@ -551,12 +554,12 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-15T21:37:43Z",
-    "ld": 1.52,
+    "at": "2026-11-15T22:08:16Z",
+    "ld": 0.21,
     "c": 12,
     "sb": 0,
     "dk": [
-     357.1,
+     357.2,
      926.4
     ],
     "sn": []
@@ -594,10 +597,10 @@
   "main": 0,
   "lanes": 1,
   "total": 1,
-  "at": "4:58 PM",
+  "at": "5:14 PM",
   "why": "",
-  "at_iso": "2026-11-15T21:58:00+00:00",
+  "at_iso": "2026-11-15T22:14:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 4:58 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 5:14 PM ET</p></section>"
  }
 }

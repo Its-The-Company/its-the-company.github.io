@@ -1,12 +1,20 @@
 {
  "schema": 1,
- "at": "2026-11-15T13:31:46.185122+00:00",
+ "at": "2026-11-15T13:34:46.919473+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-15T06:23:05-05:00",
   "flow": [],
   "done": [
+   {
+    "t": "T-4156",
+    "name": "Remove the audit session cap on Evan's account",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794749545
+   },
    {
     "t": "T-4473",
     "name": "Redo replay the queue check against the audit's verdicts",
@@ -77,16 +85,9 @@
     "steps": [],
     "end": "landed",
     "end_at": 1794738348
-   },
-   {
-    "t": "T-4123",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794737611
    }
   ],
-  "landed": 14,
+  "landed": 15,
   "failed": 4
  },
  "workers": [
@@ -95,7 +96,7 @@
    "task": "[tools] T-4487 wire task states into land",
    "model": "opus",
    "started": "2026-11-15T11:27:02.366Z",
-   "seconds": 7483,
+   "seconds": 7664,
    "finished": null
   },
   {
@@ -103,7 +104,7 @@
    "task": "[build] T-4468 premade settings Swift slice 1",
    "model": "opus",
    "started": "2026-11-15T13:27:23.628Z",
-   "seconds": 262,
+   "seconds": 443,
    "finished": null
   },
   {
@@ -111,7 +112,7 @@
    "task": "[build] T-4504 Clocks Small long city names",
    "model": "opus",
    "started": "2026-11-15T13:29:47.840Z",
-   "seconds": 118,
+   "seconds": 299,
    "finished": null
   }
  ],
@@ -153,7 +154,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 382,
+  "runnable_count": 381,
   "blocked_count": 76
  },
  "meter": {
@@ -202,7 +203,7 @@
   "week_pct": null,
   "usage_pct": null,
   "work_pct": null,
-  "read_at": "2026-11-15T13:31:00+00:00",
+  "read_at": "2026-11-15T13:34:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -214,6 +215,7 @@
     "e": "high",
     "at": "2026-11-15T08:29:41-05:00",
     "n": "Evan",
+    "d": 1,
     "src": "plan-a"
    },
    {
@@ -226,15 +228,13 @@
     "e": "high",
     "at": "2026-11-15T08:29:41-05:00",
     "n": "Evan",
+    "d": 1,
     "src": "plan-a"
    },
    {
     "lane": "a",
     "task": "T-4156",
-    "k": "tools",
     "t": "Remove the audit session cap on Evan's account",
-    "m": "opus",
-    "e": "high",
     "at": "2026-11-15T08:29:41-05:00",
     "n": "Evan",
     "d": 1,
@@ -312,7 +312,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-15T08:31:00-05:00",
+  "at": "2026-11-15T08:34:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -482,6 +482,11 @@
   ],
   "done": [
    {
+    "w": "Operator+odalys",
+    "t": "The cap on audit and Restructuring sessions on Evan's account is gone from code and settings, a...",
+    "at": "2026-11-15T08:32:00-05:00"
+   },
+   {
     "w": "Odalys",
     "t": "Home now shows the whole queue as a tree: the 14 app features first, each opening to its steps...",
     "at": "2026-11-15T08:28:00-05:00"
@@ -490,22 +495,21 @@
     "w": "Ines",
     "t": "The Handbook now says which changes get a separate review: app code going to TestFlight or the...",
     "at": "2026-11-15T07:17:00-05:00"
-   },
-   {
-    "w": "Ines",
-    "t": "A web page we saved from GitLab's documentation was fetched in a way GitLab's terms forbid, so...",
-    "at": "2026-11-15T07:15:00-05:00"
    }
   ],
   "count": {
-   "next": 382,
+   "next": 381,
    "wait": 35,
    "blocked": 41,
    "you": 12
   },
   "fin": {
-   "n": 10,
+   "n": 11,
    "rows": [
+    [
+     "T-4156",
+     "Remove the audit session cap..."
+    ],
     [
      "T-4102",
      "Show the queue nested on..."
@@ -525,10 +529,6 @@
     [
      "T-4474",
      "Redo an Investor request on..."
-    ],
-    [
-     "T-4241",
-     "Add GitLab and GitBook to..."
     ]
    ]
   }
@@ -572,27 +572,33 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-15T13:31:34Z",
+  "at": "2026-11-15T13:34:28Z",
   "s": {
    "T-4487": [
     "testing",
     "its own tests, in its copy",
-    1794748714568
+    1794748708031
    ],
    "T-4468": [
+    "testing",
+    "its own tests, in its copy",
+    1794749548031
+   ],
+   "T-4156": [
     "merged",
-    "on main 8:26 AM ET",
-    1794749175000,
+    "on main 8:32 AM ET",
+    1794749526000,
     ""
    ]
   },
   "nm": {
    "T-4487": "Wire task states into the land",
-   "T-4468": "Let people set each premade's place, events and lists"
+   "T-4468": "Let people set each premade's place, events and lists",
+   "T-4156": "Remove the audit session cap on Evan's account"
   }
  },
  "ln": {
-  "at": "2026-11-15T13:31:34Z",
+  "at": "2026-11-15T13:34:28Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -606,22 +612,22 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 793,
+    "conflicted": 796,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 2673
+    "parked": 2676
    },
    "cur": [],
    "ld": [
-    14,
-    "2026-11-15T13:11:26Z"
+    15,
+    "2026-11-15T13:32:25Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-15T13:31:12Z",
-    "ld": 2.47,
+    "at": "2026-11-15T13:33:39Z",
+    "ld": 2.76,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -629,7 +635,7 @@
      228.3
     ],
     "ss": [
-     185.8,
+     185.7,
      953.7
     ],
     "sn": []
@@ -663,7 +669,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 2 tasks",
+   "t": "Work session",
    "at": "2026-11-15T08:29:41-05:00"
   },
   {
@@ -698,10 +704,10 @@
   "main": 3,
   "lanes": 2,
   "total": 5,
-  "at": "8:31 AM",
+  "at": "8:34 AM",
   "why": "",
-  "at_iso": "2026-11-15T13:31:00+00:00",
+  "at_iso": "2026-11-15T13:34:00+00:00",
   "started": "6:23 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 3, started 6:23 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 8:31 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 3, started 6:23 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 8:34 AM ET</p></section>"
  }
 }

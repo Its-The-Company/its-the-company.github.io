@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-15T11:44:41.657533+00:00",
+ "at": "2026-11-15T11:47:56.704508+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -87,7 +87,7 @@
    }
   ],
   "landed": 13,
-  "failed": 6
+  "failed": 5
  },
  "workers": [
   {
@@ -95,7 +95,7 @@
    "task": "[tools] T-4487 wire task states into land",
    "model": "opus",
    "started": "2026-11-15T11:27:02.366Z",
-   "seconds": 1059,
+   "seconds": 1254,
    "finished": null
   },
   {
@@ -103,7 +103,7 @@
    "task": "[tools] T-4461 ledger apply last rows",
    "model": "opus",
    "started": "2026-11-15T11:34:56.087Z",
-   "seconds": 585,
+   "seconds": 780,
    "finished": null
   },
   {
@@ -111,7 +111,7 @@
    "task": "[tools] T-4241 GitLab and GitBook terms guard",
    "model": "opus",
    "started": "2026-11-15T11:42:00.619Z",
-   "seconds": 161,
+   "seconds": 356,
    "finished": null
   }
  ],
@@ -186,7 +186,7 @@
   "week_pct": null,
   "usage_pct": null,
   "work_pct": null,
-  "read_at": "2026-11-15T11:45:00+00:00",
+  "read_at": "2026-11-15T11:48:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -258,7 +258,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-15T06:45:00-05:00",
+  "at": "2026-11-15T06:48:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -506,17 +506,22 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-15T11:44:41Z",
+  "at": "2026-11-15T11:47:56Z",
   "s": {
    "T-4461": [
     "testing",
     "its own tests, in its copy",
-    1794743081657
+    1794743096704
+   ],
+   "T-4241": [
+    "testing",
+    "its own tests, in its copy",
+    1794743216704
    ],
    "T-4487": [
     "testing",
     "its own tests, in its copy",
-    1794742481657
+    1794742436704
    ],
    "T-4123": [
     "merged",
@@ -527,12 +532,13 @@
   },
   "nm": {
    "T-4461": "Let the ledger apply finish its last rows",
+   "T-4241": "Add GitLab and GitBook to the terms guard",
    "T-4487": "Wire task states into the land",
    "T-4123": "Rerun the audit pattern study on the full ledger"
   }
  },
  "ln": {
-  "at": "2026-11-15T11:44:41Z",
+  "at": "2026-11-15T11:47:56Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -546,11 +552,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 686,
+    "conflicted": 689,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 2566
+    "parked": 2569
    },
    "cur": [],
    "ld": [
@@ -560,12 +566,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-15T11:44:46Z",
-    "ld": 8.4,
+    "at": "2026-11-15T11:48:01Z",
+    "ld": 6.88,
     "c": 8,
     "sb": 0,
     "dk": [
-     18.4,
+     18.0,
      228.3
     ],
     "ss": [
@@ -627,10 +633,10 @@
   "main": 3,
   "lanes": 1,
   "total": 4,
-  "at": "6:45 AM",
+  "at": "6:48 AM",
   "why": "",
-  "at_iso": "2026-11-15T11:45:00+00:00",
+  "at_iso": "2026-11-15T11:48:00+00:00",
   "started": "6:23 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 3, started 6:23 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 6:45 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 3, started 6:23 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 6:48 AM ET</p></section>"
  }
 }

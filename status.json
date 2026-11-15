@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-15T20:26:41.135771+00:00",
+ "at": "2026-11-15T20:29:42.750924+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -107,22 +107,30 @@
    "task": "[build] T-4468 premade settings H1 Python half",
    "model": "opus",
    "started": "2026-11-15T19:14:40.149Z",
-   "seconds": 4320,
+   "seconds": 4502,
    "finished": null,
    "effort": "high"
   },
   {
    "name": "odalys",
-   "task": "[tools] T-4449 queue check fixes and switch-on",
+   "task": "[tools] T-3992 land the pipeline batch",
    "model": "opus",
-   "started": "2026-11-15T19:48:34.144Z",
-   "seconds": 2286,
+   "started": "2026-11-15T20:27:24.942Z",
+   "seconds": 137,
    "finished": null,
    "effort": "high"
   }
  ],
  "who": "Pernille, Odalys",
  "recent": [
+  {
+   "name": "odalys",
+   "task": "[tools] T-4449 queue check fixes and switch-on",
+   "model": "opus",
+   "started": "2026-11-15T19:48:34.144Z",
+   "seconds": null,
+   "finished": "2026-11-15T20:26:42.914000+00:00"
+  },
   {
    "name": "idris",
    "task": "[build] T-4311 net.request certificate errors",
@@ -146,14 +154,6 @@
    "started": "2026-11-15T19:16:25.519Z",
    "seconds": null,
    "finished": "2026-11-15T19:50:53.027000+00:00"
-  },
-  {
-   "name": "ines",
-   "task": "[plan] T-4448 read the queue check dry run",
-   "model": "opus",
-   "started": "2026-11-15T19:44:46.436Z",
-   "seconds": null,
-   "finished": "2026-11-15T19:48:18.698000+00:00"
   }
  ],
  "queue": {
@@ -208,7 +208,7 @@
   "week_pct": 3.22,
   "usage_pct": 26.1,
   "work_pct": 75.0,
-  "read_at": "2026-11-15T20:26:00+00:00",
+  "read_at": "2026-11-15T20:29:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -233,19 +233,19 @@
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 186
+   "free_gb": 184
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-15T15:22:00-05:00",
+   "at": "2026-11-15T15:28:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-15T15:26:00-05:00",
+  "at": "2026-11-15T15:29:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -273,9 +273,9 @@
   {
    "name": "Odalys",
    "state": "running",
-   "task": "[tools] T-4449 queue check fixes and switch-on",
+   "task": "[tools] T-3992 land the pipeline batch",
    "model": "opus",
-   "since": "2026-11-15T19:48:34.144Z",
+   "since": "2026-11-15T20:27:24.942Z",
    "next": [],
    "effort": "high"
   },
@@ -327,12 +327,12 @@
    {
     "w": "Odalys",
     "k": "tools",
-    "t": "Switch the queue check on",
+    "t": "Clear and merge the unfinished merge fixes",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-15T19:48:34.144Z",
+    "at": "2026-11-15T20:27:24.942Z",
     "o": "c",
-    "task": "T-4449"
+    "task": "T-3992"
    }
   ],
   "src": "plan",
@@ -500,27 +500,26 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-15T20:26:34Z",
+  "at": "2026-11-15T20:29:23Z",
   "s": {
    "T-4468": [
-    "mergetest",
-    "iPhone tests on the MacBook",
-    null
+    "merging",
+    "Mac tests at the main gate",
+    1794774563311
    ],
-   "T-4449": [
-    "merged",
-    "on main 3:19 PM ET",
-    1794773982000,
-    "Odalys"
+   "T-3992": [
+    "testing",
+    "its own tests, in its copy",
+    1794774563311
    ]
   },
   "nm": {
    "T-4468": "Let people set each premade's place, events and lists",
-   "T-4449": "Switch the queue check on"
+   "T-3992": "Clear and merge the unfinished merge fixes"
   }
  },
  "ln": {
-  "at": "2026-11-15T20:26:34Z",
+  "at": "2026-11-15T20:29:23Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -534,11 +533,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 1208,
-    "failed": 2,
+    "conflicted": 1211,
+    "failed": 5,
     "held": null,
     "retry": null,
-    "parked": 437
+    "parked": 440
    },
    "cur": [],
    "ld": [
@@ -548,27 +547,27 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-15T20:26:35Z",
-    "ld": 1.94,
+    "at": "2026-11-15T20:28:41Z",
+    "ld": 2.42,
     "c": 8,
     "sb": 0,
     "dk": [
-     13.6,
+     14.6,
      228.3
     ],
     "ss": [
-     186.1,
+     184.1,
      953.7
     ],
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-15T20:20:44Z",
-    "ld": 1.19,
+    "at": "2026-11-15T20:28:15Z",
+    "ld": 1.49,
     "c": 12,
     "sb": 0,
     "dk": [
-     357.8,
+     356.3,
      926.4
     ],
     "sn": []
@@ -608,10 +607,10 @@
   "main": 2,
   "lanes": 0,
   "total": 2,
-  "at": "3:26 PM",
+  "at": "3:29 PM",
   "why": "",
-  "at_iso": "2026-11-15T20:26:00+00:00",
+  "at_iso": "2026-11-15T20:29:00+00:00",
   "started": "2:00 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 2:00 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 3:26 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 2:00 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 3:29 PM ET</p></section>"
  }
 }

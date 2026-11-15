@@ -33,10 +33,6 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 ## Open
 
-- T-0299 11-13: stale-checked, NOT ticked: hold waits on T-0801 (mine, [b] to 11-16) + T-0802 (Odalys) per <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span> deeea6a0. Lesson: an audit's "likely done" cites an old pass; read the newest ruling in the review doc first.
-- T-3400 11-13 LANDED ea5eb9a749 (ticked) after T-4275 gate fix; review = T-4294 (Idris, Maren); strip T-4202, phone list T-4203 (Simulator run with system_tls on waits for Swift net.request). Lesson: main moves during a 7-min host run; land exit 2 'not named' = bring up and land again, not a refusal.
-- T-4268 11-13 (0b0fcf0bb8): T-3899 PASS w/ notes, both ticked; M1 = T-4277 (Idris, offered step hangs). Lesson: main_folder_guard refuses a review file in main even when the packet says commit there; own copy + main_gate land (doc-only: no MacBook run).
-- T-4289 11-13 (a7751b9c76, 3ba970827d): T-4258-60 PASS w/ notes; L1-L3 = T-4290..92 (Idris). UI suite NOT on runner. Lesson: runner_queue takes only PyWidgetTests filters (UI needs --full); xc.sh from repo root routes local and dies 66: run it from pywidget/ios.
 - T-4300 11-13 (d1aad15ca5, e1c650efb): T-4277 PASS w/ notes; L1 = T-4301, L3 = T-4302 (Idris). Lesson: hoisting a read out of a serialised pass moves it before the queue's wait; ask when it is used, not only how often.
 - T-4303 11-13 LANDED cff2e415eb (ticked, 310a5850bd): shim H1/M1/M2/L1/L3 fixed; review = T-4312 (Idris); L4 device line on T-4203. Lesson: a tool backgrounded at 600 s keeps writing; read the whole output file before calling it empty, and pipe long runs to a file.
 - T-3825 11-13 (168237a736): T-2494 re-check on main PASS w/ fixes; L1-L3 = T-4404..06 (Idris), ticked. Lesson: board add refuses a bare ID in a line's text with no link; drop the ID.
@@ -46,6 +42,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-4123 11-15: ledger patterns second pass (1787 rows, 781 studied). Lesson: a ledger "tick" can be a close made elsewhere ("Not open when judged"); templated titles beat the machine regex.
 - T-4468/T-4504 11-15: premade Page limits measured in render.py; Clocks Small row redesigned (time on the name's line, priority 1; offset own line), Name 9 -> 11. Lesson: check the sum first: a full-size time plus the widest label at 0.8 can exceed a 158 pt Small, so priority alone cannot keep both; render.py never shrinks a VStack in an HStack.
 - Older entries (2026-10-25 8:12 PM to 2026-10-27 T-0391: bridge contract v1-v4, DSL v1, stdlib manifest, OPS-4/5, installer) are in archive.md; 11-12/13 reviews T-4204, T-4171, T-4238, T-4217, T-4214, T-4242 too.
+- T-4524/25/26 11-15 LANDED 04ad030f72, dcf6f1272d (+ T-4526): systls target host, strict chunk sizes, C2 s6 wording; all ticked. Lesson: a gate land runs 15-25 min (host suites + MacBook job; main moves meanwhile): run it in the background with a long timeout and loop bring-up on 'not named'/75.
 
 ## Lessons
 

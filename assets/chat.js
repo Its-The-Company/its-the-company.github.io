@@ -140,6 +140,8 @@ if (W.addEventListener) { W.addEventListener('scroll', latestShow, { passive: tr
 function login(x) { return String((x && x.user && x.user.login) || '').toLowerCase(); }
 function numOf(c) { return +String(c.issue_url || '').split('/').pop(); }
 function isInv(l) { return names.indexOf(l) >= 0; }
+var FIRST = { friesevan: 'Evan', jeremyfries: 'Jeremy' };
+function asker(l) { return (FIRST[l] || 'You') + ' asked'; }
 function issue(n) { for (var k = 0; k < issues.length; k++) if (issues[k].number === n) return issues[k]; return extra[n] || null; }
 function ttl(i) { return labelsOf(i).indexOf('main') >= 0 ? 'Chat' : i.title; }
 function mainN() { var i = issues.concat(flat(extra)).filter((x) => x.state === 'open' && labelsOf(x).indexOf('main') >= 0)[0]; return i ? i.number : 0; }
@@ -279,7 +281,7 @@ markSeen(cur); drawTabs();
 if (pinObs) pinObs.disconnect();
 if (!anchor || !W.IntersectionObserver) return;
 var a = anchor, x = items(cur).filter((m) => isInv(m.l)).pop();
-pin.textContent = ''; mk(pin, 'b', null, 'You asked, ' + clock(x.at)); mk(pin, 'span', null, summary(x.body).slice(0, 80));
+pin.textContent = ''; mk(pin, 'b', null, asker(x.l) + ', ' + clock(x.at)); mk(pin, 'span', null, summary(x.body).slice(0, 80));
 pin.onclick = () => { toMsg(a); };
 pinObs = new W.IntersectionObserver((es) => {
 var e = es[es.length - 1]; pin.hidden = e.isIntersecting || e.boundingClientRect.top > (e.rootBounds ? e.rootBounds.top : 0);

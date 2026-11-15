@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-15T07:31:20.829168+00:00",
+ "at": "2026-11-15T07:34:24.588140+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -112,7 +112,7 @@
    "task": "[tools] T-4466 open audit lines to all accounts",
    "model": "opus",
    "started": "2026-11-15T07:11:46.805Z",
-   "seconds": 1174,
+   "seconds": 1357,
    "finished": null,
    "effort": "high"
   },
@@ -121,7 +121,7 @@
    "task": "[tools] T-4479 land stuck lane-a branches",
    "model": "opus",
    "started": "2026-11-15T07:19:25.179Z",
-   "seconds": 715,
+   "seconds": 899,
    "finished": null,
    "effort": "high"
   }
@@ -197,7 +197,7 @@
   "week_pct": null,
   "usage_pct": null,
   "work_pct": null,
-  "read_at": "2026-11-15T07:31:00+00:00",
+  "read_at": "2026-11-15T07:34:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -234,7 +234,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-15T02:31:00-05:00",
+  "at": "2026-11-15T02:34:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -472,26 +472,33 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-15T07:31:20Z",
+  "at": "2026-11-15T07:34:13Z",
   "s": {
    "T-4457": [
     "mergeq",
     "1st to merge",
-    1794715220829
+    1794715213253
    ],
    "T-4466": [
     "testing",
     "its own tests, in its copy",
-    1794727160829
+    1794727153253
+   ],
+   "T-4479": [
+    "merged",
+    "on main 2:33 AM ET",
+    1794728015000,
+    ""
    ]
   },
   "nm": {
    "T-4457": "Commit queued board records with the records round",
-   "T-4466": "Open the audit lines to every account and any model"
+   "T-4466": "Open the audit lines to every account and any model",
+   "T-4479": "Land Evan's account work stuck since yesterday afternoon"
   }
  },
  "ln": {
-  "at": "2026-11-15T07:31:20Z",
+  "at": "2026-11-15T07:34:13Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -504,12 +511,12 @@
    },
    "m": {
     "checking": null,
-    "inline": 211,
-    "conflicted": 222,
+    "inline": 214,
+    "conflicted": 225,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 2313
+    "parked": 2315
    },
    "cur": [],
    "ld": [
@@ -519,12 +526,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-15T07:31:21Z",
-    "ld": 4.36,
+    "at": "2026-11-15T07:33:26Z",
+    "ld": 4.18,
     "c": 8,
     "sb": 0,
     "dk": [
-     24.2,
+     23.6,
      228.3
     ],
     "ss": [
@@ -577,10 +584,10 @@
   "main": 2,
   "lanes": 0,
   "total": 2,
-  "at": "2:31 AM",
+  "at": "2:34 AM",
   "why": "",
-  "at_iso": "2026-11-15T07:31:00+00:00",
+  "at_iso": "2026-11-15T07:34:00+00:00",
   "started": "2:07 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 2:07 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 2:31 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 2:07 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 2:34 AM ET</p></section>"
  }
 }

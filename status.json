@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-15T09:57:49.170042+00:00",
+ "at": "2026-11-15T10:00:47.866552+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -102,7 +102,7 @@
    "task": "[tools] T-4485 fix real-tick land rows red",
    "model": "opus",
    "started": "2026-11-15T09:24:59.819Z",
-   "seconds": 1969,
+   "seconds": 2148,
    "finished": null,
    "effort": "high"
   },
@@ -111,7 +111,7 @@
    "task": "[tools] T-4486 refuse Fable without Fable task",
    "model": "opus",
    "started": "2026-11-15T09:39:16.911Z",
-   "seconds": 1112,
+   "seconds": 1290,
    "finished": null,
    "effort": "high"
   },
@@ -120,7 +120,7 @@
    "task": "[tools] T-4488 T-4438 fix main red suites",
    "model": "opus",
    "started": "2026-11-15T09:53:40.312Z",
-   "seconds": 248,
+   "seconds": 427,
    "finished": null,
    "effort": "high"
   }
@@ -212,7 +212,7 @@
   "week_pct": null,
   "usage_pct": null,
   "work_pct": null,
-  "read_at": "2026-11-15T09:57:00+00:00",
+  "read_at": "2026-11-15T10:01:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -358,7 +358,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-15T04:57:00-05:00",
+  "at": "2026-11-15T05:01:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -622,32 +622,50 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-15T09:57:49Z",
+  "at": "2026-11-15T10:00:47Z",
   "s": {
    "T-4488": [
     "merging",
     "Mac tests at the main gate",
-    1794736549170
+    1794736547866
+   ],
+   "T-4089": [
+    "testing",
+    "Mac Mini \u00b7 test",
+    null
+   ],
+   "T-4280": [
+    "testing",
+    "Mac Mini \u00b7 test",
+    null
+   ],
+   "T-4430": [
+    "testing",
+    "Mac Mini \u00b7 test",
+    null
    ],
    "T-4485": [
     "testing",
     "its own tests, in its copy",
-    1794735469170
+    1794735467866
    ],
    "T-4486": [
     "testing",
     "its own tests, in its copy",
-    1794735709170
+    1794735707866
    ]
   },
   "nm": {
    "T-4488": "Fix the How it works page test red on main",
+   "T-4089": "Fix the location bridge test that failed on the MacBook",
+   "T-4280": "Run each widget in the widget or app by size",
+   "T-4430": "Answer TestFlight encryption questions by default",
    "T-4485": "Real-tick land rows red on main",
    "T-4486": "Refuse Fable in sessions with no Fable task"
   }
  },
  "ln": {
-  "at": "2026-11-15T09:57:49Z",
+  "at": "2026-11-15T10:00:47Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -661,11 +679,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 579,
+    "conflicted": 582,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1308
+    "parked": 1311
    },
    "cur": [],
    "ld": [
@@ -675,19 +693,21 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-15T09:57:28Z",
-    "ld": 4.91,
+    "at": "2026-11-15T10:01:05Z",
+    "ld": 17.59,
     "c": 8,
-    "sb": 0,
+    "sb": 1,
     "dk": [
-     23.8,
+     22.8,
      228.3
     ],
     "ss": [
      186.0,
      953.7
     ],
-    "sn": []
+    "sn": [
+     "iPhone 18 Pro"
+    ]
    },
    "macbook": {
     "at": "2026-11-15T09:27:09Z",
@@ -716,17 +736,13 @@
    "w": "Operator",
    "a": "Evan",
    "sr": 1,
-   "m": "opus",
-   "e": "high",
    "t": "Work session \u2013 3 tasks",
-   "at": "2026-11-15T04:53:03-05:00"
+   "at": "2026-11-15T04:53:04-05:00"
   },
   {
    "w": "Operator",
    "a": "Evan",
    "sr": 1,
-   "m": "opus",
-   "e": "high",
    "t": "Work session \u2013 3 tasks",
    "at": "2026-11-15T04:53:08-05:00"
   },
@@ -734,8 +750,6 @@
    "w": "Operator",
    "a": "Evan",
    "sr": 1,
-   "m": "opus",
-   "e": "high",
    "t": "Work session \u2013 3 tasks",
    "at": "2026-11-15T04:53:01-05:00"
   }
@@ -762,10 +776,10 @@
   "main": 3,
   "lanes": 3,
   "total": 6,
-  "at": "4:57 AM",
+  "at": "5:01 AM",
   "why": "",
-  "at_iso": "2026-11-15T09:57:00+00:00",
+  "at_iso": "2026-11-15T10:01:00+00:00",
   "started": "2:07 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 3, started 2:07 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 4:57 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 3, started 2:07 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 5:01 AM ET</p></section>"
  }
 }

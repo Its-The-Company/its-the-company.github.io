@@ -1,12 +1,36 @@
 {
  "schema": 1,
- "at": "2026-11-15T13:34:46.919473+00:00",
+ "at": "2026-11-15T13:37:47.890227+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-15T06:23:05-05:00",
   "flow": [],
   "done": [
+   {
+    "t": "T-4482",
+    "name": "Redo commit queued board records with the records round",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794749839
+   },
+   {
+    "t": "T-4112",
+    "name": "Count each queue by category and readiness",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794749766
+   },
+   {
+    "t": "T-4318",
+    "name": "Let a session settle a conflict before landing",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794749740
+   },
    {
     "t": "T-4156",
     "name": "Remove the audit session cap on Evan's account",
@@ -62,32 +86,9 @@
     "steps": [],
     "end": "landed",
     "end_at": 1794742034
-   },
-   {
-    "t": "T-4430",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794738880
-   },
-   {
-    "t": "T-3712",
-    "name": "Erase unused Simulators by tool",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794738711
-   },
-   {
-    "t": "T-4089",
-    "name": "Fix the location bridge test that failed on the MacBook",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794738348
    }
   ],
-  "landed": 15,
+  "landed": 18,
   "failed": 4
  },
  "workers": [
@@ -96,7 +97,7 @@
    "task": "[tools] T-4487 wire task states into land",
    "model": "opus",
    "started": "2026-11-15T11:27:02.366Z",
-   "seconds": 7664,
+   "seconds": 7845,
    "finished": null
   },
   {
@@ -104,7 +105,7 @@
    "task": "[build] T-4468 premade settings Swift slice 1",
    "model": "opus",
    "started": "2026-11-15T13:27:23.628Z",
-   "seconds": 443,
+   "seconds": 624,
    "finished": null
   },
   {
@@ -112,7 +113,7 @@
    "task": "[build] T-4504 Clocks Small long city names",
    "model": "opus",
    "started": "2026-11-15T13:29:47.840Z",
-   "seconds": 299,
+   "seconds": 480,
    "finished": null
   }
  ],
@@ -154,24 +155,24 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 381,
+  "runnable_count": 380,
   "blocked_count": 76
  },
  "meter": {
   "five_hour": {
-   "pct": 12.0,
+   "pct": 13.0,
    "resets_at": "2026-11-15T12:00:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-15T08:28:54.986499-05:00",
+   "read_at": "2026-11-15T08:35:11.247872-05:00",
    "source": "live",
-   "left": 88.0,
+   "left": 87.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 5.0,
    "resets_at": "2026-11-22T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-15T08:28:54.986499-05:00",
+   "read_at": "2026-11-15T08:35:11.247872-05:00",
    "source": "live",
    "left": 95.0,
    "left_words": "of your weekly allowance left"
@@ -183,7 +184,7 @@
    "read_at": "2026-11-15T06:22:39.617562-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-15T08:28:54.986499-05:00"
+  "read_at": "2026-11-15T08:35:11.247872-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -203,53 +204,15 @@
   "week_pct": null,
   "usage_pct": null,
   "work_pct": null,
-  "read_at": "2026-11-15T13:34:00+00:00",
+  "read_at": "2026-11-15T13:37:00+00:00",
   "running": [
-   {
-    "lane": "a",
-    "task": "T-4112",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Count each queue by category and readiness",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-15T08:29:41-05:00",
-    "n": "Evan",
-    "d": 1,
-    "src": "plan-a"
-   },
-   {
-    "lane": "a",
-    "task": "T-4318",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Let a session settle a conflict before landing",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-15T08:29:41-05:00",
-    "n": "Evan",
-    "d": 1,
-    "src": "plan-a"
-   },
-   {
-    "lane": "a",
-    "task": "T-4156",
-    "t": "Remove the audit session cap on Evan's account",
-    "at": "2026-11-15T08:29:41-05:00",
-    "n": "Evan",
-    "d": 1,
-    "src": "plan-a"
-   },
    {
     "lane": "b3",
     "task": "T-4482",
-    "w": "Odalys",
-    "k": "tools",
     "t": "Redo commit queued board records with the records round",
-    "m": "opus",
-    "e": "high",
     "at": "2026-11-15T08:30:49-05:00",
     "n": "Jeremy",
+    "d": 1,
     "src": "plan-b"
    },
    {
@@ -296,7 +259,7 @@
   }
  ],
  "disk": {
-  "free_gb": 20,
+  "free_gb": 19,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -305,14 +268,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-15T08:28:00-05:00",
+   "at": "2026-11-15T08:35:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-15T08:34:00-05:00",
+  "at": "2026-11-15T08:37:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -482,6 +445,11 @@
   ],
   "done": [
    {
+    "w": "Odalys",
+    "t": "No redo was needed: the earlier work that hands the land's record commits to the 15-minute...",
+    "at": "2026-11-15T08:37:00-05:00"
+   },
+   {
     "w": "Operator+odalys",
     "t": "The cap on audit and Restructuring sessions on Evan's account is gone from code and settings, a...",
     "at": "2026-11-15T08:32:00-05:00"
@@ -490,22 +458,21 @@
     "w": "Odalys",
     "t": "Home now shows the whole queue as a tree: the 14 app features first, each opening to its steps...",
     "at": "2026-11-15T08:28:00-05:00"
-   },
-   {
-    "w": "Ines",
-    "t": "The Handbook now says which changes get a separate review: app code going to TestFlight or the...",
-    "at": "2026-11-15T07:17:00-05:00"
    }
   ],
   "count": {
-   "next": 381,
+   "next": 380,
    "wait": 35,
    "blocked": 41,
    "you": 12
   },
   "fin": {
-   "n": 11,
+   "n": 12,
    "rows": [
+    [
+     "T-4482",
+     "Redo commit queued board..."
+    ],
     [
      "T-4156",
      "Remove the audit session cap..."
@@ -525,10 +492,6 @@
     [
      "T-4437",
      "Finish the queue audit's..."
-    ],
-    [
-     "T-4474",
-     "Redo an Investor request on..."
     ]
    ]
   }
@@ -572,38 +535,38 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-15T13:34:28Z",
+  "at": "2026-11-15T13:37:47Z",
   "s": {
+   "T-4468": [
+    "testing",
+    "Mac Mini \u00b7 test",
+    null
+   ],
    "T-4487": [
     "testing",
     "its own tests, in its copy",
-    1794748708031
+    1794749867890
    ],
-   "T-4468": [
-    "testing",
-    "its own tests, in its copy",
-    1794749548031
-   ],
-   "T-4156": [
+   "T-4482": [
     "merged",
-    "on main 8:32 AM ET",
-    1794749526000,
+    "on main 8:37 AM ET",
+    1794749821000,
     ""
    ]
   },
   "nm": {
-   "T-4487": "Wire task states into the land",
    "T-4468": "Let people set each premade's place, events and lists",
-   "T-4156": "Remove the audit session cap on Evan's account"
+   "T-4487": "Wire task states into the land",
+   "T-4482": "Redo commit queued board records with the records round"
   }
  },
  "ln": {
-  "at": "2026-11-15T13:34:28Z",
+  "at": "2026-11-15T13:37:47Z",
   "mq": {
    "n": {
     "checking": 0,
     "inline": 0,
-    "conflicted": 3,
+    "conflicted": 2,
     "failed": 0,
     "held": 0,
     "retry": 0,
@@ -612,26 +575,26 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 796,
+    "conflicted": 815,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 2676
+    "parked": 2679
    },
    "cur": [],
    "ld": [
-    15,
-    "2026-11-15T13:32:25Z"
+    18,
+    "2026-11-15T13:37:19Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-15T13:33:39Z",
-    "ld": 2.76,
+    "at": "2026-11-15T13:37:50Z",
+    "ld": 3.6,
     "c": 8,
     "sb": 0,
     "dk": [
-     19.9,
+     18.9,
      228.3
     ],
     "ss": [
@@ -665,20 +628,11 @@
   },
   {
    "w": "Operator",
-   "a": "Evan",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session",
-   "at": "2026-11-15T08:29:41-05:00"
-  },
-  {
-   "w": "Operator",
    "a": "Jeremy",
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 3 tasks",
+   "t": "Work session \u2013 2 tasks",
    "at": "2026-11-15T08:30:48-05:00"
   }
  ],
@@ -702,12 +656,12 @@
  ],
  "agents_now": {
   "main": 3,
-  "lanes": 2,
-  "total": 5,
-  "at": "8:34 AM",
+  "lanes": 1,
+  "total": 4,
+  "at": "8:37 AM",
   "why": "",
-  "at_iso": "2026-11-15T13:34:00+00:00",
+  "at_iso": "2026-11-15T13:37:00+00:00",
   "started": "6:23 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 3, started 6:23 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 8:34 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 3, started 6:23 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 8:37 AM ET</p></section>"
  }
 }

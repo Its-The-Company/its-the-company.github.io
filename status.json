@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-15T14:42:18.167852+00:00",
+ "at": "2026-11-15T14:45:32.557457+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -126,18 +126,17 @@
   "landed": 19,
   "failed": 4
  },
- "workers": [
+ "workers": [],
+ "who": "",
+ "recent": [
   {
    "name": "maren",
    "task": "[site] T-4513 SSD free space on Machine bubble",
    "model": "opus",
    "started": "2026-11-15T14:27:32.053Z",
-   "seconds": 886,
-   "finished": null
-  }
- ],
- "who": "Maren",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-15T14:44:56.814000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[ops] T-4509 land reply wording in prompts",
@@ -161,14 +160,6 @@
    "started": "2026-11-15T13:29:47.840Z",
    "seconds": null,
    "finished": "2026-11-15T14:27:12.591000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-4487 wire task states into land",
-   "model": "opus",
-   "started": "2026-11-15T11:27:02.366Z",
-   "seconds": null,
-   "finished": "2026-11-15T14:04:08.154000+00:00"
   }
  ],
  "queue": {
@@ -223,7 +214,7 @@
   "week_pct": null,
   "usage_pct": null,
   "work_pct": null,
-  "read_at": "2026-11-15T14:42:00+00:00",
+  "read_at": "2026-11-15T14:45:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -311,7 +302,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-15T09:42:00-05:00",
+  "at": "2026-11-15T09:45:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -327,14 +318,6 @@
   "at": "2026-11-15T06:22:40.536194-05:00"
  },
  "lanes": [
-  {
-   "name": "Maren",
-   "state": "running",
-   "task": "[site] T-4513 SSD free space on Machine bubble",
-   "model": "opus",
-   "since": "2026-11-15T14:27:32.053Z",
-   "next": []
-  },
   {
    "name": "Idris",
    "state": "next",
@@ -374,20 +357,18 @@
    "model": null,
    "since": null,
    "next": []
+  },
+  {
+   "name": "Maren",
+   "state": "next",
+   "task": "Maren, P2, found on T-3366 (11-07): in...",
+   "model": null,
+   "since": null,
+   "next": []
   }
  ],
  "tasks": {
-  "run": [
-   {
-    "w": "Maren",
-    "k": "site",
-    "t": "Show the SSD's free space on the Machine bubble",
-    "m": "opus",
-    "at": "2026-11-15T14:27:32.053Z",
-    "o": "c",
-    "task": "T-4513"
-   }
-  ],
+  "run": [],
   "src": "plan",
   "open": [
    {
@@ -553,38 +534,32 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-15T14:42:11Z",
+  "at": "2026-11-15T14:45:32Z",
   "s": {
    "T-4129": [
     "merging",
-    "Host checks on the Mac mini",
-    1794753311476
+    "Host checks on the Mac mini \u00b7 1 group of tests done",
+    1794753332557
    ],
    "T-4482": [
     "mergeq",
     "1st to merge",
-    1794752531476
+    1794752552557
    ],
    "T-4009": [
     "mergeq",
     "1st to merge",
-    1794752531476
+    1794752552557
    ],
-   "T-4513": [
-    "merging",
-    "Mac tests at the main gate",
-    1794753551476
+   "T-4468": [
+    "testing",
+    "Mac Mini \u00b7 test",
+    null
    ],
    "T-4472": [
     "merged",
     "on main 9:34 AM ET",
     1794753283000,
-    ""
-   ],
-   "T-4468": [
-    "merged",
-    "on main 9:03 AM ET",
-    1794751395000,
     ""
    ]
   },
@@ -592,13 +567,12 @@
    "T-4129": "Retire the Set aside stage on Home",
    "T-4482": "Redo commit queued board records with the records round",
    "T-4009": "Raise the 5-hour stop from 90% toward 100%",
-   "T-4513": "Show the SSD's free space on the Machine bubble",
-   "T-4472": "Measure the queue check rules the replay could not",
-   "T-4468": "Let people set each premade's place, events and lists"
+   "T-4468": "Let people set each premade's place, events and lists",
+   "T-4472": "Measure the queue check rules the replay could not"
   }
  },
  "ln": {
-  "at": "2026-11-15T14:42:11Z",
+  "at": "2026-11-15T14:45:32Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -610,13 +584,13 @@
     "parked": 3
    },
    "m": {
-    "checking": 7,
-    "inline": 20,
-    "conflicted": 880,
+    "checking": 10,
+    "inline": 23,
+    "conflicted": 883,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 2743
+    "parked": 2747
    },
    "cur": [
     [
@@ -625,7 +599,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     7
+     10
     ]
    ],
    "ld": [
@@ -635,19 +609,21 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-15T14:41:51Z",
-    "ld": 4.02,
+    "at": "2026-11-15T14:45:34Z",
+    "ld": 25.04,
     "c": 8,
-    "sb": 0,
+    "sb": 1,
     "dk": [
-     21.1,
+     19.6,
      228.3
     ],
     "ss": [
      185.2,
      953.7
     ],
-    "sn": []
+    "sn": [
+     "iPhone 18 Pro"
+    ]
    },
    "macbook": {
     "at": "2026-11-15T14:26:41Z",
@@ -669,15 +645,13 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 1 task",
+   "t": "Work session",
    "at": "2026-11-15T09:10:04-05:00"
   },
   {
    "w": "Operator",
    "a": "Evan",
    "sr": 1,
-   "m": "opus",
-   "e": "high",
    "t": "Work session \u2013 1 task",
    "at": "2026-11-15T09:10:17-05:00"
   },
@@ -685,8 +659,6 @@
    "w": "Operator",
    "a": "Evan",
    "sr": 1,
-   "m": "opus",
-   "e": "high",
    "t": "Work session \u2013 1 task",
    "at": "2026-11-15T09:36:04-05:00"
   }
@@ -710,13 +682,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 1,
+  "main": 0,
   "lanes": 2,
-  "total": 3,
-  "at": "9:42 AM",
+  "total": 2,
+  "at": "9:45 AM",
   "why": "",
-  "at_iso": "2026-11-15T14:42:00+00:00",
+  "at_iso": "2026-11-15T14:45:00+00:00",
   "started": "6:23 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 1, started 6:23 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 9:42 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0, started 6:23 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 9:45 AM ET</p></section>"
  }
 }

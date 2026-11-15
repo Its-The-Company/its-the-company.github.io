@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-15T10:07:14.090729+00:00",
+ "at": "2026-11-15T10:10:21.387280+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -102,7 +102,7 @@
    "task": "[tools] T-4485 fix real-tick land rows red",
    "model": "opus",
    "started": "2026-11-15T09:24:59.819Z",
-   "seconds": 2534,
+   "seconds": 2721,
    "finished": null,
    "effort": "high"
   },
@@ -111,7 +111,7 @@
    "task": "[tools] T-4486 refuse Fable without Fable task",
    "model": "opus",
    "started": "2026-11-15T09:39:16.911Z",
-   "seconds": 1677,
+   "seconds": 1864,
    "finished": null,
    "effort": "high"
   },
@@ -120,7 +120,7 @@
    "task": "[tools] T-4488 T-4438 fix main red suites",
    "model": "opus",
    "started": "2026-11-15T09:53:40.312Z",
-   "seconds": 813,
+   "seconds": 1001,
    "finished": null,
    "effort": "high"
   }
@@ -212,7 +212,7 @@
   "week_pct": null,
   "usage_pct": null,
   "work_pct": null,
-  "read_at": "2026-11-15T10:07:00+00:00",
+  "read_at": "2026-11-15T10:10:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -248,6 +248,7 @@
     "e": "high",
     "at": "2026-11-15T04:53:04-05:00",
     "n": "Evan",
+    "d": 1,
     "src": "plan-a"
    },
    {
@@ -358,7 +359,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-15T05:07:00-05:00",
+  "at": "2026-11-15T05:10:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -622,12 +623,17 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-15T10:07:14Z",
+  "at": "2026-11-15T10:09:57Z",
   "s": {
    "T-4485": [
     "merging",
     "Mac tests at the main gate",
-    1794737174090
+    1794737157666
+   ],
+   "T-4438": [
+    "merging",
+    "Mac tests at the main gate",
+    1794737277666
    ],
    "T-4089": [
     "testing",
@@ -644,28 +650,23 @@
     "Mac Mini \u00b7 test",
     null
    ],
-   "T-4488": [
-    "testing",
-    "its own tests, in its copy",
-    1794736574090
-   ],
    "T-4486": [
     "testing",
     "its own tests, in its copy",
-    1794736994090
+    1794737037666
    ]
   },
   "nm": {
    "T-4485": "Real-tick land rows red on main",
+   "T-4438": "Fix two test suites that fail on main",
    "T-4089": "Fix the location bridge test that failed on the MacBook",
    "T-4280": "Run each widget in the widget or app by size",
    "T-4430": "Answer TestFlight encryption questions by default",
-   "T-4488": "Fix the How it works page test red on main",
    "T-4486": "Refuse Fable in sessions with no Fable task"
   }
  },
  "ln": {
-  "at": "2026-11-15T10:07:14Z",
+  "at": "2026-11-15T10:09:57Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -679,11 +680,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 589,
+    "conflicted": 591,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1317
+    "parked": 1320
    },
    "cur": [],
    "ld": [
@@ -693,12 +694,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-15T10:06:49Z",
-    "ld": 60.4,
+    "at": "2026-11-15T10:09:59Z",
+    "ld": 70.58,
     "c": 8,
     "sb": 1,
     "dk": [
-     21.2,
+     21.9,
      228.3
     ],
     "ss": [
@@ -782,10 +783,10 @@
   "main": 3,
   "lanes": 3,
   "total": 6,
-  "at": "5:07 AM",
+  "at": "5:10 AM",
   "why": "",
-  "at_iso": "2026-11-15T10:07:00+00:00",
+  "at_iso": "2026-11-15T10:10:00+00:00",
   "started": "2:07 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 3, started 2:07 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 5:07 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 3, started 2:07 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 5:10 AM ET</p></section>"
  }
 }

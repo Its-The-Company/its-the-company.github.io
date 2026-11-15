@@ -1,19 +1,19 @@
 {
  "schema": 1,
- "at": "2026-11-15T23:15:37.674008+00:00",
+ "at": "2026-11-15T23:18:41.544153+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-15T17:14:43-05:00",
   "flow": [
    {
-    "t": "T-4282",
-    "name": "Measure real scripts inside the widget on phones",
+    "t": "T-4512",
+    "name": "Propose the personal accounts' 5-hour stop at 97",
     "acct": "Personal a",
     "steps": [
      {
       "s": "testq",
-      "at": 1794783739
+      "at": 1794784685
      }
     ]
    },
@@ -30,6 +30,14 @@
    }
   ],
   "done": [
+   {
+    "t": "T-4282",
+    "name": "Measure real scripts inside the widget on phones",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794784610
+   },
    {
     "t": "T-4293",
     "name": "Show skipped and brief stages on Home",
@@ -105,18 +113,9 @@
     "end": "failed",
     "end_at": 1794770139,
     "why": "tests failed"
-   },
-   {
-    "t": "T-4227",
-    "name": "Run every Operator on Opus high",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "failed",
-    "end_at": 1794767908,
-    "why": "tests failed"
    }
   ],
-  "landed": 21,
+  "landed": 22,
   "failed": 6
  },
  "workers": [
@@ -125,7 +124,7 @@
    "task": "[tools] T-3992 land the pipeline batch",
    "model": "opus",
    "started": "2026-11-15T22:17:17.812Z",
-   "seconds": 3499,
+   "seconds": 3683,
    "finished": null,
    "effort": "high"
   }
@@ -209,7 +208,7 @@
   "week_pct": 3.57,
   "usage_pct": 22.9,
   "work_pct": 71.4,
-  "read_at": "2026-11-15T23:15:00+00:00",
+  "read_at": "2026-11-15T23:18:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -230,7 +229,7 @@
   }
  ],
  "disk": {
-  "free_gb": 10,
+  "free_gb": 11,
   "gate": "closed",
   "ssd": {
    "mounted": true,
@@ -239,14 +238,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions wait until 20 GB is free.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-15T18:15:00-05:00",
+   "at": "2026-11-15T18:18:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-15T18:15:00-05:00",
+  "at": "2026-11-15T18:18:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -474,26 +473,26 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-15T23:15:37Z",
+  "at": "2026-11-15T23:18:22Z",
   "s": {
-   "T-4282": [
+   "T-4512": [
     "merging",
     "Host checks on the Mac mini",
-    1794783757674
+    1794784702860
    ],
    "T-3992": [
     "merging",
     "Mac tests at the main gate",
-    1794784177674
+    1794784162860
    ]
   },
   "nm": {
-   "T-4282": "Measure real scripts inside the widget on phones",
+   "T-4512": "Propose the personal accounts' 5-hour stop at 97",
    "T-3992": "Clear and merge the unfinished merge fixes"
   }
  },
  "ln": {
-  "at": "2026-11-15T23:15:37Z",
+  "at": "2026-11-15T23:18:22Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -505,37 +504,37 @@
     "parked": 2
    },
    "m": {
-    "checking": 13,
+    "checking": 0,
     "inline": null,
-    "conflicted": 1377,
-    "failed": 14,
+    "conflicted": 1380,
+    "failed": 17,
     "held": null,
     "retry": null,
-    "parked": 606
+    "parked": 609
    },
    "cur": [
     [
      [
-      "T-4282"
+      "T-4512"
      ],
      "Mac tests",
      "Mac mini",
-     13
+     0
     ]
    ],
    "ld": [
-    29,
-    "2026-11-15T23:01:14Z"
+    30,
+    "2026-11-15T23:16:50Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-15T23:15:12Z",
-    "ld": 2.52,
+    "at": "2026-11-15T23:17:36Z",
+    "ld": 2.48,
     "c": 8,
     "sb": 0,
     "dk": [
-     10.3,
+     11.3,
      228.3
     ],
     "ss": [
@@ -545,12 +544,12 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-15T22:37:21Z",
-    "ld": 6.66,
+    "at": "2026-11-15T23:11:18Z",
+    "ld": 1.37,
     "c": 12,
     "sb": 0,
     "dk": [
-     356.9,
+     356.7,
      926.4
     ],
     "sn": []
@@ -588,10 +587,10 @@
   "main": 1,
   "lanes": 0,
   "total": 1,
-  "at": "6:15 PM",
+  "at": "6:18 PM",
   "why": "",
-  "at_iso": "2026-11-15T23:15:00+00:00",
+  "at_iso": "2026-11-15T23:18:00+00:00",
   "started": "5:14 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 5:14 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 6:15 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 5:14 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 6:18 PM ET</p></section>"
  }
 }

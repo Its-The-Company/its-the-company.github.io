@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-15T16:21:41.979483+00:00",
+ "at": "2026-11-15T16:24:42.363447+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -106,7 +106,7 @@
    "task": "[build] T-2869 pyc-only completion test",
    "model": "opus",
    "started": "2026-11-15T15:08:06.419Z",
-   "seconds": 4415,
+   "seconds": 4595,
    "finished": null,
    "effort": "high"
   },
@@ -115,7 +115,7 @@
    "task": "[build] T-4505 Distance Small far values",
    "model": "opus",
    "started": "2026-11-15T15:08:12.068Z",
-   "seconds": 4409,
+   "seconds": 4590,
    "finished": null,
    "effort": "high"
   },
@@ -124,7 +124,7 @@
    "task": "[build] T-3282 cap run marker read",
    "model": "opus",
    "started": "2026-11-15T16:13:09.853Z",
-   "seconds": 512,
+   "seconds": 692,
    "finished": null,
    "effort": "high"
   }
@@ -208,7 +208,7 @@
   "week_pct": 2.36,
   "usage_pct": 27.2,
   "work_pct": 75.0,
-  "read_at": "2026-11-15T16:21:00+00:00",
+  "read_at": "2026-11-15T16:24:00+00:00",
   "running": [
    {
     "lane": "b3",
@@ -266,7 +266,7 @@
   }
  ],
  "disk": {
-  "free_gb": 16,
+  "free_gb": 15,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -275,14 +275,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-15T11:16:00-05:00",
+   "at": "2026-11-15T11:22:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-15T11:21:00-05:00",
+  "at": "2026-11-15T11:24:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -543,32 +543,32 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-15T16:21:32Z",
+  "at": "2026-11-15T16:24:42Z",
   "s": {
+   "T-4505": [
+    "mergetest",
+    "iPhone tests on the MacBook",
+    null
+   ],
    "T-2869": [
     "merging",
     "Mac tests at the main gate \u00b7 4 groups of tests done",
-    1794759152373
-   ],
-   "T-4505": [
-    "merging",
-    "Mac tests at the main gate \u00b7 1 group of tests done",
-    1794759272373
+    1794759162363
    ],
    "T-3282": [
     "merging",
     "Mac tests at the main gate",
-    1794759512373
+    1794759462363
    ]
   },
   "nm": {
-   "T-2869": "Test completion with the stdlib as compiled-only files",
    "T-4505": "Fit far distances in Distance Small",
+   "T-2869": "Test completion with the stdlib as compiled-only files",
    "T-3282": "Cap how much of the run marker the widget reads"
   }
  },
  "ln": {
-  "at": "2026-11-15T16:21:32Z",
+  "at": "2026-11-15T16:24:42Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -582,11 +582,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 979,
+    "conflicted": 982,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 2843
+    "parked": 2846
    },
    "cur": [],
    "ld": [
@@ -596,12 +596,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-15T16:21:33Z",
-    "ld": 4.39,
+    "at": "2026-11-15T16:24:25Z",
+    "ld": 5.73,
     "c": 8,
     "sb": 0,
     "dk": [
-     14.7,
+     15.7,
      228.3
     ],
     "ss": [
@@ -611,8 +611,8 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-15T16:20:02Z",
-    "ld": 1.64,
+    "at": "2026-11-15T16:22:08Z",
+    "ld": 1.12,
     "c": 12,
     "sb": 0,
     "dk": [
@@ -663,10 +663,10 @@
   "main": 3,
   "lanes": 1,
   "total": 4,
-  "at": "11:21 AM",
+  "at": "11:24 AM",
   "why": "",
-  "at_iso": "2026-11-15T16:21:00+00:00",
+  "at_iso": "2026-11-15T16:24:00+00:00",
   "started": "10:05 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 3, started 10:05 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 11:21 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 3, started 10:05 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 11:24 AM ET</p></section>"
  }
 }

@@ -44,11 +44,9 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 - T-4254/55/56/61 eab2ec4097 11-13: EditorMarks (hold typed word, keep other lines), tint 12/9 %, VO list announcements; 4254+4255 ticked (board unstaged). Open: T-4256 gutter number colour (Runestone one colour for all numbers: needs a Vendor/adapter hook), Increase Contrast shots; T-4261 review by Pernille. Lesson: simctl recordVideo can't write to the SANDISK volume (-12204): record to /private/tmp; avconvert trims. A Vendor symlink in the copy blocks main_gate: remove before land.
 
-- T-4258/59/60 landed cad4c75e38 11-13 (job 1747/0, ticked). Open: review line NOT added (board_tick add refused: a follow-up naming T-4259/T-4260 needs links; 2nd refusal stopped it; to Ines); copy not removed. Lesson: name only the 'from T-X' ID in a new line; gate 75 'no result' -> xc_route.py wait J-.. then rerun at once (main moved 3x).
+- T-3821 11-13: written, not landed; copy T-3821-idris/wt (review-line.txt ready) must first come up over T-4311 (same 3 files: checkout --merge). Then land, tick, review line, remove copy. Lesson: a land cycle is ~20 min; start the gate by minute 15.
 
-- T-4294 11-13 87cf4874ba: shim review, fixes to Pernille T-4303. My T-3401 net.request must: https-only url, no trust override, resource timeout, body_file under tmp only.
-
-- T-3821 11-13: written, not landed; copy T-3821-idris/wt, review-line.txt ready. Rerun land (job J-20261113-1416-land-m-417c27), tick, add review line, remove copy. Lesson: a full land cycle is ~20 min with two runner waits; start the gate by minute 15.
+- T-4311 11-15: -1200 named by SecureTransport code (cert -9807/08/12-15, else trust key), L1-L3. Open: phone cases on T-4203 (self-signed, TLS 1.0, 302 with body).
 
 ## Lessons
 - Older lessons and dated logs: archive.md.
@@ -56,7 +54,11 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 - T-4474/T-4196 11-15 57f84c603e: card-parser fix redone, patch to T-3995. Open: land_xc slice, GROUP_JOB, switch on, 20 timed runs, week vs 6.00 by 11-30. Lesson: --fast >2 h now (bg limit <span title="A test written in advance. If it fires, we drop the idea.">kills</span> it, no summary; read res/*.log in its tmp dir before it ends); mutants: changed ones only.
 
-- T-4468 11-15 slice 1: settings Page core+UI (Pages/), PyBridge.onRunQueue, trigger settings_saved. Open: slice 2 Gallery row, widget-tap route, cities.tsv in app, Use Current Location, phone check; Pernille reviews. Lesson: JSONSerialization prints a Double to 17 digits (38.719999999999999): write NSDecimalNumber.
+- T-4468 11-15: slices 1-2 on main; 3a 86cf6f47bd (M1-M5, L1-L3). Open: Habits week dots, settings_saved doc rows, T-4515/16/17, phone check. Lesson: gate 'no result' -> xc_route wait, then main moves: checkout --merge again, same key reuses the job.
+
+- T-4532 11-15: reviewed Pernille's H1 lock (SHIP, 4 Lows: t4468-lock-idris.md); Swift write under flock on premade.json.lock, .page- temp. Open: L1 (save raises on OSError) + L2 (no fsync, both) to Pernille; s2.3.2 before App Store. Lesson: Core flock tests need a 2nd open file description, not a 2nd process.
+
+- T-4494 11-15: slice 1 = item (2), <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span>.json and its readers gone. Open: item (1) own-script mirror without "lane" (LaneEntry.entry + lane.py mirror_entry/lane_of default + manifest-less sends: design call), (3) recording, (4) Ines's two readings.
 {% endraw %}
 
 

@@ -119,6 +119,59 @@ premade's id, not by the placed widget). That is today's model and this build ke
 A save that fails (no App Group, disk full) leaves the file as it was, shows `page.cantsave` under the section, and
 puts the control back to the saved value.
 
+#### 2.3.1 The file lock both writers take (T-4468 H1; Python half landed, Swift half next)
+
+Two processes write `premade.json`: the Page (Swift) and the premade's own run (Python, `_premade.Store.save`, done
+by `_premade_lock.save`). The run queue orders only the app's own runs, and a widget run holds the copy it read for
+seconds (a fetch, a sensor wait), so whole-file writes lose updates. Every writer of `premade.json` follows this
+contract:
+
+- **Lock file.** `premade.json.lock` in the same folder as `premade.json` (the folder `files.shared(script_id)` answers).
+  Open it with `O_RDWR | O_CREAT`, mode `0600`. Never delete it, and never lock `premade.json` itself: the rename
+  replaces that inode, so a lock on it locks the old file.
+- **Lock kind.** BSD `flock(fd, LOCK_EX)` on that descriptor, exclusive, whole file. Not `fcntl(F_SETLK)` or `lockf`:
+  those POSIX record locks belong to the process, and the app process holds both the Page's writer and the app's
+  Python runs, so they would not exclude each other. `flock` belongs to the open file description, so two opens in one
+  process exclude, as two processes do. Release by `close(fd)` (or `flock(fd, LOCK_UN)` then close).
+- **Waiting.** Poll `LOCK_EX | LOCK_NB` (Python: every 10 ms, for at most 2 s). A writer that cannot get it in its
+  deadline writes nothing (Swift: `.writeFailed`, `page.cantsave`; Python: the run's history waits for its next run).
+- **Under the lock, in this order:** read `premade.json` again; if it is missing, start from `{}`; if it exists and is
+  not a UTF-8 JSON object, write nothing and stop. Merge: for each key the writer owns, set it to the writer's value
+  (or remove it, as the Page removes `pinned`); every other key keeps the value the file has **now**, not the one the
+  writer read earlier. The Page owns its s4.2 keys; a Python run owns exactly the keys it `set()` during the run.
+  Write a temp file in the same folder, rename it over `premade.json`, then release.
+- **Hold.** Only the read, merge, write and rename: milliseconds. Never across a fetch, a sensor wait or an `await`.
+  An app suspended while it holds a file lock in the App Group container is killed (`0xdead10cc`), so the Swift
+  writer takes and releases the lock inside one synchronous block.
+- **Temp files.** Python names its temp file `.premade-<16 hex>`. A `.premade-*` file older than 60 s, seen while
+  holding the lock, belongs to a killed writer; Python removes it. The Swift writer may use any other name.
+- **The widget <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span>.** `fcntl` is not on the lane's import list (`lane.py` `ALLOWED`), and the lane premades import
+  `_premade`, which passes the lane's scan. So the locked save is its own file, `_premade_lock.py`; each premade that
+  saves (Altitude, Distance, GitHub, Steps, Storage) imports it and sets `k.SAVE = _premade_lock.save`. Without it
+  `Store.save()` writes nothing, never an unlocked whole file. No lane premade saves today (Countdown, Habits,
+  Quote only read). A lane premade that must save needs `fcntl` added to `ALLOWED` first (70,112 bytes on the device
+  slice, already shipped), a lane decision.
+
+Tests: `pywidget/tests/widgets/test_premade_store_lock.py` (a writer in another process holding the lock, a holder in
+this process, an unreadable file, keys the run did not set, no locked save installed, orphan temp files, and which
+premades import `_premade_lock`).
+
+#### 2.3.2 When an all-day event stops being upcoming (T-4468 M5)
+
+One rule for the widget and the Page. A timed event is upcoming while now is before its `at`. An event with
+`all_day: true` (stamped 12:00 PM of the picked day in the zone it was picked in) belongs to the local day, in the phone's
+zone now, that contains its stamp, and stays upcoming until the next local midnight after that day began: a calendar
+day added, not `+ 86,400` seconds, which is an hour wrong on the two days a year the clocks change.
+
+- Swift owns the Page's half: `SettingsKinds.isUpcoming` (Idris, 86cf6f47bd), used by the Past section and the save
+  check: `calendar.startOfDay(for: at)`, then `date(byAdding: .day, value: 1, ...)`.
+- Python owns the widget's half: `countdown.py` `_end` (`local_midnight(at, tz, 1)`), since c00ce27e15. The same
+  boundary; nothing in Python changed for M5. Tests: `AllDay` in `test_premade_settings.py` (11:59 PM and midnight,
+  a 25-hour day, a timeline entry at the boundary, a phone in another zone).
+- Open, both sides together or neither: a phone that has moved more than 11 hours east or west of where the event was
+  picked reads its stamp as the next or the previous day. Reading the date written in the stamp instead would fix it;
+  it is a change to this rule, not to one side.
+
 ### 2.4 Choose a Place (frame 7)
 
 Pushed from a `place` row. A search field (`page.place.search`), then CitySearch's hits for the typed text: prefix

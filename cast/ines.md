@@ -33,11 +33,10 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - Lesson: hold a pre-written rule to its words when the evidence lands close ("no input" is not "no answer"); the point of writing it first was to not bend it after. Its words = the committed entry (OPT-049).
 - L5 (T-1012): never accept a standing red; a SKIP with a reason, or it hides the next one.
 - pywidget build — product chosen 2026-10-25; v1 scope, money path, hiring, board state at build start
-- queue audit T-4092 — T-4437 ticked 11-15 (13 active rows left, owners asked); next the follow-up, T-4105
+- queue audit T-4092 — T-4502 done 11-15: 12 rows held, holders named; parents take child priority; next T-4105
 - task process redesign T-4122 — card, one checker, feature unit, fitted iPhone group size; who builds, dates
 - efficiency review T-4124 — a metrics row's `seconds` can be its whole run's time on every row; queue a note before writing that it exists
-- account fixes T-4305 — unified session: no; #303 pending; T-4314, T-4315; re-read 11-20
-- 11-13 (T-4266): #270 A, #272 A: 1.0 = Builder + Pages, likely 2027-04-26 (late Feb to late Jul), firm date at the Builder's first phone proof; nothing out near Day 60 (#271 A). Range = 05-timeline weeks summed, script ops/plans/T-4266-release-range.py. Mission line via #298 (auto path). B-staged Pro (refresh + themes, premades free) stands.
+- account fixes T-4305 — unified session: no; #303 pending; T-4314, T-431- 11-13 (T-4266): #270 A, #272 A: 1.0 = Builder + Pages; re-worked to early June 2027 (T-4467). Range script ops/plans/T-4266-release-range.py. B-staged Pro (refresh + themes, premades free) stands.des free) stands.
 - Board: never pre-number lines (`add` assigns IDs, T-2354); grep the board before `add`; stage my lines only (T-3204).
 - Standing lessons: run `date` before every stamp; grep my own proposals and git log before <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">ruling</span>; read a new rule against the ADR it touches; when two fixes interact, check the bound under both. Never write "ships as is" without a grep at HEAD (T-0791: an unbuilt BGAppRefresh went into the guide as shipped).
 - T-1035: run a proposal's place against my own rules, its last verb against the guard. Git worktree is checkout, plain copy isn't (T-3770: the guard's in_checkout). An ops/runs file can be my own live stream: check before citing it. Branch to main: #113 A only.

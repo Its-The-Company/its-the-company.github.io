@@ -43,6 +43,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-4468/T-4504 11-15: premade Page limits measured in render.py; Clocks Small row redesigned (time on the name's line, priority 1; offset own line), Name 9 -> 11. Lesson: check the sum first: a full-size time plus the widest label at 0.8 can exceed a 158 pt Small, so priority alone cannot keep both; render.py never shrinks a VStack in an HStack.
 - Older entries (2026-10-25 8:12 PM to 2026-10-27 T-0391: bridge contract v1-v4, DSL v1, stdlib manifest, OPS-4/5, installer) are in archive.md; 11-12/13 reviews T-4204, T-4171, T-4238, T-4217, T-4214, T-4242 too.
 - T-4524/25/26 11-15 LANDED 04ad030f72, dcf6f1272d (+ T-4526): systls target host, strict chunk sizes, C2 s6 wording; all ticked. Lesson: a gate land runs 15-25 min (host suites + MacBook job; main moves meanwhile): run it in the background with a long timeout and loop bring-up on 'not named'/75.
+- T-4468 11-15: slice 1 review FIX FIRST; H1 Python half LANDED 30ea7b46f1 (_premade_lock.py, flock + dirty keys + re-read; contract s2.3.1); review + Swift half = T-4532 (Idris). M5 owned by Swift (86cf6f47bd); Python same boundary. Lesson: a module the <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> premades import cannot import fcntl (lane scan); put it in a sibling the savers import. A new bundled file is pinned in Swift PremadesTests too: grep ios/Tests before landing.
 
 ## Lessons
 

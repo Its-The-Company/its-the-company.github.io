@@ -193,9 +193,10 @@ row.hidden = !row.firstChild;
 }
 function reactions(m, x) {
 if (typeof x.id !== 'number') return;
-var row = mk(m, 'div', 'cv-rx'), pick = null, rb = el('button', 'cv-copy', 'React');
+var row = mk(m, 'div', 'cv-rx'), pick = null, rb = el('button', 'vh', 'React to this message'), t0 = 0;
 rb.type = 'button'; rxRow(row, x);
-function shut() { if (pick) { pick.remove(); pick = null; } }
+rb.onfocus = () => { rb.className = 'cv-copy'; }; rb.onblur = () => { rb.className = 'vh'; };
+function shut(k) { if (pick) { var f = k && pick.contains(document.activeElement); pick.remove(); pick = null; if (f) rb.focus(); } }
 function open() {
 if (pick) return shut();
 pick = put(m, el('div', 'cv-rxp')); attr(pick, 'role', 'group'); attr(pick, 'aria-label', 'React to this message');
@@ -212,9 +213,13 @@ rxRow(row, x);
 });
 pick.firstChild.focus();
 }
-on(m, 'dblclick', (ev) => { if (!(ev.target.closest && ev.target.closest('a,button'))) open(); });
+on(m, 'click', (ev) => {
+if (ev.target.closest && ev.target.closest('a,button')) return;
+var t = Date.now(); if (t - t0 > 400) { t0 = t; return; }
+t0 = 0; var g = W.getSelection && W.getSelection(); if (g) g.removeAllRanges(); open();
+});
 rb.onclick = open; m.insertBefore(rb, row.nextSibling);
-on(m, 'keydown', (ev) => { if (ev.key === 'Escape') shut(); });
+on(m, 'keydown', (ev) => { if (ev.key === 'Escape') shut(1); });
 }
 function copyText(t) {
 var nav = W.navigator, fb = () => {

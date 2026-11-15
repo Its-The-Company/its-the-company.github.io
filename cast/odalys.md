@@ -37,13 +37,6 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 ## Open (2026-11-15)
 
-- T-4230 f054a45347 (branch odalys/t4230-restructuring-docs, unlanded 11-12 22:1x): Restructuring folder under Documents. Owed: land; first live mock-up copy (phase 4).
-
-- T-4275 952958e1e1 (11-13 12:0x PM, under T-3992): land --from finds host suites in the copy (host_suites disk=). Owed: Pernille's T-3400 land is the first live run; known gap: a copy behind main misses a suite main added.
-
-- T-4284 closed 11-15 (superseded by <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">rulings</span> 11-14 4:09 PM c6884234782 and 6:16 PM c6885758301; slice 1 453bf6cc2f retired by T-4466 431b39acfa; wt2 helpers-on-Fable dropped). Nothing owed.
-
-
 - T-4317 1fc5ad43a8 + T-4402 9f7eb648d0 (11-13): ledger rows via tools/ledger_row.py (fills prev; plan, <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span>.md, slice notes say so). Owed: tick T-4402 when the next slice's rows all carry prev; then the apply refuses rows without prev.
 
 - T-4314 fcb1782366 (11-13 23:1x): personal_stream_shape.py cost + T-4124 sums. Tick lines = patch in company-scratch/T-4314-odalys (audit owner; reviewer Pernille). Owed: first real 'session: cost:' line, then tick.
@@ -60,7 +53,11 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 - T-4009 07a67cf259 + 89c42a36fc (11-15): hold line = governor.five_hour_hold() (100% less 3 median calls; 95% today, floor 90, cap 97); OPT-133 proposed. Owed: rules/personal_lane.py 90->97 card (my diff step refused by a deny rule, stopped); OPT-133 reads after land.
 
+- T-4473/T-4448/T-4449 (11-15): queue check v1, dry run, Ines's 5 fixes (e831be688e), 2nd dry run all hold (5a3a0c6b43), switched on: act_alone wait_met_issue, feature_fits. Fix 2 cut replay recall 413->154 of 446 (for Ines). Owed: daily caller = revised pipeline patch, note on T-3992 (--as-switch); owner parse fix before rows go to owners; my noted copies T-4411, T-3150, T-3859, T-1248, T-3593.
+- T-4419/T-4490 closed 11-15 (OPT-100, -110, -092 no_effect; OPT-119 kept). Owed: T-4531 (keep or revert the ledger merge driver).
+
 ## Lessons
+- Before a ledger 'Read H:MM', run `date`; I wrote 2:3x for a 2:1x read (fixed before T-4490 landed).
 {% endraw %}
 
 

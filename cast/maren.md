@@ -44,6 +44,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - 2026-11-13 T-4308 f6e0d9e506. Lesson: check a packet's diagnosis against git before coding; the cause was running.py's d flag, not a missing claim. Under load 100, run suites via run.sh in background to a file.
 - 2026-11-14 T-4313 02fca96d3d (Merged fold above In flight; folds; filtered totals). Lessons: a closed <details> keeps client rects in Chromium, use checkVisibility(); a red on a test I touch may be main's own data drift (state.md), check main before blaming my change.
 - 2026-11-14 T-4316 50402e5c90 (box takes wheel only after pointer moves in). Lessons: prove a new browser check red on the old file first; gate refuses when main moved anywhere, so checkout --merge --detach main and land again; site_t3219 red from live stage names, not mine.
+- 2026-11-15 T-4534 slice 1: React link gone; tap pair (400 ms) not dblclick, since iOS Safari may not send it; keyboard keeps a .vh button shown on focus. Lesson: site browser tests run ~5 min under load; start them early.
 {% endraw %}
 
 

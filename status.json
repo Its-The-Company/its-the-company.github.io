@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-15T07:40:29.315384+00:00",
+ "at": "2026-11-15T07:43:33.650454+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -102,22 +102,30 @@
    "task": "[tools] T-4466 open audit lines to all accounts",
    "model": "opus",
    "started": "2026-11-15T07:11:46.805Z",
-   "seconds": 1722,
+   "seconds": 1906,
    "finished": null,
    "effort": "high"
   },
   {
    "name": "odalys",
-   "task": "[tools] T-4479 land stuck lane-a branches",
+   "task": "[tools] T-4129 land Set aside part 2b",
    "model": "opus",
-   "started": "2026-11-15T07:19:25.179Z",
-   "seconds": 1264,
+   "started": "2026-11-15T07:42:39.983Z",
+   "seconds": 53,
    "finished": null,
    "effort": "high"
   }
  ],
  "who": "Odalys x2",
  "recent": [
+  {
+   "name": "odalys",
+   "task": "[tools] T-4479 land stuck lane-a branches",
+   "model": "opus",
+   "started": "2026-11-15T07:19:25.179Z",
+   "seconds": null,
+   "finished": "2026-11-15T07:40:57.121000+00:00"
+  },
   {
    "name": "ines",
    "task": "[plan] T-4465 plan in line with six answers",
@@ -138,7 +146,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 377,
+  "runnable_count": 376,
   "blocked_count": 78
  },
  "meter": {
@@ -187,7 +195,7 @@
   "week_pct": null,
   "usage_pct": null,
   "work_pct": null,
-  "read_at": "2026-11-15T07:40:00+00:00",
+  "read_at": "2026-11-15T07:43:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -224,7 +232,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-15T02:40:00-05:00",
+  "at": "2026-11-15T02:43:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -305,12 +313,12 @@
    {
     "w": "Odalys",
     "k": "tools",
-    "t": "Land Evan's account work stuck since yesterday afternoon",
+    "t": "Retire the Set aside stage on Home",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-15T07:19:25.179Z",
+    "at": "2026-11-15T07:42:39.983Z",
     "o": "c",
-    "task": "T-4479"
+    "task": "T-4129"
    }
   ],
   "src": "plan",
@@ -373,20 +381,25 @@
    },
    {
     "w": "Odalys",
-    "k": "tools",
-    "t": "Land Evan's account work stuck since...",
+    "k": "site",
+    "t": "Draw the app's diagrams from its code on the...",
     "s": "next",
     "o": "i"
    },
    {
     "w": "Odalys",
-    "k": "site",
-    "t": "Draw the app's diagrams from its code on the...",
+    "k": "tools",
+    "t": "Retire the Set aside stage on Home",
     "s": "next",
     "o": "i"
    }
   ],
   "done": [
+   {
+    "w": "Odalys+operator",
+    "t": "Work from Evan's account stopped reaching main yesterday afternoon because the records step...",
+    "at": "2026-11-15T02:42:00-05:00"
+   },
    {
     "w": "Ines",
     "t": "The build plan and the scope record now follow six Investor answers of Saturday: no iMessage...",
@@ -396,22 +409,21 @@
     "w": "Odalys",
     "t": "Until the 19th, the dispatcher hands out the open queue-audit and Restructuring steps (site...",
     "at": "2026-11-15T02:17:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "The once-a-day check of the task queue now also decides, from the last 7 days of results, how...",
-    "at": "2026-11-14T19:12:00-05:00"
    }
   ],
   "count": {
-   "next": 377,
+   "next": 376,
    "wait": 37,
    "blocked": 41,
    "you": 12
   },
   "fin": {
-   "n": 2,
+   "n": 3,
    "rows": [
+    [
+     "T-4479",
+     "Land Evan's account work..."
+    ],
     [
      "T-4465",
      "Bring the plan and records..."
@@ -462,27 +474,20 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-15T07:40:29Z",
+  "at": "2026-11-15T07:43:21Z",
   "s": {
    "T-4466": [
     "testing",
     "its own tests, in its copy",
-    1794727169315
-   ],
-   "T-4479": [
-    "merged",
-    "on main 2:38 AM ET",
-    1794728325000,
-    ""
+    1794727161236
    ]
   },
   "nm": {
-   "T-4466": "Open the audit lines to every account and any model",
-   "T-4479": "Land Evan's account work stuck since yesterday afternoon"
+   "T-4466": "Open the audit lines to every account and any model"
   }
  },
  "ln": {
-  "at": "2026-11-15T07:40:29Z",
+  "at": "2026-11-15T07:43:21Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -490,17 +495,17 @@
     "conflicted": 4,
     "failed": 0,
     "held": 0,
-    "retry": 1,
-    "parked": 2
+    "retry": 0,
+    "parked": 3
    },
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 231,
+    "conflicted": 234,
     "failed": null,
     "held": null,
-    "retry": 6,
-    "parked": 2324
+    "retry": null,
+    "parked": 2325
    },
    "cur": [],
    "ld": [
@@ -510,16 +515,16 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-15T07:40:04Z",
-    "ld": 4.23,
+    "at": "2026-11-15T07:43:21Z",
+    "ld": 4.21,
     "c": 8,
     "sb": 0,
     "dk": [
-     25.2,
+     24.8,
      228.3
     ],
     "ss": [
-     188.1,
+     186.0,
      953.7
     ],
     "sn": []
@@ -544,7 +549,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 4 tasks",
+   "t": "Work session \u2013 5 tasks",
    "at": "2026-11-15T02:10:06-05:00"
   }
  ],
@@ -568,10 +573,10 @@
   "main": 2,
   "lanes": 0,
   "total": 2,
-  "at": "2:40 AM",
+  "at": "2:43 AM",
   "why": "",
-  "at_iso": "2026-11-15T07:40:00+00:00",
+  "at_iso": "2026-11-15T07:43:00+00:00",
   "started": "2:07 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 2:07 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 2:40 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 2:07 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 2:43 AM ET</p></section>"
  }
 }

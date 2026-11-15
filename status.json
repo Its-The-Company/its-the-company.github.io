@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-15T20:08:10.022706+00:00",
+ "at": "2026-11-15T20:11:28.166024+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -117,7 +117,7 @@
    "task": "[build] T-4468 premade settings H1 Python half",
    "model": "opus",
    "started": "2026-11-15T19:14:40.149Z",
-   "seconds": 3209,
+   "seconds": 3408,
    "finished": null,
    "effort": "high"
   },
@@ -126,22 +126,21 @@
    "task": "[tools] T-4449 queue check fixes and switch-on",
    "model": "opus",
    "started": "2026-11-15T19:48:34.144Z",
-   "seconds": 1175,
+   "seconds": 1374,
    "finished": null,
    "effort": "high"
-  },
+  }
+ ],
+ "who": "Pernille, Odalys",
+ "recent": [
   {
    "name": "idris",
    "task": "[build] T-4311 net.request certificate errors",
    "model": "opus",
    "started": "2026-11-15T19:51:18.433Z",
-   "seconds": 1011,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Pernille, Odalys, Idris",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-15T20:10:41.239000+00:00"
+  },
   {
    "name": "idris",
    "task": "[ios] T-4311 net.request certificate errors",
@@ -165,20 +164,12 @@
    "started": "2026-11-15T19:44:46.436Z",
    "seconds": null,
    "finished": "2026-11-15T19:48:18.698000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-4448 dry-run queue check live",
-   "model": "opus",
-   "started": "2026-11-15T19:36:33.107Z",
-   "seconds": null,
-   "finished": "2026-11-15T19:44:32.275000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 376,
+  "runnable_count": 375,
   "blocked_count": 76
  },
  "meter": {
@@ -186,18 +177,18 @@
    "pct": 16.0,
    "resets_at": "2026-11-15T17:00:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-15T14:56:39.647298-05:00",
+   "read_at": "2026-11-15T15:09:17.438060-05:00",
    "source": "live",
    "left": 84.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 10.0,
+   "pct": 11.0,
    "resets_at": "2026-11-22T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-15T14:56:39.647298-05:00",
+   "read_at": "2026-11-15T15:09:17.438060-05:00",
    "source": "live",
-   "left": 90.0,
+   "left": 89.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
@@ -207,7 +198,7 @@
    "read_at": "2026-11-15T14:00:25.240335-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-15T14:56:39.647298-05:00"
+  "read_at": "2026-11-15T15:09:17.438060-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -227,7 +218,7 @@
   "week_pct": 3.22,
   "usage_pct": 26.1,
   "work_pct": 75.0,
-  "read_at": "2026-11-15T20:08:00+00:00",
+  "read_at": "2026-11-15T20:11:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -257,14 +248,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-15T15:02:00-05:00",
+   "at": "2026-11-15T15:09:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-15T15:08:00-05:00",
+  "at": "2026-11-15T15:11:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -275,7 +266,7 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Double Spread: 90% of the week left, paced to last until Wed 14:00, the week's halfway point; the machine allows 20 (held: too few lands in 3 hours to judge a raise)",
+  "why": "Double Spread: 89% of the week left, paced to last until Wed 14:00, the week's halfway point; the machine allows 20 (held: too few lands in 3 hours to judge a raise)",
   "n": 3,
   "at": "2026-11-15T14:00:25.823772-05:00"
  },
@@ -300,12 +291,11 @@
   },
   {
    "name": "Idris",
-   "state": "running",
-   "task": "[build] T-4311 net.request certificate errors",
-   "model": "opus",
-   "since": "2026-11-15T19:51:18.433Z",
-   "next": [],
-   "effort": "high"
+   "state": "next",
+   "task": "Idris, P2, from T-2869 (Idris's land, 11:4x AM 11-15):...",
+   "model": null,
+   "since": null,
+   "next": []
   },
   {
    "name": "Ines",
@@ -353,16 +343,6 @@
     "at": "2026-11-15T19:48:34.144Z",
     "o": "c",
     "task": "T-4449"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "Name certificate failures right in net.request",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-15T19:51:18.433Z",
-    "o": "c",
-    "task": "T-4311"
    }
   ],
   "src": "plan",
@@ -440,6 +420,11 @@
   ],
   "done": [
    {
+    "w": "Idris",
+    "t": "When a script's secure web call fails, the app now tells a bad server certificate apart from a...",
+    "at": "2026-11-15T15:10:00-05:00"
+   },
+   {
     "w": "Odalys+ines",
     "t": "The queue check ran without changing anything on all 453 open tasks; Ines read the result and...",
     "at": "2026-11-15T14:47:00-05:00"
@@ -448,22 +433,21 @@
     "w": "Odalys",
     "t": "The daily queue check was replayed against the audit's verdicts and its rules narrowed. It...",
     "at": "2026-11-15T14:35:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "The daily queue check now ignores two signals that alone did not tell finished work from live...",
-    "at": "2026-11-15T14:35:00-05:00"
    }
   ],
   "count": {
-   "next": 376,
+   "next": 375,
    "wait": 35,
    "blocked": 41,
    "you": 12
   },
   "fin": {
-   "n": 6,
+   "n": 7,
    "rows": [
+    [
+     "T-4311",
+     "Name certificate failures..."
+    ],
     [
      "T-4448",
      "Dry-run the queue check on..."
@@ -483,10 +467,6 @@
     [
      "T-4419",
      "Measure two overdue..."
-    ],
-    [
-     "T-3310",
-     "Cap the demotion list read..."
     ]
    ]
   }
@@ -530,32 +510,32 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-15T20:08:10Z",
+  "at": "2026-11-15T20:11:22Z",
   "s": {
    "T-4227": [
     "merging",
     "Host checks on the Mac mini",
-    1794772750022
+    1794772762111
    ],
-   "T-4311": [
-    "mergetest",
-    "iPhone tests on the MacBook",
-    null
+   "T-4449": [
+    "merging",
+    "Mac tests at the main gate",
+    1794773482111
    ],
    "T-4468": [
     "merging",
     "Mac tests at the main gate \u00b7 4 groups of tests done",
-    1794772810022
+    1794772762111
    ]
   },
   "nm": {
    "T-4227": "Run every Operator on Opus high",
-   "T-4311": "Name certificate failures right in net.request",
+   "T-4449": "Switch the queue check on",
    "T-4468": "Let people set each premade's place, events and lists"
   }
  },
  "ln": {
-  "at": "2026-11-15T20:08:10Z",
+  "at": "2026-11-15T20:11:22Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -567,13 +547,13 @@
     "parked": 2
    },
    "m": {
-    "checking": 9,
+    "checking": 12,
     "inline": null,
-    "conflicted": 1190,
+    "conflicted": 1193,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 418
+    "parked": 422
    },
    "cur": [
     [
@@ -582,7 +562,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     9
+     12
     ]
    ],
    "ld": [
@@ -592,8 +572,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-15T20:07:24Z",
-    "ld": 0.94,
+    "at": "2026-11-15T20:10:53Z",
+    "ld": 0.9,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -607,8 +587,8 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-15T20:01:31Z",
-    "ld": 1.67,
+    "at": "2026-11-15T20:09:01Z",
+    "ld": 1.96,
     "c": 12,
     "sb": 0,
     "dk": [
@@ -626,7 +606,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 3 tasks",
+   "t": "Work session \u2013 2 tasks",
    "at": "2026-11-15T14:00:40-05:00"
   }
  ],
@@ -644,17 +624,18 @@
   "task_title",
   "done_text",
   "task_open",
+  "fin_six",
   "lane_task",
   "task_next"
  ],
  "agents_now": {
-  "main": 3,
+  "main": 2,
   "lanes": 0,
-  "total": 3,
-  "at": "3:08 PM",
+  "total": 2,
+  "at": "3:11 PM",
   "why": "",
-  "at_iso": "2026-11-15T20:08:00+00:00",
+  "at_iso": "2026-11-15T20:11:00+00:00",
   "started": "2:00 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 2:00 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 3:08 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 2:00 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 3:11 PM ET</p></section>"
  }
 }

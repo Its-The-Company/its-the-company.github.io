@@ -51,11 +51,12 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 - T-4411 (11-14 00:1x): dispatch.py patch in company-scratch/T-4411-odalys/T-4411-dispatch.patch, handed by note on T-4092 (audit-owned). Owed: after it lands, dispatch.log shows an audit line dealt within one tick of a 5-hour reset; then tick T-4411.
 
-- T-4446 slice 1 (11-14): tools/records_round.py, one records commit per 900 s, never memory alone; memory_commit.py hands over (old path MEMORY_WITH_RECORDS=0). Baseline 1,336 record-only, 432 memory-only in 7 d. ops/plans/t4446-supervisor.patch noted on T-3995; its suite not run (refusal). Rest: T-4457. Owed: 7-day count <= 672 and wait lines not up; then tick.
+- T-4446 slice 1 (11-14): tools/records_round.py, one records commit per 900 s (full note in archive.md); rest T-4457. Owed: 7-day count <= 672 and wait lines not up; then tick.
 
-- T-4452 (11-14): board_tick add and tick take "Supersedes: T-a (reason)"; named lines become '- [~]' with a WITHDRAWN note, board.py tick archives them. Refused: P0, Investor-cited (145 of 437 open lines on 11-14), claimed, linked, not open. Owed: Ines decides whether cited lines get a path; a lane tick's named line can be claimed before the landing (replay then fails to failed/).
+- T-4452 (11-14): board_tick's Supersedes field (full note in archive.md). Owed: Ines decides whether Investor-cited lines get a path; a lane tick's named line can be claimed before the landing.
 - T-4103 31b4b962fb, T-4443 slice 1 14f086c7d8 (11-14): open, full notes in archive.md. Owed: T-4447 replay narrows the signals; five card rules in queue_check; T-4459 machine callers.
 - T-4458 (11-14): jobs_loop notes, merge_first, runner_watch, main_green hand over to records_round (RECORDS_OWN_COMMIT=1 = old). fav_notice refused (guard); own line. Owed: 7-day commit-shares run shows none of their subjects; then tick.
+- T-4450 (11-14 19:0x): the day's group-size fit is a job of queue_check's daily run; `pass` reads the kept sizes. No pipeline patch (T-4444's step carries it). Owed: 7 days of land_group.jsonl rows by 'daily sweep' against 'first read'; queue_check mutants not measured.
 
 ## Lessons
 

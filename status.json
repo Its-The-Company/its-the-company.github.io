@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-15T17:25:58.687520+00:00",
+ "at": "2026-11-15T17:28:59.538727+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -106,7 +106,7 @@
    "task": "[build] T-4524 https host fixes",
    "model": "opus",
    "started": "2026-11-15T16:46:36.927Z",
-   "seconds": 2361,
+   "seconds": 2542,
    "finished": null,
    "effort": "high"
   },
@@ -115,7 +115,7 @@
    "task": "[design] T-4523 Distance design tree",
    "model": "opus",
    "started": "2026-11-15T16:52:57.433Z",
-   "seconds": 1981,
+   "seconds": 2162,
    "finished": null,
    "effort": "high"
   },
@@ -124,7 +124,7 @@
    "task": "[build] T-3282 land from copy",
    "model": "opus",
    "started": "2026-11-15T17:12:40.772Z",
-   "seconds": 797,
+   "seconds": 978,
    "finished": null,
    "effort": "high"
   }
@@ -216,7 +216,7 @@
   "week_pct": 2.36,
   "usage_pct": 27.2,
   "work_pct": 75.0,
-  "read_at": "2026-11-15T17:26:00+00:00",
+  "read_at": "2026-11-15T17:29:00+00:00",
   "running": [
    {
     "lane": "b3",
@@ -290,7 +290,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-15T12:26:00-05:00",
+  "at": "2026-11-15T12:29:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -556,22 +556,22 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-15T17:25:40Z",
+  "at": "2026-11-15T17:28:59Z",
   "s": {
    "T-3282": [
-    "mergetest",
-    "iPhone tests on the MacBook",
-    null
+    "merging",
+    "Mac tests at the main gate \u00b7 6 groups of tests done",
+    1794763379538
    ],
    "T-4523": [
     "merging",
-    "Mac tests at the main gate \u00b7 3 groups of tests done",
-    1794762820585
+    "Mac tests at the main gate \u00b7 1 group of tests done",
+    1794763619538
    ],
    "T-4525": [
-    "testing",
-    "its own tests, in its copy",
-    1794763120585
+    "merging",
+    "Mac tests at the main gate",
+    1794763679538
    ],
    "T-4524": [
     "merged",
@@ -588,7 +588,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-15T17:25:40Z",
+  "at": "2026-11-15T17:28:59Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -602,11 +602,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 1043,
+    "conflicted": 1047,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 2907
+    "parked": 2910
    },
    "cur": [],
    "ld": [
@@ -616,8 +616,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-15T17:24:53Z",
-    "ld": 3.86,
+    "at": "2026-11-15T17:28:33Z",
+    "ld": 3.56,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -631,12 +631,12 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-15T17:17:52Z",
-    "ld": 0.86,
+    "at": "2026-11-15T17:27:20Z",
+    "ld": 11.02,
     "c": 12,
     "sb": 0,
     "dk": [
-     361.4,
+     359.6,
      926.4
     ],
     "sn": []
@@ -685,10 +685,10 @@
   "main": 3,
   "lanes": 1,
   "total": 4,
-  "at": "12:26 PM",
+  "at": "12:29 PM",
   "why": "",
-  "at_iso": "2026-11-15T17:26:00+00:00",
+  "at_iso": "2026-11-15T17:29:00+00:00",
   "started": "10:05 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 3, started 10:05 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 12:26 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 3, started 10:05 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 12:29 PM ET</p></section>"
  }
 }

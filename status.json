@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-15T16:09:22.054383+00:00",
+ "at": "2026-11-15T16:12:27.268944+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -105,7 +105,7 @@
    "task": "[build] T-2869 pyc-only completion test",
    "model": "opus",
    "started": "2026-11-15T15:08:06.419Z",
-   "seconds": 3675,
+   "seconds": 3860,
    "finished": null,
    "effort": "high"
   },
@@ -114,7 +114,7 @@
    "task": "[build] T-4505 Distance Small far values",
    "model": "opus",
    "started": "2026-11-15T15:08:12.068Z",
-   "seconds": 3669,
+   "seconds": 3855,
    "finished": null,
    "effort": "high"
   },
@@ -123,7 +123,7 @@
    "task": "[build] T-4521 T-4522 folder rule tidy",
    "model": "opus",
    "started": "2026-11-15T15:46:23.589Z",
-   "seconds": 1378,
+   "seconds": 1563,
    "finished": null,
    "effort": "high"
   }
@@ -150,7 +150,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 387,
+  "runnable_count": 385,
   "blocked_count": 76
  },
  "meter": {
@@ -199,7 +199,7 @@
   "week_pct": 2.36,
   "usage_pct": 27.2,
   "work_pct": 75.0,
-  "read_at": "2026-11-15T16:09:00+00:00",
+  "read_at": "2026-11-15T16:12:00+00:00",
   "running": [
    {
     "lane": "b3",
@@ -257,7 +257,7 @@
   }
  ],
  "disk": {
-  "free_gb": 16,
+  "free_gb": 15,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -266,14 +266,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-15T11:02:00-05:00",
+   "at": "2026-11-15T11:09:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-15T11:09:00-05:00",
+  "at": "2026-11-15T11:12:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -448,30 +448,38 @@
   ],
   "done": [
    {
-    "w": "Pernille",
-    "t": "Checked Idris's fix so that a widget a person renames or deletes while it waits behind a stuck...",
-    "at": "2026-11-15T10:45:00-05:00"
+    "w": "Idris",
+    "t": "The notes and a test name around the fix for deleted widgets coming back now say exactly what...",
+    "at": "2026-11-15T11:12:00-05:00"
    },
    {
     "w": "Idris",
-    "t": "When someone renames or deletes a widget while it waits behind a stuck script, the widget engine...",
-    "at": "2026-11-15T10:39:00-05:00"
+    "t": "The rule that only the app's own ready-made widgets may have their folder created is now written...",
+    "at": "2026-11-15T11:12:00-05:00"
    },
    {
-    "w": "Odalys",
-    "t": "Work on the main account now stops at 95% of the five-hour usage window instead of 90%, keeping...",
-    "at": "2026-11-15T10:04:00-05:00"
+    "w": "Pernille",
+    "t": "Checked Idris's fix so that a widget a person renames or deletes while it waits behind a stuck...",
+    "at": "2026-11-15T10:45:00-05:00"
    }
   ],
   "count": {
-   "next": 387,
+   "next": 385,
    "wait": 35,
    "blocked": 41,
    "you": 12
   },
   "fin": {
-   "n": 2,
+   "n": 4,
    "rows": [
+    [
+     "T-4521",
+     "Correct the deleted widget..."
+    ],
+    [
+     "T-4522",
+     "Write the premade folder..."
+    ],
     [
      "T-4520",
      "Review the deleted widget..."
@@ -522,32 +530,26 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-15T16:09:09Z",
+  "at": "2026-11-15T16:12:27Z",
   "s": {
-   "T-4522": [
-    "mergetest",
-    "iPhone tests on the MacBook",
-    null
-   ],
-   "T-2869": [
-    "merging",
-    "Mac tests at the main gate \u00b7 8 groups of tests done",
-    1794757929969
-   ],
    "T-4505": [
     "merging",
     "Mac tests at the main gate \u00b7 3 groups of tests done",
-    1794758349969
+    1794758367268
+   ],
+   "T-2869": [
+    "merging",
+    "Mac tests at the main gate",
+    1794759147268
    ]
   },
   "nm": {
-   "T-4522": "Write the premade folder rule once",
-   "T-2869": "Test completion with the stdlib as compiled-only files",
-   "T-4505": "Fit far distances in Distance Small"
+   "T-4505": "Fit far distances in Distance Small",
+   "T-2869": "Test completion with the stdlib as compiled-only files"
   }
  },
  "ln": {
-  "at": "2026-11-15T16:09:09Z",
+  "at": "2026-11-15T16:12:27Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -561,11 +563,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 967,
+    "conflicted": 970,
     "failed": null,
     "held": null,
-    "retry": 3,
-    "parked": 2830
+    "retry": 6,
+    "parked": 2834
    },
    "cur": [],
    "ld": [
@@ -575,12 +577,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-15T16:08:45Z",
-    "ld": 3.92,
+    "at": "2026-11-15T16:12:05Z",
+    "ld": 4.31,
     "c": 8,
     "sb": 0,
     "dk": [
-     14.5,
+     15.9,
      228.3
     ],
     "ss": [
@@ -590,12 +592,12 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-15T16:01:16Z",
-    "ld": 1.48,
+    "at": "2026-11-15T16:10:31Z",
+    "ld": 5.57,
     "c": 12,
     "sb": 0,
     "dk": [
-     362.2,
+     361.9,
      926.4
     ],
     "sn": []
@@ -642,10 +644,10 @@
   "main": 3,
   "lanes": 1,
   "total": 4,
-  "at": "11:09 AM",
+  "at": "11:12 AM",
   "why": "",
-  "at_iso": "2026-11-15T16:09:00+00:00",
+  "at_iso": "2026-11-15T16:12:00+00:00",
   "started": "10:05 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 3, started 10:05 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 11:09 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 3, started 10:05 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 11:12 AM ET</p></section>"
  }
 }

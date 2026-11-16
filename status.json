@@ -1,24 +1,20 @@
 {
  "schema": 1,
- "at": "2026-11-16T16:55:28.220817+00:00",
+ "at": "2026-11-16T16:58:30.246254+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-16T10:53:39-05:00",
-  "flow": [
+  "flow": [],
+  "done": [
    {
     "t": "T-4049",
     "name": "Check finished work before it ships",
     "acct": "Personal a",
-    "steps": [
-     {
-      "s": "landing",
-      "at": 1794848125
-     }
-    ]
-   }
-  ],
-  "done": [
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794848131
+   },
    {
     "t": "T-4240",
     "name": "Move the app's diagrams to a new App page",
@@ -93,17 +89,9 @@
     "steps": [],
     "end": "landed",
     "end_at": 1794844442
-   },
-   {
-    "t": "T-4295",
-    "name": "Let Chat messages pick model, effort and account",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794844434
    }
   ],
-  "landed": 41,
+  "landed": 42,
   "failed": 11
  },
  "workers": [
@@ -112,7 +100,7 @@
    "task": "[tools] T-4583 feature step ticking",
    "model": "opus",
    "started": "2026-11-16T15:55:21.544Z",
-   "seconds": 3606,
+   "seconds": 3788,
    "finished": null,
    "effort": "high"
   }
@@ -131,24 +119,24 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 383,
+  "runnable_count": 384,
   "blocked_count": 74
  },
  "meter": {
   "five_hour": {
-   "pct": 9.0,
+   "pct": 10.0,
    "resets_at": "2026-11-16T13:10:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-16T11:05:00.995751-05:00",
+   "read_at": "2026-11-16T11:57:42.023443-05:00",
    "source": "live",
-   "left": 91.0,
+   "left": 90.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 21.0,
    "resets_at": "2026-11-22T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-16T11:05:00.995751-05:00",
+   "read_at": "2026-11-16T11:57:42.023443-05:00",
    "source": "live",
    "left": 79.0,
    "left_words": "of your weekly allowance left"
@@ -160,7 +148,7 @@
    "read_at": "2026-11-16T10:53:26.226781-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-16T11:05:00.995751-05:00"
+  "read_at": "2026-11-16T11:57:42.023443-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -180,7 +168,7 @@
   "week_pct": 15.51,
   "usage_pct": 42.5,
   "work_pct": 69.1,
-  "read_at": "2026-11-16T16:55:00+00:00",
+  "read_at": "2026-11-16T16:58:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -192,6 +180,7 @@
     "e": "high",
     "at": "2026-11-16T11:42:17-05:00",
     "n": "Evan",
+    "d": 1,
     "src": "plan-a"
    },
    {
@@ -347,7 +336,7 @@
   }
  ],
  "disk": {
-  "free_gb": 50,
+  "free_gb": 48,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -356,14 +345,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-16T11:50:00-05:00",
+   "at": "2026-11-16T11:57:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-16T11:55:00-05:00",
+  "at": "2026-11-16T11:58:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -533,7 +522,7 @@
    }
   ],
   "count": {
-   "next": 383,
+   "next": 384,
    "wait": 34,
    "blocked": 40,
    "you": 11
@@ -587,19 +576,19 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-16T16:55:20Z",
+  "at": "2026-11-16T16:58:12Z",
   "s": {
-   "T-4049": [
-    "mergeq",
-    "1st to merge",
-    1794848120711
-   ],
-   "T-4063": [
+   "T-3764": [
     "testing",
     "Mac Mini \u00b7 test",
     null
    ],
-   "T-4067": [
+   "T-4040": [
+    "testing",
+    "Mac Mini \u00b7 test",
+    null
+   ],
+   "T-4043": [
     "testing",
     "Mac Mini \u00b7 test",
     null
@@ -607,71 +596,65 @@
    "T-4583": [
     "testing",
     "its own tests, in its copy",
-    1794848000711
+    1794847992993
    ],
-   "T-3764": [
+   "T-4063": [
     "testq",
-    "1st for a Simulator",
-    1794847700711
+    "2nd for a Simulator",
+    1794847812993
    ],
-   "T-4040": [
+   "T-4067": [
     "testq",
-    "1st for a Simulator",
-    1794847700711
-   ],
-   "T-4043": [
-    "testq",
-    "1st for a Simulator",
-    1794847700711
+    "2nd for a Simulator",
+    1794847812993
    ],
    "T-4031": [
     "testq",
-    "4th for a Simulator",
-    1794848000711
+    "3rd for a Simulator",
+    1794847992993
    ],
    "T-4032": [
     "testq",
-    "4th for a Simulator",
-    1794848000711
+    "3rd for a Simulator",
+    1794847992993
    ],
-   "T-4048": [
-    "testq",
-    "6th for a Simulator",
-    1794848060711
+   "T-4049": [
+    "merged",
+    "on main 11:55 AM ET",
+    1794848118000,
+    ""
    ]
   },
   "nm": {
-   "T-4049": "Check finished work before it ships",
-   "T-4063": "Check finished work before it ships",
-   "T-4067": "Check finished work before it ships",
-   "T-4583": "Turn on Feature mode and tick steps at the merge",
    "T-3764": "Make the iPad window test fail without the fix",
    "T-4040": "Check finished work before it ships",
    "T-4043": "Check finished work before it ships",
+   "T-4583": "Turn on Feature mode and tick steps at the merge",
+   "T-4063": "Check finished work before it ships",
+   "T-4067": "Check finished work before it ships",
    "T-4031": "Check finished work before it ships",
    "T-4032": "Check finished work before it ships",
-   "T-4048": "Check finished work before it ships"
+   "T-4049": "Check finished work before it ships"
   },
   "wk": {
-   "T-4049": "Pernille",
-   "T-4063": "Pernille",
-   "T-4067": "Pernille",
-   "T-4583": "Idris",
    "T-3764": "Idris",
    "T-4040": "Pernille",
    "T-4043": "Pernille",
+   "T-4583": "Idris",
+   "T-4063": "Pernille",
+   "T-4067": "Pernille",
    "T-4031": "Pernille",
    "T-4032": "Pernille",
-   "T-4048": "Pernille",
+   "T-4049": "Pernille",
    "T-4585": "Odalys"
   }
  },
  "ln": {
-  "at": "2026-11-16T16:55:20Z",
+  "at": "2026-11-16T16:58:12Z",
   "mq": {
    "n": {
     "checking": 0,
-    "inline": 1,
+    "inline": 0,
     "conflicted": 2,
     "failed": 0,
     "held": 0,
@@ -680,27 +663,27 @@
    },
    "m": {
     "checking": null,
-    "inline": 0,
-    "conflicted": 1234,
+    "inline": null,
+    "conflicted": 1237,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 507
+    "parked": 509
    },
    "cur": [],
    "ld": [
-    43,
-    "2026-11-16T16:25:00Z"
+    44,
+    "2026-11-16T16:55:31Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-16T16:54:55Z",
-    "ld": 11.76,
+    "at": "2026-11-16T16:57:47Z",
+    "ld": 9.14,
     "c": 8,
     "sb": 1,
     "dk": [
-     47.9,
+     47.8,
      228.3
     ],
     "ss": [
@@ -712,8 +695,8 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-16T16:26:34Z",
-    "ld": 0.19,
+    "at": "2026-11-16T16:57:11Z",
+    "ld": 0.18,
     "c": 12,
     "sb": 0,
     "dk": [
@@ -740,8 +723,8 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 2 tasks",
-   "at": "2026-11-16T11:42:17-05:00"
+   "t": "Work session \u2013 1 task",
+   "at": "2026-11-16T11:57:13-05:00"
   },
   {
    "w": "Operator",
@@ -790,8 +773,8 @@
   }
  ],
  "reply": {
-  "sent": "2026-11-16T14:42:27Z",
-  "seconds": 106.0
+  "sent": "2026-11-16T16:55:19Z",
+  "seconds": 113.0
  },
  "inbox": [],
  "trimmed": [
@@ -809,10 +792,10 @@
   "main": 1,
   "lanes": 6,
   "total": 7,
-  "at": "11:55 AM",
+  "at": "11:58 AM",
   "why": "",
-  "at_iso": "2026-11-16T16:55:00+00:00",
+  "at_iso": "2026-11-16T16:58:00+00:00",
   "started": "10:53 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 1, started 10:53 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 6 sessions \u00b7 as of 11:55 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 1, started 10:53 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 6 sessions \u00b7 as of 11:58 AM ET</p></section>"
  }
 }

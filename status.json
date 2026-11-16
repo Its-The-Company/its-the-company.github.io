@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-16T21:41:39.490690+00:00",
+ "at": "2026-11-16T21:44:50.616559+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -97,7 +97,7 @@
    "task": "[tools] T-4583 land feature-step ticking",
    "model": "opus",
    "started": "2026-11-16T20:38:05.386Z",
-   "seconds": 3814,
+   "seconds": 4005,
    "finished": null,
    "effort": "high"
   },
@@ -106,7 +106,7 @@
    "task": "[tools] T-4617 quick checks before Xcode slot",
    "model": "opus",
    "started": "2026-11-16T20:38:15.991Z",
-   "seconds": 3803,
+   "seconds": 3994,
    "finished": null,
    "effort": "high"
   },
@@ -115,7 +115,7 @@
    "task": "[tools] T-4103 switch on queue-check sweep",
    "model": "opus",
    "started": "2026-11-16T21:15:08.438Z",
-   "seconds": 1591,
+   "seconds": 1782,
    "finished": null,
    "effort": "high"
   },
@@ -124,7 +124,7 @@
    "task": "[tools] T-4196 grouped iPhone runs, rest",
    "model": "opus",
    "started": "2026-11-16T21:27:29.300Z",
-   "seconds": 850,
+   "seconds": 1041,
    "finished": null,
    "effort": "high"
   },
@@ -133,7 +133,7 @@
    "task": "[design] T-4620 Features in Home task lists",
    "model": "opus",
    "started": "2026-11-16T21:36:15.573Z",
-   "seconds": 323,
+   "seconds": 515,
    "finished": null,
    "effort": "high"
   }
@@ -152,7 +152,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 412,
+  "runnable_count": 413,
   "blocked_count": 75
  },
  "meter": {
@@ -201,7 +201,7 @@
   "week_pct": 18.58,
   "usage_pct": 45.8,
   "work_pct": 73.2,
-  "read_at": "2026-11-16T21:41:00+00:00",
+  "read_at": "2026-11-16T21:44:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -351,7 +351,7 @@
  "lock_in": {
   "on": false,
   "pool": 4,
-  "at": "2026-11-16T16:41:00-05:00",
+  "at": "2026-11-16T16:44:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -563,7 +563,7 @@
    }
   ],
   "count": {
-   "next": 412,
+   "next": 413,
    "wait": 35,
    "blocked": 40,
    "you": 12
@@ -637,32 +637,17 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-16T21:41:39Z",
+  "at": "2026-11-16T21:44:33Z",
   "s": {
-   "T-4077": [
-    "testing",
-    "Mac Mini \u00b7 test",
-    null
-   ],
-   "T-4082": [
-    "testing",
-    "Mac Mini \u00b7 test",
-    null
-   ],
-   "T-4616": [
-    "testing",
-    "Mac Mini \u00b7 test",
-    null
-   ],
    "T-4617": [
-    "testing",
-    "its own tests, in its copy",
-    1794864939490
+    "merging",
+    "Mac tests at the main gate",
+    1794865473961
    ],
    "T-4103": [
     "testing",
     "its own tests, in its copy",
-    1794864759490
+    1794864753961
    ],
    "T-4621": [
     "merged",
@@ -678,18 +663,12 @@
    ]
   },
   "nm": {
-   "T-4077": "Check finished work before it ships",
-   "T-4082": "Check finished work before it ships",
-   "T-4616": "Order tasks by the files waiting work holds",
    "T-4617": "Run quick checks before a land takes the Xcode slot",
    "T-4103": "Build the queue-check sweep into the sweep system",
    "T-4621": "Card check that app parts name their docs page",
    "T-4486": "Refuse Fable in sessions with no Fable task"
   },
   "wk": {
-   "T-4077": "Pernille",
-   "T-4082": "Pernille",
-   "T-4616": "Odalys",
    "T-4617": "Odalys",
    "T-4103": "Odalys",
    "T-4621": "Odalys",
@@ -704,7 +683,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-16T21:41:39Z",
+  "at": "2026-11-16T21:44:33Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -718,11 +697,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 1520,
+    "conflicted": 1523,
     "failed": null,
     "held": null,
-    "retry": 123,
-    "parked": 737
+    "retry": 126,
+    "parked": 739
    },
    "cur": [],
    "ld": [
@@ -732,12 +711,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-16T21:41:09Z",
-    "ld": 19.88,
+    "at": "2026-11-16T21:44:35Z",
+    "ld": 19.54,
     "c": 8,
     "sb": 1,
     "dk": [
-     18.6,
+     18.2,
      228.3
     ],
     "ss": [
@@ -749,12 +728,12 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-16T21:11:29Z",
-    "ld": 0.46,
+    "at": "2026-11-16T21:42:05Z",
+    "ld": 0.19,
     "c": 12,
     "sb": 0,
     "dk": [
-     331.5,
+     332.2,
      926.4
     ],
     "sn": []
@@ -813,7 +792,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 2 tasks",
+   "t": "Work session \u2013 1 task",
    "at": "2026-11-16T16:38:27-05:00"
   }
  ],
@@ -838,10 +817,10 @@
   "main": 5,
   "lanes": 5,
   "total": 10,
-  "at": "4:41 PM",
+  "at": "4:44 PM",
   "why": "",
-  "at_iso": "2026-11-16T21:41:00+00:00",
+  "at_iso": "2026-11-16T21:44:00+00:00",
   "started": "3:35 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>10</b> agents running now</p><p class=\"an-sub\">Main session 5, started 3:35 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 4:41 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>10</b> agents running now</p><p class=\"an-sub\">Main session 5, started 3:35 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 4:44 PM ET</p></section>"
  }
 }

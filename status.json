@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-16T11:08:40.494315+00:00",
+ "at": "2026-11-16T11:12:15.299837+00:00",
  "session": {
   "active": true,
   "kind": "morning",
@@ -126,19 +126,19 @@
  "meter": {
   "five_hour": {
    "pct": 7.0,
-   "resets_at": "2026-11-16T13:10:00.498054+00:00",
+   "resets_at": "2026-11-16T08:10:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-16T06:03:46.712134-05:00",
-   "source": "usage",
+   "read_at": "2026-11-16T06:10:33.037972-05:00",
+   "source": "live",
    "left": 93.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 20.0,
-   "resets_at": "2026-11-22T07:00:00.498074+00:00",
+   "resets_at": "2026-11-22T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-16T06:03:46.712134-05:00",
-   "source": "usage",
+   "read_at": "2026-11-16T06:10:33.037972-05:00",
+   "source": "live",
    "left": 80.0,
    "left_words": "of your weekly allowance left"
   },
@@ -149,7 +149,7 @@
    "read_at": "2026-11-16T06:03:46.712134-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-16T06:03:46.712134-05:00"
+  "read_at": "2026-11-16T06:10:33.037972-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -169,8 +169,56 @@
   "week_pct": 9.67,
   "usage_pct": 32.6,
   "work_pct": 76.3,
-  "read_at": "2026-11-16T11:08:00+00:00",
+  "read_at": "2026-11-16T11:13:00+00:00",
   "running": [
+   {
+    "lane": "a",
+    "task": "T-4276",
+    "w": "Operator",
+    "k": "ops",
+    "t": "Run Evan's account on the audit without the pause",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-16T06:10:18-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a",
+    "task": "T-4295",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Let Chat messages pick model, effort and account",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-16T06:10:18-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a",
+    "task": "T-4315",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Start a lane's next session without the wait",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-16T06:10:18-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a",
+    "task": "T-4314",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Record what each personal session costs",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-16T06:10:18-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
    {
     "lane": "b",
     "task": "T-4529",
@@ -311,7 +359,7 @@
   }
  ],
  "disk": {
-  "free_gb": 54,
+  "free_gb": 53,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -320,14 +368,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-16T06:00:00-05:00",
+   "at": "2026-11-16T06:10:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-16T06:08:00-05:00",
+  "at": "2026-11-16T06:13:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -534,23 +582,51 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-16T11:08:29Z",
+  "at": "2026-11-16T11:12:15Z",
   "s": {
    "T-4506": [
     "merging",
-    "Host checks on the Mac mini",
-    1794827249265
+    "Host checks on the Mac mini \u00b7 3 groups of tests done",
+    1794827235299
+   ],
+   "T-3745": [
+    "testq",
+    "1st for a Simulator",
+    1794827415299
+   ],
+   "T-4256": [
+    "testq",
+    "1st for a Simulator",
+    1794827415299
+   ],
+   "T-4433": [
+    "testq",
+    "1st for a Simulator",
+    1794827415299
+   ],
+   "T-4435": [
+    "testq",
+    "1st for a Simulator",
+    1794827415299
    ]
   },
   "nm": {
-   "T-4506": "Site suites that fail only in worker copies"
+   "T-4506": "Site suites that fail only in worker copies",
+   "T-3745": "Stop the Pro store test timing out",
+   "T-4256": "Lighten the marks and colour their line numbers",
+   "T-4433": "Confirm the Lock Screen refresh tap first",
+   "T-4435": "Draw the wrapped refresh glyph on both runtimes"
   },
   "wk": {
-   "T-4506": "Odalys"
+   "T-4506": "Odalys",
+   "T-3745": "Idris",
+   "T-4256": "Idris",
+   "T-4433": "Idris",
+   "T-4435": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-16T11:08:29Z",
+  "at": "2026-11-16T11:12:15Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -562,13 +638,13 @@
     "parked": 7
    },
    "m": {
-    "checking": 1,
+    "checking": 5,
     "inline": null,
-    "conflicted": 2090,
+    "conflicted": 2094,
     "failed": null,
     "held": null,
-    "retry": 159,
-    "parked": 219
+    "retry": 163,
+    "parked": 223
    },
    "cur": [
     [
@@ -577,7 +653,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     1
+     5
     ]
    ],
    "ld": [
@@ -587,19 +663,22 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-16T11:08:33Z",
-    "ld": 5.97,
+    "at": "2026-11-16T11:12:49Z",
+    "ld": 46.31,
     "c": 8,
-    "sb": 0,
+    "sb": 2,
     "dk": [
-     53.6,
+     52.4,
      228.3
     ],
     "ss": [
      186.1,
      953.7
     ],
-    "sn": []
+    "sn": [
+     "iPhone 17e",
+     "T3764 iPad"
+    ]
    },
    "macbook": {
     "at": "2026-11-16T11:05:12Z",
@@ -626,19 +705,22 @@
   },
   {
    "w": "Operator",
-   "a": "Jeremy",
+   "a": "Evan",
    "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session \u2013 3 tasks",
-   "at": "2026-11-16T06:07:06-05:00"
+   "t": "Work session \u2013 4 tasks",
+   "at": "2026-11-16T06:10:18-05:00"
   },
   {
    "w": "Operator",
    "a": "Jeremy",
    "sr": 1,
-   "m": "opus",
-   "e": "high",
+   "t": "Work session \u2013 3 tasks",
+   "at": "2026-11-16T06:07:07-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Jeremy",
+   "sr": 1,
    "t": "Work session \u2013 3 tasks",
    "at": "2026-11-16T06:07:08-05:00"
   },
@@ -646,10 +728,8 @@
    "w": "Operator",
    "a": "Jeremy",
    "sr": 1,
-   "m": "opus",
-   "e": "high",
    "t": "Work session \u2013 4 tasks",
-   "at": "2026-11-16T06:07:04-05:00"
+   "at": "2026-11-16T06:07:05-05:00"
   }
  ],
  "reply": {
@@ -669,12 +749,12 @@
  ],
  "agents_now": {
   "main": 0,
-  "lanes": 3,
-  "total": 3,
-  "at": "6:08 AM",
+  "lanes": 4,
+  "total": 4,
+  "at": "6:13 AM",
   "why": "",
-  "at_iso": "2026-11-16T11:08:00+00:00",
+  "at_iso": "2026-11-16T11:13:00+00:00",
   "started": "6:05 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 6:05 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 6:08 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 0, started 6:05 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 6:13 AM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-16T02:55:31.847233+00:00",
+ "at": "2026-11-16T02:58:36.877553+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -104,7 +104,7 @@
     "end_at": 1794779989
    }
   ],
-  "landed": 13,
+  "landed": 11,
   "failed": 8
  },
  "workers": [
@@ -113,7 +113,7 @@
    "task": "[tools] T-4194 wire and switch on feature sessions",
    "model": "opus",
    "started": "2026-11-16T02:43:06.794Z",
-   "seconds": 745,
+   "seconds": 930,
    "finished": null,
    "effort": "high"
   },
@@ -122,22 +122,30 @@
    "task": "[review] T-4542 Maren reviews ADR-011 setting and notices",
    "model": "opus",
    "started": "2026-11-16T02:52:19.557Z",
-   "seconds": 192,
+   "seconds": 377,
    "finished": null,
    "effort": "high"
   },
+  {
+   "name": "ines",
+   "task": "[plan] T-4543 widget buttons into the 1.0 plan",
+   "model": "opus",
+   "started": "2026-11-16T02:56:42.517Z",
+   "seconds": 114,
+   "finished": null,
+   "effort": "high"
+  }
+ ],
+ "who": "Idris, Maren, Ines",
+ "recent": [
   {
    "name": "pernille",
    "task": "[review] T-4542 Pernille re-reads revised ADR-011",
    "model": "opus",
    "started": "2026-11-16T02:52:42.454Z",
-   "seconds": 169,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Idris, Maren, Pernille",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-16T02:56:25.166000+00:00"
+  },
   {
    "name": "idris",
    "task": "[design] T-4542 revise ADR-011 after Pernille review",
@@ -161,14 +169,6 @@
    "started": "2026-11-16T02:35:30.038Z",
    "seconds": null,
    "finished": "2026-11-16T02:43:17.174000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-4539 personal accounts idle fix",
-   "model": "opus",
-   "started": "2026-11-16T01:32:55.724Z",
-   "seconds": null,
-   "finished": "2026-11-16T02:42:42.593000+00:00"
   }
  ],
  "queue": {
@@ -223,7 +223,7 @@
   "week_pct": 4.62,
   "usage_pct": 26.2,
   "work_pct": 68.8,
-  "read_at": "2026-11-16T02:55:00+00:00",
+  "read_at": "2026-11-16T02:58:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -260,7 +260,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-15T21:55:00-05:00",
+  "at": "2026-11-15T21:58:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -295,18 +295,18 @@
    "effort": "high"
   },
   {
-   "name": "Pernille",
+   "name": "Ines",
    "state": "running",
-   "task": "[review] T-4542 Pernille re-reads revised ADR-011",
+   "task": "[plan] T-4543 widget buttons into the 1.0 plan",
    "model": "opus",
-   "since": "2026-11-16T02:52:42.454Z",
+   "since": "2026-11-16T02:56:42.517Z",
    "next": [],
    "effort": "high"
   },
   {
-   "name": "Ines",
+   "name": "Pernille",
    "state": "next",
-   "task": "Ines, P2, from T-1110 (Wrenna,...",
+   "task": "Pernille, P1, premades and gallery take the age line...",
    "model": null,
    "since": null,
    "next": []
@@ -351,14 +351,14 @@
     "task": "T-4542"
    },
    {
-    "w": "Pernille",
-    "k": "review",
-    "t": "Let people choose what a widget tap does",
+    "w": "Ines",
+    "k": "plan",
+    "t": "Put widget buttons into the 1.0 plan",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-16T02:52:42.454Z",
-    "o": "i",
-    "task": "T-4542"
+    "at": "2026-11-16T02:56:42.517Z",
+    "o": "c",
+    "task": "T-4543"
    }
   ],
   "src": "plan",
@@ -518,13 +518,12 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-16T02:55:31Z",
+  "at": "2026-11-16T02:58:23Z",
   "s": {
    "T-4542": [
-    "merged",
-    "on main 9:51 PM ET",
-    1794797505000,
-    ""
+    "testing",
+    "its own tests, in its copy",
+    1794797903147
    ]
   },
   "nm": {
@@ -532,7 +531,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-16T02:55:31Z",
+  "at": "2026-11-16T02:58:23Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -546,11 +545,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 1597,
+    "conflicted": 1600,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 826
+    "parked": 829
    },
    "cur": [],
    "ld": [
@@ -560,12 +559,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-16T02:55:09Z",
-    "ld": 3.1,
+    "at": "2026-11-16T02:58:23Z",
+    "ld": 3.29,
     "c": 8,
     "sb": 0,
     "dk": [
-     11.1,
+     11.0,
      228.3
     ],
     "ss": [
@@ -594,8 +593,17 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 5 tasks",
+   "t": "Work session \u2013 6 tasks",
    "at": "2026-11-15T21:39:53-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Evan",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session",
+   "at": "2026-11-15T21:58:36-05:00"
   }
  ],
  "reply": {
@@ -619,10 +627,10 @@
   "main": 3,
   "lanes": 0,
   "total": 3,
-  "at": "9:55 PM",
+  "at": "9:58 PM",
   "why": "",
-  "at_iso": "2026-11-16T02:55:00+00:00",
+  "at_iso": "2026-11-16T02:58:00+00:00",
   "started": "8:30 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 8:30 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:55 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 8:30 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:58 PM ET</p></section>"
  }
 }

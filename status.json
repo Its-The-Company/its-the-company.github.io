@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-16T06:22:17.045504+00:00",
+ "at": "2026-11-16T06:25:16.949012+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -103,7 +103,7 @@
    "task": "[tools] T-4194 land feature-session wiring",
    "model": "opus",
    "started": "2026-11-16T05:36:18.799Z",
-   "seconds": 2758,
+   "seconds": 2938,
    "finished": null
   },
   {
@@ -111,20 +111,21 @@
    "task": "[tools] T-3995 personal_land daily batch",
    "model": "opus",
    "started": "2026-11-16T05:36:28.863Z",
-   "seconds": 2748,
+   "seconds": 2928,
    "finished": null
-  },
+  }
+ ],
+ "who": "Idris, Odalys",
+ "recent": [
   {
    "name": "idris",
    "task": "[release] T-3281 gate build check and upload",
    "model": "opus",
    "started": "2026-11-16T05:37:26.993Z",
-   "seconds": 2690,
-   "finished": null
+   "seconds": null,
+   "finished": "2026-11-16T06:24:30.870000+00:00"
   }
  ],
- "who": "Idris x2, Odalys",
- "recent": [],
  "queue": {
   "runnable": [],
   "blocked": [],
@@ -177,7 +178,7 @@
   "week_pct": 5.72,
   "usage_pct": 25.2,
   "work_pct": 70.0,
-  "read_at": "2026-11-16T06:22:00+00:00",
+  "read_at": "2026-11-16T06:25:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -298,7 +299,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-16T01:22:00-05:00",
+  "at": "2026-11-16T01:25:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -382,15 +383,6 @@
     "at": "2026-11-16T05:36:28.863Z",
     "o": "c",
     "task": "T-3995"
-   },
-   {
-    "w": "Idris",
-    "k": "release",
-    "t": "Run the gate build's Settings row once",
-    "m": "opus",
-    "at": "2026-11-16T05:37:26.993Z",
-    "o": "c",
-    "task": "T-3281"
    }
   ],
   "src": "plan",
@@ -468,6 +460,11 @@
   ],
   "done": [
    {
+    "w": "Idris",
+    "t": "The test build that carries the phone measurement switch had never been built with its tests; it...",
+    "at": "2026-11-16T01:23:00-05:00"
+   },
+   {
     "w": "Operator",
     "t": "Xcode, Safari and Disk Utility, which Evan said the Investors never opened, were asked to quit...",
     "at": "2026-11-16T00:33:00-05:00"
@@ -476,11 +473,6 @@
     "w": "Odalys",
     "t": "The site header no longer has a Notifications bell, since each tab shows its own count; the...",
     "at": "2026-11-15T23:40:00-05:00"
-   },
-   {
-    "w": "Maren",
-    "t": "The App Store shots now carry the agreed captions, and the first iPad shot shows the widget...",
-    "at": "2026-11-15T23:30:00-05:00"
    }
   ],
   "count": {
@@ -490,8 +482,13 @@
    "you": 12
   },
   "fin": {
-   "n": 0,
-   "rows": []
+   "n": 1,
+   "rows": [
+    [
+     "T-3281",
+     "Run the gate build's..."
+    ]
+   ]
   }
  },
  "qr": [
@@ -533,22 +530,17 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-16T06:22:09Z",
+  "at": "2026-11-16T06:25:16Z",
   "s": {
-   "T-3281": [
-    "mergetest",
-    "iPhone tests on the MacBook",
-    null
-   ],
    "T-3995": [
     "testing",
     "its own tests, in its copy",
-    1794809469680
+    1794809416949
    ],
    "T-4194": [
     "testing",
     "its own tests, in its copy",
-    1794809889680
+    1794809896949
    ],
    "T-4451": [
     "merged",
@@ -564,7 +556,6 @@
    ]
   },
   "nm": {
-   "T-3281": "Run the gate build's Settings row once",
    "T-3995": "Replace the waiting pile with one merge line",
    "T-4194": "Build the feature session for app work",
    "T-4451": "Read the flagged lines once a day with a model",
@@ -572,7 +563,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-16T06:22:09Z",
+  "at": "2026-11-16T06:25:16Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -586,11 +577,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 1804,
+    "conflicted": 1807,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 683
+    "parked": 686
    },
    "cur": [],
    "ld": [
@@ -600,27 +591,27 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-16T06:21:28Z",
-    "ld": 4.35,
+    "at": "2026-11-16T06:25:20Z",
+    "ld": 4.74,
     "c": 8,
     "sb": 0,
     "dk": [
-     26.1,
+     25.1,
      228.3
     ],
     "ss": [
-     177.3,
+     180.1,
      953.7
     ],
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-16T06:15:33Z",
-    "ld": 0.2,
+    "at": "2026-11-16T06:23:07Z",
+    "ld": 1.35,
     "c": 12,
     "sb": 0,
     "dk": [
-     356.3,
+     354.7,
      926.4
     ],
     "sn": []
@@ -634,7 +625,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 3 tasks",
+   "t": "Work session \u2013 1 task",
    "at": "2026-11-16T00:32:52-05:00"
   },
   {
@@ -665,6 +656,7 @@
   "lane_next",
   "queue_text",
   "task_done",
+  "fin_short",
   "task_title",
   "done_text",
   "task_open",
@@ -672,13 +664,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 3,
+  "main": 2,
   "lanes": 2,
-  "total": 5,
-  "at": "1:22 AM",
+  "total": 4,
+  "at": "1:25 AM",
   "why": "",
-  "at_iso": "2026-11-16T06:22:00+00:00",
+  "at_iso": "2026-11-16T06:25:00+00:00",
   "started": "12:32 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 3, started 12:32 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 1:22 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 2, started 12:32 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 1:25 AM ET</p></section>"
  }
 }

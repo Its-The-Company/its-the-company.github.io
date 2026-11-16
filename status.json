@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-16T17:41:49.489209+00:00",
+ "at": "2026-11-16T17:44:47.842479+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -97,7 +97,7 @@
    "task": "[tools] T-4583 feature step ticking",
    "model": "opus",
    "started": "2026-11-16T15:55:21.544Z",
-   "seconds": 6387,
+   "seconds": 6566,
    "finished": null,
    "effort": "high"
   }
@@ -165,7 +165,7 @@
   "week_pct": 15.51,
   "usage_pct": 42.5,
   "work_pct": 69.1,
-  "read_at": "2026-11-16T17:41:00+00:00",
+  "read_at": "2026-11-16T17:44:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -186,6 +186,7 @@
     "e": "high",
     "at": "2026-11-16T11:41:02-05:00",
     "n": "Jeremy",
+    "d": 1,
     "src": "plan-b"
    },
    {
@@ -253,14 +254,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-16T12:40:00-05:00",
+   "at": "2026-11-16T12:42:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 4,
-  "at": "2026-11-16T12:41:00-05:00",
+  "at": "2026-11-16T12:44:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -500,32 +501,32 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-16T17:41:36Z",
+  "at": "2026-11-16T17:44:47Z",
   "s": {
+   "T-2691": [
+    "testing",
+    "Mac Mini \u00b7 test",
+    null
+   ],
+   "T-3765": [
+    "testing",
+    "Mac Mini \u00b7 test",
+    null
+   ],
+   "T-4040": [
+    "testing",
+    "Mac Mini \u00b7 test",
+    null
+   ],
+   "T-4043": [
+    "testing",
+    "Mac Mini \u00b7 test",
+    null
+   ],
    "T-4583": [
     "testing",
     "its own tests, in its copy",
-    1794848016448
-   ],
-   "T-2691": [
-    "testq",
-    "1st for a Simulator",
-    1794850476448
-   ],
-   "T-3765": [
-    "testq",
-    "1st for a Simulator",
-    1794850476448
-   ],
-   "T-4040": [
-    "testq",
-    "1st for a Simulator",
-    1794850476448
-   ],
-   "T-4043": [
-    "testq",
-    "1st for a Simulator",
-    1794850476448
+    1794848027842
    ],
    "T-4561": [
     "merged",
@@ -535,19 +536,19 @@
    ]
   },
   "nm": {
-   "T-4583": "Turn on Feature mode and tick steps at the merge",
    "T-2691": "Check every archive for the phone test marker, Organizer too",
    "T-3765": "Check a real widget tap on the TestFlight build",
    "T-4040": "Check finished work before it ships",
    "T-4043": "Check finished work before it ships",
+   "T-4583": "Turn on Feature mode and tick steps at the merge",
    "T-4561": "Act on the Investors' answer on the Simulator refusals"
   },
   "wk": {
-   "T-4583": "Idris",
    "T-2691": "Idris",
    "T-3765": "Idris",
    "T-4040": "Pernille",
    "T-4043": "Pernille",
+   "T-4583": "Idris",
    "T-4561": "Odalys",
    "T-4032": "Pernille",
    "T-4063": "Pernille",
@@ -556,7 +557,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-16T17:41:36Z",
+  "at": "2026-11-16T17:44:47Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -570,11 +571,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 1280,
+    "conflicted": 1283,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 553
+    "parked": 556
    },
    "cur": [],
    "ld": [
@@ -584,12 +585,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-16T17:41:37Z",
-    "ld": 8.7,
+    "at": "2026-11-16T17:44:49Z",
+    "ld": 15.75,
     "c": 8,
     "sb": 1,
     "dk": [
-     30.6,
+     29.6,
      228.3
     ],
     "ss": [
@@ -597,7 +598,7 @@
      953.7
     ],
     "sn": [
-     "iPhone 17e"
+     "t3765-iphone"
     ]
    },
    "macbook": {
@@ -671,10 +672,10 @@
   "main": 1,
   "lanes": 3,
   "total": 4,
-  "at": "12:41 PM",
+  "at": "12:44 PM",
   "why": "",
-  "at_iso": "2026-11-16T17:41:00+00:00",
+  "at_iso": "2026-11-16T17:44:00+00:00",
   "started": "10:53 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 1, started 10:53 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 12:41 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 1, started 10:53 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 12:44 PM ET</p></section>"
  }
 }

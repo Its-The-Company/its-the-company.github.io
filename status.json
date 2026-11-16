@@ -1,12 +1,44 @@
 {
  "schema": 1,
- "at": "2026-11-16T20:48:15.927544+00:00",
+ "at": "2026-11-16T20:51:30.963434+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-16T15:35:16-05:00",
   "flow": [],
   "done": [
+   {
+    "t": "T-0696",
+    "name": "Measure peak memory for fetches in the extension",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794862242
+   },
+   {
+    "t": "T-4058",
+    "name": "Check finished work before it ships",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794862231
+   },
+   {
+    "t": "T-4615",
+    "name": "Widget taps on iPad reuse an open window",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794862157
+   },
+   {
+    "t": "T-4076",
+    "name": "Check finished work before it ships",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794862109
+   },
    {
     "t": "T-4046",
     "acct": "Personal a",
@@ -53,39 +85,9 @@
     "steps": [],
     "end": "landed",
     "end_at": 1794852967
-   },
-   {
-    "t": "T-4561",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794850104
-   },
-   {
-    "t": "T-4031",
-    "name": "Check finished work before it ships",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794849885
-   },
-   {
-    "t": "T-4048",
-    "name": "Check finished work before it ships",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794849683
-   },
-   {
-    "t": "T-4032",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794849650
    }
   ],
-  "landed": 49,
+  "landed": 52,
   "failed": 12
  },
  "workers": [
@@ -94,7 +96,7 @@
    "task": "[tools] T-4583 land feature-step ticking",
    "model": "opus",
    "started": "2026-11-16T20:38:05.386Z",
-   "seconds": 610,
+   "seconds": 805,
    "finished": null,
    "effort": "high"
   },
@@ -103,7 +105,7 @@
    "task": "[tools] T-4617 quick checks before Xcode slot",
    "model": "opus",
    "started": "2026-11-16T20:38:15.991Z",
-   "seconds": 599,
+   "seconds": 794,
    "finished": null,
    "effort": "high"
   }
@@ -113,7 +115,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 407,
+  "runnable_count": 406,
   "blocked_count": 75
  },
  "meter": {
@@ -162,16 +164,12 @@
   "week_pct": 18.58,
   "usage_pct": 45.8,
   "work_pct": 73.2,
-  "read_at": "2026-11-16T20:48:00+00:00",
+  "read_at": "2026-11-16T20:51:00+00:00",
   "running": [
    {
     "lane": "a2",
     "task": "T-4058",
-    "w": "Idris",
-    "k": "review",
     "t": "Check finished work before it ships",
-    "m": "opus",
-    "e": "high",
     "at": "2026-11-16T15:14:45-05:00",
     "n": "Evan",
     "d": 1,
@@ -187,6 +185,7 @@
     "e": "high",
     "at": "2026-11-16T15:14:45-05:00",
     "n": "Evan",
+    "d": 1,
     "src": "plan-a"
    },
    {
@@ -270,7 +269,7 @@
  "lock_in": {
   "on": false,
   "pool": 4,
-  "at": "2026-11-16T15:48:00-05:00",
+  "at": "2026-11-16T15:51:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -435,30 +434,38 @@
   ],
   "done": [
    {
-    "w": "Odalys",
-    "t": "Each session on the Investors' personal accounts now records its own cost and token counts, so...",
-    "at": "2026-11-16T15:36:00-05:00"
+    "w": "Idris",
+    "t": "Pernille's check of whether the widget can read the phone's time zone files was reviewed and is...",
+    "at": "2026-11-16T15:50:00-05:00"
    },
    {
     "w": "Pernille",
-    "t": "Idris's change that logs a refresh tap whose new data did not arrive as one failed run with the...",
-    "at": "2026-11-16T15:13:00-05:00"
+    "t": "An independent check of the code that lets a person put a widget back in the faster widget lane...",
+    "at": "2026-11-16T15:48:00-05:00"
    },
    {
     "w": "Odalys",
-    "t": "The earthquakes example's four fixes (bad magnitudes, a dropped connection, no keyboard, deeply...",
-    "at": "2026-11-16T15:13:00-05:00"
+    "t": "Each session on the Investors' personal accounts now records its own cost and token counts, so...",
+    "at": "2026-11-16T15:36:00-05:00"
    }
   ],
   "count": {
-   "next": 407,
+   "next": 406,
    "wait": 35,
    "blocked": 40,
    "you": 12
   },
   "fin": {
-   "n": 1,
+   "n": 3,
    "rows": [
+    [
+     "T-4058",
+     "Check finished work before..."
+    ],
+    [
+     "T-4076",
+     "Check finished work before..."
+    ],
     [
      "T-4314",
      "Record what each personal..."
@@ -505,24 +512,14 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-16T20:48:15Z",
+  "at": "2026-11-16T20:51:24Z",
   "s": {
+   "T-4068": [
+    "testing",
+    "Mac Mini \u00b7 test",
+    null
+   ],
    "T-4076": [
-    "merging",
-    "Rebasing onto current main",
-    1794862095927
-   ],
-   "T-4031": [
-    "testing",
-    "Mac Mini \u00b7 test",
-    null
-   ],
-   "T-4058": [
-    "testing",
-    "Mac Mini \u00b7 test",
-    null
-   ],
-   "T-4060": [
     "testing",
     "Mac Mini \u00b7 test",
     null
@@ -535,46 +532,43 @@
    "T-4583": [
     "testing",
     "its own tests, in its copy",
-    1794861555927
-   ],
-   "T-4068": [
-    "testq",
-    "1st for a Simulator",
-    1794861435927
+    1794861564228
    ],
    "T-4048": [
     "testq",
-    "2nd for a Simulator",
-    1794856875927
+    "1st for a Simulator",
+    1794856884228
+   ],
+   "T-4058": [
+    "merged",
+    "on main 3:50 PM ET",
+    1794862210000,
+    ""
    ]
   },
   "nm": {
+   "T-4068": "Check finished work before it ships",
    "T-4076": "Check finished work before it ships",
-   "T-4031": "Check finished work before it ships",
-   "T-4058": "Check finished work before it ships",
-   "T-4060": "Check finished work before it ships",
    "T-4022": "Check finished work before it ships",
    "T-4583": "Turn on Feature mode and tick steps at the merge",
-   "T-4068": "Check finished work before it ships",
-   "T-4048": "Check finished work before it ships"
+   "T-4048": "Check finished work before it ships",
+   "T-4058": "Check finished work before it ships"
   },
   "wk": {
+   "T-4068": "Pernille",
    "T-4076": "Pernille",
-   "T-4031": "Pernille",
-   "T-4058": "Idris",
-   "T-4060": "Pernille",
    "T-4022": "Pernille",
    "T-4583": "Idris",
-   "T-4068": "Pernille",
    "T-4048": "Pernille",
+   "T-4058": "Idris",
    "T-4314": "Odalys"
   }
  },
  "ln": {
-  "at": "2026-11-16T20:48:15Z",
+  "at": "2026-11-16T20:51:24Z",
   "mq": {
    "n": {
-    "checking": 1,
+    "checking": 0,
     "inline": 0,
     "conflicted": 2,
     "failed": 0,
@@ -583,37 +577,28 @@
     "parked": 12
    },
    "m": {
-    "checking": 0,
+    "checking": null,
     "inline": null,
-    "conflicted": 1467,
+    "conflicted": 1470,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 672
+    "parked": 675
    },
-   "cur": [
-    [
-     [
-      "T-4076"
-     ],
-     "lining up with main",
-     "Mac mini",
-     0
-    ]
-   ],
+   "cur": [],
    "ld": [
-    60,
-    "2026-11-16T20:13:26Z"
+    64,
+    "2026-11-16T20:50:42Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-16T20:48:18Z",
-    "ld": 18.2,
+    "at": "2026-11-16T20:51:00Z",
+    "ld": 19.03,
     "c": 8,
     "sb": 1,
     "dk": [
-     19.6,
+     21.7,
      228.3
     ],
     "ss": [
@@ -653,7 +638,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 2 tasks",
+   "t": "Work session \u2013 1 task",
    "at": "2026-11-16T15:14:44-05:00"
   },
   {
@@ -695,10 +680,10 @@
   "main": 2,
   "lanes": 3,
   "total": 5,
-  "at": "3:48 PM",
+  "at": "3:51 PM",
   "why": "",
-  "at_iso": "2026-11-16T20:48:00+00:00",
+  "at_iso": "2026-11-16T20:51:00+00:00",
   "started": "3:35 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 2, started 3:35 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 3:48 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 2, started 3:35 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 3:51 PM ET</p></section>"
  }
 }

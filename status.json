@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-16T03:32:14.795822+00:00",
+ "at": "2026-11-16T03:35:16.208521+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -101,7 +101,7 @@
    "task": "[tools] T-4194 wire and switch on feature sessions",
    "model": "opus",
    "started": "2026-11-16T02:43:06.794Z",
-   "seconds": 2948,
+   "seconds": 3129,
    "finished": null,
    "effort": "high"
   },
@@ -110,7 +110,7 @@
    "task": "[tools] T-4560 disk cleaning acts on cleared refusals",
    "model": "opus",
    "started": "2026-11-16T03:28:22.673Z",
-   "seconds": 232,
+   "seconds": 413,
    "finished": null,
    "effort": "high"
   }
@@ -202,8 +202,105 @@
   "week_pct": 4.62,
   "usage_pct": 26.2,
   "work_pct": 68.8,
-  "read_at": "2026-11-16T03:32:00+00:00",
-  "running": []
+  "read_at": "2026-11-16T03:35:00+00:00",
+  "running": [
+   {
+    "lane": "a",
+    "task": "T-4314",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Record what each personal session costs",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-15T22:32:55-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a",
+    "task": "T-4109",
+    "w": "Maren",
+    "k": "site",
+    "t": "Add a newest-first view to the Reports page",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-15T22:32:55-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a",
+    "task": "T-4010",
+    "w": "Odalys",
+    "k": "site",
+    "t": "Rebuild This Session as a full flowchart",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-15T22:32:55-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a",
+    "task": "T-3976",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Show each drive's storage makeup on Home",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-15T22:32:55-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a3",
+    "task": "T-4534",
+    "w": "Maren",
+    "k": "site",
+    "t": "Double-tap a Chat bubble to react, and add fire",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-15T22:32:46-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a3",
+    "task": "T-3803",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Post the time guard proposal and finish deadline readers",
+    "m": "sonnet",
+    "e": "medium",
+    "at": "2026-11-15T22:32:46-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a3",
+    "task": "T-0261",
+    "w": "Maren",
+    "k": "design",
+    "t": "Apply the chosen store caption wording",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-15T22:32:46-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a3",
+    "task": "T-3345",
+    "w": "Ines",
+    "k": "build",
+    "t": "Drop two parked 1.1 Builder tasks",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-15T22:32:46-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   }
+  ]
  },
  "api_credits": [
   {
@@ -239,7 +336,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-15T22:32:00-05:00",
+  "at": "2026-11-15T22:35:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -494,20 +591,33 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-16T03:31:55Z",
+  "at": "2026-11-16T03:35:09Z",
   "s": {
+   "T-4560": [
+    "testing",
+    "its own tests, in its copy",
+    1794800049891
+   ],
    "T-4194": [
     "testing",
     "its own tests, in its copy",
-    1794799255733
+    1794799269891
+   ],
+   "T-4534": [
+    "merged",
+    "on main 4:47 PM ET",
+    1794779227000,
+    "Maren"
    ]
   },
   "nm": {
-   "T-4194": "Build the feature session for app work"
+   "T-4560": "Let the disk cleaning act on cleared refusals",
+   "T-4194": "Build the feature session for app work",
+   "T-4534": "Double-tap a Chat bubble to react, and add fire"
   }
  },
  "ln": {
-  "at": "2026-11-16T03:31:55Z",
+  "at": "2026-11-16T03:35:09Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -521,11 +631,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 1633,
+    "conflicted": 1637,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 862
+    "parked": 865
    },
    "cur": [],
    "ld": [
@@ -535,12 +645,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-16T03:31:56Z",
-    "ld": 4.64,
+    "at": "2026-11-16T03:35:10Z",
+    "ld": 4.44,
     "c": 8,
     "sb": 0,
     "dk": [
-     35.2,
+     35.1,
      228.3
     ],
     "ss": [
@@ -571,6 +681,24 @@
    "e": "high",
    "t": "Work session \u2013 8 tasks",
    "at": "2026-11-15T22:02:37-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Evan",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session \u2013 4 tasks",
+   "at": "2026-11-15T22:32:55-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Evan",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session \u2013 4 tasks",
+   "at": "2026-11-15T22:32:45-05:00"
   }
  ],
  "reply": {
@@ -593,12 +721,12 @@
  ],
  "agents_now": {
   "main": 2,
-  "lanes": 0,
-  "total": 2,
-  "at": "10:32 PM",
+  "lanes": 2,
+  "total": 4,
+  "at": "10:35 PM",
   "why": "",
-  "at_iso": "2026-11-16T03:32:00+00:00",
+  "at_iso": "2026-11-16T03:35:00+00:00",
   "started": "8:30 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 8:30 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 10:32 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 2, started 8:30 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 10:35 PM ET</p></section>"
  }
 }

@@ -1,12 +1,48 @@
 {
  "schema": 1,
- "at": "2026-11-16T21:00:55.598094+00:00",
+ "at": "2026-11-16T21:03:59.340681+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-16T15:35:16-05:00",
-  "flow": [],
+  "flow": [
+   {
+    "t": "T-4621",
+    "name": "Card check that app parts name their docs page",
+    "acct": "Personal b",
+    "steps": [
+     {
+      "s": "testq",
+      "at": 1794863021
+     }
+    ]
+   }
+  ],
   "done": [
+   {
+    "t": "T-4068",
+    "name": "Check finished work before it ships",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794863009
+   },
+   {
+    "t": "T-4486",
+    "name": "Refuse Fable in sessions with no Fable task",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794862977
+   },
+   {
+    "t": "T-4616",
+    "name": "Order tasks by the files waiting work holds",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794862939
+   },
    {
     "t": "T-4060",
     "name": "Check finished work before it ships",
@@ -60,34 +96,9 @@
     "steps": [],
     "end": "landed",
     "end_at": 1794860000
-   },
-   {
-    "t": "T-4320",
-    "name": "Name the accounts Evan's and Jeremy's on Home",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794856724
-   },
-   {
-    "t": "T-0678",
-    "name": "Run the refresh button inside the widget extension",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794854567
-   },
-   {
-    "t": "T-0678",
-    "name": "Run the refresh button inside the widget extension",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "failed",
-    "end_at": 1794854480,
-    "why": "tests failed"
    }
   ],
-  "landed": 53,
+  "landed": 55,
   "failed": 12
  },
  "workers": [
@@ -96,7 +107,7 @@
    "task": "[tools] T-4583 land feature-step ticking",
    "model": "opus",
    "started": "2026-11-16T20:38:05.386Z",
-   "seconds": 1370,
+   "seconds": 1553,
    "finished": null,
    "effort": "high"
   },
@@ -105,7 +116,7 @@
    "task": "[tools] T-4617 quick checks before Xcode slot",
    "model": "opus",
    "started": "2026-11-16T20:38:15.991Z",
-   "seconds": 1359,
+   "seconds": 1543,
    "finished": null,
    "effort": "high"
   }
@@ -164,7 +175,7 @@
   "week_pct": 18.58,
   "usage_pct": 45.8,
   "work_pct": 73.2,
-  "read_at": "2026-11-16T21:01:00+00:00",
+  "read_at": "2026-11-16T21:04:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -199,28 +210,6 @@
     "m": "sonnet",
     "e": "medium",
     "at": "2026-11-16T15:56:20-05:00",
-    "n": "Evan",
-    "d": 1,
-    "src": "plan-a"
-   },
-   {
-    "lane": "a3",
-    "task": "T-4068",
-    "w": "Pernille",
-    "k": "review",
-    "t": "Check finished work before it ships",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-16T14:52:19-05:00",
-    "n": "Evan",
-    "d": 1,
-    "src": "plan-a"
-   },
-   {
-    "lane": "a3",
-    "task": "T-4076",
-    "t": "Check finished work before it ships",
-    "at": "2026-11-16T14:52:19-05:00",
     "n": "Evan",
     "d": 1,
     "src": "plan-a"
@@ -279,14 +268,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-16T15:54:00-05:00",
+   "at": "2026-11-16T16:01:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 4,
-  "at": "2026-11-16T16:01:00-05:00",
+  "at": "2026-11-16T16:04:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -533,8 +522,13 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-16T21:00:55Z",
+  "at": "2026-11-16T21:03:38Z",
   "s": {
+   "T-4621": [
+    "merging",
+    "Host checks on the Mac mini",
+    1794863018530
+   ],
    "T-4022": [
     "testing",
     "MacBook \u00b7 test",
@@ -543,48 +537,51 @@
    "T-4617": [
     "testing",
     "its own tests, in its copy",
-    1794862435598
+    1794862418530
    ],
    "T-4583": [
     "testing",
     "its own tests, in its copy",
-    1794861535598
+    1794861518530
    ],
    "T-4048": [
     "testq",
     "1st for a Simulator",
-    1794856915598
+    1794856898530
    ],
-   "T-4076": [
+   "T-4486": [
     "merged",
-    "on main 3:48 PM ET",
-    1794862085000,
+    "on main 4:02 PM ET",
+    1794862951000,
     ""
    ]
   },
   "nm": {
+   "T-4621": "Card check that app parts name their docs page",
    "T-4022": "Check finished work before it ships",
    "T-4617": "Run quick checks before a land takes the Xcode slot",
    "T-4583": "Turn on Feature mode and tick steps at the merge",
    "T-4048": "Check finished work before it ships",
-   "T-4076": "Check finished work before it ships"
+   "T-4486": "Refuse Fable in sessions with no Fable task"
   },
   "wk": {
+   "T-4621": "Odalys",
    "T-4022": "Pernille",
    "T-4617": "Odalys",
    "T-4583": "Idris",
    "T-4048": "Pernille",
-   "T-4076": "Pernille",
+   "T-4486": "Odalys",
    "T-4060": "Pernille",
    "T-4058": "Idris",
+   "T-4076": "Pernille",
    "T-4314": "Odalys"
   }
  },
  "ln": {
-  "at": "2026-11-16T21:00:55Z",
+  "at": "2026-11-16T21:03:38Z",
   "mq": {
    "n": {
-    "checking": 0,
+    "checking": 1,
     "inline": 0,
     "conflicted": 2,
     "failed": 0,
@@ -593,28 +590,37 @@
     "parked": 11
    },
    "m": {
-    "checking": null,
+    "checking": 0,
     "inline": null,
-    "conflicted": 1479,
+    "conflicted": 1482,
     "failed": null,
     "held": null,
-    "retry": 8,
-    "parked": 696
+    "retry": 85,
+    "parked": 699
    },
-   "cur": [],
+   "cur": [
+    [
+     [
+      "T-4621"
+     ],
+     "Mac tests",
+     "Mac mini",
+     0
+    ]
+   ],
    "ld": [
-    65,
-    "2026-11-16T20:52:54Z"
+    68,
+    "2026-11-16T21:03:29Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-16T21:00:29Z",
-    "ld": 17.21,
+    "at": "2026-11-16T21:03:08Z",
+    "ld": 20.04,
     "c": 8,
     "sb": 1,
     "dk": [
-     21.3,
+     21.2,
      228.3
     ],
     "ss": [
@@ -683,12 +689,12 @@
  ],
  "agents_now": {
   "main": 2,
-  "lanes": 4,
-  "total": 6,
-  "at": "4:01 PM",
+  "lanes": 3,
+  "total": 5,
+  "at": "4:04 PM",
   "why": "",
-  "at_iso": "2026-11-16T21:01:00+00:00",
+  "at_iso": "2026-11-16T21:04:00+00:00",
   "started": "3:35 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 2, started 3:35 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 4:01 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 2, started 3:35 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 4:04 PM ET</p></section>"
  }
 }

@@ -37,14 +37,8 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 ## Open (2026-11-15)
 
-- T-4317 1fc5ad43a8 + T-4402 9f7eb648d0 (11-13): ledger rows via tools/ledger_row.py (fills prev; plan, <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span>.md, slice notes say so). Owed: tick T-4402 when the next slice's rows all carry prev; then the apply refuses rows without prev.
-
-- T-4314 fcb1782366 (11-13 23:1x): personal_stream_shape.py cost + T-4124 sums. Tick lines = patch in company-scratch/T-4314-odalys (audit owner; reviewer Pernille). Owed: first real 'session: cost:' line, then tick.
-
-
 - T-4446 slice 1 (11-14): tools/records_round.py, one records commit per 900 s (full note in archive.md); rest T-4457. Owed: 7-day count <= 672 and wait lines not up; then tick.
 
-- T-4452 (11-14): board_tick's Supersedes field (full note in archive.md). Owed: Ines decides whether Investor-cited lines get a path; a lane tick's named line can be claimed before the landing.
 - T-4103 31b4b962fb, T-4443 slice 1 14f086c7d8 (11-14): open, full notes in archive.md. Owed: T-4447 replay narrows the signals; five card rules in queue_check; T-4459 machine callers.
 - T-4458 (11-14): jobs_loop notes, merge_first, runner_watch, main_green hand over to records_round (RECORDS_OWN_COMMIT=1 = old). fav_notice refused (guard); own line. Owed: 7-day commit-shares run shows none of their subjects; then tick.
 - T-4450 (11-14 19:0x): the day's group-size fit is a job of queue_check's daily run; `pass` reads the kept sizes. No pipeline patch (T-4444's step carries it). Owed: 7 days of land_group.jsonl rows by 'daily sweep' against 'first read'; queue_check mutants not measured.
@@ -55,10 +49,16 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-4473/T-4448/T-4449 (11-15): queue check v1, dry run, Ines's 5 fixes (e831be688e), 2nd dry run all hold (5a3a0c6b43), switched on: act_alone wait_met_issue, feature_fits. Fix 2 cut replay recall 413->154 of 446 (for Ines). Owed: daily caller = revised pipeline patch, note on T-3992 (--as-switch); owner parse fix before rows go to owners; my noted copies T-4411, T-3150, T-3859, T-1248, T-3593.
 - T-4419/T-4490 closed 11-15 (OPT-100, -110, -092 no_effect; OPT-119 kept). Owed: T-4531 (keep or revert the ledger merge driver).
 - T-4508 81212e12e5 (11-15): tools/land_refusal_alarm.py via idle_alarm. Owed: tick after land; 11-13 1:35 PM <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">ruling</span> (c6861701678) only on <span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">parked</span>/a2.
+- T-4539 (11-15 20:4x): own-first 'hold' idled b's slots (13 b ticks with room, 3 a); now such a slot takes new work ("own_first_hold": true = old). Disk gate is T-4537. Owed: T-4535 (xc_sim.py reads board raw, my T-3712; board_notes_readers red on main).
+
+- T-4400 c94db44592 (11-15): ticked (outbox). Owed: T-4562 inbox correction to the 11-13 reply on #41.
 
 ## Lessons
-- A personal tick's stale-reading hold <span title="A new, permitted reading that removes a cap. A lift rule is that reading, written down before we look.">lifts</span> only at the reading's named reset (reset_passed): the tick before and the tick after bound a reset that no file records (T-4411, ticked 11-15 ebd4a529e4).
-- Before a ledger 'Read H:MM', run `date`; I wrote 2:3x for a 2:1x read (fixed before T-4490 landed).
+- T-4537 (11-15): xc.sh gate runs disk_keeper clean before exit 75; keeper retries held locks; sweep stamps after lock. Owed: tick after land; 30 GB not reachable in rules (Sims 38.4, company-scratch 25.6 under T-3859, swap 27.9).
+- T-4560 (11-15 22:5x): refusals.CLEARED <span title="A new, permitted reading that removes a cap. A lift rule is that reading, written down before we look.">lifts</span> T-3859 1:48:23 PM inside /private/tmp/company-scratch for disk_sweep finished only; owner-less folders judged by name task. Dry run: 31 folders, 0.07 GB (scratch now 0.36 GB). Owed: first acting pass rows in disk_keeper.jsonl; space is elsewhere (Sims, swap).
+- A dry run must not change anything: T-4547's ran `git worktree prune` for real (fixed T-4560). Test the dry path for side effects.
+- T-4278 bb4548b71f (11-15): bell gone; notif switch in "i" panel; notice only on About. Owed: T-4563 (composer_test red at HEAD).
+- zsh: $F with paths does not split; use an array, or git diff sees one path and gives 0 hunks.
 {% endraw %}
 
 

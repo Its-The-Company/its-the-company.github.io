@@ -14,6 +14,7 @@ description: "r1 decided a programmer&#x27;s product: an IDE first, widgets behi
 - Status: **accepted, revision 2** (Ines, CEO, 2026-11-13, T-4272). Written after the Investors approved the Restructuring's keep, change or drop tables (Restructuring 11, an Investor, #280 c6858665300, A, 11:22 AM ET 11-13). It replaces revision 1 (accepted 2026-10-25 7:27 PM ET, with nine <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">rulings</span> and three re-datings appended through 2026-10-31), which is archived word for word at `archive/ADR-001-r1-2026-10-25-to-10-31.md`. Where the two differ, this text wins. "r1" below means that archived text.
 - Dated line, 2026-11-15 2:14 AM ET (Ines, T-4465): decisions 4, 5, 10, 15, 16 and 26 were answered on 11-14 (an Investor, 5:23 to 5:39 PM ET; rows added to section 1). Sections 3.1, 3.3, 4, 5 and 6 follow them. Dates and the reasons for the six set-aside items: `plan.md`, chair note 2026-11-15.
 - Dated line, 2026-11-15 6:34 AM ET (Ines, T-4467): decisions 8, 17, 18, 19, 20, 21, 23 and 24 and the Builder's drag-and-drop card (#300) were answered on 11-14 (an Investor, 4:51 to 5:42 PM ET; rows added to section 1). Sections 2, 3, 3.1, 3.3, 4, 5 and 6 follow them. Two-way editing (#287 C) and snap-to-layout drag and drop (#300 A) move the likely release to early June 2027 (`plan.md`, chair note 2026-11-15 6:34 AM).
+- Dated line, 2026-11-15 10:00 PM ET (Ines, T-4543): widget actions are 1.0 work. an Investor asked that a person choose what a widget tap does, designed so buttons reuse it (#41 c6905224905), 8:59 PM), then "Add buttons to 1.0!" (#41 c6905386313), 9:11 PM); both in `log/rulings.md`. Interactive widget buttons leave the 1.2 row (sections 3.3 and 4) for section 3.1's new Widget actions row; the design is ADR-011 (proposed). The tap choice goes in phase C, the buttons and run-a-function in the Pages phase; the likely release moves from Sunday 2027-06-06 to Thursday 2027-07-08, about 4.5 weeks (`plan.md`, chair note 2026-11-15 10:00 PM).
 - Author: Ines. Inputs: [`documents/restructuring/02-audit.md`](../restructuring/02-audit.html) (the ADR table, row 001), `03-structure.md`, `05-timeline.md`, `06-decisions.md` with the Investors' answers; [`ops/plans/pywidget/plan.md`](pywidget-plan.html), chair notes of 2026-11-13 10:31 AM and 10:53 AM; ADR-002, ADR-006 and ADR-007 as changed the same day.
 - What this text decides: scope and versions. Dates live in `plan.md` and `ops/milestones.json`; how Python runs, in ADR-007; the widget format, in ADR-002; sharing, in ADR-006.
 
@@ -52,6 +53,8 @@ The answers this text rests on, all 2026-11-13 ET, an Investor:
 | 19. Server and account (11-14) | A: none in 1.0; at the live shelf (1.2), Sign in with Apple only to publish, CloudKit first | #288 c6885326341, 5:40 PM 11-14 |
 | 23. Reports and takedowns (11-14) | B: decided when 1.2 is scoped; the live shelf cannot open until then | #292 c6885342790, 5:41 PM 11-14 |
 | 24. Age (11-14) | A: the terms say 13 or over; Apple's Declared Age Range check gates the marketplace; no likes, comments or feeds | #293 c6885351357, 5:42 PM 11-14 |
+| Widget tap choice (11-15) | The person chooses what each widget's tap does (its Page, its code, pywidget's home, a link, or a Python function), as one action model that buttons reuse | #41 c6905224905, 8:59 PM 11-15 |
+| Widget buttons (11-15) | "Add buttons to 1.0!": interactive widget buttons are in 1.0, not 1.2 | #41 c6905386313, 9:11 PM 11-15 |
 
 </div>
 
@@ -76,7 +79,7 @@ Decisions 4, 5, 6, 8, 9, 10 and 15 to 28 were still open when this was written (
 
 **The promise 1.0 proves.** Anyone can make a working widget or Page on iPhone and iPad, by writing Python, by building with blocks, or by picking one ready-made, and one Project serves all three ways.
 
-**When.** Likely early June 2027 (Sunday 2027-06-06 on the likely line), range mid March to early October 2027 (*11-15, T-4467: was late April, Monday 2027-04-26, range late February to late July; two-way editing and snap-to-layout drag and drop added about 6 weeks*). The firm date is fixed when the Builder first works on a phone (#270 A). Phases A to E and their phone proofs: `plan.md`, chair note 2026-11-13 10:53 AM. Nothing goes out near Day 60 (#271 A).
+**When.** Likely early July 2027 (Thursday 2027-07-08 on the likely line), range early April to late November 2027 (*11-15 10:00 PM, T-4543: was early June, Sunday 2027-06-06, range mid March to early October; the widget tap choice and buttons added about 4.5 weeks. 11-15, T-4467: was late April, Monday 2027-04-26, range late February to late July; two-way editing and snap-to-layout drag and drop added about 6 weeks*). The firm date is fixed when the Builder first works on a phone (#270 A). Phases A to E and their phone proofs: `plan.md`, chair note 2026-11-13 10:53 AM. Nothing goes out near Day 60 (#271 A).
 
 ### 3.1 In 1.0
 
@@ -91,6 +94,7 @@ Decisions 4, 5, 6, 8, 9, 10 and 15 to 28 were still open when this was written (
 | 12 premades | All free, none marked Pro (plan 11-04 item 6). Each is a Project, and each opens as the person's own editable copy | plan 11-04; ADR-006 13.6 |
 | The Project | One folder, one manifest, one ID, and a tested migration of existing projects, before any public release (#281 A). Version fields per #285 B; an app update never changes a person's copy silently, and a file they changed is kept | section 6 |
 | The Builder | The block format, catalog and compiler; premades as blocks; the block editor, editing on the live widget by drag and drop that snaps pieces into rows, columns and layers, with handles for size and spacing and a style panel, every move also possible without dragging (#300 A); blocks and written code each editable, kept in step with the other (#287 C); a custom block; "Save as component" and sharing by file. The person picks from our premade components (#276). Brought-in fonts only if the one-day phone check passes | ADR-008, written first (section 6); `06-decisions.md`, board list; #287 C; #300 A |
+| Widget actions | Each widget's tap, and each button its tree draws, carries one action the person chooses on the project's page: open its Page, its code, pywidget's home, a web link (https only), another app through the launcher's path, or run one of the widget's declared Python functions. Nothing chosen keeps today's route. A button that runs a function runs inside the widget on iOS 18 to 26 when the widget's lane and time allow, and in pywidget otherwise; on iOS 27, in pywidget in the background. Links that run code are signed. Buttons are inactive while the phone is locked (Apple's rule). Opening another app ships only under the launcher's own condition (#192) | #41 c6905224905 and c6905386313 (11-15); ADR-011 (proposed); ADR-007 s3 and s5 |
 | Pages | A Project's full-screen output, drawn by the app from the view-tree format with Page-only parts (ADR-002, amendment of 11-13). A Page answers taps by calling Python on the app's one run queue (ADR-007 s4) | #272 A |
 | Gallery | Our own premade Projects, widgets and components only, inside the app binary, with the three ways to use an item in `03-structure.md`. The marketplace's first stage; no server, sign-in or reports desk | #276; #274 A; ADR-006 S0 |
 | Sharing by file | A Project, a Builder document or a component saved to Files or the share sheet, opened by the other person the way they open a `.py`. The app downloads and hosts nothing. Someone else's Python arrives only this way, with less reach than the person's own: none of their saved keys, no other project's files, only what its project file declares, and its code shown before it first runs | ADR-006 (amended 11-13: S1b and the component); #284 A |
@@ -126,7 +130,7 @@ Decisions 4, 5, 6, 8, 9, 10 and 15 to 28 were still open when this was written (
 | iMessage | After a Messages extension is measured on a phone; not before 1.2 | answered: #273 B |
 | Paid items, paying creators | Not planned | pending decision 9 (#278) |
 | The web IDE and sync, the compatibility layer for the old app's scripts, Shortcut Lab, and the 11-04 plan's AI key, Control Center button and Share extension | "Maybe later", each with its reason (`plan.md`, chair note 2026-11-15) | answered: #279 A |
-| Interactive widget buttons; advanced libraries (numpy, Pillow, matplotlib) | After 1.0 (plan 11-04, the 1.2 row) | dated when 1.0's date is firm |
+| Advanced libraries (numpy, Pillow, matplotlib) | After 1.0 (plan 11-04, the 1.2 row) | dated when 1.0's date is firm (*11-15 10:00 PM, T-4543: interactive widget buttons left this row for 3.1, #41 c6905386313*) |
 | Debugger, formatter and r1's other 3.2 rows | After 1.0, as r1 3.2 placed them | unchanged |
 
 </div>
@@ -138,17 +142,18 @@ Three versions are planned. Only 1.0 is fixed; 1.1 and 1.2 are working assumptio
 
 1. **1.0:** section 3.
 2. **1.1:** fixes, whatever 1.0's fallbacks move out, any "maybe later" item the Investors bring back by name (#279 A), and the screen that offers a newer version of an installed item, never silent, keeping a file the person changed (#285 B; the version fields it reads are in 1.0, section 6). No Messages part (#273 B).
-3. **1.2:** a live shelf of other people's block projects, only if Apple says yes in writing (#274 A; decision 6), with Sign in with Apple to publish and CloudKit first (#288 A), the age check (#293 A), and the reports and takedown owner decided first (#292 B); a Messages extension considered only after it is measured on a phone (#273 B); advanced libraries and widget buttons.
+3. **1.2:** a live shelf of other people's block projects, only if Apple says yes in writing (#274 A; decision 6), with Sign in with Apple to publish and CloudKit first (#288 A), the age check (#293 A), and the reports and takedown owner decided first (#292 B); a Messages extension considered only after it is measured on a phone (#273 B); advanced libraries (*widget buttons moved to 1.0 on 11-15, #41 c6905386313*).
 
 No version holds anything Apple's text rates High (other people's Python listed in the app) before Apple answers (ADR-006 13.2, S3b's gate).
 
 ## 5. Order of work, and what would make this fail
 
-**Order** (#282 A; `plan.md` phases). A: the 12 premades draw on an Investor's iPhone, and one sitting reads the widget's memory. B: the IDE and widgets finished, beside A. C, after A's proof: the Project first, then the `read()` and `draw()` contract, permissions and the outside-code notice, the tab shell, the Gallery's three choices. D: the Builder, whose first phone proof fixes the date. Then Pages, then E, the release. Each phase ends with a phone proof on a TestFlight build in an Investor's hands.
+**Order** (#282 A; `plan.md` phases). A: the 12 premades draw on an Investor's iPhone, and one sitting reads the widget's memory. B: the IDE and widgets finished, beside A. C, after A's proof: the Project first, then the `read()` and `draw()` contract, permissions and the outside-code notice, the tab shell, the Gallery's three choices. D: the Builder, whose first phone proof fixes the date. Then Pages, then E, the release. Widget actions (ADR-011) sit in two places: the tap choice in C, after the manifest it is stored in; running a function from a tap or a button, and the buttons, in the Pages phase, beside the Page's own tap-to-Python path (`plan.md`, chair note 2026-11-15 10:00 PM). Each phase ends with a phone proof on a TestFlight build in an Investor's hands.
 
 **What would make this fail.**
 - Phase A's cause is not found, and everything waits behind it (T-4180, T-3783).
 - The Builder runs long: about 12.25 weeks on the Xcode slot (7 to 19) and 3.5 beside it, an estimate (`05-timeline.md`; with #287 C's two-way editing and #300 A's drag and drop, `plan.md` chair note 2026-11-15 6:34 AM). The drag-and-drop weeks are the designer's, not yet checked by the engineer who builds them, and two-way editing has no prototype.
+- Widget buttons run long: about 4.6 weeks on the slot with the tap choice (2.7 to 8.4), my estimate per ADR-011 build step, not yet checked by Idris. A function run inside the widget must fit its small memory (23 MB free at rest on the iPhone 15 so far, T-4282) and its 2-second budget; when it doesn't, the button opens pywidget and runs there, so buttons ship either way, but visibly.
 - App Review refuses app-like Pages, or reads the Gallery as a storefront. Pages were taken on with that risk (#272); the review notes and ADR-006 13.2 carry the answer.
 - Bank and tax details and the name (#90) stay open, so nothing can be sold or test-bought.
 - The Builder's "no code" promise is tested only by the company (#295 B), so a failure in the hands of people who don't write Python is first seen in store reviews. The third phone proof is held to its words: blocks only, the code view never opened, VoiceOver finishing every move.
@@ -165,6 +170,7 @@ No version holds anything Apple's text rates High (other people's Python listed 
 - **ADR-005:** history; its subject, the compatibility layer, is set aside (#279 A).
 - **ADR-003, ADR-004, ADR-009:** unchanged.
 - **ADR-010:** stands; its rules R5 and R6 retire with the manifest.
+- **ADR-011, widget actions:** proposed (Idris, T-4542); its build steps start when it is accepted after Pernille's and Maren's reviews. Its actions are stored in the manifest of phase C.
 
 Ines, CEO
 {% endraw %}

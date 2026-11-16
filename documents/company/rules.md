@@ -662,6 +662,10 @@ The Effect lines of the amendments.md entries the charter retired (2026-11-04 12
 - **2026-11-15 11:32 AM ET** ((private)): Option B of lane a's card c6895930080 (an Investor c6896901345 asked for B if the board is not expected to drift back): the queue check is switched on as it is once its dry run passes (T-4448, T-4449), the audit report is posted (T-4105) and the Set aside fix finishes (T-4129); the measurement lines T-4472, T-4451 (daily model read), T-4314, T-4315 and T-4459 leave the audit-first list and go behind app work.
 - **2026-11-15 5:24 PM ET** ((private)): When the Mac mini's internal disk is under 20 GB free, the company cleans it instead of pausing work; a cleaning of the internal disk now (board line T-4537 for Odalys).
 - **2026-11-15 5:48 PM ET** ((private)): Every account (main, a, b) should be taking work while work may start; an idle account is a fault to fix at once, and sessions use more agents when runnable work is there.
+- **2026-11-15 8:59 PM ET** ((private)): A person chooses what each widget's tap does (its Page, its code, pywidget's home, a link, or a Python function), designed as one action model that future widget buttons reuse (board line T-4542).
+- **2026-11-15 9:11 PM ET** ((private)): Interactive widget buttons are in 1.0, not after it; the tap actions design (T-4542) covers them as 1.0 work and the plan and date effect are set by board line T-4543.
+- **2026-11-15 9:38 PM ET** ((private)): Feature sessions are switched on as soon as their wiring is built and tested, not on the 11-20 trial date: T-4194 goes to the front of app tooling, on the main session (pin lifted).
+- **2026-11-15 10:00 PM ET** ((private)): The company deletes on its own whatever can safely be deleted to keep the disk over its line (finished work copies with nothing main lacks or saved to the SSD, build caches, test leftovers), and the cleaning runs automatically from now on; a deletion a safety check still refuses goes to the Investors by hand.
 {% endraw %}
 
 </div>

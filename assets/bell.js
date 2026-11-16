@@ -12,7 +12,7 @@ function here() { var p = location.pathname || '/'; return p.indexOf(basePath) =
 var hd = D.querySelector('header.site'), DE = D.documentElement;
 if (hd && window.ResizeObserver) new ResizeObserver(function () { DE.style.setProperty('--hdr-h', hd.getBoundingClientRect().height + 'px'); }).observe(hd);
 var NL = 'company.notify', NC = 'company.notify.count', CK = 'company.bell.chat', SK = 'company.bell.seen', RK = 'company.bell.read', GAP = 12e4, WEEK = 6048e5;
-var bellB = null, bellP = null, bellOpen = false, known = null, lastNote = 0, held = [], heldT = 0, title0 = D.title;
+var ctl = D.querySelector('header.site [data-notify-ctl]'), known = null, lastNote = 0, held = [], heldT = 0, title0 = D.title;
 var docs = [], rep = null, repo = '';
 function json(k, d, st) { try { return JSON.parse((st || LS).getItem(k)) || d; } catch (e) { return d; } }
 function flagOn() { var r = S.byId('chat-root'); return !(r && r.getAttribute('data-notify') === 'off'); }
@@ -93,7 +93,7 @@ var more = ns.length > 4 ? ' and ' + (ns.length - 4) + ' more' : '';
 var n = new Notification(one ? 'Reply from ' + one.w + ' on #' + one.n : h.length + ' new replies on ' + ns.slice(0, 4).map(function (k) { return '#' + k; }).join(', ') + more,
 { body: one ? (one.ti ? one.ti + '\n' : '') + one.b : tis.slice(0, 4).join('; '), tag: 'company-bell' });
 weekCount(1);
-n.onclick = function () { if (window.focus) window.focus(); if (one) location.href = href('/chat/#t=' + one.n); else show(true); if (n.close) n.close(); };
+n.onclick = function () { if (window.focus) window.focus(); if (one) location.href = href('/chat/#t=' + one.n); else location.href = href('/chat/'); if (n.close) n.close(); };
 draw();
 }
 function issuesN() { var b = D.querySelector('nav a[data-issues] .nb'); return b && !b.hidden ? +b.textContent || 0 : 0; }
@@ -105,22 +105,6 @@ return [['Chat', chatRows().map(function (x) { return { n: x.n, b: x.b, u: '/cha
 }
 function row(d) { return { b: d.n || d.u, u: d.u }; }
 function len(g) { return g[1].reduce(function (s, r) { return s + (r.c || 1); }, 0); }
-function svg(tag, a) {
-var e = D.createElementNS('http://www.w3.org/2000/svg', tag);
-Object.keys(a).forEach(function (k) { e.setAttribute(k, a[k]); }); return e;
-}
-function ui() {
-var w = hd && hd.querySelector('.wrap');
-if (!w || !D.createElementNS) return;
-w.style.position = 'relative';
-var g = w.querySelector && w.querySelector('.hact'), gi = g && g.firstChild;
-bellB = g ? (gi ? g.insertBefore(el('button', 'bell'), gi) : add(g, 'button', 'bell')) : add(w, 'button', 'bell'); bellB.type = 'button';
-bellP = add(w, 'div', 'bellp'); bellP.setAttribute('role', 'dialog'); bellP.setAttribute('aria-label', 'Notifications'); bellP.hidden = true;
-bellB.onclick = function (e) { if (e && e.stopPropagation) e.stopPropagation(); show(!bellOpen); };
-on(D, 'keydown', function (e) { if (bellOpen && e.key === 'Escape') { show(false); bellB.focus(); } });
-on(D, 'click', function (e) { var t = e.target; if (bellOpen && bellP.contains && !bellP.contains(t) && !bellB.contains(t)) show(false); });
-}
-function show(open) { bellOpen = open; draw(); }
 function tab(nav, sel, n, what) {
 var a = D.querySelector(nav + ' a[href$="' + sel + '"]'), b = a && a.querySelector(':scope > .nb');
 if (!a) return;
@@ -132,36 +116,16 @@ var g = groups(), n = g.reduce(function (s, x) { return s + len(x); }, 0);
 tab('header.site .tabs', '/chat/', len(g[0]), 'in the chat');
 tab('header.site .tabs', '/reports/', len(g[2]) + len(g[3]), 'reports and documents');
 tab('nav.subtabs[aria-label="Reports"]', '/reports/', len(g[2]), 'reports');
-if (!bellB) return;
-var s = svg('svg', { viewBox: '0 0 24 24', fill: 'none', stroke: 'currentColor', 'stroke-width': '1.8', 'aria-hidden': 'true' });
-s.appendChild(svg('path', { d: 'M12 3.5a5.5 5.5 0 0 0-5.5 5.5v3.6L4.8 15.8h14.4l-1.7-3.2V9A5.5 5.5 0 0 0 12 3.5z', 'stroke-linejoin': 'round' }));
-s.appendChild(svg('path', { d: 'M9.8 18.6a2.3 2.3 0 0 0 4.4 0', 'stroke-linecap': 'round' }));
-bellB.textContent = ''; bellB.appendChild(s);
-if (n) add(bellB, 'span', 'badge', String(n));  // today's colour until #170 Q3 is answered (Ines 11-04 08:23)
-bellB.setAttribute('aria-label', 'Notifications, ' + (n ? n + ' new or waiting' : 'nothing new'));
-bellB.setAttribute('aria-expanded', bellOpen ? 'true' : 'false');
 D.title = (n ? '(' + n + ') ' : '') + title0;
-bellP.hidden = !bellOpen;
-if (!bellOpen) return;
-bellP.textContent = '';
-trial(add(bellP, 'div', 'trial'));
-g.forEach(function (x) {
-if (!x[1].length) return;
-add(bellP, 'h4', null, x[0] + ' ' + len(x));
-x[1].forEach(function (r) {
-var a = add(bellP, 'a', 'item'); a.href = href(r.u);
-if (r.n) add(a, 'span', 'ref', '#' + r.n);
-add(a, 'span', null, r.b);
-});
-});
-if (!n) add(bellP, 'p', 'muted', 'Nothing new.');
+if (!ctl) return;
+ctl.textContent = ''; ctl.hidden = false; trial(ctl);
 }
 function trial(t) {
 function say(b, small) { add(t, 'b', null, b); if (small) add(t, 'small', 'muted', small); }
-if (!flagOn()) return say('Notifications are off', 'Turned off for both of you on #24. The bell still lists everything.');
+if (!flagOn()) return say('Notifications are off', 'Turned off for both of you on #24. Each tab still shows its own count.');
 if (iPhone()) return say('Notifications', 'On iPhone, Safari sends them only to a site added to the Home Screen (iOS 16.4 or later). Share, then Add to Home Screen.');
-if (!hasN()) return say('Notifications', 'This browser does not offer them. The bell still lists everything.');
-if (Notification.permission === 'denied') return say('Notifications', 'Blocked in this browser’s settings for this site. The bell still lists everything.');
+if (!hasN()) return say('Notifications', 'This browser does not offer them. Each tab still shows its own count.');
+if (Notification.permission === 'denied') return say('Notifications', 'Blocked in this browser’s settings for this site. Each tab still shows its own count.');
 if (Notification.permission !== 'granted' || !LS.getItem(NL)) {
 add(t, 'b', null, 'Try notifications (trial)');
 var b = add(t, 'button', 'btn primary', 'Turn on'); b.type = 'button';
@@ -188,13 +152,13 @@ docs = (Array.isArray(j.docs) ? j.docs : []).filter(function (d) { return d.f !=
 var p = here(), mine = docs.filter(function (d) { return d.u === p || d.u === p.replace(/index\.html$/, ''); });
 if (mine.length) { var s = json(SK, []); mine.forEach(function (d) { if (s.indexOf(d.i) < 0) s.push(d.i); }); try { LS.setItem(SK, JSON.stringify(s.slice(-500))); } catch (e) { /* full */ } }
 draw(); read();
-}).catch(function () { /* the bell keeps what it has */ });
+}).catch(function () { /* the counts keep what they have */ });
 S.feed = feed;
-S.onReject.push(function () { rep = []; LS.removeItem(CK); if (bellB) bellB.hidden = bellP.hidden = true; D.title = title0; draw(); });
+S.onReject.push(function () { rep = []; LS.removeItem(CK); D.title = title0; draw(); });
 on(window, 'storage', function () { draw(); });
 on(D, 'visibilitychange', function () { if (!D.hidden) read(); });
 var ia = D.querySelector('nav a[data-issues]');
 if (ia && window.MutationObserver) new MutationObserver(function () { draw(); }).observe(ia, { childList: true, subtree: true, characterData: true });
-ui(); draw();
+draw();
 if (S.fed) feed.apply(null, S.fed);  // a chat read from before this file ran (app.js keeps it)
 })();

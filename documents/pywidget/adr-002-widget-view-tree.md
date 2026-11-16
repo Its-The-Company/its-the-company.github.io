@@ -116,6 +116,12 @@ Made under the Investors' approval of the Restructuring's keep, change or drop t
 What would make this fail: Page parts that cannot be expressed as additive nodes inside major 1 (a Page that needs live state the tree cannot carry). Then the Pages design comes back here before any code, and a major 2 is a chair decision with its migration written first.
 
 Ines, CEO
+
+## Dated line (Idris), 2026-11-15, T-4542: widget actions (ADR-011). In force when ADR-011 is accepted; proposed until then
+
+Asked by Pernille's review of ADR-011 (M3, M6, M9; [`pywidget/docs/reviews/adr-011-review-pernille.md`](adr-011-review-pernille.html)).
+1. **Ruling 5 is retired for `Button` only.** A Button's tap runs its handler or opens what its action says (ADR-011 s4), and its console line goes. `Toggle` stays drawn and inert in 1.0 with its console line: a Toggle needs L5's `isOnState` and ops, both 1.1. The Investors moved buttons into 1.0 on 11-15 at 9:11 PM ET (#41 c6905386313).
+2. **Under Ruling 6, two format changes after the Day 13 freeze, both inside major 1.** (a) Action names, in the document's `actions` keys and a Button's `p.action`, match `[A-Za-z0-9_-][A-Za-z0-9_.-]{0,63}`, compare exactly, and keep the `pywidget.` prefix reserved. A tree written before this with another name is refused with one clear error at save; no premade declares an action. (b) A Button's `p` gains an optional `open` (ADR-011 s1's value minus `run`: `page`, `code`, `home`, `link`, `app`), beside the required `action`, which is then the button's name. `TreeRules` checks `open.url` with ADR-011 s5's https grammar, separately from `linkURL`; the renderer never draws it as a `Link` destination. Older readers see an unknown `p` key; the schema change lands with ADR-011 build step 5, with its fixture.
 {% endraw %}
 
 </div>

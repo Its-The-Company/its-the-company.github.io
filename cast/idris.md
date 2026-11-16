@@ -47,16 +47,13 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - Older lessons and dated logs: archive.md.
 
 
-- T-4474/T-4196 11-15 57f84c603e: card-parser fix redone, patch to T-3995. Open: land_xc slice, GROUP_JOB, switch on, 20 timed runs, week vs 6.00 by 11-30. Lesson: --fast >2 h now (bg limit <span title="A test written in advance. If it fires, we drop the idea.">kills</span> it, no summary; read res/*.log in its tmp dir before it ends); mutants: changed ones only.
-
-- T-4468 11-15: slices 1-2 on main; 3a 86cf6f47bd (M1-M5, L1-L3). Open: Habits week dots, settings_saved doc rows, T-4515/16/17, phone check. Lesson: gate 'no result' -> xc_route wait, then main moves: checkout --merge again, same key reuses the job.
-
 - T-4532 11-15: reviewed Pernille's H1 lock (SHIP, 4 Lows: t4468-lock-idris.md); Swift write under flock on premade.json.lock, .page- temp. Open: L1 (save raises on OSError) + L2 (no fsync, both) to Pernille; s2.3.2 before App Store. Lesson: Core flock tests need a 2nd open file description, not a 2nd process.
 
 - T-4494 11-15: slice 1 = item (2), <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span>.json and its readers gone. Open: item (1) own-script mirror without "lane" (LaneEntry.entry + lane.py mirror_entry/lane_of default + manifest-less sends: design call), (3) recording, (4) Ines's two readings.
 
 - T-4527 11-15: hung-step timing tests: count proves 'once' (callers), clock only the cut: >= limit and < limit x ids / 2. Red on the runner via tools/land_mutants.py (2 KILLED, control green). Open: land/idris-t4527 ref stays (land_xc drop refuses non-lane ids). Lesson: local disk under 10 GB -> land_mutants, mutants json must be in the --base commit.
 - T-4282 11-15 cdfacacc4c: ladder1-7 + manifest <span title="Our grade scale, nine steps: D, D+, C-, C, C+, B-, B, B+, A. An idea&#x27;s ladder is the letter it reaches before any cap.">ladder</span>; T-4536 asks phones after T-2943. Open: land, gate compile (xc 75), export read, <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span> facts for Ines. Lesson: 24 MiB < 25.2 MB free; MiB, not MB.
+- T-4542 11-15: ADR-011 accepted 10:05 PM after Pernille re-read + Maren review (run.lock separate from state.lock; v matched across tree.json entries x families; notice no timer; 44 pt targets). Open: both confirm (board note 10:04 PM), then tick. Lesson: before naming a lock for a long hold, grep its callers' waits; a short-hold lock can't double as a run lock.
 {% endraw %}
 
 

@@ -28,7 +28,8 @@ function deadlineTime(text) {
 var d = /(\d{4})-(\d{2})-(\d{2})/.exec(text);
 if (!d) return null;
 var y = +d[1], mo = +d[2], day = +d[3], rest = text.slice(d.index + d[0].length);
-var h = /(?:^|[^\d])(\d{1,2}):(\d{2})/.exec(rest), hh = h ? +h[1] : 23, mm = h ? +h[2] : 59;
+var h = /(?:^|[^\d])(\d{1,2}):(\d{2})(?:[ \t]*([AaPp])\.?[Mm]\b)?/.exec(rest), hh = h ? +h[1] : 23, mm = h ? +h[2] : 59;
+if (h && h[3]) hh = hh < 1 || hh > 12 ? 99 : hh % 12 + (/p/i.test(h[3]) ? 12 : 0);  // 12-hour: 6:00 PM, 12:00 AM
 if (mo < 1 || mo > 12 || day < 1 || day > 31 || hh > 23 || mm > 59) return null;
 var off = /\b(?:UTC|GMT)\b|\d{2}Z\b/.test(rest) ? 0 : etOffset(y, mo, day);
 return Date.UTC(y, mo - 1, day, hh + off, mm);
@@ -185,10 +186,11 @@ else { (S.planQ = S.planQ || []).push([m, b, x]); if (!S.planL && D('plan')) { S
 }
 return m;
 }
-var RX = [['\u2764\uFE0F', 'heart', 'Heart'], ['\uD83D\uDC4D', '+1', 'Thumbs up'], ['\uD83D\uDC4E', '-1', 'Thumbs down'], ['\uD83D\uDE02', 'laugh', 'Haha'], ['\u2753', 'confused', 'Question']], rxDone = {};
+var RX = [['\u2764\uFE0F', 'heart', 'Heart'], ['\uD83D\uDC4D', '+1', 'Thumbs up'], ['\uD83D\uDC4E', '-1', 'Thumbs down'], ['\uD83D\uDD25', 'hooray', 'Fire'], ['\u2753', 'confused', 'Question']],
+RXS = RX.concat([['\uD83D\uDE02', 'laugh', 'Haha']]), rxDone = {};
 function rxRow(row, x) {
 row.textContent = '';
-RX.forEach((r) => { var n = x.rx && x.rx[r[1]]; if (n > 0) mk(row, 'span', 'cv-rx1', r[0] + (n > 1 ? ' ' + n : '')).title = r[2]; });
+RXS.forEach((r) => { var n = x.rx && x.rx[r[1]]; if (n > 0) mk(row, 'span', 'cv-rx1', r[0] + (n > 1 ? ' ' + n : '')).title = r[2]; });
 row.hidden = !row.firstChild;
 }
 function reactions(m, x) {

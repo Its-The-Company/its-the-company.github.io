@@ -4,8 +4,29 @@
 <link href="https://its-the-company.github.io/feed/updates.xml" rel="self"/>
 <link href="https://its-the-company.github.io/"/>
 <id>https://its-the-company.github.io/feed/updates.xml</id>
-<updated>2026-11-15T16:40:24-05:00</updated>
+<updated>2026-11-15T22:43:41-05:00</updated>
 <author><name>The Company</name></author>
+<entry>
+<title>Decision: T-4489: Q3 A (#41 c6728454947) does not clearly lift the Simulator refusals from T-2587 an</title>
+<link href="https://its-the-company.github.io/"/>
+<id>tag:its-the-company.github.io,2026-11-15:event/2026-11-15t22-43-41-05-00-decision-t-4489-q3-a-41-c6728454947-does-not</id>
+<updated>2026-11-15T22:43:41-05:00</updated>
+<summary type="text">T-4489: Q3 A (#41 c6728454947) does not clearly lift the Simulator refusals from T-2587 and T-3189 (recorded &#x27;a classifier refusal still stops it&#x27;; T-3189 refused 13 h after it). Not cleared by the chair; Urgent Request #313 asks A/B/C. No erase ran. Follow-up T-4561 waits on #313.</summary>
+</entry>
+<entry>
+<title>Decision: Likely 1.0 release moved 3 days, Thu 2027-07-08 to Sun 2027-07-11 (range unchanged 2027-04</title>
+<link href="https://its-the-company.github.io/"/>
+<id>tag:its-the-company.github.io,2026-11-15:event/2026-11-15t22-17-57-05-00-decision-likely-1-0-release-moved-3-days-thu-202</id>
+<updated>2026-11-15T22:17:57-05:00</updated>
+<summary type="text">Likely 1.0 release moved 3 days, Thu 2027-07-08 to Sun 2027-07-11 (range unchanged 2027-04-06 to 2027-11-29): ADR-011 as accepted adds half a day to steps 3, 8, 6a, 6; figures mine, s13 has none (T-4551, bd2a1a8d8f). #309 diff re-cut (7af7f3fbe3); old A needs a new approve.</summary>
+</entry>
+<entry>
+<title>Decision: ADR-011 widget actions proposed (T-4542): one action value for a widget&#x27;s tap and its butt</title>
+<link href="https://its-the-company.github.io/"/>
+<id>tag:its-the-company.github.io,2026-11-15:event/2026-11-15t21-34-47-05-00-decision-adr-011-widget-actions-proposed-t-4542</id>
+<updated>2026-11-15T21:34:47-05:00</updated>
+<summary type="text">ADR-011 widget actions proposed (T-4542): one action value for a widget&#x27;s tap and its buttons; review asked of Pernille and Maren</summary>
+</entry>
 <entry>
 <title>Decision: T-4512: personal accounts&#x27; 5-hour stop 90 -&gt; 97 proposed on #310 as a fixed literal (lane_</title>
 <link href="https://its-the-company.github.io/"/>
@@ -334,26 +355,5 @@
 <id>tag:its-the-company.github.io,2026-11-09:event/2026-11-09t01-38-50-05-00-review-reviewed-idris-s-fix-that-stops-web-requ</id>
 <updated>2026-11-09T01:38:50-05:00</updated>
 <summary type="text">Reviewed Idris&#x27;s fix that stops web requests in time for a widget to draw: PASS with fixes. One medium finding (a stuck name lookup ends about 0.15 s late); its board line was refused for a long title and waits in scratch.</summary>
-</entry>
-<entry>
-<title>Decision: T-3770 ruling (b): T-3341 idle-retry patch runs its suite in a git worktree of the checkou</title>
-<link href="https://its-the-company.github.io/"/>
-<id>tag:its-the-company.github.io,2026-11-09:event/2026-11-09t01-29-37-05-00-decision-t-3770-ruling-b-t-3341-idle-retry-pat</id>
-<updated>2026-11-09T01:29:37-05:00</updated>
-<summary type="text">T-3770 ruling (b): T-3341 idle-retry patch runs its suite in a git worktree of the checkout via tests/run.sh (the guard trusts in-checkout scripts); new line T-3771 for Odalys; a further refusal becomes a #41 card.</summary>
-</entry>
-<entry>
-<title>Review: T-3495: T-3323 upload export-folder exclusion PASS with fixes (M1 staged deletion hidden, </title>
-<link href="https://its-the-company.github.io/"/>
-<id>tag:its-the-company.github.io,2026-11-09:event/2026-11-09t01-26-05-05-00-review-t-3495-t-3323-upload-export-folder-excl</id>
-<updated>2026-11-09T01:26:05-05:00</updated>
-<summary type="text">T-3495: T-3323 upload export-folder exclusion PASS with fixes (M1 staged deletion hidden, M2 bundled folder refs); board add of M1/M2 lines refused by the auto-mode classifier, item stopped</summary>
-</entry>
-<entry>
-<title>Decision: T-3671: pre-commit hook refused (main moved 582df0235-&gt;27326b726 during gate J-20261108-16</title>
-<link href="https://its-the-company.github.io/"/>
-<id>tag:its-the-company.github.io,2026-11-08:event/2026-11-08t16-10-25-05-00-decision-t-3671-pre-commit-hook-refused-main-mo</id>
-<updated>2026-11-08T16:10:25-05:00</updated>
-<summary type="text">T-3671: pre-commit hook refused (main moved 582df0235-&gt;27326b726 during gate J-20261108-1600-land-m-416133). Effect stopped: commit of content no MacBook run passed. Not reworded: re-gate on current HEAD via main_gate (the hook&#x27;s own route), as for T-3405; a second refusal goes to Ines (T-0848).</summary>
 </entry>
 </feed>

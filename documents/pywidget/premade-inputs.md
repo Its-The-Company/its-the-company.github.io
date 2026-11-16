@@ -210,6 +210,9 @@ Now (before phase C):
 In phase C: the premade's project page lists its outputs (03-structure s1, "The project page"), the widget and the
 settings Page. Route 1 then opens the project's Page directly; route 2 stays.
 
+Route 1 is the widget's **default action** in ADR-011 (T-4542, proposed): from phase C a person may choose another
+action for the widget's tap and its buttons on the project page; with nothing chosen, route 1 stays exactly as above.
+
 ### 2.6 How it becomes an ordinary Page in phase C, unchanged
 
 

@@ -86,6 +86,8 @@ A widget's size is what its runs measure, not its file length: a ten-line script
 
 iOS tells the app nothing when a widget is placed, removed or reconfigured, so a new placement is written at the next T1 or T3 (r1 s5.1, Idris's T-0684 limit). `wants-run` is honoured by the next T1 to T4 run. A tree's `reload_policy` is clamped to the expected interval of Apple's budget.
 
+Dated line (Idris), 2026-11-15, T-4542, **in force when ADR-011 is accepted** (proposed until then): T5 becomes 1.0 for Buttons only (the Investors' ruling of 11-15 9:11 PM ET, #41 c6905386313). A button's handler runs in the extension on iOS 18 to 26 when the widget is in the lane and its `timeout` plus T fits 2.0 s; otherwise in the app, from a signed link, as a foreground run; on iOS 27+ in the app in the background. ADR-011 s4 and s7 carry the rules; Toggle stays inert (ADR-011 M9).
+
 ### 4.2 One run queue
 
 The app has one interpreter, never finalized, and one script thread (contract s1, s2; r1 s8.1). Every app run, of every kind, goes through **one run queue**: console runs, previews, app-lane widget runs, Page runs (a Page's taps call Python on it) and Shortcut runs. Runs take the queue in arrival order, queue-then-busy (contract Q1). Two rules sit beside that order:
@@ -167,6 +169,7 @@ Entries are taken from `tree.json` in date order, keeping the newest past one. L
 - **Two writers of a tree.** A writer does not replace a tree whose `sampled_at` is newer than its own, not past the clock, and whose `tree.json` was modified after this run started (r1 11-01 6:17 PM item 2). With the flag on, a run that started before the folder's `sent_at` (and that `sent_at` is not past the clock) writes no tree and no status; the send's rename goes under `state.lock` (r1 11-01 6:38 PM). No script can freeze its widget.
 - **Reserved names.** `widgets/` holds id folders, `index.json`, `.trash/`, `.lane-demoted.json` and its lock, and nothing else; widget ids have no leading dot, are not `index.json`, take no `pywidget.` prefix in a user script, and are unique without regard to case. Any new file needs a dated line here (r1 amendment 2 item 4; 11-01 1:03 PM item 1).
 - **Names held for after 1.0, nothing written in 1.0:** `state.json` (schema `pywidget.state/1`), `state.lock`'s state use, `failed.jsonl`, `controls/`, `secrets/`, `state_at` in `tree.json` (r1 amendment 2 item 4).
+- **Dated line (Idris), 2026-11-15, T-4542, in force when ADR-011 is accepted** (proposed until then; ADR-011 s6, s7, s10 and Pernille's review M6, M8, H2). New in 1.0: `widgets/<id>/state.json` (`pywidget.state/1`, `(epoch, rev)`, one result commit per run; no ops, no `pending`, and `failed.jsonl` stays held) and `state.lock`'s state use, for the short commit of `state.json`; new: `widgets/<id>/run.lock`, held by a handler run from its snapshot to its commit, in either process, with `state.lock`'s short holds (tree, `state.json`, each run-log row) taken inside it, in the order `run.lock`, `state.lock`, premade lock (ADR-011 s7; Pernille's re-read, H2). The app creates `run.lock` as it creates `state.lock`; the extension never creates it, and with none it draws a button's link form. The extension writes `state.json` for an in-widget button run, after step 6a's gates (G-L5-1 (a), G-L5-5 widened to two processes with its kill test, Odalys's review of the L5 s5 delta). New, written by the app only: `widgets/<id>/actions.json` (the actions cache, one rename on save) and `widgets/.action-key` (the link-signing key: exclusive create, then re-read; the extension reads it, never creates it; excluded from backups and exports). `widgets/` reserved names gain `.action-key`. `controls/`, `secrets/` and `state_at` stay held.
 
 ## 9. The run log (Activity)
 
@@ -200,7 +203,7 @@ The widget lane runs the person's own scripts on their own phone inside our sand
 
 - **C2-Q1, a Swift-only location fix** in a second widget extension that alone carries `NSWidgetWantsLocation`, for widgets whose manifest declares `location`; at most 3 s inside `getTimeline`; When In Use only, never Always (r1 Ruling 2 and its 10-26 7:57 PM line; T-0053). It ships when that second extension is built and measured.
 - **Bound fields** (`data/<id>/fields.json`, schema `pywidget.fields`; ADR-002's bound-fields row): built only if the widget lane is proven impossible (section 3 item 9). This restates r1's trigger, "the lane fails its gates", because gates G1 to G3 no longer decide the lane (section 1 item 2).
-- **Widget interactivity after 1.0** (T5; state ops in the extension; the `pending` queue): the design is r1's amendments 1 to 3 and the 10-26 2:40 AM line, gated by their G-L5 tests.
+- **Widget interactivity after 1.0** (T5; state ops in the extension; the `pending` queue): the design is r1's amendments 1 to 3 and the 10-26 2:40 AM line, gated by their G-L5 tests. Dated line (Idris), 2026-11-15, T-4542, in force when ADR-011 is accepted: Button handler runs move to 1.0 under ADR-011; Toggle, state ops and the `pending` queue stay here.
 
 ## 15. What changes the numbers
 

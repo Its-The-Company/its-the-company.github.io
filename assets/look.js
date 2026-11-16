@@ -512,6 +512,27 @@ function fig(lab,v){[].forEach.call(document.querySelectorAll('.lk-bub a[href="#
 function draw(st){var g=st&&st.ln,d=st&&st.disk;LNM=(st&&st.stg&&st.stg.nm)||LNM;if(st&&Date.parse(st.at)>=B&&d&&typeof d.free_gb==='number')fig('Mac Mini',d.free_gb+' GB');
 if(!g||!(Date.parse(g.at)>=B))return;if(g.mq)merge(g.mq,g.at);if(g.mx){mach(g.mx,g.at);if(g.mx.macbook&&g.mx.macbook.dk)fig('MacBook',g.mx.macbook.dk[0]+' GB')}}
 S.onStatus.push(draw);if(S.status&&S.status())draw(S.status())});
+// T-4110: Flow's queue charts. The switch (Merge Queue or Task Queue; 24 h or 7 days) shows one chart; a tap, a drag or a pointer
+// over it, or an arrow key on it, reads the count at that time from the points the page carries (the page wrote the words).
+document.addEventListener('DOMContentLoaded',function(){var V=document.querySelector('.lk-qv');if(!V)return;
+var sw=V.querySelector('.lk-qs'),P=[].slice.call(V.querySelectorAll('.lk-qp')),B=[].slice.call(sw?sw.querySelectorAll('button'):[]),S={q:'merge',w:'24'};
+function pl(p){return p.querySelector('.lk-plot')}
+function pts(p){var e=pl(p);if(!e)return[];if(!e._p){try{e._p=JSON.parse(e.getAttribute('data-p'))}catch(x){e._p=[]}}return e._p}
+function clear(p){var e=pl(p);if(!e)return;e.querySelector('.cu').classList.remove('on');e.querySelector('.lk-cd').hidden=true;p.querySelector('.lk-rd').textContent=''}
+function mark(p,i){var d=pts(p),e=pl(p);if(!e||i<0||i>=d.length)return;var lo=+e.getAttribute('data-lo'),hi=+e.getAttribute('data-hi'),c=e.querySelector('.cu'),o=e.querySelector('.lk-cd');
+c.setAttribute('x1',d[i][0]);c.setAttribute('x2',d[i][0]);c.classList.add('on');o.style.left=d[i][0]/10+'%';o.style.top=(100-(d[i][1]-lo)/(hi-lo)*100)+'%';o.hidden=false;
+p.querySelector('.lk-rd').textContent=d[i][2];e._i=i}
+function near(p,cx){var e=pl(p),d=pts(p),r=e.getBoundingClientRect(),x,i,b=-1;if(!d.length||!r.width)return -1;x=(cx-r.left)/r.width*1000;
+for(i=0;i<d.length;i++)if(b<0||Math.abs(d[i][0]-x)<Math.abs(d[b][0]-x))b=i;
+if(Math.abs(d[b][0]-x)>+e.getAttribute('data-gx')){clear(p);p.querySelector('.lk-rd').textContent='No count then';e._i=-1;return -1}return b}
+function show(){P.forEach(function(p){p.hidden=!(p.getAttribute('data-q')===S.q&&p.getAttribute('data-w')===S.w);clear(p)});
+B.forEach(function(b){var k=b.hasAttribute('data-q')?'q':'w';b.setAttribute('aria-pressed',b.getAttribute('data-'+k)===S[k]?'true':'false')})}
+B.forEach(function(b){b.addEventListener('click',function(){var k=b.hasAttribute('data-q')?'q':'w';S[k]=b.getAttribute('data-'+k);show()})});
+P.forEach(function(p){var e=pl(p);if(!e)return;function go(ev){var i=near(p,ev.clientX);if(i>=0)mark(p,i)}
+e.addEventListener('pointerdown',go);e.addEventListener('pointermove',function(ev){if(ev.pointerType!=='touch'||ev.buttons)go(ev)});
+e.addEventListener('keydown',function(ev){var d=pts(p),i=e._i==null||e._i<0?d.length:e._i;if(ev.key==='ArrowLeft')i=Math.max(0,i-1);else if(ev.key==='ArrowRight')i=Math.min(d.length-1,i+1);
+else if(ev.key==='Escape'){clear(p);e._i=-1;return}else return;ev.preventDefault();mark(p,i)})});
+if(sw){sw.hidden=false;show()}});
 
 // T-4136 (friesevan #41 c6816980644): Operators & Direct follows each status newer than the build that carries the
 // "operators" block; a status without it leaves the build's cards (tools/site/ops_look.py). Text goes in as textContent.

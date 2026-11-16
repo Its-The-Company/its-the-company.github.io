@@ -101,12 +101,13 @@ header.site .wrap{display:flex;flex-wrap:wrap;align-items:center;gap:var(--s2) v
    viewport says viewport-fit=cover). --hdr-h is its height (bell.js measures it; these are the fallbacks), for the chat's
    own sticky rows under it and for in-page links.
    T-3185 (friesevan #201 c6701181652): no name and no logo in the bar (none was chosen, T-2952 withdrawn); the tabs sit
-   in the centre of the bar from 880 px (a 3-column grid, the bell and info buttons in the right column); on a phone the
-   bell and info share the tabs' row, so the bar is one row (measured in the T-3185 commit). */
+   in the centre of the bar from 880 px (a 3-column grid, the info button in the right column); on a phone the
+   info button shares the tabs' row, so the bar is one row (measured in the T-3185 commit). T-4278 (#41 c6859033283):
+   no bell; the notifications control is in the info panel. */
 header.site{position:sticky;top:0;z-index:30;border-bottom:1px solid var(--head-line)}
 header.site .wrap{padding-top:var(--s2);padding-bottom:var(--s2)}
 header.site .tabs a{padding:4px var(--s2)}
-header.site details.info{margin-block:0}header.site details.info summary,header.site .bell{width:36px;height:36px}
+header.site details.info{margin-block:0}header.site details.info summary{width:36px;height:36px}
 header.site .hact{flex:none;display:flex;align-items:center;gap:6px}header.site .hact>*{order:0;margin:0}
 @media (min-width:880px){
   header.site .wrap{display:grid;grid-template-columns:1fr minmax(0,460px) 1fr;column-gap:var(--s4)}
@@ -119,7 +120,7 @@ html .cv-tabs{top:var(--hdr-h)}html .cv-head{top:calc(var(--hdr-h) + var(--cv-ta
 @media (max-width:879px){
   header.site .wrap{flex-wrap:nowrap;gap:var(--s2);padding-bottom:6px}
   header.site .tabs{padding:2px;gap:2px}header.site .tabs a{padding:5px 2px;font-size:14px}header.site .tabs a{position:relative}
-  /* T-3185: a tab's count sits on its top corner, as the bell's does, so four tabs and two buttons fit one row at 320 px */
+  /* T-3185: a tab's count sits on its top corner, so four tabs and the info button fit one row at 320 px */
   header.site .tabs a .nb{position:absolute;top:-6px;right:-2px;margin:0;min-width:16px;padding:0 4px;font-size:10px;line-height:16px;box-shadow:0 0 0 2px var(--head-bg)}
   header.site .tabs a .nbs{position:absolute;top:-6px;right:-2px;display:inline-flex;gap:2px}header.site .tabs a .nbs .nb{position:static;box-shadow:0 0 0 2px var(--head-bg)}
   header.site .hact{gap:4px}
@@ -128,7 +129,7 @@ html .cv-tabs{top:var(--hdr-h)}html .cv-head{top:calc(var(--hdr-h) + var(--cv-ta
   header.site .wrap{padding-top:calc(var(--s2) + env(safe-area-inset-top));padding-left:max(var(--s4),env(safe-area-inset-left));padding-right:max(var(--s4),env(safe-area-inset-right))}
 }
 /* T-1776: About as an info icon (four-sections.md 2, C44): a <details>, so it opens without script */
-details.info{position:relative;order:2;margin-left:auto}details.info:has(~ .bell){margin-left:0}@media (min-width:880px){details.info{margin-left:0}}details.info summary{list-style:none;cursor:pointer;width:44px;height:44px;box-sizing:border-box;display:grid;place-items:center;border:1px solid var(--head-line);border-radius:var(--r-m);font:italic 700 var(--fs-2) Georgia,serif;color:var(--head-ink)}details.info summary::-webkit-details-marker{display:none}.infop{position:absolute;right:0;top:52px;z-index:20;width:min(300px,80vw);padding:var(--s3);background:var(--bg);color:var(--ink);border:1px solid var(--line);border-radius:var(--r-m);font-size:13px}.infop p{margin:0 0 var(--s2)}
+details.info{position:relative;order:2;margin-left:auto}@media (min-width:880px){details.info{margin-left:0}}details.info summary{list-style:none;cursor:pointer;width:44px;height:44px;box-sizing:border-box;display:grid;place-items:center;border:1px solid var(--head-line);border-radius:var(--r-m);font:italic 700 var(--fs-2) Georgia,serif;color:var(--head-ink)}details.info summary::-webkit-details-marker{display:none}.infop{position:absolute;right:0;top:52px;z-index:20;width:min(300px,80vw);padding:var(--s3);background:var(--bg);color:var(--ink);border:1px solid var(--line);border-radius:var(--r-m);font-size:13px}.infop p{margin:0 0 var(--s2)}
 @media (max-width:440px){.tabs a{padding:var(--s2) var(--s1)}}
 
 /* C44: the notice is one quiet line on every page, never hidden and never behind a tap. */
@@ -426,17 +427,10 @@ section.now h3{margin:0 0 var(--s1)}
 .ix .card,.ix .rec{padding:var(--s3) 0;border:0;border-bottom:1px solid var(--line);border-radius:0;background:none}.ix .card:hover b,.ix .rec:hover b{text-decoration:underline}
 
 /* additions: plan 1.3,2,4,6.4,6.6; cap 4 KB raw / 1.5 KB gz (plan 7.1) */
-.bell{order:1;margin-left:auto;position:relative;display:grid;place-items:center;width:44px;height:44px;border:1px solid var(--head-line);border-radius:var(--r-m);background:none;color:inherit}
-.bell svg{width:22px}
 .badge{position:absolute;top:-4px;right:-4px;padding:0 6px;border-radius:9px;background:var(--hot);color:var(--bg);font:800 12px/18px var(--font)}
-@media (min-width:880px){.bell{margin:0}.bellp{left:auto!important;width:400px}}
-.bellp,.sheet{position:absolute;top:100%;right:8px;left:8px;z-index:9;padding:var(--s3);background:var(--bg);color:var(--ink);border-radius:var(--r-l);box-shadow:var(--shadow)}
-.bellp{max-height:calc(100dvh - var(--hdr-h) - var(--s4));overflow-y:auto;overscroll-behavior:contain}
-.bellp h4{margin:var(--s3) 0 var(--s1);font-size:15px;font-weight:700;color:var(--ink)}
-.bellp a.item{display:flex;gap:var(--s2);align-items:center;min-height:36px;color:inherit;text-decoration:none;border-top:1px solid var(--line)}.bellp a.item:hover span:last-child{text-decoration:underline}
-.bellp a.item span:last-child{flex:1;min-width:0;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.sheet{position:absolute;top:100%;right:8px;left:8px;z-index:9;padding:var(--s3);background:var(--bg);color:var(--ink);border-radius:var(--r-l);box-shadow:var(--shadow)}
 .trial{display:flex;flex-wrap:wrap;align-items:center;gap:var(--s2);padding:var(--s2) var(--s3);border-radius:var(--r-m);background:var(--soft)}
-.trial b{flex:1}.trial small{flex-basis:100%}
+.trial b{flex:1}.trial small{flex-basis:100%}.infop .trial{margin:0 0 var(--s2)}
 .seg2{display:flex;padding:2px;border-radius:99px;background:var(--soft-2)}
 .seg2 a{padding:0 var(--s3);border-radius:inherit;color:var(--muted);text-decoration:none;font-weight:600}
 .seg2 [aria-current]{background:var(--bg);color:var(--ink)}
@@ -828,7 +822,7 @@ html,body,.cv-dock textarea,.cv-dock .cv-state{overscroll-behavior-y:auto}
 <a href="{{ '/issues/' | relative_url }}" data-issues{% if page.section == "requests" %} aria-current="page"{% endif %}>Issues{% if page.issues %} <span class="nb" hidden{% if page.issues_at %} title="{{ page.issues }} waiting on the Investors at the site build, {{ page.issues_at }}"{% endif %}>{{ page.issues }}</span>{% endif %}</a>
 <a href="{{ '/reports/' | relative_url }}"{% if page.section == "reports" or page.section == "documents" or page.section == "pitches" or page.section == "infra" %} aria-current="page"{% endif %}>Reports</a>
 </nav>
-<div class="hact"><details class="info"><summary title="About" aria-label="About this site">i</summary><div class="infop"><p>{{ site.disclosure }}</p><a href="{{ '/about.html' | relative_url }}">About the company</a><p data-scoreboard hidden style="margin:var(--s2) 0 0"><a href="{{ '/scoreboard.html' | relative_url }}">Scoreboard</a></p></div></details></div>
+<div class="hact"><details class="info"><summary title="About" aria-label="About this site">i</summary><div class="infop"><div class="trial" data-notify-ctl hidden></div><a href="{{ '/about.html' | relative_url }}">About the company</a><p data-scoreboard hidden style="margin:var(--s2) 0 0"><a href="{{ '/scoreboard.html' | relative_url }}">Scoreboard</a></p></div></details></div>
 </div></header>
 <div class="wrap notice-row">
 {% if site.announcement and site.announcement != "" %}<p class="notice announce">{{ site.announcement }}</p>{% endif %}

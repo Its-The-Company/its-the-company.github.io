@@ -1,24 +1,20 @@
 {
  "schema": 1,
- "at": "2026-11-16T17:26:34.145675+00:00",
+ "at": "2026-11-16T17:29:22.282465+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-16T10:53:39-05:00",
-  "flow": [
+  "flow": [],
+  "done": [
    {
     "t": "T-4561",
     "name": "Act on the Investors' answer on the Simulator refusals",
     "acct": "Personal b",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1794849965
-     }
-    ]
-   }
-  ],
-  "done": [
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794850104
+   },
    {
     "t": "T-4031",
     "name": "Check finished work before it ships",
@@ -90,17 +86,9 @@
     "steps": [],
     "end": "landed",
     "end_at": 1794848400
-   },
-   {
-    "t": "T-4049",
-    "name": "Check finished work before it ships",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794848131
    }
   ],
-  "landed": 51,
+  "landed": 52,
   "failed": 11
  },
  "workers": [
@@ -109,7 +97,7 @@
    "task": "[tools] T-4583 feature step ticking",
    "model": "opus",
    "started": "2026-11-16T15:55:21.544Z",
-   "seconds": 5472,
+   "seconds": 5640,
    "finished": null,
    "effort": "high"
   }
@@ -128,7 +116,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 387,
+  "runnable_count": 386,
   "blocked_count": 75
  },
  "meter": {
@@ -177,16 +165,12 @@
   "week_pct": 15.51,
   "usage_pct": 42.5,
   "work_pct": 69.1,
-  "read_at": "2026-11-16T17:26:00+00:00",
+  "read_at": "2026-11-16T17:29:00+00:00",
   "running": [
    {
     "lane": "b",
     "task": "T-4561",
-    "w": "Odalys",
-    "k": "ops",
     "t": "Act on the Investors' answer on the Simulator refusals",
-    "m": "opus",
-    "e": "high",
     "at": "2026-11-16T11:41:02-05:00",
     "n": "Jeremy",
     "d": 1,
@@ -248,7 +232,7 @@
   }
  ],
  "disk": {
-  "free_gb": 33,
+  "free_gb": 32,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -256,15 +240,15 @@
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
-   "ok": false,
-   "at": "2026-11-16T12:18:00-05:00",
+   "ok": true,
+   "at": "2026-11-16T12:27:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-16T12:26:00-05:00",
+  "at": "2026-11-16T12:29:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -418,6 +402,11 @@
   ],
   "done": [
    {
+    "w": "Odalys",
+    "t": "The Investors' answer A now lifts the two old blocks on deleting Simulators, and the cleaner...",
+    "at": "2026-11-16T12:28:00-05:00"
+   },
+   {
     "w": "Pernille",
     "t": "A second engineer checked the fix that marks a widget run as late in its log; it is sound and...",
     "at": "2026-11-16T12:20:00-05:00"
@@ -426,22 +415,21 @@
     "w": "Pernille",
     "t": "A second engineer checked that the unused project manifest reader is really gone from the...",
     "at": "2026-11-16T12:05:00-05:00"
-   },
-   {
-    "w": "Pernille",
-    "t": "An independent check of the new screen-title tests found the test-only switch is truly absent...",
-    "at": "2026-11-16T12:00:00-05:00"
    }
   ],
   "count": {
-   "next": 387,
+   "next": 386,
    "wait": 34,
    "blocked": 41,
    "you": 12
   },
   "fin": {
-   "n": 4,
+   "n": 5,
    "rows": [
+    [
+     "T-4561",
+     "Act on the Investors' answer..."
+    ],
     [
      "T-4032",
      "Check finished work before..."
@@ -500,61 +488,62 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-16T17:26:26Z",
+  "at": "2026-11-16T17:29:22Z",
   "s": {
-   "T-4561": [
-    "merging",
-    "Host checks on the Mac mini \u00b7 1 group of tests done",
-    1794849986805
-   ],
-   "T-2691": [
-    "testing",
-    "Mac Mini \u00b7 test",
-    null
-   ],
-   "T-3764": [
-    "testing",
-    "Mac Mini \u00b7 test",
-    null
-   ],
-   "T-3765": [
-    "testing",
-    "Mac Mini \u00b7 test",
-    null
-   ],
-   "T-4040": [
-    "testing",
-    "Mac Mini \u00b7 test",
-    null
-   ],
-   "T-4043": [
-    "testing",
-    "Mac Mini \u00b7 test",
-    null
-   ],
    "T-4583": [
     "testing",
     "its own tests, in its copy",
-    1794848006805
+    1794848002282
+   ],
+   "T-2691": [
+    "testq",
+    "1st for a Simulator",
+    1794850162282
+   ],
+   "T-3764": [
+    "testq",
+    "1st for a Simulator",
+    1794850162282
+   ],
+   "T-3765": [
+    "testq",
+    "1st for a Simulator",
+    1794850162282
+   ],
+   "T-4040": [
+    "testq",
+    "1st for a Simulator",
+    1794850162282
+   ],
+   "T-4043": [
+    "testq",
+    "1st for a Simulator",
+    1794850162282
+   ],
+   "T-4561": [
+    "merged",
+    "on main 12:28 PM ET",
+    1794850100000,
+    ""
    ]
   },
   "nm": {
-   "T-4561": "Act on the Investors' answer on the Simulator refusals",
+   "T-4583": "Turn on Feature mode and tick steps at the merge",
    "T-2691": "Check every archive for the phone test marker, Organizer too",
    "T-3764": "Make the iPad window test fail without the fix",
    "T-3765": "Check a real widget tap on the TestFlight build",
    "T-4040": "Check finished work before it ships",
    "T-4043": "Check finished work before it ships",
-   "T-4583": "Turn on Feature mode and tick steps at the merge"
+   "T-4561": "Act on the Investors' answer on the Simulator refusals"
   },
   "wk": {
-   "T-4561": "Odalys",
+   "T-4583": "Idris",
    "T-2691": "Idris",
    "T-3764": "Idris",
    "T-3765": "Idris",
    "T-4040": "Pernille",
    "T-4043": "Pernille",
-   "T-4583": "Idris",
+   "T-4561": "Odalys",
    "T-4032": "Pernille",
    "T-4063": "Pernille",
    "T-4067": "Pernille",
@@ -562,10 +551,10 @@
   }
  },
  "ln": {
-  "at": "2026-11-16T17:26:26Z",
+  "at": "2026-11-16T17:29:22Z",
   "mq": {
    "n": {
-    "checking": 1,
+    "checking": 0,
     "inline": 0,
     "conflicted": 2,
     "failed": 0,
@@ -574,37 +563,28 @@
     "parked": 11
    },
    "m": {
-    "checking": 0,
+    "checking": null,
     "inline": null,
-    "conflicted": 1265,
+    "conflicted": 1268,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 537
+    "parked": 540
    },
-   "cur": [
-    [
-     [
-      "T-4561"
-     ],
-     "Mac tests",
-     "Mac mini",
-     0
-    ]
-   ],
+   "cur": [],
    "ld": [
-    54,
-    "2026-11-16T17:24:45Z"
+    55,
+    "2026-11-16T17:28:24Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-16T17:26:27Z",
-    "ld": 39.55,
+    "at": "2026-11-16T17:29:32Z",
+    "ld": 26.87,
     "c": 8,
     "sb": 1,
     "dk": [
-     32.0,
+     32.1,
      228.3
     ],
     "ss": [
@@ -612,7 +592,7 @@
      953.7
     ],
     "sn": [
-     "t3765-iphone"
+     "iPhone 17e"
     ]
    },
    "macbook": {
@@ -677,10 +657,10 @@
   "main": 1,
   "lanes": 2,
   "total": 3,
-  "at": "12:26 PM",
+  "at": "12:29 PM",
   "why": "",
-  "at_iso": "2026-11-16T17:26:00+00:00",
+  "at_iso": "2026-11-16T17:29:00+00:00",
   "started": "10:53 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 1, started 10:53 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 12:26 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 1, started 10:53 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 12:29 PM ET</p></section>"
  }
 }

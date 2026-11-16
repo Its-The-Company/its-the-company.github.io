@@ -1,24 +1,20 @@
 {
  "schema": 1,
- "at": "2026-11-16T19:16:03.042008+00:00",
+ "at": "2026-11-16T19:21:14.396356+00:00",
  "session": {
   "active": false,
   "kind": "",
   "started": null,
-  "flow": [
+  "flow": [],
+  "done": [
    {
     "t": "T-4320",
     "name": "Name the accounts Evan's and Jeremy's on Home",
     "acct": "Personal b",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1794856137
-     }
-    ]
-   }
-  ],
-  "done": [
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794856724
+   },
    {
     "t": "T-0678",
     "name": "Run the refresh button inside the widget extension",
@@ -89,13 +85,6 @@
     "steps": [],
     "end": "landed",
     "end_at": 1794848931
-   },
-   {
-    "t": "T-4063",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794848747
    }
   ],
   "landed": 49,
@@ -132,36 +121,36 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 387,
+  "runnable_count": 402,
   "blocked_count": 75
  },
  "meter": {
   "five_hour": {
-   "pct": 3.0,
-   "resets_at": "2026-11-16T18:10:00-05:00",
+   "pct": 4.0,
+   "resets_at": "2026-11-16T23:09:59.956128+00:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-16T13:57:23.670637-05:00",
-   "source": "live",
-   "left": 97.0,
+   "read_at": "2026-11-16T14:21:03.843890-05:00",
+   "source": "usage",
+   "left": 96.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 21.0,
-   "resets_at": "2026-11-22T02:00:00-05:00",
+   "pct": 22.0,
+   "resets_at": "2026-11-22T06:59:59.956155+00:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-16T13:57:23.670637-05:00",
-   "source": "live",
-   "left": 79.0,
+   "read_at": "2026-11-16T14:21:03.843890-05:00",
+   "source": "usage",
+   "left": 78.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 0.0,
    "resets_at": "2026-11-22T07:00:00+00:00",
    "used_words": "of the Fable weekly allowance used",
-   "read_at": "2026-11-16T10:53:26.226781-05:00",
+   "read_at": "2026-11-16T14:21:03.843890-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-16T13:57:23.670637-05:00"
+  "read_at": "2026-11-16T14:21:03.843890-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -176,12 +165,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-16T11:08:26-05:00",
+ "next_tick": "2026-11-16T14:36:04-05:00",
  "personal": {
-  "week_pct": 15.51,
-  "usage_pct": 41.2,
-  "work_pct": 67.9,
-  "read_at": "2026-11-16T19:17:00+00:00",
+  "week_pct": 17.69,
+  "usage_pct": 44.6,
+  "work_pct": 73.1,
+  "read_at": "2026-11-16T19:21:00+00:00",
   "running": [
    {
     "lane": "b2",
@@ -207,19 +196,6 @@
     "n": "Jeremy",
     "d": 1,
     "src": "plan-b"
-   },
-   {
-    "lane": "b3",
-    "task": "T-4320",
-    "w": "Odalys",
-    "k": "site",
-    "t": "Name the accounts Evan's and Jeremy's on Home",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-16T12:33:02-05:00",
-    "n": "Jeremy",
-    "d": 1,
-    "src": "plan-b"
    }
   ]
  },
@@ -241,7 +217,7 @@
   }
  ],
  "disk": {
-  "free_gb": 24,
+  "free_gb": 25,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -250,14 +226,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-16T14:14:00-05:00",
+   "at": "2026-11-16T14:18:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 4,
-  "at": "2026-11-16T14:17:00-05:00",
+  "at": "2026-11-16T14:21:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -394,23 +370,23 @@
   ],
   "done": [
    {
-    "w": "Maren",
-    "t": "Home's count of finished work now reads 'waiting to land' and says how many are in the merge...",
-    "at": "2026-11-16T14:07:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "The Investors' answer A now lifts the two old blocks on deleting Simulators, and the cleaner...",
-    "at": "2026-11-16T12:28:00-05:00"
+    "w": "Idris",
+    "t": "A gallery preview that had to wait behind a slow Home Screen widget refresh used to run out of...",
+    "at": "2026-11-16T14:20:00-05:00"
    },
    {
     "w": "Pernille",
-    "t": "A second engineer checked the fix that marks a widget run as late in its log; it is sound and...",
-    "at": "2026-11-16T12:20:00-05:00"
+    "t": "The new words iOS shows for the app's widgets and Shortcuts were checked and are correct and...",
+    "at": "2026-11-16T14:20:00-05:00"
+   },
+   {
+    "w": "Maren",
+    "t": "Home's count of finished work now reads 'waiting to land' and says how many are in the merge...",
+    "at": "2026-11-16T14:07:00-05:00"
    }
   ],
   "count": {
-   "next": 387,
+   "next": 402,
    "wait": 34,
    "blocked": 41,
    "you": 12
@@ -455,13 +431,8 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-16T19:16:03Z",
+  "at": "2026-11-16T19:21:14Z",
   "s": {
-   "T-4320": [
-    "merging",
-    "Host checks on the Mac mini \u00b7 13 groups of tests done",
-    1794856143042
-   ],
    "T-2691": [
     "testing",
     "Mac Mini \u00b7 test",
@@ -484,14 +455,12 @@
    ]
   },
   "nm": {
-   "T-4320": "Name the accounts Evan's and Jeremy's on Home",
    "T-2691": "Check every archive for the phone test marker, Organizer too",
    "T-3765": "Check a real widget tap on the TestFlight build",
    "T-4040": "Check finished work before it ships",
    "T-4043": "Check finished work before it ships"
   },
   "wk": {
-   "T-4320": "Odalys",
    "T-2691": "Idris",
    "T-3765": "Idris",
    "T-4040": "Pernille",
@@ -499,10 +468,10 @@
   }
  },
  "ln": {
-  "at": "2026-11-16T19:16:03Z",
+  "at": "2026-11-16T19:21:14Z",
   "mq": {
    "n": {
-    "checking": 1,
+    "checking": 0,
     "inline": 0,
     "conflicted": 2,
     "failed": 2,
@@ -511,37 +480,28 @@
     "parked": 10
    },
    "m": {
-    "checking": 7,
+    "checking": null,
     "inline": null,
-    "conflicted": 1374,
-    "failed": 34,
+    "conflicted": 1380,
+    "failed": 39,
     "held": null,
     "retry": null,
-    "parked": 647
+    "parked": 624
    },
-   "cur": [
-    [
-     [
-      "T-4320"
-     ],
-     "Mac tests",
-     "Mac mini",
-     7
-    ]
-   ],
+   "cur": [],
    "ld": [
-    57,
-    "2026-11-16T18:42:47Z"
+    58,
+    "2026-11-16T19:18:44Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-16T19:16:04Z",
-    "ld": 1.55,
+    "at": "2026-11-16T19:20:40Z",
+    "ld": 0.9,
     "c": 8,
     "sb": 1,
     "dk": [
-     23.8,
+     22.6,
      228.3
     ],
     "ss": [
@@ -568,21 +528,12 @@
  "operators": [
   {
    "w": "Operator",
-   "a": "Jeremy",
+   "a": "Jeremy's Account",
    "sr": 1,
    "m": "opus",
    "e": "high",
    "t": "Work session \u2013 1 task",
    "at": "2026-11-16T12:10:47-05:00"
-  },
-  {
-   "w": "Operator",
-   "a": "Jeremy",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session",
-   "at": "2026-11-16T12:33:02-05:00"
   }
  ],
  "reply": {
@@ -602,12 +553,12 @@
  ],
  "agents_now": {
   "main": 0,
-  "lanes": 2,
-  "total": 2,
-  "at": "2:17 PM",
+  "lanes": 1,
+  "total": 1,
+  "at": "2:21 PM",
   "why": "",
-  "at_iso": "2026-11-16T19:17:00+00:00",
+  "at_iso": "2026-11-16T19:21:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 2:17 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 2:21 PM ET</p></section>"
  }
 }

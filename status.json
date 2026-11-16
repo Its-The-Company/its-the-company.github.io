@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-16T10:15:01.648208+00:00",
+ "at": "2026-11-16T10:18:02.789798+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -123,16 +123,7 @@
    "task": "[release] T-2943 upload gate build 7",
    "model": "opus",
    "started": "2026-11-16T09:44:58.790Z",
-   "seconds": 1802,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "maren",
-   "task": "[design] T-4293 Home skipped stages",
-   "model": "opus",
-   "started": "2026-11-16T09:45:15.190Z",
-   "seconds": 1786,
+   "seconds": 1983,
    "finished": null,
    "effort": "high"
   },
@@ -141,13 +132,21 @@
    "task": "[tools] T-4194 land the wiring split",
    "model": "opus",
    "started": "2026-11-16T09:47:47.943Z",
-   "seconds": 1633,
+   "seconds": 1814,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Idris x2, Maren",
+ "who": "Idris x2",
  "recent": [
+  {
+   "name": "maren",
+   "task": "[design] T-4293 Home skipped stages",
+   "model": "opus",
+   "started": "2026-11-16T09:45:15.190Z",
+   "seconds": null,
+   "finished": "2026-11-16T10:18:01.115000+00:00"
+  },
   {
    "name": "ines",
    "task": "[plan] T-4194 decide on refused land",
@@ -160,7 +159,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 379,
+  "runnable_count": 378,
   "blocked_count": 75
  },
  "meter": {
@@ -209,7 +208,7 @@
   "week_pct": 9.1,
   "usage_pct": 32.4,
   "work_pct": 76.5,
-  "read_at": "2026-11-16T10:15:00+00:00",
+  "read_at": "2026-11-16T10:18:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -239,14 +238,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-16T05:08:00-05:00",
+   "at": "2026-11-16T05:15:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-16T05:15:00-05:00",
+  "at": "2026-11-16T05:18:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -268,15 +267,6 @@
    "task": "[release] T-2943 upload gate build 7",
    "model": "opus",
    "since": "2026-11-16T09:44:58.790Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
-   "name": "Maren",
-   "state": "running",
-   "task": "[design] T-4293 Home skipped stages",
-   "model": "opus",
-   "since": "2026-11-16T09:45:15.190Z",
    "next": [],
    "effort": "high"
   },
@@ -311,6 +301,14 @@
    "model": null,
    "since": null,
    "next": []
+  },
+  {
+   "name": "Maren",
+   "state": "next",
+   "task": "Maren, P2, found on T-3366 (11-07): in...",
+   "model": null,
+   "since": null,
+   "next": []
   }
  ],
  "tasks": {
@@ -324,16 +322,6 @@
     "at": "2026-11-16T09:44:58.790Z",
     "o": "i",
     "task": "T-2943"
-   },
-   {
-    "w": "Maren",
-    "k": "design",
-    "t": "Show skipped and brief stages on Home",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-16T09:45:15.190Z",
-    "o": "c",
-    "task": "T-4293"
    },
    {
     "w": "Idris",
@@ -398,13 +386,6 @@
     "o": "c"
    },
    {
-    "w": "Maren",
-    "k": "site",
-    "t": "Show skipped and brief stages on Home",
-    "s": "next",
-    "o": "c"
-   },
-   {
     "w": "Odalys",
     "k": "tools",
     "t": "Answer Investor messages that no session claims",
@@ -417,9 +398,21 @@
     "t": "Propose the personal accounts' 5-hour stop at 97",
     "s": "next",
     "o": "i"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Alarm when one account's work keeps being...",
+    "s": "next",
+    "o": "c"
    }
   ],
   "done": [
+   {
+    "w": "Maren",
+    "t": "Home now shows a stage a task passed through between two readings as a faint chip, and a stage...",
+    "at": "2026-11-16T05:17:00-05:00"
+   },
    {
     "w": "Operator",
     "t": "This line repeated an existing board line, T-4401 (keep the parked count test off the live usage...",
@@ -429,22 +422,22 @@
     "w": "Odalys",
     "t": "Old company test folders in the temp folder are now cleared by the disk cleaner after 3 hours...",
     "at": "2026-11-16T03:41:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "Test runs now delete their own scratch folders when they finish, and the disk cleaner removes...",
-    "at": "2026-11-16T03:41:00-05:00"
    }
   ],
   "count": {
-   "next": 379,
+   "next": 378,
    "wait": 34,
    "blocked": 41,
    "you": 12
   },
   "fin": {
-   "n": 0,
-   "rows": []
+   "n": 1,
+   "rows": [
+    [
+     "T-4293",
+     "Show skipped and brief..."
+    ]
+   ]
   }
  },
  "qr": [
@@ -486,32 +479,32 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-16T10:14:48Z",
+  "at": "2026-11-16T10:18:02Z",
   "s": {
    "T-3552": [
     "mergetest",
     "Xcode checks on the MacBook, 1st to merge",
-    1794823068082
+    1794823082789
    ],
    "T-0687": [
     "mergetest",
     "Xcode checks on the MacBook, 2nd to merge",
-    1794823368082
+    1794823382789
    ],
    "T-0972": [
     "mergetest",
     "Xcode checks on the MacBook, 3rd to merge",
-    1794823548082
+    1794823562789
    ],
    "T-2943": [
     "testing",
     "Mac Mini \u00b7 test",
     null
    ],
-   "T-4293": [
+   "T-4194": [
     "testing",
     "its own tests, in its copy",
-    1794824028082
+    1794824282789
    ]
   },
   "nm": {
@@ -519,18 +512,19 @@
    "T-0687": "Run network fetches inside the extension on the Simulator",
    "T-0972": "Decide how a script's refresh path is chosen on send",
    "T-2943": "Send up the gate build and confirm it stays internal",
-   "T-4293": "Show skipped and brief stages on Home"
+   "T-4194": "Build the feature session for app work"
   },
   "wk": {
    "T-3552": "Idris",
    "T-0687": "Idris",
    "T-0972": "Idris",
    "T-2943": "Idris",
+   "T-4194": "Idris",
    "T-4293": "Maren"
   }
  },
  "ln": {
-  "at": "2026-11-16T10:14:48Z",
+  "at": "2026-11-16T10:18:02Z",
   "mq": {
    "n": {
     "checking": 3,
@@ -542,13 +536,13 @@
     "parked": 8
    },
    "m": {
-    "checking": 12,
+    "checking": 15,
     "inline": null,
-    "conflicted": 2036,
+    "conflicted": 2039,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 136
+    "parked": 139
    },
    "cur": [
     [
@@ -557,7 +551,7 @@
      ],
      "iPhone app tests",
      "MacBook",
-     17
+     20
     ],
     [
      [
@@ -565,7 +559,7 @@
      ],
      "iPhone app tests",
      "MacBook",
-     12
+     15
     ],
     [
      [
@@ -573,7 +567,7 @@
      ],
      "iPhone app tests",
      "MacBook",
-     9
+     12
     ]
    ],
    "ld": [
@@ -583,16 +577,16 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-16T10:14:49Z",
-    "ld": 26.97,
+    "at": "2026-11-16T10:17:18Z",
+    "ld": 17.59,
     "c": 8,
     "sb": 0,
     "dk": [
-     17.1,
+     17.9,
      228.3
     ],
     "ss": [
-     187.2,
+     186.6,
      953.7
     ],
     "sn": []
@@ -630,6 +624,7 @@
   "lane_next",
   "queue_text",
   "task_done",
+  "fin_short",
   "task_title",
   "done_text",
   "task_open",
@@ -637,13 +632,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 3,
+  "main": 2,
   "lanes": 0,
-  "total": 3,
-  "at": "5:15 AM",
+  "total": 2,
+  "at": "5:18 AM",
   "why": "",
-  "at_iso": "2026-11-16T10:15:00+00:00",
+  "at_iso": "2026-11-16T10:18:00+00:00",
   "started": "4:43 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 4:43 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 5:15 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 4:43 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 5:18 AM ET</p></section>"
  }
 }

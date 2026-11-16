@@ -1,10 +1,10 @@
 {
  "schema": 1,
- "at": "2026-11-16T12:46:01.707257+00:00",
+ "at": "2026-11-16T12:49:03.204450+00:00",
  "session": {
-  "active": false,
-  "kind": "",
-  "started": null,
+  "active": true,
+  "kind": "work",
+  "started": "2026-11-16T07:46:03-05:00",
   "flow": [
    {
     "t": "T-4558",
@@ -177,12 +177,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-16T07:59:48-05:00",
+ "next_tick": null,
  "personal": {
   "week_pct": 10.07,
   "usage_pct": 33.5,
   "work_pct": 72.1,
-  "read_at": "2026-11-16T12:46:00+00:00",
+  "read_at": "2026-11-16T12:49:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -461,7 +461,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-16T07:46:00-05:00",
+  "at": "2026-11-16T07:49:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -469,9 +469,13 @@
    "b": "double-spread"
   }
  },
- "next_tick_why": "last_tick",
+ "next_tick_why": "session",
  "idle": null,
- "pool": null,
+ "pool": {
+  "why": "Double Spread: 80% of the week left, paced to last until Wed 14:00, the week's halfway point; the machine allows 2 (new work waits: 19 tasks wait to merge (limit 12): 2 agents finish and merge...",
+  "n": 2,
+  "at": "2026-11-16T07:44:48.036186-05:00"
+ },
  "lanes": [
   {
    "name": "Idris",
@@ -524,6 +528,7 @@
  ],
  "tasks": {
   "run": [],
+  "src": "plan",
   "open": [
    {
     "w": "Idris",
@@ -618,6 +623,10 @@
    "wait": 34,
    "blocked": 42,
    "you": 12
+  },
+  "fin": {
+   "n": 0,
+   "rows": []
   }
  },
  "qr": [
@@ -659,47 +668,47 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-16T12:46:01Z",
+  "at": "2026-11-16T12:49:03Z",
   "s": {
    "T-4564": [
     "merging",
     "Host checks on the Mac mini",
-    1794833161707
+    1794833163204
    ],
    "T-3970": [
     "mergeq",
     "1st to merge",
-    1794828601707
+    1794828603204
    ],
    "T-4558": [
     "mergeq",
     "2nd to merge",
-    1794830461707
+    1794830463204
    ],
    "T-4256": [
     "mergetest",
     "Xcode checks on the MacBook, 3rd to merge",
-    1794832021707
+    1794832023204
    ],
    "T-4554": [
     "mergeq",
     "4th to merge",
-    1794831601707
+    1794831543204
    ],
    "T-4555": [
     "mergeq",
     "5th to merge",
-    1794831961707
+    1794831963204
    ],
    "T-4022": [
     "mergeq",
     "6th to merge",
-    1794832201707
+    1794832203204
    ],
    "T-4020": [
     "mergeq",
     "7th to merge",
-    1794832321707
+    1794832323204
    ],
    "T-3764": [
     "testing",
@@ -709,27 +718,27 @@
    "T-4506": [
     "testq",
     "1st for a Simulator",
-    1794833041707
+    1794833043204
    ],
    "T-4565": [
     "testq",
     "1st for a Simulator",
-    1794833041707
+    1794833043204
    ],
    "T-3745": [
     "testq",
     "2nd for a Simulator",
-    1794833161707
+    1794833163204
    ],
    "T-4433": [
     "testq",
     "2nd for a Simulator",
-    1794833161707
+    1794833163204
    ],
    "T-4435": [
     "testq",
     "2nd for a Simulator",
-    1794833161707
+    1794833163204
    ],
    "T-4529": [
     "merged",
@@ -790,7 +799,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-16T12:46:01Z",
+  "at": "2026-11-16T12:49:03Z",
   "mq": {
    "n": {
     "checking": 2,
@@ -802,13 +811,13 @@
     "parked": 10
    },
    "m": {
-    "checking": 9,
-    "inline": 23,
-    "conflicted": 2187,
+    "checking": 12,
+    "inline": 26,
+    "conflicted": 2190,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 257
+    "parked": 260
    },
    "cur": [
     [
@@ -817,7 +826,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     0
+     3
     ],
     [
      [
@@ -825,7 +834,7 @@
      ],
      "iPhone app tests",
      "MacBook",
-     19
+     22
     ]
    ],
    "ld": [
@@ -835,12 +844,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-16T12:46:03Z",
-    "ld": 29.41,
+    "at": "2026-11-16T12:49:05Z",
+    "ld": 29.23,
     "c": 8,
     "sb": 1,
     "dk": [
-     47.0,
+     46.9,
      228.3
     ],
     "ss": [
@@ -865,6 +874,15 @@
   }
  },
  "operators": [
+  {
+   "w": "Operator",
+   "a": "Main plan",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session",
+   "at": "2026-11-16T07:46:03-05:00"
+  },
   {
    "w": "Operator",
    "a": "Evan",
@@ -908,7 +926,7 @@
    "m": "opus",
    "e": "high",
    "t": "Work session \u2013 1 task",
-   "at": "2026-11-16T07:39:41-05:00"
+   "at": "2026-11-16T07:02:23-05:00"
   },
   {
    "w": "Operator",
@@ -939,10 +957,10 @@
   "main": 0,
   "lanes": 6,
   "total": 6,
-  "at": "7:46 AM",
+  "at": "7:49 AM",
   "why": "",
-  "at_iso": "2026-11-16T12:46:00+00:00",
-  "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 6 sessions \u00b7 as of 7:46 AM ET</p></section>"
+  "at_iso": "2026-11-16T12:49:00+00:00",
+  "started": "7:46 AM",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 0, started 7:46 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 6 sessions \u00b7 as of 7:49 AM ET</p></section>"
  }
 }

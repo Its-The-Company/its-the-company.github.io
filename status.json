@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-16T19:54:46.834588+00:00",
+ "at": "2026-11-16T19:57:51.337190+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -96,7 +96,7 @@
    "task": "[tools] T-3992 recut parked lane-a batch",
    "model": "opus",
    "started": "2026-11-16T19:25:02.030Z",
-   "seconds": 1784,
+   "seconds": 1969,
    "finished": null,
    "effort": "high"
   }
@@ -115,7 +115,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 409,
+  "runnable_count": 410,
   "blocked_count": 75
  },
  "meter": {
@@ -164,7 +164,7 @@
   "week_pct": 17.69,
   "usage_pct": 44.6,
   "work_pct": 73.1,
-  "read_at": "2026-11-16T19:54:00+00:00",
+  "read_at": "2026-11-16T19:57:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -212,6 +212,7 @@
     "e": "high",
     "at": "2026-11-16T14:52:19-05:00",
     "n": "Evan",
+    "d": 1,
     "src": "plan-a"
    },
    {
@@ -286,7 +287,7 @@
  "lock_in": {
   "on": false,
   "pool": 4,
-  "at": "2026-11-16T14:54:00-05:00",
+  "at": "2026-11-16T14:57:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -456,7 +457,7 @@
    }
   ],
   "count": {
-   "next": 409,
+   "next": 410,
    "wait": 35,
    "blocked": 40,
    "you": 12
@@ -510,24 +511,66 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-16T19:54:29Z",
+  "at": "2026-11-16T19:57:22Z",
   "s": {
+   "T-4068": [
+    "testing",
+    "Mac Mini \u00b7 test",
+    null
+   ],
+   "T-4076": [
+    "testing",
+    "Mac Mini \u00b7 test",
+    null
+   ],
    "T-4295": [
     "testing",
     "its own tests, in its copy",
-    1794857609598
+    1794857662673
+   ],
+   "T-4031": [
+    "testq",
+    "2nd for a Simulator",
+    1794859042673
+   ],
+   "T-4032": [
+    "testq",
+    "2nd for a Simulator",
+    1794859042673
+   ],
+   "T-4046": [
+    "testq",
+    "2nd for a Simulator",
+    1794859042673
+   ],
+   "T-4047": [
+    "testq",
+    "2nd for a Simulator",
+    1794859042673
    ]
   },
   "nm": {
-   "T-4295": "Let Chat messages pick model, effort and account"
+   "T-4068": "Check finished work before it ships",
+   "T-4076": "Check finished work before it ships",
+   "T-4295": "Let Chat messages pick model, effort and account",
+   "T-4031": "Check finished work before it ships",
+   "T-4032": "Check finished work before it ships",
+   "T-4046": "Check finished work before it ships",
+   "T-4047": "Check finished work before it ships"
   },
   "wk": {
+   "T-4068": "Pernille",
+   "T-4076": "Pernille",
    "T-4295": "Odalys",
+   "T-4031": "Pernille",
+   "T-4032": "Pernille",
+   "T-4046": "Pernille",
+   "T-4047": "Pernille",
    "T-4443": "Odalys"
   }
  },
  "ln": {
-  "at": "2026-11-16T19:54:29Z",
+  "at": "2026-11-16T19:57:22Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -541,11 +584,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 1413,
+    "conflicted": 1416,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 618
+    "parked": 621
    },
    "cur": [],
    "ld": [
@@ -555,12 +598,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-16T19:54:06Z",
-    "ld": 1.79,
+    "at": "2026-11-16T19:57:32Z",
+    "ld": 7.33,
     "c": 8,
-    "sb": 1,
+    "sb": 2,
     "dk": [
-     31.2,
+     29.9,
      228.3
     ],
     "ss": [
@@ -568,7 +611,8 @@
      953.7
     ],
     "sn": [
-     "t3765-iphone"
+     "t3765-iphone",
+     "iPhone 17"
     ]
    },
    "macbook": {
@@ -609,7 +653,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 2 tasks",
+   "t": "Work session \u2013 1 task",
    "at": "2026-11-16T14:52:19-05:00"
   },
   {
@@ -651,10 +695,10 @@
   "main": 1,
   "lanes": 4,
   "total": 5,
-  "at": "2:54 PM",
+  "at": "2:57 PM",
   "why": "",
-  "at_iso": "2026-11-16T19:54:00+00:00",
+  "at_iso": "2026-11-16T19:57:00+00:00",
   "started": "2:21 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 1, started 2:21 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 2:54 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 1, started 2:21 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 2:57 PM ET</p></section>"
  }
 }

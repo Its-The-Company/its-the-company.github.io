@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-16T02:46:25.297883+00:00",
+ "at": "2026-11-16T02:49:30.230934+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -104,25 +104,16 @@
     "end_at": 1794779989
    }
   ],
-  "landed": 14,
+  "landed": 13,
   "failed": 8
  },
  "workers": [
-  {
-   "name": "odalys",
-   "task": "[tools] T-4537 clean disk before pausing",
-   "model": "opus",
-   "started": "2026-11-16T01:32:48.168Z",
-   "seconds": 4417,
-   "finished": null,
-   "effort": "high"
-  },
   {
    "name": "idris",
    "task": "[tools] T-4194 wire and switch on feature sessions",
    "model": "opus",
    "started": "2026-11-16T02:43:06.794Z",
-   "seconds": 198,
+   "seconds": 383,
    "finished": null,
    "effort": "high"
   },
@@ -131,13 +122,21 @@
    "task": "[design] T-4542 revise ADR-011 after Pernille review",
    "model": "opus",
    "started": "2026-11-16T02:43:31.677Z",
-   "seconds": 173,
+   "seconds": 358,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Odalys, Idris x2",
+ "who": "Idris x2",
  "recent": [
+  {
+   "name": "odalys",
+   "task": "[tools] T-4537 clean disk before pausing",
+   "model": "opus",
+   "started": "2026-11-16T01:32:48.168Z",
+   "seconds": null,
+   "finished": "2026-11-16T02:48:18.537000+00:00"
+  },
   {
    "name": "pernille",
    "task": "[review] T-4542 Pernille reviews ADR-011 Python contract",
@@ -161,20 +160,12 @@
    "started": "2026-11-16T02:16:11.402Z",
    "seconds": null,
    "finished": "2026-11-16T02:34:57.315000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-4515 Habits tap opens its habit",
-   "model": "opus",
-   "started": "2026-11-16T01:33:02.627Z",
-   "seconds": null,
-   "finished": "2026-11-16T02:25:20.563000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 377,
+  "runnable_count": 376,
   "blocked_count": 75
  },
  "meter": {
@@ -223,7 +214,7 @@
   "week_pct": 4.62,
   "usage_pct": 26.2,
   "work_pct": 68.8,
-  "read_at": "2026-11-16T02:46:00+00:00",
+  "read_at": "2026-11-16T02:49:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -260,7 +251,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-15T21:46:00-05:00",
+  "at": "2026-11-15T21:49:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -276,15 +267,6 @@
   "at": "2026-11-15T20:29:58.478388-05:00"
  },
  "lanes": [
-  {
-   "name": "Odalys",
-   "state": "running",
-   "task": "[tools] T-4537 clean disk before pausing",
-   "model": "opus",
-   "since": "2026-11-16T01:32:48.168Z",
-   "next": [],
-   "effort": "high"
-  },
   {
    "name": "Idris",
    "state": "running",
@@ -311,6 +293,14 @@
    "next": []
   },
   {
+   "name": "Odalys",
+   "state": "next",
+   "task": "A lane record main refused: failed...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
    "name": "Wrenna",
    "state": "next",
    "task": "Wrenna, P2, T-2375 continuation (B-staged item 3...",
@@ -329,16 +319,6 @@
  ],
  "tasks": {
   "run": [
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Clean the Mac mini's disk instead of pausing work",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-16T01:32:48.168Z",
-    "o": "c",
-    "task": "T-4537"
-   },
    {
     "w": "Idris",
     "k": "tools",
@@ -362,13 +342,6 @@
   ],
   "src": "plan",
   "open": [
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Clean the Mac mini's disk instead of pausing...",
-    "s": "next",
-    "o": "i"
-   },
    {
     "w": "Idris",
     "k": "measure",
@@ -431,9 +404,21 @@
     "t": "Answer Investor messages that no session claims",
     "s": "next",
     "o": "c"
+   },
+   {
+    "w": "Ines",
+    "k": "tools",
+    "t": "Propose the personal accounts' 5-hour stop at 97",
+    "s": "next",
+    "o": "i"
    }
   ],
   "done": [
+   {
+    "w": "Odalys",
+    "t": "When the Mac mini's disk falls under the line, the build gate now cleans first and pauses only...",
+    "at": "2026-11-15T21:48:00-05:00"
+   },
    {
     "w": "Odalys",
     "t": "An account no longer sits idle because an old parked change of its own cannot run; that slot now...",
@@ -443,22 +428,21 @@
     "w": "Odalys",
     "t": "Every Operator session now runs on Opus at high effort, as the Investors asked: work sessions no...",
     "at": "2026-11-15T21:25:00-05:00"
-   },
-   {
-    "w": "Idris",
-    "t": "Tapping a habit's row on the Habits widget now opens the Habits settings page at that habit,...",
-    "at": "2026-11-15T21:15:00-05:00"
    }
   ],
   "count": {
-   "next": 377,
+   "next": 376,
    "wait": 35,
    "blocked": 40,
    "you": 11
   },
   "fin": {
-   "n": 3,
+   "n": 4,
    "rows": [
+    [
+     "T-4537",
+     "Clean the Mac mini's disk..."
+    ],
     [
      "T-4539",
      "Get both personal accounts..."
@@ -513,13 +497,8 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-16T02:46:19Z",
+  "at": "2026-11-16T02:49:09Z",
   "s": {
-   "T-4537": [
-    "testing",
-    "its own tests, in its copy",
-    1794795259462
-   ],
    "T-4542": [
     "merged",
     "on main 9:42 PM ET",
@@ -528,12 +507,11 @@
    ]
   },
   "nm": {
-   "T-4537": "Clean the Mac mini's disk instead of pausing work",
    "T-4542": "Let people choose what a widget tap does"
   }
  },
  "ln": {
-  "at": "2026-11-16T02:46:19Z",
+  "at": "2026-11-16T02:49:09Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -542,16 +520,16 @@
     "failed": 0,
     "held": 0,
     "retry": 0,
-    "parked": 3
+    "parked": 2
    },
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 1588,
+    "conflicted": 1591,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 468
+    "parked": 819
    },
    "cur": [],
    "ld": [
@@ -561,12 +539,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-16T02:45:57Z",
-    "ld": 2.98,
+    "at": "2026-11-16T02:48:47Z",
+    "ld": 3.31,
     "c": 8,
     "sb": 0,
     "dk": [
-     10.9,
+     11.1,
      228.3
     ],
     "ss": [
@@ -607,6 +585,7 @@
  "trimmed": [
   "lane_next",
   "queue_text",
+  "recent",
   "task_done",
   "fin_short",
   "task_title",
@@ -616,13 +595,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 3,
+  "main": 2,
   "lanes": 0,
-  "total": 3,
-  "at": "9:46 PM",
+  "total": 2,
+  "at": "9:49 PM",
   "why": "",
-  "at_iso": "2026-11-16T02:46:00+00:00",
+  "at_iso": "2026-11-16T02:49:00+00:00",
   "started": "8:30 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 8:30 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:46 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 8:30 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:49 PM ET</p></section>"
  }
 }

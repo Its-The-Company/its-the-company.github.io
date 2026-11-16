@@ -1,11 +1,23 @@
 {
  "schema": 1,
- "at": "2026-11-16T09:35:52.949462+00:00",
+ "at": "2026-11-16T09:43:11.186669+00:00",
  "session": {
-  "active": true,
-  "kind": "work",
-  "started": "2026-11-16T04:01:22-05:00",
-  "flow": [],
+  "active": false,
+  "kind": "",
+  "started": null,
+  "flow": [
+   {
+    "t": "T-3552",
+    "name": "Test gallery and widget runs together with a stalled sensor",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "testq",
+      "at": 1794822050
+     }
+    ]
+   }
+  ],
   "done": [
    {
     "t": "T-4548",
@@ -109,20 +121,20 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 3.0,
-   "resets_at": "2026-11-16T08:10:00-05:00",
+   "pct": 4.0,
+   "resets_at": "2026-11-16T13:09:59.728245+00:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-16T04:35:34.524164-05:00",
-   "source": "live",
-   "left": 97.0,
+   "read_at": "2026-11-16T04:42:53.742307-05:00",
+   "source": "usage",
+   "left": 96.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 19.0,
-   "resets_at": "2026-11-22T02:00:00-05:00",
+   "resets_at": "2026-11-22T06:59:59.728265+00:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-16T04:35:34.524164-05:00",
-   "source": "live",
+   "read_at": "2026-11-16T04:42:53.742307-05:00",
+   "source": "usage",
    "left": 81.0,
    "left_words": "of your weekly allowance left"
   },
@@ -130,10 +142,10 @@
    "pct": 0.0,
    "resets_at": "2026-11-22T07:00:00+00:00",
    "used_words": "of the Fable weekly allowance used",
-   "read_at": "2026-11-16T04:01:10.655277-05:00",
+   "read_at": "2026-11-16T04:42:53.742307-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-16T04:35:34.524164-05:00"
+  "read_at": "2026-11-16T04:42:53.742307-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -148,13 +160,37 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": null,
+ "next_tick": "2026-11-16T04:57:54-05:00",
  "personal": {
   "week_pct": 9.1,
   "usage_pct": 32.4,
-  "work_pct": 78.1,
-  "read_at": "2026-11-16T09:38:00+00:00",
+  "work_pct": 76.5,
+  "read_at": "2026-11-16T09:43:00+00:00",
   "running": [
+   {
+    "lane": "a",
+    "task": "T-4475",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Land a lane's queued records without commits of their own",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-16T04:40:01-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a",
+    "task": "T-4567",
+    "w": "Odalys",
+    "k": "measure",
+    "t": "Measure the inbox wait experiment OPT-064",
+    "m": "sonnet",
+    "e": "medium",
+    "at": "2026-11-16T04:40:01-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
    {
     "lane": "a3",
     "task": "T-3552",
@@ -188,7 +224,7 @@
   }
  ],
  "disk": {
-  "free_gb": 18,
+  "free_gb": 19,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -197,14 +233,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-16T04:35:00-05:00",
+   "at": "2026-11-16T04:40:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-16T04:38:00-05:00",
+  "at": "2026-11-16T04:43:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -212,13 +248,9 @@
    "b": "double-spread"
   }
  },
- "next_tick_why": "session",
+ "next_tick_why": "last_tick",
  "idle": null,
- "pool": {
-  "why": "Double Spread: 81% of the week left, paced to last until Wed 14:00, the week's halfway point; the machine allows 2 (new work waits: 12 tasks wait to merge (limit 12): 2 agents finish and merge...",
-  "n": 2,
-  "at": "2026-11-16T04:01:10.992807-05:00"
- },
+ "pool": null,
  "lanes": [
   {
    "name": "Idris",
@@ -271,7 +303,6 @@
  ],
  "tasks": {
   "run": [],
-  "src": "plan",
   "open": [
    {
     "w": "Idris",
@@ -366,10 +397,6 @@
    "wait": 34,
    "blocked": 41,
    "you": 12
-  },
-  "fin": {
-   "n": 0,
-   "rows": []
   }
  },
  "qr": [
@@ -411,88 +438,70 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-16T09:35:39Z",
+  "at": "2026-11-16T09:43:11Z",
   "s": {
-   "T-0687": [
-    "testing",
-    "Mac Mini \u00b7 test",
-    null
-   ],
-   "T-0972": [
-    "testing",
-    "Mac Mini \u00b7 test",
-    null
-   ],
    "T-3552": [
-    "testing",
-    "Mac Mini \u00b7 test",
-    null
+    "merging",
+    "Host checks on the Mac mini",
+    1794822071186
    ]
   },
   "nm": {
-   "T-0687": "Run network fetches inside the extension on the Simulator",
-   "T-0972": "Decide how a script's refresh path is chosen on send",
    "T-3552": "Test gallery and widget runs together with a stalled sensor"
   },
   "wk": {
-   "T-0687": "Idris",
-   "T-0972": "Idris",
    "T-3552": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-16T09:35:39Z",
+  "at": "2026-11-16T09:43:11Z",
   "mq": {
    "n": {
-    "checking": 0,
+    "checking": 1,
     "inline": 0,
     "conflicted": 1,
     "failed": 0,
     "held": 0,
     "retry": 2,
-    "parked": 8
+    "parked": 7
    },
    "m": {
-    "checking": null,
+    "checking": 2,
     "inline": null,
-    "conflicted": 1997,
+    "conflicted": 2005,
     "failed": null,
     "held": null,
-    "retry": 24,
-    "parked": 96
+    "retry": 31,
+    "parked": 134
    },
-   "cur": [],
+   "cur": [
+    [
+     [
+      "T-3552"
+     ],
+     "Mac tests",
+     "Mac mini",
+     2
+    ]
+   ],
    "ld": [
-    12,
-    "2026-11-16T09:19:17Z"
+    13,
+    "2026-11-16T09:40:39Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-16T09:34:54Z",
-    "ld": 23.52,
+    "at": "2026-11-16T09:43:12Z",
+    "ld": 8.42,
     "c": 8,
-    "sb": 1,
+    "sb": 0,
     "dk": [
-     18.7,
+     20.0,
      228.3
     ],
     "ss": [
-     185.8,
+     187.2,
      953.7
-    ],
-    "sn": [
-     "iPhone 18 Pro"
-    ]
-   },
-   "macbook": {
-    "at": "2026-11-16T09:01:31Z",
-    "ld": 0.33,
-    "c": 12,
-    "sb": 0,
-    "dk": [
-     355.6,
-     926.4
     ],
     "sn": []
    }
@@ -501,12 +510,12 @@
  "operators": [
   {
    "w": "Operator",
-   "a": "Main plan",
+   "a": "Evan",
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session",
-   "at": "2026-11-16T04:01:22-05:00"
+   "t": "Work session \u2013 2 tasks",
+   "at": "2026-11-16T04:40:01-05:00"
   },
   {
    "w": "Operator",
@@ -514,7 +523,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 1 task",
+   "t": "Work session",
    "at": "2026-11-16T04:03:03-05:00"
   }
  ],
@@ -535,12 +544,12 @@
  ],
  "agents_now": {
   "main": 0,
-  "lanes": 1,
-  "total": 1,
-  "at": "4:38 AM",
+  "lanes": 2,
+  "total": 2,
+  "at": "4:43 AM",
   "why": "",
-  "at_iso": "2026-11-16T09:38:00+00:00",
+  "at_iso": "2026-11-16T09:43:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 4:38 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 4:43 AM ET</p></section>"
  }
 }

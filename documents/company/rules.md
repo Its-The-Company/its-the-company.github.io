@@ -666,6 +666,8 @@ The Effect lines of the amendments.md entries the charter retired (2026-11-04 12
 - **2026-11-15 9:11 PM ET** ((private)): Interactive widget buttons are in 1.0, not after it; the tap actions design (T-4542) covers them as 1.0 work and the plan and date effect are set by board line T-4543.
 - **2026-11-15 9:38 PM ET** ((private)): Feature sessions are switched on as soon as their wiring is built and tested, not on the 11-20 trial date: T-4194 goes to the front of app tooling, on the main session (pin lifted).
 - **2026-11-15 10:00 PM ET** ((private)): The company deletes on its own whatever can safely be deleted to keep the disk over its line (finished work copies with nothing main lacks or saved to the SSD, build caches, test leftovers), and the cleaning runs automatically from now on; a deletion a safety check still refuses goes to the Investors by hand.
+- **2026-11-16 9:21 AM ET** ((private)): Option A on <span title="A GitHub issue asking the Investors for something that is blocking work.">Urgent Request</span> #313: both Simulator refusals are lifted, for Simulators only: the automatic cleaning may delete Simulators made for finished tasks and erase (empty, keep) standard ones nothing uses, one at a time through the company's own tool, never one in use, named by a script, or for an open task, each deletion listed with its size in the disk keeper's record (board line T-4561).
+- **2026-11-16 9:29 AM ET** ((private)): Feature sessions are switched on (first T-4191, at most two at once), because one landing per feature in place of one per step cuts merges and iPhone runs (ops/plans/app-features.md 3.3: 187 step merges become 27 to 54); steps are ticked by hand until T-4194's tick part is built.
 {% endraw %}
 
 </div>

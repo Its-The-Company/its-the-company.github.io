@@ -58,7 +58,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 ## Lessons
 - T-4460+T-3684 5817998dd3 (11-16): sweep test pass (3 h, one listing) + tests/temp_clean.py. Owed: first live run's 'test temp pass' line; 7-day count. + site_t3219 cleanup owed after T-4455
-- T-4529 3e77aef319 (11-16): dispatch.py order --json / start_order() for T-4530 (Maren). Ticked (outbox).
+- T-4584 (11-16): runner_watch skips jobs the runner ended (status error + reason, no exit/output); first_error names the reason; metric land_checks_runner_ended. 27/534 results so. Also fixed main's board_notes_readers red (xc_sim via board_notes = T-4535's fix). Operator ticks.
 {% endraw %}
 
 

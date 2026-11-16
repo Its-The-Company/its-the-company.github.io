@@ -33,9 +33,6 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 ## Open
 
-- T-0678.7 11-13 (feb15a1ceb): T-0678 slices FIX FIRST; H1+M1 = T-4414, M2 = T-4415, M3 = T-4416, L = T-4417 (Idris); agreed iOS 27 .main pin. Lesson: a rule keyed on an author-set field (sampled_at) measures the author, not the run; ask who writes the input.
-- T-4418 11-14 (c267c4ecb3): T-1440 refresh tap PASS w/ notes; M1-M3 = T-4433..35, L = T-4436 (Idris). Lesson: tests hosted in the app see TreeHost.isExtension false, so extension-only branches are never drawn; look for that first.
-- T-4439 11-14 LANDED a1d5dc5e46 (ticked): T-3279 PASS w/ findings; M1 = T-4440, M2 = T-4441, L1-L3 = T-4442 (Idris), M3 on T-3279's line. Guard refused the first write in main; restarted in a scratch worktree under a logged T-0848 decision. Lesson: a review file goes in my own copy first, whatever the packet says.
 - T-4123 11-15: ledger patterns second pass (1787 rows, 781 studied). Lesson: a ledger "tick" can be a close made elsewhere ("Not open when judged"); templated titles beat the machine regex.
 - T-4468/T-4504 11-15: premade Page limits measured in render.py; Clocks Small row redesigned (time on the name's line, priority 1; offset own line), Name 9 -> 11. Lesson: check the sum first: a full-size time plus the widest label at 0.8 can exceed a 158 pt Small, so priority alone cannot keep both; render.py never shrinks a VStack in an HStack.
 - Older entries (2026-10-25 8:12 PM to 2026-10-27 T-0391: bridge contract v1-v4, DSL v1, stdlib manifest, OPS-4/5, installer) are in archive.md; 11-12/13 reviews T-4204, T-4171, T-4238, T-4217, T-4214, T-4242 too.
@@ -51,6 +48,8 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - Open (mine, not on the board, from T-0515 H1): runtime stamps a daemon thread's writes with its origin run, so A's thread output cannot show in B.
 
 - T-1992 (01a58b94f): keeper stops show only in the exit code. T-2971 reviews my fix. Lesson: count a fix in the logs before calling a finding closed.
+- T-4022 11-16 (20c6fd02fa, ticked): T-1442 s9 strings PASS w/ findings; M1 Ines, L1-L3 Idris, board add refused (rule 14). Lesson: no 'iPhone 16/17' Simulators here (iPhone 18 Pro); a shared Mac's Xcode lock can eat 45 min and still end 75.
+- T-4020 11-16 (852fbb4257, ticked): T-3664 launcher editor model PASS w/ findings; M1 schemes in every build = T-4574, M2 Shortcut link = T-4575, L1-L4 = T-4576 (Idris). Lesson: Core's scheme is PyWidgetCore-Package; a URL check must <span title="A measured fact that holds a grade below a letter, however good the rest is.">cap</span> what is stored, not what was typed.
 {% endraw %}
 
 

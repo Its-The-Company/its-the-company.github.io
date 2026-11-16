@@ -42,6 +42,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - Kept lessons: before redoing a task, grep ops/personal_retry.txt and `git log main --grep` for its ID (T-2282, T-4293 were already on main); before drafting a request card, `gh issue list` for an open one (T-0625 duplicated #94; drafted as its update); never amend in a shared repo; read terms/licences in their own command before any fetch; count claims by script; script the contrast; never stamp a time ahead of `date`; when blind_packet refuses, stop and report line numbers; board_tick Evidence is a bare path, frame numbers go in Detail; snapshot sheets use stand-in grounds and frozen timers, so a fail list must say what a snapshot can and cannot show.
 
 - 2026-11-16 T-4558 premade buttons (bc332cb0ac, premade-inputs s9): Habits only, Done today (S1 M3 L6). Lesson: stacked rows can't hold 44 pt + 12 pt targets in Medium (156 of 116) or Large (324 of 292); check rows before promising per-row buttons. Open: route A/B for the mark (Pernille, Idris).
+- 2026-11-16 T-4555 When tapped frames (when-tapped/, 34 per appearance). Lessons: draw_ide's render() runs ~7 min for 8 sheets; look at one sheet before re-rendering all. Back labels over 96 px truncate: write "Back". Shipped strings say "PyWidget"; ADR prose says pywidget.
 {% endraw %}
 
 

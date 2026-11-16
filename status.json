@@ -1,12 +1,20 @@
 {
  "schema": 1,
- "at": "2026-11-16T09:16:38.202332+00:00",
+ "at": "2026-11-16T09:19:46.978352+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-16T04:01:22-05:00",
   "flow": [],
   "done": [
+   {
+    "t": "T-4548",
+    "name": "Read one widget action value strictly",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794820757
+   },
    {
     "t": "T-4010",
     "name": "Rebuild This Session as a full flowchart",
@@ -76,17 +84,9 @@
     "steps": [],
     "end": "landed",
     "end_at": 1794809962
-   },
-   {
-    "t": "T-4451",
-    "name": "Read the flagged lines once a day with a model",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794808235
    }
   ],
-  "landed": 27,
+  "landed": 28,
   "failed": 5
  },
  "workers": [
@@ -95,7 +95,7 @@
    "task": "[tools] T-3995 land personal_land batch",
    "model": "opus",
    "started": "2026-11-16T09:02:22.631Z",
-   "seconds": 855,
+   "seconds": 1044,
    "finished": null,
    "effort": "high"
   }
@@ -154,7 +154,7 @@
   "week_pct": 9.1,
   "usage_pct": 32.4,
   "work_pct": 78.1,
-  "read_at": "2026-11-16T09:16:00+00:00",
+  "read_at": "2026-11-16T09:19:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -216,7 +216,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-16T04:16:00-05:00",
+  "at": "2026-11-16T04:19:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -435,12 +435,12 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-16T09:16:38Z",
+  "at": "2026-11-16T09:19:46Z",
   "s": {
    "T-3995": [
     "merging",
     "Mac tests at the main gate",
-    1794820598202
+    1794820606978
    ],
    "T-0687": [
     "testing",
@@ -472,7 +472,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-16T09:16:38Z",
+  "at": "2026-11-16T09:19:46Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -480,32 +480,32 @@
     "conflicted": 1,
     "failed": 0,
     "held": 0,
-    "retry": 3,
+    "retry": 2,
     "parked": 8
    },
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 1978,
+    "conflicted": 1981,
     "failed": null,
     "held": null,
-    "retry": 5,
-    "parked": 77
+    "retry": 8,
+    "parked": 81
    },
    "cur": [],
    "ld": [
-    11,
-    "2026-11-16T09:01:30Z"
+    12,
+    "2026-11-16T09:19:17Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-16T09:16:14Z",
-    "ld": 15.91,
+    "at": "2026-11-16T09:19:21Z",
+    "ld": 21.37,
     "c": 8,
     "sb": 1,
     "dk": [
-     19.0,
+     19.6,
      228.3
     ],
     "ss": [
@@ -577,10 +577,10 @@
   "main": 1,
   "lanes": 2,
   "total": 3,
-  "at": "4:16 AM",
+  "at": "4:19 AM",
   "why": "",
-  "at_iso": "2026-11-16T09:16:00+00:00",
+  "at_iso": "2026-11-16T09:19:00+00:00",
   "started": "4:01 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 1, started 4:01 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 4:16 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 1, started 4:01 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 4:19 AM ET</p></section>"
  }
 }

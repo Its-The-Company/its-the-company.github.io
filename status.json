@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-16T14:00:15.828920+00:00",
+ "at": "2026-11-16T14:03:16.870256+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -172,7 +172,7 @@
   "week_pct": 13.38,
   "usage_pct": 40.1,
   "work_pct": 70.0,
-  "read_at": "2026-11-16T14:00:00+00:00",
+  "read_at": "2026-11-16T14:03:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -220,19 +220,6 @@
     "n": "Evan",
     "d": 1,
     "src": "plan-a"
-   },
-   {
-    "lane": "b2",
-    "task": "T-3764",
-    "w": "Idris",
-    "k": "build",
-    "t": "Make the iPad window test fail without the fix",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-16T08:49:01-05:00",
-    "n": "Jeremy",
-    "d": 1,
-    "src": "plan-b"
    }
   ]
  },
@@ -270,7 +257,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-16T09:00:00-05:00",
+  "at": "2026-11-16T09:03:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -477,82 +464,87 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-16T14:00:08Z",
+  "at": "2026-11-16T14:03:06Z",
   "s": {
    "T-4555": [
     "merging",
     "Host checks on the Mac mini",
-    1794837068508
+    1794837066439
    ],
    "T-4022": [
     "mergeq",
     "1st to merge",
-    1794832208508
+    1794832206439
    ],
    "T-4020": [
     "mergeq",
     "2nd to merge",
-    1794832268508
+    1794832326439
    ],
    "T-4565": [
     "mergeq",
     "3rd to merge",
-    1794833768508
+    1794833766439
    ],
    "T-4554": [
     "mergeq",
     "4th to merge",
-    1794835928508
+    1794835986439
    ],
    "T-4564": [
     "mergeq",
     "4th to merge",
-    1794835928508
+    1794835986439
    ],
    "T-3745": [
     "mergeq",
     "5th to merge",
-    1794837368508
+    1794837366439
    ],
    "T-4256": [
     "mergeq",
     "5th to merge",
-    1794837368508
+    1794837366439
    ],
    "T-4433": [
     "mergeq",
     "5th to merge",
-    1794837368508
+    1794837366439
    ],
    "T-4435": [
     "mergeq",
     "5th to merge",
-    1794837368508
+    1794837366439
+   ],
+   "T-3764": [
+    "mergeq",
+    "6th to merge",
+    1794837726439
    ],
    "T-4529": [
     "mergeq",
-    "13th to merge",
-    1794835448508
+    "14th to merge",
+    1794835446439
    ],
    "T-4297": [
     "mergeq",
-    "13th to merge",
-    1794835448508
+    "14th to merge",
+    1794835446439
    ],
    "T-4286": [
     "mergeq",
-    "13th to merge",
-    1794835448508
+    "14th to merge",
+    1794835446439
    ],
    "T-4558": [
     "mergeq",
-    "15th to merge",
-    1794836288508
+    "16th to merge",
+    1794836286439
    ],
    "T-3970": [
     "mergeq",
-    "15th to merge",
-    1794836288508
+    "16th to merge",
+    1794836286439
    ],
    "T-4276": [
     "merged",
@@ -572,6 +564,7 @@
    "T-4256": "Lighten the marks and colour their line numbers",
    "T-4433": "Confirm the Lock Screen refresh tap first",
    "T-4435": "Draw the wrapped refresh glyph on both runtimes",
+   "T-3764": "Make the iPad window test fail without the fix",
    "T-4529": "Give Home the dispatcher's real start order",
    "T-4297": "Personal account stopped and its work parked",
    "T-4286": "Check an imported font draws in a widget",
@@ -590,6 +583,7 @@
    "T-4256": "Idris",
    "T-4433": "Idris",
    "T-4435": "Idris",
+   "T-3764": "Idris",
    "T-4529": "Odalys",
    "T-4297": "Ines",
    "T-4286": "Idris",
@@ -599,25 +593,25 @@
   }
  },
  "ln": {
-  "at": "2026-11-16T14:00:08Z",
+  "at": "2026-11-16T14:03:06Z",
   "mq": {
    "n": {
     "checking": 1,
-    "inline": 9,
+    "inline": 10,
     "conflicted": 1,
     "failed": 5,
     "held": 0,
     "retry": 1,
-    "parked": 10
+    "parked": 9
    },
    "m": {
-    "checking": 9,
-    "inline": 22,
-    "conflicted": 2262,
-    "failed": 19,
+    "checking": 12,
+    "inline": 16,
+    "conflicted": 2265,
+    "failed": 22,
     "held": null,
-    "retry": 30,
-    "parked": 331
+    "retry": 33,
+    "parked": 334
    },
    "cur": [
     [
@@ -626,7 +620,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     9
+     12
     ]
    ],
    "ld": [
@@ -636,12 +630,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-16T13:59:25Z",
-    "ld": 14.09,
+    "at": "2026-11-16T14:03:07Z",
+    "ld": 8.48,
     "c": 8,
     "sb": 0,
     "dk": [
-     49.2,
+     48.0,
      228.3
     ],
     "ss": [
@@ -681,15 +675,6 @@
    "e": "high",
    "t": "Work session \u2013 3 tasks",
    "at": "2026-11-16T08:59:05-05:00"
-  },
-  {
-   "w": "Operator",
-   "a": "Jeremy",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session \u2013 1 task",
-   "at": "2026-11-16T08:59:18-05:00"
   }
  ],
  "reply": {
@@ -709,12 +694,12 @@
  ],
  "agents_now": {
   "main": 0,
-  "lanes": 2,
-  "total": 2,
-  "at": "9:00 AM",
+  "lanes": 1,
+  "total": 1,
+  "at": "9:03 AM",
   "why": "",
-  "at_iso": "2026-11-16T14:00:00+00:00",
+  "at_iso": "2026-11-16T14:03:00+00:00",
   "started": "8:47 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0, started 8:47 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 9:00 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0, started 8:47 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 9:03 AM ET</p></section>"
  }
 }

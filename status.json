@@ -1,22 +1,11 @@
 {
  "schema": 1,
- "at": "2026-11-15T23:58:36.863252+00:00",
+ "at": "2026-11-16T00:01:41.432333+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-15T17:14:43-05:00",
   "flow": [
-   {
-    "t": "T-4227",
-    "name": "Run every Operator on Opus high",
-    "acct": "Personal b",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1794785774
-     }
-    ]
-   },
    {
     "t": "T-2266",
     "name": "Run the stuck-signal tests on the MacBook",
@@ -30,6 +19,15 @@
    }
   ],
   "done": [
+   {
+    "t": "T-4227",
+    "name": "Run every Operator on Opus high",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "failed",
+    "end_at": 1794787276,
+    "why": "tests failed"
+   },
    {
     "t": "T-4512",
     "name": "Propose the personal accounts' 5-hour stop at 97",
@@ -103,19 +101,10 @@
     "end": "failed",
     "end_at": 1794779274,
     "why": "tests failed"
-   },
-   {
-    "t": "T-4227",
-    "name": "Run every Operator on Opus high",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "failed",
-    "end_at": 1794774236,
-    "why": "tests failed"
    }
   ],
   "landed": 18,
-  "failed": 6
+  "failed": 7
  },
  "workers": [
   {
@@ -123,7 +112,7 @@
    "task": "[tools] T-3992 land the pipeline batch",
    "model": "opus",
    "started": "2026-11-15T22:17:17.812Z",
-   "seconds": 6079,
+   "seconds": 6263,
    "finished": null,
    "effort": "high"
   }
@@ -207,7 +196,7 @@
   "week_pct": 3.57,
   "usage_pct": 22.9,
   "work_pct": 71.4,
-  "read_at": "2026-11-15T23:58:00+00:00",
+  "read_at": "2026-11-16T00:01:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -228,7 +217,7 @@
   }
  ],
  "disk": {
-  "free_gb": 12,
+  "free_gb": 10,
   "gate": "closed",
   "ssd": {
    "mounted": true,
@@ -237,14 +226,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions wait until 20 GB is free.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-15T18:52:00-05:00",
+   "at": "2026-11-15T19:00:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-15T18:58:00-05:00",
+  "at": "2026-11-15T19:01:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -472,36 +461,30 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-15T23:58:18Z",
+  "at": "2026-11-16T00:01:33Z",
   "s": {
-   "T-4227": [
-    "merging",
-    "Host checks on the Mac mini",
-    1794785778297
-   ],
    "T-4282": [
-    "mergeq",
-    "1st to merge",
-    1794785178297
+    "merging",
+    "Merging onto main",
+    1794787293809
    ],
    "T-4293": [
-    "mergeq",
-    "1st to merge",
-    1794785178297
+    "merging",
+    "Merging onto main",
+    1794787293809
    ],
    "T-4512": [
-    "mergeq",
-    "1st to merge",
-    1794785178297
+    "merging",
+    "Merging onto main",
+    1794787293809
    ],
    "T-3992": [
     "testing",
     "its own tests, in its copy",
-    1794784878297
+    1794784833809
    ]
   },
   "nm": {
-   "T-4227": "Run every Operator on Opus high",
    "T-4282": "Measure real scripts inside the widget on phones",
    "T-4293": "Show skipped and brief stages on Home",
    "T-4512": "Propose the personal accounts' 5-hour stop at 97",
@@ -509,34 +492,50 @@
   }
  },
  "ln": {
-  "at": "2026-11-15T23:58:18Z",
+  "at": "2026-11-16T00:01:33Z",
   "mq": {
    "n": {
-    "checking": 1,
-    "inline": 3,
+    "checking": 3,
+    "inline": 0,
     "conflicted": 1,
-    "failed": 0,
+    "failed": 1,
     "held": 0,
     "retry": 0,
     "parked": 2
    },
    "m": {
-    "checking": 22,
-    "inline": 32,
-    "conflicted": 1420,
-    "failed": null,
+    "checking": 0,
+    "inline": null,
+    "conflicted": 1423,
+    "failed": 0,
     "held": null,
     "retry": null,
-    "parked": 649
+    "parked": 652
    },
    "cur": [
     [
      [
-      "T-4227"
+      "T-4282"
      ],
-     "Mac tests",
+     "going onto main",
      "Mac mini",
-     22
+     0
+    ],
+    [
+     [
+      "T-4293"
+     ],
+     "going onto main",
+     "Mac mini",
+     0
+    ],
+    [
+     [
+      "T-4512"
+     ],
+     "going onto main",
+     "Mac mini",
+     0
     ]
    ],
    "ld": [
@@ -546,8 +545,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-15T23:57:54Z",
-    "ld": 1.09,
+    "at": "2026-11-16T00:01:34Z",
+    "ld": 1.19,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -557,6 +556,17 @@
     "ss": [
      181.6,
      953.7
+    ],
+    "sn": []
+   },
+   "macbook": {
+    "at": "2026-11-15T23:41:51Z",
+    "ld": 0.19,
+    "c": 12,
+    "sb": 0,
+    "dk": [
+     356.7,
+     926.4
     ],
     "sn": []
    }
@@ -593,10 +603,10 @@
   "main": 1,
   "lanes": 0,
   "total": 1,
-  "at": "6:58 PM",
+  "at": "7:01 PM",
   "why": "",
-  "at_iso": "2026-11-15T23:58:00+00:00",
+  "at_iso": "2026-11-16T00:01:00+00:00",
   "started": "5:14 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 5:14 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 6:58 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 5:14 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 7:01 PM ET</p></section>"
  }
 }

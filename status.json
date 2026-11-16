@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-16T07:44:43.572879+00:00",
+ "at": "2026-11-16T07:47:47.827303+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -95,7 +95,7 @@
    "task": "[tools] T-4194 land feature-session wiring",
    "model": "opus",
    "started": "2026-11-16T05:36:18.799Z",
-   "seconds": 7704,
+   "seconds": 7889,
    "finished": null
   },
   {
@@ -103,7 +103,7 @@
    "task": "[tools] T-3995 personal_land daily batch",
    "model": "opus",
    "started": "2026-11-16T05:36:28.863Z",
-   "seconds": 7694,
+   "seconds": 7878,
    "finished": null
   }
  ],
@@ -170,8 +170,189 @@
   "week_pct": 5.72,
   "usage_pct": 25.2,
   "work_pct": 70.0,
-  "read_at": "2026-11-16T07:44:00+00:00",
-  "running": []
+  "read_at": "2026-11-16T07:47:00+00:00",
+  "running": [
+   {
+    "lane": "a",
+    "task": "T-4279",
+    "w": "Odalys",
+    "k": "site",
+    "t": "Draw the site's info button as a code-drawn gear",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-16T02:46:14-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a",
+    "task": "T-4493",
+    "w": "Maren",
+    "k": "site",
+    "t": "Cut clutter text on the pages still carrying it",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-16T02:46:14-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a",
+    "task": "T-4314",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Record what each personal session costs",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-16T02:46:14-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a",
+    "task": "T-2943",
+    "w": "Idris",
+    "k": "build",
+    "t": "Send up the gate build and confirm it stays internal",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-16T02:46:14-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a2",
+    "task": "T-4455",
+    "w": "Maren",
+    "k": "site",
+    "t": "Fix the stage name test after the Retry Queue rename",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-16T02:46:18-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a2",
+    "task": "T-4506",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Site suites that fail only in worker copies",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-16T02:46:18-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a2",
+    "task": "T-2691",
+    "w": "Idris",
+    "k": "build",
+    "t": "Check every archive for the phone test marker, Organizer too",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-16T02:46:18-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a2",
+    "task": "T-4286",
+    "w": "Idris",
+    "k": "build",
+    "t": "Check an imported font draws in a widget",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-16T02:46:18-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a3",
+    "task": "T-0972",
+    "w": "Idris",
+    "k": "build",
+    "t": "Decide how a script's refresh path is chosen on send",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-16T02:46:17-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a3",
+    "task": "T-0687",
+    "w": "Idris",
+    "k": "build",
+    "t": "Run network fetches inside the extension on the Simulator",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-16T02:46:17-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a3",
+    "task": "T-3552",
+    "w": "Idris",
+    "k": "test",
+    "t": "Test gallery and widget runs together with a stalled sensor",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-16T02:46:17-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a3",
+    "task": "T-0696",
+    "w": "Idris",
+    "k": "build",
+    "t": "Measure peak memory for fetches in the extension",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-16T02:46:17-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "b",
+    "task": "T-4549",
+    "w": "Idris",
+    "k": "build",
+    "t": "Store tap and button actions in the manifest",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-16T02:46:12-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
+   },
+   {
+    "lane": "b",
+    "task": "T-4548",
+    "w": "Idris",
+    "k": "build",
+    "t": "Read one widget action value strictly",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-16T02:46:12-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
+   },
+   {
+    "lane": "b",
+    "task": "T-4460",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Clear old test leftovers from the temporary folder",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-16T02:46:12-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
+   }
+  ]
  },
  "api_credits": [
   {
@@ -207,7 +388,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-16T02:44:00-05:00",
+  "at": "2026-11-16T02:47:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -438,12 +619,12 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-16T07:44:23Z",
+  "at": "2026-11-16T07:47:41Z",
   "s": {
    "T-4194": [
     "merging",
     "Mac tests at the main gate",
-    1794814943955
+    1794814961119
    ]
   },
   "nm": {
@@ -451,7 +632,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-16T07:44:23Z",
+  "at": "2026-11-16T07:47:41Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -465,11 +646,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 1886,
+    "conflicted": 1889,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 47
+    "parked": 50
    },
    "cur": [],
    "ld": [
@@ -479,8 +660,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-16T07:43:41Z",
-    "ld": 1.0,
+    "at": "2026-11-16T07:47:20Z",
+    "ld": 1.33,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -515,6 +696,42 @@
    "e": "high",
    "t": "Work session \u2013 1 task",
    "at": "2026-11-16T00:32:52-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Evan",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session \u2013 4 tasks",
+   "at": "2026-11-16T02:46:14-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Evan",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session \u2013 4 tasks",
+   "at": "2026-11-16T02:46:18-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Evan",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session \u2013 4 tasks",
+   "at": "2026-11-16T02:46:15-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Jeremy",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session \u2013 3 tasks",
+   "at": "2026-11-16T02:46:12-05:00"
   }
  ],
  "reply": {
@@ -535,12 +752,12 @@
  ],
  "agents_now": {
   "main": 2,
-  "lanes": 0,
-  "total": 2,
-  "at": "2:44 AM",
+  "lanes": 4,
+  "total": 6,
+  "at": "2:47 AM",
   "why": "",
-  "at_iso": "2026-11-16T07:44:00+00:00",
+  "at_iso": "2026-11-16T07:47:00+00:00",
   "started": "12:32 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 12:32 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 2:44 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 2, started 12:32 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 2:47 AM ET</p></section>"
  }
 }

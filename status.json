@@ -1,12 +1,28 @@
 {
  "schema": 1,
- "at": "2026-11-16T14:49:46.193740+00:00",
+ "at": "2026-11-16T14:52:51.584778+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-16T09:19:29-05:00",
   "flow": [],
   "done": [
+   {
+    "t": "T-4286",
+    "name": "Check an imported font draws in a widget",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794840726
+   },
+   {
+    "t": "T-4564",
+    "name": "Run a button's action and redraw in one run",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794840704
+   },
    {
     "t": "T-4555",
     "name": "Draw the When tapped setting",
@@ -73,23 +89,9 @@
     "steps": [],
     "end": "landed",
     "end_at": 1794837023
-   },
-   {
-    "t": "T-4558",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794836142
-   },
-   {
-    "t": "T-3970",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794836112
    }
   ],
-  "landed": 38,
+  "landed": 40,
   "failed": 5
  },
  "workers": [
@@ -98,7 +100,7 @@
    "task": "[tools] T-4584 land false main-red fix",
    "model": "opus",
    "started": "2026-11-16T14:29:37.058Z",
-   "seconds": 1209,
+   "seconds": 1394,
    "finished": null,
    "effort": "high"
   },
@@ -107,7 +109,7 @@
    "task": "[tools] T-4194 switch feature sessions on",
    "model": "opus",
    "started": "2026-11-16T14:45:03.633Z",
-   "seconds": 282,
+   "seconds": 467,
    "finished": null,
    "effort": "high"
   }
@@ -122,19 +124,19 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 5.0,
+   "pct": 6.0,
    "resets_at": "2026-11-16T13:10:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-16T09:43:59.057210-05:00",
+   "read_at": "2026-11-16T09:50:24.668316-05:00",
    "source": "live",
-   "left": 95.0,
+   "left": 94.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 20.0,
    "resets_at": "2026-11-22T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-16T09:43:59.057210-05:00",
+   "read_at": "2026-11-16T09:50:24.668316-05:00",
    "source": "live",
    "left": 80.0,
    "left_words": "of your weekly allowance left"
@@ -146,7 +148,7 @@
    "read_at": "2026-11-16T09:19:16.584974-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-16T09:43:59.057210-05:00"
+  "read_at": "2026-11-16T09:50:24.668316-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -166,7 +168,7 @@
   "week_pct": 13.24,
   "usage_pct": 39.8,
   "work_pct": 68.6,
-  "read_at": "2026-11-16T14:49:00+00:00",
+  "read_at": "2026-11-16T14:52:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -245,14 +247,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-16T09:43:00-05:00",
+   "at": "2026-11-16T09:50:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-16T09:49:00-05:00",
+  "at": "2026-11-16T09:52:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -482,97 +484,77 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-16T14:49:37Z",
+  "at": "2026-11-16T14:52:36Z",
   "s": {
-   "T-4564": [
-    "mergeq",
-    "1st to merge",
-    1794834697726
-   ],
-   "T-4286": [
-    "mergeq",
-    "2nd to merge",
-    1794835417726
-   ],
-   "T-4529": [
-    "mergeq",
-    "3rd to merge",
-    1794835417726
-   ],
-   "T-4297": [
-    "mergeq",
-    "3rd to merge",
-    1794835417726
-   ],
-   "T-4554": [
-    "mergeq",
-    "4th to merge",
-    1794835717726
-   ],
    "T-4555": [
     "mergetest",
-    "Xcode checks on the MacBook, 5th to merge",
-    1794839797726
+    "Xcode checks on the MacBook, 1st to merge",
+    1794839796709
+   ],
+   "T-4564": [
+    "mergetest",
+    "Xcode checks on the MacBook, 2nd to merge",
+    1794840756709
    ],
    "T-4565": [
     "mergetest",
-    "Xcode checks on the MacBook, 7th to merge",
-    1794839737726
+    "Xcode checks on the MacBook, 3rd to merge",
+    1794839736709
    ],
    "T-4558": [
     "mergeq",
-    "8th to merge",
-    1794836137726
+    "4th to merge",
+    1794836136709
    ],
    "T-4020": [
     "mergeq",
-    "9th to merge",
-    1794836197726
+    "5th to merge",
+    1794836196709
    ],
    "T-4022": [
     "mergeq",
-    "10th to merge",
-    1794836257726
+    "6th to merge",
+    1794836256709
    ],
    "T-3970": [
     "mergeq",
-    "11th to merge",
-    1794836257726
+    "7th to merge",
+    1794836256709
    ],
    "T-3745": [
     "mergeq",
-    "12th to merge",
-    1794837397726
+    "8th to merge",
+    1794837396709
    ],
    "T-4256": [
     "mergeq",
-    "12th to merge",
-    1794837397726
+    "8th to merge",
+    1794837396709
    ],
    "T-4433": [
     "mergeq",
-    "12th to merge",
-    1794837397726
+    "8th to merge",
+    1794837396709
    ],
    "T-4435": [
     "mergeq",
-    "12th to merge",
-    1794837397726
+    "8th to merge",
+    1794837396709
    ],
    "T-3764": [
     "mergeq",
-    "13th to merge",
-    1794837697726
+    "9th to merge",
+    1794837696709
    ],
    "T-4194": [
     "testing",
     "its own tests, in its copy",
-    1794840397726
+    1794840636709
    ],
    "T-4584": [
     "testing",
     "its own tests, in its copy",
-    1794840397726
+    1794840396709
    ],
    "T-4276": [
     "merged",
@@ -582,12 +564,8 @@
    ]
   },
   "nm": {
-   "T-4564": "Run a button's action and redraw in one run",
-   "T-4286": "Check an imported font draws in a widget",
-   "T-4529": "Give Home the dispatcher's real start order",
-   "T-4297": "Personal account stopped and its work parked",
-   "T-4554": "One state commit per widget across app and widget",
    "T-4555": "Draw the When tapped setting",
+   "T-4564": "Run a button's action and redraw in one run",
    "T-4565": "Send button actions from Swift, schema names checked",
    "T-4558": "Choose which premades get buttons",
    "T-4020": "Check finished work before it ships",
@@ -603,12 +581,8 @@
    "T-4276": "Run Evan's account on the audit without the pause"
   },
   "wk": {
-   "T-4564": "Pernille",
-   "T-4286": "Idris",
-   "T-4529": "Odalys",
-   "T-4297": "Ines",
-   "T-4554": "Idris",
    "T-4555": "Maren",
+   "T-4564": "Pernille",
    "T-4565": "Pernille",
    "T-4558": "Maren",
    "T-4020": "Pernille",
@@ -625,57 +599,65 @@
   }
  },
  "ln": {
-  "at": "2026-11-16T14:49:37Z",
+  "at": "2026-11-16T14:52:36Z",
   "mq": {
    "n": {
-    "checking": 2,
-    "inline": 7,
+    "checking": 3,
+    "inline": 5,
     "conflicted": 1,
-    "failed": 7,
+    "failed": 4,
     "held": 0,
-    "retry": 1,
+    "retry": 2,
     "parked": 8
    },
    "m": {
-    "checking": 13,
-    "inline": 73,
-    "conflicted": 2311,
-    "failed": 32,
+    "checking": 16,
+    "inline": 75,
+    "conflicted": 2314,
+    "failed": 35,
     "held": null,
-    "retry": 79,
-    "parked": 381
+    "retry": 82,
+    "parked": 384
    },
    "cur": [
     [
      [
       "T-4555"
      ],
+     "iPhone app tests",
+     "MacBook",
+     16
+    ],
+    [
+     [
+      "T-4564"
+     ],
      "iPhone app tests, sent and waiting its turn",
      "MacBook",
-     13
+     0
     ],
     [
      [
       "T-4565"
      ],
-     "iPhone app tests, sent and waiting its turn",
+     "iPhone app tests",
      "MacBook",
-     14
+     17
     ]
    ],
    "ld": [
-    30,
-    "2026-11-16T14:35:41Z"
+    33,
+    "2026-11-16T14:52:23Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-16T14:48:48Z",
-    "ld": 1.86,
+    "at": "2026-11-16T14:52:37Z",
+    "ld": 1.5,
     "c": 8,
     "sb": 0,
     "dk": [
-     45.2,
+     48.9,
      228.3
     ],
     "ss": [
@@ -685,8 +667,8 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-16T14:43:15Z",
-    "ld": 2.38,
+    "at": "2026-11-16T14:45:21Z",
+    "ld": 1.61,
     "c": 12,
     "sb": 0,
     "dk": [
@@ -736,10 +718,10 @@
   "main": 2,
   "lanes": 1,
   "total": 3,
-  "at": "9:49 AM",
+  "at": "9:52 AM",
   "why": "",
-  "at_iso": "2026-11-16T14:49:00+00:00",
+  "at_iso": "2026-11-16T14:52:00+00:00",
   "started": "9:19 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 9:19 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 9:49 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 9:19 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 9:52 AM ET</p></section>"
  }
 }

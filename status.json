@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-16T21:19:37.508650+00:00",
+ "at": "2026-11-16T21:22:42.378322+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -96,7 +96,7 @@
    "task": "[tools] T-4583 land feature-step ticking",
    "model": "opus",
    "started": "2026-11-16T20:38:05.386Z",
-   "seconds": 2492,
+   "seconds": 2676,
    "finished": null,
    "effort": "high"
   },
@@ -105,7 +105,7 @@
    "task": "[tools] T-4617 quick checks before Xcode slot",
    "model": "opus",
    "started": "2026-11-16T20:38:15.991Z",
-   "seconds": 2481,
+   "seconds": 2666,
    "finished": null,
    "effort": "high"
   },
@@ -114,7 +114,7 @@
    "task": "[tools] T-4103 switch on queue-check sweep",
    "model": "opus",
    "started": "2026-11-16T21:15:08.438Z",
-   "seconds": 269,
+   "seconds": 453,
    "finished": null,
    "effort": "high"
   }
@@ -124,7 +124,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 407,
+  "runnable_count": 408,
   "blocked_count": 75
  },
  "meter": {
@@ -173,7 +173,7 @@
   "week_pct": 18.58,
   "usage_pct": 45.8,
   "work_pct": 73.2,
-  "read_at": "2026-11-16T21:19:00+00:00",
+  "read_at": "2026-11-16T21:22:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -238,6 +238,30 @@
     "src": "plan-b"
    },
    {
+    "lane": "b2",
+    "task": "T-4077",
+    "w": "Pernille",
+    "k": "review",
+    "t": "Check finished work before it ships",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-16T16:22:55-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
+   },
+   {
+    "lane": "b2",
+    "task": "T-4082",
+    "w": "Pernille",
+    "k": "review",
+    "t": "Check finished work before it ships",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-16T16:22:55-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
+   },
+   {
     "lane": "b3",
     "task": "T-4596",
     "w": "Pernille",
@@ -247,6 +271,7 @@
     "e": "high",
     "at": "2026-11-16T16:07:00-05:00",
     "n": "Jeremy",
+    "d": 1,
     "src": "plan-b"
    },
    {
@@ -290,14 +315,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-16T16:16:00-05:00",
+   "at": "2026-11-16T16:22:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 4,
-  "at": "2026-11-16T16:19:00-05:00",
+  "at": "2026-11-16T16:22:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -488,7 +513,7 @@
    }
   ],
   "count": {
-   "next": 407,
+   "next": 408,
    "wait": 35,
    "blocked": 40,
    "you": 12
@@ -554,7 +579,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-16T21:19:37Z",
+  "at": "2026-11-16T21:22:42Z",
   "s": {
    "T-4022": [
     "testing",
@@ -564,22 +589,22 @@
    "T-4617": [
     "testing",
     "its own tests, in its copy",
-    1794863737508
+    1794863742378
    ],
    "T-4103": [
     "testing",
     "its own tests, in its copy",
-    1794863977508
+    1794863982378
    ],
    "T-4583": [
     "testing",
     "its own tests, in its copy",
-    1794861517508
+    1794861522378
    ],
    "T-4048": [
     "testq",
     "1st for a Simulator",
-    1794856837508
+    1794856842378
    ],
    "T-4621": [
     "merged",
@@ -618,7 +643,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-16T21:19:37Z",
+  "at": "2026-11-16T21:22:42Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -632,11 +657,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 1498,
+    "conflicted": 1501,
     "failed": null,
     "held": null,
-    "retry": 101,
-    "parked": 714
+    "retry": 105,
+    "parked": 718
    },
    "cur": [],
    "ld": [
@@ -646,12 +671,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-16T21:19:44Z",
-    "ld": 20.78,
+    "at": "2026-11-16T21:22:46Z",
+    "ld": 18.23,
     "c": 8,
     "sb": 1,
     "dk": [
-     19.9,
+     19.7,
      228.3
     ],
     "ss": [
@@ -698,8 +723,8 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 1 task",
-   "at": "2026-11-16T16:18:21-05:00"
+   "t": "Inbox \u2013 Evan's 4:21 PM Message on GitHub",
+   "at": "2026-11-16T16:21:41-05:00"
   },
   {
    "w": "Operator",
@@ -707,7 +732,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 2 tasks",
+   "t": "Work session \u2013 1 task",
    "at": "2026-11-16T16:06:59-05:00"
   }
  ],
@@ -715,12 +740,24 @@
   "sent": "2026-11-16T21:13:10Z",
   "seconds": 307.0
  },
- "inbox": [],
+ "inbox": [
+  {
+   "id": "c6929735241",
+   "state": "received",
+   "position": 1,
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "Work on all top priority efficiency..."
+  }
+ ],
  "trimmed": [
   "lane_next",
   "queue_text",
   "task_done",
   "fin_short",
+  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -729,12 +766,12 @@
  ],
  "agents_now": {
   "main": 3,
-  "lanes": 4,
-  "total": 7,
-  "at": "4:19 PM",
+  "lanes": 5,
+  "total": 8,
+  "at": "4:22 PM",
   "why": "",
-  "at_iso": "2026-11-16T21:19:00+00:00",
+  "at_iso": "2026-11-16T21:22:00+00:00",
   "started": "3:35 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 3, started 3:35 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 4:19 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>8</b> agents running now</p><p class=\"an-sub\">Main session 3, started 3:35 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 4:22 PM ET</p></section>"
  }
 }

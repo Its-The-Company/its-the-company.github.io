@@ -556,6 +556,160 @@ node against its composited background, 4.5:1, 3:1 large). Content behind a shee
 design, as in the launcher editor. Result, 2026-11-15: 10 frames per sheet, 6 issues per sheet, all the Countdown
 widget overlap in s6 (Pernille item 3), none in the Page itself; lowest text contrast 5.49:1 (A) and 6.37:1 (B).
 Dates in the frames are drawn in one English format; the build uses the system's date styles.
+
+## 9. Buttons in 1.0 (T-4558)
+
+**Dated line, Maren, 2026-11-16 6:30 AM ET, with Ines's limits (ADR-011 s13 step 10, accepted at 137c133087; plan.md
+<span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span> note 2026-11-15 10:00 PM).** One premade gains a button in 1.0: **Habit tracker**, a **Done today** button per
+habit shown. The other eleven gain none. Every count sits inside ADR-011 s3's caps, and the build fits the 1 slot day
+(0.5 to 2) plan.md gives step 10 (s9.4). The launcher premades (`widgets/premade/launcher/`, built, not released) are
+not among the twelve; their tiles are `Link`s through the launcher path, which s3 does not count, and nothing changes.
+
+### 9.1 The test each premade had to pass
+
+1. **It does more than open pywidget.** Apple: "An interaction with a button or toggle should do more than open the
+   app" (ADR-011 [A3]). Opening a Page, a link or an app is the tap's job, or a `Link`. So a premade's button runs one
+   of its own declared functions.
+2. **It can run inside the widget.** On iOS 18 to 26 an in-widget run has no location fix, no motion reading, no
+   network wait and no keyboard, in one 2.0 s budget (ADR-011 s4). A button that needs any of those opens pywidget
+   on every tap, which is the tap again.
+3. **A person would do it from the Home Screen, often.** Daily, not once at setup.
+4. **It fits.** Each counted button has a 44 x 44 pt hit area with 12 pt to the next (ADR-011 s3), measured on the
+   smallest iOS 18 phone (375 x 667 pt; 16 pt widget margins: Small 116 x 116 usable, Medium 289 x 116, Large
+   289 x 292).
+
+No premade draws a `Button`, `Toggle` or `RefreshButton` today (`grep` of `widgets/premade/*.py`, 2026-11-16), so the
+habit buttons are the only counted instances in any premade.
+
+### 9.2 Habit tracker: Done today
+
+**What it does.** A tap marks today done for that habit; on a habit already done today, a tap takes today's mark off,
+so a slip of the thumb is undone with a second tap. It is a `Button`, not a `Toggle`, because `Toggle` stays inert in
+1.0 (ADR-011 s7 item 5). The background tap is unchanged: the Page, focused on the habit (s2.5, T-4515). The week's
+other days are still set in the Page.
+
+**The action.** `@widget.action("check", timeout=0.5)` in `habits.py`, one name for every row (one setting, separate
+taps; ADR-011 s7 item 2). Each drawn instance carries `args` of numbers only (ADR-011 s1):
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 13: 9.2 Habit tracker: Done today, scrolls sideways" style="--tw:724px" markdown="1">
+
+| arg | value | why |
+|---|---|---|
+| `habit` | the habit's `id` read as a number: `"h1a2b3c4d"` -> `0x1a2b3c4d` (at most 4,294,967,295, exact in JSON) | names the habit, not its row, so a reorder in the Page between draw and tap cannot mark the wrong one |
+| `day` | the local day drawn, as days since 1970-01-01 | a tap just after midnight marks the day the person saw |
+| `done` | 1 to mark, 0 to unmark: the opposite of what the button showed | a repeated or stale tap does what the person saw, never a <span title="A second worker who grades the idea without seeing the first worker&#x27;s grades, and records them first.">blind</span> flip |
+
+</div>
+
+
+The handler treats `args` as untrusted (ADR-011 s7, L2): an unknown `habit`, a `day` outside today and the six days
+before (the Page's own limit, s3.5) or any other value changes nothing. A habit with no stored `id` (a file from
+before the Page) draws no button and keeps its `Link`. The tree's `v` covers the `args`, so a tap on a widget drawn
+before a change is N4 (ADR-011 s8), not a wrong mark.
+
+**Per family, against s3's caps.** Area figures are estimates from the type sizes at the default text size
+(subheadline 20 pt line, footnote 18, headline 22), worked in one script on 2026-11-16; Pernille's render test and
+Idris's step-6 screenshots measure them.
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 14: 9.2 Habit tracker: Done today, scrolls sideways" style="--tw:898px" markdown="1">
+
+| Family | Buttons / cap | Layout with buttons | <span title="Whether we may and can build it: our rules and banned areas, and a first version Idris can finish by Day 22. A subject off the Investors&#x27; list is noted, not dropped.">Fit</span> (usable 375 pt phone) |
+|---|---|---|---|
+| `systemSmall` | 1 / 2 | the one habit; the button at the trailing end of the streak line; the streak number drops from 44 to 34 pt; "day streak" moves under it; the "Habit" eyebrow goes | height 109 of 116; width at a 3-digit streak 113 of 116 (3 pt spare: the render test at "365" decides; if it fails, the number drops to 30 pt) |
+| `systemMedium` | 3 / 4 | three columns instead of three rows: name (footnote, up to two lines), the week's dots at 9 pt, the button under them; the "This week" head goes | three stacked rows need 156 of 116 pt, so rows are impossible. Columns 88 pt wide: dots 84; height 101 of 116; 56 pt between hit areas |
+| `systemLarge` | 6 / 8 | two columns of three cells: name above (subheadline, one line), dots at 9 pt and the button beside them; the head becomes one line; the letters row, the "Best streak" footer and the "Tap a habit to log" hint go | six stacked rows need 324 of 292 pt, so rows are impossible. Cells 138 pt wide (row 133), 68 tall; grid 228, with the head 264 of 292 |
+| `accessoryCircular` | 0 / 0 | unchanged (the gauge) | cap is 0 |
+
+</div>
+
+
+In every cell and column the name and dots stay a `Link` to the Page with the habit's focus; links are not counted
+(ADR-011 s3). These are my layouts; their frames, in Paper and Studio, are drawn before the build (s9.4).
+
+**How it reads.** The button is a symbol only, drawn at 28 pt in its 44 pt hit area: `circle` when not done,
+`checkmark.circle.fill` in the accent when done (the dots' fill, `widget_accentable`). Its VoiceOver label (DRAFT, <span title="Commandment 51: the Investors approve every visual before it ships.">C51</span>):
+"Mark Reading done today" when not done; "Undo Reading for today" when done (the habit's own name in place of
+"Reading"). Words stay about the person's own log (done, not done, streak); nothing says what a habit is good for or
+gives health advice (Commandment 7). The redraw adds no transition (ADR-011 s3). On a locked phone the button waits
+for unlock (ADR-011 [A3]); Habits has no Lock Screen family with a button.
+
+**Where the mark is written.** Check-ins live in `premade.json` under `habits[].done`, written today only by the Page
+(s3.5). Habits runs in the widget lane, where `Store.save()` writes nothing because `fcntl` is not on the lane's import
+list (s2.3.1). The handler's mark must reach that same file, or the widget and the Page disagree. Two ways, Pernille's
+and Idris's to choose at the step-5 and step-6 reviews:
+- **B, recommended:** the handler returns the changed `habits` list as a premade key; Swift commits it into
+  `premade.json` with the Page's own locked writer (s2.3.1), inside `run.lock` and in ADR-011 s7's order (`run.lock`,
+  `state.lock`, premade lock), with the state and tree. A handler that fails writes nothing (ADR-011 s7 (b)). The same
+  path serves iOS 27's run in the app. No lane change.
+- **A:** `fcntl` joins the lane's `ALLOWED` (70,112 bytes, already on the device slice) and the lane opens the real
+  `Store` rather than the request's copy. A lane decision, and the premade's write lands before the commit, outside
+  s7 (b)'s "writes nothing".
+
+Not chosen: keeping the button's marks in the widget's `state.json`. Two stores of one person's check-ins would show
+different weeks in the widget and the Page.
+
+### 9.3 The eleven without a button
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 15: 9.3 The eleven without a button, scrolls sideways" style="--tw:839px" markdown="1">
+
+| Premade | Why not in 1.0 | What would change it |
+|---|---|---|
+| Countdown | adding or renaming an event needs typing (the Page); choosing the event Small shows is a setting, not a daily act | none planned |
+| Sunrise and sunset | shows a figure; nothing to act on | none |
+| Steps and floors | the reading comes from Motion & Fitness; a button could only refresh, which is ADR-007's `RefreshButton`: not person-settable, and it would spend a cap for a reading the app already updates | none in 1.0 |
+| Distance to a saved place | needs a location fix, which a widget run here does not get ("while PyWidget is open"); every tap would open pywidget, the tap's job | none |
+| Altitude | the same: a fix while pywidget is open | none |
+| Shortcuts launcher | its tiles are `Link`s that run a shortcut through pywidget, which iOS must bring forward to open Shortcuts; links are not buttons and stay uncounted | none |
+| Storage | shows a figure | none |
+| Day progress | shows the clock | none |
+| Quote of the day | its caption promises one quote a day, and its list is not picked yet (`PERSON_PICKED = False`: three layout samples). "Another quote" over three samples would show the same lines | first candidate after 1.0, once the L16 list is picked |
+| World clocks | shows times | none |
+| GitHub repository | a refresh is a network fetch, and GitHub is not a lane premade (it saves its cache through `_premade_lock`, s2.3.1), so the button would open pywidget on every tap | none |
+
+</div>
+
+
+### 9.4 Build cost, for Idris (Commandment 13 reviewer)
+
+After ADR-011 steps 4, 5, 6a and 6 (the generic path: signing, the Python run, the state commit, drawing). Nothing
+here adds a Swift view; the habit button is an ordinary drawn `Button`.
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 16: 9.4 Build cost, for Idris (Commandment 13 reviewer), scrolls sideways" style="--tw:965px" markdown="1">
+
+| Part | Who | Size | On the slot |
+|---|---|---|---|
+| Frames for Small, Medium and Large in Paper and Studio, hit areas outlined, VoiceOver order | Maren | 0.5 day | no, beside it, before the build |
+| `habits.py`: the `check` handler, the three layouts, the docstring's "no widget buttons in v1" line; host tests (mark, unmark, unknown `habit`, `day` out of range, a failed handler writes nothing); render tests at name `max` 13 and a 3-digit streak; trees, first renders and `catalog.json` re-run | Pernille | 0.5 day | no, beside it, as plan.md counts her step 5 |
+| Route B's commit of a premade key in the action run, reusing the Page's locked writer; tests that a mark from the widget and a Page save in the same second both survive | Idris | 0.5 (0.25 to 1) | yes |
+| On the iPhone (iOS 26): a lane Habits widget's button marks today without opening pywidget; Habits' measured T against `timeout` 0.5 + T <= 2.0 s; a locked-phone tap; screenshots of the three sizes with hit areas outlined | Idris | 0.5 (0.25 to 1) | yes |
+| **Total on the slot** | | **1 (0.5 to 2)**, as plan.md has it | |
+
+</div>
+
+
+What would push it to 2: route A instead of B; the Page's Swift locked writer (T-4468's Swift half) not landed when
+this starts, since route B reuses it; or Habits' T above 1.5 s, so its buttons fall back to links that open pywidget
+(it still works, visibly; ADR-011 s4).
+
+The board line is Idris's to add when T-4558 is ticked (the board line says so). A draft he can take or change:
+`[build] Habit tracker's Done today button \| Idris with Pernille, step of T-4478, after ADR-011 steps 4, 5, 6a, 6:
+premade-inputs.md s9. Done when: tests: the handler cases in s9.4, and a widget mark and a Page save in one second
+both kept; seen: on the iPhone (iOS 26) a lane Habits widget marks today without pywidget opening, and Small, Medium
+and Large screenshots with hit areas outlined.`
+
+### 9.5 Open
+
+1. **Route A or B** (s9.2): Pernille and Idris, at the step-5 and step-6 reviews. I recommend B.
+2. **The `entry()` lint and `accessibility_label`.** ADR-011 s3 has the lint print "Button 'x' has no text" when a
+   label has no text. The habit button's label is a symbol with an `accessibility_label`; the lint should count that
+   as text. Pernille's, in step 5.
+3. **Name length.** s3.5 above says Name `max` 24; `habits.py` `SETTINGS` has 13 (measured, c00ce27e15). The layouts
+   here use 13. s3.5 is the stale one; I correct it with the frames.
+4. **Strings** are DRAFT, like every app string, until a copy guide is approved (C51).
 {% endraw %}
 
 </div>

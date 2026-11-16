@@ -1,10 +1,10 @@
 {
  "schema": 1,
- "at": "2026-11-16T13:37:32.053202+00:00",
+ "at": "2026-11-16T13:43:08.518174+00:00",
  "session": {
-  "active": true,
-  "kind": "work",
-  "started": "2026-11-16T08:19:11-05:00",
+  "active": false,
+  "kind": "",
+  "started": null,
   "flow": [
    {
     "t": "T-4554",
@@ -43,7 +43,6 @@
   "done": [
    {
     "t": "T-4558",
-    "name": "Choose which premades get buttons",
     "acct": "Personal a",
     "steps": [],
     "end": "landed",
@@ -51,7 +50,6 @@
    },
    {
     "t": "T-3970",
-    "name": "Check finished work before it ships",
     "acct": "Personal a",
     "steps": [],
     "end": "landed",
@@ -59,7 +57,6 @@
    },
    {
     "t": "T-4256",
-    "name": "Lighten the marks and colour their line numbers",
     "acct": "Personal b",
     "steps": [],
     "end": "landed",
@@ -197,12 +194,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": null,
+ "next_tick": "2026-11-16T08:33:16-05:00",
  "personal": {
   "week_pct": 10.02,
-  "usage_pct": 33.4,
-  "work_pct": 68.9,
-  "read_at": "2026-11-16T13:37:00+00:00",
+  "usage_pct": 33.2,
+  "work_pct": 67.4,
+  "read_at": "2026-11-16T13:44:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -317,7 +314,7 @@
   }
  ],
  "disk": {
-  "free_gb": 44,
+  "free_gb": 47,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -326,14 +323,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-16T08:31:00-05:00",
+   "at": "2026-11-16T08:38:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-16T08:37:00-05:00",
+  "at": "2026-11-16T08:44:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -341,13 +338,9 @@
    "b": "double-spread"
   }
  },
- "next_tick_why": "session",
+ "next_tick_why": "last_tick",
  "idle": null,
- "pool": {
-  "why": "Double Spread: 80% of the week left, paced to last until Wed 14:00, the week's halfway point; the machine allows 2 (new work waits: 20 tasks wait to merge (limit 12): 2 agents finish and merge...",
-  "n": 2,
-  "at": "2026-11-16T08:18:16.297874-05:00"
- },
+ "pool": null,
  "lanes": [
   {
    "name": "Idris",
@@ -400,7 +393,6 @@
  ],
  "tasks": {
   "run": [],
-  "src": "plan",
   "open": [
    {
     "w": "Idris",
@@ -495,31 +487,6 @@
    "wait": 34,
    "blocked": 42,
    "you": 12
-  },
-  "fin": {
-   "n": 5,
-   "rows": [
-    [
-     "T-3970",
-     "Check finished work before..."
-    ],
-    [
-     "T-4558",
-     "Choose which premades get..."
-    ],
-    [
-     "T-4402",
-     "Have the audit ledger's..."
-    ],
-    [
-     "T-4256",
-     "Lighten the marks and colour..."
-    ],
-    [
-     "T-4420",
-     "Read the audit's one-limit..."
-    ]
-   ]
   }
  },
  "qr": [
@@ -561,62 +528,62 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-16T13:37:23Z",
+  "at": "2026-11-16T13:43:08Z",
   "s": {
    "T-4554": [
     "merging",
     "Host checks on the Mac mini",
-    1794836183037
+    1794836168518
    ],
    "T-4555": [
     "mergeq",
     "1st to merge",
-    1794831983037
+    1794831968518
    ],
    "T-4022": [
     "mergeq",
     "2nd to merge",
-    1794832223037
+    1794832208518
    ],
    "T-4020": [
     "mergeq",
     "3rd to merge",
-    1794832283037
+    1794832268518
    ],
    "T-4564": [
-    "mergetest",
-    "Xcode checks on the MacBook, 4th to merge",
-    1794836123037
+    "mergeq",
+    "4th to merge",
+    1794835928518
    ],
    "T-4565": [
-    "mergetest",
-    "Xcode checks on the MacBook, 4th to merge",
-    1794836123037
+    "mergeq",
+    "4th to merge",
+    1794835928518
    ],
    "T-4529": [
-    "mergetest",
-    "Xcode checks on the MacBook, 11th to merge",
-    1794836123037
+    "mergeq",
+    "11th to merge",
+    1794835448518
    ],
    "T-4297": [
-    "mergetest",
-    "Xcode checks on the MacBook, 11th to merge",
-    1794836123037
+    "mergeq",
+    "11th to merge",
+    1794835448518
    ],
    "T-4286": [
-    "mergetest",
-    "Xcode checks on the MacBook, 11th to merge",
-    1794836123037
+    "mergeq",
+    "11th to merge",
+    1794835448518
    ],
    "T-4558": [
     "mergeq",
     "13th to merge",
-    1794836243037
+    1794836288518
    ],
    "T-3970": [
     "mergeq",
     "13th to merge",
-    1794836243037
+    1794836288518
    ],
    "T-4256": [
     "merged",
@@ -659,31 +626,29 @@
    "T-4558": "Maren",
    "T-3970": "Pernille",
    "T-4256": "Idris",
-   "T-4276": "Operator",
-   "T-4402": "Odalys",
-   "T-4420": "Operator"
+   "T-4276": "Operator"
   }
  },
  "ln": {
-  "at": "2026-11-16T13:37:23Z",
+  "at": "2026-11-16T13:43:08Z",
   "mq": {
    "n": {
-    "checking": 6,
+    "checking": 1,
     "inline": 5,
     "conflicted": 1,
-    "failed": 0,
+    "failed": 5,
     "held": 0,
     "retry": 1,
     "parked": 10
    },
    "m": {
-    "checking": 2,
-    "inline": 66,
-    "conflicted": 2239,
-    "failed": null,
+    "checking": 7,
+    "inline": 72,
+    "conflicted": 2245,
+    "failed": 2,
     "held": null,
-    "retry": 7,
-    "parked": 309
+    "retry": 13,
+    "parked": 314
    },
    "cur": [
     [
@@ -692,31 +657,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     1
-    ],
-    [
-     [
-      "T-4564"
-     ],
-     "iPhone app tests",
-     "MacBook",
-     2
-    ],
-    [
-     [
-      "T-4565"
-     ],
-     "iPhone app tests",
-     "MacBook",
-     2
-    ],
-    [
-     [
-      "T-4529"
-     ],
-     "iPhone app tests",
-     "MacBook",
-     2
+     7
     ]
    ],
    "ld": [
@@ -726,12 +667,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-16T13:37:23Z",
-    "ld": 14.4,
+    "at": "2026-11-16T13:43:09Z",
+    "ld": 7.07,
     "c": 8,
     "sb": 0,
     "dk": [
-     47.4,
+     47.2,
      228.3
     ],
     "ss": [
@@ -754,15 +695,6 @@
   }
  },
  "operators": [
-  {
-   "w": "Operator",
-   "a": "Main plan",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session \u2013 2 tasks",
-   "at": "2026-11-16T08:19:11-05:00"
-  },
   {
    "w": "Operator",
    "a": "Evan",
@@ -791,7 +723,6 @@
   "lane_next",
   "queue_text",
   "task_done",
-  "fin_short",
   "task_title",
   "done_text",
   "task_open",
@@ -802,10 +733,10 @@
   "main": 0,
   "lanes": 2,
   "total": 2,
-  "at": "8:37 AM",
+  "at": "8:44 AM",
   "why": "",
-  "at_iso": "2026-11-16T13:37:00+00:00",
-  "started": "8:19 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0, started 8:19 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 8:37 AM ET</p></section>"
+  "at_iso": "2026-11-16T13:44:00+00:00",
+  "started": "",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 8:44 AM ET</p></section>"
  }
 }

@@ -37,7 +37,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 - T-2261 11-13 17393d231c: problems element + UI test (local 2/0 only), shots t2261/; review T-4252 Pernille. Open: Maren, runner run of the UI test. Lesson: the bundle's own names come from a C embedder (sim clang, -framework Python) run by simctl spawn, PYTHONPATH = lib/python3.15 + lib-arm64; land jobs run unit tests only.
 
-- T-4254/55/56/61 eab2ec4097 11-13: EditorMarks (hold typed word, keep other lines), tint 12/9 %, VO list announcements; 4254+4255 ticked (board unstaged). Open: T-4256 gutter number colour (Runestone one colour for all numbers: needs a Vendor/adapter hook), Increase Contrast shots; T-4261 review by Pernille. Lesson: simctl recordVideo can't write to the SANDISK volume (-12204): record to /private/tmp; avconvert trims. A Vendor symlink in the copy blocks main_gate: remove before land.
+- T-4256 11-16 0b3deb64a5: gutter numbers via patch runestone-0003 (TextView.lineNumberMarks), shots t4256/. Open: tick after full run; T-4261 review (Pernille); HC tint 6.4-7.9 < 7:1 for Maren. Lesson: shots on a private sim (simctl create/delete): the shared iPhone 17e runs others' tests, and simctl ui flips their contrast.
 
 - T-3821 11-13: written, not landed; copy T-3821-idris/wt (review-line.txt ready) must first come up over T-4311 (same 3 files: checkout --merge). Then land, tick, review line, remove copy. Lesson: a land cycle is ~20 min; start the gate by minute 15.
 
@@ -52,6 +52,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-4542 11-15: ADR-011 accepted 10:05 PM after Pernille re-read + Maren review (run.lock separate from state.lock; v matched across tree.json entries x families; notice no timer; 44 pt targets). Open: both confirm (board note 10:04 PM), then tick. Lesson: before naming a lock for a long hold, grep its callers' waits; a short-hold lock can't double as a run lock.
 - T-3281 11-16: gate_session_build.sh --test (XC_LOCAL=1: xc_route sends a test with KEY=VALUE to the runner, which drops it: false green). 12/0, shot t3281/. Open: shot catches the share sheet mid-present (dim, no sheet); xc_route should keep such tests local.
 - T-3552 11-16 106de8a7d0: preview budget whole at dequeue, queue limit 10 s; ticked. Open: review. Lesson: another task's uncommitted file that won't compile reds every local test: test in a detached worktree copy with only my diff.
+- T-4433 11-16 39afa8c746: Lock Screen refresh tap gated .none (M1), s10 runtime table all open. Open: tests NOT run (3 attempts lost to Xcode lock), land, then the checks. Lesson: 27.1 has no device; use iPhone 17e 27.0 by id.
 {% endraw %}
 
 

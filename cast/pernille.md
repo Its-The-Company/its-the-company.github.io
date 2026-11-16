@@ -33,7 +33,6 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 ## Open
 
-- T-3825 11-13 (168237a736): T-2494 re-check on main PASS w/ fixes; L1-L3 = T-4404..06 (Idris), ticked. Lesson: board add refuses a bare ID in a line's text with no link; drop the ID.
 - T-0678.7 11-13 (feb15a1ceb): T-0678 slices FIX FIRST; H1+M1 = T-4414, M2 = T-4415, M3 = T-4416, L = T-4417 (Idris); agreed iOS 27 .main pin. Lesson: a rule keyed on an author-set field (sampled_at) measures the author, not the run; ask who writes the input.
 - T-4418 11-14 (c267c4ecb3): T-1440 refresh tap PASS w/ notes; M1-M3 = T-4433..35, L = T-4436 (Idris). Lesson: tests hosted in the app see TreeHost.isExtension false, so extension-only branches are never drawn; look for that first.
 - T-4439 11-14 LANDED a1d5dc5e46 (ticked): T-3279 PASS w/ findings; M1 = T-4440, M2 = T-4441, L1-L3 = T-4442 (Idris), M3 on T-3279's line. Guard refused the first write in main; restarted in a scratch worktree under a logged T-0848 decision. Lesson: a review file goes in my own copy first, whatever the packet says.
@@ -45,6 +44,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-4542 11-15: ADR-011 s4/s6/s7 review FIX FIRST (H1 per-row Button args lost; H2 two interpreters commit one state; M1-M9); s7 Q1/Q2 answered in the ADR. Lesson: when a design adds a second process that runs handlers, find the invariant the old commit rule assumed (one interpreter at a time).
 - T-4542 11-15 re-read: ADR-011 at bec23284ba FIX FIRST narrowed; Mediums settled. H1 gap: tree.json holds entries x families, link names neither; H2 gap: state.lock is the short-hold lock of sink, run log, status, so a run-long hold starves them (use run.lock). Lesson: before naming a lock for a long hold, list who else takes it.
 - T-4550 11-16 slice 1 (0221be1eed): ADR-011 s7 items 1-5 in pywidget_ui; slices 2/3 = T-4564/T-4565; Idris review owed. Lesson: run_host --both under load runs 25+ min and prints nothing till the end; run it -u into a scratch file, background, long timeout; 3.9 stdlib can trip 600 s (rerun --timeout 1500).
+- T-3970 11-16 (680c9dbab9): T-3675 launcher slot copy PASS w/ findings; M1 premade.json lock = T-4570 (Idris, part of T-4185). Lesson: lane outbox holds other sessions' records (xc.sh jobs); commit outbox files by name, never the folder.
 
 ## Lessons
 

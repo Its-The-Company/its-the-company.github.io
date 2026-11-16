@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-16T02:49:30.230934+00:00",
+ "at": "2026-11-16T02:52:29.677505+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -113,22 +113,30 @@
    "task": "[tools] T-4194 wire and switch on feature sessions",
    "model": "opus",
    "started": "2026-11-16T02:43:06.794Z",
-   "seconds": 383,
+   "seconds": 562,
    "finished": null,
    "effort": "high"
   },
+  {
+   "name": "maren",
+   "task": "[review] T-4542 Maren reviews ADR-011 setting and notices",
+   "model": "opus",
+   "started": "2026-11-16T02:52:19.557Z",
+   "seconds": 10,
+   "finished": null,
+   "effort": "high"
+  }
+ ],
+ "who": "Idris, Maren",
+ "recent": [
   {
    "name": "idris",
    "task": "[design] T-4542 revise ADR-011 after Pernille review",
    "model": "opus",
    "started": "2026-11-16T02:43:31.677Z",
-   "seconds": 358,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Idris x2",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-16T02:52:24.287000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[tools] T-4537 clean disk before pausing",
@@ -152,21 +160,13 @@
    "started": "2026-11-16T01:32:55.724Z",
    "seconds": null,
    "finished": "2026-11-16T02:42:42.593000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[design] T-4542 widget tap and button actions ADR",
-   "model": "opus",
-   "started": "2026-11-16T02:16:11.402Z",
-   "seconds": null,
-   "finished": "2026-11-16T02:34:57.315000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
   "runnable_count": 376,
-  "blocked_count": 75
+  "blocked_count": 76
  },
  "meter": {
   "five_hour": {
@@ -214,7 +214,7 @@
   "week_pct": 4.62,
   "usage_pct": 26.2,
   "work_pct": 68.8,
-  "read_at": "2026-11-16T02:49:00+00:00",
+  "read_at": "2026-11-16T02:52:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -251,7 +251,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-15T21:49:00-05:00",
+  "at": "2026-11-15T21:52:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -273,6 +273,15 @@
    "task": "[tools] T-4194 wire and switch on feature sessions",
    "model": "opus",
    "since": "2026-11-16T02:43:06.794Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
+   "name": "Maren",
+   "state": "running",
+   "task": "[review] T-4542 Maren reviews ADR-011 setting and notices",
+   "model": "opus",
+   "since": "2026-11-16T02:52:19.557Z",
    "next": [],
    "effort": "high"
   },
@@ -307,14 +316,6 @@
    "model": null,
    "since": null,
    "next": []
-  },
-  {
-   "name": "Maren",
-   "state": "next",
-   "task": "Maren, P2, found on T-3366 (11-07): in...",
-   "model": null,
-   "since": null,
-   "next": []
   }
  ],
  "tasks": {
@@ -330,13 +331,13 @@
     "task": "T-4194"
    },
    {
-    "w": "Idris",
-    "k": "design",
+    "w": "Maren",
+    "k": "review",
     "t": "Let people choose what a widget tap does",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-16T02:43:31.677Z",
-    "o": "c",
+    "at": "2026-11-16T02:52:19.557Z",
+    "o": "i",
     "task": "T-4542"
    }
   ],
@@ -433,8 +434,8 @@
   "count": {
    "next": 376,
    "wait": 35,
-   "blocked": 40,
-   "you": 11
+   "blocked": 41,
+   "you": 12
   },
   "fin": {
    "n": 4,
@@ -497,12 +498,12 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-16T02:49:09Z",
+  "at": "2026-11-16T02:52:21Z",
   "s": {
    "T-4542": [
     "merged",
-    "on main 9:42 PM ET",
-    1794796973000,
+    "on main 9:51 PM ET",
+    1794797505000,
     ""
    ]
   },
@@ -511,7 +512,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-16T02:49:09Z",
+  "at": "2026-11-16T02:52:21Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -525,11 +526,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 1591,
+    "conflicted": 1594,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 819
+    "parked": 823
    },
    "cur": [],
    "ld": [
@@ -539,8 +540,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-16T02:48:47Z",
-    "ld": 3.31,
+    "at": "2026-11-16T02:52:22Z",
+    "ld": 2.95,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -598,10 +599,10 @@
   "main": 2,
   "lanes": 0,
   "total": 2,
-  "at": "9:49 PM",
+  "at": "9:52 PM",
   "why": "",
-  "at_iso": "2026-11-16T02:49:00+00:00",
+  "at_iso": "2026-11-16T02:52:00+00:00",
   "started": "8:30 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 8:30 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:49 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 8:30 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:52 PM ET</p></section>"
  }
 }

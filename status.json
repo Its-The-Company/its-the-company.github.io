@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-16T03:10:46.688784+00:00",
+ "at": "2026-11-16T03:13:47.293799+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -101,7 +101,7 @@
    "task": "[tools] T-4194 wire and switch on feature sessions",
    "model": "opus",
    "started": "2026-11-16T02:43:06.794Z",
-   "seconds": 1659,
+   "seconds": 1840,
    "finished": null,
    "effort": "high"
   },
@@ -110,22 +110,30 @@
    "task": "[tools] T-4547 automatic safe deletion when disk low",
    "model": "opus",
    "started": "2026-11-16T03:04:22.456Z",
-   "seconds": 384,
+   "seconds": 564,
    "finished": null,
    "effort": "high"
   },
   {
    "name": "ines",
-   "task": "[plan] add ADR-011's remaining build steps to the board",
+   "task": "[plan] T-4551 new dates in plan and proposal",
    "model": "opus",
-   "started": "2026-11-16T03:07:46.334Z",
-   "seconds": 180,
+   "started": "2026-11-16T03:12:25.129Z",
+   "seconds": 82,
    "finished": null,
    "effort": "high"
   }
  ],
  "who": "Idris, Odalys, Ines",
  "recent": [
+  {
+   "name": "ines",
+   "task": "[plan] add ADR-011's remaining build steps to the board",
+   "model": "opus",
+   "started": "2026-11-16T03:07:46.334Z",
+   "seconds": null,
+   "finished": "2026-11-16T03:12:10.181000+00:00"
+  },
   {
    "name": "maren",
    "task": "[review] T-4542 Maren confirms accepted ADR-011",
@@ -149,38 +157,29 @@
    "started": "2026-11-16T02:59:55.606Z",
    "seconds": null,
    "finished": "2026-11-16T03:05:44.927000+00:00"
-  },
-  {
-   "name": "ines",
-   "task": "[plan] T-4543 widget buttons into the 1.0 plan",
-   "model": "opus",
-   "started": "2026-11-16T02:56:42.517Z",
-   "seconds": null,
-   "finished": "2026-11-16T03:04:06.874000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 383,
+  "runnable_count": 387,
   "blocked_count": 75
  },
  "meter": {
   "five_hour": {
-   "pct": null,
-   "resets_at": null,
+   "pct": 0.0,
+   "resets_at": "2026-11-16T03:10:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-15T22:05:18.890198-05:00",
+   "read_at": "2026-11-15T22:11:29.025208-05:00",
    "source": "live",
-   "last_reset": "2026-11-15T22:10:00-05:00",
-   "left": null,
+   "left": 100.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 15.0,
    "resets_at": "2026-11-22T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-15T22:05:18.890198-05:00",
+   "read_at": "2026-11-15T22:11:29.025208-05:00",
    "source": "live",
    "left": 85.0,
    "left_words": "of your weekly allowance left"
@@ -192,7 +191,7 @@
    "read_at": "2026-11-15T20:29:58.154359-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-15T22:05:18.890198-05:00"
+  "read_at": "2026-11-15T22:11:29.025208-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -212,7 +211,7 @@
   "week_pct": 4.62,
   "usage_pct": 26.2,
   "work_pct": 68.8,
-  "read_at": "2026-11-16T03:10:00+00:00",
+  "read_at": "2026-11-16T03:13:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -242,14 +241,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-15T22:05:00-05:00",
+   "at": "2026-11-15T22:11:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-15T22:10:00-05:00",
+  "at": "2026-11-15T22:13:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -286,9 +285,9 @@
   {
    "name": "Ines",
    "state": "running",
-   "task": "[plan] add ADR-011's remaining build steps to the board",
+   "task": "[plan] T-4551 new dates in plan and proposal",
    "model": "opus",
-   "since": "2026-11-16T03:07:46.334Z",
+   "since": "2026-11-16T03:12:25.129Z",
    "next": [],
    "effort": "high"
   },
@@ -342,11 +341,12 @@
    {
     "w": "Ines",
     "k": "plan",
-    "t": "Add ADR-011's remaining build steps to the board",
+    "t": "Bring the charter Mission proposal up to the new dates",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-16T03:07:46.334Z",
-    "o": "c"
+    "at": "2026-11-16T03:12:25.129Z",
+    "o": "c",
+    "task": "T-4551"
    }
   ],
   "src": "plan",
@@ -440,7 +440,7 @@
    }
   ],
   "count": {
-   "next": 383,
+   "next": 387,
    "wait": 35,
    "blocked": 40,
    "you": 11
@@ -514,11 +514,11 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-16T03:10:46Z",
+  "at": "2026-11-16T03:13:41Z",
   "s": {}
  },
  "ln": {
-  "at": "2026-11-16T03:10:46Z",
+  "at": "2026-11-16T03:13:41Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -532,11 +532,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 1612,
+    "conflicted": 1615,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 841
+    "parked": 844
    },
    "cur": [],
    "ld": [
@@ -546,12 +546,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-16T03:10:47Z",
-    "ld": 2.8,
+    "at": "2026-11-16T03:13:41Z",
+    "ld": 2.22,
     "c": 8,
     "sb": 0,
     "dk": [
-     36.3,
+     35.3,
      228.3
     ],
     "ss": [
@@ -606,10 +606,10 @@
   "main": 3,
   "lanes": 0,
   "total": 3,
-  "at": "10:10 PM",
+  "at": "10:13 PM",
   "why": "",
-  "at_iso": "2026-11-16T03:10:00+00:00",
+  "at_iso": "2026-11-16T03:13:00+00:00",
   "started": "8:30 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 8:30 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 10:10 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 8:30 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 10:13 PM ET</p></section>"
  }
 }

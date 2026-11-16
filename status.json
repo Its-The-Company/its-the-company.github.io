@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-16T19:48:44.638327+00:00",
+ "at": "2026-11-16T19:51:45.748661+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -93,25 +93,25 @@
  "workers": [
   {
    "name": "odalys",
-   "task": "[tools] T-4443 card rules in queue check",
-   "model": "opus",
-   "started": "2026-11-16T19:23:14.320Z",
-   "seconds": 1530,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "odalys",
    "task": "[tools] T-3992 recut parked lane-a batch",
    "model": "opus",
    "started": "2026-11-16T19:25:02.030Z",
-   "seconds": 1422,
+   "seconds": 1603,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Odalys x2",
- "recent": [],
+ "who": "Odalys",
+ "recent": [
+  {
+   "name": "odalys",
+   "task": "[tools] T-4443 card rules in queue check",
+   "model": "opus",
+   "started": "2026-11-16T19:23:14.320Z",
+   "seconds": null,
+   "finished": "2026-11-16T19:50:21.100000+00:00"
+  }
+ ],
  "queue": {
   "runnable": [],
   "blocked": [],
@@ -164,7 +164,7 @@
   "week_pct": 17.69,
   "usage_pct": 44.6,
   "work_pct": 73.1,
-  "read_at": "2026-11-16T19:48:00+00:00",
+  "read_at": "2026-11-16T19:51:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -201,7 +201,7 @@
  "lock_in": {
   "on": false,
   "pool": 4,
-  "at": "2026-11-16T14:48:00-05:00",
+  "at": "2026-11-16T14:51:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -220,9 +220,9 @@
   {
    "name": "Odalys",
    "state": "running",
-   "task": "[tools] T-4443 card rules in queue check",
+   "task": "[tools] T-3992 recut parked lane-a batch",
    "model": "opus",
-   "since": "2026-11-16T19:23:14.320Z",
+   "since": "2026-11-16T19:25:02.030Z",
    "next": [],
    "effort": "high"
   },
@@ -269,16 +269,6 @@
  ],
  "tasks": {
   "run": [
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Add the task card slots when a line is made",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-16T19:23:14.320Z",
-    "o": "c",
-    "task": "T-4443"
-   },
    {
     "w": "Odalys",
     "k": "tools",
@@ -365,6 +355,11 @@
   ],
   "done": [
    {
+    "w": "Odalys",
+    "t": "the daily queue check now reads each task's card: it proves a task finished when its named test...",
+    "at": "2026-11-16T14:50:00-05:00"
+   },
+   {
     "w": "Idris",
     "t": "A gallery preview that had to wait behind a slow Home Screen widget refresh used to run out of...",
     "at": "2026-11-16T14:20:00-05:00"
@@ -373,11 +368,6 @@
     "w": "Pernille",
     "t": "The new words iOS shows for the app's widgets and Shortcuts were checked and are correct and...",
     "at": "2026-11-16T14:20:00-05:00"
-   },
-   {
-    "w": "Maren",
-    "t": "Home's count of finished work now reads 'waiting to land' and says how many are in the merge...",
-    "at": "2026-11-16T14:07:00-05:00"
    }
   ],
   "count": {
@@ -387,8 +377,13 @@
    "you": 12
   },
   "fin": {
-   "n": 0,
-   "rows": []
+   "n": 1,
+   "rows": [
+    [
+     "T-4443",
+     "Add the task card slots when..."
+    ]
+   ]
   }
  },
  "qr": [
@@ -430,22 +425,16 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-16T19:48:33Z",
+  "at": "2026-11-16T19:51:45Z",
   "s": {
    "T-4295": [
     "testing",
     "its own tests, in its copy",
-    1794857613240
-   ],
-   "T-4443": [
-    "testing",
-    "its own tests, in its copy",
-    1794858393240
+    1794857625748
    ]
   },
   "nm": {
-   "T-4295": "Let Chat messages pick model, effort and account",
-   "T-4443": "Add the task card slots when a line is made"
+   "T-4295": "Let Chat messages pick model, effort and account"
   },
   "wk": {
    "T-4295": "Odalys",
@@ -453,7 +442,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-16T19:48:33Z",
+  "at": "2026-11-16T19:51:45Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -467,11 +456,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 1407,
-    "failed": 67,
+    "conflicted": 1410,
+    "failed": 70,
     "held": null,
     "retry": null,
-    "parked": 612
+    "parked": 615
    },
    "cur": [],
    "ld": [
@@ -481,12 +470,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-16T19:47:58Z",
-    "ld": 4.68,
+    "at": "2026-11-16T19:50:59Z",
+    "ld": 2.82,
     "c": 8,
     "sb": 1,
     "dk": [
-     31.1,
+     31.2,
      228.3
     ],
     "ss": [
@@ -530,6 +519,7 @@
   "lane_next",
   "queue_text",
   "task_done",
+  "fin_short",
   "task_title",
   "done_text",
   "task_open",
@@ -537,13 +527,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 2,
+  "main": 1,
   "lanes": 0,
-  "total": 2,
-  "at": "2:48 PM",
+  "total": 1,
+  "at": "2:51 PM",
   "why": "",
-  "at_iso": "2026-11-16T19:48:00+00:00",
+  "at_iso": "2026-11-16T19:51:00+00:00",
   "started": "2:21 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 2:21 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 2:48 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 2:21 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 2:51 PM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-16T00:07:46.308367+00:00",
+ "at": "2026-11-16T00:10:45.851440+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -112,7 +112,7 @@
    "task": "[tools] T-3992 land the pipeline batch",
    "model": "opus",
    "started": "2026-11-15T22:17:17.812Z",
-   "seconds": 6628,
+   "seconds": 6808,
    "finished": null,
    "effort": "high"
   }
@@ -196,7 +196,7 @@
   "week_pct": 3.57,
   "usage_pct": 22.9,
   "work_pct": 71.4,
-  "read_at": "2026-11-16T00:07:00+00:00",
+  "read_at": "2026-11-16T00:10:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -233,7 +233,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-15T19:07:00-05:00",
+  "at": "2026-11-15T19:10:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -461,27 +461,27 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-16T00:07:46Z",
+  "at": "2026-11-16T00:10:29Z",
   "s": {
    "T-4282": [
     "mergeq",
     "1st to merge",
-    1794785146308
+    1794785129649
    ],
    "T-4293": [
     "mergeq",
     "1st to merge",
-    1794785146308
+    1794785129649
    ],
    "T-4512": [
     "mergeq",
     "1st to merge",
-    1794785146308
+    1794785129649
    ],
    "T-3992": [
-    "testing",
-    "its own tests, in its copy",
-    1794784846308
+    "merging",
+    "Mac tests at the main gate",
+    1794787769649
    ]
   },
   "nm": {
@@ -492,7 +492,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-16T00:07:46Z",
+  "at": "2026-11-16T00:10:29Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -505,12 +505,12 @@
    },
    "m": {
     "checking": null,
-    "inline": 42,
-    "conflicted": 1429,
-    "failed": 6,
+    "inline": 45,
+    "conflicted": 1432,
+    "failed": 9,
     "held": null,
     "retry": null,
-    "parked": 658
+    "parked": 661
    },
    "cur": [],
    "ld": [
@@ -520,12 +520,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-16T00:07:46Z",
-    "ld": 0.88,
+    "at": "2026-11-16T00:10:09Z",
+    "ld": 1.12,
     "c": 8,
     "sb": 0,
     "dk": [
-     10.5,
+     11.2,
      228.3
     ],
     "ss": [
@@ -578,10 +578,10 @@
   "main": 1,
   "lanes": 0,
   "total": 1,
-  "at": "7:07 PM",
+  "at": "7:10 PM",
   "why": "",
-  "at_iso": "2026-11-16T00:07:00+00:00",
+  "at_iso": "2026-11-16T00:10:00+00:00",
   "started": "5:14 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 5:14 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 7:07 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 5:14 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 7:10 PM ET</p></section>"
  }
 }

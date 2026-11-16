@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-16T15:23:24.822241+00:00",
+ "at": "2026-11-16T15:26:29.550517+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -145,7 +145,7 @@
    "task": "[tools] T-4194 switch feature sessions on",
    "model": "opus",
    "started": "2026-11-16T14:45:03.633Z",
-   "seconds": 2301,
+   "seconds": 2485,
    "finished": null,
    "effort": "high"
   }
@@ -213,7 +213,7 @@
   "week_pct": 13.24,
   "usage_pct": 39.8,
   "work_pct": 68.6,
-  "read_at": "2026-11-16T15:23:00+00:00",
+  "read_at": "2026-11-16T15:26:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -243,14 +243,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-16T10:23:00-05:00",
+   "at": "2026-11-16T10:26:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-16T10:23:00-05:00",
+  "at": "2026-11-16T10:26:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -474,42 +474,47 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-16T15:23:05Z",
+  "at": "2026-11-16T15:26:17Z",
   "s": {
    "T-4276": [
     "merging",
     "Host checks on the Mac mini \u00b7 5 groups of tests done",
-    1794842285203
+    1794842237303
    ],
    "T-4295": [
     "merging",
     "Host checks on the Mac mini \u00b7 5 groups of tests done",
-    1794842285203
+    1794842237303
    ],
    "T-4315": [
     "merging",
     "Host checks on the Mac mini \u00b7 5 groups of tests done",
-    1794842285203
+    1794842237303
    ],
    "T-4314": [
     "merging",
     "Host checks on the Mac mini \u00b7 5 groups of tests done",
-    1794842285203
+    1794842237303
    ],
    "T-3764": [
     "mergeq",
     "1st to merge",
-    1794837725203
+    1794837677303
    ],
    "T-2943": [
     "mergeq",
     "4th to merge",
-    1794841565203
+    1794841577303
+   ],
+   "T-4433": [
+    "mergetest",
+    "iPhone tests on the MacBook",
+    null
    ],
    "T-4194": [
     "testing",
     "its own tests, in its copy",
-    1794841325203
+    1794841277303
    ]
   },
   "nm": {
@@ -519,6 +524,7 @@
    "T-4314": "Record what each personal session costs",
    "T-3764": "Make the iPad window test fail without the fix",
    "T-2943": "Send up the gate build and confirm it stays internal",
+   "T-4433": "Confirm the Lock Screen refresh tap first",
    "T-4194": "Build the feature session for app work"
   },
   "wk": {
@@ -528,12 +534,13 @@
    "T-4314": "Odalys",
    "T-3764": "Idris",
    "T-2943": "Idris",
+   "T-4433": "Idris",
    "T-4194": "Idris",
    "T-4584": "Operator"
   }
  },
  "ln": {
-  "at": "2026-11-16T15:23:05Z",
+  "at": "2026-11-16T15:26:17Z",
   "mq": {
    "n": {
     "checking": 4,
@@ -545,13 +552,13 @@
     "parked": 10
    },
    "m": {
-    "checking": 5,
-    "inline": 49,
-    "conflicted": 2345,
+    "checking": 9,
+    "inline": 52,
+    "conflicted": 2348,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 414
+    "parked": 417
    },
    "cur": [
     [
@@ -560,7 +567,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     5
+     9
     ],
     [
      [
@@ -568,7 +575,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     5
+     9
     ],
     [
      [
@@ -576,7 +583,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     5
+     9
     ],
     [
      [
@@ -584,7 +591,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     5
+     9
     ]
    ],
    "ld": [
@@ -594,8 +601,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-16T15:22:44Z",
-    "ld": 0.88,
+    "at": "2026-11-16T15:25:29Z",
+    "ld": 0.69,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -609,12 +616,12 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-16T14:59:38Z",
-    "ld": 11.1,
+    "at": "2026-11-16T15:16:00Z",
+    "ld": 0.67,
     "c": 12,
     "sb": 0,
     "dk": [
-     332.9,
+     333.1,
      926.4
     ],
     "sn": []
@@ -652,10 +659,10 @@
   "main": 1,
   "lanes": 0,
   "total": 1,
-  "at": "10:23 AM",
+  "at": "10:26 AM",
   "why": "",
-  "at_iso": "2026-11-16T15:23:00+00:00",
+  "at_iso": "2026-11-16T15:26:00+00:00",
   "started": "9:19 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 9:19 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 10:23 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 9:19 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 10:26 AM ET</p></section>"
  }
 }

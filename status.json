@@ -1,24 +1,20 @@
 {
  "schema": 1,
- "at": "2026-11-16T21:07:11.604378+00:00",
+ "at": "2026-11-16T21:10:23.786450+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-16T15:35:16-05:00",
-  "flow": [
+  "flow": [],
+  "done": [
    {
     "t": "T-4621",
     "name": "Card check that app parts name their docs page",
     "acct": "Personal b",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1794863021
-     }
-    ]
-   }
-  ],
-  "done": [
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794863302
+   },
    {
     "t": "T-4068",
     "name": "Check finished work before it ships",
@@ -89,16 +85,9 @@
     "steps": [],
     "end": "landed",
     "end_at": 1794860006
-   },
-   {
-    "t": "T-4047",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794860000
    }
   ],
-  "landed": 55,
+  "landed": 56,
   "failed": 12
  },
  "workers": [
@@ -107,7 +96,7 @@
    "task": "[tools] T-4583 land feature-step ticking",
    "model": "opus",
    "started": "2026-11-16T20:38:05.386Z",
-   "seconds": 1746,
+   "seconds": 1938,
    "finished": null,
    "effort": "high"
   },
@@ -116,7 +105,7 @@
    "task": "[tools] T-4617 quick checks before Xcode slot",
    "model": "opus",
    "started": "2026-11-16T20:38:15.991Z",
-   "seconds": 1735,
+   "seconds": 1927,
    "finished": null,
    "effort": "high"
   }
@@ -126,7 +115,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 405,
+  "runnable_count": 406,
   "blocked_count": 75
  },
  "meter": {
@@ -175,7 +164,7 @@
   "week_pct": 18.58,
   "usage_pct": 45.8,
   "work_pct": 73.2,
-  "read_at": "2026-11-16T21:07:00+00:00",
+  "read_at": "2026-11-16T21:10:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -299,7 +288,7 @@
  "lock_in": {
   "on": false,
   "pool": 4,
-  "at": "2026-11-16T16:07:00-05:00",
+  "at": "2026-11-16T16:10:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -480,7 +469,7 @@
    }
   ],
   "count": {
-   "next": 405,
+   "next": 406,
    "wait": 35,
    "blocked": 40,
    "you": 12
@@ -546,23 +535,8 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-16T21:06:45Z",
+  "at": "2026-11-16T21:10:23Z",
   "s": {
-   "T-4621": [
-    "merging",
-    "Host checks on the Mac mini \u00b7 1 group of tests done",
-    1794863025440
-   ],
-   "T-4068": [
-    "mergeq",
-    "1st to merge",
-    1794863205440
-   ],
-   "T-4076": [
-    "mergeq",
-    "1st to merge",
-    1794863205440
-   ],
    "T-4022": [
     "testing",
     "MacBook \u00b7 test",
@@ -571,17 +545,23 @@
    "T-4617": [
     "testing",
     "its own tests, in its copy",
-    1794862425440
+    1794862403786
    ],
    "T-4583": [
     "testing",
     "its own tests, in its copy",
-    1794861525440
+    1794861563786
    ],
    "T-4048": [
     "testq",
     "1st for a Simulator",
-    1794856845440
+    1794856883786
+   ],
+   "T-4621": [
+    "merged",
+    "on main 4:03 PM ET",
+    1794863017000,
+    ""
    ],
    "T-4486": [
     "merged",
@@ -591,35 +571,32 @@
    ]
   },
   "nm": {
-   "T-4621": "Card check that app parts name their docs page",
-   "T-4068": "Check finished work before it ships",
-   "T-4076": "Check finished work before it ships",
    "T-4022": "Check finished work before it ships",
    "T-4617": "Run quick checks before a land takes the Xcode slot",
    "T-4583": "Turn on Feature mode and tick steps at the merge",
    "T-4048": "Check finished work before it ships",
+   "T-4621": "Card check that app parts name their docs page",
    "T-4486": "Refuse Fable in sessions with no Fable task"
   },
   "wk": {
-   "T-4621": "Odalys",
-   "T-4068": "Pernille",
-   "T-4076": "Pernille",
    "T-4022": "Pernille",
    "T-4617": "Odalys",
    "T-4583": "Idris",
    "T-4048": "Pernille",
+   "T-4621": "Odalys",
    "T-4486": "Odalys",
    "T-4060": "Pernille",
    "T-4058": "Idris",
+   "T-4076": "Pernille",
    "T-4314": "Odalys"
   }
  },
  "ln": {
-  "at": "2026-11-16T21:06:45Z",
+  "at": "2026-11-16T21:10:23Z",
   "mq": {
    "n": {
-    "checking": 1,
-    "inline": 2,
+    "checking": 0,
+    "inline": 0,
     "conflicted": 2,
     "failed": 0,
     "held": 0,
@@ -627,37 +604,28 @@
     "parked": 11
    },
    "m": {
-    "checking": 3,
-    "inline": 0,
-    "conflicted": 1485,
+    "checking": null,
+    "inline": null,
+    "conflicted": 1489,
     "failed": null,
     "held": null,
-    "retry": 89,
-    "parked": 702
+    "retry": 92,
+    "parked": 705
    },
-   "cur": [
-    [
-     [
-      "T-4621"
-     ],
-     "Mac tests",
-     "Mac mini",
-     3
-    ]
-   ],
+   "cur": [],
    "ld": [
-    68,
-    "2026-11-16T21:03:29Z"
+    69,
+    "2026-11-16T21:08:22Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-16T21:06:53Z",
-    "ld": 19.77,
+    "at": "2026-11-16T21:10:03Z",
+    "ld": 24.64,
     "c": 8,
     "sb": 1,
     "dk": [
-     20.5,
+     20.1,
      228.3
     ],
     "ss": [
@@ -705,7 +673,7 @@
    "m": "opus",
    "e": "high",
    "t": "Work session \u2013 1 task",
-   "at": "2026-11-16T16:05:16-05:00"
+   "at": "2026-11-16T16:08:26-05:00"
   },
   {
    "w": "Operator",
@@ -718,8 +686,8 @@
   }
  ],
  "reply": {
-  "sent": "2026-11-16T21:04:02Z",
-  "seconds": 72.0
+  "sent": "2026-11-16T21:07:05Z",
+  "seconds": 78.0
  },
  "inbox": [],
  "trimmed": [
@@ -737,10 +705,10 @@
   "main": 2,
   "lanes": 4,
   "total": 6,
-  "at": "4:07 PM",
+  "at": "4:10 PM",
   "why": "",
-  "at_iso": "2026-11-16T21:07:00+00:00",
+  "at_iso": "2026-11-16T21:10:00+00:00",
   "started": "3:35 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 2, started 3:35 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 4:07 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 2, started 3:35 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 4:10 PM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-16T19:05:00.447804+00:00",
+ "at": "2026-11-16T19:08:04.706762+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -92,19 +92,17 @@
   "landed": 49,
   "failed": 12
  },
- "workers": [
+ "workers": [],
+ "who": "",
+ "recent": [
   {
    "name": "maren",
    "task": "[design] T-4595 split Home waiting count",
    "model": "opus",
    "started": "2026-11-16T17:52:58.025Z",
-   "seconds": 4322,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Maren",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-16T19:07:49.864000+00:00"
+  },
   {
    "name": "idris",
    "task": "[tools] T-4583 feature step ticking",
@@ -125,7 +123,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 388,
+  "runnable_count": 387,
   "blocked_count": 75
  },
  "meter": {
@@ -174,7 +172,7 @@
   "week_pct": 15.51,
   "usage_pct": 42.5,
   "work_pct": 69.1,
-  "read_at": "2026-11-16T19:05:00+00:00",
+  "read_at": "2026-11-16T19:08:00+00:00",
   "running": [
    {
     "lane": "b2",
@@ -249,7 +247,7 @@
  "lock_in": {
   "on": false,
   "pool": 4,
-  "at": "2026-11-16T14:05:00-05:00",
+  "at": "2026-11-16T14:08:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -265,15 +263,6 @@
   "at": "2026-11-16T10:53:26.618368-05:00"
  },
  "lanes": [
-  {
-   "name": "Maren",
-   "state": "running",
-   "task": "[design] T-4595 split Home waiting count",
-   "model": "opus",
-   "since": "2026-11-16T17:52:58.025Z",
-   "next": [],
-   "effort": "high"
-  },
   {
    "name": "Idris",
    "state": "next",
@@ -313,21 +302,18 @@
    "model": null,
    "since": null,
    "next": []
+  },
+  {
+   "name": "Maren",
+   "state": "next",
+   "task": "Maren, P2, found on T-3366 (11-07): in...",
+   "model": null,
+   "since": null,
+   "next": []
   }
  ],
  "tasks": {
-  "run": [
-   {
-    "w": "Maren",
-    "k": "design",
-    "t": "Split Home's waiting-to-merge count into its parts",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-16T17:52:58.025Z",
-    "o": "i",
-    "task": "T-4595"
-   }
-  ],
+  "run": [],
   "src": "plan",
   "open": [
    {
@@ -387,21 +373,26 @@
     "o": "c"
    },
    {
-    "w": "Maren",
-    "k": "site",
-    "t": "Split Home's waiting-to-merge count into its...",
-    "s": "next",
-    "o": "i"
-   },
-   {
     "w": "Odalys",
     "k": "tools",
     "t": "Answer Investor messages that no session claims",
     "s": "next",
     "o": "c"
+   },
+   {
+    "w": "Ines",
+    "k": "tools",
+    "t": "Propose the personal accounts' 5-hour stop at 97",
+    "s": "next",
+    "o": "i"
    }
   ],
   "done": [
+   {
+    "w": "Maren",
+    "t": "Home's count of finished work now reads 'waiting to land' and says how many are in the merge...",
+    "at": "2026-11-16T14:07:00-05:00"
+   },
    {
     "w": "Odalys",
     "t": "The Investors' answer A now lifts the two old blocks on deleting Simulators, and the cleaner...",
@@ -411,22 +402,21 @@
     "w": "Pernille",
     "t": "A second engineer checked the fix that marks a widget run as late in its log; it is sound and...",
     "at": "2026-11-16T12:20:00-05:00"
-   },
-   {
-    "w": "Pernille",
-    "t": "A second engineer checked that the unused project manifest reader is really gone from the...",
-    "at": "2026-11-16T12:05:00-05:00"
    }
   ],
   "count": {
-   "next": 388,
+   "next": 387,
    "wait": 34,
    "blocked": 41,
    "you": 12
   },
   "fin": {
-   "n": 5,
+   "n": 6,
    "rows": [
+    [
+     "T-4595",
+     "Split Home's..."
+    ],
     [
      "T-4561",
      "Act on the Investors' answer..."
@@ -489,7 +479,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-16T19:04:54Z",
+  "at": "2026-11-16T19:08:04Z",
   "s": {
    "T-2691": [
     "testing",
@@ -523,6 +513,7 @@
    "T-3765": "Idris",
    "T-4040": "Pernille",
    "T-4043": "Pernille",
+   "T-4595": "Maren",
    "T-4561": "Odalys",
    "T-4032": "Pernille",
    "T-4063": "Pernille",
@@ -531,7 +522,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-16T19:04:54Z",
+  "at": "2026-11-16T19:08:04Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -545,11 +536,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 1363,
-    "failed": 23,
+    "conflicted": 1366,
+    "failed": 26,
     "held": null,
     "retry": null,
-    "parked": 636
+    "parked": 639
    },
    "cur": [],
    "ld": [
@@ -559,12 +550,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-16T19:04:54Z",
-    "ld": 4.89,
+    "at": "2026-11-16T19:08:05Z",
+    "ld": 2.83,
     "c": 8,
     "sb": 2,
     "dk": [
-     26.4,
+     26.6,
      228.3
     ],
     "ss": [
@@ -575,17 +566,6 @@
      "t3765-iphone",
      "t3765-ipad"
     ]
-   },
-   "macbook": {
-    "at": "2026-11-16T18:27:24Z",
-    "ld": 10.99,
-    "c": 12,
-    "sb": 0,
-    "dk": [
-     331.9,
-     926.4
-    ],
-    "sn": []
    }
   }
  },
@@ -596,7 +576,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 1 task",
+   "t": "Work session",
    "at": "2026-11-16T13:49:21-05:00"
   },
   {
@@ -635,13 +615,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 1,
+  "main": 0,
   "lanes": 2,
-  "total": 3,
-  "at": "2:05 PM",
+  "total": 2,
+  "at": "2:08 PM",
   "why": "",
-  "at_iso": "2026-11-16T19:05:00+00:00",
+  "at_iso": "2026-11-16T19:08:00+00:00",
   "started": "10:53 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 1, started 10:53 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 2:05 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0, started 10:53 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 2:08 PM ET</p></section>"
  }
 }

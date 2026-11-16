@@ -1,24 +1,20 @@
 {
  "schema": 1,
- "at": "2026-11-16T11:14:09.538992+00:00",
+ "at": "2026-11-16T11:19:45.935635+00:00",
  "session": {
   "active": true,
   "kind": "morning",
   "started": "2026-11-16T06:05:30-05:00",
-  "flow": [
+  "flow": [],
+  "done": [
    {
     "t": "T-4276",
     "name": "Run Evan's account on the audit without the pause",
     "acct": "Personal a",
-    "steps": [
-     {
-      "s": "landing",
-      "at": 1794827799
-     }
-    ]
-   }
-  ],
-  "done": [
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794827804
+   },
    {
     "t": "T-4506",
     "name": "Site suites that fail only in worker copies",
@@ -92,18 +88,10 @@
     "steps": [],
     "end": "landed",
     "end_at": 1794820757
-   },
-   {
-    "t": "T-4010",
-    "name": "Rebuild This Session as a full flowchart",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794819690
    }
   ],
   "landed": 30,
-  "failed": 5
+  "failed": 6
  },
  "workers": [],
  "who": "",
@@ -169,7 +157,7 @@
   "week_pct": 9.67,
   "usage_pct": 32.6,
   "work_pct": 76.3,
-  "read_at": "2026-11-16T11:16:00+00:00",
+  "read_at": "2026-11-16T11:19:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -213,6 +201,54 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-16T06:10:18-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a2",
+    "task": "T-4554",
+    "w": "Idris",
+    "k": "build",
+    "t": "One state commit per widget across app and widget",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-16T06:18:21-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a2",
+    "task": "T-4555",
+    "w": "Maren",
+    "k": "design",
+    "t": "Draw the When tapped setting",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-16T06:18:21-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a2",
+    "task": "T-4564",
+    "w": "Pernille",
+    "k": "build",
+    "t": "Run a button's action and redraw in one run",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-16T06:18:21-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a2",
+    "task": "T-4565",
+    "w": "Pernille",
+    "k": "build",
+    "t": "Send button actions from Swift, schema names checked",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-16T06:18:21-05:00",
     "n": "Evan",
     "src": "plan-a"
    },
@@ -373,7 +409,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-16T06:16:00-05:00",
+  "at": "2026-11-16T06:19:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -485,13 +521,6 @@
     "o": "i"
    },
    {
-    "w": "Operator",
-    "k": "ops",
-    "t": "Run Evan's account on the audit without the...",
-    "s": "next",
-    "o": "c"
-   },
-   {
     "w": "Odalys",
     "k": "tools",
     "t": "Answer Investor messages that no session claims",
@@ -511,9 +540,21 @@
     "t": "Alarm when one account's work keeps being...",
     "s": "next",
     "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "site",
+    "t": "Move the app's diagrams to a new App page",
+    "s": "next",
+    "o": "c"
    }
   ],
   "done": [
+   {
+    "w": "Operator",
+    "t": "Not needed any more: Evan's 11-14 rulings put audit work on every account with no Fable and no...",
+    "at": "2026-11-16T06:16:00-05:00"
+   },
    {
     "w": "Maren",
     "t": "Home now shows a stage a task passed through between two readings as a faint chip, and a stage...",
@@ -523,11 +564,6 @@
     "w": "Operator",
     "t": "This line repeated an existing board line, T-4401 (keep the parked count test off the live usage...",
     "at": "2026-11-16T03:46:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "Old company test folders in the temp folder are now cleared by the disk cleaner after 3 hours...",
-    "at": "2026-11-16T03:41:00-05:00"
    }
   ],
   "count": {
@@ -537,8 +573,13 @@
    "you": 12
   },
   "fin": {
-   "n": 0,
-   "rows": []
+   "n": 1,
+   "rows": [
+    [
+     "T-4276",
+     "Run Evan's account on the..."
+    ]
+   ]
   }
  },
  "qr": [
@@ -580,101 +621,93 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-16T11:14:09Z",
+  "at": "2026-11-16T11:19:30Z",
   "s": {
-   "T-4276": [
-    "merging",
-    "Merging onto main",
-    1794827649538
-   ],
    "T-3745": [
     "testq",
     "1st for a Simulator",
-    1794827289538
+    1794827430470
    ],
    "T-4256": [
     "testq",
     "1st for a Simulator",
-    1794827289538
+    1794827430470
    ],
    "T-4433": [
     "testq",
     "1st for a Simulator",
-    1794827289538
+    1794827430470
    ],
    "T-4435": [
     "testq",
     "1st for a Simulator",
-    1794827289538
+    1794827430470
    ],
    "T-2691": [
     "testq",
     "2nd for a Simulator",
-    1794827469538
+    1794827610470
    ],
    "T-3764": [
     "testq",
     "2nd for a Simulator",
-    1794827469538
+    1794827610470
    ],
    "T-3765": [
     "testq",
     "2nd for a Simulator",
-    1794827469538
+    1794827610470
+   ],
+   "T-4276": [
+    "merged",
+    "on main 6:16 AM ET",
+    1794827798000,
+    ""
    ]
   },
   "nm": {
-   "T-4276": "Run Evan's account on the audit without the pause",
    "T-3745": "Stop the Pro store test timing out",
    "T-4256": "Lighten the marks and colour their line numbers",
    "T-4433": "Confirm the Lock Screen refresh tap first",
    "T-4435": "Draw the wrapped refresh glyph on both runtimes",
    "T-2691": "Check every archive for the phone test marker, Organizer too",
    "T-3764": "Make the iPad window test fail without the fix",
-   "T-3765": "Check a real widget tap on the TestFlight build"
+   "T-3765": "Check a real widget tap on the TestFlight build",
+   "T-4276": "Run Evan's account on the audit without the pause"
   },
   "wk": {
-   "T-4276": "Operator",
    "T-3745": "Idris",
    "T-4256": "Idris",
    "T-4433": "Idris",
    "T-4435": "Idris",
    "T-2691": "Idris",
    "T-3764": "Idris",
-   "T-3765": "Idris"
+   "T-3765": "Idris",
+   "T-4276": "Operator"
   }
  },
  "ln": {
-  "at": "2026-11-16T11:14:09Z",
+  "at": "2026-11-16T11:19:30Z",
   "mq": {
    "n": {
-    "checking": 1,
+    "checking": 0,
     "inline": 0,
     "conflicted": 1,
     "failed": 0,
     "held": 0,
-    "retry": 1,
-    "parked": 8
+    "retry": 0,
+    "parked": 9
    },
    "m": {
-    "checking": 0,
+    "checking": null,
     "inline": null,
-    "conflicted": 2096,
+    "conflicted": 2101,
     "failed": null,
     "held": null,
-    "retry": 165,
-    "parked": 195
+    "retry": null,
+    "parked": 171
    },
-   "cur": [
-    [
-     [
-      "T-4276"
-     ],
-     "going onto main",
-     "Mac mini",
-     0
-    ]
-   ],
+   "cur": [],
    "ld": [
     20,
     "2026-11-16T11:16:44Z"
@@ -682,12 +715,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-16T11:16:43Z",
-    "ld": 59.1,
+    "at": "2026-11-16T11:19:32Z",
+    "ld": 65.67,
     "c": 8,
     "sb": 2,
     "dk": [
-     52.0,
+     51.7,
      228.3
     ],
     "ss": [
@@ -726,20 +759,35 @@
    "w": "Operator",
    "a": "Evan",
    "sr": 1,
+   "m": "opus",
+   "e": "high",
    "t": "Work session \u2013 3 tasks",
-   "at": "2026-11-16T06:10:18-05:00"
+   "at": "2026-11-16T06:19:44-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Evan",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session \u2013 4 tasks",
+   "at": "2026-11-16T06:18:20-05:00"
   },
   {
    "w": "Operator",
    "a": "Jeremy",
    "sr": 1,
-   "t": "Work session \u2013 3 tasks",
-   "at": "2026-11-16T06:07:07-05:00"
+   "m": "opus",
+   "e": "high",
+   "t": "Work session \u2013 2 tasks",
+   "at": "2026-11-16T06:07:06-05:00"
   },
   {
    "w": "Operator",
    "a": "Jeremy",
    "sr": 1,
+   "m": "opus",
+   "e": "high",
    "t": "Work session \u2013 3 tasks",
    "at": "2026-11-16T06:07:08-05:00"
   },
@@ -747,8 +795,10 @@
    "w": "Operator",
    "a": "Jeremy",
    "sr": 1,
+   "m": "opus",
+   "e": "high",
    "t": "Work session \u2013 4 tasks",
-   "at": "2026-11-16T06:07:05-05:00"
+   "at": "2026-11-16T06:07:04-05:00"
   }
  ],
  "reply": {
@@ -760,6 +810,7 @@
   "lane_next",
   "queue_text",
   "task_done",
+  "fin_short",
   "task_title",
   "done_text",
   "task_open",
@@ -768,12 +819,12 @@
  ],
  "agents_now": {
   "main": 0,
-  "lanes": 4,
-  "total": 4,
-  "at": "6:16 AM",
+  "lanes": 5,
+  "total": 5,
+  "at": "6:19 AM",
   "why": "",
-  "at_iso": "2026-11-16T11:16:00+00:00",
+  "at_iso": "2026-11-16T11:19:00+00:00",
   "started": "6:05 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 0, started 6:05 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 6:16 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 0, started 6:05 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 6:19 AM ET</p></section>"
  }
 }

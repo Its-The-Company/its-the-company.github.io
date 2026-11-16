@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-16T11:23:46.195555+00:00",
+ "at": "2026-11-16T11:27:42.588690+00:00",
  "session": {
   "active": true,
   "kind": "morning",
@@ -90,8 +90,8 @@
     "why": "tests failed"
    }
   ],
-  "landed": 31,
-  "failed": 6
+  "landed": 30,
+  "failed": 7
  },
  "workers": [],
  "who": "",
@@ -108,7 +108,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 376,
+  "runnable_count": 377,
   "blocked_count": 76
  },
  "meter": {
@@ -157,7 +157,7 @@
   "week_pct": 9.67,
   "usage_pct": 32.6,
   "work_pct": 76.3,
-  "read_at": "2026-11-16T11:24:00+00:00",
+  "read_at": "2026-11-16T11:27:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -274,6 +274,7 @@
     "e": "high",
     "at": "2026-11-16T06:20:48-05:00",
     "n": "Evan",
+    "d": 1,
     "src": "plan-a"
    },
    {
@@ -437,7 +438,7 @@
   }
  ],
  "disk": {
-  "free_gb": 52,
+  "free_gb": 53,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -446,14 +447,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-16T06:19:00-05:00",
+   "at": "2026-11-16T06:27:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-16T06:24:00-05:00",
+  "at": "2026-11-16T06:27:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -611,7 +612,7 @@
    }
   ],
   "count": {
-   "next": 376,
+   "next": 377,
    "wait": 34,
    "blocked": 42,
    "you": 12
@@ -668,8 +669,131 @@
    "ok"
   ]
  ],
+ "stg": {
+  "at": "2026-11-16T11:27:42Z",
+  "s": {
+   "T-2691": [
+    "testing",
+    "Mac Mini \u00b7 test",
+    null
+   ],
+   "T-3764": [
+    "testing",
+    "Mac Mini \u00b7 test",
+    null
+   ],
+   "T-3765": [
+    "testing",
+    "Mac Mini \u00b7 test",
+    null
+   ],
+   "T-3745": [
+    "testq",
+    "1st for a Simulator",
+    1794827442588
+   ],
+   "T-4256": [
+    "testq",
+    "1st for a Simulator",
+    1794827442588
+   ],
+   "T-4433": [
+    "testq",
+    "1st for a Simulator",
+    1794827442588
+   ],
+   "T-4435": [
+    "testq",
+    "1st for a Simulator",
+    1794827442588
+   ],
+   "T-0687": [
+    "testq",
+    "5th for a Simulator",
+    1794828342588
+   ],
+   "T-0972": [
+    "testq",
+    "5th for a Simulator",
+    1794828342588
+   ],
+   "T-3552": [
+    "testq",
+    "5th for a Simulator",
+    1794828342588
+   ],
+   "T-3970": [
+    "testq",
+    "5th for a Simulator",
+    1794828342588
+   ],
+   "T-4020": [
+    "testq",
+    "5th for a Simulator",
+    1794828342588
+   ],
+   "T-4022": [
+    "testq",
+    "5th for a Simulator",
+    1794828342588
+   ],
+   "T-4558": [
+    "testq",
+    "5th for a Simulator",
+    1794828342588
+   ],
+   "T-4297": [
+    "merged",
+    "on main 6:19 AM ET",
+    1794827998000,
+    ""
+   ],
+   "T-4276": [
+    "merged",
+    "on main 6:16 AM ET",
+    1794827798000,
+    ""
+   ]
+  },
+  "nm": {
+   "T-2691": "Check every archive for the phone test marker, Organizer too",
+   "T-3764": "Make the iPad window test fail without the fix",
+   "T-3765": "Check a real widget tap on the TestFlight build",
+   "T-3745": "Stop the Pro store test timing out",
+   "T-4256": "Lighten the marks and colour their line numbers",
+   "T-4433": "Confirm the Lock Screen refresh tap first",
+   "T-4435": "Draw the wrapped refresh glyph on both runtimes",
+   "T-0687": "Run network fetches inside the extension on the Simulator",
+   "T-0972": "Decide how a script's refresh path is chosen on send",
+   "T-3552": "Test gallery and widget runs together with a stalled sensor",
+   "T-3970": "Check finished work before it ships",
+   "T-4020": "Check finished work before it ships",
+   "T-4022": "Check finished work before it ships",
+   "T-4558": "Choose which premades get buttons",
+   "T-4297": "Personal account stopped and its work parked",
+   "T-4276": "Run Evan's account on the audit without the pause"
+  },
+  "wk": {
+   "T-2691": "Idris",
+   "T-3764": "Idris",
+   "T-3765": "Idris",
+   "T-3745": "Idris",
+   "T-4256": "Idris",
+   "T-4433": "Idris",
+   "T-4435": "Idris",
+   "T-0687": "Idris",
+   "T-0972": "Idris",
+   "T-3552": "Idris",
+   "T-3970": "Pernille",
+   "T-4020": "Pernille",
+   "T-4022": "Pernille",
+   "T-4558": "Maren",
+   "T-4297": "Ines",
+   "T-4276": "Operator"
+  }
+ },
  "ln": {
-  "at": "2026-11-16T11:23:46Z",
+  "at": "2026-11-16T11:27:42Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -683,11 +807,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 2105,
+    "conflicted": 2109,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 175
+    "parked": 179
    },
    "cur": [],
    "ld": [
@@ -697,16 +821,21 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-16T11:23:48Z",
-    "ld": 74.74,
+    "at": "2026-11-16T11:27:16Z",
+    "ld": 68.25,
     "c": 8,
+    "sb": 2,
     "dk": [
-     51.6,
+     53.3,
      228.3
     ],
     "ss": [
      186.1,
      953.7
+    ],
+    "sn": [
+     "iPhone 17e",
+     "T3764 iPad"
     ]
    },
    "macbook": {
@@ -736,34 +865,44 @@
    "w": "Operator",
    "a": "Evan",
    "sr": 1,
+   "m": "opus",
+   "e": "high",
    "t": "Work session \u2013 3 tasks",
-   "at": "2026-11-16T06:10:18-05:00"
+   "at": "2026-11-16T06:10:17-05:00"
   },
   {
    "w": "Operator",
    "a": "Evan",
    "sr": 1,
+   "m": "opus",
+   "e": "high",
    "t": "Work session \u2013 4 tasks",
-   "at": "2026-11-16T06:18:21-05:00"
+   "at": "2026-11-16T06:18:20-05:00"
   },
   {
    "w": "Operator",
    "a": "Evan",
    "sr": 1,
+   "m": "opus",
+   "e": "high",
    "t": "Work session \u2013 4 tasks",
-   "at": "2026-11-16T06:20:48-05:00"
+   "at": "2026-11-16T06:20:47-05:00"
   },
   {
    "w": "Operator",
    "a": "Jeremy",
    "sr": 1,
+   "m": "opus",
+   "e": "high",
    "t": "Work session \u2013 2 tasks",
-   "at": "2026-11-16T06:07:07-05:00"
+   "at": "2026-11-16T06:07:06-05:00"
   },
   {
    "w": "Operator",
    "a": "Jeremy",
    "sr": 1,
+   "m": "opus",
+   "e": "high",
    "t": "Work session \u2013 3 tasks",
    "at": "2026-11-16T06:07:08-05:00"
   },
@@ -771,8 +910,10 @@
    "w": "Operator",
    "a": "Jeremy",
    "sr": 1,
+   "m": "opus",
+   "e": "high",
    "t": "Work session \u2013 4 tasks",
-   "at": "2026-11-16T06:07:05-05:00"
+   "at": "2026-11-16T06:07:04-05:00"
   }
  ],
  "reply": {
@@ -795,10 +936,10 @@
   "main": 0,
   "lanes": 6,
   "total": 6,
-  "at": "6:24 AM",
+  "at": "6:27 AM",
   "why": "",
-  "at_iso": "2026-11-16T11:24:00+00:00",
+  "at_iso": "2026-11-16T11:27:00+00:00",
   "started": "6:05 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 0, started 6:05 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 6 sessions \u00b7 as of 6:24 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 0, started 6:05 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 6 sessions \u00b7 as of 6:27 AM ET</p></section>"
  }
 }

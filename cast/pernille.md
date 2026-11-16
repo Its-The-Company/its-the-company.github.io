@@ -33,7 +33,6 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 ## Open
 
-- T-4123 11-15: ledger patterns second pass (1787 rows, 781 studied). Lesson: a ledger "tick" can be a close made elsewhere ("Not open when judged"); templated titles beat the machine regex.
 - T-4468/T-4504 11-15: premade Page limits measured in render.py; Clocks Small row redesigned (time on the name's line, priority 1; offset own line), Name 9 -> 11. Lesson: check the sum first: a full-size time plus the widest label at 0.8 can exceed a 158 pt Small, so priority alone cannot keep both; render.py never shrinks a VStack in an HStack.
 - Older entries (2026-10-25 8:12 PM to 2026-10-27 T-0391: bridge contract v1-v4, DSL v1, stdlib manifest, OPS-4/5, installer) are in archive.md; 11-12/13 reviews T-4204, T-4171, T-4238, T-4217, T-4214, T-4242 too.
 - T-4524/25/26 11-15 LANDED 04ad030f72, dcf6f1272d (+ T-4526): systls target host, strict chunk sizes, C2 s6 wording; all ticked. Lesson: a gate land runs 15-25 min (host suites + MacBook job; main moves meanwhile): run it in the background with a long timeout and loop bring-up on 'not named'/75.
@@ -45,6 +44,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 ## Lessons
 
+- T-4046 11-16: T-1972 review PASS w/ findings (L1 nil-fetch mutant survives, L2 fetch.json doc; notes on T-1882; T-1972 on main since 11-09, board said unmerged). Lesson: xc.sh from repo root needs -project/-scheme/-destination (else exit 64); swift mutants in a scratch Core copy fail the EveryPremades tests: filter them out.
 - Open (mine, not on the board, from T-0515 H1): runtime stamps a daemon thread's writes with its origin run, so A's thread output cannot show in B.
 
 - T-4031 11-16: T-0444 review PASS w/ findings; M1 inherited "as in" versions unchecked = T-4593 (Odalys); L1-L3 noted on T-0623. Lesson: when the app parses a registry string, check the <span title="The starting recipe a lane uses to look for ideas. G2, for example, starts from public datasets.">generator</span> validates that form, and the .txt it also writes.

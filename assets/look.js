@@ -291,8 +291,11 @@ function mk(p,t,c,x){var e=document.createElement(t);if(c)e.className=c;if(x)e.t
 function cap(s){s=String(s||'');return s.charAt(0).toUpperCase()+s.slice(1)}
 // T-2401 (#41 c6648649825): the model and the effort a lane gives the task, 'Opus high', as home_look.level
 function lv(x){return x.m?[cap(x.m),x.e].filter(Boolean).join(' '):''}
-// T-3318: src_words in home_look.py; '' for an unknown source, never a guess
-function sw(s,n){s=String(s||'');var k=/^(plan|key)-([a-z])$/.exec(s);return s==='plan'?'Main plan':s==='api'?'Company API credits':k?(k[1]==='key'?'Key '+k[2].toUpperCase():String(n||'')||'Account '+k[2].toUpperCase()):''}
+// T-3318: src_words in home_look.py; '' for an unknown source, never a guess. T-4320 (JeremyFries #41 c6866054849): a
+// personal account is "Evan's Account" (a) or "Jeremy's Account" (b): acn() is personal.py's account_words
+var OWN={a:'Evan',b:'Jeremy'};
+function acn(l,n){n=String(n||OWN[l]||'');return !n?'Account '+String(l).toUpperCase():/\baccount$/i.test(n)?n:n+"'s Account"}
+function sw(s,n){s=String(s||'');var k=/^(plan|key)-([a-z])$/.exec(s);return s==='plan'?'Main plan':s==='api'?'Company API credits':k?(k[1]==='key'?'Key '+k[2].toUpperCase():acn(k[2],n)):''}
 function nm(s){s=String(s||'').replace(/^\s*\[[^\]]*\]\s*/,'').replace(/^\s*T-\d+\s*[:,]?\s*/,'');s=cap(s);return s.length>160?s.slice(0,159).replace(/\s+\S*$/,'')+'…':s}
 var K3=window.CompanySite&&window.CompanySite.lk;  // T-3187: stars, search and open cards (the block above)
 function mins(n){return n>=1440?Math.floor(n/1440)+' d '+Math.floor(n%1440/60)+' h':n>=60?Math.floor(n/60)+' h '+(n%60)+' min':n+' min'}
@@ -432,7 +435,7 @@ function sg(LS,id,r){var s=LS&&LS[id]||null,b=(L.st||{})[id],a;if(!s&&b&&!(LS&&L
 function draw(st,isPub){var ml=S.lane.main(st,isPub),l=ml.concat(S.lane.rows(st)),seen={},u=[],now=Date.now(),o={},wk,ms=sw((st.tasks||{}).src),LS=lv0(st);
 l.forEach(function(r){var t=String(r.t||r.task||''),id=r.task||(t.match(/\bT-\d+/)||[''])[0],k=id||nm(t),s=sg(LS,id,r),m,b=IN[id]||{},ln=/^([ab])\d*$/.exec(r.lane||''),mn=ml.indexOf(r)>=0,rs=mn?ms:sw(r.src||(ln?'plan-'+ln[1]:''),r.n);if(s&&s[0]==='parked'&&r.at&&Date.parse(r.at)>s[2])s=[r.k==='review'?'review':'coding','Fix after a failed merge'];if(!s&&r.d)s=[r.k==='review'?'review':'coding',HN];if(r.w&&!r.d)o[String(r.w).toLowerCase()]=1;if(!k||seen[k])return;seen[k]=1;
 m=r.at?Math.round((now-Date.parse(r.at))/6e4):NaN;u.push({id:id,t:nm(r.t||r.task)||nm((L.nm||{})[id])||snm(st,id)||'Name not recorded',w:r.w?[r.w]:swk(st,id,b.w),m:r.m||b.m||'model not recorded',e:r.e&&r.m?r.e:r.m?'':b.e||'',min:m>=0?m:-1,s:s?s[0]:r.k==='review'?'review':'coding',n:s?s[1]:'',
-a:rs||(mn?'Main':ln?'Account '+ln[1].toUpperCase():''),sr:rs?1:0,h:b.h,x:b.x,p:b.p,c:b.c||CT[id]||'',g:b.g||'',y:b.y||0,ps:b.ps||''})});
+a:rs||(mn?'Main':ln?acn(ln[1]):''),sr:rs?1:0,h:b.h,x:b.x,p:b.p,c:b.c||CT[id]||'',g:b.g||'',y:b.y||0,ps:b.ps||''})});
 (L.init||[]).forEach(function(x){var v;if(x.s==='coding'||x.s==='review'||seen[x.id||x.t])return;if(LS&&x.id&&LK[x.s]){v=LS[x.id];if(!v||v[0]==='merged')return;x=Object.assign({},x,{s:v[0],n:v[1]})}if(x.id&&/^Name not recorded/i.test(x.t||'')&&snm(st,x.id))x=Object.assign({},x,{t:snm(st,x.id)});if(x.id)x=Object.assign({},x,{w:swk(st,x.id,x.w)});seen[x.id||x.t]=1;u.push(x)});  // T-3284 item 3
 if(LS)Object.keys(LS).forEach(function(id){var v=LS[id],b=IN[id]||{};if(seen[id]||v[0]==='merged')return;seen[id]=1;  // T-4095: a stage the build had not seen
 u.push({id:id,t:nm((L.nm||{})[id])||snm(st,id)||'Name not recorded',w:swk(st,id,b.w),m:b.m||'model not recorded',e:b.e||'',min:v[2]?Math.max(0,Math.round((now-v[2])/6e4)):-1,s:v[0],n:v[1],h:b.h,x:b.x,p:b.p,c:b.c||CT[id]||'',g:b.g||'',y:b.y||0,ps:b.ps||''})});

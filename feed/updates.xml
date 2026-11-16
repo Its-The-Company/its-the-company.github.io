@@ -4,8 +4,22 @@
 <link href="https://its-the-company.github.io/feed/updates.xml" rel="self"/>
 <link href="https://its-the-company.github.io/"/>
 <id>https://its-the-company.github.io/feed/updates.xml</id>
-<updated>2026-11-16T12:24:29-05:00</updated>
+<updated>2026-11-16T15:12:22-05:00</updated>
 <author><name>The Company</name></author>
+<entry>
+<title>Review: T-4046: reviewed T-1972 (run-log writer applies RefreshOutcomeRule): PASS with findings; L</title>
+<link href="https://its-the-company.github.io/"/>
+<id>tag:its-the-company.github.io,2026-11-16:event/2026-11-16t15-12-22-05-00-review-t-4046-reviewed-t-1972-run-log-writer</id>
+<updated>2026-11-16T15:12:22-05:00</updated>
+<summary type="text">T-4046: reviewed T-1972 (run-log writer applies RefreshOutcomeRule): PASS with findings; L1-L2 noted on T-1882, T-1972 found already on main</summary>
+</entry>
+<entry>
+<title>Review: T-4047: reviewed T-2409 (earthquakes example fixes, e6dc5a9e16; Pernille authored it): PAS</title>
+<link href="https://its-the-company.github.io/"/>
+<id>tag:its-the-company.github.io,2026-11-16:event/2026-11-16t14-56-06-05-00-review-t-4047-reviewed-t-2409-earthquakes-exa</id>
+<updated>2026-11-16T14:56:06-05:00</updated>
+<summary type="text">T-4047: reviewed T-2409 (earthquakes example fixes, e6dc5a9e16; Pernille authored it): PASS with findings; L1 filed as T-4622 (Pernille), L2-L3 noted</summary>
+</entry>
 <entry>
 <title>Decision: T-4561: acted on #313 answer A. The two Simulator refusal records (T-2587, T-3189) cleared</title>
 <link href="https://its-the-company.github.io/"/>
@@ -341,19 +355,5 @@
 <id>tag:its-the-company.github.io,2026-11-09:event/2026-11-09t13-45-05-05-00-decision-t-3771-closed-without-landing-the-t-3341</id>
 <updated>2026-11-09T13:45:05-05:00</updated>
 <summary type="text">T-3771 closed without landing the T-3341 idle-retry patch: T-3827 slice 3 already retries on main moving (143 of 180 idle waits); remaining 37 onto unchanged main pass ~2/20. No suite run, no refusal.</summary>
-</entry>
-<entry>
-<title>Decision: T-3751 restart (T-0848 chair rule): main_gate hook refused the commit because main moved d</title>
-<link href="https://its-the-company.github.io/"/>
-<id>tag:its-the-company.github.io,2026-11-09:event/2026-11-09t13-43-17-05-00-decision-t-3751-restart-t-0848-chair-rule-main</id>
-<updated>2026-11-09T13:43:17-05:00</updated>
-<summary type="text">T-3751 restart (T-0848 chair rule): main_gate hook refused the commit because main moved during the check (b71546e7a). Effect stopped: committing on a stale check. Dropped: the restart re-runs main_gate check on current HEAD and commits only if HEAD is unchanged; no skip. Job still does its packet.</summary>
-</entry>
-<entry>
-<title>Decision: T-3676 restart (T-0848 chair rule): Idris&#x27;s commit was refused (Security Weaken) for setti</title>
-<link href="https://its-the-company.github.io/"/>
-<id>tag:its-the-company.github.io,2026-11-09:event/2026-11-09t13-41-02-05-00-decision-t-3676-restart-t-0848-chair-rule-idri</id>
-<updated>2026-11-09T13:41:02-05:00</updated>
-<summary type="text">T-3676 restart (T-0848 chair rule): Idris&#x27;s commit was refused (Security Weaken) for setting core.hooksPath=/dev/null. Effect stopped: disabling git hooks. Dropped: the restart commits with hooks on, no hooksPath change. The job still does its packet (land the T-3676 recut).</summary>
 </entry>
 </feed>

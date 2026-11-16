@@ -39,7 +39,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 - T-4446 (11-14): records_round.py, one records commit per 900 s (archive.md). Land part T-4457 on main c0048bc661 11-16 (T-3995 batch with T-4459, T-4196). Owed: 7-day count <= 672, no 'lane records applied'; tick.
 
-- T-4103 31b4b962fb, T-4443 slice 1 14f086c7d8 (11-14): open, full notes in archive.md. Owed: T-4447 replay narrows the signals; five card rules in queue_check; T-4459 machine callers.
+- T-4103 31b4b962fb (11-14): open, notes in archive.md. T-4443 slice 2 (11-16): five card rules in queue_check; dry run ops/queue_audit/dry-run-2026-11-16-t4443.txt (changed_under 45, 11 alone). Owed: T-4459; decision 29 is answered (docs = done condition), card does not ask it yet.
 - T-3712 3b4ce80e44 (11-15): xc_sim.py unused (dry by default, --apply). Every device is under refusal T-3189 (whole Devices folder); 6.87 GB would go without it. Owed: Ines decides if #41 c6728454947 clears T-3189/T-2587.
 
 - T-4009 07a67cf259 + 89c42a36fc (11-15): hold line = governor.five_hour_hold() (100% less 3 median calls; 95% today, floor 90, cap 97); OPT-133 proposed. Owed: rules/personal_lane.py 90->97 card (my diff step refused by a deny rule, stopped); OPT-133 reads after land.

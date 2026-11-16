@@ -4,6 +4,8 @@
 var S = window.CompanySite, D = document, fixed = D.getElementById('personal');
 if (!S || !fixed || !S.getToken()) return;
 var repo = fixed.getAttribute('data-repo'), BILL = 'investors/billing.json', MAX = 40;
+var OWN = { a: 'Evan', b: 'Jeremy' };
+function word(a) { var n = a.name || OWN[a.id] || ''; return !n ? 'Account ' + String(a.id).toUpperCase() : /\baccount$/i.test(n) ? n : n + "'s Account"; }
 var boxes = [], warn = '', opened = false;
 var WHAT = 'Each bar: this project, then other use.';
 function clean(n) { return typeof n === 'string' ? Array.from(n.replace(/\s+/g, ' ').replace(/\p{C}/gu, '').trim()).slice(0, MAX).join('').trim() : ''; }
@@ -166,7 +168,7 @@ x.total.textContent = total();
 x.count.textContent = accts.some((a) => a.on === null) ? ' Not known' : ' ' + accts.filter((a) => a.on).length + ' of ' + accts.length + ' on';
 x.rows.forEach((w) => {
 meters(w);
-var a = w.a, off = a.on === false, name = a.name || 'Account ' + a.id;
+var a = w.a, off = a.on === false, name = word(a);
 var armP = a.arm && a.armWhat === 'power', armL = a.arm && a.armWhat === 'lift', wait = a.busy ? 'true' : 'false';
 w.name.textContent = name;
 w.state.textContent = a.on === null ? ' Not known' : a.on ? ' On' : ' Off';

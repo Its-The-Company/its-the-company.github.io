@@ -14,7 +14,9 @@ function main(st, isPub) {
 return old(st, isPub) && !(age(st) < LANE_MS) ? [] : (st.tasks || {}).run
 || (st.workers || []).map(w => ({ w: String(w.name || '').replace(/^./, c => c.toUpperCase()), t: w.task, m: w.model, e: w.effort, at: w.started }));
 }
-function word(r) { return r.lane ? (r.n ? r.n + "'s account" : 'Personal account') + ' (session ' + (r.lane.slice(1) || 1) + ')' : 'Main account'; }
+var OWN = { a: 'Evan', b: 'Jeremy' };
+function acct(l, n) { n = String(n || OWN[l] || ''); return !n ? 'Account ' + String(l).toUpperCase() : /\baccount$/i.test(n) ? n : n + "'s Account"; }
+function word(r) { return r.lane ? acct(r.lane.charAt(0), r.n) + ' (session ' + (r.lane.slice(1) || 1) + ')' : 'Main account'; }
 function level(r) { return r.m ? r.m.charAt(0).toUpperCase() + r.m.slice(1) + (r.e ? ', ' + r.e + ' effort' : '') : ''; }
 function et(t) { return S.clock(t); }  // T-3396: the shared 12-hour clock (Eastern, ' ET')
 function pl(n, w) { return n + ' ' + w + (n === 1 ? '' : 's'); }
@@ -71,7 +73,7 @@ fetch(box.getAttribute('data-status'), { cache: 'no-store' }).then(r => (r.ok ? 
 }
 if (!p.running && built && built.running) st.personal = Object.assign({}, p, { running: built.running, read_at: built.read_at });
 }
-S.lane = { old: old, rows: rows, main: main, word: word, draw: draw, line: line, et: et };
+S.lane = { old: old, rows: rows, main: main, word: word, acct: acct, draw: draw, line: line, et: et };
 function seen(st, isPub) {
 var e = S.byId('now-words');
 if (!isPub) fromBuild(st);

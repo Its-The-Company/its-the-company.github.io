@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-16T08:27:34.250649+00:00",
+ "at": "2026-11-16T08:31:09.194392+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -107,7 +107,7 @@
    "task": "[tools] T-4194 land feature-session wiring",
    "model": "opus",
    "started": "2026-11-16T05:36:18.799Z",
-   "seconds": 10275,
+   "seconds": 10490,
    "finished": null
   },
   {
@@ -115,7 +115,7 @@
    "task": "[tools] T-3995 personal_land daily batch",
    "model": "opus",
    "started": "2026-11-16T05:36:28.863Z",
-   "seconds": 10265,
+   "seconds": 10480,
    "finished": null
   }
  ],
@@ -138,19 +138,19 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 0.0,
+   "pct": 1.0,
    "resets_at": "2026-11-16T08:10:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-16T03:13:10.078273-05:00",
+   "read_at": "2026-11-16T03:28:39.518670-05:00",
    "source": "live",
-   "left": 100.0,
+   "left": 99.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 18.0,
    "resets_at": "2026-11-22T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-16T03:13:10.078273-05:00",
+   "read_at": "2026-11-16T03:28:39.518670-05:00",
    "source": "live",
    "left": 82.0,
    "left_words": "of your weekly allowance left"
@@ -162,7 +162,7 @@
    "read_at": "2026-11-16T00:32:00.430425-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-16T03:13:10.078273-05:00"
+  "read_at": "2026-11-16T03:28:39.518670-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -182,59 +182,8 @@
   "week_pct": 5.72,
   "usage_pct": 25.2,
   "work_pct": 70.0,
-  "read_at": "2026-11-16T08:28:00+00:00",
-  "running": [
-   {
-    "lane": "a3",
-    "task": "T-0972",
-    "w": "Idris",
-    "k": "build",
-    "t": "Decide how a script's refresh path is chosen on send",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-16T02:46:17-05:00",
-    "n": "Evan",
-    "d": 1,
-    "src": "plan-a"
-   },
-   {
-    "lane": "a3",
-    "task": "T-0687",
-    "w": "Idris",
-    "k": "build",
-    "t": "Run network fetches inside the extension on the Simulator",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-16T02:46:17-05:00",
-    "n": "Evan",
-    "d": 1,
-    "src": "plan-a"
-   },
-   {
-    "lane": "a3",
-    "task": "T-3552",
-    "w": "Idris",
-    "k": "test",
-    "t": "Test gallery and widget runs together with a stalled sensor",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-16T02:46:17-05:00",
-    "n": "Evan",
-    "src": "plan-a"
-   },
-   {
-    "lane": "a3",
-    "task": "T-0696",
-    "w": "Idris",
-    "k": "build",
-    "t": "Measure peak memory for fetches in the extension",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-16T02:46:17-05:00",
-    "n": "Evan",
-    "src": "plan-a"
-   }
-  ]
+  "read_at": "2026-11-16T08:31:00+00:00",
+  "running": []
  },
  "api_credits": [
   {
@@ -263,14 +212,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-16T03:20:00-05:00",
+   "at": "2026-11-16T03:28:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-16T03:28:00-05:00",
+  "at": "2026-11-16T03:31:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -501,68 +450,38 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-16T08:27:34Z",
+  "at": "2026-11-16T08:31:09Z",
   "s": {
    "T-4550": [
     "merging",
     "Host checks on the Mac mini",
-    1794816454250
+    1794816429194
    ],
    "T-4460": [
     "mergeq",
     "1st to merge",
-    1794816514250
+    1794816549194
    ],
    "T-4279": [
     "mergeq",
     "2nd to merge",
-    1794816814250
+    1794816789194
    ],
    "T-4455": [
     "mergeq",
     "3rd to merge",
-    1794816994250
-   ],
-   "T-2943": [
-    "testing",
-    "Mac Mini \u00b7 test",
-    null
-   ],
-   "T-0687": [
-    "testq",
-    "1st for a Simulator",
-    1794817294250
-   ],
-   "T-0696": [
-    "testq",
-    "1st for a Simulator",
-    1794817294250
-   ],
-   "T-0972": [
-    "testq",
-    "1st for a Simulator",
-    1794817294250
-   ],
-   "T-3552": [
-    "testq",
-    "1st for a Simulator",
-    1794817294250
+    1794817029194
    ]
   },
   "nm": {
    "T-4550": "Python contract and action run for widget buttons",
    "T-4460": "Clear old test leftovers from the temporary folder",
    "T-4279": "Draw the site's info button as a code-drawn gear",
-   "T-4455": "Fix the stage name test after the Retry Queue rename",
-   "T-2943": "Send up the gate build and confirm it stays internal",
-   "T-0687": "Run network fetches inside the extension on the Simulator",
-   "T-0696": "Measure peak memory for fetches in the extension",
-   "T-0972": "Decide how a script's refresh path is chosen on send",
-   "T-3552": "Test gallery and widget runs together with a stalled sensor"
+   "T-4455": "Fix the stage name test after the Retry Queue rename"
   }
  },
  "ln": {
-  "at": "2026-11-16T08:27:34Z",
+  "at": "2026-11-16T08:31:09Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -571,16 +490,16 @@
     "failed": 0,
     "held": 0,
     "retry": 0,
-    "parked": 4
+    "parked": 10
    },
    "m": {
-    "checking": 20,
-    "inline": 14,
-    "conflicted": 1929,
+    "checking": 24,
+    "inline": 18,
+    "conflicted": 1933,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 94
+    "parked": 2
    },
    "cur": [
     [
@@ -589,7 +508,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     20
+     24
     ]
    ],
    "ld": [
@@ -599,12 +518,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-16T08:27:53Z",
-    "ld": 44.89,
+    "at": "2026-11-16T08:30:31Z",
+    "ld": 49.66,
     "c": 8,
     "sb": 1,
     "dk": [
-     18.1,
+     19.6,
      228.3
     ],
     "ss": [
@@ -616,12 +535,12 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-16T07:54:46Z",
-    "ld": 0.16,
+    "at": "2026-11-16T08:14:39Z",
+    "ld": 1.67,
     "c": 12,
     "sb": 0,
     "dk": [
-     356.1,
+     355.8,
      926.4
     ],
     "sn": []
@@ -637,34 +556,6 @@
    "e": "high",
    "t": "Work session \u2013 1 task",
    "at": "2026-11-16T00:32:52-05:00"
-  },
-  {
-   "w": "Operator",
-   "a": "Evan",
-   "sr": 1,
-   "t": "Work session \u2013 3 tasks",
-   "at": "2026-11-16T02:46:14-05:00"
-  },
-  {
-   "w": "Operator",
-   "a": "Evan",
-   "sr": 1,
-   "t": "Work session \u2013 3 tasks",
-   "at": "2026-11-16T02:46:18-05:00"
-  },
-  {
-   "w": "Operator",
-   "a": "Evan",
-   "sr": 1,
-   "t": "Work session \u2013 4 tasks",
-   "at": "2026-11-16T02:46:17-05:00"
-  },
-  {
-   "w": "Operator",
-   "a": "Jeremy",
-   "sr": 1,
-   "t": "Work session \u2013 2 tasks",
-   "at": "2026-11-16T02:46:12-05:00"
   }
  ],
  "reply": {
@@ -685,12 +576,12 @@
  ],
  "agents_now": {
   "main": 2,
-  "lanes": 1,
-  "total": 3,
-  "at": "3:28 AM",
+  "lanes": 0,
+  "total": 2,
+  "at": "3:31 AM",
   "why": "",
-  "at_iso": "2026-11-16T08:28:00+00:00",
+  "at_iso": "2026-11-16T08:31:00+00:00",
   "started": "12:32 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 12:32 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 3:28 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 12:32 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 3:31 AM ET</p></section>"
  }
 }

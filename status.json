@@ -1,24 +1,20 @@
 {
  "schema": 1,
- "at": "2026-11-16T17:16:45.436816+00:00",
+ "at": "2026-11-16T17:20:07.991078+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-16T10:53:39-05:00",
-  "flow": [
+  "flow": [],
+  "done": [
    {
     "t": "T-4454",
     "name": "Read a personal account again after its reset",
     "acct": "Personal a",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1794849352
-     }
-    ]
-   }
-  ],
-  "done": [
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794849563
+   },
    {
     "t": "T-4043",
     "name": "Check finished work before it ships",
@@ -91,17 +87,9 @@
     "steps": [],
     "end": "landed",
     "end_at": 1794846211
-   },
-   {
-    "t": "T-2943",
-    "name": "Send up the gate build and confirm it stays internal",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794845670
    }
   ],
-  "landed": 47,
+  "landed": 48,
   "failed": 11
  },
  "workers": [
@@ -110,7 +98,7 @@
    "task": "[tools] T-4583 feature step ticking",
    "model": "opus",
    "started": "2026-11-16T15:55:21.544Z",
-   "seconds": 4883,
+   "seconds": 5086,
    "finished": null,
    "effort": "high"
   }
@@ -178,7 +166,7 @@
   "week_pct": 15.51,
   "usage_pct": 42.5,
   "work_pct": 69.1,
-  "read_at": "2026-11-16T17:16:00+00:00",
+  "read_at": "2026-11-16T17:20:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -199,57 +187,6 @@
     "w": "Odalys",
     "k": "tools",
     "t": "Read a personal account again after its reset",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-16T11:42:17-05:00",
-    "n": "Evan",
-    "d": 1,
-    "src": "plan-a"
-   },
-   {
-    "lane": "a2",
-    "task": "T-4031",
-    "w": "Pernille",
-    "k": "review",
-    "t": "Check finished work before it ships",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-16T11:42:17-05:00",
-    "n": "Evan",
-    "src": "plan-a"
-   },
-   {
-    "lane": "a2",
-    "task": "T-4032",
-    "w": "Pernille",
-    "k": "review",
-    "t": "Check finished work before it ships",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-16T11:42:17-05:00",
-    "n": "Evan",
-    "d": 1,
-    "src": "plan-a"
-   },
-   {
-    "lane": "a3",
-    "task": "T-4048",
-    "w": "Pernille",
-    "k": "review",
-    "t": "Check finished work before it ships",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-16T11:42:17-05:00",
-    "n": "Evan",
-    "d": 1,
-    "src": "plan-a"
-   },
-   {
-    "lane": "a3",
-    "task": "T-4049",
-    "w": "Pernille",
-    "k": "review",
-    "t": "Check finished work before it ships",
     "m": "opus",
     "e": "high",
     "at": "2026-11-16T11:42:17-05:00",
@@ -304,30 +241,6 @@
     "at": "2026-11-16T12:10:48-05:00",
     "n": "Jeremy",
     "src": "plan-b"
-   },
-   {
-    "lane": "b3",
-    "task": "T-4320",
-    "w": "Odalys",
-    "k": "site",
-    "t": "Name the accounts Evan's and Jeremy's on Home",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-16T12:08:04-05:00",
-    "n": "Jeremy",
-    "src": "plan-b"
-   },
-   {
-    "lane": "b3",
-    "task": "T-3976",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Show each drive's storage makeup on Home",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-16T12:08:04-05:00",
-    "n": "Jeremy",
-    "src": "plan-b"
    }
   ]
  },
@@ -349,7 +262,7 @@
   }
  ],
  "disk": {
-  "free_gb": 37,
+  "free_gb": 33,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -357,15 +270,15 @@
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
-   "ok": true,
-   "at": "2026-11-16T12:11:00-05:00",
+   "ok": false,
+   "at": "2026-11-16T12:18:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-16T12:16:00-05:00",
+  "at": "2026-11-16T12:20:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -536,8 +449,8 @@
   ],
   "count": {
    "next": 386,
-   "wait": 35,
-   "blocked": 40,
+   "wait": 34,
+   "blocked": 41,
    "you": 12
   },
   "fin": {
@@ -597,95 +510,60 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-16T17:16:37Z",
+  "at": "2026-11-16T17:20:07Z",
   "s": {
-   "T-4454": [
-    "merging",
-    "Host checks on the Mac mini \u00b7 1 group of tests done",
-    1794849397622
-   ],
    "T-4032": [
     "mergeq",
     "1st to merge",
-    1794849397622
+    1794849427991
+   ],
+   "T-4048": [
+    "mergeq",
+    "2nd to merge",
+    1794849427991
    ],
    "T-4583": [
     "testing",
     "its own tests, in its copy",
-    1794848017622
+    1794847987991
    ],
-   "T-2691": [
-    "testq",
-    "1st for a Simulator",
-    1794849337622
-   ],
-   "T-3764": [
-    "testq",
-    "1st for a Simulator",
-    1794849337622
-   ],
-   "T-3765": [
-    "testq",
-    "1st for a Simulator",
-    1794849337622
-   ],
-   "T-4040": [
-    "testq",
-    "1st for a Simulator",
-    1794849337622
-   ],
-   "T-4043": [
-    "testq",
-    "1st for a Simulator",
-    1794849337622
+   "T-4454": [
+    "merged",
+    "on main 12:15 PM ET",
+    1794849305000,
+    ""
    ],
    "T-4573": [
     "merged",
     "on main 11:58 AM ET",
     1794848307000,
     ""
-   ],
-   "T-4049": [
-    "merged",
-    "on main 11:55 AM ET",
-    1794848118000,
-    ""
    ]
   },
   "nm": {
-   "T-4454": "Read a personal account again after its reset",
    "T-4032": "Check finished work before it ships",
+   "T-4048": "Check finished work before it ships",
    "T-4583": "Turn on Feature mode and tick steps at the merge",
-   "T-2691": "Check every archive for the phone test marker, Organizer too",
-   "T-3764": "Make the iPad window test fail without the fix",
-   "T-3765": "Check a real widget tap on the TestFlight build",
-   "T-4040": "Check finished work before it ships",
-   "T-4043": "Check finished work before it ships",
-   "T-4573": "Answer when the chosen account cannot take a message",
-   "T-4049": "Check finished work before it ships"
+   "T-4454": "Read a personal account again after its reset",
+   "T-4573": "Answer when the chosen account cannot take a message"
   },
   "wk": {
-   "T-4454": "Odalys",
    "T-4032": "Pernille",
+   "T-4048": "Pernille",
    "T-4583": "Idris",
-   "T-2691": "Idris",
-   "T-3764": "Idris",
-   "T-3765": "Idris",
-   "T-4040": "Pernille",
-   "T-4043": "Pernille",
+   "T-4454": "Odalys",
    "T-4573": "Odalys",
-   "T-4049": "Pernille",
    "T-4063": "Pernille",
    "T-4067": "Pernille",
    "T-4585": "Odalys"
   }
  },
  "ln": {
-  "at": "2026-11-16T17:16:37Z",
+  "at": "2026-11-16T17:20:07Z",
   "mq": {
    "n": {
-    "checking": 1,
-    "inline": 1,
+    "checking": 0,
+    "inline": 2,
     "conflicted": 2,
     "failed": 0,
     "held": 0,
@@ -693,37 +571,28 @@
     "parked": 9
    },
    "m": {
-    "checking": 0,
-    "inline": 0,
-    "conflicted": 1255,
+    "checking": null,
+    "inline": 3,
+    "conflicted": 1259,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 528
+    "parked": 531
    },
-   "cur": [
-    [
-     [
-      "T-4454"
-     ],
-     "Mac tests",
-     "Mac mini",
-     0
-    ]
-   ],
+   "cur": [],
    "ld": [
-    49,
-    "2026-11-16T17:08:51Z"
+    50,
+    "2026-11-16T17:19:23Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-16T17:15:51Z",
-    "ld": 14.88,
+    "at": "2026-11-16T17:19:19Z",
+    "ld": 25.68,
     "c": 8,
     "sb": 1,
     "dk": [
-     31.9,
+     32.5,
      228.3
     ],
     "ss": [
@@ -731,7 +600,7 @@
      953.7
     ],
     "sn": [
-     "iPhone 17e"
+     "t3765-iphone"
     ]
    },
    "macbook": {
@@ -759,24 +628,6 @@
   },
   {
    "w": "Operator",
-   "a": "Evan",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session",
-   "at": "2026-11-16T11:42:17-05:00"
-  },
-  {
-   "w": "Operator",
-   "a": "Evan",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session \u2013 1 task",
-   "at": "2026-11-16T11:42:17-05:00"
-  },
-  {
-   "w": "Operator",
    "a": "Jeremy",
    "sr": 1,
    "m": "opus",
@@ -792,15 +643,6 @@
    "e": "high",
    "t": "Work session \u2013 2 tasks",
    "at": "2026-11-16T12:10:47-05:00"
-  },
-  {
-   "w": "Operator",
-   "a": "Jeremy",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session \u2013 2 tasks",
-   "at": "2026-11-16T12:08:04-05:00"
   }
  ],
  "reply": {
@@ -821,12 +663,12 @@
  ],
  "agents_now": {
   "main": 1,
-  "lanes": 6,
-  "total": 7,
-  "at": "12:16 PM",
+  "lanes": 3,
+  "total": 4,
+  "at": "12:20 PM",
   "why": "",
-  "at_iso": "2026-11-16T17:16:00+00:00",
+  "at_iso": "2026-11-16T17:20:00+00:00",
   "started": "10:53 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 1, started 10:53 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 6 sessions \u00b7 as of 12:16 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 1, started 10:53 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 12:20 PM ET</p></section>"
  }
 }

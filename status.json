@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-16T06:59:03.241506+00:00",
+ "at": "2026-11-16T07:02:08.842488+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -18,6 +18,22 @@
    }
   ],
   "done": [
+   {
+    "t": "T-4562",
+    "name": "Correct the pace reply sent to Jeremy",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794812468
+   },
+   {
+    "t": "T-3726",
+    "name": "Run the Simulators from a disk image on the SSD",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794812455
+   },
    {
     "t": "T-4477",
     "name": "People build a widget from blocks without code",
@@ -78,23 +94,9 @@
     "steps": [],
     "end": "landed",
     "end_at": 1794802684
-   },
-   {
-    "t": "T-4400",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794802334
-   },
-   {
-    "t": "T-4534",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794802307
    }
   ],
-  "landed": 19,
+  "landed": 21,
   "failed": 7
  },
  "workers": [
@@ -103,7 +105,7 @@
    "task": "[tools] T-4194 land feature-session wiring",
    "model": "opus",
    "started": "2026-11-16T05:36:18.799Z",
-   "seconds": 4964,
+   "seconds": 5150,
    "finished": null
   },
   {
@@ -111,7 +113,7 @@
    "task": "[tools] T-3995 personal_land daily batch",
    "model": "opus",
    "started": "2026-11-16T05:36:28.863Z",
-   "seconds": 4954,
+   "seconds": 5139,
    "finished": null
   }
  ],
@@ -129,7 +131,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 380,
+  "runnable_count": 379,
   "blocked_count": 76
  },
  "meter": {
@@ -178,7 +180,7 @@
   "week_pct": 5.72,
   "usage_pct": 25.2,
   "work_pct": 70.0,
-  "read_at": "2026-11-16T06:59:00+00:00",
+  "read_at": "2026-11-16T07:02:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -195,11 +197,7 @@
    {
     "lane": "b",
     "task": "T-4562",
-    "w": "Operator",
-    "k": "ops",
     "t": "Correct the pace reply sent to Jeremy",
-    "m": "opus",
-    "e": "high",
     "at": "2026-11-16T01:55:40-05:00",
     "n": "Jeremy",
     "d": 1,
@@ -311,7 +309,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-16T01:59:00-05:00",
+  "at": "2026-11-16T02:02:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -472,6 +470,11 @@
   ],
   "done": [
    {
+    "w": "Operator",
+    "t": "Posted a short correction on to Jeremy: his account read 77% of its own week, not about 33%, and...",
+    "at": "2026-11-16T02:01:00-05:00"
+   },
+   {
     "w": "Idris",
     "t": "The test build that carries the phone measurement switch had never been built with its tests; it...",
     "at": "2026-11-16T01:23:00-05:00"
@@ -480,15 +483,10 @@
     "w": "Operator",
     "t": "Xcode, Safari and Disk Utility, which Evan said the Investors never opened, were asked to quit...",
     "at": "2026-11-16T00:33:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "The site header no longer has a Notifications bell, since each tab shows its own count; the...",
-    "at": "2026-11-15T23:40:00-05:00"
    }
   ],
   "count": {
-   "next": 380,
+   "next": 379,
    "wait": 35,
    "blocked": 41,
    "you": 12
@@ -542,17 +540,23 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-16T06:58:55Z",
+  "at": "2026-11-16T07:02:01Z",
   "s": {
    "T-3995": [
     "testing",
     "its own tests, in its copy",
-    1794809455509
+    1794809461865
    ],
    "T-4194": [
     "testing",
     "its own tests, in its copy",
-    1794809875509
+    1794809881865
+   ],
+   "T-4562": [
+    "merged",
+    "on main 2:00 AM ET",
+    1794812457000,
+    ""
    ],
    "T-4514": [
     "merged",
@@ -564,11 +568,12 @@
   "nm": {
    "T-3995": "Replace the waiting pile with one merge line",
    "T-4194": "Build the feature session for app work",
+   "T-4562": "Correct the pace reply sent to Jeremy",
    "T-4514": "Quit the three apps once the rule applies"
   }
  },
  "ln": {
-  "at": "2026-11-16T06:58:55Z",
+  "at": "2026-11-16T07:02:01Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -576,28 +581,28 @@
     "conflicted": 1,
     "failed": 0,
     "held": 0,
-    "retry": 1,
+    "retry": 0,
     "parked": 4
    },
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 1840,
+    "conflicted": 1843,
     "failed": null,
     "held": null,
-    "retry": 2,
-    "parked": 38
+    "retry": null,
+    "parked": 41
    },
    "cur": [],
    "ld": [
-    3,
-    "2026-11-16T06:19:22Z"
+    5,
+    "2026-11-16T07:01:08Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-16T06:58:57Z",
-    "ld": 3.73,
+    "at": "2026-11-16T07:01:16Z",
+    "ld": 4.07,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -672,10 +677,10 @@
   "main": 2,
   "lanes": 2,
   "total": 4,
-  "at": "1:59 AM",
+  "at": "2:02 AM",
   "why": "",
-  "at_iso": "2026-11-16T06:59:00+00:00",
+  "at_iso": "2026-11-16T07:02:00+00:00",
   "started": "12:32 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 2, started 12:32 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 1:59 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 2, started 12:32 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 2:02 AM ET</p></section>"
  }
 }

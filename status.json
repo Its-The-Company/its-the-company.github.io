@@ -1,22 +1,11 @@
 {
  "schema": 1,
- "at": "2026-11-16T13:47:48.312518+00:00",
+ "at": "2026-11-16T13:50:54.548689+00:00",
  "session": {
-  "active": false,
-  "kind": "",
-  "started": null,
+  "active": true,
+  "kind": "work",
+  "started": "2026-11-16T08:47:49-05:00",
   "flow": [
-   {
-    "t": "T-4554",
-    "name": "One state commit per widget across app and widget",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1794836164
-     }
-    ]
-   },
    {
     "t": "T-4564",
     "name": "Run a button's action and redraw in one run",
@@ -41,6 +30,14 @@
    }
   ],
   "done": [
+   {
+    "t": "T-4554",
+    "name": "One state commit per widget across app and widget",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794837023
+   },
    {
     "t": "T-4558",
     "acct": "Personal a",
@@ -106,47 +103,14 @@
     "steps": [],
     "end": "landed",
     "end_at": 1794827185
-   },
-   {
-    "t": "T-3552",
-    "name": "Test gallery and widget runs together with a stalled sensor",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794826185
    }
   ],
-  "landed": 34,
+  "landed": 35,
   "failed": 2
  },
  "workers": [],
  "who": "",
- "recent": [
-  {
-   "name": "odalys",
-   "task": "[tools] T-4402 ledger rows need prev",
-   "model": "opus",
-   "started": "2026-11-16T13:20:37.912Z",
-   "seconds": null,
-   "finished": "2026-11-16T13:34:37.699000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[ops] T-4420 read OPT-128",
-   "model": "opus",
-   "started": "2026-11-16T13:20:56.222Z",
-   "seconds": null,
-   "finished": "2026-11-16T13:32:40.198000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[measure] T-4420 read OPT-128",
-   "model": "opus",
-   "started": "2026-11-16T13:20:46.515Z",
-   "seconds": null,
-   "finished": "2026-11-16T13:20:46.634Z"
-  }
- ],
+ "recent": [],
  "queue": {
   "runnable": [],
   "blocked": [],
@@ -194,12 +158,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-16T09:02:34-05:00",
+ "next_tick": null,
  "personal": {
   "week_pct": 13.38,
   "usage_pct": 40.1,
   "work_pct": 70.0,
-  "read_at": "2026-11-16T13:47:00+00:00",
+  "read_at": "2026-11-16T13:50:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -247,6 +211,18 @@
     "n": "Evan",
     "d": 1,
     "src": "plan-a"
+   },
+   {
+    "lane": "b2",
+    "task": "T-3764",
+    "w": "Idris",
+    "k": "build",
+    "t": "Make the iPad window test fail without the fix",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-16T08:49:01-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
    },
    {
     "lane": "b3",
@@ -330,7 +306,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-16T08:47:00-05:00",
+  "at": "2026-11-16T08:50:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -338,9 +314,13 @@
    "b": "double-spread"
   }
  },
- "next_tick_why": "last_tick",
+ "next_tick_why": "session",
  "idle": null,
- "pool": null,
+ "pool": {
+  "why": "Double Spread: 80% of the week left, paced to last until Wed 14:00, the week's halfway point; the machine allows 2 (new work waits: 23 tasks wait to merge (limit 12): 2 agents finish and merge...",
+  "n": 2,
+  "at": "2026-11-16T08:47:34.052992-05:00"
+ },
  "lanes": [
   {
    "name": "Idris",
@@ -393,6 +373,7 @@
  ],
  "tasks": {
   "run": [],
+  "src": "plan",
   "open": [
    {
     "w": "Idris",
@@ -487,6 +468,10 @@
    "wait": 34,
    "blocked": 42,
    "you": 12
+  },
+  "fin": {
+   "n": 0,
+   "rows": []
   }
  },
  "qr": [
@@ -528,62 +513,62 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-16T13:47:48Z",
+  "at": "2026-11-16T13:50:39Z",
   "s": {
-   "T-4554": [
+   "T-4555": [
     "merging",
     "Host checks on the Mac mini",
-    1794836208312
-   ],
-   "T-4555": [
-    "mergeq",
-    "1st to merge",
-    1794832008312
+    1794837039623
    ],
    "T-4022": [
     "mergeq",
-    "2nd to merge",
-    1794832188312
+    "1st to merge",
+    1794832179623
    ],
    "T-4020": [
     "mergeq",
+    "2nd to merge",
+    1794832299623
+   ],
+   "T-4554": [
+    "mergeq",
     "3rd to merge",
-    1794832308312
+    1794835959623
    ],
    "T-4564": [
     "mergeq",
-    "4th to merge",
-    1794835968312
+    "3rd to merge",
+    1794835959623
    ],
    "T-4565": [
     "mergeq",
-    "4th to merge",
-    1794835968312
+    "3rd to merge",
+    1794835959623
    ],
    "T-4529": [
     "mergeq",
-    "11th to merge",
-    1794835428312
+    "10th to merge",
+    1794835419623
    ],
    "T-4297": [
     "mergeq",
-    "11th to merge",
-    1794835428312
+    "10th to merge",
+    1794835419623
    ],
    "T-4286": [
     "mergeq",
-    "11th to merge",
-    1794835428312
+    "10th to merge",
+    1794835419623
    ],
    "T-4558": [
     "mergeq",
-    "13th to merge",
-    1794836268312
+    "12th to merge",
+    1794836259623
    ],
    "T-3970": [
     "mergeq",
-    "13th to merge",
-    1794836268312
+    "12th to merge",
+    1794836259623
    ],
    "T-4256": [
     "merged",
@@ -599,10 +584,10 @@
    ]
   },
   "nm": {
-   "T-4554": "One state commit per widget across app and widget",
    "T-4555": "Draw the When tapped setting",
    "T-4022": "Check finished work before it ships",
    "T-4020": "Check finished work before it ships",
+   "T-4554": "One state commit per widget across app and widget",
    "T-4564": "Run a button's action and redraw in one run",
    "T-4565": "Send button actions from Swift, schema names checked",
    "T-4529": "Give Home the dispatcher's real start order",
@@ -614,10 +599,10 @@
    "T-4276": "Run Evan's account on the audit without the pause"
   },
   "wk": {
-   "T-4554": "Idris",
    "T-4555": "Maren",
    "T-4022": "Pernille",
    "T-4020": "Pernille",
+   "T-4554": "Idris",
    "T-4564": "Pernille",
    "T-4565": "Pernille",
    "T-4529": "Odalys",
@@ -630,49 +615,49 @@
   }
  },
  "ln": {
-  "at": "2026-11-16T13:47:48Z",
+  "at": "2026-11-16T13:50:39Z",
   "mq": {
    "n": {
     "checking": 1,
-    "inline": 5,
+    "inline": 4,
     "conflicted": 1,
-    "failed": 5,
+    "failed": 6,
     "held": 0,
     "retry": 1,
     "parked": 10
    },
    "m": {
-    "checking": 11,
-    "inline": 76,
-    "conflicted": 2249,
-    "failed": 7,
+    "checking": 0,
+    "inline": 46,
+    "conflicted": 2252,
+    "failed": 9,
     "held": null,
-    "retry": 17,
-    "parked": 319
+    "retry": 20,
+    "parked": 322
    },
    "cur": [
     [
      [
-      "T-4554"
+      "T-4555"
      ],
      "Mac tests",
      "Mac mini",
-     11
+     0
     ]
    ],
    "ld": [
-    25,
-    "2026-11-16T13:35:42Z"
+    26,
+    "2026-11-16T13:50:23Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-16T13:47:49Z",
-    "ld": 4.71,
+    "at": "2026-11-16T13:50:40Z",
+    "ld": 4.1,
     "c": 8,
     "sb": 0,
     "dk": [
-     43.8,
+     45.1,
      228.3
     ],
     "ss": [
@@ -682,12 +667,12 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-16T13:35:22Z",
-    "ld": 0.38,
+    "at": "2026-11-16T13:48:51Z",
+    "ld": 2.09,
     "c": 12,
     "sb": 0,
     "dk": [
-     334.0,
+     334.6,
      926.4
     ],
     "sn": []
@@ -697,12 +682,30 @@
  "operators": [
   {
    "w": "Operator",
+   "a": "Main plan",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session \u2013 1 task",
+   "at": "2026-11-16T08:47:49-05:00"
+  },
+  {
+   "w": "Operator",
    "a": "Evan",
    "sr": 1,
    "m": "opus",
    "e": "high",
    "t": "Work session \u2013 3 tasks",
    "at": "2026-11-16T06:10:17-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Jeremy",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session \u2013 1 task",
+   "at": "2026-11-16T08:49:01-05:00"
   },
   {
    "w": "Operator",
@@ -731,12 +734,12 @@
  ],
  "agents_now": {
   "main": 0,
-  "lanes": 2,
-  "total": 2,
-  "at": "8:47 AM",
+  "lanes": 3,
+  "total": 3,
+  "at": "8:50 AM",
   "why": "",
-  "at_iso": "2026-11-16T13:47:00+00:00",
-  "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 8:47 AM ET</p></section>"
+  "at_iso": "2026-11-16T13:50:00+00:00",
+  "started": "8:47 AM",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 8:47 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 8:50 AM ET</p></section>"
  }
 }

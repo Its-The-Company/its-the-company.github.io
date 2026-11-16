@@ -1,22 +1,11 @@
 {
  "schema": 1,
- "at": "2026-11-16T04:15:00.538008+00:00",
+ "at": "2026-11-16T04:18:06.055260+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-15T20:30:09-05:00",
   "flow": [
-   {
-    "t": "T-3803",
-    "name": "Post the time guard proposal and finish deadline readers",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1794802353
-     }
-    ]
-   },
    {
     "t": "T-0261",
     "name": "Apply the chosen store caption wording",
@@ -40,6 +29,14 @@
    }
   ],
   "done": [
+   {
+    "t": "T-3803",
+    "name": "Post the time guard proposal and finish deadline readers",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794802684
+   },
    {
     "t": "T-4400",
     "name": "Find why pace count and meter disagree",
@@ -113,17 +110,9 @@
     "steps": [],
     "end": "landed",
     "end_at": 1794784610
-   },
-   {
-    "t": "T-4293",
-    "name": "Show skipped and brief stages on Home",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794783674
    }
   ],
-  "landed": 14,
+  "landed": 15,
   "failed": 8
  },
  "workers": [
@@ -132,7 +121,7 @@
    "task": "[tools] T-4194 wire and switch on feature sessions",
    "model": "opus",
    "started": "2026-11-16T02:43:06.794Z",
-   "seconds": 5513,
+   "seconds": 5699,
    "finished": null,
    "effort": "high"
   },
@@ -141,7 +130,7 @@
    "task": "[tools] T-4560 disk cleaning acts on cleared refusals",
    "model": "opus",
    "started": "2026-11-16T03:28:22.673Z",
-   "seconds": 2797,
+   "seconds": 2983,
    "finished": null,
    "effort": "high"
   }
@@ -184,7 +173,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 382,
+  "runnable_count": 381,
   "blocked_count": 76
  },
  "meter": {
@@ -233,7 +222,7 @@
   "week_pct": 4.62,
   "usage_pct": 26.2,
   "work_pct": 68.8,
-  "read_at": "2026-11-16T04:15:00+00:00",
+  "read_at": "2026-11-16T04:18:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -337,11 +326,7 @@
    {
     "lane": "a3",
     "task": "T-3803",
-    "w": "Odalys",
-    "k": "tools",
     "t": "Post the time guard proposal and finish deadline readers",
-    "m": "sonnet",
-    "e": "medium",
     "at": "2026-11-15T22:32:46-05:00",
     "n": "Evan",
     "d": 1,
@@ -405,7 +390,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-15T23:15:00-05:00",
+  "at": "2026-11-15T23:18:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -571,6 +556,11 @@
   "done": [
    {
     "w": "Odalys",
+    "t": "The proposal for a guard that refuses 24-hour clock times in hand-typed posts is now with the...",
+    "at": "2026-11-15T23:18:00-05:00"
+   },
+   {
+    "w": "Odalys",
     "t": "The 94% and the 33% came from two different accounts, not a counting error: the main account...",
     "at": "2026-11-15T23:12:00-05:00"
    },
@@ -578,22 +568,21 @@
     "w": "Maren",
     "t": "In Chat, double-tapping a message now offers a fire reaction in place of the laughing face, as...",
     "at": "2026-11-15T23:11:00-05:00"
-   },
-   {
-    "w": "Ines",
-    "t": "The Investors' 11-08 yes to erasing old Simulators does not clearly lift the two safety-check...",
-    "at": "2026-11-15T23:06:00-05:00"
    }
   ],
   "count": {
-   "next": 382,
+   "next": 381,
    "wait": 35,
    "blocked": 41,
    "you": 12
   },
   "fin": {
-   "n": 12,
+   "n": 13,
    "rows": [
+    [
+     "T-3803",
+     "Post the time guard proposal..."
+    ],
     [
      "T-4400",
      "Find why pace count and..."
@@ -613,10 +602,6 @@
     [
      "T-4551",
      "Bring the charter Mission..."
-    ],
-    [
-     "T-4542",
-     "Let people choose what a..."
     ]
    ]
   }
@@ -660,27 +645,28 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-16T04:15:00Z",
+  "at": "2026-11-16T04:18:06Z",
   "s": {
-   "T-3803": [
-    "merging",
-    "Host checks on the Mac mini \u00b7 1 group of tests done",
-    1794802380538
-   ],
    "T-0261": [
     "mergeq",
     "1st to merge",
-    1794802020538
+    1794802026055
    ],
    "T-4560": [
     "merging",
     "Mac tests at the main gate",
-    1794802500538
+    1794802506055
    ],
    "T-4194": [
     "testing",
     "its own tests, in its copy",
-    1794799260538
+    1794799266055
+   ],
+   "T-3803": [
+    "merged",
+    "on main 11:12 PM ET",
+    1794802350000,
+    ""
    ],
    "T-4400": [
     "merged",
@@ -708,10 +694,10 @@
    ]
   },
   "nm": {
-   "T-3803": "Post the time guard proposal and finish deadline readers",
    "T-0261": "Apply the chosen store caption wording",
    "T-4560": "Let the disk cleaning act on cleared refusals",
    "T-4194": "Build the feature session for app work",
+   "T-3803": "Post the time guard proposal and finish deadline readers",
    "T-4400": "Find why pace count and meter disagree",
    "T-4534": "Double-tap a Chat bubble to react, and add fire",
    "T-4489": "Decide if the Simulator erase approval clears old refusals",
@@ -719,10 +705,10 @@
   }
  },
  "ln": {
-  "at": "2026-11-16T04:15:00Z",
+  "at": "2026-11-16T04:18:06Z",
   "mq": {
    "n": {
-    "checking": 1,
+    "checking": 0,
     "inline": 1,
     "conflicted": 1,
     "failed": 0,
@@ -731,37 +717,28 @@
     "parked": 2
    },
    "m": {
-    "checking": 2,
-    "inline": 8,
-    "conflicted": 1676,
+    "checking": null,
+    "inline": 11,
+    "conflicted": 1680,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 905
+    "parked": 908
    },
-   "cur": [
-    [
-     [
-      "T-3803"
-     ],
-     "Mac tests",
-     "Mac mini",
-     2
-    ]
-   ],
+   "cur": [],
    "ld": [
-    36,
-    "2026-11-16T04:12:14Z"
+    37,
+    "2026-11-16T04:18:04Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-16T04:14:40Z",
-    "ld": 5.97,
+    "at": "2026-11-16T04:17:20Z",
+    "ld": 7.05,
     "c": 8,
     "sb": 0,
     "dk": [
-     29.1,
+     28.5,
      228.3
     ],
     "ss": [
@@ -843,10 +820,10 @@
   "main": 2,
   "lanes": 3,
   "total": 5,
-  "at": "11:15 PM",
+  "at": "11:18 PM",
   "why": "",
-  "at_iso": "2026-11-16T04:15:00+00:00",
+  "at_iso": "2026-11-16T04:18:00+00:00",
   "started": "8:30 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 2, started 8:30 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 11:15 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 2, started 8:30 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 11:18 PM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-16T02:43:19.010917+00:00",
+ "at": "2026-11-16T02:46:25.297883+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -113,7 +113,7 @@
    "task": "[tools] T-4537 clean disk before pausing",
    "model": "opus",
    "started": "2026-11-16T01:32:48.168Z",
-   "seconds": 4230,
+   "seconds": 4417,
    "finished": null,
    "effort": "high"
   },
@@ -122,12 +122,21 @@
    "task": "[tools] T-4194 wire and switch on feature sessions",
    "model": "opus",
    "started": "2026-11-16T02:43:06.794Z",
-   "seconds": 12,
+   "seconds": 198,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "idris",
+   "task": "[design] T-4542 revise ADR-011 after Pernille review",
+   "model": "opus",
+   "started": "2026-11-16T02:43:31.677Z",
+   "seconds": 173,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Odalys, Idris",
+ "who": "Odalys, Idris x2",
  "recent": [
   {
    "name": "pernille",
@@ -170,19 +179,19 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 15.0,
+   "pct": 16.0,
    "resets_at": "2026-11-15T22:10:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-15T21:39:42.844497-05:00",
+   "read_at": "2026-11-15T21:46:25.328514-05:00",
    "source": "live",
-   "left": 85.0,
+   "left": 84.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 14.0,
    "resets_at": "2026-11-22T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-15T21:39:42.844497-05:00",
+   "read_at": "2026-11-15T21:46:25.328514-05:00",
    "source": "live",
    "left": 86.0,
    "left_words": "of your weekly allowance left"
@@ -194,7 +203,7 @@
    "read_at": "2026-11-15T20:29:58.154359-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-15T21:39:42.844497-05:00"
+  "read_at": "2026-11-15T21:46:25.328514-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -214,7 +223,7 @@
   "week_pct": 4.62,
   "usage_pct": 26.2,
   "work_pct": 68.8,
-  "read_at": "2026-11-16T02:43:00+00:00",
+  "read_at": "2026-11-16T02:46:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -244,14 +253,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions wait until 20 GB is free.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-15T21:39:00-05:00",
+   "at": "2026-11-15T21:46:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-15T21:43:00-05:00",
+  "at": "2026-11-15T21:46:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -339,6 +348,16 @@
     "at": "2026-11-16T02:43:06.794Z",
     "o": "c",
     "task": "T-4194"
+   },
+   {
+    "w": "Idris",
+    "k": "design",
+    "t": "Let people choose what a widget tap does",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-16T02:43:31.677Z",
+    "o": "c",
+    "task": "T-4542"
    }
   ],
   "src": "plan",
@@ -494,12 +513,12 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-16T02:43:09Z",
+  "at": "2026-11-16T02:46:19Z",
   "s": {
    "T-4537": [
     "testing",
     "its own tests, in its copy",
-    1794795249825
+    1794795259462
    ],
    "T-4542": [
     "merged",
@@ -514,7 +533,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-16T02:43:09Z",
+  "at": "2026-11-16T02:46:19Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -528,11 +547,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 1585,
+    "conflicted": 1588,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 464
+    "parked": 468
    },
    "cur": [],
    "ld": [
@@ -542,12 +561,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-16T02:42:30Z",
-    "ld": 2.42,
+    "at": "2026-11-16T02:45:57Z",
+    "ld": 2.98,
     "c": 8,
     "sb": 0,
     "dk": [
-     11.0,
+     10.9,
      228.3
     ],
     "ss": [
@@ -597,13 +616,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 2,
+  "main": 3,
   "lanes": 0,
-  "total": 2,
-  "at": "9:43 PM",
+  "total": 3,
+  "at": "9:46 PM",
   "why": "",
-  "at_iso": "2026-11-16T02:43:00+00:00",
+  "at_iso": "2026-11-16T02:46:00+00:00",
   "started": "8:30 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 8:30 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:43 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 8:30 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:46 PM ET</p></section>"
  }
 }

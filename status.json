@@ -1,24 +1,29 @@
 {
  "schema": 1,
- "at": "2026-11-16T18:40:44.213340+00:00",
+ "at": "2026-11-16T18:43:45.327354+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-16T10:53:39-05:00",
-  "flow": [
+  "flow": [],
+  "done": [
    {
     "t": "T-0678",
     "name": "Run the refresh button inside the widget extension",
     "acct": "Personal b",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1794852977
-     }
-    ]
-   }
-  ],
-  "done": [
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794854567
+   },
+   {
+    "t": "T-0678",
+    "name": "Run the refresh button inside the widget extension",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "failed",
+    "end_at": 1794854480,
+    "why": "tests failed"
+   },
    {
     "t": "T-2691",
     "name": "Check every archive for the phone test marker, Organizer too",
@@ -82,26 +87,10 @@
     "steps": [],
     "end": "landed",
     "end_at": 1794848747
-   },
-   {
-    "t": "T-4040",
-    "name": "Check finished work before it ships",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794848477
-   },
-   {
-    "t": "T-4067",
-    "name": "Check finished work before it ships",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794848445
    }
   ],
-  "landed": 50,
-  "failed": 11
+  "landed": 51,
+  "failed": 12
  },
  "workers": [
   {
@@ -109,7 +98,7 @@
    "task": "[design] T-4595 split Home waiting count",
    "model": "opus",
    "started": "2026-11-16T17:52:58.025Z",
-   "seconds": 2866,
+   "seconds": 3047,
    "finished": null,
    "effort": "high"
   }
@@ -185,7 +174,7 @@
   "week_pct": 15.51,
   "usage_pct": 42.5,
   "work_pct": 69.1,
-  "read_at": "2026-11-16T18:40:00+00:00",
+  "read_at": "2026-11-16T18:43:00+00:00",
   "running": [
    {
     "lane": "b2",
@@ -253,14 +242,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-16T13:37:00-05:00",
+   "at": "2026-11-16T13:43:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 4,
-  "at": "2026-11-16T13:40:00-05:00",
+  "at": "2026-11-16T13:43:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -500,18 +489,8 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-16T18:40:44Z",
+  "at": "2026-11-16T18:43:45Z",
   "s": {
-   "T-4561": [
-    "merging",
-    "Host checks on the Mac mini",
-    1794853004213
-   ],
-   "T-0678": [
-    "merging",
-    "Host checks on the Mac mini",
-    1794853004213
-   ],
    "T-2691": [
     "testing",
     "Mac Mini \u00b7 test",
@@ -535,12 +514,10 @@
    "T-4595": [
     "testing",
     "its own tests, in its copy",
-    1794852704213
+    1794852705327
    ]
   },
   "nm": {
-   "T-4561": "Act on the Investors' answer on the Simulator refusals",
-   "T-0678": "Run the refresh button inside the widget extension",
    "T-2691": "Check every archive for the phone test marker, Organizer too",
    "T-3765": "Check a real widget tap on the TestFlight build",
    "T-4040": "Check finished work before it ships",
@@ -548,13 +525,12 @@
    "T-4595": "Split Home's waiting-to-merge count into its parts"
   },
   "wk": {
-   "T-4561": "Odalys",
-   "T-0678": "Idris",
    "T-2691": "Idris",
    "T-3765": "Idris",
    "T-4040": "Pernille",
    "T-4043": "Pernille",
    "T-4595": "Maren",
+   "T-4561": "Odalys",
    "T-4032": "Pernille",
    "T-4063": "Pernille",
    "T-4067": "Pernille",
@@ -562,57 +538,40 @@
   }
  },
  "ln": {
-  "at": "2026-11-16T18:40:44Z",
+  "at": "2026-11-16T18:43:45Z",
   "mq": {
    "n": {
-    "checking": 2,
+    "checking": 0,
     "inline": 0,
     "conflicted": 2,
-    "failed": 0,
+    "failed": 2,
     "held": 0,
     "retry": 0,
     "parked": 11
    },
    "m": {
-    "checking": 24,
+    "checking": null,
     "inline": null,
-    "conflicted": 1339,
-    "failed": null,
+    "conflicted": 1342,
+    "failed": 2,
     "held": null,
     "retry": null,
-    "parked": 612
+    "parked": 615
    },
-   "cur": [
-    [
-     [
-      "T-4561"
-     ],
-     "Mac tests",
-     "Mac mini",
-     24
-    ],
-    [
-     [
-      "T-0678"
-     ],
-     "Mac tests",
-     "Mac mini",
-     24
-    ]
-   ],
+   "cur": [],
    "ld": [
-    56,
-    "2026-11-16T18:16:07Z"
+    57,
+    "2026-11-16T18:42:47Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-16T18:39:55Z",
-    "ld": 42.45,
+    "at": "2026-11-16T18:43:19Z",
+    "ld": 38.35,
     "c": 8,
     "sb": 2,
     "dk": [
-     27.4,
+     27.0,
      228.3
     ],
     "ss": [
@@ -686,10 +645,10 @@
   "main": 1,
   "lanes": 2,
   "total": 3,
-  "at": "1:40 PM",
+  "at": "1:43 PM",
   "why": "",
-  "at_iso": "2026-11-16T18:40:00+00:00",
+  "at_iso": "2026-11-16T18:43:00+00:00",
   "started": "10:53 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 1, started 10:53 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 1:40 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 1, started 10:53 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 1:43 PM ET</p></section>"
  }
 }

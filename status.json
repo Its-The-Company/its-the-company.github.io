@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-16T08:07:08.776656+00:00",
+ "at": "2026-11-16T08:09:04.397688+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -107,7 +107,7 @@
    "task": "[tools] T-4194 land feature-session wiring",
    "model": "opus",
    "started": "2026-11-16T05:36:18.799Z",
-   "seconds": 9049,
+   "seconds": 9165,
    "finished": null
   },
   {
@@ -115,7 +115,7 @@
    "task": "[tools] T-3995 personal_land daily batch",
    "model": "opus",
    "started": "2026-11-16T05:36:28.863Z",
-   "seconds": 9039,
+   "seconds": 9155,
    "finished": null
   }
  ],
@@ -182,7 +182,7 @@
   "week_pct": 5.72,
   "usage_pct": 25.2,
   "work_pct": 70.0,
-  "read_at": "2026-11-16T08:07:00+00:00",
+  "read_at": "2026-11-16T08:10:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -194,6 +194,7 @@
     "e": "high",
     "at": "2026-11-16T02:46:14-05:00",
     "n": "Evan",
+    "d": 1,
     "src": "plan-a"
    },
    {
@@ -401,7 +402,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-16T03:07:00-05:00",
+  "at": "2026-11-16T03:10:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -632,19 +633,39 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-16T08:07:08Z",
+  "at": "2026-11-16T08:09:04Z",
   "s": {
    "T-4550": [
     "merging",
     "Host checks on the Mac mini",
-    1794816428776
+    1794816424397
+   ],
+   "T-4460": [
+    "mergeq",
+    "1st to merge",
+    1794816544397
    ],
    "T-4194": [
     "merging",
     "Mac tests at the main gate",
-    1794816068776
+    1794816064397
    ],
-   "T-2943": [
+   "T-2691": [
+    "testing",
+    "Mac Mini \u00b7 test",
+    null
+   ],
+   "T-4286": [
+    "testing",
+    "Mac Mini \u00b7 test",
+    null
+   ],
+   "T-4455": [
+    "testing",
+    "Mac Mini \u00b7 test",
+    null
+   ],
+   "T-4506": [
     "testing",
     "Mac Mini \u00b7 test",
     null
@@ -652,64 +673,44 @@
    "T-0687": [
     "testq",
     "1st for a Simulator",
-    1794816008776
+    1794816004397
    ],
    "T-0696": [
     "testq",
     "1st for a Simulator",
-    1794816008776
+    1794816004397
    ],
    "T-0972": [
     "testq",
     "1st for a Simulator",
-    1794816008776
+    1794816004397
    ],
    "T-3552": [
     "testq",
     "1st for a Simulator",
-    1794816008776
-   ],
-   "T-2691": [
-    "testq",
-    "2nd for a Simulator",
-    1794816008776
-   ],
-   "T-4286": [
-    "testq",
-    "2nd for a Simulator",
-    1794816008776
-   ],
-   "T-4455": [
-    "testq",
-    "2nd for a Simulator",
-    1794816008776
-   ],
-   "T-4506": [
-    "testq",
-    "2nd for a Simulator",
-    1794816008776
+    1794816004397
    ]
   },
   "nm": {
    "T-4550": "Python contract and action run for widget buttons",
+   "T-4460": "Clear old test leftovers from the temporary folder",
    "T-4194": "Build the feature session for app work",
-   "T-2943": "Send up the gate build and confirm it stays internal",
-   "T-0687": "Run network fetches inside the extension on the Simulator",
-   "T-0696": "Measure peak memory for fetches in the extension",
-   "T-0972": "Decide how a script's refresh path is chosen on send",
-   "T-3552": "Test gallery and widget runs together with a stalled sensor",
    "T-2691": "Check every archive for the phone test marker, Organizer too",
    "T-4286": "Check an imported font draws in a widget",
    "T-4455": "Fix the stage name test after the Retry Queue rename",
-   "T-4506": "Site suites that fail only in worker copies"
+   "T-4506": "Site suites that fail only in worker copies",
+   "T-0687": "Run network fetches inside the extension on the Simulator",
+   "T-0696": "Measure peak memory for fetches in the extension",
+   "T-0972": "Decide how a script's refresh path is chosen on send",
+   "T-3552": "Test gallery and widget runs together with a stalled sensor"
   }
  },
  "ln": {
-  "at": "2026-11-16T08:07:08Z",
+  "at": "2026-11-16T08:09:04Z",
   "mq": {
    "n": {
     "checking": 1,
-    "inline": 0,
+    "inline": 1,
     "conflicted": 1,
     "failed": 0,
     "held": 0,
@@ -717,13 +718,13 @@
     "parked": 4
    },
    "m": {
-    "checking": 0,
-    "inline": null,
-    "conflicted": 1909,
+    "checking": 2,
+    "inline": 0,
+    "conflicted": 1910,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 73
+    "parked": 75
    },
    "cur": [
     [
@@ -732,7 +733,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     0
+     2
     ]
    ],
    "ld": [
@@ -742,22 +743,19 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-16T08:06:45Z",
-    "ld": 117.61,
+    "at": "2026-11-16T08:09:06Z",
+    "ld": 108.62,
     "c": 8,
-    "sb": 2,
+    "sb": 0,
     "dk": [
-     21.9,
+     19.5,
      228.3
     ],
     "ss": [
      180.1,
      953.7
     ],
-    "sn": [
-     "iPhone 17e",
-     "iPhone Air"
-    ]
+    "sn": []
    },
    "macbook": {
     "at": "2026-11-16T07:54:46Z",
@@ -788,8 +786,8 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session",
-   "at": "2026-11-16T03:07:07-05:00"
+   "t": "Work session \u2013 3 tasks",
+   "at": "2026-11-16T02:46:14-05:00"
   },
   {
    "w": "Operator",
@@ -815,7 +813,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 3 tasks",
+   "t": "Work session \u2013 2 tasks",
    "at": "2026-11-16T02:46:12-05:00"
   }
  ],
@@ -839,10 +837,10 @@
   "main": 2,
   "lanes": 4,
   "total": 6,
-  "at": "3:07 AM",
+  "at": "3:10 AM",
   "why": "",
-  "at_iso": "2026-11-16T08:07:00+00:00",
+  "at_iso": "2026-11-16T08:10:00+00:00",
   "started": "12:32 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 2, started 12:32 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 3:07 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 2, started 12:32 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 3:10 AM ET</p></section>"
  }
 }

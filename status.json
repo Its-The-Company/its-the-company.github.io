@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-16T00:01:41.432333+00:00",
+ "at": "2026-11-16T00:04:46.272500+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -103,7 +103,7 @@
     "why": "tests failed"
    }
   ],
-  "landed": 18,
+  "landed": 17,
   "failed": 7
  },
  "workers": [
@@ -112,7 +112,7 @@
    "task": "[tools] T-3992 land the pipeline batch",
    "model": "opus",
    "started": "2026-11-15T22:17:17.812Z",
-   "seconds": 6263,
+   "seconds": 6448,
    "finished": null,
    "effort": "high"
   }
@@ -196,7 +196,7 @@
   "week_pct": 3.57,
   "usage_pct": 22.9,
   "work_pct": 71.4,
-  "read_at": "2026-11-16T00:01:00+00:00",
+  "read_at": "2026-11-16T00:04:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -233,7 +233,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-15T19:01:00-05:00",
+  "at": "2026-11-15T19:04:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -461,27 +461,27 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-16T00:01:33Z",
+  "at": "2026-11-16T00:04:40Z",
   "s": {
    "T-4282": [
-    "merging",
-    "Merging onto main",
-    1794787293809
+    "mergeq",
+    "1st to merge",
+    1794785140434
    ],
    "T-4293": [
-    "merging",
-    "Merging onto main",
-    1794787293809
+    "mergeq",
+    "1st to merge",
+    1794785140434
    ],
    "T-4512": [
-    "merging",
-    "Merging onto main",
-    1794787293809
+    "mergeq",
+    "1st to merge",
+    1794785140434
    ],
    "T-3992": [
     "testing",
     "its own tests, in its copy",
-    1794784833809
+    1794784840434
    ]
   },
   "nm": {
@@ -492,11 +492,11 @@
   }
  },
  "ln": {
-  "at": "2026-11-16T00:01:33Z",
+  "at": "2026-11-16T00:04:40Z",
   "mq": {
    "n": {
-    "checking": 3,
-    "inline": 0,
+    "checking": 0,
+    "inline": 3,
     "conflicted": 1,
     "failed": 1,
     "held": 0,
@@ -504,40 +504,15 @@
     "parked": 2
    },
    "m": {
-    "checking": 0,
-    "inline": null,
-    "conflicted": 1423,
-    "failed": 0,
+    "checking": null,
+    "inline": 39,
+    "conflicted": 1426,
+    "failed": 3,
     "held": null,
     "retry": null,
-    "parked": 652
+    "parked": 655
    },
-   "cur": [
-    [
-     [
-      "T-4282"
-     ],
-     "going onto main",
-     "Mac mini",
-     0
-    ],
-    [
-     [
-      "T-4293"
-     ],
-     "going onto main",
-     "Mac mini",
-     0
-    ],
-    [
-     [
-      "T-4512"
-     ],
-     "going onto main",
-     "Mac mini",
-     0
-    ]
-   ],
+   "cur": [],
    "ld": [
     31,
     "2026-11-15T23:25:27Z"
@@ -545,8 +520,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-16T00:01:34Z",
-    "ld": 1.19,
+    "at": "2026-11-16T00:03:56Z",
+    "ld": 1.1,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -603,10 +578,10 @@
   "main": 1,
   "lanes": 0,
   "total": 1,
-  "at": "7:01 PM",
+  "at": "7:04 PM",
   "why": "",
-  "at_iso": "2026-11-16T00:01:00+00:00",
+  "at_iso": "2026-11-16T00:04:00+00:00",
   "started": "5:14 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 5:14 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 7:01 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 5:14 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 7:04 PM ET</p></section>"
  }
 }

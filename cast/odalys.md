@@ -54,6 +54,8 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 - T-4475 (11-16): stopped twice by refusals (security-guard on a heredoc with git verbs; classifier on a test heredoc). Built work in scratch, ops/plans/T-4475-handoff.md. Owed: test rows, then commit.
 
+- T-4012 (11-16): reading 3 no (log/audit/t4012/read16.py). Fix/own works for left work; 31/32 failed lands never reach it, merge-queue q re-cut first. Next 9 AM 11-19 or row 42.
+
 ## Lessons
 - T-4460+T-3684 5817998dd3 (11-16): sweep test pass (3 h, one listing) + tests/temp_clean.py. Owed: first live run's 'test temp pass' line; 7-day count. + site_t3219 cleanup owed after T-4455
 - T-4529 3e77aef319 (11-16): dispatch.py order --json / start_order() for T-4530 (Maren). Ticked (outbox).

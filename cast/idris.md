@@ -47,12 +47,12 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - Older lessons and dated logs: archive.md.
 
 
-- T-4527 11-15: hung-step timing tests: count proves 'once' (callers), clock only the cut: >= limit and < limit x ids / 2. Red on the runner via tools/land_mutants.py (2 KILLED, control green). Open: land/idris-t4527 ref stays (land_xc drop refuses non-lane ids). Lesson: local disk under 10 GB -> land_mutants, mutants json must be in the --base commit.
-- T-4282 11-15 cdfacacc4c: ladder1-7 + manifest <span title="Our grade scale, nine steps: D, D+, C-, C, C+, B-, B, B+, A. An idea&#x27;s ladder is the letter it reaches before any cap.">ladder</span>; T-4536 asks phones after T-2943. Open: land, gate compile (xc 75), export read, <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span> facts for Ines. Lesson: 24 MiB < 25.2 MB free; MiB, not MB.
+- T-4282 11-15 cdfacacc4c: ladder1-7 + manifest ladder; T-4536 asks phones after T-2943. Open: land, gate compile (xc 75), export read, chair facts for Ines. Lesson: 24 MiB < 25.2 MB free; MiB, not MB.
 - T-4542 11-15: ADR-011 accepted 10:05 PM after Pernille re-read + Maren review (run.lock separate from state.lock; v matched across tree.json entries x families; notice no timer; 44 pt targets). Open: both confirm (board note 10:04 PM), then tick. Lesson: before naming a lock for a long hold, grep its callers' waits; a short-hold lock can't double as a run lock.
 - T-3281 11-16: gate_session_build.sh --test (XC_LOCAL=1: xc_route sends a test with KEY=VALUE to the runner, which drops it: false green). 12/0, shot t3281/. Open: shot catches the share sheet mid-present (dim, no sheet); xc_route should keep such tests local.
 - T-3552 11-16 106de8a7d0: preview budget whole at dequeue, queue limit 10 s; ticked. Open: review. Lesson: another task's uncommitted file that won't compile reds every local test: test in a detached worktree copy with only my diff.
 - T-4433 11-16 39afa8c746: Lock Screen refresh tap gated .none (M1), s10 runtime table all open. Open: tests NOT run (3 attempts lost to Xcode lock), land, then the checks. Lesson: 27.1 has no device; use iPhone 17e 27.0 by id.
+- T-4554 11-16: WidgetStateCommit (state.json pywidget.state/1, run.lock, 64 KiB cap) + Core tests + host 2-process/kill suite (pywidget/tests/state_commit, swiftc helper). Odalys FIX FIRST f8c9e5b07a: F1 cap, F2 run.lock in runFileNames fixed. Open: T-4577 (Hold, G-L5-1 (a), xc test patch in scratch). Lesson: xc lock waits 30 min then 75 under load; host-run gates through swift test + swiftc helpers.
 {% endraw %}
 
 

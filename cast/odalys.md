@@ -54,11 +54,9 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-4400 c94db44592 (11-15): ticked (outbox). Owed: T-4562 inbox correction to the 11-13 reply on #41.
 - T-4225 5e8875519d + dd94ec84dc (11-16): Home cards the build never saw read stg.wk (owner from board/archive); "X with Y, P0" heads name X. Owed: tick after land.
 
+- T-4475 (11-16): stopped twice by refusals (security-guard on a heredoc with git verbs; classifier on a test heredoc). Built work in scratch, ops/plans/T-4475-handoff.md. Owed: test rows, then commit.
+
 ## Lessons
-- A dry run must not change anything: T-4547's ran `git worktree prune` for real (fixed T-4560). Test the dry path for side effects.
-- T-4278 bb4548b71f (11-15): bell gone; notif switch in "i" panel; notice only on About. Owed: T-4563 (composer_test red at HEAD).
-- zsh: $F with paths does not split; use an array, or git diff sees one path and gives 0 hunks.
-- scratch.py worktree can hand back an old copy (11-16: 11-11 HEAD). Check HEAD before applying.
 - T-4460+T-3684 5817998dd3 (11-16): sweep test pass (3 h, one listing) + tests/temp_clean.py. Owed: first live run's 'test temp pass' line; 7-day count. + site_t3219 cleanup owed after T-4455
 {% endraw %}
 

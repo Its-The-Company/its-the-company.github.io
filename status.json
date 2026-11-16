@@ -1,11 +1,23 @@
 {
  "schema": 1,
- "at": "2026-11-16T07:14:19.726312+00:00",
+ "at": "2026-11-16T07:17:22.256730+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-16T00:32:52-05:00",
-  "flow": [],
+  "flow": [
+   {
+    "t": "T-4225",
+    "name": "Show the worker on the task regroup card",
+    "acct": "Personal b",
+    "steps": [
+     {
+      "s": "testq",
+      "at": 1794813347
+     }
+    ]
+   }
+  ],
   "done": [
    {
     "t": "T-4562",
@@ -86,7 +98,7 @@
    }
   ],
   "landed": 21,
-  "failed": 7
+  "failed": 6
  },
  "workers": [
   {
@@ -94,7 +106,7 @@
    "task": "[tools] T-4194 land feature-session wiring",
    "model": "opus",
    "started": "2026-11-16T05:36:18.799Z",
-   "seconds": 5880,
+   "seconds": 6063,
    "finished": null
   },
   {
@@ -102,7 +114,7 @@
    "task": "[tools] T-3995 personal_land daily batch",
    "model": "opus",
    "started": "2026-11-16T05:36:28.863Z",
-   "seconds": 5870,
+   "seconds": 6053,
    "finished": null
   }
  ],
@@ -169,7 +181,7 @@
   "week_pct": 5.72,
   "usage_pct": 25.2,
   "work_pct": 70.0,
-  "read_at": "2026-11-16T07:14:00+00:00",
+  "read_at": "2026-11-16T07:17:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -299,7 +311,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-16T02:14:00-05:00",
+  "at": "2026-11-16T02:17:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -530,12 +542,17 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-16T07:14:07Z",
+  "at": "2026-11-16T07:17:08Z",
   "s": {
+   "T-4225": [
+    "merging",
+    "Host checks on the Mac mini \u00b7 3 groups of tests done",
+    1794813368974
+   ],
    "T-4194": [
     "testing",
     "its own tests, in its copy",
-    1794812827513
+    1794812828974
    ],
    "T-4562": [
     "merged",
@@ -551,16 +568,17 @@
    ]
   },
   "nm": {
+   "T-4225": "Show the worker on the task regroup card",
    "T-4194": "Build the feature session for app work",
    "T-4562": "Correct the pace reply sent to Jeremy",
    "T-4514": "Quit the three apps once the rule applies"
   }
  },
  "ln": {
-  "at": "2026-11-16T07:14:07Z",
+  "at": "2026-11-16T07:17:08Z",
   "mq": {
    "n": {
-    "checking": 0,
+    "checking": 1,
     "inline": 0,
     "conflicted": 1,
     "failed": 0,
@@ -569,15 +587,24 @@
     "parked": 4
    },
    "m": {
-    "checking": null,
+    "checking": 1,
     "inline": null,
-    "conflicted": 1856,
+    "conflicted": 1859,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 53
+    "parked": 56
    },
-   "cur": [],
+   "cur": [
+    [
+     [
+      "T-4225"
+     ],
+     "Mac tests",
+     "Mac mini",
+     1
+    ]
+   ],
    "ld": [
     5,
     "2026-11-16T07:01:08Z"
@@ -585,12 +612,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-16T07:14:03Z",
-    "ld": 2.42,
+    "at": "2026-11-16T07:17:10Z",
+    "ld": 2.25,
     "c": 8,
     "sb": 0,
     "dk": [
-     25.1,
+     26.0,
      228.3
     ],
     "ss": [
@@ -629,15 +656,6 @@
    "m": "opus",
    "e": "high",
    "t": "Work session \u2013 3 tasks",
-   "at": "2026-11-16T01:55:39-05:00"
-  },
-  {
-   "w": "Operator",
-   "a": "Jeremy",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session \u2013 3 tasks",
    "at": "2026-11-16T00:11:48-05:00"
   }
  ],
@@ -661,10 +679,10 @@
   "main": 2,
   "lanes": 2,
   "total": 4,
-  "at": "2:14 AM",
+  "at": "2:17 AM",
   "why": "",
-  "at_iso": "2026-11-16T07:14:00+00:00",
+  "at_iso": "2026-11-16T07:17:00+00:00",
   "started": "12:32 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 2, started 12:32 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 2:14 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 2, started 12:32 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 2:17 AM ET</p></section>"
  }
 }

@@ -1,19 +1,19 @@
 {
  "schema": 1,
- "at": "2026-11-16T04:09:01.652557+00:00",
+ "at": "2026-11-16T04:12:02.479356+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-15T20:30:09-05:00",
   "flow": [
    {
-    "t": "T-4534",
-    "name": "Double-tap a Chat bubble to react, and add fire",
+    "t": "T-4400",
+    "name": "Find why pace count and meter disagree",
     "acct": "Personal a",
     "steps": [
      {
       "s": "testq",
-      "at": 1794802005
+      "at": 1794802318
      }
     ]
    },
@@ -40,6 +40,14 @@
    }
   ],
   "done": [
+   {
+    "t": "T-4534",
+    "name": "Double-tap a Chat bubble to react, and add fire",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794802307
+   },
    {
     "t": "T-4489",
     "name": "Decide if the Simulator erase approval clears old refusals",
@@ -114,18 +122,9 @@
     "end": "failed",
     "end_at": 1794783663,
     "why": "tests failed"
-   },
-   {
-    "t": "T-4227",
-    "name": "Run every Operator on Opus high",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "failed",
-    "end_at": 1794781570,
-    "why": "tests failed"
    }
   ],
-  "landed": 12,
+  "landed": 13,
   "failed": 8
  },
  "workers": [
@@ -134,7 +133,7 @@
    "task": "[tools] T-4194 wire and switch on feature sessions",
    "model": "opus",
    "started": "2026-11-16T02:43:06.794Z",
-   "seconds": 5154,
+   "seconds": 5335,
    "finished": null,
    "effort": "high"
   },
@@ -143,7 +142,7 @@
    "task": "[tools] T-4560 disk cleaning acts on cleared refusals",
    "model": "opus",
    "started": "2026-11-16T03:28:22.673Z",
-   "seconds": 2438,
+   "seconds": 2619,
    "finished": null,
    "effort": "high"
   }
@@ -186,7 +185,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 384,
+  "runnable_count": 383,
   "blocked_count": 76
  },
  "meter": {
@@ -235,7 +234,7 @@
   "week_pct": 4.62,
   "usage_pct": 26.2,
   "work_pct": 68.8,
-  "read_at": "2026-11-16T04:09:00+00:00",
+  "read_at": "2026-11-16T04:12:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -334,11 +333,7 @@
    {
     "lane": "a3",
     "task": "T-4534",
-    "w": "Maren",
-    "k": "site",
     "t": "Double-tap a Chat bubble to react, and add fire",
-    "m": "opus",
-    "e": "high",
     "at": "2026-11-15T22:32:46-05:00",
     "n": "Evan",
     "d": 1,
@@ -415,7 +410,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-15T23:09:00-05:00",
+  "at": "2026-11-15T23:12:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -580,6 +575,11 @@
   ],
   "done": [
    {
+    "w": "Maren",
+    "t": "In Chat, double-tapping a message now offers a fire reaction in place of the laughing face, as...",
+    "at": "2026-11-15T23:11:00-05:00"
+   },
+   {
     "w": "Ines",
     "t": "The Investors' 11-08 yes to erasing old Simulators does not clearly lift the two safety-check...",
     "at": "2026-11-15T23:06:00-05:00"
@@ -588,22 +588,21 @@
     "w": "Ines",
     "t": "Dropped for 1.0, Builder scope: letting Shortcuts open a project from the Home Screen moves to...",
     "at": "2026-11-15T22:37:00-05:00"
-   },
-   {
-    "w": "Ines",
-    "t": "Of the two parked Shortcuts tasks, the Home Screen one (T-0449: open a project from Shortcuts)...",
-    "at": "2026-11-15T22:37:00-05:00"
    }
   ],
   "count": {
-   "next": 384,
+   "next": 383,
    "wait": 35,
    "blocked": 41,
    "you": 12
   },
   "fin": {
-   "n": 10,
+   "n": 11,
    "rows": [
+    [
+     "T-4534",
+     "Double-tap a Chat bubble to..."
+    ],
     [
      "T-4489",
      "Decide if the Simulator..."
@@ -623,10 +622,6 @@
     [
      "T-4543",
      "Put widget buttons into the..."
-    ],
-    [
-     "T-4546",
-     "Tidy git's copies after the..."
     ]
    ]
   }
@@ -670,32 +665,37 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-16T04:09:01Z",
+  "at": "2026-11-16T04:11:45Z",
   "s": {
    "T-4534": [
     "merging",
-    "Host checks on the Mac mini",
-    1794802021652
+    "Merging onto main",
+    1794802305192
    ],
    "T-4400": [
     "mergeq",
     "1st to merge",
-    1794801241652
+    1794801225192
+   ],
+   "T-3803": [
+    "mergeq",
+    "2nd to merge",
+    1794802185192
    ],
    "T-0261": [
     "mergeq",
-    "2nd to merge",
-    1794802021652
+    "3rd to merge",
+    1794802005192
    ],
    "T-4560": [
     "testing",
     "its own tests, in its copy",
-    1794801301652
+    1794801285192
    ],
    "T-4194": [
     "testing",
     "its own tests, in its copy",
-    1794799261652
+    1794799245192
    ],
    "T-4489": [
     "merged",
@@ -713,6 +713,7 @@
   "nm": {
    "T-4534": "Double-tap a Chat bubble to react, and add fire",
    "T-4400": "Find why pace count and meter disagree",
+   "T-3803": "Post the time guard proposal and finish deadline readers",
    "T-0261": "Apply the chosen store caption wording",
    "T-4560": "Let the disk cleaning act on cleared refusals",
    "T-4194": "Build the feature session for app work",
@@ -721,11 +722,11 @@
   }
  },
  "ln": {
-  "at": "2026-11-16T04:09:01Z",
+  "at": "2026-11-16T04:11:45Z",
   "mq": {
    "n": {
     "checking": 1,
-    "inline": 2,
+    "inline": 3,
     "conflicted": 1,
     "failed": 0,
     "held": 0,
@@ -733,22 +734,22 @@
     "parked": 2
    },
    "m": {
-    "checking": 2,
-    "inline": 8,
-    "conflicted": 1670,
+    "checking": 0,
+    "inline": 5,
+    "conflicted": 1673,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 899
+    "parked": 902
    },
    "cur": [
     [
      [
       "T-4534"
      ],
-     "Mac tests",
+     "going onto main",
      "Mac mini",
-     2
+     0
     ]
    ],
    "ld": [
@@ -758,12 +759,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-16T04:08:13Z",
-    "ld": 5.52,
+    "at": "2026-11-16T04:11:46Z",
+    "ld": 5.99,
     "c": 8,
     "sb": 0,
     "dk": [
-     30.8,
+     28.2,
      228.3
     ],
     "ss": [
@@ -845,10 +846,10 @@
   "main": 2,
   "lanes": 3,
   "total": 5,
-  "at": "11:09 PM",
+  "at": "11:12 PM",
   "why": "",
-  "at_iso": "2026-11-16T04:09:00+00:00",
+  "at_iso": "2026-11-16T04:12:00+00:00",
   "started": "8:30 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 2, started 8:30 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 11:09 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 2, started 8:30 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 11:12 PM ET</p></section>"
  }
 }

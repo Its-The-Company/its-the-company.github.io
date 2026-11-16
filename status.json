@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-16T19:51:45.748661+00:00",
+ "at": "2026-11-16T19:54:46.834588+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -96,7 +96,7 @@
    "task": "[tools] T-3992 recut parked lane-a batch",
    "model": "opus",
    "started": "2026-11-16T19:25:02.030Z",
-   "seconds": 1603,
+   "seconds": 1784,
    "finished": null,
    "effort": "high"
   }
@@ -164,8 +164,93 @@
   "week_pct": 17.69,
   "usage_pct": 44.6,
   "work_pct": 73.1,
-  "read_at": "2026-11-16T19:51:00+00:00",
-  "running": []
+  "read_at": "2026-11-16T19:54:00+00:00",
+  "running": [
+   {
+    "lane": "a",
+    "task": "T-4615",
+    "w": "Idris",
+    "k": "fix",
+    "t": "Widget taps on iPad reuse an open window",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-16T14:52:21-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a",
+    "task": "T-0696",
+    "w": "Idris",
+    "k": "build",
+    "t": "Measure peak memory for fetches in the extension",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-16T14:52:21-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a2",
+    "task": "T-4046",
+    "w": "Pernille",
+    "k": "review",
+    "t": "Check finished work before it ships",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-16T14:52:19-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a2",
+    "task": "T-4047",
+    "w": "Pernille",
+    "k": "review",
+    "t": "Check finished work before it ships",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-16T14:52:19-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a3",
+    "task": "T-4068",
+    "w": "Pernille",
+    "k": "review",
+    "t": "Check finished work before it ships",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-16T14:52:19-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a3",
+    "task": "T-4076",
+    "w": "Pernille",
+    "k": "review",
+    "t": "Check finished work before it ships",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-16T14:52:19-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "b2",
+    "task": "T-4616",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Order tasks by the files waiting work holds",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-16T14:53:57-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
+   }
+  ]
  },
  "api_credits": [
   {
@@ -194,14 +279,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-16T14:46:00-05:00",
+   "at": "2026-11-16T14:52:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 4,
-  "at": "2026-11-16T14:51:00-05:00",
+  "at": "2026-11-16T14:54:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -425,12 +510,12 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-16T19:51:45Z",
+  "at": "2026-11-16T19:54:29Z",
   "s": {
    "T-4295": [
     "testing",
     "its own tests, in its copy",
-    1794857625748
+    1794857609598
    ]
   },
   "nm": {
@@ -442,13 +527,13 @@
   }
  },
  "ln": {
-  "at": "2026-11-16T19:51:45Z",
+  "at": "2026-11-16T19:54:29Z",
   "mq": {
    "n": {
     "checking": 0,
     "inline": 0,
     "conflicted": 2,
-    "failed": 2,
+    "failed": 0,
     "held": 0,
     "retry": 0,
     "parked": 12
@@ -456,11 +541,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 1410,
-    "failed": 70,
+    "conflicted": 1413,
+    "failed": null,
     "held": null,
     "retry": null,
-    "parked": 615
+    "parked": 618
    },
    "cur": [],
    "ld": [
@@ -470,8 +555,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-16T19:50:59Z",
-    "ld": 2.82,
+    "at": "2026-11-16T19:54:06Z",
+    "ld": 1.79,
     "c": 8,
     "sb": 1,
     "dk": [
@@ -508,6 +593,42 @@
    "e": "high",
    "t": "Work session \u2013 5 tasks",
    "at": "2026-11-16T14:48:24-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Evan's Account",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session \u2013 2 tasks",
+   "at": "2026-11-16T14:52:21-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Evan's Account",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session \u2013 2 tasks",
+   "at": "2026-11-16T14:52:19-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Evan's Account",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session \u2013 2 tasks",
+   "at": "2026-11-16T14:52:19-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Jeremy's Account",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session \u2013 1 task",
+   "at": "2026-11-16T14:53:57-05:00"
   }
  ],
  "reply": {
@@ -528,12 +649,12 @@
  ],
  "agents_now": {
   "main": 1,
-  "lanes": 0,
-  "total": 1,
-  "at": "2:51 PM",
+  "lanes": 4,
+  "total": 5,
+  "at": "2:54 PM",
   "why": "",
-  "at_iso": "2026-11-16T19:51:00+00:00",
+  "at_iso": "2026-11-16T19:54:00+00:00",
   "started": "2:21 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 2:21 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 2:51 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 1, started 2:21 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 2:54 PM ET</p></section>"
  }
 }

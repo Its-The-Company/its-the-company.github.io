@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-16T04:21:14.178932+00:00",
+ "at": "2026-11-16T04:24:20.504646+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -112,7 +112,7 @@
     "end_at": 1794784610
    }
   ],
-  "landed": 15,
+  "landed": 13,
   "failed": 8
  },
  "workers": [
@@ -121,7 +121,7 @@
    "task": "[tools] T-4194 wire and switch on feature sessions",
    "model": "opus",
    "started": "2026-11-16T02:43:06.794Z",
-   "seconds": 5887,
+   "seconds": 6073,
    "finished": null,
    "effort": "high"
   },
@@ -130,7 +130,7 @@
    "task": "[tools] T-4560 disk cleaning acts on cleared refusals",
    "model": "opus",
    "started": "2026-11-16T03:28:22.673Z",
-   "seconds": 3171,
+   "seconds": 3357,
    "finished": null,
    "effort": "high"
   }
@@ -173,7 +173,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 381,
+  "runnable_count": 382,
   "blocked_count": 76
  },
  "meter": {
@@ -222,7 +222,7 @@
   "week_pct": 4.62,
   "usage_pct": 26.2,
   "work_pct": 68.8,
-  "read_at": "2026-11-16T04:21:00+00:00",
+  "read_at": "2026-11-16T04:24:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -391,7 +391,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-15T23:21:00-05:00",
+  "at": "2026-11-15T23:24:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -572,7 +572,7 @@
    }
   ],
   "count": {
-   "next": 381,
+   "next": 382,
    "wait": 35,
    "blocked": 41,
    "you": 12
@@ -646,17 +646,22 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-16T04:21:04Z",
+  "at": "2026-11-16T04:24:05Z",
   "s": {
-   "T-0261": [
+   "T-4278": [
     "mergeq",
     "1st to merge",
-    1794802024051
+    1794803045816
+   ],
+   "T-0261": [
+    "mergeq",
+    "2nd to merge",
+    1794802025816
    ],
    "T-4560": [
     "merging",
     "Mac tests at the main gate",
-    1794802504051
+    1794802505816
    ],
    "T-3803": [
     "merged",
@@ -690,6 +695,7 @@
    ]
   },
   "nm": {
+   "T-4278": "Move notification settings into the info panel",
    "T-0261": "Apply the chosen store caption wording",
    "T-4560": "Let the disk cleaning act on cleared refusals",
    "T-3803": "Post the time guard proposal and finish deadline readers",
@@ -700,11 +706,11 @@
   }
  },
  "ln": {
-  "at": "2026-11-16T04:21:04Z",
+  "at": "2026-11-16T04:24:05Z",
   "mq": {
    "n": {
     "checking": 0,
-    "inline": 1,
+    "inline": 2,
     "conflicted": 1,
     "failed": 0,
     "held": 0,
@@ -713,12 +719,12 @@
    },
    "m": {
     "checking": null,
-    "inline": 14,
-    "conflicted": 1682,
+    "inline": 8,
+    "conflicted": 1686,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 911
+    "parked": 914
    },
    "cur": [],
    "ld": [
@@ -728,12 +734,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-16T04:20:41Z",
-    "ld": 7.6,
+    "at": "2026-11-16T04:23:19Z",
+    "ld": 6.95,
     "c": 8,
     "sb": 0,
     "dk": [
-     27.0,
+     28.2,
      228.3
     ],
     "ss": [
@@ -780,7 +786,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 2 tasks",
+   "t": "Work session \u2013 1 task",
    "at": "2026-11-15T22:37:27-05:00"
   },
   {
@@ -815,10 +821,10 @@
   "main": 2,
   "lanes": 3,
   "total": 5,
-  "at": "11:21 PM",
+  "at": "11:24 PM",
   "why": "",
-  "at_iso": "2026-11-16T04:21:00+00:00",
+  "at_iso": "2026-11-16T04:24:00+00:00",
   "started": "8:30 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 2, started 8:30 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 11:21 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 2, started 8:30 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 11:24 PM ET</p></section>"
  }
 }

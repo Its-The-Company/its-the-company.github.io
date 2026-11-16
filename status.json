@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-16T01:23:56.272466+00:00",
+ "at": "2026-11-16T01:24:25.517093+00:00",
  "session": {
   "active": true,
   "kind": "evening",
@@ -112,8 +112,8 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 375,
-  "blocked_count": 76
+  "runnable_count": 376,
+  "blocked_count": 75
  },
  "meter": {
   "five_hour": {
@@ -161,7 +161,7 @@
   "week_pct": 4.62,
   "usage_pct": 26.2,
   "work_pct": 68.8,
-  "read_at": "2026-11-16T01:23:00+00:00",
+  "read_at": "2026-11-16T01:27:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -198,7 +198,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-15T20:23:00-05:00",
+  "at": "2026-11-15T20:27:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -356,10 +356,10 @@
    }
   ],
   "count": {
-   "next": 375,
+   "next": 376,
    "wait": 35,
-   "blocked": 41,
-   "you": 12
+   "blocked": 40,
+   "you": 11
   },
   "fin": {
    "n": 0,
@@ -405,11 +405,11 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-16T01:23:44Z",
+  "at": "2026-11-16T01:24:07Z",
   "s": {}
  },
  "ln": {
-  "at": "2026-11-16T01:23:44Z",
+  "at": "2026-11-16T01:24:07Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -423,8 +423,8 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 1505,
-    "failed": 11,
+    "conflicted": 1506,
+    "failed": 12,
     "held": null,
     "retry": null,
     "parked": 385
@@ -437,12 +437,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-16T01:23:45Z",
+    "at": "2026-11-16T01:23:57Z",
     "ld": 0.79,
     "c": 8,
     "sb": 0,
     "dk": [
-     10.2,
+     10.4,
      228.3
     ],
     "ss": [
@@ -494,10 +494,10 @@
   "main": 0,
   "lanes": 0,
   "total": 0,
-  "at": "8:23 PM",
-  "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
-  "at_iso": "2026-11-16T01:23:00+00:00",
-  "started": "8:17 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0, started 8:17 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 8:23 PM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
+  "at": "8:27 PM",
+  "why": "Between sessions: no session is running. Last check 8:17 PM ET.",
+  "at_iso": "2026-11-16T01:27:00+00:00",
+  "started": "",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 8:27 PM ET</p><p class=\"an-why\">Between sessions: no session is running. Last check 8:17 PM ET.</p></section>"
  }
 }

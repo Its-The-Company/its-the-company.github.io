@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-16T20:57:39.390161+00:00",
+ "at": "2026-11-16T21:00:55.598094+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -96,7 +96,7 @@
    "task": "[tools] T-4583 land feature-step ticking",
    "model": "opus",
    "started": "2026-11-16T20:38:05.386Z",
-   "seconds": 1174,
+   "seconds": 1370,
    "finished": null,
    "effort": "high"
   },
@@ -105,7 +105,7 @@
    "task": "[tools] T-4617 quick checks before Xcode slot",
    "model": "opus",
    "started": "2026-11-16T20:38:15.991Z",
-   "seconds": 1163,
+   "seconds": 1359,
    "finished": null,
    "effort": "high"
   }
@@ -164,7 +164,7 @@
   "week_pct": 18.58,
   "usage_pct": 45.8,
   "work_pct": 73.2,
-  "read_at": "2026-11-16T20:58:00+00:00",
+  "read_at": "2026-11-16T21:01:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -200,6 +200,7 @@
     "e": "medium",
     "at": "2026-11-16T15:56:20-05:00",
     "n": "Evan",
+    "d": 1,
     "src": "plan-a"
    },
    {
@@ -212,6 +213,7 @@
     "e": "high",
     "at": "2026-11-16T14:52:19-05:00",
     "n": "Evan",
+    "d": 1,
     "src": "plan-a"
    },
    {
@@ -284,7 +286,7 @@
  "lock_in": {
   "on": false,
   "pool": 4,
-  "at": "2026-11-16T15:58:00-05:00",
+  "at": "2026-11-16T16:01:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -531,18 +533,8 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-16T20:57:39Z",
+  "at": "2026-11-16T21:00:55Z",
   "s": {
-   "T-4068": [
-    "testing",
-    "Mac Mini \u00b7 test",
-    null
-   ],
-   "T-4076": [
-    "testing",
-    "Mac Mini \u00b7 test",
-    null
-   ],
    "T-4022": [
     "testing",
     "MacBook \u00b7 test",
@@ -551,41 +543,45 @@
    "T-4617": [
     "testing",
     "its own tests, in its copy",
-    1794862419390
+    1794862435598
    ],
    "T-4583": [
     "testing",
     "its own tests, in its copy",
-    1794861519390
+    1794861535598
    ],
    "T-4048": [
     "testq",
     "1st for a Simulator",
-    1794856839390
+    1794856915598
+   ],
+   "T-4076": [
+    "merged",
+    "on main 3:48 PM ET",
+    1794862085000,
+    ""
    ]
   },
   "nm": {
-   "T-4068": "Check finished work before it ships",
-   "T-4076": "Check finished work before it ships",
    "T-4022": "Check finished work before it ships",
    "T-4617": "Run quick checks before a land takes the Xcode slot",
    "T-4583": "Turn on Feature mode and tick steps at the merge",
-   "T-4048": "Check finished work before it ships"
+   "T-4048": "Check finished work before it ships",
+   "T-4076": "Check finished work before it ships"
   },
   "wk": {
-   "T-4068": "Pernille",
-   "T-4076": "Pernille",
    "T-4022": "Pernille",
    "T-4617": "Odalys",
    "T-4583": "Idris",
    "T-4048": "Pernille",
+   "T-4076": "Pernille",
    "T-4060": "Pernille",
    "T-4058": "Idris",
    "T-4314": "Odalys"
   }
  },
  "ln": {
-  "at": "2026-11-16T20:57:39Z",
+  "at": "2026-11-16T21:00:55Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -599,11 +595,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 1476,
+    "conflicted": 1479,
     "failed": null,
     "held": null,
-    "retry": 5,
-    "parked": 693
+    "retry": 8,
+    "parked": 696
    },
    "cur": [],
    "ld": [
@@ -613,12 +609,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-16T20:57:47Z",
-    "ld": 16.07,
+    "at": "2026-11-16T21:00:29Z",
+    "ld": 17.21,
     "c": 8,
     "sb": 1,
     "dk": [
-     19.2,
+     21.3,
      228.3
     ],
     "ss": [
@@ -656,17 +652,8 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 2 tasks",
-   "at": "2026-11-16T15:56:19-05:00"
-  },
-  {
-   "w": "Operator",
-   "a": "Evan's Account",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
    "t": "Work session \u2013 1 task",
-   "at": "2026-11-16T14:52:19-05:00"
+   "at": "2026-11-16T15:56:19-05:00"
   },
   {
    "w": "Operator",
@@ -674,7 +661,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 2 tasks",
+   "t": "Work session \u2013 1 task",
    "at": "2026-11-16T15:22:29-05:00"
   }
  ],
@@ -698,10 +685,10 @@
   "main": 2,
   "lanes": 4,
   "total": 6,
-  "at": "3:58 PM",
+  "at": "4:01 PM",
   "why": "",
-  "at_iso": "2026-11-16T20:58:00+00:00",
+  "at_iso": "2026-11-16T21:01:00+00:00",
   "started": "3:35 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 2, started 3:35 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 3:58 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 2, started 3:35 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 4:01 PM ET</p></section>"
  }
 }

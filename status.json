@@ -1,24 +1,32 @@
 {
  "schema": 1,
- "at": "2026-11-16T18:15:47.635258+00:00",
+ "at": "2026-11-16T18:18:48.607175+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-16T10:53:39-05:00",
   "flow": [
    {
-    "t": "T-2691",
-    "name": "Check every archive for the phone test marker, Organizer too",
+    "t": "T-0678",
+    "name": "Run the refresh button inside the widget extension",
     "acct": "Personal b",
     "steps": [
      {
       "s": "testq",
-      "at": 1794851710
+      "at": 1794852977
      }
     ]
    }
   ],
   "done": [
+   {
+    "t": "T-2691",
+    "name": "Check every archive for the phone test marker, Organizer too",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794852967
+   },
    {
     "t": "T-4561",
     "name": "Act on the Investors' answer on the Simulator refusals",
@@ -90,17 +98,9 @@
     "steps": [],
     "end": "landed",
     "end_at": 1794848445
-   },
-   {
-    "t": "T-4573",
-    "name": "Answer when the chosen account cannot take a message",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794848400
    }
   ],
-  "landed": 50,
+  "landed": 51,
   "failed": 11
  },
  "workers": [
@@ -109,7 +109,7 @@
    "task": "[design] T-4595 split Home waiting count",
    "model": "opus",
    "started": "2026-11-16T17:52:58.025Z",
-   "seconds": 1369,
+   "seconds": 1550,
    "finished": null,
    "effort": "high"
   }
@@ -141,20 +141,19 @@
  },
  "meter": {
   "five_hour": {
-   "pct": null,
-   "resets_at": null,
+   "pct": 1.0,
+   "resets_at": "2026-11-16T18:10:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-16T13:09:43.884048-05:00",
+   "read_at": "2026-11-16T13:16:13.239020-05:00",
    "source": "live",
-   "last_reset": "2026-11-16T13:10:00-05:00",
-   "left": null,
+   "left": 99.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 21.0,
    "resets_at": "2026-11-22T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-16T13:09:43.884048-05:00",
+   "read_at": "2026-11-16T13:16:13.239020-05:00",
    "source": "live",
    "left": 79.0,
    "left_words": "of your weekly allowance left"
@@ -166,7 +165,7 @@
    "read_at": "2026-11-16T10:53:26.226781-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-16T13:09:43.884048-05:00"
+  "read_at": "2026-11-16T13:16:13.239020-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -186,7 +185,7 @@
   "week_pct": 15.51,
   "usage_pct": 42.5,
   "work_pct": 69.1,
-  "read_at": "2026-11-16T18:15:00+00:00",
+  "read_at": "2026-11-16T18:18:00+00:00",
   "running": [
    {
     "lane": "b2",
@@ -245,7 +244,7 @@
   }
  ],
  "disk": {
-  "free_gb": 27,
+  "free_gb": 30,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -254,14 +253,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-16T13:12:00-05:00",
+   "at": "2026-11-16T13:16:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 4,
-  "at": "2026-11-16T13:15:00-05:00",
+  "at": "2026-11-16T13:18:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -501,22 +500,22 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-16T18:15:41Z",
+  "at": "2026-11-16T18:18:39Z",
   "s": {
-   "T-2691": [
+   "T-4561": [
     "merging",
     "Host checks on the Mac mini",
-    1794851741493
-   ],
-   "T-4561": [
-    "mergeq",
-    "1st to merge",
-    1794852941493
+    1794852999789
    ],
    "T-0678": [
-    "mergeq",
-    "1st to merge",
-    1794852941493
+    "merging",
+    "Host checks on the Mac mini",
+    1794852999789
+   ],
+   "T-2691": [
+    "testing",
+    "Mac Mini \u00b7 test",
+    null
    ],
    "T-3765": [
     "testing",
@@ -536,22 +535,22 @@
    "T-4595": [
     "testing",
     "its own tests, in its copy",
-    1794852701493
+    1794852759789
    ]
   },
   "nm": {
-   "T-2691": "Check every archive for the phone test marker, Organizer too",
    "T-4561": "Act on the Investors' answer on the Simulator refusals",
    "T-0678": "Run the refresh button inside the widget extension",
+   "T-2691": "Check every archive for the phone test marker, Organizer too",
    "T-3765": "Check a real widget tap on the TestFlight build",
    "T-4040": "Check finished work before it ships",
    "T-4043": "Check finished work before it ships",
    "T-4595": "Split Home's waiting-to-merge count into its parts"
   },
   "wk": {
-   "T-2691": "Idris",
    "T-4561": "Odalys",
    "T-0678": "Idris",
+   "T-2691": "Idris",
    "T-3765": "Idris",
    "T-4040": "Pernille",
    "T-4043": "Pernille",
@@ -563,11 +562,11 @@
   }
  },
  "ln": {
-  "at": "2026-11-16T18:15:41Z",
+  "at": "2026-11-16T18:18:39Z",
   "mq": {
    "n": {
-    "checking": 1,
-    "inline": 2,
+    "checking": 2,
+    "inline": 0,
     "conflicted": 2,
     "failed": 0,
     "held": 0,
@@ -575,37 +574,45 @@
     "parked": 11
    },
    "m": {
-    "checking": 20,
-    "inline": 0,
-    "conflicted": 1314,
+    "checking": 2,
+    "inline": null,
+    "conflicted": 1317,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 587
+    "parked": 590
    },
    "cur": [
     [
      [
-      "T-2691"
+      "T-4561"
      ],
      "Mac tests",
      "Mac mini",
-     20
+     2
+    ],
+    [
+     [
+      "T-0678"
+     ],
+     "Mac tests",
+     "Mac mini",
+     2
     ]
    ],
    "ld": [
-    55,
-    "2026-11-16T17:28:24Z"
+    56,
+    "2026-11-16T18:16:07Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-16T18:15:19Z",
-    "ld": 23.21,
+    "at": "2026-11-16T18:17:53Z",
+    "ld": 20.71,
     "c": 8,
     "sb": 1,
     "dk": [
-     29.8,
+     29.9,
      228.3
     ],
     "ss": [
@@ -615,6 +622,17 @@
     "sn": [
      "t3765-iphone"
     ]
+   },
+   "macbook": {
+    "at": "2026-11-16T18:03:31Z",
+    "ld": 1.49,
+    "c": 12,
+    "sb": 0,
+    "dk": [
+     332.9,
+     926.4
+    ],
+    "sn": []
    }
   }
  },
@@ -667,10 +685,10 @@
   "main": 1,
   "lanes": 2,
   "total": 3,
-  "at": "1:15 PM",
+  "at": "1:18 PM",
   "why": "",
-  "at_iso": "2026-11-16T18:15:00+00:00",
+  "at_iso": "2026-11-16T18:18:00+00:00",
   "started": "10:53 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 1, started 10:53 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 1:15 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 1, started 10:53 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 1:18 PM ET</p></section>"
  }
 }

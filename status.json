@@ -1,19 +1,19 @@
 {
  "schema": 1,
- "at": "2026-11-16T04:33:32.162240+00:00",
+ "at": "2026-11-16T04:36:38.460523+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-15T20:30:09-05:00",
   "flow": [
    {
-    "t": "T-4109",
-    "name": "Add a newest-first view to the Reports page",
+    "t": "T-4278",
+    "name": "Move notification settings into the info panel",
     "acct": "Personal a",
     "steps": [
      {
       "s": "testq",
-      "at": 1794803447
+      "at": 1794803711
      }
     ]
    },
@@ -29,6 +29,14 @@
    }
   ],
   "done": [
+   {
+    "t": "T-4109",
+    "name": "Add a newest-first view to the Reports page",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794803679
+   },
    {
     "t": "T-0261",
     "name": "Apply the chosen store caption wording",
@@ -102,17 +110,9 @@
     "end": "failed",
     "end_at": 1794787276,
     "why": "tests failed"
-   },
-   {
-    "t": "T-4512",
-    "name": "Propose the personal accounts' 5-hour stop at 97",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794785127
    }
   ],
-  "landed": 14,
+  "landed": 15,
   "failed": 8
  },
  "workers": [
@@ -121,7 +121,7 @@
    "task": "[tools] T-4194 wire and switch on feature sessions",
    "model": "opus",
    "started": "2026-11-16T02:43:06.794Z",
-   "seconds": 6625,
+   "seconds": 6811,
    "finished": null,
    "effort": "high"
   }
@@ -134,7 +134,7 @@
    "model": "opus",
    "started": "2026-11-16T03:28:22.673Z",
    "seconds": null,
-   "finished": "2026-11-16T04:28:01.684000+00:00"
+   "finished": "2026-11-16T04:35:25.793000+00:00"
   },
   {
    "name": "odalys",
@@ -169,21 +169,21 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 7.0,
+   "pct": 8.0,
    "resets_at": "2026-11-16T03:10:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-15T23:20:10.980376-05:00",
+   "read_at": "2026-11-15T23:33:36.453564-05:00",
    "source": "live",
-   "left": 93.0,
+   "left": 92.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 16.0,
+   "pct": 17.0,
    "resets_at": "2026-11-22T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-15T23:20:10.980376-05:00",
+   "read_at": "2026-11-15T23:33:36.453564-05:00",
    "source": "live",
-   "left": 84.0,
+   "left": 83.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
@@ -193,7 +193,7 @@
    "read_at": "2026-11-15T20:29:58.154359-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-15T23:20:10.980376-05:00"
+  "read_at": "2026-11-15T23:33:36.453564-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -213,7 +213,7 @@
   "week_pct": 4.62,
   "usage_pct": 26.2,
   "work_pct": 68.8,
-  "read_at": "2026-11-16T04:33:00+00:00",
+  "read_at": "2026-11-16T04:36:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -331,7 +331,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-15T23:33:00-05:00",
+  "at": "2026-11-15T23:36:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -342,7 +342,7 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Double Spread: 84% of the week left, paced to last until Wed 14:00, the week's halfway point; the machine allows 19 (held, just changed: 2 of 5 lands failed in 3 hours (2 red))",
+  "why": "Double Spread: 83% of the week left, paced to last until Wed 14:00, the week's halfway point; the machine allows 19 (held, just changed: 2 of 5 lands failed in 3 hours (2 red))",
   "n": 3,
   "at": "2026-11-15T20:29:58.478388-05:00"
  },
@@ -575,22 +575,17 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-16T04:33:19Z",
+  "at": "2026-11-16T04:36:38Z",
   "s": {
-   "T-4109": [
-    "merging",
-    "Host checks on the Mac mini \u00b7 3 groups of tests done",
-    1794803479311
-   ],
    "T-4278": [
-    "mergeq",
-    "1st to merge",
-    1794803059311
+    "merging",
+    "Host checks on the Mac mini \u00b7 1 group of tests done",
+    1794803738460
    ],
    "T-4110": [
     "mergeq",
-    "3rd to merge",
-    1794803599311
+    "1st to merge",
+    1794803558460
    ],
    "T-0261": [
     "merged",
@@ -630,7 +625,6 @@
    ]
   },
   "nm": {
-   "T-4109": "Add a newest-first view to the Reports page",
    "T-4278": "Move notification settings into the info panel",
    "T-4110": "Chart the task queue size on Home",
    "T-0261": "Apply the chosen store caption wording",
@@ -642,11 +636,11 @@
   }
  },
  "ln": {
-  "at": "2026-11-16T04:33:19Z",
+  "at": "2026-11-16T04:36:38Z",
   "mq": {
    "n": {
     "checking": 1,
-    "inline": 2,
+    "inline": 1,
     "conflicted": 1,
     "failed": 0,
     "held": 0,
@@ -654,37 +648,37 @@
     "parked": 2
    },
    "m": {
-    "checking": 2,
+    "checking": 1,
     "inline": 4,
-    "conflicted": 1695,
+    "conflicted": 1698,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 924
+    "parked": 927
    },
    "cur": [
     [
      [
-      "T-4109"
+      "T-4278"
      ],
      "Mac tests",
      "Mac mini",
-     2
+     1
     ]
    ],
    "ld": [
-    38,
-    "2026-11-16T04:30:43Z"
+    40,
+    "2026-11-16T04:34:54Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-16T04:32:59Z",
-    "ld": 4.69,
+    "at": "2026-11-16T04:36:14Z",
+    "ld": 4.3,
     "c": 8,
     "sb": 0,
     "dk": [
-     26.1,
+     28.1,
      228.3
     ],
     "ss": [
@@ -757,10 +751,10 @@
   "main": 1,
   "lanes": 2,
   "total": 3,
-  "at": "11:33 PM",
+  "at": "11:36 PM",
   "why": "",
-  "at_iso": "2026-11-16T04:33:00+00:00",
+  "at_iso": "2026-11-16T04:36:00+00:00",
   "started": "8:30 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 1, started 8:30 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 11:33 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 1, started 8:30 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 11:36 PM ET</p></section>"
  }
 }

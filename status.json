@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-16T10:18:02.789798+00:00",
+ "at": "2026-11-16T10:21:04.830263+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -123,7 +123,7 @@
    "task": "[release] T-2943 upload gate build 7",
    "model": "opus",
    "started": "2026-11-16T09:44:58.790Z",
-   "seconds": 1983,
+   "seconds": 2166,
    "finished": null,
    "effort": "high"
   },
@@ -132,7 +132,7 @@
    "task": "[tools] T-4194 land the wiring split",
    "model": "opus",
    "started": "2026-11-16T09:47:47.943Z",
-   "seconds": 1814,
+   "seconds": 1996,
    "finished": null,
    "effort": "high"
   }
@@ -208,7 +208,7 @@
   "week_pct": 9.1,
   "usage_pct": 32.4,
   "work_pct": 76.5,
-  "read_at": "2026-11-16T10:18:00+00:00",
+  "read_at": "2026-11-16T10:21:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -245,7 +245,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-16T05:18:00-05:00",
+  "at": "2026-11-16T05:21:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -479,52 +479,53 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-16T10:18:02Z",
+  "at": "2026-11-16T10:20:46Z",
   "s": {
    "T-3552": [
     "mergetest",
     "Xcode checks on the MacBook, 1st to merge",
-    1794823082789
+    1794823066603
    ],
    "T-0687": [
     "mergetest",
     "Xcode checks on the MacBook, 2nd to merge",
-    1794823382789
+    1794823366603
    ],
    "T-0972": [
     "mergetest",
     "Xcode checks on the MacBook, 3rd to merge",
-    1794823562789
-   ],
-   "T-2943": [
-    "testing",
-    "Mac Mini \u00b7 test",
-    null
+    1794823546603
    ],
    "T-4194": [
     "testing",
     "its own tests, in its copy",
-    1794824282789
+    1794824266603
+   ],
+   "T-2943": [
+    "merged",
+    "on main 5:05 AM ET",
+    1794823545000,
+    ""
    ]
   },
   "nm": {
    "T-3552": "Test gallery and widget runs together with a stalled sensor",
    "T-0687": "Run network fetches inside the extension on the Simulator",
    "T-0972": "Decide how a script's refresh path is chosen on send",
-   "T-2943": "Send up the gate build and confirm it stays internal",
-   "T-4194": "Build the feature session for app work"
+   "T-4194": "Build the feature session for app work",
+   "T-2943": "Send up the gate build and confirm it stays internal"
   },
   "wk": {
    "T-3552": "Idris",
    "T-0687": "Idris",
    "T-0972": "Idris",
-   "T-2943": "Idris",
    "T-4194": "Idris",
+   "T-2943": "Idris",
    "T-4293": "Maren"
   }
  },
  "ln": {
-  "at": "2026-11-16T10:18:02Z",
+  "at": "2026-11-16T10:20:46Z",
   "mq": {
    "n": {
     "checking": 3,
@@ -536,13 +537,13 @@
     "parked": 8
    },
    "m": {
-    "checking": 15,
+    "checking": 18,
     "inline": null,
-    "conflicted": 2039,
+    "conflicted": 2042,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 139
+    "parked": 142
    },
    "cur": [
     [
@@ -551,7 +552,7 @@
      ],
      "iPhone app tests",
      "MacBook",
-     20
+     23
     ],
     [
      [
@@ -559,7 +560,7 @@
      ],
      "iPhone app tests",
      "MacBook",
-     15
+     18
     ],
     [
      [
@@ -567,7 +568,7 @@
      ],
      "iPhone app tests",
      "MacBook",
-     12
+     15
     ]
    ],
    "ld": [
@@ -577,12 +578,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-16T10:17:18Z",
-    "ld": 17.59,
+    "at": "2026-11-16T10:20:47Z",
+    "ld": 10.7,
     "c": 8,
     "sb": 0,
     "dk": [
-     17.9,
+     17.0,
      228.3
     ],
     "ss": [
@@ -635,10 +636,10 @@
   "main": 2,
   "lanes": 0,
   "total": 2,
-  "at": "5:18 AM",
+  "at": "5:21 AM",
   "why": "",
-  "at_iso": "2026-11-16T10:18:00+00:00",
+  "at_iso": "2026-11-16T10:21:00+00:00",
   "started": "4:43 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 4:43 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 5:18 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 4:43 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 5:21 AM ET</p></section>"
  }
 }

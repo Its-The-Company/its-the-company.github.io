@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-16T20:24:58.252765+00:00",
+ "at": "2026-11-16T20:35:14.641042+00:00",
  "session": {
   "active": false,
   "kind": "",
@@ -85,7 +85,7 @@
     "end_at": 1794849650
    }
   ],
-  "landed": 51,
+  "landed": 50,
   "failed": 12
  },
  "workers": [],
@@ -116,20 +116,20 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 7.0,
-   "resets_at": "2026-11-16T18:10:00-05:00",
+   "pct": 8.0,
+   "resets_at": "2026-11-16T23:10:00.440869+00:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-16T15:10:48.482460-05:00",
-   "source": "live",
-   "left": 93.0,
+   "read_at": "2026-11-16T15:34:56.358895-05:00",
+   "source": "usage",
+   "left": 92.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 22.0,
-   "resets_at": "2026-11-22T02:00:00-05:00",
+   "resets_at": "2026-11-22T07:00:00.440890+00:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-16T15:10:48.482460-05:00",
-   "source": "live",
+   "read_at": "2026-11-16T15:34:56.358895-05:00",
+   "source": "usage",
    "left": 78.0,
    "left_words": "of your weekly allowance left"
   },
@@ -137,10 +137,10 @@
    "pct": 0.0,
    "resets_at": "2026-11-22T07:00:00+00:00",
    "used_words": "of the Fable weekly allowance used",
-   "read_at": "2026-11-16T14:21:03.843890-05:00",
+   "read_at": "2026-11-16T15:34:56.358895-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-16T15:10:48.482460-05:00"
+  "read_at": "2026-11-16T15:34:56.358895-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -155,12 +155,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-16T14:36:04-05:00",
+ "next_tick": "2026-11-16T15:49:56-05:00",
  "personal": {
-  "week_pct": 17.69,
-  "usage_pct": 43.7,
-  "work_pct": 72.1,
-  "read_at": "2026-11-16T20:26:00+00:00",
+  "week_pct": 18.58,
+  "usage_pct": 45.8,
+  "work_pct": 73.2,
+  "read_at": "2026-11-16T20:35:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -278,7 +278,7 @@
   }
  ],
  "disk": {
-  "free_gb": 26,
+  "free_gb": 22,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -287,14 +287,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-16T15:17:00-05:00",
+   "at": "2026-11-16T15:31:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 4,
-  "at": "2026-11-16T15:26:00-05:00",
+  "at": "2026-11-16T15:35:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -492,9 +492,14 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-16T20:24:58Z",
+  "at": "2026-11-16T20:35:14Z",
   "s": {
-   "T-0696": [
+   "T-4068": [
+    "testing",
+    "Mac Mini \u00b7 test",
+    null
+   ],
+   "T-4076": [
     "testing",
     "Mac Mini \u00b7 test",
     null
@@ -506,72 +511,53 @@
    ],
    "T-4031": [
     "testq",
-    "1st for a Simulator",
-    1794860398252
-   ],
-   "T-4032": [
-    "testq",
-    "1st for a Simulator",
-    1794860398252
+    "2nd for a Simulator",
+    1794861134641
    ],
    "T-4058": [
     "testq",
-    "1st for a Simulator",
-    1794860398252
+    "2nd for a Simulator",
+    1794861134641
    ],
    "T-4060": [
     "testq",
-    "1st for a Simulator",
-    1794860398252
-   ],
-   "T-4068": [
-    "testq",
     "2nd for a Simulator",
-    1794860398252
+    1794861134641
    ],
-   "T-4076": [
+   "T-0696": [
     "testq",
-    "2nd for a Simulator",
-    1794860398252
-   ],
-   "T-4020": [
-    "testq",
-    "6th for a Simulator",
-    1794856858252
+    "3rd for a Simulator",
+    1794861254641
    ],
    "T-4048": [
     "testq",
-    "7th for a Simulator",
-    1794856858252
+    "5th for a Simulator",
+    1794856874641
    ]
   },
   "nm": {
-   "T-0696": "Measure peak memory for fetches in the extension",
-   "T-4022": "Check finished work before it ships",
-   "T-4031": "Check finished work before it ships",
-   "T-4032": "Check finished work before it ships",
-   "T-4058": "Check finished work before it ships",
-   "T-4060": "Check finished work before it ships",
    "T-4068": "Check finished work before it ships",
    "T-4076": "Check finished work before it ships",
-   "T-4020": "Check finished work before it ships",
+   "T-4022": "Check finished work before it ships",
+   "T-4031": "Check finished work before it ships",
+   "T-4058": "Check finished work before it ships",
+   "T-4060": "Check finished work before it ships",
+   "T-0696": "Measure peak memory for fetches in the extension",
    "T-4048": "Check finished work before it ships"
   },
   "wk": {
-   "T-0696": "Idris",
-   "T-4022": "Pernille",
-   "T-4031": "Pernille",
-   "T-4032": "Pernille",
-   "T-4058": "Idris",
-   "T-4060": "Pernille",
    "T-4068": "Pernille",
    "T-4076": "Pernille",
-   "T-4020": "Pernille",
+   "T-4022": "Pernille",
+   "T-4031": "Pernille",
+   "T-4058": "Idris",
+   "T-4060": "Pernille",
+   "T-0696": "Idris",
    "T-4048": "Pernille"
   }
  },
  "ln": {
-  "at": "2026-11-16T20:24:58Z",
+  "at": "2026-11-16T20:35:14Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -585,11 +571,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 1443,
+    "conflicted": 1454,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 648
+    "parked": 659
    },
    "cur": [],
    "ld": [
@@ -599,12 +585,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-16T20:24:59Z",
-    "ld": 60.97,
+    "at": "2026-11-16T20:34:46Z",
+    "ld": 34.93,
     "c": 8,
-    "sb": 3,
+    "sb": 2,
     "dk": [
-     24.3,
+     20.5,
      228.3
     ],
     "ss": [
@@ -612,9 +598,8 @@
      953.7
     ],
     "sn": [
-     "iPhone 18 Pro",
      "pywidget-t0696",
-     "t3765-ipad"
+     "iPhone 18 Pro"
     ]
    },
    "macbook": {
@@ -635,6 +620,8 @@
    "w": "Operator",
    "a": "Evan's Account",
    "sr": 1,
+   "m": "opus",
+   "e": "high",
    "t": "Work session \u2013 2 tasks",
    "at": "2026-11-16T14:52:21-05:00"
   },
@@ -642,13 +629,17 @@
    "w": "Operator",
    "a": "Evan's Account",
    "sr": 1,
+   "m": "opus",
+   "e": "high",
    "t": "Work session \u2013 2 tasks",
-   "at": "2026-11-16T15:14:45-05:00"
+   "at": "2026-11-16T15:14:44-05:00"
   },
   {
    "w": "Operator",
    "a": "Evan's Account",
    "sr": 1,
+   "m": "opus",
+   "e": "high",
    "t": "Work session \u2013 2 tasks",
    "at": "2026-11-16T14:52:19-05:00"
   },
@@ -656,6 +647,8 @@
    "w": "Operator",
    "a": "Jeremy's Account",
    "sr": 1,
+   "m": "opus",
+   "e": "high",
    "t": "Work session \u2013 2 tasks",
    "at": "2026-11-16T15:22:29-05:00"
   }
@@ -679,10 +672,10 @@
   "main": 0,
   "lanes": 4,
   "total": 4,
-  "at": "3:26 PM",
+  "at": "3:35 PM",
   "why": "",
-  "at_iso": "2026-11-16T20:26:00+00:00",
+  "at_iso": "2026-11-16T20:35:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 3:26 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 3:35 PM ET</p></section>"
  }
 }

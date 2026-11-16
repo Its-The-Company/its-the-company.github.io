@@ -1,11 +1,23 @@
 {
  "schema": 1,
- "at": "2026-11-16T22:16:49.817703+00:00",
+ "at": "2026-11-16T22:20:33.816933+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-16T15:35:16-05:00",
-  "flow": [],
+  "flow": [
+   {
+    "t": "T-4624",
+    "name": "Drop Parents and Children from Home's task cards",
+    "acct": "Personal b",
+    "steps": [
+     {
+      "s": "testq",
+      "at": 1794867583
+     }
+    ]
+   }
+  ],
   "done": [
    {
     "t": "T-3349",
@@ -98,7 +110,7 @@
    "task": "[tools] T-4583 land feature-step ticking",
    "model": "opus",
    "started": "2026-11-16T20:38:05.386Z",
-   "seconds": 5924,
+   "seconds": 6148,
    "finished": null,
    "effort": "high"
   },
@@ -107,7 +119,7 @@
    "task": "[tools] T-4103 switch on queue-check sweep",
    "model": "opus",
    "started": "2026-11-16T21:15:08.438Z",
-   "seconds": 3701,
+   "seconds": 3925,
    "finished": null,
    "effort": "high"
   },
@@ -116,7 +128,7 @@
    "task": "[tools] T-4196 grouped iPhone runs, rest",
    "model": "opus",
    "started": "2026-11-16T21:27:29.300Z",
-   "seconds": 2960,
+   "seconds": 3184,
    "finished": null,
    "effort": "high"
   },
@@ -125,7 +137,7 @@
    "task": "[design] T-4620 Features in Home task lists",
    "model": "opus",
    "started": "2026-11-16T21:36:15.573Z",
-   "seconds": 2434,
+   "seconds": 2658,
    "finished": null,
    "effort": "high"
   },
@@ -134,7 +146,7 @@
    "task": "[tools] T-3959 merge_queue batch with T-3960",
    "model": "opus",
    "started": "2026-11-16T21:48:36.481Z",
-   "seconds": 1693,
+   "seconds": 1917,
    "finished": null,
    "effort": "high"
   }
@@ -166,21 +178,21 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 16.0,
+   "pct": 18.0,
    "resets_at": "2026-11-16T18:10:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-16T17:02:36.080850-05:00",
+   "read_at": "2026-11-16T17:18:01.467371-05:00",
    "source": "live",
-   "left": 84.0,
+   "left": 82.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 23.0,
+   "pct": 24.0,
    "resets_at": "2026-11-22T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-16T17:02:36.080850-05:00",
+   "read_at": "2026-11-16T17:18:01.467371-05:00",
    "source": "live",
-   "left": 77.0,
+   "left": 76.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
@@ -190,7 +202,7 @@
    "read_at": "2026-11-16T15:34:56.358895-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-16T17:02:36.080850-05:00"
+  "read_at": "2026-11-16T17:18:01.467371-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -210,7 +222,7 @@
   "week_pct": 18.58,
   "usage_pct": 45.8,
   "work_pct": 73.2,
-  "read_at": "2026-11-16T22:17:00+00:00",
+  "read_at": "2026-11-16T22:20:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -345,6 +357,7 @@
     "e": "medium",
     "at": "2026-11-16T16:38:28-05:00",
     "n": "Jeremy",
+    "d": 1,
     "src": "plan-b"
    }
   ]
@@ -383,7 +396,7 @@
  "lock_in": {
   "on": false,
   "pool": 4,
-  "at": "2026-11-16T17:17:00-05:00",
+  "at": "2026-11-16T17:20:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -394,7 +407,7 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Double Spread: 77% of the week left, paced to last until Wed 14:00, the week's halfway point; the machine allows 2 (at its floor: load 34.0 a core is over 10)",
+  "why": "Double Spread: 76% of the week left, paced to last until Wed 14:00, the week's halfway point; the machine allows 2 (at its floor: load 34.0 a core is over 10)",
   "n": 2,
   "at": "2026-11-16T15:34:56.773320-05:00"
  },
@@ -669,8 +682,18 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-16T22:16:49Z",
+  "at": "2026-11-16T22:20:33Z",
   "s": {
+   "T-4624": [
+    "merging",
+    "Host checks on the Mac mini \u00b7 1 group of tests done",
+    1794867633816
+   ],
+   "T-4614": [
+    "mergeq",
+    "1st to merge",
+    1794867633816
+   ],
    "T-4077": [
     "testing",
     "Mac Mini \u00b7 test",
@@ -694,22 +717,22 @@
    "T-4196": [
     "testing",
     "its own tests, in its copy",
-    1794866029817
+    1794866013816
    ],
    "T-4620": [
     "testing",
     "its own tests, in its copy",
-    1794867289817
+    1794867333816
    ],
    "T-4103": [
     "testing",
     "its own tests, in its copy",
-    1794866209817
+    1794866253816
    ],
    "T-3959": [
     "testing",
     "its own tests, in its copy",
-    1794866929817
+    1794866913816
    ],
    "T-3349": [
     "merged",
@@ -731,6 +754,8 @@
    ]
   },
   "nm": {
+   "T-4624": "Drop Parents and Children from Home's task cards",
+   "T-4614": "Make main's own tests pass again",
    "T-4077": "Check finished work before it ships",
    "T-4082": "Check finished work before it ships",
    "T-4616": "Order tasks by the files waiting work holds",
@@ -744,6 +769,8 @@
    "T-4486": "Refuse Fable in sessions with no Fable task"
   },
   "wk": {
+   "T-4624": "Maren",
+   "T-4614": "Pernille",
    "T-4077": "Pernille",
    "T-4082": "Pernille",
    "T-4616": "Odalys",
@@ -765,11 +792,11 @@
   }
  },
  "ln": {
-  "at": "2026-11-16T22:16:49Z",
+  "at": "2026-11-16T22:20:33Z",
   "mq": {
    "n": {
-    "checking": 0,
-    "inline": 0,
+    "checking": 1,
+    "inline": 1,
     "conflicted": 2,
     "failed": 1,
     "held": 0,
@@ -777,15 +804,24 @@
     "parked": 12
    },
    "m": {
-    "checking": null,
-    "inline": null,
-    "conflicted": 1555,
-    "failed": 7,
+    "checking": 0,
+    "inline": 0,
+    "conflicted": 1559,
+    "failed": 11,
     "held": null,
     "retry": null,
-    "parked": 760
+    "parked": 764
    },
-   "cur": [],
+   "cur": [
+    [
+     [
+      "T-4624"
+     ],
+     "Mac tests",
+     "Mac mini",
+     0
+    ]
+   ],
    "ld": [
     76,
     "2026-11-16T22:16:40Z"
@@ -793,12 +829,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-16T22:17:22Z",
-    "ld": 41.04,
+    "at": "2026-11-16T22:20:36Z",
+    "ld": 34.1,
     "c": 8,
     "sb": 1,
     "dk": [
-     17.1,
+     13.3,
      228.3
     ],
     "ss": [
@@ -836,26 +872,20 @@
    "w": "Operator",
    "a": "Evan's Account",
    "sr": 1,
-   "m": "opus",
-   "e": "high",
    "t": "Work session \u2013 1 task",
-   "at": "2026-11-16T15:52:34-05:00"
+   "at": "2026-11-16T15:52:35-05:00"
   },
   {
    "w": "Operator",
    "a": "Evan's Account",
    "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session \u2013 1 task",
-   "at": "2026-11-16T15:56:19-05:00"
+   "t": "Work session",
+   "at": "2026-11-16T15:56:20-05:00"
   },
   {
    "w": "Operator",
    "a": "Evan's Account",
    "sr": 1,
-   "m": "opus",
-   "e": "high",
    "t": "Work session",
    "at": "2026-11-16T16:48:40-05:00"
   },
@@ -863,8 +893,6 @@
    "w": "Operator",
    "a": "Jeremy's Account",
    "sr": 1,
-   "m": "opus",
-   "e": "high",
    "t": "Work session \u2013 1 task",
    "at": "2026-11-16T16:27:48-05:00"
   },
@@ -872,19 +900,15 @@
    "w": "Operator",
    "a": "Jeremy's Account",
    "sr": 1,
-   "m": "opus",
-   "e": "high",
    "t": "Work session \u2013 2 tasks",
-   "at": "2026-11-16T16:56:05-05:00"
+   "at": "2026-11-16T16:56:06-05:00"
   },
   {
    "w": "Operator",
    "a": "Jeremy's Account",
    "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session \u2013 1 task",
-   "at": "2026-11-16T16:38:27-05:00"
+   "t": "Work session",
+   "at": "2026-11-16T16:38:28-05:00"
   }
  ],
  "reply": {
@@ -908,10 +932,10 @@
   "main": 5,
   "lanes": 6,
   "total": 11,
-  "at": "5:17 PM",
+  "at": "5:20 PM",
   "why": "",
-  "at_iso": "2026-11-16T22:17:00+00:00",
+  "at_iso": "2026-11-16T22:20:00+00:00",
   "started": "3:35 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>11</b> agents running now</p><p class=\"an-sub\">Main session 5, started 3:35 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 6 sessions \u00b7 as of 5:17 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>11</b> agents running now</p><p class=\"an-sub\">Main session 5, started 3:35 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 6 sessions \u00b7 as of 5:20 PM ET</p></section>"
  }
 }

@@ -1,24 +1,20 @@
 {
  "schema": 1,
- "at": "2026-11-16T14:31:40.489191+00:00",
+ "at": "2026-11-16T14:34:41.975314+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-16T09:19:29-05:00",
-  "flow": [
+  "flow": [],
+  "done": [
    {
     "t": "T-4565",
     "name": "Send button actions from Swift, schema names checked",
     "acct": "Personal a",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1794838992
-     }
-    ]
-   }
-  ],
-  "done": [
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794839672
+   },
    {
     "t": "T-4565",
     "name": "Send button actions from Swift, schema names checked",
@@ -90,16 +86,9 @@
     "steps": [],
     "end": "landed",
     "end_at": 1794836057
-   },
-   {
-    "t": "T-4529",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794832077
    }
   ],
-  "landed": 36,
+  "landed": 37,
   "failed": 5
  },
  "workers": [
@@ -108,7 +97,7 @@
    "task": "[tools] T-4584 land false main-red fix",
    "model": "opus",
    "started": "2026-11-16T14:29:37.058Z",
-   "seconds": 123,
+   "seconds": 304,
    "finished": null,
    "effort": "high"
   }
@@ -167,7 +156,7 @@
   "week_pct": 13.24,
   "usage_pct": 39.8,
   "work_pct": 68.6,
-  "read_at": "2026-11-16T14:31:00+00:00",
+  "read_at": "2026-11-16T14:34:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -253,7 +242,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-16T09:31:00-05:00",
+  "at": "2026-11-16T09:34:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -472,92 +461,92 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-16T14:31:26Z",
+  "at": "2026-11-16T14:34:26Z",
   "s": {
    "T-4565": [
-    "merging",
-    "Host checks on the Mac mini",
-    1794839006391
+    "mergetest",
+    "Xcode checks on the MacBook",
+    1794839666129
    ],
    "T-4555": [
     "mergeq",
     "1st to merge",
-    1794831986391
+    1794831986129
    ],
    "T-4564": [
     "mergeq",
     "2nd to merge",
-    1794834686391
+    1794834686129
    ],
    "T-4286": [
     "mergeq",
     "3rd to merge",
-    1794835466391
+    1794835466129
    ],
    "T-4529": [
     "mergeq",
     "4th to merge",
-    1794835466391
+    1794835466129
    ],
    "T-4297": [
     "mergeq",
     "4th to merge",
-    1794835466391
+    1794835466129
    ],
    "T-4554": [
     "mergeq",
     "5th to merge",
-    1794835706391
+    1794835706129
    ],
    "T-3745": [
     "mergeq",
-    "8th to merge",
-    1794837386391
+    "9th to merge",
+    1794837386129
    ],
    "T-4256": [
     "mergeq",
-    "8th to merge",
-    1794837386391
+    "9th to merge",
+    1794837386129
    ],
    "T-4433": [
     "mergeq",
-    "8th to merge",
-    1794837386391
+    "9th to merge",
+    1794837386129
    ],
    "T-4435": [
     "mergeq",
-    "8th to merge",
-    1794837386391
+    "9th to merge",
+    1794837386129
    ],
    "T-3764": [
     "mergeq",
-    "9th to merge",
-    1794837686391
+    "10th to merge",
+    1794837686129
    ],
    "T-4558": [
-    "mergetest",
-    "Xcode checks on the MacBook, 14th to merge",
-    1794838346391
+    "mergeq",
+    "14th to merge",
+    1794836246129
    ],
    "T-3970": [
-    "mergetest",
-    "Xcode checks on the MacBook, 14th to merge",
-    1794838346391
+    "mergeq",
+    "14th to merge",
+    1794836246129
    ],
    "T-4020": [
-    "mergetest",
-    "Xcode checks on the MacBook, 14th to merge",
-    1794838346391
+    "mergeq",
+    "14th to merge",
+    1794836246129
    ],
    "T-4022": [
-    "mergetest",
-    "Xcode checks on the MacBook, 14th to merge",
-    1794838346391
+    "mergeq",
+    "14th to merge",
+    1794836246129
    ],
    "T-4584": [
     "testing",
     "its own tests, in its copy",
-    1794839486391
+    1794839546129
    ],
    "T-4276": [
     "merged",
@@ -608,11 +597,11 @@
   }
  },
  "ln": {
-  "at": "2026-11-16T14:31:26Z",
+  "at": "2026-11-16T14:34:26Z",
   "mq": {
    "n": {
-    "checking": 5,
-    "inline": 4,
+    "checking": 1,
+    "inline": 8,
     "conflicted": 1,
     "failed": 7,
     "held": 1,
@@ -620,46 +609,22 @@
     "parked": 8
    },
    "m": {
-    "checking": 19,
-    "inline": 73,
-    "conflicted": 2293,
-    "failed": 14,
-    "held": 1173,
-    "retry": 61,
-    "parked": 363
+    "checking": 0,
+    "inline": 57,
+    "conflicted": 2296,
+    "failed": 17,
+    "held": 1176,
+    "retry": 64,
+    "parked": 366
    },
    "cur": [
     [
      [
       "T-4565"
      ],
-     "Mac tests",
-     "Mac mini",
-     8
-    ],
-    [
-     [
-      "T-4558"
-     ],
      "iPhone app tests",
      "MacBook",
-     19
-    ],
-    [
-     [
-      "T-3970"
-     ],
-     "iPhone app tests",
-     "MacBook",
-     19
-    ],
-    [
-     [
-      "T-4020"
-     ],
-     "iPhone app tests",
-     "MacBook",
-     19
+     0
     ]
    ],
    "ld": [
@@ -669,12 +634,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-16T14:30:38Z",
-    "ld": 3.92,
+    "at": "2026-11-16T14:34:00Z",
+    "ld": 3.05,
     "c": 8,
     "sb": 0,
     "dk": [
-     44.9,
+     44.6,
      228.3
     ],
     "ss": [
@@ -735,10 +700,10 @@
   "main": 1,
   "lanes": 1,
   "total": 2,
-  "at": "9:31 AM",
+  "at": "9:34 AM",
   "why": "",
-  "at_iso": "2026-11-16T14:31:00+00:00",
+  "at_iso": "2026-11-16T14:34:00+00:00",
   "started": "9:19 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 1, started 9:19 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 9:31 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 1, started 9:19 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 9:34 AM ET</p></section>"
  }
 }

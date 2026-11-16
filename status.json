@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-16T21:57:11.645379+00:00",
+ "at": "2026-11-16T22:00:18.092805+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -88,7 +88,7 @@
     "end_at": 1794862939
    }
   ],
-  "landed": 60,
+  "landed": 59,
   "failed": 11
  },
  "workers": [
@@ -97,7 +97,7 @@
    "task": "[tools] T-4583 land feature-step ticking",
    "model": "opus",
    "started": "2026-11-16T20:38:05.386Z",
-   "seconds": 4746,
+   "seconds": 4932,
    "finished": null,
    "effort": "high"
   },
@@ -106,7 +106,7 @@
    "task": "[tools] T-4103 switch on queue-check sweep",
    "model": "opus",
    "started": "2026-11-16T21:15:08.438Z",
-   "seconds": 2523,
+   "seconds": 2709,
    "finished": null,
    "effort": "high"
   },
@@ -115,7 +115,7 @@
    "task": "[tools] T-4196 grouped iPhone runs, rest",
    "model": "opus",
    "started": "2026-11-16T21:27:29.300Z",
-   "seconds": 1782,
+   "seconds": 1968,
    "finished": null,
    "effort": "high"
   },
@@ -124,7 +124,7 @@
    "task": "[design] T-4620 Features in Home task lists",
    "model": "opus",
    "started": "2026-11-16T21:36:15.573Z",
-   "seconds": 1256,
+   "seconds": 1442,
    "finished": null,
    "effort": "high"
   },
@@ -133,7 +133,7 @@
    "task": "[tools] T-3959 merge_queue batch with T-3960",
    "model": "opus",
    "started": "2026-11-16T21:48:36.481Z",
-   "seconds": 515,
+   "seconds": 701,
    "finished": null,
    "effort": "high"
   }
@@ -209,7 +209,7 @@
   "week_pct": 18.58,
   "usage_pct": 45.8,
   "work_pct": 73.2,
-  "read_at": "2026-11-16T21:57:00+00:00",
+  "read_at": "2026-11-16T22:00:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -320,6 +320,7 @@
     "e": "high",
     "at": "2026-11-16T16:56:06-05:00",
     "n": "Jeremy",
+    "d": 1,
     "src": "plan-b"
    },
    {
@@ -383,7 +384,7 @@
  "lock_in": {
   "on": false,
   "pool": 4,
-  "at": "2026-11-16T16:57:00-05:00",
+  "at": "2026-11-16T17:00:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -669,7 +670,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-16T21:57:11Z",
+  "at": "2026-11-16T21:59:58Z",
   "s": {
    "T-3349": [
     "testing",
@@ -694,17 +695,17 @@
    "T-4196": [
     "testing",
     "its own tests, in its copy",
-    1794866051645
+    1794866038371
    ],
    "T-4103": [
     "testing",
     "its own tests, in its copy",
-    1794866231645
+    1794866218371
    ],
    "T-3959": [
     "testing",
     "its own tests, in its copy",
-    1794865751645
+    1794865798371
    ],
    "T-4621": [
     "merged",
@@ -750,7 +751,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-16T21:57:11Z",
+  "at": "2026-11-16T21:59:58Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -764,11 +765,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 1536,
+    "conflicted": 1538,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 741
+    "parked": 743
    },
    "cur": [],
    "ld": [
@@ -778,12 +779,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-16T21:56:43Z",
-    "ld": 14.55,
+    "at": "2026-11-16T21:59:38Z",
+    "ld": 14.37,
     "c": 8,
     "sb": 1,
     "dk": [
-     17.6,
+     17.4,
      228.3
     ],
     "ss": [
@@ -893,10 +894,10 @@
   "main": 5,
   "lanes": 6,
   "total": 11,
-  "at": "4:57 PM",
+  "at": "5:00 PM",
   "why": "",
-  "at_iso": "2026-11-16T21:57:00+00:00",
+  "at_iso": "2026-11-16T22:00:00+00:00",
   "started": "3:35 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>11</b> agents running now</p><p class=\"an-sub\">Main session 5, started 3:35 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 6 sessions \u00b7 as of 4:57 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>11</b> agents running now</p><p class=\"an-sub\">Main session 5, started 3:35 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 6 sessions \u00b7 as of 5:00 PM ET</p></section>"
  }
 }

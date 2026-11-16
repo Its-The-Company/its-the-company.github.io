@@ -1,12 +1,20 @@
 {
  "schema": 1,
- "at": "2026-11-16T21:51:01.805180+00:00",
+ "at": "2026-11-16T21:54:09.208803+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-16T15:35:16-05:00",
   "flow": [],
   "done": [
+   {
+    "t": "T-4077",
+    "name": "Check finished work before it ships",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794865963
+   },
    {
     "t": "T-4082",
     "name": "Check finished work before it ships",
@@ -78,17 +86,9 @@
     "steps": [],
     "end": "landed",
     "end_at": 1794862939
-   },
-   {
-    "t": "T-4060",
-    "name": "Check finished work before it ships",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794862374
    }
   ],
-  "landed": 59,
+  "landed": 60,
   "failed": 12
  },
  "workers": [
@@ -97,7 +97,7 @@
    "task": "[tools] T-4583 land feature-step ticking",
    "model": "opus",
    "started": "2026-11-16T20:38:05.386Z",
-   "seconds": 4376,
+   "seconds": 4563,
    "finished": null,
    "effort": "high"
   },
@@ -106,7 +106,7 @@
    "task": "[tools] T-4103 switch on queue-check sweep",
    "model": "opus",
    "started": "2026-11-16T21:15:08.438Z",
-   "seconds": 2153,
+   "seconds": 2340,
    "finished": null,
    "effort": "high"
   },
@@ -115,7 +115,7 @@
    "task": "[tools] T-4196 grouped iPhone runs, rest",
    "model": "opus",
    "started": "2026-11-16T21:27:29.300Z",
-   "seconds": 1412,
+   "seconds": 1599,
    "finished": null,
    "effort": "high"
   },
@@ -124,7 +124,7 @@
    "task": "[design] T-4620 Features in Home task lists",
    "model": "opus",
    "started": "2026-11-16T21:36:15.573Z",
-   "seconds": 886,
+   "seconds": 1073,
    "finished": null,
    "effort": "high"
   },
@@ -133,7 +133,7 @@
    "task": "[tools] T-3959 merge_queue batch with T-3960",
    "model": "opus",
    "started": "2026-11-16T21:48:36.481Z",
-   "seconds": 145,
+   "seconds": 332,
    "finished": null,
    "effort": "high"
   }
@@ -209,7 +209,7 @@
   "week_pct": 18.58,
   "usage_pct": 45.8,
   "work_pct": 73.2,
-  "read_at": "2026-11-16T21:51:00+00:00",
+  "read_at": "2026-11-16T21:54:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -299,28 +299,6 @@
     "src": "plan-b"
    },
    {
-    "lane": "b2",
-    "task": "T-4077",
-    "w": "Pernille",
-    "k": "review",
-    "t": "Check finished work before it ships",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-16T16:22:55-05:00",
-    "n": "Jeremy",
-    "d": 1,
-    "src": "plan-b"
-   },
-   {
-    "lane": "b2",
-    "task": "T-4082",
-    "t": "Check finished work before it ships",
-    "at": "2026-11-16T16:22:55-05:00",
-    "n": "Jeremy",
-    "d": 1,
-    "src": "plan-b"
-   },
-   {
     "lane": "b3",
     "task": "T-4627",
     "w": "Odalys",
@@ -381,7 +359,7 @@
  "lock_in": {
   "on": false,
   "pool": 4,
-  "at": "2026-11-16T16:51:00-05:00",
+  "at": "2026-11-16T16:54:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -667,18 +645,37 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-16T21:50:54Z",
+  "at": "2026-11-16T21:54:09Z",
   "s": {
+   "T-3349": [
+    "testing",
+    "Mac Mini \u00b7 test",
+    null
+   ],
+   "T-3976": [
+    "testing",
+    "Mac Mini \u00b7 test",
+    null
+   ],
+   "T-4068": [
+    "testing",
+    "Mac Mini \u00b7 test",
+    null
+   ],
+   "T-4076": [
+    "testing",
+    "Mac Mini \u00b7 test",
+    null
+   ],
+   "T-4196": [
+    "testing",
+    "its own tests, in its copy",
+    1794866049208
+   ],
    "T-3959": [
     "testing",
     "its own tests, in its copy",
-    1794865794684
-   ],
-   "T-4082": [
-    "merged",
-    "on main 4:46 PM ET",
-    1794865589000,
-    ""
+    1794865809208
    ],
    "T-4621": [
     "merged",
@@ -694,27 +691,35 @@
    ]
   },
   "nm": {
+   "T-3349": "Review the Release privacy scan before TestFlight",
+   "T-3976": "Show each drive's storage makeup on Home",
+   "T-4068": "Check finished work before it ships",
+   "T-4076": "Check finished work before it ships",
+   "T-4196": "Let app changes waiting to merge share one iPhone run",
    "T-3959": "Skip product tests for docs-only changes",
-   "T-4082": "Check finished work before it ships",
    "T-4621": "Card check that app parts name their docs page",
    "T-4486": "Refuse Fable in sessions with no Fable task"
   },
   "wk": {
+   "T-3349": "Odalys",
+   "T-3976": "Odalys",
+   "T-4068": "Pernille",
+   "T-4076": "Pernille",
+   "T-4196": "Idris",
    "T-3959": "Odalys",
-   "T-4082": "Pernille",
    "T-4621": "Odalys",
    "T-4486": "Odalys",
+   "T-4082": "Pernille",
    "T-4518": "Pernille",
    "T-4451": "Odalys",
    "T-4596": "Pernille",
    "T-4060": "Pernille",
    "T-4058": "Idris",
-   "T-4076": "Pernille",
    "T-4314": "Odalys"
   }
  },
  "ln": {
-  "at": "2026-11-16T21:50:54Z",
+  "at": "2026-11-16T21:54:09Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -728,26 +733,26 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 1529,
+    "conflicted": 1533,
     "failed": null,
     "held": null,
-    "retry": 133,
-    "parked": 746
+    "retry": 136,
+    "parked": 749
    },
    "cur": [],
    "ld": [
-    74,
-    "2026-11-16T21:46:57Z"
+    75,
+    "2026-11-16T21:52:43Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-16T21:50:18Z",
-    "ld": 15.71,
+    "at": "2026-11-16T21:53:22Z",
+    "ld": 16.41,
     "c": 8,
     "sb": 1,
     "dk": [
-     17.7,
+     17.3,
      228.3
     ],
     "ss": [
@@ -824,15 +829,6 @@
    "m": "opus",
    "e": "high",
    "t": "Work session \u2013 1 task",
-   "at": "2026-11-16T16:22:53-05:00"
-  },
-  {
-   "w": "Operator",
-   "a": "Jeremy's Account",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session \u2013 1 task",
    "at": "2026-11-16T16:38:27-05:00"
   }
  ],
@@ -855,12 +851,12 @@
  ],
  "agents_now": {
   "main": 5,
-  "lanes": 6,
-  "total": 11,
-  "at": "4:51 PM",
+  "lanes": 5,
+  "total": 10,
+  "at": "4:54 PM",
   "why": "",
-  "at_iso": "2026-11-16T21:51:00+00:00",
+  "at_iso": "2026-11-16T21:54:00+00:00",
   "started": "3:35 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>11</b> agents running now</p><p class=\"an-sub\">Main session 5, started 3:35 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 6 sessions \u00b7 as of 4:51 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>10</b> agents running now</p><p class=\"an-sub\">Main session 5, started 3:35 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 4:54 PM ET</p></section>"
  }
 }

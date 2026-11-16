@@ -1,22 +1,11 @@
 {
  "schema": 1,
- "at": "2026-11-16T12:27:47.870769+00:00",
+ "at": "2026-11-16T12:30:55.352406+00:00",
  "session": {
-  "active": false,
-  "kind": "",
-  "started": null,
+  "active": true,
+  "kind": "work",
+  "started": "2026-11-16T07:27:48-05:00",
   "flow": [
-   {
-    "t": "T-4529",
-    "name": "Give Home the dispatcher's real start order",
-    "acct": "Personal b",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1794831988
-     }
-    ]
-   },
    {
     "t": "T-4555",
     "name": "Draw the When tapped setting",
@@ -41,6 +30,14 @@
    }
   ],
   "done": [
+   {
+    "t": "T-4529",
+    "name": "Give Home the dispatcher's real start order",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794832077
+   },
    {
     "t": "T-4297",
     "acct": "Personal b",
@@ -111,18 +108,9 @@
     "steps": [],
     "end": "landed",
     "end_at": 1794823050
-   },
-   {
-    "t": "T-3552",
-    "name": "Test gallery and widget runs together with a stalled sensor",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "failed",
-    "end_at": 1794823026,
-    "why": "tests failed"
    }
   ],
-  "landed": 30,
+  "landed": 31,
   "failed": 3
  },
  "workers": [],
@@ -131,7 +119,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 380,
+  "runnable_count": 382,
   "blocked_count": 76
  },
  "meter": {
@@ -175,12 +163,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-16T07:41:29-05:00",
+ "next_tick": null,
  "personal": {
   "week_pct": 10.1,
   "usage_pct": 33.6,
   "work_pct": 73.8,
-  "read_at": "2026-11-16T12:27:00+00:00",
+  "read_at": "2026-11-16T12:30:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -201,6 +189,7 @@
     "e": "high",
     "at": "2026-11-16T06:10:18-05:00",
     "n": "Evan",
+    "d": 1,
     "src": "plan-a"
    },
    {
@@ -333,11 +322,7 @@
    {
     "lane": "b",
     "task": "T-4529",
-    "w": "Odalys",
-    "k": "tools",
     "t": "Give Home the dispatcher's real start order",
-    "m": "opus",
-    "e": "high",
     "at": "2026-11-16T06:07:07-05:00",
     "n": "Jeremy",
     "d": 1,
@@ -462,7 +447,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-16T07:27:00-05:00",
+  "at": "2026-11-16T07:30:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -470,9 +455,13 @@
    "b": "double-spread"
   }
  },
- "next_tick_why": "last_tick",
+ "next_tick_why": "session",
  "idle": null,
- "pool": null,
+ "pool": {
+  "why": "Double Spread: 80% of the week left, paced to last until Wed 14:00, the week's halfway point; the machine allows 2 (new work waits: 18 tasks wait to merge (limit 12): 2 agents finish and merge...",
+  "n": 2,
+  "at": "2026-11-16T07:26:29.712253-05:00"
+ },
  "lanes": [
   {
    "name": "Idris",
@@ -525,6 +514,7 @@
  ],
  "tasks": {
   "run": [],
+  "src": "plan",
   "open": [
    {
     "w": "Idris",
@@ -599,6 +589,11 @@
   ],
   "done": [
    {
+    "w": "Odalys",
+    "t": "The dispatcher can now list every open task in the order it will really start them, with what...",
+    "at": "2026-11-16T07:27:00-05:00"
+   },
+   {
     "w": "Operator",
     "t": "Main's own tests pass again on a clean copy of main (c5e055032), so finished work is no longer...",
     "at": "2026-11-16T07:15:00-05:00"
@@ -607,18 +602,22 @@
     "w": "Ines+operator",
     "t": "Nothing from the stopped account's set-aside work is lost: the one Investor ruling only it held...",
     "at": "2026-11-16T06:20:00-05:00"
-   },
-   {
-    "w": "Operator",
-    "t": "Not needed any more: Evan's 11-14 rulings put audit work on every account with no Fable and no...",
-    "at": "2026-11-16T06:16:00-05:00"
    }
   ],
   "count": {
-   "next": 380,
+   "next": 382,
    "wait": 34,
    "blocked": 42,
    "you": 12
+  },
+  "fin": {
+   "n": 1,
+   "rows": [
+    [
+     "T-4529",
+     "Give Home the dispatcher's..."
+    ]
+   ]
   }
  },
  "qr": [
@@ -660,72 +659,78 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-16T12:27:47Z",
+  "at": "2026-11-16T12:30:45Z",
   "s": {
-   "T-4529": [
+   "T-4558": [
     "merging",
     "Host checks on the Mac mini",
-    1794832007870
+    1794832125493
    ],
-   "T-4558": [
+   "T-3970": [
     "mergeq",
     "1st to merge",
-    1794830447870
+    1794828645493
    ],
    "T-4564": [
     "mergetest",
     "Xcode checks on the MacBook, 2nd to merge",
-    1794832007870
+    1794832005493
    ],
    "T-4256": [
     "mergetest",
     "Xcode checks on the MacBook, 3rd to merge",
-    1794832007870
+    1794832005493
    ],
    "T-4554": [
     "mergetest",
     "Xcode checks on the MacBook, 4th to merge",
-    1794832007870
+    1794832005493
    ],
    "T-4555": [
     "mergeq",
     "5th to merge",
-    1794832007870
+    1794832005493
    ],
-   "T-3970": [
+   "T-4022": [
     "mergeq",
     "6th to merge",
-    1794828647870
+    1794832185493
    ],
    "T-3764": [
     "testing",
     "Mac Mini \u00b7 test",
     null
    ],
-   "T-3745": [
-    "testq",
-    "1st for a Simulator",
-    1794830867870
-   ],
-   "T-4433": [
-    "testq",
-    "1st for a Simulator",
-    1794830867870
-   ],
-   "T-4435": [
-    "testq",
-    "1st for a Simulator",
-    1794830867870
-   ],
    "T-4506": [
     "testq",
-    "2nd for a Simulator",
-    1794831527870
+    "1st for a Simulator",
+    1794831525493
    ],
    "T-4565": [
     "testq",
+    "1st for a Simulator",
+    1794831525493
+   ],
+   "T-3745": [
+    "testq",
     "2nd for a Simulator",
-    1794831527870
+    1794832125493
+   ],
+   "T-4433": [
+    "testq",
+    "2nd for a Simulator",
+    1794832125493
+   ],
+   "T-4435": [
+    "testq",
+    "2nd for a Simulator",
+    1794832125493
+   ],
+   "T-4529": [
+    "merged",
+    "on main 7:26 AM ET",
+    1794831986000,
+    ""
    ],
    "T-4297": [
     "merged",
@@ -741,42 +746,44 @@
    ]
   },
   "nm": {
-   "T-4529": "Give Home the dispatcher's real start order",
    "T-4558": "Choose which premades get buttons",
+   "T-3970": "Check finished work before it ships",
    "T-4564": "Run a button's action and redraw in one run",
    "T-4256": "Lighten the marks and colour their line numbers",
    "T-4554": "One state commit per widget across app and widget",
    "T-4555": "Draw the When tapped setting",
-   "T-3970": "Check finished work before it ships",
+   "T-4022": "Check finished work before it ships",
    "T-3764": "Make the iPad window test fail without the fix",
+   "T-4506": "Site suites that fail only in worker copies",
+   "T-4565": "Send button actions from Swift, schema names checked",
    "T-3745": "Stop the Pro store test timing out",
    "T-4433": "Confirm the Lock Screen refresh tap first",
    "T-4435": "Draw the wrapped refresh glyph on both runtimes",
-   "T-4506": "Site suites that fail only in worker copies",
-   "T-4565": "Send button actions from Swift, schema names checked",
+   "T-4529": "Give Home the dispatcher's real start order",
    "T-4297": "Personal account stopped and its work parked",
    "T-4276": "Run Evan's account on the audit without the pause"
   },
   "wk": {
-   "T-4529": "Odalys",
    "T-4558": "Maren",
+   "T-3970": "Pernille",
    "T-4564": "Pernille",
    "T-4256": "Idris",
    "T-4554": "Idris",
    "T-4555": "Maren",
-   "T-3970": "Pernille",
+   "T-4022": "Pernille",
    "T-3764": "Idris",
+   "T-4506": "Odalys",
+   "T-4565": "Pernille",
    "T-3745": "Idris",
    "T-4433": "Idris",
    "T-4435": "Idris",
-   "T-4506": "Odalys",
-   "T-4565": "Pernille",
+   "T-4529": "Odalys",
    "T-4297": "Ines",
    "T-4276": "Operator"
   }
  },
  "ln": {
-  "at": "2026-11-16T12:27:47Z",
+  "at": "2026-11-16T12:30:45Z",
   "mq": {
    "n": {
     "checking": 4,
@@ -788,22 +795,22 @@
     "parked": 10
    },
    "m": {
-    "checking": 1,
-    "inline": 27,
-    "conflicted": 2169,
+    "checking": 4,
+    "inline": 4,
+    "conflicted": 2172,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 239
+    "parked": 242
    },
    "cur": [
     [
      [
-      "T-4529"
+      "T-4558"
      ],
      "Mac tests",
      "Mac mini",
-     1
+     2
     ],
     [
      [
@@ -811,7 +818,7 @@
      ],
      "iPhone app tests, sent and waiting its turn",
      "MacBook",
-     1
+     4
     ],
     [
      [
@@ -819,7 +826,7 @@
      ],
      "iPhone app tests, sent and waiting its turn",
      "MacBook",
-     1
+     4
     ],
     [
      [
@@ -827,26 +834,26 @@
      ],
      "iPhone app tests, sent and waiting its turn",
      "MacBook",
-     1
+     4
     ]
    ],
    "ld": [
-    21,
-    "2026-11-16T11:20:27Z"
+    22,
+    "2026-11-16T12:27:57Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-16T12:27:41Z",
-    "ld": 27.19,
+    "at": "2026-11-16T12:30:47Z",
+    "ld": 26.71,
     "c": 8,
     "sb": 1,
     "dk": [
-     49.3,
+     47.0,
      228.3
     ],
     "ss": [
-     186.0,
+     185.8,
      953.7
     ],
     "sn": [
@@ -869,6 +876,15 @@
  "operators": [
   {
    "w": "Operator",
+   "a": "Main plan",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session",
+   "at": "2026-11-16T07:27:48-05:00"
+  },
+  {
+   "w": "Operator",
    "a": "Evan",
    "sr": 1,
    "m": "opus",
@@ -883,7 +899,7 @@
    "m": "opus",
    "e": "high",
    "t": "Work session \u2013 1 task",
-   "at": "2026-11-16T07:16:36-05:00"
+   "at": "2026-11-16T06:18:20-05:00"
   },
   {
    "w": "Operator",
@@ -891,8 +907,8 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 2 tasks",
-   "at": "2026-11-16T07:17:10-05:00"
+   "t": "Work session",
+   "at": "2026-11-16T06:20:47-05:00"
   },
   {
    "w": "Operator",
@@ -931,6 +947,7 @@
   "lane_next",
   "queue_text",
   "task_done",
+  "fin_short",
   "task_title",
   "done_text",
   "task_open",
@@ -941,10 +958,10 @@
   "main": 0,
   "lanes": 6,
   "total": 6,
-  "at": "7:27 AM",
+  "at": "7:30 AM",
   "why": "",
-  "at_iso": "2026-11-16T12:27:00+00:00",
-  "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 6 sessions \u00b7 as of 7:27 AM ET</p></section>"
+  "at_iso": "2026-11-16T12:30:00+00:00",
+  "started": "7:27 AM",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 0, started 7:27 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 6 sessions \u00b7 as of 7:30 AM ET</p></section>"
  }
 }

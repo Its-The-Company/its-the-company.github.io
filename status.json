@@ -1,24 +1,32 @@
 {
  "schema": 1,
- "at": "2026-11-16T11:12:15.299837+00:00",
+ "at": "2026-11-16T11:14:09.538992+00:00",
  "session": {
   "active": true,
   "kind": "morning",
   "started": "2026-11-16T06:05:30-05:00",
   "flow": [
    {
-    "t": "T-4506",
-    "name": "Site suites that fail only in worker copies",
+    "t": "T-4276",
+    "name": "Run Evan's account on the audit without the pause",
     "acct": "Personal a",
     "steps": [
      {
-      "s": "testq",
-      "at": 1794827210
+      "s": "landing",
+      "at": 1794827799
      }
     ]
    }
   ],
   "done": [
+   {
+    "t": "T-4506",
+    "name": "Site suites that fail only in worker copies",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794827774
+   },
    {
     "t": "T-4475",
     "name": "Land a lane's queued records without commits of their own",
@@ -92,17 +100,9 @@
     "steps": [],
     "end": "landed",
     "end_at": 1794819690
-   },
-   {
-    "t": "T-4550",
-    "name": "Python contract and action run for widget buttons",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794818974
    }
   ],
-  "landed": 29,
+  "landed": 30,
   "failed": 5
  },
  "workers": [],
@@ -120,7 +120,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 377,
+  "runnable_count": 376,
   "blocked_count": 76
  },
  "meter": {
@@ -169,18 +169,15 @@
   "week_pct": 9.67,
   "usage_pct": 32.6,
   "work_pct": 76.3,
-  "read_at": "2026-11-16T11:13:00+00:00",
+  "read_at": "2026-11-16T11:16:00+00:00",
   "running": [
    {
     "lane": "a",
     "task": "T-4276",
-    "w": "Operator",
-    "k": "ops",
     "t": "Run Evan's account on the audit without the pause",
-    "m": "opus",
-    "e": "high",
     "at": "2026-11-16T06:10:18-05:00",
     "n": "Evan",
+    "d": 1,
     "src": "plan-a"
    },
    {
@@ -241,6 +238,7 @@
     "e": "high",
     "at": "2026-11-16T06:07:07-05:00",
     "n": "Jeremy",
+    "d": 1,
     "src": "plan-b"
    },
    {
@@ -375,7 +373,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-16T06:13:00-05:00",
+  "at": "2026-11-16T06:16:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -533,7 +531,7 @@
    }
   ],
   "count": {
-   "next": 377,
+   "next": 376,
    "wait": 34,
    "blocked": 42,
    "you": 12
@@ -582,51 +580,72 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-16T11:12:15Z",
+  "at": "2026-11-16T11:14:09Z",
   "s": {
-   "T-4506": [
+   "T-4276": [
     "merging",
-    "Host checks on the Mac mini \u00b7 3 groups of tests done",
-    1794827235299
+    "Merging onto main",
+    1794827649538
    ],
    "T-3745": [
     "testq",
     "1st for a Simulator",
-    1794827415299
+    1794827289538
    ],
    "T-4256": [
     "testq",
     "1st for a Simulator",
-    1794827415299
+    1794827289538
    ],
    "T-4433": [
     "testq",
     "1st for a Simulator",
-    1794827415299
+    1794827289538
    ],
    "T-4435": [
     "testq",
     "1st for a Simulator",
-    1794827415299
+    1794827289538
+   ],
+   "T-2691": [
+    "testq",
+    "2nd for a Simulator",
+    1794827469538
+   ],
+   "T-3764": [
+    "testq",
+    "2nd for a Simulator",
+    1794827469538
+   ],
+   "T-3765": [
+    "testq",
+    "2nd for a Simulator",
+    1794827469538
    ]
   },
   "nm": {
-   "T-4506": "Site suites that fail only in worker copies",
+   "T-4276": "Run Evan's account on the audit without the pause",
    "T-3745": "Stop the Pro store test timing out",
    "T-4256": "Lighten the marks and colour their line numbers",
    "T-4433": "Confirm the Lock Screen refresh tap first",
-   "T-4435": "Draw the wrapped refresh glyph on both runtimes"
+   "T-4435": "Draw the wrapped refresh glyph on both runtimes",
+   "T-2691": "Check every archive for the phone test marker, Organizer too",
+   "T-3764": "Make the iPad window test fail without the fix",
+   "T-3765": "Check a real widget tap on the TestFlight build"
   },
   "wk": {
-   "T-4506": "Odalys",
+   "T-4276": "Operator",
    "T-3745": "Idris",
    "T-4256": "Idris",
    "T-4433": "Idris",
-   "T-4435": "Idris"
+   "T-4435": "Idris",
+   "T-2691": "Idris",
+   "T-3764": "Idris",
+   "T-3765": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-16T11:12:15Z",
+  "at": "2026-11-16T11:14:09Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -635,40 +654,40 @@
     "failed": 0,
     "held": 0,
     "retry": 1,
-    "parked": 7
+    "parked": 8
    },
    "m": {
-    "checking": 5,
+    "checking": 0,
     "inline": null,
-    "conflicted": 2094,
+    "conflicted": 2096,
     "failed": null,
     "held": null,
-    "retry": 163,
-    "parked": 223
+    "retry": 165,
+    "parked": 195
    },
    "cur": [
     [
      [
-      "T-4506"
+      "T-4276"
      ],
-     "Mac tests",
+     "going onto main",
      "Mac mini",
-     5
+     0
     ]
    ],
    "ld": [
-    18,
-    "2026-11-16T11:06:45Z"
+    20,
+    "2026-11-16T11:16:44Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-16T11:12:49Z",
-    "ld": 46.31,
+    "at": "2026-11-16T11:16:43Z",
+    "ld": 59.1,
     "c": 8,
     "sb": 2,
     "dk": [
-     52.4,
+     52.0,
      228.3
     ],
     "ss": [
@@ -707,7 +726,7 @@
    "w": "Operator",
    "a": "Evan",
    "sr": 1,
-   "t": "Work session \u2013 4 tasks",
+   "t": "Work session \u2013 3 tasks",
    "at": "2026-11-16T06:10:18-05:00"
   },
   {
@@ -751,10 +770,10 @@
   "main": 0,
   "lanes": 4,
   "total": 4,
-  "at": "6:13 AM",
+  "at": "6:16 AM",
   "why": "",
-  "at_iso": "2026-11-16T11:13:00+00:00",
+  "at_iso": "2026-11-16T11:16:00+00:00",
   "started": "6:05 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 0, started 6:05 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 6:13 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 0, started 6:05 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 6:16 AM ET</p></section>"
  }
 }

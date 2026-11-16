@@ -1,11 +1,23 @@
 {
  "schema": 1,
- "at": "2026-11-16T16:51:54.489635+00:00",
+ "at": "2026-11-16T16:55:28.220817+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-16T10:53:39-05:00",
-  "flow": [],
+  "flow": [
+   {
+    "t": "T-4049",
+    "name": "Check finished work before it ships",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "landing",
+      "at": 1794848125
+     }
+    ]
+   }
+  ],
   "done": [
    {
     "t": "T-4240",
@@ -100,7 +112,7 @@
    "task": "[tools] T-4583 feature step ticking",
    "model": "opus",
    "started": "2026-11-16T15:55:21.544Z",
-   "seconds": 3392,
+   "seconds": 3606,
    "finished": null,
    "effort": "high"
   }
@@ -119,7 +131,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 382,
+  "runnable_count": 383,
   "blocked_count": 74
  },
  "meter": {
@@ -168,7 +180,7 @@
   "week_pct": 15.51,
   "usage_pct": 42.5,
   "work_pct": 69.1,
-  "read_at": "2026-11-16T16:52:00+00:00",
+  "read_at": "2026-11-16T16:55:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -240,6 +252,7 @@
     "e": "high",
     "at": "2026-11-16T11:42:17-05:00",
     "n": "Evan",
+    "d": 1,
     "src": "plan-a"
    },
    {
@@ -350,7 +363,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-16T11:52:00-05:00",
+  "at": "2026-11-16T11:55:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -520,7 +533,7 @@
    }
   ],
   "count": {
-   "next": 382,
+   "next": 383,
    "wait": 34,
    "blocked": 40,
    "you": 11
@@ -574,14 +587,19 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-16T16:51:54Z",
+  "at": "2026-11-16T16:55:20Z",
   "s": {
-   "T-4048": [
+   "T-4049": [
+    "mergeq",
+    "1st to merge",
+    1794848120711
+   ],
+   "T-4063": [
     "testing",
     "Mac Mini \u00b7 test",
     null
    ],
-   "T-4049": [
+   "T-4067": [
     "testing",
     "Mac Mini \u00b7 test",
     null
@@ -589,76 +607,71 @@
    "T-4583": [
     "testing",
     "its own tests, in its copy",
-    1794845814489
-   ],
-   "T-4031": [
-    "testq",
-    "1st for a Simulator",
-    1794847554489
-   ],
-   "T-4032": [
-    "testq",
-    "1st for a Simulator",
-    1794847554489
+    1794848000711
    ],
    "T-3764": [
     "testq",
-    "2nd for a Simulator",
-    1794847614489
+    "1st for a Simulator",
+    1794847700711
    ],
    "T-4040": [
     "testq",
-    "2nd for a Simulator",
-    1794847614489
+    "1st for a Simulator",
+    1794847700711
    ],
    "T-4043": [
     "testq",
-    "2nd for a Simulator",
-    1794847614489
+    "1st for a Simulator",
+    1794847700711
    ],
-   "T-4063": [
+   "T-4031": [
     "testq",
     "4th for a Simulator",
-    1794847734489
+    1794848000711
    ],
-   "T-4067": [
+   "T-4032": [
     "testq",
     "4th for a Simulator",
-    1794847734489
+    1794848000711
+   ],
+   "T-4048": [
+    "testq",
+    "6th for a Simulator",
+    1794848060711
    ]
   },
   "nm": {
-   "T-4048": "Check finished work before it ships",
    "T-4049": "Check finished work before it ships",
+   "T-4063": "Check finished work before it ships",
+   "T-4067": "Check finished work before it ships",
    "T-4583": "Turn on Feature mode and tick steps at the merge",
-   "T-4031": "Check finished work before it ships",
-   "T-4032": "Check finished work before it ships",
    "T-3764": "Make the iPad window test fail without the fix",
    "T-4040": "Check finished work before it ships",
    "T-4043": "Check finished work before it ships",
-   "T-4063": "Check finished work before it ships",
-   "T-4067": "Check finished work before it ships"
+   "T-4031": "Check finished work before it ships",
+   "T-4032": "Check finished work before it ships",
+   "T-4048": "Check finished work before it ships"
   },
   "wk": {
-   "T-4048": "Pernille",
    "T-4049": "Pernille",
+   "T-4063": "Pernille",
+   "T-4067": "Pernille",
    "T-4583": "Idris",
-   "T-4031": "Pernille",
-   "T-4032": "Pernille",
    "T-3764": "Idris",
    "T-4040": "Pernille",
    "T-4043": "Pernille",
-   "T-4063": "Pernille",
-   "T-4067": "Pernille",
+   "T-4031": "Pernille",
+   "T-4032": "Pernille",
+   "T-4048": "Pernille",
    "T-4585": "Odalys"
   }
  },
  "ln": {
-  "at": "2026-11-16T16:51:54Z",
+  "at": "2026-11-16T16:55:20Z",
   "mq": {
    "n": {
     "checking": 0,
-    "inline": 0,
+    "inline": 1,
     "conflicted": 2,
     "failed": 0,
     "held": 0,
@@ -667,12 +680,12 @@
    },
    "m": {
     "checking": null,
-    "inline": null,
-    "conflicted": 1230,
+    "inline": 0,
+    "conflicted": 1234,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 503
+    "parked": 507
    },
    "cur": [],
    "ld": [
@@ -682,12 +695,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-16T16:52:22Z",
-    "ld": 14.18,
+    "at": "2026-11-16T16:54:55Z",
+    "ld": 11.76,
     "c": 8,
     "sb": 1,
     "dk": [
-     49.2,
+     47.9,
      228.3
     ],
     "ss": [
@@ -745,7 +758,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 2 tasks",
+   "t": "Work session \u2013 1 task",
    "at": "2026-11-16T11:42:17-05:00"
   },
   {
@@ -796,10 +809,10 @@
   "main": 1,
   "lanes": 6,
   "total": 7,
-  "at": "11:52 AM",
+  "at": "11:55 AM",
   "why": "",
-  "at_iso": "2026-11-16T16:52:00+00:00",
+  "at_iso": "2026-11-16T16:55:00+00:00",
   "started": "10:53 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 1, started 10:53 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 6 sessions \u00b7 as of 11:52 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 1, started 10:53 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 6 sessions \u00b7 as of 11:55 AM ET</p></section>"
  }
 }

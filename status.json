@@ -1,32 +1,20 @@
 {
  "schema": 1,
- "at": "2026-11-16T10:48:34.893905+00:00",
+ "at": "2026-11-16T10:51:41.191684+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-16T04:43:12-05:00",
-  "flow": [
+  "flow": [],
+  "done": [
    {
     "t": "T-3552",
     "name": "Test gallery and widget runs together with a stalled sensor",
     "acct": "Personal a",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1794823057
-     },
-     {
-      "s": "macbook",
-      "at": 1794823123
-     },
-     {
-      "s": "testq",
-      "at": 1794825433
-     }
-    ]
-   }
-  ],
-  "done": [
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794826185
+   },
    {
     "t": "T-0687",
     "name": "Run network fetches inside the extension on the Simulator",
@@ -99,32 +87,22 @@
     "steps": [],
     "end": "landed",
     "end_at": 1794818213
-   },
-   {
-    "t": "T-4279",
-    "name": "Draw the site's info button as a code-drawn gear",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794817984
    }
   ],
-  "landed": 27,
+  "landed": 28,
   "failed": 5
  },
- "workers": [
+ "workers": [],
+ "who": "",
+ "recent": [
   {
    "name": "idris",
    "task": "[tools] T-4194 land the wiring split",
    "model": "opus",
    "started": "2026-11-16T09:47:47.943Z",
-   "seconds": 3646,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Idris",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-16T10:49:41.870000+00:00"
+  },
   {
    "name": "idris",
    "task": "[release] T-2943 upload gate build 7",
@@ -202,7 +180,7 @@
   "week_pct": 9.1,
   "usage_pct": 32.4,
   "work_pct": 76.5,
-  "read_at": "2026-11-16T10:48:00+00:00",
+  "read_at": "2026-11-16T10:51:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -223,7 +201,7 @@
   }
  ],
  "disk": {
-  "free_gb": 15,
+  "free_gb": 17,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -232,14 +210,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-16T05:42:00-05:00",
+   "at": "2026-11-16T05:49:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-16T05:48:00-05:00",
+  "at": "2026-11-16T05:51:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -257,12 +235,11 @@
  "lanes": [
   {
    "name": "Idris",
-   "state": "running",
-   "task": "[tools] T-4194 land the wiring split",
-   "model": "opus",
-   "since": "2026-11-16T09:47:47.943Z",
-   "next": [],
-   "effort": "high"
+   "state": "next",
+   "task": "Idris, P2, from T-4238 (Pernille's review, from T-3900,...",
+   "model": null,
+   "since": null,
+   "next": []
   },
   {
    "name": "Ines",
@@ -306,18 +283,7 @@
   }
  ],
  "tasks": {
-  "run": [
-   {
-    "w": "Idris",
-    "k": "tools",
-    "t": "Build the feature session for app work",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-16T09:47:47.943Z",
-    "o": "c",
-    "task": "T-4194"
-   }
-  ],
+  "run": [],
   "src": "plan",
   "open": [
    {
@@ -463,110 +429,72 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-16T10:48:34Z",
+  "at": "2026-11-16T10:51:41Z",
   "s": {
-   "T-3552": [
-    "merging",
-    "Host checks on the Mac mini",
-    1794825454893
-   ],
    "T-0687": [
-    "mergetest",
-    "Xcode checks on the MacBook, 1st to merge",
-    1794825454893
-   ],
-   "T-0972": [
     "mergetest",
     "iPhone tests on the MacBook",
     null
-   ],
-   "T-4194": [
-    "merging",
-    "Mac tests at the main gate",
-    1794825574893
    ]
   },
   "nm": {
-   "T-3552": "Test gallery and widget runs together with a stalled sensor",
-   "T-0687": "Run network fetches inside the extension on the Simulator",
-   "T-0972": "Decide how a script's refresh path is chosen on send",
-   "T-4194": "Build the feature session for app work"
+   "T-0687": "Run network fetches inside the extension on the Simulator"
   },
   "wk": {
-   "T-3552": "Idris",
    "T-0687": "Idris",
-   "T-0972": "Idris",
-   "T-4194": "Idris",
    "T-4293": "Maren"
   }
  },
  "ln": {
-  "at": "2026-11-16T10:48:34Z",
+  "at": "2026-11-16T10:51:41Z",
   "mq": {
    "n": {
-    "checking": 2,
+    "checking": 0,
     "inline": 0,
     "conflicted": 2,
     "failed": 0,
     "held": 0,
-    "retry": 0,
+    "retry": 1,
     "parked": 8
    },
    "m": {
-    "checking": 11,
+    "checking": null,
     "inline": null,
-    "conflicted": 1048,
+    "conflicted": 1051,
     "failed": null,
     "held": null,
-    "retry": null,
-    "parked": 169
+    "retry": 143,
+    "parked": 173
    },
-   "cur": [
-    [
-     [
-      "T-3552"
-     ],
-     "Mac tests",
-     "Mac mini",
-     11
-    ],
-    [
-     [
-      "T-0687"
-     ],
-     "iPhone app tests, sent and waiting its turn",
-     "MacBook",
-     11
-    ]
-   ],
+   "cur": [],
    "ld": [
-    15,
-    "2026-11-16T10:36:21Z"
+    16,
+    "2026-11-16T10:49:45Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-16T10:48:35Z",
-    "ld": 2.68,
+    "at": "2026-11-16T10:51:19Z",
+    "ld": 3.12,
     "c": 8,
     "sb": 0,
     "dk": [
-     15.9,
+     54.6,
      228.3
     ],
     "ss": [
-     185.9,
+     186.1,
      953.7
     ],
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-16T10:27:33Z",
-    "ld": 24.3,
+    "at": "2026-11-16T10:41:50Z",
+    "ld": 12.19,
     "c": 12,
     "sb": 0,
     "dk": [
-     351.9,
+     350.9,
      926.4
     ],
     "sn": []
@@ -580,17 +508,8 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 2 tasks",
+   "t": "Work session \u2013 1 task",
    "at": "2026-11-16T04:43:12-05:00"
-  },
-  {
-   "w": "Operator",
-   "a": "Evan",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session",
-   "at": "2026-11-16T05:48:21-05:00"
   }
  ],
  "reply": {
@@ -610,13 +529,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 1,
+  "main": 0,
   "lanes": 0,
-  "total": 1,
-  "at": "5:48 AM",
-  "why": "",
-  "at_iso": "2026-11-16T10:48:00+00:00",
+  "total": 0,
+  "at": "5:51 AM",
+  "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
+  "at_iso": "2026-11-16T10:51:00+00:00",
   "started": "4:43 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 4:43 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 5:48 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0, started 4:43 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 5:51 AM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
  }
 }

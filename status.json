@@ -1,12 +1,20 @@
 {
  "schema": 1,
- "at": "2026-11-16T21:25:52.305993+00:00",
+ "at": "2026-11-16T21:28:51.255403+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-16T15:35:16-05:00",
   "flow": [],
   "done": [
+   {
+    "t": "T-4401",
+    "name": "Keep the parked count test off the live mode file",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794864532
+   },
    {
     "t": "T-4596",
     "name": "Review the archive check for the phone test marker",
@@ -78,17 +86,9 @@
     "steps": [],
     "end": "landed",
     "end_at": 1794862157
-   },
-   {
-    "t": "T-4076",
-    "name": "Check finished work before it ships",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794862109
    }
   ],
-  "landed": 56,
+  "landed": 57,
   "failed": 12
  },
  "workers": [
@@ -97,7 +97,7 @@
    "task": "[tools] T-4583 land feature-step ticking",
    "model": "opus",
    "started": "2026-11-16T20:38:05.386Z",
-   "seconds": 2866,
+   "seconds": 3045,
    "finished": null,
    "effort": "high"
   },
@@ -106,7 +106,7 @@
    "task": "[tools] T-4617 quick checks before Xcode slot",
    "model": "opus",
    "started": "2026-11-16T20:38:15.991Z",
-   "seconds": 2856,
+   "seconds": 3035,
    "finished": null,
    "effort": "high"
   },
@@ -115,12 +115,30 @@
    "task": "[tools] T-4103 switch on queue-check sweep",
    "model": "opus",
    "started": "2026-11-16T21:15:08.438Z",
-   "seconds": 643,
+   "seconds": 822,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "idris",
+   "task": "[tools] T-4196 grouped iPhone runs, rest",
+   "model": "opus",
+   "started": "2026-11-16T21:27:29.300Z",
+   "seconds": 81,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-4451 daily model read of flagged lines",
+   "model": "opus",
+   "started": "2026-11-16T21:27:37.384Z",
+   "seconds": 73,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Idris, Odalys x2",
+ "who": "Idris x2, Odalys x3",
  "recent": [],
  "queue": {
   "runnable": [],
@@ -174,7 +192,7 @@
   "week_pct": 18.58,
   "usage_pct": 45.8,
   "work_pct": 73.2,
-  "read_at": "2026-11-16T21:25:00+00:00",
+  "read_at": "2026-11-16T21:28:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -286,28 +304,6 @@
     "at": "2026-11-16T16:22:55-05:00",
     "n": "Jeremy",
     "src": "plan-b"
-   },
-   {
-    "lane": "b3",
-    "task": "T-4596",
-    "t": "Review the archive check for the phone test marker",
-    "at": "2026-11-16T16:07:00-05:00",
-    "n": "Jeremy",
-    "d": 1,
-    "src": "plan-b"
-   },
-   {
-    "lane": "b3",
-    "task": "T-4401",
-    "w": "Odalys",
-    "k": "test",
-    "t": "Keep the parked count test off the live mode file",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-16T16:07:00-05:00",
-    "n": "Jeremy",
-    "d": 1,
-    "src": "plan-b"
    }
   ]
  },
@@ -345,7 +341,7 @@
  "lock_in": {
   "on": false,
   "pool": 4,
-  "at": "2026-11-16T16:25:00-05:00",
+  "at": "2026-11-16T16:28:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -443,6 +439,26 @@
     "at": "2026-11-16T21:15:08.438Z",
     "o": "c",
     "task": "T-4103"
+   },
+   {
+    "w": "Idris",
+    "k": "tools",
+    "t": "Let app changes waiting to merge share one iPhone run",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-16T21:27:29.300Z",
+    "o": "c",
+    "task": "T-4196"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Read the flagged lines once a day with a model",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-16T21:27:37.384Z",
+    "o": "c",
+    "task": "T-4451"
    }
   ],
   "src": "plan",
@@ -606,22 +622,42 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-16T21:25:52Z",
+  "at": "2026-11-16T21:28:33Z",
   "s": {
+   "T-4401": [
+    "merging",
+    "Host checks on the Mac mini \u00b7 1 group of tests done",
+    1794864513351
+   ],
+   "T-4077": [
+    "testing",
+    "Mac Mini \u00b7 test",
+    null
+   ],
+   "T-4082": [
+    "testing",
+    "Mac Mini \u00b7 test",
+    null
+   ],
+   "T-4616": [
+    "testing",
+    "Mac Mini \u00b7 test",
+    null
+   ],
    "T-4617": [
     "testing",
     "its own tests, in its copy",
-    1794863752305
+    1794863733351
    ],
    "T-4103": [
     "testing",
     "its own tests, in its copy",
-    1794863992305
+    1794863973351
    ],
    "T-4583": [
     "testing",
     "its own tests, in its copy",
-    1794861532305
+    1794861513351
    ],
    "T-4596": [
     "merged",
@@ -643,6 +679,10 @@
    ]
   },
   "nm": {
+   "T-4401": "Keep the parked count test off the live mode file",
+   "T-4077": "Check finished work before it ships",
+   "T-4082": "Check finished work before it ships",
+   "T-4616": "Order tasks by the files waiting work holds",
    "T-4617": "Run quick checks before a land takes the Xcode slot",
    "T-4103": "Build the queue-check sweep into the sweep system",
    "T-4583": "Turn on Feature mode and tick steps at the merge",
@@ -651,6 +691,10 @@
    "T-4486": "Refuse Fable in sessions with no Fable task"
   },
   "wk": {
+   "T-4401": "Odalys",
+   "T-4077": "Pernille",
+   "T-4082": "Pernille",
+   "T-4616": "Odalys",
    "T-4617": "Odalys",
    "T-4103": "Odalys",
    "T-4583": "Idris",
@@ -664,10 +708,10 @@
   }
  },
  "ln": {
-  "at": "2026-11-16T21:25:52Z",
+  "at": "2026-11-16T21:28:33Z",
   "mq": {
    "n": {
-    "checking": 0,
+    "checking": 1,
     "inline": 0,
     "conflicted": 2,
     "failed": 0,
@@ -676,15 +720,24 @@
     "parked": 11
    },
    "m": {
-    "checking": null,
+    "checking": 0,
     "inline": null,
-    "conflicted": 1504,
+    "conflicted": 1507,
     "failed": null,
     "held": null,
-    "retry": 108,
-    "parked": 721
+    "retry": 110,
+    "parked": 723
    },
-   "cur": [],
+   "cur": [
+    [
+     [
+      "T-4401"
+     ],
+     "Mac tests",
+     "Mac mini",
+     0
+    ]
+   ],
    "ld": [
     70,
     "2026-11-16T21:25:26Z"
@@ -692,8 +745,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-16T21:25:27Z",
-    "ld": 18.75,
+    "at": "2026-11-16T21:28:37Z",
+    "ld": 19.79,
     "c": 8,
     "sb": 1,
     "dk": [
@@ -728,7 +781,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 3 tasks",
+   "t": "Work session \u2013 5 tasks",
    "at": "2026-11-16T15:35:16-05:00"
   },
   {
@@ -755,7 +808,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 2 tasks",
+   "t": "Work session \u2013 1 task",
    "at": "2026-11-16T16:22:57-05:00"
   },
   {
@@ -765,7 +818,7 @@
    "m": "opus",
    "e": "high",
    "t": "Work session \u2013 1 task",
-   "at": "2026-11-16T16:23:38-05:00"
+   "at": "2026-11-16T16:27:48-05:00"
   },
   {
    "w": "Operator",
@@ -775,20 +828,11 @@
    "e": "high",
    "t": "Work session \u2013 2 tasks",
    "at": "2026-11-16T16:22:53-05:00"
-  },
-  {
-   "w": "Operator",
-   "a": "Jeremy's Account",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session",
-   "at": "2026-11-16T16:06:59-05:00"
   }
  ],
  "reply": {
-  "sent": "2026-11-16T21:21:19Z",
-  "seconds": 135.0
+  "sent": "2026-11-16T21:26:21Z",
+  "seconds": 85.0
  },
  "inbox": [],
  "trimmed": [
@@ -803,13 +847,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 3,
-  "lanes": 6,
-  "total": 9,
-  "at": "4:25 PM",
+  "main": 5,
+  "lanes": 5,
+  "total": 10,
+  "at": "4:28 PM",
   "why": "",
-  "at_iso": "2026-11-16T21:25:00+00:00",
+  "at_iso": "2026-11-16T21:28:00+00:00",
   "started": "3:35 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>9</b> agents running now</p><p class=\"an-sub\">Main session 3, started 3:35 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 6 sessions \u00b7 as of 4:25 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>10</b> agents running now</p><p class=\"an-sub\">Main session 5, started 3:35 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 4:28 PM ET</p></section>"
  }
 }

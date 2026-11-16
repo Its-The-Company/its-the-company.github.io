@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-16T03:50:27.117670+00:00",
+ "at": "2026-11-16T03:53:38.866479+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -123,7 +123,7 @@
    "task": "[tools] T-4194 wire and switch on feature sessions",
    "model": "opus",
    "started": "2026-11-16T02:43:06.794Z",
-   "seconds": 4040,
+   "seconds": 4232,
    "finished": null,
    "effort": "high"
   },
@@ -132,7 +132,7 @@
    "task": "[tools] T-4560 disk cleaning acts on cleared refusals",
    "model": "opus",
    "started": "2026-11-16T03:28:22.673Z",
-   "seconds": 1324,
+   "seconds": 1516,
    "finished": null,
    "effort": "high"
   }
@@ -180,19 +180,19 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 4.0,
+   "pct": 5.0,
    "resets_at": "2026-11-16T03:10:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-15T22:30:24.845445-05:00",
+   "read_at": "2026-11-15T22:50:36.876800-05:00",
    "source": "live",
-   "left": 96.0,
+   "left": 95.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 16.0,
    "resets_at": "2026-11-22T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-15T22:30:24.845445-05:00",
+   "read_at": "2026-11-15T22:50:36.876800-05:00",
    "source": "live",
    "left": 84.0,
    "left_words": "of your weekly allowance left"
@@ -204,7 +204,7 @@
    "read_at": "2026-11-15T20:29:58.154359-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-15T22:30:24.845445-05:00"
+  "read_at": "2026-11-15T22:50:36.876800-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -224,7 +224,7 @@
   "week_pct": 4.62,
   "usage_pct": 26.2,
   "work_pct": 68.8,
-  "read_at": "2026-11-16T03:50:00+00:00",
+  "read_at": "2026-11-16T03:53:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -407,7 +407,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-15T22:50:00-05:00",
+  "at": "2026-11-15T22:53:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -662,32 +662,27 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-16T03:50:07Z",
+  "at": "2026-11-16T03:53:38Z",
   "s": {
    "T-0261": [
     "merging",
     "Host checks on the Mac mini",
-    1794800527648
+    1794800498866
    ],
    "T-4489": [
     "mergeq",
     "1st to merge",
-    1794800767648
+    1794800798866
    ],
    "T-4534": [
     "mergeq",
     "2nd to merge",
-    1794801007648
-   ],
-   "T-4560": [
-    "testing",
-    "its own tests, in its copy",
-    1794800047648
+    1794800978866
    ],
    "T-4194": [
     "testing",
     "its own tests, in its copy",
-    1794799267648
+    1794799298866
    ],
    "T-3345": [
     "merged",
@@ -700,13 +695,12 @@
    "T-0261": "Apply the chosen store caption wording",
    "T-4489": "Decide if the Simulator erase approval clears old refusals",
    "T-4534": "Double-tap a Chat bubble to react, and add fire",
-   "T-4560": "Let the disk cleaning act on cleared refusals",
    "T-4194": "Build the feature session for app work",
    "T-3345": "Drop two parked 1.1 Builder tasks"
   }
  },
  "ln": {
-  "at": "2026-11-16T03:50:07Z",
+  "at": "2026-11-16T03:53:38Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -718,13 +712,13 @@
     "parked": 2
    },
    "m": {
-    "checking": 8,
-    "inline": 2,
-    "conflicted": 1652,
+    "checking": 12,
+    "inline": 5,
+    "conflicted": 1655,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 880
+    "parked": 884
    },
    "cur": [
     [
@@ -733,7 +727,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     8
+     12
     ]
    ],
    "ld": [
@@ -743,12 +737,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-16T03:50:15Z",
-    "ld": 6.82,
+    "at": "2026-11-16T03:53:20Z",
+    "ld": 7.59,
     "c": 8,
     "sb": 0,
     "dk": [
-     30.7,
+     32.3,
      228.3
     ],
     "ss": [
@@ -795,7 +789,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 3 tasks",
+   "t": "Work session \u2013 2 tasks",
    "at": "2026-11-15T22:37:27-05:00"
   },
   {
@@ -830,10 +824,10 @@
   "main": 2,
   "lanes": 3,
   "total": 5,
-  "at": "10:50 PM",
+  "at": "10:53 PM",
   "why": "",
-  "at_iso": "2026-11-16T03:50:00+00:00",
+  "at_iso": "2026-11-16T03:53:00+00:00",
   "started": "8:30 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 2, started 8:30 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 10:50 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 2, started 8:30 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 10:53 PM ET</p></section>"
  }
 }

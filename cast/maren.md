@@ -43,6 +43,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 - 2026-11-16 T-4558 premade buttons (bc332cb0ac, premade-inputs s9): Habits only, Done today (S1 M3 L6). Lesson: stacked rows can't hold 44 pt + 12 pt targets in Medium (156 of 116) or Large (324 of 292); check rows before promising per-row buttons. Open: route A/B for the mark (Pernille, Idris).
 - 2026-11-16 T-4555 When tapped frames (when-tapped/, 34 per appearance). Lessons: draw_ide's render() runs ~7 min for 8 sheets; look at one sheet before re-rendering all. Back labels over 96 px truncate: write "Back". Shipped strings say "PyWidget"; ADR prose says pywidget.
+- 2026-11-16 T-4595 Home count split (08e8307667). Lessons: a long test run goes in background with its own task ID; never `pkill -f` a pattern (I did, killed my own waiters). macOS xargs -I drops long sh -c commands silently; use a Python pool. A worker copy lands via `main_gate.py land --from`; if main moved, stash, `checkout --detach main`, pop.
 {% endraw %}
 
 

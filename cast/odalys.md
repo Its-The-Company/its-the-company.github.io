@@ -40,8 +40,6 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-4446 (11-14): records_round.py, one records commit per 900 s (archive.md). Land part T-4457 on main c0048bc661 11-16 (T-3995 batch with T-4459, T-4196). Owed: 7-day count <= 672, no 'lane records applied'; tick.
 
 - T-4103 31b4b962fb, T-4443 slice 1 14f086c7d8 (11-14): open, full notes in archive.md. Owed: T-4447 replay narrows the signals; five card rules in queue_check; T-4459 machine callers.
-- T-4458 (11-14): jobs_loop notes, merge_first, runner_watch, main_green hand over to records_round (RECORDS_OWN_COMMIT=1 = old). fav_notice refused (guard); own line. Owed: 7-day commit-shares run shows none of their subjects; then tick.
-- T-4450 (11-14 19:0x): the day's group-size fit is a job of queue_check's daily run; `pass` reads the kept sizes. No pipeline patch (T-4444's step carries it). Owed: 7 days of land_group.jsonl rows by 'daily sweep' against 'first read'; queue_check mutants not measured.
 - T-3712 3b4ce80e44 (11-15): xc_sim.py unused (dry by default, --apply). Every device is under refusal T-3189 (whole Devices folder); 6.87 GB would go without it. Owed: Ines decides if #41 c6728454947 clears T-3189/T-2587.
 
 - T-4009 07a67cf259 + 89c42a36fc (11-15): hold line = governor.five_hour_hold() (100% less 3 median calls; 95% today, floor 90, cap 97); OPT-133 proposed. Owed: rules/personal_lane.py 90->97 card (my diff step refused by a deny rule, stopped); OPT-133 reads after land.
@@ -56,8 +54,11 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 - T-4012 (11-16): reading 3 no (log/audit/t4012/read16.py). Fix/own works for left work; 31/32 failed lands never reach it, merge-queue q re-cut first. Next 9 AM 11-19 or row 42.
 
+- T-4573 (11-16): inbox.py unable_check + MOVE [id] TO acct; 41 checks. Lock In never offered (pace never holds chat). <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">Lane</span> stop flags not read (inbox_test bars stop paths). Owed: T-4571 site MOVE button; end to end on #41.
+
+- T-4454 (11-16): reset-due line in tick + site mark; reading itself held by lane meter_run_refusals (card ops/requests/t4454-reset-read-card.md). Guard refuses any script importing rules/personal_lane. Owed: Operator posts card.
+
 ## Lessons
-- T-4460+T-3684 5817998dd3 (11-16): sweep test pass (3 h, one listing) + tests/temp_clean.py. Owed: first live run's 'test temp pass' line; 7-day count. + site_t3219 cleanup owed after T-4455
 - T-4584 (11-16): runner_watch skips jobs the runner ended (status error + reason, no exit/output); first_error names the reason; metric land_checks_runner_ended. 27/534 results so. Also fixed main's board_notes_readers red (xc_sim via board_notes = T-4535's fix). Operator ticks.
 {% endraw %}
 

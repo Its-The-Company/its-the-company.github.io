@@ -5,7 +5,7 @@ section: "documents"
 description: "How other software companies keep documentation and diagrams current with code; free tools and paid services compared, licences checked; what step D2 should build."
 ---
 <div class="crumbs" role="navigation" aria-label="Back"><a class="back" href="{{ '/documents/restructuring/' | relative_url }}">← The Restructuring</a><a href="{{ '/documents/restructuring/07-documentation.html' | relative_url }}" rel="bookmark">Permanent link</a></div>
-<div class="page-head"><div class="kicker"><span class="kind grey">Restructuring</span><span>Day 23 · Fri Nov 13, 12:19 AM ET</span><span><code>documents/restructuring/07-documentation.md</code></span></div><h1>The Restructuring, documentation part: diagrams drawn from the code</h1><div class="byline"><img class="avatar" src="{{ '/assets/portraits/wrenna.svg' | relative_url }}" alt="Wrenna" title="Wrenna"><span>By <a href="{{ '/cast/wrenna.html' | relative_url }}">Wrenna</a>, Market and product researcher</span></div></div>
+<div class="page-head"><div class="kicker"><span class="kind grey">Restructuring</span><span>Day 26 · Mon Nov 16, 11:23 AM ET</span><span><code>documents/restructuring/07-documentation.md</code></span></div><h1>The Restructuring, documentation part: diagrams drawn from the code</h1><div class="byline"><img class="avatar" src="{{ '/assets/portraits/wrenna.svg' | relative_url }}" alt="Wrenna" title="Wrenna"><span>By <a href="{{ '/cast/wrenna.html' | relative_url }}">Wrenna</a>, Market and product researcher</span></div></div>
 
 <style>.doc-body{overflow-wrap:break-word}.doc-src{overflow-wrap:anywhere}.tbl[data-n~="1"] tr>:nth-child(1),.tbl[data-n~="2"] tr>:nth-child(2),.tbl[data-n~="3"] tr>:nth-child(3),.tbl[data-n~="4"] tr>:nth-child(4),.tbl[data-n~="5"] tr>:nth-child(5),.tbl[data-n~="6"] tr>:nth-child(6),.tbl[data-n~="7"] tr>:nth-child(7),.tbl[data-n~="8"] tr>:nth-child(8),.tbl[data-n~="9"] tr>:nth-child(9),.tbl[data-n~="10"] tr>:nth-child(10),.tbl[data-n~="11"] tr>:nth-child(11),.tbl[data-n~="12"] tr>:nth-child(12){min-width:0;overflow-wrap:normal}.tbl[data-o="1"] tr>:nth-child(1),.tbl[data-o="2"] tr>:nth-child(2),.tbl[data-o="3"] tr>:nth-child(3),.tbl[data-o="4"] tr>:nth-child(4),.tbl[data-o="5"] tr>:nth-child(5),.tbl[data-o="6"] tr>:nth-child(6),.tbl[data-o="7"] tr>:nth-child(7),.tbl[data-o="8"] tr>:nth-child(8),.tbl[data-o="9"] tr>:nth-child(9),.tbl[data-o="10"] tr>:nth-child(10),.tbl[data-o="11"] tr>:nth-child(11),.tbl[data-o="12"] tr>:nth-child(12){position:sticky;right:0;overflow-wrap:normal;background:var(--page);box-shadow:-1px 0 var(--line),-9px 0 8px -8px var(--sh)}</style>
 <div class="doc-body" markdown="1">
@@ -158,6 +158,32 @@ Read 2026-11-12, robots.txt first (`tools/terms_guard.py`); [API] quotes as raw 
 4. **Where on the site?** Recommendation: under Documents as "How the app works" (T-4230), promoted to the menu if you use it.
 5. **The site is public. May the app's inner diagrams be published?** Recommendation: yes; they hold no keys or personal data, and the site's existing scrub runs over them.
 6. **Should the four-point design step enter the Handbook?** Recommendation: yes, through phase 6's decisions; until then it is a working assumption for new app parts.
+
+## What D2 built
+
+Odalys, T-4240, 11:2x AM ET 11-16. Built on the recommendation above, with one change from the Investors: the page is not under Documents. Restructuring 29 was answered A with that change (an Investor, 11:24 AM ET 11-13, #297 c6858715463): "A new main site page, App, will contain all of this."
+
+**What was built.**
+
+- `tools/site/how_it_works.py`, the company's own generator, part of the site generator. Our Python, no new install. It writes Mermaid text; the site's vendored Mermaid 12.2.0 (MIT, licence served beside it) draws it in the reader's browser. Nothing GPL, no paid service, no model.
+- The App page, `/app/`, a tab of the site's top bar after Reports. It shows the overview, then the seven diagrams of the table above, each with the same facts as a plain numbered list under it, and names the commit it was drawn from. Its first slice (diagrams 1, 2 and 4) landed under Documents in 15e820baff (7:41 AM ET 11-13); diagrams 3, 5, 6 and 7 in 528e4bb390 (7:54 AM ET 11-13); the move to App in T-4240's commit of 11-16. The old Documents address answers with a refresh to `/app/`, and Documents no longer lists it.
+- The hand-written half in `pywidget/docs/how-it-works/`, the folder [`03-structure.md`](03-structure.html) section 5 named, confirmed as it stands: `overview.md` and one file per diagram. Each box is "## name", a few plain sentences written by a person, "anchor: file name" and "checked: fingerprint". 61 anchors today.
+- `tests/site_how_it_works_test.py` (53 checks), and the top-bar and App checks in `tests/site_test.sh`.
+
+**What it reads.** The four sources listed above, all on each build, and the hand-written half beside them:
+
+- targets and their dependencies from `xcodegen dump --type json` of `pywidget/ios/project.yml`;
+- the Swift in `App/`, `Shared/` and `Widget/` by a line scan: each SwiftUI view (49 in `App/` today, 41 SwiftUI and 8 UIKit views wrapped for SwiftUI), which screen opens which, and every file that opens the shared folder, Documents, Application Support, Caches, settings or the Keychain; `swiftc -dump-parse` was not needed;
+- the bridging header's includes, and every module of `pywidget` and `_pywidget_runtime` in `App/Runtime/` with Python's `ast`: public names and imports;
+- `StoreKit/PyWidget.storekit`, `pywidget/runtime/pro-flags.json` and the entitlements file.
+
+**How it is drawn again when the code changes.** The site is rebuilt every 15 minutes by `tools/site_publish.sh` (the jobs loop, 900 s), so each landing on main is redrawn within one round. On each build every anchor is resolved against the code and its lines fingerprinted (the first 12 hex of SHA-256):
+
+- a new view, module, storage user or target is drawn by itself;
+- an explanation whose fingerprint differs is marked on the page "The code changed after this was last checked." until a person re-reads it and copies the new fingerprint (`python3 tools/site/how_it_works.py` prints them). At this build 19 of the 61 are marked; the explanations were not re-read in T-4240;
+- an anchor whose file or name is gone fails `tests/site_how_it_works_test.py` on the real repository, so the change cannot land through the gate unnoticed, and the page says "Out of date".
+
+**Not built.** The recommendation's list of boxes added or removed since the last build: each build reads the code fresh and keeps no copy of the last one, so new boxes appear and gone anchors are named, but there is no change list. The four-point design step goes to the Handbook under T-4273.
 {% endraw %}
 
 </div>

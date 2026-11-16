@@ -234,6 +234,7 @@ var d=mk(g,'div','tile','');mk(d,'b','num',big);mk(d,'span','',sub?l+': '+sub:l)
 // T-2667 (T-2480, friesevan #41 c6651474906): each account's 5-hour and week bars, each against its own reset and its own
 // even-pace tick (JeremyFries #41 c6673789569: the accounts' weeks do not line up). The main account's from the status's meter;
 // a personal account's from personal.meters, which only the token's status carries (T-0944). Text goes in as textContent.
+// T-4454: a window whose reading is older than its own reset says "reset due, not read yet" in place of a reset already past.
 document.addEventListener('DOMContentLoaded',function(){var S=window.CompanySite;if(!S||!S.onStatus)return;
 function et(t){var d=new Date(t);return !t||isNaN(d)?'':d.toLocaleString('en-GB',{timeZone:'America/New_York',weekday:'short',hour:'2-digit',minute:'2-digit'}).replace(',','')}
 function pace(r,h){var e=Date.parse(r);return isNaN(e)?null:Math.max(0,Math.min(100,100-(e-Date.now())/(h*36e3)))}
@@ -241,7 +242,7 @@ function set(row,k,w,h){var c=row.querySelector('[data-w="'+k+'"]');if(!c)return
 var p=w&&typeof w.pct==='number'?w.pct:null,t=w?pace(w.resets_at,h):null,r=w&&w.resets_at?et(w.resets_at):'';
 i.style.width=(p===null?0:Math.max(0,Math.min(100,p)))+'%';i.className=p!==null&&p>=100?'hot':'';v.textContent=p===null?'–':Math.round(p)+'%';
 if(s){s.hidden=t===null;if(t!==null)s.style.left=t+'%'}
-if(n){n.className=p!==null&&p>=100?'meta lk-hotw':'meta';n.textContent=p===null?'no reading yet':!r?(p>=100?'at its limit · ':'')+'reset time not known':p>=100?'at its limit · lane paused to '+r:'resets '+r}return p}
+if(n){n.className=p!==null&&p>=100?'meta lk-hotw':'meta';n.textContent=p===null?'no reading yet':w.resets_at&&Date.parse(w.resets_at)<=Date.now()?'reset due, not read yet':!r?(p>=100?'at its limit · ':'')+'reset time not known':p>=100?'at its limit · lane paused to '+r:'resets '+r}return p}
 function draw(st){var ms=(st.personal||{}).meters,m=st.meter||{},z=0;
 [].forEach.call(document.querySelectorAll('.lk-acct[data-acct]'),function(row){var a=row.getAttribute('data-acct');
 if(a==='main'){if(m.five_hour)set(row,'five',m.five_hour,5);if(m.weekly)set(row,'week',m.weekly,168);return}
@@ -274,6 +275,8 @@ M3=['mergeq','mergetest','merging'],EX={coding:M3,review:M3,testq:['testing'].co
 // sent-back queue (home_look COLS, HL, retry_queue). T-4129: no Set aside stage.
 var CK=['being_built','waiting_to_merge','mac_tests','sim_queue','iphone_tests','sent_back'],
 COL={coding:'being_built',review:'being_built',testq:'being_built',testing:'mac_tests',mergeq:'waiting_to_merge',merging:'mac_tests',simq:'sim_queue',mergetest:'iphone_tests',parked:'sent_back',merged:'merged'},
+// T-4595 (friesevan #41 c6924443937): the Merge Queue chip's title, so it and Now's split mean the same thing
+MQT='Ready, waiting its turn to land. Home’s “in the merge queue” counts these and the one landing now (under Testing).',
 CL={being_built:'Building',waiting_to_merge:'Merge Queue',mac_tests:'Testing',sim_queue:'Simulator Queue',iphone_tests:'Simulator',sent_back:'Retry Queue',merged:'Merged'},
 MK={waiting_to_merge:'q',sim_queue:'q',sent_back:'f'},SN={review:'review',testq:'waiting for its own test run'},
 HW={coding:'Building',review:'Review',testq:'Waiting for its own test run',testing:'Testing',mergeq:'Merge Queue',merging:'Testing',simq:'Simulator Queue',mergetest:'Simulator',parked:'Retry Queue',merged:'Merged'};
@@ -356,7 +359,7 @@ if(x.min>=0){if(m.textContent)m.appendChild(document.createTextNode(' · '));mk(
 if(x.a){m.appendChild(document.createTextNode(' '));sc=mk(m,'span','lk-tag'+(x.sr?' lk-src':''),x.a);if(x.sr)sc.title='Runs on: '+x.a}
 if(x.c){sc=mk(m,'span','lk-cat',x.c);sc.title='Category: '+x.c}
 rt=mk(r,'span','lk-rt');if(x.id)mk(rt,'span','idb',x.id);if(x.n&&col==='being_built'&&x.n!==HN)mk(rt,'span','lk-nt',x.n);if(K3){K3.star(r,x.id);K3.aria(c)}
-track(c,x);past(c,x);goto(c,x);sc=mk(c,'span','lk-ch lk-stc');mark(sc,x.s);sc.appendChild(document.createTextNode(CL[col]));
+track(c,x);past(c,x);goto(c,x);sc=mk(c,'span','lk-ch lk-stc');if(col==='waiting_to_merge')sc.title=MQT;mark(sc,x.s);sc.appendChild(document.createTextNode(CL[col]));
 m=[x.y>=1?'retry '+x.y:'',SN[x.s],x.n===HN?HN:'',x.g].filter(Boolean).join(' · ');if(m)mk(c,'span','lk-mg',m);if(K3)K3.lin(c,x.id)}
 // the worker a card sorts by: its first, a card with none recorded last
 function who(x){var w=String((x.w||[])[0]||'');return /not recorded/.test(w)?'':w}
@@ -386,7 +389,7 @@ if(fl!=='all'&&!(fl==='queued'?qn:all[fl]))fl='all';cnt.all=vf.length+qv+nmg;
 // the chips filter, each with its count as before T-3996 (T-4007, friesevan #41 c6772135629); T-4313: Merged among
 // them, and a chip opens the part it shows if it was folded
 if(flt){flt.textContent='';[['all','All']].concat(qn?[['queued','Queued']]:[]).concat(CK.concat(['merged']).filter(function(k){return all[k]}).map(function(k){return[k,CL[k]]})).forEach(function(c){
-var b=mk(flt,'button','lk-ch');b.type='button';b.setAttribute('aria-pressed',fl===c[0]);b.onclick=function(){var d;fl=c[0];render();d=document.getElementById(fl==='queued'?'lk-qd':fl==='merged'?'lk-mgd':fl==='all'?'':'lk-fd');if(d)d.open=true};
+var b=mk(flt,'button','lk-ch');b.type='button';if(c[0]==='waiting_to_merge')b.title=MQT;b.setAttribute('aria-pressed',fl===c[0]);b.onclick=function(){var d;fl=c[0];render();d=document.getElementById(fl==='queued'?'lk-qd':fl==='merged'?'lk-mgd':fl==='all'?'':'lk-fd');if(d)d.open=true};
 if(c[0]!=='all')mk(b,'span',c[0]==='queued'||MK[c[0]]?'lk-qm':'lk-dot');b.appendChild(document.createTextNode(c[1]+' '));mk(b,'small','',String(cnt[c[0]]||0))})}
 // one part alone under a chip; the columns left to right (the Stage sort, ascending) put Queued, which comes before the
 // first of them, on top and Merged, the last stage, at the bottom

@@ -47,9 +47,8 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 - Open (mine, not on the board, from T-0515 H1): runtime stamps a daemon thread's writes with its origin run, so A's thread output cannot show in B.
 
-- T-1992 (01a58b94f): keeper stops show only in the exit code. T-2971 reviews my fix. Lesson: count a fix in the logs before calling a finding closed.
-- T-4022 11-16 (20c6fd02fa, ticked): T-1442 s9 strings PASS w/ findings; M1 Ines, L1-L3 Idris, board add refused (rule 14). Lesson: no 'iPhone 16/17' Simulators here (iPhone 18 Pro); a shared Mac's Xcode lock can eat 45 min and still end 75.
-- T-4020 11-16 (852fbb4257, ticked): T-3664 launcher editor model PASS w/ findings; M1 schemes in every build = T-4574, M2 Shortcut link = T-4575, L1-L4 = T-4576 (Idris). Lesson: Core's scheme is PyWidgetCore-Package; a URL check must <span title="A measured fact that holds a grade below a letter, however good the rest is.">cap</span> what is stored, not what was typed.
+- T-4031 11-16: T-0444 review PASS w/ findings; M1 inherited "as in" versions unchecked = T-4593 (Odalys); L1-L3 noted on T-0623. Lesson: when the app parses a registry string, check the <span title="The starting recipe a lane uses to look for ideas. G2, for example, starts from public datasets.">generator</span> validates that form, and the .txt it also writes.
+- T-4067 11-16: T-2715 review PASS w/ 4 Lows (host failure read as app failure; system switch unproven, no line; mid-push capture; script mktemp/watcher leak). Lesson: prove a #if DEBUG hook gone by grepping the Release binary with a Debug positive control (Debug code lives in PyWidget.debug.dylib); Release sim build needs PW_EDITOR_BENCH=YES past the legal-links gate.
 {% endraw %}
 
 

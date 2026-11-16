@@ -135,7 +135,8 @@ function meter(b, label, w, none) {
 b.bar.hidden = !w; b.bar.style.display = w ? 'flex' : 'none';
 if (!w) { b.head.textContent = none; return; }
 var p = Math.min(w.project_pct, w.pct), o = w.pct - p;
-b.head.textContent = label + ' ' + Math.round(w.pct) + '%' + (w.resets_at ? ', resets ' + et(w.resets_at) : '') + ': about ' + Math.round(p) + '% this project, about ' + Math.round(o) + '% other use' + split(p, w.pct);
+var due = w.resets_at && Date.parse(w.resets_at) <= Date.now();
+b.head.textContent = label + ' ' + Math.round(w.pct) + '%' + (due ? ', reset due, not read yet' : w.resets_at ? ', resets ' + et(w.resets_at) : '') + ': about ' + Math.round(p) + '% this project, about ' + Math.round(o) + '% other use' + split(p, w.pct);
 b.mine.style.width = p.toFixed(1) + '%'; b.rest.style.width = o.toFixed(1) + '%';
 }
 function split(p, all) {

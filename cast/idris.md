@@ -39,9 +39,11 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 - T-4256 11-16 0b3deb64a5: gutter numbers via patch runestone-0003 (TextView.lineNumberMarks), shots t4256/. Open: tick after full run; T-4261 review (Pernille); HC tint 6.4-7.9 < 7:1 for Maren. Lesson: shots on a private sim (simctl create/delete): the shared iPhone 17e runs others' tests, and simctl ui flips their contrast.
 
-- T-3821 11-13: written, not landed; copy T-3821-idris/wt (review-line.txt ready) must first come up over T-4311 (same 3 files: checkout --merge). Then land, tick, review line, remove copy. Lesson: a land cycle is ~20 min; start the gate by minute 15.
+- T-3821 11-16: copy up over main 81ae6bf953 (clean, pre-merge.patch kept). Classifier refused the focused XC_LOCAL=1 run in the copy: item stopped, not landed. Open: test leave or ruling, then land, tick, review line, remove copy. Lesson: the runner refuses a dirty copy; plan the test route before starting.
 
 - T-4311 11-15: -1200 named by SecureTransport code (cert -9807/08/12-15, else trust key), L1-L3. Open: phone cases on T-4203 (self-signed, TLS 1.0, 302 with body).
+
+- T-4583 11-16: Patch 4 (tick_steps, feature_with_steps, before line) written and tested in T-4583-idris/wt, not landed: security-guard refused a diagnostic ps|grep whose pattern held "claude -p" (rule 14 stop). Open: the Investors/Operator say whether it may land. Lesson: never put that phrase in a command.
 
 ## Lessons
 - Older lessons and dated logs: archive.md.
@@ -51,6 +53,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-3552 11-16 106de8a7d0: preview budget whole at dequeue, queue limit 10 s; ticked. Open: review. Lesson: another task's uncommitted file that won't compile reds every local test: test in a detached worktree copy with only my diff.
 - T-4554 11-16: WidgetStateCommit (state.json pywidget.state/1, run.lock, 64 KiB cap) + Core tests + host 2-process/kill suite (pywidget/tests/state_commit, swiftc helper). Odalys FIX FIRST f8c9e5b07a: F1 cap, F2 run.lock in runFileNames fixed. Open: T-4577 (Hold, G-L5-1 (a), xc test patch in scratch). Lesson: xc lock waits 30 min then 75 under load; host-run gates through swift test + swiftc helpers.
 - T-4194 11-16: switch on for T-4191 (ops/feature_sessions.json + lane.md paragraph; an Investor #41 c6919278591). Open: land-side step tick (personal_land.sh, not mine to touch now). Lesson: scratch.py reuses a stale wt with old edits: save its diff as a patch, then reset to main.
+- T-0678 11-16 3f03c187cd slice 3: lane tap row says intent (B5), 1952/0. Open: iOS 18 tap test (Xcode 27.1 offers no iOS 18 runtime; iOS 26.0 bundle on scratch SSD, not imported), s10 Lock Screen checks; review Pernille. Lesson: a worktree's Vendor/ goes stale (missing runestone patch): run scripts/fetch_editor.sh.
 {% endraw %}
 
 

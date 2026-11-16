@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-16T16:45:25.143478+00:00",
+ "at": "2026-11-16T16:48:38.587483+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -100,7 +100,7 @@
    "task": "[tools] T-4583 feature step ticking",
    "model": "opus",
    "started": "2026-11-16T15:55:21.544Z",
-   "seconds": 3003,
+   "seconds": 3197,
    "finished": null,
    "effort": "high"
   }
@@ -168,7 +168,7 @@
   "week_pct": 15.51,
   "usage_pct": 42.5,
   "work_pct": 69.1,
-  "read_at": "2026-11-16T16:45:00+00:00",
+  "read_at": "2026-11-16T16:48:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -350,7 +350,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-16T11:45:00-05:00",
+  "at": "2026-11-16T11:48:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -574,19 +574,14 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-16T16:45:11Z",
+  "at": "2026-11-16T16:48:38Z",
   "s": {
-   "T-3764": [
+   "T-4063": [
     "testing",
     "Mac Mini \u00b7 test",
     null
    ],
-   "T-4040": [
-    "testing",
-    "Mac Mini \u00b7 test",
-    null
-   ],
-   "T-4043": [
+   "T-4067": [
     "testing",
     "Mac Mini \u00b7 test",
     null
@@ -594,39 +589,72 @@
    "T-4583": [
     "testing",
     "its own tests, in its copy",
-    1794845831446
+    1794845798587
    ],
-   "T-4063": [
+   "T-4031": [
     "testq",
     "1st for a Simulator",
-    1794847511446
+    1794847598587
    ],
-   "T-4067": [
+   "T-4032": [
     "testq",
     "1st for a Simulator",
-    1794847511446
+    1794847598587
+   ],
+   "T-4048": [
+    "testq",
+    "2nd for a Simulator",
+    1794847598587
+   ],
+   "T-4049": [
+    "testq",
+    "2nd for a Simulator",
+    1794847598587
+   ],
+   "T-3764": [
+    "testq",
+    "4th for a Simulator",
+    1794847658587
+   ],
+   "T-4040": [
+    "testq",
+    "4th for a Simulator",
+    1794847658587
+   ],
+   "T-4043": [
+    "testq",
+    "4th for a Simulator",
+    1794847658587
    ]
   },
   "nm": {
+   "T-4063": "Check finished work before it ships",
+   "T-4067": "Check finished work before it ships",
+   "T-4583": "Turn on Feature mode and tick steps at the merge",
+   "T-4031": "Check finished work before it ships",
+   "T-4032": "Check finished work before it ships",
+   "T-4048": "Check finished work before it ships",
+   "T-4049": "Check finished work before it ships",
    "T-3764": "Make the iPad window test fail without the fix",
    "T-4040": "Check finished work before it ships",
-   "T-4043": "Check finished work before it ships",
-   "T-4583": "Turn on Feature mode and tick steps at the merge",
-   "T-4063": "Check finished work before it ships",
-   "T-4067": "Check finished work before it ships"
+   "T-4043": "Check finished work before it ships"
   },
   "wk": {
+   "T-4063": "Pernille",
+   "T-4067": "Pernille",
+   "T-4583": "Idris",
+   "T-4031": "Pernille",
+   "T-4032": "Pernille",
+   "T-4048": "Pernille",
+   "T-4049": "Pernille",
    "T-3764": "Idris",
    "T-4040": "Pernille",
    "T-4043": "Pernille",
-   "T-4583": "Idris",
-   "T-4063": "Pernille",
-   "T-4067": "Pernille",
    "T-4585": "Odalys"
   }
  },
  "ln": {
-  "at": "2026-11-16T16:45:11Z",
+  "at": "2026-11-16T16:48:38Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -640,11 +668,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 1224,
+    "conflicted": 1227,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 496
+    "parked": 500
    },
    "cur": [],
    "ld": [
@@ -654,21 +682,19 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-16T16:44:50Z",
-    "ld": 7.88,
+    "at": "2026-11-16T16:48:10Z",
+    "ld": 6.96,
     "c": 8,
-    "sb": 1,
+    "sb": 0,
     "dk": [
-     50.7,
+     49.9,
      228.3
     ],
     "ss": [
      184.9,
      953.7
     ],
-    "sn": [
-     "iPhone 18 Pro"
-    ]
+    "sn": []
    },
    "macbook": {
     "at": "2026-11-16T16:26:34Z",
@@ -697,8 +723,6 @@
    "w": "Operator",
    "a": "Evan",
    "sr": 1,
-   "m": "opus",
-   "e": "high",
    "t": "Work session \u2013 2 tasks",
    "at": "2026-11-16T11:42:17-05:00"
   },
@@ -706,8 +730,6 @@
    "w": "Operator",
    "a": "Evan",
    "sr": 1,
-   "m": "opus",
-   "e": "high",
    "t": "Work session \u2013 2 tasks",
    "at": "2026-11-16T11:42:17-05:00"
   },
@@ -715,8 +737,6 @@
    "w": "Operator",
    "a": "Evan",
    "sr": 1,
-   "m": "opus",
-   "e": "high",
    "t": "Work session \u2013 2 tasks",
    "at": "2026-11-16T11:42:17-05:00"
   },
@@ -724,8 +744,6 @@
    "w": "Operator",
    "a": "Jeremy",
    "sr": 1,
-   "m": "opus",
-   "e": "high",
    "t": "Work session \u2013 2 tasks",
    "at": "2026-11-16T11:41:02-05:00"
   },
@@ -733,8 +751,6 @@
    "w": "Operator",
    "a": "Jeremy",
    "sr": 1,
-   "m": "opus",
-   "e": "high",
    "t": "Work session \u2013 2 tasks",
    "at": "2026-11-16T11:41:01-05:00"
   },
@@ -742,8 +758,6 @@
    "w": "Operator",
    "a": "Jeremy",
    "sr": 1,
-   "m": "opus",
-   "e": "high",
    "t": "Work session \u2013 2 tasks",
    "at": "2026-11-16T11:41:32-05:00"
   }
@@ -768,10 +782,10 @@
   "main": 1,
   "lanes": 6,
   "total": 7,
-  "at": "11:45 AM",
+  "at": "11:48 AM",
   "why": "",
-  "at_iso": "2026-11-16T16:45:00+00:00",
+  "at_iso": "2026-11-16T16:48:00+00:00",
   "started": "10:53 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 1, started 10:53 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 6 sessions \u00b7 as of 11:45 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 1, started 10:53 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 6 sessions \u00b7 as of 11:48 AM ET</p></section>"
  }
 }

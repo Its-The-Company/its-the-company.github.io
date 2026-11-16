@@ -1,10 +1,10 @@
 {
  "schema": 1,
- "at": "2026-11-16T19:21:14.396356+00:00",
+ "at": "2026-11-16T19:24:19.322129+00:00",
  "session": {
-  "active": false,
-  "kind": "",
-  "started": null,
+  "active": true,
+  "kind": "work",
+  "started": "2026-11-16T14:21:14-05:00",
   "flow": [],
   "done": [
    {
@@ -90,34 +90,19 @@
   "landed": 49,
   "failed": 12
  },
- "workers": [],
- "who": "",
- "recent": [
+ "workers": [
   {
-   "name": "maren",
-   "task": "[design] T-4595 split Home waiting count",
+   "name": "odalys",
+   "task": "[tools] T-4443 card rules in queue check",
    "model": "opus",
-   "started": "2026-11-16T17:52:58.025Z",
-   "seconds": null,
-   "finished": "2026-11-16T19:07:49.864000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[tools] T-4583 feature step ticking",
-   "model": "opus",
-   "started": "2026-11-16T15:55:21.544Z",
-   "seconds": null,
-   "finished": "2026-11-16T18:15:00.488000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-3821 land large web bodies",
-   "model": "opus",
-   "started": "2026-11-16T15:56:22.324Z",
-   "seconds": null,
-   "finished": "2026-11-16T15:57:49.090000+00:00"
+   "started": "2026-11-16T19:23:14.320Z",
+   "seconds": 65,
+   "finished": null,
+   "effort": "high"
   }
  ],
+ "who": "Odalys",
+ "recent": [],
  "queue": {
   "runnable": [],
   "blocked": [],
@@ -165,12 +150,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-16T14:36:04-05:00",
+ "next_tick": null,
  "personal": {
   "week_pct": 17.69,
   "usage_pct": 44.6,
   "work_pct": 73.1,
-  "read_at": "2026-11-16T19:21:00+00:00",
+  "read_at": "2026-11-16T19:24:00+00:00",
   "running": [
    {
     "lane": "b2",
@@ -233,7 +218,7 @@
  "lock_in": {
   "on": false,
   "pool": 4,
-  "at": "2026-11-16T14:21:00-05:00",
+  "at": "2026-11-16T14:24:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -241,10 +226,23 @@
    "b": "double-spread"
   }
  },
- "next_tick_why": "last_tick",
+ "next_tick_why": "session",
  "idle": null,
- "pool": null,
+ "pool": {
+  "why": "Double Spread: 78% of the week left, paced to last until Wed 14:00, the week's halfway point; the machine allows 2 (new work waits: 14 tasks wait to merge (limit 12): 2 agents finish and merge...",
+  "n": 2,
+  "at": "2026-11-16T14:21:04.173374-05:00"
+ },
  "lanes": [
+  {
+   "name": "Odalys",
+   "state": "running",
+   "task": "[tools] T-4443 card rules in queue check",
+   "model": "opus",
+   "since": "2026-11-16T19:23:14.320Z",
+   "next": [],
+   "effort": "high"
+  },
   {
    "name": "Idris",
    "state": "next",
@@ -270,14 +268,6 @@
    "next": []
   },
   {
-   "name": "Odalys",
-   "state": "next",
-   "task": "A lane record main refused: failed...",
-   "model": null,
-   "since": null,
-   "next": []
-  },
-  {
    "name": "Wrenna",
    "state": "next",
    "task": "Wrenna, P2, T-2375 continuation (B-staged item 3...",
@@ -295,7 +285,19 @@
   }
  ],
  "tasks": {
-  "run": [],
+  "run": [
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Add the task card slots when a line is made",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-16T19:23:14.320Z",
+    "o": "c",
+    "task": "T-4443"
+   }
+  ],
+  "src": "plan",
   "open": [
    {
     "w": "Idris",
@@ -390,6 +392,10 @@
    "wait": 34,
    "blocked": 41,
    "you": 12
+  },
+  "fin": {
+   "n": 0,
+   "rows": []
   }
  },
  "qr": [
@@ -431,7 +437,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-16T19:21:14Z",
+  "at": "2026-11-16T19:24:01Z",
   "s": {
    "T-2691": [
     "testing",
@@ -468,7 +474,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-16T19:21:14Z",
+  "at": "2026-11-16T19:24:01Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -482,11 +488,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 1380,
-    "failed": 39,
+    "conflicted": 1382,
+    "failed": 42,
     "held": null,
     "retry": null,
-    "parked": 624
+    "parked": 627
    },
    "cur": [],
    "ld": [
@@ -496,12 +502,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-16T19:20:40Z",
-    "ld": 0.9,
+    "at": "2026-11-16T19:24:02Z",
+    "ld": 1.01,
     "c": 8,
     "sb": 1,
     "dk": [
-     22.6,
+     26.7,
      228.3
     ],
     "ss": [
@@ -528,6 +534,15 @@
  "operators": [
   {
    "w": "Operator",
+   "a": "Main plan",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session \u2013 1 task",
+   "at": "2026-11-16T14:21:14-05:00"
+  },
+  {
+   "w": "Operator",
    "a": "Jeremy's Account",
    "sr": 1,
    "m": "opus",
@@ -552,13 +567,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 0,
+  "main": 1,
   "lanes": 1,
-  "total": 1,
-  "at": "2:21 PM",
+  "total": 2,
+  "at": "2:24 PM",
   "why": "",
-  "at_iso": "2026-11-16T19:21:00+00:00",
-  "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 2:21 PM ET</p></section>"
+  "at_iso": "2026-11-16T19:24:00+00:00",
+  "started": "2:21 PM",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 1, started 2:21 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 2:24 PM ET</p></section>"
  }
 }

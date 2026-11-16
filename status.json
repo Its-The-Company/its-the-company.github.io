@@ -1,19 +1,19 @@
 {
  "schema": 1,
- "at": "2026-11-16T04:30:31.483155+00:00",
+ "at": "2026-11-16T04:33:32.162240+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-15T20:30:09-05:00",
   "flow": [
    {
-    "t": "T-0261",
-    "name": "Apply the chosen store caption wording",
+    "t": "T-4109",
+    "name": "Add a newest-first view to the Reports page",
     "acct": "Personal a",
     "steps": [
      {
       "s": "testq",
-      "at": 1794800484
+      "at": 1794803447
      }
     ]
    },
@@ -29,6 +29,14 @@
    }
   ],
   "done": [
+   {
+    "t": "T-0261",
+    "name": "Apply the chosen store caption wording",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794803443
+   },
    {
     "t": "T-3803",
     "name": "Post the time guard proposal and finish deadline readers",
@@ -102,17 +110,9 @@
     "steps": [],
     "end": "landed",
     "end_at": 1794785127
-   },
-   {
-    "t": "T-4282",
-    "name": "Measure real scripts inside the widget on phones",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794784610
    }
   ],
-  "landed": 13,
+  "landed": 14,
   "failed": 8
  },
  "workers": [
@@ -121,7 +121,7 @@
    "task": "[tools] T-4194 wire and switch on feature sessions",
    "model": "opus",
    "started": "2026-11-16T02:43:06.794Z",
-   "seconds": 6444,
+   "seconds": 6625,
    "finished": null,
    "effort": "high"
   }
@@ -164,7 +164,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 381,
+  "runnable_count": 380,
   "blocked_count": 76
  },
  "meter": {
@@ -213,57 +213,8 @@
   "week_pct": 4.62,
   "usage_pct": 26.2,
   "work_pct": 68.8,
-  "read_at": "2026-11-16T04:30:00+00:00",
+  "read_at": "2026-11-16T04:33:00+00:00",
   "running": [
-   {
-    "lane": "a",
-    "task": "T-4314",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Record what each personal session costs",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-15T22:32:55-05:00",
-    "n": "Evan",
-    "src": "plan-a"
-   },
-   {
-    "lane": "a",
-    "task": "T-4109",
-    "w": "Maren",
-    "k": "site",
-    "t": "Add a newest-first view to the Reports page",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-15T22:32:55-05:00",
-    "n": "Evan",
-    "d": 1,
-    "src": "plan-a"
-   },
-   {
-    "lane": "a",
-    "task": "T-4010",
-    "w": "Odalys",
-    "k": "site",
-    "t": "Rebuild This Session as a full flowchart",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-15T22:32:55-05:00",
-    "n": "Evan",
-    "src": "plan-a"
-   },
-   {
-    "lane": "a",
-    "task": "T-3976",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Show each drive's storage makeup on Home",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-15T22:32:55-05:00",
-    "n": "Evan",
-    "src": "plan-a"
-   },
    {
     "lane": "a2",
     "task": "T-4110",
@@ -274,6 +225,7 @@
     "e": "high",
     "at": "2026-11-15T22:37:27-05:00",
     "n": "Evan",
+    "d": 1,
     "src": "plan-a"
    },
    {
@@ -328,11 +280,7 @@
    {
     "lane": "a3",
     "task": "T-0261",
-    "w": "Maren",
-    "k": "design",
     "t": "Apply the chosen store caption wording",
-    "m": "opus",
-    "e": "high",
     "at": "2026-11-15T22:32:46-05:00",
     "n": "Evan",
     "d": 1,
@@ -367,7 +315,7 @@
   }
  ],
  "disk": {
-  "free_gb": 26,
+  "free_gb": 25,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -376,14 +324,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-15T23:27:00-05:00",
+   "at": "2026-11-15T23:33:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-15T23:30:00-05:00",
+  "at": "2026-11-15T23:33:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -537,6 +485,11 @@
   ],
   "done": [
    {
+    "w": "Maren",
+    "t": "The App Store shots now carry the agreed captions, and the first iPad shot shows the widget...",
+    "at": "2026-11-15T23:30:00-05:00"
+   },
+   {
     "w": "Odalys",
     "t": "The automatic disk cleaning can now remove finished task folders the Investors cleared on 11-15,...",
     "at": "2026-11-15T23:27:00-05:00"
@@ -545,22 +498,21 @@
     "w": "Odalys",
     "t": "The proposal for a guard that refuses 24-hour clock times in hand-typed posts is now with the...",
     "at": "2026-11-15T23:18:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "The 94% and the 33% came from two different accounts, not a counting error: the main account...",
-    "at": "2026-11-15T23:12:00-05:00"
    }
   ],
   "count": {
-   "next": 381,
+   "next": 380,
    "wait": 35,
    "blocked": 41,
    "you": 12
   },
   "fin": {
-   "n": 14,
+   "n": 15,
    "rows": [
+    [
+     "T-0261",
+     "Apply the chosen store..."
+    ],
     [
      "T-4560",
      "Let the disk cleaning act on..."
@@ -580,10 +532,6 @@
     [
      "T-4489",
      "Decide if the Simulator..."
-    ],
-    [
-     "T-4547",
-     "Delete safe leftovers on its..."
     ]
    ]
   }
@@ -627,22 +575,28 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-16T04:30:25Z",
+  "at": "2026-11-16T04:33:19Z",
   "s": {
+   "T-4109": [
+    "merging",
+    "Host checks on the Mac mini \u00b7 3 groups of tests done",
+    1794803479311
+   ],
    "T-4278": [
     "mergeq",
     "1st to merge",
-    1794803065030
+    1794803059311
    ],
-   "T-4109": [
-    "mergeq",
-    "2nd to merge",
-    1794803245030
-   ],
-   "T-0261": [
+   "T-4110": [
     "mergeq",
     "3rd to merge",
-    1794802045030
+    1794803599311
+   ],
+   "T-0261": [
+    "merged",
+    "on main 11:30 PM ET",
+    1794803433000,
+    ""
    ],
    "T-3803": [
     "merged",
@@ -676,8 +630,9 @@
    ]
   },
   "nm": {
-   "T-4278": "Move notification settings into the info panel",
    "T-4109": "Add a newest-first view to the Reports page",
+   "T-4278": "Move notification settings into the info panel",
+   "T-4110": "Chart the task queue size on Home",
    "T-0261": "Apply the chosen store caption wording",
    "T-3803": "Post the time guard proposal and finish deadline readers",
    "T-4400": "Find why pace count and meter disagree",
@@ -687,11 +642,11 @@
   }
  },
  "ln": {
-  "at": "2026-11-16T04:30:25Z",
+  "at": "2026-11-16T04:33:19Z",
   "mq": {
    "n": {
-    "checking": 0,
-    "inline": 3,
+    "checking": 1,
+    "inline": 2,
     "conflicted": 1,
     "failed": 0,
     "held": 0,
@@ -699,24 +654,33 @@
     "parked": 2
    },
    "m": {
-    "checking": null,
-    "inline": 6,
-    "conflicted": 1692,
+    "checking": 2,
+    "inline": 4,
+    "conflicted": 1695,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 921
+    "parked": 924
    },
-   "cur": [],
+   "cur": [
+    [
+     [
+      "T-4109"
+     ],
+     "Mac tests",
+     "Mac mini",
+     2
+    ]
+   ],
    "ld": [
-    37,
-    "2026-11-16T04:18:04Z"
+    38,
+    "2026-11-16T04:30:43Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-16T04:29:36Z",
-    "ld": 5.38,
+    "at": "2026-11-16T04:32:59Z",
+    "ld": 4.69,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -758,16 +722,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 3 tasks",
-   "at": "2026-11-15T22:32:55-05:00"
-  },
-  {
-   "w": "Operator",
-   "a": "Evan",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session \u2013 1 task",
+   "t": "Work session",
    "at": "2026-11-15T22:37:27-05:00"
   },
   {
@@ -800,12 +755,12 @@
  ],
  "agents_now": {
   "main": 1,
-  "lanes": 3,
-  "total": 4,
-  "at": "11:30 PM",
+  "lanes": 2,
+  "total": 3,
+  "at": "11:33 PM",
   "why": "",
-  "at_iso": "2026-11-16T04:30:00+00:00",
+  "at_iso": "2026-11-16T04:33:00+00:00",
   "started": "8:30 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 1, started 8:30 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 11:30 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 1, started 8:30 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 11:33 PM ET</p></section>"
  }
 }

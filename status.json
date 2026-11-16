@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-16T20:14:54.456468+00:00",
+ "at": "2026-11-16T20:17:52.638242+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -90,19 +90,17 @@
   "landed": 51,
   "failed": 12
  },
- "workers": [
+ "workers": [],
+ "who": "",
+ "recent": [
   {
    "name": "odalys",
    "task": "[tools] T-3992 recut parked lane-a batch",
    "model": "opus",
    "started": "2026-11-16T19:25:02.030Z",
-   "seconds": 2992,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Odalys",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-16T20:15:47.906000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[tools] T-4443 card rules in queue check",
@@ -164,7 +162,7 @@
   "week_pct": 17.69,
   "usage_pct": 44.6,
   "work_pct": 73.1,
-  "read_at": "2026-11-16T20:14:00+00:00",
+  "read_at": "2026-11-16T20:18:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -267,14 +265,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-16T15:10:00-05:00",
+   "at": "2026-11-16T15:17:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 4,
-  "at": "2026-11-16T15:14:00-05:00",
+  "at": "2026-11-16T15:18:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -290,15 +288,6 @@
   "at": "2026-11-16T14:21:04.173374-05:00"
  },
  "lanes": [
-  {
-   "name": "Odalys",
-   "state": "running",
-   "task": "[tools] T-3992 recut parked lane-a batch",
-   "model": "opus",
-   "since": "2026-11-16T19:25:02.030Z",
-   "next": [],
-   "effort": "high"
-  },
   {
    "name": "Idris",
    "state": "next",
@@ -324,6 +313,14 @@
    "next": []
   },
   {
+   "name": "Odalys",
+   "state": "next",
+   "task": "A lane record main refused: failed...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
    "name": "Wrenna",
    "state": "next",
    "task": "Wrenna, P2, T-2375 continuation (B-staged item 3...",
@@ -341,18 +338,7 @@
   }
  ],
  "tasks": {
-  "run": [
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Clear and merge the unfinished merge fixes",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-16T19:25:02.030Z",
-    "o": "c",
-    "task": "T-3992"
-   }
-  ],
+  "run": [],
   "src": "plan",
   "open": [
    {
@@ -506,51 +492,72 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-16T20:14:39Z",
+  "at": "2026-11-16T20:17:26Z",
   "s": {
-   "T-4295": [
-    "testing",
-    "its own tests, in its copy",
-    1794857619554
-   ],
    "T-4068": [
     "testq",
     "1st for a Simulator",
-    1794859419554
+    1794859406544
    ],
    "T-4076": [
     "testq",
     "1st for a Simulator",
-    1794859419554
+    1794859406544
+   ],
+   "T-4031": [
+    "testq",
+    "3rd for a Simulator",
+    1794860246544
+   ],
+   "T-4032": [
+    "testq",
+    "3rd for a Simulator",
+    1794860246544
+   ],
+   "T-4058": [
+    "testq",
+    "3rd for a Simulator",
+    1794860246544
+   ],
+   "T-4060": [
+    "testq",
+    "3rd for a Simulator",
+    1794860246544
    ],
    "T-4022": [
     "testq",
-    "3rd for a Simulator",
-    1794856899554
+    "4th for a Simulator",
+    1794856886544
    ],
    "T-4020": [
     "testq",
-    "4th for a Simulator",
-    1794856899554
+    "5th for a Simulator",
+    1794856886544
    ],
    "T-4048": [
     "testq",
-    "5th for a Simulator",
-    1794856899554
+    "6th for a Simulator",
+    1794856886544
    ]
   },
   "nm": {
-   "T-4295": "Let Chat messages pick model, effort and account",
    "T-4068": "Check finished work before it ships",
    "T-4076": "Check finished work before it ships",
+   "T-4031": "Check finished work before it ships",
+   "T-4032": "Check finished work before it ships",
+   "T-4058": "Check finished work before it ships",
+   "T-4060": "Check finished work before it ships",
    "T-4022": "Check finished work before it ships",
    "T-4020": "Check finished work before it ships",
    "T-4048": "Check finished work before it ships"
   },
   "wk": {
-   "T-4295": "Odalys",
    "T-4068": "Pernille",
    "T-4076": "Pernille",
+   "T-4031": "Pernille",
+   "T-4032": "Pernille",
+   "T-4058": "Idris",
+   "T-4060": "Pernille",
    "T-4022": "Pernille",
    "T-4020": "Pernille",
    "T-4048": "Pernille",
@@ -560,7 +567,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-16T20:14:39Z",
+  "at": "2026-11-16T20:17:26Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -574,11 +581,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 1433,
+    "conflicted": 1436,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 638
+    "parked": 641
    },
    "cur": [],
    "ld": [
@@ -588,12 +595,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-16T20:14:40Z",
-    "ld": 31.83,
+    "at": "2026-11-16T20:16:59Z",
+    "ld": 20.11,
     "c": 8,
     "sb": 1,
     "dk": [
-     25.7,
+     26.0,
      228.3
     ],
     "ss": [
@@ -624,7 +631,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 5 tasks",
+   "t": "Work session",
    "at": "2026-11-16T14:48:24-05:00"
   },
   {
@@ -672,13 +679,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 1,
+  "main": 0,
   "lanes": 3,
-  "total": 4,
-  "at": "3:14 PM",
+  "total": 3,
+  "at": "3:18 PM",
   "why": "",
-  "at_iso": "2026-11-16T20:14:00+00:00",
+  "at_iso": "2026-11-16T20:18:00+00:00",
   "started": "2:21 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 1, started 2:21 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 3:14 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 2:21 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 3:18 PM ET</p></section>"
  }
 }

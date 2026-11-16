@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-16T10:11:28.459469+00:00",
+ "at": "2026-11-16T10:15:01.648208+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -123,7 +123,7 @@
    "task": "[release] T-2943 upload gate build 7",
    "model": "opus",
    "started": "2026-11-16T09:44:58.790Z",
-   "seconds": 1589,
+   "seconds": 1802,
    "finished": null,
    "effort": "high"
   },
@@ -132,7 +132,7 @@
    "task": "[design] T-4293 Home skipped stages",
    "model": "opus",
    "started": "2026-11-16T09:45:15.190Z",
-   "seconds": 1573,
+   "seconds": 1786,
    "finished": null,
    "effort": "high"
   },
@@ -141,7 +141,7 @@
    "task": "[tools] T-4194 land the wiring split",
    "model": "opus",
    "started": "2026-11-16T09:47:47.943Z",
-   "seconds": 1420,
+   "seconds": 1633,
    "finished": null,
    "effort": "high"
   }
@@ -209,7 +209,7 @@
   "week_pct": 9.1,
   "usage_pct": 32.4,
   "work_pct": 76.5,
-  "read_at": "2026-11-16T10:12:00+00:00",
+  "read_at": "2026-11-16T10:15:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -246,7 +246,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-16T05:12:00-05:00",
+  "at": "2026-11-16T05:15:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -486,51 +486,51 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-16T10:11:28Z",
+  "at": "2026-11-16T10:14:48Z",
   "s": {
    "T-3552": [
     "mergetest",
     "Xcode checks on the MacBook, 1st to merge",
-    1794823048459
+    1794823068082
    ],
    "T-0687": [
     "mergetest",
     "Xcode checks on the MacBook, 2nd to merge",
-    1794823348459
+    1794823368082
    ],
    "T-0972": [
     "mergetest",
     "Xcode checks on the MacBook, 3rd to merge",
-    1794823588459
+    1794823548082
+   ],
+   "T-2943": [
+    "testing",
+    "Mac Mini \u00b7 test",
+    null
    ],
    "T-4293": [
     "testing",
     "its own tests, in its copy",
-    1794823048459
-   ],
-   "T-2943": [
-    "testing",
-    "its own tests, in its copy",
-    1794823648459
+    1794824028082
    ]
   },
   "nm": {
    "T-3552": "Test gallery and widget runs together with a stalled sensor",
    "T-0687": "Run network fetches inside the extension on the Simulator",
    "T-0972": "Decide how a script's refresh path is chosen on send",
-   "T-4293": "Show skipped and brief stages on Home",
-   "T-2943": "Send up the gate build and confirm it stays internal"
+   "T-2943": "Send up the gate build and confirm it stays internal",
+   "T-4293": "Show skipped and brief stages on Home"
   },
   "wk": {
    "T-3552": "Idris",
    "T-0687": "Idris",
    "T-0972": "Idris",
-   "T-4293": "Maren",
-   "T-2943": "Idris"
+   "T-2943": "Idris",
+   "T-4293": "Maren"
   }
  },
  "ln": {
-  "at": "2026-11-16T10:11:28Z",
+  "at": "2026-11-16T10:14:48Z",
   "mq": {
    "n": {
     "checking": 3,
@@ -542,13 +542,13 @@
     "parked": 8
    },
    "m": {
-    "checking": 9,
+    "checking": 12,
     "inline": null,
-    "conflicted": 2033,
+    "conflicted": 2036,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 132
+    "parked": 136
    },
    "cur": [
     [
@@ -557,7 +557,7 @@
      ],
      "iPhone app tests",
      "MacBook",
-     14
+     17
     ],
     [
      [
@@ -565,7 +565,7 @@
      ],
      "iPhone app tests",
      "MacBook",
-     9
+     12
     ],
     [
      [
@@ -573,7 +573,7 @@
      ],
      "iPhone app tests",
      "MacBook",
-     5
+     9
     ]
    ],
    "ld": [
@@ -583,17 +583,19 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-16T10:11:47Z",
-    "ld": 35.01,
+    "at": "2026-11-16T10:14:49Z",
+    "ld": 26.97,
     "c": 8,
+    "sb": 0,
     "dk": [
-     16.9,
+     17.1,
      228.3
     ],
     "ss": [
      187.2,
      953.7
-    ]
+    ],
+    "sn": []
    },
    "macbook": {
     "at": "2026-11-16T10:08:09Z",
@@ -638,10 +640,10 @@
   "main": 3,
   "lanes": 0,
   "total": 3,
-  "at": "5:12 AM",
+  "at": "5:15 AM",
   "why": "",
-  "at_iso": "2026-11-16T10:12:00+00:00",
+  "at_iso": "2026-11-16T10:15:00+00:00",
   "started": "4:43 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 4:43 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 5:12 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 4:43 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 5:15 AM ET</p></section>"
  }
 }

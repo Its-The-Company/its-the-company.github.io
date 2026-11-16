@@ -1,23 +1,19 @@
 {
  "schema": 1,
- "at": "2026-11-16T13:34:27.876210+00:00",
+ "at": "2026-11-16T13:37:32.053202+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-16T08:19:11-05:00",
   "flow": [
    {
-    "t": "T-4558",
-    "name": "Choose which premades get buttons",
+    "t": "T-4554",
+    "name": "One state commit per widget across app and widget",
     "acct": "Personal a",
     "steps": [
      {
       "s": "testq",
-      "at": 1794828931
-     },
-     {
-      "s": "macbook",
-      "at": 1794832835
+      "at": 1794836164
      }
     ]
    },
@@ -45,6 +41,22 @@
    }
   ],
   "done": [
+   {
+    "t": "T-4558",
+    "name": "Choose which premades get buttons",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794836142
+   },
+   {
+    "t": "T-3970",
+    "name": "Check finished work before it ships",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794836112
+   },
    {
     "t": "T-4256",
     "name": "Lighten the marks and colour their line numbers",
@@ -105,41 +117,22 @@
     "steps": [],
     "end": "landed",
     "end_at": 1794826185
-   },
-   {
-    "t": "T-0687",
-    "name": "Run network fetches inside the extension on the Simulator",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794825381
-   },
-   {
-    "t": "T-0972",
-    "name": "Decide how a script's refresh path is chosen on send",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "failed",
-    "end_at": 1794824526,
-    "why": "did not merge cleanly"
    }
   ],
-  "landed": 32,
+  "landed": 34,
   "failed": 2
  },
- "workers": [
+ "workers": [],
+ "who": "",
+ "recent": [
   {
    "name": "odalys",
    "task": "[tools] T-4402 ledger rows need prev",
    "model": "opus",
    "started": "2026-11-16T13:20:37.912Z",
-   "seconds": 829,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Odalys",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-16T13:34:37.699000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[ops] T-4420 read OPT-128",
@@ -160,7 +153,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 380,
+  "runnable_count": 378,
   "blocked_count": 76
  },
  "meter": {
@@ -209,7 +202,7 @@
   "week_pct": 10.02,
   "usage_pct": 33.4,
   "work_pct": 68.9,
-  "read_at": "2026-11-16T13:34:00+00:00",
+  "read_at": "2026-11-16T13:37:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -301,6 +294,7 @@
     "e": "high",
     "at": "2026-11-16T06:07:05-05:00",
     "n": "Jeremy",
+    "d": 1,
     "src": "plan-b"
    }
   ]
@@ -339,7 +333,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-16T08:34:00-05:00",
+  "at": "2026-11-16T08:37:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -355,15 +349,6 @@
   "at": "2026-11-16T08:18:16.297874-05:00"
  },
  "lanes": [
-  {
-   "name": "Odalys",
-   "state": "running",
-   "task": "[tools] T-4402 ledger rows need prev",
-   "model": "opus",
-   "since": "2026-11-16T13:20:37.912Z",
-   "next": [],
-   "effort": "high"
-  },
   {
    "name": "Idris",
    "state": "next",
@@ -389,6 +374,14 @@
    "next": []
   },
   {
+   "name": "Odalys",
+   "state": "next",
+   "task": "A lane record main refused: failed...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
    "name": "Wrenna",
    "state": "next",
    "task": "Wrenna, P2, T-2375 continuation (B-staged item 3...",
@@ -406,18 +399,7 @@
   }
  ],
  "tasks": {
-  "run": [
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Have the audit ledger's writers fill in prev",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-16T13:20:37.912Z",
-    "o": "c",
-    "task": "T-4402"
-   }
-  ],
+  "run": [],
   "src": "plan",
   "open": [
    {
@@ -493,30 +475,38 @@
   ],
   "done": [
    {
+    "w": "Pernille",
+    "t": "An independent check of the code that copies a person's chosen launcher apps into each launcher...",
+    "at": "2026-11-16T08:35:00-05:00"
+   },
+   {
+    "w": "Maren",
+    "t": "The Habit tracker widget gets a Done today button for each habit it shows, so a person can log a...",
+    "at": "2026-11-16T08:35:00-05:00"
+   },
+   {
     "w": "Odalys",
     "t": "The tool that applies the queue audit's verdicts now refuses any new verdict row that does not...",
     "at": "2026-11-16T08:34:00-05:00"
-   },
-   {
-    "w": "Idris",
-    "t": "In the editor, the line number next to a line with a problem now turns amber for a warning or...",
-    "at": "2026-11-16T08:34:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "After the one limit, work waiting to merge fell from 215 to under 20 in a day and stayed low...",
-    "at": "2026-11-16T08:32:00-05:00"
    }
   ],
   "count": {
-   "next": 380,
+   "next": 378,
    "wait": 34,
    "blocked": 42,
    "you": 12
   },
   "fin": {
-   "n": 3,
+   "n": 5,
    "rows": [
+    [
+     "T-3970",
+     "Check finished work before..."
+    ],
+    [
+     "T-4558",
+     "Choose which premades get..."
+    ],
     [
      "T-4402",
      "Have the audit ledger's..."
@@ -571,87 +561,68 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-16T13:34:11Z",
+  "at": "2026-11-16T13:37:23Z",
   "s": {
-   "T-4256": [
-    "merging",
-    "Merging onto main",
-    1794836051451
-   ],
-   "T-3970": [
-    "mergeq",
-    "1st to merge",
-    1794828611451
-   ],
-   "T-4558": [
-    "mergeq",
-    "2nd to merge",
-    1794830471451
-   ],
    "T-4554": [
-    "mergeq",
-    "3rd to merge",
-    1794831551451
+    "merging",
+    "Host checks on the Mac mini",
+    1794836183037
    ],
    "T-4555": [
     "mergeq",
-    "4th to merge",
-    1794831971451
+    "1st to merge",
+    1794831983037
    ],
    "T-4022": [
     "mergeq",
-    "5th to merge",
-    1794832211451
+    "2nd to merge",
+    1794832223037
    ],
    "T-4020": [
     "mergeq",
-    "6th to merge",
-    1794832271451
+    "3rd to merge",
+    1794832283037
    ],
    "T-4564": [
-    "mergeq",
-    "7th to merge",
-    1794835931451
+    "mergetest",
+    "Xcode checks on the MacBook, 4th to merge",
+    1794836123037
    ],
    "T-4565": [
-    "mergeq",
-    "7th to merge",
-    1794835931451
+    "mergetest",
+    "Xcode checks on the MacBook, 4th to merge",
+    1794836123037
    ],
    "T-4529": [
-    "mergeq",
-    "14th to merge",
-    1794835451451
+    "mergetest",
+    "Xcode checks on the MacBook, 11th to merge",
+    1794836123037
    ],
    "T-4297": [
-    "mergeq",
-    "14th to merge",
-    1794835451451
+    "mergetest",
+    "Xcode checks on the MacBook, 11th to merge",
+    1794836123037
    ],
    "T-4286": [
+    "mergetest",
+    "Xcode checks on the MacBook, 11th to merge",
+    1794836123037
+   ],
+   "T-4558": [
     "mergeq",
-    "14th to merge",
-    1794835451451
+    "13th to merge",
+    1794836243037
    ],
-   "T-3745": [
-    "testing",
-    "Mac Mini \u00b7 test",
-    null
+   "T-3970": [
+    "mergeq",
+    "13th to merge",
+    1794836243037
    ],
-   "T-4433": [
-    "testing",
-    "Mac Mini \u00b7 test",
-    null
-   ],
-   "T-4435": [
-    "testing",
-    "Mac Mini \u00b7 test",
-    null
-   ],
-   "T-4402": [
-    "testing",
-    "its own tests, in its copy",
-    1794836051451
+   "T-4256": [
+    "merged",
+    "on main 8:34 AM ET",
+    1794836049000,
+    ""
    ],
    "T-4276": [
     "merged",
@@ -661,9 +632,6 @@
    ]
   },
   "nm": {
-   "T-4256": "Lighten the marks and colour their line numbers",
-   "T-3970": "Check finished work before it ships",
-   "T-4558": "Choose which premades get buttons",
    "T-4554": "One state commit per widget across app and widget",
    "T-4555": "Draw the When tapped setting",
    "T-4022": "Check finished work before it ships",
@@ -673,16 +641,12 @@
    "T-4529": "Give Home the dispatcher's real start order",
    "T-4297": "Personal account stopped and its work parked",
    "T-4286": "Check an imported font draws in a widget",
-   "T-3745": "Stop the Pro store test timing out",
-   "T-4433": "Confirm the Lock Screen refresh tap first",
-   "T-4435": "Draw the wrapped refresh glyph on both runtimes",
-   "T-4402": "Have the audit ledger's writers fill in prev",
+   "T-4558": "Choose which premades get buttons",
+   "T-3970": "Check finished work before it ships",
+   "T-4256": "Lighten the marks and colour their line numbers",
    "T-4276": "Run Evan's account on the audit without the pause"
   },
   "wk": {
-   "T-4256": "Idris",
-   "T-3970": "Pernille",
-   "T-4558": "Maren",
    "T-4554": "Idris",
    "T-4555": "Maren",
    "T-4022": "Pernille",
@@ -692,20 +656,20 @@
    "T-4529": "Odalys",
    "T-4297": "Ines",
    "T-4286": "Idris",
-   "T-3745": "Idris",
-   "T-4433": "Idris",
-   "T-4435": "Idris",
-   "T-4402": "Odalys",
+   "T-4558": "Maren",
+   "T-3970": "Pernille",
+   "T-4256": "Idris",
    "T-4276": "Operator",
+   "T-4402": "Odalys",
    "T-4420": "Operator"
   }
  },
  "ln": {
-  "at": "2026-11-16T13:34:11Z",
+  "at": "2026-11-16T13:37:23Z",
   "mq": {
    "n": {
-    "checking": 1,
-    "inline": 11,
+    "checking": 6,
+    "inline": 5,
     "conflicted": 1,
     "failed": 0,
     "held": 0,
@@ -713,54 +677,76 @@
     "parked": 10
    },
    "m": {
-    "checking": 0,
-    "inline": 63,
-    "conflicted": 2236,
+    "checking": 2,
+    "inline": 66,
+    "conflicted": 2239,
     "failed": null,
     "held": null,
-    "retry": 4,
-    "parked": 305
+    "retry": 7,
+    "parked": 309
    },
    "cur": [
     [
      [
-      "T-4256"
+      "T-4554"
      ],
-     "going onto main",
+     "Mac tests",
      "Mac mini",
-     0
+     1
+    ],
+    [
+     [
+      "T-4564"
+     ],
+     "iPhone app tests",
+     "MacBook",
+     2
+    ],
+    [
+     [
+      "T-4565"
+     ],
+     "iPhone app tests",
+     "MacBook",
+     2
+    ],
+    [
+     [
+      "T-4529"
+     ],
+     "iPhone app tests",
+     "MacBook",
+     2
     ]
    ],
    "ld": [
-    22,
-    "2026-11-16T12:27:57Z"
+    25,
+    "2026-11-16T13:35:42Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-16T13:34:12Z",
-    "ld": 22.38,
+    "at": "2026-11-16T13:37:23Z",
+    "ld": 14.4,
     "c": 8,
-    "sb": 1,
+    "sb": 0,
     "dk": [
-     46.6,
+     47.4,
      228.3
     ],
     "ss": [
-     185.1,
+     185.0,
      953.7
     ],
-    "sn": [
-     "iPhone 17e"
-    ]
+    "sn": []
    },
    "macbook": {
-    "at": "2026-11-16T13:21:00Z",
-    "ld": 1.08,
+    "at": "2026-11-16T13:35:22Z",
+    "ld": 0.38,
     "c": 12,
     "sb": 0,
     "dk": [
-     334.7,
+     334.0,
      926.4
     ],
     "sn": []
@@ -813,13 +799,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 1,
+  "main": 0,
   "lanes": 2,
-  "total": 3,
-  "at": "8:34 AM",
+  "total": 2,
+  "at": "8:37 AM",
   "why": "",
-  "at_iso": "2026-11-16T13:34:00+00:00",
+  "at_iso": "2026-11-16T13:37:00+00:00",
   "started": "8:19 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 1, started 8:19 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 8:34 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0, started 8:19 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 8:37 AM ET</p></section>"
  }
 }

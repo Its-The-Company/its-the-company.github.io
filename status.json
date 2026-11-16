@@ -1,12 +1,20 @@
 {
  "schema": 1,
- "at": "2026-11-16T21:28:51.255403+00:00",
+ "at": "2026-11-16T21:32:02.007077+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-16T15:35:16-05:00",
   "flow": [],
   "done": [
+   {
+    "t": "T-4625",
+    "name": "Put every remaining efficiency and site line first",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794864648
+   },
    {
     "t": "T-4401",
     "name": "Keep the parked count test off the live mode file",
@@ -78,17 +86,9 @@
     "steps": [],
     "end": "landed",
     "end_at": 1794862231
-   },
-   {
-    "t": "T-4615",
-    "name": "Widget taps on iPad reuse an open window",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794862157
    }
   ],
-  "landed": 57,
+  "landed": 58,
   "failed": 12
  },
  "workers": [
@@ -97,7 +97,7 @@
    "task": "[tools] T-4583 land feature-step ticking",
    "model": "opus",
    "started": "2026-11-16T20:38:05.386Z",
-   "seconds": 3045,
+   "seconds": 3236,
    "finished": null,
    "effort": "high"
   },
@@ -106,7 +106,7 @@
    "task": "[tools] T-4617 quick checks before Xcode slot",
    "model": "opus",
    "started": "2026-11-16T20:38:15.991Z",
-   "seconds": 3035,
+   "seconds": 3226,
    "finished": null,
    "effort": "high"
   },
@@ -115,7 +115,7 @@
    "task": "[tools] T-4103 switch on queue-check sweep",
    "model": "opus",
    "started": "2026-11-16T21:15:08.438Z",
-   "seconds": 822,
+   "seconds": 1013,
    "finished": null,
    "effort": "high"
   },
@@ -124,7 +124,7 @@
    "task": "[tools] T-4196 grouped iPhone runs, rest",
    "model": "opus",
    "started": "2026-11-16T21:27:29.300Z",
-   "seconds": 81,
+   "seconds": 272,
    "finished": null,
    "effort": "high"
   },
@@ -133,7 +133,7 @@
    "task": "[tools] T-4451 daily model read of flagged lines",
    "model": "opus",
    "started": "2026-11-16T21:27:37.384Z",
-   "seconds": 73,
+   "seconds": 264,
    "finished": null,
    "effort": "high"
   }
@@ -143,26 +143,26 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 408,
+  "runnable_count": 410,
   "blocked_count": 75
  },
  "meter": {
   "five_hour": {
-   "pct": 10.0,
+   "pct": 11.0,
    "resets_at": "2026-11-16T18:10:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-16T16:22:44.613995-05:00",
+   "read_at": "2026-11-16T16:30:36.129005-05:00",
    "source": "live",
-   "left": 90.0,
+   "left": 89.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 22.0,
+   "pct": 23.0,
    "resets_at": "2026-11-22T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-16T16:22:44.613995-05:00",
+   "read_at": "2026-11-16T16:30:36.129005-05:00",
    "source": "live",
-   "left": 78.0,
+   "left": 77.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
@@ -172,7 +172,7 @@
    "read_at": "2026-11-16T15:34:56.358895-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-16T16:22:44.613995-05:00"
+  "read_at": "2026-11-16T16:30:36.129005-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -192,7 +192,7 @@
   "week_pct": 18.58,
   "usage_pct": 45.8,
   "work_pct": 73.2,
-  "read_at": "2026-11-16T21:28:00+00:00",
+  "read_at": "2026-11-16T21:32:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -325,23 +325,23 @@
   }
  ],
  "disk": {
-  "free_gb": 20,
+  "free_gb": 19,
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 185
+   "free_gb": 184
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-16T16:22:00-05:00",
+   "at": "2026-11-16T16:32:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 4,
-  "at": "2026-11-16T16:28:00-05:00",
+  "at": "2026-11-16T16:32:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -352,7 +352,7 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Double Spread: 78% of the week left, paced to last until Wed 14:00, the week's halfway point; the machine allows 2 (at its floor: load 34.0 a core is over 10)",
+  "why": "Double Spread: 77% of the week left, paced to last until Wed 14:00, the week's halfway point; the machine allows 2 (at its floor: load 34.0 a core is over 10)",
   "n": 2,
   "at": "2026-11-16T15:34:56.773320-05:00"
  },
@@ -552,7 +552,7 @@
    }
   ],
   "count": {
-   "next": 408,
+   "next": 410,
    "wait": 35,
    "blocked": 40,
    "you": 12
@@ -622,13 +622,8 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-16T21:28:33Z",
+  "at": "2026-11-16T21:31:50Z",
   "s": {
-   "T-4401": [
-    "merging",
-    "Host checks on the Mac mini \u00b7 1 group of tests done",
-    1794864513351
-   ],
    "T-4077": [
     "testing",
     "Mac Mini \u00b7 test",
@@ -647,22 +642,27 @@
    "T-4617": [
     "testing",
     "its own tests, in its copy",
-    1794863733351
+    1794863750365
    ],
    "T-4103": [
     "testing",
     "its own tests, in its copy",
-    1794863973351
+    1794864710365
+   ],
+   "T-4451": [
+    "testing",
+    "its own tests, in its copy",
+    1794864650365
    ],
    "T-4583": [
     "testing",
     "its own tests, in its copy",
-    1794861513351
+    1794861530365
    ],
-   "T-4596": [
+   "T-4625": [
     "merged",
-    "on main 4:24 PM ET",
-    1794864270000,
+    "on main 4:29 PM ET",
+    1794864595000,
     ""
    ],
    "T-4621": [
@@ -679,28 +679,29 @@
    ]
   },
   "nm": {
-   "T-4401": "Keep the parked count test off the live mode file",
    "T-4077": "Check finished work before it ships",
    "T-4082": "Check finished work before it ships",
    "T-4616": "Order tasks by the files waiting work holds",
    "T-4617": "Run quick checks before a land takes the Xcode slot",
    "T-4103": "Build the queue-check sweep into the sweep system",
+   "T-4451": "Read the flagged lines once a day with a model",
    "T-4583": "Turn on Feature mode and tick steps at the merge",
-   "T-4596": "Review the archive check for the phone test marker",
+   "T-4625": "Put every remaining efficiency and site line first",
    "T-4621": "Card check that app parts name their docs page",
    "T-4486": "Refuse Fable in sessions with no Fable task"
   },
   "wk": {
-   "T-4401": "Odalys",
    "T-4077": "Pernille",
    "T-4082": "Pernille",
    "T-4616": "Odalys",
    "T-4617": "Odalys",
    "T-4103": "Odalys",
+   "T-4451": "Odalys",
    "T-4583": "Idris",
-   "T-4596": "Pernille",
+   "T-4625": "Odalys",
    "T-4621": "Odalys",
    "T-4486": "Odalys",
+   "T-4596": "Pernille",
    "T-4060": "Pernille",
    "T-4058": "Idris",
    "T-4076": "Pernille",
@@ -708,10 +709,10 @@
   }
  },
  "ln": {
-  "at": "2026-11-16T21:28:33Z",
+  "at": "2026-11-16T21:31:50Z",
   "mq": {
    "n": {
-    "checking": 1,
+    "checking": 0,
     "inline": 0,
     "conflicted": 2,
     "failed": 0,
@@ -720,41 +721,32 @@
     "parked": 11
    },
    "m": {
-    "checking": 0,
+    "checking": null,
     "inline": null,
-    "conflicted": 1507,
+    "conflicted": 1510,
     "failed": null,
     "held": null,
-    "retry": 110,
-    "parked": 723
+    "retry": 114,
+    "parked": 727
    },
-   "cur": [
-    [
-     [
-      "T-4401"
-     ],
-     "Mac tests",
-     "Mac mini",
-     0
-    ]
-   ],
+   "cur": [],
    "ld": [
-    70,
-    "2026-11-16T21:25:26Z"
+    72,
+    "2026-11-16T21:30:48Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-16T21:28:37Z",
-    "ld": 19.79,
+    "at": "2026-11-16T21:31:24Z",
+    "ld": 20.85,
     "c": 8,
     "sb": 1,
     "dk": [
-     19.2,
+     19.0,
      228.3
     ],
     "ss": [
-     184.5,
+     184.3,
      953.7
     ],
     "sn": [
@@ -850,10 +842,10 @@
   "main": 5,
   "lanes": 5,
   "total": 10,
-  "at": "4:28 PM",
+  "at": "4:32 PM",
   "why": "",
-  "at_iso": "2026-11-16T21:28:00+00:00",
+  "at_iso": "2026-11-16T21:32:00+00:00",
   "started": "3:35 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>10</b> agents running now</p><p class=\"an-sub\">Main session 5, started 3:35 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 4:28 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>10</b> agents running now</p><p class=\"an-sub\">Main session 5, started 3:35 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 4:32 PM ET</p></section>"
  }
 }

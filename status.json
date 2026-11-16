@@ -1,11 +1,22 @@
 {
  "schema": 1,
- "at": "2026-11-16T08:31:09.194392+00:00",
+ "at": "2026-11-16T08:34:17.358084+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-16T00:32:52-05:00",
   "flow": [
+   {
+    "t": "T-4455",
+    "name": "Fix the stage name test after the Retry Queue rename",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "testq",
+      "at": 1794817994
+     }
+    ]
+   },
    {
     "t": "T-4550",
     "name": "Python contract and action run for widget buttons",
@@ -19,6 +30,14 @@
    }
   ],
   "done": [
+   {
+    "t": "T-4279",
+    "name": "Draw the site's info button as a code-drawn gear",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794817984
+   },
    {
     "t": "T-4225",
     "name": "Show the worker on the task regroup card",
@@ -89,16 +108,9 @@
     "steps": [],
     "end": "landed",
     "end_at": 1794803679
-   },
-   {
-    "t": "T-0261",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794803443
    }
   ],
-  "landed": 22,
+  "landed": 23,
   "failed": 5
  },
  "workers": [
@@ -107,7 +119,7 @@
    "task": "[tools] T-4194 land feature-session wiring",
    "model": "opus",
    "started": "2026-11-16T05:36:18.799Z",
-   "seconds": 10490,
+   "seconds": 10678,
    "finished": null
   },
   {
@@ -115,7 +127,7 @@
    "task": "[tools] T-3995 personal_land daily batch",
    "model": "opus",
    "started": "2026-11-16T05:36:28.863Z",
-   "seconds": 10480,
+   "seconds": 10668,
    "finished": null
   }
  ],
@@ -182,7 +194,7 @@
   "week_pct": 5.72,
   "usage_pct": 25.2,
   "work_pct": 70.0,
-  "read_at": "2026-11-16T08:31:00+00:00",
+  "read_at": "2026-11-16T08:34:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -219,7 +231,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-16T03:31:00-05:00",
+  "at": "2026-11-16T03:34:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -450,80 +462,74 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-16T08:31:09Z",
+  "at": "2026-11-16T08:34:17Z",
   "s": {
-   "T-4550": [
+   "T-4455": [
     "merging",
     "Host checks on the Mac mini",
-    1794816429194
+    1794817997358
    ],
    "T-4460": [
     "mergeq",
     "1st to merge",
-    1794816549194
+    1794816497358
    ],
-   "T-4279": [
+   "T-4550": [
     "mergeq",
     "2nd to merge",
-    1794816789194
-   ],
-   "T-4455": [
-    "mergeq",
-    "3rd to merge",
-    1794817029194
+    1794817937358
    ]
   },
   "nm": {
-   "T-4550": "Python contract and action run for widget buttons",
+   "T-4455": "Fix the stage name test after the Retry Queue rename",
    "T-4460": "Clear old test leftovers from the temporary folder",
-   "T-4279": "Draw the site's info button as a code-drawn gear",
-   "T-4455": "Fix the stage name test after the Retry Queue rename"
+   "T-4550": "Python contract and action run for widget buttons"
   }
  },
  "ln": {
-  "at": "2026-11-16T08:31:09Z",
+  "at": "2026-11-16T08:34:17Z",
   "mq": {
    "n": {
     "checking": 1,
-    "inline": 3,
+    "inline": 2,
     "conflicted": 1,
     "failed": 0,
     "held": 0,
     "retry": 0,
-    "parked": 10
+    "parked": 11
    },
    "m": {
-    "checking": 24,
-    "inline": 18,
-    "conflicted": 1933,
+    "checking": 1,
+    "inline": 14,
+    "conflicted": 1936,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 2
+    "parked": 5
    },
    "cur": [
     [
      [
-      "T-4550"
+      "T-4455"
      ],
      "Mac tests",
      "Mac mini",
-     24
+     1
     ]
    ],
    "ld": [
-    6,
-    "2026-11-16T07:18:24Z"
+    7,
+    "2026-11-16T08:33:04Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-16T08:30:31Z",
-    "ld": 49.66,
+    "at": "2026-11-16T08:34:18Z",
+    "ld": 38.21,
     "c": 8,
     "sb": 1,
     "dk": [
-     19.6,
+     16.0,
      228.3
     ],
     "ss": [
@@ -578,10 +584,10 @@
   "main": 2,
   "lanes": 0,
   "total": 2,
-  "at": "3:31 AM",
+  "at": "3:34 AM",
   "why": "",
-  "at_iso": "2026-11-16T08:31:00+00:00",
+  "at_iso": "2026-11-16T08:34:00+00:00",
   "started": "12:32 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 12:32 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 3:31 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 12:32 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 3:34 AM ET</p></section>"
  }
 }

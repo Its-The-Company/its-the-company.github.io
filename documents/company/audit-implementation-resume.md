@@ -40,6 +40,8 @@ Last updated: 2026-11-11 3:3x PM ET, by the 12:52 PM Opus work session (see "In 
 
 ### In flight when this was written
 
+4:3x AM 11-16 (Opus work session 4:01 AM): the personal_land.sh batch (T-4459, T-4457, T-4196) landed c0048bc661 (Odalys; posted #41 c6912627367). T-4194's wiring still waits on Ines; t4446-supervisor.patch still out. Before it:
+
 3:5x AM 11-16 (Opus work session 12:32 AM): nothing merged. Two pieces wait in kept copies with their land commands on their lines: T-4194's feature-session wiring (its last land was refused by the classifier at 3:46 AM: Ines decides before any rerun) and the daily personal_land.sh batch (T-4459, T-4457, T-4196 patches; note on T-3995). ops/plans/t4446-supervisor.patch stays out (refused 11-14). Load 350-780 from about 2:30 AM stalled the gates.
 
 1:1x PM 11-12 (Opus work session 10:13 AM): landed T-4157 ff2a4c732d (accounts a and b take only Fable lines pinned to them), T-4160 bce6bf068d (pause on a failed usage reading), T-4179 30eaa45f58 (each requeue line gives one start; T-4127 requeued 12:44 PM, runs at a's 3:30 PM reset), T-4161 bd24d50c7a (b runs Fable as 5.2; tick log 'session: models'). Every open audit piece pinned 'Account: a, b' on Fable xhigh at 12:58 PM (683d0b9c63). T-4206 df0eb78f5a releases an account whose stop rule is retired (<span title="One numbered piece of research into one area of ideas. Each lane has its own file.">LANE</span> CLEAR b 1:18 PM came first); b started T-4116 and T-4117 at 1:22 PM. Owed on #41: the first 'session: models' line.

@@ -37,7 +37,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 ## Open (2026-11-15)
 
-- T-4446 slice 1 (11-14): tools/records_round.py, one records commit per 900 s (full note in archive.md); rest T-4457. Owed: 7-day count <= 672 and wait lines not up; then tick.
+- T-4446 (11-14): records_round.py, one records commit per 900 s (archive.md). Land part T-4457 on main c0048bc661 11-16 (T-3995 batch with T-4459, T-4196). Owed: 7-day count <= 672, no 'lane records applied'; tick.
 
 - T-4103 31b4b962fb, T-4443 slice 1 14f086c7d8 (11-14): open, full notes in archive.md. Owed: T-4447 replay narrows the signals; five card rules in queue_check; T-4459 machine callers.
 - T-4458 (11-14): jobs_loop notes, merge_first, runner_watch, main_green hand over to records_round (RECORDS_OWN_COMMIT=1 = old). fav_notice refused (guard); own line. Owed: 7-day commit-shares run shows none of their subjects; then tick.
@@ -58,6 +58,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - A dry run must not change anything: T-4547's ran `git worktree prune` for real (fixed T-4560). Test the dry path for side effects.
 - T-4278 bb4548b71f (11-15): bell gone; notif switch in "i" panel; notice only on About. Owed: T-4563 (composer_test red at HEAD).
 - zsh: $F with paths does not split; use an array, or git diff sees one path and gives 0 hunks.
+- scratch.py worktree can hand back an old copy (11-16: 11-11 HEAD). Check HEAD before applying.
 {% endraw %}
 
 

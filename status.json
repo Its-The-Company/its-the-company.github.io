@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-16T00:23:03.431945+00:00",
+ "at": "2026-11-16T00:26:06.705789+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -112,7 +112,7 @@
    "task": "[tools] T-3992 land the pipeline batch",
    "model": "opus",
    "started": "2026-11-15T22:17:17.812Z",
-   "seconds": 7545,
+   "seconds": 7728,
    "finished": null,
    "effort": "high"
   }
@@ -152,19 +152,19 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 5.0,
+   "pct": 6.0,
    "resets_at": "2026-11-15T22:10:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-15T19:11:47.594745-05:00",
+   "read_at": "2026-11-15T19:25:15.697440-05:00",
    "source": "live",
-   "left": 95.0,
+   "left": 94.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 13.0,
    "resets_at": "2026-11-22T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-15T19:11:47.594745-05:00",
+   "read_at": "2026-11-15T19:25:15.697440-05:00",
    "source": "live",
    "left": 87.0,
    "left_words": "of your weekly allowance left"
@@ -176,7 +176,7 @@
    "read_at": "2026-11-15T17:14:22.598638-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-15T19:11:47.594745-05:00"
+  "read_at": "2026-11-15T19:25:15.697440-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -196,7 +196,7 @@
   "week_pct": 3.57,
   "usage_pct": 22.9,
   "work_pct": 71.4,
-  "read_at": "2026-11-16T00:23:00+00:00",
+  "read_at": "2026-11-16T00:26:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -217,7 +217,7 @@
   }
  ],
  "disk": {
-  "free_gb": 11,
+  "free_gb": 10,
   "gate": "closed",
   "ssd": {
    "mounted": true,
@@ -226,14 +226,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions wait until 20 GB is free.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-15T19:18:00-05:00",
+   "at": "2026-11-15T19:25:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-15T19:23:00-05:00",
+  "at": "2026-11-15T19:26:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -322,6 +322,13 @@
     "o": "i"
    },
    {
+    "w": "Idris",
+    "k": "measure",
+    "t": "Measure real scripts inside the widget on phones",
+    "s": "next",
+    "o": "i"
+   },
+   {
     "w": "Pernille",
     "k": "build",
     "t": "Keep real packages out until the sandbox is...",
@@ -364,23 +371,16 @@
     "o": "c"
    },
    {
+    "w": "Maren",
+    "k": "site",
+    "t": "Show skipped and brief stages on Home",
+    "s": "next",
+    "o": "c"
+   },
+   {
     "w": "Odalys",
     "k": "tools",
     "t": "Get both personal accounts taking work again",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Answer Investor messages that no session claims",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Alarm when one account's work keeps being...",
     "s": "next",
     "o": "c"
    }
@@ -461,56 +461,38 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-16T00:22:56Z",
+  "at": "2026-11-16T00:26:06Z",
   "s": {
-   "T-4282": [
-    "mergeq",
-    "1st to merge",
-    1794785156048
-   ],
-   "T-4293": [
-    "mergeq",
-    "1st to merge",
-    1794785156048
-   ],
-   "T-4512": [
-    "mergeq",
-    "1st to merge",
-    1794785156048
-   ],
    "T-3992": [
     "merging",
     "Mac tests at the main gate",
-    1794787736048
+    1794787746705
    ]
   },
   "nm": {
-   "T-4282": "Measure real scripts inside the widget on phones",
-   "T-4293": "Show skipped and brief stages on Home",
-   "T-4512": "Propose the personal accounts' 5-hour stop at 97",
    "T-3992": "Clear and merge the unfinished merge fixes"
   }
  },
  "ln": {
-  "at": "2026-11-16T00:22:56Z",
+  "at": "2026-11-16T00:26:06Z",
   "mq": {
    "n": {
     "checking": 0,
-    "inline": 3,
-    "conflicted": 1,
+    "inline": 0,
+    "conflicted": 4,
     "failed": 1,
     "held": 0,
     "retry": 0,
-    "parked": 2
+    "parked": 3
    },
    "m": {
     "checking": null,
-    "inline": 57,
-    "conflicted": 1444,
-    "failed": 21,
+    "inline": null,
+    "conflicted": 0,
+    "failed": 24,
     "held": null,
     "retry": null,
-    "parked": 673
+    "parked": 327
    },
    "cur": [],
    "ld": [
@@ -520,12 +502,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-16T00:22:31Z",
-    "ld": 2.41,
+    "at": "2026-11-16T00:25:42Z",
+    "ld": 1.62,
     "c": 8,
     "sb": 0,
     "dk": [
-     10.4,
+     10.3,
      228.3
     ],
     "ss": [
@@ -554,26 +536,15 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Inbox \u2013 Jeremy's 7:22 PM Message on GitHub",
-   "at": "2026-11-15T19:22:51-05:00"
+   "t": "Work session \u2013 3 tasks",
+   "at": "2026-11-15T19:23:35-05:00"
   }
  ],
  "reply": {
-  "sent": "2026-11-15T22:48:56Z",
+  "sent": "2026-11-16T00:22:30Z",
   "seconds": 64.0
  },
- "inbox": [
-  {
-   "id": "c6903885636",
-   "state": "received",
-   "position": 1,
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "How do we fix this problem?"
-  }
- ],
+ "inbox": [],
  "trimmed": [
   "lane_next",
   "queue_text",
@@ -589,10 +560,10 @@
   "main": 1,
   "lanes": 0,
   "total": 1,
-  "at": "7:23 PM",
+  "at": "7:26 PM",
   "why": "",
-  "at_iso": "2026-11-16T00:23:00+00:00",
+  "at_iso": "2026-11-16T00:26:00+00:00",
   "started": "5:14 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 5:14 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 7:23 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 5:14 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 7:26 PM ET</p></section>"
  }
 }

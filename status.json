@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-16T22:48:32.672033+00:00",
+ "at": "2026-11-16T22:51:43.129425+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -101,7 +101,7 @@
     "end_at": 1794864326
    }
   ],
-  "landed": 61,
+  "landed": 60,
   "failed": 11
  },
  "workers": [
@@ -110,16 +110,7 @@
    "task": "[tools] T-4583 land feature-step ticking",
    "model": "opus",
    "started": "2026-11-16T20:38:05.386Z",
-   "seconds": 7827,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-4103 switch on queue-check sweep",
-   "model": "opus",
-   "started": "2026-11-16T21:15:08.438Z",
-   "seconds": 5604,
+   "seconds": 8017,
    "finished": null,
    "effort": "high"
   },
@@ -128,7 +119,7 @@
    "task": "[design] T-4620 Features in Home task lists",
    "model": "opus",
    "started": "2026-11-16T21:36:15.573Z",
-   "seconds": 4337,
+   "seconds": 4527,
    "finished": null,
    "effort": "high"
   },
@@ -137,7 +128,7 @@
    "task": "[tools] T-3959 merge_queue batch with T-3960",
    "model": "opus",
    "started": "2026-11-16T21:48:36.481Z",
-   "seconds": 3596,
+   "seconds": 3786,
    "finished": null,
    "effort": "high"
   },
@@ -146,13 +137,21 @@
    "task": "[tools] T-4196 grouped iPhone runs, rest",
    "model": "opus",
    "started": "2026-11-16T21:27:29.300Z",
-   "seconds": 4863,
+   "seconds": 5053,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Idris x2, Odalys x2, Maren",
+ "who": "Idris x2, Maren, Odalys",
  "recent": [
+  {
+   "name": "odalys",
+   "task": "[tools] T-4103 switch on queue-check sweep",
+   "model": "opus",
+   "started": "2026-11-16T21:15:08.438Z",
+   "seconds": null,
+   "finished": "2026-11-16T22:49:29.377000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[tools] T-4617 quick checks before Xcode slot",
@@ -222,7 +221,7 @@
   "week_pct": 18.58,
   "usage_pct": 45.8,
   "work_pct": 73.2,
-  "read_at": "2026-11-16T22:48:00+00:00",
+  "read_at": "2026-11-16T22:51:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -323,7 +322,7 @@
  "lock_in": {
   "on": false,
   "pool": 4,
-  "at": "2026-11-16T17:48:00-05:00",
+  "at": "2026-11-16T17:51:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -349,20 +348,20 @@
    "effort": "high"
   },
   {
-   "name": "Odalys",
-   "state": "running",
-   "task": "[tools] T-4103 switch on queue-check sweep",
-   "model": "opus",
-   "since": "2026-11-16T21:15:08.438Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
    "name": "Maren",
    "state": "running",
    "task": "[design] T-4620 Features in Home task lists",
    "model": "opus",
    "since": "2026-11-16T21:36:15.573Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
+   "name": "Odalys",
+   "state": "running",
+   "task": "[tools] T-3959 merge_queue batch with T-3960",
+   "model": "opus",
+   "since": "2026-11-16T21:48:36.481Z",
    "next": [],
    "effort": "high"
   },
@@ -402,16 +401,6 @@
     "at": "2026-11-16T20:38:05.386Z",
     "o": "c",
     "task": "T-4583"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Build the queue-check sweep into the sweep system",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-16T21:15:08.438Z",
-    "o": "c",
-    "task": "T-4103"
    },
    {
     "w": "Idris",
@@ -608,8 +597,123 @@
    "ok"
   ]
  ],
+ "stg": {
+  "at": "2026-11-16T22:51:30Z",
+  "s": {
+   "T-4614": [
+    "merging",
+    "Host checks on the Mac mini",
+    1794868410614
+   ],
+   "T-4621": [
+    "mergeq",
+    "1st to merge",
+    1794868950614
+   ],
+   "T-3996": [
+    "mergeq",
+    "1st to merge",
+    1794868950614
+   ],
+   "T-3976": [
+    "mergeq",
+    "4th to merge",
+    1794867930614
+   ],
+   "T-4630": [
+    "mergeq",
+    "5th to merge",
+    1794868710614
+   ],
+   "T-4196": [
+    "merging",
+    "Mac tests at the main gate",
+    1794869190614
+   ],
+   "T-3349": [
+    "testing",
+    "Mac Mini \u00b7 test",
+    null
+   ],
+   "T-3495": [
+    "testing",
+    "Mac Mini \u00b7 test",
+    null
+   ],
+   "T-4068": [
+    "testing",
+    "Mac Mini \u00b7 test",
+    null
+   ],
+   "T-4076": [
+    "testing",
+    "Mac Mini \u00b7 test",
+    null
+   ],
+   "T-4494": [
+    "testing",
+    "Mac Mini \u00b7 test",
+    null
+   ],
+   "T-4620": [
+    "testing",
+    "its own tests, in its copy",
+    1794867330614
+   ],
+   "T-3959": [
+    "testing",
+    "its own tests, in its copy",
+    1794867930614
+   ],
+   "T-4624": [
+    "merged",
+    "on main 5:19 PM ET",
+    1794867570000,
+    ""
+   ]
+  },
+  "nm": {
+   "T-4614": "Make main's own tests pass again",
+   "T-4621": "Card check that app parts name their docs page",
+   "T-3996": "Show one true record on Home and This Session",
+   "T-3976": "Show each drive's storage makeup on Home",
+   "T-4630": "Stop badging widgets moved to the app by size",
+   "T-4196": "Let app changes waiting to merge share one iPhone run",
+   "T-3349": "Review the Release privacy scan before TestFlight",
+   "T-3495": "Check the upload fix before build 4 goes out",
+   "T-4068": "Check finished work before it ships",
+   "T-4076": "Check finished work before it ships",
+   "T-4494": "Prove widgets move to the app by size",
+   "T-4620": "Show Features and their steps in Home's task lists",
+   "T-3959": "Skip product tests for docs-only changes",
+   "T-4624": "Drop Parents and Children from Home's task cards"
+  },
+  "wk": {
+   "T-4614": "Pernille",
+   "T-4621": "Odalys",
+   "T-3996": "Operator",
+   "T-3976": "Odalys",
+   "T-4630": "Idris",
+   "T-4196": "Idris",
+   "T-3349": "Odalys",
+   "T-3495": "Pernille",
+   "T-4068": "Pernille",
+   "T-4076": "Pernille",
+   "T-4494": "Idris",
+   "T-4620": "Maren",
+   "T-3959": "Odalys",
+   "T-4624": "Maren",
+   "T-4082": "Pernille",
+   "T-4518": "Pernille",
+   "T-4451": "Odalys",
+   "T-4596": "Pernille",
+   "T-4060": "Pernille",
+   "T-4058": "Idris",
+   "T-4314": "Odalys"
+  }
+ },
  "ln": {
-  "at": "2026-11-16T22:46:50Z",
+  "at": "2026-11-16T22:51:30Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -621,13 +725,13 @@
     "parked": 15
    },
    "m": {
-    "checking": 13,
-    "inline": 6,
-    "conflicted": 1585,
+    "checking": 18,
+    "inline": 11,
+    "conflicted": 1590,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 586
+    "parked": 590
    },
    "cur": [
     [
@@ -636,7 +740,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     13
+     18
     ]
    ],
    "ld": [
@@ -646,12 +750,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-16T22:47:42Z",
-    "ld": 14.83,
+    "at": "2026-11-16T22:50:48Z",
+    "ld": 32.32,
     "c": 8,
     "sb": 1,
     "dk": [
-     21.8,
+     22.4,
      228.3
     ],
     "ss": [
@@ -682,7 +786,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 7 tasks",
+   "t": "Work session \u2013 6 tasks",
    "at": "2026-11-16T15:35:16-05:00"
   },
   {
@@ -722,13 +826,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 5,
+  "main": 4,
   "lanes": 3,
-  "total": 8,
-  "at": "5:48 PM",
+  "total": 7,
+  "at": "5:51 PM",
   "why": "",
-  "at_iso": "2026-11-16T22:48:00+00:00",
+  "at_iso": "2026-11-16T22:51:00+00:00",
   "started": "3:35 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>8</b> agents running now</p><p class=\"an-sub\">Main session 5, started 3:35 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 5:48 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 4, started 3:35 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 5:51 PM ET</p></section>"
  }
 }

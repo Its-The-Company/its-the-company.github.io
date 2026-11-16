@@ -52,10 +52,9 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-4539 (11-15 20:4x): own-first 'hold' idled b's slots (13 b ticks with room, 3 a); now such a slot takes new work ("own_first_hold": true = old). Disk gate is T-4537. Owed: T-4535 (xc_sim.py reads board raw, my T-3712; board_notes_readers red on main).
 
 - T-4400 c94db44592 (11-15): ticked (outbox). Owed: T-4562 inbox correction to the 11-13 reply on #41.
+- T-4225 5e8875519d + dd94ec84dc (11-16): Home cards the build never saw read stg.wk (owner from board/archive); "X with Y, P0" heads name X. Owed: tick after land.
 
 ## Lessons
-- T-4537 (11-15): xc.sh gate runs disk_keeper clean before exit 75; keeper retries held locks; sweep stamps after lock. Owed: tick after land; 30 GB not reachable in rules (Sims 38.4, company-scratch 25.6 under T-3859, swap 27.9).
-- T-4560 (11-15 22:5x): refusals.CLEARED <span title="A new, permitted reading that removes a cap. A lift rule is that reading, written down before we look.">lifts</span> T-3859 1:48:23 PM inside /private/tmp/company-scratch for disk_sweep finished only; owner-less folders judged by name task. Dry run: 31 folders, 0.07 GB (scratch now 0.36 GB). Owed: first acting pass rows in disk_keeper.jsonl; space is elsewhere (Sims, swap).
 - A dry run must not change anything: T-4547's ran `git worktree prune` for real (fixed T-4560). Test the dry path for side effects.
 - T-4278 bb4548b71f (11-15): bell gone; notif switch in "i" panel; notice only on About. Owed: T-4563 (composer_test red at HEAD).
 - zsh: $F with paths does not split; use an array, or git diff sees one path and gives 0 hunks.

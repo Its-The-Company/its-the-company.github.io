@@ -1,35 +1,22 @@
 {
  "schema": 1,
- "at": "2026-11-16T08:49:31.403221+00:00",
+ "at": "2026-11-16T08:54:34.230204+00:00",
  "session": {
-  "active": true,
-  "kind": "work",
-  "started": "2026-11-16T00:32:52-05:00",
-  "flow": [
+  "active": false,
+  "kind": "",
+  "started": null,
+  "flow": [],
+  "done": [
    {
     "t": "T-4550",
     "name": "Python contract and action run for widget buttons",
     "acct": "Personal b",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1794816400
-     },
-     {
-      "s": "macbook",
-      "at": 1794818963
-     },
-     {
-      "s": "landing",
-      "at": 1794818969
-     }
-    ]
-   }
-  ],
-  "done": [
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794818974
+   },
    {
     "t": "T-4460",
-    "name": "Clear old test leftovers from the temporary folder",
     "acct": "Personal b",
     "steps": [],
     "end": "landed",
@@ -61,7 +48,6 @@
    },
    {
     "t": "T-4562",
-    "name": "Correct the pace reply sent to Jeremy",
     "acct": "Personal b",
     "steps": [],
     "end": "landed",
@@ -93,22 +79,13 @@
    },
    {
     "t": "T-4514",
-    "name": "Quit the three apps once the rule applies",
     "acct": "Personal b",
     "steps": [],
     "end": "landed",
     "end_at": 1794807183
-   },
-   {
-    "t": "T-4110",
-    "name": "Chart the task queue size on Home",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794804031
    }
   ],
-  "landed": 25,
+  "landed": 26,
   "failed": 5
  },
  "workers": [],
@@ -186,12 +163,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": null,
+ "next_tick": "2026-11-16T00:47:01-05:00",
  "personal": {
   "week_pct": 5.72,
-  "usage_pct": 25.2,
-  "work_pct": 70.0,
-  "read_at": "2026-11-16T08:49:00+00:00",
+  "usage_pct": 23.8,
+  "work_pct": 66.7,
+  "read_at": "2026-11-16T08:55:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -228,7 +205,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-16T03:49:00-05:00",
+  "at": "2026-11-16T03:55:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -236,13 +213,9 @@
    "b": "double-spread"
   }
  },
- "next_tick_why": "session",
+ "next_tick_why": "last_tick",
  "idle": null,
- "pool": {
-  "why": "Double Spread: 82% of the week left, paced to last until Wed 14:00, the week's halfway point; the machine allows 20 (raised a step: load, time-outs, failed lands and redone tasks all under their...",
-  "n": 3,
-  "at": "2026-11-16T00:32:01.412473-05:00"
- },
+ "pool": null,
  "lanes": [
   {
    "name": "Idris",
@@ -295,7 +268,6 @@
  ],
  "tasks": {
   "run": [],
-  "src": "plan",
   "open": [
    {
     "w": "Idris",
@@ -390,23 +362,6 @@
    "wait": 34,
    "blocked": 41,
    "you": 12
-  },
-  "fin": {
-   "n": 3,
-   "rows": [
-    [
-     "T-3684",
-     "Sweep old company test..."
-    ],
-    [
-     "T-4460",
-     "Clear old test leftovers..."
-    ],
-    [
-     "T-3281",
-     "Run the gate build's..."
-    ]
-   ]
   }
  },
  "qr": [
@@ -448,23 +403,14 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-16T08:49:31Z",
-  "s": {
-   "T-4550": [
-    "merging",
-    "Merging onto main",
-    1794818971403
-   ]
-  },
-  "nm": {
-   "T-4550": "Python contract and action run for widget buttons"
-  }
+  "at": "2026-11-16T08:54:34Z",
+  "s": {}
  },
  "ln": {
-  "at": "2026-11-16T08:49:31Z",
+  "at": "2026-11-16T08:54:34Z",
   "mq": {
    "n": {
-    "checking": 1,
+    "checking": 0,
     "inline": 0,
     "conflicted": 1,
     "failed": 0,
@@ -473,37 +419,28 @@
     "parked": 11
    },
    "m": {
-    "checking": 0,
+    "checking": null,
     "inline": null,
-    "conflicted": 1951,
+    "conflicted": 1956,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 21
+    "parked": 26
    },
-   "cur": [
-    [
-     [
-      "T-4550"
-     ],
-     "going onto main",
-     "Mac mini",
-     0
-    ]
-   ],
+   "cur": [],
    "ld": [
-    9,
-    "2026-11-16T08:41:40Z"
+    10,
+    "2026-11-16T08:49:34Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-16T08:49:32Z",
-    "ld": 7.16,
+    "at": "2026-11-16T08:54:34Z",
+    "ld": 2.99,
     "c": 8,
     "sb": 1,
     "dk": [
-     20.5,
+     20.6,
      228.3
     ],
     "ss": [
@@ -527,17 +464,7 @@
    }
   }
  },
- "operators": [
-  {
-   "w": "Operator",
-   "a": "Main plan",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session",
-   "at": "2026-11-16T00:32:52-05:00"
-  }
- ],
+ "operators": [],
  "reply": {
   "sent": "2026-11-16T03:00:49Z",
   "seconds": 107.0
@@ -547,7 +474,6 @@
   "lane_next",
   "queue_text",
   "task_done",
-  "fin_short",
   "task_title",
   "done_text",
   "task_open",
@@ -558,10 +484,10 @@
   "main": 0,
   "lanes": 0,
   "total": 0,
-  "at": "3:49 AM",
-  "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
-  "at_iso": "2026-11-16T08:49:00+00:00",
-  "started": "12:32 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0, started 12:32 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 3:49 AM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
+  "at": "3:55 AM",
+  "why": "Between sessions: no session is running. Last check 12:32 AM ET.",
+  "at_iso": "2026-11-16T08:55:00+00:00",
+  "started": "",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 3:55 AM ET</p><p class=\"an-why\">Between sessions: no session is running. Last check 12:32 AM ET.</p></section>"
  }
 }

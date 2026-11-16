@@ -33,7 +33,6 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 ## Open
 
-- T-4303 11-13 LANDED cff2e415eb (ticked, 310a5850bd): shim H1/M1/M2/L1/L3 fixed; review = T-4312 (Idris); L4 device line on T-4203. Lesson: a tool backgrounded at 600 s keeps writing; read the whole output file before calling it empty, and pipe long runs to a file.
 - T-3825 11-13 (168237a736): T-2494 re-check on main PASS w/ fixes; L1-L3 = T-4404..06 (Idris), ticked. Lesson: board add refuses a bare ID in a line's text with no link; drop the ID.
 - T-0678.7 11-13 (feb15a1ceb): T-0678 slices FIX FIRST; H1+M1 = T-4414, M2 = T-4415, M3 = T-4416, L = T-4417 (Idris); agreed iOS 27 .main pin. Lesson: a rule keyed on an author-set field (sampled_at) measures the author, not the run; ask who writes the input.
 - T-4418 11-14 (c267c4ecb3): T-1440 refresh tap PASS w/ notes; M1-M3 = T-4433..35, L = T-4436 (Idris). Lesson: tests hosted in the app see TreeHost.isExtension false, so extension-only branches are never drawn; look for that first.
@@ -45,6 +44,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-4468 11-15: slice 1 review FIX FIRST; H1 Python half LANDED 30ea7b46f1 (_premade_lock.py, flock + dirty keys + re-read; contract s2.3.1); review + Swift half = T-4532 (Idris). M5 owned by Swift (86cf6f47bd); Python same boundary. Lesson: a module the <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> premades import cannot import fcntl (lane scan); put it in a sibling the savers import. A new bundled file is pinned in Swift PremadesTests too: grep ios/Tests before landing.
 - T-4542 11-15: ADR-011 s4/s6/s7 review FIX FIRST (H1 per-row Button args lost; H2 two interpreters commit one state; M1-M9); s7 Q1/Q2 answered in the ADR. Lesson: when a design adds a second process that runs handlers, find the invariant the old commit rule assumed (one interpreter at a time).
 - T-4542 11-15 re-read: ADR-011 at bec23284ba FIX FIRST narrowed; Mediums settled. H1 gap: tree.json holds entries x families, link names neither; H2 gap: state.lock is the short-hold lock of sink, run log, status, so a run-long hold starves them (use run.lock). Lesson: before naming a lock for a long hold, list who else takes it.
+- T-4550 11-16 slice 1 (0221be1eed): ADR-011 s7 items 1-5 in pywidget_ui; slices 2/3 = T-4564/T-4565; Idris review owed. Lesson: run_host --both under load runs 25+ min and prints nothing till the end; run it -u into a scratch file, background, long timeout; 3.9 stdlib can trip 600 s (rerun --timeout 1500).
 
 ## Lessons
 

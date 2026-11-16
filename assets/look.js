@@ -410,7 +410,7 @@ function mgs(st,u,LS,now){var d=(st.session||{}).active?(st.tasks||{}).fin:null,
 o.forEach(function(x){sn[x.id||x.t]=1});ME=d?Math.max(0,(+d.n||0)-(d.rows||[]).length):0;
 (d&&d.rows||[]).forEach(function(a){var id=String(a&&a[0]||''),b,v,m=-1;if(!id||sn[id])return;sn[id]=1;b=IN[id]||{};v=LS&&LS[id];
 if(v&&v[0]==='merged'&&v[2])m=Math.max(0,Math.round((now-v[2])/6e4));else if(b.s==='merged'&&b.min>=0)m=b.min+Math.max(0,Math.round((now-(L.at||now))/6e4));
-o.push({id:id,t:nm(a[1])||nm((L.nm||{})[id])||snm(st,id)||b.t||'Name not recorded',w:b.w||['worker not recorded'],m:b.m||'model not recorded',e:b.e||'',min:m,s:'merged',n:'',h:b.h||[],x:b.x,p:b.p,c:b.c||CT[id]||'',ps:b.ps||''})});
+o.push({id:id,t:nm(a[1])||nm((L.nm||{})[id])||snm(st,id)||b.t||'Name not recorded',w:swk(st,id,b.w),m:b.m||'model not recorded',e:b.e||'',min:m,s:'merged',n:'',h:b.h||[],x:b.x,p:b.p,c:b.c||CT[id]||'',ps:b.ps||''})});
 return o}
 // T-4095 (friesevan #41 c6809316957): the status's stg, the live stages (live_stage.py, read every minute with the same rule
 // as the build, home_look stage_map), wins over the build's L.st once it is newer than the build; a stage it reads that
@@ -419,17 +419,20 @@ function lv0(st){var g=st&&st.stg;return g&&g.s&&Date.parse(g.at)>=(L.at||0)?g.s
 // T-4162 (friesevan #41 c6826068202): the status's stg.nm names each task it lists (live_stage.add_names, task_names);
 // the build's L.nm names only the tasks the build saw, so T-3807, handed out after it, read "Name not recorded".
 function snm(st,id){var g=st&&st.stg;return nm(g&&g.nm&&g.nm[id])}
+// T-4225 (friesevan #41 c6840224155): and stg.wk names each one's worker (live_stage.add_workers): a card the build had
+// not seen, T-4116 in its land at 7:38 PM 11-12, read "worker not recorded". w: the build's, kept when it names one.
+function swk(st,id,w){var g=st&&st.stg,k=g&&g.wk&&g.wk[id];return w&&w[0]&&!/not recorded/.test(w[0])||!k?w||['worker not recorded']:[k]}
 var LK={testq:1,testing:1,mergeq:1,simq:1,mergetest:1,merging:1,merged:1};
 // T-4308: a lane task its session has committed stays Building while the session runs (home_look HELD_NOTE)
 var HN='committed; it joins the merge line when its session ends';
 function sg(LS,id,r){var s=LS&&LS[id]||null,b=(L.st||{})[id],a;if(!s&&b&&!(LS&&LK[b[0]]))s=b;if(s&&s[0]==='merged'){a=Date.parse(r.at||'');if(!(a<s[2])||(s[3]&&r.w&&String(s[3]).toLowerCase()!==String(r.w).toLowerCase()))s=null}return s}
 function draw(st,isPub){var ml=S.lane.main(st,isPub),l=ml.concat(S.lane.rows(st)),seen={},u=[],now=Date.now(),o={},wk,ms=sw((st.tasks||{}).src),LS=lv0(st);
 l.forEach(function(r){var t=String(r.t||r.task||''),id=r.task||(t.match(/\bT-\d+/)||[''])[0],k=id||nm(t),s=sg(LS,id,r),m,b=IN[id]||{},ln=/^([ab])\d*$/.exec(r.lane||''),mn=ml.indexOf(r)>=0,rs=mn?ms:sw(r.src||(ln?'plan-'+ln[1]:''),r.n);if(s&&s[0]==='parked'&&r.at&&Date.parse(r.at)>s[2])s=[r.k==='review'?'review':'coding','Fix after a failed merge'];if(!s&&r.d)s=[r.k==='review'?'review':'coding',HN];if(r.w&&!r.d)o[String(r.w).toLowerCase()]=1;if(!k||seen[k])return;seen[k]=1;
-m=r.at?Math.round((now-Date.parse(r.at))/6e4):NaN;u.push({id:id,t:nm(r.t||r.task)||nm((L.nm||{})[id])||snm(st,id)||'Name not recorded',w:[r.w||(b.w||[])[0]||'worker not recorded'],m:r.m||b.m||'model not recorded',e:r.e&&r.m?r.e:r.m?'':b.e||'',min:m>=0?m:-1,s:s?s[0]:r.k==='review'?'review':'coding',n:s?s[1]:'',
+m=r.at?Math.round((now-Date.parse(r.at))/6e4):NaN;u.push({id:id,t:nm(r.t||r.task)||nm((L.nm||{})[id])||snm(st,id)||'Name not recorded',w:r.w?[r.w]:swk(st,id,b.w),m:r.m||b.m||'model not recorded',e:r.e&&r.m?r.e:r.m?'':b.e||'',min:m>=0?m:-1,s:s?s[0]:r.k==='review'?'review':'coding',n:s?s[1]:'',
 a:rs||(mn?'Main':ln?'Account '+ln[1].toUpperCase():''),sr:rs?1:0,h:b.h,x:b.x,p:b.p,c:b.c||CT[id]||'',g:b.g||'',y:b.y||0,ps:b.ps||''})});
-(L.init||[]).forEach(function(x){var v;if(x.s==='coding'||x.s==='review'||seen[x.id||x.t])return;if(LS&&x.id&&LK[x.s]){v=LS[x.id];if(!v||v[0]==='merged')return;x=Object.assign({},x,{s:v[0],n:v[1]})}if(x.id&&/^Name not recorded/i.test(x.t||'')&&snm(st,x.id))x=Object.assign({},x,{t:snm(st,x.id)});seen[x.id||x.t]=1;u.push(x)});  // T-3284 item 3
+(L.init||[]).forEach(function(x){var v;if(x.s==='coding'||x.s==='review'||seen[x.id||x.t])return;if(LS&&x.id&&LK[x.s]){v=LS[x.id];if(!v||v[0]==='merged')return;x=Object.assign({},x,{s:v[0],n:v[1]})}if(x.id&&/^Name not recorded/i.test(x.t||'')&&snm(st,x.id))x=Object.assign({},x,{t:snm(st,x.id)});if(x.id)x=Object.assign({},x,{w:swk(st,x.id,x.w)});seen[x.id||x.t]=1;u.push(x)});  // T-3284 item 3
 if(LS)Object.keys(LS).forEach(function(id){var v=LS[id],b=IN[id]||{};if(seen[id]||v[0]==='merged')return;seen[id]=1;  // T-4095: a stage the build had not seen
-u.push({id:id,t:nm((L.nm||{})[id])||snm(st,id)||'Name not recorded',w:b.w||['worker not recorded'],m:b.m||'model not recorded',e:b.e||'',min:v[2]?Math.max(0,Math.round((now-v[2])/6e4)):-1,s:v[0],n:v[1],h:b.h,x:b.x,p:b.p,c:b.c||CT[id]||'',g:b.g||'',y:b.y||0,ps:b.ps||''})});
+u.push({id:id,t:nm((L.nm||{})[id])||snm(st,id)||'Name not recorded',w:swk(st,id,b.w),m:b.m||'model not recorded',e:b.e||'',min:v[2]?Math.max(0,Math.round((now-v[2])/6e4)):-1,s:v[0],n:v[1],h:b.h,x:b.x,p:b.p,c:b.c||CT[id]||'',g:b.g||'',y:b.y||0,ps:b.ps||''})});
 MG=mgs(st,u,LS,now);items=u.filter(function(x){return x.s!=='merged'});if(K3&&K3.requeue)K3.requeue();render();wk=document.getElementById('lk-working');if(wk)wk.textContent=Object.keys(o).length+' working';idle(st)}
 // T-3316: a tree's link to an In flight card shows the whole list, then hands back the card
 // T-4313: and to a Merged card, in its own box (go() opens its part)

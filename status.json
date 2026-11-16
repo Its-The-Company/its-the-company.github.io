@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-16T17:48:04.714444+00:00",
+ "at": "2026-11-16T17:51:12.773881+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -88,7 +88,7 @@
     "end_at": 1794848400
    }
   ],
-  "landed": 51,
+  "landed": 50,
   "failed": 11
  },
  "workers": [
@@ -97,7 +97,7 @@
    "task": "[tools] T-4583 feature step ticking",
    "model": "opus",
    "started": "2026-11-16T15:55:21.544Z",
-   "seconds": 6763,
+   "seconds": 6951,
    "finished": null,
    "effort": "high"
   }
@@ -165,7 +165,7 @@
   "week_pct": 15.51,
   "usage_pct": 42.5,
   "work_pct": 69.1,
-  "read_at": "2026-11-16T17:48:00+00:00",
+  "read_at": "2026-11-16T17:51:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -261,7 +261,7 @@
  "lock_in": {
   "on": false,
   "pool": 4,
-  "at": "2026-11-16T12:48:00-05:00",
+  "at": "2026-11-16T12:51:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -501,7 +501,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-16T17:48:04Z",
+  "at": "2026-11-16T17:50:55Z",
   "s": {
    "T-2691": [
     "testing",
@@ -526,7 +526,7 @@
    "T-4583": [
     "testing",
     "its own tests, in its copy",
-    1794848044714
+    1794848035060
    ],
    "T-4561": [
     "merged",
@@ -557,7 +557,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-16T17:48:04Z",
+  "at": "2026-11-16T17:50:55Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -571,11 +571,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 1286,
+    "conflicted": 1289,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 559
+    "parked": 562
    },
    "cur": [],
    "ld": [
@@ -585,12 +585,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-16T17:48:06Z",
-    "ld": 20.74,
+    "at": "2026-11-16T17:50:10Z",
+    "ld": 18.26,
     "c": 8,
     "sb": 1,
     "dk": [
-     28.4,
+     28.3,
      228.3
     ],
     "ss": [
@@ -628,6 +628,8 @@
    "w": "Operator",
    "a": "Jeremy",
    "sr": 1,
+   "m": "opus",
+   "e": "high",
    "t": "Work session \u2013 1 task",
    "at": "2026-11-16T12:35:53-05:00"
   },
@@ -635,13 +637,17 @@
    "w": "Operator",
    "a": "Jeremy",
    "sr": 1,
+   "m": "opus",
+   "e": "high",
    "t": "Work session \u2013 2 tasks",
-   "at": "2026-11-16T12:10:48-05:00"
+   "at": "2026-11-16T12:10:47-05:00"
   },
   {
    "w": "Operator",
    "a": "Jeremy",
    "sr": 1,
+   "m": "opus",
+   "e": "high",
    "t": "Work session \u2013 1 task",
    "at": "2026-11-16T12:33:02-05:00"
   }
@@ -666,10 +672,10 @@
   "main": 1,
   "lanes": 3,
   "total": 4,
-  "at": "12:48 PM",
+  "at": "12:51 PM",
   "why": "",
-  "at_iso": "2026-11-16T17:48:00+00:00",
+  "at_iso": "2026-11-16T17:51:00+00:00",
   "started": "10:53 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 1, started 10:53 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 12:48 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 1, started 10:53 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 12:51 PM ET</p></section>"
  }
 }

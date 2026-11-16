@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-16T19:36:33.053528+00:00",
+ "at": "2026-11-16T19:39:04.588189+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -96,7 +96,7 @@
    "task": "[tools] T-4443 card rules in queue check",
    "model": "opus",
    "started": "2026-11-16T19:23:14.320Z",
-   "seconds": 798,
+   "seconds": 950,
    "finished": null,
    "effort": "high"
   },
@@ -105,7 +105,7 @@
    "task": "[tools] T-3992 recut parked lane-a batch",
    "model": "opus",
    "started": "2026-11-16T19:25:02.030Z",
-   "seconds": 691,
+   "seconds": 842,
    "finished": null,
    "effort": "high"
   }
@@ -115,7 +115,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 403,
+  "runnable_count": 406,
   "blocked_count": 75
  },
  "meter": {
@@ -164,34 +164,8 @@
   "week_pct": 17.69,
   "usage_pct": 44.6,
   "work_pct": 73.1,
-  "read_at": "2026-11-16T19:36:00+00:00",
-  "running": [
-   {
-    "lane": "b2",
-    "task": "T-3765",
-    "w": "Idris",
-    "k": "build",
-    "t": "Check a real widget tap on the TestFlight build",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-16T12:10:48-05:00",
-    "n": "Jeremy",
-    "src": "plan-b"
-   },
-   {
-    "lane": "b2",
-    "task": "T-2691",
-    "w": "Idris",
-    "k": "build",
-    "t": "Check every archive for the phone test marker, Organizer too",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-16T12:10:48-05:00",
-    "n": "Jeremy",
-    "d": 1,
-    "src": "plan-b"
-   }
-  ]
+  "read_at": "2026-11-16T19:39:00+00:00",
+  "running": []
  },
  "api_credits": [
   {
@@ -227,7 +201,7 @@
  "lock_in": {
   "on": false,
   "pool": 4,
-  "at": "2026-11-16T14:36:00-05:00",
+  "at": "2026-11-16T14:39:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -333,6 +307,20 @@
     "o": "i"
    },
    {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Order tasks by the files waiting work holds",
+    "s": "next",
+    "o": "i"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Run quick checks before a land takes the...",
+    "s": "next",
+    "o": "i"
+   },
+   {
     "w": "Pernille",
     "k": "build",
     "t": "Keep real packages out until the sandbox is...",
@@ -373,20 +361,6 @@
     "t": "Let Chat messages pick model, effort and account",
     "s": "next",
     "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Answer Investor messages that no session claims",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Ines",
-    "k": "tools",
-    "t": "Propose the personal accounts' 5-hour stop at 97",
-    "s": "next",
-    "o": "i"
    }
   ],
   "done": [
@@ -407,9 +381,9 @@
    }
   ],
   "count": {
-   "next": 403,
-   "wait": 34,
-   "blocked": 41,
+   "next": 406,
+   "wait": 35,
+   "blocked": 40,
    "you": 12
   },
   "fin": {
@@ -456,58 +430,30 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-16T19:36:21Z",
+  "at": "2026-11-16T19:39:04Z",
   "s": {
-   "T-2691": [
-    "testing",
-    "Mac Mini \u00b7 test",
-    null
-   ],
-   "T-3765": [
-    "testing",
-    "Mac Mini \u00b7 test",
-    null
-   ],
-   "T-4040": [
-    "testing",
-    "Mac Mini \u00b7 test",
-    null
-   ],
-   "T-4043": [
-    "testing",
-    "Mac Mini \u00b7 test",
-    null
-   ],
    "T-4295": [
     "testing",
     "its own tests, in its copy",
-    1794857661392
+    1794857644588
    ],
    "T-4443": [
     "testing",
     "its own tests, in its copy",
-    1794857241392
+    1794857224588
    ]
   },
   "nm": {
-   "T-2691": "Check every archive for the phone test marker, Organizer too",
-   "T-3765": "Check a real widget tap on the TestFlight build",
-   "T-4040": "Check finished work before it ships",
-   "T-4043": "Check finished work before it ships",
    "T-4295": "Let Chat messages pick model, effort and account",
    "T-4443": "Add the task card slots when a line is made"
   },
   "wk": {
-   "T-2691": "Idris",
-   "T-3765": "Idris",
-   "T-4040": "Pernille",
-   "T-4043": "Pernille",
    "T-4295": "Odalys",
    "T-4443": "Odalys"
   }
  },
  "ln": {
-  "at": "2026-11-16T19:36:21Z",
+  "at": "2026-11-16T19:39:04Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -516,16 +462,16 @@
     "failed": 2,
     "held": 0,
     "retry": 0,
-    "parked": 10
+    "parked": 12
    },
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 1395,
-    "failed": 55,
+    "conflicted": 1397,
+    "failed": 57,
     "held": null,
     "retry": null,
-    "parked": 639
+    "parked": 603
    },
    "cur": [],
    "ld": [
@@ -535,12 +481,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-16T19:35:59Z",
-    "ld": 16.63,
+    "at": "2026-11-16T19:39:33Z",
+    "ld": 21.32,
     "c": 8,
     "sb": 1,
     "dk": [
-     30.4,
+     30.3,
      228.3
     ],
     "ss": [
@@ -550,17 +496,6 @@
     "sn": [
      "t3765-iphone"
     ]
-   },
-   "macbook": {
-    "at": "2026-11-16T18:58:02Z",
-    "ld": 0.2,
-    "c": 12,
-    "sb": 0,
-    "dk": [
-     332.6,
-     926.4
-    ],
-    "sn": []
    }
   }
  },
@@ -571,50 +506,19 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Inbox \u2013 Evan's 2:35 PM Message on GitHub",
-   "at": "2026-11-16T14:36:23-05:00"
-  },
-  {
-   "w": "Operator",
-   "a": "Jeremy's Account",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Inbox \u2013 Evan's 2:34 PM Message on GitHub",
-   "at": "2026-11-16T14:35:56-05:00"
+   "t": "Work session \u2013 5 tasks",
+   "at": "2026-11-16T14:36:48-05:00"
   }
  ],
  "reply": {
-  "sent": "2026-11-16T19:26:53Z",
-  "seconds": 120.0
+  "sent": "2026-11-16T19:34:41Z",
+  "seconds": 149.0
  },
- "inbox": [
-  {
-   "id": "c6926970950",
-   "state": "received",
-   "position": 1,
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "Do both, and queue ordering should..."
-  },
-  {
-   "id": "c6926986576",
-   "state": "received",
-   "position": 2,
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "approve"
-  }
- ],
+ "inbox": [],
  "trimmed": [
   "lane_next",
   "queue_text",
   "task_done",
-  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -623,12 +527,12 @@
  ],
  "agents_now": {
   "main": 2,
-  "lanes": 1,
-  "total": 3,
-  "at": "2:36 PM",
+  "lanes": 0,
+  "total": 2,
+  "at": "2:39 PM",
   "why": "",
-  "at_iso": "2026-11-16T19:36:00+00:00",
+  "at_iso": "2026-11-16T19:39:00+00:00",
   "started": "2:21 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 2:21 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 2:36 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 2:21 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 2:39 PM ET</p></section>"
  }
 }

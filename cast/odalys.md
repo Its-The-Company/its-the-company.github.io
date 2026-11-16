@@ -47,17 +47,16 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-4009 07a67cf259 + 89c42a36fc (11-15): hold line = governor.five_hour_hold() (100% less 3 median calls; 95% today, floor 90, cap 97); OPT-133 proposed. Owed: rules/personal_lane.py 90->97 card (my diff step refused by a deny rule, stopped); OPT-133 reads after land.
 
 - T-4473/T-4448/T-4449 (11-15): queue check v1, dry run, Ines's 5 fixes (e831be688e), 2nd dry run all hold (5a3a0c6b43), switched on: act_alone wait_met_issue, feature_fits. Fix 2 cut replay recall 413->154 of 446 (for Ines). Owed: daily caller = revised pipeline patch, note on T-3992 (--as-switch); owner parse fix before rows go to owners; my noted copies T-4411, T-3150, T-3859, T-1248, T-3593.
-- T-4419/T-4490 closed 11-15 (OPT-100, -110, -092 no_effect; OPT-119 kept). Owed: T-4531 (keep or revert the ledger merge driver).
 - T-4508 81212e12e5 (11-15): tools/land_refusal_alarm.py via idle_alarm. Owed: tick after land; 11-13 1:35 PM <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">ruling</span> (c6861701678) only on <span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">parked</span>/a2.
 - T-4539 (11-15 20:4x): own-first 'hold' idled b's slots (13 b ticks with room, 3 a); now such a slot takes new work ("own_first_hold": true = old). Disk gate is T-4537. Owed: T-4535 (xc_sim.py reads board raw, my T-3712; board_notes_readers red on main).
 
-- T-4400 c94db44592 (11-15): ticked (outbox). Owed: T-4562 inbox correction to the 11-13 reply on #41.
 - T-4225 5e8875519d + dd94ec84dc (11-16): Home cards the build never saw read stg.wk (owner from board/archive); "X with Y, P0" heads name X. Owed: tick after land.
 
 - T-4475 (11-16): stopped twice by refusals (security-guard on a heredoc with git verbs; classifier on a test heredoc). Built work in scratch, ops/plans/T-4475-handoff.md. Owed: test rows, then commit.
 
 ## Lessons
 - T-4460+T-3684 5817998dd3 (11-16): sweep test pass (3 h, one listing) + tests/temp_clean.py. Owed: first live run's 'test temp pass' line; 7-day count. + site_t3219 cleanup owed after T-4455
+- T-4529 3e77aef319 (11-16): dispatch.py order --json / start_order() for T-4530 (Maren). Ticked (outbox).
 {% endraw %}
 
 

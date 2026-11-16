@@ -1,35 +1,54 @@
 {
  "schema": 1,
- "at": "2026-11-16T16:12:03.061626+00:00",
+ "at": "2026-11-16T16:15:08.764769+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-16T10:53:39-05:00",
-  "flow": [
+  "flow": [],
+  "done": [
+   {
+    "t": "T-2943",
+    "name": "Send up the gate build and confirm it stays internal",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794845670
+   },
+   {
+    "t": "T-4191",
+    "name": "VoiceOver and large text work on every screen",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "failed",
+    "end_at": 1794845596,
+    "why": "did not merge cleanly"
+   },
+   {
+    "t": "T-2943",
+    "name": "Send up the gate build and confirm it stays internal",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "failed",
+    "end_at": 1794845596,
+    "why": "did not merge cleanly"
+   },
    {
     "t": "T-3764",
     "name": "Make the iPad window test fail without the fix",
     "acct": "Personal b",
-    "steps": [
-     {
-      "s": "landing",
-      "at": 1794840802
-     }
-    ]
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794845571
    },
    {
     "t": "T-4315",
     "name": "Start a lane's next session without the wait",
     "acct": "Personal a",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1794844860
-     }
-    ]
-   }
-  ],
-  "done": [
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794845555
+   },
    {
     "t": "T-4314",
     "name": "Record what each personal session costs",
@@ -72,50 +91,10 @@
     "end": "failed",
     "end_at": 1794844375,
     "why": "did not merge cleanly"
-   },
-   {
-    "t": "T-4435",
-    "name": "Draw the wrapped refresh glyph on both runtimes",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794842100
-   },
-   {
-    "t": "T-4433",
-    "name": "Confirm the Lock Screen refresh tap first",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794842100
-   },
-   {
-    "t": "T-3745",
-    "name": "Stop the Pro store test timing out",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794842100
-   },
-   {
-    "t": "T-4286",
-    "name": "Check an imported font draws in a widget",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794840726
-   },
-   {
-    "t": "T-4564",
-    "name": "Run a button's action and redraw in one run",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794840704
    }
   ],
-  "landed": 42,
-  "failed": 8
+  "landed": 44,
+  "failed": 10
  },
  "workers": [
   {
@@ -123,7 +102,7 @@
    "task": "[tools] T-4583 feature step ticking",
    "model": "opus",
    "started": "2026-11-16T15:55:21.544Z",
-   "seconds": 1001,
+   "seconds": 1187,
    "finished": null,
    "effort": "high"
   }
@@ -191,7 +170,7 @@
   "week_pct": 15.51,
   "usage_pct": 42.5,
   "work_pct": 69.1,
-  "read_at": "2026-11-16T16:12:00+00:00",
+  "read_at": "2026-11-16T16:15:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -241,7 +220,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-16T11:12:00-05:00",
+  "at": "2026-11-16T11:15:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -460,96 +439,52 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-16T16:12:03Z",
+  "at": "2026-11-16T16:14:56Z",
   "s": {
-   "T-4315": [
-    "merging",
-    "Host checks on the Mac mini \u00b7 1 group of tests done",
-    1794844863061
-   ],
-   "T-3764": [
-    "mergeq",
-    "1st to merge",
-    1794837723061
-   ],
-   "T-4295": [
-    "mergeq",
-    "2nd to merge",
-    1794844923061
-   ],
-   "T-2943": [
-    "mergeq",
-    "2nd to merge",
-    1794844923061
-   ],
-   "T-4191": [
-    "mergeq",
-    "2nd to merge",
-    1794844923061
-   ],
    "T-4583": [
     "testing",
     "its own tests, in its copy",
-    1794844863061
+    1794844856424
    ]
   },
   "nm": {
-   "T-4315": "Start a lane's next session without the wait",
-   "T-3764": "Make the iPad window test fail without the fix",
-   "T-4295": "Let Chat messages pick model, effort and account",
-   "T-2943": "Send up the gate build and confirm it stays internal",
-   "T-4191": "VoiceOver and large text work on every screen",
    "T-4583": "Turn on Feature mode and tick steps at the merge"
   },
   "wk": {
-   "T-4315": "Odalys",
-   "T-3764": "Idris",
-   "T-4295": "Odalys",
-   "T-2943": "Idris",
-   "T-4191": "Idris",
    "T-4583": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-16T16:12:03Z",
+  "at": "2026-11-16T16:14:56Z",
   "mq": {
    "n": {
-    "checking": 1,
-    "inline": 4,
+    "checking": 0,
+    "inline": 0,
     "conflicted": 1,
     "failed": 0,
     "held": 0,
-    "retry": 0,
+    "retry": 3,
     "parked": 9
    },
    "m": {
-    "checking": 11,
-    "inline": 10,
-    "conflicted": 2393,
+    "checking": null,
+    "inline": null,
+    "conflicted": 2396,
     "failed": null,
     "held": null,
-    "retry": null,
-    "parked": 463
+    "retry": 22,
+    "parked": 466
    },
-   "cur": [
-    [
-     [
-      "T-4315"
-     ],
-     "Mac tests",
-     "Mac mini",
-     11
-    ]
-   ],
+   "cur": [],
    "ld": [
-    37,
-    "2026-11-16T15:54:02Z"
+    40,
+    "2026-11-16T16:14:30Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-16T16:11:31Z",
-    "ld": 6.01,
+    "at": "2026-11-16T16:14:31Z",
+    "ld": 6.81,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -592,7 +527,7 @@
    "m": "opus",
    "e": "high",
    "t": "Work session",
-   "at": "2026-11-16T11:12:01-05:00"
+   "at": "2026-11-16T11:14:50-05:00"
   },
   {
    "w": "Operator",
@@ -623,10 +558,10 @@
   "main": 1,
   "lanes": 1,
   "total": 2,
-  "at": "11:12 AM",
+  "at": "11:15 AM",
   "why": "",
-  "at_iso": "2026-11-16T16:12:00+00:00",
+  "at_iso": "2026-11-16T16:15:00+00:00",
   "started": "10:53 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 1, started 10:53 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 11:12 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 1, started 10:53 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 11:15 AM ET</p></section>"
  }
 }

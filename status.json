@@ -1,12 +1,20 @@
 {
  "schema": 1,
- "at": "2026-11-16T22:14:26.615282+00:00",
+ "at": "2026-11-16T22:16:49.817703+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-16T15:35:16-05:00",
   "flow": [],
   "done": [
+   {
+    "t": "T-3349",
+    "name": "Review the Release privacy scan before TestFlight",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794867400
+   },
    {
     "t": "T-3976",
     "name": "Show each drive's storage makeup on Home",
@@ -79,17 +87,9 @@
     "steps": [],
     "end": "landed",
     "end_at": 1794863009
-   },
-   {
-    "t": "T-4486",
-    "name": "Refuse Fable in sessions with no Fable task",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794862977
    }
   ],
-  "landed": 59,
+  "landed": 60,
   "failed": 12
  },
  "workers": [
@@ -98,7 +98,7 @@
    "task": "[tools] T-4583 land feature-step ticking",
    "model": "opus",
    "started": "2026-11-16T20:38:05.386Z",
-   "seconds": 5781,
+   "seconds": 5924,
    "finished": null,
    "effort": "high"
   },
@@ -107,7 +107,7 @@
    "task": "[tools] T-4103 switch on queue-check sweep",
    "model": "opus",
    "started": "2026-11-16T21:15:08.438Z",
-   "seconds": 3558,
+   "seconds": 3701,
    "finished": null,
    "effort": "high"
   },
@@ -116,7 +116,7 @@
    "task": "[tools] T-4196 grouped iPhone runs, rest",
    "model": "opus",
    "started": "2026-11-16T21:27:29.300Z",
-   "seconds": 2817,
+   "seconds": 2960,
    "finished": null,
    "effort": "high"
   },
@@ -125,7 +125,7 @@
    "task": "[design] T-4620 Features in Home task lists",
    "model": "opus",
    "started": "2026-11-16T21:36:15.573Z",
-   "seconds": 2291,
+   "seconds": 2434,
    "finished": null,
    "effort": "high"
   },
@@ -134,7 +134,7 @@
    "task": "[tools] T-3959 merge_queue batch with T-3960",
    "model": "opus",
    "started": "2026-11-16T21:48:36.481Z",
-   "seconds": 1550,
+   "seconds": 1693,
    "finished": null,
    "effort": "high"
   }
@@ -161,7 +161,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 415,
+  "runnable_count": 414,
   "blocked_count": 75
  },
  "meter": {
@@ -210,7 +210,7 @@
   "week_pct": 18.58,
   "usage_pct": 45.8,
   "work_pct": 73.2,
-  "read_at": "2026-11-16T22:14:00+00:00",
+  "read_at": "2026-11-16T22:17:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -266,11 +266,7 @@
    {
     "lane": "a3",
     "task": "T-3349",
-    "w": "Odalys",
-    "k": "review",
     "t": "Review the Release privacy scan before TestFlight",
-    "m": "opus",
-    "e": "high",
     "at": "2026-11-16T16:48:40-05:00",
     "n": "Evan",
     "d": 1,
@@ -380,14 +376,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-16T17:09:00-05:00",
+   "at": "2026-11-16T17:17:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 4,
-  "at": "2026-11-16T17:14:00-05:00",
+  "at": "2026-11-16T17:17:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -583,6 +579,11 @@
   ],
   "done": [
    {
+    "w": "Odalys",
+    "t": "An independent check found that release builds of the app now stop when a part of it uses a...",
+    "at": "2026-11-16T17:16:00-05:00"
+   },
+   {
     "w": "Pernille",
     "t": "Checked Idris's fix that redraws the last real reading when a sensor is slow; it works, but...",
     "at": "2026-11-16T16:46:00-05:00"
@@ -591,22 +592,21 @@
     "w": "Pernille",
     "t": "An independent check of the code that picks whether each widget runs inside the widget or in the...",
     "at": "2026-11-16T16:40:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "Once a day, one model reading looks at up to 40 queue lines the automatic check could not...",
-    "at": "2026-11-16T16:33:00-05:00"
    }
   ],
   "count": {
-   "next": 415,
+   "next": 414,
    "wait": 35,
    "blocked": 40,
    "you": 12
   },
   "fin": {
-   "n": 8,
+   "n": 9,
    "rows": [
+    [
+     "T-3349",
+     "Review the Release privacy..."
+    ],
     [
      "T-4082",
      "Check finished work before..."
@@ -625,10 +625,6 @@
     ],
     [
      "T-4060",
-     "Check finished work before..."
-    ],
-    [
-     "T-4058",
      "Check finished work before..."
     ]
    ]
@@ -673,7 +669,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-16T22:14:08Z",
+  "at": "2026-11-16T22:16:49Z",
   "s": {
    "T-4077": [
     "testing",
@@ -698,22 +694,28 @@
    "T-4196": [
     "testing",
     "its own tests, in its copy",
-    1794866048114
+    1794866029817
    ],
    "T-4620": [
     "testing",
     "its own tests, in its copy",
-    1794866588114
+    1794867289817
    ],
    "T-4103": [
     "testing",
     "its own tests, in its copy",
-    1794866228114
+    1794866209817
    ],
    "T-3959": [
     "testing",
     "its own tests, in its copy",
-    1794866888114
+    1794866929817
+   ],
+   "T-3349": [
+    "merged",
+    "on main 5:16 PM ET",
+    1794867371000,
+    ""
    ],
    "T-4621": [
     "merged",
@@ -737,6 +739,7 @@
    "T-4620": "Show Features and their steps in Home's task lists",
    "T-4103": "Build the queue-check sweep into the sweep system",
    "T-3959": "Skip product tests for docs-only changes",
+   "T-3349": "Review the Release privacy scan before TestFlight",
    "T-4621": "Card check that app parts name their docs page",
    "T-4486": "Refuse Fable in sessions with no Fable task"
   },
@@ -749,6 +752,7 @@
    "T-4620": "Maren",
    "T-4103": "Odalys",
    "T-3959": "Odalys",
+   "T-3349": "Odalys",
    "T-4621": "Odalys",
    "T-4486": "Odalys",
    "T-4518": "Pernille",
@@ -761,7 +765,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-16T22:14:08Z",
+  "at": "2026-11-16T22:16:49Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -775,26 +779,26 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 1553,
-    "failed": 4,
+    "conflicted": 1555,
+    "failed": 7,
     "held": null,
     "retry": null,
-    "parked": 758
+    "parked": 760
    },
    "cur": [],
    "ld": [
-    75,
-    "2026-11-16T21:52:43Z"
+    76,
+    "2026-11-16T22:16:40Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-16T22:14:10Z",
-    "ld": 39.76,
+    "at": "2026-11-16T22:17:22Z",
+    "ld": 41.04,
     "c": 8,
     "sb": 1,
     "dk": [
-     15.7,
+     17.1,
      228.3
     ],
     "ss": [
@@ -806,8 +810,8 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-16T21:42:05Z",
-    "ld": 0.19,
+    "at": "2026-11-16T22:12:39Z",
+    "ld": 0.16,
     "c": 12,
     "sb": 0,
     "dk": [
@@ -904,10 +908,10 @@
   "main": 5,
   "lanes": 6,
   "total": 11,
-  "at": "5:14 PM",
+  "at": "5:17 PM",
   "why": "",
-  "at_iso": "2026-11-16T22:14:00+00:00",
+  "at_iso": "2026-11-16T22:17:00+00:00",
   "started": "3:35 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>11</b> agents running now</p><p class=\"an-sub\">Main session 5, started 3:35 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 6 sessions \u00b7 as of 5:14 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>11</b> agents running now</p><p class=\"an-sub\">Main session 5, started 3:35 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 6 sessions \u00b7 as of 5:17 PM ET</p></section>"
  }
 }

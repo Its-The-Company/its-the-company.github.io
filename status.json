@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-16T17:51:12.773881+00:00",
+ "at": "2026-11-16T17:54:19.066149+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -97,12 +97,21 @@
    "task": "[tools] T-4583 feature step ticking",
    "model": "opus",
    "started": "2026-11-16T15:55:21.544Z",
-   "seconds": 6951,
+   "seconds": 7137,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "maren",
+   "task": "[design] T-4595 split Home waiting count",
+   "model": "opus",
+   "started": "2026-11-16T17:52:58.025Z",
+   "seconds": 81,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Idris",
+ "who": "Idris, Maren",
  "recent": [
   {
    "name": "idris",
@@ -116,7 +125,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 386,
+  "runnable_count": 388,
   "blocked_count": 75
  },
  "meter": {
@@ -165,7 +174,7 @@
   "week_pct": 15.51,
   "usage_pct": 42.5,
   "work_pct": 69.1,
-  "read_at": "2026-11-16T17:51:00+00:00",
+  "read_at": "2026-11-16T17:54:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -211,6 +220,7 @@
     "e": "high",
     "at": "2026-11-16T12:10:48-05:00",
     "n": "Jeremy",
+    "d": 1,
     "src": "plan-b"
    },
    {
@@ -261,7 +271,7 @@
  "lock_in": {
   "on": false,
   "pool": 4,
-  "at": "2026-11-16T12:51:00-05:00",
+  "at": "2026-11-16T12:54:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -283,6 +293,15 @@
    "task": "[tools] T-4583 feature step ticking",
    "model": "opus",
    "since": "2026-11-16T15:55:21.544Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
+   "name": "Maren",
+   "state": "running",
+   "task": "[design] T-4595 split Home waiting count",
+   "model": "opus",
+   "since": "2026-11-16T17:52:58.025Z",
    "next": [],
    "effort": "high"
   },
@@ -317,14 +336,6 @@
    "model": null,
    "since": null,
    "next": []
-  },
-  {
-   "name": "Maren",
-   "state": "next",
-   "task": "Maren, P2, found on T-3366 (11-07): in...",
-   "model": null,
-   "since": null,
-   "next": []
   }
  ],
  "tasks": {
@@ -338,6 +349,16 @@
     "at": "2026-11-16T15:55:21.544Z",
     "o": "c",
     "task": "T-4583"
+   },
+   {
+    "w": "Maren",
+    "k": "design",
+    "t": "Split Home's waiting-to-merge count into its parts",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-16T17:52:58.025Z",
+    "o": "i",
+    "task": "T-4595"
    }
   ],
   "src": "plan",
@@ -399,18 +420,18 @@
     "o": "c"
    },
    {
+    "w": "Maren",
+    "k": "site",
+    "t": "Split Home's waiting-to-merge count into its...",
+    "s": "next",
+    "o": "i"
+   },
+   {
     "w": "Odalys",
     "k": "tools",
     "t": "Answer Investor messages that no session claims",
     "s": "next",
     "o": "c"
-   },
-   {
-    "w": "Ines",
-    "k": "tools",
-    "t": "Propose the personal accounts' 5-hour stop at 97",
-    "s": "next",
-    "o": "i"
    }
   ],
   "done": [
@@ -431,7 +452,7 @@
    }
   ],
   "count": {
-   "next": 386,
+   "next": 388,
    "wait": 34,
    "blocked": 41,
    "you": 12
@@ -501,7 +522,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-16T17:50:55Z",
+  "at": "2026-11-16T17:54:00Z",
   "s": {
    "T-2691": [
     "testing",
@@ -523,11 +544,6 @@
     "Mac Mini \u00b7 test",
     null
    ],
-   "T-4583": [
-    "testing",
-    "its own tests, in its copy",
-    1794848035060
-   ],
    "T-4561": [
     "merged",
     "on main 12:28 PM ET",
@@ -540,7 +556,6 @@
    "T-3765": "Check a real widget tap on the TestFlight build",
    "T-4040": "Check finished work before it ships",
    "T-4043": "Check finished work before it ships",
-   "T-4583": "Turn on Feature mode and tick steps at the merge",
    "T-4561": "Act on the Investors' answer on the Simulator refusals"
   },
   "wk": {
@@ -548,7 +563,6 @@
    "T-3765": "Idris",
    "T-4040": "Pernille",
    "T-4043": "Pernille",
-   "T-4583": "Idris",
    "T-4561": "Odalys",
    "T-4032": "Pernille",
    "T-4063": "Pernille",
@@ -557,7 +571,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-16T17:50:55Z",
+  "at": "2026-11-16T17:54:00Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -571,11 +585,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 1289,
+    "conflicted": 1292,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 562
+    "parked": 565
    },
    "cur": [],
    "ld": [
@@ -585,12 +599,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-16T17:50:10Z",
-    "ld": 18.26,
+    "at": "2026-11-16T17:53:37Z",
+    "ld": 20.32,
     "c": 8,
     "sb": 1,
     "dk": [
-     28.3,
+     28.1,
      228.3
     ],
     "ss": [
@@ -621,8 +635,8 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 1 task",
-   "at": "2026-11-16T10:53:39-05:00"
+   "t": "Work session \u2013 2 tasks",
+   "at": "2026-11-16T12:52:12-05:00"
   },
   {
    "w": "Operator",
@@ -639,7 +653,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 2 tasks",
+   "t": "Work session \u2013 1 task",
    "at": "2026-11-16T12:10:47-05:00"
   },
   {
@@ -653,8 +667,8 @@
   }
  ],
  "reply": {
-  "sent": "2026-11-16T17:34:19Z",
-  "seconds": 93.0
+  "sent": "2026-11-16T17:51:30Z",
+  "seconds": 41.0
  },
  "inbox": [],
  "trimmed": [
@@ -669,13 +683,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 1,
+  "main": 2,
   "lanes": 3,
-  "total": 4,
-  "at": "12:51 PM",
+  "total": 5,
+  "at": "12:54 PM",
   "why": "",
-  "at_iso": "2026-11-16T17:51:00+00:00",
+  "at_iso": "2026-11-16T17:54:00+00:00",
   "started": "10:53 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 1, started 10:53 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 12:51 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 2, started 10:53 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 12:54 PM ET</p></section>"
  }
 }

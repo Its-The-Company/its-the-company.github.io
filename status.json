@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-16T23:43:46.163152+00:00",
+ "at": "2026-11-16T23:46:52.765987+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -110,7 +110,7 @@
    "task": "[tools] T-4583 land feature-step ticking",
    "model": "opus",
    "started": "2026-11-16T20:38:05.386Z",
-   "seconds": 11140,
+   "seconds": 11327,
    "finished": null,
    "effort": "high"
   },
@@ -119,7 +119,7 @@
    "task": "[design] T-4620 Features in Home task lists",
    "model": "opus",
    "started": "2026-11-16T21:36:15.573Z",
-   "seconds": 7650,
+   "seconds": 7837,
    "finished": null,
    "effort": "high"
   }
@@ -211,7 +211,7 @@
   "week_pct": 18.58,
   "usage_pct": 45.8,
   "work_pct": 73.2,
-  "read_at": "2026-11-16T23:43:00+00:00",
+  "read_at": "2026-11-16T23:47:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -287,7 +287,7 @@
  "lock_in": {
   "on": false,
   "pool": 4,
-  "at": "2026-11-16T18:43:00-05:00",
+  "at": "2026-11-16T18:47:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -542,67 +542,77 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-16T23:43:46Z",
+  "at": "2026-11-16T23:46:52Z",
   "s": {
    "T-4614": [
     "merging",
     "Host checks on the Mac mini",
-    1794872026163
+    1794872032765
    ],
    "T-4627": [
     "mergeq",
     "1st to merge",
-    1794871906163
+    1794871912765
    ],
    "T-4624": [
     "mergeq",
     "1st to merge",
-    1794871906163
+    1794871912765
    ],
    "T-4625": [
     "mergeq",
     "3rd to merge",
-    1794871966163
+    1794871972765
    ],
    "T-3495": [
     "mergeq",
     "4th to merge",
-    1794872626163
+    1794872692765
+   ],
+   "T-4494": [
+    "mergeq",
+    "4th to merge",
+    1794872692765
    ],
    "T-4540": [
     "mergeq",
-    "5th to merge",
-    1794872626163
+    "7th to merge",
+    1794872572765
    ],
    "T-4630": [
     "mergetest",
     "iPhone tests on the MacBook",
     null
    ],
-   "T-3765": [
-    "testing",
-    "Mac Mini \u00b7 test",
-    null
-   ],
-   "T-4077": [
-    "testing",
-    "Mac Mini \u00b7 test",
-    null
-   ],
-   "T-4082": [
-    "testing",
-    "Mac Mini \u00b7 test",
-    null
-   ],
    "T-4583": [
-    "testing",
-    "its own tests, in its copy",
-    1794870166163
+    "merging",
+    "Mac tests at the main gate",
+    1794872752765
    ],
    "T-4541": [
+    "testing",
+    "Mac Mini \u00b7 test",
+    null
+   ],
+   "T-4620": [
+    "testing",
+    "its own tests, in its copy",
+    1794872812765
+   ],
+   "T-3765": [
     "testq",
     "1st for a Simulator",
-    1794872326163
+    1794872752765
+   ],
+   "T-4077": [
+    "testq",
+    "1st for a Simulator",
+    1794872752765
+   ],
+   "T-4082": [
+    "testq",
+    "1st for a Simulator",
+    1794872752765
    ]
   },
   "nm": {
@@ -611,13 +621,15 @@
    "T-4624": "Drop Parents and Children from Home's task cards",
    "T-4625": "Put every remaining efficiency and site line first",
    "T-3495": "Check the upload fix before build 4 goes out",
+   "T-4494": "Prove widgets move to the app by size",
    "T-4540": "Check finished work before it ships",
    "T-4630": "Stop badging widgets moved to the app by size",
+   "T-4583": "Turn on Feature mode and tick steps at the merge",
+   "T-4541": "Check finished work before it ships",
+   "T-4620": "Show Features and their steps in Home's task lists",
    "T-3765": "Check a real widget tap on the TestFlight build",
    "T-4077": "Check finished work before it ships",
-   "T-4082": "Check finished work before it ships",
-   "T-4583": "Turn on Feature mode and tick steps at the merge",
-   "T-4541": "Check finished work before it ships"
+   "T-4082": "Check finished work before it ships"
   },
   "wk": {
    "T-4614": "Pernille",
@@ -625,13 +637,15 @@
    "T-4624": "Maren",
    "T-4625": "Odalys",
    "T-3495": "Pernille",
+   "T-4494": "Idris",
    "T-4540": "Pernille",
    "T-4630": "Idris",
+   "T-4583": "Idris",
+   "T-4541": "Pernille",
+   "T-4620": "Maren",
    "T-3765": "Idris",
    "T-4077": "Pernille",
    "T-4082": "Pernille",
-   "T-4583": "Idris",
-   "T-4541": "Pernille",
    "T-4486": "Odalys",
    "T-3349": "Odalys",
    "T-4518": "Pernille",
@@ -644,11 +658,11 @@
   }
  },
  "ln": {
-  "at": "2026-11-16T23:43:46Z",
+  "at": "2026-11-16T23:46:52Z",
   "mq": {
    "n": {
     "checking": 1,
-    "inline": 5,
+    "inline": 6,
     "conflicted": 2,
     "failed": 0,
     "held": 0,
@@ -656,13 +670,13 @@
     "parked": 12
    },
    "m": {
-    "checking": 10,
-    "inline": 11,
-    "conflicted": 1642,
+    "checking": 13,
+    "inline": 9,
+    "conflicted": 1645,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 739
+    "parked": 742
    },
    "cur": [
     [
@@ -671,7 +685,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     10
+     13
     ]
    ],
    "ld": [
@@ -681,12 +695,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-16T23:43:22Z",
-    "ld": 10.74,
+    "at": "2026-11-16T23:46:28Z",
+    "ld": 22.11,
     "c": 8,
     "sb": 1,
     "dk": [
-     21.5,
+     20.1,
      228.3
     ],
     "ss": [
@@ -694,7 +708,7 @@
      953.7
     ],
     "sn": [
-     "iPhone 17e"
+     "iPhone Air"
     ]
    },
    "macbook": {
@@ -761,10 +775,10 @@
   "main": 2,
   "lanes": 2,
   "total": 4,
-  "at": "6:43 PM",
+  "at": "6:47 PM",
   "why": "",
-  "at_iso": "2026-11-16T23:43:00+00:00",
+  "at_iso": "2026-11-16T23:47:00+00:00",
   "started": "3:35 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 2, started 3:35 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 6:43 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 2, started 3:35 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 6:47 PM ET</p></section>"
  }
 }

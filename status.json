@@ -1,22 +1,11 @@
 {
  "schema": 1,
- "at": "2026-11-16T07:08:14.911398+00:00",
+ "at": "2026-11-16T07:11:17.363146+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-16T00:32:52-05:00",
-  "flow": [
-   {
-    "t": "T-4468",
-    "name": "Let people set each premade's place, events and lists",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1794769835
-     }
-    ]
-   }
-  ],
+  "flow": [],
   "done": [
    {
     "t": "T-4562",
@@ -105,7 +94,7 @@
    "task": "[tools] T-4194 land feature-session wiring",
    "model": "opus",
    "started": "2026-11-16T05:36:18.799Z",
-   "seconds": 5516,
+   "seconds": 5698,
    "finished": null
   },
   {
@@ -113,7 +102,7 @@
    "task": "[tools] T-3995 personal_land daily batch",
    "model": "opus",
    "started": "2026-11-16T05:36:28.863Z",
-   "seconds": 5506,
+   "seconds": 5688,
    "finished": null
   }
  ],
@@ -180,7 +169,7 @@
   "week_pct": 5.72,
   "usage_pct": 25.2,
   "work_pct": 70.0,
-  "read_at": "2026-11-16T07:08:00+00:00",
+  "read_at": "2026-11-16T07:11:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -192,6 +181,7 @@
     "e": "high",
     "at": "2026-11-16T01:55:40-05:00",
     "n": "Jeremy",
+    "d": 1,
     "src": "plan-b"
    },
    {
@@ -309,7 +299,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-16T02:08:00-05:00",
+  "at": "2026-11-16T02:11:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -540,17 +530,12 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-16T07:08:01Z",
+  "at": "2026-11-16T07:11:17Z",
   "s": {
-   "T-3995": [
-    "testing",
-    "its own tests, in its copy",
-    1794809461143
-   ],
    "T-4194": [
     "testing",
     "its own tests, in its copy",
-    1794812881143
+    1794812837363
    ],
    "T-4562": [
     "merged",
@@ -566,14 +551,13 @@
    ]
   },
   "nm": {
-   "T-3995": "Replace the waiting pile with one merge line",
    "T-4194": "Build the feature session for app work",
    "T-4562": "Correct the pace reply sent to Jeremy",
    "T-4514": "Quit the three apps once the rule applies"
   }
  },
  "ln": {
-  "at": "2026-11-16T07:08:01Z",
+  "at": "2026-11-16T07:11:17Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -587,11 +571,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 1849,
+    "conflicted": 1853,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 47
+    "parked": 50
    },
    "cur": [],
    "ld": [
@@ -601,12 +585,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-16T07:08:02Z",
-    "ld": 2.71,
+    "at": "2026-11-16T07:11:18Z",
+    "ld": 2.3,
     "c": 8,
     "sb": 0,
     "dk": [
-     26.1,
+     23.0,
      228.3
     ],
     "ss": [
@@ -677,10 +661,10 @@
   "main": 2,
   "lanes": 2,
   "total": 4,
-  "at": "2:08 AM",
+  "at": "2:11 AM",
   "why": "",
-  "at_iso": "2026-11-16T07:08:00+00:00",
+  "at_iso": "2026-11-16T07:11:00+00:00",
   "started": "12:32 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 2, started 12:32 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 2:08 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 2, started 12:32 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 2:11 AM ET</p></section>"
  }
 }

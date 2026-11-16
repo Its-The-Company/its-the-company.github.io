@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-16T03:44:20.629752+00:00",
+ "at": "2026-11-16T03:47:18.423638+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -113,7 +113,7 @@
    "task": "[tools] T-4194 wire and switch on feature sessions",
    "model": "opus",
    "started": "2026-11-16T02:43:06.794Z",
-   "seconds": 3673,
+   "seconds": 3851,
    "finished": null,
    "effort": "high"
   },
@@ -122,7 +122,7 @@
    "task": "[tools] T-4560 disk cleaning acts on cleared refusals",
    "model": "opus",
    "started": "2026-11-16T03:28:22.673Z",
-   "seconds": 957,
+   "seconds": 1135,
    "finished": null,
    "effort": "high"
   }
@@ -214,7 +214,7 @@
   "week_pct": 4.62,
   "usage_pct": 26.2,
   "work_pct": 68.8,
-  "read_at": "2026-11-16T03:44:00+00:00",
+  "read_at": "2026-11-16T03:47:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -323,6 +323,7 @@
     "e": "high",
     "at": "2026-11-15T22:32:46-05:00",
     "n": "Evan",
+    "d": 1,
     "src": "plan-a"
    },
    {
@@ -395,7 +396,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-15T22:44:00-05:00",
+  "at": "2026-11-15T22:47:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -650,22 +651,27 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-16T03:44:20Z",
+  "at": "2026-11-16T03:47:18Z",
   "s": {
    "T-0261": [
     "merging",
     "Host checks on the Mac mini",
-    1794800540629
+    1794800538423
+   ],
+   "T-4489": [
+    "mergeq",
+    "1st to merge",
+    1794800778423
    ],
    "T-4560": [
     "testing",
     "its own tests, in its copy",
-    1794800060629
+    1794800058423
    ],
    "T-4194": [
     "testing",
     "its own tests, in its copy",
-    1794799280629
+    1794799278423
    ],
    "T-3345": [
     "merged",
@@ -682,6 +688,7 @@
   },
   "nm": {
    "T-0261": "Apply the chosen store caption wording",
+   "T-4489": "Decide if the Simulator erase approval clears old refusals",
    "T-4560": "Let the disk cleaning act on cleared refusals",
    "T-4194": "Build the feature session for app work",
    "T-3345": "Drop two parked 1.1 Builder tasks",
@@ -689,11 +696,11 @@
   }
  },
  "ln": {
-  "at": "2026-11-16T03:44:20Z",
+  "at": "2026-11-16T03:47:18Z",
   "mq": {
    "n": {
     "checking": 1,
-    "inline": 0,
+    "inline": 1,
     "conflicted": 1,
     "failed": 0,
     "held": 0,
@@ -701,13 +708,13 @@
     "parked": 2
    },
    "m": {
-    "checking": 2,
-    "inline": null,
-    "conflicted": 1646,
+    "checking": 5,
+    "inline": 1,
+    "conflicted": 1649,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 875
+    "parked": 878
    },
    "cur": [
     [
@@ -716,7 +723,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     2
+     5
     ]
    ],
    "ld": [
@@ -726,12 +733,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-16T03:44:23Z",
-    "ld": 3.35,
+    "at": "2026-11-16T03:47:27Z",
+    "ld": 5.67,
     "c": 8,
     "sb": 0,
     "dk": [
-     34.8,
+     33.7,
      228.3
     ],
     "ss": [
@@ -778,7 +785,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 4 tasks",
+   "t": "Work session \u2013 3 tasks",
    "at": "2026-11-15T22:37:27-05:00"
   },
   {
@@ -787,7 +794,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 2 tasks",
+   "t": "Work session \u2013 1 task",
    "at": "2026-11-15T22:32:45-05:00"
   }
  ],
@@ -813,10 +820,10 @@
   "main": 2,
   "lanes": 3,
   "total": 5,
-  "at": "10:44 PM",
+  "at": "10:47 PM",
   "why": "",
-  "at_iso": "2026-11-16T03:44:00+00:00",
+  "at_iso": "2026-11-16T03:47:00+00:00",
   "started": "8:30 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 2, started 8:30 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 10:44 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 2, started 8:30 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 10:47 PM ET</p></section>"
  }
 }

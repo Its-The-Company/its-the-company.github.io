@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-16T02:52:29.677505+00:00",
+ "at": "2026-11-16T02:55:31.847233+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -113,7 +113,7 @@
    "task": "[tools] T-4194 wire and switch on feature sessions",
    "model": "opus",
    "started": "2026-11-16T02:43:06.794Z",
-   "seconds": 562,
+   "seconds": 745,
    "finished": null,
    "effort": "high"
   },
@@ -122,12 +122,21 @@
    "task": "[review] T-4542 Maren reviews ADR-011 setting and notices",
    "model": "opus",
    "started": "2026-11-16T02:52:19.557Z",
-   "seconds": 10,
+   "seconds": 192,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "pernille",
+   "task": "[review] T-4542 Pernille re-reads revised ADR-011",
+   "model": "opus",
+   "started": "2026-11-16T02:52:42.454Z",
+   "seconds": 169,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Idris, Maren",
+ "who": "Idris, Maren, Pernille",
  "recent": [
   {
    "name": "idris",
@@ -170,21 +179,21 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 16.0,
+   "pct": 18.0,
    "resets_at": "2026-11-15T22:10:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-15T21:46:25.328514-05:00",
+   "read_at": "2026-11-15T21:52:51.055524-05:00",
    "source": "live",
-   "left": 84.0,
+   "left": 82.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 14.0,
+   "pct": 15.0,
    "resets_at": "2026-11-22T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-15T21:46:25.328514-05:00",
+   "read_at": "2026-11-15T21:52:51.055524-05:00",
    "source": "live",
-   "left": 86.0,
+   "left": 85.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
@@ -194,7 +203,7 @@
    "read_at": "2026-11-15T20:29:58.154359-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-15T21:46:25.328514-05:00"
+  "read_at": "2026-11-15T21:52:51.055524-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -214,7 +223,7 @@
   "week_pct": 4.62,
   "usage_pct": 26.2,
   "work_pct": 68.8,
-  "read_at": "2026-11-16T02:52:00+00:00",
+  "read_at": "2026-11-16T02:55:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -244,14 +253,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions wait until 20 GB is free.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-15T21:46:00-05:00",
+   "at": "2026-11-15T21:52:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-15T21:52:00-05:00",
+  "at": "2026-11-15T21:55:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -262,7 +271,7 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Double Spread: 86% of the week left, paced to last until Wed 14:00, the week's halfway point; the machine allows 19 (held, just changed: 2 of 5 lands failed in 3 hours (2 red))",
+  "why": "Double Spread: 85% of the week left, paced to last until Wed 14:00, the week's halfway point; the machine allows 19 (held, just changed: 2 of 5 lands failed in 3 hours (2 red))",
   "n": 3,
   "at": "2026-11-15T20:29:58.478388-05:00"
  },
@@ -286,17 +295,18 @@
    "effort": "high"
   },
   {
+   "name": "Pernille",
+   "state": "running",
+   "task": "[review] T-4542 Pernille re-reads revised ADR-011",
+   "model": "opus",
+   "since": "2026-11-16T02:52:42.454Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
    "name": "Ines",
    "state": "next",
    "task": "Ines, P2, from T-1110 (Wrenna,...",
-   "model": null,
-   "since": null,
-   "next": []
-  },
-  {
-   "name": "Pernille",
-   "state": "next",
-   "task": "Pernille, P1, premades and gallery take the age line...",
    "model": null,
    "since": null,
    "next": []
@@ -337,6 +347,16 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-16T02:52:19.557Z",
+    "o": "i",
+    "task": "T-4542"
+   },
+   {
+    "w": "Pernille",
+    "k": "review",
+    "t": "Let people choose what a widget tap does",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-16T02:52:42.454Z",
     "o": "i",
     "task": "T-4542"
    }
@@ -498,7 +518,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-16T02:52:21Z",
+  "at": "2026-11-16T02:55:31Z",
   "s": {
    "T-4542": [
     "merged",
@@ -512,7 +532,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-16T02:52:21Z",
+  "at": "2026-11-16T02:55:31Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -526,11 +546,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 1594,
+    "conflicted": 1597,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 823
+    "parked": 826
    },
    "cur": [],
    "ld": [
@@ -540,8 +560,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-16T02:52:22Z",
-    "ld": 2.95,
+    "at": "2026-11-16T02:55:09Z",
+    "ld": 3.1,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -549,7 +569,7 @@
      228.3
     ],
     "ss": [
-     181.6,
+     179.5,
      953.7
     ],
     "sn": []
@@ -596,13 +616,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 2,
+  "main": 3,
   "lanes": 0,
-  "total": 2,
-  "at": "9:52 PM",
+  "total": 3,
+  "at": "9:55 PM",
   "why": "",
-  "at_iso": "2026-11-16T02:52:00+00:00",
+  "at_iso": "2026-11-16T02:55:00+00:00",
   "started": "8:30 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 8:30 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:52 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 8:30 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:55 PM ET</p></section>"
  }
 }

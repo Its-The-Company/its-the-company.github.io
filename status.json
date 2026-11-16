@@ -1,10 +1,10 @@
 {
  "schema": 1,
- "at": "2026-11-16T09:43:11.186669+00:00",
+ "at": "2026-11-16T09:46:17.420553+00:00",
  "session": {
-  "active": false,
-  "kind": "",
-  "started": null,
+  "active": true,
+  "kind": "work",
+  "started": "2026-11-16T04:43:12-05:00",
   "flow": [
    {
     "t": "T-3552",
@@ -101,18 +101,37 @@
   "landed": 28,
   "failed": 5
  },
- "workers": [],
- "who": "",
- "recent": [
+ "workers": [
   {
-   "name": "odalys",
-   "task": "[tools] T-3995 land personal_land batch",
+   "name": "idris",
+   "task": "[release] T-2943 upload gate build 7",
    "model": "opus",
-   "started": "2026-11-16T09:02:22.631Z",
-   "seconds": null,
-   "finished": "2026-11-16T09:30:45.964000+00:00"
+   "started": "2026-11-16T09:44:58.790Z",
+   "seconds": 78,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "ines",
+   "task": "[plan] T-4194 decide on refused land",
+   "model": "opus",
+   "started": "2026-11-16T09:45:08.086Z",
+   "seconds": 69,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "maren",
+   "task": "[design] T-4293 Home skipped stages",
+   "model": "opus",
+   "started": "2026-11-16T09:45:15.190Z",
+   "seconds": 62,
+   "finished": null,
+   "effort": "high"
   }
  ],
+ "who": "Idris, Ines, Maren",
+ "recent": [],
  "queue": {
   "runnable": [],
   "blocked": [],
@@ -160,12 +179,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-16T04:57:54-05:00",
+ "next_tick": null,
  "personal": {
   "week_pct": 9.1,
   "usage_pct": 32.4,
   "work_pct": 76.5,
-  "read_at": "2026-11-16T09:43:00+00:00",
+  "read_at": "2026-11-16T09:46:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -177,6 +196,7 @@
     "e": "high",
     "at": "2026-11-16T04:40:01-05:00",
     "n": "Evan",
+    "d": 1,
     "src": "plan-a"
    },
    {
@@ -189,6 +209,7 @@
     "e": "medium",
     "at": "2026-11-16T04:40:01-05:00",
     "n": "Evan",
+    "d": 1,
     "src": "plan-a"
    },
    {
@@ -240,7 +261,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-16T04:43:00-05:00",
+  "at": "2026-11-16T04:46:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -248,25 +269,40 @@
    "b": "double-spread"
   }
  },
- "next_tick_why": "last_tick",
+ "next_tick_why": "session",
  "idle": null,
- "pool": null,
+ "pool": {
+  "why": "Double Spread: 81% of the week left, paced to last until Wed 14:00, the week's halfway point; the machine allows 3 (raised a step toward the floor of 8: new work may start and every signal is...",
+  "n": 3,
+  "at": "2026-11-16T04:42:54.154987-05:00"
+ },
  "lanes": [
   {
    "name": "Idris",
-   "state": "next",
-   "task": "Idris, P2, from T-4238 (Pernille's review, from T-3900,...",
-   "model": null,
-   "since": null,
-   "next": []
+   "state": "running",
+   "task": "[release] T-2943 upload gate build 7",
+   "model": "opus",
+   "since": "2026-11-16T09:44:58.790Z",
+   "next": [],
+   "effort": "high"
   },
   {
    "name": "Ines",
-   "state": "next",
-   "task": "Ines, P2, from T-1110 (Wrenna,...",
-   "model": null,
-   "since": null,
-   "next": []
+   "state": "running",
+   "task": "[plan] T-4194 decide on refused land",
+   "model": "opus",
+   "since": "2026-11-16T09:45:08.086Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
+   "name": "Maren",
+   "state": "running",
+   "task": "[design] T-4293 Home skipped stages",
+   "model": "opus",
+   "since": "2026-11-16T09:45:15.190Z",
+   "next": [],
+   "effort": "high"
   },
   {
    "name": "Pernille",
@@ -291,18 +327,42 @@
    "model": null,
    "since": null,
    "next": []
-  },
-  {
-   "name": "Maren",
-   "state": "next",
-   "task": "Maren, P2, found on T-3366 (11-07): in...",
-   "model": null,
-   "since": null,
-   "next": []
   }
  ],
  "tasks": {
-  "run": [],
+  "run": [
+   {
+    "w": "Idris",
+    "k": "release",
+    "t": "Send up the gate build and confirm it stays internal",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-16T09:44:58.790Z",
+    "o": "i",
+    "task": "T-2943"
+   },
+   {
+    "w": "Ines",
+    "k": "plan",
+    "t": "Build the feature session for app work",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-16T09:45:08.086Z",
+    "o": "c",
+    "task": "T-4194"
+   },
+   {
+    "w": "Maren",
+    "k": "design",
+    "t": "Show skipped and brief stages on Home",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-16T09:45:15.190Z",
+    "o": "c",
+    "task": "T-4293"
+   }
+  ],
+  "src": "plan",
   "open": [
    {
     "w": "Idris",
@@ -397,6 +457,10 @@
    "wait": 34,
    "blocked": 41,
    "you": 12
+  },
+  "fin": {
+   "n": 0,
+   "rows": []
   }
  },
  "qr": [
@@ -438,27 +502,42 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-16T09:43:11Z",
+  "at": "2026-11-16T09:45:59Z",
   "s": {
    "T-3552": [
     "merging",
     "Host checks on the Mac mini",
-    1794822071186
+    1794822059793
+   ],
+   "T-4567": [
+    "mergeq",
+    "1st to merge",
+    1794822299793
+   ],
+   "T-4293": [
+    "merged",
+    "on main 6:01 PM ET",
+    1794783665000,
+    "Maren"
    ]
   },
   "nm": {
-   "T-3552": "Test gallery and widget runs together with a stalled sensor"
+   "T-3552": "Test gallery and widget runs together with a stalled sensor",
+   "T-4567": "Measure the inbox wait experiment OPT-064",
+   "T-4293": "Show skipped and brief stages on Home"
   },
   "wk": {
-   "T-3552": "Idris"
+   "T-3552": "Idris",
+   "T-4567": "Odalys",
+   "T-4293": "Maren"
   }
  },
  "ln": {
-  "at": "2026-11-16T09:43:11Z",
+  "at": "2026-11-16T09:45:59Z",
   "mq": {
    "n": {
     "checking": 1,
-    "inline": 0,
+    "inline": 1,
     "conflicted": 1,
     "failed": 0,
     "held": 0,
@@ -466,13 +545,13 @@
     "parked": 7
    },
    "m": {
-    "checking": 2,
-    "inline": null,
-    "conflicted": 2005,
+    "checking": 5,
+    "inline": 1,
+    "conflicted": 2007,
     "failed": null,
     "held": null,
-    "retry": 31,
-    "parked": 134
+    "retry": 34,
+    "parked": 137
    },
    "cur": [
     [
@@ -481,7 +560,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     2
+     5
     ]
    ],
    "ld": [
@@ -491,12 +570,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-16T09:43:12Z",
-    "ld": 8.42,
+    "at": "2026-11-16T09:45:33Z",
+    "ld": 6.49,
     "c": 8,
     "sb": 0,
     "dk": [
-     20.0,
+     17.9,
      228.3
     ],
     "ss": [
@@ -510,11 +589,20 @@
  "operators": [
   {
    "w": "Operator",
+   "a": "Main plan",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session \u2013 3 tasks",
+   "at": "2026-11-16T04:43:12-05:00"
+  },
+  {
+   "w": "Operator",
    "a": "Evan",
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 2 tasks",
+   "t": "Work session \u2013 1 task",
    "at": "2026-11-16T04:40:01-05:00"
   },
   {
@@ -543,13 +631,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 0,
+  "main": 3,
   "lanes": 2,
-  "total": 2,
-  "at": "4:43 AM",
+  "total": 5,
+  "at": "4:46 AM",
   "why": "",
-  "at_iso": "2026-11-16T09:43:00+00:00",
-  "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 4:43 AM ET</p></section>"
+  "at_iso": "2026-11-16T09:46:00+00:00",
+  "started": "4:43 AM",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 3, started 4:43 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 4:46 AM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-16T13:54:06.655006+00:00",
+ "at": "2026-11-16T13:57:11.565747+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -114,7 +114,7 @@
    "task": "[tools] T-4012 retry routes reading",
    "model": "opus",
    "started": "2026-11-16T13:51:01.145Z",
-   "seconds": 185,
+   "seconds": 370,
    "finished": null,
    "effort": "high"
   }
@@ -173,7 +173,7 @@
   "week_pct": 13.38,
   "usage_pct": 40.1,
   "work_pct": 70.0,
-  "read_at": "2026-11-16T13:54:00+00:00",
+  "read_at": "2026-11-16T13:57:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -233,52 +233,6 @@
     "at": "2026-11-16T08:49:01-05:00",
     "n": "Jeremy",
     "src": "plan-b"
-   },
-   {
-    "lane": "b3",
-    "task": "T-3745",
-    "w": "Idris",
-    "k": "test",
-    "t": "Stop the Pro store test timing out",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-16T06:07:05-05:00",
-    "n": "Jeremy",
-    "src": "plan-b"
-   },
-   {
-    "lane": "b3",
-    "task": "T-4256",
-    "t": "Lighten the marks and colour their line numbers",
-    "at": "2026-11-16T06:07:05-05:00",
-    "n": "Jeremy",
-    "d": 1,
-    "src": "plan-b"
-   },
-   {
-    "lane": "b3",
-    "task": "T-4433",
-    "w": "Idris",
-    "k": "build",
-    "t": "Confirm the Lock Screen refresh tap first",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-16T06:07:05-05:00",
-    "n": "Jeremy",
-    "src": "plan-b"
-   },
-   {
-    "lane": "b3",
-    "task": "T-4435",
-    "w": "Idris",
-    "k": "build",
-    "t": "Draw the wrapped refresh glyph on both runtimes",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-16T06:07:05-05:00",
-    "n": "Jeremy",
-    "d": 1,
-    "src": "plan-b"
    }
   ]
  },
@@ -316,7 +270,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-16T08:54:00-05:00",
+  "at": "2026-11-16T08:57:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -535,73 +489,87 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-16T13:54:06Z",
+  "at": "2026-11-16T13:57:11Z",
   "s": {
    "T-4555": [
     "merging",
     "Host checks on the Mac mini",
-    1794837066655
+    1794837071565
    ],
    "T-4022": [
     "mergeq",
     "1st to merge",
-    1794832206655
+    1794832211565
    ],
    "T-4020": [
     "mergeq",
     "2nd to merge",
-    1794832326655
-   ],
-   "T-4554": [
-    "mergeq",
-    "3rd to merge",
-    1794835986655
-   ],
-   "T-4564": [
-    "mergeq",
-    "3rd to merge",
-    1794835986655
+    1794832271565
    ],
    "T-4565": [
     "mergeq",
     "3rd to merge",
-    1794835986655
+    1794833771565
+   ],
+   "T-4554": [
+    "mergeq",
+    "4th to merge",
+    1794835931565
+   ],
+   "T-4564": [
+    "mergeq",
+    "4th to merge",
+    1794835931565
+   ],
+   "T-3745": [
+    "mergeq",
+    "5th to merge",
+    1794837371565
+   ],
+   "T-4256": [
+    "mergeq",
+    "5th to merge",
+    1794837371565
+   ],
+   "T-4433": [
+    "mergeq",
+    "5th to merge",
+    1794837371565
+   ],
+   "T-4435": [
+    "mergeq",
+    "5th to merge",
+    1794837371565
    ],
    "T-4529": [
     "mergeq",
-    "10th to merge",
-    1794835446655
+    "13th to merge",
+    1794835451565
    ],
    "T-4297": [
     "mergeq",
-    "10th to merge",
-    1794835446655
+    "13th to merge",
+    1794835451565
    ],
    "T-4286": [
     "mergeq",
-    "10th to merge",
-    1794835446655
+    "13th to merge",
+    1794835451565
    ],
    "T-4558": [
     "mergeq",
-    "12th to merge",
-    1794836286655
+    "15th to merge",
+    1794836291565
    ],
    "T-3970": [
     "mergeq",
-    "12th to merge",
-    1794836286655
+    "15th to merge",
+    1794836291565
    ],
    "T-3764": [
     "testing",
     "Mac Mini \u00b7 test",
     null
-   ],
-   "T-4256": [
-    "merged",
-    "on main 8:34 AM ET",
-    1794836049000,
-    ""
    ],
    "T-4276": [
     "merged",
@@ -614,55 +582,61 @@
    "T-4555": "Draw the When tapped setting",
    "T-4022": "Check finished work before it ships",
    "T-4020": "Check finished work before it ships",
+   "T-4565": "Send button actions from Swift, schema names checked",
    "T-4554": "One state commit per widget across app and widget",
    "T-4564": "Run a button's action and redraw in one run",
-   "T-4565": "Send button actions from Swift, schema names checked",
+   "T-3745": "Stop the Pro store test timing out",
+   "T-4256": "Lighten the marks and colour their line numbers",
+   "T-4433": "Confirm the Lock Screen refresh tap first",
+   "T-4435": "Draw the wrapped refresh glyph on both runtimes",
    "T-4529": "Give Home the dispatcher's real start order",
    "T-4297": "Personal account stopped and its work parked",
    "T-4286": "Check an imported font draws in a widget",
    "T-4558": "Choose which premades get buttons",
    "T-3970": "Check finished work before it ships",
    "T-3764": "Make the iPad window test fail without the fix",
-   "T-4256": "Lighten the marks and colour their line numbers",
    "T-4276": "Run Evan's account on the audit without the pause"
   },
   "wk": {
    "T-4555": "Maren",
    "T-4022": "Pernille",
    "T-4020": "Pernille",
+   "T-4565": "Pernille",
    "T-4554": "Idris",
    "T-4564": "Pernille",
-   "T-4565": "Pernille",
+   "T-3745": "Idris",
+   "T-4256": "Idris",
+   "T-4433": "Idris",
+   "T-4435": "Idris",
    "T-4529": "Odalys",
    "T-4297": "Ines",
    "T-4286": "Idris",
    "T-4558": "Maren",
    "T-3970": "Pernille",
    "T-3764": "Idris",
-   "T-4256": "Idris",
    "T-4276": "Operator"
   }
  },
  "ln": {
-  "at": "2026-11-16T13:54:06Z",
+  "at": "2026-11-16T13:57:11Z",
   "mq": {
    "n": {
     "checking": 1,
-    "inline": 4,
+    "inline": 9,
     "conflicted": 1,
-    "failed": 6,
+    "failed": 5,
     "held": 0,
     "retry": 1,
     "parked": 10
    },
    "m": {
-    "checking": 3,
-    "inline": 49,
-    "conflicted": 2256,
-    "failed": 13,
+    "checking": 6,
+    "inline": 19,
+    "conflicted": 2259,
+    "failed": 16,
     "held": null,
-    "retry": 24,
-    "parked": 325
+    "retry": 27,
+    "parked": 328
    },
    "cur": [
     [
@@ -671,7 +645,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     3
+     6
     ]
    ],
    "ld": [
@@ -681,16 +655,16 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-16T13:54:07Z",
-    "ld": 14.8,
+    "at": "2026-11-16T13:56:44Z",
+    "ld": 20.08,
     "c": 8,
     "sb": 1,
     "dk": [
-     46.8,
+     48.5,
      228.3
     ],
     "ss": [
-     185.0,
+     184.9,
      953.7
     ],
     "sn": [
@@ -726,8 +700,8 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 3 tasks",
-   "at": "2026-11-16T06:10:17-05:00"
+   "t": "Work session",
+   "at": "2026-11-16T08:57:10-05:00"
   },
   {
    "w": "Operator",
@@ -737,15 +711,6 @@
    "e": "high",
    "t": "Work session \u2013 1 task",
    "at": "2026-11-16T08:49:01-05:00"
-  },
-  {
-   "w": "Operator",
-   "a": "Jeremy",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session \u2013 3 tasks",
-   "at": "2026-11-16T06:07:04-05:00"
   }
  ],
  "reply": {
@@ -765,12 +730,12 @@
  ],
  "agents_now": {
   "main": 1,
-  "lanes": 3,
-  "total": 4,
-  "at": "8:54 AM",
+  "lanes": 2,
+  "total": 3,
+  "at": "8:57 AM",
   "why": "",
-  "at_iso": "2026-11-16T13:54:00+00:00",
+  "at_iso": "2026-11-16T13:57:00+00:00",
   "started": "8:47 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 1, started 8:47 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 8:54 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 1, started 8:47 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 8:57 AM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-16T17:57:21.427421+00:00",
+ "at": "2026-11-16T18:00:30.156088+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -109,7 +109,7 @@
    "task": "[tools] T-4583 feature step ticking",
    "model": "opus",
    "started": "2026-11-16T15:55:21.544Z",
-   "seconds": 7319,
+   "seconds": 7508,
    "finished": null,
    "effort": "high"
   },
@@ -118,7 +118,7 @@
    "task": "[design] T-4595 split Home waiting count",
    "model": "opus",
    "started": "2026-11-16T17:52:58.025Z",
-   "seconds": 263,
+   "seconds": 452,
    "finished": null,
    "effort": "high"
   }
@@ -186,7 +186,7 @@
   "week_pct": 15.51,
   "usage_pct": 42.5,
   "work_pct": 69.1,
-  "read_at": "2026-11-16T17:57:00+00:00",
+  "read_at": "2026-11-16T18:00:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -276,14 +276,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-16T12:55:00-05:00",
+   "at": "2026-11-16T12:57:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 4,
-  "at": "2026-11-16T12:57:00-05:00",
+  "at": "2026-11-16T13:00:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -534,12 +534,12 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-16T17:57:08Z",
+  "at": "2026-11-16T18:00:17Z",
   "s": {
    "T-2691": [
     "merging",
     "Host checks on the Mac mini",
-    1794851768203
+    1794851717232
    ],
    "T-3765": [
     "testing",
@@ -556,6 +556,11 @@
     "Mac Mini \u00b7 test",
     null
    ],
+   "T-4595": [
+    "testing",
+    "its own tests, in its copy",
+    1794851897232
+   ],
    "T-4561": [
     "merged",
     "on main 12:28 PM ET",
@@ -568,6 +573,7 @@
    "T-3765": "Check a real widget tap on the TestFlight build",
    "T-4040": "Check finished work before it ships",
    "T-4043": "Check finished work before it ships",
+   "T-4595": "Split Home's waiting-to-merge count into its parts",
    "T-4561": "Act on the Investors' answer on the Simulator refusals"
   },
   "wk": {
@@ -575,6 +581,7 @@
    "T-3765": "Idris",
    "T-4040": "Pernille",
    "T-4043": "Pernille",
+   "T-4595": "Maren",
    "T-4561": "Odalys",
    "T-4032": "Pernille",
    "T-4063": "Pernille",
@@ -583,7 +590,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-16T17:57:08Z",
+  "at": "2026-11-16T18:00:17Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -595,13 +602,13 @@
     "parked": 11
    },
    "m": {
-    "checking": 1,
+    "checking": 5,
     "inline": null,
-    "conflicted": 1296,
+    "conflicted": 1299,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 568
+    "parked": 571
    },
    "cur": [
     [
@@ -610,7 +617,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     1
+     5
     ]
    ],
    "ld": [
@@ -620,12 +627,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-16T17:56:42Z",
-    "ld": 23.01,
+    "at": "2026-11-16T17:59:52Z",
+    "ld": 21.87,
     "c": 8,
     "sb": 1,
     "dk": [
-     28.1,
+     27.7,
      228.3
     ],
     "ss": [
@@ -707,10 +714,10 @@
   "main": 2,
   "lanes": 3,
   "total": 5,
-  "at": "12:57 PM",
+  "at": "1:00 PM",
   "why": "",
-  "at_iso": "2026-11-16T17:57:00+00:00",
+  "at_iso": "2026-11-16T18:00:00+00:00",
   "started": "10:53 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 2, started 10:53 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 12:57 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 2, started 10:53 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 1:00 PM ET</p></section>"
  }
 }

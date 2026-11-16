@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-16T10:21:04.830263+00:00",
+ "at": "2026-11-16T10:24:05.976935+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -34,6 +34,15 @@
    }
   ],
   "done": [
+   {
+    "t": "T-0972",
+    "name": "Decide how a script's refresh path is chosen on send",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "failed",
+    "end_at": 1794824526,
+    "why": "did not merge cleanly"
+   },
    {
     "t": "T-4567",
     "name": "Measure the inbox wait experiment OPT-064",
@@ -105,40 +114,32 @@
     "steps": [],
     "end": "landed",
     "end_at": 1794813504
-   },
-   {
-    "t": "T-4562",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794812468
    }
   ],
   "landed": 26,
-  "failed": 5
+  "failed": 6
  },
  "workers": [
-  {
-   "name": "idris",
-   "task": "[release] T-2943 upload gate build 7",
-   "model": "opus",
-   "started": "2026-11-16T09:44:58.790Z",
-   "seconds": 2166,
-   "finished": null,
-   "effort": "high"
-  },
   {
    "name": "idris",
    "task": "[tools] T-4194 land the wiring split",
    "model": "opus",
    "started": "2026-11-16T09:47:47.943Z",
-   "seconds": 1996,
+   "seconds": 2178,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Idris x2",
+ "who": "Idris",
  "recent": [
+  {
+   "name": "idris",
+   "task": "[release] T-2943 upload gate build 7",
+   "model": "opus",
+   "started": "2026-11-16T09:44:58.790Z",
+   "seconds": null,
+   "finished": "2026-11-16T10:21:31.112000+00:00"
+  },
   {
    "name": "maren",
    "task": "[design] T-4293 Home skipped stages",
@@ -159,24 +160,24 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 378,
-  "blocked_count": 75
+  "runnable_count": 377,
+  "blocked_count": 76
  },
  "meter": {
   "five_hour": {
-   "pct": 5.0,
+   "pct": 6.0,
    "resets_at": "2026-11-16T08:10:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-16T05:01:47.201070-05:00",
+   "read_at": "2026-11-16T05:22:21.976526-05:00",
    "source": "live",
-   "left": 95.0,
+   "left": 94.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 19.0,
    "resets_at": "2026-11-22T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-16T05:01:47.201070-05:00",
+   "read_at": "2026-11-16T05:22:21.976526-05:00",
    "source": "live",
    "left": 81.0,
    "left_words": "of your weekly allowance left"
@@ -188,7 +189,7 @@
    "read_at": "2026-11-16T04:42:53.742307-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-16T05:01:47.201070-05:00"
+  "read_at": "2026-11-16T05:22:21.976526-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -208,7 +209,7 @@
   "week_pct": 9.1,
   "usage_pct": 32.4,
   "work_pct": 76.5,
-  "read_at": "2026-11-16T10:21:00+00:00",
+  "read_at": "2026-11-16T10:24:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -238,14 +239,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-16T05:15:00-05:00",
+   "at": "2026-11-16T05:22:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-16T05:21:00-05:00",
+  "at": "2026-11-16T05:24:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -264,9 +265,9 @@
   {
    "name": "Idris",
    "state": "running",
-   "task": "[release] T-2943 upload gate build 7",
+   "task": "[tools] T-4194 land the wiring split",
    "model": "opus",
-   "since": "2026-11-16T09:44:58.790Z",
+   "since": "2026-11-16T09:47:47.943Z",
    "next": [],
    "effort": "high"
   },
@@ -313,16 +314,6 @@
  ],
  "tasks": {
   "run": [
-   {
-    "w": "Idris",
-    "k": "release",
-    "t": "Send up the gate build and confirm it stays internal",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-16T09:44:58.790Z",
-    "o": "i",
-    "task": "T-2943"
-   },
    {
     "w": "Idris",
     "k": "tools",
@@ -425,9 +416,9 @@
    }
   ],
   "count": {
-   "next": 378,
+   "next": 377,
    "wait": 34,
-   "blocked": 41,
+   "blocked": 42,
    "you": 12
   },
   "fin": {
@@ -479,71 +470,56 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-16T10:20:46Z",
+  "at": "2026-11-16T10:23:58Z",
   "s": {
    "T-3552": [
     "mergetest",
     "Xcode checks on the MacBook, 1st to merge",
-    1794823066603
+    1794823078676
    ],
    "T-0687": [
     "mergetest",
     "Xcode checks on the MacBook, 2nd to merge",
-    1794823366603
-   ],
-   "T-0972": [
-    "mergetest",
-    "Xcode checks on the MacBook, 3rd to merge",
-    1794823546603
+    1794823378676
    ],
    "T-4194": [
     "testing",
     "its own tests, in its copy",
-    1794824266603
-   ],
-   "T-2943": [
-    "merged",
-    "on main 5:05 AM ET",
-    1794823545000,
-    ""
+    1794824278676
    ]
   },
   "nm": {
    "T-3552": "Test gallery and widget runs together with a stalled sensor",
    "T-0687": "Run network fetches inside the extension on the Simulator",
-   "T-0972": "Decide how a script's refresh path is chosen on send",
-   "T-4194": "Build the feature session for app work",
-   "T-2943": "Send up the gate build and confirm it stays internal"
+   "T-4194": "Build the feature session for app work"
   },
   "wk": {
    "T-3552": "Idris",
    "T-0687": "Idris",
-   "T-0972": "Idris",
    "T-4194": "Idris",
-   "T-2943": "Idris",
    "T-4293": "Maren"
   }
  },
  "ln": {
-  "at": "2026-11-16T10:20:46Z",
+  "at": "2026-11-16T10:23:58Z",
   "mq": {
    "n": {
-    "checking": 3,
+    "checking": 2,
     "inline": 0,
-    "conflicted": 1,
+    "conflicted": 2,
     "failed": 0,
     "held": 0,
     "retry": 0,
     "parked": 8
    },
    "m": {
-    "checking": 18,
+    "checking": 23,
     "inline": null,
-    "conflicted": 2042,
+    "conflicted": 1023,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 142
+    "parked": 145
    },
    "cur": [
     [
@@ -552,7 +528,7 @@
      ],
      "iPhone app tests",
      "MacBook",
-     23
+     26
     ],
     [
      [
@@ -560,15 +536,7 @@
      ],
      "iPhone app tests",
      "MacBook",
-     18
-    ],
-    [
-     [
-      "T-0972"
-     ],
-     "iPhone app tests",
-     "MacBook",
-     15
+     21
     ]
    ],
    "ld": [
@@ -578,8 +546,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-16T10:20:47Z",
-    "ld": 10.7,
+    "at": "2026-11-16T10:23:39Z",
+    "ld": 7.05,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -612,7 +580,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 3 tasks",
+   "t": "Work session \u2013 2 tasks",
    "at": "2026-11-16T04:43:12-05:00"
   }
  ],
@@ -633,13 +601,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 2,
+  "main": 1,
   "lanes": 0,
-  "total": 2,
-  "at": "5:21 AM",
+  "total": 1,
+  "at": "5:24 AM",
   "why": "",
-  "at_iso": "2026-11-16T10:21:00+00:00",
+  "at_iso": "2026-11-16T10:24:00+00:00",
   "started": "4:43 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 4:43 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 5:21 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 4:43 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 5:24 AM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-16T02:40:18.657929+00:00",
+ "at": "2026-11-16T02:43:19.010917+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -113,31 +113,38 @@
    "task": "[tools] T-4537 clean disk before pausing",
    "model": "opus",
    "started": "2026-11-16T01:32:48.168Z",
-   "seconds": 4050,
+   "seconds": 4230,
    "finished": null,
    "effort": "high"
+  },
+  {
+   "name": "idris",
+   "task": "[tools] T-4194 wire and switch on feature sessions",
+   "model": "opus",
+   "started": "2026-11-16T02:43:06.794Z",
+   "seconds": 12,
+   "finished": null,
+   "effort": "high"
+  }
+ ],
+ "who": "Odalys, Idris",
+ "recent": [
+  {
+   "name": "pernille",
+   "task": "[review] T-4542 Pernille reviews ADR-011 Python contract",
+   "model": "opus",
+   "started": "2026-11-16T02:35:30.038Z",
+   "seconds": null,
+   "finished": "2026-11-16T02:43:17.174000+00:00"
   },
   {
    "name": "odalys",
    "task": "[tools] T-4539 personal accounts idle fix",
    "model": "opus",
    "started": "2026-11-16T01:32:55.724Z",
-   "seconds": 4042,
-   "finished": null,
-   "effort": "high"
+   "seconds": null,
+   "finished": "2026-11-16T02:42:42.593000+00:00"
   },
-  {
-   "name": "pernille",
-   "task": "[review] T-4542 Pernille reviews ADR-011 Python contract",
-   "model": "opus",
-   "started": "2026-11-16T02:35:30.038Z",
-   "seconds": 288,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Odalys x2, Pernille",
- "recent": [
   {
    "name": "idris",
    "task": "[design] T-4542 widget tap and button actions ADR",
@@ -158,7 +165,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 376,
+  "runnable_count": 377,
   "blocked_count": 75
  },
  "meter": {
@@ -207,7 +214,7 @@
   "week_pct": 4.62,
   "usage_pct": 26.2,
   "work_pct": 68.8,
-  "read_at": "2026-11-16T02:40:00+00:00",
+  "read_at": "2026-11-16T02:43:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -244,7 +251,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-15T21:40:00-05:00",
+  "at": "2026-11-15T21:43:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -270,26 +277,26 @@
    "effort": "high"
   },
   {
-   "name": "Pernille",
+   "name": "Idris",
    "state": "running",
-   "task": "[review] T-4542 Pernille reviews ADR-011 Python contract",
+   "task": "[tools] T-4194 wire and switch on feature sessions",
    "model": "opus",
-   "since": "2026-11-16T02:35:30.038Z",
+   "since": "2026-11-16T02:43:06.794Z",
    "next": [],
    "effort": "high"
-  },
-  {
-   "name": "Idris",
-   "state": "next",
-   "task": "Idris, P2, from T-4238 (Pernille's review, from T-3900,...",
-   "model": null,
-   "since": null,
-   "next": []
   },
   {
    "name": "Ines",
    "state": "next",
    "task": "Ines, P2, from T-1110 (Wrenna,...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
+   "name": "Pernille",
+   "state": "next",
+   "task": "Pernille, P1, premades and gallery take the age line...",
    "model": null,
    "since": null,
    "next": []
@@ -324,24 +331,14 @@
     "task": "T-4537"
    },
    {
-    "w": "Odalys",
+    "w": "Idris",
     "k": "tools",
-    "t": "Get both personal accounts taking work again",
+    "t": "Build the feature session for app work",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-16T01:32:55.724Z",
+    "at": "2026-11-16T02:43:06.794Z",
     "o": "c",
-    "task": "T-4539"
-   },
-   {
-    "w": "Pernille",
-    "k": "review",
-    "t": "Let people choose what a widget tap does",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-16T02:35:30.038Z",
-    "o": "i",
-    "task": "T-4542"
+    "task": "T-4194"
    }
   ],
   "src": "plan",
@@ -435,7 +432,7 @@
    }
   ],
   "count": {
-   "next": 376,
+   "next": 377,
    "wait": 35,
    "blocked": 40,
    "you": 11
@@ -497,34 +494,27 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-16T02:39:59Z",
+  "at": "2026-11-16T02:43:09Z",
   "s": {
    "T-4537": [
     "testing",
     "its own tests, in its copy",
-    1794795239488
+    1794795249825
    ],
    "T-4542": [
     "merged",
-    "on main 9:34 PM ET",
-    1794796468000,
+    "on main 9:42 PM ET",
+    1794796973000,
     ""
-   ],
-   "T-4539": [
-    "merged",
-    "on main 9:32 PM ET",
-    1794796357000,
-    "Odalys"
    ]
   },
   "nm": {
    "T-4537": "Clean the Mac mini's disk instead of pausing work",
-   "T-4542": "Let people choose what a widget tap does",
-   "T-4539": "Get both personal accounts taking work again"
+   "T-4542": "Let people choose what a widget tap does"
   }
  },
  "ln": {
-  "at": "2026-11-16T02:39:59Z",
+  "at": "2026-11-16T02:43:09Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -538,11 +528,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 1581,
+    "conflicted": 1585,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 461
+    "parked": 464
    },
    "cur": [],
    "ld": [
@@ -552,12 +542,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-16T02:39:16Z",
-    "ld": 1.07,
+    "at": "2026-11-16T02:42:30Z",
+    "ld": 2.42,
     "c": 8,
     "sb": 0,
     "dk": [
-     12.0,
+     11.0,
      228.3
     ],
     "ss": [
@@ -607,13 +597,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 3,
+  "main": 2,
   "lanes": 0,
-  "total": 3,
-  "at": "9:40 PM",
+  "total": 2,
+  "at": "9:43 PM",
   "why": "",
-  "at_iso": "2026-11-16T02:40:00+00:00",
+  "at_iso": "2026-11-16T02:43:00+00:00",
   "started": "8:30 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 8:30 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:40 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 8:30 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:43 PM ET</p></section>"
  }
 }

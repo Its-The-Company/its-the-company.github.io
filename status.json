@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-16T13:50:54.548689+00:00",
+ "at": "2026-11-16T13:54:06.655006+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -108,31 +108,41 @@
   "landed": 35,
   "failed": 2
  },
- "workers": [],
- "who": "",
+ "workers": [
+  {
+   "name": "odalys",
+   "task": "[tools] T-4012 retry routes reading",
+   "model": "opus",
+   "started": "2026-11-16T13:51:01.145Z",
+   "seconds": 185,
+   "finished": null,
+   "effort": "high"
+  }
+ ],
+ "who": "Odalys",
  "recent": [],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 379,
+  "runnable_count": 378,
   "blocked_count": 76
  },
  "meter": {
   "five_hour": {
    "pct": 2.0,
-   "resets_at": "2026-11-16T18:10:00.160811+00:00",
+   "resets_at": "2026-11-16T13:10:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-16T08:47:33.459811-05:00",
-   "source": "usage",
+   "read_at": "2026-11-16T08:52:50.643916-05:00",
+   "source": "live",
    "left": 98.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 20.0,
-   "resets_at": "2026-11-22T07:00:00.160833+00:00",
+   "resets_at": "2026-11-22T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-16T08:47:33.459811-05:00",
-   "source": "usage",
+   "read_at": "2026-11-16T08:52:50.643916-05:00",
+   "source": "live",
    "left": 80.0,
    "left_words": "of your weekly allowance left"
   },
@@ -143,7 +153,7 @@
    "read_at": "2026-11-16T08:47:33.459811-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-16T08:47:33.459811-05:00"
+  "read_at": "2026-11-16T08:52:50.643916-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -163,7 +173,7 @@
   "week_pct": 13.38,
   "usage_pct": 40.1,
   "work_pct": 70.0,
-  "read_at": "2026-11-16T13:50:00+00:00",
+  "read_at": "2026-11-16T13:54:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -290,7 +300,7 @@
   }
  ],
  "disk": {
-  "free_gb": 47,
+  "free_gb": 45,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -299,14 +309,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-16T08:45:00-05:00",
+   "at": "2026-11-16T08:52:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-16T08:50:00-05:00",
+  "at": "2026-11-16T08:54:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -322,6 +332,15 @@
   "at": "2026-11-16T08:47:34.052992-05:00"
  },
  "lanes": [
+  {
+   "name": "Odalys",
+   "state": "running",
+   "task": "[tools] T-4012 retry routes reading",
+   "model": "opus",
+   "since": "2026-11-16T13:51:01.145Z",
+   "next": [],
+   "effort": "high"
+  },
   {
    "name": "Idris",
    "state": "next",
@@ -347,14 +366,6 @@
    "next": []
   },
   {
-   "name": "Odalys",
-   "state": "next",
-   "task": "A lane record main refused: failed...",
-   "model": null,
-   "since": null,
-   "next": []
-  },
-  {
    "name": "Wrenna",
    "state": "next",
    "task": "Wrenna, P2, T-2375 continuation (B-staged item 3...",
@@ -372,7 +383,18 @@
   }
  ],
  "tasks": {
-  "run": [],
+  "run": [
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Retire the retry routes the send-back replaces",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-16T13:51:01.145Z",
+    "o": "c",
+    "task": "T-4012"
+   }
+  ],
   "src": "plan",
   "open": [
    {
@@ -448,6 +470,11 @@
   ],
   "done": [
    {
+    "w": "Operator",
+    "t": "Main passes its Xcode checks again: job J-20261116-0835-land-b40-00c9fb on the MacBook no longer...",
+    "at": "2026-11-16T08:52:00-05:00"
+   },
+   {
     "w": "Pernille",
     "t": "An independent check of the code that copies a person's chosen launcher apps into each launcher...",
     "at": "2026-11-16T08:35:00-05:00"
@@ -456,15 +483,10 @@
     "w": "Maren",
     "t": "The Habit tracker widget gets a Done today button for each habit it shows, so a person can log a...",
     "at": "2026-11-16T08:35:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "The tool that applies the queue audit's verdicts now refuses any new verdict row that does not...",
-    "at": "2026-11-16T08:34:00-05:00"
    }
   ],
   "count": {
-   "next": 379,
+   "next": 378,
    "wait": 34,
    "blocked": 42,
    "you": 12
@@ -513,62 +535,67 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-16T13:50:39Z",
+  "at": "2026-11-16T13:54:06Z",
   "s": {
    "T-4555": [
     "merging",
     "Host checks on the Mac mini",
-    1794837039623
+    1794837066655
    ],
    "T-4022": [
     "mergeq",
     "1st to merge",
-    1794832179623
+    1794832206655
    ],
    "T-4020": [
     "mergeq",
     "2nd to merge",
-    1794832299623
+    1794832326655
    ],
    "T-4554": [
     "mergeq",
     "3rd to merge",
-    1794835959623
+    1794835986655
    ],
    "T-4564": [
     "mergeq",
     "3rd to merge",
-    1794835959623
+    1794835986655
    ],
    "T-4565": [
     "mergeq",
     "3rd to merge",
-    1794835959623
+    1794835986655
    ],
    "T-4529": [
     "mergeq",
     "10th to merge",
-    1794835419623
+    1794835446655
    ],
    "T-4297": [
     "mergeq",
     "10th to merge",
-    1794835419623
+    1794835446655
    ],
    "T-4286": [
     "mergeq",
     "10th to merge",
-    1794835419623
+    1794835446655
    ],
    "T-4558": [
     "mergeq",
     "12th to merge",
-    1794836259623
+    1794836286655
    ],
    "T-3970": [
     "mergeq",
     "12th to merge",
-    1794836259623
+    1794836286655
+   ],
+   "T-3764": [
+    "testing",
+    "Mac Mini \u00b7 test",
+    null
    ],
    "T-4256": [
     "merged",
@@ -595,6 +622,7 @@
    "T-4286": "Check an imported font draws in a widget",
    "T-4558": "Choose which premades get buttons",
    "T-3970": "Check finished work before it ships",
+   "T-3764": "Make the iPad window test fail without the fix",
    "T-4256": "Lighten the marks and colour their line numbers",
    "T-4276": "Run Evan's account on the audit without the pause"
   },
@@ -610,12 +638,13 @@
    "T-4286": "Idris",
    "T-4558": "Maren",
    "T-3970": "Pernille",
+   "T-3764": "Idris",
    "T-4256": "Idris",
    "T-4276": "Operator"
   }
  },
  "ln": {
-  "at": "2026-11-16T13:50:39Z",
+  "at": "2026-11-16T13:54:06Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -627,13 +656,13 @@
     "parked": 10
    },
    "m": {
-    "checking": 0,
-    "inline": 46,
-    "conflicted": 2252,
-    "failed": 9,
+    "checking": 3,
+    "inline": 49,
+    "conflicted": 2256,
+    "failed": 13,
     "held": null,
-    "retry": 20,
-    "parked": 322
+    "retry": 24,
+    "parked": 325
    },
    "cur": [
     [
@@ -642,7 +671,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     0
+     3
     ]
    ],
    "ld": [
@@ -652,23 +681,25 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-16T13:50:40Z",
-    "ld": 4.1,
+    "at": "2026-11-16T13:54:07Z",
+    "ld": 14.8,
     "c": 8,
-    "sb": 0,
+    "sb": 1,
     "dk": [
-     45.1,
+     46.8,
      228.3
     ],
     "ss": [
      185.0,
      953.7
     ],
-    "sn": []
+    "sn": [
+     "T3764 iPad"
+    ]
    },
    "macbook": {
-    "at": "2026-11-16T13:48:51Z",
-    "ld": 2.09,
+    "at": "2026-11-16T13:50:59Z",
+    "ld": 1.43,
     "c": 12,
     "sb": 0,
     "dk": [
@@ -733,13 +764,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 0,
+  "main": 1,
   "lanes": 3,
-  "total": 3,
-  "at": "8:50 AM",
+  "total": 4,
+  "at": "8:54 AM",
   "why": "",
-  "at_iso": "2026-11-16T13:50:00+00:00",
+  "at_iso": "2026-11-16T13:54:00+00:00",
   "started": "8:47 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 8:47 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 8:50 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 1, started 8:47 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 8:54 AM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-16T17:01:32.784622+00:00",
+ "at": "2026-11-16T17:04:34.126204+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -100,7 +100,7 @@
    "task": "[tools] T-4583 feature step ticking",
    "model": "opus",
    "started": "2026-11-16T15:55:21.544Z",
-   "seconds": 3971,
+   "seconds": 4152,
    "finished": null,
    "effort": "high"
   }
@@ -119,24 +119,24 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 384,
+  "runnable_count": 385,
   "blocked_count": 74
  },
  "meter": {
   "five_hour": {
-   "pct": 10.0,
+   "pct": 11.0,
    "resets_at": "2026-11-16T13:10:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-16T11:57:42.023443-05:00",
+   "read_at": "2026-11-16T12:04:27.813951-05:00",
    "source": "live",
-   "left": 90.0,
+   "left": 89.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 21.0,
    "resets_at": "2026-11-22T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-16T11:57:42.023443-05:00",
+   "read_at": "2026-11-16T12:04:27.813951-05:00",
    "source": "live",
    "left": 79.0,
    "left_words": "of your weekly allowance left"
@@ -148,7 +148,7 @@
    "read_at": "2026-11-16T10:53:26.226781-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-16T11:57:42.023443-05:00"
+  "read_at": "2026-11-16T12:04:27.813951-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -168,7 +168,7 @@
   "week_pct": 15.51,
   "usage_pct": 42.5,
   "work_pct": 69.1,
-  "read_at": "2026-11-16T17:01:00+00:00",
+  "read_at": "2026-11-16T17:04:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -334,7 +334,7 @@
   }
  ],
  "disk": {
-  "free_gb": 48,
+  "free_gb": 43,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -343,14 +343,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-16T11:57:00-05:00",
+   "at": "2026-11-16T12:04:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-16T12:01:00-05:00",
+  "at": "2026-11-16T12:04:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -520,7 +520,7 @@
    }
   ],
   "count": {
-   "next": 384,
+   "next": 385,
    "wait": 34,
    "blocked": 40,
    "you": 11
@@ -578,14 +578,19 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-16T17:01:24Z",
+  "at": "2026-11-16T17:04:18Z",
   "s": {
-   "T-4063": [
+   "T-3764": [
     "testing",
     "Mac Mini \u00b7 test",
     null
    ],
-   "T-4067": [
+   "T-4040": [
+    "testing",
+    "Mac Mini \u00b7 test",
+    null
+   ],
+   "T-4043": [
     "testing",
     "Mac Mini \u00b7 test",
     null
@@ -593,42 +598,33 @@
    "T-4583": [
     "testing",
     "its own tests, in its copy",
-    1794848004028
-   ],
-   "T-3764": [
-    "testq",
-    "1st for a Simulator",
-    1794847644028
-   ],
-   "T-4040": [
-    "testq",
-    "1st for a Simulator",
-    1794847644028
-   ],
-   "T-4043": [
-    "testq",
-    "1st for a Simulator",
-    1794847644028
+    1794847998955
    ],
    "T-4031": [
     "testq",
-    "2nd for a Simulator",
-    1794848004028
+    "1st for a Simulator",
+    1794847998955
    ],
    "T-4032": [
     "testq",
-    "2nd for a Simulator",
-    1794848004028
+    "1st for a Simulator",
+    1794847998955
    ],
    "T-4048": [
     "testq",
-    "4th for a Simulator",
-    1794848484028
+    "3rd for a Simulator",
+    1794848478955
    ],
    "T-4049": [
     "testq",
-    "4th for a Simulator",
-    1794848484028
+    "3rd for a Simulator",
+    1794848478955
+   ],
+   "T-4067": [
+    "merged",
+    "on main 12:00 PM ET",
+    1794848431000,
+    ""
    ],
    "T-4573": [
     "merged",
@@ -638,35 +634,33 @@
    ]
   },
   "nm": {
-   "T-4063": "Check finished work before it ships",
-   "T-4067": "Check finished work before it ships",
-   "T-4583": "Turn on Feature mode and tick steps at the merge",
    "T-3764": "Make the iPad window test fail without the fix",
    "T-4040": "Check finished work before it ships",
    "T-4043": "Check finished work before it ships",
+   "T-4583": "Turn on Feature mode and tick steps at the merge",
    "T-4031": "Check finished work before it ships",
    "T-4032": "Check finished work before it ships",
    "T-4048": "Check finished work before it ships",
    "T-4049": "Check finished work before it ships",
+   "T-4067": "Check finished work before it ships",
    "T-4573": "Answer when the chosen account cannot take a message"
   },
   "wk": {
-   "T-4063": "Pernille",
-   "T-4067": "Pernille",
-   "T-4583": "Idris",
    "T-3764": "Idris",
    "T-4040": "Pernille",
    "T-4043": "Pernille",
+   "T-4583": "Idris",
    "T-4031": "Pernille",
    "T-4032": "Pernille",
    "T-4048": "Pernille",
    "T-4049": "Pernille",
+   "T-4067": "Pernille",
    "T-4573": "Odalys",
    "T-4585": "Odalys"
   }
  },
  "ln": {
-  "at": "2026-11-16T17:01:24Z",
+  "at": "2026-11-16T17:04:18Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -680,11 +674,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 1240,
+    "conflicted": 1243,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 513
+    "parked": 515
    },
    "cur": [],
    "ld": [
@@ -694,12 +688,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-16T17:01:25Z",
-    "ld": 6.74,
+    "at": "2026-11-16T17:04:19Z",
+    "ld": 4.79,
     "c": 8,
     "sb": 1,
     "dk": [
-     45.8,
+     42.9,
      228.3
     ],
     "ss": [
@@ -766,8 +760,8 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 2 tasks",
-   "at": "2026-11-16T11:41:02-05:00"
+   "t": "Inbox \u2013 Jeremy's 12:03 PM Message on GitHub",
+   "at": "2026-11-16T12:03:41-05:00"
   },
   {
    "w": "Operator",
@@ -792,12 +786,24 @@
   "sent": "2026-11-16T16:55:19Z",
   "seconds": 113.0
  },
- "inbox": [],
+ "inbox": [
+  {
+   "id": "c6923264104",
+   "state": "received",
+   "position": 1,
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "Why does the merge queue say \u201cheld?\u201d..."
+  }
+ ],
  "trimmed": [
   "lane_next",
   "queue_text",
   "task_done",
   "fin_short",
+  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -808,10 +814,10 @@
   "main": 1,
   "lanes": 6,
   "total": 7,
-  "at": "12:01 PM",
+  "at": "12:04 PM",
   "why": "",
-  "at_iso": "2026-11-16T17:01:00+00:00",
+  "at_iso": "2026-11-16T17:04:00+00:00",
   "started": "10:53 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 1, started 10:53 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 6 sessions \u00b7 as of 12:01 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 1, started 10:53 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 6 sessions \u00b7 as of 12:04 PM ET</p></section>"
  }
 }

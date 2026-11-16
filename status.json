@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-16T19:33:29.155287+00:00",
+ "at": "2026-11-16T19:36:33.053528+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -96,7 +96,7 @@
    "task": "[tools] T-4443 card rules in queue check",
    "model": "opus",
    "started": "2026-11-16T19:23:14.320Z",
-   "seconds": 614,
+   "seconds": 798,
    "finished": null,
    "effort": "high"
   },
@@ -105,7 +105,7 @@
    "task": "[tools] T-3992 recut parked lane-a batch",
    "model": "opus",
    "started": "2026-11-16T19:25:02.030Z",
-   "seconds": 507,
+   "seconds": 691,
    "finished": null,
    "effort": "high"
   }
@@ -164,7 +164,7 @@
   "week_pct": 17.69,
   "usage_pct": 44.6,
   "work_pct": 73.1,
-  "read_at": "2026-11-16T19:33:00+00:00",
+  "read_at": "2026-11-16T19:36:00+00:00",
   "running": [
    {
     "lane": "b2",
@@ -227,7 +227,7 @@
  "lock_in": {
   "on": false,
   "pool": 4,
-  "at": "2026-11-16T14:33:00-05:00",
+  "at": "2026-11-16T14:36:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -456,7 +456,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-16T19:33:12Z",
+  "at": "2026-11-16T19:36:21Z",
   "s": {
    "T-2691": [
     "testing",
@@ -481,12 +481,12 @@
    "T-4295": [
     "testing",
     "its own tests, in its copy",
-    1794857472786
+    1794857661392
    ],
    "T-4443": [
     "testing",
     "its own tests, in its copy",
-    1794857232786
+    1794857241392
    ]
   },
   "nm": {
@@ -507,7 +507,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-16T19:33:12Z",
+  "at": "2026-11-16T19:36:21Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -521,11 +521,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 1392,
-    "failed": 51,
+    "conflicted": 1395,
+    "failed": 55,
     "held": null,
     "retry": null,
-    "parked": 636
+    "parked": 639
    },
    "cur": [],
    "ld": [
@@ -535,12 +535,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-16T19:32:26Z",
-    "ld": 11.79,
+    "at": "2026-11-16T19:35:59Z",
+    "ld": 16.63,
     "c": 8,
-    "sb": 2,
+    "sb": 1,
     "dk": [
-     30.0,
+     30.4,
      228.3
     ],
     "ss": [
@@ -548,7 +548,6 @@
      953.7
     ],
     "sn": [
-     "t3765-ipad",
      "t3765-iphone"
     ]
    },
@@ -572,8 +571,8 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 5 tasks",
-   "at": "2026-11-16T14:21:14-05:00"
+   "t": "Inbox \u2013 Evan's 2:35 PM Message on GitHub",
+   "at": "2026-11-16T14:36:23-05:00"
   },
   {
    "w": "Operator",
@@ -581,19 +580,41 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 1 task",
-   "at": "2026-11-16T14:28:54-05:00"
+   "t": "Inbox \u2013 Evan's 2:34 PM Message on GitHub",
+   "at": "2026-11-16T14:35:56-05:00"
   }
  ],
  "reply": {
   "sent": "2026-11-16T19:26:53Z",
   "seconds": 120.0
  },
- "inbox": [],
+ "inbox": [
+  {
+   "id": "c6926970950",
+   "state": "received",
+   "position": 1,
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "Do both, and queue ordering should..."
+  },
+  {
+   "id": "c6926986576",
+   "state": "received",
+   "position": 2,
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "approve"
+  }
+ ],
  "trimmed": [
   "lane_next",
   "queue_text",
   "task_done",
+  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -604,10 +625,10 @@
   "main": 2,
   "lanes": 1,
   "total": 3,
-  "at": "2:33 PM",
+  "at": "2:36 PM",
   "why": "",
-  "at_iso": "2026-11-16T19:33:00+00:00",
+  "at_iso": "2026-11-16T19:36:00+00:00",
   "started": "2:21 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 2:21 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 2:33 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 2:21 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 2:36 PM ET</p></section>"
  }
 }

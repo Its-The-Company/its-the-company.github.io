@@ -1,24 +1,28 @@
 {
  "schema": 1,
- "at": "2026-11-16T20:11:53.873820+00:00",
+ "at": "2026-11-16T20:14:54.456468+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-16T14:21:14-05:00",
-  "flow": [
+  "flow": [],
+  "done": [
+   {
+    "t": "T-4046",
+    "name": "Check finished work before it ships",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794860006
+   },
    {
     "t": "T-4047",
     "name": "Check finished work before it ships",
     "acct": "Personal a",
-    "steps": [
-     {
-      "s": "landing",
-      "at": 1794859116
-     }
-    ]
-   }
-  ],
-  "done": [
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794860000
+   },
    {
     "t": "T-4320",
     "name": "Name the accounts Evan's and Jeremy's on Home",
@@ -81,25 +85,9 @@
     "steps": [],
     "end": "landed",
     "end_at": 1794849650
-   },
-   {
-    "t": "T-4454",
-    "name": "Read a personal account again after its reset",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794849563
-   },
-   {
-    "t": "T-4043",
-    "name": "Check finished work before it ships",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794848931
    }
   ],
-  "landed": 49,
+  "landed": 51,
   "failed": 12
  },
  "workers": [
@@ -108,7 +96,7 @@
    "task": "[tools] T-3992 recut parked lane-a batch",
    "model": "opus",
    "started": "2026-11-16T19:25:02.030Z",
-   "seconds": 2811,
+   "seconds": 2992,
    "finished": null,
    "effort": "high"
   }
@@ -127,7 +115,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 410,
+  "runnable_count": 408,
   "blocked_count": 75
  },
  "meter": {
@@ -176,7 +164,7 @@
   "week_pct": 17.69,
   "usage_pct": 44.6,
   "work_pct": 73.1,
-  "read_at": "2026-11-16T20:11:00+00:00",
+  "read_at": "2026-11-16T20:14:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -204,27 +192,26 @@
    },
    {
     "lane": "a2",
-    "task": "T-4046",
-    "w": "Pernille",
+    "task": "T-4058",
+    "w": "Idris",
     "k": "review",
     "t": "Check finished work before it ships",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-16T14:52:19-05:00",
+    "at": "2026-11-16T15:14:45-05:00",
     "n": "Evan",
     "src": "plan-a"
    },
    {
     "lane": "a2",
-    "task": "T-4047",
+    "task": "T-4060",
     "w": "Pernille",
     "k": "review",
     "t": "Check finished work before it ships",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-16T14:52:19-05:00",
+    "at": "2026-11-16T15:14:45-05:00",
     "n": "Evan",
-    "d": 1,
     "src": "plan-a"
    },
    {
@@ -287,7 +274,7 @@
  "lock_in": {
   "on": false,
   "pool": 4,
-  "at": "2026-11-16T15:11:00-05:00",
+  "at": "2026-11-16T15:14:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -441,30 +428,38 @@
   ],
   "done": [
    {
+    "w": "Pernille",
+    "t": "Idris's change that logs a refresh tap whose new data did not arrive as one failed run with the...",
+    "at": "2026-11-16T15:13:00-05:00"
+   },
+   {
+    "w": "Odalys",
+    "t": "The earthquakes example's four fixes (bad magnitudes, a dropped connection, no keyboard, deeply...",
+    "at": "2026-11-16T15:13:00-05:00"
+   },
+   {
     "w": "Odalys",
     "t": "the daily queue check now reads each task's card: it proves a task finished when its named test...",
     "at": "2026-11-16T14:50:00-05:00"
-   },
-   {
-    "w": "Idris",
-    "t": "A gallery preview that had to wait behind a slow Home Screen widget refresh used to run out of...",
-    "at": "2026-11-16T14:20:00-05:00"
-   },
-   {
-    "w": "Pernille",
-    "t": "The new words iOS shows for the app's widgets and Shortcuts were checked and are correct and...",
-    "at": "2026-11-16T14:20:00-05:00"
    }
   ],
   "count": {
-   "next": 410,
+   "next": 408,
    "wait": 35,
    "blocked": 40,
    "you": 12
   },
   "fin": {
-   "n": 1,
+   "n": 3,
    "rows": [
+    [
+     "T-4046",
+     "Check finished work before..."
+    ],
+    [
+     "T-4047",
+     "Check finished work before..."
+    ],
     [
      "T-4443",
      "Add the task card slots when..."
@@ -511,49 +506,65 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-16T20:11:47Z",
+  "at": "2026-11-16T20:14:39Z",
   "s": {
-   "T-4047": [
-    "mergeq",
-    "1st to merge",
-    1794859127599
-   ],
    "T-4295": [
     "testing",
     "its own tests, in its copy",
-    1794857627599
+    1794857619554
    ],
    "T-4068": [
     "testq",
     "1st for a Simulator",
-    1794859427599
+    1794859419554
    ],
    "T-4076": [
     "testq",
     "1st for a Simulator",
-    1794859427599
+    1794859419554
+   ],
+   "T-4022": [
+    "testq",
+    "3rd for a Simulator",
+    1794856899554
+   ],
+   "T-4020": [
+    "testq",
+    "4th for a Simulator",
+    1794856899554
+   ],
+   "T-4048": [
+    "testq",
+    "5th for a Simulator",
+    1794856899554
    ]
   },
   "nm": {
-   "T-4047": "Check finished work before it ships",
    "T-4295": "Let Chat messages pick model, effort and account",
    "T-4068": "Check finished work before it ships",
-   "T-4076": "Check finished work before it ships"
+   "T-4076": "Check finished work before it ships",
+   "T-4022": "Check finished work before it ships",
+   "T-4020": "Check finished work before it ships",
+   "T-4048": "Check finished work before it ships"
   },
   "wk": {
-   "T-4047": "Pernille",
    "T-4295": "Odalys",
    "T-4068": "Pernille",
    "T-4076": "Pernille",
+   "T-4022": "Pernille",
+   "T-4020": "Pernille",
+   "T-4048": "Pernille",
+   "T-4046": "Pernille",
+   "T-4047": "Pernille",
    "T-4443": "Odalys"
   }
  },
  "ln": {
-  "at": "2026-11-16T20:11:47Z",
+  "at": "2026-11-16T20:14:39Z",
   "mq": {
    "n": {
     "checking": 0,
-    "inline": 1,
+    "inline": 0,
     "conflicted": 2,
     "failed": 0,
     "held": 0,
@@ -562,27 +573,27 @@
    },
    "m": {
     "checking": null,
-    "inline": 13,
-    "conflicted": 1430,
+    "inline": null,
+    "conflicted": 1433,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 635
+    "parked": 638
    },
    "cur": [],
    "ld": [
-    58,
-    "2026-11-16T19:18:44Z"
+    60,
+    "2026-11-16T20:13:26Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-16T20:11:20Z",
-    "ld": 60.06,
+    "at": "2026-11-16T20:14:40Z",
+    "ld": 31.83,
     "c": 8,
     "sb": 1,
     "dk": [
-     26.0,
+     25.7,
      228.3
     ],
     "ss": [
@@ -631,8 +642,8 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 1 task",
-   "at": "2026-11-16T14:52:19-05:00"
+   "t": "Work session \u2013 2 tasks",
+   "at": "2026-11-16T15:14:44-05:00"
   },
   {
    "w": "Operator",
@@ -664,10 +675,10 @@
   "main": 1,
   "lanes": 3,
   "total": 4,
-  "at": "3:11 PM",
+  "at": "3:14 PM",
   "why": "",
-  "at_iso": "2026-11-16T20:11:00+00:00",
+  "at_iso": "2026-11-16T20:14:00+00:00",
   "started": "2:21 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 1, started 2:21 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 3:11 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 1, started 2:21 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 3:14 PM ET</p></section>"
  }
 }

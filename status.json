@@ -1,12 +1,41 @@
 {
  "schema": 1,
- "at": "2026-11-16T16:21:12.017582+00:00",
+ "at": "2026-11-16T16:24:14.331908+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-16T10:53:39-05:00",
-  "flow": [],
+  "flow": [
+   {
+    "t": "T-4240",
+    "name": "Move the app's diagrams to a new App page",
+    "acct": "Personal b",
+    "steps": [
+     {
+      "s": "testq",
+      "at": 1794846216
+     }
+    ]
+   }
+  ],
   "done": [
+   {
+    "t": "T-4191",
+    "name": "VoiceOver and large text work on every screen",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "failed",
+    "end_at": 1794846215,
+    "why": "did not merge cleanly"
+   },
+   {
+    "t": "T-4585",
+    "name": "Stop a MacBook send timeout reading as main red",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794846211
+   },
    {
     "t": "T-2943",
     "name": "Send up the gate build and confirm it stays internal",
@@ -73,28 +102,10 @@
     "end": "failed",
     "end_at": 1794844375,
     "why": "did not merge cleanly"
-   },
-   {
-    "t": "T-4315",
-    "name": "Start a lane's next session without the wait",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "failed",
-    "end_at": 1794844375,
-    "why": "did not merge cleanly"
-   },
-   {
-    "t": "T-4295",
-    "name": "Let Chat messages pick model, effort and account",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "failed",
-    "end_at": 1794844375,
-    "why": "did not merge cleanly"
    }
   ],
-  "landed": 43,
-  "failed": 10
+  "landed": 44,
+  "failed": 11
  },
  "workers": [
   {
@@ -102,7 +113,7 @@
    "task": "[tools] T-4583 feature step ticking",
    "model": "opus",
    "started": "2026-11-16T15:55:21.544Z",
-   "seconds": 1550,
+   "seconds": 1732,
    "finished": null,
    "effort": "high"
   }
@@ -121,7 +132,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 383,
+  "runnable_count": 382,
   "blocked_count": 74
  },
  "meter": {
@@ -170,16 +181,12 @@
   "week_pct": 15.51,
   "usage_pct": 42.5,
   "work_pct": 69.1,
-  "read_at": "2026-11-16T16:21:00+00:00",
+  "read_at": "2026-11-16T16:24:00+00:00",
   "running": [
    {
     "lane": "a",
     "task": "T-4585",
-    "w": "Odalys",
-    "k": "tools",
     "t": "Stop a MacBook send timeout reading as main red",
-    "m": "opus",
-    "e": "high",
     "at": "2026-11-16T11:17:50-05:00",
     "n": "Evan",
     "d": 1,
@@ -234,7 +241,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-16T11:21:00-05:00",
+  "at": "2026-11-16T11:24:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -323,6 +330,13 @@
     "o": "i"
    },
    {
+    "w": "Idris",
+    "k": "build",
+    "t": "VoiceOver and large text work on every screen",
+    "s": "next",
+    "o": "i"
+   },
+   {
     "w": "Pernille",
     "k": "build",
     "t": "Keep real packages out until the sandbox is...",
@@ -377,16 +391,14 @@
     "t": "Propose the personal accounts' 5-hour stop at 97",
     "s": "next",
     "o": "i"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Alarm when one account's work keeps being...",
-    "s": "next",
-    "o": "c"
    }
   ],
   "done": [
+   {
+    "w": "Odalys",
+    "t": "MacBook land checks the runner itself ended while the job was being sent in (tar or git archive...",
+    "at": "2026-11-16T11:23:00-05:00"
+   },
    {
     "w": "Odalys",
     "t": "A test check that the MacBook ended before it ran, such as a copy that timed out, no longer...",
@@ -396,22 +408,22 @@
     "w": "Pernille",
     "t": "The launcher editor's design and data layer were checked by a second engineer and pass; the...",
     "at": "2026-11-16T09:11:00-05:00"
-   },
-   {
-    "w": "Operator",
-    "t": "Main passes its Xcode checks again: job J-20261116-0835-land-b40-00c9fb on the MacBook no longer...",
-    "at": "2026-11-16T08:52:00-05:00"
    }
   ],
   "count": {
-   "next": 383,
+   "next": 382,
    "wait": 34,
    "blocked": 40,
    "you": 11
   },
   "fin": {
-   "n": 0,
-   "rows": []
+   "n": 1,
+   "rows": [
+    [
+     "T-4585",
+     "Stop a MacBook send timeout..."
+    ]
+   ]
   }
  },
  "qr": [
@@ -453,56 +465,80 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-16T16:21:12Z",
+  "at": "2026-11-16T16:24:04Z",
   "s": {
+   "T-4240": [
+    "merging",
+    "Host checks on the Mac mini \u00b7 2 groups of tests done",
+    1794846244557
+   ],
    "T-4583": [
     "testing",
     "its own tests, in its copy",
-    1794845832017
+    1794845824557
+   ],
+   "T-4585": [
+    "merged",
+    "on main 11:22 AM ET",
+    1794846139000,
+    ""
    ]
   },
   "nm": {
-   "T-4583": "Turn on Feature mode and tick steps at the merge"
+   "T-4240": "Move the app's diagrams to a new App page",
+   "T-4583": "Turn on Feature mode and tick steps at the merge",
+   "T-4585": "Stop a MacBook send timeout reading as main red"
   },
   "wk": {
-   "T-4583": "Idris"
+   "T-4240": "Odalys",
+   "T-4583": "Idris",
+   "T-4585": "Odalys"
   }
  },
  "ln": {
-  "at": "2026-11-16T16:21:12Z",
+  "at": "2026-11-16T16:24:04Z",
   "mq": {
    "n": {
-    "checking": 0,
+    "checking": 1,
     "inline": 0,
-    "conflicted": 1,
+    "conflicted": 2,
     "failed": 0,
     "held": 0,
-    "retry": 2,
-    "parked": 9
+    "retry": 1,
+    "parked": 7
    },
    "m": {
-    "checking": null,
+    "checking": 0,
     "inline": null,
-    "conflicted": 2403,
+    "conflicted": 1202,
     "failed": null,
     "held": null,
-    "retry": 114,
-    "parked": 472
+    "retry": 203,
+    "parked": 475
    },
-   "cur": [],
+   "cur": [
+    [
+     [
+      "T-4240"
+     ],
+     "Mac tests",
+     "Mac mini",
+     0
+    ]
+   ],
    "ld": [
-    40,
-    "2026-11-16T16:14:30Z"
+    41,
+    "2026-11-16T16:23:31Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-16T16:21:12Z",
-    "ld": 2.73,
+    "at": "2026-11-16T16:24:05Z",
+    "ld": 1.86,
     "c": 8,
     "sb": 0,
     "dk": [
-     50.6,
+     48.5,
      228.3
     ],
     "ss": [
@@ -536,20 +572,11 @@
   },
   {
    "w": "Operator",
-   "a": "Evan",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session \u2013 1 task",
-   "at": "2026-11-16T11:17:50-05:00"
-  },
-  {
-   "w": "Operator",
    "a": "Jeremy",
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 1 task",
+   "t": "Work session",
    "at": "2026-11-16T11:09:57-05:00"
   }
  ],
@@ -562,6 +589,7 @@
   "lane_next",
   "queue_text",
   "task_done",
+  "fin_short",
   "task_title",
   "done_text",
   "task_open",
@@ -572,10 +600,10 @@
   "main": 1,
   "lanes": 2,
   "total": 3,
-  "at": "11:21 AM",
+  "at": "11:24 AM",
   "why": "",
-  "at_iso": "2026-11-16T16:21:00+00:00",
+  "at_iso": "2026-11-16T16:24:00+00:00",
   "started": "10:53 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 1, started 10:53 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 11:21 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 1, started 10:53 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 11:24 AM ET</p></section>"
  }
 }

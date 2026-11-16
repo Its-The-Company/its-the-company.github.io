@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-16T13:22:16.786588+00:00",
+ "at": "2026-11-16T13:25:16.071586+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -144,7 +144,7 @@
    "task": "[tools] T-4402 ledger rows need prev",
    "model": "opus",
    "started": "2026-11-16T13:20:37.912Z",
-   "seconds": 98,
+   "seconds": 278,
    "finished": null,
    "effort": "high"
   },
@@ -153,7 +153,7 @@
    "task": "[ops] T-4420 read OPT-128",
    "model": "opus",
    "started": "2026-11-16T13:20:56.222Z",
-   "seconds": 80,
+   "seconds": 259,
    "finished": null,
    "effort": "high"
   }
@@ -177,20 +177,20 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 0.0,
-   "resets_at": null,
+   "pct": 1.0,
+   "resets_at": "2026-11-16T13:10:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-16T08:18:15.499760-05:00",
-   "source": "usage",
-   "left": 100.0,
+   "read_at": "2026-11-16T08:24:14.303806-05:00",
+   "source": "live",
+   "left": 99.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 20.0,
-   "resets_at": "2026-11-22T07:00:00.050377+00:00",
+   "resets_at": "2026-11-22T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-16T08:18:15.499760-05:00",
-   "source": "usage",
+   "read_at": "2026-11-16T08:24:14.303806-05:00",
+   "source": "live",
    "left": 80.0,
    "left_words": "of your weekly allowance left"
   },
@@ -201,7 +201,7 @@
    "read_at": "2026-11-16T08:18:15.499760-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-16T08:18:15.499760-05:00"
+  "read_at": "2026-11-16T08:24:14.303806-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -221,7 +221,7 @@
   "week_pct": 10.02,
   "usage_pct": 33.4,
   "work_pct": 68.9,
-  "read_at": "2026-11-16T13:22:00+00:00",
+  "read_at": "2026-11-16T13:25:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -375,37 +375,6 @@
     "src": "plan-a"
    },
    {
-    "lane": "b",
-    "task": "T-4529",
-    "t": "Give Home the dispatcher's real start order",
-    "at": "2026-11-16T06:07:07-05:00",
-    "n": "Jeremy",
-    "d": 1,
-    "src": "plan-b"
-   },
-   {
-    "lane": "b",
-    "task": "T-4297",
-    "t": "Personal account stopped and its work parked",
-    "at": "2026-11-16T06:07:07-05:00",
-    "n": "Jeremy",
-    "d": 1,
-    "src": "plan-b"
-   },
-   {
-    "lane": "b",
-    "task": "T-4286",
-    "w": "Idris",
-    "k": "build",
-    "t": "Check an imported font draws in a widget",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-16T06:07:07-05:00",
-    "n": "Jeremy",
-    "d": 1,
-    "src": "plan-b"
-   },
-   {
     "lane": "b3",
     "task": "T-3745",
     "w": "Idris",
@@ -474,7 +443,7 @@
   }
  ],
  "disk": {
-  "free_gb": 45,
+  "free_gb": 42,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -483,14 +452,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-16T08:15:00-05:00",
+   "at": "2026-11-16T08:24:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-16T08:22:00-05:00",
+  "at": "2026-11-16T08:25:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -719,52 +688,67 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-16T13:22:07Z",
+  "at": "2026-11-16T13:25:16Z",
   "s": {
    "T-4256": [
     "merging",
     "Host checks on the Mac mini",
-    1794834727661
+    1794834676071
    ],
    "T-3970": [
     "mergeq",
     "1st to merge",
-    1794828607661
+    1794828616071
    ],
    "T-4558": [
     "mergeq",
     "2nd to merge",
-    1794830467661
+    1794830476071
    ],
    "T-4554": [
     "mergeq",
     "3rd to merge",
-    1794831547661
+    1794831556071
    ],
    "T-4555": [
     "mergeq",
     "4th to merge",
-    1794831967661
+    1794831976071
    ],
    "T-4565": [
-    "mergetest",
-    "Xcode checks on the MacBook, 5th to merge",
-    1794834667661
+    "mergeq",
+    "5th to merge",
+    1794833776071
    ],
    "T-4564": [
     "mergeq",
     "6th to merge",
-    1794834667661
+    1794834676071
+   ],
+   "T-4529": [
+    "mergeq",
+    "7th to merge",
+    1794835456071
+   ],
+   "T-4297": [
+    "mergeq",
+    "7th to merge",
+    1794835456071
+   ],
+   "T-4286": [
+    "mergeq",
+    "7th to merge",
+    1794835456071
    ],
    "T-4022": [
     "mergeq",
-    "7th to merge",
-    1794832207661
+    "9th to merge",
+    1794832216071
    ],
    "T-4020": [
     "mergeq",
-    "8th to merge",
-    1794832267661
+    "10th to merge",
+    1794832276071
    ],
    "T-3745": [
     "testing",
@@ -781,17 +765,10 @@
     "Mac Mini \u00b7 test",
     null
    ],
-   "T-4529": [
-    "merged",
-    "on main 7:26 AM ET",
-    1794831986000,
-    ""
-   ],
-   "T-4297": [
-    "merged",
-    "on main 6:19 AM ET",
-    1794827998000,
-    ""
+   "T-4402": [
+    "testing",
+    "its own tests, in its copy",
+    1794835456071
    ],
    "T-4276": [
     "merged",
@@ -808,13 +785,15 @@
    "T-4555": "Draw the When tapped setting",
    "T-4565": "Send button actions from Swift, schema names checked",
    "T-4564": "Run a button's action and redraw in one run",
+   "T-4529": "Give Home the dispatcher's real start order",
+   "T-4297": "Personal account stopped and its work parked",
+   "T-4286": "Check an imported font draws in a widget",
    "T-4022": "Check finished work before it ships",
    "T-4020": "Check finished work before it ships",
    "T-3745": "Stop the Pro store test timing out",
    "T-4433": "Confirm the Lock Screen refresh tap first",
    "T-4435": "Draw the wrapped refresh glyph on both runtimes",
-   "T-4529": "Give Home the dispatcher's real start order",
-   "T-4297": "Personal account stopped and its work parked",
+   "T-4402": "Have the audit ledger's writers fill in prev",
    "T-4276": "Run Evan's account on the audit without the pause"
   },
   "wk": {
@@ -825,36 +804,38 @@
    "T-4555": "Maren",
    "T-4565": "Pernille",
    "T-4564": "Pernille",
+   "T-4529": "Odalys",
+   "T-4297": "Ines",
+   "T-4286": "Idris",
    "T-4022": "Pernille",
    "T-4020": "Pernille",
    "T-3745": "Idris",
    "T-4433": "Idris",
    "T-4435": "Idris",
-   "T-4529": "Odalys",
-   "T-4297": "Ines",
+   "T-4402": "Odalys",
    "T-4276": "Operator"
   }
  },
  "ln": {
-  "at": "2026-11-16T13:22:07Z",
+  "at": "2026-11-16T13:25:16Z",
   "mq": {
    "n": {
-    "checking": 2,
-    "inline": 7,
+    "checking": 1,
+    "inline": 11,
     "conflicted": 1,
     "failed": 0,
     "held": 0,
     "retry": 0,
-    "parked": 10
+    "parked": 11
    },
    "m": {
-    "checking": 10,
-    "inline": 56,
-    "conflicted": 2224,
+    "checking": 14,
+    "inline": 54,
+    "conflicted": 2227,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 293
+    "parked": 296
    },
    "cur": [
     [
@@ -863,15 +844,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     10
-    ],
-    [
-     [
-      "T-4565"
-     ],
-     "iPhone app tests",
-     "MacBook",
-     11
+     14
     ]
    ],
    "ld": [
@@ -881,12 +854,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-16T13:22:09Z",
-    "ld": 7.21,
+    "at": "2026-11-16T13:25:18Z",
+    "ld": 8.51,
     "c": 8,
     "sb": 1,
     "dk": [
-     40.2,
+     44.1,
      228.3
     ],
     "ss": [
@@ -898,12 +871,12 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-16T13:12:55Z",
-    "ld": 0.15,
+    "at": "2026-11-16T13:21:00Z",
+    "ld": 1.08,
     "c": 12,
     "sb": 0,
     "dk": [
-     335.0,
+     334.7,
      926.4
     ],
     "sn": []
@@ -944,15 +917,6 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 1 task",
-   "at": "2026-11-16T08:12:49-05:00"
-  },
-  {
-   "w": "Operator",
-   "a": "Jeremy",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
    "t": "Work session \u2013 3 tasks",
    "at": "2026-11-16T06:07:04-05:00"
   }
@@ -974,12 +938,12 @@
  ],
  "agents_now": {
   "main": 2,
-  "lanes": 5,
-  "total": 7,
-  "at": "8:22 AM",
+  "lanes": 4,
+  "total": 6,
+  "at": "8:25 AM",
   "why": "",
-  "at_iso": "2026-11-16T13:22:00+00:00",
+  "at_iso": "2026-11-16T13:25:00+00:00",
   "started": "8:19 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 2, started 8:19 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 8:22 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 2, started 8:19 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 8:25 AM ET</p></section>"
  }
 }

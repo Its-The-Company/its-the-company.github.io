@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-16T19:42:41.070998+00:00",
+ "at": "2026-11-16T19:45:39.850232+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -96,7 +96,7 @@
    "task": "[tools] T-4443 card rules in queue check",
    "model": "opus",
    "started": "2026-11-16T19:23:14.320Z",
-   "seconds": 1166,
+   "seconds": 1345,
    "finished": null,
    "effort": "high"
   },
@@ -105,7 +105,7 @@
    "task": "[tools] T-3992 recut parked lane-a batch",
    "model": "opus",
    "started": "2026-11-16T19:25:02.030Z",
-   "seconds": 1059,
+   "seconds": 1237,
    "finished": null,
    "effort": "high"
   }
@@ -164,7 +164,7 @@
   "week_pct": 17.69,
   "usage_pct": 44.6,
   "work_pct": 73.1,
-  "read_at": "2026-11-16T19:42:00+00:00",
+  "read_at": "2026-11-16T19:45:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -185,7 +185,7 @@
   }
  ],
  "disk": {
-  "free_gb": 30,
+  "free_gb": 31,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -194,14 +194,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-16T14:40:00-05:00",
+   "at": "2026-11-16T14:44:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 4,
-  "at": "2026-11-16T14:42:00-05:00",
+  "at": "2026-11-16T14:45:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -430,17 +430,17 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-16T19:42:27Z",
+  "at": "2026-11-16T19:45:39Z",
   "s": {
    "T-4295": [
     "testing",
     "its own tests, in its copy",
-    1794857667647
+    1794857619850
    ],
    "T-4443": [
     "testing",
     "its own tests, in its copy",
-    1794857247647
+    1794857199850
    ]
   },
   "nm": {
@@ -453,7 +453,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-16T19:42:27Z",
+  "at": "2026-11-16T19:45:39Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -467,11 +467,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 1401,
-    "failed": 61,
+    "conflicted": 1404,
+    "failed": 64,
     "held": null,
     "retry": null,
-    "parked": 606
+    "parked": 609
    },
    "cur": [],
    "ld": [
@@ -481,12 +481,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-16T19:42:28Z",
-    "ld": 12.71,
+    "at": "2026-11-16T19:45:40Z",
+    "ld": 7.03,
     "c": 8,
     "sb": 1,
     "dk": [
-     31.2,
+     31.0,
      228.3
     ],
     "ss": [
@@ -506,19 +506,31 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 5 tasks",
-   "at": "2026-11-16T14:42:05-05:00"
+   "t": "Inbox \u2013 Evan's 2:45 PM Message on GitHub",
+   "at": "2026-11-16T14:45:39-05:00"
   }
  ],
  "reply": {
-  "sent": "2026-11-16T19:40:06Z",
-  "seconds": 118.0
+  "sent": "2026-11-16T19:43:14Z",
+  "seconds": 49.0
  },
- "inbox": [],
+ "inbox": [
+  {
+   "id": "c6927223919",
+   "state": "received",
+   "position": 1,
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "Should site/efficiency changes use..."
+  }
+ ],
  "trimmed": [
   "lane_next",
   "queue_text",
   "task_done",
+  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -529,10 +541,10 @@
   "main": 2,
   "lanes": 0,
   "total": 2,
-  "at": "2:42 PM",
+  "at": "2:45 PM",
   "why": "",
-  "at_iso": "2026-11-16T19:42:00+00:00",
+  "at_iso": "2026-11-16T19:45:00+00:00",
   "started": "2:21 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 2:21 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 2:42 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 2:21 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 2:45 PM ET</p></section>"
  }
 }

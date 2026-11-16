@@ -1,22 +1,11 @@
 {
  "schema": 1,
- "at": "2026-11-16T08:40:24.615649+00:00",
+ "at": "2026-11-16T08:43:30.808640+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-16T00:32:52-05:00",
   "flow": [
-   {
-    "t": "T-4460",
-    "name": "Clear old test leftovers from the temporary folder",
-    "acct": "Personal b",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1794818217
-     }
-    ]
-   },
    {
     "t": "T-4550",
     "name": "Python contract and action run for widget buttons",
@@ -30,6 +19,14 @@
    }
   ],
   "done": [
+   {
+    "t": "T-4460",
+    "name": "Clear old test leftovers from the temporary folder",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794818500
+   },
    {
     "t": "T-4455",
     "name": "Fix the stage name test after the Retry Queue rename",
@@ -101,16 +98,9 @@
     "steps": [],
     "end": "landed",
     "end_at": 1794804031
-   },
-   {
-    "t": "T-4278",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794804022
    }
   ],
-  "landed": 24,
+  "landed": 25,
   "failed": 5
  },
  "workers": [
@@ -119,7 +109,7 @@
    "task": "[tools] T-4194 land feature-session wiring",
    "model": "opus",
    "started": "2026-11-16T05:36:18.799Z",
-   "seconds": 11045,
+   "seconds": 11232,
    "finished": null
   },
   {
@@ -127,7 +117,7 @@
    "task": "[tools] T-3995 personal_land daily batch",
    "model": "opus",
    "started": "2026-11-16T05:36:28.863Z",
-   "seconds": 11035,
+   "seconds": 11221,
    "finished": null
   }
  ],
@@ -145,24 +135,24 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 380,
-  "blocked_count": 76
+  "runnable_count": 379,
+  "blocked_count": 75
  },
  "meter": {
   "five_hour": {
-   "pct": 1.0,
+   "pct": 2.0,
    "resets_at": "2026-11-16T08:10:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-16T03:28:39.518670-05:00",
+   "read_at": "2026-11-16T03:41:50.148062-05:00",
    "source": "live",
-   "left": 99.0,
+   "left": 98.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 18.0,
    "resets_at": "2026-11-22T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-16T03:28:39.518670-05:00",
+   "read_at": "2026-11-16T03:41:50.148062-05:00",
    "source": "live",
    "left": 82.0,
    "left_words": "of your weekly allowance left"
@@ -174,7 +164,7 @@
    "read_at": "2026-11-16T00:32:00.430425-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-16T03:28:39.518670-05:00"
+  "read_at": "2026-11-16T03:41:50.148062-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -194,7 +184,7 @@
   "week_pct": 5.72,
   "usage_pct": 25.2,
   "work_pct": 70.0,
-  "read_at": "2026-11-16T08:40:00+00:00",
+  "read_at": "2026-11-16T08:43:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -215,7 +205,7 @@
   }
  ],
  "disk": {
-  "free_gb": 18,
+  "free_gb": 21,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -224,14 +214,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-16T03:35:00-05:00",
+   "at": "2026-11-16T03:41:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-16T03:40:00-05:00",
+  "at": "2026-11-16T03:43:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -392,30 +382,38 @@
   ],
   "done": [
    {
+    "w": "Odalys",
+    "t": "Old company test folders in the temp folder are now cleared by the disk cleaner after 3 hours...",
+    "at": "2026-11-16T03:41:00-05:00"
+   },
+   {
+    "w": "Odalys",
+    "t": "Test runs now delete their own scratch folders when they finish, and the disk cleaner removes...",
+    "at": "2026-11-16T03:41:00-05:00"
+   },
+   {
     "w": "Operator",
     "t": "Posted a short correction on to Jeremy: his account read 77% of its own week, not about 33%, and...",
     "at": "2026-11-16T02:01:00-05:00"
-   },
-   {
-    "w": "Idris",
-    "t": "The test build that carries the phone measurement switch had never been built with its tests; it...",
-    "at": "2026-11-16T01:23:00-05:00"
-   },
-   {
-    "w": "Operator",
-    "t": "Xcode, Safari and Disk Utility, which Evan said the Investors never opened, were asked to quit...",
-    "at": "2026-11-16T00:33:00-05:00"
    }
   ],
   "count": {
-   "next": 380,
-   "wait": 35,
+   "next": 379,
+   "wait": 34,
    "blocked": 41,
    "you": 12
   },
   "fin": {
-   "n": 1,
+   "n": 3,
    "rows": [
+    [
+     "T-3684",
+     "Sweep old company test..."
+    ],
+    [
+     "T-4460",
+     "Clear old test leftovers..."
+    ],
     [
      "T-3281",
      "Run the gate build's..."
@@ -462,30 +460,24 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-16T08:40:24Z",
+  "at": "2026-11-16T08:43:30Z",
   "s": {
-   "T-4460": [
-    "merging",
-    "Host checks on the Mac mini \u00b7 11 groups of tests done",
-    1794818244615
-   ],
    "T-4550": [
-    "mergeq",
-    "1st to merge",
-    1794817944615
+    "merging",
+    "Host checks on the Mac mini",
+    1794818550808
    ]
   },
   "nm": {
-   "T-4460": "Clear old test leftovers from the temporary folder",
    "T-4550": "Python contract and action run for widget buttons"
   }
  },
  "ln": {
-  "at": "2026-11-16T08:40:24Z",
+  "at": "2026-11-16T08:43:30Z",
   "mq": {
    "n": {
     "checking": 1,
-    "inline": 1,
+    "inline": 0,
     "conflicted": 1,
     "failed": 0,
     "held": 0,
@@ -493,37 +485,37 @@
     "parked": 11
    },
    "m": {
-    "checking": 3,
-    "inline": 8,
-    "conflicted": 1942,
+    "checking": 1,
+    "inline": null,
+    "conflicted": 1945,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 12
+    "parked": 15
    },
    "cur": [
     [
      [
-      "T-4460"
+      "T-4550"
      ],
      "Mac tests",
      "Mac mini",
-     3
+     1
     ]
    ],
    "ld": [
-    8,
-    "2026-11-16T08:36:53Z"
+    9,
+    "2026-11-16T08:41:40Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-16T08:40:01Z",
-    "ld": 27.49,
+    "at": "2026-11-16T08:43:07Z",
+    "ld": 21.63,
     "c": 8,
     "sb": 1,
     "dk": [
-     19.8,
+     20.6,
      228.3
     ],
     "ss": [
@@ -578,10 +570,10 @@
   "main": 2,
   "lanes": 0,
   "total": 2,
-  "at": "3:40 AM",
+  "at": "3:43 AM",
   "why": "",
-  "at_iso": "2026-11-16T08:40:00+00:00",
+  "at_iso": "2026-11-16T08:43:00+00:00",
   "started": "12:32 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 12:32 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 3:40 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 12:32 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 3:43 AM ET</p></section>"
  }
 }

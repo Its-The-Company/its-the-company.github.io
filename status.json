@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-16T03:04:43.456858+00:00",
+ "at": "2026-11-16T03:07:44.868413+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -101,16 +101,7 @@
    "task": "[tools] T-4194 wire and switch on feature sessions",
    "model": "opus",
    "started": "2026-11-16T02:43:06.794Z",
-   "seconds": 1296,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "idris",
-   "task": "[design] T-4542 final ADR-011 pass after both reviews",
-   "model": "opus",
-   "started": "2026-11-16T02:59:55.606Z",
-   "seconds": 287,
+   "seconds": 1478,
    "finished": null,
    "effort": "high"
   },
@@ -119,13 +110,37 @@
    "task": "[tools] T-4547 automatic safe deletion when disk low",
    "model": "opus",
    "started": "2026-11-16T03:04:22.456Z",
-   "seconds": 21,
+   "seconds": 202,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Idris x2, Odalys",
+ "who": "Idris, Odalys",
  "recent": [
+  {
+   "name": "maren",
+   "task": "[review] T-4542 Maren confirms accepted ADR-011",
+   "model": "opus",
+   "started": "2026-11-16T03:06:32.935Z",
+   "seconds": null,
+   "finished": "2026-11-16T03:07:24.523000+00:00"
+  },
+  {
+   "name": "pernille",
+   "task": "[review] T-4542 Pernille confirms accepted ADR-011",
+   "model": "opus",
+   "started": "2026-11-16T03:05:53.557Z",
+   "seconds": null,
+   "finished": "2026-11-16T03:06:28.144000+00:00"
+  },
+  {
+   "name": "idris",
+   "task": "[design] T-4542 final ADR-011 pass after both reviews",
+   "model": "opus",
+   "started": "2026-11-16T02:59:55.606Z",
+   "seconds": null,
+   "finished": "2026-11-16T03:05:44.927000+00:00"
+  },
   {
    "name": "ines",
    "task": "[plan] T-4543 widget buttons into the 1.0 plan",
@@ -133,53 +148,29 @@
    "started": "2026-11-16T02:56:42.517Z",
    "seconds": null,
    "finished": "2026-11-16T03:04:06.874000+00:00"
-  },
-  {
-   "name": "maren",
-   "task": "[review] T-4542 Maren reviews ADR-011 setting and notices",
-   "model": "opus",
-   "started": "2026-11-16T02:52:19.557Z",
-   "seconds": null,
-   "finished": "2026-11-16T02:59:02.036000+00:00"
-  },
-  {
-   "name": "pernille",
-   "task": "[review] T-4542 Pernille re-reads revised ADR-011",
-   "model": "opus",
-   "started": "2026-11-16T02:52:42.454Z",
-   "seconds": null,
-   "finished": "2026-11-16T02:56:25.166000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[design] T-4542 revise ADR-011 after Pernille review",
-   "model": "opus",
-   "started": "2026-11-16T02:43:31.677Z",
-   "seconds": null,
-   "finished": "2026-11-16T02:52:24.287000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 380,
+  "runnable_count": 379,
   "blocked_count": 75
  },
  "meter": {
   "five_hour": {
-   "pct": 19.0,
+   "pct": 21.0,
    "resets_at": "2026-11-15T22:10:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-15T21:59:03.958641-05:00",
+   "read_at": "2026-11-15T22:05:18.890198-05:00",
    "source": "live",
-   "left": 81.0,
+   "left": 79.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 15.0,
    "resets_at": "2026-11-22T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-15T21:59:03.958641-05:00",
+   "read_at": "2026-11-15T22:05:18.890198-05:00",
    "source": "live",
    "left": 85.0,
    "left_words": "of your weekly allowance left"
@@ -191,7 +182,7 @@
    "read_at": "2026-11-15T20:29:58.154359-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-15T21:59:03.958641-05:00"
+  "read_at": "2026-11-15T22:05:18.890198-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -211,7 +202,7 @@
   "week_pct": 4.62,
   "usage_pct": 26.2,
   "work_pct": 68.8,
-  "read_at": "2026-11-16T03:04:00+00:00",
+  "read_at": "2026-11-16T03:07:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -232,23 +223,23 @@
   }
  ],
  "disk": {
-  "free_gb": 11,
-  "gate": "closed",
+  "free_gb": 36,
+  "gate": "open",
   "ssd": {
    "mounted": true,
    "free_gb": 180
   },
-  "words": "free on the Mac mini. New Xcode runs and personal sessions wait until 20 GB is free.",
+  "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-15T21:59:00-05:00",
+   "at": "2026-11-15T22:05:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-15T22:04:00-05:00",
+  "at": "2026-11-15T22:07:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -326,16 +317,6 @@
     "at": "2026-11-16T02:43:06.794Z",
     "o": "c",
     "task": "T-4194"
-   },
-   {
-    "w": "Idris",
-    "k": "design",
-    "t": "Let people choose what a widget tap does",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-16T02:59:55.606Z",
-    "o": "c",
-    "task": "T-4542"
    },
    {
     "w": "Odalys",
@@ -423,6 +404,11 @@
   ],
   "done": [
    {
+    "w": "Idris+pernille+maren",
+    "t": "The design for choosing what a widget tap or button does is written and accepted: open its Page,...",
+    "at": "2026-11-15T22:07:00-05:00"
+   },
+   {
     "w": "Ines",
     "t": "Widget buttons and the choice of what a widget tap does are now part of version 1.0; they add...",
     "at": "2026-11-15T22:03:00-05:00"
@@ -431,22 +417,21 @@
     "w": "Operator",
     "t": "The 11 finished work folders were deleted under Evan's 10:00 PM permission after their changes...",
     "at": "2026-11-15T22:03:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "When the Mac mini's disk falls under the line, the build gate now cleans first and pauses only...",
-    "at": "2026-11-15T21:48:00-05:00"
    }
   ],
   "count": {
-   "next": 380,
+   "next": 379,
    "wait": 35,
    "blocked": 40,
    "you": 11
   },
   "fin": {
-   "n": 6,
+   "n": 7,
    "rows": [
+    [
+     "T-4542",
+     "Let people choose what a..."
+    ],
     [
      "T-4543",
      "Put widget buttons into the..."
@@ -466,10 +451,6 @@
     [
      "T-4227",
      "Run every Operator on Opus high"
-    ],
-    [
-     "T-4515",
-     "Open the Habits Page at the..."
     ]
    ]
   }
@@ -513,20 +494,11 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-16T03:04:35Z",
-  "s": {
-   "T-4542": [
-    "testing",
-    "its own tests, in its copy",
-    1794798275392
-   ]
-  },
-  "nm": {
-   "T-4542": "Let people choose what a widget tap does"
-  }
+  "at": "2026-11-16T03:07:31Z",
+  "s": {}
  },
  "ln": {
-  "at": "2026-11-16T03:04:35Z",
+  "at": "2026-11-16T03:07:31Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -540,11 +512,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 1606,
+    "conflicted": 1609,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 835
+    "parked": 838
    },
    "cur": [],
    "ld": [
@@ -554,12 +526,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-16T03:04:36Z",
-    "ld": 3.28,
+    "at": "2026-11-16T03:07:31Z",
+    "ld": 3.06,
     "c": 8,
     "sb": 0,
     "dk": [
-     36.4,
+     36.3,
      228.3
     ],
     "ss": [
@@ -588,7 +560,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 7 tasks",
+   "t": "Work session \u2013 8 tasks",
    "at": "2026-11-15T22:02:37-05:00"
   }
  ],
@@ -606,17 +578,18 @@
   "task_title",
   "done_text",
   "task_open",
+  "fin_six",
   "lane_task",
   "task_next"
  ],
  "agents_now": {
-  "main": 3,
+  "main": 2,
   "lanes": 0,
-  "total": 3,
-  "at": "10:04 PM",
+  "total": 2,
+  "at": "10:07 PM",
   "why": "",
-  "at_iso": "2026-11-16T03:04:00+00:00",
+  "at_iso": "2026-11-16T03:07:00+00:00",
   "started": "8:30 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 8:30 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 10:04 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 8:30 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 10:07 PM ET</p></section>"
  }
 }

@@ -1,12 +1,20 @@
 {
  "schema": 1,
- "at": "2026-11-16T17:04:34.126204+00:00",
+ "at": "2026-11-16T17:07:36.772879+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-16T10:53:39-05:00",
   "flow": [],
   "done": [
+   {
+    "t": "T-4063",
+    "name": "Check finished work before it ships",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794848747
+   },
    {
     "t": "T-4040",
     "name": "Check finished work before it ships",
@@ -80,18 +88,9 @@
     "end": "failed",
     "end_at": 1794845596,
     "why": "did not merge cleanly"
-   },
-   {
-    "t": "T-2943",
-    "name": "Send up the gate build and confirm it stays internal",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "failed",
-    "end_at": 1794845596,
-    "why": "did not merge cleanly"
    }
   ],
-  "landed": 45,
+  "landed": 46,
   "failed": 11
  },
  "workers": [
@@ -100,7 +99,7 @@
    "task": "[tools] T-4583 feature step ticking",
    "model": "opus",
    "started": "2026-11-16T15:55:21.544Z",
-   "seconds": 4152,
+   "seconds": 4335,
    "finished": null,
    "effort": "high"
   }
@@ -119,7 +118,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 385,
+  "runnable_count": 384,
   "blocked_count": 74
  },
  "meter": {
@@ -168,7 +167,7 @@
   "week_pct": 15.51,
   "usage_pct": 42.5,
   "work_pct": 69.1,
-  "read_at": "2026-11-16T17:04:00+00:00",
+  "read_at": "2026-11-16T17:07:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -291,26 +290,6 @@
     "e": "high",
     "at": "2026-11-16T11:41:01-05:00",
     "n": "Jeremy",
-    "src": "plan-b"
-   },
-   {
-    "lane": "b3",
-    "task": "T-4063",
-    "w": "Pernille",
-    "k": "review",
-    "t": "Check finished work before it ships",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-16T11:41:32-05:00",
-    "n": "Jeremy",
-    "src": "plan-b"
-   },
-   {
-    "lane": "b3",
-    "task": "T-4067",
-    "t": "Check finished work before it ships",
-    "at": "2026-11-16T11:41:32-05:00",
-    "n": "Jeremy",
     "d": 1,
     "src": "plan-b"
    }
@@ -350,7 +329,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-16T12:04:00-05:00",
+  "at": "2026-11-16T12:07:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -505,6 +484,11 @@
   "done": [
    {
     "w": "Pernille",
+    "t": "A second engineer checked that the unused project manifest reader is really gone from the...",
+    "at": "2026-11-16T12:05:00-05:00"
+   },
+   {
+    "w": "Pernille",
     "t": "An independent check of the new screen-title tests found the test-only switch is truly absent...",
     "at": "2026-11-16T12:00:00-05:00"
    },
@@ -512,22 +496,21 @@
     "w": "Odalys",
     "t": "MacBook land checks the runner itself ended while the job was being sent in (tar or git archive...",
     "at": "2026-11-16T11:23:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "A test check that the MacBook ended before it ran, such as a copy that timed out, no longer...",
-    "at": "2026-11-16T10:01:00-05:00"
    }
   ],
   "count": {
-   "next": 385,
+   "next": 384,
    "wait": 34,
    "blocked": 40,
    "you": 11
   },
   "fin": {
-   "n": 2,
+   "n": 3,
    "rows": [
+    [
+     "T-4063",
+     "Check finished work before..."
+    ],
     [
      "T-4067",
      "Check finished work before..."
@@ -578,19 +561,14 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-16T17:04:18Z",
+  "at": "2026-11-16T17:07:21Z",
   "s": {
-   "T-3764": [
+   "T-4031": [
     "testing",
     "Mac Mini \u00b7 test",
     null
    ],
-   "T-4040": [
-    "testing",
-    "Mac Mini \u00b7 test",
-    null
-   ],
-   "T-4043": [
+   "T-4032": [
     "testing",
     "Mac Mini \u00b7 test",
     null
@@ -598,32 +576,22 @@
    "T-4583": [
     "testing",
     "its own tests, in its copy",
-    1794847998955
-   ],
-   "T-4031": [
-    "testq",
-    "1st for a Simulator",
-    1794847998955
-   ],
-   "T-4032": [
-    "testq",
-    "1st for a Simulator",
-    1794847998955
+    1794848001542
    ],
    "T-4048": [
     "testq",
-    "3rd for a Simulator",
-    1794848478955
+    "2nd for a Simulator",
+    1794848541542
    ],
    "T-4049": [
     "testq",
-    "3rd for a Simulator",
-    1794848478955
+    "2nd for a Simulator",
+    1794848541542
    ],
-   "T-4067": [
+   "T-4040": [
     "merged",
-    "on main 12:00 PM ET",
-    1794848431000,
+    "on main 12:01 PM ET",
+    1794848465000,
     ""
    ],
    "T-4573": [
@@ -634,33 +602,29 @@
    ]
   },
   "nm": {
-   "T-3764": "Make the iPad window test fail without the fix",
-   "T-4040": "Check finished work before it ships",
-   "T-4043": "Check finished work before it ships",
-   "T-4583": "Turn on Feature mode and tick steps at the merge",
    "T-4031": "Check finished work before it ships",
    "T-4032": "Check finished work before it ships",
+   "T-4583": "Turn on Feature mode and tick steps at the merge",
    "T-4048": "Check finished work before it ships",
    "T-4049": "Check finished work before it ships",
-   "T-4067": "Check finished work before it ships",
+   "T-4040": "Check finished work before it ships",
    "T-4573": "Answer when the chosen account cannot take a message"
   },
   "wk": {
-   "T-3764": "Idris",
-   "T-4040": "Pernille",
-   "T-4043": "Pernille",
-   "T-4583": "Idris",
    "T-4031": "Pernille",
    "T-4032": "Pernille",
+   "T-4583": "Idris",
    "T-4048": "Pernille",
    "T-4049": "Pernille",
-   "T-4067": "Pernille",
+   "T-4040": "Pernille",
    "T-4573": "Odalys",
+   "T-4063": "Pernille",
+   "T-4067": "Pernille",
    "T-4585": "Odalys"
   }
  },
  "ln": {
-  "at": "2026-11-16T17:04:18Z",
+  "at": "2026-11-16T17:07:21Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -674,26 +638,26 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 1243,
+    "conflicted": 1246,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 515
+    "parked": 519
    },
    "cur": [],
    "ld": [
-    47,
-    "2026-11-16T17:01:17Z"
+    48,
+    "2026-11-16T17:05:47Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-16T17:04:19Z",
-    "ld": 4.79,
+    "at": "2026-11-16T17:06:56Z",
+    "ld": 3.67,
     "c": 8,
     "sb": 1,
     "dk": [
-     42.9,
+     40.7,
      228.3
     ],
     "ss": [
@@ -760,8 +724,8 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Inbox \u2013 Jeremy's 12:03 PM Message on GitHub",
-   "at": "2026-11-16T12:03:41-05:00"
+   "t": "Work session \u2013 2 tasks",
+   "at": "2026-11-16T12:04:49-05:00"
   },
   {
    "w": "Operator",
@@ -771,39 +735,18 @@
    "e": "high",
    "t": "Work session \u2013 1 task",
    "at": "2026-11-16T11:41:01-05:00"
-  },
-  {
-   "w": "Operator",
-   "a": "Jeremy",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session \u2013 1 task",
-   "at": "2026-11-16T11:41:32-05:00"
   }
  ],
  "reply": {
-  "sent": "2026-11-16T16:55:19Z",
-  "seconds": 113.0
+  "sent": "2026-11-16T17:03:23Z",
+  "seconds": 84.0
  },
- "inbox": [
-  {
-   "id": "c6923264104",
-   "state": "received",
-   "position": 1,
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "Why does the merge queue say \u201cheld?\u201d..."
-  }
- ],
+ "inbox": [],
  "trimmed": [
   "lane_next",
   "queue_text",
   "task_done",
   "fin_short",
-  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -812,12 +755,12 @@
  ],
  "agents_now": {
   "main": 1,
-  "lanes": 6,
-  "total": 7,
-  "at": "12:04 PM",
+  "lanes": 5,
+  "total": 6,
+  "at": "12:07 PM",
   "why": "",
-  "at_iso": "2026-11-16T17:04:00+00:00",
+  "at_iso": "2026-11-16T17:07:00+00:00",
   "started": "10:53 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 1, started 10:53 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 6 sessions \u00b7 as of 12:04 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 1, started 10:53 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 12:07 PM ET</p></section>"
  }
 }

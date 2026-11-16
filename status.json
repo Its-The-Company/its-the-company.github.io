@@ -1,10 +1,10 @@
 {
  "schema": 1,
- "at": "2026-11-16T13:03:07.765538+00:00",
+ "at": "2026-11-16T13:09:36.769942+00:00",
  "session": {
-  "active": true,
-  "kind": "work",
-  "started": "2026-11-16T07:58:32-05:00",
+  "active": false,
+  "kind": "",
+  "started": null,
   "flow": [
    {
     "t": "T-4558",
@@ -133,7 +133,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 381,
+  "runnable_count": 383,
   "blocked_count": 76
  },
  "meter": {
@@ -177,12 +177,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": null,
+ "next_tick": "2026-11-16T08:10:47-05:00",
  "personal": {
   "week_pct": 10.05,
   "usage_pct": 33.4,
-  "work_pct": 70.5,
-  "read_at": "2026-11-16T13:03:00+00:00",
+  "work_pct": 68.9,
+  "read_at": "2026-11-16T13:12:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -450,7 +450,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-16T08:03:00-05:00",
+  "at": "2026-11-16T08:12:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -458,13 +458,9 @@
    "b": "double-spread"
   }
  },
- "next_tick_why": "session",
+ "next_tick_why": "last_tick",
  "idle": null,
- "pool": {
-  "why": "Double Spread: 80% of the week left, paced to last until Wed 14:00, the week's halfway point; the machine allows 2 (new work waits: 19 tasks wait to merge (limit 12): 2 agents finish and merge...",
-  "n": 2,
-  "at": "2026-11-16T07:55:47.640603-05:00"
- },
+ "pool": null,
  "lanes": [
   {
    "name": "Idris",
@@ -517,7 +513,6 @@
  ],
  "tasks": {
   "run": [],
-  "src": "plan",
   "open": [
    {
     "w": "Idris",
@@ -608,19 +603,10 @@
    }
   ],
   "count": {
-   "next": 381,
+   "next": 383,
    "wait": 34,
    "blocked": 42,
    "you": 12
-  },
-  "fin": {
-   "n": 1,
-   "rows": [
-    [
-     "T-4456",
-     "Personal account stopped and..."
-    ]
-   ]
   }
  },
  "qr": [
@@ -662,52 +648,52 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-16T13:02:52Z",
+  "at": "2026-11-16T13:09:36Z",
   "s": {
    "T-4564": [
     "merging",
     "Host checks on the Mac mini",
-    1794833212923
+    1794833196769
    ],
    "T-3970": [
     "mergeq",
     "1st to merge",
-    1794828592923
+    1794828636769
    ],
    "T-4558": [
     "mergeq",
     "2nd to merge",
-    1794830452923
+    1794830436769
    ],
    "T-4256": [
     "mergeq",
     "3rd to merge",
-    1794831352923
+    1794831336769
    ],
    "T-4554": [
     "mergeq",
     "4th to merge",
-    1794831592923
+    1794831576769
    ],
    "T-4555": [
     "mergeq",
     "5th to merge",
-    1794832012923
+    1794831996769
    ],
    "T-4565": [
     "mergeq",
     "6th to merge",
-    1794833752923
+    1794833796769
    ],
    "T-4022": [
     "mergeq",
     "7th to merge",
-    1794832192923
+    1794832236769
    ],
    "T-4020": [
     "mergeq",
     "8th to merge",
-    1794832312923
+    1794832296769
    ],
    "T-3745": [
     "testing",
@@ -775,12 +761,11 @@
    "T-4435": "Idris",
    "T-4529": "Odalys",
    "T-4297": "Ines",
-   "T-4276": "Operator",
-   "T-4456": "Idris"
+   "T-4276": "Operator"
   }
  },
  "ln": {
-  "at": "2026-11-16T13:02:52Z",
+  "at": "2026-11-16T13:09:36Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -792,13 +777,13 @@
     "parked": 10
    },
    "m": {
-    "checking": 16,
-    "inline": 39,
-    "conflicted": 2204,
+    "checking": 23,
+    "inline": 46,
+    "conflicted": 2211,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 274
+    "parked": 281
    },
    "cur": [
     [
@@ -807,7 +792,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     16
+     23
     ]
    ],
    "ld": [
@@ -817,12 +802,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-16T13:02:27Z",
-    "ld": 50.12,
+    "at": "2026-11-16T13:09:38Z",
+    "ld": 31.77,
     "c": 8,
-    "sb": 2,
+    "sb": 1,
     "dk": [
-     44.3,
+     43.2,
      228.3
     ],
     "ss": [
@@ -830,7 +815,6 @@
      953.7
     ],
     "sn": [
-     "T3764 iPad",
      "T-4435 iPhone Duo 27.1"
     ]
    },
@@ -850,21 +834,12 @@
  "operators": [
   {
    "w": "Operator",
-   "a": "Main plan",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session \u2013 1 task",
-   "at": "2026-11-16T07:58:32-05:00"
-  },
-  {
-   "w": "Operator",
    "a": "Evan",
    "sr": 1,
    "m": "opus",
    "e": "high",
    "t": "Work session",
-   "at": "2026-11-16T08:03:07-05:00"
+   "at": "2026-11-16T08:09:36-05:00"
   },
   {
    "w": "Operator",
@@ -903,7 +878,6 @@
   "lane_next",
   "queue_text",
   "task_done",
-  "fin_short",
   "task_title",
   "done_text",
   "task_open",
@@ -914,10 +888,10 @@
   "main": 0,
   "lanes": 5,
   "total": 5,
-  "at": "8:03 AM",
+  "at": "8:12 AM",
   "why": "",
-  "at_iso": "2026-11-16T13:03:00+00:00",
-  "started": "7:58 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 0, started 7:58 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 8:03 AM ET</p></section>"
+  "at_iso": "2026-11-16T13:12:00+00:00",
+  "started": "",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 8:12 AM ET</p></section>"
  }
 }

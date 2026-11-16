@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-16T04:27:25.264225+00:00",
+ "at": "2026-11-16T04:30:31.483155+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -121,22 +121,21 @@
    "task": "[tools] T-4194 wire and switch on feature sessions",
    "model": "opus",
    "started": "2026-11-16T02:43:06.794Z",
-   "seconds": 6258,
+   "seconds": 6444,
    "finished": null,
    "effort": "high"
-  },
+  }
+ ],
+ "who": "Idris",
+ "recent": [
   {
    "name": "odalys",
    "task": "[tools] T-4560 disk cleaning acts on cleared refusals",
    "model": "opus",
    "started": "2026-11-16T03:28:22.673Z",
-   "seconds": 3542,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Idris, Odalys",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-16T04:28:01.684000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[tools] T-4547 automatic safe deletion when disk low",
@@ -160,20 +159,12 @@
    "started": "2026-11-16T03:07:46.334Z",
    "seconds": null,
    "finished": "2026-11-16T03:12:10.181000+00:00"
-  },
-  {
-   "name": "maren",
-   "task": "[review] T-4542 Maren confirms accepted ADR-011",
-   "model": "opus",
-   "started": "2026-11-16T03:06:32.935Z",
-   "seconds": null,
-   "finished": "2026-11-16T03:07:24.523000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 382,
+  "runnable_count": 381,
   "blocked_count": 76
  },
  "meter": {
@@ -222,7 +213,7 @@
   "week_pct": 4.62,
   "usage_pct": 26.2,
   "work_pct": 68.8,
-  "read_at": "2026-11-16T04:27:00+00:00",
+  "read_at": "2026-11-16T04:30:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -392,7 +383,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-15T23:27:00-05:00",
+  "at": "2026-11-15T23:30:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -418,15 +409,6 @@
    "effort": "high"
   },
   {
-   "name": "Odalys",
-   "state": "running",
-   "task": "[tools] T-4560 disk cleaning acts on cleared refusals",
-   "model": "opus",
-   "since": "2026-11-16T03:28:22.673Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
    "name": "Ines",
    "state": "next",
    "task": "Ines, P2, from T-1110 (Wrenna,...",
@@ -438,6 +420,14 @@
    "name": "Pernille",
    "state": "next",
    "task": "Pernille, P1, premades and gallery take the age line...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
+   "name": "Odalys",
+   "state": "next",
+   "task": "A lane record main refused: failed...",
    "model": null,
    "since": null,
    "next": []
@@ -470,16 +460,6 @@
     "at": "2026-11-16T02:43:06.794Z",
     "o": "c",
     "task": "T-4194"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Let the disk cleaning act on cleared refusals",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-16T03:28:22.673Z",
-    "o": "c",
-    "task": "T-4560"
    }
   ],
   "src": "plan",
@@ -558,6 +538,11 @@
   "done": [
    {
     "w": "Odalys",
+    "t": "The automatic disk cleaning can now remove finished task folders the Investors cleared on 11-15,...",
+    "at": "2026-11-15T23:27:00-05:00"
+   },
+   {
+    "w": "Odalys",
     "t": "The proposal for a guard that refuses 24-hour clock times in hand-typed posts is now with the...",
     "at": "2026-11-15T23:18:00-05:00"
    },
@@ -565,22 +550,21 @@
     "w": "Odalys",
     "t": "The 94% and the 33% came from two different accounts, not a counting error: the main account...",
     "at": "2026-11-15T23:12:00-05:00"
-   },
-   {
-    "w": "Maren",
-    "t": "In Chat, double-tapping a message now offers a fire reaction in place of the laughing face, as...",
-    "at": "2026-11-15T23:11:00-05:00"
    }
   ],
   "count": {
-   "next": 382,
+   "next": 381,
    "wait": 35,
    "blocked": 41,
    "you": 12
   },
   "fin": {
-   "n": 13,
+   "n": 14,
    "rows": [
+    [
+     "T-4560",
+     "Let the disk cleaning act on..."
+    ],
     [
      "T-3803",
      "Post the time guard proposal..."
@@ -600,10 +584,6 @@
     [
      "T-4547",
      "Delete safe leftovers on its..."
-    ],
-    [
-     "T-4551",
-     "Bring the charter Mission..."
     ]
    ]
   }
@@ -647,27 +627,22 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-16T04:27:16Z",
+  "at": "2026-11-16T04:30:25Z",
   "s": {
    "T-4278": [
     "mergeq",
     "1st to merge",
-    1794803056785
+    1794803065030
    ],
    "T-4109": [
     "mergeq",
     "2nd to merge",
-    1794803236785
+    1794803245030
    ],
    "T-0261": [
     "mergeq",
     "3rd to merge",
-    1794802036785
-   ],
-   "T-4560": [
-    "merging",
-    "Mac tests at the main gate",
-    1794802516785
+    1794802045030
    ],
    "T-3803": [
     "merged",
@@ -704,7 +679,6 @@
    "T-4278": "Move notification settings into the info panel",
    "T-4109": "Add a newest-first view to the Reports page",
    "T-0261": "Apply the chosen store caption wording",
-   "T-4560": "Let the disk cleaning act on cleared refusals",
    "T-3803": "Post the time guard proposal and finish deadline readers",
    "T-4400": "Find why pace count and meter disagree",
    "T-4534": "Double-tap a Chat bubble to react, and add fire",
@@ -713,7 +687,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-16T04:27:16Z",
+  "at": "2026-11-16T04:30:25Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -726,12 +700,12 @@
    },
    "m": {
     "checking": null,
-    "inline": 3,
-    "conflicted": 1689,
+    "inline": 6,
+    "conflicted": 1692,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 917
+    "parked": 921
    },
    "cur": [],
    "ld": [
@@ -741,12 +715,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-16T04:26:51Z",
-    "ld": 6.61,
+    "at": "2026-11-16T04:29:36Z",
+    "ld": 5.38,
     "c": 8,
     "sb": 0,
     "dk": [
-     24.3,
+     26.1,
      228.3
     ],
     "ss": [
@@ -784,8 +758,8 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session",
-   "at": "2026-11-15T23:27:24-05:00"
+   "t": "Work session \u2013 3 tasks",
+   "at": "2026-11-15T22:32:55-05:00"
   },
   {
    "w": "Operator",
@@ -825,13 +799,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 2,
+  "main": 1,
   "lanes": 3,
-  "total": 5,
-  "at": "11:27 PM",
+  "total": 4,
+  "at": "11:30 PM",
   "why": "",
-  "at_iso": "2026-11-16T04:27:00+00:00",
+  "at_iso": "2026-11-16T04:30:00+00:00",
   "started": "8:30 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 2, started 8:30 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 11:27 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 1, started 8:30 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 11:30 PM ET</p></section>"
  }
 }

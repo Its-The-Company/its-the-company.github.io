@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-16T04:36:38.460523+00:00",
+ "at": "2026-11-16T04:39:44.461538+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -121,7 +121,7 @@
    "task": "[tools] T-4194 wire and switch on feature sessions",
    "model": "opus",
    "started": "2026-11-16T02:43:06.794Z",
-   "seconds": 6811,
+   "seconds": 6997,
    "finished": null,
    "effort": "high"
   }
@@ -213,7 +213,7 @@
   "week_pct": 4.62,
   "usage_pct": 26.2,
   "work_pct": 68.8,
-  "read_at": "2026-11-16T04:36:00+00:00",
+  "read_at": "2026-11-16T04:39:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -258,42 +258,6 @@
     "n": "Evan",
     "d": 1,
     "src": "plan-a"
-   },
-   {
-    "lane": "a3",
-    "task": "T-4534",
-    "t": "Double-tap a Chat bubble to react, and add fire",
-    "at": "2026-11-15T22:32:46-05:00",
-    "n": "Evan",
-    "d": 1,
-    "src": "plan-a"
-   },
-   {
-    "lane": "a3",
-    "task": "T-3803",
-    "t": "Post the time guard proposal and finish deadline readers",
-    "at": "2026-11-15T22:32:46-05:00",
-    "n": "Evan",
-    "d": 1,
-    "src": "plan-a"
-   },
-   {
-    "lane": "a3",
-    "task": "T-0261",
-    "t": "Apply the chosen store caption wording",
-    "at": "2026-11-15T22:32:46-05:00",
-    "n": "Evan",
-    "d": 1,
-    "src": "plan-a"
-   },
-   {
-    "lane": "a3",
-    "task": "T-3345",
-    "t": "Drop two parked 1.1 Builder tasks",
-    "at": "2026-11-15T22:32:46-05:00",
-    "n": "Evan",
-    "d": 1,
-    "src": "plan-a"
    }
   ]
  },
@@ -331,7 +295,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-15T23:36:00-05:00",
+  "at": "2026-11-15T23:39:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -575,29 +539,37 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-16T04:36:38Z",
+  "at": "2026-11-16T04:39:26Z",
   "s": {
    "T-4278": [
     "merging",
-    "Host checks on the Mac mini \u00b7 1 group of tests done",
-    1794803738460
+    "Host checks on the Mac mini",
+    1794803726854
    ],
    "T-4110": [
     "mergeq",
     "1st to merge",
-    1794803558460
+    1794803546854
    ],
-   "T-0261": [
-    "merged",
-    "on main 11:30 PM ET",
-    1794803433000,
-    ""
+   "T-4534": [
+    "mergeq",
+    "2nd to merge",
+    1794803846854
    ],
    "T-3803": [
-    "merged",
-    "on main 11:12 PM ET",
-    1794802350000,
-    ""
+    "mergeq",
+    "2nd to merge",
+    1794803846854
+   ],
+   "T-0261": [
+    "mergeq",
+    "2nd to merge",
+    1794803846854
+   ],
+   "T-3345": [
+    "mergeq",
+    "2nd to merge",
+    1794803846854
    ],
    "T-4400": [
     "merged",
@@ -605,42 +577,30 @@
     1794802316000,
     ""
    ],
-   "T-4534": [
-    "merged",
-    "on main 11:06 PM ET",
-    1794802004000,
-    ""
-   ],
    "T-4489": [
     "merged",
     "on main 11:06 PM ET",
     1794801991000,
-    ""
-   ],
-   "T-3345": [
-    "merged",
-    "on main 10:37 PM ET",
-    1794800248000,
     ""
    ]
   },
   "nm": {
    "T-4278": "Move notification settings into the info panel",
    "T-4110": "Chart the task queue size on Home",
-   "T-0261": "Apply the chosen store caption wording",
-   "T-3803": "Post the time guard proposal and finish deadline readers",
-   "T-4400": "Find why pace count and meter disagree",
    "T-4534": "Double-tap a Chat bubble to react, and add fire",
-   "T-4489": "Decide if the Simulator erase approval clears old refusals",
-   "T-3345": "Drop two parked 1.1 Builder tasks"
+   "T-3803": "Post the time guard proposal and finish deadline readers",
+   "T-0261": "Apply the chosen store caption wording",
+   "T-3345": "Drop two parked 1.1 Builder tasks",
+   "T-4400": "Find why pace count and meter disagree",
+   "T-4489": "Decide if the Simulator erase approval clears old refusals"
   }
  },
  "ln": {
-  "at": "2026-11-16T04:36:38Z",
+  "at": "2026-11-16T04:39:26Z",
   "mq": {
    "n": {
     "checking": 1,
-    "inline": 1,
+    "inline": 5,
     "conflicted": 1,
     "failed": 0,
     "held": 0,
@@ -648,13 +608,13 @@
     "parked": 2
    },
    "m": {
-    "checking": 1,
-    "inline": 4,
-    "conflicted": 1698,
+    "checking": 4,
+    "inline": 2,
+    "conflicted": 1701,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 927
+    "parked": 930
    },
    "cur": [
     [
@@ -663,7 +623,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     1
+     4
     ]
    ],
    "ld": [
@@ -673,12 +633,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-16T04:36:14Z",
-    "ld": 4.3,
+    "at": "2026-11-16T04:39:27Z",
+    "ld": 3.66,
     "c": 8,
     "sb": 0,
     "dk": [
-     28.1,
+     30.2,
      228.3
     ],
     "ss": [
@@ -718,15 +678,6 @@
    "e": "high",
    "t": "Work session",
    "at": "2026-11-15T22:37:27-05:00"
-  },
-  {
-   "w": "Operator",
-   "a": "Evan",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session",
-   "at": "2026-11-15T22:32:45-05:00"
   }
  ],
  "reply": {
@@ -749,12 +700,12 @@
  ],
  "agents_now": {
   "main": 1,
-  "lanes": 2,
-  "total": 3,
-  "at": "11:36 PM",
+  "lanes": 1,
+  "total": 2,
+  "at": "11:39 PM",
   "why": "",
-  "at_iso": "2026-11-16T04:36:00+00:00",
+  "at_iso": "2026-11-16T04:39:00+00:00",
   "started": "8:30 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 1, started 8:30 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 11:36 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 1, started 8:30 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 11:39 PM ET</p></section>"
  }
 }

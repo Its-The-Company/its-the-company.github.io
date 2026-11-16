@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-16T11:45:08.127175+00:00",
+ "at": "2026-11-16T11:48:14.466282+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -115,19 +115,19 @@
  "meter": {
   "five_hour": {
    "pct": 7.0,
-   "resets_at": "2026-11-16T13:10:00.135352+00:00",
+   "resets_at": "2026-11-16T08:10:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-16T06:40:46.462904-05:00",
-   "source": "usage",
+   "read_at": "2026-11-16T06:47:03.980591-05:00",
+   "source": "live",
    "left": 93.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 20.0,
-   "resets_at": "2026-11-22T07:00:00.135408+00:00",
+   "resets_at": "2026-11-22T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-16T06:40:46.462904-05:00",
-   "source": "usage",
+   "read_at": "2026-11-16T06:47:03.980591-05:00",
+   "source": "live",
    "left": 80.0,
    "left_words": "of your weekly allowance left"
   },
@@ -138,7 +138,7 @@
    "read_at": "2026-11-16T06:40:46.462904-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-16T06:40:46.462904-05:00"
+  "read_at": "2026-11-16T06:47:03.980591-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -158,7 +158,7 @@
   "week_pct": 9.69,
   "usage_pct": 32.6,
   "work_pct": 76.9,
-  "read_at": "2026-11-16T11:45:00+00:00",
+  "read_at": "2026-11-16T11:48:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -442,7 +442,7 @@
   }
  ],
  "disk": {
-  "free_gb": 53,
+  "free_gb": 52,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -451,14 +451,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-16T06:38:00-05:00",
+   "at": "2026-11-16T06:47:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-16T06:45:00-05:00",
+  "at": "2026-11-16T06:48:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -665,97 +665,97 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-16T11:44:53Z",
+  "at": "2026-11-16T11:48:14Z",
   "s": {
    "T-4558": [
     "merging",
     "",
-    1794828953559
+    1794828974466
    ],
    "T-4529": [
     "mergeq",
     "",
-    1794829313559
+    1794829274466
    ],
    "T-3970": [
     "mergeq",
     "",
-    1794828593559
+    1794828614466
    ],
-   "T-3745": [
+   "T-2691": [
     "testing",
     "",
     null
    ],
-   "T-4256": [
+   "T-3764": [
     "testing",
     "",
     null
    ],
-   "T-4433": [
+   "T-3765": [
     "testing",
     "",
     null
-   ],
-   "T-4435": [
-    "testing",
-    "",
-    null
-   ],
-   "T-3552": [
-    "testq",
-    "",
-    1794828413559
-   ],
-   "T-4020": [
-    "testq",
-    "",
-    1794828413559
-   ],
-   "T-4022": [
-    "testq",
-    "",
-    1794828413559
    ],
    "T-4506": [
     "testq",
     "",
-    1794828713559
+    1794828734466
    ],
    "T-4554": [
     "testq",
     "",
-    1794828713559
+    1794828734466
    ],
    "T-4555": [
     "testq",
     "",
-    1794828713559
+    1794828734466
    ],
    "T-4564": [
     "testq",
     "",
-    1794828713559
+    1794828734466
    ],
    "T-4565": [
     "testq",
     "",
-    1794828713559
+    1794828734466
    ],
-   "T-3765": [
+   "T-3745": [
     "testq",
     "",
-    1794829013559
+    1794829094466
    ],
-   "T-2691": [
+   "T-4256": [
     "testq",
     "",
-    1794829433559
+    1794829094466
    ],
-   "T-3764": [
+   "T-4433": [
     "testq",
     "",
-    1794829433559
+    1794829094466
+   ],
+   "T-4435": [
+    "testq",
+    "",
+    1794829094466
+   ],
+   "T-3552": [
+    "testq",
+    "",
+    1794829574466
+   ],
+   "T-4020": [
+    "testq",
+    "",
+    1794829574466
+   ],
+   "T-4022": [
+    "testq",
+    "",
+    1794829574466
    ],
    "T-4297": [
     "merged",
@@ -774,6 +774,14 @@
    "T-4558": "Choose which premades get buttons",
    "T-4529": "Give Home the dispatcher's real start order",
    "T-3970": "Check finished work before it ships",
+   "T-2691": "Check every archive for the phone test marker, Organizer too",
+   "T-3764": "Make the iPad window test fail without the fix",
+   "T-3765": "Check a real widget tap on the TestFlight build",
+   "T-4506": "Site suites that fail only in worker copies",
+   "T-4554": "One state commit per widget across app and widget",
+   "T-4555": "Draw the When tapped setting",
+   "T-4564": "Run a button's action and redraw in one run",
+   "T-4565": "Send button actions from Swift, schema names checked",
    "T-3745": "Stop the Pro store test timing out",
    "T-4256": "Lighten the marks and colour their line numbers",
    "T-4433": "Confirm the Lock Screen refresh tap first",
@@ -781,14 +789,6 @@
    "T-3552": "Test gallery and widget runs together with a stalled sensor",
    "T-4020": "Check finished work before it ships",
    "T-4022": "Check finished work before it ships",
-   "T-4506": "Site suites that fail only in worker copies",
-   "T-4554": "One state commit per widget across app and widget",
-   "T-4555": "Draw the When tapped setting",
-   "T-4564": "Run a button's action and redraw in one run",
-   "T-4565": "Send button actions from Swift, schema names checked",
-   "T-3765": "Check a real widget tap on the TestFlight build",
-   "T-2691": "Check every archive for the phone test marker, Organizer too",
-   "T-3764": "Make the iPad window test fail without the fix",
    "T-4297": "Personal account stopped and its work parked",
    "T-4276": "Run Evan's account on the audit without the pause"
   },
@@ -796,6 +796,14 @@
    "T-4558": "Maren",
    "T-4529": "Odalys",
    "T-3970": "Pernille",
+   "T-2691": "Idris",
+   "T-3764": "Idris",
+   "T-3765": "Idris",
+   "T-4506": "Odalys",
+   "T-4554": "Idris",
+   "T-4555": "Maren",
+   "T-4564": "Pernille",
+   "T-4565": "Pernille",
    "T-3745": "Idris",
    "T-4256": "Idris",
    "T-4433": "Idris",
@@ -803,20 +811,12 @@
    "T-3552": "Idris",
    "T-4020": "Pernille",
    "T-4022": "Pernille",
-   "T-4506": "Odalys",
-   "T-4554": "Idris",
-   "T-4555": "Maren",
-   "T-4564": "Pernille",
-   "T-4565": "Pernille",
-   "T-3765": "Idris",
-   "T-2691": "Idris",
-   "T-3764": "Idris",
    "T-4297": "Ines",
    "T-4276": "Operator"
   }
  },
  "ln": {
-  "at": "2026-11-16T11:44:53Z",
+  "at": "2026-11-16T11:48:14Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -828,13 +828,13 @@
     "parked": 9
    },
    "m": {
-    "checking": 9,
-    "inline": 9,
-    "conflicted": 2126,
+    "checking": 12,
+    "inline": 12,
+    "conflicted": 2130,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 196
+    "parked": 199
    },
    "cur": [
     [
@@ -843,7 +843,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     9
+     12
     ]
    ],
    "ld": [
@@ -853,12 +853,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-16T11:45:00Z",
-    "ld": 48.01,
+    "at": "2026-11-16T11:47:48Z",
+    "ld": 53.4,
     "c": 8,
-    "sb": 1,
+    "sb": 2,
     "dk": [
-     52.5,
+     51.7,
      228.3
     ],
     "ss": [
@@ -866,16 +866,17 @@
      953.7
     ],
     "sn": [
-     "iPhone 17e"
+     "pywidget-wk-check",
+     "T3764 iPad"
     ]
    },
    "macbook": {
-    "at": "2026-11-16T11:35:47Z",
-    "ld": 0.22,
+    "at": "2026-11-16T11:43:47Z",
+    "ld": 1.32,
     "c": 12,
     "sb": 0,
     "dk": [
-     335.9,
+     335.6,
      926.4
     ],
     "sn": []
@@ -966,10 +967,10 @@
   "main": 0,
   "lanes": 6,
   "total": 6,
-  "at": "6:45 AM",
+  "at": "6:48 AM",
   "why": "",
-  "at_iso": "2026-11-16T11:45:00+00:00",
+  "at_iso": "2026-11-16T11:48:00+00:00",
   "started": "6:41 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 0, started 6:41 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 6 sessions \u00b7 as of 6:45 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 0, started 6:41 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 6 sessions \u00b7 as of 6:48 AM ET</p></section>"
  }
 }

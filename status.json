@@ -1,11 +1,23 @@
 {
  "schema": 1,
- "at": "2026-11-16T10:51:41.191684+00:00",
+ "at": "2026-11-16T10:58:20.663133+00:00",
  "session": {
-  "active": true,
-  "kind": "work",
-  "started": "2026-11-16T04:43:12-05:00",
-  "flow": [],
+  "active": false,
+  "kind": "",
+  "started": null,
+  "flow": [
+   {
+    "t": "T-0972",
+    "name": "Decide how a script's refresh path is chosen on send",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "testq",
+      "at": 1794826420
+     }
+    ]
+   }
+  ],
   "done": [
    {
     "t": "T-3552",
@@ -175,13 +187,39 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": null,
+ "next_tick": "2026-11-16T04:57:54-05:00",
  "personal": {
   "week_pct": 9.1,
-  "usage_pct": 32.4,
-  "work_pct": 76.5,
-  "read_at": "2026-11-16T10:51:00+00:00",
-  "running": []
+  "usage_pct": 31.8,
+  "work_pct": 74.3,
+  "read_at": "2026-11-16T10:59:00+00:00",
+  "running": [
+   {
+    "lane": "a",
+    "task": "T-4475",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Land a lane's queued records without commits of their own",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-16T05:53:17-05:00",
+    "n": "Evan",
+    "d": 1,
+    "src": "plan-a"
+   },
+   {
+    "lane": "a2",
+    "task": "T-4506",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Site suites that fail only in worker copies",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-16T05:53:17-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   }
+  ]
  },
  "api_credits": [
   {
@@ -217,7 +255,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-16T05:51:00-05:00",
+  "at": "2026-11-16T05:59:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -225,13 +263,9 @@
    "b": "double-spread"
   }
  },
- "next_tick_why": "session",
+ "next_tick_why": "last_tick",
  "idle": null,
- "pool": {
-  "why": "Double Spread: 81% of the week left, paced to last until Wed 14:00, the week's halfway point; the machine allows 3 (raised a step toward the floor of 8: new work may start and every signal is...",
-  "n": 3,
-  "at": "2026-11-16T04:42:54.154987-05:00"
- },
+ "pool": null,
  "lanes": [
   {
    "name": "Idris",
@@ -284,7 +318,6 @@
  ],
  "tasks": {
   "run": [],
-  "src": "plan",
   "open": [
    {
     "w": "Idris",
@@ -379,15 +412,6 @@
    "wait": 34,
    "blocked": 42,
    "you": 12
-  },
-  "fin": {
-   "n": 1,
-   "rows": [
-    [
-     "T-4293",
-     "Show skipped and brief..."
-    ]
-   ]
   }
  },
  "qr": [
@@ -429,44 +453,67 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-16T10:51:41Z",
+  "at": "2026-11-16T10:58:20Z",
   "s": {
-   "T-0687": [
+   "T-0972": [
+    "merging",
+    "Host checks on the Mac mini",
+    1794826460663
+   ],
+   "T-3552": [
     "mergetest",
-    "iPhone tests on the MacBook",
-    null
+    "Xcode checks on the MacBook, 1st to merge",
+    1794826460663
    ]
   },
   "nm": {
-   "T-0687": "Run network fetches inside the extension on the Simulator"
+   "T-0972": "Decide how a script's refresh path is chosen on send",
+   "T-3552": "Test gallery and widget runs together with a stalled sensor"
   },
   "wk": {
-   "T-0687": "Idris",
-   "T-4293": "Maren"
+   "T-0972": "Idris",
+   "T-3552": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-16T10:51:41Z",
+  "at": "2026-11-16T10:58:20Z",
   "mq": {
    "n": {
-    "checking": 0,
+    "checking": 2,
     "inline": 0,
-    "conflicted": 2,
+    "conflicted": 1,
     "failed": 0,
     "held": 0,
-    "retry": 1,
+    "retry": 0,
     "parked": 8
    },
    "m": {
-    "checking": null,
+    "checking": 4,
     "inline": null,
-    "conflicted": 1051,
+    "conflicted": 2080,
     "failed": null,
     "held": null,
-    "retry": 143,
-    "parked": 173
+    "retry": null,
+    "parked": 179
    },
-   "cur": [],
+   "cur": [
+    [
+     [
+      "T-0972"
+     ],
+     "Mac tests",
+     "Mac mini",
+     4
+    ],
+    [
+     [
+      "T-3552"
+     ],
+     "iPhone app tests, sent and waiting its turn",
+     "MacBook",
+     4
+    ]
+   ],
    "ld": [
     16,
     "2026-11-16T10:49:45Z"
@@ -474,12 +521,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-16T10:51:19Z",
-    "ld": 3.12,
+    "at": "2026-11-16T10:58:21Z",
+    "ld": 1.43,
     "c": 8,
     "sb": 0,
     "dk": [
-     54.6,
+     56.0,
      228.3
     ],
     "ss": [
@@ -489,12 +536,12 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-16T10:41:50Z",
-    "ld": 12.19,
+    "at": "2026-11-16T10:49:21Z",
+    "ld": 3.68,
     "c": 12,
     "sb": 0,
     "dk": [
-     350.9,
+     334.7,
      926.4
     ],
     "sn": []
@@ -504,12 +551,21 @@
  "operators": [
   {
    "w": "Operator",
-   "a": "Main plan",
+   "a": "Evan",
    "sr": 1,
    "m": "opus",
    "e": "high",
    "t": "Work session \u2013 1 task",
-   "at": "2026-11-16T04:43:12-05:00"
+   "at": "2026-11-16T05:53:17-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Evan",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session \u2013 1 task",
+   "at": "2026-11-16T05:53:17-05:00"
   }
  ],
  "reply": {
@@ -521,7 +577,6 @@
   "lane_next",
   "queue_text",
   "task_done",
-  "fin_short",
   "task_title",
   "done_text",
   "task_open",
@@ -530,12 +585,12 @@
  ],
  "agents_now": {
   "main": 0,
-  "lanes": 0,
-  "total": 0,
-  "at": "5:51 AM",
-  "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
-  "at_iso": "2026-11-16T10:51:00+00:00",
-  "started": "4:43 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0, started 4:43 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 5:51 AM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
+  "lanes": 2,
+  "total": 2,
+  "at": "5:59 AM",
+  "why": "",
+  "at_iso": "2026-11-16T10:59:00+00:00",
+  "started": "",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 5:59 AM ET</p></section>"
  }
 }

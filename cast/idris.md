@@ -33,7 +33,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 ## Open (mine)
 
-- T-4270 11-13: build 6 uploaded 8:37 PM ET (ledger 1902fe5e84), card #306 (phone check), ticked 9914ab1bd0. Open: What to Test text not set in App Store Connect (signed-in, Investors); #306 answer. Lesson: main gets recut, check is-ancestor on origin/main. Gate Release build needs PW_INTERNAL_TESTFLIGHT=YES CODE_SIGNING_ALLOWED=NO.
+- T-2943 11-16: build 7 (bump landed via main_gate), gate --test then --testflight from a clean clone of origin/main. Open: Investors read 'internal only' in App Store Connect (card), then tick; T-4270 What to Test text + #306 answer still theirs. Lesson: scratch.py worktree refuses when $D/wt is a stray clone: look, move aside, never delete <span title="A second worker who grades the idea without seeing the first worker&#x27;s grades, and records them first.">blind</span>. Main gets recut: check is-ancestor on origin/main; gate Release build needs PW_INTERNAL_TESTFLIGHT=YES CODE_SIGNING_ALLOWED=NO.
 
 - T-2261 11-13 17393d231c: problems element + UI test (local 2/0 only), shots t2261/; review T-4252 Pernille. Open: Maren, runner run of the UI test. Lesson: the bundle's own names come from a C embedder (sim clang, -framework Python) run by simctl spawn, PYTHONPATH = lib/python3.15 + lib-arm64; land jobs run unit tests only.
 
@@ -51,6 +51,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-4282 11-15 cdfacacc4c: ladder1-7 + manifest <span title="Our grade scale, nine steps: D, D+, C-, C, C+, B-, B, B+, A. An idea&#x27;s ladder is the letter it reaches before any cap.">ladder</span>; T-4536 asks phones after T-2943. Open: land, gate compile (xc 75), export read, <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span> facts for Ines. Lesson: 24 MiB < 25.2 MB free; MiB, not MB.
 - T-4542 11-15: ADR-011 accepted 10:05 PM after Pernille re-read + Maren review (run.lock separate from state.lock; v matched across tree.json entries x families; notice no timer; 44 pt targets). Open: both confirm (board note 10:04 PM), then tick. Lesson: before naming a lock for a long hold, grep its callers' waits; a short-hold lock can't double as a run lock.
 - T-3281 11-16: gate_session_build.sh --test (XC_LOCAL=1: xc_route sends a test with KEY=VALUE to the runner, which drops it: false green). 12/0, shot t3281/. Open: shot catches the share sheet mid-present (dim, no sheet); xc_route should keep such tests local.
+- T-3552 11-16 106de8a7d0: preview budget whole at dequeue, queue limit 10 s; ticked. Open: review. Lesson: another task's uncommitted file that won't compile reds every local test: test in a detached worktree copy with only my diff.
 {% endraw %}
 
 

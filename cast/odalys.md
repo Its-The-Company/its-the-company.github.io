@@ -59,6 +59,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-4278 bb4548b71f (11-15): bell gone; notif switch in "i" panel; notice only on About. Owed: T-4563 (composer_test red at HEAD).
 - zsh: $F with paths does not split; use an array, or git diff sees one path and gives 0 hunks.
 - scratch.py worktree can hand back an old copy (11-16: 11-11 HEAD). Check HEAD before applying.
+- T-4460+T-3684 5817998dd3 (11-16): sweep test pass (3 h, one listing) + tests/temp_clean.py. Owed: first live run's 'test temp pass' line; 7-day count. + site_t3219 cleanup owed after T-4455
 {% endraw %}
 
 

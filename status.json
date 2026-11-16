@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-16T15:59:46.432621+00:00",
+ "at": "2026-11-16T16:02:49.367652+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -14,6 +14,17 @@
      {
       "s": "landing",
       "at": 1794840802
+     }
+    ]
+   },
+   {
+    "t": "T-4315",
+    "name": "Start a lane's next session without the wait",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "testq",
+      "at": 1794844860
      }
     ]
    }
@@ -112,7 +123,7 @@
    "task": "[tools] T-4583 feature step ticking",
    "model": "opus",
    "started": "2026-11-16T15:55:21.544Z",
-   "seconds": 264,
+   "seconds": 447,
    "finished": null,
    "effort": "high"
   }
@@ -180,7 +191,7 @@
   "week_pct": 15.51,
   "usage_pct": 42.5,
   "work_pct": 69.1,
-  "read_at": "2026-11-16T15:59:00+00:00",
+  "read_at": "2026-11-16T16:02:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -217,7 +228,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-16T10:59:00-05:00",
+  "at": "2026-11-16T11:02:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -436,50 +447,87 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-16T15:59:27Z",
+  "at": "2026-11-16T16:02:43Z",
   "s": {
+   "T-4315": [
+    "merging",
+    "Host checks on the Mac mini \u00b7 1 group of tests done",
+    1794844903659
+   ],
    "T-3764": [
     "mergeq",
     "1st to merge",
-    1794837687464
+    1794837703659
    ],
-   "T-4315": [
+   "T-4295": [
     "mergeq",
     "2nd to merge",
-    1794841047464
+    1794844903659
+   ],
+   "T-2943": [
+    "mergeq",
+    "2nd to merge",
+    1794844903659
+   ],
+   "T-4191": [
+    "mergeq",
+    "2nd to merge",
+    1794844903659
+   ],
+   "T-4583": [
+    "testing",
+    "its own tests, in its copy",
+    1794844843659
    ]
   },
   "nm": {
+   "T-4315": "Start a lane's next session without the wait",
    "T-3764": "Make the iPad window test fail without the fix",
-   "T-4315": "Start a lane's next session without the wait"
+   "T-4295": "Let Chat messages pick model, effort and account",
+   "T-2943": "Send up the gate build and confirm it stays internal",
+   "T-4191": "VoiceOver and large text work on every screen",
+   "T-4583": "Turn on Feature mode and tick steps at the merge"
   },
   "wk": {
+   "T-4315": "Odalys",
    "T-3764": "Idris",
-   "T-4315": "Odalys"
+   "T-4295": "Odalys",
+   "T-2943": "Idris",
+   "T-4191": "Idris",
+   "T-4583": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-16T15:59:27Z",
+  "at": "2026-11-16T16:02:43Z",
   "mq": {
    "n": {
-    "checking": 0,
-    "inline": 2,
-    "conflicted": 4,
+    "checking": 1,
+    "inline": 4,
+    "conflicted": 1,
     "failed": 0,
     "held": 0,
-    "retry": 2,
+    "retry": 0,
     "parked": 9
    },
    "m": {
-    "checking": null,
-    "inline": 90,
-    "conflicted": 6,
+    "checking": 1,
+    "inline": 1,
+    "conflicted": 2384,
     "failed": null,
     "held": null,
-    "retry": 6,
-    "parked": 451
+    "retry": null,
+    "parked": 454
    },
-   "cur": [],
+   "cur": [
+    [
+     [
+      "T-4315"
+     ],
+     "Mac tests",
+     "Mac mini",
+     1
+    ]
+   ],
    "ld": [
     37,
     "2026-11-16T15:54:02Z"
@@ -487,12 +535,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-16T15:58:38Z",
-    "ld": 1.54,
+    "at": "2026-11-16T16:02:19Z",
+    "ld": 1.85,
     "c": 8,
     "sb": 0,
     "dk": [
-     50.6,
+     50.5,
      228.3
     ],
     "ss": [
@@ -502,12 +550,12 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-16T15:24:07Z",
-    "ld": 0.98,
+    "at": "2026-11-16T15:54:43Z",
+    "ld": 0.18,
     "c": 12,
     "sb": 0,
     "dk": [
-     332.9,
+     332.8,
      926.4
     ],
     "sn": []
@@ -544,10 +592,10 @@
   "main": 1,
   "lanes": 0,
   "total": 1,
-  "at": "10:59 AM",
+  "at": "11:02 AM",
   "why": "",
-  "at_iso": "2026-11-16T15:59:00+00:00",
+  "at_iso": "2026-11-16T16:02:00+00:00",
   "started": "10:53 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 10:53 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 10:59 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 10:53 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 11:02 AM ET</p></section>"
  }
 }

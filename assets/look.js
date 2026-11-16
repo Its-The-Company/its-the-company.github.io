@@ -313,14 +313,29 @@ if(here==='merged')been.waiting_to_merge=been.mac_tests=1;if(x.s!=='testing'&&([
 if(here==='sim_queue')been.mac_tests=1;if(here==='iphone_tests'||been.iphone_tests)been.sim_queue=1;
 // c6797836020: a step the task does not need is blank in its own column (home_look col_cells, needs_sim); T-4094: the
 // Retry Queue is lit only for a task waiting in it now
-return CK.map(function(k){var v=k===here?'now':been[k]&&k!=='sent_back'?'was':'';return v===''&&(k==='sent_back'||((k==='sim_queue'||k==='iphone_tests')&&sim(x)===false))?'skip':v})}
+// T-4293: the records' marks for the stages behind it (psm) over the inferred ones: brief faint, arrow skipped
+var M=psm(x);return CK.map(function(k){var v=k===here?'now':been[k]&&k!=='sent_back'?'was':'',m=M[k];if(v===''&&k==='sent_back')return 'skip';
+if(m&&v!=='now')v={d:'was',b:'brief',s:'arrow'}[m[0]]||'';return v})}
+// T-4293 (friesevan #41 c6860226572): the build's marks (home_look add_passes, x.p) for the columns behind the card's
+// stage now, and the Simulator's two for work the board files outside App anywhere on the track (home_look pass_marks)
+var PSC=['waiting_to_merge','mac_tests','sim_queue','iphone_tests'],WHYS={"short": "{L}: passed through in {s}, less than the {g} s between two of Home's live readings, so the page may never have shown it.", "short_own": "{L}: passed through in {s}, less than the {g} s between two of Home's live readings, so the page may never have shown it. No test run of its own on the MacBook is on record before hand-in.", "lane": "{L}: passed through between two readings. Its land shows it was marked ready and took its turn, but no reading of the record caught it waiting.", "turn": "{L}: passed through between two readings. Its iPhone check ran, so it had its turn for a Simulator, but no reading of the record caught it waiting.", "main": "{L}: did not apply. Main-session work lands straight through the gate, which has no Merge Queue; a wait for the gate's turn shows here while it lasts and is not recorded.", "own": "{L}: skipped. It sent no test run of its own to the MacBook before hand-in, and no test run at its merge is on record.", "noxc": "{L}: did not apply. Its change touches no app code, so its merge ran no iPhone check.", "cat": "{L}: does not apply. The board files it under {c}, not App, and work outside the app gets no iPhone check.", "none": "{L}: not on record, and no record says why."},BRS=20;
+function psm(x){var here=COL[x.s],o={},i=PSC.indexOf(here),p=x.p||{};
+PSC.forEach(function(k,j){var m=p[k];if(m&&m[1]==='cat'){if(k!==here)o[k]=m}else if(m&&x.s!=='parked'&&(here==='merged'||(i>j&&x.s!=='testing')))o[k]=m});
+if(sim(x)===false)['sim_queue','iphone_tests'].forEach(function(k){if(k!==here&&!o[k])o[k]=['s','cat']});return o}
+// one plain line a stage passed quickly or skipped, neighbours with the same reason on one line (home_look why_lines)
+function andw(a){return a.length>1?a.slice(0,-1).join(', ')+' and '+a[a.length-1]:a[0]}
+function whys(x){var M=psm(x),o=[],l=null;CK.forEach(function(k){var m=M[k];if(!m||m[0]==='d'){l=null;return}
+if(l&&l[0]===m[0]&&l[1]===m[1]&&l[2]===m[2]){o[o.length-1][0].push(CL[k]);return}o.push([[CL[k]],m]);l=m});
+return o.map(function(a){var m=a[1],s=m[2];return String(WHYS[m[1]]||'').replace('{L}',andw(a[0])).replace('{s}',s==null?'':s<1?'under a second':s+' s').replace('{g}',BRS).replace('{c}',String(x.c||'').split(' \u00b7 ')[0]||'another category')})}
 function sim(x){if(x.x)return true;var c=String(x.c||'');return c?c.indexOf('App')===0:null}
 function track(c,x){var here=COL[x.s],t=mk(c,'span','ts-trk'),wd=[],nx=[];t.setAttribute('aria-hidden','true');
-cells(x).forEach(function(v){var i=mk(t,'i');if(v==='now')i.className=MK[here]||'a';else if(v==='was')i.className='d';else if(v==='skip')i.className='o'});
+var cs=cells(x);cs.forEach(function(v,j){var i=mk(t,'i');if(v==='now')i.className=MK[here]||'a';else if(v==='was')i.className='d';else if(v==='brief')i.className='b';
+else if(v==='arrow')i.className=cs[j+1]==='arrow'?'s':'s e';else if(v==='skip')i.className='o'});
 steps(x).forEach(function(h,j){var w=[h[1]==null?'':h[1]<1?'<1 min':mins(h[1]),h[3]].filter(Boolean).join(' · ');
 if(h[2].charAt(0)==='n')nx.push([CK.indexOf(COL[h[0]]),j,(h[2]==='n r'?'back to ':'')+HW[h[0]]]);else wd.push((h[2].indexOf('lb')>=0?'back to ':'')+HW[h[0]]+(w?' '+w:''))});
 nx.sort(function(a,b){return a[0]-b[0]||a[1]-b[1]});
-mk(c,'p','lk-hw meta',wd.join(' → ')+(nx.length?'; next: '+nx.map(function(n){return n[2]}).join(', '):''));if(x.b)mk(c,'p','lk-hw meta',x.b)}
+mk(c,'p','lk-hw meta',wd.join(' → ')+(nx.length?'; next: '+nx.map(function(n){return n[2]}).join(', '):''));
+whys(x).forEach(function(w){mk(c,'p','lk-hw meta lk-why',w)});if(x.b)mk(c,'p','lk-hw meta',x.b)}
 // T-4094 (c6804999684): beside the worker, the model and effort only in Building; any other stage says its own fact
 // (home_look fact()); an open card past Building names its build's worker, model and effort (past_html)
 function fact(x){return COL[x.s]==='being_built'?lv(x):x.s==='parked'?(x.f||''):(x.f||x.n||'')}
@@ -395,7 +410,7 @@ function mgs(st,u,LS,now){var d=(st.session||{}).active?(st.tasks||{}).fin:null,
 o.forEach(function(x){sn[x.id||x.t]=1});ME=d?Math.max(0,(+d.n||0)-(d.rows||[]).length):0;
 (d&&d.rows||[]).forEach(function(a){var id=String(a&&a[0]||''),b,v,m=-1;if(!id||sn[id])return;sn[id]=1;b=IN[id]||{};v=LS&&LS[id];
 if(v&&v[0]==='merged'&&v[2])m=Math.max(0,Math.round((now-v[2])/6e4));else if(b.s==='merged'&&b.min>=0)m=b.min+Math.max(0,Math.round((now-(L.at||now))/6e4));
-o.push({id:id,t:nm(a[1])||nm((L.nm||{})[id])||snm(st,id)||b.t||'Name not recorded',w:b.w||['worker not recorded'],m:b.m||'model not recorded',e:b.e||'',min:m,s:'merged',n:'',h:b.h||[],x:b.x,c:b.c||CT[id]||'',ps:b.ps||''})});
+o.push({id:id,t:nm(a[1])||nm((L.nm||{})[id])||snm(st,id)||b.t||'Name not recorded',w:b.w||['worker not recorded'],m:b.m||'model not recorded',e:b.e||'',min:m,s:'merged',n:'',h:b.h||[],x:b.x,p:b.p,c:b.c||CT[id]||'',ps:b.ps||''})});
 return o}
 // T-4095 (friesevan #41 c6809316957): the status's stg, the live stages (live_stage.py, read every minute with the same rule
 // as the build, home_look stage_map), wins over the build's L.st once it is newer than the build; a stage it reads that
@@ -411,10 +426,10 @@ function sg(LS,id,r){var s=LS&&LS[id]||null,b=(L.st||{})[id],a;if(!s&&b&&!(LS&&L
 function draw(st,isPub){var ml=S.lane.main(st,isPub),l=ml.concat(S.lane.rows(st)),seen={},u=[],now=Date.now(),o={},wk,ms=sw((st.tasks||{}).src),LS=lv0(st);
 l.forEach(function(r){var t=String(r.t||r.task||''),id=r.task||(t.match(/\bT-\d+/)||[''])[0],k=id||nm(t),s=sg(LS,id,r),m,b=IN[id]||{},ln=/^([ab])\d*$/.exec(r.lane||''),mn=ml.indexOf(r)>=0,rs=mn?ms:sw(r.src||(ln?'plan-'+ln[1]:''),r.n);if(s&&s[0]==='parked'&&r.at&&Date.parse(r.at)>s[2])s=[r.k==='review'?'review':'coding','Fix after a failed merge'];if(!s&&r.d)s=[r.k==='review'?'review':'coding',HN];if(r.w&&!r.d)o[String(r.w).toLowerCase()]=1;if(!k||seen[k])return;seen[k]=1;
 m=r.at?Math.round((now-Date.parse(r.at))/6e4):NaN;u.push({id:id,t:nm(r.t||r.task)||nm((L.nm||{})[id])||snm(st,id)||'Name not recorded',w:[r.w||(b.w||[])[0]||'worker not recorded'],m:r.m||b.m||'model not recorded',e:r.e&&r.m?r.e:r.m?'':b.e||'',min:m>=0?m:-1,s:s?s[0]:r.k==='review'?'review':'coding',n:s?s[1]:'',
-a:rs||(mn?'Main':ln?'Account '+ln[1].toUpperCase():''),sr:rs?1:0,h:b.h,x:b.x,c:b.c||CT[id]||'',g:b.g||'',y:b.y||0,ps:b.ps||''})});
+a:rs||(mn?'Main':ln?'Account '+ln[1].toUpperCase():''),sr:rs?1:0,h:b.h,x:b.x,p:b.p,c:b.c||CT[id]||'',g:b.g||'',y:b.y||0,ps:b.ps||''})});
 (L.init||[]).forEach(function(x){var v;if(x.s==='coding'||x.s==='review'||seen[x.id||x.t])return;if(LS&&x.id&&LK[x.s]){v=LS[x.id];if(!v||v[0]==='merged')return;x=Object.assign({},x,{s:v[0],n:v[1]})}if(x.id&&/^Name not recorded/i.test(x.t||'')&&snm(st,x.id))x=Object.assign({},x,{t:snm(st,x.id)});seen[x.id||x.t]=1;u.push(x)});  // T-3284 item 3
 if(LS)Object.keys(LS).forEach(function(id){var v=LS[id],b=IN[id]||{};if(seen[id]||v[0]==='merged')return;seen[id]=1;  // T-4095: a stage the build had not seen
-u.push({id:id,t:nm((L.nm||{})[id])||snm(st,id)||'Name not recorded',w:b.w||['worker not recorded'],m:b.m||'model not recorded',e:b.e||'',min:v[2]?Math.max(0,Math.round((now-v[2])/6e4)):-1,s:v[0],n:v[1],h:b.h,x:b.x,c:b.c||CT[id]||'',g:b.g||'',y:b.y||0,ps:b.ps||''})});
+u.push({id:id,t:nm((L.nm||{})[id])||snm(st,id)||'Name not recorded',w:b.w||['worker not recorded'],m:b.m||'model not recorded',e:b.e||'',min:v[2]?Math.max(0,Math.round((now-v[2])/6e4)):-1,s:v[0],n:v[1],h:b.h,x:b.x,p:b.p,c:b.c||CT[id]||'',g:b.g||'',y:b.y||0,ps:b.ps||''})});
 MG=mgs(st,u,LS,now);items=u.filter(function(x){return x.s!=='merged'});if(K3&&K3.requeue)K3.requeue();render();wk=document.getElementById('lk-working');if(wk)wk.textContent=Object.keys(o).length+' working';idle(st)}
 // T-3316: a tree's link to an In flight card shows the whole list, then hands back the card
 // T-4313: and to a Merged card, in its own box (go() opens its part)

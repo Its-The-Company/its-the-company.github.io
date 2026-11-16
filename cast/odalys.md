@@ -41,7 +41,6 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 - T-4314 fcb1782366 (11-13 23:1x): personal_stream_shape.py cost + T-4124 sums. Tick lines = patch in company-scratch/T-4314-odalys (audit owner; reviewer Pernille). Owed: first real 'session: cost:' line, then tick.
 
-- T-4411 (11-14 00:1x): dispatch.py patch in company-scratch/T-4411-odalys/T-4411-dispatch.patch, handed by note on T-4092 (audit-owned). Owed: after it lands, dispatch.log shows an audit line dealt within one tick of a 5-hour reset; then tick T-4411.
 
 - T-4446 slice 1 (11-14): tools/records_round.py, one records commit per 900 s (full note in archive.md); rest T-4457. Owed: 7-day count <= 672 and wait lines not up; then tick.
 
@@ -55,8 +54,10 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 - T-4473/T-4448/T-4449 (11-15): queue check v1, dry run, Ines's 5 fixes (e831be688e), 2nd dry run all hold (5a3a0c6b43), switched on: act_alone wait_met_issue, feature_fits. Fix 2 cut replay recall 413->154 of 446 (for Ines). Owed: daily caller = revised pipeline patch, note on T-3992 (--as-switch); owner parse fix before rows go to owners; my noted copies T-4411, T-3150, T-3859, T-1248, T-3593.
 - T-4419/T-4490 closed 11-15 (OPT-100, -110, -092 no_effect; OPT-119 kept). Owed: T-4531 (keep or revert the ledger merge driver).
+- T-4508 81212e12e5 (11-15): tools/land_refusal_alarm.py via idle_alarm. Owed: tick after land; 11-13 1:35 PM <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">ruling</span> (c6861701678) only on <span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">parked</span>/a2.
 
 ## Lessons
+- A personal tick's stale-reading hold <span title="A new, permitted reading that removes a cap. A lift rule is that reading, written down before we look.">lifts</span> only at the reading's named reset (reset_passed): the tick before and the tick after bound a reset that no file records (T-4411, ticked 11-15 ebd4a529e4).
 - Before a ledger 'Read H:MM', run `date`; I wrote 2:3x for a 2:1x read (fixed before T-4490 landed).
 {% endraw %}
 

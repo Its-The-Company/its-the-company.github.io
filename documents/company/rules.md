@@ -660,6 +660,8 @@ The Effect lines of the amendments.md entries the charter retired (2026-11-04 12
 - **2026-11-15 8:55 AM ET** ((private)): The company may quit apps it opened itself on the Mac mini, through one tool that keeps a record of what it opened, never an app an Investor opened; the allow rule goes in through the applier.
 - **2026-11-15 9:00 AM ET** ((private)): A reply that names the message it answers says whose it is by first name, e.g. "Answering Jeremy's 8:55 AM ET message" or "Answering Evan's ...", never "Answering your ..."; the rest of the line stays the same.
 - **2026-11-15 11:32 AM ET** ((private)): Option B of lane a's card c6895930080 (an Investor c6896901345 asked for B if the board is not expected to drift back): the queue check is switched on as it is once its dry run passes (T-4448, T-4449), the audit report is posted (T-4105) and the Set aside fix finishes (T-4129); the measurement lines T-4472, T-4451 (daily model read), T-4314, T-4315 and T-4459 leave the audit-first list and go behind app work.
+- **2026-11-15 5:24 PM ET** ((private)): When the Mac mini's internal disk is under 20 GB free, the company cleans it instead of pausing work; a cleaning of the internal disk now (board line T-4537 for Odalys).
+- **2026-11-15 5:48 PM ET** ((private)): Every account (main, a, b) should be taking work while work may start; an idle account is a fault to fix at once, and sessions use more agents when runnable work is there.
 {% endraw %}
 
 </div>

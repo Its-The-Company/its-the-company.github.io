@@ -33,12 +33,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 ## Open (mine)
 
-- T-4008 11-10 0dc00ac09b: Ask to Buy red = StoreKit test env lists a verified purchase for a deferred request; test skips with facts. Rerun line off after a clean week (xc_rerun.jsonl).
-- Lesson T-4008: main unpushed? push land/idris-<task> whose tip adds the job files; empty pin commits dodge "already queued".
-
 - T-4270 11-13: build 6 uploaded 8:37 PM ET (ledger 1902fe5e84), card #306 (phone check), ticked 9914ab1bd0. Open: What to Test text not set in App Store Connect (signed-in, Investors); #306 answer. Lesson: main gets recut, check is-ancestor on origin/main. Gate Release build needs PW_INTERNAL_TESTFLIGHT=YES CODE_SIGNING_ALLOWED=NO.
-
-- T-3764 11-12: stopped, no code. Runner {SIM} is always an iPhone (runner.py simulator()); every .pad UI test skips there. iPad proof needs a runner change first (line noted).
 
 - T-2261 11-13 17393d231c: problems element + UI test (local 2/0 only), shots t2261/; review T-4252 Pernille. Open: Maren, runner run of the UI test. Lesson: the bundle's own names come from a C embedder (sim clang, -framework Python) run by simctl spawn, PYTHONPATH = lib/python3.15 + lib-arm64; land jobs run unit tests only.
 
@@ -59,6 +54,9 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-4532 11-15: reviewed Pernille's H1 lock (SHIP, 4 Lows: t4468-lock-idris.md); Swift write under flock on premade.json.lock, .page- temp. Open: L1 (save raises on OSError) + L2 (no fsync, both) to Pernille; s2.3.2 before App Store. Lesson: Core flock tests need a 2nd open file description, not a 2nd process.
 
 - T-4494 11-15: slice 1 = item (2), <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span>.json and its readers gone. Open: item (1) own-script mirror without "lane" (LaneEntry.entry + lane.py mirror_entry/lane_of default + manifest-less sends: design call), (3) recording, (4) Ines's two readings.
+
+- T-4527 11-15: hung-step timing tests: count proves 'once' (callers), clock only the cut: >= limit and < limit x ids / 2. Red on the runner via tools/land_mutants.py (2 KILLED, control green). Open: land/idris-t4527 ref stays (land_xc drop refuses non-lane ids). Lesson: local disk under 10 GB -> land_mutants, mutants json must be in the --base commit.
+- T-4282 11-15 cdfacacc4c: ladder1-7 + manifest <span title="Our grade scale, nine steps: D, D+, C-, C, C+, B-, B, B+, A. An idea&#x27;s ladder is the letter it reaches before any cap.">ladder</span>; T-4536 asks phones after T-2943. Open: land, gate compile (xc 75), export read, <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span> facts for Ines. Lesson: 24 MiB < 25.2 MB free; MiB, not MB.
 {% endraw %}
 
 

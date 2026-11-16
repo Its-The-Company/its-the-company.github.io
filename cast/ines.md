@@ -36,7 +36,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - queue audit T-4092 — T-4502 done 11-15: 12 rows held, holders named; parents take child priority; next T-4105
 - task process redesign T-4122 — card, one checker, feature unit, fitted iPhone group size; who builds, dates
 - efficiency review T-4124 — a metrics row's `seconds` can be its whole run's time on every row; queue a note before writing that it exists
-- account fixes T-4305 — unified session: no; #303 pending; T-4314, T-431- 11-13 (T-4266): #270 A, #272 A: 1.0 = Builder + Pages; re-worked to early June 2027 (T-4467). Range script ops/plans/T-4266-release-range.py. B-staged Pro (refresh + themes, premades free) stands.des free) stands.
+- account fixes T-4305 — unified session: no; #303 pending; T-4314, T-431- 11-13 (T-4266): #270 A, #272 A: 1.0 = Builder + Pages; re-worked to early June 2027 (T-4467). Range script ops/plans/T-4266-release-range.py. B-staged Pro (refresh + themes, premades free) stands.
 - Board: never pre-number lines (`add` assigns IDs, T-2354); grep the board before `add`; stage my lines only (T-3204).
 - Standing lessons: run `date` before every stamp; grep my own proposals and git log before <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">ruling</span>; read a new rule against the ADR it touches; when two fixes interact, check the bound under both. Never write "ships as is" without a grep at HEAD (T-0791: an unbuilt BGAppRefresh went into the guide as shipped).
 - T-1035: run a proposal's place against my own rules, its last verb against the guard. Git worktree is checkout, plain copy isn't (T-3770: the guard's in_checkout). An ops/runs file can be my own live stream: check before citing it. Branch to main: #113 A only.
@@ -48,6 +48,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-3710: keep the script with every count I publish (my 11-08 idle count did not reproduce: 60.9 vs 65.8); script at ops/plans/T-3710-idle-by-cause.py.
 - T-4117: a reflog check (amendments_watch) can be green on one <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span>, red on another: run it where the records were made.
 - T-4267: ADRs are code to main_folder_guard: worker copy + main_gate. T-4272: an answer that changes a decision's content withdraws the content, not a form the Investors approved; check what each A approved, in time order.
+- T-4105: a fix's number must match its aim ("first day" went in as 7 days). A one-day replay counts slow rules as misses. Subagent report .md Writes are refused.
 - feature grouping T-4228 — done 11-14; both switches off, mine to switch; 17, 18 open; code-written slots are not the author's words
 {% endraw %}
 

@@ -1,10 +1,10 @@
 {
  "schema": 1,
- "at": "2026-11-16T13:19:10.871745+00:00",
+ "at": "2026-11-16T13:22:16.786588+00:00",
  "session": {
-  "active": false,
-  "kind": "",
-  "started": null,
+  "active": true,
+  "kind": "work",
+  "started": "2026-11-16T08:19:11-05:00",
   "flow": [
    {
     "t": "T-4558",
@@ -138,9 +138,37 @@
   "landed": 31,
   "failed": 2
  },
- "workers": [],
- "who": "",
- "recent": [],
+ "workers": [
+  {
+   "name": "odalys",
+   "task": "[tools] T-4402 ledger rows need prev",
+   "model": "opus",
+   "started": "2026-11-16T13:20:37.912Z",
+   "seconds": 98,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "odalys",
+   "task": "[ops] T-4420 read OPT-128",
+   "model": "opus",
+   "started": "2026-11-16T13:20:56.222Z",
+   "seconds": 80,
+   "finished": null,
+   "effort": "high"
+  }
+ ],
+ "who": "Odalys x2",
+ "recent": [
+  {
+   "name": "odalys",
+   "task": "[measure] T-4420 read OPT-128",
+   "model": "opus",
+   "started": "2026-11-16T13:20:46.515Z",
+   "seconds": null,
+   "finished": "2026-11-16T13:20:46.634Z"
+  }
+ ],
  "queue": {
   "runnable": [],
   "blocked": [],
@@ -188,12 +216,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-16T08:33:16-05:00",
+ "next_tick": null,
  "personal": {
   "week_pct": 10.02,
   "usage_pct": 33.4,
   "work_pct": 68.9,
-  "read_at": "2026-11-16T13:19:00+00:00",
+  "read_at": "2026-11-16T13:22:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -462,7 +490,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-16T08:19:00-05:00",
+  "at": "2026-11-16T08:22:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -470,10 +498,23 @@
    "b": "double-spread"
   }
  },
- "next_tick_why": "last_tick",
+ "next_tick_why": "session",
  "idle": null,
- "pool": null,
+ "pool": {
+  "why": "Double Spread: 80% of the week left, paced to last until Wed 14:00, the week's halfway point; the machine allows 2 (new work waits: 20 tasks wait to merge (limit 12): 2 agents finish and merge...",
+  "n": 2,
+  "at": "2026-11-16T08:18:16.297874-05:00"
+ },
  "lanes": [
+  {
+   "name": "Odalys",
+   "state": "running",
+   "task": "[tools] T-4402 ledger rows need prev",
+   "model": "opus",
+   "since": "2026-11-16T13:20:37.912Z",
+   "next": [],
+   "effort": "high"
+  },
   {
    "name": "Idris",
    "state": "next",
@@ -499,14 +540,6 @@
    "next": []
   },
   {
-   "name": "Odalys",
-   "state": "next",
-   "task": "A lane record main refused: failed...",
-   "model": null,
-   "since": null,
-   "next": []
-  },
-  {
    "name": "Wrenna",
    "state": "next",
    "task": "Wrenna, P2, T-2375 continuation (B-staged item 3...",
@@ -524,7 +557,29 @@
   }
  ],
  "tasks": {
-  "run": [],
+  "run": [
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Have the audit ledger's writers fill in prev",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-16T13:20:37.912Z",
+    "o": "c",
+    "task": "T-4402"
+   },
+   {
+    "w": "Odalys",
+    "k": "ops",
+    "t": "Read the audit's one-limit experiment",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-16T13:20:56.222Z",
+    "o": "c",
+    "task": "T-4420"
+   }
+  ],
+  "src": "plan",
   "open": [
    {
     "w": "Idris",
@@ -619,6 +674,10 @@
    "wait": 34,
    "blocked": 42,
    "you": 12
+  },
+  "fin": {
+   "n": 0,
+   "rows": []
   }
  },
  "qr": [
@@ -660,52 +719,52 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-16T13:19:10Z",
+  "at": "2026-11-16T13:22:07Z",
   "s": {
    "T-4256": [
     "merging",
     "Host checks on the Mac mini",
-    1794834730871
+    1794834727661
    ],
    "T-3970": [
     "mergeq",
     "1st to merge",
-    1794828610871
+    1794828607661
    ],
    "T-4558": [
     "mergeq",
     "2nd to merge",
-    1794830470871
+    1794830467661
    ],
    "T-4554": [
     "mergeq",
     "3rd to merge",
-    1794831550871
+    1794831547661
    ],
    "T-4555": [
     "mergeq",
     "4th to merge",
-    1794831970871
+    1794831967661
    ],
    "T-4565": [
     "mergetest",
     "Xcode checks on the MacBook, 5th to merge",
-    1794834670871
+    1794834667661
    ],
    "T-4564": [
     "mergeq",
     "6th to merge",
-    1794834670871
+    1794834667661
    ],
    "T-4022": [
     "mergeq",
     "7th to merge",
-    1794832210871
+    1794832207661
    ],
    "T-4020": [
     "mergeq",
     "8th to merge",
-    1794832270871
+    1794832267661
    ],
    "T-3745": [
     "testing",
@@ -777,7 +836,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-16T13:19:10Z",
+  "at": "2026-11-16T13:22:07Z",
   "mq": {
    "n": {
     "checking": 2,
@@ -789,13 +848,13 @@
     "parked": 10
    },
    "m": {
-    "checking": 7,
-    "inline": 53,
-    "conflicted": 2221,
+    "checking": 10,
+    "inline": 56,
+    "conflicted": 2224,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 290
+    "parked": 293
    },
    "cur": [
     [
@@ -804,7 +863,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     7
+     10
     ],
     [
      [
@@ -812,7 +871,7 @@
      ],
      "iPhone app tests",
      "MacBook",
-     8
+     11
     ]
    ],
    "ld": [
@@ -822,12 +881,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-16T13:19:09Z",
-    "ld": 9.33,
+    "at": "2026-11-16T13:22:09Z",
+    "ld": 7.21,
     "c": 8,
     "sb": 1,
     "dk": [
-     40.3,
+     40.2,
      228.3
     ],
     "ss": [
@@ -852,6 +911,15 @@
   }
  },
  "operators": [
+  {
+   "w": "Operator",
+   "a": "Main plan",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session \u2013 2 tasks",
+   "at": "2026-11-16T08:19:11-05:00"
+  },
   {
    "w": "Operator",
    "a": "Evan",
@@ -905,13 +973,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 0,
+  "main": 2,
   "lanes": 5,
-  "total": 5,
-  "at": "8:19 AM",
+  "total": 7,
+  "at": "8:22 AM",
   "why": "",
-  "at_iso": "2026-11-16T13:19:00+00:00",
-  "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 8:19 AM ET</p></section>"
+  "at_iso": "2026-11-16T13:22:00+00:00",
+  "started": "8:19 AM",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 2, started 8:19 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 8:22 AM ET</p></section>"
  }
 }

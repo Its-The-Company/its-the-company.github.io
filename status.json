@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-17T18:40:52.520584+00:00",
+ "at": "2026-11-17T18:45:57.662686+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -121,7 +121,7 @@
    "task": "[build] T-3564 land device-limit fixes from parked ref",
    "model": "opus",
    "started": "2026-11-17T17:49:46.991Z",
-   "seconds": 3065,
+   "seconds": 3370,
    "finished": null,
    "effort": "high"
   },
@@ -130,7 +130,7 @@
    "task": "[tools] T-4749 rewrite source-text tests, first slice",
    "model": "opus",
    "started": "2026-11-17T18:10:19.748Z",
-   "seconds": 1832,
+   "seconds": 2137,
    "finished": null,
    "effort": "high"
   }
@@ -154,19 +154,19 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 14.0,
+   "pct": 15.0,
    "resets_at": "2026-11-17T14:10:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-17T13:27:38.597378-05:00",
+   "read_at": "2026-11-17T13:43:50.777778-05:00",
    "source": "live",
-   "left": 86.0,
+   "left": 85.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 34.0,
    "resets_at": "2026-11-22T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-17T13:27:38.597378-05:00",
+   "read_at": "2026-11-17T13:43:50.777778-05:00",
    "source": "live",
    "left": 66.0,
    "left_words": "of your weekly allowance left"
@@ -178,7 +178,7 @@
    "read_at": "2026-11-17T12:48:07.002980-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-17T13:27:38.597378-05:00"
+  "read_at": "2026-11-17T13:43:50.777778-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -198,7 +198,7 @@
   "week_pct": 39.28,
   "usage_pct": 53.6,
   "work_pct": 80.0,
-  "read_at": "2026-11-17T18:42:00+00:00",
+  "read_at": "2026-11-17T18:46:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -297,6 +297,7 @@
     "e": "high",
     "at": "2026-11-17T13:13:54-05:00",
     "n": "Jeremy",
+    "d": 1,
     "src": "plan-b"
    }
   ]
@@ -319,7 +320,7 @@
   }
  ],
  "disk": {
-  "free_gb": 12,
+  "free_gb": 13,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -327,15 +328,15 @@
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
-   "ok": true,
-   "at": "2026-11-17T13:34:00-05:00",
+   "ok": false,
+   "at": "2026-11-17T13:40:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 6,
-  "at": "2026-11-17T13:42:00-05:00",
+  "at": "2026-11-17T13:46:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -586,22 +587,32 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-17T18:40:52Z",
+  "at": "2026-11-17T18:45:57Z",
   "s": {
    "T-4758": [
     "merging",
     "Host checks on the Mac mini",
-    1794940072520
+    1794940017662
+   ],
+   "T-4703": [
+    "mergeq",
+    "1st to merge",
+    1794941097662
    ],
    "T-4601": [
     "mergeq",
-    "1st to merge",
-    1794940852520
+    "2nd to merge",
+    1794940797662
    ],
    "T-4602": [
     "mergeq",
-    "1st to merge",
-    1794940852520
+    "2nd to merge",
+    1794940797662
+   ],
+   "T-4604": [
+    "mergeq",
+    "7th to merge",
+    1794941157662
    ],
    "T-3716": [
     "mergetest",
@@ -611,17 +622,7 @@
    "T-4749": [
     "testing",
     "its own tests, in its copy",
-    1794939112520
-   ],
-   "T-4653": [
-    "testq",
-    "1st for a Simulator",
-    1794940792520
-   ],
-   "T-4703": [
-    "testq",
-    "1st for a Simulator",
-    1794940792520
+    1794939117662
    ],
    "T-4689": [
     "merged",
@@ -638,23 +639,23 @@
   },
   "nm": {
    "T-4758": "Keep the shortcut test's pictures out of the source tree",
+   "T-4703": "Draw the frames for the 1.0 showcase premades",
    "T-4601": "Check finished work before it ships",
    "T-4602": "Check finished work before it ships",
+   "T-4604": "Check finished work before it ships",
    "T-3716": "Find why the Simulator location test now fails",
    "T-4749": "Rewrite or drop outdated tests that read code text",
-   "T-4653": "Give the Shortcut's Pro check a time limit",
-   "T-4703": "Draw the frames for the 1.0 showcase premades",
    "T-4689": "Bring the plan into line with the phase A proof",
    "T-3564": "Stop other errors saying a sensor is missing"
   },
   "wk": {
    "T-4758": "Idris",
+   "T-4703": "Maren",
    "T-4601": "Pernille",
    "T-4602": "Pernille",
+   "T-4604": "Pernille",
    "T-3716": "Idris",
    "T-4749": "Pernille",
-   "T-4653": "Idris",
-   "T-4703": "Maren",
    "T-4689": "Ines",
    "T-3564": "Idris",
    "T-3560": "Idris",
@@ -664,11 +665,11 @@
   }
  },
  "ln": {
-  "at": "2026-11-17T18:40:52Z",
+  "at": "2026-11-17T18:45:57Z",
   "mq": {
    "n": {
     "checking": 1,
-    "inline": 2,
+    "inline": 4,
     "conflicted": 1,
     "failed": 0,
     "held": 2,
@@ -676,13 +677,13 @@
     "parked": 12
    },
    "m": {
-    "checking": 13,
-    "inline": 0,
-    "conflicted": 896,
+    "checking": 19,
+    "inline": 3,
+    "conflicted": 901,
     "failed": null,
-    "held": 591,
+    "held": 596,
     "retry": null,
-    "parked": 104
+    "parked": 109
    },
    "cur": [
     [
@@ -691,7 +692,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     13
+     19
     ]
    ],
    "ld": [
@@ -701,20 +702,16 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-17T18:41:56Z",
-    "ld": 44.0,
+    "at": "2026-11-17T18:45:14Z",
+    "ld": 69.38,
     "c": 8,
-    "sb": 1,
     "dk": [
-     12.7,
+     12.8,
      228.3
     ],
     "ss": [
      175.8,
      953.7
-    ],
-    "sn": [
-     "T2027 Idris fresh iPhone 17e"
     ]
    },
    "macbook": {
@@ -744,8 +741,6 @@
    "w": "Operator",
    "a": "Evan's Account",
    "sr": 1,
-   "m": "opus",
-   "e": "high",
    "t": "Work session \u2013 1 task",
    "at": "2026-11-17T13:25:15-05:00"
   },
@@ -753,8 +748,6 @@
    "w": "Operator",
    "a": "Evan's Account",
    "sr": 1,
-   "m": "opus",
-   "e": "high",
    "t": "Work session \u2013 1 task",
    "at": "2026-11-17T13:25:14-05:00"
   },
@@ -762,8 +755,6 @@
    "w": "Operator",
    "a": "Jeremy's Account",
    "sr": 1,
-   "m": "opus",
-   "e": "high",
    "t": "Work session \u2013 1 task",
    "at": "2026-11-17T12:02:39-05:00"
   },
@@ -771,8 +762,6 @@
    "w": "Operator",
    "a": "Jeremy's Account",
    "sr": 1,
-   "m": "opus",
-   "e": "high",
    "t": "Work session",
    "at": "2026-11-17T13:13:54-05:00"
   },
@@ -780,10 +769,8 @@
    "w": "Operator",
    "a": "Jeremy's Account",
    "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session \u2013 2 tasks",
-   "at": "2026-11-17T13:13:53-05:00"
+   "t": "Work session \u2013 1 task",
+   "at": "2026-11-17T13:13:54-05:00"
   }
  ],
  "reply": {
@@ -806,10 +793,10 @@
   "main": 2,
   "lanes": 5,
   "total": 7,
-  "at": "1:42 PM",
+  "at": "1:46 PM",
   "why": "",
-  "at_iso": "2026-11-17T18:42:00+00:00",
+  "at_iso": "2026-11-17T18:46:00+00:00",
   "started": "12:48 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 2, started 12:48 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 1:42 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 2, started 12:48 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 1:46 PM ET</p></section>"
  }
 }

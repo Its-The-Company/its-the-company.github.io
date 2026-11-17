@@ -1,10 +1,10 @@
 {
  "schema": 1,
- "at": "2026-11-17T00:23:59.623504+00:00",
+ "at": "2026-11-17T00:27:04.422503+00:00",
  "session": {
-  "active": false,
-  "kind": "",
-  "started": null,
+  "active": true,
+  "kind": "evening",
+  "started": "2026-11-16T19:24:00-05:00",
   "flow": [
    {
     "t": "T-3765",
@@ -121,36 +121,12 @@
  "who": "",
  "recent": [
   {
-   "name": "maren",
-   "task": "[design] T-4620 Features in Home task lists",
-   "model": "opus",
-   "started": "2026-11-16T21:36:15.573Z",
-   "seconds": null,
-   "finished": "2026-11-17T00:05:08.984000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[tools] T-4583 land feature-step ticking",
-   "model": "opus",
-   "started": "2026-11-16T20:38:05.386Z",
-   "seconds": null,
-   "finished": "2026-11-16T23:58:47.720000+00:00"
-  },
-  {
    "name": "odalys",
-   "task": "[tools] T-4103 land the daily sweep run (retry)",
+   "task": "[report] evening",
    "model": "opus",
-   "started": "2026-11-16T22:54:18.511Z",
+   "started": "2026-11-17T00:24:18.628Z",
    "seconds": null,
-   "finished": "2026-11-16T23:20:23.288000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[tools] T-4196 grouped iPhone runs, rest",
-   "model": "opus",
-   "started": "2026-11-16T21:27:29.300Z",
-   "seconds": null,
-   "finished": "2026-11-16T23:16:22.103000+00:00"
+   "finished": "2026-11-17T00:26:14.239Z"
   }
  ],
  "queue": {
@@ -200,12 +176,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-16T19:38:39-05:00",
+ "next_tick": null,
  "personal": {
   "week_pct": 18.99,
   "usage_pct": 42.2,
   "work_pct": 72.2,
-  "read_at": "2026-11-17T00:24:00+00:00",
+  "read_at": "2026-11-17T00:27:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -242,7 +218,7 @@
  "lock_in": {
   "on": false,
   "pool": 4,
-  "at": "2026-11-16T19:24:00-05:00",
+  "at": "2026-11-16T19:27:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -250,9 +226,13 @@
    "b": "double-spread"
   }
  },
- "next_tick_why": "last_tick",
+ "next_tick_why": "session",
  "idle": null,
- "pool": null,
+ "pool": {
+  "why": "Double Spread: 74% of the week left, paced to last until Wed 14:00, the week's halfway point; the machine allows 2 (new work waits: 21 tasks wait to merge (limit 20): 2 agents finish and merge...",
+  "n": 2,
+  "at": "2026-11-16T19:23:39.829312-05:00"
+ },
  "lanes": [
   {
    "name": "Idris",
@@ -305,6 +285,7 @@
  ],
  "tasks": {
   "run": [],
+  "src": "plan",
   "open": [
    {
     "w": "Idris",
@@ -399,6 +380,10 @@
    "wait": 35,
    "blocked": 40,
    "you": 12
+  },
+  "fin": {
+   "n": 0,
+   "rows": []
   }
  },
  "qr": [
@@ -440,47 +425,47 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-17T00:23:59Z",
+  "at": "2026-11-17T00:26:52Z",
   "s": {
    "T-3765": [
     "mergetest",
     "Xcode checks on the MacBook",
-    1794875039623
+    1794875152241
    ],
    "T-4627": [
     "mergeq",
     "1st to merge",
-    1794871919623
+    1794871912241
    ],
    "T-4625": [
     "mergeq",
     "2nd to merge",
-    1794871979623
+    1794871972241
    ],
    "T-3495": [
     "mergeq",
     "3rd to merge",
-    1794872639623
+    1794872632241
    ],
    "T-4494": [
     "mergetest",
     "Xcode checks on the MacBook, 4th to merge",
-    1794874439623
+    1794874492241
    ],
    "T-4540": [
     "mergeq",
     "6th to merge",
-    1794872579623
+    1794872572241
    ],
    "T-4541": [
     "mergeq",
     "7th to merge",
-    1794873659623
+    1794873712241
    ],
    "T-4614": [
     "mergeq",
     "10th to merge",
-    1794872039623
+    1794872032241
    ]
   },
   "nm": {
@@ -505,7 +490,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-17T00:23:59Z",
+  "at": "2026-11-17T00:26:52Z",
   "mq": {
    "n": {
     "checking": 2,
@@ -517,13 +502,13 @@
     "parked": 11
    },
    "m": {
-    "checking": 5,
-    "inline": 45,
-    "conflicted": 480,
+    "checking": 6,
+    "inline": 48,
+    "conflicted": 483,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 876
+    "parked": 879
    },
    "cur": [
     [
@@ -532,7 +517,7 @@
      ],
      "iPhone app tests",
      "MacBook",
-     0
+     1
     ],
     [
      [
@@ -540,7 +525,7 @@
      ],
      "iPhone app tests",
      "MacBook",
-     10
+     12
     ]
    ],
    "ld": [
@@ -550,8 +535,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-17T00:24:00Z",
-    "ld": 1.72,
+    "at": "2026-11-17T00:26:26Z",
+    "ld": 1.47,
     "c": 8,
     "sb": 1,
     "dk": [
@@ -579,7 +564,17 @@
    }
   }
  },
- "operators": [],
+ "operators": [
+  {
+   "w": "Operator",
+   "a": "Main plan",
+   "sr": 1,
+   "m": "sonnet",
+   "e": "low",
+   "t": "Evening report",
+   "at": "2026-11-16T19:24:00-05:00"
+  }
+ ],
  "reply": {
   "sent": "2026-11-16T23:22:43Z",
   "seconds": 52.0
@@ -588,7 +583,6 @@
  "trimmed": [
   "lane_next",
   "queue_text",
-  "recent",
   "task_done",
   "task_title",
   "done_text",
@@ -600,10 +594,10 @@
   "main": 0,
   "lanes": 0,
   "total": 0,
-  "at": "7:24 PM",
+  "at": "7:27 PM",
   "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
-  "at_iso": "2026-11-17T00:24:00+00:00",
-  "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 7:24 PM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
+  "at_iso": "2026-11-17T00:27:00+00:00",
+  "started": "7:24 PM",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0, started 7:24 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 7:27 PM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
  }
 }

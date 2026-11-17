@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-17T17:57:32.074480+00:00",
+ "at": "2026-11-17T18:00:30.387917+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -13,15 +13,6 @@
      {
       "s": "testq",
       "at": 1794937680
-     }
-    ]
-   },
-   {
-    "t": "T-4605",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1794895204
      }
     ]
    }
@@ -110,7 +101,7 @@
     "end_at": 1794927290
    }
   ],
-  "landed": 31,
+  "landed": 30,
   "failed": 7
  },
  "workers": [
@@ -119,7 +110,7 @@
    "task": "[build] T-3564 land device-limit fixes from parked ref",
    "model": "opus",
    "started": "2026-11-17T17:49:46.991Z",
-   "seconds": 465,
+   "seconds": 643,
    "finished": null,
    "effort": "high"
   },
@@ -128,7 +119,7 @@
    "task": "[test] T-3560 land first-render test fixes from parked ref",
    "model": "opus",
    "started": "2026-11-17T17:49:58.500Z",
-   "seconds": 453,
+   "seconds": 631,
    "finished": null,
    "effort": "high"
   }
@@ -187,7 +178,7 @@
   "week_pct": 39.28,
   "usage_pct": 53.6,
   "work_pct": 80.0,
-  "read_at": "2026-11-17T17:57:00+00:00",
+  "read_at": "2026-11-17T18:00:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -242,14 +233,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-17T12:53:00-05:00",
+   "at": "2026-11-17T12:59:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 6,
-  "at": "2026-11-17T12:57:00-05:00",
+  "at": "2026-11-17T13:00:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -491,17 +482,17 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-17T17:57:14Z",
+  "at": "2026-11-17T18:00:30Z",
   "s": {
    "T-3560": [
-    "merging",
-    "Mac tests at the main gate \u00b7 8 groups of tests done",
-    1794937934863
+    "mergetest",
+    "iPhone tests on the MacBook",
+    null
    ],
    "T-3564": [
     "merging",
     "Mac tests at the main gate",
-    1794938234863
+    1794938190387
    ]
   },
   "nm": {
@@ -517,7 +508,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-17T17:57:14Z",
+  "at": "2026-11-17T18:00:30Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -531,11 +522,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 852,
+    "conflicted": 855,
     "failed": null,
-    "held": 621,
+    "held": 624,
     "retry": null,
-    "parked": 134
+    "parked": 137
    },
    "cur": [],
    "ld": [
@@ -545,12 +536,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-17T17:56:28Z",
-    "ld": 1.31,
+    "at": "2026-11-17T18:00:31Z",
+    "ld": 12.7,
     "c": 8,
     "sb": 1,
     "dk": [
-     17.9,
+     17.2,
      228.3
     ],
     "ss": [
@@ -558,12 +549,12 @@
      953.7
     ],
     "sn": [
-     "iPhone 17e"
+     "T2027 Idris never-used 1117"
     ]
    },
    "macbook": {
-    "at": "2026-11-17T17:50:46Z",
-    "ld": 2.84,
+    "at": "2026-11-17T17:56:56Z",
+    "ld": 1.03,
     "c": 12,
     "sb": 0,
     "dk": [
@@ -623,10 +614,10 @@
   "main": 2,
   "lanes": 2,
   "total": 4,
-  "at": "12:57 PM",
+  "at": "1:00 PM",
   "why": "",
-  "at_iso": "2026-11-17T17:57:00+00:00",
+  "at_iso": "2026-11-17T18:00:00+00:00",
   "started": "12:48 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 2, started 12:48 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 12:57 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 2, started 12:48 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 1:00 PM ET</p></section>"
  }
 }

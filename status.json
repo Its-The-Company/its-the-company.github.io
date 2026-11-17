@@ -1,24 +1,40 @@
 {
  "schema": 1,
- "at": "2026-11-17T01:36:05.705600+00:00",
+ "at": "2026-11-17T01:39:15.839619+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-16T19:47:08-05:00",
   "flow": [
    {
-    "t": "T-4628",
-    "name": "Keep the Distance location fix out of its file",
-    "acct": "Personal b",
+    "t": "T-4617",
+    "name": "Run quick checks before a land takes the Xcode slot",
+    "acct": "Personal a",
     "steps": [
      {
       "s": "testq",
-      "at": 1794878123
+      "at": 1794879459
      }
     ]
    }
   ],
   "done": [
+   {
+    "t": "T-4587",
+    "name": "Switch feature sessions on for every app feature",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794879447
+   },
+   {
+    "t": "T-4628",
+    "name": "Keep the Distance location fix out of its file",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794879383
+   },
    {
     "t": "T-4642",
     "name": "Review the premade settings declarations in Python",
@@ -81,25 +97,9 @@
     "steps": [],
     "end": "landed",
     "end_at": 1794874418
-   },
-   {
-    "t": "T-3495",
-    "name": "Check the upload fix before build 4 goes out",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794874418
-   },
-   {
-    "t": "T-4630",
-    "name": "Stop badging widgets moved to the app by size",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794871994
    }
   ],
-  "landed": 67,
+  "landed": 69,
   "failed": 12
  },
  "workers": [
@@ -108,7 +108,7 @@
    "task": "[tools] T-4655 heavy test run cap",
    "model": "opus",
    "started": "2026-11-17T00:50:34.871Z",
-   "seconds": 2730,
+   "seconds": 2920,
    "finished": null,
    "effort": "high"
   }
@@ -118,7 +118,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 430,
+  "runnable_count": 429,
   "blocked_count": 75
  },
  "meter": {
@@ -167,7 +167,7 @@
   "week_pct": 23.56,
   "usage_pct": 47.5,
   "work_pct": 77.0,
-  "read_at": "2026-11-17T01:36:00+00:00",
+  "read_at": "2026-11-17T01:39:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -255,7 +255,7 @@
  "lock_in": {
   "on": false,
   "pool": 4,
-  "at": "2026-11-16T20:36:00-05:00",
+  "at": "2026-11-16T20:39:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -410,6 +410,11 @@
   "done": [
    {
     "w": "Idris",
+    "t": "The Distance widget no longer saves your exact location in its own file, which went into device...",
+    "at": "2026-11-16T20:36:00-05:00"
+   },
+   {
+    "w": "Idris",
     "t": "Checked Pernille's settings work for the ready-made widgets and passed it; one fix matters most,...",
     "at": "2026-11-16T20:15:00-05:00"
    },
@@ -417,22 +422,21 @@
     "w": "Odalys",
     "t": "Checked the change that gives a gallery preview its full two seconds after waiting in line; it...",
     "at": "2026-11-16T20:14:00-05:00"
-   },
-   {
-    "w": "Operator",
-    "t": "Main's own tests pass again on a clean copy of main (a6951dbe7), so finished work is no longer...",
-    "at": "2026-11-16T19:29:00-05:00"
    }
   ],
   "count": {
-   "next": 430,
+   "next": 429,
    "wait": 35,
    "blocked": 40,
    "you": 12
   },
   "fin": {
-   "n": 2,
+   "n": 3,
    "rows": [
+    [
+     "T-4628",
+     "Keep the Distance location..."
+    ],
     [
      "T-4642",
      "Review the premade settings..."
@@ -483,90 +487,91 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-17T01:36:05Z",
+  "at": "2026-11-17T01:39:15Z",
   "s": {
-   "T-4628": [
+   "T-4617": [
     "merging",
     "Host checks on the Mac mini",
-    1794878165705
-   ],
-   "T-4587": [
-    "mergeq",
-    "1st to merge",
-    1794878465705
-   ],
-   "T-4617": [
-    "mergeq",
-    "2nd to merge",
-    1794877865705
+    1794879495839
    ],
    "T-3765": [
     "mergeq",
+    "1st to merge",
+    1794874455839
+   ],
+   "T-4024": [
+    "mergeq",
+    "2nd to merge",
+    1794878415839
+   ],
+   "T-4597": [
+    "mergeq",
+    "2nd to merge",
+    1794878415839
+   ],
+   "T-3718": [
+    "mergeq",
     "3rd to merge",
-    1794874445705
+    1794879195839
+   ],
+   "T-4598": [
+    "mergeq",
+    "3rd to merge",
+    1794879195839
    ],
    "T-4642": [
     "mergetest",
     "Xcode checks on the MacBook, 4th to merge",
-    1794878165705
+    1794879435839
    ],
-   "T-4024": [
-    "mergeq",
-    "6th to merge",
-    1794878465705
-   ],
-   "T-4597": [
-    "mergeq",
-    "6th to merge",
-    1794878465705
-   ],
-   "T-3718": [
-    "mergeq",
-    "7th to merge",
-    1794879245705
-   ],
-   "T-4598": [
-    "mergeq",
-    "7th to merge",
-    1794879245705
+   "T-4628": [
+    "mergetest",
+    "Xcode checks on the MacBook, 4th to merge",
+    1794879435839
    ],
    "T-4655": [
     "testing",
     "its own tests, in its copy",
-    1794879185705
+    1794879195839
+   ],
+   "T-4587": [
+    "merged",
+    "on main 8:37 PM ET",
+    1794879427000,
+    ""
    ]
   },
   "nm": {
-   "T-4628": "Keep the Distance location fix out of its file",
-   "T-4587": "Switch feature sessions on for every app feature",
    "T-4617": "Run quick checks before a land takes the Xcode slot",
    "T-3765": "Check a real widget tap on the TestFlight build",
-   "T-4642": "Review the premade settings declarations in Python",
    "T-4024": "Check finished work before it ships",
    "T-4597": "Check finished work before it ships",
    "T-3718": "Check finished work before it ships",
    "T-4598": "Check finished work before it ships",
-   "T-4655": "Cap how many heavy test runs share the Mac mini"
+   "T-4642": "Review the premade settings declarations in Python",
+   "T-4628": "Keep the Distance location fix out of its file",
+   "T-4655": "Cap how many heavy test runs share the Mac mini",
+   "T-4587": "Switch feature sessions on for every app feature"
   },
   "wk": {
-   "T-4628": "Idris",
-   "T-4587": "Idris",
    "T-4617": "Odalys",
    "T-3765": "Idris",
-   "T-4642": "Idris",
    "T-4024": "Pernille",
    "T-4597": "Odalys",
    "T-3718": "Pernille",
    "T-4598": "Pernille",
-   "T-4655": "Odalys"
+   "T-4642": "Idris",
+   "T-4628": "Idris",
+   "T-4655": "Odalys",
+   "T-4587": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-17T01:36:05Z",
+  "at": "2026-11-17T01:39:15Z",
   "mq": {
    "n": {
-    "checking": 2,
-    "inline": 7,
+    "checking": 3,
+    "inline": 5,
     "conflicted": 1,
     "failed": 0,
     "held": 0,
@@ -574,22 +579,22 @@
     "parked": 12
    },
    "m": {
-    "checking": 20,
-    "inline": 15,
-    "conflicted": 552,
+    "checking": 2,
+    "inline": 19,
+    "conflicted": 555,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 852
+    "parked": 855
    },
    "cur": [
     [
      [
-      "T-4628"
+      "T-4617"
      ],
      "Mac tests",
      "Mac mini",
-     20
+     1
     ],
     [
      [
@@ -597,22 +602,30 @@
      ],
      "iPhone app tests",
      "MacBook",
-     20
+     2
+    ],
+    [
+     [
+      "T-4628"
+     ],
+     "iPhone app tests",
+     "MacBook",
+     2
     ]
    ],
    "ld": [
-    88,
-    "2026-11-17T01:15:11Z"
+    90,
+    "2026-11-17T01:37:27Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-17T01:35:39Z",
-    "ld": 26.32,
+    "at": "2026-11-17T01:38:32Z",
+    "ld": 28.04,
     "c": 8,
     "sb": 1,
     "dk": [
-     16.0,
+     15.9,
      228.3
     ],
     "ss": [
@@ -685,10 +698,10 @@
   "main": 1,
   "lanes": 2,
   "total": 3,
-  "at": "8:36 PM",
+  "at": "8:39 PM",
   "why": "",
-  "at_iso": "2026-11-17T01:36:00+00:00",
+  "at_iso": "2026-11-17T01:39:00+00:00",
   "started": "7:47 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 1, started 7:47 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 8:36 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 1, started 7:47 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 8:39 PM ET</p></section>"
  }
 }

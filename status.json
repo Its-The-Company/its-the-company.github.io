@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-17T15:21:11.149320+00:00",
+ "at": "2026-11-17T15:24:22.788566+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -136,7 +136,7 @@
    "task": "[build] T-0289 land parked state module",
    "model": "opus",
    "started": "2026-11-17T14:21:25.112Z",
-   "seconds": 3586,
+   "seconds": 3777,
    "finished": null,
    "effort": "high"
   },
@@ -145,7 +145,7 @@
    "task": "[build] T-1882 finish landing parked work",
    "model": "opus",
    "started": "2026-11-17T15:07:11.689Z",
-   "seconds": 839,
+   "seconds": 1031,
    "finished": null,
    "effort": "high"
   }
@@ -213,7 +213,7 @@
   "week_pct": 36.07,
   "usage_pct": 52.2,
   "work_pct": 79.0,
-  "read_at": "2026-11-17T15:21:00+00:00",
+  "read_at": "2026-11-17T15:24:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -323,7 +323,7 @@
  "lock_in": {
   "on": false,
   "pool": 5,
-  "at": "2026-11-17T10:21:00-05:00",
+  "at": "2026-11-17T10:24:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -562,27 +562,47 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-17T15:20:59Z",
+  "at": "2026-11-17T15:24:22Z",
   "s": {
    "T-4663": [
     "merging",
     "Host checks on the Mac mini",
-    1794928019118
+    1794927982788
    ],
    "T-4656": [
     "mergetest",
     "Xcode checks on the MacBook, 1st to merge",
-    1794927179118
+    1794927142788
    ],
    "T-4513": [
     "merging",
     "Mac tests at the main gate",
-    1794927659118
+    1794927622788
    ],
    "T-0289": [
     "merging",
     "Mac tests at the main gate",
-    1794928559118
+    1794929062788
+   ],
+   "T-4668": [
+    "testing",
+    "Mac Mini \u00b7 test",
+    null
+   ],
+   "T-4671": [
+    "testing",
+    "Mac Mini \u00b7 test",
+    null
+   ],
+   "T-4744": [
+    "testing",
+    "Mac Mini \u00b7 test",
+    null
+   ],
+   "T-4745": [
+    "testing",
+    "Mac Mini \u00b7 test",
+    null
    ],
    "T-3217": [
     "testing",
@@ -592,27 +612,7 @@
    "T-0687": [
     "testing",
     "its own tests, in its copy",
-    1794928199118
-   ],
-   "T-4668": [
-    "testq",
-    "1st for a Simulator",
-    1794928739118
-   ],
-   "T-4671": [
-    "testq",
-    "1st for a Simulator",
-    1794928739118
-   ],
-   "T-4744": [
-    "testq",
-    "1st for a Simulator",
-    1794928739118
-   ],
-   "T-4745": [
-    "testq",
-    "1st for a Simulator",
-    1794928739118
+    1794928162788
    ]
   },
   "nm": {
@@ -620,30 +620,30 @@
    "T-4656": "Let a cleaned script return to the widget on resend",
    "T-4513": "Show the SSD's free space on the Machine bubble",
    "T-0289": "Build the widget state module for scripts",
-   "T-3217": "Fix the three red tests before build 3",
-   "T-0687": "Run network fetches inside the extension on the Simulator",
    "T-4668": "Put the bank, tax and name dates in the plan",
    "T-4671": "Clear the app's sentences under the approved voice",
    "T-4744": "Fix a MacBook test job that failed",
-   "T-4745": "Fix a MacBook test job that failed"
+   "T-4745": "Fix a MacBook test job that failed",
+   "T-3217": "Fix the three red tests before build 3",
+   "T-0687": "Run network fetches inside the extension on the Simulator"
   },
   "wk": {
    "T-4663": "Idris",
    "T-4656": "Idris",
    "T-4513": "Maren",
    "T-0289": "Pernille",
-   "T-3217": "Idris",
-   "T-0687": "Idris",
    "T-4668": "Ines",
    "T-4671": "Maren",
    "T-4744": "Operator",
    "T-4745": "Odalys",
+   "T-3217": "Idris",
+   "T-0687": "Idris",
    "T-4417": "Idris",
    "T-4416": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-17T15:20:59Z",
+  "at": "2026-11-17T15:24:22Z",
   "mq": {
    "n": {
     "checking": 2,
@@ -655,13 +655,13 @@
     "parked": 14
    },
    "m": {
-    "checking": 21,
+    "checking": 25,
     "inline": null,
-    "conflicted": 696,
+    "conflicted": 699,
     "failed": null,
-    "held": 952,
+    "held": 955,
     "retry": null,
-    "parked": 491
+    "parked": 494
    },
    "cur": [
     [
@@ -670,7 +670,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     14
+     18
     ],
     [
      [
@@ -678,7 +678,7 @@
      ],
      "iPhone app tests, sent and waiting its turn",
      "MacBook",
-     28
+     32
     ]
    ],
    "ld": [
@@ -688,12 +688,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-17T15:20:59Z",
-    "ld": 10.32,
+    "at": "2026-11-17T15:24:29Z",
+    "ld": 11.03,
     "c": 8,
     "sb": 2,
     "dk": [
-     20.3,
+     20.6,
      228.3
     ],
     "ss": [
@@ -701,7 +701,7 @@
      953.7
     ],
     "sn": [
-     "T4188 Idris iPhone 17e",
+     "iPhone 18 Pro",
      "iPhone 17e"
     ]
    },
@@ -732,17 +732,13 @@
    "w": "Operator",
    "a": "Evan's Account",
    "sr": 1,
-   "m": "opus",
-   "e": "high",
    "t": "Work session \u2013 1 task",
-   "at": "2026-11-17T07:19:51-05:00"
+   "at": "2026-11-17T07:19:52-05:00"
   },
   {
    "w": "Operator",
    "a": "Evan's Account",
    "sr": 1,
-   "m": "opus",
-   "e": "high",
    "t": "Work session \u2013 2 tasks",
    "at": "2026-11-17T10:00:25-05:00"
   },
@@ -750,8 +746,6 @@
    "w": "Operator",
    "a": "Jeremy's Account",
    "sr": 1,
-   "m": "opus",
-   "e": "high",
    "t": "Work session \u2013 1 task",
    "at": "2026-11-17T10:01:27-05:00"
   },
@@ -759,8 +753,6 @@
    "w": "Operator",
    "a": "Jeremy's Account",
    "sr": 1,
-   "m": "opus",
-   "e": "high",
    "t": "Work session \u2013 2 tasks",
    "at": "2026-11-17T10:11:40-05:00"
   }
@@ -785,10 +777,10 @@
   "main": 2,
   "lanes": 4,
   "total": 6,
-  "at": "10:21 AM",
+  "at": "10:24 AM",
   "why": "",
-  "at_iso": "2026-11-17T15:21:00+00:00",
+  "at_iso": "2026-11-17T15:24:00+00:00",
   "started": "9:17 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 2, started 9:17 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 10:21 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 2, started 9:17 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 10:24 AM ET</p></section>"
  }
 }

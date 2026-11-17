@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-17T06:22:43.721316+00:00",
+ "at": "2026-11-17T06:25:45.933074+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -122,7 +122,7 @@
    "task": "[test] T-4702 state_commit race on main",
    "model": "opus",
    "started": "2026-11-17T06:18:11.005Z",
-   "seconds": 272,
+   "seconds": 454,
    "finished": null,
    "effort": "high"
   },
@@ -131,7 +131,7 @@
    "task": "[tools] T-4694 pass lands whose red is on main",
    "model": "opus",
    "started": "2026-11-17T06:18:19.459Z",
-   "seconds": 264,
+   "seconds": 446,
    "finished": null,
    "effort": "high"
   },
@@ -140,7 +140,7 @@
    "task": "[tools] T-4674 rulings land on main at once",
    "model": "opus",
    "started": "2026-11-17T06:18:28.214Z",
-   "seconds": 255,
+   "seconds": 437,
    "finished": null,
    "effort": "high"
   }
@@ -199,7 +199,7 @@
   "week_pct": 32.81,
   "usage_pct": 54.0,
   "work_pct": 78.2,
-  "read_at": "2026-11-17T06:22:00+00:00",
+  "read_at": "2026-11-17T06:25:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -273,7 +273,7 @@
  "lock_in": {
   "on": false,
   "pool": 4,
-  "at": "2026-11-17T01:22:00-05:00",
+  "at": "2026-11-17T01:25:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -538,19 +538,26 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-17T06:22:26Z",
+  "at": "2026-11-17T06:25:31Z",
   "s": {
    "T-4181": [
+    "testing",
+    "Mac Mini \u00b7 test",
+    null
+   ],
+   "T-4190": [
     "testq",
     "1st for a Simulator",
-    1794896366439
+    1794896611255
    ]
   },
   "nm": {
-   "T-4181": "Widgets refresh on their own and by a tap"
+   "T-4181": "Widgets refresh on their own and by a tap",
+   "T-4190": "Settings and Pro: buy, restore, themes"
   },
   "wk": {
    "T-4181": "Idris",
+   "T-4190": "Idris",
    "T-4620": "Maren",
    "T-4655": "Odalys",
    "T-4665": "Odalys",
@@ -562,7 +569,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-17T06:22:26Z",
+  "at": "2026-11-17T06:25:31Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -576,11 +583,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 497,
+    "conflicted": 501,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 54
+    "parked": 57
    },
    "cur": [],
    "ld": [
@@ -590,12 +597,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-17T06:22:02Z",
-    "ld": 17.12,
+    "at": "2026-11-17T06:25:31Z",
+    "ld": 18.36,
     "c": 8,
     "sb": 2,
     "dk": [
-     22.5,
+     22.4,
      228.3
     ],
     "ss": [
@@ -679,10 +686,10 @@
   "main": 3,
   "lanes": 3,
   "total": 6,
-  "at": "1:22 AM",
+  "at": "1:25 AM",
   "why": "",
-  "at_iso": "2026-11-17T06:22:00+00:00",
+  "at_iso": "2026-11-17T06:25:00+00:00",
   "started": "1:00 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 3, started 1:00 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 1:22 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 3, started 1:00 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 1:25 AM ET</p></section>"
  }
 }

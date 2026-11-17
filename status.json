@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-17T15:04:19.100071+00:00",
+ "at": "2026-11-17T15:08:56.677198+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -18,6 +18,17 @@
      {
       "s": "macbook",
       "at": 1794927137
+     }
+    ]
+   },
+   {
+    "t": "T-4663",
+    "name": "Completion ignores letter case and small typos",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "testq",
+      "at": 1794927973
      }
     ]
    },
@@ -121,26 +132,35 @@
  },
  "workers": [
   {
-   "name": "idris",
-   "task": "[build] T-0687 land parked extension work",
-   "model": "opus",
-   "started": "2026-11-17T14:21:15.257Z",
-   "seconds": 2583,
-   "finished": null,
-   "effort": "high"
-  },
-  {
    "name": "pernille",
    "task": "[build] T-0289 land parked state module",
    "model": "opus",
    "started": "2026-11-17T14:21:25.112Z",
-   "seconds": 2573,
+   "seconds": 2851,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "idris",
+   "task": "[build] T-1882 finish landing parked work",
+   "model": "opus",
+   "started": "2026-11-17T15:07:11.689Z",
+   "seconds": 104,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Idris, Pernille",
- "recent": [],
+ "who": "Pernille, Idris",
+ "recent": [
+  {
+   "name": "idris",
+   "task": "[build] T-0687 land parked extension work",
+   "model": "opus",
+   "started": "2026-11-17T14:21:15.257Z",
+   "seconds": null,
+   "finished": "2026-11-17T15:04:51.599000+00:00"
+  }
+ ],
  "queue": {
   "runnable": [],
   "blocked": [],
@@ -149,19 +169,19 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 2.0,
+   "pct": 3.0,
    "resets_at": "2026-11-17T14:10:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-17T09:47:54.422839-05:00",
+   "read_at": "2026-11-17T10:06:39.755900-05:00",
    "source": "live",
-   "left": 98.0,
+   "left": 97.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 33.0,
    "resets_at": "2026-11-22T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-17T09:47:54.422839-05:00",
+   "read_at": "2026-11-17T10:06:39.755900-05:00",
    "source": "live",
    "left": 67.0,
    "left_words": "of your weekly allowance left"
@@ -173,7 +193,7 @@
    "read_at": "2026-11-17T09:17:28.824401-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-17T09:47:54.422839-05:00"
+  "read_at": "2026-11-17T10:06:39.755900-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -193,7 +213,7 @@
   "week_pct": 36.07,
   "usage_pct": 52.2,
   "work_pct": 79.0,
-  "read_at": "2026-11-17T15:05:00+00:00",
+  "read_at": "2026-11-17T15:08:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -263,7 +283,7 @@
   }
  ],
  "disk": {
-  "free_gb": 23,
+  "free_gb": 21,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -272,14 +292,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-17T10:00:00-05:00",
+   "at": "2026-11-17T10:06:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 5,
-  "at": "2026-11-17T10:05:00-05:00",
+  "at": "2026-11-17T10:08:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -296,20 +316,20 @@
  },
  "lanes": [
   {
-   "name": "Idris",
-   "state": "running",
-   "task": "[build] T-0687 land parked extension work",
-   "model": "opus",
-   "since": "2026-11-17T14:21:15.257Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
    "name": "Pernille",
    "state": "running",
    "task": "[build] T-0289 land parked state module",
    "model": "opus",
    "since": "2026-11-17T14:21:25.112Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
+   "name": "Idris",
+   "state": "running",
+   "task": "[build] T-1882 finish landing parked work",
+   "model": "opus",
+   "since": "2026-11-17T15:07:11.689Z",
    "next": [],
    "effort": "high"
   },
@@ -349,16 +369,6 @@
  "tasks": {
   "run": [
    {
-    "w": "Idris",
-    "k": "build",
-    "t": "Run network fetches inside the extension on the Simulator",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-17T14:21:15.257Z",
-    "o": "c",
-    "task": "T-0687"
-   },
-   {
     "w": "Pernille",
     "k": "build",
     "t": "Build the widget state module for scripts",
@@ -367,6 +377,16 @@
     "at": "2026-11-17T14:21:25.112Z",
     "o": "c",
     "task": "T-0289"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "Count a fetch as good when the data arrived",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-17T15:07:11.689Z",
+    "o": "c",
+    "task": "T-1882"
    }
   ],
   "src": "plan",
@@ -518,27 +538,27 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-17T15:04:19Z",
+  "at": "2026-11-17T15:08:42Z",
   "s": {
+   "T-4663": [
+    "merging",
+    "Host checks on the Mac mini",
+    1794928002073
+   ],
    "T-4656": [
     "mergetest",
     "Xcode checks on the MacBook, 1st to merge",
-    1794927139100
+    1794927162073
    ],
    "T-4513": [
     "merging",
     "Mac tests at the main gate",
-    1794927559100
-   ],
-   "T-1882": [
-    "merging",
-    "Mac tests at the main gate \u00b7 5 groups of tests done",
-    1794927199100
+    1794927642073
    ],
    "T-0289": [
     "merging",
-    "Mac tests at the main gate \u00b7 3 groups of tests done",
-    1794927199100
+    "Mac tests at the main gate",
+    1794928002073
    ],
    "T-3217": [
     "testing",
@@ -548,21 +568,21 @@
    "T-0687": [
     "testing",
     "its own tests, in its copy",
-    1794927259100
+    1794928122073
    ]
   },
   "nm": {
+   "T-4663": "Completion ignores letter case and small typos",
    "T-4656": "Let a cleaned script return to the widget on resend",
    "T-4513": "Show the SSD's free space on the Machine bubble",
-   "T-1882": "Count a fetch as good when the data arrived",
    "T-0289": "Build the widget state module for scripts",
    "T-3217": "Fix the three red tests before build 3",
    "T-0687": "Run network fetches inside the extension on the Simulator"
   },
   "wk": {
+   "T-4663": "Idris",
    "T-4656": "Idris",
    "T-4513": "Maren",
-   "T-1882": "Idris",
    "T-0289": "Pernille",
    "T-3217": "Idris",
    "T-0687": "Idris",
@@ -571,34 +591,42 @@
   }
  },
  "ln": {
-  "at": "2026-11-17T15:04:19Z",
+  "at": "2026-11-17T15:08:42Z",
   "mq": {
    "n": {
-    "checking": 1,
+    "checking": 2,
     "inline": 0,
     "conflicted": 1,
     "failed": 0,
     "held": 1,
-    "retry": 1,
-    "parked": 12
+    "retry": 0,
+    "parked": 14
    },
    "m": {
-    "checking": 12,
+    "checking": 9,
     "inline": null,
-    "conflicted": 679,
+    "conflicted": 684,
     "failed": null,
-    "held": 935,
-    "retry": 1,
-    "parked": 558
+    "held": 939,
+    "retry": null,
+    "parked": 478
    },
    "cur": [
+    [
+     [
+      "T-4663"
+     ],
+     "Mac tests",
+     "Mac mini",
+     2
+    ],
     [
      [
       "T-4656"
      ],
      "iPhone app tests, sent and waiting its turn",
      "MacBook",
-     12
+     16
     ]
    ],
    "ld": [
@@ -608,12 +636,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-17T15:03:25Z",
-    "ld": 5.99,
+    "at": "2026-11-17T15:08:09Z",
+    "ld": 22.9,
     "c": 8,
-    "sb": 2,
+    "sb": 3,
     "dk": [
-     22.2,
+     21.2,
      228.3
     ],
     "ss": [
@@ -621,6 +649,7 @@
      953.7
     ],
     "sn": [
+     "T4631 Idris iPhone 17e",
      "iPhone 17e",
      "T4188 Idris iPhone 17e"
     ]
@@ -696,10 +725,10 @@
   "main": 2,
   "lanes": 3,
   "total": 5,
-  "at": "10:05 AM",
+  "at": "10:08 AM",
   "why": "",
-  "at_iso": "2026-11-17T15:05:00+00:00",
+  "at_iso": "2026-11-17T15:08:00+00:00",
   "started": "9:17 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 2, started 9:17 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 10:05 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 2, started 9:17 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 10:08 AM ET</p></section>"
  }
 }

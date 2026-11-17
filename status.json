@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-17T16:38:03.799797+00:00",
+ "at": "2026-11-17T16:41:06.389919+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -129,7 +129,7 @@
    "task": "[tools] T-4755 stop runner rerunning old jobs",
    "model": "opus",
    "started": "2026-11-17T16:01:08.321Z",
-   "seconds": 2215,
+   "seconds": 2398,
    "finished": null,
    "effort": "high"
   },
@@ -138,7 +138,7 @@
    "task": "[build] T-3764 settle parked iPad window work",
    "model": "opus",
    "started": "2026-11-17T16:26:30.934Z",
-   "seconds": 692,
+   "seconds": 875,
    "finished": null,
    "effort": "high"
   }
@@ -173,7 +173,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 402,
+  "runnable_count": 404,
   "blocked_count": 59
  },
  "meter": {
@@ -222,7 +222,7 @@
   "week_pct": 36.07,
   "usage_pct": 52.2,
   "work_pct": 79.0,
-  "read_at": "2026-11-17T16:38:00+00:00",
+  "read_at": "2026-11-17T16:41:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -259,7 +259,7 @@
  "lock_in": {
   "on": false,
   "pool": 5,
-  "at": "2026-11-17T11:38:00-05:00",
+  "at": "2026-11-17T11:41:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -294,6 +294,14 @@
    "effort": "high"
   },
   {
+   "name": "Maren",
+   "state": "next",
+   "task": "Maren, P0, from T-4240 (Investor an Investor...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
    "name": "Pernille",
    "state": "next",
    "task": "Pernille, P0, Investor an Investor c6950031511 (8:53 AM...",
@@ -313,14 +321,6 @@
    "name": "Wrenna",
    "state": "next",
    "task": "Wrenna, P2, T-2375 continuation (B-staged item 3...",
-   "model": null,
-   "since": null,
-   "next": []
-  },
-  {
-   "name": "Maren",
-   "state": "next",
-   "task": "Maren, P2, found on T-3366 (11-07): in...",
    "model": null,
    "since": null,
    "next": []
@@ -351,6 +351,20 @@
   ],
   "src": "plan",
   "open": [
+   {
+    "w": "Maren",
+    "k": "tools",
+    "t": "Fix the App page row that is red on main",
+    "s": "next",
+    "o": "i"
+   },
+   {
+    "w": "Maren",
+    "k": "tools",
+    "t": "Fix the board search test that is red on main",
+    "s": "next",
+    "o": "i"
+   },
    {
     "w": "Odalys",
     "k": "tools",
@@ -406,20 +420,6 @@
     "t": "Close the iPhone premade feature and free...",
     "s": "next",
     "o": "i"
-   },
-   {
-    "w": "Pernille",
-    "k": "tools",
-    "t": "Fail any new test that reads code text",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Alarm when one account's work keeps being...",
-    "s": "next",
-    "o": "c"
    }
   ],
   "done": [
@@ -440,7 +440,7 @@
    }
   ],
   "count": {
-   "next": 402,
+   "next": 404,
    "wait": 28,
    "blocked": 31,
    "you": 8
@@ -498,22 +498,22 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-17T16:38:03Z",
+  "at": "2026-11-17T16:40:53Z",
   "s": {
    "T-4656": [
     "mergetest",
     "Xcode checks on the Mac mini",
-    1794933243799
+    1794933233731
    ],
    "T-4513": [
     "mergeq",
     "2nd to merge",
-    1794933423799
+    1794933413731
    ],
    "T-4747": [
     "mergeq",
     "2nd to merge",
-    1794933423799
+    1794933413731
    ],
    "T-3764": [
     "mergetest",
@@ -523,7 +523,7 @@
    "T-4755": [
     "merging",
     "Mac tests at the main gate",
-    1794933183799
+    1794933173731
    ]
   },
   "nm": {
@@ -544,7 +544,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-17T16:38:03Z",
+  "at": "2026-11-17T16:40:53Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -556,13 +556,13 @@
     "parked": 21
    },
    "m": {
-    "checking": 4,
-    "inline": 1,
-    "conflicted": 773,
+    "checking": 7,
+    "inline": 4,
+    "conflicted": 776,
     "failed": null,
-    "held": 541,
-    "retry": 55,
-    "parked": 91
+    "held": 544,
+    "retry": 58,
+    "parked": 94
    },
    "cur": [
     [
@@ -571,7 +571,7 @@
      ],
      "iPhone app tests",
      "Mac mini",
-     4
+     7
     ]
    ],
    "ld": [
@@ -581,12 +581,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-17T16:37:16Z",
-    "ld": 1.81,
+    "at": "2026-11-17T16:40:31Z",
+    "ld": 1.29,
     "c": 8,
     "sb": 1,
     "dk": [
-     18.9,
+     19.0,
      228.3
     ],
     "ss": [
@@ -617,32 +617,20 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Inbox \u2013 Jeremy's 11:34 AM Message on GitHub",
-   "at": "2026-11-17T11:34:56-05:00"
+   "t": "Work session \u2013 4 tasks",
+   "at": "2026-11-17T11:39:55-05:00"
   }
  ],
  "reply": {
-  "sent": "2026-11-17T15:54:07Z",
-  "seconds": 92.0
+  "sent": "2026-11-17T16:34:37Z",
+  "seconds": 317.0
  },
- "inbox": [
-  {
-   "id": "c6954285088",
-   "state": "received",
-   "position": 1,
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "Yes, fix the reds on main and clear..."
-  }
- ],
+ "inbox": [],
  "trimmed": [
   "lane_next",
   "queue_text",
   "task_done",
   "fin_short",
-  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -653,10 +641,10 @@
   "main": 2,
   "lanes": 0,
   "total": 2,
-  "at": "11:38 AM",
+  "at": "11:41 AM",
   "why": "",
-  "at_iso": "2026-11-17T16:38:00+00:00",
+  "at_iso": "2026-11-17T16:41:00+00:00",
   "started": "9:17 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 9:17 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 11:38 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 9:17 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 11:41 AM ET</p></section>"
  }
 }

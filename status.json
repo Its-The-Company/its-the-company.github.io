@@ -1,24 +1,20 @@
 {
  "schema": 1,
- "at": "2026-11-17T13:03:58.085035+00:00",
+ "at": "2026-11-17T13:07:14.329161+00:00",
  "session": {
-  "active": false,
-  "kind": "",
-  "started": null,
-  "flow": [
+  "active": true,
+  "kind": "work",
+  "started": "2026-11-17T08:03:58-05:00",
+  "flow": [],
+  "done": [
    {
     "t": "T-4661",
     "name": "Free disk space and cut the Mac mini's load",
     "acct": "Personal a",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1794920436
-     }
-    ]
-   }
-  ],
-  "done": [
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794920754
+   },
    {
     "t": "T-4663",
     "name": "Completion ignores letter case and small typos",
@@ -91,30 +87,42 @@
     "steps": [],
     "end": "landed",
     "end_at": 1794904466
-   },
-   {
-    "t": "T-4675",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794904466
    }
   ],
-  "landed": 31,
+  "landed": 32,
   "failed": 4
  },
- "workers": [],
- "who": "",
- "recent": [
+ "workers": [
   {
-   "name": "pernille",
-   "task": "[report] morning",
+   "name": "idris",
+   "task": "[build] T-4184 land parked app code",
    "model": "opus",
-   "started": "2026-11-17T12:30:02.092Z",
-   "seconds": null,
-   "finished": "2026-11-17T12:31:22.476000+00:00"
+   "started": "2026-11-17T13:06:45.804Z",
+   "seconds": 28,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "maren",
+   "task": "[site] T-4493 land the clutter cut",
+   "model": "opus",
+   "started": "2026-11-17T13:06:57.727Z",
+   "seconds": 16,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-4191 sort stale parked refs",
+   "model": "opus",
+   "started": "2026-11-17T13:07:10.329Z",
+   "seconds": 4,
+   "finished": null,
+   "effort": "high"
   }
  ],
+ "who": "Idris, Maren, Odalys",
+ "recent": [],
  "queue": {
   "runnable": [],
   "blocked": [],
@@ -162,12 +170,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-17T08:18:42-05:00",
+ "next_tick": null,
  "personal": {
   "week_pct": 33.92,
   "usage_pct": 51.5,
   "work_pct": 78.4,
-  "read_at": "2026-11-17T13:04:00+00:00",
+  "read_at": "2026-11-17T13:07:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -177,57 +185,6 @@
     "t": "Location, steps and notifications work in scripts and widgets",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-17T07:19:52-05:00",
-    "n": "Evan",
-    "src": "plan-a"
-   },
-   {
-    "lane": "a2",
-    "task": "T-4663",
-    "w": "Idris",
-    "k": "build",
-    "t": "Completion ignores letter case and small typos",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-17T07:25:12-05:00",
-    "n": "Evan",
-    "d": 1,
-    "src": "plan-a"
-   },
-   {
-    "lane": "a2",
-    "task": "T-4669",
-    "w": "Ines",
-    "k": "plan",
-    "t": "Align the plan and records with the Pro ruling",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-17T07:25:12-05:00",
-    "n": "Evan",
-    "d": 1,
-    "src": "plan-a"
-   },
-   {
-    "lane": "a3",
-    "task": "T-4661",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Free disk space and cut the Mac mini's load",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-17T07:19:52-05:00",
-    "n": "Evan",
-    "d": 1,
-    "src": "plan-a"
-   },
-   {
-    "lane": "a3",
-    "task": "T-4618",
-    "w": "Odalys",
-    "k": "measure",
-    "t": "Check the raised merge limit after two days",
-    "m": "sonnet",
-    "e": "medium",
     "at": "2026-11-17T07:19:52-05:00",
     "n": "Evan",
     "src": "plan-a"
@@ -349,7 +306,7 @@
  "lock_in": {
   "on": false,
   "pool": 5,
-  "at": "2026-11-17T08:04:00-05:00",
+  "at": "2026-11-17T08:07:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -357,22 +314,45 @@
    "b": "double-spread"
   }
  },
- "next_tick_why": "last_tick",
+ "next_tick_why": "session",
  "idle": {
   "since": "2026-11-17T07:36:00-05:00",
-  "minutes": 27,
+  "minutes": 31,
   "why": "a tick has spent 4 min on steps before the session",
   "healed": []
  },
- "pool": null,
+ "pool": {
+  "why": "Double Spread: 68% of the week left, paced to last until Wed 14:00, the week's halfway point; the machine allows 3 (at its floor: load 10.7 a core is over 10)",
+  "n": 3,
+  "at": "2026-11-17T08:03:42.685422-05:00"
+ },
  "lanes": [
   {
    "name": "Idris",
-   "state": "next",
-   "task": "Idris, P2, from T-4238 (Pernille's review, from T-3900,...",
-   "model": null,
-   "since": null,
-   "next": []
+   "state": "running",
+   "task": "[build] T-4184 land parked app code",
+   "model": "opus",
+   "since": "2026-11-17T13:06:45.804Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
+   "name": "Maren",
+   "state": "running",
+   "task": "[site] T-4493 land the clutter cut",
+   "model": "opus",
+   "since": "2026-11-17T13:06:57.727Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
+   "name": "Odalys",
+   "state": "running",
+   "task": "[tools] T-4191 sort stale parked refs",
+   "model": "opus",
+   "since": "2026-11-17T13:07:10.329Z",
+   "next": [],
+   "effort": "high"
   },
   {
    "name": "Ines",
@@ -391,32 +371,48 @@
    "next": []
   },
   {
-   "name": "Odalys",
-   "state": "next",
-   "task": "A lane record main refused: failed...",
-   "model": null,
-   "since": null,
-   "next": []
-  },
-  {
    "name": "Wrenna",
    "state": "next",
    "task": "Wrenna, P2, T-2375 continuation (B-staged item 3...",
    "model": null,
    "since": null,
    "next": []
-  },
-  {
-   "name": "Maren",
-   "state": "next",
-   "task": "Maren, P2, found on T-3366 (11-07): in...",
-   "model": null,
-   "since": null,
-   "next": []
   }
  ],
  "tasks": {
-  "run": [],
+  "run": [
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "A person's own script becomes a Home Screen widget",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-17T13:06:45.804Z",
+    "o": "i",
+    "task": "T-4184"
+   },
+   {
+    "w": "Maren",
+    "k": "site",
+    "t": "Cut clutter text on the pages still carrying it",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-17T13:06:57.727Z",
+    "o": "i",
+    "task": "T-4493"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "VoiceOver and large text work on every screen",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-17T13:07:10.329Z",
+    "o": "c",
+    "task": "T-4191"
+   }
+  ],
+  "src": "plan",
   "open": [
    {
     "w": "Idris",
@@ -491,6 +487,11 @@
   ],
   "done": [
    {
+    "w": "Odalys",
+    "t": "The Mac mini got 9.9 GB of disk back (old test leftovers and two unused test phones), and the...",
+    "at": "2026-11-17T08:05:00-05:00"
+   },
+   {
     "w": "Ines",
     "t": "The Handbook now says no part of the app is finished until it has a plain-English page and a...",
     "at": "2026-11-17T07:52:00-05:00"
@@ -499,11 +500,6 @@
     "w": "Ines",
     "t": "Background refresh is no longer behind Pro: the Investors made it free for everyone, 9:43 PM ET...",
     "at": "2026-11-17T07:30:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "When a task finishes mid-session and lands early, its board tick now lands with it instead of...",
-    "at": "2026-11-17T07:12:00-05:00"
    }
   ],
   "count": {
@@ -511,6 +507,15 @@
    "wait": 28,
    "blocked": 31,
    "you": 8
+  },
+  "fin": {
+   "n": 1,
+   "rows": [
+    [
+     "T-4661",
+     "Free disk space and cut the..."
+    ]
+   ]
   }
  },
  "qr": [
@@ -552,94 +557,71 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-17T13:03:58Z",
+  "at": "2026-11-17T13:07:14Z",
   "s": {
-   "T-4661": [
-    "merging",
-    "Host checks on the Mac mini",
-    1794920458085
-   ],
    "T-4273": [
-    "testq",
-    "1st for a Simulator",
-    1794920638085
+    "testing",
+    "Mac Mini \u00b7 test",
+    null
    ],
    "T-4530": [
-    "testq",
-    "1st for a Simulator",
-    1794920638085
+    "testing",
+    "Mac Mini \u00b7 test",
+    null
    ],
    "T-4742": [
-    "testq",
-    "1st for a Simulator",
-    1794920638085
-   ],
-   "T-4669": [
-    "merged",
-    "on main 7:30 AM ET",
-    1794918619000,
-    ""
+    "testing",
+    "Mac Mini \u00b7 test",
+    null
    ]
   },
   "nm": {
-   "T-4661": "Free disk space and cut the Mac mini's load",
    "T-4273": "Add the app documentation step to the Handbook",
    "T-4530": "Make Queued the one queue list on Home",
-   "T-4742": "Make main pass its Xcode checks again",
-   "T-4669": "Align the plan and records with the Pro ruling"
+   "T-4742": "Make main pass its Xcode checks again"
   },
   "wk": {
-   "T-4661": "Odalys",
    "T-4273": "Ines",
    "T-4530": "Maren",
    "T-4742": "Operator",
-   "T-4669": "Ines"
+   "T-4661": "Odalys"
   }
  },
  "ln": {
-  "at": "2026-11-17T13:03:58Z",
+  "at": "2026-11-17T13:07:14Z",
   "mq": {
    "n": {
-    "checking": 1,
+    "checking": 0,
     "inline": 0,
     "conflicted": 2,
     "failed": 1,
     "held": 0,
     "retry": 0,
-    "parked": 16
+    "parked": 17
    },
    "m": {
-    "checking": 3,
+    "checking": null,
     "inline": null,
-    "conflicted": 899,
-    "failed": 3,
+    "conflicted": 902,
+    "failed": 6,
     "held": null,
     "retry": null,
-    "parked": 438
+    "parked": 441
    },
-   "cur": [
-    [
-     [
-      "T-4661"
-     ],
-     "Mac tests",
-     "Mac mini",
-     3
-    ]
-   ],
+   "cur": [],
    "ld": [
-    12,
-    "2026-11-17T12:52:43Z"
+    13,
+    "2026-11-17T13:05:54Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-17T13:03:59Z",
-    "ld": 10.29,
+    "at": "2026-11-17T13:07:25Z",
+    "ld": 9.73,
     "c": 8,
     "sb": 1,
     "dk": [
-     22.2,
+     26.8,
      228.3
     ],
     "ss": [
@@ -666,28 +648,17 @@
  "operators": [
   {
    "w": "Operator",
-   "a": "Evan's Account",
+   "a": "Main plan",
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 1 task",
-   "at": "2026-11-17T07:19:51-05:00"
+   "t": "Work session \u2013 4 tasks",
+   "at": "2026-11-17T08:03:58-05:00"
   },
   {
    "w": "Operator",
    "a": "Evan's Account",
    "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session",
-   "at": "2026-11-17T07:25:11-05:00"
-  },
-  {
-   "w": "Operator",
-   "a": "Evan's Account",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
    "t": "Work session \u2013 1 task",
    "at": "2026-11-17T07:19:52-05:00"
   },
@@ -695,8 +666,6 @@
    "w": "Operator",
    "a": "Jeremy's Account",
    "sr": 1,
-   "m": "opus",
-   "e": "high",
    "t": "Work session \u2013 1 task",
    "at": "2026-11-17T07:51:48-05:00"
   },
@@ -704,17 +673,13 @@
    "w": "Operator",
    "a": "Jeremy's Account",
    "sr": 1,
-   "m": "opus",
-   "e": "high",
    "t": "Work session \u2013 3 tasks",
-   "at": "2026-11-17T07:58:09-05:00"
+   "at": "2026-11-17T07:58:10-05:00"
   },
   {
    "w": "Operator",
    "a": "Jeremy's Account",
    "sr": 1,
-   "m": "opus",
-   "e": "high",
    "t": "Work session \u2013 2 tasks",
    "at": "2026-11-17T07:46:11-05:00"
   }
@@ -728,6 +693,7 @@
   "lane_next",
   "queue_text",
   "task_done",
+  "fin_short",
   "task_title",
   "done_text",
   "task_open",
@@ -735,13 +701,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 0,
-  "lanes": 6,
-  "total": 6,
-  "at": "8:04 AM",
+  "main": 3,
+  "lanes": 4,
+  "total": 7,
+  "at": "8:07 AM",
   "why": "",
-  "at_iso": "2026-11-17T13:04:00+00:00",
-  "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 6 sessions \u00b7 as of 8:04 AM ET</p></section>"
+  "at_iso": "2026-11-17T13:07:00+00:00",
+  "started": "8:03 AM",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 3, started 8:03 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 8:07 AM ET</p></section>"
  }
 }

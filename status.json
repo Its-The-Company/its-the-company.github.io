@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-17T15:58:08.436186+00:00",
+ "at": "2026-11-17T16:01:11.997046+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -129,22 +129,30 @@
    "task": "[build] T-1882 finish landing parked work",
    "model": "opus",
    "started": "2026-11-17T15:07:11.689Z",
-   "seconds": 3056,
+   "seconds": 3240,
    "finished": null,
    "effort": "high"
   },
+  {
+   "name": "odalys",
+   "task": "[tools] T-4755 stop runner rerunning old jobs",
+   "model": "opus",
+   "started": "2026-11-17T16:01:08.321Z",
+   "seconds": 3,
+   "finished": null,
+   "effort": "high"
+  }
+ ],
+ "who": "Idris, Odalys",
+ "recent": [
   {
    "name": "pernille",
    "task": "[build] T-0289 land parked state module",
    "model": "opus",
    "started": "2026-11-17T14:21:25.112Z",
-   "seconds": 5803,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Idris, Pernille",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-17T16:00:53.549000+00:00"
+  },
   {
    "name": "idris",
    "task": "[build] T-0687 land parked extension work",
@@ -206,7 +214,7 @@
   "week_pct": 36.07,
   "usage_pct": 52.2,
   "work_pct": 79.0,
-  "read_at": "2026-11-17T15:58:00+00:00",
+  "read_at": "2026-11-17T16:01:00+00:00",
   "running": [
    {
     "lane": "a3",
@@ -268,7 +276,7 @@
  "lock_in": {
   "on": false,
   "pool": 5,
-  "at": "2026-11-17T10:58:00-05:00",
+  "at": "2026-11-17T11:01:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -285,15 +293,6 @@
  },
  "lanes": [
   {
-   "name": "Pernille",
-   "state": "running",
-   "task": "[build] T-0289 land parked state module",
-   "model": "opus",
-   "since": "2026-11-17T14:21:25.112Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
    "name": "Idris",
    "state": "running",
    "task": "[build] T-1882 finish landing parked work",
@@ -304,8 +303,17 @@
   },
   {
    "name": "Odalys",
+   "state": "running",
+   "task": "[tools] T-4755 stop runner rerunning old jobs",
+   "model": "opus",
+   "since": "2026-11-17T16:01:08.321Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
+   "name": "Pernille",
    "state": "next",
-   "task": "Odalys, P0 (merge-blocking):...",
+   "task": "Pernille, P0, Investor an Investor c6950031511 (8:53 AM...",
    "model": null,
    "since": null,
    "next": []
@@ -338,16 +346,6 @@
  "tasks": {
   "run": [
    {
-    "w": "Pernille",
-    "k": "build",
-    "t": "Build the widget state module for scripts",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-17T14:21:25.112Z",
-    "o": "c",
-    "task": "T-0289"
-   },
-   {
     "w": "Idris",
     "k": "build",
     "t": "Count a fetch as good when the data arrived",
@@ -356,6 +354,16 @@
     "at": "2026-11-17T15:07:11.689Z",
     "o": "c",
     "task": "T-1882"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Stop the MacBook runner rerunning old jobs",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-17T16:01:08.321Z",
+    "o": "c",
+    "task": "T-4755"
    }
   ],
   "src": "plan",
@@ -507,46 +515,39 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-17T15:57:49Z",
+  "at": "2026-11-17T16:00:50Z",
   "s": {
    "T-4656": [
     "mergetest",
     "Xcode checks on the Mac mini",
-    1794930409928
+    1794930410728
    ],
    "T-4513": [
     "mergeq",
     "1st to merge",
-    1794930589928
-   ],
-   "T-0289": [
-    "merging",
-    "Mac tests at the main gate",
-    1794930709928
+    1794930590728
    ],
    "T-0687": [
     "testing",
     "its own tests, in its copy",
-    1794928189928
+    1794928190728
    ]
   },
   "nm": {
    "T-4656": "Let a cleaned script return to the widget on resend",
    "T-4513": "Show the SSD's free space on the Machine bubble",
-   "T-0289": "Build the widget state module for scripts",
    "T-0687": "Run network fetches inside the extension on the Simulator"
   },
   "wk": {
    "T-4656": "Idris",
    "T-4513": "Maren",
-   "T-0289": "Pernille",
    "T-0687": "Idris",
    "T-4417": "Idris",
    "T-4416": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-17T15:57:49Z",
+  "at": "2026-11-17T16:00:50Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -558,13 +559,13 @@
     "parked": 23
    },
    "m": {
-    "checking": 11,
-    "inline": 8,
-    "conflicted": 733,
+    "checking": 14,
+    "inline": 11,
+    "conflicted": 736,
     "failed": null,
-    "held": 501,
-    "retry": 26,
-    "parked": 51
+    "held": 504,
+    "retry": 29,
+    "parked": 54
    },
    "cur": [
     [
@@ -573,7 +574,7 @@
      ],
      "iPhone app tests",
      "Mac mini",
-     11
+     14
     ]
    ],
    "ld": [
@@ -583,8 +584,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-17T15:57:24Z",
-    "ld": 1.47,
+    "at": "2026-11-17T16:00:07Z",
+    "ld": 1.0,
     "c": 8,
     "sb": 1,
     "dk": [
@@ -619,7 +620,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 7 tasks",
+   "t": "Work session \u2013 6 tasks",
    "at": "2026-11-17T09:17:58-05:00"
   },
   {
@@ -652,10 +653,10 @@
   "main": 2,
   "lanes": 1,
   "total": 3,
-  "at": "10:58 AM",
+  "at": "11:01 AM",
   "why": "",
-  "at_iso": "2026-11-17T15:58:00+00:00",
+  "at_iso": "2026-11-17T16:01:00+00:00",
   "started": "9:17 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 9:17 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 10:58 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 9:17 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 11:01 AM ET</p></section>"
  }
 }

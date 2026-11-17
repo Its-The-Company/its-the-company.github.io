@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-17T14:36:17.292457+00:00",
+ "at": "2026-11-17T14:39:21.679207+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -111,7 +111,7 @@
    "task": "[build] T-0687 land parked extension work",
    "model": "opus",
    "started": "2026-11-17T14:21:15.257Z",
-   "seconds": 902,
+   "seconds": 1086,
    "finished": null,
    "effort": "high"
   },
@@ -120,7 +120,7 @@
    "task": "[build] T-0289 land parked state module",
    "model": "opus",
    "started": "2026-11-17T14:21:25.112Z",
-   "seconds": 892,
+   "seconds": 1076,
    "finished": null,
    "effort": "high"
   }
@@ -179,7 +179,7 @@
   "week_pct": 36.07,
   "usage_pct": 52.2,
   "work_pct": 79.0,
-  "read_at": "2026-11-17T14:36:00+00:00",
+  "read_at": "2026-11-17T14:39:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -326,7 +326,7 @@
  "lock_in": {
   "on": false,
   "pool": 5,
-  "at": "2026-11-17T09:36:00-05:00",
+  "at": "2026-11-17T09:39:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -556,12 +556,17 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-17T14:35:58Z",
+  "at": "2026-11-17T14:39:13Z",
   "s": {
    "T-4656": [
     "merging",
     "Host checks on the Mac mini",
-    1794926098257
+    1794926053916
+   ],
+   "T-4599": [
+    "mergeq",
+    "1st to merge",
+    1794926233916
    ],
    "T-0289": [
     "mergetest",
@@ -570,34 +575,36 @@
    ],
    "T-4417": [
     "merging",
-    "Mac tests at the main gate",
-    1794925978257
+    "Mac tests at the main gate \u00b7 5 groups of tests done",
+    1794925993916
    ],
    "T-0687": [
     "testing",
     "its own tests, in its copy",
-    1794925978257
+    1794925993916
    ]
   },
   "nm": {
    "T-4656": "Let a cleaned script return to the widget on resend",
+   "T-4599": "Check finished work before it ships",
    "T-0289": "Build the widget state module for scripts",
    "T-4417": "Close the rerun rule's test gaps",
    "T-0687": "Run network fetches inside the extension on the Simulator"
   },
   "wk": {
    "T-4656": "Idris",
+   "T-4599": "Odalys",
    "T-0289": "Pernille",
    "T-4417": "Idris",
    "T-0687": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-17T14:35:58Z",
+  "at": "2026-11-17T14:39:13Z",
   "mq": {
    "n": {
     "checking": 1,
-    "inline": 0,
+    "inline": 1,
     "conflicted": 1,
     "failed": 0,
     "held": 1,
@@ -605,13 +612,13 @@
     "parked": 13
    },
    "m": {
-    "checking": 1,
-    "inline": null,
-    "conflicted": 651,
+    "checking": 5,
+    "inline": 2,
+    "conflicted": 654,
     "failed": null,
-    "held": 906,
-    "retry": 20,
-    "parked": 530
+    "held": 910,
+    "retry": 23,
+    "parked": 533
    },
    "cur": [
     [
@@ -620,7 +627,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     1
+     5
     ]
    ],
    "ld": [
@@ -630,12 +637,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-17T14:35:12Z",
-    "ld": 1.25,
+    "at": "2026-11-17T14:38:51Z",
+    "ld": 0.84,
     "c": 8,
     "sb": 2,
     "dk": [
-     23.7,
+     23.6,
      228.3
     ],
     "ss": [
@@ -712,19 +719,31 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 2 tasks",
-   "at": "2026-11-17T09:29:09-05:00"
+   "t": "Inbox \u2013 Evan's 9:37 AM Message on GitHub",
+   "at": "2026-11-17T09:37:38-05:00"
   }
  ],
  "reply": {
   "sent": "2026-11-17T14:30:32Z",
   "seconds": 68.0
  },
- "inbox": [],
+ "inbox": [
+  {
+   "id": "c6951158380",
+   "state": "received",
+   "position": 1,
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "source-text checks should fail the..."
+  }
+ ],
  "trimmed": [
   "lane_next",
   "queue_text",
   "task_done",
+  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -735,10 +754,10 @@
   "main": 2,
   "lanes": 5,
   "total": 7,
-  "at": "9:36 AM",
+  "at": "9:39 AM",
   "why": "",
-  "at_iso": "2026-11-17T14:36:00+00:00",
+  "at_iso": "2026-11-17T14:39:00+00:00",
   "started": "9:17 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 2, started 9:17 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 9:36 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 2, started 9:17 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 9:39 AM ET</p></section>"
  }
 }

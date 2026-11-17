@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-17T18:02:54.286668+00:00",
+ "at": "2026-11-17T18:06:54.597939+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -110,26 +110,26 @@
    "task": "[build] T-3564 land device-limit fixes from parked ref",
    "model": "opus",
    "started": "2026-11-17T17:49:46.991Z",
-   "seconds": 787,
+   "seconds": 1027,
    "finished": null,
    "effort": "high"
-  },
+  }
+ ],
+ "who": "Idris",
+ "recent": [
   {
    "name": "idris",
    "task": "[test] T-3560 land first-render test fixes from parked ref",
    "model": "opus",
    "started": "2026-11-17T17:49:58.500Z",
-   "seconds": 775,
-   "finished": null,
-   "effort": "high"
+   "seconds": null,
+   "finished": "2026-11-17T18:06:13.820000+00:00"
   }
  ],
- "who": "Idris x2",
- "recent": [],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 399,
+  "runnable_count": 398,
   "blocked_count": 58
  },
  "meter": {
@@ -178,20 +178,8 @@
   "week_pct": 39.28,
   "usage_pct": 53.6,
   "work_pct": 80.0,
-  "read_at": "2026-11-17T18:04:00+00:00",
+  "read_at": "2026-11-17T18:08:00+00:00",
   "running": [
-   {
-    "lane": "a",
-    "task": "T-4188",
-    "w": "Idris",
-    "k": "build",
-    "t": "Location, steps and notifications work in scripts and widgets",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-17T12:26:28-05:00",
-    "n": "Evan",
-    "src": "plan-a"
-   },
    {
     "lane": "b",
     "task": "T-4183",
@@ -224,23 +212,23 @@
   }
  ],
  "disk": {
-  "free_gb": 18,
+  "free_gb": 13,
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 174
+   "free_gb": 176
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-17T12:59:00-05:00",
+   "at": "2026-11-17T13:07:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 6,
-  "at": "2026-11-17T13:04:00-05:00",
+  "at": "2026-11-17T13:08:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -317,16 +305,6 @@
     "at": "2026-11-17T17:49:46.991Z",
     "o": "c",
     "task": "T-3564"
-   },
-   {
-    "w": "Idris",
-    "k": "test",
-    "t": "Tighten the per-premade first-render tests",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-17T17:49:58.500Z",
-    "o": "c",
-    "task": "T-3560"
    }
   ],
   "src": "plan",
@@ -404,6 +382,11 @@
   ],
   "done": [
    {
+    "w": "Idris",
+    "t": "The tests that check each ready-made widget draws on first open now check every moment in its...",
+    "at": "2026-11-17T13:05:00-05:00"
+   },
+   {
     "w": "Pernille",
     "t": "Python scripts can now keep small saved values per widget, with clear errors when a value is too...",
     "at": "2026-11-17T12:49:00-05:00"
@@ -412,22 +395,21 @@
     "w": "Odalys",
     "t": "The App Store screenshot work passed review with one fix owed: the iPad shot shows a widget...",
     "at": "2026-11-17T12:48:00-05:00"
-   },
-   {
-    "w": "Pernille",
-    "t": "The review of the network-fetch test cases and the Mac stand-in for fetching passed with two...",
-    "at": "2026-11-17T12:48:00-05:00"
    }
   ],
   "count": {
-   "next": 399,
+   "next": 398,
    "wait": 27,
    "blocked": 31,
    "you": 8
   },
   "fin": {
-   "n": 3,
+   "n": 4,
    "rows": [
+    [
+     "T-3560",
+     "Tighten the per-premade..."
+    ],
     [
      "T-0289",
      "Build the widget state..."
@@ -482,33 +464,27 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-17T18:02:54Z",
+  "at": "2026-11-17T18:06:54Z",
   "s": {
-   "T-3560": [
-    "mergetest",
-    "iPhone tests on the MacBook",
-    null
-   ],
    "T-3564": [
-    "merging",
-    "Mac tests at the main gate",
-    1794938214286
+    "testing",
+    "its own tests, in its copy",
+    1794938214597
    ]
   },
   "nm": {
-   "T-3560": "Tighten the per-premade first-render tests",
    "T-3564": "Stop other errors saying a sensor is missing"
   },
   "wk": {
-   "T-3560": "Idris",
    "T-3564": "Idris",
+   "T-3560": "Idris",
    "T-0289": "Pernille",
    "T-4599": "Odalys",
    "T-4600": "Pernille"
   }
  },
  "ln": {
-  "at": "2026-11-17T18:02:54Z",
+  "at": "2026-11-17T18:06:54Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -517,16 +493,16 @@
     "failed": 0,
     "held": 2,
     "retry": 0,
-    "parked": 17
+    "parked": 16
    },
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 858,
+    "conflicted": 862,
     "failed": null,
-    "held": 626,
+    "held": 630,
     "retry": null,
-    "parked": 139
+    "parked": 143
    },
    "cur": [],
    "ld": [
@@ -536,27 +512,29 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-17T18:02:38Z",
-    "ld": 15.8,
+    "at": "2026-11-17T18:07:54Z",
+    "ld": 26.69,
     "c": 8,
-    "sb": 0,
+    "sb": 1,
     "dk": [
-     16.4,
+     13.5,
      228.3
     ],
     "ss": [
-     173.7,
+     175.9,
      953.7
     ],
-    "sn": []
+    "sn": [
+     "T2027 Idris never-used 1117c"
+    ]
    },
    "macbook": {
-    "at": "2026-11-17T17:56:56Z",
-    "ld": 1.03,
+    "at": "2026-11-17T18:04:43Z",
+    "ld": 1.54,
     "c": 12,
     "sb": 0,
     "dk": [
-     322.6,
+     322.5,
      926.4
     ],
     "sn": []
@@ -570,17 +548,8 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 11 tasks",
+   "t": "Work session \u2013 10 tasks",
    "at": "2026-11-17T12:48:19-05:00"
-  },
-  {
-   "w": "Operator",
-   "a": "Evan's Account",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session \u2013 1 task",
-   "at": "2026-11-17T12:26:27-05:00"
   },
   {
    "w": "Operator",
@@ -609,13 +578,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 2,
-  "lanes": 2,
-  "total": 4,
-  "at": "1:04 PM",
+  "main": 1,
+  "lanes": 1,
+  "total": 2,
+  "at": "1:08 PM",
   "why": "",
-  "at_iso": "2026-11-17T18:04:00+00:00",
+  "at_iso": "2026-11-17T18:08:00+00:00",
   "started": "12:48 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 2, started 12:48 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 1:04 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 1, started 12:48 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 1:08 PM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-17T14:00:09.670844+00:00",
+ "at": "2026-11-17T14:03:09.395270+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -92,21 +92,19 @@
    }
   ],
   "landed": 27,
-  "failed": 6
+  "failed": 5
  },
- "workers": [
+ "workers": [],
+ "who": "",
+ "recent": [
   {
    "name": "maren",
    "task": "[site] T-4493 land the clutter cut",
    "model": "opus",
    "started": "2026-11-17T13:06:57.727Z",
-   "seconds": 3191,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Maren",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-17T14:03:07.038000+00:00"
+  },
   {
    "name": "idris",
    "task": "[build] T-4184 land parked app code",
@@ -176,7 +174,7 @@
   "week_pct": 33.92,
   "usage_pct": 51.5,
   "work_pct": 78.4,
-  "read_at": "2026-11-17T14:00:00+00:00",
+  "read_at": "2026-11-17T14:03:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -238,7 +236,7 @@
  "lock_in": {
   "on": false,
   "pool": 5,
-  "at": "2026-11-17T09:00:00-05:00",
+  "at": "2026-11-17T09:03:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -255,13 +253,12 @@
  },
  "lanes": [
   {
-   "name": "Maren",
-   "state": "running",
-   "task": "[site] T-4493 land the clutter cut",
-   "model": "opus",
-   "since": "2026-11-17T13:06:57.727Z",
-   "next": [],
-   "effort": "high"
+   "name": "Pernille",
+   "state": "next",
+   "task": "Pernille, P0, Investor an Investor c6950031511 (8:53 AM...",
+   "model": null,
+   "since": null,
+   "next": []
   },
   {
    "name": "Idris",
@@ -275,14 +272,6 @@
    "name": "Ines",
    "state": "next",
    "task": "Ines, P2, from T-1110 (Wrenna,...",
-   "model": null,
-   "since": null,
-   "next": []
-  },
-  {
-   "name": "Pernille",
-   "state": "next",
-   "task": "Pernille, P1, premades and gallery take the age line...",
    "model": null,
    "since": null,
    "next": []
@@ -302,23 +291,27 @@
    "model": null,
    "since": null,
    "next": []
+  },
+  {
+   "name": "Maren",
+   "state": "next",
+   "task": "Maren, P2, found on T-3366 (11-07): in...",
+   "model": null,
+   "since": null,
+   "next": []
   }
  ],
  "tasks": {
-  "run": [
-   {
-    "w": "Maren",
-    "k": "site",
-    "t": "Cut clutter text on the pages still carrying it",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-17T13:06:57.727Z",
-    "o": "i",
-    "task": "T-4493"
-   }
-  ],
+  "run": [],
   "src": "plan",
   "open": [
+   {
+    "w": "Pernille",
+    "k": "tools",
+    "t": "Rewrite or drop outdated tests that read...",
+    "s": "next",
+    "o": "c"
+   },
    {
     "w": "Idris",
     "k": "measure",
@@ -381,13 +374,6 @@
     "t": "Commit the company's records once per...",
     "s": "next",
     "o": "i"
-   },
-   {
-    "w": "Ines",
-    "k": "plan",
-    "t": "Post the queue audit report in the main thread",
-    "s": "next",
-    "o": "c"
    }
   ],
   "done": [
@@ -470,26 +456,16 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-17T13:59:58Z",
-  "s": {
-   "T-4493": [
-    "merging",
-    "Mac tests at the main gate",
-    1794923818169
-   ]
-  },
-  "nm": {
-   "T-4493": "Cut clutter text on the pages still carrying it"
-  },
+  "at": "2026-11-17T14:03:09Z",
+  "s": {},
   "wk": {
-   "T-4493": "Maren",
    "T-0906": "Idris",
    "T-2498": "Idris",
    "T-4661": "Odalys"
   }
  },
  "ln": {
-  "at": "2026-11-17T13:59:58Z",
+  "at": "2026-11-17T14:03:09Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -503,11 +479,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 615,
-    "failed": 6,
-    "held": 870,
+    "conflicted": 618,
+    "failed": 9,
+    "held": 874,
     "retry": null,
-    "parked": 494
+    "parked": 497
    },
    "cur": [],
    "ld": [
@@ -517,7 +493,7 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-17T13:59:09Z",
+    "at": "2026-11-17T14:03:09Z",
     "ld": 0.57,
     "c": 8,
     "sb": 1,
@@ -554,7 +530,7 @@
    "m": "opus",
    "e": "high",
    "t": "Work session \u2013 1 task",
-   "at": "2026-11-17T08:54:33-05:00"
+   "at": "2026-11-17T09:03:06-05:00"
   },
   {
    "w": "Operator",
@@ -576,8 +552,8 @@
   }
  ],
  "reply": {
-  "sent": "2026-11-17T13:53:14Z",
-  "seconds": 79.0
+  "sent": "2026-11-17T14:01:59Z",
+  "seconds": 66.0
  },
  "inbox": [],
  "trimmed": [
@@ -592,13 +568,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 1,
+  "main": 0,
   "lanes": 2,
-  "total": 3,
-  "at": "9:00 AM",
+  "total": 2,
+  "at": "9:03 AM",
   "why": "",
-  "at_iso": "2026-11-17T14:00:00+00:00",
+  "at_iso": "2026-11-17T14:03:00+00:00",
   "started": "8:03 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 1, started 8:03 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 9:00 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0, started 8:03 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 9:03 AM ET</p></section>"
  }
 }

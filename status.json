@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-17T16:25:43.493985+00:00",
+ "at": "2026-11-17T16:28:48.857968+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -129,22 +129,30 @@
    "task": "[tools] T-4755 stop runner rerunning old jobs",
    "model": "opus",
    "started": "2026-11-17T16:01:08.321Z",
-   "seconds": 1475,
+   "seconds": 1660,
    "finished": null,
    "effort": "high"
   },
   {
    "name": "idris",
-   "task": "[build] T-1882 finish landing parked work",
+   "task": "[build] T-3764 settle parked iPad window work",
    "model": "opus",
-   "started": "2026-11-17T15:07:11.689Z",
-   "seconds": 4711,
+   "started": "2026-11-17T16:26:30.934Z",
+   "seconds": 137,
    "finished": null,
    "effort": "high"
   }
  ],
  "who": "Odalys, Idris",
  "recent": [
+  {
+   "name": "idris",
+   "task": "[build] T-1882 finish landing parked work",
+   "model": "opus",
+   "started": "2026-11-17T15:07:11.689Z",
+   "seconds": null,
+   "finished": "2026-11-17T16:25:59.595000+00:00"
+  },
   {
    "name": "pernille",
    "task": "[build] T-0289 land parked state module",
@@ -214,7 +222,7 @@
   "week_pct": 36.07,
   "usage_pct": 52.2,
   "work_pct": 79.0,
-  "read_at": "2026-11-17T16:25:00+00:00",
+  "read_at": "2026-11-17T16:28:00+00:00",
   "running": [
    {
     "lane": "a3",
@@ -277,7 +285,7 @@
  "lock_in": {
   "on": false,
   "pool": 5,
-  "at": "2026-11-17T11:25:00-05:00",
+  "at": "2026-11-17T11:28:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -294,20 +302,20 @@
  },
  "lanes": [
   {
-   "name": "Idris",
-   "state": "running",
-   "task": "[build] T-1882 finish landing parked work",
-   "model": "opus",
-   "since": "2026-11-17T15:07:11.689Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
    "name": "Odalys",
    "state": "running",
    "task": "[tools] T-4755 stop runner rerunning old jobs",
    "model": "opus",
    "since": "2026-11-17T16:01:08.321Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
+   "name": "Idris",
+   "state": "running",
+   "task": "[build] T-3764 settle parked iPad window work",
+   "model": "opus",
+   "since": "2026-11-17T16:26:30.934Z",
    "next": [],
    "effort": "high"
   },
@@ -347,16 +355,6 @@
  "tasks": {
   "run": [
    {
-    "w": "Idris",
-    "k": "build",
-    "t": "Count a fetch as good when the data arrived",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-17T15:07:11.689Z",
-    "o": "c",
-    "task": "T-1882"
-   },
-   {
     "w": "Odalys",
     "k": "tools",
     "t": "Stop the MacBook runner rerunning old jobs",
@@ -365,6 +363,16 @@
     "at": "2026-11-17T16:01:08.321Z",
     "o": "c",
     "task": "T-4755"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "Make the iPad window test fail without the fix",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-17T16:26:30.934Z",
+    "o": "c",
+    "task": "T-3764"
    }
   ],
   "src": "plan",
@@ -516,12 +524,17 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-17T16:25:37Z",
+  "at": "2026-11-17T16:28:33Z",
   "s": {
    "T-4656": [
     "merging",
     "Host checks on the Mac mini",
-    1794932317515
+    1794932313510
+   ],
+   "T-4747": [
+    "mergeq",
+    "2nd to merge",
+    1794932853510
    ],
    "T-0687": [
     "mergetest",
@@ -531,43 +544,44 @@
    "T-4513": [
     "merging",
     "Mac tests at the main gate",
-    1794927637515
+    1794927633510
    ],
    "T-4755": [
     "testing",
     "its own tests, in its copy",
-    1794932257515
+    1794932253510
    ],
-   "T-1882": [
-    "merged",
-    "on main 11:08 AM ET",
-    1794931724000,
-    "Idris"
+   "T-3764": [
+    "testing",
+    "its own tests, in its copy",
+    1794932913510
    ]
   },
   "nm": {
    "T-4656": "Let a cleaned script return to the widget on resend",
+   "T-4747": "Show each umbrella's progress and its running steps on Home",
    "T-0687": "Run network fetches inside the extension on the Simulator",
    "T-4513": "Show the SSD's free space on the Machine bubble",
    "T-4755": "Stop the MacBook runner rerunning old jobs",
-   "T-1882": "Count a fetch as good when the data arrived"
+   "T-3764": "Make the iPad window test fail without the fix"
   },
   "wk": {
    "T-4656": "Idris",
+   "T-4747": "Maren",
    "T-0687": "Idris",
    "T-4513": "Maren",
    "T-4755": "Odalys",
-   "T-1882": "Idris",
+   "T-3764": "Idris",
    "T-4417": "Idris",
    "T-4416": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-17T16:25:37Z",
+  "at": "2026-11-17T16:28:33Z",
   "mq": {
    "n": {
     "checking": 1,
-    "inline": 0,
+    "inline": 1,
     "conflicted": 1,
     "failed": 0,
     "held": 2,
@@ -575,13 +589,13 @@
     "parked": 21
    },
    "m": {
-    "checking": 7,
-    "inline": null,
-    "conflicted": 761,
+    "checking": 10,
+    "inline": 1,
+    "conflicted": 764,
     "failed": null,
-    "held": 529,
-    "retry": 43,
-    "parked": 79
+    "held": 532,
+    "retry": 46,
+    "parked": 82
    },
    "cur": [
     [
@@ -590,7 +604,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     7
+     10
     ]
    ],
    "ld": [
@@ -600,8 +614,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-17T16:24:51Z",
-    "ld": 1.72,
+    "at": "2026-11-17T16:28:10Z",
+    "ld": 1.45,
     "c": 8,
     "sb": 1,
     "dk": [
@@ -636,7 +650,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 6 tasks",
+   "t": "Work session \u2013 2 tasks",
    "at": "2026-11-17T09:17:58-05:00"
   },
   {
@@ -645,7 +659,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 1 task",
+   "t": "Work session",
    "at": "2026-11-17T10:55:40-05:00"
   }
  ],
@@ -669,10 +683,10 @@
   "main": 2,
   "lanes": 1,
   "total": 3,
-  "at": "11:25 AM",
+  "at": "11:28 AM",
   "why": "",
-  "at_iso": "2026-11-17T16:25:00+00:00",
+  "at_iso": "2026-11-17T16:28:00+00:00",
   "started": "9:17 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 9:17 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 11:25 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 9:17 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 11:28 AM ET</p></section>"
  }
 }

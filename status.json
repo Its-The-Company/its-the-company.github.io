@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-17T22:37:09.451606+00:00",
+ "at": "2026-11-17T22:40:16.654793+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -146,7 +146,7 @@
    "task": "[tools] T-4779 T-4780 reds, reland T-4730",
    "model": "opus",
    "started": "2026-11-17T22:22:02.061Z",
-   "seconds": 907,
+   "seconds": 1094,
    "finished": null,
    "effort": "high"
   },
@@ -155,7 +155,7 @@
    "task": "[tools] T-4753 fail new source-text tests",
    "model": "opus",
    "started": "2026-11-17T21:05:08.821Z",
-   "seconds": 5520,
+   "seconds": 5707,
    "finished": null,
    "effort": "high"
   }
@@ -198,7 +198,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 414,
+  "runnable_count": 413,
   "blocked_count": 58
  },
  "meter": {
@@ -247,7 +247,7 @@
   "week_pct": 38.85,
   "usage_pct": 52.6,
   "work_pct": 79.4,
-  "read_at": "2026-11-17T22:37:00+00:00",
+  "read_at": "2026-11-17T22:40:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -321,7 +321,7 @@
  "lock_in": {
   "on": false,
   "pool": 7,
-  "at": "2026-11-17T17:37:00-05:00",
+  "at": "2026-11-17T17:40:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -487,6 +487,11 @@
   "done": [
    {
     "w": "Maren",
+    "t": "A site test passed on the office Mac but failed in a clean copy, because it read a status file...",
+    "at": "2026-11-17T17:39:00-05:00"
+   },
+   {
+    "w": "Maren",
     "t": "The design mockup pages the Investors read showed clock times in 24-hour form; all 24 now read...",
     "at": "2026-11-17T17:28:00-05:00"
    },
@@ -494,22 +499,21 @@
     "w": "Maren",
     "t": "Home now shows each feature's progress as 'N of M merged, K building', and while a feature is...",
     "at": "2026-11-17T16:35:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "The Home task list test is green again. Its Bottlenecks check was fixed this morning...",
-    "at": "2026-11-17T16:05:00-05:00"
    }
   ],
   "count": {
-   "next": 414,
+   "next": 413,
    "wait": 27,
    "blocked": 31,
    "you": 8
   },
   "fin": {
-   "n": 4,
+   "n": 5,
    "rows": [
+    [
+     "T-4780",
+     "Fix the live site test that..."
+    ],
     [
      "T-4779",
      "Show 12-hour times in the..."
@@ -568,67 +572,72 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-17T22:36:48Z",
+  "at": "2026-11-17T22:40:01Z",
   "s": {
    "T-4760": [
     "mergeq",
     "1st to merge",
-    1794954228921
+    1794954241141
    ],
    "T-4763": [
     "mergeq",
     "2nd to merge",
-    1794951228921
+    1794951241141
    ],
    "T-4765": [
     "mergeq",
     "3rd to merge",
-    1794951288921
-   ],
-   "T-3773": [
-    "mergetest",
-    "Xcode checks on the MacBook, 4th to merge",
-    1794954468921
-   ],
-   "T-4611": [
-    "mergeq",
-    "7th to merge",
-    1794952008921
-   ],
-   "T-4612": [
-    "mergeq",
-    "7th to merge",
-    1794952008921
+    1794951301141
    ],
    "T-4613": [
     "mergeq",
-    "7th to merge",
-    1794952008921
+    "4th to merge",
+    1794951541141
    ],
-   "T-4744": [
+   "T-3773": [
+    "mergetest",
+    "Xcode checks on the MacBook, 5th to merge",
+    1794954421141
+   ],
+   "T-4611": [
     "mergeq",
-    "14th to merge",
-    1794952248921
+    "8th to merge",
+    1794952021141
+   ],
+   "T-4612": [
+    "mergeq",
+    "8th to merge",
+    1794952021141
    ],
    "T-4607": [
     "mergeq",
-    "16th to merge",
-    1794954648921
+    "9th to merge",
+    1794955201141
    ],
    "T-4608": [
     "mergeq",
-    "17th to merge",
-    1794954888921
+    "9th to merge",
+    1794955201141
    ],
    "T-4609": [
     "mergeq",
-    "18th to merge",
-    1794955008921
+    "9th to merge",
+    1794955201141
    ],
-   "T-4780": [
+   "T-4744": [
+    "mergeq",
+    "15th to merge",
+    1794952261141
+   ],
+   "T-4753": [
     "merging",
     "Mac tests at the main gate",
-    1794954948921
+    1794955141141
+   ],
+   "T-4730": [
+    "testing",
+    "its own tests, in its copy",
+    1794955201141
    ],
    "T-4779": [
     "merged",
@@ -647,15 +656,16 @@
    "T-4760": "Report a widget state save truthfully",
    "T-4763": "Keep habit marks when the Page also saves",
    "T-4765": "Fix the When tapped frames' captions and VoiceOver list",
+   "T-4613": "Check finished work before it ships",
    "T-3773": "Decide how stuck review fix lines reach the board",
    "T-4611": "Check finished work before it ships",
    "T-4612": "Check finished work before it ships",
-   "T-4613": "Check finished work before it ships",
-   "T-4744": "Fix a MacBook test job that failed",
    "T-4607": "Check finished work before it ships",
    "T-4608": "Check finished work before it ships",
    "T-4609": "Check finished work before it ships",
-   "T-4780": "Fix the live site test that is red on main",
+   "T-4744": "Fix a MacBook test job that failed",
+   "T-4753": "Fail any new test that reads code text",
+   "T-4730": "Fix a test row that is red on main",
    "T-4779": "Show 12-hour times in the design mockup pages",
    "T-4770": "Re-estimate the release date from measured build speed"
   },
@@ -663,24 +673,26 @@
    "T-4760": "Idris",
    "T-4763": "Maren",
    "T-4765": "Maren",
+   "T-4613": "Pernille",
    "T-3773": "Ines",
    "T-4611": "Pernille",
    "T-4612": "Pernille",
-   "T-4613": "Pernille",
-   "T-4744": "Operator",
    "T-4607": "Odalys",
    "T-4608": "Pernille",
    "T-4609": "Pernille",
-   "T-4780": "Odalys",
+   "T-4744": "Operator",
+   "T-4753": "Pernille",
+   "T-4730": "Maren",
    "T-4779": "Maren",
    "T-4770": "Ines",
+   "T-4780": "Odalys",
    "T-4747": "Maren",
    "T-4732": "Odalys",
    "T-4769": "Pernille"
   }
  },
  "ln": {
-  "at": "2026-11-17T22:36:48Z",
+  "at": "2026-11-17T22:40:01Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -692,13 +704,13 @@
     "parked": 9
    },
    "m": {
-    "checking": 9,
-    "inline": 48,
-    "conflicted": 582,
+    "checking": 13,
+    "inline": 51,
+    "conflicted": 585,
     "failed": null,
-    "held": 1387,
+    "held": 1391,
     "retry": null,
-    "parked": 149
+    "parked": 152
    },
    "cur": [
     [
@@ -707,7 +719,7 @@
      ],
      "iPhone app tests, sent and waiting its turn",
      "MacBook",
-     9
+     13
     ]
    ],
    "ld": [
@@ -717,16 +729,16 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-17T22:36:25Z",
-    "ld": 31.43,
+    "at": "2026-11-17T22:40:03Z",
+    "ld": 41.83,
     "c": 8,
     "sb": 1,
     "dk": [
-     21.2,
+     20.9,
      228.3
     ],
     "ss": [
-     177.0,
+     176.8,
      953.7
     ],
     "sn": [
@@ -787,10 +799,10 @@
   "main": 2,
   "lanes": 1,
   "total": 3,
-  "at": "5:37 PM",
+  "at": "5:40 PM",
   "why": "",
-  "at_iso": "2026-11-17T22:37:00+00:00",
+  "at_iso": "2026-11-17T22:40:00+00:00",
   "started": "3:40 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 3:40 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 5:37 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 3:40 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 5:40 PM ET</p></section>"
  }
 }

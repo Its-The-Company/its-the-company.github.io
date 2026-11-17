@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-17T04:14:11.220734+00:00",
+ "at": "2026-11-17T04:17:18.368087+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -102,7 +102,7 @@
     "end_at": 1794878111
    }
   ],
-  "landed": 57,
+  "landed": 55,
   "failed": 4
  },
  "workers": [
@@ -111,7 +111,7 @@
    "task": "[tools] T-4665 batch land efficiency pieces",
    "model": "opus",
    "started": "2026-11-17T02:49:08.404Z",
-   "seconds": 5102,
+   "seconds": 5289,
    "finished": null,
    "effort": "high"
   }
@@ -170,7 +170,7 @@
   "week_pct": 24.98,
   "usage_pct": 48.1,
   "work_pct": 77.2,
-  "read_at": "2026-11-17T04:14:00+00:00",
+  "read_at": "2026-11-17T04:17:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -280,7 +280,7 @@
  "lock_in": {
   "on": false,
   "pool": 4,
-  "at": "2026-11-16T23:14:00-05:00",
+  "at": "2026-11-16T23:17:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -504,38 +504,45 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-17T04:14:11Z",
+  "at": "2026-11-17T04:17:01Z",
   "s": {
-   "T-4182": [
-    "testing",
-    "Mac Mini \u00b7 test",
-    null
+   "T-4665": [
+    "merging",
+    "Mac tests at the main gate",
+    1794888961811
    ],
    "T-4190": [
     "testq",
     "1st for a Simulator",
-    1794887411220
+    1794887341811
    ],
    "T-4662": [
     "testq",
     "2nd for a Simulator",
-    1794888731220
+    1794888721811
+   ],
+   "T-4182": [
+    "testq",
+    "3rd for a Simulator",
+    1794889021811
    ]
   },
   "nm": {
-   "T-4182": "A failing widget says so and can recover",
+   "T-4665": "Land the finished efficiency pieces in one batch",
    "T-4190": "Settings and Pro: buy, restore, themes",
-   "T-4662": "Place the cursor easily on a long line"
+   "T-4662": "Place the cursor easily on a long line",
+   "T-4182": "A failing widget says so and can recover"
   },
   "wk": {
-   "T-4182": "Idris",
+   "T-4665": "Odalys",
    "T-4190": "Idris",
    "T-4662": "Idris",
+   "T-4182": "Idris",
    "T-4617": "Odalys"
   }
  },
  "ln": {
-  "at": "2026-11-17T04:14:11Z",
+  "at": "2026-11-17T04:17:01Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -549,11 +556,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 710,
+    "conflicted": 713,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 653
+    "parked": 656
    },
    "cur": [],
    "ld": [
@@ -563,16 +570,16 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-17T04:13:30Z",
-    "ld": 14.41,
+    "at": "2026-11-17T04:17:08Z",
+    "ld": 11.71,
     "c": 8,
     "sb": 2,
     "dk": [
-     11.4,
+     12.8,
      228.3
     ],
     "ss": [
-     179.6,
+     179.2,
      953.7
     ],
     "sn": [
@@ -619,7 +626,7 @@
    "m": "opus",
    "e": "high",
    "t": "Work session \u2013 1 task",
-   "at": "2026-11-16T23:11:49-05:00"
+   "at": "2026-11-16T23:15:50-05:00"
   },
   {
    "w": "Operator",
@@ -659,8 +666,8 @@
   }
  ],
  "reply": {
-  "sent": "2026-11-17T04:10:43Z",
-  "seconds": 65.0
+  "sent": "2026-11-17T04:14:46Z",
+  "seconds": 63.0
  },
  "inbox": [],
  "trimmed": [
@@ -678,10 +685,10 @@
   "main": 1,
   "lanes": 6,
   "total": 7,
-  "at": "11:14 PM",
+  "at": "11:17 PM",
   "why": "",
-  "at_iso": "2026-11-17T04:14:00+00:00",
+  "at_iso": "2026-11-17T04:17:00+00:00",
   "started": "9:46 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 1, started 9:46 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 6 sessions \u00b7 as of 11:14 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 1, started 9:46 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 6 sessions \u00b7 as of 11:17 PM ET</p></section>"
  }
 }

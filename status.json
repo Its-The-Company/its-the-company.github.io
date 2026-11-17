@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-17T11:44:33.131900+00:00",
+ "at": "2026-11-17T11:47:33.529831+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -95,12 +95,21 @@
    "task": "[tools] T-4718 land records with work",
    "model": "opus",
    "started": "2026-11-17T09:19:38.190Z",
-   "seconds": 8694,
+   "seconds": 8875,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "ines",
+   "task": "[plan] Process changes write-up and queue removal",
+   "model": "opus",
+   "started": "2026-11-17T11:47:14.973Z",
+   "seconds": 18,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Odalys",
+ "who": "Odalys, Ines",
  "recent": [
   {
    "name": "odalys",
@@ -179,7 +188,7 @@
   "week_pct": 33.55,
   "usage_pct": 52.8,
   "work_pct": 78.5,
-  "read_at": "2026-11-17T11:44:00+00:00",
+  "read_at": "2026-11-17T11:47:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -200,7 +209,7 @@
   }
  ],
  "disk": {
-  "free_gb": 23,
+  "free_gb": 22,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -209,14 +218,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-17T06:41:00-05:00",
+   "at": "2026-11-17T06:47:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 5,
-  "at": "2026-11-17T06:44:00-05:00",
+  "at": "2026-11-17T06:47:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -242,17 +251,18 @@
    "effort": "high"
   },
   {
+   "name": "Ines",
+   "state": "running",
+   "task": "[plan] Process changes write-up and queue removal",
+   "model": "opus",
+   "since": "2026-11-17T11:47:14.973Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
    "name": "Idris",
    "state": "next",
    "task": "Idris, P2, from T-4238 (Pernille's review, from T-3900,...",
-   "model": null,
-   "since": null,
-   "next": []
-  },
-  {
-   "name": "Ines",
-   "state": "next",
-   "task": "Ines, P2, from T-1110 (Wrenna,...",
    "model": null,
    "since": null,
    "next": []
@@ -293,6 +303,15 @@
     "at": "2026-11-17T09:19:38.190Z",
     "o": "c",
     "task": "T-4718"
+   },
+   {
+    "w": "Ines",
+    "k": "plan",
+    "t": "Process changes write-up and queue removal",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-17T11:47:14.973Z",
+    "o": "c"
    }
   ],
   "src": "plan",
@@ -452,8 +471,13 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-17T11:44:25Z",
+  "at": "2026-11-17T11:47:33Z",
   "s": {
+   "T-4701": [
+    "merging",
+    "Mac tests at the main gate",
+    1794915933529
+   ],
    "T-3217": [
     "testing",
     "MacBook \u00b7 test",
@@ -462,14 +486,16 @@
    "T-4718": [
     "testing",
     "its own tests, in its copy",
-    1794914425810
+    1794914433529
    ]
   },
   "nm": {
+   "T-4701": "Keep bad tests from blocking merges",
    "T-3217": "Fix the three red tests before build 3",
    "T-4718": "Land a task's records with its work"
   },
   "wk": {
+   "T-4701": "Odalys",
    "T-3217": "Idris",
    "T-4718": "Odalys",
    "T-4716": "Odalys",
@@ -479,7 +505,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-17T11:44:25Z",
+  "at": "2026-11-17T11:47:33Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -493,11 +519,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 819,
+    "conflicted": 823,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 367
+    "parked": 370
    },
    "cur": [],
    "ld": [
@@ -507,8 +533,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-17T11:44:26Z",
-    "ld": 0.88,
+    "at": "2026-11-17T11:46:47Z",
+    "ld": 0.74,
     "c": 8,
     "sb": 1,
     "dk": [
@@ -544,12 +570,12 @@
    "m": "opus",
    "e": "high",
    "t": "Work session \u2013 3 tasks",
-   "at": "2026-11-17T06:37:06-05:00"
+   "at": "2026-11-17T06:46:32-05:00"
   }
  ],
  "reply": {
-  "sent": "2026-11-17T11:35:35Z",
-  "seconds": 90.0
+  "sent": "2026-11-17T11:45:49Z",
+  "seconds": 42.0
  },
  "inbox": [],
  "trimmed": [
@@ -564,13 +590,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 1,
+  "main": 2,
   "lanes": 0,
-  "total": 1,
-  "at": "6:44 AM",
+  "total": 2,
+  "at": "6:47 AM",
   "why": "",
-  "at_iso": "2026-11-17T11:44:00+00:00",
+  "at_iso": "2026-11-17T11:47:00+00:00",
   "started": "4:18 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 4:18 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 6:44 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 4:18 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 6:47 AM ET</p></section>"
  }
 }

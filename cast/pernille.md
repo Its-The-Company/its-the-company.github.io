@@ -45,11 +45,10 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 - Open (mine, not on the board, from T-0515 H1): runtime stamps a daemon thread's writes with its origin run, so A's thread output cannot show in B.
 
-- T-4518 11-16 (c32ea61425): T-4280 review FAIL; H1 badge on size moves = T-4630, H2 premades unscanned = T-4631 (finder refusal note is my half), M1 = T-4632, L = T-4633. Lesson: a run-time 'refused import' test misses a script that catches ImportError; check each premade's try/except around denied imports.
-- T-4077 11-16: T-2499 review (de343f7e24) PASS w/ findings; M1+L1-L2 = T-4635 (Idris). Lesson: when a fix stops a view clearing its own state, list what else changes while that state lives (a purchase on the pushed screen left 'no purchase found' under 'Active').
-- T-3495 11-16: T-3323 review re-check: M1, M2, L1-L3 all still open in upload.sh and on no line; noted, not ticked; lines wait on T-3773 (Ines). Lesson: re-check a stuck review against the code by line, not by commit list.
 - T-4540 11-16 (0e5a9b9bbc): T-4183 at 0803f09d (T-4468 slices 1+2) PASS w/ findings; M1 stale place name = T-4639, M2 late fix = T-4640, Lows T-4641, c00ce27e15 review = T-4642 (Idris). Lesson: a "fill only when empty" rule keeps a value the app itself filled; ask who wrote it. board_tick add writes the main board; names over 48 chars need task_names_store.py.
 - T-4541 11-16: T-4282 <span title="Our grade scale, nine steps: D, D+, C-, C, C+, B-, B, B+, A. An idea&#x27;s ladder is the letter it reaches before any cap.">ladder</span> review (88ba326d54) PASS w/ findings; M1/M2/L1 = T-4643, L2-L4 = T-4644 (Idris). Gate compile check passed here (12/0). Lesson: a measurement build that keeps the product's demotion rule gets one sample per install; check the rule before the phone ask. Scratch xcodebuild needs tools/ in the archive too (pkg_stage).
+- T-4024 11-16: T-2316 Shortcut Pro gate review PASS w/ findings; M1 unbounded StoreKit read = T-4653, L1+L2 = T-4654 (Idris); O1 (own script can exec a bundled premade) noted on T-2372. Lesson: when a gate reads StoreKit, check it has the writer's time limit; and check every App Intent, not only the one in the diff.
+- T-4598 11-16 (0aef474dcb): T-4181 at 420538d6 (T-0972 send_lane) PASS w/ findings; M1 = T-4656, M2 = T-4657, Ls = T-4658 (Idris). Lesson: a function that writes a key and reads it back as "typed" next time is sticky; run two sends in sequence, not one.
 {% endraw %}
 
 

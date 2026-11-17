@@ -53,6 +53,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-4196 11-16: group job built, NOT landed (copy T-4196-idris/wt, msg1.txt); gate red only on queue_check timing row under load. Open: land once at lower load, then 20 timed runs. Lesson: a land group's runs share task IDs; runner_watch must count them as one change.
 - T-0696 11-16 5e6799654b: handoff only; patch in scratch T-0696-idris (LaneNetPeak, ExtensionMemoryTests, HTTPS on loopback). Lesson: killing the extension + app launch reruns nothing; launch with -reload.
 - T-4494 11-16 1f081860c8 slice 2: item (1), every send mirrors (no "lane" = widget; typed "app" keeps out; LaneMirror.defaultManifest). 1955/0. Open: (3) recording, (4) Ines; review by someone else. Lesson: a full unit run takes >10 min with the lock wait: background it and wait on its output file.
+- T-4605 11-16 0465b8455a: review of T-4565 PASS w/ findings; M1 -> T-4659 (mine: Swift test that a widgetAction run reaches the handler). Lesson: in a <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> xc.sh test only queues (75); evidence for code already on main is a full-suite result.json on origin/macbook-results at a commit containing it.
 {% endraw %}
 
 

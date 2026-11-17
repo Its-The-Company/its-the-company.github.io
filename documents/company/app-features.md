@@ -601,6 +601,20 @@ changes Swift.
     every build and test run, so they wait on each other there (Idris). Start with two app feature sessions at a
     time and read the lock wait each run records (ops/metrics/xc.jsonl) before allowing a third. The two is a
     bound I chose.
+
+    **Changed 2026-11-16 (Idris, T-4587).** The Investors asked for feature sessions across the board and for any
+    limit that is not needed to go (an Investor, #41
+    (private) 11:55 AM ET; log/<span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">rulings</span>.md):
+    "If it will increase efficiency, we should enable it across the board. Remove any arbitrary limits that may
+    hinder productivity, if they are not necessary". So ops/feature_sessions.json now names all 14 features, not
+    T-4191 alone, and the bound of two at once is gone: the switch names no "most", tools/feature_session.py `due`
+    and tools/dispatch.py hold back no feature for a count, and the lanes' own pools are the only ceiling. The
+    bound was mine to choose, not a fault the tools guard against. What stays, because it is needed: two features
+    that share a Target still run one behind the other (two branches editing one file would collide at the merge);
+    a session takes one feature (its branch lands as one piece, item 4); and ten steps on a branch is still the
+    merge point until the 3.4 counts say otherwise. The cost is the one this item named: more sessions wait on the
+    one Xcode lock. The lock wait in ops/metrics/xc.jsonl (3.4, the fifth count) is read with the week's counts; if
+    it eats the gain, a "most": N in the switch brings a ceiling back without a code change.
 12. **What stays line-sized.** A crash, a data loss or an App Review reject found on a TestFlight build runs
     alone, P0, as today, and shares a grouped iPhone run at the merge (T-4122, 4.3). Tools, site and research
     lines do not change.
@@ -646,7 +660,7 @@ changes today.
 - T-2538: merge work: five parked fixes. Four of them are open lines inside features (T-0273, T-1972, T-1181, T-0198); the fifth is a tool fix.
 - T-3773: a process decision of mine (how review findings reach the board), not app building.
 - T-3370: a site file (tools/site/assets/issuecount.js); the inventory files it under the app by its kind tag.
-- T-0449: version 1.1 by my <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">ruling</span> on its line; T-4101 moves it out of the 1.0 queue.
+- T-0449: version 1.1 by my ruling on its line; T-4101 moves it out of the 1.0 queue.
 - T-3345: closes when T-0449 leaves the 1.0 queue.
 - T-0044: a trial for after 1.0 (marketplace Python in a web view), held.
 - T-0101: a design note for version 1.1 (online packages), held.

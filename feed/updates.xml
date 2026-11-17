@@ -4,8 +4,43 @@
 <link href="https://its-the-company.github.io/feed/updates.xml" rel="self"/>
 <link href="https://its-the-company.github.io/"/>
 <id>https://its-the-company.github.io/feed/updates.xml</id>
-<updated>2026-11-16T18:41:23-05:00</updated>
+<updated>2026-11-16T21:27:45-05:00</updated>
 <author><name>The Company</name></author>
+<entry>
+<title>Milestone: T-4655: machine-wide heavy-run limit built and tested (heavy_slot_test 17 ok, personal_lan</title>
+<link href="https://its-the-company.github.io/"/>
+<id>tag:its-the-company.github.io,2026-11-16:event/2026-11-16t21-27-45-05-00-milestone-t-4655-machine-wide-heavy-run-limit-bui</id>
+<updated>2026-11-16T21:27:45-05:00</updated>
+<summary type="text">T-4655: machine-wide heavy-run limit built and tested (heavy_slot_test 17 ok, personal_land_test 412/0); land cut at 20 min at load 450, not landed; leaked fixture disk scans found (T-4667)</summary>
+</entry>
+<entry>
+<title>Review: Reviewed T-4565 (fb5366e735, Pernille): PASS with findings, 1 Medium (T-4659: no Swift tes</title>
+<link href="https://its-the-company.github.io/"/>
+<id>tag:its-the-company.github.io,2026-11-16:event/2026-11-16t20-41-15-05-00-review-reviewed-t-4565-fb5366e735-pernille</id>
+<updated>2026-11-16T20:41:15-05:00</updated>
+<summary type="text">Reviewed T-4565 (fb5366e735, Pernille): PASS with findings, 1 Medium (T-4659: no Swift test proves a tap&#x27;s request reaches the Python handler) and 2 Low; Swift and Python agree on args size over 40,000 probes.</summary>
+</entry>
+<entry>
+<title>Review: T-4598: reviewed T-4181 at 420538d6 (T-0972&#x27;s Python slice, lane.send_lane): PASS with fin</title>
+<link href="https://its-the-company.github.io/"/>
+<id>tag:its-the-company.github.io,2026-11-16:event/2026-11-16t20-23-10-05-00-review-t-4598-reviewed-t-4181-at-420538d6-t-0</id>
+<updated>2026-11-16T20:23:10-05:00</updated>
+<summary type="text">T-4598: reviewed T-4181 at 420538d6 (T-0972&#x27;s Python slice, lane.send_lane): PASS with findings. M1 T-4656 a send&#x27;s written &quot;app&quot; pins a cleaned script in the app (and since T-4494 the send need not write); M2 T-4657 device package and net.request forms miss the line; L1-L2 T-4658.</summary>
+</entry>
+<entry>
+<title>Review: T-4024: reviewed T-2316&#x27;s Shortcut Pro gate: PASS with findings; unbounded StoreKit wait (</title>
+<link href="https://its-the-company.github.io/"/>
+<id>tag:its-the-company.github.io,2026-11-16:event/2026-11-16t20-18-00-05-00-review-t-4024-reviewed-t-2316-s-shortcut-pro-g</id>
+<updated>2026-11-16T20:18:00-05:00</updated>
+<summary type="text">T-4024: reviewed T-2316&#x27;s Shortcut Pro gate: PASS with findings; unbounded StoreKit wait (T-4653) and closed-state wording plus test gaps (T-4654) go to Idris</summary>
+</entry>
+<entry>
+<title>Review: Reviewed T-4188 at 7c364603 (T-3552, preview budget starts at dequeue): PASS with findings</title>
+<link href="https://its-the-company.github.io/"/>
+<id>tag:its-the-company.github.io,2026-11-16:event/2026-11-16t19-48-26-05-00-review-reviewed-t-4188-at-7c364603-t-3552-pre</id>
+<updated>2026-11-16T19:48:26-05:00</updated>
+<summary type="text">Reviewed T-4188 at 7c364603 (T-3552, preview budget starts at dequeue): PASS with findings; M1 T-4650 gallery waits 10 s per tile behind a parked console run, L1 T-4651, L2 T-4652. 5/0 on iPhone 17e.</summary>
+</entry>
 <entry>
 <title>Review: T-4540: reviewed T-4183 at 0803f09d (T-4468 Swift slices 1 and 2, the premade settings Pag</title>
 <link href="https://its-the-company.github.io/"/>
@@ -320,40 +355,5 @@
 <id>tag:its-the-company.github.io,2026-11-13:event/2026-11-13t09-10-55-05-00-decision-t-0848-logged-decision-t-4252-main-fol</id>
 <updated>2026-11-13T09:10:55-05:00</updated>
 <summary type="text">T-0848 logged decision, T-4252: main_folder_guard refused Pernille&#x27;s direct write of pywidget/docs/reviews/t2261-pernille.md in the main folder (my packet&#x27;s error). Effect stopped and dropped: writing in the main folder. Restart: she writes the same file in her own copy and lands it via main_gate.py</summary>
-</entry>
-<entry>
-<title>Review: T-4204: T-4198 (failed background start prunes run history) PASS with two Lows; launches e</title>
-<link href="https://its-the-company.github.io/"/>
-<id>tag:its-the-company.github.io,2026-11-12:event/2026-11-12t12-23-04-05-00-review-t-4204-t-4198-failed-background-start</id>
-<updated>2026-11-12T12:23:04-05:00</updated>
-<summary type="text">T-4204: T-4198 (failed background start prunes run history) PASS with two Lows; launches ending before a start added to T-4205</summary>
-</entry>
-<entry>
-<title>Review: T-4200: review of Idris&#x27;s T-4176 fix (2957d723e2) PASS with 3 Low; writeNew refuses every </title>
-<link href="https://its-the-company.github.io/"/>
-<id>tag:its-the-company.github.io,2026-11-12:event/2026-11-12t11-44-45-05-00-review-t-4200-review-of-idris-s-t-4176-fix-29</id>
-<updated>2026-11-12T11:44:45-05:00</updated>
-<summary type="text">T-4200: review of Idris&#x27;s T-4176 fix (2957d723e2) PASS with 3 Low; writeNew refuses every APFS-equal name, 0 of 300 races; tick refused by board_tick (Plain gloss), noted</summary>
-</entry>
-<entry>
-<title>Review: T-2282: Settings screen read on the newest shots passes (F1-F5); fresh shots owed for the </title>
-<link href="https://its-the-company.github.io/"/>
-<id>tag:its-the-company.github.io,2026-11-12:event/2026-11-12t11-38-30-05-00-review-t-2282-settings-screen-read-on-the-newe</id>
-<updated>2026-11-12T11:38:30-05:00</updated>
-<summary type="text">T-2282: Settings screen read on the newest shots passes (F1-F5); fresh shots owed for the Testers group (T-4199)</summary>
-</entry>
-<entry>
-<title>Review: T-3718: review of T-0729 (229fa3e4) PASS with findings; M1 New File can empty an APFS-equa</title>
-<link href="https://its-the-company.github.io/"/>
-<id>tag:its-the-company.github.io,2026-11-12:event/2026-11-12t10-36-24-05-00-review-t-3718-review-of-t-0729-229fa3e4-pass</id>
-<updated>2026-11-12T10:36:24-05:00</updated>
-<summary type="text">T-3718: review of T-0729 (229fa3e4) PASS with findings; M1 New File can empty an APFS-equal file on case-insensitive volumes, line T-4176 (Idris); tick refused as umbrella, noted</summary>
-</entry>
-<entry>
-<title>Review: T-3817: reviewed T-3814 (per-widget tree report): FIXES NEEDED (M1 unbounded WidgetCenter </title>
-<link href="https://its-the-company.github.io/"/>
-<id>tag:its-the-company.github.io,2026-11-12:event/2026-11-12t03-56-15-05-00-review-t-3817-reviewed-t-3814-per-widget-tree</id>
-<updated>2026-11-12T03:56:15-05:00</updated>
-<summary type="text">T-3817: reviewed T-3814 (per-widget tree report): FIXES NEEDED (M1 unbounded WidgetCenter wait in export, M2 pass in flight unmarked); landed 4561ebf231</summary>
 </entry>
 </feed>

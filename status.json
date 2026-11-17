@@ -1,10 +1,10 @@
 {
  "schema": 1,
- "at": "2026-11-17T09:18:05.424103+00:00",
+ "at": "2026-11-17T09:21:18.070803+00:00",
  "session": {
-  "active": false,
-  "kind": "",
-  "started": null,
+  "active": true,
+  "kind": "work",
+  "started": "2026-11-17T04:18:09-05:00",
   "flow": [],
   "done": [
    {
@@ -89,46 +89,41 @@
   "landed": 44,
   "failed": 4
  },
- "workers": [],
- "who": "",
- "recent": [
+ "workers": [
   {
    "name": "odalys",
-   "task": "[tools] T-4694 nightly run of every suite",
+   "task": "[tools] T-4701 quarantine expiry schedule",
    "model": "opus",
-   "started": "2026-11-17T08:09:12.090Z",
-   "seconds": null,
-   "finished": "2026-11-17T08:55:24.344000+00:00"
-  },
-  {
-   "name": "pernille",
-   "task": "[tools] T-4701 new-test deflake hook in gate",
-   "model": "opus",
-   "started": "2026-11-17T08:08:59.086Z",
-   "seconds": null,
-   "finished": "2026-11-17T08:52:49.605000+00:00"
+   "started": "2026-11-17T09:19:32.737Z",
+   "seconds": 105,
+   "finished": null,
+   "effort": "high"
   },
   {
    "name": "odalys",
-   "task": "[tools] T-4676 lane wiring for in-place fix",
+   "task": "[tools] T-4718 land records with work",
    "model": "opus",
-   "started": "2026-11-17T08:09:05.886Z",
-   "seconds": null,
-   "finished": "2026-11-17T08:47:44.435000+00:00"
+   "started": "2026-11-17T09:19:38.190Z",
+   "seconds": 99,
+   "finished": null,
+   "effort": "high"
   },
   {
    "name": "odalys",
-   "task": "[tools] T-4677 landed work never shows Retry",
+   "task": "[ops] T-4716 re-date OPT-106",
    "model": "opus",
-   "started": "2026-11-17T07:27:10.371Z",
-   "seconds": null,
-   "finished": "2026-11-17T08:39:53.328000+00:00"
+   "started": "2026-11-17T09:19:45.790Z",
+   "seconds": 92,
+   "finished": null,
+   "effort": "high"
   }
  ],
+ "who": "Odalys x3",
+ "recent": [],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 471,
+  "runnable_count": 468,
   "blocked_count": 73
  },
  "meter": {
@@ -172,12 +167,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-17T04:31:46-05:00",
+ "next_tick": null,
  "personal": {
   "week_pct": 33.55,
   "usage_pct": 52.8,
   "work_pct": 78.5,
-  "read_at": "2026-11-17T09:18:00+00:00",
+  "read_at": "2026-11-17T09:21:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -214,7 +209,7 @@
  "lock_in": {
   "on": false,
   "pool": 5,
-  "at": "2026-11-17T04:18:00-05:00",
+  "at": "2026-11-17T04:21:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -222,10 +217,23 @@
    "b": "double-spread"
   }
  },
- "next_tick_why": "last_tick",
+ "next_tick_why": "session",
  "idle": null,
- "pool": null,
+ "pool": {
+  "why": "Double Spread: 70% of the week left, paced to last until Wed 14:00, the week's halfway point; the machine allows 2 (new work waits: 24 tasks wait to merge (limit 20): 2 agents finish and merge...",
+  "n": 2,
+  "at": "2026-11-17T04:16:46.866705-05:00"
+ },
  "lanes": [
+  {
+   "name": "Odalys",
+   "state": "running",
+   "task": "[tools] T-4701 quarantine expiry schedule",
+   "model": "opus",
+   "since": "2026-11-17T09:19:32.737Z",
+   "next": [],
+   "effort": "high"
+  },
   {
    "name": "Idris",
    "state": "next",
@@ -251,14 +259,6 @@
    "next": []
   },
   {
-   "name": "Odalys",
-   "state": "next",
-   "task": "A lane record main refused: failed...",
-   "model": null,
-   "since": null,
-   "next": []
-  },
-  {
    "name": "Wrenna",
    "state": "next",
    "task": "Wrenna, P2, T-2375 continuation (B-staged item 3...",
@@ -276,7 +276,39 @@
   }
  ],
  "tasks": {
-  "run": [],
+  "run": [
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Keep bad tests from blocking merges",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-17T09:19:32.737Z",
+    "o": "c",
+    "task": "T-4701"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Land a task's records with its work",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-17T09:19:38.190Z",
+    "o": "c",
+    "task": "T-4718"
+   },
+   {
+    "w": "Odalys",
+    "k": "ops",
+    "t": "Measure or re-date the duplicate-ID experiment",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-17T09:19:45.790Z",
+    "o": "c",
+    "task": "T-4716"
+   }
+  ],
+  "src": "plan",
   "open": [
    {
     "w": "Idris",
@@ -352,25 +384,42 @@
   "done": [
    {
     "w": "Odalys",
-    "t": "Work that already reached main now shows as landed (with a missing tick flagged) instead of in...",
-    "at": "2026-11-17T04:02:00-05:00"
+    "t": "The five site tests that seemed to fail only in worker copies were really stale on main; they...",
+    "at": "2026-11-17T04:20:00-05:00"
    },
    {
     "w": "Odalys",
-    "t": "A failed test check on a change now goes through when the same test also fails on the shared...",
-    "at": "2026-11-17T03:55:00-05:00"
+    "t": "Home and the site now call the two personal accounts Evan's Account and Jeremy's Account, as...",
+    "at": "2026-11-17T04:20:00-05:00"
    },
    {
-    "w": "Odalys",
-    "t": "when a finished change fails one or two of its own test rows, it now gets one small fix in place...",
-    "at": "2026-11-17T03:47:00-05:00"
+    "w": "Maren",
+    "t": "The Investors' choice of visual direction (Paper and Studio with three parts of option C, Studio...",
+    "at": "2026-11-17T04:20:00-05:00"
    }
   ],
   "count": {
-   "next": 471,
+   "next": 468,
    "wait": 35,
    "blocked": 38,
    "you": 11
+  },
+  "fin": {
+   "n": 3,
+   "rows": [
+    [
+     "T-4506",
+     "Site suites that fail only..."
+    ],
+    [
+     "T-4320",
+     "Name the accounts Evan's and..."
+    ],
+    [
+     "T-4680",
+     "Write the chosen visual..."
+    ]
+   ]
   }
  },
  "qr": [
@@ -412,11 +461,27 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-17T09:18:05Z",
-  "s": {}
+  "at": "2026-11-17T09:20:57Z",
+  "s": {
+   "T-4701": [
+    "merged",
+    "on main 3:52 AM ET",
+    1794905541000,
+    "Pernille"
+   ]
+  },
+  "nm": {
+   "T-4701": "Keep bad tests from blocking merges"
+  },
+  "wk": {
+   "T-4701": "Odalys",
+   "T-4506": "Odalys",
+   "T-4320": "Odalys",
+   "T-4680": "Maren"
+  }
  },
  "ln": {
-  "at": "2026-11-17T09:18:05Z",
+  "at": "2026-11-17T09:20:57Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -430,11 +495,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 673,
+    "conflicted": 676,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 220
+    "parked": 223
    },
    "cur": [],
    "ld": [
@@ -444,12 +509,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-17T09:18:08Z",
-    "ld": 5.85,
+    "at": "2026-11-17T09:20:14Z",
+    "ld": 6.12,
     "c": 8,
     "sb": 1,
     "dk": [
-     15.1,
+     15.6,
      228.3
     ],
     "ss": [
@@ -473,7 +538,17 @@
    }
   }
  },
- "operators": [],
+ "operators": [
+  {
+   "w": "Operator",
+   "a": "Main plan",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session \u2013 3 tasks",
+   "at": "2026-11-17T04:18:09-05:00"
+  }
+ ],
  "reply": {
   "sent": "2026-11-17T05:56:39Z",
   "seconds": 62.0
@@ -482,8 +557,8 @@
  "trimmed": [
   "lane_next",
   "queue_text",
-  "recent",
   "task_done",
+  "fin_short",
   "task_title",
   "done_text",
   "task_open",
@@ -491,13 +566,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 0,
+  "main": 3,
   "lanes": 0,
-  "total": 0,
-  "at": "4:18 AM",
-  "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
-  "at_iso": "2026-11-17T09:18:00+00:00",
-  "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 4:18 AM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
+  "total": 3,
+  "at": "4:21 AM",
+  "why": "",
+  "at_iso": "2026-11-17T09:21:00+00:00",
+  "started": "4:18 AM",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 4:18 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 4:21 AM ET</p></section>"
  }
 }

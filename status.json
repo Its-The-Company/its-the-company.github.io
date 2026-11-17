@@ -1,19 +1,19 @@
 {
  "schema": 1,
- "at": "2026-11-17T16:13:28.657425+00:00",
+ "at": "2026-11-17T16:16:33.439562+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-17T09:17:58-05:00",
   "flow": [
    {
-    "t": "T-4513",
-    "name": "Show the SSD's free space on the Machine bubble",
+    "t": "T-4663",
+    "name": "Completion ignores letter case and small typos",
     "acct": "Personal a",
     "steps": [
      {
       "s": "testq",
-      "at": 1794931907
+      "at": 1794932087
      }
     ]
    },
@@ -47,6 +47,22 @@
    }
   ],
   "done": [
+   {
+    "t": "T-4749",
+    "name": "Rewrite or drop outdated tests that read code text",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794932083
+   },
+   {
+    "t": "T-4513",
+    "name": "Show the SSD's free space on the Machine bubble",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794932075
+   },
    {
     "t": "T-4745",
     "name": "Fix a MacBook test job that failed",
@@ -113,25 +129,9 @@
     "end": "failed",
     "end_at": 1794923634,
     "why": "tests failed"
-   },
-   {
-    "t": "T-4530",
-    "name": "Make Queued the one queue list on Home",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794923426
-   },
-   {
-    "t": "T-4671",
-    "name": "Clear the app's sentences under the approved voice",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794923245
    }
   ],
-  "landed": 28,
+  "landed": 30,
   "failed": 7
  },
  "workers": [
@@ -140,7 +140,7 @@
    "task": "[tools] T-4755 stop runner rerunning old jobs",
    "model": "opus",
    "started": "2026-11-17T16:01:08.321Z",
-   "seconds": 740,
+   "seconds": 925,
    "finished": null,
    "effort": "high"
   },
@@ -149,7 +149,7 @@
    "task": "[build] T-1882 finish landing parked work",
    "model": "opus",
    "started": "2026-11-17T15:07:11.689Z",
-   "seconds": 3976,
+   "seconds": 4161,
    "finished": null,
    "effort": "high"
   }
@@ -225,7 +225,7 @@
   "week_pct": 36.07,
   "usage_pct": 52.2,
   "work_pct": 79.0,
-  "read_at": "2026-11-17T16:13:00+00:00",
+  "read_at": "2026-11-17T16:16:00+00:00",
   "running": [
    {
     "lane": "a3",
@@ -280,14 +280,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-17T11:10:00-05:00",
+   "at": "2026-11-17T11:16:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 5,
-  "at": "2026-11-17T11:13:00-05:00",
+  "at": "2026-11-17T11:16:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -526,27 +526,32 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-17T16:13:19Z",
+  "at": "2026-11-17T16:16:13Z",
   "s": {
-   "T-4513": [
+   "T-4663": [
     "merging",
     "Host checks on the Mac mini \u00b7 1 of 2 groups of tests done",
-    1794931939858
+    1794932113873
    ],
    "T-4656": [
     "mergeq",
     "1st to merge",
-    1794931939858
+    1794932113873
+   ],
+   "T-4513": [
+    "merging",
+    "Mac tests at the main gate",
+    1794927673873
    ],
    "T-0687": [
     "merging",
     "Mac tests at the main gate",
-    1794931879858
+    1794931873873
    ],
    "T-4755": [
     "testing",
     "its own tests, in its copy",
-    1794931459858
+    1794931453873
    ],
    "T-1882": [
     "merged",
@@ -556,15 +561,17 @@
    ]
   },
   "nm": {
-   "T-4513": "Show the SSD's free space on the Machine bubble",
+   "T-4663": "Completion ignores letter case and small typos",
    "T-4656": "Let a cleaned script return to the widget on resend",
+   "T-4513": "Show the SSD's free space on the Machine bubble",
    "T-0687": "Run network fetches inside the extension on the Simulator",
    "T-4755": "Stop the MacBook runner rerunning old jobs",
    "T-1882": "Count a fetch as good when the data arrived"
   },
   "wk": {
-   "T-4513": "Maren",
+   "T-4663": "Idris",
    "T-4656": "Idris",
+   "T-4513": "Maren",
    "T-0687": "Idris",
    "T-4755": "Odalys",
    "T-1882": "Idris",
@@ -573,57 +580,49 @@
   }
  },
  "ln": {
-  "at": "2026-11-17T16:13:19Z",
+  "at": "2026-11-17T16:16:13Z",
   "mq": {
    "n": {
-    "checking": 2,
-    "inline": 0,
+    "checking": 1,
+    "inline": 1,
     "conflicted": 1,
     "failed": 0,
     "held": 2,
-    "retry": 2,
+    "retry": 1,
     "parked": 21
    },
    "m": {
-    "checking": 41,
-    "inline": null,
-    "conflicted": 748,
+    "checking": 1,
+    "inline": 1,
+    "conflicted": 751,
     "failed": null,
-    "held": 517,
-    "retry": 6,
-    "parked": 67
+    "held": 520,
+    "retry": 70,
+    "parked": 70
    },
    "cur": [
     [
      [
-      "T-4513"
+      "T-4663"
      ],
      "Mac tests",
      "Mac mini",
      1
-    ],
-    [
-     [
-      "T-4656"
-     ],
-     "iPhone app tests",
-     "MacBook",
-     81
     ]
    ],
    "ld": [
-    19,
-    "2026-11-17T15:31:34Z"
+    21,
+    "2026-11-17T16:14:43Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-17T16:12:33Z",
-    "ld": 0.83,
+    "at": "2026-11-17T16:15:50Z",
+    "ld": 3.52,
     "c": 8,
     "sb": 1,
     "dk": [
-     18.3,
+     18.1,
      228.3
     ],
     "ss": [
@@ -687,10 +686,10 @@
   "main": 2,
   "lanes": 1,
   "total": 3,
-  "at": "11:13 AM",
+  "at": "11:16 AM",
   "why": "",
-  "at_iso": "2026-11-17T16:13:00+00:00",
+  "at_iso": "2026-11-17T16:16:00+00:00",
   "started": "9:17 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 9:17 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 11:13 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 9:17 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 11:16 AM ET</p></section>"
  }
 }

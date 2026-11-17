@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-17T08:45:54.492450+00:00",
+ "at": "2026-11-17T08:48:58.628050+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -87,7 +87,7 @@
     "why": "tests failed"
    }
   ],
-  "landed": 50,
+  "landed": 49,
   "failed": 4
  },
  "workers": [
@@ -96,16 +96,7 @@
    "task": "[tools] T-4701 new-test deflake hook in gate",
    "model": "opus",
    "started": "2026-11-17T08:08:59.086Z",
-   "seconds": 2215,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-4676 lane wiring for in-place fix",
-   "model": "opus",
-   "started": "2026-11-17T08:09:05.886Z",
-   "seconds": 2208,
+   "seconds": 2399,
    "finished": null,
    "effort": "high"
   },
@@ -114,13 +105,21 @@
    "task": "[tools] T-4694 nightly run of every suite",
    "model": "opus",
    "started": "2026-11-17T08:09:12.090Z",
-   "seconds": 2202,
+   "seconds": 2386,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Pernille, Odalys x2",
+ "who": "Pernille, Odalys",
  "recent": [
+  {
+   "name": "odalys",
+   "task": "[tools] T-4676 lane wiring for in-place fix",
+   "model": "opus",
+   "started": "2026-11-17T08:09:05.886Z",
+   "seconds": null,
+   "finished": "2026-11-17T08:47:44.435000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[tools] T-4677 landed work never shows Retry",
@@ -144,39 +143,31 @@
    "started": "2026-11-17T07:27:03.469Z",
    "seconds": null,
    "finished": "2026-11-17T07:48:27.672000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-4694 pass lands whose red is on main",
-   "model": "opus",
-   "started": "2026-11-17T06:18:19.459Z",
-   "seconds": null,
-   "finished": "2026-11-17T07:07:19.315000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 470,
+  "runnable_count": 469,
   "blocked_count": 73
  },
  "meter": {
   "five_hour": {
-   "pct": 16.0,
+   "pct": 17.0,
    "resets_at": "2026-11-17T04:10:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-17T03:41:50.137517-05:00",
+   "read_at": "2026-11-17T03:48:02.845799-05:00",
    "source": "live",
-   "left": 84.0,
+   "left": 83.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 29.0,
+   "pct": 30.0,
    "resets_at": "2026-11-22T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-17T03:41:50.137517-05:00",
+   "read_at": "2026-11-17T03:48:02.845799-05:00",
    "source": "live",
-   "left": 71.0,
+   "left": 70.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
@@ -186,7 +177,7 @@
    "read_at": "2026-11-17T01:00:19.230352-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-17T03:41:50.137517-05:00"
+  "read_at": "2026-11-17T03:48:02.845799-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -206,7 +197,7 @@
   "week_pct": 32.81,
   "usage_pct": 54.0,
   "work_pct": 78.2,
-  "read_at": "2026-11-17T08:45:00+00:00",
+  "read_at": "2026-11-17T08:49:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -236,14 +227,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-17T03:41:00-05:00",
+   "at": "2026-11-17T03:48:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 4,
-  "at": "2026-11-17T03:45:00-05:00",
+  "at": "2026-11-17T03:49:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -254,7 +245,7 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Double Spread: 71% of the week left, paced to last until Wed 14:00, the week's halfway point; the machine allows 2 (new work waits: 30 tasks wait to merge (limit 20): 2 agents finish and merge...",
+  "why": "Double Spread: 70% of the week left, paced to last until Wed 14:00, the week's halfway point; the machine allows 2 (new work waits: 30 tasks wait to merge (limit 20): 2 agents finish and merge...",
   "n": 2,
   "at": "2026-11-17T01:00:19.692166-05:00"
  },
@@ -271,9 +262,9 @@
   {
    "name": "Odalys",
    "state": "running",
-   "task": "[tools] T-4676 lane wiring for in-place fix",
+   "task": "[tools] T-4694 nightly run of every suite",
    "model": "opus",
-   "since": "2026-11-17T08:09:05.886Z",
+   "since": "2026-11-17T08:09:12.090Z",
    "next": [],
    "effort": "high"
   },
@@ -321,16 +312,6 @@
     "at": "2026-11-17T08:08:59.086Z",
     "o": "c",
     "task": "T-4701"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Fix small test failures in place during a land",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-17T08:09:05.886Z",
-    "o": "c",
-    "task": "T-4676"
    },
    {
     "w": "Odalys",
@@ -418,6 +399,11 @@
   ],
   "done": [
    {
+    "w": "Odalys",
+    "t": "when a finished change fails one or two of its own test rows, it now gets one small fix in place...",
+    "at": "2026-11-17T03:47:00-05:00"
+   },
+   {
     "w": "Pernille",
     "t": "Main's test run was failing now and then because a test helper gave up waiting for a file lock...",
     "at": "2026-11-17T01:58:00-05:00"
@@ -426,22 +412,21 @@
     "w": "Odalys",
     "t": "Each worker's own step limit went from 150 to 10000, so a worker no longer stops partway through...",
     "at": "2026-11-17T01:40:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "An Investor ruling recorded inside a worker's lane now reaches main within seconds as its own...",
-    "at": "2026-11-17T01:36:00-05:00"
    }
   ],
   "count": {
-   "next": 470,
+   "next": 469,
    "wait": 35,
    "blocked": 38,
    "you": 11
   },
   "fin": {
-   "n": 11,
+   "n": 12,
    "rows": [
+    [
+     "T-4676",
+     "Fix small test failures in..."
+    ],
     [
      "T-4702",
      "Make main's own tests pass again"
@@ -461,10 +446,6 @@
     [
      "T-4655",
      "Cap how many heavy test runs..."
-    ],
-    [
-     "T-4665",
-     "Land the finished efficiency..."
     ]
    ]
   }
@@ -508,17 +489,17 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-17T08:45:40Z",
+  "at": "2026-11-17T08:48:40Z",
   "s": {
-   "T-4676": [
+   "T-4701": [
     "merging",
     "Mac tests at the main gate",
-    1794904900051
+    1794905320153
    ],
-   "T-4701": [
-    "testing",
-    "its own tests, in its copy",
-    1794904840051
+   "T-4677": [
+    "merging",
+    "Mac tests at the main gate",
+    1794905320153
    ],
    "T-4694": [
     "merged",
@@ -528,14 +509,15 @@
    ]
   },
   "nm": {
-   "T-4676": "Fix small test failures in place during a land",
    "T-4701": "Keep bad tests from blocking merges",
+   "T-4677": "Show landed work as landed, never as Retry",
    "T-4694": "Pass lands whose red is also on main"
   },
   "wk": {
-   "T-4676": "Odalys",
    "T-4701": "Odalys",
+   "T-4677": "Odalys",
    "T-4694": "Odalys",
+   "T-4676": "Odalys",
    "T-4702": "Pernille",
    "T-4691": "Odalys",
    "T-4674": "Odalys",
@@ -550,7 +532,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-17T08:45:40Z",
+  "at": "2026-11-17T08:48:40Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -564,11 +546,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 641,
+    "conflicted": 644,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 197
+    "parked": 200
    },
    "cur": [],
    "ld": [
@@ -578,12 +560,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-17T08:45:17Z",
-    "ld": 15.84,
+    "at": "2026-11-17T08:48:40Z",
+    "ld": 11.55,
     "c": 8,
     "sb": 1,
     "dk": [
-     18.6,
+     17.7,
      228.3
     ],
     "ss": [
@@ -637,13 +619,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 3,
+  "main": 2,
   "lanes": 0,
-  "total": 3,
-  "at": "3:45 AM",
+  "total": 2,
+  "at": "3:49 AM",
   "why": "",
-  "at_iso": "2026-11-17T08:45:00+00:00",
+  "at_iso": "2026-11-17T08:49:00+00:00",
   "started": "1:00 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 1:00 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 3:45 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 1:00 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 3:49 AM ET</p></section>"
  }
 }

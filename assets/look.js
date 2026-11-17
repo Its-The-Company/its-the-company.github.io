@@ -12,6 +12,33 @@ x=e.clientX;y=e.clientY;on=e.target.closest?e.target.closest('.lk-box'):null},{p
 document.querySelectorAll('.lk-box').forEach(function(b){b.addEventListener('wheel',function(e){
 if(on===b||e.ctrlKey||e.defaultPrevented)return;e.preventDefault();var k=e.deltaMode===1?40:e.deltaMode===2?innerHeight*.9:1;
 scrollBy({left:e.deltaX*k,top:e.deltaY*k,behavior:'instant'})},{passive:false})})})();
+// T-4620 (friesevan #41 c6927279384): a feature in Merged, In flight or Queued is one card with its steps' cards nested
+// under it (home_look.feat_wrap builds it; data-ft on #lk-all names each feature's steps and its line). The lists' own
+// code draws flat rows: each calls undo(list) before it reads or sorts them and group(list) after it draws them, so a
+// feature card sits where its first card falls in the list's order. A card opened by a tap stays open across redraws;
+// a search opens the cards that hold a match; a card none of whose steps shows under the filters hides.
+window.LKFT=(function(){var D=null,W={},OP={};
+function data(){if(D)return D;D={};var a=document.getElementById('lk-all');try{D=JSON.parse(a&&a.getAttribute('data-ft')||'{}')}catch(e){}
+Object.keys(D).forEach(function(f){if(!W[f])W[f]=f;(D[f].s||[]).forEach(function(s){if(!W[s])W[s]=f})});return D}
+function mk(p,t,c,x){var e=document.createElement(t);if(c)e.className=c;if(x)e.textContent=x;p.appendChild(e);return e}
+function body(d){return d.querySelector(':scope>.lk-ftb')}
+// home_look.feature_words, from the live lists: merged (the records, or Merged now), in flight, queued, waiting
+function words(f){var x=D[f],s=x.s||[],L=(window.CompanySite||{}).lk||{},n={m:0,f:0,q:0,w:0,x:0},k;if(!s.length)return 'No steps on the board yet';
+function has(a,i){return (a||[]).indexOf(i)>=0}
+s.forEach(function(i){n[has(x.m,i)||(L.hm&&L.hm(i))?'m':L.has&&L.has(i)?'f':has(x.q,i)?'q':has(x.o,i)?'w':'x']++});
+k=[n.m+' of '+s.length+' step'+(s.length===1?'':'s')+' merged'];[['f','in flight'],['q','queued'],['w','waiting or blocked'],['x','closed or held from view']]
+.forEach(function(w){if(n[w[0]])k.push(n[w[0]]+' '+w[1])});return k.join(' \u00b7 ')}
+function card(f){var d=document.createElement('details'),s=mk(d,'summary'),t;d.className='lk-ft';d.setAttribute('data-ft',f);
+t=mk(s,'span','t');mk(t,'span','lk-ftk','Feature');mk(t,'b','',D[f].t);mk(t,'span','lk-ftm',words(f));mk(s,'span','idb',f);mk(d,'div','lk-ftb');
+s.addEventListener('click',function(){OP[f]=!d.open});return d}
+function undo(c){if(!c)return;[].slice.call(c.children).forEach(function(d){if(!d.classList.contains('lk-ft'))return;
+[].slice.call(body(d).children).forEach(function(x){c.insertBefore(x,d)});c.removeChild(d)})}
+function group(c){if(!c)return;undo(c);data();var g={},S=window.CompanySite,q=!!(S&&S.lk&&S.lk.q&&S.lk.q());
+[].slice.call(c.children).forEach(function(x){var i=(x.getAttribute('data-id')||'').replace(/\.\d+$/,''),f=W[i],b;if(!f||!D[f])return;
+if(!g[f]){g[f]=card(f);c.insertBefore(g[f],x)}b=body(g[f]);if(i===f)b.insertBefore(x,b.firstChild);else b.appendChild(x)});
+Object.keys(g).forEach(function(f){var d=g[f],n=body(d).querySelectorAll(':scope>[data-id]:not([hidden])').length;d.hidden=!n;d.open=!!OP[f]||(q&&n>0)});
+[].forEach.call(document.querySelectorAll('details.lk-ft'),function(d){var m=d.querySelector('.lk-ftm'),f=d.getAttribute('data-ft');if(m&&D[f])m.textContent=words(f)})}
+return{group:group,undo:undo}})();
 // T-3187 (friesevan #41 c6701678631): (1) a star on each Running and Queued card; the stars are shared by both Investors, in
 // investors/favorites.json on GitHub ({"tasks": [...]}), written with the Investor's own token, one commit a tap, read fresh
 // first and once more if GitHub moved it (as personal.js writes billing.json); no token: the build's stars show, no buttons.
@@ -112,7 +139,7 @@ function walk(i,g){var s={},o=[],t=[],n;s[i]=1;function push(x,d){(g[x]||[]).sli
 while(t.length&&o.length<LMAX){n=t.pop();o.push([n[1],n[0],s[n[0]]?1:0]);if(!s[n[0]]){s[n[0]]=1;push(n[0],n[1]+1)}}
 if(t.length)while(t.length){n=t.pop();if(!s[n[0]]){s[n[0]]=1;push(n[0],0)}}
 o.left=Object.keys(s).length-1-o.filter(function(r){return !r[2]}).length;return o}
-function qcard(i){var q=document.getElementById('lk-q');return q?[].filter.call(q.children,function(c){return lid(c.getAttribute('data-id'))===i})[0]:null}
+function qcard(i){var q=document.getElementById('lk-q');return q?[].filter.call(q.querySelectorAll('.lk-q'),function(c){return lid(c.getAttribute('data-id'))===i})[0]:null}
 function carded(i){return !!((S.lk.has&&S.lk.has(i))||(S.lk.hm&&S.lk.hm(i))||qcard(i)||(A||[]).some(function(a){return a[0]===i}))}
 function qname(i){var c=qcard(i),a=(A||[]).filter(function(x){return x[0]===i})[0];return c?(c.querySelector('.lk-tn')||{}).textContent:a?a[2]:''}
 function lrow(ul,r,me){var t=r[1],li=mk(ul,'li'),go=!r[2]&&carded(t),n=G.n[t]||['','q'],e=mk(li,go?'a':'span');
@@ -138,10 +165,10 @@ c.setAttribute('data-q',[a[2],a[0],a[3]].join(' '));c.setAttribute('data-w',a[3]
 t=mk(c,'span','t');mk(t,'b','lk-tn',a[2]);badge(t,a[0]);if(a[7])mk(c,'span','lk-rty','retry '+a[7]);if(a[4]){g=mk(c,'span','lk-cat',a[4]);g.title='Category: '+a[4]}mk(c,'span','idb',a[0]);aria(c);return c}
 // T-4007: k counts the rows on show, for the no-match line; T-4287: every row shows, in the scroll box (no fold)
 // T-4313: a card in a folded part (Merged, In flight, Queued) opens its part first, so a link to it lands on it
-function unfold(c){var d=c&&c.closest&&c.closest('details.lk-fold');if(d&&!d.open)d.open=true}
+function unfold(c){var d=c&&c.closest&&c.closest('details.lk-fold'),f=c&&c.closest&&c.closest('details.lk-ft');if(d&&!d.open)d.open=true;if(f&&!f.open)f.open=true}
 // T-4313: QV, the queued rows on show under the search and the filters (queued() counts them), for every total
 var QV=0;
-function queued(){var q=document.getElementById('lk-q'),rows,k=0;if(!q)return;if(!A){A=[];try{A=JSON.parse(q.getAttribute('data-all')||'[]')}catch(e){}}
+function queued(){var q=document.getElementById('lk-q'),rows,k=0;if(!q)return;LKFT.undo(q);if(!A){A=[];try{A=JSON.parse(q.getAttribute('data-all')||'[]')}catch(e){}}
 [].slice.call(q.querySelectorAll('.lk-x')).forEach(function(c){q.removeChild(c)});
 A.forEach(function(a){if(okId(a[0])&&inq(a[0],a[5]))q.appendChild(qrow(a))});  // T-4287: every row, the filters below hide
 rows=[].slice.call(q.children);
@@ -151,9 +178,9 @@ rows.forEach(function(c){var s=c.querySelector('.lk-star'),on=match(c.getAttribu
 c.hidden=!on});
 var no=document.getElementById('lk-q-none');if(!no&&(Q||CF||IV)){no=document.createElement('p');no.id='lk-q-none';no.className='meta';q.parentNode.insertBefore(no,q.nextSibling)}
 QV=k;if(no){no.textContent=Q?'No queued task matches.':IV?'No queued task '+fw()+'.':'No queued task in this category.';no.hidden=!(Q||CF||IV)||k>0}
-no=document.getElementById('lk-q-rest');if(no)no.hidden=true}
+no=document.getElementById('lk-q-rest');if(no)no.hidden=true;LKFT.group(q)}
 function count(){if(!fn2)return;if(!Q&&!CF&&!IV){fn2.textContent='';return}
-var m=document.querySelectorAll('#lk-mg .lk-run').length,r=document.querySelectorAll('#lk-run .lk-run').length,q=document.querySelectorAll('#lk-q>.lk-q:not([hidden])').length;
+var m=document.querySelectorAll('#lk-mg .lk-run').length,r=document.querySelectorAll('#lk-run .lk-run').length,q=document.querySelectorAll('#lk-q .lk-q:not([hidden])').length;
 fn2.textContent=(m?m+' merged, ':'')+r+' in flight, '+q+' in Queued '+(Q?'match':fw())}
 // T-4313: the queued rows first, so In flight's render (fn) reads their count under the same filters
 function fire(){queued();fn.forEach(function(f){try{f()}catch(e){}});count()}
@@ -172,7 +199,7 @@ function take(l){F={};l.forEach(function(i){F[i]=1});fire()}
 var QI=null,KIN=['parent','grandparent','great-grandparent'];
 function anc(i){var s={},t=[[lid(i),0]],x;while(t.length){x=t.shift();(G.u[x[0]]||[]).concat(G.x[x[0]]||[]).forEach(function(p){p=lid(p);if(!s[p]){s[p]=x[1]+1;t.push([p,x[1]+1])}})}return s}
 function nums(){var m={},q=document.getElementById('lk-q');(A||[]).forEach(function(a){if(okId(a[0]))m[lid(a[0])]=a[1]});
-[].forEach.call(q?q.children:[],function(d){var i=d.getAttribute('data-id');if(okId(i))m[lid(i)]=+d.getAttribute('data-n')});return m}
+[].forEach.call(q?q.querySelectorAll('.lk-q'):[],function(d){var i=d.getAttribute('data-id');if(okId(i))m[lid(i)]=+d.getAttribute('data-n')});return m}
 function target(x,c){var s=anc(x),m=nums(),by={},n=+c.getAttribute('data-n'),y=null,go=[],may=[];Object.keys(m).forEach(function(i){by[m[i]]=i});
 while(--n>0&&by[n]&&s[by[n]]);if(n>0&&by[n])y=by[n];
 Object.keys(s).sort(function(a,b){return s[a]-s[b]||+a.slice(2)-+b.slice(2)}).forEach(function(a){var w=a+', its '+(KIN[s[a]-1]||'ancestor'),st=(G.n[a]||[])[1];
@@ -399,9 +426,9 @@ if(c[0]!=='all')mk(b,'span',c[0]==='queued'||MK[c[0]]?'lk-qm':'lk-dot');b.append
 if(pm)pm.hidden=fl!=='all'&&fl!=='merged';if(pf)pf.hidden=fl==='queued'||fl==='merged';if(pq)pq.hidden=fl!=='all'&&fl!=='queued';
 od=(K3&&K3.sort&&K3.sort()==='stage'&&K3.dir&&K3.dir()>0?[pq,pf,pm]:[pm,pf,pq]).filter(Boolean);
 if(od.length>1&&od.every(function(e){return e.parentNode===od[0].parentNode})&&od.some(function(e,i){return i&&od[i-1].nextElementSibling!==e}))od.forEach(function(e){e.parentNode.appendChild(e)});
-var sq=!!(K3&&K3.q());box.textContent='';v=vf.filter(function(x){return fl==='all'||COL[x.s]===fl}).sort(order);v.forEach(function(x){card(x)});
+var sq=!!(K3&&K3.q());box.textContent='';v=vf.filter(function(x){return fl==='all'||COL[x.s]===fl}).sort(order);v.forEach(function(x){card(x)});LKFT.group(box);
 if(!items.length)mk(box,'p','','Nothing in flight.');else if(!v.length&&(sq||on))mk(box,'p','meta','No task in flight matches.');
-if(mbox){mbox.textContent='';w=vm.slice().sort(order);w.forEach(function(x){card(x,mbox)});
+if(mbox){mbox.textContent='';w=vm.slice().sort(order);w.forEach(function(x){card(x,mbox)});LKFT.group(mbox);
 if(!MG.length)mk(mbox,'p','','Nothing merged this session yet.');else if(!w.length)mk(mbox,'p','meta','No merged task matches.')}
 c=document.getElementById('lk-mg-m');if(c){c.hidden=!ME;c.textContent='and '+ME+' merged earlier this session, not listed here'}
 put('lk-run-n',v.length);put('lk-mg-n',nmg);c=document.getElementById('lk-q-n');if(c)c.textContent=on?qv:(c.getAttribute('data-n')||qv);
@@ -444,7 +471,7 @@ MG=mgs(st,u,LS,now);items=u.filter(function(x){return x.s!=='merged'});if(K3&&K3
 // T-4313: and to a Merged card, in its own box (go() opens its part)
 if(K3){K3.has=function(i){return items.some(function(x){return K3.id(x.id)===i})};K3.hm=function(i){return MG.some(function(x){return K3.id(x.id)===i})};
 K3.all=function(){if(fl!=='all'){fl='all';render()}};K3.run=function(i){var b=K3.has(i)?box:K3.hm(i)?mbox:null;if(!b)return null;fl='all';render();
-return [].filter.call(b.children,function(c){return K3.id(c.getAttribute('data-id'))===i})[0]||null}}
+return [].filter.call(b.querySelectorAll('.lk-run'),function(c){return K3.id(c.getAttribute('data-id'))===i})[0]||null}}
 render();if(K3)K3.on(render);if(S&&S.onStatus&&S.lane){S.onStatus.push(draw);if(S.status&&S.status())draw(S.status(),true)}});
 // T-2940: Blocked or waiting (T-3735) folds behind a button at the top of its list: rows past data-max carry lk-fold.
 // T-4287: Queued no longer folds; it scrolls in its box.

@@ -7,7 +7,8 @@
 <style>
 /* Direction A, "evolve what is approved". Hand-written HTML and SVG, no images, no script.
    Every colour, size and face below is copied by value from pywidget/docs/design/tokens.css
-   (generated from tokens.json): .paper = light, A Paper; .studio = dark, B Studio. Nothing is new.
+   (generated from tokens.json): .paper = light, A Paper; .studio = dark, B Studio. Nothing is new,
+   except that on 2026-11-17 (T-4680, #291) Studio's hued values became neutral greys of equal luminance.
    Each screen is drawn once in <defs> and shown twice; the appearance comes from the class on the frame. */
 html{color-scheme:light dark}
 body{margin:0;padding:16px 16px 56px;background:#F7F5F0;color:#1C1B19;font:15px/1.45 system-ui,-apple-system,'Segoe UI',Roboto,sans-serif}
@@ -23,9 +24,9 @@ svg.frame{display:block;width:100%;height:auto}
 svg.pad{max-width:1180px}
 svg.defs{position:absolute;width:0;height:0;overflow:hidden}
 @media (prefers-color-scheme:dark){
-  body{background:#0A0C13;color:#EEF0F8}
+  body{background:#0C0C0C;color:#F0F0F0}
   .mark{border-color:#FFC266;color:#FFC266}
-  figcaption{color:#A9AFC5}
+  figcaption{color:#AFAFAF}
 }
 
 /* tokens */
@@ -36,11 +37,11 @@ svg.defs{position:absolute;width:0;height:0;overflow:hidden}
   --card-primary:#1C1B19;--card-secondary:#5C5850;--card-accent:#2350B0;--card-ground:#EEEBE4;--card-stroke:#E3DFD6;
   --font-display:ui-serif,'New York',Georgia,serif;--w-title:600;--w-num:500;
   --shadow:rgba(28,27,25,.10);--d-paper:inline;--d-studio:none}
-.studio{--bg-canvas:#0A0C13;--bg-surface:#151926;--bg-raised:#1E2333;--bg-sunken:#06070C;--bg-editor:#0E1120;--bg-console:#080A12;
-  --line-hairline:#262C3E;--line-strong:#394158;--text-primary:#EEF0F8;--text-secondary:#A9AFC5;--text-tertiary:#8A91AA;--text-onAccent:#120A33;
-  --accent:#A08BFF;--accent-soft:#2A2350;--status-success:#4FD39A;--status-warning:#FFC266;--status-danger:#FF7A8A;
-  --glass-fill:rgba(30,35,51,.55);--glass-stroke:rgba(255,255,255,.14);
-  --card-primary:#FFFFFF;--card-secondary:rgba(255,255,255,.78);--card-accent:#B0A3FD;--card-ground:rgba(255,255,255,.28);--card-stroke:rgba(255,255,255,.14);
+.studio{--bg-canvas:#0C0C0C;--bg-surface:#191919;--bg-raised:#232323;--bg-sunken:#070707;--bg-editor:#121212;--bg-console:#0A0A0A;
+  --line-hairline:#2C2C2C;--line-strong:#414141;--text-primary:#F0F0F0;--text-secondary:#AFAFAF;--text-tertiary:#929292;--text-onAccent:#121212;
+  --accent:#9C9C9C;--accent-soft:#2A2A2A;--status-success:#4FD39A;--status-warning:#FFC266;--status-danger:#FF7A8A;
+  --glass-fill:rgba(35,35,35,.55);--glass-stroke:rgba(255,255,255,.14);
+  --card-primary:#FFFFFF;--card-secondary:rgba(255,255,255,.78);--card-accent:#AEAEAE;--card-ground:rgba(255,255,255,.28);--card-stroke:rgba(255,255,255,.14);
   --font-display:ui-rounded,system-ui,sans-serif;--w-title:700;--w-num:600;
   --shadow:rgba(0,0,0,0);--d-paper:none;--d-studio:inline}
 
@@ -92,7 +93,7 @@ svg.frame{fill:var(--text-primary);font-family:system-ui,-apple-system,'Segoe UI
 
 /* syntax: Quill light and Lumen dark, design-system-v0.md section 7 */
 .paper{--sx-text:#1C1B19;--sx-comment:#6B675E;--sx-keyword:#8A2F8F;--sx-string:#1D6B40;--sx-number:#9A4500;--sx-function:#2350B0;--sx-builtin:#0B6670;--sx-gutter:#6A665D;--sx-currentLine:#F6F4EE;--sx-selection:#E3EAF8}
-.studio{--sx-text:#E6E9F5;--sx-comment:#9198B5;--sx-keyword:#C59BFF;--sx-string:#7FE3BA;--sx-number:#FFB86E;--sx-function:#72BBFF;--sx-builtin:#FF93B6;--sx-gutter:#8089A6;--sx-currentLine:#151929;--sx-selection:#28234F}
+.studio{--sx-text:#E6E9F5;--sx-comment:#9198B5;--sx-keyword:#C59BFF;--sx-string:#7FE3BA;--sx-number:#FFB86E;--sx-function:#72BBFF;--sx-builtin:#FF93B6;--sx-gutter:#8089A6;--sx-currentLine:#1A1A1A;--sx-selection:#292929}
 .cd{font-family:ui-monospace,Menlo,Consolas,'Roboto Mono',monospace;font-size:15px;fill:var(--sx-text)}
 .cd13{font-family:ui-monospace,Menlo,Consolas,'Roboto Mono',monospace;font-size:13px;fill:var(--sx-text)}
 .gu{font-family:ui-monospace,Menlo,Consolas,'Roboto Mono',monospace;font-size:12px;fill:var(--sx-gutter);text-anchor:end}
@@ -108,13 +109,14 @@ svg.frame{fill:var(--text-primary);font-family:system-ui,-apple-system,'Segoe UI
 <div role="note" class="rs-proposal" style="position:sticky;top:0;z-index:2147483647;margin:0;padding:6px 10px;background:#7a4b00;color:#fff;font:600 14px/1.4 -apple-system,system-ui,sans-serif;text-align:center">Proposal, not approved: the mock-ups are options for the Investors to review. Nothing here is adopted until the Investors approve it.</div>
 <main>
 <p><span class="mark">Proposal, not approved</span></p>
+<p><strong>Changed 2026-11-17 (T-4680).</strong> On #291 the Investors chose A as the base with three parts of C, and asked that Studio be plain black or dark grey, not purple. Studio's grounds, lines, text, accent, gradients and widget card on this page are now neutral greys, each with the same lightness as the colour it replaces, so every contrast pair is within 0.1 of what it was. Unchanged: Paper, the status colours, the Lumen code colours (its keyword colour is still violet). The new greys are not in tokens.css yet. Still a proposal: the specifics come later.</p>
 <h1>Direction A, screens 2 and 3: the editor and the Builder</h1>
 <p>Two views of one output, never two places (03 section 2). A switch at the top chooses Blocks or Code; the preview is the same sheet under both on iPhone and the same column beside both on iPad. Colours, type and syntax themes are the approved Paper and Studio ones. Sample data and sample code: the module names are placeholders, not the final API. Project, Page and Builder are placeholder names.</p>
 
 <svg class="defs" aria-hidden="true" focusable="false">
 <defs>
-  <linearGradient id="g-pill" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#A08BFF"/><stop offset="1" stop-color="#FF9B6A"/></linearGradient>
-  <linearGradient id="g-card" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#5B33E6"/><stop offset="1" stop-color="#1E1450"/></linearGradient>
+  <linearGradient id="g-pill" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#9C9C9C"/><stop offset="1" stop-color="#B4B4B4"/></linearGradient>
+  <linearGradient id="g-card" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#5A5A5A"/><stop offset="1" stop-color="#1F1F1F"/></linearGradient>
   <filter id="f-soft" x="-30%" y="-30%" width="160%" height="180%"><feGaussianBlur stdDeviation="7"/></filter>
   <filter id="f-tight" x="-30%" y="-30%" width="160%" height="180%"><feGaussianBlur stdDeviation="2"/></filter>
   <clipPath id="clip-phone"><rect width="390" height="844" rx="40"/></clipPath>

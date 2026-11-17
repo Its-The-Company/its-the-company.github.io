@@ -36,7 +36,8 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - efficiency review T-4124 — a metrics row's `seconds` can be its whole run's time on every row; queue a note before writing that it exists
 - account fixes T-4305 — unified session: no; #303 pending
 - 1.0 = Builder + Pages + widget taps/buttons (#270, #272, #41). Likely Thu 2027-07-08 (T-4543); ADR-011 as accepted: +3 days, Idris to size (T-4551). Range: ops/plans/T-4266-release-range.py. B-staged Pro stands.
-- Board: never pre-number lines (`add` assigns IDs, T-2354); grep the board before `add`; stage my lines only (T-3204).
+- Board: never pre-number lines (`add` assigns IDs, T-2354); grep the board before `add`; stage my lines only (T-3204). A <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> `add` writes main's live board; card: no Base/By (pass --by), one Done-when kind + docs page (T-4672).
+- Showcase premades plan: ops/plans/T-4672-showcase-premades.md (Pro tag model #41 12:27 AM 11-17; themes split + Pro words are proposals).
 - Standing lessons: run `date` before every stamp; grep my own proposals and git log before <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">ruling</span>; read a new rule against the ADR it touches; when two fixes interact, check the bound under both. Never write "ships as is" without a grep at HEAD (T-0791: an unbuilt BGAppRefresh went into the guide as shipped).
 - Never route round a refusal by copying the refused content another way (11-05 E1 route, owned 11-15).
 - T-3892: a session calling a tool's inner function after its check said STOP is what a classifier should refuse. A fix folded into an approved proposal keeps checks exact, never looser than what the Investors saw.
@@ -44,7 +45,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-3809: when a read's source sits on a locked disk, read the record written at the time (events log, ruled lines) and say so; a fired rule that names the Investors as the actor: ask, recommend, record the disagreement.
 - T-4489 (11-15): an approval never <span title="A new, permitted reading that removes a cap. A lift rule is that reading, written down before we look.">lifts</span> a refusal made after it; a plan's gloss ("also lifts the record") is not Investor words. Sim refusals asked on #313, T-4561 waits.
 - T-4107: a grep scoped to one file is not a repo grep; before writing 'X is gone' as a remove's evidence, run the repo-wide grep and quote its count (T-0472 row had to be superseded). Verdict counts come from the ledger's last row per ID.
-- T-4117: a reflog check (amendments_watch) can be green on one <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span>, red on another: run it where the records were made.
+- T-4117: a reflog check (amendments_watch) can be green on one lane, red on another: run it where the records were made.
 - T-4267: ADRs are code to main_folder_guard: worker copy + main_gate. T-4272: an answer that changes a decision's content withdraws the content, not a form the Investors approved; check what each A approved, in time order.
 - T-4105: a fix's number must match its aim ("first day" went in as 7 days). A one-day replay counts slow rules as misses. Subagent report .md Writes are refused.
 - feature grouping T-4228 — done 11-14; both switches off, mine to switch; 17, 18 open; code-written slots are not the author's words

@@ -8,7 +8,8 @@
 /* Direction C, "creative-first". Hand-written HTML and SVG, no images, no script, system fonts only.
    .lite = C in light, standing on Paper's colours; .dark = C in dark, standing on Studio's.
    Copied by value from pywidget/docs/design/tokens.css: every ground, line, text, accent and status colour,
-   the widget card colours and the syntax themes. New in C, and in no token file: the six tile tints
+   the widget card colours and the syntax themes; on 2026-11-17 (T-4680, #291) Studio's hued values became
+   neutral greys of equal luminance, so those are no longer token values. New in C, and in no token file: the six tile tints
    (--t-*) in each appearance, the rounded title face in light, the larger type scale. The 28 px corners are the approved r5.
    Each screen is drawn once in <defs> and shown twice; the appearance comes from the class on the frame. */
 html{color-scheme:light dark}
@@ -29,10 +30,10 @@ svg.frame{display:block;width:100%;height:auto}
 svg.pad{max-width:1180px}
 svg.defs{position:absolute;width:0;height:0;overflow:hidden}
 @media (prefers-color-scheme:dark){
-  body{background:#0A0C13;color:#EEF0F8}
+  body{background:#0C0C0C;color:#F0F0F0}
   .mark{border-color:#FFC266;color:#FFC266}
-  figcaption{color:#A9AFC5}
-  th,td{border-color:#262C3E}
+  figcaption{color:#AFAFAF}
+  th,td{border-color:#2C2C2C}
 }
 
 /* tokens: approved values first, then C's own tints */
@@ -44,12 +45,12 @@ svg.defs{position:absolute;width:0;height:0;overflow:hidden}
   --sx-text:#1C1B19;--sx-comment:#6B675E;--sx-keyword:#8A2F8F;--sx-string:#1D6B40;--sx-number:#9A4500;--sx-function:#2350B0;--sx-builtin:#0B6670;--sx-gutter:#6A665D;--sx-currentLine:#F6F4EE;
   --t-sky:#DCE8FA;--t-mint:#D9EFE1;--t-sun:#FBEBC8;--t-rose:#F9DDD8;--t-lilac:#E6DFF8;--t-sand:#ECE6D8;
   --shadow:rgba(28,27,25,.10);--d-l:inline;--d-d:none}
-.dark{--canvas:#0A0C13;--surface:#151926;--sunken:#06070C;--editor:#0E1120;--console:#080A12;
-  --hair:#262C3E;--strong:#394158;--tx:#EEF0F8;--tx2:#A9AFC5;--tx3:#8A91AA;--on:#120A33;
-  --accent:#A08BFF;--soft:#2A2350;--ok:#4FD39A;--warn:#FFC266;
-  --card-primary:#FFFFFF;--card-secondary:rgba(255,255,255,.78);--card-accent:#B0A3FD;--card-ground:rgba(255,255,255,.28);--card-stroke:rgba(255,255,255,.14);
+.dark{--canvas:#0C0C0C;--surface:#191919;--sunken:#070707;--editor:#121212;--console:#0A0A0A;
+  --hair:#2C2C2C;--strong:#414141;--tx:#F0F0F0;--tx2:#AFAFAF;--tx3:#929292;--on:#121212;
+  --accent:#9C9C9C;--soft:#2A2A2A;--ok:#4FD39A;--warn:#FFC266;
+  --card-primary:#FFFFFF;--card-secondary:rgba(255,255,255,.78);--card-accent:#AEAEAE;--card-ground:rgba(255,255,255,.28);--card-stroke:rgba(255,255,255,.14);
   --wfont:ui-rounded,'SF Pro Rounded',system-ui,sans-serif;--wnum:600;
-  --sx-text:#E6E9F5;--sx-comment:#9198B5;--sx-keyword:#C59BFF;--sx-string:#7FE3BA;--sx-number:#FFB86E;--sx-function:#72BBFF;--sx-builtin:#FF93B6;--sx-gutter:#8089A6;--sx-currentLine:#151929;
+  --sx-text:#E6E9F5;--sx-comment:#9198B5;--sx-keyword:#C59BFF;--sx-string:#7FE3BA;--sx-number:#FFB86E;--sx-function:#72BBFF;--sx-builtin:#FF93B6;--sx-gutter:#8089A6;--sx-currentLine:#1A1A1A;
   --t-sky:#1B2A4A;--t-mint:#16342B;--t-sun:#3A2E14;--t-rose:#3D1F27;--t-lilac:#2A2350;--t-sand:#262A36;
   --shadow:rgba(0,0,0,0);--d-l:none;--d-d:inline}
 
@@ -116,14 +117,15 @@ svg.frame{fill:var(--tx);font-family:system-ui,-apple-system,'Segoe UI',Roboto,s
 <div role="note" class="rs-proposal" style="position:sticky;top:0;z-index:2147483647;margin:0;padding:6px 10px;background:#7a4b00;color:#fff;font:600 14px/1.4 -apple-system,system-ui,sans-serif;text-align:center">Proposal, not approved: the mock-ups are options for the Investors to review. Nothing here is adopted until the Investors approve it.</div>
 <main>
 <p><span class="mark">Proposal, not approved</span></p>
+<p><strong>Changed 2026-11-17 (T-4680).</strong> On #291 the Investors chose A as the base with three parts of C, and asked that Studio be plain black or dark grey, not purple. Studio's grounds, lines, text, accent, gradients and widget card on this page are now neutral greys, each with the same lightness as the colour it replaces, so every contrast pair is within 0.1 of what it was. Unchanged: Paper, the status colours, the Lumen code colours (its keyword colour is still violet) and C's own tile tints, which were never approved. The new greys are not in tokens.css yet. Still a proposal: the specifics come later.</p>
 <h1>Direction C, screens 2 and 3: the Builder and the editor</h1>
 <p>In direction C the finished thing is on the screen at every step. The Builder comes first on this page because C puts it first: the widget sits on a stage at the top and the blocks are large cards under it. The editor is the same project one tap away, through the Blocks and Code switch or through the round code button on a block. The sample Python and its module names are placeholders, not the app's API. Builder and Project are placeholder names.</p>
 
 <svg class="defs" aria-hidden="true" focusable="false">
 <defs>
 <!-- shared:begin -->
-  <linearGradient id="g-pill" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#A08BFF"/><stop offset="1" stop-color="#FF9B6A"/></linearGradient>
-  <linearGradient id="g-card" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#5B33E6"/><stop offset="1" stop-color="#1E1450"/></linearGradient>
+  <linearGradient id="g-pill" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#9C9C9C"/><stop offset="1" stop-color="#B4B4B4"/></linearGradient>
+  <linearGradient id="g-card" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#5A5A5A"/><stop offset="1" stop-color="#1F1F1F"/></linearGradient>
   <filter id="f-soft" x="-30%" y="-30%" width="160%" height="180%"><feGaussianBlur stdDeviation="7"/></filter>
   <clipPath id="clip-phone"><rect width="390" height="844" rx="40"/></clipPath>
   <clipPath id="clip-pad"><rect width="1180" height="820" rx="24"/></clipPath>

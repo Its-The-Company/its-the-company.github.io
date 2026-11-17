@@ -556,11 +556,11 @@ Runs log (⋯ → Runs): one row per run with the same icon and word, run number
    | Testers (`grp.testers`) | `set.tester.pro` Unlock Pro (testers), a switch with the `hammer` glyph; footer `set.tester.foot` For testing only. Nothing is charged, and your purchase, if any, is unchanged. Turn it off to see what you’ve bought. | only in a TestFlight or Xcode copy: the binary is compiled with `PYWIDGET_TESTER_PRO` (Debug, and `tools/upload.sh --internal --upload`'s internal TestFlight archive), AppTransaction reads `.sandbox` or `.xcode` at that moment, and the flag file has a product (`ProStore.showsTesterSwitch`). Drawn after the Pro group, before Editor. **Never** in an App Store copy, an App Review build, an external TestFlight group, or when AppTransaction is unread, unverified or late (`.unknown` counts as production) | flips the switch in place; on, the Pro gates open on this device (`purchased || tester`); no StoreKit call, so the Pro row's detail and Restore stay as StoreKit says; the widgets reload when the gates change | T-4093 (`Shared/TesterPro.swift`; shots `ops/site-checks/settings-T-4199/`). `draw_settings.py` holds the three strings for the C6 check but draws this group in no frame: the sheets show the App Store copy |
    | Editor | `e.theme` Editor theme; detail the chosen theme (`set.theme.default` or a Pro name) | `entitlements.themes.on` and a product | pushes the picker (10.3) | T-0272 |
    | Help | `set.tour` Show the tour again | always | presents the s5.6 tour from page 1 (iPhone full-screen cover; iPad 560 × 700 page sheet). Skip or the last page returns to Settings. Changes no project and does not reset "shown once" | s5.6 |
-   | | `set.support` Support (trailing arrow up-right) | always | opens `[support URL]` in `SFSafariViewController` | matrix s2c (Support URL) |
-   | About | `link.privacy` Privacy Policy (arrow) | always | opens `[privacy URL]`, the same URL as App Store Connect's field | matrix row 41, G11 |
-   | | `link.terms` Terms of Use (arrow) | always | opens `[terms URL]`, the same URL as the Pro screen's link | s5.7 links |
+   | | `set.support` Support (trailing arrow up-right) | while the support URL is set (no row until then; T-0485) | opens `[support URL]` in `SFSafariViewController` | matrix s2c (Support URL) |
+   | About | `link.privacy` Privacy Policy (arrow) | while the privacy URL is set (`LegalLinks`; no row until then) | opens `[privacy URL]`, the same URL as App Store Connect's field | matrix row 41, G11 |
+   | | `link.terms` Terms of Use (arrow) | while the terms URL is set (`LegalLinks`; no row until then) | opens `[terms URL]`, the same URL as the Pro screen's link | s5.7 links |
    | | `set.ack` Acknowledgements | always | pushes the list (10.4) | T-0042, T-0345 |
-   | page foot | `set.appear`, then `set.version` | always | none; long-press on the version: context menu Copy | |
+   | page foot | `set.appear`, then `set.version` | always | none; long-press on the version: context menu `set.copy` Copy | |
 
 </div>
 
@@ -586,7 +586,7 @@ Runs log (⋯ → Runs): one row per run with the same icon and word, run number
    | Offline | rows unchanged; Restore ends in `set.restore.failed`; the Pro screen shows its own offline state (s5.7.4 row 6); a web row opens Safari's own error page |
    | C3, no product (`product: null`) | frame 5: no Pro group, no Restore, no Editor group |
    | `themes` off, or a stored theme id not in `themes.items` | no Editor group; the editor uses Quill and Lumen |
-   | A URL still a placeholder | does not ship: a Release-configuration unit test fails if any of the three URLs is empty, not `https`, or contains `[` (G11) |
+   | A URL not yet set | its row is not drawn (Support, Privacy Policy, Terms of Use), so no row opens a placeholder; the Release archive fails until the privacy URL is an `https` URL with a host (`scripts/check_legal_links.py`, G11), so no store build ships without the Privacy Policy row |
    | Acknowledgements file missing or empty | does not ship: T-0042's UI test fails. No empty state is drawn, because an empty screen would breach the licences |
 
 </div>

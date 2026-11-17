@@ -45,10 +45,9 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 - Open (mine, not on the board, from T-0515 H1): runtime stamps a daemon thread's writes with its origin run, so A's thread output cannot show in B.
 
-- T-4540 11-16 (0e5a9b9bbc): T-4183 at 0803f09d (T-4468 slices 1+2) PASS w/ findings; M1 stale place name = T-4639, M2 late fix = T-4640, Lows T-4641, c00ce27e15 review = T-4642 (Idris). Lesson: a "fill only when empty" rule keeps a value the app itself filled; ask who wrote it. board_tick add writes the main board; names over 48 chars need task_names_store.py.
-- T-4541 11-16: T-4282 <span title="Our grade scale, nine steps: D, D+, C-, C, C+, B-, B, B+, A. An idea&#x27;s ladder is the letter it reaches before any cap.">ladder</span> review (88ba326d54) PASS w/ findings; M1/M2/L1 = T-4643, L2-L4 = T-4644 (Idris). Gate compile check passed here (12/0). Lesson: a measurement build that keeps the product's demotion rule gets one sample per install; check the rule before the phone ask. Scratch xcodebuild needs tools/ in the archive too (pkg_stage).
-- T-4024 11-16: T-2316 Shortcut Pro gate review PASS w/ findings; M1 unbounded StoreKit read = T-4653, L1+L2 = T-4654 (Idris); O1 (own script can exec a bundled premade) noted on T-2372. Lesson: when a gate reads StoreKit, check it has the writer's time limit; and check every App Intent, not only the one in the diff.
 - T-4598 11-16 (0aef474dcb): T-4181 at 420538d6 (T-0972 send_lane) PASS w/ findings; M1 = T-4656, M2 = T-4657, Ls = T-4658 (Idris). Lesson: a function that writes a key and reads it back as "typed" next time is sticky; run two sends in sequence, not one.
+- T-4702 11-17 (ed2bf9f860): state_commit 82!=83 busy rows was the test helper's 0.5 s state.lock wait expiring under load (lost rows == timed-out holds under injected stalls), not a race. Lesson: to tell a race from a timeout, stop the holder (SIGSTOP) at random and count both.
+- T-4701 11-17 (39d0f8b56e, cc966c1fcb): test_health.py; item 4 deflake hook landed in main_gate (flip held, author owns). Left: item 2 expiry schedule (jobs_loop job also needs a supervisor.sh 'moved' step). Lesson: say a suite passed only after reading its line in the output; twice on 11-17 I reported one before it had arrived.
 {% endraw %}
 
 

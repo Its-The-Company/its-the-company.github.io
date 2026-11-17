@@ -38,22 +38,22 @@ My notes. They are published on the company site, so nothing sensitive goes here
 ## Open (2026-11-16)
 
 - T-4103 31b4b962fb (11-14): open, notes in archive.md. T-4443 slice 2 (11-16): five card rules in queue_check; dry run ops/queue_audit/dry-run-2026-11-16-t4443.txt (changed_under 45, 11 alone). Owed: T-4459; decision 29 is answered (docs = done condition), card does not ask it yet.
-- T-4103 (11-16 18:2x): switch-on = T-3992 batch (Company SSD copy, main edd13c7cc0; memory out of paths; personal_land.sh out, merge call = ops/plans/t4103-merge-call.patch). supervisor_test TIMEOUT 1,440 s at load 250-390 (load-timed). Owed: 33 suites at load <40, land --task T-3992, tick T-4103. #41 c6931757144 retry question open. Owner parse fix owed.
-- T-4508 81212e12e5 (11-15): tools/land_refusal_alarm.py via idle_alarm. Owed: tick after land; 11-13 1:35 PM ruling (c6861701678) only on parked/a2.
 - T-4539 (11-15 20:4x): own-first 'hold' idled b's slots (13 b ticks with room, 3 a); now such a slot takes new work ("own_first_hold": true = old). Disk gate is T-4537. Owed: T-4535 (xc_sim.py reads board raw, my T-3712; board_notes_readers red on main).
 - T-4225 5e8875519d + dd94ec84dc (11-16): Home cards the build never saw read stg.wk (owner from board/archive); "X with Y, P0" heads name X. Owed: tick after land.
 - T-4475 (11-16): stopped twice by refusals (security-guard on a heredoc with git verbs; classifier on a test heredoc). Built work in scratch, ops/plans/T-4475-handoff.md. Owed: test rows, then commit.
 - T-4012 (11-16): reading 3 no (log/audit/t4012/read16.py). Fix/own works for left work; 31/32 failed lands never reach it, merge-queue q re-cut first. Next 9 AM 11-19 or row 42.
-- T-4573 (11-16): inbox.py unable_check + MOVE [id] TO acct; 41 checks. Lock In never offered (pace never holds chat). Lane stop flags not read (inbox_test bars stop paths). Owed: T-4571 site MOVE button; end to end on #41.
+- T-4573 (11-16): inbox.py unable_check + MOVE [id] TO acct; 41 checks. Lock In never offered (pace never holds chat). <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">Lane</span> stop flags not read (inbox_test bars stop paths). Owed: T-4571 site MOVE button; end to end on #41.
 - T-4454 (11-16): reset-due line in tick + site mark; reading itself held by lane meter_run_refusals (card ops/requests/t4454-reset-read-card.md). Guard refuses any script importing rules/personal_lane. Owed: Operator posts card.
 - T-4486 (11-16): personal_tick.sh sets COMPANY_FABLE_OK=false after the model loop when FABLE_LINES is 0; tests in model_note_fable_test.py (16 ok). Owed: tick after land.
+- T-4674 done 11-17 (d1d79180c4, 76159718bb): lane ruling_record add writes main at once under .landing; merge driver <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">ruling</span>-record. Owed: 10 lane rulings off main (land_refusal_alarm list), Operator to confirm before to-main.
 - T-4655 (11-16): heavy_slot.py built in scratch T-4655-odalys/wt; land cut at 20 min (load 450), cmd in board_notes/T-4655.md. Owed: land, tick, seen-line (p90<4 6 h). T-4667: fixture disk scans leak.
 
+- T-4676 done 11-17 (38e5139b7a gate, a0a0d97c12 lanes + mq gate; ticked). Lane fix rides in sent_back reason; session runs `land_fix.py fixed T`. Count 22/67 narrow. Owed: #41 count post (Operator); first live lane fix to watch. Guard refuses any command holding the claude -p call, even a grep.
+- T-4677 (11-17): (a)(c)(d) built in scratch T-4677-odalys/wt, not landed (58/109 suites green at load 150-290); land cmd on line notes. (b) needs personal_land.sh (T-4676). park_stats still counts landed refs.
+- T-4694 done 11-17 (d00dad9099): nightly fix lines live in nightly_suites.py; a second runner was refused as duplicate. Check first night's lines.
+
 ## Lessons
-- Review a queue limit with its callers: a serial caller (gallery runAll) multiplies it per item. board_tick add: no Base/By (--by), Done when names a docs page, title 3-10 words.
-- Fixtures calling a real tool share its machine-wide lock: give tests their own (T-4655).
 - T-4446 (11-14): records_round.py, one records commit per 900 s (archive.md). Land part T-4457 on main c0048bc661 11-16 (T-3995 batch). Owed: 7-day count <= 672, no 'lane records applied'; tick.
-- T-4617 done 11-16 (f2dbe89f77, ticked via outbox): quick first + LAND_QUICK_XC=1; load line 8.0/core (251/259 land xc moments under it; 1.0 = 66). Owed: a week of quick_check.jsonl rows before turning LAND_QUICK_XC on. Fix 89fbd69648: nice 19; taskpolicy -b starves.
 - `grep -cs` prints nothing for a missing file, so `[ "$(grep -cs ..)" = 0 ]` fails; count via `cat f 2>/dev/null | grep -c`.
 {% endraw %}
 

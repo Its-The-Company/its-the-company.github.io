@@ -31,6 +31,37 @@ inset grouped form, with the same cards, rows, sheets and footers as Settings an
 ([`launcher/editor.md`](editor.html)). Strings are DRAFT, like every app string, since no copy guide is approved. The visual
 direction question (#291, Restructuring 22) is open; this Page uses only parts all three of its options keep.
 
+## 0. The 1.0 showcase set (T-4672, Ines, 2026-11-17)
+
+Dated line. From #278 (an Investor, 9:55 PM ET 11-16: the twelve built premades are not a limit and may not all ship;
+1.0 ships many premades that show what Python and iOS widget features do together and demo what Pro unlocks) and the
+Pro widgets <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">ruling</span> on #41 (12:27 AM ET 11-17: every premade works for everyone; a premade that uses a Pro feature is
+tagged Pro, its inputs stay settable, its design, layout and code need Pro). The plan, with each premade's data
+source, terms and Python and iOS features, is [`ops/plans/T-4672-showcase-premades.md`](../company/t-4672-showcase-premades.html).
+
+**The new set, in build order** (Pro tag in brackets):
+
+1. **Day phases** (`day_phases.py`, new, T-4673; Pro once Today's three has Done buttons): morning trains, a day
+   view, evening trains, a night view, by time of day. Defaults: downtown B and D from 125 St, 6:00 to 10:00 AM;
+   uptown B and D from 34 St-Herald Sq, 5:00 to 9:00 PM. Its Page needs two new field kinds, `time` and `stop`
+   (plan s4.5); the MTA's terms are read before any fetch (plan s4.4).
+2. **Habit tracker** (kept; Pro): gains Done today (s9 below).
+3. **Focus timer** (new; Pro): start, pause and skip buttons that run Python in the widget.
+4. **Next 24 hours** (new; no tag): a temperature and rain chart for a saved place, MET Norway data (L16).
+5. **Sky** (rework of Sunrise and sunset, s3.2; no tag): the sun's arc, twilight, moon phase.
+6. **Overlap clocks** (rework of World clocks, s3.3; no tag): working hours across zones and the shared hours.
+7. **Site status** (new; no tag): up or down and a 24-hour strip for sites the person names.
+8. **Flashcards** (new; Pro): Show answer, Again and Got it buttons, Leitner boxes run in the widget.
+9. **GitHub repository** (kept, s3.6; no tag): adds a star-history line.
+10. **Shortcuts launcher** (kept, s3.7; no tag).
+11. **Countdown** (kept, s3.1; no tag).
+12. **Pattern of the day** (new, last, conditional; Pro only if it uses an advanced library that ships in 1.0).
+
+**Leaving the Gallery** (code and tests stay in the repo): Day progress (folds into Day phases), Steps and floors,
+Distance to a saved place (s3.4), Altitude, Storage, Quote of the day. Sections 3 and 9 below describe the built
+premades as designed; the reworked ones get their Page fields in their own build lines. No Pro tag or offer is ever
+drawn on a placed widget (Apple 4.4); the tag lives on the Gallery tile and the premade's page.
+
 ## 1. The reading, and what is built now
 
 - **"A Page within the same project."** In phase C a premade is a project ([`documents/restructuring/03-structure.md`](../restructuring/03-structure.html)
@@ -560,7 +591,7 @@ Dates in the frames are drawn in one English format; the build uses the system's
 ## 9. Buttons in 1.0 (T-4558)
 
 **Dated line, Maren, 2026-11-16 6:30 AM ET, with Ines's limits (ADR-011 s13 step 10, accepted at 137c133087; plan.md
-<span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span> note 2026-11-15 10:00 PM).** One premade gains a button in 1.0: **Habit tracker**, a **Done today** button per
+chair note 2026-11-15 10:00 PM).** One premade gains a button in 1.0: **Habit tracker**, a **Done today** button per
 habit shown. The other eleven gain none. Every count sits inside ADR-011 s3's caps, and the build fits the 1 slot day
 (0.5 to 2) plan.md gives step 10 (s9.4). The launcher premades (`widgets/premade/launcher/`, built, not released) are
 not among the twelve; their tiles are `Link`s through the launcher path, which s3 does not count, and nothing changes.

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-17T04:07:57.110674+00:00",
+ "at": "2026-11-17T04:11:07.270319+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -111,7 +111,7 @@
    "task": "[tools] T-4665 batch land efficiency pieces",
    "model": "opus",
    "started": "2026-11-17T02:49:08.404Z",
-   "seconds": 4728,
+   "seconds": 4918,
    "finished": null,
    "effort": "high"
   }
@@ -121,17 +121,18 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 453,
+  "runnable_count": 454,
   "blocked_count": 74
  },
  "meter": {
   "five_hour": {
-   "pct": 11.0,
-   "resets_at": "2026-11-16T23:10:00-05:00",
+   "pct": null,
+   "resets_at": null,
    "used_words": "of your 5-hour allowance used",
    "read_at": "2026-11-16T22:46:16.890564-05:00",
    "source": "live",
-   "left": 89.0,
+   "last_reset": "2026-11-16T23:10:00-05:00",
+   "left": null,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
@@ -170,7 +171,7 @@
   "week_pct": 24.98,
   "usage_pct": 48.1,
   "work_pct": 77.2,
-  "read_at": "2026-11-17T04:07:00+00:00",
+  "read_at": "2026-11-17T04:11:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -280,7 +281,7 @@
  "lock_in": {
   "on": false,
   "pool": 4,
-  "at": "2026-11-16T23:07:00-05:00",
+  "at": "2026-11-16T23:11:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -450,7 +451,7 @@
    }
   ],
   "count": {
-   "next": 453,
+   "next": 454,
    "wait": 35,
    "blocked": 39,
    "you": 12
@@ -504,9 +505,9 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-17T04:07:49Z",
+  "at": "2026-11-17T04:11:07Z",
   "s": {
-   "T-4181": [
+   "T-4182": [
     "testing",
     "Mac Mini \u00b7 test",
     null
@@ -514,35 +515,28 @@
    "T-4190": [
     "testq",
     "1st for a Simulator",
-    1794887329036
+    1794887347270
    ],
    "T-4662": [
     "testq",
     "2nd for a Simulator",
-    1794887929036
-   ],
-   "T-4182": [
-    "testq",
-    "3rd for a Simulator",
-    1794888169036
+    1794888667270
    ]
   },
   "nm": {
-   "T-4181": "Widgets refresh on their own and by a tap",
+   "T-4182": "A failing widget says so and can recover",
    "T-4190": "Settings and Pro: buy, restore, themes",
-   "T-4662": "Place the cursor easily on a long line",
-   "T-4182": "A failing widget says so and can recover"
+   "T-4662": "Place the cursor easily on a long line"
   },
   "wk": {
-   "T-4181": "Idris",
+   "T-4182": "Idris",
    "T-4190": "Idris",
    "T-4662": "Idris",
-   "T-4182": "Idris",
    "T-4617": "Odalys"
   }
  },
  "ln": {
-  "at": "2026-11-17T04:07:49Z",
+  "at": "2026-11-17T04:11:07Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -556,11 +550,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 704,
+    "conflicted": 707,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 647
+    "parked": 650
    },
    "cur": [],
    "ld": [
@@ -570,12 +564,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-17T04:07:49Z",
-    "ld": 17.67,
+    "at": "2026-11-17T04:11:12Z",
+    "ld": 17.15,
     "c": 8,
-    "sb": 1,
+    "sb": 2,
     "dk": [
-     11.6,
+     11.8,
      228.3
     ],
     "ss": [
@@ -583,7 +577,8 @@
      953.7
     ],
     "sn": [
-     "pywidget-t0678-ios26"
+     "pywidget-t0678-ios26",
+     "iPhone 17e"
     ]
    },
    "macbook": {
@@ -616,7 +611,16 @@
    "m": "opus",
    "e": "high",
    "t": "Work session \u2013 1 task",
-   "at": "2026-11-16T23:04:08-05:00"
+   "at": "2026-11-16T23:08:57-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Evan's Account",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Inbox \u2013 Evan's 11:10 PM Message on GitHub",
+   "at": "2026-11-16T23:11:14-05:00"
   },
   {
    "w": "Operator",
@@ -625,16 +629,7 @@
    "m": "opus",
    "e": "high",
    "t": "Work session \u2013 1 task",
-   "at": "2026-11-16T22:45:58-05:00"
-  },
-  {
-   "w": "Operator",
-   "a": "Evan's Account",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session \u2013 1 task",
-   "at": "2026-11-16T23:01:01-05:00"
+   "at": "2026-11-16T21:59:07-05:00"
   },
   {
    "w": "Operator",
@@ -665,15 +660,27 @@
   }
  ],
  "reply": {
-  "sent": "2026-11-17T04:03:18Z",
-  "seconds": 48.0
+  "sent": "2026-11-17T04:07:55Z",
+  "seconds": 61.0
  },
- "inbox": [],
+ "inbox": [
+  {
+   "id": "c6938028690",
+   "state": "received",
+   "position": 1,
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "Is code headed to TestFlight is..."
+  }
+ ],
  "trimmed": [
   "lane_next",
   "queue_text",
   "task_done",
   "fin_short",
+  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -684,10 +691,10 @@
   "main": 1,
   "lanes": 6,
   "total": 7,
-  "at": "11:07 PM",
+  "at": "11:11 PM",
   "why": "",
-  "at_iso": "2026-11-17T04:07:00+00:00",
+  "at_iso": "2026-11-17T04:11:00+00:00",
   "started": "9:46 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 1, started 9:46 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 6 sessions \u00b7 as of 11:07 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 1, started 9:46 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 6 sessions \u00b7 as of 11:11 PM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-17T18:06:54.597939+00:00",
+ "at": "2026-11-17T18:11:17.895243+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -110,12 +110,21 @@
    "task": "[build] T-3564 land device-limit fixes from parked ref",
    "model": "opus",
    "started": "2026-11-17T17:49:46.991Z",
-   "seconds": 1027,
+   "seconds": 1290,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "pernille",
+   "task": "[tools] T-4749 rewrite source-text tests, first slice",
+   "model": "opus",
+   "started": "2026-11-17T18:10:19.748Z",
+   "seconds": 58,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Idris",
+ "who": "Idris, Pernille",
  "recent": [
   {
    "name": "idris",
@@ -137,7 +146,7 @@
    "pct": 12.0,
    "resets_at": "2026-11-17T14:10:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-17T12:53:22.515070-05:00",
+   "read_at": "2026-11-17T13:08:10.395398-05:00",
    "source": "live",
    "left": 88.0,
    "left_words": "of your 5-hour allowance left"
@@ -146,7 +155,7 @@
    "pct": 34.0,
    "resets_at": "2026-11-22T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-17T12:53:22.515070-05:00",
+   "read_at": "2026-11-17T13:08:10.395398-05:00",
    "source": "live",
    "left": 66.0,
    "left_words": "of your weekly allowance left"
@@ -158,7 +167,7 @@
    "read_at": "2026-11-17T12:48:07.002980-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-17T12:53:22.515070-05:00"
+  "read_at": "2026-11-17T13:08:10.395398-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -178,7 +187,7 @@
   "week_pct": 39.28,
   "usage_pct": 53.6,
   "work_pct": 80.0,
-  "read_at": "2026-11-17T18:08:00+00:00",
+  "read_at": "2026-11-17T18:11:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -228,7 +237,7 @@
  "lock_in": {
   "on": false,
   "pool": 6,
-  "at": "2026-11-17T13:08:00-05:00",
+  "at": "2026-11-17T13:11:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -255,11 +264,12 @@
   },
   {
    "name": "Pernille",
-   "state": "next",
-   "task": "Pernille, P0, Investor an Investor c6950031511 (8:53 AM...",
-   "model": null,
-   "since": null,
-   "next": []
+   "state": "running",
+   "task": "[tools] T-4749 rewrite source-text tests, first slice",
+   "model": "opus",
+   "since": "2026-11-17T18:10:19.748Z",
+   "next": [],
+   "effort": "high"
   },
   {
    "name": "Ines",
@@ -305,6 +315,16 @@
     "at": "2026-11-17T17:49:46.991Z",
     "o": "c",
     "task": "T-3564"
+   },
+   {
+    "w": "Pernille",
+    "k": "tools",
+    "t": "Rewrite or drop outdated tests that read code text",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-17T18:10:19.748Z",
+    "o": "c",
+    "task": "T-4749"
    }
   ],
   "src": "plan",
@@ -464,12 +484,12 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-17T18:06:54Z",
+  "at": "2026-11-17T18:11:17Z",
   "s": {
    "T-3564": [
-    "testing",
-    "its own tests, in its copy",
-    1794938214597
+    "merging",
+    "Mac tests at the main gate",
+    1794939017895
    ]
   },
   "nm": {
@@ -484,7 +504,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-17T18:06:54Z",
+  "at": "2026-11-17T18:11:17Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -493,16 +513,16 @@
     "failed": 0,
     "held": 2,
     "retry": 0,
-    "parked": 16
+    "parked": 14
    },
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 862,
+    "conflicted": 866,
     "failed": null,
-    "held": 630,
+    "held": 562,
     "retry": null,
-    "parked": 143
+    "parked": 2
    },
    "cur": [],
    "ld": [
@@ -512,12 +532,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-17T18:07:54Z",
-    "ld": 26.69,
+    "at": "2026-11-17T18:10:32Z",
+    "ld": 21.48,
     "c": 8,
     "sb": 1,
     "dk": [
-     13.5,
+     11.2,
      228.3
     ],
     "ss": [
@@ -578,13 +598,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 1,
+  "main": 2,
   "lanes": 1,
-  "total": 2,
-  "at": "1:08 PM",
+  "total": 3,
+  "at": "1:11 PM",
   "why": "",
-  "at_iso": "2026-11-17T18:08:00+00:00",
+  "at_iso": "2026-11-17T18:11:00+00:00",
   "started": "12:48 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 1, started 12:48 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 1:08 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 12:48 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 1:11 PM ET</p></section>"
  }
 }

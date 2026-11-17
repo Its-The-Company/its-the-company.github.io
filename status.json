@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-17T19:23:51.926018+00:00",
+ "at": "2026-11-17T19:26:53.833158+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -139,7 +139,7 @@
    "task": "[build] T-3564 land device-limit fixes from parked ref",
    "model": "opus",
    "started": "2026-11-17T17:49:46.991Z",
-   "seconds": 5644,
+   "seconds": 5826,
    "finished": null,
    "effort": "high"
   },
@@ -148,7 +148,7 @@
    "task": "[tools] T-4749 rewrite source-text tests, first slice",
    "model": "opus",
    "started": "2026-11-17T18:10:19.748Z",
-   "seconds": 4412,
+   "seconds": 4594,
    "finished": null,
    "effort": "high"
   }
@@ -216,7 +216,7 @@
   "week_pct": 39.28,
   "usage_pct": 53.6,
   "work_pct": 80.0,
-  "read_at": "2026-11-17T19:23:00+00:00",
+  "read_at": "2026-11-17T19:26:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -326,7 +326,7 @@
  "lock_in": {
   "on": false,
   "pool": 6,
-  "at": "2026-11-17T14:23:00-05:00",
+  "at": "2026-11-17T14:26:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -581,47 +581,47 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-17T19:23:38Z",
+  "at": "2026-11-17T19:26:53Z",
   "s": {
    "T-4758": [
     "mergeq",
     "1st to merge",
-    1794943118027
+    1794943073833
    ],
    "T-4689": [
     "mergeq",
     "1st to merge",
-    1794943118027
+    1794943073833
    ],
    "T-4703": [
     "mergetest",
     "Xcode checks on the MacBook, 2nd to merge",
-    1794942938027
+    1794942893833
    ],
    "T-4749": [
     "merging",
     "Mac tests at the main gate",
-    1794942758027
+    1794942773833
    ],
    "T-0543": [
     "merging",
-    "Mac tests at the main gate \u00b7 8 groups of tests done",
-    1794942458027
+    "Mac tests at the main gate",
+    1794943553833
+   ],
+   "T-4746": [
+    "testing",
+    "Mac Mini \u00b7 test",
+    null
+   ],
+   "T-4760": [
+    "testing",
+    "Mac Mini \u00b7 test",
+    null
    ],
    "T-4653": [
     "testq",
     "1st for a Simulator",
-    1794943418027
-   ],
-   "T-4746": [
-    "testq",
-    "2nd for a Simulator",
-    1794943418027
-   ],
-   "T-4760": [
-    "testq",
-    "2nd for a Simulator",
-    1794943418027
+    1794943373833
    ],
    "T-3564": [
     "merged",
@@ -636,9 +636,9 @@
    "T-4703": "Draw the frames for the 1.0 showcase premades",
    "T-4749": "Rewrite or drop outdated tests that read code text",
    "T-0543": "Add limits to notification scheduling",
-   "T-4653": "Give the Shortcut's Pro check a time limit",
    "T-4746": "Write PyWidget's name right in the widget's words",
    "T-4760": "Report a widget state save truthfully",
+   "T-4653": "Give the Shortcut's Pro check a time limit",
    "T-3564": "Stop other errors saying a sensor is missing"
   },
   "wk": {
@@ -647,9 +647,9 @@
    "T-4703": "Maren",
    "T-4749": "Pernille",
    "T-0543": "Idris",
-   "T-4653": "Idris",
    "T-4746": "Maren",
    "T-4760": "Idris",
+   "T-4653": "Idris",
    "T-3564": "Idris",
    "T-3716": "Idris",
    "T-3560": "Idris",
@@ -659,7 +659,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-17T19:23:38Z",
+  "at": "2026-11-17T19:26:53Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -671,13 +671,13 @@
     "parked": 14
    },
    "m": {
-    "checking": 8,
-    "inline": 5,
-    "conflicted": 939,
+    "checking": 12,
+    "inline": 9,
+    "conflicted": 942,
     "failed": null,
-    "held": 612,
+    "held": 615,
     "retry": null,
-    "parked": 31
+    "parked": 34
    },
    "cur": [
     [
@@ -686,7 +686,7 @@
      ],
      "iPhone app tests",
      "MacBook",
-     8
+     12
     ]
    ],
    "ld": [
@@ -696,12 +696,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-17T19:23:12Z",
-    "ld": 51.6,
+    "at": "2026-11-17T19:26:54Z",
+    "ld": 32.86,
     "c": 8,
-    "sb": 2,
+    "sb": 1,
     "dk": [
-     14.1,
+     13.3,
      228.3
     ],
     "ss": [
@@ -709,8 +709,7 @@
      953.7
     ],
     "sn": [
-     "iPhone 17e",
-     "T2027 Idris never-used 1117c"
+     "iPhone 17e"
     ]
    },
    "macbook": {
@@ -802,10 +801,10 @@
   "main": 2,
   "lanes": 5,
   "total": 7,
-  "at": "2:23 PM",
+  "at": "2:26 PM",
   "why": "",
-  "at_iso": "2026-11-17T19:23:00+00:00",
+  "at_iso": "2026-11-17T19:26:00+00:00",
   "started": "12:48 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 2, started 12:48 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 2:23 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 2, started 12:48 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 2:26 PM ET</p></section>"
  }
 }

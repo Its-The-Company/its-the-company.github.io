@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-17T23:23:52.406571+00:00",
+ "at": "2026-11-17T23:26:55.411281+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -120,7 +120,7 @@
    "task": "[build] T-4653 land parked Shortcut fix",
    "model": "opus",
    "started": "2026-11-17T22:57:48.038Z",
-   "seconds": 1564,
+   "seconds": 1747,
    "finished": null,
    "effort": "high"
   },
@@ -129,7 +129,7 @@
    "task": "[design] T-4746 land parked name fix",
    "model": "opus",
    "started": "2026-11-17T22:59:28.420Z",
-   "seconds": 1463,
+   "seconds": 1646,
    "finished": null,
    "effort": "high"
   }
@@ -172,7 +172,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 411,
+  "runnable_count": 414,
   "blocked_count": 58
  },
  "meter": {
@@ -221,7 +221,7 @@
   "week_pct": 38.85,
   "usage_pct": 52.6,
   "work_pct": 79.4,
-  "read_at": "2026-11-17T23:23:00+00:00",
+  "read_at": "2026-11-17T23:26:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -295,7 +295,7 @@
  "lock_in": {
   "on": false,
   "pool": 7,
-  "at": "2026-11-17T18:23:00-05:00",
+  "at": "2026-11-17T18:26:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -332,7 +332,15 @@
   {
    "name": "Pernille",
    "state": "next",
-   "task": "Pernille, P0, Investor an Investor c6950031511 (8:53 AM...",
+   "task": "Pernille, P0, Investor an Investor c6963972184 (6:23 PM...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
+   "name": "Odalys",
+   "state": "next",
+   "task": "Odalys, P0, Investor an Investor c6963972184 (6:23 PM...",
    "model": null,
    "since": null,
    "next": []
@@ -341,14 +349,6 @@
    "name": "Ines",
    "state": "next",
    "task": "Ines, P2, from T-1110 (Wrenna,...",
-   "model": null,
-   "since": null,
-   "next": []
-  },
-  {
-   "name": "Odalys",
-   "state": "next",
-   "task": "A lane record main refused: failed...",
    "model": null,
    "since": null,
    "next": []
@@ -387,6 +387,27 @@
   ],
   "src": "plan",
   "open": [
+   {
+    "w": "Pernille",
+    "k": "tools",
+    "t": "Correct every bad test that holds a merge",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Count failed merges by cause: bad test or...",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Turn feature sessions on for every app feature",
+    "s": "next",
+    "o": "c"
+   },
    {
     "w": "Pernille",
     "k": "tools",
@@ -435,27 +456,6 @@
     "t": "Close the iPhone premade feature and free...",
     "s": "next",
     "o": "i"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Alarm when one account's work keeps being...",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Build the queue-check sweep into the sweep...",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Commit the company's records once per...",
-    "s": "next",
-    "o": "i"
    }
   ],
   "done": [
@@ -476,7 +476,7 @@
    }
   ],
   "count": {
-   "next": 411,
+   "next": 414,
    "wait": 27,
    "blocked": 31,
    "you": 8
@@ -550,37 +550,37 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-17T23:23:38Z",
+  "at": "2026-11-17T23:26:55Z",
   "s": {
    "T-4774": [
     "merging",
     "Host checks on the Mac mini",
-    1794957578266
+    1794957535411
    ],
    "T-4607": [
     "mergeq",
     "1st to merge",
-    1794955178266
+    1794955195411
    ],
    "T-4608": [
     "mergeq",
     "1st to merge",
-    1794955178266
+    1794955195411
    ],
    "T-4609": [
     "mergeq",
     "1st to merge",
-    1794955178266
+    1794955195411
    ],
    "T-4746": [
     "merging",
     "Mac tests at the main gate",
-    1794957818266
+    1794957775411
    ],
    "T-4653": [
     "merging",
     "Mac tests at the main gate",
-    1794957698266
+    1794957655411
    ],
    "T-4770": [
     "merged",
@@ -616,7 +616,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-17T23:23:38Z",
+  "at": "2026-11-17T23:26:55Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -628,13 +628,13 @@
     "parked": 9
    },
    "m": {
-    "checking": 4,
-    "inline": 44,
-    "conflicted": 629,
+    "checking": 8,
+    "inline": 47,
+    "conflicted": 632,
     "failed": null,
-    "held": 1434,
+    "held": 1437,
     "retry": null,
-    "parked": 196
+    "parked": 199
    },
    "cur": [
     [
@@ -643,7 +643,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     4
+     8
     ]
    ],
    "ld": [
@@ -653,12 +653,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-17T23:23:39Z",
-    "ld": 4.97,
+    "at": "2026-11-17T23:26:56Z",
+    "ld": 3.71,
     "c": 8,
     "sb": 0,
     "dk": [
-     20.4,
+     19.6,
      228.3
     ],
     "ss": [
@@ -668,12 +668,12 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-17T23:22:36Z",
-    "ld": 6.32,
+    "at": "2026-11-17T23:26:45Z",
+    "ld": 2.97,
     "c": 12,
     "sb": 0,
     "dk": [
-     312.7,
+     313.3,
      926.4
     ],
     "sn": []
@@ -696,33 +696,21 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Inbox \u2013 Evan's 6:23 PM Message on GitHub",
-   "at": "2026-11-17T18:23:37-05:00"
+   "t": "Work session \u2013 1 task",
+   "at": "2026-11-17T18:26:07-05:00"
   }
  ],
  "reply": {
-  "sent": "2026-11-17T22:19:43Z",
-  "seconds": 99.0
+  "sent": "2026-11-17T23:23:29Z",
+  "seconds": 156.0
  },
- "inbox": [
-  {
-   "id": "c6963972184",
-   "state": "received",
-   "position": 1,
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "The feature switch shouldn't need to..."
-  }
- ],
+ "inbox": [],
  "trimmed": [
   "lane_next",
   "queue_text",
   "recent",
   "task_done",
   "fin_short",
-  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -734,10 +722,10 @@
   "main": 2,
   "lanes": 1,
   "total": 3,
-  "at": "6:23 PM",
+  "at": "6:26 PM",
   "why": "",
-  "at_iso": "2026-11-17T23:23:00+00:00",
+  "at_iso": "2026-11-17T23:26:00+00:00",
   "started": "3:40 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 3:40 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 6:23 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 3:40 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 6:26 PM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-17T13:23:33.030641+00:00",
+ "at": "2026-11-17T13:26:40.650766+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -116,26 +116,25 @@
  },
  "workers": [
   {
-   "name": "idris",
-   "task": "[build] T-4184 land parked app code",
-   "model": "opus",
-   "started": "2026-11-17T13:06:45.804Z",
-   "seconds": 1007,
-   "finished": null,
-   "effort": "high"
-  },
-  {
    "name": "maren",
    "task": "[site] T-4493 land the clutter cut",
    "model": "opus",
    "started": "2026-11-17T13:06:57.727Z",
-   "seconds": 995,
+   "seconds": 1182,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Idris, Maren",
+ "who": "Maren",
  "recent": [
+  {
+   "name": "idris",
+   "task": "[build] T-4184 land parked app code",
+   "model": "opus",
+   "started": "2026-11-17T13:06:45.804Z",
+   "seconds": null,
+   "finished": "2026-11-17T13:25:57.034000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[tools] T-4191 sort stale parked refs",
@@ -148,7 +147,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 399,
+  "runnable_count": 398,
   "blocked_count": 59
  },
  "meter": {
@@ -197,7 +196,7 @@
   "week_pct": 33.92,
   "usage_pct": 51.5,
   "work_pct": 78.4,
-  "read_at": "2026-11-17T13:23:00+00:00",
+  "read_at": "2026-11-17T13:26:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -292,7 +291,7 @@
  "lock_in": {
   "on": false,
   "pool": 5,
-  "at": "2026-11-17T08:23:00-05:00",
+  "at": "2026-11-17T08:26:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -309,15 +308,6 @@
  },
  "lanes": [
   {
-   "name": "Idris",
-   "state": "running",
-   "task": "[build] T-4184 land parked app code",
-   "model": "opus",
-   "since": "2026-11-17T13:06:45.804Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
    "name": "Maren",
    "state": "running",
    "task": "[site] T-4493 land the clutter cut",
@@ -325,6 +315,14 @@
    "since": "2026-11-17T13:06:57.727Z",
    "next": [],
    "effort": "high"
+  },
+  {
+   "name": "Idris",
+   "state": "next",
+   "task": "Idris, P2, from T-4238 (Pernille's review, from T-3900,...",
+   "model": null,
+   "since": null,
+   "next": []
   },
   {
    "name": "Ines",
@@ -361,16 +359,6 @@
  ],
  "tasks": {
   "run": [
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "A person's own script becomes a Home Screen widget",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-17T13:06:45.804Z",
-    "o": "i",
-    "task": "T-4184"
-   },
    {
     "w": "Maren",
     "k": "site",
@@ -458,6 +446,11 @@
   "done": [
    {
     "w": "Idris",
+    "t": "sending a project to its widget now swaps the whole widget folder in one step, so a phone with a...",
+    "at": "2026-11-17T08:25:00-05:00"
+   },
+   {
+    "w": "Idris",
     "t": "the Settings tests for a purchase waiting for a parent's approval (Ask to Buy) and for a failed...",
     "at": "2026-11-17T08:21:00-05:00"
    },
@@ -465,22 +458,21 @@
     "w": "Odalys",
     "t": "The Mac mini got 9.9 GB of disk back (old test leftovers and two unused test phones), and the...",
     "at": "2026-11-17T08:05:00-05:00"
-   },
-   {
-    "w": "Ines",
-    "t": "The Handbook now says no part of the app is finished until it has a plain-English page and a...",
-    "at": "2026-11-17T07:52:00-05:00"
    }
   ],
   "count": {
-   "next": 399,
+   "next": 398,
    "wait": 28,
    "blocked": 31,
    "you": 8
   },
   "fin": {
-   "n": 2,
+   "n": 3,
    "rows": [
+    [
+     "T-0906",
+     "Fix project send failures on..."
+    ],
     [
      "T-2498",
      "Test the..."
@@ -531,32 +523,27 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-17T13:23:33Z",
+  "at": "2026-11-17T13:26:21Z",
   "s": {
    "T-4663": [
     "merging",
     "Host checks on the Mac mini",
-    1794920973030
+    1794920961791
    ],
    "T-4668": [
     "mergeq",
     "1st to merge",
-    1794921633030
+    1794921621791
    ],
    "T-4671": [
     "mergeq",
     "1st to merge",
-    1794921633030
-   ],
-   "T-4184": [
-    "mergetest",
-    "iPhone tests on the MacBook",
-    null
+    1794921621791
    ],
    "T-4493": [
     "testing",
     "its own tests, in its copy",
-    1794920913030
+    1794920961791
    ],
    "T-4273": [
     "merged",
@@ -569,7 +556,6 @@
    "T-4663": "Completion ignores letter case and small typos",
    "T-4668": "Put the bank, tax and name dates in the plan",
    "T-4671": "Clear the app's sentences under the approved voice",
-   "T-4184": "A person's own script becomes a Home Screen widget",
    "T-4493": "Cut clutter text on the pages still carrying it",
    "T-4273": "Add the app documentation step to the Handbook"
   },
@@ -577,15 +563,15 @@
    "T-4663": "Idris",
    "T-4668": "Ines",
    "T-4671": "Maren",
-   "T-4184": "Idris",
    "T-4493": "Maren",
    "T-4273": "Ines",
+   "T-0906": "Idris",
    "T-2498": "Idris",
    "T-4661": "Odalys"
   }
  },
  "ln": {
-  "at": "2026-11-17T13:23:33Z",
+  "at": "2026-11-17T13:26:21Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -597,13 +583,13 @@
     "parked": 17
    },
    "m": {
-    "checking": 14,
-    "inline": 3,
-    "conflicted": 579,
+    "checking": 17,
+    "inline": 6,
+    "conflicted": 581,
     "failed": null,
-    "held": 834,
+    "held": 837,
     "retry": null,
-    "parked": 457
+    "parked": 460
    },
    "cur": [
     [
@@ -612,7 +598,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     14
+     17
     ]
    ],
    "ld": [
@@ -622,27 +608,29 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-17T13:23:33Z",
-    "ld": 11.91,
+    "at": "2026-11-17T13:25:56Z",
+    "ld": 18.23,
     "c": 8,
-    "sb": 0,
+    "sb": 1,
     "dk": [
-     28.3,
+     28.2,
      228.3
     ],
     "ss": [
      176.3,
      953.7
     ],
-    "sn": []
+    "sn": [
+     "iPhone 17e"
+    ]
    },
    "macbook": {
-    "at": "2026-11-17T13:16:29Z",
-    "ld": 0.25,
+    "at": "2026-11-17T13:24:37Z",
+    "ld": 1.86,
     "c": 12,
     "sb": 0,
     "dk": [
-     326.3,
+     325.3,
      926.4
     ],
     "sn": []
@@ -656,7 +644,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 3 tasks",
+   "t": "Work session \u2013 1 task",
    "at": "2026-11-17T08:03:58-05:00"
   },
   {
@@ -704,13 +692,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 2,
+  "main": 1,
   "lanes": 3,
-  "total": 5,
-  "at": "8:23 AM",
+  "total": 4,
+  "at": "8:26 AM",
   "why": "",
-  "at_iso": "2026-11-17T13:23:00+00:00",
+  "at_iso": "2026-11-17T13:26:00+00:00",
   "started": "8:03 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 2, started 8:03 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 8:23 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 1, started 8:03 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 8:26 AM ET</p></section>"
  }
 }

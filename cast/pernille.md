@@ -45,10 +45,11 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 - Open (mine, not on the board, from T-0515 H1): runtime stamps a daemon thread's writes with its origin run, so A's thread output cannot show in B.
 
-- T-4060 11-16: T-2296 review (a0d9f23b5f pager + iPad columns) PASS w/ findings; M1 board/merge-reset says unmerged (on main 11-10), M2 9.7 tile no longer one VO element; note on T-2296. Lesson: a lane xc.sh test queues to the MacBook (exit 75, outbox file); XC_LOCAL=1 runs here; app-target pure code mutates fine in a scratch SwiftPM package with stubbed deps.
-- T-4596 11-16: T-2691 review (lane gate product phase) PASS w/ 2 Lows; L2 PW_INTERNAL_TESTFLIGHT unpinned = T-4626 (Idris). Lesson: an archive sets ENABLE_DEBUG_DYLIB=NO even in Debug, so EXECUTABLE_PATH holds the code; check that a cited log really holds the claimed output (the --archive runs were not in theirs).
 - T-4518 11-16 (c32ea61425): T-4280 review FAIL; H1 badge on size moves = T-4630, H2 premades unscanned = T-4631 (finder refusal note is my half), M1 = T-4632, L = T-4633. Lesson: a run-time 'refused import' test misses a script that catches ImportError; check each premade's try/except around denied imports.
 - T-4077 11-16: T-2499 review (de343f7e24) PASS w/ findings; M1+L1-L2 = T-4635 (Idris). Lesson: when a fix stops a view clearing its own state, list what else changes while that state lives (a purchase on the pushed screen left 'no purchase found' under 'Active').
+- T-3495 11-16: T-3323 review re-check: M1, M2, L1-L3 all still open in upload.sh and on no line; noted, not ticked; lines wait on T-3773 (Ines). Lesson: re-check a stuck review against the code by line, not by commit list.
+- T-4540 11-16 (0e5a9b9bbc): T-4183 at 0803f09d (T-4468 slices 1+2) PASS w/ findings; M1 stale place name = T-4639, M2 late fix = T-4640, Lows T-4641, c00ce27e15 review = T-4642 (Idris). Lesson: a "fill only when empty" rule keeps a value the app itself filled; ask who wrote it. board_tick add writes the main board; names over 48 chars need task_names_store.py.
+- T-4541 11-16: T-4282 <span title="Our grade scale, nine steps: D, D+, C-, C, C+, B-, B, B+, A. An idea&#x27;s ladder is the letter it reaches before any cap.">ladder</span> review (88ba326d54) PASS w/ findings; M1/M2/L1 = T-4643, L2-L4 = T-4644 (Idris). Gate compile check passed here (12/0). Lesson: a measurement build that keeps the product's demotion rule gets one sample per install; check the rule before the phone ask. Scratch xcodebuild needs tools/ in the archive too (pkg_stage).
 {% endraw %}
 
 

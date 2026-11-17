@@ -1,11 +1,22 @@
 {
  "schema": 1,
- "at": "2026-11-17T00:30:05.115825+00:00",
+ "at": "2026-11-17T00:36:12.545964+00:00",
  "session": {
-  "active": true,
-  "kind": "evening",
-  "started": "2026-11-16T19:24:00-05:00",
-  "flow": [],
+  "active": false,
+  "kind": "",
+  "started": null,
+  "flow": [
+   {
+    "t": "T-4614",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "testq",
+      "at": 1794868371
+     }
+    ]
+   }
+  ],
   "done": [
    {
     "t": "T-3765",
@@ -150,13 +161,86 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": null,
+ "next_tick": "2026-11-16T19:38:39-05:00",
  "personal": {
   "week_pct": 18.99,
-  "usage_pct": 42.2,
+  "usage_pct": 42.1,
   "work_pct": 72.2,
-  "read_at": "2026-11-17T00:30:00+00:00",
-  "running": []
+  "read_at": "2026-11-17T00:38:00+00:00",
+  "running": [
+   {
+    "lane": "a",
+    "task": "T-4587",
+    "w": "Idris",
+    "k": "tools",
+    "t": "Switch feature sessions on for every app feature",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-16T19:37:34-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a",
+    "task": "T-4617",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Run quick checks before a land takes the Xcode slot",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-16T19:37:34-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "b",
+    "task": "T-4642",
+    "w": "Idris",
+    "k": "review",
+    "t": "Review the premade settings declarations in Python",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-16T19:31:21-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
+   },
+   {
+    "lane": "b",
+    "task": "T-4628",
+    "w": "Idris",
+    "k": "fix",
+    "t": "Keep the Distance location fix out of its file",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-16T19:31:21-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
+   },
+   {
+    "lane": "b3",
+    "task": "T-4024",
+    "w": "Pernille",
+    "k": "review",
+    "t": "Check finished work before it ships",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-16T19:31:21-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
+   },
+   {
+    "lane": "b3",
+    "task": "T-4597",
+    "w": "Odalys",
+    "k": "review",
+    "t": "Check finished work before it ships",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-16T19:31:21-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
+   }
+  ]
  },
  "api_credits": [
   {
@@ -192,7 +276,7 @@
  "lock_in": {
   "on": false,
   "pool": 4,
-  "at": "2026-11-16T19:30:00-05:00",
+  "at": "2026-11-16T19:38:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -200,13 +284,9 @@
    "b": "double-spread"
   }
  },
- "next_tick_why": "session",
+ "next_tick_why": "last_tick",
  "idle": null,
- "pool": {
-  "why": "Double Spread: 74% of the week left, paced to last until Wed 14:00, the week's halfway point; the machine allows 2 (new work waits: 21 tasks wait to merge (limit 20): 2 agents finish and merge...",
-  "n": 2,
-  "at": "2026-11-16T19:23:39.829312-05:00"
- },
+ "pool": null,
  "lanes": [
   {
    "name": "Idris",
@@ -259,7 +339,6 @@
  ],
  "tasks": {
   "run": [],
-  "src": "plan",
   "open": [
    {
     "w": "Idris",
@@ -354,10 +433,6 @@
    "wait": 35,
    "blocked": 40,
    "you": 12
-  },
-  "fin": {
-   "n": 0,
-   "rows": []
   }
  },
  "qr": [
@@ -399,30 +474,58 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-17T00:29:52Z",
+  "at": "2026-11-17T00:36:12Z",
   "s": {
-   "T-3765": [
-    "mergetest",
-    "Xcode checks on the MacBook, 1st to merge",
-    1794875332427
-   ],
    "T-4614": [
     "mergeq",
-    "2nd to merge",
-    1794872032427
+    "1st to merge",
+    1794872052545
+   ],
+   "T-3765": [
+    "mergetest",
+    "Xcode checks on the MacBook, 2nd to merge",
+    1794875352545
+   ],
+   "T-4024": [
+    "testing",
+    "Mac Mini \u00b7 test",
+    null
+   ],
+   "T-4401": [
+    "testing",
+    "Mac Mini \u00b7 test",
+    null
+   ],
+   "T-4596": [
+    "testing",
+    "Mac Mini \u00b7 test",
+    null
+   ],
+   "T-4597": [
+    "testing",
+    "Mac Mini \u00b7 test",
+    null
    ]
   },
   "nm": {
+   "T-4614": "Make main's own tests pass again",
    "T-3765": "Check a real widget tap on the TestFlight build",
-   "T-4614": "Make main's own tests pass again"
+   "T-4024": "Check finished work before it ships",
+   "T-4401": "Keep the parked count test off the live mode file",
+   "T-4596": "Review the archive check for the phone test marker",
+   "T-4597": "Check finished work before it ships"
   },
   "wk": {
+   "T-4614": "Pernille",
    "T-3765": "Idris",
-   "T-4614": "Pernille"
+   "T-4024": "Pernille",
+   "T-4401": "Odalys",
+   "T-4596": "Pernille",
+   "T-4597": "Odalys"
   }
  },
  "ln": {
-  "at": "2026-11-17T00:29:52Z",
+  "at": "2026-11-17T00:36:12Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -434,22 +537,22 @@
     "parked": 11
    },
    "m": {
-    "checking": 1,
-    "inline": 56,
-    "conflicted": 486,
+    "checking": 7,
+    "inline": 62,
+    "conflicted": 492,
     "failed": null,
     "held": null,
-    "retry": 101,
-    "parked": 882
+    "retry": 108,
+    "parked": 889
    },
    "cur": [
     [
      [
       "T-3765"
      ],
-     "iPhone app tests, sent and waiting its turn",
+     "iPhone app tests",
      "MacBook",
-     1
+     7
     ]
    ],
    "ld": [
@@ -459,12 +562,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-17T00:29:28Z",
-    "ld": 5.03,
+    "at": "2026-11-17T00:36:13Z",
+    "ld": 15.16,
     "c": 8,
     "sb": 1,
     "dk": [
-     19.0,
+     18.8,
      228.3
     ],
     "ss": [
@@ -472,16 +575,16 @@
      953.7
     ],
     "sn": [
-     "iPhone Air"
+     "iPhone 17e"
     ]
    },
    "macbook": {
-    "at": "2026-11-17T00:27:29Z",
-    "ld": 20.35,
+    "at": "2026-11-17T00:29:34Z",
+    "ld": 13.51,
     "c": 12,
     "sb": 0,
     "dk": [
-     329.7,
+     331.0,
      926.4
     ],
     "sn": []
@@ -491,12 +594,21 @@
  "operators": [
   {
    "w": "Operator",
-   "a": "Main plan",
+   "a": "Jeremy's Account",
    "sr": 1,
-   "m": "sonnet",
-   "e": "low",
-   "t": "Evening report",
-   "at": "2026-11-16T19:24:00-05:00"
+   "m": "opus",
+   "e": "high",
+   "t": "Work session \u2013 2 tasks",
+   "at": "2026-11-16T19:31:21-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Jeremy's Account",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session \u2013 2 tasks",
+   "at": "2026-11-16T19:31:21-05:00"
   }
  ],
  "reply": {
@@ -516,12 +628,12 @@
  ],
  "agents_now": {
   "main": 0,
-  "lanes": 0,
-  "total": 0,
-  "at": "7:30 PM",
-  "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
-  "at_iso": "2026-11-17T00:30:00+00:00",
-  "started": "7:24 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0, started 7:24 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 7:30 PM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
+  "lanes": 3,
+  "total": 3,
+  "at": "7:38 PM",
+  "why": "",
+  "at_iso": "2026-11-17T00:38:00+00:00",
+  "started": "",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 7:38 PM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-17T21:08:34.974533+00:00",
+ "at": "2026-11-17T21:11:37.072417+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -151,7 +151,7 @@
    "task": "[tools] T-4749 source-text tests slice 2",
    "model": "opus",
    "started": "2026-11-17T20:41:48.377Z",
-   "seconds": 1606,
+   "seconds": 1788,
    "finished": null,
    "effort": "high"
   },
@@ -160,12 +160,21 @@
    "task": "[tools] T-4753 fail new source-text tests",
    "model": "opus",
    "started": "2026-11-17T21:05:08.821Z",
-   "seconds": 206,
+   "seconds": 388,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "maren",
+   "task": "[site] T-4747 queued-order red fix",
+   "model": "opus",
+   "started": "2026-11-17T21:09:16.623Z",
+   "seconds": 140,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Pernille x2",
+ "who": "Pernille x2, Maren",
  "recent": [
   {
    "name": "odalys",
@@ -236,7 +245,7 @@
   "week_pct": 38.85,
   "usage_pct": 52.6,
   "work_pct": 79.4,
-  "read_at": "2026-11-17T21:08:00+00:00",
+  "read_at": "2026-11-17T21:11:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -273,7 +282,7 @@
  "lock_in": {
   "on": false,
   "pool": 6,
-  "at": "2026-11-17T16:08:00-05:00",
+  "at": "2026-11-17T16:11:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -295,6 +304,15 @@
    "task": "[tools] T-4749 source-text tests slice 2",
    "model": "opus",
    "since": "2026-11-17T20:41:48.377Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
+   "name": "Maren",
+   "state": "running",
+   "task": "[site] T-4747 queued-order red fix",
+   "model": "opus",
+   "since": "2026-11-17T21:09:16.623Z",
    "next": [],
    "effort": "high"
   },
@@ -329,14 +347,6 @@
    "model": null,
    "since": null,
    "next": []
-  },
-  {
-   "name": "Maren",
-   "state": "next",
-   "task": "Maren, P2, found on T-3366 (11-07): in...",
-   "model": null,
-   "since": null,
-   "next": []
   }
  ],
  "tasks": {
@@ -360,6 +370,16 @@
     "at": "2026-11-17T21:05:08.821Z",
     "o": "c",
     "task": "T-4753"
+   },
+   {
+    "w": "Maren",
+    "k": "site",
+    "t": "Show each umbrella's progress and its running steps on Home",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-17T21:09:16.623Z",
+    "o": "c",
+    "task": "T-4747"
    }
   ],
   "src": "plan",
@@ -511,47 +531,52 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-17T21:08:17Z",
+  "at": "2026-11-17T21:11:24Z",
   "s": {
    "T-4760": [
     "merging",
     "Host checks on the Mac mini",
-    1794948677782
+    1794948684779
    ],
    "T-4758": [
     "mergeq",
     "1st to merge",
-    1794942137782
+    1794942084779
    ],
    "T-4689": [
     "mergeq",
     "3rd to merge",
-    1794943097782
+    1794943104779
    ],
    "T-4743": [
     "mergeq",
     "4th to merge",
-    1794944957782
+    1794944964779
    ],
    "T-4653": [
     "mergeq",
     "7th to merge",
-    1794946817782
+    1794946824779
    ],
    "T-4188": [
     "mergeq",
     "8th to merge",
-    1794947057782
+    1794947064779
    ],
    "T-4183": [
     "mergeq",
     "9th to merge",
-    1794948017782
+    1794948024779
    ],
    "T-4749": [
     "merging",
     "Mac tests at the main gate \u00b7 3 groups of tests done, 1 red",
-    1794949577782
+    1794949584779
+   ],
+   "T-4747": [
+    "testing",
+    "its own tests, in its copy",
+    1794949824779
    ]
   },
   "nm": {
@@ -562,7 +587,8 @@
    "T-4653": "Give the Shortcut's Pro check a time limit",
    "T-4188": "Location, steps and notifications work in scripts and...",
    "T-4183": "The Gallery shows, previews and opens every premade",
-   "T-4749": "Rewrite or drop outdated tests that read code text"
+   "T-4749": "Rewrite or drop outdated tests that read code text",
+   "T-4747": "Show each umbrella's progress and its running steps on Home"
   },
   "wk": {
    "T-4760": "Idris",
@@ -573,12 +599,13 @@
    "T-4188": "Idris",
    "T-4183": "Idris",
    "T-4749": "Pernille",
+   "T-4747": "Maren",
    "T-4732": "Odalys",
    "T-4769": "Pernille"
   }
  },
  "ln": {
-  "at": "2026-11-17T21:08:17Z",
+  "at": "2026-11-17T21:11:24Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -590,13 +617,13 @@
     "parked": 9
    },
    "m": {
-    "checking": 17,
-    "inline": 63,
-    "conflicted": 1043,
+    "checking": 20,
+    "inline": 66,
+    "conflicted": 1046,
     "failed": null,
-    "held": 717,
+    "held": 720,
     "retry": null,
-    "parked": 61
+    "parked": 64
    },
    "cur": [
     [
@@ -605,7 +632,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     17
+     20
     ]
    ],
    "ld": [
@@ -615,12 +642,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-17T21:07:50Z",
-    "ld": 3.29,
+    "at": "2026-11-17T21:11:01Z",
+    "ld": 2.87,
     "c": 8,
     "sb": 2,
     "dk": [
-     20.0,
+     19.4,
      228.3
     ],
     "ss": [
@@ -652,7 +679,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 4 tasks",
+   "t": "Work session \u2013 5 tasks",
    "at": "2026-11-17T15:40:57-05:00"
   }
  ],
@@ -673,13 +700,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 2,
+  "main": 3,
   "lanes": 0,
-  "total": 2,
-  "at": "4:08 PM",
+  "total": 3,
+  "at": "4:11 PM",
   "why": "",
-  "at_iso": "2026-11-17T21:08:00+00:00",
+  "at_iso": "2026-11-17T21:11:00+00:00",
   "started": "3:40 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 3:40 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 4:08 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 3:40 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 4:11 PM ET</p></section>"
  }
 }

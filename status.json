@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-17T13:26:40.650766+00:00",
+ "at": "2026-11-17T13:29:41.243726+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -17,18 +17,38 @@
     ]
    },
    {
-    "t": "T-4663",
-    "name": "Completion ignores letter case and small typos",
-    "acct": "Personal a",
+    "t": "T-4668",
+    "name": "Put the bank, tax and name dates in the plan",
+    "acct": "Personal b",
     "steps": [
      {
       "s": "testq",
-      "at": 1794920939
+      "at": 1794922035
+     }
+    ]
+   },
+   {
+    "t": "T-4671",
+    "name": "Clear the app's sentences under the approved voice",
+    "acct": "Personal b",
+    "steps": [
+     {
+      "s": "testq",
+      "at": 1794922035
      }
     ]
    }
   ],
   "done": [
+   {
+    "t": "T-4663",
+    "name": "Completion ignores letter case and small typos",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "failed",
+    "end_at": 1794922033,
+    "why": "tests failed"
+   },
    {
     "t": "T-4661",
     "name": "Free disk space and cut the Mac mini's load",
@@ -101,18 +121,10 @@
     "steps": [],
     "end": "landed",
     "end_at": 1794904466
-   },
-   {
-    "t": "T-4688",
-    "name": "Build a Developer mode for testing Pro",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794904466
    }
   ],
   "landed": 29,
-  "failed": 4
+  "failed": 5
  },
  "workers": [
   {
@@ -120,7 +132,7 @@
    "task": "[site] T-4493 land the clutter cut",
    "model": "opus",
    "started": "2026-11-17T13:06:57.727Z",
-   "seconds": 1182,
+   "seconds": 1363,
    "finished": null,
    "effort": "high"
   }
@@ -196,7 +208,7 @@
   "week_pct": 33.92,
   "usage_pct": 51.5,
   "work_pct": 78.4,
-  "read_at": "2026-11-17T13:26:00+00:00",
+  "read_at": "2026-11-17T13:29:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -253,6 +265,7 @@
     "e": "high",
     "at": "2026-11-17T07:46:11-05:00",
     "n": "Jeremy",
+    "d": 1,
     "src": "plan-b"
    }
   ]
@@ -284,14 +297,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-17T08:22:00-05:00",
+   "at": "2026-11-17T08:29:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 5,
-  "at": "2026-11-17T08:26:00-05:00",
+  "at": "2026-11-17T08:29:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -523,27 +536,22 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-17T13:26:21Z",
+  "at": "2026-11-17T13:29:35Z",
   "s": {
-   "T-4663": [
+   "T-4668": [
     "merging",
     "Host checks on the Mac mini",
-    1794920961791
-   ],
-   "T-4668": [
-    "mergeq",
-    "1st to merge",
-    1794921621791
+    1794922055308
    ],
    "T-4671": [
-    "mergeq",
-    "1st to merge",
-    1794921621791
+    "merging",
+    "Host checks on the Mac mini",
+    1794922055308
    ],
    "T-4493": [
     "testing",
     "its own tests, in its copy",
-    1794920961791
+    1794920915308
    ],
    "T-4273": [
     "merged",
@@ -553,14 +561,12 @@
    ]
   },
   "nm": {
-   "T-4663": "Completion ignores letter case and small typos",
    "T-4668": "Put the bank, tax and name dates in the plan",
    "T-4671": "Clear the app's sentences under the approved voice",
    "T-4493": "Cut clutter text on the pages still carrying it",
    "T-4273": "Add the app documentation step to the Handbook"
   },
   "wk": {
-   "T-4663": "Idris",
    "T-4668": "Ines",
    "T-4671": "Maren",
    "T-4493": "Maren",
@@ -571,34 +577,42 @@
   }
  },
  "ln": {
-  "at": "2026-11-17T13:26:21Z",
+  "at": "2026-11-17T13:29:35Z",
   "mq": {
    "n": {
-    "checking": 1,
-    "inline": 2,
+    "checking": 2,
+    "inline": 0,
     "conflicted": 1,
-    "failed": 0,
+    "failed": 1,
     "held": 1,
     "retry": 0,
     "parked": 17
    },
    "m": {
-    "checking": 17,
-    "inline": 6,
-    "conflicted": 581,
-    "failed": null,
-    "held": 837,
+    "checking": 2,
+    "inline": null,
+    "conflicted": 585,
+    "failed": 2,
+    "held": 840,
     "retry": null,
-    "parked": 460
+    "parked": 463
    },
    "cur": [
     [
      [
-      "T-4663"
+      "T-4668"
      ],
      "Mac tests",
      "Mac mini",
-     17
+     2
+    ],
+    [
+     [
+      "T-4671"
+     ],
+     "Mac tests",
+     "Mac mini",
+     2
     ]
    ],
    "ld": [
@@ -608,12 +622,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-17T13:25:56Z",
-    "ld": 18.23,
+    "at": "2026-11-17T13:28:49Z",
+    "ld": 14.35,
     "c": 8,
     "sb": 1,
     "dk": [
-     28.2,
+     27.6,
      228.3
     ],
     "ss": [
@@ -671,7 +685,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 2 tasks",
+   "t": "Work session \u2013 1 task",
    "at": "2026-11-17T07:46:11-05:00"
   }
  ],
@@ -695,10 +709,10 @@
   "main": 1,
   "lanes": 3,
   "total": 4,
-  "at": "8:26 AM",
+  "at": "8:29 AM",
   "why": "",
-  "at_iso": "2026-11-17T13:26:00+00:00",
+  "at_iso": "2026-11-17T13:29:00+00:00",
   "started": "8:03 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 1, started 8:03 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 8:26 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 1, started 8:03 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 8:29 AM ET</p></section>"
  }
 }

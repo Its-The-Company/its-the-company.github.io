@@ -1,10 +1,10 @@
 {
  "schema": 1,
- "at": "2026-11-17T14:17:57.436600+00:00",
+ "at": "2026-11-17T14:21:02.682716+00:00",
  "session": {
-  "active": false,
-  "kind": "",
-  "started": null,
+  "active": true,
+  "kind": "work",
+  "started": "2026-11-17T09:17:58-05:00",
   "flow": [],
   "done": [
    {
@@ -95,32 +95,7 @@
  },
  "workers": [],
  "who": "",
- "recent": [
-  {
-   "name": "maren",
-   "task": "[site] T-4493 land the clutter cut",
-   "model": "opus",
-   "started": "2026-11-17T13:06:57.727Z",
-   "seconds": null,
-   "finished": "2026-11-17T14:03:07.038000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-4184 land parked app code",
-   "model": "opus",
-   "started": "2026-11-17T13:06:45.804Z",
-   "seconds": null,
-   "finished": "2026-11-17T13:25:57.034000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-4191 sort stale parked refs",
-   "model": "opus",
-   "started": "2026-11-17T13:07:10.329Z",
-   "seconds": null,
-   "finished": "2026-11-17T13:13:09.524000+00:00"
-  }
- ],
+ "recent": [],
  "queue": {
   "runnable": [],
   "blocked": [],
@@ -168,12 +143,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-17T09:32:29-05:00",
+ "next_tick": null,
  "personal": {
   "week_pct": 36.07,
   "usage_pct": 52.2,
   "work_pct": 79.0,
-  "read_at": "2026-11-17T14:18:00+00:00",
+  "read_at": "2026-11-17T14:21:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -223,7 +198,7 @@
  "lock_in": {
   "on": false,
   "pool": 5,
-  "at": "2026-11-17T09:18:00-05:00",
+  "at": "2026-11-17T09:21:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -231,9 +206,13 @@
    "b": "double-spread"
   }
  },
- "next_tick_why": "last_tick",
+ "next_tick_why": "session",
  "idle": null,
- "pool": null,
+ "pool": {
+  "why": "Double Spread: 67% of the week left, paced to last until Wed 14:00, the week's halfway point; the machine allows 2 (new work waits: 20 tasks wait to merge (limit 20): 2 agents finish and merge...",
+  "n": 2,
+  "at": "2026-11-17T09:17:29.225460-05:00"
+ },
  "lanes": [
   {
    "name": "Pernille",
@@ -286,6 +265,7 @@
  ],
  "tasks": {
   "run": [],
+  "src": "plan",
   "open": [
    {
     "w": "Pernille",
@@ -380,6 +360,10 @@
    "wait": 28,
    "blocked": 31,
    "you": 8
+  },
+  "fin": {
+   "n": 0,
+   "rows": []
   }
  },
  "qr": [
@@ -421,11 +405,11 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-17T14:17:57Z",
+  "at": "2026-11-17T14:20:43Z",
   "s": {}
  },
  "ln": {
-  "at": "2026-11-17T14:17:57Z",
+  "at": "2026-11-17T14:20:43Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -439,11 +423,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 633,
-    "failed": 2,
-    "held": 888,
+    "conflicted": 636,
+    "failed": 5,
+    "held": 891,
     "retry": null,
-    "parked": 512
+    "parked": 514
    },
    "cur": [],
    "ld": [
@@ -453,12 +437,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-17T14:17:58Z",
-    "ld": 8.23,
+    "at": "2026-11-17T14:20:19Z",
+    "ld": 5.46,
     "c": 8,
     "sb": 2,
     "dk": [
-     21.6,
+     21.4,
      228.3
     ],
     "ss": [
@@ -484,6 +468,15 @@
   }
  },
  "operators": [
+  {
+   "w": "Operator",
+   "a": "Main plan",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session \u2013 6 tasks",
+   "at": "2026-11-17T09:17:58-05:00"
+  },
   {
    "w": "Operator",
    "a": "Evan's Account",
@@ -513,10 +506,10 @@
   "main": 0,
   "lanes": 1,
   "total": 1,
-  "at": "9:18 AM",
+  "at": "9:21 AM",
   "why": "",
-  "at_iso": "2026-11-17T14:18:00+00:00",
-  "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 9:18 AM ET</p></section>"
+  "at_iso": "2026-11-17T14:21:00+00:00",
+  "started": "9:17 AM",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0, started 9:17 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 9:21 AM ET</p></section>"
  }
 }

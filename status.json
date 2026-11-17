@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-17T01:17:47.611894+00:00",
+ "at": "2026-11-17T01:20:44.627445+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -108,7 +108,7 @@
    "task": "[tools] T-4655 heavy test run cap",
    "model": "opus",
    "started": "2026-11-17T00:50:34.871Z",
-   "seconds": 1632,
+   "seconds": 1809,
    "finished": null,
    "effort": "high"
   }
@@ -167,7 +167,7 @@
   "week_pct": 23.56,
   "usage_pct": 47.5,
   "work_pct": 77.0,
-  "read_at": "2026-11-17T01:17:00+00:00",
+  "read_at": "2026-11-17T01:20:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -179,6 +179,7 @@
     "e": "high",
     "at": "2026-11-16T19:37:34-05:00",
     "n": "Evan",
+    "d": 1,
     "src": "plan-a"
    },
    {
@@ -242,26 +243,6 @@
     "at": "2026-11-16T20:16:08-05:00",
     "n": "Evan",
     "src": "plan-a"
-   },
-   {
-    "lane": "b3",
-    "task": "T-4024",
-    "w": "Pernille",
-    "k": "review",
-    "t": "Check finished work before it ships",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-16T19:31:21-05:00",
-    "n": "Jeremy",
-    "src": "plan-b"
-   },
-   {
-    "lane": "b3",
-    "task": "T-4597",
-    "t": "Check finished work before it ships",
-    "at": "2026-11-16T19:31:21-05:00",
-    "n": "Jeremy",
-    "src": "plan-b"
    }
   ]
  },
@@ -283,7 +264,7 @@
   }
  ],
  "disk": {
-  "free_gb": 20,
+  "free_gb": 17,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -292,14 +273,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-16T20:12:00-05:00",
+   "at": "2026-11-16T20:19:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 4,
-  "at": "2026-11-16T20:17:00-05:00",
+  "at": "2026-11-16T20:20:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -527,69 +508,83 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-17T01:17:34Z",
+  "at": "2026-11-17T01:20:44Z",
   "s": {
    "T-4628": [
     "merging",
     "Host checks on the Mac mini",
-    1794878134908
+    1794878144627
+   ],
+   "T-4587": [
+    "mergeq",
+    "1st to merge",
+    1794878444627
    ],
    "T-4617": [
     "mergeq",
-    "1st to merge",
-    1794877894908
+    "2nd to merge",
+    1794877844627
    ],
    "T-3765": [
     "mergeq",
-    "2nd to merge",
-    1794874474908
+    "3rd to merge",
+    1794874484627
    ],
    "T-4642": [
     "mergetest",
-    "Xcode checks on the MacBook, 3rd to merge",
-    1794878134908
+    "Xcode checks on the MacBook, 4th to merge",
+    1794878144627
    ],
    "T-4024": [
-    "testing",
-    "Mac Mini \u00b7 test",
-    null
+    "mergeq",
+    "6th to merge",
+    1794878444627
    ],
    "T-4597": [
-    "testing",
-    "Mac Mini \u00b7 test",
-    null
+    "mergeq",
+    "6th to merge",
+    1794878444627
+   ],
+   "T-3718": [
+    "mergeq",
+    "8th to merge",
+    1794878324627
    ],
    "T-4655": [
     "testing",
     "its own tests, in its copy",
-    1794878014908
+    1794878324627
    ]
   },
   "nm": {
    "T-4628": "Keep the Distance location fix out of its file",
+   "T-4587": "Switch feature sessions on for every app feature",
    "T-4617": "Run quick checks before a land takes the Xcode slot",
    "T-3765": "Check a real widget tap on the TestFlight build",
    "T-4642": "Review the premade settings declarations in Python",
    "T-4024": "Check finished work before it ships",
    "T-4597": "Check finished work before it ships",
+   "T-3718": "Check finished work before it ships",
    "T-4655": "Cap how many heavy test runs share the Mac mini"
   },
   "wk": {
    "T-4628": "Idris",
+   "T-4587": "Idris",
    "T-4617": "Odalys",
    "T-3765": "Idris",
    "T-4642": "Idris",
    "T-4024": "Pernille",
    "T-4597": "Odalys",
+   "T-3718": "Pernille",
    "T-4655": "Odalys"
   }
  },
  "ln": {
-  "at": "2026-11-17T01:17:34Z",
+  "at": "2026-11-17T01:20:44Z",
   "mq": {
    "n": {
     "checking": 2,
-    "inline": 2,
+    "inline": 6,
     "conflicted": 1,
     "failed": 0,
     "held": 0,
@@ -597,13 +592,13 @@
     "parked": 12
    },
    "m": {
-    "checking": 2,
-    "inline": 34,
-    "conflicted": 534,
+    "checking": 5,
+    "inline": 1,
+    "conflicted": 537,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 833
+    "parked": 836
    },
    "cur": [
     [
@@ -612,7 +607,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     2
+     5
     ],
     [
      [
@@ -620,7 +615,7 @@
      ],
      "iPhone app tests, sent and waiting its turn",
      "MacBook",
-     2
+     5
     ]
    ],
    "ld": [
@@ -630,12 +625,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-17T01:16:46Z",
-    "ld": 27.63,
+    "at": "2026-11-17T01:19:57Z",
+    "ld": 21.41,
     "c": 8,
     "sb": 1,
     "dk": [
-     19.3,
+     16.5,
      228.3
     ],
     "ss": [
@@ -675,7 +670,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 1 task",
+   "t": "Work session",
    "at": "2026-11-16T19:37:33-05:00"
   },
   {
@@ -695,15 +690,6 @@
    "e": "high",
    "t": "Work session \u2013 2 tasks",
    "at": "2026-11-16T20:16:07-05:00"
-  },
-  {
-   "w": "Operator",
-   "a": "Jeremy's Account",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session \u2013 1 task",
-   "at": "2026-11-16T19:31:21-05:00"
   }
  ],
  "reply": {
@@ -724,12 +710,12 @@
  ],
  "agents_now": {
   "main": 1,
-  "lanes": 4,
-  "total": 5,
-  "at": "8:17 PM",
+  "lanes": 3,
+  "total": 4,
+  "at": "8:20 PM",
   "why": "",
-  "at_iso": "2026-11-17T01:17:00+00:00",
+  "at_iso": "2026-11-17T01:20:00+00:00",
   "started": "7:47 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 1, started 7:47 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 8:17 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 1, started 7:47 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 8:20 PM ET</p></section>"
  }
 }

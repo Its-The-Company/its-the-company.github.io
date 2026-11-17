@@ -1,10 +1,10 @@
 {
  "schema": 1,
- "at": "2026-11-17T00:05:33.593771+00:00",
+ "at": "2026-11-17T00:10:21.146807+00:00",
  "session": {
-  "active": true,
-  "kind": "work",
-  "started": "2026-11-16T15:35:16-05:00",
+  "active": false,
+  "kind": "",
+  "started": null,
   "flow": [
    {
     "t": "T-3495",
@@ -75,7 +75,6 @@
    },
    {
     "t": "T-3349",
-    "name": "Review the Release privacy scan before TestFlight",
     "acct": "Personal a",
     "steps": [],
     "end": "landed",
@@ -100,7 +99,6 @@
    },
    {
     "t": "T-4082",
-    "name": "Check finished work before it ships",
     "acct": "Personal b",
     "steps": [],
     "end": "landed",
@@ -108,7 +106,6 @@
    },
    {
     "t": "T-4518",
-    "name": "Check finished work before it ships",
     "acct": "Personal a",
     "steps": [],
     "end": "landed",
@@ -209,12 +206,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": null,
+ "next_tick": "2026-11-16T15:49:56-05:00",
  "personal": {
   "week_pct": 18.58,
-  "usage_pct": 45.8,
-  "work_pct": 73.2,
-  "read_at": "2026-11-17T00:05:00+00:00",
+  "usage_pct": 42.2,
+  "work_pct": 72.2,
+  "read_at": "2026-11-17T00:11:00+00:00",
   "running": [
    {
     "lane": "b2",
@@ -249,7 +246,7 @@
   }
  ],
  "disk": {
-  "free_gb": 18,
+  "free_gb": 20,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -258,14 +255,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-16T19:02:00-05:00",
+   "at": "2026-11-16T19:05:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 4,
-  "at": "2026-11-16T19:05:00-05:00",
+  "at": "2026-11-16T19:11:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -273,13 +270,9 @@
    "b": "double-spread"
   }
  },
- "next_tick_why": "session",
+ "next_tick_why": "last_tick",
  "idle": null,
- "pool": {
-  "why": "Double Spread: 75% of the week left, paced to last until Wed 14:00, the week's halfway point; the machine allows 2 (at its floor: load 34.0 a core is over 10)",
-  "n": 2,
-  "at": "2026-11-16T15:34:56.773320-05:00"
- },
+ "pool": null,
  "lanes": [
   {
    "name": "Idris",
@@ -332,7 +325,6 @@
  ],
  "tasks": {
   "run": [],
-  "src": "plan",
   "open": [
    {
     "w": "Idris",
@@ -427,35 +419,6 @@
    "wait": 35,
    "blocked": 40,
    "you": 12
-  },
-  "fin": {
-   "n": 11,
-   "rows": [
-    [
-     "T-4583",
-     "Turn on Feature mode and..."
-    ],
-    [
-     "T-4486",
-     "Refuse Fable in sessions..."
-    ],
-    [
-     "T-3349",
-     "Review the Release privacy..."
-    ],
-    [
-     "T-4082",
-     "Check finished work before..."
-    ],
-    [
-     "T-4518",
-     "Check finished work before..."
-    ],
-    [
-     "T-4451",
-     "Read the flagged lines once..."
-    ]
-   ]
   }
  },
  "qr": [
@@ -497,47 +460,52 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-17T00:05:33Z",
+  "at": "2026-11-17T00:10:21Z",
   "s": {
    "T-3495": [
     "merging",
     "Host checks on the Mac mini",
-    1794873573593
+    1794873561146
    ],
    "T-4494": [
     "merging",
     "Host checks on the Mac mini",
-    1794873573593
+    1794873561146
    ],
    "T-4627": [
     "mergeq",
     "1st to merge",
-    1794871893593
+    1794871881146
    ],
    "T-4624": [
     "mergeq",
     "1st to merge",
-    1794871893593
+    1794871881146
    ],
    "T-4625": [
     "mergeq",
     "3rd to merge",
-    1794871953593
+    1794871941146
+   ],
+   "T-3765": [
+    "mergeq",
+    "6th to merge",
+    1794874041146
    ],
    "T-4540": [
     "mergeq",
-    "6th to merge",
-    1794873813593
+    "7th to merge",
+    1794873801146
    ],
    "T-4541": [
     "mergeq",
-    "6th to merge",
-    1794873813593
+    "7th to merge",
+    1794873801146
    ],
    "T-4614": [
     "mergeq",
-    "11th to merge",
-    1794872073593
+    "12th to merge",
+    1794872061146
    ]
   },
   "nm": {
@@ -546,6 +514,7 @@
    "T-4627": "Land and star the top efficiency lines first",
    "T-4624": "Drop Parents and Children from Home's task cards",
    "T-4625": "Put every remaining efficiency and site line first",
+   "T-3765": "Check a real widget tap on the TestFlight build",
    "T-4540": "Check finished work before it ships",
    "T-4541": "Check finished work before it ships",
    "T-4614": "Make main's own tests pass again"
@@ -556,42 +525,32 @@
    "T-4627": "Odalys",
    "T-4624": "Maren",
    "T-4625": "Odalys",
+   "T-3765": "Idris",
    "T-4540": "Pernille",
    "T-4541": "Pernille",
-   "T-4614": "Pernille",
-   "T-4583": "Idris",
-   "T-4486": "Odalys",
-   "T-3349": "Odalys",
-   "T-4082": "Pernille",
-   "T-4518": "Pernille",
-   "T-4451": "Odalys",
-   "T-4596": "Pernille",
-   "T-4060": "Pernille",
-   "T-4058": "Idris",
-   "T-4076": "Pernille",
-   "T-4314": "Odalys"
+   "T-4614": "Pernille"
   }
  },
  "ln": {
-  "at": "2026-11-17T00:05:33Z",
+  "at": "2026-11-17T00:10:21Z",
   "mq": {
    "n": {
     "checking": 2,
-    "inline": 6,
+    "inline": 7,
     "conflicted": 2,
     "failed": 0,
     "held": 0,
     "retry": 0,
-    "parked": 12
+    "parked": 11
    },
    "m": {
-    "checking": 6,
-    "inline": 32,
-    "conflicted": 1664,
+    "checking": 11,
+    "inline": 36,
+    "conflicted": 1669,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 761
+    "parked": 863
    },
    "cur": [
     [
@@ -600,7 +559,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     6
+     11
     ],
     [
      [
@@ -608,7 +567,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     6
+     11
     ]
    ],
    "ld": [
@@ -618,12 +577,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-17T00:05:07Z",
-    "ld": 28.0,
+    "at": "2026-11-17T00:10:21Z",
+    "ld": 11.99,
     "c": 8,
     "sb": 1,
     "dk": [
-     19.3,
+     17.7,
      228.3
     ],
     "ss": [
@@ -650,20 +609,11 @@
  "operators": [
   {
    "w": "Operator",
-   "a": "Main plan",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session",
-   "at": "2026-11-16T17:53:57-05:00"
-  },
-  {
-   "w": "Operator",
    "a": "Jeremy's Account",
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 1 task",
+   "t": "Work session",
    "at": "2026-11-16T17:57:10-05:00"
   }
  ],
@@ -677,11 +627,9 @@
   "queue_text",
   "recent",
   "task_done",
-  "fin_short",
   "task_title",
   "done_text",
   "task_open",
-  "fin_six",
   "lane_task",
   "task_next"
  ],
@@ -689,10 +637,10 @@
   "main": 0,
   "lanes": 1,
   "total": 1,
-  "at": "7:05 PM",
+  "at": "7:11 PM",
   "why": "",
-  "at_iso": "2026-11-17T00:05:00+00:00",
-  "started": "3:35 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0, started 3:35 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 7:05 PM ET</p></section>"
+  "at_iso": "2026-11-17T00:11:00+00:00",
+  "started": "",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 7:11 PM ET</p></section>"
  }
 }

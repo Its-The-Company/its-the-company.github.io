@@ -49,11 +49,11 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - Older lessons and dated logs: archive.md.
 
 
-- T-3281 11-16: gate_session_build.sh --test (XC_LOCAL=1: xc_route sends a test with KEY=VALUE to the runner, which drops it: false green). 12/0, shot t3281/. Open: shot catches the share sheet mid-present (dim, no sheet); xc_route should keep such tests local.
-- T-3552 11-16 106de8a7d0: preview budget whole at dequeue, queue limit 10 s; ticked. Open: review. Lesson: another task's uncommitted file that won't compile reds every local test: test in a detached worktree copy with only my diff.
 - T-4554 11-16: WidgetStateCommit (state.json pywidget.state/1, run.lock, 64 KiB cap) + Core tests + host 2-process/kill suite (pywidget/tests/state_commit, swiftc helper). Odalys FIX FIRST f8c9e5b07a: F1 cap, F2 run.lock in runFileNames fixed. Open: T-4577 (Hold, G-L5-1 (a), xc test patch in scratch). Lesson: xc lock waits 30 min then 75 under load; host-run gates through swift test + swiftc helpers.
 - T-4194 11-16: switch on for T-4191 (ops/feature_sessions.json + lane.md paragraph; an Investor #41 c6919278591). Open: land-side step tick (personal_land.sh, not mine to touch now). Lesson: scratch.py reuses a stale wt with old edits: save its diff as a patch, then reset to main.
 - T-0678 11-16 3f03c187cd slice 3: lane tap row says intent (B5), 1952/0. Open: iOS 18 tap test (Xcode 27.1 offers no iOS 18 runtime; iOS 26.0 bundle on scratch SSD, not imported), s10 Lock Screen checks; review Pernille. Lesson: a worktree's Vendor/ goes stale (missing runestone patch): run scripts/fetch_editor.sh.
+- T-4196 11-16: group job built, NOT landed (copy T-4196-idris/wt, msg1.txt); gate red only on queue_check timing row under load. Open: land once at lower load, then 20 timed runs. Lesson: a land group's runs share task IDs; runner_watch must count them as one change.
+- T-0696 11-16 5e6799654b: handoff only; patch in scratch T-0696-idris (LaneNetPeak, ExtensionMemoryTests, HTTPS on loopback). Lesson: killing the extension + app launch reruns nothing; launch with -reload.
 {% endraw %}
 
 

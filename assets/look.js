@@ -97,7 +97,7 @@ function toggle(c){var k=key(c),on=!c.classList.contains('lk-open');c.classList.
 // field names too, shown once, under the field's heading, and walked only by the move rule (anc). LW is lineage.WAYS. An
 // ID with no entry in n is a queued card whose name is on this page.
 var G={n:{},u:{},a:{},d:{},x:{},P:{},p:{},k:{},K:{},m:{}},LS={q:'Queued',w:'Waiting',b:'Blocked',d:'Done',a:'Archived',c:'Cancelled',u:'Not on the board'},LMAX=40,
-LW=[['part_of','Part of','p'],['pieces','Pieces','P'],['needs','Needs','k'],['needed_by','Needed by','K'],['up','Parents','u'],['down','Children','d']];
+LW=[['part_of','Part of','p'],['pieces','Pieces','P'],['needs','Needs','k'],['needed_by','Needed by','K']];
 try{var g0=JSON.parse(H.getAttribute('data-lin')||'{}');G.n=g0.n||{};G.u=g0.u||{};G.a=g0.a||{};G.x=g0.x||{};G.P=g0.p||{};G.k=g0.k||{};G.m=g0.m||{}}catch(e){}
 [['u','d'],['P','p'],['k','K']].forEach(function(w){Object.keys(G[w[0]]).sort().forEach(function(c){G[w[0]][c].forEach(function(p){(G[w[1]][p]=G[w[1]][p]||[]).push(c)})})});
 function lid(i){i=String(i||'').replace(/\.\d+$/,'');return G.a[i]||i}
@@ -105,7 +105,7 @@ function pl(n,w,e){return n?n+' '+w+(n===1?'':e):''}
 function nm(w,l){l=l||[];return l.length?w+' '+(l.length===1?l[0]:l.length):''}
 function mt(i){var m=G.m[i]||{};return['d','a','c','u'].filter(function(s){return m[s]}).map(function(s){return m[s]+' '+LS[s].toLowerCase()})}
 function lws(i){var m,n;i=lid(i);m=G.m[i]||{};n=(G.P[i]||[]).length;Object.keys(m).forEach(function(s){n+=m[s]});
-return[[nm('part of',G.p[i]),pl(n,'piece','s')],[nm('needs',G.k[i]),nm('needed by',G.K[i])],[pl((G.u[i]||[]).length,'parent','s'),pl((G.d[i]||[]).length,'child','ren')]]
+return[[nm('part of',G.p[i]),pl(n,'piece','s')],[nm('needs',G.k[i]),nm('needed by',G.K[i])]]
 .map(function(k){return k.filter(Boolean).join(' · ')}).filter(Boolean)}
 function badge(p,i){lws(i).forEach(function(w){mk(p,'span','lk-lin',w)})}
 function walk(i,g){var s={},o=[],t=[],n;s[i]=1;function push(x,d){(g[x]||[]).slice().reverse().forEach(function(y){t.push([y,d])})}push(i,1);

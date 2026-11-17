@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-17T08:15:28.320307+00:00",
+ "at": "2026-11-17T08:18:34.123337+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -127,7 +127,7 @@
    "task": "[tools] T-4677 landed work never shows Retry",
    "model": "opus",
    "started": "2026-11-17T07:27:10.371Z",
-   "seconds": 2897,
+   "seconds": 3083,
    "finished": null,
    "effort": "high"
   },
@@ -136,7 +136,7 @@
    "task": "[tools] T-4701 new-test deflake hook in gate",
    "model": "opus",
    "started": "2026-11-17T08:08:59.086Z",
-   "seconds": 389,
+   "seconds": 575,
    "finished": null,
    "effort": "high"
   },
@@ -145,7 +145,7 @@
    "task": "[tools] T-4676 lane wiring for in-place fix",
    "model": "opus",
    "started": "2026-11-17T08:09:05.886Z",
-   "seconds": 382,
+   "seconds": 568,
    "finished": null,
    "effort": "high"
   },
@@ -154,7 +154,7 @@
    "task": "[tools] T-4694 nightly run of every suite",
    "model": "opus",
    "started": "2026-11-17T08:09:12.090Z",
-   "seconds": 376,
+   "seconds": 562,
    "finished": null,
    "effort": "high"
   }
@@ -202,19 +202,19 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 11.0,
+   "pct": 12.0,
    "resets_at": "2026-11-17T04:10:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-17T03:09:50.980798-05:00",
+   "read_at": "2026-11-17T03:16:09.873592-05:00",
    "source": "live",
-   "left": 89.0,
+   "left": 88.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 29.0,
    "resets_at": "2026-11-22T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-17T03:09:50.980798-05:00",
+   "read_at": "2026-11-17T03:16:09.873592-05:00",
    "source": "live",
    "left": 71.0,
    "left_words": "of your weekly allowance left"
@@ -226,7 +226,7 @@
    "read_at": "2026-11-17T01:00:19.230352-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-17T03:09:50.980798-05:00"
+  "read_at": "2026-11-17T03:16:09.873592-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -246,7 +246,7 @@
   "week_pct": 32.81,
   "usage_pct": 54.0,
   "work_pct": 78.2,
-  "read_at": "2026-11-17T08:15:00+00:00",
+  "read_at": "2026-11-17T08:18:00+00:00",
   "running": [
    {
     "lane": "a3",
@@ -289,14 +289,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-17T03:09:00-05:00",
+   "at": "2026-11-17T03:16:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 4,
-  "at": "2026-11-17T03:15:00-05:00",
+  "at": "2026-11-17T03:18:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -571,57 +571,55 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-17T08:15:09Z",
+  "at": "2026-11-17T08:18:16Z",
   "s": {
-   "T-4672": [
-    "mergetest",
-    "Xcode checks on the MacBook",
-    1794903189196
-   ],
    "T-4190": [
     "mergetest",
     "Xcode checks on the MacBook, 1st to merge",
-    1794903069196
+    1794903076274
+   ],
+   "T-4672": [
+    "mergetest",
+    "Xcode checks on the MacBook, 2nd to merge",
+    1794903196274
    ],
    "T-4181": [
     "testing",
     "Mac Mini \u00b7 test",
     null
    ],
+   "T-4694": [
+    "testing",
+    "its own tests, in its copy",
+    1794903436274
+   ],
+   "T-4701": [
+    "testing",
+    "its own tests, in its copy",
+    1794903376274
+   ],
    "T-4676": [
     "merged",
     "on main 3:07 AM ET",
     1794902839000,
     "Odalys"
-   ],
-   "T-4701": [
-    "merged",
-    "on main 2:50 AM ET",
-    1794901848000,
-    "Pernille"
-   ],
-   "T-4694": [
-    "merged",
-    "on main 2:26 AM ET",
-    1794900392000,
-    "Odalys"
    ]
   },
   "nm": {
-   "T-4672": "Plan the 1.0 showcase premades",
    "T-4190": "Settings and Pro: buy, restore, themes",
+   "T-4672": "Plan the 1.0 showcase premades",
    "T-4181": "Widgets refresh on their own and by a tap",
-   "T-4676": "Fix small test failures in place during a land",
+   "T-4694": "Pass lands whose red is also on main",
    "T-4701": "Keep bad tests from blocking merges",
-   "T-4694": "Pass lands whose red is also on main"
+   "T-4676": "Fix small test failures in place during a land"
   },
   "wk": {
-   "T-4672": "Ines",
    "T-4190": "Idris",
+   "T-4672": "Ines",
    "T-4181": "Idris",
-   "T-4676": "Odalys",
-   "T-4701": "Odalys",
    "T-4694": "Odalys",
+   "T-4701": "Odalys",
+   "T-4676": "Odalys",
    "T-4702": "Pernille",
    "T-4691": "Odalys",
    "T-4674": "Odalys",
@@ -636,7 +634,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-17T08:15:09Z",
+  "at": "2026-11-17T08:18:16Z",
   "mq": {
    "n": {
     "checking": 2,
@@ -648,30 +646,30 @@
     "parked": 19
    },
    "m": {
-    "checking": 3,
+    "checking": 6,
     "inline": null,
-    "conflicted": 610,
+    "conflicted": 613,
     "failed": null,
     "held": null,
-    "retry": 47,
-    "parked": 172
+    "retry": 50,
+    "parked": 175
    },
    "cur": [
-    [
-     [
-      "T-4672"
-     ],
-     "iPhone app tests",
-     "MacBook",
-     2
-    ],
     [
      [
       "T-4190"
      ],
      "iPhone app tests",
      "MacBook",
-     4
+     7
+    ],
+    [
+     [
+      "T-4672"
+     ],
+     "iPhone app tests, sent and waiting its turn",
+     "MacBook",
+     5
     ]
    ],
    "ld": [
@@ -681,12 +679,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-17T08:15:16Z",
-    "ld": 18.26,
+    "at": "2026-11-17T08:17:28Z",
+    "ld": 25.48,
     "c": 8,
     "sb": 1,
     "dk": [
-     18.1,
+     17.8,
      228.3
     ],
     "ss": [
@@ -752,10 +750,10 @@
   "main": 4,
   "lanes": 1,
   "total": 5,
-  "at": "3:15 AM",
+  "at": "3:18 AM",
   "why": "",
-  "at_iso": "2026-11-17T08:15:00+00:00",
+  "at_iso": "2026-11-17T08:18:00+00:00",
   "started": "1:00 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 4, started 1:00 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 3:15 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 4, started 1:00 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 3:18 AM ET</p></section>"
  }
 }

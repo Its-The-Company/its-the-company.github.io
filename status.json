@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-17T16:34:57.415334+00:00",
+ "at": "2026-11-17T16:38:03.799797+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -129,7 +129,7 @@
    "task": "[tools] T-4755 stop runner rerunning old jobs",
    "model": "opus",
    "started": "2026-11-17T16:01:08.321Z",
-   "seconds": 2029,
+   "seconds": 2215,
    "finished": null,
    "effort": "high"
   },
@@ -138,7 +138,7 @@
    "task": "[build] T-3764 settle parked iPad window work",
    "model": "opus",
    "started": "2026-11-17T16:26:30.934Z",
-   "seconds": 506,
+   "seconds": 692,
    "finished": null,
    "effort": "high"
   }
@@ -222,34 +222,8 @@
   "week_pct": 36.07,
   "usage_pct": 52.2,
   "work_pct": 79.0,
-  "read_at": "2026-11-17T16:35:00+00:00",
-  "running": [
-   {
-    "lane": "a3",
-    "task": "T-4513",
-    "w": "Maren",
-    "k": "site",
-    "t": "Show the SSD's free space on the Machine bubble",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-17T10:00:25-05:00",
-    "n": "Evan",
-    "src": "plan-a"
-   },
-   {
-    "lane": "a3",
-    "task": "T-4747",
-    "w": "Maren",
-    "k": "site",
-    "t": "Show each umbrella's progress and its running steps on Home",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-17T10:00:25-05:00",
-    "n": "Evan",
-    "d": 1,
-    "src": "plan-a"
-   }
-  ]
+  "read_at": "2026-11-17T16:38:00+00:00",
+  "running": []
  },
  "api_credits": [
   {
@@ -285,7 +259,7 @@
  "lock_in": {
   "on": false,
   "pool": 5,
-  "at": "2026-11-17T11:35:00-05:00",
+  "at": "2026-11-17T11:38:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -524,57 +498,57 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-17T16:34:47Z",
+  "at": "2026-11-17T16:38:03Z",
   "s": {
    "T-4656": [
     "mergetest",
     "Xcode checks on the Mac mini",
-    1794933227208
+    1794933243799
+   ],
+   "T-4513": [
+    "mergeq",
+    "2nd to merge",
+    1794933423799
    ],
    "T-4747": [
     "mergeq",
     "2nd to merge",
-    1794932867208
+    1794933423799
    ],
-   "T-4513": [
-    "merging",
-    "Mac tests at the main gate",
-    1794927647208
+   "T-3764": [
+    "mergetest",
+    "iPhone tests on the MacBook",
+    null
    ],
    "T-4755": [
     "merging",
     "Mac tests at the main gate",
-    1794933167208
-   ],
-   "T-3764": [
-    "merging",
-    "Mac tests at the main gate \u00b7 7 groups of tests done",
-    1794932927208
+    1794933183799
    ]
   },
   "nm": {
    "T-4656": "Let a cleaned script return to the widget on resend",
-   "T-4747": "Show each umbrella's progress and its running steps on Home",
    "T-4513": "Show the SSD's free space on the Machine bubble",
-   "T-4755": "Stop the MacBook runner rerunning old jobs",
-   "T-3764": "Make the iPad window test fail without the fix"
+   "T-4747": "Show each umbrella's progress and its running steps on Home",
+   "T-3764": "Make the iPad window test fail without the fix",
+   "T-4755": "Stop the MacBook runner rerunning old jobs"
   },
   "wk": {
    "T-4656": "Idris",
-   "T-4747": "Maren",
    "T-4513": "Maren",
-   "T-4755": "Odalys",
+   "T-4747": "Maren",
    "T-3764": "Idris",
+   "T-4755": "Odalys",
    "T-4417": "Idris",
    "T-4416": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-17T16:34:47Z",
+  "at": "2026-11-17T16:38:03Z",
   "mq": {
    "n": {
     "checking": 1,
-    "inline": 1,
+    "inline": 2,
     "conflicted": 1,
     "failed": 0,
     "held": 2,
@@ -582,13 +556,13 @@
     "parked": 21
    },
    "m": {
-    "checking": 1,
-    "inline": 7,
-    "conflicted": 770,
+    "checking": 4,
+    "inline": 1,
+    "conflicted": 773,
     "failed": null,
-    "held": 538,
-    "retry": 52,
-    "parked": 88
+    "held": 541,
+    "retry": 55,
+    "parked": 91
    },
    "cur": [
     [
@@ -597,7 +571,7 @@
      ],
      "iPhone app tests",
      "Mac mini",
-     1
+     4
     ]
    ],
    "ld": [
@@ -607,12 +581,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-17T16:34:23Z",
-    "ld": 1.48,
+    "at": "2026-11-17T16:37:16Z",
+    "ld": 1.81,
     "c": 8,
     "sb": 1,
     "dk": [
-     16.7,
+     18.9,
      228.3
     ],
     "ss": [
@@ -624,12 +598,12 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-17T16:24:48Z",
-    "ld": 2.28,
+    "at": "2026-11-17T16:35:01Z",
+    "ld": 0.67,
     "c": 12,
     "sb": 0,
     "dk": [
-     323.1,
+     323.6,
      926.4
     ],
     "sn": []
@@ -645,15 +619,6 @@
    "e": "high",
    "t": "Inbox \u2013 Jeremy's 11:34 AM Message on GitHub",
    "at": "2026-11-17T11:34:56-05:00"
-  },
-  {
-   "w": "Operator",
-   "a": "Evan's Account",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session",
-   "at": "2026-11-17T10:55:40-05:00"
   }
  ],
  "reply": {
@@ -686,12 +651,12 @@
  ],
  "agents_now": {
   "main": 2,
-  "lanes": 1,
-  "total": 3,
-  "at": "11:35 AM",
+  "lanes": 0,
+  "total": 2,
+  "at": "11:38 AM",
   "why": "",
-  "at_iso": "2026-11-17T16:35:00+00:00",
+  "at_iso": "2026-11-17T16:38:00+00:00",
   "started": "9:17 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 9:17 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 11:35 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 9:17 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 11:38 AM ET</p></section>"
  }
 }

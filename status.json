@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-17T12:11:58.105133+00:00",
+ "at": "2026-11-17T12:15:00.182272+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -84,22 +84,20 @@
     "end_at": 1794903153
    }
   ],
-  "landed": 32,
+  "landed": 26,
   "failed": 3
  },
- "workers": [
+ "workers": [],
+ "who": "",
+ "recent": [
   {
    "name": "odalys",
    "task": "[tools] T-4718 land records with work",
    "model": "opus",
    "started": "2026-11-17T09:19:38.190Z",
-   "seconds": 10339,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Odalys",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-17T12:12:38.212000+00:00"
+  },
   {
    "name": "ines",
    "task": "[plan] Process changes write-up and queue removal",
@@ -123,20 +121,12 @@
    "started": "2026-11-17T09:19:32.737Z",
    "seconds": null,
    "finished": "2026-11-17T11:15:44.065000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[ops] T-4716 re-date OPT-106",
-   "model": "opus",
-   "started": "2026-11-17T09:19:45.790Z",
-   "seconds": null,
-   "finished": "2026-11-17T09:22:52.104000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 397,
+  "runnable_count": 396,
   "blocked_count": 59
  },
  "meter": {
@@ -185,7 +175,7 @@
   "week_pct": 33.55,
   "usage_pct": 52.8,
   "work_pct": 78.5,
-  "read_at": "2026-11-17T12:11:00+00:00",
+  "read_at": "2026-11-17T12:15:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -222,7 +212,7 @@
  "lock_in": {
   "on": false,
   "pool": 5,
-  "at": "2026-11-17T07:11:00-05:00",
+  "at": "2026-11-17T07:15:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -238,15 +228,6 @@
   "at": "2026-11-17T04:16:46.866705-05:00"
  },
  "lanes": [
-  {
-   "name": "Odalys",
-   "state": "running",
-   "task": "[tools] T-4718 land records with work",
-   "model": "opus",
-   "since": "2026-11-17T09:19:38.190Z",
-   "next": [],
-   "effort": "high"
-  },
   {
    "name": "Idris",
    "state": "next",
@@ -272,6 +253,14 @@
    "next": []
   },
   {
+   "name": "Odalys",
+   "state": "next",
+   "task": "A lane record main refused: failed...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
    "name": "Wrenna",
    "state": "next",
    "task": "Wrenna, P2, T-2375 continuation (B-staged item 3...",
@@ -289,18 +278,7 @@
   }
  ],
  "tasks": {
-  "run": [
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Land a task's records with its work",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-17T09:19:38.190Z",
-    "o": "c",
-    "task": "T-4718"
-   }
-  ],
+  "run": [],
   "src": "plan",
   "open": [
    {
@@ -376,6 +354,11 @@
   ],
   "done": [
    {
+    "w": "Odalys",
+    "t": "When a task finishes mid-session and lands early, its board tick now lands with it instead of...",
+    "at": "2026-11-17T07:12:00-05:00"
+   },
+   {
     "w": "Odalys+pernille",
     "t": "Bad tests now block merges far less: a new or changed test runs three times before it may block,...",
     "at": "2026-11-17T07:08:00-05:00"
@@ -384,22 +367,21 @@
     "w": "Odalys",
     "t": "The test of a check that stops two experiments sharing one ledger number had a deadline it could...",
     "at": "2026-11-17T04:22:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "The five site tests that seemed to fail only in worker copies were really stale on main; they...",
-    "at": "2026-11-17T04:20:00-05:00"
    }
   ],
   "count": {
-   "next": 397,
+   "next": 396,
    "wait": 28,
    "blocked": 31,
    "you": 8
   },
   "fin": {
-   "n": 5,
+   "n": 6,
    "rows": [
+    [
+     "T-4718",
+     "Land a task's records with..."
+    ],
     [
      "T-4701",
      "Keep bad tests from blocking..."
@@ -462,17 +444,8 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-17T12:11:45Z",
-  "s": {
-   "T-4718": [
-    "merging",
-    "Mac tests at the main gate",
-    1794916905115
-   ]
-  },
-  "nm": {
-   "T-4718": "Land a task's records with its work"
-  },
+  "at": "2026-11-17T12:15:00Z",
+  "s": {},
   "wk": {
    "T-4718": "Odalys",
    "T-4701": "Odalys",
@@ -483,7 +456,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-17T12:11:45Z",
+  "at": "2026-11-17T12:15:00Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -497,11 +470,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 847,
+    "conflicted": 850,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 385
+    "parked": 389
    },
    "cur": [],
    "ld": [
@@ -511,12 +484,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-17T12:11:45Z",
-    "ld": 1.11,
+    "at": "2026-11-17T12:14:15Z",
+    "ld": 0.85,
     "c": 8,
     "sb": 1,
     "dk": [
-     19.7,
+     21.8,
      228.3
     ],
     "ss": [
@@ -559,6 +532,7 @@
  "trimmed": [
   "lane_next",
   "queue_text",
+  "recent",
   "task_done",
   "fin_short",
   "task_title",
@@ -568,13 +542,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 1,
+  "main": 0,
   "lanes": 0,
-  "total": 1,
-  "at": "7:11 AM",
-  "why": "",
-  "at_iso": "2026-11-17T12:11:00+00:00",
+  "total": 0,
+  "at": "7:15 AM",
+  "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
+  "at_iso": "2026-11-17T12:15:00+00:00",
   "started": "4:18 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 4:18 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 7:11 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0, started 4:18 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 7:15 AM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
  }
 }

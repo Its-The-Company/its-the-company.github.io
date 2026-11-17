@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-17T05:46:37.231643+00:00",
+ "at": "2026-11-17T05:49:40.892796+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -133,24 +133,23 @@
   "landed": 44,
   "failed": 5
  },
- "workers": [
+ "workers": [],
+ "who": "",
+ "recent": [
   {
    "name": "odalys",
    "task": "[tools] T-4665 batch land efficiency pieces",
    "model": "opus",
    "started": "2026-11-17T02:49:08.404Z",
-   "seconds": 10648,
-   "finished": null,
-   "effort": "high"
+   "seconds": null,
+   "finished": "2026-11-17T05:49:13.094000+00:00"
   }
  ],
- "who": "Odalys",
- "recent": [],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 458,
-  "blocked_count": 74
+  "runnable_count": 459,
+  "blocked_count": 73
  },
  "meter": {
   "five_hour": {
@@ -198,7 +197,7 @@
   "week_pct": 24.98,
   "usage_pct": 48.1,
   "work_pct": 77.2,
-  "read_at": "2026-11-17T05:46:00+00:00",
+  "read_at": "2026-11-17T05:49:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -235,7 +234,7 @@
  "lock_in": {
   "on": false,
   "pool": 4,
-  "at": "2026-11-17T00:46:00-05:00",
+  "at": "2026-11-17T00:49:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -251,15 +250,6 @@
   "at": "2026-11-16T21:43:51.768849-05:00"
  },
  "lanes": [
-  {
-   "name": "Odalys",
-   "state": "running",
-   "task": "[tools] T-4665 batch land efficiency pieces",
-   "model": "opus",
-   "since": "2026-11-17T02:49:08.404Z",
-   "next": [],
-   "effort": "high"
-  },
   {
    "name": "Idris",
    "state": "next",
@@ -285,6 +275,14 @@
    "next": []
   },
   {
+   "name": "Odalys",
+   "state": "next",
+   "task": "A lane record main refused: failed...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
    "name": "Wrenna",
    "state": "next",
    "task": "Wrenna, P2, T-2375 continuation (B-staged item 3...",
@@ -302,18 +300,7 @@
   }
  ],
  "tasks": {
-  "run": [
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Land the finished efficiency pieces in one batch",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-17T02:49:08.404Z",
-    "o": "c",
-    "task": "T-4665"
-   }
-  ],
+  "run": [],
   "src": "plan",
   "open": [
    {
@@ -405,10 +392,10 @@
    }
   ],
   "count": {
-   "next": 458,
+   "next": 459,
    "wait": 35,
-   "blocked": 39,
-   "you": 12
+   "blocked": 38,
+   "you": 11
   },
   "fin": {
    "n": 3,
@@ -467,33 +454,26 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-17T05:46:30Z",
+  "at": "2026-11-17T05:49:22Z",
   "s": {
    "T-4182": [
     "mergetest",
     "Xcode checks on the MacBook, 1st to merge",
-    1794894210687
-   ],
-   "T-4665": [
-    "merging",
-    "Mac tests at the main gate",
-    1794894090687
+    1794894202364
    ]
   },
   "nm": {
-   "T-4182": "A failing widget says so and can recover",
-   "T-4665": "Land the finished efficiency pieces in one batch"
+   "T-4182": "A failing widget says so and can recover"
   },
   "wk": {
    "T-4182": "Idris",
-   "T-4665": "Odalys",
    "T-4279": "Odalys",
    "T-4240": "Odalys",
    "T-4617": "Odalys"
   }
  },
  "ln": {
-  "at": "2026-11-17T05:46:30Z",
+  "at": "2026-11-17T05:49:22Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -505,13 +485,13 @@
     "parked": 31
    },
    "m": {
-    "checking": 3,
+    "checking": 6,
     "inline": null,
-    "conflicted": 401,
-    "failed": 18,
+    "conflicted": 404,
+    "failed": 21,
     "held": null,
     "retry": null,
-    "parked": 18
+    "parked": 21
    },
    "cur": [
     [
@@ -520,7 +500,7 @@
      ],
      "iPhone app tests",
      "MacBook",
-     3
+     6
     ]
    ],
    "ld": [
@@ -530,12 +510,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-17T05:46:31Z",
-    "ld": 3.07,
+    "at": "2026-11-17T05:49:22Z",
+    "ld": 2.07,
     "c": 8,
     "sb": 2,
     "dk": [
-     20.1,
+     22.3,
      228.3
     ],
     "ss": [
@@ -567,32 +547,20 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Inbox \u2013 Evan's 12:45 AM Message on GitHub",
-   "at": "2026-11-17T00:46:04-05:00"
+   "t": "Work session",
+   "at": "2026-11-17T00:46:41-05:00"
   }
  ],
  "reply": {
-  "sent": "2026-11-17T05:27:34Z",
-  "seconds": 113.0
+  "sent": "2026-11-17T05:45:42Z",
+  "seconds": 57.0
  },
- "inbox": [
-  {
-   "id": "c6939849645",
-   "state": "received",
-   "position": 1,
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "Is T-4181 in progress? If they do..."
-  }
- ],
+ "inbox": [],
  "trimmed": [
   "lane_next",
   "queue_text",
   "task_done",
   "fin_short",
-  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -600,13 +568,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 1,
+  "main": 0,
   "lanes": 0,
-  "total": 1,
-  "at": "12:46 AM",
-  "why": "",
-  "at_iso": "2026-11-17T05:46:00+00:00",
+  "total": 0,
+  "at": "12:49 AM",
+  "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
+  "at_iso": "2026-11-17T05:49:00+00:00",
   "started": "9:46 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 9:46 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 12:46 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0, started 9:46 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 12:49 AM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
  }
 }

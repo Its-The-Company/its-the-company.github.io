@@ -156,7 +156,7 @@ area. A session takes a feature's open steps P0 first, then in the order listed.
 ### 2.2 T-4181: Widgets refresh on their own and by a tap
 
 - **Owner:** Idris. **Reviewer (Commandment 13, once per merge):** Pernille. **Priority:** P0.
-- **Done when:** `seen:` on the iPhone, tapping the refresh button on a placed widget reruns its script without opening the app, and the widget shows the new value with its age line; a widget that reads the web does the same; with Pro, a widget left alone refreshes by itself.
+- **Done when:** `seen:` on the iPhone, tapping the refresh button on a placed widget reruns its script without opening the app, and the widget shows the new value with its age line; a widget that reads the web does the same; a widget left alone refreshes by itself, for everyone (background refresh is free: #278, 9:43 PM ET 11-16; 06-decisions.md item 9, T-4669).
 - **Seen on:** the iPhone 17e Simulator; time and memory inside the widget are then measured on the Investors' iPhone with the internal gate build.
 - **Evidence:** a screen recording of the tap and the new value, and the measured time and memory figures.
 - **Targets:** `pywidget/ios/Shared/ExtensionLane.swift`, `pywidget/ios/Shared/RefreshAsks.swift`, `pywidget/ios/Shared/RefreshOutcomeRule.swift`, `pywidget/ios/Shared/RefreshSchedule.swift`, `pywidget/ios/Shared/RefreshWidgetsIntent.swift`, `pywidget/ios/Shared/AgeLine.swift`, `pywidget/ios/Shared/PythonRuntime.swift`, `pywidget/ios/App/Runtime/_pywidget_runtime`.
@@ -438,7 +438,7 @@ area. A session takes a feature's open steps P0 first, then in the order listed.
 ### 2.11 T-4190: Settings and Pro: buy, restore, themes
 
 - **Owner:** Idris. **Reviewer (Commandment 13, once per merge):** Odalys. **Priority:** P1.
-- **Done when:** `seen:` on the iPhone, Settings matches the design in light and dark; the Pro screen shows the approved words and price; a test purchase unlocks the editor themes and background refresh, Restore brings them back, and Ask to Buy shows waiting for approval; Acknowledgements lists every bundled package; the rating request appears once after a real success.
+- **Done when:** `seen:` on the iPhone, Settings matches the design in light and dark; the Pro screen names only what decision 9 puts in Pro (advanced Python libraries, Buttons in widgets, Python running within the widget), in words the Investors have approved, and shows no price until they decide the pay model after a working prototype (#278, 9:43 PM ET 11-16; T-4669); a test purchase with the StoreKit test file (its price a test value, not a chosen one) unlocks those features, and Pro themes only once the Investors settle which themes are free (open, 06-decisions.md item 9); Restore brings them back, and Ask to Buy shows waiting for approval; Acknowledgements lists every bundled package; the rating request appears once after a real success.
 - **Seen on:** the iPhone 17e Simulator with the StoreKit test file.
 - **Evidence:** screenshots of Settings, the Pro screen before and after the test purchase, the theme picker and Acknowledgements.
 - **Targets:** `pywidget/ios/App/Settings`, `pywidget/ios/App/Store`, `pywidget/ios/App/SettingsProRowRule.swift`, `pywidget/ios/Shared/ProFlags.swift`, `pywidget/ios/Shared/ProEntitlement.swift`, `pywidget/ios/Shared/ProCardView.swift`, `pywidget/ios/App/Acknowledgements.swift`, `pywidget/ios/App/RatingRequestRule.swift`, `pywidget/ios/StoreKit`.
@@ -674,7 +674,7 @@ Added 12:5x AM ET 11-14 (T-4413), from the lines the audit judged keep after the
 - T-4221: a tool fix (tools/task_names_store.py), not app work; the inventory files it under the app by its kind tag.
 - T-4304: a Handbook note on which changes get a review line: a process note, not app building. The inventory files it under the app by its words (TestFlight, App Store).
 - T-4286: waits on the Restructuring's new feature list: a one-day phone probe for the Builder (does an imported font draw in a widget), and the Builder is none of the 14 features. Not placed and not decided here.
-- T-4301: waits on Restructuring decision 9 (are any premades Pro). As written it follows T-3899, a step of T-4180, in WidgetWriter.swift; if every premade is free, what is left of it is background refresh's, T-4181. Not placed until 9 is answered.
+- T-4301: waits on Restructuring decision 9 (are any premades Pro). As written it follows T-3899, a step of T-4180, in WidgetWriter.swift; if every premade is free, what is left of it is background refresh's, T-4181. Not placed until 9 is answered. *11-17 (T-4669):* 9 is answered: all 12 premades free and unmarked, background refresh free (#278, 9:43 PM ET 11-16); premades that use a Pro feature carry a Pro tag (#41, 12:27 AM ET 11-17), so its gate read is T-4692's to judge.
 
 The 76 open review lines are not placed. T-4098 judges them. My recommendation to that slice: a review line on a
 step of a feature folds into that feature's one review at its merge.
@@ -998,6 +998,8 @@ Each reason is in ops/plans/app-features.json under "placed". This is their copy
 - **T-4301** waits on Restructuring decision 9 (are any premades Pro). As written it follows T-3899, a step of
   T-4180, in WidgetWriter.swift; if every premade is free, what is left of it is background refresh's, T-4181.
   Not placed until 9 is answered.
+  *11-17 (T-4669):* 9 is answered (#278, 9:43 PM ET 11-16): all 12 premades free and unmarked, background refresh
+  free; premades that use a Pro feature carry a Pro tag (#41, 12:27 AM ET 11-17), so its gate read is T-4692's to judge.
 - **T-4286** waits on the Restructuring's new feature list. It is a one-day phone probe for the Builder, and the
   Builder is none of the 14 features (06-decisions.md, Changes: "New features ... The Builder").
 

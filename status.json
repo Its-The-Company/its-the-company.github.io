@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-17T11:14:08.331831+00:00",
+ "at": "2026-11-17T11:17:07.871446+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -95,22 +95,21 @@
    "task": "[tools] T-4718 land records with work",
    "model": "opus",
    "started": "2026-11-17T09:19:38.190Z",
-   "seconds": 6870,
+   "seconds": 7049,
    "finished": null,
    "effort": "high"
-  },
+  }
+ ],
+ "who": "Odalys",
+ "recent": [
   {
    "name": "odalys",
    "task": "[tools] T-4701 quarantine expiry schedule",
    "model": "opus",
    "started": "2026-11-17T09:19:32.737Z",
-   "seconds": 6875,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Odalys x2",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-17T11:15:44.065000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[ops] T-4716 re-date OPT-106",
@@ -172,7 +171,7 @@
   "week_pct": 33.55,
   "usage_pct": 52.8,
   "work_pct": 78.5,
-  "read_at": "2026-11-17T11:14:00+00:00",
+  "read_at": "2026-11-17T11:17:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -202,14 +201,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-17T06:11:00-05:00",
+   "at": "2026-11-17T06:17:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 5,
-  "at": "2026-11-17T06:14:00-05:00",
+  "at": "2026-11-17T06:17:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -228,9 +227,9 @@
   {
    "name": "Odalys",
    "state": "running",
-   "task": "[tools] T-4701 quarantine expiry schedule",
+   "task": "[tools] T-4718 land records with work",
    "model": "opus",
-   "since": "2026-11-17T09:19:32.737Z",
+   "since": "2026-11-17T09:19:38.190Z",
    "next": [],
    "effort": "high"
   },
@@ -277,16 +276,6 @@
  ],
  "tasks": {
   "run": [
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Keep bad tests from blocking merges",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-17T09:19:32.737Z",
-    "o": "c",
-    "task": "T-4701"
-   },
    {
     "w": "Odalys",
     "k": "tools",
@@ -455,12 +444,12 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-17T11:13:56Z",
+  "at": "2026-11-17T11:17:07Z",
   "s": {
    "T-4701": [
     "merging",
     "Mac tests at the main gate",
-    1794912956940
+    1794914167871
    ]
   },
   "nm": {
@@ -475,7 +464,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-17T11:13:56Z",
+  "at": "2026-11-17T11:17:07Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -489,11 +478,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 789,
+    "conflicted": 792,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 336
+    "parked": 339
    },
    "cur": [],
    "ld": [
@@ -503,12 +492,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-17T11:13:09Z",
-    "ld": 0.52,
+    "at": "2026-11-17T11:16:21Z",
+    "ld": 0.54,
     "c": 8,
     "sb": 1,
     "dk": [
-     20.1,
+     20.0,
      228.3
     ],
     "ss": [
@@ -560,13 +549,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 2,
+  "main": 1,
   "lanes": 0,
-  "total": 2,
-  "at": "6:14 AM",
+  "total": 1,
+  "at": "6:17 AM",
   "why": "",
-  "at_iso": "2026-11-17T11:14:00+00:00",
+  "at_iso": "2026-11-17T11:17:00+00:00",
   "started": "4:18 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 4:18 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 6:14 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 4:18 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 6:17 AM ET</p></section>"
  }
 }

@@ -1,10 +1,10 @@
 {
  "schema": 1,
- "at": "2026-11-17T05:49:40.892796+00:00",
+ "at": "2026-11-17T05:56:56.241640+00:00",
  "session": {
-  "active": true,
-  "kind": "work",
-  "started": "2026-11-16T21:46:27-05:00",
+  "active": false,
+  "kind": "",
+  "started": null,
   "flow": [
    {
     "t": "T-4182",
@@ -70,7 +70,6 @@
    },
    {
     "t": "T-4240",
-    "name": "Move the app's diagrams to a new App page",
     "acct": "Personal b",
     "steps": [],
     "end": "landed",
@@ -86,7 +85,6 @@
    },
    {
     "t": "T-4617",
-    "name": "Run quick checks before a land takes the Xcode slot",
     "acct": "Personal a",
     "steps": [],
     "end": "landed",
@@ -101,7 +99,6 @@
    },
    {
     "t": "T-4617",
-    "name": "Run quick checks before a land takes the Xcode slot",
     "acct": "Personal a",
     "steps": [],
     "end": "failed",
@@ -148,24 +145,24 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 459,
+  "runnable_count": 460,
   "blocked_count": 73
  },
  "meter": {
   "five_hour": {
-   "pct": 1.0,
+   "pct": 2.0,
    "resets_at": "2026-11-17T04:10:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-17T00:11:28.516932-05:00",
+   "read_at": "2026-11-17T00:51:59.006399-05:00",
    "source": "live",
-   "left": 99.0,
+   "left": 98.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 27.0,
    "resets_at": "2026-11-22T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-17T00:11:28.516932-05:00",
+   "read_at": "2026-11-17T00:51:59.006399-05:00",
    "source": "live",
    "left": 73.0,
    "left_words": "of your weekly allowance left"
@@ -177,7 +174,7 @@
    "read_at": "2026-11-16T21:43:50.296890-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-17T00:11:28.516932-05:00"
+  "read_at": "2026-11-17T00:51:59.006399-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -192,12 +189,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": null,
+ "next_tick": "2026-11-16T21:58:51-05:00",
  "personal": {
   "week_pct": 24.98,
-  "usage_pct": 48.1,
-  "work_pct": 77.2,
-  "read_at": "2026-11-17T05:49:00+00:00",
+  "usage_pct": 47.3,
+  "work_pct": 76.3,
+  "read_at": "2026-11-17T05:58:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -218,7 +215,7 @@
   }
  ],
  "disk": {
-  "free_gb": 20,
+  "free_gb": 22,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -227,14 +224,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-17T00:45:00-05:00",
+   "at": "2026-11-17T00:51:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 4,
-  "at": "2026-11-17T00:49:00-05:00",
+  "at": "2026-11-17T00:58:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -242,13 +239,9 @@
    "b": "double-spread"
   }
  },
- "next_tick_why": "session",
+ "next_tick_why": "last_tick",
  "idle": null,
- "pool": {
-  "why": "Double Spread: 73% of the week left, paced to last until Wed 14:00, the week's halfway point; the machine allows 2 (at its floor: load 17.4 a core is over 10)",
-  "n": 2,
-  "at": "2026-11-16T21:43:51.768849-05:00"
- },
+ "pool": null,
  "lanes": [
   {
    "name": "Idris",
@@ -301,7 +294,6 @@
  ],
  "tasks": {
   "run": [],
-  "src": "plan",
   "open": [
    {
     "w": "Idris",
@@ -392,27 +384,10 @@
    }
   ],
   "count": {
-   "next": 459,
+   "next": 460,
    "wait": 35,
    "blocked": 38,
    "you": 11
-  },
-  "fin": {
-   "n": 3,
-   "rows": [
-    [
-     "T-4279",
-     "Draw the site's info button..."
-    ],
-    [
-     "T-4240",
-     "Move the app's diagrams to a..."
-    ],
-    [
-     "T-4617",
-     "Run quick checks before a..."
-    ]
-   ]
   }
  },
  "qr": [
@@ -454,26 +429,23 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-17T05:49:22Z",
+  "at": "2026-11-17T05:56:56Z",
   "s": {
    "T-4182": [
     "mergetest",
-    "Xcode checks on the MacBook, 1st to merge",
-    1794894202364
+    "Xcode checks on the MacBook",
+    1794894836241
    ]
   },
   "nm": {
    "T-4182": "A failing widget says so and can recover"
   },
   "wk": {
-   "T-4182": "Idris",
-   "T-4279": "Odalys",
-   "T-4240": "Odalys",
-   "T-4617": "Odalys"
+   "T-4182": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-17T05:49:22Z",
+  "at": "2026-11-17T05:56:56Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -485,13 +457,13 @@
     "parked": 31
    },
    "m": {
-    "checking": 6,
+    "checking": 3,
     "inline": null,
-    "conflicted": 404,
-    "failed": 21,
+    "conflicted": 412,
+    "failed": 28,
     "held": null,
     "retry": null,
-    "parked": 21
+    "parked": 28
    },
    "cur": [
     [
@@ -500,7 +472,7 @@
      ],
      "iPhone app tests",
      "MacBook",
-     6
+     3
     ]
    ],
    "ld": [
@@ -510,12 +482,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-17T05:49:22Z",
-    "ld": 2.07,
+    "at": "2026-11-17T05:56:56Z",
+    "ld": 0.81,
     "c": 8,
     "sb": 2,
     "dk": [
-     22.3,
+     22.9,
      228.3
     ],
     "ss": [
@@ -528,39 +500,41 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-17T05:43:04Z",
-    "ld": 0.26,
+    "at": "2026-11-17T05:51:25Z",
+    "ld": 1.38,
     "c": 12,
     "sb": 0,
     "dk": [
-     329.8,
+     329.5,
      926.4
     ],
     "sn": []
    }
   }
  },
- "operators": [
+ "operators": [],
+ "reply": {
+  "sent": "2026-11-17T05:49:54Z",
+  "seconds": 62.0
+ },
+ "inbox": [
   {
-   "w": "Operator",
-   "a": "Main plan",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session",
-   "at": "2026-11-17T00:46:41-05:00"
+   "id": "c6940053735",
+   "state": "received",
+   "position": 1,
+   "eta": "2026-11-16T21:58:51-05:00",
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "Great, let's incorporate all..."
   }
  ],
- "reply": {
-  "sent": "2026-11-17T05:45:42Z",
-  "seconds": 57.0
- },
- "inbox": [],
  "trimmed": [
   "lane_next",
   "queue_text",
   "task_done",
-  "fin_short",
+  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -571,10 +545,10 @@
   "main": 0,
   "lanes": 0,
   "total": 0,
-  "at": "12:49 AM",
-  "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
-  "at_iso": "2026-11-17T05:49:00+00:00",
-  "started": "9:46 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0, started 9:46 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 12:49 AM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
+  "at": "12:58 AM",
+  "why": "Between sessions: no session is running. Last check 9:43 PM ET.",
+  "at_iso": "2026-11-17T05:58:00+00:00",
+  "started": "",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 12:58 AM ET</p><p class=\"an-why\">Between sessions: no session is running. Last check 9:43 PM ET.</p></section>"
  }
 }

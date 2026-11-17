@@ -49,11 +49,10 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - Older lessons and dated logs: archive.md.
 
 
-- T-0678 11-16 3f03c187cd slice 3: lane tap row says intent (B5), 1952/0. Open: iOS 18 tap test (Xcode 27.1 offers no iOS 18 runtime; iOS 26.0 bundle on scratch SSD, not imported), s10 Lock Screen checks; review Pernille. Lesson: a worktree's Vendor/ goes stale (missing runestone patch): run scripts/fetch_editor.sh.
-- T-4196 11-16: group job built, NOT landed (copy T-4196-idris/wt, msg1.txt); gate red only on queue_check timing row under load. Open: land once at lower load, then 20 timed runs. Lesson: a land group's runs share task IDs; runner_watch must count them as one change.
 - T-0696 11-16 5e6799654b: handoff only; patch in scratch T-0696-idris (LaneNetPeak, ExtensionMemoryTests, HTTPS on loopback). Lesson: killing the extension + app launch reruns nothing; launch with -reload.
 - T-4494 11-16 1f081860c8 slice 2: item (1), every send mirrors (no "lane" = widget; typed "app" keeps out; LaneMirror.defaultManifest). 1955/0. Open: (3) recording, (4) Ines; review by someone else. Lesson: a full unit run takes >10 min with the lock wait: background it and wait on its output file.
 - T-4605 11-16 0465b8455a: review of T-4565 PASS w/ findings; M1 -> T-4659 (mine: Swift test that a widgetAction run reaches the handler). Lesson: in a <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> xc.sh test only queues (75); evidence for code already on main is a full-suite result.json on origin/macbook-results at a commit containing it.
+- T-4606 11-16 3a9e74b2bd: review of T-4550 slice 1 PASS w/ findings; M1 -> T-4660 (Pernille). Open (mine): L3, bound run-args ints (+-2^53-1) in WidgetAction step 1 to match Python. Lesson: tests/run.sh does not finish in 60 min at load 300; check first whether it covers the change.
 {% endraw %}
 
 

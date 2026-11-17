@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-17T14:51:27.410810+00:00",
+ "at": "2026-11-17T14:54:30.868461+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -14,11 +14,31 @@
      {
       "s": "testq",
       "at": 1794926048
+     },
+     {
+      "s": "macbook",
+      "at": 1794927137
      }
     ]
    }
   ],
   "done": [
+   {
+    "t": "T-4600",
+    "name": "Check finished work before it ships",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794927263
+   },
+   {
+    "t": "T-4599",
+    "name": "Check finished work before it ships",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794927263
+   },
    {
     "t": "T-4663",
     "name": "Completion ignores letter case and small typos",
@@ -85,24 +105,9 @@
     "end": "failed",
     "end_at": 1794920433,
     "why": "tests failed"
-   },
-   {
-    "t": "T-4273",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794919963
-   },
-   {
-    "t": "T-4678",
-    "name": "Close the iPhone premade feature and free its steps",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794919833
    }
   ],
-  "landed": 27,
+  "landed": 29,
   "failed": 6
  },
  "workers": [
@@ -111,7 +116,7 @@
    "task": "[build] T-0687 land parked extension work",
    "model": "opus",
    "started": "2026-11-17T14:21:15.257Z",
-   "seconds": 1812,
+   "seconds": 1995,
    "finished": null,
    "effort": "high"
   },
@@ -120,7 +125,7 @@
    "task": "[build] T-0289 land parked state module",
    "model": "opus",
    "started": "2026-11-17T14:21:25.112Z",
-   "seconds": 1802,
+   "seconds": 1985,
    "finished": null,
    "effort": "high"
   }
@@ -130,7 +135,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 401,
+  "runnable_count": 400,
   "blocked_count": 59
  },
  "meter": {
@@ -179,7 +184,7 @@
   "week_pct": 36.07,
   "usage_pct": 52.2,
   "work_pct": 79.0,
-  "read_at": "2026-11-17T14:51:00+00:00",
+  "read_at": "2026-11-17T14:54:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -227,6 +232,7 @@
     "e": "high",
     "at": "2026-11-17T09:29:11-05:00",
     "n": "Jeremy",
+    "d": 1,
     "src": "plan-b"
    },
    {
@@ -296,14 +302,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-17T09:47:00-05:00",
+   "at": "2026-11-17T09:54:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 5,
-  "at": "2026-11-17T09:51:00-05:00",
+  "at": "2026-11-17T09:54:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -469,6 +475,11 @@
   "done": [
    {
     "w": "Idris",
+    "t": "Tests now catch three ways the widget's refresh timing could silently go wrong, and fail if a...",
+    "at": "2026-11-17T09:53:00-05:00"
+   },
+   {
+    "w": "Idris",
     "t": "A test now fails if anyone removes the line that lets a widget's refresh button run its script...",
     "at": "2026-11-17T09:42:00-05:00"
    },
@@ -476,22 +487,21 @@
     "w": "Operator",
     "t": "Main passes its Xcode checks again: job J-20261117-0816-land-m-065516 on the MacBook no longer...",
     "at": "2026-11-17T09:16:00-05:00"
-   },
-   {
-    "w": "Idris",
-    "t": "sending a project to its widget now swaps the whole widget folder in one step, so a phone with a...",
-    "at": "2026-11-17T08:25:00-05:00"
    }
   ],
   "count": {
-   "next": 401,
+   "next": 400,
    "wait": 28,
    "blocked": 31,
    "you": 8
   },
   "fin": {
-   "n": 1,
+   "n": 2,
    "rows": [
+    [
+     "T-4417",
+     "Close the rerun rule's test gaps"
+    ],
     [
      "T-4416",
      "Pin the app's refresh-tap..."
@@ -538,37 +548,37 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-17T14:51:15Z",
+  "at": "2026-11-17T14:54:30Z",
   "s": {
-   "T-4656": [
-    "merging",
-    "Host checks on the Mac mini",
-    1794926055259
-   ],
    "T-4693": [
     "mergeq",
     "1st to merge",
-    1794926835259
+    1794926850868
+   ],
+   "T-4656": [
+    "mergetest",
+    "Xcode checks on the MacBook, 2nd to merge",
+    1794927150868
    ],
    "T-4599": [
     "mergeq",
-    "2nd to merge",
-    1794926715259
+    "3rd to merge",
+    1794926670868
    ],
    "T-4600": [
     "mergeq",
-    "2nd to merge",
-    1794926715259
+    "4th to merge",
+    1794926670868
    ],
-   "T-4417": [
-    "mergetest",
-    "iPhone tests on the MacBook",
-    null
+   "T-1882": [
+    "merging",
+    "Mac tests at the main gate",
+    1794927270868
    ],
    "T-0289": [
     "merging",
     "Mac tests at the main gate",
-    1794927075259
+    1794927270868
    ],
    "T-4631": [
     "testing",
@@ -588,15 +598,15 @@
    "T-0687": [
     "testing",
     "its own tests, in its copy",
-    1794925995259
+    1794927270868
    ]
   },
   "nm": {
-   "T-4656": "Let a cleaned script return to the widget on resend",
    "T-4693": "Research a permanent name for the app",
+   "T-4656": "Let a cleaned script return to the widget on resend",
    "T-4599": "Check finished work before it ships",
    "T-4600": "Check finished work before it ships",
-   "T-4417": "Close the rerun rule's test gaps",
+   "T-1882": "Count a fetch as good when the data arrived",
    "T-0289": "Build the widget state module for scripts",
    "T-4631": "Place premades in the app when their imports are refused",
    "T-4668": "Put the bank, tax and name dates in the plan",
@@ -604,21 +614,22 @@
    "T-0687": "Run network fetches inside the extension on the Simulator"
   },
   "wk": {
-   "T-4656": "Idris",
    "T-4693": "Wrenna",
+   "T-4656": "Idris",
    "T-4599": "Odalys",
    "T-4600": "Pernille",
-   "T-4417": "Idris",
+   "T-1882": "Idris",
    "T-0289": "Pernille",
    "T-4631": "Idris",
    "T-4668": "Ines",
    "T-4671": "Maren",
    "T-0687": "Idris",
+   "T-4417": "Idris",
    "T-4416": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-17T14:51:15Z",
+  "at": "2026-11-17T14:54:30Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -630,37 +641,37 @@
     "parked": 14
    },
    "m": {
-    "checking": 17,
-    "inline": 6,
-    "conflicted": 666,
+    "checking": 2,
+    "inline": 10,
+    "conflicted": 669,
     "failed": null,
-    "held": 922,
-    "retry": 35,
-    "parked": 461
+    "held": 925,
+    "retry": 39,
+    "parked": 464
    },
    "cur": [
     [
      [
       "T-4656"
      ],
-     "Mac tests",
-     "Mac mini",
-     17
+     "iPhone app tests, sent and waiting its turn",
+     "MacBook",
+     2
     ]
    ],
    "ld": [
-    15,
-    "2026-11-17T13:50:26Z"
+    16,
+    "2026-11-17T14:54:23Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-17T14:51:15Z",
-    "ld": 0.71,
+    "at": "2026-11-17T14:54:31Z",
+    "ld": 0.9,
     "c": 8,
     "sb": 1,
     "dk": [
-     23.6,
+     23.8,
      228.3
     ],
     "ss": [
@@ -672,12 +683,12 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-17T14:43:58Z",
-    "ld": 1.63,
+    "at": "2026-11-17T14:53:36Z",
+    "ld": 10.9,
     "c": 12,
     "sb": 0,
     "dk": [
-     325.5,
+     325.3,
      926.4
     ],
     "sn": []
@@ -718,7 +729,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 1 task",
+   "t": "Work session",
    "at": "2026-11-17T09:29:10-05:00"
   },
   {
@@ -751,10 +762,10 @@
   "main": 2,
   "lanes": 4,
   "total": 6,
-  "at": "9:51 AM",
+  "at": "9:54 AM",
   "why": "",
-  "at_iso": "2026-11-17T14:51:00+00:00",
+  "at_iso": "2026-11-17T14:54:00+00:00",
   "started": "9:17 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 2, started 9:17 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 9:51 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 2, started 9:17 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 9:54 AM ET</p></section>"
  }
 }

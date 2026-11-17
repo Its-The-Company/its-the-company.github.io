@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-17T02:03:40.702190+00:00",
+ "at": "2026-11-17T02:06:42.613251+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -97,7 +97,7 @@
    "task": "[tools] T-4655 heavy test run cap",
    "model": "opus",
    "started": "2026-11-17T00:50:34.871Z",
-   "seconds": 4385,
+   "seconds": 4567,
    "finished": null,
    "effort": "high"
   }
@@ -156,7 +156,7 @@
   "week_pct": 23.56,
   "usage_pct": 47.5,
   "work_pct": 77.0,
-  "read_at": "2026-11-17T02:03:00+00:00",
+  "read_at": "2026-11-17T02:06:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -182,6 +182,18 @@
     "at": "2026-11-16T19:37:34-05:00",
     "n": "Evan",
     "d": 1,
+    "src": "plan-a"
+   },
+   {
+    "lane": "a2",
+    "task": "T-4190",
+    "w": "Idris",
+    "k": "build",
+    "t": "Settings and Pro: buy, restore, themes",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-16T21:04:08-05:00",
+    "n": "Evan",
     "src": "plan-a"
    },
    {
@@ -228,6 +240,18 @@
     "at": "2026-11-16T20:57:47-05:00",
     "n": "Jeremy",
     "src": "plan-b"
+   },
+   {
+    "lane": "b3",
+    "task": "T-4182",
+    "w": "Idris",
+    "k": "build",
+    "t": "A failing widget says so and can recover",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-16T21:04:43-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
    }
   ]
  },
@@ -258,14 +282,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-16T20:56:00-05:00",
+   "at": "2026-11-16T21:04:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 4,
-  "at": "2026-11-16T21:03:00-05:00",
+  "at": "2026-11-16T21:06:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -509,22 +533,32 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-17T02:03:31Z",
+  "at": "2026-11-17T02:06:42Z",
   "s": {
    "T-4655": [
+    "merging",
+    "Mac tests at the main gate",
+    1794881202613
+   ],
+   "T-4182": [
     "testing",
-    "its own tests, in its copy",
-    1794880471613
+    "Mac Mini \u00b7 test",
+    null
    ],
    "T-3765": [
     "testq",
     "1st for a Simulator",
-    1794880951613
+    1794880962613
    ],
    "T-4185": [
     "testq",
     "1st for a Simulator",
-    1794880951613
+    1794880962613
+   ],
+   "T-4190": [
+    "testq",
+    "2nd for a Simulator",
+    1794881142613
    ],
    "T-4605": [
     "merged",
@@ -547,16 +581,20 @@
   },
   "nm": {
    "T-4655": "Cap how many heavy test runs share the Mac mini",
+   "T-4182": "A failing widget says so and can recover",
    "T-3765": "Check a real widget tap on the TestFlight build",
    "T-4185": "Launcher widgets open the apps a person chose",
+   "T-4190": "Settings and Pro: buy, restore, themes",
    "T-4605": "Check finished work before it ships",
    "T-4587": "Switch feature sessions on for every app feature",
    "T-4617": "Run quick checks before a land takes the Xcode slot"
   },
   "wk": {
    "T-4655": "Odalys",
+   "T-4182": "Idris",
    "T-3765": "Idris",
    "T-4185": "Idris",
+   "T-4190": "Idris",
    "T-4605": "Idris",
    "T-4587": "Idris",
    "T-4617": "Odalys",
@@ -569,7 +607,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-17T02:03:31Z",
+  "at": "2026-11-17T02:06:42Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -583,11 +621,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 579,
-    "failed": 1,
+    "conflicted": 583,
+    "failed": 4,
     "held": null,
     "retry": null,
-    "parked": 879
+    "parked": 882
    },
    "cur": [],
    "ld": [
@@ -597,16 +635,16 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-17T02:03:11Z",
-    "ld": 36.98,
+    "at": "2026-11-17T02:06:19Z",
+    "ld": 36.15,
     "c": 8,
     "sb": 1,
     "dk": [
-     17.8,
+     18.2,
      228.3
     ],
     "ss": [
-     181.1,
+     180.6,
      953.7
     ],
     "sn": [
@@ -643,7 +681,16 @@
    "m": "opus",
    "e": "high",
    "t": "Work session",
-   "at": "2026-11-16T21:03:36-05:00"
+   "at": "2026-11-16T19:37:33-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Evan's Account",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session \u2013 1 task",
+   "at": "2026-11-16T21:04:08-05:00"
   },
   {
    "w": "Operator",
@@ -669,20 +716,41 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
+   "t": "Inbox \u2013 Jeremy's 9:05 PM Message on GitHub",
+   "at": "2026-11-16T21:06:31-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Jeremy's Account",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
    "t": "Work session \u2013 1 task",
-   "at": "2026-11-16T20:57:47-05:00"
+   "at": "2026-11-16T21:04:43-05:00"
   }
  ],
  "reply": {
   "sent": "2026-11-17T01:47:57Z",
   "seconds": 135.0
  },
- "inbox": [],
+ "inbox": [
+  {
+   "id": "c6935680188",
+   "state": "received",
+   "position": 1,
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "Progress report on the efficiency..."
+  }
+ ],
  "trimmed": [
   "lane_next",
   "queue_text",
   "task_done",
   "fin_short",
+  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -692,12 +760,12 @@
  ],
  "agents_now": {
   "main": 1,
-  "lanes": 4,
-  "total": 5,
-  "at": "9:03 PM",
+  "lanes": 6,
+  "total": 7,
+  "at": "9:06 PM",
   "why": "",
-  "at_iso": "2026-11-17T02:03:00+00:00",
+  "at_iso": "2026-11-17T02:06:00+00:00",
   "started": "7:47 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 1, started 7:47 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 9:03 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 1, started 7:47 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 6 sessions \u00b7 as of 9:06 PM ET</p></section>"
  }
 }

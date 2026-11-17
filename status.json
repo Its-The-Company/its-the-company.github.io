@@ -1,24 +1,33 @@
 {
  "schema": 1,
- "at": "2026-11-17T07:56:59.382885+00:00",
+ "at": "2026-11-17T07:59:59.782336+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-17T01:00:31-05:00",
   "flow": [
    {
-    "t": "T-4672",
-    "name": "Plan the 1.0 showcase premades",
-    "acct": "Personal b",
+    "t": "T-4190",
+    "name": "Settings and Pro: buy, restore, themes",
+    "acct": "Personal a",
     "steps": [
      {
       "s": "testq",
-      "at": 1794900854
+      "at": 1794902360
      }
     ]
    }
   ],
   "done": [
+   {
+    "t": "T-4672",
+    "name": "Plan the 1.0 showcase premades",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "failed",
+    "end_at": 1794902356,
+    "why": "tests failed"
+   },
    {
     "t": "T-4680",
     "name": "Write the chosen visual direction into the guide",
@@ -88,17 +97,10 @@
     "end": "failed",
     "end_at": 1794880907,
     "why": "tests failed"
-   },
-   {
-    "t": "T-4598",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794880229
    }
   ],
   "landed": 43,
-  "failed": 3
+  "failed": 4
  },
  "workers": [
   {
@@ -106,7 +108,7 @@
    "task": "[tools] T-4677 landed work never shows Retry",
    "model": "opus",
    "started": "2026-11-17T07:27:10.371Z",
-   "seconds": 1789,
+   "seconds": 1969,
    "finished": null,
    "effort": "high"
   }
@@ -198,7 +200,7 @@
   "week_pct": 32.81,
   "usage_pct": 54.0,
   "work_pct": 78.2,
-  "read_at": "2026-11-17T07:57:00+00:00",
+  "read_at": "2026-11-17T08:00:00+00:00",
   "running": [
    {
     "lane": "a3",
@@ -245,7 +247,7 @@
   }
  ],
  "disk": {
-  "free_gb": 19,
+  "free_gb": 18,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -254,14 +256,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-17T02:51:00-05:00",
+   "at": "2026-11-17T02:57:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 4,
-  "at": "2026-11-17T02:57:00-05:00",
+  "at": "2026-11-17T03:00:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -505,47 +507,33 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-17T07:56:38Z",
+  "at": "2026-11-17T07:59:59Z",
   "s": {
-   "T-4672": [
+   "T-4190": [
     "merging",
     "Host checks on the Mac mini",
-    1794900878417
+    1794902399782
    ],
    "T-4616": [
     "mergeq",
     "1st to merge",
-    1794900878417
-   ],
-   "T-4190": [
-    "mergeq",
-    "2nd to merge",
-    1794901778417
+    1794900899782
    ],
    "T-4676": [
     "merging",
     "Mac tests at the main gate",
-    1794901898417
-   ],
-   "T-4181": [
-    "testing",
-    "Mac Mini \u00b7 test",
-    null
+    1794901919782
    ]
   },
   "nm": {
-   "T-4672": "Plan the 1.0 showcase premades",
-   "T-4616": "Order tasks by the files waiting work holds",
    "T-4190": "Settings and Pro: buy, restore, themes",
-   "T-4676": "Fix small test failures in place during a land",
-   "T-4181": "Widgets refresh on their own and by a tap"
+   "T-4616": "Order tasks by the files waiting work holds",
+   "T-4676": "Fix small test failures in place during a land"
   },
   "wk": {
-   "T-4672": "Ines",
-   "T-4616": "Odalys",
    "T-4190": "Idris",
+   "T-4616": "Odalys",
    "T-4676": "Odalys",
-   "T-4181": "Idris",
    "T-4702": "Pernille",
    "T-4691": "Odalys",
    "T-4674": "Odalys",
@@ -560,34 +548,34 @@
   }
  },
  "ln": {
-  "at": "2026-11-17T07:56:38Z",
+  "at": "2026-11-17T07:59:59Z",
   "mq": {
    "n": {
     "checking": 1,
-    "inline": 2,
+    "inline": 1,
     "conflicted": 2,
-    "failed": 0,
+    "failed": 1,
     "held": 0,
     "retry": 6,
     "parked": 19
    },
    "m": {
-    "checking": 22,
-    "inline": 14,
-    "conflicted": 592,
-    "failed": null,
+    "checking": 0,
+    "inline": 25,
+    "conflicted": 595,
+    "failed": 0,
     "held": null,
-    "retry": 28,
-    "parked": 154
+    "retry": 31,
+    "parked": 157
    },
    "cur": [
     [
      [
-      "T-4672"
+      "T-4190"
      ],
      "Mac tests",
      "Mac mini",
-     22
+     0
     ]
    ],
    "ld": [
@@ -597,12 +585,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-17T07:56:39Z",
-    "ld": 20.0,
+    "at": "2026-11-17T07:59:34Z",
+    "ld": 17.42,
     "c": 8,
     "sb": 1,
     "dk": [
-     18.3,
+     17.9,
      228.3
     ],
     "ss": [
@@ -668,10 +656,10 @@
   "main": 1,
   "lanes": 2,
   "total": 3,
-  "at": "2:57 AM",
+  "at": "3:00 AM",
   "why": "",
-  "at_iso": "2026-11-17T07:57:00+00:00",
+  "at_iso": "2026-11-17T08:00:00+00:00",
   "started": "1:00 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 1, started 1:00 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 2:57 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 1, started 1:00 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 3:00 AM ET</p></section>"
  }
 }

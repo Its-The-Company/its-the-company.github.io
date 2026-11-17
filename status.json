@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-17T21:05:29.453074+00:00",
+ "at": "2026-11-17T21:08:34.974533+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -151,16 +151,7 @@
    "task": "[tools] T-4749 source-text tests slice 2",
    "model": "opus",
    "started": "2026-11-17T20:41:48.377Z",
-   "seconds": 1421,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-4732 site_home red on main",
-   "model": "opus",
-   "started": "2026-11-17T20:42:07.182Z",
-   "seconds": 1402,
+   "seconds": 1606,
    "finished": null,
    "effort": "high"
   },
@@ -169,13 +160,21 @@
    "task": "[tools] T-4753 fail new source-text tests",
    "model": "opus",
    "started": "2026-11-17T21:05:08.821Z",
-   "seconds": 20,
+   "seconds": 206,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Pernille x2, Odalys",
+ "who": "Pernille x2",
  "recent": [
+  {
+   "name": "odalys",
+   "task": "[tools] T-4732 site_home red on main",
+   "model": "opus",
+   "started": "2026-11-17T20:42:07.182Z",
+   "seconds": null,
+   "finished": "2026-11-17T21:06:05.277000+00:00"
+  },
   {
    "name": "pernille",
    "task": "[tools] T-4769 heavy_slot_test flake",
@@ -188,7 +187,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 402,
+  "runnable_count": 401,
   "blocked_count": 58
  },
  "meter": {
@@ -237,7 +236,7 @@
   "week_pct": 38.85,
   "usage_pct": 52.6,
   "work_pct": 79.4,
-  "read_at": "2026-11-17T21:05:00+00:00",
+  "read_at": "2026-11-17T21:08:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -258,7 +257,7 @@
   }
  ],
  "disk": {
-  "free_gb": 20,
+  "free_gb": 18,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -267,14 +266,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-17T15:58:00-05:00",
+   "at": "2026-11-17T16:06:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 6,
-  "at": "2026-11-17T16:05:00-05:00",
+  "at": "2026-11-17T16:08:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -300,15 +299,6 @@
    "effort": "high"
   },
   {
-   "name": "Odalys",
-   "state": "running",
-   "task": "[tools] T-4732 site_home red on main",
-   "model": "opus",
-   "since": "2026-11-17T20:42:07.182Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
    "name": "Idris",
    "state": "next",
    "task": "Idris, P1, from T-4755 (Investor an Investor...",
@@ -320,6 +310,14 @@
    "name": "Ines",
    "state": "next",
    "task": "Ines, P2, from T-1110 (Wrenna,...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
+   "name": "Odalys",
+   "state": "next",
+   "task": "A lane record main refused: failed...",
    "model": null,
    "since": null,
    "next": []
@@ -352,16 +350,6 @@
     "at": "2026-11-17T20:41:48.377Z",
     "o": "c",
     "task": "T-4749"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Fix a test row that is red on main",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-17T20:42:07.182Z",
-    "o": "c",
-    "task": "T-4732"
    },
    {
     "w": "Pernille",
@@ -449,6 +437,11 @@
   ],
   "done": [
    {
+    "w": "Odalys",
+    "t": "The Home task list test is green again. Its Bottlenecks check was fixed this morning...",
+    "at": "2026-11-17T16:05:00-05:00"
+   },
+   {
     "w": "Pernille",
     "t": "A test of the machine's heavy-run limiter failed now and then when the Mac was busy, because it...",
     "at": "2026-11-17T16:04:00-05:00"
@@ -457,22 +450,21 @@
     "w": "Operator",
     "t": "A later MacBook job for the same work (J-20261117-1248-xc-test) passed, so the failed job...",
     "at": "2026-11-17T15:39:00-05:00"
-   },
-   {
-    "w": "Idris",
-    "t": "One widget can no longer use up all 64 notification slots the iPhone allows by scheduling a few...",
-    "at": "2026-11-17T15:27:00-05:00"
    }
   ],
   "count": {
-   "next": 402,
+   "next": 401,
    "wait": 27,
    "blocked": 31,
    "you": 8
   },
   "fin": {
-   "n": 1,
+   "n": 2,
    "rows": [
+    [
+     "T-4732",
+     "Fix a test row that is red..."
+    ],
     [
      "T-4769",
      "Make a new test pass every time"
@@ -519,53 +511,47 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-17T21:05:29Z",
+  "at": "2026-11-17T21:08:17Z",
   "s": {
    "T-4760": [
     "merging",
     "Host checks on the Mac mini",
-    1794948689453
+    1794948677782
    ],
    "T-4758": [
     "mergeq",
     "1st to merge",
-    1794942089453
+    1794942137782
    ],
    "T-4689": [
     "mergeq",
     "3rd to merge",
-    1794943109453
+    1794943097782
    ],
    "T-4743": [
     "mergeq",
     "4th to merge",
-    1794944969453
+    1794944957782
    ],
    "T-4653": [
     "mergeq",
-    "6th to merge",
-    1794946829453
+    "7th to merge",
+    1794946817782
    ],
    "T-4188": [
     "mergeq",
     "8th to merge",
-    1794947069453
+    1794947057782
    ],
    "T-4183": [
     "mergeq",
     "9th to merge",
-    1794948029453
-   ],
-   "T-4732": [
-    "merging",
-    "Mac tests at the main gate",
-    1794949469453
+    1794948017782
    ],
    "T-4749": [
-    "merged",
-    "on main 3:10 PM ET",
-    1794946234000,
-    "Pernille"
+    "merging",
+    "Mac tests at the main gate \u00b7 3 groups of tests done, 1 red",
+    1794949577782
    ]
   },
   "nm": {
@@ -576,7 +562,6 @@
    "T-4653": "Give the Shortcut's Pro check a time limit",
    "T-4188": "Location, steps and notifications work in scripts and...",
    "T-4183": "The Gallery shows, previews and opens every premade",
-   "T-4732": "Fix a test row that is red on main",
    "T-4749": "Rewrite or drop outdated tests that read code text"
   },
   "wk": {
@@ -587,13 +572,13 @@
    "T-4653": "Idris",
    "T-4188": "Idris",
    "T-4183": "Idris",
-   "T-4732": "Odalys",
    "T-4749": "Pernille",
+   "T-4732": "Odalys",
    "T-4769": "Pernille"
   }
  },
  "ln": {
-  "at": "2026-11-17T21:05:29Z",
+  "at": "2026-11-17T21:08:17Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -605,13 +590,13 @@
     "parked": 9
    },
    "m": {
-    "checking": 14,
-    "inline": 60,
-    "conflicted": 1040,
+    "checking": 17,
+    "inline": 63,
+    "conflicted": 1043,
     "failed": null,
-    "held": 714,
+    "held": 717,
     "retry": null,
-    "parked": 58
+    "parked": 61
    },
    "cur": [
     [
@@ -620,7 +605,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     14
+     17
     ]
    ],
    "ld": [
@@ -630,12 +615,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-17T21:05:08Z",
-    "ld": 3.01,
+    "at": "2026-11-17T21:07:50Z",
+    "ld": 3.29,
     "c": 8,
     "sb": 2,
     "dk": [
-     20.1,
+     20.0,
      228.3
     ],
     "ss": [
@@ -648,12 +633,12 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-17T20:41:05Z",
-    "ld": 2.42,
+    "at": "2026-11-17T20:59:05Z",
+    "ld": 1.22,
     "c": 12,
     "sb": 0,
     "dk": [
-     322.4,
+     322.3,
      926.4
     ],
     "sn": []
@@ -680,6 +665,7 @@
   "lane_next",
   "queue_text",
   "task_done",
+  "fin_short",
   "task_title",
   "done_text",
   "task_open",
@@ -687,13 +673,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 3,
+  "main": 2,
   "lanes": 0,
-  "total": 3,
-  "at": "4:05 PM",
+  "total": 2,
+  "at": "4:08 PM",
   "why": "",
-  "at_iso": "2026-11-17T21:05:00+00:00",
+  "at_iso": "2026-11-17T21:08:00+00:00",
   "started": "3:40 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 3:40 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 4:05 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 3:40 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 4:08 PM ET</p></section>"
  }
 }

@@ -1,24 +1,32 @@
 {
  "schema": 1,
- "at": "2026-11-17T13:48:01.165889+00:00",
+ "at": "2026-11-17T13:51:02.048950+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-17T08:03:58-05:00",
   "flow": [
    {
-    "t": "T-4530",
-    "name": "Make Queued the one queue list on Home",
-    "acct": "Personal b",
+    "t": "T-4663",
+    "name": "Completion ignores letter case and small typos",
+    "acct": "Personal a",
     "steps": [
      {
       "s": "testq",
-      "at": 1794923247
+      "at": 1794923445
      }
     ]
    }
   ],
   "done": [
+   {
+    "t": "T-4530",
+    "name": "Make Queued the one queue list on Home",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794923426
+   },
    {
     "t": "T-4671",
     "name": "Clear the app's sentences under the approved voice",
@@ -92,17 +100,9 @@
     "steps": [],
     "end": "landed",
     "end_at": 1794919473
-   },
-   {
-    "t": "T-4669",
-    "name": "Align the plan and records with the Pro ruling",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794918632
    }
   ],
-  "landed": 29,
+  "landed": 27,
   "failed": 5
  },
  "workers": [
@@ -111,7 +111,7 @@
    "task": "[site] T-4493 land the clutter cut",
    "model": "opus",
    "started": "2026-11-17T13:06:57.727Z",
-   "seconds": 2463,
+   "seconds": 2644,
    "finished": null,
    "effort": "high"
   }
@@ -187,7 +187,7 @@
   "week_pct": 33.92,
   "usage_pct": 51.5,
   "work_pct": 78.4,
-  "read_at": "2026-11-17T13:48:00+00:00",
+  "read_at": "2026-11-17T13:51:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -249,7 +249,7 @@
  "lock_in": {
   "on": false,
   "pool": 5,
-  "at": "2026-11-17T08:48:00-05:00",
+  "at": "2026-11-17T08:51:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -481,46 +481,32 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-17T13:48:01Z",
+  "at": "2026-11-17T13:50:48Z",
   "s": {
-   "T-4273": [
+   "T-4663": [
     "merging",
     "Host checks on the Mac mini",
-    1794923281165
+    1794923448331
    ],
-   "T-4530": [
+   "T-4669": [
     "merging",
     "Host checks on the Mac mini",
-    1794923281165
-   ],
-   "T-4668": [
-    "mergeq",
-    "1st to merge",
-    1794921001165
-   ],
-   "T-4671": [
-    "mergeq",
-    "5th to merge",
-    1794920941165
+    1794923448331
    ],
    "T-4493": [
     "testing",
     "its own tests, in its copy",
-    1794922861165
+    1794922848331
    ]
   },
   "nm": {
-   "T-4273": "Add the app documentation step to the Handbook",
-   "T-4530": "Make Queued the one queue list on Home",
-   "T-4668": "Put the bank, tax and name dates in the plan",
-   "T-4671": "Clear the app's sentences under the approved voice",
+   "T-4663": "Completion ignores letter case and small typos",
+   "T-4669": "Align the plan and records with the Pro ruling",
    "T-4493": "Cut clutter text on the pages still carrying it"
   },
   "wk": {
-   "T-4273": "Ines",
-   "T-4530": "Maren",
-   "T-4668": "Ines",
-   "T-4671": "Maren",
+   "T-4663": "Idris",
+   "T-4669": "Ines",
    "T-4493": "Maren",
    "T-0906": "Idris",
    "T-2498": "Idris",
@@ -528,30 +514,30 @@
   }
  },
  "ln": {
-  "at": "2026-11-17T13:48:01Z",
+  "at": "2026-11-17T13:50:48Z",
   "mq": {
    "n": {
     "checking": 2,
-    "inline": 2,
+    "inline": 0,
     "conflicted": 1,
-    "failed": 1,
+    "failed": 0,
     "held": 1,
     "retry": 0,
     "parked": 17
    },
    "m": {
     "checking": 0,
-    "inline": 38,
-    "conflicted": 603,
-    "failed": 20,
-    "held": 859,
+    "inline": null,
+    "conflicted": 606,
+    "failed": null,
+    "held": 861,
     "retry": null,
-    "parked": 482
+    "parked": 484
    },
    "cur": [
     [
      [
-      "T-4273"
+      "T-4663"
      ],
      "Mac tests",
      "Mac mini",
@@ -559,7 +545,7 @@
     ],
     [
      [
-      "T-4530"
+      "T-4669"
      ],
      "Mac tests",
      "Mac mini",
@@ -567,14 +553,14 @@
     ]
    ],
    "ld": [
-    14,
-    "2026-11-17T13:47:25Z"
+    15,
+    "2026-11-17T13:50:26Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-17T13:47:14Z",
-    "ld": 0.83,
+    "at": "2026-11-17T13:50:27Z",
+    "ld": 0.66,
     "c": 8,
     "sb": 1,
     "dk": [
@@ -651,10 +637,10 @@
   "main": 1,
   "lanes": 2,
   "total": 3,
-  "at": "8:48 AM",
+  "at": "8:51 AM",
   "why": "",
-  "at_iso": "2026-11-17T13:48:00+00:00",
+  "at_iso": "2026-11-17T13:51:00+00:00",
   "started": "8:03 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 1, started 8:03 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 8:48 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 1, started 8:03 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 8:51 AM ET</p></section>"
  }
 }

@@ -33,8 +33,6 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 ## Open (mine)
 
-- T-2943 11-16: build 7 (bump landed via main_gate), gate --test then --testflight from a clean clone of origin/main. Open: Investors read 'internal only' in App Store Connect (card), then tick; T-4270 What to Test text + #306 answer still theirs. Lesson: scratch.py worktree refuses when $D/wt is a stray clone: look, move aside, never delete <span title="A second worker who grades the idea without seeing the first worker&#x27;s grades, and records them first.">blind</span>. Main gets recut: check is-ancestor on origin/main; gate Release build needs PW_INTERNAL_TESTFLIGHT=YES CODE_SIGNING_ALLOWED=NO.
-
 - T-2261 11-13 17393d231c: problems element + UI test (local 2/0 only), shots t2261/; review T-4252 Pernille. Open: Maren, runner run of the UI test. Lesson: the bundle's own names come from a C embedder (sim clang, -framework Python) run by simctl spawn, PYTHONPATH = lib/python3.15 + lib-arm64; land jobs run unit tests only.
 
 - T-4256 11-16 0b3deb64a5: gutter numbers via patch runestone-0003 (TextView.lineNumberMarks), shots t4256/. Open: tick after full run; T-4261 review (Pernille); HC tint 6.4-7.9 < 7:1 for Maren. Lesson: shots on a private sim (simctl create/delete): the shared iPhone 17e runs others' tests, and simctl ui flips their contrast.
@@ -51,12 +49,15 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 - T-4662 11-17: parked b8f0b06bf1 (caret on long lines + editor.md) in scratch T-4662-idris, not landed: land job 53ed1c red only on PromptDeskTests timing. Open: rerun land, then 17e look; editor.md not in how_it_works PARTS.
 
+- T-3560/T-3280 11-17 9a71fd25dd: landed from parked ref via main_gate (2025/0); T-3560 ticked. Open: T-3280 UI runs (testF/testM green, testF red mutant, Release); T-4239 work on parked/b/...004541 b5df5627e6. Lesson: gate land exits 75 at 540 s; rerun same command, it reads the same job.
+
+- Parked a/20261117-104308-59000 11-17: 7 of 8 landed one task per gate land (T-3564, T-3716, T-1671, T-1672 ticked; T-3554, T-0550, T-0543 noted: phone/review left). Open: T-1241 (ops path in its commit, guard refused); reviews. Lesson: main_gate --task takes one id; a 75 after 'main moved' is the hook, rerun.
+
 ## Lessons
 - Older lessons and dated logs: archive.md.
 
 
-- T-4605 11-16 0465b8455a: review of T-4565 PASS w/ findings; M1 -> T-4659 (mine: Swift test that a widgetAction run reaches the handler). Lesson: in a <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> xc.sh test only queues (75); evidence for code already on main is a full-suite result.json on origin/macbook-results at a commit containing it.
-- T-4606 11-16 3a9e74b2bd: review of T-4550 slice 1 PASS w/ findings; M1 -> T-4660 (Pernille). Open (mine): L3, bound run-args ints (+-2^53-1) in WidgetAction step 1 to match Python. Lesson: tests/run.sh does not finish in 60 min at load 300; check first whether it covers the change.
+- T-4603 11-17 f701313490: review of T-4564 PASS w/ findings; M1 -> T-4767 (Pernille: handler SystemExit ends internal_error, <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> demotes). Lesson: board_tick add writes the main checkout's board, not the worktree's; a new line's ID comes from the tool, so write the review's Board: ID after.
 {% endraw %}
 
 

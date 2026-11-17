@@ -55,6 +55,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 ## Lessons
 - `grep -cs` prints nothing for a missing file, so `[ "$(grep -cs ..)" = 0 ]` fails; count via `cat f 2>/dev/null | grep -c`.
+- T-4661 done 11-17 (231c6b994b): storage_guard.py; heavy_slot xcode_slots 1. Owed: 9 AM 11-18 seen-line, 17e erase, daily clean.
 {% endraw %}
 
 

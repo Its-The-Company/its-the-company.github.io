@@ -1,0 +1,146 @@
+---
+layout: "default"
+title: "The 1.0 showcase premades: frames (T-4703)"
+section: "documents"
+description: "Drawn so far: Day phases (all four views) and Focus timer. Not drawn yet: Next 24 hours, Sky, Overlap clocks, Site status, Flashcards, and GitHub&#x27;s star-history line. They are on their own board line (see &quot;Left&quot;)."
+---
+<div class="crumbs" role="navigation" aria-label="Back"><a class="back" href="{{ '/documents/pywidget/design/' | relative_url }}">← Design &amp; Specs</a><a href="{{ '/documents/pywidget/showcase.html' | relative_url }}" rel="bookmark">Permanent link</a></div>
+<div class="page-head"><div class="kicker"><span class="kind grey">Design</span><span>Day 27 · Tue Nov 17</span><span><code>pywidget/docs/design/widgets/showcase.md</code></span></div><h1>The 1.0 showcase premades: frames (T-4703)</h1><div class="byline"><img class="avatar" src="{{ '/assets/portraits/maren.svg' | relative_url }}" alt="Maren" title="Maren"><span>By <a href="{{ '/cast/maren.html' | relative_url }}">Maren</a>, Product and visual designer</span></div><p class="meta">Mockup screens are drawn; they go public after creative approval.</p></div>
+
+<style>.doc-body{overflow-wrap:break-word}.doc-src{overflow-wrap:anywhere}.tbl[data-n~="1"] tr>:nth-child(1),.tbl[data-n~="2"] tr>:nth-child(2),.tbl[data-n~="3"] tr>:nth-child(3),.tbl[data-n~="4"] tr>:nth-child(4),.tbl[data-n~="5"] tr>:nth-child(5),.tbl[data-n~="6"] tr>:nth-child(6),.tbl[data-n~="7"] tr>:nth-child(7),.tbl[data-n~="8"] tr>:nth-child(8),.tbl[data-n~="9"] tr>:nth-child(9),.tbl[data-n~="10"] tr>:nth-child(10),.tbl[data-n~="11"] tr>:nth-child(11),.tbl[data-n~="12"] tr>:nth-child(12){min-width:0;overflow-wrap:normal}.tbl[data-o="1"] tr>:nth-child(1),.tbl[data-o="2"] tr>:nth-child(2),.tbl[data-o="3"] tr>:nth-child(3),.tbl[data-o="4"] tr>:nth-child(4),.tbl[data-o="5"] tr>:nth-child(5),.tbl[data-o="6"] tr>:nth-child(6),.tbl[data-o="7"] tr>:nth-child(7),.tbl[data-o="8"] tr>:nth-child(8),.tbl[data-o="9"] tr>:nth-child(9),.tbl[data-o="10"] tr>:nth-child(10),.tbl[data-o="11"] tr>:nth-child(11),.tbl[data-o="12"] tr>:nth-child(12){position:sticky;right:0;overflow-wrap:normal;background:var(--page);box-shadow:-1px 0 var(--line),-9px 0 8px -8px var(--sh)}</style>
+<div class="doc-body" markdown="1">
+
+{% raw %}
+Maren, 2026-11-17, 1:05 PM to 1:40 PM ET by `date`. Board line T-4703, from T-4672 (plan [`ops/plans/T-4672-showcase-premades.md`](../company/t-4672-showcase-premades.html) s2, s3 and s4.2; #278, an Investor 2026-11-16 9:55 PM ET).
+
+**Status.** These frames are drawn inside approved items 2 and 9 (`creative/approved.md`): Paper in light, Studio in black and dark grey in dark, with the existing tokens, faces and widget vocabulary. Nothing in them adds a colour, face, icon or arrangement outside the guide. Ideas that would add one are listed under "Proposals (not used)" and are not drawn. The samples are made up for layout: the arrivals are not MTA data, and the to-do items are invented.
+
+**Drawn so far:** Day phases (all four views) and Focus timer. **Not drawn yet:** Next 24 hours, Sky, Overlap clocks, Site status, Flashcards, and GitHub's star-history line. They are on their own board line (see "Left").
+
+## How the frames are made
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 1: How the frames are made, scrolls sideways" style="--tw:512px" markdown="1">
+
+| File | What |
+|---|---|
+| `premade.py` | The section "1.0 showcase premades (T-4703)" writes each view with `pywidget_ui`, using only viewtree v1 nodes. `python3 premade.py` writes `showcase/trees/NN-slug.json` and validates every document and every state variant, with 0 problems. The 12 v1 premades and their trees do not change. |
+| `render.py --set showcase` | Draws the sheets into `showcase/*.jpg` (1x, JPEG q78, 1.8 MB for all five) and writes `showcase/qa.json`. It uses the same interpreter and QA as the 12 premades (README "How it is made"). Each sheet has its own "now", so relative text reads as it would at that time of day. |
+| Studio grey | With `--set showcase`, every hued value Studio supplies (grounds, lines, text greys, accent, the widget card gradient, Increase Contrast set) becomes the neutral grey of the same relative luminance. T-4680 did the same for the 04-mockups: canvas #0A0C13 becomes #0C0C0C, the card #5B33E6 to #1E1450 becomes #5A5A5A to #1F1F1F, and the accent #A08BFF becomes #9C9C9C. The status colours stay. `tokens.json` is not changed: item 9 records that "the tokens are not changed yet". |
+
+</div>
+
+
+Each sheet shows every family the view claims in full colour light and dark, accented light and dark (sample tint #5AA9C8), and iOS 26 clear in both appearances over a light and a dark wallpaper. The Lock Screen families are shown vibrant in both appearances over two wallpapers. Every state is drawn in light and in dark. No image model, stock art or photo is used. SF Symbols are stand-in glyphs, and a symbol with no stand-in (`tram.fill`, `sunrise.fill`, `play.fill`, `timer`) shows as a dotted circle. The tree names the real symbol.
+
+## Day phases
+
+Plan s4. Families: systemSmall, systemMedium, systemLarge, accessoryRectangular, accessoryInline. StandBy is the system's scaled small widget, and this renderer does not draw it (see "Not drawn").
+
+### Transit (Morning and Evening)
+
+
+
+- **Header.** The station and direction in plain words: "125 St, downtown" (medium and large) and "34 St-Herald Sq, uptown" in the evening. Small uses the station's short name ("125 St", "Herald Sq") at footnote semibold, with the direction in caption2. The top row ends 12 pt short of the trailing edge for the corner slot (header rule, README).
+- **Route letters.** Plain bold letters in `text.primary`, carrying `.widgetAccentable()`. There is no circle, disc or route colour (plan s3, s4.4; Commandment 6).
+- **Rows.** The letter, then the next arrivals as clock times. The first is semibold in primary and the rest are in secondary. The first arrival also carries a count-down, "in 4 min", which is relative date text and ticks with no refresh. Medium shows three arrivals per line, small two, and large three, each with its own count-down. Rectangular shows the first two per line. Inline reads "B 4 min, D 6 min".
+- **Clock times carry no AM or PM** ("7:42", as the plan writes them). At 17 pt "7:42 AM" three times did not fit a medium row: the first QA run cut all six. An arrival is minutes away, so the half of the day is never in doubt.
+- **Footer.** "Updated 7:31 AM" always. The states show a credit line, with placeholder words, set beside it in medium, because the MTA's terms are unread (s4.4). It fits in medium at caption2, truncating at the tail. If the terms ask for a longer line, the Updated time keeps its place and the credit line yields.
+- **States.** Evening, in medium and small. "No B times right now" in medium, and "No times now" in small, where the full sentence does not fit at 126 pt. The credit-line variant.
+
+### Today (Day)
+
+
+
+- Today's three as plain rows with a 6 pt accent dot. They are not rings or checkboxes, because the rows do nothing in T-4673 (Done buttons come in s4.6, T-4712). A long item truncates at the tail (declared).
+- The workday bar is a `ProgressView` with a time interval, from 10:00 AM to 5:00 PM, and ticks alone. Under it is "Evening trains in 2 hr, 55 min" (relative). Small says "in 2 hr, 55 min" after a tram glyph because the words do not fit at 126 pt. Large adds the bar's two ends, a Divider, and one line naming the evening stop.
+- State: Today's three not set, which reads "Add today's three on the Page."
+
+### Night
+
+
+
+- Tomorrow's date, then sunrise (7:21 AM on the sample Wednesday at 125 St, from the NOAA low-precision form in `premade.py`; the app uses the H249 almanac) in the display face at 32, 34 or 56 pt, then "Downtown B and D from 6:00 AM". It has few words and no network.
+
+### No recent times
+
+
+
+- The data is 41 minutes old (more than 30). The view reads "No recent times." and "Open PyWidget to update." and keeps the Updated line. The stale clock in the corner slot (state-spec s2) is measured on the QA card page, which is not saved as an image. This sheet does not draw it. A tap opens PyWidget (`widgetURL`; `pywidget://open` stands in for the app's own link).
+- State: never fetched. The same words show with no Updated line, because there is no `sampled_at`.
+
+### Pernille's render, reviewed against these frames
+
+**There is nothing to review yet.** As of 1:35 PM ET T-4673 is open on the board, and `pywidget/widgets/premade/day_phases.py` exists on no branch (`git log --all` for the path is empty) and in no worktree. When it lands, check these points against the frames:
+
+1. Route letters are plain letters in a token colour, with no circles.
+2. Arrivals are clock times. Only the first one counts down, and it does so with relative text, not a per-minute entry.
+3. Medium fits three arrivals per line. If the build keeps "AM", it does not fit (see above).
+4. "Updated" is in the bottom row, never the top. The credit line yields to it.
+5. "No B times right now" appears per line, and nothing is guessed.
+6. The no-recent-times words appear after 30 minutes, and a tap opens PyWidget.
+7. Night has no network.
+8. The Simulator check (Idris) decides clear and vibrant on a light wallpaper. Those modes fail contrast here for the same reason as the 12 premades (README "Re-render").
+
+### Gaps in the plan found while drawing (for Pernille and Ines)
+
+1. **Large, "adds a third arrival".** s4.2 gives medium three arrivals already, so large cannot add a third. I drew large with three arrivals, each with its own count-down, plus the next phase's start. If a fourth arrival was meant, it fits.
+2. **The inline text goes stale.** "B 4 min, D 6 min" is a plain string. An inline widget holds one text, so either each minute gets a timeline entry or the inline shows the first clock time ("B 7:42, D 7:44"), which stays true. I recommend clock times. That needs no new design.
+3. **The short name.** Small needs a short station name. "34 St-Herald Sq, uptown" does not fit at 126 pt. s4.2 says "abbreviated by the name's `max`", but the Page (s4.5, T-4704) has no short-name field, so the stop list must carry one, or the Page must.
+4. **"Evening trains in ..." assumes Evening is a Transit phase.** If a person gives Evening the Today or Night view, or if Weekdays only is on and it is a Saturday, the line should name the next phase in plain words ("Night view at 9:00 PM") or drop. The plan does not say which.
+5. **The credit line's wording and length** wait for the terms (s4.4). Medium has room for one caption2 line beside "Updated".
+6. **StandBy.** s4.2 asks Night to read in StandBy. These frames cannot show that (see "Not drawn"), so the Simulator check covers it.
+
+## Focus timer
+
+
+
+Plan s2 row 3, Pro. Never called "Pomodoro" (a trademark). Families: systemSmall, systemMedium, systemLarge, accessoryRectangular, accessoryInline.
+
+- **The countdown** is timer text in the display face (34 pt, or 56 in large) with a `ProgressView` timer bar. Both tick alone, so one entry covers a block.
+- **Buttons.** The Gallery 09 pill (T-0429 <span title="The starting recipe a lane uses to look for ideas. G2, for example, starts from public datasets.">G1</span>): Pause and Skip while a block runs, Resume when paused, and Start alone when nothing runs, since there is nothing to skip then. Each is a `Button` with a declared action (`start`, `pause`, `resume`, `skip`). The handlers are the build's. The Lock Screen draws no buttons.
+- **Today's blocks** are bars, one per block, with height by minutes and the running block in primary, the way Steps draws today. They appear in medium (34 pt) and large (56 pt) with "4 blocks, 1 hr 47 min". Small has no chart.
+- **States:** paused, which shows "7 of 25 min" and the bar held at 0.28, and no block running, in medium and small.
+
+## QA (`showcase/qa.json`)
+
+Each sheet's own check: truncation, text or graphics outside the widget, text in the 16 pt margin, text over text, and text under 11 pt. The card page measures marks at 3:1 and text contrast in light, dark, lightHC and darkHC.
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 2: QA (showcase/qa.json), scrolls sideways" data-n="2" style="--tw:1128px" markdown="1">
+
+| Sheet | Widget renders | Layout faults | Full colour text, worst (light / dark) | Marks on the card, worst (light / dark) |
+|---|---|---|---|---|
+| 01 Day phases, Transit | 42 | 0 | 7.08 / 5.46 | 7.08 / 5.24 |
+| 02 Day phases, Today | 36 | 0 (1 declared tail truncation) | 7.08 / 5.31 | 7.08 / 3.58 |
+| 03 Day phases, Night | 32 | 0 | 7.08 / 5.38 | 7.08 / 6.09 |
+| 04 Day phases, No recent times | 34 | 0 | 7.08 / 6.34 | 7.08 / 5.24 |
+| 05 Focus timer | 40 | 0 | 7.08 / 5.31 | 3.18 / 4.67 |
+
+</div>
+
+
+That is 184 renders and 0 faults. Card text faults: 0. Graphics faults: 0. The first runs found faults on four of the five sheets, all fixed in the designs, not hidden:
+
+- In Transit, "7:42 AM" was cut six times in medium; this became the AM/PM call above.
+- In Transit small, the letter overlapped the times, and "Herald Sq uptown" was cut. The station name dropped to footnote.
+- Today's "Evening trains in ..." line was pushed out of medium and into the margin in small.
+- Night medium was too tall. The "Sunrise" label row was folded beside the time.
+- Focus timer: small was too tall (the task line was dropped there), and an hour axis under the large chart was dropped, since the bars are blocks, not hours.
+
+Accented, clear and vibrant numbers are in `qa.json` for each mode. They are this renderer's approximation of the system and fail on light wallpapers as the 12 premades do (README). Full colour is our paint, and it passes.
+
+**Not drawn.** StandBy, Dynamic Type above the default, and the Increase Contrast frames as images (they are measured on the card page, not saved). Also not drawn: the real SF Symbols, and SwiftUI's own layout. Idris's Simulator snapshots are the check that counts.
+
+## Proposals (not used; each would need its own <span title="Commandment 51: the Investors approve every visual before it ships.">C51</span> approval)
+
+- **Route colours.** Showing the B and D in their route colour (orange) or in a circle would be the MTA's marks and a new colour. It waits for the terms (s4.4) and then for a C51 approval. The frames use plain letters.
+- **Studio's grey values as tokens.** The greys above are computed, not tokens. Writing them into `tokens.json` belongs with the theme work (item 9's "specifics later"), not to this line.
+
+## Left
+
+- Next 24 hours, Sky, Overlap clocks, Site status, Flashcards, and GitHub's star-history line are added as their own board line for Maren, in the plan's order, using the same `--set showcase` script.
+- When T-4673 lands, review Pernille's render against the points listed under "Pernille's render".
+{% endraw %}
+
+</div>

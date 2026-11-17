@@ -1,10 +1,10 @@
 {
  "schema": 1,
- "at": "2026-11-17T20:31:22.233005+00:00",
+ "at": "2026-11-17T20:36:49.016285+00:00",
  "session": {
-  "active": true,
-  "kind": "work",
-  "started": "2026-11-17T12:48:19-05:00",
+  "active": false,
+  "kind": "",
+  "started": null,
   "flow": [
    {
     "t": "T-4758",
@@ -22,6 +22,14 @@
      {
       "s": "testq",
       "at": 1794946143
+     },
+     {
+      "s": "macbook",
+      "at": 1794947569
+     },
+     {
+      "s": "testq",
+      "at": 1794947601
      }
     ]
    },
@@ -119,7 +127,7 @@
     "why": "tests failed"
    }
   ],
-  "landed": 29,
+  "landed": 25,
   "failed": 6
  },
  "workers": [],
@@ -131,7 +139,7 @@
    "model": "opus",
    "started": "2026-11-17T17:49:46.991Z",
    "seconds": null,
-   "finished": "2026-11-17T20:28:00.974000+00:00"
+   "finished": "2026-11-17T20:32:11.073000+00:00"
   },
   {
    "name": "pernille",
@@ -197,12 +205,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": null,
+ "next_tick": "2026-11-17T13:03:07-05:00",
  "personal": {
   "week_pct": 39.28,
-  "usage_pct": 53.6,
-  "work_pct": 80.0,
-  "read_at": "2026-11-17T20:31:00+00:00",
+  "usage_pct": 52.6,
+  "work_pct": 79.4,
+  "read_at": "2026-11-17T20:37:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -252,7 +260,7 @@
  "lock_in": {
   "on": false,
   "pool": 6,
-  "at": "2026-11-17T15:31:00-05:00",
+  "at": "2026-11-17T15:37:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -260,13 +268,9 @@
    "b": "double-spread"
   }
  },
- "next_tick_why": "session",
+ "next_tick_why": "last_tick",
  "idle": null,
- "pool": {
-  "why": "Double Spread: 65% of the week left, paced to last until Wed 14:00, the week's halfway point; the machine allows 2 (new work waits: 22 tasks wait to merge (limit 20): 2 agents finish and merge...",
-  "n": 2,
-  "at": "2026-11-17T12:48:07.350069-05:00"
- },
+ "pool": null,
  "lanes": [
   {
    "name": "Idris",
@@ -319,7 +323,6 @@
  ],
  "tasks": {
   "run": [],
-  "src": "plan",
   "open": [
    {
     "w": "Pernille",
@@ -414,35 +417,6 @@
    "wait": 27,
    "blocked": 31,
    "you": 8
-  },
-  "fin": {
-   "n": 8,
-   "rows": [
-    [
-     "T-1672",
-     "Fix the per-run notification..."
-    ],
-    [
-     "T-1671",
-     "Fix the notification thread..."
-    ],
-    [
-     "T-3716",
-     "Find why the Simulator..."
-    ],
-    [
-     "T-3564",
-     "Stop other errors saying a..."
-    ],
-    [
-     "T-3560",
-     "Tighten the per-premade..."
-    ],
-    [
-     "T-0289",
-     "Build the widget state..."
-    ]
-   ]
   }
  },
  "qr": [
@@ -484,37 +458,37 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-17T20:31:08Z",
+  "at": "2026-11-17T20:36:49Z",
   "s": {
    "T-4758": [
     "merging",
     "Host checks on the Mac mini",
-    1794946148726
+    1794947629016
    ],
    "T-4689": [
-    "merging",
-    "Host checks on the Mac mini",
-    1794946148726
+    "mergetest",
+    "Xcode checks on the MacBook, 2nd to merge",
+    1794947629016
    ],
    "T-4653": [
     "mergeq",
     "3rd to merge",
-    1794946808726
+    1794946789016
    ],
    "T-4760": [
     "mergeq",
     "4th to merge",
-    1794944588726
+    1794944629016
    ],
    "T-4188": [
     "mergeq",
     "6th to merge",
-    1794947048726
+    1794947029016
    ],
    "T-4743": [
     "mergeq",
     "7th to merge",
-    1794944948726
+    1794944989016
    ]
   },
   "nm": {
@@ -531,19 +505,11 @@
    "T-4653": "Idris",
    "T-4760": "Idris",
    "T-4188": "Idris",
-   "T-4743": "Odalys",
-   "T-1672": "Idris",
-   "T-1671": "Idris",
-   "T-3716": "Idris",
-   "T-3564": "Idris",
-   "T-3560": "Idris",
-   "T-0289": "Pernille",
-   "T-4599": "Odalys",
-   "T-4600": "Pernille"
+   "T-4743": "Odalys"
   }
  },
  "ln": {
-  "at": "2026-11-17T20:31:08Z",
+  "at": "2026-11-17T20:36:49Z",
   "mq": {
    "n": {
     "checking": 2,
@@ -555,13 +521,13 @@
     "parked": 10
    },
    "m": {
-    "checking": 22,
-    "inline": 26,
-    "conflicted": 1006,
+    "checking": 3,
+    "inline": 32,
+    "conflicted": 1012,
     "failed": null,
-    "held": 680,
+    "held": 685,
     "retry": null,
-    "parked": 70
+    "parked": 75
    },
    "cur": [
     [
@@ -570,15 +536,15 @@
      ],
      "Mac tests",
      "Mac mini",
-     22
+     3
     ],
     [
      [
       "T-4689"
      ],
-     "Mac tests",
-     "Mac mini",
-     22
+     "iPhone app tests, sent and waiting its turn",
+     "MacBook",
+     3
     ]
    ],
    "ld": [
@@ -588,12 +554,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-17T20:31:09Z",
-    "ld": 1.36,
+    "at": "2026-11-17T20:36:49Z",
+    "ld": 0.77,
     "c": 8,
     "sb": 2,
     "dk": [
-     17.5,
+     18.1,
      228.3
     ],
     "ss": [
@@ -621,15 +587,6 @@
  "operators": [
   {
    "w": "Operator",
-   "a": "Main plan",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session",
-   "at": "2026-11-17T12:48:19-05:00"
-  },
-  {
-   "w": "Operator",
    "a": "Jeremy's Account",
    "sr": 1,
    "m": "opus",
@@ -647,11 +604,9 @@
   "lane_next",
   "queue_text",
   "task_done",
-  "fin_short",
   "task_title",
   "done_text",
   "task_open",
-  "fin_six",
   "lane_task",
   "task_next"
  ],
@@ -659,10 +614,10 @@
   "main": 0,
   "lanes": 1,
   "total": 1,
-  "at": "3:31 PM",
+  "at": "3:37 PM",
   "why": "",
-  "at_iso": "2026-11-17T20:31:00+00:00",
-  "started": "12:48 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0, started 12:48 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 3:31 PM ET</p></section>"
+  "at_iso": "2026-11-17T20:37:00+00:00",
+  "started": "",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 3:37 PM ET</p></section>"
  }
 }

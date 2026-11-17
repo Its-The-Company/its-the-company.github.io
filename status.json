@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-17T21:39:04.030036+00:00",
+ "at": "2026-11-17T21:42:08.823930+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -123,16 +123,7 @@
    "task": "[tools] T-4753 fail new source-text tests",
    "model": "opus",
    "started": "2026-11-17T21:05:08.821Z",
-   "seconds": 2035,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "maren",
-   "task": "[tools] T-4730 lanes.js budget red",
-   "model": "opus",
-   "started": "2026-11-17T21:20:29.913Z",
-   "seconds": 1114,
+   "seconds": 2220,
    "finished": null,
    "effort": "high"
   },
@@ -141,13 +132,21 @@
    "task": "[tools] T-3859 free internal disk Simulators",
    "model": "opus",
    "started": "2026-11-17T21:36:35.101Z",
-   "seconds": 148,
+   "seconds": 333,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Pernille, Maren, Odalys",
+ "who": "Pernille, Odalys",
  "recent": [
+  {
+   "name": "maren",
+   "task": "[tools] T-4730 lanes.js budget red",
+   "model": "opus",
+   "started": "2026-11-17T21:20:29.913Z",
+   "seconds": null,
+   "finished": "2026-11-17T21:41:06.808000+00:00"
+  },
   {
    "name": "maren",
    "task": "[site] T-4747 queued-order red fix",
@@ -171,20 +170,12 @@
    "started": "2026-11-17T20:42:07.182Z",
    "seconds": null,
    "finished": "2026-11-17T21:06:05.277000+00:00"
-  },
-  {
-   "name": "pernille",
-   "task": "[tools] T-4769 heavy_slot_test flake",
-   "model": "opus",
-   "started": "2026-11-17T20:41:58.479Z",
-   "seconds": null,
-   "finished": "2026-11-17T21:04:49.665000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 402,
+  "runnable_count": 409,
   "blocked_count": 58
  },
  "meter": {
@@ -233,7 +224,7 @@
   "week_pct": 38.85,
   "usage_pct": 52.6,
   "work_pct": 79.4,
-  "read_at": "2026-11-17T21:39:00+00:00",
+  "read_at": "2026-11-17T21:42:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -282,6 +273,7 @@
     "e": "high",
     "at": "2026-11-17T16:28:05-05:00",
     "n": "Evan",
+    "d": 1,
     "src": "plan-a"
    },
    {
@@ -294,6 +286,7 @@
     "e": "high",
     "at": "2026-11-17T16:28:05-05:00",
     "n": "Evan",
+    "d": 1,
     "src": "plan-a"
    },
    {
@@ -357,7 +350,7 @@
  "lock_in": {
   "on": false,
   "pool": 6,
-  "at": "2026-11-17T16:39:00-05:00",
+  "at": "2026-11-17T16:42:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -379,15 +372,6 @@
    "task": "[tools] T-4753 fail new source-text tests",
    "model": "opus",
    "since": "2026-11-17T21:05:08.821Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
-   "name": "Maren",
-   "state": "running",
-   "task": "[tools] T-4730 lanes.js budget red",
-   "model": "opus",
-   "since": "2026-11-17T21:20:29.913Z",
    "next": [],
    "effort": "high"
   },
@@ -423,6 +407,14 @@
    "model": null,
    "since": null,
    "next": []
+  },
+  {
+   "name": "Maren",
+   "state": "next",
+   "task": "Maren, P2, found on T-3366 (11-07): in...",
+   "model": null,
+   "since": null,
+   "next": []
   }
  ],
  "tasks": {
@@ -436,16 +428,6 @@
     "at": "2026-11-17T21:05:08.821Z",
     "o": "c",
     "task": "T-4753"
-   },
-   {
-    "w": "Maren",
-    "k": "tools",
-    "t": "Fix a test row that is red on main",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-17T21:20:29.913Z",
-    "o": "c",
-    "task": "T-4730"
    },
    {
     "w": "Odalys",
@@ -549,7 +531,7 @@
    }
   ],
   "count": {
-   "next": 402,
+   "next": 409,
    "wait": 27,
    "blocked": 31,
    "you": 8
@@ -611,52 +593,42 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-17T21:39:04Z",
+  "at": "2026-11-17T21:41:58Z",
   "s": {
    "T-4760": [
     "mergeq",
     "1st to merge",
-    1794944584030
+    1794944638387
    ],
    "T-4188": [
     "mergeq",
     "3rd to merge",
-    1794947044030
+    1794947038387
    ],
    "T-4183": [
     "mergeq",
     "4th to merge",
-    1794948004030
+    1794947998387
    ],
    "T-4763": [
     "mergeq",
     "5th to merge",
-    1794951244030
+    1794951238387
    ],
    "T-4765": [
     "mergeq",
     "6th to merge",
-    1794951244030
+    1794951298387
    ],
    "T-4613": [
     "mergeq",
     "7th to merge",
-    1794951544030
+    1794951538387
    ],
-   "T-4611": [
-    "testing",
-    "Mac Mini \u00b7 test",
-    null
-   ],
-   "T-4612": [
-    "testing",
-    "Mac Mini \u00b7 test",
-    null
-   ],
-   "T-4730": [
+   "T-3859": [
     "testing",
     "its own tests, in its copy",
-    1794951184030
+    1794951718387
    ]
   },
   "nm": {
@@ -666,9 +638,7 @@
    "T-4763": "Keep habit marks when the Page also saves",
    "T-4765": "Fix the When tapped frames' captions and VoiceOver list",
    "T-4613": "Check finished work before it ships",
-   "T-4611": "Check finished work before it ships",
-   "T-4612": "Check finished work before it ships",
-   "T-4730": "Fix a test row that is red on main"
+   "T-3859": "Move everything not needed off the Mac mini disk"
   },
   "wk": {
    "T-4760": "Idris",
@@ -677,16 +647,14 @@
    "T-4763": "Maren",
    "T-4765": "Maren",
    "T-4613": "Pernille",
-   "T-4611": "Pernille",
-   "T-4612": "Pernille",
-   "T-4730": "Maren",
+   "T-3859": "Odalys",
    "T-4747": "Maren",
    "T-4732": "Odalys",
    "T-4769": "Pernille"
   }
  },
  "ln": {
-  "at": "2026-11-17T21:39:04Z",
+  "at": "2026-11-17T21:41:58Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -699,12 +667,12 @@
    },
    "m": {
     "checking": null,
-    "inline": 32,
-    "conflicted": 1074,
+    "inline": 35,
+    "conflicted": 1077,
     "failed": null,
-    "held": 748,
+    "held": 750,
     "retry": null,
-    "parked": 91
+    "parked": 94
    },
    "cur": [],
    "ld": [
@@ -714,16 +682,16 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-17T21:38:37Z",
-    "ld": 2.95,
+    "at": "2026-11-17T21:41:59Z",
+    "ld": 2.7,
     "c": 8,
     "sb": 1,
     "dk": [
-     15.9,
+     15.2,
      228.3
     ],
     "ss": [
-     175.3,
+     175.1,
      953.7
     ],
     "sn": [
@@ -768,7 +736,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 2 tasks",
+   "t": "Work session \u2013 1 task",
    "at": "2026-11-17T16:28:05-05:00"
   },
   {
@@ -789,6 +757,7 @@
  "trimmed": [
   "lane_next",
   "queue_text",
+  "recent",
   "task_done",
   "fin_short",
   "task_title",
@@ -798,13 +767,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 3,
+  "main": 2,
   "lanes": 3,
-  "total": 6,
-  "at": "4:39 PM",
+  "total": 5,
+  "at": "4:42 PM",
   "why": "",
-  "at_iso": "2026-11-17T21:39:00+00:00",
+  "at_iso": "2026-11-17T21:42:00+00:00",
   "started": "3:40 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 3, started 3:40 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 4:39 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 2, started 3:40 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 4:42 PM ET</p></section>"
  }
 }

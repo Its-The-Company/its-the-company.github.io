@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-17T14:57:33.339918+00:00",
+ "at": "2026-11-17T15:01:19.449617+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -125,7 +125,7 @@
    "task": "[build] T-0687 land parked extension work",
    "model": "opus",
    "started": "2026-11-17T14:21:15.257Z",
-   "seconds": 2178,
+   "seconds": 2404,
    "finished": null,
    "effort": "high"
   },
@@ -134,7 +134,7 @@
    "task": "[build] T-0289 land parked state module",
    "model": "opus",
    "started": "2026-11-17T14:21:25.112Z",
-   "seconds": 2168,
+   "seconds": 2394,
    "finished": null,
    "effort": "high"
   }
@@ -144,7 +144,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 400,
+  "runnable_count": 401,
   "blocked_count": 59
  },
  "meter": {
@@ -193,7 +193,7 @@
   "week_pct": 36.07,
   "usage_pct": 52.2,
   "work_pct": 79.0,
-  "read_at": "2026-11-17T14:58:00+00:00",
+  "read_at": "2026-11-17T15:01:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -232,30 +232,28 @@
     "src": "plan-a"
    },
    {
-    "lane": "b",
-    "task": "T-4682",
-    "w": "Odalys",
+    "lane": "a3",
+    "task": "T-4513",
+    "w": "Maren",
     "k": "site",
-    "t": "Hide the Issues page's raw list until it loads",
-    "m": "sonnet",
-    "e": "high",
-    "at": "2026-11-17T09:29:11-05:00",
-    "n": "Jeremy",
-    "d": 1,
-    "src": "plan-b"
-   },
-   {
-    "lane": "b",
-    "task": "T-4693",
-    "w": "Wrenna",
-    "k": "research",
-    "t": "Research a permanent name for the app",
+    "t": "Show the SSD's free space on the Machine bubble",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-17T09:29:11-05:00",
-    "n": "Jeremy",
-    "d": 1,
-    "src": "plan-b"
+    "at": "2026-11-17T10:00:25-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a3",
+    "task": "T-4747",
+    "w": "Maren",
+    "k": "site",
+    "t": "Show each umbrella's progress and its running steps on Home",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-17T10:00:25-05:00",
+    "n": "Evan",
+    "src": "plan-a"
    },
    {
     "lane": "b2",
@@ -302,7 +300,7 @@
   }
  ],
  "disk": {
-  "free_gb": 24,
+  "free_gb": 23,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -311,14 +309,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-17T09:54:00-05:00",
+   "at": "2026-11-17T10:00:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 5,
-  "at": "2026-11-17T09:58:00-05:00",
+  "at": "2026-11-17T10:01:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -499,7 +497,7 @@
    }
   ],
   "count": {
-   "next": 400,
+   "next": 401,
    "wait": 28,
    "blocked": 31,
    "you": 8
@@ -557,62 +555,60 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-17T14:57:33Z",
+  "at": "2026-11-17T15:01:19Z",
   "s": {
    "T-4656": [
     "mergetest",
     "Xcode checks on the MacBook, 1st to merge",
-    1794927153339
+    1794927139449
+   ],
+   "T-4513": [
+    "merging",
+    "Mac tests at the main gate",
+    1794927679449
    ],
    "T-1882": [
     "merging",
     "Mac tests at the main gate \u00b7 5 groups of tests done",
-    1794927273339
+    1794927259449
    ],
    "T-0289": [
     "merging",
     "Mac tests at the main gate \u00b7 3 groups of tests done",
-    1794927273339
+    1794927259449
+   ],
+   "T-3217": [
+    "testing",
+    "MacBook \u00b7 test",
+    null
    ],
    "T-0687": [
     "testing",
     "its own tests, in its copy",
-    1794927273339
-   ],
-   "T-4682": [
-    "merged",
-    "on main 9:54 AM ET",
-    1794927298000,
-    ""
-   ],
-   "T-4693": [
-    "merged",
-    "on main 9:54 AM ET",
-    1794927285000,
-    ""
+    1794927259449
    ]
   },
   "nm": {
    "T-4656": "Let a cleaned script return to the widget on resend",
+   "T-4513": "Show the SSD's free space on the Machine bubble",
    "T-1882": "Count a fetch as good when the data arrived",
    "T-0289": "Build the widget state module for scripts",
-   "T-0687": "Run network fetches inside the extension on the Simulator",
-   "T-4682": "Hide the Issues page's raw list until it loads",
-   "T-4693": "Research a permanent name for the app"
+   "T-3217": "Fix the three red tests before build 3",
+   "T-0687": "Run network fetches inside the extension on the Simulator"
   },
   "wk": {
    "T-4656": "Idris",
+   "T-4513": "Maren",
    "T-1882": "Idris",
    "T-0289": "Pernille",
+   "T-3217": "Idris",
    "T-0687": "Idris",
-   "T-4682": "Odalys",
-   "T-4693": "Wrenna",
    "T-4417": "Idris",
    "T-4416": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-17T14:57:33Z",
+  "at": "2026-11-17T15:01:19Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -624,13 +620,13 @@
     "parked": 12
    },
    "m": {
-    "checking": 5,
+    "checking": 9,
     "inline": null,
-    "conflicted": 673,
+    "conflicted": 676,
     "failed": null,
-    "held": 928,
-    "retry": 42,
-    "parked": 551
+    "held": 932,
+    "retry": 45,
+    "parked": 555
    },
    "cur": [
     [
@@ -639,7 +635,7 @@
      ],
      "iPhone app tests, sent and waiting its turn",
      "MacBook",
-     5
+     9
     ]
    ],
    "ld": [
@@ -649,12 +645,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-17T14:57:02Z",
-    "ld": 0.96,
+    "at": "2026-11-17T15:01:20Z",
+    "ld": 8.09,
     "c": 8,
-    "sb": 1,
+    "sb": 2,
     "dk": [
-     21.6,
+     23.1,
      228.3
     ],
     "ss": [
@@ -662,12 +658,13 @@
      953.7
     ],
     "sn": [
-     "iPhone 17e"
+     "iPhone 17e",
+     "T4188 Idris iPhone 17e"
     ]
    },
    "macbook": {
-    "at": "2026-11-17T14:53:36Z",
-    "ld": 10.9,
+    "at": "2026-11-17T14:57:06Z",
+    "ld": 5.71,
     "c": 12,
     "sb": 0,
     "dk": [
@@ -708,12 +705,12 @@
   },
   {
    "w": "Operator",
-   "a": "Jeremy's Account",
+   "a": "Evan's Account",
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session",
-   "at": "2026-11-17T09:29:10-05:00"
+   "t": "Work session \u2013 2 tasks",
+   "at": "2026-11-17T10:00:25-05:00"
   },
   {
    "w": "Operator",
@@ -745,10 +742,10 @@
   "main": 2,
   "lanes": 4,
   "total": 6,
-  "at": "9:58 AM",
+  "at": "10:01 AM",
   "why": "",
-  "at_iso": "2026-11-17T14:58:00+00:00",
+  "at_iso": "2026-11-17T15:01:00+00:00",
   "started": "9:17 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 2, started 9:17 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 9:58 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 2, started 9:17 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 10:01 AM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-17T22:15:45.777142+00:00",
+ "at": "2026-11-17T22:18:49.625856+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -22,32 +22,6 @@
     ]
    },
    {
-    "t": "T-4188",
-    "name": "Location, steps and notifications work in scripts and widgets",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "macbook",
-      "at": 1794952972
-     }
-    ]
-   },
-   {
-    "t": "T-4760",
-    "name": "Report a widget state save truthfully",
-    "acct": "Personal b",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1794948667
-     },
-     {
-      "s": "macbook",
-      "at": 1794950000
-     }
-    ]
-   },
-   {
     "t": "T-1201",
     "w": "Odalys",
     "steps": [
@@ -59,6 +33,22 @@
    }
   ],
   "done": [
+   {
+    "t": "T-4188",
+    "name": "Location, steps and notifications work in scripts and widgets",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794953815
+   },
+   {
+    "t": "T-4760",
+    "name": "Report a widget state save truthfully",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794953776
+   },
    {
     "t": "T-4183",
     "name": "The Gallery shows, previews and opens every premade",
@@ -123,25 +113,9 @@
     "steps": [],
     "end": "landed",
     "end_at": 1794942088
-   },
-   {
-    "t": "T-4601",
-    "name": "Check finished work before it ships",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794942088
-   },
-   {
-    "t": "T-4689",
-    "name": "Bring the plan into line with the phase A proof",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794939875
    }
   ],
-  "landed": 28,
+  "landed": 30,
   "failed": 7
  },
  "workers": [
@@ -150,7 +124,7 @@
    "task": "[tools] T-4753 fail new source-text tests",
    "model": "opus",
    "started": "2026-11-17T21:05:08.821Z",
-   "seconds": 4236,
+   "seconds": 4420,
    "finished": null,
    "effort": "high"
   }
@@ -242,7 +216,7 @@
   "week_pct": 38.85,
   "usage_pct": 52.6,
   "work_pct": 79.4,
-  "read_at": "2026-11-17T22:15:00+00:00",
+  "read_at": "2026-11-17T22:18:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -263,7 +237,7 @@
   }
  ],
  "disk": {
-  "free_gb": 26,
+  "free_gb": 27,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -272,14 +246,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-17T17:10:00-05:00",
+   "at": "2026-11-17T17:16:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 7,
-  "at": "2026-11-17T17:15:00-05:00",
+  "at": "2026-11-17T17:18:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -511,57 +485,45 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-17T22:15:37Z",
+  "at": "2026-11-17T22:18:35Z",
   "s": {
-   "T-4760": [
-    "mergeq",
-    "1st to merge",
-    1794944617190
-   ],
-   "T-4188": [
-    "mergeq",
-    "3rd to merge",
-    1794947077190
-   ],
    "T-4763": [
     "mergeq",
-    "4th to merge",
-    1794952237190
+    "1st to merge",
+    1794952235099
    ],
    "T-4765": [
     "mergeq",
-    "4th to merge",
-    1794952237190
+    "1st to merge",
+    1794952235099
    ],
    "T-3773": [
     "mergeq",
-    "4th to merge",
-    1794952237190
+    "1st to merge",
+    1794952235099
    ],
    "T-4611": [
     "mergeq",
-    "9th to merge",
-    1794951997190
+    "6th to merge",
+    1794951995099
    ],
    "T-4612": [
     "mergeq",
-    "9th to merge",
-    1794951997190
+    "6th to merge",
+    1794951995099
    ],
    "T-4613": [
     "mergeq",
-    "9th to merge",
-    1794951997190
+    "6th to merge",
+    1794951995099
    ],
    "T-4744": [
     "mergeq",
-    "16th to merge",
-    1794952237190
+    "13th to merge",
+    1794952235099
    ]
   },
   "nm": {
-   "T-4760": "Report a widget state save truthfully",
-   "T-4188": "Location, steps and notifications work in scripts and...",
    "T-4763": "Keep habit marks when the Page also saves",
    "T-4765": "Fix the When tapped frames' captions and VoiceOver list",
    "T-3773": "Decide how stuck review fix lines reach the board",
@@ -571,8 +533,6 @@
    "T-4744": "Fix a MacBook test job that failed"
   },
   "wk": {
-   "T-4760": "Idris",
-   "T-4188": "Idris",
    "T-4763": "Maren",
    "T-4765": "Maren",
    "T-3773": "Ines",
@@ -586,40 +546,40 @@
   }
  },
  "ln": {
-  "at": "2026-11-17T22:15:37Z",
+  "at": "2026-11-17T22:18:35Z",
   "mq": {
    "n": {
     "checking": 0,
-    "inline": 9,
+    "inline": 7,
     "conflicted": 2,
     "failed": 0,
-    "held": 2,
+    "held": 1,
     "retry": 0,
-    "parked": 8
+    "parked": 9
    },
    "m": {
     "checking": null,
-    "inline": 29,
-    "conflicted": 561,
+    "inline": 28,
+    "conflicted": 564,
     "failed": null,
-    "held": 784,
+    "held": 1369,
     "retry": null,
-    "parked": 122
+    "parked": 131
    },
    "cur": [],
    "ld": [
-    32,
-    "2026-11-17T21:18:18Z"
+    34,
+    "2026-11-17T22:16:55Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-17T22:15:37Z",
-    "ld": 0.98,
+    "at": "2026-11-17T22:18:35Z",
+    "ld": 1.88,
     "c": 8,
     "sb": 1,
     "dk": [
-     26.7,
+     26.4,
      228.3
     ],
     "ss": [
@@ -675,10 +635,10 @@
   "main": 1,
   "lanes": 0,
   "total": 1,
-  "at": "5:15 PM",
+  "at": "5:18 PM",
   "why": "",
-  "at_iso": "2026-11-17T22:15:00+00:00",
+  "at_iso": "2026-11-17T22:18:00+00:00",
   "started": "3:40 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 3:40 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 5:15 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 3:40 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 5:18 PM ET</p></section>"
  }
 }

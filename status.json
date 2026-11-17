@@ -1,11 +1,26 @@
 {
  "schema": 1,
- "at": "2026-11-17T08:12:23.080415+00:00",
+ "at": "2026-11-17T08:15:28.320307+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-17T01:00:31-05:00",
   "flow": [
+   {
+    "t": "T-4672",
+    "name": "Plan the 1.0 showcase premades",
+    "acct": "Personal b",
+    "steps": [
+     {
+      "s": "testq",
+      "at": 1794903169
+     },
+     {
+      "s": "macbook",
+      "at": 1794903180
+     }
+    ]
+   },
    {
     "t": "T-4190",
     "name": "Settings and Pro: buy, restore, themes",
@@ -103,7 +118,7 @@
     "why": "tests failed"
    }
   ],
-  "landed": 43,
+  "landed": 41,
   "failed": 4
  },
  "workers": [
@@ -112,7 +127,7 @@
    "task": "[tools] T-4677 landed work never shows Retry",
    "model": "opus",
    "started": "2026-11-17T07:27:10.371Z",
-   "seconds": 2712,
+   "seconds": 2897,
    "finished": null,
    "effort": "high"
   },
@@ -121,7 +136,7 @@
    "task": "[tools] T-4701 new-test deflake hook in gate",
    "model": "opus",
    "started": "2026-11-17T08:08:59.086Z",
-   "seconds": 203,
+   "seconds": 389,
    "finished": null,
    "effort": "high"
   },
@@ -130,7 +145,7 @@
    "task": "[tools] T-4676 lane wiring for in-place fix",
    "model": "opus",
    "started": "2026-11-17T08:09:05.886Z",
-   "seconds": 197,
+   "seconds": 382,
    "finished": null,
    "effort": "high"
   },
@@ -139,7 +154,7 @@
    "task": "[tools] T-4694 nightly run of every suite",
    "model": "opus",
    "started": "2026-11-17T08:09:12.090Z",
-   "seconds": 190,
+   "seconds": 376,
    "finished": null,
    "effort": "high"
   }
@@ -231,7 +246,7 @@
   "week_pct": 32.81,
   "usage_pct": 54.0,
   "work_pct": 78.2,
-  "read_at": "2026-11-17T08:12:00+00:00",
+  "read_at": "2026-11-17T08:15:00+00:00",
   "running": [
    {
     "lane": "a3",
@@ -244,19 +259,6 @@
     "at": "2026-11-17T01:00:49-05:00",
     "n": "Evan",
     "src": "plan-a"
-   },
-   {
-    "lane": "b",
-    "task": "T-4672",
-    "w": "Ines",
-    "k": "plan",
-    "t": "Plan the 1.0 showcase premades",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-17T02:20:54-05:00",
-    "n": "Jeremy",
-    "d": 1,
-    "src": "plan-b"
    }
   ]
  },
@@ -294,7 +296,7 @@
  "lock_in": {
   "on": false,
   "pool": 4,
-  "at": "2026-11-17T03:12:00-05:00",
+  "at": "2026-11-17T03:15:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -569,17 +571,17 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-17T08:12:10Z",
+  "at": "2026-11-17T08:15:09Z",
   "s": {
-   "T-4190": [
+   "T-4672": [
     "mergetest",
     "Xcode checks on the MacBook",
-    1794903070976
+    1794903189196
    ],
-   "T-4616": [
-    "mergeq",
-    "1st to merge",
-    1794900910976
+   "T-4190": [
+    "mergetest",
+    "Xcode checks on the MacBook, 1st to merge",
+    1794903069196
    ],
    "T-4181": [
     "testing",
@@ -606,16 +608,16 @@
    ]
   },
   "nm": {
+   "T-4672": "Plan the 1.0 showcase premades",
    "T-4190": "Settings and Pro: buy, restore, themes",
-   "T-4616": "Order tasks by the files waiting work holds",
    "T-4181": "Widgets refresh on their own and by a tap",
    "T-4676": "Fix small test failures in place during a land",
    "T-4701": "Keep bad tests from blocking merges",
    "T-4694": "Pass lands whose red is also on main"
   },
   "wk": {
+   "T-4672": "Ines",
    "T-4190": "Idris",
-   "T-4616": "Odalys",
    "T-4181": "Idris",
    "T-4676": "Odalys",
    "T-4701": "Odalys",
@@ -634,45 +636,53 @@
   }
  },
  "ln": {
-  "at": "2026-11-17T08:12:10Z",
+  "at": "2026-11-17T08:15:09Z",
   "mq": {
    "n": {
-    "checking": 1,
-    "inline": 1,
+    "checking": 2,
+    "inline": 0,
     "conflicted": 2,
-    "failed": 1,
+    "failed": 0,
     "held": 0,
     "retry": 6,
     "parked": 19
    },
    "m": {
-    "checking": 1,
-    "inline": 37,
-    "conflicted": 607,
-    "failed": 12,
+    "checking": 3,
+    "inline": null,
+    "conflicted": 610,
+    "failed": null,
     "held": null,
-    "retry": 44,
-    "parked": 169
+    "retry": 47,
+    "parked": 172
    },
    "cur": [
+    [
+     [
+      "T-4672"
+     ],
+     "iPhone app tests",
+     "MacBook",
+     2
+    ],
     [
      [
       "T-4190"
      ],
      "iPhone app tests",
      "MacBook",
-     1
+     4
     ]
    ],
    "ld": [
-    2,
-    "2026-11-17T07:17:24Z"
+    3,
+    "2026-11-17T08:12:33Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-17T08:12:11Z",
-    "ld": 11.9,
+    "at": "2026-11-17T08:15:16Z",
+    "ld": 18.26,
     "c": 8,
     "sb": 1,
     "dk": [
@@ -684,7 +694,7 @@
      953.7
     ],
     "sn": [
-     "pywidget-t4181-idris"
+     "pywidget-t0696"
     ]
    },
    "macbook": {
@@ -740,12 +750,12 @@
  ],
  "agents_now": {
   "main": 4,
-  "lanes": 2,
-  "total": 6,
-  "at": "3:12 AM",
+  "lanes": 1,
+  "total": 5,
+  "at": "3:15 AM",
   "why": "",
-  "at_iso": "2026-11-17T08:12:00+00:00",
+  "at_iso": "2026-11-17T08:15:00+00:00",
   "started": "1:00 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 4, started 1:00 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 3:12 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 4, started 1:00 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 3:15 AM ET</p></section>"
  }
 }

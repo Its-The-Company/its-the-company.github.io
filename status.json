@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-17T22:56:20.623092+00:00",
+ "at": "2026-11-17T22:59:25.861239+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -142,26 +142,33 @@
  },
  "workers": [
   {
+   "name": "idris",
+   "task": "[build] T-4653 land parked Shortcut fix",
+   "model": "opus",
+   "started": "2026-11-17T22:57:48.038Z",
+   "seconds": 97,
+   "finished": null,
+   "effort": "high"
+  }
+ ],
+ "who": "Idris",
+ "recent": [
+  {
    "name": "maren",
    "task": "[tools] T-4779 T-4780 reds, reland T-4730",
    "model": "opus",
    "started": "2026-11-17T22:22:02.061Z",
-   "seconds": 2058,
-   "finished": null,
-   "effort": "high"
+   "seconds": null,
+   "finished": "2026-11-17T22:59:09.010000+00:00"
   },
   {
    "name": "odalys",
    "task": "[tools] T-3859 board-reader red from storage_guard",
    "model": "opus",
    "started": "2026-11-17T22:51:02.675Z",
-   "seconds": 317,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Maren, Odalys",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-17T22:56:44.831000+00:00"
+  },
   {
    "name": "pernille",
    "task": "[tools] T-4753 fail new source-text tests",
@@ -177,45 +184,29 @@
    "started": "2026-11-17T21:43:45.485Z",
    "seconds": null,
    "finished": "2026-11-17T22:06:09.469000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-3859 free internal disk Simulators",
-   "model": "opus",
-   "started": "2026-11-17T21:36:35.101Z",
-   "seconds": null,
-   "finished": "2026-11-17T21:47:08.212000+00:00"
-  },
-  {
-   "name": "maren",
-   "task": "[tools] T-4730 lanes.js budget red",
-   "model": "opus",
-   "started": "2026-11-17T21:20:29.913Z",
-   "seconds": null,
-   "finished": "2026-11-17T21:41:06.808000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 412,
+  "runnable_count": 411,
   "blocked_count": 58
  },
  "meter": {
   "five_hour": {
-   "pct": 16.0,
+   "pct": 17.0,
    "resets_at": "2026-11-17T19:10:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-17T17:42:02.887637-05:00",
+   "read_at": "2026-11-17T17:56:45.435591-05:00",
    "source": "live",
-   "left": 84.0,
+   "left": 83.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 37.0,
    "resets_at": "2026-11-22T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-17T17:42:02.887637-05:00",
+   "read_at": "2026-11-17T17:56:45.435591-05:00",
    "source": "live",
    "left": 63.0,
    "left_words": "of your weekly allowance left"
@@ -227,7 +218,7 @@
    "read_at": "2026-11-17T15:40:46.947713-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-17T17:42:02.887637-05:00"
+  "read_at": "2026-11-17T17:56:45.435591-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -247,7 +238,7 @@
   "week_pct": 38.85,
   "usage_pct": 52.6,
   "work_pct": 79.4,
-  "read_at": "2026-11-17T22:56:00+00:00",
+  "read_at": "2026-11-17T22:59:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -305,7 +296,7 @@
   }
  ],
  "disk": {
-  "free_gb": 20,
+  "free_gb": 19,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -314,14 +305,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-17T17:50:00-05:00",
+   "at": "2026-11-17T17:56:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 7,
-  "at": "2026-11-17T17:56:00-05:00",
+  "at": "2026-11-17T17:59:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -338,30 +329,13 @@
  },
  "lanes": [
   {
-   "name": "Maren",
-   "state": "running",
-   "task": "[tools] T-4779 T-4780 reds, reland T-4730",
-   "model": "opus",
-   "since": "2026-11-17T22:22:02.061Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
-   "name": "Odalys",
-   "state": "running",
-   "task": "[tools] T-3859 board-reader red from storage_guard",
-   "model": "opus",
-   "since": "2026-11-17T22:51:02.675Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
    "name": "Idris",
-   "state": "next",
-   "task": "Idris, P1, from T-4755 (Investor an Investor...",
-   "model": null,
-   "since": null,
-   "next": []
+   "state": "running",
+   "task": "[build] T-4653 land parked Shortcut fix",
+   "model": "opus",
+   "since": "2026-11-17T22:57:48.038Z",
+   "next": [],
+   "effort": "high"
   },
   {
    "name": "Pernille",
@@ -380,9 +354,25 @@
    "next": []
   },
   {
+   "name": "Odalys",
+   "state": "next",
+   "task": "A lane record main refused: failed...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
    "name": "Wrenna",
    "state": "next",
    "task": "Wrenna, P2, T-2375 continuation (B-staged item 3...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
+   "name": "Maren",
+   "state": "next",
+   "task": "Maren, P2, found on T-3366 (11-07): in...",
    "model": null,
    "since": null,
    "next": []
@@ -391,24 +381,14 @@
  "tasks": {
   "run": [
    {
-    "w": "Maren",
-    "k": "tools",
-    "t": "Show 12-hour times in the design mockup pages",
+    "w": "Idris",
+    "k": "build",
+    "t": "Give the Shortcut's Pro check a time limit",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-17T22:22:02.061Z",
+    "at": "2026-11-17T22:57:48.038Z",
     "o": "c",
-    "task": "T-4779"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Move everything not needed off the Mac mini disk",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-17T22:51:02.675Z",
-    "o": "c",
-    "task": "T-3859"
+    "task": "T-4653"
    }
   ],
   "src": "plan",
@@ -486,6 +466,11 @@
   ],
   "done": [
    {
+    "w": "Maren",
+    "t": "The script behind the site's live work list had grown past its size limit; two bits it shipped...",
+    "at": "2026-11-17T17:58:00-05:00"
+   },
+   {
     "w": "Pernille",
     "t": "A new test that checks a tool by reading its code as text, instead of running it, now stops the...",
     "at": "2026-11-17T17:49:00-05:00"
@@ -494,22 +479,21 @@
     "w": "Maren",
     "t": "A site test passed on the office Mac but failed in a clean copy, because it read a status file...",
     "at": "2026-11-17T17:39:00-05:00"
-   },
-   {
-    "w": "Maren",
-    "t": "The design mockup pages the Investors read showed clock times in 24-hour form; all 24 now read...",
-    "at": "2026-11-17T17:28:00-05:00"
    }
   ],
   "count": {
-   "next": 412,
+   "next": 411,
    "wait": 27,
    "blocked": 31,
    "you": 8
   },
   "fin": {
-   "n": 6,
+   "n": 7,
    "rows": [
+    [
+     "T-4730",
+     "Fix a test row that is red..."
+    ],
     [
      "T-4753",
      "Fail any new test that reads..."
@@ -529,10 +513,6 @@
     [
      "T-4732",
      "Fix a test row that is red..."
-    ],
-    [
-     "T-4769",
-     "Make a new test pass every time"
     ]
    ]
   }
@@ -576,64 +556,47 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-17T22:56:03Z",
+  "at": "2026-11-17T22:59:17Z",
   "s": {
    "T-4760": [
     "mergeq",
     "1st to merge",
-    1794954243837
+    1794954257666
    ],
    "T-4763": [
     "mergetest",
     "Xcode checks on the MacBook, 2nd to merge",
-    1794955983837
+    1794955937666
    ],
    "T-4765": [
     "mergeq",
     "3rd to merge",
-    1794951243837
+    1794951257666
    ],
    "T-3773": [
     "mergeq",
     "6th to merge",
-    1794952203837
+    1794952217666
    ],
    "T-4744": [
     "mergeq",
     "7th to merge",
-    1794952263837
+    1794952277666
    ],
    "T-4607": [
     "mergeq",
     "9th to merge",
-    1794955203837
+    1794955157666
    ],
    "T-4608": [
     "mergeq",
     "9th to merge",
-    1794955203837
+    1794955157666
    ],
    "T-4609": [
     "mergeq",
     "9th to merge",
-    1794955203837
-   ],
-   "T-4730": [
-    "merging",
-    "Mac tests at the main gate",
-    1794956163837
-   ],
-   "T-3859": [
-    "merged",
-    "on main 5:55 PM ET",
-    1794956139000,
-    "Odalys"
-   ],
-   "T-4779": [
-    "merged",
-    "on main 5:28 PM ET",
-    1794954519000,
-    "Maren"
+    1794955157666
    ],
    "T-4770": [
     "merged",
@@ -651,9 +614,6 @@
    "T-4607": "Check finished work before it ships",
    "T-4608": "Check finished work before it ships",
    "T-4609": "Check finished work before it ships",
-   "T-4730": "Fix a test row that is red on main",
-   "T-3859": "Move everything not needed off the Mac mini disk",
-   "T-4779": "Show 12-hour times in the design mockup pages",
    "T-4770": "Re-estimate the release date from measured build speed"
   },
   "wk": {
@@ -665,19 +625,18 @@
    "T-4607": "Odalys",
    "T-4608": "Pernille",
    "T-4609": "Pernille",
-   "T-4730": "Maren",
-   "T-3859": "Odalys",
-   "T-4779": "Maren",
    "T-4770": "Ines",
+   "T-4730": "Maren",
    "T-4753": "Pernille",
    "T-4780": "Odalys",
+   "T-4779": "Maren",
    "T-4747": "Maren",
    "T-4732": "Odalys",
    "T-4769": "Pernille"
   }
  },
  "ln": {
-  "at": "2026-11-17T22:56:03Z",
+  "at": "2026-11-17T22:59:17Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -689,13 +648,13 @@
     "parked": 9
    },
    "m": {
-    "checking": 3,
-    "inline": 32,
-    "conflicted": 601,
+    "checking": 7,
+    "inline": 35,
+    "conflicted": 604,
     "failed": null,
-    "held": 1407,
+    "held": 1410,
     "retry": null,
-    "parked": 168
+    "parked": 172
    },
    "cur": [
     [
@@ -704,7 +663,7 @@
      ],
      "iPhone app tests",
      "MacBook",
-     3
+     7
     ]
    ],
    "ld": [
@@ -714,16 +673,16 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-17T22:55:42Z",
-    "ld": 37.42,
+    "at": "2026-11-17T22:58:56Z",
+    "ld": 40.49,
     "c": 8,
     "sb": 1,
     "dk": [
-     19.4,
+     18.8,
      228.3
     ],
     "ss": [
-     174.7,
+     176.8,
      953.7
     ],
     "sn": [
@@ -750,7 +709,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 8 tasks",
+   "t": "Work session \u2013 9 tasks",
    "at": "2026-11-17T17:21:23-05:00"
   },
   {
@@ -777,17 +736,18 @@
   "task_title",
   "done_text",
   "task_open",
+  "fin_six",
   "lane_task",
   "task_next"
  ],
  "agents_now": {
-  "main": 2,
+  "main": 1,
   "lanes": 1,
-  "total": 3,
-  "at": "5:56 PM",
+  "total": 2,
+  "at": "5:59 PM",
   "why": "",
-  "at_iso": "2026-11-17T22:56:00+00:00",
+  "at_iso": "2026-11-17T22:59:00+00:00",
   "started": "3:40 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 3:40 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 5:56 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 1, started 3:40 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 5:59 PM ET</p></section>"
  }
 }

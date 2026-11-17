@@ -1,12 +1,40 @@
 {
  "schema": 1,
- "at": "2026-11-17T01:14:46.153872+00:00",
+ "at": "2026-11-17T01:17:47.611894+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-16T19:47:08-05:00",
-  "flow": [],
+  "flow": [
+   {
+    "t": "T-4628",
+    "name": "Keep the Distance location fix out of its file",
+    "acct": "Personal b",
+    "steps": [
+     {
+      "s": "testq",
+      "at": 1794878123
+     }
+    ]
+   }
+  ],
   "done": [
+   {
+    "t": "T-4642",
+    "name": "Review the premade settings declarations in Python",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794878111
+   },
+   {
+    "t": "T-4597",
+    "name": "Check finished work before it ships",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794878095
+   },
    {
     "t": "T-4614",
     "acct": "Personal a",
@@ -69,25 +97,9 @@
     "steps": [],
     "end": "landed",
     "end_at": 1794871994
-   },
-   {
-    "t": "T-3996",
-    "name": "Show one true record on Home and This Session",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794870281
-   },
-   {
-    "t": "T-3976",
-    "name": "Show each drive's storage makeup on Home",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794868363
    }
   ],
-  "landed": 65,
+  "landed": 67,
   "failed": 12
  },
  "workers": [
@@ -96,7 +108,7 @@
    "task": "[tools] T-4655 heavy test run cap",
    "model": "opus",
    "started": "2026-11-17T00:50:34.871Z",
-   "seconds": 1451,
+   "seconds": 1632,
    "finished": null,
    "effort": "high"
   }
@@ -106,7 +118,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 429,
+  "runnable_count": 427,
   "blocked_count": 75
  },
  "meter": {
@@ -155,7 +167,7 @@
   "week_pct": 23.56,
   "usage_pct": 47.5,
   "work_pct": 77.0,
-  "read_at": "2026-11-17T01:14:00+00:00",
+  "read_at": "2026-11-17T01:17:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -183,6 +195,55 @@
     "src": "plan-a"
    },
    {
+    "lane": "a2",
+    "task": "T-3718",
+    "w": "Pernille",
+    "k": "review",
+    "t": "Check finished work before it ships",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-16T20:16:07-05:00",
+    "n": "Evan",
+    "d": 1,
+    "src": "plan-a"
+   },
+   {
+    "lane": "a2",
+    "task": "T-4598",
+    "w": "Pernille",
+    "k": "review",
+    "t": "Check finished work before it ships",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-16T20:16:07-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a3",
+    "task": "T-4605",
+    "w": "Idris",
+    "k": "review",
+    "t": "Check finished work before it ships",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-16T20:16:08-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a3",
+    "task": "T-4606",
+    "w": "Idris",
+    "k": "review",
+    "t": "Check finished work before it ships",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-16T20:16:08-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
     "lane": "b3",
     "task": "T-4024",
     "w": "Pernille",
@@ -197,11 +258,7 @@
    {
     "lane": "b3",
     "task": "T-4597",
-    "w": "Odalys",
-    "k": "review",
     "t": "Check finished work before it ships",
-    "m": "opus",
-    "e": "high",
     "at": "2026-11-16T19:31:21-05:00",
     "n": "Jeremy",
     "src": "plan-b"
@@ -242,7 +299,7 @@
  "lock_in": {
   "on": false,
   "pool": 4,
-  "at": "2026-11-16T20:14:00-05:00",
+  "at": "2026-11-16T20:17:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -396,30 +453,39 @@
   ],
   "done": [
    {
-    "w": "Operator",
-    "t": "Main's own tests pass again on a clean copy of main (a6951dbe7), so finished work is no longer...",
-    "at": "2026-11-16T19:29:00-05:00"
-   },
-   {
     "w": "Idris",
-    "t": "Feature mode is on for the first app feature, and when a feature's work lands its finished steps...",
-    "at": "2026-11-16T18:59:00-05:00"
+    "t": "Checked Pernille's settings work for the ready-made widgets and passed it; one fix matters most,...",
+    "at": "2026-11-16T20:15:00-05:00"
    },
    {
     "w": "Odalys",
-    "t": "A work session with no Fable task now has the Fable switch turned off, so the model guard...",
-    "at": "2026-11-16T18:33:00-05:00"
+    "t": "Checked the change that gives a gallery preview its full two seconds after waiting in line; it...",
+    "at": "2026-11-16T20:14:00-05:00"
+   },
+   {
+    "w": "Operator",
+    "t": "Main's own tests pass again on a clean copy of main (a6951dbe7), so finished work is no longer...",
+    "at": "2026-11-16T19:29:00-05:00"
    }
   ],
   "count": {
-   "next": 429,
+   "next": 427,
    "wait": 35,
    "blocked": 40,
    "you": 12
   },
   "fin": {
-   "n": 0,
-   "rows": []
+   "n": 2,
+   "rows": [
+    [
+     "T-4642",
+     "Review the premade settings..."
+    ],
+    [
+     "T-4597",
+     "Check finished work before..."
+    ]
+   ]
   }
  },
  "qr": [
@@ -461,34 +527,34 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-17T01:14:36Z",
+  "at": "2026-11-17T01:17:34Z",
   "s": {
+   "T-4628": [
+    "merging",
+    "Host checks on the Mac mini",
+    1794878134908
+   ],
    "T-4617": [
     "mergeq",
     "1st to merge",
-    1794877896231
+    1794877894908
    ],
    "T-3765": [
     "mergeq",
     "2nd to merge",
-    1794874476231
+    1794874474908
    ],
    "T-4642": [
     "mergetest",
     "Xcode checks on the MacBook, 3rd to merge",
-    1794878076231
-   ],
-   "T-4628": [
-    "mergetest",
-    "Xcode checks on the MacBook, 3rd to merge",
-    1794878076231
-   ],
-   "T-4597": [
-    "mergeq",
-    "8th to merge",
-    1794876636231
+    1794878134908
    ],
    "T-4024": [
+    "testing",
+    "Mac Mini \u00b7 test",
+    null
+   ],
+   "T-4597": [
     "testing",
     "Mac Mini \u00b7 test",
     null
@@ -496,34 +562,34 @@
    "T-4655": [
     "testing",
     "its own tests, in its copy",
-    1794878016231
+    1794878014908
    ]
   },
   "nm": {
+   "T-4628": "Keep the Distance location fix out of its file",
    "T-4617": "Run quick checks before a land takes the Xcode slot",
    "T-3765": "Check a real widget tap on the TestFlight build",
    "T-4642": "Review the premade settings declarations in Python",
-   "T-4628": "Keep the Distance location fix out of its file",
-   "T-4597": "Check finished work before it ships",
    "T-4024": "Check finished work before it ships",
+   "T-4597": "Check finished work before it ships",
    "T-4655": "Cap how many heavy test runs share the Mac mini"
   },
   "wk": {
+   "T-4628": "Idris",
    "T-4617": "Odalys",
    "T-3765": "Idris",
    "T-4642": "Idris",
-   "T-4628": "Idris",
-   "T-4597": "Odalys",
    "T-4024": "Pernille",
+   "T-4597": "Odalys",
    "T-4655": "Odalys"
   }
  },
  "ln": {
-  "at": "2026-11-17T01:14:36Z",
+  "at": "2026-11-17T01:17:34Z",
   "mq": {
    "n": {
     "checking": 2,
-    "inline": 3,
+    "inline": 2,
     "conflicted": 1,
     "failed": 0,
     "held": 0,
@@ -531,45 +597,45 @@
     "parked": 12
    },
    "m": {
-    "checking": 0,
-    "inline": 24,
-    "conflicted": 531,
+    "checking": 2,
+    "inline": 34,
+    "conflicted": 534,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 830
+    "parked": 833
    },
    "cur": [
+    [
+     [
+      "T-4628"
+     ],
+     "Mac tests",
+     "Mac mini",
+     2
+    ],
     [
      [
       "T-4642"
      ],
      "iPhone app tests, sent and waiting its turn",
      "MacBook",
-     0
-    ],
-    [
-     [
-      "T-4628"
-     ],
-     "iPhone app tests, sent and waiting its turn",
-     "MacBook",
-     0
+     2
     ]
    ],
    "ld": [
-    86,
-    "2026-11-17T01:14:13Z"
+    88,
+    "2026-11-17T01:15:11Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-17T01:14:15Z",
-    "ld": 35.7,
+    "at": "2026-11-17T01:16:46Z",
+    "ld": 27.63,
     "c": 8,
     "sb": 1,
     "dk": [
-     19.6,
+     19.3,
      228.3
     ],
     "ss": [
@@ -609,8 +675,26 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session",
-   "at": "2026-11-16T20:14:30-05:00"
+   "t": "Work session \u2013 1 task",
+   "at": "2026-11-16T19:37:33-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Evan's Account",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session \u2013 1 task",
+   "at": "2026-11-16T20:16:06-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Evan's Account",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session \u2013 2 tasks",
+   "at": "2026-11-16T20:16:07-05:00"
   },
   {
    "w": "Operator",
@@ -631,6 +715,7 @@
   "lane_next",
   "queue_text",
   "task_done",
+  "fin_short",
   "task_title",
   "done_text",
   "task_open",
@@ -639,12 +724,12 @@
  ],
  "agents_now": {
   "main": 1,
-  "lanes": 2,
-  "total": 3,
-  "at": "8:14 PM",
+  "lanes": 4,
+  "total": 5,
+  "at": "8:17 PM",
   "why": "",
-  "at_iso": "2026-11-17T01:14:00+00:00",
+  "at_iso": "2026-11-17T01:17:00+00:00",
   "started": "7:47 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 1, started 7:47 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 8:14 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 1, started 7:47 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 8:17 PM ET</p></section>"
  }
 }

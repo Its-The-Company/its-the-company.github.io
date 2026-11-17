@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-17T01:57:38.504072+00:00",
+ "at": "2026-11-17T02:00:42.159907+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -108,7 +108,7 @@
    "task": "[tools] T-4655 heavy test run cap",
    "model": "opus",
    "started": "2026-11-17T00:50:34.871Z",
-   "seconds": 4023,
+   "seconds": 4207,
    "finished": null,
    "effort": "high"
   }
@@ -167,7 +167,7 @@
   "week_pct": 23.56,
   "usage_pct": 47.5,
   "work_pct": 77.0,
-  "read_at": "2026-11-17T01:57:00+00:00",
+  "read_at": "2026-11-17T02:00:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -219,6 +219,30 @@
     "at": "2026-11-16T20:16:08-05:00",
     "n": "Evan",
     "src": "plan-a"
+   },
+   {
+    "lane": "b",
+    "task": "T-4180",
+    "w": "Idris",
+    "k": "build",
+    "t": "Every premade widget draws on the iPhone",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-16T21:00:28-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
+   },
+   {
+    "lane": "b2",
+    "task": "T-4185",
+    "w": "Idris",
+    "k": "build",
+    "t": "Launcher widgets open the apps a person chose",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-16T20:57:47-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
    }
   ]
  },
@@ -256,7 +280,7 @@
  "lock_in": {
   "on": false,
   "pool": 4,
-  "at": "2026-11-16T20:57:00-05:00",
+  "at": "2026-11-16T21:00:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -500,42 +524,52 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-17T01:57:38Z",
+  "at": "2026-11-17T02:00:32Z",
   "s": {
    "T-4617": [
     "merging",
     "Host checks on the Mac mini",
-    1794880298504
+    1794880292755
    ],
    "T-4024": [
     "mergeq",
     "1st to merge",
-    1794878438504
+    1794878432755
    ],
    "T-4597": [
     "mergeq",
     "1st to merge",
-    1794878438504
+    1794878432755
    ],
    "T-3718": [
     "mergeq",
     "2nd to merge",
-    1794879218504
+    1794879212755
    ],
    "T-4598": [
     "mergeq",
     "2nd to merge",
-    1794879218504
+    1794879212755
    ],
    "T-4605": [
     "mergeq",
     "4th to merge",
-    1794879818504
+    1794879812755
+   ],
+   "T-3765": [
+    "testing",
+    "Mac Mini \u00b7 test",
+    null
+   ],
+   "T-4185": [
+    "testing",
+    "Mac Mini \u00b7 test",
+    null
    ],
    "T-4655": [
     "testing",
     "its own tests, in its copy",
-    1794880478504
+    1794880472755
    ],
    "T-4587": [
     "merged",
@@ -551,6 +585,8 @@
    "T-3718": "Check finished work before it ships",
    "T-4598": "Check finished work before it ships",
    "T-4605": "Check finished work before it ships",
+   "T-3765": "Check a real widget tap on the TestFlight build",
+   "T-4185": "Launcher widgets open the apps a person chose",
    "T-4655": "Cap how many heavy test runs share the Mac mini",
    "T-4587": "Switch feature sessions on for every app feature"
   },
@@ -561,6 +597,8 @@
    "T-3718": "Pernille",
    "T-4598": "Pernille",
    "T-4605": "Idris",
+   "T-3765": "Idris",
+   "T-4185": "Idris",
    "T-4655": "Odalys",
    "T-4587": "Idris",
    "T-4628": "Idris",
@@ -568,7 +606,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-17T01:57:38Z",
+  "at": "2026-11-17T02:00:32Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -580,13 +618,13 @@
     "parked": 12
    },
    "m": {
-    "checking": 6,
-    "inline": 24,
-    "conflicted": 574,
+    "checking": 9,
+    "inline": 27,
+    "conflicted": 576,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 873
+    "parked": 876
    },
    "cur": [
     [
@@ -595,7 +633,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     6
+     9
     ]
    ],
    "ld": [
@@ -605,12 +643,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-17T01:56:50Z",
-    "ld": 35.07,
+    "at": "2026-11-17T02:00:11Z",
+    "ld": 37.37,
     "c": 8,
     "sb": 1,
     "dk": [
-     18.1,
+     18.0,
      228.3
     ],
     "ss": [
@@ -661,6 +699,24 @@
    "e": "high",
    "t": "Work session \u2013 1 task",
    "at": "2026-11-16T20:50:13-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Jeremy's Account",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session \u2013 1 task",
+   "at": "2026-11-16T21:00:27-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Jeremy's Account",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session \u2013 1 task",
+   "at": "2026-11-16T20:57:47-05:00"
   }
  ],
  "reply": {
@@ -681,12 +737,12 @@
  ],
  "agents_now": {
   "main": 1,
-  "lanes": 2,
-  "total": 3,
-  "at": "8:57 PM",
+  "lanes": 4,
+  "total": 5,
+  "at": "9:00 PM",
   "why": "",
-  "at_iso": "2026-11-17T01:57:00+00:00",
+  "at_iso": "2026-11-17T02:00:00+00:00",
   "started": "7:47 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 1, started 7:47 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 8:57 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 1, started 7:47 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 9:00 PM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-17T08:55:09.170520+00:00",
+ "at": "2026-11-17T08:58:10.310605+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -90,19 +90,17 @@
   "landed": 45,
   "failed": 4
  },
- "workers": [
+ "workers": [],
+ "who": "",
+ "recent": [
   {
    "name": "odalys",
    "task": "[tools] T-4694 nightly run of every suite",
    "model": "opus",
    "started": "2026-11-17T08:09:12.090Z",
-   "seconds": 2757,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Odalys",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-17T08:55:24.344000+00:00"
+  },
   {
    "name": "pernille",
    "task": "[tools] T-4701 new-test deflake hook in gate",
@@ -126,14 +124,6 @@
    "started": "2026-11-17T07:27:10.371Z",
    "seconds": null,
    "finished": "2026-11-17T08:39:53.328000+00:00"
-  },
-  {
-   "name": "pernille",
-   "task": "[tools] T-4701 keep bad tests from blocking",
-   "model": "opus",
-   "started": "2026-11-17T07:27:19.126Z",
-   "seconds": null,
-   "finished": "2026-11-17T07:51:27.046000+00:00"
   }
  ],
  "queue": {
@@ -188,7 +178,7 @@
   "week_pct": 32.81,
   "usage_pct": 54.0,
   "work_pct": 78.2,
-  "read_at": "2026-11-17T08:55:00+00:00",
+  "read_at": "2026-11-17T08:58:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -225,7 +215,7 @@
  "lock_in": {
   "on": false,
   "pool": 4,
-  "at": "2026-11-17T03:55:00-05:00",
+  "at": "2026-11-17T03:58:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -241,15 +231,6 @@
   "at": "2026-11-17T01:00:19.692166-05:00"
  },
  "lanes": [
-  {
-   "name": "Odalys",
-   "state": "running",
-   "task": "[tools] T-4694 nightly run of every suite",
-   "model": "opus",
-   "since": "2026-11-17T08:09:12.090Z",
-   "next": [],
-   "effort": "high"
-  },
   {
    "name": "Idris",
    "state": "next",
@@ -275,6 +256,14 @@
    "next": []
   },
   {
+   "name": "Odalys",
+   "state": "next",
+   "task": "A lane record main refused: failed...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
    "name": "Wrenna",
    "state": "next",
    "task": "Wrenna, P2, T-2375 continuation (B-staged item 3...",
@@ -292,18 +281,7 @@
   }
  ],
  "tasks": {
-  "run": [
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Pass lands whose red is also on main",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-17T08:09:12.090Z",
-    "o": "c",
-    "task": "T-4694"
-   }
-  ],
+  "run": [],
   "src": "plan",
   "open": [
    {
@@ -380,6 +358,11 @@
   "done": [
    {
     "w": "Odalys",
+    "t": "A failed test check on a change now goes through when the same test also fails on the shared...",
+    "at": "2026-11-17T03:55:00-05:00"
+   },
+   {
+    "w": "Odalys",
     "t": "when a finished change fails one or two of its own test rows, it now gets one small fix in place...",
     "at": "2026-11-17T03:47:00-05:00"
    },
@@ -387,11 +370,6 @@
     "w": "Pernille",
     "t": "Main's test run was failing now and then because a test helper gave up waiting for a file lock...",
     "at": "2026-11-17T01:58:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "Each worker's own step limit went from 150 to 10000, so a worker no longer stops partway through...",
-    "at": "2026-11-17T01:40:00-05:00"
    }
   ],
   "count": {
@@ -401,8 +379,12 @@
    "you": 11
   },
   "fin": {
-   "n": 12,
+   "n": 13,
    "rows": [
+    [
+     "T-4694",
+     "Pass lands whose red is also..."
+    ],
     [
      "T-4676",
      "Fix small test failures in..."
@@ -422,10 +404,6 @@
     [
      "T-4620",
      "Show Features and their..."
-    ],
-    [
-     "T-4655",
-     "Cap how many heavy test runs..."
     ]
    ]
   }
@@ -469,22 +447,16 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-17T08:54:56Z",
+  "at": "2026-11-17T08:57:52Z",
   "s": {
    "T-4677": [
     "merging",
     "Mac tests at the main gate \u00b7 1 group of tests done, 1 red",
-    1794905336052
-   ],
-   "T-4694": [
-    "merging",
-    "Mac tests at the main gate",
-    1794905696052
+    1794905332935
    ]
   },
   "nm": {
-   "T-4677": "Show landed work as landed, never as Retry",
-   "T-4694": "Pass lands whose red is also on main"
+   "T-4677": "Show landed work as landed, never as Retry"
   },
   "wk": {
    "T-4677": "Odalys",
@@ -499,12 +471,11 @@
    "T-3959": "Odalys",
    "T-3960": "Odalys",
    "T-4540": "Pernille",
-   "T-4541": "Pernille",
-   "T-4606": "Idris"
+   "T-4541": "Pernille"
   }
  },
  "ln": {
-  "at": "2026-11-17T08:54:56Z",
+  "at": "2026-11-17T08:57:52Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -518,11 +489,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 650,
+    "conflicted": 653,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 206
+    "parked": 209
    },
    "cur": [],
    "ld": [
@@ -532,8 +503,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-17T08:54:30Z",
-    "ld": 8.0,
+    "at": "2026-11-17T08:57:53Z",
+    "ld": 6.47,
     "c": 8,
     "sb": 1,
     "dk": [
@@ -591,13 +562,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 1,
+  "main": 0,
   "lanes": 0,
-  "total": 1,
-  "at": "3:55 AM",
-  "why": "",
-  "at_iso": "2026-11-17T08:55:00+00:00",
+  "total": 0,
+  "at": "3:58 AM",
+  "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
+  "at_iso": "2026-11-17T08:58:00+00:00",
   "started": "1:00 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 1:00 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 3:55 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0, started 1:00 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 3:58 AM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
  }
 }

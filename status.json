@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-17T00:59:32.759327+00:00",
+ "at": "2026-11-17T01:02:36.196311+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -108,7 +108,7 @@
    "task": "[tools] T-4655 heavy test run cap",
    "model": "opus",
    "started": "2026-11-17T00:50:34.871Z",
-   "seconds": 537,
+   "seconds": 721,
    "finished": null,
    "effort": "high"
   }
@@ -167,7 +167,7 @@
   "week_pct": 23.56,
   "usage_pct": 47.5,
   "work_pct": 77.0,
-  "read_at": "2026-11-17T00:59:00+00:00",
+  "read_at": "2026-11-17T01:02:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -253,7 +253,7 @@
  "lock_in": {
   "on": false,
   "pool": 4,
-  "at": "2026-11-16T19:59:00-05:00",
+  "at": "2026-11-16T20:02:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -472,42 +472,47 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-17T00:59:32Z",
+  "at": "2026-11-17T01:02:29Z",
   "s": {
    "T-4614": [
     "merging",
     "Host checks on the Mac mini",
-    1794876812759
+    1794876809074
    ],
    "T-4642": [
     "mergeq",
     "2nd to merge",
-    1794876392759
-   ],
-   "T-3495": [
-    "mergeq",
-    "3rd to merge",
-    1794876752759
-   ],
-   "T-3765": [
-    "mergeq",
-    "5th to merge",
-    1794874472759
+    1794877229074
    ],
    "T-4628": [
     "mergeq",
+    "2nd to merge",
+    1794877229074
+   ],
+   "T-3495": [
+    "mergeq",
+    "4th to merge",
+    1794876749074
+   ],
+   "T-3765": [
+    "mergeq",
     "6th to merge",
-    1794876332759
+    1794874469074
    ],
    "T-4597": [
     "mergeq",
-    "7th to merge",
-    1794876632759
+    "9th to merge",
+    1794876689074
    ],
    "T-4024": [
     "testing",
     "Mac Mini \u00b7 test",
     null
+   ],
+   "T-4655": [
+    "testing",
+    "its own tests, in its copy",
+    1794877229074
    ],
    "T-4617": [
     "merged",
@@ -519,26 +524,28 @@
   "nm": {
    "T-4614": "Make main's own tests pass again",
    "T-4642": "Review the premade settings declarations in Python",
+   "T-4628": "Keep the Distance location fix out of its file",
    "T-3495": "Check the upload fix before build 4 goes out",
    "T-3765": "Check a real widget tap on the TestFlight build",
-   "T-4628": "Keep the Distance location fix out of its file",
    "T-4597": "Check finished work before it ships",
    "T-4024": "Check finished work before it ships",
+   "T-4655": "Cap how many heavy test runs share the Mac mini",
    "T-4617": "Run quick checks before a land takes the Xcode slot"
   },
   "wk": {
    "T-4614": "Pernille",
    "T-4642": "Idris",
+   "T-4628": "Idris",
    "T-3495": "Pernille",
    "T-3765": "Idris",
-   "T-4628": "Idris",
    "T-4597": "Odalys",
    "T-4024": "Pernille",
+   "T-4655": "Odalys",
    "T-4617": "Odalys"
   }
  },
  "ln": {
-  "at": "2026-11-17T00:59:32Z",
+  "at": "2026-11-17T01:02:29Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -550,13 +557,13 @@
     "parked": 11
    },
    "m": {
-    "checking": 6,
-    "inline": 13,
-    "conflicted": 515,
+    "checking": 9,
+    "inline": 10,
+    "conflicted": 518,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 912
+    "parked": 915
    },
    "cur": [
     [
@@ -565,7 +572,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     6
+     9
     ]
    ],
    "ld": [
@@ -575,16 +582,16 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-17T00:58:44Z",
-    "ld": 84.99,
+    "at": "2026-11-17T01:02:01Z",
+    "ld": 72.27,
     "c": 8,
     "sb": 1,
     "dk": [
-     18.2,
+     18.9,
      228.3
     ],
     "ss": [
-     182.5,
+     182.4,
      953.7
     ],
     "sn": [
@@ -652,10 +659,10 @@
   "main": 1,
   "lanes": 2,
   "total": 3,
-  "at": "7:59 PM",
+  "at": "8:02 PM",
   "why": "",
-  "at_iso": "2026-11-17T00:59:00+00:00",
+  "at_iso": "2026-11-17T01:02:00+00:00",
   "started": "7:47 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 1, started 7:47 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 7:59 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 1, started 7:47 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 8:02 PM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-16T23:59:23.331132+00:00",
+ "at": "2026-11-17T00:02:30.684870+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -132,7 +132,7 @@
    "task": "[design] T-4620 Features in Home task lists",
    "model": "opus",
    "started": "2026-11-16T21:36:15.573Z",
-   "seconds": 8587,
+   "seconds": 8775,
    "finished": null,
    "effort": "high"
   }
@@ -224,33 +224,8 @@
   "week_pct": 18.58,
   "usage_pct": 45.8,
   "work_pct": 73.2,
-  "read_at": "2026-11-16T23:59:00+00:00",
+  "read_at": "2026-11-17T00:02:00+00:00",
   "running": [
-   {
-    "lane": "a",
-    "task": "T-4540",
-    "w": "Pernille",
-    "k": "review",
-    "t": "Check finished work before it ships",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-16T18:31:27-05:00",
-    "n": "Evan",
-    "d": 1,
-    "src": "plan-a"
-   },
-   {
-    "lane": "a",
-    "task": "T-4541",
-    "w": "Pernille",
-    "k": "review",
-    "t": "Check finished work before it ships",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-16T18:31:27-05:00",
-    "n": "Evan",
-    "src": "plan-a"
-   },
    {
     "lane": "b2",
     "task": "T-3765",
@@ -300,7 +275,7 @@
  "lock_in": {
   "on": false,
   "pool": 4,
-  "at": "2026-11-16T18:59:00-05:00",
+  "at": "2026-11-16T19:02:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -544,47 +519,52 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-16T23:59:14Z",
+  "at": "2026-11-17T00:02:22Z",
   "s": {
    "T-3495": [
     "merging",
     "Host checks on the Mac mini",
-    1794873554242
+    1794873562240
    ],
    "T-4494": [
     "merging",
     "Host checks on the Mac mini",
-    1794873554242
+    1794873562240
    ],
    "T-4627": [
     "mergeq",
     "1st to merge",
-    1794871874242
+    1794871882240
    ],
    "T-4624": [
     "mergeq",
     "1st to merge",
-    1794871874242
+    1794871882240
    ],
    "T-4625": [
     "mergeq",
     "3rd to merge",
-    1794871934242
+    1794871942240
    ],
    "T-4540": [
     "mergeq",
     "6th to merge",
-    1794872594242
+    1794872602240
+   ],
+   "T-4541": [
+    "mergeq",
+    "7th to merge",
+    1794873682240
    ],
    "T-4614": [
     "mergeq",
-    "7th to merge",
-    1794872054242
+    "9th to merge",
+    1794872062240
    ],
    "T-4620": [
     "testing",
     "its own tests, in its copy",
-    1794872834242
+    1794872842240
    ]
   },
   "nm": {
@@ -594,6 +574,7 @@
    "T-4624": "Drop Parents and Children from Home's task cards",
    "T-4625": "Put every remaining efficiency and site line first",
    "T-4540": "Check finished work before it ships",
+   "T-4541": "Check finished work before it ships",
    "T-4614": "Make main's own tests pass again",
    "T-4620": "Show Features and their steps in Home's task lists"
   },
@@ -604,6 +585,7 @@
    "T-4624": "Maren",
    "T-4625": "Odalys",
    "T-4540": "Pernille",
+   "T-4541": "Pernille",
    "T-4614": "Pernille",
    "T-4620": "Maren",
    "T-4583": "Idris",
@@ -620,11 +602,11 @@
   }
  },
  "ln": {
-  "at": "2026-11-16T23:59:14Z",
+  "at": "2026-11-17T00:02:22Z",
   "mq": {
    "n": {
     "checking": 2,
-    "inline": 5,
+    "inline": 6,
     "conflicted": 2,
     "failed": 0,
     "held": 0,
@@ -632,13 +614,13 @@
     "parked": 12
    },
    "m": {
-    "checking": 0,
-    "inline": 27,
-    "conflicted": 1658,
+    "checking": 3,
+    "inline": 29,
+    "conflicted": 1661,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 755
+    "parked": 758
    },
    "cur": [
     [
@@ -647,7 +629,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     0
+     3
     ],
     [
      [
@@ -655,7 +637,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     0
+     3
     ]
    ],
    "ld": [
@@ -665,12 +647,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-16T23:59:15Z",
-    "ld": 65.5,
+    "at": "2026-11-17T00:01:40Z",
+    "ld": 46.11,
     "c": 8,
     "sb": 1,
     "dk": [
-     18.3,
+     18.1,
      228.3
     ],
     "ss": [
@@ -706,15 +688,6 @@
   },
   {
    "w": "Operator",
-   "a": "Evan's Account",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session \u2013 1 task",
-   "at": "2026-11-16T18:31:27-05:00"
-  },
-  {
-   "w": "Operator",
    "a": "Jeremy's Account",
    "sr": 1,
    "m": "opus",
@@ -743,12 +716,12 @@
  ],
  "agents_now": {
   "main": 1,
-  "lanes": 2,
-  "total": 3,
-  "at": "6:59 PM",
+  "lanes": 1,
+  "total": 2,
+  "at": "7:02 PM",
   "why": "",
-  "at_iso": "2026-11-16T23:59:00+00:00",
+  "at_iso": "2026-11-17T00:02:00+00:00",
   "started": "3:35 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 1, started 3:35 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 6:59 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 1, started 3:35 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 7:02 PM ET</p></section>"
  }
 }

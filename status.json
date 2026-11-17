@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-17T05:00:28.038737+00:00",
+ "at": "2026-11-17T05:03:31.659355+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -104,7 +104,7 @@
     "end_at": 1794879447
    }
   ],
-  "landed": 54,
+  "landed": 52,
   "failed": 3
  },
  "workers": [
@@ -113,7 +113,7 @@
    "task": "[tools] T-4665 batch land efficiency pieces",
    "model": "opus",
    "started": "2026-11-17T02:49:08.404Z",
-   "seconds": 7879,
+   "seconds": 8063,
    "finished": null,
    "effort": "high"
   }
@@ -123,7 +123,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 455,
+  "runnable_count": 456,
   "blocked_count": 74
  },
  "meter": {
@@ -172,7 +172,7 @@
   "week_pct": 24.98,
   "usage_pct": 48.1,
   "work_pct": 77.2,
-  "read_at": "2026-11-17T05:00:00+00:00",
+  "read_at": "2026-11-17T05:03:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -270,7 +270,7 @@
  "lock_in": {
   "on": false,
   "pool": 4,
-  "at": "2026-11-17T00:00:00-05:00",
+  "at": "2026-11-17T00:03:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -440,7 +440,7 @@
    }
   ],
   "count": {
-   "next": 455,
+   "next": 456,
    "wait": 35,
    "blocked": 39,
    "you": 12
@@ -502,39 +502,39 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-17T05:00:17Z",
+  "at": "2026-11-17T05:03:31Z",
   "s": {
    "T-4665": [
     "merging",
     "Mac tests at the main gate",
-    1794890357347
+    1794890311659
    ],
-   "T-4190": [
+   "T-4182": [
     "testing",
     "Mac Mini \u00b7 test",
     null
    ],
-   "T-4182": [
+   "T-4190": [
     "testq",
     "1st for a Simulator",
-    1794890897347
+    1794891631659
    ],
    "T-4181": [
     "testq",
     "2nd for a Simulator",
-    1794891557347
+    1794891691659
    ]
   },
   "nm": {
    "T-4665": "Land the finished efficiency pieces in one batch",
-   "T-4190": "Settings and Pro: buy, restore, themes",
    "T-4182": "A failing widget says so and can recover",
+   "T-4190": "Settings and Pro: buy, restore, themes",
    "T-4181": "Widgets refresh on their own and by a tap"
   },
   "wk": {
    "T-4665": "Odalys",
-   "T-4190": "Idris",
    "T-4182": "Idris",
+   "T-4190": "Idris",
    "T-4181": "Idris",
    "T-4279": "Odalys",
    "T-4240": "Odalys",
@@ -542,7 +542,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-17T05:00:17Z",
+  "at": "2026-11-17T05:03:31Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -556,11 +556,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 756,
+    "conflicted": 759,
     "failed": null,
     "held": null,
-    "retry": 6,
-    "parked": 699
+    "retry": 9,
+    "parked": 703
    },
    "cur": [],
    "ld": [
@@ -570,12 +570,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-17T04:59:51Z",
-    "ld": 16.37,
+    "at": "2026-11-17T05:03:33Z",
+    "ld": 18.01,
     "c": 8,
     "sb": 2,
     "dk": [
-     15.9,
+     15.7,
      228.3
     ],
     "ss": [
@@ -644,7 +644,7 @@
    "m": "opus",
    "e": "high",
    "t": "Work session \u2013 1 task",
-   "at": "2026-11-16T23:43:17-05:00"
+   "at": "2026-11-17T00:03:12-05:00"
   },
   {
    "w": "Operator",
@@ -657,8 +657,8 @@
   }
  ],
  "reply": {
-  "sent": "2026-11-17T04:57:44Z",
-  "seconds": 158.0
+  "sent": "2026-11-17T05:01:28Z",
+  "seconds": 102.0
  },
  "inbox": [],
  "trimmed": [
@@ -676,10 +676,10 @@
   "main": 1,
   "lanes": 5,
   "total": 6,
-  "at": "12:00 AM",
+  "at": "12:03 AM",
   "why": "",
-  "at_iso": "2026-11-17T05:00:00+00:00",
+  "at_iso": "2026-11-17T05:03:00+00:00",
   "started": "9:46 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 1, started 9:46 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 12:00 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 1, started 9:46 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 12:03 AM ET</p></section>"
  }
 }

@@ -1,19 +1,19 @@
 {
  "schema": 1,
- "at": "2026-11-17T23:17:45.291533+00:00",
+ "at": "2026-11-17T23:20:50.916569+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-17T15:40:57-05:00",
   "flow": [
    {
-    "t": "T-3773",
-    "name": "Decide how stuck review fix lines reach the board",
-    "acct": "Personal a",
+    "t": "T-4774",
+    "name": "Measure what one refresh tap costs the app",
+    "acct": "Personal b",
     "steps": [
      {
-      "s": "macbook",
-      "at": 1794954419
+      "s": "testq",
+      "at": 1794957524
      }
     ]
    },
@@ -29,6 +29,30 @@
    }
   ],
   "done": [
+   {
+    "t": "T-4744",
+    "name": "Fix a MacBook test job that failed",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794957514
+   },
+   {
+    "t": "T-3773",
+    "name": "Decide how stuck review fix lines reach the board",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794957502
+   },
+   {
+    "t": "T-4765",
+    "name": "Fix the When tapped frames' captions and VoiceOver list",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794957480
+   },
    {
     "t": "T-4763",
     "name": "Keep habit marks when the Page also saves",
@@ -85,34 +109,9 @@
     "steps": [],
     "end": "landed",
     "end_at": 1794953776
-   },
-   {
-    "t": "T-4183",
-    "name": "The Gallery shows, previews and opens every premade",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "failed",
-    "end_at": 1794953005,
-    "why": "did not merge cleanly"
-   },
-   {
-    "t": "T-4653",
-    "name": "Give the Shortcut's Pro check a time limit",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794950298
-   },
-   {
-    "t": "T-4743",
-    "name": "Fix a MacBook test job that failed",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794950247
    }
   ],
-  "landed": 34,
+  "landed": 37,
   "failed": 8
  },
  "workers": [
@@ -121,7 +120,7 @@
    "task": "[build] T-4653 land parked Shortcut fix",
    "model": "opus",
    "started": "2026-11-17T22:57:48.038Z",
-   "seconds": 1197,
+   "seconds": 1382,
    "finished": null,
    "effort": "high"
   },
@@ -130,7 +129,7 @@
    "task": "[design] T-4746 land parked name fix",
    "model": "opus",
    "started": "2026-11-17T22:59:28.420Z",
-   "seconds": 1096,
+   "seconds": 1282,
    "finished": null,
    "effort": "high"
   }
@@ -222,7 +221,7 @@
   "week_pct": 38.85,
   "usage_pct": 52.6,
   "work_pct": 79.4,
-  "read_at": "2026-11-17T23:17:00+00:00",
+  "read_at": "2026-11-17T23:20:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -296,7 +295,7 @@
  "lock_in": {
   "on": false,
   "pool": 7,
-  "at": "2026-11-17T18:17:00-05:00",
+  "at": "2026-11-17T18:20:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -551,47 +550,27 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-17T23:17:37Z",
+  "at": "2026-11-17T23:20:42Z",
   "s": {
-   "T-4763": [
-    "mergetest",
-    "Xcode checks on the MacBook",
-    1794957457275
-   ],
-   "T-4765": [
-    "mergeq",
-    "1st to merge",
-    1794951277275
-   ],
-   "T-3773": [
-    "mergeq",
-    "3rd to merge",
-    1794952237275
-   ],
-   "T-4744": [
-    "mergeq",
-    "4th to merge",
-    1794952237275
-   ],
    "T-4774": [
-    "mergeq",
-    "6th to merge",
-    1794957337275
+    "merging",
+    "Host checks on the Mac mini",
+    1794957582659
    ],
    "T-4607": [
     "mergeq",
-    "7th to merge",
-    1794955177275
+    "1st to merge",
+    1794955182659
    ],
    "T-4608": [
     "mergeq",
-    "7th to merge",
-    1794955177275
+    "1st to merge",
+    1794955182659
    ],
    "T-4609": [
     "mergeq",
-    "7th to merge",
-    1794955177275
+    "1st to merge",
+    1794955182659
    ],
    "T-4746": [
     "mergetest",
@@ -600,8 +579,8 @@
    ],
    "T-4653": [
     "merging",
-    "Mac tests at the main gate \u00b7 1 group of tests done",
-    1794956977275
+    "Mac tests at the main gate",
+    1794957642659
    ],
    "T-4770": [
     "merged",
@@ -611,10 +590,6 @@
    ]
   },
   "nm": {
-   "T-4763": "Keep habit marks when the Page also saves",
-   "T-4765": "Fix the When tapped frames' captions and VoiceOver list",
-   "T-3773": "Decide how stuck review fix lines reach the board",
-   "T-4744": "Fix a MacBook test job that failed",
    "T-4774": "Measure what one refresh tap costs the app",
    "T-4607": "Check finished work before it ships",
    "T-4608": "Check finished work before it ships",
@@ -624,10 +599,6 @@
    "T-4770": "Re-estimate the release date from measured build speed"
   },
   "wk": {
-   "T-4763": "Maren",
-   "T-4765": "Maren",
-   "T-3773": "Ines",
-   "T-4744": "Operator",
    "T-4774": "Idris",
    "T-4607": "Odalys",
    "T-4608": "Pernille",
@@ -645,11 +616,11 @@
   }
  },
  "ln": {
-  "at": "2026-11-17T23:17:37Z",
+  "at": "2026-11-17T23:20:42Z",
   "mq": {
    "n": {
     "checking": 1,
-    "inline": 7,
+    "inline": 3,
     "conflicted": 2,
     "failed": 0,
     "held": 1,
@@ -657,37 +628,37 @@
     "parked": 9
    },
    "m": {
-    "checking": 0,
-    "inline": 38,
-    "conflicted": 623,
+    "checking": 1,
+    "inline": 41,
+    "conflicted": 626,
     "failed": null,
-    "held": 1428,
+    "held": 1431,
     "retry": null,
-    "parked": 190
+    "parked": 193
    },
    "cur": [
     [
      [
-      "T-4763"
+      "T-4774"
      ],
-     "iPhone app tests",
-     "MacBook",
-     0
+     "Mac tests",
+     "Mac mini",
+     1
     ]
    ],
    "ld": [
-    35,
-    "2026-11-17T22:53:57Z"
+    39,
+    "2026-11-17T23:18:34Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-17T23:17:16Z",
-    "ld": 10.19,
+    "at": "2026-11-17T23:20:43Z",
+    "ld": 6.78,
     "c": 8,
     "sb": 0,
     "dk": [
-     20.4,
+     20.2,
      228.3
     ],
     "ss": [
@@ -751,10 +722,10 @@
   "main": 2,
   "lanes": 1,
   "total": 3,
-  "at": "6:17 PM",
+  "at": "6:20 PM",
   "why": "",
-  "at_iso": "2026-11-17T23:17:00+00:00",
+  "at_iso": "2026-11-17T23:20:00+00:00",
   "started": "3:40 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 3:40 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 6:17 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 3:40 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 6:20 PM ET</p></section>"
  }
 }

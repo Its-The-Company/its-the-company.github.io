@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-17T13:35:51.602756+00:00",
+ "at": "2026-11-17T13:38:54.279065+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -123,7 +123,7 @@
     "end_at": 1794904466
    }
   ],
-  "landed": 29,
+  "landed": 28,
   "failed": 5
  },
  "workers": [
@@ -132,7 +132,7 @@
    "task": "[site] T-4493 land the clutter cut",
    "model": "opus",
    "started": "2026-11-17T13:06:57.727Z",
-   "seconds": 1733,
+   "seconds": 1916,
    "finished": null,
    "effort": "high"
   }
@@ -208,7 +208,7 @@
   "week_pct": 33.92,
   "usage_pct": 51.5,
   "work_pct": 78.4,
-  "read_at": "2026-11-17T13:35:00+00:00",
+  "read_at": "2026-11-17T13:38:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -232,40 +232,6 @@
     "e": "high",
     "at": "2026-11-17T08:14:09-05:00",
     "n": "Jeremy",
-    "src": "plan-b"
-   },
-   {
-    "lane": "b3",
-    "task": "T-4742",
-    "w": "Operator",
-    "k": "fix",
-    "t": "Make main pass its Xcode checks again",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-17T07:46:11-05:00",
-    "n": "Jeremy",
-    "src": "plan-b"
-   },
-   {
-    "lane": "b3",
-    "task": "T-4273",
-    "t": "Add the app documentation step to the Handbook",
-    "at": "2026-11-17T07:46:11-05:00",
-    "n": "Jeremy",
-    "d": 1,
-    "src": "plan-b"
-   },
-   {
-    "lane": "b3",
-    "task": "T-4530",
-    "w": "Maren",
-    "k": "site",
-    "t": "Make Queued the one queue list on Home",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-17T07:46:11-05:00",
-    "n": "Jeremy",
-    "d": 1,
     "src": "plan-b"
    }
   ]
@@ -304,7 +270,7 @@
  "lock_in": {
   "on": false,
   "pool": 5,
-  "at": "2026-11-17T08:35:00-05:00",
+  "at": "2026-11-17T08:38:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -536,59 +502,58 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-17T13:35:39Z",
+  "at": "2026-11-17T13:38:54Z",
   "s": {
    "T-4668": [
     "merging",
     "Host checks on the Mac mini",
-    1794922059660
+    1794922074279
    ],
    "T-4671": [
     "merging",
     "Host checks on the Mac mini",
-    1794922059660
+    1794922074279
+   ],
+   "T-4273": [
+    "mergeq",
+    "1st to merge",
+    1794922734279
    ],
    "T-4530": [
     "mergeq",
-    "3rd to merge",
-    1794922239660
+    "1st to merge",
+    1794922734279
    ],
    "T-4493": [
     "testing",
     "its own tests, in its copy",
-    1794920919660
-   ],
-   "T-4273": [
-    "merged",
-    "on main 7:52 AM ET",
-    1794919953000,
-    ""
+    1794920934279
    ]
   },
   "nm": {
    "T-4668": "Put the bank, tax and name dates in the plan",
    "T-4671": "Clear the app's sentences under the approved voice",
+   "T-4273": "Add the app documentation step to the Handbook",
    "T-4530": "Make Queued the one queue list on Home",
-   "T-4493": "Cut clutter text on the pages still carrying it",
-   "T-4273": "Add the app documentation step to the Handbook"
+   "T-4493": "Cut clutter text on the pages still carrying it"
   },
   "wk": {
    "T-4668": "Ines",
    "T-4671": "Maren",
+   "T-4273": "Ines",
    "T-4530": "Maren",
    "T-4493": "Maren",
-   "T-4273": "Ines",
    "T-0906": "Idris",
    "T-2498": "Idris",
    "T-4661": "Odalys"
   }
  },
  "ln": {
-  "at": "2026-11-17T13:35:39Z",
+  "at": "2026-11-17T13:38:54Z",
   "mq": {
    "n": {
     "checking": 2,
-    "inline": 1,
+    "inline": 2,
     "conflicted": 1,
     "failed": 1,
     "held": 1,
@@ -596,13 +561,13 @@
     "parked": 17
    },
    "m": {
-    "checking": 8,
-    "inline": 5,
-    "conflicted": 591,
-    "failed": 8,
-    "held": 846,
+    "checking": 11,
+    "inline": 0,
+    "conflicted": 594,
+    "failed": 11,
+    "held": 849,
     "retry": null,
-    "parked": 469
+    "parked": 473
    },
    "cur": [
     [
@@ -611,7 +576,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     8
+     11
     ],
     [
      [
@@ -619,7 +584,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     8
+     11
     ]
    ],
    "ld": [
@@ -629,16 +594,16 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-17T13:34:51Z",
-    "ld": 4.9,
+    "at": "2026-11-17T13:38:28Z",
+    "ld": 2.76,
     "c": 8,
     "sb": 1,
     "dk": [
-     25.7,
+     27.8,
      228.3
     ],
     "ss": [
-     176.2,
+     176.1,
      953.7
     ],
     "sn": [
@@ -685,15 +650,6 @@
    "e": "high",
    "t": "Work session \u2013 1 task",
    "at": "2026-11-17T08:14:08-05:00"
-  },
-  {
-   "w": "Operator",
-   "a": "Jeremy's Account",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session \u2013 1 task",
-   "at": "2026-11-17T07:46:11-05:00"
   }
  ],
  "reply": {
@@ -714,12 +670,12 @@
  ],
  "agents_now": {
   "main": 1,
-  "lanes": 3,
-  "total": 4,
-  "at": "8:35 AM",
+  "lanes": 2,
+  "total": 3,
+  "at": "8:38 AM",
   "why": "",
-  "at_iso": "2026-11-17T13:35:00+00:00",
+  "at_iso": "2026-11-17T13:38:00+00:00",
   "started": "8:03 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 1, started 8:03 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 8:35 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 1, started 8:03 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 8:38 AM ET</p></section>"
  }
 }

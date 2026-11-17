@@ -19,31 +19,41 @@ scrollBy({left:e.deltaX*k,top:e.deltaY*k,behavior:'instant'})},{passive:false})}
 // a search opens the cards that hold a match; a card none of whose steps shows under the filters hides.
 // T-4530 (friesevan #41 c6898956579 Q2 A): Group by feature, a switch beside the search. Off: every list is flat, each
 // piece in its own start order place with its "part of" tag; on (the default, T-4620's look): pieces under their umbrella.
-window.LKFT=(function(){var D=null,W={},OP={},GF=true;try{GF=localStorage.getItem('lk-gf')!=='0'}catch(e){}
+// T-4747 (friesevan #41 c6938733962): FS, each step a feature session builds ({step: feature}, data-ft's "b"): while
+// its feature is in flight it is listed under the feature in In flight (fsl) and hidden from Queued (fly).
+window.LKFT=(function(){var D=null,W={},FS={},OP={},GF=true;try{GF=localStorage.getItem('lk-gf')!=='0'}catch(e){}
 function data(){if(D)return D;D={};var a=document.getElementById('lk-all');try{D=JSON.parse(a&&a.getAttribute('data-ft')||'{}')}catch(e){}
-Object.keys(D).forEach(function(f){if(!W[f])W[f]=f;(D[f].s||[]).forEach(function(s){if(!W[s])W[s]=f})});return D}
+Object.keys(D).forEach(function(f){if(!W[f])W[f]=f;(D[f].s||[]).forEach(function(s){if(!W[s])W[s]=f});(D[f].b||[]).forEach(function(b){FS[b[0]]=f})});return D}
+function live(i){var L=(window.CompanySite||{}).lk||{};return !!(L.has&&L.has(i))}
 function mk(p,t,c,x){var e=document.createElement(t);if(c)e.className=c;if(x)e.textContent=x;p.appendChild(e);return e}
 function body(d){return d.querySelector(':scope>.lk-ftb')}
-// home_look.feature_words, from the live lists: merged (the records, or Merged now), in flight, queued, waiting
-function words(f){var x=D[f],s=x.s||[],L=(window.CompanySite||{}).lk||{},n={m:0,f:0,q:0,w:0,x:0},k;if(!s.length)return 'No steps on the board yet';
+// home_look.feature_words, from the live lists: merged (the records, or Merged now), building (in flight, or a step of
+// this feature's session while the feature is in flight), queued, waiting: "12 of 48 merged, 4 building, 20 queued"
+function words(f){var x=D[f],s=x.s||[],L=(window.CompanySite||{}).lk||{},n={m:0,f:0,q:0,w:0,x:0},k,on=live(f);if(!s.length)return 'No steps on the board yet';
 function has(a,i){return (a||[]).indexOf(i)>=0}
-s.forEach(function(i){n[has(x.m,i)||(L.hm&&L.hm(i))?'m':L.has&&L.has(i)?'f':has(x.q,i)?'q':has(x.o,i)?'w':'x']++});
-k=[n.m+' of '+s.length+' step'+(s.length===1?'':'s')+' merged'];[['f','in flight'],['q','queued'],['w','waiting or blocked'],['x','closed or held from view']]
-.forEach(function(w){if(n[w[0]])k.push(n[w[0]]+' '+w[1])});return k.join(' \u00b7 ')}
+s.forEach(function(i){n[has(x.m,i)||(L.hm&&L.hm(i))?'m':live(i)||(on&&FS[i]===f)?'f':has(x.q,i)?'q':has(x.o,i)?'w':'x']++});
+k=[n.m+' of '+s.length+' merged'];[['f','building'],['q','queued'],['w','waiting or blocked'],['x','closed or held from view']]
+.forEach(function(w){if(n[w[0]])k.push(n[w[0]]+' '+w[1])});return k.join(', ')}
+// home_look.session_html: the steps feature f's session builds, under its own card in In flight
+function fsl(f){var b=D[f].b||[],e=document.createElement('div'),u;e.className='lk-sbl';e.setAttribute('data-fs',f);
+mk(e,'p','lk-sbh','Building in this session: '+b.length+' step'+(b.length===1?'':'s'));u=mk(e,'ul');
+b.forEach(function(x){var l=mk(u,'li');l.setAttribute('data-st',x[0]);mk(l,'span','lk-sbn',x[1]);mk(l,'span','lk-sbi',x[0])});return e}
 function card(f){var d=document.createElement('details'),s=mk(d,'summary'),t;d.className='lk-ft';d.setAttribute('data-ft',f);
 t=mk(s,'span','t');mk(t,'span','lk-ftk','Feature');mk(t,'b','',D[f].t);mk(t,'span','lk-ftm',words(f));mk(s,'span','idb',f);mk(d,'div','lk-ftb');
 s.addEventListener('click',function(){OP[f]=!d.open});return d}
-function undo(c){if(!c)return;[].slice.call(c.children).forEach(function(d){if(!d.classList.contains('lk-ft'))return;
+function undo(c){if(!c)return;[].forEach.call(c.querySelectorAll('.lk-sbl'),function(e){e.parentNode.removeChild(e)});[].slice.call(c.children).forEach(function(d){if(!d.classList.contains('lk-ft'))return;
 [].slice.call(body(d).children).forEach(function(x){c.insertBefore(x,d)});c.removeChild(d)})}
-function group(c){if(!c)return;undo(c);data();if(!GF){document.documentElement.classList.add('lk-flat');return}document.documentElement.classList.remove('lk-flat');var g={},S=window.CompanySite,q=!!(S&&S.lk&&S.lk.q&&S.lk.q());
+function sess(c){if(c.id!=='lk-run')return;Object.keys(D).forEach(function(f){var r;if(!(D[f].b||[]).length)return;
+r=[].filter.call(c.querySelectorAll('.lk-card[data-id]'),function(x){return x.getAttribute('data-id')===f})[0];if(r)r.parentNode.insertBefore(fsl(f),r.nextSibling)})}
+function group(c){if(!c)return;undo(c);data();if(!GF){document.documentElement.classList.add('lk-flat');sess(c);return}document.documentElement.classList.remove('lk-flat');var g={},S=window.CompanySite,q=!!(S&&S.lk&&S.lk.q&&S.lk.q());
 [].slice.call(c.children).forEach(function(x){var i=(x.getAttribute('data-id')||'').replace(/\.\d+$/,''),f=W[i],b;if(!f||!D[f])return;
 if(!g[f]){g[f]=card(f);c.insertBefore(g[f],x)}b=body(g[f]);if(i===f)b.insertBefore(x,b.firstChild);else b.appendChild(x)});
 // T-4530: a card sits by its first row (a star lifts it), and inside it the steps keep the list's own order, star or not
 Object.keys(g).forEach(function(f){var b=body(g[f]),k=[].slice.call(b.children).filter(function(x){return x.getAttribute('data-id')!==f});
 if(k.every(function(x){return x._o!=null}))k.sort(function(x,y){return x._o-y._o}).forEach(function(x){b.appendChild(x)})});
 Object.keys(g).forEach(function(f){var d=g[f],n=body(d).querySelectorAll(':scope>[data-id]:not([hidden])').length;d.hidden=!n;d.open=!!OP[f]||(q&&n>0)});
-[].forEach.call(document.querySelectorAll('details.lk-ft'),function(d){var m=d.querySelector('.lk-ftm'),f=d.getAttribute('data-ft');if(m&&D[f])m.textContent=words(f)})}
-return{group:group,undo:undo,on:function(v){if(v!=null){GF=!!v;try{localStorage.setItem('lk-gf',GF?'1':'0')}catch(e){}}return GF}}})();
+sess(c);[].forEach.call(document.querySelectorAll('details.lk-ft'),function(d){var m=d.querySelector('.lk-ftm'),f=d.getAttribute('data-ft');if(m&&D[f])m.textContent=words(f)})}
+return{group:group,undo:undo,fs:function(i){data();return FS[i]||null},on:function(v){if(v!=null){GF=!!v;try{localStorage.setItem('lk-gf',GF?'1':'0')}catch(e){}}return GF}}})();
 // T-3187 (friesevan #41 c6701678631): (1) a star on each Running and Queued card; the stars are shared by both Investors, in
 // investors/favorites.json on GitHub ({"tasks": [...]}), written with the Investor's own token, one commit a tap, read fresh
 // first and once more if GitHub moved it (as personal.js writes billing.json); no token: the build's stars show, no buttons.
@@ -95,7 +105,7 @@ function qc(c){var e=c.querySelector('.lk-cat');return e?e.textContent:''}
 // number in data-all with a sixth field, 1 (Move up counts places by those numbers); a task a later status puts in
 // flight has its row hidden here, and one that has left In flight since the build is a Queued row again (listed with
 // the page's own rows when its number is among theirs, data-last; past them it is in the index like any other).
-function fly(i){return !!(S.lk&&S.lk.has&&S.lk.has(lid(i)))}
+function fly(i){var f=window.LKFT&&LKFT.fs(lid(i));return !!(S.lk&&S.lk.has&&(S.lk.has(lid(i))||(f&&S.lk.has(f))))}  // T-4747: or its feature's session is
 // a Queued row now: not in flight (until In flight has drawn, the build's mark says)
 function inq(i,f){return S.lk&&S.lk.has?!fly(i):!f}
 function okId(i){return typeof i==='string'&&/^T-\d+$/.test(i)}
@@ -557,7 +567,7 @@ if(x.sb!=null)put(r['Simulators'],!x.sb?'none booted':x.sb+' booted'+(x.sn&&x.sn
 var pm=document.querySelector('#machine > p.meta'),lv=document.getElementById('lk-mxlv');if(any&&pm){if(!lv){lv=mk(pm,'span');lv.id='lk-mxlv'}lv.textContent=' Disk, load and Simulators follow the live status, read '+et(at)+'.'}}
 function fig(lab,v){[].forEach.call(document.querySelectorAll('.lk-bub a[href="#machine"] .lk-f > span'),function(s){var b=s.querySelector('b');if(b&&s.lastChild&&s.lastChild.nodeValue===lab)b.textContent=v})}
 function draw(st){var g=st&&st.ln,d=st&&st.disk;LNM=(st&&st.stg&&st.stg.nm)||LNM;if(st&&Date.parse(st.at)>=B&&d&&typeof d.free_gb==='number')fig('Mac Mini',d.free_gb+' GB');
-if(!g||!(Date.parse(g.at)>=B))return;if(g.mq)merge(g.mq,g.at);if(g.mx){mach(g.mx,g.at);if(g.mx.macbook&&g.mx.macbook.dk)fig('MacBook',g.mx.macbook.dk[0]+' GB')}}
+if(!g||!(Date.parse(g.at)>=B))return;if(g.mq)merge(g.mq,g.at);if(g.mx){mach(g.mx,g.at);if(g.mx.macbook&&g.mx.macbook.dk)fig('MacBook',g.mx.macbook.dk[0]+' GB');var sm=g.mx.mini;if(sm&&sm.ss&&Date.now()-Date.parse(sm.at)<24e5)fig('SSD',sm.ss==='na'?'not answering':sm.ss==='nc'?'not connected':Math.round(sm.ss[0]).toLocaleString('en-US')+' GB')}}
 S.onStatus.push(draw);if(S.status&&S.status())draw(S.status())});
 // T-4110: Flow's queue charts. The switch (Merge Queue or Task Queue; 24 h or 7 days) shows one chart; a tap, a drag or a pointer
 // over it, or an arrow key on it, reads the count at that time from the points the page carries (the page wrote the words).

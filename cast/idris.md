@@ -45,14 +45,16 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 - T-4583 11-16: Patch 4 (tick_steps, feature_with_steps, before line) written and tested in T-4583-idris/wt, not landed: security-guard refused a diagnostic ps|grep whose pattern held "claude -p" (rule 14 stop). Open: the Investors/Operator say whether it may land. Lesson: never put that phrase in a command.
 
-- T-4184 11-17 e68d8610ba: T-0906 landed + ticked. Open: Pernille review line. Lesson: a dirty copy can't use xc.sh's runner route; main_gate land runs the MacBook unit run itself. Grep all mutants*.json finds after a rewrite.
+- T-1882/T-0687 11-17: 6cf737c65b + 12998ef7c6 landed (2015/0); (2) of T-1882 was on main since 5b36a7808. Open: B5 wiring; T-0687 (b) T-4750/4751, (c) phone; reviews. Scratch T-0687-idris kept: t0687-swift-untested.patch not on main. Lesson: zsh never word-splits $F; read the notes before calling a part open.
+
+- T-3764 11-17 9213af9de8: probe+test landed, ticked (no red via system.open). Lesson: UI tests open other apps only through UITestLaunch helpers (XCUIApplication.settings()); the land's scan fails otherwise.
+
+- T-4662 11-17: parked b8f0b06bf1 (caret on long lines + editor.md) in scratch T-4662-idris, not landed: land job 53ed1c red only on PromptDeskTests timing. Open: rerun land, then 17e look; editor.md not in how_it_works PARTS.
 
 ## Lessons
 - Older lessons and dated logs: archive.md.
 
 
-- T-0696 11-16 5e6799654b: handoff only; patch in scratch T-0696-idris (LaneNetPeak, ExtensionMemoryTests, HTTPS on loopback). Lesson: killing the extension + app launch reruns nothing; launch with -reload.
-- T-4494 11-16 1f081860c8 slice 2: item (1), every send mirrors (no "lane" = widget; typed "app" keeps out; LaneMirror.defaultManifest). 1955/0. Open: (3) recording, (4) Ines; review by someone else. Lesson: a full unit run takes >10 min with the lock wait: background it and wait on its output file.
 - T-4605 11-16 0465b8455a: review of T-4565 PASS w/ findings; M1 -> T-4659 (mine: Swift test that a widgetAction run reaches the handler). Lesson: in a <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> xc.sh test only queues (75); evidence for code already on main is a full-suite result.json on origin/macbook-results at a commit containing it.
 - T-4606 11-16 3a9e74b2bd: review of T-4550 slice 1 PASS w/ findings; M1 -> T-4660 (Pernille). Open (mine): L3, bound run-args ints (+-2^53-1) in WidgetAction step 1 to match Python. Lesson: tests/run.sh does not finish in 60 min at load 300; check first whether it covers the change.
 {% endraw %}

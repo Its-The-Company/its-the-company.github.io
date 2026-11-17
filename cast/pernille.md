@@ -48,6 +48,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-4598 11-16 (0aef474dcb): T-4181 at 420538d6 (T-0972 send_lane) PASS w/ findings; M1 = T-4656, M2 = T-4657, Ls = T-4658 (Idris). Lesson: a function that writes a key and reads it back as "typed" next time is sticky; run two sends in sequence, not one.
 - T-4702 11-17 (ed2bf9f860): state_commit 82!=83 busy rows was the test helper's 0.5 s state.lock wait expiring under load (lost rows == timed-out holds under injected stalls), not a race. Lesson: to tell a race from a timeout, stop the holder (SIGSTOP) at random and count both.
 - T-4701 11-17 (39d0f8b56e, cc966c1fcb): test_health.py; item 4 deflake hook landed in main_gate (flip held, author owns). Left: item 2 expiry schedule (jobs_loop job also needs a supervisor.sh 'moved' step). Lesson: say a suite passed only after reading its line in the output; twice on 11-17 I reported one before it had arrived.
+- T-0289 11-17 (landed via gate, <span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">parked</span> 4355e9f593): widgets.state() Python half + host fake; Swift write path unbuilt (Unsupported on phone); texts to Maren. T-0299 still held on T-0801/T-0802. Lesson: a lambda's frame is the caller's line; count bytes with the writer's encoder ('/' is 2).
 {% endraw %}
 
 

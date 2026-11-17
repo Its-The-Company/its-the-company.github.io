@@ -74,6 +74,18 @@ send these links to an open window. This run only shows that the default did not
 Decide T-3764: close it as "measured, no red under system.open" with the probe and test landed (diff above, reviewed
 by someone else), or hold it for T-4581's real-tap test. PyWidgetTests was not run in this session, because nothing app-side
 is committed.
+
+## Settled 11-17 (Idris, merge-only session)
+
+- Landed: the probe and the test changes above (SceneCounts, its `.background` in IDEScene, `windowedApps()`, the
+  counts check in `settle()`, the Events-Page step), taken from <span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">parked</span> 74af614a70 and applied to main unchanged. The
+  handlesExternalEvents line stays in.
+- Dropped: parked bfbf8d0c34's PyWidgetApp.swift (the red attempt, with the line removed; never to land) and 7276cf306a
+  (an older copy of the same three files). Their T-3765 and T-2691 files are those tasks' own and were not touched.
+- Already on main: 41fba9857d's handoff (cdf59f7e54) and 3b8599664f's <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">ruling</span> (log/rulings.md, #41 c6918474720).
+- Verdict: no red is possible through `XCUIDevice.system.open` on iOS 27.0 in Windowed Apps; the open question of a real
+  Home Screen widget tap is T-4581, the cold-start preview is T-4582. These UI tests still run only on an iPad; the
+  MacBook runner has only iPhones, so there they skip (11-12 note).
 {% endraw %}
 
 </div>

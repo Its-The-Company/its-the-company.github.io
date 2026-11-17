@@ -51,10 +51,6 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 - 2026-10-25 entries (privacy drafts, names, App Review matrix v1, store page, L15, CORRECTIONS pass 1, #54 docs, OPS-7 audit, T-0075): archive.md. Standing: grep counts before typing; `date` before every time.
 
-## 2026-11-09 T-3798 timing sentences to F1 for main (6f63ec6014; noted, not ticked; swap to F2 when T-3758 lands)
-- Lesson: a policy sentence follows the build that ships; when the candidate is unsettled, write main's truth and leave the swap in the change log.
-## 2026-11-09 T-3421 pass 2, <span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">parked</span> queue (a16d3fd938, ticked); lines T-3883..T-3886 (Odalys); board lines left uncommitted for the Operator (board had others' edits)
-- Lesson: I fetched trunkbaseddevelopment.com before its terms look AGAIN. On a new host, search for its terms before running the driver.
 ## 2026-11-09 T-3902 merge-compute options (242a2d726b, ticked; board uncommitted)
 - Lesson: a ledger's row count is not a run count; dedupe by run (time, task, seconds) before quoting a median.
 ## 2026-11-11 T-4120 queue-methods research (654eb92479, ticked)
@@ -63,6 +59,8 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - Lesson: main moved mid-read (T-4198 landed); re-check `git log -1` before writing any "true at HEAD" line.
 ## 2026-11-12 T-3674 launcher app list, 12 apps (c9ec06a791, ticked); copy removal refused (old T-3859 record)
 - Lesson: main_gate exit 75 is a wait; land in run_in_background, and the copy must be re-merged if main moves meanwhile.
+## 2026-11-17 T-4693 names deep dive (22 names, RDAP 102 lookups; USPTO not run: tmsearch sits behind an AWS WAF challenge)
+- Lesson: read a site's configuration.json before scripting it; a named bot challenge ends the route, and the exact search goes to the Investors.
 {% endraw %}
 
 

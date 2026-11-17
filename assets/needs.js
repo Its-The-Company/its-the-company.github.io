@@ -3,7 +3,8 @@
 'use strict';
 var S = window.CompanySite, root = document.getElementById('needs-root'), C = S && S.core, hm = root && /^#i(\d+)$/.exec(location.hash);
 if (hm) location.replace(root.getAttribute('data-view') + '#' + hm[1]);
-if (!C || !root || !S.getToken()) return;
+function drawn() { document.documentElement.classList.remove('iq-wait'); }  // T-4682: the build's raw list shows only once this is called (needs.py WAIT_JS)
+if (!C || !root || !S.getToken()) { drawn(); return; }
 var anon = document.getElementById('needs-anon'); if (anon) anon.hidden = true;
 var chatTab = document.querySelector('nav.hometabs [data-chat-tab]'); if (chatTab) chatTab.hidden = false;
 var repo = root.getAttribute('data-repo'), RI = C.use(repo), el = S.el, VIEW = root.getAttribute('data-view');
@@ -78,7 +79,8 @@ function xr(li) { return ROWS.filter((x) => x[0] === li)[0]; }
 function due(x) { return window.IssueQ.due(x[1], ox(x), QST); }
 function paint() {
 var Q = window.IssueQ;
-if (!QST || !Q || (D && D.on)) return;
+if (!QST || !Q) { drawn(); return; }
+if (D && D.on) return;
 var now = Date.now(), vis = ROWS.filter((x) => !x[0].hidden && !x.ans && OPEN[x[1]]), by = { N: [], L: [] }, G = C.groups(now), GL;
 if (!QS) {
 QS = {}; var b = BD = el('div', 'iq-board'), a = document.querySelector('ul[data-group="open"]');
@@ -226,15 +228,15 @@ d.showModal();
 if (innerWidth >= 900) { var r = bt.getBoundingClientRect(); d.classList.add('pop'); d.style.top = Math.min(r.bottom + 6, innerHeight - d.offsetHeight - 8) + 'px'; d.style.left = Math.max(8, r.right - d.offsetWidth) + 'px'; }
 }
 function ready() {
-if (!window.IssueQ) return;
+if (!window.IssueQ) { drawn(); return; }
 window.IssueQ.load(repo).then((s0) => {
 QST = s0;
 function round() {
 var qs = {}; ROWS.forEach((x) => { if (!x[0].hidden && OPEN[x[1]]) qs[x[1]] = ox(x); });
-window.IssueQ.sync(QST, qs, Date.now(), false); paint(); tally();
+window.IssueQ.sync(QST, qs, Date.now(), false); paint(); tally(); drawn();
 }
 round(); setInterval(round, 6e4);
-});
+}, drawn);
 }
 function tally() {
 var n = rest, a = 0, lt = 0, red = 0, now = Date.now(), Q = window.IssueQ;
@@ -272,7 +274,7 @@ rows.forEach((x) => {
 var i = open[x[1]];
 thread(i).then((cs) => { if (answered(i, cs[cs.length - 1] || null, inv)) { x.ans = true; place(x); } done(); }, done);
 });
-}, (e) => { mk(root, 'p', 'iq-warn', 'GitHub did not answer: ' + e.message + '. These rows are from the build.'); });
+}, (e) => { drawn(); mk(root, 'p', 'iq-warn', 'GitHub did not answer: ' + e.message + '. These rows are from the build.'); });
 if (shut) al.then(() => getJ(RI + '?state=closed&per_page=100&sort=updated')).then((l) => {
 l = l.filter((i) => !i.pull_request && !off(i));
 var d = mk(shut, 'details', 'ny-closed'), h = mk(mk(d, 'summary'), 'h2', null, 'Closed issues ');

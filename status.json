@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-17T08:06:12.048369+00:00",
+ "at": "2026-11-17T08:09:20.080123+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -108,12 +108,39 @@
    "task": "[tools] T-4677 landed work never shows Retry",
    "model": "opus",
    "started": "2026-11-17T07:27:10.371Z",
-   "seconds": 2341,
+   "seconds": 2529,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "pernille",
+   "task": "[tools] T-4701 new-test deflake hook in gate",
+   "model": "opus",
+   "started": "2026-11-17T08:08:59.086Z",
+   "seconds": 20,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-4676 lane wiring for in-place fix",
+   "model": "opus",
+   "started": "2026-11-17T08:09:05.886Z",
+   "seconds": 14,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-4694 nightly run of every suite",
+   "model": "opus",
+   "started": "2026-11-17T08:09:12.090Z",
+   "seconds": 7,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Odalys",
+ "who": "Odalys x3, Pernille",
  "recent": [
   {
    "name": "pernille",
@@ -200,7 +227,7 @@
   "week_pct": 32.81,
   "usage_pct": 54.0,
   "work_pct": 78.2,
-  "read_at": "2026-11-17T08:06:00+00:00",
+  "read_at": "2026-11-17T08:09:00+00:00",
   "running": [
    {
     "lane": "a3",
@@ -263,7 +290,7 @@
  "lock_in": {
   "on": false,
   "pool": 4,
-  "at": "2026-11-17T03:06:00-05:00",
+  "at": "2026-11-17T03:09:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -289,6 +316,15 @@
    "effort": "high"
   },
   {
+   "name": "Pernille",
+   "state": "running",
+   "task": "[tools] T-4701 new-test deflake hook in gate",
+   "model": "opus",
+   "since": "2026-11-17T08:08:59.086Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
    "name": "Idris",
    "state": "next",
    "task": "Idris, P2, from T-4238 (Pernille's review, from T-3900,...",
@@ -300,14 +336,6 @@
    "name": "Ines",
    "state": "next",
    "task": "Ines, P2, from T-1110 (Wrenna,...",
-   "model": null,
-   "since": null,
-   "next": []
-  },
-  {
-   "name": "Pernille",
-   "state": "next",
-   "task": "Pernille, P1, premades and gallery take the age line...",
    "model": null,
    "since": null,
    "next": []
@@ -340,6 +368,36 @@
     "at": "2026-11-17T07:27:10.371Z",
     "o": "c",
     "task": "T-4677"
+   },
+   {
+    "w": "Pernille",
+    "k": "tools",
+    "t": "Keep bad tests from blocking merges",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-17T08:08:59.086Z",
+    "o": "c",
+    "task": "T-4701"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Fix small test failures in place during a land",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-17T08:09:05.886Z",
+    "o": "c",
+    "task": "T-4676"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Pass lands whose red is also on main",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-17T08:09:12.090Z",
+    "o": "c",
+    "task": "T-4694"
    }
   ],
   "src": "plan",
@@ -507,33 +565,34 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-17T08:06:12Z",
+  "at": "2026-11-17T08:09:04Z",
   "s": {
    "T-4190": [
     "merging",
     "Host checks on the Mac mini",
-    1794902412048
+    1794902404440
    ],
    "T-4616": [
     "mergeq",
     "1st to merge",
-    1794900912048
+    1794900904440
    ],
-   "T-4676": [
-    "merging",
-    "Mac tests at the main gate",
-    1794901932048
+   "T-4701": [
+    "merged",
+    "on main 2:50 AM ET",
+    1794901848000,
+    "Pernille"
    ]
   },
   "nm": {
    "T-4190": "Settings and Pro: buy, restore, themes",
    "T-4616": "Order tasks by the files waiting work holds",
-   "T-4676": "Fix small test failures in place during a land"
+   "T-4701": "Keep bad tests from blocking merges"
   },
   "wk": {
    "T-4190": "Idris",
    "T-4616": "Odalys",
-   "T-4676": "Odalys",
+   "T-4701": "Odalys",
    "T-4702": "Pernille",
    "T-4691": "Odalys",
    "T-4674": "Odalys",
@@ -548,7 +607,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-17T08:06:12Z",
+  "at": "2026-11-17T08:09:04Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -560,13 +619,13 @@
     "parked": 19
    },
    "m": {
-    "checking": 6,
-    "inline": 31,
-    "conflicted": 601,
-    "failed": 6,
+    "checking": 9,
+    "inline": 34,
+    "conflicted": 604,
+    "failed": 9,
     "held": null,
-    "retry": 38,
-    "parked": 163
+    "retry": 40,
+    "parked": 166
    },
    "cur": [
     [
@@ -575,7 +634,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     6
+     9
     ]
    ],
    "ld": [
@@ -585,12 +644,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-17T08:05:47Z",
-    "ld": 10.92,
+    "at": "2026-11-17T08:09:05Z",
+    "ld": 6.23,
     "c": 8,
     "sb": 1,
     "dk": [
-     17.6,
+     17.4,
      228.3
     ],
     "ss": [
@@ -642,13 +701,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 1,
+  "main": 4,
   "lanes": 2,
-  "total": 3,
-  "at": "3:06 AM",
+  "total": 6,
+  "at": "3:09 AM",
   "why": "",
-  "at_iso": "2026-11-17T08:06:00+00:00",
+  "at_iso": "2026-11-17T08:09:00+00:00",
   "started": "1:00 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 1, started 1:00 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 3:06 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 4, started 1:00 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 3:09 AM ET</p></section>"
  }
 }

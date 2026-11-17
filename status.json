@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-17T21:48:13.930040+00:00",
+ "at": "2026-11-17T21:51:13.025172+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -123,7 +123,7 @@
    "task": "[tools] T-4753 fail new source-text tests",
    "model": "opus",
    "started": "2026-11-17T21:05:08.821Z",
-   "seconds": 2585,
+   "seconds": 2764,
    "finished": null,
    "effort": "high"
   },
@@ -132,7 +132,7 @@
    "task": "[plan] T-4770 measured release re-estimate",
    "model": "fable",
    "started": "2026-11-17T21:43:45.485Z",
-   "seconds": 268,
+   "seconds": 447,
    "finished": null,
    "effort": "high"
   }
@@ -180,19 +180,19 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 10.0,
+   "pct": 12.0,
    "resets_at": "2026-11-17T19:10:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-17T16:44:10.341371-05:00",
+   "read_at": "2026-11-17T16:50:17.630002-05:00",
    "source": "live",
-   "left": 90.0,
+   "left": 88.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 36.0,
    "resets_at": "2026-11-22T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-17T16:44:10.341371-05:00",
+   "read_at": "2026-11-17T16:50:17.630002-05:00",
    "source": "live",
    "left": 64.0,
    "left_words": "of your weekly allowance left"
@@ -204,7 +204,7 @@
    "read_at": "2026-11-17T15:40:46.947713-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-17T16:44:10.341371-05:00"
+  "read_at": "2026-11-17T16:50:17.630002-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -224,22 +224,8 @@
   "week_pct": 38.85,
   "usage_pct": 52.6,
   "work_pct": 79.4,
-  "read_at": "2026-11-17T21:48:00+00:00",
-  "running": [
-   {
-    "lane": "b2",
-    "task": "T-4744",
-    "w": "Operator",
-    "k": "fix",
-    "t": "Fix a MacBook test job that failed",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-17T16:28:19-05:00",
-    "n": "Jeremy",
-    "d": 1,
-    "src": "plan-b"
-   }
-  ]
+  "read_at": "2026-11-17T21:51:00+00:00",
+  "running": []
  },
  "api_credits": [
   {
@@ -259,7 +245,7 @@
   }
  ],
  "disk": {
-  "free_gb": 16,
+  "free_gb": 27,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -268,14 +254,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-17T16:44:00-05:00",
+   "at": "2026-11-17T16:50:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 6,
-  "at": "2026-11-17T16:48:00-05:00",
+  "at": "2026-11-17T16:51:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -518,47 +504,57 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-17T21:48:07Z",
+  "at": "2026-11-17T21:51:01Z",
   "s": {
    "T-4760": [
     "mergeq",
     "1st to merge",
-    1794944587312
+    1794944641456
    ],
    "T-4188": [
     "mergeq",
     "3rd to merge",
-    1794947047312
+    1794947041456
    ],
    "T-4183": [
     "mergeq",
     "4th to merge",
-    1794948007312
+    1794948001456
    ],
    "T-4763": [
     "mergeq",
     "5th to merge",
-    1794951247312
+    1794952201456
    ],
    "T-4765": [
     "mergeq",
-    "6th to merge",
-    1794951247312
+    "5th to merge",
+    1794952201456
+   ],
+   "T-3773": [
+    "mergeq",
+    "5th to merge",
+    1794952201456
    ],
    "T-4611": [
     "mergeq",
-    "7th to merge",
-    1794952027312
+    "10th to merge",
+    1794952021456
    ],
    "T-4612": [
     "mergeq",
-    "7th to merge",
-    1794952027312
+    "10th to merge",
+    1794952021456
    ],
    "T-4613": [
     "mergeq",
-    "7th to merge",
-    1794952027312
+    "10th to merge",
+    1794952021456
+   ],
+   "T-4744": [
+    "mergeq",
+    "17th to merge",
+    1794952261456
    ]
   },
   "nm": {
@@ -567,9 +563,11 @@
    "T-4183": "The Gallery shows, previews and opens every premade",
    "T-4763": "Keep habit marks when the Page also saves",
    "T-4765": "Fix the When tapped frames' captions and VoiceOver list",
+   "T-3773": "Decide how stuck review fix lines reach the board",
    "T-4611": "Check finished work before it ships",
    "T-4612": "Check finished work before it ships",
-   "T-4613": "Check finished work before it ships"
+   "T-4613": "Check finished work before it ships",
+   "T-4744": "Fix a MacBook test job that failed"
   },
   "wk": {
    "T-4760": "Idris",
@@ -577,34 +575,36 @@
    "T-4183": "Idris",
    "T-4763": "Maren",
    "T-4765": "Maren",
+   "T-3773": "Ines",
    "T-4611": "Pernille",
    "T-4612": "Pernille",
    "T-4613": "Pernille",
+   "T-4744": "Operator",
    "T-4747": "Maren",
    "T-4732": "Odalys",
    "T-4769": "Pernille"
   }
  },
  "ln": {
-  "at": "2026-11-17T21:48:07Z",
+  "at": "2026-11-17T21:51:01Z",
   "mq": {
    "n": {
     "checking": 0,
-    "inline": 8,
+    "inline": 10,
     "conflicted": 1,
     "failed": 0,
     "held": 2,
     "retry": 0,
-    "parked": 9
+    "parked": 8
    },
    "m": {
     "checking": null,
-    "inline": 14,
-    "conflicted": 1083,
+    "inline": 4,
+    "conflicted": 1086,
     "failed": null,
-    "held": 757,
+    "held": 760,
     "retry": null,
-    "parked": 100
+    "parked": 97
    },
    "cur": [],
    "ld": [
@@ -614,16 +614,16 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-17T21:48:07Z",
-    "ld": 1.67,
+    "at": "2026-11-17T21:50:40Z",
+    "ld": 2.16,
     "c": 8,
     "sb": 1,
     "dk": [
-     24.8,
+     27.0,
      228.3
     ],
     "ss": [
-     177.2,
+     177.1,
      953.7
     ],
     "sn": [
@@ -652,15 +652,6 @@
    "e": "high",
    "t": "Work session \u2013 5 tasks",
    "at": "2026-11-17T16:32:12-05:00"
-  },
-  {
-   "w": "Operator",
-   "a": "Jeremy's Account",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session \u2013 1 task",
-   "at": "2026-11-17T16:28:19-05:00"
   }
  ],
  "reply": {
@@ -682,12 +673,12 @@
  ],
  "agents_now": {
   "main": 2,
-  "lanes": 1,
-  "total": 3,
-  "at": "4:48 PM",
+  "lanes": 0,
+  "total": 2,
+  "at": "4:51 PM",
   "why": "",
-  "at_iso": "2026-11-17T21:48:00+00:00",
+  "at_iso": "2026-11-17T21:51:00+00:00",
   "started": "3:40 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 3:40 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 4:48 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 3:40 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 4:51 PM ET</p></section>"
  }
 }

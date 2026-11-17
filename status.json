@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-17T21:17:47.341684+00:00",
+ "at": "2026-11-17T21:20:53.176354+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -33,6 +33,14 @@
    }
   ],
   "done": [
+   {
+    "t": "T-4653",
+    "name": "Give the Shortcut's Pro check a time limit",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794950298
+   },
    {
     "t": "T-4743",
     "name": "Fix a MacBook test job that failed",
@@ -104,35 +112,18 @@
     "steps": [],
     "end": "landed",
     "end_at": 1794937877
-   },
-   {
-    "t": "T-4747",
-    "name": "Show each umbrella's progress and its running steps on Home",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794934215
    }
   ],
-  "landed": 27,
+  "landed": 28,
   "failed": 6
  },
  "workers": [
   {
    "name": "pernille",
-   "task": "[tools] T-4749 source-text tests slice 2",
-   "model": "opus",
-   "started": "2026-11-17T20:41:48.377Z",
-   "seconds": 2158,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "pernille",
    "task": "[tools] T-4753 fail new source-text tests",
    "model": "opus",
    "started": "2026-11-17T21:05:08.821Z",
-   "seconds": 758,
+   "seconds": 944,
    "finished": null,
    "effort": "high"
   },
@@ -141,13 +132,30 @@
    "task": "[site] T-4747 queued-order red fix",
    "model": "opus",
    "started": "2026-11-17T21:09:16.623Z",
-   "seconds": 510,
+   "seconds": 696,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "maren",
+   "task": "[tools] T-4730 lanes.js budget red",
+   "model": "opus",
+   "started": "2026-11-17T21:20:29.913Z",
+   "seconds": 23,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Pernille x2, Maren",
+ "who": "Pernille, Maren x2",
  "recent": [
+  {
+   "name": "pernille",
+   "task": "[tools] T-4749 source-text tests slice 2",
+   "model": "opus",
+   "started": "2026-11-17T20:41:48.377Z",
+   "seconds": null,
+   "finished": "2026-11-17T21:20:07.321000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[tools] T-4732 site_home red on main",
@@ -173,19 +181,19 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 7.0,
+   "pct": 8.0,
    "resets_at": "2026-11-17T19:10:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-17T16:12:54.119713-05:00",
+   "read_at": "2026-11-17T16:18:54.839439-05:00",
    "source": "live",
-   "left": 93.0,
+   "left": 92.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 35.0,
    "resets_at": "2026-11-22T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-17T16:12:54.119713-05:00",
+   "read_at": "2026-11-17T16:18:54.839439-05:00",
    "source": "live",
    "left": 65.0,
    "left_words": "of your weekly allowance left"
@@ -197,7 +205,7 @@
    "read_at": "2026-11-17T15:40:46.947713-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-17T16:12:54.119713-05:00"
+  "read_at": "2026-11-17T16:18:54.839439-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -217,7 +225,7 @@
   "week_pct": 38.85,
   "usage_pct": 52.6,
   "work_pct": 79.4,
-  "read_at": "2026-11-17T21:17:00+00:00",
+  "read_at": "2026-11-17T21:20:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -238,7 +246,7 @@
   }
  ],
  "disk": {
-  "free_gb": 20,
+  "free_gb": 16,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -247,14 +255,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-17T16:12:00-05:00",
+   "at": "2026-11-17T16:18:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 6,
-  "at": "2026-11-17T16:17:00-05:00",
+  "at": "2026-11-17T16:20:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -273,9 +281,9 @@
   {
    "name": "Pernille",
    "state": "running",
-   "task": "[tools] T-4749 source-text tests slice 2",
+   "task": "[tools] T-4753 fail new source-text tests",
    "model": "opus",
-   "since": "2026-11-17T20:41:48.377Z",
+   "since": "2026-11-17T21:05:08.821Z",
    "next": [],
    "effort": "high"
   },
@@ -326,16 +334,6 @@
    {
     "w": "Pernille",
     "k": "tools",
-    "t": "Rewrite or drop outdated tests that read code text",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-17T20:41:48.377Z",
-    "o": "c",
-    "task": "T-4749"
-   },
-   {
-    "w": "Pernille",
-    "k": "tools",
     "t": "Fail any new test that reads code text",
     "m": "opus",
     "e": "high",
@@ -352,6 +350,16 @@
     "at": "2026-11-17T21:09:16.623Z",
     "o": "c",
     "task": "T-4747"
+   },
+   {
+    "w": "Maren",
+    "k": "tools",
+    "t": "Fix a test row that is red on main",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-17T21:20:29.913Z",
+    "o": "c",
+    "task": "T-4730"
    }
   ],
   "src": "plan",
@@ -503,72 +511,50 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-17T21:17:47Z",
+  "at": "2026-11-17T21:20:39Z",
   "s": {
    "T-4760": [
     "mergetest",
     "Xcode checks on the MacBook, 1st to merge",
-    1794950027341
-   ],
-   "T-4743": [
-    "mergeq",
-    "2nd to merge",
-    1794944987341
-   ],
-   "T-4653": [
-    "mergeq",
-    "4th to merge",
-    1794946787341
+    1794950019342
    ],
    "T-4188": [
     "mergeq",
-    "5th to merge",
-    1794947027341
+    "3rd to merge",
+    1794947079342
    ],
    "T-4183": [
     "mergeq",
-    "6th to merge",
-    1794947987341
-   ],
-   "T-4749": [
-    "merging",
-    "Mac tests at the main gate \u00b7 3 groups of tests done, 1 red",
-    1794949607341
+    "4th to merge",
+    1794947979342
    ],
    "T-4747": [
-    "merged",
-    "on main 11:50 AM ET",
-    1794934210000,
-    ""
+    "testing",
+    "its own tests, in its copy",
+    1794950379342
    ]
   },
   "nm": {
    "T-4760": "Report a widget state save truthfully",
-   "T-4743": "Fix a MacBook test job that failed",
-   "T-4653": "Give the Shortcut's Pro check a time limit",
    "T-4188": "Location, steps and notifications work in scripts and...",
    "T-4183": "The Gallery shows, previews and opens every premade",
-   "T-4749": "Rewrite or drop outdated tests that read code text",
    "T-4747": "Show each umbrella's progress and its running steps on Home"
   },
   "wk": {
    "T-4760": "Idris",
-   "T-4743": "Odalys",
-   "T-4653": "Idris",
    "T-4188": "Idris",
    "T-4183": "Idris",
-   "T-4749": "Pernille",
    "T-4747": "Maren",
    "T-4732": "Odalys",
    "T-4769": "Pernille"
   }
  },
  "ln": {
-  "at": "2026-11-17T21:17:47Z",
+  "at": "2026-11-17T21:20:39Z",
   "mq": {
    "n": {
     "checking": 1,
-    "inline": 4,
+    "inline": 2,
     "conflicted": 1,
     "failed": 0,
     "held": 2,
@@ -576,13 +562,13 @@
     "parked": 9
    },
    "m": {
-    "checking": 4,
-    "inline": 56,
-    "conflicted": 1053,
+    "checking": 7,
+    "inline": 48,
+    "conflicted": 1056,
     "failed": null,
-    "held": 726,
+    "held": 729,
     "retry": null,
-    "parked": 70
+    "parked": 73
    },
    "cur": [
     [
@@ -591,18 +577,18 @@
      ],
      "iPhone app tests",
      "MacBook",
-     4
+     7
     ]
    ],
    "ld": [
-    31,
-    "2026-11-17T21:17:27Z"
+    32,
+    "2026-11-17T21:18:18Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-17T21:17:02Z",
-    "ld": 2.19,
+    "at": "2026-11-17T21:19:52Z",
+    "ld": 1.65,
     "c": 8,
     "sb": 2,
     "dk": [
@@ -662,10 +648,10 @@
   "main": 3,
   "lanes": 0,
   "total": 3,
-  "at": "4:17 PM",
+  "at": "4:20 PM",
   "why": "",
-  "at_iso": "2026-11-17T21:17:00+00:00",
+  "at_iso": "2026-11-17T21:20:00+00:00",
   "started": "3:40 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 3:40 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 4:17 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 3:40 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 4:20 PM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-17T14:54:30.868461+00:00",
+ "at": "2026-11-17T14:57:33.339918+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -20,9 +20,34 @@
       "at": 1794927137
      }
     ]
+   },
+   {
+    "t": "T-4605",
+    "steps": [
+     {
+      "s": "testq",
+      "at": 1794895204
+     }
+    ]
    }
   ],
   "done": [
+   {
+    "t": "T-4682",
+    "name": "Hide the Issues page's raw list until it loads",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794927447
+   },
+   {
+    "t": "T-4693",
+    "name": "Research a permanent name for the app",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794927290
+   },
    {
     "t": "T-4600",
     "name": "Check finished work before it ships",
@@ -89,25 +114,9 @@
     "end": "failed",
     "end_at": 1794922033,
     "why": "tests failed"
-   },
-   {
-    "t": "T-4661",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794920754
-   },
-   {
-    "t": "T-4663",
-    "name": "Completion ignores letter case and small typos",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "failed",
-    "end_at": 1794920433,
-    "why": "tests failed"
    }
   ],
-  "landed": 29,
+  "landed": 27,
   "failed": 6
  },
  "workers": [
@@ -116,7 +125,7 @@
    "task": "[build] T-0687 land parked extension work",
    "model": "opus",
    "started": "2026-11-17T14:21:15.257Z",
-   "seconds": 1995,
+   "seconds": 2178,
    "finished": null,
    "effort": "high"
   },
@@ -125,7 +134,7 @@
    "task": "[build] T-0289 land parked state module",
    "model": "opus",
    "started": "2026-11-17T14:21:25.112Z",
-   "seconds": 1985,
+   "seconds": 2168,
    "finished": null,
    "effort": "high"
   }
@@ -184,7 +193,7 @@
   "week_pct": 36.07,
   "usage_pct": 52.2,
   "work_pct": 79.0,
-  "read_at": "2026-11-17T14:54:00+00:00",
+  "read_at": "2026-11-17T14:58:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -309,7 +318,7 @@
  "lock_in": {
   "on": false,
   "pool": 5,
-  "at": "2026-11-17T09:54:00-05:00",
+  "at": "2026-11-17T09:58:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -548,106 +557,80 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-17T14:54:30Z",
+  "at": "2026-11-17T14:57:33Z",
   "s": {
-   "T-4693": [
-    "mergeq",
-    "1st to merge",
-    1794926850868
-   ],
    "T-4656": [
     "mergetest",
-    "Xcode checks on the MacBook, 2nd to merge",
-    1794927150868
-   ],
-   "T-4599": [
-    "mergeq",
-    "3rd to merge",
-    1794926670868
-   ],
-   "T-4600": [
-    "mergeq",
-    "4th to merge",
-    1794926670868
+    "Xcode checks on the MacBook, 1st to merge",
+    1794927153339
    ],
    "T-1882": [
     "merging",
-    "Mac tests at the main gate",
-    1794927270868
+    "Mac tests at the main gate \u00b7 5 groups of tests done",
+    1794927273339
    ],
    "T-0289": [
     "merging",
-    "Mac tests at the main gate",
-    1794927270868
-   ],
-   "T-4631": [
-    "testing",
-    "Mac Mini \u00b7 test",
-    null
-   ],
-   "T-4668": [
-    "testing",
-    "Mac Mini \u00b7 test",
-    null
-   ],
-   "T-4671": [
-    "testing",
-    "Mac Mini \u00b7 test",
-    null
+    "Mac tests at the main gate \u00b7 3 groups of tests done",
+    1794927273339
    ],
    "T-0687": [
     "testing",
     "its own tests, in its copy",
-    1794927270868
+    1794927273339
+   ],
+   "T-4682": [
+    "merged",
+    "on main 9:54 AM ET",
+    1794927298000,
+    ""
+   ],
+   "T-4693": [
+    "merged",
+    "on main 9:54 AM ET",
+    1794927285000,
+    ""
    ]
   },
   "nm": {
-   "T-4693": "Research a permanent name for the app",
    "T-4656": "Let a cleaned script return to the widget on resend",
-   "T-4599": "Check finished work before it ships",
-   "T-4600": "Check finished work before it ships",
    "T-1882": "Count a fetch as good when the data arrived",
    "T-0289": "Build the widget state module for scripts",
-   "T-4631": "Place premades in the app when their imports are refused",
-   "T-4668": "Put the bank, tax and name dates in the plan",
-   "T-4671": "Clear the app's sentences under the approved voice",
-   "T-0687": "Run network fetches inside the extension on the Simulator"
+   "T-0687": "Run network fetches inside the extension on the Simulator",
+   "T-4682": "Hide the Issues page's raw list until it loads",
+   "T-4693": "Research a permanent name for the app"
   },
   "wk": {
-   "T-4693": "Wrenna",
    "T-4656": "Idris",
-   "T-4599": "Odalys",
-   "T-4600": "Pernille",
    "T-1882": "Idris",
    "T-0289": "Pernille",
-   "T-4631": "Idris",
-   "T-4668": "Ines",
-   "T-4671": "Maren",
    "T-0687": "Idris",
+   "T-4682": "Odalys",
+   "T-4693": "Wrenna",
    "T-4417": "Idris",
    "T-4416": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-17T14:54:30Z",
+  "at": "2026-11-17T14:57:33Z",
   "mq": {
    "n": {
     "checking": 1,
-    "inline": 3,
+    "inline": 0,
     "conflicted": 1,
     "failed": 0,
     "held": 1,
     "retry": 1,
-    "parked": 14
+    "parked": 12
    },
    "m": {
-    "checking": 2,
-    "inline": 10,
-    "conflicted": 669,
+    "checking": 5,
+    "inline": null,
+    "conflicted": 673,
     "failed": null,
-    "held": 925,
-    "retry": 39,
-    "parked": 464
+    "held": 928,
+    "retry": 42,
+    "parked": 551
    },
    "cur": [
     [
@@ -656,22 +639,22 @@
      ],
      "iPhone app tests, sent and waiting its turn",
      "MacBook",
-     2
+     5
     ]
    ],
    "ld": [
-    16,
-    "2026-11-17T14:54:23Z"
+    18,
+    "2026-11-17T14:57:27Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-17T14:54:31Z",
-    "ld": 0.9,
+    "at": "2026-11-17T14:57:02Z",
+    "ld": 0.96,
     "c": 8,
     "sb": 1,
     "dk": [
-     23.8,
+     21.6,
      228.3
     ],
     "ss": [
@@ -762,10 +745,10 @@
   "main": 2,
   "lanes": 4,
   "total": 6,
-  "at": "9:54 AM",
+  "at": "9:58 AM",
   "why": "",
-  "at_iso": "2026-11-17T14:54:00+00:00",
+  "at_iso": "2026-11-17T14:58:00+00:00",
   "started": "9:17 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 2, started 9:17 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 9:54 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 2, started 9:17 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 9:58 AM ET</p></section>"
  }
 }

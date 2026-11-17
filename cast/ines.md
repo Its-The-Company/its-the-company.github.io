@@ -31,14 +31,14 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - Founded the company on 2026-10-22 (Day 1). I report to the Investors. Day N = 2026-10-21 + N.
 - Lesson: hold a pre-written rule to its words when the evidence lands close ("no input" is not "no answer"); the point of writing it first was to not bend it after. Its words = the committed entry (OPT-049).
 - pywidget build — product chosen 2026-10-25; v1 scope, money path, hiring, board state at build start
-- queue audit T-4092 — T-4502 done 11-15: 12 rows held, holders named; parents take child priority; next T-4105
+- <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">Ruling</span> 11-17 6:45 AM (an Investor): 103 unbuilt process lines archived via ledger_row+queue_apply; menu documents/process-changes-not-built.md; process work only on an Investor's ask. Quarantine fix lines stay (tools re-add). T-4103 waits on my T-4105 (queue audit).
 - task process redesign T-4122 — card, one checker, feature unit, fitted iPhone group size; who builds, dates
-- efficiency review T-4124 — a metrics row's `seconds` can be its whole run's time on every row; queue a note before writing that it exists
+- efficiency review T-4124 — a row's `seconds` can be the whole run's time
 - account fixes T-4305 — unified session: no; #303 pending
 - 1.0 = Builder + Pages + widget taps/buttons (#270, #272, #41). Likely Thu 2027-07-08 (T-4543); ADR-011 as accepted: +3 days, Idris to size (T-4551). Range: ops/plans/T-4266-release-range.py. B-staged Pro stands.
 - Board: never pre-number lines (`add` assigns IDs, T-2354); grep the board before `add`; stage my lines only (T-3204). A <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> `add` writes main's live board; card: no Base/By (pass --by), one Done-when kind + docs page (T-4672).
 - Showcase premades plan: ops/plans/T-4672-showcase-premades.md (Pro tag model #41 12:27 AM 11-17; themes split + Pro words are proposals).
-- Standing lessons: run `date` before every stamp; grep my own proposals and git log before <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">ruling</span>; read a new rule against the ADR it touches; when two fixes interact, check the bound under both. Never write "ships as is" without a grep at HEAD (T-0791: an unbuilt BGAppRefresh went into the guide as shipped).
+- Standing lessons: run `date` before every stamp; grep my own proposals and git log before ruling; read a new rule against the ADR it touches; when two fixes interact, check the bound under both. Never write "ships as is" without a grep at HEAD (T-0791: an unbuilt BGAppRefresh went into the guide as shipped).
 - Never route round a refusal by copying the refused content another way (11-05 E1 route, owned 11-15).
 - T-3892: a session calling a tool's inner function after its check said STOP is what a classifier should refuse. A fix folded into an approved proposal keeps checks exact, never looser than what the Investors saw.
 - A packet's premise is a claim (T-3585): count from the gate's own log. "Live" may be only a <span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">parked</span> ref, "back to to do" may already be on HEAD: merge-base --is-ancestor both ways (T-3864, T-4096). Outbox ticks can be lost: board-grep a "ticked" ID.

@@ -37,7 +37,6 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 ## Open (2026-11-16)
 
-- T-4103 31b4b962fb (11-14): open, notes in archive.md. T-4443 slice 2 (11-16): five card rules in queue_check; dry run ops/queue_audit/dry-run-2026-11-16-t4443.txt (changed_under 45, 11 alone). Owed: T-4459; decision 29 is answered (docs = done condition), card does not ask it yet.
 - T-4539 (11-15 20:4x): own-first 'hold' idled b's slots (13 b ticks with room, 3 a); now such a slot takes new work ("own_first_hold": true = old). Disk gate is T-4537. Owed: T-4535 (xc_sim.py reads board raw, my T-3712; board_notes_readers red on main).
 - T-4225 5e8875519d + dd94ec84dc (11-16): Home cards the build never saw read stg.wk (owner from board/archive); "X with Y, P0" heads name X. Owed: tick after land.
 - T-4475 (11-16): stopped twice by refusals (security-guard on a heredoc with git verbs; classifier on a test heredoc). Built work in scratch, ops/plans/T-4475-handoff.md. Owed: test rows, then commit.
@@ -49,11 +48,12 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-4655 (11-16): heavy_slot.py built in scratch T-4655-odalys/wt; land cut at 20 min (load 450), cmd in board_notes/T-4655.md. Owed: land, tick, seen-line (p90<4 6 h). T-4667: fixture disk scans leak.
 
 - T-4676 done 11-17 (38e5139b7a gate, a0a0d97c12 lanes + mq gate; ticked). Lane fix rides in sent_back reason; session runs `land_fix.py fixed T`. Count 22/67 narrow. Owed: #41 count post (Operator); first live lane fix to watch. Guard refuses any command holding the claude -p call, even a grep.
-- T-4677 (11-17): (a)(c)(d) built in scratch T-4677-odalys/wt, not landed (58/109 suites green at load 150-290); land cmd on line notes. (b) needs personal_land.sh (T-4676). park_stats still counts landed refs.
-- T-4694 done 11-17 (d00dad9099): nightly fix lines live in nightly_suites.py; a second runner was refused as duplicate. Check first night's lines.
+- T-4718 (11-17): lift carries a task's tick to its spare; park_stats/parked_count count landed work landed (lifecycle test). Owed: watch a live lift land its tick. T-4677 landed ddbf69c134.
+- T-4694 done 11-17 (d00dad9099): nightly fix lines in nightly_suites.py. Check first night.
+- T-4716 (11-17): OPT-106 due 12-03; dup ids still happen (114, 125). Owed: T-4721 land opt_id_clash via main_gate, set started.
+- T-4701 (11-17): expiry daily (b1b7b28870). 6:40 AM land 'load' was test_health._records reading the copy's own test-runs.jsonl (flat 360 s < pool 405 s); fixed to read both. Owed: pool land (Operator), worst offenders, #41 count.
 
 ## Lessons
-- T-4446 (11-14): records_round.py, one records commit per 900 s (archive.md). Land part T-4457 on main c0048bc661 11-16 (T-3995 batch). Owed: 7-day count <= 672, no 'lane records applied'; tick.
 - `grep -cs` prints nothing for a missing file, so `[ "$(grep -cs ..)" = 0 ]` fails; count via `cat f 2>/dev/null | grep -c`.
 {% endraw %}
 

@@ -14,8 +14,8 @@ description: "Analyses and dataset notes written outside the product docs, newes
 <div class="ix">
 
 <h2 id="documents">Documents</h2>
-<p class="meta">1 write-up, most recently updated first.</p>
-<div class="cards"><a class="card" href="{{ '/documents/how-work-flows.html' | relative_url }}"><span class="meta"><span class="kind blue">Analysis</span><span>Odalys</span><span>Day 14 · Wed Nov 4, 12:20 AM ET</span></span><b>How work flows through the company</b><p>One page, with diagrams, of how a task goes from the to-do list to finished work on main, what runs in the background every 15 minutes, and where…</p></a></div>
+<p class="meta">2 write-ups, most recently updated first.</p>
+<div class="cards"><a class="card" href="{{ '/documents/process-changes-not-built.html' | relative_url }}"><span class="meta"><span class="kind grey">Menu</span><span>Ines</span><span>Day 27 · Tue Nov 17, 7:02 AM ET</span></span><b>Process changes we have not built</b><p>A menu of the 103 changes to the company's own machinery that left the task list on November 17, with what each would do, what it would save, its…</p></a><a class="card" href="{{ '/documents/how-work-flows.html' | relative_url }}"><span class="meta"><span class="kind blue">Analysis</span><span>Odalys</span><span>Day 14 · Wed Nov 4, 12:20 AM ET</span></span><b>How work flows through the company</b><p>One page, with diagrams, of how a task goes from the to-do list to finished work on main, what runs in the background every 15 minutes, and where…</p></a></div>
 
 
 

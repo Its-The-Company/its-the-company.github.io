@@ -11,7 +11,7 @@ description: "This file is the hand-over for the work in ops/plans/system-audit-
 <div class="doc-body" markdown="1">
 
 {% raw %}
-STATUS: open
+STATUS: done
 
 
 This file is the hand-over for the work in [`ops/plans/system-audit-2026-11.md`](system-audit-2026-11.html). An Investor's instruction (an Investor, 2026-11-10 8:10 AM, `log/rulings.md`) says the work goes on until it is done or a usage limit is reached, and that it must be able to restart from the main thread (#41). While the first line above reads `STATUS: open`, a work session takes this file as its first job. When every item under "The list" is done or handed to the Investors, set the first line to `STATUS: done` and say so on #41.
@@ -31,6 +31,8 @@ Kept by whoever is doing the work. Update "Where it stands" each time something 
 - The session memory has the traps met so far: `gate-and-hub-file-traps.md`, `gh-edit-by-comment-id.md`.
 
 ## Where it stands
+
+Closed: 2026-11-17 7:1x AM ET by the Operator, under an Investor's rulings 6:35 AM and 6:45 AM 11-17 (log/rulings.md): the last two pieces landed (T-4701 5d67d1033b and c57b41eea7; T-4718 39e2668b26); every unbuilt process change left the board (Ines, 4fb597a472, 103 lines archived) and is listed in documents/process-changes-not-built.md, built only at an Investor's request. The company works on the app from here.
 
 Last updated: 2026-11-16 7:0x PM ET, by the 3:35 PM Opus work session (see "In flight"). Before: 2026-11-11 3:3x PM ET, by the 12:52 PM Opus work session. Before: 12:0x PM ET, by the Opus work session at its 3-hour close (see the item lines: 5, 16, 20, 24 and Home updated today). Before: 2026-11-10 10:06 AM ET, by the Fable session, at its hand-off (Fable's weekly limit; the reset was asked in #258).
 

@@ -1,10 +1,10 @@
 {
  "schema": 1,
- "at": "2026-11-17T12:15:00.182272+00:00",
+ "at": "2026-11-17T12:21:58.397143+00:00",
  "session": {
-  "active": true,
-  "kind": "work",
-  "started": "2026-11-17T04:18:09-05:00",
+  "active": false,
+  "kind": "",
+  "started": null,
   "flow": [],
   "done": [
    {
@@ -170,13 +170,99 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": null,
+ "next_tick": "2026-11-17T04:31:46-05:00",
  "personal": {
   "week_pct": 33.55,
-  "usage_pct": 52.8,
-  "work_pct": 78.5,
-  "read_at": "2026-11-17T12:15:00+00:00",
-  "running": []
+  "usage_pct": 51.2,
+  "work_pct": 77.8,
+  "read_at": "2026-11-17T12:24:00+00:00",
+  "running": [
+   {
+    "lane": "a",
+    "task": "T-4188",
+    "w": "Idris",
+    "k": "build",
+    "t": "Location, steps and notifications work in scripts and widgets",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-17T07:19:52-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a3",
+    "task": "T-4661",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Free disk space and cut the Mac mini's load",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-17T07:19:52-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a3",
+    "task": "T-4618",
+    "w": "Odalys",
+    "k": "measure",
+    "t": "Check the raised merge limit after two days",
+    "m": "sonnet",
+    "e": "medium",
+    "at": "2026-11-17T07:19:52-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "b",
+    "task": "T-4678",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Close the iPhone premade feature and free its steps",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-17T07:20:06-05:00",
+    "n": "Jeremy",
+    "d": 1,
+    "src": "plan-b"
+   },
+   {
+    "lane": "b",
+    "task": "T-4732",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Fix a test row that is red on main",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-17T07:20:06-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
+   },
+   {
+    "lane": "b2",
+    "task": "T-4192",
+    "w": "Pernille",
+    "k": "build",
+    "t": "Python in the app: smaller bundle, installable packages",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-17T07:20:06-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
+   },
+   {
+    "lane": "b3",
+    "task": "T-4193",
+    "w": "Ines",
+    "k": "build",
+    "t": "TestFlight builds and the App Store page are ready",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-17T07:20:05-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
+   }
+  ]
  },
  "api_credits": [
   {
@@ -196,7 +282,7 @@
   }
  ],
  "disk": {
-  "free_gb": 20,
+  "free_gb": 22,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -205,14 +291,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-17T07:11:00-05:00",
+   "at": "2026-11-17T07:17:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 5,
-  "at": "2026-11-17T07:15:00-05:00",
+  "at": "2026-11-17T07:24:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -220,13 +306,9 @@
    "b": "double-spread"
   }
  },
- "next_tick_why": "session",
+ "next_tick_why": "last_tick",
  "idle": null,
- "pool": {
-  "why": "Double Spread: 68% of the week left, paced to last until Wed 14:00, the week's halfway point; the machine allows 2 (new work waits: 24 tasks wait to merge (limit 20): 2 agents finish and merge...",
-  "n": 2,
-  "at": "2026-11-17T04:16:46.866705-05:00"
- },
+ "pool": null,
  "lanes": [
   {
    "name": "Idris",
@@ -279,7 +361,6 @@
  ],
  "tasks": {
   "run": [],
-  "src": "plan",
   "open": [
    {
     "w": "Idris",
@@ -374,35 +455,6 @@
    "wait": 28,
    "blocked": 31,
    "you": 8
-  },
-  "fin": {
-   "n": 6,
-   "rows": [
-    [
-     "T-4718",
-     "Land a task's records with..."
-    ],
-    [
-     "T-4701",
-     "Keep bad tests from blocking..."
-    ],
-    [
-     "T-4716",
-     "Measure or re-date the..."
-    ],
-    [
-     "T-4506",
-     "Site suites that fail only..."
-    ],
-    [
-     "T-4320",
-     "Name the accounts Evan's and..."
-    ],
-    [
-     "T-4680",
-     "Write the chosen visual..."
-    ]
-   ]
   }
  },
  "qr": [
@@ -444,19 +496,11 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-17T12:15:00Z",
-  "s": {},
-  "wk": {
-   "T-4718": "Odalys",
-   "T-4701": "Odalys",
-   "T-4716": "Odalys",
-   "T-4506": "Odalys",
-   "T-4320": "Odalys",
-   "T-4680": "Maren"
-  }
+  "at": "2026-11-17T12:21:58Z",
+  "s": {}
  },
  "ln": {
-  "at": "2026-11-17T12:15:00Z",
+  "at": "2026-11-17T12:21:58Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -470,11 +514,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 850,
+    "conflicted": 857,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 389
+    "parked": 396
    },
    "cur": [],
    "ld": [
@@ -484,12 +528,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-17T12:14:15Z",
-    "ld": 0.85,
+    "at": "2026-11-17T12:21:59Z",
+    "ld": 1.09,
     "c": 8,
     "sb": 1,
     "dk": [
-     21.8,
+     21.1,
      228.3
     ],
     "ss": [
@@ -516,12 +560,48 @@
  "operators": [
   {
    "w": "Operator",
-   "a": "Main plan",
+   "a": "Evan's Account",
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 3 tasks",
-   "at": "2026-11-17T06:59:02-05:00"
+   "t": "Work session \u2013 1 task",
+   "at": "2026-11-17T07:19:51-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Evan's Account",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session \u2013 2 tasks",
+   "at": "2026-11-17T07:19:52-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Jeremy's Account",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session \u2013 2 tasks",
+   "at": "2026-11-17T07:20:06-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Jeremy's Account",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session \u2013 1 task",
+   "at": "2026-11-17T07:20:06-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Jeremy's Account",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session \u2013 1 task",
+   "at": "2026-11-17T07:20:05-05:00"
   }
  ],
  "reply": {
@@ -534,7 +614,6 @@
   "queue_text",
   "recent",
   "task_done",
-  "fin_short",
   "task_title",
   "done_text",
   "task_open",
@@ -543,12 +622,12 @@
  ],
  "agents_now": {
   "main": 0,
-  "lanes": 0,
-  "total": 0,
-  "at": "7:15 AM",
-  "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
-  "at_iso": "2026-11-17T12:15:00+00:00",
-  "started": "4:18 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0, started 4:18 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 7:15 AM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
+  "lanes": 5,
+  "total": 5,
+  "at": "7:24 AM",
+  "why": "",
+  "at_iso": "2026-11-17T12:24:00+00:00",
+  "started": "",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 7:24 AM ET</p></section>"
  }
 }

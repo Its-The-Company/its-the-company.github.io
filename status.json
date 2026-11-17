@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-17T01:23:49.548294+00:00",
+ "at": "2026-11-17T01:26:57.329532+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -108,7 +108,7 @@
    "task": "[tools] T-4655 heavy test run cap",
    "model": "opus",
    "started": "2026-11-17T00:50:34.871Z",
-   "seconds": 1994,
+   "seconds": 2182,
    "finished": null,
    "effort": "high"
   }
@@ -167,7 +167,7 @@
   "week_pct": 23.56,
   "usage_pct": 47.5,
   "work_pct": 77.0,
-  "read_at": "2026-11-17T01:23:00+00:00",
+  "read_at": "2026-11-17T01:27:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -193,31 +193,6 @@
     "at": "2026-11-16T19:37:34-05:00",
     "n": "Evan",
     "d": 1,
-    "src": "plan-a"
-   },
-   {
-    "lane": "a2",
-    "task": "T-3718",
-    "w": "Pernille",
-    "k": "review",
-    "t": "Check finished work before it ships",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-16T20:16:07-05:00",
-    "n": "Evan",
-    "d": 1,
-    "src": "plan-a"
-   },
-   {
-    "lane": "a2",
-    "task": "T-4598",
-    "w": "Pernille",
-    "k": "review",
-    "t": "Check finished work before it ships",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-16T20:16:07-05:00",
-    "n": "Evan",
     "src": "plan-a"
    },
    {
@@ -264,7 +239,7 @@
   }
  ],
  "disk": {
-  "free_gb": 17,
+  "free_gb": 16,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -273,14 +248,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-16T20:19:00-05:00",
+   "at": "2026-11-16T20:26:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 4,
-  "at": "2026-11-16T20:23:00-05:00",
+  "at": "2026-11-16T20:27:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -508,52 +483,57 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-17T01:23:33Z",
+  "at": "2026-11-17T01:26:46Z",
   "s": {
    "T-4628": [
     "merging",
     "Host checks on the Mac mini",
-    1794878133657
+    1794878146406
    ],
    "T-4587": [
     "mergeq",
     "1st to merge",
-    1794878433657
+    1794878446406
    ],
    "T-4617": [
     "mergeq",
     "2nd to merge",
-    1794877893657
+    1794877846406
    ],
    "T-3765": [
     "mergeq",
     "3rd to merge",
-    1794874473657
+    1794874486406
    ],
    "T-4642": [
     "mergetest",
     "Xcode checks on the MacBook, 4th to merge",
-    1794878133657
+    1794878146406
    ],
    "T-4024": [
     "mergeq",
     "6th to merge",
-    1794878433657
+    1794878446406
    ],
    "T-4597": [
     "mergeq",
     "6th to merge",
-    1794878433657
+    1794878446406
    ],
    "T-3718": [
     "mergeq",
     "8th to merge",
-    1794878313657
+    1794878326406
+   ],
+   "T-4598": [
+    "mergeq",
+    "11th to merge",
+    1794878806406
    ],
    "T-4655": [
     "testing",
     "its own tests, in its copy",
-    1794878373657
+    1794878326406
    ]
   },
   "nm": {
@@ -565,6 +545,7 @@
    "T-4024": "Check finished work before it ships",
    "T-4597": "Check finished work before it ships",
    "T-3718": "Check finished work before it ships",
+   "T-4598": "Check finished work before it ships",
    "T-4655": "Cap how many heavy test runs share the Mac mini"
   },
   "wk": {
@@ -576,15 +557,16 @@
    "T-4024": "Pernille",
    "T-4597": "Odalys",
    "T-3718": "Pernille",
+   "T-4598": "Pernille",
    "T-4655": "Odalys"
   }
  },
  "ln": {
-  "at": "2026-11-17T01:23:33Z",
+  "at": "2026-11-17T01:26:46Z",
   "mq": {
    "n": {
     "checking": 2,
-    "inline": 6,
+    "inline": 7,
     "conflicted": 1,
     "failed": 0,
     "held": 0,
@@ -592,13 +574,13 @@
     "parked": 12
    },
    "m": {
-    "checking": 8,
-    "inline": 4,
-    "conflicted": 539,
+    "checking": 11,
+    "inline": 6,
+    "conflicted": 543,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 839
+    "parked": 842
    },
    "cur": [
     [
@@ -607,7 +589,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     8
+     11
     ],
     [
      [
@@ -615,7 +597,7 @@
      ],
      "iPhone app tests, sent and waiting its turn",
      "MacBook",
-     8
+     11
     ]
    ],
    "ld": [
@@ -625,16 +607,16 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-17T01:23:35Z",
-    "ld": 19.46,
+    "at": "2026-11-17T01:26:49Z",
+    "ld": 19.42,
     "c": 8,
     "sb": 1,
     "dk": [
-     16.2,
+     16.4,
      228.3
     ],
     "ss": [
-     181.8,
+     181.6,
      953.7
     ],
     "sn": [
@@ -679,15 +661,6 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session",
-   "at": "2026-11-16T20:16:06-05:00"
-  },
-  {
-   "w": "Operator",
-   "a": "Evan's Account",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
    "t": "Work session \u2013 2 tasks",
    "at": "2026-11-16T20:16:07-05:00"
   }
@@ -710,12 +683,12 @@
  ],
  "agents_now": {
   "main": 1,
-  "lanes": 3,
-  "total": 4,
-  "at": "8:23 PM",
+  "lanes": 2,
+  "total": 3,
+  "at": "8:27 PM",
   "why": "",
-  "at_iso": "2026-11-17T01:23:00+00:00",
+  "at_iso": "2026-11-17T01:27:00+00:00",
   "started": "7:47 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 1, started 7:47 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 8:23 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 1, started 7:47 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 8:27 PM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-17T15:30:37.481685+00:00",
+ "at": "2026-11-17T15:33:40.966699+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -22,17 +22,6 @@
     ]
    },
    {
-    "t": "T-4663",
-    "name": "Completion ignores letter case and small typos",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1794927973
-     }
-    ]
-   },
-   {
     "t": "T-4605",
     "steps": [
      {
@@ -43,6 +32,23 @@
    }
   ],
   "done": [
+   {
+    "t": "T-4745",
+    "name": "Fix a MacBook test job that failed",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794929494
+   },
+   {
+    "t": "T-4663",
+    "name": "Completion ignores letter case and small typos",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "failed",
+    "end_at": 1794929482,
+    "why": "tests failed"
+   },
    {
     "t": "T-4682",
     "name": "Hide the Issues page's raw list until it loads",
@@ -108,27 +114,10 @@
     "steps": [],
     "end": "landed",
     "end_at": 1794923245
-   },
-   {
-    "t": "T-4668",
-    "name": "Put the bank, tax and name dates in the plan",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794923245
-   },
-   {
-    "t": "T-4663",
-    "name": "Completion ignores letter case and small typos",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "failed",
-    "end_at": 1794922033,
-    "why": "tests failed"
    }
   ],
-  "landed": 27,
-  "failed": 6
+  "landed": 28,
+  "failed": 7
  },
  "workers": [
   {
@@ -136,7 +125,7 @@
    "task": "[build] T-0289 land parked state module",
    "model": "opus",
    "started": "2026-11-17T14:21:25.112Z",
-   "seconds": 4152,
+   "seconds": 4335,
    "finished": null,
    "effort": "high"
   },
@@ -145,7 +134,7 @@
    "task": "[build] T-1882 finish landing parked work",
    "model": "opus",
    "started": "2026-11-17T15:07:11.689Z",
-   "seconds": 1405,
+   "seconds": 1589,
    "finished": null,
    "effort": "high"
   }
@@ -213,7 +202,7 @@
   "week_pct": 36.07,
   "usage_pct": 52.2,
   "work_pct": 79.0,
-  "read_at": "2026-11-17T15:30:00+00:00",
+  "read_at": "2026-11-17T15:33:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -317,14 +306,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-17T10:26:00-05:00",
+   "at": "2026-11-17T10:32:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 5,
-  "at": "2026-11-17T10:30:00-05:00",
+  "at": "2026-11-17T10:33:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -563,47 +552,22 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-17T15:30:37Z",
+  "at": "2026-11-17T15:33:29Z",
   "s": {
-   "T-4663": [
-    "merging",
-    "Host checks on the Mac mini",
-    1794927997481
-   ],
    "T-4656": [
     "mergetest",
     "Xcode checks on the MacBook, 1st to merge",
-    1794927157481
+    1794927149079
    ],
    "T-4513": [
     "merging",
     "Mac tests at the main gate",
-    1794927637481
+    1794927629079
    ],
    "T-0289": [
     "merging",
     "Mac tests at the main gate",
-    1794929077481
-   ],
-   "T-4668": [
-    "testing",
-    "Mac Mini \u00b7 test",
-    null
-   ],
-   "T-4671": [
-    "testing",
-    "Mac Mini \u00b7 test",
-    null
-   ],
-   "T-4744": [
-    "testing",
-    "Mac Mini \u00b7 test",
-    null
-   ],
-   "T-4745": [
-    "testing",
-    "Mac Mini \u00b7 test",
-    null
+    1794929609079
    ],
    "T-3217": [
     "testing",
@@ -613,86 +577,76 @@
    "T-0687": [
     "testing",
     "its own tests, in its copy",
-    1794928177481
+    1794928169079
+   ],
+   "T-4745": [
+    "merged",
+    "on main 10:30 AM ET",
+    1794929449000,
+    ""
    ]
   },
   "nm": {
-   "T-4663": "Completion ignores letter case and small typos",
    "T-4656": "Let a cleaned script return to the widget on resend",
    "T-4513": "Show the SSD's free space on the Machine bubble",
    "T-0289": "Build the widget state module for scripts",
-   "T-4668": "Put the bank, tax and name dates in the plan",
-   "T-4671": "Clear the app's sentences under the approved voice",
-   "T-4744": "Fix a MacBook test job that failed",
-   "T-4745": "Fix a MacBook test job that failed",
    "T-3217": "Fix the three red tests before build 3",
-   "T-0687": "Run network fetches inside the extension on the Simulator"
+   "T-0687": "Run network fetches inside the extension on the Simulator",
+   "T-4745": "Fix a MacBook test job that failed"
   },
   "wk": {
-   "T-4663": "Idris",
    "T-4656": "Idris",
    "T-4513": "Maren",
    "T-0289": "Pernille",
-   "T-4668": "Ines",
-   "T-4671": "Maren",
-   "T-4744": "Operator",
-   "T-4745": "Odalys",
    "T-3217": "Idris",
    "T-0687": "Idris",
+   "T-4745": "Odalys",
    "T-4417": "Idris",
    "T-4416": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-17T15:30:37Z",
+  "at": "2026-11-17T15:33:29Z",
   "mq": {
    "n": {
-    "checking": 2,
+    "checking": 1,
     "inline": 0,
     "conflicted": 1,
-    "failed": 0,
+    "failed": 1,
     "held": 1,
     "retry": 0,
     "parked": 14
    },
    "m": {
-    "checking": 31,
+    "checking": 41,
     "inline": null,
-    "conflicted": 706,
-    "failed": null,
-    "held": 961,
+    "conflicted": 708,
+    "failed": 2,
+    "held": 964,
     "retry": null,
-    "parked": 500
+    "parked": 503
    },
    "cur": [
-    [
-     [
-      "T-4663"
-     ],
-     "Mac tests",
-     "Mac mini",
-     24
-    ],
     [
      [
       "T-4656"
      ],
      "iPhone app tests, sent and waiting its turn",
      "MacBook",
-     38
+     41
     ]
    ],
    "ld": [
-    18,
-    "2026-11-17T14:57:27Z"
+    19,
+    "2026-11-17T15:31:34Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-17T15:29:47Z",
-    "ld": 4.72,
+    "at": "2026-11-17T15:33:05Z",
+    "ld": 3.44,
     "c": 8,
-    "sb": 2,
+    "sb": 1,
     "dk": [
      20.4,
      228.3
@@ -702,7 +656,6 @@
      953.7
     ],
     "sn": [
-     "iPhone 18 Pro",
      "iPhone 17e"
     ]
    },
@@ -786,10 +739,10 @@
   "main": 2,
   "lanes": 4,
   "total": 6,
-  "at": "10:30 AM",
+  "at": "10:33 AM",
   "why": "",
-  "at_iso": "2026-11-17T15:30:00+00:00",
+  "at_iso": "2026-11-17T15:33:00+00:00",
   "started": "9:17 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 2, started 9:17 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 10:30 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 2, started 9:17 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 10:33 AM ET</p></section>"
  }
 }

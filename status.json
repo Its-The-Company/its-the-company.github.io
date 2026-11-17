@@ -1,44 +1,11 @@
 {
  "schema": 1,
- "at": "2026-11-17T01:48:20.918968+00:00",
+ "at": "2026-11-17T01:51:29.537165+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-16T19:47:08-05:00",
   "flow": [
-   {
-    "t": "T-3718",
-    "name": "Check finished work before it ships",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "landing",
-      "at": 1794880068
-     }
-    ]
-   },
-   {
-    "t": "T-4598",
-    "name": "Check finished work before it ships",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "landing",
-      "at": 1794880068
-     }
-    ]
-   },
-   {
-    "t": "T-4024",
-    "name": "Check finished work before it ships",
-    "acct": "Personal b",
-    "steps": [
-     {
-      "s": "landing",
-      "at": 1794880024
-     }
-    ]
-   },
    {
     "t": "T-4617",
     "name": "Run quick checks before a land takes the Xcode slot",
@@ -52,6 +19,30 @@
    }
   ],
   "done": [
+   {
+    "t": "T-4598",
+    "name": "Check finished work before it ships",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794880229
+   },
+   {
+    "t": "T-4024",
+    "name": "Check finished work before it ships",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794880214
+   },
+   {
+    "t": "T-3718",
+    "name": "Check finished work before it ships",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794880135
+   },
    {
     "t": "T-4587",
     "name": "Switch feature sessions on for every app feature",
@@ -106,34 +97,10 @@
     "steps": [],
     "end": "landed",
     "end_at": 1794874441
-   },
-   {
-    "t": "T-4541",
-    "name": "Check finished work before it ships",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794874431
-   },
-   {
-    "t": "T-4540",
-    "name": "Check finished work before it ships",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794874431
-   },
-   {
-    "t": "T-4494",
-    "name": "Prove widgets move to the app by size",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794874418
    }
   ],
-  "landed": 69,
-  "failed": 12
+  "landed": 71,
+  "failed": 13
  },
  "workers": [
   {
@@ -141,7 +108,7 @@
    "task": "[tools] T-4655 heavy test run cap",
    "model": "opus",
    "started": "2026-11-17T00:50:34.871Z",
-   "seconds": 3466,
+   "seconds": 3654,
    "finished": null,
    "effort": "high"
   }
@@ -151,24 +118,24 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 430,
+  "runnable_count": 428,
   "blocked_count": 76
  },
  "meter": {
   "five_hour": {
-   "pct": 6.0,
+   "pct": 7.0,
    "resets_at": "2026-11-16T23:10:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-16T20:05:57.206632-05:00",
+   "read_at": "2026-11-16T20:50:02.022749-05:00",
    "source": "live",
-   "left": 94.0,
+   "left": 93.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 26.0,
    "resets_at": "2026-11-22T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-16T20:05:57.206632-05:00",
+   "read_at": "2026-11-16T20:50:02.022749-05:00",
    "source": "live",
    "left": 74.0,
    "left_words": "of your weekly allowance left"
@@ -180,7 +147,7 @@
    "read_at": "2026-11-16T19:46:37.781619-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-16T20:05:57.206632-05:00"
+  "read_at": "2026-11-16T20:50:02.022749-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -200,7 +167,7 @@
   "week_pct": 23.56,
   "usage_pct": 47.5,
   "work_pct": 77.0,
-  "read_at": "2026-11-17T01:48:00+00:00",
+  "read_at": "2026-11-17T01:51:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -282,14 +249,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-16T20:42:00-05:00",
+   "at": "2026-11-16T20:49:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 4,
-  "at": "2026-11-16T20:48:00-05:00",
+  "at": "2026-11-16T20:51:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -443,30 +410,42 @@
   ],
   "done": [
    {
-    "w": "Idris",
-    "t": "The Distance widget no longer saves your exact location in its own file, which went into device...",
-    "at": "2026-11-16T20:36:00-05:00"
+    "w": "Pernille",
+    "t": "Checked that a Shortcut can no longer run a paid premade for someone without Pro; it holds, with...",
+    "at": "2026-11-16T20:50:00-05:00"
    },
    {
-    "w": "Idris",
-    "t": "Checked Pernille's settings work for the ready-made widgets and passed it; one fix matters most,...",
-    "at": "2026-11-16T20:15:00-05:00"
+    "w": "Pernille",
+    "t": "I checked the code that will decide whether a sent script refreshes inside the widget or only in...",
+    "at": "2026-11-16T20:50:00-05:00"
    },
    {
-    "w": "Odalys",
-    "t": "Checked the change that gives a gallery preview its full two seconds after waiting in line; it...",
-    "at": "2026-11-16T20:14:00-05:00"
+    "w": "Pernille+idris",
+    "t": "The editor work in 229fa3e4 was checked by a second engineer and passed; its one real problem,...",
+    "at": "2026-11-16T20:48:00-05:00"
    }
   ],
   "count": {
-   "next": 430,
+   "next": 428,
    "wait": 35,
    "blocked": 41,
    "you": 13
   },
   "fin": {
-   "n": 3,
+   "n": 6,
    "rows": [
+    [
+     "T-4024",
+     "Check finished work before..."
+    ],
+    [
+     "T-4598",
+     "Check finished work before..."
+    ],
+    [
+     "T-3718",
+     "Check finished work before..."
+    ],
     [
      "T-4628",
      "Keep the Distance location..."
@@ -521,52 +500,52 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-17T01:48:20Z",
+  "at": "2026-11-17T01:51:09Z",
   "s": {
    "T-4617": [
     "mergeq",
     "1st to merge",
-    1794880040918
-   ],
-   "T-4628": [
-    "mergetest",
-    "Xcode checks on the MacBook, 2nd to merge",
-    1794879440918
-   ],
-   "T-4642": [
-    "mergeq",
-    "3rd to merge",
-    1794876380918
+    1794880029071
    ],
    "T-4024": [
     "mergeq",
-    "4th to merge",
-    1794878420918
+    "2nd to merge",
+    1794878469071
    ],
    "T-4597": [
     "mergeq",
-    "4th to merge",
-    1794878420918
+    "2nd to merge",
+    1794878469071
    ],
    "T-3718": [
     "mergeq",
-    "5th to merge",
-    1794879200918
+    "3rd to merge",
+    1794879189071
    ],
    "T-4598": [
     "mergeq",
-    "5th to merge",
-    1794879200918
+    "3rd to merge",
+    1794879189071
    ],
    "T-4605": [
     "mergeq",
-    "13th to merge",
-    1794879860918
+    "5th to merge",
+    1794879849071
+   ],
+   "T-4642": [
+    "mergetest",
+    "iPhone tests on the MacBook",
+    null
+   ],
+   "T-4628": [
+    "mergetest",
+    "iPhone tests on the MacBook",
+    null
    ],
    "T-4655": [
     "testing",
     "its own tests, in its copy",
-    1794879200918
+    1794879189071
    ],
    "T-4587": [
     "merged",
@@ -577,35 +556,35 @@
   },
   "nm": {
    "T-4617": "Run quick checks before a land takes the Xcode slot",
-   "T-4628": "Keep the Distance location fix out of its file",
-   "T-4642": "Review the premade settings declarations in Python",
    "T-4024": "Check finished work before it ships",
    "T-4597": "Check finished work before it ships",
    "T-3718": "Check finished work before it ships",
    "T-4598": "Check finished work before it ships",
    "T-4605": "Check finished work before it ships",
+   "T-4642": "Review the premade settings declarations in Python",
+   "T-4628": "Keep the Distance location fix out of its file",
    "T-4655": "Cap how many heavy test runs share the Mac mini",
    "T-4587": "Switch feature sessions on for every app feature"
   },
   "wk": {
    "T-4617": "Odalys",
-   "T-4628": "Idris",
-   "T-4642": "Idris",
    "T-4024": "Pernille",
    "T-4597": "Odalys",
    "T-3718": "Pernille",
    "T-4598": "Pernille",
    "T-4605": "Idris",
+   "T-4642": "Idris",
+   "T-4628": "Idris",
    "T-4655": "Odalys",
    "T-4587": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-17T01:48:20Z",
+  "at": "2026-11-17T01:51:09Z",
   "mq": {
    "n": {
-    "checking": 1,
-    "inline": 7,
+    "checking": 0,
+    "inline": 6,
     "conflicted": 1,
     "failed": 0,
     "held": 0,
@@ -613,37 +592,28 @@
     "parked": 12
    },
    "m": {
-    "checking": 11,
-    "inline": 15,
-    "conflicted": 564,
+    "checking": null,
+    "inline": 18,
+    "conflicted": 567,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 864
+    "parked": 867
    },
-   "cur": [
-    [
-     [
-      "T-4628"
-     ],
-     "iPhone app tests",
-     "MacBook",
-     11
-    ]
-   ],
+   "cur": [],
    "ld": [
-    91,
-    "2026-11-17T01:46:51Z"
+    94,
+    "2026-11-17T01:50:29Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-17T01:47:58Z",
-    "ld": 31.91,
+    "at": "2026-11-17T01:50:45Z",
+    "ld": 32.7,
     "c": 8,
     "sb": 1,
     "dk": [
-     15.9,
+     15.7,
      228.3
     ],
     "ss": [
@@ -693,31 +663,19 @@
    "m": "opus",
    "e": "high",
    "t": "Work session \u2013 1 task",
-   "at": "2026-11-16T20:16:07-05:00"
+   "at": "2026-11-16T20:50:13-05:00"
   }
  ],
  "reply": {
-  "sent": "2026-11-16T23:22:43Z",
-  "seconds": 52.0
+  "sent": "2026-11-17T01:47:57Z",
+  "seconds": 135.0
  },
- "inbox": [
-  {
-   "id": "c6935343478",
-   "state": "received",
-   "position": 1,
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "Can you free up more space by..."
-  }
- ],
+ "inbox": [],
  "trimmed": [
   "lane_next",
   "queue_text",
   "task_done",
   "fin_short",
-  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -728,10 +686,10 @@
   "main": 1,
   "lanes": 2,
   "total": 3,
-  "at": "8:48 PM",
+  "at": "8:51 PM",
   "why": "",
-  "at_iso": "2026-11-17T01:48:00+00:00",
+  "at_iso": "2026-11-17T01:51:00+00:00",
   "started": "7:47 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 1, started 7:47 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 8:48 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 1, started 7:47 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 8:51 PM ET</p></section>"
  }
 }

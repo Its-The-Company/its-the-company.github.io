@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-17T17:05:24.716682+00:00",
+ "at": "2026-11-17T17:08:29.566956+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -109,13 +109,30 @@
    "task": "[tools] T-4756 fix two reds on main",
    "model": "opus",
    "started": "2026-11-17T16:46:16.692Z",
-   "seconds": 1148,
+   "seconds": 1332,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "idris",
+   "task": "[build] T-4181 settle parked refresh and caret work",
+   "model": "opus",
+   "started": "2026-11-17T17:07:08.545Z",
+   "seconds": 81,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Maren",
+ "who": "Maren, Idris",
  "recent": [
+  {
+   "name": "idris",
+   "task": "[build] T-4477 settle parked font probe work",
+   "model": "opus",
+   "started": "2026-11-17T17:05:47.445Z",
+   "seconds": null,
+   "finished": "2026-11-17T17:06:42.679000+00:00"
+  },
   {
    "name": "idris",
    "task": "[build] T-3764 settle parked iPad window work",
@@ -139,14 +156,6 @@
    "started": "2026-11-17T15:07:11.689Z",
    "seconds": null,
    "finished": "2026-11-17T16:25:59.595000+00:00"
-  },
-  {
-   "name": "pernille",
-   "task": "[build] T-0289 land parked state module",
-   "model": "opus",
-   "started": "2026-11-17T14:21:25.112Z",
-   "seconds": null,
-   "finished": "2026-11-17T16:00:53.549000+00:00"
   }
  ],
  "queue": {
@@ -157,19 +166,19 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 8.0,
+   "pct": 9.0,
    "resets_at": "2026-11-17T14:10:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-17T11:47:31.834084-05:00",
+   "read_at": "2026-11-17T12:05:53.726310-05:00",
    "source": "live",
-   "left": 92.0,
+   "left": 91.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 33.0,
    "resets_at": "2026-11-22T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-17T11:47:31.834084-05:00",
+   "read_at": "2026-11-17T12:05:53.726310-05:00",
    "source": "live",
    "left": 67.0,
    "left_words": "of your weekly allowance left"
@@ -181,7 +190,7 @@
    "read_at": "2026-11-17T09:17:28.824401-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-17T11:47:31.834084-05:00"
+  "read_at": "2026-11-17T12:05:53.726310-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -201,7 +210,7 @@
   "week_pct": 36.07,
   "usage_pct": 52.2,
   "work_pct": 79.0,
-  "read_at": "2026-11-17T17:05:00+00:00",
+  "read_at": "2026-11-17T17:08:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -244,14 +253,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-17T11:59:00-05:00",
+   "at": "2026-11-17T12:05:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 5,
-  "at": "2026-11-17T12:05:00-05:00",
+  "at": "2026-11-17T12:08:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -277,17 +286,18 @@
    "effort": "high"
   },
   {
+   "name": "Idris",
+   "state": "running",
+   "task": "[build] T-4181 settle parked refresh and caret work",
+   "model": "opus",
+   "since": "2026-11-17T17:07:08.545Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
    "name": "Pernille",
    "state": "next",
    "task": "Pernille, P0, Investor an Investor c6950031511 (8:53 AM...",
-   "model": null,
-   "since": null,
-   "next": []
-  },
-  {
-   "name": "Idris",
-   "state": "next",
-   "task": "Idris, P2, from T-4238 (Pernille's review, from T-3900,...",
    "model": null,
    "since": null,
    "next": []
@@ -328,6 +338,16 @@
     "at": "2026-11-17T16:46:16.692Z",
     "o": "c",
     "task": "T-4756"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "Widgets refresh on their own and by a tap",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-17T17:07:08.545Z",
+    "o": "c",
+    "task": "T-4181"
    }
   ],
   "src": "plan",
@@ -491,12 +511,18 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-17T17:05:24Z",
+  "at": "2026-11-17T17:08:09Z",
   "s": {
    "T-4757": [
     "merging",
     "Mac tests at the main gate",
-    1794935004716
+    1794935049914
+   ],
+   "T-4181": [
+    "merged",
+    "on main 12:08 PM ET",
+    1794935288000,
+    "Idris"
    ],
    "T-4756": [
     "merged",
@@ -507,10 +533,12 @@
   },
   "nm": {
    "T-4757": "Fix the board search test that is red on main",
+   "T-4181": "Widgets refresh on their own and by a tap",
    "T-4756": "Fix the App page row that is red on main"
   },
   "wk": {
    "T-4757": "Maren",
+   "T-4181": "Idris",
    "T-4756": "Maren",
    "T-3764": "Idris",
    "T-4755": "Odalys",
@@ -519,25 +547,25 @@
   }
  },
  "ln": {
-  "at": "2026-11-17T17:05:24Z",
+  "at": "2026-11-17T17:08:09Z",
   "mq": {
    "n": {
     "checking": 0,
     "inline": 0,
     "conflicted": 1,
     "failed": 0,
-    "held": 2,
+    "held": 3,
     "retry": 2,
-    "parked": 20
+    "parked": 18
    },
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 800,
+    "conflicted": 803,
     "failed": null,
-    "held": 569,
-    "retry": 83,
-    "parked": 100
+    "held": 699,
+    "retry": 85,
+    "parked": 85
    },
    "cur": [],
    "ld": [
@@ -547,16 +575,16 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-17T17:05:25Z",
-    "ld": 0.81,
+    "at": "2026-11-17T17:08:10Z",
+    "ld": 0.72,
     "c": 8,
     "sb": 1,
     "dk": [
-     18.9,
+     18.7,
      228.3
     ],
     "ss": [
-     176.2,
+     176.0,
      953.7
     ],
     "sn": [
@@ -583,7 +611,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 2 tasks",
+   "t": "Work session \u2013 4 tasks",
    "at": "2026-11-17T11:39:55-05:00"
   },
   {
@@ -614,13 +642,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 1,
+  "main": 2,
   "lanes": 1,
-  "total": 2,
-  "at": "12:05 PM",
+  "total": 3,
+  "at": "12:08 PM",
   "why": "",
-  "at_iso": "2026-11-17T17:05:00+00:00",
+  "at_iso": "2026-11-17T17:08:00+00:00",
   "started": "9:17 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 1, started 9:17 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 12:05 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 9:17 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 12:08 PM ET</p></section>"
  }
 }

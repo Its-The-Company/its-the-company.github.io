@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-17T23:26:55.411281+00:00",
+ "at": "2026-11-17T23:29:58.918507+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -120,7 +120,7 @@
    "task": "[build] T-4653 land parked Shortcut fix",
    "model": "opus",
    "started": "2026-11-17T22:57:48.038Z",
-   "seconds": 1747,
+   "seconds": 1930,
    "finished": null,
    "effort": "high"
   },
@@ -129,7 +129,7 @@
    "task": "[design] T-4746 land parked name fix",
    "model": "opus",
    "started": "2026-11-17T22:59:28.420Z",
-   "seconds": 1646,
+   "seconds": 1830,
    "finished": null,
    "effort": "high"
   }
@@ -221,8 +221,80 @@
   "week_pct": 38.85,
   "usage_pct": 52.6,
   "work_pct": 79.4,
-  "read_at": "2026-11-17T23:26:00+00:00",
+  "read_at": "2026-11-17T23:30:00+00:00",
   "running": [
+   {
+    "lane": "a2",
+    "task": "T-4787",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Count failed merges by cause: bad test or broken code",
+    "m": "sonnet",
+    "e": "high",
+    "at": "2026-11-17T18:29:38-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a2",
+    "task": "T-4788",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Turn feature sessions on for every app feature",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-17T18:29:38-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a2",
+    "task": "T-4643",
+    "w": "Idris",
+    "k": "fix",
+    "t": "Make the size ladder measure each rung more than once",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-17T18:29:38-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a3",
+    "task": "T-4610",
+    "w": "Odalys",
+    "k": "review",
+    "t": "Check finished work before it ships",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-17T18:29:35-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a3",
+    "task": "T-4634",
+    "w": "Pernille",
+    "k": "test",
+    "t": "Github hang test is cut before the GET under load",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-17T18:29:35-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a3",
+    "task": "T-4695",
+    "w": "Ines",
+    "k": "review",
+    "t": "Check finished work before it ships",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-17T18:29:35-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
    {
     "lane": "b",
     "task": "T-4781",
@@ -288,14 +360,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-17T18:23:00-05:00",
+   "at": "2026-11-17T18:29:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 7,
-  "at": "2026-11-17T18:26:00-05:00",
+  "at": "2026-11-17T18:30:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -550,37 +622,42 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-17T23:26:55Z",
+  "at": "2026-11-17T23:29:49Z",
   "s": {
    "T-4774": [
     "merging",
     "Host checks on the Mac mini",
-    1794957535411
+    1794957529597
    ],
    "T-4607": [
     "mergeq",
     "1st to merge",
-    1794955195411
+    1794955189597
    ],
    "T-4608": [
     "mergeq",
     "1st to merge",
-    1794955195411
+    1794955189597
    ],
    "T-4609": [
     "mergeq",
     "1st to merge",
-    1794955195411
+    1794955189597
+   ],
+   "T-4763": [
+    "mergetest",
+    "iPhone tests on the MacBook",
+    null
    ],
    "T-4746": [
     "merging",
     "Mac tests at the main gate",
-    1794957775411
+    1794957769597
    ],
    "T-4653": [
     "merging",
     "Mac tests at the main gate",
-    1794957655411
+    1794958189597
    ],
    "T-4770": [
     "merged",
@@ -594,6 +671,7 @@
    "T-4607": "Check finished work before it ships",
    "T-4608": "Check finished work before it ships",
    "T-4609": "Check finished work before it ships",
+   "T-4763": "Keep habit marks when the Page also saves",
    "T-4746": "Write PyWidget's name right in the widget's words",
    "T-4653": "Give the Shortcut's Pro check a time limit",
    "T-4770": "Re-estimate the release date from measured build speed"
@@ -603,6 +681,7 @@
    "T-4607": "Odalys",
    "T-4608": "Pernille",
    "T-4609": "Pernille",
+   "T-4763": "Maren",
    "T-4746": "Maren",
    "T-4653": "Idris",
    "T-4770": "Ines",
@@ -616,7 +695,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-17T23:26:55Z",
+  "at": "2026-11-17T23:29:49Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -628,13 +707,13 @@
     "parked": 9
    },
    "m": {
-    "checking": 8,
-    "inline": 47,
-    "conflicted": 632,
+    "checking": 11,
+    "inline": 50,
+    "conflicted": 635,
     "failed": null,
-    "held": 1437,
+    "held": 1440,
     "retry": null,
-    "parked": 199
+    "parked": 202
    },
    "cur": [
     [
@@ -643,7 +722,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     8
+     11
     ]
    ],
    "ld": [
@@ -653,12 +732,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-17T23:26:56Z",
-    "ld": 3.71,
+    "at": "2026-11-17T23:29:24Z",
+    "ld": 4.07,
     "c": 8,
     "sb": 0,
     "dk": [
-     19.6,
+     20.7,
      228.3
     ],
     "ss": [
@@ -668,8 +747,8 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-17T23:26:45Z",
-    "ld": 2.97,
+    "at": "2026-11-17T23:26:48Z",
+    "ld": 2.93,
     "c": 12,
     "sb": 0,
     "dk": [
@@ -689,6 +768,24 @@
    "e": "high",
    "t": "Work session \u2013 9 tasks",
    "at": "2026-11-17T17:21:23-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Evan's Account",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session \u2013 3 tasks",
+   "at": "2026-11-17T18:29:37-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Evan's Account",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session \u2013 3 tasks",
+   "at": "2026-11-17T18:29:35-05:00"
   },
   {
    "w": "Operator",
@@ -720,12 +817,12 @@
  ],
  "agents_now": {
   "main": 2,
-  "lanes": 1,
-  "total": 3,
-  "at": "6:26 PM",
+  "lanes": 3,
+  "total": 5,
+  "at": "6:30 PM",
   "why": "",
-  "at_iso": "2026-11-17T23:26:00+00:00",
+  "at_iso": "2026-11-17T23:30:00+00:00",
   "started": "3:40 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 3:40 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 6:26 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 2, started 3:40 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 6:30 PM ET</p></section>"
  }
 }

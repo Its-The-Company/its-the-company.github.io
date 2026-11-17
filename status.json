@@ -1,12 +1,21 @@
 {
  "schema": 1,
- "at": "2026-11-17T14:12:00.170079+00:00",
+ "at": "2026-11-17T14:17:57.436600+00:00",
  "session": {
   "active": false,
   "kind": "",
   "started": null,
   "flow": [],
   "done": [
+   {
+    "t": "T-4663",
+    "name": "Completion ignores letter case and small typos",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "failed",
+    "end_at": 1794924927,
+    "why": "tests failed"
+   },
    {
     "t": "T-4663",
     "name": "Completion ignores letter case and small typos",
@@ -79,18 +88,10 @@
     "steps": [],
     "end": "landed",
     "end_at": 1794919833
-   },
-   {
-    "t": "T-4193",
-    "name": "TestFlight builds and the App Store page are ready",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794919478
    }
   ],
   "landed": 27,
-  "failed": 5
+  "failed": 6
  },
  "workers": [],
  "who": "",
@@ -123,37 +124,36 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 399,
+  "runnable_count": 398,
   "blocked_count": 59
  },
  "meter": {
   "five_hour": {
-   "pct": null,
+   "pct": 0.0,
    "resets_at": null,
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-17T08:22:32.387677-05:00",
-   "source": "live",
-   "last_reset": "2026-11-17T09:10:00-05:00",
-   "left": null,
+   "read_at": "2026-11-17T09:17:28.824401-05:00",
+   "source": "usage",
+   "left": 100.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 32.0,
-   "resets_at": "2026-11-22T02:00:00-05:00",
+   "pct": 33.0,
+   "resets_at": "2026-11-22T07:00:00.147430+00:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-17T08:22:32.387677-05:00",
-   "source": "live",
-   "left": 68.0,
+   "read_at": "2026-11-17T09:17:28.824401-05:00",
+   "source": "usage",
+   "left": 67.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 0.0,
    "resets_at": "2026-11-22T07:00:00+00:00",
    "used_words": "of the Fable weekly allowance used",
-   "read_at": "2026-11-17T08:03:42.028369-05:00",
+   "read_at": "2026-11-17T09:17:28.824401-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-17T08:22:32.387677-05:00"
+  "read_at": "2026-11-17T09:17:28.824401-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -168,12 +168,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-17T08:18:42-05:00",
+ "next_tick": "2026-11-17T09:32:29-05:00",
  "personal": {
-  "week_pct": 33.92,
-  "usage_pct": 51.2,
-  "work_pct": 77.7,
-  "read_at": "2026-11-17T14:14:00+00:00",
+  "week_pct": 36.07,
+  "usage_pct": 52.2,
+  "work_pct": 79.0,
+  "read_at": "2026-11-17T14:18:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -207,7 +207,7 @@
   }
  ],
  "disk": {
-  "free_gb": 26,
+  "free_gb": 24,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -216,14 +216,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-17T09:05:00-05:00",
+   "at": "2026-11-17T09:15:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 5,
-  "at": "2026-11-17T09:14:00-05:00",
+  "at": "2026-11-17T09:18:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -360,6 +360,11 @@
   ],
   "done": [
    {
+    "w": "Operator",
+    "t": "Main passes its Xcode checks again: job J-20261117-0816-land-m-065516 on the MacBook no longer...",
+    "at": "2026-11-17T09:16:00-05:00"
+   },
+   {
     "w": "Idris",
     "t": "sending a project to its widget now swaps the whole widget folder in one step, so a phone with a...",
     "at": "2026-11-17T08:25:00-05:00"
@@ -368,15 +373,10 @@
     "w": "Idris",
     "t": "the Settings tests for a purchase waiting for a parent's approval (Ask to Buy) and for a failed...",
     "at": "2026-11-17T08:21:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "The Mac mini got 9.9 GB of disk back (old test leftovers and two unused test phones), and the...",
-    "at": "2026-11-17T08:05:00-05:00"
    }
   ],
   "count": {
-   "next": 399,
+   "next": 398,
    "wait": 28,
    "blocked": 31,
    "you": 8
@@ -421,41 +421,29 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-17T14:12:00Z",
-  "s": {
-   "T-4663": [
-    "mergeq",
-    "1st to merge",
-    1794924720170
-   ]
-  },
-  "nm": {
-   "T-4663": "Completion ignores letter case and small typos"
-  },
-  "wk": {
-   "T-4663": "Idris"
-  }
+  "at": "2026-11-17T14:17:57Z",
+  "s": {}
  },
  "ln": {
-  "at": "2026-11-17T14:12:00Z",
+  "at": "2026-11-17T14:17:57Z",
   "mq": {
    "n": {
     "checking": 0,
-    "inline": 1,
+    "inline": 0,
     "conflicted": 1,
-    "failed": 0,
+    "failed": 1,
     "held": 1,
     "retry": 0,
     "parked": 17
    },
    "m": {
     "checking": null,
-    "inline": 0,
-    "conflicted": 627,
-    "failed": null,
-    "held": 883,
+    "inline": null,
+    "conflicted": 633,
+    "failed": 2,
+    "held": 888,
     "retry": null,
-    "parked": 506
+    "parked": 512
    },
    "cur": [],
    "ld": [
@@ -465,21 +453,20 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-17T14:12:01Z",
-    "ld": 22.86,
+    "at": "2026-11-17T14:17:58Z",
+    "ld": 8.23,
     "c": 8,
-    "sb": 3,
+    "sb": 2,
     "dk": [
-     24.4,
+     21.6,
      228.3
     ],
     "ss": [
-     176.1,
+     176.2,
      953.7
     ],
     "sn": [
      "T4188 Idris iPhone 17e",
-     "idris-t4183-17e",
      "iPhone 17e"
     ]
    },
@@ -526,10 +513,10 @@
   "main": 0,
   "lanes": 1,
   "total": 1,
-  "at": "9:14 AM",
+  "at": "9:18 AM",
   "why": "",
-  "at_iso": "2026-11-17T14:14:00+00:00",
+  "at_iso": "2026-11-17T14:18:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 9:14 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 9:18 AM ET</p></section>"
  }
 }

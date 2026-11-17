@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-17T21:29:57.198451+00:00",
+ "at": "2026-11-17T21:32:59.195294+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -123,7 +123,7 @@
    "task": "[tools] T-4753 fail new source-text tests",
    "model": "opus",
    "started": "2026-11-17T21:05:08.821Z",
-   "seconds": 1488,
+   "seconds": 1670,
    "finished": null,
    "effort": "high"
   },
@@ -132,7 +132,7 @@
    "task": "[site] T-4747 queued-order red fix",
    "model": "opus",
    "started": "2026-11-17T21:09:16.623Z",
-   "seconds": 1240,
+   "seconds": 1422,
    "finished": null,
    "effort": "high"
   },
@@ -141,7 +141,7 @@
    "task": "[tools] T-4730 lanes.js budget red",
    "model": "opus",
    "started": "2026-11-17T21:20:29.913Z",
-   "seconds": 567,
+   "seconds": 749,
    "finished": null,
    "effort": "high"
   }
@@ -176,7 +176,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 401,
+  "runnable_count": 402,
   "blocked_count": 58
  },
  "meter": {
@@ -225,7 +225,7 @@
   "week_pct": 38.85,
   "usage_pct": 52.6,
   "work_pct": 79.4,
-  "read_at": "2026-11-17T21:29:00+00:00",
+  "read_at": "2026-11-17T21:33:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -236,6 +236,7 @@
     "e": "high",
     "at": "2026-11-17T16:28:06-05:00",
     "n": "Evan",
+    "d": 1,
     "src": "plan-a"
    },
    {
@@ -248,6 +249,7 @@
     "e": "high",
     "at": "2026-11-17T16:28:06-05:00",
     "n": "Evan",
+    "d": 1,
     "src": "plan-a"
    },
    {
@@ -330,7 +332,7 @@
   }
  ],
  "disk": {
-  "free_gb": 20,
+  "free_gb": 19,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -339,14 +341,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-17T16:24:00-05:00",
+   "at": "2026-11-17T16:30:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 6,
-  "at": "2026-11-17T16:29:00-05:00",
+  "at": "2026-11-17T16:33:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -512,9 +514,9 @@
     "o": "c"
    },
    {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Build the queue-check sweep into the sweep...",
+    "w": "Ines",
+    "k": "plan",
+    "t": "Re-estimate the release date from measured...",
     "s": "next",
     "o": "c"
    }
@@ -537,7 +539,7 @@
    }
   ],
   "count": {
-   "next": 401,
+   "next": 402,
    "wait": 27,
    "blocked": 31,
    "you": 8
@@ -595,32 +597,47 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-17T21:29:38Z",
+  "at": "2026-11-17T21:32:59Z",
   "s": {
    "T-4760": [
     "mergeq",
     "1st to merge",
-    1794944618396
+    1794944639195
    ],
    "T-4188": [
     "mergeq",
     "3rd to merge",
-    1794947078396
+    1794947039195
    ],
    "T-4183": [
     "mergeq",
     "4th to merge",
-    1794947978396
+    1794947999195
    ],
    "T-4747": [
     "merging",
     "Mac tests at the main gate",
-    1794950798396
+    1794950759195
+   ],
+   "T-4611": [
+    "testing",
+    "Mac Mini \u00b7 test",
+    null
+   ],
+   "T-4612": [
+    "testing",
+    "Mac Mini \u00b7 test",
+    null
+   ],
+   "T-4613": [
+    "testing",
+    "Mac Mini \u00b7 test",
+    null
    ],
    "T-4730": [
     "testing",
     "its own tests, in its copy",
-    1794950558396
+    1794951179195
    ]
   },
   "nm": {
@@ -628,6 +645,9 @@
    "T-4188": "Location, steps and notifications work in scripts and...",
    "T-4183": "The Gallery shows, previews and opens every premade",
    "T-4747": "Show each umbrella's progress and its running steps on Home",
+   "T-4611": "Check finished work before it ships",
+   "T-4612": "Check finished work before it ships",
+   "T-4613": "Check finished work before it ships",
    "T-4730": "Fix a test row that is red on main"
   },
   "wk": {
@@ -635,13 +655,16 @@
    "T-4188": "Idris",
    "T-4183": "Idris",
    "T-4747": "Maren",
+   "T-4611": "Pernille",
+   "T-4612": "Pernille",
+   "T-4613": "Pernille",
    "T-4730": "Maren",
    "T-4732": "Odalys",
    "T-4769": "Pernille"
   }
  },
  "ln": {
-  "at": "2026-11-17T21:29:38Z",
+  "at": "2026-11-17T21:32:59Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -654,12 +677,12 @@
    },
    "m": {
     "checking": null,
-    "inline": 65,
-    "conflicted": 1065,
+    "inline": 69,
+    "conflicted": 1068,
     "failed": null,
-    "held": 738,
+    "held": 742,
     "retry": null,
-    "parked": 82
+    "parked": 85
    },
    "cur": [],
    "ld": [
@@ -669,12 +692,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-17T21:28:50Z",
-    "ld": 1.46,
+    "at": "2026-11-17T21:32:37Z",
+    "ld": 3.97,
     "c": 8,
-    "sb": 2,
+    "sb": 1,
     "dk": [
-     19.3,
+     18.9,
      228.3
     ],
     "ss": [
@@ -682,7 +705,6 @@
      953.7
     ],
     "sn": [
-     "T2027 Idris never-used 1117d",
      "iPhone 17e"
     ]
    },
@@ -706,8 +728,8 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Inbox \u2013 Jeremy's 4:26 PM Message on GitHub",
-   "at": "2026-11-17T16:27:05-05:00"
+   "t": "Work session \u2013 5 tasks",
+   "at": "2026-11-17T16:32:12-05:00"
   },
   {
    "w": "Operator",
@@ -715,7 +737,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 3 tasks",
+   "t": "Work session \u2013 2 tasks",
    "at": "2026-11-17T16:28:05-05:00"
   },
   {
@@ -738,27 +760,15 @@
   }
  ],
  "reply": {
-  "sent": "2026-11-17T16:34:37Z",
-  "seconds": 317.0
+  "sent": "2026-11-17T21:26:44Z",
+  "seconds": 326.0
  },
- "inbox": [
-  {
-   "id": "c6961475730",
-   "state": "received",
-   "position": 1,
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "Updates on the disk being full and..."
-  }
- ],
+ "inbox": [],
  "trimmed": [
   "lane_next",
   "queue_text",
   "task_done",
   "fin_short",
-  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -769,10 +779,10 @@
   "main": 3,
   "lanes": 3,
   "total": 6,
-  "at": "4:29 PM",
+  "at": "4:33 PM",
   "why": "",
-  "at_iso": "2026-11-17T21:29:00+00:00",
+  "at_iso": "2026-11-17T21:33:00+00:00",
   "started": "3:40 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 3, started 3:40 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 4:29 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 3, started 3:40 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 4:33 PM ET</p></section>"
  }
 }

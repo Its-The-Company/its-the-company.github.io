@@ -16,10 +16,29 @@ T-1110, Wrenna, 2026-11-02. Reader: the Investors, at submission (Days 47-48). T
 **Code read at commit `33789648`** (HEAD of main when written; `pywidget/ios`). Facts from `Shared/NetFetch.swift` were last changed at `17108b8e`. Every fact below carries the grep or file that supports it. Re-run them at the submitted build; any change in the web, sharing or crypto rows below changes an answer.
 
 **Apple's text**, saved signed out under the 2026-10-26 <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">ruling</span>, no fresh page fetched:
-- Age ratings: https://developer.apple.com/help/app-store-connect/reference/app-information/age-ratings-values-and-definitions, fetched 2026-10-26 1:17:46 AM ET, `research/inbound/apple/developer.apple.com/help_app-store-connect_reference_app-information_age-ratings-values-and-definitions-e3df83c5.html` (T-0132). Called **AGE** below.
-- Encryption: https://developer.apple.com/documentation/security/complying-with-encryption-export-regulations.md, fetched 2026-10-26 1:17:51 AM ET, `research/inbound/apple/developer.apple.com/documentation_security_complying-with-encryption-export-regulations.md-d41c9f28.html`. Called **ENC** below.
+- Age ratings: https://developer.apple.com/help/app-store-connect/reference/app-information/age-ratings-values-and-definitions, fetched 2026-10-26 1:17 AM ET, `research/inbound/apple/developer.apple.com/help_app-store-connect_reference_app-information_age-ratings-values-and-definitions-e3df83c5.html` (T-0132). Called **AGE** below.
+- Encryption: https://developer.apple.com/documentation/security/complying-with-encryption-export-regulations.md, fetched 2026-10-26 1:17 AM ET, `research/inbound/apple/developer.apple.com/documentation_security_complying-with-encryption-export-regulations.md-d41c9f28.html`. Called **ENC** below.
 
 Marks: **[mine]** a reading from code, safe to type as written; **[theirs]** the Investors' to give, with the reason.
+
+## Answers the Investors gave (issue #138, recorded 2026-11-17 by Ines, T-1119)
+
+Both questions on #138 are answered. The Investors type these themselves in App Store Connect, behind their sign-in; the company types nothing for them.
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 1: Answers the Investors gave (issue #138, recorded 2026-11-17 by Ines, T-1119), scrolls sideways" style="--tw:1280px" markdown="1">
+
+| Question | Answer | In plain words | Investor's words and link |
+|---|---|---|---|
+| 1. Age rating, unrestricted web access (row 1 below) | **A: "No"** | Answer "No" to unrestricted web access. If every other age answer stays "None" or "No", the app is rated 4+. | "A", an Investor, Sat 2026-11-14 4:00 PM ET, (private) (the question as re-asked: (private)) |
+| 2. Export compliance (section 2) | **F** (from the card that replaced C, D and E: (private)) | Builds that still carry Python's own OpenSSL: answer "Standard encryption algorithms" at each upload, add no encryption setting to the app, and leave France out of the App Store countries while those builds are on sale. The first build without that OpenSSL (ADR-009; setting work is T-3399, not landed at this writing): the setting "uses non-exempt encryption: NO", and France can go back in. If the removal slips past the freeze, 1.0 is not sold in France until the update that removes it. | "F, at least for now while we’re in early development", an Investor, Sat 2026-11-14 3:29 PM ET, (private) |
+
+</div>
+
+
+- "For now" is part of the answer: the Investors can choose differently for the final build at any time, and France is added back under Pricing and Availability, which is theirs.
+- Still theirs, not asked as a question on #138: whether the U.S. year-end self-classification report applies (the F card says it "is still your call either way"), and the "not for kids" choice in section 0.
+- Neither answer changes a Handbook rule, so no ruling was recorded.
 
 ## 0. Company limits, said plainly (Commandments 6 and 7)
 
@@ -29,14 +48,14 @@ The app is not in any banned area: not finance, medical, legal, gambling, adult 
 
 Scale in AGE: 4+, 9+, 13+, 16+, 18+, Unrated ("An Unrated app can't be published on the App Store"). Categories and wording are quoted from AGE; the form's exact question text was not read, so match each row to the question that carries the same label.
 
-**Draft result: 4+.** It holds only while every row below stays "None" or "No". AGE places Unrestricted Web Access at 16+; that is the one row with a live question (row 1).
+**Draft result: 4+** (row 1 answered "No" by the Investors on #138, see the answers above). It holds only while every row below stays "None" or "No". AGE places Unrestricted Web Access at 16+; that is the one row with a live question (row 1).
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 1: 1. Age rating, scrolls sideways" data-n="1" style="--tw:1241px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 2: 1. Age rating, scrolls sideways" data-n="1" style="--tw:1241px" markdown="1">
 
 | # | AGE descriptor (quoted) | Draft answer | Code fact and how to re-check | Who |
 |---|---|---|---|---|
-| 1 | Unrestricted Web Access: "Users can navigate to any webpage within the app or freely browse the web." "May include: embedded browser functionality or browser app." | **No** (reading). Reason in note A. | No web view or browser: `grep -rnE "WKWebView\|SFSafariViewController\|import WebKit\|import SafariServices" pywidget/ios --include=*.swift` returns 0 in App, Shared, Widget (checked at `33789648`). `pywidget.net.get` takes an `https://` URL only (`Shared/NetFetch.swift` line 83) and returns text to the script; nothing is rendered. | **[theirs]**, the one judgement call. If you read user-written fetching as "freely browse the web", the rating is 16+. |
+| 1 | Unrestricted Web Access: "Users can navigate to any webpage within the app or freely browse the web." "May include: embedded browser functionality or browser app." | **No** (reading). Reason in note A. | No web view or browser: `grep -rnE "WKWebView\|SFSafariViewController\|import WebKit\|import SafariServices" pywidget/ios --include=*.swift` returns 0 in App, Shared, Widget (checked at `33789648`). `pywidget.net.get` takes an `https://` URL only (`Shared/NetFetch.swift` line 83) and returns text to the script; nothing is rendered. | **[theirs]**, answered A ("No") on #138, see the answers above. The one judgement call: if you read user-written fetching as "freely browse the web", the rating is 16+. |
 | 2 | User-Generated Content: "broad distribution of content created by users", broadly distributed videos, photos, text, audio | **No** | No server, no account, no feed. Share is a person's own file or project zip to the system share sheet (`ShareLink` in `App/Projects/ProjectsView.swift` lines 52, 213, 225; Files import in the same file, lines 81, 233). No gallery, no download of others' code in v1 (ADR-006 line 200: "no pip, no downloaded code, no gallery"). Re-check: `grep -rnE 'https?://' --include='*.swift' App Shared Widget` shows one fixed link (`App/LegalLinks.swift` line 11, Apple's standard licence text, opened by the system, not in an in-app browser) and no app-owned endpoint. | [mine], but see note B |
 | 3 | Social Media / Social Media Disabled for Users Under 13 | **No / not applicable** | No feed, likes, comments or discovery; same greps as row 2. | [mine] |
 | 4 | Messaging and Chat | **No** | No in-app communication feature; no MessageUI, CloudKit or GameKit import (grep of `import (MessageUI\|CloudKit\|GameKit)` found 0). | [mine] |
@@ -66,7 +85,7 @@ Scale in AGE: 4+, 9+, 13+, 16+, 18+, Unrated ("An Unrated app can't be published
 ### 2b. What the code does at `33789648`
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 2: 2b. What the code does at 33789648, scrolls sideways" style="--tw:960px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 3: 2b. What the code does at 33789648, scrolls sideways" style="--tw:960px" markdown="1">
 
 | Fact | Support | <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">Lane</span> |
 |---|---|---|

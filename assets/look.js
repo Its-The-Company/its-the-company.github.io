@@ -17,7 +17,9 @@ scrollBy({left:e.deltaX*k,top:e.deltaY*k,behavior:'instant'})},{passive:false})}
 // code draws flat rows: each calls undo(list) before it reads or sorts them and group(list) after it draws them, so a
 // feature card sits where its first card falls in the list's order. A card opened by a tap stays open across redraws;
 // a search opens the cards that hold a match; a card none of whose steps shows under the filters hides.
-window.LKFT=(function(){var D=null,W={},OP={};
+// T-4530 (friesevan #41 c6898956579 Q2 A): Group by feature, a switch beside the search. Off: every list is flat, each
+// piece in its own start order place with its "part of" tag; on (the default, T-4620's look): pieces under their umbrella.
+window.LKFT=(function(){var D=null,W={},OP={},GF=true;try{GF=localStorage.getItem('lk-gf')!=='0'}catch(e){}
 function data(){if(D)return D;D={};var a=document.getElementById('lk-all');try{D=JSON.parse(a&&a.getAttribute('data-ft')||'{}')}catch(e){}
 Object.keys(D).forEach(function(f){if(!W[f])W[f]=f;(D[f].s||[]).forEach(function(s){if(!W[s])W[s]=f})});return D}
 function mk(p,t,c,x){var e=document.createElement(t);if(c)e.className=c;if(x)e.textContent=x;p.appendChild(e);return e}
@@ -33,12 +35,15 @@ t=mk(s,'span','t');mk(t,'span','lk-ftk','Feature');mk(t,'b','',D[f].t);mk(t,'spa
 s.addEventListener('click',function(){OP[f]=!d.open});return d}
 function undo(c){if(!c)return;[].slice.call(c.children).forEach(function(d){if(!d.classList.contains('lk-ft'))return;
 [].slice.call(body(d).children).forEach(function(x){c.insertBefore(x,d)});c.removeChild(d)})}
-function group(c){if(!c)return;undo(c);data();var g={},S=window.CompanySite,q=!!(S&&S.lk&&S.lk.q&&S.lk.q());
+function group(c){if(!c)return;undo(c);data();if(!GF){document.documentElement.classList.add('lk-flat');return}document.documentElement.classList.remove('lk-flat');var g={},S=window.CompanySite,q=!!(S&&S.lk&&S.lk.q&&S.lk.q());
 [].slice.call(c.children).forEach(function(x){var i=(x.getAttribute('data-id')||'').replace(/\.\d+$/,''),f=W[i],b;if(!f||!D[f])return;
 if(!g[f]){g[f]=card(f);c.insertBefore(g[f],x)}b=body(g[f]);if(i===f)b.insertBefore(x,b.firstChild);else b.appendChild(x)});
+// T-4530: a card sits by its first row (a star lifts it), and inside it the steps keep the list's own order, star or not
+Object.keys(g).forEach(function(f){var b=body(g[f]),k=[].slice.call(b.children).filter(function(x){return x.getAttribute('data-id')!==f});
+if(k.every(function(x){return x._o!=null}))k.sort(function(x,y){return x._o-y._o}).forEach(function(x){b.appendChild(x)})});
 Object.keys(g).forEach(function(f){var d=g[f],n=body(d).querySelectorAll(':scope>[data-id]:not([hidden])').length;d.hidden=!n;d.open=!!OP[f]||(q&&n>0)});
 [].forEach.call(document.querySelectorAll('details.lk-ft'),function(d){var m=d.querySelector('.lk-ftm'),f=d.getAttribute('data-ft');if(m&&D[f])m.textContent=words(f)})}
-return{group:group,undo:undo}})();
+return{group:group,undo:undo,on:function(v){if(v!=null){GF=!!v;try{localStorage.setItem('lk-gf',GF?'1':'0')}catch(e){}}return GF}}})();
 // T-3187 (friesevan #41 c6701678631): (1) a star on each Running and Queued card; the stars are shared by both Investors, in
 // investors/favorites.json on GitHub ({"tasks": [...]}), written with the Investor's own token, one commit a tap, read fresh
 // first and once more if GitHub moved it (as personal.js writes billing.json); no token: the build's stars show, no buttons.
@@ -161,8 +166,9 @@ try{fc=JSON.parse((document.getElementById('lk-run')||H).getAttribute('data-face
 function mk(p,t,c,x){var e=document.createElement(t);if(c)e.className=c;if(x!=null)e.textContent=x;p.appendChild(e);return e}
 // a Queued row past the page's 30, from data-all ([id, number, name, worker, category]): drawn while it matches the search or is starred
 function qrow(a){var c=document.createElement('div'),p=fc[String(a[3]||'').toLowerCase()],g,t;c.className='lk-card lk-q lk-x';c.setAttribute('data-id',a[0]);c.setAttribute('data-n',a[1]);
-c.setAttribute('data-q',[a[2],a[0],a[3]].join(' '));c.setAttribute('data-w',a[3]||'');if(a[6])c.setAttribute('data-ps',a[6]);if(a[7])c.setAttribute('data-r',a[7]);mk(c,'span','lk-n',String(a[1]));if(p&&pic[p]){g=mk(c,'img');g.src=pic[p];g.alt='';g.width=g.height=24}else mk(c,'span').style.width='24px';
-t=mk(c,'span','t');mk(t,'b','lk-tn',a[2]);badge(t,a[0]);if(a[7])mk(c,'span','lk-rty','retry '+a[7]);if(a[4]){g=mk(c,'span','lk-cat',a[4]);g.title='Category: '+a[4]}mk(c,'span','idb',a[0]);aria(c);return c}
+c.setAttribute('data-q',[a[2],a[0],a[3]].concat(a[10]?[a[10]]:[]).join(' '));if(a[9])c.classList.add('lk-qw');c.setAttribute('data-w',a[3]||'');if(a[6])c.setAttribute('data-ps',a[6]);if(a[7])c.setAttribute('data-r',a[7]);mk(c,'span','lk-n',String(a[1]));if(p&&pic[p]){g=mk(c,'img');g.src=pic[p];g.alt='';g.width=g.height=24}else mk(c,'span').style.width='24px';
+t=mk(c,'span','t');mk(t,'b','lk-tn',a[2]);badge(t,a[0]);if(a[7])mk(c,'span','lk-rty','retry '+a[7]);
+if(a[8]){g=mk(c,'span','lk-pt','part of '+a[8]);g.title='A piece of '+a[8]}if(a[9])mk(c,'span','lk-wait','waits: '+a[9]);if(a[4]){g=mk(c,'span','lk-cat',a[4]);g.title='Category: '+a[4]}mk(c,'span','idb',a[0]);aria(c);return c}
 // T-4007: k counts the rows on show, for the no-match line; T-4287: every row shows, in the scroll box (no fold)
 // T-4313: a card in a folded part (Merged, In flight, Queued) opens its part first, so a link to it lands on it
 function unfold(c){var d=c&&c.closest&&c.closest('details.lk-fold'),f=c&&c.closest&&c.closest('details.lk-ft');if(d&&!d.open)d.open=true;if(f&&!f.open)f.open=true}
@@ -172,6 +178,8 @@ function queued(){var q=document.getElementById('lk-q'),rows,k=0;if(!q)return;LK
 [].slice.call(q.querySelectorAll('.lk-x')).forEach(function(c){q.removeChild(c)});
 A.forEach(function(a){if(okId(a[0])&&inq(a[0],a[5]))q.appendChild(qrow(a))});  // T-4287: every row, the filters below hide
 rows=[].slice.call(q.children);
+// T-4530: each row's place in the sort without the star lift; a feature card keeps its steps in that order (LKFT.group)
+rows.slice().sort(function(a,b){return by(qrec(a),qrec(b))||(+a.getAttribute('data-n')-+b.getAttribute('data-n'))}).forEach(function(c,i){c._o=i});
 rows.sort(function(a,b){return (F[b.getAttribute('data-id')]?1:0)-(F[a.getAttribute('data-id')]?1:0)
 ||by(qrec(a),qrec(b))||(+a.getAttribute('data-n')-+b.getAttribute('data-n'))});
 rows.forEach(function(c){var s=c.querySelector('.lk-star'),on=match(c.getAttribute('data-q'))&&catok(qc(c),c.getAttribute('data-id'))&&!fly(c.getAttribute('data-id'));q.appendChild(c);if(on)k++;if(s)s.parentNode.removeChild(s);tok&&up(c,c.getAttribute('data-id'));star(c,c.getAttribute('data-id'));
@@ -243,6 +251,9 @@ if(c&&H.contains(c)&&c.querySelector('.lk-tn'))toggle(c)});
 H.addEventListener('keydown',function(e){var t=e.target,c;if((e.key==='Enter'||e.key===' ')&&t.classList&&t.classList.contains('lk-tn')){c=t.closest(CARD);if(c){e.preventDefault();toggle(c)}}});
 [].forEach.call(H.querySelectorAll('.lk-tn'),function(n){aria(n.closest(CARD))});
 if(inp&&fb){fb.hidden=false;inp.addEventListener('input',function(){Q=inp.value.trim().toLowerCase();H.classList.toggle('lk-searching',!!Q);fire()})}
+// T-4530: Group by feature; a tap redraws every list, grouped or flat in start order
+(function(){var g=document.getElementById('lk-gf');if(!g)return;g.setAttribute('aria-pressed',LKFT.on()?'true':'false');
+g.addEventListener('click',function(){LKFT.on(!LKFT.on());g.setAttribute('aria-pressed',LKFT.on()?'true':'false');fire()})})();
 if(fb&&document.getElementById('lk-q-how'))document.getElementById('lk-q-how').hidden=false;
 if(so)so.addEventListener('change',function(){SO=so.value;SD=DF[SO]||1;sorts();fire()});
 if(dr)dr.addEventListener('click',function(){SD=-SD;sorts();fire()});
@@ -585,19 +596,3 @@ if(!isNaN(x)){m.appendChild(document.createTextNode(' · '));mk(m,'span','lk-nw'
 if(r.a){m.appendChild(document.createTextNode(' '));a=mk(m,'span','lk-tag'+(r.sr?' lk-src':''),r.a);if(r.sr)a.title='Runs on: '+r.a}});
 if(!o.length)mk(box,'p','meta lk-opz','None running now.');n.textContent=o.length;sec.hidden=false}
 S.onStatus.push(draw);if(S.status&&S.status())draw(S.status())});
-
-// T-4102 (tools/site/queue_tree.py): the queue tree's search. Finds a line at any depth by ID or name and opens every
-// ancestor on the way; rows it opened close again when the box is emptied. No script: no box, the tree still opens.
-(function(){var t=document.getElementById('qt-tree'),f=document.getElementById('qt-find');if(!t||!f)return;
-var i=f.querySelector('input'),o=document.getElementById('qt-found');if(!i)return;f.hidden=false;
-function own(li){if(li._qs==null){var c=li.querySelector(':scope>details>summary>.qt-c,:scope>.qt-leaf>.qt-c');var b=c&&c.querySelector(':scope>b'),d=c&&c.querySelector('.idb');li._qs=((d?d.textContent+' ':'')+(b?b.textContent:'')).toLowerCase()}return li._qs}
-function kids(li){var d=li.querySelector(':scope>details');return d?d.querySelector(':scope>ul'):null}
-function walk(ul,q,ids){var any=false;[].forEach.call(ul.children,function(li){var d=li.querySelector(':scope>details'),sub=kids(li),
-me=!!q&&own(li).indexOf(q)>=0,kid=sub?walk(sub,q,ids):false;
-if(me&&!kid&&sub)walk(sub,'',null);var show=!q||me||kid;li.hidden=!show;li.classList.toggle('qt-hit',me);
-if(me&&ids)ids[li.getAttribute('data-id')||own(li)]=1;
-if(d){if(q&&kid){if(!d.open){d.open=true;d.setAttribute('data-qo','1')}}else if(d.hasAttribute('data-qo')){d.open=false;d.removeAttribute('data-qo')}}
-any=any||(!!q&&(me||kid))});return any}
-function go(){var q=i.value.trim().toLowerCase(),ids={};walk(t,q,ids);var n=Object.keys(ids).length;
-if(o)o.textContent=q?(n?n+(n===1?' match':' matches'):'No match'):''}
-i.addEventListener('input',go);i.addEventListener('keydown',function(e){if(e.key==='Escape'){i.value='';go()}})})();

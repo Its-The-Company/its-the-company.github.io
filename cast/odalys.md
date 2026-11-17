@@ -52,6 +52,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-4694 done 11-17 (d00dad9099): nightly fix lines in nightly_suites.py. Check first night.
 - T-4716 (11-17): OPT-106 due 12-03; dup ids still happen (114, 125). Owed: T-4721 land opt_id_clash via main_gate, set started.
 - T-4701 (11-17): expiry daily (b1b7b28870). 6:40 AM land 'load' was test_health._records reading the copy's own test-runs.jsonl (flat 360 s < pool 405 s); fixed to read both. Owed: pool land (Operator), worst offenders, #41 count.
+- T-4678 (11-17, 490eccf76b): 14 T-4180 steps unlinked (queued). Tick refused: umbrella check reads main's board, queued unlinks not landed. Owed: tick T-4180 after land.
 
 ## Lessons
 - `grep -cs` prints nothing for a missing file, so `[ "$(grep -cs ..)" = 0 ]` fails; count via `cat f 2>/dev/null | grep -c`.

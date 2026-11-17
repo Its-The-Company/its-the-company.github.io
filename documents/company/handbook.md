@@ -69,6 +69,20 @@ These are the defaults (Commandment 13). The task owner's manager may choose oth
 - **Findings.** A finding on work not yet merged is a step on that task (`tools/task_states.py step`). Only a defect in merged work becomes a new line, By: "review of T-X".
 - **Features not yet listed.** Which feature the tab shell and first run are reviewed under waits on Restructuring decision 17. The Builder's block editor, code view and custom block wait on Restructuring decision 18. Both are left undecided here; until a feature is listed, the land reviews such a change as its own task.
 
+**Every app part is explained on the App page** (T-4273, Restructuring 29, an Investor #297 c6858715463). From phase C (Foundations) on, no part of the app counts as done until it has a plain-English page and a diagram drawn from its code by the company's own free <span title="The starting recipe a lane uses to look for ideas. G2, for example, starts from public datasets.">generator</span>, shown on the site's main page App (`/app/`), never under Documents.
+
+1. **Before code.** The part's design carries a "How it works" block: three to six plain sentences a reader who does not read code can follow, and the anchors (a file and a name in it) the part adds.
+2. **Done means.** The part has its file in `pywidget/docs/how-it-works/`, it is drawn on the App page, none of its explanations is marked as changed, and the done-note links its diagram there.
+3. **Review.** The reviewer reads the explanation against the diagram as well as the code.
+4. **Owner.** The App page has one named owner: me, until a decision record names another.
+
+The generator is `tools/site/how_it_works.py`: our own Python, drawn by the site's vendored Mermaid, nothing installed or paid for, no model writing words or lines. Its checks:
+
+- **A changed explanation is flagged.** On every site build each explanation's saved fingerprint is compared with its code. When they differ, the page marks it "The code changed after this was last checked." A person re-reads it, fixes the words if needed, and copies the new fingerprint from `python3 tools/site/how_it_works.py`. A program never rewrites the words.
+- **A lost code anchor blocks the change.** An anchor whose file or name is gone fails `tests/site_how_it_works_test.py`, so the change cannot pass `tests/run.sh` and the gate, and the page says "Out of date". Move the anchor, or remove the box and its words, in the same change.
+
+A changed explanation does not block a landing, only the part's "done". Parts landed before phase C are not held to this step. The decision is in `ops/decisions/2026-11-17-t4273-app-documentation.md`.
+
 ## 4. Meetings
 
 Meetings exist to decide, never to report status. Status goes on the board.
@@ -201,7 +215,7 @@ Every worker call carries its kind tag. Anything a script can do goes to a scrip
 | `reports/` | Report sources, never deleted |
 | `log/` | `events.jsonl`, `ledger.md` (real money), `software.md`, `assets.md`, `optimizations.md`, `board-archive.md`, never deleted |
 | `site/pages/` | About, privacy, support, and press |
-| `tools/` | Our scripts, including `new-worker` (the worker <span title="The starting recipe a lane uses to look for ideas. G2, for example, starts from public datasets.">generator</span>) |
+| `tools/` | Our scripts, including `new-worker` (the worker generator) |
 
 </div>
 
@@ -212,6 +226,7 @@ Every worker call carries its kind tag. Anything a script can do goes to a scrip
 - 2026-11-04, Day 14: every board line carries a plain title, checked by a script (T-2402, Ines).
 - 2026-11-10, Day 20: rule 62 in handbook/rules.md, pipeline tools change in one batch a day while the merge line is in use; a fix that stops merging lands at once (audit item 6, cf1debd054, Odalys).
 - 2026-11-15, Day 25: section 3, which changes get a review line: app code headed to TestFlight or the App Store does (Commandment 13); tools, tests and the site rest on tests/run.sh and the gate unless the manager asks (efficiency review 2.6, T-4304, Ines).
+- 2026-11-17, Day 27: section 3, every app part is explained on the App page: from phase C no app part is done without a plain-English page and a diagram from the company's own generator; a changed explanation is flagged, a lost code anchor blocks (Restructuring 29, an Investor #297, T-4273, Ines).
 {% endraw %}
 
 </div>

@@ -15,6 +15,26 @@ Ines, 2026-10-25 7:27 PM ET; redrawn 2026-10-31 1:02 PM ET (T-0888). Scope: pywi
 
 **Goal (11-04, replaced by the <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span> notes of 2026-11-13 10:53 AM, 2026-11-15 6:34 AM, 2026-11-15 10:00 PM and 2026-11-15 10:15 PM below; kept as written).** Release version 1.0 on Tuesday 2026-12-15 (Day 55), inside the Investors' goal of release by Day 60 (2026-12-20). Feature freeze Monday 2026-11-30 (Day 40). Submit Tuesday 2026-12-08 (Day 48), with the Investors' approval. The date can move either way; every move goes in the next report and a comment on #41. v1 = the IDE (runtime, editor, console, projects, native prompts, Shortcuts) plus a narrow widget engine and 12 premade widgets, with one Pro purchase. Widget freshness is the first product priority (amendment 2026-10-29 7:33 AM).
 
+## Chair note, 2026-11-17 8:01 AM ET (Ines, T-4668): bank, tax and name dates
+
+an Investor answered Restructuring 25 with **A** (9:43 PM ET 11-16, #294 c6936383204; log/rulings.md): bank and tax before the first beta, the name (#90) four weeks before submission. Dated from the current likely release in `ops/milestones.json` (Sunday 2027-07-11), not the card's mid-February estimate. Recorded as chair; this note is the record.
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 1: Chair note, 2026-11-17 8:01 AM ET (Ines, T-4668): bank, tax and name dates, scrolls sideways" style="--tw:1087px" markdown="1">
+
+| What | Due (likely line) | Dated from | Who |
+| --- | --- | --- | --- |
+| Bank and tax in App Store Connect | **Sun 2026-12-06** (Day 46) | Phase B's five days on phones, Mon 12-07 to Fri 12-11, which carry the first test purchase of Pro. No outside beta exists (#295 B), so this internal one is the first that needs them | Investors |
+| The app's public name (#90) | **Sat 2027-05-29** (Day 220) | Submission less four weeks | Investors (creative identity); Wrenna's research, T-4693 |
+| Submission of 1.0 | Sat 2027-06-26 (Day 248) | Phase E: five days of beta from Mon 06-21, then submit; 15 days left for review and one rejection | Investors submit |
+
+</div>
+
+
+Each date moves with its phase and the release; each move goes on #41 that day. The Day 12 date for bank and tax (11-02) was missed and stays recorded as late (`paid-apps` row). Rows: `bank-tax`, `app-name`, `submit`. Timeline: [`documents/restructuring/05-timeline.md`](../restructuring/05-timeline.html) question 5 and s6.
+
+What would make this fail: bank and tax are still not entered on 12-06, so phase B's purchase proof waits and T-0771 (the Pro purchase setup) with it; the name slips past 05-29 and the store page, support email and screenshots wait behind it.
+
 ## Chair note, 2026-11-15 10:15 PM ET (Ines, T-4551): ADR-011 as accepted, and the release moves 3 more days
 
 ADR-011 was accepted at 10:05 PM (Idris, 137c133087; Pernille's re-read and Maren's review answered in its s14). The answers added work to four of the steps I sized at 10:00 PM, inside their ranges: step 3 (the fallback notice read by VoiceOver, with Close and Change), step 8 (the setting's default row, link errors, per-name rows), step 6a (a second lock, `run.lock`, held for the whole run) and step 6 (the drawing rules and hit-area screenshots). I add half a slot day to each on the likely line; best and worst stay. ADR-011 s13 gives no time figures, so these are still my figures, not Idris's; his sizing of the steps (T-4552 to T-4559) replaces them when it comes. Recorded as chair; this note is the record.
@@ -33,7 +53,7 @@ an Investor asked twice on #41 tonight. At 8:59 PM (c6905224905): a person choos
 **Where they sit in the phase order.** Two places, by what each step needs first:
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 1: Chair note, 2026-11-15 10:00 PM ET (Ines, T-4543): widget taps and buttons in…, scrolls sideways" style="--tw:1249px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 2: Chair note, 2026-11-15 10:00 PM ET (Ines, T-4543): widget taps and buttons in…, scrolls sideways" style="--tw:1249px" markdown="1">
 
 | ADR-011 step (s13) | Who | Phase, feature | Slot days (range) | Needs first |
 | --- | --- | --- | --- | --- |
@@ -62,7 +82,7 @@ Why there. The tap choice is stored in the project manifest, which phase C makes
 - Phase C: ends Friday 2027-01-29, was 2027-01-15. Phase D, the Builder: ends Sunday 2027-04-25, was 2027-04-11. Pages: ends Thursday 2027-06-17, was 2027-05-16. The Final Report moves with the release, to 2027-07-08 (Commandment 48).
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 2: Chair note, 2026-11-15 10:00 PM ET (Ines, T-4543): widget taps and buttons in…, scrolls sideways" style="--tw:816px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 3: Chair note, 2026-11-15 10:00 PM ET (Ines, T-4543): widget taps and buttons in…, scrolls sideways" style="--tw:816px" markdown="1">
 
 | Phase | Weeks (range) | Likely end |
 | --- | --- | --- |
@@ -87,7 +107,7 @@ What would make this fail: Idris's check of my figures comes in higher; the in-w
 an Investor answered ten more items on Saturday 11-14, between 4:34 and 5:42 PM ET. Each answer is one letter; quoted from `log/rulings.md`, where each has its link. Recorded as chair; this note is the record. Phases A, B and C keep their dates. Phase D, Pages, the release and the Final Report move later.
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 3: Chair note, 2026-11-15 6:34 AM ET (Ines, T-4467): ten more answers of 11-14…, scrolls sideways" style="--tw:960px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 4: Chair note, 2026-11-15 6:34 AM ET (Ines, T-4467): ten more answers of 11-14…, scrolls sideways" style="--tw:960px" markdown="1">
 
 | Item | His answer | What it means for the plan |
 | --- | --- | --- |
@@ -114,7 +134,7 @@ an Investor answered ten more items on Saturday 11-14, between 4:34 and 5:42 PM 
 - The Final Report moves with the release, to 2027-06-06 (Commandment 48).
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 4: Chair note, 2026-11-15 6:34 AM ET (Ines, T-4467): ten more answers of 11-14…, scrolls sideways" style="--tw:816px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 5: Chair note, 2026-11-15 6:34 AM ET (Ines, T-4467): ten more answers of 11-14…, scrolls sideways" style="--tw:816px" markdown="1">
 
 | Phase | Weeks (range) | Likely end |
 | --- | --- | --- |
@@ -139,7 +159,7 @@ What would make this fail: the drag-and-drop weeks were never checked by the eng
 an Investor answered six Restructuring items on Saturday 11-14, between 5:23 and 5:39 PM ET. Each answer is one letter; quoted from the issue comments. Recorded as chair; this note is the record. Nothing in phases A and B changes. Where the 11-13 10:53 AM note below said "what follows waits on decisions 4, 5 and 10", this note is what follows.
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 5: Chair note, 2026-11-15 2:14 AM ET (Ines, T-4465): six answers of 11-14, and the…, scrolls sideways" style="--tw:830px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 6: Chair note, 2026-11-15 2:14 AM ET (Ines, T-4465): six answers of 11-14, and the…, scrolls sideways" style="--tw:830px" markdown="1">
 
 | Item | His answer | What it means for the plan |
 | --- | --- | --- |
@@ -164,7 +184,7 @@ an Investor answered six Restructuring items on Saturday 11-14, between 5:23 and
 **The versions after 1.0** (replaces the 11-04 note's "After 1.0" table, kept below as history):
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 6: Chair note, 2026-11-15 2:14 AM ET (Ines, T-4465): six answers of 11-14, and the…, scrolls sideways" data-n="1" style="--tw:713px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 7: Chair note, 2026-11-15 2:14 AM ET (Ines, T-4465): six answers of 11-14, and the…, scrolls sideways" data-n="1" style="--tw:713px" markdown="1">
 
 | Version | Holds | Waits on |
 | --- | --- | --- |
@@ -178,7 +198,7 @@ an Investor answered six Restructuring items on Saturday 11-14, between 5:23 and
 **Maybe later (#279 A).** Kept with a reason each, never deleted. Any comes back when the Investors name it.
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 7: Chair note, 2026-11-15 2:14 AM ET (Ines, T-4465): six answers of 11-14, and the…, scrolls sideways" style="--tw:640px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 8: Chair note, 2026-11-15 2:14 AM ET (Ines, T-4465): six answers of 11-14, and the…, scrolls sideways" style="--tw:640px" markdown="1">
 
 | Item | Reason it waits |
 | --- | --- |
@@ -205,7 +225,7 @@ an Investor answered Restructuring 01 with **A** (10:41 AM ET 11-13, #270 c68577
 **The phases** ([`documents/restructuring/05-timeline.md`](../restructuring/05-timeline.html) s1; weeks on the single Xcode slot; dates on the likely line, counted from 11-13):
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 8: Chair note, 2026-11-13 10:53 AM ET (Ines, T-4266): 1.0 waits for the Builder…, scrolls sideways" style="--tw:1082px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 9: Chair note, 2026-11-13 10:53 AM ET (Ines, T-4266): 1.0 waits for the Builder…, scrolls sideways" style="--tw:1082px" markdown="1">
 
 | Phase | What a phone must show to close it | Weeks (range) | Likely end |
 | --- | --- | --- | --- |
@@ -234,7 +254,7 @@ Investor rule (an Investor, #41 c6546244045, amendment 2026-10-31 12:43 PM): no 
 **The dates.**
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 9: Chair note, 2026-10-31 13:02 ET (Ines, T-0888): release by Day 60, scrolls sideways" style="--tw:760px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 10: Chair note, 2026-10-31 13:02 ET (Ines, T-0888): release by Day 60, scrolls sideways" style="--tw:760px" markdown="1">
 
 | Day | Date | Milestone | Owner |
 | --- | --- | --- | --- |
@@ -271,7 +291,7 @@ Investor rule (an Investor, #41 c6546244045, amendment 2026-10-31 12:43 PM): no 
 **Day 30 items.**
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 10: Chair note, 2026-10-31 13:02 ET (Ines, T-0888): release by Day 60, scrolls sideways" style="--tw:498px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 11: Chair note, 2026-10-31 13:02 ET (Ines, T-0888): release by Day 60, scrolls sideways" style="--tw:498px" markdown="1">
 
 | Item | Ruling |
 | --- | --- |
@@ -298,7 +318,7 @@ What would make this fail: the lane fails its gates and T-0682 eats all the slac
 **History.** The rows for Days 5-8 stand. The rows for Days 9-17 are the plan of 2026-10-25, kept as written and no longer current: they were replaced by the chair note of 2026-10-29 8:03 AM below, and that table's rows from Day 21 on by the chair note of 2026-10-31 1:02 PM above.
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 11: Milestones and owners (2026-10-25, history), scrolls sideways" data-n="1" style="--tw:769px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 12: Milestones and owners (2026-10-25, history), scrolls sideways" data-n="1" style="--tw:769px" markdown="1">
 
 | Day | Date | Milestone | Owner |
 | --- | --- | --- | --- |
@@ -322,7 +342,7 @@ What would make this fail: the lane fails its gates and T-0682 eats all the slac
 ## Model per kind of work (Tenet 6)
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 12: Model per kind of work (Tenet 6), scrolls sideways" style="--tw:640px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 13: Model per kind of work (Tenet 6), scrolls sideways" style="--tw:640px" markdown="1">
 
 | Work | Model, effort |
 | --- | --- |
@@ -351,7 +371,7 @@ Ruled in ops/plans/pywidget/xcode-queue-day6-10.md. Main slot order: T-0206 (run
 Investor rule (amendments.md, 2026-10-29 7:33 AM): widget freshness beats a quick launch, Day 17 is flexible. Ruled in ADR-007's chair line of 2026-10-29 08:03: Python runs in the widget extension for `lane: widget` scripts (ADR-007 option c), built now behind the flag, the flag's default set from device numbers before the release candidate; the declared Swift steps (net fetch, location, steps) ship either way; bound fields are a specified contingency built only if the lane fails its gates. About 7 new days on Idris's lane. New milestones; rows above Day 9 stand.
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 13: Chair note, 2026-10-29 08:03 ET (Ines, T-0671): widget freshness moves the dates, scrolls sideways" style="--tw:760px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 14: Chair note, 2026-10-29 08:03 ET (Ines, T-0671): widget freshness moves the dates, scrolls sideways" style="--tw:760px" markdown="1">
 
 | Day | Date | Milestone | Owner |
 | --- | --- | --- | --- |
@@ -409,7 +429,7 @@ Investor an Investor chose **B-staged** on #142 (c6648346528, 2026-11-04 9:50 PM
 **Version 1.0, release Tuesday 2026-12-15 (holds).**
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 14: Chair note, 2026-11-04 22:03 ET (Ines, T-2354): version 1.0 re-planned around…, scrolls sideways" style="--tw:1129px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 15: Chair note, 2026-11-04 22:03 ET (Ines, T-2354): version 1.0 re-planned around…, scrolls sideways" style="--tw:1129px" markdown="1">
 
 | Item | What 1.0 holds | Lines | Cost |
 | --- | --- | --- | --- |
@@ -427,7 +447,7 @@ Investor an Investor chose **B-staged** on #142 (c6648346528, 2026-11-04 9:50 PM
 **After 1.0.** *(History: replaced by the 11-13 note, and by the 11-15 note's versions and "Maybe later".)*
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 15: Chair note, 2026-11-04 22:03 ET (Ines, T-2354): version 1.0 re-planned around…, scrolls sideways" style="--tw:960px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 16: Chair note, 2026-11-04 22:03 ET (Ines, T-2354): version 1.0 re-planned around…, scrolls sideways" style="--tw:960px" markdown="1">
 
 | Version | Holds | Needs from the Investors first |
 | --- | --- | --- |

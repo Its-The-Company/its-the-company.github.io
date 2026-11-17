@@ -112,6 +112,25 @@ Build lines proposed for Idris (Ines places them; not on the board):
 - **B3 Pro button.** The label has no line limit and no scale-down; it wraps. Check: AX3 shows "[price]" whole.
 - **B4 Bars.** Nav titles, the tab bar, the key row and the close button keep their size and set `accessibilityShowsLargeContentViewer`. Check: long-press on a tab at AX3 shows the viewer.
 
+### 2.2 Words: the approved voice (#141, approved 2026-11-16)
+
+Maren, 2026-11-17, T-4671. This is the style guide's part on words; until today the guide had none, so it sits with the other shared rules. Source: an Investor, 2026-11-16 9:45 PM ET, "approve", option A of #141 ((private)), recorded in `creative/approved.md` entry 8 and `log/rulings.md` 2026-11-16 9:45 PM. The text below is quoted from entry 8 word for word. Nothing here adds to it; a change to the voice is the Investors' call (C51).
+
+**The rule.** "Plain words, sentence case, short sentences; says what happened, then what to do; calls the product "PyWidget", never "the app"; no exclamation marks, no jokes."
+
+**Its two samples.** "#141's two samples: the Gallery's 12 ready-made widgets ("What it shows", "Uses") and the Activity screen's strings, as listed in pywidget/docs/design/copy-card-pending.md and pywidget/docs/design/ide/spec.md (section 5 screen note 12, section 9 screen note 11)."
+
+- Sample 1, the Gallery's 12 ready-made widgets: the `about.*` rows of s9.11 (from `pywidget/widgets/premade/catalog.json`, `caption` and `uses`).
+- Sample 2, the Activity screen's strings: the whole s12.12 table (104 strings, `draw_activity.py --strings`).
+
+**What the approval covers.** "Work inside this voice needs no further approval (C51): every sentence that follows the rule is cleared for release, and new ones written the same way need no card. One-word button labels follow Apple's conventions and need none."
+
+**Standing note.** "The Investors may change the voice later to add more personality; until they do, it stays straightforward."
+
+**Not approved by #141.** "A sentence that breaks the rule (a joke, a slogan, a new tone) comes back on its own card; the name (#90; "PyWidget" in the rule stands for whatever name is chosen); the Home Screen setup walkthrough; the App Store page and screenshots."
+
+**Where each string stands.** [`pywidget/docs/design/copy-card-pending.md`](copy-card-pending.html) is the record: what is cleared (marked "approved 2026-11-16"), what breaks the rule (T-4746), and what is held. The C51 column in s3.3, s9.11 and s12.12 below is printed by `draw_complete.py`, `draw_gallery.py` and `draw_activity.py` and still reads DRAFT; where it disagrees with the copy card, the copy card wins.
+
 ## 3. Components
 
 
@@ -196,7 +215,7 @@ Message shape is `pywidget_tooling/editor.py` (T-1101): `complete()` returns `mo
 </div>
 
 
-Strings (`python3 pywidget/docs/design/ide/draw_complete.py --strings`; all **DRAFT**): `cmp.basic` "Basic suggestions"; `lint.more` "+{n}"; `lint.sheet.h` "{n} messages on line {line}"; `va.lint` "Warning, {label}, line {line}. {message}"; `va.lint.n` "{n} warnings, line {line}. {first}. Double-tap to read all."; `va.lint.hint` "Opens the messages for this line."; `va.cmp.basic` "Basic suggestions". C6 word check: none banned.
+Strings (`python3 pywidget/docs/design/ide/draw_complete.py --strings`; all **DRAFT**): `cmp.basic` "Basic suggestions"; `lint.more` "+{n}"; `lint.sheet.h` "{n} messages on line {line}"; `va.lint` "Warning, {label}, line {line}. {message}"; `va.lint.n` "{n} warnings, line {line}. {first}. Double-tap to read all."; `va.lint.hint` "Opens the messages for this line."; `va.cmp.basic` "Basic suggestions". C6 word check: none banned. *2026-11-17 (T-4671):* all seven follow the approved voice (s2.2) and are cleared, approved 2026-11-16.
 
 Sheets: `A-` and `B-` `complete-phone.png`, `lint-phone.png`, `lint-ipad.png`; QA in `qa-complete.json` (8 frames per appearance, 0 clipped, 0 truncated, 0 overlap, 0 under 11 pt, 0 contrast fails, lowest 4.98:1). Source `draw_complete.py`. Not run: the sample messages were not compared to the module's output, because pyflakes does not import on the host Python (`--strings` prints the check as unchecked); Idris's UI test should assert the label text from a real `diagnostics()` answer.
 
@@ -471,7 +490,7 @@ Runs log (⋯ → Runs): one row per run with the same icon and word, run number
 
    **9.10 QA and size.** 20 frames, 0 clipped, 0 truncated, 0 text over text, 0 under 11 pt, 0 contrast fails. All 12 premades are rendered across the A phone and A iPad sheets (`qa-gallery.json` `_coverage`, missing: none). PNG bytes: A phone 288,520 (@1.16x), A iPad 227,553 (@2x), B phone 281,395 (@0.99x), each under 300 KB (draw_ide.py's `MAX_BYTES`, palette PNG). Large at 50% in a tile is a thumbnail (about 6 pt text); the QA reads computed sizes, so it does not flag it, and the detail sheet is where Large reads.
 
-   **9.11 Strings** (`draw_gallery.py --strings`; `pro:` ids are s5.7's, read from `PRO_STR` so the two screens cannot drift). Every one is DRAFT C51: no copy guide is approved.
+   **9.11 Strings** (`draw_gallery.py --strings`; `pro:` ids are s5.7's, read from `PRO_STR` so the two screens cannot drift). Every one is DRAFT C51: no copy guide is approved. *2026-11-17 (T-4671):* the voice is approved (s2.2) and these words are cleared by the copy card, except `add.home2` and `add.lock2` (they write "pywidget"; T-4746) and the other four add steps (held); the `pro:` ids are approved item 4's. The DRAFT column below is the script's and is out of date.
 
 
 <div class="tbl" role="region" tabindex="0" aria-label="Table 15: 5. Screen notes, scrolls sideways" style="--tw:853px" markdown="1">
@@ -952,7 +971,7 @@ Runs log (⋯ → Runs): one row per run with the same icon and word, run number
 
    **12.11 What T-0048 shows in the Simulator** (its done condition, for this screen): iPhone and iPad, light and dark: All while failing; Failed from the badge route; a failed run's detail; a finished run with output; working; Failed with none; no runs; the share sheet; the Clear alert; AX5 list and detail. Plus one row of each outcome in 12.4 that a fixture can make (`ok`, `error`, `timeout`, `NoTree`, `deferred` at least).
 
-   **12.12 Strings** (from `draw_activity.py --strings`; `[appname]` is `CFBundleDisplayName`, read at run time):
+   **12.12 Strings** (from `draw_activity.py --strings`; `[appname]` is `CFBundleDisplayName`, read at run time): *2026-11-17 (T-4671):* this table is sample 2 of the approved voice (s2.2); every string is cleared, approved 2026-11-16. The DRAFT column is the script's and is out of date.
 
 
 <div class="tbl" role="region" tabindex="0" aria-label="Table 26: import shared, scrolls sideways" style="--tw:846px" markdown="1">

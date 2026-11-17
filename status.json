@@ -1,10 +1,10 @@
 {
  "schema": 1,
- "at": "2026-11-17T14:06:12.738550+00:00",
+ "at": "2026-11-17T14:12:00.170079+00:00",
  "session": {
-  "active": true,
-  "kind": "work",
-  "started": "2026-11-17T08:03:58-05:00",
+  "active": false,
+  "kind": "",
+  "started": null,
   "flow": [],
   "done": [
    {
@@ -51,7 +51,6 @@
    },
    {
     "t": "T-4661",
-    "name": "Free disk space and cut the Mac mini's load",
     "acct": "Personal a",
     "steps": [],
     "end": "landed",
@@ -68,7 +67,6 @@
    },
    {
     "t": "T-4273",
-    "name": "Add the app documentation step to the Handbook",
     "acct": "Personal b",
     "steps": [],
     "end": "landed",
@@ -130,12 +128,13 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 15.0,
-   "resets_at": "2026-11-17T09:10:00-05:00",
+   "pct": null,
+   "resets_at": null,
    "used_words": "of your 5-hour allowance used",
    "read_at": "2026-11-17T08:22:32.387677-05:00",
    "source": "live",
-   "left": 85.0,
+   "last_reset": "2026-11-17T09:10:00-05:00",
+   "left": null,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
@@ -169,12 +168,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": null,
+ "next_tick": "2026-11-17T08:18:42-05:00",
  "personal": {
   "week_pct": 33.92,
-  "usage_pct": 51.5,
-  "work_pct": 78.4,
-  "read_at": "2026-11-17T14:06:00+00:00",
+  "usage_pct": 51.2,
+  "work_pct": 77.7,
+  "read_at": "2026-11-17T14:14:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -187,18 +186,6 @@
     "at": "2026-11-17T07:19:52-05:00",
     "n": "Evan",
     "src": "plan-a"
-   },
-   {
-    "lane": "b",
-    "task": "T-4183",
-    "w": "Idris",
-    "k": "build",
-    "t": "The Gallery shows, previews and opens every premade",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-17T08:14:09-05:00",
-    "n": "Jeremy",
-    "src": "plan-b"
    }
   ]
  },
@@ -236,7 +223,7 @@
  "lock_in": {
   "on": false,
   "pool": 5,
-  "at": "2026-11-17T09:06:00-05:00",
+  "at": "2026-11-17T09:14:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -244,13 +231,9 @@
    "b": "double-spread"
   }
  },
- "next_tick_why": "session",
+ "next_tick_why": "last_tick",
  "idle": null,
- "pool": {
-  "why": "Double Spread: 68% of the week left, paced to last until Wed 14:00, the week's halfway point; the machine allows 3 (at its floor: load 10.7 a core is over 10)",
-  "n": 3,
-  "at": "2026-11-17T08:03:42.685422-05:00"
- },
+ "pool": null,
  "lanes": [
   {
    "name": "Pernille",
@@ -303,7 +286,6 @@
  ],
  "tasks": {
   "run": [],
-  "src": "plan",
   "open": [
    {
     "w": "Pernille",
@@ -398,23 +380,6 @@
    "wait": 28,
    "blocked": 31,
    "you": 8
-  },
-  "fin": {
-   "n": 3,
-   "rows": [
-    [
-     "T-0906",
-     "Fix project send failures on..."
-    ],
-    [
-     "T-2498",
-     "Test the..."
-    ],
-    [
-     "T-4661",
-     "Free disk space and cut the..."
-    ]
-   ]
   }
  },
  "qr": [
@@ -456,34 +421,41 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-17T14:06:12Z",
-  "s": {},
+  "at": "2026-11-17T14:12:00Z",
+  "s": {
+   "T-4663": [
+    "mergeq",
+    "1st to merge",
+    1794924720170
+   ]
+  },
+  "nm": {
+   "T-4663": "Completion ignores letter case and small typos"
+  },
   "wk": {
-   "T-0906": "Idris",
-   "T-2498": "Idris",
-   "T-4661": "Odalys"
+   "T-4663": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-17T14:06:12Z",
+  "at": "2026-11-17T14:12:00Z",
   "mq": {
    "n": {
     "checking": 0,
-    "inline": 0,
+    "inline": 1,
     "conflicted": 1,
-    "failed": 2,
+    "failed": 0,
     "held": 1,
     "retry": 0,
     "parked": 17
    },
    "m": {
     "checking": null,
-    "inline": null,
-    "conflicted": 621,
-    "failed": 12,
-    "held": 877,
+    "inline": 0,
+    "conflicted": 627,
+    "failed": null,
+    "held": 883,
     "retry": null,
-    "parked": 500
+    "parked": 506
    },
    "cur": [],
    "ld": [
@@ -493,12 +465,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-17T14:06:14Z",
-    "ld": 16.84,
+    "at": "2026-11-17T14:12:01Z",
+    "ld": 22.86,
     "c": 8,
-    "sb": 2,
+    "sb": 3,
     "dk": [
-     26.2,
+     24.4,
      228.3
     ],
     "ss": [
@@ -507,6 +479,7 @@
     ],
     "sn": [
      "T4188 Idris iPhone 17e",
+     "idris-t4183-17e",
      "iPhone 17e"
     ]
    },
@@ -526,54 +499,23 @@
  "operators": [
   {
    "w": "Operator",
-   "a": "Main plan",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session",
-   "at": "2026-11-17T09:03:06-05:00"
-  },
-  {
-   "w": "Operator",
    "a": "Evan's Account",
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Inbox \u2013 Evan's 9:04 AM Message on GitHub",
-   "at": "2026-11-17T09:05:14-05:00"
-  },
-  {
-   "w": "Operator",
-   "a": "Jeremy's Account",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
    "t": "Work session \u2013 1 task",
-   "at": "2026-11-17T09:05:34-05:00"
+   "at": "2026-11-17T09:07:10-05:00"
   }
  ],
  "reply": {
-  "sent": "2026-11-17T14:03:10Z",
-  "seconds": 143.0
+  "sent": "2026-11-17T14:04:01Z",
+  "seconds": 92.0
  },
- "inbox": [
-  {
-   "id": "c6950294103",
-   "state": "received",
-   "position": 1,
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "start it now, since it may allow the..."
-  }
- ],
+ "inbox": [],
  "trimmed": [
   "lane_next",
   "queue_text",
   "task_done",
-  "fin_short",
-  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -582,12 +524,12 @@
  ],
  "agents_now": {
   "main": 0,
-  "lanes": 2,
-  "total": 2,
-  "at": "9:06 AM",
+  "lanes": 1,
+  "total": 1,
+  "at": "9:14 AM",
   "why": "",
-  "at_iso": "2026-11-17T14:06:00+00:00",
-  "started": "8:03 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0, started 8:03 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 9:06 AM ET</p></section>"
+  "at_iso": "2026-11-17T14:14:00+00:00",
+  "started": "",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 9:14 AM ET</p></section>"
  }
 }

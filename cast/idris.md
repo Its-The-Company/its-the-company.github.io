@@ -45,6 +45,8 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 - T-4583 11-16: Patch 4 (tick_steps, feature_with_steps, before line) written and tested in T-4583-idris/wt, not landed: security-guard refused a diagnostic ps|grep whose pattern held "claude -p" (rule 14 stop). Open: the Investors/Operator say whether it may land. Lesson: never put that phrase in a command.
 
+- T-4184 11-17 e68d8610ba: T-0906 landed + ticked. Open: Pernille review line. Lesson: a dirty copy can't use xc.sh's runner route; main_gate land runs the MacBook unit run itself. Grep all mutants*.json finds after a rewrite.
+
 ## Lessons
 - Older lessons and dated logs: archive.md.
 

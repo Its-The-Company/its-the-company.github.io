@@ -43,6 +43,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 - 11-16 kept: check rows before promising per-row widget buttons (44 pt + 12 pt overflow M/L); draw_ide render ~7 min, look at one sheet first; Back labels >96 px truncate; shipped strings "PyWidget".
 - 2026-11-17 T-4680 #291 recorded (approved.md item 9), Studio greyed in 04-mockups a,c (2aa1a4bf73). Open: tokens.css Studio still navy/violet; Lumen keyword violet; new themes each need C51. Lesson: an Investor colour change without values: equal-luminance neutral keeps every contrast pair, and say what stayed.
+- 11-17 T-4530 Queued = dispatch.start_order (slice 1); slice 2 is T-4747. T-4530 closes when piece T-4747 merges (board refuses a tick on an umbrella with open pieces).
 {% endraw %}
 
 

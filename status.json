@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-17T17:54:29.208387+00:00",
+ "at": "2026-11-17T17:57:32.074480+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -119,7 +119,7 @@
    "task": "[build] T-3564 land device-limit fixes from parked ref",
    "model": "opus",
    "started": "2026-11-17T17:49:46.991Z",
-   "seconds": 282,
+   "seconds": 465,
    "finished": null,
    "effort": "high"
   },
@@ -128,7 +128,7 @@
    "task": "[test] T-3560 land first-render test fixes from parked ref",
    "model": "opus",
    "started": "2026-11-17T17:49:58.500Z",
-   "seconds": 270,
+   "seconds": 453,
    "finished": null,
    "effort": "high"
   }
@@ -187,7 +187,7 @@
   "week_pct": 39.28,
   "usage_pct": 53.6,
   "work_pct": 80.0,
-  "read_at": "2026-11-17T17:54:00+00:00",
+  "read_at": "2026-11-17T17:57:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -249,7 +249,7 @@
  "lock_in": {
   "on": false,
   "pool": 6,
-  "at": "2026-11-17T12:54:00-05:00",
+  "at": "2026-11-17T12:57:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -491,17 +491,17 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-17T17:54:29Z",
+  "at": "2026-11-17T17:57:14Z",
   "s": {
    "T-3560": [
     "merging",
-    "Mac tests at the main gate",
-    1794937949208
+    "Mac tests at the main gate \u00b7 8 groups of tests done",
+    1794937934863
    ],
    "T-3564": [
-    "testing",
-    "its own tests, in its copy",
-    1794937889208
+    "merging",
+    "Mac tests at the main gate",
+    1794938234863
    ]
   },
   "nm": {
@@ -517,7 +517,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-17T17:54:29Z",
+  "at": "2026-11-17T17:57:14Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -531,11 +531,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 849,
+    "conflicted": 852,
     "failed": null,
-    "held": 618,
+    "held": 621,
     "retry": null,
-    "parked": 131
+    "parked": 134
    },
    "cur": [],
    "ld": [
@@ -545,12 +545,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-17T17:54:24Z",
-    "ld": 1.68,
+    "at": "2026-11-17T17:56:28Z",
+    "ld": 1.31,
     "c": 8,
     "sb": 1,
     "dk": [
-     18.0,
+     17.9,
      228.3
     ],
     "ss": [
@@ -623,10 +623,10 @@
   "main": 2,
   "lanes": 2,
   "total": 4,
-  "at": "12:54 PM",
+  "at": "12:57 PM",
   "why": "",
-  "at_iso": "2026-11-17T17:54:00+00:00",
+  "at_iso": "2026-11-17T17:57:00+00:00",
   "started": "12:48 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 2, started 12:48 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 12:54 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 2, started 12:48 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 12:57 PM ET</p></section>"
  }
 }

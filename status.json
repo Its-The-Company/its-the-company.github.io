@@ -1,28 +1,20 @@
 {
  "schema": 1,
- "at": "2026-11-17T08:30:40.080054+00:00",
+ "at": "2026-11-17T08:33:42.448169+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-17T01:00:31-05:00",
-  "flow": [
+  "flow": [],
+  "done": [
    {
     "t": "T-4672",
     "name": "Plan the 1.0 showcase premades",
     "acct": "Personal b",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1794903169
-     },
-     {
-      "s": "macbook",
-      "at": 1794903180
-     }
-    ]
-   }
-  ],
-  "done": [
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794904256
+   },
    {
     "t": "T-4469",
     "acct": "Personal a",
@@ -94,16 +86,9 @@
     "steps": [],
     "end": "landed",
     "end_at": 1794891311
-   },
-   {
-    "t": "T-4240",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794891311
    }
   ],
-  "landed": 45,
+  "landed": 46,
   "failed": 4
  },
  "workers": [
@@ -112,7 +97,7 @@
    "task": "[tools] T-4677 landed work never shows Retry",
    "model": "opus",
    "started": "2026-11-17T07:27:10.371Z",
-   "seconds": 3809,
+   "seconds": 3992,
    "finished": null,
    "effort": "high"
   },
@@ -121,7 +106,7 @@
    "task": "[tools] T-4701 new-test deflake hook in gate",
    "model": "opus",
    "started": "2026-11-17T08:08:59.086Z",
-   "seconds": 1300,
+   "seconds": 1483,
    "finished": null,
    "effort": "high"
   },
@@ -130,7 +115,7 @@
    "task": "[tools] T-4676 lane wiring for in-place fix",
    "model": "opus",
    "started": "2026-11-17T08:09:05.886Z",
-   "seconds": 1294,
+   "seconds": 1476,
    "finished": null,
    "effort": "high"
   },
@@ -139,7 +124,7 @@
    "task": "[tools] T-4694 nightly run of every suite",
    "model": "opus",
    "started": "2026-11-17T08:09:12.090Z",
-   "seconds": 1287,
+   "seconds": 1470,
    "finished": null,
    "effort": "high"
   }
@@ -231,21 +216,8 @@
   "week_pct": 32.81,
   "usage_pct": 54.0,
   "work_pct": 78.2,
-  "read_at": "2026-11-17T08:30:00+00:00",
-  "running": [
-   {
-    "lane": "a3",
-    "task": "T-4181",
-    "w": "Idris",
-    "k": "build",
-    "t": "Widgets refresh on their own and by a tap",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-17T01:00:49-05:00",
-    "n": "Evan",
-    "src": "plan-a"
-   }
-  ]
+  "read_at": "2026-11-17T08:33:00+00:00",
+  "running": []
  },
  "api_credits": [
   {
@@ -281,7 +253,7 @@
  "lock_in": {
   "on": false,
   "pool": 4,
-  "at": "2026-11-17T03:30:00-05:00",
+  "at": "2026-11-17T03:33:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -556,44 +528,30 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-17T08:30:21Z",
+  "at": "2026-11-17T08:32:11Z",
   "s": {
-   "T-4672": [
-    "mergetest",
-    "Xcode checks on the MacBook, 1st to merge",
-    1794903201630
-   ],
-   "T-4181": [
-    "testing",
-    "Mac Mini \u00b7 test",
-    null
-   ],
    "T-4694": [
     "testing",
     "its own tests, in its copy",
-    1794903441630
+    1794904271758
    ],
    "T-4676": [
     "testing",
     "its own tests, in its copy",
-    1794903501630
+    1794903551758
    ],
    "T-4701": [
     "testing",
     "its own tests, in its copy",
-    1794903621630
+    1794903611758
    ]
   },
   "nm": {
-   "T-4672": "Plan the 1.0 showcase premades",
-   "T-4181": "Widgets refresh on their own and by a tap",
    "T-4694": "Pass lands whose red is also on main",
    "T-4676": "Fix small test failures in place during a land",
    "T-4701": "Keep bad tests from blocking merges"
   },
   "wk": {
-   "T-4672": "Ines",
-   "T-4181": "Idris",
    "T-4694": "Odalys",
    "T-4676": "Odalys",
    "T-4701": "Odalys",
@@ -611,49 +569,40 @@
   }
  },
  "ln": {
-  "at": "2026-11-17T08:30:21Z",
+  "at": "2026-11-17T08:32:11Z",
   "mq": {
    "n": {
-    "checking": 1,
+    "checking": 0,
     "inline": 0,
     "conflicted": 2,
     "failed": 0,
     "held": 0,
     "retry": 4,
-    "parked": 18
+    "parked": 19
    },
    "m": {
-    "checking": 17,
+    "checking": null,
     "inline": null,
-    "conflicted": 625,
+    "conflicted": 627,
     "failed": null,
     "held": null,
-    "retry": 62,
-    "parked": 202
+    "retry": 64,
+    "parked": 189
    },
-   "cur": [
-    [
-     [
-      "T-4672"
-     ],
-     "iPhone app tests",
-     "MacBook",
-     17
-    ]
-   ],
+   "cur": [],
    "ld": [
-    5,
-    "2026-11-17T08:27:48Z"
+    6,
+    "2026-11-17T08:30:56Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-17T08:30:00Z",
-    "ld": 19.66,
+    "at": "2026-11-17T08:33:16Z",
+    "ld": 27.23,
     "c": 8,
     "sb": 1,
     "dk": [
-     15.9,
+     18.7,
      228.3
     ],
     "ss": [
@@ -665,12 +614,12 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-17T08:21:27Z",
-    "ld": 0.92,
+    "at": "2026-11-17T08:29:29Z",
+    "ld": 1.24,
     "c": 12,
     "sb": 0,
     "dk": [
-     329.0,
+     328.8,
      926.4
     ],
     "sn": []
@@ -686,15 +635,6 @@
    "e": "high",
    "t": "Work session \u2013 7 tasks",
    "at": "2026-11-17T01:02:20-05:00"
-  },
-  {
-   "w": "Operator",
-   "a": "Evan's Account",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session \u2013 1 task",
-   "at": "2026-11-17T01:02:19-05:00"
   }
  ],
  "reply": {
@@ -717,12 +657,12 @@
  ],
  "agents_now": {
   "main": 4,
-  "lanes": 1,
-  "total": 5,
-  "at": "3:30 AM",
+  "lanes": 0,
+  "total": 4,
+  "at": "3:33 AM",
   "why": "",
-  "at_iso": "2026-11-17T08:30:00+00:00",
+  "at_iso": "2026-11-17T08:33:00+00:00",
   "started": "1:00 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 4, started 1:00 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 3:30 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 4, started 1:00 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 3:33 AM ET</p></section>"
  }
 }

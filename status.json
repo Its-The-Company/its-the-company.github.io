@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-17T03:31:11.904165+00:00",
+ "at": "2026-11-17T03:34:13.951705+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -111,7 +111,7 @@
    "task": "[tools] T-4665 batch land efficiency pieces",
    "model": "opus",
    "started": "2026-11-17T02:49:08.404Z",
-   "seconds": 2523,
+   "seconds": 2705,
    "finished": null,
    "effort": "high"
   }
@@ -121,7 +121,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 443,
+  "runnable_count": 444,
   "blocked_count": 74
  },
  "meter": {
@@ -170,7 +170,7 @@
   "week_pct": 24.98,
   "usage_pct": 48.1,
   "work_pct": 77.2,
-  "read_at": "2026-11-17T03:31:00+00:00",
+  "read_at": "2026-11-17T03:34:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -264,7 +264,7 @@
   }
  ],
  "disk": {
-  "free_gb": 12,
+  "free_gb": 13,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -273,14 +273,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-16T22:24:00-05:00",
+   "at": "2026-11-16T22:31:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 4,
-  "at": "2026-11-16T22:31:00-05:00",
+  "at": "2026-11-16T22:34:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -450,7 +450,7 @@
    }
   ],
   "count": {
-   "next": 443,
+   "next": 444,
    "wait": 35,
    "blocked": 39,
    "you": 12
@@ -504,7 +504,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-17T03:31:11Z",
+  "at": "2026-11-17T03:34:05Z",
   "s": {
    "T-4181": [
     "testing",
@@ -514,28 +514,35 @@
    "T-4185": [
     "testq",
     "1st for a Simulator",
-    1794885071904
+    1794885125379
    ],
    "T-4182": [
     "testq",
     "2nd for a Simulator",
-    1794885971904
+    1794886025379
+   ],
+   "T-4190": [
+    "testq",
+    "3rd for a Simulator",
+    1794886385379
    ]
   },
   "nm": {
    "T-4181": "Widgets refresh on their own and by a tap",
    "T-4185": "Launcher widgets open the apps a person chose",
-   "T-4182": "A failing widget says so and can recover"
+   "T-4182": "A failing widget says so and can recover",
+   "T-4190": "Settings and Pro: buy, restore, themes"
   },
   "wk": {
    "T-4181": "Idris",
    "T-4185": "Idris",
    "T-4182": "Idris",
+   "T-4190": "Idris",
    "T-4617": "Odalys"
   }
  },
  "ln": {
-  "at": "2026-11-17T03:31:11Z",
+  "at": "2026-11-17T03:34:05Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -549,11 +556,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 667,
+    "conflicted": 670,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 967
+    "parked": 970
    },
    "cur": [],
    "ld": [
@@ -563,8 +570,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-17T03:30:50Z",
-    "ld": 44.24,
+    "at": "2026-11-17T03:33:16Z",
+    "ld": 37.39,
     "c": 8,
     "sb": 1,
     "dk": [
@@ -618,7 +625,7 @@
    "m": "opus",
    "e": "high",
    "t": "Work session \u2013 1 task",
-   "at": "2026-11-16T21:45:05-05:00"
+   "at": "2026-11-16T22:32:03-05:00"
   },
   {
    "w": "Operator",
@@ -644,8 +651,8 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Inbox \u2013 Evan's 10:30 PM Message on GitHub",
-   "at": "2026-11-16T22:30:50-05:00"
+   "t": "Work session \u2013 1 task",
+   "at": "2026-11-16T22:33:56-05:00"
   },
   {
    "w": "Operator",
@@ -658,27 +665,15 @@
   }
  ],
  "reply": {
-  "sent": "2026-11-17T03:28:14Z",
-  "seconds": 108.0
+  "sent": "2026-11-17T03:30:26Z",
+  "seconds": 96.0
  },
- "inbox": [
-  {
-   "id": "c6937264961",
-   "state": "received",
-   "position": 1,
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "I can see that several changes are..."
-  }
- ],
+ "inbox": [],
  "trimmed": [
   "lane_next",
   "queue_text",
   "task_done",
   "fin_short",
-  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -689,10 +684,10 @@
   "main": 1,
   "lanes": 6,
   "total": 7,
-  "at": "10:31 PM",
+  "at": "10:34 PM",
   "why": "",
-  "at_iso": "2026-11-17T03:31:00+00:00",
+  "at_iso": "2026-11-17T03:34:00+00:00",
   "started": "9:46 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 1, started 9:46 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 6 sessions \u00b7 as of 10:31 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 1, started 9:46 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 6 sessions \u00b7 as of 10:34 PM ET</p></section>"
  }
 }

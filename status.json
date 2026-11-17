@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-17T14:27:08.586028+00:00",
+ "at": "2026-11-17T14:30:08.719148+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -99,7 +99,7 @@
    "task": "[build] T-0687 land parked extension work",
    "model": "opus",
    "started": "2026-11-17T14:21:15.257Z",
-   "seconds": 353,
+   "seconds": 533,
    "finished": null,
    "effort": "high"
   },
@@ -108,7 +108,7 @@
    "task": "[build] T-0289 land parked state module",
    "model": "opus",
    "started": "2026-11-17T14:21:25.112Z",
-   "seconds": 343,
+   "seconds": 523,
    "finished": null,
    "effort": "high"
   }
@@ -167,7 +167,7 @@
   "week_pct": 36.07,
   "usage_pct": 52.2,
   "work_pct": 79.0,
-  "read_at": "2026-11-17T14:27:00+00:00",
+  "read_at": "2026-11-17T14:30:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -180,6 +180,102 @@
     "at": "2026-11-17T07:19:52-05:00",
     "n": "Evan",
     "src": "plan-a"
+   },
+   {
+    "lane": "a2",
+    "task": "T-4749",
+    "w": "Pernille",
+    "k": "tools",
+    "t": "Rewrite or drop outdated tests that read code text",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-17T09:29:40-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a2",
+    "task": "T-4743",
+    "w": "Odalys",
+    "k": "fix",
+    "t": "Fix a MacBook test job that failed",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-17T09:29:40-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "b",
+    "task": "T-4682",
+    "w": "Odalys",
+    "k": "site",
+    "t": "Hide the Issues page's raw list until it loads",
+    "m": "sonnet",
+    "e": "high",
+    "at": "2026-11-17T09:29:11-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
+   },
+   {
+    "lane": "b",
+    "task": "T-4693",
+    "w": "Wrenna",
+    "k": "research",
+    "t": "Research a permanent name for the app",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-17T09:29:11-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
+   },
+   {
+    "lane": "b2",
+    "task": "T-4631",
+    "w": "Idris",
+    "k": "fix",
+    "t": "Place premades in the app when their imports are refused",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-17T09:29:10-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
+   },
+   {
+    "lane": "b2",
+    "task": "T-4656",
+    "w": "Idris",
+    "k": "fix",
+    "t": "Let a cleaned script return to the widget on resend",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-17T09:29:10-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
+   },
+   {
+    "lane": "b3",
+    "task": "T-4599",
+    "w": "Odalys",
+    "k": "review",
+    "t": "Check finished work before it ships",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-17T09:29:10-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
+   },
+   {
+    "lane": "b3",
+    "task": "T-4600",
+    "w": "Pernille",
+    "k": "review",
+    "t": "Check finished work before it ships",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-17T09:29:10-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
    }
   ]
  },
@@ -201,7 +297,7 @@
   }
  ],
  "disk": {
-  "free_gb": 22,
+  "free_gb": 24,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -210,14 +306,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-17T09:22:00-05:00",
+   "at": "2026-11-17T09:29:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 5,
-  "at": "2026-11-17T09:27:00-05:00",
+  "at": "2026-11-17T09:30:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -447,55 +543,55 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-17T14:27:08Z",
+  "at": "2026-11-17T14:29:54Z",
   "s": {
    "T-4416": [
     "mergetest",
     "iPhone tests on the MacBook",
     null
    ],
+   "T-0289": [
+    "merging",
+    "Mac tests at the main gate",
+    1794925734599
+   ],
    "T-0687": [
     "testing",
     "its own tests, in its copy",
-    1794925388586
-   ],
-   "T-0289": [
-    "testing",
-    "its own tests, in its copy",
-    1794925508586
+    1794925374599
    ]
   },
   "nm": {
    "T-4416": "Pin the app's refresh-tap install with a test",
-   "T-0687": "Run network fetches inside the extension on the Simulator",
-   "T-0289": "Build the widget state module for scripts"
+   "T-0289": "Build the widget state module for scripts",
+   "T-0687": "Run network fetches inside the extension on the Simulator"
   },
   "wk": {
    "T-4416": "Idris",
-   "T-0687": "Idris",
-   "T-0289": "Pernille"
+   "T-0289": "Pernille",
+   "T-0687": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-17T14:27:08Z",
+  "at": "2026-11-17T14:29:54Z",
   "mq": {
    "n": {
     "checking": 0,
     "inline": 0,
     "conflicted": 1,
-    "failed": 1,
+    "failed": 0,
     "held": 1,
-    "retry": 0,
+    "retry": 1,
     "parked": 14
    },
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 642,
-    "failed": 11,
-    "held": 898,
-    "retry": null,
-    "parked": 437
+    "conflicted": 645,
+    "failed": null,
+    "held": 900,
+    "retry": 14,
+    "parked": 440
    },
    "cur": [],
    "ld": [
@@ -505,8 +601,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-17T14:26:22Z",
-    "ld": 3.17,
+    "at": "2026-11-17T14:29:33Z",
+    "ld": 2.48,
     "c": 8,
     "sb": 2,
     "dk": [
@@ -553,6 +649,42 @@
    "e": "high",
    "t": "Work session \u2013 1 task",
    "at": "2026-11-17T09:07:10-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Evan's Account",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session \u2013 2 tasks",
+   "at": "2026-11-17T09:29:39-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Jeremy's Account",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session \u2013 2 tasks",
+   "at": "2026-11-17T09:29:10-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Jeremy's Account",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session \u2013 2 tasks",
+   "at": "2026-11-17T09:29:10-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Jeremy's Account",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session \u2013 2 tasks",
+   "at": "2026-11-17T09:29:09-05:00"
   }
  ],
  "reply": {
@@ -572,12 +704,12 @@
  ],
  "agents_now": {
   "main": 2,
-  "lanes": 1,
-  "total": 3,
-  "at": "9:27 AM",
+  "lanes": 5,
+  "total": 7,
+  "at": "9:30 AM",
   "why": "",
-  "at_iso": "2026-11-17T14:27:00+00:00",
+  "at_iso": "2026-11-17T14:30:00+00:00",
   "started": "9:17 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 9:17 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 9:27 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 2, started 9:17 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 9:30 AM ET</p></section>"
  }
 }

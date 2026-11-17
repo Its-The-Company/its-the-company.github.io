@@ -1,42 +1,11 @@
 {
  "schema": 1,
- "at": "2026-11-17T21:11:37.072417+00:00",
+ "at": "2026-11-17T21:14:41.080778+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-17T15:40:57-05:00",
   "flow": [
-   {
-    "t": "T-4758",
-    "name": "Keep the shortcut test's pictures out of the source tree",
-    "acct": "Personal b",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1794940014
-     },
-     {
-      "s": "macbook",
-      "at": 1794946113
-     },
-     {
-      "s": "testq",
-      "at": 1794946143
-     },
-     {
-      "s": "macbook",
-      "at": 1794947569
-     },
-     {
-      "s": "testq",
-      "at": 1794947601
-     },
-     {
-      "s": "macbook",
-      "at": 1794948632
-     }
-    ]
-   },
    {
     "t": "T-4760",
     "name": "Report a widget state save truthfully",
@@ -45,6 +14,10 @@
      {
       "s": "testq",
       "at": 1794948667
+     },
+     {
+      "s": "macbook",
+      "at": 1794950000
      }
     ]
    },
@@ -60,6 +33,14 @@
    }
   ],
   "done": [
+   {
+    "t": "T-4758",
+    "name": "Keep the shortcut test's pictures out of the source tree",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794950065
+   },
    {
     "t": "T-4703",
     "name": "Draw the frames for the 1.0 showcase premades",
@@ -131,18 +112,9 @@
     "steps": [],
     "end": "landed",
     "end_at": 1794934098
-   },
-   {
-    "t": "T-4663",
-    "name": "Completion ignores letter case and small typos",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "failed",
-    "end_at": 1794932287,
-    "why": "tests failed"
    }
   ],
-  "landed": 25,
+  "landed": 26,
   "failed": 6
  },
  "workers": [
@@ -151,7 +123,7 @@
    "task": "[tools] T-4749 source-text tests slice 2",
    "model": "opus",
    "started": "2026-11-17T20:41:48.377Z",
-   "seconds": 1788,
+   "seconds": 1972,
    "finished": null,
    "effort": "high"
   },
@@ -160,7 +132,7 @@
    "task": "[tools] T-4753 fail new source-text tests",
    "model": "opus",
    "started": "2026-11-17T21:05:08.821Z",
-   "seconds": 388,
+   "seconds": 572,
    "finished": null,
    "effort": "high"
   },
@@ -169,7 +141,7 @@
    "task": "[site] T-4747 queued-order red fix",
    "model": "opus",
    "started": "2026-11-17T21:09:16.623Z",
-   "seconds": 140,
+   "seconds": 324,
    "finished": null,
    "effort": "high"
   }
@@ -201,19 +173,19 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 6.0,
+   "pct": 7.0,
    "resets_at": "2026-11-17T19:10:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-17T15:52:14.478796-05:00",
+   "read_at": "2026-11-17T16:12:54.119713-05:00",
    "source": "live",
-   "left": 94.0,
+   "left": 93.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 35.0,
    "resets_at": "2026-11-22T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-17T15:52:14.478796-05:00",
+   "read_at": "2026-11-17T16:12:54.119713-05:00",
    "source": "live",
    "left": 65.0,
    "left_words": "of your weekly allowance left"
@@ -225,7 +197,7 @@
    "read_at": "2026-11-17T15:40:46.947713-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-17T15:52:14.478796-05:00"
+  "read_at": "2026-11-17T16:12:54.119713-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -245,7 +217,7 @@
   "week_pct": 38.85,
   "usage_pct": 52.6,
   "work_pct": 79.4,
-  "read_at": "2026-11-17T21:11:00+00:00",
+  "read_at": "2026-11-17T21:14:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -266,7 +238,7 @@
   }
  ],
  "disk": {
-  "free_gb": 18,
+  "free_gb": 20,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -275,14 +247,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-17T16:06:00-05:00",
+   "at": "2026-11-17T16:12:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 6,
-  "at": "2026-11-17T16:11:00-05:00",
+  "at": "2026-11-17T16:14:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -531,58 +503,47 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-17T21:11:24Z",
+  "at": "2026-11-17T21:14:41Z",
   "s": {
    "T-4760": [
-    "merging",
-    "Host checks on the Mac mini",
-    1794948684779
-   ],
-   "T-4758": [
-    "mergeq",
-    "1st to merge",
-    1794942084779
-   ],
-   "T-4689": [
-    "mergeq",
-    "3rd to merge",
-    1794943104779
+    "mergetest",
+    "Xcode checks on the MacBook, 1st to merge",
+    1794950021080
    ],
    "T-4743": [
     "mergeq",
-    "4th to merge",
-    1794944964779
+    "2nd to merge",
+    1794944981080
    ],
    "T-4653": [
     "mergeq",
-    "7th to merge",
-    1794946824779
+    "5th to merge",
+    1794946781080
    ],
    "T-4188": [
     "mergeq",
-    "8th to merge",
-    1794947064779
+    "6th to merge",
+    1794947081080
    ],
    "T-4183": [
     "mergeq",
-    "9th to merge",
-    1794948024779
+    "7th to merge",
+    1794947981080
    ],
    "T-4749": [
     "merging",
     "Mac tests at the main gate \u00b7 3 groups of tests done, 1 red",
-    1794949584779
+    1794949601080
    ],
    "T-4747": [
-    "testing",
-    "its own tests, in its copy",
-    1794949824779
+    "merged",
+    "on main 11:50 AM ET",
+    1794934210000,
+    ""
    ]
   },
   "nm": {
    "T-4760": "Report a widget state save truthfully",
-   "T-4758": "Keep the shortcut test's pictures out of the source tree",
-   "T-4689": "Bring the plan into line with the phase A proof",
    "T-4743": "Fix a MacBook test job that failed",
    "T-4653": "Give the Shortcut's Pro check a time limit",
    "T-4188": "Location, steps and notifications work in scripts and...",
@@ -592,8 +553,6 @@
   },
   "wk": {
    "T-4760": "Idris",
-   "T-4758": "Idris",
-   "T-4689": "Ines",
    "T-4743": "Odalys",
    "T-4653": "Idris",
    "T-4188": "Idris",
@@ -605,11 +564,11 @@
   }
  },
  "ln": {
-  "at": "2026-11-17T21:11:24Z",
+  "at": "2026-11-17T21:14:41Z",
   "mq": {
    "n": {
     "checking": 1,
-    "inline": 6,
+    "inline": 4,
     "conflicted": 1,
     "failed": 0,
     "held": 2,
@@ -617,37 +576,37 @@
     "parked": 9
    },
    "m": {
-    "checking": 20,
-    "inline": 66,
-    "conflicted": 1046,
+    "checking": 1,
+    "inline": 52,
+    "conflicted": 1050,
     "failed": null,
-    "held": 720,
+    "held": 723,
     "retry": null,
-    "parked": 64
+    "parked": 67
    },
    "cur": [
     [
      [
       "T-4760"
      ],
-     "Mac tests",
-     "Mac mini",
-     20
+     "iPhone app tests, sent and waiting its turn",
+     "MacBook",
+     1
     ]
    ],
    "ld": [
-    29,
-    "2026-11-17T20:08:27Z"
+    30,
+    "2026-11-17T21:14:25Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-17T21:11:01Z",
-    "ld": 2.87,
+    "at": "2026-11-17T21:14:41Z",
+    "ld": 2.41,
     "c": 8,
     "sb": 2,
     "dk": [
-     19.4,
+     18.4,
      228.3
     ],
     "ss": [
@@ -703,10 +662,10 @@
   "main": 3,
   "lanes": 0,
   "total": 3,
-  "at": "4:11 PM",
+  "at": "4:14 PM",
   "why": "",
-  "at_iso": "2026-11-17T21:11:00+00:00",
+  "at_iso": "2026-11-17T21:14:00+00:00",
   "started": "3:40 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 3:40 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 4:11 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 3:40 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 4:14 PM ET</p></section>"
  }
 }

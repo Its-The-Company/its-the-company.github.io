@@ -1,22 +1,11 @@
 {
  "schema": 1,
- "at": "2026-11-17T23:39:03.878402+00:00",
+ "at": "2026-11-17T23:42:07.943581+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-17T15:40:57-05:00",
   "flow": [
-   {
-    "t": "T-4695",
-    "name": "Check finished work before it ships",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "landing",
-      "at": 1794958741
-     }
-    ]
-   },
    {
     "t": "T-4774",
     "name": "Measure what one refresh tap costs the app",
@@ -33,6 +22,17 @@
     ]
    },
    {
+    "t": "T-4781",
+    "name": "Retest a fixed red on what failed, not every test",
+    "acct": "Personal b",
+    "steps": [
+     {
+      "s": "testq",
+      "at": 1794958891
+     }
+    ]
+   },
+   {
     "t": "T-1201",
     "w": "Odalys",
     "steps": [
@@ -44,6 +44,14 @@
    }
   ],
   "done": [
+   {
+    "t": "T-4695",
+    "name": "Check finished work before it ships",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794958750
+   },
    {
     "t": "T-4609",
     "name": "Check finished work before it ships",
@@ -116,41 +124,30 @@
     "steps": [],
     "end": "landed",
     "end_at": 1794956037
-   },
-   {
-    "t": "T-4612",
-    "name": "Check finished work before it ships",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794956037
    }
   ],
-  "landed": 40,
+  "landed": 41,
   "failed": 8
  },
- "workers": [
+ "workers": [],
+ "who": "",
+ "recent": [
   {
    "name": "idris",
    "task": "[build] T-4653 land parked Shortcut fix",
    "model": "opus",
    "started": "2026-11-17T22:57:48.038Z",
-   "seconds": 2475,
-   "finished": null,
-   "effort": "high"
+   "seconds": null,
+   "finished": "2026-11-17T23:39:38.240000+00:00"
   },
   {
    "name": "maren",
    "task": "[design] T-4746 land parked name fix",
    "model": "opus",
    "started": "2026-11-17T22:59:28.420Z",
-   "seconds": 2375,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Idris, Maren",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-17T23:39:17.591000+00:00"
+  },
   {
    "name": "maren",
    "task": "[tools] T-4779 T-4780 reds, reland T-4730",
@@ -166,28 +163,12 @@
    "started": "2026-11-17T22:51:02.675Z",
    "seconds": null,
    "finished": "2026-11-17T22:56:44.831000+00:00"
-  },
-  {
-   "name": "pernille",
-   "task": "[tools] T-4753 fail new source-text tests",
-   "model": "opus",
-   "started": "2026-11-17T21:05:08.821Z",
-   "seconds": null,
-   "finished": "2026-11-17T22:49:32.778000+00:00"
-  },
-  {
-   "name": "ines",
-   "task": "[plan] T-4770 measured release re-estimate",
-   "model": "fable",
-   "started": "2026-11-17T21:43:45.485Z",
-   "seconds": null,
-   "finished": "2026-11-17T22:06:09.469000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 414,
+  "runnable_count": 413,
   "blocked_count": 58
  },
  "meter": {
@@ -236,7 +217,7 @@
   "week_pct": 38.85,
   "usage_pct": 52.6,
   "work_pct": 79.4,
-  "read_at": "2026-11-17T23:39:00+00:00",
+  "read_at": "2026-11-17T23:42:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -451,7 +432,7 @@
  "lock_in": {
   "on": false,
   "pool": 7,
-  "at": "2026-11-17T18:39:00-05:00",
+  "at": "2026-11-17T18:42:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -469,21 +450,11 @@
  "lanes": [
   {
    "name": "Idris",
-   "state": "running",
-   "task": "[build] T-4653 land parked Shortcut fix",
-   "model": "opus",
-   "since": "2026-11-17T22:57:48.038Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
-   "name": "Maren",
-   "state": "running",
-   "task": "[design] T-4746 land parked name fix",
-   "model": "opus",
-   "since": "2026-11-17T22:59:28.420Z",
-   "next": [],
-   "effort": "high"
+   "state": "next",
+   "task": "Idris, P1, from T-4755 (Investor an Investor...",
+   "model": null,
+   "since": null,
+   "next": []
   },
   {
    "name": "Pernille",
@@ -516,31 +487,18 @@
    "model": null,
    "since": null,
    "next": []
+  },
+  {
+   "name": "Maren",
+   "state": "next",
+   "task": "Maren, P2, found on T-3366 (11-07): in...",
+   "model": null,
+   "since": null,
+   "next": []
   }
  ],
  "tasks": {
-  "run": [
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "Give the Shortcut's Pro check a time limit",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-17T22:57:48.038Z",
-    "o": "c",
-    "task": "T-4653"
-   },
-   {
-    "w": "Maren",
-    "k": "design",
-    "t": "Write PyWidget's name right in the widget's words",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-17T22:59:28.420Z",
-    "o": "c",
-    "task": "T-4746"
-   }
-  ],
+  "run": [],
   "src": "plan",
   "open": [
    {
@@ -616,30 +574,34 @@
   ],
   "done": [
    {
+    "w": "Idris",
+    "t": "When a Shortcut asks for a ready-made Pro script and the App Store doesn't answer, it now stops...",
+    "at": "2026-11-17T18:39:00-05:00"
+   },
+   {
+    "w": "Ines",
+    "t": "A second person read the upload-script review and agrees with it: nothing in the script blocks...",
+    "at": "2026-11-17T18:39:00-05:00"
+   },
+   {
     "w": "Maren",
     "t": "The script behind the site's live work list had grown past its size limit; two bits it shipped...",
     "at": "2026-11-17T17:58:00-05:00"
-   },
-   {
-    "w": "Pernille",
-    "t": "A new test that checks a tool by reading its code as text, instead of running it, now stops the...",
-    "at": "2026-11-17T17:49:00-05:00"
-   },
-   {
-    "w": "Maren",
-    "t": "A site test passed on the office Mac but failed in a clean copy, because it read a status file...",
-    "at": "2026-11-17T17:39:00-05:00"
    }
   ],
   "count": {
-   "next": 414,
+   "next": 413,
    "wait": 27,
    "blocked": 31,
    "you": 8
   },
   "fin": {
-   "n": 7,
+   "n": 8,
    "rows": [
+    [
+     "T-4653",
+     "Give the Shortcut's Pro..."
+    ],
     [
      "T-4730",
      "Fix a test row that is red..."
@@ -659,10 +621,6 @@
     [
      "T-4747",
      "Show each umbrella's..."
-    ],
-    [
-     "T-4732",
-     "Fix a test row that is red..."
     ]
    ]
   }
@@ -706,27 +664,17 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-17T23:38:48Z",
+  "at": "2026-11-17T23:41:50Z",
   "s": {
-   "T-4608": [
+   "T-4781": [
     "merging",
-    "Rebasing onto current main",
-    1794958728439
+    "Host checks on the Mac mini",
+    1794958910734
    ],
    "T-4774": [
     "mergetest",
     "Xcode checks on the MacBook, 1st to merge",
-    1794958308439
-   ],
-   "T-4763": [
-    "mergetest",
-    "iPhone tests on the MacBook",
-    null
-   ],
-   "T-4746": [
-    "merging",
-    "Mac tests at the main gate",
-    1794958308439
+    1794958310734
    ],
    "T-4659": [
     "testing",
@@ -751,38 +699,32 @@
    "T-4610": [
     "testq",
     "2nd for a Simulator",
-    1794958668439
+    1794958670734
    ],
    "T-4611": [
     "testq",
     "2nd for a Simulator",
-    1794958668439
+    1794958670734
    ],
    "T-4612": [
     "testq",
     "2nd for a Simulator",
-    1794958668439
+    1794958670734
    ],
    "T-4613": [
     "testq",
     "2nd for a Simulator",
-    1794958668439
+    1794958670734
    ],
    "T-4634": [
     "testq",
     "2nd for a Simulator",
-    1794958668439
+    1794958670734
    ],
    "T-4695": [
     "testq",
     "2nd for a Simulator",
-    1794958668439
-   ],
-   "T-4653": [
-    "merged",
-    "on main 6:38 PM ET",
-    1794958712000,
-    "Idris"
+    1794958670734
    ],
    "T-4770": [
     "merged",
@@ -792,10 +734,8 @@
    ]
   },
   "nm": {
-   "T-4608": "Check finished work before it ships",
+   "T-4781": "Retest a fixed red on what failed, not every test",
    "T-4774": "Measure what one refresh tap costs the app",
-   "T-4763": "Keep habit marks when the Page also saves",
-   "T-4746": "Write PyWidget's name right in the widget's words",
    "T-4659": "Prove a widget button's tap reaches its Python handler",
    "T-4744": "Fix a MacBook test job that failed",
    "T-4750": "Check network fetch cases on the Swift side too",
@@ -806,14 +746,11 @@
    "T-4613": "Check finished work before it ships",
    "T-4634": "Github hang test is cut before the GET under load",
    "T-4695": "Check finished work before it ships",
-   "T-4653": "Give the Shortcut's Pro check a time limit",
    "T-4770": "Re-estimate the release date from measured build speed"
   },
   "wk": {
-   "T-4608": "Pernille",
+   "T-4781": "Odalys",
    "T-4774": "Idris",
-   "T-4763": "Maren",
-   "T-4746": "Maren",
    "T-4659": "Idris",
    "T-4744": "Operator",
    "T-4750": "Idris",
@@ -824,8 +761,8 @@
    "T-4613": "Pernille",
    "T-4634": "Pernille",
    "T-4695": "Ines",
-   "T-4653": "Idris",
    "T-4770": "Ines",
+   "T-4653": "Idris",
    "T-4730": "Maren",
    "T-4753": "Pernille",
    "T-4780": "Odalys",
@@ -836,7 +773,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-17T23:38:48Z",
+  "at": "2026-11-17T23:41:50Z",
   "mq": {
    "n": {
     "checking": 2,
@@ -845,23 +782,23 @@
     "failed": 0,
     "held": 1,
     "retry": 0,
-    "parked": 9
+    "parked": 8
    },
    "m": {
-    "checking": 3,
+    "checking": 5,
     "inline": null,
-    "conflicted": 644,
+    "conflicted": 647,
     "failed": null,
-    "held": 1449,
+    "held": 1452,
     "retry": null,
-    "parked": 211
+    "parked": 251
    },
    "cur": [
     [
      [
-      "T-4608"
+      "T-4781"
      ],
-     "lining up with main",
+     "Mac tests",
      "Mac mini",
      0
     ],
@@ -871,22 +808,22 @@
      ],
      "iPhone app tests, sent and waiting its turn",
      "MacBook",
-     7
+     10
     ]
    ],
    "ld": [
-    40,
-    "2026-11-17T23:32:23Z"
+    41,
+    "2026-11-17T23:39:10Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-17T23:38:17Z",
-    "ld": 29.21,
+    "at": "2026-11-17T23:41:25Z",
+    "ld": 31.5,
     "c": 8,
     "sb": 1,
     "dk": [
-     20.1,
+     18.3,
      228.3
     ],
     "ss": [
@@ -898,12 +835,12 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-17T23:26:48Z",
-    "ld": 2.93,
+    "at": "2026-11-17T23:40:15Z",
+    "ld": 23.36,
     "c": 12,
     "sb": 0,
     "dk": [
-     313.3,
+     312.9,
      926.4
     ],
     "sn": []
@@ -917,7 +854,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 9 tasks",
+   "t": "Work session \u2013 8 tasks",
    "at": "2026-11-17T17:21:23-05:00"
   },
   {
@@ -944,7 +881,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 1 task",
+   "t": "Work session",
    "at": "2026-11-17T18:26:07-05:00"
   },
   {
@@ -985,13 +922,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 2,
+  "main": 0,
   "lanes": 5,
-  "total": 7,
-  "at": "6:39 PM",
+  "total": 5,
+  "at": "6:42 PM",
   "why": "",
-  "at_iso": "2026-11-17T23:39:00+00:00",
+  "at_iso": "2026-11-17T23:42:00+00:00",
   "started": "3:40 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 2, started 3:40 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 6:39 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 0, started 3:40 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 6:42 PM ET</p></section>"
  }
 }

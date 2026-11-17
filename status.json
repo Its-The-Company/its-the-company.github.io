@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-17T06:28:47.481581+00:00",
+ "at": "2026-11-17T06:31:57.377222+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -122,7 +122,7 @@
    "task": "[test] T-4702 state_commit race on main",
    "model": "opus",
    "started": "2026-11-17T06:18:11.005Z",
-   "seconds": 636,
+   "seconds": 826,
    "finished": null,
    "effort": "high"
   },
@@ -131,7 +131,7 @@
    "task": "[tools] T-4694 pass lands whose red is on main",
    "model": "opus",
    "started": "2026-11-17T06:18:19.459Z",
-   "seconds": 628,
+   "seconds": 817,
    "finished": null,
    "effort": "high"
   },
@@ -140,7 +140,7 @@
    "task": "[tools] T-4674 rulings land on main at once",
    "model": "opus",
    "started": "2026-11-17T06:18:28.214Z",
-   "seconds": 619,
+   "seconds": 809,
    "finished": null,
    "effort": "high"
   }
@@ -199,7 +199,7 @@
   "week_pct": 32.81,
   "usage_pct": 54.0,
   "work_pct": 78.2,
-  "read_at": "2026-11-17T06:28:00+00:00",
+  "read_at": "2026-11-17T06:31:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -261,7 +261,7 @@
  "lock_in": {
   "on": false,
   "pool": 4,
-  "at": "2026-11-17T01:28:00-05:00",
+  "at": "2026-11-17T01:31:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -526,33 +526,41 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-17T06:28:47Z",
+  "at": "2026-11-17T06:31:37Z",
   "s": {
    "T-4181": [
     "testing",
     "Mac Mini \u00b7 test",
     null
    ],
-   "T-4694": [
-    "testing",
-    "its own tests, in its copy",
-    1794896807481
-   ],
    "T-4702": [
     "testing",
     "its own tests, in its copy",
-    1794896927481
+    1794896917107
+   ],
+   "T-4190": [
+    "testq",
+    "1st for a Simulator",
+    1794897037107
+   ],
+   "T-4674": [
+    "merged",
+    "on main 1:30 AM ET",
+    1794897039000,
+    "Odalys"
    ]
   },
   "nm": {
    "T-4181": "Widgets refresh on their own and by a tap",
-   "T-4694": "Pass lands whose red is also on main",
-   "T-4702": "Make main's own tests pass again"
+   "T-4702": "Make main's own tests pass again",
+   "T-4190": "Settings and Pro: buy, restore, themes",
+   "T-4674": "Land each Investor ruling on main within minutes"
   },
   "wk": {
    "T-4181": "Idris",
-   "T-4694": "Odalys",
    "T-4702": "Pernille",
+   "T-4190": "Idris",
+   "T-4674": "Odalys",
    "T-4620": "Maren",
    "T-4655": "Odalys",
    "T-4665": "Odalys",
@@ -564,7 +572,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-17T06:28:47Z",
+  "at": "2026-11-17T06:31:37Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -578,11 +586,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 504,
+    "conflicted": 507,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 60
+    "parked": 63
    },
    "cur": [],
    "ld": [
@@ -592,8 +600,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-17T06:28:48Z",
-    "ld": 24.34,
+    "at": "2026-11-17T06:30:51Z",
+    "ld": 21.37,
     "c": 8,
     "sb": 2,
     "dk": [
@@ -608,17 +616,6 @@
      "iPhone 17e",
      "pywidget-t0678-ios26"
     ]
-   },
-   "macbook": {
-    "at": "2026-11-17T05:51:25Z",
-    "ld": 1.38,
-    "c": 12,
-    "sb": 0,
-    "dk": [
-     329.5,
-     926.4
-    ],
-    "sn": []
    }
   }
  },
@@ -672,10 +669,10 @@
   "main": 3,
   "lanes": 2,
   "total": 5,
-  "at": "1:28 AM",
+  "at": "1:31 AM",
   "why": "",
-  "at_iso": "2026-11-17T06:28:00+00:00",
+  "at_iso": "2026-11-17T06:31:00+00:00",
   "started": "1:00 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 3, started 1:00 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 1:28 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 3, started 1:00 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 1:31 AM ET</p></section>"
  }
 }

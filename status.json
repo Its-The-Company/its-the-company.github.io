@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-17T02:25:26.420187+00:00",
+ "at": "2026-11-17T02:28:30.701425+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -91,23 +91,22 @@
   "landed": 72,
   "failed": 10
  },
- "workers": [
+ "workers": [],
+ "who": "",
+ "recent": [
   {
    "name": "odalys",
    "task": "[tools] T-4655 heavy test run cap",
    "model": "opus",
    "started": "2026-11-17T00:50:34.871Z",
-   "seconds": 5691,
-   "finished": null,
-   "effort": "high"
+   "seconds": null,
+   "finished": "2026-11-17T02:27:58.122000+00:00"
   }
  ],
- "who": "Odalys",
- "recent": [],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 431,
+  "runnable_count": 433,
   "blocked_count": 76
  },
  "meter": {
@@ -156,34 +155,8 @@
   "week_pct": 23.56,
   "usage_pct": 47.5,
   "work_pct": 77.0,
-  "read_at": "2026-11-17T02:25:00+00:00",
+  "read_at": "2026-11-17T02:28:00+00:00",
   "running": [
-   {
-    "lane": "a",
-    "task": "T-4587",
-    "w": "Idris",
-    "k": "tools",
-    "t": "Switch feature sessions on for every app feature",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-16T19:37:34-05:00",
-    "n": "Evan",
-    "d": 1,
-    "src": "plan-a"
-   },
-   {
-    "lane": "a",
-    "task": "T-4617",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Run quick checks before a land takes the Xcode slot",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-16T19:37:34-05:00",
-    "n": "Evan",
-    "d": 1,
-    "src": "plan-a"
-   },
    {
     "lane": "a2",
     "task": "T-4190",
@@ -273,7 +246,7 @@
   }
  ],
  "disk": {
-  "free_gb": 15,
+  "free_gb": 14,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -282,14 +255,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-16T21:19:00-05:00",
+   "at": "2026-11-16T21:26:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 4,
-  "at": "2026-11-16T21:25:00-05:00",
+  "at": "2026-11-16T21:28:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -305,15 +278,6 @@
   "at": "2026-11-16T19:46:39.338061-05:00"
  },
  "lanes": [
-  {
-   "name": "Odalys",
-   "state": "running",
-   "task": "[tools] T-4655 heavy test run cap",
-   "model": "opus",
-   "since": "2026-11-17T00:50:34.871Z",
-   "next": [],
-   "effort": "high"
-  },
   {
    "name": "Idris",
    "state": "next",
@@ -339,6 +303,14 @@
    "next": []
   },
   {
+   "name": "Odalys",
+   "state": "next",
+   "task": "A lane record main refused: failed...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
    "name": "Wrenna",
    "state": "next",
    "task": "Wrenna, P2, T-2375 continuation (B-staged item 3...",
@@ -356,18 +328,7 @@
   }
  ],
  "tasks": {
-  "run": [
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Cap how many heavy test runs share the Mac mini",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-17T00:50:34.871Z",
-    "o": "c",
-    "task": "T-4655"
-   }
-  ],
+  "run": [],
   "src": "plan",
   "open": [
    {
@@ -459,7 +420,7 @@
    }
   ],
   "count": {
-   "next": 431,
+   "next": 433,
    "wait": 35,
    "blocked": 41,
    "you": 13
@@ -533,50 +494,34 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-17T02:25:06Z",
+  "at": "2026-11-17T02:28:30Z",
   "s": {
-   "T-4655": [
-    "merging",
-    "Mac tests at the main gate",
-    1794881226062
-   ],
-   "T-4182": [
+   "T-4190": [
     "testing",
     "Mac Mini \u00b7 test",
     null
+   ],
+   "T-4182": [
+    "testq",
+    "1st for a Simulator",
+    1794882450701
    ],
    "T-4605": [
     "merged",
     "on main 9:02 PM ET",
     1794880922000,
     ""
-   ],
-   "T-4587": [
-    "merged",
-    "on main 8:37 PM ET",
-    1794879427000,
-    ""
-   ],
-   "T-4617": [
-    "merged",
-    "on main 4:47 PM ET",
-    1794865628000,
-    ""
    ]
   },
   "nm": {
-   "T-4655": "Cap how many heavy test runs share the Mac mini",
+   "T-4190": "Settings and Pro: buy, restore, themes",
    "T-4182": "A failing widget says so and can recover",
-   "T-4605": "Check finished work before it ships",
-   "T-4587": "Switch feature sessions on for every app feature",
-   "T-4617": "Run quick checks before a land takes the Xcode slot"
+   "T-4605": "Check finished work before it ships"
   },
   "wk": {
-   "T-4655": "Odalys",
+   "T-4190": "Idris",
    "T-4182": "Idris",
    "T-4605": "Idris",
-   "T-4587": "Idris",
-   "T-4617": "Odalys",
    "T-4024": "Pernille",
    "T-4598": "Pernille",
    "T-3718": "Pernille",
@@ -586,7 +531,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-17T02:25:06Z",
+  "at": "2026-11-17T02:28:30Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -600,11 +545,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 601,
-    "failed": 23,
+    "conflicted": 604,
+    "failed": 26,
     "held": null,
     "retry": null,
-    "parked": 901
+    "parked": 904
    },
    "cur": [],
    "ld": [
@@ -614,12 +559,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-17T02:24:42Z",
-    "ld": 33.37,
+    "at": "2026-11-17T02:28:32Z",
+    "ld": 28.83,
     "c": 8,
     "sb": 1,
     "dk": [
-     13.9,
+     16.4,
      228.3
     ],
     "ss": [
@@ -631,12 +576,12 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-17T01:50:44Z",
-    "ld": 8.07,
+    "at": "2026-11-17T02:21:23Z",
+    "ld": 0.18,
     "c": 12,
     "sb": 0,
     "dk": [
-     328.3,
+     328.4,
      926.4
     ],
     "sn": []
@@ -650,7 +595,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 1 task",
+   "t": "Work session",
    "at": "2026-11-16T19:47:08-05:00"
   },
   {
@@ -659,26 +604,17 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session",
-   "at": "2026-11-16T19:37:33-05:00"
-  },
-  {
-   "w": "Operator",
-   "a": "Evan's Account",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Inbox \u2013 Evan's 9:24 PM Message on GitHub",
-   "at": "2026-11-16T21:24:21-05:00"
-  },
-  {
-   "w": "Operator",
-   "a": "Evan's Account",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
    "t": "Work session \u2013 1 task",
-   "at": "2026-11-16T20:16:07-05:00"
+   "at": "2026-11-16T21:25:48-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Evan's Account",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Inbox \u2013 Evan's 9:27 PM Message on GitHub",
+   "at": "2026-11-16T21:28:14-05:00"
   },
   {
    "w": "Operator",
@@ -709,19 +645,19 @@
   }
  ],
  "reply": {
-  "sent": "2026-11-17T02:22:54Z",
-  "seconds": 73.0
+  "sent": "2026-11-17T02:24:09Z",
+  "seconds": 98.0
  },
  "inbox": [
   {
-   "id": "c6936049142",
+   "id": "c6936120604",
    "state": "received",
    "position": 1,
    "tasks": {
     "open": 0,
     "done": 0
    },
-   "title": "Can all future efficiency updates..."
+   "title": "If the file upload built into the..."
   }
  ],
  "trimmed": [
@@ -738,13 +674,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 1,
-  "lanes": 6,
-  "total": 7,
-  "at": "9:25 PM",
+  "main": 0,
+  "lanes": 5,
+  "total": 5,
+  "at": "9:28 PM",
   "why": "",
-  "at_iso": "2026-11-17T02:25:00+00:00",
+  "at_iso": "2026-11-17T02:28:00+00:00",
   "started": "7:47 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 1, started 7:47 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 6 sessions \u00b7 as of 9:25 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 0, started 7:47 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 9:28 PM ET</p></section>"
  }
 }

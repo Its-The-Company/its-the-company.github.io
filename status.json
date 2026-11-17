@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-17T20:13:00.672960+00:00",
+ "at": "2026-11-17T20:16:04.941582+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -128,22 +128,21 @@
    "task": "[build] T-3564 land device-limit fixes from parked ref",
    "model": "opus",
    "started": "2026-11-17T17:49:46.991Z",
-   "seconds": 8593,
+   "seconds": 8777,
    "finished": null,
    "effort": "high"
-  },
+  }
+ ],
+ "who": "Idris",
+ "recent": [
   {
    "name": "pernille",
    "task": "[tools] T-4749 rewrite source-text tests, first slice",
    "model": "opus",
    "started": "2026-11-17T18:10:19.748Z",
-   "seconds": 7360,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Idris, Pernille",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-17T20:13:58.116000+00:00"
+  },
   {
    "name": "idris",
    "task": "[test] T-3560 land first-render test fixes from parked ref",
@@ -205,7 +204,7 @@
   "week_pct": 39.28,
   "usage_pct": 53.6,
   "work_pct": 80.0,
-  "read_at": "2026-11-17T20:13:00+00:00",
+  "read_at": "2026-11-17T20:16:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -263,7 +262,7 @@
   }
  ],
  "disk": {
-  "free_gb": 8.7,
+  "free_gb": 19,
   "gate": "closed",
   "ssd": {
    "mounted": true,
@@ -272,14 +271,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions wait until 20 GB is free.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-17T15:06:00-05:00",
+   "at": "2026-11-17T15:13:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 6,
-  "at": "2026-11-17T15:13:00-05:00",
+  "at": "2026-11-17T15:16:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -306,12 +305,11 @@
   },
   {
    "name": "Pernille",
-   "state": "running",
-   "task": "[tools] T-4749 rewrite source-text tests, first slice",
-   "model": "opus",
-   "since": "2026-11-17T18:10:19.748Z",
-   "next": [],
-   "effort": "high"
+   "state": "next",
+   "task": "Pernille, P0, Investor an Investor c6950031511 (8:53 AM...",
+   "model": null,
+   "since": null,
+   "next": []
   },
   {
    "name": "Ines",
@@ -357,16 +355,6 @@
     "at": "2026-11-17T17:49:46.991Z",
     "o": "c",
     "task": "T-3564"
-   },
-   {
-    "w": "Pernille",
-    "k": "tools",
-    "t": "Rewrite or drop outdated tests that read code text",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-17T18:10:19.748Z",
-    "o": "c",
-    "task": "T-4749"
    }
   ],
   "src": "plan",
@@ -534,48 +522,42 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-17T20:13:00Z",
+  "at": "2026-11-17T20:15:52Z",
   "s": {
    "T-4758": [
     "merging",
     "Host checks on the Mac mini",
-    1794946200672
+    1794946192822
    ],
    "T-4689": [
     "merging",
     "Host checks on the Mac mini",
-    1794946200672
+    1794946192822
    ],
    "T-4760": [
     "mergeq",
     "3rd to merge",
-    1794944640672
+    1794944632822
    ],
    "T-4743": [
     "mergeq",
     "4th to merge",
-    1794944940672
+    1794944992822
    ],
-   "T-1672": [
+   "T-4703": [
     "mergetest",
     "iPhone tests on the MacBook",
     null
+   ],
+   "T-1672": [
+    "merging",
+    "Mac tests at the main gate \u00b7 1 group of tests done",
+    1794946372822
    ],
    "T-4653": [
     "testing",
     "Mac Mini \u00b7 test",
     null
-   ],
-   "T-4703": [
-    "testing",
-    "Mac Mini \u00b7 test",
-    null
-   ],
-   "T-4749": [
-    "merged",
-    "on main 3:10 PM ET",
-    1794946234000,
-    "Pernille"
    ],
    "T-3564": [
     "merged",
@@ -589,10 +571,9 @@
    "T-4689": "Bring the plan into line with the phase A proof",
    "T-4760": "Report a widget state save truthfully",
    "T-4743": "Fix a MacBook test job that failed",
+   "T-4703": "Draw the frames for the 1.0 showcase premades",
    "T-1672": "Fix the per-run notification cap resetting",
    "T-4653": "Give the Shortcut's Pro check a time limit",
-   "T-4703": "Draw the frames for the 1.0 showcase premades",
-   "T-4749": "Rewrite or drop outdated tests that read code text",
    "T-3564": "Stop other errors saying a sensor is missing"
   },
   "wk": {
@@ -600,10 +581,9 @@
    "T-4689": "Ines",
    "T-4760": "Idris",
    "T-4743": "Odalys",
+   "T-4703": "Maren",
    "T-1672": "Idris",
    "T-4653": "Idris",
-   "T-4703": "Maren",
-   "T-4749": "Pernille",
    "T-3564": "Idris",
    "T-1671": "Idris",
    "T-3716": "Idris",
@@ -614,7 +594,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-17T20:13:00Z",
+  "at": "2026-11-17T20:15:52Z",
   "mq": {
    "n": {
     "checking": 2,
@@ -626,13 +606,13 @@
     "parked": 12
    },
    "m": {
-    "checking": 3,
-    "inline": 26,
-    "conflicted": 988,
+    "checking": 6,
+    "inline": 29,
+    "conflicted": 991,
     "failed": null,
-    "held": 662,
+    "held": 664,
     "retry": null,
-    "parked": 80
+    "parked": 83
    },
    "cur": [
     [
@@ -641,7 +621,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     3
+     6
     ],
     [
      [
@@ -649,7 +629,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     3
+     6
     ]
    ],
    "ld": [
@@ -659,12 +639,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-17T20:12:35Z",
-    "ld": 29.68,
+    "at": "2026-11-17T20:15:26Z",
+    "ld": 19.37,
     "c": 8,
     "sb": 2,
     "dk": [
-     17.0,
+     17.7,
      228.3
     ],
     "ss": [
@@ -677,8 +657,8 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-17T20:04:52Z",
-    "ld": 0.38,
+    "at": "2026-11-17T20:14:43Z",
+    "ld": 0.91,
     "c": 12,
     "sb": 0,
     "dk": [
@@ -696,7 +676,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 10 tasks",
+   "t": "Work session \u2013 9 tasks",
    "at": "2026-11-17T12:48:19-05:00"
   },
   {
@@ -745,13 +725,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 2,
+  "main": 1,
   "lanes": 3,
-  "total": 5,
-  "at": "3:13 PM",
+  "total": 4,
+  "at": "3:16 PM",
   "why": "",
-  "at_iso": "2026-11-17T20:13:00+00:00",
+  "at_iso": "2026-11-17T20:16:00+00:00",
   "started": "12:48 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 2, started 12:48 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 3:13 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 1, started 12:48 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 3:16 PM ET</p></section>"
  }
 }

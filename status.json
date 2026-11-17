@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-17T19:17:01.899601+00:00",
+ "at": "2026-11-17T19:19:43.202115+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -130,7 +130,7 @@
     "end_at": 1794932083
    }
   ],
-  "landed": 35,
+  "landed": 34,
   "failed": 7
  },
  "workers": [
@@ -139,7 +139,7 @@
    "task": "[build] T-3564 land device-limit fixes from parked ref",
    "model": "opus",
    "started": "2026-11-17T17:49:46.991Z",
-   "seconds": 5234,
+   "seconds": 5396,
    "finished": null,
    "effort": "high"
   },
@@ -148,7 +148,7 @@
    "task": "[tools] T-4749 rewrite source-text tests, first slice",
    "model": "opus",
    "started": "2026-11-17T18:10:19.748Z",
-   "seconds": 4002,
+   "seconds": 4163,
    "finished": null,
    "effort": "high"
   }
@@ -216,7 +216,7 @@
   "week_pct": 39.28,
   "usage_pct": 53.6,
   "work_pct": 80.0,
-  "read_at": "2026-11-17T19:17:00+00:00",
+  "read_at": "2026-11-17T19:20:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -243,14 +243,26 @@
     "src": "plan-a"
    },
    {
-    "lane": "b",
-    "task": "T-4183",
-    "w": "Idris",
-    "k": "build",
-    "t": "The Gallery shows, previews and opens every premade",
+    "lane": "b3",
+    "task": "T-4746",
+    "w": "Maren",
+    "k": "design",
+    "t": "Write PyWidget's name right in the widget's words",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-17T12:02:39-05:00",
+    "at": "2026-11-17T14:18:53-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
+   },
+   {
+    "lane": "b3",
+    "task": "T-4760",
+    "w": "Idris",
+    "k": "fix",
+    "t": "Report a widget state save truthfully",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-17T14:18:53-05:00",
     "n": "Jeremy",
     "src": "plan-b"
    }
@@ -290,7 +302,7 @@
  "lock_in": {
   "on": false,
   "pool": 6,
-  "at": "2026-11-17T14:17:00-05:00",
+  "at": "2026-11-17T14:20:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -545,58 +557,37 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-17T19:16:44Z",
+  "at": "2026-11-17T19:19:43Z",
   "s": {
-   "T-4703": [
-    "mergetest",
-    "Xcode checks on the MacBook, 1st to merge",
-    1794942944208
-   ],
    "T-4758": [
     "mergeq",
-    "2nd to merge",
-    1794942104208
+    "1st to merge",
+    1794943123202
    ],
-   "T-4601": [
+   "T-4689": [
     "mergeq",
-    "3rd to merge",
-    1794940784208
+    "1st to merge",
+    1794943123202
    ],
-   "T-4602": [
-    "mergeq",
-    "4th to merge",
-    1794940844208
-   ],
-   "T-4604": [
-    "mergeq",
-    "5th to merge",
-    1794941144208
-   ],
-   "T-4603": [
-    "mergeq",
-    "6th to merge",
-    1794941624208
+   "T-4703": [
+    "mergetest",
+    "Xcode checks on the MacBook, 2nd to merge",
+    1794942943202
    ],
    "T-4749": [
     "merging",
     "Mac tests at the main gate",
-    1794942764208
+    1794942703202
    ],
    "T-0543": [
     "merging",
     "Mac tests at the main gate \u00b7 8 groups of tests done",
-    1794942464208
+    1794942403202
    ],
    "T-4653": [
     "testing",
     "Mac Mini \u00b7 test",
     null
-   ],
-   "T-4689": [
-    "merged",
-    "on main 1:24 PM ET",
-    1794939862000,
-    ""
    ],
    "T-3564": [
     "merged",
@@ -606,29 +597,21 @@
    ]
   },
   "nm": {
-   "T-4703": "Draw the frames for the 1.0 showcase premades",
    "T-4758": "Keep the shortcut test's pictures out of the source tree",
-   "T-4601": "Check finished work before it ships",
-   "T-4602": "Check finished work before it ships",
-   "T-4604": "Check finished work before it ships",
-   "T-4603": "Check finished work before it ships",
+   "T-4689": "Bring the plan into line with the phase A proof",
+   "T-4703": "Draw the frames for the 1.0 showcase premades",
    "T-4749": "Rewrite or drop outdated tests that read code text",
    "T-0543": "Add limits to notification scheduling",
    "T-4653": "Give the Shortcut's Pro check a time limit",
-   "T-4689": "Bring the plan into line with the phase A proof",
    "T-3564": "Stop other errors saying a sensor is missing"
   },
   "wk": {
-   "T-4703": "Maren",
    "T-4758": "Idris",
-   "T-4601": "Pernille",
-   "T-4602": "Pernille",
-   "T-4604": "Pernille",
-   "T-4603": "Idris",
+   "T-4689": "Ines",
+   "T-4703": "Maren",
    "T-4749": "Pernille",
    "T-0543": "Idris",
    "T-4653": "Idris",
-   "T-4689": "Ines",
    "T-3564": "Idris",
    "T-3716": "Idris",
    "T-3560": "Idris",
@@ -638,11 +621,11 @@
   }
  },
  "ln": {
-  "at": "2026-11-17T19:16:44Z",
+  "at": "2026-11-17T19:19:43Z",
   "mq": {
    "n": {
     "checking": 1,
-    "inline": 5,
+    "inline": 2,
     "conflicted": 1,
     "failed": 0,
     "held": 2,
@@ -650,22 +633,22 @@
     "parked": 11
    },
    "m": {
-    "checking": 1,
-    "inline": 31,
-    "conflicted": 932,
+    "checking": 4,
+    "inline": 1,
+    "conflicted": 935,
     "failed": null,
-    "held": 605,
+    "held": 608,
     "retry": null,
-    "parked": 213
+    "parked": 216
    },
    "cur": [
     [
      [
       "T-4703"
      ],
-     "iPhone app tests, sent and waiting its turn",
+     "iPhone app tests",
      "MacBook",
-     1
+     4
     ]
    ],
    "ld": [
@@ -675,12 +658,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-17T19:16:19Z",
-    "ld": 2.29,
+    "at": "2026-11-17T19:20:41Z",
+    "ld": 29.53,
     "c": 8,
-    "sb": 1,
+    "sb": 2,
     "dk": [
-     16.2,
+     15.0,
      228.3
     ],
     "ss": [
@@ -688,12 +671,13 @@
      953.7
     ],
     "sn": [
-     "iPhone 17e"
+     "iPhone 17e",
+     "T2027 Idris never-used 1117c"
     ]
    },
    "macbook": {
-    "at": "2026-11-17T19:06:31Z",
-    "ld": 1.5,
+    "at": "2026-11-17T19:16:47Z",
+    "ld": 0.47,
     "c": 12,
     "sb": 0,
     "dk": [
@@ -738,8 +722,8 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 1 task",
-   "at": "2026-11-17T12:02:39-05:00"
+   "t": "Work session \u2013 2 tasks",
+   "at": "2026-11-17T14:18:53-05:00"
   }
  ],
  "reply": {
@@ -762,10 +746,10 @@
   "main": 2,
   "lanes": 3,
   "total": 5,
-  "at": "2:17 PM",
+  "at": "2:20 PM",
   "why": "",
-  "at_iso": "2026-11-17T19:17:00+00:00",
+  "at_iso": "2026-11-17T19:20:00+00:00",
   "started": "12:48 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 2, started 12:48 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 2:17 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 2, started 12:48 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 2:20 PM ET</p></section>"
  }
 }

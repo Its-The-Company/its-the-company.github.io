@@ -1,39 +1,20 @@
 {
  "schema": 1,
- "at": "2026-11-17T00:27:04.422503+00:00",
+ "at": "2026-11-17T00:30:05.115825+00:00",
  "session": {
   "active": true,
   "kind": "evening",
   "started": "2026-11-16T19:24:00-05:00",
-  "flow": [
+  "flow": [],
+  "done": [
    {
     "t": "T-3765",
     "name": "Check a real widget tap on the TestFlight build",
     "acct": "Personal b",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1794874449
-     },
-     {
-      "s": "macbook",
-      "at": 1794875008
-     }
-    ]
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794875303
    },
-   {
-    "t": "T-4614",
-    "name": "Make main's own tests pass again",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1794868371
-     }
-    ]
-   }
-  ],
-  "done": [
    {
     "t": "T-4627",
     "name": "Land and star the top efficiency lines first",
@@ -105,16 +86,9 @@
     "steps": [],
     "end": "landed",
     "end_at": 1794867993
-   },
-   {
-    "t": "T-3349",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794867400
    }
   ],
-  "landed": 63,
+  "landed": 64,
   "failed": 12
  },
  "workers": [],
@@ -132,25 +106,25 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 419,
+  "runnable_count": 418,
   "blocked_count": 75
  },
  "meter": {
   "five_hour": {
    "pct": 5.0,
-   "resets_at": "2026-11-17T04:09:59.711045+00:00",
+   "resets_at": "2026-11-16T23:10:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-16T19:23:39.454472-05:00",
-   "source": "usage",
+   "read_at": "2026-11-16T19:29:03.467733-05:00",
+   "source": "live",
    "left": 95.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 26.0,
-   "resets_at": "2026-11-22T06:59:59.711066+00:00",
+   "resets_at": "2026-11-22T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-16T19:23:39.454472-05:00",
-   "source": "usage",
+   "read_at": "2026-11-16T19:29:03.467733-05:00",
+   "source": "live",
    "left": 74.0,
    "left_words": "of your weekly allowance left"
   },
@@ -161,7 +135,7 @@
    "read_at": "2026-11-16T19:23:39.454472-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-16T19:23:39.454472-05:00"
+  "read_at": "2026-11-16T19:29:03.467733-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -181,7 +155,7 @@
   "week_pct": 18.99,
   "usage_pct": 42.2,
   "work_pct": 72.2,
-  "read_at": "2026-11-17T00:27:00+00:00",
+  "read_at": "2026-11-17T00:30:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -202,23 +176,23 @@
   }
  ],
  "disk": {
-  "free_gb": 21,
+  "free_gb": 17,
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 182
+   "free_gb": 183
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-16T19:20:00-05:00",
+   "at": "2026-11-16T19:29:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 4,
-  "at": "2026-11-16T19:27:00-05:00",
+  "at": "2026-11-16T19:30:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -360,6 +334,11 @@
   ],
   "done": [
    {
+    "w": "Operator",
+    "t": "Main's own tests pass again on a clean copy of main (a6951dbe7), so finished work is no longer...",
+    "at": "2026-11-16T19:29:00-05:00"
+   },
+   {
     "w": "Idris",
     "t": "Feature mode is on for the first app feature, and when a feature's work lands its finished steps...",
     "at": "2026-11-16T18:59:00-05:00"
@@ -368,15 +347,10 @@
     "w": "Odalys",
     "t": "A work session with no Fable task now has the Fable switch turned off, so the model guard...",
     "at": "2026-11-16T18:33:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "An independent check found that release builds of the app now stop when a part of it uses a...",
-    "at": "2026-11-16T17:16:00-05:00"
    }
   ],
   "count": {
-   "next": 419,
+   "next": 418,
    "wait": 35,
    "blocked": 40,
    "you": 12
@@ -425,126 +399,76 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-17T00:26:52Z",
+  "at": "2026-11-17T00:29:52Z",
   "s": {
    "T-3765": [
     "mergetest",
-    "Xcode checks on the MacBook",
-    1794875152241
-   ],
-   "T-4627": [
-    "mergeq",
-    "1st to merge",
-    1794871912241
-   ],
-   "T-4625": [
-    "mergeq",
-    "2nd to merge",
-    1794871972241
-   ],
-   "T-3495": [
-    "mergeq",
-    "3rd to merge",
-    1794872632241
-   ],
-   "T-4494": [
-    "mergetest",
-    "Xcode checks on the MacBook, 4th to merge",
-    1794874492241
-   ],
-   "T-4540": [
-    "mergeq",
-    "6th to merge",
-    1794872572241
-   ],
-   "T-4541": [
-    "mergeq",
-    "7th to merge",
-    1794873712241
+    "Xcode checks on the MacBook, 1st to merge",
+    1794875332427
    ],
    "T-4614": [
     "mergeq",
-    "10th to merge",
-    1794872032241
+    "2nd to merge",
+    1794872032427
    ]
   },
   "nm": {
    "T-3765": "Check a real widget tap on the TestFlight build",
-   "T-4627": "Land and star the top efficiency lines first",
-   "T-4625": "Put every remaining efficiency and site line first",
-   "T-3495": "Check the upload fix before build 4 goes out",
-   "T-4494": "Prove widgets move to the app by size",
-   "T-4540": "Check finished work before it ships",
-   "T-4541": "Check finished work before it ships",
    "T-4614": "Make main's own tests pass again"
   },
   "wk": {
    "T-3765": "Idris",
-   "T-4627": "Odalys",
-   "T-4625": "Odalys",
-   "T-3495": "Pernille",
-   "T-4494": "Idris",
-   "T-4540": "Pernille",
-   "T-4541": "Pernille",
    "T-4614": "Pernille"
   }
  },
  "ln": {
-  "at": "2026-11-17T00:26:52Z",
+  "at": "2026-11-17T00:29:52Z",
   "mq": {
    "n": {
-    "checking": 2,
-    "inline": 6,
+    "checking": 1,
+    "inline": 1,
     "conflicted": 1,
     "failed": 0,
     "held": 0,
-    "retry": 0,
+    "retry": 1,
     "parked": 11
    },
    "m": {
-    "checking": 6,
-    "inline": 48,
-    "conflicted": 483,
+    "checking": 1,
+    "inline": 56,
+    "conflicted": 486,
     "failed": null,
     "held": null,
-    "retry": null,
-    "parked": 879
+    "retry": 101,
+    "parked": 882
    },
    "cur": [
     [
      [
       "T-3765"
      ],
-     "iPhone app tests",
+     "iPhone app tests, sent and waiting its turn",
      "MacBook",
      1
-    ],
-    [
-     [
-      "T-4494"
-     ],
-     "iPhone app tests",
-     "MacBook",
-     12
     ]
    ],
    "ld": [
-    84,
-    "2026-11-17T00:14:01Z"
+    85,
+    "2026-11-17T00:28:23Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-17T00:26:26Z",
-    "ld": 1.47,
+    "at": "2026-11-17T00:29:28Z",
+    "ld": 5.03,
     "c": 8,
     "sb": 1,
     "dk": [
-     16.7,
+     19.0,
      228.3
     ],
     "ss": [
-     182.7,
+     182.5,
      953.7
     ],
     "sn": [
@@ -552,12 +476,12 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-17T00:15:46Z",
-    "ld": 1.71,
+    "at": "2026-11-17T00:27:29Z",
+    "ld": 20.35,
     "c": 12,
     "sb": 0,
     "dk": [
-     331.3,
+     329.7,
      926.4
     ],
     "sn": []
@@ -594,10 +518,10 @@
   "main": 0,
   "lanes": 0,
   "total": 0,
-  "at": "7:27 PM",
+  "at": "7:30 PM",
   "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
-  "at_iso": "2026-11-17T00:27:00+00:00",
+  "at_iso": "2026-11-17T00:30:00+00:00",
   "started": "7:24 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0, started 7:24 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 7:27 PM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0, started 7:24 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 7:30 PM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
  }
 }

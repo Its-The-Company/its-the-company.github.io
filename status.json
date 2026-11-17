@@ -1,11 +1,44 @@
 {
  "schema": 1,
- "at": "2026-11-17T01:45:21.758460+00:00",
+ "at": "2026-11-17T01:48:20.918968+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-16T19:47:08-05:00",
   "flow": [
+   {
+    "t": "T-3718",
+    "name": "Check finished work before it ships",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "landing",
+      "at": 1794880068
+     }
+    ]
+   },
+   {
+    "t": "T-4598",
+    "name": "Check finished work before it ships",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "landing",
+      "at": 1794880068
+     }
+    ]
+   },
+   {
+    "t": "T-4024",
+    "name": "Check finished work before it ships",
+    "acct": "Personal b",
+    "steps": [
+     {
+      "s": "landing",
+      "at": 1794880024
+     }
+    ]
+   },
    {
     "t": "T-4617",
     "name": "Run quick checks before a land takes the Xcode slot",
@@ -108,7 +141,7 @@
    "task": "[tools] T-4655 heavy test run cap",
    "model": "opus",
    "started": "2026-11-17T00:50:34.871Z",
-   "seconds": 3286,
+   "seconds": 3466,
    "finished": null,
    "effort": "high"
   }
@@ -118,8 +151,8 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 431,
-  "blocked_count": 75
+  "runnable_count": 430,
+  "blocked_count": 76
  },
  "meter": {
   "five_hour": {
@@ -167,7 +200,7 @@
   "week_pct": 23.56,
   "usage_pct": 47.5,
   "work_pct": 77.0,
-  "read_at": "2026-11-17T01:45:00+00:00",
+  "read_at": "2026-11-17T01:48:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -256,7 +289,7 @@
  "lock_in": {
   "on": false,
   "pool": 4,
-  "at": "2026-11-16T20:45:00-05:00",
+  "at": "2026-11-16T20:48:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -426,10 +459,10 @@
    }
   ],
   "count": {
-   "next": 431,
+   "next": 430,
    "wait": 35,
-   "blocked": 40,
-   "you": 12
+   "blocked": 41,
+   "you": 13
   },
   "fin": {
    "n": 3,
@@ -488,57 +521,52 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-17T01:45:03Z",
+  "at": "2026-11-17T01:48:20Z",
   "s": {
    "T-4617": [
-    "merging",
-    "Host checks on the Mac mini",
-    1794879483594
-   ],
-   "T-3765": [
     "mergeq",
     "1st to merge",
-    1794874443594
-   ],
-   "T-4024": [
-    "mergeq",
-    "2nd to merge",
-    1794878463594
-   ],
-   "T-4597": [
-    "mergeq",
-    "2nd to merge",
-    1794878463594
-   ],
-   "T-3718": [
-    "mergeq",
-    "3rd to merge",
-    1794879243594
-   ],
-   "T-4598": [
-    "mergeq",
-    "3rd to merge",
-    1794879243594
-   ],
-   "T-4642": [
-    "mergetest",
-    "Xcode checks on the MacBook, 4th to merge",
-    1794879423594
+    1794880040918
    ],
    "T-4628": [
     "mergetest",
-    "Xcode checks on the MacBook, 4th to merge",
-    1794879423594
+    "Xcode checks on the MacBook, 2nd to merge",
+    1794879440918
+   ],
+   "T-4642": [
+    "mergeq",
+    "3rd to merge",
+    1794876380918
+   ],
+   "T-4024": [
+    "mergeq",
+    "4th to merge",
+    1794878420918
+   ],
+   "T-4597": [
+    "mergeq",
+    "4th to merge",
+    1794878420918
+   ],
+   "T-3718": [
+    "mergeq",
+    "5th to merge",
+    1794879200918
+   ],
+   "T-4598": [
+    "mergeq",
+    "5th to merge",
+    1794879200918
    ],
    "T-4605": [
     "mergeq",
-    "12th to merge",
-    1794879843594
+    "13th to merge",
+    1794879860918
    ],
    "T-4655": [
     "testing",
     "its own tests, in its copy",
-    1794879183594
+    1794879200918
    ],
    "T-4587": [
     "merged",
@@ -549,37 +577,35 @@
   },
   "nm": {
    "T-4617": "Run quick checks before a land takes the Xcode slot",
-   "T-3765": "Check a real widget tap on the TestFlight build",
+   "T-4628": "Keep the Distance location fix out of its file",
+   "T-4642": "Review the premade settings declarations in Python",
    "T-4024": "Check finished work before it ships",
    "T-4597": "Check finished work before it ships",
    "T-3718": "Check finished work before it ships",
    "T-4598": "Check finished work before it ships",
-   "T-4642": "Review the premade settings declarations in Python",
-   "T-4628": "Keep the Distance location fix out of its file",
    "T-4605": "Check finished work before it ships",
    "T-4655": "Cap how many heavy test runs share the Mac mini",
    "T-4587": "Switch feature sessions on for every app feature"
   },
   "wk": {
    "T-4617": "Odalys",
-   "T-3765": "Idris",
+   "T-4628": "Idris",
+   "T-4642": "Idris",
    "T-4024": "Pernille",
    "T-4597": "Odalys",
    "T-3718": "Pernille",
    "T-4598": "Pernille",
-   "T-4642": "Idris",
-   "T-4628": "Idris",
    "T-4605": "Idris",
    "T-4655": "Odalys",
    "T-4587": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-17T01:45:03Z",
+  "at": "2026-11-17T01:48:20Z",
   "mq": {
    "n": {
-    "checking": 3,
-    "inline": 6,
+    "checking": 1,
+    "inline": 7,
     "conflicted": 1,
     "failed": 0,
     "held": 0,
@@ -587,53 +613,37 @@
     "parked": 12
    },
    "m": {
-    "checking": 8,
-    "inline": 17,
-    "conflicted": 561,
+    "checking": 11,
+    "inline": 15,
+    "conflicted": 564,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 861
+    "parked": 864
    },
    "cur": [
-    [
-     [
-      "T-4617"
-     ],
-     "Mac tests",
-     "Mac mini",
-     7
-    ],
-    [
-     [
-      "T-4642"
-     ],
-     "iPhone app tests",
-     "MacBook",
-     8
-    ],
     [
      [
       "T-4628"
      ],
      "iPhone app tests",
      "MacBook",
-     8
+     11
     ]
    ],
    "ld": [
-    90,
-    "2026-11-17T01:37:27Z"
+    91,
+    "2026-11-17T01:46:51Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-17T01:44:54Z",
-    "ld": 30.08,
+    "at": "2026-11-17T01:47:58Z",
+    "ld": 31.91,
     "c": 8,
     "sb": 1,
     "dk": [
-     16.2,
+     15.9,
      228.3
     ],
     "ss": [
@@ -645,12 +655,12 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-17T01:30:54Z",
-    "ld": 7.59,
+    "at": "2026-11-17T01:41:04Z",
+    "ld": 1.93,
     "c": 12,
     "sb": 0,
     "dk": [
-     328.9,
+     328.7,
      926.4
     ],
     "sn": []
@@ -690,12 +700,24 @@
   "sent": "2026-11-16T23:22:43Z",
   "seconds": 52.0
  },
- "inbox": [],
+ "inbox": [
+  {
+   "id": "c6935343478",
+   "state": "received",
+   "position": 1,
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "Can you free up more space by..."
+  }
+ ],
  "trimmed": [
   "lane_next",
   "queue_text",
   "task_done",
   "fin_short",
+  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -706,10 +728,10 @@
   "main": 1,
   "lanes": 2,
   "total": 3,
-  "at": "8:45 PM",
+  "at": "8:48 PM",
   "why": "",
-  "at_iso": "2026-11-17T01:45:00+00:00",
+  "at_iso": "2026-11-17T01:48:00+00:00",
   "started": "7:47 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 1, started 7:47 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 8:45 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 1, started 7:47 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 8:48 PM ET</p></section>"
  }
 }

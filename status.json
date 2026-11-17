@@ -1,11 +1,22 @@
 {
  "schema": 1,
- "at": "2026-11-17T05:28:16.262642+00:00",
+ "at": "2026-11-17T05:31:20.740712+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-16T21:46:27-05:00",
   "flow": [
+   {
+    "t": "T-4182",
+    "name": "A failing widget says so and can recover",
+    "acct": "Personal b",
+    "steps": [
+     {
+      "s": "testq",
+      "at": 1794893314
+     }
+    ]
+   },
    {
     "t": "T-4020",
     "steps": [
@@ -114,8 +125,8 @@
     "end_at": 1794879447
    }
   ],
-  "landed": 45,
-  "failed": 3
+  "landed": 44,
+  "failed": 4
  },
  "workers": [
   {
@@ -123,7 +134,7 @@
    "task": "[tools] T-4665 batch land efficiency pieces",
    "model": "opus",
    "started": "2026-11-17T02:49:08.404Z",
-   "seconds": 9547,
+   "seconds": 9732,
    "finished": null,
    "effort": "high"
   }
@@ -133,7 +144,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 456,
+  "runnable_count": 458,
   "blocked_count": 74
  },
  "meter": {
@@ -182,7 +193,7 @@
   "week_pct": 24.98,
   "usage_pct": 48.1,
   "work_pct": 77.2,
-  "read_at": "2026-11-17T05:28:00+00:00",
+  "read_at": "2026-11-17T05:31:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -232,7 +243,7 @@
  "lock_in": {
   "on": false,
   "pool": 4,
-  "at": "2026-11-17T00:28:00-05:00",
+  "at": "2026-11-17T00:31:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -402,7 +413,7 @@
    }
   ],
   "count": {
-   "next": 456,
+   "next": 458,
    "wait": 35,
    "blocked": 39,
    "you": 12
@@ -464,18 +475,25 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-17T05:28:07Z",
+  "at": "2026-11-17T05:31:20Z",
   "s": {
+   "T-4182": [
+    "merging",
+    "Host checks on the Mac mini",
+    1794893360740
+   ],
    "T-4665": [
     "merging",
     "Mac tests at the main gate",
-    1794892027508
+    1794892040740
    ]
   },
   "nm": {
+   "T-4182": "A failing widget says so and can recover",
    "T-4665": "Land the finished efficiency pieces in one batch"
   },
   "wk": {
+   "T-4182": "Idris",
    "T-4665": "Odalys",
    "T-4279": "Odalys",
    "T-4240": "Odalys",
@@ -483,27 +501,36 @@
   }
  },
  "ln": {
-  "at": "2026-11-17T05:28:07Z",
+  "at": "2026-11-17T05:31:20Z",
   "mq": {
    "n": {
-    "checking": 0,
+    "checking": 1,
     "inline": 0,
     "conflicted": 1,
-    "failed": 0,
+    "failed": 1,
     "held": 0,
     "retry": 0,
-    "parked": 13
+    "parked": 23
    },
    "m": {
-    "checking": null,
+    "checking": 2,
     "inline": null,
-    "conflicted": 784,
-    "failed": null,
+    "conflicted": 787,
+    "failed": 3,
     "held": null,
     "retry": null,
-    "parked": 727
+    "parked": 37
    },
-   "cur": [],
+   "cur": [
+    [
+     [
+      "T-4182"
+     ],
+     "Mac tests",
+     "Mac mini",
+     2
+    ]
+   ],
    "ld": [
     0,
     null
@@ -511,12 +538,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-17T05:28:09Z",
-    "ld": 17.83,
+    "at": "2026-11-17T05:30:53Z",
+    "ld": 23.67,
     "c": 8,
     "sb": 2,
     "dk": [
-     16.1,
+     19.3,
      228.3
     ],
     "ss": [
@@ -529,8 +556,8 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-17T04:54:02Z",
-    "ld": 0.32,
+    "at": "2026-11-17T05:24:38Z",
+    "ld": 0.14,
     "c": 12,
     "sb": 0,
     "dk": [
@@ -557,32 +584,20 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Inbox \u2013 Evan's 12:27 AM Message on GitHub",
-   "at": "2026-11-17T00:27:53-05:00"
+   "t": "Work session \u2013 1 task",
+   "at": "2026-11-17T00:29:29-05:00"
   }
  ],
  "reply": {
-  "sent": "2026-11-17T05:17:24Z",
-  "seconds": 117.0
+  "sent": "2026-11-17T05:27:34Z",
+  "seconds": 113.0
  },
- "inbox": [
-  {
-   "id": "c6939492685",
-   "state": "received",
-   "position": 1,
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "I agree with this recommendation\u2013..."
-  }
- ],
+ "inbox": [],
  "trimmed": [
   "lane_next",
   "queue_text",
   "task_done",
   "fin_short",
-  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -593,10 +608,10 @@
   "main": 1,
   "lanes": 1,
   "total": 2,
-  "at": "12:28 AM",
+  "at": "12:31 AM",
   "why": "",
-  "at_iso": "2026-11-17T05:28:00+00:00",
+  "at_iso": "2026-11-17T05:31:00+00:00",
   "started": "9:46 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 1, started 9:46 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 12:28 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 1, started 9:46 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 12:31 AM ET</p></section>"
  }
 }

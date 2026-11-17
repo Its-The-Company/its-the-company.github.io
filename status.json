@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-17T21:14:41.080778+00:00",
+ "at": "2026-11-17T21:17:47.341684+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -33,6 +33,14 @@
    }
   ],
   "done": [
+   {
+    "t": "T-4743",
+    "name": "Fix a MacBook test job that failed",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794950247
+   },
    {
     "t": "T-4758",
     "name": "Keep the shortcut test's pictures out of the source tree",
@@ -104,17 +112,9 @@
     "steps": [],
     "end": "landed",
     "end_at": 1794934215
-   },
-   {
-    "t": "T-4656",
-    "name": "Let a cleaned script return to the widget on resend",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794934098
    }
   ],
-  "landed": 26,
+  "landed": 27,
   "failed": 6
  },
  "workers": [
@@ -123,7 +123,7 @@
    "task": "[tools] T-4749 source-text tests slice 2",
    "model": "opus",
    "started": "2026-11-17T20:41:48.377Z",
-   "seconds": 1972,
+   "seconds": 2158,
    "finished": null,
    "effort": "high"
   },
@@ -132,7 +132,7 @@
    "task": "[tools] T-4753 fail new source-text tests",
    "model": "opus",
    "started": "2026-11-17T21:05:08.821Z",
-   "seconds": 572,
+   "seconds": 758,
    "finished": null,
    "effort": "high"
   },
@@ -141,7 +141,7 @@
    "task": "[site] T-4747 queued-order red fix",
    "model": "opus",
    "started": "2026-11-17T21:09:16.623Z",
-   "seconds": 324,
+   "seconds": 510,
    "finished": null,
    "effort": "high"
   }
@@ -217,7 +217,7 @@
   "week_pct": 38.85,
   "usage_pct": 52.6,
   "work_pct": 79.4,
-  "read_at": "2026-11-17T21:14:00+00:00",
+  "read_at": "2026-11-17T21:17:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -254,7 +254,7 @@
  "lock_in": {
   "on": false,
   "pool": 6,
-  "at": "2026-11-17T16:14:00-05:00",
+  "at": "2026-11-17T16:17:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -503,37 +503,37 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-17T21:14:41Z",
+  "at": "2026-11-17T21:17:47Z",
   "s": {
    "T-4760": [
     "mergetest",
     "Xcode checks on the MacBook, 1st to merge",
-    1794950021080
+    1794950027341
    ],
    "T-4743": [
     "mergeq",
     "2nd to merge",
-    1794944981080
+    1794944987341
    ],
    "T-4653": [
     "mergeq",
-    "5th to merge",
-    1794946781080
+    "4th to merge",
+    1794946787341
    ],
    "T-4188": [
     "mergeq",
-    "6th to merge",
-    1794947081080
+    "5th to merge",
+    1794947027341
    ],
    "T-4183": [
     "mergeq",
-    "7th to merge",
-    1794947981080
+    "6th to merge",
+    1794947987341
    ],
    "T-4749": [
     "merging",
     "Mac tests at the main gate \u00b7 3 groups of tests done, 1 red",
-    1794949601080
+    1794949607341
    ],
    "T-4747": [
     "merged",
@@ -564,7 +564,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-17T21:14:41Z",
+  "at": "2026-11-17T21:17:47Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -576,37 +576,37 @@
     "parked": 9
    },
    "m": {
-    "checking": 1,
-    "inline": 52,
-    "conflicted": 1050,
+    "checking": 4,
+    "inline": 56,
+    "conflicted": 1053,
     "failed": null,
-    "held": 723,
+    "held": 726,
     "retry": null,
-    "parked": 67
+    "parked": 70
    },
    "cur": [
     [
      [
       "T-4760"
      ],
-     "iPhone app tests, sent and waiting its turn",
+     "iPhone app tests",
      "MacBook",
-     1
+     4
     ]
    ],
    "ld": [
-    30,
-    "2026-11-17T21:14:25Z"
+    31,
+    "2026-11-17T21:17:27Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-17T21:14:41Z",
-    "ld": 2.41,
+    "at": "2026-11-17T21:17:02Z",
+    "ld": 2.19,
     "c": 8,
     "sb": 2,
     "dk": [
-     18.4,
+     19.3,
      228.3
     ],
     "ss": [
@@ -619,12 +619,12 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-17T20:59:05Z",
-    "ld": 1.22,
+    "at": "2026-11-17T21:15:26Z",
+    "ld": 0.31,
     "c": 12,
     "sb": 0,
     "dk": [
-     322.3,
+     322.4,
      926.4
     ],
     "sn": []
@@ -662,10 +662,10 @@
   "main": 3,
   "lanes": 0,
   "total": 3,
-  "at": "4:14 PM",
+  "at": "4:17 PM",
   "why": "",
-  "at_iso": "2026-11-17T21:14:00+00:00",
+  "at_iso": "2026-11-17T21:17:00+00:00",
   "started": "3:40 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 3:40 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 4:14 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 3:40 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 4:17 PM ET</p></section>"
  }
 }

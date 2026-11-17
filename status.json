@@ -1,11 +1,33 @@
 {
  "schema": 1,
- "at": "2026-11-17T22:24:52.421470+00:00",
+ "at": "2026-11-17T22:27:57.479190+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-17T15:40:57-05:00",
   "flow": [
+   {
+    "t": "T-4763",
+    "name": "Keep habit marks when the Page also saves",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "macbook",
+      "at": 1794954419
+     }
+    ]
+   },
+   {
+    "t": "T-3773",
+    "name": "Decide how stuck review fix lines reach the board",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "macbook",
+      "at": 1794954419
+     }
+    ]
+   },
    {
     "t": "T-4765",
     "name": "Fix the When tapped frames' captions and VoiceOver list",
@@ -124,7 +146,7 @@
    "task": "[tools] T-4753 fail new source-text tests",
    "model": "opus",
    "started": "2026-11-17T21:05:08.821Z",
-   "seconds": 4783,
+   "seconds": 4968,
    "finished": null,
    "effort": "high"
   },
@@ -133,7 +155,7 @@
    "task": "[tools] T-4779 T-4780 reds, reland T-4730",
    "model": "opus",
    "started": "2026-11-17T22:22:02.061Z",
-   "seconds": 170,
+   "seconds": 355,
    "finished": null,
    "effort": "high"
   }
@@ -176,7 +198,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 412,
+  "runnable_count": 413,
   "blocked_count": 58
  },
  "meter": {
@@ -225,7 +247,7 @@
   "week_pct": 38.85,
   "usage_pct": 52.6,
   "work_pct": 79.4,
-  "read_at": "2026-11-17T22:24:00+00:00",
+  "read_at": "2026-11-17T22:28:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -335,7 +357,7 @@
  "lock_in": {
   "on": false,
   "pool": 7,
-  "at": "2026-11-17T17:24:00-05:00",
+  "at": "2026-11-17T17:28:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -516,7 +538,7 @@
    }
   ],
   "count": {
-   "next": 412,
+   "next": 413,
    "wait": 27,
    "blocked": 31,
    "you": 8
@@ -578,52 +600,52 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-17T22:24:44Z",
+  "at": "2026-11-17T22:27:57Z",
   "s": {
    "T-4760": [
     "mergeq",
     "1st to merge",
-    1794954224900
+    1794954237479
    ],
    "T-4763": [
-    "mergeq",
-    "2nd to merge",
-    1794952184900
+    "mergetest",
+    "Xcode checks on the MacBook, 2nd to merge",
+    1794954477479
    ],
    "T-4765": [
-    "mergeq",
-    "2nd to merge",
-    1794952184900
+    "mergetest",
+    "Xcode checks on the MacBook, 2nd to merge",
+    1794954477479
    ],
    "T-3773": [
-    "mergeq",
-    "2nd to merge",
-    1794952184900
+    "mergetest",
+    "Xcode checks on the MacBook, 2nd to merge",
+    1794954477479
    ],
    "T-4611": [
     "mergeq",
     "7th to merge",
-    1794952004900
+    1794952017479
    ],
    "T-4612": [
     "mergeq",
     "7th to merge",
-    1794952004900
+    1794952017479
    ],
    "T-4613": [
     "mergeq",
     "7th to merge",
-    1794952004900
+    1794952017479
    ],
    "T-4744": [
     "mergeq",
     "14th to merge",
-    1794952244900
+    1794952257479
    ],
    "T-4779": [
     "testing",
     "its own tests, in its copy",
-    1794954284900
+    1794954237479
    ],
    "T-4770": [
     "merged",
@@ -661,11 +683,11 @@
   }
  },
  "ln": {
-  "at": "2026-11-17T22:24:44Z",
+  "at": "2026-11-17T22:27:57Z",
   "mq": {
    "n": {
-    "checking": 0,
-    "inline": 8,
+    "checking": 3,
+    "inline": 5,
     "conflicted": 2,
     "failed": 0,
     "held": 1,
@@ -673,15 +695,40 @@
     "parked": 9
    },
    "m": {
-    "checking": null,
-    "inline": 35,
-    "conflicted": 570,
+    "checking": 0,
+    "inline": 41,
+    "conflicted": 573,
     "failed": null,
-    "held": 1375,
+    "held": 1378,
     "retry": null,
-    "parked": 137
+    "parked": 140
    },
-   "cur": [],
+   "cur": [
+    [
+     [
+      "T-4763"
+     ],
+     "iPhone app tests, sent and waiting its turn",
+     "MacBook",
+     0
+    ],
+    [
+     [
+      "T-4765"
+     ],
+     "iPhone app tests, sent and waiting its turn",
+     "MacBook",
+     0
+    ],
+    [
+     [
+      "T-3773"
+     ],
+     "iPhone app tests, sent and waiting its turn",
+     "MacBook",
+     0
+    ]
+   ],
    "ld": [
     34,
     "2026-11-17T22:16:55Z"
@@ -689,12 +736,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-17T22:24:45Z",
-    "ld": 2.15,
+    "at": "2026-11-17T22:27:58Z",
+    "ld": 2.77,
     "c": 8,
     "sb": 1,
     "dk": [
-     26.0,
+     26.2,
      228.3
     ],
     "ss": [
@@ -706,8 +753,8 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-17T22:15:33Z",
-    "ld": 3.41,
+    "at": "2026-11-17T22:26:44Z",
+    "ld": 1.16,
     "c": 12,
     "sb": 0,
     "dk": [
@@ -768,10 +815,10 @@
   "main": 2,
   "lanes": 2,
   "total": 4,
-  "at": "5:24 PM",
+  "at": "5:28 PM",
   "why": "",
-  "at_iso": "2026-11-17T22:24:00+00:00",
+  "at_iso": "2026-11-17T22:28:00+00:00",
   "started": "3:40 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 2, started 3:40 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 5:24 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 2, started 3:40 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 5:28 PM ET</p></section>"
  }
 }

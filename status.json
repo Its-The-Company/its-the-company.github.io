@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-17T20:19:09.483172+00:00",
+ "at": "2026-11-17T20:22:10.771352+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -119,7 +119,7 @@
     "why": "tests failed"
    }
   ],
-  "landed": 34,
+  "landed": 33,
   "failed": 6
  },
  "workers": [
@@ -128,7 +128,7 @@
    "task": "[build] T-3564 land device-limit fixes from parked ref",
    "model": "opus",
    "started": "2026-11-17T17:49:46.991Z",
-   "seconds": 8962,
+   "seconds": 9143,
    "finished": null,
    "effort": "high"
   }
@@ -160,19 +160,19 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 3.0,
+   "pct": 4.0,
    "resets_at": "2026-11-17T19:10:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-17T15:06:51.629701-05:00",
+   "read_at": "2026-11-17T15:19:16.396332-05:00",
    "source": "live",
-   "left": 97.0,
+   "left": 96.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 35.0,
    "resets_at": "2026-11-22T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-17T15:06:51.629701-05:00",
+   "read_at": "2026-11-17T15:19:16.396332-05:00",
    "source": "live",
    "left": 65.0,
    "left_words": "of your weekly allowance left"
@@ -184,7 +184,7 @@
    "read_at": "2026-11-17T12:48:07.002980-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-17T15:06:51.629701-05:00"
+  "read_at": "2026-11-17T15:19:16.396332-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -204,7 +204,7 @@
   "week_pct": 39.28,
   "usage_pct": 53.6,
   "work_pct": 80.0,
-  "read_at": "2026-11-17T20:19:00+00:00",
+  "read_at": "2026-11-17T20:22:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -215,18 +215,6 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-17T14:08:37-05:00",
-    "n": "Evan",
-    "src": "plan-a"
-   },
-   {
-    "lane": "a2",
-    "task": "T-4653",
-    "w": "Idris",
-    "k": "fix",
-    "t": "Give the Shortcut's Pro check a time limit",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-17T14:08:41-05:00",
     "n": "Evan",
     "src": "plan-a"
    },
@@ -262,7 +250,7 @@
   }
  ],
  "disk": {
-  "free_gb": 19,
+  "free_gb": 18,
   "gate": "closed",
   "ssd": {
    "mounted": true,
@@ -271,14 +259,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions wait until 20 GB is free.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-17T15:13:00-05:00",
+   "at": "2026-11-17T15:19:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 6,
-  "at": "2026-11-17T15:19:00-05:00",
+  "at": "2026-11-17T15:22:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -522,27 +510,32 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-17T20:19:01Z",
+  "at": "2026-11-17T20:21:51Z",
   "s": {
    "T-4758": [
     "merging",
     "Host checks on the Mac mini",
-    1794946201719
+    1794946191798
    ],
    "T-4689": [
     "merging",
     "Host checks on the Mac mini",
-    1794946201719
+    1794946191798
+   ],
+   "T-4653": [
+    "mergeq",
+    "3rd to merge",
+    1794946791798
    ],
    "T-4760": [
     "mergeq",
-    "3rd to merge",
-    1794944641719
+    "4th to merge",
+    1794944631798
    ],
    "T-4743": [
     "mergeq",
-    "4th to merge",
-    1794944941719
+    "6th to merge",
+    1794944991798
    ],
    "T-4703": [
     "mergetest",
@@ -551,8 +544,8 @@
    ],
    "T-1672": [
     "merging",
-    "Mac tests at the main gate \u00b7 1 group of tests done",
-    1794946381719
+    "Mac tests at the main gate",
+    1794946911798
    ],
    "T-3564": [
     "merged",
@@ -564,6 +557,7 @@
   "nm": {
    "T-4758": "Keep the shortcut test's pictures out of the source tree",
    "T-4689": "Bring the plan into line with the phase A proof",
+   "T-4653": "Give the Shortcut's Pro check a time limit",
    "T-4760": "Report a widget state save truthfully",
    "T-4743": "Fix a MacBook test job that failed",
    "T-4703": "Draw the frames for the 1.0 showcase premades",
@@ -573,6 +567,7 @@
   "wk": {
    "T-4758": "Idris",
    "T-4689": "Ines",
+   "T-4653": "Idris",
    "T-4760": "Idris",
    "T-4743": "Odalys",
    "T-4703": "Maren",
@@ -587,11 +582,11 @@
   }
  },
  "ln": {
-  "at": "2026-11-17T20:19:01Z",
+  "at": "2026-11-17T20:21:51Z",
   "mq": {
    "n": {
     "checking": 2,
-    "inline": 2,
+    "inline": 3,
     "conflicted": 1,
     "failed": 0,
     "held": 2,
@@ -599,13 +594,13 @@
     "parked": 12
    },
    "m": {
-    "checking": 9,
+    "checking": 12,
     "inline": 32,
-    "conflicted": 994,
+    "conflicted": 997,
     "failed": null,
-    "held": 668,
+    "held": 670,
     "retry": null,
-    "parked": 86
+    "parked": 74
    },
    "cur": [
     [
@@ -614,7 +609,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     9
+     12
     ],
     [
      [
@@ -622,7 +617,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     9
+     12
     ]
    ],
    "ld": [
@@ -632,8 +627,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-17T20:19:02Z",
-    "ld": 9.8,
+    "at": "2026-11-17T20:21:03Z",
+    "ld": 6.75,
     "c": 8,
     "sb": 2,
     "dk": [
@@ -683,15 +678,6 @@
   },
   {
    "w": "Operator",
-   "a": "Evan's Account",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session \u2013 1 task",
-   "at": "2026-11-17T14:08:41-05:00"
-  },
-  {
-   "w": "Operator",
    "a": "Jeremy's Account",
    "sr": 1,
    "m": "opus",
@@ -719,12 +705,12 @@
  ],
  "agents_now": {
   "main": 1,
-  "lanes": 3,
-  "total": 4,
-  "at": "3:19 PM",
+  "lanes": 2,
+  "total": 3,
+  "at": "3:22 PM",
   "why": "",
-  "at_iso": "2026-11-17T20:19:00+00:00",
+  "at_iso": "2026-11-17T20:22:00+00:00",
   "started": "12:48 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 1, started 12:48 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 3:19 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 1, started 12:48 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 3:22 PM ET</p></section>"
  }
 }

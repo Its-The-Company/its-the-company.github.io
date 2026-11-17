@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-17T22:50:09.344377+00:00",
+ "at": "2026-11-17T22:53:11.013527+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -146,12 +146,21 @@
    "task": "[tools] T-4779 T-4780 reds, reland T-4730",
    "model": "opus",
    "started": "2026-11-17T22:22:02.061Z",
-   "seconds": 1687,
+   "seconds": 1868,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-3859 board-reader red from storage_guard",
+   "model": "opus",
+   "started": "2026-11-17T22:51:02.675Z",
+   "seconds": 128,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Maren",
+ "who": "Maren, Odalys",
  "recent": [
   {
    "name": "pernille",
@@ -238,7 +247,7 @@
   "week_pct": 38.85,
   "usage_pct": 52.6,
   "work_pct": 79.4,
-  "read_at": "2026-11-17T22:50:00+00:00",
+  "read_at": "2026-11-17T22:53:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -312,7 +321,7 @@
  "lock_in": {
   "on": false,
   "pool": 7,
-  "at": "2026-11-17T17:50:00-05:00",
+  "at": "2026-11-17T17:53:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -334,6 +343,15 @@
    "task": "[tools] T-4779 T-4780 reds, reland T-4730",
    "model": "opus",
    "since": "2026-11-17T22:22:02.061Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
+   "name": "Odalys",
+   "state": "running",
+   "task": "[tools] T-3859 board-reader red from storage_guard",
+   "model": "opus",
+   "since": "2026-11-17T22:51:02.675Z",
    "next": [],
    "effort": "high"
   },
@@ -362,14 +380,6 @@
    "next": []
   },
   {
-   "name": "Odalys",
-   "state": "next",
-   "task": "A lane record main refused: failed...",
-   "model": null,
-   "since": null,
-   "next": []
-  },
-  {
    "name": "Wrenna",
    "state": "next",
    "task": "Wrenna, P2, T-2375 continuation (B-staged item 3...",
@@ -389,6 +399,16 @@
     "at": "2026-11-17T22:22:02.061Z",
     "o": "c",
     "task": "T-4779"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Move everything not needed off the Mac mini disk",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-17T22:51:02.675Z",
+    "o": "c",
+    "task": "T-3859"
    }
   ],
   "src": "plan",
@@ -556,67 +576,67 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-17T22:49:47Z",
+  "at": "2026-11-17T22:53:11Z",
   "s": {
+   "T-4763": [
+    "mergetest",
+    "Xcode checks on the MacBook",
+    1794955991013
+   ],
    "T-4760": [
     "mergeq",
     "1st to merge",
-    1794954227831
-   ],
-   "T-4763": [
-    "mergeq",
-    "2nd to merge",
-    1794951227831
+    1794954251013
    ],
    "T-4765": [
     "mergeq",
     "3rd to merge",
-    1794951287831
+    1794951251013
    ],
    "T-4613": [
     "mergeq",
     "4th to merge",
-    1794951527831
+    1794951551013
    ],
    "T-4612": [
     "mergeq",
     "5th to merge",
-    1794951827831
+    1794951791013
    ],
    "T-4611": [
     "mergeq",
     "6th to merge",
-    1794951827831
+    1794951851013
    ],
    "T-3773": [
-    "mergetest",
-    "Xcode checks on the MacBook, 13th to merge",
-    1794954467831
-   ],
-   "T-4607": [
     "mergeq",
-    "14th to merge",
-    1794955187831
-   ],
-   "T-4608": [
-    "mergeq",
-    "14th to merge",
-    1794955187831
-   ],
-   "T-4609": [
-    "mergeq",
-    "14th to merge",
-    1794955187831
+    "12th to merge",
+    1794952211013
    ],
    "T-4744": [
     "mergeq",
+    "13th to merge",
+    1794952271013
+   ],
+   "T-4607": [
+    "mergeq",
     "15th to merge",
-    1794952247831
+    1794955211013
+   ],
+   "T-4608": [
+    "mergeq",
+    "15th to merge",
+    1794955211013
+   ],
+   "T-4609": [
+    "mergeq",
+    "15th to merge",
+    1794955211013
    ],
    "T-4730": [
     "testing",
     "its own tests, in its copy",
-    1794955247831
+    1794955211013
    ],
    "T-4779": [
     "merged",
@@ -629,39 +649,47 @@
     "on main 5:06 PM ET",
     1794953163000,
     "Ines"
+   ],
+   "T-3859": [
+    "merged",
+    "on main 4:43 PM ET",
+    1794951833000,
+    "Odalys"
    ]
   },
   "nm": {
-   "T-4760": "Report a widget state save truthfully",
    "T-4763": "Keep habit marks when the Page also saves",
+   "T-4760": "Report a widget state save truthfully",
    "T-4765": "Fix the When tapped frames' captions and VoiceOver list",
    "T-4613": "Check finished work before it ships",
    "T-4612": "Check finished work before it ships",
    "T-4611": "Check finished work before it ships",
    "T-3773": "Decide how stuck review fix lines reach the board",
+   "T-4744": "Fix a MacBook test job that failed",
    "T-4607": "Check finished work before it ships",
    "T-4608": "Check finished work before it ships",
    "T-4609": "Check finished work before it ships",
-   "T-4744": "Fix a MacBook test job that failed",
    "T-4730": "Fix a test row that is red on main",
    "T-4779": "Show 12-hour times in the design mockup pages",
-   "T-4770": "Re-estimate the release date from measured build speed"
+   "T-4770": "Re-estimate the release date from measured build speed",
+   "T-3859": "Move everything not needed off the Mac mini disk"
   },
   "wk": {
-   "T-4760": "Idris",
    "T-4763": "Maren",
+   "T-4760": "Idris",
    "T-4765": "Maren",
    "T-4613": "Pernille",
    "T-4612": "Pernille",
    "T-4611": "Pernille",
    "T-3773": "Ines",
+   "T-4744": "Operator",
    "T-4607": "Odalys",
    "T-4608": "Pernille",
    "T-4609": "Pernille",
-   "T-4744": "Operator",
    "T-4730": "Maren",
    "T-4779": "Maren",
    "T-4770": "Ines",
+   "T-3859": "Odalys",
    "T-4753": "Pernille",
    "T-4780": "Odalys",
    "T-4747": "Maren",
@@ -670,7 +698,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-17T22:49:47Z",
+  "at": "2026-11-17T22:53:11Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -682,22 +710,22 @@
     "parked": 9
    },
    "m": {
-    "checking": 22,
+    "checking": 0,
     "inline": 62,
-    "conflicted": 595,
+    "conflicted": 598,
     "failed": null,
-    "held": 1400,
+    "held": 1404,
     "retry": null,
-    "parked": 162
+    "parked": 165
    },
    "cur": [
     [
      [
-      "T-3773"
+      "T-4763"
      ],
      "iPhone app tests",
      "MacBook",
-     22
+     0
     ]
    ],
    "ld": [
@@ -707,16 +735,16 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-17T22:49:16Z",
-    "ld": 40.74,
+    "at": "2026-11-17T22:52:44Z",
+    "ld": 41.92,
     "c": 8,
     "sb": 1,
     "dk": [
-     21.0,
+     19.6,
      228.3
     ],
     "ss": [
-     176.8,
+     174.7,
      953.7
     ],
     "sn": [
@@ -724,8 +752,8 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-17T22:36:36Z",
-    "ld": 1.09,
+    "at": "2026-11-17T22:52:36Z",
+    "ld": 0.57,
     "c": 12,
     "sb": 0,
     "dk": [
@@ -743,7 +771,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 7 tasks",
+   "t": "Work session \u2013 8 tasks",
    "at": "2026-11-17T17:21:23-05:00"
   },
   {
@@ -774,13 +802,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 1,
+  "main": 2,
   "lanes": 1,
-  "total": 2,
-  "at": "5:50 PM",
+  "total": 3,
+  "at": "5:53 PM",
   "why": "",
-  "at_iso": "2026-11-17T22:50:00+00:00",
+  "at_iso": "2026-11-17T22:53:00+00:00",
   "started": "3:40 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 1, started 3:40 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 5:50 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 3:40 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 5:53 PM ET</p></section>"
  }
 }

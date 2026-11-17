@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-17T15:14:58.686423+00:00",
+ "at": "2026-11-17T15:17:38.354313+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -136,7 +136,7 @@
    "task": "[build] T-0289 land parked state module",
    "model": "opus",
    "started": "2026-11-17T14:21:25.112Z",
-   "seconds": 3213,
+   "seconds": 3373,
    "finished": null,
    "effort": "high"
   },
@@ -145,7 +145,7 @@
    "task": "[build] T-1882 finish landing parked work",
    "model": "opus",
    "started": "2026-11-17T15:07:11.689Z",
-   "seconds": 466,
+   "seconds": 626,
    "finished": null,
    "effort": "high"
   }
@@ -213,7 +213,7 @@
   "week_pct": 36.07,
   "usage_pct": 52.2,
   "work_pct": 79.0,
-  "read_at": "2026-11-17T15:15:00+00:00",
+  "read_at": "2026-11-17T15:18:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -323,7 +323,7 @@
  "lock_in": {
   "on": false,
   "pool": 5,
-  "at": "2026-11-17T10:15:00-05:00",
+  "at": "2026-11-17T10:18:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -562,47 +562,27 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-17T15:14:58Z",
+  "at": "2026-11-17T15:17:38Z",
   "s": {
    "T-4663": [
     "merging",
     "Host checks on the Mac mini",
-    1794928018686
+    1794927998354
    ],
    "T-4656": [
     "mergetest",
     "Xcode checks on the MacBook, 1st to merge",
-    1794927178686
+    1794927158354
    ],
    "T-4513": [
     "merging",
     "Mac tests at the main gate",
-    1794927658686
+    1794927638354
    ],
    "T-0289": [
     "merging",
     "Mac tests at the main gate",
-    1794928018686
-   ],
-   "T-4668": [
-    "testing",
-    "Mac Mini \u00b7 test",
-    null
-   ],
-   "T-4671": [
-    "testing",
-    "Mac Mini \u00b7 test",
-    null
-   ],
-   "T-4744": [
-    "testing",
-    "Mac Mini \u00b7 test",
-    null
-   ],
-   "T-4745": [
-    "testing",
-    "Mac Mini \u00b7 test",
-    null
+    1794928538354
    ],
    "T-3217": [
     "testing",
@@ -612,7 +592,7 @@
    "T-0687": [
     "testing",
     "its own tests, in its copy",
-    1794928198686
+    1794928178354
    ]
   },
   "nm": {
@@ -620,10 +600,6 @@
    "T-4656": "Let a cleaned script return to the widget on resend",
    "T-4513": "Show the SSD's free space on the Machine bubble",
    "T-0289": "Build the widget state module for scripts",
-   "T-4668": "Put the bank, tax and name dates in the plan",
-   "T-4671": "Clear the app's sentences under the approved voice",
-   "T-4744": "Fix a MacBook test job that failed",
-   "T-4745": "Fix a MacBook test job that failed",
    "T-3217": "Fix the three red tests before build 3",
    "T-0687": "Run network fetches inside the extension on the Simulator"
   },
@@ -632,10 +608,6 @@
    "T-4656": "Idris",
    "T-4513": "Maren",
    "T-0289": "Pernille",
-   "T-4668": "Ines",
-   "T-4671": "Maren",
-   "T-4744": "Operator",
-   "T-4745": "Odalys",
    "T-3217": "Idris",
    "T-0687": "Idris",
    "T-4417": "Idris",
@@ -643,7 +615,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-17T15:14:58Z",
+  "at": "2026-11-17T15:17:38Z",
   "mq": {
    "n": {
     "checking": 2,
@@ -655,13 +627,13 @@
     "parked": 14
    },
    "m": {
-    "checking": 15,
+    "checking": 18,
     "inline": null,
-    "conflicted": 690,
+    "conflicted": 693,
     "failed": null,
-    "held": 945,
+    "held": 948,
     "retry": null,
-    "parked": 485
+    "parked": 487
    },
    "cur": [
     [
@@ -670,7 +642,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     8
+     11
     ],
     [
      [
@@ -678,7 +650,7 @@
      ],
      "iPhone app tests, sent and waiting its turn",
      "MacBook",
-     22
+     25
     ]
    ],
    "ld": [
@@ -688,8 +660,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-17T15:15:00Z",
-    "ld": 14.74,
+    "at": "2026-11-17T15:17:26Z",
+    "ld": 13.96,
     "c": 8,
     "sb": 2,
     "dk": [
@@ -701,7 +673,7 @@
      953.7
     ],
     "sn": [
-     "iPhone 18 Pro",
+     "T4188 Idris iPhone 17e",
      "iPhone 17e"
     ]
    },
@@ -785,10 +757,10 @@
   "main": 2,
   "lanes": 4,
   "total": 6,
-  "at": "10:15 AM",
+  "at": "10:18 AM",
   "why": "",
-  "at_iso": "2026-11-17T15:15:00+00:00",
+  "at_iso": "2026-11-17T15:18:00+00:00",
   "started": "9:17 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 2, started 9:17 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 10:15 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 2, started 9:17 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 10:18 AM ET</p></section>"
  }
 }

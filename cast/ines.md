@@ -49,6 +49,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-4267: ADRs are code to main_folder_guard: worker copy + main_gate. T-4272: an answer that changes a decision's content withdraws the content, not a form the Investors approved; check what each A approved, in time order.
 - T-4105: a fix's number must match its aim ("first day" went in as 7 days). A one-day replay counts slow rules as misses. Subagent report .md Writes are refused.
 - feature grouping T-4228 — done 11-14; both switches off, mine to switch; 17, 18 open; code-written slots are not the author's words
+- T-4695 (11-17): read T-3495 (Pernille on T-3323) at b08e9352: PASS with fixes, no TestFlight block; suite 159/0. M1/M2/L1-3 still have no line of their own (T-3495 open holds them; T-3773 mine); I did not add them: that add was refused 11-09 (T-0848).
 {% endraw %}
 
 

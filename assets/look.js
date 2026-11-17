@@ -46,8 +46,10 @@ function undo(c){if(!c)return;[].forEach.call(c.querySelectorAll('.lk-sbl'),func
 function sess(c){if(c.id!=='lk-run')return;Object.keys(D).forEach(function(f){var r;if(!(D[f].b||[]).length)return;
 r=[].filter.call(c.querySelectorAll('.lk-card[data-id]'),function(x){return x.getAttribute('data-id')===f})[0];if(r)r.parentNode.insertBefore(fsl(f),r.nextSibling)})}
 function group(c){if(!c)return;undo(c);data();if(!GF){document.documentElement.classList.add('lk-flat');sess(c);return}document.documentElement.classList.remove('lk-flat');var g={},S=window.CompanySite,q=!!(S&&S.lk&&S.lk.q&&S.lk.q());
-[].slice.call(c.children).forEach(function(x){var i=(x.getAttribute('data-id')||'').replace(/\.\d+$/,''),f=W[i],b;if(!f||!D[f])return;
-if(!g[f]){g[f]=card(f);c.insertBefore(g[f],x)}b=body(g[f]);if(i===f)b.insertBefore(x,b.firstChild);else b.appendChild(x)});
+// T-4732: a card sits by its first row on show; a row a filter hides (another category's step) never places it
+var kids=[].slice.call(c.children),at={};function fof(x){var f=W[(x.getAttribute('data-id')||'').replace(/\.\d+$/,'')];return f&&D[f]?f:null}
+kids.forEach(function(x){var f=fof(x);if(f&&(!at[f]||(at[f].hidden&&!x.hidden)))at[f]=x});Object.keys(at).forEach(function(f){g[f]=card(f);c.insertBefore(g[f],at[f])});
+kids.forEach(function(x){var f=fof(x),b;if(!f)return;b=body(g[f]);if(x.getAttribute('data-id').replace(/\.\d+$/,'')===f)b.insertBefore(x,b.firstChild);else b.appendChild(x)});
 // T-4530: a card sits by its first row (a star lifts it), and inside it the steps keep the list's own order, star or not
 Object.keys(g).forEach(function(f){var b=body(g[f]),k=[].slice.call(b.children).filter(function(x){return x.getAttribute('data-id')!==f});
 if(k.every(function(x){return x._o!=null}))k.sort(function(x,y){return x._o-y._o}).forEach(function(x){b.appendChild(x)})});

@@ -183,6 +183,17 @@ contract:
   Quote only read). A lane premade that must save needs `fcntl` added to `ALLOWED` first (70,112 bytes on the device
   slice, already shipped), a lane decision.
 
+**Dated line, Maren, 2026-11-17 (T-4763, from T-4601 H1, `reviews/359a4e52fb-pernille.md`).** A key with two writers
+merges by operation, never by value. The merge above sets each owned key to the writer's own copy, and that copy was
+read before the lock. With one writer per key nothing is lost. With two, whichever saves last wins, silently (Pernille's
+scratch run: a Done today mark lost and a rename kept). So for a key with two writers, each writer brings the change it
+made (an operation), takes the lock, re-reads the file, and applies that change to the value it has just read. It never
+sets the key to the copy it read earlier. In 1.0 exactly one key has two writers: Habits' `habits`, written by the
+Page and by the Done today button (s9.2 gives both operations). For that key this replaces s2.3 step 1's "replace the
+keys the Page owns" and s4.2's whole-list write. Every other key keeps one writer and the by-key merge. A second writer
+for any other key needs its operation written here first. `habits.py` never `set()`s `habits`, so the Python by-key
+save never touches that key. Test: s9.4.
+
 Tests: `pywidget/tests/widgets/test_premade_store_lock.py` (a writer in another process holding the lock, a holder in
 this process, an unreadable file, keys the run did not set, no locked save installed, orphan temp files, and which
 premades import `_premade_lock`).
@@ -596,6 +607,9 @@ habit shown. The other eleven gain none. Every count sits inside ADR-011 s3's ca
 (0.5 to 2) plan.md gives step 10 (s9.4). The launcher premades (`widgets/premade/launcher/`, built, not released) are
 not among the twelve; their tiles are `Link`s through the launcher path, which s3 does not count, and nothing changes.
 
+**2026-11-17 (T-4763):** the slot figure above no longer holds. The mark became an operation with its own result
+channel (s9.2), and s9.4 now puts it at 1.5 (1 to 2.5) slot days.
+
 ### 9.1 The test each premade had to pass
 
 1. **It does more than open pywidget.** Apple: "An interaction with a button or toggle should do more than open the
@@ -668,15 +682,71 @@ for unlock (ADR-011 [A3]); Habits has no Lock Screen family with a button.
 
 **Where the mark is written.** Check-ins live in `premade.json` under `habits[].done`, written today only by the Page
 (s3.5). Habits runs in the widget lane, where `Store.save()` writes nothing because `fcntl` is not on the lane's import
-list (s2.3.1). The handler's mark must reach that same file, or the widget and the Page disagree. Two ways, Pernille's
-and Idris's to choose at the step-5 and step-6 reviews:
-- **B, recommended:** the handler returns the changed `habits` list as a premade key; Swift commits it into
-  `premade.json` with the Page's own locked writer (s2.3.1), inside `run.lock` and in ADR-011 s7's order (`run.lock`,
-  `state.lock`, premade lock), with the state and tree. A handler that fails writes nothing (ADR-011 s7 (b)). The same
-  path serves iOS 27's run in the app. No lane change.
-- **A:** `fcntl` joins the lane's `ALLOWED` (70,112 bytes, already on the device slice) and the lane opens the real
-  `Store` rather than the request's copy. A lane decision, and the premade's write lands before the commit, outside
-  s7 (b)'s "writes nothing".
+list (s2.3.1). The handler's mark must reach that same file, or the widget and the Page disagree. With the button,
+`habits` has two writers, so it merges by operation (s2.3.1, dated line 2026-11-17). Each copy of the list is read
+seconds before its writer saves: the run's copy at the run's read, and the Page's when it opened. Neither copy is ever
+written back whole. (Revised 2026-11-17, T-4763, from T-4601 H1 and M1. The 2026-11-16 text had route B return the
+whole changed list. Under s2.3.1's by-key merge that loses a mark or a Page edit, whichever saved first, with no error.)
+
+*The mark is an operation.* The handler never returns the list. After its checks it yields one operation, made of the
+same three numbers as its `args`:
+`{"key": "habits", "op": "mark", "habit": 439041101, "day": 20774, "done": 1}` (habit `h1a2b3c4d`, 2026-11-17). It also applies that operation to its
+own in-memory copy, so the render that follows draws the mark. The writer takes the premade lock (s2.3.1) and re-reads
+`premade.json`. It finds the habit whose stored `id` is `"h"` plus `habit` as 8 lower-case hex digits. For `done: 1`
+it adds that day's ISO date to `done` if it is missing, and for `done: 0` it removes the date if present. Nothing else
+in the file changes: not the order, the name, the habit's other days, or the other habits. Applying the operation
+twice gives the same file as applying it once, because `done` is the state the person chose, not a flip. If no habit
+has that id (the Page deleted it after the draw), the file is not written. The run's tree and state still commit, and
+a `.settingsSaved` refresh (s2.3 step 2) is queued so the tree catches up.
+
+*The Page applies its own edit per habit id.* `habits` is the one list in 1.0 with an `id` rule (s4.1). For it, the
+Page's save (s2.3 step 1) re-reads the list under the lock and applies only what this edit changed, habit by habit:
+- a rename sets that id's `name`;
+- for check-ins, only the days the person toggled in this edit are added or removed, one by one, like the mark;
+- an add appends the new id, and does nothing if the id is already there;
+- a delete removes the id, and does nothing if it is already gone;
+- a reorder puts the ids in the Page's order, with any id the Page did not have kept after them in the file's order.
+
+Habits this edit did not touch keep the file's value. So a mark and a rename made from copies read before either
+saved are both kept, in either order. A mark and a Page toggle of the same habit and day are two target states, and
+the later save's state stands: that is what the person did last, not a silent loss. Countdown's `events` and the other
+lists keep their single writer and the whole-key write.
+
+*The Page reloads when a widget run commits.* Every writer of `premade.json`, Swift and Python, posts one Darwin
+notification after its rename (`<bundle id>.premade.changed`, no payload). An open Page reloads its rows from the file
+when that notification arrives and whenever the scene becomes active. An edit sheet that is open keeps its fields.
+Its Save is applied per id as above, so the reload neither throws the edit away nor overwrites the mark. A widget can
+be tapped while pywidget is in front, from Notification Center or the Today view, so foreground alone is not enough.
+
+*The result channel* (ADR-011 s7 has none: a handler returns state, and a premade's state is `{}` in 1.0). In 1.0 the
+channel is first-party only and carries one operation per run:
+- **Python.** `pywidget_ui._premade_op(op)`, private and not in API.md's public rows. It can be called only inside
+  `ui._first_party()` in an action run, and only once per run. Any other call raises, which fails the handler, so
+  nothing is written (ADR-011 s7 (b)). If the handler succeeds, the runner puts the operation in the `widget_tree`
+  document as `premade_op`. The document's `state` is unchanged.
+- **Checked in four places.** (1) At the call: shape, keys exactly `key`, `op`, `habit`, `day`, `done`; `habit` an
+  integer from 0 to 4,294,967,295; `day` an integer; `done` 0 or 1. (2) In `validate()` of the document: `premade_op`
+  is allowed only when the request carried `first_party: true` and an `action`. (3) In Swift, decoding the result
+  before the commit: the same shape again, the widget id `pywidget.premade.habits`, and the `(key, op)` pair on a fixed
+  Swift allow-list with one row in 1.0. Anything else ends the run as `error`, and nothing is written: state, tree
+  and file all stay as they were. (4) In the writer: the id lookup above.
+- **Committed** inside `run.lock`, in ADR-011 s7's lock order. Take `state.lock` and check `rev`. Take the premade
+  lock, apply the operation, rename, release. Then write `state.json` and the tree, and release `state.lock`. The file
+  goes first because it is the record. A tree that lags is redrawn by the next run. In the extension, the premade
+  lock's wait is cut to what is left of the run's 2.0 s budget. A wait that runs out writes nothing and is the
+  run's `busy` row (ADR-011 s7).
+- **Contract lines.** bridge-contract.md gains v5.12 (the document's `premade_op`, request unchanged, `contract: 5`
+  kept because it is additive in one bundle). ADR-011 s7 gains a dated line that a first-party handler may yield one
+  premade operation. Both are Pernille's to write at step 5.
+
+The same Swift writer (one function that applies an operation under the premade lock) serves the Page, the extension
+on iOS 18 to 26 and the app's run on iOS 27. Two ways to get the mark into the file, Pernille's and Idris's to choose at
+the step-5 and step-6 reviews:
+- **B, recommended:** the channel and the Swift writer above. No lane change.
+- **A:** `fcntl` joins the lane's `ALLOWED` (70,112 bytes, already on the device slice). The handler applies the same
+  operation itself through a new operation save in `_premade_lock`, not the by-key `save`. This is a lane decision.
+  The file is written before the commit, outside s7 (b)'s "writes nothing", and the Page still needs the per-id edit
+  and the reload.
 
 Not chosen: keeping the button's marks in the widget's `state.json`. Two stores of one person's check-ins would show
 different weeks in the widget and the Page.
@@ -709,32 +779,46 @@ After ADR-011 steps 4, 5, 6a and 6 (the generic path: signing, the Python run, t
 here adds a Swift view; the habit button is an ordinary drawn `Button`.
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 16: 9.4 Build cost, for Idris (Commandment 13 reviewer), scrolls sideways" style="--tw:965px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 16: 9.4 Build cost, for Idris (Commandment 13 reviewer), scrolls sideways" style="--tw:1044px" markdown="1">
 
 | Part | Who | Size | On the slot |
 |---|---|---|---|
 | Frames for Small, Medium and Large in Paper and Studio, hit areas outlined, VoiceOver order | Maren | 0.5 day | no, beside it, before the build |
 | `habits.py`: the `check` handler, the three layouts, the docstring's "no widget buttons in v1" line; host tests (mark, unmark, unknown `habit`, `day` out of range, a failed handler writes nothing); render tests at name `max` 13 and a 3-digit streak; trees, first renders and `catalog.json` re-run | Pernille | 0.5 day | no, beside it, as plan.md counts her step 5 |
-| Route B's commit of a premade key in the action run, reusing the Page's locked writer; tests that a mark from the widget and a Page save in the same second both survive | Idris | 0.5 (0.25 to 1) | yes |
-| On the iPhone (iOS 26): a lane Habits widget's button marks today without opening pywidget; Habits' measured T against `timeout` 0.5 + T <= 2.0 s; a locked-phone tap; screenshots of the three sizes with hit areas outlined | Idris | 0.5 (0.25 to 1) | yes |
-| **Total on the slot** | | **1 (0.5 to 2)**, as plan.md has it | |
+| The result channel's Python half (s9.2): `ui._premade_op`, callable once and only in a first-party action run; the document's `premade_op` and its check in `validate()`; `Widget.run_action` returns it for host tests; bridge-contract v5.12 and the ADR-011 s7 dated line; tests (refused outside `_first_party()`, outside an action, twice, with a bad shape; a handler that raises after the call yields none) | Pernille | 0.5 (0.25 to 1) | no, beside it as step 5 work; it must land before Idris's next row starts |
+| The extension's writer (s9.2): one Swift function that applies an operation under the premade lock, built into the widget extension target as well as the app, its lock wait cut to the run's budget; decoding and checking `premade_op` in the action commit, in ADR-011 s7's lock order; the Page's per-id save for `habits` in place of the whole-list write; the Darwin notification after every rename and the Page's reload on it and on scene active; tests as below | Idris | 1 (0.5 to 1.5) | yes |
+| On the iPhone (iOS 26): a lane Habits widget's button marks today without opening pywidget; Habits' measured T against `timeout` 0.5 + T <= 2.0 s; a locked-phone tap; a tap from the Today view with the Page open, whose rows show the mark; screenshots of the three sizes with hit areas outlined | Idris | 0.5 (0.25 to 1) | yes |
+| **Total on the slot** | | **1.5 (1 to 2.5)**; plan.md's 1 (0.5 to 2) no longer holds | |
 
 </div>
 
 
-What would push it to 2: route A instead of B; the Page's Swift locked writer (T-4468's Swift half) not landed when
-this starts, since route B reuses it; or Habits' T above 1.5 s, so its buttons fall back to links that open pywidget
-(it still works, visibly; ADR-011 s4).
+**The test (replaces "a mark and a Page save in the same second both survive", which a whole-list writer could pass by
+timing).** A mark and a rename, each made from a copy read before the other wrote, are both kept. Shape, from
+Pernille's `lost_mark.py`: two writers read the same file; the widget writer marks today on `h0000abcd`; the Page
+renames `h0000abcd` from `Read` to `Reading`; both commit, mark first and then the other order. Each order must end
+with the name `Reading` **and** today in `done`. The same test also covers: a Page toggle of another day of that habit
+alongside the mark, both kept; a Page delete before the mark, where the mark writes nothing and no error is raised; the
+operation applied twice, giving the same file; and the second writer in another process holding the lock (s2.3.1's
+cases). Idris's Swift tests, run through `tools/xc.sh`.
+
+**Does 1 slot day hold? No.** The old 0.5 for the commit assumed reusing a writer as it stood. The operation writer,
+the Page's per-id save and its reload, and the result check are new Swift, and they need to reach the extension as
+well as the app. The likely figure is 1.5 slot days, with a range of 1 to 2.5. Changing plan.md's step 10 row is
+Ines's. What would push it to 2.5: route A instead of B; the Page's Swift locked writer (T-4468's Swift half;
+`LauncherPremadeSlots.write` still takes no lock, T-4570) not landed when this starts; the Python channel landing late;
+or Habits' T above 1.5 s, so its buttons fall back to links that open pywidget (it still works, visibly; ADR-011 s4).
 
 The board line is Idris's to add when T-4558 is ticked (the board line says so). A draft he can take or change:
 `[build] Habit tracker's Done today button \| Idris with Pernille, step of T-4478, after ADR-011 steps 4, 5, 6a, 6:
-premade-inputs.md s9. Done when: tests: the handler cases in s9.4, and a widget mark and a Page save in one second
-both kept; seen: on the iPhone (iOS 26) a lane Habits widget marks today without pywidget opening, and Small, Medium
+premade-inputs.md s9. Done when: tests: the handler cases in s9.4, and a mark and a rename from copies read before
+the other wrote, both kept, in both orders; seen: on the iPhone (iOS 26) a lane Habits widget marks today without pywidget opening, and Small, Medium
 and Large screenshots with hit areas outlined.`
 
 ### 9.5 Open
 
-1. **Route A or B** (s9.2): Pernille and Idris, at the step-5 and step-6 reviews. I recommend B.
+1. **Route A or B** (s9.2): Pernille and Idris, at the step-5 and step-6 reviews. I recommend B. Either way the mark
+   is an operation, and the Page saves `habits` per id (s2.3.1, 2026-11-17).
 2. **The `entry()` lint and `accessibility_label`.** ADR-011 s3 has the lint print "Button 'x' has no text" when a
    label has no text. The habit button's label is a symbol with an `accessibility_label`; the lint should count that
    as text. Pernille's, in step 5.

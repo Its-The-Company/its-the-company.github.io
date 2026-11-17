@@ -45,7 +45,6 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 - T-1882/T-0687 11-17: 6cf737c65b + 12998ef7c6 landed (2015/0); (2) of T-1882 was on main since 5b36a7808. Open: B5 wiring; T-0687 (b) T-4750/4751, (c) phone; reviews. Scratch T-0687-idris kept: t0687-swift-untested.patch not on main. Lesson: zsh never word-splits $F; read the notes before calling a part open.
 
-- T-3764 11-17 9213af9de8: probe+test landed, ticked (no red via system.open). Lesson: UI tests open other apps only through UITestLaunch helpers (XCUIApplication.settings()); the land's scan fails otherwise.
 
 - T-4662 11-17: parked b8f0b06bf1 (caret on long lines + editor.md) in scratch T-4662-idris, not landed: land job 53ed1c red only on PromptDeskTests timing. Open: rerun land, then 17e look; editor.md not in how_it_works PARTS.
 
@@ -58,6 +57,8 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 
 - T-4603 11-17 f701313490: review of T-4564 PASS w/ findings; M1 -> T-4767 (Pernille: handler SystemExit ends internal_error, <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> demotes). Lesson: board_tick add writes the main checkout's board, not the worktree's; a new line's ID comes from the tool, so write the review's Board: ID after.
+- T-4188/T-2027 11-17 53ea686e39: fresh sim refuses add() UNErrorDomain 2003 >10 s after first grant; mapped plainly, test skips. Open: whole unit target (disk exit 75), T-0053 waits Ines/Wrenna (App Group vs lane Python); ops/plans/T-4188-handoff.md. Lesson: host_keep takes >10 min under load: run it in background with a long timeout.
+- T-4653 11-17 e707fbc622: landed from <span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">parked</span> 68bdede3c7 (2043/0), ticked; review T-4789 Pernille. Open: bound-dropped mutant verdict. Lesson: 75 then rebase = new job; rerun without rebase.
 {% endraw %}
 
 

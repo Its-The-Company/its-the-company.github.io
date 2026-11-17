@@ -705,6 +705,8 @@ The Effect lines of the amendments.md entries the charter retired (2026-11-04 12
 - **2026-11-17 6:45 AM ET** ((private)): After T-4718 and T-4701's pool fix, the audit closes and the company turns fully to app work. Unbuilt process changes go in a brief Documents report and leave the board (archived); they are built only at an Investor's request. Fixes that keep merges and tests working stay (reply c6947127448).
 - **2026-11-17 9:37 AM ET** ((private)): Standing: a new test that checks a file's source text instead of running it fails the run where it is written (commit and test run), before it can reach a merge; the check covers the Swift tests too; the existing source-text tests are rewritten as behavior tests one at a time (T-4749). Done the cheap published way (a lint on changed lines only, no extra full runs), and only as far as it saves time.
 - **2026-11-17 11:34 AM ET** ((private)): Standing: fixing reds on main and clearing parked tasks comes first (answers c6953248293 items 1 and 2); every session actively fixes a slowdown when it appears instead of working around it or waiting
+- **2026-11-17 5:19 PM ET** ((private)): Standing: fewer merge test runs through features and batching; a red means broken behaviour, never a bad test; a fix after a red is retested on what failed and what it touched, not the whole Mac and iPhone suite
+- **2026-11-17 6:23 PM ET** ((private)): Feature sessions are on for every app feature without a per-feature switch; correcting bad tests is top priority; a known process fix is built and shipped at once; T-4781 expedited.
 {% endraw %}
 
 </div>

@@ -28,7 +28,7 @@ Drawn by code: `draw_when_tapped.py` writes the eight PNGs and `qa.json` (HTML/C
 </div>
 
 
-QA (`qa.json`, re-run 2026-11-16 after Idris's notes): 70 frames, 0 clipped, 0 truncated, 0 overlapping, 0 under 11 pt, 0 contrast fails; lowest text contrast 5.72:1 (A) and 5.6:1 (B) Every sheet is under 300 KB (largest 293,714 B).
+QA (`qa.json`, re-run 2026-11-17 after Pernille's review, T-4765): 70 frames, 0 clipped, 0 truncated, 0 overlapping, 0 under 11 pt, 0 contrast fails; lowest text contrast 5.72:1 (A) and 5.6:1 (B). Every sheet is under 300 KB (largest 298,159 B, `A-when-tapped-access`).
 
 ## 1. The widget's settings (frames 1, 2, 19, 30)
 
@@ -91,7 +91,7 @@ Dynamic Type to AX5. From AX1 up (`dynamicTypeSize.isAccessibilitySize`, with `V
 ## 9. Choices made here, beyond the ADR's words
 
 - The app's name is written **PyWidget**, as the app shows it (`CFBundleDisplayName` and every shipped string); the ADR's lower-case spelling in s8 and s9 is prose.
-- 13 strings are new (marked in the table): the button Run footer, "Opens {Page}", the default words for a button, the family-cap line, the list footers, "The file this widget runs", the Web Page title, "Saves as…", the field footer, and the row hint.
+- 25 strings are new words, not the ADR's: the rows whose Source is `new, DRAFT` in the table below are the list. `l.app.used` ("Also in {where}") is one of them: the ADR gives the behaviour (s5a), not these words.
 - Back labels too long for the bar read "Back", as iOS shortens them.
 
 ## Idris's build notes answered (2026-11-16)
@@ -101,13 +101,13 @@ Two independent reads by Idris, neither shown this README's reasoning: **F** (re
 **F1, E4 (pushed rows; what is stored).** Pushing a second list changes nothing; only choosing a row in it applies, and Back without a choice keeps the old one. Choosing the file the widget runs stores `{"do": "code"}` with no `file` (so it follows the widget if its file changes) and reads "Opens its code"; any other file stores `file` and reads "Opens {last path part}" (new `c.code.n`). A Page always stores its id ("Opens Log"), except a premade's own settings Page, stored with none.
 **F2 (Save and the no-host error).** One rule: Save is on exactly when the field passes s5's check. Errors show at once, except the no-host one, which waits for editing to end. So Save is off with no reason shown only while the field is empty or still a prefix of `https://`. `exam` is a valid single-label host, so Save is on.
 **F3, E14, E11 (unit, case, schemes).** The cap counts the stored form (after `https://` is added and the host is in `xn--` form), which is ASCII, so bytes and characters are the same and the words stay "characters". Scheme and host are lower-cased silently on save; `HTTPS://` is accepted. Text with `://` takes its scheme from before it. Without `://`, `name:` followed by anything but digits is a scheme (`tel:x`, `mailto:x` give "Links start with https://."), and `localhost:3000` is a host with a port. The Return key is labelled Done: it saves when Save is on, otherwise it ends editing and shows the error.
-**F4 (newlines).** Pasted text is trimmed at both ends. A newline inside it is a bad character ("This isn't a web address."). If a vertical-axis field makes Return insert a newline on the Simulator, use a single-line field that scrolls; frame 18's wrap and "…" are only the drawing's.
+**F4 (newlines).** Pasted text is trimmed at both ends. A newline inside it is a bad character ("This isn't a web address."). If a vertical-axis field makes Return insert a newline on the Simulator, use a single-line field that scrolls. Frame 33 draws the field that way (one line, clipped at its edge); frame 18's wrap and "…" are only the drawing's, so the whole long link can be read.
 **F5, E12 (IDN shown as typed).** The action keeps no second field (s1 refuses unknown fields), and there is no public decoder. In 1.0 the Web Page field shows what the person typed while they are on it; the row shows the stored host, `xn--` form included. This narrows s5's "shown to the person as typed" to the field. Proposed to Idris as an ADR-011 s5 wording change; nothing is decided here.
 **F6, E18 (Buttons rows' data; drops).** They are read from the widget's last `tree.json`, across its entries and families (the same read as step 3's defaults). Names are listed in depth-first order of the largest family drawn. Caps grow with size, so a name dropped in Medium is dropped in Small too. The sub-line names each family that drops every instance, smallest first ("Not shown in Small", "Not shown in Small or Medium", new `ws.drop.2`). A family that drops only some instances gives "Not all shown in Small" (new `ws.drop.some`). A premade's caption is "Widget · {premade name}". The detail screen's existing top (preview, families) is T-4476's and is not drawn here; these two parts sit under it.
 **F7, E6 (where else an app is used).** The counts are read from the caches the app already has: launcher widgets' slots, other widgets' `actions.json`, and every last tree's `p.open` for script defaults (no source scan). This widget's own place is never counted. Words: "Also in" plus the parts joined by commas and "and", with plural forms in the String Catalog (new `l.app.used.l`, `.s`, `.c`). This is Idris's, app side.
 **F8, E6, E7 (Add an app; Change).** Add an app presents the launcher editor's Add App sheet (editor.md frame 5). On Save the new slot is chosen and checked; Cancel changes nothing. Change (on a notice, or in frame 26's sheet) closes the notice or sheet and sets the Projects tab's path to that project, then that widget's settings, replacing the path that was there. The editor saves on leaving as it does today; if it does not, that is a QUESTION back to Idris before step 8. In frame 27 Save writes the slot under its fixed id, `music-2` (editor.md s7, Set Up App for `.unknown`), so the stored action works again.
 **F9, E8, E9 (notice: overlay or inset).** It is an overlay: pinned under the navigation bar (or the status bar on a large-title screen, frame 25), over the content, which does not move. Height is capped at 50% of the screen; past that its text scrolls inside it, and Close and Change stay visible. The notice belongs to the destination view and closes when that view disappears (pop, push or tab switch). Posting the announcement after the screen change settles is accepted; checking the speech on a device belongs to step 3's "seen".
-**F10 (hint on Buttons rows).** The README was right; frame 29 now gives the hint on every Buttons row.
+**F10 (hint on Buttons rows).** The README was right; frame 29 now gives the hint on every Buttons row, the "drawn 5 times" rows included (T-4765).
 **F11, E15 (chevrons at AX; custom rows).** Custom rows (a Button plus path navigation and a drawn chevron) are accepted. Chevrons now stay at AX sizes on rows that push (frames 30-31 redrawn, s8 updated). The checkmark scales with `@ScaledMetric`.
 **F12 (testing VoiceOver).** Agreed: test labels, hints and traits; the speech order is the system's.
 **F13 (PyWidget; the s5a sentence).** Kept as written (s9 above).
@@ -117,6 +117,16 @@ Two independent reads by Idris, neither shown this README's reasoning: **F** (re
 **E3 (where the functions come from).** From the widget's last render's `actions`, the same source N2 uses. A widget that has never rendered shows "PyWidget lists this widget's functions after it is drawn once. Run it, or place it on your Home Screen." (new `l.run.wait`; not drawn). If Pernille's runtime can list declarations without a render, that replaces it; that is her call.
 **E5 (footer with Open an app hidden).** Fixed in frame 4: "PyWidget opens first, then the page."
 **E10.** Same as F9. **E13.** Taken: the field's label is "Web address" (new `f.ax`, frame 29). **E16.** Same as F11. **E17.** The frames use SF Pro read from the system fonts; the line breaks will differ a little in the app. Back labels are the system's in the build. **E19.** Not drawn here: the import summary (L6, words in ADR s9; it belongs to step 2's import sheet). Reduce Motion is in s5 above. Increase Contrast comes from the asset catalog's high-contrast sets with no code.
+
+## T-4602 findings answered (2026-11-17, T-4765)
+
+Pernille's review of cb989fd1c8 ([`../../reviews/cb989fd1c8-pernille.md`](cb989fd1c8-pernille.html)), PASS with findings. The script was rerun and `qa.json` regenerated; the QA line above is that run's.
+- **M1 (frame 30 said chevrons hide).** Fixed: the caption reads "title above choice; chevrons stay on rows that push", matching s8 and F11.
+- **M2 (frame 29 against the README).** Fixed, all three: both "drawn 5 times" rows end with the hint "Changes what happens when you tap it."; the picker's list starts "Today, Back button" (it is pushed from the widget's settings, titled Today); the link field's list starts "Back, Back button". `ax.row.n`'s note in the table now says the hint follows it.
+- **L1 (13 new strings; `l.app.used`).** Fixed: `l.app.used` is marked new words, and s9 now gives the count from the table, 25 (the 24 Pernille counted plus `l.app.used`), with the table as the list. The QA line's missing full stop is added.
+- **L2 (frame 33 wrapped the URL).** Frame 33 is redrawn as one line that scrolls, as F4 says, with the caption "keyboard down; one line that scrolls (F4)". F4's sentence now names frame 33 and keeps frame 18's wrap as the drawing's only.
+- **L3 (Idris's reads not recorded).** Idris's to commit, not this task's.
+- **Info (`qa.json` bytes).** Seen again: `A-when-tapped-notices` and `A-when-tapped-setting` came back a few bytes different though their frames did not change, and `B-when-tapped-notices` matches Pernille's rerun (292,676 B). Compare the QA fields, not the bytes.
 
 ## Strings (DRAFT, C51)
 
@@ -164,7 +174,7 @@ Printed by `python3 draw_when_tapped.py --strings`.
 | `l.stale.page` | Not in this project | sub-line, warning colour, on a stored Page that is gone (N1) | new, DRAFT |
 | `l.stale.file` | Not in this project | sub-line, warning colour, on a stored file that is gone (N6) | new, DRAFT |
 | `l.app.add` | Add an app | row under the saved apps; opens the launcher editor's Add App | ADR-011, DRAFT |
-| `l.app.used` | Also in {where} | sub-line on a saved app row: where else the slot is used (s5a); {where} joins the parts below with commas and 'and', this widget's own place not counted | ADR-011, DRAFT |
+| `l.app.used` | Also in {where} | sub-line on a saved app row: where else the slot is used (s5a); {where} joins the parts below with commas and 'and', this widget's own place not counted; the ADR gives the behaviour (s5a), not the words | new, DRAFT |
 | `l.app.used.l` | {n} launcher widgets | part of {where}; plural forms in the String Catalog ('1 launcher widget') | new, DRAFT |
 | `l.app.used.s` | {n} widget settings | part of {where}: other stored app actions; plural forms | new, DRAFT |
 | `l.app.used.c` | {n} scripts | part of {where}: scripts whose ui.Open.app default names the slot; plural forms | new, DRAFT |
@@ -192,7 +202,7 @@ Printed by `python3 draw_when_tapped.py --strings`.
 | `su.removed` | The app this widget opened was removed from your saved apps. Choose the app it opens. | why .unknown for a stored app action whose slot is gone; second sentence added, the .unknown reason's own | ADR-011, DRAFT |
 | `su.done` | Done | the message-only sheet's trailing button (today's) | ADR-011, DRAFT |
 | `ax.row` | {title}, {choice} | label of a row in the widget's settings | ADR-011, DRAFT |
-| `ax.row.n` | {title}, {choice}, {n} buttons | label of a Buttons row drawn more than once | ADR-011, DRAFT |
+| `ax.row.n` | {title}, {choice}, {n} buttons | label of a Buttons row drawn more than once; ax.hint.row follows it, as on every Buttons row | ADR-011, DRAFT |
 | `ax.hint.row` | Changes what happens when you tap it. | hint on the When tapped row and every Buttons row | new, DRAFT |
 | `ax.sel` | Selected | trait on the checked picker row (read by iOS) | ADR-011, DRAFT |
 

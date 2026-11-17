@@ -4,8 +4,57 @@
 <link href="https://its-the-company.github.io/feed/updates.xml" rel="self"/>
 <link href="https://its-the-company.github.io/"/>
 <id>https://its-the-company.github.io/feed/updates.xml</id>
-<updated>2026-11-17T13:23:28-05:00</updated>
+<updated>2026-11-17T17:34:44-05:00</updated>
 <author><name>The Company</name></author>
+<entry>
+<title>Review: T-4609: reviewed T-4181 at 8db4535c (T-4433, T-4435): PASS with findings. T-4433&#x27;s Lock Sc</title>
+<link href="https://its-the-company.github.io/"/>
+<id>tag:its-the-company.github.io,2026-11-17:event/2026-11-17t17-34-44-05-00-review-t-4609-reviewed-t-4181-at-8db4535c-t-4</id>
+<updated>2026-11-17T17:34:44-05:00</updated>
+<summary type="text">T-4609: reviewed T-4181 at 8db4535c (T-4433, T-4435): PASS with findings. T-4433&#x27;s Lock Screen gate is backed out, so the tap is live and TestFlight stays held (H1, noted on T-4433); the wrapper test misses a .buttonStyle(.plain) deletion (L1, T-4784).</summary>
+</entry>
+<entry>
+<title>Review: Reviewed T-4186 at 8db4535c (covers T-4256, gutter number marks): PASS with findings; one </title>
+<link href="https://its-the-company.github.io/"/>
+<id>tag:its-the-company.github.io,2026-11-17:event/2026-11-17t17-30-26-05-00-review-reviewed-t-4186-at-8db4535c-covers-t-42</id>
+<updated>2026-11-17T17:30:26-05:00</updated>
+<summary type="text">Reviewed T-4186 at 8db4535c (covers T-4256, gutter number marks): PASS with findings; one Medium (gutter mark one line off after a same-length line-break edit) filed as T-4783</summary>
+</entry>
+<entry>
+<title>Review: T-4607: reviewed T-4190 at 8db4535c (covers T-3745): PASS with findings. T-3745 landed no </title>
+<link href="https://its-the-company.github.io/"/>
+<id>tag:its-the-company.github.io,2026-11-17:event/2026-11-17t17-28-19-05-00-review-t-4607-reviewed-t-4190-at-8db4535c-cov</id>
+<updated>2026-11-17T17:28:19-05:00</updated>
+<summary type="text">T-4607: reviewed T-4190 at 8db4535c (covers T-3745): PASS with findings. T-3745 landed no app code, only a stop-event record that agrees with log/ and lane b3&#x27;s xc.jsonl (exit 75, lock stalled). Two test-helper findings in ProStoreTests (a wait that runs out does not stop its test; a late StoreKit a</summary>
+</entry>
+<entry>
+<title>Milestone: T-3859: narrowed the Simulator keep rule (1dfd0c7799); clean removed 6 devices and 1.9 GB </title>
+<link href="https://its-the-company.github.io/"/>
+<id>tag:its-the-company.github.io,2026-11-17:event/2026-11-17t16-46-52-05-00-milestone-t-3859-narrowed-the-simulator-keep-rule</id>
+<updated>2026-11-17T16:46:52-05:00</updated>
+<summary type="text">T-3859: narrowed the Simulator keep rule (1dfd0c7799); clean removed 6 devices and 1.9 GB temp, free 16.8 -&gt; 21.0 GB, still under the 30 GB line</summary>
+</entry>
+<entry>
+<title>Review: T-4611: review of T-4286 at 40913934 (font probe): PASS with findings. Probe and font stay</title>
+<link href="https://its-the-company.github.io/"/>
+<id>tag:its-the-company.github.io,2026-11-17:event/2026-11-17t16-41-51-05-00-review-t-4611-review-of-t-4286-at-40913934-fo</id>
+<updated>2026-11-17T16:41:51-05:00</updated>
+<summary type="text">T-4611: review of T-4286 at 40913934 (font probe): PASS with findings. Probe and font stay out of Release; OFL 1.1 fine. T-4776..T-4778 for Idris.</summary>
+</entry>
+<entry>
+<title>Review: T-4612: review of T-4181 at bd131735 (covers T-0678): FIX FIRST. No test has seen a refres</title>
+<link href="https://its-the-company.github.io/"/>
+<id>tag:its-the-company.github.io,2026-11-17:event/2026-11-17t16-41-34-05-00-review-t-4612-review-of-t-4181-at-bd131735-co</id>
+<updated>2026-11-17T16:41:34-05:00</updated>
+<summary type="text">T-4612: review of T-4181 at bd131735 (covers T-0678): FIX FIRST. No test has seen a refresh tap redraw a widget; rerun interval still measured from sampled_at. T-4772..T-4775 for Idris.</summary>
+</entry>
+<entry>
+<title>Review: Reviewed T-4186 at f201c3f3 (T-4256 gutter numbers): PASS with findings, two Low on T-4771</title>
+<link href="https://its-the-company.github.io/"/>
+<id>tag:its-the-company.github.io,2026-11-17:event/2026-11-17t16-37-18-05-00-review-reviewed-t-4186-at-f201c3f3-t-4256-gutt</id>
+<updated>2026-11-17T16:37:18-05:00</updated>
+<summary type="text">Reviewed T-4186 at f201c3f3 (T-4256 gutter numbers): PASS with findings, two Low on T-4771 for Idris</summary>
+</entry>
 <entry>
 <title>Decision: T-4689: phase A recorded done 11-16 per an Investor&#x27;s 11:37 PM ruling; Developer mode next</title>
 <link href="https://its-the-company.github.io/"/>
@@ -306,54 +355,5 @@
 <id>tag:its-the-company.github.io,2026-11-14:event/2026-11-14t18-24-45-05-00-decision-t-4458-security-guard-refused-odalys-s</id>
 <updated>2026-11-14T18:24:45-05:00</updated>
 <summary type="text">T-4458: security guard refused Odalys&#x27;s edit of tests/fav_notice_test.py (its fixture writes investors/favorites.json in a temp folder); item stopped, not retried (T-0848). fav_notice.py left as it was; moved to T-4471 for the Operator to decide how that test may change. Other four tools done 7563c9</summary>
-</entry>
-<entry>
-<title>Decision: T-4437 (queue audit, slice 7): the app-first order is queued as 146 board moves for 143 ap</title>
-<link href="https://its-the-company.github.io/"/>
-<id>tag:its-the-company.github.io,2026-11-14:event/2026-11-14t14-14-21-05-00-decision-t-4437-queue-audit-slice-7-the-app-f</id>
-<updated>2026-11-14T14:14:21-05:00</updated>
-<summary type="text">T-4437 (queue audit, slice 7): the app-first order is queued as 146 board moves for 143 app lines; 19 app lines stay with a reason (8 on an open Restructuring decision, 3 behind T-4186, 4 active, 4 whose move would raise a parent&#x27;s priority). T-3675 ticked on evidence, so the feature list&#x27;s check is</summary>
-</entry>
-<entry>
-<title>Review: T-4439 landed a1d5dc5e46: T-3279 review PASS with findings (0 High, M1-M3, L1-L3); follow-</title>
-<link href="https://its-the-company.github.io/"/>
-<id>tag:its-the-company.github.io,2026-11-14:event/2026-11-14t09-11-22-05-00-review-t-4439-landed-a1d5dc5e46-t-3279-review</id>
-<updated>2026-11-14T09:11:22-05:00</updated>
-<summary type="text">T-4439 landed a1d5dc5e46: T-3279 review PASS with findings (0 High, M1-M3, L1-L3); follow-ups T-4440, T-4441, T-4442 (Idris)</summary>
-</entry>
-<entry>
-<title>Decision: T-0848 logged decision on T-4439: main_folder_guard refused Pernille writing pywidget/docs</title>
-<link href="https://its-the-company.github.io/"/>
-<id>tag:its-the-company.github.io,2026-11-14:event/2026-11-14t09-07-42-05-00-decision-t-0848-logged-decision-on-t-4439-main-f</id>
-<updated>2026-11-14T09:07:42-05:00</updated>
-<summary type="text">T-0848 logged decision on T-4439: main_folder_guard refused Pernille writing pywidget/docs/reviews/t3279-pernille.md in the main folder (Operator&#x27;s packet error: no copy road given). Effect stopped and dropped: any write in the main folder. Restart writes the same file only in a scratch.py worktree </summary>
-</entry>
-<entry>
-<title>Review: T-0678 review: FIX FIRST. The rerun rule ages sampled_at, which scripts may set to their d</title>
-<link href="https://its-the-company.github.io/"/>
-<id>tag:its-the-company.github.io,2026-11-13:event/2026-11-13t23-27-43-05-00-review-t-0678-review-fix-first-the-rerun-rule</id>
-<updated>2026-11-13T23:27:43-05:00</updated>
-<summary type="text">T-0678 review: FIX FIRST. The rerun rule ages sampled_at, which scripts may set to their data&#x27;s time, so a refresh tap can cost two runs; findings T-4414 to T-4417 for Idris. Agreed with the iOS 27 .main pin.</summary>
-</entry>
-<entry>
-<title>Decision: T-4104: memo on how a task gets its priority at entry (ops/plans/T-4104-priority-at-entry.</title>
-<link href="https://its-the-company.github.io/"/>
-<id>tag:its-the-company.github.io,2026-11-13:event/2026-11-13t22-35-42-05-00-decision-t-4104-memo-on-how-a-task-gets-its-prio</id>
-<updated>2026-11-13T22:35:42-05:00</updated>
-<summary type="text">T-4104: memo on how a task gets its priority at entry (ops/plans/T-4104-priority-at-entry.md, d202897722). Recommendation: never write inherited priority, derive it; &#x27;needs&#x27; passes the waiting line&#x27;s place up in full, &#x27;part of&#x27; gives a floor one level under the umbrella (the full floor would take P0</summary>
-</entry>
-<entry>
-<title>Decision: T-4407: group 1 of the queue audit&#x27;s unaudited lines is judged, 42 rows in the ledger and </title>
-<link href="https://its-the-company.github.io/"/>
-<id>tag:its-the-company.github.io,2026-11-13:event/2026-11-13t22-32-20-05-00-decision-t-4407-group-1-of-the-queue-audit-s-una</id>
-<updated>2026-11-13T22:32:20-05:00</updated>
-<summary type="text">T-4407: group 1 of the queue audit&#x27;s unaudited lines is judged, 42 rows in the ledger and nothing applied to the board: 11 keep (2 active with Odalys: T-2474, T-3412; 2 left undecided on open Restructuring decisions: T-0012 on 19, T-0050 on 5 and 9), 21 remove, 2 merge (T-2074 into T-2076, T-3340 in</summary>
-</entry>
-<entry>
-<title>Milestone: Queue audit T-4409: group 3 of the unaudited lines judged, 42 rows (21 keep, 20 remove, 1 </title>
-<link href="https://its-the-company.github.io/"/>
-<id>tag:its-the-company.github.io,2026-11-13:event/2026-11-13t22-27-55-05-00-milestone-queue-audit-t-4409-group-3-of-the-unaud</id>
-<updated>2026-11-13T22:27:55-05:00</updated>
-<summary type="text">Queue audit T-4409: group 3 of the unaudited lines judged, 42 rows (21 keep, 20 remove, 1 merge); judge only, nothing applied to the board</summary>
 </entry>
 </feed>

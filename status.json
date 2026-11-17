@@ -1,22 +1,11 @@
 {
  "schema": 1,
- "at": "2026-11-17T16:16:33.439562+00:00",
+ "at": "2026-11-17T16:19:37.361543+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-17T09:17:58-05:00",
   "flow": [
-   {
-    "t": "T-4663",
-    "name": "Completion ignores letter case and small typos",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1794932087
-     }
-    ]
-   },
    {
     "t": "T-4656",
     "name": "Let a cleaned script return to the widget on resend",
@@ -47,6 +36,15 @@
    }
   ],
   "done": [
+   {
+    "t": "T-4663",
+    "name": "Completion ignores letter case and small typos",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "failed",
+    "end_at": 1794932287,
+    "why": "tests failed"
+   },
    {
     "t": "T-4749",
     "name": "Rewrite or drop outdated tests that read code text",
@@ -120,19 +118,10 @@
     "end": "failed",
     "end_at": 1794924927,
     "why": "tests failed"
-   },
-   {
-    "t": "T-4663",
-    "name": "Completion ignores letter case and small typos",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "failed",
-    "end_at": 1794923634,
-    "why": "tests failed"
    }
   ],
   "landed": 30,
-  "failed": 7
+  "failed": 8
  },
  "workers": [
   {
@@ -140,7 +129,7 @@
    "task": "[tools] T-4755 stop runner rerunning old jobs",
    "model": "opus",
    "started": "2026-11-17T16:01:08.321Z",
-   "seconds": 925,
+   "seconds": 1109,
    "finished": null,
    "effort": "high"
   },
@@ -149,7 +138,7 @@
    "task": "[build] T-1882 finish landing parked work",
    "model": "opus",
    "started": "2026-11-17T15:07:11.689Z",
-   "seconds": 4161,
+   "seconds": 4345,
    "finished": null,
    "effort": "high"
   }
@@ -225,7 +214,7 @@
   "week_pct": 36.07,
   "usage_pct": 52.2,
   "work_pct": 79.0,
-  "read_at": "2026-11-17T16:16:00+00:00",
+  "read_at": "2026-11-17T16:19:00+00:00",
   "running": [
    {
     "lane": "a3",
@@ -287,7 +276,7 @@
  "lock_in": {
   "on": false,
   "pool": 5,
-  "at": "2026-11-17T11:16:00-05:00",
+  "at": "2026-11-17T11:19:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -526,32 +515,27 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-17T16:16:13Z",
+  "at": "2026-11-17T16:19:37Z",
   "s": {
-   "T-4663": [
-    "merging",
-    "Host checks on the Mac mini \u00b7 1 of 2 groups of tests done",
-    1794932113873
-   ],
    "T-4656": [
-    "mergeq",
-    "1st to merge",
-    1794932113873
+    "merging",
+    "Host checks on the Mac mini",
+    1794932317361
+   ],
+   "T-0687": [
+    "mergetest",
+    "iPhone tests on the MacBook",
+    null
    ],
    "T-4513": [
     "merging",
     "Mac tests at the main gate",
-    1794927673873
-   ],
-   "T-0687": [
-    "merging",
-    "Mac tests at the main gate",
-    1794931873873
+    1794927637361
    ],
    "T-4755": [
     "testing",
     "its own tests, in its copy",
-    1794931453873
+    1794932257361
    ],
    "T-1882": [
     "merged",
@@ -561,18 +545,16 @@
    ]
   },
   "nm": {
-   "T-4663": "Completion ignores letter case and small typos",
    "T-4656": "Let a cleaned script return to the widget on resend",
-   "T-4513": "Show the SSD's free space on the Machine bubble",
    "T-0687": "Run network fetches inside the extension on the Simulator",
+   "T-4513": "Show the SSD's free space on the Machine bubble",
    "T-4755": "Stop the MacBook runner rerunning old jobs",
    "T-1882": "Count a fetch as good when the data arrived"
   },
   "wk": {
-   "T-4663": "Idris",
    "T-4656": "Idris",
-   "T-4513": "Maren",
    "T-0687": "Idris",
+   "T-4513": "Maren",
    "T-4755": "Odalys",
    "T-1882": "Idris",
    "T-4417": "Idris",
@@ -580,30 +562,30 @@
   }
  },
  "ln": {
-  "at": "2026-11-17T16:16:13Z",
+  "at": "2026-11-17T16:19:37Z",
   "mq": {
    "n": {
     "checking": 1,
-    "inline": 1,
+    "inline": 0,
     "conflicted": 1,
     "failed": 0,
     "held": 2,
-    "retry": 1,
+    "retry": 2,
     "parked": 21
    },
    "m": {
     "checking": 1,
-    "inline": 1,
-    "conflicted": 751,
+    "inline": null,
+    "conflicted": 755,
     "failed": null,
-    "held": 520,
-    "retry": 70,
-    "parked": 70
+    "held": 523,
+    "retry": 37,
+    "parked": 73
    },
    "cur": [
     [
      [
-      "T-4663"
+      "T-4656"
      ],
      "Mac tests",
      "Mac mini",
@@ -617,12 +599,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-17T16:15:50Z",
-    "ld": 3.52,
+    "at": "2026-11-17T16:19:38Z",
+    "ld": 3.08,
     "c": 8,
     "sb": 1,
     "dk": [
-     18.1,
+     18.0,
      228.3
     ],
     "ss": [
@@ -634,12 +616,12 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-17T15:55:55Z",
-    "ld": 6.6,
+    "at": "2026-11-17T16:16:57Z",
+    "ld": 3.24,
     "c": 12,
     "sb": 0,
     "dk": [
-     322.3,
+     322.0,
      926.4
     ],
     "sn": []
@@ -686,10 +668,10 @@
   "main": 2,
   "lanes": 1,
   "total": 3,
-  "at": "11:16 AM",
+  "at": "11:19 AM",
   "why": "",
-  "at_iso": "2026-11-17T16:16:00+00:00",
+  "at_iso": "2026-11-17T16:19:00+00:00",
   "started": "9:17 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 9:17 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 11:16 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 9:17 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 11:19 AM ET</p></section>"
  }
 }

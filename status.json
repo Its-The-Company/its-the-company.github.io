@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-17T18:35:41.379156+00:00",
+ "at": "2026-11-17T18:38:38.776056+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -121,7 +121,7 @@
    "task": "[build] T-3564 land device-limit fixes from parked ref",
    "model": "opus",
    "started": "2026-11-17T17:49:46.991Z",
-   "seconds": 2754,
+   "seconds": 2931,
    "finished": null,
    "effort": "high"
   },
@@ -130,7 +130,7 @@
    "task": "[tools] T-4749 rewrite source-text tests, first slice",
    "model": "opus",
    "started": "2026-11-17T18:10:19.748Z",
-   "seconds": 1521,
+   "seconds": 1699,
    "finished": null,
    "effort": "high"
   }
@@ -198,7 +198,7 @@
   "week_pct": 39.28,
   "usage_pct": 53.6,
   "work_pct": 80.0,
-  "read_at": "2026-11-17T18:35:00+00:00",
+  "read_at": "2026-11-17T18:38:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -334,7 +334,7 @@
  "lock_in": {
   "on": false,
   "pool": 6,
-  "at": "2026-11-17T13:35:00-05:00",
+  "at": "2026-11-17T13:38:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -585,42 +585,42 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-17T18:35:24Z",
+  "at": "2026-11-17T18:38:38Z",
   "s": {
    "T-4758": [
     "merging",
     "Host checks on the Mac mini",
-    1794940044328
+    1794940058776
    ],
    "T-4601": [
     "mergeq",
     "1st to merge",
-    1794940464328
+    1794940478776
    ],
    "T-4602": [
     "mergeq",
     "2nd to merge",
-    1794940524328
+    1794940538776
    ],
    "T-3554": [
     "mergetest",
     "iPhone tests on the MacBook",
     null
    ],
+   "T-4653": [
+    "testing",
+    "Mac Mini \u00b7 test",
+    null
+   ],
+   "T-4703": [
+    "testing",
+    "Mac Mini \u00b7 test",
+    null
+   ],
    "T-4749": [
     "testing",
     "its own tests, in its copy",
-    1794939144328
-   ],
-   "T-4653": [
-    "testq",
-    "1st for a Simulator",
-    1794940524328
-   ],
-   "T-4703": [
-    "testq",
-    "1st for a Simulator",
-    1794940524328
+    1794939098776
    ],
    "T-4689": [
     "merged",
@@ -640,9 +640,9 @@
    "T-4601": "Check finished work before it ships",
    "T-4602": "Check finished work before it ships",
    "T-3554": "Tidy the time reserve's edge cases and docs",
-   "T-4749": "Rewrite or drop outdated tests that read code text",
    "T-4653": "Give the Shortcut's Pro check a time limit",
    "T-4703": "Draw the frames for the 1.0 showcase premades",
+   "T-4749": "Rewrite or drop outdated tests that read code text",
    "T-4689": "Bring the plan into line with the phase A proof",
    "T-3564": "Stop other errors saying a sensor is missing"
   },
@@ -651,9 +651,9 @@
    "T-4601": "Pernille",
    "T-4602": "Pernille",
    "T-3554": "Idris",
-   "T-4749": "Pernille",
    "T-4653": "Idris",
    "T-4703": "Maren",
+   "T-4749": "Pernille",
    "T-4689": "Ines",
    "T-3564": "Idris",
    "T-3560": "Idris",
@@ -663,7 +663,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-17T18:35:24Z",
+  "at": "2026-11-17T18:38:38Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -675,13 +675,13 @@
     "parked": 13
    },
    "m": {
-    "checking": 8,
-    "inline": 0,
-    "conflicted": 890,
+    "checking": 11,
+    "inline": 3,
+    "conflicted": 894,
     "failed": null,
-    "held": 586,
+    "held": 589,
     "retry": null,
-    "parked": 27
+    "parked": 30
    },
    "cur": [
     [
@@ -690,7 +690,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     8
+     11
     ]
    ],
    "ld": [
@@ -700,12 +700,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-17T18:35:03Z",
-    "ld": 11.77,
+    "at": "2026-11-17T18:38:44Z",
+    "ld": 33.8,
     "c": 8,
-    "sb": 1,
+    "sb": 2,
     "dk": [
-     12.3,
+     12.1,
      228.3
     ],
     "ss": [
@@ -713,6 +713,7 @@
      953.7
     ],
     "sn": [
+     "iPad Air 11-inch (M4)",
      "iPhone 17e"
     ]
    },
@@ -805,10 +806,10 @@
   "main": 2,
   "lanes": 5,
   "total": 7,
-  "at": "1:35 PM",
+  "at": "1:38 PM",
   "why": "",
-  "at_iso": "2026-11-17T18:35:00+00:00",
+  "at_iso": "2026-11-17T18:38:00+00:00",
   "started": "12:48 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 2, started 12:48 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 1:35 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 2, started 12:48 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 1:38 PM ET</p></section>"
  }
 }

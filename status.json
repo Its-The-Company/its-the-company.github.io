@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-17T14:42:22.167395+00:00",
+ "at": "2026-11-17T14:45:23.107087+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -111,7 +111,7 @@
    "task": "[build] T-0687 land parked extension work",
    "model": "opus",
    "started": "2026-11-17T14:21:15.257Z",
-   "seconds": 1266,
+   "seconds": 1447,
    "finished": null,
    "effort": "high"
   },
@@ -120,7 +120,7 @@
    "task": "[build] T-0289 land parked state module",
    "model": "opus",
    "started": "2026-11-17T14:21:25.112Z",
-   "seconds": 1257,
+   "seconds": 1437,
    "finished": null,
    "effort": "high"
   }
@@ -130,7 +130,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 402,
+  "runnable_count": 401,
   "blocked_count": 59
  },
  "meter": {
@@ -179,7 +179,7 @@
   "week_pct": 36.07,
   "usage_pct": 52.2,
   "work_pct": 79.0,
-  "read_at": "2026-11-17T14:42:00+00:00",
+  "read_at": "2026-11-17T14:45:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -265,30 +265,6 @@
     "n": "Jeremy",
     "d": 1,
     "src": "plan-b"
-   },
-   {
-    "lane": "b3",
-    "task": "T-4599",
-    "w": "Odalys",
-    "k": "review",
-    "t": "Check finished work before it ships",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-17T09:29:10-05:00",
-    "n": "Jeremy",
-    "src": "plan-b"
-   },
-   {
-    "lane": "b3",
-    "task": "T-4600",
-    "w": "Pernille",
-    "k": "review",
-    "t": "Check finished work before it ships",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-17T09:29:10-05:00",
-    "n": "Jeremy",
-    "src": "plan-b"
    }
   ]
  },
@@ -326,7 +302,7 @@
  "lock_in": {
   "on": false,
   "pool": 5,
-  "at": "2026-11-17T09:42:00-05:00",
+  "at": "2026-11-17T09:45:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -491,6 +467,11 @@
   ],
   "done": [
    {
+    "w": "Idris",
+    "t": "A test now fails if anyone removes the line that lets a widget's refresh button run its script...",
+    "at": "2026-11-17T09:42:00-05:00"
+   },
+   {
     "w": "Operator",
     "t": "Main passes its Xcode checks again: job J-20261117-0816-land-m-065516 on the MacBook no longer...",
     "at": "2026-11-17T09:16:00-05:00"
@@ -499,22 +480,22 @@
     "w": "Idris",
     "t": "sending a project to its widget now swaps the whole widget folder in one step, so a phone with a...",
     "at": "2026-11-17T08:25:00-05:00"
-   },
-   {
-    "w": "Idris",
-    "t": "the Settings tests for a purchase waiting for a parent's approval (Ask to Buy) and for a failed...",
-    "at": "2026-11-17T08:21:00-05:00"
    }
   ],
   "count": {
-   "next": 402,
+   "next": 401,
    "wait": 28,
    "blocked": 31,
    "you": 8
   },
   "fin": {
-   "n": 0,
-   "rows": []
+   "n": 1,
+   "rows": [
+    [
+     "T-4416",
+     "Pin the app's refresh-tap..."
+    ]
+   ]
   }
  },
  "qr": [
@@ -556,55 +537,63 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-17T14:42:04Z",
+  "at": "2026-11-17T14:45:17Z",
   "s": {
    "T-4656": [
     "merging",
     "Host checks on the Mac mini",
-    1794926104467
+    1794926057081
    ],
    "T-4599": [
     "mergeq",
     "1st to merge",
-    1794926224467
+    1794926717081
    ],
-   "T-0289": [
+   "T-4600": [
+    "mergeq",
+    "1st to merge",
+    1794926717081
+   ],
+   "T-4417": [
     "mergetest",
     "iPhone tests on the MacBook",
     null
    ],
-   "T-4417": [
+   "T-0289": [
     "merging",
-    "Mac tests at the main gate \u00b7 5 groups of tests done",
-    1794925984467
+    "Mac tests at the main gate",
+    1794926537081
    ],
    "T-0687": [
     "testing",
     "its own tests, in its copy",
-    1794925984467
+    1794925997081
    ]
   },
   "nm": {
    "T-4656": "Let a cleaned script return to the widget on resend",
    "T-4599": "Check finished work before it ships",
-   "T-0289": "Build the widget state module for scripts",
+   "T-4600": "Check finished work before it ships",
    "T-4417": "Close the rerun rule's test gaps",
+   "T-0289": "Build the widget state module for scripts",
    "T-0687": "Run network fetches inside the extension on the Simulator"
   },
   "wk": {
    "T-4656": "Idris",
    "T-4599": "Odalys",
-   "T-0289": "Pernille",
+   "T-4600": "Pernille",
    "T-4417": "Idris",
-   "T-0687": "Idris"
+   "T-0289": "Pernille",
+   "T-0687": "Idris",
+   "T-4416": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-17T14:42:04Z",
+  "at": "2026-11-17T14:45:17Z",
   "mq": {
    "n": {
     "checking": 1,
-    "inline": 1,
+    "inline": 2,
     "conflicted": 1,
     "failed": 0,
     "held": 1,
@@ -612,13 +601,13 @@
     "parked": 13
    },
    "m": {
-    "checking": 7,
-    "inline": 5,
-    "conflicted": 657,
+    "checking": 11,
+    "inline": 0,
+    "conflicted": 660,
     "failed": null,
-    "held": 913,
-    "retry": 26,
-    "parked": 536
+    "held": 916,
+    "retry": 29,
+    "parked": 539
    },
    "cur": [
     [
@@ -627,7 +616,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     7
+     11
     ]
    ],
    "ld": [
@@ -637,8 +626,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-17T14:42:05Z",
-    "ld": 0.69,
+    "at": "2026-11-17T14:44:52Z",
+    "ld": 0.66,
     "c": 8,
     "sb": 2,
     "dk": [
@@ -655,12 +644,12 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-17T14:33:57Z",
-    "ld": 1.49,
+    "at": "2026-11-17T14:43:58Z",
+    "ld": 1.63,
     "c": 12,
     "sb": 0,
     "dk": [
-     325.7,
+     325.5,
      926.4
     ],
     "sn": []
@@ -712,15 +701,6 @@
    "e": "high",
    "t": "Work session \u2013 1 task",
    "at": "2026-11-17T09:29:10-05:00"
-  },
-  {
-   "w": "Operator",
-   "a": "Jeremy's Account",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session \u2013 1 task",
-   "at": "2026-11-17T09:40:23-05:00"
   }
  ],
  "reply": {
@@ -732,6 +712,7 @@
   "lane_next",
   "queue_text",
   "task_done",
+  "fin_short",
   "task_title",
   "done_text",
   "task_open",
@@ -740,12 +721,12 @@
  ],
  "agents_now": {
   "main": 2,
-  "lanes": 5,
-  "total": 7,
-  "at": "9:42 AM",
+  "lanes": 4,
+  "total": 6,
+  "at": "9:45 AM",
   "why": "",
-  "at_iso": "2026-11-17T14:42:00+00:00",
+  "at_iso": "2026-11-17T14:45:00+00:00",
   "started": "9:17 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 2, started 9:17 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 9:42 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 2, started 9:17 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 9:45 AM ET</p></section>"
  }
 }

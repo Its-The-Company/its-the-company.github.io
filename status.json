@@ -1,30 +1,11 @@
 {
  "schema": 1,
- "at": "2026-11-17T20:05:06.314379+00:00",
+ "at": "2026-11-17T20:09:57.862757+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-17T12:48:19-05:00",
   "flow": [
-   {
-    "t": "T-4703",
-    "name": "Draw the frames for the 1.0 showcase premades",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1794942113
-     },
-     {
-      "s": "macbook",
-      "at": 1794942887
-     },
-     {
-      "s": "testq",
-      "at": 1794943020
-     }
-    ]
-   },
    {
     "t": "T-4758",
     "name": "Keep the shortcut test's pictures out of the source tree",
@@ -33,6 +14,14 @@
      {
       "s": "testq",
       "at": 1794940014
+     },
+     {
+      "s": "macbook",
+      "at": 1794946113
+     },
+     {
+      "s": "testq",
+      "at": 1794946143
      }
     ]
    },
@@ -48,6 +37,14 @@
    }
   ],
   "done": [
+   {
+    "t": "T-4703",
+    "name": "Draw the frames for the 1.0 showcase premades",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794946107
+   },
    {
     "t": "T-4604",
     "name": "Check finished work before it ships",
@@ -120,17 +117,9 @@
     "end": "failed",
     "end_at": 1794932287,
     "why": "tests failed"
-   },
-   {
-    "t": "T-4749",
-    "name": "Rewrite or drop outdated tests that read code text",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794932083
    }
   ],
-  "landed": 34,
+  "landed": 35,
   "failed": 6
  },
  "workers": [
@@ -139,7 +128,7 @@
    "task": "[build] T-3564 land device-limit fixes from parked ref",
    "model": "opus",
    "started": "2026-11-17T17:49:46.991Z",
-   "seconds": 8119,
+   "seconds": 8410,
    "finished": null,
    "effort": "high"
   },
@@ -148,7 +137,7 @@
    "task": "[tools] T-4749 rewrite source-text tests, first slice",
    "model": "opus",
    "started": "2026-11-17T18:10:19.748Z",
-   "seconds": 6886,
+   "seconds": 7178,
    "finished": null,
    "effort": "high"
   }
@@ -172,21 +161,21 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 2.0,
+   "pct": 3.0,
    "resets_at": "2026-11-17T19:10:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-17T14:41:15.341534-05:00",
+   "read_at": "2026-11-17T15:06:51.629701-05:00",
    "source": "live",
-   "left": 98.0,
+   "left": 97.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 34.0,
+   "pct": 35.0,
    "resets_at": "2026-11-22T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-17T14:41:15.341534-05:00",
+   "read_at": "2026-11-17T15:06:51.629701-05:00",
    "source": "live",
-   "left": 66.0,
+   "left": 65.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
@@ -196,7 +185,7 @@
    "read_at": "2026-11-17T12:48:07.002980-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-17T14:41:15.341534-05:00"
+  "read_at": "2026-11-17T15:06:51.629701-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -216,7 +205,7 @@
   "week_pct": 39.28,
   "usage_pct": 53.6,
   "work_pct": 80.0,
-  "read_at": "2026-11-17T20:07:00+00:00",
+  "read_at": "2026-11-17T20:09:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -290,7 +279,7 @@
  "lock_in": {
   "on": false,
   "pool": 6,
-  "at": "2026-11-17T15:07:00-05:00",
+  "at": "2026-11-17T15:09:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -301,7 +290,7 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Double Spread: 66% of the week left, paced to last until Wed 14:00, the week's halfway point; the machine allows 2 (new work waits: 22 tasks wait to merge (limit 20): 2 agents finish and merge...",
+  "why": "Double Spread: 65% of the week left, paced to last until Wed 14:00, the week's halfway point; the machine allows 2 (new work waits: 22 tasks wait to merge (limit 20): 2 agents finish and merge...",
   "n": 2,
   "at": "2026-11-17T12:48:07.350069-05:00"
  },
@@ -545,34 +534,29 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-17T20:05:06Z",
+  "at": "2026-11-17T20:09:40Z",
   "s": {
-   "T-4703": [
-    "mergetest",
-    "Xcode checks on the Mac mini",
-    1794945666314
-   ],
    "T-4758": [
-    "mergeq",
-    "1st to merge",
-    1794942126314
+    "merging",
+    "Host checks on the Mac mini",
+    1794946180055
    ],
    "T-4689": [
-    "mergeq",
-    "2nd to merge",
-    1794943086314
+    "merging",
+    "Host checks on the Mac mini",
+    1794946180055
    ],
    "T-4760": [
     "mergeq",
-    "4th to merge",
-    1794944586314
+    "3rd to merge",
+    1794944620055
    ],
    "T-4743": [
     "mergeq",
-    "5th to merge",
-    1794944946314
+    "4th to merge",
+    1794944980055
    ],
-   "T-1671": [
+   "T-1672": [
     "mergetest",
     "iPhone tests on the MacBook",
     null
@@ -580,14 +564,14 @@
    "T-4749": [
     "merging",
     "Mac tests at the main gate",
-    1794942666314
+    1794942760055
    ],
-   "T-1672": [
-    "merging",
-    "Mac tests at the main gate \u00b7 8 groups of tests done",
-    1794945066314
+   "T-4653": [
+    "testing",
+    "Mac Mini \u00b7 test",
+    null
    ],
-   "T-4746": [
+   "T-4703": [
     "testing",
     "Mac Mini \u00b7 test",
     null
@@ -600,28 +584,27 @@
    ]
   },
   "nm": {
-   "T-4703": "Draw the frames for the 1.0 showcase premades",
    "T-4758": "Keep the shortcut test's pictures out of the source tree",
    "T-4689": "Bring the plan into line with the phase A proof",
    "T-4760": "Report a widget state save truthfully",
    "T-4743": "Fix a MacBook test job that failed",
-   "T-1671": "Fix the notification thread type check order",
-   "T-4749": "Rewrite or drop outdated tests that read code text",
    "T-1672": "Fix the per-run notification cap resetting",
-   "T-4746": "Write PyWidget's name right in the widget's words",
+   "T-4749": "Rewrite or drop outdated tests that read code text",
+   "T-4653": "Give the Shortcut's Pro check a time limit",
+   "T-4703": "Draw the frames for the 1.0 showcase premades",
    "T-3564": "Stop other errors saying a sensor is missing"
   },
   "wk": {
-   "T-4703": "Maren",
    "T-4758": "Idris",
    "T-4689": "Ines",
    "T-4760": "Idris",
    "T-4743": "Odalys",
-   "T-1671": "Idris",
-   "T-4749": "Pernille",
    "T-1672": "Idris",
-   "T-4746": "Maren",
+   "T-4749": "Pernille",
+   "T-4653": "Idris",
+   "T-4703": "Maren",
    "T-3564": "Idris",
+   "T-1671": "Idris",
    "T-3716": "Idris",
    "T-3560": "Idris",
    "T-0289": "Pernille",
@@ -630,49 +613,57 @@
   }
  },
  "ln": {
-  "at": "2026-11-17T20:05:06Z",
+  "at": "2026-11-17T20:09:40Z",
   "mq": {
    "n": {
-    "checking": 1,
-    "inline": 4,
+    "checking": 2,
+    "inline": 2,
     "conflicted": 1,
     "failed": 0,
     "held": 2,
     "retry": 0,
-    "parked": 12
+    "parked": 13
    },
    "m": {
-    "checking": 4,
-    "inline": 34,
-    "conflicted": 980,
+    "checking": 0,
+    "inline": 23,
+    "conflicted": 985,
     "failed": null,
-    "held": 654,
+    "held": 658,
     "retry": null,
-    "parked": 72
+    "parked": 77
    },
    "cur": [
     [
      [
-      "T-4703"
+      "T-4758"
      ],
-     "iPhone app tests",
+     "Mac tests",
      "Mac mini",
-     4
+     0
+    ],
+    [
+     [
+      "T-4689"
+     ],
+     "Mac tests",
+     "Mac mini",
+     0
     ]
    ],
    "ld": [
-    28,
-    "2026-11-17T19:01:38Z"
+    29,
+    "2026-11-17T20:08:27Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-17T20:03:37Z",
-    "ld": 3.18,
+    "at": "2026-11-17T20:09:13Z",
+    "ld": 36.85,
     "c": 8,
-    "sb": 1,
+    "sb": 2,
     "dk": [
-     12.4,
+     11.5,
      228.3
     ],
     "ss": [
@@ -680,12 +671,13 @@
      953.7
     ],
     "sn": [
+     "T2027 Idris never-used 1117d",
      "iPhone 17e"
     ]
    },
    "macbook": {
-    "at": "2026-11-17T19:44:46Z",
-    "ld": 0.49,
+    "at": "2026-11-17T20:04:52Z",
+    "ld": 0.38,
     "c": 12,
     "sb": 0,
     "dk": [
@@ -755,10 +747,10 @@
   "main": 2,
   "lanes": 3,
   "total": 5,
-  "at": "3:07 PM",
+  "at": "3:09 PM",
   "why": "",
-  "at_iso": "2026-11-17T20:07:00+00:00",
+  "at_iso": "2026-11-17T20:09:00+00:00",
   "started": "12:48 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 2, started 12:48 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 3:07 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 2, started 12:48 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 3:09 PM ET</p></section>"
  }
 }

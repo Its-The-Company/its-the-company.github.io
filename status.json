@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-17T20:25:15.765201+00:00",
+ "at": "2026-11-17T20:28:18.357256+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -119,22 +119,20 @@
     "why": "tests failed"
    }
   ],
-  "landed": 33,
+  "landed": 30,
   "failed": 6
  },
- "workers": [
+ "workers": [],
+ "who": "",
+ "recent": [
   {
    "name": "idris",
    "task": "[build] T-3564 land device-limit fixes from parked ref",
    "model": "opus",
    "started": "2026-11-17T17:49:46.991Z",
-   "seconds": 9328,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Idris",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-17T20:28:00.974000+00:00"
+  },
   {
    "name": "pernille",
    "task": "[tools] T-4749 rewrite source-text tests, first slice",
@@ -155,7 +153,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 405,
+  "runnable_count": 404,
   "blocked_count": 58
  },
  "meter": {
@@ -204,7 +202,7 @@
   "week_pct": 39.28,
   "usage_pct": 53.6,
   "work_pct": 80.0,
-  "read_at": "2026-11-17T20:25:00+00:00",
+  "read_at": "2026-11-17T20:28:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -254,7 +252,7 @@
  "lock_in": {
   "on": false,
   "pool": 6,
-  "at": "2026-11-17T15:25:00-05:00",
+  "at": "2026-11-17T15:28:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -272,12 +270,11 @@
  "lanes": [
   {
    "name": "Idris",
-   "state": "running",
-   "task": "[build] T-3564 land device-limit fixes from parked ref",
-   "model": "opus",
-   "since": "2026-11-17T17:49:46.991Z",
-   "next": [],
-   "effort": "high"
+   "state": "next",
+   "task": "Idris, P1, from T-4755 (Investor an Investor...",
+   "model": null,
+   "since": null,
+   "next": []
   },
   {
    "name": "Pernille",
@@ -321,18 +318,7 @@
   }
  ],
  "tasks": {
-  "run": [
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "Stop other errors saying a sensor is missing",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-17T17:49:46.991Z",
-    "o": "c",
-    "task": "T-3564"
-   }
-  ],
+  "run": [],
   "src": "plan",
   "open": [
    {
@@ -409,6 +395,11 @@
   "done": [
    {
     "w": "Idris",
+    "t": "One widget can no longer use up all 64 notification slots the iPhone allows by scheduling a few...",
+    "at": "2026-11-17T15:27:00-05:00"
+   },
+   {
+    "w": "Idris",
     "t": "A script that passes a number as a notification's thread now gets a clear error instead of a...",
     "at": "2026-11-17T14:53:00-05:00"
    },
@@ -416,22 +407,21 @@
     "w": "Idris",
     "t": "The Simulator test for location now checks the position it was handed instead of failing on a...",
     "at": "2026-11-17T13:49:00-05:00"
-   },
-   {
-    "w": "Idris",
-    "t": "The Steps, Altitude and Distance widgets no longer falsely say the sensor is missing or off when...",
-    "at": "2026-11-17T13:23:00-05:00"
    }
   ],
   "count": {
-   "next": 405,
+   "next": 404,
    "wait": 27,
    "blocked": 31,
    "you": 8
   },
   "fin": {
-   "n": 7,
+   "n": 8,
    "rows": [
+    [
+     "T-1672",
+     "Fix the per-run notification..."
+    ],
     [
      "T-1671",
      "Fix the notification thread..."
@@ -451,10 +441,6 @@
     [
      "T-0289",
      "Build the widget state..."
-    ],
-    [
-     "T-4599",
-     "Check finished work before..."
     ]
    ]
   }
@@ -498,53 +484,37 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-17T20:25:09Z",
+  "at": "2026-11-17T20:28:18Z",
   "s": {
    "T-4758": [
     "merging",
     "Host checks on the Mac mini",
-    1794946149653
+    1794946158357
    ],
    "T-4689": [
     "merging",
     "Host checks on the Mac mini",
-    1794946149653
+    1794946158357
    ],
    "T-4653": [
     "mergeq",
     "3rd to merge",
-    1794946809653
+    1794946818357
    ],
    "T-4760": [
     "mergeq",
     "4th to merge",
-    1794944589653
+    1794944598357
    ],
    "T-4188": [
     "mergeq",
     "6th to merge",
-    1794947049653
+    1794947058357
    ],
    "T-4743": [
     "mergeq",
     "7th to merge",
-    1794944949653
-   ],
-   "T-4703": [
-    "mergetest",
-    "iPhone tests on the MacBook",
-    null
-   ],
-   "T-1672": [
-    "merging",
-    "Mac tests at the main gate",
-    1794946929653
-   ],
-   "T-3564": [
-    "merged",
-    "on main 1:22 PM ET",
-    1794939769000,
-    "Idris"
+    1794944958357
    ]
   },
   "nm": {
@@ -553,10 +523,7 @@
    "T-4653": "Give the Shortcut's Pro check a time limit",
    "T-4760": "Report a widget state save truthfully",
    "T-4188": "Location, steps and notifications work in scripts and...",
-   "T-4743": "Fix a MacBook test job that failed",
-   "T-4703": "Draw the frames for the 1.0 showcase premades",
-   "T-1672": "Fix the per-run notification cap resetting",
-   "T-3564": "Stop other errors saying a sensor is missing"
+   "T-4743": "Fix a MacBook test job that failed"
   },
   "wk": {
    "T-4758": "Idris",
@@ -565,11 +532,10 @@
    "T-4760": "Idris",
    "T-4188": "Idris",
    "T-4743": "Odalys",
-   "T-4703": "Maren",
    "T-1672": "Idris",
-   "T-3564": "Idris",
    "T-1671": "Idris",
    "T-3716": "Idris",
+   "T-3564": "Idris",
    "T-3560": "Idris",
    "T-0289": "Pernille",
    "T-4599": "Odalys",
@@ -577,7 +543,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-17T20:25:09Z",
+  "at": "2026-11-17T20:28:18Z",
   "mq": {
    "n": {
     "checking": 2,
@@ -586,16 +552,16 @@
     "failed": 0,
     "held": 2,
     "retry": 0,
-    "parked": 11
+    "parked": 10
    },
    "m": {
-    "checking": 16,
-    "inline": 20,
-    "conflicted": 1000,
+    "checking": 19,
+    "inline": 23,
+    "conflicted": 1003,
     "failed": null,
-    "held": 674,
+    "held": 677,
     "retry": null,
-    "parked": 64
+    "parked": 67
    },
    "cur": [
     [
@@ -604,7 +570,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     16
+     19
     ],
     [
      [
@@ -612,7 +578,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     16
+     19
     ]
    ],
    "ld": [
@@ -622,12 +588,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-17T20:24:22Z",
-    "ld": 3.76,
+    "at": "2026-11-17T20:27:29Z",
+    "ld": 2.21,
     "c": 8,
     "sb": 2,
     "dk": [
-     20.4,
+     18.2,
      228.3
     ],
     "ss": [
@@ -640,12 +606,12 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-17T20:14:43Z",
-    "ld": 0.91,
+    "at": "2026-11-17T20:27:06Z",
+    "ld": 20.01,
     "c": 12,
     "sb": 0,
     "dk": [
-     322.7,
+     321.8,
      926.4
     ],
     "sn": []
@@ -659,7 +625,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 9 tasks",
+   "t": "Work session \u2013 5 tasks",
    "at": "2026-11-17T12:48:19-05:00"
   },
   {
@@ -690,13 +656,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 1,
+  "main": 0,
   "lanes": 1,
-  "total": 2,
-  "at": "3:25 PM",
+  "total": 1,
+  "at": "3:28 PM",
   "why": "",
-  "at_iso": "2026-11-17T20:25:00+00:00",
+  "at_iso": "2026-11-17T20:28:00+00:00",
   "started": "12:48 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 1, started 12:48 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 3:25 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0, started 12:48 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 3:28 PM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-17T19:48:19.108739+00:00",
+ "at": "2026-11-17T19:51:24.032712+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -139,7 +139,7 @@
    "task": "[build] T-3564 land device-limit fixes from parked ref",
    "model": "opus",
    "started": "2026-11-17T17:49:46.991Z",
-   "seconds": 7112,
+   "seconds": 7297,
    "finished": null,
    "effort": "high"
   },
@@ -148,7 +148,7 @@
    "task": "[tools] T-4749 rewrite source-text tests, first slice",
    "model": "opus",
    "started": "2026-11-17T18:10:19.748Z",
-   "seconds": 5879,
+   "seconds": 6064,
    "finished": null,
    "effort": "high"
   }
@@ -216,7 +216,7 @@
   "week_pct": 39.28,
   "usage_pct": 53.6,
   "work_pct": 80.0,
-  "read_at": "2026-11-17T19:48:00+00:00",
+  "read_at": "2026-11-17T19:51:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -240,19 +240,6 @@
     "e": "high",
     "at": "2026-11-17T14:08:41-05:00",
     "n": "Evan",
-    "src": "plan-a"
-   },
-   {
-    "lane": "a3",
-    "task": "T-4743",
-    "w": "Odalys",
-    "k": "fix",
-    "t": "Fix a MacBook test job that failed",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-17T14:21:09-05:00",
-    "n": "Evan",
-    "d": 1,
     "src": "plan-a"
    },
    {
@@ -328,7 +315,7 @@
  "lock_in": {
   "on": false,
   "pool": 6,
-  "at": "2026-11-17T14:48:00-05:00",
+  "at": "2026-11-17T14:51:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -583,27 +570,32 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-17T19:48:02Z",
+  "at": "2026-11-17T19:51:17Z",
   "s": {
    "T-4703": [
     "mergeq",
     "1st to merge",
-    1794941102855
+    1794941117299
    ],
    "T-4758": [
     "mergeq",
     "2nd to merge",
-    1794943082855
+    1794943097299
    ],
    "T-4689": [
     "mergeq",
     "2nd to merge",
-    1794943082855
+    1794943097299
    ],
    "T-4760": [
     "mergeq",
     "5th to merge",
-    1794944642855
+    1794944597299
+   ],
+   "T-4743": [
+    "mergeq",
+    "6th to merge",
+    1794944957299
    ],
    "T-1671": [
     "mergetest",
@@ -613,7 +605,7 @@
    "T-4749": [
     "merging",
     "Mac tests at the main gate",
-    1794942782855
+    1794942797299
    ],
    "T-4653": [
     "testing",
@@ -623,7 +615,7 @@
    "T-4746": [
     "testq",
     "1st for a Simulator",
-    1794944882855
+    1794945077299
    ],
    "T-3564": [
     "merged",
@@ -637,6 +629,7 @@
    "T-4758": "Keep the shortcut test's pictures out of the source tree",
    "T-4689": "Bring the plan into line with the phase A proof",
    "T-4760": "Report a widget state save truthfully",
+   "T-4743": "Fix a MacBook test job that failed",
    "T-1671": "Fix the notification thread type check order",
    "T-4749": "Rewrite or drop outdated tests that read code text",
    "T-4653": "Give the Shortcut's Pro check a time limit",
@@ -648,6 +641,7 @@
    "T-4758": "Idris",
    "T-4689": "Ines",
    "T-4760": "Idris",
+   "T-4743": "Odalys",
    "T-1671": "Idris",
    "T-4749": "Pernille",
    "T-4653": "Idris",
@@ -661,11 +655,11 @@
   }
  },
  "ln": {
-  "at": "2026-11-17T19:48:02Z",
+  "at": "2026-11-17T19:51:17Z",
   "mq": {
    "n": {
     "checking": 0,
-    "inline": 4,
+    "inline": 5,
     "conflicted": 1,
     "failed": 0,
     "held": 2,
@@ -674,12 +668,12 @@
    },
    "m": {
     "checking": null,
-    "inline": 30,
-    "conflicted": 963,
+    "inline": 33,
+    "conflicted": 966,
     "failed": null,
-    "held": 637,
+    "held": 640,
     "retry": null,
-    "parked": 55
+    "parked": 58
    },
    "cur": [],
    "ld": [
@@ -689,12 +683,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-17T19:48:11Z",
-    "ld": 12.3,
+    "at": "2026-11-17T19:50:49Z",
+    "ld": 12.03,
     "c": 8,
     "sb": 1,
     "dk": [
-     13.4,
+     11.8,
      228.3
     ],
     "ss": [
@@ -783,12 +777,12 @@
  ],
  "agents_now": {
   "main": 2,
-  "lanes": 5,
-  "total": 7,
-  "at": "2:48 PM",
+  "lanes": 4,
+  "total": 6,
+  "at": "2:51 PM",
   "why": "",
-  "at_iso": "2026-11-17T19:48:00+00:00",
+  "at_iso": "2026-11-17T19:51:00+00:00",
   "started": "12:48 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 2, started 12:48 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 2:48 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 2, started 12:48 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 2:51 PM ET</p></section>"
  }
 }

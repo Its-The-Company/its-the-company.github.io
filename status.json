@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-17T16:56:19.466442+00:00",
+ "at": "2026-11-17T16:59:24.568086+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -109,7 +109,7 @@
    "task": "[build] T-3764 settle parked iPad window work",
    "model": "opus",
    "started": "2026-11-17T16:26:30.934Z",
-   "seconds": 1788,
+   "seconds": 1973,
    "finished": null,
    "effort": "high"
   },
@@ -118,7 +118,7 @@
    "task": "[tools] T-4756 fix two reds on main",
    "model": "opus",
    "started": "2026-11-17T16:46:16.692Z",
-   "seconds": 602,
+   "seconds": 787,
    "finished": null,
    "effort": "high"
   }
@@ -161,7 +161,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 403,
+  "runnable_count": 402,
   "blocked_count": 59
  },
  "meter": {
@@ -210,7 +210,7 @@
   "week_pct": 36.07,
   "usage_pct": 52.2,
   "work_pct": 79.0,
-  "read_at": "2026-11-17T16:56:00+00:00",
+  "read_at": "2026-11-17T16:59:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -247,7 +247,7 @@
  "lock_in": {
   "on": false,
   "pool": 5,
-  "at": "2026-11-17T11:56:00-05:00",
+  "at": "2026-11-17T11:59:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -342,13 +342,6 @@
    {
     "w": "Maren",
     "k": "tools",
-    "t": "Fix the App page row that is red on main",
-    "s": "next",
-    "o": "i"
-   },
-   {
-    "w": "Maren",
-    "k": "tools",
     "t": "Fix the board search test that is red on main",
     "s": "next",
     "o": "i"
@@ -408,9 +401,21 @@
     "t": "Fail any new test that reads code text",
     "s": "next",
     "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Alarm when one account's work keeps being...",
+    "s": "next",
+    "o": "c"
    }
   ],
   "done": [
+   {
+    "w": "Maren",
+    "t": "The App page test counted exactly seven diagrams, so it kept refusing Idris's T-4663 (completion...",
+    "at": "2026-11-17T11:59:00-05:00"
+   },
    {
     "w": "Odalys",
     "t": "The MacBook test runner no longer reruns every old job when it fails to read its results list;...",
@@ -420,22 +425,21 @@
     "w": "Idris",
     "t": "Tests now catch three ways the widget's refresh timing could silently go wrong, and fail if a...",
     "at": "2026-11-17T09:53:00-05:00"
-   },
-   {
-    "w": "Idris",
-    "t": "A test now fails if anyone removes the line that lets a widget's refresh button run its script...",
-    "at": "2026-11-17T09:42:00-05:00"
    }
   ],
   "count": {
-   "next": 403,
+   "next": 402,
    "wait": 28,
    "blocked": 31,
    "you": 8
   },
   "fin": {
-   "n": 3,
+   "n": 4,
    "rows": [
+    [
+     "T-4756",
+     "Fix the App page row that is..."
+    ],
     [
      "T-4755",
      "Stop the MacBook runner..."
@@ -490,17 +494,18 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-17T16:56:02Z",
+  "at": "2026-11-17T16:59:03Z",
   "s": {
    "T-3764": [
-    "merging",
-    "Mac tests at the main gate",
-    1794934382602
+    "mergetest",
+    "iPhone tests on the MacBook",
+    null
    ],
    "T-4756": [
-    "merging",
-    "Mac tests at the main gate",
-    1794934562602
+    "merged",
+    "on main 11:59 AM ET",
+    1794934743000,
+    "Maren"
    ]
   },
   "nm": {
@@ -516,7 +521,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-17T16:56:02Z",
+  "at": "2026-11-17T16:59:03Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -530,11 +535,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 791,
+    "conflicted": 794,
     "failed": null,
-    "held": 559,
-    "retry": 73,
-    "parked": 109
+    "held": 562,
+    "retry": 76,
+    "parked": 112
    },
    "cur": [],
    "ld": [
@@ -544,12 +549,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-17T16:55:38Z",
-    "ld": 0.81,
+    "at": "2026-11-17T16:59:03Z",
+    "ld": 0.56,
     "c": 8,
     "sb": 1,
     "dk": [
-     19.1,
+     19.2,
      228.3
     ],
     "ss": [
@@ -561,8 +566,8 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-17T16:52:36Z",
-    "ld": 2.2,
+    "at": "2026-11-17T16:56:48Z",
+    "ld": 1.14,
     "c": 12,
     "sb": 0,
     "dk": [
@@ -604,10 +609,10 @@
   "main": 2,
   "lanes": 0,
   "total": 2,
-  "at": "11:56 AM",
+  "at": "11:59 AM",
   "why": "",
-  "at_iso": "2026-11-17T16:56:00+00:00",
+  "at_iso": "2026-11-17T16:59:00+00:00",
   "started": "9:17 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 9:17 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 11:56 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 9:17 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 11:59 AM ET</p></section>"
  }
 }

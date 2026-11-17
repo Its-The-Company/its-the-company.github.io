@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-17T15:45:56.610559+00:00",
+ "at": "2026-11-17T15:48:59.453431+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -18,6 +18,10 @@
      {
       "s": "macbook",
       "at": 1794927137
+     },
+     {
+      "s": "testq",
+      "at": 1794930404
      }
     ]
    },
@@ -125,7 +129,7 @@
    "task": "[build] T-0289 land parked state module",
    "model": "opus",
    "started": "2026-11-17T14:21:25.112Z",
-   "seconds": 5071,
+   "seconds": 5254,
    "finished": null,
    "effort": "high"
   },
@@ -134,7 +138,7 @@
    "task": "[build] T-1882 finish landing parked work",
    "model": "opus",
    "started": "2026-11-17T15:07:11.689Z",
-   "seconds": 2324,
+   "seconds": 2507,
    "finished": null,
    "effort": "high"
   }
@@ -202,7 +206,7 @@
   "week_pct": 36.07,
   "usage_pct": 52.2,
   "work_pct": 79.0,
-  "read_at": "2026-11-17T15:45:00+00:00",
+  "read_at": "2026-11-17T15:49:00+00:00",
   "running": [
    {
     "lane": "a3",
@@ -264,7 +268,7 @@
  "lock_in": {
   "on": false,
   "pool": 5,
-  "at": "2026-11-17T10:45:00-05:00",
+  "at": "2026-11-17T10:49:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -503,22 +507,22 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-17T15:45:39Z",
+  "at": "2026-11-17T15:48:48Z",
   "s": {
    "T-4656": [
     "mergetest",
-    "Xcode checks on the MacBook, 1st to merge",
-    1794927159364
+    "Xcode checks on the Mac mini",
+    1794930408008
    ],
    "T-4513": [
     "merging",
     "Mac tests at the main gate",
-    1794927639364
+    1794927648008
    ],
    "T-0289": [
     "merging",
     "Mac tests at the main gate",
-    1794930159364
+    1794930168008
    ],
    "T-3217": [
     "testing",
@@ -528,7 +532,7 @@
    "T-0687": [
     "testing",
     "its own tests, in its copy",
-    1794928179364
+    1794928188008
    ]
   },
   "nm": {
@@ -549,7 +553,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-17T15:45:39Z",
+  "at": "2026-11-17T15:48:48Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -561,22 +565,22 @@
     "parked": 23
    },
    "m": {
-    "checking": 53,
+    "checking": 2,
     "inline": null,
-    "conflicted": 721,
-    "failed": 14,
-    "held": 489,
+    "conflicted": 724,
+    "failed": 17,
+    "held": 492,
     "retry": null,
-    "parked": 39
+    "parked": 42
    },
    "cur": [
     [
      [
       "T-4656"
      ],
-     "iPhone app tests, sent and waiting its turn",
-     "MacBook",
-     53
+     "iPhone app tests",
+     "Mac mini",
+     2
     ]
    ],
    "ld": [
@@ -586,12 +590,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-17T15:44:51Z",
-    "ld": 14.13,
+    "at": "2026-11-17T15:48:24Z",
+    "ld": 7.16,
     "c": 8,
-    "sb": 2,
+    "sb": 1,
     "dk": [
-     16.3,
+     18.5,
      228.3
     ],
     "ss": [
@@ -599,7 +603,6 @@
      953.7
     ],
     "sn": [
-     "T2027 Idris fresh iPhone 17e",
      "iPhone 17e"
     ]
    }
@@ -621,7 +624,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 2 tasks",
+   "t": "Work session \u2013 1 task",
    "at": "2026-11-17T10:00:25-05:00"
   }
  ],
@@ -645,10 +648,10 @@
   "main": 2,
   "lanes": 1,
   "total": 3,
-  "at": "10:45 AM",
+  "at": "10:49 AM",
   "why": "",
-  "at_iso": "2026-11-17T15:45:00+00:00",
+  "at_iso": "2026-11-17T15:49:00+00:00",
   "started": "9:17 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 9:17 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 10:45 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 9:17 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 10:49 AM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-17T21:20:53.176354+00:00",
+ "at": "2026-11-17T21:23:52.621398+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -123,7 +123,7 @@
    "task": "[tools] T-4753 fail new source-text tests",
    "model": "opus",
    "started": "2026-11-17T21:05:08.821Z",
-   "seconds": 944,
+   "seconds": 1123,
    "finished": null,
    "effort": "high"
   },
@@ -132,7 +132,7 @@
    "task": "[site] T-4747 queued-order red fix",
    "model": "opus",
    "started": "2026-11-17T21:09:16.623Z",
-   "seconds": 696,
+   "seconds": 875,
    "finished": null,
    "effort": "high"
   },
@@ -141,7 +141,7 @@
    "task": "[tools] T-4730 lanes.js budget red",
    "model": "opus",
    "started": "2026-11-17T21:20:29.913Z",
-   "seconds": 23,
+   "seconds": 202,
    "finished": null,
    "effort": "high"
   }
@@ -225,7 +225,7 @@
   "week_pct": 38.85,
   "usage_pct": 52.6,
   "work_pct": 79.4,
-  "read_at": "2026-11-17T21:20:00+00:00",
+  "read_at": "2026-11-17T21:23:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -262,7 +262,7 @@
  "lock_in": {
   "on": false,
   "pool": 6,
-  "at": "2026-11-17T16:20:00-05:00",
+  "at": "2026-11-17T16:23:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -511,46 +511,53 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-17T21:20:39Z",
+  "at": "2026-11-17T21:23:52Z",
   "s": {
    "T-4760": [
     "mergetest",
     "Xcode checks on the MacBook, 1st to merge",
-    1794950019342
+    1794950032621
    ],
    "T-4188": [
     "mergeq",
     "3rd to merge",
-    1794947079342
+    1794947032621
    ],
    "T-4183": [
     "mergeq",
     "4th to merge",
-    1794947979342
+    1794947992621
    ],
    "T-4747": [
     "testing",
     "its own tests, in its copy",
-    1794950379342
+    1794950632621
+   ],
+   "T-4730": [
+    "testing",
+    "its own tests, in its copy",
+    1794950572621
    ]
   },
   "nm": {
    "T-4760": "Report a widget state save truthfully",
    "T-4188": "Location, steps and notifications work in scripts and...",
    "T-4183": "The Gallery shows, previews and opens every premade",
-   "T-4747": "Show each umbrella's progress and its running steps on Home"
+   "T-4747": "Show each umbrella's progress and its running steps on Home",
+   "T-4730": "Fix a test row that is red on main"
   },
   "wk": {
    "T-4760": "Idris",
    "T-4188": "Idris",
    "T-4183": "Idris",
    "T-4747": "Maren",
+   "T-4730": "Maren",
    "T-4732": "Odalys",
    "T-4769": "Pernille"
   }
  },
  "ln": {
-  "at": "2026-11-17T21:20:39Z",
+  "at": "2026-11-17T21:23:52Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -562,13 +569,13 @@
     "parked": 9
    },
    "m": {
-    "checking": 7,
-    "inline": 48,
-    "conflicted": 1056,
+    "checking": 10,
+    "inline": 52,
+    "conflicted": 1059,
     "failed": null,
-    "held": 729,
+    "held": 732,
     "retry": null,
-    "parked": 73
+    "parked": 76
    },
    "cur": [
     [
@@ -577,7 +584,7 @@
      ],
      "iPhone app tests",
      "MacBook",
-     7
+     10
     ]
    ],
    "ld": [
@@ -587,12 +594,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-17T21:19:52Z",
-    "ld": 1.65,
+    "at": "2026-11-17T21:23:29Z",
+    "ld": 1.81,
     "c": 8,
     "sb": 2,
     "dk": [
-     19.3,
+     19.6,
      228.3
     ],
     "ss": [
@@ -648,10 +655,10 @@
   "main": 3,
   "lanes": 0,
   "total": 3,
-  "at": "4:20 PM",
+  "at": "4:23 PM",
   "why": "",
-  "at_iso": "2026-11-17T21:20:00+00:00",
+  "at_iso": "2026-11-17T21:23:00+00:00",
   "started": "3:40 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 3:40 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 4:20 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 3:40 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 4:23 PM ET</p></section>"
  }
 }

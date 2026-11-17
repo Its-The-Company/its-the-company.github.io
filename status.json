@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-17T21:36:01.758190+00:00",
+ "at": "2026-11-17T21:39:04.030036+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -123,16 +123,7 @@
    "task": "[tools] T-4753 fail new source-text tests",
    "model": "opus",
    "started": "2026-11-17T21:05:08.821Z",
-   "seconds": 1852,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "maren",
-   "task": "[site] T-4747 queued-order red fix",
-   "model": "opus",
-   "started": "2026-11-17T21:09:16.623Z",
-   "seconds": 1605,
+   "seconds": 2035,
    "finished": null,
    "effort": "high"
   },
@@ -141,13 +132,30 @@
    "task": "[tools] T-4730 lanes.js budget red",
    "model": "opus",
    "started": "2026-11-17T21:20:29.913Z",
-   "seconds": 931,
+   "seconds": 1114,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-3859 free internal disk Simulators",
+   "model": "opus",
+   "started": "2026-11-17T21:36:35.101Z",
+   "seconds": 148,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Pernille, Maren x2",
+ "who": "Pernille, Maren, Odalys",
  "recent": [
+  {
+   "name": "maren",
+   "task": "[site] T-4747 queued-order red fix",
+   "model": "opus",
+   "started": "2026-11-17T21:09:16.623Z",
+   "seconds": null,
+   "finished": "2026-11-17T21:36:08.924000+00:00"
+  },
   {
    "name": "pernille",
    "task": "[tools] T-4749 source-text tests slice 2",
@@ -176,26 +184,26 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 401,
+  "runnable_count": 402,
   "blocked_count": 58
  },
  "meter": {
   "five_hour": {
-   "pct": 8.0,
+   "pct": 9.0,
    "resets_at": "2026-11-17T19:10:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-17T16:18:54.839439-05:00",
+   "read_at": "2026-11-17T16:37:42.577023-05:00",
    "source": "live",
-   "left": 92.0,
+   "left": 91.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 35.0,
+   "pct": 36.0,
    "resets_at": "2026-11-22T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-17T16:18:54.839439-05:00",
+   "read_at": "2026-11-17T16:37:42.577023-05:00",
    "source": "live",
-   "left": 65.0,
+   "left": 64.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
@@ -205,7 +213,7 @@
    "read_at": "2026-11-17T15:40:46.947713-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-17T16:18:54.839439-05:00"
+  "read_at": "2026-11-17T16:37:42.577023-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -225,7 +233,7 @@
   "week_pct": 38.85,
   "usage_pct": 52.6,
   "work_pct": 79.4,
-  "read_at": "2026-11-17T21:36:00+00:00",
+  "read_at": "2026-11-17T21:39:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -298,6 +306,7 @@
     "e": "high",
     "at": "2026-11-17T16:28:05-05:00",
     "n": "Evan",
+    "d": 1,
     "src": "plan-a"
    },
    {
@@ -332,7 +341,7 @@
   }
  ],
  "disk": {
-  "free_gb": 19,
+  "free_gb": 16,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -341,14 +350,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-17T16:30:00-05:00",
+   "at": "2026-11-17T16:37:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 6,
-  "at": "2026-11-17T16:36:00-05:00",
+  "at": "2026-11-17T16:39:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -359,7 +368,7 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Double Spread: 65% of the week left, paced to last until Wed 14:00, the week's halfway point; the machine allows 3 (raised a step toward the floor of 8: new work may start and every signal is...",
+  "why": "Double Spread: 64% of the week left, paced to last until Wed 14:00, the week's halfway point; the machine allows 3 (raised a step toward the floor of 8: new work may start and every signal is...",
   "n": 3,
   "at": "2026-11-17T15:40:47.290288-05:00"
  },
@@ -376,9 +385,18 @@
   {
    "name": "Maren",
    "state": "running",
-   "task": "[site] T-4747 queued-order red fix",
+   "task": "[tools] T-4730 lanes.js budget red",
    "model": "opus",
-   "since": "2026-11-17T21:09:16.623Z",
+   "since": "2026-11-17T21:20:29.913Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
+   "name": "Odalys",
+   "state": "running",
+   "task": "[tools] T-3859 free internal disk Simulators",
+   "model": "opus",
+   "since": "2026-11-17T21:36:35.101Z",
    "next": [],
    "effort": "high"
   },
@@ -394,14 +412,6 @@
    "name": "Ines",
    "state": "next",
    "task": "Ines, P2, from T-1110 (Wrenna,...",
-   "model": null,
-   "since": null,
-   "next": []
-  },
-  {
-   "name": "Odalys",
-   "state": "next",
-   "task": "A lane record main refused: failed...",
    "model": null,
    "since": null,
    "next": []
@@ -429,16 +439,6 @@
    },
    {
     "w": "Maren",
-    "k": "site",
-    "t": "Show each umbrella's progress and its running steps on Home",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-17T21:09:16.623Z",
-    "o": "c",
-    "task": "T-4747"
-   },
-   {
-    "w": "Maren",
     "k": "tools",
     "t": "Fix a test row that is red on main",
     "m": "opus",
@@ -446,6 +446,16 @@
     "at": "2026-11-17T21:20:29.913Z",
     "o": "c",
     "task": "T-4730"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Move everything not needed off the Mac mini disk",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-17T21:36:35.101Z",
+    "o": "c",
+    "task": "T-3859"
    }
   ],
   "src": "plan",
@@ -539,7 +549,7 @@
    }
   ],
   "count": {
-   "next": 401,
+   "next": 402,
    "wait": 27,
    "blocked": 31,
    "you": 8
@@ -601,32 +611,37 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-17T21:35:53Z",
+  "at": "2026-11-17T21:39:04Z",
   "s": {
    "T-4760": [
     "mergeq",
     "1st to merge",
-    1794944633500
+    1794944584030
    ],
    "T-4188": [
     "mergeq",
     "3rd to merge",
-    1794947033500
+    1794947044030
    ],
    "T-4183": [
     "mergeq",
     "4th to merge",
-    1794947993500
+    1794948004030
    ],
    "T-4763": [
     "mergeq",
     "5th to merge",
-    1794951233500
+    1794951244030
    ],
    "T-4765": [
     "mergeq",
     "6th to merge",
-    1794951293500
+    1794951244030
+   ],
+   "T-4613": [
+    "mergeq",
+    "7th to merge",
+    1794951544030
    ],
    "T-4611": [
     "testing",
@@ -638,21 +653,10 @@
     "Mac Mini \u00b7 test",
     null
    ],
-   "T-4613": [
-    "testing",
-    "Mac Mini \u00b7 test",
-    null
-   ],
    "T-4730": [
     "testing",
     "its own tests, in its copy",
-    1794951173500
-   ],
-   "T-4747": [
-    "merged",
-    "on main 4:35 PM ET",
-    1794951339000,
-    "Maren"
+    1794951184030
    ]
   },
   "nm": {
@@ -661,11 +665,10 @@
    "T-4183": "The Gallery shows, previews and opens every premade",
    "T-4763": "Keep habit marks when the Page also saves",
    "T-4765": "Fix the When tapped frames' captions and VoiceOver list",
+   "T-4613": "Check finished work before it ships",
    "T-4611": "Check finished work before it ships",
    "T-4612": "Check finished work before it ships",
-   "T-4613": "Check finished work before it ships",
-   "T-4730": "Fix a test row that is red on main",
-   "T-4747": "Show each umbrella's progress and its running steps on Home"
+   "T-4730": "Fix a test row that is red on main"
   },
   "wk": {
    "T-4760": "Idris",
@@ -673,9 +676,9 @@
    "T-4183": "Idris",
    "T-4763": "Maren",
    "T-4765": "Maren",
+   "T-4613": "Pernille",
    "T-4611": "Pernille",
    "T-4612": "Pernille",
-   "T-4613": "Pernille",
    "T-4730": "Maren",
    "T-4747": "Maren",
    "T-4732": "Odalys",
@@ -683,11 +686,11 @@
   }
  },
  "ln": {
-  "at": "2026-11-17T21:35:53Z",
+  "at": "2026-11-17T21:39:04Z",
   "mq": {
    "n": {
     "checking": 0,
-    "inline": 5,
+    "inline": 6,
     "conflicted": 1,
     "failed": 0,
     "held": 2,
@@ -696,12 +699,12 @@
    },
    "m": {
     "checking": null,
-    "inline": 56,
-    "conflicted": 1071,
+    "inline": 32,
+    "conflicted": 1074,
     "failed": null,
-    "held": 744,
+    "held": 748,
     "retry": null,
-    "parked": 88
+    "parked": 91
    },
    "cur": [],
    "ld": [
@@ -711,12 +714,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-17T21:35:08Z",
-    "ld": 3.53,
+    "at": "2026-11-17T21:38:37Z",
+    "ld": 2.95,
     "c": 8,
     "sb": 1,
     "dk": [
-     15.7,
+     15.9,
      228.3
     ],
     "ss": [
@@ -747,7 +750,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 5 tasks",
+   "t": "Work session \u2013 6 tasks",
    "at": "2026-11-17T16:32:12-05:00"
   },
   {
@@ -765,7 +768,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 3 tasks",
+   "t": "Work session \u2013 2 tasks",
    "at": "2026-11-17T16:28:05-05:00"
   },
   {
@@ -798,10 +801,10 @@
   "main": 3,
   "lanes": 3,
   "total": 6,
-  "at": "4:36 PM",
+  "at": "4:39 PM",
   "why": "",
-  "at_iso": "2026-11-17T21:36:00+00:00",
+  "at_iso": "2026-11-17T21:39:00+00:00",
   "started": "3:40 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 3, started 3:40 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 4:36 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 3, started 3:40 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 4:39 PM ET</p></section>"
  }
 }

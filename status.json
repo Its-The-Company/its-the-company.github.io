@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-18T02:46:06.417250+00:00",
+ "at": "2026-11-18T02:49:07.704023+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -158,19 +158,10 @@
  "workers": [
   {
    "name": "odalys",
-   "task": "[tools] T-4814 split the merge limit",
-   "model": "opus",
-   "started": "2026-11-18T02:08:31.145Z",
-   "seconds": 2255,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "odalys",
    "task": "[tools] T-4810 every wait names a task or issue",
    "model": "opus",
    "started": "2026-11-18T02:08:44.734Z",
-   "seconds": 2241,
+   "seconds": 2422,
    "finished": null,
    "effort": "high"
   },
@@ -179,13 +170,21 @@
    "task": "[site] T-4813 Home's numbers update live",
    "model": "opus",
    "started": "2026-11-18T02:08:56.638Z",
-   "seconds": 2229,
+   "seconds": 2411,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Odalys x2, Maren",
+ "who": "Odalys, Maren",
  "recent": [
+  {
+   "name": "odalys",
+   "task": "[tools] T-4814 split the merge limit",
+   "model": "opus",
+   "started": "2026-11-18T02:08:31.145Z",
+   "seconds": null,
+   "finished": "2026-11-18T02:46:31.888000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[tools] T-4806 fix merge time-outs",
@@ -209,14 +208,6 @@
    "started": "2026-11-18T01:37:46.011Z",
    "seconds": null,
    "finished": "2026-11-18T01:43:19.873000+00:00"
-  },
-  {
-   "name": "maren",
-   "task": "[site] T-4493 land the clutter cut",
-   "model": "opus",
-   "started": "2026-11-18T01:07:36.770Z",
-   "seconds": null,
-   "finished": "2026-11-18T01:37:07.463000+00:00"
   }
  ],
  "queue": {
@@ -227,19 +218,19 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 13.0,
+   "pct": 14.0,
    "resets_at": "2026-11-18T00:10:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-17T21:40:00.399394-05:00",
+   "read_at": "2026-11-17T21:46:41.875353-05:00",
    "source": "live",
-   "left": 87.0,
+   "left": 86.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 39.0,
    "resets_at": "2026-11-22T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-17T21:40:00.399394-05:00",
+   "read_at": "2026-11-17T21:46:41.875353-05:00",
    "source": "live",
    "left": 61.0,
    "left_words": "of your weekly allowance left"
@@ -251,7 +242,7 @@
    "read_at": "2026-11-17T19:09:49.957069-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-17T21:40:00.399394-05:00"
+  "read_at": "2026-11-17T21:46:41.875353-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -271,7 +262,7 @@
   "week_pct": 43.81,
   "usage_pct": 53.5,
   "work_pct": 81.2,
-  "read_at": "2026-11-18T02:46:00+00:00",
+  "read_at": "2026-11-18T02:49:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -292,7 +283,7 @@
   }
  ],
  "disk": {
-  "free_gb": 17,
+  "free_gb": 16,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -301,14 +292,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-17T21:39:00-05:00",
+   "at": "2026-11-17T21:46:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 8,
-  "at": "2026-11-17T21:46:00-05:00",
+  "at": "2026-11-17T21:49:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -327,9 +318,9 @@
   {
    "name": "Odalys",
    "state": "running",
-   "task": "[tools] T-4814 split the merge limit",
+   "task": "[tools] T-4810 every wait names a task or issue",
    "model": "opus",
-   "since": "2026-11-18T02:08:31.145Z",
+   "since": "2026-11-18T02:08:44.734Z",
    "next": [],
    "effort": "high"
   },
@@ -377,16 +368,6 @@
  ],
  "tasks": {
   "run": [
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Split the merge limit by what a change touches",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-18T02:08:31.145Z",
-    "o": "c",
-    "task": "T-4814"
-   },
    {
     "w": "Odalys",
     "k": "tools",
@@ -573,82 +554,77 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-18T02:45:58Z",
+  "at": "2026-11-18T02:49:07Z",
   "s": {
    "T-4643": [
     "merging",
     "Host checks on the Mac mini",
-    1794969598009
+    1794969607704
    ],
    "T-4761": [
     "mergeq",
     "1st to merge",
-    1794960538009
+    1794960487704
    ],
    "T-4659": [
     "mergeq",
     "2nd to merge",
-    1794961078009
+    1794961087704
    ],
    "T-4782": [
     "mergetest",
     "Xcode checks on the MacBook, 4th to merge",
-    1794969538009
+    1794969547704
    ],
    "T-4787": [
     "mergeq",
     "5th to merge",
-    1794962638009
+    1794962647704
    ],
    "T-4719": [
     "mergeq",
     "6th to merge",
-    1794963118009
+    1794963127704
    ],
    "T-4720": [
     "mergeq",
     "6th to merge",
-    1794963118009
+    1794963127704
    ],
    "T-4750": [
     "mergeq",
     "7th to merge",
-    1794963178009
+    1794963187704
    ],
    "T-4770": [
     "mergeq",
     "8th to merge",
-    1794964678009
+    1794964687704
    ],
    "T-4781": [
     "mergeq",
     "9th to merge",
-    1794964678009
+    1794964687704
    ],
    "T-4774": [
     "mergeq",
     "9th to merge",
-    1794964678009
+    1794964687704
    ],
-   "T-4806": [
+   "T-4814": [
     "merging",
     "Mac tests at the main gate",
-    1794969478009
+    1794970087704
    ],
    "T-4810": [
     "testing",
     "its own tests, in its copy",
-    1794969838009
+    1794969847704
    ],
    "T-4813": [
     "testing",
     "its own tests, in its copy",
-    1794968278009
-   ],
-   "T-4814": [
-    "testing",
-    "its own tests, in its copy",
-    1794968758009
+    1794968287704
    ]
   },
   "nm": {
@@ -663,10 +639,9 @@
    "T-4770": "Re-estimate the release date from measured build speed",
    "T-4781": "Retest a fixed red on what failed, not every test",
    "T-4774": "Measure what one refresh tap costs the app",
-   "T-4806": "Fix the causes of merge time-outs and runner errors",
+   "T-4814": "Split the merge limit by what a change touches",
    "T-4810": "Make every wait name a task or an Investor issue",
-   "T-4813": "Home's numbers update within a minute",
-   "T-4814": "Split the merge limit by what a change touches"
+   "T-4813": "Home's numbers update within a minute"
   },
   "wk": {
    "T-4643": "Idris",
@@ -680,10 +655,9 @@
    "T-4770": "Ines",
    "T-4781": "Odalys",
    "T-4774": "Idris",
-   "T-4806": "Odalys",
+   "T-4814": "Odalys",
    "T-4810": "Odalys",
    "T-4813": "Maren",
-   "T-4814": "Odalys",
    "T-4699": "Pernille",
    "T-4698": "Pernille",
    "T-4697": "Pernille",
@@ -692,7 +666,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-18T02:45:58Z",
+  "at": "2026-11-18T02:49:07Z",
   "mq": {
    "n": {
     "checking": 2,
@@ -704,13 +678,13 @@
     "parked": 6
    },
    "m": {
-    "checking": 6,
-    "inline": 114,
-    "conflicted": 831,
+    "checking": 9,
+    "inline": 117,
+    "conflicted": 834,
     "failed": null,
-    "held": 1636,
+    "held": 1640,
     "retry": null,
-    "parked": 586
+    "parked": 589
    },
    "cur": [
     [
@@ -719,7 +693,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     6
+     9
     ],
     [
      [
@@ -727,7 +701,7 @@
      ],
      "iPhone app tests, sent and waiting its turn",
      "MacBook",
-     7
+     10
     ]
    ],
    "ld": [
@@ -737,12 +711,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-18T02:45:58Z",
-    "ld": 6.17,
+    "at": "2026-11-18T02:48:43Z",
+    "ld": 6.41,
     "c": 8,
     "sb": 0,
     "dk": [
-     17.8,
+     17.9,
      228.3
     ],
     "ss": [
@@ -794,13 +768,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 3,
+  "main": 2,
   "lanes": 0,
-  "total": 3,
-  "at": "9:46 PM",
+  "total": 2,
+  "at": "9:49 PM",
   "why": "",
-  "at_iso": "2026-11-18T02:46:00+00:00",
+  "at_iso": "2026-11-18T02:49:00+00:00",
   "started": "7:10 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 7:10 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:46 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 7:10 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:49 PM ET</p></section>"
  }
 }

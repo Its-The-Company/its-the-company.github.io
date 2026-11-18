@@ -1,11 +1,26 @@
 {
  "schema": 1,
- "at": "2026-11-18T18:22:38.492814+00:00",
+ "at": "2026-11-18T18:25:43.499067+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-18T10:30:40-05:00",
   "flow": [
+   {
+    "t": "T-4890",
+    "name": "Keep a real widget tap in the open iPad window",
+    "acct": "Personal b",
+    "steps": [
+     {
+      "s": "testq",
+      "at": 1795024869
+     },
+     {
+      "s": "macbook",
+      "at": 1795026225
+     }
+    ]
+   },
    {
     "t": "T-4898",
     "name": "Fix the Home Screen token test reading the gallery",
@@ -18,13 +33,13 @@
     ]
    },
    {
-    "t": "T-4890",
-    "name": "Keep a real widget tap in the open iPad window",
-    "acct": "Personal b",
+    "t": "T-4849",
+    "name": "Shorten the process merge wait for good",
+    "acct": "Personal a",
     "steps": [
      {
       "s": "testq",
-      "at": 1795024869
+      "at": 1795026279
      }
     ]
    },
@@ -163,7 +178,7 @@
    "task": "[tools] T-4786 fix S30-5 held-state test, land T-4493",
    "model": "opus",
    "started": "2026-11-18T17:33:36.694Z",
-   "seconds": 2941,
+   "seconds": 3126,
    "finished": null,
    "effort": "high"
   },
@@ -172,7 +187,7 @@
    "task": "[tools] T-4903 part 5: drop copies when redo starts",
    "model": "opus",
    "started": "2026-11-18T17:41:17.039Z",
-   "seconds": 2481,
+   "seconds": 2666,
    "finished": null,
    "effort": "high"
   }
@@ -264,33 +279,8 @@
   "week_pct": 51.32,
   "usage_pct": 52.2,
   "work_pct": 82.0,
-  "read_at": "2026-11-18T18:22:00+00:00",
+  "read_at": "2026-11-18T18:25:00+00:00",
   "running": [
-   {
-    "lane": "a2",
-    "task": "T-4897",
-    "w": "Idris",
-    "k": "review",
-    "t": "Check an all-day event keeps its date after travel",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-18T12:11:35-05:00",
-    "n": "Evan",
-    "d": 1,
-    "src": "plan-a"
-   },
-   {
-    "lane": "a2",
-    "task": "T-4570",
-    "w": "Idris",
-    "k": "build",
-    "t": "Launcher slot copy takes the premade file lock",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-18T12:11:35-05:00",
-    "n": "Evan",
-    "src": "plan-a"
-   },
    {
     "lane": "b3",
     "task": "T-4819",
@@ -337,7 +327,7 @@
   }
  ],
  "disk": {
-  "free_gb": 8.9,
+  "free_gb": 8.6,
   "gate": "closed",
   "ssd": {
    "mounted": true,
@@ -346,14 +336,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions wait until 20 GB is free.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-18T13:16:00-05:00",
+   "at": "2026-11-18T13:22:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 12,
-  "at": "2026-11-18T13:22:00-05:00",
+  "at": "2026-11-18T13:25:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -592,77 +582,83 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-18T18:22:38Z",
+  "at": "2026-11-18T18:25:34Z",
   "s": {
-   "T-4890": [
+   "T-4849": [
     "merging",
     "Host checks on the Mac mini",
-    1795024898492
-   ],
-   "T-4849": [
-    "mergeq",
-    "1st to merge",
-    1795024178492
+    1795026334087
    ],
    "T-4679": [
     "mergeq",
-    "2nd to merge",
-    1795011998492
+    "1st to merge",
+    1795011994087
    ],
    "T-4898": [
     "mergeq",
-    "5th to merge",
-    1795020998492
+    "4th to merge",
+    1795020994087
+   ],
+   "T-4890": [
+    "mergetest",
+    "Xcode checks on the MacBook, 5th to merge",
+    1795026274087
    ],
    "T-4840": [
     "mergeq",
     "6th to merge",
-    1795022498492
-   ],
-   "T-4866": [
-    "mergeq",
-    "8th to merge",
-    1795023218492
+    1795022494087
    ],
    "T-4897": [
     "mergeq",
-    "12th to merge",
-    1795022618492
+    "7th to merge",
+    1795022614087
+   ],
+   "T-4866": [
+    "mergeq",
+    "9th to merge",
+    1795023214087
+   ],
+   "T-4570": [
+    "mergeq",
+    "13th to merge",
+    1795026334087
    ],
    "T-4819": [
     "mergeq",
-    "13th to merge",
-    1795022918492
+    "15th to merge",
+    1795022914087
    ],
    "T-4660": [
     "mergeq",
-    "14th to merge",
-    1795022798492
+    "16th to merge",
+    1795022794087
    ],
    "T-4493": [
     "merging",
     "Mac tests at the main gate",
-    1795025918492
+    1795025914087
    ],
    "T-4786": [
     "testing",
     "its own tests, in its copy",
-    1795025918492
+    1795025914087
    ],
    "T-4903": [
     "testing",
     "its own tests, in its copy",
-    1795024178492
+    1795024174087
    ]
   },
   "nm": {
-   "T-4890": "Keep a real widget tap in the open iPad window",
    "T-4849": "Shorten the process merge wait for good",
    "T-4679": "Make the unit tests pass in a launcher build",
    "T-4898": "Fix the Home Screen token test reading the gallery",
+   "T-4890": "Keep a real widget tap in the open iPad window",
    "T-4840": "Read the sensor rows from the gate build's export",
-   "T-4866": "Rerun the Pro row large-text test after the footer fix",
    "T-4897": "Check an all-day event keeps its date after travel",
+   "T-4866": "Rerun the Pro row large-text test after the footer fix",
+   "T-4570": "Launcher slot copy takes the premade file lock",
    "T-4819": "Make sure a send never rewrites a project's settings file",
    "T-4660": "Count a family When's buttons per family",
    "T-4493": "Cut clutter text on the pages still carrying it",
@@ -670,13 +666,14 @@
    "T-4903": "Drop stale copies from the merge count for good"
   },
   "wk": {
-   "T-4890": "Idris",
    "T-4849": "Odalys",
    "T-4679": "Idris",
    "T-4898": "Idris",
+   "T-4890": "Idris",
    "T-4840": "Idris",
-   "T-4866": "Idris",
    "T-4897": "Idris",
+   "T-4866": "Idris",
+   "T-4570": "Idris",
    "T-4819": "Idris",
    "T-4660": "Pernille",
    "T-4493": "Maren",
@@ -687,10 +684,10 @@
   }
  },
  "ln": {
-  "at": "2026-11-18T18:22:38Z",
+  "at": "2026-11-18T18:25:34Z",
   "mq": {
    "n": {
-    "checking": 1,
+    "checking": 2,
     "inline": 8,
     "conflicted": 5,
     "failed": 0,
@@ -699,22 +696,30 @@
     "parked": 5
    },
    "m": {
-    "checking": 21,
-    "inline": 57,
-    "conflicted": 408,
+    "checking": 0,
+    "inline": 60,
+    "conflicted": 411,
     "failed": null,
-    "held": 2573,
-    "retry": 8,
-    "parked": 885
+    "held": 2576,
+    "retry": 11,
+    "parked": 888
    },
    "cur": [
     [
      [
-      "T-4890"
+      "T-4849"
      ],
      "Mac tests",
      "Mac mini",
-     21
+     0
+    ],
+    [
+     [
+      "T-4890"
+     ],
+     "iPhone app tests",
+     "MacBook",
+     1
     ]
    ],
    "ld": [
@@ -724,12 +729,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-18T18:22:09Z",
-    "ld": 5.84,
+    "at": "2026-11-18T18:25:12Z",
+    "ld": 4.58,
     "c": 8,
     "sb": 1,
     "dk": [
-     8.5,
+     10.7,
      228.3
     ],
     "ss": [
@@ -741,12 +746,12 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-18T18:09:43Z",
-    "ld": 0.8,
+    "at": "2026-11-18T18:24:00Z",
+    "ld": 0.35,
     "c": 12,
     "sb": 0,
     "dk": [
-     305.9,
+     305.8,
      926.4
     ],
     "sn": []
@@ -762,15 +767,6 @@
    "e": "high",
    "t": "Work session \u2013 2 tasks",
    "at": "2026-11-18T13:19:54-05:00"
-  },
-  {
-   "w": "Operator",
-   "a": "Evan's Account",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session \u2013 1 task",
-   "at": "2026-11-18T12:16:07-05:00"
   },
   {
    "w": "Operator",
@@ -801,12 +797,12 @@
  ],
  "agents_now": {
   "main": 2,
-  "lanes": 2,
-  "total": 4,
-  "at": "1:22 PM",
+  "lanes": 1,
+  "total": 3,
+  "at": "1:25 PM",
   "why": "",
-  "at_iso": "2026-11-18T18:22:00+00:00",
+  "at_iso": "2026-11-18T18:25:00+00:00",
   "started": "10:30 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 2, started 10:30 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 1:22 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 10:30 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 1:25 PM ET</p></section>"
  }
 }

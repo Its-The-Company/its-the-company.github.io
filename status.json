@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-18T07:12:53.295748+00:00",
+ "at": "2026-11-18T07:16:05.578244+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -145,7 +145,7 @@
    "task": "[build] T-4688 Developer mode for Pro",
    "model": "opus",
    "started": "2026-11-18T05:56:56.560Z",
-   "seconds": 4556,
+   "seconds": 4749,
    "finished": null,
    "effort": "high"
   },
@@ -154,7 +154,7 @@
    "task": "[build] T-4767 button handler exit as error",
    "model": "opus",
    "started": "2026-11-18T06:37:03.752Z",
-   "seconds": 2149,
+   "seconds": 2341,
    "finished": null,
    "effort": "high"
   }
@@ -178,19 +178,19 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 7.0,
+   "pct": 8.0,
    "resets_at": "2026-11-18T05:10:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-18T01:56:24.507367-05:00",
+   "read_at": "2026-11-18T02:15:45.520238-05:00",
    "source": "live",
-   "left": 93.0,
+   "left": 92.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 42.0,
    "resets_at": "2026-11-22T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-18T01:56:24.507367-05:00",
+   "read_at": "2026-11-18T02:15:45.520238-05:00",
    "source": "live",
    "left": 58.0,
    "left_words": "of your weekly allowance left"
@@ -202,7 +202,7 @@
    "read_at": "2026-11-18T00:47:24.484187-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-18T01:56:24.507367-05:00"
+  "read_at": "2026-11-18T02:15:45.520238-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -222,7 +222,7 @@
   "week_pct": 46.38,
   "usage_pct": 53.1,
   "work_pct": 80.8,
-  "read_at": "2026-11-18T07:13:00+00:00",
+  "read_at": "2026-11-18T07:16:00+00:00",
   "running": [
    {
     "lane": "b3",
@@ -269,7 +269,7 @@
   }
  ],
  "disk": {
-  "free_gb": 20,
+  "free_gb": 21,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -278,14 +278,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-18T02:08:00-05:00",
+   "at": "2026-11-18T02:15:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 10,
-  "at": "2026-11-18T02:13:00-05:00",
+  "at": "2026-11-18T02:16:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -520,47 +520,47 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-18T07:12:53Z",
+  "at": "2026-11-18T07:15:58Z",
   "s": {
    "T-4442": [
     "merging",
     "Host checks on the Mac mini",
-    1794985073295
+    1794985078792
    ],
    "T-4796": [
     "mergeq",
     "1st to merge",
-    1794984113295
+    1794984118792
    ],
    "T-4516": [
     "mergeq",
     "2nd to merge",
-    1794977573295
+    1794977578792
    ],
    "T-4784": [
     "mergeq",
     "3rd to merge",
-    1794982793295
+    1794982798792
    ],
    "T-4854": [
     "mergeq",
     "4th to merge",
-    1794985013295
+    1794985018792
    ],
    "T-4852": [
     "mergeq",
     "4th to merge",
-    1794985013295
+    1794985018792
+   ],
+   "T-4767": [
+    "mergetest",
+    "iPhone tests on the MacBook",
+    null
    ],
    "T-4688": [
     "merging",
     "Mac tests at the main gate",
-    1794985913295
-   ],
-   "T-4767": [
-    "merging",
-    "Mac tests at the main gate \u00b7 1 group of tests done",
-    1794985673295
+    1794985918792
    ],
    "T-0044": [
     "testing",
@@ -590,8 +590,8 @@
    "T-4784": "Pin the refresh glyph's button style in a test",
    "T-4854": "Review the button args number limit",
    "T-4852": "Check finished work before it ships",
-   "T-4688": "Build a Developer mode for testing Pro",
    "T-4767": "Treat a button handler's exit as the script's error",
+   "T-4688": "Build a Developer mode for testing Pro",
    "T-0044": "Test running marketplace Python inside a web view",
    "T-4301": "Read fresh Pro gates after a queued wait",
    "T-4644": "Check the ladder's files in the gate build's own tests",
@@ -604,8 +604,8 @@
    "T-4784": "Idris",
    "T-4854": "Idris",
    "T-4852": "Pernille",
-   "T-4688": "Idris",
    "T-4767": "Pernille",
+   "T-4688": "Idris",
    "T-0044": "Idris",
    "T-4301": "Idris",
    "T-4644": "Idris",
@@ -614,7 +614,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-18T07:12:53Z",
+  "at": "2026-11-18T07:15:58Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -626,13 +626,13 @@
     "parked": 10
    },
    "m": {
-    "checking": 15,
-    "inline": 31,
-    "conflicted": 549,
+    "checking": 18,
+    "inline": 34,
+    "conflicted": 552,
     "failed": null,
-    "held": 1903,
+    "held": 1906,
     "retry": null,
-    "parked": 469
+    "parked": 472
    },
    "cur": [
     [
@@ -641,7 +641,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     15
+     18
     ]
    ],
    "ld": [
@@ -651,8 +651,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-18T07:13:02Z",
-    "ld": 24.52,
+    "at": "2026-11-18T07:15:29Z",
+    "ld": 15.21,
     "c": 8,
     "sb": 2,
     "dk": [
@@ -669,12 +669,12 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-18T06:44:45Z",
-    "ld": 1.01,
+    "at": "2026-11-18T07:13:14Z",
+    "ld": 0.26,
     "c": 12,
     "sb": 0,
     "dk": [
-     310.7,
+     310.8,
      926.4
     ],
     "sn": []
@@ -721,10 +721,10 @@
   "main": 2,
   "lanes": 1,
   "total": 3,
-  "at": "2:13 AM",
+  "at": "2:16 AM",
   "why": "",
-  "at_iso": "2026-11-18T07:13:00+00:00",
+  "at_iso": "2026-11-18T07:16:00+00:00",
   "started": "12:47 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 12:47 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 2:13 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 12:47 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 2:16 AM ET</p></section>"
  }
 }

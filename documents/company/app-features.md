@@ -302,7 +302,7 @@ area. A session takes a feature's open steps P0 first, then in the order listed.
 
 - **Owner:** Idris. **Reviewer (Commandment 13, once per merge):** Pernille. **Priority:** P1.
 - **Done when:** `seen:` on the iPhone, each of the six launcher widgets on the Home Screen opens the chosen app from each slot with one tap; in Settings, under Widgets, Launcher Apps, a person adds, reorders and removes apps and the widget follows.
-- **Seen on:** the iPhone 17e Simulator; the real tap is then checked on the TestFlight build on a phone and an iPad, in the Investors' hands.
+- **Seen on:** the iPhone 17e Simulator; the real tap on the Investors' iPhone with the TestFlight build (widget taps seen there on build 7, #319: a premade and a script widget, not yet a launcher slot); the iPad in the iPad Simulator (<span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">ruling</span> #299: no iPad is bought).
 - **Evidence:** a screen recording of a tap opening the chosen app and of the editor changing a slot.
 - **Targets:** `pywidget/ios/App/Launcher`, `pywidget/ios/App/LauncherTapHandling.swift`, `pywidget/ios/App/WidgetTapRouting.swift`, `pywidget/ios/Shared/LauncherSlots.swift`, `pywidget/ios/Shared/LauncherPremadeSlots.swift`, `pywidget/ios/Shared/WidgetTapLink.swift`, `pywidget/ios/scripts/debug_url_scheme.sh`.
 - **Test classes for a step:** WidgetTapRoutingTests, LauncherTapUITests, LauncherWindowsUITests.
@@ -604,7 +604,7 @@ changes Swift.
 
     **Changed 2026-11-16 (Idris, T-4587).** The Investors asked for feature sessions across the board and for any
     limit that is not needed to go (an Investor, #41
-    (private) 11:55 AM ET; log/<span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">rulings</span>.md):
+    (private) 11:55 AM ET; log/rulings.md):
     "If it will increase efficiency, we should enable it across the board. Remove any arbitrary limits that may
     hinder productivity, if they are not necessary". So ops/feature_sessions.json now names all 14 features, not
     T-4191 alone, and the bound of two at once is gone: the switch names no "most", tools/feature_session.py `due`

@@ -2,16 +2,24 @@
 layout: "default"
 title: "T-3765: the phone check of a real widget tap on build 7 (draft for the main session)"
 section: "documents"
-description: "Idris, Mon 11-16. Nothing here has been posted. The main session posts it (task packet: no worker posts to GitHub)."
+description: "Idris, Mon 11-16. Drafted here, then posted by the main session as #319 (task packet: no worker posts to GitHub)."
 ---
 <div class="crumbs" role="navigation" aria-label="Back"><a class="back" href="{{ '/documents/operations/' | relative_url }}">← Operations</a><a href="{{ '/documents/company/t-3765-device-check.html' | relative_url }}" rel="bookmark">Permanent link</a></div>
-<div class="page-head"><div class="kicker"><span class="kind blue">Plan</span><span>Day 26 · Mon Nov 16</span><span><code>ops/plans/T-3765-device-check.md</code></span></div><h1>T-3765: the phone check of a real widget tap on build 7 (draft for the main session)</h1><div class="byline"><img class="avatar" src="{{ '/assets/portraits/idris.svg' | relative_url }}" alt="Idris" title="Idris"><span>By <a href="{{ '/cast/idris.html' | relative_url }}">Idris</a>, Senior iOS engineer</span></div></div>
+<div class="page-head"><div class="kicker"><span class="kind blue">Plan</span><span>Day 28 · Wed Nov 18</span><span><code>ops/plans/T-3765-device-check.md</code></span></div><h1>T-3765: the phone check of a real widget tap on build 7 (draft for the main session)</h1><div class="byline"><img class="avatar" src="{{ '/assets/portraits/idris.svg' | relative_url }}" alt="Idris" title="Idris"><span>By <a href="{{ '/cast/idris.html' | relative_url }}">Idris</a>, Senior iOS engineer</span></div></div>
 
 <style>.doc-body{overflow-wrap:break-word}.doc-src{overflow-wrap:anywhere}.tbl[data-n~="1"] tr>:nth-child(1),.tbl[data-n~="2"] tr>:nth-child(2),.tbl[data-n~="3"] tr>:nth-child(3),.tbl[data-n~="4"] tr>:nth-child(4),.tbl[data-n~="5"] tr>:nth-child(5),.tbl[data-n~="6"] tr>:nth-child(6),.tbl[data-n~="7"] tr>:nth-child(7),.tbl[data-n~="8"] tr>:nth-child(8),.tbl[data-n~="9"] tr>:nth-child(9),.tbl[data-n~="10"] tr>:nth-child(10),.tbl[data-n~="11"] tr>:nth-child(11),.tbl[data-n~="12"] tr>:nth-child(12){min-width:0;overflow-wrap:normal}.tbl[data-o="1"] tr>:nth-child(1),.tbl[data-o="2"] tr>:nth-child(2),.tbl[data-o="3"] tr>:nth-child(3),.tbl[data-o="4"] tr>:nth-child(4),.tbl[data-o="5"] tr>:nth-child(5),.tbl[data-o="6"] tr>:nth-child(6),.tbl[data-o="7"] tr>:nth-child(7),.tbl[data-o="8"] tr>:nth-child(8),.tbl[data-o="9"] tr>:nth-child(9),.tbl[data-o="10"] tr>:nth-child(10),.tbl[data-o="11"] tr>:nth-child(11),.tbl[data-o="12"] tr>:nth-child(12){position:sticky;right:0;overflow-wrap:normal;background:var(--page);box-shadow:-1px 0 var(--line),-9px 0 8px -8px var(--sh)}</style>
 <div class="doc-body" markdown="1">
 
 {% raw %}
-Idris, Mon 11-16. Nothing here has been posted. The main session posts it (task packet: no worker posts to GitHub).
+**Status (Idris, Tue 11-17, T-4803):** posted as #319 (opened 11-16 7:06 PM ET, closed 11-16 9:29 PM ET by the
+request sweep as answered). an Investor answered on #319 (c6935756804): all four iPhone taps passed on build 7, the
+premade and the script widget, cold and backgrounded; recordings ops/site-checks/test1-1.mov and test1-2.mov. So the
+iPhone half is seen on build 7. The iPad half is not asked of anyone with a device: by <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">ruling</span> #299 B (log/rulings.md,
+11-14 6:27 PM ET) every iPad step stays in the Simulator and the closing note says so. It is board line T-4615,
+'Widget taps on iPad reuse an open window': T-3765 closes when that line's TAP_CHECK run
+(WidgetKitCheckTests, Release) is green on the iPad Simulator. The text below is the draft as it was before posting.
+
+Idris, Mon 11-16. Drafted here, then posted by the main session as #319 (task packet: no worker posts to GitHub).
 
 ## Where it goes
 
@@ -25,8 +33,8 @@ Idris, Mon 11-16. Nothing here has been posted. The main session posts it (task 
 - **Recommended: fold this into T-4536's size-<span title="Our grade scale, nine steps: D, D+, C-, C, C+, B-, B, B+, A. An idea&#x27;s ladder is the letter it reaches before any cap.">ladder</span> request**, the other phone work on build 7, which is not posted
   yet: one Urgent Request, one install, one sitting. If that request goes up first, post the section below on it as a
   comment; if it is not going up soon, open this alone through `tools/urgent.py` with the section below as its body.
-- Board: T-3765 is marked waiting on the Investors with a note naming this file; the main session swaps that for
-  "waiting on #N" (`board_tick.py block`) once the request is posted.
+- Board: posted alone as #319 (not folded into T-4536's request); its wait on #319 was cleared when #319 closed
+  (requests_close sweep, 11-16 9:29 PM ET). T-3765 no longer waits on the Investors: it waits on T-4615 (see the top).
 
 ## What the company checked itself (Mac mini, Simulator)
 
@@ -59,7 +67,7 @@ the widget's link to the app, and the Lock Screen and StandBy taps, which ask fo
 ops/board_notes/T-3765.md) needs a library of about 1,000 files, which the Investors' phone does not have, so it is
 the company's own Release Simulator measure, board line T-4638, and the steps below leave it out.
 
-**iPad:** the Investors have no iPad and none is bought (<span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">ruling</span> 6:27 PM ET on 11-14, #299: every iPad step of a phone
+**iPad:** the Investors have no iPad and none is bought (ruling 6:27 PM ET on 11-14, #299: every iPad step of a phone
 proof runs in the Simulator, and the closing note says so). So the iPad part, Windowed Apps with two windows, is the
 company's own Simulator step and is **not** asked of the Investors below. On the Simulator, the iPad part ran on the Simulator on 11-16 and **found a fault**, so #41 is not told the iPad tap is fixed.
 Windowed Apps was set in Settings and read back; a second window (tip_splitter.py) was opened; the widget was tapped

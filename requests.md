@@ -4,7 +4,7 @@ title: "Issues"
 section: "requests"
 permalink: "/issues/"
 issues: "1"
-issues_at: "10:17 PM ET, Nov 17"
+issues_at: "4:04 AM ET, Nov 18"
 ---
 
 # Issues
@@ -15,7 +15,7 @@ issues_at: "10:17 PM ET, Nov 17"
 <p class="lead">1 open.</p>
 
 <p class="meta" id="needs-anon">With your GitHub token saved (<a href="{{ '/connect.html' | relative_url }}">Connect</a>), you answer on each issue's own page: its card and options, the whole thread, a reply box and Close. Without it, the page says how to connect.</p>
-<div id="needs-root" data-repo="Its-The-Company/itsthecompany" data-view="{{ '/issues/view/' | relative_url }}" data-named="13 19 29 32 33 36 38 41 42 51 53 54 55 56 57 58 59 60" data-props="" data-skip="39 41" data-rest="0"></div>
+<div id="needs-root" data-repo="Its-The-Company/itsthecompany" data-view="{{ '/issues/view/' | relative_url }}" data-named="13 19 29 32 33 36 38 41 42 51 53 54 55 56 57 58 59 60" data-props="" data-skip="39 41 325" data-rest="0"></div>
 <script>try{var d=document.documentElement,t=sessionStorage.getItem('company-chat-token')||localStorage.getItem('company-chat-token');if(t){d.classList.add('iq-wait');setTimeout(function(){d.classList.remove('iq-wait')},1e4)}}catch(e){}</script>
 
 <ul class="iq-list" data-group="open"><li class="ny iq-row" data-nums="90" id="i90"><span class="iq-dot off"></span><a class="iq-a" href="{{ '/issues/view/' | relative_url }}#90"><b class="iq-t">Decision: the app's public name, after one trademark search by you (by Mon <span class="nw">2026-11-02</span>, Day 12)</b><span class="iq-d">Which public name should the app have?</span><span class="iq-m"><span class="tag approval">Approval</span><span class="iq-num ref">#90</span></span></a><span class="iq-due"></span></li></ul>

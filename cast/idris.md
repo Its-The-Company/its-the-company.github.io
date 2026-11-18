@@ -33,8 +33,6 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 ## Open (mine)
 
-- T-2261 11-13 17393d231c: problems element + UI test (local 2/0 only), shots t2261/; review T-4252 Pernille. Open: Maren, runner run of the UI test. Lesson: the bundle's own names come from a C embedder (sim clang, -framework Python) run by simctl spawn, PYTHONPATH = lib/python3.15 + lib-arm64; land jobs run unit tests only.
-
 - T-4256 11-16 0b3deb64a5: gutter numbers via patch runestone-0003 (TextView.lineNumberMarks), shots t4256/. Open: tick after full run; T-4261 review (Pernille); HC tint 6.4-7.9 < 7:1 for Maren. Lesson: shots on a private sim (simctl create/delete): the shared iPhone 17e runs others' tests, and simctl ui flips their contrast.
 
 - T-3821 11-16: copy up over main 81ae6bf953 (clean, pre-merge.patch kept). Classifier refused the focused XC_LOCAL=1 run in the copy: item stopped, not landed. Open: test leave or ruling, then land, tick, review line, remove copy. Lesson: the runner refuses a dirty copy; plan the test route before starting.
@@ -52,12 +50,15 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 - Parked a/20261117-104308-59000 11-17: 7 of 8 landed one task per gate land (T-3564, T-3716, T-1671, T-1672 ticked; T-3554, T-0550, T-0543 noted: phone/review left). Open: T-1241 (ops path in its commit, guard refused); reviews. Lesson: main_gate --task takes one id; a 75 after 'main moved' is the hook, rerun.
 
+- T-4688 11-18 f531d51b2c+8e22b68221: done but tick refused (umbrella waits T-4857/T-4858); phone T-4865, reviews T-4852 PASS, T-4864. Lesson: Debug code lives in PyWidget.debug.dylib; a Release build needs PW_INTERNAL_TESTFLIGHT=YES until the privacy URL exists; copies need scripts/fetch_editor.sh (not main's stale Vendor).
+
+- T-4858 11-18 22016c0c82 (scratch T-4858-idris, not landed): extension AppTransaction bound 2 s + .unknown held 15 min, late answer kept; test + purchases.md. Gate run 1 red only on Bundle.main scan (fixed: TreeHost.isExtension). Stopped: guard refused fetch+rebase after main moved. Open: a way to bring the copy up to main, then land, tick, review line, Evan's phone note. Lesson: Shared code finds the extension via TreeHost.isExtension.
+
 ## Lessons
 - Older lessons and dated logs: archive.md.
 
 
-- T-0191/T-2268/T-2296 11-17: parked b/20261117-170324 (3 commits + T-4183 handoff) landed in one gate land. Open: Gallery/ProPaywall UI tests only via a runner --full job on main; reviews owed; T-0193 step 1 uncommitted in the old tree. Lesson: checkout --merge carries only uncommitted work; a copy's commits need reset --mixed to its base first.
-- T-4782 11-17: ProStore eventually throws WaitRanOut, bounded fulfils only before its deadline; 2 new tests. Open: review. Lesson: a late fulfil of a test-case expectation inside the same test records no violation (mutant stayed green); check a test's mutant before claiming what it proves.
+- T-4784 11-17: source-text pin refused by lint (ruling c6951158380); replaced, uncommitted, by testTheRefreshGlyphWrappersKeepTheirStyle (Drawn.body type + Mirror). Open: run focused + mutant when disk gate opens (closed <20 GB), then commit. Lesson: no source-text tests.
 {% endraw %}
 
 

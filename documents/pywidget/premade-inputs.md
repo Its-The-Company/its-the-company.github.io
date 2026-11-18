@@ -39,7 +39,18 @@ Pro widgets <span title="The worker who reads both graders and decides. The deci
 tagged Pro, its inputs stay settable, its design, layout and code need Pro). The plan, with each premade's data
 source, terms and Python and iOS features, is [`ops/plans/T-4672-showcase-premades.md`](../company/t-4672-showcase-premades.html).
 
-**The new set, in build order** (Pro tag in brackets):
+**Which runs count for the Pro tag: open with the Investors (T-4796, 2026-11-17 10:25 PM ET; <span title="A GitHub issue asking the Investors for something that is blocking work.">Urgent Request</span> #324).**
+"Python running within the widget" is in Pro (#278, 9:43 PM ET 11-16), and every widget, premades included, runs in
+the widget first whenever it fits (#283, 10:46 AM ET 11-13; ADR-007 s3 item 4), as Countdown did 69 times on the
+phone. The record does not say which runs the Investors meant, so the company has asked rather than picked. Reading
+A, the company's recommendation: the Pro feature is Python a button on the widget runs without opening PyWidget
+(ADR-011 s4), and the <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span>'s own runs (the timeline runs ADR-007 s3 places in the widget) are not, for anyone. Reading
+B, word for word: every run inside the widget is Pro, so a person's own widgets run in the app without Pro, and every
+premade the widget lane runs is tagged (all but those the lane refuses, such as GitHub repository). **The tags below
+are reading A's working list until #324 is answered**, not a ruling; the plan's s1 carries the same passage, and both
+lists change together with the answer.
+
+**The new set, in build order** (Pro tag in brackets, reading A):
 
 1. **Day phases** (`day_phases.py`, new, T-4673; Pro once Today's three has Done buttons): morning trains, a day
    view, evening trains, a night view, by time of day. Defaults: downtown B and D from 125 St, 6:00 to 10:00 AM;
@@ -176,7 +187,7 @@ contract:
   writer takes and releases the lock inside one synchronous block.
 - **Temp files.** Python names its temp file `.premade-<16 hex>`. A `.premade-*` file older than 60 s, seen while
   holding the lock, belongs to a killed writer; Python removes it. The Swift writer may use any other name.
-- **The widget <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span>.** `fcntl` is not on the lane's import list (`lane.py` `ALLOWED`), and the lane premades import
+- **The widget lane.** `fcntl` is not on the lane's import list (`lane.py` `ALLOWED`), and the lane premades import
   `_premade`, which passes the lane's scan. So the locked save is its own file, `_premade_lock.py`; each premade that
   saves (Altitude, Distance, GitHub, Steps, Storage) imports it and sets `k.SAVE = _premade_lock.save`. Without it
   `Store.save()` writes nothing, never an unlocked whole file. No lane premade saves today (Countdown, Habits,

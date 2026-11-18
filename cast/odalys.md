@@ -46,7 +46,12 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-4719 11-17: reviews of a <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span>: board_tick add writes main's live board, a tick goes to ops/lane-outbox; evidence logs of other lanes sit in ../<lane>/ops/runs (find by name, don't list).
 - T-4781 (11-17): narrowed retest after a red in personal_land.sh (tools/land_retest.py). Replay: 7 of 8 narrowable retries were gate lands (main_gate.py m*), not wired; owed: wire the gate, a week of only_testing rows for the quality number.
 - Replay a rule over the ledger before claiming its saving: which land path carries the cases decides the figure (T-4781: the gate, not lanes).
+- T-4817 done 11-17 (1e7bbaff29): bottleneck_watch.py; limits from own history, a <span title="A measured fact that holds a grade below a letter, however good the rest is.">cap</span>/floor = rule in force so a steadily bad process still opens. Owed: T-4829 tick hook, T-4830 idle slots + red cause at source, review T-4831.
+- T-4829 11-18: tick step 1h runs bottleneck_watch (BOTTLENECK_WATCH_OFF=1 in supervisor_test). `out=$(run_limited ... 2>&1)` catches bash's "Terminated" notice for the timer's sleep: send the command's output to a temp file. Gate at load 200: supervisor_test 940 s; land in the background from the start.
+- A metric with short history: the rule in force is the limit until the chart has a baseline; never "no limit".
 - T-4814 (11-17): merge limit split app 20 / other 8 / hub 1 by files touched (per commit subject, git cherry). Owed: review, work.md step 2 `open --task`, Tenet 2 text, governor run.json queues.
+- T-4806 11-17: a gate 75 left no row, so T-4787 missed 27 gate wait-outs; count exits that write nothing from ops/runs session logs. Shipped records + carry (MAIN_GATE_CARRY=off reverts); slices 4-7 owed in ops/plans/T-4806-timeouts.md; review owed. A Bash call goes to the background at 10 min and is stopped at 20: run a gate land in the background with a long timeout under load.
+- A timing bound in a test must time only the code under test: stub du, no taskpolicy -b (T-4806: disk_makeup hang row read 294.6 s from the other drive's du beside 20 suites).
 {% endraw %}
 
 

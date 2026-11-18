@@ -716,6 +716,15 @@ The Effect lines of the amendments.md entries the charter retired (2026-11-04 12
 - **2026-11-17 9:10 PM ET** ((private)): Standing: a safety-check refusal of a routine test fix is not raised as an urgent request; it is listed with the bad-test work and in the next report; T-4816 seeks a setting so the check allows such fixes
 - **2026-11-17 9:20 PM ET** ((private)): Standing: process fixes run now and first; app work must merge faster than it is created; a bottleneck automatically creates a prioritized big-picture fix task through the process merge queue; needed metrics are captured as they happen; process changes need no manual Investor help unless illegal or spending money
 - **2026-11-17 9:55 PM ET** ((private)): Standing: every bottleneck signal shows on Flow with its graph, current value and its dynamically computed, industry-standard limit (explained by an i pop-up); new signals appear there automatically; Flow and Work panels trimmed as listed
+- **2026-11-17 10:31 PM ET** ((private)): Process changes are grouped into features like app work, and every newly added task, process or app, is placed in a feature automatically (T-4823).
+- **2026-11-17 11:40 PM ET** ((private)): The app's final name must not reference widgets directly (it makes more than widgets); "Widget Above" was an example of the kind of name wanted, not a name request.
+- **2026-11-18 12:06 AM ET** ((private)): Standing: every task belongs to a Feature; no stand-alone tasks: a task that fits no existing Feature, or benefits from running alone and at once, creates a new Feature holding only itself
+- **2026-11-18 12:09 AM ET** ((private)): Controls (Control Center, Lock Screen, Action button) that run a person's Python become an option of the Widgets feature, out of 'Maybe later'; sized first, its version and date effect reported before it takes the Builder's slot
+- **2026-11-18 12:15 AM ET** ((private)): Standing: how many tasks merge together is computed from measured data (each kind's red rate, test time, risk) for the most speedup and best quality, never a fixed count
+- **2026-11-18 12:23 AM ET** ((private)): Standing: batch sizing and its measurements are logged and shown on Flow in their own section, apart from the bottleneck signals that open process-fix tasks
+- **2026-11-18 12:33 AM ET** ((private)): Every process and efficiency change the Investors asked for on the night of 11-17 is P0; storage gets a permanent, automatic fix: drives cleaned often by code, company data kept off the internal disk, P0
+- **2026-11-18 12:36 AM ET** ((private)): #324 A: the Pro feature is Python that a widget button runs without opening the app; a widget's own updates running in the widget are not Pro for anyone; Pro tags: Habit tracker, Focus timer, Flashcards, Day phases once it has buttons
+- **2026-11-18 12:40 AM ET** ((private)): Standing approval: the safety check is to allow deleting Simulator data and any other company data that is safe to delete (not unsaved code work, not in use by a running test) once no merge needs it; the company may change the Claude Code settings to say so, approved in advance
 {% endraw %}
 
 </div>

@@ -2,7 +2,7 @@
 layout: "default"
 title: "The 1.0 showcase premades: frames (T-4703)"
 section: "documents"
-description: "Drawn so far: Day phases (all four views) and Focus timer. Not drawn yet: Next 24 hours, Sky, Overlap clocks, Site status, Flashcards, and GitHub&#x27;s star-history line. They are on their own board line (see &quot;Left&quot;)."
+description: "Drawn: all eight on the board line, in its order: Day phases (all four views), Focus timer, Next 24 hours, Sky, Overlap clocks, Site status, Flashcards, and GitHub&#x27;s star-history line. Not done: the review of Pernille&#x27;s\u2026"
 ---
 <div class="crumbs" role="navigation" aria-label="Back"><a class="back" href="{{ '/documents/pywidget/design/' | relative_url }}">← Design &amp; Specs</a><a href="{{ '/documents/pywidget/showcase.html' | relative_url }}" rel="bookmark">Permanent link</a></div>
 <div class="page-head"><div class="kicker"><span class="kind grey">Design</span><span>Day 27 · Tue Nov 17</span><span><code>pywidget/docs/design/widgets/showcase.md</code></span></div><h1>The 1.0 showcase premades: frames (T-4703)</h1><div class="byline"><img class="avatar" src="{{ '/assets/portraits/maren.svg' | relative_url }}" alt="Maren" title="Maren"><span>By <a href="{{ '/cast/maren.html' | relative_url }}">Maren</a>, Product and visual designer</span></div><p class="meta">Mockup screens are drawn; they go public after creative approval.</p></div>
@@ -11,11 +11,11 @@ description: "Drawn so far: Day phases (all four views) and Focus timer. Not dra
 <div class="doc-body" markdown="1">
 
 {% raw %}
-Maren, 2026-11-17, 1:05 PM to 1:40 PM ET by `date`. Board line T-4703, from T-4672 (plan [`ops/plans/T-4672-showcase-premades.md`](../company/t-4672-showcase-premades.html) s2, s3 and s4.2; #278, an Investor 2026-11-16 9:55 PM ET).
+Maren, 2026-11-17, 1:05 PM to 1:40 PM ET, and 2026-11-18 from 2:50 AM ET (sheets 06 to 11), by `date`. Board line T-4703, from T-4672 (plan [`ops/plans/T-4672-showcase-premades.md`](../company/t-4672-showcase-premades.html) s2, s3 and s4.2; #278, an Investor 2026-11-16 9:55 PM ET).
 
-**Status.** These frames are drawn inside approved items 2 and 9 (`creative/approved.md`): Paper in light, Studio in black and dark grey in dark, with the existing tokens, faces and widget vocabulary. Nothing in them adds a colour, face, icon or arrangement outside the guide. Ideas that would add one are listed under "Proposals (not used)" and are not drawn. The samples are made up for layout: the arrivals are not MTA data, and the to-do items are invented.
+**Status.** These frames are drawn inside approved items 2 and 9 (`creative/approved.md`): Paper in light, Studio in black and dark grey in dark, with the existing tokens, faces and widget vocabulary. Nothing in them adds a colour, face, icon or arrangement outside the guide. Ideas that would add one are listed under "Proposals (not used)" and are not drawn. The samples are made up for layout: the arrivals are not MTA data, the forecast is not MET Norway data, and the to-do items, places, sites, deck and star counts are invented.
 
-**Drawn so far:** Day phases (all four views) and Focus timer. **Not drawn yet:** Next 24 hours, Sky, Overlap clocks, Site status, Flashcards, and GitHub's star-history line. They are on their own board line (see "Left").
+**Drawn:** all eight on the board line, in its order: Day phases (all four views), Focus timer, Next 24 hours, Sky, Overlap clocks, Site status, Flashcards, and GitHub's star-history line. **Not done:** the review of Pernille's Day phases render, because it does not exist yet (see "Pernille's render").
 
 ## How the frames are made
 
@@ -25,13 +25,13 @@ Maren, 2026-11-17, 1:05 PM to 1:40 PM ET by `date`. Board line T-4703, from T-46
 | File | What |
 |---|---|
 | `premade.py` | The section "1.0 showcase premades (T-4703)" writes each view with `pywidget_ui`, using only viewtree v1 nodes. `python3 premade.py` writes `showcase/trees/NN-slug.json` and validates every document and every state variant, with 0 problems. The 12 v1 premades and their trees do not change. |
-| `render.py --set showcase` | Draws the sheets into `showcase/*.jpg` (1x, JPEG q78, 1.8 MB for all five) and writes `showcase/qa.json`. It uses the same interpreter and QA as the 12 premades (README "How it is made"). Each sheet has its own "now", so relative text reads as it would at that time of day. |
+| `render.py --set showcase` | Draws the sheets into `showcase/*.jpg` (1x, JPEG q78, 4.0 MB for all eleven) and writes `showcase/qa.json`. It uses the same interpreter and QA as the 12 premades (README "How it is made"). Each sheet has its own "now", so relative text reads as it would at that time of day. |
 | Studio grey | With `--set showcase`, every hued value Studio supplies (grounds, lines, text greys, accent, the widget card gradient, Increase Contrast set) becomes the neutral grey of the same relative luminance. T-4680 did the same for the 04-mockups: canvas #0A0C13 becomes #0C0C0C, the card #5B33E6 to #1E1450 becomes #5A5A5A to #1F1F1F, and the accent #A08BFF becomes #9C9C9C. The status colours stay. `tokens.json` is not changed: item 9 records that "the tokens are not changed yet". |
 
 </div>
 
 
-Each sheet shows every family the view claims in full colour light and dark, accented light and dark (sample tint #5AA9C8), and iOS 26 clear in both appearances over a light and a dark wallpaper. The Lock Screen families are shown vibrant in both appearances over two wallpapers. Every state is drawn in light and in dark. No image model, stock art or photo is used. SF Symbols are stand-in glyphs, and a symbol with no stand-in (`tram.fill`, `sunrise.fill`, `play.fill`, `timer`) shows as a dotted circle. The tree names the real symbol.
+Each sheet shows every family the view claims in full colour light and dark, accented light and dark (sample tint #5AA9C8), and iOS 26 clear in both appearances over a light and a dark wallpaper. The Lock Screen families are shown vibrant in both appearances over two wallpapers. Every state is drawn in light and in dark. No image model, stock art or photo is used. SF Symbols are stand-in glyphs, and a symbol with no stand-in (`tram.fill`, `sunrise.fill`, `play.fill`, `timer`, `umbrella`, `eye`, and others) shows as a dotted circle. The tree names the real symbol.
 
 ## Day phases
 
@@ -71,7 +71,7 @@ Plan s4. Families: systemSmall, systemMedium, systemLarge, accessoryRectangular,
 
 ### Pernille's render, reviewed against these frames
 
-**There is nothing to review yet.** As of 1:35 PM ET T-4673 is open on the board, and `pywidget/widgets/premade/day_phases.py` exists on no branch (`git log --all` for the path is empty) and in no worktree. When it lands, check these points against the frames:
+**There is nothing to review yet.** As of 1:35 PM ET on 11-17, and again at 3:32 AM ET on 11-18, T-4673 is open on the board, and `pywidget/widgets/premade/day_phases.py` exists on no branch (`git log --all` for the path is empty) and in no worktree. When it lands, check these points against the frames:
 
 1. Route letters are plain letters in a token colour, with no circles.
 2. Arrivals are clock times. Only the first one counts down, and it does so with relative text, not a per-minute entry.
@@ -90,6 +90,9 @@ Plan s4. Families: systemSmall, systemMedium, systemLarge, accessoryRectangular,
 4. **"Evening trains in ..." assumes Evening is a Transit phase.** If a person gives Evening the Today or Night view, or if Weekdays only is on and it is a Saturday, the line should name the next phase in plain words ("Night view at 9:00 PM") or drop. The plan does not say which.
 5. **The credit line's wording and length** wait for the terms (s4.4). Medium has room for one caption2 line beside "Updated".
 6. **StandBy.** s4.2 asks Night to read in StandBy. These frames cannot show that (see "Not drawn"), so the Simulator check covers it.
+7. **Next 24 hours on the Lock Screen.** L16's condition is the credit line "on the widget". The rectangular widget has three lines and no room for it. Wrenna or Ines should say whether the Lock Screen families need it (and so need to drop a line), or whether the credit on the system families and in PyWidget is enough.
+8. **The driest window when several tie** (for example, a dry day with one shower). The frames pick the sooner. The plan does not say.
+9. **Site status "down" thresholds.** The frames show a single "Down" (no answer, or an error). A "slow" state (the build line tests it) has no mark in the strip yet. If the build wants one, it would be a third bar height, not a new colour.
 
 ## Focus timer
 
@@ -101,6 +104,73 @@ Plan s2 row 3, Pro. Never called "Pomodoro" (a trademark). Families: systemSmall
 - **Buttons.** The Gallery 09 pill (T-0429 <span title="The starting recipe a lane uses to look for ideas. G2, for example, starts from public datasets.">G1</span>): Pause and Skip while a block runs, Resume when paused, and Start alone when nothing runs, since there is nothing to skip then. Each is a `Button` with a declared action (`start`, `pause`, `resume`, `skip`). The handlers are the build's. The Lock Screen draws no buttons.
 - **Today's blocks** are bars, one per block, with height by minutes and the running block in primary, the way Steps draws today. They appear in medium (34 pt) and large (56 pt) with "4 blocks, 1 hr 47 min". Small has no chart.
 - **States:** paused, which shows "7 of 25 min" and the bar held at 0.28, and no block running, in medium and small.
+
+## Next 24 hours
+
+
+
+Plan s2 row 4, free. MET Norway (L16: Go with conditions). Families: systemSmall, systemMedium, systemLarge, accessoryRectangular, accessoryInline. The forecast is a made-up sample, not MET Norway data.
+
+- **The chart.** Temperature is an accent line (Altitude's profile line), with a dot at now. Rain is bars in `line.strong` under it (Steps' past bars). The driest two-hour window is an `accent.soft` band behind both (Altitude's area fill), and it is named in words above the chart: "Driest 5–7 PM". The band never carries the meaning alone.
+- **The credit line** "Data from MET Norway" is on every system family at caption2, bottom left, with "Updated" at bottom right in medium and large. In small the credit takes the bottom row and there is no Updated line, because both do not fit at 126 pt. The stale clock in the corner still says when it is old. Lock Screen families carry no credit line (see gap 7).
+- **Units.** The sample is in °F and inches, as a US person would see it. MET Norway sends °C and mm, and the build converts by the person's locale.
+- **Large** adds High, Low and Rain rows ("0.37 in, most 8–10 PM"). **Inline** is "58°, rain from 8 PM", or "dry all day".
+- **State:** dry all day, in medium and small. The band is not drawn, and the words say "Dry all day".
+
+## Sky
+
+
+
+Plan s2 row 5, free, the rework of Sunrise and sunset. Families: systemSmall, systemMedium, systemLarge, accessoryCircular, accessoryRectangular, accessoryInline (Sun's families plus Large).
+
+- **The arc** runs from dawn to dusk across the width. Sun's arc (a `bg.sunken` track, with the travelled part and the dot in `status.warning`) rises between sunrise and sunset. Civil twilight is an `accent.soft` band under the horizon at each end.
+- **The moon** is drawn with Path, with no image or symbol: a `line.strong` ring for the limb and the lit part in `status.warning`, the colour Sun already uses for the sun's light. The first draw used `text.primary` for the lit part, which made a full moon a black disc in light. A `bg.sunken` dark disc measured 2.70:1 under the amber in dark, so it became a ring.
+- **Daylight gained.** On the sample day (Oct 27) the day is shorter, so it reads "2 min 29 s less than yesterday" (medium) and "...shorter than yesterday" (large). The plan's word "gained" is the spring case.
+- **Before sunrise** the hero switches to Sunrise. This is shown in the morning state, in medium and small. Large adds Dawn, Sunrise, Sunset and Dusk, the moon at 40 pt with its name and percent lit, and the next full moon (or the next new moon when it is full now).
+- The sample uses the NOAA sun equation and a mean synodic month. Which almanac the app uses is T-4797's.
+
+## Overlap clocks
+
+
+
+Plan s2 row 6, free, the rework of World clocks. Families: systemSmall, systemMedium, accessoryRectangular, accessoryInline (World clocks' families). Places: New York (you), London and Berlin, 9 to 5 each. London is on GMT and New York on EDT on Oct 27.
+
+- **One bar per place** on your 24-hour axis (12 AM to 12 AM, your time). Working hours are `line.strong` and the hours all share are accent, set side by side with a 1 pt gap, never stacked. Stacking measured 2.32:1 (accent on grey) in light and 1.07:1 in dark. A hairline marks the day's extent, and now is two short `text.primary` stubs above and below the bar, never across a cell.
+- **Words first.** "Shared hours / 9:00 AM–12:00 PM, in 40 min" (relative, ticks alone), "Shared now / to 12:00 PM", or "No shared hour / None today".
+- Medium adds an axis (12 AM, 6 AM, 12 PM, 6 PM) under the bars. Small has bars but no axis.
+- **States:** shared now, and no shared hour (London, Berlin and Tokyo), each in medium and small.
+
+## Site status
+
+
+
+Plan s2 row 7, free. Families: systemSmall, systemMedium, systemLarge, accessoryRectangular, accessoryInline. The addresses are on the reserved example domains (RFC 2606), not real sites.
+
+- **Up or down** is a symbol in its status colour (`checkmark.circle.fill`, `xmark.octagon.fill`, as GitHub's CI line), and "Down" is a word in the time column. The summary line names the site when one is down.
+- **The 24-hour strip.** One mark per hour. Up is a short `line.strong` bar, down a full-height `status.danger` bar (taller, so it reads by shape as well as colour, and it is in the accent group), and no reading a short `bg.sunken` bar. A green strip was not used: colour on every healthy hour would be noise.
+- Medium fits four sites on one line each. Large puts the strip full width under each name, with "Down since 12:00 PM".
+- **States:** all up, in medium and small, and a site just added with one hour of history.
+
+## Flashcards
+
+
+
+Plan s2 row 8, Pro. Families: systemSmall, systemMedium, systemLarge, accessoryRectangular, accessoryInline. The deck is a made-up Spanish sample.
+
+- **The card** is in the display face (24, 28 or 40 pt). The buttons are Focus timer's pills (Gallery 09): "Show answer" (prominent) on the front, then "Again" (soft) and "Got it" (prominent). Each is a `Button` with a declared action (`show`, `again`, `got_it`). Small drops the button symbols and uses caption to fit at 126 pt.
+- **Large** adds the Leitner box, the count answered today and a progress bar.
+- **The Lock Screen** draws no buttons, as with Focus timer: rectangular shows the deck, the count due, the front and "Tap to answer".
+- **States:** answer shown (medium, small, large), nothing due ("Next card at 6:00 PM"), and no cards yet ("Add cards on the Page").
+
+## GitHub repository: the star-history line
+
+
+
+Plan s2 row 9, free, and T-4713. Families: systemSmall, systemMedium, accessoryRectangular. Only Medium changes, and Small and rectangular are v1 as drawn.
+
+- **The line** is the last 30 days of the premade's own star counts, drawn as an accent line on an `accent.soft` area (Altitude's profile) with "Stars, 30 days" and "+62". A day with no fetch breaks the line and the area. It does not join across.
+- To make room, medium drops v1's Forks and Pushed rows and keeps open issues and CI.
+- **States:** four days with no fetch (a gap), first fetch ("Star history starts with the next fetch."), and CI failing.
 
 ## QA (`showcase/qa.json`)
 
@@ -116,17 +186,28 @@ Each sheet's own check: truncation, text or graphics outside the widget, text in
 | 03 Day phases, Night | 32 | 0 | 7.08 / 5.38 | 7.08 / 6.09 |
 | 04 Day phases, No recent times | 34 | 0 | 7.08 / 6.34 | 7.08 / 5.24 |
 | 05 Focus timer | 40 | 0 | 7.08 / 5.31 | 3.18 / 4.67 |
+| 06 Next 24 hours | 36 | 0 | 7.08 / 5.46 | 3.18 / 3.81 |
+| 07 Sky | 40 | 0 | 7.08 / 5.24 | 3.18 / 4.23 |
+| 08 Overlap clocks | 32 | 0 | 7.08 / 5.92 | 3.18 / 4.85 |
+| 09 Site status | 38 | 0 | 7.08 / 6.43 | 3.18 / 3.66 |
+| 10 Flashcards | 42 | 0 | 7.08 / 5.38 | 7.08 / 4.90 |
+| 11 GitHub star history | 26 | 0 | 7.08 / 5.53 | 5.79 / 5.47 |
 
 </div>
 
 
-That is 184 renders and 0 faults. Card text faults: 0. Graphics faults: 0. The first runs found faults on four of the five sheets, all fixed in the designs, not hidden:
+That is 398 renders and 0 faults (sheets 01 to 05: 184; 06 to 11: 214). Card text faults: 0. Graphics faults: 0. The first runs found faults on four of the five sheets, all fixed in the designs, not hidden:
 
 - In Transit, "7:42 AM" was cut six times in medium; this became the AM/PM call above.
 - In Transit small, the letter overlapped the times, and "Herald Sq uptown" was cut. The station name dropped to footnote.
 - Today's "Evening trains in ..." line was pushed out of medium and into the margin in small.
 - Night medium was too tall. The "Sunrise" label row was folded beside the time.
 - Focus timer: small was too tall (the task line was dropped there), and an hour axis under the large chart was dropped, since the bars are blocks, not hours.
+- Next 24 hours: large was too tall, so the chart went from 118 to 92 pt.
+- Sky: the daylight line was cut in small, medium and large (28 faults). The marks failed in dark (see the moon above), and large was too tall.
+- Overlap clocks: the medium axis was cut and sat in the margin. Small was cut ("Working hours do not meet"). Stacked bars failed 3:1 in all four card modes.
+- Site status: small spilled out of the widget, and medium sat in the margin.
+- Flashcards: small's "Again" and "Got it" sat in the margin. "the window" now holds one line and scales.
 
 Accented, clear and vibrant numbers are in `qa.json` for each mode. They are this renderer's approximation of the system and fail on light wallpapers as the 12 premades do (README). Full colour is our paint, and it passes.
 
@@ -135,12 +216,13 @@ Accented, clear and vibrant numbers are in `qa.json` for each mode. They are thi
 ## Proposals (not used; each would need its own <span title="Commandment 51: the Investors approve every visual before it ships.">C51</span> approval)
 
 - **Route colours.** Showing the B and D in their route colour (orange) or in a circle would be the MTA's marks and a new colour. It waits for the terms (s4.4) and then for a C51 approval. The frames use plain letters.
+- **A moon glyph of our own.** Sky's moon is drawn from the lit fraction, which needs no new asset. A drawn moon icon for the Gallery or the app would be a new icon, so it would need its own approval.
 - **Studio's grey values as tokens.** The greys above are computed, not tokens. Writing them into `tokens.json` belongs with the theme work (item 9's "specifics later"), not to this line.
 
 ## Left
 
-- Next 24 hours, Sky, Overlap clocks, Site status, Flashcards, and GitHub's star-history line are added as their own board line for Maren, in the plan's order, using the same `--set showcase` script.
-- When T-4673 lands, review Pernille's render against the points listed under "Pernille's render".
+- When T-4673 lands, review Pernille's render against the points listed under "Pernille's render". That is the only part of T-4703 still open.
+- T-4766 (the other six) is the same work as sheets 06 to 11. It can close as done by this commit.
 {% endraw %}
 
 </div>

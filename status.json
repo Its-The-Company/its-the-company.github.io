@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-18T15:39:57.975938+00:00",
+ "at": "2026-11-18T15:43:02.440861+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -207,22 +207,21 @@
    "task": "[build] T-4771 recut gutter marks and land",
    "model": "opus",
    "started": "2026-11-18T15:32:38.173Z",
-   "seconds": 439,
+   "seconds": 624,
    "finished": null,
    "effort": "high"
-  },
+  }
+ ],
+ "who": "Idris",
+ "recent": [
   {
    "name": "idris",
    "task": "[build] T-2296 land the Gallery pager work",
    "model": "opus",
    "started": "2026-11-18T15:37:31.196Z",
-   "seconds": 146,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Idris x2",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-18T15:40:59.707000+00:00"
+  },
   {
    "name": "idris",
    "task": "[build] T-3280 recut placed-path tests and land",
@@ -292,7 +291,7 @@
   "week_pct": 51.32,
   "usage_pct": 52.2,
   "work_pct": 82.0,
-  "read_at": "2026-11-18T15:39:00+00:00",
+  "read_at": "2026-11-18T15:43:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -313,23 +312,23 @@
   }
  ],
  "disk": {
-  "free_gb": 16,
+  "free_gb": 17,
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 170
+   "free_gb": 168
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-18T10:35:00-05:00",
+   "at": "2026-11-18T10:41:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 12,
-  "at": "2026-11-18T10:39:00-05:00",
+  "at": "2026-11-18T10:43:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -406,16 +405,6 @@
     "at": "2026-11-18T15:32:38.173Z",
     "o": "c",
     "task": "T-4771"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "Finish the gallery pager, iPad layout and detail foot",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-18T15:37:31.196Z",
-    "o": "c",
-    "task": "T-2296"
    }
   ],
   "src": "plan",
@@ -558,72 +547,67 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-18T15:39:57Z",
+  "at": "2026-11-18T15:42:48Z",
   "s": {
    "T-4533": [
     "mergeq",
     "1st to merge",
-    1794988077975
+    1794988128366
    ],
    "T-4574": [
     "mergeq",
     "3rd to merge",
-    1794992517975
+    1794992508366
    ],
    "T-4635": [
     "mergeq",
     "5th to merge",
-    1795006377975
+    1795006368366
    ],
    "T-4748": [
     "mergeq",
     "6th to merge",
-    1795007037975
+    1795007028366
    ],
    "T-4640": [
     "mergeq",
     "7th to merge",
-    1795007097975
+    1795007088366
    ],
    "T-4581": [
     "mergeq",
     "8th to merge",
-    1795007097975
+    1795007088366
    ],
    "T-4575": [
     "mergeq",
     "10th to merge",
-    1795007397975
+    1795007448366
    ],
    "T-4789": [
     "mergeq",
     "11th to merge",
-    1795007457975
+    1795007448366
    ],
    "T-4889": [
     "mergeq",
     "13th to merge",
-    1795010097975
+    1795010088366
    ],
    "T-4835": [
     "mergeq",
     "14th to merge",
-    1795011717975
+    1795011708366
    ],
    "T-4679": [
     "mergeq",
     "15th to merge",
-    1795012017975
+    1795012008366
    ],
    "T-4771": [
-    "merging",
-    "Mac tests at the main gate",
-    1795016157975
-   ],
-   "T-2296": [
-    "testing",
-    "its own tests, in its copy",
-    1795016337975
+    "mergetest",
+    "iPhone tests on the MacBook",
+    null
    ]
   },
   "nm": {
@@ -638,8 +622,7 @@
    "T-4889": "Check the PyWidget case fix in premade lines",
    "T-4835": "Show an all-day event on its own date after travel",
    "T-4679": "Make the unit tests pass in a launcher build",
-   "T-4771": "Gutter marks redraw quickly and stay right while typing",
-   "T-2296": "Finish the gallery pager, iPad layout and detail foot"
+   "T-4771": "Gutter marks redraw quickly and stay right while typing"
   },
   "wk": {
    "T-4533": "Pernille",
@@ -653,12 +636,11 @@
    "T-4889": "Idris",
    "T-4835": "Pernille",
    "T-4679": "Idris",
-   "T-4771": "Idris",
-   "T-2296": "Idris"
+   "T-4771": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-18T15:39:57Z",
+  "at": "2026-11-18T15:42:48Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -667,16 +649,16 @@
     "failed": 0,
     "held": 1,
     "retry": 0,
-    "parked": 6
+    "parked": 5
    },
    "m": {
     "checking": null,
-    "inline": 155,
-    "conflicted": 747,
+    "inline": 158,
+    "conflicted": 749,
     "failed": null,
-    "held": 2410,
+    "held": 2413,
     "retry": null,
-    "parked": 809
+    "parked": 725
    },
    "cur": [],
    "ld": [
@@ -686,12 +668,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-18T15:39:35Z",
-    "ld": 8.71,
+    "at": "2026-11-18T15:42:48Z",
+    "ld": 4.96,
     "c": 8,
     "sb": 1,
     "dk": [
-     17.5,
+     16.7,
      228.3
     ],
     "ss": [
@@ -703,8 +685,8 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-18T15:33:17Z",
-    "ld": 3.72,
+    "at": "2026-11-18T15:41:33Z",
+    "ld": 0.86,
     "c": 12,
     "sb": 0,
     "dk": [
@@ -722,7 +704,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 3 tasks",
+   "t": "Work session \u2013 2 tasks",
    "at": "2026-11-18T10:30:40-05:00"
   }
  ],
@@ -742,13 +724,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 2,
+  "main": 1,
   "lanes": 0,
-  "total": 2,
-  "at": "10:39 AM",
+  "total": 1,
+  "at": "10:43 AM",
   "why": "",
-  "at_iso": "2026-11-18T15:39:00+00:00",
+  "at_iso": "2026-11-18T15:43:00+00:00",
   "started": "10:30 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 10:30 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 10:39 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 10:30 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 10:43 AM ET</p></section>"
  }
 }

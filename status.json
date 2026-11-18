@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-18T01:17:25.393503+00:00",
+ "at": "2026-11-18T01:20:25.023684+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -119,12 +119,21 @@
    "task": "[site] T-4493 land the clutter cut",
    "model": "opus",
    "started": "2026-11-18T01:07:36.770Z",
-   "seconds": 588,
+   "seconds": 768,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-4806 fix merge time-outs",
+   "model": "opus",
+   "started": "2026-11-18T01:18:02.621Z",
+   "seconds": 142,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Maren",
+ "who": "Maren, Odalys",
  "recent": [
   {
    "name": "pernille",
@@ -154,8 +163,8 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 429,
-  "blocked_count": 57
+  "runnable_count": 430,
+  "blocked_count": 59
  },
  "meter": {
   "five_hour": {
@@ -203,7 +212,7 @@
   "week_pct": 43.81,
   "usage_pct": 53.5,
   "work_pct": 81.2,
-  "read_at": "2026-11-18T01:17:00+00:00",
+  "read_at": "2026-11-18T01:20:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -240,7 +249,7 @@
  "lock_in": {
   "on": false,
   "pool": 7,
-  "at": "2026-11-17T20:17:00-05:00",
+  "at": "2026-11-17T20:20:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -266,6 +275,15 @@
    "effort": "high"
   },
   {
+   "name": "Odalys",
+   "state": "running",
+   "task": "[tools] T-4806 fix merge time-outs",
+   "model": "opus",
+   "since": "2026-11-18T01:18:02.621Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
    "name": "Idris",
    "state": "next",
    "task": "Idris, P1, from T-4755 (Investor an Investor...",
@@ -277,14 +295,6 @@
    "name": "Pernille",
    "state": "next",
    "task": "Pernille, P0, Investor an Investor c6963972184 (6:23 PM...",
-   "model": null,
-   "since": null,
-   "next": []
-  },
-  {
-   "name": "Odalys",
-   "state": "next",
-   "task": "Odalys, P0, Investor an Investor c6963972184 (6:23 PM...",
    "model": null,
    "since": null,
    "next": []
@@ -317,6 +327,16 @@
     "at": "2026-11-18T01:07:36.770Z",
     "o": "i",
     "task": "T-4493"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Fix the causes of merge time-outs and runner errors",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-18T01:18:02.621Z",
+    "o": "c",
+    "task": "T-4806"
    }
   ],
   "src": "plan",
@@ -410,10 +430,10 @@
    }
   ],
   "count": {
-   "next": 429,
-   "wait": 26,
+   "next": 430,
+   "wait": 28,
    "blocked": 31,
-   "you": 8
+   "you": 10
   },
   "fin": {
    "n": 4,
@@ -476,82 +496,92 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-18T01:17:17Z",
+  "at": "2026-11-18T01:20:16Z",
   "s": {
    "T-4697": [
     "mergeq",
     "1st to merge",
-    1794959897694
+    1794959896675
    ],
    "T-4750": [
     "mergeq",
     "2nd to merge",
-    1794960197694
+    1794960196675
    ],
    "T-4698": [
     "mergeq",
     "3rd to merge",
-    1794960257694
+    1794960256675
    ],
    "T-4781": [
     "mergeq",
     "4th to merge",
-    1794964637694
+    1794964636675
    ],
    "T-4634": [
     "mergeq",
     "5th to merge",
-    1794964157694
+    1794964156675
    ],
    "T-4610": [
     "mergeq",
     "7th to merge",
-    1794960377694
+    1794960376675
    ],
    "T-4761": [
     "mergeq",
     "8th to merge",
-    1794960497694
+    1794960496675
    ],
    "T-4659": [
     "mergeq",
     "9th to merge",
-    1794961037694
+    1794961036675
    ],
    "T-4787": [
     "mergeq",
     "10th to merge",
-    1794962657694
+    1794962656675
    ],
    "T-4643": [
     "mergeq",
     "10th to merge",
-    1794962657694
+    1794962656675
    ],
    "T-4782": [
     "mergeq",
     "11th to merge",
-    1794963137694
+    1794963136675
    ],
    "T-4719": [
     "mergeq",
     "11th to merge",
-    1794963137694
+    1794963136675
    ],
    "T-4720": [
     "mergeq",
     "11th to merge",
-    1794963137694
+    1794963136675
+   ],
+   "T-4770": [
+    "mergeq",
+    "13th to merge",
+    1794964696675
+   ],
+   "T-4774": [
+    "mergeq",
+    "13th to merge",
+    1794964696675
    ],
    "T-4699": [
     "mergeq",
-    "16th to merge",
-    1794961757694
+    "18th to merge",
+    1794961816675
    ],
    "T-4493": [
     "testing",
     "its own tests, in its copy",
-    1794964637694
+    1794964636675
    ]
   },
   "nm": {
@@ -568,6 +598,8 @@
    "T-4782": "Stop a Pro store test at its first stalled wait",
    "T-4719": "Check finished work before it ships",
    "T-4720": "Check finished work before it ships",
+   "T-4770": "Re-estimate the release date from measured build speed",
+   "T-4774": "Measure what one refresh tap costs the app",
    "T-4699": "Check finished work before it ships",
    "T-4493": "Cut clutter text on the pages still carrying it"
   },
@@ -585,6 +617,8 @@
    "T-4782": "Idris",
    "T-4719": "Odalys",
    "T-4720": "Pernille",
+   "T-4770": "Ines",
+   "T-4774": "Idris",
    "T-4699": "Pernille",
    "T-4493": "Maren",
    "T-0191": "Idris",
@@ -592,11 +626,11 @@
   }
  },
  "ln": {
-  "at": "2026-11-18T01:17:17Z",
+  "at": "2026-11-18T01:20:16Z",
   "mq": {
    "n": {
     "checking": 0,
-    "inline": 14,
+    "inline": 16,
     "conflicted": 2,
     "failed": 0,
     "held": 1,
@@ -605,12 +639,12 @@
    },
    "m": {
     "checking": null,
-    "inline": 40,
-    "conflicted": 742,
+    "inline": 36,
+    "conflicted": 745,
     "failed": null,
-    "held": 1548,
+    "held": 1551,
     "retry": null,
-    "parked": 497
+    "parked": 500
    },
    "cur": [],
    "ld": [
@@ -620,16 +654,16 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-18T01:16:49Z",
-    "ld": 2.39,
+    "at": "2026-11-18T01:20:17Z",
+    "ld": 2.72,
     "c": 8,
     "sb": 0,
     "dk": [
-     19.9,
+     19.5,
      228.3
     ],
     "ss": [
-     176.3,
+     175.9,
      953.7
     ],
     "sn": []
@@ -655,12 +689,12 @@
    "m": "opus",
    "e": "high",
    "t": "Work session \u2013 2 tasks",
-   "at": "2026-11-17T19:10:01-05:00"
+   "at": "2026-11-17T20:20:21-05:00"
   }
  ],
  "reply": {
-  "sent": "2026-11-18T00:26:15Z",
-  "seconds": 198.0
+  "sent": "2026-11-18T01:17:58Z",
+  "seconds": 142.0
  },
  "inbox": [],
  "trimmed": [
@@ -675,13 +709,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 1,
+  "main": 2,
   "lanes": 0,
-  "total": 1,
-  "at": "8:17 PM",
+  "total": 2,
+  "at": "8:20 PM",
   "why": "",
-  "at_iso": "2026-11-18T01:17:00+00:00",
+  "at_iso": "2026-11-18T01:20:00+00:00",
   "started": "7:10 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 7:10 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 8:17 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 7:10 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 8:20 PM ET</p></section>"
  }
 }

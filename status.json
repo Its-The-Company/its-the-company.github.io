@@ -1,30 +1,11 @@
 {
  "schema": 1,
- "at": "2026-11-18T06:39:44.740593+00:00",
+ "at": "2026-11-18T06:43:03.538790+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-18T00:47:38-05:00",
   "flow": [
-   {
-    "t": "T-4796",
-    "name": "Say which premades carry the Pro tag",
-    "acct": "Personal b",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1794978480
-     },
-     {
-      "s": "macbook",
-      "at": 1794980845
-     },
-     {
-      "s": "landing",
-      "at": 1794981899
-     }
-    ]
-   },
    {
     "t": "T-4516",
     "name": "Prove the premade settings routes in a UI test",
@@ -63,6 +44,29 @@
      {
       "s": "macbook",
       "at": 1794947569
+     }
+    ]
+   },
+   {
+    "t": "T-4796",
+    "name": "Say which premades carry the Pro tag",
+    "acct": "Personal b",
+    "steps": [
+     {
+      "s": "testq",
+      "at": 1794978480
+     },
+     {
+      "s": "macbook",
+      "at": 1794980845
+     },
+     {
+      "s": "landing",
+      "at": 1794981899
+     },
+     {
+      "s": "testq",
+      "at": 1794984017
      }
     ]
    }
@@ -161,7 +165,7 @@
    "task": "[build] T-4688 Developer mode for Pro",
    "model": "opus",
    "started": "2026-11-18T05:56:56.560Z",
-   "seconds": 2568,
+   "seconds": 2766,
    "finished": null,
    "effort": "high"
   },
@@ -170,7 +174,7 @@
    "task": "[build] T-4767 button handler exit as error",
    "model": "opus",
    "started": "2026-11-18T06:37:03.752Z",
-   "seconds": 160,
+   "seconds": 359,
    "finished": null,
    "effort": "high"
   }
@@ -238,7 +242,7 @@
   "week_pct": 46.38,
   "usage_pct": 53.1,
   "work_pct": 80.8,
-  "read_at": "2026-11-18T06:40:00+00:00",
+  "read_at": "2026-11-18T06:43:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -251,6 +255,54 @@
     "at": "2026-11-18T01:19:53-05:00",
     "n": "Evan",
     "src": "plan-a"
+   },
+   {
+    "lane": "b2",
+    "task": "T-4854",
+    "w": "Idris",
+    "k": "review",
+    "t": "Review the button args number limit",
+    "m": "sonnet",
+    "e": "high",
+    "at": "2026-11-18T01:41:10-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
+   },
+   {
+    "lane": "b2",
+    "task": "T-4852",
+    "w": "Pernille",
+    "k": "review",
+    "t": "Check finished work before it ships",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-18T01:41:10-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
+   },
+   {
+    "lane": "b3",
+    "task": "T-4301",
+    "w": "Idris",
+    "k": "fix",
+    "t": "Read fresh Pro gates after a queued wait",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-18T01:41:08-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
+   },
+   {
+    "lane": "b3",
+    "task": "T-4644",
+    "w": "Idris",
+    "k": "fix",
+    "t": "Check the ladder's files in the gate build's own tests",
+    "m": "sonnet",
+    "e": "medium",
+    "at": "2026-11-18T01:41:08-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
    }
   ]
  },
@@ -272,7 +324,7 @@
   }
  ],
  "disk": {
-  "free_gb": 31,
+  "free_gb": 28,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -281,14 +333,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-18T01:36:00-05:00",
+   "at": "2026-11-18T01:42:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 10,
-  "at": "2026-11-18T01:40:00-05:00",
+  "at": "2026-11-18T01:43:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -523,46 +575,40 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-18T06:39:44Z",
+  "at": "2026-11-18T06:43:03Z",
   "s": {
-   "T-4787": [
-    "mergeq",
-    "1st to merge",
-    1794982904740
-   ],
    "T-4796": [
-    "mergeq",
-    "2nd to merge",
-    1794975224740
+    "merging",
+    "Host checks on the Mac mini",
+    1794984063538
    ],
    "T-4442": [
     "mergeq",
-    "3rd to merge",
-    1794975344740
+    "2nd to merge",
+    1794975303538
    ],
    "T-4516": [
     "mergetest",
-    "Xcode checks on the MacBook, 4th to merge",
-    1794983864740
+    "Xcode checks on the MacBook, 3rd to merge",
+    1794983823538
    ],
    "T-4784": [
     "mergeq",
-    "5th to merge",
-    1794982784740
+    "4th to merge",
+    1794982803538
    ],
    "T-4688": [
     "testing",
     "its own tests, in its copy",
-    1794983564740
+    1794983523538
    ],
    "T-4767": [
     "testing",
     "its own tests, in its copy",
-    1794983984740
+    1794984123538
    ]
   },
   "nm": {
-   "T-4787": "Count failed merges by cause: bad test or broken code",
    "T-4796": "Say which premades carry the Pro tag",
    "T-4442": "Tidy the bundled first renders' small edges",
    "T-4516": "Prove the premade settings routes in a UI test",
@@ -571,7 +617,6 @@
    "T-4767": "Treat a button handler's exit as the script's error"
   },
   "wk": {
-   "T-4787": "Odalys",
    "T-4796": "Ines",
    "T-4442": "Idris",
    "T-4516": "Idris",
@@ -582,34 +627,42 @@
   }
  },
  "ln": {
-  "at": "2026-11-18T06:39:44Z",
+  "at": "2026-11-18T06:43:03Z",
   "mq": {
    "n": {
-    "checking": 1,
-    "inline": 4,
+    "checking": 2,
+    "inline": 2,
     "conflicted": 3,
     "failed": 0,
     "held": 1,
-    "retry": 1,
+    "retry": 0,
     "parked": 10
    },
    "m": {
-    "checking": 2,
-    "inline": 82,
-    "conflicted": 516,
+    "checking": 4,
+    "inline": 85,
+    "conflicted": 519,
     "failed": null,
-    "held": 1870,
-    "retry": 136,
-    "parked": 436
+    "held": 1874,
+    "retry": null,
+    "parked": 439
    },
    "cur": [
+    [
+     [
+      "T-4796"
+     ],
+     "Mac tests",
+     "Mac mini",
+     2
+    ],
     [
      [
       "T-4516"
      ],
      "iPhone app tests",
      "MacBook",
-     2
+     6
     ]
    ],
    "ld": [
@@ -619,12 +672,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-18T06:39:58Z",
-    "ld": 17.2,
+    "at": "2026-11-18T06:42:36Z",
+    "ld": 37.33,
     "c": 8,
     "sb": 2,
     "dk": [
-     29.9,
+     27.8,
      228.3
     ],
     "ss": [
@@ -667,6 +720,24 @@
    "e": "high",
    "t": "Work session \u2013 1 task",
    "at": "2026-11-18T01:19:52-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Jeremy's Account",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session \u2013 2 tasks",
+   "at": "2026-11-18T01:41:09-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Jeremy's Account",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session \u2013 2 tasks",
+   "at": "2026-11-18T01:41:08-05:00"
   }
  ],
  "reply": {
@@ -687,12 +758,12 @@
  ],
  "agents_now": {
   "main": 2,
-  "lanes": 1,
-  "total": 3,
-  "at": "1:40 AM",
+  "lanes": 3,
+  "total": 5,
+  "at": "1:43 AM",
   "why": "",
-  "at_iso": "2026-11-18T06:40:00+00:00",
+  "at_iso": "2026-11-18T06:43:00+00:00",
   "started": "12:47 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 12:47 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 1:40 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 2, started 12:47 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 1:43 AM ET</p></section>"
  }
 }

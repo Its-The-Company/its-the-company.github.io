@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-18T02:06:13.823955+00:00",
+ "at": "2026-11-18T02:09:21.163569+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -146,7 +146,7 @@
    "task": "[tools] T-4806 fix merge time-outs",
    "model": "opus",
    "started": "2026-11-18T01:18:02.621Z",
-   "seconds": 2891,
+   "seconds": 3078,
    "finished": null,
    "effort": "high"
   },
@@ -155,12 +155,39 @@
    "task": "[test] T-4807 fix bad tests that failed merges",
    "model": "opus",
    "started": "2026-11-18T01:44:52.149Z",
-   "seconds": 1281,
+   "seconds": 1469,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-4814 split the merge limit",
+   "model": "opus",
+   "started": "2026-11-18T02:08:31.145Z",
+   "seconds": 50,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-4810 every wait names a task or issue",
+   "model": "opus",
+   "started": "2026-11-18T02:08:44.734Z",
+   "seconds": 36,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "maren",
+   "task": "[site] T-4813 Home's numbers update live",
+   "model": "opus",
+   "started": "2026-11-18T02:08:56.638Z",
+   "seconds": 24,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Odalys, Pernille",
+ "who": "Odalys x3, Pernille, Maren",
  "recent": [
   {
    "name": "ines",
@@ -247,7 +274,7 @@
   "week_pct": 43.81,
   "usage_pct": 53.5,
   "work_pct": 81.2,
-  "read_at": "2026-11-18T02:06:00+00:00",
+  "read_at": "2026-11-18T02:09:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -284,7 +311,7 @@
  "lock_in": {
   "on": false,
   "pool": 7,
-  "at": "2026-11-17T21:06:00-05:00",
+  "at": "2026-11-17T21:09:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -319,6 +346,15 @@
    "effort": "high"
   },
   {
+   "name": "Maren",
+   "state": "running",
+   "task": "[site] T-4813 Home's numbers update live",
+   "model": "opus",
+   "since": "2026-11-18T02:08:56.638Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
    "name": "Idris",
    "state": "next",
    "task": "Idris, P1, from T-4755 (Investor an Investor...",
@@ -338,14 +374,6 @@
    "name": "Wrenna",
    "state": "next",
    "task": "Wrenna, P2, T-2375 continuation (B-staged item 3...",
-   "model": null,
-   "since": null,
-   "next": []
-  },
-  {
-   "name": "Maren",
-   "state": "next",
-   "task": "Maren, P2, found on T-3366 (11-07): in...",
    "model": null,
    "since": null,
    "next": []
@@ -372,6 +400,36 @@
     "at": "2026-11-18T01:44:52.149Z",
     "o": "c",
     "task": "T-4807"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Split the merge limit by what a change touches",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-18T02:08:31.145Z",
+    "o": "c",
+    "task": "T-4814"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Make every wait name a task or an Investor issue",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-18T02:08:44.734Z",
+    "o": "c",
+    "task": "T-4810"
+   },
+   {
+    "w": "Maren",
+    "k": "site",
+    "t": "Home's numbers update within a minute",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-18T02:08:56.638Z",
+    "o": "c",
+    "task": "T-4813"
    }
   ],
   "src": "plan",
@@ -539,87 +597,87 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-18T02:06:05Z",
+  "at": "2026-11-18T02:09:21Z",
   "s": {
    "T-4761": [
     "mergetest",
     "Xcode checks on the MacBook, 1st to merge",
-    1794966905735
+    1794966921163
    ],
    "T-4659": [
     "mergetest",
     "Xcode checks on the MacBook, 2nd to merge",
-    1794966905735
+    1794966921163
    ],
    "T-4643": [
     "mergeq",
     "3rd to merge",
-    1794961625735
+    1794961641163
    ],
    "T-4697": [
     "mergeq",
     "4th to merge",
-    1794961685735
+    1794961701163
    ],
    "T-4698": [
     "mergeq",
     "5th to merge",
-    1794961745735
+    1794961761163
    ],
    "T-4699": [
     "mergeq",
     "6th to merge",
-    1794961805735
+    1794961761163
    ],
    "T-4782": [
     "mergeq",
     "8th to merge",
-    1794962165735
+    1794962181163
    ],
    "T-4787": [
     "mergeq",
     "10th to merge",
-    1794962645735
+    1794962661163
    ],
    "T-4719": [
     "mergeq",
     "11th to merge",
-    1794963125735
+    1794963141163
    ],
    "T-4720": [
     "mergeq",
     "11th to merge",
-    1794963125735
+    1794963141163
    ],
    "T-4750": [
     "mergeq",
     "12th to merge",
-    1794963185735
+    1794963201163
    ],
    "T-4781": [
     "mergeq",
     "13th to merge",
-    1794964685735
+    1794964701163
    ],
    "T-4770": [
     "mergeq",
     "13th to merge",
-    1794964685735
+    1794964701163
    ],
    "T-4774": [
     "mergeq",
     "13th to merge",
-    1794964685735
+    1794964701163
    ],
    "T-4806": [
     "merging",
     "Mac tests at the main gate",
-    1794967565735
+    1794967581163
    ],
    "T-4807": [
     "testing",
     "its own tests, in its copy",
-    1794966845735
+    1794966801163
    ]
   },
   "nm": {
@@ -662,7 +720,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-18T02:06:05Z",
+  "at": "2026-11-18T02:09:21Z",
   "mq": {
    "n": {
     "checking": 2,
@@ -674,13 +732,13 @@
     "parked": 6
    },
    "m": {
-    "checking": 11,
-    "inline": 78,
-    "conflicted": 791,
+    "checking": 14,
+    "inline": 81,
+    "conflicted": 794,
     "failed": null,
-    "held": 1597,
+    "held": 1600,
     "retry": null,
-    "parked": 546
+    "parked": 550
    },
    "cur": [
     [
@@ -689,7 +747,7 @@
      ],
      "iPhone app tests, sent and waiting its turn",
      "MacBook",
-     11
+     14
     ],
     [
      [
@@ -697,7 +755,7 @@
      ],
      "iPhone app tests, sent and waiting its turn",
      "MacBook",
-     11
+     14
     ]
    ],
    "ld": [
@@ -707,12 +765,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-18T02:05:40Z",
-    "ld": 3.91,
+    "at": "2026-11-18T02:09:23Z",
+    "ld": 4.1,
     "c": 8,
     "sb": 0,
     "dk": [
-     20.0,
+     21.0,
      228.3
     ],
     "ss": [
@@ -741,13 +799,13 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 2 tasks",
-   "at": "2026-11-17T20:56:21-05:00"
+   "t": "Work session \u2013 5 tasks",
+   "at": "2026-11-17T21:08:16-05:00"
   }
  ],
  "reply": {
-  "sent": "2026-11-18T01:55:17Z",
-  "seconds": 62.0
+  "sent": "2026-11-18T02:06:34Z",
+  "seconds": 101.0
  },
  "inbox": [],
  "trimmed": [
@@ -764,13 +822,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 2,
+  "main": 5,
   "lanes": 0,
-  "total": 2,
-  "at": "9:06 PM",
+  "total": 5,
+  "at": "9:09 PM",
   "why": "",
-  "at_iso": "2026-11-18T02:06:00+00:00",
+  "at_iso": "2026-11-18T02:09:00+00:00",
   "started": "7:10 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 7:10 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:06 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 5, started 7:10 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:09 PM ET</p></section>"
  }
 }

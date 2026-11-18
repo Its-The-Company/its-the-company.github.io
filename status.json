@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-18T01:05:12.920098+00:00",
+ "at": "2026-11-18T01:08:16.571206+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -110,7 +110,7 @@
     "end_at": 1794958343
    }
   ],
-  "landed": 43,
+  "landed": 42,
   "failed": 9
  },
  "workers": [
@@ -119,22 +119,30 @@
    "task": "[tools] T-4786 correct bad tests holding merges",
    "model": "opus",
    "started": "2026-11-18T00:45:18.571Z",
-   "seconds": 1194,
+   "seconds": 1378,
    "finished": null,
    "effort": "high"
   },
+  {
+   "name": "maren",
+   "task": "[site] T-4493 land the clutter cut",
+   "model": "opus",
+   "started": "2026-11-18T01:07:36.770Z",
+   "seconds": 39,
+   "finished": null,
+   "effort": "high"
+  }
+ ],
+ "who": "Pernille, Maren",
+ "recent": [
   {
    "name": "idris",
    "task": "[build] T-2296 land the gallery work",
    "model": "opus",
    "started": "2026-11-18T00:13:00.213Z",
-   "seconds": 3132,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Pernille, Idris",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-18T01:07:02.800000+00:00"
+  },
   {
    "name": "maren",
    "task": "[design] T-4746 land the name wording fix",
@@ -147,8 +155,8 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 430,
-  "blocked_count": 58
+  "runnable_count": 429,
+  "blocked_count": 57
  },
  "meter": {
   "five_hour": {
@@ -196,7 +204,7 @@
   "week_pct": 43.81,
   "usage_pct": 53.5,
   "work_pct": 81.2,
-  "read_at": "2026-11-18T01:05:00+00:00",
+  "read_at": "2026-11-18T01:08:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -270,7 +278,7 @@
  "lock_in": {
   "on": false,
   "pool": 7,
-  "at": "2026-11-17T20:05:00-05:00",
+  "at": "2026-11-17T20:08:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -287,15 +295,6 @@
  },
  "lanes": [
   {
-   "name": "Idris",
-   "state": "running",
-   "task": "[build] T-2296 land the gallery work",
-   "model": "opus",
-   "since": "2026-11-18T00:13:00.213Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
    "name": "Pernille",
    "state": "running",
    "task": "[tools] T-4786 correct bad tests holding merges",
@@ -303,6 +302,23 @@
    "since": "2026-11-18T00:45:18.571Z",
    "next": [],
    "effort": "high"
+  },
+  {
+   "name": "Maren",
+   "state": "running",
+   "task": "[site] T-4493 land the clutter cut",
+   "model": "opus",
+   "since": "2026-11-18T01:07:36.770Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
+   "name": "Idris",
+   "state": "next",
+   "task": "Idris, P1, from T-4755 (Investor an Investor...",
+   "model": null,
+   "since": null,
+   "next": []
   },
   {
    "name": "Odalys",
@@ -327,28 +343,10 @@
    "model": null,
    "since": null,
    "next": []
-  },
-  {
-   "name": "Maren",
-   "state": "next",
-   "task": "Maren, P2, found on T-3366 (11-07): in...",
-   "model": null,
-   "since": null,
-   "next": []
   }
  ],
  "tasks": {
   "run": [
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "Finish the gallery pager, iPad layout and detail foot",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-18T00:13:00.213Z",
-    "o": "c",
-    "task": "T-2296"
-   },
    {
     "w": "Pernille",
     "k": "tools",
@@ -358,6 +356,16 @@
     "at": "2026-11-18T00:45:18.571Z",
     "o": "c",
     "task": "T-4786"
+   },
+   {
+    "w": "Maren",
+    "k": "site",
+    "t": "Cut clutter text on the pages still carrying it",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-18T01:07:36.770Z",
+    "o": "i",
+    "task": "T-4493"
    }
   ],
   "src": "plan",
@@ -435,30 +443,38 @@
   ],
   "done": [
    {
-    "w": "Odalys",
-    "t": "A second person read the latest Settings and Pro work (the Ask to Buy and failed-restore test...",
-    "at": "2026-11-17T20:04:00-05:00"
-   },
-   {
-    "w": "Pernille",
-    "t": "An independent read of the plan for the 1.0 showcase widgets passed with fixes: before the...",
-    "at": "2026-11-17T20:04:00-05:00"
+    "w": "Idris",
+    "t": "The Gallery screen is done: every premade has real Simulator pictures in each widget size and...",
+    "at": "2026-11-17T20:06:00-05:00"
    },
    {
     "w": "Idris",
-    "t": "When a Shortcut asks for a ready-made Pro script and the App Store doesn't answer, it now stops...",
-    "at": "2026-11-17T18:39:00-05:00"
+    "t": "The Gallery and a premade's page now have light and dark screenshots on iPhone and iPad, and the...",
+    "at": "2026-11-17T20:06:00-05:00"
+   },
+   {
+    "w": "Odalys",
+    "t": "A second person read the latest Settings and Pro work (the Ask to Buy and failed-restore test...",
+    "at": "2026-11-17T20:04:00-05:00"
    }
   ],
   "count": {
-   "next": 430,
-   "wait": 27,
+   "next": 429,
+   "wait": 26,
    "blocked": 31,
    "you": 8
   },
   "fin": {
-   "n": 2,
+   "n": 4,
    "rows": [
+    [
+     "T-0191",
+     "Build the gallery screen and..."
+    ],
+    [
+     "T-2268",
+     "Finish the gallery screens..."
+    ],
     [
      "T-4719",
      "Check finished work before..."
@@ -509,82 +525,77 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-18T01:05:12Z",
+  "at": "2026-11-18T01:08:03Z",
   "s": {
    "T-4697": [
-    "merging",
-    "Merging onto main",
-    1794963912920
+    "mergeq",
+    "1st to merge",
+    1794959883923
    ],
    "T-4750": [
     "mergeq",
-    "1st to merge",
-    1794960192920
+    "2nd to merge",
+    1794960183923
    ],
    "T-4698": [
     "mergeq",
-    "2nd to merge",
-    1794960252920
+    "3rd to merge",
+    1794960243923
    ],
    "T-4634": [
     "mergeq",
-    "3rd to merge",
-    1794960432920
+    "4th to merge",
+    1794960423923
    ],
    "T-4610": [
     "mergeq",
-    "4th to merge",
-    1794960372920
+    "5th to merge",
+    1794960363923
    ],
    "T-4787": [
     "mergeq",
-    "5th to merge",
-    1794962652920
+    "6th to merge",
+    1794962643923
    ],
    "T-4643": [
     "mergeq",
-    "5th to merge",
-    1794962652920
+    "6th to merge",
+    1794962643923
    ],
    "T-4782": [
     "mergeq",
     "7th to merge",
-    1794963132920
+    1794963123923
    ],
    "T-4719": [
     "mergeq",
     "7th to merge",
-    1794963132920
+    1794963123923
    ],
    "T-4720": [
     "mergeq",
     "7th to merge",
-    1794963132920
+    1794963123923
    ],
    "T-4659": [
     "mergeq",
     "8th to merge",
-    1794963192920
+    1794963183923
    ],
    "T-4761": [
     "mergeq",
     "8th to merge",
-    1794963192920
+    1794963183923
    ],
    "T-4699": [
     "mergeq",
     "14th to merge",
-    1794961812920
-   ],
-   "T-2296": [
-    "merging",
-    "Mac tests at the main gate",
-    1794963852920
+    1794961803923
    ],
    "T-4786": [
     "merging",
     "Mac tests at the main gate",
-    1794963912920
+    1794964083923
    ],
    "T-4774": [
     "merged",
@@ -613,7 +624,6 @@
    "T-4659": "Prove a widget button's tap reaches its Python handler",
    "T-4761": "Keep one layout for the widget state format",
    "T-4699": "Check finished work before it ships",
-   "T-2296": "Finish the gallery pager, iPad layout and detail foot",
    "T-4786": "Correct every bad test that holds a merge",
    "T-4774": "Measure what one refresh tap costs the app",
    "T-4770": "Re-estimate the release date from measured build speed"
@@ -632,60 +642,52 @@
    "T-4659": "Idris",
    "T-4761": "Idris",
    "T-4699": "Pernille",
-   "T-2296": "Idris",
    "T-4786": "Pernille",
    "T-4774": "Idris",
-   "T-4770": "Ines"
+   "T-4770": "Ines",
+   "T-0191": "Idris",
+   "T-2268": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-18T01:05:12Z",
+  "at": "2026-11-18T01:08:03Z",
   "mq": {
    "n": {
-    "checking": 1,
-    "inline": 12,
+    "checking": 0,
+    "inline": 13,
     "conflicted": 2,
     "failed": 0,
     "held": 1,
     "retry": 1,
-    "parked": 8
+    "parked": 6
    },
    "m": {
-    "checking": 0,
-    "inline": 21,
-    "conflicted": 730,
+    "checking": null,
+    "inline": 24,
+    "conflicted": 733,
     "failed": null,
-    "held": 1536,
-    "retry": 35,
-    "parked": 276
+    "held": 1539,
+    "retry": 37,
+    "parked": 488
    },
-   "cur": [
-    [
-     [
-      "T-4697"
-     ],
-     "going onto main",
-     "Mac mini",
-     0
-    ]
-   ],
+   "cur": [],
    "ld": [
-    46,
-    "2026-11-18T01:04:39Z"
+    47,
+    "2026-11-18T01:05:54Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-18T01:05:13Z",
-    "ld": 2.86,
+    "at": "2026-11-18T01:08:04Z",
+    "ld": 2.07,
     "c": 8,
     "sb": 0,
     "dk": [
-     17.8,
+     17.7,
      228.3
     ],
     "ss": [
-     174.1,
+     176.3,
      953.7
     ],
     "sn": []
@@ -710,7 +712,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 4 tasks",
+   "t": "Work session \u2013 2 tasks",
    "at": "2026-11-17T19:10:01-05:00"
   },
   {
@@ -743,10 +745,10 @@
   "main": 2,
   "lanes": 1,
   "total": 3,
-  "at": "8:05 PM",
+  "at": "8:08 PM",
   "why": "",
-  "at_iso": "2026-11-18T01:05:00+00:00",
+  "at_iso": "2026-11-18T01:08:00+00:00",
   "started": "7:10 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 7:10 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 8:05 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 7:10 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 8:08 PM ET</p></section>"
  }
 }

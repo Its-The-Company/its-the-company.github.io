@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-18T07:28:27.064687+00:00",
+ "at": "2026-11-18T07:31:32.526638+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -124,22 +124,21 @@
    "task": "[build] T-4688 Developer mode for Pro",
    "model": "opus",
    "started": "2026-11-18T05:56:56.560Z",
-   "seconds": 5490,
+   "seconds": 5675,
    "finished": null,
    "effort": "high"
-  },
+  }
+ ],
+ "who": "Idris",
+ "recent": [
   {
    "name": "pernille",
    "task": "[build] T-4767 button handler exit as error",
    "model": "opus",
    "started": "2026-11-18T06:37:03.752Z",
-   "seconds": 3083,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Idris, Pernille",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-18T07:31:31.948000+00:00"
+  },
   {
    "name": "pernille",
    "task": "[build] T-4564 button action run path",
@@ -201,7 +200,7 @@
   "week_pct": 46.38,
   "usage_pct": 53.1,
   "work_pct": 80.8,
-  "read_at": "2026-11-18T07:28:00+00:00",
+  "read_at": "2026-11-18T07:31:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -334,7 +333,7 @@
   }
  ],
  "disk": {
-  "free_gb": 21,
+  "free_gb": 19,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -343,14 +342,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-18T02:22:00-05:00",
+   "at": "2026-11-18T02:29:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 10,
-  "at": "2026-11-18T02:28:00-05:00",
+  "at": "2026-11-18T02:31:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -377,12 +376,11 @@
   },
   {
    "name": "Pernille",
-   "state": "running",
-   "task": "[build] T-4767 button handler exit as error",
-   "model": "opus",
-   "since": "2026-11-18T06:37:03.752Z",
-   "next": [],
-   "effort": "high"
+   "state": "next",
+   "task": "Pernille, P0, Investor an Investor c6963972184 (6:23 PM...",
+   "model": null,
+   "since": null,
+   "next": []
   },
   {
    "name": "Odalys",
@@ -428,16 +426,6 @@
     "at": "2026-11-18T05:56:56.560Z",
     "o": "c",
     "task": "T-4688"
-   },
-   {
-    "w": "Pernille",
-    "k": "build",
-    "t": "Treat a button handler's exit as the script's error",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-18T06:37:03.752Z",
-    "o": "c",
-    "task": "T-4767"
    }
   ],
   "src": "plan",
@@ -516,6 +504,11 @@
   "done": [
    {
     "w": "Pernille",
+    "t": "When a widget button's code or its drawing code stops itself early with sys.exit(), the run now...",
+    "at": "2026-11-18T02:31:00-05:00"
+   },
+   {
+    "w": "Pernille",
     "t": "A tap on a widget button now runs its Python action and redraws the widget in one go, and...",
     "at": "2026-11-18T01:36:00-05:00"
    },
@@ -523,11 +516,6 @@
     "w": "Operator",
     "t": "Main's own tests pass again on a clean copy of main (3303c72a9), so finished work is no longer...",
     "at": "2026-11-18T00:58:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "The supervisor now runs the bottleneck watch on every tick, so a merge queue or another...",
-    "at": "2026-11-18T00:30:00-05:00"
    }
   ],
   "count": {
@@ -537,8 +525,12 @@
    "you": 10
   },
   "fin": {
-   "n": 1,
+   "n": 2,
    "rows": [
+    [
+     "T-4767",
+     "Treat a button handler's..."
+    ],
     [
      "T-4564",
      "Run a button's action and..."
@@ -585,42 +577,42 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-18T07:28:17Z",
+  "at": "2026-11-18T07:31:19Z",
   "s": {
    "T-4301": [
     "merging",
     "Host checks on the Mac mini",
-    1794986477365
+    1794986479009
    ],
    "T-4688": [
     "merging",
     "Mac tests at the main gate",
-    1794986837365
+    1794986839009
    ],
    "T-4771": [
     "testq",
     "1st for a Simulator",
-    1794986597365
+    1794986599009
    ],
    "T-4783": [
     "testq",
     "1st for a Simulator",
-    1794986597365
+    1794986599009
    ],
    "T-4533": [
     "testq",
     "2nd for a Simulator",
-    1794986597365
+    1794986599009
    ],
    "T-4784": [
     "testq",
     "2nd for a Simulator",
-    1794986597365
+    1794986599009
    ],
    "T-4574": [
     "testq",
     "3rd for a Simulator",
-    1794986777365
+    1794986779009
    ],
    "T-4767": [
     "merged",
@@ -652,7 +644,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-18T07:28:17Z",
+  "at": "2026-11-18T07:31:19Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -664,13 +656,13 @@
     "parked": 11
    },
    "m": {
-    "checking": 7,
+    "checking": 10,
     "inline": null,
-    "conflicted": 564,
+    "conflicted": 567,
     "failed": null,
-    "held": 1919,
+    "held": 1922,
     "retry": null,
-    "parked": 405
+    "parked": 408
    },
    "cur": [
     [
@@ -679,7 +671,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     7
+     10
     ]
    ],
    "ld": [
@@ -689,12 +681,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-18T07:28:18Z",
-    "ld": 8.35,
+    "at": "2026-11-18T07:31:19Z",
+    "ld": 4.95,
     "c": 8,
     "sb": 2,
     "dk": [
-     18.5,
+     18.6,
      228.3
     ],
     "ss": [
@@ -801,13 +793,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 2,
+  "main": 1,
   "lanes": 6,
-  "total": 8,
-  "at": "2:28 AM",
+  "total": 7,
+  "at": "2:31 AM",
   "why": "",
-  "at_iso": "2026-11-18T07:28:00+00:00",
+  "at_iso": "2026-11-18T07:31:00+00:00",
   "started": "12:47 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>8</b> agents running now</p><p class=\"an-sub\">Main session 2, started 12:47 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 6 sessions \u00b7 as of 2:28 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 1, started 12:47 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 6 sessions \u00b7 as of 2:31 AM ET</p></section>"
  }
 }

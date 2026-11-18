@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-18T06:18:28.127124+00:00",
+ "at": "2026-11-18T06:21:29.011082+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -135,7 +135,7 @@
    "task": "[build] T-4688 Developer mode for Pro",
    "model": "opus",
    "started": "2026-11-18T05:56:56.560Z",
-   "seconds": 1291,
+   "seconds": 1472,
    "finished": null,
    "effort": "high"
   },
@@ -144,7 +144,7 @@
    "task": "[build] T-4564 button action run path",
    "model": "opus",
    "started": "2026-11-18T05:57:37.954Z",
-   "seconds": 1250,
+   "seconds": 1431,
    "finished": null,
    "effort": "high"
   }
@@ -203,8 +203,21 @@
   "week_pct": 46.38,
   "usage_pct": 53.1,
   "work_pct": 80.8,
-  "read_at": "2026-11-18T06:18:00+00:00",
-  "running": []
+  "read_at": "2026-11-18T06:21:00+00:00",
+  "running": [
+   {
+    "lane": "a",
+    "task": "T-0011",
+    "w": "Idris",
+    "k": "measure",
+    "t": "Check motion, health and battery sensors on a device",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-18T01:19:53-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   }
+  ]
  },
  "api_credits": [
   {
@@ -240,7 +253,7 @@
  "lock_in": {
   "on": false,
   "pool": 9,
-  "at": "2026-11-18T01:18:00-05:00",
+  "at": "2026-11-18T01:21:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -470,42 +483,47 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-18T06:18:19Z",
+  "at": "2026-11-18T06:21:15Z",
   "s": {
    "T-4823": [
     "mergeq",
     "1st to merge",
-    1794981979848
+    1794981975861
    ],
    "T-4796": [
     "mergeq",
     "2nd to merge",
-    1794975199848
+    1794975195861
    ],
    "T-4442": [
     "mergeq",
     "3rd to merge",
-    1794975319848
+    1794975315861
    ],
    "T-4516": [
     "mergeq",
     "4th to merge",
-    1794977539848
+    1794977535861
+   ],
+   "T-4784": [
+    "mergeq",
+    "5th to merge",
+    1794982815861
    ],
    "T-4841": [
     "mergeq",
-    "5th to merge",
-    1794981919848
+    "6th to merge",
+    1794981915861
    ],
    "T-4564": [
     "merging",
     "Mac tests at the main gate \u00b7 12 groups of tests done",
-    1794982219848
+    1794982215861
    ],
    "T-4688": [
     "merging",
-    "Mac tests at the main gate \u00b7 11 groups of tests done",
-    1794981859848
+    "Mac tests at the main gate",
+    1794982815861
    ]
   },
   "nm": {
@@ -513,6 +531,7 @@
    "T-4796": "Say which premades carry the Pro tag",
    "T-4442": "Tidy the bundled first renders' small edges",
    "T-4516": "Prove the premade settings routes in a UI test",
+   "T-4784": "Pin the refresh glyph's button style in a test",
    "T-4841": "Decide whether the widget probe asks for HealthKit",
    "T-4564": "Run a button's action and redraw in one run",
    "T-4688": "Build a Developer mode for testing Pro"
@@ -522,31 +541,32 @@
    "T-4796": "Ines",
    "T-4442": "Idris",
    "T-4516": "Idris",
+   "T-4784": "Idris",
    "T-4841": "Ines",
    "T-4564": "Pernille",
    "T-4688": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-18T06:18:19Z",
+  "at": "2026-11-18T06:21:15Z",
   "mq": {
    "n": {
     "checking": 0,
-    "inline": 5,
+    "inline": 6,
     "conflicted": 3,
     "failed": 0,
     "held": 1,
-    "retry": 1,
+    "retry": 0,
     "parked": 10
    },
    "m": {
     "checking": null,
-    "inline": 86,
-    "conflicted": 494,
+    "inline": 52,
+    "conflicted": 497,
     "failed": null,
-    "held": 1849,
-    "retry": 161,
-    "parked": 414
+    "held": 1852,
+    "retry": null,
+    "parked": 417
    },
    "cur": [],
    "ld": [
@@ -556,12 +576,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-18T06:18:20Z",
-    "ld": 2.68,
+    "at": "2026-11-18T06:20:51Z",
+    "ld": 2.49,
     "c": 8,
     "sb": 3,
     "dk": [
-     32.4,
+     31.8,
      228.3
     ],
     "ss": [
@@ -596,6 +616,15 @@
    "e": "high",
    "t": "Work session \u2013 2 tasks",
    "at": "2026-11-18T00:48:26-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Evan's Account",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session \u2013 1 task",
+   "at": "2026-11-18T01:19:52-05:00"
   }
  ],
  "reply": {
@@ -615,12 +644,12 @@
  ],
  "agents_now": {
   "main": 2,
-  "lanes": 0,
-  "total": 2,
-  "at": "1:18 AM",
+  "lanes": 1,
+  "total": 3,
+  "at": "1:21 AM",
   "why": "",
-  "at_iso": "2026-11-18T06:18:00+00:00",
+  "at_iso": "2026-11-18T06:21:00+00:00",
   "started": "12:47 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 12:47 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 1:18 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 12:47 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 1:21 AM ET</p></section>"
  }
 }

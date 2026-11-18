@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-18T01:41:43.264722+00:00",
+ "at": "2026-11-18T01:44:43.634137+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -131,22 +131,21 @@
    "task": "[tools] T-4806 fix merge time-outs",
    "model": "opus",
    "started": "2026-11-18T01:18:02.621Z",
-   "seconds": 1420,
+   "seconds": 1601,
    "finished": null,
    "effort": "high"
-  },
+  }
+ ],
+ "who": "Odalys",
+ "recent": [
   {
    "name": "ines",
    "task": "[plan] T-4493 decide the refused test fix",
    "model": "opus",
    "started": "2026-11-18T01:37:46.011Z",
-   "seconds": 237,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Odalys, Ines",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-18T01:43:19.873000+00:00"
+  },
   {
    "name": "maren",
    "task": "[site] T-4493 land the clutter cut",
@@ -170,21 +169,13 @@
    "started": "2026-11-18T00:13:00.213Z",
    "seconds": null,
    "finished": "2026-11-18T01:07:02.800000+00:00"
-  },
-  {
-   "name": "maren",
-   "task": "[design] T-4746 land the name wording fix",
-   "model": "opus",
-   "started": "2026-11-18T00:13:11.913Z",
-   "seconds": null,
-   "finished": "2026-11-18T00:44:48.211000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
   "runnable_count": 430,
-  "blocked_count": 59
+  "blocked_count": 61
  },
  "meter": {
   "five_hour": {
@@ -232,7 +223,7 @@
   "week_pct": 43.81,
   "usage_pct": 53.5,
   "work_pct": 81.2,
-  "read_at": "2026-11-18T01:41:00+00:00",
+  "read_at": "2026-11-18T01:44:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -269,7 +260,7 @@
  "lock_in": {
   "on": false,
   "pool": 7,
-  "at": "2026-11-17T20:41:00-05:00",
+  "at": "2026-11-17T20:44:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -295,15 +286,6 @@
    "effort": "high"
   },
   {
-   "name": "Ines",
-   "state": "running",
-   "task": "[plan] T-4493 decide the refused test fix",
-   "model": "opus",
-   "since": "2026-11-18T01:37:46.011Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
    "name": "Idris",
    "state": "next",
    "task": "Idris, P1, from T-4755 (Investor an Investor...",
@@ -315,6 +297,14 @@
    "name": "Pernille",
    "state": "next",
    "task": "Pernille, P0, Investor an Investor c6963972184 (6:23 PM...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
+   "name": "Ines",
+   "state": "next",
+   "task": "Ines, P2, from T-1110 (Wrenna,...",
    "model": null,
    "since": null,
    "next": []
@@ -347,16 +337,6 @@
     "at": "2026-11-18T01:18:02.621Z",
     "o": "c",
     "task": "T-4806"
-   },
-   {
-    "w": "Ines",
-    "k": "plan",
-    "t": "Cut clutter text on the pages still carrying it",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-18T01:37:46.011Z",
-    "o": "i",
-    "task": "T-4493"
    }
   ],
   "src": "plan",
@@ -451,9 +431,9 @@
   ],
   "count": {
    "next": 430,
-   "wait": 28,
-   "blocked": 31,
-   "you": 10
+   "wait": 29,
+   "blocked": 32,
+   "you": 11
   },
   "fin": {
    "n": 4,
@@ -516,92 +496,92 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-18T01:41:34Z",
+  "at": "2026-11-18T01:44:30Z",
   "s": {
    "T-4787": [
     "merging",
     "Host checks on the Mac mini",
-    1794965314925
+    1794965310622
    ],
    "T-4643": [
     "merging",
     "Host checks on the Mac mini",
-    1794965314925
+    1794965310622
    ],
    "T-4697": [
     "mergeq",
     "1st to merge",
-    1794959914925
+    1794959910622
    ],
    "T-4698": [
     "mergeq",
     "2nd to merge",
-    1794960274925
+    1794960270622
    ],
    "T-4781": [
     "mergeq",
     "3rd to merge",
-    1794964654925
+    1794964650622
    ],
    "T-4634": [
     "mergeq",
     "4th to merge",
-    1794964114925
+    1794964110622
    ],
    "T-4610": [
     "mergeq",
     "6th to merge",
-    1794960394925
+    1794960390622
    ],
    "T-4761": [
     "mergeq",
     "7th to merge",
-    1794960514925
+    1794960510622
    ],
    "T-4659": [
     "mergeq",
     "8th to merge",
-    1794961054925
+    1794961050622
    ],
    "T-4699": [
     "mergeq",
     "9th to merge",
-    1794961594925
+    1794961650622
    ],
    "T-4782": [
     "mergeq",
     "15th to merge",
-    1794962194925
+    1794962190622
    ],
    "T-4719": [
     "mergeq",
-    "16th to merge",
-    1794963094925
+    "17th to merge",
+    1794963090622
    ],
    "T-4720": [
     "mergeq",
-    "16th to merge",
-    1794963094925
+    "17th to merge",
+    1794963090622
    ],
    "T-4750": [
     "mergeq",
-    "17th to merge",
-    1794963154925
+    "18th to merge",
+    1794963150622
    ],
    "T-4770": [
     "mergeq",
-    "18th to merge",
-    1794964714925
+    "19th to merge",
+    1794964710622
    ],
    "T-4774": [
     "mergeq",
-    "18th to merge",
-    1794964714925
+    "19th to merge",
+    1794964710622
    ],
    "T-4806": [
     "testing",
     "its own tests, in its copy",
-    1794965494925
+    1794966270622
    ]
   },
   "nm": {
@@ -646,7 +626,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-18T01:41:34Z",
+  "at": "2026-11-18T01:44:30Z",
   "mq": {
    "n": {
     "checking": 2,
@@ -658,13 +638,13 @@
     "parked": 6
    },
    "m": {
-    "checking": 13,
-    "inline": 57,
-    "conflicted": 767,
+    "checking": 16,
+    "inline": 60,
+    "conflicted": 770,
     "failed": null,
-    "held": 1572,
+    "held": 1575,
     "retry": null,
-    "parked": 522
+    "parked": 525
    },
    "cur": [
     [
@@ -673,7 +653,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     13
+     16
     ],
     [
      [
@@ -681,7 +661,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     13
+     16
     ]
    ],
    "ld": [
@@ -691,16 +671,16 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-18T01:41:09Z",
-    "ld": 1.26,
+    "at": "2026-11-18T01:44:04Z",
+    "ld": 1.21,
     "c": 8,
     "sb": 0,
     "dk": [
-     19.2,
+     20.0,
      228.3
     ],
     "ss": [
-     175.7,
+     175.4,
      953.7
     ],
     "sn": []
@@ -725,18 +705,19 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 1 task",
-   "at": "2026-11-17T20:35:43-05:00"
+   "t": "Work session \u2013 2 tasks",
+   "at": "2026-11-17T20:44:24-05:00"
   }
  ],
  "reply": {
-  "sent": "2026-11-18T01:33:50Z",
-  "seconds": 111.0
+  "sent": "2026-11-18T01:43:14Z",
+  "seconds": 68.0
  },
  "inbox": [],
  "trimmed": [
   "lane_next",
   "queue_text",
+  "recent",
   "task_done",
   "fin_short",
   "task_title",
@@ -746,13 +727,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 2,
+  "main": 1,
   "lanes": 0,
-  "total": 2,
-  "at": "8:41 PM",
+  "total": 1,
+  "at": "8:44 PM",
   "why": "",
-  "at_iso": "2026-11-18T01:41:00+00:00",
+  "at_iso": "2026-11-18T01:44:00+00:00",
   "started": "7:10 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 7:10 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 8:41 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 7:10 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 8:44 PM ET</p></section>"
  }
 }

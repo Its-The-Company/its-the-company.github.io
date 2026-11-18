@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-18T21:06:23.110047+00:00",
+ "at": "2026-11-18T21:09:28.713729+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -137,7 +137,7 @@
    "task": "[tools] T-4907 keep main green after every land",
    "model": "opus",
    "started": "2026-11-18T19:11:56.141Z",
-   "seconds": 6866,
+   "seconds": 7052,
    "finished": null,
    "effort": "high"
   },
@@ -146,7 +146,7 @@
    "task": "[test] T-4807 land browser time-out fix",
    "model": "opus",
    "started": "2026-11-18T20:31:35.722Z",
-   "seconds": 2087,
+   "seconds": 2272,
    "finished": null,
    "effort": "high"
   },
@@ -155,7 +155,7 @@
    "task": "[build] T-4631 premades with refused imports to app",
    "model": "opus",
    "started": "2026-11-18T20:40:36.593Z",
-   "seconds": 1546,
+   "seconds": 1732,
    "finished": null,
    "effort": "high"
   }
@@ -203,19 +203,19 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 6.0,
+   "pct": 7.0,
    "resets_at": "2026-11-18T20:10:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-18T16:02:27.425234-05:00",
+   "read_at": "2026-11-18T16:08:29.720035-05:00",
    "source": "live",
-   "left": 94.0,
+   "left": 93.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 51.0,
    "resets_at": "2026-11-22T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-18T16:02:27.425234-05:00",
+   "read_at": "2026-11-18T16:08:29.720035-05:00",
    "source": "live",
    "left": 49.0,
    "left_words": "of your weekly allowance left"
@@ -227,7 +227,7 @@
    "read_at": "2026-11-18T14:09:30.092585-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-18T16:02:27.425234-05:00"
+  "read_at": "2026-11-18T16:08:29.720035-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -247,7 +247,7 @@
   "week_pct": 51.56,
   "usage_pct": 51.3,
   "work_pct": 81.5,
-  "read_at": "2026-11-18T21:06:00+00:00",
+  "read_at": "2026-11-18T21:09:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -268,7 +268,7 @@
   }
  ],
  "disk": {
-  "free_gb": 14,
+  "free_gb": 11,
   "gate": "closed",
   "ssd": {
    "mounted": true,
@@ -277,14 +277,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions wait until 20 GB is free.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-18T16:02:00-05:00",
+   "at": "2026-11-18T16:08:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-18T16:06:00-05:00",
+  "at": "2026-11-18T16:09:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -534,39 +534,39 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-18T21:06:23Z",
+  "at": "2026-11-18T21:09:21Z",
   "s": {
-   "T-4631": [
-    "mergetest",
-    "iPhone tests on the MacBook",
-    null
-   ],
    "T-4907": [
     "merging",
     "Mac tests at the main gate",
-    1795035503110
+    1795035501008
    ],
    "T-4807": [
     "merging",
     "Mac tests at the main gate",
-    1795035923110
+    1795035921008
+   ],
+   "T-4631": [
+    "merging",
+    "Mac tests at the main gate",
+    1795036161008
    ]
   },
   "nm": {
-   "T-4631": "Place premades in the app when their imports are refused",
    "T-4907": "Keep main green after every land",
-   "T-4807": "Fix every bad test that failed a merge"
+   "T-4807": "Fix every bad test that failed a merge",
+   "T-4631": "Place premades in the app when their imports are refused"
   },
   "wk": {
-   "T-4631": "Idris",
    "T-4907": "Odalys",
    "T-4807": "Pernille",
+   "T-4631": "Idris",
    "T-4902": "Odalys",
    "T-4773": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-18T21:06:23Z",
+  "at": "2026-11-18T21:09:21Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -580,11 +580,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 572,
+    "conflicted": 575,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1136
+    "parked": 1139
    },
    "cur": [],
    "ld": [
@@ -594,12 +594,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-18T21:05:35Z",
-    "ld": 1.03,
+    "at": "2026-11-18T21:08:56Z",
+    "ld": 1.35,
     "c": 8,
     "sb": 0,
     "dk": [
-     11.5,
+     10.6,
      228.3
     ],
     "ss": [
@@ -609,12 +609,12 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-18T21:00:09Z",
-    "ld": 0.2,
+    "at": "2026-11-18T21:07:54Z",
+    "ld": 0.67,
     "c": 12,
     "sb": 0,
     "dk": [
-     305.1,
+     305.3,
      926.4
     ],
     "sn": []
@@ -653,10 +653,10 @@
   "main": 3,
   "lanes": 0,
   "total": 3,
-  "at": "4:06 PM",
+  "at": "4:09 PM",
   "why": "",
-  "at_iso": "2026-11-18T21:06:00+00:00",
+  "at_iso": "2026-11-18T21:09:00+00:00",
   "started": "2:09 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 2:09 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 4:06 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 2:09 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 4:09 PM ET</p></section>"
  }
 }

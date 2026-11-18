@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-18T09:10:29.062649+00:00",
+ "at": "2026-11-18T09:13:26.081372+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -18,6 +18,16 @@
      {
       "s": "macbook",
       "at": 1794990590
+     }
+    ]
+   },
+   {
+    "t": "T-4663",
+    "name": "Completion ignores letter case and small typos",
+    "steps": [
+     {
+      "s": "testq",
+      "at": 1794993064
      }
     ]
    }
@@ -112,7 +122,7 @@
    "task": "[research] T-4839 widget label name",
    "model": "sonnet",
    "started": "2026-11-18T09:08:33.641Z",
-   "seconds": 115,
+   "seconds": 292,
    "finished": null
   },
   {
@@ -120,7 +130,7 @@
    "task": "[build] T-4663 case-insensitive completion",
    "model": "opus",
    "started": "2026-11-18T09:08:46.044Z",
-   "seconds": 103,
+   "seconds": 280,
    "finished": null
   },
   {
@@ -128,7 +138,7 @@
    "task": "[design] T-4285 drag-and-drop week figures",
    "model": "opus",
    "started": "2026-11-18T09:10:00.181Z",
-   "seconds": 28,
+   "seconds": 205,
    "finished": null
   }
  ],
@@ -151,20 +161,20 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 17.0,
-   "resets_at": "2026-11-18T10:10:00.254719+00:00",
+   "pct": 18.0,
+   "resets_at": "2026-11-18T05:10:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-18T04:07:09.006523-05:00",
-   "source": "usage",
-   "left": 83.0,
+   "read_at": "2026-11-18T04:12:27.721004-05:00",
+   "source": "live",
+   "left": 82.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 44.0,
-   "resets_at": "2026-11-22T07:00:00.254735+00:00",
+   "resets_at": "2026-11-22T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-18T04:07:09.006523-05:00",
-   "source": "usage",
+   "read_at": "2026-11-18T04:12:27.721004-05:00",
+   "source": "live",
    "left": 56.0,
    "left_words": "of your weekly allowance left"
   },
@@ -175,7 +185,7 @@
    "read_at": "2026-11-18T04:07:09.006523-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-18T04:07:09.006523-05:00"
+  "read_at": "2026-11-18T04:12:27.721004-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -195,7 +205,7 @@
   "week_pct": 50.16,
   "usage_pct": 53.3,
   "work_pct": 82.4,
-  "read_at": "2026-11-18T09:10:00+00:00",
+  "read_at": "2026-11-18T09:13:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -255,7 +265,7 @@
   }
  ],
  "disk": {
-  "free_gb": 16,
+  "free_gb": 14,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -264,14 +274,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-18T04:05:00-05:00",
+   "at": "2026-11-18T04:12:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 11,
-  "at": "2026-11-18T04:10:00-05:00",
+  "at": "2026-11-18T04:13:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -511,47 +521,52 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-18T09:10:10Z",
+  "at": "2026-11-18T09:13:26Z",
   "s": {
    "T-0011": [
     "mergeq",
     "1st to merge",
-    1794989470645
+    1794989426081
    ],
    "T-4533": [
     "mergeq",
     "3rd to merge",
-    1794988090645
+    1794988106081
    ],
    "T-4644": [
     "mergeq",
     "4th to merge",
-    1794988630645
+    1794988646081
    ],
    "T-4762": [
     "mergeq",
     "5th to merge",
-    1794989830645
+    1794989846081
    ],
    "T-4301": [
     "mergeq",
     "6th to merge",
-    1794991090645
+    1794991106081
    ],
    "T-4771": [
     "mergeq",
     "7th to merge",
-    1794991510645
+    1794991526081
    ],
    "T-4783": [
     "mergeq",
     "7th to merge",
-    1794991510645
+    1794991526081
    ],
    "T-4574": [
     "mergeq",
     "12th to merge",
-    1794992530645
+    1794992486081
+   ],
+   "T-4663": [
+    "testing",
+    "its own tests, in its copy",
+    1794993086081
    ]
   },
   "nm": {
@@ -562,7 +577,8 @@
    "T-4301": "Read fresh Pro gates after a queued wait",
    "T-4771": "Gutter marks redraw quickly and stay right while typing",
    "T-4783": "Keep the gutter mark on its line after an edit",
-   "T-4574": "Keep the launcher's app queries out of shipped builds"
+   "T-4574": "Keep the launcher's app queries out of shipped builds",
+   "T-4663": "Completion ignores letter case and small typos"
   },
   "wk": {
    "T-0011": "Idris",
@@ -573,11 +589,12 @@
    "T-4771": "Idris",
    "T-4783": "Idris",
    "T-4574": "Idris",
+   "T-4663": "Idris",
    "T-4852": "Pernille"
   }
  },
  "ln": {
-  "at": "2026-11-18T09:10:10Z",
+  "at": "2026-11-18T09:13:26Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -590,12 +607,12 @@
    },
    "m": {
     "checking": null,
-    "inline": 42,
-    "conflicted": 666,
+    "inline": 45,
+    "conflicted": 670,
     "failed": null,
-    "held": 2021,
+    "held": 2024,
     "retry": null,
-    "parked": 761
+    "parked": 765
    },
    "cur": [],
    "ld": [
@@ -605,12 +622,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-18T09:09:26Z",
-    "ld": 2.5,
+    "at": "2026-11-18T09:13:29Z",
+    "ld": 9.79,
     "c": 8,
     "sb": 2,
     "dk": [
-     13.9,
+     13.5,
      228.3
     ],
     "ss": [
@@ -684,10 +701,10 @@
   "main": 3,
   "lanes": 2,
   "total": 5,
-  "at": "4:10 AM",
+  "at": "4:13 AM",
   "why": "",
-  "at_iso": "2026-11-18T09:10:00+00:00",
+  "at_iso": "2026-11-18T09:13:00+00:00",
   "started": "4:07 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 3, started 4:07 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 4:10 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 3, started 4:07 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 4:13 AM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-18T10:39:43.345801+00:00",
+ "at": "2026-11-18T10:42:48.729166+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -108,19 +108,11 @@
  },
  "workers": [
   {
-   "name": "idris",
-   "task": "[build] T-4662 long-line caret land",
-   "model": "opus",
-   "started": "2026-11-18T09:43:33.374Z",
-   "seconds": 3369,
-   "finished": null
-  },
-  {
    "name": "maren",
    "task": "[design] T-4764 habit buttons at large text",
    "model": "sonnet",
    "started": "2026-11-18T10:27:42.950Z",
-   "seconds": 720,
+   "seconds": 905,
    "finished": null
   },
   {
@@ -128,12 +120,28 @@
    "task": "[build] T-4873 fallback completion case",
    "model": "sonnet",
    "started": "2026-11-18T10:35:31.351Z",
-   "seconds": 251,
+   "seconds": 437,
+   "finished": null
+  },
+  {
+   "name": "pernille",
+   "task": "[review] T-4876 long-line caret review",
+   "model": "opus",
+   "started": "2026-11-18T10:40:13.676Z",
+   "seconds": 155,
    "finished": null
   }
  ],
- "who": "Idris x2, Maren",
+ "who": "Maren, Idris, Pernille",
  "recent": [
+  {
+   "name": "idris",
+   "task": "[build] T-4662 long-line caret land",
+   "model": "opus",
+   "started": "2026-11-18T09:43:33.374Z",
+   "seconds": null,
+   "finished": "2026-11-18T10:39:44.344000+00:00"
+  },
   {
    "name": "pernille",
    "task": "[review] T-4872 completion change review",
@@ -157,39 +165,31 @@
    "started": "2026-11-18T09:16:14.754Z",
    "seconds": null,
    "finished": "2026-11-18T10:27:11.368000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-4663 case-insensitive completion",
-   "model": "opus",
-   "started": "2026-11-18T09:08:46.044Z",
-   "seconds": null,
-   "finished": "2026-11-18T09:43:09.319000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 481,
+  "runnable_count": 482,
   "blocked_count": 35
  },
  "meter": {
   "five_hour": {
-   "pct": 2.0,
+   "pct": 3.0,
    "resets_at": "2026-11-18T10:10:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-18T05:35:34.161108-05:00",
+   "read_at": "2026-11-18T05:41:47.745064-05:00",
    "source": "live",
-   "left": 98.0,
+   "left": 97.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 44.0,
+   "pct": 45.0,
    "resets_at": "2026-11-22T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-18T05:35:34.161108-05:00",
+   "read_at": "2026-11-18T05:41:47.745064-05:00",
    "source": "live",
-   "left": 56.0,
+   "left": 55.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
@@ -199,7 +199,7 @@
    "read_at": "2026-11-18T04:07:09.006523-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-18T05:35:34.161108-05:00"
+  "read_at": "2026-11-18T05:41:47.745064-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -219,34 +219,8 @@
   "week_pct": 50.16,
   "usage_pct": 53.3,
   "work_pct": 82.4,
-  "read_at": "2026-11-18T10:39:00+00:00",
-  "running": [
-   {
-    "lane": "b2",
-    "task": "T-4840",
-    "w": "Idris",
-    "k": "measure",
-    "t": "Read the sensor rows from the gate build's export",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-18T02:18:53-05:00",
-    "n": "Jeremy",
-    "src": "plan-b"
-   },
-   {
-    "lane": "b2",
-    "task": "T-4574",
-    "w": "Idris",
-    "k": "build",
-    "t": "Keep the launcher's app queries out of shipped builds",
-    "m": "opus",
-    "e": "medium",
-    "at": "2026-11-18T02:18:53-05:00",
-    "n": "Jeremy",
-    "d": 1,
-    "src": "plan-b"
-   }
-  ]
+  "read_at": "2026-11-18T10:42:00+00:00",
+  "running": []
  },
  "api_credits": [
   {
@@ -266,7 +240,7 @@
   }
  ],
  "disk": {
-  "free_gb": 15,
+  "free_gb": 20,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -275,14 +249,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-18T05:35:00-05:00",
+   "at": "2026-11-18T05:41:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 12,
-  "at": "2026-11-18T05:39:00-05:00",
+  "at": "2026-11-18T05:42:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -293,19 +267,11 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Double Spread: 56% of the week left, paced to last until Wed 14:00, the week's halfway point; the machine allows 3 (raised a step toward the floor of 8: new work may start and every signal is...",
+  "why": "Double Spread: 55% of the week left, paced to last until Wed 14:00, the week's halfway point; the machine allows 3 (raised a step toward the floor of 8: new work may start and every signal is...",
   "n": 3,
   "at": "2026-11-18T04:07:09.354573-05:00"
  },
  "lanes": [
-  {
-   "name": "Idris",
-   "state": "running",
-   "task": "[build] T-4662 long-line caret land",
-   "model": "opus",
-   "since": "2026-11-18T09:43:33.374Z",
-   "next": []
-  },
   {
    "name": "Maren",
    "state": "running",
@@ -315,11 +281,19 @@
    "next": []
   },
   {
+   "name": "Idris",
+   "state": "running",
+   "task": "[build] T-4873 fallback completion case",
+   "model": "sonnet",
+   "since": "2026-11-18T10:35:31.351Z",
+   "next": []
+  },
+  {
    "name": "Pernille",
-   "state": "next",
-   "task": "Pernille, P0, Investor an Investor c6963972184 (6:23 PM...",
-   "model": null,
-   "since": null,
+   "state": "running",
+   "task": "[review] T-4876 long-line caret review",
+   "model": "opus",
+   "since": "2026-11-18T10:40:13.676Z",
    "next": []
   },
   {
@@ -350,15 +324,6 @@
  "tasks": {
   "run": [
    {
-    "w": "Idris",
-    "k": "build",
-    "t": "Place the cursor easily on a long line",
-    "m": "opus",
-    "at": "2026-11-18T09:43:33.374Z",
-    "o": "c",
-    "task": "T-4662"
-   },
-   {
     "w": "Maren",
     "k": "design",
     "t": "Fit habit buttons at large text sizes",
@@ -375,6 +340,15 @@
     "at": "2026-11-18T10:35:31.351Z",
     "o": "c",
     "task": "T-4873"
+   },
+   {
+    "w": "Pernille",
+    "k": "review",
+    "t": "Check the long-line caret change",
+    "m": "opus",
+    "at": "2026-11-18T10:40:13.676Z",
+    "o": "c",
+    "task": "T-4876"
    }
   ],
   "src": "plan",
@@ -468,7 +442,7 @@
    }
   ],
   "count": {
-   "next": 481,
+   "next": 482,
    "wait": 32,
    "blocked": 3,
    "you": 10
@@ -542,63 +516,57 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-18T10:39:43Z",
+  "at": "2026-11-18T10:42:35Z",
   "s": {
    "T-0011": [
     "merging",
     "Host checks on the Mac mini",
-    1794998143345
+    1794998135461
    ],
    "T-4533": [
     "mergeq",
     "2nd to merge",
-    1794988123345
+    1794988115461
    ],
    "T-4644": [
     "mergeq",
     "3rd to merge",
-    1794988603345
+    1794988655461
    ],
    "T-4771": [
     "mergeq",
     "4th to merge",
-    1794989803345
+    1794989855461
    ],
    "T-4762": [
     "mergetest",
     "Xcode checks on the MacBook, 5th to merge",
-    1794998083345
+    1794998135461
    ],
    "T-4301": [
     "mergeq",
     "7th to merge",
-    1794991063345
+    1794991055461
    ],
    "T-4783": [
     "mergeq",
     "9th to merge",
-    1794991543345
+    1794991535461
    ],
    "T-4574": [
     "mergeq",
     "11th to merge",
-    1794992503345
+    1794992495461
    ],
    "T-4764": [
-    "merging",
-    "Mac tests at the main gate",
-    1794997903345
+    "mergetest",
+    "iPhone tests on the MacBook",
+    null
    ],
    "T-4873": [
     "merging",
     "Mac tests at the main gate \u00b7 1 group of tests done",
-    1794998323345
-   ],
-   "T-4662": [
-    "merged",
-    "on main 5:39 AM ET",
-    1794998357000,
-    "Idris"
+    1794998315461
    ]
   },
   "nm": {
@@ -611,8 +579,7 @@
    "T-4783": "Keep the gutter mark on its line after an edit",
    "T-4574": "Keep the launcher's app queries out of shipped builds",
    "T-4764": "Fit habit buttons at large text sizes",
-   "T-4873": "Make backup suggestions ignore letter case too",
-   "T-4662": "Place the cursor easily on a long line"
+   "T-4873": "Make backup suggestions ignore letter case too"
   },
   "wk": {
    "T-0011": "Idris",
@@ -625,7 +592,6 @@
    "T-4574": "Idris",
    "T-4764": "Maren",
    "T-4873": "Idris",
-   "T-4662": "Idris",
    "T-4872": "Pernille",
    "T-4752": "Maren",
    "T-4763": "Maren",
@@ -641,7 +607,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-18T10:39:43Z",
+  "at": "2026-11-18T10:42:35Z",
   "mq": {
    "n": {
     "checking": 2,
@@ -653,13 +619,13 @@
     "parked": 8
    },
    "m": {
-    "checking": 4,
-    "inline": 132,
-    "conflicted": 756,
+    "checking": 7,
+    "inline": 135,
+    "conflicted": 759,
     "failed": null,
-    "held": 2110,
+    "held": 2113,
     "retry": null,
-    "parked": 851
+    "parked": 854
    },
    "cur": [
     [
@@ -668,15 +634,15 @@
      ],
      "Mac tests",
      "Mac mini",
-     4
+     7
     ],
     [
      [
       "T-4762"
      ],
-     "iPhone app tests, sent and waiting its turn",
+     "iPhone app tests",
      "MacBook",
-     5
+     7
     ]
    ],
    "ld": [
@@ -686,12 +652,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-18T10:39:18Z",
-    "ld": 3.9,
+    "at": "2026-11-18T10:42:36Z",
+    "ld": 2.66,
     "c": 8,
     "sb": 1,
     "dk": [
-     15.2,
+     20.0,
      228.3
     ],
     "ss": [
@@ -703,8 +669,8 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-18T10:38:24Z",
-    "ld": 1.03,
+    "at": "2026-11-18T10:40:29Z",
+    "ld": 0.73,
     "c": 12,
     "sb": 0,
     "dk": [
@@ -724,15 +690,6 @@
    "e": "high",
    "t": "Work session \u2013 12 tasks",
    "at": "2026-11-18T04:07:20-05:00"
-  },
-  {
-   "w": "Operator",
-   "a": "Jeremy's Account",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session \u2013 1 task",
-   "at": "2026-11-18T02:18:53-05:00"
   }
  ],
  "reply": {
@@ -755,12 +712,12 @@
  ],
  "agents_now": {
   "main": 3,
-  "lanes": 1,
-  "total": 4,
-  "at": "5:39 AM",
+  "lanes": 0,
+  "total": 3,
+  "at": "5:42 AM",
   "why": "",
-  "at_iso": "2026-11-18T10:39:00+00:00",
+  "at_iso": "2026-11-18T10:42:00+00:00",
   "started": "4:07 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 3, started 4:07 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 5:39 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 4:07 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 5:42 AM ET</p></section>"
  }
 }

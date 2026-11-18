@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-18T03:32:35.480504+00:00",
+ "at": "2026-11-18T03:35:16.460304+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,12 +12,8 @@
     "acct": "Personal b",
     "steps": [
      {
-      "s": "macbook",
-      "at": 1794971432
-     },
-     {
       "s": "testq",
-      "at": 1794971787
+      "at": 1794972848
      }
     ]
    },
@@ -33,6 +29,15 @@
    }
   ],
   "done": [
+   {
+    "t": "T-4750",
+    "name": "Check network fetch cases on the Swift side too",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "failed",
+    "end_at": 1794972842,
+    "why": "tests failed"
+   },
    {
     "t": "T-4770",
     "name": "Re-estimate the release date from measured build speed",
@@ -104,17 +109,10 @@
     "steps": [],
     "end": "landed",
     "end_at": 1794966905
-   },
-   {
-    "t": "T-4697",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794966883
    }
   ],
   "landed": 41,
-  "failed": 7
+  "failed": 8
  },
  "workers": [
   {
@@ -122,7 +120,7 @@
    "task": "[tools] T-4806 land merge time-out fixes",
    "model": "opus",
    "started": "2026-11-18T03:27:34.411Z",
-   "seconds": 301,
+   "seconds": 462,
    "finished": null,
    "effort": "high"
   },
@@ -131,7 +129,7 @@
    "task": "[tools] T-4817 bottleneck watcher",
    "model": "opus",
    "started": "2026-11-18T03:27:43.614Z",
-   "seconds": 291,
+   "seconds": 452,
    "finished": null,
    "effort": "high"
   }
@@ -141,7 +139,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 463,
+  "runnable_count": 465,
   "blocked_count": 34
  },
  "meter": {
@@ -149,7 +147,7 @@
    "pct": 16.0,
    "resets_at": "2026-11-18T00:10:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-17T22:27:47.102809-05:00",
+   "read_at": "2026-11-17T22:34:15.147916-05:00",
    "source": "live",
    "left": 84.0,
    "left_words": "of your 5-hour allowance left"
@@ -158,7 +156,7 @@
    "pct": 40.0,
    "resets_at": "2026-11-22T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-17T22:27:47.102809-05:00",
+   "read_at": "2026-11-17T22:34:15.147916-05:00",
    "source": "live",
    "left": 60.0,
    "left_words": "of your weekly allowance left"
@@ -170,7 +168,7 @@
    "read_at": "2026-11-17T22:21:25.951433-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-17T22:27:47.102809-05:00"
+  "read_at": "2026-11-17T22:34:15.147916-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -190,7 +188,7 @@
   "week_pct": 46.38,
   "usage_pct": 53.7,
   "work_pct": 81.3,
-  "read_at": "2026-11-18T03:32:00+00:00",
+  "read_at": "2026-11-18T03:36:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -343,14 +341,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-17T22:27:00-05:00",
+   "at": "2026-11-17T22:34:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 8,
-  "at": "2026-11-17T22:32:00-05:00",
+  "at": "2026-11-17T22:36:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -530,7 +528,7 @@
    }
   ],
   "count": {
-   "next": 463,
+   "next": 465,
    "wait": 32,
    "blocked": 2,
    "you": 9
@@ -579,34 +577,34 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-18T03:32:17Z",
+  "at": "2026-11-18T03:35:16Z",
   "s": {
-   "T-4659": [
-    "merging",
-    "Host checks on the Mac mini",
-    1794971837923
-   ],
    "T-4750": [
     "merging",
     "Host checks on the Mac mini",
-    1794971837923
-   ],
-   "T-4761": [
-    "merging",
-    "Host checks on the Mac mini",
-    1794971837923
+    1794972856460
    ],
    "T-4759": [
     "mergeq",
-    "2nd to merge",
-    1794972617923
+    "1st to merge",
+    1794972676460
    ],
-   "T-4772": [
+   "T-4659": [
+    "mergetest",
+    "iPhone tests on the MacBook",
+    null
+   ],
+   "T-4761": [
+    "mergetest",
+    "iPhone tests on the MacBook",
+    null
+   ],
+   "T-4436": [
     "testing",
     "Mac Mini \u00b7 test",
     null
    ],
-   "T-4773": [
+   "T-4784": [
     "testing",
     "Mac Mini \u00b7 test",
     null
@@ -614,94 +612,64 @@
    "T-4806": [
     "testing",
     "its own tests, in its copy",
-    1794972737923
+    1794972736460
    ],
    "T-4789": [
     "testq",
     "1st for a Simulator",
-    1794972257923
-   ],
-   "T-4436": [
-    "testq",
-    "2nd for a Simulator",
-    1794972497923
-   ],
-   "T-4784": [
-    "testq",
-    "2nd for a Simulator",
-    1794972497923
+    1794972136460
    ]
   },
   "nm": {
-   "T-4659": "Prove a widget button's tap reaches its Python handler",
    "T-4750": "Check network fetch cases on the Swift side too",
-   "T-4761": "Keep one layout for the widget state format",
    "T-4759": "Check finished work before it ships",
-   "T-4772": "Prove a refresh tap redraws the widget",
-   "T-4773": "Time the next run from the widget's own ask",
-   "T-4806": "Fix the causes of merge time-outs and runner errors",
-   "T-4789": "Check finished work before it ships",
+   "T-4659": "Prove a widget button's tap reaches its Python handler",
+   "T-4761": "Keep one layout for the widget state format",
    "T-4436": "Tidy the refresh tap's small edges",
-   "T-4784": "Pin the refresh glyph's button style in a test"
+   "T-4784": "Pin the refresh glyph's button style in a test",
+   "T-4806": "Fix the causes of merge time-outs and runner errors",
+   "T-4789": "Check finished work before it ships"
   },
   "wk": {
-   "T-4659": "Idris",
    "T-4750": "Idris",
-   "T-4761": "Idris",
    "T-4759": "Pernille",
-   "T-4772": "Idris",
-   "T-4773": "Idris",
-   "T-4806": "Odalys",
-   "T-4789": "Pernille",
+   "T-4659": "Idris",
+   "T-4761": "Idris",
    "T-4436": "Idris",
-   "T-4784": "Idris"
+   "T-4784": "Idris",
+   "T-4806": "Odalys",
+   "T-4789": "Pernille"
   }
  },
  "ln": {
-  "at": "2026-11-18T03:32:17Z",
+  "at": "2026-11-18T03:35:16Z",
   "mq": {
    "n": {
-    "checking": 3,
+    "checking": 1,
     "inline": 1,
     "conflicted": 3,
-    "failed": 0,
+    "failed": 2,
     "held": 1,
     "retry": 0,
     "parked": 7
    },
    "m": {
-    "checking": 15,
-    "inline": 2,
-    "conflicted": 328,
-    "failed": null,
-    "held": 1683,
+    "checking": 1,
+    "inline": 4,
+    "conflicted": 331,
+    "failed": 1,
+    "held": 1686,
     "retry": null,
-    "parked": 519
+    "parked": 522
    },
    "cur": [
-    [
-     [
-      "T-4659"
-     ],
-     "Mac tests",
-     "Mac mini",
-     15
-    ],
     [
      [
       "T-4750"
      ],
      "Mac tests",
      "Mac mini",
-     15
-    ],
-    [
-     [
-      "T-4761"
-     ],
-     "Mac tests",
-     "Mac mini",
-     15
+     1
     ]
    ],
    "ld": [
@@ -711,12 +679,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-18T03:31:31Z",
-    "ld": 62.54,
+    "at": "2026-11-18T03:36:05Z",
+    "ld": 57.67,
     "c": 8,
-    "sb": 2,
+    "sb": 3,
     "dk": [
-     12.1,
+     14.9,
      228.3
     ],
     "ss": [
@@ -724,6 +692,7 @@
      953.7
     ],
     "sn": [
+     "iPhone 17e",
      "t4772-27",
      "t4772-26"
     ]
@@ -793,8 +762,8 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Inbox \u2013 Evan's 10:31 PM Message on GitHub",
-   "at": "2026-11-17T22:31:53-05:00"
+   "t": "Work session \u2013 2 tasks",
+   "at": "2026-11-17T22:36:08-05:00"
   }
  ],
  "reply": {
@@ -828,10 +797,10 @@
   "main": 2,
   "lanes": 5,
   "total": 7,
-  "at": "10:32 PM",
+  "at": "10:36 PM",
   "why": "",
-  "at_iso": "2026-11-18T03:32:00+00:00",
+  "at_iso": "2026-11-18T03:36:00+00:00",
   "started": "10:22 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 2, started 10:22 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 10:32 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 2, started 10:22 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 10:36 PM ET</p></section>"
  }
 }

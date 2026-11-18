@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-18T11:13:19.894253+00:00",
+ "at": "2026-11-18T11:16:23.098310+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -112,20 +112,28 @@
    "task": "[design] T-4886 PyWidget in premade lines",
    "model": "sonnet",
    "started": "2026-11-18T11:02:42.183Z",
-   "seconds": 637,
+   "seconds": 820,
    "finished": null
   },
   {
    "name": "idris",
-   "task": "[report] morning",
+   "task": "[test] T-4887 gated second-tap caret test",
    "model": "opus",
-   "started": "2026-11-18T11:05:00.328Z",
-   "seconds": 499,
+   "started": "2026-11-18T11:14:20.521Z",
+   "seconds": 122,
    "finished": null
   }
  ],
  "who": "Maren, Idris",
  "recent": [
+  {
+   "name": "idris",
+   "task": "[report] morning",
+   "model": "opus",
+   "started": "2026-11-18T11:05:00.328Z",
+   "seconds": null,
+   "finished": "2026-11-18T11:14:00.558000+00:00"
+  },
   {
    "name": "pernille",
    "task": "[review] T-4876 long-line caret review",
@@ -149,21 +157,13 @@
    "started": "2026-11-18T10:55:51.583Z",
    "seconds": null,
    "finished": "2026-11-18T11:02:19.753000+00:00"
-  },
-  {
-   "name": "maren",
-   "task": "[design] T-4764 habit buttons at large text",
-   "model": "sonnet",
-   "started": "2026-11-18T10:27:42.950Z",
-   "seconds": null,
-   "finished": "2026-11-18T10:54:32.394000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 486,
-  "blocked_count": 35
+  "runnable_count": 487,
+  "blocked_count": 34
  },
  "meter": {
   "five_hour": {
@@ -211,7 +211,7 @@
   "week_pct": 50.16,
   "usage_pct": 53.3,
   "work_pct": 82.4,
-  "read_at": "2026-11-18T11:13:00+00:00",
+  "read_at": "2026-11-18T11:16:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -248,7 +248,7 @@
  "lock_in": {
   "on": false,
   "pool": 12,
-  "at": "2026-11-18T06:13:00-05:00",
+  "at": "2026-11-18T06:16:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -275,9 +275,9 @@
   {
    "name": "Idris",
    "state": "running",
-   "task": "[report] morning",
+   "task": "[test] T-4887 gated second-tap caret test",
    "model": "opus",
-   "since": "2026-11-18T11:05:00.328Z",
+   "since": "2026-11-18T11:14:20.521Z",
    "next": []
   },
   {
@@ -326,11 +326,12 @@
    },
    {
     "w": "Idris",
-    "k": "report",
-    "t": "Morning",
+    "k": "test",
+    "t": "Put the second-tap caret fix under a gated test",
     "m": "opus",
-    "at": "2026-11-18T11:05:00.328Z",
-    "o": "c"
+    "at": "2026-11-18T11:14:20.521Z",
+    "o": "c",
+    "task": "T-4887"
    }
   ],
   "src": "plan",
@@ -424,10 +425,10 @@
    }
   ],
   "count": {
-   "next": 486,
+   "next": 487,
    "wait": 32,
-   "blocked": 3,
-   "you": 10
+   "blocked": 2,
+   "you": 9
   },
   "fin": {
    "n": 21,
@@ -498,47 +499,47 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-18T11:13:19Z",
+  "at": "2026-11-18T11:16:14Z",
   "s": {
    "T-0011": [
     "merging",
     "Host checks on the Mac mini",
-    1795000339894
+    1795000334463
    ],
    "T-4533": [
     "mergeq",
     "2nd to merge",
-    1794988099894
+    1794988094463
    ],
    "T-4644": [
     "mergetest",
     "Xcode checks on the MacBook, 3rd to merge",
-    1795000279894
+    1795000334463
    ],
    "T-4771": [
     "mergeq",
     "4th to merge",
-    1794989839894
+    1794989834463
    ],
    "T-4762": [
     "mergeq",
     "5th to merge",
-    1794989839894
+    1794989834463
    ],
    "T-4301": [
     "mergeq",
     "7th to merge",
-    1794991099894
+    1794991094463
    ],
    "T-4783": [
     "mergeq",
     "9th to merge",
-    1794991519894
+    1794991514463
    ],
    "T-4574": [
     "mergeq",
     "11th to merge",
-    1794992539894
+    1794992534463
    ]
   },
   "nm": {
@@ -575,7 +576,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-18T11:13:19Z",
+  "at": "2026-11-18T11:16:14Z",
   "mq": {
    "n": {
     "checking": 2,
@@ -587,13 +588,13 @@
     "parked": 9
    },
    "m": {
-    "checking": 1,
-    "inline": 165,
-    "conflicted": 789,
+    "checking": 4,
+    "inline": 168,
+    "conflicted": 792,
     "failed": null,
-    "held": 2144,
+    "held": 2147,
     "retry": null,
-    "parked": 789
+    "parked": 792
    },
    "cur": [
     [
@@ -602,7 +603,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     1
+     4
     ],
     [
      [
@@ -610,7 +611,7 @@
      ],
      "iPhone app tests, sent and waiting its turn",
      "MacBook",
-     2
+     4
     ]
    ],
    "ld": [
@@ -620,12 +621,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-18T11:12:56Z",
-    "ld": 1.62,
+    "at": "2026-11-18T11:15:51Z",
+    "ld": 1.77,
     "c": 8,
     "sb": 1,
     "dk": [
-     20.4,
+     20.5,
      228.3
     ],
     "ss": [
@@ -656,7 +657,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 14 tasks",
+   "t": "Work session \u2013 15 tasks",
    "at": "2026-11-18T04:07:20-05:00"
   }
  ],
@@ -682,10 +683,10 @@
   "main": 2,
   "lanes": 0,
   "total": 2,
-  "at": "6:13 AM",
+  "at": "6:16 AM",
   "why": "",
-  "at_iso": "2026-11-18T11:13:00+00:00",
+  "at_iso": "2026-11-18T11:16:00+00:00",
   "started": "4:07 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 4:07 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 6:13 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 4:07 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 6:16 AM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-18T04:13:39.007491+00:00",
+ "at": "2026-11-18T04:16:47.953758+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -113,7 +113,7 @@
     "end_at": 1794970678
    }
   ],
-  "landed": 45,
+  "landed": 44,
   "failed": 8
  },
  "workers": [
@@ -122,7 +122,7 @@
    "task": "[tools] T-4829 bottleneck watch on tick",
    "model": "opus",
    "started": "2026-11-18T03:44:30.048Z",
-   "seconds": 1748,
+   "seconds": 1937,
    "finished": null,
    "effort": "high"
   }
@@ -198,7 +198,7 @@
   "week_pct": 46.38,
   "usage_pct": 53.7,
   "work_pct": 81.3,
-  "read_at": "2026-11-18T04:13:00+00:00",
+  "read_at": "2026-11-18T04:16:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -322,7 +322,7 @@
  "lock_in": {
   "on": false,
   "pool": 8,
-  "at": "2026-11-17T23:13:00-05:00",
+  "at": "2026-11-17T23:16:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -546,32 +546,37 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-18T04:13:21Z",
+  "at": "2026-11-18T04:16:30Z",
   "s": {
    "T-4516": [
     "merging",
     "Host checks on the Mac mini",
-    1794975081222
+    1794975090528
    ],
    "T-4796": [
     "mergeq",
     "1st to merge",
-    1794975201222
+    1794975270528
    ],
    "T-4803": [
     "mergeq",
-    "2nd to merge",
-    1794973941222
+    "1st to merge",
+    1794975270528
+   ],
+   "T-4442": [
+    "mergeq",
+    "5th to merge",
+    1794975330528
    ],
    "T-4696": [
     "mergeq",
-    "3rd to merge",
-    1794974781222
+    "6th to merge",
+    1794974790528
    ],
    "T-4700": [
     "mergeq",
-    "5th to merge",
-    1794974901222
+    "8th to merge",
+    1794974910528
    ],
    "T-4533": [
     "testing",
@@ -586,23 +591,24 @@
    "T-4829": [
     "testing",
     "its own tests, in its copy",
-    1794974721222
+    1794974730528
    ],
    "T-4772": [
     "testq",
     "2nd for a Simulator",
-    1794975141222
+    1794975210528
    ],
    "T-4773": [
     "testq",
     "2nd for a Simulator",
-    1794975141222
+    1794975210528
    ]
   },
   "nm": {
    "T-4516": "Prove the premade settings routes in a UI test",
    "T-4796": "Say which premades carry the Pro tag",
    "T-4803": "Make the tap check's record match the iPad ruling",
+   "T-4442": "Tidy the bundled first renders' small edges",
    "T-4696": "Check finished work before it ships",
    "T-4700": "Check finished work before it ships",
    "T-4533": "Make the premade settings save sturdier on disk errors",
@@ -615,6 +621,7 @@
    "T-4516": "Idris",
    "T-4796": "Ines",
    "T-4803": "Idris",
+   "T-4442": "Idris",
    "T-4696": "Pernille",
    "T-4700": "Pernille",
    "T-4533": "Pernille",
@@ -626,11 +633,11 @@
   }
  },
  "ln": {
-  "at": "2026-11-18T04:13:21Z",
+  "at": "2026-11-18T04:16:30Z",
   "mq": {
    "n": {
     "checking": 1,
-    "inline": 4,
+    "inline": 5,
     "conflicted": 3,
     "failed": 0,
     "held": 1,
@@ -638,13 +645,13 @@
     "parked": 9
    },
    "m": {
-    "checking": 2,
-    "inline": 6,
-    "conflicted": 369,
+    "checking": 5,
+    "inline": 2,
+    "conflicted": 373,
     "failed": null,
-    "held": 1724,
-    "retry": 34,
-    "parked": 369
+    "held": 1727,
+    "retry": 38,
+    "parked": 373
    },
    "cur": [
     [
@@ -653,7 +660,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     2
+     5
     ]
    ],
    "ld": [
@@ -663,12 +670,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-18T04:13:21Z",
-    "ld": 15.37,
+    "at": "2026-11-18T04:15:47Z",
+    "ld": 22.93,
     "c": 8,
     "sb": 1,
     "dk": [
-     12.2,
+     11.6,
      228.3
     ],
     "ss": [
@@ -717,7 +724,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 1 task",
+   "t": "Work session",
    "at": "2026-11-17T22:39:45-05:00"
   },
   {
@@ -759,10 +766,10 @@
   "main": 1,
   "lanes": 4,
   "total": 5,
-  "at": "11:13 PM",
+  "at": "11:16 PM",
   "why": "",
-  "at_iso": "2026-11-18T04:13:00+00:00",
+  "at_iso": "2026-11-18T04:16:00+00:00",
   "started": "10:22 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 1, started 10:22 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 11:13 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 1, started 10:22 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 11:16 PM ET</p></section>"
  }
 }

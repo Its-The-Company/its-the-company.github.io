@@ -1,27 +1,30 @@
 {
  "schema": 1,
- "at": "2026-11-18T00:22:23.778533+00:00",
+ "at": "2026-11-18T00:25:27.104380+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-17T19:10:01-05:00",
   "flow": [
    {
-    "t": "T-4774",
-    "name": "Measure what one refresh tap costs the app",
-    "acct": "Personal b",
+    "t": "T-4610",
+    "name": "Check finished work before it ships",
+    "acct": "Personal a",
     "steps": [
      {
       "s": "testq",
-      "at": 1794957524
-     },
-     {
-      "s": "macbook",
-      "at": 1794958285
-     },
+      "at": 1794961365
+     }
+    ]
+   },
+   {
+    "t": "T-4634",
+    "name": "Github hang test is cut before the GET under load",
+    "acct": "Personal a",
+    "steps": [
      {
       "s": "testq",
-      "at": 1794960291
+      "at": 1794961365
      }
     ]
    },
@@ -37,6 +40,14 @@
    }
   ],
   "done": [
+   {
+    "t": "T-4774",
+    "name": "Measure what one refresh tap costs the app",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794961358
+   },
    {
     "t": "T-4781",
     "name": "Retest a fixed red on what failed, not every test",
@@ -108,18 +119,9 @@
     "steps": [],
     "end": "landed",
     "end_at": 1794957463
-   },
-   {
-    "t": "T-4765",
-    "name": "Fix the When tapped frames' captions and VoiceOver list",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "failed",
-    "end_at": 1794957425,
-    "why": "did not merge cleanly"
    }
   ],
-  "landed": 41,
+  "landed": 42,
   "failed": 9
  },
  "workers": [
@@ -128,7 +130,7 @@
    "task": "[build] T-2296 land the gallery work",
    "model": "opus",
    "started": "2026-11-18T00:13:00.213Z",
-   "seconds": 563,
+   "seconds": 746,
    "finished": null,
    "effort": "high"
   },
@@ -137,7 +139,7 @@
    "task": "[design] T-4746 land the name wording fix",
    "model": "opus",
    "started": "2026-11-18T00:13:11.913Z",
-   "seconds": 551,
+   "seconds": 735,
    "finished": null,
    "effort": "high"
   }
@@ -147,7 +149,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 427,
+  "runnable_count": 428,
   "blocked_count": 58
  },
  "meter": {
@@ -196,7 +198,7 @@
   "week_pct": 43.81,
   "usage_pct": 53.5,
   "work_pct": 81.2,
-  "read_at": "2026-11-18T00:22:00+00:00",
+  "read_at": "2026-11-18T00:25:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -384,6 +386,7 @@
     "e": "high",
     "at": "2026-11-17T18:38:11-05:00",
     "n": "Jeremy",
+    "d": 1,
     "src": "plan-b"
    }
   ]
@@ -422,7 +425,7 @@
  "lock_in": {
   "on": false,
   "pool": 7,
-  "at": "2026-11-17T19:22:00-05:00",
+  "at": "2026-11-17T19:25:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -603,7 +606,7 @@
    }
   ],
   "count": {
-   "next": 427,
+   "next": 428,
    "wait": 27,
    "blocked": 31,
    "you": 8
@@ -652,72 +655,67 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-18T00:22:09Z",
+  "at": "2026-11-18T00:25:05Z",
   "s": {
-   "T-4774": [
+   "T-4610": [
     "merging",
     "",
-    1794960309798
+    1794961385337
+   ],
+   "T-4634": [
+    "merging",
+    "",
+    1794961385337
+   ],
+   "T-4695": [
+    "merging",
+    "",
+    1794961385337
    ],
    "T-4607": [
     "mergeq",
     "",
-    1794959049798
+    1794959045337
    ],
    "T-4787": [
     "mergeq",
     "",
-    1794959229798
+    1794959285337
    ],
    "T-4750": [
     "mergeq",
     "",
-    1794960189798
+    1794960185337
    ],
    "T-4761": [
     "mergeq",
     "",
-    1794960489798
+    1794960485337
    ],
    "T-4659": [
     "mergeq",
     "",
-    1794961089798
-   ],
-   "T-4610": [
-    "mergeq",
-    "",
-    1794960429798
-   ],
-   "T-4634": [
-    "mergeq",
-    "",
-    1794960429798
-   ],
-   "T-4695": [
-    "mergeq",
-    "",
-    1794960429798
+    1794961085337
    ],
    "T-4719": [
     "mergeq",
     "",
-    1794959529798
+    1794959525337
    ],
    "T-4720": [
     "mergeq",
     "",
-    1794959649798
+    1794959645337
    ],
    "T-4697": [
     "mergeq",
     "",
-    1794959889798
+    1794959885337
    ],
    "T-4698": [
     "mergeq",
     "",
-    1794960249798
+    1794960245337
    ],
    "T-4746": [
     "mergetest",
@@ -727,7 +725,7 @@
    "T-2296": [
     "merging",
     "",
-    1794960909798
+    1794960905337
    ],
    "T-4643": [
     "testing",
@@ -749,10 +747,11 @@
     "",
     null
    ],
-   "T-4699": [
-    "testq",
+   "T-4774": [
+    "merged",
     "",
-    1794960609798
+    1794961354000,
+    "Idris"
    ],
    "T-4770": [
     "merged",
@@ -762,15 +761,14 @@
    ]
   },
   "nm": {
-   "T-4774": "Measure what one refresh tap costs the app",
+   "T-4610": "Check finished work before it ships",
+   "T-4634": "Github hang test is cut before the GET under load",
+   "T-4695": "Check finished work before it ships",
    "T-4607": "Check finished work before it ships",
    "T-4787": "Count failed merges by cause: bad test or broken code",
    "T-4750": "Check network fetch cases on the Swift side too",
    "T-4761": "Keep one layout for the widget state format",
    "T-4659": "Prove a widget button's tap reaches its Python handler",
-   "T-4610": "Check finished work before it ships",
-   "T-4634": "Github hang test is cut before the GET under load",
-   "T-4695": "Check finished work before it ships",
    "T-4719": "Check finished work before it ships",
    "T-4720": "Check finished work before it ships",
    "T-4697": "Check finished work before it ships",
@@ -781,19 +779,18 @@
    "T-4763": "Keep habit marks when the Page also saves",
    "T-4765": "Fix the When tapped frames' captions and VoiceOver list",
    "T-4788": "Turn feature sessions on for every app feature",
-   "T-4699": "Check finished work before it ships",
+   "T-4774": "Measure what one refresh tap costs the app",
    "T-4770": "Re-estimate the release date from measured build speed"
   },
   "wk": {
-   "T-4774": "Idris",
+   "T-4610": "Odalys",
+   "T-4634": "Pernille",
+   "T-4695": "Ines",
    "T-4607": "Odalys",
    "T-4787": "Odalys",
    "T-4750": "Idris",
    "T-4761": "Idris",
    "T-4659": "Idris",
-   "T-4610": "Odalys",
-   "T-4634": "Pernille",
-   "T-4695": "Ines",
    "T-4719": "Odalys",
    "T-4720": "Pernille",
    "T-4697": "Pernille",
@@ -804,16 +801,16 @@
    "T-4763": "Maren",
    "T-4765": "Maren",
    "T-4788": "Odalys",
-   "T-4699": "Pernille",
+   "T-4774": "Idris",
    "T-4770": "Ines"
   }
  },
  "ln": {
-  "at": "2026-11-18T00:22:09Z",
+  "at": "2026-11-18T00:25:05Z",
   "mq": {
    "n": {
-    "checking": 1,
-    "inline": 12,
+    "checking": 3,
+    "inline": 9,
     "conflicted": 2,
     "failed": 1,
     "held": 1,
@@ -821,37 +818,53 @@
     "parked": 8
    },
    "m": {
-    "checking": 17,
-    "inline": 18,
-    "conflicted": 687,
-    "failed": 17,
-    "held": 1493,
+    "checking": 2,
+    "inline": 27,
+    "conflicted": 690,
+    "failed": 20,
+    "held": 1496,
     "retry": null,
-    "parked": 291
+    "parked": 294
    },
    "cur": [
     [
      [
-      "T-4774"
+      "T-4610"
      ],
      "Mac tests",
      "Mac mini",
-     17
+     2
+    ],
+    [
+     [
+      "T-4634"
+     ],
+     "Mac tests",
+     "Mac mini",
+     2
+    ],
+    [
+     [
+      "T-4695"
+     ],
+     "Mac tests",
+     "Mac mini",
+     2
     ]
    ],
    "ld": [
-    41,
-    "2026-11-17T23:39:10Z"
+    42,
+    "2026-11-18T00:22:38Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-18T00:21:44Z",
-    "ld": 0.69,
+    "at": "2026-11-18T00:24:18Z",
+    "ld": 0.63,
     "c": 8,
     "sb": 1,
     "dk": [
-     16.9,
+     16.8,
      228.3
     ],
     "ss": [
@@ -950,10 +963,10 @@
   "main": 2,
   "lanes": 5,
   "total": 7,
-  "at": "7:22 PM",
+  "at": "7:25 PM",
   "why": "",
-  "at_iso": "2026-11-18T00:22:00+00:00",
+  "at_iso": "2026-11-18T00:25:00+00:00",
   "started": "7:10 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 2, started 7:10 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 7:22 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 2, started 7:10 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 7:25 PM ET</p></section>"
  }
 }

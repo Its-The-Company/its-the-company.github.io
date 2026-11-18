@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-18T06:52:36.250136+00:00",
+ "at": "2026-11-18T06:55:39.535031+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -165,7 +165,7 @@
    "task": "[build] T-4688 Developer mode for Pro",
    "model": "opus",
    "started": "2026-11-18T05:56:56.560Z",
-   "seconds": 3339,
+   "seconds": 3522,
    "finished": null,
    "effort": "high"
   },
@@ -174,7 +174,7 @@
    "task": "[build] T-4767 button handler exit as error",
    "model": "opus",
    "started": "2026-11-18T06:37:03.752Z",
-   "seconds": 932,
+   "seconds": 1115,
    "finished": null,
    "effort": "high"
   }
@@ -193,7 +193,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 487,
+  "runnable_count": 489,
   "blocked_count": 34
  },
  "meter": {
@@ -242,7 +242,7 @@
   "week_pct": 46.38,
   "usage_pct": 53.1,
   "work_pct": 80.8,
-  "read_at": "2026-11-18T06:52:00+00:00",
+  "read_at": "2026-11-18T06:56:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -255,31 +255,6 @@
     "at": "2026-11-18T01:19:53-05:00",
     "n": "Evan",
     "src": "plan-a"
-   },
-   {
-    "lane": "b2",
-    "task": "T-4854",
-    "w": "Idris",
-    "k": "review",
-    "t": "Review the button args number limit",
-    "m": "sonnet",
-    "e": "high",
-    "at": "2026-11-18T01:41:10-05:00",
-    "n": "Jeremy",
-    "d": 1,
-    "src": "plan-b"
-   },
-   {
-    "lane": "b2",
-    "task": "T-4852",
-    "w": "Pernille",
-    "k": "review",
-    "t": "Check finished work before it ships",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-18T01:41:10-05:00",
-    "n": "Jeremy",
-    "src": "plan-b"
    },
    {
     "lane": "b3",
@@ -341,7 +316,7 @@
  "lock_in": {
   "on": false,
   "pool": 10,
-  "at": "2026-11-18T01:52:00-05:00",
+  "at": "2026-11-18T01:56:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -522,7 +497,7 @@
    }
   ],
   "count": {
-   "next": 487,
+   "next": 489,
    "wait": 32,
    "blocked": 2,
    "you": 9
@@ -576,62 +551,67 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-18T06:52:17Z",
+  "at": "2026-11-18T06:55:19Z",
   "s": {
    "T-4796": [
     "merging",
     "Host checks on the Mac mini",
-    1794984017245
+    1794984019795
    ],
    "T-4442": [
     "mergeq",
     "2nd to merge",
-    1794975317245
+    1794975319795
    ],
    "T-4516": [
     "mergetest",
     "Xcode checks on the MacBook, 3rd to merge",
-    1794983837245
+    1794983839795
    ],
    "T-4784": [
     "mergeq",
     "4th to merge",
-    1794982817245
+    1794982819795
    ],
    "T-4854": [
     "mergeq",
     "5th to merge",
-    1794984617245
+    1794984619795
+   ],
+   "T-4852": [
+    "mergeq",
+    "6th to merge",
+    1794984919795
    ],
    "T-4767": [
     "merging",
     "Mac tests at the main gate",
-    1794984737245
+    1794984739795
    ],
    "T-4688": [
     "testing",
     "its own tests, in its copy",
-    1794983537245
+    1794983539795
    ],
    "T-0044": [
     "testq",
     "1st for a Simulator",
-    1794984317245
+    1794984319795
    ],
    "T-4301": [
     "testq",
     "1st for a Simulator",
-    1794984317245
+    1794984319795
    ],
    "T-4644": [
     "testq",
     "1st for a Simulator",
-    1794984317245
+    1794984319795
    ],
    "T-4772": [
     "testq",
     "1st for a Simulator",
-    1794984317245
+    1794984319795
    ]
   },
   "nm": {
@@ -640,6 +620,7 @@
    "T-4516": "Prove the premade settings routes in a UI test",
    "T-4784": "Pin the refresh glyph's button style in a test",
    "T-4854": "Review the button args number limit",
+   "T-4852": "Check finished work before it ships",
    "T-4767": "Treat a button handler's exit as the script's error",
    "T-4688": "Build a Developer mode for testing Pro",
    "T-0044": "Test running marketplace Python inside a web view",
@@ -653,6 +634,7 @@
    "T-4516": "Idris",
    "T-4784": "Idris",
    "T-4854": "Idris",
+   "T-4852": "Pernille",
    "T-4767": "Pernille",
    "T-4688": "Idris",
    "T-0044": "Idris",
@@ -663,11 +645,11 @@
   }
  },
  "ln": {
-  "at": "2026-11-18T06:52:17Z",
+  "at": "2026-11-18T06:55:19Z",
   "mq": {
    "n": {
     "checking": 2,
-    "inline": 3,
+    "inline": 4,
     "conflicted": 3,
     "failed": 0,
     "held": 1,
@@ -675,13 +657,13 @@
     "parked": 10
    },
    "m": {
-    "checking": 13,
-    "inline": 32,
-    "conflicted": 528,
+    "checking": 16,
+    "inline": 20,
+    "conflicted": 531,
     "failed": null,
-    "held": 1883,
+    "held": 1886,
     "retry": null,
-    "parked": 448
+    "parked": 451
    },
    "cur": [
     [
@@ -690,7 +672,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     12
+     15
     ],
     [
      [
@@ -698,7 +680,7 @@
      ],
      "iPhone app tests",
      "MacBook",
-     15
+     18
     ]
    ],
    "ld": [
@@ -708,12 +690,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-18T06:51:49Z",
-    "ld": 22.86,
+    "at": "2026-11-18T06:54:55Z",
+    "ld": 12.7,
     "c": 8,
     "sb": 2,
     "dk": [
-     26.1,
+     25.4,
      228.3
     ],
     "ss": [
@@ -763,15 +745,6 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 1 task",
-   "at": "2026-11-18T01:41:09-05:00"
-  },
-  {
-   "w": "Operator",
-   "a": "Jeremy's Account",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
    "t": "Work session \u2013 2 tasks",
    "at": "2026-11-18T01:41:08-05:00"
   }
@@ -794,12 +767,12 @@
  ],
  "agents_now": {
   "main": 2,
-  "lanes": 3,
-  "total": 5,
-  "at": "1:52 AM",
+  "lanes": 2,
+  "total": 4,
+  "at": "1:56 AM",
   "why": "",
-  "at_iso": "2026-11-18T06:52:00+00:00",
+  "at_iso": "2026-11-18T06:56:00+00:00",
   "started": "12:47 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 2, started 12:47 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 1:52 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 2, started 12:47 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 1:56 AM ET</p></section>"
  }
 }

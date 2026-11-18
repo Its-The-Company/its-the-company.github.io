@@ -1,50 +1,19 @@
 {
  "schema": 1,
- "at": "2026-11-18T16:56:33.373158+00:00",
+ "at": "2026-11-18T16:59:40.792088+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-18T10:30:40-05:00",
   "flow": [
    {
-    "t": "T-4574",
-    "name": "Keep the launcher's app queries out of shipped builds",
-    "acct": "Personal b",
+    "t": "T-4679",
+    "name": "Make the unit tests pass in a launcher build",
+    "acct": "Personal a",
     "steps": [
      {
-      "s": "macbook",
-      "at": 1795012473
-     },
-     {
       "s": "testq",
-      "at": 1795016718
-     },
-     {
-      "s": "macbook",
-      "at": 1795017534
-     },
-     {
-      "s": "testq",
-      "at": 1795020000
-     },
-     {
-      "s": "macbook",
-      "at": 1795020984
-     },
-     {
-      "s": "landing",
-      "at": 1795020991
-     }
-    ]
-   },
-   {
-    "t": "T-4635",
-    "name": "Clear the Settings restore line once Pro is bought",
-    "acct": "Personal b",
-    "steps": [
-     {
-      "s": "macbook",
-      "at": 1795017662
+      "at": 1795021107
      }
     ]
    },
@@ -89,6 +58,31 @@
    }
   ],
   "done": [
+   {
+    "t": "T-4835",
+    "name": "Show an all-day event on its own date after travel",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "failed",
+    "end_at": 1795021095,
+    "why": "did not merge cleanly"
+   },
+   {
+    "t": "T-4635",
+    "name": "Clear the Settings restore line once Pro is bought",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1795021039
+   },
+   {
+    "t": "T-4574",
+    "name": "Keep the launcher's app queries out of shipped builds",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1795020997
+   },
    {
     "t": "T-4533",
     "name": "Make the premade settings save sturdier on disk errors",
@@ -144,37 +138,10 @@
     "steps": [],
     "end": "landed",
     "end_at": 1795016185
-   },
-   {
-    "t": "T-4783",
-    "name": "Keep the gutter mark on its line after an edit",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "failed",
-    "end_at": 1795001655,
-    "why": "did not merge cleanly"
-   },
-   {
-    "t": "T-4771",
-    "name": "Gutter marks redraw quickly and stay right while typing",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "failed",
-    "end_at": 1795001655,
-    "why": "did not merge cleanly"
-   },
-   {
-    "t": "T-4771",
-    "name": "Gutter marks redraw quickly and stay right while typing",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "failed",
-    "end_at": 1795001648,
-    "why": "did not merge cleanly"
    }
   ],
-  "landed": 23,
-  "failed": 6
+  "landed": 25,
+  "failed": 7
  },
  "workers": [
   {
@@ -182,7 +149,7 @@
    "task": "[build] T-4493 land the site clutter cut",
    "model": "opus",
    "started": "2026-11-18T15:43:48.650Z",
-   "seconds": 4364,
+   "seconds": 4552,
    "finished": null,
    "effort": "high"
   },
@@ -191,7 +158,7 @@
    "task": "[tools] T-4180 judge stray runner salvage",
    "model": "opus",
    "started": "2026-11-18T15:50:45.673Z",
-   "seconds": 3947,
+   "seconds": 4135,
    "finished": null,
    "effort": "high"
   }
@@ -239,19 +206,19 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 5.0,
+   "pct": 6.0,
    "resets_at": "2026-11-18T15:10:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-18T11:29:20.931947-05:00",
+   "read_at": "2026-11-18T11:56:46.230281-05:00",
    "source": "live",
-   "left": 95.0,
+   "left": 94.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 47.0,
    "resets_at": "2026-11-22T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-18T11:29:20.931947-05:00",
+   "read_at": "2026-11-18T11:56:46.230281-05:00",
    "source": "live",
    "left": 53.0,
    "left_words": "of your weekly allowance left"
@@ -263,7 +230,7 @@
    "read_at": "2026-11-18T10:30:22.136410-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-18T11:29:20.931947-05:00"
+  "read_at": "2026-11-18T11:56:46.230281-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -283,7 +250,7 @@
   "week_pct": 51.32,
   "usage_pct": 52.2,
   "work_pct": 82.0,
-  "read_at": "2026-11-18T16:56:00+00:00",
+  "read_at": "2026-11-18T16:59:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -295,6 +262,7 @@
     "e": "high",
     "at": "2026-11-18T10:51:33-05:00",
     "n": "Jeremy",
+    "d": 1,
     "src": "plan-b"
    },
    {
@@ -346,7 +314,7 @@
  "lock_in": {
   "on": false,
   "pool": 12,
-  "at": "2026-11-18T11:56:00-05:00",
+  "at": "2026-11-18T11:59:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -511,6 +479,11 @@
   ],
   "done": [
    {
+    "w": "Idris",
+    "t": "The shipped app no longer lists the twelve other apps the unreleased launcher would check for;...",
+    "at": "2026-11-18T11:56:00-05:00"
+   },
+   {
     "w": "Operator",
     "t": "The website's Pitches page test works again: Evan made the one-line fix himself on GitHub after...",
     "at": "2026-11-18T10:43:00-05:00"
@@ -519,11 +492,6 @@
     "w": "Operator",
     "t": "Refusals per day stayed within its limit of 16.05 refusals for a full day, so the bottleneck...",
     "at": "2026-11-18T10:29:00-05:00"
-   },
-   {
-    "w": "Idris+operator",
-    "t": "The Pro purchase tests no longer time out: after the waiting fix they passed three times running...",
-    "at": "2026-11-18T10:17:00-05:00"
    }
   ],
   "count": {
@@ -533,8 +501,12 @@
    "you": 9
   },
   "fin": {
-   "n": 1,
+   "n": 2,
    "rows": [
+    [
+     "T-4574",
+     "Keep the launcher's app..."
+    ],
     [
      "T-4812",
      "Pitches page test crashes on..."
@@ -581,92 +553,71 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-18T16:56:15Z",
+  "at": "2026-11-18T16:59:31Z",
   "s": {
-   "T-4574": [
+   "T-4679": [
     "merging",
     "Host checks on the Mac mini",
-    1795020015268
+    1795021111605
    ],
    "T-4533": [
     "mergeq",
     "1st to merge",
-    1795020915268
+    1795020931605
+   ],
+   "T-4574": [
+    "mergeq",
+    "2nd to merge",
+    1795021111605
    ],
    "T-4635": [
     "mergeq",
     "3rd to merge",
-    1795006395268
-   ],
-   "T-4581": [
-    "mergeq",
-    "4th to merge",
-    1795017855268
-   ],
-   "T-4575": [
-    "mergeq",
-    "6th to merge",
-    1795007535268
-   ],
-   "T-4789": [
-    "mergeq",
-    "6th to merge",
-    1795007535268
+    1795021111605
    ],
    "T-4835": [
     "mergeq",
-    "7th to merge",
-    1795011735268
-   ],
-   "T-4679": [
-    "mergeq",
-    "8th to merge",
-    1795012035268
+    "4th to merge",
+    1795014871605
    ],
    "T-4889": [
     "mergeq",
-    "11th to merge",
-    1795014915268
+    "6th to merge",
+    1795014871605
    ],
    "T-4898": [
     "mergeq",
-    "13th to merge",
-    1795020975268
+    "8th to merge",
+    1795020991605
    ],
    "T-4220": [
     "merging",
     "Mac tests at the main gate",
-    1795020555268
+    1795020571605
    ],
    "T-4493": [
     "merging",
     "Mac tests at the main gate",
-    1795020555268
+    1795020571605
    ]
   },
   "nm": {
-   "T-4574": "Keep the launcher's app queries out of shipped builds",
-   "T-4533": "Make the premade settings save sturdier on disk errors",
-   "T-4635": "Clear the Settings restore line once Pro is bought",
-   "T-4581": "Test a real widget tap in iPad windows",
-   "T-4575": "Stop an edit from rewriting a pasted Shortcut link",
-   "T-4789": "Check finished work before it ships",
-   "T-4835": "Show an all-day event on its own date after travel",
    "T-4679": "Make the unit tests pass in a launcher build",
+   "T-4533": "Make the premade settings save sturdier on disk errors",
+   "T-4574": "Keep the launcher's app queries out of shipped builds",
+   "T-4635": "Clear the Settings restore line once Pro is bought",
+   "T-4835": "Show an all-day event on its own date after travel",
    "T-4889": "Check the PyWidget case fix in premade lines",
    "T-4898": "Fix the Home Screen token test reading the gallery",
    "T-4220": "Run the launcher build's tests on a schedule",
    "T-4493": "Cut clutter text on the pages still carrying it"
   },
   "wk": {
-   "T-4574": "Idris",
-   "T-4533": "Pernille",
-   "T-4635": "Idris",
-   "T-4581": "Idris",
-   "T-4575": "Idris",
-   "T-4789": "Pernille",
-   "T-4835": "Pernille",
    "T-4679": "Idris",
+   "T-4533": "Pernille",
+   "T-4574": "Idris",
+   "T-4635": "Idris",
+   "T-4835": "Pernille",
    "T-4889": "Idris",
    "T-4898": "Idris",
    "T-4220": "Idris",
@@ -675,11 +626,11 @@
   }
  },
  "ln": {
-  "at": "2026-11-18T16:56:15Z",
+  "at": "2026-11-18T16:59:31Z",
   "mq": {
    "n": {
     "checking": 1,
-    "inline": 9,
+    "inline": 6,
     "conflicted": 5,
     "failed": 0,
     "held": 1,
@@ -687,37 +638,37 @@
     "parked": 5
    },
    "m": {
-    "checking": 16,
-    "inline": 149,
-    "conflicted": 823,
+    "checking": 1,
+    "inline": 3,
+    "conflicted": 826,
     "failed": null,
-    "held": 2487,
+    "held": 2490,
     "retry": null,
-    "parked": 799
+    "parked": 802
    },
    "cur": [
     [
      [
-      "T-4574"
+      "T-4679"
      ],
      "Mac tests",
      "Mac mini",
-     16
+     1
     ]
    ],
    "ld": [
-    24,
-    "2026-11-18T16:39:31Z"
+    27,
+    "2026-11-18T16:58:03Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-18T16:56:16Z",
-    "ld": 20.94,
+    "at": "2026-11-18T16:58:47Z",
+    "ld": 22.0,
     "c": 8,
     "sb": 2,
     "dk": [
-     13.4,
+     13.3,
      228.3
     ],
     "ss": [
@@ -730,12 +681,12 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-18T16:31:25Z",
-    "ld": 1.18,
+    "at": "2026-11-18T16:45:02Z",
+    "ld": 16.09,
     "c": 12,
     "sb": 0,
     "dk": [
-     306.1,
+     305.8,
      926.4
     ],
     "sn": []
@@ -749,8 +700,8 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 2 tasks",
-   "at": "2026-11-18T10:30:40-05:00"
+   "t": "Inbox \u2013 Evan's 11:59 AM Message on GitHub",
+   "at": "2026-11-18T11:59:32-05:00"
   },
   {
    "w": "Operator",
@@ -758,20 +709,42 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 1 task",
-   "at": "2026-11-18T11:50:11-05:00"
+   "t": "Inbox \u2013 Evan's 11:57 AM Message on GitHub",
+   "at": "2026-11-18T11:58:05-05:00"
   }
  ],
  "reply": {
   "sent": "2026-11-18T16:48:11Z",
   "seconds": 118.0
  },
- "inbox": [],
+ "inbox": [
+  {
+   "id": "c6985477493",
+   "state": "received",
+   "position": 1,
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "A"
+  },
+  {
+   "id": "c6985508097",
+   "state": "received",
+   "position": 2,
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "I am also confused why the process..."
+  }
+ ],
  "trimmed": [
   "lane_next",
   "queue_text",
   "task_done",
   "fin_short",
+  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -782,10 +755,10 @@
   "main": 2,
   "lanes": 1,
   "total": 3,
-  "at": "11:56 AM",
+  "at": "11:59 AM",
   "why": "",
-  "at_iso": "2026-11-18T16:56:00+00:00",
+  "at_iso": "2026-11-18T16:59:00+00:00",
   "started": "10:30 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 10:30 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 11:56 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 10:30 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 11:59 AM ET</p></section>"
  }
 }

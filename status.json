@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-18T11:01:05.655844+00:00",
+ "at": "2026-11-18T11:04:10.268170+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -112,7 +112,7 @@
    "task": "[build] T-4873 fallback completion case",
    "model": "sonnet",
    "started": "2026-11-18T10:35:31.351Z",
-   "seconds": 1534,
+   "seconds": 1718,
    "finished": null
   },
   {
@@ -120,20 +120,28 @@
    "task": "[review] T-4876 long-line caret review",
    "model": "opus",
    "started": "2026-11-18T10:40:13.676Z",
-   "seconds": 1251,
+   "seconds": 1436,
    "finished": null
   },
+  {
+   "name": "maren",
+   "task": "[design] T-4886 PyWidget in premade lines",
+   "model": "sonnet",
+   "started": "2026-11-18T11:02:42.183Z",
+   "seconds": 88,
+   "finished": null
+  }
+ ],
+ "who": "Idris, Pernille, Maren",
+ "recent": [
   {
    "name": "idris",
    "task": "[review] T-4885 PyWidget name strings review",
    "model": "opus",
    "started": "2026-11-18T10:55:51.583Z",
-   "seconds": 314,
-   "finished": null
-  }
- ],
- "who": "Idris x2, Pernille",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-18T11:02:19.753000+00:00"
+  },
   {
    "name": "maren",
    "task": "[design] T-4764 habit buttons at large text",
@@ -157,20 +165,12 @@
    "started": "2026-11-18T10:27:31.576Z",
    "seconds": null,
    "finished": "2026-11-18T10:35:10.810000+00:00"
-  },
-  {
-   "name": "maren",
-   "task": "[design] T-4752 gate iPad preview shot",
-   "model": "sonnet",
-   "started": "2026-11-18T09:30:49.790Z",
-   "seconds": null,
-   "finished": "2026-11-18T10:27:13.194000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 487,
+  "runnable_count": 486,
   "blocked_count": 35
  },
  "meter": {
@@ -219,7 +219,7 @@
   "week_pct": 50.16,
   "usage_pct": 53.3,
   "work_pct": 82.4,
-  "read_at": "2026-11-18T11:01:00+00:00",
+  "read_at": "2026-11-18T11:04:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -256,7 +256,7 @@
  "lock_in": {
   "on": false,
   "pool": 12,
-  "at": "2026-11-18T06:01:00-05:00",
+  "at": "2026-11-18T06:04:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -289,6 +289,14 @@
    "next": []
   },
   {
+   "name": "Maren",
+   "state": "running",
+   "task": "[design] T-4886 PyWidget in premade lines",
+   "model": "sonnet",
+   "since": "2026-11-18T11:02:42.183Z",
+   "next": []
+  },
+  {
    "name": "Odalys",
    "state": "next",
    "task": "Odalys, P0, Investor an Investor c6963972184 (6:23 PM...",
@@ -308,14 +316,6 @@
    "name": "Wrenna",
    "state": "next",
    "task": "Wrenna, P2, T-2375 continuation (B-staged item 3...",
-   "model": null,
-   "since": null,
-   "next": []
-  },
-  {
-   "name": "Maren",
-   "state": "next",
-   "task": "Maren, P2, found on T-3366 (11-07): in...",
    "model": null,
    "since": null,
    "next": []
@@ -342,13 +342,13 @@
     "task": "T-4876"
    },
    {
-    "w": "Idris",
-    "k": "review",
-    "t": "Check the PyWidget name fix in widget words",
-    "m": "opus",
-    "at": "2026-11-18T10:55:51.583Z",
+    "w": "Maren",
+    "k": "design",
+    "t": "Write PyWidget right in premade widget lines",
+    "m": "sonnet",
+    "at": "2026-11-18T11:02:42.183Z",
     "o": "c",
-    "task": "T-4885"
+    "task": "T-4886"
    }
   ],
   "src": "plan",
@@ -427,29 +427,37 @@
   "done": [
    {
     "w": "Idris",
-    "t": "Measured what one tap on a widget's refresh button costs: with the app closed about 3.4 seconds...",
-    "at": "2026-11-18T05:55:00-05:00"
-   },
-   {
-    "w": "Idris",
-    "t": "The record of where widget taps were checked now matches the Investors' ruling: iPhone taps were...",
-    "at": "2026-11-18T05:55:00-05:00"
+    "t": "An independent check confirmed the eleven widget lines now spell the product PyWidget the...",
+    "at": "2026-11-18T06:01:00-05:00"
    },
    {
     "w": "Maren",
-    "t": "The Habit tracker's Done today button spec now says what shrinks or drops first when a person...",
-    "at": "2026-11-18T05:54:00-05:00"
+    "t": "The widget's words now spell the product PyWidget the way the approved voice writes it, in...",
+    "at": "2026-11-18T06:01:00-05:00"
+   },
+   {
+    "w": "Idris",
+    "t": "Measured what one tap on a widget's refresh button costs: with the app closed about 3.4 seconds...",
+    "at": "2026-11-18T05:55:00-05:00"
    }
   ],
   "count": {
-   "next": 487,
+   "next": 486,
    "wait": 32,
    "blocked": 3,
    "you": 10
   },
   "fin": {
-   "n": 17,
+   "n": 19,
    "rows": [
+    [
+     "T-4885",
+     "Check the PyWidget name fix..."
+    ],
+    [
+     "T-4746",
+     "Write PyWidget's name right..."
+    ],
     [
      "T-4774",
      "Measure what one refresh tap..."
@@ -465,14 +473,6 @@
     [
      "T-4872",
      "Check the completion case..."
-    ],
-    [
-     "T-4752",
-     "Gate the iPad preview shot..."
-    ],
-    [
-     "T-4763",
-     "Keep habit marks when the..."
     ]
    ]
   }
@@ -516,47 +516,47 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-18T11:00:59Z",
+  "at": "2026-11-18T11:03:55Z",
   "s": {
    "T-0011": [
     "merging",
     "Host checks on the Mac mini",
-    1794999359385
+    1794999355548
    ],
    "T-4533": [
     "mergeq",
     "2nd to merge",
-    1794988079385
+    1794988075548
    ],
    "T-4644": [
     "mergeq",
     "3rd to merge",
-    1794988619385
+    1794988615548
    ],
    "T-4771": [
     "mergeq",
     "4th to merge",
-    1794989819385
+    1794989815548
    ],
    "T-4762": [
     "mergeq",
     "5th to merge",
-    1794989819385
+    1794989875548
    ],
    "T-4301": [
     "mergeq",
     "7th to merge",
-    1794991079385
+    1794991075548
    ],
    "T-4783": [
     "mergeq",
     "9th to merge",
-    1794991559385
+    1794991555548
    ],
    "T-4574": [
     "mergeq",
     "11th to merge",
-    1794992519385
+    1794992515548
    ],
    "T-4873": [
     "mergetest",
@@ -566,7 +566,7 @@
    "T-4876": [
     "testing",
     "its own tests, in its copy",
-    1794999359385
+    1794999355548
    ]
   },
   "nm": {
@@ -592,6 +592,8 @@
    "T-4574": "Idris",
    "T-4873": "Idris",
    "T-4876": "Pernille",
+   "T-4885": "Idris",
+   "T-4746": "Maren",
    "T-4774": "Idris",
    "T-4803": "Idris",
    "T-4764": "Maren",
@@ -601,13 +603,11 @@
    "T-4663": "Idris",
    "T-4861": "Pernille",
    "T-4601": "Pernille",
-   "T-4602": "Pernille",
-   "T-4603": "Idris",
-   "T-4604": "Pernille"
+   "T-4602": "Pernille"
   }
  },
  "ln": {
-  "at": "2026-11-18T11:00:59Z",
+  "at": "2026-11-18T11:03:55Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -619,13 +619,13 @@
     "parked": 9
    },
    "m": {
-    "checking": 5,
-    "inline": 164,
-    "conflicted": 777,
+    "checking": 8,
+    "inline": 166,
+    "conflicted": 780,
     "failed": null,
-    "held": 2132,
+    "held": 2134,
     "retry": null,
-    "parked": 777
+    "parked": 780
    },
    "cur": [
     [
@@ -634,7 +634,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     5
+     8
     ]
    ],
    "ld": [
@@ -644,16 +644,16 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-18T11:00:35Z",
-    "ld": 1.38,
+    "at": "2026-11-18T11:03:32Z",
+    "ld": 2.08,
     "c": 8,
     "sb": 1,
     "dk": [
-     20.6,
+     19.8,
      228.3
     ],
     "ss": [
-     172.1,
+     172.2,
      953.7
     ],
     "sn": [
@@ -680,7 +680,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 13 tasks",
+   "t": "Work session \u2013 14 tasks",
    "at": "2026-11-18T04:07:20-05:00"
   }
  ],
@@ -706,10 +706,10 @@
   "main": 3,
   "lanes": 0,
   "total": 3,
-  "at": "6:01 AM",
+  "at": "6:04 AM",
   "why": "",
-  "at_iso": "2026-11-18T11:01:00+00:00",
+  "at_iso": "2026-11-18T11:04:00+00:00",
   "started": "4:07 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 4:07 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 6:01 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 4:07 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 6:04 AM ET</p></section>"
  }
 }

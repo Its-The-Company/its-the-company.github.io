@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-18T05:15:08.066114+00:00",
+ "at": "2026-11-18T05:18:11.679286+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -122,7 +122,7 @@
    "task": "[tools] T-4829 bottleneck watch on tick",
    "model": "opus",
    "started": "2026-11-18T03:44:30.048Z",
-   "seconds": 5438,
+   "seconds": 5621,
    "finished": null,
    "effort": "high"
   }
@@ -149,25 +149,24 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 478,
+  "runnable_count": 479,
   "blocked_count": 34
  },
  "meter": {
   "five_hour": {
-   "pct": null,
-   "resets_at": null,
+   "pct": 0.0,
+   "resets_at": "2026-11-18T05:10:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-17T23:41:41.010581-05:00",
+   "read_at": "2026-11-18T00:15:15.727269-05:00",
    "source": "live",
-   "last_reset": "2026-11-18T00:10:00-05:00",
-   "left": null,
+   "left": 100.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 40.0,
    "resets_at": "2026-11-22T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-17T23:41:41.010581-05:00",
+   "read_at": "2026-11-18T00:15:15.727269-05:00",
    "source": "live",
    "left": 60.0,
    "left_words": "of your weekly allowance left"
@@ -179,7 +178,7 @@
    "read_at": "2026-11-17T22:21:25.951433-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-17T23:41:41.010581-05:00"
+  "read_at": "2026-11-18T00:15:15.727269-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -199,7 +198,7 @@
   "week_pct": 46.38,
   "usage_pct": 53.7,
   "work_pct": 81.3,
-  "read_at": "2026-11-18T05:15:00+00:00",
+  "read_at": "2026-11-18T05:18:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -220,7 +219,7 @@
   }
  ],
  "disk": {
-  "free_gb": 8.7,
+  "free_gb": 8.2,
   "gate": "closed",
   "ssd": {
    "mounted": true,
@@ -229,14 +228,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions wait until 20 GB is free.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-18T00:08:00-05:00",
+   "at": "2026-11-18T00:15:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 9,
-  "at": "2026-11-18T00:15:00-05:00",
+  "at": "2026-11-18T00:18:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -406,7 +405,7 @@
    }
   ],
   "count": {
-   "next": 478,
+   "next": 479,
    "wait": 32,
    "blocked": 2,
    "you": 9
@@ -460,61 +459,61 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-18T05:14:52Z",
+  "at": "2026-11-18T05:18:02Z",
   "s": {
    "T-4796": [
     "merging",
     "Host checks on the Mac mini",
-    1794978532956
+    1794978482309
    ],
    "T-4700": [
     "mergeq",
     "1st to merge",
-    1794974932956
+    1794974882309
    ],
    "T-4803": [
     "mergeq",
     "2nd to merge",
-    1794975232956
-   ],
-   "T-4787": [
-    "mergeq",
-    "3rd to merge",
-    1794978472956
-   ],
-   "T-4784": [
-    "mergeq",
-    "4th to merge",
-    1794977992956
+    1794975242309
    ],
    "T-4442": [
     "mergeq",
+    "3rd to merge",
+    1794975362309
+   ],
+   "T-4787": [
+    "mergeq",
+    "4th to merge",
+    1794978482309
+   ],
+   "T-4784": [
+    "mergeq",
     "5th to merge",
-    1794975352956
+    1794977942309
    ],
    "T-4516": [
     "mergeq",
     "6th to merge",
-    1794977572956
+    1794977582309
    ],
    "T-0011": [
     "mergeq",
     "7th to merge",
-    1794977512956
+    1794977522309
    ],
    "T-4829": [
     "merging",
     "Mac tests at the main gate",
-    1794978532956
+    1794978482309
    ]
   },
   "nm": {
    "T-4796": "Say which premades carry the Pro tag",
    "T-4700": "Check finished work before it ships",
    "T-4803": "Make the tap check's record match the iPad ruling",
+   "T-4442": "Tidy the bundled first renders' small edges",
    "T-4787": "Count failed merges by cause: bad test or broken code",
    "T-4784": "Pin the refresh glyph's button style in a test",
-   "T-4442": "Tidy the bundled first renders' small edges",
    "T-4516": "Prove the premade settings routes in a UI test",
    "T-0011": "Check motion, health and battery sensors on a device",
    "T-4829": "Run the bottleneck watch on every tick"
@@ -523,9 +522,9 @@
    "T-4796": "Ines",
    "T-4700": "Pernille",
    "T-4803": "Idris",
+   "T-4442": "Idris",
    "T-4787": "Odalys",
    "T-4784": "Idris",
-   "T-4442": "Idris",
    "T-4516": "Idris",
    "T-0011": "Idris",
    "T-4829": "Odalys",
@@ -533,7 +532,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-18T05:14:52Z",
+  "at": "2026-11-18T05:18:02Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -545,13 +544,13 @@
     "parked": 10
    },
    "m": {
-    "checking": 6,
-    "inline": 23,
-    "conflicted": 431,
+    "checking": 10,
+    "inline": 26,
+    "conflicted": 434,
     "failed": null,
-    "held": 1785,
-    "retry": 35,
-    "parked": 351
+    "held": 1789,
+    "retry": 38,
+    "parked": 354
    },
    "cur": [
     [
@@ -560,7 +559,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     6
+     10
     ]
    ],
    "ld": [
@@ -570,12 +569,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-18T05:14:53Z",
-    "ld": 35.66,
+    "at": "2026-11-18T05:17:38Z",
+    "ld": 32.81,
     "c": 8,
     "sb": 3,
     "dk": [
-     7.8,
+     7.0,
      228.3
     ],
     "ss": [
@@ -589,12 +588,12 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-18T05:08:25Z",
-    "ld": 0.28,
+    "at": "2026-11-18T05:16:07Z",
+    "ld": 1.2,
     "c": 12,
     "sb": 0,
     "dk": [
-     311.3,
+     311.1,
      926.4
     ],
     "sn": []
@@ -609,31 +608,19 @@
    "m": "opus",
    "e": "high",
    "t": "Work session \u2013 2 tasks",
-   "at": "2026-11-18T00:13:36-05:00"
+   "at": "2026-11-18T00:16:16-05:00"
   }
  ],
  "reply": {
-  "sent": "2026-11-18T05:09:19Z",
-  "seconds": 256.0
+  "sent": "2026-11-18T05:15:00Z",
+  "seconds": 75.0
  },
- "inbox": [
-  {
-   "id": "c6969786057",
-   "state": "received",
-   "position": 1,
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "Explain the difference between..."
-  }
- ],
+ "inbox": [],
  "trimmed": [
   "lane_next",
   "queue_text",
   "task_done",
   "fin_short",
-  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -644,10 +631,10 @@
   "main": 1,
   "lanes": 0,
   "total": 1,
-  "at": "12:15 AM",
+  "at": "12:18 AM",
   "why": "",
-  "at_iso": "2026-11-18T05:15:00+00:00",
+  "at_iso": "2026-11-18T05:18:00+00:00",
   "started": "10:22 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 10:22 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 12:15 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 10:22 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 12:18 AM ET</p></section>"
  }
 }

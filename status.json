@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-18T00:46:53.571385+00:00",
+ "at": "2026-11-18T00:49:55.212589+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -130,7 +130,7 @@
    "task": "[build] T-2296 land the gallery work",
    "model": "opus",
    "started": "2026-11-18T00:13:00.213Z",
-   "seconds": 2033,
+   "seconds": 2214,
    "finished": null,
    "effort": "high"
   },
@@ -139,7 +139,7 @@
    "task": "[tools] T-4786 correct bad tests holding merges",
    "model": "opus",
    "started": "2026-11-18T00:45:18.571Z",
-   "seconds": 95,
+   "seconds": 276,
    "finished": null,
    "effort": "high"
   }
@@ -207,47 +207,8 @@
   "week_pct": 43.81,
   "usage_pct": 53.5,
   "work_pct": 81.2,
-  "read_at": "2026-11-18T00:46:00+00:00",
+  "read_at": "2026-11-18T00:49:00+00:00",
   "running": [
-   {
-    "lane": "a",
-    "task": "T-4782",
-    "w": "Idris",
-    "k": "test",
-    "t": "Stop a Pro store test at its first stalled wait",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-17T18:44:12-05:00",
-    "n": "Evan",
-    "d": 1,
-    "src": "plan-a"
-   },
-   {
-    "lane": "a",
-    "task": "T-4719",
-    "w": "Odalys",
-    "k": "review",
-    "t": "Check finished work before it ships",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-17T18:44:12-05:00",
-    "n": "Evan",
-    "d": 1,
-    "src": "plan-a"
-   },
-   {
-    "lane": "a",
-    "task": "T-4720",
-    "w": "Pernille",
-    "k": "review",
-    "t": "Check finished work before it ships",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-17T18:44:12-05:00",
-    "n": "Evan",
-    "d": 1,
-    "src": "plan-a"
-   },
    {
     "lane": "b",
     "task": "T-4781",
@@ -359,7 +320,7 @@
  "lock_in": {
   "on": false,
   "pool": 7,
-  "at": "2026-11-17T19:46:00-05:00",
+  "at": "2026-11-17T19:49:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -589,87 +550,92 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-18T00:46:35Z",
+  "at": "2026-11-18T00:49:55Z",
   "s": {
    "T-4610": [
     "merging",
     "Host checks on the Mac mini",
-    1794961415596
+    1794961375212
    ],
    "T-4634": [
     "merging",
     "Host checks on the Mac mini",
-    1794961415596
+    1794961375212
    ],
    "T-4695": [
     "merging",
     "Host checks on the Mac mini",
-    1794961415596
+    1794961375212
    ],
    "T-4607": [
     "mergeq",
     "1st to merge",
-    1794959015596
+    1794959035212
    ],
    "T-4787": [
     "mergeq",
     "3rd to merge",
-    1794962675596
+    1794959275212
    ],
    "T-4643": [
     "mergeq",
-    "3rd to merge",
-    1794962675596
+    "4th to merge",
+    1794962635212
    ],
    "T-4750": [
     "mergeq",
     "6th to merge",
-    1794960155596
+    1794960175212
    ],
    "T-4761": [
     "mergeq",
     "7th to merge",
-    1794960515596
+    1794960535212
    ],
    "T-4659": [
     "mergeq",
     "8th to merge",
-    1794961055596
+    1794961075212
    ],
    "T-4782": [
     "mergeq",
     "10th to merge",
-    1794962195596
+    1794962215212
    ],
    "T-4697": [
     "mergeq",
     "12th to merge",
-    1794961775596
+    1794961795212
    ],
    "T-4698": [
     "mergeq",
     "12th to merge",
-    1794961775596
+    1794961795212
    ],
    "T-4699": [
     "mergeq",
     "12th to merge",
-    1794961775596
+    1794961795212
    ],
    "T-4719": [
     "mergeq",
     "13th to merge",
-    1794959555596
+    1794959515212
    ],
    "T-4720": [
     "mergeq",
     "14th to merge",
-    1794959675596
+    1794959635212
    ],
    "T-2296": [
-    "merging",
-    "Mac tests at the main gate",
-    1794962615596
+    "mergetest",
+    "iPhone tests on the MacBook",
+    null
+   ],
+   "T-4786": [
+    "testing",
+    "Mac Mini \u00b7 test",
+    null
    ],
    "T-4774": [
     "merged",
@@ -701,6 +667,7 @@
    "T-4719": "Check finished work before it ships",
    "T-4720": "Check finished work before it ships",
    "T-2296": "Finish the gallery pager, iPad layout and detail foot",
+   "T-4786": "Correct every bad test that holds a merge",
    "T-4774": "Measure what one refresh tap costs the app",
    "T-4770": "Re-estimate the release date from measured build speed"
   },
@@ -721,12 +688,13 @@
    "T-4719": "Odalys",
    "T-4720": "Pernille",
    "T-2296": "Idris",
+   "T-4786": "Pernille",
    "T-4774": "Idris",
    "T-4770": "Ines"
   }
  },
  "ln": {
-  "at": "2026-11-18T00:46:35Z",
+  "at": "2026-11-18T00:49:55Z",
   "mq": {
    "n": {
     "checking": 3,
@@ -738,13 +706,13 @@
     "parked": 8
    },
    "m": {
-    "checking": 23,
-    "inline": 23,
-    "conflicted": 712,
+    "checking": 27,
+    "inline": 36,
+    "conflicted": 715,
     "failed": null,
-    "held": 1517,
-    "retry": 16,
-    "parked": 258
+    "held": 1520,
+    "retry": 19,
+    "parked": 261
    },
    "cur": [
     [
@@ -753,7 +721,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     23
+     27
     ],
     [
      [
@@ -761,7 +729,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     23
+     27
     ],
     [
      [
@@ -769,7 +737,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     23
+     27
     ]
    ],
    "ld": [
@@ -779,12 +747,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-18T00:45:50Z",
-    "ld": 1.38,
+    "at": "2026-11-18T00:49:32Z",
+    "ld": 4.53,
     "c": 8,
     "sb": 1,
     "dk": [
-     15.6,
+     18.1,
      228.3
     ],
     "ss": [
@@ -792,12 +760,12 @@
      953.7
     ],
     "sn": [
-     "iPhone 17e"
+     "iPhone 17"
     ]
    },
    "macbook": {
-    "at": "2026-11-18T00:43:38Z",
-    "ld": 0.93,
+    "at": "2026-11-18T00:45:44Z",
+    "ld": 0.7,
     "c": 12,
     "sb": 0,
     "dk": [
@@ -817,15 +785,6 @@
    "e": "high",
    "t": "Work session \u2013 4 tasks",
    "at": "2026-11-17T19:10:01-05:00"
-  },
-  {
-   "w": "Operator",
-   "a": "Evan's Account",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session",
-   "at": "2026-11-17T18:44:11-05:00"
   },
   {
    "w": "Operator",
@@ -863,12 +822,12 @@
  ],
  "agents_now": {
   "main": 2,
-  "lanes": 3,
-  "total": 5,
-  "at": "7:46 PM",
+  "lanes": 2,
+  "total": 4,
+  "at": "7:49 PM",
   "why": "",
-  "at_iso": "2026-11-18T00:46:00+00:00",
+  "at_iso": "2026-11-18T00:49:00+00:00",
   "started": "7:10 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 2, started 7:10 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 7:46 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 2, started 7:10 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 7:49 PM ET</p></section>"
  }
 }

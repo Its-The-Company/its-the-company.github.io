@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-18T00:04:53.903926+00:00",
+ "at": "2026-11-18T00:10:01.047111+00:00",
  "session": {
   "active": false,
   "kind": "",
@@ -142,31 +142,32 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 19.0,
-   "resets_at": "2026-11-17T19:10:00-05:00",
+   "pct": null,
+   "resets_at": null,
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-17T19:00:10.051397-05:00",
-   "source": "live",
-   "left": 81.0,
+   "read_at": "2026-11-17T19:09:49.957069-05:00",
+   "source": "usage",
+   "last_reset": "2026-11-18T00:10:00.069956+00:00",
+   "left": null,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 38.0,
-   "resets_at": "2026-11-22T02:00:00-05:00",
+   "resets_at": "2026-11-22T07:00:00.069975+00:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-17T19:00:10.051397-05:00",
-   "source": "live",
+   "read_at": "2026-11-17T19:09:49.957069-05:00",
+   "source": "usage",
    "left": 62.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 2.0,
-   "resets_at": "2026-11-22T06:59:59.615947+00:00",
+   "resets_at": "2026-11-22T07:00:00.070128+00:00",
    "used_words": "of the Fable weekly allowance used",
-   "read_at": "2026-11-17T18:54:30.472637-05:00",
+   "read_at": "2026-11-17T19:09:49.957069-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-17T19:00:10.051397-05:00"
+  "read_at": "2026-11-17T19:09:49.957069-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -181,12 +182,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-17T19:09:31-05:00",
+ "next_tick": "2026-11-17T19:24:50-05:00",
  "personal": {
-  "week_pct": 43.79,
+  "week_pct": 43.81,
   "usage_pct": 53.5,
-  "work_pct": 81.1,
-  "read_at": "2026-11-18T00:06:00+00:00",
+  "work_pct": 81.2,
+  "read_at": "2026-11-18T00:10:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -395,7 +396,7 @@
   }
  ],
  "disk": {
-  "free_gb": 14,
+  "free_gb": 19,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -404,14 +405,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-17T19:00:00-05:00",
+   "at": "2026-11-17T19:08:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 7,
-  "at": "2026-11-17T19:06:00-05:00",
+  "at": "2026-11-17T19:10:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -609,83 +610,102 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-18T00:04:53Z",
+  "at": "2026-11-18T00:10:01Z",
   "s": {
    "T-4774": [
     "merging",
     "Host checks on the Mac mini",
-    1794960293903
+    1794960301047
    ],
    "T-4607": [
     "mergeq",
     "1st to merge",
-    1794959033903
+    1794959041047
    ],
    "T-4787": [
     "mergeq",
     "2nd to merge",
-    1794959273903
+    1794959281047
    ],
    "T-4750": [
     "mergeq",
     "3rd to merge",
-    1794960173903
+    1794960181047
    ],
-   "T-4719": [
+   "T-4761": [
     "mergeq",
     "4th to merge",
-    1794959513903
-   ],
-   "T-4720": [
-    "mergeq",
-    "5th to merge",
-    1794959633903
+    1794960541047
    ],
    "T-4610": [
     "mergeq",
-    "6th to merge",
-    1794959753903
-   ],
-   "T-4697": [
-    "mergeq",
-    "7th to merge",
-    1794959873903
-   ],
-   "T-4698": [
-    "mergeq",
-    "8th to merge",
-    1794960233903
+    "5th to merge",
+    1794960421047
    ],
    "T-4634": [
     "mergeq",
-    "9th to merge",
-    1794959213903
+    "5th to merge",
+    1794960421047
    ],
-   "T-4699": [
+   "T-4695": [
+    "mergeq",
+    "5th to merge",
+    1794960421047
+   ],
+   "T-4719": [
+    "mergeq",
+    "6th to merge",
+    1794959521047
+   ],
+   "T-4720": [
+    "mergeq",
+    "7th to merge",
+    1794959641047
+   ],
+   "T-4697": [
+    "mergeq",
+    "9th to merge",
+    1794959881047
+   ],
+   "T-4698": [
+    "mergeq",
+    "10th to merge",
+    1794960241047
+   ],
+   "T-4659": [
     "testing",
     "Mac Mini \u00b7 test",
     null
    ],
-   "T-4659": [
-    "testq",
-    "1st for a Simulator",
-    1794959153903
-   ],
    "T-4744": [
+    "testing",
+    "Mac Mini \u00b7 test",
+    null
+   ],
+   "T-4643": [
     "testq",
     "1st for a Simulator",
-    1794959153903
+    1794960361047
    ],
-   "T-4761": [
+   "T-4763": [
     "testq",
     "1st for a Simulator",
-    1794959153903
+    1794960361047
    ],
-   "T-4695": [
-    "merged",
-    "on main 6:38 PM ET",
-    1794958729000,
-    ""
+   "T-4765": [
+    "testq",
+    "1st for a Simulator",
+    1794960361047
+   ],
+   "T-4788": [
+    "testq",
+    "1st for a Simulator",
+    1794960361047
+   ],
+   "T-4699": [
+    "testq",
+    "2nd for a Simulator",
+    1794960601047
    ],
    "T-4770": [
     "merged",
@@ -699,17 +719,21 @@
    "T-4607": "Check finished work before it ships",
    "T-4787": "Count failed merges by cause: bad test or broken code",
    "T-4750": "Check network fetch cases on the Swift side too",
+   "T-4761": "Keep one layout for the widget state format",
+   "T-4610": "Check finished work before it ships",
+   "T-4634": "Github hang test is cut before the GET under load",
+   "T-4695": "Check finished work before it ships",
    "T-4719": "Check finished work before it ships",
    "T-4720": "Check finished work before it ships",
-   "T-4610": "Check finished work before it ships",
    "T-4697": "Check finished work before it ships",
    "T-4698": "Check finished work before it ships",
-   "T-4634": "Github hang test is cut before the GET under load",
-   "T-4699": "Check finished work before it ships",
    "T-4659": "Prove a widget button's tap reaches its Python handler",
    "T-4744": "Fix a MacBook test job that failed",
-   "T-4761": "Keep one layout for the widget state format",
-   "T-4695": "Check finished work before it ships",
+   "T-4643": "Make the size ladder measure each rung more than once",
+   "T-4763": "Keep habit marks when the Page also saves",
+   "T-4765": "Fix the When tapped frames' captions and VoiceOver list",
+   "T-4788": "Turn feature sessions on for every app feature",
+   "T-4699": "Check finished work before it ships",
    "T-4770": "Re-estimate the release date from measured build speed"
   },
   "wk": {
@@ -717,26 +741,30 @@
    "T-4607": "Odalys",
    "T-4787": "Odalys",
    "T-4750": "Idris",
+   "T-4761": "Idris",
+   "T-4610": "Odalys",
+   "T-4634": "Pernille",
+   "T-4695": "Ines",
    "T-4719": "Odalys",
    "T-4720": "Pernille",
-   "T-4610": "Odalys",
    "T-4697": "Pernille",
    "T-4698": "Pernille",
-   "T-4634": "Pernille",
-   "T-4699": "Pernille",
    "T-4659": "Idris",
    "T-4744": "Operator",
-   "T-4761": "Idris",
-   "T-4695": "Ines",
+   "T-4643": "Idris",
+   "T-4763": "Maren",
+   "T-4765": "Maren",
+   "T-4788": "Odalys",
+   "T-4699": "Pernille",
    "T-4770": "Ines"
   }
  },
  "ln": {
-  "at": "2026-11-18T00:04:53Z",
+  "at": "2026-11-18T00:10:01Z",
   "mq": {
    "n": {
     "checking": 1,
-    "inline": 9,
+    "inline": 11,
     "conflicted": 2,
     "failed": 1,
     "held": 1,
@@ -744,13 +772,13 @@
     "parked": 8
    },
    "m": {
-    "checking": 0,
-    "inline": 11,
-    "conflicted": 670,
-    "failed": 0,
-    "held": 1475,
+    "checking": 5,
+    "inline": 7,
+    "conflicted": 675,
+    "failed": 5,
+    "held": 1481,
     "retry": null,
-    "parked": 274
+    "parked": 279
    },
    "cur": [
     [
@@ -759,7 +787,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     0
+     5
     ]
    ],
    "ld": [
@@ -769,12 +797,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-18T00:04:54Z",
-    "ld": 2.39,
+    "at": "2026-11-18T00:09:37Z",
+    "ld": 2.12,
     "c": 8,
     "sb": 1,
     "dk": [
-     19.7,
+     19.1,
      228.3
     ],
     "ss": [
@@ -819,15 +847,6 @@
   },
   {
    "w": "Operator",
-   "a": "Evan's Account",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session",
-   "at": "2026-11-17T18:29:35-05:00"
-  },
-  {
-   "w": "Operator",
    "a": "Jeremy's Account",
    "sr": 1,
    "m": "opus",
@@ -841,7 +860,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 2 tasks",
+   "t": "Work session \u2013 1 task",
    "at": "2026-11-17T18:30:35-05:00"
   },
   {
@@ -873,10 +892,10 @@
   "main": 0,
   "lanes": 5,
   "total": 5,
-  "at": "7:06 PM",
+  "at": "7:10 PM",
   "why": "",
-  "at_iso": "2026-11-18T00:06:00+00:00",
+  "at_iso": "2026-11-18T00:10:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 7:06 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 7:10 PM ET</p></section>"
  }
 }

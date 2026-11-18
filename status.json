@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-18T01:26:34.513752+00:00",
+ "at": "2026-11-18T01:29:31.336284+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -18,6 +18,17 @@
     ]
    },
    {
+    "t": "T-4643",
+    "name": "Make the size ladder measure each rung more than once",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "testq",
+      "at": 1794965284
+     }
+    ]
+   },
+   {
     "t": "T-1201",
     "w": "Odalys",
     "steps": [
@@ -29,6 +40,15 @@
    }
   ],
   "done": [
+   {
+    "t": "T-4750",
+    "name": "Check network fetch cases on the Swift side too",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "failed",
+    "end_at": 1794965270,
+    "why": "did not merge cleanly"
+   },
    {
     "t": "T-4720",
     "name": "Check finished work before it ships",
@@ -100,14 +120,6 @@
     "steps": [],
     "end": "landed",
     "end_at": 1794958343
-   },
-   {
-    "t": "T-4608",
-    "name": "Check finished work before it ships",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794958343
    }
   ],
   "landed": 42,
@@ -119,7 +131,7 @@
    "task": "[site] T-4493 land the clutter cut",
    "model": "opus",
    "started": "2026-11-18T01:07:36.770Z",
-   "seconds": 1137,
+   "seconds": 1314,
    "finished": null,
    "effort": "high"
   },
@@ -128,7 +140,7 @@
    "task": "[tools] T-4806 fix merge time-outs",
    "model": "opus",
    "started": "2026-11-18T01:18:02.621Z",
-   "seconds": 511,
+   "seconds": 688,
    "finished": null,
    "effort": "high"
   }
@@ -168,19 +180,19 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 4.0,
+   "pct": 5.0,
    "resets_at": "2026-11-18T00:10:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-17T20:16:49.044024-05:00",
+   "read_at": "2026-11-17T20:28:58.128701-05:00",
    "source": "live",
-   "left": 96.0,
+   "left": 95.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 38.0,
    "resets_at": "2026-11-22T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-17T20:16:49.044024-05:00",
+   "read_at": "2026-11-17T20:28:58.128701-05:00",
    "source": "live",
    "left": 62.0,
    "left_words": "of your weekly allowance left"
@@ -192,7 +204,7 @@
    "read_at": "2026-11-17T19:09:49.957069-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-17T20:16:49.044024-05:00"
+  "read_at": "2026-11-17T20:28:58.128701-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -212,7 +224,7 @@
   "week_pct": 43.81,
   "usage_pct": 53.5,
   "work_pct": 81.2,
-  "read_at": "2026-11-18T01:26:00+00:00",
+  "read_at": "2026-11-18T01:29:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -242,14 +254,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-17T20:22:00-05:00",
+   "at": "2026-11-17T20:28:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 7,
-  "at": "2026-11-17T20:26:00-05:00",
+  "at": "2026-11-17T20:29:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -496,148 +508,141 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-18T01:26:26Z",
+  "at": "2026-11-18T01:29:31Z",
   "s": {
+   "T-4787": [
+    "merging",
+    "Host checks on the Mac mini",
+    1794965311336
+   ],
+   "T-4643": [
+    "merging",
+    "Host checks on the Mac mini",
+    1794965311336
+   ],
    "T-4697": [
     "mergeq",
     "1st to merge",
-    1794959906416
-   ],
-   "T-4750": [
-    "mergeq",
-    "2nd to merge",
-    1794960146416
+    1794959911336
    ],
    "T-4698": [
     "mergeq",
-    "3rd to merge",
-    1794960266416
+    "2nd to merge",
+    1794960271336
    ],
    "T-4781": [
     "mergeq",
-    "4th to merge",
-    1794964646416
+    "3rd to merge",
+    1794964651336
    ],
    "T-4634": [
     "mergeq",
-    "5th to merge",
-    1794964106416
+    "4th to merge",
+    1794964111336
    ],
    "T-4610": [
     "mergeq",
-    "7th to merge",
-    1794960386416
+    "6th to merge",
+    1794960391336
    ],
    "T-4761": [
     "mergeq",
-    "8th to merge",
-    1794960506416
+    "7th to merge",
+    1794960511336
    ],
    "T-4659": [
     "mergeq",
-    "9th to merge",
-    1794961046416
-   ],
-   "T-4787": [
-    "mergeq",
-    "10th to merge",
-    1794962666416
-   ],
-   "T-4643": [
-    "mergeq",
-    "10th to merge",
-    1794962666416
-   ],
-   "T-4782": [
-    "mergeq",
-    "11th to merge",
-    1794963146416
-   ],
-   "T-4719": [
-    "mergeq",
-    "11th to merge",
-    1794963146416
-   ],
-   "T-4720": [
-    "mergeq",
-    "11th to merge",
-    1794963146416
-   ],
-   "T-4770": [
-    "mergeq",
-    "13th to merge",
-    1794964706416
-   ],
-   "T-4774": [
-    "mergeq",
-    "13th to merge",
-    1794964706416
+    "8th to merge",
+    1794961051336
    ],
    "T-4699": [
     "mergeq",
-    "18th to merge",
-    1794961766416
+    "9th to merge",
+    1794961651336
+   ],
+   "T-4782": [
+    "mergeq",
+    "15th to merge",
+    1794963091336
+   ],
+   "T-4719": [
+    "mergeq",
+    "15th to merge",
+    1794963091336
+   ],
+   "T-4720": [
+    "mergeq",
+    "15th to merge",
+    1794963091336
+   ],
+   "T-4750": [
+    "mergeq",
+    "16th to merge",
+    1794963151336
+   ],
+   "T-4770": [
+    "mergeq",
+    "17th to merge",
+    1794964711336
+   ],
+   "T-4774": [
+    "mergeq",
+    "17th to merge",
+    1794964711336
    ],
    "T-4493": [
     "testing",
     "its own tests, in its copy",
-    1794964586416
-   ],
-   "T-4806": [
-    "testing",
-    "its own tests, in its copy",
-    1794965126416
+    1794964591336
    ]
   },
   "nm": {
+   "T-4787": "Count failed merges by cause: bad test or broken code",
+   "T-4643": "Make the size ladder measure each rung more than once",
    "T-4697": "Check finished work before it ships",
-   "T-4750": "Check network fetch cases on the Swift side too",
    "T-4698": "Check finished work before it ships",
    "T-4781": "Retest a fixed red on what failed, not every test",
    "T-4634": "Github hang test is cut before the GET under load",
    "T-4610": "Check finished work before it ships",
    "T-4761": "Keep one layout for the widget state format",
    "T-4659": "Prove a widget button's tap reaches its Python handler",
-   "T-4787": "Count failed merges by cause: bad test or broken code",
-   "T-4643": "Make the size ladder measure each rung more than once",
+   "T-4699": "Check finished work before it ships",
    "T-4782": "Stop a Pro store test at its first stalled wait",
    "T-4719": "Check finished work before it ships",
    "T-4720": "Check finished work before it ships",
+   "T-4750": "Check network fetch cases on the Swift side too",
    "T-4770": "Re-estimate the release date from measured build speed",
    "T-4774": "Measure what one refresh tap costs the app",
-   "T-4699": "Check finished work before it ships",
-   "T-4493": "Cut clutter text on the pages still carrying it",
-   "T-4806": "Fix the causes of merge time-outs and runner errors"
+   "T-4493": "Cut clutter text on the pages still carrying it"
   },
   "wk": {
+   "T-4787": "Odalys",
+   "T-4643": "Idris",
    "T-4697": "Pernille",
-   "T-4750": "Idris",
    "T-4698": "Pernille",
    "T-4781": "Odalys",
    "T-4634": "Pernille",
    "T-4610": "Odalys",
    "T-4761": "Idris",
    "T-4659": "Idris",
-   "T-4787": "Odalys",
-   "T-4643": "Idris",
+   "T-4699": "Pernille",
    "T-4782": "Idris",
    "T-4719": "Odalys",
    "T-4720": "Pernille",
+   "T-4750": "Idris",
    "T-4770": "Ines",
    "T-4774": "Idris",
-   "T-4699": "Pernille",
    "T-4493": "Maren",
-   "T-4806": "Odalys",
    "T-0191": "Idris",
    "T-2268": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-18T01:26:26Z",
+  "at": "2026-11-18T01:29:31Z",
   "mq": {
    "n": {
-    "checking": 0,
-    "inline": 16,
+    "checking": 2,
+    "inline": 14,
     "conflicted": 2,
     "failed": 0,
     "held": 1,
@@ -645,15 +650,32 @@
     "parked": 6
    },
    "m": {
-    "checking": null,
-    "inline": 42,
-    "conflicted": 752,
+    "checking": 1,
+    "inline": 38,
+    "conflicted": 755,
     "failed": null,
-    "held": 1557,
+    "held": 1560,
     "retry": null,
-    "parked": 507
+    "parked": 510
    },
-   "cur": [],
+   "cur": [
+    [
+     [
+      "T-4787"
+     ],
+     "Mac tests",
+     "Mac mini",
+     1
+    ],
+    [
+     [
+      "T-4643"
+     ],
+     "Mac tests",
+     "Mac mini",
+     1
+    ]
+   ],
    "ld": [
     47,
     "2026-11-18T01:05:54Z"
@@ -661,12 +683,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-18T01:26:03Z",
-    "ld": 1.77,
+    "at": "2026-11-18T01:29:32Z",
+    "ld": 1.48,
     "c": 8,
     "sb": 0,
     "dk": [
-     19.2,
+     20.1,
      228.3
     ],
     "ss": [
@@ -719,10 +741,10 @@
   "main": 2,
   "lanes": 0,
   "total": 2,
-  "at": "8:26 PM",
+  "at": "8:29 PM",
   "why": "",
-  "at_iso": "2026-11-18T01:26:00+00:00",
+  "at_iso": "2026-11-18T01:29:00+00:00",
   "started": "7:10 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 7:10 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 8:26 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 7:10 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 8:29 PM ET</p></section>"
  }
 }

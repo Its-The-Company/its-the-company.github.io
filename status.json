@@ -1,22 +1,11 @@
 {
  "schema": 1,
- "at": "2026-11-18T07:16:05.578244+00:00",
+ "at": "2026-11-18T07:19:06.445416+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-18T00:47:38-05:00",
   "flow": [
-   {
-    "t": "T-4516",
-    "name": "Prove the premade settings routes in a UI test",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "macbook",
-      "at": 1794983804
-     }
-    ]
-   },
    {
     "t": "T-4689",
     "name": "Bring the plan into line with the phase A proof",
@@ -31,28 +20,41 @@
       "at": 1794947569
      }
     ]
+   }
+  ],
+  "done": [
+   {
+    "t": "T-4852",
+    "name": "Check finished work before it ships",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794986239
+   },
+   {
+    "t": "T-4854",
+    "name": "Review the button args number limit",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794986239
+   },
+   {
+    "t": "T-4516",
+    "name": "Prove the premade settings routes in a UI test",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794986227
    },
    {
     "t": "T-4442",
     "name": "Tidy the bundled first renders' small edges",
     "acct": "Personal a",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1794980918
-     },
-     {
-      "s": "macbook",
-      "at": 1794981824
-     },
-     {
-      "s": "testq",
-      "at": 1794985070
-     }
-    ]
-   }
-  ],
-  "done": [
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794986212
+   },
    {
     "t": "T-4796",
     "name": "Say which premades carry the Pro tag",
@@ -100,43 +102,9 @@
     "steps": [],
     "end": "landed",
     "end_at": 1794978474
-   },
-   {
-    "t": "T-0044",
-    "name": "Test running marketplace Python inside a web view",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794978474
-   },
-   {
-    "t": "T-4803",
-    "name": "Make the tap check's record match the iPad ruling",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794978456
-   },
-   {
-    "t": "T-4803",
-    "name": "Make the tap check's record match the iPad ruling",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "failed",
-    "end_at": 1794978432,
-    "why": "tests failed"
-   },
-   {
-    "t": "T-4796",
-    "name": "Say which premades carry the Pro tag",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "failed",
-    "end_at": 1794978432,
-    "why": "tests failed"
    }
   ],
-  "landed": 43,
+  "landed": 47,
   "failed": 10
  },
  "workers": [
@@ -145,7 +113,7 @@
    "task": "[build] T-4688 Developer mode for Pro",
    "model": "opus",
    "started": "2026-11-18T05:56:56.560Z",
-   "seconds": 4749,
+   "seconds": 4929,
    "finished": null,
    "effort": "high"
   },
@@ -154,7 +122,7 @@
    "task": "[build] T-4767 button handler exit as error",
    "model": "opus",
    "started": "2026-11-18T06:37:03.752Z",
-   "seconds": 2341,
+   "seconds": 2522,
    "finished": null,
    "effort": "high"
   }
@@ -222,8 +190,57 @@
   "week_pct": 46.38,
   "usage_pct": 53.1,
   "work_pct": 80.8,
-  "read_at": "2026-11-18T07:16:00+00:00",
+  "read_at": "2026-11-18T07:19:00+00:00",
   "running": [
+   {
+    "lane": "a",
+    "task": "T-0011",
+    "w": "Idris",
+    "k": "measure",
+    "t": "Check motion, health and battery sensors on a device",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-18T02:17:55-05:00",
+    "n": "Evan",
+    "d": 1,
+    "src": "plan-a"
+   },
+   {
+    "lane": "a3",
+    "task": "T-4533",
+    "w": "Pernille",
+    "k": "build",
+    "t": "Make the premade settings save sturdier on disk errors",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-18T02:17:55-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "b2",
+    "task": "T-4840",
+    "w": "Idris",
+    "k": "measure",
+    "t": "Read the sensor rows from the gate build's export",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-18T02:18:53-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
+   },
+   {
+    "lane": "b2",
+    "task": "T-4574",
+    "w": "Idris",
+    "k": "build",
+    "t": "Keep the launcher's app queries out of shipped builds",
+    "m": "opus",
+    "e": "medium",
+    "at": "2026-11-18T02:18:53-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
+   },
    {
     "lane": "b3",
     "task": "T-4301",
@@ -285,7 +302,7 @@
  "lock_in": {
   "on": false,
   "pool": 10,
-  "at": "2026-11-18T02:16:00-05:00",
+  "at": "2026-11-18T02:19:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -520,38 +537,8 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-18T07:15:58Z",
+  "at": "2026-11-18T07:18:45Z",
   "s": {
-   "T-4442": [
-    "merging",
-    "Host checks on the Mac mini",
-    1794985078792
-   ],
-   "T-4796": [
-    "mergeq",
-    "1st to merge",
-    1794984118792
-   ],
-   "T-4516": [
-    "mergeq",
-    "2nd to merge",
-    1794977578792
-   ],
-   "T-4784": [
-    "mergeq",
-    "3rd to merge",
-    1794982798792
-   ],
-   "T-4854": [
-    "mergeq",
-    "4th to merge",
-    1794985018792
-   ],
-   "T-4852": [
-    "mergeq",
-    "4th to merge",
-    1794985018792
-   ],
    "T-4767": [
     "mergetest",
     "iPhone tests on the MacBook",
@@ -560,7 +547,7 @@
    "T-4688": [
     "merging",
     "Mac tests at the main gate",
-    1794985918792
+    1794985905745
    ],
    "T-0044": [
     "testing",
@@ -584,12 +571,6 @@
    ]
   },
   "nm": {
-   "T-4442": "Tidy the bundled first renders' small edges",
-   "T-4796": "Say which premades carry the Pro tag",
-   "T-4516": "Prove the premade settings routes in a UI test",
-   "T-4784": "Pin the refresh glyph's button style in a test",
-   "T-4854": "Review the button args number limit",
-   "T-4852": "Check finished work before it ships",
    "T-4767": "Treat a button handler's exit as the script's error",
    "T-4688": "Build a Developer mode for testing Pro",
    "T-0044": "Test running marketplace Python inside a web view",
@@ -598,12 +579,6 @@
    "T-4772": "Prove a refresh tap redraws the widget"
   },
   "wk": {
-   "T-4442": "Idris",
-   "T-4796": "Ines",
-   "T-4516": "Idris",
-   "T-4784": "Idris",
-   "T-4854": "Idris",
-   "T-4852": "Pernille",
    "T-4767": "Pernille",
    "T-4688": "Idris",
    "T-0044": "Idris",
@@ -614,49 +589,40 @@
   }
  },
  "ln": {
-  "at": "2026-11-18T07:15:58Z",
+  "at": "2026-11-18T07:18:45Z",
   "mq": {
    "n": {
-    "checking": 1,
-    "inline": 5,
+    "checking": 0,
+    "inline": 0,
     "conflicted": 3,
     "failed": 0,
     "held": 1,
     "retry": 0,
-    "parked": 10
+    "parked": 11
    },
    "m": {
-    "checking": 18,
-    "inline": 34,
-    "conflicted": 552,
+    "checking": null,
+    "inline": null,
+    "conflicted": 555,
     "failed": null,
-    "held": 1906,
+    "held": 1909,
     "retry": null,
-    "parked": 472
+    "parked": 396
    },
-   "cur": [
-    [
-     [
-      "T-4442"
-     ],
-     "Mac tests",
-     "Mac mini",
-     18
-    ]
-   ],
+   "cur": [],
    "ld": [
-    8,
-    "2026-11-18T06:57:39Z"
+    11,
+    "2026-11-18T07:17:19Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-18T07:15:29Z",
-    "ld": 15.21,
+    "at": "2026-11-18T07:18:46Z",
+    "ld": 8.39,
     "c": 8,
     "sb": 2,
     "dk": [
-     20.7,
+     20.1,
      228.3
     ],
     "ss": [
@@ -693,6 +659,33 @@
   },
   {
    "w": "Operator",
+   "a": "Evan's Account",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session \u2013 1 task",
+   "at": "2026-11-18T02:17:55-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Evan's Account",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session \u2013 1 task",
+   "at": "2026-11-18T02:17:55-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Jeremy's Account",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session \u2013 2 tasks",
+   "at": "2026-11-18T02:18:53-05:00"
+  },
+  {
+   "w": "Operator",
    "a": "Jeremy's Account",
    "sr": 1,
    "m": "opus",
@@ -719,12 +712,12 @@
  ],
  "agents_now": {
   "main": 2,
-  "lanes": 1,
-  "total": 3,
-  "at": "2:16 AM",
+  "lanes": 4,
+  "total": 6,
+  "at": "2:19 AM",
   "why": "",
-  "at_iso": "2026-11-18T07:16:00+00:00",
+  "at_iso": "2026-11-18T07:19:00+00:00",
   "started": "12:47 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 12:47 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 2:16 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 2, started 12:47 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 2:19 AM ET</p></section>"
  }
 }

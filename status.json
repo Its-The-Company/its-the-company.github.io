@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-18T02:15:29.949794+00:00",
+ "at": "2026-11-18T02:18:34.583702+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -146,7 +146,7 @@
    "task": "[tools] T-4806 fix merge time-outs",
    "model": "opus",
    "started": "2026-11-18T01:18:02.621Z",
-   "seconds": 3447,
+   "seconds": 3631,
    "finished": null,
    "effort": "high"
   },
@@ -155,7 +155,7 @@
    "task": "[test] T-4807 fix bad tests that failed merges",
    "model": "opus",
    "started": "2026-11-18T01:44:52.149Z",
-   "seconds": 1837,
+   "seconds": 2022,
    "finished": null,
    "effort": "high"
   },
@@ -164,7 +164,7 @@
    "task": "[tools] T-4814 split the merge limit",
    "model": "opus",
    "started": "2026-11-18T02:08:31.145Z",
-   "seconds": 418,
+   "seconds": 603,
    "finished": null,
    "effort": "high"
   },
@@ -173,7 +173,7 @@
    "task": "[tools] T-4810 every wait names a task or issue",
    "model": "opus",
    "started": "2026-11-18T02:08:44.734Z",
-   "seconds": 405,
+   "seconds": 589,
    "finished": null,
    "effort": "high"
   },
@@ -182,7 +182,7 @@
    "task": "[site] T-4813 Home's numbers update live",
    "model": "opus",
    "started": "2026-11-18T02:08:56.638Z",
-   "seconds": 393,
+   "seconds": 577,
    "finished": null,
    "effort": "high"
   }
@@ -225,8 +225,8 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 431,
-  "blocked_count": 60
+  "runnable_count": 457,
+  "blocked_count": 34
  },
  "meter": {
   "five_hour": {
@@ -274,7 +274,7 @@
   "week_pct": 43.81,
   "usage_pct": 53.5,
   "work_pct": 81.2,
-  "read_at": "2026-11-18T02:15:00+00:00",
+  "read_at": "2026-11-18T02:18:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -310,8 +310,8 @@
  },
  "lock_in": {
   "on": false,
-  "pool": 7,
-  "at": "2026-11-17T21:15:00-05:00",
+  "pool": 8,
+  "at": "2026-11-17T21:18:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -523,10 +523,10 @@
    }
   ],
   "count": {
-   "next": 431,
-   "wait": 29,
-   "blocked": 31,
-   "you": 10
+   "next": 457,
+   "wait": 32,
+   "blocked": 2,
+   "you": 9
   },
   "fin": {
    "n": 7,
@@ -597,87 +597,102 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-18T02:15:29Z",
+  "at": "2026-11-18T02:18:26Z",
   "s": {
    "T-4761": [
     "mergetest",
-    "Xcode checks on the MacBook, 1st to merge",
-    1794966869949
+    "",
+    1794966926985
    ],
    "T-4659": [
     "mergetest",
-    "Xcode checks on the MacBook, 2nd to merge",
-    1794966869949
+    "",
+    1794966926985
    ],
    "T-4643": [
-    "mergeq",
-    "3rd to merge",
-    1794961649949
+    "mergetest",
+    "",
+    1794968246985
    ],
    "T-4697": [
     "mergeq",
-    "4th to merge",
-    1794961709949
+    "",
+    1794961766985
    ],
    "T-4698": [
     "mergeq",
-    "5th to merge",
-    1794961769949
+    "",
+    1794961766985
    ],
    "T-4699": [
     "mergeq",
-    "6th to merge",
-    1794961769949
+    "",
+    1794961766985
    ],
    "T-4782": [
     "mergeq",
-    "8th to merge",
-    1794962189949
+    "",
+    1794962186985
    ],
    "T-4787": [
     "mergeq",
-    "10th to merge",
-    1794962669949
+    "",
+    1794962666985
    ],
    "T-4719": [
     "mergeq",
-    "11th to merge",
-    1794963089949
+    "",
+    1794963146985
    ],
    "T-4720": [
     "mergeq",
-    "11th to merge",
-    1794963089949
+    "",
+    1794963146985
    ],
    "T-4750": [
     "mergeq",
-    "12th to merge",
-    1794963149949
-   ],
-   "T-4781": [
-    "mergeq",
-    "13th to merge",
-    1794964709949
+    "",
+    1794963146985
    ],
    "T-4770": [
     "mergeq",
-    "13th to merge",
-    1794964709949
+    "",
+    1794964706985
+   ],
+   "T-4781": [
+    "mergeq",
+    "",
+    1794964706985
    ],
    "T-4774": [
     "mergeq",
-    "13th to merge",
-    1794964709949
+    "",
+    1794964706985
    ],
    "T-4807": [
     "merging",
-    "Mac tests at the main gate",
-    1794967949949
+    "",
+    1794967946985
    ],
    "T-4806": [
     "merging",
-    "Mac tests at the main gate",
-    1794967589949
+    "",
+    1794967586985
+   ],
+   "T-4810": [
+    "testing",
+    "",
+    1794968246985
+   ],
+   "T-4813": [
+    "testing",
+    "",
+    1794968306985
+   ],
+   "T-4814": [
+    "testing",
+    "",
+    1794968186985
    ]
   },
   "nm": {
@@ -692,11 +707,14 @@
    "T-4719": "Check finished work before it ships",
    "T-4720": "Check finished work before it ships",
    "T-4750": "Check network fetch cases on the Swift side too",
-   "T-4781": "Retest a fixed red on what failed, not every test",
    "T-4770": "Re-estimate the release date from measured build speed",
+   "T-4781": "Retest a fixed red on what failed, not every test",
    "T-4774": "Measure what one refresh tap costs the app",
    "T-4807": "Fix every bad test that failed a merge",
-   "T-4806": "Fix the causes of merge time-outs and runner errors"
+   "T-4806": "Fix the causes of merge time-outs and runner errors",
+   "T-4810": "Make every wait name a task or an Investor issue",
+   "T-4813": "Home's numbers update within a minute",
+   "T-4814": "Split the merge limit by what a change touches"
   },
   "wk": {
    "T-4761": "Idris",
@@ -710,21 +728,24 @@
    "T-4719": "Odalys",
    "T-4720": "Pernille",
    "T-4750": "Idris",
-   "T-4781": "Odalys",
    "T-4770": "Ines",
+   "T-4781": "Odalys",
    "T-4774": "Idris",
    "T-4807": "Pernille",
    "T-4806": "Odalys",
+   "T-4810": "Odalys",
+   "T-4813": "Maren",
+   "T-4814": "Odalys",
    "T-0191": "Idris",
    "T-2268": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-18T02:15:29Z",
+  "at": "2026-11-18T02:18:26Z",
   "mq": {
    "n": {
-    "checking": 2,
-    "inline": 12,
+    "checking": 3,
+    "inline": 11,
     "conflicted": 2,
     "failed": 0,
     "held": 1,
@@ -732,13 +753,13 @@
     "parked": 6
    },
    "m": {
-    "checking": 21,
-    "inline": 87,
-    "conflicted": 801,
+    "checking": 23,
+    "inline": 86,
+    "conflicted": 804,
     "failed": null,
-    "held": 1606,
+    "held": 1609,
     "retry": null,
-    "parked": 556
+    "parked": 559
    },
    "cur": [
     [
@@ -747,7 +768,7 @@
      ],
      "iPhone app tests, sent and waiting its turn",
      "MacBook",
-     21
+     23
     ],
     [
      [
@@ -755,7 +776,15 @@
      ],
      "iPhone app tests, sent and waiting its turn",
      "MacBook",
-     21
+     23
+    ],
+    [
+     [
+      "T-4643"
+     ],
+     "iPhone app tests, sent and waiting its turn",
+     "MacBook",
+     1
     ]
    ],
    "ld": [
@@ -765,12 +794,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-18T02:15:05Z",
-    "ld": 3.68,
+    "at": "2026-11-18T02:18:02Z",
+    "ld": 3.5,
     "c": 8,
     "sb": 0,
     "dk": [
-     19.8,
+     20.6,
      228.3
     ],
     "ss": [
@@ -825,10 +854,10 @@
   "main": 5,
   "lanes": 0,
   "total": 5,
-  "at": "9:15 PM",
+  "at": "9:18 PM",
   "why": "",
-  "at_iso": "2026-11-18T02:15:00+00:00",
+  "at_iso": "2026-11-18T02:18:00+00:00",
   "started": "7:10 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 5, started 7:10 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:15 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 5, started 7:10 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:18 PM ET</p></section>"
  }
 }

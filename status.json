@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-18T15:36:52.403127+00:00",
+ "at": "2026-11-18T15:39:57.975938+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -73,6 +73,16 @@
     ]
    },
    {
+    "t": "T-2296",
+    "name": "Finish the gallery pager, iPad layout and detail foot",
+    "steps": [
+     {
+      "s": "testq",
+      "at": 1795016382
+     }
+    ]
+   },
+   {
     "t": "T-3745",
     "w": "Idris",
     "steps": [
@@ -103,6 +113,22 @@
    }
   ],
   "done": [
+   {
+    "t": "T-4789",
+    "name": "Check finished work before it ships",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1795016250
+   },
+   {
+    "t": "T-4640",
+    "name": "Drop a location fix that arrives too late",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1795016233
+   },
    {
     "t": "T-4575",
     "name": "Stop an edit from rewriting a pasted Shortcut link",
@@ -170,24 +196,9 @@
     "steps": [],
     "end": "landed",
     "end_at": 1795001607
-   },
-   {
-    "t": "T-4301",
-    "name": "Read fresh Pro gates after a queued wait",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794987951
-   },
-   {
-    "t": "T-4852",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794986239
    }
   ],
-  "landed": 22,
+  "landed": 24,
   "failed": 7
  },
  "workers": [
@@ -196,12 +207,21 @@
    "task": "[build] T-4771 recut gutter marks and land",
    "model": "opus",
    "started": "2026-11-18T15:32:38.173Z",
-   "seconds": 254,
+   "seconds": 439,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "idris",
+   "task": "[build] T-2296 land the Gallery pager work",
+   "model": "opus",
+   "started": "2026-11-18T15:37:31.196Z",
+   "seconds": 146,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Idris",
+ "who": "Idris x2",
  "recent": [
   {
    "name": "idris",
@@ -272,7 +292,7 @@
   "week_pct": 51.32,
   "usage_pct": 52.2,
   "work_pct": 82.0,
-  "read_at": "2026-11-18T15:36:00+00:00",
+  "read_at": "2026-11-18T15:39:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -309,7 +329,7 @@
  "lock_in": {
   "on": false,
   "pool": 12,
-  "at": "2026-11-18T10:36:00-05:00",
+  "at": "2026-11-18T10:39:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -386,6 +406,16 @@
     "at": "2026-11-18T15:32:38.173Z",
     "o": "c",
     "task": "T-4771"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "Finish the gallery pager, iPad layout and detail foot",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-18T15:37:31.196Z",
+    "o": "c",
+    "task": "T-2296"
    }
   ],
   "src": "plan",
@@ -528,146 +558,144 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-18T15:36:43Z",
+  "at": "2026-11-18T15:39:57Z",
   "s": {
-   "T-4575": [
-    "mergetest",
-    "Xcode checks on the MacBook",
-    1795016203633
-   ],
    "T-4533": [
     "mergeq",
     "1st to merge",
-    1794988123633
+    1794988077975
    ],
    "T-4574": [
     "mergeq",
     "3rd to merge",
-    1794992503633
-   ],
-   "T-4640": [
-    "mergeq",
-    "5th to merge",
-    1795004323633
-   ],
-   "T-4789": [
-    "mergeq",
-    "6th to merge",
-    1795006003633
+    1794992517975
    ],
    "T-4635": [
     "mergeq",
-    "7th to merge",
-    1795006363633
+    "5th to merge",
+    1795006377975
    ],
    "T-4748": [
     "mergeq",
-    "8th to merge",
-    1795007023633
+    "6th to merge",
+    1795007037975
+   ],
+   "T-4640": [
+    "mergeq",
+    "7th to merge",
+    1795007097975
    ],
    "T-4581": [
     "mergeq",
+    "8th to merge",
+    1795007097975
+   ],
+   "T-4575": [
+    "mergeq",
     "10th to merge",
-    1795007083633
+    1795007397975
+   ],
+   "T-4789": [
+    "mergeq",
+    "11th to merge",
+    1795007457975
    ],
    "T-4889": [
     "mergeq",
-    "15th to merge",
-    1795010083633
+    "13th to merge",
+    1795010097975
    ],
    "T-4835": [
     "mergeq",
-    "16th to merge",
-    1795011703633
+    "14th to merge",
+    1795011717975
    ],
    "T-4679": [
     "mergeq",
-    "17th to merge",
-    1795012003633
+    "15th to merge",
+    1795012017975
    ],
    "T-4771": [
     "merging",
     "Mac tests at the main gate",
-    1795016143633
+    1795016157975
+   ],
+   "T-2296": [
+    "testing",
+    "its own tests, in its copy",
+    1795016337975
    ]
   },
   "nm": {
-   "T-4575": "Stop an edit from rewriting a pasted Shortcut link",
    "T-4533": "Make the premade settings save sturdier on disk errors",
    "T-4574": "Keep the launcher's app queries out of shipped builds",
-   "T-4640": "Drop a location fix that arrives too late",
-   "T-4789": "Check finished work before it ships",
    "T-4635": "Clear the Settings restore line once Pro is bought",
    "T-4748": "Make the widget font check ignore lookalike letters",
+   "T-4640": "Drop a location fix that arrives too late",
    "T-4581": "Test a real widget tap in iPad windows",
+   "T-4575": "Stop an edit from rewriting a pasted Shortcut link",
+   "T-4789": "Check finished work before it ships",
    "T-4889": "Check the PyWidget case fix in premade lines",
    "T-4835": "Show an all-day event on its own date after travel",
    "T-4679": "Make the unit tests pass in a launcher build",
-   "T-4771": "Gutter marks redraw quickly and stay right while typing"
+   "T-4771": "Gutter marks redraw quickly and stay right while typing",
+   "T-2296": "Finish the gallery pager, iPad layout and detail foot"
   },
   "wk": {
-   "T-4575": "Idris",
    "T-4533": "Pernille",
    "T-4574": "Idris",
-   "T-4640": "Idris",
-   "T-4789": "Pernille",
    "T-4635": "Idris",
    "T-4748": "Idris",
+   "T-4640": "Idris",
    "T-4581": "Idris",
+   "T-4575": "Idris",
+   "T-4789": "Pernille",
    "T-4889": "Idris",
    "T-4835": "Pernille",
    "T-4679": "Idris",
-   "T-4771": "Idris"
+   "T-4771": "Idris",
+   "T-2296": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-18T15:36:43Z",
+  "at": "2026-11-18T15:39:57Z",
   "mq": {
    "n": {
-    "checking": 1,
-    "inline": 10,
+    "checking": 0,
+    "inline": 11,
     "conflicted": 5,
     "failed": 0,
     "held": 1,
     "retry": 0,
-    "parked": 9
+    "parked": 6
    },
    "m": {
-    "checking": 0,
-    "inline": 158,
-    "conflicted": 743,
+    "checking": null,
+    "inline": 155,
+    "conflicted": 747,
     "failed": null,
-    "held": 2407,
+    "held": 2410,
     "retry": null,
-    "parked": 1053
+    "parked": 809
    },
-   "cur": [
-    [
-     [
-      "T-4575"
-     ],
-     "iPhone app tests",
-     "MacBook",
-     0
-    ]
-   ],
+   "cur": [],
    "ld": [
-    17,
-    "2026-11-18T15:36:25Z"
+    20,
+    "2026-11-18T15:37:30Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-18T15:36:44Z",
-    "ld": 6.76,
+    "at": "2026-11-18T15:39:35Z",
+    "ld": 8.71,
     "c": 8,
     "sb": 1,
     "dk": [
-     17.2,
+     17.5,
      228.3
     ],
     "ss": [
-     170.0,
+     167.8,
      953.7
     ],
     "sn": [
@@ -694,7 +722,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 2 tasks",
+   "t": "Work session \u2013 3 tasks",
    "at": "2026-11-18T10:30:40-05:00"
   }
  ],
@@ -714,13 +742,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 1,
+  "main": 2,
   "lanes": 0,
-  "total": 1,
-  "at": "10:36 AM",
+  "total": 2,
+  "at": "10:39 AM",
   "why": "",
-  "at_iso": "2026-11-18T15:36:00+00:00",
+  "at_iso": "2026-11-18T15:39:00+00:00",
   "started": "10:30 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 10:30 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 10:36 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 10:30 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 10:39 AM ET</p></section>"
  }
 }

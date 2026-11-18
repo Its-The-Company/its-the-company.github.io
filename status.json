@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-18T09:19:39.093410+00:00",
+ "at": "2026-11-18T09:22:36.878533+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -122,7 +122,7 @@
    "task": "[build] T-4663 case-insensitive completion",
    "model": "opus",
    "started": "2026-11-18T09:08:46.044Z",
-   "seconds": 653,
+   "seconds": 830,
    "finished": null
   },
   {
@@ -130,20 +130,28 @@
    "task": "[design] T-4763 habit marks merge by operation",
    "model": "opus",
    "started": "2026-11-18T09:16:14.754Z",
-   "seconds": 204,
+   "seconds": 382,
    "finished": null
   },
+  {
+   "name": "pernille",
+   "task": "[review] T-4861 launcher query schemes review",
+   "model": "opus",
+   "started": "2026-11-18T09:22:01.607Z",
+   "seconds": 35,
+   "finished": null
+  }
+ ],
+ "who": "Idris, Maren, Pernille",
+ "recent": [
   {
    "name": "ines",
    "task": "[plan] T-4870 timeline with checked weeks",
    "model": "opus",
    "started": "2026-11-18T09:16:47.608Z",
-   "seconds": 171,
-   "finished": null
-  }
- ],
- "who": "Idris, Maren, Ines",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-18T09:19:55.233000+00:00"
+  },
   {
    "name": "idris",
    "task": "[design] T-4285 drag-and-drop week figures",
@@ -172,7 +180,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 487,
+  "runnable_count": 482,
   "blocked_count": 35
  },
  "meter": {
@@ -221,7 +229,7 @@
   "week_pct": 50.16,
   "usage_pct": 53.3,
   "work_pct": 82.4,
-  "read_at": "2026-11-18T09:19:00+00:00",
+  "read_at": "2026-11-18T09:22:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -296,8 +304,8 @@
  },
  "lock_in": {
   "on": false,
-  "pool": 11,
-  "at": "2026-11-18T04:19:00-05:00",
+  "pool": 12,
+  "at": "2026-11-18T04:22:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -330,25 +338,25 @@
    "next": []
   },
   {
-   "name": "Ines",
-   "state": "running",
-   "task": "[plan] T-4870 timeline with checked weeks",
-   "model": "opus",
-   "since": "2026-11-18T09:16:47.608Z",
-   "next": []
-  },
-  {
    "name": "Pernille",
-   "state": "next",
-   "task": "Pernille, P0, Investor an Investor c6963972184 (6:23 PM...",
-   "model": null,
-   "since": null,
+   "state": "running",
+   "task": "[review] T-4861 launcher query schemes review",
+   "model": "opus",
+   "since": "2026-11-18T09:22:01.607Z",
    "next": []
   },
   {
    "name": "Odalys",
    "state": "next",
    "task": "Odalys, P0, Investor an Investor c6963972184 (6:23 PM...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
+   "name": "Ines",
+   "state": "next",
+   "task": "Ines, P2, from T-1110 (Wrenna,...",
    "model": null,
    "since": null,
    "next": []
@@ -383,13 +391,13 @@
     "task": "T-4763"
    },
    {
-    "w": "Ines",
-    "k": "plan",
-    "t": "Update the timeline with checked drag-and-drop weeks",
+    "w": "Pernille",
+    "k": "review",
+    "t": "Check finished work before it ships",
     "m": "opus",
-    "at": "2026-11-18T09:16:47.608Z",
+    "at": "2026-11-18T09:22:01.607Z",
     "o": "c",
-    "task": "T-4870"
+    "task": "T-4861"
    }
   ],
   "src": "plan",
@@ -467,41 +475,53 @@
   ],
   "done": [
    {
-    "w": "Idris",
-    "t": "The engineer who will build drag and drop checked the designer's time estimates against the real...",
-    "at": "2026-11-18T04:15:00-05:00"
-   },
-   {
-    "w": "Wrenna",
-    "t": "Apple's pages name the app's Home Screen name and a gallery-only widget name but never describe...",
-    "at": "2026-11-18T04:14:00-05:00"
+    "w": "Pernille",
+    "t": "A second person checked the habits screen design and passed it, raising a lost-mark fault and a...",
+    "at": "2026-11-18T04:21:00-05:00"
    },
    {
     "w": "Pernille",
-    "t": "An independent check found that the free Pro switch for testers cannot reach App Review or App...",
-    "at": "2026-11-18T04:09:00-05:00"
+    "t": "A second person checked the designs for what a widget does when tapped and found them complete,...",
+    "at": "2026-11-18T04:21:00-05:00"
+   },
+   {
+    "w": "Idris",
+    "t": "A second person checked how widget buttons run their Python code and passed it; the one fix it...",
+    "at": "2026-11-18T04:21:00-05:00"
    }
   ],
   "count": {
-   "next": 487,
+   "next": 482,
    "wait": 32,
    "blocked": 3,
    "you": 10
   },
   "fin": {
-   "n": 3,
+   "n": 9,
    "rows": [
     [
-     "T-4285",
-     "Confirm the Builder..."
-    ],
-    [
-     "T-4839",
-     "Find what sets the name..."
-    ],
-    [
-     "T-4852",
+     "T-4601",
      "Check finished work before..."
+    ],
+    [
+     "T-4602",
+     "Check finished work before..."
+    ],
+    [
+     "T-4603",
+     "Check finished work before..."
+    ],
+    [
+     "T-4604",
+     "Check finished work before..."
+    ],
+    [
+     "T-4607",
+     "Check finished work before..."
+    ],
+    [
+     "T-4870",
+     "Update the timeline with..."
     ]
    ]
   }
@@ -545,64 +565,57 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-18T09:19:39Z",
+  "at": "2026-11-18T09:22:36Z",
   "s": {
    "T-0011": [
     "mergeq",
     "1st to merge",
-    1794989439093
+    1794989436878
    ],
    "T-4533": [
     "mergeq",
     "3rd to merge",
-    1794988119093
+    1794988116878
    ],
    "T-4644": [
     "mergeq",
     "4th to merge",
-    1794988599093
+    1794988656878
    ],
    "T-4771": [
     "mergeq",
     "5th to merge",
-    1794989799093
+    1794989796878
    ],
    "T-4762": [
     "mergeq",
     "6th to merge",
-    1794989859093
+    1794989856878
    ],
    "T-4301": [
     "mergeq",
     "7th to merge",
-    1794991059093
+    1794991056878
    ],
    "T-4783": [
     "mergeq",
     "8th to merge",
-    1794991539093
+    1794991536878
    ],
    "T-4574": [
     "mergeq",
     "12th to merge",
-    1794992499093
+    1794992496878
+   ],
+   "T-4763": [
+    "merging",
+    "Mac tests at the main gate",
+    1794993756878
    ],
    "T-4663": [
     "testing",
     "its own tests, in its copy",
-    1794993099093
-   ],
-   "T-4870": [
-    "merged",
-    "on main 4:19 AM ET",
-    1794993549000,
-    ""
-   ],
-   "T-4763": [
-    "merged",
-    "on main 6:17 PM ET",
-    1794957455000,
-    ""
+    1794993096878
    ]
   },
   "nm": {
@@ -614,9 +627,8 @@
    "T-4301": "Read fresh Pro gates after a queued wait",
    "T-4783": "Keep the gutter mark on its line after an edit",
    "T-4574": "Keep the launcher's app queries out of shipped builds",
-   "T-4663": "Completion ignores letter case and small typos",
-   "T-4870": "Update the timeline with checked drag-and-drop weeks",
-   "T-4763": "Keep habit marks when the Page also saves"
+   "T-4763": "Keep habit marks when the Page also saves",
+   "T-4663": "Completion ignores letter case and small typos"
   },
   "wk": {
    "T-0011": "Idris",
@@ -627,16 +639,21 @@
    "T-4301": "Idris",
    "T-4783": "Idris",
    "T-4574": "Idris",
-   "T-4663": "Idris",
-   "T-4870": "Ines",
    "T-4763": "Maren",
+   "T-4663": "Idris",
+   "T-4601": "Pernille",
+   "T-4602": "Pernille",
+   "T-4603": "Idris",
+   "T-4604": "Pernille",
+   "T-4607": "Odalys",
+   "T-4870": "Ines",
    "T-4285": "Idris",
    "T-4839": "Wrenna",
    "T-4852": "Pernille"
   }
  },
  "ln": {
-  "at": "2026-11-18T09:19:39Z",
+  "at": "2026-11-18T09:22:36Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -649,12 +666,12 @@
    },
    "m": {
     "checking": null,
-    "inline": 62,
-    "conflicted": 676,
+    "inline": 65,
+    "conflicted": 679,
     "failed": null,
-    "held": 2030,
+    "held": 2033,
     "retry": null,
-    "parked": 771
+    "parked": 774
    },
    "cur": [],
    "ld": [
@@ -664,12 +681,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-18T09:18:54Z",
-    "ld": 8.15,
+    "at": "2026-11-18T09:22:37Z",
+    "ld": 5.72,
     "c": 8,
     "sb": 2,
     "dk": [
-     15.5,
+     15.7,
      228.3
     ],
     "ss": [
@@ -682,8 +699,8 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-18T09:16:57Z",
-    "ld": 19.83,
+    "at": "2026-11-18T09:19:02Z",
+    "ld": 13.37,
     "c": 12,
     "sb": 0,
     "dk": [
@@ -701,7 +718,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 6 tasks",
+   "t": "Work session \u2013 7 tasks",
    "at": "2026-11-18T04:07:20-05:00"
   },
   {
@@ -736,6 +753,7 @@
   "task_title",
   "done_text",
   "task_open",
+  "fin_six",
   "lane_task",
   "task_next"
  ],
@@ -743,10 +761,10 @@
   "main": 3,
   "lanes": 2,
   "total": 5,
-  "at": "4:19 AM",
+  "at": "4:22 AM",
   "why": "",
-  "at_iso": "2026-11-18T09:19:00+00:00",
+  "at_iso": "2026-11-18T09:22:00+00:00",
   "started": "4:07 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 3, started 4:07 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 4:19 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 3, started 4:07 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 4:22 AM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-18T14:20:46.445510+00:00",
+ "at": "2026-11-18T14:23:52.556405+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -38,6 +38,10 @@
      {
       "s": "testq",
       "at": 1795011033
+     },
+     {
+      "s": "macbook",
+      "at": 1795011775
      }
     ]
    },
@@ -166,7 +170,7 @@
    "task": "[build] T-1905 project send safe swap",
    "model": "opus",
    "started": "2026-11-18T13:35:50.063Z",
-   "seconds": 2696,
+   "seconds": 2882,
    "finished": null,
    "effort": "high"
   },
@@ -175,7 +179,7 @@
    "task": "[test] T-4892 caret UI tests on runner",
    "model": "opus",
    "started": "2026-11-18T13:02:21.149Z",
-   "seconds": 4705,
+   "seconds": 4891,
    "finished": null,
    "effort": "high"
   }
@@ -243,7 +247,7 @@
   "week_pct": 49.77,
   "usage_pct": 52.0,
   "work_pct": 81.9,
-  "read_at": "2026-11-18T14:20:00+00:00",
+  "read_at": "2026-11-18T14:23:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -319,7 +323,7 @@
  "lock_in": {
   "on": false,
   "pool": 12,
-  "at": "2026-11-18T09:20:00-05:00",
+  "at": "2026-11-18T09:23:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -569,62 +573,67 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-18T14:20:34Z",
+  "at": "2026-11-18T14:23:52Z",
   "s": {
    "T-4533": [
-    "merging",
-    "Host checks on the Mac mini",
-    1795011034877
+    "mergetest",
+    "Xcode checks on the MacBook, 1st to merge",
+    1795011832556
    ],
    "T-4574": [
     "mergeq",
-    "2nd to merge",
-    1794992494877
+    "3rd to merge",
+    1794992512556
    ],
    "T-4762": [
     "mergeq",
-    "3rd to merge",
-    1794994714877
+    "4th to merge",
+    1794994672556
    ],
    "T-4748": [
     "mergeq",
-    "5th to merge",
-    1795002334877
+    "6th to merge",
+    1795002352556
    ],
    "T-4575": [
     "mergeq",
-    "6th to merge",
-    1795003834877
+    "7th to merge",
+    1795003852556
    ],
    "T-4640": [
     "mergeq",
-    "7th to merge",
-    1795004374877
+    "8th to merge",
+    1795004332556
    ],
    "T-4789": [
     "mergeq",
-    "8th to merge",
-    1795005994877
+    "9th to merge",
+    1795005952556
    ],
    "T-4635": [
     "mergeq",
-    "9th to merge",
-    1795006414877
+    "10th to merge",
+    1795006372556
    ],
    "T-4581": [
     "mergeq",
-    "12th to merge",
-    1795007074877
+    "13th to merge",
+    1795007092556
    ],
    "T-4889": [
     "mergeq",
-    "17th to merge",
-    1795010074877
+    "18th to merge",
+    1795010092556
+   ],
+   "T-4835": [
+    "mergeq",
+    "19th to merge",
+    1795011712556
    ],
    "T-1905": [
     "merging",
     "Mac tests at the main gate",
-    1795011394877
+    1795011352556
    ],
    "T-4892": [
     "testing",
@@ -643,6 +652,7 @@
    "T-4635": "Clear the Settings restore line once Pro is bought",
    "T-4581": "Test a real widget tap in iPad windows",
    "T-4889": "Check the PyWidget case fix in premade lines",
+   "T-4835": "Show an all-day event on its own date after travel",
    "T-1905": "Send project files in one safe swap",
    "T-4892": "Run the caret UI tests on the split tap"
   },
@@ -657,6 +667,7 @@
    "T-4635": "Idris",
    "T-4581": "Idris",
    "T-4889": "Idris",
+   "T-4835": "Pernille",
    "T-1905": "Idris",
    "T-4892": "Idris",
    "T-4782": "Idris",
@@ -667,11 +678,11 @@
   }
  },
  "ln": {
-  "at": "2026-11-18T14:20:34Z",
+  "at": "2026-11-18T14:23:52Z",
   "mq": {
    "n": {
     "checking": 1,
-    "inline": 9,
+    "inline": 10,
     "conflicted": 5,
     "failed": 0,
     "held": 1,
@@ -679,22 +690,22 @@
     "parked": 9
    },
    "m": {
-    "checking": 10,
-    "inline": 121,
-    "conflicted": 667,
+    "checking": 0,
+    "inline": 111,
+    "conflicted": 671,
     "failed": null,
-    "held": 2331,
+    "held": 2334,
     "retry": null,
-    "parked": 977
+    "parked": 980
    },
    "cur": [
     [
      [
       "T-4533"
      ],
-     "Mac tests",
-     "Mac mini",
-     10
+     "iPhone app tests, sent and waiting its turn",
+     "MacBook",
+     0
     ]
    ],
    "ld": [
@@ -704,8 +715,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-18T14:20:36Z",
-    "ld": 5.38,
+    "at": "2026-11-18T14:23:28Z",
+    "ld": 4.47,
     "c": 8,
     "sb": 2,
     "dk": [
@@ -774,10 +785,10 @@
   "main": 2,
   "lanes": 1,
   "total": 3,
-  "at": "9:20 AM",
+  "at": "9:23 AM",
   "why": "",
-  "at_iso": "2026-11-18T14:20:00+00:00",
+  "at_iso": "2026-11-18T14:23:00+00:00",
   "started": "8:00 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 8:00 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 9:20 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 8:00 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 9:23 AM ET</p></section>"
  }
 }

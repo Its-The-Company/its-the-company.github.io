@@ -1,11 +1,22 @@
 {
  "schema": 1,
- "at": "2026-11-18T13:00:21.659430+00:00",
+ "at": "2026-11-18T13:03:32.270034+00:00",
  "session": {
-  "active": false,
-  "kind": "",
-  "started": null,
+  "active": true,
+  "kind": "work",
+  "started": "2026-11-18T08:00:22-05:00",
   "flow": [
+   {
+    "t": "T-4892",
+    "name": "Run the caret UI tests on the split tap",
+    "w": "Idris",
+    "steps": [
+     {
+      "s": "testq",
+      "at": 1795006953
+     }
+    ]
+   },
    {
     "t": "T-4533",
     "name": "Make the premade settings save sturdier on disk errors",
@@ -127,16 +138,26 @@
     "end_at": 1794986227
    }
   ],
-  "landed": 33,
+  "landed": 30,
   "failed": 12
  },
- "workers": [],
- "who": "",
+ "workers": [
+  {
+   "name": "idris",
+   "task": "[test] T-4892 caret UI tests on runner",
+   "model": "opus",
+   "started": "2026-11-18T13:02:21.149Z",
+   "seconds": 71,
+   "finished": null,
+   "effort": "high"
+  }
+ ],
+ "who": "Idris",
  "recent": [],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 490,
+  "runnable_count": 486,
   "blocked_count": 34
  },
  "meter": {
@@ -180,51 +201,13 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-18T08:15:11-05:00",
+ "next_tick": null,
  "personal": {
   "week_pct": 49.77,
   "usage_pct": 52.0,
   "work_pct": 81.9,
-  "read_at": "2026-11-18T13:00:00+00:00",
+  "read_at": "2026-11-18T13:03:00+00:00",
   "running": [
-   {
-    "lane": "a2",
-    "task": "T-4748",
-    "w": "Idris",
-    "k": "fix",
-    "t": "Make the widget font check ignore lookalike letters",
-    "m": "sonnet",
-    "e": "high",
-    "at": "2026-11-18T06:38:23-05:00",
-    "n": "Evan",
-    "d": 1,
-    "src": "plan-a"
-   },
-   {
-    "lane": "a2",
-    "task": "T-4640",
-    "w": "Idris",
-    "k": "fix",
-    "t": "Drop a location fix that arrives too late",
-    "m": "sonnet",
-    "e": "medium",
-    "at": "2026-11-18T06:38:23-05:00",
-    "n": "Evan",
-    "d": 1,
-    "src": "plan-a"
-   },
-   {
-    "lane": "a2",
-    "task": "T-4581",
-    "w": "Idris",
-    "k": "build",
-    "t": "Test a real widget tap in iPad windows",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-18T06:38:23-05:00",
-    "n": "Evan",
-    "src": "plan-a"
-   },
    {
     "lane": "b3",
     "task": "T-4575",
@@ -300,7 +283,7 @@
  "lock_in": {
   "on": false,
   "pool": 12,
-  "at": "2026-11-18T08:00:00-05:00",
+  "at": "2026-11-18T08:03:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -308,17 +291,22 @@
    "b": "double-spread"
   }
  },
- "next_tick_why": "last_tick",
+ "next_tick_why": "session",
  "idle": null,
- "pool": null,
+ "pool": {
+  "why": "Double Spread: 54% of the week left, paced to last until Wed 14:00, the week's halfway point; the machine allows 4 (held: too few lands in 3 hours to judge a raise)",
+  "n": 4,
+  "at": "2026-11-18T08:00:11.412181-05:00"
+ },
  "lanes": [
   {
    "name": "Idris",
-   "state": "next",
-   "task": "Idris, P1, from T-4755 (Investor an Investor...",
-   "model": null,
-   "since": null,
-   "next": []
+   "state": "running",
+   "task": "[test] T-4892 caret UI tests on runner",
+   "model": "opus",
+   "since": "2026-11-18T13:02:21.149Z",
+   "next": [],
+   "effort": "high"
   },
   {
    "name": "Pernille",
@@ -362,7 +350,19 @@
   }
  ],
  "tasks": {
-  "run": [],
+  "run": [
+   {
+    "w": "Idris",
+    "k": "test",
+    "t": "Run the caret UI tests on the split tap",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-18T13:02:21.149Z",
+    "o": "c",
+    "task": "T-4892"
+   }
+  ],
+  "src": "plan",
   "open": [
    {
     "w": "Pernille",
@@ -437,26 +437,47 @@
   ],
   "done": [
    {
-    "w": "Idris",
-    "t": "The fix that keeps a second tap's cursor under the finger on a long code line is now checked by...",
-    "at": "2026-11-18T07:19:00-05:00"
+    "w": "Odalys",
+    "t": "The inbox wait change was measured: it made no real difference (8 of 30 waits over five minutes...",
+    "at": "2026-11-18T08:03:00-05:00"
    },
    {
-    "w": "Maren",
-    "t": "PyWidget is now spelled with its capital letters in every ready-made widget's empty-state line,...",
-    "at": "2026-11-18T07:07:00-05:00"
+    "w": "Ines",
+    "t": "The bank, tax and app name dates Evan chose on are now in the timeline, the build plan and the...",
+    "at": "2026-11-18T08:03:00-05:00"
    },
    {
-    "w": "Pernille",
-    "t": "The check on a premade's settings now refuses everything the app could not read, so one typo can...",
-    "at": "2026-11-18T06:57:00-05:00"
+    "w": "Ines",
+    "t": "The decisions record, the build brief and the feature cards now match Evan's ruling that Python...",
+    "at": "2026-11-18T08:03:00-05:00"
    }
   ],
   "count": {
-   "next": 490,
+   "next": 486,
    "wait": 32,
    "blocked": 2,
    "you": 9
+  },
+  "fin": {
+   "n": 4,
+   "rows": [
+    [
+     "T-4567",
+     "Measure the inbox wait..."
+    ],
+    [
+     "T-4668",
+     "Put the bank, tax and name..."
+    ],
+    [
+     "T-4669",
+     "Align the plan and records..."
+    ],
+    [
+     "T-4689",
+     "Bring the plan into line..."
+    ]
+   ]
   }
  },
  "qr": [
@@ -498,52 +519,57 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-18T13:00:21Z",
+  "at": "2026-11-18T13:03:32Z",
   "s": {
    "T-4533": [
     "merging",
     "Host checks on the Mac mini",
-    1795003341659
+    1795003352270
    ],
    "T-0011": [
     "mergeq",
     "1st to merge",
-    1795001901659
+    1795001912270
    ],
    "T-4574": [
     "mergeq",
     "3rd to merge",
-    1794992541659
+    1794992492270
    ],
    "T-4762": [
     "mergeq",
     "4th to merge",
-    1794994701659
+    1794994712270
    ],
    "T-4748": [
     "mergeq",
     "6th to merge",
-    1795002381659
+    1795002332270
    ],
    "T-4575": [
     "mergeq",
     "7th to merge",
-    1795003881659
+    1795003832270
    ],
    "T-4640": [
     "mergeq",
     "8th to merge",
-    1795004361659
+    1795004372270
    ],
    "T-4635": [
     "mergeq",
     "9th to merge",
-    1795006401659
+    1795006412270
    ],
    "T-4789": [
     "mergeq",
-    "10th to merge",
-    1795005981659
+    "11th to merge",
+    1795005992270
+   ],
+   "T-4892": [
+    "testing",
+    "its own tests, in its copy",
+    1795007012270
    ]
   },
   "nm": {
@@ -555,7 +581,8 @@
    "T-4575": "Stop an edit from rewriting a pasted Shortcut link",
    "T-4640": "Drop a location fix that arrives too late",
    "T-4635": "Clear the Settings restore line once Pro is bought",
-   "T-4789": "Check finished work before it ships"
+   "T-4789": "Check finished work before it ships",
+   "T-4892": "Run the caret UI tests on the split tap"
   },
   "wk": {
    "T-4533": "Pernille",
@@ -566,11 +593,16 @@
    "T-4575": "Idris",
    "T-4640": "Idris",
    "T-4635": "Idris",
-   "T-4789": "Pernille"
+   "T-4789": "Pernille",
+   "T-4892": "Idris",
+   "T-4567": "Odalys",
+   "T-4668": "Ines",
+   "T-4669": "Ines",
+   "T-4689": "Ines"
   }
  },
  "ln": {
-  "at": "2026-11-18T13:00:21Z",
+  "at": "2026-11-18T13:03:32Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -579,16 +611,16 @@
     "failed": 0,
     "held": 1,
     "retry": 0,
-    "parked": 9
+    "parked": 10
    },
    "m": {
-    "checking": 58,
-    "inline": 61,
-    "conflicted": 587,
+    "checking": 61,
+    "inline": 65,
+    "conflicted": 590,
     "failed": null,
-    "held": 2251,
+    "held": 2254,
     "retry": null,
-    "parked": 896
+    "parked": 820
    },
    "cur": [
     [
@@ -597,7 +629,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     58
+     61
     ]
    ],
    "ld": [
@@ -607,12 +639,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-18T12:59:57Z",
-    "ld": 2.01,
+    "at": "2026-11-18T13:03:33Z",
+    "ld": 1.42,
     "c": 8,
     "sb": 2,
     "dk": [
-     15.4,
+     17.3,
      228.3
     ],
     "ss": [
@@ -640,12 +672,12 @@
  "operators": [
   {
    "w": "Operator",
-   "a": "Evan's Account",
+   "a": "Main plan",
    "sr": 1,
    "m": "opus",
    "e": "high",
    "t": "Work session \u2013 1 task",
-   "at": "2026-11-18T07:03:13-05:00"
+   "at": "2026-11-18T08:00:22-05:00"
   },
   {
    "w": "Operator",
@@ -666,6 +698,7 @@
   "lane_next",
   "queue_text",
   "task_done",
+  "fin_short",
   "task_title",
   "done_text",
   "task_open",
@@ -673,13 +706,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 0,
-  "lanes": 2,
+  "main": 1,
+  "lanes": 1,
   "total": 2,
-  "at": "8:00 AM",
+  "at": "8:03 AM",
   "why": "",
-  "at_iso": "2026-11-18T13:00:00+00:00",
-  "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 8:00 AM ET</p></section>"
+  "at_iso": "2026-11-18T13:03:00+00:00",
+  "started": "8:00 AM",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 1, started 8:00 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 8:03 AM ET</p></section>"
  }
 }

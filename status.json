@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-18T00:16:14.343983+00:00",
+ "at": "2026-11-18T00:19:19.398892+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -128,7 +128,7 @@
    "task": "[build] T-2296 land the gallery work",
    "model": "opus",
    "started": "2026-11-18T00:13:00.213Z",
-   "seconds": 194,
+   "seconds": 379,
    "finished": null,
    "effort": "high"
   },
@@ -137,7 +137,7 @@
    "task": "[design] T-4746 land the name wording fix",
    "model": "opus",
    "started": "2026-11-18T00:13:11.913Z",
-   "seconds": 182,
+   "seconds": 367,
    "finished": null,
    "effort": "high"
   }
@@ -196,7 +196,7 @@
   "week_pct": 43.81,
   "usage_pct": 53.5,
   "work_pct": 81.2,
-  "read_at": "2026-11-18T00:16:00+00:00",
+  "read_at": "2026-11-18T00:19:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -319,6 +319,7 @@
     "e": "medium",
     "at": "2026-11-17T18:30:36-05:00",
     "n": "Jeremy",
+    "d": 1,
     "src": "plan-b"
    },
    {
@@ -421,7 +422,7 @@
  "lock_in": {
   "on": false,
   "pool": 7,
-  "at": "2026-11-17T19:16:00-05:00",
+  "at": "2026-11-17T19:19:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -651,112 +652,107 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-18T00:16:02Z",
+  "at": "2026-11-18T00:19:19Z",
   "s": {
    "T-4774": [
     "merging",
     "",
-    1794960302172
+    1794960319398
    ],
    "T-4607": [
     "mergeq",
     "",
-    1794959042172
+    1794959059398
    ],
    "T-4787": [
     "mergeq",
     "",
-    1794959282172
+    1794959239398
    ],
    "T-4750": [
     "mergeq",
     "",
-    1794960182172
+    1794960199398
    ],
    "T-4761": [
     "mergeq",
     "",
-    1794960542172
+    1794960499398
+   ],
+   "T-4659": [
+    "mergeq",
+    "",
+    1794961039398
    ],
    "T-4610": [
     "mergeq",
     "",
-    1794960422172
+    1794960439398
    ],
    "T-4634": [
     "mergeq",
     "",
-    1794960422172
+    1794960439398
    ],
    "T-4695": [
     "mergeq",
     "",
-    1794960422172
+    1794960439398
    ],
    "T-4719": [
     "mergeq",
     "",
-    1794959522172
+    1794959539398
    ],
    "T-4720": [
     "mergeq",
     "",
-    1794959642172
+    1794959659398
    ],
    "T-4697": [
     "mergeq",
     "",
-    1794959882172
+    1794959899398
    ],
    "T-4698": [
     "mergeq",
     "",
-    1794960242172
+    1794960259398
    ],
    "T-2296": [
     "merging",
     "",
-    1794960902172
-   ],
-   "T-4659": [
-    "testing",
-    "",
-    null
-   ],
-   "T-4744": [
-    "testing",
-    "",
-    null
+    1794960919398
    ],
    "T-4746": [
-    "testing",
+    "merging",
     "",
-    1794960842172
+    1794961039398
    ],
    "T-4643": [
-    "testq",
+    "testing",
     "",
-    1794960362172
+    null
    ],
    "T-4763": [
-    "testq",
+    "testing",
     "",
-    1794960362172
+    null
    ],
    "T-4765": [
-    "testq",
+    "testing",
     "",
-    1794960362172
+    null
    ],
    "T-4788": [
-    "testq",
+    "testing",
     "",
-    1794960362172
+    null
    ],
    "T-4699": [
     "testq",
     "",
-    1794960602172
+    1794960559398
    ],
    "T-4770": [
     "merged",
@@ -771,6 +767,7 @@
    "T-4787": "Count failed merges by cause: bad test or broken code",
    "T-4750": "Check network fetch cases on the Swift side too",
    "T-4761": "Keep one layout for the widget state format",
+   "T-4659": "Prove a widget button's tap reaches its Python handler",
    "T-4610": "Check finished work before it ships",
    "T-4634": "Github hang test is cut before the GET under load",
    "T-4695": "Check finished work before it ships",
@@ -779,8 +776,6 @@
    "T-4697": "Check finished work before it ships",
    "T-4698": "Check finished work before it ships",
    "T-2296": "Finish the gallery pager, iPad layout and detail foot",
-   "T-4659": "Prove a widget button's tap reaches its Python handler",
-   "T-4744": "Fix a MacBook test job that failed",
    "T-4746": "Write PyWidget's name right in the widget's words",
    "T-4643": "Make the size ladder measure each rung more than once",
    "T-4763": "Keep habit marks when the Page also saves",
@@ -795,6 +790,7 @@
    "T-4787": "Odalys",
    "T-4750": "Idris",
    "T-4761": "Idris",
+   "T-4659": "Idris",
    "T-4610": "Odalys",
    "T-4634": "Pernille",
    "T-4695": "Ines",
@@ -803,8 +799,6 @@
    "T-4697": "Pernille",
    "T-4698": "Pernille",
    "T-2296": "Idris",
-   "T-4659": "Idris",
-   "T-4744": "Operator",
    "T-4746": "Maren",
    "T-4643": "Idris",
    "T-4763": "Maren",
@@ -815,11 +809,11 @@
   }
  },
  "ln": {
-  "at": "2026-11-18T00:16:02Z",
+  "at": "2026-11-18T00:19:19Z",
   "mq": {
    "n": {
     "checking": 1,
-    "inline": 11,
+    "inline": 12,
     "conflicted": 2,
     "failed": 1,
     "held": 1,
@@ -827,13 +821,13 @@
     "parked": 8
    },
    "m": {
-    "checking": 11,
-    "inline": 13,
-    "conflicted": 681,
-    "failed": 11,
-    "held": 1487,
+    "checking": 14,
+    "inline": 15,
+    "conflicted": 684,
+    "failed": 14,
+    "held": 1490,
     "retry": null,
-    "parked": 285
+    "parked": 289
    },
    "cur": [
     [
@@ -842,7 +836,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     11
+     14
     ]
    ],
    "ld": [
@@ -852,12 +846,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-18T00:15:13Z",
-    "ld": 1.05,
+    "at": "2026-11-18T00:19:19Z",
+    "ld": 0.8,
     "c": 8,
     "sb": 1,
     "dk": [
-     19.1,
+     16.9,
      228.3
     ],
     "ss": [
@@ -924,7 +918,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 1 task",
+   "t": "Work session",
    "at": "2026-11-17T18:30:35-05:00"
   },
   {
@@ -956,10 +950,10 @@
   "main": 2,
   "lanes": 5,
   "total": 7,
-  "at": "7:16 PM",
+  "at": "7:19 PM",
   "why": "",
-  "at_iso": "2026-11-18T00:16:00+00:00",
+  "at_iso": "2026-11-18T00:19:00+00:00",
   "started": "7:10 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 2, started 7:10 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 7:16 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 2, started 7:10 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 7:19 PM ET</p></section>"
  }
 }

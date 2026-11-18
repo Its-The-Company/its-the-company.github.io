@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-18T23:32:17.643294+00:00",
+ "at": "2026-11-18T23:35:15.218553+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -21,17 +21,6 @@
      {
       "s": "testq",
       "at": 1795041182
-     }
-    ]
-   },
-   {
-    "t": "T-4750",
-    "name": "Check network fetch cases on the Swift side too",
-    "w": "Idris",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1795037445
      }
     ]
    },
@@ -148,8 +137,8 @@
     "why": "did not merge cleanly"
    }
   ],
-  "landed": 20,
-  "failed": 8
+  "landed": 19,
+  "failed": 4
  },
  "workers": [
   {
@@ -157,16 +146,7 @@
    "task": "[tools] T-4917 gate counts own copied files",
    "model": "opus",
    "started": "2026-11-18T22:35:16.121Z",
-   "seconds": 3421,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-4784 land kept app copies",
-   "model": "opus",
-   "started": "2026-11-18T22:35:28.268Z",
-   "seconds": 3409,
+   "seconds": 3599,
    "finished": null,
    "effort": "high"
   },
@@ -175,7 +155,7 @@
    "task": "[test] T-4807 bad tests slice 3",
    "model": "opus",
    "started": "2026-11-18T22:58:04.466Z",
-   "seconds": 2053,
+   "seconds": 2230,
    "finished": null,
    "effort": "high"
   },
@@ -184,13 +164,30 @@
    "task": "[tools] T-4808 merge-step fixes stream",
    "model": "opus",
    "started": "2026-11-18T23:26:46.521Z",
-   "seconds": 331,
+   "seconds": 508,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-4913 post guard proposal per",
+   "model": "opus",
+   "started": "2026-11-18T23:33:55.723Z",
+   "seconds": 79,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Odalys x2, Idris, Pernille",
+ "who": "Odalys x3, Pernille",
  "recent": [
+  {
+   "name": "idris",
+   "task": "[build] T-4784 land kept app copies",
+   "model": "opus",
+   "started": "2026-11-18T22:35:28.268Z",
+   "seconds": null,
+   "finished": "2026-11-18T23:33:33.873000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[tools] T-4913 test and post guard proposal",
@@ -219,7 +216,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 523,
+  "runnable_count": 522,
   "blocked_count": 33
  },
  "meter": {
@@ -268,7 +265,7 @@
   "week_pct": 52.29,
   "usage_pct": 50.1,
   "work_pct": 81.6,
-  "read_at": "2026-11-18T23:32:00+00:00",
+  "read_at": "2026-11-18T23:35:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -298,14 +295,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions wait until 20 GB is free.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-18T18:28:00-05:00",
+   "at": "2026-11-18T18:34:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 3,
-  "at": "2026-11-18T18:32:00-05:00",
+  "at": "2026-11-18T18:35:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -331,15 +328,6 @@
    "effort": "high"
   },
   {
-   "name": "Idris",
-   "state": "running",
-   "task": "[build] T-4784 land kept app copies",
-   "model": "opus",
-   "since": "2026-11-18T22:35:28.268Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
    "name": "Pernille",
    "state": "running",
    "task": "[test] T-4807 bad tests slice 3",
@@ -347,6 +335,14 @@
    "since": "2026-11-18T22:58:04.466Z",
    "next": [],
    "effort": "high"
+  },
+  {
+   "name": "Idris",
+   "state": "next",
+   "task": "Idris, P1, from T-4755 (Investor an Investor...",
+   "model": null,
+   "since": null,
+   "next": []
   },
   {
    "name": "Ines",
@@ -386,16 +382,6 @@
     "task": "T-4917"
    },
    {
-    "w": "Idris",
-    "k": "build",
-    "t": "Pin the refresh glyph's button style in a test",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-18T22:35:28.268Z",
-    "o": "c",
-    "task": "T-4784"
-   },
-   {
     "w": "Pernille",
     "k": "test",
     "t": "Fix every bad test that failed a merge",
@@ -414,6 +400,16 @@
     "at": "2026-11-18T23:26:46.521Z",
     "o": "c",
     "task": "T-4808"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Stop the safety guard refusing safe work",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-18T23:33:55.723Z",
+    "o": "c",
+    "task": "T-4913"
    }
   ],
   "src": "plan",
@@ -492,6 +488,11 @@
   "done": [
    {
     "w": "Idris",
+    "t": "The app's own network fetch is now checked against the same six shared test cases the Python...",
+    "at": "2026-11-18T18:33:00-05:00"
+   },
+   {
+    "w": "Idris",
     "t": "Coloured line numbers for warnings and errors now redraw without rescanning the whole script on...",
     "at": "2026-11-18T18:25:00-05:00"
    },
@@ -499,22 +500,21 @@
     "w": "Idris",
     "t": "When an edit moves a line with a warning up or down, its coloured line number and the spoken...",
     "at": "2026-11-18T18:25:00-05:00"
-   },
-   {
-    "w": "Idris",
-    "t": "A test now fails if the widget's refresh button loses its plain look or its link gets a tinted...",
-    "at": "2026-11-18T18:05:00-05:00"
    }
   ],
   "count": {
-   "next": 523,
+   "next": 522,
    "wait": 31,
    "blocked": 2,
    "you": 9
   },
   "fin": {
-   "n": 4,
+   "n": 5,
    "rows": [
+    [
+     "T-4750",
+     "Check network fetch cases on..."
+    ],
     [
      "T-4771",
      "Gutter marks redraw quickly..."
@@ -573,62 +573,57 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-18T23:32:17Z",
+  "at": "2026-11-18T23:35:02Z",
   "s": {
    "T-4807": [
     "merging",
     "Mac tests at the main gate",
-    1795044017643
-   ],
-   "T-4750": [
-    "testing",
-    "MacBook \u00b7 test",
-    null
+    1795044062093
    ],
    "T-4903": [
     "testing",
     "its own tests, in its copy",
-    1795042637643
+    1795042682093
    ],
    "T-4808": [
     "testing",
     "its own tests, in its copy",
-    1795044497643
-   ],
-   "T-4784": [
-    "merged",
-    "on main 6:04 PM ET",
-    1795043090000,
-    "Idris"
+    1795044482093
    ],
    "T-4917": [
     "merged",
     "on main 5:55 PM ET",
     1795042549000,
     "Odalys"
+   ],
+   "T-4913": [
+    "merged",
+    "on main 5:44 PM ET",
+    1795041880000,
+    "Odalys"
    ]
   },
   "nm": {
    "T-4807": "Fix every bad test that failed a merge",
-   "T-4750": "Check network fetch cases on the Swift side too",
    "T-4903": "Drop stale copies from the merge count for good",
    "T-4808": "Fix the red board-check row in the land test",
-   "T-4784": "Pin the refresh glyph's button style in a test",
-   "T-4917": "Stop the gate refusing files it copied in itself"
+   "T-4917": "Stop the gate refusing files it copied in itself",
+   "T-4913": "Stop the safety guard refusing safe work"
   },
   "wk": {
    "T-4807": "Pernille",
-   "T-4750": "Idris",
    "T-4903": "Odalys",
    "T-4808": "Odalys",
-   "T-4784": "Idris",
    "T-4917": "Odalys",
+   "T-4913": "Odalys",
+   "T-4750": "Idris",
    "T-4771": "Idris",
-   "T-4783": "Idris"
+   "T-4783": "Idris",
+   "T-4784": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-18T23:32:17Z",
+  "at": "2026-11-18T23:35:02Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -642,11 +637,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 795,
+    "conflicted": 798,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1069
+    "parked": 1072
    },
    "cur": [],
    "ld": [
@@ -656,8 +651,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-18T23:31:31Z",
-    "ld": 1.32,
+    "at": "2026-11-18T23:34:38Z",
+    "ld": 1.27,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -671,12 +666,12 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-18T23:26:53Z",
-    "ld": 0.55,
+    "at": "2026-11-18T23:32:49Z",
+    "ld": 57.67,
     "c": 12,
     "sb": 0,
     "dk": [
-     357.0,
+     357.2,
      926.4
     ],
     "sn": []
@@ -690,8 +685,17 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 11 tasks",
+   "t": "Work session \u2013 12 tasks",
    "at": "2026-11-18T18:26:31-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Evan's Account",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session",
+   "at": "2026-11-18T18:35:13-05:00"
   }
  ],
  "reply": {
@@ -714,10 +718,10 @@
   "main": 4,
   "lanes": 0,
   "total": 4,
-  "at": "6:32 PM",
+  "at": "6:35 PM",
   "why": "",
-  "at_iso": "2026-11-18T23:32:00+00:00",
+  "at_iso": "2026-11-18T23:35:00+00:00",
   "started": "5:34 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 4, started 5:34 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 6:32 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 4, started 5:34 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 6:35 PM ET</p></section>"
  }
 }

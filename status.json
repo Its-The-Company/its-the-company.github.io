@@ -1,48 +1,11 @@
 {
  "schema": 1,
- "at": "2026-11-18T15:30:39.787362+00:00",
+ "at": "2026-11-18T15:33:45.412522+00:00",
  "session": {
-  "active": false,
-  "kind": "",
-  "started": null,
+  "active": true,
+  "kind": "work",
+  "started": "2026-11-18T10:30:40-05:00",
   "flow": [
-   {
-    "t": "T-4575",
-    "name": "Stop an edit from rewriting a pasted Shortcut link",
-    "acct": "Personal b",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1795014350
-     },
-     {
-      "s": "macbook",
-      "at": 1795015345
-     }
-    ]
-   },
-   {
-    "t": "T-4748",
-    "name": "Make the widget font check ignore lookalike letters",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "macbook",
-      "at": 1795013070
-     }
-    ]
-   },
-   {
-    "t": "T-4574",
-    "name": "Keep the launcher's app queries out of shipped builds",
-    "acct": "Personal b",
-    "steps": [
-     {
-      "s": "macbook",
-      "at": 1795012473
-     }
-    ]
-   },
    {
     "t": "T-4533",
     "name": "Make the premade settings save sturdier on disk errors",
@@ -83,6 +46,51 @@
      {
       "s": "testq",
       "at": 1795015423
+     },
+     {
+      "s": "macbook",
+      "at": 1795016006
+     },
+     {
+      "s": "landing",
+      "at": 1795016012
+     }
+    ]
+   },
+   {
+    "t": "T-4575",
+    "name": "Stop an edit from rewriting a pasted Shortcut link",
+    "acct": "Personal b",
+    "steps": [
+     {
+      "s": "testq",
+      "at": 1795014350
+     },
+     {
+      "s": "macbook",
+      "at": 1795015345
+     }
+    ]
+   },
+   {
+    "t": "T-4748",
+    "name": "Make the widget font check ignore lookalike letters",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "macbook",
+      "at": 1795013070
+     }
+    ]
+   },
+   {
+    "t": "T-4574",
+    "name": "Keep the launcher's app queries out of shipped builds",
+    "acct": "Personal b",
+    "steps": [
+     {
+      "s": "macbook",
+      "at": 1795012473
      }
     ]
    },
@@ -203,32 +211,26 @@
   "landed": 20,
   "failed": 10
  },
- "workers": [],
- "who": "",
+ "workers": [
+  {
+   "name": "idris",
+   "task": "[build] T-4771 recut gutter marks and land",
+   "model": "opus",
+   "started": "2026-11-18T15:32:38.173Z",
+   "seconds": 67,
+   "finished": null,
+   "effort": "high"
+  }
+ ],
+ "who": "Idris",
  "recent": [
   {
    "name": "idris",
-   "task": "[build] T-1905 project send safe swap",
+   "task": "[build] T-4188 recut device modules and land",
    "model": "opus",
-   "started": "2026-11-18T13:35:50.063Z",
+   "started": "2026-11-18T15:32:48.276Z",
    "seconds": null,
-   "finished": "2026-11-18T15:11:54.130000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[test] T-4892 caret UI tests on runner",
-   "model": "opus",
-   "started": "2026-11-18T13:02:21.149Z",
-   "seconds": null,
-   "finished": "2026-11-18T14:46:28.970000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[test] T-4782 Pro store test waits",
-   "model": "opus",
-   "started": "2026-11-18T13:03:48.762Z",
-   "seconds": null,
-   "finished": "2026-11-18T13:35:19.631000+00:00"
+   "finished": "2026-11-18T15:33:37.839000+00:00"
   }
  ],
  "queue": {
@@ -278,12 +280,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-18T10:45:22-05:00",
+ "next_tick": null,
  "personal": {
   "week_pct": 51.32,
   "usage_pct": 52.2,
   "work_pct": 82.0,
-  "read_at": "2026-11-18T15:30:00+00:00",
+  "read_at": "2026-11-18T15:33:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -320,7 +322,7 @@
  "lock_in": {
   "on": false,
   "pool": 12,
-  "at": "2026-11-18T10:30:00-05:00",
+  "at": "2026-11-18T10:33:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -328,17 +330,22 @@
    "b": "double-spread"
   }
  },
- "next_tick_why": "last_tick",
+ "next_tick_why": "session",
  "idle": null,
- "pool": null,
+ "pool": {
+  "why": "Double Spread: 53% of the week left, paced to last until Wed 14:00, the week's halfway point; the machine allows 2 (new work waits: 27 tasks wait to merge (app 21 of 20, process and site 20 of 8,...",
+  "n": 2,
+  "at": "2026-11-18T10:30:22.499863-05:00"
+ },
  "lanes": [
   {
    "name": "Idris",
-   "state": "next",
-   "task": "Idris, P1, from T-4755 (Investor an Investor...",
-   "model": null,
-   "since": null,
-   "next": []
+   "state": "running",
+   "task": "[build] T-4771 recut gutter marks and land",
+   "model": "opus",
+   "since": "2026-11-18T15:32:38.173Z",
+   "next": [],
+   "effort": "high"
   },
   {
    "name": "Pernille",
@@ -382,7 +389,19 @@
   }
  ],
  "tasks": {
-  "run": [],
+  "run": [
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "Gutter marks redraw quickly and stay right while typing",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-18T15:32:38.173Z",
+    "o": "c",
+    "task": "T-4771"
+   }
+  ],
+  "src": "plan",
   "open": [
    {
     "w": "Pernille",
@@ -477,6 +496,10 @@
    "wait": 32,
    "blocked": 2,
    "you": 9
+  },
+  "fin": {
+   "n": 0,
+   "rows": []
   }
  },
  "qr": [
@@ -518,67 +541,67 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-18T15:30:39Z",
+  "at": "2026-11-18T15:33:30Z",
   "s": {
    "T-4533": [
-    "merging",
-    "Host checks on the Mac mini",
-    1795015479787
+    "mergetest",
+    "Xcode checks on the MacBook",
+    1795016010132
    ],
    "T-4574": [
     "mergeq",
     "2nd to merge",
-    1794992499787
+    1794992490132
    ],
    "T-4762": [
     "mergeq",
     "3rd to merge",
-    1795012299787
+    1795012350132
    ],
    "T-4748": [
     "mergeq",
     "5th to merge",
-    1795002339787
+    1795002330132
    ],
    "T-4575": [
-    "mergetest",
-    "Xcode checks on the MacBook, 6th to merge",
-    1795015359787
+    "mergeq",
+    "6th to merge",
+    1795003890132
    ],
    "T-4640": [
-    "mergetest",
-    "Xcode checks on the MacBook, 7th to merge",
-    1795015419787
+    "mergeq",
+    "7th to merge",
+    1795004370132
    ],
    "T-4789": [
     "mergeq",
     "8th to merge",
-    1795005999787
+    1795005990132
    ],
    "T-4635": [
     "mergeq",
     "9th to merge",
-    1795006359787
+    1795006410132
    ],
    "T-4581": [
     "mergeq",
     "12th to merge",
-    1795007079787
+    1795007070132
    ],
    "T-4889": [
     "mergeq",
     "17th to merge",
-    1795010079787
+    1795010070132
    ],
    "T-4835": [
     "mergeq",
     "18th to merge",
-    1795011699787
+    1795011750132
    ],
    "T-4679": [
     "mergeq",
     "19th to merge",
-    1795011999787
+    1795011990132
    ]
   },
   "nm": {
@@ -611,11 +634,11 @@
   }
  },
  "ln": {
-  "at": "2026-11-18T15:30:39Z",
+  "at": "2026-11-18T15:33:30Z",
   "mq": {
    "n": {
-    "checking": 3,
-    "inline": 9,
+    "checking": 1,
+    "inline": 11,
     "conflicted": 5,
     "failed": 0,
     "held": 1,
@@ -623,38 +646,22 @@
     "parked": 9
    },
    "m": {
-    "checking": 7,
-    "inline": 146,
-    "conflicted": 737,
+    "checking": 0,
+    "inline": 160,
+    "conflicted": 740,
     "failed": null,
-    "held": 2401,
+    "held": 2404,
     "retry": null,
-    "parked": 1047
+    "parked": 1050
    },
    "cur": [
     [
      [
       "T-4533"
      ],
-     "Mac tests",
-     "Mac mini",
-     6
-    ],
-    [
-     [
-      "T-4575"
-     ],
      "iPhone app tests",
      "MacBook",
-     8
-    ],
-    [
-     [
-      "T-4640"
-     ],
-     "iPhone app tests",
-     "MacBook",
-     7
+     0
     ]
    ],
    "ld": [
@@ -664,12 +671,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-18T15:30:40Z",
-    "ld": 0.71,
+    "at": "2026-11-18T15:33:04Z",
+    "ld": 0.75,
     "c": 8,
     "sb": 1,
     "dk": [
-     15.5,
+     15.2,
      228.3
     ],
     "ss": [
@@ -693,7 +700,17 @@
    }
   }
  },
- "operators": [],
+ "operators": [
+  {
+   "w": "Operator",
+   "a": "Main plan",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session \u2013 2 tasks",
+   "at": "2026-11-18T10:30:40-05:00"
+  }
+ ],
  "reply": {
   "sent": "2026-11-18T14:54:49Z",
   "seconds": 96.0
@@ -710,13 +727,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 0,
+  "main": 1,
   "lanes": 0,
-  "total": 0,
-  "at": "10:30 AM",
-  "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
-  "at_iso": "2026-11-18T15:30:00+00:00",
-  "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 10:30 AM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
+  "total": 1,
+  "at": "10:33 AM",
+  "why": "",
+  "at_iso": "2026-11-18T15:33:00+00:00",
+  "started": "10:30 AM",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 10:30 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 10:33 AM ET</p></section>"
  }
 }

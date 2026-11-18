@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-18T16:04:20.994511+00:00",
+ "at": "2026-11-18T16:07:23.578708+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -225,7 +225,7 @@
    "task": "[build] T-4493 land the site clutter cut",
    "model": "opus",
    "started": "2026-11-18T15:43:48.650Z",
-   "seconds": 1232,
+   "seconds": 1414,
    "finished": null,
    "effort": "high"
   },
@@ -234,7 +234,7 @@
    "task": "[tools] T-4180 judge stray runner salvage",
    "model": "opus",
    "started": "2026-11-18T15:50:45.673Z",
-   "seconds": 815,
+   "seconds": 997,
    "finished": null,
    "effort": "high"
   }
@@ -326,7 +326,7 @@
   "week_pct": 51.32,
   "usage_pct": 52.2,
   "work_pct": 82.0,
-  "read_at": "2026-11-18T16:04:00+00:00",
+  "read_at": "2026-11-18T16:07:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -388,7 +388,7 @@
  "lock_in": {
   "on": false,
   "pool": 12,
-  "at": "2026-11-18T11:04:00-05:00",
+  "at": "2026-11-18T11:07:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -623,67 +623,67 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-18T16:04:03Z",
+  "at": "2026-11-18T16:06:53Z",
   "s": {
    "T-4533": [
     "mergeq",
     "1st to merge",
-    1794988083390
+    1794988133128
    ],
    "T-4574": [
     "mergetest",
     "Xcode checks on the MacBook, 3rd to merge",
-    1795017543390
+    1795017593128
    ],
    "T-4635": [
     "mergetest",
     "Xcode checks on the MacBook, 5th to merge",
-    1795017603390
+    1795017593128
    ],
    "T-4581": [
     "mergeq",
     "6th to merge",
-    1795017843390
+    1795017893128
    ],
    "T-4575": [
     "mergeq",
     "8th to merge",
-    1795007523390
+    1795007513128
    ],
    "T-4789": [
     "mergeq",
     "8th to merge",
-    1795007523390
-   ],
-   "T-4889": [
-    "mergeq",
-    "9th to merge",
-    1795010103390
+    1795007513128
    ],
    "T-4835": [
     "mergeq",
-    "10th to merge",
-    1795011723390
+    "9th to merge",
+    1795011713128
    ],
    "T-4679": [
     "mergeq",
+    "10th to merge",
+    1795012013128
+   ],
+   "T-4889": [
+    "mergeq",
     "11th to merge",
-    1795012023390
+    1795014953128
    ],
    "T-4180": [
     "testing",
     "its own tests, in its copy",
-    1795017123390
+    1795017173128
    ],
    "T-4493": [
     "testing",
     "its own tests, in its copy",
-    1795016703390
+    1795016693128
    ],
    "T-2296": [
     "testq",
     "1st for a Simulator",
-    1795016403390
+    1795016453128
    ]
   },
   "nm": {
@@ -693,9 +693,9 @@
    "T-4581": "Test a real widget tap in iPad windows",
    "T-4575": "Stop an edit from rewriting a pasted Shortcut link",
    "T-4789": "Check finished work before it ships",
-   "T-4889": "Check the PyWidget case fix in premade lines",
    "T-4835": "Show an all-day event on its own date after travel",
    "T-4679": "Make the unit tests pass in a launcher build",
+   "T-4889": "Check the PyWidget case fix in premade lines",
    "T-4180": "Every premade widget draws on the iPhone",
    "T-4493": "Cut clutter text on the pages still carrying it",
    "T-2296": "Finish the gallery pager, iPad layout and detail foot"
@@ -707,9 +707,9 @@
    "T-4581": "Idris",
    "T-4575": "Idris",
    "T-4789": "Pernille",
-   "T-4889": "Idris",
    "T-4835": "Pernille",
    "T-4679": "Idris",
+   "T-4889": "Idris",
    "T-4180": "Idris",
    "T-4493": "Maren",
    "T-2296": "Idris",
@@ -717,7 +717,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-18T16:04:03Z",
+  "at": "2026-11-18T16:06:53Z",
   "mq": {
    "n": {
     "checking": 2,
@@ -729,13 +729,13 @@
     "parked": 5
    },
    "m": {
-    "checking": 4,
-    "inline": 129,
-    "conflicted": 771,
+    "checking": 7,
+    "inline": 105,
+    "conflicted": 774,
     "failed": null,
-    "held": 2435,
+    "held": 2437,
     "retry": null,
-    "parked": 746
+    "parked": 749
    },
    "cur": [
     [
@@ -744,7 +744,7 @@
      ],
      "iPhone app tests",
      "MacBook",
-     5
+     7
     ],
     [
      [
@@ -752,22 +752,22 @@
      ],
      "iPhone app tests, sent and waiting its turn",
      "MacBook",
-     4
+     7
     ]
    ],
    "ld": [
-    22,
-    "2026-11-18T16:03:39Z"
+    23,
+    "2026-11-18T16:04:14Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-18T16:03:42Z",
-    "ld": 24.35,
+    "at": "2026-11-18T16:06:10Z",
+    "ld": 17.88,
     "c": 8,
     "sb": 2,
     "dk": [
-     15.3,
+     14.5,
      228.3
     ],
     "ss": [
@@ -832,10 +832,10 @@
   "main": 2,
   "lanes": 1,
   "total": 3,
-  "at": "11:04 AM",
+  "at": "11:07 AM",
   "why": "",
-  "at_iso": "2026-11-18T16:04:00+00:00",
+  "at_iso": "2026-11-18T16:07:00+00:00",
   "started": "10:30 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 10:30 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 11:04 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 10:30 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 11:07 AM ET</p></section>"
  }
 }

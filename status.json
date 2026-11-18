@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-18T20:08:17.598918+00:00",
+ "at": "2026-11-18T20:11:24.431029+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -137,7 +137,7 @@
    "task": "[tools] T-4907 keep main green after every land",
    "model": "opus",
    "started": "2026-11-18T19:11:56.141Z",
-   "seconds": 3381,
+   "seconds": 3568,
    "finished": null,
    "effort": "high"
   },
@@ -146,7 +146,7 @@
    "task": "[tools] T-4902 Investor P0 process lines past limit",
    "model": "opus",
    "started": "2026-11-18T19:12:07.311Z",
-   "seconds": 3370,
+   "seconds": 3557,
    "finished": null,
    "effort": "high"
   },
@@ -155,7 +155,7 @@
    "task": "[build] T-4773 time next run from widget ask",
    "model": "opus",
    "started": "2026-11-18T19:52:27.248Z",
-   "seconds": 950,
+   "seconds": 1137,
    "finished": null,
    "effort": "high"
   }
@@ -179,12 +179,13 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 22.0,
-   "resets_at": "2026-11-18T15:10:00-05:00",
+   "pct": null,
+   "resets_at": null,
    "used_words": "of your 5-hour allowance used",
    "read_at": "2026-11-18T14:58:15.038654-05:00",
    "source": "live",
-   "left": 78.0,
+   "last_reset": "2026-11-18T15:10:00-05:00",
+   "left": null,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
@@ -223,7 +224,7 @@
   "week_pct": 51.56,
   "usage_pct": 51.3,
   "work_pct": 81.5,
-  "read_at": "2026-11-18T20:08:00+00:00",
+  "read_at": "2026-11-18T20:11:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -260,7 +261,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-18T15:08:00-05:00",
+  "at": "2026-11-18T15:11:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -500,22 +501,22 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-18T20:08:17Z",
+  "at": "2026-11-18T20:11:08Z",
   "s": {
    "T-4773": [
     "merging",
     "Mac tests at the main gate",
-    1795032497598
+    1795032488204
    ],
    "T-4907": [
     "merging",
     "Mac tests at the main gate",
-    1795031657598
+    1795031648204
    ],
    "T-4902": [
     "testing",
     "its own tests, in its copy",
-    1795031657598
+    1795031648204
    ]
   },
   "nm": {
@@ -530,7 +531,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-18T20:08:17Z",
+  "at": "2026-11-18T20:11:08Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -544,11 +545,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 514,
+    "conflicted": 516,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1078
+    "parked": 1081
    },
    "cur": [],
    "ld": [
@@ -558,12 +559,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-18T20:07:52Z",
-    "ld": 5.57,
+    "at": "2026-11-18T20:11:10Z",
+    "ld": 3.93,
     "c": 8,
     "sb": 0,
     "dk": [
-     13.8,
+     11.9,
      228.3
     ],
     "ss": [
@@ -615,10 +616,10 @@
   "main": 3,
   "lanes": 0,
   "total": 3,
-  "at": "3:08 PM",
+  "at": "3:11 PM",
   "why": "",
-  "at_iso": "2026-11-18T20:08:00+00:00",
+  "at_iso": "2026-11-18T20:11:00+00:00",
   "started": "2:09 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 2:09 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 3:08 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 2:09 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 3:11 PM ET</p></section>"
  }
 }

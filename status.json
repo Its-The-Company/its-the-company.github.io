@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-18T10:55:01.554610+00:00",
+ "at": "2026-11-18T10:58:04.488271+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -112,7 +112,7 @@
    "task": "[build] T-4873 fallback completion case",
    "model": "sonnet",
    "started": "2026-11-18T10:35:31.351Z",
-   "seconds": 1170,
+   "seconds": 1353,
    "finished": null
   },
   {
@@ -120,11 +120,19 @@
    "task": "[review] T-4876 long-line caret review",
    "model": "opus",
    "started": "2026-11-18T10:40:13.676Z",
-   "seconds": 887,
+   "seconds": 1070,
+   "finished": null
+  },
+  {
+   "name": "idris",
+   "task": "[review] T-4885 PyWidget name strings review",
+   "model": "opus",
+   "started": "2026-11-18T10:55:51.583Z",
+   "seconds": 132,
    "finished": null
   }
  ],
- "who": "Idris, Pernille",
+ "who": "Idris x2, Pernille",
  "recent": [
   {
    "name": "maren",
@@ -162,7 +170,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 488,
+  "runnable_count": 487,
   "blocked_count": 35
  },
  "meter": {
@@ -211,7 +219,7 @@
   "week_pct": 50.16,
   "usage_pct": 53.3,
   "work_pct": 82.4,
-  "read_at": "2026-11-18T10:55:00+00:00",
+  "read_at": "2026-11-18T10:58:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -248,7 +256,7 @@
  "lock_in": {
   "on": false,
   "pool": 12,
-  "at": "2026-11-18T05:55:00-05:00",
+  "at": "2026-11-18T05:58:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -332,6 +340,15 @@
     "at": "2026-11-18T10:40:13.676Z",
     "o": "c",
     "task": "T-4876"
+   },
+   {
+    "w": "Idris",
+    "k": "review",
+    "t": "Check the PyWidget name fix in widget words",
+    "m": "opus",
+    "at": "2026-11-18T10:55:51.583Z",
+    "o": "c",
+    "task": "T-4885"
    }
   ],
   "src": "plan",
@@ -409,30 +426,38 @@
   ],
   "done": [
    {
+    "w": "Idris",
+    "t": "Measured what one tap on a widget's refresh button costs: with the app closed about 3.4 seconds...",
+    "at": "2026-11-18T05:55:00-05:00"
+   },
+   {
+    "w": "Idris",
+    "t": "The record of where widget taps were checked now matches the Investors' ruling: iPhone taps were...",
+    "at": "2026-11-18T05:55:00-05:00"
+   },
+   {
     "w": "Maren",
     "t": "The Habit tracker's Done today button spec now says what shrinks or drops first when a person...",
     "at": "2026-11-18T05:54:00-05:00"
-   },
-   {
-    "w": "Pernille",
-    "t": "An independent check of the change that lets editor suggestions ignore letter case and small...",
-    "at": "2026-11-18T05:34:00-05:00"
-   },
-   {
-    "w": "Maren",
-    "t": "The iPad store shot that shows the widget preview beside the code is now marked as depending on...",
-    "at": "2026-11-18T05:27:00-05:00"
    }
   ],
   "count": {
-   "next": 488,
+   "next": 487,
    "wait": 32,
    "blocked": 3,
    "you": 10
   },
   "fin": {
-   "n": 15,
+   "n": 17,
    "rows": [
+    [
+     "T-4774",
+     "Measure what one refresh tap..."
+    ],
+    [
+     "T-4803",
+     "Make the tap check's record..."
+    ],
     [
      "T-4764",
      "Fit habit buttons at large..."
@@ -448,14 +473,6 @@
     [
      "T-4763",
      "Keep habit marks when the..."
-    ],
-    [
-     "T-4663",
-     "Completion ignores letter..."
-    ],
-    [
-     "T-4861",
-     "Check finished work before..."
     ]
    ]
   }
@@ -499,57 +516,62 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-18T10:54:52Z",
+  "at": "2026-11-18T10:57:41Z",
   "s": {
    "T-0011": [
     "merging",
     "Host checks on the Mac mini",
-    1794998092724
+    1794999401358
    ],
    "T-4533": [
     "mergeq",
     "2nd to merge",
-    1794988132724
+    1794988121358
    ],
    "T-4644": [
     "mergeq",
     "3rd to merge",
-    1794988612724
+    1794988601358
    ],
    "T-4771": [
     "mergeq",
     "4th to merge",
-    1794989812724
+    1794989801358
    ],
    "T-4762": [
     "mergeq",
     "5th to merge",
-    1794989872724
+    1794989861358
    ],
    "T-4301": [
     "mergeq",
     "7th to merge",
-    1794991072724
+    1794991061358
    ],
    "T-4783": [
     "mergeq",
     "9th to merge",
-    1794991552724
+    1794991541358
    ],
    "T-4574": [
     "mergeq",
     "11th to merge",
-    1794992512724
+    1794992501358
    ],
    "T-4873": [
-    "merging",
-    "Mac tests at the main gate",
-    1794998932724
+    "mergetest",
+    "iPhone tests on the MacBook",
+    null
    ],
    "T-4876": [
     "testing",
     "its own tests, in its copy",
-    1794998692724
+    1794999401358
+   ],
+   "T-4885": [
+    "testing",
+    "its own tests, in its copy",
+    1794999461358
    ]
   },
   "nm": {
@@ -562,7 +584,8 @@
    "T-4783": "Keep the gutter mark on its line after an edit",
    "T-4574": "Keep the launcher's app queries out of shipped builds",
    "T-4873": "Make backup suggestions ignore letter case too",
-   "T-4876": "Check the long-line caret change"
+   "T-4876": "Check the long-line caret change",
+   "T-4885": "Check the PyWidget name fix in widget words"
   },
   "wk": {
    "T-0011": "Idris",
@@ -575,6 +598,9 @@
    "T-4574": "Idris",
    "T-4873": "Idris",
    "T-4876": "Pernille",
+   "T-4885": "Idris",
+   "T-4774": "Idris",
+   "T-4803": "Idris",
    "T-4764": "Maren",
    "T-4872": "Pernille",
    "T-4752": "Maren",
@@ -584,13 +610,11 @@
    "T-4601": "Pernille",
    "T-4602": "Pernille",
    "T-4603": "Idris",
-   "T-4604": "Pernille",
-   "T-4607": "Odalys",
-   "T-4870": "Ines"
+   "T-4604": "Pernille"
   }
  },
  "ln": {
-  "at": "2026-11-18T10:54:52Z",
+  "at": "2026-11-18T10:57:41Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -602,13 +626,13 @@
     "parked": 9
    },
    "m": {
-    "checking": 20,
-    "inline": 157,
-    "conflicted": 771,
+    "checking": 1,
+    "inline": 160,
+    "conflicted": 774,
     "failed": null,
-    "held": 2125,
+    "held": 2128,
     "retry": null,
-    "parked": 771
+    "parked": 774
    },
    "cur": [
     [
@@ -617,7 +641,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     20
+     1
     ]
    ],
    "ld": [
@@ -627,12 +651,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-18T10:54:29Z",
-    "ld": 1.3,
+    "at": "2026-11-18T10:57:16Z",
+    "ld": 1.04,
     "c": 8,
     "sb": 1,
     "dk": [
-     20.1,
+     20.7,
      228.3
     ],
     "ss": [
@@ -644,8 +668,8 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-18T10:54:10Z",
-    "ld": 21.54,
+    "at": "2026-11-18T10:56:16Z",
+    "ld": 14.25,
     "c": 12,
     "sb": 0,
     "dk": [
@@ -663,7 +687,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 12 tasks",
+   "t": "Work session \u2013 13 tasks",
    "at": "2026-11-18T04:07:20-05:00"
   }
  ],
@@ -686,13 +710,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 2,
+  "main": 3,
   "lanes": 0,
-  "total": 2,
-  "at": "5:55 AM",
+  "total": 3,
+  "at": "5:58 AM",
   "why": "",
-  "at_iso": "2026-11-18T10:55:00+00:00",
+  "at_iso": "2026-11-18T10:58:00+00:00",
   "started": "4:07 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 4:07 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 5:55 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 4:07 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 5:58 AM ET</p></section>"
  }
 }

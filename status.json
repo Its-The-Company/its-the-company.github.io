@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-18T04:26:09.563120+00:00",
+ "at": "2026-11-18T04:29:10.620588+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -122,7 +122,7 @@
    "task": "[tools] T-4829 bottleneck watch on tick",
    "model": "opus",
    "started": "2026-11-18T03:44:30.048Z",
-   "seconds": 2499,
+   "seconds": 2680,
    "finished": null,
    "effort": "high"
   }
@@ -198,7 +198,7 @@
   "week_pct": 46.38,
   "usage_pct": 53.7,
   "work_pct": 81.3,
-  "read_at": "2026-11-18T04:26:00+00:00",
+  "read_at": "2026-11-18T04:29:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -315,14 +315,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-17T23:21:00-05:00",
+   "at": "2026-11-17T23:28:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 8,
-  "at": "2026-11-17T23:26:00-05:00",
+  "at": "2026-11-17T23:29:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -546,37 +546,37 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-18T04:25:53Z",
+  "at": "2026-11-18T04:28:57Z",
   "s": {
    "T-4516": [
     "merging",
     "Host checks on the Mac mini",
-    1794975053795
+    1794975057335
    ],
    "T-4796": [
     "mergeq",
     "1st to merge",
-    1794975233795
+    1794975237335
    ],
    "T-4803": [
     "mergeq",
     "1st to merge",
-    1794975233795
+    1794975237335
    ],
    "T-4442": [
     "mergeq",
     "5th to merge",
-    1794975353795
+    1794975357335
    ],
    "T-4696": [
     "mergeq",
     "6th to merge",
-    1794974813795
+    1794974757335
    ],
    "T-4700": [
     "mergeq",
     "8th to merge",
-    1794974933795
+    1794974877335
    ],
    "T-4533": [
     "testing",
@@ -591,7 +591,17 @@
    "T-4829": [
     "testing",
     "its own tests, in its copy",
-    1794974693795
+    1794974697335
+   ],
+   "T-0044": [
+    "testq",
+    "1st for a Simulator",
+    1794976137335
+   ],
+   "T-4772": [
+    "testq",
+    "1st for a Simulator",
+    1794976137335
    ]
   },
   "nm": {
@@ -603,7 +613,9 @@
    "T-4700": "Check finished work before it ships",
    "T-4533": "Make the premade settings save sturdier on disk errors",
    "T-4654": "Say true things when a Shortcut's premade is held back",
-   "T-4829": "Run the bottleneck watch on every tick"
+   "T-4829": "Run the bottleneck watch on every tick",
+   "T-0044": "Test running marketplace Python inside a web view",
+   "T-4772": "Prove a refresh tap redraws the widget"
   },
   "wk": {
    "T-4516": "Idris",
@@ -615,11 +627,13 @@
    "T-4533": "Pernille",
    "T-4654": "Idris",
    "T-4829": "Odalys",
+   "T-0044": "Idris",
+   "T-4772": "Idris",
    "T-4817": "Odalys"
   }
  },
  "ln": {
-  "at": "2026-11-18T04:25:53Z",
+  "at": "2026-11-18T04:28:57Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -631,13 +645,13 @@
     "parked": 11
    },
    "m": {
-    "checking": 15,
-    "inline": 12,
-    "conflicted": 382,
+    "checking": 18,
+    "inline": 15,
+    "conflicted": 385,
     "failed": null,
-    "held": 1736,
-    "retry": 47,
-    "parked": 223
+    "held": 1739,
+    "retry": 50,
+    "parked": 226
    },
    "cur": [
     [
@@ -646,7 +660,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     15
+     18
     ]
    ],
    "ld": [
@@ -656,12 +670,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-18T04:25:09Z",
-    "ld": 31.88,
+    "at": "2026-11-18T04:28:58Z",
+    "ld": 18.72,
     "c": 8,
     "sb": 1,
     "dk": [
-     10.2,
+     11.2,
      228.3
     ],
     "ss": [
@@ -673,12 +687,12 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-18T03:53:04Z",
-    "ld": 0.83,
+    "at": "2026-11-18T04:23:37Z",
+    "ld": 0.28,
     "c": 12,
     "sb": 0,
     "dk": [
-     311.1,
+     311.2,
      926.4
     ],
     "sn": []
@@ -752,10 +766,10 @@
   "main": 1,
   "lanes": 4,
   "total": 5,
-  "at": "11:26 PM",
+  "at": "11:29 PM",
   "why": "",
-  "at_iso": "2026-11-18T04:26:00+00:00",
+  "at_iso": "2026-11-18T04:29:00+00:00",
   "started": "10:22 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 1, started 10:22 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 11:26 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 1, started 10:22 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 11:29 PM ET</p></section>"
  }
 }

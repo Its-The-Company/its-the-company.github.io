@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-18T08:09:00.730539+00:00",
+ "at": "2026-11-18T08:12:05.968550+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -11,10 +11,6 @@
     "name": "Bring the plan into line with the phase A proof",
     "acct": "Personal b",
     "steps": [
-     {
-      "s": "testq",
-      "at": 1794946143
-     },
      {
       "s": "macbook",
       "at": 1794947569
@@ -124,22 +120,21 @@
    "task": "[build] T-4688 Developer mode for Pro",
    "model": "opus",
    "started": "2026-11-18T05:56:56.560Z",
-   "seconds": 7924,
+   "seconds": 8109,
    "finished": null,
    "effort": "high"
-  },
+  }
+ ],
+ "who": "Idris",
+ "recent": [
   {
    "name": "pernille",
    "task": "[build] T-4860 any handler exception as user error",
    "model": "opus",
    "started": "2026-11-18T07:40:38.788Z",
-   "seconds": 1701,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Idris, Pernille",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-18T08:11:50.557000+00:00"
+  },
   {
    "name": "idris",
    "task": "[review] T-4854 T-4859 button run path reviews",
@@ -217,21 +212,8 @@
   "week_pct": 46.38,
   "usage_pct": 53.1,
   "work_pct": 80.8,
-  "read_at": "2026-11-18T08:09:00+00:00",
+  "read_at": "2026-11-18T08:12:00+00:00",
   "running": [
-   {
-    "lane": "a",
-    "task": "T-0011",
-    "w": "Idris",
-    "k": "measure",
-    "t": "Check motion, health and battery sensors on a device",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-18T02:17:55-05:00",
-    "n": "Evan",
-    "d": 1,
-    "src": "plan-a"
-   },
    {
     "lane": "a2",
     "task": "T-4771",
@@ -369,7 +351,7 @@
  "lock_in": {
   "on": false,
   "pool": 11,
-  "at": "2026-11-18T03:09:00-05:00",
+  "at": "2026-11-18T03:12:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -396,12 +378,11 @@
   },
   {
    "name": "Pernille",
-   "state": "running",
-   "task": "[build] T-4860 any handler exception as user error",
-   "model": "opus",
-   "since": "2026-11-18T07:40:38.788Z",
-   "next": [],
-   "effort": "high"
+   "state": "next",
+   "task": "Pernille, P0, Investor an Investor c6963972184 (6:23 PM...",
+   "model": null,
+   "since": null,
+   "next": []
   },
   {
    "name": "Odalys",
@@ -447,16 +428,6 @@
     "at": "2026-11-18T05:56:56.560Z",
     "o": "c",
     "task": "T-4688"
-   },
-   {
-    "w": "Pernille",
-    "k": "build",
-    "t": "Treat any exception a button handler raises as the script's",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-18T07:40:38.788Z",
-    "o": "c",
-    "task": "T-4860"
    }
   ],
   "src": "plan",
@@ -534,6 +505,11 @@
   ],
   "done": [
    {
+    "w": "Pernille",
+    "t": "When a widget button's code or the widget's drawing code fails in an unusual way, the tap now...",
+    "at": "2026-11-18T03:10:00-05:00"
+   },
+   {
     "w": "Idris",
     "t": "The check that a widget button refuses numbers too large to pass safely was reviewed: the app's...",
     "at": "2026-11-18T02:40:00-05:00"
@@ -542,11 +518,6 @@
     "w": "Idris",
     "t": "A widget button whose Python code calls exit now shows as the script's own error, and the widget...",
     "at": "2026-11-18T02:40:00-05:00"
-   },
-   {
-    "w": "Pernille",
-    "t": "When a widget button's code or its drawing code stops itself early with sys.exit(), the run now...",
-    "at": "2026-11-18T02:31:00-05:00"
    }
   ],
   "count": {
@@ -556,8 +527,12 @@
    "you": 10
   },
   "fin": {
-   "n": 4,
+   "n": 5,
    "rows": [
+    [
+     "T-4860",
+     "Treat any exception a button..."
+    ],
     [
      "T-4854",
      "Review the button args..."
@@ -616,22 +591,27 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-18T08:08:46Z",
+  "at": "2026-11-18T08:12:05Z",
   "s": {
    "T-4533": [
     "merging",
     "Host checks on the Mac mini",
-    1794988126403
+    1794988085968
+   ],
+   "T-0011": [
+    "mergeq",
+    "1st to merge",
+    1794989465968
    ],
    "T-4644": [
     "mergeq",
-    "1st to merge",
-    1794988606403
+    "3rd to merge",
+    1794988625968
    ],
    "T-4688": [
-    "merging",
-    "Mac tests at the main gate \u00b7 8 groups of tests done",
-    1794988546403
+    "mergetest",
+    "iPhone tests on the MacBook",
+    null
    ],
    "T-4771": [
     "testing",
@@ -652,6 +632,7 @@
   },
   "nm": {
    "T-4533": "Make the premade settings save sturdier on disk errors",
+   "T-0011": "Check motion, health and battery sensors on a device",
    "T-4644": "Check the ladder's files in the gate build's own tests",
    "T-4688": "Build a Developer mode for testing Pro",
    "T-4771": "Gutter marks redraw quickly and stay right while typing",
@@ -660,11 +641,13 @@
   },
   "wk": {
    "T-4533": "Pernille",
+   "T-0011": "Idris",
    "T-4644": "Idris",
    "T-4688": "Idris",
    "T-4771": "Idris",
    "T-4783": "Idris",
    "T-4301": "Idris",
+   "T-4860": "Pernille",
    "T-4854": "Idris",
    "T-4859": "Idris",
    "T-4767": "Pernille",
@@ -672,25 +655,25 @@
   }
  },
  "ln": {
-  "at": "2026-11-18T08:08:46Z",
+  "at": "2026-11-18T08:12:05Z",
   "mq": {
    "n": {
     "checking": 1,
-    "inline": 1,
+    "inline": 2,
     "conflicted": 3,
     "failed": 0,
     "held": 1,
-    "retry": 1,
+    "retry": 0,
     "parked": 9
    },
    "m": {
-    "checking": 20,
-    "inline": 12,
-    "conflicted": 605,
+    "checking": 24,
+    "inline": 8,
+    "conflicted": 608,
     "failed": null,
-    "held": 1959,
-    "retry": 17,
-    "parked": 605
+    "held": 1963,
+    "retry": null,
+    "parked": 608
    },
    "cur": [
     [
@@ -699,7 +682,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     20
+     24
     ]
    ],
    "ld": [
@@ -709,12 +692,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-18T08:08:47Z",
-    "ld": 0.97,
+    "at": "2026-11-18T08:12:06Z",
+    "ld": 0.82,
     "c": 8,
     "sb": 2,
     "dk": [
-     13.3,
+     13.5,
      228.3
     ],
     "ss": [
@@ -727,12 +710,12 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-18T08:08:25Z",
-    "ld": 0.79,
+    "at": "2026-11-18T08:10:30Z",
+    "ld": 0.66,
     "c": 12,
     "sb": 0,
     "dk": [
-     310.7,
+     310.5,
      926.4
     ],
     "sn": []
@@ -746,17 +729,8 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 5 tasks",
+   "t": "Work session \u2013 6 tasks",
    "at": "2026-11-18T00:48:26-05:00"
-  },
-  {
-   "w": "Operator",
-   "a": "Evan's Account",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session \u2013 1 task",
-   "at": "2026-11-18T02:17:55-05:00"
   },
   {
    "w": "Operator",
@@ -812,13 +786,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 2,
-  "lanes": 6,
-  "total": 8,
-  "at": "3:09 AM",
+  "main": 1,
+  "lanes": 5,
+  "total": 6,
+  "at": "3:12 AM",
   "why": "",
-  "at_iso": "2026-11-18T08:09:00+00:00",
+  "at_iso": "2026-11-18T08:12:00+00:00",
   "started": "12:47 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>8</b> agents running now</p><p class=\"an-sub\">Main session 2, started 12:47 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 6 sessions \u00b7 as of 3:09 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 1, started 12:47 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 3:12 AM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-18T00:49:55.212589+00:00",
+ "at": "2026-11-18T00:52:57.273009+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -121,30 +121,30 @@
     "end_at": 1794957463
    }
   ],
-  "landed": 39,
+  "landed": 38,
   "failed": 10
  },
  "workers": [
-  {
-   "name": "idris",
-   "task": "[build] T-2296 land the gallery work",
-   "model": "opus",
-   "started": "2026-11-18T00:13:00.213Z",
-   "seconds": 2214,
-   "finished": null,
-   "effort": "high"
-  },
   {
    "name": "pernille",
    "task": "[tools] T-4786 correct bad tests holding merges",
    "model": "opus",
    "started": "2026-11-18T00:45:18.571Z",
-   "seconds": 276,
+   "seconds": 458,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "idris",
+   "task": "[build] T-2296 land the gallery work",
+   "model": "opus",
+   "started": "2026-11-18T00:13:00.213Z",
+   "seconds": 2397,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Idris, Pernille",
+ "who": "Pernille, Idris",
  "recent": [
   {
    "name": "maren",
@@ -166,7 +166,7 @@
    "pct": 2.0,
    "resets_at": "2026-11-18T00:10:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-17T19:46:14.620912-05:00",
+   "read_at": "2026-11-17T19:52:14.983795-05:00",
    "source": "live",
    "left": 98.0,
    "left_words": "of your 5-hour allowance left"
@@ -175,7 +175,7 @@
    "pct": 38.0,
    "resets_at": "2026-11-22T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-17T19:46:14.620912-05:00",
+   "read_at": "2026-11-17T19:52:14.983795-05:00",
    "source": "live",
    "left": 62.0,
    "left_words": "of your weekly allowance left"
@@ -187,7 +187,7 @@
    "read_at": "2026-11-17T19:09:49.957069-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-17T19:46:14.620912-05:00"
+  "read_at": "2026-11-17T19:52:14.983795-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -207,7 +207,7 @@
   "week_pct": 43.81,
   "usage_pct": 53.5,
   "work_pct": 81.2,
-  "read_at": "2026-11-18T00:49:00+00:00",
+  "read_at": "2026-11-18T00:53:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -244,45 +244,6 @@
     "at": "2026-11-17T17:24:08-05:00",
     "n": "Jeremy",
     "src": "plan-b"
-   },
-   {
-    "lane": "b2",
-    "task": "T-4659",
-    "w": "Idris",
-    "k": "test",
-    "t": "Prove a widget button's tap reaches its Python handler",
-    "m": "sonnet",
-    "e": "medium",
-    "at": "2026-11-17T18:30:36-05:00",
-    "n": "Jeremy",
-    "d": 1,
-    "src": "plan-b"
-   },
-   {
-    "lane": "b2",
-    "task": "T-4750",
-    "w": "Idris",
-    "k": "test",
-    "t": "Check network fetch cases on the Swift side too",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-17T18:30:36-05:00",
-    "n": "Jeremy",
-    "d": 1,
-    "src": "plan-b"
-   },
-   {
-    "lane": "b2",
-    "task": "T-4761",
-    "w": "Idris",
-    "k": "fix",
-    "t": "Keep one layout for the widget state format",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-17T18:30:36-05:00",
-    "n": "Jeremy",
-    "d": 1,
-    "src": "plan-b"
    }
   ]
  },
@@ -304,7 +265,7 @@
   }
  ],
  "disk": {
-  "free_gb": 16,
+  "free_gb": 20,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -312,15 +273,15 @@
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
-   "ok": true,
-   "at": "2026-11-17T19:46:00-05:00",
+   "ok": false,
+   "at": "2026-11-17T19:50:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 7,
-  "at": "2026-11-17T19:49:00-05:00",
+  "at": "2026-11-17T19:53:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -550,82 +511,82 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-18T00:49:55Z",
+  "at": "2026-11-18T00:52:57Z",
   "s": {
    "T-4610": [
     "merging",
     "Host checks on the Mac mini",
-    1794961375212
+    1794961377273
    ],
    "T-4634": [
     "merging",
     "Host checks on the Mac mini",
-    1794961375212
+    1794961377273
    ],
    "T-4695": [
     "merging",
     "Host checks on the Mac mini",
-    1794961375212
+    1794961377273
    ],
    "T-4607": [
     "mergeq",
     "1st to merge",
-    1794959035212
+    1794959037273
    ],
    "T-4787": [
     "mergeq",
     "3rd to merge",
-    1794959275212
+    1794959277273
+   ],
+   "T-4719": [
+    "mergeq",
+    "4th to merge",
+    1794959517273
    ],
    "T-4643": [
     "mergeq",
-    "4th to merge",
-    1794962635212
+    "5th to merge",
+    1794962637273
    ],
-   "T-4750": [
-    "mergeq",
-    "6th to merge",
-    1794960175212
-   ],
-   "T-4761": [
+   "T-4782": [
     "mergeq",
     "7th to merge",
-    1794960535212
+    1794963117273
+   ],
+   "T-4720": [
+    "mergeq",
+    "7th to merge",
+    1794963117273
    ],
    "T-4659": [
     "mergeq",
     "8th to merge",
-    1794961075212
+    1794963177273
    ],
-   "T-4782": [
+   "T-4750": [
     "mergeq",
-    "10th to merge",
-    1794962215212
+    "8th to merge",
+    1794963177273
+   ],
+   "T-4761": [
+    "mergeq",
+    "8th to merge",
+    1794963177273
    ],
    "T-4697": [
     "mergeq",
-    "12th to merge",
-    1794961795212
+    "15th to merge",
+    1794961797273
    ],
    "T-4698": [
     "mergeq",
-    "12th to merge",
-    1794961795212
+    "15th to merge",
+    1794961797273
    ],
    "T-4699": [
     "mergeq",
-    "12th to merge",
-    1794961795212
-   ],
-   "T-4719": [
-    "mergeq",
-    "13th to merge",
-    1794959515212
-   ],
-   "T-4720": [
-    "mergeq",
-    "14th to merge",
-    1794959635212
+    "15th to merge",
+    1794961797273
    ],
    "T-2296": [
     "mergetest",
@@ -633,9 +594,9 @@
     null
    ],
    "T-4786": [
-    "testing",
-    "Mac Mini \u00b7 test",
-    null
+    "merging",
+    "Mac tests at the main gate",
+    1794963057273
    ],
    "T-4774": [
     "merged",
@@ -656,16 +617,16 @@
    "T-4695": "Check finished work before it ships",
    "T-4607": "Check finished work before it ships",
    "T-4787": "Count failed merges by cause: bad test or broken code",
+   "T-4719": "Check finished work before it ships",
    "T-4643": "Make the size ladder measure each rung more than once",
+   "T-4782": "Stop a Pro store test at its first stalled wait",
+   "T-4720": "Check finished work before it ships",
+   "T-4659": "Prove a widget button's tap reaches its Python handler",
    "T-4750": "Check network fetch cases on the Swift side too",
    "T-4761": "Keep one layout for the widget state format",
-   "T-4659": "Prove a widget button's tap reaches its Python handler",
-   "T-4782": "Stop a Pro store test at its first stalled wait",
    "T-4697": "Check finished work before it ships",
    "T-4698": "Check finished work before it ships",
    "T-4699": "Check finished work before it ships",
-   "T-4719": "Check finished work before it ships",
-   "T-4720": "Check finished work before it ships",
    "T-2296": "Finish the gallery pager, iPad layout and detail foot",
    "T-4786": "Correct every bad test that holds a merge",
    "T-4774": "Measure what one refresh tap costs the app",
@@ -677,16 +638,16 @@
    "T-4695": "Ines",
    "T-4607": "Odalys",
    "T-4787": "Odalys",
+   "T-4719": "Odalys",
    "T-4643": "Idris",
+   "T-4782": "Idris",
+   "T-4720": "Pernille",
+   "T-4659": "Idris",
    "T-4750": "Idris",
    "T-4761": "Idris",
-   "T-4659": "Idris",
-   "T-4782": "Idris",
    "T-4697": "Pernille",
    "T-4698": "Pernille",
    "T-4699": "Pernille",
-   "T-4719": "Odalys",
-   "T-4720": "Pernille",
    "T-2296": "Idris",
    "T-4786": "Pernille",
    "T-4774": "Idris",
@@ -694,7 +655,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-18T00:49:55Z",
+  "at": "2026-11-18T00:52:57Z",
   "mq": {
    "n": {
     "checking": 3,
@@ -706,13 +667,13 @@
     "parked": 8
    },
    "m": {
-    "checking": 27,
-    "inline": 36,
-    "conflicted": 715,
+    "checking": 30,
+    "inline": 16,
+    "conflicted": 718,
     "failed": null,
-    "held": 1520,
-    "retry": 19,
-    "parked": 261
+    "held": 1523,
+    "retry": 22,
+    "parked": 264
    },
    "cur": [
     [
@@ -721,7 +682,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     27
+     30
     ],
     [
      [
@@ -729,7 +690,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     27
+     30
     ],
     [
      [
@@ -737,7 +698,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     27
+     30
     ]
    ],
    "ld": [
@@ -747,21 +708,19 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-18T00:49:32Z",
-    "ld": 4.53,
+    "at": "2026-11-18T00:52:32Z",
+    "ld": 6.08,
     "c": 8,
-    "sb": 1,
+    "sb": 0,
     "dk": [
-     18.1,
+     19.9,
      228.3
     ],
     "ss": [
      174.3,
      953.7
     ],
-    "sn": [
-     "iPhone 17"
-    ]
+    "sn": []
    },
    "macbook": {
     "at": "2026-11-18T00:45:44Z",
@@ -794,15 +753,6 @@
    "e": "high",
    "t": "Work session",
    "at": "2026-11-17T18:26:07-05:00"
-  },
-  {
-   "w": "Operator",
-   "a": "Jeremy's Account",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session",
-   "at": "2026-11-17T18:30:35-05:00"
   }
  ],
  "reply": {
@@ -822,12 +772,12 @@
  ],
  "agents_now": {
   "main": 2,
-  "lanes": 2,
-  "total": 4,
-  "at": "7:49 PM",
+  "lanes": 1,
+  "total": 3,
+  "at": "7:53 PM",
   "why": "",
-  "at_iso": "2026-11-18T00:49:00+00:00",
+  "at_iso": "2026-11-18T00:53:00+00:00",
   "started": "7:10 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 2, started 7:10 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 7:49 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 7:10 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 7:53 PM ET</p></section>"
  }
 }

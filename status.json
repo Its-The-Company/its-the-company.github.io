@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-18T08:15:13.099881+00:00",
+ "at": "2026-11-18T08:18:12.209812+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -120,7 +120,7 @@
    "task": "[build] T-4688 Developer mode for Pro",
    "model": "opus",
    "started": "2026-11-18T05:56:56.560Z",
-   "seconds": 8296,
+   "seconds": 8475,
    "finished": null,
    "effort": "high"
   },
@@ -129,7 +129,7 @@
    "task": "[review] T-4862 review of ea66407478",
    "model": "opus",
    "started": "2026-11-18T08:12:07.301Z",
-   "seconds": 185,
+   "seconds": 364,
    "finished": null,
    "effort": "high"
   }
@@ -221,7 +221,7 @@
   "week_pct": 46.38,
   "usage_pct": 53.1,
   "work_pct": 80.8,
-  "read_at": "2026-11-18T08:15:00+00:00",
+  "read_at": "2026-11-18T08:18:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -233,6 +233,7 @@
     "e": "medium",
     "at": "2026-11-18T02:20:25-05:00",
     "n": "Evan",
+    "d": 1,
     "src": "plan-a"
    },
    {
@@ -360,7 +361,7 @@
  "lock_in": {
   "on": false,
   "pool": 11,
-  "at": "2026-11-18T03:15:00-05:00",
+  "at": "2026-11-18T03:18:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -610,31 +611,36 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-18T08:15:00Z",
+  "at": "2026-11-18T08:18:12Z",
   "s": {
    "T-4533": [
     "merging",
     "Host checks on the Mac mini",
-    1794988140889
+    1794988092209
    ],
    "T-0011": [
     "mergeq",
     "1st to merge",
-    1794989460889
+    1794989472209
+   ],
+   "T-4762": [
+    "mergeq",
+    "3rd to merge",
+    1794989832209
    ],
    "T-4644": [
     "mergeq",
-    "3rd to merge",
-    1794988620889
+    "4th to merge",
+    1794988632209
+   ],
+   "T-4771": [
+    "mergeq",
+    "5th to merge",
+    1794989832209
    ],
    "T-4688": [
     "mergetest",
     "iPhone tests on the MacBook",
-    null
-   ],
-   "T-4771": [
-    "testing",
-    "Mac Mini \u00b7 test",
     null
    ],
    "T-4783": [
@@ -652,18 +658,20 @@
   "nm": {
    "T-4533": "Make the premade settings save sturdier on disk errors",
    "T-0011": "Check motion, health and battery sensors on a device",
+   "T-4762": "Let the run lock wrap a Python run",
    "T-4644": "Check the ladder's files in the gate build's own tests",
-   "T-4688": "Build a Developer mode for testing Pro",
    "T-4771": "Gutter marks redraw quickly and stay right while typing",
+   "T-4688": "Build a Developer mode for testing Pro",
    "T-4783": "Keep the gutter mark on its line after an edit",
    "T-4301": "Read fresh Pro gates after a queued wait"
   },
   "wk": {
    "T-4533": "Pernille",
    "T-0011": "Idris",
+   "T-4762": "Idris",
    "T-4644": "Idris",
-   "T-4688": "Idris",
    "T-4771": "Idris",
+   "T-4688": "Idris",
    "T-4783": "Idris",
    "T-4301": "Idris",
    "T-4860": "Pernille",
@@ -674,25 +682,25 @@
   }
  },
  "ln": {
-  "at": "2026-11-18T08:15:00Z",
+  "at": "2026-11-18T08:18:12Z",
   "mq": {
    "n": {
     "checking": 1,
-    "inline": 2,
+    "inline": 4,
     "conflicted": 3,
     "failed": 0,
     "held": 1,
     "retry": 0,
-    "parked": 9
+    "parked": 8
    },
    "m": {
-    "checking": 26,
-    "inline": 11,
-    "conflicted": 611,
+    "checking": 30,
+    "inline": 4,
+    "conflicted": 614,
     "failed": null,
-    "held": 1966,
+    "held": 1969,
     "retry": null,
-    "parked": 611
+    "parked": 709
    },
    "cur": [
     [
@@ -701,7 +709,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     26
+     30
     ]
    ],
    "ld": [
@@ -711,12 +719,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-18T08:14:36Z",
-    "ld": 1.32,
+    "at": "2026-11-18T08:18:13Z",
+    "ld": 1.14,
     "c": 8,
     "sb": 2,
     "dk": [
-     13.3,
+     13.4,
      228.3
     ],
     "ss": [
@@ -757,7 +765,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 2 tasks",
+   "t": "Work session \u2013 1 task",
    "at": "2026-11-18T02:20:25-05:00"
   },
   {
@@ -766,7 +774,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 1 task",
+   "t": "Work session",
    "at": "2026-11-18T02:19:18-05:00"
   },
   {
@@ -808,10 +816,10 @@
   "main": 2,
   "lanes": 5,
   "total": 7,
-  "at": "3:15 AM",
+  "at": "3:18 AM",
   "why": "",
-  "at_iso": "2026-11-18T08:15:00+00:00",
+  "at_iso": "2026-11-18T08:18:00+00:00",
   "started": "12:47 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 2, started 12:47 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 3:15 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 2, started 12:47 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 3:18 AM ET</p></section>"
  }
 }

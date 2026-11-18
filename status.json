@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-18T09:13:26.081372+00:00",
+ "at": "2026-11-18T09:16:34.974475+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -113,37 +113,45 @@
     "end_at": 1794980912
    }
   ],
-  "landed": 47,
+  "landed": 46,
   "failed": 10
  },
  "workers": [
-  {
-   "name": "wrenna",
-   "task": "[research] T-4839 widget label name",
-   "model": "sonnet",
-   "started": "2026-11-18T09:08:33.641Z",
-   "seconds": 292,
-   "finished": null
-  },
   {
    "name": "idris",
    "task": "[build] T-4663 case-insensitive completion",
    "model": "opus",
    "started": "2026-11-18T09:08:46.044Z",
-   "seconds": 280,
+   "seconds": 468,
    "finished": null
   },
+  {
+   "name": "maren",
+   "task": "[design] T-4763 habit marks merge by operation",
+   "model": "opus",
+   "started": "2026-11-18T09:16:14.754Z",
+   "seconds": 20,
+   "finished": null
+  }
+ ],
+ "who": "Idris, Maren",
+ "recent": [
   {
    "name": "idris",
    "task": "[design] T-4285 drag-and-drop week figures",
    "model": "opus",
    "started": "2026-11-18T09:10:00.181Z",
-   "seconds": 205,
-   "finished": null
-  }
- ],
- "who": "Wrenna, Idris x2",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-18T09:16:25.917000+00:00"
+  },
+  {
+   "name": "wrenna",
+   "task": "[research] T-4839 widget label name",
+   "model": "sonnet",
+   "started": "2026-11-18T09:08:33.641Z",
+   "seconds": null,
+   "finished": "2026-11-18T09:15:06.760000+00:00"
+  },
   {
    "name": "pernille",
    "task": "[review] T-4852 Developer mode review",
@@ -205,7 +213,7 @@
   "week_pct": 50.16,
   "usage_pct": 53.3,
   "work_pct": 82.4,
-  "read_at": "2026-11-18T09:13:00+00:00",
+  "read_at": "2026-11-18T09:16:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -281,7 +289,7 @@
  "lock_in": {
   "on": false,
   "pool": 11,
-  "at": "2026-11-18T04:13:00-05:00",
+  "at": "2026-11-18T04:16:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -298,19 +306,19 @@
  },
  "lanes": [
   {
-   "name": "Wrenna",
-   "state": "running",
-   "task": "[research] T-4839 widget label name",
-   "model": "sonnet",
-   "since": "2026-11-18T09:08:33.641Z",
-   "next": []
-  },
-  {
    "name": "Idris",
    "state": "running",
    "task": "[build] T-4663 case-insensitive completion",
    "model": "opus",
    "since": "2026-11-18T09:08:46.044Z",
+   "next": []
+  },
+  {
+   "name": "Maren",
+   "state": "running",
+   "task": "[design] T-4763 habit marks merge by operation",
+   "model": "opus",
+   "since": "2026-11-18T09:16:14.754Z",
    "next": []
   },
   {
@@ -338,9 +346,9 @@
    "next": []
   },
   {
-   "name": "Maren",
+   "name": "Wrenna",
    "state": "next",
-   "task": "Maren, P2, found on T-3366 (11-07): in...",
+   "task": "Wrenna, P2, T-2375 continuation (B-staged item 3...",
    "model": null,
    "since": null,
    "next": []
@@ -348,15 +356,6 @@
  ],
  "tasks": {
   "run": [
-   {
-    "w": "Wrenna",
-    "k": "research",
-    "t": "Find what sets the name under a Home Screen widget",
-    "m": "sonnet",
-    "at": "2026-11-18T09:08:33.641Z",
-    "o": "c",
-    "task": "T-4839"
-   },
    {
     "w": "Idris",
     "k": "build",
@@ -367,13 +366,13 @@
     "task": "T-4663"
    },
    {
-    "w": "Idris",
+    "w": "Maren",
     "k": "design",
-    "t": "Confirm the Builder drag-and-drop week figures",
+    "t": "Keep habit marks when the Page also saves",
     "m": "opus",
-    "at": "2026-11-18T09:10:00.181Z",
+    "at": "2026-11-18T09:16:14.754Z",
     "o": "c",
-    "task": "T-4285"
+    "task": "T-4763"
    }
   ],
   "src": "plan",
@@ -451,19 +450,19 @@
   ],
   "done": [
    {
+    "w": "Idris",
+    "t": "The engineer who will build drag and drop checked the designer's time estimates against the real...",
+    "at": "2026-11-18T04:15:00-05:00"
+   },
+   {
+    "w": "Wrenna",
+    "t": "Apple's pages name the app's Home Screen name and a gallery-only widget name but never describe...",
+    "at": "2026-11-18T04:14:00-05:00"
+   },
+   {
     "w": "Pernille",
     "t": "An independent check found that the free Pro switch for testers cannot reach App Review or App...",
     "at": "2026-11-18T04:09:00-05:00"
-   },
-   {
-    "w": "Maren",
-    "t": "All eight showcase widgets planned for version 1.0 now have finished drawings in light and dark,...",
-    "at": "2026-11-18T03:51:00-05:00"
-   },
-   {
-    "w": "Pernille",
-    "t": "Checked that the testers' Reset to first launch erases only the app's own data and never touches...",
-    "at": "2026-11-18T03:32:00-05:00"
    }
   ],
   "count": {
@@ -473,8 +472,16 @@
    "you": 10
   },
   "fin": {
-   "n": 1,
+   "n": 3,
    "rows": [
+    [
+     "T-4285",
+     "Confirm the Builder..."
+    ],
+    [
+     "T-4839",
+     "Find what sets the name..."
+    ],
     [
      "T-4852",
      "Check finished work before..."
@@ -521,52 +528,58 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-18T09:13:26Z",
+  "at": "2026-11-18T09:16:10Z",
   "s": {
    "T-0011": [
     "mergeq",
     "1st to merge",
-    1794989426081
+    1794989470738
    ],
    "T-4533": [
     "mergeq",
     "3rd to merge",
-    1794988106081
+    1794988090738
    ],
    "T-4644": [
     "mergeq",
     "4th to merge",
-    1794988646081
+    1794988630738
    ],
    "T-4762": [
     "mergeq",
     "5th to merge",
-    1794989846081
+    1794989830738
    ],
    "T-4301": [
     "mergeq",
     "6th to merge",
-    1794991106081
+    1794991090738
    ],
    "T-4771": [
     "mergeq",
     "7th to merge",
-    1794991526081
+    1794991510738
    ],
    "T-4783": [
     "mergeq",
     "7th to merge",
-    1794991526081
+    1794991510738
    ],
    "T-4574": [
     "mergeq",
     "12th to merge",
-    1794992486081
+    1794992530738
    ],
    "T-4663": [
     "testing",
     "its own tests, in its copy",
-    1794993086081
+    1794993130738
+   ],
+   "T-4285": [
+    "merged",
+    "on main 4:15 AM ET",
+    1794993305000,
+    ""
    ]
   },
   "nm": {
@@ -578,7 +591,8 @@
    "T-4771": "Gutter marks redraw quickly and stay right while typing",
    "T-4783": "Keep the gutter mark on its line after an edit",
    "T-4574": "Keep the launcher's app queries out of shipped builds",
-   "T-4663": "Completion ignores letter case and small typos"
+   "T-4663": "Completion ignores letter case and small typos",
+   "T-4285": "Confirm the Builder drag-and-drop week figures"
   },
   "wk": {
    "T-0011": "Idris",
@@ -590,11 +604,13 @@
    "T-4783": "Idris",
    "T-4574": "Idris",
    "T-4663": "Idris",
+   "T-4285": "Idris",
+   "T-4839": "Wrenna",
    "T-4852": "Pernille"
   }
  },
  "ln": {
-  "at": "2026-11-18T09:13:26Z",
+  "at": "2026-11-18T09:16:10Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -607,12 +623,12 @@
    },
    "m": {
     "checking": null,
-    "inline": 45,
-    "conflicted": 670,
+    "inline": 48,
+    "conflicted": 672,
     "failed": null,
-    "held": 2024,
+    "held": 2027,
     "retry": null,
-    "parked": 765
+    "parked": 767
    },
    "cur": [],
    "ld": [
@@ -622,8 +638,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-18T09:13:29Z",
-    "ld": 9.79,
+    "at": "2026-11-18T09:15:26Z",
+    "ld": 9.03,
     "c": 8,
     "sb": 2,
     "dk": [
@@ -659,7 +675,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 4 tasks",
+   "t": "Work session \u2013 5 tasks",
    "at": "2026-11-18T04:07:20-05:00"
   },
   {
@@ -698,13 +714,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 3,
+  "main": 2,
   "lanes": 2,
-  "total": 5,
-  "at": "4:13 AM",
+  "total": 4,
+  "at": "4:16 AM",
   "why": "",
-  "at_iso": "2026-11-18T09:13:00+00:00",
+  "at_iso": "2026-11-18T09:16:00+00:00",
   "started": "4:07 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 3, started 4:07 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 4:13 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 2, started 4:07 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 4:16 AM ET</p></section>"
  }
 }

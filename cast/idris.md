@@ -56,9 +56,8 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - Older lessons and dated logs: archive.md.
 
 
-- T-4603 11-17 f701313490: review of T-4564 PASS w/ findings; M1 -> T-4767 (Pernille: handler SystemExit ends internal_error, <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> demotes). Lesson: board_tick add writes the main checkout's board, not the worktree's; a new line's ID comes from the tool, so write the review's Board: ID after.
-- T-4188/T-2027 11-17 53ea686e39: fresh sim refuses add() UNErrorDomain 2003 >10 s after first grant; mapped plainly, test skips. Open: whole unit target (disk exit 75), T-0053 waits Ines/Wrenna (App Group vs lane Python); ops/plans/T-4188-handoff.md. Lesson: host_keep takes >10 min under load: run it in background with a long timeout.
-- T-4653 11-17 e707fbc622: landed from <span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">parked</span> 68bdede3c7 (2043/0), ticked; review T-4789 Pernille. Open: bound-dropped mutant verdict. Lesson: 75 then rebase = new job; rerun without rebase.
+- T-0191/T-2268/T-2296 11-17: parked b/20261117-170324 (3 commits + T-4183 handoff) landed in one gate land. Open: Gallery/ProPaywall UI tests only via a runner --full job on main; reviews owed; T-0193 step 1 uncommitted in the old tree. Lesson: checkout --merge carries only uncommitted work; a copy's commits need reset --mixed to its base first.
+- T-4782 11-17: ProStore eventually throws WaitRanOut, bounded fulfils only before its deadline; 2 new tests. Open: review. Lesson: a late fulfil of a test-case expectation inside the same test records no violation (mutant stayed green); check a test's mutant before claiming what it proves.
 {% endraw %}
 
 

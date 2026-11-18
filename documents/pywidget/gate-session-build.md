@@ -169,6 +169,78 @@ The order is T-0680's: item 2 first, so C and B exist before any lane run.
 - **The largest lane premade's cold peak above baseline** (chair line 5bb6692c) is read the same way as G1. It
   replaces `firstRunPeak` (21 MiB) in the flag-default chair line. `margin=would_refuse` rows that finished are listed
   there by count.
+- **A refresh tap's cost in the app** (T-4774, Pernille's M2 in the T-4181 review): on iOS 26 and 27 a tap starts
+  the app in the background. On the phone, with one own widget with the refresh button placed: 3 cold taps (app
+  swiped away first) and 3 warm taps (within 10 s of the tap before). For each tap, the intent row's `peak_mb` from
+  Export measurements (`runs-<id>.jsonl`, lane `app`, trigger `intent`) and the time from the tap to that row. On the
+  Simulator `peak_mb` read 2-4 MiB under the process's peak, so it is a lower bound. The tap-to-row time has no
+  measured phone method yet; the session records how it was taken. The Simulator figures to compare against are in
+  [`ops/plans/T-4774-tap-cost.md`](../company/t-4774-tap-cost.html) (cold peak footprint 34.2 MiB on iOS 27.0 and 48.5 MiB on 26.0).
+
+## The size <span title="Our grade scale, nine steps: D, D+, C-, C, C+, B-, B, B+, A. An idea&#x27;s ladder is the letter it reaches before any cap.">ladder</span>: what each rung measures and how often (T-4282, T-4643)
+
+The gate build also carries twelve premades named `ladder1` to `ladder12` (widgets/gate/_ladder.py, one file per rung).
+They are installed and offered like `overrun`, and never ship: same build phase, same condition, no catalog or flag
+file. Each rung holds a set number of MiB, writing every page, then keeps the CPU busy over that memory for a set
+time. Before each 1 MiB step it writes how far it got, so a rung the system kills leaves `held_mib` on its `killed`
+row. Pernille's review of T-4282 (docs/reviews/t4282-741d6b44-pernille.md, M1, M2, L1) found that the first version
+measured each rung once per install, and that memory killed its slow rungs before their time was read. T-4643 changed
+both.
+
+**What each rung measures.** The table splits the two axes, so one never hides the other:
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 1: The size ladder: what each rung measures and how often (T-4282, T-4643), scrolls sideways" style="--tw:912px" markdown="1">
+
+| Rungs | Kind | Holds | Works | Measures |
+|---|---|---|---|---|
+| 1-9 | memory | 10, 12, 13, 14, 15, 16, 17, 18, 20 MiB | 0.10 s each | the kill point, to within 1 MiB |
+| 10-12 | time | 4 MiB each | 1.00, 1.50, 1.90 s | how much of the 2 s budget a script gets |
+
+</div>
+
+
+The arithmetic uses the iPhone 15's figures (#231). The phone has 23.0-25.2 MB free at rest, which is 21.9-24.0 MiB.
+A rung's peak above baseline is its <span title="What keeps an idea below the top: the cap that applies to it now.">hold</span> plus R, the runtime's own share (interpreter, renderer, tree). Countdown's
+whole cold peak is 9 MiB and Countdown itself holds very little, so we take R as 7-9 MiB. The first kill should then
+come at a hold between 21.9 - 9 = 12.9 MiB and 24.0 - 7 = 17.0 MiB. The memory rungs are 1 MiB apart from 12 to 18
+MiB, so they cover that band in single steps. Rung 1 (peak about 17-19 MiB) fits on that phone. Rung 9 (about 27-29
+MiB) is past the most it ever has free. If no memory rung dies, R is under about 4 MiB, which is a reading too, and
+`overrun` (64 MiB) still finds the kill. A time rung peaks at 4 + R, about 11-13 MiB, so memory leaves it alone on
+any phone with more than 13 MiB free. Its row therefore carries a duration. The 1.90 s rung's work alone fits the
+lane's 2 s budget; whether the run as a whole does depends on how long the runtime takes to start, and that is what
+the rung is there to show.
+
+The export's manifest lists each rung under `ladder` with `rung`, `id`, `kind`, `hold_mib` and `work_s`, so a
+reader can put each `runs-<id>.jsonl` beside what that rung was asked to do.
+
+**How often.** In this build, every placed rung runs in the widget on every reload, not once per install:
+
+- The product's size rule (ADR-007 s3, `LaneChoice.judge`) would move almost every rung to the app after its first
+  widget run. A memory rung's 2 x (R + hold) is 34 MiB or more, against W = 23 MiB. A time rung's is 22-26 MiB, over
+  W once R is 8 MiB or more, and a time rung that runs past 2 s moves for time. In the record-only gate build,
+  `ExtensionLane` leaves GatePremade's names out of that move (`ExtensionLane.sizeMoveExempt`, which is
+  `GatePremade.ids` under the condition and empty in every other build; it is read only when `recordOnly` is on).
+  The rule still judges every run, and the row still says `lane_reason` (`memory`, `time` or `fits`). Only the
+  move is skipped: no `.lane-demoted.json` entry, no moved reason and no badge.
+- Each rung's timeline asks for a reload 15 minutes after its run (`ReloadPolicy.after`, `RELOAD_MINUTES`). It used
+  to ask for `never`. WidgetKit decides when a reload actually happens, so 15 minutes is the shortest gap, not a
+  promise. Each reload adds one more widget-lane row for that rung.
+- A rung that the system kills still moves to the app on the next call (`killed`, with `held_mib`), exactly as
+  `overrun` does. The kill is the reading, and running a known kill again every 15 minutes would only end the
+  extension process over and over. To read a killed rung again, remove it and place it again, or reinstall.
+- Two rungs in one warm process: `LaneFootprint` keeps only a peak the run raised itself. A rung that runs after a
+  larger one in the same process gets no peak on its row, only its duration and its margin figures. A later reload
+  in a fresh process measures it again.
+
+We chose this route over the review's other option (keep the rule and write the phone request around one widget run
+per rung per install). With the exemption, each rung gives several samples from one install, and the phone steps do
+not depend on placement order. The exemption cannot reach a customer: it needs both the compile condition (which
+check_lane_gate.py refuses on every archive except the internal one) and `recordOnly`, and ExtensionLaneTests hold
+that an enforcing lane still moves the same id. Tests: test_gate_premade.LadderTests (the two tables, the
+arithmetic above, the reload policy, the Swift table) and ExtensionLaneTests' T-4643 cases (a rung over W stays off
+`.lane-demoted.json` and its rows say `memory`; the same for `time`; an enforcing lane moves the id; a killed rung
+still moves).
 
 ## Left open
 

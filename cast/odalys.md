@@ -42,6 +42,11 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 ## Lessons
 - T-4661 done 11-17 (231c6b994b): storage_guard.py; heavy_slot xcode_slots 1. Owed: 9 AM 11-18 seen-line, 17e erase, daily clean.
+- T-4610 review of b810bba81a (T-2691) PASS 11-17: no High; Low: cited logs pruned, app-phase archive not re-run by me (xc lock queue >20 min with many sim jobs; use a short timeout).
+- T-4719 11-17: reviews of a <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span>: board_tick add writes main's live board, a tick goes to ops/lane-outbox; evidence logs of other lanes sit in ../<lane>/ops/runs (find by name, don't list).
+- T-4781 (11-17): narrowed retest after a red in personal_land.sh (tools/land_retest.py). Replay: 7 of 8 narrowable retries were gate lands (main_gate.py m*), not wired; owed: wire the gate, a week of only_testing rows for the quality number.
+- Replay a rule over the ledger before claiming its saving: which land path carries the cases decides the figure (T-4781: the gate, not lanes).
+- T-4814 (11-17): merge limit split app 20 / other 8 / hub 1 by files touched (per commit subject, git cherry). Owed: review, work.md step 2 `open --task`, Tenet 2 text, governor run.json queues.
 {% endraw %}
 
 

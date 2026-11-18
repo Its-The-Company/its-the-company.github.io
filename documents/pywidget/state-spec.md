@@ -62,13 +62,13 @@ A failed run also means old data, so the badge outranks the stale mark. Never a 
 
 | Family | Error card | Update card |
 |---|---|---|
-| systemSmall | glyph + widget name, "Script error", "Line 12", "Tap to open" at the bottom | glyph + name, "Update", "Needs a newer pywidget", "Tap to open" |
+| systemSmall | glyph + widget name, "Script error", "Line 12", "Tap to open" at the bottom | glyph + name, "Update", "Needs a newer PyWidget", "Tap to open" |
 | systemMedium | small composition left; right: exception type (mono, one line, tail truncation), "in trip.py", "Failing since 8:48" | right: "View tree v2", "This app reads v1", "Update in the App Store" |
 | systemLarge | medium composition, then "Recent runs": 4 rows of time, glyph, "Failed", duration | medium composition, then "What to do": 3 numbered steps |
 | systemExtraLarge | medium composition and the run list side by side, centred vertically | same with the steps |
 | accessoryCircular | glyph, "Line 12" | glyph, "Update" |
-| accessoryRectangular | glyph + "Script error"; "Line 12"; "Tap to open" | glyph + "Update needed"; "Needs a newer pywidget"; "Tap to open" |
-| accessoryInline | glyph + "Error, line 12" (14 chars) | glyph + "Update pywidget" (15 chars) |
+| accessoryRectangular | glyph + "Script error"; "Line 12"; "Tap to open" | glyph + "Update needed"; "Needs a newer PyWidget"; "Tap to open" |
+| accessoryInline | glyph + "Error, line 12" (14 chars) | glyph + "Update PyWidget" (15 chars) |
 
 </div>
 
@@ -91,7 +91,7 @@ ADR-007 7.1 row 3 and 7.2: the extension's render rule (ADR-007 s6) refused the 
 |---|---|
 | systemSmall | glyph + name, "Too big to draw", "Script ran fine", "Tap to open" |
 | systemMedium | small composition left; right: "Its view is more than a widget can hold in memory.", "Details in Activity" |
-| systemLarge | medium composition, then "What to do": 1 "Open it in pywidget", 2 "Show fewer rows or images", 3 "Run it to draw again" |
+| systemLarge | medium composition, then "What to do": 1 "Open it in PyWidget", 2 "Show fewer rows or images", 3 "Run it to draw again" |
 | systemExtraLarge | medium composition and the steps side by side |
 | accessoryCircular | glyph, "Too big" |
 | accessoryRectangular | glyph + "Too big to draw"; "Script ran fine"; "Tap to open" |
@@ -114,7 +114,7 @@ Chair ruling 2026-10-25 8:08 PM item 3, ADR-007 7.1 row 2. A placed Pro premade 
 - **Never the last good render** (it would keep Pro content running unpaid), never blank, never a price, a currency, "Buy", "Unlock", "trial" or "subscribe" (App Review Guideline 4.4, pp. 35-36 of the #59 PDF: extensions "may not include marketing, advertising, or in-app purchases"; the widget extension is one, app-review-matrix.md rows 22 and 40; ruling item 3). No corner slot on a Pro card.
 - **Glyph:** `lock.fill`. Full colour `text.secondary` (quiet, not an alarm: 3:1 checked in A and B, light and dark); accented: the glyph alone is accentable; vibrant: white 1.0.
 - **Tap:** the premade's detail sheet (ruling item 3), which carries the offer in the app, not on the Home Screen. Small: `widgetURL`; medium and larger: the whole card is the target.
-- **VoiceOver:** "{name}. Needs Pro. Double-tap to open in pywidget." Same string on the Lock Screen. Aligned 2026-10-25 from the 8:08 PM ruling's "Tap to open in pywidget": the ruling decides placement and the card's visible words; its item 4 quotes the VoiceOver string as the delta to draw, and nothing in its reasoning is about the verb. VoiceOver activates with a double tap, and the other four card strings already say "Double-tap", so a bare "Tap" would teach the wrong gesture on one card. The visible word stays "Tap to open", as on every card, so no sheet changes. `check_states.py` now fails on any VoiceOver string that says "Tap" without "Double-". Ines can reverse it in one line of `state-tokens.json`.
+- **VoiceOver:** "{name}. Needs Pro. Double-tap to open in PyWidget." Same string on the Lock Screen. Aligned 2026-10-25 from the 8:08 PM ruling's "Tap to open in pywidget": the ruling decides placement and the card's visible words; its item 4 quotes the VoiceOver string as the delta to draw, and nothing in its reasoning is about the verb. VoiceOver activates with a double tap, and the other four card strings already say "Double-tap", so a bare "Tap" would teach the wrong gesture on one card. The visible word stays "Tap to open", as on every card, so no sheet changes. `check_states.py` now fails on any VoiceOver string that says "Tap" without "Double-". Ines can reverse it in one line of `state-tokens.json`.
 - `check_states.py` fails if `pro_card` is not between `update` and `error_card` in `priority`, if any Pro card string (or its VoiceOver) carries a price or sales word, or if the Lock Screen string is more than the title. `draw_states.py` QA fails on any drawn word outside {name, "Needs Pro", "Tap to open"} (Lock Screen: "Needs Pro"), any price, any slot on a Pro card, and any text outside the accessoryCircular circle.
 - **Note, 2026-10-26 12:16 AM ET (Maren, T-0062).** Citation: the bar above was "2.5.16" until now (CORRECTIONS P5). 2.5.16 says only that widgets "should be related to the content and functionality of your app" (p. 20); 4.4 is the rule that bars a purchase inside an extension. Design unchanged. The 8:08 PM ruling's own 2.5.16 bullet is Ines's text and is not edited here. Checked against the 12:05 AM ruling (5 free, 7 Pro, no Pro premade needs a permission): s3.2 holds. No Pro premade asks for a grant, so a Pro card never stands in for a "Location is off" state, and its tap opens the detail sheet with no prompt. Checked against Storage (premade 8, Pro; families small, medium, circular, rectangular; stale after 6 h; LOW SPACE under 10%): an unentitled Storage shows the Pro card, never its last render, LOW SPACE or the stale mark (`pro_card` outranks `stale` in `priority`); "STORAGE" (7 characters) fits the small name line; circular and rectangular follow the Lock Screen bullet. One mismatch, not redrawn: `states-pro-card.png` names its samples MOON (small), HOURLY WEATHER (medium), HABITS (large) and TODAY BOARD (extra large) (`NAMES` in `draw_states.py`). Only HABITS is in the 7 Pro. They are placeholders for name length, and the card's words do not depend on them. On the next re-render, take the names from the Pro set: STORAGE (small), WORLD CLOCKS (medium), HABITS (large), DAY PROGRESS (extra large). Re-rendered 2026-10-26 1:19 AM ET (T-0104): `NAMES` now STORAGE, WORLD CLOCKS, HABITS, DAY PROGRESS; `states-pro-card.png` 180,835 B, QA 0 faults.
 
@@ -519,8 +519,8 @@ Ines, CEO
 | `unset.circular` | accessoryCircular | glyph above "Choose" |
 | `unset.rect` | accessoryRectangular | glyph + "Choose a widget", one line at the top |
 | `unset.inline` | accessoryInline | glyph + "Choose a widget" (15 chars) |
-| `unset.voiceover` | Home Screen families (`system*`) | "pywidget. Not set to a widget yet. Touch and hold, then choose Edit Widget. Double-tap to open pywidget." |
-| `unset.voiceover.lock` (token `voiceover.unset_lock`; T-0891, DRAFT C51, 2026-11-03) | Lock Screen families (`accessory*`) | "pywidget. Not set to a widget yet. Double-tap to open pywidget." |
+| `unset.voiceover` | Home Screen families (`system*`) | "PyWidget. Not set to a widget yet. Touch and hold, then choose Edit Widget. Double-tap to open PyWidget." |
+| `unset.voiceover.lock` (token `voiceover.unset_lock`; T-0891, DRAFT C51, 2026-11-03) | Lock Screen families (`accessory*`) | "PyWidget. Not set to a widget yet. Double-tap to open PyWidget." |
 
 </div>
 

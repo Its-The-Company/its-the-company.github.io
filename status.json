@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-18T03:07:34.072457+00:00",
+ "at": "2026-11-18T03:10:24.238166+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -202,8 +202,33 @@
   "week_pct": 43.81,
   "usage_pct": 53.5,
   "work_pct": 81.2,
-  "read_at": "2026-11-18T03:07:00+00:00",
-  "running": []
+  "read_at": "2026-11-18T03:16:00+00:00",
+  "running": [
+   {
+    "lane": "b3",
+    "task": "T-4772",
+    "w": "Idris",
+    "k": "build",
+    "t": "Prove a refresh tap redraws the widget",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-17T22:11:13-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
+   },
+   {
+    "lane": "b3",
+    "task": "T-4773",
+    "w": "Idris",
+    "k": "build",
+    "t": "Time the next run from the widget's own ask",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-17T22:11:13-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
+   }
+  ]
  },
  "api_credits": [
   {
@@ -239,7 +264,7 @@
  "lock_in": {
   "on": false,
   "pool": 8,
-  "at": "2026-11-17T22:07:00-05:00",
+  "at": "2026-11-17T22:16:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -471,64 +496,64 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-18T03:07:34Z",
+  "at": "2026-11-18T03:10:24Z",
   "s": {
+   "T-4782": [
+    "merging",
+    "Rebasing onto current main",
+    1794971424238
+   ],
+   "T-4719": [
+    "merging",
+    "Rebasing onto current main",
+    1794971424238
+   ],
+   "T-4720": [
+    "merging",
+    "Rebasing onto current main",
+    1794971424238
+   ],
    "T-4643": [
     "mergeq",
     "1st to merge",
-    1794970834072
-   ],
-   "T-4782": [
-    "mergeq",
-    "2nd to merge",
-    1794963094072
-   ],
-   "T-4719": [
-    "mergeq",
-    "2nd to merge",
-    1794963094072
-   ],
-   "T-4720": [
-    "mergeq",
-    "2nd to merge",
-    1794963094072
+    1794970824238
    ],
    "T-4659": [
     "mergeq",
-    "3rd to merge",
-    1794963154072
+    "2nd to merge",
+    1794963144238
    ],
    "T-4750": [
     "mergeq",
-    "3rd to merge",
-    1794963154072
+    "2nd to merge",
+    1794963144238
    ],
    "T-4761": [
     "mergeq",
-    "3rd to merge",
-    1794963154072
+    "2nd to merge",
+    1794963144238
    ],
    "T-4770": [
     "mergeq",
-    "4th to merge",
-    1794964714072
+    "3rd to merge",
+    1794964704238
    ],
    "T-4781": [
     "mergeq",
-    "5th to merge",
-    1794964714072
+    "4th to merge",
+    1794964704238
    ],
    "T-4774": [
     "mergeq",
-    "5th to merge",
-    1794964714072
+    "4th to merge",
+    1794964704238
    ]
   },
   "nm": {
-   "T-4643": "Make the size ladder measure each rung more than once",
    "T-4782": "Stop a Pro store test at its first stalled wait",
    "T-4719": "Check finished work before it ships",
    "T-4720": "Check finished work before it ships",
+   "T-4643": "Make the size ladder measure each rung more than once",
    "T-4659": "Prove a widget button's tap reaches its Python handler",
    "T-4750": "Check network fetch cases on the Swift side too",
    "T-4761": "Keep one layout for the widget state format",
@@ -537,10 +562,10 @@
    "T-4774": "Measure what one refresh tap costs the app"
   },
   "wk": {
-   "T-4643": "Idris",
    "T-4782": "Idris",
    "T-4719": "Odalys",
    "T-4720": "Pernille",
+   "T-4643": "Idris",
    "T-4659": "Idris",
    "T-4750": "Idris",
    "T-4761": "Idris",
@@ -555,11 +580,11 @@
   }
  },
  "ln": {
-  "at": "2026-11-18T03:07:34Z",
+  "at": "2026-11-18T03:10:24Z",
   "mq": {
    "n": {
-    "checking": 0,
-    "inline": 10,
+    "checking": 3,
+    "inline": 7,
     "conflicted": 2,
     "failed": 0,
     "held": 1,
@@ -567,15 +592,40 @@
     "parked": 6
    },
    "m": {
-    "checking": null,
-    "inline": 135,
-    "conflicted": 853,
+    "checking": 0,
+    "inline": 112,
+    "conflicted": 856,
     "failed": null,
-    "held": 1658,
+    "held": 1661,
     "retry": null,
-    "parked": 608
+    "parked": 611
    },
-   "cur": [],
+   "cur": [
+    [
+     [
+      "T-4782"
+     ],
+     "lining up with main",
+     "Mac mini",
+     0
+    ],
+    [
+     [
+      "T-4719"
+     ],
+     "lining up with main",
+     "Mac mini",
+     0
+    ],
+    [
+     [
+      "T-4720"
+     ],
+     "lining up with main",
+     "Mac mini",
+     0
+    ]
+   ],
    "ld": [
     55,
     "2026-11-18T02:58:33Z"
@@ -583,12 +633,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-18T03:07:34Z",
-    "ld": 3.2,
+    "at": "2026-11-18T03:10:01Z",
+    "ld": 2.89,
     "c": 8,
     "sb": 0,
     "dk": [
-     15.5,
+     16.3,
      228.3
     ],
     "ss": [
@@ -641,12 +691,12 @@
  ],
  "agents_now": {
   "main": 0,
-  "lanes": 0,
-  "total": 0,
-  "at": "10:07 PM",
-  "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
-  "at_iso": "2026-11-18T03:07:00+00:00",
-  "started": "7:10 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0, started 7:10 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 10:07 PM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
+  "lanes": 1,
+  "total": 1,
+  "at": "10:16 PM",
+  "why": "",
+  "at_iso": "2026-11-18T03:16:00+00:00",
+  "started": "",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 10:16 PM ET</p></section>"
  }
 }

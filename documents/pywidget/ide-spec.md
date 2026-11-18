@@ -488,9 +488,9 @@ Runs log (⋯ → Runs): one row per run with the same icon and word, run number
 
    **9.9 Contrast, measured** (`qa-gallery.json`, every text node against its composited background, 4.5:1, 3:1 large): A-gallery-phone 498 nodes, lowest 5.95:1; A-gallery-ipad 166, 5.95; B-gallery-phone 307 checked, lowest 6.37, and 191 skipped on B's widget card gradient and glass sheets. Those pairs by hand from tokens: `widget.onCard.primary` 6.86 and `.secondary` 4.77 on the card's lighter stop (s1); render.py's pixel check gives full colour dark 5.18 worst (widgets/README). Widget text in Accented, Vibrant, StandBy and Lock Screen wells is the system's paint and is not counted here; render.py's per-mode table in widgets/README is the number for it, and the weak case there (white over a light wallpaper) is not a gallery ground: Lock Screen wells use the dark ground. Tier chips: `key.text` on `key.bgAlt` and `text.secondary` on `bg.sunken`, both inside the counted nodes.
 
-   **9.10 QA and size.** 20 frames, 0 clipped, 0 truncated, 0 text over text, 0 under 11 pt, 0 contrast fails. All 12 premades are rendered across the A phone and A iPad sheets (`qa-gallery.json` `_coverage`, missing: none). PNG bytes: A phone 288,520 (@1.16x), A iPad 227,553 (@2x), B phone 281,395 (@0.99x), each under 300 KB (draw_ide.py's `MAX_BYTES`, palette PNG). Large at 50% in a tile is a thumbnail (about 6 pt text); the QA reads computed sizes, so it does not flag it, and the detail sheet is where Large reads.
+   **9.10 QA and size.** 20 frames, 0 clipped, 0 truncated, 0 text over text, 0 under 11 pt, 0 contrast fails. All 12 premades are rendered across the A phone and A iPad sheets (`qa-gallery.json` `_coverage`, missing: none). PNG bytes (redrawn 2026-11-17, T-4746): A phone 293,075 (@1.17x), A iPad 224,751 (@2x), B phone 291,590 (@1.01x), each under 300 KB (draw_ide.py's `MAX_BYTES`, palette PNG). Large at 50% in a tile is a thumbnail (about 6 pt text); the QA reads computed sizes, so it does not flag it, and the detail sheet is where Large reads.
 
-   **9.11 Strings** (`draw_gallery.py --strings`; `pro:` ids are s5.7's, read from `PRO_STR` so the two screens cannot drift). Every one is DRAFT C51: no copy guide is approved. *2026-11-17 (T-4671):* the voice is approved (s2.2) and these words are cleared by the copy card, except `add.home2` and `add.lock2` (they write "pywidget"; T-4746) and the other four add steps (held); the `pro:` ids are approved item 4's. The DRAFT column below is the script's and is out of date.
+   **9.11 Strings** (`draw_gallery.py --strings`; `pro:` ids are s5.7's, read from `PRO_STR` so the two screens cannot drift). Every one is DRAFT C51: no copy guide is approved. *2026-11-17 (T-4671):* the voice is approved (s2.2) and these words are cleared by the copy card, except the six add steps (held; `add.home2` and `add.lock2` wrote "pywidget" and read "PyWidget" since T-4746, 2026-11-17); the `pro:` ids are approved item 4's. The DRAFT column below is the script's and is out of date.
 
 
 <div class="tbl" role="region" tabindex="0" aria-label="Table 15: 5. Screen notes, scrolls sideways" style="--tw:853px" markdown="1">
@@ -532,10 +532,10 @@ Runs log (⋯ → Runs): one row per run with the same icon and word, run number
    | `d.uses` | Uses | detail sheet label | DRAFT |
    | `add.t` | Add {name} | add sheet title | DRAFT |
    | `add.home1` | Touch and hold the Home Screen, tap Edit, then Add Widget. | add sheet step 1, Home Screen families [recall] | DRAFT |
-   | `add.home2` | Search for pywidget and add the widget. | add sheet step 2 | DRAFT |
+   | `add.home2` | Search for PyWidget and add the widget. | add sheet step 2 | DRAFT |
    | `add.home3` | Touch and hold it, tap Edit Widget, then choose {name}. | add sheet step 3 (T-0051 entity query) | DRAFT |
    | `add.lock1` | Touch and hold the Lock Screen, then tap Customize. | add sheet step 1, Lock Screen families [recall] | DRAFT |
-   | `add.lock2` | Tap the widget area and choose pywidget. | add sheet step 2, Lock Screen [recall] | DRAFT |
+   | `add.lock2` | Tap the widget area and choose PyWidget. | add sheet step 2, Lock Screen [recall] | DRAFT |
    | `add.lock3` | Tap the widget, then choose {name}. | add sheet step 3, Lock Screen | DRAFT |
    | `add.foot` | iOS adds widgets from the Home Screen and Lock Screen; PyWidget can’t place one. | add sheet footer | DRAFT |
    | `pro:e.unlock` | Unlock with Pro | owned by s5.7 (T-0333); used here | DRAFT |

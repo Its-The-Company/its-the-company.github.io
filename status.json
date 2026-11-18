@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-18T13:03:32.270034+00:00",
+ "at": "2026-11-18T13:06:36.362899+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -138,7 +138,7 @@
     "end_at": 1794986227
    }
   ],
-  "landed": 30,
+  "landed": 28,
   "failed": 12
  },
  "workers": [
@@ -147,12 +147,21 @@
    "task": "[test] T-4892 caret UI tests on runner",
    "model": "opus",
    "started": "2026-11-18T13:02:21.149Z",
-   "seconds": 71,
+   "seconds": 255,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "idris",
+   "task": "[test] T-4782 Pro store test waits",
+   "model": "opus",
+   "started": "2026-11-18T13:03:48.762Z",
+   "seconds": 167,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Idris",
+ "who": "Idris x2",
  "recent": [],
  "queue": {
   "runnable": [],
@@ -162,20 +171,20 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 9.0,
-   "resets_at": "2026-11-18T15:10:00.338000+00:00",
+   "pct": 10.0,
+   "resets_at": "2026-11-18T10:10:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-18T08:00:11.045824-05:00",
-   "source": "usage",
-   "left": 91.0,
+   "read_at": "2026-11-18T08:05:24.639921-05:00",
+   "source": "live",
+   "left": 90.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 46.0,
-   "resets_at": "2026-11-22T07:00:00.338024+00:00",
+   "resets_at": "2026-11-22T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-18T08:00:11.045824-05:00",
-   "source": "usage",
+   "read_at": "2026-11-18T08:05:24.639921-05:00",
+   "source": "live",
    "left": 54.0,
    "left_words": "of your weekly allowance left"
   },
@@ -186,7 +195,7 @@
    "read_at": "2026-11-18T08:00:11.045824-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-18T08:00:11.045824-05:00"
+  "read_at": "2026-11-18T08:05:24.639921-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -206,7 +215,7 @@
   "week_pct": 49.77,
   "usage_pct": 52.0,
   "work_pct": 81.9,
-  "read_at": "2026-11-18T13:03:00+00:00",
+  "read_at": "2026-11-18T13:06:00+00:00",
   "running": [
    {
     "lane": "b3",
@@ -267,7 +276,7 @@
   }
  ],
  "disk": {
-  "free_gb": 13,
+  "free_gb": 17,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -276,14 +285,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-18T07:57:00-05:00",
+   "at": "2026-11-18T08:05:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 12,
-  "at": "2026-11-18T08:03:00-05:00",
+  "at": "2026-11-18T08:06:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -360,6 +369,16 @@
     "at": "2026-11-18T13:02:21.149Z",
     "o": "c",
     "task": "T-4892"
+   },
+   {
+    "w": "Idris",
+    "k": "test",
+    "t": "Stop a Pro store test at its first stalled wait",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-18T13:03:48.762Z",
+    "o": "c",
+    "task": "T-4782"
    }
   ],
   "src": "plan",
@@ -519,57 +538,67 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-18T13:03:32Z",
+  "at": "2026-11-18T13:06:24Z",
   "s": {
    "T-4533": [
     "merging",
     "Host checks on the Mac mini",
-    1795003352270
+    1795003344052
    ],
    "T-0011": [
     "mergeq",
     "1st to merge",
-    1795001912270
+    1795001904052
    ],
    "T-4574": [
     "mergeq",
     "3rd to merge",
-    1794992492270
+    1794992544052
    ],
    "T-4762": [
     "mergeq",
     "4th to merge",
-    1794994712270
+    1794994704052
    ],
    "T-4748": [
     "mergeq",
     "6th to merge",
-    1795002332270
-   ],
-   "T-4575": [
-    "mergeq",
-    "7th to merge",
-    1795003832270
+    1795002384052
    ],
    "T-4640": [
     "mergeq",
+    "7th to merge",
+    1795007064052
+   ],
+   "T-4581": [
+    "mergeq",
+    "7th to merge",
+    1795007064052
+   ],
+   "T-4575": [
+    "mergeq",
     "8th to merge",
-    1795004372270
+    1795003884052
    ],
    "T-4635": [
     "mergeq",
-    "9th to merge",
-    1795006412270
+    "10th to merge",
+    1795006404052
    ],
    "T-4789": [
     "mergeq",
-    "11th to merge",
-    1795005992270
+    "13th to merge",
+    1795005984052
+   ],
+   "T-4782": [
+    "merging",
+    "Mac tests at the main gate",
+    1795007124052
    ],
    "T-4892": [
     "testing",
     "its own tests, in its copy",
-    1795007012270
+    1795007004052
    ]
   },
   "nm": {
@@ -578,10 +607,12 @@
    "T-4574": "Keep the launcher's app queries out of shipped builds",
    "T-4762": "Let the run lock wrap a Python run",
    "T-4748": "Make the widget font check ignore lookalike letters",
-   "T-4575": "Stop an edit from rewriting a pasted Shortcut link",
    "T-4640": "Drop a location fix that arrives too late",
+   "T-4581": "Test a real widget tap in iPad windows",
+   "T-4575": "Stop an edit from rewriting a pasted Shortcut link",
    "T-4635": "Clear the Settings restore line once Pro is bought",
    "T-4789": "Check finished work before it ships",
+   "T-4782": "Stop a Pro store test at its first stalled wait",
    "T-4892": "Run the caret UI tests on the split tap"
   },
   "wk": {
@@ -590,10 +621,12 @@
    "T-4574": "Idris",
    "T-4762": "Idris",
    "T-4748": "Idris",
-   "T-4575": "Idris",
    "T-4640": "Idris",
+   "T-4581": "Idris",
+   "T-4575": "Idris",
    "T-4635": "Idris",
    "T-4789": "Pernille",
+   "T-4782": "Idris",
    "T-4892": "Idris",
    "T-4567": "Odalys",
    "T-4668": "Ines",
@@ -602,25 +635,25 @@
   }
  },
  "ln": {
-  "at": "2026-11-18T13:03:32Z",
+  "at": "2026-11-18T13:06:24Z",
   "mq": {
    "n": {
     "checking": 1,
-    "inline": 8,
+    "inline": 9,
     "conflicted": 5,
     "failed": 0,
     "held": 1,
     "retry": 0,
-    "parked": 10
+    "parked": 9
    },
    "m": {
-    "checking": 61,
-    "inline": 65,
-    "conflicted": 590,
+    "checking": 64,
+    "inline": 55,
+    "conflicted": 593,
     "failed": null,
-    "held": 2254,
+    "held": 2257,
     "retry": null,
-    "parked": 820
+    "parked": 903
    },
    "cur": [
     [
@@ -629,7 +662,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     61
+     64
     ]
    ],
    "ld": [
@@ -639,12 +672,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-18T13:03:33Z",
-    "ld": 1.42,
+    "at": "2026-11-18T13:05:34Z",
+    "ld": 1.88,
     "c": 8,
     "sb": 2,
     "dk": [
-     17.3,
+     16.7,
      228.3
     ],
     "ss": [
@@ -676,7 +709,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 1 task",
+   "t": "Work session \u2013 3 tasks",
    "at": "2026-11-18T08:00:22-05:00"
   },
   {
@@ -706,13 +739,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 1,
+  "main": 2,
   "lanes": 1,
-  "total": 2,
-  "at": "8:03 AM",
+  "total": 3,
+  "at": "8:06 AM",
   "why": "",
-  "at_iso": "2026-11-18T13:03:00+00:00",
+  "at_iso": "2026-11-18T13:06:00+00:00",
   "started": "8:00 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 1, started 8:00 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 8:03 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 8:00 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 8:06 AM ET</p></section>"
  }
 }

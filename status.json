@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-18T02:27:41.099482+00:00",
+ "at": "2026-11-18T02:30:41.448320+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -146,7 +146,7 @@
    "task": "[tools] T-4806 fix merge time-outs",
    "model": "opus",
    "started": "2026-11-18T01:18:02.621Z",
-   "seconds": 4178,
+   "seconds": 4358,
    "finished": null,
    "effort": "high"
   },
@@ -155,7 +155,7 @@
    "task": "[test] T-4807 fix bad tests that failed merges",
    "model": "opus",
    "started": "2026-11-18T01:44:52.149Z",
-   "seconds": 2568,
+   "seconds": 2749,
    "finished": null,
    "effort": "high"
   },
@@ -164,7 +164,7 @@
    "task": "[tools] T-4814 split the merge limit",
    "model": "opus",
    "started": "2026-11-18T02:08:31.145Z",
-   "seconds": 1149,
+   "seconds": 1330,
    "finished": null,
    "effort": "high"
   },
@@ -173,7 +173,7 @@
    "task": "[tools] T-4810 every wait names a task or issue",
    "model": "opus",
    "started": "2026-11-18T02:08:44.734Z",
-   "seconds": 1136,
+   "seconds": 1316,
    "finished": null,
    "effort": "high"
   },
@@ -182,7 +182,7 @@
    "task": "[site] T-4813 Home's numbers update live",
    "model": "opus",
    "started": "2026-11-18T02:08:56.638Z",
-   "seconds": 1124,
+   "seconds": 1304,
    "finished": null,
    "effort": "high"
   }
@@ -274,7 +274,7 @@
   "week_pct": 43.81,
   "usage_pct": 53.5,
   "work_pct": 81.2,
-  "read_at": "2026-11-18T02:27:00+00:00",
+  "read_at": "2026-11-18T02:30:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -311,7 +311,7 @@
  "lock_in": {
   "on": false,
   "pool": 8,
-  "at": "2026-11-17T21:27:00-05:00",
+  "at": "2026-11-17T21:30:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -597,87 +597,87 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-18T02:27:29Z",
+  "at": "2026-11-18T02:30:21Z",
   "s": {
    "T-4761": [
     "mergetest",
     "Xcode checks on the MacBook, 1st to merge",
-    1794966869622
+    1794966921902
    ],
    "T-4659": [
     "mergetest",
     "Xcode checks on the MacBook, 2nd to merge",
-    1794966869622
+    1794966921902
    ],
    "T-4643": [
     "mergetest",
     "Xcode checks on the MacBook, 3rd to merge",
-    1794968249622
+    1794968301902
    ],
    "T-4782": [
     "mergeq",
     "4th to merge",
-    1794962189622
+    1794962181902
    ],
    "T-4787": [
     "mergeq",
     "6th to merge",
-    1794962669622
+    1794962661902
    ],
    "T-4719": [
     "mergeq",
     "7th to merge",
-    1794963089622
+    1794963141902
    ],
    "T-4720": [
     "mergeq",
     "7th to merge",
-    1794963089622
+    1794963141902
    ],
    "T-4750": [
     "mergeq",
     "8th to merge",
-    1794963149622
+    1794963201902
    ],
    "T-4770": [
     "mergeq",
     "9th to merge",
-    1794964709622
+    1794964701902
    ],
    "T-4781": [
     "mergeq",
     "10th to merge",
-    1794964709622
+    1794964701902
    ],
    "T-4774": [
     "mergeq",
     "10th to merge",
-    1794964709622
+    1794964701902
    ],
    "T-4814": [
     "merging",
-    "Mac tests at the main gate",
-    1794968789622
-   ],
-   "T-4806": [
-    "merging",
-    "Mac tests at the main gate",
-    1794968789622
+    "Mac tests at the main gate \u00b7 12 groups of tests done, 1 red",
+    1794968781902
    ],
    "T-4807": [
     "merging",
     "Mac tests at the main gate",
-    1794967949622
+    1794967941902
    ],
    "T-4810": [
     "testing",
     "its own tests, in its copy",
-    1794968249622
+    1794968241902
+   ],
+   "T-4806": [
+    "testing",
+    "its own tests, in its copy",
+    1794968841902
    ],
    "T-4813": [
     "testing",
     "its own tests, in its copy",
-    1794968309622
+    1794968301902
    ]
   },
   "nm": {
@@ -693,9 +693,9 @@
    "T-4781": "Retest a fixed red on what failed, not every test",
    "T-4774": "Measure what one refresh tap costs the app",
    "T-4814": "Split the merge limit by what a change touches",
-   "T-4806": "Fix the causes of merge time-outs and runner errors",
    "T-4807": "Fix every bad test that failed a merge",
    "T-4810": "Make every wait name a task or an Investor issue",
+   "T-4806": "Fix the causes of merge time-outs and runner errors",
    "T-4813": "Home's numbers update within a minute"
   },
   "wk": {
@@ -711,9 +711,9 @@
    "T-4781": "Odalys",
    "T-4774": "Idris",
    "T-4814": "Odalys",
-   "T-4806": "Odalys",
    "T-4807": "Pernille",
    "T-4810": "Odalys",
+   "T-4806": "Odalys",
    "T-4813": "Maren",
    "T-4699": "Pernille",
    "T-4698": "Pernille",
@@ -723,7 +723,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-18T02:27:29Z",
+  "at": "2026-11-18T02:30:21Z",
   "mq": {
    "n": {
     "checking": 3,
@@ -735,13 +735,13 @@
     "parked": 6
    },
    "m": {
-    "checking": 33,
-    "inline": 95,
-    "conflicted": 813,
+    "checking": 35,
+    "inline": 97,
+    "conflicted": 815,
     "failed": null,
-    "held": 1618,
+    "held": 1621,
     "retry": null,
-    "parked": 568
+    "parked": 571
    },
    "cur": [
     [
@@ -750,7 +750,7 @@
      ],
      "iPhone app tests, sent and waiting its turn",
      "MacBook",
-     33
+     35
     ],
     [
      [
@@ -758,7 +758,7 @@
      ],
      "iPhone app tests, sent and waiting its turn",
      "MacBook",
-     33
+     35
     ],
     [
      [
@@ -766,7 +766,7 @@
      ],
      "iPhone app tests, sent and waiting its turn",
      "MacBook",
-     10
+     12
     ]
    ],
    "ld": [
@@ -776,12 +776,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-18T02:27:21Z",
-    "ld": 7.85,
+    "at": "2026-11-18T02:30:25Z",
+    "ld": 6.8,
     "c": 8,
     "sb": 0,
     "dk": [
-     18.7,
+     18.9,
      228.3
     ],
     "ss": [
@@ -836,10 +836,10 @@
   "main": 5,
   "lanes": 0,
   "total": 5,
-  "at": "9:27 PM",
+  "at": "9:30 PM",
   "why": "",
-  "at_iso": "2026-11-18T02:27:00+00:00",
+  "at_iso": "2026-11-18T02:30:00+00:00",
   "started": "7:10 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 5, started 7:10 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:27 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 5, started 7:10 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:30 PM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-18T11:31:32.898841+00:00",
+ "at": "2026-11-18T11:34:32.668539+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -22,11 +22,67 @@
      {
       "s": "testq",
       "at": 1795000932
+     },
+     {
+      "s": "macbook",
+      "at": 1795001502
      }
     ]
    }
   ],
   "done": [
+   {
+    "t": "T-4783",
+    "name": "Keep the gutter mark on its line after an edit",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "failed",
+    "end_at": 1795001655,
+    "why": "did not merge cleanly"
+   },
+   {
+    "t": "T-4771",
+    "name": "Gutter marks redraw quickly and stay right while typing",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "failed",
+    "end_at": 1795001655,
+    "why": "did not merge cleanly"
+   },
+   {
+    "t": "T-4771",
+    "name": "Gutter marks redraw quickly and stay right while typing",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "failed",
+    "end_at": 1795001648,
+    "why": "did not merge cleanly"
+   },
+   {
+    "t": "T-4762",
+    "name": "Let the run lock wrap a Python run",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1795001632
+   },
+   {
+    "t": "T-4771",
+    "name": "Gutter marks redraw quickly and stay right while typing",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "failed",
+    "end_at": 1795001617,
+    "why": "did not merge cleanly"
+   },
+   {
+    "t": "T-4644",
+    "name": "Check the ladder's files in the gate build's own tests",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1795001607
+   },
    {
     "t": "T-4301",
     "name": "Read fresh Pro gates after a queued wait",
@@ -57,58 +113,10 @@
     "steps": [],
     "end": "landed",
     "end_at": 1794986227
-   },
-   {
-    "t": "T-4442",
-    "name": "Tidy the bundled first renders' small edges",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794986212
-   },
-   {
-    "t": "T-4796",
-    "name": "Say which premades carry the Pro tag",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794985059
-   },
-   {
-    "t": "T-4823",
-    "name": "Group process changes into features",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794983960
-   },
-   {
-    "t": "T-4841",
-    "name": "Decide whether the widget probe asks for HealthKit",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794983945
-   },
-   {
-    "t": "T-0011",
-    "name": "Check motion, health and battery sensors on a device",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794981945
-   },
-   {
-    "t": "T-4784",
-    "name": "Pin the refresh glyph's button style in a test",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794980912
    }
   ],
-  "landed": 35,
-  "failed": 8
+  "landed": 34,
+  "failed": 12
  },
  "workers": [
   {
@@ -116,7 +124,7 @@
    "task": "[design] T-4886 PyWidget in premade lines",
    "model": "sonnet",
    "started": "2026-11-18T11:02:42.183Z",
-   "seconds": 1730,
+   "seconds": 1910,
    "finished": null
   },
   {
@@ -124,7 +132,7 @@
    "task": "[test] T-4887 gated second-tap caret test",
    "model": "opus",
    "started": "2026-11-18T11:14:20.521Z",
-   "seconds": 1032,
+   "seconds": 1212,
    "finished": null
   },
   {
@@ -132,7 +140,7 @@
    "task": "[build] T-4645 settings check matches Swift decoder",
    "model": "sonnet",
    "started": "2026-11-18T11:27:20.238Z",
-   "seconds": 252,
+   "seconds": 432,
    "finished": null
   }
  ],
@@ -223,7 +231,7 @@
   "week_pct": 50.16,
   "usage_pct": 53.3,
   "work_pct": 82.4,
-  "read_at": "2026-11-18T11:31:00+00:00",
+  "read_at": "2026-11-18T11:34:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -260,7 +268,7 @@
  "lock_in": {
   "on": false,
   "pool": 12,
-  "at": "2026-11-18T06:31:00-05:00",
+  "at": "2026-11-18T06:34:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -520,78 +528,60 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-18T11:31:19Z",
+  "at": "2026-11-18T11:34:32Z",
   "s": {
    "T-4533": [
-    "merging",
-    "Host checks on the Mac mini",
-    1795000939077
+    "mergetest",
+    "Xcode checks on the MacBook, 1st to merge",
+    1795001552668
    ],
-   "T-0011": [
+   "T-4301": [
     "mergeq",
-    "1st to merge",
-    1794989419077
+    "2nd to merge",
+    1794991052668
    ],
    "T-4644": [
     "mergeq",
     "2nd to merge",
-    1794988639077
-   ],
-   "T-4771": [
-    "mergeq",
-    "3rd to merge",
-    1794989839077
-   ],
-   "T-4762": [
-    "mergeq",
-    "4th to merge",
-    1794989839077
-   ],
-   "T-4301": [
-    "mergeq",
-    "6th to merge",
-    1794991099077
-   ],
-   "T-4783": [
-    "mergeq",
-    "8th to merge",
-    1794991519077
+    1794991052668
    ],
    "T-4574": [
     "mergeq",
-    "10th to merge",
-    1794992539077
+    "4th to merge",
+    1794992492668
+   ],
+   "T-4762": [
+    "mergeq",
+    "5th to merge",
+    1794994712668
    ],
    "T-4886": [
     "merging",
-    "Mac tests at the main gate \u00b7 14 groups of tests done",
-    1795000639077
+    "Mac tests at the main gate",
+    1795001552668
    ],
    "T-4645": [
     "merging",
     "Mac tests at the main gate",
-    1795001479077
+    1795001432668
    ],
    "T-4887": [
-    "testing",
-    "its own tests, in its copy",
-    1795000639077
+    "merging",
+    "Mac tests at the main gate",
+    1795001552668
    ],
    "T-4663": [
-    "testq",
-    "1st for a Simulator",
-    1794993079077
+    "testing",
+    "MacBook \u00b7 test",
+    null
    ]
   },
   "nm": {
    "T-4533": "Make the premade settings save sturdier on disk errors",
-   "T-0011": "Check motion, health and battery sensors on a device",
-   "T-4644": "Check the ladder's files in the gate build's own tests",
-   "T-4771": "Gutter marks redraw quickly and stay right while typing",
-   "T-4762": "Let the run lock wrap a Python run",
    "T-4301": "Read fresh Pro gates after a queued wait",
-   "T-4783": "Keep the gutter mark on its line after an edit",
+   "T-4644": "Check the ladder's files in the gate build's own tests",
    "T-4574": "Keep the launcher's app queries out of shipped builds",
+   "T-4762": "Let the run lock wrap a Python run",
    "T-4886": "Write PyWidget right in premade widget lines",
    "T-4645": "Make the settings check refuse what the app cannot read",
    "T-4887": "Put the second-tap caret fix under a gated test",
@@ -599,13 +589,10 @@
   },
   "wk": {
    "T-4533": "Pernille",
-   "T-0011": "Idris",
-   "T-4644": "Idris",
-   "T-4771": "Idris",
-   "T-4762": "Idris",
    "T-4301": "Idris",
-   "T-4783": "Idris",
+   "T-4644": "Idris",
    "T-4574": "Idris",
+   "T-4762": "Idris",
    "T-4886": "Maren",
    "T-4645": "Pernille",
    "T-4887": "Idris",
@@ -624,49 +611,49 @@
   }
  },
  "ln": {
-  "at": "2026-11-18T11:31:19Z",
+  "at": "2026-11-18T11:34:32Z",
   "mq": {
    "n": {
     "checking": 1,
-    "inline": 7,
-    "conflicted": 3,
+    "inline": 4,
+    "conflicted": 5,
     "failed": 0,
     "held": 1,
     "retry": 0,
     "parked": 9
    },
    "m": {
-    "checking": 9,
-    "inline": 194,
-    "conflicted": 807,
+    "checking": 2,
+    "inline": 165,
+    "conflicted": 501,
     "failed": null,
-    "held": 2162,
+    "held": 2165,
     "retry": null,
-    "parked": 807
+    "parked": 811
    },
    "cur": [
     [
      [
       "T-4533"
      ],
-     "Mac tests",
-     "Mac mini",
-     9
+     "iPhone app tests",
+     "MacBook",
+     2
     ]
    ],
    "ld": [
-    13,
-    "2026-11-18T11:22:00Z"
+    15,
+    "2026-11-18T11:33:52Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-18T11:31:19Z",
-    "ld": 1.37,
+    "at": "2026-11-18T11:34:33Z",
+    "ld": 2.14,
     "c": 8,
     "sb": 1,
     "dk": [
-     20.5,
+     20.4,
      228.3
     ],
     "ss": [
@@ -678,8 +665,8 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-18T11:30:38Z",
-    "ld": 67.09,
+    "at": "2026-11-18T11:32:43Z",
+    "ld": 44.29,
     "c": 12,
     "sb": 0,
     "dk": [
@@ -723,10 +710,10 @@
   "main": 3,
   "lanes": 0,
   "total": 3,
-  "at": "6:31 AM",
+  "at": "6:34 AM",
   "why": "",
-  "at_iso": "2026-11-18T11:31:00+00:00",
+  "at_iso": "2026-11-18T11:34:00+00:00",
   "started": "4:07 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 4:07 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 6:31 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 4:07 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 6:34 AM ET</p></section>"
  }
 }

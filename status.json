@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-18T15:12:49.447218+00:00",
+ "at": "2026-11-18T15:15:53.463417+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -184,7 +184,7 @@
    }
   ],
   "landed": 20,
-  "failed": 13
+  "failed": 10
  },
  "workers": [],
  "who": "",
@@ -222,20 +222,19 @@
  },
  "meter": {
   "five_hour": {
-   "pct": null,
-   "resets_at": null,
+   "pct": 1.0,
+   "resets_at": "2026-11-18T15:10:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-18T10:03:29.543008-05:00",
+   "read_at": "2026-11-18T10:15:47.705792-05:00",
    "source": "live",
-   "last_reset": "2026-11-18T10:10:00-05:00",
-   "left": null,
+   "left": 99.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 47.0,
    "resets_at": "2026-11-22T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-18T10:03:29.543008-05:00",
+   "read_at": "2026-11-18T10:15:47.705792-05:00",
    "source": "live",
    "left": 53.0,
    "left_words": "of your weekly allowance left"
@@ -247,7 +246,7 @@
    "read_at": "2026-11-18T08:00:11.045824-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-18T10:03:29.543008-05:00"
+  "read_at": "2026-11-18T10:15:47.705792-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -267,7 +266,7 @@
   "week_pct": 49.77,
   "usage_pct": 52.0,
   "work_pct": 81.9,
-  "read_at": "2026-11-18T15:12:00+00:00",
+  "read_at": "2026-11-18T15:16:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -288,7 +287,7 @@
   }
  ],
  "disk": {
-  "free_gb": 15,
+  "free_gb": 17,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -297,14 +296,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-18T10:09:00-05:00",
+   "at": "2026-11-18T10:15:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 12,
-  "at": "2026-11-18T10:12:00-05:00",
+  "at": "2026-11-18T10:16:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -536,67 +535,72 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-18T15:12:29Z",
+  "at": "2026-11-18T15:15:53Z",
   "s": {
    "T-4575": [
     "merging",
     "Host checks on the Mac mini",
-    1795014389656
+    1795014353463
    ],
    "T-4533": [
     "mergeq",
     "1st to merge",
-    1794988109656
+    1794988133463
    ],
    "T-4574": [
     "mergeq",
     "3rd to merge",
-    1794992489656
+    1794992513463
    ],
    "T-4762": [
     "mergeq",
     "4th to merge",
-    1795012349656
+    1795012313463
    ],
    "T-4748": [
     "mergeq",
     "6th to merge",
-    1795002329656
+    1795002353463
    ],
    "T-4640": [
     "mergeq",
     "7th to merge",
-    1795004369656
+    1795004333463
    ],
    "T-4789": [
     "mergeq",
     "8th to merge",
-    1795005989656
+    1795005953463
    ],
    "T-4635": [
     "mergeq",
     "9th to merge",
-    1795006409656
+    1795006373463
    ],
    "T-4581": [
     "mergeq",
     "12th to merge",
-    1795007069656
+    1795007093463
    ],
    "T-4889": [
     "mergeq",
     "17th to merge",
-    1795010069656
+    1795010093463
    ],
    "T-4835": [
     "mergeq",
     "18th to merge",
-    1795011749656
+    1795014953463
    ],
    "T-4679": [
     "mergeq",
-    "19th to merge",
-    1795011989656
+    "18th to merge",
+    1795014953463
+   ],
+   "T-3745": [
+    "testing",
+    "MacBook \u00b7 test",
+    null
    ]
   },
   "nm": {
@@ -611,7 +615,8 @@
    "T-4581": "Test a real widget tap in iPad windows",
    "T-4889": "Check the PyWidget case fix in premade lines",
    "T-4835": "Show an all-day event on its own date after travel",
-   "T-4679": "Make the unit tests pass in a launcher build"
+   "T-4679": "Make the unit tests pass in a launcher build",
+   "T-3745": "Stop the Pro store test timing out"
   },
   "wk": {
    "T-4575": "Idris",
@@ -626,6 +631,7 @@
    "T-4889": "Idris",
    "T-4835": "Pernille",
    "T-4679": "Idris",
+   "T-3745": "Idris",
    "T-4892": "Idris",
    "T-4782": "Idris",
    "T-4567": "Odalys",
@@ -635,7 +641,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-18T15:12:29Z",
+  "at": "2026-11-18T15:15:53Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -647,13 +653,13 @@
     "parked": 9
    },
    "m": {
-    "checking": 6,
-    "inline": 139,
-    "conflicted": 719,
+    "checking": 10,
+    "inline": 143,
+    "conflicted": 723,
     "failed": null,
-    "held": 2383,
+    "held": 2386,
     "retry": null,
-    "parked": 1029
+    "parked": 1032
    },
    "cur": [
     [
@@ -662,7 +668,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     6
+     10
     ]
    ],
    "ld": [
@@ -672,16 +678,16 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-18T15:11:40Z",
-    "ld": 0.62,
+    "at": "2026-11-18T15:15:54Z",
+    "ld": 0.77,
     "c": 8,
     "sb": 1,
     "dk": [
-     15.3,
+     16.8,
      228.3
     ],
     "ss": [
-     170.4,
+     170.0,
      953.7
     ],
     "sn": [
@@ -689,8 +695,8 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-18T15:11:06Z",
-    "ld": 4.59,
+    "at": "2026-11-18T15:13:11Z",
+    "ld": 3.14,
     "c": 12,
     "sb": 0,
     "dk": [
@@ -732,10 +738,10 @@
   "main": 0,
   "lanes": 0,
   "total": 0,
-  "at": "10:12 AM",
+  "at": "10:16 AM",
   "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
-  "at_iso": "2026-11-18T15:12:00+00:00",
+  "at_iso": "2026-11-18T15:16:00+00:00",
   "started": "8:00 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0, started 8:00 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 10:12 AM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0, started 8:00 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 10:16 AM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
  }
 }

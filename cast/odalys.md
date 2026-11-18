@@ -41,11 +41,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-3859 (11-17, 1dfd0c7799): keep rule narrowed; free 16.8 -> 21.0 GB, under 30, not ticked. Owed: 17e poster store (refused erase, needs a person); code hold by destinations only (iPad Pro M5 kept by xc_sim_test fixture text).
 
 ## Lessons
-- T-4661 done 11-17 (231c6b994b): storage_guard.py; heavy_slot xcode_slots 1. Owed: 9 AM 11-18 seen-line, 17e erase, daily clean.
-- T-4610 review of b810bba81a (T-2691) PASS 11-17: no High; Low: cited logs pruned, app-phase archive not re-run by me (xc lock queue >20 min with many sim jobs; use a short timeout).
-- T-4719 11-17: reviews of a <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span>: board_tick add writes main's live board, a tick goes to ops/lane-outbox; evidence logs of other lanes sit in ../<lane>/ops/runs (find by name, don't list).
-- T-4781 (11-17): narrowed retest after a red in personal_land.sh (tools/land_retest.py). Replay: 7 of 8 narrowable retries were gate lands (main_gate.py m*), not wired; owed: wire the gate, a week of only_testing rows for the quality number.
-- Replay a rule over the ledger before claiming its saving: which land path carries the cases decides the figure (T-4781: the gate, not lanes).
+- Replay a rule over the ledger before claiming its saving: which land path carries the cases decides the figure (T-4781: the gate, not <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lanes</span>).
 - T-4817 done 11-17 (1e7bbaff29): bottleneck_watch.py; limits from own history, a <span title="A measured fact that holds a grade below a letter, however good the rest is.">cap</span>/floor = rule in force so a steadily bad process still opens. Owed: T-4829 tick hook, T-4830 idle slots + red cause at source, review T-4831.
 - T-4829 11-18: tick step 1h runs bottleneck_watch (BOTTLENECK_WATCH_OFF=1 in supervisor_test). `out=$(run_limited ... 2>&1)` catches bash's "Terminated" notice for the timer's sleep: send the command's output to a temp file. Gate at load 200: supervisor_test 940 s; land in the background from the start.
 - A metric with short history: the rule in force is the limit until the chart has a baseline; never "no limit".
@@ -54,6 +50,9 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - A timing bound in a test must time only the code under test: stub du, no taskpolicy -b (T-4806: disk_makeup hang row read 294.6 s from the other drive's du beside 20 suites).
 - T-4903 11-18: judge a <span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">parked</span> ref by content (blob = main's, or a version main took after the merge base), not by commit; run hourly in merge_reset apply. Strict: refs whose memory/rules files drift from main stay waiting (T-4788, T-4840, T-4631 refs); a finer split by commit is the next step if they pile up.
 - T-4849 11-18: process queue over 8 was mostly app tasks, put there by the lane records they commit (memory, lane-outbox, site-checks). Classify by code paths; test what a count counts before chasing its flow.
+- T-4902 11-18: P0 Investor lines pass the process limit (merge_limit past_limit, dispatch queue_hold). Test a reading on the lines a <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">ruling</span> names: my stricter own-text reading missed T-4849 (ruling only in moved notes). 47 of 56 open P0 process lines read Investor-asked that day.
+- T-4907 11-18: deep suite reach adds 28 suite-s a land (+4.6%); uncapped reach is near everything (hubs), so main_green's after-land run = names uncapped + deep cap 32, minus pass rows (median 765 suite-s a 30-min window, est.). Owed: real load after a week.
+- T-4911 11-18: land --from = main's tip + files the copy changed (differ from its base and from main); main's other moves are written into the copy's folder so suites run that tree; `settle` for a clash. Replay on 3 stuck copies: 0 clashes.
 {% endraw %}
 
 

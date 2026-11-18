@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-18T22:22:46.448396+00:00",
+ "at": "2026-11-18T22:25:54.785433+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -219,9 +219,9 @@
  "next_tick": null,
  "personal": {
   "week_pct": 51.56,
-  "usage_pct": 51.3,
-  "work_pct": 81.5,
-  "read_at": "2026-11-18T22:22:00+00:00",
+  "usage_pct": 49.6,
+  "work_pct": 81.1,
+  "read_at": "2026-11-18T22:30:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -258,7 +258,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-18T17:22:00-05:00",
+  "at": "2026-11-18T17:30:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -486,9 +486,19 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-18T22:22:29Z",
-  "s": {},
+  "at": "2026-11-18T22:25:54Z",
+  "s": {
+   "T-4750": [
+    "testq",
+    "1st for a Simulator",
+    1795037454785
+   ]
+  },
+  "nm": {
+   "T-4750": "Check network fetch cases on the Swift side too"
+  },
   "wk": {
+   "T-4750": "Idris",
    "T-4735": "Odalys",
    "T-4911": "Odalys",
    "T-4631": "Idris",
@@ -497,7 +507,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-18T22:22:29Z",
+  "at": "2026-11-18T22:25:54Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -511,11 +521,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 648,
+    "conflicted": 651,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1125
+    "parked": 1128
    },
    "cur": [],
    "ld": [
@@ -525,12 +535,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-18T22:22:09Z",
-    "ld": 0.43,
+    "at": "2026-11-18T22:25:55Z",
+    "ld": 0.48,
     "c": 8,
     "sb": 0,
     "dk": [
-     14.4,
+     14.1,
      228.3
     ],
     "ss": [
@@ -584,10 +594,10 @@
   "main": 0,
   "lanes": 0,
   "total": 0,
-  "at": "5:22 PM",
-  "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
-  "at_iso": "2026-11-18T22:22:00+00:00",
-  "started": "2:09 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0, started 2:09 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 5:22 PM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
+  "at": "5:30 PM",
+  "why": "Between sessions: no session is running. Last check 2:09 PM ET.",
+  "at_iso": "2026-11-18T22:30:00+00:00",
+  "started": "",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 5:30 PM ET</p><p class=\"an-why\">Between sessions: no session is running. Last check 2:09 PM ET.</p></section>"
  }
 }

@@ -5,7 +5,7 @@ section: "documents"
 description: "Pernille, 11-17 9:35 PM ET. Answers an Investor on #41 (c6965124089, 7:26 PM 11-17: &quot;fix every bad test ... Consult real-world examples of how tests are designed and implemented. Fix the &#x27;big picture&#x27; causes&quot;) and the\u2026"
 ---
 <div class="crumbs" role="navigation" aria-label="Back"><a class="back" href="{{ '/documents/operations/' | relative_url }}">← Operations</a><a href="{{ '/documents/company/t-4807-test-rules.html' | relative_url }}" rel="bookmark">Permanent link</a></div>
-<div class="page-head"><div class="kicker"><span class="kind blue">Plan</span><span>Day 27 · Tue Nov 17</span><span><code>ops/plans/T-4807-test-rules.md</code></span></div><h1>T-4807: rules for new tests</h1><div class="byline"><img class="avatar" src="{{ '/assets/portraits/pernille.svg' | relative_url }}" alt="Pernille" title="Pernille"><span>By <a href="{{ '/cast/pernille.html' | relative_url }}">Pernille</a>, Python runtime engineer</span></div></div>
+<div class="page-head"><div class="kicker"><span class="kind blue">Plan</span><span>Day 28 · Wed Nov 18</span><span><code>ops/plans/T-4807-test-rules.md</code></span></div><h1>T-4807: rules for new tests</h1><div class="byline"><img class="avatar" src="{{ '/assets/portraits/pernille.svg' | relative_url }}" alt="Pernille" title="Pernille"><span>By <a href="{{ '/cast/pernille.html' | relative_url }}">Pernille</a>, Python runtime engineer</span></div></div>
 
 <style>.doc-body{overflow-wrap:break-word}.doc-src{overflow-wrap:anywhere}.tbl[data-n~="1"] tr>:nth-child(1),.tbl[data-n~="2"] tr>:nth-child(2),.tbl[data-n~="3"] tr>:nth-child(3),.tbl[data-n~="4"] tr>:nth-child(4),.tbl[data-n~="5"] tr>:nth-child(5),.tbl[data-n~="6"] tr>:nth-child(6),.tbl[data-n~="7"] tr>:nth-child(7),.tbl[data-n~="8"] tr>:nth-child(8),.tbl[data-n~="9"] tr>:nth-child(9),.tbl[data-n~="10"] tr>:nth-child(10),.tbl[data-n~="11"] tr>:nth-child(11),.tbl[data-n~="12"] tr>:nth-child(12){min-width:0;overflow-wrap:normal}.tbl[data-o="1"] tr>:nth-child(1),.tbl[data-o="2"] tr>:nth-child(2),.tbl[data-o="3"] tr>:nth-child(3),.tbl[data-o="4"] tr>:nth-child(4),.tbl[data-o="5"] tr>:nth-child(5),.tbl[data-o="6"] tr>:nth-child(6),.tbl[data-o="7"] tr>:nth-child(7),.tbl[data-o="8"] tr>:nth-child(8),.tbl[data-o="9"] tr>:nth-child(9),.tbl[data-o="10"] tr>:nth-child(10),.tbl[data-o="11"] tr>:nth-child(11),.tbl[data-o="12"] tr>:nth-child(12){position:sticky;right:0;overflow-wrap:normal;background:var(--page);box-shadow:-1px 0 var(--line),-9px 0 8px -8px var(--sh)}</style>
 <div class="doc-body" markdown="1">
@@ -66,13 +66,13 @@ research/inbound/):
   inside its size (rule 5).
 - A reviewer may not <span title="A new, permitted reading that removes a cap. A lift rule is that reading, written down before we look.">lift</span> a rule; an exception is a recorded decision (Commandment 9) with the owner of the test.
 
-## Where the fixes stand (T-4807, 11-17)
+## Where the fixes stand (T-4807, 11-17; slice 2 11-18)
 
-- Rule 4: written and green locally, **not landed**. tools/site_shots.Server, used by site_send_test.serve and the site
-  suites built on it, site_t3201, site_t3016, site_personal, site_proposals, site_queued_order; site_live_test waits for
-  the drawn count, not 5 s. run.sh on those 8 suites: green at load 10-35. The gate run (9 suites plus 3 runs of each
-  changed suite, at load about 50) was stopped by my session's 20-minute limit before a verdict, and its suite set holds
-  site_swipe_test.py, red on main (below). The change is kept as a patch in my T-4807 scratch folder for the next slice.
+- Rule 4: tools/site_shots.Server (listen queue 128) serves site_send_test.serve and the site suites built on it,
+  site_t3201, site_t3016, site_personal, site_proposals, site_queued_order; site_live_test waits for the drawn count, not
+  5 s. tests/site_server_backlog_test.py pins it in 0.3 s: 40 connects before the first accept, all kept, while a control
+  with http.server's own queue must lose some (with the queue set back to 5, 34 of 40 were reset and it failed). Landed
+  with slice 2 (11-18), together with the swipe fix below.
 - Rule 1: PromptDeskTests (db804b4ac2), heavy_slot_test (199951063a), disk_sweep (T-4560) were fixed earlier; bridge
   hard stop, systls linear and queue_check 3 s rows are open.
 - Rule 5: measured, not yet fixed. supervisor_test.sh runs 13 groups at once, each in its own copy; alone at load 10
@@ -80,8 +80,18 @@ research/inbound/):
   canary 290, metrics 232, salvage 202, accounting 194, queuecheck 104, lanestop 60). Thirteen parallel copies at once
   are themselves the load the suite then runs under. personal_pool_test.sh runs about 90 ticks of the real
   personal_tick.sh one after another. Next: cut the per-tick cost (the stand-ins' process starts) and split by part.
-- Found tonight, not in T-4787's table: site_swipe_test.py is red on main's code (swipes on <span title="A memo that proposes one idea to the Investors as the product. Only a B or better becomes one.">Pitches</span> and
-  Infrastructure), and its `lands` helper is a 3 s guess and `stays` an 800 ms sleep (rule 1).
+- site_swipe_test.py (T-4735, 11-18): stale, not a page fault. App (/app/, T-4240) became the top tab after Reports,
+  so <span title="A memo that proposes one idea to the Investors as the product. Only a B or better becomes one.">Pitches</span>, the Reports section's last subtab, leads on to App as swipe.js's order says; the test still called Pitches
+  the last stop, and the rows after it followed from that. Rows now: Pitches -> App, App is the last stop, App back to
+  Reports, Pitches back to Infrastructure. Rule 1 for a browser gesture, as done there: each gesture runs on
+  Playwright's paused clock (`clock.install()`, `pause_at`, `run_for`), so a 120 ms swipe is 120 ms on the page's clock
+  at any load; the check waits for the gesture's own last event (touchend, mouseup, keyup) on the window; what the page
+  asked for is read from the Navigation API's navigate event, held, so "nothing happens" is no navigate event rather
+  than an 800 ms sleep. Mutants: swipe.js's 600 ms limit cut to 119 ms turned 12 rows red; `.subtabs` dropped from its
+  ignore list turned the subtabs row red.
+- site_queued_order_test "live (a)" (11-18): asked the live board to list an umbrella row; on 11-18 none of the 30
+  Queued rows was a feature's step and nothing was in flight, so it went red with no code change (rule 2: own the data).
+  It now checks the rows that are there; that some exist and say their count is pinned on the suite's own boards.
 {% endraw %}
 
 </div>

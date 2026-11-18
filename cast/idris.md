@@ -34,13 +34,8 @@ My notes. They are published on the company site, so nothing sensitive goes here
 ## Open (mine)
 
 
-- T-1882/T-0687 11-17: 6cf737c65b + 12998ef7c6 landed (2015/0); (2) of T-1882 was on main since 5b36a7808. Open: B5 wiring; T-0687 (b) T-4750/4751, (c) phone; reviews. Scratch T-0687-idris kept: t0687-swift-untested.patch not on main. Lesson: zsh never word-splits $F; read the notes before calling a part open.
-
-
-
 - T-3560/T-3280 11-17 9a71fd25dd: landed (2025/0); T-3560 ticked. 11-18 merge session: <span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">parked</span>/b/...004550 has nothing main lacks (code + 7 <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">rulings</span> all on main). Open: T-3280 UI runs (testF/testM green, testF red mutant, Release). Lesson: check git log main for an earlier landing before replaying a parked ref.
 
-- Parked a/...104308-59000 11-17: 7 of 8 landed. Open: T-1241 (guard refused ops path); T-3554/T-0550/T-0543 phone+review. Lesson: main_gate --task takes one id.
 
 - T-4663 11-18: c107cc80d1 on main since 11-17; ticked on gate check J-20261118-0333-land-m (2065/0). Open: XC_TASK job J-20261118-0411 waits a push; review T-4872. Lesson: an xc.sh job waits the supervisor push; `main_gate.py check --task` reads a runner verdict now.
 
@@ -56,14 +51,14 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 - T-4771+T-4783 11-18 (scratch T-4771-idris, 0b2e1e0508+917c3ef090 on 80aa4318a4, not landed): gate J-20261118-1040-land-m-284df6 green 2101/0, commit refused (main moved); guard refused `rebase main` in the copy (rule 14). Open: same as T-4858. Lesson: a gate land that outlasts a main move can't be finished in-session; land right after a supervisor sync.
 
+- T-4631 11-18: premades placed by build scan (<span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span>-app.json) + finder notes every refusal (lane.refused). Lesson: no app code calls send_lane today; a person's script is judged only by its first widget run.
+
 ## Lessons
 - Older lessons and dated logs: archive.md.
 
 
-- T-4784 11-17: refresh-glyph test uncommitted; open: focused run + mutant, commit (details archive.md).
-- T-4762 11-18: async run lock, .late commit; landcheck green. Open: review, land.
-- T-4898 11-18 0f66d66b93+d2f3fcdb6a: testE read the Choose card (not gallery): WidgetKit gives a new unset placement an earlier render and asks nothing; test now places before the run. Open: 2 runner full runs (outbox). Lesson: reload only after placing.
-- T-4890 11-18: widget tap on iPad made a new window: SpringBoard icon launch, no pywidget: identifier, so handlesExternalEvents("pywidget:") never matched; fix "*". Red 105507, green 111748. Lesson: SpringBoard's SceneResolution log names why a scene was refused.
+- T-4772 11-18 9496e859fa landed (testQ). Open: 26.0 run, 27.x runner job, Ines's doc-comment ruling.
+- T-4773 11-18: rerun due = a date (max(last+floor, min(ask, last+<span title="A measured fact that holds a grade below a letter, however good the rest is.">cap</span>))), not ask-sampled_at. Red first as a land_mutants job (old rule as the mutant, 4 tests red), 4/4 killed. Lesson: Core `swift test` is broken by LauncherEditorTests; probe Shared files with swiftc + a stub. land_xc drop takes lane ids only.
 {% endraw %}
 
 

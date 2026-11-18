@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-18T22:16:40.443344+00:00",
+ "at": "2026-11-18T22:19:41.548228+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -139,7 +139,7 @@
    "task": "[test] T-4807 land browser time-out fix",
    "model": "opus",
    "started": "2026-11-18T20:31:35.722Z",
-   "seconds": 6304,
+   "seconds": 6485,
    "finished": null,
    "effort": "high"
   },
@@ -148,7 +148,7 @@
    "task": "[tools] T-4903 saved work leaves the merge count",
    "model": "opus",
    "started": "2026-11-18T21:36:06.256Z",
-   "seconds": 2434,
+   "seconds": 2615,
    "finished": null,
    "effort": "high"
   }
@@ -191,7 +191,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 496,
+  "runnable_count": 495,
   "blocked_count": 33
  },
  "meter": {
@@ -240,7 +240,7 @@
   "week_pct": 51.56,
   "usage_pct": 51.3,
   "work_pct": 81.5,
-  "read_at": "2026-11-18T22:16:00+00:00",
+  "read_at": "2026-11-18T22:19:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -277,7 +277,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-18T17:16:00-05:00",
+  "at": "2026-11-18T17:19:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -442,6 +442,11 @@
   ],
   "done": [
    {
+    "w": "Pernille",
+    "t": "The website's swipe test was failing because it still treated Pitches as the last tab, though...",
+    "at": "2026-11-18T17:19:00-05:00"
+   },
+   {
     "w": "Odalys",
     "t": "A finished change in a worker's copy now lands on main's current tip even after main has moved...",
     "at": "2026-11-18T16:32:00-05:00"
@@ -450,22 +455,21 @@
     "w": "Idris",
     "t": "Built-in widgets that use something the Home Screen widget cannot run (web, keychain, files,...",
     "at": "2026-11-18T16:27:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "When the process and site merge queue is full, a top-priority (P0) task the Investors asked for...",
-    "at": "2026-11-18T15:30:00-05:00"
    }
   ],
   "count": {
-   "next": 496,
+   "next": 495,
    "wait": 31,
    "blocked": 2,
    "you": 9
   },
   "fin": {
-   "n": 4,
+   "n": 5,
    "rows": [
+    [
+     "T-4735",
+     "Fix a test row that is red..."
+    ],
     [
      "T-4911",
      "Land a finished copy after..."
@@ -524,27 +528,28 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-18T22:16:34Z",
+  "at": "2026-11-18T22:19:41Z",
   "s": {
-   "T-4807": [
-    "merging",
-    "Mac tests at the main gate \u00b7 11 groups of tests done, 2 red",
-    1795037674708
-   ],
    "T-4903": [
+    "testing",
+    "its own tests, in its copy",
+    1795040381548
+   ],
+   "T-4807": [
     "merged",
-    "on main 12:40 PM ET",
-    1795023618000,
+    "on main 5:19 PM ET",
+    1795040346000,
     ""
    ]
   },
   "nm": {
-   "T-4807": "Fix every bad test that failed a merge",
-   "T-4903": "Drop stale copies from the merge count for good"
+   "T-4903": "Drop stale copies from the merge count for good",
+   "T-4807": "Fix every bad test that failed a merge"
   },
   "wk": {
-   "T-4807": "Pernille",
    "T-4903": "Odalys",
+   "T-4807": "Pernille",
+   "T-4735": "Odalys",
    "T-4911": "Odalys",
    "T-4631": "Idris",
    "T-4902": "Odalys",
@@ -552,7 +557,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-18T22:16:34Z",
+  "at": "2026-11-18T22:19:41Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -566,11 +571,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 642,
+    "conflicted": 645,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1119
+    "parked": 1122
    },
    "cur": [],
    "ld": [
@@ -580,12 +585,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-18T22:16:05Z",
-    "ld": 0.44,
+    "at": "2026-11-18T22:19:14Z",
+    "ld": 0.42,
     "c": 8,
     "sb": 0,
     "dk": [
-     14.6,
+     14.5,
      228.3
     ],
     "ss": [
@@ -639,10 +644,10 @@
   "main": 2,
   "lanes": 0,
   "total": 2,
-  "at": "5:16 PM",
+  "at": "5:19 PM",
   "why": "",
-  "at_iso": "2026-11-18T22:16:00+00:00",
+  "at_iso": "2026-11-18T22:19:00+00:00",
   "started": "2:09 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 2:09 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 5:16 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 2:09 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 5:19 PM ET</p></section>"
  }
 }

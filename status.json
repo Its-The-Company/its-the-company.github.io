@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-18T02:12:22.347482+00:00",
+ "at": "2026-11-18T02:15:29.949794+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -138,7 +138,7 @@
    }
   ],
   "landed": 42,
-  "failed": 7
+  "failed": 6
  },
  "workers": [
   {
@@ -146,7 +146,7 @@
    "task": "[tools] T-4806 fix merge time-outs",
    "model": "opus",
    "started": "2026-11-18T01:18:02.621Z",
-   "seconds": 3259,
+   "seconds": 3447,
    "finished": null,
    "effort": "high"
   },
@@ -155,7 +155,7 @@
    "task": "[test] T-4807 fix bad tests that failed merges",
    "model": "opus",
    "started": "2026-11-18T01:44:52.149Z",
-   "seconds": 1650,
+   "seconds": 1837,
    "finished": null,
    "effort": "high"
   },
@@ -164,7 +164,7 @@
    "task": "[tools] T-4814 split the merge limit",
    "model": "opus",
    "started": "2026-11-18T02:08:31.145Z",
-   "seconds": 231,
+   "seconds": 418,
    "finished": null,
    "effort": "high"
   },
@@ -173,7 +173,7 @@
    "task": "[tools] T-4810 every wait names a task or issue",
    "model": "opus",
    "started": "2026-11-18T02:08:44.734Z",
-   "seconds": 217,
+   "seconds": 405,
    "finished": null,
    "effort": "high"
   },
@@ -182,7 +182,7 @@
    "task": "[site] T-4813 Home's numbers update live",
    "model": "opus",
    "started": "2026-11-18T02:08:56.638Z",
-   "seconds": 205,
+   "seconds": 393,
    "finished": null,
    "effort": "high"
   }
@@ -225,26 +225,26 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 429,
-  "blocked_count": 61
+  "runnable_count": 431,
+  "blocked_count": 60
  },
  "meter": {
   "five_hour": {
-   "pct": 7.0,
+   "pct": 9.0,
    "resets_at": "2026-11-18T00:10:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-17T20:53:43.380708-05:00",
+   "read_at": "2026-11-17T21:12:39.383035-05:00",
    "source": "live",
-   "left": 93.0,
+   "left": 91.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 38.0,
+   "pct": 39.0,
    "resets_at": "2026-11-22T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-17T20:53:43.380708-05:00",
+   "read_at": "2026-11-17T21:12:39.383035-05:00",
    "source": "live",
-   "left": 62.0,
+   "left": 61.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
@@ -254,7 +254,7 @@
    "read_at": "2026-11-17T19:09:49.957069-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-17T20:53:43.380708-05:00"
+  "read_at": "2026-11-17T21:12:39.383035-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -274,7 +274,7 @@
   "week_pct": 43.81,
   "usage_pct": 53.5,
   "work_pct": 81.2,
-  "read_at": "2026-11-18T02:12:00+00:00",
+  "read_at": "2026-11-18T02:15:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -311,7 +311,7 @@
  "lock_in": {
   "on": false,
   "pool": 7,
-  "at": "2026-11-17T21:12:00-05:00",
+  "at": "2026-11-17T21:15:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -322,7 +322,7 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Double Spread: 62% of the week left, paced to last until Wed 14:00, the week's halfway point; the machine allows 2 (new work waits: 23 tasks wait to merge (limit 20): 2 agents finish and merge...",
+  "why": "Double Spread: 61% of the week left, paced to last until Wed 14:00, the week's halfway point; the machine allows 2 (new work waits: 23 tasks wait to merge (limit 20): 2 agents finish and merge...",
   "n": 2,
   "at": "2026-11-17T19:09:50.373536-05:00"
  },
@@ -523,10 +523,10 @@
    }
   ],
   "count": {
-   "next": 429,
+   "next": 431,
    "wait": 29,
-   "blocked": 32,
-   "you": 11
+   "blocked": 31,
+   "you": 10
   },
   "fin": {
    "n": 7,
@@ -597,87 +597,87 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-18T02:12:22Z",
+  "at": "2026-11-18T02:15:29Z",
   "s": {
    "T-4761": [
     "mergetest",
     "Xcode checks on the MacBook, 1st to merge",
-    1794966922347
+    1794966869949
    ],
    "T-4659": [
     "mergetest",
     "Xcode checks on the MacBook, 2nd to merge",
-    1794966922347
+    1794966869949
    ],
    "T-4643": [
     "mergeq",
     "3rd to merge",
-    1794961642347
+    1794961649949
    ],
    "T-4697": [
     "mergeq",
     "4th to merge",
-    1794961702347
+    1794961709949
    ],
    "T-4698": [
     "mergeq",
     "5th to merge",
-    1794961762347
+    1794961769949
    ],
    "T-4699": [
     "mergeq",
     "6th to merge",
-    1794961762347
+    1794961769949
    ],
    "T-4782": [
     "mergeq",
     "8th to merge",
-    1794962182347
+    1794962189949
    ],
    "T-4787": [
     "mergeq",
     "10th to merge",
-    1794962662347
+    1794962669949
    ],
    "T-4719": [
     "mergeq",
     "11th to merge",
-    1794963142347
+    1794963089949
    ],
    "T-4720": [
     "mergeq",
     "11th to merge",
-    1794963142347
+    1794963089949
    ],
    "T-4750": [
     "mergeq",
     "12th to merge",
-    1794963202347
+    1794963149949
    ],
    "T-4781": [
     "mergeq",
     "13th to merge",
-    1794964702347
+    1794964709949
    ],
    "T-4770": [
     "mergeq",
     "13th to merge",
-    1794964702347
+    1794964709949
    ],
    "T-4774": [
     "mergeq",
     "13th to merge",
-    1794964702347
+    1794964709949
    ],
    "T-4807": [
     "merging",
     "Mac tests at the main gate",
-    1794967942347
+    1794967949949
    ],
    "T-4806": [
     "merging",
     "Mac tests at the main gate",
-    1794967582347
+    1794967589949
    ]
   },
   "nm": {
@@ -720,7 +720,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-18T02:12:22Z",
+  "at": "2026-11-18T02:15:29Z",
   "mq": {
    "n": {
     "checking": 2,
@@ -732,13 +732,13 @@
     "parked": 6
    },
    "m": {
-    "checking": 17,
-    "inline": 84,
-    "conflicted": 797,
+    "checking": 21,
+    "inline": 87,
+    "conflicted": 801,
     "failed": null,
-    "held": 1603,
+    "held": 1606,
     "retry": null,
-    "parked": 553
+    "parked": 556
    },
    "cur": [
     [
@@ -747,7 +747,7 @@
      ],
      "iPhone app tests, sent and waiting its turn",
      "MacBook",
-     17
+     21
     ],
     [
      [
@@ -755,7 +755,7 @@
      ],
      "iPhone app tests, sent and waiting its turn",
      "MacBook",
-     17
+     21
     ]
    ],
    "ld": [
@@ -765,12 +765,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-18T02:12:26Z",
-    "ld": 3.93,
+    "at": "2026-11-18T02:15:05Z",
+    "ld": 3.68,
     "c": 8,
     "sb": 0,
     "dk": [
-     20.6,
+     19.8,
      228.3
     ],
     "ss": [
@@ -799,33 +799,21 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Inbox \u2013 Evan's 9:10 PM Message on GitHub",
-   "at": "2026-11-17T21:10:30-05:00"
+   "t": "Work session \u2013 5 tasks",
+   "at": "2026-11-17T21:13:31-05:00"
   }
  ],
  "reply": {
-  "sent": "2026-11-18T02:06:34Z",
-  "seconds": 101.0
+  "sent": "2026-11-18T02:10:08Z",
+  "seconds": 202.0
  },
- "inbox": [
-  {
-   "id": "c6966883854",
-   "state": "received",
-   "position": 1,
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "Done. Though don't flag these moving..."
-  }
- ],
+ "inbox": [],
  "trimmed": [
   "lane_next",
   "queue_text",
   "recent",
   "task_done",
   "fin_short",
-  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -837,10 +825,10 @@
   "main": 5,
   "lanes": 0,
   "total": 5,
-  "at": "9:12 PM",
+  "at": "9:15 PM",
   "why": "",
-  "at_iso": "2026-11-18T02:12:00+00:00",
+  "at_iso": "2026-11-18T02:15:00+00:00",
   "started": "7:10 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 5, started 7:10 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:12 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 5, started 7:10 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:15 PM ET</p></section>"
  }
 }

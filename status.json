@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-18T06:36:58.967449+00:00",
+ "at": "2026-11-18T06:39:44.740593+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -69,6 +69,22 @@
   ],
   "done": [
    {
+    "t": "T-4823",
+    "name": "Group process changes into features",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794983960
+   },
+   {
+    "t": "T-4841",
+    "name": "Decide whether the widget probe asks for HealthKit",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794983945
+   },
+   {
     "t": "T-0011",
     "name": "Check motion, health and battery sensors on a device",
     "acct": "Personal a",
@@ -134,25 +150,9 @@
     "end": "failed",
     "end_at": 1794976608,
     "why": "tests failed"
-   },
-   {
-    "t": "T-4700",
-    "name": "Check finished work before it ships",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794975028
-   },
-   {
-    "t": "T-4696",
-    "name": "Check finished work before it ships",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794975028
    }
   ],
-  "landed": 44,
+  "landed": 46,
   "failed": 10
  },
  "workers": [
@@ -161,12 +161,21 @@
    "task": "[build] T-4688 Developer mode for Pro",
    "model": "opus",
    "started": "2026-11-18T05:56:56.560Z",
-   "seconds": 2402,
+   "seconds": 2568,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "pernille",
+   "task": "[build] T-4767 button handler exit as error",
+   "model": "opus",
+   "started": "2026-11-18T06:37:03.752Z",
+   "seconds": 160,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Idris",
+ "who": "Idris, Pernille",
  "recent": [
   {
    "name": "pernille",
@@ -229,7 +238,7 @@
   "week_pct": 46.38,
   "usage_pct": 53.1,
   "work_pct": 80.8,
-  "read_at": "2026-11-18T06:37:00+00:00",
+  "read_at": "2026-11-18T06:40:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -279,7 +288,7 @@
  "lock_in": {
   "on": false,
   "pool": 10,
-  "at": "2026-11-18T01:37:00-05:00",
+  "at": "2026-11-18T01:40:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -306,11 +315,12 @@
   },
   {
    "name": "Pernille",
-   "state": "next",
-   "task": "Pernille, P0, Investor an Investor c6963972184 (6:23 PM...",
-   "model": null,
-   "since": null,
-   "next": []
+   "state": "running",
+   "task": "[build] T-4767 button handler exit as error",
+   "model": "opus",
+   "since": "2026-11-18T06:37:03.752Z",
+   "next": [],
+   "effort": "high"
   },
   {
    "name": "Odalys",
@@ -356,6 +366,16 @@
     "at": "2026-11-18T05:56:56.560Z",
     "o": "c",
     "task": "T-4688"
+   },
+   {
+    "w": "Pernille",
+    "k": "build",
+    "t": "Treat a button handler's exit as the script's error",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-18T06:37:03.752Z",
+    "o": "c",
+    "task": "T-4767"
    }
   ],
   "src": "plan",
@@ -503,115 +523,108 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-18T06:36:43Z",
+  "at": "2026-11-18T06:39:44Z",
   "s": {
-   "T-4516": [
-    "merging",
-    "Rebasing onto current main",
-    1794983803518
-   ],
-   "T-4823": [
-    "mergeq",
-    "1st to merge",
-    1794982003518
-   ],
    "T-4787": [
     "mergeq",
-    "2nd to merge",
-    1794982903518
+    "1st to merge",
+    1794982904740
    ],
    "T-4796": [
     "mergeq",
-    "3rd to merge",
-    1794975223518
+    "2nd to merge",
+    1794975224740
    ],
    "T-4442": [
     "mergeq",
-    "4th to merge",
-    1794975343518
+    "3rd to merge",
+    1794975344740
+   ],
+   "T-4516": [
+    "mergetest",
+    "Xcode checks on the MacBook, 4th to merge",
+    1794983864740
    ],
    "T-4784": [
     "mergeq",
     "5th to merge",
-    1794982783518
-   ],
-   "T-4841": [
-    "mergeq",
-    "6th to merge",
-    1794981943518
+    1794982784740
    ],
    "T-4688": [
     "testing",
     "its own tests, in its copy",
-    1794983563518
+    1794983564740
+   ],
+   "T-4767": [
+    "testing",
+    "its own tests, in its copy",
+    1794983984740
    ]
   },
   "nm": {
-   "T-4516": "Prove the premade settings routes in a UI test",
-   "T-4823": "Group process changes into features",
    "T-4787": "Count failed merges by cause: bad test or broken code",
    "T-4796": "Say which premades carry the Pro tag",
    "T-4442": "Tidy the bundled first renders' small edges",
+   "T-4516": "Prove the premade settings routes in a UI test",
    "T-4784": "Pin the refresh glyph's button style in a test",
-   "T-4841": "Decide whether the widget probe asks for HealthKit",
-   "T-4688": "Build a Developer mode for testing Pro"
+   "T-4688": "Build a Developer mode for testing Pro",
+   "T-4767": "Treat a button handler's exit as the script's error"
   },
   "wk": {
-   "T-4516": "Idris",
-   "T-4823": "Odalys",
    "T-4787": "Odalys",
    "T-4796": "Ines",
    "T-4442": "Idris",
+   "T-4516": "Idris",
    "T-4784": "Idris",
-   "T-4841": "Ines",
    "T-4688": "Idris",
+   "T-4767": "Pernille",
    "T-4564": "Pernille"
   }
  },
  "ln": {
-  "at": "2026-11-18T06:36:43Z",
+  "at": "2026-11-18T06:39:44Z",
   "mq": {
    "n": {
     "checking": 1,
-    "inline": 6,
+    "inline": 4,
     "conflicted": 3,
     "failed": 0,
     "held": 1,
-    "retry": 0,
+    "retry": 1,
     "parked": 10
    },
    "m": {
-    "checking": 0,
-    "inline": 30,
-    "conflicted": 513,
+    "checking": 2,
+    "inline": 82,
+    "conflicted": 516,
     "failed": null,
-    "held": 1867,
-    "retry": null,
-    "parked": 433
+    "held": 1870,
+    "retry": 136,
+    "parked": 436
    },
    "cur": [
     [
      [
       "T-4516"
      ],
-     "lining up with main",
-     "Mac mini",
-     0
+     "iPhone app tests",
+     "MacBook",
+     2
     ]
    ],
    "ld": [
-    5,
-    "2026-11-18T06:06:01Z"
+    7,
+    "2026-11-18T06:39:20Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-18T06:35:58Z",
-    "ld": 10.51,
+    "at": "2026-11-18T06:39:58Z",
+    "ld": 17.2,
     "c": 8,
     "sb": 2,
     "dk": [
-     31.3,
+     29.9,
      228.3
     ],
     "ss": [
@@ -620,12 +633,12 @@
     ],
     "sn": [
      "t4772-27",
-     "T4631 Idris iPhone 17e"
+     "iPhone 17"
     ]
    },
    "macbook": {
-    "at": "2026-11-18T06:35:00Z",
-    "ld": 2.31,
+    "at": "2026-11-18T06:37:05Z",
+    "ld": 1.64,
     "c": 12,
     "sb": 0,
     "dk": [
@@ -673,13 +686,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 1,
+  "main": 2,
   "lanes": 1,
-  "total": 2,
-  "at": "1:37 AM",
+  "total": 3,
+  "at": "1:40 AM",
   "why": "",
-  "at_iso": "2026-11-18T06:37:00+00:00",
+  "at_iso": "2026-11-18T06:40:00+00:00",
   "started": "12:47 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 1, started 12:47 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 1:37 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 12:47 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 1:40 AM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-18T03:42:31.671904+00:00",
+ "at": "2026-11-18T03:45:43.433039+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -14,6 +14,10 @@
      {
       "s": "testq",
       "at": 1794972848
+     },
+     {
+      "s": "macbook",
+      "at": 1794973517
      }
     ]
    },
@@ -120,26 +124,35 @@
    "task": "[tools] T-4806 land merge time-out fixes",
    "model": "opus",
    "started": "2026-11-18T03:27:34.411Z",
-   "seconds": 897,
+   "seconds": 1089,
    "finished": null,
    "effort": "high"
   },
   {
    "name": "odalys",
-   "task": "[tools] T-4817 bottleneck watcher",
+   "task": "[tools] T-4829 bottleneck watch on tick",
    "model": "opus",
-   "started": "2026-11-18T03:27:43.614Z",
-   "seconds": 888,
+   "started": "2026-11-18T03:44:30.048Z",
+   "seconds": 73,
    "finished": null,
    "effort": "high"
   }
  ],
  "who": "Odalys x2",
- "recent": [],
+ "recent": [
+  {
+   "name": "odalys",
+   "task": "[tools] T-4817 bottleneck watcher",
+   "model": "opus",
+   "started": "2026-11-18T03:27:43.614Z",
+   "seconds": null,
+   "finished": "2026-11-18T03:44:12.440000+00:00"
+  }
+ ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 465,
+  "runnable_count": 467,
   "blocked_count": 34
  },
  "meter": {
@@ -188,7 +201,7 @@
   "week_pct": 46.38,
   "usage_pct": 53.7,
   "work_pct": 81.3,
-  "read_at": "2026-11-18T03:42:00+00:00",
+  "read_at": "2026-11-18T03:45:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -348,7 +361,7 @@
  "lock_in": {
   "on": false,
   "pool": 8,
-  "at": "2026-11-17T22:42:00-05:00",
+  "at": "2026-11-17T22:45:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -429,12 +442,12 @@
    {
     "w": "Odalys",
     "k": "tools",
-    "t": "Turn every bottleneck into a fix task automatically",
+    "t": "Run the bottleneck watch on every tick",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-18T03:27:43.614Z",
+    "at": "2026-11-18T03:44:30.048Z",
     "o": "c",
-    "task": "T-4817"
+    "task": "T-4829"
    }
   ],
   "src": "plan",
@@ -512,6 +525,11 @@
   ],
   "done": [
    {
+    "w": "Odalys",
+    "t": "A new checker reads fifteen measures of how work flows (merge waits, failed lands, machine load,...",
+    "at": "2026-11-17T22:43:00-05:00"
+   },
+   {
     "w": "Pernille",
     "t": "Checked the change that keeps the error mark off widgets moved to the app only because they are...",
     "at": "2026-11-17T20:58:00-05:00"
@@ -520,22 +538,22 @@
     "w": "Pernille",
     "t": "Pernille checked the widget-tap work before it ships: the code is right and its tests catch the...",
     "at": "2026-11-17T20:55:00-05:00"
-   },
-   {
-    "w": "Pernille",
-    "t": "Pernille checked the new per-widget Activity screen, the widget's own run record and the 'Could...",
-    "at": "2026-11-17T20:54:00-05:00"
    }
   ],
   "count": {
-   "next": 465,
+   "next": 467,
    "wait": 32,
    "blocked": 2,
    "you": 9
   },
   "fin": {
-   "n": 0,
-   "rows": []
+   "n": 1,
+   "rows": [
+    [
+     "T-4817",
+     "Turn every bottleneck into a..."
+    ]
+   ]
   }
  },
  "qr": [
@@ -577,17 +595,17 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-18T03:42:31Z",
+  "at": "2026-11-18T03:45:35Z",
   "s": {
    "T-4750": [
-    "merging",
-    "Host checks on the Mac mini",
-    1794972871671
+    "mergetest",
+    "Xcode checks on the MacBook",
+    1794973535439
    ],
    "T-4759": [
     "mergeq",
     "1st to merge",
-    1794972631671
+    1794972635439
    ],
    "T-4659": [
     "mergetest",
@@ -598,11 +616,6 @@
     "mergetest",
     "iPhone tests on the MacBook",
     null
-   ],
-   "T-4817": [
-    "merging",
-    "Mac tests at the main gate",
-    1794973231671
    ],
    "T-4772": [
     "testing",
@@ -617,17 +630,27 @@
    "T-4806": [
     "testing",
     "its own tests, in its copy",
-    1794972691671
+    1794972695439
    ],
    "T-4533": [
     "testq",
     "1st for a Simulator",
-    1794973291671
+    1794973295439
    ],
    "T-4654": [
     "testq",
     "1st for a Simulator",
-    1794973291671
+    1794973295439
+   ],
+   "T-4442": [
+    "testq",
+    "3rd for a Simulator",
+    1794973415439
+   ],
+   "T-4516": [
+    "testq",
+    "3rd for a Simulator",
+    1794973415439
    ]
   },
   "nm": {
@@ -635,28 +658,31 @@
    "T-4759": "Check finished work before it ships",
    "T-4659": "Prove a widget button's tap reaches its Python handler",
    "T-4761": "Keep one layout for the widget state format",
-   "T-4817": "Turn every bottleneck into a fix task automatically",
    "T-4772": "Prove a refresh tap redraws the widget",
    "T-4773": "Time the next run from the widget's own ask",
    "T-4806": "Fix the causes of merge time-outs and runner errors",
    "T-4533": "Make the premade settings save sturdier on disk errors",
-   "T-4654": "Say true things when a Shortcut's premade is held back"
+   "T-4654": "Say true things when a Shortcut's premade is held back",
+   "T-4442": "Tidy the bundled first renders' small edges",
+   "T-4516": "Prove the premade settings routes in a UI test"
   },
   "wk": {
    "T-4750": "Idris",
    "T-4759": "Pernille",
    "T-4659": "Idris",
    "T-4761": "Idris",
-   "T-4817": "Odalys",
    "T-4772": "Idris",
    "T-4773": "Idris",
    "T-4806": "Odalys",
    "T-4533": "Pernille",
-   "T-4654": "Idris"
+   "T-4654": "Idris",
+   "T-4442": "Idris",
+   "T-4516": "Idris",
+   "T-4817": "Odalys"
   }
  },
  "ln": {
-  "at": "2026-11-18T03:42:31Z",
+  "at": "2026-11-18T03:45:35Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -665,25 +691,25 @@
     "failed": 2,
     "held": 1,
     "retry": 1,
-    "parked": 11
+    "parked": 10
    },
    "m": {
-    "checking": 8,
-    "inline": 12,
-    "conflicted": 339,
-    "failed": 8,
-    "held": 1693,
-    "retry": 4,
-    "parked": 180
+    "checking": 0,
+    "inline": 15,
+    "conflicted": 342,
+    "failed": 11,
+    "held": 1696,
+    "retry": 7,
+    "parked": 262
    },
    "cur": [
     [
      [
       "T-4750"
      ],
-     "Mac tests",
-     "Mac mini",
-     8
+     "iPhone app tests",
+     "MacBook",
+     0
     ]
    ],
    "ld": [
@@ -693,8 +719,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-18T03:42:01Z",
-    "ld": 38.56,
+    "at": "2026-11-18T03:45:09Z",
+    "ld": 28.8,
     "c": 8,
     "sb": 1,
     "dk": [
@@ -729,7 +755,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 2 tasks",
+   "t": "Work session \u2013 3 tasks",
    "at": "2026-11-17T22:22:45-05:00"
   },
   {
@@ -787,6 +813,7 @@
   "lane_next",
   "queue_text",
   "task_done",
+  "fin_short",
   "task_title",
   "done_text",
   "task_open",
@@ -797,10 +824,10 @@
   "main": 2,
   "lanes": 5,
   "total": 7,
-  "at": "10:42 PM",
+  "at": "10:45 PM",
   "why": "",
-  "at_iso": "2026-11-18T03:42:00+00:00",
+  "at_iso": "2026-11-18T03:45:00+00:00",
   "started": "10:22 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 2, started 10:22 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 10:42 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 2, started 10:22 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 10:45 PM ET</p></section>"
  }
 }

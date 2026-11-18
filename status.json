@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-18T17:30:29.744193+00:00",
+ "at": "2026-11-18T17:33:36.805371+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -137,26 +137,34 @@
  },
  "workers": [
   {
-   "name": "maren",
-   "task": "[build] T-4493 land the site clutter cut",
-   "model": "opus",
-   "started": "2026-11-18T15:43:48.650Z",
-   "seconds": 6401,
-   "finished": null,
-   "effort": "high"
-  },
-  {
    "name": "odalys",
    "task": "[tools] T-4903 drop stale copies from merge count",
    "model": "opus",
    "started": "2026-11-18T17:19:56.464Z",
-   "seconds": 633,
+   "seconds": 820,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "pernille",
+   "task": "[tools] T-4786 fix S30-5 held-state test, land T-4493",
+   "model": "opus",
+   "started": "2026-11-18T17:33:36.694Z",
+   "seconds": 0,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Maren, Odalys",
+ "who": "Odalys, Pernille",
  "recent": [
+  {
+   "name": "maren",
+   "task": "[build] T-4493 land the site clutter cut",
+   "model": "opus",
+   "started": "2026-11-18T15:43:48.650Z",
+   "seconds": null,
+   "finished": "2026-11-18T17:30:58.997000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[tools] T-4180 judge stray runner salvage",
@@ -180,14 +188,6 @@
    "started": "2026-11-18T15:37:31.196Z",
    "seconds": null,
    "finished": "2026-11-18T15:40:59.707000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-3280 recut placed-path tests and land",
-   "model": "opus",
-   "started": "2026-11-18T15:35:39.515Z",
-   "seconds": null,
-   "finished": "2026-11-18T15:36:25.389000+00:00"
   }
  ],
  "queue": {
@@ -242,7 +242,7 @@
   "week_pct": 51.32,
   "usage_pct": 52.2,
   "work_pct": 82.0,
-  "read_at": "2026-11-18T17:30:00+00:00",
+  "read_at": "2026-11-18T17:33:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -279,6 +279,7 @@
     "e": "high",
     "at": "2026-11-18T12:20:48-05:00",
     "n": "Evan",
+    "d": 1,
     "src": "plan-a"
    },
    {
@@ -365,23 +366,23 @@
   }
  ],
  "disk": {
-  "free_gb": 14,
-  "gate": "open",
+  "free_gb": 9.8,
+  "gate": "closed",
   "ssd": {
    "mounted": true,
    "free_gb": 168
   },
-  "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
+  "words": "free on the Mac mini. New Xcode runs and personal sessions wait until 20 GB is free.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-18T12:23:00-05:00",
+   "at": "2026-11-18T12:30:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 12,
-  "at": "2026-11-18T12:30:00-05:00",
+  "at": "2026-11-18T12:33:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -398,15 +399,6 @@
  },
  "lanes": [
   {
-   "name": "Maren",
-   "state": "running",
-   "task": "[build] T-4493 land the site clutter cut",
-   "model": "opus",
-   "since": "2026-11-18T15:43:48.650Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
    "name": "Odalys",
    "state": "running",
    "task": "[tools] T-4903 drop stale copies from merge count",
@@ -416,17 +408,18 @@
    "effort": "high"
   },
   {
+   "name": "Pernille",
+   "state": "running",
+   "task": "[tools] T-4786 fix S30-5 held-state test, land T-4493",
+   "model": "opus",
+   "since": "2026-11-18T17:33:36.694Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
    "name": "Idris",
    "state": "next",
    "task": "Idris, P1, from T-4755 (Investor an Investor...",
-   "model": null,
-   "since": null,
-   "next": []
-  },
-  {
-   "name": "Pernille",
-   "state": "next",
-   "task": "Pernille, P0, Investor an Investor c6963972184 (6:23 PM...",
    "model": null,
    "since": null,
    "next": []
@@ -446,20 +439,18 @@
    "model": null,
    "since": null,
    "next": []
+  },
+  {
+   "name": "Maren",
+   "state": "next",
+   "task": "Maren, P2, found on T-3366 (11-07): in...",
+   "model": null,
+   "since": null,
+   "next": []
   }
  ],
  "tasks": {
   "run": [
-   {
-    "w": "Maren",
-    "k": "build",
-    "t": "Cut clutter text on the pages still carrying it",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-18T15:43:48.650Z",
-    "o": "c",
-    "task": "T-4493"
-   },
    {
     "w": "Odalys",
     "k": "tools",
@@ -469,6 +460,16 @@
     "at": "2026-11-18T17:19:56.464Z",
     "o": "c",
     "task": "T-4903"
+   },
+   {
+    "w": "Pernille",
+    "k": "tools",
+    "t": "Correct every bad test that holds a merge",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-18T17:33:36.694Z",
+    "o": "c",
+    "task": "T-4786"
    }
   ],
   "src": "plan",
@@ -620,49 +621,54 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-18T17:30:21Z",
+  "at": "2026-11-18T17:33:36Z",
   "s": {
    "T-4679": [
     "mergetest",
     "Xcode checks on the MacBook, 1st to merge",
-    1795022241065
+    1795022196805
    ],
    "T-4840": [
     "mergeq",
     "4th to merge",
-    1795022481065
+    1795022496805
+   ],
+   "T-4866": [
+    "mergeq",
+    "5th to merge",
+    1795023216805
    ],
    "T-4898": [
     "mergeq",
-    "5th to merge",
-    1795020981065
+    "6th to merge",
+    1795020996805
    ],
    "T-4890": [
     "mergeq",
-    "6th to merge",
-    1795021401065
+    "7th to merge",
+    1795021416805
    ],
    "T-4897": [
     "mergeq",
-    "7th to merge",
-    1795022601065
+    "8th to merge",
+    1795022616805
    ],
    "T-4819": [
     "mergeq",
-    "8th to merge",
-    1795022901065
+    "9th to merge",
+    1795022916805
    ],
    "T-4660": [
     "mergeq",
-    "9th to merge",
-    1795022781065
+    "10th to merge",
+    1795022796805
    ],
-   "T-4866": [
+   "T-4570": [
     "testing",
     "Mac Mini \u00b7 test",
     null
    ],
-   "T-4888": [
+   "T-4849": [
     "testing",
     "Mac Mini \u00b7 test",
     null
@@ -670,63 +676,44 @@
    "T-4903": [
     "testing",
     "its own tests, in its copy",
-    1795022901065
-   ],
-   "T-4493": [
-    "testing",
-    "its own tests, in its copy",
-    1795022841065
-   ],
-   "T-4570": [
-    "testq",
-    "2nd for a Simulator",
-    1795022661065
-   ],
-   "T-4849": [
-    "testq",
-    "2nd for a Simulator",
-    1795022661065
+    1795022916805
    ]
   },
   "nm": {
    "T-4679": "Make the unit tests pass in a launcher build",
    "T-4840": "Read the sensor rows from the gate build's export",
+   "T-4866": "Rerun the Pro row large-text test after the footer fix",
    "T-4898": "Fix the Home Screen token test reading the gallery",
    "T-4890": "Keep a real widget tap in the open iPad window",
    "T-4897": "Check an all-day event keeps its date after travel",
    "T-4819": "Make sure a send never rewrites a project's settings file",
    "T-4660": "Count a family When's buttons per family",
-   "T-4866": "Rerun the Pro row large-text test after the footer fix",
-   "T-4888": "Undo the vertical slide on a wrapped-line tap",
-   "T-4903": "Drop stale copies from the merge count for good",
-   "T-4493": "Cut clutter text on the pages still carrying it",
    "T-4570": "Launcher slot copy takes the premade file lock",
-   "T-4849": "Shorten the process merge wait for good"
+   "T-4849": "Shorten the process merge wait for good",
+   "T-4903": "Drop stale copies from the merge count for good"
   },
   "wk": {
    "T-4679": "Idris",
    "T-4840": "Idris",
+   "T-4866": "Idris",
    "T-4898": "Idris",
    "T-4890": "Idris",
    "T-4897": "Idris",
    "T-4819": "Idris",
    "T-4660": "Pernille",
-   "T-4866": "Idris",
-   "T-4888": "Idris",
-   "T-4903": "Odalys",
-   "T-4493": "Maren",
    "T-4570": "Idris",
    "T-4849": "Odalys",
+   "T-4903": "Odalys",
    "T-4574": "Idris",
    "T-4812": "Maren"
   }
  },
  "ln": {
-  "at": "2026-11-18T17:30:21Z",
+  "at": "2026-11-18T17:33:36Z",
   "mq": {
    "n": {
     "checking": 1,
-    "inline": 6,
+    "inline": 7,
     "conflicted": 5,
     "failed": 0,
     "held": 1,
@@ -734,13 +721,13 @@
     "parked": 4
    },
    "m": {
-    "checking": 13,
-    "inline": 8,
-    "conflicted": 356,
+    "checking": 17,
+    "inline": 10,
+    "conflicted": 359,
     "failed": null,
-    "held": 2521,
+    "held": 2524,
     "retry": null,
-    "parked": 920
+    "parked": 923
    },
    "cur": [
     [
@@ -749,7 +736,7 @@
      ],
      "iPhone app tests",
      "MacBook",
-     13
+     17
     ]
    ],
    "ld": [
@@ -759,12 +746,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-18T17:30:21Z",
-    "ld": 34.93,
+    "at": "2026-11-18T17:33:08Z",
+    "ld": 26.29,
     "c": 8,
-    "sb": 2,
+    "sb": 1,
     "dk": [
-     10.3,
+     10.9,
      228.3
     ],
     "ss": [
@@ -772,8 +759,7 @@
      953.7
     ],
     "sn": [
-     "t4772-27",
-     "iPhone 17e"
+     "t4772-27"
     ]
    },
    "macbook": {
@@ -814,7 +800,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 2 tasks",
+   "t": "Work session \u2013 1 task",
    "at": "2026-11-18T12:20:47-05:00"
   },
   {
@@ -857,10 +843,10 @@
   "main": 2,
   "lanes": 4,
   "total": 6,
-  "at": "12:30 PM",
+  "at": "12:33 PM",
   "why": "",
-  "at_iso": "2026-11-18T17:30:00+00:00",
+  "at_iso": "2026-11-18T17:33:00+00:00",
   "started": "10:30 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 2, started 10:30 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 12:30 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 2, started 10:30 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 12:33 PM ET</p></section>"
  }
 }

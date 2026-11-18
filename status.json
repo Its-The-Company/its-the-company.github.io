@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-18T23:47:39.926415+00:00",
+ "at": "2026-11-18T23:50:36.541625+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -146,7 +146,7 @@
    "task": "[tools] T-4917 gate counts own copied files",
    "model": "opus",
    "started": "2026-11-18T22:35:16.121Z",
-   "seconds": 4343,
+   "seconds": 4520,
    "finished": null,
    "effort": "high"
   },
@@ -155,7 +155,7 @@
    "task": "[test] T-4807 bad tests slice 3",
    "model": "opus",
    "started": "2026-11-18T22:58:04.466Z",
-   "seconds": 2975,
+   "seconds": 3152,
    "finished": null,
    "effort": "high"
   },
@@ -164,7 +164,7 @@
    "task": "[tools] T-4808 merge-step fixes stream",
    "model": "opus",
    "started": "2026-11-18T23:26:46.521Z",
-   "seconds": 1253,
+   "seconds": 1430,
    "finished": null,
    "effort": "high"
   },
@@ -173,7 +173,7 @@
    "task": "[tools] T-4788 feature sessions on for all",
    "model": "opus",
    "started": "2026-11-18T23:37:01.600Z",
-   "seconds": 638,
+   "seconds": 814,
    "finished": null,
    "effort": "high"
   }
@@ -265,7 +265,7 @@
   "week_pct": 52.29,
   "usage_pct": 50.1,
   "work_pct": 81.6,
-  "read_at": "2026-11-18T23:47:00+00:00",
+  "read_at": "2026-11-18T23:50:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -302,7 +302,7 @@
  "lock_in": {
   "on": true,
   "pool": 3,
-  "at": "2026-11-18T18:47:00-05:00",
+  "at": "2026-11-18T18:50:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -573,27 +573,32 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-18T23:47:39Z",
+  "at": "2026-11-18T23:50:36Z",
   "s": {
    "T-4808": [
     "merging",
     "Mac tests at the main gate",
-    1795045119926
+    1795045116541
+   ],
+   "T-4903": [
+    "merging",
+    "Mac tests at the main gate",
+    1795045776541
    ],
    "T-4807": [
     "merging",
     "Mac tests at the main gate",
-    1795045299926
+    1795045296541
    ],
-   "T-4903": [
+   "T-4805": [
     "testing",
     "its own tests, in its copy",
-    1795042659926
+    1795045836541
    ],
    "T-4788": [
     "testing",
     "its own tests, in its copy",
-    1795045299926
+    1795045296541
    ],
    "T-4917": [
     "merged",
@@ -604,15 +609,17 @@
   },
   "nm": {
    "T-4808": "Fix the red board-check row in the land test",
-   "T-4807": "Fix every bad test that failed a merge",
    "T-4903": "Drop stale copies from the merge count for good",
+   "T-4807": "Fix every bad test that failed a merge",
+   "T-4805": "Record a cause for every failed merge",
    "T-4788": "Turn feature sessions on for every app feature",
    "T-4917": "Stop the gate refusing files it copied in itself"
   },
   "wk": {
    "T-4808": "Odalys",
-   "T-4807": "Pernille",
    "T-4903": "Odalys",
+   "T-4807": "Pernille",
+   "T-4805": "Odalys",
    "T-4788": "Odalys",
    "T-4917": "Odalys",
    "T-4750": "Idris",
@@ -622,7 +629,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-18T23:47:39Z",
+  "at": "2026-11-18T23:50:36Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -636,11 +643,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 810,
+    "conflicted": 813,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1085
+    "parked": 1088
    },
    "cur": [],
    "ld": [
@@ -650,12 +657,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-18T23:47:41Z",
-    "ld": 2.75,
+    "at": "2026-11-18T23:50:11Z",
+    "ld": 3.57,
     "c": 8,
     "sb": 0,
     "dk": [
-     12.6,
+     12.5,
      228.3
     ],
     "ss": [
@@ -709,10 +716,10 @@
   "main": 4,
   "lanes": 0,
   "total": 4,
-  "at": "6:47 PM",
+  "at": "6:50 PM",
   "why": "",
-  "at_iso": "2026-11-18T23:47:00+00:00",
+  "at_iso": "2026-11-18T23:50:00+00:00",
   "started": "5:34 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 4, started 5:34 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 6:47 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 4, started 5:34 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 6:50 PM ET</p></section>"
  }
 }

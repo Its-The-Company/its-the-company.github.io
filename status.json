@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-18T23:10:56.921871+00:00",
+ "at": "2026-11-18T23:13:55.999562+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -157,7 +157,7 @@
    "task": "[tools] T-4917 gate counts own copied files",
    "model": "opus",
    "started": "2026-11-18T22:35:16.121Z",
-   "seconds": 2140,
+   "seconds": 2319,
    "finished": null,
    "effort": "high"
   },
@@ -166,7 +166,7 @@
    "task": "[build] T-4784 land kept app copies",
    "model": "opus",
    "started": "2026-11-18T22:35:28.268Z",
-   "seconds": 2128,
+   "seconds": 2307,
    "finished": null,
    "effort": "high"
   },
@@ -175,7 +175,7 @@
    "task": "[test] T-4807 bad tests slice 3",
    "model": "opus",
    "started": "2026-11-18T22:58:04.466Z",
-   "seconds": 772,
+   "seconds": 951,
    "finished": null,
    "effort": "high"
   }
@@ -259,7 +259,7 @@
   "week_pct": 52.29,
   "usage_pct": 50.1,
   "work_pct": 81.6,
-  "read_at": "2026-11-18T23:10:00+00:00",
+  "read_at": "2026-11-18T23:13:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -296,7 +296,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-18T18:10:00-05:00",
+  "at": "2026-11-18T18:13:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -546,27 +546,27 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-18T23:10:38Z",
+  "at": "2026-11-18T23:13:55Z",
   "s": {
    "T-4784": [
     "mergetest",
     "iPhone tests on the MacBook",
     null
    ],
-   "T-4771": [
+   "T-4750": [
     "merging",
     "Mac tests at the main gate",
-    1795043138192
+    1795043635999
    ],
    "T-4807": [
     "testing",
     "its own tests, in its copy",
-    1795042778192
+    1795042735999
    ],
    "T-4903": [
     "testing",
     "its own tests, in its copy",
-    1795042658192
+    1795042675999
    ],
    "T-4917": [
     "merged",
@@ -577,21 +577,21 @@
   },
   "nm": {
    "T-4784": "Pin the refresh glyph's button style in a test",
-   "T-4771": "Gutter marks redraw quickly and stay right while typing",
+   "T-4750": "Check network fetch cases on the Swift side too",
    "T-4807": "Fix every bad test that failed a merge",
    "T-4903": "Drop stale copies from the merge count for good",
    "T-4917": "Stop the gate refusing files it copied in itself"
   },
   "wk": {
    "T-4784": "Idris",
-   "T-4771": "Idris",
+   "T-4750": "Idris",
    "T-4807": "Pernille",
    "T-4903": "Odalys",
    "T-4917": "Odalys"
   }
  },
  "ln": {
-  "at": "2026-11-18T23:10:38Z",
+  "at": "2026-11-18T23:13:55Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -605,11 +605,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 696,
+    "conflicted": 699,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1048
+    "parked": 1051
    },
    "cur": [],
    "ld": [
@@ -619,12 +619,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-18T23:10:12Z",
-    "ld": 3.8,
+    "at": "2026-11-18T23:13:56Z",
+    "ld": 2.21,
     "c": 8,
     "sb": 0,
     "dk": [
-     11.3,
+     13.2,
      228.3
     ],
     "ss": [
@@ -677,10 +677,10 @@
   "main": 3,
   "lanes": 0,
   "total": 3,
-  "at": "6:10 PM",
+  "at": "6:13 PM",
   "why": "",
-  "at_iso": "2026-11-18T23:10:00+00:00",
+  "at_iso": "2026-11-18T23:13:00+00:00",
   "started": "5:34 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 5:34 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 6:10 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 5:34 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 6:13 PM ET</p></section>"
  }
 }

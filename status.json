@@ -1,10 +1,10 @@
 {
  "schema": 1,
- "at": "2026-11-18T09:07:19.598780+00:00",
+ "at": "2026-11-18T09:10:29.062649+00:00",
  "session": {
-  "active": false,
-  "kind": "",
-  "started": null,
+  "active": true,
+  "kind": "work",
+  "started": "2026-11-18T04:07:20-05:00",
   "flow": [
    {
     "t": "T-4533",
@@ -106,46 +106,47 @@
   "landed": 47,
   "failed": 10
  },
- "workers": [],
- "who": "",
+ "workers": [
+  {
+   "name": "wrenna",
+   "task": "[research] T-4839 widget label name",
+   "model": "sonnet",
+   "started": "2026-11-18T09:08:33.641Z",
+   "seconds": 115,
+   "finished": null
+  },
+  {
+   "name": "idris",
+   "task": "[build] T-4663 case-insensitive completion",
+   "model": "opus",
+   "started": "2026-11-18T09:08:46.044Z",
+   "seconds": 103,
+   "finished": null
+  },
+  {
+   "name": "idris",
+   "task": "[design] T-4285 drag-and-drop week figures",
+   "model": "opus",
+   "started": "2026-11-18T09:10:00.181Z",
+   "seconds": 28,
+   "finished": null
+  }
+ ],
+ "who": "Wrenna, Idris x2",
  "recent": [
   {
-   "name": "idris",
-   "task": "[build] T-4858 slow store check stalls widgets",
-   "model": "opus",
-   "started": "2026-11-18T08:34:12.280Z",
-   "seconds": null,
-   "finished": "2026-11-18T08:51:51.267000+00:00"
-  },
-  {
-   "name": "maren",
-   "task": "[design] T-4703 showcase premade frames",
-   "model": "opus",
-   "started": "2026-11-18T08:21:49.663Z",
-   "seconds": null,
-   "finished": "2026-11-18T08:51:14.090000+00:00"
-  },
-  {
    "name": "pernille",
-   "task": "[review] T-4864 review Developer mode part 2",
+   "task": "[review] T-4852 Developer mode review",
    "model": "opus",
-   "started": "2026-11-18T08:25:35.880Z",
+   "started": "2026-11-18T09:08:39.942Z",
    "seconds": null,
-   "finished": "2026-11-18T08:33:37.776000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-4688 Developer mode for Pro",
-   "model": "opus",
-   "started": "2026-11-18T05:56:56.560Z",
-   "seconds": null,
-   "finished": "2026-11-18T08:25:11.930000+00:00"
+   "finished": "2026-11-18T09:09:37.629000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 488,
+  "runnable_count": 487,
   "blocked_count": 35
  },
  "meter": {
@@ -189,12 +190,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-18T04:22:09-05:00",
+ "next_tick": null,
  "personal": {
   "week_pct": 50.16,
   "usage_pct": 53.3,
   "work_pct": 82.4,
-  "read_at": "2026-11-18T09:07:00+00:00",
+  "read_at": "2026-11-18T09:10:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -270,7 +271,7 @@
  "lock_in": {
   "on": false,
   "pool": 11,
-  "at": "2026-11-18T04:07:00-05:00",
+  "at": "2026-11-18T04:10:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -278,16 +279,28 @@
    "b": "double-spread"
   }
  },
- "next_tick_why": "last_tick",
+ "next_tick_why": "session",
  "idle": null,
- "pool": null,
+ "pool": {
+  "why": "Double Spread: 56% of the week left, paced to last until Wed 14:00, the week's halfway point; the machine allows 3 (raised a step toward the floor of 8: new work may start and every signal is...",
+  "n": 3,
+  "at": "2026-11-18T04:07:09.354573-05:00"
+ },
  "lanes": [
   {
+   "name": "Wrenna",
+   "state": "running",
+   "task": "[research] T-4839 widget label name",
+   "model": "sonnet",
+   "since": "2026-11-18T09:08:33.641Z",
+   "next": []
+  },
+  {
    "name": "Idris",
-   "state": "next",
-   "task": "Idris, P1, from T-4755 (Investor an Investor...",
-   "model": null,
-   "since": null,
+   "state": "running",
+   "task": "[build] T-4663 case-insensitive completion",
+   "model": "opus",
+   "since": "2026-11-18T09:08:46.044Z",
    "next": []
   },
   {
@@ -315,14 +328,6 @@
    "next": []
   },
   {
-   "name": "Wrenna",
-   "state": "next",
-   "task": "Wrenna, P2, T-2375 continuation (B-staged item 3...",
-   "model": null,
-   "since": null,
-   "next": []
-  },
-  {
    "name": "Maren",
    "state": "next",
    "task": "Maren, P2, found on T-3366 (11-07): in...",
@@ -332,7 +337,36 @@
   }
  ],
  "tasks": {
-  "run": [],
+  "run": [
+   {
+    "w": "Wrenna",
+    "k": "research",
+    "t": "Find what sets the name under a Home Screen widget",
+    "m": "sonnet",
+    "at": "2026-11-18T09:08:33.641Z",
+    "o": "c",
+    "task": "T-4839"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "Completion ignores letter case and small typos",
+    "m": "opus",
+    "at": "2026-11-18T09:08:46.044Z",
+    "o": "c",
+    "task": "T-4663"
+   },
+   {
+    "w": "Idris",
+    "k": "design",
+    "t": "Confirm the Builder drag-and-drop week figures",
+    "m": "opus",
+    "at": "2026-11-18T09:10:00.181Z",
+    "o": "c",
+    "task": "T-4285"
+   }
+  ],
+  "src": "plan",
   "open": [
    {
     "w": "Pernille",
@@ -407,6 +441,11 @@
   ],
   "done": [
    {
+    "w": "Pernille",
+    "t": "An independent check found that the free Pro switch for testers cannot reach App Review or App...",
+    "at": "2026-11-18T04:09:00-05:00"
+   },
+   {
     "w": "Maren",
     "t": "All eight showcase widgets planned for version 1.0 now have finished drawings in light and dark,...",
     "at": "2026-11-18T03:51:00-05:00"
@@ -415,18 +454,22 @@
     "w": "Pernille",
     "t": "Checked that the testers' Reset to first launch erases only the app's own data and never touches...",
     "at": "2026-11-18T03:32:00-05:00"
-   },
-   {
-    "w": "Maren",
-    "t": "The screens for choosing what a widget does when tapped are drawn in both the light and dark...",
-    "at": "2026-11-18T03:21:00-05:00"
    }
   ],
   "count": {
-   "next": 488,
+   "next": 487,
    "wait": 32,
    "blocked": 3,
    "you": 10
+  },
+  "fin": {
+   "n": 1,
+   "rows": [
+    [
+     "T-4852",
+     "Check finished work before..."
+    ]
+   ]
   }
  },
  "qr": [
@@ -468,47 +511,47 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-18T09:07:19Z",
+  "at": "2026-11-18T09:10:10Z",
   "s": {
    "T-0011": [
     "mergeq",
     "1st to merge",
-    1794989419598
+    1794989470645
    ],
    "T-4533": [
     "mergeq",
     "3rd to merge",
-    1794988099598
+    1794988090645
    ],
    "T-4644": [
     "mergeq",
     "4th to merge",
-    1794988639598
+    1794988630645
    ],
    "T-4762": [
     "mergeq",
     "5th to merge",
-    1794989839598
+    1794989830645
    ],
    "T-4301": [
     "mergeq",
     "6th to merge",
-    1794991099598
+    1794991090645
    ],
    "T-4771": [
     "mergeq",
     "7th to merge",
-    1794991519598
+    1794991510645
    ],
    "T-4783": [
     "mergeq",
     "7th to merge",
-    1794991519598
+    1794991510645
    ],
    "T-4574": [
     "mergeq",
     "12th to merge",
-    1794992539598
+    1794992530645
    ]
   },
   "nm": {
@@ -529,11 +572,12 @@
    "T-4301": "Idris",
    "T-4771": "Idris",
    "T-4783": "Idris",
-   "T-4574": "Idris"
+   "T-4574": "Idris",
+   "T-4852": "Pernille"
   }
  },
  "ln": {
-  "at": "2026-11-18T09:07:19Z",
+  "at": "2026-11-18T09:10:10Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -546,12 +590,12 @@
    },
    "m": {
     "checking": null,
-    "inline": 39,
-    "conflicted": 663,
+    "inline": 42,
+    "conflicted": 666,
     "failed": null,
-    "held": 2018,
+    "held": 2021,
     "retry": null,
-    "parked": 759
+    "parked": 761
    },
    "cur": [],
    "ld": [
@@ -561,12 +605,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-18T09:07:20Z",
-    "ld": 2.36,
+    "at": "2026-11-18T09:09:26Z",
+    "ld": 2.5,
     "c": 8,
     "sb": 2,
     "dk": [
-     13.7,
+     13.9,
      228.3
     ],
     "ss": [
@@ -594,6 +638,15 @@
  "operators": [
   {
    "w": "Operator",
+   "a": "Main plan",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session \u2013 4 tasks",
+   "at": "2026-11-18T04:07:20-05:00"
+  },
+  {
+   "w": "Operator",
    "a": "Jeremy's Account",
    "sr": 1,
    "m": "opus",
@@ -619,8 +672,8 @@
  "trimmed": [
   "lane_next",
   "queue_text",
-  "recent",
   "task_done",
+  "fin_short",
   "task_title",
   "done_text",
   "task_open",
@@ -628,13 +681,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 0,
+  "main": 3,
   "lanes": 2,
-  "total": 2,
-  "at": "4:07 AM",
+  "total": 5,
+  "at": "4:10 AM",
   "why": "",
-  "at_iso": "2026-11-18T09:07:00+00:00",
-  "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 4:07 AM ET</p></section>"
+  "at_iso": "2026-11-18T09:10:00+00:00",
+  "started": "4:07 AM",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 3, started 4:07 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 4:10 AM ET</p></section>"
  }
 }

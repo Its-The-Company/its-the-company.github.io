@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-18T04:04:16.070091+00:00",
+ "at": "2026-11-18T04:07:27.765759+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -129,7 +129,7 @@
    "task": "[tools] T-4806 land merge time-out fixes",
    "model": "opus",
    "started": "2026-11-18T03:27:34.411Z",
-   "seconds": 2201,
+   "seconds": 2393,
    "finished": null,
    "effort": "high"
   },
@@ -138,7 +138,7 @@
    "task": "[tools] T-4829 bottleneck watch on tick",
    "model": "opus",
    "started": "2026-11-18T03:44:30.048Z",
-   "seconds": 1186,
+   "seconds": 1377,
    "finished": null,
    "effort": "high"
   }
@@ -157,7 +157,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 473,
+  "runnable_count": 474,
   "blocked_count": 34
  },
  "meter": {
@@ -206,34 +206,8 @@
   "week_pct": 46.38,
   "usage_pct": 53.7,
   "work_pct": 81.3,
-  "read_at": "2026-11-18T04:04:00+00:00",
+  "read_at": "2026-11-18T04:07:00+00:00",
   "running": [
-   {
-    "lane": "a",
-    "task": "T-4696",
-    "w": "Pernille",
-    "k": "review",
-    "t": "Check finished work before it ships",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-17T22:39:48-05:00",
-    "n": "Evan",
-    "d": 1,
-    "src": "plan-a"
-   },
-   {
-    "lane": "a",
-    "task": "T-4700",
-    "w": "Pernille",
-    "k": "review",
-    "t": "Check finished work before it ships",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-17T22:39:48-05:00",
-    "n": "Evan",
-    "d": 1,
-    "src": "plan-a"
-   },
    {
     "lane": "a2",
     "task": "T-4516",
@@ -353,7 +327,7 @@
   }
  ],
  "disk": {
-  "free_gb": 12,
+  "free_gb": 10,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -362,14 +336,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-17T23:01:00-05:00",
+   "at": "2026-11-17T23:07:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 8,
-  "at": "2026-11-17T23:04:00-05:00",
+  "at": "2026-11-17T23:07:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -503,6 +477,13 @@
     "o": "c"
    },
    {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Gate waits while the runner shows progress",
+    "s": "next",
+    "o": "i"
+   },
+   {
     "w": "Pernille",
     "k": "test",
     "t": "Fix every bad test that failed a merge",
@@ -522,13 +503,6 @@
     "t": "Rewrite or drop outdated tests that read...",
     "s": "next",
     "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "measure",
-    "t": "Measure real scripts inside the widget on phones",
-    "s": "next",
-    "o": "i"
    }
   ],
   "done": [
@@ -549,7 +523,7 @@
    }
   ],
   "count": {
-   "next": 473,
+   "next": 474,
    "wait": 32,
    "blocked": 2,
    "you": 9
@@ -603,32 +577,32 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-18T04:04:16Z",
+  "at": "2026-11-18T04:07:13Z",
   "s": {
    "T-4750": [
     "merging",
     "Host checks on the Mac mini",
-    1794973756070
+    1794973753089
    ],
    "T-4803": [
     "mergeq",
     "2nd to merge",
-    1794973996070
+    1794973993089
    ],
    "T-4516": [
     "mergeq",
     "3rd to merge",
-    1794974176070
+    1794974173089
    ],
    "T-4700": [
     "mergeq",
     "4th to merge",
-    1794973936070
+    1794973933089
    ],
-   "T-4806": [
-    "merging",
-    "Mac tests at the main gate",
-    1794973636070
+   "T-4696": [
+    "mergeq",
+    "5th to merge",
+    1794974773089
    ],
    "T-4442": [
     "testing",
@@ -640,30 +614,35 @@
     "Mac Mini \u00b7 test",
     null
    ],
+   "T-4806": [
+    "testing",
+    "its own tests, in its copy",
+    1794973573089
+   ],
    "T-4829": [
     "testing",
     "its own tests, in its copy",
-    1794973636070
+    1794974713089
    ],
    "T-4772": [
     "testq",
     "1st for a Simulator",
-    1794973936070
+    1794973933089
    ],
    "T-4773": [
     "testq",
     "1st for a Simulator",
-    1794973936070
+    1794973933089
    ],
    "T-4533": [
     "testq",
     "2nd for a Simulator",
-    1794974476070
+    1794974473089
    ],
    "T-4654": [
     "testq",
     "2nd for a Simulator",
-    1794974476070
+    1794974473089
    ]
   },
   "nm": {
@@ -671,9 +650,10 @@
    "T-4803": "Make the tap check's record match the iPad ruling",
    "T-4516": "Prove the premade settings routes in a UI test",
    "T-4700": "Check finished work before it ships",
-   "T-4806": "Fix the causes of merge time-outs and runner errors",
+   "T-4696": "Check finished work before it ships",
    "T-4442": "Tidy the bundled first renders' small edges",
    "T-4759": "Check finished work before it ships",
+   "T-4806": "Fix the causes of merge time-outs and runner errors",
    "T-4829": "Run the bottleneck watch on every tick",
    "T-4772": "Prove a refresh tap redraws the widget",
    "T-4773": "Time the next run from the widget's own ask",
@@ -685,9 +665,10 @@
    "T-4803": "Idris",
    "T-4516": "Idris",
    "T-4700": "Pernille",
-   "T-4806": "Odalys",
+   "T-4696": "Pernille",
    "T-4442": "Idris",
    "T-4759": "Pernille",
+   "T-4806": "Odalys",
    "T-4829": "Odalys",
    "T-4772": "Idris",
    "T-4773": "Idris",
@@ -697,11 +678,11 @@
   }
  },
  "ln": {
-  "at": "2026-11-18T04:04:16Z",
+  "at": "2026-11-18T04:07:13Z",
   "mq": {
    "n": {
     "checking": 1,
-    "inline": 3,
+    "inline": 4,
     "conflicted": 3,
     "failed": 0,
     "held": 1,
@@ -709,13 +690,13 @@
     "parked": 10
    },
    "m": {
-    "checking": 15,
-    "inline": 11,
-    "conflicted": 360,
+    "checking": 18,
+    "inline": 12,
+    "conflicted": 363,
     "failed": null,
-    "held": 1715,
-    "retry": 25,
-    "parked": 280
+    "held": 1718,
+    "retry": 28,
+    "parked": 283
    },
    "cur": [
     [
@@ -724,7 +705,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     15
+     18
     ]
    ],
    "ld": [
@@ -734,23 +715,25 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-18T04:03:37Z",
-    "ld": 23.79,
+    "at": "2026-11-18T04:07:13Z",
+    "ld": 23.42,
     "c": 8,
-    "sb": 0,
+    "sb": 1,
     "dk": [
-     11.9,
+     9.7,
      228.3
     ],
     "ss": [
      174.5,
      953.7
     ],
-    "sn": []
+    "sn": [
+     "iPhone 17e"
+    ]
    },
    "macbook": {
-    "at": "2026-11-18T03:45:24Z",
-    "ld": 0.55,
+    "at": "2026-11-18T03:53:04Z",
+    "ld": 0.83,
     "c": 12,
     "sb": 0,
     "dk": [
@@ -770,15 +753,6 @@
    "e": "high",
    "t": "Work session \u2013 3 tasks",
    "at": "2026-11-17T22:22:45-05:00"
-  },
-  {
-   "w": "Operator",
-   "a": "Evan's Account",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Inbox \u2013 Evan's 11:03 PM Message on GitHub",
-   "at": "2026-11-17T23:03:36-05:00"
   },
   {
    "w": "Operator",
@@ -818,27 +792,15 @@
   }
  ],
  "reply": {
-  "sent": "2026-11-18T03:31:21Z",
-  "seconds": 285.0
+  "sent": "2026-11-18T04:03:25Z",
+  "seconds": 139.0
  },
- "inbox": [
-  {
-   "id": "c6968663984",
-   "state": "received",
-   "position": 1,
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "What do you mean by \"line that fits..."
-  }
- ],
+ "inbox": [],
  "trimmed": [
   "lane_next",
   "queue_text",
   "task_done",
   "fin_short",
-  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -847,12 +809,12 @@
  ],
  "agents_now": {
   "main": 2,
-  "lanes": 5,
-  "total": 7,
-  "at": "11:04 PM",
+  "lanes": 4,
+  "total": 6,
+  "at": "11:07 PM",
   "why": "",
-  "at_iso": "2026-11-18T04:04:00+00:00",
+  "at_iso": "2026-11-18T04:07:00+00:00",
   "started": "10:22 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 2, started 10:22 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 11:04 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 2, started 10:22 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 11:07 PM ET</p></section>"
  }
 }

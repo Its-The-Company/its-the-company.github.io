@@ -1,19 +1,19 @@
 {
  "schema": 1,
- "at": "2026-11-18T02:58:25.078237+00:00",
+ "at": "2026-11-18T03:01:26.694215+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-17T19:10:01-05:00",
   "flow": [
    {
-    "t": "T-4782",
-    "name": "Stop a Pro store test at its first stalled wait",
-    "acct": "Personal a",
+    "t": "T-4770",
+    "name": "Re-estimate the release date from measured build speed",
+    "acct": "Personal b",
     "steps": [
      {
-      "s": "macbook",
-      "at": 1794969523
+      "s": "landing",
+      "at": 1794970735
      }
     ]
    },
@@ -29,6 +29,14 @@
    }
   ],
   "done": [
+   {
+    "t": "T-4782",
+    "name": "Stop a Pro store test at its first stalled wait",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794970713
+   },
    {
     "t": "T-4643",
     "name": "Make the size ladder measure each rung more than once",
@@ -101,17 +109,9 @@
     "steps": [],
     "end": "landed",
     "end_at": 1794963879
-   },
-   {
-    "t": "T-4719",
-    "name": "Check finished work before it ships",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794963857
    }
   ],
-  "landed": 41,
+  "landed": 42,
   "failed": 6
  },
  "workers": [],
@@ -202,7 +202,7 @@
   "week_pct": 43.81,
   "usage_pct": 53.5,
   "work_pct": 81.2,
-  "read_at": "2026-11-18T02:58:00+00:00",
+  "read_at": "2026-11-18T03:01:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -232,14 +232,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-17T21:52:00-05:00",
+   "at": "2026-11-17T21:59:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 8,
-  "at": "2026-11-17T21:58:00-05:00",
+  "at": "2026-11-17T22:01:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -471,73 +471,67 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-18T02:58:16Z",
+  "at": "2026-11-18T03:01:07Z",
   "s": {
-   "T-4782": [
+   "T-4643": [
     "mergeq",
     "1st to merge",
-    1794962176929
+    1794970867702
    ],
-   "T-4643": [
-    "mergetest",
-    "Xcode checks on the MacBook, 2nd to merge",
-    1794970636929
-   ],
-   "T-4787": [
+   "T-4782": [
     "mergeq",
-    "3rd to merge",
-    1794962656929
+    "2nd to merge",
+    1794963127702
    ],
    "T-4719": [
     "mergeq",
-    "4th to merge",
-    1794963136929
+    "2nd to merge",
+    1794963127702
    ],
    "T-4720": [
     "mergeq",
-    "4th to merge",
-    1794963136929
+    "2nd to merge",
+    1794963127702
    ],
    "T-4659": [
     "mergeq",
-    "5th to merge",
-    1794963196929
+    "3rd to merge",
+    1794963187702
    ],
    "T-4750": [
     "mergeq",
-    "5th to merge",
-    1794963196929
+    "3rd to merge",
+    1794963187702
    ],
    "T-4761": [
     "mergeq",
-    "5th to merge",
-    1794963196929
+    "3rd to merge",
+    1794963187702
    ],
    "T-4770": [
     "mergeq",
-    "6th to merge",
-    1794964696929
+    "4th to merge",
+    1794964687702
    ],
    "T-4781": [
     "mergeq",
-    "7th to merge",
-    1794964696929
+    "5th to merge",
+    1794964687702
    ],
    "T-4774": [
     "mergeq",
-    "7th to merge",
-    1794964696929
+    "5th to merge",
+    1794964687702
    ],
    "T-4814": [
     "merging",
     "Mac tests at the main gate",
-    1794970096929
+    1794970087702
    ]
   },
   "nm": {
-   "T-4782": "Stop a Pro store test at its first stalled wait",
    "T-4643": "Make the size ladder measure each rung more than once",
-   "T-4787": "Count failed merges by cause: bad test or broken code",
+   "T-4782": "Stop a Pro store test at its first stalled wait",
    "T-4719": "Check finished work before it ships",
    "T-4720": "Check finished work before it ships",
    "T-4659": "Prove a widget button's tap reaches its Python handler",
@@ -549,9 +543,8 @@
    "T-4814": "Split the merge limit by what a change touches"
   },
   "wk": {
-   "T-4782": "Idris",
    "T-4643": "Idris",
-   "T-4787": "Odalys",
+   "T-4782": "Idris",
    "T-4719": "Odalys",
    "T-4720": "Pernille",
    "T-4659": "Idris",
@@ -569,10 +562,10 @@
   }
  },
  "ln": {
-  "at": "2026-11-18T02:58:16Z",
+  "at": "2026-11-18T03:01:07Z",
   "mq": {
    "n": {
-    "checking": 1,
+    "checking": 0,
     "inline": 10,
     "conflicted": 2,
     "failed": 0,
@@ -581,33 +574,24 @@
     "parked": 6
    },
    "m": {
-    "checking": 1,
-    "inline": 125,
-    "conflicted": 843,
+    "checking": null,
+    "inline": 128,
+    "conflicted": 846,
     "failed": null,
-    "held": 1649,
+    "held": 1652,
     "retry": null,
-    "parked": 598
+    "parked": 601
    },
-   "cur": [
-    [
-     [
-      "T-4643"
-     ],
-     "iPhone app tests",
-     "MacBook",
-     1
-    ]
-   ],
+   "cur": [],
    "ld": [
-    54,
-    "2026-11-18T02:58:16Z"
+    55,
+    "2026-11-18T02:58:33Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-18T02:58:17Z",
-    "ld": 4.38,
+    "at": "2026-11-18T03:00:26Z",
+    "ld": 4.5,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -615,7 +599,7 @@
      228.3
     ],
     "ss": [
-     174.3,
+     174.2,
      953.7
     ],
     "sn": []
@@ -666,10 +650,10 @@
   "main": 0,
   "lanes": 0,
   "total": 0,
-  "at": "9:58 PM",
+  "at": "10:01 PM",
   "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
-  "at_iso": "2026-11-18T02:58:00+00:00",
+  "at_iso": "2026-11-18T03:01:00+00:00",
   "started": "7:10 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0, started 7:10 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:58 PM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0, started 7:10 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 10:01 PM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
  }
 }

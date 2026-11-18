@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-18T12:41:04.892440+00:00",
+ "at": "2026-11-18T12:46:04.920332+00:00",
  "session": {
   "active": false,
   "kind": "",
@@ -132,44 +132,11 @@
  },
  "workers": [],
  "who": "",
- "recent": [
-  {
-   "name": "idris",
-   "task": "[test] T-4887 gated second-tap caret test",
-   "model": "opus",
-   "started": "2026-11-18T11:14:20.521Z",
-   "seconds": null,
-   "finished": "2026-11-18T12:21:01.385000+00:00"
-  },
-  {
-   "name": "maren",
-   "task": "[design] T-4886 PyWidget in premade lines",
-   "model": "sonnet",
-   "started": "2026-11-18T11:02:42.183Z",
-   "seconds": null,
-   "finished": "2026-11-18T12:08:59.987000+00:00"
-  },
-  {
-   "name": "pernille",
-   "task": "[build] T-4645 settings check matches Swift decoder",
-   "model": "sonnet",
-   "started": "2026-11-18T11:27:20.238Z",
-   "seconds": null,
-   "finished": "2026-11-18T11:58:02.349000+00:00"
-  },
-  {
-   "name": "pernille",
-   "task": "[review] T-4876 long-line caret review",
-   "model": "opus",
-   "started": "2026-11-18T10:40:13.676Z",
-   "seconds": null,
-   "finished": "2026-11-18T11:26:58.175000+00:00"
-  }
- ],
+ "recent": [],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 488,
+  "runnable_count": 490,
   "blocked_count": 34
  },
  "meter": {
@@ -218,7 +185,7 @@
   "week_pct": 49.77,
   "usage_pct": 52.0,
   "work_pct": 81.9,
-  "read_at": "2026-11-18T12:41:00+00:00",
+  "read_at": "2026-11-18T12:47:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -281,6 +248,7 @@
     "e": "high",
     "at": "2026-11-18T07:03:51-05:00",
     "n": "Jeremy",
+    "d": 1,
     "src": "plan-b"
    },
    {
@@ -332,7 +300,7 @@
  "lock_in": {
   "on": false,
   "pool": 12,
-  "at": "2026-11-18T07:41:00-05:00",
+  "at": "2026-11-18T07:47:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -485,7 +453,7 @@
    }
   ],
   "count": {
-   "next": 488,
+   "next": 490,
    "wait": 32,
    "blocked": 2,
    "you": 9
@@ -530,52 +498,52 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-18T12:41:04Z",
+  "at": "2026-11-18T12:46:04Z",
   "s": {
    "T-4533": [
     "merging",
     "Host checks on the Mac mini",
-    1795003324892
+    1795003324920
    ],
    "T-0011": [
     "mergeq",
     "1st to merge",
-    1795001884892
+    1795001884920
    ],
    "T-4574": [
     "mergeq",
     "3rd to merge",
-    1794992524892
+    1794992524920
    ],
    "T-4762": [
     "mergeq",
     "4th to merge",
-    1794994684892
+    1794994684920
    ],
    "T-4748": [
     "mergeq",
     "6th to merge",
-    1795002364892
+    1795002364920
    ],
    "T-4575": [
     "mergeq",
     "7th to merge",
-    1795003864892
+    1795003864920
    ],
    "T-4640": [
     "mergeq",
     "8th to merge",
-    1795004344892
+    1795004344920
    ],
    "T-4789": [
+    "mergeq",
+    "9th to merge",
+    1795005964920
+   ],
+   "T-4635": [
     "testing",
     "Mac Mini \u00b7 test",
     null
-   ],
-   "T-4635": [
-    "testq",
-    "1st for a Simulator",
-    1795005664892
    ]
   },
   "nm": {
@@ -602,11 +570,11 @@
   }
  },
  "ln": {
-  "at": "2026-11-18T12:41:04Z",
+  "at": "2026-11-18T12:46:04Z",
   "mq": {
    "n": {
     "checking": 1,
-    "inline": 6,
+    "inline": 7,
     "conflicted": 5,
     "failed": 0,
     "held": 1,
@@ -614,13 +582,13 @@
     "parked": 9
    },
    "m": {
-    "checking": 39,
-    "inline": 59,
-    "conflicted": 568,
+    "checking": 44,
+    "inline": 60,
+    "conflicted": 573,
     "failed": null,
-    "held": 2232,
+    "held": 2237,
     "retry": null,
-    "parked": 877
+    "parked": 882
    },
    "cur": [
     [
@@ -629,7 +597,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     39
+     44
     ]
    ],
    "ld": [
@@ -639,12 +607,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-18T12:41:06Z",
-    "ld": 32.35,
+    "at": "2026-11-18T12:46:05Z",
+    "ld": 18.76,
     "c": 8,
     "sb": 2,
     "dk": [
-     13.7,
+     13.2,
      228.3
     ],
     "ss": [
@@ -685,7 +653,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 2 tasks",
+   "t": "Work session \u2013 1 task",
    "at": "2026-11-18T07:16:26-05:00"
   }
  ],
@@ -697,7 +665,6 @@
  "trimmed": [
   "lane_next",
   "queue_text",
-  "recent",
   "task_done",
   "task_title",
   "done_text",
@@ -709,10 +676,10 @@
   "main": 0,
   "lanes": 2,
   "total": 2,
-  "at": "7:41 AM",
+  "at": "7:47 AM",
   "why": "",
-  "at_iso": "2026-11-18T12:41:00+00:00",
+  "at_iso": "2026-11-18T12:47:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 7:41 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 7:47 AM ET</p></section>"
  }
 }

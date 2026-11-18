@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-18T03:39:15.721062+00:00",
+ "at": "2026-11-18T03:42:31.671904+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -120,7 +120,7 @@
    "task": "[tools] T-4806 land merge time-out fixes",
    "model": "opus",
    "started": "2026-11-18T03:27:34.411Z",
-   "seconds": 701,
+   "seconds": 897,
    "finished": null,
    "effort": "high"
   },
@@ -129,7 +129,7 @@
    "task": "[tools] T-4817 bottleneck watcher",
    "model": "opus",
    "started": "2026-11-18T03:27:43.614Z",
-   "seconds": 692,
+   "seconds": 888,
    "finished": null,
    "effort": "high"
   }
@@ -188,8 +188,56 @@
   "week_pct": 46.38,
   "usage_pct": 53.7,
   "work_pct": 81.3,
-  "read_at": "2026-11-18T03:39:00+00:00",
+  "read_at": "2026-11-18T03:42:00+00:00",
   "running": [
+   {
+    "lane": "a",
+    "task": "T-4696",
+    "w": "Pernille",
+    "k": "review",
+    "t": "Check finished work before it ships",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-17T22:39:48-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a",
+    "task": "T-4700",
+    "w": "Pernille",
+    "k": "review",
+    "t": "Check finished work before it ships",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-17T22:39:48-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a2",
+    "task": "T-4516",
+    "w": "Idris",
+    "k": "build",
+    "t": "Prove the premade settings routes in a UI test",
+    "m": "sonnet",
+    "e": "high",
+    "at": "2026-11-17T22:39:46-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a2",
+    "task": "T-4442",
+    "w": "Idris",
+    "k": "build",
+    "t": "Tidy the bundled first renders' small edges",
+    "m": "opus",
+    "e": "medium",
+    "at": "2026-11-17T22:39:46-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
    {
     "lane": "a3",
     "task": "T-4533",
@@ -224,6 +272,7 @@
     "e": "high",
     "at": "2026-11-17T22:39:14-05:00",
     "n": "Jeremy",
+    "d": 1,
     "src": "plan-b"
    },
    {
@@ -236,6 +285,7 @@
     "e": "high",
     "at": "2026-11-17T22:39:14-05:00",
     "n": "Jeremy",
+    "d": 1,
     "src": "plan-b"
    },
    {
@@ -282,7 +332,7 @@
   }
  ],
  "disk": {
-  "free_gb": 13,
+  "free_gb": 14,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -291,14 +341,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-17T22:34:00-05:00",
+   "at": "2026-11-17T22:41:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 8,
-  "at": "2026-11-17T22:39:00-05:00",
+  "at": "2026-11-17T22:42:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -527,17 +577,17 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-18T03:39:15Z",
+  "at": "2026-11-18T03:42:31Z",
   "s": {
    "T-4750": [
     "merging",
     "Host checks on the Mac mini",
-    1794972855721
+    1794972871671
    ],
    "T-4759": [
     "mergeq",
     "1st to merge",
-    1794972675721
+    1794972631671
    ],
    "T-4659": [
     "mergetest",
@@ -548,6 +598,11 @@
     "mergetest",
     "iPhone tests on the MacBook",
     null
+   ],
+   "T-4817": [
+    "merging",
+    "Mac tests at the main gate",
+    1794973231671
    ],
    "T-4772": [
     "testing",
@@ -562,7 +617,17 @@
    "T-4806": [
     "testing",
     "its own tests, in its copy",
-    1794972735721
+    1794972691671
+   ],
+   "T-4533": [
+    "testq",
+    "1st for a Simulator",
+    1794973291671
+   ],
+   "T-4654": [
+    "testq",
+    "1st for a Simulator",
+    1794973291671
    ]
   },
   "nm": {
@@ -570,22 +635,28 @@
    "T-4759": "Check finished work before it ships",
    "T-4659": "Prove a widget button's tap reaches its Python handler",
    "T-4761": "Keep one layout for the widget state format",
+   "T-4817": "Turn every bottleneck into a fix task automatically",
    "T-4772": "Prove a refresh tap redraws the widget",
    "T-4773": "Time the next run from the widget's own ask",
-   "T-4806": "Fix the causes of merge time-outs and runner errors"
+   "T-4806": "Fix the causes of merge time-outs and runner errors",
+   "T-4533": "Make the premade settings save sturdier on disk errors",
+   "T-4654": "Say true things when a Shortcut's premade is held back"
   },
   "wk": {
    "T-4750": "Idris",
    "T-4759": "Pernille",
    "T-4659": "Idris",
    "T-4761": "Idris",
+   "T-4817": "Odalys",
    "T-4772": "Idris",
    "T-4773": "Idris",
-   "T-4806": "Odalys"
+   "T-4806": "Odalys",
+   "T-4533": "Pernille",
+   "T-4654": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-18T03:39:15Z",
+  "at": "2026-11-18T03:42:31Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -593,17 +664,17 @@
     "conflicted": 3,
     "failed": 2,
     "held": 1,
-    "retry": 0,
-    "parked": 12
+    "retry": 1,
+    "parked": 11
    },
    "m": {
-    "checking": 5,
-    "inline": 8,
-    "conflicted": 335,
-    "failed": 5,
-    "held": 1690,
-    "retry": null,
-    "parked": 101
+    "checking": 8,
+    "inline": 12,
+    "conflicted": 339,
+    "failed": 8,
+    "held": 1693,
+    "retry": 4,
+    "parked": 180
    },
    "cur": [
     [
@@ -612,7 +683,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     5
+     8
     ]
    ],
    "ld": [
@@ -622,12 +693,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-18T03:38:49Z",
-    "ld": 49.66,
+    "at": "2026-11-18T03:42:01Z",
+    "ld": 38.56,
     "c": 8,
     "sb": 1,
     "dk": [
-     13.3,
+     12.5,
      228.3
     ],
     "ss": [
@@ -660,6 +731,24 @@
    "e": "high",
    "t": "Work session \u2013 2 tasks",
    "at": "2026-11-17T22:22:45-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Evan's Account",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session \u2013 2 tasks",
+   "at": "2026-11-17T22:39:47-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Evan's Account",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session \u2013 2 tasks",
+   "at": "2026-11-17T22:39:45-05:00"
   },
   {
    "w": "Operator",
@@ -706,12 +795,12 @@
  ],
  "agents_now": {
   "main": 2,
-  "lanes": 3,
-  "total": 5,
-  "at": "10:39 PM",
+  "lanes": 5,
+  "total": 7,
+  "at": "10:42 PM",
   "why": "",
-  "at_iso": "2026-11-18T03:39:00+00:00",
+  "at_iso": "2026-11-18T03:42:00+00:00",
   "started": "10:22 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 2, started 10:22 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 10:39 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 2, started 10:22 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 10:42 PM ET</p></section>"
  }
 }

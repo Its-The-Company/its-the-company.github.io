@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-18T16:27:37.150121+00:00",
+ "at": "2026-11-18T16:31:48.652856+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -225,7 +225,7 @@
    "task": "[build] T-4493 land the site clutter cut",
    "model": "opus",
    "started": "2026-11-18T15:43:48.650Z",
-   "seconds": 2628,
+   "seconds": 2880,
    "finished": null,
    "effort": "high"
   },
@@ -234,7 +234,7 @@
    "task": "[tools] T-4180 judge stray runner salvage",
    "model": "opus",
    "started": "2026-11-18T15:50:45.673Z",
-   "seconds": 2211,
+   "seconds": 2462,
    "finished": null,
    "effort": "high"
   }
@@ -282,19 +282,19 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 4.0,
+   "pct": 5.0,
    "resets_at": "2026-11-18T15:10:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-18T11:01:53.631671-05:00",
+   "read_at": "2026-11-18T11:29:20.931947-05:00",
    "source": "live",
-   "left": 96.0,
+   "left": 95.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 47.0,
    "resets_at": "2026-11-22T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-18T11:01:53.631671-05:00",
+   "read_at": "2026-11-18T11:29:20.931947-05:00",
    "source": "live",
    "left": 53.0,
    "left_words": "of your weekly allowance left"
@@ -306,7 +306,7 @@
    "read_at": "2026-11-18T10:30:22.136410-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-18T11:01:53.631671-05:00"
+  "read_at": "2026-11-18T11:29:20.931947-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -326,7 +326,7 @@
   "week_pct": 51.32,
   "usage_pct": 52.2,
   "work_pct": 82.0,
-  "read_at": "2026-11-18T16:28:00+00:00",
+  "read_at": "2026-11-18T16:31:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -372,7 +372,7 @@
   }
  ],
  "disk": {
-  "free_gb": 15,
+  "free_gb": 14,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -381,14 +381,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-18T11:21:00-05:00",
+   "at": "2026-11-18T11:29:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 12,
-  "at": "2026-11-18T11:28:00-05:00",
+  "at": "2026-11-18T11:31:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -623,62 +623,62 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-18T16:27:37Z",
+  "at": "2026-11-18T16:31:29Z",
   "s": {
    "T-4533": [
     "merging",
     "Host checks on the Mac mini",
-    1795018837150
+    1795018889002
    ],
    "T-4574": [
     "mergeq",
     "2nd to merge",
-    1794992497150
+    1794992489002
    ],
    "T-4635": [
     "mergeq",
     "4th to merge",
-    1795006417150
+    1795006409002
    ],
    "T-4581": [
     "mergeq",
     "5th to merge",
-    1795017877150
+    1795017869002
    ],
    "T-4575": [
     "mergeq",
     "7th to merge",
-    1795007497150
+    1795007489002
    ],
    "T-4789": [
     "mergeq",
     "7th to merge",
-    1795007497150
+    1795007489002
    ],
    "T-4835": [
     "mergeq",
     "8th to merge",
-    1795011757150
+    1795011749002
    ],
    "T-4679": [
     "mergeq",
     "9th to merge",
-    1795011997150
+    1795011989002
    ],
    "T-4889": [
     "mergeq",
     "12th to merge",
-    1795014877150
+    1795014929002
    ],
    "T-4493": [
     "merging",
     "Mac tests at the main gate",
-    1795019257150
+    1795019309002
    ],
    "T-4220": [
     "merging",
     "Mac tests at the main gate",
-    1795018657150
+    1795018709002
    ]
   },
   "nm": {
@@ -710,7 +710,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-18T16:27:37Z",
+  "at": "2026-11-18T16:31:29Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -722,13 +722,13 @@
     "parked": 5
    },
    "m": {
-    "checking": 7,
-    "inline": 160,
-    "conflicted": 794,
+    "checking": 10,
+    "inline": 164,
+    "conflicted": 798,
     "failed": null,
-    "held": 2458,
+    "held": 2462,
     "retry": null,
-    "parked": 770
+    "parked": 774
    },
    "cur": [
     [
@@ -737,7 +737,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     7
+     10
     ]
    ],
    "ld": [
@@ -747,25 +747,30 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-18T16:28:26Z",
-    "ld": 62.65,
+    "at": "2026-11-18T16:30:59Z",
+    "ld": 54.72,
     "c": 8,
+    "sb": 2,
     "dk": [
-     14.2,
+     14.7,
      228.3
     ],
     "ss": [
      167.8,
      953.7
+    ],
+    "sn": [
+     "t4772-27",
+     "iPhone 17e"
     ]
    },
    "macbook": {
-    "at": "2026-11-18T16:21:30Z",
-    "ld": 4.7,
+    "at": "2026-11-18T16:29:18Z",
+    "ld": 1.7,
     "c": 12,
     "sb": 0,
     "dk": [
-     306.3,
+     306.1,
      926.4
     ],
     "sn": []
@@ -786,6 +791,8 @@
    "w": "Operator",
    "a": "Jeremy's Account",
    "sr": 1,
+   "m": "opus",
+   "e": "high",
    "t": "Work session \u2013 2 tasks",
    "at": "2026-11-18T10:51:33-05:00"
   }
@@ -810,10 +817,10 @@
   "main": 2,
   "lanes": 1,
   "total": 3,
-  "at": "11:28 AM",
+  "at": "11:31 AM",
   "why": "",
-  "at_iso": "2026-11-18T16:28:00+00:00",
+  "at_iso": "2026-11-18T16:31:00+00:00",
   "started": "10:30 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 10:30 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 11:28 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 10:30 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 11:31 AM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-18T08:12:05.968550+00:00",
+ "at": "2026-11-18T08:15:13.099881+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -120,12 +120,21 @@
    "task": "[build] T-4688 Developer mode for Pro",
    "model": "opus",
    "started": "2026-11-18T05:56:56.560Z",
-   "seconds": 8109,
+   "seconds": 8296,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "idris",
+   "task": "[review] T-4862 review of ea66407478",
+   "model": "opus",
+   "started": "2026-11-18T08:12:07.301Z",
+   "seconds": 185,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Idris",
+ "who": "Idris x2",
  "recent": [
   {
    "name": "pernille",
@@ -168,19 +177,19 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 11.0,
+   "pct": 12.0,
    "resets_at": "2026-11-18T05:10:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-18T03:00:16.310886-05:00",
+   "read_at": "2026-11-18T03:12:39.362219-05:00",
    "source": "live",
-   "left": 89.0,
+   "left": 88.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 42.0,
    "resets_at": "2026-11-22T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-18T03:00:16.310886-05:00",
+   "read_at": "2026-11-18T03:12:39.362219-05:00",
    "source": "live",
    "left": 58.0,
    "left_words": "of your weekly allowance left"
@@ -192,7 +201,7 @@
    "read_at": "2026-11-18T00:47:24.484187-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-18T03:00:16.310886-05:00"
+  "read_at": "2026-11-18T03:12:39.362219-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -212,7 +221,7 @@
   "week_pct": 46.38,
   "usage_pct": 53.1,
   "work_pct": 80.8,
-  "read_at": "2026-11-18T08:12:00+00:00",
+  "read_at": "2026-11-18T08:15:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -335,7 +344,7 @@
   }
  ],
  "disk": {
-  "free_gb": 13,
+  "free_gb": 14,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -344,14 +353,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-18T03:06:00-05:00",
+   "at": "2026-11-18T03:12:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 11,
-  "at": "2026-11-18T03:12:00-05:00",
+  "at": "2026-11-18T03:15:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -428,6 +437,16 @@
     "at": "2026-11-18T05:56:56.560Z",
     "o": "c",
     "task": "T-4688"
+   },
+   {
+    "w": "Idris",
+    "k": "review",
+    "t": "Check finished work before it ships",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-18T08:12:07.301Z",
+    "o": "c",
+    "task": "T-4862"
    }
   ],
   "src": "plan",
@@ -591,22 +610,22 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-18T08:12:05Z",
+  "at": "2026-11-18T08:15:00Z",
   "s": {
    "T-4533": [
     "merging",
     "Host checks on the Mac mini",
-    1794988085968
+    1794988140889
    ],
    "T-0011": [
     "mergeq",
     "1st to merge",
-    1794989465968
+    1794989460889
    ],
    "T-4644": [
     "mergeq",
     "3rd to merge",
-    1794988625968
+    1794988620889
    ],
    "T-4688": [
     "mergetest",
@@ -655,7 +674,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-18T08:12:05Z",
+  "at": "2026-11-18T08:15:00Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -667,13 +686,13 @@
     "parked": 9
    },
    "m": {
-    "checking": 24,
-    "inline": 8,
-    "conflicted": 608,
+    "checking": 26,
+    "inline": 11,
+    "conflicted": 611,
     "failed": null,
-    "held": 1963,
+    "held": 1966,
     "retry": null,
-    "parked": 608
+    "parked": 611
    },
    "cur": [
     [
@@ -682,7 +701,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     24
+     26
     ]
    ],
    "ld": [
@@ -692,12 +711,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-18T08:12:06Z",
-    "ld": 0.82,
+    "at": "2026-11-18T08:14:36Z",
+    "ld": 1.32,
     "c": 8,
     "sb": 2,
     "dk": [
-     13.5,
+     13.3,
      228.3
     ],
     "ss": [
@@ -786,13 +805,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 1,
+  "main": 2,
   "lanes": 5,
-  "total": 6,
-  "at": "3:12 AM",
+  "total": 7,
+  "at": "3:15 AM",
   "why": "",
-  "at_iso": "2026-11-18T08:12:00+00:00",
+  "at_iso": "2026-11-18T08:15:00+00:00",
   "started": "12:47 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 1, started 12:47 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 3:12 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 2, started 12:47 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 3:15 AM ET</p></section>"
  }
 }

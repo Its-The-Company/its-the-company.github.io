@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-18T20:23:40.656685+00:00",
+ "at": "2026-11-18T20:26:43.210558+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -137,7 +137,7 @@
    "task": "[tools] T-4907 keep main green after every land",
    "model": "opus",
    "started": "2026-11-18T19:11:56.141Z",
-   "seconds": 4304,
+   "seconds": 4487,
    "finished": null,
    "effort": "high"
   },
@@ -146,7 +146,7 @@
    "task": "[tools] T-4902 Investor P0 process lines past limit",
    "model": "opus",
    "started": "2026-11-18T19:12:07.311Z",
-   "seconds": 4293,
+   "seconds": 4475,
    "finished": null,
    "effort": "high"
   },
@@ -155,7 +155,7 @@
    "task": "[build] T-4784 pin refresh glyph button style",
    "model": "opus",
    "started": "2026-11-18T20:23:23.859Z",
-   "seconds": 16,
+   "seconds": 199,
    "finished": null,
    "effort": "high"
   }
@@ -187,19 +187,19 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 1.0,
+   "pct": 2.0,
    "resets_at": "2026-11-18T20:10:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-18T15:18:19.029977-05:00",
+   "read_at": "2026-11-18T15:24:45.850442-05:00",
    "source": "live",
-   "left": 99.0,
+   "left": 98.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 50.0,
    "resets_at": "2026-11-22T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-18T15:18:19.029977-05:00",
+   "read_at": "2026-11-18T15:24:45.850442-05:00",
    "source": "live",
    "left": 50.0,
    "left_words": "of your weekly allowance left"
@@ -211,7 +211,7 @@
    "read_at": "2026-11-18T14:09:30.092585-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-18T15:18:19.029977-05:00"
+  "read_at": "2026-11-18T15:24:45.850442-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -231,7 +231,7 @@
   "week_pct": 51.56,
   "usage_pct": 51.3,
   "work_pct": 81.5,
-  "read_at": "2026-11-18T20:23:00+00:00",
+  "read_at": "2026-11-18T20:26:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -261,14 +261,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions wait until 20 GB is free.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-18T15:18:00-05:00",
+   "at": "2026-11-18T15:24:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-18T15:23:00-05:00",
+  "at": "2026-11-18T15:26:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -513,31 +513,38 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-18T20:23:27Z",
+  "at": "2026-11-18T20:26:43Z",
   "s": {
+   "T-4907": [
+    "merging",
+    "Mac tests at the main gate",
+    1795033483210
+   ],
    "T-4902": [
     "merging",
     "Mac tests at the main gate",
-    1795033227088
+    1795033243210
    ],
-   "T-4907": [
+   "T-4784": [
     "testing",
     "its own tests, in its copy",
-    1795031607088
+    1795033603210
    ]
   },
   "nm": {
+   "T-4907": "Keep main green after every land",
    "T-4902": "Let Investor-asked P0 process lines start past the limit",
-   "T-4907": "Keep main green after every land"
+   "T-4784": "Pin the refresh glyph's button style in a test"
   },
   "wk": {
-   "T-4902": "Odalys",
    "T-4907": "Odalys",
+   "T-4902": "Odalys",
+   "T-4784": "Idris",
    "T-4773": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-18T20:23:27Z",
+  "at": "2026-11-18T20:26:43Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -551,11 +558,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 529,
+    "conflicted": 532,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1093
+    "parked": 1096
    },
    "cur": [],
    "ld": [
@@ -565,8 +572,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-18T20:23:03Z",
-    "ld": 2.93,
+    "at": "2026-11-18T20:26:17Z",
+    "ld": 3.65,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -623,10 +630,10 @@
   "main": 3,
   "lanes": 0,
   "total": 3,
-  "at": "3:23 PM",
+  "at": "3:26 PM",
   "why": "",
-  "at_iso": "2026-11-18T20:23:00+00:00",
+  "at_iso": "2026-11-18T20:26:00+00:00",
   "started": "2:09 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 2:09 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 3:23 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 2:09 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 3:26 PM ET</p></section>"
  }
 }

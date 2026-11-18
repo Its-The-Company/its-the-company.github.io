@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-18T06:49:30.315012+00:00",
+ "at": "2026-11-18T06:52:36.250136+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -165,7 +165,7 @@
    "task": "[build] T-4688 Developer mode for Pro",
    "model": "opus",
    "started": "2026-11-18T05:56:56.560Z",
-   "seconds": 3153,
+   "seconds": 3339,
    "finished": null,
    "effort": "high"
   },
@@ -174,7 +174,7 @@
    "task": "[build] T-4767 button handler exit as error",
    "model": "opus",
    "started": "2026-11-18T06:37:03.752Z",
-   "seconds": 746,
+   "seconds": 932,
    "finished": null,
    "effort": "high"
   }
@@ -198,19 +198,19 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 6.0,
+   "pct": 7.0,
    "resets_at": "2026-11-18T05:10:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-18T01:36:51.604414-05:00",
+   "read_at": "2026-11-18T01:49:50.429581-05:00",
    "source": "live",
-   "left": 94.0,
+   "left": 93.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 41.0,
    "resets_at": "2026-11-22T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-18T01:36:51.604414-05:00",
+   "read_at": "2026-11-18T01:49:50.429581-05:00",
    "source": "live",
    "left": 59.0,
    "left_words": "of your weekly allowance left"
@@ -222,7 +222,7 @@
    "read_at": "2026-11-18T00:47:24.484187-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-18T01:36:51.604414-05:00"
+  "read_at": "2026-11-18T01:49:50.429581-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -242,7 +242,7 @@
   "week_pct": 46.38,
   "usage_pct": 53.1,
   "work_pct": 80.8,
-  "read_at": "2026-11-18T06:49:00+00:00",
+  "read_at": "2026-11-18T06:52:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -325,7 +325,7 @@
   }
  ],
  "disk": {
-  "free_gb": 28,
+  "free_gb": 26,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -334,14 +334,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-18T01:42:00-05:00",
+   "at": "2026-11-18T01:49:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 10,
-  "at": "2026-11-18T01:49:00-05:00",
+  "at": "2026-11-18T01:52:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -576,57 +576,62 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-18T06:49:07Z",
+  "at": "2026-11-18T06:52:17Z",
   "s": {
    "T-4796": [
     "merging",
     "Host checks on the Mac mini",
-    1794984067692
+    1794984017245
    ],
    "T-4442": [
     "mergeq",
     "2nd to merge",
-    1794975307692
+    1794975317245
    ],
    "T-4516": [
     "mergetest",
     "Xcode checks on the MacBook, 3rd to merge",
-    1794983827692
+    1794983837245
    ],
    "T-4784": [
     "mergeq",
     "4th to merge",
-    1794982807692
+    1794982817245
+   ],
+   "T-4854": [
+    "mergeq",
+    "5th to merge",
+    1794984617245
+   ],
+   "T-4767": [
+    "merging",
+    "Mac tests at the main gate",
+    1794984737245
    ],
    "T-4688": [
     "testing",
     "its own tests, in its copy",
-    1794983527692
-   ],
-   "T-4767": [
-    "testing",
-    "its own tests, in its copy",
-    1794984067692
+    1794983537245
    ],
    "T-0044": [
     "testq",
     "1st for a Simulator",
-    1794984367692
+    1794984317245
    ],
    "T-4301": [
     "testq",
     "1st for a Simulator",
-    1794984367692
+    1794984317245
    ],
    "T-4644": [
     "testq",
     "1st for a Simulator",
-    1794984367692
+    1794984317245
    ],
    "T-4772": [
     "testq",
     "1st for a Simulator",
-    1794984367692
+    1794984317245
    ]
   },
   "nm": {
@@ -634,8 +639,9 @@
    "T-4442": "Tidy the bundled first renders' small edges",
    "T-4516": "Prove the premade settings routes in a UI test",
    "T-4784": "Pin the refresh glyph's button style in a test",
-   "T-4688": "Build a Developer mode for testing Pro",
+   "T-4854": "Review the button args number limit",
    "T-4767": "Treat a button handler's exit as the script's error",
+   "T-4688": "Build a Developer mode for testing Pro",
    "T-0044": "Test running marketplace Python inside a web view",
    "T-4301": "Read fresh Pro gates after a queued wait",
    "T-4644": "Check the ladder's files in the gate build's own tests",
@@ -646,8 +652,9 @@
    "T-4442": "Idris",
    "T-4516": "Idris",
    "T-4784": "Idris",
-   "T-4688": "Idris",
+   "T-4854": "Idris",
    "T-4767": "Pernille",
+   "T-4688": "Idris",
    "T-0044": "Idris",
    "T-4301": "Idris",
    "T-4644": "Idris",
@@ -656,11 +663,11 @@
   }
  },
  "ln": {
-  "at": "2026-11-18T06:49:07Z",
+  "at": "2026-11-18T06:52:17Z",
   "mq": {
    "n": {
     "checking": 2,
-    "inline": 2,
+    "inline": 3,
     "conflicted": 3,
     "failed": 0,
     "held": 1,
@@ -668,13 +675,13 @@
     "parked": 10
    },
    "m": {
-    "checking": 10,
-    "inline": 91,
-    "conflicted": 525,
+    "checking": 13,
+    "inline": 32,
+    "conflicted": 528,
     "failed": null,
-    "held": 1880,
+    "held": 1883,
     "retry": null,
-    "parked": 445
+    "parked": 448
    },
    "cur": [
     [
@@ -683,7 +690,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     8
+     12
     ],
     [
      [
@@ -691,7 +698,7 @@
      ],
      "iPhone app tests",
      "MacBook",
-     12
+     15
     ]
    ],
    "ld": [
@@ -701,12 +708,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-18T06:48:23Z",
-    "ld": 38.99,
+    "at": "2026-11-18T06:51:49Z",
+    "ld": 22.86,
     "c": 8,
     "sb": 2,
     "dk": [
-     26.3,
+     26.1,
      228.3
     ],
     "ss": [
@@ -756,7 +763,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 2 tasks",
+   "t": "Work session \u2013 1 task",
    "at": "2026-11-18T01:41:09-05:00"
   },
   {
@@ -789,10 +796,10 @@
   "main": 2,
   "lanes": 3,
   "total": 5,
-  "at": "1:49 AM",
+  "at": "1:52 AM",
   "why": "",
-  "at_iso": "2026-11-18T06:49:00+00:00",
+  "at_iso": "2026-11-18T06:52:00+00:00",
   "started": "12:47 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 2, started 12:47 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 1:49 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 2, started 12:47 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 1:52 AM ET</p></section>"
  }
 }

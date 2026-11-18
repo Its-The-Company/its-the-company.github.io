@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-18T06:46:18.638465+00:00",
+ "at": "2026-11-18T06:49:30.315012+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -165,7 +165,7 @@
    "task": "[build] T-4688 Developer mode for Pro",
    "model": "opus",
    "started": "2026-11-18T05:56:56.560Z",
-   "seconds": 2962,
+   "seconds": 3153,
    "finished": null,
    "effort": "high"
   },
@@ -174,7 +174,7 @@
    "task": "[build] T-4767 button handler exit as error",
    "model": "opus",
    "started": "2026-11-18T06:37:03.752Z",
-   "seconds": 554,
+   "seconds": 746,
    "finished": null,
    "effort": "high"
   }
@@ -193,7 +193,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 486,
+  "runnable_count": 487,
   "blocked_count": 34
  },
  "meter": {
@@ -242,7 +242,7 @@
   "week_pct": 46.38,
   "usage_pct": 53.1,
   "work_pct": 80.8,
-  "read_at": "2026-11-18T06:46:00+00:00",
+  "read_at": "2026-11-18T06:49:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -266,6 +266,7 @@
     "e": "high",
     "at": "2026-11-18T01:41:10-05:00",
     "n": "Jeremy",
+    "d": 1,
     "src": "plan-b"
    },
    {
@@ -340,7 +341,7 @@
  "lock_in": {
   "on": false,
   "pool": 10,
-  "at": "2026-11-18T01:46:00-05:00",
+  "at": "2026-11-18T01:49:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -521,7 +522,7 @@
    }
   ],
   "count": {
-   "next": 486,
+   "next": 487,
    "wait": 32,
    "blocked": 2,
    "you": 9
@@ -575,57 +576,57 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-18T06:46:18Z",
+  "at": "2026-11-18T06:49:07Z",
   "s": {
    "T-4796": [
     "merging",
     "Host checks on the Mac mini",
-    1794984018638
+    1794984067692
    ],
    "T-4442": [
     "mergeq",
     "2nd to merge",
-    1794975318638
+    1794975307692
    ],
    "T-4516": [
     "mergetest",
     "Xcode checks on the MacBook, 3rd to merge",
-    1794983838638
+    1794983827692
    ],
    "T-4784": [
     "mergeq",
     "4th to merge",
-    1794982818638
+    1794982807692
    ],
    "T-4688": [
     "testing",
-    "Mac Mini \u00b7 test",
-    null
+    "its own tests, in its copy",
+    1794983527692
    ],
    "T-4767": [
     "testing",
     "its own tests, in its copy",
-    1794984078638
+    1794984067692
    ],
    "T-0044": [
     "testq",
     "1st for a Simulator",
-    1794984318638
+    1794984367692
    ],
    "T-4301": [
     "testq",
     "1st for a Simulator",
-    1794984318638
+    1794984367692
    ],
    "T-4644": [
     "testq",
     "1st for a Simulator",
-    1794984318638
+    1794984367692
    ],
    "T-4772": [
     "testq",
     "1st for a Simulator",
-    1794984318638
+    1794984367692
    ]
   },
   "nm": {
@@ -655,7 +656,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-18T06:46:18Z",
+  "at": "2026-11-18T06:49:07Z",
   "mq": {
    "n": {
     "checking": 2,
@@ -667,13 +668,13 @@
     "parked": 10
    },
    "m": {
-    "checking": 7,
-    "inline": 88,
-    "conflicted": 522,
+    "checking": 10,
+    "inline": 91,
+    "conflicted": 525,
     "failed": null,
-    "held": 1877,
+    "held": 1880,
     "retry": null,
-    "parked": 442
+    "parked": 445
    },
    "cur": [
     [
@@ -682,7 +683,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     6
+     8
     ],
     [
      [
@@ -690,7 +691,7 @@
      ],
      "iPhone app tests",
      "MacBook",
-     9
+     12
     ]
    ],
    "ld": [
@@ -700,12 +701,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-18T06:45:45Z",
-    "ld": 41.39,
+    "at": "2026-11-18T06:48:23Z",
+    "ld": 38.99,
     "c": 8,
     "sb": 2,
     "dk": [
-     27.1,
+     26.3,
      228.3
     ],
     "ss": [
@@ -714,7 +715,7 @@
     ],
     "sn": [
      "t4772-27",
-     "iPhone 17e"
+     "iPhone 17"
     ]
    },
    "macbook": {
@@ -744,20 +745,26 @@
    "w": "Operator",
    "a": "Evan's Account",
    "sr": 1,
+   "m": "opus",
+   "e": "high",
    "t": "Work session \u2013 1 task",
-   "at": "2026-11-18T01:19:53-05:00"
+   "at": "2026-11-18T01:19:52-05:00"
   },
   {
    "w": "Operator",
    "a": "Jeremy's Account",
    "sr": 1,
+   "m": "opus",
+   "e": "high",
    "t": "Work session \u2013 2 tasks",
-   "at": "2026-11-18T01:41:10-05:00"
+   "at": "2026-11-18T01:41:09-05:00"
   },
   {
    "w": "Operator",
    "a": "Jeremy's Account",
    "sr": 1,
+   "m": "opus",
+   "e": "high",
    "t": "Work session \u2013 2 tasks",
    "at": "2026-11-18T01:41:08-05:00"
   }
@@ -782,10 +789,10 @@
   "main": 2,
   "lanes": 3,
   "total": 5,
-  "at": "1:46 AM",
+  "at": "1:49 AM",
   "why": "",
-  "at_iso": "2026-11-18T06:46:00+00:00",
+  "at_iso": "2026-11-18T06:49:00+00:00",
   "started": "12:47 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 2, started 12:47 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 1:46 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 2, started 12:47 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 1:49 AM ET</p></section>"
  }
 }

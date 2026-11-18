@@ -1,11 +1,22 @@
 {
  "schema": 1,
- "at": "2026-11-18T02:36:44.792325+00:00",
+ "at": "2026-11-18T02:39:56.496609+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-17T19:10:01-05:00",
   "flow": [
+   {
+    "t": "T-4782",
+    "name": "Stop a Pro store test at its first stalled wait",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "macbook",
+      "at": 1794969523
+     }
+    ]
+   },
    {
     "t": "T-4659",
     "name": "Prove a widget button's tap reaches its Python handler",
@@ -40,6 +51,10 @@
      {
       "s": "macbook",
       "at": 1794966808
+     },
+     {
+      "s": "testq",
+      "at": 1794969565
      }
     ]
    },
@@ -143,19 +158,10 @@
  "workers": [
   {
    "name": "odalys",
-   "task": "[tools] T-4806 fix merge time-outs",
-   "model": "opus",
-   "started": "2026-11-18T01:18:02.621Z",
-   "seconds": 4722,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "odalys",
    "task": "[tools] T-4814 split the merge limit",
    "model": "opus",
    "started": "2026-11-18T02:08:31.145Z",
-   "seconds": 1693,
+   "seconds": 1885,
    "finished": null,
    "effort": "high"
   },
@@ -164,7 +170,7 @@
    "task": "[tools] T-4810 every wait names a task or issue",
    "model": "opus",
    "started": "2026-11-18T02:08:44.734Z",
-   "seconds": 1680,
+   "seconds": 1871,
    "finished": null,
    "effort": "high"
   },
@@ -173,13 +179,21 @@
    "task": "[site] T-4813 Home's numbers update live",
    "model": "opus",
    "started": "2026-11-18T02:08:56.638Z",
-   "seconds": 1668,
+   "seconds": 1859,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Odalys x3, Maren",
+ "who": "Odalys x2, Maren",
  "recent": [
+  {
+   "name": "odalys",
+   "task": "[tools] T-4806 fix merge time-outs",
+   "model": "opus",
+   "started": "2026-11-18T01:18:02.621Z",
+   "seconds": null,
+   "finished": "2026-11-18T02:37:27.306000+00:00"
+  },
   {
    "name": "pernille",
    "task": "[test] T-4807 fix bad tests that failed merges",
@@ -203,14 +217,6 @@
    "started": "2026-11-18T01:07:36.770Z",
    "seconds": null,
    "finished": "2026-11-18T01:37:07.463000+00:00"
-  },
-  {
-   "name": "pernille",
-   "task": "[tools] T-4786 correct bad tests holding merges",
-   "model": "opus",
-   "started": "2026-11-18T00:45:18.571Z",
-   "seconds": null,
-   "finished": "2026-11-18T01:17:05.026000+00:00"
   }
  ],
  "queue": {
@@ -265,7 +271,7 @@
   "week_pct": 43.81,
   "usage_pct": 53.5,
   "work_pct": 81.2,
-  "read_at": "2026-11-18T02:37:00+00:00",
+  "read_at": "2026-11-18T02:40:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -286,7 +292,7 @@
   }
  ],
  "disk": {
-  "free_gb": 18,
+  "free_gb": 17,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -295,14 +301,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-17T21:32:00-05:00",
+   "at": "2026-11-17T21:39:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 8,
-  "at": "2026-11-17T21:37:00-05:00",
+  "at": "2026-11-17T21:40:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -321,9 +327,9 @@
   {
    "name": "Odalys",
    "state": "running",
-   "task": "[tools] T-4806 fix merge time-outs",
+   "task": "[tools] T-4814 split the merge limit",
    "model": "opus",
-   "since": "2026-11-18T01:18:02.621Z",
+   "since": "2026-11-18T02:08:31.145Z",
    "next": [],
    "effort": "high"
   },
@@ -371,16 +377,6 @@
  ],
  "tasks": {
   "run": [
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Fix the causes of merge time-outs and runner errors",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-18T01:18:02.621Z",
-    "o": "c",
-    "task": "T-4806"
-   },
    {
     "w": "Odalys",
     "k": "tools",
@@ -577,88 +573,88 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-18T02:36:44Z",
+  "at": "2026-11-18T02:39:56Z",
   "s": {
+   "T-4643": [
+    "merging",
+    "Host checks on the Mac mini",
+    1794969596496
+   ],
    "T-4761": [
     "mergeq",
     "1st to merge",
-    1794960524792
+    1794960536496
    ],
    "T-4659": [
     "mergeq",
     "2nd to merge",
-    1794961064792
-   ],
-   "T-4643": [
-    "mergeq",
-    "3rd to merge",
-    1794961664792
+    1794961076496
    ],
    "T-4782": [
-    "mergeq",
-    "4th to merge",
-    1794962204792
+    "mergetest",
+    "Xcode checks on the MacBook, 4th to merge",
+    1794969536496
    ],
    "T-4787": [
     "mergeq",
-    "6th to merge",
-    1794962684792
+    "5th to merge",
+    1794962636496
    ],
    "T-4719": [
     "mergeq",
-    "7th to merge",
-    1794963104792
+    "6th to merge",
+    1794963116496
    ],
    "T-4720": [
     "mergeq",
-    "7th to merge",
-    1794963104792
+    "6th to merge",
+    1794963116496
    ],
    "T-4750": [
     "mergeq",
-    "8th to merge",
-    1794963164792
+    "7th to merge",
+    1794963176496
    ],
    "T-4770": [
     "mergeq",
-    "9th to merge",
-    1794964664792
+    "8th to merge",
+    1794964676496
    ],
    "T-4781": [
     "mergeq",
-    "10th to merge",
-    1794964664792
+    "9th to merge",
+    1794964676496
    ],
    "T-4774": [
     "mergeq",
-    "10th to merge",
-    1794964664792
+    "9th to merge",
+    1794964676496
    ],
    "T-4814": [
     "merging",
     "Mac tests at the main gate \u00b7 12 groups of tests done, 1 red",
-    1794968744792
+    1794968756496
+   ],
+   "T-4806": [
+    "merging",
+    "Mac tests at the main gate",
+    1794969476496
    ],
    "T-4810": [
     "testing",
     "its own tests, in its copy",
-    1794968264792
-   ],
-   "T-4806": [
-    "testing",
-    "its own tests, in its copy",
-    1794968804792
+    1794968276496
    ],
    "T-4813": [
     "testing",
     "its own tests, in its copy",
-    1794968324792
+    1794968276496
    ]
   },
   "nm": {
+   "T-4643": "Make the size ladder measure each rung more than once",
    "T-4761": "Keep one layout for the widget state format",
    "T-4659": "Prove a widget button's tap reaches its Python handler",
-   "T-4643": "Make the size ladder measure each rung more than once",
    "T-4782": "Stop a Pro store test at its first stalled wait",
    "T-4787": "Count failed merges by cause: bad test or broken code",
    "T-4719": "Check finished work before it ships",
@@ -668,14 +664,14 @@
    "T-4781": "Retest a fixed red on what failed, not every test",
    "T-4774": "Measure what one refresh tap costs the app",
    "T-4814": "Split the merge limit by what a change touches",
-   "T-4810": "Make every wait name a task or an Investor issue",
    "T-4806": "Fix the causes of merge time-outs and runner errors",
+   "T-4810": "Make every wait name a task or an Investor issue",
    "T-4813": "Home's numbers update within a minute"
   },
   "wk": {
+   "T-4643": "Idris",
    "T-4761": "Idris",
    "T-4659": "Idris",
-   "T-4643": "Idris",
    "T-4782": "Idris",
    "T-4787": "Odalys",
    "T-4719": "Odalys",
@@ -685,8 +681,8 @@
    "T-4781": "Odalys",
    "T-4774": "Idris",
    "T-4814": "Odalys",
-   "T-4810": "Odalys",
    "T-4806": "Odalys",
+   "T-4810": "Odalys",
    "T-4813": "Maren",
    "T-4699": "Pernille",
    "T-4698": "Pernille",
@@ -696,11 +692,11 @@
   }
  },
  "ln": {
-  "at": "2026-11-18T02:36:44Z",
+  "at": "2026-11-18T02:39:56Z",
   "mq": {
    "n": {
-    "checking": 0,
-    "inline": 11,
+    "checking": 2,
+    "inline": 9,
     "conflicted": 2,
     "failed": 0,
     "held": 1,
@@ -708,15 +704,32 @@
     "parked": 6
    },
    "m": {
-    "checking": null,
-    "inline": 105,
-    "conflicted": 822,
+    "checking": 0,
+    "inline": 108,
+    "conflicted": 825,
     "failed": null,
-    "held": 1627,
+    "held": 1630,
     "retry": null,
-    "parked": 577
+    "parked": 580
    },
-   "cur": [],
+   "cur": [
+    [
+     [
+      "T-4643"
+     ],
+     "Mac tests",
+     "Mac mini",
+     0
+    ],
+    [
+     [
+      "T-4782"
+     ],
+     "iPhone app tests, sent and waiting its turn",
+     "MacBook",
+     1
+    ]
+   ],
    "ld": [
     51,
     "2026-11-18T01:58:20Z"
@@ -724,12 +737,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-18T02:36:50Z",
-    "ld": 5.99,
+    "at": "2026-11-18T02:39:31Z",
+    "ld": 6.52,
     "c": 8,
     "sb": 0,
     "dk": [
-     16.8,
+     17.3,
      228.3
     ],
     "ss": [
@@ -781,13 +794,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 4,
+  "main": 3,
   "lanes": 0,
-  "total": 4,
-  "at": "9:37 PM",
+  "total": 3,
+  "at": "9:40 PM",
   "why": "",
-  "at_iso": "2026-11-18T02:37:00+00:00",
+  "at_iso": "2026-11-18T02:40:00+00:00",
   "started": "7:10 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 4, started 7:10 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:37 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 7:10 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:40 PM ET</p></section>"
  }
 }

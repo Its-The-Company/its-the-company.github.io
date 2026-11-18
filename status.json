@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-18T07:53:42.556777+00:00",
+ "at": "2026-11-18T07:56:45.319982+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -124,7 +124,7 @@
    "task": "[build] T-4688 Developer mode for Pro",
    "model": "opus",
    "started": "2026-11-18T05:56:56.560Z",
-   "seconds": 7005,
+   "seconds": 7188,
    "finished": null,
    "effort": "high"
   },
@@ -133,7 +133,7 @@
    "task": "[build] T-4860 any handler exception as user error",
    "model": "opus",
    "started": "2026-11-18T07:40:38.788Z",
-   "seconds": 783,
+   "seconds": 966,
    "finished": null,
    "effort": "high"
   }
@@ -217,7 +217,7 @@
   "week_pct": 46.38,
   "usage_pct": 53.1,
   "work_pct": 80.8,
-  "read_at": "2026-11-18T07:53:00+00:00",
+  "read_at": "2026-11-18T07:56:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -360,14 +360,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-18T02:47:00-05:00",
+   "at": "2026-11-18T02:54:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 11,
-  "at": "2026-11-18T02:53:00-05:00",
+  "at": "2026-11-18T02:56:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -614,22 +614,27 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-18T07:53:24Z",
+  "at": "2026-11-18T07:56:45Z",
   "s": {
    "T-4533": [
     "merging",
     "Host checks on the Mac mini",
-    1794988104636
+    1794988125319
    ],
-   "T-4688": [
-    "mergetest",
-    "iPhone tests on the MacBook",
-    null
+   "T-4644": [
+    "mergeq",
+    "1st to merge",
+    1794988605319
    ],
    "T-4860": [
     "merging",
     "Mac tests at the main gate",
-    1794988344636
+    1794988365319
+   ],
+   "T-4688": [
+    "merging",
+    "Mac tests at the main gate",
+    1794988545319
    ],
    "T-4574": [
     "testing",
@@ -639,12 +644,12 @@
    "T-4771": [
     "testq",
     "1st for a Simulator",
-    1794988284636
+    1794988305319
    ],
    "T-4783": [
     "testq",
     "1st for a Simulator",
-    1794988284636
+    1794988305319
    ],
    "T-4301": [
     "merged",
@@ -655,8 +660,9 @@
   },
   "nm": {
    "T-4533": "Make the premade settings save sturdier on disk errors",
-   "T-4688": "Build a Developer mode for testing Pro",
+   "T-4644": "Check the ladder's files in the gate build's own tests",
    "T-4860": "Treat any exception a button handler raises as the script's",
+   "T-4688": "Build a Developer mode for testing Pro",
    "T-4574": "Keep the launcher's app queries out of shipped builds",
    "T-4771": "Gutter marks redraw quickly and stay right while typing",
    "T-4783": "Keep the gutter mark on its line after an edit",
@@ -664,8 +670,9 @@
   },
   "wk": {
    "T-4533": "Pernille",
-   "T-4688": "Idris",
+   "T-4644": "Idris",
    "T-4860": "Pernille",
+   "T-4688": "Idris",
    "T-4574": "Idris",
    "T-4771": "Idris",
    "T-4783": "Idris",
@@ -677,11 +684,11 @@
   }
  },
  "ln": {
-  "at": "2026-11-18T07:53:24Z",
+  "at": "2026-11-18T07:56:45Z",
   "mq": {
    "n": {
     "checking": 1,
-    "inline": 0,
+    "inline": 1,
     "conflicted": 3,
     "failed": 0,
     "held": 1,
@@ -689,13 +696,13 @@
     "parked": 9
    },
    "m": {
-    "checking": 5,
-    "inline": null,
-    "conflicted": 590,
+    "checking": 8,
+    "inline": 0,
+    "conflicted": 593,
     "failed": null,
-    "held": 1944,
-    "retry": 2,
-    "parked": 590
+    "held": 1947,
+    "retry": 5,
+    "parked": 593
    },
    "cur": [
     [
@@ -704,7 +711,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     5
+     8
     ]
    ],
    "ld": [
@@ -714,12 +721,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-18T07:52:57Z",
-    "ld": 4.71,
+    "at": "2026-11-18T07:56:21Z",
+    "ld": 2.75,
     "c": 8,
     "sb": 2,
     "dk": [
-     13.8,
+     11.5,
      228.3
     ],
     "ss": [
@@ -732,12 +739,12 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-18T07:46:55Z",
-    "ld": 0.64,
+    "at": "2026-11-18T07:54:32Z",
+    "ld": 0.81,
     "c": 12,
     "sb": 0,
     "dk": [
-     310.6,
+     310.5,
      926.4
     ],
     "sn": []
@@ -805,7 +812,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 1 task",
+   "t": "Work session",
    "at": "2026-11-18T01:41:08-05:00"
   }
  ],
@@ -829,10 +836,10 @@
   "main": 2,
   "lanes": 6,
   "total": 8,
-  "at": "2:53 AM",
+  "at": "2:56 AM",
   "why": "",
-  "at_iso": "2026-11-18T07:53:00+00:00",
+  "at_iso": "2026-11-18T07:56:00+00:00",
   "started": "12:47 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>8</b> agents running now</p><p class=\"an-sub\">Main session 2, started 12:47 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 6 sessions \u00b7 as of 2:53 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>8</b> agents running now</p><p class=\"an-sub\">Main session 2, started 12:47 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 6 sessions \u00b7 as of 2:56 AM ET</p></section>"
  }
 }

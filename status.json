@@ -1,19 +1,19 @@
 {
  "schema": 1,
- "at": "2026-11-18T01:54:00.204193+00:00",
+ "at": "2026-11-18T01:57:05.834631+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-17T19:10:01-05:00",
   "flow": [
    {
-    "t": "T-4697",
-    "name": "Check finished work before it ships",
+    "t": "T-4761",
+    "name": "Keep one layout for the widget state format",
     "acct": "Personal b",
     "steps": [
      {
-      "s": "landing",
-      "at": 1794963906
+      "s": "macbook",
+      "at": 1794967024
      }
     ]
    },
@@ -44,6 +44,30 @@
    }
   ],
   "done": [
+   {
+    "t": "T-4781",
+    "name": "Retest a fixed red on what failed, not every test",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794966974
+   },
+   {
+    "t": "T-4698",
+    "name": "Check finished work before it ships",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794966905
+   },
+   {
+    "t": "T-4697",
+    "name": "Check finished work before it ships",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794966883
+   },
    {
     "t": "T-4750",
     "name": "Check network fetch cases on the Swift side too",
@@ -100,33 +124,9 @@
     "steps": [],
     "end": "landed",
     "end_at": 1794961358
-   },
-   {
-    "t": "T-4781",
-    "name": "Retest a fixed red on what failed, not every test",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "failed",
-    "end_at": 1794960283,
-    "why": "tests failed"
-   },
-   {
-    "t": "T-4695",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794958750
-   },
-   {
-    "t": "T-4609",
-    "name": "Check finished work before it ships",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794958343
    }
   ],
-  "landed": 38,
+  "landed": 41,
   "failed": 7
  },
  "workers": [
@@ -135,7 +135,7 @@
    "task": "[tools] T-4806 fix merge time-outs",
    "model": "opus",
    "started": "2026-11-18T01:18:02.621Z",
-   "seconds": 2157,
+   "seconds": 2343,
    "finished": null,
    "effort": "high"
   },
@@ -144,7 +144,7 @@
    "task": "[test] T-4807 fix bad tests that failed merges",
    "model": "opus",
    "started": "2026-11-18T01:44:52.149Z",
-   "seconds": 548,
+   "seconds": 733,
    "finished": null,
    "effort": "high"
   }
@@ -187,7 +187,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 432,
+  "runnable_count": 430,
   "blocked_count": 61
  },
  "meter": {
@@ -236,7 +236,7 @@
   "week_pct": 43.81,
   "usage_pct": 53.5,
   "work_pct": 81.2,
-  "read_at": "2026-11-18T01:54:00+00:00",
+  "read_at": "2026-11-18T01:57:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -273,7 +273,7 @@
  "lock_in": {
   "on": false,
   "pool": 7,
-  "at": "2026-11-17T20:54:00-05:00",
+  "at": "2026-11-17T20:57:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -438,30 +438,38 @@
   ],
   "done": [
    {
+    "w": "Pernille",
+    "t": "Pernille checked the widget-tap work before it ships: the code is right and its tests catch the...",
+    "at": "2026-11-17T20:55:00-05:00"
+   },
+   {
+    "w": "Pernille",
+    "t": "Pernille checked the new per-widget Activity screen, the widget's own run record and the 'Could...",
+    "at": "2026-11-17T20:54:00-05:00"
+   },
+   {
     "w": "Idris",
     "t": "The Gallery screen is done: every premade has real Simulator pictures in each widget size and...",
     "at": "2026-11-17T20:06:00-05:00"
-   },
-   {
-    "w": "Idris",
-    "t": "The Gallery and a premade's page now have light and dark screenshots on iPhone and iPad, and the...",
-    "at": "2026-11-17T20:06:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "A second person read the latest Settings and Pro work (the Ask to Buy and failed-restore test...",
-    "at": "2026-11-17T20:04:00-05:00"
    }
   ],
   "count": {
-   "next": 432,
+   "next": 430,
    "wait": 29,
    "blocked": 32,
    "you": 11
   },
   "fin": {
-   "n": 4,
+   "n": 6,
    "rows": [
+    [
+     "T-4698",
+     "Check finished work before..."
+    ],
+    [
+     "T-4697",
+     "Check finished work before..."
+    ],
     [
      "T-0191",
      "Build the gallery screen and..."
@@ -520,134 +528,127 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-18T01:54:00Z",
+  "at": "2026-11-18T01:56:49Z",
   "s": {
-   "T-4697": [
-    "mergeq",
-    "1st to merge",
-    1794959880204
-   ],
-   "T-4698": [
-    "mergeq",
-    "2nd to merge",
-    1794960240204
-   ],
-   "T-4781": [
-    "mergeq",
-    "3rd to merge",
-    1794964680204
-   ],
-   "T-4634": [
-    "mergeq",
-    "4th to merge",
-    1794964140204
-   ],
    "T-4610": [
     "mergeq",
-    "6th to merge",
-    1794960360204
+    "1st to merge",
+    1794960409170
    ],
    "T-4761": [
-    "mergeq",
-    "7th to merge",
-    1794960540204
+    "mergetest",
+    "Xcode checks on the MacBook, 2nd to merge",
+    1794966889170
    ],
    "T-4659": [
-    "mergeq",
-    "8th to merge",
-    1794961080204
+    "mergetest",
+    "Xcode checks on the MacBook, 3rd to merge",
+    1794966889170
    ],
    "T-4699": [
     "mergeq",
-    "9th to merge",
-    1794961620204
+    "4th to merge",
+    1794961609170
    ],
    "T-4643": [
     "mergeq",
-    "10th to merge",
-    1794961620204
+    "5th to merge",
+    1794961669170
+   ],
+   "T-4697": [
+    "mergeq",
+    "6th to merge",
+    1794961669170
+   ],
+   "T-4698": [
+    "mergeq",
+    "7th to merge",
+    1794961729170
    ],
    "T-4782": [
     "mergeq",
-    "15th to merge",
-    1794962160204
+    "10th to merge",
+    1794962209170
    ],
    "T-4787": [
     "mergetest",
-    "Xcode checks on the MacBook, 17th to merge",
-    1794966840204
+    "Xcode checks on the MacBook, 12th to merge",
+    1794966829170
    ],
    "T-4719": [
     "mergeq",
-    "18th to merge",
-    1794963120204
+    "13th to merge",
+    1794963109170
    ],
    "T-4720": [
     "mergeq",
-    "18th to merge",
-    1794963120204
+    "13th to merge",
+    1794963109170
    ],
    "T-4750": [
     "mergeq",
-    "19th to merge",
-    1794963180204
+    "14th to merge",
+    1794963169170
+   ],
+   "T-4781": [
+    "mergeq",
+    "15th to merge",
+    1794964669170
    ],
    "T-4770": [
     "mergeq",
-    "20th to merge",
-    1794964680204
+    "15th to merge",
+    1794964669170
    ],
    "T-4774": [
     "mergeq",
-    "20th to merge",
-    1794964680204
+    "15th to merge",
+    1794964669170
    ],
    "T-4807": [
     "testing",
     "its own tests, in its copy",
-    1794966840204
+    1794966829170
    ],
    "T-4806": [
     "testing",
     "its own tests, in its copy",
-    1794966240204
+    1794966229170
    ]
   },
   "nm": {
-   "T-4697": "Check finished work before it ships",
-   "T-4698": "Check finished work before it ships",
-   "T-4781": "Retest a fixed red on what failed, not every test",
-   "T-4634": "Github hang test is cut before the GET under load",
    "T-4610": "Check finished work before it ships",
    "T-4761": "Keep one layout for the widget state format",
    "T-4659": "Prove a widget button's tap reaches its Python handler",
    "T-4699": "Check finished work before it ships",
    "T-4643": "Make the size ladder measure each rung more than once",
+   "T-4697": "Check finished work before it ships",
+   "T-4698": "Check finished work before it ships",
    "T-4782": "Stop a Pro store test at its first stalled wait",
    "T-4787": "Count failed merges by cause: bad test or broken code",
    "T-4719": "Check finished work before it ships",
    "T-4720": "Check finished work before it ships",
    "T-4750": "Check network fetch cases on the Swift side too",
+   "T-4781": "Retest a fixed red on what failed, not every test",
    "T-4770": "Re-estimate the release date from measured build speed",
    "T-4774": "Measure what one refresh tap costs the app",
    "T-4807": "Fix every bad test that failed a merge",
    "T-4806": "Fix the causes of merge time-outs and runner errors"
   },
   "wk": {
-   "T-4697": "Pernille",
-   "T-4698": "Pernille",
-   "T-4781": "Odalys",
-   "T-4634": "Pernille",
    "T-4610": "Odalys",
    "T-4761": "Idris",
    "T-4659": "Idris",
    "T-4699": "Pernille",
    "T-4643": "Idris",
+   "T-4697": "Pernille",
+   "T-4698": "Pernille",
    "T-4782": "Idris",
    "T-4787": "Odalys",
    "T-4719": "Odalys",
    "T-4720": "Pernille",
    "T-4750": "Idris",
+   "T-4781": "Odalys",
    "T-4770": "Ines",
    "T-4774": "Idris",
    "T-4807": "Pernille",
@@ -657,11 +658,11 @@
   }
  },
  "ln": {
-  "at": "2026-11-18T01:54:00Z",
+  "at": "2026-11-18T01:56:49Z",
   "mq": {
    "n": {
-    "checking": 1,
-    "inline": 15,
+    "checking": 3,
+    "inline": 12,
     "conflicted": 2,
     "failed": 0,
     "held": 1,
@@ -669,37 +670,53 @@
     "parked": 6
    },
    "m": {
-    "checking": 0,
-    "inline": 78,
-    "conflicted": 779,
+    "checking": 2,
+    "inline": 72,
+    "conflicted": 782,
     "failed": null,
-    "held": 1585,
+    "held": 1587,
     "retry": null,
-    "parked": 534
+    "parked": 537
    },
    "cur": [
     [
      [
-      "T-4787"
+      "T-4761"
      ],
      "iPhone app tests, sent and waiting its turn",
      "MacBook",
-     0
+     2
+    ],
+    [
+     [
+      "T-4659"
+     ],
+     "iPhone app tests, sent and waiting its turn",
+     "MacBook",
+     2
+    ],
+    [
+     [
+      "T-4787"
+     ],
+     "iPhone app tests",
+     "MacBook",
+     3
     ]
    ],
    "ld": [
-    47,
-    "2026-11-18T01:05:54Z"
+    50,
+    "2026-11-18T01:56:14Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-18T01:54:01Z",
-    "ld": 5.61,
+    "at": "2026-11-18T01:56:50Z",
+    "ld": 5.48,
     "c": 8,
     "sb": 0,
     "dk": [
-     20.1,
+     20.2,
      228.3
     ],
     "ss": [
@@ -709,12 +726,12 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-18T01:46:15Z",
-    "ld": 0.36,
+    "at": "2026-11-18T01:54:25Z",
+    "ld": 0.35,
     "c": 12,
     "sb": 0,
     "dk": [
-     312.4,
+     312.3,
      926.4
     ],
     "sn": []
@@ -729,12 +746,12 @@
    "m": "opus",
    "e": "high",
    "t": "Work session \u2013 2 tasks",
-   "at": "2026-11-17T20:47:52-05:00"
+   "at": "2026-11-17T20:56:21-05:00"
   }
  ],
  "reply": {
-  "sent": "2026-11-18T01:46:05Z",
-  "seconds": 106.0
+  "sent": "2026-11-18T01:55:17Z",
+  "seconds": 62.0
  },
  "inbox": [],
  "trimmed": [
@@ -753,10 +770,10 @@
   "main": 2,
   "lanes": 0,
   "total": 2,
-  "at": "8:54 PM",
+  "at": "8:57 PM",
   "why": "",
-  "at_iso": "2026-11-18T01:54:00+00:00",
+  "at_iso": "2026-11-18T01:57:00+00:00",
   "started": "7:10 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 7:10 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 8:54 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 7:10 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 8:57 PM ET</p></section>"
  }
 }

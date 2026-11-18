@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-18T11:07:10.741021+00:00",
+ "at": "2026-11-18T11:10:15.127757+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -108,19 +108,11 @@
  },
  "workers": [
   {
-   "name": "pernille",
-   "task": "[review] T-4876 long-line caret review",
-   "model": "opus",
-   "started": "2026-11-18T10:40:13.676Z",
-   "seconds": 1617,
-   "finished": null
-  },
-  {
    "name": "maren",
    "task": "[design] T-4886 PyWidget in premade lines",
    "model": "sonnet",
    "started": "2026-11-18T11:02:42.183Z",
-   "seconds": 268,
+   "seconds": 452,
    "finished": null
   },
   {
@@ -128,12 +120,20 @@
    "task": "[report] morning",
    "model": "opus",
    "started": "2026-11-18T11:05:00.328Z",
-   "seconds": 130,
+   "seconds": 314,
    "finished": null
   }
  ],
- "who": "Pernille, Maren, Idris",
+ "who": "Maren, Idris",
  "recent": [
+  {
+   "name": "pernille",
+   "task": "[review] T-4876 long-line caret review",
+   "model": "opus",
+   "started": "2026-11-18T10:40:13.676Z",
+   "seconds": null,
+   "finished": "2026-11-18T11:08:44.808000+00:00"
+  },
   {
    "name": "idris",
    "task": "[build] T-4873 fallback completion case",
@@ -157,20 +157,12 @@
    "started": "2026-11-18T10:27:42.950Z",
    "seconds": null,
    "finished": "2026-11-18T10:54:32.394000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-4662 long-line caret land",
-   "model": "opus",
-   "started": "2026-11-18T09:43:33.374Z",
-   "seconds": null,
-   "finished": "2026-11-18T10:39:44.344000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 485,
+  "runnable_count": 486,
   "blocked_count": 35
  },
  "meter": {
@@ -219,7 +211,7 @@
   "week_pct": 50.16,
   "usage_pct": 53.3,
   "work_pct": 82.4,
-  "read_at": "2026-11-18T11:07:00+00:00",
+  "read_at": "2026-11-18T11:10:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -256,7 +248,7 @@
  "lock_in": {
   "on": false,
   "pool": 12,
-  "at": "2026-11-18T06:07:00-05:00",
+  "at": "2026-11-18T06:10:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -273,14 +265,6 @@
  },
  "lanes": [
   {
-   "name": "Pernille",
-   "state": "running",
-   "task": "[review] T-4876 long-line caret review",
-   "model": "opus",
-   "since": "2026-11-18T10:40:13.676Z",
-   "next": []
-  },
-  {
    "name": "Maren",
    "state": "running",
    "task": "[design] T-4886 PyWidget in premade lines",
@@ -294,6 +278,14 @@
    "task": "[report] morning",
    "model": "opus",
    "since": "2026-11-18T11:05:00.328Z",
+   "next": []
+  },
+  {
+   "name": "Pernille",
+   "state": "next",
+   "task": "Pernille, P0, Investor an Investor c6963972184 (6:23 PM...",
+   "model": null,
+   "since": null,
    "next": []
   },
   {
@@ -323,15 +315,6 @@
  ],
  "tasks": {
   "run": [
-   {
-    "w": "Pernille",
-    "k": "review",
-    "t": "Check the long-line caret change",
-    "m": "opus",
-    "at": "2026-11-18T10:40:13.676Z",
-    "o": "c",
-    "task": "T-4876"
-   },
    {
     "w": "Maren",
     "k": "design",
@@ -425,6 +408,11 @@
   ],
   "done": [
    {
+    "w": "Pernille",
+    "t": "An independent check of the change that puts the editor's caret under the finger on long lines:...",
+    "at": "2026-11-18T06:07:00-05:00"
+   },
+   {
     "w": "Idris",
     "t": "The editor's backup suggestions now match typed words whatever their capitals, so typing a...",
     "at": "2026-11-18T06:04:00-05:00"
@@ -433,22 +421,21 @@
     "w": "Idris",
     "t": "An independent check confirmed the eleven widget lines now spell the product PyWidget the...",
     "at": "2026-11-18T06:01:00-05:00"
-   },
-   {
-    "w": "Maren",
-    "t": "The widget's words now spell the product PyWidget the way the approved voice writes it, in...",
-    "at": "2026-11-18T06:01:00-05:00"
    }
   ],
   "count": {
-   "next": 485,
+   "next": 486,
    "wait": 32,
    "blocked": 3,
    "you": 10
   },
   "fin": {
-   "n": 20,
+   "n": 21,
    "rows": [
+    [
+     "T-4876",
+     "Check the long-line caret change"
+    ],
     [
      "T-4873",
      "Make backup suggestions..."
@@ -468,10 +455,6 @@
     [
      "T-4803",
      "Make the tap check's record..."
-    ],
-    [
-     "T-4764",
-     "Fit habit buttons at large..."
     ]
    ]
   }
@@ -515,52 +498,47 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-18T11:07:10Z",
+  "at": "2026-11-18T11:10:00Z",
   "s": {
    "T-0011": [
     "merging",
     "Host checks on the Mac mini",
-    1794999370741
+    1794999360835
    ],
    "T-4533": [
     "mergeq",
     "2nd to merge",
-    1794988090741
+    1794988080835
    ],
    "T-4644": [
     "mergeq",
     "3rd to merge",
-    1794988630741
+    1794988620835
    ],
    "T-4771": [
     "mergeq",
     "4th to merge",
-    1794989830741
+    1794989820835
    ],
    "T-4762": [
     "mergeq",
     "5th to merge",
-    1794989830741
+    1794989820835
    ],
    "T-4301": [
     "mergeq",
     "7th to merge",
-    1794991090741
+    1794991080835
    ],
    "T-4783": [
     "mergeq",
     "9th to merge",
-    1794991510741
+    1794991560835
    ],
    "T-4574": [
     "mergeq",
     "11th to merge",
-    1794992530741
-   ],
-   "T-4876": [
-    "testing",
-    "its own tests, in its copy",
-    1794999910741
+    1794992520835
    ]
   },
   "nm": {
@@ -571,8 +549,7 @@
    "T-4762": "Let the run lock wrap a Python run",
    "T-4301": "Read fresh Pro gates after a queued wait",
    "T-4783": "Keep the gutter mark on its line after an edit",
-   "T-4574": "Keep the launcher's app queries out of shipped builds",
-   "T-4876": "Check the long-line caret change"
+   "T-4574": "Keep the launcher's app queries out of shipped builds"
   },
   "wk": {
    "T-0011": "Idris",
@@ -594,12 +571,11 @@
    "T-4752": "Maren",
    "T-4763": "Maren",
    "T-4663": "Idris",
-   "T-4861": "Pernille",
-   "T-4601": "Pernille"
+   "T-4861": "Pernille"
   }
  },
  "ln": {
-  "at": "2026-11-18T11:07:10Z",
+  "at": "2026-11-18T11:10:00Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -611,13 +587,13 @@
     "parked": 9
    },
    "m": {
-    "checking": 11,
-    "inline": 170,
-    "conflicted": 783,
+    "checking": 14,
+    "inline": 173,
+    "conflicted": 786,
     "failed": null,
-    "held": 2138,
+    "held": 2141,
     "retry": null,
-    "parked": 783
+    "parked": 786
    },
    "cur": [
     [
@@ -626,7 +602,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     11
+     14
     ]
    ],
    "ld": [
@@ -636,12 +612,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-18T11:07:11Z",
-    "ld": 2.89,
+    "at": "2026-11-18T11:09:37Z",
+    "ld": 2.23,
     "c": 8,
     "sb": 1,
     "dk": [
-     20.6,
+     19.9,
      228.3
     ],
     "ss": [
@@ -695,13 +671,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 3,
+  "main": 2,
   "lanes": 0,
-  "total": 3,
-  "at": "6:07 AM",
+  "total": 2,
+  "at": "6:10 AM",
   "why": "",
-  "at_iso": "2026-11-18T11:07:00+00:00",
+  "at_iso": "2026-11-18T11:10:00+00:00",
   "started": "4:07 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 4:07 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 6:07 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 4:07 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 6:10 AM ET</p></section>"
  }
 }

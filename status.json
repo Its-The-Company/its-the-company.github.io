@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-18T14:45:15.861895+00:00",
+ "at": "2026-11-18T14:48:16.652682+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -75,17 +75,6 @@
      {
       "s": "testq",
       "at": 1795008352
-     }
-    ]
-   },
-   {
-    "t": "T-4892",
-    "name": "Run the caret UI tests on the split tap",
-    "w": "Idris",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1795006953
      }
     ]
    },
@@ -192,22 +181,21 @@
    "task": "[build] T-1905 project send safe swap",
    "model": "opus",
    "started": "2026-11-18T13:35:50.063Z",
-   "seconds": 4165,
+   "seconds": 4346,
    "finished": null,
    "effort": "high"
-  },
+  }
+ ],
+ "who": "Idris",
+ "recent": [
   {
    "name": "idris",
    "task": "[test] T-4892 caret UI tests on runner",
    "model": "opus",
    "started": "2026-11-18T13:02:21.149Z",
-   "seconds": 6174,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Idris x2",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-18T14:46:28.970000+00:00"
+  },
   {
    "name": "idris",
    "task": "[test] T-4782 Pro store test waits",
@@ -269,7 +257,7 @@
   "week_pct": 49.77,
   "usage_pct": 52.0,
   "work_pct": 81.9,
-  "read_at": "2026-11-18T14:45:00+00:00",
+  "read_at": "2026-11-18T14:48:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -346,7 +334,7 @@
  "lock_in": {
   "on": false,
   "pool": 12,
-  "at": "2026-11-18T09:45:00-05:00",
+  "at": "2026-11-18T09:48:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -365,9 +353,9 @@
   {
    "name": "Idris",
    "state": "running",
-   "task": "[test] T-4892 caret UI tests on runner",
+   "task": "[build] T-1905 project send safe swap",
    "model": "opus",
-   "since": "2026-11-18T13:02:21.149Z",
+   "since": "2026-11-18T13:35:50.063Z",
    "next": [],
    "effort": "high"
   },
@@ -414,16 +402,6 @@
  ],
  "tasks": {
   "run": [
-   {
-    "w": "Idris",
-    "k": "test",
-    "t": "Run the caret UI tests on the split tap",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-18T13:02:21.149Z",
-    "o": "c",
-    "task": "T-4892"
-   },
    {
     "w": "Idris",
     "k": "build",
@@ -511,17 +489,17 @@
   "done": [
    {
     "w": "Idris",
+    "t": "The automated tests that tap a long line of code and slide the space-bar trackpad passed on the...",
+    "at": "2026-11-18T09:46:00-05:00"
+   },
+   {
+    "w": "Idris",
     "t": "The Pro purchase tests now stop at the first wait on Apple's test store that runs out and name...",
     "at": "2026-11-18T08:15:00-05:00"
    },
    {
     "w": "Odalys",
     "t": "The inbox wait change was measured: it made no real difference (8 of 30 waits over five minutes...",
-    "at": "2026-11-18T08:03:00-05:00"
-   },
-   {
-    "w": "Ines",
-    "t": "The bank, tax and app name dates Evan chose on are now in the timeline, the build plan and the...",
     "at": "2026-11-18T08:03:00-05:00"
    }
   ],
@@ -532,8 +510,12 @@
    "you": 9
   },
   "fin": {
-   "n": 5,
+   "n": 6,
    "rows": [
+    [
+     "T-4892",
+     "Run the caret UI tests on..."
+    ],
     [
      "T-4782",
      "Stop a Pro store test at its..."
@@ -596,72 +578,72 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-18T14:45:06Z",
+  "at": "2026-11-18T14:48:01Z",
   "s": {
    "T-4533": [
     "mergetest",
     "Xcode checks on the MacBook, 1st to merge",
-    1795011786302
+    1795011781915
    ],
    "T-4574": [
     "mergetest",
     "Xcode checks on the MacBook, 3rd to merge",
-    1795012506302
+    1795012501915
    ],
    "T-4762": [
     "mergeq",
     "4th to merge",
-    1795012326302
+    1795012321915
    ],
    "T-4748": [
     "mergetest",
     "Xcode checks on the MacBook, 6th to merge",
-    1795013106302
+    1795013101915
    ],
    "T-4575": [
     "mergeq",
     "7th to merge",
-    1795003866302
+    1795003861915
    ],
    "T-4640": [
     "mergeq",
     "8th to merge",
-    1795004346302
+    1795004341915
    ],
    "T-4789": [
     "mergeq",
     "9th to merge",
-    1795005966302
+    1795005961915
    ],
    "T-4635": [
     "mergeq",
     "10th to merge",
-    1795006386302
+    1795006381915
    ],
    "T-4581": [
     "mergeq",
     "13th to merge",
-    1795007046302
+    1795007041915
    ],
    "T-4889": [
     "mergeq",
     "18th to merge",
-    1795010106302
+    1795010101915
    ],
    "T-4835": [
     "mergeq",
     "19th to merge",
-    1795011726302
+    1795011721915
    ],
    "T-4679": [
     "mergeq",
     "20th to merge",
-    1795012026302
+    1795012021915
    ],
    "T-1905": [
-    "merging",
-    "Mac tests at the main gate",
-    1795013046302
+    "mergetest",
+    "iPhone tests on the MacBook",
+    null
    ]
   },
   "nm": {
@@ -693,6 +675,7 @@
    "T-4835": "Pernille",
    "T-4679": "Idris",
    "T-1905": "Idris",
+   "T-4892": "Idris",
    "T-4782": "Idris",
    "T-4567": "Odalys",
    "T-4668": "Ines",
@@ -701,7 +684,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-18T14:45:06Z",
+  "at": "2026-11-18T14:48:01Z",
   "mq": {
    "n": {
     "checking": 3,
@@ -713,38 +696,38 @@
     "parked": 9
    },
    "m": {
-    "checking": 10,
-    "inline": 101,
-    "conflicted": 692,
+    "checking": 13,
+    "inline": 104,
+    "conflicted": 695,
     "failed": null,
-    "held": 2356,
+    "held": 2359,
     "retry": null,
-    "parked": 1001
+    "parked": 1004
    },
    "cur": [
     [
      [
       "T-4533"
      ],
-     "iPhone app tests, sent and waiting its turn",
+     "iPhone app tests",
      "MacBook",
-     22
+     25
     ],
     [
      [
       "T-4574"
      ],
-     "iPhone app tests, sent and waiting its turn",
+     "iPhone app tests",
      "MacBook",
-     10
+     13
     ],
     [
      [
       "T-4748"
      ],
-     "iPhone app tests, sent and waiting its turn",
+     "iPhone app tests",
      "MacBook",
-     0
+     3
     ]
    ],
    "ld": [
@@ -754,12 +737,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-18T14:44:40Z",
-    "ld": 1.76,
+    "at": "2026-11-18T14:48:02Z",
+    "ld": 1.27,
     "c": 8,
     "sb": 1,
     "dk": [
-     15.3,
+     14.3,
      228.3
     ],
     "ss": [
@@ -771,8 +754,8 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-18T14:43:28Z",
-    "ld": 0.4,
+    "at": "2026-11-18T14:45:34Z",
+    "ld": 0.36,
     "c": 12,
     "sb": 0,
     "dk": [
@@ -790,7 +773,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 2 tasks",
+   "t": "Work session \u2013 1 task",
    "at": "2026-11-18T08:00:22-05:00"
   },
   {
@@ -820,13 +803,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 2,
+  "main": 1,
   "lanes": 1,
-  "total": 3,
-  "at": "9:45 AM",
+  "total": 2,
+  "at": "9:48 AM",
   "why": "",
-  "at_iso": "2026-11-18T14:45:00+00:00",
+  "at_iso": "2026-11-18T14:48:00+00:00",
   "started": "8:00 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 8:00 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 9:45 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 1, started 8:00 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 9:48 AM ET</p></section>"
  }
 }

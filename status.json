@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-18T07:47:33.998173+00:00",
+ "at": "2026-11-18T07:50:41.602264+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -18,6 +18,17 @@
      {
       "s": "macbook",
       "at": 1794947569
+     }
+    ]
+   },
+   {
+    "t": "T-4533",
+    "name": "Make the premade settings save sturdier on disk errors",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "testq",
+      "at": 1794988082
      }
     ]
    }
@@ -113,7 +124,7 @@
    "task": "[build] T-4688 Developer mode for Pro",
    "model": "opus",
    "started": "2026-11-18T05:56:56.560Z",
-   "seconds": 6637,
+   "seconds": 6825,
    "finished": null,
    "effort": "high"
   },
@@ -122,7 +133,7 @@
    "task": "[build] T-4860 any handler exception as user error",
    "model": "opus",
    "started": "2026-11-18T07:40:38.788Z",
-   "seconds": 415,
+   "seconds": 602,
    "finished": null,
    "effort": "high"
   }
@@ -206,7 +217,7 @@
   "week_pct": 46.38,
   "usage_pct": 53.1,
   "work_pct": 80.8,
-  "read_at": "2026-11-18T07:47:00+00:00",
+  "read_at": "2026-11-18T07:50:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -340,7 +351,7 @@
   }
  ],
  "disk": {
-  "free_gb": 15,
+  "free_gb": 12,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -349,14 +360,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-18T02:41:00-05:00",
+   "at": "2026-11-18T02:47:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 11,
-  "at": "2026-11-18T02:47:00-05:00",
+  "at": "2026-11-18T02:50:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -603,14 +614,24 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-18T07:47:33Z",
+  "at": "2026-11-18T07:50:22Z",
   "s": {
+   "T-4533": [
+    "merging",
+    "Host checks on the Mac mini",
+    1794988102330
+   ],
    "T-4688": [
     "mergetest",
     "iPhone tests on the MacBook",
     null
    ],
-   "T-4574": [
+   "T-4771": [
+    "testing",
+    "Mac Mini \u00b7 test",
+    null
+   ],
+   "T-4783": [
     "testing",
     "Mac Mini \u00b7 test",
     null
@@ -618,17 +639,12 @@
    "T-4860": [
     "testing",
     "its own tests, in its copy",
-    1794987813998
+    1794987802330
    ],
-   "T-4771": [
+   "T-4574": [
     "testq",
     "1st for a Simulator",
-    1794987333998
-   ],
-   "T-4783": [
-    "testq",
-    "1st for a Simulator",
-    1794987333998
+    1794988222330
    ],
    "T-4301": [
     "merged",
@@ -638,19 +654,21 @@
    ]
   },
   "nm": {
+   "T-4533": "Make the premade settings save sturdier on disk errors",
    "T-4688": "Build a Developer mode for testing Pro",
-   "T-4574": "Keep the launcher's app queries out of shipped builds",
-   "T-4860": "Treat any exception a button handler raises as the script's",
    "T-4771": "Gutter marks redraw quickly and stay right while typing",
    "T-4783": "Keep the gutter mark on its line after an edit",
+   "T-4860": "Treat any exception a button handler raises as the script's",
+   "T-4574": "Keep the launcher's app queries out of shipped builds",
    "T-4301": "Read fresh Pro gates after a queued wait"
   },
   "wk": {
+   "T-4533": "Pernille",
    "T-4688": "Idris",
-   "T-4574": "Idris",
-   "T-4860": "Pernille",
    "T-4771": "Idris",
    "T-4783": "Idris",
+   "T-4860": "Pernille",
+   "T-4574": "Idris",
    "T-4301": "Idris",
    "T-4854": "Idris",
    "T-4859": "Idris",
@@ -659,27 +677,36 @@
   }
  },
  "ln": {
-  "at": "2026-11-18T07:47:33Z",
+  "at": "2026-11-18T07:50:22Z",
   "mq": {
    "n": {
-    "checking": 0,
+    "checking": 1,
     "inline": 0,
     "conflicted": 3,
     "failed": 0,
     "held": 1,
     "retry": 0,
-    "parked": 11
+    "parked": 10
    },
    "m": {
-    "checking": null,
+    "checking": 2,
     "inline": null,
-    "conflicted": 584,
+    "conflicted": 586,
     "failed": null,
-    "held": 1938,
+    "held": 1941,
     "retry": null,
-    "parked": 425
+    "parked": 507
    },
-   "cur": [],
+   "cur": [
+    [
+     [
+      "T-4533"
+     ],
+     "Mac tests",
+     "Mac mini",
+     2
+    ]
+   ],
    "ld": [
     12,
     "2026-11-18T07:45:51Z"
@@ -687,12 +714,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-18T07:47:35Z",
-    "ld": 6.98,
+    "at": "2026-11-18T07:49:55Z",
+    "ld": 6.88,
     "c": 8,
     "sb": 2,
     "dk": [
-     12.2,
+     11.8,
      228.3
     ],
     "ss": [
@@ -802,10 +829,10 @@
   "main": 2,
   "lanes": 6,
   "total": 8,
-  "at": "2:47 AM",
+  "at": "2:50 AM",
   "why": "",
-  "at_iso": "2026-11-18T07:47:00+00:00",
+  "at_iso": "2026-11-18T07:50:00+00:00",
   "started": "12:47 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>8</b> agents running now</p><p class=\"an-sub\">Main session 2, started 12:47 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 6 sessions \u00b7 as of 2:47 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>8</b> agents running now</p><p class=\"an-sub\">Main session 2, started 12:47 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 6 sessions \u00b7 as of 2:50 AM ET</p></section>"
  }
 }

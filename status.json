@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-18T18:25:43.499067+00:00",
+ "at": "2026-11-18T18:28:46.886473+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -178,7 +178,7 @@
    "task": "[tools] T-4786 fix S30-5 held-state test, land T-4493",
    "model": "opus",
    "started": "2026-11-18T17:33:36.694Z",
-   "seconds": 3126,
+   "seconds": 3310,
    "finished": null,
    "effort": "high"
   },
@@ -187,7 +187,7 @@
    "task": "[tools] T-4903 part 5: drop copies when redo starts",
    "model": "opus",
    "started": "2026-11-18T17:41:17.039Z",
-   "seconds": 2666,
+   "seconds": 2849,
    "finished": null,
    "effort": "high"
   }
@@ -279,7 +279,7 @@
   "week_pct": 51.32,
   "usage_pct": 52.2,
   "work_pct": 82.0,
-  "read_at": "2026-11-18T18:25:00+00:00",
+  "read_at": "2026-11-18T18:28:00+00:00",
   "running": [
    {
     "lane": "b3",
@@ -343,7 +343,7 @@
  "lock_in": {
   "on": false,
   "pool": 12,
-  "at": "2026-11-18T13:25:00-05:00",
+  "at": "2026-11-18T13:28:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -582,72 +582,72 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-18T18:25:34Z",
+  "at": "2026-11-18T18:28:46Z",
   "s": {
    "T-4849": [
     "merging",
     "Host checks on the Mac mini",
-    1795026334087
+    1795026286886
    ],
    "T-4679": [
     "mergeq",
     "1st to merge",
-    1795011994087
+    1795012006886
    ],
    "T-4898": [
     "mergeq",
     "4th to merge",
-    1795020994087
+    1795021006886
    ],
    "T-4890": [
     "mergetest",
     "Xcode checks on the MacBook, 5th to merge",
-    1795026274087
+    1795026226886
    ],
    "T-4840": [
     "mergeq",
     "6th to merge",
-    1795022494087
+    1795022506886
    ],
    "T-4897": [
     "mergeq",
     "7th to merge",
-    1795022614087
-   ],
-   "T-4866": [
-    "mergeq",
-    "9th to merge",
-    1795023214087
-   ],
-   "T-4570": [
-    "mergeq",
-    "13th to merge",
-    1795026334087
-   ],
-   "T-4819": [
-    "mergeq",
-    "15th to merge",
-    1795022914087
+    1795022626886
    ],
    "T-4660": [
     "mergeq",
-    "16th to merge",
-    1795022794087
+    "8th to merge",
+    1795022806886
+   ],
+   "T-4819": [
+    "mergeq",
+    "9th to merge",
+    1795022866886
+   ],
+   "T-4866": [
+    "mergeq",
+    "11th to merge",
+    1795023166886
+   ],
+   "T-4570": [
+    "mergeq",
+    "15th to merge",
+    1795026346886
    ],
    "T-4493": [
     "merging",
     "Mac tests at the main gate",
-    1795025914087
+    1795025926886
    ],
    "T-4786": [
     "testing",
     "its own tests, in its copy",
-    1795025914087
+    1795025926886
    ],
    "T-4903": [
     "testing",
     "its own tests, in its copy",
-    1795024174087
+    1795024126886
    ]
   },
   "nm": {
@@ -657,10 +657,10 @@
    "T-4890": "Keep a real widget tap in the open iPad window",
    "T-4840": "Read the sensor rows from the gate build's export",
    "T-4897": "Check an all-day event keeps its date after travel",
+   "T-4660": "Count a family When's buttons per family",
+   "T-4819": "Make sure a send never rewrites a project's settings file",
    "T-4866": "Rerun the Pro row large-text test after the footer fix",
    "T-4570": "Launcher slot copy takes the premade file lock",
-   "T-4819": "Make sure a send never rewrites a project's settings file",
-   "T-4660": "Count a family When's buttons per family",
    "T-4493": "Cut clutter text on the pages still carrying it",
    "T-4786": "Correct every bad test that holds a merge",
    "T-4903": "Drop stale copies from the merge count for good"
@@ -672,10 +672,10 @@
    "T-4890": "Idris",
    "T-4840": "Idris",
    "T-4897": "Idris",
+   "T-4660": "Pernille",
+   "T-4819": "Idris",
    "T-4866": "Idris",
    "T-4570": "Idris",
-   "T-4819": "Idris",
-   "T-4660": "Pernille",
    "T-4493": "Maren",
    "T-4786": "Pernille",
    "T-4903": "Odalys",
@@ -684,7 +684,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-18T18:25:34Z",
+  "at": "2026-11-18T18:28:46Z",
   "mq": {
    "n": {
     "checking": 2,
@@ -696,13 +696,13 @@
     "parked": 5
    },
    "m": {
-    "checking": 0,
-    "inline": 60,
-    "conflicted": 411,
+    "checking": 4,
+    "inline": 63,
+    "conflicted": 414,
     "failed": null,
-    "held": 2576,
-    "retry": 11,
-    "parked": 888
+    "held": 2579,
+    "retry": 14,
+    "parked": 891
    },
    "cur": [
     [
@@ -711,7 +711,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     0
+     4
     ],
     [
      [
@@ -719,7 +719,7 @@
      ],
      "iPhone app tests",
      "MacBook",
-     1
+     5
     ]
    ],
    "ld": [
@@ -729,8 +729,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-18T18:25:12Z",
-    "ld": 4.58,
+    "at": "2026-11-18T18:28:23Z",
+    "ld": 4.24,
     "c": 8,
     "sb": 1,
     "dk": [
@@ -799,10 +799,10 @@
   "main": 2,
   "lanes": 1,
   "total": 3,
-  "at": "1:25 PM",
+  "at": "1:28 PM",
   "why": "",
-  "at_iso": "2026-11-18T18:25:00+00:00",
+  "at_iso": "2026-11-18T18:28:00+00:00",
   "started": "10:30 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 10:30 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 1:25 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 10:30 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 1:28 PM ET</p></section>"
  }
 }

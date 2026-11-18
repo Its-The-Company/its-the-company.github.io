@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-18T03:54:48.896113+00:00",
+ "at": "2026-11-18T03:57:54.872989+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -129,7 +129,7 @@
    "task": "[tools] T-4806 land merge time-out fixes",
    "model": "opus",
    "started": "2026-11-18T03:27:34.411Z",
-   "seconds": 1634,
+   "seconds": 1820,
    "finished": null,
    "effort": "high"
   },
@@ -138,7 +138,7 @@
    "task": "[tools] T-4829 bottleneck watch on tick",
    "model": "opus",
    "started": "2026-11-18T03:44:30.048Z",
-   "seconds": 618,
+   "seconds": 804,
    "finished": null,
    "effort": "high"
   }
@@ -206,7 +206,7 @@
   "week_pct": 46.38,
   "usage_pct": 53.7,
   "work_pct": 81.3,
-  "read_at": "2026-11-18T03:54:00+00:00",
+  "read_at": "2026-11-18T03:57:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -368,7 +368,7 @@
  "lock_in": {
   "on": false,
   "pool": 8,
-  "at": "2026-11-17T22:54:00-05:00",
+  "at": "2026-11-17T22:57:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -602,34 +602,39 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-18T03:54:39Z",
+  "at": "2026-11-18T03:57:33Z",
   "s": {
    "T-4750": [
     "merging",
     "Host checks on the Mac mini",
-    1794973719927
+    1794973773880
    ],
    "T-4803": [
     "mergeq",
     "2nd to merge",
-    1794973959927
+    1794973953880
+   ],
+   "T-4516": [
+    "mergeq",
+    "3rd to merge",
+    1794974193880
    ],
    "T-4700": [
     "mergeq",
-    "3rd to merge",
-    1794973899927
+    "4th to merge",
+    1794973893880
    ],
    "T-4806": [
     "merging",
     "Mac tests at the main gate",
-    1794973599927
+    1794973593880
    ],
-   "T-4533": [
+   "T-4442": [
     "testing",
     "Mac Mini \u00b7 test",
     null
    ],
-   "T-4654": [
+   "T-4759": [
     "testing",
     "Mac Mini \u00b7 test",
     null
@@ -637,70 +642,65 @@
    "T-4829": [
     "testing",
     "its own tests, in its copy",
-    1794973659927
-   ],
-   "T-4442": [
-    "testq",
-    "2nd for a Simulator",
-    1794973419927
-   ],
-   "T-4516": [
-    "testq",
-    "2nd for a Simulator",
-    1794973419927
-   ],
-   "T-4759": [
-    "testq",
-    "2nd for a Simulator",
-    1794973419927
+    1794973653880
    ],
    "T-4772": [
     "testq",
-    "3rd for a Simulator",
-    1794973959927
+    "1st for a Simulator",
+    1794973953880
    ],
    "T-4773": [
     "testq",
-    "3rd for a Simulator",
-    1794973959927
+    "1st for a Simulator",
+    1794973953880
+   ],
+   "T-4533": [
+    "testq",
+    "2nd for a Simulator",
+    1794974253880
+   ],
+   "T-4654": [
+    "testq",
+    "2nd for a Simulator",
+    1794974253880
    ]
   },
   "nm": {
    "T-4750": "Check network fetch cases on the Swift side too",
    "T-4803": "Make the tap check's record match the iPad ruling",
+   "T-4516": "Prove the premade settings routes in a UI test",
    "T-4700": "Check finished work before it ships",
    "T-4806": "Fix the causes of merge time-outs and runner errors",
-   "T-4533": "Make the premade settings save sturdier on disk errors",
-   "T-4654": "Say true things when a Shortcut's premade is held back",
-   "T-4829": "Run the bottleneck watch on every tick",
    "T-4442": "Tidy the bundled first renders' small edges",
-   "T-4516": "Prove the premade settings routes in a UI test",
    "T-4759": "Check finished work before it ships",
+   "T-4829": "Run the bottleneck watch on every tick",
    "T-4772": "Prove a refresh tap redraws the widget",
-   "T-4773": "Time the next run from the widget's own ask"
+   "T-4773": "Time the next run from the widget's own ask",
+   "T-4533": "Make the premade settings save sturdier on disk errors",
+   "T-4654": "Say true things when a Shortcut's premade is held back"
   },
   "wk": {
    "T-4750": "Idris",
    "T-4803": "Idris",
+   "T-4516": "Idris",
    "T-4700": "Pernille",
    "T-4806": "Odalys",
-   "T-4533": "Pernille",
-   "T-4654": "Idris",
-   "T-4829": "Odalys",
    "T-4442": "Idris",
-   "T-4516": "Idris",
    "T-4759": "Pernille",
+   "T-4829": "Odalys",
    "T-4772": "Idris",
    "T-4773": "Idris",
+   "T-4533": "Pernille",
+   "T-4654": "Idris",
    "T-4817": "Odalys"
   }
  },
  "ln": {
-  "at": "2026-11-18T03:54:39Z",
+  "at": "2026-11-18T03:57:33Z",
   "mq": {
    "n": {
     "checking": 1,
-    "inline": 2,
+    "inline": 3,
     "conflicted": 3,
     "failed": 0,
     "held": 1,
@@ -708,13 +708,13 @@
     "parked": 10
    },
    "m": {
-    "checking": 6,
-    "inline": 2,
-    "conflicted": 351,
+    "checking": 8,
+    "inline": 5,
+    "conflicted": 354,
     "failed": null,
-    "held": 1705,
-    "retry": 16,
-    "parked": 271
+    "held": 1708,
+    "retry": 19,
+    "parked": 274
    },
    "cur": [
     [
@@ -723,7 +723,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     6
+     8
     ]
    ],
    "ld": [
@@ -733,21 +733,19 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-18T03:53:52Z",
-    "ld": 21.8,
+    "at": "2026-11-18T03:56:47Z",
+    "ld": 19.2,
     "c": 8,
-    "sb": 1,
+    "sb": 0,
     "dk": [
-     12.2,
+     11.8,
      228.3
     ],
     "ss": [
      174.5,
      953.7
     ],
-    "sn": [
-     "iPhone 17 Pro"
-    ]
+    "sn": []
    },
    "macbook": {
     "at": "2026-11-18T03:45:24Z",
@@ -787,7 +785,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 2 tasks",
+   "t": "Work session \u2013 1 task",
    "at": "2026-11-17T22:39:45-05:00"
   },
   {
@@ -838,10 +836,10 @@
   "main": 2,
   "lanes": 5,
   "total": 7,
-  "at": "10:54 PM",
+  "at": "10:57 PM",
   "why": "",
-  "at_iso": "2026-11-18T03:54:00+00:00",
+  "at_iso": "2026-11-18T03:57:00+00:00",
   "started": "10:22 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 2, started 10:22 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 10:54 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 2, started 10:22 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 10:57 PM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-18T19:15:50.995880+00:00",
+ "at": "2026-11-18T19:18:54.538707+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -130,7 +130,7 @@
     "why": "did not merge cleanly"
    }
   ],
-  "landed": 24,
+  "landed": 20,
   "failed": 8
  },
  "workers": [
@@ -139,7 +139,7 @@
    "task": "[tools] T-4907 keep main green after every land",
    "model": "opus",
    "started": "2026-11-18T19:11:56.141Z",
-   "seconds": 234,
+   "seconds": 418,
    "finished": null,
    "effort": "high"
   },
@@ -148,7 +148,7 @@
    "task": "[tools] T-4902 Investor P0 process lines past limit",
    "model": "opus",
    "started": "2026-11-18T19:12:07.311Z",
-   "seconds": 223,
+   "seconds": 407,
    "finished": null,
    "effort": "high"
   },
@@ -157,7 +157,7 @@
    "task": "[build] T-4772 prove a refresh tap redraws widget",
    "model": "opus",
    "started": "2026-11-18T19:12:21.245Z",
-   "seconds": 209,
+   "seconds": 393,
    "finished": null,
    "effort": "high"
   }
@@ -216,7 +216,7 @@
   "week_pct": 51.56,
   "usage_pct": 51.3,
   "work_pct": 81.5,
-  "read_at": "2026-11-18T19:15:00+00:00",
+  "read_at": "2026-11-18T19:18:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -253,7 +253,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-18T14:15:00-05:00",
+  "at": "2026-11-18T14:18:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -493,47 +493,52 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-18T19:15:44Z",
+  "at": "2026-11-18T19:18:42Z",
   "s": {
    "T-4679": [
     "mergeq",
     "1st to merge",
-    1795027304369
+    1795027302671
    ],
    "T-4660": [
     "mergeq",
     "2nd to merge",
-    1795022804369
+    1795022802671
    ],
    "T-4819": [
     "mergeq",
     "3rd to merge",
-    1795022924369
+    1795022922671
    ],
    "T-4866": [
     "mergeq",
     "4th to merge",
-    1795027304369
+    1795027302671
    ],
    "T-4890": [
     "mergeq",
     "5th to merge",
-    1795024064369
+    1795024062671
    ],
    "T-4898": [
     "mergeq",
     "5th to merge",
-    1795024064369
+    1795024062671
    ],
    "T-4897": [
     "mergeq",
     "6th to merge",
-    1795026344369
+    1795026342671
    ],
    "T-4570": [
     "mergeq",
     "6th to merge",
-    1795026344369
+    1795026342671
+   ],
+   "T-4772": [
+    "testing",
+    "its own tests, in its copy",
+    1795029462671
    ]
   },
   "nm": {
@@ -544,7 +549,8 @@
    "T-4890": "Keep a real widget tap in the open iPad window",
    "T-4898": "Fix the Home Screen token test reading the gallery",
    "T-4897": "Check an all-day event keeps its date after travel",
-   "T-4570": "Launcher slot copy takes the premade file lock"
+   "T-4570": "Launcher slot copy takes the premade file lock",
+   "T-4772": "Prove a refresh tap redraws the widget"
   },
   "wk": {
    "T-4679": "Idris",
@@ -554,11 +560,12 @@
    "T-4890": "Idris",
    "T-4898": "Idris",
    "T-4897": "Idris",
-   "T-4570": "Idris"
+   "T-4570": "Idris",
+   "T-4772": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-18T19:15:44Z",
+  "at": "2026-11-18T19:18:42Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -571,12 +578,12 @@
    },
    "m": {
     "checking": null,
-    "inline": 69,
-    "conflicted": 461,
+    "inline": 72,
+    "conflicted": 464,
     "failed": null,
     "held": null,
-    "retry": 61,
-    "parked": 938
+    "retry": 64,
+    "parked": 941
    },
    "cur": [],
    "ld": [
@@ -586,12 +593,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-18T19:14:59Z",
-    "ld": 1.85,
+    "at": "2026-11-18T19:18:17Z",
+    "ld": 7.69,
     "c": 8,
-    "sb": 1,
+    "sb": 2,
     "dk": [
-     13.0,
+     14.6,
      228.3
     ],
     "ss": [
@@ -599,7 +606,8 @@
      953.7
     ],
     "sn": [
-     "t4772-27"
+     "t4772-27",
+     "pywidget-t0678-ios26"
     ]
    },
    "macbook": {
@@ -645,10 +653,10 @@
   "main": 3,
   "lanes": 0,
   "total": 3,
-  "at": "2:15 PM",
+  "at": "2:18 PM",
   "why": "",
-  "at_iso": "2026-11-18T19:15:00+00:00",
+  "at_iso": "2026-11-18T19:18:00+00:00",
   "started": "2:09 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 2:09 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 2:15 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 2:09 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 2:18 PM ET</p></section>"
  }
 }

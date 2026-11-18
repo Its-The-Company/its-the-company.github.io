@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-18T15:43:02.440861+00:00",
+ "at": "2026-11-18T15:46:03.407202+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -69,6 +69,10 @@
      {
       "s": "macbook",
       "at": 1795012473
+     },
+     {
+      "s": "testq",
+      "at": 1795016718
      }
     ]
    },
@@ -207,12 +211,21 @@
    "task": "[build] T-4771 recut gutter marks and land",
    "model": "opus",
    "started": "2026-11-18T15:32:38.173Z",
-   "seconds": 624,
+   "seconds": 805,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "maren",
+   "task": "[build] T-4493 land the site clutter cut",
+   "model": "opus",
+   "started": "2026-11-18T15:43:48.650Z",
+   "seconds": 134,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Idris",
+ "who": "Idris, Maren",
  "recent": [
   {
    "name": "idris",
@@ -242,7 +255,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 488,
+  "runnable_count": 487,
   "blocked_count": 34
  },
  "meter": {
@@ -291,7 +304,7 @@
   "week_pct": 51.32,
   "usage_pct": 52.2,
   "work_pct": 82.0,
-  "read_at": "2026-11-18T15:43:00+00:00",
+  "read_at": "2026-11-18T15:46:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -328,7 +341,7 @@
  "lock_in": {
   "on": false,
   "pool": 12,
-  "at": "2026-11-18T10:43:00-05:00",
+  "at": "2026-11-18T10:46:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -350,6 +363,15 @@
    "task": "[build] T-4771 recut gutter marks and land",
    "model": "opus",
    "since": "2026-11-18T15:32:38.173Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
+   "name": "Maren",
+   "state": "running",
+   "task": "[build] T-4493 land the site clutter cut",
+   "model": "opus",
+   "since": "2026-11-18T15:43:48.650Z",
    "next": [],
    "effort": "high"
   },
@@ -384,14 +406,6 @@
    "model": null,
    "since": null,
    "next": []
-  },
-  {
-   "name": "Maren",
-   "state": "next",
-   "task": "Maren, P2, found on T-3366 (11-07): in...",
-   "model": null,
-   "since": null,
-   "next": []
   }
  ],
  "tasks": {
@@ -405,6 +419,16 @@
     "at": "2026-11-18T15:32:38.173Z",
     "o": "c",
     "task": "T-4771"
+   },
+   {
+    "w": "Maren",
+    "k": "build",
+    "t": "Cut clutter text on the pages still carrying it",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-18T15:43:48.650Z",
+    "o": "c",
+    "task": "T-4493"
    }
   ],
   "src": "plan",
@@ -483,6 +507,11 @@
   "done": [
    {
     "w": "Operator",
+    "t": "The website's Pitches page test works again: Evan made the one-line fix himself on GitHub after...",
+    "at": "2026-11-18T10:43:00-05:00"
+   },
+   {
+    "w": "Operator",
     "t": "Refusals per day stayed within its limit of 16.05 refusals for a full day, so the bottleneck...",
     "at": "2026-11-18T10:29:00-05:00"
    },
@@ -490,22 +519,22 @@
     "w": "Idris+operator",
     "t": "The Pro purchase tests no longer time out: after the waiting fix they passed three times running...",
     "at": "2026-11-18T10:17:00-05:00"
-   },
-   {
-    "w": "Idris",
-    "t": "The automated tests that tap a long line of code and slide the space-bar trackpad passed on the...",
-    "at": "2026-11-18T09:46:00-05:00"
    }
   ],
   "count": {
-   "next": 488,
+   "next": 487,
    "wait": 32,
    "blocked": 2,
    "you": 9
   },
   "fin": {
-   "n": 0,
-   "rows": []
+   "n": 1,
+   "rows": [
+    [
+     "T-4812",
+     "Pitches page test crashes on..."
+    ]
+   ]
   }
  },
  "qr": [
@@ -547,72 +576,77 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-18T15:42:48Z",
+  "at": "2026-11-18T15:45:41Z",
   "s": {
+   "T-4574": [
+    "merging",
+    "Host checks on the Mac mini",
+    1795016741805
+   ],
    "T-4533": [
     "mergeq",
     "1st to merge",
-    1794988128366
-   ],
-   "T-4574": [
-    "mergeq",
-    "3rd to merge",
-    1794992508366
+    1794988121805
    ],
    "T-4635": [
     "mergeq",
-    "5th to merge",
-    1795006368366
+    "4th to merge",
+    1795006361805
    ],
    "T-4748": [
     "mergeq",
-    "6th to merge",
-    1795007028366
+    "5th to merge",
+    1795007021805
    ],
    "T-4640": [
     "mergeq",
-    "7th to merge",
-    1795007088366
+    "6th to merge",
+    1795007081805
    ],
    "T-4581": [
     "mergeq",
-    "8th to merge",
-    1795007088366
+    "7th to merge",
+    1795007081805
    ],
    "T-4575": [
     "mergeq",
-    "10th to merge",
-    1795007448366
+    "9th to merge",
+    1795007441805
    ],
    "T-4789": [
     "mergeq",
-    "11th to merge",
-    1795007448366
+    "10th to merge",
+    1795007441805
    ],
    "T-4889": [
     "mergeq",
-    "13th to merge",
-    1795010088366
+    "12th to merge",
+    1795010081805
    ],
    "T-4835": [
     "mergeq",
-    "14th to merge",
-    1795011708366
+    "13th to merge",
+    1795011701805
    ],
    "T-4679": [
     "mergeq",
-    "15th to merge",
-    1795012008366
+    "14th to merge",
+    1795012001805
    ],
    "T-4771": [
     "mergetest",
     "iPhone tests on the MacBook",
     null
+   ],
+   "T-4493": [
+    "testing",
+    "its own tests, in its copy",
+    1795016681805
    ]
   },
   "nm": {
-   "T-4533": "Make the premade settings save sturdier on disk errors",
    "T-4574": "Keep the launcher's app queries out of shipped builds",
+   "T-4533": "Make the premade settings save sturdier on disk errors",
    "T-4635": "Clear the Settings restore line once Pro is bought",
    "T-4748": "Make the widget font check ignore lookalike letters",
    "T-4640": "Drop a location fix that arrives too late",
@@ -622,11 +656,12 @@
    "T-4889": "Check the PyWidget case fix in premade lines",
    "T-4835": "Show an all-day event on its own date after travel",
    "T-4679": "Make the unit tests pass in a launcher build",
-   "T-4771": "Gutter marks redraw quickly and stay right while typing"
+   "T-4771": "Gutter marks redraw quickly and stay right while typing",
+   "T-4493": "Cut clutter text on the pages still carrying it"
   },
   "wk": {
-   "T-4533": "Pernille",
    "T-4574": "Idris",
+   "T-4533": "Pernille",
    "T-4635": "Idris",
    "T-4748": "Idris",
    "T-4640": "Idris",
@@ -636,15 +671,17 @@
    "T-4889": "Idris",
    "T-4835": "Pernille",
    "T-4679": "Idris",
-   "T-4771": "Idris"
+   "T-4771": "Idris",
+   "T-4493": "Maren",
+   "T-4812": "Maren"
   }
  },
  "ln": {
-  "at": "2026-11-18T15:42:48Z",
+  "at": "2026-11-18T15:45:41Z",
   "mq": {
    "n": {
-    "checking": 0,
-    "inline": 11,
+    "checking": 1,
+    "inline": 10,
     "conflicted": 5,
     "failed": 0,
     "held": 1,
@@ -652,15 +689,24 @@
     "parked": 5
    },
    "m": {
-    "checking": null,
+    "checking": 0,
     "inline": 158,
-    "conflicted": 749,
+    "conflicted": 752,
     "failed": null,
-    "held": 2413,
+    "held": 2416,
     "retry": null,
-    "parked": 725
+    "parked": 728
    },
-   "cur": [],
+   "cur": [
+    [
+     [
+      "T-4574"
+     ],
+     "Mac tests",
+     "Mac mini",
+     0
+    ]
+   ],
    "ld": [
     20,
     "2026-11-18T15:37:30Z"
@@ -668,8 +714,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-18T15:42:48Z",
-    "ld": 4.96,
+    "at": "2026-11-18T15:45:16Z",
+    "ld": 3.29,
     "c": 8,
     "sb": 1,
     "dk": [
@@ -704,7 +750,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 2 tasks",
+   "t": "Work session \u2013 3 tasks",
    "at": "2026-11-18T10:30:40-05:00"
   }
  ],
@@ -717,6 +763,7 @@
   "lane_next",
   "queue_text",
   "task_done",
+  "fin_short",
   "task_title",
   "done_text",
   "task_open",
@@ -724,13 +771,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 1,
+  "main": 2,
   "lanes": 0,
-  "total": 1,
-  "at": "10:43 AM",
+  "total": 2,
+  "at": "10:46 AM",
   "why": "",
-  "at_iso": "2026-11-18T15:43:00+00:00",
+  "at_iso": "2026-11-18T15:46:00+00:00",
   "started": "10:30 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 10:30 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 10:43 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 10:30 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 10:46 AM ET</p></section>"
  }
 }

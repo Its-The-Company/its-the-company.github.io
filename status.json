@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-18T19:49:38.980529+00:00",
+ "at": "2026-11-18T19:52:41.812116+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -137,7 +137,7 @@
    "task": "[tools] T-4907 keep main green after every land",
    "model": "opus",
    "started": "2026-11-18T19:11:56.141Z",
-   "seconds": 2262,
+   "seconds": 2445,
    "finished": null,
    "effort": "high"
   },
@@ -146,22 +146,31 @@
    "task": "[tools] T-4902 Investor P0 process lines past limit",
    "model": "opus",
    "started": "2026-11-18T19:12:07.311Z",
-   "seconds": 2251,
+   "seconds": 2434,
    "finished": null,
    "effort": "high"
   },
   {
    "name": "idris",
-   "task": "[build] T-4772 prove a refresh tap redraws widget",
+   "task": "[build] T-4773 time next run from widget ask",
    "model": "opus",
-   "started": "2026-11-18T19:12:21.245Z",
-   "seconds": 2237,
+   "started": "2026-11-18T19:52:27.248Z",
+   "seconds": 14,
    "finished": null,
    "effort": "high"
   }
  ],
  "who": "Odalys x2, Idris",
- "recent": [],
+ "recent": [
+  {
+   "name": "idris",
+   "task": "[build] T-4772 prove a refresh tap redraws widget",
+   "model": "opus",
+   "started": "2026-11-18T19:12:21.245Z",
+   "seconds": null,
+   "finished": "2026-11-18T19:52:02.875000+00:00"
+  }
+ ],
  "queue": {
   "runnable": [],
   "blocked": [],
@@ -170,19 +179,19 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 20.0,
+   "pct": 21.0,
    "resets_at": "2026-11-18T15:10:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-18T14:45:37.527305-05:00",
+   "read_at": "2026-11-18T14:52:01.035957-05:00",
    "source": "live",
-   "left": 80.0,
+   "left": 79.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 49.0,
    "resets_at": "2026-11-22T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-18T14:45:37.527305-05:00",
+   "read_at": "2026-11-18T14:52:01.035957-05:00",
    "source": "live",
    "left": 51.0,
    "left_words": "of your weekly allowance left"
@@ -194,7 +203,7 @@
    "read_at": "2026-11-18T14:09:30.092585-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-18T14:45:37.527305-05:00"
+  "read_at": "2026-11-18T14:52:01.035957-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -214,7 +223,7 @@
   "week_pct": 51.56,
   "usage_pct": 51.3,
   "work_pct": 81.5,
-  "read_at": "2026-11-18T19:49:00+00:00",
+  "read_at": "2026-11-18T19:52:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -244,14 +253,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions wait until 20 GB is free.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-18T14:45:00-05:00",
+   "at": "2026-11-18T14:51:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-18T14:49:00-05:00",
+  "at": "2026-11-18T14:52:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -279,9 +288,9 @@
   {
    "name": "Idris",
    "state": "running",
-   "task": "[build] T-4772 prove a refresh tap redraws widget",
+   "task": "[build] T-4773 time next run from widget ask",
    "model": "opus",
-   "since": "2026-11-18T19:12:21.245Z",
+   "since": "2026-11-18T19:52:27.248Z",
    "next": [],
    "effort": "high"
   },
@@ -343,12 +352,12 @@
    {
     "w": "Idris",
     "k": "build",
-    "t": "Prove a refresh tap redraws the widget",
+    "t": "Time the next run from the widget's own ask",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-18T19:12:21.245Z",
+    "at": "2026-11-18T19:52:27.248Z",
     "o": "c",
-    "task": "T-4772"
+    "task": "T-4773"
    }
   ],
   "src": "plan",
@@ -491,37 +500,30 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-18T19:49:23Z",
+  "at": "2026-11-18T19:52:35Z",
   "s": {
-   "T-4772": [
-    "merging",
-    "Mac tests at the main gate",
-    1795031363418
-   ],
    "T-4902": [
     "testing",
     "its own tests, in its copy",
-    1795029683418
+    1795029695464
    ],
    "T-4907": [
     "testing",
     "its own tests, in its copy",
-    1795030043418
+    1795029995464
    ]
   },
   "nm": {
-   "T-4772": "Prove a refresh tap redraws the widget",
    "T-4902": "Let Investor-asked P0 process lines start past the limit",
    "T-4907": "Keep main green after every land"
   },
   "wk": {
-   "T-4772": "Idris",
    "T-4902": "Odalys",
    "T-4907": "Odalys"
   }
  },
  "ln": {
-  "at": "2026-11-18T19:49:23Z",
+  "at": "2026-11-18T19:52:35Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -530,16 +532,16 @@
     "failed": 0,
     "held": 0,
     "retry": 0,
-    "parked": 5
+    "parked": 4
    },
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 495,
+    "conflicted": 498,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 972
+    "parked": 1062
    },
    "cur": [],
    "ld": [
@@ -549,12 +551,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-18T19:49:24Z",
-    "ld": 2.58,
+    "at": "2026-11-18T19:51:46Z",
+    "ld": 2.11,
     "c": 8,
     "sb": 1,
     "dk": [
-     14.7,
+     14.6,
      228.3
     ],
     "ss": [
@@ -586,12 +588,12 @@
    "m": "opus",
    "e": "high",
    "t": "Work session \u2013 3 tasks",
-   "at": "2026-11-18T14:39:06-05:00"
+   "at": "2026-11-18T14:51:26-05:00"
   }
  ],
  "reply": {
-  "sent": "2026-11-18T19:38:24Z",
-  "seconds": 41.0
+  "sent": "2026-11-18T19:50:26Z",
+  "seconds": 59.0
  },
  "inbox": [],
  "trimmed": [
@@ -608,10 +610,10 @@
   "main": 3,
   "lanes": 0,
   "total": 3,
-  "at": "2:49 PM",
+  "at": "2:52 PM",
   "why": "",
-  "at_iso": "2026-11-18T19:49:00+00:00",
+  "at_iso": "2026-11-18T19:52:00+00:00",
   "started": "2:09 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 2:09 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 2:49 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 2:09 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 2:52 PM ET</p></section>"
  }
 }

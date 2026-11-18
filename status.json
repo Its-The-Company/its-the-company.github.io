@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-18T17:42:44.166822+00:00",
+ "at": "2026-11-18T17:45:52.695018+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -141,7 +141,7 @@
    "task": "[tools] T-4786 fix S30-5 held-state test, land T-4493",
    "model": "opus",
    "started": "2026-11-18T17:33:36.694Z",
-   "seconds": 547,
+   "seconds": 736,
    "finished": null,
    "effort": "high"
   },
@@ -150,7 +150,7 @@
    "task": "[tools] T-4903 part 5: drop copies when redo starts",
    "model": "opus",
    "started": "2026-11-18T17:41:17.039Z",
-   "seconds": 87,
+   "seconds": 275,
    "finished": null,
    "effort": "high"
   }
@@ -198,19 +198,19 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 9.0,
+   "pct": 10.0,
    "resets_at": "2026-11-18T15:10:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-18T12:37:13.920033-05:00",
+   "read_at": "2026-11-18T12:43:34.861798-05:00",
    "source": "live",
-   "left": 91.0,
+   "left": 90.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 48.0,
    "resets_at": "2026-11-22T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-18T12:37:13.920033-05:00",
+   "read_at": "2026-11-18T12:43:34.861798-05:00",
    "source": "live",
    "left": 52.0,
    "left_words": "of your weekly allowance left"
@@ -222,7 +222,7 @@
    "read_at": "2026-11-18T10:30:22.136410-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-18T12:37:13.920033-05:00"
+  "read_at": "2026-11-18T12:43:34.861798-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -242,7 +242,7 @@
   "week_pct": 51.32,
   "usage_pct": 52.2,
   "work_pct": 82.0,
-  "read_at": "2026-11-18T17:42:00+00:00",
+  "read_at": "2026-11-18T17:45:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -268,32 +268,6 @@
     "at": "2026-11-18T12:11:35-05:00",
     "n": "Evan",
     "src": "plan-a"
-   },
-   {
-    "lane": "b",
-    "task": "T-4890",
-    "w": "Idris",
-    "k": "build",
-    "t": "Keep a real widget tap in the open iPad window",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-18T10:51:33-05:00",
-    "n": "Jeremy",
-    "d": 1,
-    "src": "plan-b"
-   },
-   {
-    "lane": "b",
-    "task": "T-4898",
-    "w": "Idris",
-    "k": "fix",
-    "t": "Fix the Home Screen token test reading the gallery",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-18T10:51:33-05:00",
-    "n": "Jeremy",
-    "d": 1,
-    "src": "plan-b"
    },
    {
     "lane": "b3",
@@ -341,7 +315,7 @@
   }
  ],
  "disk": {
-  "free_gb": 10,
+  "free_gb": 11,
   "gate": "closed",
   "ssd": {
    "mounted": true,
@@ -350,14 +324,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions wait until 20 GB is free.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-18T12:37:00-05:00",
+   "at": "2026-11-18T12:43:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 12,
-  "at": "2026-11-18T12:42:00-05:00",
+  "at": "2026-11-18T12:45:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -596,52 +570,52 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-18T17:42:44Z",
+  "at": "2026-11-18T17:45:39Z",
   "s": {
    "T-4679": [
     "mergeq",
     "1st to merge",
-    1795012004166
+    1795011999867
    ],
    "T-4840": [
     "mergeq",
     "4th to merge",
-    1795022504166
+    1795022499867
    ],
    "T-4866": [
     "mergeq",
     "5th to merge",
-    1795023164166
+    1795023219867
    ],
    "T-4898": [
     "mergeq",
     "7th to merge",
-    1795021004166
+    1795020999867
    ],
    "T-4890": [
     "mergeq",
     "8th to merge",
-    1795021424166
+    1795021419867
    ],
    "T-4897": [
     "mergeq",
     "9th to merge",
-    1795022624166
+    1795022619867
    ],
    "T-4819": [
     "mergeq",
     "10th to merge",
-    1795022924166
+    1795022919867
    ],
    "T-4660": [
     "mergeq",
     "11th to merge",
-    1795022804166
+    1795022799867
    ],
    "T-4786": [
     "merging",
     "Mac tests at the main gate",
-    1795023704166
+    1795023699867
    ],
    "T-4903": [
     "merged",
@@ -678,7 +652,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-18T17:42:44Z",
+  "at": "2026-11-18T17:45:39Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -691,12 +665,12 @@
    },
    "m": {
     "checking": null,
-    "inline": 20,
-    "conflicted": 368,
+    "inline": 23,
+    "conflicted": 371,
     "failed": null,
-    "held": 2533,
+    "held": 2536,
     "retry": null,
-    "parked": 845
+    "parked": 848
    },
    "cur": [],
    "ld": [
@@ -706,12 +680,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-18T17:42:44Z",
-    "ld": 6.85,
+    "at": "2026-11-18T17:45:40Z",
+    "ld": 4.66,
     "c": 8,
     "sb": 1,
     "dk": [
-     11.5,
+     13.7,
      228.3
     ],
     "ss": [
@@ -761,15 +735,6 @@
    "m": "opus",
    "e": "high",
    "t": "Work session",
-   "at": "2026-11-18T12:01:54-05:00"
-  },
-  {
-   "w": "Operator",
-   "a": "Jeremy's Account",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session",
    "at": "2026-11-18T12:21:22-05:00"
   }
  ],
@@ -792,12 +757,12 @@
  ],
  "agents_now": {
   "main": 2,
-  "lanes": 3,
-  "total": 5,
-  "at": "12:42 PM",
+  "lanes": 2,
+  "total": 4,
+  "at": "12:45 PM",
   "why": "",
-  "at_iso": "2026-11-18T17:42:00+00:00",
+  "at_iso": "2026-11-18T17:45:00+00:00",
   "started": "10:30 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 2, started 10:30 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 12:42 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 2, started 10:30 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 12:45 PM ET</p></section>"
  }
 }

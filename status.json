@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-18T06:33:53.360426+00:00",
+ "at": "2026-11-18T06:36:58.967449+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -22,6 +22,17 @@
      {
       "s": "landing",
       "at": 1794981899
+     }
+    ]
+   },
+   {
+    "t": "T-4516",
+    "name": "Prove the premade settings routes in a UI test",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "macbook",
+      "at": 1794983804
      }
     ]
    },
@@ -146,26 +157,26 @@
  },
  "workers": [
   {
-   "name": "pernille",
-   "task": "[build] T-4564 button action run path",
-   "model": "opus",
-   "started": "2026-11-18T05:57:37.954Z",
-   "seconds": 2175,
-   "finished": null,
-   "effort": "high"
-  },
-  {
    "name": "idris",
    "task": "[build] T-4688 Developer mode for Pro",
    "model": "opus",
    "started": "2026-11-18T05:56:56.560Z",
-   "seconds": 2216,
+   "seconds": 2402,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Pernille, Idris",
- "recent": [],
+ "who": "Idris",
+ "recent": [
+  {
+   "name": "pernille",
+   "task": "[build] T-4564 button action run path",
+   "model": "opus",
+   "started": "2026-11-18T05:57:37.954Z",
+   "seconds": null,
+   "finished": "2026-11-18T06:36:08.807000+00:00"
+  }
+ ],
  "queue": {
   "runnable": [],
   "blocked": [],
@@ -174,19 +185,19 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 5.0,
+   "pct": 6.0,
    "resets_at": "2026-11-18T05:10:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-18T01:30:48.634258-05:00",
+   "read_at": "2026-11-18T01:36:51.604414-05:00",
    "source": "live",
-   "left": 95.0,
+   "left": 94.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 41.0,
    "resets_at": "2026-11-22T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-18T01:30:48.634258-05:00",
+   "read_at": "2026-11-18T01:36:51.604414-05:00",
    "source": "live",
    "left": 59.0,
    "left_words": "of your weekly allowance left"
@@ -198,7 +209,7 @@
    "read_at": "2026-11-18T00:47:24.484187-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-18T01:30:48.634258-05:00"
+  "read_at": "2026-11-18T01:36:51.604414-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -218,7 +229,7 @@
   "week_pct": 46.38,
   "usage_pct": 53.1,
   "work_pct": 80.8,
-  "read_at": "2026-11-18T06:33:00+00:00",
+  "read_at": "2026-11-18T06:37:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -252,7 +263,7 @@
   }
  ],
  "disk": {
-  "free_gb": 32,
+  "free_gb": 31,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -261,14 +272,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-18T01:30:00-05:00",
+   "at": "2026-11-18T01:36:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 10,
-  "at": "2026-11-18T01:33:00-05:00",
+  "at": "2026-11-18T01:37:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -295,12 +306,11 @@
   },
   {
    "name": "Pernille",
-   "state": "running",
-   "task": "[build] T-4564 button action run path",
-   "model": "opus",
-   "since": "2026-11-18T05:57:37.954Z",
-   "next": [],
-   "effort": "high"
+   "state": "next",
+   "task": "Pernille, P0, Investor an Investor c6963972184 (6:23 PM...",
+   "model": null,
+   "since": null,
+   "next": []
   },
   {
    "name": "Odalys",
@@ -346,16 +356,6 @@
     "at": "2026-11-18T05:56:56.560Z",
     "o": "c",
     "task": "T-4688"
-   },
-   {
-    "w": "Pernille",
-    "k": "build",
-    "t": "Run a button's action and redraw in one run",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-18T05:57:37.954Z",
-    "o": "c",
-    "task": "T-4564"
    }
   ],
   "src": "plan",
@@ -433,6 +433,11 @@
   ],
   "done": [
    {
+    "w": "Pernille",
+    "t": "A tap on a widget button now runs its Python action and redraws the widget in one go, and...",
+    "at": "2026-11-18T01:36:00-05:00"
+   },
+   {
     "w": "Operator",
     "t": "Main's own tests pass again on a clean copy of main (3303c72a9), so finished work is no longer...",
     "at": "2026-11-18T00:58:00-05:00"
@@ -441,11 +446,6 @@
     "w": "Odalys",
     "t": "The supervisor now runs the bottleneck watch on every tick, so a merge queue or another...",
     "at": "2026-11-18T00:30:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "A new checker reads fifteen measures of how work flows (merge waits, failed lands, machine load,...",
-    "at": "2026-11-17T22:43:00-05:00"
    }
   ],
   "count": {
@@ -455,8 +455,13 @@
    "you": 9
   },
   "fin": {
-   "n": 0,
-   "rows": []
+   "n": 1,
+   "rows": [
+    [
+     "T-4564",
+     "Run a button's action and..."
+    ]
+   ]
   }
  },
  "qr": [
@@ -498,83 +503,77 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-18T06:33:53Z",
+  "at": "2026-11-18T06:36:43Z",
   "s": {
+   "T-4516": [
+    "merging",
+    "Rebasing onto current main",
+    1794983803518
+   ],
    "T-4823": [
     "mergeq",
     "1st to merge",
-    1794981953360
+    1794982003518
    ],
    "T-4787": [
     "mergeq",
     "2nd to merge",
-    1794982913360
+    1794982903518
    ],
    "T-4796": [
     "mergeq",
     "3rd to merge",
-    1794975233360
+    1794975223518
    ],
    "T-4442": [
     "mergeq",
     "4th to merge",
-    1794975353360
-   ],
-   "T-4516": [
-    "mergeq",
-    "5th to merge",
-    1794977573360
+    1794975343518
    ],
    "T-4784": [
     "mergeq",
-    "6th to merge",
-    1794982793360
+    "5th to merge",
+    1794982783518
    ],
    "T-4841": [
     "mergeq",
-    "7th to merge",
-    1794981893360
-   ],
-   "T-4564": [
-    "mergetest",
-    "iPhone tests on the MacBook",
-    null
+    "6th to merge",
+    1794981943518
    ],
    "T-4688": [
     "testing",
     "its own tests, in its copy",
-    1794983513360
+    1794983563518
    ]
   },
   "nm": {
+   "T-4516": "Prove the premade settings routes in a UI test",
    "T-4823": "Group process changes into features",
    "T-4787": "Count failed merges by cause: bad test or broken code",
    "T-4796": "Say which premades carry the Pro tag",
    "T-4442": "Tidy the bundled first renders' small edges",
-   "T-4516": "Prove the premade settings routes in a UI test",
    "T-4784": "Pin the refresh glyph's button style in a test",
    "T-4841": "Decide whether the widget probe asks for HealthKit",
-   "T-4564": "Run a button's action and redraw in one run",
    "T-4688": "Build a Developer mode for testing Pro"
   },
   "wk": {
+   "T-4516": "Idris",
    "T-4823": "Odalys",
    "T-4787": "Odalys",
    "T-4796": "Ines",
    "T-4442": "Idris",
-   "T-4516": "Idris",
    "T-4784": "Idris",
    "T-4841": "Ines",
-   "T-4564": "Pernille",
-   "T-4688": "Idris"
+   "T-4688": "Idris",
+   "T-4564": "Pernille"
   }
  },
  "ln": {
-  "at": "2026-11-18T06:33:53Z",
+  "at": "2026-11-18T06:36:43Z",
   "mq": {
    "n": {
-    "checking": 0,
-    "inline": 7,
+    "checking": 1,
+    "inline": 6,
     "conflicted": 3,
     "failed": 0,
     "held": 1,
@@ -582,15 +581,24 @@
     "parked": 10
    },
    "m": {
-    "checking": null,
-    "inline": 29,
-    "conflicted": 510,
+    "checking": 0,
+    "inline": 30,
+    "conflicted": 513,
     "failed": null,
-    "held": 1864,
+    "held": 1867,
     "retry": null,
-    "parked": 430
+    "parked": 433
    },
-   "cur": [],
+   "cur": [
+    [
+     [
+      "T-4516"
+     ],
+     "lining up with main",
+     "Mac mini",
+     0
+    ]
+   ],
    "ld": [
     5,
     "2026-11-18T06:06:01Z"
@@ -598,12 +606,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-18T06:33:29Z",
-    "ld": 15.85,
+    "at": "2026-11-18T06:35:58Z",
+    "ld": 10.51,
     "c": 8,
     "sb": 2,
     "dk": [
-     31.8,
+     31.3,
      228.3
     ],
     "ss": [
@@ -616,8 +624,8 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-18T06:27:11Z",
-    "ld": 7.38,
+    "at": "2026-11-18T06:35:00Z",
+    "ld": 2.31,
     "c": 12,
     "sb": 0,
     "dk": [
@@ -657,6 +665,7 @@
   "lane_next",
   "queue_text",
   "task_done",
+  "fin_short",
   "task_title",
   "done_text",
   "task_open",
@@ -664,13 +673,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 2,
+  "main": 1,
   "lanes": 1,
-  "total": 3,
-  "at": "1:33 AM",
+  "total": 2,
+  "at": "1:37 AM",
   "why": "",
-  "at_iso": "2026-11-18T06:33:00+00:00",
+  "at_iso": "2026-11-18T06:37:00+00:00",
   "started": "12:47 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 12:47 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 1:33 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 1, started 12:47 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 1:37 AM ET</p></section>"
  }
 }

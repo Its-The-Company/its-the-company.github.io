@@ -1,22 +1,11 @@
 {
  "schema": 1,
- "at": "2026-11-18T13:09:40.359319+00:00",
+ "at": "2026-11-18T13:12:44.220944+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-18T08:00:22-05:00",
   "flow": [
-   {
-    "t": "T-4892",
-    "name": "Run the caret UI tests on the split tap",
-    "w": "Idris",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1795006953
-     }
-    ]
-   },
    {
     "t": "T-4533",
     "name": "Make the premade settings save sturdier on disk errors",
@@ -41,6 +30,21 @@
      {
       "s": "testq",
       "at": 1795003317
+     },
+     {
+      "s": "macbook",
+      "at": 1795007531
+     }
+    ]
+   },
+   {
+    "t": "T-4892",
+    "name": "Run the caret UI tests on the split tap",
+    "w": "Idris",
+    "steps": [
+     {
+      "s": "testq",
+      "at": 1795006953
      }
     ]
    },
@@ -147,7 +151,7 @@
    "task": "[test] T-4892 caret UI tests on runner",
    "model": "opus",
    "started": "2026-11-18T13:02:21.149Z",
-   "seconds": 439,
+   "seconds": 623,
    "finished": null,
    "effort": "high"
   },
@@ -156,7 +160,7 @@
    "task": "[test] T-4782 Pro store test waits",
    "model": "opus",
    "started": "2026-11-18T13:03:48.762Z",
-   "seconds": 351,
+   "seconds": 535,
    "finished": null,
    "effort": "high"
   }
@@ -215,7 +219,7 @@
   "week_pct": 49.77,
   "usage_pct": 52.0,
   "work_pct": 81.9,
-  "read_at": "2026-11-18T13:09:00+00:00",
+  "read_at": "2026-11-18T13:12:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -236,23 +240,23 @@
   }
  ],
  "disk": {
-  "free_gb": 17,
+  "free_gb": 19,
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 173
+   "free_gb": 172
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-18T08:05:00-05:00",
+   "at": "2026-11-18T08:11:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 12,
-  "at": "2026-11-18T08:09:00-05:00",
+  "at": "2026-11-18T08:12:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -498,57 +502,57 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-18T13:09:22Z",
+  "at": "2026-11-18T13:12:37Z",
   "s": {
    "T-4533": [
-    "merging",
-    "Host checks on the Mac mini",
-    1795003342648
+    "mergetest",
+    "Xcode checks on the MacBook",
+    1795007557991
    ],
    "T-0011": [
     "mergeq",
     "1st to merge",
-    1795001902648
+    1795001917991
    ],
    "T-4574": [
     "mergeq",
     "3rd to merge",
-    1794992542648
+    1794992497991
    ],
    "T-4762": [
     "mergeq",
     "4th to merge",
-    1794994702648
+    1794994657991
    ],
    "T-4748": [
     "mergeq",
     "6th to merge",
-    1795002382648
-   ],
-   "T-4640": [
-    "mergeq",
-    "7th to merge",
-    1795007062648
-   ],
-   "T-4581": [
-    "mergeq",
-    "7th to merge",
-    1795007062648
+    1795002337991
    ],
    "T-4575": [
     "mergeq",
-    "8th to merge",
-    1795003882648
+    "7th to merge",
+    1795003837991
    ],
-   "T-4635": [
+   "T-4640": [
     "mergeq",
-    "10th to merge",
-    1795006402648
+    "8th to merge",
+    1795007077991
+   ],
+   "T-4581": [
+    "mergeq",
+    "8th to merge",
+    1795007077991
    ],
    "T-4789": [
     "mergeq",
-    "13th to merge",
-    1795005982648
+    "9th to merge",
+    1795007497991
+   ],
+   "T-4635": [
+    "mergeq",
+    "9th to merge",
+    1795007497991
    ],
    "T-4782": [
     "mergetest",
@@ -558,7 +562,7 @@
    "T-4892": [
     "testing",
     "its own tests, in its copy",
-    1795007002648
+    1795006957991
    ]
   },
   "nm": {
@@ -567,11 +571,11 @@
    "T-4574": "Keep the launcher's app queries out of shipped builds",
    "T-4762": "Let the run lock wrap a Python run",
    "T-4748": "Make the widget font check ignore lookalike letters",
+   "T-4575": "Stop an edit from rewriting a pasted Shortcut link",
    "T-4640": "Drop a location fix that arrives too late",
    "T-4581": "Test a real widget tap in iPad windows",
-   "T-4575": "Stop an edit from rewriting a pasted Shortcut link",
-   "T-4635": "Clear the Settings restore line once Pro is bought",
    "T-4789": "Check finished work before it ships",
+   "T-4635": "Clear the Settings restore line once Pro is bought",
    "T-4782": "Stop a Pro store test at its first stalled wait",
    "T-4892": "Run the caret UI tests on the split tap"
   },
@@ -581,11 +585,11 @@
    "T-4574": "Idris",
    "T-4762": "Idris",
    "T-4748": "Idris",
+   "T-4575": "Idris",
    "T-4640": "Idris",
    "T-4581": "Idris",
-   "T-4575": "Idris",
-   "T-4635": "Idris",
    "T-4789": "Pernille",
+   "T-4635": "Idris",
    "T-4782": "Idris",
    "T-4892": "Idris",
    "T-4567": "Odalys",
@@ -595,7 +599,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-18T13:09:22Z",
+  "at": "2026-11-18T13:12:37Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -607,22 +611,22 @@
     "parked": 9
    },
    "m": {
-    "checking": 67,
-    "inline": 58,
-    "conflicted": 596,
+    "checking": 0,
+    "inline": 62,
+    "conflicted": 599,
     "failed": null,
-    "held": 2260,
+    "held": 2263,
     "retry": null,
-    "parked": 905
+    "parked": 909
    },
    "cur": [
     [
      [
       "T-4533"
      ],
-     "Mac tests",
-     "Mac mini",
-     67
+     "iPhone app tests",
+     "MacBook",
+     0
     ]
    ],
    "ld": [
@@ -632,16 +636,16 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-18T13:08:52Z",
-    "ld": 1.65,
+    "at": "2026-11-18T13:12:31Z",
+    "ld": 1.1,
     "c": 8,
     "sb": 2,
     "dk": [
-     18.2,
+     19.4,
      228.3
     ],
     "ss": [
-     172.6,
+     172.2,
      953.7
     ],
     "sn": [
@@ -693,10 +697,10 @@
   "main": 2,
   "lanes": 0,
   "total": 2,
-  "at": "8:09 AM",
+  "at": "8:12 AM",
   "why": "",
-  "at_iso": "2026-11-18T13:09:00+00:00",
+  "at_iso": "2026-11-18T13:12:00+00:00",
   "started": "8:00 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 8:00 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 8:09 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 8:00 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 8:12 AM ET</p></section>"
  }
 }

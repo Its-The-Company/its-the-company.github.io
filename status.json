@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-18T15:09:43.489175+00:00",
+ "at": "2026-11-18T15:12:49.447218+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -184,21 +184,19 @@
    }
   ],
   "landed": 20,
-  "failed": 14
+  "failed": 13
  },
- "workers": [
+ "workers": [],
+ "who": "",
+ "recent": [
   {
    "name": "idris",
    "task": "[build] T-1905 project send safe swap",
    "model": "opus",
    "started": "2026-11-18T13:35:50.063Z",
-   "seconds": 5633,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Idris",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-18T15:11:54.130000+00:00"
+  },
   {
    "name": "idris",
    "task": "[test] T-4892 caret UI tests on runner",
@@ -224,12 +222,13 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 19.0,
-   "resets_at": "2026-11-18T10:10:00-05:00",
+   "pct": null,
+   "resets_at": null,
    "used_words": "of your 5-hour allowance used",
    "read_at": "2026-11-18T10:03:29.543008-05:00",
    "source": "live",
-   "left": 81.0,
+   "last_reset": "2026-11-18T10:10:00-05:00",
+   "left": null,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
@@ -268,48 +267,8 @@
   "week_pct": 49.77,
   "usage_pct": 52.0,
   "work_pct": 81.9,
-  "read_at": "2026-11-18T15:09:00+00:00",
-  "running": [
-   {
-    "lane": "a",
-    "task": "T-4835",
-    "w": "Pernille",
-    "k": "build",
-    "t": "Show an all-day event on its own date after travel",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-18T08:36:36-05:00",
-    "n": "Evan",
-    "d": 1,
-    "src": "plan-a"
-   },
-   {
-    "lane": "a",
-    "task": "T-4889",
-    "w": "Idris",
-    "k": "review",
-    "t": "Check the PyWidget case fix in premade lines",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-18T08:36:36-05:00",
-    "n": "Evan",
-    "d": 1,
-    "src": "plan-a"
-   },
-   {
-    "lane": "a",
-    "task": "T-4679",
-    "w": "Idris",
-    "k": "fix",
-    "t": "Make the unit tests pass in a launcher build",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-18T08:36:36-05:00",
-    "n": "Evan",
-    "d": 1,
-    "src": "plan-a"
-   }
-  ]
+  "read_at": "2026-11-18T15:12:00+00:00",
+  "running": []
  },
  "api_credits": [
   {
@@ -345,7 +304,7 @@
  "lock_in": {
   "on": false,
   "pool": 12,
-  "at": "2026-11-18T10:09:00-05:00",
+  "at": "2026-11-18T10:12:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -363,12 +322,11 @@
  "lanes": [
   {
    "name": "Idris",
-   "state": "running",
-   "task": "[build] T-1905 project send safe swap",
-   "model": "opus",
-   "since": "2026-11-18T13:35:50.063Z",
-   "next": [],
-   "effort": "high"
+   "state": "next",
+   "task": "Idris, P1, from T-4755 (Investor an Investor...",
+   "model": null,
+   "since": null,
+   "next": []
   },
   {
    "name": "Pernille",
@@ -412,18 +370,7 @@
   }
  ],
  "tasks": {
-  "run": [
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "Send project files in one safe swap",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-18T13:35:50.063Z",
-    "o": "c",
-    "task": "T-1905"
-   }
-  ],
+  "run": [],
   "src": "plan",
   "open": [
    {
@@ -589,72 +536,67 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-18T15:09:34Z",
+  "at": "2026-11-18T15:12:29Z",
   "s": {
    "T-4575": [
     "merging",
     "Host checks on the Mac mini",
-    1795014394342
+    1795014389656
    ],
    "T-4533": [
     "mergeq",
     "1st to merge",
-    1794988114342
+    1794988109656
    ],
    "T-4574": [
     "mergeq",
     "3rd to merge",
-    1794992494342
+    1794992489656
    ],
    "T-4762": [
     "mergeq",
     "4th to merge",
-    1795012294342
+    1795012349656
    ],
    "T-4748": [
     "mergeq",
     "6th to merge",
-    1795002334342
+    1795002329656
    ],
    "T-4640": [
     "mergeq",
     "7th to merge",
-    1795004374342
+    1795004369656
    ],
    "T-4789": [
     "mergeq",
     "8th to merge",
-    1795005994342
+    1795005989656
    ],
    "T-4635": [
     "mergeq",
     "9th to merge",
-    1795006414342
+    1795006409656
    ],
    "T-4581": [
     "mergeq",
     "12th to merge",
-    1795007074342
+    1795007069656
    ],
    "T-4889": [
     "mergeq",
     "17th to merge",
-    1795010074342
+    1795010069656
    ],
    "T-4835": [
     "mergeq",
     "18th to merge",
-    1795011754342
+    1795011749656
    ],
    "T-4679": [
     "mergeq",
     "19th to merge",
-    1795011994342
-   ],
-   "T-1905": [
-    "mergetest",
-    "iPhone tests on the MacBook",
-    null
+    1795011989656
    ]
   },
   "nm": {
@@ -669,8 +611,7 @@
    "T-4581": "Test a real widget tap in iPad windows",
    "T-4889": "Check the PyWidget case fix in premade lines",
    "T-4835": "Show an all-day event on its own date after travel",
-   "T-4679": "Make the unit tests pass in a launcher build",
-   "T-1905": "Send project files in one safe swap"
+   "T-4679": "Make the unit tests pass in a launcher build"
   },
   "wk": {
    "T-4575": "Idris",
@@ -685,7 +626,6 @@
    "T-4889": "Idris",
    "T-4835": "Pernille",
    "T-4679": "Idris",
-   "T-1905": "Idris",
    "T-4892": "Idris",
    "T-4782": "Idris",
    "T-4567": "Odalys",
@@ -695,7 +635,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-18T15:09:34Z",
+  "at": "2026-11-18T15:12:29Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -707,13 +647,13 @@
     "parked": 9
    },
    "m": {
-    "checking": 3,
-    "inline": 136,
-    "conflicted": 716,
+    "checking": 6,
+    "inline": 139,
+    "conflicted": 719,
     "failed": null,
-    "held": 2380,
+    "held": 2383,
     "retry": null,
-    "parked": 1026
+    "parked": 1029
    },
    "cur": [
     [
@@ -722,7 +662,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     3
+     6
     ]
    ],
    "ld": [
@@ -732,8 +672,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-18T15:09:34Z",
-    "ld": 0.71,
+    "at": "2026-11-18T15:11:40Z",
+    "ld": 0.62,
     "c": 8,
     "sb": 1,
     "dk": [
@@ -749,8 +689,8 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-18T15:03:11Z",
-    "ld": 18.17,
+    "at": "2026-11-18T15:11:06Z",
+    "ld": 4.59,
     "c": 12,
     "sb": 0,
     "dk": [
@@ -768,17 +708,8 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 1 task",
-   "at": "2026-11-18T09:56:26-05:00"
-  },
-  {
-   "w": "Operator",
-   "a": "Evan's Account",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
    "t": "Work session",
-   "at": "2026-11-18T08:36:36-05:00"
+   "at": "2026-11-18T09:56:26-05:00"
   }
  ],
  "reply": {
@@ -798,13 +729,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 1,
-  "lanes": 1,
-  "total": 2,
-  "at": "10:09 AM",
-  "why": "",
-  "at_iso": "2026-11-18T15:09:00+00:00",
+  "main": 0,
+  "lanes": 0,
+  "total": 0,
+  "at": "10:12 AM",
+  "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
+  "at_iso": "2026-11-18T15:12:00+00:00",
   "started": "8:00 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 1, started 8:00 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 10:09 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0, started 8:00 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 10:12 AM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-18T00:28:32.287871+00:00",
+ "at": "2026-11-18T00:31:33.349551+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -121,35 +121,35 @@
     "end_at": 1794957463
    }
   ],
-  "landed": 42,
-  "failed": 9
+  "landed": 41,
+  "failed": 10
  },
  "workers": [
-  {
-   "name": "idris",
-   "task": "[build] T-2296 land the gallery work",
-   "model": "opus",
-   "started": "2026-11-18T00:13:00.213Z",
-   "seconds": 932,
-   "finished": null,
-   "effort": "high"
-  },
   {
    "name": "maren",
    "task": "[design] T-4746 land the name wording fix",
    "model": "opus",
    "started": "2026-11-18T00:13:11.913Z",
-   "seconds": 920,
+   "seconds": 1101,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "idris",
+   "task": "[build] T-2296 land the gallery work",
+   "model": "opus",
+   "started": "2026-11-18T00:13:00.213Z",
+   "seconds": 1113,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Idris, Maren",
+ "who": "Maren, Idris",
  "recent": [],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 428,
+  "runnable_count": 431,
   "blocked_count": 58
  },
  "meter": {
@@ -198,7 +198,7 @@
   "week_pct": 43.81,
   "usage_pct": 53.5,
   "work_pct": 81.2,
-  "read_at": "2026-11-18T00:28:00+00:00",
+  "read_at": "2026-11-18T00:31:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -387,7 +387,7 @@
  "lock_in": {
   "on": false,
   "pool": 7,
-  "at": "2026-11-17T19:28:00-05:00",
+  "at": "2026-11-17T19:31:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -508,6 +508,27 @@
     "o": "c"
    },
    {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Record a cause for every failed merge",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Fix the causes of merge time-outs and runner...",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Pernille",
+    "k": "test",
+    "t": "Fix every bad test that failed a merge",
+    "s": "next",
+    "o": "c"
+   },
+   {
     "w": "Pernille",
     "k": "tools",
     "t": "Rewrite or drop outdated tests that read...",
@@ -527,27 +548,6 @@
     "t": "VoiceOver and large text work on every screen",
     "s": "next",
     "o": "i"
-   },
-   {
-    "w": "Pernille",
-    "k": "build",
-    "t": "Keep real packages out until the sandbox is...",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "Every premade widget draws on the iPhone",
-    "s": "next",
-    "o": "i"
-   },
-   {
-    "w": "Idris",
-    "k": "measure",
-    "t": "Run the device test session for the widget...",
-    "s": "next",
-    "o": "c"
    }
   ],
   "done": [
@@ -568,7 +568,7 @@
    }
   ],
   "count": {
-   "next": 428,
+   "next": 431,
    "wait": 27,
    "blocked": 31,
    "you": 8
@@ -617,77 +617,77 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-18T00:28:22Z",
+  "at": "2026-11-18T00:31:12Z",
   "s": {
    "T-4610": [
     "merging",
     "Host checks on the Mac mini",
-    1794961402612
+    1794961392170
    ],
    "T-4634": [
     "merging",
     "Host checks on the Mac mini",
-    1794961402612
+    1794961392170
    ],
    "T-4695": [
     "merging",
     "Host checks on the Mac mini",
-    1794961402612
+    1794961392170
    ],
    "T-4607": [
     "mergeq",
     "1st to merge",
-    1794959062612
+    1794959052170
    ],
    "T-4787": [
     "mergeq",
     "2nd to merge",
-    1794959242612
+    1794959232170
    ],
    "T-4750": [
     "mergeq",
     "3rd to merge",
-    1794960202612
+    1794960192170
    ],
    "T-4761": [
     "mergeq",
     "4th to merge",
-    1794960502612
+    1794960492170
    ],
    "T-4659": [
     "mergeq",
     "5th to merge",
-    1794961042612
+    1794961092170
    ],
    "T-4643": [
     "mergeq",
     "6th to merge",
-    1794961642612
-   ],
-   "T-4719": [
-    "mergeq",
-    "7th to merge",
-    1794959542612
-   ],
-   "T-4720": [
-    "mergeq",
-    "8th to merge",
-    1794959662612
+    1794961632170
    ],
    "T-4697": [
     "mergeq",
-    "10th to merge",
-    1794959902612
+    "7th to merge",
+    1794961812170
    ],
    "T-4698": [
     "mergeq",
-    "11th to merge",
-    1794960262612
+    "7th to merge",
+    1794961812170
    ],
    "T-4699": [
     "mergeq",
-    "13th to merge",
-    1794961642612
+    "7th to merge",
+    1794961812170
+   ],
+   "T-4719": [
+    "mergeq",
+    "8th to merge",
+    1794959532170
+   ],
+   "T-4720": [
+    "mergeq",
+    "9th to merge",
+    1794959652170
    ],
    "T-4746": [
     "mergetest",
@@ -695,9 +695,9 @@
     null
    ],
    "T-2296": [
-    "testing",
-    "its own tests, in its copy",
-    1794960922612
+    "merging",
+    "Mac tests at the main gate",
+    1794961872170
    ],
    "T-4774": [
     "merged",
@@ -722,11 +722,11 @@
    "T-4761": "Keep one layout for the widget state format",
    "T-4659": "Prove a widget button's tap reaches its Python handler",
    "T-4643": "Make the size ladder measure each rung more than once",
-   "T-4719": "Check finished work before it ships",
-   "T-4720": "Check finished work before it ships",
    "T-4697": "Check finished work before it ships",
    "T-4698": "Check finished work before it ships",
    "T-4699": "Check finished work before it ships",
+   "T-4719": "Check finished work before it ships",
+   "T-4720": "Check finished work before it ships",
    "T-4746": "Write PyWidget's name right in the widget's words",
    "T-2296": "Finish the gallery pager, iPad layout and detail foot",
    "T-4774": "Measure what one refresh tap costs the app",
@@ -742,11 +742,11 @@
    "T-4761": "Idris",
    "T-4659": "Idris",
    "T-4643": "Idris",
-   "T-4719": "Odalys",
-   "T-4720": "Pernille",
    "T-4697": "Pernille",
    "T-4698": "Pernille",
    "T-4699": "Pernille",
+   "T-4719": "Odalys",
+   "T-4720": "Pernille",
    "T-4746": "Maren",
    "T-2296": "Idris",
    "T-4774": "Idris",
@@ -754,25 +754,25 @@
   }
  },
  "ln": {
-  "at": "2026-11-18T00:28:22Z",
+  "at": "2026-11-18T00:31:12Z",
   "mq": {
    "n": {
     "checking": 3,
     "inline": 11,
     "conflicted": 2,
-    "failed": 1,
+    "failed": 0,
     "held": 1,
-    "retry": 0,
+    "retry": 1,
     "parked": 8
    },
    "m": {
-    "checking": 5,
-    "inline": 25,
-    "conflicted": 693,
-    "failed": 23,
-    "held": 1499,
-    "retry": null,
-    "parked": 298
+    "checking": 8,
+    "inline": 23,
+    "conflicted": 696,
+    "failed": null,
+    "held": 1502,
+    "retry": 1,
+    "parked": 301
    },
    "cur": [
     [
@@ -781,7 +781,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     5
+     8
     ],
     [
      [
@@ -789,7 +789,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     5
+     8
     ],
     [
      [
@@ -797,7 +797,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     5
+     8
     ]
    ],
    "ld": [
@@ -807,8 +807,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-18T00:28:01Z",
-    "ld": 1.87,
+    "at": "2026-11-18T00:31:12Z",
+    "ld": 1.94,
     "c": 8,
     "sb": 1,
     "dk": [
@@ -816,7 +816,7 @@
      228.3
     ],
     "ss": [
-     174.7,
+     174.3,
      953.7
     ],
     "sn": [
@@ -861,8 +861,8 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Inbox \u2013 Evan's 7:26 PM Message on GitHub",
-   "at": "2026-11-17T19:26:48-05:00"
+   "t": "Work session \u2013 1 task",
+   "at": "2026-11-17T19:29:34-05:00"
   },
   {
    "w": "Operator",
@@ -884,26 +884,14 @@
   }
  ],
  "reply": {
-  "sent": "2026-11-17T23:23:29Z",
-  "seconds": 156.0
+  "sent": "2026-11-18T00:26:15Z",
+  "seconds": 198.0
  },
- "inbox": [
-  {
-   "id": "c6965124089",
-   "state": "received",
-   "position": 1,
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "We need to fix the timeout errors or..."
-  }
- ],
+ "inbox": [],
  "trimmed": [
   "lane_next",
   "queue_text",
   "task_done",
-  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -914,10 +902,10 @@
   "main": 2,
   "lanes": 4,
   "total": 6,
-  "at": "7:28 PM",
+  "at": "7:31 PM",
   "why": "",
-  "at_iso": "2026-11-18T00:28:00+00:00",
+  "at_iso": "2026-11-18T00:31:00+00:00",
   "started": "7:10 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 2, started 7:10 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 7:28 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 2, started 7:10 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 7:31 PM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-18T21:09:28.713729+00:00",
+ "at": "2026-11-18T21:12:30.419052+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -33,15 +33,6 @@
      {
       "s": "testq",
       "at": 1795006953
-     }
-    ]
-   },
-   {
-    "t": "T-4663",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1794993064
      }
     ]
    }
@@ -137,7 +128,7 @@
    "task": "[tools] T-4907 keep main green after every land",
    "model": "opus",
    "started": "2026-11-18T19:11:56.141Z",
-   "seconds": 7052,
+   "seconds": 7234,
    "finished": null,
    "effort": "high"
   },
@@ -146,7 +137,7 @@
    "task": "[test] T-4807 land browser time-out fix",
    "model": "opus",
    "started": "2026-11-18T20:31:35.722Z",
-   "seconds": 2272,
+   "seconds": 2454,
    "finished": null,
    "effort": "high"
   },
@@ -155,7 +146,7 @@
    "task": "[build] T-4631 premades with refused imports to app",
    "model": "opus",
    "started": "2026-11-18T20:40:36.593Z",
-   "seconds": 1732,
+   "seconds": 1913,
    "finished": null,
    "effort": "high"
   }
@@ -247,7 +238,7 @@
   "week_pct": 51.56,
   "usage_pct": 51.3,
   "work_pct": 81.5,
-  "read_at": "2026-11-18T21:09:00+00:00",
+  "read_at": "2026-11-18T21:12:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -284,7 +275,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-18T16:09:00-05:00",
+  "at": "2026-11-18T16:12:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -534,39 +525,25 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-18T21:09:21Z",
+  "at": "2026-11-18T21:12:30Z",
   "s": {
-   "T-4907": [
-    "merging",
-    "Mac tests at the main gate",
-    1795035501008
-   ],
-   "T-4807": [
-    "merging",
-    "Mac tests at the main gate",
-    1795035921008
-   ],
    "T-4631": [
-    "merging",
-    "Mac tests at the main gate",
-    1795036161008
+    "mergetest",
+    "iPhone tests on the MacBook",
+    null
    ]
   },
   "nm": {
-   "T-4907": "Keep main green after every land",
-   "T-4807": "Fix every bad test that failed a merge",
    "T-4631": "Place premades in the app when their imports are refused"
   },
   "wk": {
-   "T-4907": "Odalys",
-   "T-4807": "Pernille",
    "T-4631": "Idris",
    "T-4902": "Odalys",
    "T-4773": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-18T21:09:21Z",
+  "at": "2026-11-18T21:12:30Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -580,11 +557,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 575,
+    "conflicted": 578,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1139
+    "parked": 1142
    },
    "cur": [],
    "ld": [
@@ -594,12 +571,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-18T21:08:56Z",
-    "ld": 1.35,
+    "at": "2026-11-18T21:11:43Z",
+    "ld": 1.08,
     "c": 8,
     "sb": 0,
     "dk": [
-     10.6,
+     13.6,
      228.3
     ],
     "ss": [
@@ -609,12 +586,12 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-18T21:07:54Z",
-    "ld": 0.67,
+    "at": "2026-11-18T21:09:59Z",
+    "ld": 0.48,
     "c": 12,
     "sb": 0,
     "dk": [
-     305.3,
+     305.2,
      926.4
     ],
     "sn": []
@@ -653,10 +630,10 @@
   "main": 3,
   "lanes": 0,
   "total": 3,
-  "at": "4:09 PM",
+  "at": "4:12 PM",
   "why": "",
-  "at_iso": "2026-11-18T21:09:00+00:00",
+  "at_iso": "2026-11-18T21:12:00+00:00",
   "started": "2:09 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 2:09 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 4:09 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 2:09 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 4:12 PM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-18T17:15:09.045855+00:00",
+ "at": "2026-11-18T17:18:17.623156+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -14,6 +14,10 @@
      {
       "s": "testq",
       "at": 1795021107
+     },
+     {
+      "s": "macbook",
+      "at": 1795022194
      }
     ]
    },
@@ -149,22 +153,21 @@
    "task": "[build] T-4493 land the site clutter cut",
    "model": "opus",
    "started": "2026-11-18T15:43:48.650Z",
-   "seconds": 5480,
+   "seconds": 5668,
    "finished": null,
    "effort": "high"
-  },
+  }
+ ],
+ "who": "Maren",
+ "recent": [
   {
    "name": "odalys",
    "task": "[tools] T-4180 judge stray runner salvage",
    "model": "opus",
    "started": "2026-11-18T15:50:45.673Z",
-   "seconds": 5063,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Maren, Odalys",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-18T17:17:18.265000+00:00"
+  },
   {
    "name": "idris",
    "task": "[build] T-4771 recut gutter marks and land",
@@ -188,14 +191,6 @@
    "started": "2026-11-18T15:35:39.515Z",
    "seconds": null,
    "finished": "2026-11-18T15:36:25.389000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-4188 recut device modules and land",
-   "model": "opus",
-   "started": "2026-11-18T15:32:48.276Z",
-   "seconds": null,
-   "finished": "2026-11-18T15:33:37.839000+00:00"
   }
  ],
  "queue": {
@@ -206,19 +201,19 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 6.0,
+   "pct": 7.0,
    "resets_at": "2026-11-18T15:10:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-18T11:56:46.230281-05:00",
+   "read_at": "2026-11-18T12:16:21.947462-05:00",
    "source": "live",
-   "left": 94.0,
+   "left": 93.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 47.0,
    "resets_at": "2026-11-22T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-18T11:56:46.230281-05:00",
+   "read_at": "2026-11-18T12:16:21.947462-05:00",
    "source": "live",
    "left": 53.0,
    "left_words": "of your weekly allowance left"
@@ -230,7 +225,7 @@
    "read_at": "2026-11-18T10:30:22.136410-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-18T11:56:46.230281-05:00"
+  "read_at": "2026-11-18T12:16:21.947462-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -250,7 +245,7 @@
   "week_pct": 51.32,
   "usage_pct": 52.2,
   "work_pct": 82.0,
-  "read_at": "2026-11-18T17:15:00+00:00",
+  "read_at": "2026-11-18T17:18:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -332,14 +327,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-18T12:09:00-05:00",
+   "at": "2026-11-18T12:16:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 12,
-  "at": "2026-11-18T12:15:00-05:00",
+  "at": "2026-11-18T12:18:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -365,15 +360,6 @@
    "effort": "high"
   },
   {
-   "name": "Odalys",
-   "state": "running",
-   "task": "[tools] T-4180 judge stray runner salvage",
-   "model": "opus",
-   "since": "2026-11-18T15:50:45.673Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
    "name": "Idris",
    "state": "next",
    "task": "Idris, P1, from T-4755 (Investor an Investor...",
@@ -385,6 +371,14 @@
    "name": "Pernille",
    "state": "next",
    "task": "Pernille, P0, Investor an Investor c6963972184 (6:23 PM...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
+   "name": "Odalys",
+   "state": "next",
+   "task": "Odalys, P0, Investor an Investor c6963972184 (6:23 PM...",
    "model": null,
    "since": null,
    "next": []
@@ -417,16 +411,6 @@
     "at": "2026-11-18T15:43:48.650Z",
     "o": "c",
     "task": "T-4493"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Every premade widget draws on the iPhone",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-18T15:50:45.673Z",
-    "o": "c",
-    "task": "T-4180"
    }
   ],
   "src": "plan",
@@ -578,87 +562,101 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-18T17:15:09Z",
+  "at": "2026-11-18T17:17:50Z",
   "s": {
-   "T-4679": [
-    "merging",
-    "Host checks on the Mac mini",
-    1795021149045
-   ],
    "T-4533": [
     "mergeq",
     "1st to merge",
-    1795020909045
+    1795020950648
    ],
    "T-4574": [
     "mergeq",
     "2nd to merge",
-    1795021149045
+    1795021130648
    ],
    "T-4635": [
     "mergeq",
     "3rd to merge",
-    1795021149045
+    1795021130648
+   ],
+   "T-4679": [
+    "mergetest",
+    "Xcode checks on the MacBook, 4th to merge",
+    1795022210648
    ],
    "T-4835": [
     "mergeq",
-    "4th to merge",
-    1795014849045
+    "5th to merge",
+    1795014830648
    ],
    "T-4889": [
     "mergeq",
-    "6th to merge",
-    1795014909045
+    "7th to merge",
+    1795014890648
    ],
    "T-4898": [
     "mergeq",
-    "8th to merge",
-    1795020969045
+    "9th to merge",
+    1795021010648
    ],
    "T-4890": [
     "mergeq",
-    "9th to merge",
-    1795021389045
-   ],
-   "T-4220": [
-    "merging",
-    "Mac tests at the main gate",
-    1795020549045
+    "10th to merge",
+    1795021430648
    ],
    "T-4493": [
     "merging",
     "Mac tests at the main gate",
-    1795020549045
+    1795020530648
+   ],
+   "T-4570": [
+    "testing",
+    "Mac Mini \u00b7 test",
+    null
+   ],
+   "T-4849": [
+    "testing",
+    "Mac Mini \u00b7 test",
+    null
+   ],
+   "T-4897": [
+    "testing",
+    "Mac Mini \u00b7 test",
+    null
    ]
   },
   "nm": {
-   "T-4679": "Make the unit tests pass in a launcher build",
    "T-4533": "Make the premade settings save sturdier on disk errors",
    "T-4574": "Keep the launcher's app queries out of shipped builds",
    "T-4635": "Clear the Settings restore line once Pro is bought",
+   "T-4679": "Make the unit tests pass in a launcher build",
    "T-4835": "Show an all-day event on its own date after travel",
    "T-4889": "Check the PyWidget case fix in premade lines",
    "T-4898": "Fix the Home Screen token test reading the gallery",
    "T-4890": "Keep a real widget tap in the open iPad window",
-   "T-4220": "Run the launcher build's tests on a schedule",
-   "T-4493": "Cut clutter text on the pages still carrying it"
+   "T-4493": "Cut clutter text on the pages still carrying it",
+   "T-4570": "Launcher slot copy takes the premade file lock",
+   "T-4849": "Shorten the process merge wait for good",
+   "T-4897": "Check an all-day event keeps its date after travel"
   },
   "wk": {
-   "T-4679": "Idris",
    "T-4533": "Pernille",
    "T-4574": "Idris",
    "T-4635": "Idris",
+   "T-4679": "Idris",
    "T-4835": "Pernille",
    "T-4889": "Idris",
    "T-4898": "Idris",
    "T-4890": "Idris",
-   "T-4220": "Idris",
    "T-4493": "Maren",
+   "T-4570": "Idris",
+   "T-4849": "Odalys",
+   "T-4897": "Idris",
    "T-4812": "Maren"
   }
  },
  "ln": {
-  "at": "2026-11-18T17:15:09Z",
+  "at": "2026-11-18T17:17:50Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -670,22 +668,22 @@
     "parked": 5
    },
    "m": {
-    "checking": 16,
-    "inline": 19,
-    "conflicted": 842,
+    "checking": 1,
+    "inline": 21,
+    "conflicted": 845,
     "failed": null,
-    "held": 2506,
+    "held": 2508,
     "retry": null,
-    "parked": 818
+    "parked": 820
    },
    "cur": [
     [
      [
       "T-4679"
      ],
-     "Mac tests",
-     "Mac mini",
-     16
+     "iPhone app tests, sent and waiting its turn",
+     "MacBook",
+     1
     ]
    ],
    "ld": [
@@ -695,12 +693,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-18T17:15:10Z",
-    "ld": 3.12,
+    "at": "2026-11-18T17:18:00Z",
+    "ld": 6.95,
     "c": 8,
     "sb": 2,
     "dk": [
-     12.4,
+     14.0,
      228.3
     ],
     "ss": [
@@ -708,17 +706,17 @@
      953.7
     ],
     "sn": [
-     "t3765-ipad",
-     "t4772-27"
+     "t4772-27",
+     "iPhone 17e"
     ]
    },
    "macbook": {
-    "at": "2026-11-18T16:45:02Z",
-    "ld": 16.09,
+    "at": "2026-11-18T17:15:36Z",
+    "ld": 0.2,
     "c": 12,
     "sb": 0,
     "dk": [
-     305.8,
+     306.0,
      926.4
     ],
     "sn": []
@@ -732,8 +730,8 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 2 tasks",
-   "at": "2026-11-18T12:03:00-05:00"
+   "t": "Inbox \u2013 Evan's 12:17 PM Message on GitHub",
+   "at": "2026-11-18T12:18:17-05:00"
   },
   {
    "w": "Operator",
@@ -742,7 +740,7 @@
    "m": "opus",
    "e": "high",
    "t": "Work session \u2013 2 tasks",
-   "at": "2026-11-18T12:11:35-05:00"
+   "at": "2026-11-18T12:16:07-05:00"
   },
   {
    "w": "Operator",
@@ -755,15 +753,28 @@
   }
  ],
  "reply": {
-  "sent": "2026-11-18T16:57:56Z",
-  "seconds": 186.0
+  "sent": "2026-11-18T17:15:18Z",
+  "seconds": 48.0
  },
- "inbox": [],
+ "inbox": [
+  {
+   "id": "c6985998606",
+   "state": "received",
+   "position": 1,
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "start the recommendations suggested..."
+  }
+ ],
  "trimmed": [
   "lane_next",
   "queue_text",
+  "recent",
   "task_done",
   "fin_short",
+  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -771,13 +782,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 2,
+  "main": 1,
   "lanes": 2,
-  "total": 4,
-  "at": "12:15 PM",
+  "total": 3,
+  "at": "12:18 PM",
   "why": "",
-  "at_iso": "2026-11-18T17:15:00+00:00",
+  "at_iso": "2026-11-18T17:18:00+00:00",
   "started": "10:30 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 2, started 10:30 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 12:15 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 1, started 10:30 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 12:18 PM ET</p></section>"
  }
 }

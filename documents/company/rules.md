@@ -725,6 +725,7 @@ The Effect lines of the amendments.md entries the charter retired (2026-11-04 12
 - **2026-11-18 12:33 AM ET** ((private)): Every process and efficiency change the Investors asked for on the night of 11-17 is P0; storage gets a permanent, automatic fix: drives cleaned often by code, company data kept off the internal disk, P0
 - **2026-11-18 12:36 AM ET** ((private)): #324 A: the Pro feature is Python that a widget button runs without opening the app; a widget's own updates running in the widget are not Pro for anyone; Pro tags: Habit tracker, Focus timer, Flashcards, Day phases once it has buttons
 - **2026-11-18 12:40 AM ET** ((private)): Standing approval: the safety check is to allow deleting Simulator data and any other company data that is safe to delete (not unsaved code work, not in use by a running test) once no merge needs it; the company may change the Claude Code settings to say so, approved in advance
+- **2026-11-18 6:23 AM ET** ((private)): A small move of the projected release date is no longer posted as its own chat comment; it goes in the next scheduled report (and ops/milestones.json, state.md). A separate message only for a large move: more than two weeks, or past either end of the range (company reading, open to correction).
 {% endraw %}
 
 </div>

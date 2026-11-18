@@ -116,9 +116,37 @@ Six strings on this card. Each writes the product's name "pywidget" in lower cas
 </div>
 
 
-Same fault, outside this card's sets, found while checking state-tokens.json and folded into T-4746: `update.detail` "Needs a newer pywidget", `update.inline` "Update pywidget", `first_draw.tap` "Open pywidget to draw it", and the `update` and `first_draw` VoiceOver lines. Strings 3 to 6 and these five ship today: the widget reads state-tokens.json, and WidgetPlacementTests, ChooseCardLockVoiceOverTests and FirstDrawCardTests assert the lower-case text.
+Same fault, outside this card's sets, found while checking state-tokens.json and folded into T-4746: `update.detail` "Needs a newer pywidget", `update.inline` "Update pywidget", `first_draw.tap` "Open pywidget to draw it", and the `update` and `first_draw` VoiceOver lines. Strings 4 to 6 and two of these five (`first_draw.tap` and the `first_draw` VoiceOver line) are drawn today: the widget reads state-tokens.json, and WidgetPlacementTests, ChooseCardLockVoiceOverTests and FirstDrawCardTests assert the lower-case text. String 3 and the other three of the five (`update.detail`, `update.inline`, the `update` VoiceOver line) are bundled for cards not yet built, and no Swift reads them yet (corrected T-4886; the first line said they all ship today).
 
 - **Fixed (T-4746, Maren, 2026-11-17):** all eleven now write the name "PyWidget" and change nothing else: the same words, the same order, the same lengths (`update.inline` "Update PyWidget" is still 15 characters). Strings 3 to 6 and the five are fixed in state-tokens.json, and where state-spec.md quotes them (s3, s3.1, s3.2, s9); the 2026-10-25 8:08 PM ruling's own words, quoted in s3.2 and in the ruling's section, stay as written. 1 and 2 are fixed in draw_gallery.py and spec s9.11. Strings 3 to 6 and the five are cleared under the rule. `add.home2` and `add.lock2` now pass the rule but stay held with the other four add steps (below). The three test files assert the new text, and the Choose card's Lock Screen line and the first-draw tap line are now asserted too. Code identifiers, bundle IDs, file paths and the `pywidget://` scheme are untouched.
+
+## The name in the premade widgets' own lines and the Settings pages (T-4886, Maren, 2026-11-18)
+
+Found in Idris's review of T-4746 (M1, L3). These lines wrote the name "pywidget" in lower case on the Home Screen, the Lock Screen and in the app. Each changes the case of the name and nothing else, except where the line said "the app", which the voice rule forbids (entry 8: "calls the product PyWidget, never the app"). All are cleared under the rule; no Investor card is needed. Code identifiers, module names, bundle IDs, file paths and the `pywidget://` scheme stay lower case.
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 3: The name in the premade widgets&#x27; own lines and the Settings pages (T-4886…, scrolls sideways" data-n="1" style="--tw:1000px" markdown="1">
+
+| # | Where | String now | Change |
+|---|---|---|---|
+| 12 | Habits, no habits yet (`habits.py`; also the bundled first render `first-renders/habits.json`) | Add a habit in PyWidget. | case |
+| 13 | Countdown, no events (`countdown.py`; also `first-renders/countdown.json`) | Add a countdown in PyWidget. | case |
+| 14 | Sun, no place set (`sun.py`) | Choose a place for sunrise and sunset in PyWidget. | case |
+| 15 | Altitude, location off and no fix (`altitude.py`, two lines) | Allow location for PyWidget to see altitude. / Open PyWidget once to take a fix. | case |
+| 16 | Distance, no places, location off, no fix (`distance.py`, three lines) | Save a place in PyWidget. / Allow location for PyWidget to see distances. / Open PyWidget once to take a fix. | case |
+| 17 | Shortcuts, empty and the Edit link (`shortcuts.py`, two lines) | Pick shortcuts in PyWidget. / Edit in PyWidget | case |
+| 18 | GitHub, no repository (`github.py`) | Choose a repository in PyWidget. | case |
+| 19 | World clocks, hints, empty, VoiceOver (`clocks.py`, four lines) | Open PyWidget for times / Offsets from here. Open PyWidget for times. / Pick cities in PyWidget. / World clocks, times paused. {cities}. Open PyWidget for times. | case |
+| 20 | Launcher, no apps (`launcher/_launch.py`) | Add apps in PyWidget, then pick this widget. | case |
+| 21 | Gallery "Uses" lines of the six launcher looks (`launcher/catalog.json`) | The apps you save in PyWidget ... | case |
+| 22 | Settings page, widget settings unreadable, not saved, from a newer version (`SettingsPage.swift` `page.unreadable`, `page.cantsave`, `page.newer`) | PyWidget couldn't read this widget's settings, so it changed nothing. / PyWidget couldn't save this change. Try again. / These settings come from a newer PyWidget. Update PyWidget to change them. | case; "the app" becomes "PyWidget" |
+| 23 | Settings page, location and city list (`page.loc.off`, `page.sun.cur`, `page.sc.foot`, `page.nocities`, `page.loc.nofix`) | Location is off for PyWidget. / Uses where this iPhone was when PyWidget was last open, ... / ... PyWidget can’t see your shortcuts to check it. / PyWidget couldn't read its city list. Reinstall PyWidget to get it back. / PyWidget couldn't find where this iPhone is. Try again outside or near a window. | case; "the app" becomes "PyWidget" |
+| 24 | Acknowledgements intro (`Acknowledgements.swift`, `Localizable.xcstrings`, `set.ack.intro`) | PyWidget is built on open-source software. Thank you to the people who wrote it. | case (it also started a sentence in lower case) |
+
+</div>
+
+
+Add a habit in PyWidget is the line the bundled first render draws before the app's first open. `check_states.py` now fails on any `copy` or `voiceover` value in state-tokens.json that writes the name in lower case (a scheme, module or file name is not copy), and `test_choose_card_lock_voiceover.py` has a mutant for each table.
 
 ## Held (not cleared, not breaking)
 

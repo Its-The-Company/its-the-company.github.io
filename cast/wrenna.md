@@ -36,7 +36,6 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - Day 3 late (2026-10-24) H199-H213, L148, L113, QA builds: archive.md. Standing: `date` in its own call before any time; counts by script.
 
 ## Open
-- Phase 1 research pass: findings in research/ with links, ending in a ranked shortlist of four to six candidate ideas with evidence, for the Fable synthesis.
 
 - Day 1-2 passes 1-13, site QA and #25/#34 notes: archive.md. Standing lessons: hand-check regex counts; write the file by the third query; run `date` before writing any time.
 
@@ -52,15 +51,12 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - 2026-10-25 entries (privacy drafts, names, App Review matrix v1, store page, L15, CORRECTIONS pass 1, #54 docs, OPS-7 audit, T-0075): archive.md. Standing: grep counts before typing; `date` before every time.
 
 ## 2026-11-09 T-3902 merge-compute options (242a2d726b, ticked; board uncommitted)
-- Lesson: a ledger's row count is not a run count; dedupe by run (time, task, seconds) before quoting a median.
 ## 2026-11-11 T-4120 queue-methods research (654eb92479, ticked)
-- Lesson: check what a named stage really runs before reasoning (the "iPhone run" is the iPhone 17e Simulator on the MacBook). Put `$(date +%H:%M)` in status steps, never a typed time.
 ## 2026-11-12 T-3798 independent read (ced6f947bf, ticked); T-4205 filed (timed-out background start makes no prune)
-- Lesson: main moved mid-read (T-4198 landed); re-check `git log -1` before writing any "true at HEAD" line.
 ## 2026-11-12 T-3674 launcher app list, 12 apps (c9ec06a791, ticked); copy removal refused (old T-3859 record)
-- Lesson: main_gate exit 75 is a wait; land in run_in_background, and the copy must be re-merged if main moves meanwhile.
 ## 2026-11-17 T-4693 names deep dive (22 names, RDAP 102 lookups; USPTO not run: tmsearch sits behind an AWS WAF challenge)
-- Lesson: read a site's configuration.json before scripting it; a named bot challenge ends the route, and the exact search goes to the Investors.
+## 2026-11-18 T-4839 widget label name (research/widget-label-name.md)
+- 2026-11-18 T-4839 widget label: Apple docs never describe a label under a placed widget; call it inference and ask for a Simulator test. support.apple.com is terms-barred; fetch developer pages as /tutorials/data/....json.
 {% endraw %}
 
 

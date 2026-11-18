@@ -644,7 +644,7 @@ Runs log (⋯ → Runs): one row per run with the same icon and word, run number
    | `set.support` | Support | Help row: opens [support URL] | DRAFT |
    | `grp.about` | About | group header | DRAFT |
    | `set.ack` | Acknowledgements | About row; Acknowledgements screen title | DRAFT |
-   | `set.ack.intro` | pywidget is built on open-source software. Thank you to the people who wrote it. | Acknowledgements, above the list | DRAFT |
+   | `set.ack.intro` | PyWidget is built on open-source software. Thank you to the people who wrote it. | Acknowledgements, above the list | DRAFT |
    | `set.appear` | Light and dark follow your {device}’s setting in Display & Brightness. | page footer; {device} = UIDevice model name | DRAFT |
    | `set.version` | Version {version} ({build}) | page footer; CFBundleShortVersionString and CFBundleVersion | DRAFT |
    | `set.hint.web` | Opens a web page. | VoiceOver hint on Support, Privacy Policy, Terms of Use | DRAFT |

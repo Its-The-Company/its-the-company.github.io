@@ -35,7 +35,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - task process redesign T-4122 — card, one checker, feature unit, fitted iPhone group size; who builds, dates
 - efficiency review T-4124 — a row's `seconds` can be the whole run's time
 - account fixes T-4305 — unified session: no; #303 pending
-- 1.0 = Builder + Pages + widget taps/buttons (#270, #272, #41). Likely Thu 2027-07-08 (T-4543); ADR-011 as accepted: +3 days, Idris to size (T-4551). Range: ops/plans/T-4266-release-range.py. B-staged Pro stands.
+- 1.0 = Builder + Pages + widget taps/buttons (#270, #272, #41). Likely Wed 2027-07-21, range 04-13 to 12-10 (T-4870, 11-18: snap drag and drop checked at 4.25 slot weeks; two-way editing #287 C still unchecked by Idris). Range: ops/plans/T-4266-release-range.py. B-staged Pro stands.
 - Board: never pre-number lines (`add` assigns IDs, T-2354); grep the board before `add`; stage my lines only (T-3204). A <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> `add` writes main's live board; card: no Base/By (pass --by), one Done-when kind + docs page (T-4672).
 - Showcase premades plan: ops/plans/T-4672-showcase-premades.md (Pro tag model #41 12:27 AM 11-17; themes split + Pro words are proposals).
 - Standing lessons: run `date` before every stamp; grep my own proposals and git log before ruling; read a new rule against the ADR it touches; when two fixes interact, check the bound under both. Never write "ships as is" without a grep at HEAD (T-0791: an unbuilt BGAppRefresh went into the guide as shipped).

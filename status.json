@@ -1,10 +1,10 @@
 {
  "schema": 1,
- "at": "2026-11-18T12:27:23.928915+00:00",
+ "at": "2026-11-18T12:32:06.376202+00:00",
  "session": {
-  "active": true,
-  "kind": "work",
-  "started": "2026-11-18T04:07:20-05:00",
+  "active": false,
+  "kind": "",
+  "started": null,
   "flow": [
    {
     "t": "T-4533",
@@ -30,6 +30,15 @@
      {
       "s": "testq",
       "at": 1795003317
+     }
+    ]
+   },
+   {
+    "t": "T-4663",
+    "steps": [
+     {
+      "s": "testq",
+      "at": 1794993064
      }
     ]
    }
@@ -97,7 +106,6 @@
    },
    {
     "t": "T-4852",
-    "name": "Check finished work before it ships",
     "acct": "Personal b",
     "steps": [],
     "end": "landed",
@@ -205,12 +213,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": null,
+ "next_tick": "2026-11-18T04:22:09-05:00",
  "personal": {
   "week_pct": 50.16,
-  "usage_pct": 53.3,
-  "work_pct": 82.4,
-  "read_at": "2026-11-18T12:27:00+00:00",
+  "usage_pct": 52.0,
+  "work_pct": 81.9,
+  "read_at": "2026-11-18T12:34:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -324,7 +332,7 @@
  "lock_in": {
   "on": false,
   "pool": 12,
-  "at": "2026-11-18T07:27:00-05:00",
+  "at": "2026-11-18T07:34:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -332,13 +340,9 @@
    "b": "double-spread"
   }
  },
- "next_tick_why": "session",
+ "next_tick_why": "last_tick",
  "idle": null,
- "pool": {
-  "why": "Double Spread: 54% of the week left, paced to last until Wed 14:00, the week's halfway point; the machine allows 3 (raised a step toward the floor of 8: new work may start and every signal is...",
-  "n": 3,
-  "at": "2026-11-18T04:07:09.354573-05:00"
- },
+ "pool": null,
  "lanes": [
   {
    "name": "Idris",
@@ -391,7 +395,6 @@
  ],
  "tasks": {
   "run": [],
-  "src": "plan",
   "open": [
    {
     "w": "Pernille",
@@ -486,35 +489,6 @@
    "wait": 32,
    "blocked": 2,
    "you": 9
-  },
-  "fin": {
-   "n": 24,
-   "rows": [
-    [
-     "T-4887",
-     "Put the second-tap caret fix..."
-    ],
-    [
-     "T-4886",
-     "Write PyWidget right in..."
-    ],
-    [
-     "T-4645",
-     "Make the settings check..."
-    ],
-    [
-     "T-4876",
-     "Check the long-line caret change"
-    ],
-    [
-     "T-4873",
-     "Make backup suggestions..."
-    ],
-    [
-     "T-4885",
-     "Check the PyWidget name fix..."
-    ]
-   ]
   }
  },
  "qr": [
@@ -556,52 +530,47 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-18T12:27:15Z",
+  "at": "2026-11-18T12:32:06Z",
   "s": {
    "T-4533": [
     "merging",
     "Host checks on the Mac mini",
-    1795003335254
+    1795003326376
    ],
    "T-0011": [
     "mergeq",
     "1st to merge",
-    1795001895254
+    1795001886376
    ],
    "T-4574": [
     "mergeq",
     "3rd to merge",
-    1794992535254
+    1794992526376
    ],
    "T-4762": [
     "mergeq",
     "4th to merge",
-    1794994695254
+    1794994686376
    ],
    "T-4748": [
     "mergeq",
     "6th to merge",
-    1795002375254
+    1795002366376
    ],
    "T-4575": [
     "mergeq",
     "7th to merge",
-    1795003875254
+    1795003866376
    ],
    "T-4640": [
     "mergeq",
     "8th to merge",
-    1795004355254
+    1795004346376
    ],
    "T-4789": [
     "testing",
     "Mac Mini \u00b7 test",
     null
-   ],
-   "T-4635": [
-    "testq",
-    "1st for a Simulator",
-    1795004775254
    ]
   },
   "nm": {
@@ -612,8 +581,7 @@
    "T-4748": "Make the widget font check ignore lookalike letters",
    "T-4575": "Stop an edit from rewriting a pasted Shortcut link",
    "T-4640": "Drop a location fix that arrives too late",
-   "T-4789": "Check finished work before it ships",
-   "T-4635": "Clear the Settings restore line once Pro is bought"
+   "T-4789": "Check finished work before it ships"
   },
   "wk": {
    "T-4533": "Pernille",
@@ -623,24 +591,11 @@
    "T-4748": "Idris",
    "T-4575": "Idris",
    "T-4640": "Idris",
-   "T-4789": "Pernille",
-   "T-4635": "Idris",
-   "T-4887": "Idris",
-   "T-4886": "Maren",
-   "T-4645": "Pernille",
-   "T-4876": "Pernille",
-   "T-4873": "Idris",
-   "T-4885": "Idris",
-   "T-4746": "Maren",
-   "T-4774": "Idris",
-   "T-4803": "Idris",
-   "T-4764": "Maren",
-   "T-4872": "Pernille",
-   "T-4752": "Maren"
+   "T-4789": "Pernille"
   }
  },
  "ln": {
-  "at": "2026-11-18T12:27:15Z",
+  "at": "2026-11-18T12:32:06Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -652,13 +607,13 @@
     "parked": 9
    },
    "m": {
-    "checking": 25,
-    "inline": 45,
-    "conflicted": 554,
+    "checking": 30,
+    "inline": 50,
+    "conflicted": 559,
     "failed": null,
-    "held": 2218,
+    "held": 2223,
     "retry": null,
-    "parked": 863
+    "parked": 868
    },
    "cur": [
     [
@@ -667,7 +622,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     25
+     30
     ]
    ],
    "ld": [
@@ -677,21 +632,20 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-18T12:26:28Z",
-    "ld": 26.79,
+    "at": "2026-11-18T12:32:07Z",
+    "ld": 29.14,
     "c": 8,
-    "sb": 2,
+    "sb": 1,
     "dk": [
-     17.4,
+     16.7,
      228.3
     ],
     "ss": [
-     171.4,
+     171.3,
      953.7
     ],
     "sn": [
-     "t4772-27",
-     "iPhone 17e"
+     "t4772-27"
     ]
    },
    "macbook": {
@@ -708,15 +662,6 @@
   }
  },
  "operators": [
-  {
-   "w": "Operator",
-   "a": "Main plan",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session \u2013 16 tasks",
-   "at": "2026-11-18T06:24:03-05:00"
-  },
   {
    "w": "Operator",
    "a": "Evan's Account",
@@ -746,11 +691,9 @@
   "queue_text",
   "recent",
   "task_done",
-  "fin_short",
   "task_title",
   "done_text",
   "task_open",
-  "fin_six",
   "lane_task",
   "task_next"
  ],
@@ -758,10 +701,10 @@
   "main": 0,
   "lanes": 2,
   "total": 2,
-  "at": "7:27 AM",
+  "at": "7:34 AM",
   "why": "",
-  "at_iso": "2026-11-18T12:27:00+00:00",
-  "started": "4:07 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0, started 4:07 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 7:27 AM ET</p></section>"
+  "at_iso": "2026-11-18T12:34:00+00:00",
+  "started": "",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 7:34 AM ET</p></section>"
  }
 }

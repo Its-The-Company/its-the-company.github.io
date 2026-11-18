@@ -205,6 +205,11 @@ keys the Page owns" and s4.2's whole-list write. Every other key keeps one write
 for any other key needs its operation written here first. `habits.py` never `set()`s `habits`, so the Python by-key
 save never touches that key. Test: s9.4.
 
+**Dated line, Maren, 2026-11-18 (T-4763, checked against the code).** Restated so it cannot be misread: a key with two
+writers merges by operation under the lock, never by value. The Swift half named in this heading has landed:
+`PremadeSettingsFile.write` (T-4532) takes this lock in the app. The operation writer, `PremadeFileOp.apply`, and the
+lock code it shares live in `Shared/` so that the widget extension can build them (s9.2).
+
 Tests: `pywidget/tests/widgets/test_premade_store_lock.py` (a writer in another process holding the lock, a holder in
 this process, an unreadable file, keys the run did not set, no locked save installed, orphan temp files, and which
 premades import `_premade_lock`).
@@ -257,7 +262,7 @@ Now (before phase C):
 2. **The Gallery detail sheet** (frame 1). A new card under the family chips: one row, the Page's label and a summary
    (`page.sum.*`), chevron; it pushes the Page. It shows only where the detail sheet shows Add widget (`mayAdd`,
    Gallery 9.4 hook), so a locked premade has no Page.
-3. **The empty notice.** The seven notices already send the person to pywidget ("Add a countdown in pywidget.");
+3. **The empty notice.** The seven notices already send the person to pywidget ("Add a countdown in PyWidget.");
    route 1 is that tap. Their words do not change.
 
 In phase C: the premade's project page lists its outputs (03-structure s1, "The project page"), the widget and the
@@ -515,9 +520,9 @@ This table is the full set. The strings the frames draw are the drawing script's
 | `page.title.*` | Events · Place · Cities · Places · Habits · Repository · Shortcuts | Page title; Gallery row label |
 | `page.preview` | How your widget looks now. | under the well |
 | `page.local` | Places stay on this iPhone. | footer, Sun, Clocks, Distance |
-| `page.unreadable` | pywidget couldn't read this widget's settings, so it changed nothing. | in place of the sections |
-| `page.cantsave` | pywidget couldn't save this change. Try again. | under the section |
-| `page.newer` | These settings come from a newer pywidget. Update the app to change them. | in place of the sections |
+| `page.unreadable` | PyWidget couldn't read this widget's settings, so it changed nothing. | in place of the sections |
+| `page.cantsave` | PyWidget couldn't save this change. Try again. | under the section |
+| `page.newer` | These settings come from a newer PyWidget. Update PyWidget to change them. | in place of the sections |
 | `page.ax.well` | Preview of your widget | VoiceOver label of the well |
 | `page.ax.row` | Opens its settings. | VoiceOver hint of a list row |
 | `page.place.choose` | Choose a Place | place row before one is set; search screen title |
@@ -526,7 +531,7 @@ This table is the full set. The strings the frames draw are the drawing script's
 | `page.place.none` | No city starts with “{q}”. Try its English name. | no hits |
 | `page.place.nozone` | No time zone known | dimmed hit, Clocks |
 | `page.place.current` | Use Current Location | Distance's search screen |
-| `page.loc.off` | Location is off for pywidget. | footer, with Open Settings |
+| `page.loc.off` | Location is off for PyWidget. | footer, with Open Settings |
 | `page.cd.foot` | Medium shows the next three. Small and the Lock Screen show the one you choose. | Countdown footer |
 | `page.cd.add` | Add Event | add row; sheet title |
 | `page.cd.edit` | Edit Event | sheet title |
@@ -536,13 +541,13 @@ This table is the full set. The strings the frames draw are the drawing script's
 | `page.cd.short` | Shown on the Lock Screen line. Leave it empty to use the name. | Short Name footer |
 | `page.cd.soonest` | The soonest | first option of Show on Small |
 | `page.cd.ended` | Ended | detail of a past event |
-| `page.sun.cur` | Uses where this iPhone was when pywidget was last open, or the place below when it has no location. | Sun footer |
+| `page.sun.cur` | Uses where this iPhone was when PyWidget was last open, or the place below when it has no location. | Sun footer |
 | `page.cl.min` | A clock needs at least one city. | footer when one city is left |
 | `page.cl.foot` | Small and the Lock Screen show the first three. | Clocks footer |
 | `page.hb.del` | Delete “{name}”? Its check-ins are deleted too. | confirmation |
 | `page.gh.bad` | Enter it as owner/name, like python/cpython. | refusal |
 | `page.gh.foot` | Public repositories only. The widget asks GitHub for this repository’s numbers about every 15 minutes. | GitHub footer |
-| `page.sc.foot` | Type the name exactly as it is in Shortcuts. pywidget can’t see your shortcuts to check it. | Shortcuts footer |
+| `page.sc.foot` | Type the name exactly as it is in Shortcuts. PyWidget can’t see your shortcuts to check it. | Shortcuts footer |
 | `page.sum.*` | “{n} events”, “No events yet”, the place's name, “{n} cities”, “No places yet”, “{n} habits”, the repository, “{n} shortcuts” | Gallery row detail |
 
 </div>
@@ -612,6 +617,11 @@ Dates in the frames are drawn in one English format; the build uses the system's
 
 ## 9. Buttons in 1.0 (T-4558)
 
+**2026-11-18 (T-4764, Maren, from `reviews/359a4e52fb-pernille.md` L1).** This section covers the built twelve. s0
+(T-4672) supersedes its 1.0 count: "one premade gains a button" and "the other eleven gain none" below were true when
+written; s0 now plans Focus timer, Flashcards and Day phases with buttons, and six of the eleven leave the Gallery. The
+slot figure in s9.4 is Habits' alone. Each new premade's buttons are counted against s3's caps in its own build line.
+
 **Dated line, Maren, 2026-11-16 6:30 AM ET, with Ines's limits (ADR-011 s13 step 10, accepted at 137c133087; plan.md
 chair note 2026-11-15 10:00 PM).** One premade gains a button in 1.0: **Habit tracker**, a **Done today** button per
 habit shown. The other eleven gain none. Every count sits inside ADR-011 s3's caps, and the build fits the 1 slot day
@@ -660,13 +670,20 @@ taps; ADR-011 s7 item 2). Each drawn instance carries `args` of numbers only (AD
 
 
 The handler treats `args` as untrusted (ADR-011 s7, L2): an unknown `habit`, a `day` outside today and the six days
-before (the Page's own limit, s3.5) or any other value changes nothing. A habit with no stored `id` (a file from
-before the Page) draws no button and keeps its `Link`. The tree's `v` covers the `args`, so a tap on a widget drawn
+before (the Page's own limit, s3.5) or any other value changes nothing. Only a habit whose `id` came from
+the file draws a button; any other keeps its `Link`. `habits.py` `read()` cannot tell the two apart as it stands: it
+writes `str(h.get("id") or _slug(str(h["name"])))`, so a file from before the Page (no `id`) still gets an id, the
+slug of the name's first word, and `draw()` would put a button on it with a made-up id. A slug can also take the
+stored id's own shape: a first word `h1a2b3c4d` gives the id `h1a2b3c4d`. So `read()` sets `"stored": True` on a habit
+only when the file's entry has an `id` that is a string of `h` and 8 lower-case hex digits (the form the Page writes,
+s4.1), and `False` otherwise, and `draw()` draws a button only where `stored` is true. The slug stays as the habit's
+`id` for the row's `Link` URL (`_url`). T-4705's handler cases add a pre-Page habit (no `id`) and one whose name's first
+word is `h` plus 8 hex digits: neither draws a button. The tree's `v` covers the `args`, so a tap on a widget drawn
 before a change is N4 (ADR-011 s8), not a wrong mark.
 
-**Per family, against s3's caps.** Area figures are estimates from the type sizes at the default text size
-(subheadline 20 pt line, footnote 18, headline 22), worked in one script on 2026-11-16; Pernille's render test and
-Idris's step-6 screenshots measure them.
+**Per family, against s3's caps.** Area figures in this table are estimates from the type sizes at the default text size
+(subheadline 20 pt line, footnote 18, headline 22), worked in one script on 2026-11-16; larger text sizes follow the
+table, under "When the text grows". Pernille's render test and Idris's step-6 screenshots measure them.
 
 
 <div class="tbl" role="region" tabindex="0" aria-label="Table 14: 9.2 Habit tracker: Done today, scrolls sideways" style="--tw:898px" markdown="1">
@@ -684,6 +701,46 @@ Idris's step-6 screenshots measure them.
 In every cell and column the name and dots stay a `Link` to the Page with the habit's focus; links are not counted
 (ADR-011 s3). These are my layouts; their frames, in Paper and Studio, are drawn before the build (s9.4).
 
+**When the text grows (T-4764, from review M2).** Every text in these layouts is a text style, so it grows with Dynamic
+Type. The 44 pt hit areas do not, and neither do the dots: they are circles drawn in points. So the rule is that text
+gives way and the button never does. A button keeps its whole 44 x 44 pt hit area, 12 pt from the next button and
+inside the widget, at every text size. A layout that cannot keep that is not squeezed: it is replaced by the next step.
+Inside the approved look (creative/approved.md): the steps use the same type styles, the same 9 pt dots and the same
+button, and nothing is added to the identity. In this order, in every family:
+1. **The head, eyebrow and hint lines go** (what the cell says anyway: "This week", "Tap a habit to log").
+2. **The name goes from two lines to one**, then scales to 0.8 for width (`minimum_scale_factor`, never under 11 pt: the
+   floor ADR-011 s3 sets for a button's label), then ends in an ellipsis. The full name is still read by VoiceOver, on
+   the `Link` and in the button's label.
+3. **The cell changes shape and fewer habits show.** Medium's three columns become two, drawn as Large's cell. Large's
+   three rows become one column of two, from AX3. The Page still holds every habit; the widget
+   shows the first ones, as now.
+4. **The dots do not shrink.** They do not grow with the text, so there is nothing for them to give back. Review M2
+   offered "the dots shrink" as one order; 84 pt of dots in an 88 pt column is already the smallest the 9 pt design
+   allows, and a smaller dot is a new look.
+
+Where each step starts (estimates from Apple's Dynamic Type table as I recall it, footnote 13 / 19 / 44 pt and
+subheadline 15 / 21 / 49 pt at Large / xxxLarge / AX5; not measured: Idris checks in the Simulator, and the render test
+and screenshots at the largest text size measure):
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 15: 9.2 Habit tracker: Done today, scrolls sideways" style="--tw:1280px" markdown="1">
+
+| Text size | Medium (116 pt tall, 289 wide) | Large (292 pt tall) | Small (116 pt tall) |
+|---|---|---|---|
+| Large to xLarge (the default range) | the table above: three columns, name up to two lines | the table above: two columns of three, head on one line | the table above |
+| xxLarge to xxxLarge | step 2: name on one line, because two lines need 117 of 116 pt at xxxLarge; 91 of 116; the name shows about 11 characters at 0.8 scale, so a 13-character name ends in an ellipsis | step 1: the head goes (it would need 296 of 292); cells 76 tall, grid 252 of 292; the name shows its 13 characters | the streak number is 30 pt (the existing fallback) because "day streak" grows from 18 to 26 pt of line and 109 would become 117 of 116; now 112 of 116 |
+| AX1 to AX5, only if a widget draws them (below) | step 3: two columns, 140 pt each, the first two habits; a cell is name above (one line), dots 84 and button 44 beside it, 136 of 140; height 78 at AX1 to 106 of 116 at AX5 | AX1 and AX2: cells 82 and 88 tall, grid 270 and 288 of 292. AX3 to AX5: one column of two habits, cells 96 to 113 tall, 204 to 238 of 292, because a name in a 138 pt cell shows only 7 to 9 characters | as the row above |
+
+</div>
+
+
+Which AX sizes a widget draws is not settled. ADR-011 s3 says widgets take Large to AX5 (Apple, [A4]); the renderer's
+clamp at xxxLarge (design-system-v0 s3.2; API.md A5, proposed; `viewtree.schema.json`) says no widget sees an
+accessibility size. The steps hold either way: the AX row applies only if the clamp does not. The largest text size a
+widget draws at is xxxLarge while the clamp holds and AX5 if it does not, and s9.4's frames and screenshots are taken
+there. The tiers are `When("dynamicTypeSize", [...])` branches, each a whole layout (API.md, `When`), so Pernille builds
+them in `habits.py` and the render test reads each branch.
+
 **How it reads.** The button is a symbol only, drawn at 28 pt in its 44 pt hit area: `circle` when not done,
 `checkmark.circle.fill` in the accent when done (the dots' fill, `widget_accentable`). Its VoiceOver label (DRAFT, <span title="Commandment 51: the Investors approve every visual before it ships.">C51</span>):
 "Mark Reading done today" when not done; "Undo Reading for today" when done (the habit's own name in place of
@@ -697,65 +754,110 @@ list (s2.3.1). The handler's mark must reach that same file, or the widget and t
 `habits` has two writers, so it merges by operation (s2.3.1, dated line 2026-11-17). Each copy of the list is read
 seconds before its writer saves: the run's copy at the run's read, and the Page's when it opened. Neither copy is ever
 written back whole. (Revised 2026-11-17, T-4763, from T-4601 H1 and M1. The 2026-11-16 text had route B return the
-whole changed list. Under s2.3.1's by-key merge that loses a mark or a Page edit, whichever saved first, with no error.)
+whole changed list. Under s2.3.1's by-key merge that loses a mark or a Page edit, whichever saved first, with no error.
+Checked against the code on 2026-11-18. Four corrections, all below: the channel's gate is a slot `widget_tree.emit`
+opens, because the handler runs outside `ui._first_party()`; the request rule is checked in `emit`, because
+`validate(doc)` never sees the request; the render's own read reapplies the operation; and the writer moves to `Shared/`
+so the extension can build it.)
 
 *The mark is an operation.* The handler never returns the list. After its checks it yields one operation, made of the
 same three numbers as its `args`:
-`{"key": "habits", "op": "mark", "habit": 439041101, "day": 20774, "done": 1}` (habit `h1a2b3c4d`, 2026-11-17). It also applies that operation to its
-own in-memory copy, so the render that follows draws the mark. The writer takes the premade lock (s2.3.1) and re-reads
-`premade.json`. It finds the habit whose stored `id` is `"h"` plus `habit` as 8 lower-case hex digits. For `done: 1`
-it adds that day's ISO date to `done` if it is missing, and for `done: 0` it removes the date if present. Nothing else
-in the file changes: not the order, the name, the habit's other days, or the other habits. Applying the operation
-twice gives the same file as applying it once, because `done` is the state the person chose, not a flip. If no habit
-has that id (the Page deleted it after the draw), the file is not written. The run's tree and state still commit, and
-a `.settingsSaved` refresh (s2.3 step 2) is queued so the tree catches up.
+`{"key": "habits", "op": "mark", "habit": 439041101, "day": 20774, "done": 1}` (habit `h1a2b3c4d`, 2026-11-17).
+The handler hands it over with `ui._premade_op(op)` (the result channel, below) and returns `None`, so the state stays
+`{}`. It never puts the list, or `premade_file`, in the state: that would be committed to `state.json` and read by the
+next run in place of the file (`_premade.open_store`, `FILE_KEY`).
 
-*The Page applies its own edit per habit id.* `habits` is the one list in 1.0 with an `id` rule (s4.1). For it, the
-Page's save (s2.3 step 1) re-reads the list under the lock and applies only what this edit changed, habit by habit:
-- a rename sets that id's `name`;
-- for check-ins, only the days the person toggled in this edit are added or removed, one by one, like the mark;
-- an add appends the new id, and does nothing if the id is already there;
+*The render in the same run draws the mark.* The render does not see the handler's copy: `install()`'s timeline
+provider calls `read(now, open_store(widget.id, state))`, which opens the file again. So `_premade.open_store`
+applies the run's pending operation (if its `key` is one the opened store holds) to the store's data in memory, with
+`_premade.apply_op(data, op)`, and never through `Store.set`, so the store is not dirty and no save writes it. Until
+the commit the file still lacks the mark; the tree drawn from the marked copy is the one committed with it.
+
+*The operation, exactly* (one pure function on each side: `_premade.apply_op` in Python, `PremadeFileOp.apply` in
+Swift; both test against the same cases, s9.4). The habit is the one whose stored `id` equals `"h"` plus `habit` as
+8 lower-case hex digits (`"h%08x"`). The date is 1970-01-01 plus `day` days in the Gregorian calendar with no time
+zone (Python `dt.date(1970, 1, 1) + dt.timedelta(days=day)`; Swift: UTC calendar), written `YYYY-MM-DD`. For
+`done: 1` that date is appended to the habit's `done` if missing, and for `done: 0` every copy of it is removed. Nothing
+else in the file changes: not the order of habits or of other dates, the name, the habit's other days, or the other
+habits and keys. Applying the operation twice gives the same file as applying it once, because `done` is the state the
+person chose, not a flip. If no habit has that id (the Page deleted it after the draw), or nothing would change, the
+file is not written and no error is raised. The run's tree and state still commit, and a `.settingsSaved` refresh
+(s2.3 step 2) is queued so the tree catches up.
+
+*The Page applies its own edit per habit id.* `habits` is the one list in 1.0 with an `id` rule (s4.1;
+`SettingsField.id` is non-nil only there). For such a list, `SettingsPageModel.putRow`, `deleteRow` and `moveRows`
+(`App/Pages/SettingsPage.swift`) stop sending the whole list through `saveList`. Each turns its edit into operations and
+hands them to `PremadeFileOp.apply(_:folder:wait:)`, which re-reads the file under the lock and applies them, habit by
+habit, in one hold:
+- a rename (the sheet's `name` differs from `edit.original`'s) sets that id's `name`;
+- check-ins: the dates in the sheet's `done` and not in `edit.original`'s are `mark` with `done: 1`, the dates in the
+  original and not in the sheet are `mark` with `done: 0`, the same operation as the button's. Only the days the person
+  toggled in this sheet are applied;
+- an add appends the new row with its new id, and does nothing if the id is already there;
 - a delete removes the id, and does nothing if it is already gone;
 - a reorder puts the ids in the Page's order, with any id the Page did not have kept after them in the file's order.
 
+The row being edited is found by its `id`, never by value. Today `putRow` and `deleteRow` look the original up with
+`rows.firstIndex(of:)` and write nothing if it is gone (review M3). After a reload has brought in a mark, the original
+held by an open sheet no longer equals the row, so a by-value lookup would refuse the rename. By id, it goes through.
 Habits this edit did not touch keep the file's value. So a mark and a rename made from copies read before either
 saved are both kept, in either order. A mark and a Page toggle of the same habit and day are two target states, and
 the later save's state stands: that is what the person did last, not a silent loss. Countdown's `events` and the other
 lists keep their single writer and the whole-key write.
 
-*The Page reloads when a widget run commits.* Every writer of `premade.json`, Swift and Python, posts one Darwin
-notification after its rename (`<bundle id>.premade.changed`, no payload). An open Page reloads its rows from the file
-when that notification arrives and whenever the scene becomes active. An edit sheet that is open keeps its fields.
+*The Page reloads when a widget run commits.* `PremadeFileOp.apply` posts one Darwin notification after a rename that
+changed the file: `app.pywidget.premade.changed`, no payload. The name is spelled once in `Shared/`, never built from
+`Bundle.main`, because the extension's bundle id differs from the app's. Python never posts: the lane refuses `ctypes`
+(`lane.py`), and the keys Python saves by key are keys no Page edits. Under route A, the Swift run code posts it after
+the action run returns. An open Page (`SettingsPageModel`) calls `load()` when the notification arrives and when its
+scene becomes active. Today `load()` runs only in `init`. An open edit sheet keeps its fields and its `edit.original`.
 Its Save is applied per id as above, so the reload neither throws the edit away nor overwrites the mark. A widget can
 be tapped while pywidget is in front, from Notification Center or the Today view, so foreground alone is not enough.
 
 *The result channel* (ADR-011 s7 has none: a handler returns state, and a premade's state is `{}` in 1.0). In 1.0 the
 channel is first-party only and carries one operation per run:
-- **Python.** `pywidget_ui._premade_op(op)`, private and not in API.md's public rows. It can be called only inside
-  `ui._first_party()` in an action run, and only once per run. Any other call raises, which fails the handler, so
-  nothing is written (ADR-011 s7 (b)). If the handler succeeds, the runner puts the operation in the `widget_tree`
-  document as `premade_op`. The document's `state` is unchanged.
-- **Checked in four places.** (1) At the call: shape, keys exactly `key`, `op`, `habit`, `day`, `done`; `habit` an
-  integer from 0 to 4,294,967,295; `day` an integer; `done` 0 or 1. (2) In `validate()` of the document: `premade_op`
-  is allowed only when the request carried `first_party: true` and an `action`. (3) In Swift, decoding the result
-  before the commit: the same shape again, the widget id `pywidget.premade.habits`, and the `(key, op)` pair on a fixed
-  Swift allow-list with one row in 1.0. Anything else ends the run as `error`, and nothing is written: state, tree
-  and file all stay as they were. (4) In the writer: the id lookup above.
-- **Committed** inside `run.lock`, in ADR-011 s7's lock order. Take `state.lock` and check `rev`. Take the premade
-  lock, apply the operation, rename, release. Then write `state.json` and the tree, and release `state.lock`. The file
-  goes first because it is the record. A tree that lags is redrawn by the next run. In the extension, the premade
-  lock's wait is cut to what is left of the run's 2.0 s budget. A wait that runs out writes nothing and is the
-  run's `busy` row (ADR-011 s7).
+- **Python.** `pywidget_ui._premade_op(op)`, private and not in API.md's public rows. It works only while a slot is
+  open, and only once per slot. `widget_tree.emit` opens the slot around `run_handler` when the request
+  `is_first_party` and carries an `action`, and closes it when the handler returns or raises. Any other call raises,
+  which fails the handler, so nothing is written (ADR-011 s7 (b)). The gate is the slot, not `ui._first_party()`:
+  the runner enters `_first_party()` only around the module's own execution (`runner.py`, `_go`), and the handler runs
+  later, in `records.finish`'s tree step, outside it. The runner's `_clear_first_party()`, at the start of every run,
+  also empties the slot, because `pywidget_ui` stays loaded across runs. If the handler succeeds, `emit` takes the
+  operation from the slot and passes it through `build` to `Widget.document(timeline, state=state, premade_op=op)`,
+  which writes it at the document's top level as `premade_op`. The document's `state` is unchanged. A host test reads
+  it with `ui._take_premade_op()` after `Widget.run_action`; `run_action` still returns the state.
+- **Checked in four places.** (1) At the call: a dict with keys exactly `key`, `op`, `habit`, `day`, `done`; `habit`
+  an integer from 0 to 4,294,967,295; `day` an integer; `done` 0 or 1. (2) In the document: `validate(doc)` checks the
+  same shape and that `widget.id` starts `pywidget.premade.`. `validate` sees only the document, so the request rule,
+  `premade_op` only with `first_party: true` and an `action`, is checked in `widget_tree.emit`, which has the request.
+  (3) In Swift, decoding the result in the action run's body before `Commit.commit`: the same shape again, the widget id
+  `pywidget.premade.habits`, and the `(key, op)` pair on a fixed Swift allow-list with one row in 1.0. Anything else
+  ends the run as `error`, and nothing is written: state, tree and file all stay as they were. (4) In the writer: the
+  id lookup above.
+- **Committed** inside `run.lock`, in ADR-011 s7's lock order: `run.lock`, then `state.lock`, then
+  `premade.json.lock`. No writer takes them in another order; the Page and Python take only `premade.json.lock`.
+  `WidgetStateCommit.Commit.commit` (`Shared/WidgetStateCommit.swift`) gains an optional `before: () -> Bool`. It is
+  called inside its `state.lock` hold, after the `rev` check and before `state.json` is written. For a run with a
+  `premade_op`, `before` runs `PremadeFileOp.apply`. If `before` returns false, nothing is written and the commit
+  answers a new case, `.premadeBusy`. The tree's compare-and-replace follows in its own hold, as now. The file goes
+  first because it is the record. If `state.json`'s write then fails, the mark stands and the next run draws it: a
+  premade's state is `{}`, so nothing is lost. In the extension, `apply`'s wait is cut to what is left of the run's
+  2.0 s budget, and `.premadeBusy` is the run's `busy` row (ADR-011 s7). The extension finds the file's folder as
+  `ExtensionLane` does for a premade's scripts folder (`WidgetFolder.sharedScripts` in the App Group).
 - **Contract lines.** bridge-contract.md gains v5.12 (the document's `premade_op`, request unchanged, `contract: 5`
   kept because it is additive in one bundle). ADR-011 s7 gains a dated line that a first-party handler may yield one
   premade operation. Both are Pernille's to write at step 5.
 
-The same Swift writer (one function that applies an operation under the premade lock) serves the Page, the extension
-on iOS 18 to 26 and the app's run on iOS 27. Two ways to get the mark into the file, Pernille's and Idris's to choose at
+The same Swift writer, `PremadeFileOp.apply`, serves the Page, the extension on iOS 18 to 26 and the app's run on
+iOS 27. It lives in a new `Shared/PremadeFileOp.swift`. The Page's locked writer, `PremadeSettingsFile.write`, and its
+`read` and `locked` sit in `App/Pages/PremadeSettings.swift`, which the extension target does not compile
+(`project.yml`: `PyWidgetExtension` takes `Widget` and `Shared`). So `read`, `locked`, `lockName`, `lockWait` and
+`tempPrefix` move to `Shared/` with it, and the Page keeps calling them there. Two ways to get the mark into the file, Pernille's and Idris's to choose at
 the step-5 and step-6 reviews:
 - **B, recommended:** the channel and the Swift writer above. No lane change.
 - **A:** `fcntl` joins the lane's `ALLOWED` (70,112 bytes, already on the device slice). The handler applies the same
-  operation itself through a new operation save in `_premade_lock`, not the by-key `save`. This is a lane decision.
+  operation itself through a new operation save in `_premade_lock` (`_premade_lock.apply(folder, op)`, using
+  `_premade.apply_op` under the lock), not the by-key `save`. This is a lane decision.
   The file is written before the commit, outside s7 (b)'s "writes nothing", and the Page still needs the per-id edit
   and the reload.
 
@@ -765,7 +867,7 @@ different weeks in the widget and the Page.
 ### 9.3 The eleven without a button
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 15: 9.3 The eleven without a button, scrolls sideways" style="--tw:839px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 16: 9.3 The eleven without a button, scrolls sideways" style="--tw:839px" markdown="1">
 
 | Premade | Why not in 1.0 | What would change it |
 |---|---|---|
@@ -790,15 +892,15 @@ After ADR-011 steps 4, 5, 6a and 6 (the generic path: signing, the Python run, t
 here adds a Swift view; the habit button is an ordinary drawn `Button`.
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 16: 9.4 Build cost, for Idris (Commandment 13 reviewer), scrolls sideways" style="--tw:1044px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 17: 9.4 Build cost, for Idris (Commandment 13 reviewer), scrolls sideways" style="--tw:1044px" markdown="1">
 
 | Part | Who | Size | On the slot |
 |---|---|---|---|
-| Frames for Small, Medium and Large in Paper and Studio, hit areas outlined, VoiceOver order | Maren | 0.5 day | no, beside it, before the build |
+| Frames for Small, Medium and Large in Paper and Studio, hit areas outlined, VoiceOver order; and Medium and Large at the largest text size (s9.2, "When the text grows"), hit areas outlined (no frames are drawn yet; no script draws them, so each is drawn by code when this row starts) | Maren | 0.5 day, plus 0.25 for the two larger frames | no, beside it, before the build |
 | `habits.py`: the `check` handler, the three layouts, the docstring's "no widget buttons in v1" line; host tests (mark, unmark, unknown `habit`, `day` out of range, a failed handler writes nothing); render tests at name `max` 13 and a 3-digit streak; trees, first renders and `catalog.json` re-run | Pernille | 0.5 day | no, beside it, as plan.md counts her step 5 |
-| The result channel's Python half (s9.2): `ui._premade_op`, callable once and only in a first-party action run; the document's `premade_op` and its check in `validate()`; `Widget.run_action` returns it for host tests; bridge-contract v5.12 and the ADR-011 s7 dated line; tests (refused outside `_first_party()`, outside an action, twice, with a bad shape; a handler that raises after the call yields none) | Pernille | 0.5 (0.25 to 1) | no, beside it as step 5 work; it must land before Idris's next row starts |
-| The extension's writer (s9.2): one Swift function that applies an operation under the premade lock, built into the widget extension target as well as the app, its lock wait cut to the run's budget; decoding and checking `premade_op` in the action commit, in ADR-011 s7's lock order; the Page's per-id save for `habits` in place of the whole-list write; the Darwin notification after every rename and the Page's reload on it and on scene active; tests as below | Idris | 1 (0.5 to 1.5) | yes |
-| On the iPhone (iOS 26): a lane Habits widget's button marks today without opening pywidget; Habits' measured T against `timeout` 0.5 + T <= 2.0 s; a locked-phone tap; a tap from the Today view with the Page open, whose rows show the mark; screenshots of the three sizes with hit areas outlined | Idris | 0.5 (0.25 to 1) | yes |
+| The result channel's Python half (s9.2): `ui._premade_op` and its slot, opened by `widget_tree.emit` around `run_handler` for a first-party action run and emptied by `_clear_first_party()`; `premade_op` through `build` and `Widget.document`, its shape in `validate(doc)` and its request rule in `emit`; `ui._take_premade_op()` for host tests; `_premade.apply_op` and `open_store`'s in-memory apply for the same run's render; bridge-contract v5.12 and the ADR-011 s7 dated line; tests (refused with no slot, in a non-first-party or non-action run, twice, with a bad shape; a handler that raises after the call yields none; the render after a mark draws it; the store is not dirty after it) | Pernille | 0.5 (0.25 to 1) | no, beside it as step 5 work; it must land before Idris's next row starts |
+| The extension's writer (s9.2): `Shared/PremadeFileOp.swift` with `apply`, and `PremadeSettingsFile`'s `read`, `locked` and their constants moved from `App/Pages/` to `Shared/` so the extension builds them; the lock wait cut to the run's budget; decoding and checking `premade_op` in the action run's body; `Commit.commit`'s `before` and `.premadeBusy`; the Page's per-id `putRow`, `deleteRow` and `moveRows` for an `id` list, finding the row by id; the Darwin notification after a changing rename, and `load()` on it and on scene active; tests as below | Idris | 1 (0.5 to 1.5) | yes |
+| On the iPhone (iOS 26): a lane Habits widget's button marks today without opening pywidget; Habits' measured T against `timeout` 0.5 + T <= 2.0 s; a locked-phone tap; a tap from the Today view with the Page open, whose rows show the mark; screenshots of the three sizes with hit areas outlined, and Medium and Large again at the largest text size, each button's whole 44 pt area inside the widget | Idris | 0.5 (0.25 to 1) | yes |
 | **Total on the slot** | | **1.5 (1 to 2.5)**; plan.md's 1 (0.5 to 2) no longer holds | |
 
 </div>
@@ -810,21 +912,29 @@ Pernille's `lost_mark.py`: two writers read the same file; the widget writer mar
 renames `h0000abcd` from `Read` to `Reading`; both commit, mark first and then the other order. Each order must end
 with the name `Reading` **and** today in `done`. The same test also covers: a Page toggle of another day of that habit
 alongside the mark, both kept; a Page delete before the mark, where the mark writes nothing and no error is raised; the
-operation applied twice, giving the same file; and the second writer in another process holding the lock (s2.3.1's
-cases). Idris's Swift tests, run through `tools/xc.sh`.
+operation applied twice, giving the same file; the second writer in another process holding the lock (s2.3.1's
+cases); and an edit sheet opened before a mark, saved after the Page reloaded, which keeps both the rename and the mark
+(the by-id lookup). Idris's Swift tests, run through `tools/xc.sh`. `_premade.apply_op` and `PremadeFileOp.apply` read
+the same cases from one file, `pywidget/tests/fixtures/premade_ops.json` (before, operation, after), so the two sides
+cannot drift. Pernille's host test runs the Python order of the same shape with `lost_mark.py`'s two copies.
 
 **Does 1 slot day hold? No.** The old 0.5 for the commit assumed reusing a writer as it stood. The operation writer,
 the Page's per-id save and its reload, and the result check are new Swift, and they need to reach the extension as
 well as the app. The likely figure is 1.5 slot days, with a range of 1 to 2.5. Changing plan.md's step 10 row is
-Ines's. What would push it to 2.5: route A instead of B; the Page's Swift locked writer (T-4468's Swift half;
-`LauncherPremadeSlots.write` still takes no lock, T-4570) not landed when this starts; the Python channel landing late;
-or Habits' T above 1.5 s, so its buttons fall back to links that open pywidget (it still works, visibly; ADR-011 s4).
+Ines's. Checked on 2026-11-18, the figure stands. The Page's locked writer has landed (`PremadeSettingsFile.write`,
+T-4532), so the lock itself is not new. Moving it to `Shared/`, the `Commit.commit` hook and the by-id lookup are each
+small, and they sit inside Idris's range. ADR-011 step 6's action commit has no caller yet (`WidgetStateCommit.run` is
+used only by its tests), and this row starts after it, as the table's head says. What would push it to 2.5: route A
+instead of B; step 6 landing without a place for the body to read the document before the commit; the Python channel
+landing late; or Habits' T above 1.5 s, so its buttons fall back to links that open pywidget (it still works,
+visibly; ADR-011 s4). `LauncherPremadeSlots.write` still takes no lock (T-4570), but it writes launcher folders, not
+Habits', so it does not hold this up.
 
 The board line is Idris's to add when T-4558 is ticked (the board line says so). A draft he can take or change:
 `[build] Habit tracker's Done today button \| Idris with Pernille, step of T-4478, after ADR-011 steps 4, 5, 6a, 6:
 premade-inputs.md s9. Done when: tests: the handler cases in s9.4, and a mark and a rename from copies read before
 the other wrote, both kept, in both orders; seen: on the iPhone (iOS 26) a lane Habits widget marks today without pywidget opening, and Small, Medium
-and Large screenshots with hit areas outlined.`
+and Large screenshots with hit areas outlined, plus Medium and Large at the largest text size.`
 
 ### 9.5 Open
 
@@ -836,6 +946,8 @@ and Large screenshots with hit areas outlined.`
 3. **Name length.** s3.5 above says Name `max` 24; `habits.py` `SETTINGS` has 13 (measured, c00ce27e15). The layouts
    here use 13. s3.5 is the stale one; I correct it with the frames.
 4. **Strings** are DRAFT, like every app string, until a copy guide is approved (C51).
+5. **Which text sizes a widget draws** (s9.2, "When the text grows"): ADR-011 s3 says Large to AX5, the renderer's
+   clamp says xxxLarge. Idris checks in the Simulator; the AX row of the table is built only if the clamp <span title="A new, permitted reading that removes a cap. A lift rule is that reading, written down before we look.">lifts</span>.
 {% endraw %}
 
 </div>

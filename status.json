@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-18T08:39:47.644311+00:00",
+ "at": "2026-11-18T08:42:53.207875+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -113,7 +113,7 @@
    "task": "[design] T-4703 showcase premade frames",
    "model": "opus",
    "started": "2026-11-18T08:21:49.663Z",
-   "seconds": 1077,
+   "seconds": 1263,
    "finished": null,
    "effort": "high"
   },
@@ -122,7 +122,7 @@
    "task": "[build] T-4858 slow store check stalls widgets",
    "model": "opus",
    "started": "2026-11-18T08:34:12.280Z",
-   "seconds": 335,
+   "seconds": 520,
    "finished": null,
    "effort": "high"
   }
@@ -214,7 +214,7 @@
   "week_pct": 46.38,
   "usage_pct": 53.1,
   "work_pct": 80.8,
-  "read_at": "2026-11-18T08:39:00+00:00",
+  "read_at": "2026-11-18T08:42:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -329,7 +329,7 @@
  "lock_in": {
   "on": false,
   "pool": 11,
-  "at": "2026-11-18T03:39:00-05:00",
+  "at": "2026-11-18T03:42:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -584,47 +584,47 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-18T08:39:35Z",
+  "at": "2026-11-18T08:42:53Z",
   "s": {
    "T-0011": [
     "merging",
     "Host checks on the Mac mini",
-    1794990755640
+    1794990773207
    ],
    "T-4762": [
     "mergeq",
     "2nd to merge",
-    1794989855640
+    1794989873207
    ],
    "T-4301": [
     "mergeq",
     "3rd to merge",
-    1794991055640
+    1794991073207
    ],
    "T-4644": [
     "mergeq",
     "3rd to merge",
-    1794991055640
+    1794991073207
    ],
    "T-4533": [
     "mergeq",
     "4th to merge",
-    1794988115640
+    1794988133207
    ],
    "T-4771": [
     "mergeq",
     "6th to merge",
-    1794989855640
+    1794989813207
    ],
    "T-4703": [
-    "merging",
-    "Mac tests at the main gate \u00b7 1 group of tests done",
-    1794990815640
+    "mergetest",
+    "iPhone tests on the MacBook",
+    null
    ],
    "T-4858": [
     "merging",
-    "Mac tests at the main gate",
-    1794991055640
+    "Mac tests at the main gate \u00b7 5 groups of tests done",
+    1794991073207
    ]
   },
   "nm": {
@@ -659,7 +659,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-18T08:39:35Z",
+  "at": "2026-11-18T08:42:53Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -671,13 +671,13 @@
     "parked": 8
    },
    "m": {
-    "checking": 7,
-    "inline": 22,
-    "conflicted": 636,
+    "checking": 10,
+    "inline": 25,
+    "conflicted": 639,
     "failed": null,
-    "held": 1990,
+    "held": 1993,
     "retry": null,
-    "parked": 731
+    "parked": 734
    },
    "cur": [
     [
@@ -686,7 +686,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     7
+     10
     ]
    ],
    "ld": [
@@ -696,12 +696,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-18T08:39:11Z",
-    "ld": 1.7,
+    "at": "2026-11-18T08:42:28Z",
+    "ld": 1.21,
     "c": 8,
     "sb": 2,
     "dk": [
-     14.4,
+     14.7,
      228.3
     ],
     "ss": [
@@ -714,12 +714,12 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-18T08:39:06Z",
-    "ld": 0.6,
+    "at": "2026-11-18T08:41:11Z",
+    "ld": 0.45,
     "c": 12,
     "sb": 0,
     "dk": [
-     310.5,
+     310.4,
      926.4
     ],
     "sn": []
@@ -786,10 +786,10 @@
   "main": 2,
   "lanes": 4,
   "total": 6,
-  "at": "3:39 AM",
+  "at": "3:42 AM",
   "why": "",
-  "at_iso": "2026-11-18T08:39:00+00:00",
+  "at_iso": "2026-11-18T08:42:00+00:00",
   "started": "12:47 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 2, started 12:47 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 3:39 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 2, started 12:47 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 3:42 AM ET</p></section>"
  }
 }

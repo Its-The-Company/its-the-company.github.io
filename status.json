@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-18T06:24:20.868527+00:00",
+ "at": "2026-11-18T06:30:46.869937+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -37,6 +37,21 @@
      {
       "s": "macbook",
       "at": 1794981824
+     }
+    ]
+   },
+   {
+    "t": "T-4689",
+    "name": "Bring the plan into line with the phase A proof",
+    "acct": "Personal b",
+    "steps": [
+     {
+      "s": "testq",
+      "at": 1794946143
+     },
+     {
+      "s": "macbook",
+      "at": 1794947569
      }
     ]
    }
@@ -126,35 +141,35 @@
     "end_at": 1794975028
    }
   ],
-  "landed": 45,
+  "landed": 44,
   "failed": 10
  },
  "workers": [
-  {
-   "name": "idris",
-   "task": "[build] T-4688 Developer mode for Pro",
-   "model": "opus",
-   "started": "2026-11-18T05:56:56.560Z",
-   "seconds": 1644,
-   "finished": null,
-   "effort": "high"
-  },
   {
    "name": "pernille",
    "task": "[build] T-4564 button action run path",
    "model": "opus",
    "started": "2026-11-18T05:57:37.954Z",
-   "seconds": 1602,
+   "seconds": 1988,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "idris",
+   "task": "[build] T-4688 Developer mode for Pro",
+   "model": "opus",
+   "started": "2026-11-18T05:56:56.560Z",
+   "seconds": 2030,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Idris, Pernille",
+ "who": "Pernille, Idris",
  "recent": [],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 485,
+  "runnable_count": 486,
   "blocked_count": 34
  },
  "meter": {
@@ -203,7 +218,7 @@
   "week_pct": 46.38,
   "usage_pct": 53.1,
   "work_pct": 80.8,
-  "read_at": "2026-11-18T06:25:00+00:00",
+  "read_at": "2026-11-18T06:30:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -237,7 +252,7 @@
   }
  ],
  "disk": {
-  "free_gb": 33,
+  "free_gb": 32,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -246,14 +261,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-18T01:23:00-05:00",
+   "at": "2026-11-18T01:30:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
-  "pool": 9,
-  "at": "2026-11-18T01:25:00-05:00",
+  "pool": 10,
+  "at": "2026-11-18T01:30:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -434,7 +449,7 @@
    }
   ],
   "count": {
-   "next": 485,
+   "next": 486,
    "wait": 32,
    "blocked": 2,
    "you": 9
@@ -483,52 +498,47 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-18T06:24:04Z",
+  "at": "2026-11-18T06:30:40Z",
   "s": {
    "T-4823": [
     "mergeq",
     "1st to merge",
-    1794981964246
+    1794982000505
    ],
    "T-4787": [
     "mergeq",
     "2nd to merge",
-    1794982924246
+    1794982900505
    ],
    "T-4796": [
     "mergeq",
     "3rd to merge",
-    1794975184246
+    1794975220505
    ],
    "T-4442": [
     "mergeq",
     "4th to merge",
-    1794975304246
+    1794975340505
    ],
    "T-4516": [
     "mergeq",
     "5th to merge",
-    1794977584246
+    1794977560505
    ],
    "T-4784": [
     "mergeq",
     "6th to merge",
-    1794982804246
+    1794982780505
    ],
    "T-4841": [
     "mergeq",
     "7th to merge",
-    1794981904246
+    1794981940505
    ],
    "T-4564": [
     "merging",
-    "Mac tests at the main gate \u00b7 12 groups of tests done",
-    1794982204246
-   ],
-   "T-4688": [
-    "merging",
     "Mac tests at the main gate",
-    1794982864246
+    1794983200505
    ]
   },
   "nm": {
@@ -539,8 +549,7 @@
    "T-4516": "Prove the premade settings routes in a UI test",
    "T-4784": "Pin the refresh glyph's button style in a test",
    "T-4841": "Decide whether the widget probe asks for HealthKit",
-   "T-4564": "Run a button's action and redraw in one run",
-   "T-4688": "Build a Developer mode for testing Pro"
+   "T-4564": "Run a button's action and redraw in one run"
   },
   "wk": {
    "T-4823": "Odalys",
@@ -550,12 +559,11 @@
    "T-4516": "Idris",
    "T-4784": "Idris",
    "T-4841": "Ines",
-   "T-4564": "Pernille",
-   "T-4688": "Idris"
+   "T-4564": "Pernille"
   }
  },
  "ln": {
-  "at": "2026-11-18T06:24:04Z",
+  "at": "2026-11-18T06:30:40Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -568,12 +576,12 @@
    },
    "m": {
     "checking": null,
-    "inline": 19,
-    "conflicted": 500,
+    "inline": 25,
+    "conflicted": 507,
     "failed": null,
-    "held": 1855,
+    "held": 1861,
     "retry": null,
-    "parked": 420
+    "parked": 427
    },
    "cur": [],
    "ld": [
@@ -583,12 +591,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-18T06:24:04Z",
-    "ld": 19.05,
+    "at": "2026-11-18T06:30:15Z",
+    "ld": 20.55,
     "c": 8,
     "sb": 2,
     "dk": [
-     33.0,
+     31.5,
      228.3
     ],
     "ss": [
@@ -601,12 +609,12 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-18T06:14:20Z",
-    "ld": 0.54,
+    "at": "2026-11-18T06:25:06Z",
+    "ld": 11.08,
     "c": 12,
     "sb": 0,
     "dk": [
-     311.0,
+     310.2,
      926.4
     ],
     "sn": []
@@ -652,10 +660,10 @@
   "main": 2,
   "lanes": 1,
   "total": 3,
-  "at": "1:25 AM",
+  "at": "1:30 AM",
   "why": "",
-  "at_iso": "2026-11-18T06:25:00+00:00",
+  "at_iso": "2026-11-18T06:30:00+00:00",
   "started": "12:47 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 12:47 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 1:25 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 12:47 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 1:30 AM ET</p></section>"
  }
 }

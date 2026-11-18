@@ -1,11 +1,29 @@
 {
  "schema": 1,
- "at": "2026-11-18T22:25:54.785433+00:00",
+ "at": "2026-11-18T22:34:06.915498+00:00",
  "session": {
-  "active": true,
-  "kind": "work",
-  "started": "2026-11-18T14:09:41-05:00",
+  "active": false,
+  "kind": "",
+  "started": null,
   "flow": [
+   {
+    "t": "T-3217",
+    "steps": [
+     {
+      "s": "testq",
+      "at": 1795041185
+     }
+    ]
+   },
+   {
+    "t": "T-4607",
+    "steps": [
+     {
+      "s": "testq",
+      "at": 1795041182
+     }
+    ]
+   },
    {
     "t": "T-4750",
     "name": "Check network fetch cases on the Swift side too",
@@ -172,36 +190,36 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 497,
+  "runnable_count": 520,
   "blocked_count": 33
  },
  "meter": {
   "five_hour": {
    "pct": 15.0,
-   "resets_at": "2026-11-18T20:10:00-05:00",
+   "resets_at": "2026-11-19T01:10:00.019987+00:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-18T17:21:09.140049-05:00",
-   "source": "live",
+   "read_at": "2026-11-18T17:33:56.705931-05:00",
+   "source": "usage",
    "left": 85.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 52.0,
-   "resets_at": "2026-11-22T02:00:00-05:00",
+   "resets_at": "2026-11-22T07:00:00.020015+00:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-18T17:21:09.140049-05:00",
-   "source": "live",
+   "read_at": "2026-11-18T17:33:56.705931-05:00",
+   "source": "usage",
    "left": 48.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 2.0,
-   "resets_at": "2026-11-22T07:00:00.311825+00:00",
+   "resets_at": "2026-11-22T07:00:00.020207+00:00",
    "used_words": "of the Fable weekly allowance used",
-   "read_at": "2026-11-18T14:09:30.092585-05:00",
+   "read_at": "2026-11-18T17:33:56.705931-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-18T17:21:09.140049-05:00"
+  "read_at": "2026-11-18T17:33:56.705931-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -216,12 +234,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": null,
+ "next_tick": "2026-11-18T17:48:57-05:00",
  "personal": {
-  "week_pct": 51.56,
-  "usage_pct": 49.6,
-  "work_pct": 81.1,
-  "read_at": "2026-11-18T22:30:00+00:00",
+  "week_pct": 52.29,
+  "usage_pct": 50.1,
+  "work_pct": 81.6,
+  "read_at": "2026-11-18T22:34:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -242,7 +260,7 @@
   }
  ],
  "disk": {
-  "free_gb": 14,
+  "free_gb": 11,
   "gate": "closed",
   "ssd": {
    "mounted": true,
@@ -251,14 +269,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions wait until 20 GB is free.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-18T17:21:00-05:00",
+   "at": "2026-11-18T17:31:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-18T17:30:00-05:00",
+  "at": "2026-11-18T17:34:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -266,13 +284,9 @@
    "b": "double-spread"
   }
  },
- "next_tick_why": "session",
+ "next_tick_why": "last_tick",
  "idle": null,
- "pool": {
-  "why": "Double Spread: past the week's halfway point with room left, so twice the even pace until the limit or the reset; the machine allows 3 (raised a step toward the floor of 8: new work may start and...",
-  "n": 3,
-  "at": "2026-11-18T14:09:30.557671-05:00"
- },
+ "pool": null,
  "lanes": [
   {
    "name": "Idris",
@@ -325,7 +339,6 @@
  ],
  "tasks": {
   "run": [],
-  "src": "plan",
   "open": [
    {
     "w": "Pernille",
@@ -401,50 +414,25 @@
   "done": [
    {
     "w": "Pernille",
-    "t": "The website's swipe test was failing because it still treated Pitches as the last tab, though...",
-    "at": "2026-11-18T17:19:00-05:00"
+    "t": "An independent check of the editor's new warning and error colours on line numbers passed, with...",
+    "at": "2026-11-18T17:33:00-05:00"
    },
    {
-    "w": "Odalys",
-    "t": "A finished change in a worker's copy now lands on main's current tip even after main has moved...",
-    "at": "2026-11-18T16:32:00-05:00"
+    "w": "Pernille",
+    "t": "Checked the widget refresh button work; it is sound, but the Lock Screen refresh tap is still...",
+    "at": "2026-11-18T17:33:00-05:00"
    },
    {
-    "w": "Idris",
-    "t": "Built-in widgets that use something the Home Screen widget cannot run (web, keychain, files,...",
-    "at": "2026-11-18T16:27:00-05:00"
+    "w": "Pernille",
+    "t": "The review of the font test build found that the test font never reaches App Store builds and...",
+    "at": "2026-11-18T17:33:00-05:00"
    }
   ],
   "count": {
-   "next": 497,
+   "next": 520,
    "wait": 31,
    "blocked": 2,
    "you": 9
-  },
-  "fin": {
-   "n": 5,
-   "rows": [
-    [
-     "T-4735",
-     "Fix a test row that is red..."
-    ],
-    [
-     "T-4911",
-     "Land a finished copy after..."
-    ],
-    [
-     "T-4631",
-     "Place premades in the app..."
-    ],
-    [
-     "T-4902",
-     "Let Investor-asked P0..."
-    ],
-    [
-     "T-4773",
-     "Time the next run from the..."
-    ]
-   ]
   }
  },
  "qr": [
@@ -486,28 +474,11 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-18T22:25:54Z",
-  "s": {
-   "T-4750": [
-    "testq",
-    "1st for a Simulator",
-    1795037454785
-   ]
-  },
-  "nm": {
-   "T-4750": "Check network fetch cases on the Swift side too"
-  },
-  "wk": {
-   "T-4750": "Idris",
-   "T-4735": "Odalys",
-   "T-4911": "Odalys",
-   "T-4631": "Idris",
-   "T-4902": "Odalys",
-   "T-4773": "Idris"
-  }
+  "at": "2026-11-18T22:34:06Z",
+  "s": {}
  },
  "ln": {
-  "at": "2026-11-18T22:25:54Z",
+  "at": "2026-11-18T22:34:06Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -521,11 +492,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 651,
+    "conflicted": 659,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1128
+    "parked": 1136
    },
    "cur": [],
    "ld": [
@@ -535,12 +506,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-18T22:25:55Z",
-    "ld": 0.48,
+    "at": "2026-11-18T22:34:07Z",
+    "ld": 0.43,
     "c": 8,
     "sb": 0,
     "dk": [
-     14.1,
+     12.7,
      228.3
     ],
     "ss": [
@@ -550,29 +521,19 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-18T21:58:08Z",
-    "ld": 0.2,
+    "at": "2026-11-18T22:26:24Z",
+    "ld": 3.74,
     "c": 12,
     "sb": 0,
     "dk": [
-     303.5,
+     357.3,
      926.4
     ],
     "sn": []
    }
   }
  },
- "operators": [
-  {
-   "w": "Operator",
-   "a": "Main plan",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session",
-   "at": "2026-11-18T15:52:47-05:00"
-  }
- ],
+ "operators": [],
  "reply": {
   "sent": "2026-11-18T20:51:46Z",
   "seconds": 60.0
@@ -583,7 +544,6 @@
   "queue_text",
   "recent",
   "task_done",
-  "fin_short",
   "task_title",
   "done_text",
   "task_open",
@@ -594,10 +554,10 @@
   "main": 0,
   "lanes": 0,
   "total": 0,
-  "at": "5:30 PM",
-  "why": "Between sessions: no session is running. Last check 2:09 PM ET.",
-  "at_iso": "2026-11-18T22:30:00+00:00",
+  "at": "5:34 PM",
+  "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
+  "at_iso": "2026-11-18T22:34:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 5:30 PM ET</p><p class=\"an-why\">Between sessions: no session is running. Last check 2:09 PM ET.</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 5:34 PM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
  }
 }

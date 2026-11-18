@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-18T13:34:05.903613+00:00",
+ "at": "2026-11-18T13:37:11.656400+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -162,22 +162,31 @@
    "task": "[test] T-4892 caret UI tests on runner",
    "model": "opus",
    "started": "2026-11-18T13:02:21.149Z",
-   "seconds": 1904,
+   "seconds": 2090,
    "finished": null,
    "effort": "high"
   },
   {
    "name": "idris",
-   "task": "[test] T-4782 Pro store test waits",
+   "task": "[build] T-1905 project send safe swap",
    "model": "opus",
-   "started": "2026-11-18T13:03:48.762Z",
-   "seconds": 1817,
+   "started": "2026-11-18T13:35:50.063Z",
+   "seconds": 81,
    "finished": null,
    "effort": "high"
   }
  ],
  "who": "Idris x2",
- "recent": [],
+ "recent": [
+  {
+   "name": "idris",
+   "task": "[test] T-4782 Pro store test waits",
+   "model": "opus",
+   "started": "2026-11-18T13:03:48.762Z",
+   "seconds": null,
+   "finished": "2026-11-18T13:35:19.631000+00:00"
+  }
+ ],
  "queue": {
   "runnable": [],
   "blocked": [],
@@ -186,19 +195,19 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 10.0,
+   "pct": 11.0,
    "resets_at": "2026-11-18T10:10:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-18T08:05:24.639921-05:00",
+   "read_at": "2026-11-18T08:35:44.089551-05:00",
    "source": "live",
-   "left": 90.0,
+   "left": 89.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 46.0,
    "resets_at": "2026-11-22T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-18T08:05:24.639921-05:00",
+   "read_at": "2026-11-18T08:35:44.089551-05:00",
    "source": "live",
    "left": 54.0,
    "left_words": "of your weekly allowance left"
@@ -210,7 +219,7 @@
    "read_at": "2026-11-18T08:00:11.045824-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-18T08:05:24.639921-05:00"
+  "read_at": "2026-11-18T08:35:44.089551-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -230,8 +239,45 @@
   "week_pct": 49.77,
   "usage_pct": 52.0,
   "work_pct": 81.9,
-  "read_at": "2026-11-18T13:34:00+00:00",
-  "running": []
+  "read_at": "2026-11-18T13:37:00+00:00",
+  "running": [
+   {
+    "lane": "a",
+    "task": "T-4835",
+    "w": "Pernille",
+    "k": "build",
+    "t": "Show an all-day event on its own date after travel",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-18T08:36:36-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a",
+    "task": "T-4889",
+    "w": "Idris",
+    "k": "review",
+    "t": "Check the PyWidget case fix in premade lines",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-18T08:36:36-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a",
+    "task": "T-4679",
+    "w": "Idris",
+    "k": "fix",
+    "t": "Make the unit tests pass in a launcher build",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-18T08:36:36-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   }
+  ]
  },
  "api_credits": [
   {
@@ -251,7 +297,7 @@
   }
  ],
  "disk": {
-  "free_gb": 20,
+  "free_gb": 19,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -260,14 +306,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-18T08:29:00-05:00",
+   "at": "2026-11-18T08:35:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 12,
-  "at": "2026-11-18T08:34:00-05:00",
+  "at": "2026-11-18T08:37:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -347,13 +393,13 @@
    },
    {
     "w": "Idris",
-    "k": "test",
-    "t": "Stop a Pro store test at its first stalled wait",
+    "k": "build",
+    "t": "Send project files in one safe swap",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-18T13:03:48.762Z",
+    "at": "2026-11-18T13:35:50.063Z",
     "o": "c",
-    "task": "T-4782"
+    "task": "T-1905"
    }
   ],
   "src": "plan",
@@ -517,68 +563,57 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-18T13:33:53Z",
+  "at": "2026-11-18T13:37:11Z",
   "s": {
    "T-4533": [
     "mergeq",
     "1st to merge",
-    1794988133900
+    1794988091656
    ],
    "T-4574": [
     "mergeq",
     "3rd to merge",
-    1794992513900
+    1794992531656
    ],
    "T-4762": [
     "mergeq",
     "4th to merge",
-    1794994673900
+    1794994691656
    ],
    "T-4748": [
     "mergeq",
     "6th to merge",
-    1795002353900
+    1795002371656
    ],
    "T-4575": [
     "mergeq",
     "7th to merge",
-    1795003853900
+    1795003871656
    ],
    "T-4640": [
     "mergeq",
     "8th to merge",
-    1795004333900
+    1795004351656
    ],
    "T-4581": [
     "mergeq",
     "9th to merge",
-    1795007093900
+    1795007051656
    ],
    "T-4789": [
     "mergeq",
     "10th to merge",
-    1795007513900
+    1795007531656
    ],
    "T-4635": [
     "mergeq",
     "10th to merge",
-    1795007513900
+    1795007531656
    ],
    "T-4892": [
     "testing",
     "its own tests, in its copy",
-    1795006973900
-   ],
-   "T-3745": [
-    "testing",
-    "its own tests, in its copy",
-    1795008413900
-   ],
-   "T-4782": [
-    "merged",
-    "on main 8:14 AM ET",
-    1795007687000,
-    ""
+    1795006991656
    ]
   },
   "nm": {
@@ -591,9 +626,7 @@
    "T-4581": "Test a real widget tap in iPad windows",
    "T-4789": "Check finished work before it ships",
    "T-4635": "Clear the Settings restore line once Pro is bought",
-   "T-4892": "Run the caret UI tests on the split tap",
-   "T-3745": "Stop the Pro store test timing out",
-   "T-4782": "Stop a Pro store test at its first stalled wait"
+   "T-4892": "Run the caret UI tests on the split tap"
   },
   "wk": {
    "T-4533": "Pernille",
@@ -606,7 +639,6 @@
    "T-4789": "Pernille",
    "T-4635": "Idris",
    "T-4892": "Idris",
-   "T-3745": "Idris",
    "T-4782": "Idris",
    "T-4567": "Odalys",
    "T-4668": "Ines",
@@ -615,7 +647,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-18T13:33:53Z",
+  "at": "2026-11-18T13:37:11Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -628,12 +660,12 @@
    },
    "m": {
     "checking": null,
-    "inline": 83,
-    "conflicted": 621,
+    "inline": 86,
+    "conflicted": 624,
     "failed": null,
-    "held": 2284,
+    "held": 2288,
     "retry": null,
-    "parked": 930
+    "parked": 933
    },
    "cur": [],
    "ld": [
@@ -643,16 +675,16 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-18T13:33:54Z",
-    "ld": 0.72,
+    "at": "2026-11-18T13:36:48Z",
+    "ld": 1.15,
     "c": 8,
     "sb": 2,
     "dk": [
-     19.7,
+     20.6,
      228.3
     ],
     "ss": [
-     171.9,
+     171.0,
      953.7
     ],
     "sn": [
@@ -680,8 +712,17 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 3 tasks",
+   "t": "Work session \u2013 2 tasks",
    "at": "2026-11-18T08:00:22-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Evan's Account",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session \u2013 3 tasks",
+   "at": "2026-11-18T08:36:36-05:00"
   }
  ],
  "reply": {
@@ -702,12 +743,12 @@
  ],
  "agents_now": {
   "main": 2,
-  "lanes": 0,
-  "total": 2,
-  "at": "8:34 AM",
+  "lanes": 1,
+  "total": 3,
+  "at": "8:37 AM",
   "why": "",
-  "at_iso": "2026-11-18T13:34:00+00:00",
+  "at_iso": "2026-11-18T13:37:00+00:00",
   "started": "8:00 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 8:00 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 8:34 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 8:00 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 8:37 AM ET</p></section>"
  }
 }

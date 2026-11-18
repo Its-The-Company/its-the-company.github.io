@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-18T17:39:44.704980+00:00",
+ "at": "2026-11-18T17:42:44.166822+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -137,26 +137,34 @@
  },
  "workers": [
   {
-   "name": "odalys",
-   "task": "[tools] T-4903 drop stale copies from merge count",
-   "model": "opus",
-   "started": "2026-11-18T17:19:56.464Z",
-   "seconds": 1188,
-   "finished": null,
-   "effort": "high"
-  },
-  {
    "name": "pernille",
    "task": "[tools] T-4786 fix S30-5 held-state test, land T-4493",
    "model": "opus",
    "started": "2026-11-18T17:33:36.694Z",
-   "seconds": 368,
+   "seconds": 547,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-4903 part 5: drop copies when redo starts",
+   "model": "opus",
+   "started": "2026-11-18T17:41:17.039Z",
+   "seconds": 87,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Odalys, Pernille",
+ "who": "Pernille, Odalys",
  "recent": [
+  {
+   "name": "odalys",
+   "task": "[tools] T-4903 drop stale copies from merge count",
+   "model": "opus",
+   "started": "2026-11-18T17:19:56.464Z",
+   "seconds": null,
+   "finished": "2026-11-18T17:40:54.378000+00:00"
+  },
   {
    "name": "maren",
    "task": "[build] T-4493 land the site clutter cut",
@@ -180,14 +188,6 @@
    "started": "2026-11-18T15:32:38.173Z",
    "seconds": null,
    "finished": "2026-11-18T15:50:04.604000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-2296 land the Gallery pager work",
-   "model": "opus",
-   "started": "2026-11-18T15:37:31.196Z",
-   "seconds": null,
-   "finished": "2026-11-18T15:40:59.707000+00:00"
   }
  ],
  "queue": {
@@ -242,7 +242,7 @@
   "week_pct": 51.32,
   "usage_pct": 52.2,
   "work_pct": 82.0,
-  "read_at": "2026-11-18T17:39:00+00:00",
+  "read_at": "2026-11-18T17:42:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -357,7 +357,7 @@
  "lock_in": {
   "on": false,
   "pool": 12,
-  "at": "2026-11-18T12:39:00-05:00",
+  "at": "2026-11-18T12:42:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -374,20 +374,20 @@
  },
  "lanes": [
   {
-   "name": "Odalys",
-   "state": "running",
-   "task": "[tools] T-4903 drop stale copies from merge count",
-   "model": "opus",
-   "since": "2026-11-18T17:19:56.464Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
    "name": "Pernille",
    "state": "running",
    "task": "[tools] T-4786 fix S30-5 held-state test, land T-4493",
    "model": "opus",
    "since": "2026-11-18T17:33:36.694Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
+   "name": "Odalys",
+   "state": "running",
+   "task": "[tools] T-4903 part 5: drop copies when redo starts",
+   "model": "opus",
+   "since": "2026-11-18T17:41:17.039Z",
    "next": [],
    "effort": "high"
   },
@@ -427,16 +427,6 @@
  "tasks": {
   "run": [
    {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Drop stale copies from the merge count for good",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-18T17:19:56.464Z",
-    "o": "c",
-    "task": "T-4903"
-   },
-   {
     "w": "Pernille",
     "k": "tools",
     "t": "Correct every bad test that holds a merge",
@@ -445,6 +435,16 @@
     "at": "2026-11-18T17:33:36.694Z",
     "o": "c",
     "task": "T-4786"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Drop stale copies from the merge count for good",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-18T17:41:17.039Z",
+    "o": "c",
+    "task": "T-4903"
    }
   ],
   "src": "plan",
@@ -596,57 +596,58 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-18T17:39:34Z",
+  "at": "2026-11-18T17:42:44Z",
   "s": {
    "T-4679": [
     "mergeq",
     "1st to merge",
-    1795011994387
+    1795012004166
    ],
    "T-4840": [
     "mergeq",
     "4th to merge",
-    1795022494387
+    1795022504166
    ],
    "T-4866": [
     "mergeq",
     "5th to merge",
-    1795023214387
+    1795023164166
    ],
    "T-4898": [
     "mergeq",
     "7th to merge",
-    1795020994387
+    1795021004166
    ],
    "T-4890": [
     "mergeq",
     "8th to merge",
-    1795021414387
+    1795021424166
    ],
    "T-4897": [
     "mergeq",
     "9th to merge",
-    1795022614387
+    1795022624166
    ],
    "T-4819": [
     "mergeq",
     "10th to merge",
-    1795022914387
+    1795022924166
    ],
    "T-4660": [
     "mergeq",
     "11th to merge",
-    1795022794387
-   ],
-   "T-4903": [
-    "merging",
-    "Mac tests at the main gate",
-    1795023454387
+    1795022804166
    ],
    "T-4786": [
-    "testing",
-    "its own tests, in its copy",
-    1795023514387
+    "merging",
+    "Mac tests at the main gate",
+    1795023704166
+   ],
+   "T-4903": [
+    "merged",
+    "on main 12:40 PM ET",
+    1795023618000,
+    ""
    ]
   },
   "nm": {
@@ -658,8 +659,8 @@
    "T-4897": "Check an all-day event keeps its date after travel",
    "T-4819": "Make sure a send never rewrites a project's settings file",
    "T-4660": "Count a family When's buttons per family",
-   "T-4903": "Drop stale copies from the merge count for good",
-   "T-4786": "Correct every bad test that holds a merge"
+   "T-4786": "Correct every bad test that holds a merge",
+   "T-4903": "Drop stale copies from the merge count for good"
   },
   "wk": {
    "T-4679": "Idris",
@@ -670,14 +671,14 @@
    "T-4897": "Idris",
    "T-4819": "Idris",
    "T-4660": "Pernille",
-   "T-4903": "Odalys",
    "T-4786": "Pernille",
+   "T-4903": "Odalys",
    "T-4574": "Idris",
    "T-4812": "Maren"
   }
  },
  "ln": {
-  "at": "2026-11-18T17:39:34Z",
+  "at": "2026-11-18T17:42:44Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -690,12 +691,12 @@
    },
    "m": {
     "checking": null,
-    "inline": 17,
-    "conflicted": 365,
+    "inline": 20,
+    "conflicted": 368,
     "failed": null,
-    "held": 2530,
+    "held": 2533,
     "retry": null,
-    "parked": 842
+    "parked": 845
    },
    "cur": [],
    "ld": [
@@ -705,12 +706,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-18T17:39:35Z",
-    "ld": 10.75,
+    "at": "2026-11-18T17:42:44Z",
+    "ld": 6.85,
     "c": 8,
     "sb": 1,
     "dk": [
-     10.3,
+     11.5,
      228.3
     ],
     "ss": [
@@ -793,10 +794,10 @@
   "main": 2,
   "lanes": 3,
   "total": 5,
-  "at": "12:39 PM",
+  "at": "12:42 PM",
   "why": "",
-  "at_iso": "2026-11-18T17:39:00+00:00",
+  "at_iso": "2026-11-18T17:42:00+00:00",
   "started": "10:30 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 2, started 10:30 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 12:39 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 2, started 10:30 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 12:42 PM ET</p></section>"
  }
 }

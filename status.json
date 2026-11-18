@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-18T01:47:47.471221+00:00",
+ "at": "2026-11-18T01:50:53.464306+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -122,7 +122,7 @@
     "end_at": 1794958343
    }
   ],
-  "landed": 40,
+  "landed": 38,
   "failed": 9
  },
  "workers": [
@@ -131,7 +131,7 @@
    "task": "[tools] T-4806 fix merge time-outs",
    "model": "opus",
    "started": "2026-11-18T01:18:02.621Z",
-   "seconds": 1784,
+   "seconds": 1970,
    "finished": null,
    "effort": "high"
   },
@@ -140,7 +140,7 @@
    "task": "[test] T-4807 fix bad tests that failed merges",
    "model": "opus",
    "started": "2026-11-18T01:44:52.149Z",
-   "seconds": 175,
+   "seconds": 361,
    "finished": null,
    "effort": "high"
   }
@@ -232,7 +232,7 @@
   "week_pct": 43.81,
   "usage_pct": 53.5,
   "work_pct": 81.2,
-  "read_at": "2026-11-18T01:47:00+00:00",
+  "read_at": "2026-11-18T01:50:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -269,7 +269,7 @@
  "lock_in": {
   "on": false,
   "pool": 7,
-  "at": "2026-11-17T20:47:00-05:00",
+  "at": "2026-11-17T20:50:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -516,97 +516,97 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-18T01:47:29Z",
+  "at": "2026-11-18T01:50:44Z",
   "s": {
    "T-4787": [
     "merging",
     "Host checks on the Mac mini",
-    1794965309617
+    1794965324668
    ],
    "T-4643": [
     "merging",
     "Host checks on the Mac mini",
-    1794965309617
+    1794965324668
    ],
    "T-4697": [
     "mergeq",
     "1st to merge",
-    1794959909617
+    1794959864668
    ],
    "T-4698": [
     "mergeq",
     "2nd to merge",
-    1794960269617
+    1794960224668
    ],
    "T-4781": [
     "mergeq",
     "3rd to merge",
-    1794964649617
+    1794964664668
    ],
    "T-4634": [
     "mergeq",
     "4th to merge",
-    1794964109617
+    1794964124668
    ],
    "T-4610": [
     "mergeq",
     "6th to merge",
-    1794960389617
+    1794960404668
    ],
    "T-4761": [
     "mergeq",
     "7th to merge",
-    1794960509617
+    1794960524668
    ],
    "T-4659": [
     "mergeq",
     "8th to merge",
-    1794961049617
+    1794961064668
    ],
    "T-4699": [
     "mergeq",
     "9th to merge",
-    1794961649617
+    1794961604668
    ],
    "T-4782": [
     "mergeq",
     "15th to merge",
-    1794962189617
+    1794962204668
    ],
    "T-4719": [
     "mergeq",
     "17th to merge",
-    1794963089617
+    1794963104668
    ],
    "T-4720": [
     "mergeq",
     "17th to merge",
-    1794963089617
+    1794963104668
    ],
    "T-4750": [
     "mergeq",
     "18th to merge",
-    1794963149617
+    1794963164668
    ],
    "T-4770": [
     "mergeq",
     "19th to merge",
-    1794964709617
+    1794964664668
    ],
    "T-4774": [
     "mergeq",
     "19th to merge",
-    1794964709617
+    1794964664668
    ],
    "T-4807": [
     "testing",
     "its own tests, in its copy",
-    1794966389617
+    1794966344668
    ],
    "T-4806": [
     "testing",
     "its own tests, in its copy",
-    1794966269617
+    1794966224668
    ]
   },
   "nm": {
@@ -653,7 +653,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-18T01:47:29Z",
+  "at": "2026-11-18T01:50:44Z",
   "mq": {
    "n": {
     "checking": 2,
@@ -665,13 +665,13 @@
     "parked": 6
    },
    "m": {
-    "checking": 19,
-    "inline": 63,
-    "conflicted": 773,
+    "checking": 22,
+    "inline": 66,
+    "conflicted": 776,
     "failed": null,
-    "held": 1578,
+    "held": 1581,
     "retry": null,
-    "parked": 528
+    "parked": 531
    },
    "cur": [
     [
@@ -680,7 +680,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     19
+     22
     ],
     [
      [
@@ -688,7 +688,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     19
+     22
     ]
    ],
    "ld": [
@@ -698,12 +698,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-18T01:47:01Z",
-    "ld": 2.65,
+    "at": "2026-11-18T01:50:46Z",
+    "ld": 6.65,
     "c": 8,
     "sb": 0,
     "dk": [
-     19.9,
+     19.2,
      228.3
     ],
     "ss": [
@@ -732,33 +732,21 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Inbox \u2013 Evan's 8:46 PM Message on GitHub",
-   "at": "2026-11-17T20:46:25-05:00"
+   "t": "Work session \u2013 2 tasks",
+   "at": "2026-11-17T20:47:52-05:00"
   }
  ],
  "reply": {
-  "sent": "2026-11-18T01:43:14Z",
-  "seconds": 68.0
+  "sent": "2026-11-18T01:46:05Z",
+  "seconds": 106.0
  },
- "inbox": [
-  {
-   "id": "c6966497074",
-   "state": "received",
-   "position": 1,
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "I am responding \"A\" to the 8:35PM..."
-  }
- ],
+ "inbox": [],
  "trimmed": [
   "lane_next",
   "queue_text",
   "recent",
   "task_done",
   "fin_short",
-  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -769,10 +757,10 @@
   "main": 2,
   "lanes": 0,
   "total": 2,
-  "at": "8:47 PM",
+  "at": "8:50 PM",
   "why": "",
-  "at_iso": "2026-11-18T01:47:00+00:00",
+  "at_iso": "2026-11-18T01:50:00+00:00",
   "started": "7:10 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 7:10 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 8:47 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 7:10 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 8:50 PM ET</p></section>"
  }
 }

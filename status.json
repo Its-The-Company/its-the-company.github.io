@@ -1,37 +1,11 @@
 {
  "schema": 1,
- "at": "2026-11-18T18:31:50.862671+00:00",
+ "at": "2026-11-18T18:34:53.748488+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-18T10:30:40-05:00",
   "flow": [
-   {
-    "t": "T-4890",
-    "name": "Keep a real widget tap in the open iPad window",
-    "acct": "Personal b",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1795024869
-     },
-     {
-      "s": "macbook",
-      "at": 1795026225
-     }
-    ]
-   },
-   {
-    "t": "T-4898",
-    "name": "Fix the Home Screen token test reading the gallery",
-    "acct": "Personal b",
-    "steps": [
-     {
-      "s": "macbook",
-      "at": 1795024811
-     }
-    ]
-   },
    {
     "t": "T-2296",
     "name": "Finish the gallery pager, iPad layout and detail foot",
@@ -74,6 +48,54 @@
   ],
   "done": [
    {
+    "t": "T-4866",
+    "name": "Rerun the Pro row large-text test after the footer fix",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1795026877
+   },
+   {
+    "t": "T-4897",
+    "name": "Check an all-day event keeps its date after travel",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1795026861
+   },
+   {
+    "t": "T-4840",
+    "name": "Read the sensor rows from the gate build's export",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1795026841
+   },
+   {
+    "t": "T-4890",
+    "name": "Keep a real widget tap in the open iPad window",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1795026823
+   },
+   {
+    "t": "T-4898",
+    "name": "Fix the Home Screen token test reading the gallery",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1795026797
+   },
+   {
+    "t": "T-4679",
+    "name": "Make the unit tests pass in a launcher build",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1795026732
+   },
+   {
     "t": "T-4849",
     "name": "Shorten the process merge wait for good",
     "acct": "Personal a",
@@ -107,58 +129,9 @@
     "end": "failed",
     "end_at": 1795022361,
     "why": "did not merge cleanly"
-   },
-   {
-    "t": "T-4835",
-    "name": "Show an all-day event on its own date after travel",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "failed",
-    "end_at": 1795021095,
-    "why": "did not merge cleanly"
-   },
-   {
-    "t": "T-4635",
-    "name": "Clear the Settings restore line once Pro is bought",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1795021039
-   },
-   {
-    "t": "T-4574",
-    "name": "Keep the launcher's app queries out of shipped builds",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1795020997
-   },
-   {
-    "t": "T-4533",
-    "name": "Make the premade settings save sturdier on disk errors",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1795019971
-   },
-   {
-    "t": "T-4889",
-    "name": "Check the PyWidget case fix in premade lines",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1795017854
-   },
-   {
-    "t": "T-4581",
-    "name": "Test a real widget tap in iPad windows",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1795017788
    }
   ],
-  "landed": 21,
+  "landed": 27,
   "failed": 8
  },
  "workers": [
@@ -167,7 +140,7 @@
    "task": "[tools] T-4786 fix S30-5 held-state test, land T-4493",
    "model": "opus",
    "started": "2026-11-18T17:33:36.694Z",
-   "seconds": 3494,
+   "seconds": 3677,
    "finished": null,
    "effort": "high"
   },
@@ -176,7 +149,7 @@
    "task": "[tools] T-4903 part 5: drop copies when redo starts",
    "model": "opus",
    "started": "2026-11-18T17:41:17.039Z",
-   "seconds": 3033,
+   "seconds": 3216,
    "finished": null,
    "effort": "high"
   }
@@ -219,7 +192,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 492,
+  "runnable_count": 491,
   "blocked_count": 34
  },
  "meter": {
@@ -268,7 +241,7 @@
   "week_pct": 51.32,
   "usage_pct": 52.2,
   "work_pct": 82.0,
-  "read_at": "2026-11-18T18:31:00+00:00",
+  "read_at": "2026-11-18T18:34:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -305,7 +278,7 @@
  "lock_in": {
   "on": false,
   "pool": 12,
-  "at": "2026-11-18T13:31:00-05:00",
+  "at": "2026-11-18T13:34:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -471,6 +444,11 @@
   "done": [
    {
     "w": "Idris",
+    "t": "Tapping a widget on the iPad Home Screen now opens its screen in a window that is already open...",
+    "at": "2026-11-18T13:33:00-05:00"
+   },
+   {
+    "w": "Idris",
     "t": "The shipped app no longer lists the twelve other apps the unreleased launcher would check for;...",
     "at": "2026-11-18T11:56:00-05:00"
    },
@@ -478,22 +456,21 @@
     "w": "Operator",
     "t": "The website's Pitches page test works again: Evan made the one-line fix himself on GitHub after...",
     "at": "2026-11-18T10:43:00-05:00"
-   },
-   {
-    "w": "Operator",
-    "t": "Refusals per day stayed within its limit of 16.05 refusals for a full day, so the bottleneck...",
-    "at": "2026-11-18T10:29:00-05:00"
    }
   ],
   "count": {
-   "next": 492,
+   "next": 491,
    "wait": 32,
    "blocked": 2,
    "you": 9
   },
   "fin": {
-   "n": 2,
+   "n": 3,
    "rows": [
+    [
+     "T-4890",
+     "Keep a real widget tap in..."
+    ],
     [
      "T-4574",
      "Keep the launcher's app..."
@@ -544,92 +521,71 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-18T18:31:50Z",
+  "at": "2026-11-18T18:34:53Z",
   "s": {
-   "T-4679": [
-    "mergeq",
-    "1st to merge",
-    1795012010862
-   ],
-   "T-4898": [
-    "mergeq",
-    "4th to merge",
-    1795021010862
-   ],
-   "T-4890": [
-    "mergetest",
-    "Xcode checks on the MacBook, 5th to merge",
-    1795026230862
-   ],
-   "T-4840": [
-    "mergeq",
-    "6th to merge",
-    1795022510862
-   ],
-   "T-4897": [
-    "mergeq",
-    "7th to merge",
-    1795022630862
-   ],
    "T-4660": [
     "mergeq",
-    "8th to merge",
-    1795022810862
+    "1st to merge",
+    1795022813748
    ],
    "T-4819": [
     "mergeq",
-    "9th to merge",
-    1795022870862
+    "2nd to merge",
+    1795022873748
    ],
-   "T-4866": [
+   "T-4890": [
     "mergeq",
-    "11th to merge",
-    1795023170862
+    "3rd to merge",
+    1795024073748
+   ],
+   "T-4898": [
+    "mergeq",
+    "3rd to merge",
+    1795024073748
+   ],
+   "T-4897": [
+    "mergeq",
+    "5th to merge",
+    1795026353748
    ],
    "T-4570": [
     "mergeq",
-    "15th to merge",
-    1795026350862
+    "5th to merge",
+    1795026353748
    ],
    "T-4493": [
     "merging",
-    "Mac tests at the main gate",
-    1795025930862
+    "Mac tests at the main gate \u00b7 9 groups of tests done, 1 red",
+    1795025873748
    ],
    "T-4786": [
     "testing",
     "its own tests, in its copy",
-    1795025930862
+    1795025933748
    ],
    "T-4903": [
     "testing",
     "its own tests, in its copy",
-    1795024130862
+    1795024133748
    ]
   },
   "nm": {
-   "T-4679": "Make the unit tests pass in a launcher build",
-   "T-4898": "Fix the Home Screen token test reading the gallery",
-   "T-4890": "Keep a real widget tap in the open iPad window",
-   "T-4840": "Read the sensor rows from the gate build's export",
-   "T-4897": "Check an all-day event keeps its date after travel",
    "T-4660": "Count a family When's buttons per family",
    "T-4819": "Make sure a send never rewrites a project's settings file",
-   "T-4866": "Rerun the Pro row large-text test after the footer fix",
+   "T-4890": "Keep a real widget tap in the open iPad window",
+   "T-4898": "Fix the Home Screen token test reading the gallery",
+   "T-4897": "Check an all-day event keeps its date after travel",
    "T-4570": "Launcher slot copy takes the premade file lock",
    "T-4493": "Cut clutter text on the pages still carrying it",
    "T-4786": "Correct every bad test that holds a merge",
    "T-4903": "Drop stale copies from the merge count for good"
   },
   "wk": {
-   "T-4679": "Idris",
-   "T-4898": "Idris",
-   "T-4890": "Idris",
-   "T-4840": "Idris",
-   "T-4897": "Idris",
    "T-4660": "Pernille",
    "T-4819": "Idris",
-   "T-4866": "Idris",
+   "T-4890": "Idris",
+   "T-4898": "Idris",
+   "T-4897": "Idris",
    "T-4570": "Idris",
    "T-4493": "Maren",
    "T-4786": "Pernille",
@@ -639,49 +595,40 @@
   }
  },
  "ln": {
-  "at": "2026-11-18T18:31:50Z",
+  "at": "2026-11-18T18:34:53Z",
   "mq": {
    "n": {
-    "checking": 1,
-    "inline": 8,
+    "checking": 0,
+    "inline": 6,
     "conflicted": 5,
     "failed": 0,
     "held": 1,
-    "retry": 1,
+    "retry": 2,
     "parked": 6
    },
    "m": {
-    "checking": 8,
-    "inline": 66,
-    "conflicted": 417,
+    "checking": null,
+    "inline": 47,
+    "conflicted": 420,
     "failed": null,
-    "held": 2582,
-    "retry": 18,
-    "parked": 871
+    "held": 2585,
+    "retry": 21,
+    "parked": 874
    },
-   "cur": [
-    [
-     [
-      "T-4890"
-     ],
-     "iPhone app tests",
-     "MacBook",
-     8
-    ]
-   ],
+   "cur": [],
    "ld": [
-    28,
-    "2026-11-18T18:31:39Z"
+    35,
+    "2026-11-18T18:34:51Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-18T18:31:26Z",
-    "ld": 3.88,
+    "at": "2026-11-18T18:34:54Z",
+    "ld": 4.94,
     "c": 8,
     "sb": 1,
     "dk": [
-     11.2,
+     13.3,
      228.3
     ],
     "ss": [
@@ -693,12 +640,12 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-18T18:24:00Z",
-    "ld": 0.35,
+    "at": "2026-11-18T18:33:50Z",
+    "ld": 0.87,
     "c": 12,
     "sb": 0,
     "dk": [
-     305.8,
+     305.6,
      926.4
     ],
     "sn": []
@@ -712,33 +659,21 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Inbox \u2013 Evan's 1:30 PM Message on GitHub",
-   "at": "2026-11-18T13:30:50-05:00"
+   "t": "Work session \u2013 3 tasks",
+   "at": "2026-11-18T13:33:16-05:00"
   }
  ],
  "reply": {
-  "sent": "2026-11-18T18:18:23Z",
-  "seconds": 90.0
+  "sent": "2026-11-18T18:30:25Z",
+  "seconds": 170.0
  },
- "inbox": [
-  {
-   "id": "c6987802744",
-   "state": "received",
-   "position": 1,
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "You may do this at once at top..."
-  }
- ],
+ "inbox": [],
  "trimmed": [
   "lane_next",
   "queue_text",
   "recent",
   "task_done",
   "fin_short",
-  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -749,10 +684,10 @@
   "main": 2,
   "lanes": 0,
   "total": 2,
-  "at": "1:31 PM",
+  "at": "1:34 PM",
   "why": "",
-  "at_iso": "2026-11-18T18:31:00+00:00",
+  "at_iso": "2026-11-18T18:34:00+00:00",
   "started": "10:30 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 10:30 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 1:31 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 10:30 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 1:34 PM ET</p></section>"
  }
 }

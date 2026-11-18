@@ -1,11 +1,22 @@
 {
  "schema": 1,
- "at": "2026-11-18T21:27:46.182492+00:00",
+ "at": "2026-11-18T21:30:50.533932+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-18T14:09:41-05:00",
   "flow": [
+   {
+    "t": "T-4750",
+    "name": "Check network fetch cases on the Swift side too",
+    "w": "Idris",
+    "steps": [
+     {
+      "s": "testq",
+      "at": 1795037445
+     }
+    ]
+   },
    {
     "t": "T-2296",
     "name": "Finish the gallery pager, iPad layout and detail foot",
@@ -124,20 +135,11 @@
  },
  "workers": [
   {
-   "name": "idris",
-   "task": "[build] T-4631 premades with refused imports to app",
-   "model": "opus",
-   "started": "2026-11-18T20:40:36.593Z",
-   "seconds": 2829,
-   "finished": null,
-   "effort": "high"
-  },
-  {
    "name": "pernille",
    "task": "[test] T-4807 land browser time-out fix",
    "model": "opus",
    "started": "2026-11-18T20:31:35.722Z",
-   "seconds": 3370,
+   "seconds": 3554,
    "finished": null,
    "effort": "high"
   },
@@ -146,13 +148,30 @@
    "task": "[tools] T-4911 land a finished copy after main moves",
    "model": "opus",
    "started": "2026-11-18T21:13:45.187Z",
-   "seconds": 840,
+   "seconds": 1025,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "idris",
+   "task": "[test] T-4750 Swift replay of network fetch cases",
+   "model": "opus",
+   "started": "2026-11-18T21:28:52.652Z",
+   "seconds": 117,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Idris, Pernille, Odalys",
+ "who": "Pernille, Odalys, Idris",
  "recent": [
+  {
+   "name": "idris",
+   "task": "[build] T-4631 premades with refused imports to app",
+   "model": "opus",
+   "started": "2026-11-18T20:40:36.593Z",
+   "seconds": null,
+   "finished": "2026-11-18T21:28:27.643000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[tools] T-4907 keep main green after every land",
@@ -176,20 +195,12 @@
    "started": "2026-11-18T20:23:23.859Z",
    "seconds": null,
    "finished": "2026-11-18T20:39:24.053000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-4902 Investor P0 process lines past limit",
-   "model": "opus",
-   "started": "2026-11-18T19:12:07.311Z",
-   "seconds": null,
-   "finished": "2026-11-18T20:31:10.864000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 495,
+  "runnable_count": 496,
   "blocked_count": 33
  },
  "meter": {
@@ -238,7 +249,7 @@
   "week_pct": 51.56,
   "usage_pct": 51.3,
   "work_pct": 81.5,
-  "read_at": "2026-11-18T21:27:00+00:00",
+  "read_at": "2026-11-18T21:30:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -275,7 +286,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-18T16:27:00-05:00",
+  "at": "2026-11-18T16:30:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -301,20 +312,20 @@
    "effort": "high"
   },
   {
-   "name": "Idris",
-   "state": "running",
-   "task": "[build] T-4631 premades with refused imports to app",
-   "model": "opus",
-   "since": "2026-11-18T20:40:36.593Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
    "name": "Odalys",
    "state": "running",
    "task": "[tools] T-4911 land a finished copy after main moves",
    "model": "opus",
    "since": "2026-11-18T21:13:45.187Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
+   "name": "Idris",
+   "state": "running",
+   "task": "[test] T-4750 Swift replay of network fetch cases",
+   "model": "opus",
+   "since": "2026-11-18T21:28:52.652Z",
    "next": [],
    "effort": "high"
   },
@@ -356,16 +367,6 @@
     "task": "T-4807"
    },
    {
-    "w": "Idris",
-    "k": "build",
-    "t": "Place premades in the app when their imports are refused",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-18T20:40:36.593Z",
-    "o": "c",
-    "task": "T-4631"
-   },
-   {
     "w": "Odalys",
     "k": "tools",
     "t": "Land a finished copy after main moves on",
@@ -374,6 +375,16 @@
     "at": "2026-11-18T21:13:45.187Z",
     "o": "c",
     "task": "T-4911"
+   },
+   {
+    "w": "Idris",
+    "k": "test",
+    "t": "Check network fetch cases on the Swift side too",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-18T21:28:52.652Z",
+    "o": "c",
+    "task": "T-4750"
    }
   ],
   "src": "plan",
@@ -451,6 +462,11 @@
   ],
   "done": [
    {
+    "w": "Idris",
+    "t": "Built-in widgets that use something the Home Screen widget cannot run (web, keychain, files,...",
+    "at": "2026-11-18T16:27:00-05:00"
+   },
+   {
     "w": "Odalys",
     "t": "When the process and site merge queue is full, a top-priority (P0) task the Investors asked for...",
     "at": "2026-11-18T15:30:00-05:00"
@@ -459,22 +475,21 @@
     "w": "Idris",
     "t": "A widget whose script labels its data with an older or fixed date now refreshes when it asked...",
     "at": "2026-11-18T15:21:00-05:00"
-   },
-   {
-    "w": "Maren+pernille",
-    "t": "Twelve website pages (How it works, Infrastructure, Lanes, Workflow, Funnel, This Session and...",
-    "at": "2026-11-18T13:44:00-05:00"
    }
   ],
   "count": {
-   "next": 495,
+   "next": 496,
    "wait": 31,
    "blocked": 2,
    "you": 9
   },
   "fin": {
-   "n": 2,
+   "n": 3,
    "rows": [
+    [
+     "T-4631",
+     "Place premades in the app..."
+    ],
     [
      "T-4902",
      "Let Investor-asked P0..."
@@ -525,7 +540,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-18T21:27:27Z",
+  "at": "2026-11-18T21:30:36Z",
   "s": {
    "T-4631": [
     "mergetest",
@@ -535,22 +550,29 @@
    "T-4911": [
     "merging",
     "Mac tests at the main gate",
-    1795037007397
+    1795037016851
+   ],
+   "T-4750": [
+    "testing",
+    "its own tests, in its copy",
+    1795037436851
    ]
   },
   "nm": {
    "T-4631": "Place premades in the app when their imports are refused",
-   "T-4911": "Land a finished copy after main moves on"
+   "T-4911": "Land a finished copy after main moves on",
+   "T-4750": "Check network fetch cases on the Swift side too"
   },
   "wk": {
    "T-4631": "Idris",
    "T-4911": "Odalys",
+   "T-4750": "Idris",
    "T-4902": "Odalys",
    "T-4773": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-18T21:27:27Z",
+  "at": "2026-11-18T21:30:36Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -559,16 +581,16 @@
     "failed": 0,
     "held": 0,
     "retry": 0,
-    "parked": 4
+    "parked": 3
    },
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 593,
+    "conflicted": 596,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1157
+    "parked": 1073
    },
    "cur": [],
    "ld": [
@@ -578,8 +600,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-18T21:27:28Z",
-    "ld": 0.71,
+    "at": "2026-11-18T21:29:49Z",
+    "ld": 0.97,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -637,10 +659,10 @@
   "main": 3,
   "lanes": 0,
   "total": 3,
-  "at": "4:27 PM",
+  "at": "4:30 PM",
   "why": "",
-  "at_iso": "2026-11-18T21:27:00+00:00",
+  "at_iso": "2026-11-18T21:30:00+00:00",
   "started": "2:09 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 2:09 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 4:27 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 2:09 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 4:30 PM ET</p></section>"
  }
 }

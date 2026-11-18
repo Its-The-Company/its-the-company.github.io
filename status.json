@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-18T09:16:34.974475+00:00",
+ "at": "2026-11-18T09:19:39.093410+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -113,7 +113,7 @@
     "end_at": 1794980912
    }
   ],
-  "landed": 46,
+  "landed": 44,
   "failed": 10
  },
  "workers": [
@@ -122,7 +122,7 @@
    "task": "[build] T-4663 case-insensitive completion",
    "model": "opus",
    "started": "2026-11-18T09:08:46.044Z",
-   "seconds": 468,
+   "seconds": 653,
    "finished": null
   },
   {
@@ -130,11 +130,19 @@
    "task": "[design] T-4763 habit marks merge by operation",
    "model": "opus",
    "started": "2026-11-18T09:16:14.754Z",
-   "seconds": 20,
+   "seconds": 204,
+   "finished": null
+  },
+  {
+   "name": "ines",
+   "task": "[plan] T-4870 timeline with checked weeks",
+   "model": "opus",
+   "started": "2026-11-18T09:16:47.608Z",
+   "seconds": 171,
    "finished": null
   }
  ],
- "who": "Idris, Maren",
+ "who": "Idris, Maren, Ines",
  "recent": [
   {
    "name": "idris",
@@ -169,19 +177,19 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 18.0,
+   "pct": 19.0,
    "resets_at": "2026-11-18T05:10:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-18T04:12:27.721004-05:00",
+   "read_at": "2026-11-18T04:19:28.144358-05:00",
    "source": "live",
-   "left": 82.0,
+   "left": 81.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 44.0,
    "resets_at": "2026-11-22T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-18T04:12:27.721004-05:00",
+   "read_at": "2026-11-18T04:19:28.144358-05:00",
    "source": "live",
    "left": 56.0,
    "left_words": "of your weekly allowance left"
@@ -193,7 +201,7 @@
    "read_at": "2026-11-18T04:07:09.006523-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-18T04:12:27.721004-05:00"
+  "read_at": "2026-11-18T04:19:28.144358-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -213,7 +221,7 @@
   "week_pct": 50.16,
   "usage_pct": 53.3,
   "work_pct": 82.4,
-  "read_at": "2026-11-18T09:16:00+00:00",
+  "read_at": "2026-11-18T09:19:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -273,7 +281,7 @@
   }
  ],
  "disk": {
-  "free_gb": 14,
+  "free_gb": 16,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -282,14 +290,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-18T04:12:00-05:00",
+   "at": "2026-11-18T04:19:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 11,
-  "at": "2026-11-18T04:16:00-05:00",
+  "at": "2026-11-18T04:19:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -322,6 +330,14 @@
    "next": []
   },
   {
+   "name": "Ines",
+   "state": "running",
+   "task": "[plan] T-4870 timeline with checked weeks",
+   "model": "opus",
+   "since": "2026-11-18T09:16:47.608Z",
+   "next": []
+  },
+  {
    "name": "Pernille",
    "state": "next",
    "task": "Pernille, P0, Investor an Investor c6963972184 (6:23 PM...",
@@ -333,14 +349,6 @@
    "name": "Odalys",
    "state": "next",
    "task": "Odalys, P0, Investor an Investor c6963972184 (6:23 PM...",
-   "model": null,
-   "since": null,
-   "next": []
-  },
-  {
-   "name": "Ines",
-   "state": "next",
-   "task": "Ines, P2, from T-1110 (Wrenna,...",
    "model": null,
    "since": null,
    "next": []
@@ -373,6 +381,15 @@
     "at": "2026-11-18T09:16:14.754Z",
     "o": "c",
     "task": "T-4763"
+   },
+   {
+    "w": "Ines",
+    "k": "plan",
+    "t": "Update the timeline with checked drag-and-drop weeks",
+    "m": "opus",
+    "at": "2026-11-18T09:16:47.608Z",
+    "o": "c",
+    "task": "T-4870"
    }
   ],
   "src": "plan",
@@ -528,57 +545,63 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-18T09:16:10Z",
+  "at": "2026-11-18T09:19:39Z",
   "s": {
    "T-0011": [
     "mergeq",
     "1st to merge",
-    1794989470738
+    1794989439093
    ],
    "T-4533": [
     "mergeq",
     "3rd to merge",
-    1794988090738
+    1794988119093
    ],
    "T-4644": [
     "mergeq",
     "4th to merge",
-    1794988630738
-   ],
-   "T-4762": [
-    "mergeq",
-    "5th to merge",
-    1794989830738
-   ],
-   "T-4301": [
-    "mergeq",
-    "6th to merge",
-    1794991090738
+    1794988599093
    ],
    "T-4771": [
     "mergeq",
+    "5th to merge",
+    1794989799093
+   ],
+   "T-4762": [
+    "mergeq",
+    "6th to merge",
+    1794989859093
+   ],
+   "T-4301": [
+    "mergeq",
     "7th to merge",
-    1794991510738
+    1794991059093
    ],
    "T-4783": [
     "mergeq",
-    "7th to merge",
-    1794991510738
+    "8th to merge",
+    1794991539093
    ],
    "T-4574": [
     "mergeq",
     "12th to merge",
-    1794992530738
+    1794992499093
    ],
    "T-4663": [
     "testing",
     "its own tests, in its copy",
-    1794993130738
+    1794993099093
    ],
-   "T-4285": [
+   "T-4870": [
     "merged",
-    "on main 4:15 AM ET",
-    1794993305000,
+    "on main 4:19 AM ET",
+    1794993549000,
+    ""
+   ],
+   "T-4763": [
+    "merged",
+    "on main 6:17 PM ET",
+    1794957455000,
     ""
    ]
   },
@@ -586,31 +609,34 @@
    "T-0011": "Check motion, health and battery sensors on a device",
    "T-4533": "Make the premade settings save sturdier on disk errors",
    "T-4644": "Check the ladder's files in the gate build's own tests",
+   "T-4771": "Gutter marks redraw quickly and stay right while typing",
    "T-4762": "Let the run lock wrap a Python run",
    "T-4301": "Read fresh Pro gates after a queued wait",
-   "T-4771": "Gutter marks redraw quickly and stay right while typing",
    "T-4783": "Keep the gutter mark on its line after an edit",
    "T-4574": "Keep the launcher's app queries out of shipped builds",
    "T-4663": "Completion ignores letter case and small typos",
-   "T-4285": "Confirm the Builder drag-and-drop week figures"
+   "T-4870": "Update the timeline with checked drag-and-drop weeks",
+   "T-4763": "Keep habit marks when the Page also saves"
   },
   "wk": {
    "T-0011": "Idris",
    "T-4533": "Pernille",
    "T-4644": "Idris",
+   "T-4771": "Idris",
    "T-4762": "Idris",
    "T-4301": "Idris",
-   "T-4771": "Idris",
    "T-4783": "Idris",
    "T-4574": "Idris",
    "T-4663": "Idris",
+   "T-4870": "Ines",
+   "T-4763": "Maren",
    "T-4285": "Idris",
    "T-4839": "Wrenna",
    "T-4852": "Pernille"
   }
  },
  "ln": {
-  "at": "2026-11-18T09:16:10Z",
+  "at": "2026-11-18T09:19:39Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -623,12 +649,12 @@
    },
    "m": {
     "checking": null,
-    "inline": 48,
-    "conflicted": 672,
+    "inline": 62,
+    "conflicted": 676,
     "failed": null,
-    "held": 2027,
+    "held": 2030,
     "retry": null,
-    "parked": 767
+    "parked": 771
    },
    "cur": [],
    "ld": [
@@ -638,12 +664,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-18T09:15:26Z",
-    "ld": 9.03,
+    "at": "2026-11-18T09:18:54Z",
+    "ld": 8.15,
     "c": 8,
     "sb": 2,
     "dk": [
-     13.5,
+     15.5,
      228.3
     ],
     "ss": [
@@ -656,12 +682,12 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-18T09:04:45Z",
-    "ld": 1.07,
+    "at": "2026-11-18T09:16:57Z",
+    "ld": 19.83,
     "c": 12,
     "sb": 0,
     "dk": [
-     310.2,
+     309.9,
      926.4
     ],
     "sn": []
@@ -675,7 +701,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 5 tasks",
+   "t": "Work session \u2013 6 tasks",
    "at": "2026-11-18T04:07:20-05:00"
   },
   {
@@ -714,13 +740,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 2,
+  "main": 3,
   "lanes": 2,
-  "total": 4,
-  "at": "4:16 AM",
+  "total": 5,
+  "at": "4:19 AM",
   "why": "",
-  "at_iso": "2026-11-18T09:16:00+00:00",
+  "at_iso": "2026-11-18T09:19:00+00:00",
   "started": "4:07 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 2, started 4:07 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 4:16 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 3, started 4:07 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 4:19 AM ET</p></section>"
  }
 }

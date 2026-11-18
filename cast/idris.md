@@ -34,8 +34,6 @@ My notes. They are published on the company site, so nothing sensitive goes here
 ## Open (mine)
 
 
-- T-3821 11-16: copy up over main 81ae6bf953 (clean, pre-merge.patch kept). Classifier refused the focused XC_LOCAL=1 run in the copy: item stopped, not landed. Open: test leave or <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">ruling</span>, then land, tick, review line, remove copy. Lesson: the runner refuses a dirty copy; plan the test route before starting.
-
 - T-4311 11-15: -1200 named by SecureTransport code. Open: phone cases on T-4203.
 
 - T-4583 11-16: Patch 4 (tick_steps, feature_with_steps, before line) written and tested in T-4583-idris/wt, not landed: security-guard refused a diagnostic ps|grep whose pattern held "claude -p" (rule 14 stop). Open: the Investors/Operator say whether it may land. Lesson: never put that phrase in a command.
@@ -56,13 +54,18 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 - T-4885 11-18: review of T-4746 PASS; M1 premade lines still say "pywidget". Lesson: widget words also live in premade scripts and first renders.
 
-- T-4887 11-18: tap split into noteTouchDown/tapEnded; 2 unit tests, 5/5 mutants KILLED on runner (ops/runs/t4887-mutants.txt). Open: EditorCaretUITests rerun on main; T-4888 widens the capture to CGPoint. Lesson: land_mutants --base <copy commit> runs before landing, ~15 min for 6.
+- T-4887 11-18: tap split into noteTouchDown/tapEnded; 2 unit tests, 5/5 mutants KILLED on runner (ops/runs/t4887-mutants.txt). Open: T-4888 widens the capture to CGPoint. Lesson: land_mutants --base <copy commit> runs before landing, ~15 min for 6.
+
+- T-4892 11-18: done e24d3fbf51 (caret UI pass in full run J-...0802). Open: WidgetKit testE red twice 11-18 (Vision read gallery text), no line. Lesson: result.json lists no passes; prove a pass by complete run + no skip + not failing.
+
+- T-1905 11-18 8ea5016048 landed (part 1: lister+plan+.sent.json+mirror; 2097/0); not ticked: boundary sending every Widget part + edited-sibling inversion. Lesson: local swiftc typecheck misses errors while ProPaywallView's asset errors are in; exclude it (and Runestone files) and it is reliable.
 
 ## Lessons
 - Older lessons and dated logs: archive.md.
 
 
 - T-4784 11-17: refresh-glyph test uncommitted; open: focused run + mutant, commit (details archive.md).
+- T-4762 11-18: async run lock, .late commit; landcheck green. Open: review, land.
 {% endraw %}
 
 

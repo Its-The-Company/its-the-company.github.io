@@ -1,11 +1,26 @@
 {
  "schema": 1,
- "at": "2026-11-18T15:19:00.113658+00:00",
+ "at": "2026-11-18T15:23:52.481087+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-18T08:00:22-05:00",
   "flow": [
+   {
+    "t": "T-4575",
+    "name": "Stop an edit from rewriting a pasted Shortcut link",
+    "acct": "Personal b",
+    "steps": [
+     {
+      "s": "testq",
+      "at": 1795014350
+     },
+     {
+      "s": "macbook",
+      "at": 1795015345
+     }
+    ]
+   },
    {
     "t": "T-4748",
     "name": "Make the widget font check ignore lookalike letters",
@@ -64,17 +79,30 @@
      {
       "s": "macbook",
       "at": 1795011775
+     },
+     {
+      "s": "testq",
+      "at": 1795015423
      }
     ]
    },
    {
-    "t": "T-4575",
-    "name": "Stop an edit from rewriting a pasted Shortcut link",
-    "acct": "Personal b",
+    "t": "T-3745",
+    "w": "Idris",
     "steps": [
      {
       "s": "testq",
-      "at": 1795014350
+      "at": 1795008352
+     }
+    ]
+   },
+   {
+    "t": "T-4892",
+    "w": "Idris",
+    "steps": [
+     {
+      "s": "testq",
+      "at": 1795006953
      }
     ]
    },
@@ -253,9 +281,9 @@
  "next_tick": null,
  "personal": {
   "week_pct": 49.77,
-  "usage_pct": 52.0,
-  "work_pct": 81.9,
-  "read_at": "2026-11-18T15:19:00+00:00",
+  "usage_pct": 51.3,
+  "work_pct": 81.5,
+  "read_at": "2026-11-18T15:26:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -292,7 +320,7 @@
  "lock_in": {
   "on": false,
   "pool": 12,
-  "at": "2026-11-18T10:19:00-05:00",
+  "at": "2026-11-18T10:26:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -524,75 +552,75 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-18T15:18:52Z",
+  "at": "2026-11-18T15:23:52Z",
   "s": {
-   "T-4575": [
+   "T-4533": [
     "merging",
     "Host checks on the Mac mini",
-    1795014352971
-   ],
-   "T-4533": [
-    "mergeq",
-    "1st to merge",
-    1794988132971
+    1795015432481
    ],
    "T-4574": [
     "mergeq",
-    "3rd to merge",
-    1794992512971
+    "2nd to merge",
+    1794992512481
    ],
    "T-4762": [
     "mergeq",
-    "4th to merge",
-    1795012312971
+    "3rd to merge",
+    1795012312481
    ],
    "T-4748": [
     "mergeq",
-    "6th to merge",
-    1795002352971
+    "5th to merge",
+    1795002352481
+   ],
+   "T-4575": [
+    "mergetest",
+    "Xcode checks on the MacBook, 6th to merge",
+    1795015372481
    ],
    "T-4640": [
-    "mergeq",
-    "7th to merge",
-    1795004332971
+    "mergetest",
+    "Xcode checks on the MacBook, 7th to merge",
+    1795015432481
    ],
    "T-4789": [
     "mergeq",
     "8th to merge",
-    1795005952971
+    1795005952481
    ],
    "T-4635": [
     "mergeq",
     "9th to merge",
-    1795006372971
+    1795006372481
    ],
    "T-4581": [
     "mergeq",
     "12th to merge",
-    1795007092971
+    1795007092481
    ],
    "T-4889": [
     "mergeq",
     "17th to merge",
-    1795010092971
+    1795010092481
    ],
    "T-4835": [
     "mergeq",
     "18th to merge",
-    1795014952971
+    1795011712481
    ],
    "T-4679": [
     "mergeq",
-    "18th to merge",
-    1795014952971
+    "19th to merge",
+    1795014952481
    ]
   },
   "nm": {
-   "T-4575": "Stop an edit from rewriting a pasted Shortcut link",
    "T-4533": "Make the premade settings save sturdier on disk errors",
    "T-4574": "Keep the launcher's app queries out of shipped builds",
    "T-4762": "Let the run lock wrap a Python run",
    "T-4748": "Make the widget font check ignore lookalike letters",
+   "T-4575": "Stop an edit from rewriting a pasted Shortcut link",
    "T-4640": "Drop a location fix that arrives too late",
    "T-4789": "Check finished work before it ships",
    "T-4635": "Clear the Settings restore line once Pro is bought",
@@ -602,11 +630,11 @@
    "T-4679": "Make the unit tests pass in a launcher build"
   },
   "wk": {
-   "T-4575": "Idris",
    "T-4533": "Pernille",
    "T-4574": "Idris",
    "T-4762": "Idris",
    "T-4748": "Idris",
+   "T-4575": "Idris",
    "T-4640": "Idris",
    "T-4789": "Pernille",
    "T-4635": "Idris",
@@ -624,11 +652,11 @@
   }
  },
  "ln": {
-  "at": "2026-11-18T15:18:52Z",
+  "at": "2026-11-18T15:23:52Z",
   "mq": {
    "n": {
-    "checking": 1,
-    "inline": 11,
+    "checking": 3,
+    "inline": 9,
     "conflicted": 5,
     "failed": 0,
     "held": 1,
@@ -636,22 +664,38 @@
     "parked": 9
    },
    "m": {
-    "checking": 13,
-    "inline": 146,
-    "conflicted": 726,
+    "checking": 0,
+    "inline": 139,
+    "conflicted": 731,
     "failed": null,
-    "held": 2389,
+    "held": 2394,
     "retry": null,
-    "parked": 1035
+    "parked": 1040
    },
    "cur": [
     [
      [
-      "T-4575"
+      "T-4533"
      ],
      "Mac tests",
      "Mac mini",
-     13
+     0
+    ],
+    [
+     [
+      "T-4575"
+     ],
+     "iPhone app tests, sent and waiting its turn",
+     "MacBook",
+     1
+    ],
+    [
+     [
+      "T-4640"
+     ],
+     "iPhone app tests, sent and waiting its turn",
+     "MacBook",
+     0
     ]
    ],
    "ld": [
@@ -661,12 +705,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-18T15:18:53Z",
-    "ld": 0.71,
+    "at": "2026-11-18T15:23:53Z",
+    "ld": 0.74,
     "c": 8,
     "sb": 1,
     "dk": [
-     16.6,
+     16.5,
      228.3
     ],
     "ss": [
@@ -722,10 +766,10 @@
   "main": 0,
   "lanes": 0,
   "total": 0,
-  "at": "10:19 AM",
-  "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
-  "at_iso": "2026-11-18T15:19:00+00:00",
-  "started": "8:00 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0, started 8:00 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 10:19 AM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
+  "at": "10:26 AM",
+  "why": "Between sessions: no session is running. Last check 8:00 AM ET.",
+  "at_iso": "2026-11-18T15:26:00+00:00",
+  "started": "",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 10:26 AM ET</p><p class=\"an-why\">Between sessions: no session is running. Last check 8:00 AM ET.</p></section>"
  }
 }

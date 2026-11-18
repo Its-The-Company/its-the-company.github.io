@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-18T02:03:13.269212+00:00",
+ "at": "2026-11-18T02:06:13.823955+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -146,7 +146,7 @@
    "task": "[tools] T-4806 fix merge time-outs",
    "model": "opus",
    "started": "2026-11-18T01:18:02.621Z",
-   "seconds": 2710,
+   "seconds": 2891,
    "finished": null,
    "effort": "high"
   },
@@ -155,7 +155,7 @@
    "task": "[test] T-4807 fix bad tests that failed merges",
    "model": "opus",
    "started": "2026-11-18T01:44:52.149Z",
-   "seconds": 1101,
+   "seconds": 1281,
    "finished": null,
    "effort": "high"
   }
@@ -247,7 +247,7 @@
   "week_pct": 43.81,
   "usage_pct": 53.5,
   "work_pct": 81.2,
-  "read_at": "2026-11-18T02:03:00+00:00",
+  "read_at": "2026-11-18T02:06:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -268,7 +268,7 @@
   }
  ],
  "disk": {
-  "free_gb": 19,
+  "free_gb": 20,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -277,14 +277,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-17T20:59:00-05:00",
+   "at": "2026-11-17T21:06:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 7,
-  "at": "2026-11-17T21:03:00-05:00",
+  "at": "2026-11-17T21:06:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -539,87 +539,87 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-18T02:02:55Z",
+  "at": "2026-11-18T02:06:05Z",
   "s": {
    "T-4761": [
     "mergetest",
     "Xcode checks on the MacBook, 1st to merge",
-    1794966895298
+    1794966905735
    ],
    "T-4659": [
     "mergetest",
     "Xcode checks on the MacBook, 2nd to merge",
-    1794966895298
+    1794966905735
    ],
    "T-4643": [
     "mergeq",
     "3rd to merge",
-    1794961615298
+    1794961625735
    ],
    "T-4697": [
     "mergeq",
     "4th to merge",
-    1794961675298
+    1794961685735
    ],
    "T-4698": [
     "mergeq",
     "5th to merge",
-    1794961735298
+    1794961745735
    ],
    "T-4699": [
     "mergeq",
     "6th to merge",
-    1794961795298
+    1794961805735
    ],
    "T-4782": [
     "mergeq",
     "8th to merge",
-    1794962215298
+    1794962165735
    ],
    "T-4787": [
     "mergeq",
     "10th to merge",
-    1794962635298
+    1794962645735
    ],
    "T-4719": [
     "mergeq",
     "11th to merge",
-    1794963115298
+    1794963125735
    ],
    "T-4720": [
     "mergeq",
     "11th to merge",
-    1794963115298
+    1794963125735
    ],
    "T-4750": [
     "mergeq",
     "12th to merge",
-    1794963175298
+    1794963185735
    ],
    "T-4781": [
     "mergeq",
     "13th to merge",
-    1794964675298
+    1794964685735
    ],
    "T-4770": [
     "mergeq",
     "13th to merge",
-    1794964675298
+    1794964685735
    ],
    "T-4774": [
     "mergeq",
     "13th to merge",
-    1794964675298
+    1794964685735
+   ],
+   "T-4806": [
+    "merging",
+    "Mac tests at the main gate",
+    1794967565735
    ],
    "T-4807": [
     "testing",
     "its own tests, in its copy",
-    1794966835298
-   ],
-   "T-4806": [
-    "testing",
-    "its own tests, in its copy",
-    1794967135298
+    1794966845735
    ]
   },
   "nm": {
@@ -637,8 +637,8 @@
    "T-4781": "Retest a fixed red on what failed, not every test",
    "T-4770": "Re-estimate the release date from measured build speed",
    "T-4774": "Measure what one refresh tap costs the app",
-   "T-4807": "Fix every bad test that failed a merge",
-   "T-4806": "Fix the causes of merge time-outs and runner errors"
+   "T-4806": "Fix the causes of merge time-outs and runner errors",
+   "T-4807": "Fix every bad test that failed a merge"
   },
   "wk": {
    "T-4761": "Idris",
@@ -655,14 +655,14 @@
    "T-4781": "Odalys",
    "T-4770": "Ines",
    "T-4774": "Idris",
-   "T-4807": "Pernille",
    "T-4806": "Odalys",
+   "T-4807": "Pernille",
    "T-0191": "Idris",
    "T-2268": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-18T02:02:55Z",
+  "at": "2026-11-18T02:06:05Z",
   "mq": {
    "n": {
     "checking": 2,
@@ -674,13 +674,13 @@
     "parked": 6
    },
    "m": {
-    "checking": 8,
-    "inline": 75,
-    "conflicted": 788,
+    "checking": 11,
+    "inline": 78,
+    "conflicted": 791,
     "failed": null,
-    "held": 1593,
+    "held": 1597,
     "retry": null,
-    "parked": 543
+    "parked": 546
    },
    "cur": [
     [
@@ -689,7 +689,7 @@
      ],
      "iPhone app tests, sent and waiting its turn",
      "MacBook",
-     8
+     11
     ],
     [
      [
@@ -697,7 +697,7 @@
      ],
      "iPhone app tests, sent and waiting its turn",
      "MacBook",
-     8
+     11
     ]
    ],
    "ld": [
@@ -707,12 +707,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-18T02:02:07Z",
-    "ld": 4.57,
+    "at": "2026-11-18T02:05:40Z",
+    "ld": 3.91,
     "c": 8,
     "sb": 0,
     "dk": [
-     20.6,
+     20.0,
      228.3
     ],
     "ss": [
@@ -722,12 +722,12 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-18T01:54:25Z",
-    "ld": 0.35,
+    "at": "2026-11-18T02:04:08Z",
+    "ld": 0.87,
     "c": 12,
     "sb": 0,
     "dk": [
-     312.3,
+     312.2,
      926.4
     ],
     "sn": []
@@ -767,10 +767,10 @@
   "main": 2,
   "lanes": 0,
   "total": 2,
-  "at": "9:03 PM",
+  "at": "9:06 PM",
   "why": "",
-  "at_iso": "2026-11-18T02:03:00+00:00",
+  "at_iso": "2026-11-18T02:06:00+00:00",
   "started": "7:10 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 7:10 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:03 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 7:10 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:06 PM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-18T06:00:04.702124+00:00",
+ "at": "2026-11-18T06:03:09.930421+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -127,7 +127,7 @@
    "task": "[build] T-4688 Developer mode for Pro",
    "model": "opus",
    "started": "2026-11-18T05:56:56.560Z",
-   "seconds": 188,
+   "seconds": 373,
    "finished": null,
    "effort": "high"
   },
@@ -136,7 +136,7 @@
    "task": "[build] T-4564 button action run path",
    "model": "opus",
    "started": "2026-11-18T05:57:37.954Z",
-   "seconds": 146,
+   "seconds": 331,
    "finished": null,
    "effort": "high"
   }
@@ -195,7 +195,7 @@
   "week_pct": 46.38,
   "usage_pct": 53.1,
   "work_pct": 80.8,
-  "read_at": "2026-11-18T06:00:00+00:00",
+  "read_at": "2026-11-18T06:03:00+00:00",
   "running": [
    {
     "lane": "b2",
@@ -219,6 +219,7 @@
     "e": "high",
     "at": "2026-11-18T00:57:29-05:00",
     "n": "Jeremy",
+    "d": 1,
     "src": "plan-b"
    }
   ]
@@ -257,7 +258,7 @@
  "lock_in": {
   "on": false,
   "pool": 9,
-  "at": "2026-11-18T01:00:00-05:00",
+  "at": "2026-11-18T01:03:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -487,47 +488,52 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-18T06:00:04Z",
+  "at": "2026-11-18T06:02:55Z",
   "s": {
    "T-4442": [
     "merging",
     "Host checks on the Mac mini",
-    1794980944702
+    1794980935097
    ],
    "T-4700": [
     "mergeq",
     "1st to merge",
-    1794974884702
+    1794974935097
    ],
    "T-4796": [
     "mergetest",
     "Xcode checks on the MacBook, 2nd to merge",
-    1794980884702
+    1794980875097
    ],
    "T-4516": [
     "mergeq",
     "3rd to merge",
-    1794977584702
+    1794977575097
    ],
    "T-0011": [
     "mergeq",
     "4th to merge",
-    1794977524702
+    1794977515097
    ],
    "T-4787": [
     "mergeq",
     "5th to merge",
-    1794978484702
+    1794978475097
    ],
    "T-4803": [
     "mergeq",
     "5th to merge",
-    1794978484702
+    1794978475097
    ],
    "T-4806": [
     "merging",
     "Mac tests at the main gate",
-    1794981004702
+    1794980995097
+   ],
+   "T-4564": [
+    "testing",
+    "its own tests, in its copy",
+    1794981715097
    ]
   },
   "nm": {
@@ -538,7 +544,8 @@
    "T-0011": "Check motion, health and battery sensors on a device",
    "T-4787": "Count failed merges by cause: bad test or broken code",
    "T-4803": "Make the tap check's record match the iPad ruling",
-   "T-4806": "Fix the causes of merge time-outs and runner errors"
+   "T-4806": "Fix the causes of merge time-outs and runner errors",
+   "T-4564": "Run a button's action and redraw in one run"
   },
   "wk": {
    "T-4442": "Idris",
@@ -548,11 +555,12 @@
    "T-0011": "Idris",
    "T-4787": "Odalys",
    "T-4803": "Idris",
-   "T-4806": "Odalys"
+   "T-4806": "Odalys",
+   "T-4564": "Pernille"
   }
  },
  "ln": {
-  "at": "2026-11-18T06:00:04Z",
+  "at": "2026-11-18T06:02:55Z",
   "mq": {
    "n": {
     "checking": 2,
@@ -564,13 +572,13 @@
     "parked": 9
    },
    "m": {
-    "checking": 11,
-    "inline": 67,
-    "conflicted": 476,
+    "checking": 14,
+    "inline": 70,
+    "conflicted": 479,
     "failed": null,
-    "held": 1831,
-    "retry": 111,
-    "parked": 476
+    "held": 1833,
+    "retry": 114,
+    "parked": 479
    },
    "cur": [
     [
@@ -579,7 +587,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     11
+     14
     ],
     [
      [
@@ -587,7 +595,7 @@
      ],
      "iPhone app tests, sent and waiting its turn",
      "MacBook",
-     12
+     15
     ]
    ],
    "ld": [
@@ -597,12 +605,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-18T05:59:41Z",
-    "ld": 4.45,
+    "at": "2026-11-18T06:02:31Z",
+    "ld": 3.94,
     "c": 8,
     "sb": 3,
     "dk": [
-     29.9,
+     33.3,
      228.3
     ],
     "ss": [
@@ -667,10 +675,10 @@
   "main": 2,
   "lanes": 1,
   "total": 3,
-  "at": "1:00 AM",
+  "at": "1:03 AM",
   "why": "",
-  "at_iso": "2026-11-18T06:00:00+00:00",
+  "at_iso": "2026-11-18T06:03:00+00:00",
   "started": "12:47 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 12:47 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 1:00 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 12:47 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 1:03 AM ET</p></section>"
  }
 }

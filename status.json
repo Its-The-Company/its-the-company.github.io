@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-18T07:56:45.319982+00:00",
+ "at": "2026-11-18T07:59:48.520250+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -124,7 +124,7 @@
    "task": "[build] T-4688 Developer mode for Pro",
    "model": "opus",
    "started": "2026-11-18T05:56:56.560Z",
-   "seconds": 7188,
+   "seconds": 7371,
    "finished": null,
    "effort": "high"
   },
@@ -133,7 +133,7 @@
    "task": "[build] T-4860 any handler exception as user error",
    "model": "opus",
    "started": "2026-11-18T07:40:38.788Z",
-   "seconds": 966,
+   "seconds": 1149,
    "finished": null,
    "effort": "high"
   }
@@ -168,7 +168,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 487,
+  "runnable_count": 488,
   "blocked_count": 35
  },
  "meter": {
@@ -217,7 +217,7 @@
   "week_pct": 46.38,
   "usage_pct": 53.1,
   "work_pct": 80.8,
-  "read_at": "2026-11-18T07:56:00+00:00",
+  "read_at": "2026-11-18T07:59:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -303,6 +303,7 @@
     "e": "medium",
     "at": "2026-11-18T02:18:53-05:00",
     "n": "Jeremy",
+    "d": 1,
     "src": "plan-b"
    },
    {
@@ -367,7 +368,7 @@
  "lock_in": {
   "on": false,
   "pool": 11,
-  "at": "2026-11-18T02:56:00-05:00",
+  "at": "2026-11-18T02:59:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -548,7 +549,7 @@
    }
   ],
   "count": {
-   "next": 487,
+   "next": 488,
    "wait": 32,
    "blocked": 3,
    "you": 10
@@ -614,42 +615,37 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-18T07:56:45Z",
+  "at": "2026-11-18T07:59:48Z",
   "s": {
    "T-4533": [
     "merging",
     "Host checks on the Mac mini",
-    1794988125319
+    1794988128520
    ],
    "T-4644": [
     "mergeq",
     "1st to merge",
-    1794988605319
+    1794988608520
    ],
    "T-4860": [
     "merging",
-    "Mac tests at the main gate",
-    1794988365319
+    "Mac tests at the main gate \u00b7 11 groups of tests done",
+    1794988368520
    ],
    "T-4688": [
     "merging",
     "Mac tests at the main gate",
-    1794988545319
+    1794988548520
    ],
-   "T-4574": [
+   "T-4771": [
     "testing",
     "Mac Mini \u00b7 test",
     null
    ],
-   "T-4771": [
-    "testq",
-    "1st for a Simulator",
-    1794988305319
-   ],
    "T-4783": [
-    "testq",
-    "1st for a Simulator",
-    1794988305319
+    "testing",
+    "Mac Mini \u00b7 test",
+    null
    ],
    "T-4301": [
     "merged",
@@ -663,7 +659,6 @@
    "T-4644": "Check the ladder's files in the gate build's own tests",
    "T-4860": "Treat any exception a button handler raises as the script's",
    "T-4688": "Build a Developer mode for testing Pro",
-   "T-4574": "Keep the launcher's app queries out of shipped builds",
    "T-4771": "Gutter marks redraw quickly and stay right while typing",
    "T-4783": "Keep the gutter mark on its line after an edit",
    "T-4301": "Read fresh Pro gates after a queued wait"
@@ -673,7 +668,6 @@
    "T-4644": "Idris",
    "T-4860": "Pernille",
    "T-4688": "Idris",
-   "T-4574": "Idris",
    "T-4771": "Idris",
    "T-4783": "Idris",
    "T-4301": "Idris",
@@ -684,7 +678,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-18T07:56:45Z",
+  "at": "2026-11-18T07:59:48Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -696,13 +690,13 @@
     "parked": 9
    },
    "m": {
-    "checking": 8,
-    "inline": 0,
-    "conflicted": 593,
+    "checking": 11,
+    "inline": 3,
+    "conflicted": 596,
     "failed": null,
-    "held": 1947,
-    "retry": 5,
-    "parked": 593
+    "held": 1950,
+    "retry": 8,
+    "parked": 596
    },
    "cur": [
     [
@@ -711,7 +705,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     8
+     11
     ]
    ],
    "ld": [
@@ -721,12 +715,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-18T07:56:21Z",
-    "ld": 2.75,
+    "at": "2026-11-18T07:59:19Z",
+    "ld": 1.92,
     "c": 8,
     "sb": 2,
     "dk": [
-     11.5,
+     14.2,
      228.3
     ],
     "ss": [
@@ -781,15 +775,6 @@
   },
   {
    "w": "Operator",
-   "a": "Evan's Account",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session",
-   "at": "2026-11-18T02:17:55-05:00"
-  },
-  {
-   "w": "Operator",
    "a": "Jeremy's Account",
    "sr": 1,
    "m": "opus",
@@ -836,10 +821,10 @@
   "main": 2,
   "lanes": 6,
   "total": 8,
-  "at": "2:56 AM",
+  "at": "2:59 AM",
   "why": "",
-  "at_iso": "2026-11-18T07:56:00+00:00",
+  "at_iso": "2026-11-18T07:59:00+00:00",
   "started": "12:47 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>8</b> agents running now</p><p class=\"an-sub\">Main session 2, started 12:47 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 6 sessions \u00b7 as of 2:56 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>8</b> agents running now</p><p class=\"an-sub\">Main session 2, started 12:47 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 6 sessions \u00b7 as of 2:59 AM ET</p></section>"
  }
 }

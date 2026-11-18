@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-18T22:43:21.530107+00:00",
+ "at": "2026-11-18T22:46:22.268502+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -157,7 +157,7 @@
    "task": "[tools] T-4917 gate counts own copied files",
    "model": "opus",
    "started": "2026-11-18T22:35:16.121Z",
-   "seconds": 485,
+   "seconds": 666,
    "finished": null,
    "effort": "high"
   },
@@ -166,26 +166,26 @@
    "task": "[build] T-4784 land kept app copies",
    "model": "opus",
    "started": "2026-11-18T22:35:28.268Z",
-   "seconds": 473,
+   "seconds": 654,
    "finished": null,
    "effort": "high"
-  },
+  }
+ ],
+ "who": "Odalys, Idris",
+ "recent": [
   {
    "name": "odalys",
    "task": "[tools] T-4913 guard refusals review",
    "model": "opus",
    "started": "2026-11-18T22:35:42.123Z",
-   "seconds": 459,
-   "finished": null,
-   "effort": "high"
+   "seconds": null,
+   "finished": "2026-11-18T22:45:17.504000+00:00"
   }
  ],
- "who": "Odalys x2, Idris",
- "recent": [],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 519,
+  "runnable_count": 525,
   "blocked_count": 34
  },
  "meter": {
@@ -234,7 +234,7 @@
   "week_pct": 52.29,
   "usage_pct": 50.1,
   "work_pct": 81.6,
-  "read_at": "2026-11-18T22:43:00+00:00",
+  "read_at": "2026-11-18T22:46:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -255,7 +255,7 @@
   }
  ],
  "disk": {
-  "free_gb": 15,
+  "free_gb": 13,
   "gate": "closed",
   "ssd": {
    "mounted": true,
@@ -264,14 +264,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions wait until 20 GB is free.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-18T17:39:00-05:00",
+   "at": "2026-11-18T17:45:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-18T17:43:00-05:00",
+  "at": "2026-11-18T17:46:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -359,16 +359,6 @@
     "at": "2026-11-18T22:35:28.268Z",
     "o": "c",
     "task": "T-4784"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Stop the safety guard refusing safe work",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-18T22:35:42.123Z",
-    "o": "c",
-    "task": "T-4913"
    }
   ],
   "src": "plan",
@@ -462,7 +452,7 @@
    }
   ],
   "count": {
-   "next": 519,
+   "next": 525,
    "wait": 32,
    "blocked": 2,
    "you": 9
@@ -511,12 +501,12 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-18T22:43:04Z",
+  "at": "2026-11-18T22:46:14Z",
   "s": {
    "T-4917": [
-    "testing",
-    "its own tests, in its copy",
-    1795041484625
+    "merging",
+    "Mac tests at the main gate",
+    1795041974943
    ]
   },
   "nm": {
@@ -527,7 +517,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-18T22:43:04Z",
+  "at": "2026-11-18T22:46:14Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -541,11 +531,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 668,
+    "conflicted": 672,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1145
+    "parked": 1149
    },
    "cur": [],
    "ld": [
@@ -555,12 +545,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-18T22:42:19Z",
-    "ld": 1.47,
+    "at": "2026-11-18T22:46:12Z",
+    "ld": 0.97,
     "c": 8,
     "sb": 0,
     "dk": [
-     11.1,
+     12.8,
      228.3
     ],
     "ss": [
@@ -589,7 +579,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 8 tasks",
+   "t": "Work session \u2013 7 tasks",
    "at": "2026-11-18T17:34:07-05:00"
   }
  ],
@@ -609,13 +599,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 3,
+  "main": 2,
   "lanes": 0,
-  "total": 3,
-  "at": "5:43 PM",
+  "total": 2,
+  "at": "5:46 PM",
   "why": "",
-  "at_iso": "2026-11-18T22:43:00+00:00",
+  "at_iso": "2026-11-18T22:46:00+00:00",
   "started": "5:34 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 5:34 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 5:43 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 5:34 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 5:46 PM ET</p></section>"
  }
 }

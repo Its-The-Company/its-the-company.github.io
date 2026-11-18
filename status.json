@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-18T19:52:41.812116+00:00",
+ "at": "2026-11-18T19:55:46.679121+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -137,7 +137,7 @@
    "task": "[tools] T-4907 keep main green after every land",
    "model": "opus",
    "started": "2026-11-18T19:11:56.141Z",
-   "seconds": 2445,
+   "seconds": 2630,
    "finished": null,
    "effort": "high"
   },
@@ -146,7 +146,7 @@
    "task": "[tools] T-4902 Investor P0 process lines past limit",
    "model": "opus",
    "started": "2026-11-18T19:12:07.311Z",
-   "seconds": 2434,
+   "seconds": 2619,
    "finished": null,
    "effort": "high"
   },
@@ -155,7 +155,7 @@
    "task": "[build] T-4773 time next run from widget ask",
    "model": "opus",
    "started": "2026-11-18T19:52:27.248Z",
-   "seconds": 14,
+   "seconds": 199,
    "finished": null,
    "effort": "high"
   }
@@ -223,7 +223,7 @@
   "week_pct": 51.56,
   "usage_pct": 51.3,
   "work_pct": 81.5,
-  "read_at": "2026-11-18T19:52:00+00:00",
+  "read_at": "2026-11-18T19:55:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -260,7 +260,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-18T14:52:00-05:00",
+  "at": "2026-11-18T14:55:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -500,30 +500,30 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-18T19:52:35Z",
+  "at": "2026-11-18T19:55:26Z",
   "s": {
+   "T-4907": [
+    "merging",
+    "Mac tests at the main gate",
+    1795031666852
+   ],
    "T-4902": [
     "testing",
     "its own tests, in its copy",
-    1795029695464
-   ],
-   "T-4907": [
-    "testing",
-    "its own tests, in its copy",
-    1795029995464
+    1795031666852
    ]
   },
   "nm": {
-   "T-4902": "Let Investor-asked P0 process lines start past the limit",
-   "T-4907": "Keep main green after every land"
+   "T-4907": "Keep main green after every land",
+   "T-4902": "Let Investor-asked P0 process lines start past the limit"
   },
   "wk": {
-   "T-4902": "Odalys",
-   "T-4907": "Odalys"
+   "T-4907": "Odalys",
+   "T-4902": "Odalys"
   }
  },
  "ln": {
-  "at": "2026-11-18T19:52:35Z",
+  "at": "2026-11-18T19:55:26Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -537,11 +537,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 498,
+    "conflicted": 501,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1062
+    "parked": 1065
    },
    "cur": [],
    "ld": [
@@ -551,21 +551,19 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-18T19:51:46Z",
-    "ld": 2.11,
+    "at": "2026-11-18T19:55:31Z",
+    "ld": 4.44,
     "c": 8,
-    "sb": 1,
+    "sb": 0,
     "dk": [
-     14.6,
+     13.4,
      228.3
     ],
     "ss": [
      165.1,
      953.7
     ],
-    "sn": [
-     "pywidget-t0678-ios26"
-    ]
+    "sn": []
    },
    "macbook": {
     "at": "2026-11-18T19:48:18Z",
@@ -610,10 +608,10 @@
   "main": 3,
   "lanes": 0,
   "total": 3,
-  "at": "2:52 PM",
+  "at": "2:55 PM",
   "why": "",
-  "at_iso": "2026-11-18T19:52:00+00:00",
+  "at_iso": "2026-11-18T19:55:00+00:00",
   "started": "2:09 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 2:09 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 2:52 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 2:09 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 2:55 PM ET</p></section>"
  }
 }

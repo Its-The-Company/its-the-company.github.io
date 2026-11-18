@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-18T11:37:38.351580+00:00",
+ "at": "2026-11-18T11:40:41.394786+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -124,7 +124,7 @@
    "task": "[design] T-4886 PyWidget in premade lines",
    "model": "sonnet",
    "started": "2026-11-18T11:02:42.183Z",
-   "seconds": 2096,
+   "seconds": 2279,
    "finished": null
   },
   {
@@ -132,7 +132,7 @@
    "task": "[test] T-4887 gated second-tap caret test",
    "model": "opus",
    "started": "2026-11-18T11:14:20.521Z",
-   "seconds": 1397,
+   "seconds": 1580,
    "finished": null
   },
   {
@@ -140,7 +140,7 @@
    "task": "[build] T-4645 settings check matches Swift decoder",
    "model": "sonnet",
    "started": "2026-11-18T11:27:20.238Z",
-   "seconds": 618,
+   "seconds": 801,
    "finished": null
   }
  ],
@@ -231,8 +231,45 @@
   "week_pct": 50.16,
   "usage_pct": 53.3,
   "work_pct": 82.4,
-  "read_at": "2026-11-18T11:37:00+00:00",
-  "running": []
+  "read_at": "2026-11-18T11:40:00+00:00",
+  "running": [
+   {
+    "lane": "a2",
+    "task": "T-4748",
+    "w": "Idris",
+    "k": "fix",
+    "t": "Make the widget font check ignore lookalike letters",
+    "m": "sonnet",
+    "e": "high",
+    "at": "2026-11-18T06:38:23-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a2",
+    "task": "T-4640",
+    "w": "Idris",
+    "k": "fix",
+    "t": "Drop a location fix that arrives too late",
+    "m": "sonnet",
+    "e": "medium",
+    "at": "2026-11-18T06:38:23-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a2",
+    "task": "T-4581",
+    "w": "Idris",
+    "k": "build",
+    "t": "Test a real widget tap in iPad windows",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-18T06:38:23-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   }
+  ]
  },
  "api_credits": [
   {
@@ -268,7 +305,7 @@
  "lock_in": {
   "on": false,
   "pool": 12,
-  "at": "2026-11-18T06:37:00-05:00",
+  "at": "2026-11-18T06:40:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -528,47 +565,67 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-18T11:37:26Z",
+  "at": "2026-11-18T11:40:16Z",
   "s": {
+   "T-0011": [
+    "mergeq",
+    "1st to merge",
+    1795001896901
+   ],
    "T-4533": [
     "mergetest",
-    "Xcode checks on the MacBook, 1st to merge",
-    1795001546431
+    "Xcode checks on the MacBook, 2nd to merge",
+    1795001536901
    ],
    "T-4301": [
     "mergeq",
-    "2nd to merge",
-    1794991106431
+    "3rd to merge",
+    1794991096901
    ],
    "T-4644": [
     "mergeq",
-    "2nd to merge",
-    1794991106431
+    "3rd to merge",
+    1794991096901
    ],
    "T-4574": [
     "mergeq",
-    "4th to merge",
-    1794992486431
+    "5th to merge",
+    1794992536901
    ],
    "T-4762": [
     "mergeq",
-    "5th to merge",
-    1794994706431
+    "6th to merge",
+    1794994696901
    ],
    "T-4886": [
     "merging",
     "Mac tests at the main gate \u00b7 9 groups of tests done",
-    1795001546431
+    1795001536901
    ],
    "T-4645": [
     "merging",
     "Mac tests at the main gate \u00b7 6 groups of tests done",
-    1795001486431
+    1795001476901
    ],
    "T-4887": [
     "merging",
     "Mac tests at the main gate \u00b7 8 groups of tests done",
-    1795001546431
+    1795001536901
+   ],
+   "T-4581": [
+    "testing",
+    "Mac Mini \u00b7 test",
+    null
+   ],
+   "T-4640": [
+    "testing",
+    "Mac Mini \u00b7 test",
+    null
+   ],
+   "T-4748": [
+    "testing",
+    "Mac Mini \u00b7 test",
+    null
    ],
    "T-4663": [
     "testing",
@@ -577,6 +634,7 @@
    ]
   },
   "nm": {
+   "T-0011": "Check motion, health and battery sensors on a device",
    "T-4533": "Make the premade settings save sturdier on disk errors",
    "T-4301": "Read fresh Pro gates after a queued wait",
    "T-4644": "Check the ladder's files in the gate build's own tests",
@@ -585,9 +643,13 @@
    "T-4886": "Write PyWidget right in premade widget lines",
    "T-4645": "Make the settings check refuse what the app cannot read",
    "T-4887": "Put the second-tap caret fix under a gated test",
+   "T-4581": "Test a real widget tap in iPad windows",
+   "T-4640": "Drop a location fix that arrives too late",
+   "T-4748": "Make the widget font check ignore lookalike letters",
    "T-4663": "Completion ignores letter case and small typos"
   },
   "wk": {
+   "T-0011": "Idris",
    "T-4533": "Pernille",
    "T-4301": "Idris",
    "T-4644": "Idris",
@@ -596,6 +658,9 @@
    "T-4886": "Maren",
    "T-4645": "Pernille",
    "T-4887": "Idris",
+   "T-4581": "Idris",
+   "T-4640": "Idris",
+   "T-4748": "Idris",
    "T-4663": "Idris",
    "T-4876": "Pernille",
    "T-4873": "Idris",
@@ -611,11 +676,11 @@
   }
  },
  "ln": {
-  "at": "2026-11-18T11:37:26Z",
+  "at": "2026-11-18T11:40:16Z",
   "mq": {
    "n": {
     "checking": 1,
-    "inline": 4,
+    "inline": 5,
     "conflicted": 5,
     "failed": 0,
     "held": 1,
@@ -623,13 +688,13 @@
     "parked": 9
    },
    "m": {
-    "checking": 5,
-    "inline": 167,
-    "conflicted": 504,
+    "checking": 8,
+    "inline": 158,
+    "conflicted": 507,
     "failed": null,
-    "held": 2168,
+    "held": 2171,
     "retry": null,
-    "parked": 814
+    "parked": 816
    },
    "cur": [
     [
@@ -638,7 +703,7 @@
      ],
      "iPhone app tests",
      "MacBook",
-     5
+     8
     ]
    ],
    "ld": [
@@ -648,12 +713,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-18T11:37:26Z",
-    "ld": 2.38,
+    "at": "2026-11-18T11:40:22Z",
+    "ld": 7.8,
     "c": 8,
-    "sb": 1,
+    "sb": 2,
     "dk": [
-     20.5,
+     19.7,
      228.3
     ],
     "ss": [
@@ -661,7 +726,8 @@
      953.7
     ],
     "sn": [
-     "t4772-27"
+     "t4772-27",
+     "iPhone 17e"
     ]
    },
    "macbook": {
@@ -686,6 +752,15 @@
    "e": "high",
    "t": "Work session \u2013 16 tasks",
    "at": "2026-11-18T06:24:03-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Evan's Account",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session \u2013 3 tasks",
+   "at": "2026-11-18T06:38:23-05:00"
   }
  ],
  "reply": {
@@ -708,12 +783,12 @@
  ],
  "agents_now": {
   "main": 3,
-  "lanes": 0,
-  "total": 3,
-  "at": "6:37 AM",
+  "lanes": 1,
+  "total": 4,
+  "at": "6:40 AM",
   "why": "",
-  "at_iso": "2026-11-18T11:37:00+00:00",
+  "at_iso": "2026-11-18T11:40:00+00:00",
   "started": "4:07 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 4:07 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 6:37 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 3, started 4:07 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 6:40 AM ET</p></section>"
  }
 }

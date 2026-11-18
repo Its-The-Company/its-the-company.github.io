@@ -1,19 +1,30 @@
 {
  "schema": 1,
- "at": "2026-11-18T04:35:22.592246+00:00",
+ "at": "2026-11-18T04:39:01.543939+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-17T22:22:45-05:00",
   "flow": [
    {
-    "t": "T-4516",
-    "name": "Prove the premade settings routes in a UI test",
-    "acct": "Personal a",
+    "t": "T-4796",
+    "name": "Say which premades carry the Pro tag",
+    "acct": "Personal b",
     "steps": [
      {
       "s": "testq",
-      "at": 1794975036
+      "at": 1794976624
+     }
+    ]
+   },
+   {
+    "t": "T-4803",
+    "name": "Make the tap check's record match the iPad ruling",
+    "acct": "Personal b",
+    "steps": [
+     {
+      "s": "testq",
+      "at": 1794976624
      }
     ]
    },
@@ -29,6 +40,15 @@
    }
   ],
   "done": [
+   {
+    "t": "T-4516",
+    "name": "Prove the premade settings routes in a UI test",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "failed",
+    "end_at": 1794976608,
+    "why": "tests failed"
+   },
    {
     "t": "T-4700",
     "name": "Check finished work before it ships",
@@ -103,18 +123,10 @@
     "steps": [],
     "end": "landed",
     "end_at": 1794970696
-   },
-   {
-    "t": "T-4659",
-    "name": "Prove a widget button's tap reaches its Python handler",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794970678
    }
   ],
   "landed": 44,
-  "failed": 7
+  "failed": 8
  },
  "workers": [
   {
@@ -122,7 +134,7 @@
    "task": "[tools] T-4829 bottleneck watch on tick",
    "model": "opus",
    "started": "2026-11-18T03:44:30.048Z",
-   "seconds": 3052,
+   "seconds": 3271,
    "finished": null,
    "effort": "high"
   }
@@ -149,7 +161,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 475,
+  "runnable_count": 477,
   "blocked_count": 34
  },
  "meter": {
@@ -198,7 +210,7 @@
   "week_pct": 46.38,
   "usage_pct": 53.7,
   "work_pct": 81.3,
-  "read_at": "2026-11-18T04:35:00+00:00",
+  "read_at": "2026-11-18T04:39:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -236,6 +248,18 @@
     "at": "2026-11-17T22:39:46-05:00",
     "n": "Evan",
     "d": 1,
+    "src": "plan-a"
+   },
+   {
+    "lane": "a3",
+    "task": "T-4784",
+    "w": "Idris",
+    "k": "build",
+    "t": "Pin the refresh glyph's button style in a test",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-17T23:36:55-05:00",
+    "n": "Evan",
     "src": "plan-a"
    },
    {
@@ -297,8 +321,8 @@
  },
  "lock_in": {
   "on": false,
-  "pool": 8,
-  "at": "2026-11-17T23:35:00-05:00",
+  "pool": 9,
+  "at": "2026-11-17T23:39:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -468,7 +492,7 @@
    }
   ],
   "count": {
-   "next": 475,
+   "next": 477,
    "wait": 32,
    "blocked": 2,
    "you": 9
@@ -522,107 +546,108 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-18T04:34:51Z",
+  "at": "2026-11-18T04:39:01Z",
   "s": {
-   "T-4516": [
+   "T-4796": [
     "merging",
     "Host checks on the Mac mini",
-    1794975051109
-   ],
-   "T-4796": [
-    "mergeq",
-    "1st to merge",
-    1794975231109
+    1794976681543
    ],
    "T-4803": [
-    "mergeq",
-    "1st to merge",
-    1794975231109
+    "merging",
+    "Host checks on the Mac mini",
+    1794976681543
    ],
    "T-4442": [
     "mergeq",
-    "5th to merge",
-    1794975351109
+    "4th to merge",
+    1794975361543
    ],
    "T-4696": [
     "mergeq",
-    "6th to merge",
-    1794974811109
+    "5th to merge",
+    1794974761543
    ],
    "T-4700": [
     "mergeq",
-    "8th to merge",
-    1794974931109
-   ],
-   "T-0044": [
-    "testing",
-    "Mac Mini \u00b7 test",
-    null
-   ],
-   "T-4772": [
-    "testing",
-    "Mac Mini \u00b7 test",
-    null
+    "7th to merge",
+    1794974881543
    ],
    "T-4829": [
-    "testing",
-    "its own tests, in its copy",
-    1794974691109
+    "merging",
+    "Mac tests at the main gate",
+    1794976681543
+   ],
+   "T-0044": [
+    "testq",
+    "1st for a Simulator",
+    1794976381543
+   ],
+   "T-4784": [
+    "testq",
+    "2nd for a Simulator",
+    1794976741543
    ]
   },
   "nm": {
-   "T-4516": "Prove the premade settings routes in a UI test",
    "T-4796": "Say which premades carry the Pro tag",
    "T-4803": "Make the tap check's record match the iPad ruling",
    "T-4442": "Tidy the bundled first renders' small edges",
    "T-4696": "Check finished work before it ships",
    "T-4700": "Check finished work before it ships",
+   "T-4829": "Run the bottleneck watch on every tick",
    "T-0044": "Test running marketplace Python inside a web view",
-   "T-4772": "Prove a refresh tap redraws the widget",
-   "T-4829": "Run the bottleneck watch on every tick"
+   "T-4784": "Pin the refresh glyph's button style in a test"
   },
   "wk": {
-   "T-4516": "Idris",
    "T-4796": "Ines",
    "T-4803": "Idris",
    "T-4442": "Idris",
    "T-4696": "Pernille",
    "T-4700": "Pernille",
-   "T-0044": "Idris",
-   "T-4772": "Idris",
    "T-4829": "Odalys",
+   "T-0044": "Idris",
+   "T-4784": "Idris",
    "T-4817": "Odalys"
   }
  },
  "ln": {
-  "at": "2026-11-18T04:34:51Z",
+  "at": "2026-11-18T04:39:01Z",
   "mq": {
    "n": {
-    "checking": 1,
-    "inline": 5,
+    "checking": 2,
+    "inline": 3,
     "conflicted": 3,
-    "failed": 0,
+    "failed": 1,
     "held": 1,
     "retry": 1,
-    "parked": 11
+    "parked": 12
    },
    "m": {
-    "checking": 24,
-    "inline": 21,
-    "conflicted": 391,
-    "failed": null,
-    "held": 1745,
-    "retry": 56,
-    "parked": 232
+    "checking": 1,
+    "inline": 31,
+    "conflicted": 395,
+    "failed": 2,
+    "held": 1750,
+    "retry": 60,
+    "parked": 148
    },
    "cur": [
     [
      [
-      "T-4516"
+      "T-4796"
      ],
      "Mac tests",
      "Mac mini",
-     24
+     1
+    ],
+    [
+     [
+      "T-4803"
+     ],
+     "Mac tests",
+     "Mac mini",
+     1
     ]
    ],
    "ld": [
@@ -632,21 +657,20 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-18T04:35:10Z",
-    "ld": 26.08,
+    "at": "2026-11-18T04:38:20Z",
+    "ld": 24.34,
     "c": 8,
-    "sb": 2,
+    "sb": 1,
     "dk": [
-     12.7,
+     12.5,
      228.3
     ],
     "ss": [
-     174.5,
+     173.2,
      953.7
     ],
     "sn": [
-     "t4772-27",
-     "iPhone 17 Pro"
+     "t4772-27"
     ]
    },
    "macbook": {
@@ -692,6 +716,15 @@
   },
   {
    "w": "Operator",
+   "a": "Evan's Account",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session \u2013 1 task",
+   "at": "2026-11-17T23:36:54-05:00"
+  },
+  {
+   "w": "Operator",
    "a": "Jeremy's Account",
    "sr": 1,
    "m": "opus",
@@ -704,12 +737,24 @@
   "sent": "2026-11-18T04:11:11Z",
   "seconds": 70.0
  },
- "inbox": [],
+ "inbox": [
+  {
+   "id": "c6969215601",
+   "state": "received",
+   "position": 1,
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "Is Ines placing each flagged line..."
+  }
+ ],
  "trimmed": [
   "lane_next",
   "queue_text",
   "task_done",
   "fin_short",
+  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -718,12 +763,12 @@
  ],
  "agents_now": {
   "main": 1,
-  "lanes": 3,
-  "total": 4,
-  "at": "11:35 PM",
+  "lanes": 4,
+  "total": 5,
+  "at": "11:39 PM",
   "why": "",
-  "at_iso": "2026-11-18T04:35:00+00:00",
+  "at_iso": "2026-11-18T04:39:00+00:00",
   "started": "10:22 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 1, started 10:22 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 11:35 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 1, started 10:22 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 11:39 PM ET</p></section>"
  }
 }

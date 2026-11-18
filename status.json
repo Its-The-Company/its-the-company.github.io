@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-18T20:29:49.511518+00:00",
+ "at": "2026-11-18T20:32:52.531057+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -137,16 +137,7 @@
    "task": "[tools] T-4907 keep main green after every land",
    "model": "opus",
    "started": "2026-11-18T19:11:56.141Z",
-   "seconds": 4673,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-4902 Investor P0 process lines past limit",
-   "model": "opus",
-   "started": "2026-11-18T19:12:07.311Z",
-   "seconds": 4662,
+   "seconds": 4856,
    "finished": null,
    "effort": "high"
   },
@@ -155,13 +146,30 @@
    "task": "[build] T-4784 pin refresh glyph button style",
    "model": "opus",
    "started": "2026-11-18T20:23:23.859Z",
-   "seconds": 385,
+   "seconds": 568,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "pernille",
+   "task": "[test] T-4807 land browser time-out fix",
+   "model": "opus",
+   "started": "2026-11-18T20:31:35.722Z",
+   "seconds": 76,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Odalys x2, Idris",
+ "who": "Odalys, Idris, Pernille",
  "recent": [
+  {
+   "name": "odalys",
+   "task": "[tools] T-4902 Investor P0 process lines past limit",
+   "model": "opus",
+   "started": "2026-11-18T19:12:07.311Z",
+   "seconds": null,
+   "finished": "2026-11-18T20:31:10.864000+00:00"
+  },
   {
    "name": "idris",
    "task": "[build] T-4773 time next run from widget ask",
@@ -182,24 +190,24 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 493,
+  "runnable_count": 492,
   "blocked_count": 33
  },
  "meter": {
   "five_hour": {
-   "pct": 2.0,
+   "pct": 3.0,
    "resets_at": "2026-11-18T20:10:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-18T15:24:45.850442-05:00",
+   "read_at": "2026-11-18T15:31:21.675630-05:00",
    "source": "live",
-   "left": 98.0,
+   "left": 97.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 50.0,
    "resets_at": "2026-11-22T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-18T15:24:45.850442-05:00",
+   "read_at": "2026-11-18T15:31:21.675630-05:00",
    "source": "live",
    "left": 50.0,
    "left_words": "of your weekly allowance left"
@@ -211,7 +219,7 @@
    "read_at": "2026-11-18T14:09:30.092585-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-18T15:24:45.850442-05:00"
+  "read_at": "2026-11-18T15:31:21.675630-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -231,7 +239,7 @@
   "week_pct": 51.56,
   "usage_pct": 51.3,
   "work_pct": 81.5,
-  "read_at": "2026-11-18T20:29:00+00:00",
+  "read_at": "2026-11-18T20:32:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -261,14 +269,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions wait until 20 GB is free.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-18T15:24:00-05:00",
+   "at": "2026-11-18T15:31:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-18T15:29:00-05:00",
+  "at": "2026-11-18T15:32:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -304,11 +312,12 @@
   },
   {
    "name": "Pernille",
-   "state": "next",
-   "task": "Pernille, P0, Investor an Investor c6963972184 (6:23 PM...",
-   "model": null,
-   "since": null,
-   "next": []
+   "state": "running",
+   "task": "[test] T-4807 land browser time-out fix",
+   "model": "opus",
+   "since": "2026-11-18T20:31:35.722Z",
+   "next": [],
+   "effort": "high"
   },
   {
    "name": "Ines",
@@ -348,16 +357,6 @@
     "task": "T-4907"
    },
    {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Let Investor-asked P0 process lines start past the limit",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-18T19:12:07.311Z",
-    "o": "c",
-    "task": "T-4902"
-   },
-   {
     "w": "Idris",
     "k": "build",
     "t": "Pin the refresh glyph's button style in a test",
@@ -366,6 +365,16 @@
     "at": "2026-11-18T20:23:23.859Z",
     "o": "c",
     "task": "T-4784"
+   },
+   {
+    "w": "Pernille",
+    "k": "test",
+    "t": "Fix every bad test that failed a merge",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-18T20:31:35.722Z",
+    "o": "c",
+    "task": "T-4807"
    }
   ],
   "src": "plan",
@@ -443,6 +452,11 @@
   ],
   "done": [
    {
+    "w": "Odalys",
+    "t": "When the process and site merge queue is full, a top-priority (P0) task the Investors asked for...",
+    "at": "2026-11-18T15:30:00-05:00"
+   },
+   {
     "w": "Idris",
     "t": "A widget whose script labels its data with an older or fixed date now refreshes when it asked...",
     "at": "2026-11-18T15:21:00-05:00"
@@ -451,22 +465,21 @@
     "w": "Maren+pernille",
     "t": "Twelve website pages (How it works, Infrastructure, Lanes, Workflow, Funnel, This Session and...",
     "at": "2026-11-18T13:44:00-05:00"
-   },
-   {
-    "w": "Idris",
-    "t": "Tapping a widget on the iPad Home Screen now opens its screen in a window that is already open...",
-    "at": "2026-11-18T13:33:00-05:00"
    }
   ],
   "count": {
-   "next": 493,
+   "next": 492,
    "wait": 31,
    "blocked": 2,
    "you": 9
   },
   "fin": {
-   "n": 1,
+   "n": 2,
    "rows": [
+    [
+     "T-4902",
+     "Let Investor-asked P0..."
+    ],
     [
      "T-4773",
      "Time the next run from the..."
@@ -513,38 +526,32 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-18T20:29:43Z",
+  "at": "2026-11-18T20:32:33Z",
   "s": {
+   "T-4784": [
+    "mergetest",
+    "iPhone tests on the MacBook",
+    null
+   ],
    "T-4907": [
     "merging",
     "Mac tests at the main gate",
-    1795033483431
-   ],
-   "T-4902": [
-    "merging",
-    "Mac tests at the main gate",
-    1795033243431
-   ],
-   "T-4784": [
-    "testing",
-    "MacBook \u00b7 test",
-    null
+    1795033533742
    ]
   },
   "nm": {
-   "T-4907": "Keep main green after every land",
-   "T-4902": "Let Investor-asked P0 process lines start past the limit",
-   "T-4784": "Pin the refresh glyph's button style in a test"
+   "T-4784": "Pin the refresh glyph's button style in a test",
+   "T-4907": "Keep main green after every land"
   },
   "wk": {
+   "T-4784": "Idris",
    "T-4907": "Odalys",
    "T-4902": "Odalys",
-   "T-4784": "Idris",
    "T-4773": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-18T20:29:43Z",
+  "at": "2026-11-18T20:32:33Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -558,11 +565,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 535,
+    "conflicted": 538,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1099
+    "parked": 1102
    },
    "cur": [],
    "ld": [
@@ -572,12 +579,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-18T20:29:17Z",
-    "ld": 5.09,
+    "at": "2026-11-18T20:32:25Z",
+    "ld": 3.92,
     "c": 8,
     "sb": 0,
     "dk": [
-     14.0,
+     14.2,
      228.3
     ],
     "ss": [
@@ -587,12 +594,12 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-18T20:27:36Z",
-    "ld": 0.87,
+    "at": "2026-11-18T20:32:02Z",
+    "ld": 5.65,
     "c": 12,
     "sb": 0,
     "dk": [
-     305.2,
+     305.1,
      926.4
     ],
     "sn": []
@@ -630,10 +637,10 @@
   "main": 3,
   "lanes": 0,
   "total": 3,
-  "at": "3:29 PM",
+  "at": "3:32 PM",
   "why": "",
-  "at_iso": "2026-11-18T20:29:00+00:00",
+  "at_iso": "2026-11-18T20:32:00+00:00",
   "started": "2:09 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 2:09 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 3:29 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 2:09 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 3:32 PM ET</p></section>"
  }
 }

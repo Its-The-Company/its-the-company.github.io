@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-18T06:21:29.011082+00:00",
+ "at": "2026-11-18T06:24:20.868527+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -135,7 +135,7 @@
    "task": "[build] T-4688 Developer mode for Pro",
    "model": "opus",
    "started": "2026-11-18T05:56:56.560Z",
-   "seconds": 1472,
+   "seconds": 1644,
    "finished": null,
    "effort": "high"
   },
@@ -144,7 +144,7 @@
    "task": "[build] T-4564 button action run path",
    "model": "opus",
    "started": "2026-11-18T05:57:37.954Z",
-   "seconds": 1431,
+   "seconds": 1602,
    "finished": null,
    "effort": "high"
   }
@@ -159,19 +159,19 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 3.0,
+   "pct": 4.0,
    "resets_at": "2026-11-18T05:10:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-18T01:05:33.409924-05:00",
+   "read_at": "2026-11-18T01:23:48.344262-05:00",
    "source": "live",
-   "left": 97.0,
+   "left": 96.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 41.0,
    "resets_at": "2026-11-22T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-18T01:05:33.409924-05:00",
+   "read_at": "2026-11-18T01:23:48.344262-05:00",
    "source": "live",
    "left": 59.0,
    "left_words": "of your weekly allowance left"
@@ -183,7 +183,7 @@
    "read_at": "2026-11-18T00:47:24.484187-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-18T01:05:33.409924-05:00"
+  "read_at": "2026-11-18T01:23:48.344262-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -203,7 +203,7 @@
   "week_pct": 46.38,
   "usage_pct": 53.1,
   "work_pct": 80.8,
-  "read_at": "2026-11-18T06:21:00+00:00",
+  "read_at": "2026-11-18T06:25:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -237,7 +237,7 @@
   }
  ],
  "disk": {
-  "free_gb": 32,
+  "free_gb": 33,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -246,14 +246,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-18T01:17:00-05:00",
+   "at": "2026-11-18T01:23:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 9,
-  "at": "2026-11-18T01:21:00-05:00",
+  "at": "2026-11-18T01:25:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -483,51 +483,57 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-18T06:21:15Z",
+  "at": "2026-11-18T06:24:04Z",
   "s": {
    "T-4823": [
     "mergeq",
     "1st to merge",
-    1794981975861
+    1794981964246
+   ],
+   "T-4787": [
+    "mergeq",
+    "2nd to merge",
+    1794982924246
    ],
    "T-4796": [
     "mergeq",
-    "2nd to merge",
-    1794975195861
+    "3rd to merge",
+    1794975184246
    ],
    "T-4442": [
     "mergeq",
-    "3rd to merge",
-    1794975315861
+    "4th to merge",
+    1794975304246
    ],
    "T-4516": [
     "mergeq",
-    "4th to merge",
-    1794977535861
+    "5th to merge",
+    1794977584246
    ],
    "T-4784": [
     "mergeq",
-    "5th to merge",
-    1794982815861
+    "6th to merge",
+    1794982804246
    ],
    "T-4841": [
     "mergeq",
-    "6th to merge",
-    1794981915861
+    "7th to merge",
+    1794981904246
    ],
    "T-4564": [
     "merging",
     "Mac tests at the main gate \u00b7 12 groups of tests done",
-    1794982215861
+    1794982204246
    ],
    "T-4688": [
     "merging",
     "Mac tests at the main gate",
-    1794982815861
+    1794982864246
    ]
   },
   "nm": {
    "T-4823": "Group process changes into features",
+   "T-4787": "Count failed merges by cause: bad test or broken code",
    "T-4796": "Say which premades carry the Pro tag",
    "T-4442": "Tidy the bundled first renders' small edges",
    "T-4516": "Prove the premade settings routes in a UI test",
@@ -538,6 +544,7 @@
   },
   "wk": {
    "T-4823": "Odalys",
+   "T-4787": "Odalys",
    "T-4796": "Ines",
    "T-4442": "Idris",
    "T-4516": "Idris",
@@ -548,11 +555,11 @@
   }
  },
  "ln": {
-  "at": "2026-11-18T06:21:15Z",
+  "at": "2026-11-18T06:24:04Z",
   "mq": {
    "n": {
     "checking": 0,
-    "inline": 6,
+    "inline": 7,
     "conflicted": 3,
     "failed": 0,
     "held": 1,
@@ -561,12 +568,12 @@
    },
    "m": {
     "checking": null,
-    "inline": 52,
-    "conflicted": 497,
+    "inline": 19,
+    "conflicted": 500,
     "failed": null,
-    "held": 1852,
+    "held": 1855,
     "retry": null,
-    "parked": 417
+    "parked": 420
    },
    "cur": [],
    "ld": [
@@ -576,12 +583,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-18T06:20:51Z",
-    "ld": 2.49,
+    "at": "2026-11-18T06:24:04Z",
+    "ld": 19.05,
     "c": 8,
-    "sb": 3,
+    "sb": 2,
     "dk": [
-     31.8,
+     33.0,
      228.3
     ],
     "ss": [
@@ -590,8 +597,7 @@
     ],
     "sn": [
      "t4772-27",
-     "t4772-26",
-     "iPhone 17e"
+     "T4631 Idris iPhone 17e"
     ]
    },
    "macbook": {
@@ -646,10 +652,10 @@
   "main": 2,
   "lanes": 1,
   "total": 3,
-  "at": "1:21 AM",
+  "at": "1:25 AM",
   "why": "",
-  "at_iso": "2026-11-18T06:21:00+00:00",
+  "at_iso": "2026-11-18T06:25:00+00:00",
   "started": "12:47 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 12:47 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 1:21 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 12:47 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 1:25 AM ET</p></section>"
  }
 }

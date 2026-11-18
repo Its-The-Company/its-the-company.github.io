@@ -1,10 +1,10 @@
 {
  "schema": 1,
- "at": "2026-11-18T15:23:52.481087+00:00",
+ "at": "2026-11-18T15:30:39.787362+00:00",
  "session": {
-  "active": true,
-  "kind": "work",
-  "started": "2026-11-18T08:00:22-05:00",
+  "active": false,
+  "kind": "",
+  "started": null,
   "flow": [
    {
     "t": "T-4575",
@@ -234,36 +234,36 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 487,
+  "runnable_count": 488,
   "blocked_count": 34
  },
  "meter": {
   "five_hour": {
    "pct": 1.0,
-   "resets_at": "2026-11-18T15:10:00-05:00",
+   "resets_at": "2026-11-18T20:10:00.449553+00:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-18T10:15:47.705792-05:00",
-   "source": "live",
+   "read_at": "2026-11-18T10:30:22.136410-05:00",
+   "source": "usage",
    "left": 99.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 47.0,
-   "resets_at": "2026-11-22T02:00:00-05:00",
+   "resets_at": "2026-11-22T07:00:00.449573+00:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-18T10:15:47.705792-05:00",
-   "source": "live",
+   "read_at": "2026-11-18T10:30:22.136410-05:00",
+   "source": "usage",
    "left": 53.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 2.0,
-   "resets_at": "2026-11-22T07:00:00.338202+00:00",
+   "resets_at": "2026-11-22T07:00:00.449728+00:00",
    "used_words": "of the Fable weekly allowance used",
-   "read_at": "2026-11-18T08:00:11.045824-05:00",
+   "read_at": "2026-11-18T10:30:22.136410-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-18T10:15:47.705792-05:00"
+  "read_at": "2026-11-18T10:30:22.136410-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -278,12 +278,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": null,
+ "next_tick": "2026-11-18T10:45:22-05:00",
  "personal": {
-  "week_pct": 49.77,
-  "usage_pct": 51.3,
-  "work_pct": 81.5,
-  "read_at": "2026-11-18T15:26:00+00:00",
+  "week_pct": 51.32,
+  "usage_pct": 52.2,
+  "work_pct": 82.0,
+  "read_at": "2026-11-18T15:30:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -313,14 +313,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-18T10:15:00-05:00",
+   "at": "2026-11-18T10:28:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 12,
-  "at": "2026-11-18T10:26:00-05:00",
+  "at": "2026-11-18T10:30:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -328,13 +328,9 @@
    "b": "double-spread"
   }
  },
- "next_tick_why": "session",
+ "next_tick_why": "last_tick",
  "idle": null,
- "pool": {
-  "why": "Double Spread: 53% of the week left, paced to last until Wed 14:00, the week's halfway point; the machine allows 4 (held: too few lands in 3 hours to judge a raise)",
-  "n": 4,
-  "at": "2026-11-18T08:00:11.412181-05:00"
- },
+ "pool": null,
  "lanes": [
   {
    "name": "Idris",
@@ -387,7 +383,6 @@
  ],
  "tasks": {
   "run": [],
-  "src": "plan",
   "open": [
    {
     "w": "Pernille",
@@ -462,6 +457,11 @@
   ],
   "done": [
    {
+    "w": "Operator",
+    "t": "Refusals per day stayed within its limit of 16.05 refusals for a full day, so the bottleneck...",
+    "at": "2026-11-18T10:29:00-05:00"
+   },
+   {
     "w": "Idris+operator",
     "t": "The Pro purchase tests no longer time out: after the waiting fix they passed three times running...",
     "at": "2026-11-18T10:17:00-05:00"
@@ -470,47 +470,13 @@
     "w": "Idris",
     "t": "The automated tests that tap a long line of code and slide the space-bar trackpad passed on the...",
     "at": "2026-11-18T09:46:00-05:00"
-   },
-   {
-    "w": "Idris",
-    "t": "The Pro purchase tests now stop at the first wait on Apple's test store that runs out and name...",
-    "at": "2026-11-18T08:15:00-05:00"
    }
   ],
   "count": {
-   "next": 487,
+   "next": 488,
    "wait": 32,
    "blocked": 2,
    "you": 9
-  },
-  "fin": {
-   "n": 7,
-   "rows": [
-    [
-     "T-3745",
-     "Stop the Pro store test..."
-    ],
-    [
-     "T-4892",
-     "Run the caret UI tests on..."
-    ],
-    [
-     "T-4782",
-     "Stop a Pro store test at its..."
-    ],
-    [
-     "T-4567",
-     "Measure the inbox wait..."
-    ],
-    [
-     "T-4668",
-     "Put the bank, tax and name..."
-    ],
-    [
-     "T-4669",
-     "Align the plan and records..."
-    ]
-   ]
   }
  },
  "qr": [
@@ -552,67 +518,67 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-18T15:23:52Z",
+  "at": "2026-11-18T15:30:39Z",
   "s": {
    "T-4533": [
     "merging",
     "Host checks on the Mac mini",
-    1795015432481
+    1795015479787
    ],
    "T-4574": [
     "mergeq",
     "2nd to merge",
-    1794992512481
+    1794992499787
    ],
    "T-4762": [
     "mergeq",
     "3rd to merge",
-    1795012312481
+    1795012299787
    ],
    "T-4748": [
     "mergeq",
     "5th to merge",
-    1795002352481
+    1795002339787
    ],
    "T-4575": [
     "mergetest",
     "Xcode checks on the MacBook, 6th to merge",
-    1795015372481
+    1795015359787
    ],
    "T-4640": [
     "mergetest",
     "Xcode checks on the MacBook, 7th to merge",
-    1795015432481
+    1795015419787
    ],
    "T-4789": [
     "mergeq",
     "8th to merge",
-    1795005952481
+    1795005999787
    ],
    "T-4635": [
     "mergeq",
     "9th to merge",
-    1795006372481
+    1795006359787
    ],
    "T-4581": [
     "mergeq",
     "12th to merge",
-    1795007092481
+    1795007079787
    ],
    "T-4889": [
     "mergeq",
     "17th to merge",
-    1795010092481
+    1795010079787
    ],
    "T-4835": [
     "mergeq",
     "18th to merge",
-    1795011712481
+    1795011699787
    ],
    "T-4679": [
     "mergeq",
     "19th to merge",
-    1795014952481
+    1795011999787
    ]
   },
   "nm": {
@@ -641,18 +607,11 @@
    "T-4581": "Idris",
    "T-4889": "Idris",
    "T-4835": "Pernille",
-   "T-4679": "Idris",
-   "T-3745": "Idris",
-   "T-4892": "Idris",
-   "T-4782": "Idris",
-   "T-4567": "Odalys",
-   "T-4668": "Ines",
-   "T-4669": "Ines",
-   "T-4689": "Ines"
+   "T-4679": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-18T15:23:52Z",
+  "at": "2026-11-18T15:30:39Z",
   "mq": {
    "n": {
     "checking": 3,
@@ -664,13 +623,13 @@
     "parked": 9
    },
    "m": {
-    "checking": 0,
-    "inline": 139,
-    "conflicted": 731,
+    "checking": 7,
+    "inline": 146,
+    "conflicted": 737,
     "failed": null,
-    "held": 2394,
+    "held": 2401,
     "retry": null,
-    "parked": 1040
+    "parked": 1047
    },
    "cur": [
     [
@@ -679,23 +638,23 @@
      ],
      "Mac tests",
      "Mac mini",
-     0
+     6
     ],
     [
      [
       "T-4575"
      ],
-     "iPhone app tests, sent and waiting its turn",
+     "iPhone app tests",
      "MacBook",
-     1
+     8
     ],
     [
      [
       "T-4640"
      ],
-     "iPhone app tests, sent and waiting its turn",
+     "iPhone app tests",
      "MacBook",
-     0
+     7
     ]
    ],
    "ld": [
@@ -705,12 +664,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-18T15:23:53Z",
-    "ld": 0.74,
+    "at": "2026-11-18T15:30:40Z",
+    "ld": 0.71,
     "c": 8,
     "sb": 1,
     "dk": [
-     16.5,
+     15.5,
      228.3
     ],
     "ss": [
@@ -722,29 +681,19 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-18T15:16:07Z",
-    "ld": 8.71,
+    "at": "2026-11-18T15:24:19Z",
+    "ld": 1.87,
     "c": 12,
     "sb": 0,
     "dk": [
-     306.9,
+     306.6,
      926.4
     ],
     "sn": []
    }
   }
  },
- "operators": [
-  {
-   "w": "Operator",
-   "a": "Main plan",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session",
-   "at": "2026-11-18T09:56:26-05:00"
-  }
- ],
+ "operators": [],
  "reply": {
   "sent": "2026-11-18T14:54:49Z",
   "seconds": 96.0
@@ -754,11 +703,9 @@
   "lane_next",
   "queue_text",
   "task_done",
-  "fin_short",
   "task_title",
   "done_text",
   "task_open",
-  "fin_six",
   "lane_task",
   "task_next"
  ],
@@ -766,10 +713,10 @@
   "main": 0,
   "lanes": 0,
   "total": 0,
-  "at": "10:26 AM",
-  "why": "Between sessions: no session is running. Last check 8:00 AM ET.",
-  "at_iso": "2026-11-18T15:26:00+00:00",
+  "at": "10:30 AM",
+  "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
+  "at_iso": "2026-11-18T15:30:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 10:26 AM ET</p><p class=\"an-why\">Between sessions: no session is running. Last check 8:00 AM ET.</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 10:30 AM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
  }
 }

@@ -1,22 +1,11 @@
 {
  "schema": 1,
- "at": "2026-11-18T19:40:22.971531+00:00",
+ "at": "2026-11-18T19:43:26.575267+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-18T14:09:41-05:00",
   "flow": [
-   {
-    "t": "T-4660",
-    "name": "Count a family When's buttons per family",
-    "acct": "Personal b",
-    "steps": [
-     {
-      "s": "macbook",
-      "at": 1795030232
-     }
-    ]
-   },
    {
     "t": "T-2296",
     "name": "Finish the gallery pager, iPad layout and detail foot",
@@ -58,6 +47,14 @@
    }
   ],
   "done": [
+   {
+    "t": "T-4660",
+    "name": "Count a family When's buttons per family",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1795030979
+   },
    {
     "t": "T-4819",
     "name": "Make sure a send never rewrites a project's settings file",
@@ -129,18 +126,9 @@
     "end": "failed",
     "end_at": 1795022429,
     "why": "did not merge cleanly"
-   },
-   {
-    "t": "T-4835",
-    "name": "Show an all-day event on its own date after travel",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "failed",
-    "end_at": 1795022429,
-    "why": "did not merge cleanly"
    }
   ],
-  "landed": 21,
+  "landed": 22,
   "failed": 8
  },
  "workers": [
@@ -149,7 +137,7 @@
    "task": "[tools] T-4907 keep main green after every land",
    "model": "opus",
    "started": "2026-11-18T19:11:56.141Z",
-   "seconds": 1706,
+   "seconds": 1890,
    "finished": null,
    "effort": "high"
   },
@@ -158,7 +146,7 @@
    "task": "[tools] T-4902 Investor P0 process lines past limit",
    "model": "opus",
    "started": "2026-11-18T19:12:07.311Z",
-   "seconds": 1695,
+   "seconds": 1879,
    "finished": null,
    "effort": "high"
   },
@@ -167,7 +155,7 @@
    "task": "[build] T-4772 prove a refresh tap redraws widget",
    "model": "opus",
    "started": "2026-11-18T19:12:21.245Z",
-   "seconds": 1681,
+   "seconds": 1865,
    "finished": null,
    "effort": "high"
   }
@@ -226,7 +214,7 @@
   "week_pct": 51.56,
   "usage_pct": 51.3,
   "work_pct": 81.5,
-  "read_at": "2026-11-18T19:40:00+00:00",
+  "read_at": "2026-11-18T19:43:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -263,7 +251,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-18T14:40:00-05:00",
+  "at": "2026-11-18T14:43:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -503,47 +491,35 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-18T19:40:04Z",
+  "at": "2026-11-18T19:43:08Z",
   "s": {
-   "T-4660": [
-    "mergeq",
-    "1st to merge",
-    1795022764499
-   ],
-   "T-4819": [
-    "mergeq",
-    "3rd to merge",
-    1795026844499
-   ],
    "T-4477": [
     "mergeq",
-    "4th to merge",
-    1795030264499
+    "1st to merge",
+    1795030268255
    ],
    "T-4897": [
     "mergeq",
-    "4th to merge",
-    1795030264499
+    "1st to merge",
+    1795030268255
    ],
    "T-4772": [
-    "merging",
-    "Mac tests at the main gate \u00b7 2 groups of tests done",
-    1795029904499
+    "mergetest",
+    "iPhone tests on the MacBook",
+    null
    ],
    "T-4902": [
     "testing",
     "its own tests, in its copy",
-    1795029664499
+    1795029668255
    ],
    "T-4907": [
     "testing",
     "its own tests, in its copy",
-    1795030024499
+    1795030028255
    ]
   },
   "nm": {
-   "T-4660": "Count a family When's buttons per family",
-   "T-4819": "Make sure a send never rewrites a project's settings file",
    "T-4477": "People build a widget from blocks without code",
    "T-4897": "Check an all-day event keeps its date after travel",
    "T-4772": "Prove a refresh tap redraws the widget",
@@ -551,8 +527,6 @@
    "T-4907": "Keep main green after every land"
   },
   "wk": {
-   "T-4660": "Pernille",
-   "T-4819": "Idris",
    "T-4477": "Idris",
    "T-4897": "Idris",
    "T-4772": "Idris",
@@ -561,11 +535,11 @@
   }
  },
  "ln": {
-  "at": "2026-11-18T19:40:04Z",
+  "at": "2026-11-18T19:43:08Z",
   "mq": {
    "n": {
     "checking": 0,
-    "inline": 4,
+    "inline": 2,
     "conflicted": 4,
     "failed": 0,
     "held": 0,
@@ -574,27 +548,27 @@
    },
    "m": {
     "checking": null,
-    "inline": 37,
-    "conflicted": 485,
+    "inline": 12,
+    "conflicted": 488,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 962
+    "parked": 966
    },
    "cur": [],
    "ld": [
-    38,
-    "2026-11-18T19:31:26Z"
+    39,
+    "2026-11-18T19:42:59Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-18T19:39:41Z",
-    "ld": 1.3,
+    "at": "2026-11-18T19:42:39Z",
+    "ld": 1.85,
     "c": 8,
     "sb": 1,
     "dk": [
-     13.8,
+     14.8,
      228.3
     ],
     "ss": [
@@ -606,8 +580,8 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-18T19:38:32Z",
-    "ld": 1.49,
+    "at": "2026-11-18T19:40:38Z",
+    "ld": 1.05,
     "c": 12,
     "sb": 0,
     "dk": [
@@ -648,10 +622,10 @@
   "main": 3,
   "lanes": 0,
   "total": 3,
-  "at": "2:40 PM",
+  "at": "2:43 PM",
   "why": "",
-  "at_iso": "2026-11-18T19:40:00+00:00",
+  "at_iso": "2026-11-18T19:43:00+00:00",
   "started": "2:09 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 2:09 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 2:40 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 2:09 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 2:43 PM ET</p></section>"
  }
 }

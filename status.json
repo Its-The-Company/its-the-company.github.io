@@ -1,30 +1,19 @@
 {
  "schema": 1,
- "at": "2026-11-18T01:02:09.389506+00:00",
+ "at": "2026-11-18T01:05:12.920098+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-17T19:10:01-05:00",
   "flow": [
    {
-    "t": "T-4610",
+    "t": "T-4697",
     "name": "Check finished work before it ships",
-    "acct": "Personal a",
+    "acct": "Personal b",
     "steps": [
      {
-      "s": "testq",
-      "at": 1794961365
-     }
-    ]
-   },
-   {
-    "t": "T-4634",
-    "name": "Github hang test is cut before the GET under load",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1794961365
+      "s": "landing",
+      "at": 1794963906
      }
     ]
    },
@@ -40,6 +29,46 @@
    }
   ],
   "done": [
+   {
+    "t": "T-4720",
+    "name": "Check finished work before it ships",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794963879
+   },
+   {
+    "t": "T-4719",
+    "name": "Check finished work before it ships",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794963857
+   },
+   {
+    "t": "T-4787",
+    "name": "Count failed merges by cause: bad test or broken code",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794963841
+   },
+   {
+    "t": "T-4634",
+    "name": "Github hang test is cut before the GET under load",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794963788
+   },
+   {
+    "t": "T-4610",
+    "name": "Check finished work before it ships",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794963788
+   },
    {
     "t": "T-4774",
     "name": "Measure what one refresh tap costs the app",
@@ -79,49 +108,9 @@
     "steps": [],
     "end": "landed",
     "end_at": 1794958343
-   },
-   {
-    "t": "T-4607",
-    "name": "Check finished work before it ships",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794958343
-   },
-   {
-    "t": "T-4744",
-    "name": "Fix a MacBook test job that failed",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794957514
-   },
-   {
-    "t": "T-3773",
-    "name": "Decide how stuck review fix lines reach the board",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794957502
-   },
-   {
-    "t": "T-4765",
-    "name": "Fix the When tapped frames' captions and VoiceOver list",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794957480
-   },
-   {
-    "t": "T-4763",
-    "name": "Keep habit marks when the Page also saves",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794957463
    }
   ],
-  "landed": 38,
+  "landed": 43,
   "failed": 9
  },
  "workers": [
@@ -130,7 +119,7 @@
    "task": "[tools] T-4786 correct bad tests holding merges",
    "model": "opus",
    "started": "2026-11-18T00:45:18.571Z",
-   "seconds": 1010,
+   "seconds": 1194,
    "finished": null,
    "effort": "high"
   },
@@ -139,7 +128,7 @@
    "task": "[build] T-2296 land the gallery work",
    "model": "opus",
    "started": "2026-11-18T00:13:00.213Z",
-   "seconds": 2949,
+   "seconds": 3132,
    "finished": null,
    "effort": "high"
   }
@@ -158,24 +147,24 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 431,
+  "runnable_count": 430,
   "blocked_count": 58
  },
  "meter": {
   "five_hour": {
-   "pct": 2.0,
+   "pct": 3.0,
    "resets_at": "2026-11-18T00:10:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-17T19:52:14.983795-05:00",
+   "read_at": "2026-11-17T20:04:33.455901-05:00",
    "source": "live",
-   "left": 98.0,
+   "left": 97.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 38.0,
    "resets_at": "2026-11-22T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-17T19:52:14.983795-05:00",
+   "read_at": "2026-11-17T20:04:33.455901-05:00",
    "source": "live",
    "left": 62.0,
    "left_words": "of your weekly allowance left"
@@ -187,7 +176,7 @@
    "read_at": "2026-11-17T19:09:49.957069-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-17T19:52:14.983795-05:00"
+  "read_at": "2026-11-17T20:04:33.455901-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -207,7 +196,7 @@
   "week_pct": 43.81,
   "usage_pct": 53.5,
   "work_pct": 81.2,
-  "read_at": "2026-11-18T01:02:00+00:00",
+  "read_at": "2026-11-18T01:05:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -265,7 +254,7 @@
   }
  ],
  "disk": {
-  "free_gb": 18,
+  "free_gb": 19,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -274,14 +263,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-17T19:58:00-05:00",
+   "at": "2026-11-17T20:04:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 7,
-  "at": "2026-11-17T20:02:00-05:00",
+  "at": "2026-11-17T20:05:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -423,6 +412,13 @@
     "o": "c"
    },
    {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Fix the red board-check row in the land test",
+    "s": "next",
+    "o": "c"
+   },
+   {
     "w": "Pernille",
     "k": "tools",
     "t": "Rewrite or drop outdated tests that read...",
@@ -435,41 +431,43 @@
     "t": "Measure real scripts inside the widget on phones",
     "s": "next",
     "o": "i"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "VoiceOver and large text work on every screen",
-    "s": "next",
-    "o": "i"
    }
   ],
   "done": [
    {
+    "w": "Odalys",
+    "t": "A second person read the latest Settings and Pro work (the Ask to Buy and failed-restore test...",
+    "at": "2026-11-17T20:04:00-05:00"
+   },
+   {
+    "w": "Pernille",
+    "t": "An independent read of the plan for the 1.0 showcase widgets passed with fixes: before the...",
+    "at": "2026-11-17T20:04:00-05:00"
+   },
+   {
     "w": "Idris",
     "t": "When a Shortcut asks for a ready-made Pro script and the App Store doesn't answer, it now stops...",
     "at": "2026-11-17T18:39:00-05:00"
-   },
-   {
-    "w": "Ines",
-    "t": "A second person read the upload-script review and agrees with it: nothing in the script blocks...",
-    "at": "2026-11-17T18:39:00-05:00"
-   },
-   {
-    "w": "Maren",
-    "t": "The script behind the site's live work list had grown past its size limit; two bits it shipped...",
-    "at": "2026-11-17T17:58:00-05:00"
    }
   ],
   "count": {
-   "next": 431,
+   "next": 430,
    "wait": 27,
    "blocked": 31,
    "you": 8
   },
   "fin": {
-   "n": 0,
-   "rows": []
+   "n": 2,
+   "rows": [
+    [
+     "T-4719",
+     "Check finished work before..."
+    ],
+    [
+     "T-4720",
+     "Check finished work before..."
+    ]
+   ]
   }
  },
  "qr": [
@@ -511,92 +509,82 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-18T01:01:50Z",
+  "at": "2026-11-18T01:05:12Z",
   "s": {
-   "T-4610": [
-    "merging",
-    "Host checks on the Mac mini",
-    1794961370613
-   ],
-   "T-4634": [
-    "merging",
-    "Host checks on the Mac mini",
-    1794961370613
-   ],
-   "T-4695": [
-    "merging",
-    "Host checks on the Mac mini",
-    1794961370613
-   ],
-   "T-4607": [
-    "mergeq",
-    "1st to merge",
-    1794959030613
-   ],
-   "T-4787": [
-    "mergeq",
-    "3rd to merge",
-    1794959270613
-   ],
-   "T-4719": [
-    "mergeq",
-    "4th to merge",
-    1794959510613
-   ],
-   "T-4720": [
-    "mergeq",
-    "5th to merge",
-    1794959630613
-   ],
    "T-4697": [
-    "mergeq",
-    "7th to merge",
-    1794959870613
-   ],
-   "T-4643": [
-    "mergeq",
-    "8th to merge",
-    1794962690613
-   ],
-   "T-4782": [
-    "mergeq",
-    "10th to merge",
-    1794963110613
-   ],
-   "T-4659": [
-    "mergeq",
-    "11th to merge",
-    1794963170613
+    "merging",
+    "Merging onto main",
+    1794963912920
    ],
    "T-4750": [
     "mergeq",
-    "11th to merge",
-    1794963170613
-   ],
-   "T-4761": [
-    "mergeq",
-    "11th to merge",
-    1794963170613
+    "1st to merge",
+    1794960192920
    ],
    "T-4698": [
     "mergeq",
-    "18th to merge",
-    1794961790613
+    "2nd to merge",
+    1794960252920
+   ],
+   "T-4634": [
+    "mergeq",
+    "3rd to merge",
+    1794960432920
+   ],
+   "T-4610": [
+    "mergeq",
+    "4th to merge",
+    1794960372920
+   ],
+   "T-4787": [
+    "mergeq",
+    "5th to merge",
+    1794962652920
+   ],
+   "T-4643": [
+    "mergeq",
+    "5th to merge",
+    1794962652920
+   ],
+   "T-4782": [
+    "mergeq",
+    "7th to merge",
+    1794963132920
+   ],
+   "T-4719": [
+    "mergeq",
+    "7th to merge",
+    1794963132920
+   ],
+   "T-4720": [
+    "mergeq",
+    "7th to merge",
+    1794963132920
+   ],
+   "T-4659": [
+    "mergeq",
+    "8th to merge",
+    1794963192920
+   ],
+   "T-4761": [
+    "mergeq",
+    "8th to merge",
+    1794963192920
    ],
    "T-4699": [
     "mergeq",
-    "18th to merge",
-    1794961790613
-   ],
-   "T-4786": [
-    "mergetest",
-    "iPhone tests on the MacBook",
-    null
+    "14th to merge",
+    1794961812920
    ],
    "T-2296": [
     "merging",
-    "Mac tests at the main gate \u00b7 1 group of tests done",
-    1794963290613
+    "Mac tests at the main gate",
+    1794963852920
+   ],
+   "T-4786": [
+    "merging",
+    "Mac tests at the main gate",
+    1794963912920
    ],
    "T-4774": [
     "merged",
@@ -612,53 +600,49 @@
    ]
   },
   "nm": {
-   "T-4610": "Check finished work before it ships",
-   "T-4634": "Github hang test is cut before the GET under load",
-   "T-4695": "Check finished work before it ships",
-   "T-4607": "Check finished work before it ships",
-   "T-4787": "Count failed merges by cause: bad test or broken code",
-   "T-4719": "Check finished work before it ships",
-   "T-4720": "Check finished work before it ships",
    "T-4697": "Check finished work before it ships",
+   "T-4750": "Check network fetch cases on the Swift side too",
+   "T-4698": "Check finished work before it ships",
+   "T-4634": "Github hang test is cut before the GET under load",
+   "T-4610": "Check finished work before it ships",
+   "T-4787": "Count failed merges by cause: bad test or broken code",
    "T-4643": "Make the size ladder measure each rung more than once",
    "T-4782": "Stop a Pro store test at its first stalled wait",
+   "T-4719": "Check finished work before it ships",
+   "T-4720": "Check finished work before it ships",
    "T-4659": "Prove a widget button's tap reaches its Python handler",
-   "T-4750": "Check network fetch cases on the Swift side too",
    "T-4761": "Keep one layout for the widget state format",
-   "T-4698": "Check finished work before it ships",
    "T-4699": "Check finished work before it ships",
-   "T-4786": "Correct every bad test that holds a merge",
    "T-2296": "Finish the gallery pager, iPad layout and detail foot",
+   "T-4786": "Correct every bad test that holds a merge",
    "T-4774": "Measure what one refresh tap costs the app",
    "T-4770": "Re-estimate the release date from measured build speed"
   },
   "wk": {
-   "T-4610": "Odalys",
-   "T-4634": "Pernille",
-   "T-4695": "Ines",
-   "T-4607": "Odalys",
-   "T-4787": "Odalys",
-   "T-4719": "Odalys",
-   "T-4720": "Pernille",
    "T-4697": "Pernille",
+   "T-4750": "Idris",
+   "T-4698": "Pernille",
+   "T-4634": "Pernille",
+   "T-4610": "Odalys",
+   "T-4787": "Odalys",
    "T-4643": "Idris",
    "T-4782": "Idris",
+   "T-4719": "Odalys",
+   "T-4720": "Pernille",
    "T-4659": "Idris",
-   "T-4750": "Idris",
    "T-4761": "Idris",
-   "T-4698": "Pernille",
    "T-4699": "Pernille",
-   "T-4786": "Pernille",
    "T-2296": "Idris",
+   "T-4786": "Pernille",
    "T-4774": "Idris",
    "T-4770": "Ines"
   }
  },
  "ln": {
-  "at": "2026-11-18T01:01:50Z",
+  "at": "2026-11-18T01:05:12Z",
   "mq": {
    "n": {
-    "checking": 3,
+    "checking": 1,
     "inline": 12,
     "conflicted": 2,
     "failed": 0,
@@ -667,68 +651,52 @@
     "parked": 8
    },
    "m": {
-    "checking": 39,
-    "inline": 32,
-    "conflicted": 727,
+    "checking": 0,
+    "inline": 21,
+    "conflicted": 730,
     "failed": null,
-    "held": 1532,
-    "retry": 31,
-    "parked": 273
+    "held": 1536,
+    "retry": 35,
+    "parked": 276
    },
    "cur": [
     [
      [
-      "T-4610"
+      "T-4697"
      ],
-     "Mac tests",
+     "going onto main",
      "Mac mini",
-     39
-    ],
-    [
-     [
-      "T-4634"
-     ],
-     "Mac tests",
-     "Mac mini",
-     39
-    ],
-    [
-     [
-      "T-4695"
-     ],
-     "Mac tests",
-     "Mac mini",
-     39
+     0
     ]
    ],
    "ld": [
-    42,
-    "2026-11-18T00:22:38Z"
+    46,
+    "2026-11-18T01:04:39Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-18T01:01:23Z",
-    "ld": 2.3,
+    "at": "2026-11-18T01:05:13Z",
+    "ld": 2.86,
     "c": 8,
     "sb": 0,
     "dk": [
-     17.7,
+     17.8,
      228.3
     ],
     "ss": [
-     174.3,
+     174.1,
      953.7
     ],
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-18T00:55:25Z",
-    "ld": 0.78,
+    "at": "2026-11-18T01:04:01Z",
+    "ld": 5.43,
     "c": 12,
     "sb": 0,
     "dk": [
-     311.9,
+     311.6,
      926.4
     ],
     "sn": []
@@ -764,6 +732,7 @@
   "lane_next",
   "queue_text",
   "task_done",
+  "fin_short",
   "task_title",
   "done_text",
   "task_open",
@@ -774,10 +743,10 @@
   "main": 2,
   "lanes": 1,
   "total": 3,
-  "at": "8:02 PM",
+  "at": "8:05 PM",
   "why": "",
-  "at_iso": "2026-11-18T01:02:00+00:00",
+  "at_iso": "2026-11-18T01:05:00+00:00",
   "started": "7:10 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 7:10 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 8:02 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 7:10 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 8:05 PM ET</p></section>"
  }
 }

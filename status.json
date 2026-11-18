@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-18T01:14:20.527571+00:00",
+ "at": "2026-11-18T01:17:25.393503+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -115,26 +115,25 @@
  },
  "workers": [
   {
-   "name": "pernille",
-   "task": "[tools] T-4786 correct bad tests holding merges",
-   "model": "opus",
-   "started": "2026-11-18T00:45:18.571Z",
-   "seconds": 1741,
-   "finished": null,
-   "effort": "high"
-  },
-  {
    "name": "maren",
    "task": "[site] T-4493 land the clutter cut",
    "model": "opus",
    "started": "2026-11-18T01:07:36.770Z",
-   "seconds": 403,
+   "seconds": 588,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Pernille, Maren",
+ "who": "Maren",
  "recent": [
+  {
+   "name": "pernille",
+   "task": "[tools] T-4786 correct bad tests holding merges",
+   "model": "opus",
+   "started": "2026-11-18T00:45:18.571Z",
+   "seconds": null,
+   "finished": "2026-11-18T01:17:05.026000+00:00"
+  },
   {
    "name": "idris",
    "task": "[build] T-2296 land the gallery work",
@@ -160,19 +159,19 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 3.0,
+   "pct": 4.0,
    "resets_at": "2026-11-18T00:10:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-17T20:04:33.455901-05:00",
+   "read_at": "2026-11-17T20:16:49.044024-05:00",
    "source": "live",
-   "left": 97.0,
+   "left": 96.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 38.0,
    "resets_at": "2026-11-22T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-17T20:04:33.455901-05:00",
+   "read_at": "2026-11-17T20:16:49.044024-05:00",
    "source": "live",
    "left": 62.0,
    "left_words": "of your weekly allowance left"
@@ -184,7 +183,7 @@
    "read_at": "2026-11-17T19:09:49.957069-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-17T20:04:33.455901-05:00"
+  "read_at": "2026-11-17T20:16:49.044024-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -204,45 +203,8 @@
   "week_pct": 43.81,
   "usage_pct": 53.5,
   "work_pct": 81.2,
-  "read_at": "2026-11-18T01:14:00+00:00",
-  "running": [
-   {
-    "lane": "b",
-    "task": "T-4781",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Retest a fixed red on what failed, not every test",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-17T17:24:08-05:00",
-    "n": "Jeremy",
-    "src": "plan-b"
-   },
-   {
-    "lane": "b",
-    "task": "T-4770",
-    "w": "Ines",
-    "k": "plan",
-    "t": "Re-estimate the release date from measured build speed",
-    "m": "fable",
-    "e": "high",
-    "at": "2026-11-17T17:24:08-05:00",
-    "n": "Jeremy",
-    "src": "plan-b"
-   },
-   {
-    "lane": "b",
-    "task": "T-4774",
-    "w": "Idris",
-    "k": "build",
-    "t": "Measure what one refresh tap costs the app",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-17T17:24:08-05:00",
-    "n": "Jeremy",
-    "src": "plan-b"
-   }
-  ]
+  "read_at": "2026-11-18T01:17:00+00:00",
+  "running": []
  },
  "api_credits": [
   {
@@ -262,7 +224,7 @@
   }
  ],
  "disk": {
-  "free_gb": 18,
+  "free_gb": 20,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -271,14 +233,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-17T20:10:00-05:00",
+   "at": "2026-11-17T20:16:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 7,
-  "at": "2026-11-17T20:14:00-05:00",
+  "at": "2026-11-17T20:17:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -295,15 +257,6 @@
  },
  "lanes": [
   {
-   "name": "Pernille",
-   "state": "running",
-   "task": "[tools] T-4786 correct bad tests holding merges",
-   "model": "opus",
-   "since": "2026-11-18T00:45:18.571Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
    "name": "Maren",
    "state": "running",
    "task": "[site] T-4493 land the clutter cut",
@@ -316,6 +269,14 @@
    "name": "Idris",
    "state": "next",
    "task": "Idris, P1, from T-4755 (Investor an Investor...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
+   "name": "Pernille",
+   "state": "next",
+   "task": "Pernille, P0, Investor an Investor c6963972184 (6:23 PM...",
    "model": null,
    "since": null,
    "next": []
@@ -347,16 +308,6 @@
  ],
  "tasks": {
   "run": [
-   {
-    "w": "Pernille",
-    "k": "tools",
-    "t": "Correct every bad test that holds a merge",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-18T00:45:18.571Z",
-    "o": "c",
-    "task": "T-4786"
-   },
    {
     "w": "Maren",
     "k": "site",
@@ -525,150 +476,141 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-18T01:14:20Z",
+  "at": "2026-11-18T01:17:17Z",
   "s": {
    "T-4697": [
     "mergeq",
     "1st to merge",
-    1794959900527
+    1794959897694
    ],
    "T-4750": [
     "mergeq",
     "2nd to merge",
-    1794960200527
+    1794960197694
    ],
    "T-4698": [
     "mergeq",
     "3rd to merge",
-    1794960260527
+    1794960257694
+   ],
+   "T-4781": [
+    "mergeq",
+    "4th to merge",
+    1794964637694
    ],
    "T-4634": [
     "mergeq",
-    "4th to merge",
-    1794964160527
+    "5th to merge",
+    1794964157694
    ],
    "T-4610": [
     "mergeq",
-    "6th to merge",
-    1794960380527
+    "7th to merge",
+    1794960377694
    ],
    "T-4761": [
     "mergeq",
-    "7th to merge",
-    1794960500527
-   ],
-   "T-4787": [
-    "mergeq",
     "8th to merge",
-    1794962660527
-   ],
-   "T-4643": [
-    "mergeq",
-    "8th to merge",
-    1794962660527
-   ],
-   "T-4782": [
-    "mergeq",
-    "9th to merge",
-    1794963140527
-   ],
-   "T-4719": [
-    "mergeq",
-    "9th to merge",
-    1794963140527
-   ],
-   "T-4720": [
-    "mergeq",
-    "9th to merge",
-    1794963140527
+    1794960497694
    ],
    "T-4659": [
     "mergeq",
+    "9th to merge",
+    1794961037694
+   ],
+   "T-4787": [
+    "mergeq",
     "10th to merge",
-    1794963200527
+    1794962657694
+   ],
+   "T-4643": [
+    "mergeq",
+    "10th to merge",
+    1794962657694
+   ],
+   "T-4782": [
+    "mergeq",
+    "11th to merge",
+    1794963137694
+   ],
+   "T-4719": [
+    "mergeq",
+    "11th to merge",
+    1794963137694
+   ],
+   "T-4720": [
+    "mergeq",
+    "11th to merge",
+    1794963137694
    ],
    "T-4699": [
     "mergeq",
-    "15th to merge",
-    1794961760527
+    "16th to merge",
+    1794961757694
    ],
-   "T-4786": [
-    "mergetest",
-    "iPhone tests on the MacBook",
-    null
-   ],
-   "T-4774": [
-    "merged",
-    "on main 7:22 PM ET",
-    1794961354000,
-    "Idris"
-   ],
-   "T-4770": [
-    "merged",
-    "on main 5:06 PM ET",
-    1794953163000,
-    "Ines"
+   "T-4493": [
+    "testing",
+    "its own tests, in its copy",
+    1794964637694
    ]
   },
   "nm": {
    "T-4697": "Check finished work before it ships",
    "T-4750": "Check network fetch cases on the Swift side too",
    "T-4698": "Check finished work before it ships",
+   "T-4781": "Retest a fixed red on what failed, not every test",
    "T-4634": "Github hang test is cut before the GET under load",
    "T-4610": "Check finished work before it ships",
    "T-4761": "Keep one layout for the widget state format",
+   "T-4659": "Prove a widget button's tap reaches its Python handler",
    "T-4787": "Count failed merges by cause: bad test or broken code",
    "T-4643": "Make the size ladder measure each rung more than once",
    "T-4782": "Stop a Pro store test at its first stalled wait",
    "T-4719": "Check finished work before it ships",
    "T-4720": "Check finished work before it ships",
-   "T-4659": "Prove a widget button's tap reaches its Python handler",
    "T-4699": "Check finished work before it ships",
-   "T-4786": "Correct every bad test that holds a merge",
-   "T-4774": "Measure what one refresh tap costs the app",
-   "T-4770": "Re-estimate the release date from measured build speed"
+   "T-4493": "Cut clutter text on the pages still carrying it"
   },
   "wk": {
    "T-4697": "Pernille",
    "T-4750": "Idris",
    "T-4698": "Pernille",
+   "T-4781": "Odalys",
    "T-4634": "Pernille",
    "T-4610": "Odalys",
    "T-4761": "Idris",
+   "T-4659": "Idris",
    "T-4787": "Odalys",
    "T-4643": "Idris",
    "T-4782": "Idris",
    "T-4719": "Odalys",
    "T-4720": "Pernille",
-   "T-4659": "Idris",
    "T-4699": "Pernille",
-   "T-4786": "Pernille",
-   "T-4774": "Idris",
-   "T-4770": "Ines",
+   "T-4493": "Maren",
    "T-0191": "Idris",
    "T-2268": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-18T01:14:20Z",
+  "at": "2026-11-18T01:17:17Z",
   "mq": {
    "n": {
     "checking": 0,
-    "inline": 13,
+    "inline": 14,
     "conflicted": 2,
     "failed": 0,
     "held": 1,
-    "retry": 1,
+    "retry": 0,
     "parked": 6
    },
    "m": {
     "checking": null,
-    "inline": 30,
-    "conflicted": 739,
+    "inline": 40,
+    "conflicted": 742,
     "failed": null,
-    "held": 1545,
-    "retry": 44,
-    "parked": 495
+    "held": 1548,
+    "retry": null,
+    "parked": 497
    },
    "cur": [],
    "ld": [
@@ -678,12 +620,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-18T01:13:52Z",
-    "ld": 2.58,
+    "at": "2026-11-18T01:16:49Z",
+    "ld": 2.39,
     "c": 8,
     "sb": 0,
     "dk": [
-     16.8,
+     19.9,
      228.3
     ],
     "ss": [
@@ -693,12 +635,12 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-18T01:08:08Z",
-    "ld": 2.69,
+    "at": "2026-11-18T01:15:42Z",
+    "ld": 1.68,
     "c": 12,
     "sb": 0,
     "dk": [
-     311.8,
+     311.6,
      926.4
     ],
     "sn": []
@@ -714,15 +656,6 @@
    "e": "high",
    "t": "Work session \u2013 2 tasks",
    "at": "2026-11-17T19:10:01-05:00"
-  },
-  {
-   "w": "Operator",
-   "a": "Jeremy's Account",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session",
-   "at": "2026-11-17T18:26:07-05:00"
   }
  ],
  "reply": {
@@ -742,13 +675,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 2,
-  "lanes": 1,
-  "total": 3,
-  "at": "8:14 PM",
+  "main": 1,
+  "lanes": 0,
+  "total": 1,
+  "at": "8:17 PM",
   "why": "",
-  "at_iso": "2026-11-18T01:14:00+00:00",
+  "at_iso": "2026-11-18T01:17:00+00:00",
   "started": "7:10 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 7:10 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 8:14 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 7:10 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 8:17 PM ET</p></section>"
  }
 }

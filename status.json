@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-18T11:56:10.990412+00:00",
+ "at": "2026-11-18T11:59:12.440886+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -124,7 +124,7 @@
    "task": "[design] T-4886 PyWidget in premade lines",
    "model": "sonnet",
    "started": "2026-11-18T11:02:42.183Z",
-   "seconds": 3208,
+   "seconds": 3390,
    "finished": null
   },
   {
@@ -132,20 +132,20 @@
    "task": "[test] T-4887 gated second-tap caret test",
    "model": "opus",
    "started": "2026-11-18T11:14:20.521Z",
-   "seconds": 2510,
+   "seconds": 2691,
    "finished": null
-  },
+  }
+ ],
+ "who": "Maren, Idris",
+ "recent": [
   {
    "name": "pernille",
    "task": "[build] T-4645 settings check matches Swift decoder",
    "model": "sonnet",
    "started": "2026-11-18T11:27:20.238Z",
-   "seconds": 1730,
-   "finished": null
-  }
- ],
- "who": "Maren, Idris, Pernille",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-18T11:58:02.349000+00:00"
+  },
   {
    "name": "pernille",
    "task": "[review] T-4876 long-line caret review",
@@ -169,20 +169,12 @@
    "started": "2026-11-18T10:35:31.351Z",
    "seconds": null,
    "finished": "2026-11-18T11:04:32.695000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[review] T-4885 PyWidget name strings review",
-   "model": "opus",
-   "started": "2026-11-18T10:55:51.583Z",
-   "seconds": null,
-   "finished": "2026-11-18T11:02:19.753000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 487,
+  "runnable_count": 486,
   "blocked_count": 34
  },
  "meter": {
@@ -231,7 +223,7 @@
   "week_pct": 50.16,
   "usage_pct": 53.3,
   "work_pct": 82.4,
-  "read_at": "2026-11-18T11:56:00+00:00",
+  "read_at": "2026-11-18T11:59:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -306,7 +298,7 @@
  "lock_in": {
   "on": false,
   "pool": 12,
-  "at": "2026-11-18T06:56:00-05:00",
+  "at": "2026-11-18T06:59:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -340,10 +332,10 @@
   },
   {
    "name": "Pernille",
-   "state": "running",
-   "task": "[build] T-4645 settings check matches Swift decoder",
-   "model": "sonnet",
-   "since": "2026-11-18T11:27:20.238Z",
+   "state": "next",
+   "task": "Pernille, P0, Investor an Investor c6963972184 (6:23 PM...",
+   "model": null,
+   "since": null,
    "next": []
   },
   {
@@ -390,15 +382,6 @@
     "at": "2026-11-18T11:14:20.521Z",
     "o": "c",
     "task": "T-4887"
-   },
-   {
-    "w": "Pernille",
-    "k": "build",
-    "t": "Make the settings check refuse what the app cannot read",
-    "m": "sonnet",
-    "at": "2026-11-18T11:27:20.238Z",
-    "o": "c",
-    "task": "T-4645"
    }
   ],
   "src": "plan",
@@ -477,6 +460,11 @@
   "done": [
    {
     "w": "Pernille",
+    "t": "The check on a premade's settings now refuses everything the app could not read, so one typo can...",
+    "at": "2026-11-18T06:57:00-05:00"
+   },
+   {
+    "w": "Pernille",
     "t": "An independent check of the change that puts the editor's caret under the finger on long lines:...",
     "at": "2026-11-18T06:07:00-05:00"
    },
@@ -484,22 +472,21 @@
     "w": "Idris",
     "t": "The editor's backup suggestions now match typed words whatever their capitals, so typing a...",
     "at": "2026-11-18T06:04:00-05:00"
-   },
-   {
-    "w": "Idris",
-    "t": "An independent check confirmed the eleven widget lines now spell the product PyWidget the...",
-    "at": "2026-11-18T06:01:00-05:00"
    }
   ],
   "count": {
-   "next": 487,
+   "next": 486,
    "wait": 32,
    "blocked": 2,
    "you": 9
   },
   "fin": {
-   "n": 21,
+   "n": 22,
    "rows": [
+    [
+     "T-4645",
+     "Make the settings check..."
+    ],
     [
      "T-4876",
      "Check the long-line caret change"
@@ -519,10 +506,6 @@
     [
      "T-4774",
      "Measure what one refresh tap..."
-    ],
-    [
-     "T-4803",
-     "Make the tap check's record..."
     ]
    ]
   }
@@ -566,42 +549,42 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-18T11:55:55Z",
+  "at": "2026-11-18T11:58:18Z",
   "s": {
    "T-0011": [
     "mergeq",
     "1st to merge",
-    1795001935672
+    1795001898580
    ],
    "T-4533": [
     "mergeq",
     "2nd to merge",
-    1794988075672
+    1794988098580
    ],
    "T-4301": [
     "mergeq",
     "3rd to merge",
-    1794991075672
+    1794991098580
    ],
    "T-4644": [
     "mergeq",
     "3rd to merge",
-    1794991075672
+    1794991098580
    ],
    "T-4574": [
     "mergeq",
     "5th to merge",
-    1794992515672
+    1794992538580
    ],
    "T-4762": [
     "mergeq",
     "6th to merge",
-    1794994675672
+    1794994698580
    ],
    "T-4748": [
     "mergeq",
     "8th to merge",
-    1795002355672
+    1795002378580
    ],
    "T-4645": [
     "mergetest",
@@ -611,12 +594,12 @@
    "T-4887": [
     "merging",
     "Mac tests at the main gate",
-    1795002355672
+    1795002318580
    ],
    "T-4886": [
     "merging",
     "Mac tests at the main gate",
-    1795002355672
+    1795002318580
    ],
    "T-4581": [
     "testing",
@@ -666,12 +649,11 @@
    "T-4872": "Pernille",
    "T-4752": "Maren",
    "T-4763": "Maren",
-   "T-4663": "Idris",
-   "T-4861": "Pernille"
+   "T-4663": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-18T11:55:55Z",
+  "at": "2026-11-18T11:58:18Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -684,12 +666,12 @@
    },
    "m": {
     "checking": null,
-    "inline": 174,
-    "conflicted": 523,
+    "inline": 176,
+    "conflicted": 525,
     "failed": null,
-    "held": 2186,
+    "held": 2189,
     "retry": null,
-    "parked": 832
+    "parked": 834
    },
    "cur": [],
    "ld": [
@@ -699,16 +681,16 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-18T11:55:27Z",
-    "ld": 25.7,
+    "at": "2026-11-18T11:57:07Z",
+    "ld": 23.69,
     "c": 8,
     "sb": 3,
     "dk": [
-     18.8,
+     17.9,
      228.3
     ],
     "ss": [
-     172.1,
+     171.4,
      953.7
     ],
     "sn": [
@@ -769,13 +751,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 3,
+  "main": 2,
   "lanes": 1,
-  "total": 4,
-  "at": "6:56 AM",
+  "total": 3,
+  "at": "6:59 AM",
   "why": "",
-  "at_iso": "2026-11-18T11:56:00+00:00",
+  "at_iso": "2026-11-18T11:59:00+00:00",
   "started": "4:07 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 3, started 4:07 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 6:56 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 4:07 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 6:59 AM ET</p></section>"
  }
 }

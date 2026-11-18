@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-18T07:38:28.817660+00:00",
+ "at": "2026-11-18T07:41:35.405579+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -128,22 +128,30 @@
    "task": "[build] T-4688 Developer mode for Pro",
    "model": "opus",
    "started": "2026-11-18T05:56:56.560Z",
-   "seconds": 6092,
+   "seconds": 6278,
    "finished": null,
    "effort": "high"
   },
+  {
+   "name": "pernille",
+   "task": "[build] T-4860 any handler exception as user error",
+   "model": "opus",
+   "started": "2026-11-18T07:40:38.788Z",
+   "seconds": 56,
+   "finished": null,
+   "effort": "high"
+  }
+ ],
+ "who": "Idris, Pernille",
+ "recent": [
   {
    "name": "idris",
    "task": "[review] T-4854 T-4859 button run path reviews",
    "model": "opus",
    "started": "2026-11-18T07:31:54.893Z",
-   "seconds": 393,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Idris x2",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-18T07:40:22.761000+00:00"
+  },
   {
    "name": "pernille",
    "task": "[build] T-4767 button handler exit as error",
@@ -164,7 +172,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 488,
+  "runnable_count": 487,
   "blocked_count": 35
  },
  "meter": {
@@ -213,7 +221,7 @@
   "week_pct": 46.38,
   "usage_pct": 53.1,
   "work_pct": 80.8,
-  "read_at": "2026-11-18T07:38:00+00:00",
+  "read_at": "2026-11-18T07:41:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -363,7 +371,7 @@
  "lock_in": {
   "on": false,
   "pool": 10,
-  "at": "2026-11-18T02:38:00-05:00",
+  "at": "2026-11-18T02:41:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -390,11 +398,12 @@
   },
   {
    "name": "Pernille",
-   "state": "next",
-   "task": "Pernille, P0, Investor an Investor c6963972184 (6:23 PM...",
-   "model": null,
-   "since": null,
-   "next": []
+   "state": "running",
+   "task": "[build] T-4860 any handler exception as user error",
+   "model": "opus",
+   "since": "2026-11-18T07:40:38.788Z",
+   "next": [],
+   "effort": "high"
   },
   {
    "name": "Odalys",
@@ -442,14 +451,14 @@
     "task": "T-4688"
    },
    {
-    "w": "Idris",
-    "k": "review",
-    "t": "Review the button args number limit",
+    "w": "Pernille",
+    "k": "build",
+    "t": "Treat any exception a button handler raises as the script's",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-18T07:31:54.893Z",
+    "at": "2026-11-18T07:40:38.788Z",
     "o": "c",
-    "task": "T-4854"
+    "task": "T-4860"
    }
   ],
   "src": "plan",
@@ -527,30 +536,38 @@
   ],
   "done": [
    {
+    "w": "Idris",
+    "t": "The check that a widget button refuses numbers too large to pass safely was reviewed: the app's...",
+    "at": "2026-11-18T02:40:00-05:00"
+   },
+   {
+    "w": "Idris",
+    "t": "A widget button whose Python code calls exit now shows as the script's own error, and the widget...",
+    "at": "2026-11-18T02:40:00-05:00"
+   },
+   {
     "w": "Pernille",
     "t": "When a widget button's code or its drawing code stops itself early with sys.exit(), the run now...",
     "at": "2026-11-18T02:31:00-05:00"
-   },
-   {
-    "w": "Pernille",
-    "t": "A tap on a widget button now runs its Python action and redraws the widget in one go, and...",
-    "at": "2026-11-18T01:36:00-05:00"
-   },
-   {
-    "w": "Operator",
-    "t": "Main's own tests pass again on a clean copy of main (3303c72a9), so finished work is no longer...",
-    "at": "2026-11-18T00:58:00-05:00"
    }
   ],
   "count": {
-   "next": 488,
+   "next": 487,
    "wait": 32,
    "blocked": 3,
    "you": 10
   },
   "fin": {
-   "n": 2,
+   "n": 4,
    "rows": [
+    [
+     "T-4854",
+     "Review the button args..."
+    ],
+    [
+     "T-4859",
+     "Check finished work before..."
+    ],
     [
      "T-4767",
      "Treat a button handler's..."
@@ -601,19 +618,24 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-18T07:38:28Z",
+  "at": "2026-11-18T07:41:21Z",
   "s": {
    "T-4301": [
     "mergetest",
-    "Xcode checks on the MacBook",
-    1794987448817
+    "Xcode checks on the MacBook, 1st to merge",
+    1794987441709
    ],
    "T-4688": [
     "merging",
-    "Mac tests at the main gate",
-    1794986788817
+    "Mac tests at the main gate \u00b7 8 groups of tests done",
+    1794986781709
    ],
-   "T-4574": [
+   "T-4533": [
+    "testing",
+    "Mac Mini \u00b7 test",
+    null
+   ],
+   "T-4784": [
     "testing",
     "Mac Mini \u00b7 test",
     null
@@ -621,55 +643,44 @@
    "T-4771": [
     "testq",
     "1st for a Simulator",
-    1794987328817
+    1794987381709
    ],
    "T-4783": [
     "testq",
     "1st for a Simulator",
-    1794987328817
+    1794987381709
    ],
-   "T-4533": [
+   "T-4574": [
     "testq",
     "2nd for a Simulator",
-    1794987448817
-   ],
-   "T-4784": [
-    "testq",
-    "2nd for a Simulator",
-    1794987448817
-   ],
-   "T-4854": [
-    "merged",
-    "on main 2:17 AM ET",
-    1794986234000,
-    ""
+    1794987621709
    ]
   },
   "nm": {
    "T-4301": "Read fresh Pro gates after a queued wait",
    "T-4688": "Build a Developer mode for testing Pro",
-   "T-4574": "Keep the launcher's app queries out of shipped builds",
-   "T-4771": "Gutter marks redraw quickly and stay right while typing",
-   "T-4783": "Keep the gutter mark on its line after an edit",
    "T-4533": "Make the premade settings save sturdier on disk errors",
    "T-4784": "Pin the refresh glyph's button style in a test",
-   "T-4854": "Review the button args number limit"
+   "T-4771": "Gutter marks redraw quickly and stay right while typing",
+   "T-4783": "Keep the gutter mark on its line after an edit",
+   "T-4574": "Keep the launcher's app queries out of shipped builds"
   },
   "wk": {
    "T-4301": "Idris",
    "T-4688": "Idris",
-   "T-4574": "Idris",
-   "T-4771": "Idris",
-   "T-4783": "Idris",
    "T-4533": "Pernille",
    "T-4784": "Idris",
+   "T-4771": "Idris",
+   "T-4783": "Idris",
+   "T-4574": "Idris",
    "T-4854": "Idris",
+   "T-4859": "Idris",
    "T-4767": "Pernille",
    "T-4564": "Pernille"
   }
  },
  "ln": {
-  "at": "2026-11-18T07:38:28Z",
+  "at": "2026-11-18T07:41:21Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -681,13 +692,13 @@
     "parked": 11
    },
    "m": {
-    "checking": 1,
+    "checking": 4,
     "inline": null,
-    "conflicted": 575,
+    "conflicted": 577,
     "failed": null,
-    "held": 1929,
+    "held": 1932,
     "retry": null,
-    "parked": 416
+    "parked": 419
    },
    "cur": [
     [
@@ -696,7 +707,7 @@
      ],
      "iPhone app tests",
      "MacBook",
-     1
+     4
     ]
    ],
    "ld": [
@@ -706,12 +717,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-18T07:38:30Z",
-    "ld": 17.76,
+    "at": "2026-11-18T07:40:34Z",
+    "ld": 15.58,
     "c": 8,
     "sb": 2,
     "dk": [
-     15.7,
+     15.0,
      228.3
     ],
     "ss": [
@@ -743,7 +754,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 4 tasks",
+   "t": "Work session \u2013 5 tasks",
    "at": "2026-11-18T00:48:26-05:00"
   },
   {
@@ -821,10 +832,10 @@
   "main": 2,
   "lanes": 6,
   "total": 8,
-  "at": "2:38 AM",
+  "at": "2:41 AM",
   "why": "",
-  "at_iso": "2026-11-18T07:38:00+00:00",
+  "at_iso": "2026-11-18T07:41:00+00:00",
   "started": "12:47 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>8</b> agents running now</p><p class=\"an-sub\">Main session 2, started 12:47 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 6 sessions \u00b7 as of 2:38 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>8</b> agents running now</p><p class=\"an-sub\">Main session 2, started 12:47 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 6 sessions \u00b7 as of 2:41 AM ET</p></section>"
  }
 }

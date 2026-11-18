@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-18T20:05:14.553344+00:00",
+ "at": "2026-11-18T20:08:17.598918+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -137,7 +137,7 @@
    "task": "[tools] T-4907 keep main green after every land",
    "model": "opus",
    "started": "2026-11-18T19:11:56.141Z",
-   "seconds": 3198,
+   "seconds": 3381,
    "finished": null,
    "effort": "high"
   },
@@ -146,7 +146,7 @@
    "task": "[tools] T-4902 Investor P0 process lines past limit",
    "model": "opus",
    "started": "2026-11-18T19:12:07.311Z",
-   "seconds": 3187,
+   "seconds": 3370,
    "finished": null,
    "effort": "high"
   },
@@ -155,7 +155,7 @@
    "task": "[build] T-4773 time next run from widget ask",
    "model": "opus",
    "started": "2026-11-18T19:52:27.248Z",
-   "seconds": 767,
+   "seconds": 950,
    "finished": null,
    "effort": "high"
   }
@@ -223,7 +223,7 @@
   "week_pct": 51.56,
   "usage_pct": 51.3,
   "work_pct": 81.5,
-  "read_at": "2026-11-18T20:05:00+00:00",
+  "read_at": "2026-11-18T20:08:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -253,14 +253,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions wait until 20 GB is free.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-18T14:58:00-05:00",
+   "at": "2026-11-18T15:05:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-18T15:05:00-05:00",
+  "at": "2026-11-18T15:08:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -500,37 +500,37 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-18T20:05:02Z",
+  "at": "2026-11-18T20:08:17Z",
   "s": {
+   "T-4773": [
+    "merging",
+    "Mac tests at the main gate",
+    1795032497598
+   ],
    "T-4907": [
     "merging",
     "Mac tests at the main gate",
-    1795031642999
-   ],
-   "T-4773": [
-    "testing",
-    "MacBook \u00b7 test",
-    null
+    1795031657598
    ],
    "T-4902": [
     "testing",
     "its own tests, in its copy",
-    1795031642999
+    1795031657598
    ]
   },
   "nm": {
-   "T-4907": "Keep main green after every land",
    "T-4773": "Time the next run from the widget's own ask",
+   "T-4907": "Keep main green after every land",
    "T-4902": "Let Investor-asked P0 process lines start past the limit"
   },
   "wk": {
-   "T-4907": "Odalys",
    "T-4773": "Idris",
+   "T-4907": "Odalys",
    "T-4902": "Odalys"
   }
  },
  "ln": {
-  "at": "2026-11-18T20:05:02Z",
+  "at": "2026-11-18T20:08:17Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -544,11 +544,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 510,
+    "conflicted": 514,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1074
+    "parked": 1078
    },
    "cur": [],
    "ld": [
@@ -558,12 +558,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-18T20:04:40Z",
-    "ld": 9.19,
+    "at": "2026-11-18T20:07:52Z",
+    "ld": 5.57,
     "c": 8,
     "sb": 0,
     "dk": [
-     13.4,
+     13.8,
      228.3
     ],
     "ss": [
@@ -573,12 +573,12 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-18T20:00:36Z",
-    "ld": 0.38,
+    "at": "2026-11-18T20:05:27Z",
+    "ld": 41.43,
     "c": 12,
     "sb": 0,
     "dk": [
-     305.3,
+     305.2,
      926.4
     ],
     "sn": []
@@ -615,10 +615,10 @@
   "main": 3,
   "lanes": 0,
   "total": 3,
-  "at": "3:05 PM",
+  "at": "3:08 PM",
   "why": "",
-  "at_iso": "2026-11-18T20:05:00+00:00",
+  "at_iso": "2026-11-18T20:08:00+00:00",
   "started": "2:09 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 2:09 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 3:05 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 2:09 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 3:08 PM ET</p></section>"
  }
 }

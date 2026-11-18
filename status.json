@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-18T05:12:05.119123+00:00",
+ "at": "2026-11-18T05:15:08.066114+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -122,7 +122,7 @@
    "task": "[tools] T-4829 bottleneck watch on tick",
    "model": "opus",
    "started": "2026-11-18T03:44:30.048Z",
-   "seconds": 5255,
+   "seconds": 5438,
    "finished": null,
    "effort": "high"
   }
@@ -149,7 +149,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 477,
+  "runnable_count": 478,
   "blocked_count": 34
  },
  "meter": {
@@ -199,7 +199,7 @@
   "week_pct": 46.38,
   "usage_pct": 53.7,
   "work_pct": 81.3,
-  "read_at": "2026-11-18T05:12:00+00:00",
+  "read_at": "2026-11-18T05:15:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -236,7 +236,7 @@
  "lock_in": {
   "on": false,
   "pool": 9,
-  "at": "2026-11-18T00:12:00-05:00",
+  "at": "2026-11-18T00:15:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -406,7 +406,7 @@
    }
   ],
   "count": {
-   "next": 477,
+   "next": 478,
    "wait": 32,
    "blocked": 2,
    "you": 9
@@ -460,59 +460,59 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-18T05:12:05Z",
+  "at": "2026-11-18T05:14:52Z",
   "s": {
    "T-4796": [
     "merging",
     "Host checks on the Mac mini",
-    1794978485119
+    1794978532956
    ],
    "T-4700": [
     "mergeq",
     "1st to merge",
-    1794974885119
-   ],
-   "T-4787": [
-    "mergeq",
-    "2nd to merge",
-    1794978485119
+    1794974932956
    ],
    "T-4803": [
     "mergeq",
     "2nd to merge",
-    1794978485119
+    1794975232956
+   ],
+   "T-4787": [
+    "mergeq",
+    "3rd to merge",
+    1794978472956
    ],
    "T-4784": [
     "mergeq",
     "4th to merge",
-    1794977945119
+    1794977992956
    ],
    "T-4442": [
     "mergeq",
     "5th to merge",
-    1794975305119
+    1794975352956
    ],
    "T-4516": [
     "mergeq",
     "6th to merge",
-    1794977585119
+    1794977572956
    ],
    "T-0011": [
     "mergeq",
     "7th to merge",
-    1794977525119
+    1794977512956
    ],
    "T-4829": [
     "merging",
     "Mac tests at the main gate",
-    1794978485119
+    1794978532956
    ]
   },
   "nm": {
    "T-4796": "Say which premades carry the Pro tag",
    "T-4700": "Check finished work before it ships",
-   "T-4787": "Count failed merges by cause: bad test or broken code",
    "T-4803": "Make the tap check's record match the iPad ruling",
+   "T-4787": "Count failed merges by cause: bad test or broken code",
    "T-4784": "Pin the refresh glyph's button style in a test",
    "T-4442": "Tidy the bundled first renders' small edges",
    "T-4516": "Prove the premade settings routes in a UI test",
@@ -522,8 +522,8 @@
   "wk": {
    "T-4796": "Ines",
    "T-4700": "Pernille",
-   "T-4787": "Odalys",
    "T-4803": "Idris",
+   "T-4787": "Odalys",
    "T-4784": "Idris",
    "T-4442": "Idris",
    "T-4516": "Idris",
@@ -533,7 +533,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-18T05:12:05Z",
+  "at": "2026-11-18T05:14:52Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -545,13 +545,13 @@
     "parked": 10
    },
    "m": {
-    "checking": 4,
-    "inline": 19,
-    "conflicted": 428,
+    "checking": 6,
+    "inline": 23,
+    "conflicted": 431,
     "failed": null,
-    "held": 1783,
-    "retry": 32,
-    "parked": 348
+    "held": 1785,
+    "retry": 35,
+    "parked": 351
    },
    "cur": [
     [
@@ -560,7 +560,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     4
+     6
     ]
    ],
    "ld": [
@@ -570,12 +570,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-18T05:11:20Z",
-    "ld": 36.01,
+    "at": "2026-11-18T05:14:53Z",
+    "ld": 35.66,
     "c": 8,
     "sb": 3,
     "dk": [
-     8.0,
+     7.8,
      228.3
     ],
     "ss": [
@@ -609,23 +609,23 @@
    "m": "opus",
    "e": "high",
    "t": "Work session \u2013 2 tasks",
-   "at": "2026-11-18T00:07:25-05:00"
+   "at": "2026-11-18T00:13:36-05:00"
   }
  ],
  "reply": {
-  "sent": "2026-11-18T05:06:22Z",
-  "seconds": 58.0
+  "sent": "2026-11-18T05:09:19Z",
+  "seconds": 256.0
  },
  "inbox": [
   {
-   "id": "c6969694208",
+   "id": "c6969786057",
    "state": "received",
    "position": 1,
    "tasks": {
     "open": 0,
     "done": 0
    },
-   "title": "Are there current plans to implement..."
+   "title": "Explain the difference between..."
   }
  ],
  "trimmed": [
@@ -644,10 +644,10 @@
   "main": 1,
   "lanes": 0,
   "total": 1,
-  "at": "12:12 AM",
+  "at": "12:15 AM",
   "why": "",
-  "at_iso": "2026-11-18T05:12:00+00:00",
+  "at_iso": "2026-11-18T05:15:00+00:00",
   "started": "10:22 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 10:22 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 12:12 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 10:22 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 12:15 AM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-18T03:26:26.283753+00:00",
+ "at": "2026-11-18T03:29:29.656590+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -116,31 +116,50 @@
   "landed": 42,
   "failed": 8
  },
- "workers": [],
- "who": "",
+ "workers": [
+  {
+   "name": "odalys",
+   "task": "[tools] T-4806 land merge time-out fixes",
+   "model": "opus",
+   "started": "2026-11-18T03:27:34.411Z",
+   "seconds": 115,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-4817 bottleneck watcher",
+   "model": "opus",
+   "started": "2026-11-18T03:27:43.614Z",
+   "seconds": 106,
+   "finished": null,
+   "effort": "high"
+  }
+ ],
+ "who": "Odalys x2",
  "recent": [],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 459,
+  "runnable_count": 462,
   "blocked_count": 34
  },
  "meter": {
   "five_hour": {
    "pct": 16.0,
-   "resets_at": "2026-11-18T05:09:59.764832+00:00",
+   "resets_at": "2026-11-18T00:10:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-17T22:21:25.951433-05:00",
-   "source": "usage",
+   "read_at": "2026-11-17T22:27:47.102809-05:00",
+   "source": "live",
    "left": 84.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 40.0,
-   "resets_at": "2026-11-22T06:59:59.764850+00:00",
+   "resets_at": "2026-11-22T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-17T22:21:25.951433-05:00",
-   "source": "usage",
+   "read_at": "2026-11-17T22:27:47.102809-05:00",
+   "source": "live",
    "left": 60.0,
    "left_words": "of your weekly allowance left"
   },
@@ -151,7 +170,7 @@
    "read_at": "2026-11-17T22:21:25.951433-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-17T22:21:25.951433-05:00"
+  "read_at": "2026-11-17T22:27:47.102809-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -171,7 +190,7 @@
   "week_pct": 46.38,
   "usage_pct": 53.7,
   "work_pct": 81.3,
-  "read_at": "2026-11-18T03:26:00+00:00",
+  "read_at": "2026-11-18T03:29:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -183,6 +202,7 @@
     "e": "high",
     "at": "2026-11-17T22:18:06-05:00",
     "n": "Evan",
+    "d": 1,
     "src": "plan-a"
    },
    {
@@ -219,6 +239,7 @@
     "e": "high",
     "at": "2026-11-17T22:18:05-05:00",
     "n": "Evan",
+    "d": 1,
     "src": "plan-a"
    },
    {
@@ -289,23 +310,23 @@
   }
  ],
  "disk": {
-  "free_gb": 15,
+  "free_gb": 13,
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 174
+   "free_gb": 175
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-17T22:18:00-05:00",
+   "at": "2026-11-17T22:27:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 8,
-  "at": "2026-11-17T22:26:00-05:00",
+  "at": "2026-11-17T22:29:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -322,6 +343,15 @@
  },
  "lanes": [
   {
+   "name": "Odalys",
+   "state": "running",
+   "task": "[tools] T-4806 land merge time-out fixes",
+   "model": "opus",
+   "since": "2026-11-18T03:27:34.411Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
    "name": "Idris",
    "state": "next",
    "task": "Idris, P1, from T-4755 (Investor an Investor...",
@@ -333,14 +363,6 @@
    "name": "Pernille",
    "state": "next",
    "task": "Pernille, P0, Investor an Investor c6963972184 (6:23 PM...",
-   "model": null,
-   "since": null,
-   "next": []
-  },
-  {
-   "name": "Odalys",
-   "state": "next",
-   "task": "Odalys, P0, Investor an Investor c6963972184 (6:23 PM...",
    "model": null,
    "since": null,
    "next": []
@@ -371,7 +393,28 @@
   }
  ],
  "tasks": {
-  "run": [],
+  "run": [
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Fix the causes of merge time-outs and runner errors",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-18T03:27:34.411Z",
+    "o": "c",
+    "task": "T-4806"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Turn every bottleneck into a fix task automatically",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-18T03:27:43.614Z",
+    "o": "c",
+    "task": "T-4817"
+   }
+  ],
   "src": "plan",
   "open": [
    {
@@ -463,7 +506,7 @@
    }
   ],
   "count": {
-   "next": 459,
+   "next": 462,
    "wait": 32,
    "blocked": 2,
    "you": 9
@@ -512,86 +555,86 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-18T03:26:03Z",
+  "at": "2026-11-18T03:29:29Z",
   "s": {
    "T-4659": [
     "merging",
     "Host checks on the Mac mini",
-    1794971823816
+    1794971789656
    ],
    "T-4750": [
     "merging",
     "Host checks on the Mac mini",
-    1794971823816
+    1794971789656
    ],
    "T-4761": [
     "merging",
     "Host checks on the Mac mini",
-    1794971823816
+    1794971789656
    ],
-   "T-4643": [
-    "mergetest",
-    "iPhone tests on the MacBook",
-    null
-   ],
-   "T-4436": [
+   "T-4772": [
     "testing",
     "Mac Mini \u00b7 test",
     null
    ],
-   "T-4784": [
+   "T-4773": [
     "testing",
     "Mac Mini \u00b7 test",
     null
+   ],
+   "T-4806": [
+    "testing",
+    "its own tests, in its copy",
+    1794972569656
    ],
    "T-4759": [
     "testq",
     "1st for a Simulator",
-    1794972183816
+    1794972209656
    ],
    "T-4789": [
     "testq",
     "1st for a Simulator",
-    1794972183816
+    1794972209656
    ],
-   "T-4772": [
+   "T-4436": [
     "testq",
     "2nd for a Simulator",
-    1794972243816
+    1794972509656
    ],
-   "T-4773": [
+   "T-4784": [
     "testq",
     "2nd for a Simulator",
-    1794972243816
+    1794972509656
    ]
   },
   "nm": {
    "T-4659": "Prove a widget button's tap reaches its Python handler",
    "T-4750": "Check network fetch cases on the Swift side too",
    "T-4761": "Keep one layout for the widget state format",
-   "T-4643": "Make the size ladder measure each rung more than once",
-   "T-4436": "Tidy the refresh tap's small edges",
-   "T-4784": "Pin the refresh glyph's button style in a test",
+   "T-4772": "Prove a refresh tap redraws the widget",
+   "T-4773": "Time the next run from the widget's own ask",
+   "T-4806": "Fix the causes of merge time-outs and runner errors",
    "T-4759": "Check finished work before it ships",
    "T-4789": "Check finished work before it ships",
-   "T-4772": "Prove a refresh tap redraws the widget",
-   "T-4773": "Time the next run from the widget's own ask"
+   "T-4436": "Tidy the refresh tap's small edges",
+   "T-4784": "Pin the refresh glyph's button style in a test"
   },
   "wk": {
    "T-4659": "Idris",
    "T-4750": "Idris",
    "T-4761": "Idris",
-   "T-4643": "Idris",
-   "T-4436": "Idris",
-   "T-4784": "Idris",
+   "T-4772": "Idris",
+   "T-4773": "Idris",
+   "T-4806": "Odalys",
    "T-4759": "Pernille",
    "T-4789": "Pernille",
-   "T-4772": "Idris",
-   "T-4773": "Idris"
+   "T-4436": "Idris",
+   "T-4784": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-18T03:26:03Z",
+  "at": "2026-11-18T03:29:29Z",
   "mq": {
    "n": {
     "checking": 3,
@@ -603,13 +646,13 @@
     "parked": 7
    },
    "m": {
-    "checking": 9,
+    "checking": 13,
     "inline": null,
-    "conflicted": 13,
+    "conflicted": 16,
     "failed": null,
-    "held": 1677,
+    "held": 1680,
     "retry": null,
-    "parked": 513
+    "parked": 517
    },
    "cur": [
     [
@@ -618,7 +661,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     9
+     13
     ],
     [
      [
@@ -626,7 +669,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     9
+     13
     ],
     [
      [
@@ -634,7 +677,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     9
+     13
     ]
    ],
    "ld": [
@@ -644,12 +687,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-18T03:26:05Z",
-    "ld": 71.59,
+    "at": "2026-11-18T03:29:06Z",
+    "ld": 65.23,
     "c": 8,
-    "sb": 3,
+    "sb": 2,
     "dk": [
-     14.1,
+     13.1,
      228.3
     ],
     "ss": [
@@ -658,17 +701,16 @@
     ],
     "sn": [
      "t4772-27",
-     "iPhone 17e",
      "t4772-26"
     ]
    },
    "macbook": {
-    "at": "2026-11-18T03:06:56Z",
-    "ld": 0.69,
+    "at": "2026-11-18T03:23:13Z",
+    "ld": 15.38,
     "c": 12,
     "sb": 0,
     "dk": [
-     311.0,
+     311.2,
      926.4
     ],
     "sn": []
@@ -682,7 +724,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session",
+   "t": "Work session \u2013 2 tasks",
    "at": "2026-11-17T22:22:45-05:00"
   },
   {
@@ -700,7 +742,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 2 tasks",
+   "t": "Work session \u2013 1 task",
    "at": "2026-11-17T22:18:05-05:00"
   },
   {
@@ -738,13 +780,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 0,
+  "main": 2,
   "lanes": 4,
-  "total": 4,
-  "at": "10:26 PM",
+  "total": 6,
+  "at": "10:29 PM",
   "why": "",
-  "at_iso": "2026-11-18T03:26:00+00:00",
+  "at_iso": "2026-11-18T03:29:00+00:00",
   "started": "10:22 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 0, started 10:22 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 10:26 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 2, started 10:22 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 10:29 PM ET</p></section>"
  }
 }

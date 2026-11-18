@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-18T02:09:21.163569+00:00",
+ "at": "2026-11-18T02:12:22.347482+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -146,7 +146,7 @@
    "task": "[tools] T-4806 fix merge time-outs",
    "model": "opus",
    "started": "2026-11-18T01:18:02.621Z",
-   "seconds": 3078,
+   "seconds": 3259,
    "finished": null,
    "effort": "high"
   },
@@ -155,7 +155,7 @@
    "task": "[test] T-4807 fix bad tests that failed merges",
    "model": "opus",
    "started": "2026-11-18T01:44:52.149Z",
-   "seconds": 1469,
+   "seconds": 1650,
    "finished": null,
    "effort": "high"
   },
@@ -164,7 +164,7 @@
    "task": "[tools] T-4814 split the merge limit",
    "model": "opus",
    "started": "2026-11-18T02:08:31.145Z",
-   "seconds": 50,
+   "seconds": 231,
    "finished": null,
    "effort": "high"
   },
@@ -173,7 +173,7 @@
    "task": "[tools] T-4810 every wait names a task or issue",
    "model": "opus",
    "started": "2026-11-18T02:08:44.734Z",
-   "seconds": 36,
+   "seconds": 217,
    "finished": null,
    "effort": "high"
   },
@@ -182,7 +182,7 @@
    "task": "[site] T-4813 Home's numbers update live",
    "model": "opus",
    "started": "2026-11-18T02:08:56.638Z",
-   "seconds": 24,
+   "seconds": 205,
    "finished": null,
    "effort": "high"
   }
@@ -274,7 +274,7 @@
   "week_pct": 43.81,
   "usage_pct": 53.5,
   "work_pct": 81.2,
-  "read_at": "2026-11-18T02:09:00+00:00",
+  "read_at": "2026-11-18T02:12:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -295,7 +295,7 @@
   }
  ],
  "disk": {
-  "free_gb": 20,
+  "free_gb": 21,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -304,14 +304,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-17T21:06:00-05:00",
+   "at": "2026-11-17T21:12:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 7,
-  "at": "2026-11-17T21:09:00-05:00",
+  "at": "2026-11-17T21:12:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -597,87 +597,87 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-18T02:09:21Z",
+  "at": "2026-11-18T02:12:22Z",
   "s": {
    "T-4761": [
     "mergetest",
     "Xcode checks on the MacBook, 1st to merge",
-    1794966921163
+    1794966922347
    ],
    "T-4659": [
     "mergetest",
     "Xcode checks on the MacBook, 2nd to merge",
-    1794966921163
+    1794966922347
    ],
    "T-4643": [
     "mergeq",
     "3rd to merge",
-    1794961641163
+    1794961642347
    ],
    "T-4697": [
     "mergeq",
     "4th to merge",
-    1794961701163
+    1794961702347
    ],
    "T-4698": [
     "mergeq",
     "5th to merge",
-    1794961761163
+    1794961762347
    ],
    "T-4699": [
     "mergeq",
     "6th to merge",
-    1794961761163
+    1794961762347
    ],
    "T-4782": [
     "mergeq",
     "8th to merge",
-    1794962181163
+    1794962182347
    ],
    "T-4787": [
     "mergeq",
     "10th to merge",
-    1794962661163
+    1794962662347
    ],
    "T-4719": [
     "mergeq",
     "11th to merge",
-    1794963141163
+    1794963142347
    ],
    "T-4720": [
     "mergeq",
     "11th to merge",
-    1794963141163
+    1794963142347
    ],
    "T-4750": [
     "mergeq",
     "12th to merge",
-    1794963201163
+    1794963202347
    ],
    "T-4781": [
     "mergeq",
     "13th to merge",
-    1794964701163
+    1794964702347
    ],
    "T-4770": [
     "mergeq",
     "13th to merge",
-    1794964701163
+    1794964702347
    ],
    "T-4774": [
     "mergeq",
     "13th to merge",
-    1794964701163
+    1794964702347
+   ],
+   "T-4807": [
+    "merging",
+    "Mac tests at the main gate",
+    1794967942347
    ],
    "T-4806": [
     "merging",
     "Mac tests at the main gate",
-    1794967581163
-   ],
-   "T-4807": [
-    "testing",
-    "its own tests, in its copy",
-    1794966801163
+    1794967582347
    ]
   },
   "nm": {
@@ -695,8 +695,8 @@
    "T-4781": "Retest a fixed red on what failed, not every test",
    "T-4770": "Re-estimate the release date from measured build speed",
    "T-4774": "Measure what one refresh tap costs the app",
-   "T-4806": "Fix the causes of merge time-outs and runner errors",
-   "T-4807": "Fix every bad test that failed a merge"
+   "T-4807": "Fix every bad test that failed a merge",
+   "T-4806": "Fix the causes of merge time-outs and runner errors"
   },
   "wk": {
    "T-4761": "Idris",
@@ -713,14 +713,14 @@
    "T-4781": "Odalys",
    "T-4770": "Ines",
    "T-4774": "Idris",
-   "T-4806": "Odalys",
    "T-4807": "Pernille",
+   "T-4806": "Odalys",
    "T-0191": "Idris",
    "T-2268": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-18T02:09:21Z",
+  "at": "2026-11-18T02:12:22Z",
   "mq": {
    "n": {
     "checking": 2,
@@ -732,13 +732,13 @@
     "parked": 6
    },
    "m": {
-    "checking": 14,
-    "inline": 81,
-    "conflicted": 794,
+    "checking": 17,
+    "inline": 84,
+    "conflicted": 797,
     "failed": null,
-    "held": 1600,
+    "held": 1603,
     "retry": null,
-    "parked": 550
+    "parked": 553
    },
    "cur": [
     [
@@ -747,7 +747,7 @@
      ],
      "iPhone app tests, sent and waiting its turn",
      "MacBook",
-     14
+     17
     ],
     [
      [
@@ -755,7 +755,7 @@
      ],
      "iPhone app tests, sent and waiting its turn",
      "MacBook",
-     14
+     17
     ]
    ],
    "ld": [
@@ -765,12 +765,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-18T02:09:23Z",
-    "ld": 4.1,
+    "at": "2026-11-18T02:12:26Z",
+    "ld": 3.93,
     "c": 8,
     "sb": 0,
     "dk": [
-     21.0,
+     20.6,
      228.3
     ],
     "ss": [
@@ -799,21 +799,33 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 5 tasks",
-   "at": "2026-11-17T21:08:16-05:00"
+   "t": "Inbox \u2013 Evan's 9:10 PM Message on GitHub",
+   "at": "2026-11-17T21:10:30-05:00"
   }
  ],
  "reply": {
   "sent": "2026-11-18T02:06:34Z",
   "seconds": 101.0
  },
- "inbox": [],
+ "inbox": [
+  {
+   "id": "c6966883854",
+   "state": "received",
+   "position": 1,
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "Done. Though don't flag these moving..."
+  }
+ ],
  "trimmed": [
   "lane_next",
   "queue_text",
   "recent",
   "task_done",
   "fin_short",
+  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -825,10 +837,10 @@
   "main": 5,
   "lanes": 0,
   "total": 5,
-  "at": "9:09 PM",
+  "at": "9:12 PM",
   "why": "",
-  "at_iso": "2026-11-18T02:09:00+00:00",
+  "at_iso": "2026-11-18T02:12:00+00:00",
   "started": "7:10 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 5, started 7:10 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:09 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 5, started 7:10 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:12 PM ET</p></section>"
  }
 }

@@ -600,7 +600,7 @@ Runs log (⋯ → Runs): one row per run with the same icon and word, run number
    | Entitlement not read yet (first frame after launch) | Pro row with an empty detail, still tappable; no spinner (`Transaction.currentEntitlements` is local) |
    | Not purchased / active / pending (Ask to Buy) | detail `e.settings.off` / `e.settings.on` / `set.pro.pending`; the Restore row stays in every state, as s5.7 keeps it on the purchased screen |
    | Restoring | frame 3: row disabled (trait `.notEnabled`), spinner, `btn.restoring` |
-   | Restore result | frame 4: footer under the Pro group, and posted as a VoiceOver announcement; it clears when Settings is left |
+   | Restore result | frame 4: footer under the Pro group, and posted as a VoiceOver announcement; it lasts while Settings is on screen, across a push to the Pro screen. A purchase made there clears the "found nothing" and "failed" lines (T-4635); "restored" stays |
    | Refund or revocation (`Transaction.updates`) | detail back to `e.settings.off`; a chosen Pro theme falls back to Quill and Lumen at once |
    | Offline | rows unchanged; Restore ends in `set.restore.failed`; the Pro screen shows its own offline state (s5.7.4 row 6); a web row opens Safari's own error page |
    | C3, no product (`product: null`) | frame 5: no Pro group, no Restore, no Editor group |

@@ -110,6 +110,50 @@ Counts: High 0, Medium 5, Low 6.
   3. Show it can fail. Run once on a build with the `.handlesExternalEvents` line removed (a seeded mutation), and record
      that it is red there and green with the line. Without the red run, the test only guards behaviour that full-screen
      mode gives anyway.
+- T-4581 record (Idris, 2026-11-18): a real Home Screen widget tap, not `system.open`. **Red with the line removed, and
+  red with it restored too: the line does not stop a real widget tap from making a second window.** So no red-then-green
+  pair exists, and the test is not committed (it is red on main). Simulator "t3765-ipad" (4ECAF1BF-06BD-4DEA-AD2B-734266FBC9E7),
+  iOS 27.0, Debug, Windowed Apps set by the test, app uninstalled before each run. The test, `testRealWidgetTapGoesToAnOpenWindow`
+  (diff in scratch `T-4581-idris/t4581-real-tap-test.diff`, with run attachments), launches the app with
+  `-ui-scene-probe` (1 window: sessions=1 scenes=1), goes Home, adds the Python widget at small and sets it to Countdown
+  (WidgetKitCheckTests' steps), and taps it with the app in the background. The tap opens countdown's Events page and
+  Gallery, then `settle` reads the counts.
+  1. Line in, 6:44 AM ET, ops/runs/xcodebuild-20261118-064116.log: 1 executed, 1 failure at the first tap's count, "2
+     windows by their controls, want 1".
+  2. Line in, 6:51 AM ET, ops/runs/xcodebuild-20261118-065041.log, with every count logged: after the tap
+     `controls=2 probes=2 app=sessions=2 scenes=2`. One window holds the Gallery, the other the editor's More button.
+     xc.sh returned 75 (another waiter took the lock at a quiet spell, so xc.sh did not count it); the xcodebuild itself
+     ran to the end, in the foreground wait: 1 executed, 1 failure, same assertion.
+  3. Line removed (grep count of the modifier 0), 7:01 AM ET, ops/runs/xcodebuild-20261118-065900.log: 1 executed, 1
+     failure, the same counts, `sessions=2 scenes=2`.
+  The line is restored in the working copy (unchanged from main). Under `system.open` the same build stays at 1 session
+  (ops/plans/T-3764-handoff.md); under WidgetKit's tap it does not, with or without the line. That is T-3667's bug on
+  the path it was reported on, still open on iOS 27.0 in the Simulator; a real iPad was not used (<span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">ruling</span> #299). Fix and
+  re-test: T-4890 (this test, red then green), with T-4615, the same bug seen in Release under T-3765 on 11-16 (two
+  windows became three); one fix serves both.
+
+- **Red, then green, on a real widget tap (T-4890, Idris, 2026-11-18).** `testRealWidgetTapGoesToAnOpenWindow` places a
+  Countdown widget on the iPad Simulator's Home Screen (t3765-ipad, iOS 27.0, Windowed Apps, Debug) and taps it with the
+  app in the background, first with one window and then with two, asserting the probe's session and scene counts.
+  - Cause, from SpringBoard's own log of the red run: the tap is an icon launch ("source: Widget") that carries the link
+    as a URL action. For every open PyWidget scene SpringBoard logged "Scene is not suitable for primary role" with
+    `can=SELF CONTAINS[cdl] "pywidget:", prefers=SELF CONTAINS[cdl] "pywidget:"`, then made a new scene. So the
+    request's content identifier never contains `pywidget:`, and the line as written could not match it. (The
+    `system.open` path of T-3764 does match, which is why that test could not go red.)
+  - Fix: `.handlesExternalEvents(preferring: ["*"], allowing: ["*"])` in IDEScene (App/PyWidgetApp.swift).
+  - Red, main's code (base a91b7a6521, line `["pywidget:"]`) plus the test: ops/runs/xcodebuild-20261118-105507.log,
+    1 executed, 1 failure at the first tap: "one window, real widget tap: 2 windows by their controls, want 1", probe
+    `sessions=2 scenes=2`. The test then gained one step after that point (`backToEditor`, before the second window is
+    opened); the red assertion comes before it, so the step does not change this result.
+  - Green, with the fix: ops/runs/xcodebuild-20261118-111748.log, 1 executed, 0 failures; probe `sessions=1 scenes=1`
+    after the one-window tap and `sessions=2 scenes=2` after the two-window tap.
+  - An attempt between them (ops/runs/xcodebuild-20261118-110716.log) had the fix's 1/1 count but stopped at "no More
+    button on screen": the tap leaves the window on the Gallery list, which the added `backToEditor` step leaves.
+  - Whole unit target with the fix, same Simulator: ops/runs/xcodebuild-20261118-113020.log, 2099 executed, 17
+    skipped, red: 21 tests failed, all in ProStoreTests and StoreKitConfigTests ("every session purchase reaches the
+    app's StoreKit before the clear"). Those two classes alone are green with the fix (115617.log, 26/0) and without
+    it (115024.log, 26/0), so the red is how they run inside the full target on this Simulator, not this change.
+  - Not covered: Release and a real iPad (F4, T-4615).
 
 ### F4 (Medium, T-3765): the only tested path registers the scheme, and the shipping build does not; a real widget tap in Release is unverified
 

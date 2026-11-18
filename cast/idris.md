@@ -34,15 +34,11 @@ My notes. They are published on the company site, so nothing sensitive goes here
 ## Open (mine)
 
 
-- T-4311 11-15: -1200 named by SecureTransport code. Open: phone cases on T-4203.
-
-- T-4583 11-16: Patch 4 (tick_steps, feature_with_steps, before line) written and tested in T-4583-idris/wt, not landed: security-guard refused a diagnostic ps|grep whose pattern held "claude -p" (rule 14 stop). Open: the Investors/Operator say whether it may land. Lesson: never put that phrase in a command.
-
 - T-1882/T-0687 11-17: 6cf737c65b + 12998ef7c6 landed (2015/0); (2) of T-1882 was on main since 5b36a7808. Open: B5 wiring; T-0687 (b) T-4750/4751, (c) phone; reviews. Scratch T-0687-idris kept: t0687-swift-untested.patch not on main. Lesson: zsh never word-splits $F; read the notes before calling a part open.
 
 
 
-- T-3560/T-3280 11-17 9a71fd25dd: landed from <span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">parked</span> ref via main_gate (2025/0); T-3560 ticked. Open: T-3280 UI runs (testF/testM green, testF red mutant, Release); T-4239 work on parked/b/...004541 b5df5627e6. Lesson: gate land exits 75 at 540 s; rerun same command, it reads the same job.
+- T-3560/T-3280 11-17 9a71fd25dd: landed (2025/0); T-3560 ticked. 11-18 merge session: <span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">parked</span>/b/...004550 has nothing main lacks (code + 7 <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">rulings</span> all on main). Open: T-3280 UI runs (testF/testM green, testF red mutant, Release). Lesson: check git log main for an earlier landing before replaying a parked ref.
 
 - Parked a/...104308-59000 11-17: 7 of 8 landed. Open: T-1241 (guard refused ops path); T-3554/T-0550/T-0543 phone+review. Lesson: main_gate --task takes one id.
 
@@ -52,13 +48,13 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 - T-4858 11-18 22016c0c82 (scratch T-4858-idris, not landed): extension AppTransaction bound 2 s + .unknown held 15 min, late answer kept; test + purchases.md. Gate run 1 red only on Bundle.main scan (fixed: TreeHost.isExtension). Stopped: guard refused fetch+rebase after main moved. Open: a way to bring the copy up to main, then land, tick, review line, Evan's phone note. Lesson: Shared code finds the extension via TreeHost.isExtension.
 
-- T-4885 11-18: review of T-4746 PASS; M1 premade lines still say "pywidget". Lesson: widget words also live in premade scripts and first renders.
 
 - T-4887 11-18: tap split into noteTouchDown/tapEnded; 2 unit tests, 5/5 mutants KILLED on runner (ops/runs/t4887-mutants.txt). Open: T-4888 widens the capture to CGPoint. Lesson: land_mutants --base <copy commit> runs before landing, ~15 min for 6.
 
-- T-4892 11-18: done e24d3fbf51 (caret UI pass in full run J-...0802). Open: WidgetKit testE red twice 11-18 (Vision read gallery text), no line. Lesson: result.json lists no passes; prove a pass by complete run + no skip + not failing.
 
 - T-1905 11-18 8ea5016048 landed (part 1: lister+plan+.sent.json+mirror; 2097/0); not ticked: boundary sending every Widget part + edited-sibling inversion. Lesson: local swiftc typecheck misses errors while ProPaywallView's asset errors are in; exclude it (and Runestone files) and it is reliable.
+
+- T-4771+T-4783 11-18 (scratch T-4771-idris, 0b2e1e0508+917c3ef090 on 80aa4318a4, not landed): gate J-20261118-1040-land-m-284df6 green 2101/0, commit refused (main moved); guard refused `rebase main` in the copy (rule 14). Open: same as T-4858. Lesson: a gate land that outlasts a main move can't be finished in-session; land right after a supervisor sync.
 
 ## Lessons
 - Older lessons and dated logs: archive.md.
@@ -66,6 +62,8 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 - T-4784 11-17: refresh-glyph test uncommitted; open: focused run + mutant, commit (details archive.md).
 - T-4762 11-18: async run lock, .late commit; landcheck green. Open: review, land.
+- T-4898 11-18 0f66d66b93+d2f3fcdb6a: testE read the Choose card (not gallery): WidgetKit gives a new unset placement an earlier render and asks nothing; test now places before the run. Open: 2 runner full runs (outbox). Lesson: reload only after placing.
+- T-4890 11-18: widget tap on iPad made a new window: SpringBoard icon launch, no pywidget: identifier, so handlesExternalEvents("pywidget:") never matched; fix "*". Red 105507, green 111748. Lesson: SpringBoard's SceneResolution log names why a scene was refused.
 {% endraw %}
 
 

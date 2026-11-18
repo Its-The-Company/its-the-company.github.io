@@ -229,6 +229,16 @@ day added, not `+ 86,400` seconds, which is an hour wrong on the two days a year
 - Open, both sides together or neither: a phone that has moved more than 11 hours east or west of where the event was
   picked reads its stamp as the next or the previous day. Reading the date written in the stamp instead would fix it;
   it is a change to this rule, not to one side.
+- Decided (Pernille, T-4533, 2026-11-17; from Idris's review t4468-lock-idris.md): fixed before the App Store
+  release, not before TestFlight. The rule becomes: an all-day event's day is the date written in its stamp (the
+  `YYYY-MM-DD` before the `T`, which the Page writes in the zone it was picked in), and it is upcoming until the
+  phone's local midnight that ends that date, in the phone's zone now. Both halves in one commit, never one alone:
+  `SettingsKinds.isUpcoming` and countdown.py's `_start`/`_end` and day count, with tests for a phone 12 hours east
+  and 12 hours west (the event shows on its own date in both) beside the existing `AllDay` cases. Work: T-4835
+  (the date in an all-day stamp).
+  Why not before TestFlight: it loses no data, crashes nothing, App Review does not see it, and the two halves agree
+  with each other today. Why before the App Store: a countdown that names the wrong day to a traveller is a visible
+  wrong answer to a paying user, on the one widget whose whole job is the date.
 
 ### 2.4 Choose a Place (frame 7)
 

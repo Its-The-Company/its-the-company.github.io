@@ -52,6 +52,8 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-4814 (11-17): merge limit split app 20 / other 8 / hub 1 by files touched (per commit subject, git cherry). Owed: review, work.md step 2 `open --task`, Tenet 2 text, governor run.json queues.
 - T-4806 11-17: a gate 75 left no row, so T-4787 missed 27 gate wait-outs; count exits that write nothing from ops/runs session logs. Shipped records + carry (MAIN_GATE_CARRY=off reverts); slices 4-7 owed in ops/plans/T-4806-timeouts.md; review owed. A Bash call goes to the background at 10 min and is stopped at 20: run a gate land in the background with a long timeout under load.
 - A timing bound in a test must time only the code under test: stub du, no taskpolicy -b (T-4806: disk_makeup hang row read 294.6 s from the other drive's du beside 20 suites).
+- T-4903 11-18: judge a <span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">parked</span> ref by content (blob = main's, or a version main took after the merge base), not by commit; run hourly in merge_reset apply. Strict: refs whose memory/rules files drift from main stay waiting (T-4788, T-4840, T-4631 refs); a finer split by commit is the next step if they pile up.
+- T-4849 11-18: process queue over 8 was mostly app tasks, put there by the lane records they commit (memory, lane-outbox, site-checks). Classify by code paths; test what a count counts before chasing its flow.
 {% endraw %}
 
 

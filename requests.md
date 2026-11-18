@@ -4,7 +4,7 @@ title: "Issues"
 section: "requests"
 permalink: "/issues/"
 issues: "2"
-issues_at: "10:27 AM ET, Nov 18"
+issues_at: "2:06 PM ET, Nov 18"
 ---
 
 # Issues
@@ -14,7 +14,7 @@ issues_at: "10:27 AM ET, Nov 18"
 
 <p class="lead">2 open.</p>
 
-<p class="meta" id="needs-anon">With your GitHub token saved (<a href="{{ '/connect.html' | relative_url }}">Connect</a>), you answer on each issue's own page: its card and options, the whole thread, a reply box and Close. Without it, the page says how to connect.</p>
+<p class="meta" id="needs-anon">Save your GitHub token (<a href="{{ '/connect.html' | relative_url }}">Connect</a>) to answer on each issue's page.</p>
 <div id="needs-root" data-repo="Its-The-Company/itsthecompany" data-view="{{ '/issues/view/' | relative_url }}" data-named="13 19 29 32 33 36 38 41 42 51 53 54 55 56 57 58 59 60" data-props="" data-skip="39 41 325" data-rest="0"></div>
 <script>try{var d=document.documentElement,t=sessionStorage.getItem('company-chat-token')||localStorage.getItem('company-chat-token');if(t){d.classList.add('iq-wait');setTimeout(function(){d.classList.remove('iq-wait')},1e4)}}catch(e){}</script>
 

@@ -346,13 +346,38 @@ contents are unconfirmed, and Wrenna or Idris may grow the set.
   would need that lock first.
 - **Still unconfirmed:** `shortcuts://run-shortcut?name=` (s11) is kept as Maren drew it, untested on a device.
 
+## 11b. Which premade lists hold the launchers (T-4679, Idris, 2026-11-18)
+
+In a `PYWIDGET_LAUNCHER` build the six launchers (`launcher-mosaic`, `-prompt`, `-pegboard`, `-dial`, `-now`,
+`-words`) are bundled premades (`launcher_premades.py`). Each premade list holds them, or not, as follows. A build
+without the condition holds them in none. This stays until #192's release step, which decides each list again.
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 3: 11b. Which premade lists hold the launchers (T-4679, Idris, 2026-11-18), scrolls sideways" style="--tw:960px" markdown="1">
+
+| List | Launchers in it? | Why |
+|---|---|---|
+| Widget picker and the app's widget pass (`WidgetChoices.premades`, `WidgetWriter.offeredPremades`) | Yes, after every shipping premade, in launcher-catalog.json's order, as free rows, with or without Pro | T-4212: a tester must be able to place one. The 2026-11-17 12:27 AM <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">ruling</span> (#41 c6939492685) says every premade works for everyone, so a launcher is never locked. |
+| Gallery <span title="The App Store results a buyer sees for a search phrase. The top 10 is the first ten, dated the day we read them.">shelf</span> (catalog.json, `GalleryEntry.shelf`) and its free shelf | No | The shelf is what a customer is shown and sold. An unreleased widget has no page there. |
+| Pro (pro-flags.json, `ProGates`) | No: never locked, never sold, and in no Pro tag | Nobody has priced them. The ruling's Pro tag goes on a premade that uses a Pro feature, and that choice belongs to #192 together with the move into pro-flags.json (review t4185 N10 to N12). |
+| Gallery pages (where a widget's own tap goes) | No page | A tap on a launcher's app box opens that app through PyWidget (tap-path.md). A tap anywhere else sends the premade's Gallery link. The Gallery finds no page for it and stays at its root. Open for Maren at #192: should that tap open Launcher Apps instead? |
+
+</div>
+
+
+The tests read the build they run in: `LauncherPickerTests.idsHere` is the six in a launcher build and none in any
+other build. FirstOpenPassTests (the T-3557 pass and offered list), ProFlagsContractTests (the flag file covers
+every bundled premade except these), ProStoreTests' T-0051 picker lists, WidgetTapRoutingTests (a Gallery page
+for every premade except these), and the T-3364 and T-3393 shelf checks (every bundled premade except these is on
+the shelf) each add it.
+
 ## 12. Strings
 
 Printed from `draw_editor.py` (`--strings`), so the frames and this table cannot drift. `{…}` is filled in at run
 time. Typographic quotes and apostrophes are as they ship.
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 3: 12. Strings, scrolls sideways" style="--tw:769px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 4: 12. Strings, scrolls sideways" style="--tw:769px" markdown="1">
 
 | ID | String | Where |
 |---|---|---|

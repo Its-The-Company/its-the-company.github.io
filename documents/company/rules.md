@@ -726,6 +726,9 @@ The Effect lines of the amendments.md entries the charter retired (2026-11-04 12
 - **2026-11-18 12:36 AM ET** ((private)): #324 A: the Pro feature is Python that a widget button runs without opening the app; a widget's own updates running in the widget are not Pro for anyone; Pro tags: Habit tracker, Focus timer, Flashcards, Day phases once it has buttons
 - **2026-11-18 12:40 AM ET** ((private)): Standing approval: the safety check is to allow deleting Simulator data and any other company data that is safe to delete (not unsaved code work, not in use by a running test) once no merge needs it; the company may change the Claude Code settings to say so, approved in advance
 - **2026-11-18 6:23 AM ET** ((private)): A small move of the projected release date is no longer posted as its own chat comment; it goes in the next scheduled report (and ops/milestones.json, state.md). A separate message only for a large move: more than two weeks, or past either end of the range (company reading, open to correction).
+- **2026-11-18 11:57 AM ET** ((private)): Option A of the 11:50 AM card (c6985266309): P0 process lines the Investors asked for may start while the process and site merge queue is over its limit; all other process and site work still waits for the limit.
+- **2026-11-18 11:59 AM ET** ((private)): A process change that fails its merge check is recoded or retested at once and never holds the merge queue; process merges are expected to take minutes, so anything waiting longer is a fault to fix (T-4849).
+- **2026-11-18 12:37 PM ET** ((private)): A task's old parked copy leaves the merge count and is archived the moment a session takes the task to recode it; if the redo fails its merge, it gets another redo, never a restore of the old copy. A failure not caused by the change is retried at once, not recoded.
 {% endraw %}
 
 </div>

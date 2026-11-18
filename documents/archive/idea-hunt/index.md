@@ -6,13 +6,13 @@ description: "The idea hunt ran from Day 1 to Day 4 and stopped when the Investo
 ---
 <div class="crumbs" role="navigation" aria-label="Back"><a class="back" href="{{ '/documents/archive/' | relative_url }}">← Archive</a></div>
 
-<div class="page-head"><div class="kicker"><span class="trail"><a href="{{ '/documents/' | relative_url }}">Documents</a> › <a href="{{ '/documents/archive/' | relative_url }}">Archive</a> › <span>The idea hunt</span></span></div><h1>The idea hunt</h1><p class="lead">The idea hunt ran from Day 1 to Day 4 and stopped when the Investors chose pywidget on 2026-10-25. Its overview, the Ideas library and every <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> note, kept as they were.</p></div>
+<div class="page-head"><div class="kicker"><span class="trail"><a href="{{ '/documents/' | relative_url }}">Documents</a> › <a href="{{ '/documents/archive/' | relative_url }}">Archive</a> › <span>The idea hunt</span></span></div><h1>The idea hunt</h1><p class="lead">Ran Day 1 to Day 4; stopped when the Investors chose pywidget on 2026-10-25.</p></div>
 
 <nav class="subtabs doc-tabs" aria-label="Documents or Archive"><a href="{{ '/documents/' | relative_url }}">Documents</a><a href="{{ '/documents/archive/' | relative_url }}" aria-current="true">Archive</a></nav>
 <style>.doc-tabs{margin:var(--s3) 0 var(--s4)}.fld-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,160px),1fr));gap:var(--s2);margin:var(--s3) 0 var(--s5)}.fld-grid .btn.fld{flex-direction:column;align-items:flex-start;justify-content:center;gap:2px;min-width:0;min-height:64px;padding:var(--s2) var(--s3);text-align:left}.btn.fld b{font-size:var(--fs-2);line-height:1.25}.btn.fld small{font-weight:400;font-size:var(--fs-0);color:var(--muted)}.btn.fld:hover{border-color:var(--accent)}.btn.fld:focus-visible{outline:2px solid var(--accent);outline-offset:2px}</style>
 
 <h2 id="folders">Folders</h2>
-<nav class="fld-grid" aria-label="Folders"><a class="btn fld" href="{{ '/documents/archive/idea-hunt/lane-notes/' | relative_url }}"><b>Lane notes</b><small>231 documents</small></a></nav>
+<nav class="fld-grid" aria-label="Folders"><a class="btn fld" href="{{ '/documents/archive/idea-hunt/lane-notes/' | relative_url }}"><b><span title="One numbered piece of research into one area of ideas. Each lane has its own file.">Lane</span> notes</b><small>231 documents</small></a></nav>
 
 <div class="ix">
 

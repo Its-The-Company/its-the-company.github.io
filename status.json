@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-18T22:13:36.672659+00:00",
+ "at": "2026-11-18T22:16:40.443344+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -139,16 +139,7 @@
    "task": "[test] T-4807 land browser time-out fix",
    "model": "opus",
    "started": "2026-11-18T20:31:35.722Z",
-   "seconds": 6120,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "idris",
-   "task": "[test] T-4750 Swift replay of network fetch cases",
-   "model": "opus",
-   "started": "2026-11-18T21:28:52.652Z",
-   "seconds": 2684,
+   "seconds": 6304,
    "finished": null,
    "effort": "high"
   },
@@ -157,13 +148,21 @@
    "task": "[tools] T-4903 saved work leaves the merge count",
    "model": "opus",
    "started": "2026-11-18T21:36:06.256Z",
-   "seconds": 2250,
+   "seconds": 2434,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Pernille, Idris, Odalys",
+ "who": "Pernille, Odalys",
  "recent": [
+  {
+   "name": "idris",
+   "task": "[test] T-4750 Swift replay of network fetch cases",
+   "model": "opus",
+   "started": "2026-11-18T21:28:52.652Z",
+   "seconds": null,
+   "finished": "2026-11-18T22:15:34.776000+00:00"
+  },
   {
    "name": "ines",
    "task": "[plan] T-4630 badge ruling and T-4771 landing decision",
@@ -187,14 +186,6 @@
    "started": "2026-11-18T20:40:36.593Z",
    "seconds": null,
    "finished": "2026-11-18T21:28:27.643000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-4907 keep main green after every land",
-   "model": "opus",
-   "started": "2026-11-18T19:11:56.141Z",
-   "seconds": null,
-   "finished": "2026-11-18T21:13:09.663000+00:00"
   }
  ],
  "queue": {
@@ -249,7 +240,7 @@
   "week_pct": 51.56,
   "usage_pct": 51.3,
   "work_pct": 81.5,
-  "read_at": "2026-11-18T22:13:00+00:00",
+  "read_at": "2026-11-18T22:16:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -270,7 +261,7 @@
   }
  ],
  "disk": {
-  "free_gb": 14,
+  "free_gb": 15,
   "gate": "closed",
   "ssd": {
    "mounted": true,
@@ -279,14 +270,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions wait until 20 GB is free.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-18T17:09:00-05:00",
+   "at": "2026-11-18T17:15:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-18T17:13:00-05:00",
+  "at": "2026-11-18T17:16:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -312,15 +303,6 @@
    "effort": "high"
   },
   {
-   "name": "Idris",
-   "state": "running",
-   "task": "[test] T-4750 Swift replay of network fetch cases",
-   "model": "opus",
-   "since": "2026-11-18T21:28:52.652Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
    "name": "Odalys",
    "state": "running",
    "task": "[tools] T-4903 saved work leaves the merge count",
@@ -328,6 +310,14 @@
    "since": "2026-11-18T21:36:06.256Z",
    "next": [],
    "effort": "high"
+  },
+  {
+   "name": "Idris",
+   "state": "next",
+   "task": "Idris, P1, from T-4755 (Investor an Investor...",
+   "model": null,
+   "since": null,
+   "next": []
   },
   {
    "name": "Ines",
@@ -365,16 +355,6 @@
     "at": "2026-11-18T20:31:35.722Z",
     "o": "c",
     "task": "T-4807"
-   },
-   {
-    "w": "Idris",
-    "k": "test",
-    "t": "Check network fetch cases on the Swift side too",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-18T21:28:52.652Z",
-    "o": "c",
-    "task": "T-4750"
    },
    {
     "w": "Odalys",
@@ -544,12 +524,12 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-18T22:13:30Z",
+  "at": "2026-11-18T22:16:34Z",
   "s": {
    "T-4807": [
     "merging",
     "Mac tests at the main gate \u00b7 11 groups of tests done, 2 red",
-    1795037670715
+    1795037674708
    ],
    "T-4903": [
     "merged",
@@ -572,7 +552,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-18T22:13:30Z",
+  "at": "2026-11-18T22:16:34Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -586,11 +566,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 639,
+    "conflicted": 642,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1116
+    "parked": 1119
    },
    "cur": [],
    "ld": [
@@ -600,12 +580,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-18T22:13:31Z",
-    "ld": 0.4,
+    "at": "2026-11-18T22:16:05Z",
+    "ld": 0.44,
     "c": 8,
     "sb": 0,
     "dk": [
-     14.3,
+     14.6,
      228.3
     ],
     "ss": [
@@ -634,7 +614,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 4 tasks",
+   "t": "Work session \u2013 3 tasks",
    "at": "2026-11-18T15:52:47-05:00"
   }
  ],
@@ -656,13 +636,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 3,
+  "main": 2,
   "lanes": 0,
-  "total": 3,
-  "at": "5:13 PM",
+  "total": 2,
+  "at": "5:16 PM",
   "why": "",
-  "at_iso": "2026-11-18T22:13:00+00:00",
+  "at_iso": "2026-11-18T22:16:00+00:00",
   "started": "2:09 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 2:09 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 5:13 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 2:09 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 5:16 PM ET</p></section>"
  }
 }

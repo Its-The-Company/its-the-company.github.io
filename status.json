@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-18T03:29:29.656590+00:00",
+ "at": "2026-11-18T03:32:35.480504+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -113,8 +113,8 @@
     "end_at": 1794966883
    }
   ],
-  "landed": 42,
-  "failed": 8
+  "landed": 41,
+  "failed": 7
  },
  "workers": [
   {
@@ -122,7 +122,7 @@
    "task": "[tools] T-4806 land merge time-out fixes",
    "model": "opus",
    "started": "2026-11-18T03:27:34.411Z",
-   "seconds": 115,
+   "seconds": 301,
    "finished": null,
    "effort": "high"
   },
@@ -131,7 +131,7 @@
    "task": "[tools] T-4817 bottleneck watcher",
    "model": "opus",
    "started": "2026-11-18T03:27:43.614Z",
-   "seconds": 106,
+   "seconds": 291,
    "finished": null,
    "effort": "high"
   }
@@ -141,7 +141,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 462,
+  "runnable_count": 463,
   "blocked_count": 34
  },
  "meter": {
@@ -190,7 +190,7 @@
   "week_pct": 46.38,
   "usage_pct": 53.7,
   "work_pct": 81.3,
-  "read_at": "2026-11-18T03:29:00+00:00",
+  "read_at": "2026-11-18T03:32:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -267,6 +267,30 @@
     "src": "plan-a"
    },
    {
+    "lane": "b",
+    "task": "T-4762",
+    "w": "Idris",
+    "k": "fix",
+    "t": "Let the run lock wrap a Python run",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-17T22:30:38-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
+   },
+   {
+    "lane": "b",
+    "task": "T-4635",
+    "w": "Idris",
+    "k": "build",
+    "t": "Clear the Settings restore line once Pro is bought",
+    "m": "sonnet",
+    "e": "medium",
+    "at": "2026-11-17T22:30:38-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
+   },
+   {
     "lane": "b3",
     "task": "T-4772",
     "w": "Idris",
@@ -326,7 +350,7 @@
  "lock_in": {
   "on": false,
   "pool": 8,
-  "at": "2026-11-17T22:29:00-05:00",
+  "at": "2026-11-17T22:32:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -506,7 +530,7 @@
    }
   ],
   "count": {
-   "next": 462,
+   "next": 463,
    "wait": 32,
    "blocked": 2,
    "you": 9
@@ -555,22 +579,27 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-18T03:29:29Z",
+  "at": "2026-11-18T03:32:17Z",
   "s": {
    "T-4659": [
     "merging",
     "Host checks on the Mac mini",
-    1794971789656
+    1794971837923
    ],
    "T-4750": [
     "merging",
     "Host checks on the Mac mini",
-    1794971789656
+    1794971837923
    ],
    "T-4761": [
     "merging",
     "Host checks on the Mac mini",
-    1794971789656
+    1794971837923
+   ],
+   "T-4759": [
+    "mergeq",
+    "2nd to merge",
+    1794972617923
    ],
    "T-4772": [
     "testing",
@@ -585,37 +614,32 @@
    "T-4806": [
     "testing",
     "its own tests, in its copy",
-    1794972569656
-   ],
-   "T-4759": [
-    "testq",
-    "1st for a Simulator",
-    1794972209656
+    1794972737923
    ],
    "T-4789": [
     "testq",
     "1st for a Simulator",
-    1794972209656
+    1794972257923
    ],
    "T-4436": [
     "testq",
     "2nd for a Simulator",
-    1794972509656
+    1794972497923
    ],
    "T-4784": [
     "testq",
     "2nd for a Simulator",
-    1794972509656
+    1794972497923
    ]
   },
   "nm": {
    "T-4659": "Prove a widget button's tap reaches its Python handler",
    "T-4750": "Check network fetch cases on the Swift side too",
    "T-4761": "Keep one layout for the widget state format",
+   "T-4759": "Check finished work before it ships",
    "T-4772": "Prove a refresh tap redraws the widget",
    "T-4773": "Time the next run from the widget's own ask",
    "T-4806": "Fix the causes of merge time-outs and runner errors",
-   "T-4759": "Check finished work before it ships",
    "T-4789": "Check finished work before it ships",
    "T-4436": "Tidy the refresh tap's small edges",
    "T-4784": "Pin the refresh glyph's button style in a test"
@@ -624,35 +648,35 @@
    "T-4659": "Idris",
    "T-4750": "Idris",
    "T-4761": "Idris",
+   "T-4759": "Pernille",
    "T-4772": "Idris",
    "T-4773": "Idris",
    "T-4806": "Odalys",
-   "T-4759": "Pernille",
    "T-4789": "Pernille",
    "T-4436": "Idris",
    "T-4784": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-18T03:29:29Z",
+  "at": "2026-11-18T03:32:17Z",
   "mq": {
    "n": {
     "checking": 3,
-    "inline": 0,
-    "conflicted": 5,
+    "inline": 1,
+    "conflicted": 3,
     "failed": 0,
     "held": 1,
     "retry": 0,
     "parked": 7
    },
    "m": {
-    "checking": 13,
-    "inline": null,
-    "conflicted": 16,
+    "checking": 15,
+    "inline": 2,
+    "conflicted": 328,
     "failed": null,
-    "held": 1680,
+    "held": 1683,
     "retry": null,
-    "parked": 517
+    "parked": 519
    },
    "cur": [
     [
@@ -661,7 +685,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     13
+     15
     ],
     [
      [
@@ -669,7 +693,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     13
+     15
     ],
     [
      [
@@ -677,7 +701,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     13
+     15
     ]
    ],
    "ld": [
@@ -687,12 +711,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-18T03:29:06Z",
-    "ld": 65.23,
+    "at": "2026-11-18T03:31:31Z",
+    "ld": 62.54,
     "c": 8,
     "sb": 2,
     "dk": [
-     13.1,
+     12.1,
      228.3
     ],
     "ss": [
@@ -761,18 +785,39 @@
    "m": "opus",
    "e": "high",
    "t": "Work session \u2013 2 tasks",
-   "at": "2026-11-17T22:11:13-05:00"
+   "at": "2026-11-17T22:30:38-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Jeremy's Account",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Inbox \u2013 Evan's 10:31 PM Message on GitHub",
+   "at": "2026-11-17T22:31:53-05:00"
   }
  ],
  "reply": {
   "sent": "2026-11-18T03:19:51Z",
   "seconds": 76.0
  },
- "inbox": [],
+ "inbox": [
+  {
+   "id": "c6968175224",
+   "state": "received",
+   "position": 1,
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "I have been requesting a lot of..."
+  }
+ ],
  "trimmed": [
   "lane_next",
   "queue_text",
   "task_done",
+  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -781,12 +826,12 @@
  ],
  "agents_now": {
   "main": 2,
-  "lanes": 4,
-  "total": 6,
-  "at": "10:29 PM",
+  "lanes": 5,
+  "total": 7,
+  "at": "10:32 PM",
   "why": "",
-  "at_iso": "2026-11-18T03:29:00+00:00",
+  "at_iso": "2026-11-18T03:32:00+00:00",
   "started": "10:22 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 2, started 10:22 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 10:29 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 2, started 10:22 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 10:32 PM ET</p></section>"
  }
 }

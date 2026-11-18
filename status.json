@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-18T15:49:02.851709+00:00",
+ "at": "2026-11-18T15:52:08.424557+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -207,26 +207,34 @@
  },
  "workers": [
   {
-   "name": "idris",
-   "task": "[build] T-4771 recut gutter marks and land",
-   "model": "opus",
-   "started": "2026-11-18T15:32:38.173Z",
-   "seconds": 984,
-   "finished": null,
-   "effort": "high"
-  },
-  {
    "name": "maren",
    "task": "[build] T-4493 land the site clutter cut",
    "model": "opus",
    "started": "2026-11-18T15:43:48.650Z",
-   "seconds": 314,
+   "seconds": 499,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-4180 judge stray runner salvage",
+   "model": "opus",
+   "started": "2026-11-18T15:50:45.673Z",
+   "seconds": 82,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Idris, Maren",
+ "who": "Maren, Odalys",
  "recent": [
+  {
+   "name": "idris",
+   "task": "[build] T-4771 recut gutter marks and land",
+   "model": "opus",
+   "started": "2026-11-18T15:32:38.173Z",
+   "seconds": null,
+   "finished": "2026-11-18T15:50:04.604000+00:00"
+  },
   {
    "name": "idris",
    "task": "[build] T-2296 land the Gallery pager work",
@@ -304,8 +312,33 @@
   "week_pct": 51.32,
   "usage_pct": 52.2,
   "work_pct": 82.0,
-  "read_at": "2026-11-18T15:49:00+00:00",
-  "running": []
+  "read_at": "2026-11-18T15:52:00+00:00",
+  "running": [
+   {
+    "lane": "b",
+    "task": "T-4890",
+    "w": "Idris",
+    "k": "build",
+    "t": "Keep a real widget tap in the open iPad window",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-18T10:51:33-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
+   },
+   {
+    "lane": "b",
+    "task": "T-4898",
+    "w": "Idris",
+    "k": "fix",
+    "t": "Fix the Home Screen token test reading the gallery",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-18T10:51:33-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
+   }
+  ]
  },
  "api_credits": [
   {
@@ -341,7 +374,7 @@
  "lock_in": {
   "on": false,
   "pool": 12,
-  "at": "2026-11-18T10:49:00-05:00",
+  "at": "2026-11-18T10:52:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -358,15 +391,6 @@
  },
  "lanes": [
   {
-   "name": "Idris",
-   "state": "running",
-   "task": "[build] T-4771 recut gutter marks and land",
-   "model": "opus",
-   "since": "2026-11-18T15:32:38.173Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
    "name": "Maren",
    "state": "running",
    "task": "[build] T-4493 land the site clutter cut",
@@ -376,17 +400,26 @@
    "effort": "high"
   },
   {
-   "name": "Pernille",
+   "name": "Odalys",
+   "state": "running",
+   "task": "[tools] T-4180 judge stray runner salvage",
+   "model": "opus",
+   "since": "2026-11-18T15:50:45.673Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
+   "name": "Idris",
    "state": "next",
-   "task": "Pernille, P0, Investor an Investor c6963972184 (6:23 PM...",
+   "task": "Idris, P1, from T-4755 (Investor an Investor...",
    "model": null,
    "since": null,
    "next": []
   },
   {
-   "name": "Odalys",
+   "name": "Pernille",
    "state": "next",
-   "task": "Odalys, P0, Investor an Investor c6963972184 (6:23 PM...",
+   "task": "Pernille, P0, Investor an Investor c6963972184 (6:23 PM...",
    "model": null,
    "since": null,
    "next": []
@@ -411,16 +444,6 @@
  "tasks": {
   "run": [
    {
-    "w": "Idris",
-    "k": "build",
-    "t": "Gutter marks redraw quickly and stay right while typing",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-18T15:32:38.173Z",
-    "o": "c",
-    "task": "T-4771"
-   },
-   {
     "w": "Maren",
     "k": "build",
     "t": "Cut clutter text on the pages still carrying it",
@@ -429,6 +452,16 @@
     "at": "2026-11-18T15:43:48.650Z",
     "o": "c",
     "task": "T-4493"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Every premade widget draws on the iPhone",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-18T15:50:45.673Z",
+    "o": "c",
+    "task": "T-4180"
    }
   ],
   "src": "plan",
@@ -576,72 +609,67 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-18T15:49:02Z",
+  "at": "2026-11-18T15:51:53Z",
   "s": {
    "T-4574": [
     "merging",
     "Host checks on the Mac mini",
-    1795016762851
+    1795016753900
    ],
    "T-4533": [
     "mergeq",
     "1st to merge",
-    1794988082851
+    1794988133900
    ],
    "T-4635": [
     "mergeq",
     "4th to merge",
-    1795006382851
+    1795006373900
    ],
    "T-4748": [
     "mergeq",
     "5th to merge",
-    1795007042851
+    1795007033900
    ],
    "T-4640": [
     "mergeq",
     "6th to merge",
-    1795007042851
+    1795007093900
    ],
    "T-4581": [
     "mergeq",
     "7th to merge",
-    1795007042851
+    1795007093900
    ],
    "T-4575": [
     "mergeq",
     "9th to merge",
-    1795007402851
+    1795007453900
    ],
    "T-4789": [
     "mergeq",
     "10th to merge",
-    1795007462851
+    1795007453900
    ],
    "T-4889": [
     "mergeq",
     "12th to merge",
-    1795010102851
+    1795010093900
    ],
    "T-4835": [
     "mergeq",
     "13th to merge",
-    1795011722851
+    1795011713900
    ],
    "T-4679": [
     "mergeq",
     "14th to merge",
-    1795012022851
-   ],
-   "T-4771": [
-    "mergetest",
-    "iPhone tests on the MacBook",
-    null
+    1795012013900
    ],
    "T-4493": [
     "testing",
     "its own tests, in its copy",
-    1795016702851
+    1795016693900
    ]
   },
   "nm": {
@@ -656,7 +684,6 @@
    "T-4889": "Check the PyWidget case fix in premade lines",
    "T-4835": "Show an all-day event on its own date after travel",
    "T-4679": "Make the unit tests pass in a launcher build",
-   "T-4771": "Gutter marks redraw quickly and stay right while typing",
    "T-4493": "Cut clutter text on the pages still carrying it"
   },
   "wk": {
@@ -671,13 +698,12 @@
    "T-4889": "Idris",
    "T-4835": "Pernille",
    "T-4679": "Idris",
-   "T-4771": "Idris",
    "T-4493": "Maren",
    "T-4812": "Maren"
   }
  },
  "ln": {
-  "at": "2026-11-18T15:49:02Z",
+  "at": "2026-11-18T15:51:53Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -689,13 +715,13 @@
     "parked": 5
    },
    "m": {
-    "checking": 3,
-    "inline": 162,
-    "conflicted": 756,
+    "checking": 6,
+    "inline": 164,
+    "conflicted": 759,
     "failed": null,
-    "held": 2420,
+    "held": 2422,
     "retry": null,
-    "parked": 731
+    "parked": 734
    },
    "cur": [
     [
@@ -704,7 +730,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     3
+     6
     ]
    ],
    "ld": [
@@ -714,12 +740,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-18T15:48:17Z",
-    "ld": 2.13,
+    "at": "2026-11-18T15:51:32Z",
+    "ld": 1.48,
     "c": 8,
     "sb": 1,
     "dk": [
-     16.0,
+     16.7,
      228.3
     ],
     "ss": [
@@ -731,8 +757,8 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-18T15:41:33Z",
-    "ld": 0.86,
+    "at": "2026-11-18T15:49:20Z",
+    "ld": 0.74,
     "c": 12,
     "sb": 0,
     "dk": [
@@ -750,8 +776,17 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 3 tasks",
+   "t": "Work session \u2013 2 tasks",
    "at": "2026-11-18T10:30:40-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Jeremy's Account",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session \u2013 2 tasks",
+   "at": "2026-11-18T10:51:33-05:00"
   }
  ],
  "reply": {
@@ -772,12 +807,12 @@
  ],
  "agents_now": {
   "main": 2,
-  "lanes": 0,
-  "total": 2,
-  "at": "10:49 AM",
+  "lanes": 1,
+  "total": 3,
+  "at": "10:52 AM",
   "why": "",
-  "at_iso": "2026-11-18T15:49:00+00:00",
+  "at_iso": "2026-11-18T15:52:00+00:00",
   "started": "10:30 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 10:30 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 10:49 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 10:30 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 10:52 AM ET</p></section>"
  }
 }

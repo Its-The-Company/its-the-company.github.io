@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-18T02:49:07.704023+00:00",
+ "at": "2026-11-18T02:52:13.025453+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -155,28 +155,25 @@
   "landed": 42,
   "failed": 6
  },
- "workers": [
+ "workers": [],
+ "who": "",
+ "recent": [
   {
    "name": "odalys",
    "task": "[tools] T-4810 every wait names a task or issue",
    "model": "opus",
    "started": "2026-11-18T02:08:44.734Z",
-   "seconds": 2422,
-   "finished": null,
-   "effort": "high"
+   "seconds": null,
+   "finished": "2026-11-18T02:51:07.685000+00:00"
   },
   {
    "name": "maren",
    "task": "[site] T-4813 Home's numbers update live",
    "model": "opus",
    "started": "2026-11-18T02:08:56.638Z",
-   "seconds": 2411,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Odalys, Maren",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-18T02:50:41.293000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[tools] T-4814 split the merge limit",
@@ -192,22 +189,6 @@
    "started": "2026-11-18T01:18:02.621Z",
    "seconds": null,
    "finished": "2026-11-18T02:37:27.306000+00:00"
-  },
-  {
-   "name": "pernille",
-   "task": "[test] T-4807 fix bad tests that failed merges",
-   "model": "opus",
-   "started": "2026-11-18T01:44:52.149Z",
-   "seconds": null,
-   "finished": "2026-11-18T02:34:56.825000+00:00"
-  },
-  {
-   "name": "ines",
-   "task": "[plan] T-4493 decide the refused test fix",
-   "model": "opus",
-   "started": "2026-11-18T01:37:46.011Z",
-   "seconds": null,
-   "finished": "2026-11-18T01:43:19.873000+00:00"
   }
  ],
  "queue": {
@@ -262,7 +243,7 @@
   "week_pct": 43.81,
   "usage_pct": 53.5,
   "work_pct": 81.2,
-  "read_at": "2026-11-18T02:49:00+00:00",
+  "read_at": "2026-11-18T02:52:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -299,7 +280,7 @@
  "lock_in": {
   "on": false,
   "pool": 8,
-  "at": "2026-11-17T21:49:00-05:00",
+  "at": "2026-11-17T21:52:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -316,24 +297,6 @@
  },
  "lanes": [
   {
-   "name": "Odalys",
-   "state": "running",
-   "task": "[tools] T-4810 every wait names a task or issue",
-   "model": "opus",
-   "since": "2026-11-18T02:08:44.734Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
-   "name": "Maren",
-   "state": "running",
-   "task": "[site] T-4813 Home's numbers update live",
-   "model": "opus",
-   "since": "2026-11-18T02:08:56.638Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
    "name": "Idris",
    "state": "next",
    "task": "Idris, P1, from T-4755 (Investor an Investor...",
@@ -345,6 +308,14 @@
    "name": "Pernille",
    "state": "next",
    "task": "Pernille, P0, Investor an Investor c6963972184 (6:23 PM...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
+   "name": "Odalys",
+   "state": "next",
+   "task": "Odalys, P0, Investor an Investor c6963972184 (6:23 PM...",
    "model": null,
    "since": null,
    "next": []
@@ -364,31 +335,18 @@
    "model": null,
    "since": null,
    "next": []
+  },
+  {
+   "name": "Maren",
+   "state": "next",
+   "task": "Maren, P2, found on T-3366 (11-07): in...",
+   "model": null,
+   "since": null,
+   "next": []
   }
  ],
  "tasks": {
-  "run": [
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Make every wait name a task or an Investor issue",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-18T02:08:44.734Z",
-    "o": "c",
-    "task": "T-4810"
-   },
-   {
-    "w": "Maren",
-    "k": "site",
-    "t": "Home's numbers update within a minute",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-18T02:08:56.638Z",
-    "o": "c",
-    "task": "T-4813"
-   }
-  ],
+  "run": [],
   "src": "plan",
   "open": [
    {
@@ -554,77 +512,67 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-18T02:49:07Z",
+  "at": "2026-11-18T02:51:56Z",
   "s": {
    "T-4643": [
     "merging",
     "Host checks on the Mac mini",
-    1794969607704
+    1794969596816
    ],
    "T-4761": [
     "mergeq",
     "1st to merge",
-    1794960487704
+    1794960536816
    ],
    "T-4659": [
     "mergeq",
     "2nd to merge",
-    1794961087704
+    1794961076816
    ],
    "T-4782": [
     "mergetest",
     "Xcode checks on the MacBook, 4th to merge",
-    1794969547704
+    1794969536816
    ],
    "T-4787": [
     "mergeq",
     "5th to merge",
-    1794962647704
+    1794962636816
    ],
    "T-4719": [
     "mergeq",
     "6th to merge",
-    1794963127704
+    1794963116816
    ],
    "T-4720": [
     "mergeq",
     "6th to merge",
-    1794963127704
+    1794963116816
    ],
    "T-4750": [
     "mergeq",
     "7th to merge",
-    1794963187704
+    1794963176816
    ],
    "T-4770": [
     "mergeq",
     "8th to merge",
-    1794964687704
+    1794964676816
    ],
    "T-4781": [
     "mergeq",
     "9th to merge",
-    1794964687704
+    1794964676816
    ],
    "T-4774": [
     "mergeq",
     "9th to merge",
-    1794964687704
+    1794964676816
    ],
    "T-4814": [
     "merging",
     "Mac tests at the main gate",
-    1794970087704
-   ],
-   "T-4810": [
-    "testing",
-    "its own tests, in its copy",
-    1794969847704
-   ],
-   "T-4813": [
-    "testing",
-    "its own tests, in its copy",
-    1794968287704
+    1794970076816
    ]
   },
   "nm": {
@@ -639,9 +587,7 @@
    "T-4770": "Re-estimate the release date from measured build speed",
    "T-4781": "Retest a fixed red on what failed, not every test",
    "T-4774": "Measure what one refresh tap costs the app",
-   "T-4814": "Split the merge limit by what a change touches",
-   "T-4810": "Make every wait name a task or an Investor issue",
-   "T-4813": "Home's numbers update within a minute"
+   "T-4814": "Split the merge limit by what a change touches"
   },
   "wk": {
    "T-4643": "Idris",
@@ -656,8 +602,6 @@
    "T-4781": "Odalys",
    "T-4774": "Idris",
    "T-4814": "Odalys",
-   "T-4810": "Odalys",
-   "T-4813": "Maren",
    "T-4699": "Pernille",
    "T-4698": "Pernille",
    "T-4697": "Pernille",
@@ -666,7 +610,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-18T02:49:07Z",
+  "at": "2026-11-18T02:51:56Z",
   "mq": {
    "n": {
     "checking": 2,
@@ -678,13 +622,13 @@
     "parked": 6
    },
    "m": {
-    "checking": 9,
-    "inline": 117,
-    "conflicted": 834,
+    "checking": 12,
+    "inline": 120,
+    "conflicted": 837,
     "failed": null,
-    "held": 1640,
+    "held": 1642,
     "retry": null,
-    "parked": 589
+    "parked": 592
    },
    "cur": [
     [
@@ -693,7 +637,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     9
+     12
     ],
     [
      [
@@ -701,7 +645,7 @@
      ],
      "iPhone app tests, sent and waiting its turn",
      "MacBook",
-     10
+     13
     ]
    ],
    "ld": [
@@ -711,12 +655,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-18T02:48:43Z",
-    "ld": 6.41,
+    "at": "2026-11-18T02:51:32Z",
+    "ld": 6.46,
     "c": 8,
     "sb": 0,
     "dk": [
-     17.9,
+     16.9,
      228.3
     ],
     "ss": [
@@ -745,7 +689,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 4 tasks",
+   "t": "Work session \u2013 2 tasks",
    "at": "2026-11-17T21:21:21-05:00"
   }
  ],
@@ -768,13 +712,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 2,
+  "main": 0,
   "lanes": 0,
-  "total": 2,
-  "at": "9:49 PM",
-  "why": "",
-  "at_iso": "2026-11-18T02:49:00+00:00",
+  "total": 0,
+  "at": "9:52 PM",
+  "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
+  "at_iso": "2026-11-18T02:52:00+00:00",
   "started": "7:10 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 7:10 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:49 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0, started 7:10 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:52 PM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
  }
 }

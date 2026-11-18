@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-18T11:04:10.268170+00:00",
+ "at": "2026-11-18T11:07:10.741021+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -108,19 +108,11 @@
  },
  "workers": [
   {
-   "name": "idris",
-   "task": "[build] T-4873 fallback completion case",
-   "model": "sonnet",
-   "started": "2026-11-18T10:35:31.351Z",
-   "seconds": 1718,
-   "finished": null
-  },
-  {
    "name": "pernille",
    "task": "[review] T-4876 long-line caret review",
    "model": "opus",
    "started": "2026-11-18T10:40:13.676Z",
-   "seconds": 1436,
+   "seconds": 1617,
    "finished": null
   },
   {
@@ -128,12 +120,28 @@
    "task": "[design] T-4886 PyWidget in premade lines",
    "model": "sonnet",
    "started": "2026-11-18T11:02:42.183Z",
-   "seconds": 88,
+   "seconds": 268,
+   "finished": null
+  },
+  {
+   "name": "idris",
+   "task": "[report] morning",
+   "model": "opus",
+   "started": "2026-11-18T11:05:00.328Z",
+   "seconds": 130,
    "finished": null
   }
  ],
- "who": "Idris, Pernille, Maren",
+ "who": "Pernille, Maren, Idris",
  "recent": [
+  {
+   "name": "idris",
+   "task": "[build] T-4873 fallback completion case",
+   "model": "sonnet",
+   "started": "2026-11-18T10:35:31.351Z",
+   "seconds": null,
+   "finished": "2026-11-18T11:04:32.695000+00:00"
+  },
   {
    "name": "idris",
    "task": "[review] T-4885 PyWidget name strings review",
@@ -157,37 +165,29 @@
    "started": "2026-11-18T09:43:33.374Z",
    "seconds": null,
    "finished": "2026-11-18T10:39:44.344000+00:00"
-  },
-  {
-   "name": "pernille",
-   "task": "[review] T-4872 completion change review",
-   "model": "opus",
-   "started": "2026-11-18T10:27:31.576Z",
-   "seconds": null,
-   "finished": "2026-11-18T10:35:10.810000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 486,
+  "runnable_count": 485,
   "blocked_count": 35
  },
  "meter": {
   "five_hour": {
-   "pct": 4.0,
+   "pct": 5.0,
    "resets_at": "2026-11-18T10:10:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-18T06:00:16.190633-05:00",
+   "read_at": "2026-11-18T06:06:26.167978-05:00",
    "source": "live",
-   "left": 96.0,
+   "left": 95.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 45.0,
    "resets_at": "2026-11-22T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-18T06:00:16.190633-05:00",
+   "read_at": "2026-11-18T06:06:26.167978-05:00",
    "source": "live",
    "left": 55.0,
    "left_words": "of your weekly allowance left"
@@ -199,7 +199,7 @@
    "read_at": "2026-11-18T04:07:09.006523-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-18T06:00:16.190633-05:00"
+  "read_at": "2026-11-18T06:06:26.167978-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -219,7 +219,7 @@
   "week_pct": 50.16,
   "usage_pct": 53.3,
   "work_pct": 82.4,
-  "read_at": "2026-11-18T11:04:00+00:00",
+  "read_at": "2026-11-18T11:07:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -249,14 +249,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-18T06:00:00-05:00",
+   "at": "2026-11-18T06:06:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 12,
-  "at": "2026-11-18T06:04:00-05:00",
+  "at": "2026-11-18T06:07:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -273,14 +273,6 @@
  },
  "lanes": [
   {
-   "name": "Idris",
-   "state": "running",
-   "task": "[build] T-4873 fallback completion case",
-   "model": "sonnet",
-   "since": "2026-11-18T10:35:31.351Z",
-   "next": []
-  },
-  {
    "name": "Pernille",
    "state": "running",
    "task": "[review] T-4876 long-line caret review",
@@ -294,6 +286,14 @@
    "task": "[design] T-4886 PyWidget in premade lines",
    "model": "sonnet",
    "since": "2026-11-18T11:02:42.183Z",
+   "next": []
+  },
+  {
+   "name": "Idris",
+   "state": "running",
+   "task": "[report] morning",
+   "model": "opus",
+   "since": "2026-11-18T11:05:00.328Z",
    "next": []
   },
   {
@@ -324,15 +324,6 @@
  "tasks": {
   "run": [
    {
-    "w": "Idris",
-    "k": "build",
-    "t": "Make backup suggestions ignore letter case too",
-    "m": "sonnet",
-    "at": "2026-11-18T10:35:31.351Z",
-    "o": "c",
-    "task": "T-4873"
-   },
-   {
     "w": "Pernille",
     "k": "review",
     "t": "Check the long-line caret change",
@@ -349,6 +340,14 @@
     "at": "2026-11-18T11:02:42.183Z",
     "o": "c",
     "task": "T-4886"
+   },
+   {
+    "w": "Idris",
+    "k": "report",
+    "t": "Morning",
+    "m": "opus",
+    "at": "2026-11-18T11:05:00.328Z",
+    "o": "c"
    }
   ],
   "src": "plan",
@@ -427,6 +426,11 @@
   "done": [
    {
     "w": "Idris",
+    "t": "The editor's backup suggestions now match typed words whatever their capitals, so typing a...",
+    "at": "2026-11-18T06:04:00-05:00"
+   },
+   {
+    "w": "Idris",
     "t": "An independent check confirmed the eleven widget lines now spell the product PyWidget the...",
     "at": "2026-11-18T06:01:00-05:00"
    },
@@ -434,22 +438,21 @@
     "w": "Maren",
     "t": "The widget's words now spell the product PyWidget the way the approved voice writes it, in...",
     "at": "2026-11-18T06:01:00-05:00"
-   },
-   {
-    "w": "Idris",
-    "t": "Measured what one tap on a widget's refresh button costs: with the app closed about 3.4 seconds...",
-    "at": "2026-11-18T05:55:00-05:00"
    }
   ],
   "count": {
-   "next": 486,
+   "next": 485,
    "wait": 32,
    "blocked": 3,
    "you": 10
   },
   "fin": {
-   "n": 19,
+   "n": 20,
    "rows": [
+    [
+     "T-4873",
+     "Make backup suggestions..."
+    ],
     [
      "T-4885",
      "Check the PyWidget name fix..."
@@ -469,10 +472,6 @@
     [
      "T-4764",
      "Fit habit buttons at large..."
-    ],
-    [
-     "T-4872",
-     "Check the completion case..."
     ]
    ]
   }
@@ -516,57 +515,52 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-18T11:03:55Z",
+  "at": "2026-11-18T11:07:10Z",
   "s": {
    "T-0011": [
     "merging",
     "Host checks on the Mac mini",
-    1794999355548
+    1794999370741
    ],
    "T-4533": [
     "mergeq",
     "2nd to merge",
-    1794988075548
+    1794988090741
    ],
    "T-4644": [
     "mergeq",
     "3rd to merge",
-    1794988615548
+    1794988630741
    ],
    "T-4771": [
     "mergeq",
     "4th to merge",
-    1794989815548
+    1794989830741
    ],
    "T-4762": [
     "mergeq",
     "5th to merge",
-    1794989875548
+    1794989830741
    ],
    "T-4301": [
     "mergeq",
     "7th to merge",
-    1794991075548
+    1794991090741
    ],
    "T-4783": [
     "mergeq",
     "9th to merge",
-    1794991555548
+    1794991510741
    ],
    "T-4574": [
     "mergeq",
     "11th to merge",
-    1794992515548
-   ],
-   "T-4873": [
-    "mergetest",
-    "iPhone tests on the MacBook",
-    null
+    1794992530741
    ],
    "T-4876": [
     "testing",
     "its own tests, in its copy",
-    1794999355548
+    1794999910741
    ]
   },
   "nm": {
@@ -578,7 +572,6 @@
    "T-4301": "Read fresh Pro gates after a queued wait",
    "T-4783": "Keep the gutter mark on its line after an edit",
    "T-4574": "Keep the launcher's app queries out of shipped builds",
-   "T-4873": "Make backup suggestions ignore letter case too",
    "T-4876": "Check the long-line caret change"
   },
   "wk": {
@@ -590,8 +583,8 @@
    "T-4301": "Idris",
    "T-4783": "Idris",
    "T-4574": "Idris",
-   "T-4873": "Idris",
    "T-4876": "Pernille",
+   "T-4873": "Idris",
    "T-4885": "Idris",
    "T-4746": "Maren",
    "T-4774": "Idris",
@@ -602,12 +595,11 @@
    "T-4763": "Maren",
    "T-4663": "Idris",
    "T-4861": "Pernille",
-   "T-4601": "Pernille",
-   "T-4602": "Pernille"
+   "T-4601": "Pernille"
   }
  },
  "ln": {
-  "at": "2026-11-18T11:03:55Z",
+  "at": "2026-11-18T11:07:10Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -619,13 +611,13 @@
     "parked": 9
    },
    "m": {
-    "checking": 8,
-    "inline": 166,
-    "conflicted": 780,
+    "checking": 11,
+    "inline": 170,
+    "conflicted": 783,
     "failed": null,
-    "held": 2134,
+    "held": 2138,
     "retry": null,
-    "parked": 780
+    "parked": 783
    },
    "cur": [
     [
@@ -634,7 +626,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     8
+     11
     ]
    ],
    "ld": [
@@ -644,12 +636,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-18T11:03:32Z",
-    "ld": 2.08,
+    "at": "2026-11-18T11:07:11Z",
+    "ld": 2.89,
     "c": 8,
     "sb": 1,
     "dk": [
-     19.8,
+     20.6,
      228.3
     ],
     "ss": [
@@ -661,8 +653,8 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-18T10:56:16Z",
-    "ld": 14.25,
+    "at": "2026-11-18T11:04:04Z",
+    "ld": 3.52,
     "c": 12,
     "sb": 0,
     "dk": [
@@ -706,10 +698,10 @@
   "main": 3,
   "lanes": 0,
   "total": 3,
-  "at": "6:04 AM",
+  "at": "6:07 AM",
   "why": "",
-  "at_iso": "2026-11-18T11:04:00+00:00",
+  "at_iso": "2026-11-18T11:07:00+00:00",
   "started": "4:07 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 4:07 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 6:04 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 4:07 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 6:07 AM ET</p></section>"
  }
 }

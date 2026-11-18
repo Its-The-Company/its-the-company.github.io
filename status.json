@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-18T21:12:30.419052+00:00",
+ "at": "2026-11-18T21:15:34.657302+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -124,11 +124,11 @@
  },
  "workers": [
   {
-   "name": "odalys",
-   "task": "[tools] T-4907 keep main green after every land",
+   "name": "idris",
+   "task": "[build] T-4631 premades with refused imports to app",
    "model": "opus",
-   "started": "2026-11-18T19:11:56.141Z",
-   "seconds": 7234,
+   "started": "2026-11-18T20:40:36.593Z",
+   "seconds": 2098,
    "finished": null,
    "effort": "high"
   },
@@ -137,22 +137,30 @@
    "task": "[test] T-4807 land browser time-out fix",
    "model": "opus",
    "started": "2026-11-18T20:31:35.722Z",
-   "seconds": 2454,
+   "seconds": 2638,
    "finished": null,
    "effort": "high"
   },
   {
-   "name": "idris",
-   "task": "[build] T-4631 premades with refused imports to app",
+   "name": "odalys",
+   "task": "[tools] T-4911 land a finished copy after main moves",
    "model": "opus",
-   "started": "2026-11-18T20:40:36.593Z",
-   "seconds": 1913,
+   "started": "2026-11-18T21:13:45.187Z",
+   "seconds": 109,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Odalys, Pernille, Idris",
+ "who": "Idris, Pernille, Odalys",
  "recent": [
+  {
+   "name": "odalys",
+   "task": "[tools] T-4907 keep main green after every land",
+   "model": "opus",
+   "started": "2026-11-18T19:11:56.141Z",
+   "seconds": null,
+   "finished": "2026-11-18T21:13:09.663000+00:00"
+  },
   {
    "name": "idris",
    "task": "[fix] T-4631 premades with refused imports to app",
@@ -176,37 +184,29 @@
    "started": "2026-11-18T19:12:07.311Z",
    "seconds": null,
    "finished": "2026-11-18T20:31:10.864000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-4773 time next run from widget ask",
-   "model": "opus",
-   "started": "2026-11-18T19:52:27.248Z",
-   "seconds": null,
-   "finished": "2026-11-18T20:22:49.417000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 495,
+  "runnable_count": 496,
   "blocked_count": 33
  },
  "meter": {
   "five_hour": {
-   "pct": 7.0,
+   "pct": 8.0,
    "resets_at": "2026-11-18T20:10:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-18T16:08:29.720035-05:00",
+   "read_at": "2026-11-18T16:14:35.073244-05:00",
    "source": "live",
-   "left": 93.0,
+   "left": 92.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 51.0,
    "resets_at": "2026-11-22T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-18T16:08:29.720035-05:00",
+   "read_at": "2026-11-18T16:14:35.073244-05:00",
    "source": "live",
    "left": 49.0,
    "left_words": "of your weekly allowance left"
@@ -218,7 +218,7 @@
    "read_at": "2026-11-18T14:09:30.092585-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-18T16:08:29.720035-05:00"
+  "read_at": "2026-11-18T16:14:35.073244-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -238,7 +238,7 @@
   "week_pct": 51.56,
   "usage_pct": 51.3,
   "work_pct": 81.5,
-  "read_at": "2026-11-18T21:12:00+00:00",
+  "read_at": "2026-11-18T21:15:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -259,7 +259,7 @@
   }
  ],
  "disk": {
-  "free_gb": 11,
+  "free_gb": 14,
   "gate": "closed",
   "ssd": {
    "mounted": true,
@@ -268,14 +268,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions wait until 20 GB is free.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-18T16:08:00-05:00",
+   "at": "2026-11-18T16:14:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-18T16:12:00-05:00",
+  "at": "2026-11-18T16:15:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -292,15 +292,6 @@
  },
  "lanes": [
   {
-   "name": "Odalys",
-   "state": "running",
-   "task": "[tools] T-4907 keep main green after every land",
-   "model": "opus",
-   "since": "2026-11-18T19:11:56.141Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
    "name": "Pernille",
    "state": "running",
    "task": "[test] T-4807 land browser time-out fix",
@@ -315,6 +306,15 @@
    "task": "[build] T-4631 premades with refused imports to app",
    "model": "opus",
    "since": "2026-11-18T20:40:36.593Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
+   "name": "Odalys",
+   "state": "running",
+   "task": "[tools] T-4911 land a finished copy after main moves",
+   "model": "opus",
+   "since": "2026-11-18T21:13:45.187Z",
    "next": [],
    "effort": "high"
   },
@@ -346,16 +346,6 @@
  "tasks": {
   "run": [
    {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Keep main green after every land",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-18T19:11:56.141Z",
-    "o": "c",
-    "task": "T-4907"
-   },
-   {
     "w": "Pernille",
     "k": "test",
     "t": "Fix every bad test that failed a merge",
@@ -374,6 +364,16 @@
     "at": "2026-11-18T20:40:36.593Z",
     "o": "c",
     "task": "T-4631"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Land a finished copy after main moves on",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-18T21:13:45.187Z",
+    "o": "c",
+    "task": "T-4911"
    }
   ],
   "src": "plan",
@@ -467,7 +467,7 @@
    }
   ],
   "count": {
-   "next": 495,
+   "next": 496,
    "wait": 31,
    "blocked": 2,
    "you": 9
@@ -525,7 +525,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-18T21:12:30Z",
+  "at": "2026-11-18T21:15:34Z",
   "s": {
    "T-4631": [
     "mergetest",
@@ -543,7 +543,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-18T21:12:30Z",
+  "at": "2026-11-18T21:15:34Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -557,11 +557,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 578,
+    "conflicted": 581,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1142
+    "parked": 1145
    },
    "cur": [],
    "ld": [
@@ -571,16 +571,16 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-18T21:11:43Z",
-    "ld": 1.08,
+    "at": "2026-11-18T21:15:34Z",
+    "ld": 1.45,
     "c": 8,
     "sb": 0,
     "dk": [
-     13.6,
+     15.6,
      228.3
     ],
     "ss": [
-     165.1,
+     164.5,
      953.7
     ],
     "sn": []
@@ -605,7 +605,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 3 tasks",
+   "t": "Work session \u2013 4 tasks",
    "at": "2026-11-18T15:52:47-05:00"
   }
  ],
@@ -630,10 +630,10 @@
   "main": 3,
   "lanes": 0,
   "total": 3,
-  "at": "4:12 PM",
+  "at": "4:15 PM",
   "why": "",
-  "at_iso": "2026-11-18T21:12:00+00:00",
+  "at_iso": "2026-11-18T21:15:00+00:00",
   "started": "2:09 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 2:09 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 4:12 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 2:09 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 4:15 PM ET</p></section>"
  }
 }

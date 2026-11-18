@@ -1,11 +1,22 @@
 {
  "schema": 1,
- "at": "2026-11-18T17:57:58.870936+00:00",
+ "at": "2026-11-18T18:01:07.265892+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-18T10:30:40-05:00",
   "flow": [
+   {
+    "t": "T-4898",
+    "name": "Fix the Home Screen token test reading the gallery",
+    "acct": "Personal b",
+    "steps": [
+     {
+      "s": "macbook",
+      "at": 1795024811
+     }
+    ]
+   },
    {
     "t": "T-2296",
     "name": "Finish the gallery pager, iPad layout and detail foot",
@@ -141,7 +152,7 @@
    "task": "[tools] T-4786 fix S30-5 held-state test, land T-4493",
    "model": "opus",
    "started": "2026-11-18T17:33:36.694Z",
-   "seconds": 1462,
+   "seconds": 1650,
    "finished": null,
    "effort": "high"
   },
@@ -150,7 +161,7 @@
    "task": "[tools] T-4903 part 5: drop copies when redo starts",
    "model": "opus",
    "started": "2026-11-18T17:41:17.039Z",
-   "seconds": 1001,
+   "seconds": 1190,
    "finished": null,
    "effort": "high"
   }
@@ -242,7 +253,7 @@
   "week_pct": 51.32,
   "usage_pct": 52.2,
   "work_pct": 82.0,
-  "read_at": "2026-11-18T17:58:00+00:00",
+  "read_at": "2026-11-18T18:01:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -331,7 +342,7 @@
  "lock_in": {
   "on": false,
   "pool": 12,
-  "at": "2026-11-18T12:58:00-05:00",
+  "at": "2026-11-18T13:01:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -570,67 +581,67 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-18T17:57:58Z",
+  "at": "2026-11-18T18:00:57Z",
   "s": {
    "T-4849": [
     "mergeq",
     "1st to merge",
-    1795024198870
+    1795024197474
    ],
    "T-4679": [
     "mergeq",
     "2nd to merge",
-    1795012018870
+    1795012017474
    ],
    "T-4898": [
-    "mergeq",
-    "5th to merge",
-    1795021018870
+    "mergetest",
+    "Xcode checks on the MacBook, 5th to merge",
+    1795024857474
    ],
    "T-4890": [
     "mergeq",
     "6th to merge",
-    1795024078870
+    1795024077474
    ],
    "T-4840": [
     "mergeq",
     "7th to merge",
-    1795022518870
+    1795022517474
    ],
    "T-4866": [
     "mergeq",
     "8th to merge",
-    1795023178870
+    1795023177474
    ],
    "T-4897": [
     "mergeq",
     "13th to merge",
-    1795022638870
+    1795022637474
    ],
    "T-4819": [
     "mergeq",
     "14th to merge",
-    1795022878870
+    1795022877474
    ],
    "T-4660": [
     "mergeq",
     "15th to merge",
-    1795022758870
+    1795022817474
    ],
    "T-4493": [
     "merging",
     "Mac tests at the main gate",
-    1795024138870
+    1795024137474
    ],
    "T-4786": [
     "testing",
     "its own tests, in its copy",
-    1795024078870
+    1795024077474
    ],
    "T-4903": [
     "testing",
     "its own tests, in its copy",
-    1795024138870
+    1795024137474
    ]
   },
   "nm": {
@@ -665,11 +676,11 @@
   }
  },
  "ln": {
-  "at": "2026-11-18T17:57:58Z",
+  "at": "2026-11-18T18:00:57Z",
   "mq": {
    "n": {
-    "checking": 0,
-    "inline": 9,
+    "checking": 1,
+    "inline": 8,
     "conflicted": 5,
     "failed": 0,
     "held": 2,
@@ -677,15 +688,24 @@
     "parked": 5
    },
    "m": {
-    "checking": null,
-    "inline": 32,
-    "conflicted": 383,
+    "checking": 0,
+    "inline": 33,
+    "conflicted": 386,
     "failed": null,
-    "held": 1280,
+    "held": 1283,
     "retry": null,
-    "parked": 860
+    "parked": 863
    },
-   "cur": [],
+   "cur": [
+    [
+     [
+      "T-4898"
+     ],
+     "iPhone app tests, sent and waiting its turn",
+     "MacBook",
+     0
+    ]
+   ],
    "ld": [
     27,
     "2026-11-18T16:58:03Z"
@@ -693,12 +713,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-18T17:57:59Z",
+    "at": "2026-11-18T18:00:58Z",
     "ld": 1.47,
     "c": 8,
     "sb": 1,
     "dk": [
-     10.6,
+     9.2,
      228.3
     ],
     "ss": [
@@ -772,10 +792,10 @@
   "main": 2,
   "lanes": 2,
   "total": 4,
-  "at": "12:58 PM",
+  "at": "1:01 PM",
   "why": "",
-  "at_iso": "2026-11-18T17:58:00+00:00",
+  "at_iso": "2026-11-18T18:01:00+00:00",
   "started": "10:30 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 2, started 10:30 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 12:58 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 2, started 10:30 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 1:01 PM ET</p></section>"
  }
 }

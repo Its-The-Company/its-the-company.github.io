@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-19T15:31:38.771447+00:00",
+ "at": "2026-11-19T15:43:59.177436+00:00",
  "session": {
   "active": false,
   "kind": "",
@@ -226,12 +226,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-19T10:38:02-05:00",
+ "next_tick": "2026-11-19T10:58:37-05:00",
  "personal": {
   "week_pct": 69.01,
   "usage_pct": 44.9,
   "work_pct": 81.2,
-  "read_at": "2026-11-19T15:33:00+00:00",
+  "read_at": "2026-11-19T15:44:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -301,7 +301,7 @@
   }
  ],
  "disk": {
-  "free_gb": 41,
+  "free_gb": 35,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -309,15 +309,15 @@
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
-   "ok": true,
-   "at": "2026-11-19T10:30:00-05:00",
+   "ok": false,
+   "at": "2026-11-19T10:35:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 3,
-  "at": "2026-11-19T10:33:00-05:00",
+  "at": "2026-11-19T10:44:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -326,7 +326,12 @@
   }
  },
  "next_tick_why": "last_tick",
- "idle": null,
+ "idle": {
+  "since": "2026-11-19T09:42:21-05:00",
+  "minutes": 61,
+  "why": "a tick has spent 1 min on steps before the session",
+  "healed": []
+ },
  "pool": null,
  "lanes": [
   {
@@ -515,99 +520,99 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-19T15:31:38Z",
+  "at": "2026-11-19T15:43:59Z",
   "s": {
    "T-4681": [
     "merging",
     "Host checks on the Mac mini",
-    1795100918771
+    1795100879177
    ],
    "T-4823": [
     "mergeq",
     "1st to merge",
-    1795101038771
+    1795100999177
    ],
    "T-4849": [
     "mergeq",
     "2nd to merge",
-    1795089698771
+    1795089719177
+   ],
+   "T-4843": [
+    "mergeq",
+    "3rd to merge",
+    1795102439177
    ],
    "T-5045": [
     "mergeq",
-    "3rd to merge",
-    1795083278771
+    "4th to merge",
+    1795083239177
    ],
    "T-5037": [
     "mergeq",
-    "4th to merge",
-    1795084298771
+    "5th to merge",
+    1795084259177
    ],
    "T-0349": [
     "mergeq",
-    "6th to merge",
-    1795086938771
+    "7th to merge",
+    1795086959177
    ],
    "T-3402": [
     "mergeq",
-    "7th to merge",
-    1795087058771
+    "8th to merge",
+    1795087019177
    ],
    "T-5057": [
     "mergeq",
-    "10th to merge",
-    1795092818771
+    "11th to merge",
+    1795092839177
    ],
    "T-0101": [
     "mergeq",
-    "11th to merge",
-    1795092938771
+    "12th to merge",
+    1795092959177
    ],
    "T-0902": [
     "mergeq",
-    "12th to merge",
-    1795093058771
+    "13th to merge",
+    1795093019177
    ],
    "T-5062": [
     "mergeq",
-    "13th to merge",
-    1795093178771
+    "14th to merge",
+    1795093199177
    ],
    "T-2378": [
     "mergeq",
-    "14th to merge",
-    1795093418771
+    "15th to merge",
+    1795093439177
    ],
    "T-4795": [
     "mergeq",
-    "16th to merge",
-    1795093598771
+    "17th to merge",
+    1795093619177
    ],
    "T-4807": [
     "mergeq",
-    "17th to merge",
-    1795093718771
+    "18th to merge",
+    1795093739177
    ],
    "T-4913": [
     "mergeq",
-    "19th to merge",
-    1795096478771
+    "20th to merge",
+    1795096499177
    ],
    "T-4180": [
     "testing",
     "Mac Mini \u00b7 test",
     null
-   ],
-   "T-4843": [
-    "merged",
-    "on main 3:58 AM ET",
-    1795078726000,
-    "Odalys"
    ]
   },
   "nm": {
    "T-4681": "Premades default to Paper in light and Studio in dark",
    "T-4823": "Group process changes into features",
    "T-4849": "Shorten the process merge wait for good",
+   "T-4843": "Size each merge batch from measured data",
    "T-5045": "Date the Home merge-only line, hide it after a day",
    "T-5037": "Break the Machine tab's \"Other\" storage into named parts",
    "T-0349": "Fix gaps in the package sandbox build step",
@@ -620,13 +625,13 @@
    "T-4795": "Weigh the showcase set against the Builder-first ruling",
    "T-4807": "Fix every bad test that failed a merge",
    "T-4913": "Stop the safety guard refusing safe work",
-   "T-4180": "Every premade widget draws on the iPhone",
-   "T-4843": "Size each merge batch from measured data"
+   "T-4180": "Every premade widget draws on the iPhone"
   },
   "wk": {
    "T-4681": "Idris",
    "T-4823": "Odalys",
    "T-4849": "Odalys",
+   "T-4843": "Odalys",
    "T-5045": "Maren",
    "T-5037": "Odalys",
    "T-0349": "Pernille",
@@ -639,16 +644,15 @@
    "T-4795": "Ines",
    "T-4807": "Pernille",
    "T-4913": "Odalys",
-   "T-4180": "Idris",
-   "T-4843": "Odalys"
+   "T-4180": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-19T15:31:38Z",
+  "at": "2026-11-19T15:43:59Z",
   "mq": {
    "n": {
     "checking": 1,
-    "inline": 14,
+    "inline": 15,
     "conflicted": 2,
     "failed": 0,
     "held": 0,
@@ -656,12 +660,12 @@
     "parked": 0
    },
    "m": {
-    "checking": 23,
-    "inline": 155,
-    "conflicted": 696,
+    "checking": 36,
+    "inline": 167,
+    "conflicted": 708,
     "failed": null,
     "held": null,
-    "retry": 44,
+    "retry": 56,
     "parked": null
    },
    "cur": [
@@ -671,7 +675,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     23
+     36
     ]
    ],
    "ld": [
@@ -681,12 +685,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-19T15:31:40Z",
-    "ld": 20.44,
+    "at": "2026-11-19T15:44:01Z",
+    "ld": 35.73,
     "c": 8,
     "sb": 1,
     "dk": [
-     40.5,
+     36.2,
      228.3
     ],
     "ss": [
@@ -750,10 +754,10 @@
   "main": 0,
   "lanes": 2,
   "total": 2,
-  "at": "10:33 AM",
+  "at": "10:44 AM",
   "why": "",
-  "at_iso": "2026-11-19T15:33:00+00:00",
+  "at_iso": "2026-11-19T15:44:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 10:33 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 10:44 AM ET</p></section>"
  }
 }

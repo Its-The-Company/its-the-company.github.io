@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-19T08:30:10.064174+00:00",
+ "at": "2026-11-19T08:33:15.599771+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -226,7 +226,7 @@
    "task": "[tools] T-4726 fix red personal land test",
    "model": "opus",
    "started": "2026-11-19T08:07:31.727Z",
-   "seconds": 1358,
+   "seconds": 1543,
    "finished": null,
    "effort": "high"
   },
@@ -235,16 +235,7 @@
    "task": "[tools] T-4884 fix red Xcode sim test",
    "model": "opus",
    "started": "2026-11-19T08:20:12.646Z",
-   "seconds": 597,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-4810 land waits fix then T-4809",
-   "model": "opus",
-   "started": "2026-11-19T08:25:56.830Z",
-   "seconds": 253,
+   "seconds": 782,
    "finished": null,
    "effort": "high"
   },
@@ -253,7 +244,7 @@
    "task": "[tools] T-4838 gate waits on runner progress",
    "model": "opus",
    "started": "2026-11-19T08:26:43.295Z",
-   "seconds": 206,
+   "seconds": 392,
    "finished": null,
    "effort": "high"
   },
@@ -262,7 +253,16 @@
    "task": "[tools] T-5065 clear answered waits each tick",
    "model": "opus",
    "started": "2026-11-19T08:26:51.402Z",
-   "seconds": 198,
+   "seconds": 384,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-4810 land waits fix then T-4809",
+   "model": "opus",
+   "started": "2026-11-19T08:25:56.830Z",
+   "seconds": 438,
    "finished": null,
    "effort": "high"
   }
@@ -305,24 +305,24 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 591,
+  "runnable_count": 592,
   "blocked_count": 28
  },
  "meter": {
   "five_hour": {
-   "pct": 13.0,
+   "pct": 14.0,
    "resets_at": "2026-11-19T06:10:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-19T03:23:55.102410-05:00",
+   "read_at": "2026-11-19T03:30:13.076247-05:00",
    "source": "live",
-   "left": 87.0,
+   "left": 86.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 65.0,
    "resets_at": "2026-11-22T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-19T03:23:55.102410-05:00",
+   "read_at": "2026-11-19T03:30:13.076247-05:00",
    "source": "live",
    "left": 35.0,
    "left_words": "of your weekly allowance left"
@@ -334,7 +334,7 @@
    "read_at": "2026-11-19T02:04:04.659976-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-19T03:23:55.102410-05:00"
+  "read_at": "2026-11-19T03:30:13.076247-05:00"
  },
  "ui": {
   "week_pct": 0.092,
@@ -354,7 +354,7 @@
   "week_pct": 57.06,
   "usage_pct": 47.1,
   "work_pct": 81.4,
-  "read_at": "2026-11-19T08:30:00+00:00",
+  "read_at": "2026-11-19T08:33:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -429,6 +429,7 @@
     "e": "high",
     "at": "2026-11-19T03:12:30-05:00",
     "n": "Jeremy",
+    "d": 1,
     "src": "plan-b"
    }
   ]
@@ -451,7 +452,7 @@
   }
  ],
  "disk": {
-  "free_gb": 39,
+  "free_gb": 37,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -460,14 +461,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-19T03:25:00-05:00",
+   "at": "2026-11-19T03:30:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 3,
-  "at": "2026-11-19T03:30:00-05:00",
+  "at": "2026-11-19T03:33:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -478,8 +479,8 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 8 (raised a step toward the floor of 8: new work may start and every signal is under its line)",
-  "n": 8,
+  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 9 (raised a step: load, time-outs, failed lands and redone tasks all under their lines)",
+  "n": 9,
   "at": "2026-11-19T02:04:05.487764-05:00"
  },
  "lanes": [
@@ -677,7 +678,7 @@
    }
   ],
   "count": {
-   "next": 591,
+   "next": 592,
    "wait": 27,
    "blocked": 1,
    "you": 9
@@ -747,82 +748,92 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-19T08:29:55Z",
+  "at": "2026-11-19T08:33:00Z",
   "s": {
    "T-4891": [
     "mergeq",
     "1st to merge",
-    1795076515055
+    1795076520346
    ],
    "T-5000": [
     "mergeq",
     "2nd to merge",
-    1795066435055
+    1795066440346
    ],
    "T-4916": [
     "mergeq",
     "3rd to merge",
-    1795068415055
+    1795068420346
    ],
    "T-5002": [
     "mergeq",
     "5th to merge",
-    1795068475055
+    1795068480346
    ],
    "T-4899": [
     "mergeq",
     "6th to merge",
-    1795068715055
+    1795068720346
    ],
    "T-4931": [
     "mergeq",
     "7th to merge",
-    1795068715055
+    1795068720346
    ],
    "T-4932": [
     "mergeq",
     "9th to merge",
-    1795068895055
+    1795068900346
    ],
    "T-4933": [
     "mergeq",
     "10th to merge",
-    1795069075055
+    1795069080346
    ],
    "T-4934": [
     "mergeq",
     "11th to merge",
-    1795069255055
+    1795069260346
    ],
    "T-5006": [
     "mergeq",
     "13th to merge",
-    1795071955055
+    1795071960346
    ],
    "T-4871": [
     "mergeq",
     "14th to merge",
-    1795072975055
+    1795072920346
+   ],
+   "T-4961": [
+    "mergeq",
+    "15th to merge",
+    1795077120346
    ],
    "T-4919": [
     "mergeq",
-    "15th to merge",
-    1795075795055
+    "16th to merge",
+    1795075800346
    ],
    "T-4843": [
     "merging",
     "Mac tests at the main gate",
-    1795076815055
+    1795076820346
    ],
    "T-4884": [
     "merging",
     "Mac tests at the main gate",
-    1795076935055
+    1795076940346
    ],
    "T-4726": [
     "testing",
     "its own tests, in its copy",
-    1795076635055
+    1795076640346
+   ],
+   "T-5065": [
+    "testing",
+    "its own tests, in its copy",
+    1795077120346
    ],
    "T-4850": [
     "merged",
@@ -843,10 +854,12 @@
    "T-4934": "Check finished work before it ships",
    "T-5006": "Lock In turns itself on after midnight",
    "T-4871": "Check the two-way editing week figure against the code",
+   "T-4961": "Publish the twice-daily reports close to six",
    "T-4919": "Fix a MacBook test job that failed",
    "T-4843": "Size each merge batch from measured data",
    "T-4884": "Fix the red Xcode sim test",
    "T-4726": "Fix the red personal land test",
+   "T-5065": "Clear answered waits from the supervisor tick",
    "T-4850": "Bring the Mac mini load back down"
   },
   "wk": {
@@ -861,10 +874,12 @@
    "T-4934": "Pernille",
    "T-5006": "Odalys",
    "T-4871": "Idris",
+   "T-4961": "Odalys",
    "T-4919": "Operator",
    "T-4843": "Odalys",
    "T-4884": "Odalys",
    "T-4726": "Odalys",
+   "T-5065": "Odalys",
    "T-4850": "Odalys",
    "T-4964": "Odalys",
    "T-5066": "Odalys",
@@ -874,11 +889,11 @@
   }
  },
  "ln": {
-  "at": "2026-11-19T08:29:55Z",
+  "at": "2026-11-19T08:33:00Z",
   "mq": {
    "n": {
     "checking": 0,
-    "inline": 12,
+    "inline": 13,
     "conflicted": 1,
     "failed": 0,
     "held": 0,
@@ -887,8 +902,8 @@
    },
    "m": {
     "checking": null,
-    "inline": 133,
-    "conflicted": 909,
+    "inline": 135,
+    "conflicted": 912,
     "failed": null,
     "held": null,
     "retry": null,
@@ -902,12 +917,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-19T08:29:31Z",
-    "ld": 4.91,
+    "at": "2026-11-19T08:33:02Z",
+    "ld": 4.58,
     "c": 8,
     "sb": 0,
     "dk": [
-     39.2,
+     36.5,
      228.3
     ],
     "ss": [
@@ -979,10 +994,10 @@
   "main": 5,
   "lanes": 2,
   "total": 7,
-  "at": "3:30 AM",
+  "at": "3:33 AM",
   "why": "",
-  "at_iso": "2026-11-19T08:30:00+00:00",
+  "at_iso": "2026-11-19T08:33:00+00:00",
   "started": "2:04 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 5, started 2:04 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 3:30 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 5, started 2:04 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 3:33 AM ET</p></section>"
  }
 }

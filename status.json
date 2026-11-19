@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-19T03:49:01.659660+00:00",
+ "at": "2026-11-19T03:52:07.940976+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -135,7 +135,7 @@
    "task": "[tools] T-4805 T-4792 land gate cause and retest",
    "model": "opus",
    "started": "2026-11-19T02:37:38.692Z",
-   "seconds": 4282,
+   "seconds": 4469,
    "finished": null,
    "effort": "high"
   },
@@ -144,7 +144,7 @@
    "task": "[build] T-4962 make main pass Xcode checks",
    "model": "opus",
    "started": "2026-11-19T02:38:04.132Z",
-   "seconds": 4257,
+   "seconds": 4443,
    "finished": null,
    "effort": "high"
   },
@@ -153,7 +153,7 @@
    "task": "[tools] T-4806 lane time-outs never a failed merge",
    "model": "opus",
    "started": "2026-11-19T03:00:38.966Z",
-   "seconds": 2902,
+   "seconds": 3088,
    "finished": null,
    "effort": "high"
   },
@@ -162,12 +162,21 @@
    "task": "[tools] T-4851 keep Mac mini disk free for good",
    "model": "opus",
    "started": "2026-11-19T03:17:34.802Z",
-   "seconds": 1886,
+   "seconds": 2073,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-4810 T-4809 waits name tasks, merge label fix",
+   "model": "opus",
+   "started": "2026-11-19T03:52:04.985Z",
+   "seconds": 2,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Odalys x2, Idris, Pernille",
+ "who": "Odalys x3, Idris, Pernille",
  "recent": [
   {
    "name": "odalys",
@@ -210,19 +219,19 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 25.0,
+   "pct": 27.0,
    "resets_at": "2026-11-19T01:10:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-18T22:34:07.413929-05:00",
+   "read_at": "2026-11-18T22:49:13.869540-05:00",
    "source": "live",
-   "left": 75.0,
+   "left": 73.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 59.0,
    "resets_at": "2026-11-22T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-18T22:34:07.413929-05:00",
+   "read_at": "2026-11-18T22:49:13.869540-05:00",
    "source": "live",
    "left": 41.0,
    "left_words": "of your weekly allowance left"
@@ -234,7 +243,7 @@
    "read_at": "2026-11-18T21:23:20.295533-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-18T22:34:07.413929-05:00"
+  "read_at": "2026-11-18T22:49:13.869540-05:00"
  },
  "ui": {
   "week_pct": 0.092,
@@ -254,7 +263,7 @@
   "week_pct": 52.57,
   "usage_pct": 47.5,
   "work_pct": 81.2,
-  "read_at": "2026-11-19T03:49:00+00:00",
+  "read_at": "2026-11-19T03:52:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -284,14 +293,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions wait until 20 GB is free.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-18T22:43:00-05:00",
+   "at": "2026-11-18T22:50:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 3,
-  "at": "2026-11-18T22:49:00-05:00",
+  "at": "2026-11-18T22:52:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -400,6 +409,16 @@
     "at": "2026-11-19T03:17:34.802Z",
     "o": "c",
     "task": "T-4851"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Make every wait name a task or an Investor issue",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-19T03:52:04.985Z",
+    "o": "c",
+    "task": "T-4810"
    }
   ],
   "src": "plan",
@@ -563,32 +582,33 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-19T03:49:01Z",
+  "at": "2026-11-19T03:52:07Z",
   "s": {
-   "T-4806": [
-    "merging",
-    "Mac tests at the main gate",
-    1795059121659
-   ],
-   "T-4851": [
-    "merging",
-    "Mac tests at the main gate",
-    1795060141659
-   ],
    "T-4909": [
     "merging",
     "Mac tests at the main gate",
-    1795058701659
+    1795058707940
    ],
    "T-4962": [
     "testing",
     "MacBook \u00b7 test",
     null
    ],
+   "T-4806": [
+    "testing",
+    "its own tests, in its copy",
+    1795060327940
+   ],
    "T-4792": [
     "testing",
     "its own tests, in its copy",
-    1795059661659
+    1795059667940
+   ],
+   "T-4851": [
+    "merged",
+    "on main 10:50 PM ET",
+    1795060226000,
+    "Pernille"
    ],
    "T-4805": [
     "merged",
@@ -598,19 +618,19 @@
    ]
   },
   "nm": {
-   "T-4806": "Fix the causes of merge time-outs and runner errors",
-   "T-4851": "Keep the Mac mini disk free for good",
    "T-4909": "End work sessions on a stall, not on the clock",
    "T-4962": "Make main pass its Xcode checks again",
+   "T-4806": "Fix the causes of merge time-outs and runner errors",
    "T-4792": "Gate lands retest a fixed red on what failed",
+   "T-4851": "Keep the Mac mini disk free for good",
    "T-4805": "Record a cause for every failed merge"
   },
   "wk": {
-   "T-4806": "Odalys",
-   "T-4851": "Odalys",
    "T-4909": "Odalys",
    "T-4962": "Operator",
+   "T-4806": "Odalys",
    "T-4792": "Odalys",
+   "T-4851": "Odalys",
    "T-4805": "Odalys",
    "T-4956": "Odalys",
    "T-4788": "Odalys",
@@ -619,7 +639,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-19T03:49:01Z",
+  "at": "2026-11-19T03:52:07Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -633,7 +653,7 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 628,
+    "conflicted": 631,
     "failed": null,
     "held": null,
     "retry": null,
@@ -647,12 +667,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-19T03:48:36Z",
-    "ld": 4.74,
+    "at": "2026-11-19T03:51:52Z",
+    "ld": 5.68,
     "c": 8,
     "sb": 0,
     "dk": [
-     12.2,
+     12.7,
      228.3
     ],
     "ss": [
@@ -681,13 +701,13 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 8 tasks",
-   "at": "2026-11-18T22:48:42-05:00"
+   "t": "Work session \u2013 10 tasks",
+   "at": "2026-11-18T22:51:50-05:00"
   }
  ],
  "reply": {
-  "sent": "2026-11-19T03:47:42Z",
-  "seconds": 59.0
+  "sent": "2026-11-19T03:50:13Z",
+  "seconds": 96.0
  },
  "inbox": [],
  "trimmed": [
@@ -703,13 +723,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 4,
+  "main": 5,
   "lanes": 0,
-  "total": 4,
-  "at": "10:49 PM",
+  "total": 5,
+  "at": "10:52 PM",
   "why": "",
-  "at_iso": "2026-11-19T03:49:00+00:00",
+  "at_iso": "2026-11-19T03:52:00+00:00",
   "started": "9:32 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 4, started 9:32 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 10:49 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 5, started 9:32 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 10:52 PM ET</p></section>"
  }
 }

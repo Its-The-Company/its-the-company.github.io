@@ -892,6 +892,15 @@ no job. The others each saved one MacBook job: about 5 x 454 s, some 38 minutes 
 queued. That fits 7.3: the key is rarely the answer, and when it is, the cause is the same content landed again
 after a retry or a shared pass between lanes. No tool changed.
 
+**Read again at the tick, 2 PM ET 2026-11-19 (Idris).** To the record's last row (1:48 PM 11-19): 594 rows after
+8:02 AM 11-14, still 6 "reused". The six are lines 578, 650, 739, 754, 874 and 879 of the main checkout's
+`ops/metrics/land_xc.jsonl` (a row in the order of the table). The land's record the done condition asks for is
+line 754: event "reused", via "at land", by_key "app", rule t4195-v1, key c8844b40cfda128d..., task T-4182 on b3,
+pass_job J-20261117-0042-land-b3-37aaa8 at a85e176c83. The count covers 5 days and 6 hours, not a full 7: 6 reuses,
+5 jobs saved. The two optional pipeline edits (7.5) are still not on main: `merge_queue.py` counts in `xc_reused`
+only a pass kept by tree, and `personal_land.sh`'s floor still leaves out the build's other paths. They stay with
+the audit-implementation session; the line is done without them.
+
 ### 7.5 Not done
 
 - A pass that ran on the Mac mini (the land's fallback, the gate's run "here") is not kept by the key. Only a

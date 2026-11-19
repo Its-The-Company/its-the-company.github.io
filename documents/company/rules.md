@@ -754,6 +754,7 @@ The Effect lines of the amendments.md entries the charter retired (2026-11-04 12
 - **2026-11-19 9:17 AM ET** ((private)): The company aims for one merge route for every account's work, as part of the one-coordinator change (T-5005); a measured deep dive comes first and says whether it pays off and how best to do it.
 - **2026-11-19 11:55 AM ET** ((private)): Finished work that an account cannot merge itself, because the account is shut down or has hit its usage limit, is merged by a session on another account that is running, so it does not hold the merge queue; this applies to every account, the company account and the personal ones.
 - **2026-11-19 12:02 PM ET** ((private)): The Standing Investor instructions stay up to date: a new ruling that contradicts or edits an older entry updates or removes it; an entry better done as an automated deterministic process becomes one and its text entry is removed; T-5165 reviews every entry for keep, automate, edit or remove.
+- **2026-11-19 12:03 PM ET** ((private)): Correction to c7016129138: a standing rule is replaced by an automated process, and its text removed, only if that benefits the project's efficiency and accuracy; otherwise it stays as text.
 {% endraw %}
 
 </div>

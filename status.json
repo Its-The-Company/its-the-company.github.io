@@ -1,59 +1,11 @@
 {
  "schema": 1,
- "at": "2026-11-19T20:24:17.760840+00:00",
+ "at": "2026-11-19T20:39:18.197366+00:00",
  "session": {
   "active": false,
   "kind": "",
   "started": null,
   "flow": [
-   {
-    "t": "T-4932",
-    "name": "Check finished work before it ships",
-    "acct": "Personal b",
-    "steps": [
-     {
-      "s": "landing",
-      "at": 1795077542
-     }
-    ]
-   },
-   {
-    "t": "T-4933",
-    "name": "Check finished work before it ships",
-    "acct": "Personal b",
-    "steps": [
-     {
-      "s": "landing",
-      "at": 1795077542
-     }
-    ]
-   },
-   {
-    "t": "T-4934",
-    "name": "Check finished work before it ships",
-    "acct": "Personal b",
-    "steps": [
-     {
-      "s": "landing",
-      "at": 1795077542
-     }
-    ]
-   },
-   {
-    "t": "T-4182",
-    "name": "A failing widget says so and can recover",
-    "acct": "Personal b",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1795116189
-     },
-     {
-      "s": "macbook",
-      "at": 1795117708
-     }
-    ]
-   },
    {
     "t": "T-4919",
     "acct": "Personal b",
@@ -61,6 +13,17 @@
      {
       "s": "macbook",
       "at": 1795079292
+     }
+    ]
+   },
+   {
+    "t": "T-4508",
+    "name": "Alarm when one account's work keeps being refused",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "testq",
+      "at": 1795120641
      }
     ]
    },
@@ -85,6 +48,22 @@
    }
   ],
   "done": [
+   {
+    "t": "T-4182",
+    "name": "A failing widget says so and can recover",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1795120617
+   },
+   {
+    "t": "T-3974",
+    "name": "Never leave the merge step idle while work waits",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1795120545
+   },
    {
     "t": "T-4181",
     "name": "Widgets refresh on their own and by a tap",
@@ -145,25 +124,9 @@
     "steps": [],
     "end": "landed",
     "end_at": 1795112685
-   },
-   {
-    "t": "T-3871",
-    "name": "Archive parked refs whose work main already has",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1795112666
-   },
-   {
-    "t": "T-4678",
-    "name": "Close the iPhone premade feature and free its steps",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1795112610
    }
   ],
-  "landed": 36,
+  "landed": 38,
   "failed": 7
  },
  "workers": [],
@@ -172,7 +135,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 640,
+  "runnable_count": 639,
   "blocked_count": 2
  },
  "meter": {
@@ -217,12 +180,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-19T15:30:35-05:00",
+ "next_tick": "2026-11-19T15:42:17-05:00",
  "personal": {
   "week_pct": 72.29,
   "usage_pct": 46.0,
   "work_pct": 80.3,
-  "read_at": "2026-11-19T20:28:00+00:00",
+  "read_at": "2026-11-19T20:43:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -326,11 +289,7 @@
    {
     "lane": "a3",
     "task": "T-3871",
-    "w": "Odalys",
-    "k": "ops",
     "t": "Archive parked refs whose work main already has",
-    "m": "opus",
-    "e": "high",
     "at": "2026-11-19T13:51:51-05:00",
     "n": "Evan",
     "d": 1,
@@ -364,11 +323,7 @@
    {
     "lane": "a3",
     "task": "T-4195",
-    "w": "Idris",
-    "k": "tools",
     "t": "Reuse an iPhone pass when the app's inputs are unchanged",
-    "m": "opus",
-    "e": "high",
     "at": "2026-11-19T13:51:51-05:00",
     "n": "Evan",
     "d": 1,
@@ -410,6 +365,43 @@
     "n": "Jeremy",
     "d": 1,
     "src": "plan-b"
+   },
+   {
+    "lane": "b3",
+    "task": "T-4678",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Close the iPhone premade feature and free its steps",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-19T15:39:45-05:00",
+    "n": "Jeremy",
+    "d": 1,
+    "src": "plan-b"
+   },
+   {
+    "lane": "b3",
+    "task": "T-4549",
+    "w": "Idris",
+    "k": "build",
+    "t": "Store tap and button actions in the manifest",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-19T15:39:45-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
+   },
+   {
+    "lane": "b3",
+    "task": "T-2377",
+    "w": "Ines",
+    "k": "plan",
+    "t": "Plan the version 1.1 board",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-19T15:39:45-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
    }
   ]
  },
@@ -431,7 +423,7 @@
   }
  ],
  "disk": {
-  "free_gb": 33,
+  "free_gb": 31,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -440,14 +432,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-19T15:22:00-05:00",
+   "at": "2026-11-19T15:38:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 3,
-  "at": "2026-11-19T15:28:00-05:00",
+  "at": "2026-11-19T15:43:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -584,25 +576,25 @@
   ],
   "done": [
    {
+    "w": "Idris",
+    "t": "When a branch's app files match a version the iPhone tests already passed, the land now reuses...",
+    "at": "2026-11-19T15:37:00-05:00"
+   },
+   {
+    "w": "Odalys+idris",
+    "t": "Every old parked copy of work that main already had is now filed in the archive, where it can be...",
+    "at": "2026-11-19T15:36:00-05:00"
+   },
+   {
     "w": "Odalys",
     "t": "Proposed the Operations Guide wording that the supervisor runs every 5 minutes, and the Handbook...",
     "at": "2026-11-19T13:52:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "Counted failed merges from 11-10 to 11-17 by cause: 46 bad tests, 14 broken code, 26 other, 48...",
-    "at": "2026-11-19T13:51:00-05:00"
-   },
-   {
-    "w": "Idris",
-    "t": "The Shortcut recipe test no longer saves its six pictures into the app's folder; it keeps them...",
-    "at": "2026-11-19T13:49:00-05:00"
    }
   ],
   "count": {
-   "next": 640,
-   "wait": 1,
-   "blocked": 1,
+   "next": 639,
+   "wait": 2,
+   "blocked": 0,
    "you": 2
   }
  },
@@ -645,67 +637,61 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-19T20:24:17Z",
+  "at": "2026-11-19T20:39:18Z",
   "s": {
-   "T-3974": [
-    "mergeq",
-    "1st to merge",
-    1795117157760
-   ],
-   "T-3871": [
-    "mergeq",
-    "2nd to merge",
-    1795114817760
-   ],
-   "T-4843": [
-    "mergeq",
-    "3rd to merge",
-    1795115417760
-   ],
-   "T-5095": [
-    "mergeq",
-    "4th to merge",
-    1795113257760
-   ],
-   "T-4182": [
-    "mergeq",
-    "5th to merge",
-    1795114217760
-   ],
-   "T-4195": [
-    "mergeq",
-    "6th to merge",
-    1795114637760
-   ],
    "T-4508": [
-    "mergeq",
-    "7th to merge",
-    1795115657760
+    "merging",
+    "Host checks on the Mac mini",
+    1795120698197
    ],
    "T-4446": [
     "mergeq",
-    "8th to merge",
-    1795116917760
+    "1st to merge",
+    1795116918197
    ],
    "T-4180": [
     "mergeq",
-    "9th to merge",
-    1795118357760
+    "2nd to merge",
+    1795118358197
    ],
    "T-3976": [
     "mergeq",
-    "10th to merge",
-    1795118177760
+    "3rd to merge",
+    1795118178197
    ],
    "T-5103": [
     "merging",
     "Mac tests at the main gate",
-    1795117697760
+    1795117698197
    ],
    "T-4196": [
     "merging",
     "Mac tests at the main gate",
-    1795114337760
+    1795114338197
+   ],
+   "T-4195": [
+    "merged",
+    "on main 3:37 PM ET",
+    1795120625000,
+    ""
+   ],
+   "T-3871": [
+    "merged",
+    "on main 3:36 PM ET",
+    1795120575000,
+    ""
+   ],
+   "T-4843": [
+    "merged",
+    "on main 3:35 PM ET",
+    1795120556000,
+    ""
+   ],
+   "T-3974": [
+    "merged",
+    "on main 3:35 PM ET",
+    1795120536000,
+    ""
    ],
    "T-4849": [
     "merged",
@@ -715,42 +701,38 @@
    ]
   },
   "nm": {
-   "T-3974": "Never leave the merge step idle while work waits",
-   "T-3871": "Archive parked refs whose work main already has",
-   "T-4843": "Size each merge batch from measured data",
-   "T-5095": "Land the disk sweep job from a fresh copy",
-   "T-4182": "A failing widget says so and can recover",
-   "T-4195": "Reuse an iPhone pass when the app's inputs are unchanged",
    "T-4508": "Alarm when one account's work keeps being refused",
    "T-4446": "Commit the company's records once per supervisor round",
    "T-4180": "Every premade widget draws on the iPhone",
    "T-3976": "Show each drive's storage makeup on Home",
    "T-5103": "Land the unclaimed-message answer from a fresh copy",
    "T-4196": "Let app changes waiting to merge share one iPhone run",
+   "T-4195": "Reuse an iPhone pass when the app's inputs are unchanged",
+   "T-3871": "Archive parked refs whose work main already has",
+   "T-4843": "Size each merge batch from measured data",
+   "T-3974": "Never leave the merge step idle while work waits",
    "T-4849": "Shorten the process merge wait for good"
   },
   "wk": {
-   "T-3974": "Odalys",
-   "T-3871": "Odalys",
-   "T-4843": "Odalys",
-   "T-5095": "Pernille",
-   "T-4182": "Idris",
-   "T-4195": "Idris",
    "T-4508": "Odalys",
    "T-4446": "Odalys",
    "T-4180": "Idris",
    "T-3976": "Odalys",
    "T-5103": "Odalys",
    "T-4196": "Idris",
+   "T-4195": "Idris",
+   "T-3871": "Odalys",
+   "T-4843": "Odalys",
+   "T-3974": "Odalys",
    "T-4849": "Odalys"
   }
  },
  "ln": {
-  "at": "2026-11-19T20:24:17Z",
+  "at": "2026-11-19T20:39:18Z",
   "mq": {
    "n": {
-    "checking": 0,
-    "inline": 10,
+    "checking": 1,
+    "inline": 3,
     "conflicted": 3,
     "failed": 0,
     "held": 0,
@@ -758,28 +740,37 @@
     "parked": 0
    },
    "m": {
-    "checking": null,
-    "inline": 72,
-    "conflicted": 244,
+    "checking": 1,
+    "inline": 43,
+    "conflicted": 259,
     "failed": null,
     "held": null,
     "retry": null,
     "parked": null
    },
-   "cur": [],
+   "cur": [
+    [
+     [
+      "T-4508"
+     ],
+     "Mac tests",
+     "Mac mini",
+     1
+    ]
+   ],
    "ld": [
-    70,
-    "2026-11-19T19:59:00Z"
+    75,
+    "2026-11-19T20:37:13Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-19T20:24:20Z",
-    "ld": 7.55,
+    "at": "2026-11-19T20:39:23Z",
+    "ld": 4.9,
     "c": 8,
     "sb": 0,
     "dk": [
-     32.8,
+     28.6,
      228.3
     ],
     "ss": [
@@ -789,8 +780,8 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-19T19:58:22Z",
-    "ld": 1.05,
+    "at": "2026-11-19T20:28:57Z",
+    "ld": 0.19,
     "c": 12,
     "sb": 0,
     "dk": [
@@ -835,7 +826,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 3 tasks",
+   "t": "Work session \u2013 2 tasks",
    "at": "2026-11-19T15:00:54-05:00"
   }
  ],
@@ -856,12 +847,12 @@
  ],
  "agents_now": {
   "main": 0,
-  "lanes": 4,
-  "total": 4,
-  "at": "3:28 PM",
+  "lanes": 5,
+  "total": 5,
+  "at": "3:43 PM",
   "why": "",
-  "at_iso": "2026-11-19T20:28:00+00:00",
+  "at_iso": "2026-11-19T20:43:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 3:28 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 3:43 PM ET</p></section>"
  }
 }

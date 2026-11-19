@@ -64,14 +64,14 @@ Open: nothing runs `batch_size.py check` on a schedule yet. It needs a line in t
 
 ## Sources
 
-Ideas only; no code was copied from any of these.
+Ideas only; no code was copied from any of these. Checked 11-19 against the public pages: the GitHub and GitLab docs (quoted points as below); the Uber and Google papers could not be read, and their lines say so.
 - R. Dorfman, "The Detection of Defective Members of Large Populations", Annals of Mathematical Statistics 14(4), 1943: pooled testing and its optimum group size near 1/sqrt(p).
 - F. K. Hwang, "A method for detecting all defective members in a population by group testing", JASA 67, 1972: binary splitting on a positive pool, the bisect cost used here.
 - Pollaczek-Khinchine mean waiting time for an M/G/1 queue (any queueing text, e.g. Kleinrock, Queueing Systems Vol. 1, 1975).
-- GitHub Docs, "Managing a merge queue": merge group size limits and how a failing group is split.
+- GitHub Docs, "Managing a merge queue": merge group size limits (minimum and maximum pull requests to merge), and a pull request whose group fails its checks removed from the queue with the groups behind it rebuilt; it describes no splitting or bisect.
 - GitLab Docs, "Merge trains": each merge request tested on top of the ones ahead of it, and a failure drops it and restarts those behind.
-- S. Ananthanarayanan et al. (Uber), "Keeping Master Green at Scale", EuroSys 2019 (SubmitQueue): build outcomes predicted from change features to decide what to test together.
-- A. Memon et al. (Google), "Taming Google-Scale Continuous Testing", ICSE-SEIP 2017 (TAP): batching changes and bisecting culprits when a batch fails.
+- S. Ananthanarayanan et al. (Uber), "Keeping Master Green at Scale", EuroSys 2019 (SubmitQueue): cited for predicting build outcomes from change features to decide what to test together. Its text could not be read for this plan (11-19: the ACM page refused, the Uber page was gone), so that point is not yet checked against the paper.
+- A. Memon et al. (Google), "Taming Google-Scale Continuous Testing", ICSE-SEIP 2017 (TAP, Google's continuous test system): named in the T-4843 board line for batching changes and finding the culprit when a batch fails. Only the abstract was read for this plan (11-19; it speaks of controlling test workload without losing quality), so that point is not yet checked against the paper's text.
 - Company records: ops/metrics/main_gate.jsonl, ops/metrics/land_xc.jsonl, ops/metrics/xc.jsonl, ops/metrics/flow.jsonl, ops/plans/T-4787-red-causes.md, ops/plans/app-features.md section 3.2, Handbook rule 62.
 {% endraw %}
 

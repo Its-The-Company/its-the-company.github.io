@@ -1,11 +1,41 @@
 {
  "schema": 1,
- "at": "2026-11-19T06:24:06.594574+00:00",
+ "at": "2026-11-19T06:27:10.152725+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-19T01:08:31-05:00",
   "flow": [
+   {
+    "t": "T-4928",
+    "name": "Check finished work before it ships",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "landing",
+      "at": 1795069618
+     }
+    ]
+   },
+   {
+    "t": "T-4916",
+    "name": "Check the new landing road before it ships",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "landing",
+      "at": 1795068792
+     },
+     {
+      "s": "testq",
+      "at": 1795068887
+     },
+     {
+      "s": "landing",
+      "at": 1795069508
+     }
+    ]
+   },
    {
     "t": "T-4933",
     "name": "Check finished work before it ships",
@@ -37,21 +67,14 @@
      {
       "s": "macbook",
       "at": 1795068705
-     }
-    ]
-   },
-   {
-    "t": "T-4916",
-    "name": "Check the new landing road before it ships",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "landing",
-      "at": 1795068792
      },
      {
       "s": "testq",
-      "at": 1795068887
+      "at": 1795069582
+     },
+     {
+      "s": "macbook",
+      "at": 1795069594
      }
     ]
    },
@@ -201,7 +224,7 @@
    "task": "[tools] T-4907 main green parts 3-4",
    "model": "opus",
    "started": "2026-11-19T06:10:25.463Z",
-   "seconds": 821,
+   "seconds": 1004,
    "finished": null,
    "effort": "high"
   },
@@ -210,7 +233,7 @@
    "task": "[tools] T-4843 batch size from data",
    "model": "opus",
    "started": "2026-11-19T06:10:37.169Z",
-   "seconds": 809,
+   "seconds": 992,
    "finished": null,
    "effort": "high"
   }
@@ -269,7 +292,7 @@
   "week_pct": 52.99,
   "usage_pct": 45.3,
   "work_pct": 80.7,
-  "read_at": "2026-11-19T06:24:00+00:00",
+  "read_at": "2026-11-19T06:27:00+00:00",
   "running": [
    {
     "lane": "b2",
@@ -331,7 +354,7 @@
  "lock_in": {
   "on": true,
   "pool": 3,
-  "at": "2026-11-19T01:24:00-05:00",
+  "at": "2026-11-19T01:27:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -560,100 +583,105 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-19T06:23:55Z",
+  "at": "2026-11-19T06:26:52Z",
   "s": {
-   "T-4916": [
-    "merging",
-    "Host checks on the Mac mini \u00b7 1 of 2 groups of tests done",
-    1795069375566
-   ],
    "T-4933": [
     "mergeq",
     "1st to merge",
-    1795065535566
+    1795065532085
    ],
    "T-4934": [
     "mergeq",
     "2nd to merge",
-    1795065655566
+    1795065652085
    ],
    "T-5002": [
     "mergeq",
     "3rd to merge",
-    1795068475566
+    1795068472085
    ],
    "T-5000": [
     "mergeq",
     "3rd to merge",
-    1795068475566
+    1795068472085
+   ],
+   "T-4916": [
+    "mergeq",
+    "4th to merge",
+    1795068352085
    ],
    "T-4927": [
     "mergeq",
-    "7th to merge",
-    1795068175566
+    "8th to merge",
+    1795068172085
    ],
    "T-4928": [
     "mergeq",
-    "7th to merge",
-    1795068175566
+    "8th to merge",
+    1795068172085
    ],
    "T-4929": [
     "mergeq",
-    "7th to merge",
-    1795068175566
+    "8th to merge",
+    1795068172085
    ],
    "T-4930": [
     "mergeq",
-    "7th to merge",
-    1795068175566
+    "8th to merge",
+    1795068172085
    ],
    "T-4931": [
     "mergeq",
-    "8th to merge",
-    1795069255566
+    "9th to merge",
+    1795069252085
    ],
    "T-4932": [
     "mergeq",
-    "8th to merge",
-    1795069255566
+    "9th to merge",
+    1795069252085
    ],
    "T-4899": [
     "mergeq",
-    "9th to merge",
-    1795068715566
+    "10th to merge",
+    1795068712085
    ],
    "T-4919": [
     "mergeq",
-    "9th to merge",
-    1795068715566
+    "10th to merge",
+    1795068712085
    ],
    "T-4922": [
     "mergeq",
-    "10th to merge",
-    1795066495566
+    "11th to merge",
+    1795066552085
    ],
    "T-4923": [
     "mergeq",
-    "11th to merge",
-    1795066615566
+    "12th to merge",
+    1795066612085
    ],
    "T-4909": [
     "merging",
     "Mac tests at the main gate",
-    1795068595566
+    1795068592085
    ],
    "T-4907": [
     "testing",
     "its own tests, in its copy",
-    1795069255566
+    1795069252085
+   ],
+   "T-4843": [
+    "testing",
+    "its own tests, in its copy",
+    1795069612085
    ]
   },
   "nm": {
-   "T-4916": "Check the new landing road before it ships",
    "T-4933": "Check finished work before it ships",
    "T-4934": "Check finished work before it ships",
    "T-5002": "Say what a run does when its save is unchecked",
    "T-5000": "Draw transit count-downs the way the iPhone draws them",
+   "T-4916": "Check the new landing road before it ships",
    "T-4927": "Check finished work before it ships",
    "T-4928": "Check finished work before it ships",
    "T-4929": "Check finished work before it ships",
@@ -665,14 +693,15 @@
    "T-4922": "Check finished work before it ships",
    "T-4923": "Check finished work before it ships",
    "T-4909": "End work sessions on a stall, not on the clock",
-   "T-4907": "Keep main green after every land"
+   "T-4907": "Keep main green after every land",
+   "T-4843": "Size each merge batch from measured data"
   },
   "wk": {
-   "T-4916": "Pernille",
    "T-4933": "Pernille",
    "T-4934": "Pernille",
    "T-5002": "Pernille",
    "T-5000": "Maren",
+   "T-4916": "Pernille",
    "T-4927": "Pernille",
    "T-4928": "Pernille",
    "T-4929": "Pernille",
@@ -684,15 +713,16 @@
    "T-4922": "Pernille",
    "T-4923": "Pernille",
    "T-4909": "Odalys",
-   "T-4907": "Odalys"
+   "T-4907": "Odalys",
+   "T-4843": "Odalys"
   }
  },
  "ln": {
-  "at": "2026-11-19T06:23:55Z",
+  "at": "2026-11-19T06:26:52Z",
   "mq": {
    "n": {
-    "checking": 1,
-    "inline": 14,
+    "checking": 0,
+    "inline": 15,
     "conflicted": 1,
     "failed": 0,
     "held": 0,
@@ -700,24 +730,15 @@
     "parked": 1
    },
    "m": {
-    "checking": 1,
-    "inline": 21,
-    "conflicted": 783,
+    "checking": null,
+    "inline": 24,
+    "conflicted": 786,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 13
+    "parked": 16
    },
-   "cur": [
-    [
-     [
-      "T-4916"
-     ],
-     "Mac tests",
-     "Mac mini",
-     1
-    ]
-   ],
+   "cur": [],
    "ld": [
     15,
     "2026-11-19T05:36:35Z"
@@ -725,12 +746,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-19T06:23:22Z",
-    "ld": 25.08,
+    "at": "2026-11-19T06:26:28Z",
+    "ld": 21.81,
     "c": 8,
     "sb": 1,
     "dk": [
-     38.3,
+     38.9,
      228.3
     ],
     "ss": [
@@ -761,8 +782,8 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 2 tasks",
-   "at": "2026-11-19T01:20:42-05:00"
+   "t": "Inbox \u2013 Jeremy's 1:25 AM Message on GitHub",
+   "at": "2026-11-19T01:26:23-05:00"
   },
   {
    "w": "Operator",
@@ -778,11 +799,23 @@
   "sent": "2026-11-19T06:19:20Z",
   "seconds": 80.0
  },
- "inbox": [],
+ "inbox": [
+  {
+   "id": "c7001589646",
+   "state": "received",
+   "position": 1,
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "The task queue has been steadily..."
+  }
+ ],
  "trimmed": [
   "lane_next",
   "queue_text",
   "task_done",
+  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -793,10 +826,10 @@
   "main": 2,
   "lanes": 1,
   "total": 3,
-  "at": "1:24 AM",
+  "at": "1:27 AM",
   "why": "",
-  "at_iso": "2026-11-19T06:24:00+00:00",
+  "at_iso": "2026-11-19T06:27:00+00:00",
   "started": "1:08 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 1:08 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 1:24 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 1:08 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 1:27 AM ET</p></section>"
  }
 }

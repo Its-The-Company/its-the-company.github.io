@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-19T08:24:11.455585+00:00",
+ "at": "2026-11-19T08:27:09.091573+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -223,19 +223,10 @@
  "workers": [
   {
    "name": "odalys",
-   "task": "[tools] T-5066 limit auto Lock In to 11-19",
-   "model": "opus",
-   "started": "2026-11-19T07:47:07.521Z",
-   "seconds": 2223,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "odalys",
    "task": "[tools] T-4726 fix red personal land test",
    "model": "opus",
    "started": "2026-11-19T08:07:31.727Z",
-   "seconds": 999,
+   "seconds": 1177,
    "finished": null,
    "effort": "high"
   },
@@ -244,13 +235,48 @@
    "task": "[tools] T-4884 fix red Xcode sim test",
    "model": "opus",
    "started": "2026-11-19T08:20:12.646Z",
-   "seconds": 238,
+   "seconds": 416,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-4810 land waits fix then T-4809",
+   "model": "opus",
+   "started": "2026-11-19T08:25:56.830Z",
+   "seconds": 72,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-4838 gate waits on runner progress",
+   "model": "opus",
+   "started": "2026-11-19T08:26:43.295Z",
+   "seconds": 25,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-5065 clear answered waits each tick",
+   "model": "opus",
+   "started": "2026-11-19T08:26:51.402Z",
+   "seconds": 17,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Odalys x3",
+ "who": "Odalys x5",
  "recent": [
+  {
+   "name": "odalys",
+   "task": "[tools] T-5066 limit auto Lock In to 11-19",
+   "model": "opus",
+   "started": "2026-11-19T07:47:07.521Z",
+   "seconds": null,
+   "finished": "2026-11-19T08:26:08.719000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[tools] T-5068 stop test copies scanning disks",
@@ -274,20 +300,12 @@
    "started": "2026-11-19T07:33:51.570Z",
    "seconds": null,
    "finished": "2026-11-19T08:05:37.350000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-5034 free held lines check",
-   "model": "opus",
-   "started": "2026-11-19T07:06:01.402Z",
-   "seconds": null,
-   "finished": "2026-11-19T07:33:20.574000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 594,
+  "runnable_count": 592,
   "blocked_count": 28
  },
  "meter": {
@@ -336,7 +354,7 @@
   "week_pct": 57.06,
   "usage_pct": 47.1,
   "work_pct": 81.4,
-  "read_at": "2026-11-19T08:24:00+00:00",
+  "read_at": "2026-11-19T08:27:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -441,14 +459,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-19T03:23:00-05:00",
+   "at": "2026-11-19T03:25:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 3,
-  "at": "2026-11-19T03:24:00-05:00",
+  "at": "2026-11-19T03:27:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -459,17 +477,17 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 7 (raised a step toward the floor of 8: new work may start and every signal is under its line)",
-  "n": 7,
+  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 8 (raised a step toward the floor of 8: new work may start and every signal is under its line)",
+  "n": 8,
   "at": "2026-11-19T02:04:05.487764-05:00"
  },
  "lanes": [
   {
    "name": "Odalys",
    "state": "running",
-   "task": "[tools] T-5066 limit auto Lock In to 11-19",
+   "task": "[tools] T-4726 fix red personal land test",
    "model": "opus",
-   "since": "2026-11-19T07:47:07.521Z",
+   "since": "2026-11-19T08:07:31.727Z",
    "next": [],
    "effort": "high"
   },
@@ -519,16 +537,6 @@
    {
     "w": "Odalys",
     "k": "tools",
-    "t": "Stop the nightly Lock In after tonight",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-19T07:47:07.521Z",
-    "o": "c",
-    "task": "T-5066"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
     "t": "Fix the red personal land test",
     "m": "opus",
     "e": "high",
@@ -545,6 +553,36 @@
     "at": "2026-11-19T08:20:12.646Z",
     "o": "c",
     "task": "T-4884"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Make every wait name a task or an Investor issue",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-19T08:25:56.830Z",
+    "o": "c",
+    "task": "T-4810"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Gate waits while the runner shows progress",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-19T08:26:43.295Z",
+    "o": "c",
+    "task": "T-4838"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Clear answered waits from the supervisor tick",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-19T08:26:51.402Z",
+    "o": "c",
+    "task": "T-5065"
    }
   ],
   "src": "plan",
@@ -560,13 +598,6 @@
     "w": "Odalys",
     "k": "tools",
     "t": "Fix the causes of merge time-outs and runner...",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Name machine-made task lines by what they fix",
     "s": "next",
     "o": "c"
    },
@@ -618,34 +649,49 @@
     "t": "Fix the red personal account test",
     "s": "next",
     "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Fix the red queue bars test",
+    "s": "next",
+    "o": "c"
    }
   ],
   "done": [
    {
     "w": "Odalys",
+    "t": "Lines the tools open on their own now say which test or signal they are about and sit in their...",
+    "at": "2026-11-19T03:26:00-05:00"
+   },
+   {
+    "w": "Odalys",
+    "t": "the overnight Lock In now switches itself on for 19 November only, as the Investor ruled, so...",
+    "at": "2026-11-19T03:25:00-05:00"
+   },
+   {
+    "w": "Odalys",
     "t": "Test runs no longer start hour-scale disk size scans of the real SSD and Simulator folders,...",
     "at": "2026-11-19T03:19:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "Each report now says how many task lines were added against how many were closed the day before,...",
-    "at": "2026-11-19T02:46:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "Folded into T-2549 (Picture the Pro screen and finish its word changes), which covers the same...",
-    "at": "2026-11-19T02:32:00-05:00"
    }
   ],
   "count": {
-   "next": 594,
+   "next": 592,
    "wait": 27,
    "blocked": 1,
    "you": 9
   },
   "fin": {
-   "n": 3,
+   "n": 5,
    "rows": [
+    [
+     "T-4964",
+     "Name machine-made task lines..."
+    ],
+    [
+     "T-5066",
+     "Stop the nightly Lock In..."
+    ],
     [
      "T-5068",
      "Stop test copies scanning..."
@@ -700,82 +746,82 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-19T08:24:01Z",
+  "at": "2026-11-19T08:26:53Z",
   "s": {
    "T-4891": [
     "mergeq",
     "1st to merge",
-    1795076521323
+    1795076513667
    ],
    "T-5000": [
     "mergetest",
     "Xcode checks on the MacBook, 2nd to merge",
-    1795075861323
+    1795075853667
    ],
    "T-4916": [
     "mergeq",
     "3rd to merge",
-    1795068421323
+    1795068413667
    ],
    "T-5002": [
     "mergetest",
     "Xcode checks on the MacBook, 5th to merge",
-    1795075861323
+    1795075853667
    ],
    "T-4899": [
     "mergeq",
     "6th to merge",
-    1795068721323
+    1795068713667
    ],
    "T-4931": [
     "mergeq",
     "7th to merge",
-    1795068721323
+    1795068713667
    ],
    "T-4932": [
     "mergeq",
     "9th to merge",
-    1795068901323
+    1795068893667
    ],
    "T-4933": [
     "mergeq",
     "10th to merge",
-    1795069081323
+    1795069073667
    ],
    "T-4934": [
     "mergeq",
     "11th to merge",
-    1795069261323
+    1795069253667
    ],
    "T-5006": [
     "mergeq",
     "13th to merge",
-    1795071961323
+    1795071953667
    ],
    "T-4871": [
     "mergeq",
     "14th to merge",
-    1795072921323
+    1795072973667
    ],
    "T-4919": [
     "mergeq",
     "15th to merge",
-    1795075801323
+    1795075793667
    ],
-   "T-4964": [
+   "T-4843": [
     "merging",
     "Mac tests at the main gate",
-    1795076641323
+    1795076813667
    ],
    "T-4884": [
     "testing",
     "its own tests, in its copy",
-    1795076521323
+    1795076513667
    ],
    "T-4726": [
     "testing",
     "its own tests, in its copy",
-    1795076641323
+    1795076633667
    ],
    "T-4850": [
     "merged",
@@ -797,7 +843,7 @@
    "T-5006": "Lock In turns itself on after midnight",
    "T-4871": "Check the two-way editing week figure against the code",
    "T-4919": "Fix a MacBook test job that failed",
-   "T-4964": "Name machine-made task lines by what they fix",
+   "T-4843": "Size each merge batch from measured data",
    "T-4884": "Fix the red Xcode sim test",
    "T-4726": "Fix the red personal land test",
    "T-4850": "Bring the Mac mini load back down"
@@ -815,17 +861,19 @@
    "T-5006": "Odalys",
    "T-4871": "Idris",
    "T-4919": "Operator",
-   "T-4964": "Odalys",
+   "T-4843": "Odalys",
    "T-4884": "Odalys",
    "T-4726": "Odalys",
    "T-4850": "Odalys",
+   "T-4964": "Odalys",
+   "T-5066": "Odalys",
    "T-5068": "Odalys",
    "T-5063": "Odalys",
    "T-5034": "Odalys"
   }
  },
  "ln": {
-  "at": "2026-11-19T08:24:01Z",
+  "at": "2026-11-19T08:26:53Z",
   "mq": {
    "n": {
     "checking": 2,
@@ -837,9 +885,9 @@
     "parked": 0
    },
    "m": {
-    "checking": 13,
-    "inline": 124,
-    "conflicted": 903,
+    "checking": 16,
+    "inline": 127,
+    "conflicted": 906,
     "failed": null,
     "held": null,
     "retry": null,
@@ -852,7 +900,7 @@
      ],
      "iPhone app tests",
      "MacBook",
-     13
+     16
     ],
     [
      [
@@ -860,7 +908,7 @@
      ],
      "iPhone app tests",
      "MacBook",
-     13
+     16
     ]
    ],
    "ld": [
@@ -870,12 +918,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-19T08:24:02Z",
-    "ld": 5.2,
+    "at": "2026-11-19T08:26:28Z",
+    "ld": 4.82,
     "c": 8,
     "sb": 0,
     "dk": [
-     38.9,
+     39.1,
      228.3
     ],
     "ss": [
@@ -904,7 +952,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 3 tasks",
+   "t": "Work session \u2013 7 tasks",
    "at": "2026-11-19T02:04:21-05:00"
   },
   {
@@ -934,6 +982,7 @@
  "trimmed": [
   "lane_next",
   "queue_text",
+  "recent",
   "task_done",
   "fin_short",
   "task_title",
@@ -943,13 +992,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 3,
+  "main": 5,
   "lanes": 2,
-  "total": 5,
-  "at": "3:24 AM",
+  "total": 7,
+  "at": "3:27 AM",
   "why": "",
-  "at_iso": "2026-11-19T08:24:00+00:00",
+  "at_iso": "2026-11-19T08:27:00+00:00",
   "started": "2:04 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 3, started 2:04 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 3:24 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 5, started 2:04 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 3:27 AM ET</p></section>"
  }
 }

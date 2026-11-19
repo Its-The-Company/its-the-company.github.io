@@ -33,10 +33,6 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 ## Open (mine)
 
-- T-3560/T-3280 11-17 9a71fd25dd landed; T-3560 ticked. Open: T-3280 UI runs (testF/testM green, testF red mutant, Release). Lesson: check git log main for an earlier landing before replaying a <span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">parked</span> ref.
-
-- T-4663 11-18: c107cc80d1 on main since 11-17; ticked on gate check J-20261118-0333-land-m (2065/0). Open: XC_TASK job J-20261118-0411 waits a push; review T-4872. Lesson: an xc.sh job waits the supervisor push; `main_gate.py check --task` reads a runner verdict now.
-
 - T-4688 11-18 f531d51b2c+8e22b68221: done but tick refused (umbrella waits T-4857/T-4858); phone T-4865, reviews T-4852 PASS, T-4864. Lesson: Debug code lives in PyWidget.debug.dylib; a Release build needs PW_INTERNAL_TESTFLIGHT=YES until the privacy URL exists; copies need scripts/fetch_editor.sh (not main's stale Vendor).
 
 - T-4858 11-18 22016c0c82 (scratch T-4858-idris, not landed): extension AppTransaction bound 2 s + .unknown held 15 min, late answer kept; test + purchases.md. Gate run 1 red only on Bundle.main scan (fixed: TreeHost.isExtension). Stopped: guard refused fetch+rebase after main moved. Open: a way to bring the copy up to main, then land, tick, review line, Evan's phone note. Lesson: Shared code finds the extension via TreeHost.isExtension.
@@ -53,10 +49,15 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 - T-4842 11-19 39f46a7c1c: controls.md plan, 2.8 slot wk (1.6-4.8), 1.0 after ADR-011 step 9 recommended; open: Investors' version answer, Action-button phone. Lesson: Apple's pages don't say which process runs a control's intent; C0 spike checks.
 
+- T-4871 11-19: two-way editing 5.0 wk in all, 2.0 on the slot (1.25-3.25), 3.0 Python beside; release Thu 2027-07-15 (#325 c7002531691). Open: T-4770 script still says 3.5 (Ines's); state.md target line. Lesson: split each part slot vs beside; more work can still move the date earlier.
+
+- T-4888 11-19 f3e5e85f55 landed+ticked (wrapped tap, both axes; 4/4 mutants). Follow-up T-5093 (UI case at an accessibility size). Lesson: in a unit-test window Runestone never measures a wrapped line by scrolling; call scrollRangeToVisible first. A gate >10 min: run it with run_in_background, or the tool limit <span title="A test written in advance. If it fires, we drop the idea.">kills</span> it.
+
+- T-4866 11-19 done (5d38a8a84e+81a18acbdc). Lesson: the runner carries no TEST_RUNNER_* and only PyWidgetTests filters; a UI test that skips without env proves nothing there, and a UI filter queues the full suite (~60 min).
+
 ## Lessons
 - Older lessons and dated logs: archive.md.
 
-- T-4962 11-18: testE gets its own id per run (PW_WIDGET_ID), set in Edit Widget (b7d07e38b8); full suite then failed on the picker row (setWidget now waits 20 s). Open: full-suite green. Lesson: UI tests run on the runner only at main commits (land check is unit-only); verify with runner_queue --full after the land.
 - T-4990 11-18: storage_guard resets a shut-down kept device's PRBPosterExtensionDataStore at 1 GB+ and an open task keeps its Simulator only if run in 24 h. Lesson: a `tail -F xcodebuild-*.log` lives on for weeks; match job programs, not words. T-4991: 27.1 runtime decision.
 {% endraw %}
 

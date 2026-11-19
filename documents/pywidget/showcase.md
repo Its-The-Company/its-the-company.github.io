@@ -11,7 +11,7 @@ description: "Drawn: all eight on the board line, in its order: Day phases (all 
 <div class="doc-body" markdown="1">
 
 {% raw %}
-Maren, 2026-11-17, 1:05 PM to 1:40 PM ET, and 2026-11-18 from 2:50 AM ET (sheets 06 to 11), by `date`. Board line T-4703, from T-4672 (plan [`ops/plans/T-4672-showcase-premades.md`](../company/t-4672-showcase-premades.html) s2, s3 and s4.2; #278, an Investor 2026-11-16 9:55 PM ET).
+Maren, 2026-11-17, 1:05 PM to 1:40 PM ET, and 2026-11-18 from 2:50 AM ET (sheets 06 to 11), by `date`. Transit's count-down taken out and relative text drawn as SwiftUI draws it on 2026-11-19 (T-5000, from Pernille's review T-4927 H1). Board line T-4703, from T-4672 (plan [`ops/plans/T-4672-showcase-premades.md`](../company/t-4672-showcase-premades.html) s2, s3 and s4.2; #278, an Investor 2026-11-16 9:55 PM ET).
 
 **Status.** These frames are drawn inside approved items 2 and 9 (`creative/approved.md`): Paper in light, Studio in black and dark grey in dark, with the existing tokens, faces and widget vocabulary. Nothing in them adds a colour, face, icon or arrangement outside the guide. Ideas that would add one are listed under "Proposals (not used)" and are not drawn. The samples are made up for layout: the arrivals are not MTA data, the forecast is not MET Norway data, and the to-do items, places, sites, deck and star counts are invented.
 
@@ -25,7 +25,7 @@ Maren, 2026-11-17, 1:05 PM to 1:40 PM ET, and 2026-11-18 from 2:50 AM ET (sheets
 | File | What |
 |---|---|
 | `premade.py` | The section "1.0 showcase premades (T-4703)" writes each view with `pywidget_ui`, using only viewtree v1 nodes. `python3 premade.py` writes `showcase/trees/NN-slug.json` and validates every document and every state variant, with 0 problems. The 12 v1 premades and their trees do not change. |
-| `render.py --set showcase` | Draws the sheets into `showcase/*.jpg` (1x, JPEG q78, 4.0 MB for all eleven) and writes `showcase/qa.json`. It uses the same interpreter and QA as the 12 premades (README "How it is made"). Each sheet has its own "now", so relative text reads as it would at that time of day. |
+| `render.py --set showcase` | Draws the sheets into `showcase/*.jpg` (1x, JPEG q78, 4.0 MB for all eleven) and writes `showcase/qa.json`. It uses the same interpreter and QA as the 12 premades (README "How it is made"). Each sheet has its own "now", so relative text reads as it would at that time of day, in SwiftUI's own form: `Text(date, style: .relative)` under an hour is "39 min, 59 sec" and ticks every second, over an hour "2 hr, 54 min" (Pernille's SwiftUI probe, T-4927). Every sheet measures that string. |
 | Studio grey | With `--set showcase`, every hued value Studio supplies (grounds, lines, text greys, accent, the widget card gradient, Increase Contrast set) becomes the neutral grey of the same relative luminance. T-4680 did the same for the 04-mockups: canvas #0A0C13 becomes #0C0C0C, the card #5B33E6 to #1E1450 becomes #5A5A5A to #1F1F1F, and the accent #A08BFF becomes #9C9C9C. The status colours stay. `tokens.json` is not changed: item 9 records that "the tokens are not changed yet". |
 
 </div>
@@ -43,7 +43,8 @@ Plan s4. Families: systemSmall, systemMedium, systemLarge, accessoryRectangular,
 
 - **Header.** The station and direction in plain words: "125 St, downtown" (medium and large) and "34 St-Herald Sq, uptown" in the evening. Small uses the station's short name ("125 St", "Herald Sq") at footnote semibold, with the direction in caption2. The top row ends 12 pt short of the trailing edge for the corner slot (header rule, README).
 - **Route letters.** Plain bold letters in `text.primary`, carrying `.widgetAccentable()`. There is no circle, disc or route colour (plan s3, s4.4; Commandment 6).
-- **Rows.** The letter, then the next arrivals as clock times. The first is semibold in primary and the rest are in secondary. The first arrival also carries a count-down, "in 4 min", which is relative date text and ticks with no refresh. Medium shows three arrivals per line, small two, and large three, each with its own count-down. Rectangular shows the first two per line. Inline reads "B 4 min, D 6 min".
+- **Rows.** The letter, then the next arrivals as clock times. The first is semibold in primary and the rest are in secondary. Medium shows three arrivals per line, small two, and large three at 22 pt. Rectangular shows the first two per line. Inline reads "B 7:42, D 7:44". VoiceOver reads clock times only: "125 St, downtown. B at 7:42 AM, then 7:49 and 7:58. D at 7:44 AM, then 7:53 and 8:01."
+- **No count-down (T-5000).** The first draw had "in 4 min" under the first arrival, as relative date text. That is not what iOS draws. `Text(date, style: .relative)` reads "3 min, 59 sec" and ticks every second, so it cut every count-down in all eight large panels once the real string was measured. After the train leaves it counts up again, so a gone train reads "in 1 min, 5 sec" until the next entry, up to 5 minutes later (entries are at least about 5 minutes apart, L2, plan s4.3). Timer text (`Text(timerInterval:countsDown:)`) stops at "0:00", but "0:00" for a train that left four minutes ago still tells someone to run for it. iOS has no self-updating text that says "in 4 min" and stops, so no count-down here can stay true between entries. A clock time can: 7:42 is still 7:42 when the entry is late, and the next entry drops it. Plan s4.2 and s2 row 1 ("ticking 'in 4 min'") need this change too (for Ines and Pernille).
 - **Clock times carry no AM or PM** ("7:42", as the plan writes them). At 17 pt "7:42 AM" three times did not fit a medium row: the first QA run cut all six. An arrival is minutes away, so the half of the day is never in doubt.
 - **Footer.** "Updated 7:31 AM" always. The states show a credit line, with placeholder words, set beside it in medium, because the MTA's terms are unread (s4.4). It fits in medium at caption2, truncating at the tail. If the terms ask for a longer line, the Updated time keeps its place and the credit line yields.
 - **States.** Evening, in medium and small. "No B times right now" in medium, and "No times now" in small, where the full sentence does not fit at 126 pt. The credit-line variant.
@@ -53,7 +54,7 @@ Plan s4. Families: systemSmall, systemMedium, systemLarge, accessoryRectangular,
 
 
 - Today's three as plain rows with a 6 pt accent dot. They are not rings or checkboxes, because the rows do nothing in T-4673 (Done buttons come in s4.6, T-4712). A long item truncates at the tail (declared).
-- The workday bar is a `ProgressView` with a time interval, from 10:00 AM to 5:00 PM, and ticks alone. Under it is "Evening trains in 2 hr, 55 min" (relative). Small says "in 2 hr, 55 min" after a tram glyph because the words do not fit at 126 pt. Large adds the bar's two ends, a Divider, and one line naming the evening stop.
+- The workday bar is a `ProgressView` with a time interval, from 10:00 AM to 5:00 PM, and ticks alone. Under it is "Evening trains in 2 hr, 54 min" (relative, as SwiftUI draws it half a second after 2:05 PM). It stays true only because the Evening entry at 5:00 PM replaces the view when the count reaches zero; a relative text with no entry at its date counts up. VoiceOver says "Evening trains from 5:00 PM", which does not go stale. Small says "in 2 hr, 54 min" after a tram glyph because the words do not fit at 126 pt. Large adds the bar's two ends, a Divider, and one line naming the evening stop.
 - State: Today's three not set, which reads "Add today's three on the Page."
 
 ### Night
@@ -74,7 +75,7 @@ Plan s4. Families: systemSmall, systemMedium, systemLarge, accessoryRectangular,
 **There is nothing to review yet.** As of 1:35 PM ET on 11-17, and again at 3:32 AM ET on 11-18, T-4673 is open on the board, and `pywidget/widgets/premade/day_phases.py` exists on no branch (`git log --all` for the path is empty) and in no worktree. When it lands, check these points against the frames:
 
 1. Route letters are plain letters in a token colour, with no circles.
-2. Arrivals are clock times. Only the first one counts down, and it does so with relative text, not a per-minute entry.
+2. Arrivals are clock times, with no count-down: no relative text (it counts up once the train has gone) and no timer text (it holds "0:00" for a gone train), in every family. The VoiceOver label has clock times only. Inline is "B 7:42, D 7:44". (T-5000, from T-4927 H1.)
 3. Medium fits three arrivals per line. If the build keeps "AM", it does not fit (see above).
 4. "Updated" is in the bottom row, never the top. The credit line yields to it.
 5. "No B times right now" appears per line, and nothing is guessed.
@@ -85,7 +86,7 @@ Plan s4. Families: systemSmall, systemMedium, systemLarge, accessoryRectangular,
 ### Gaps in the plan found while drawing (for Pernille and Ines)
 
 1. **Large, "adds a third arrival".** s4.2 gives medium three arrivals already, so large cannot add a third. I drew large with three arrivals, each with its own count-down, plus the next phase's start. If a fourth arrival was meant, it fits.
-2. **The inline text goes stale.** "B 4 min, D 6 min" is a plain string. An inline widget holds one text, so either each minute gets a timeline entry or the inline shows the first clock time ("B 7:42, D 7:44"), which stays true. I recommend clock times. That needs no new design.
+2. **The inline text goes stale.** "B 4 min, D 6 min" was a plain string. Settled in T-5000: the inline shows the first clock time ("B 7:42, D 7:44"), which stays true, as do the other families.
 3. **The short name.** Small needs a short station name. "34 St-Herald Sq, uptown" does not fit at 126 pt. s4.2 says "abbreviated by the name's `max`", but the Page (s4.5, T-4704) has no short-name field, so the stop list must carry one, or the Page must.
 4. **"Evening trains in ..." assumes Evening is a Transit phase.** If a person gives Evening the Today or Night view, or if Weekdays only is on and it is a Saturday, the line should name the next phase in plain words ("Night view at 9:00 PM") or drop. The plan does not say which.
 5. **The credit line's wording and length** wait for the terms (s4.4). Medium has room for one caption2 line beside "Updated".
@@ -126,6 +127,7 @@ Plan s2 row 5, free, the rework of Sunrise and sunset. Families: systemSmall, sy
 - **The arc** runs from dawn to dusk across the width. Sun's arc (a `bg.sunken` track, with the travelled part and the dot in `status.warning`) rises between sunrise and sunset. Civil twilight is an `accent.soft` band under the horizon at each end.
 - **The moon** is drawn with Path, with no image or symbol: a `line.strong` ring for the limb and the lit part in `status.warning`, the colour Sun already uses for the sun's light. The first draw used `text.primary` for the lit part, which made a full moon a black disc in light. A `bg.sunken` dark disc measured 2.70:1 under the amber in dark, so it became a ring.
 - **Daylight gained.** On the sample day (Oct 27) the day is shorter, so it reads "2 min 29 s less than yesterday" (medium) and "...shorter than yesterday" (large). The plan's word "gained" is the spring case.
+- **The count-down to the next event** ("in 2 hr, 18 min") is relative text, which counts up once its date has passed. The 15-minute entries are too far apart to replace it in time, so the build needs an entry at each event (dawn, sunrise, sunset, dusk) as well (T-5000).
 - **Before sunrise** the hero switches to Sunrise. This is shown in the morning state, in medium and small. Large adds Dawn, Sunrise, Sunset and Dusk, the moon at 40 pt with its name and percent lit, and the next full moon (or the next new moon when it is full now).
 - The sample uses the NOAA sun equation and a mean synodic month. Which almanac the app uses is T-4797's.
 
@@ -136,7 +138,7 @@ Plan s2 row 5, free, the rework of Sunrise and sunset. Families: systemSmall, sy
 Plan s2 row 6, free, the rework of World clocks. Families: systemSmall, systemMedium, accessoryRectangular, accessoryInline (World clocks' families). Places: New York (you), London and Berlin, 9 to 5 each. London is on GMT and New York on EDT on Oct 27.
 
 - **One bar per place** on your 24-hour axis (12 AM to 12 AM, your time). Working hours are `line.strong` and the hours all share are accent, set side by side with a 1 pt gap, never stacked. Stacking measured 2.32:1 (accent on grey) in light and 1.07:1 in dark. A hairline marks the day's extent, and now is two short `text.primary` stubs above and below the bar, never across a cell.
-- **Words first.** "Shared hours / 9:00 AM–12:00 PM, in 40 min" (relative, ticks alone), "Shared now / to 12:00 PM", or "No shared hour / None today".
+- **Words first.** "Shared hours / 9:00 AM–12:00 PM, in 39 min, 59 sec" (relative, ticks every second; the per-minute entries replace it before it can count up), "Shared now / to 12:00 PM", or "No shared hour / None today".
 - Medium adds an axis (12 AM, 6 AM, 12 PM, 6 PM) under the bars. Small has bars but no axis.
 - **States:** shared now, and no shared hour (London, Berlin and Tokyo), each in medium and small.
 
@@ -199,6 +201,7 @@ Each sheet's own check: truncation, text or graphics outside the widget, text in
 That is 398 renders and 0 faults (sheets 01 to 05: 184; 06 to 11: 214). Card text faults: 0. Graphics faults: 0. The first runs found faults on four of the five sheets, all fixed in the designs, not hidden:
 
 - In Transit, "7:42 AM" was cut six times in medium; this became the AM/PM call above.
+- In Transit large, the count-down cut in all eight panels once render.py drew SwiftUI's real string ("in 3 min, 59 sec"; Pernille's T-4927 check). The count-down was taken out (T-5000, above), not shortened. Sheets 02, 07 and 08 were redrawn with the real relative strings and still have 0 faults.
 - In Transit small, the letter overlapped the times, and "Herald Sq uptown" was cut. The station name dropped to footnote.
 - Today's "Evening trains in ..." line was pushed out of medium and into the margin in small.
 - Night medium was too tall. The "Sunrise" label row was folded beside the time.

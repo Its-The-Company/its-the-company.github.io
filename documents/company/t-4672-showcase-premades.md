@@ -32,6 +32,16 @@ Investors: the themes split (s6) and the Pro screen's words (s7, DRAFT strings, 
   widget; background refresh is free.
 - #291, 10:42 PM ET 11-16 (creative/approved.md item 9): premades use Paper in light and Studio (black or dark grey)
   in dark, for now (T-4681).
+- #41, an Investor, 11:26 PM ET 11-16 (c6938306456), later than #278's 9:55 PM message: "the pre-made widgets are
+  meant to be a proof of <span title="One product idea inside a lane. C1 is the lane&#x27;s first idea.">concept</span> of the widget builder, showing off several high-quality results of what can be
+  built using this tool, not necessarily the biggest draw of the app. I consider a functional IDE and widget/Page
+  builder to be higher priority over the actual pre-mades, although these are necessary in order to prove the
+  functionality that we are promising". Its Effect line in `log/rulings.md`: "Premade work is sized to that role;
+  where premade polish and IDE or Builder work compete, the IDE and Builder go first."
+- #41, an Investor, 11:37 PM ET 11-16 (c6938494530): "we should prioritize building a Developer mode so that Pro
+  widgets can be tested moving forward". Effect line: "Build a Developer mode next, as a priority". s8 weighs each
+  P1 line of this plan against these two rulings (T-4795, added 2026-11-19; the plan as first written left them out,
+  Pernille's M1 in [`pywidget/docs/reviews/t4672-efded76e-pernille.md`](../pywidget/t4672-efded76e-pernille.html)).
 
 **Whose views I used** (read from their files, not invented; credit where it is used below):
 - **Wrenna:** [`pywidget/docs/research/L7-competition.md`](../pywidget/l7-competition.html) (2026-10-25) for what other widget apps cannot do, and
@@ -376,12 +386,13 @@ T-4692 is built, so the screen and the gate land together.
 ## 8. Build order and board lines
 
 1. **T-4673** (Pernille, P1): Day phases, s4. First. The MTA terms (s4.4) are its first step.
-2. **Maren, frames for the showcase set** (P1): Day phases' four views first, then Focus timer, Next 24 hours, Sky,
-   Overlap clocks, Site status, Flashcards, GitHub's sparkline; and her review of T-4673's render.
-3. **Idris, the Page's `time` and `stop` kinds** (P1), for Day phases.
-4. **Habit tracker's Done today** (Idris with Pernille, P1): the line premade-inputs.md s9.4 drafted, after
-   ADR-011 steps 4, 5, 6a and 6.
-5. **Focus timer** (Pernille, P1), after the button path.
+2. **Maren, frames for the showcase set** (P1, T-4703, done 11-18): Day phases' four views first, then Focus timer,
+   Next 24 hours, Sky, Overlap clocks, Site status, Flashcards, GitHub's sparkline; her review of T-4673's render
+   is left on T-4766.
+3. **Idris, the Page's `time` and `stop` kinds** (T-4704, P2 since 11-19, was P1), for Day phases.
+4. **Habit tracker's Done today** (T-4705, Idris with Pernille, P2 since 11-19, was P1): the line premade-inputs.md
+   s9.4 drafted, after ADR-011 steps 4, 5, 6a and 6.
+5. **Focus timer** (T-4706, Pernille, P2 since 11-19, was P1), after the button path.
 6. **Next 24 hours** (Pernille, P2), MET Norway under L16's conditions.
 7. **Sky** (Pernille, P2).
 8. **Overlap clocks** (Pernille, P2).
@@ -400,6 +411,53 @@ someone other than its author before TestFlight (Commandment 13).
 sizes one button at half a day of hers). Idris's slot gains the two Page kinds (about 1 day) and the habit button (already counted in
 plan.md). I have not moved the release range for this plan; T-4689 (the plan after the phase A proof) folds these
 lines into the dates and reports any move on #41.
+
+**Weighed against the Builder-first rulings (T-4795, Ines, 2026-11-19 4:50 AM ET by `date`).** The list above was
+written at 2:20 AM 11-17 without #41 c6938306456 (11:26 PM 11-16: "I consider a functional IDE and widget/Page
+builder to be higher priority over the actual pre-mades"; Effect: "where premade polish and IDE or Builder work
+compete, the IDE and Builder go first") or #41 c6938494530 (11:37 PM 11-16: "we should prioritize building a
+Developer mode so that Pro widgets can be tested moving forward"). Both came before this plan and rank above it. The
+#278 9:55 PM ask for "many high-quality pre-made widgets" stands; these two rulings set its place in the order. A line
+competes when it takes a worker's time, or the Xcode slot, that an open IDE, Builder or Developer mode line needs. The
+IDE here is phase B (T-4181 to T-4192, finishing the editor, runs and widgets); Developer mode is T-4688 (Idris, inside
+phase B); the Builder is phase D (T-4477), whose steps open when it starts. The queue runs P0 first, then board order
+within a priority.
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 6: 278 9:55 PM ask for &quot;many high-quality pre-made widgets&quot; stands; these two…, scrolls sideways" style="--tw:1066px" markdown="1">
+
+| Line | Lane | Competes? | Placed |
+| --- | --- | --- | --- |
+| T-4673 Day phases (Pernille) | Pernille, beside the slot | Partly: her time against her open phase B lines (T-4202 and T-4203, part of T-4189), and the Simulator for its done-when. Not with Developer mode or the Builder (Idris's work; phase D has not started) | **Stays P1, by chair line below** |
+| T-4703 Maren's frames | Maren, beside the slot | No: done 11-18 3:51 AM (f32bea8ad4). No open Maren line for the IDE, Builder or Developer mode existed then or now (board grep, 4:50 AM 11-19). Its rest, the render review, is on T-4766 and waits on T-4673 | Nothing to move |
+| T-4704 the Page's `time` and `stop` kinds (Idris) | Idris, the Xcode slot | Yes: the same slot as T-4688 Developer mode, phase B's editor and run lines (T-4186, T-4187) and the Builder | **P1 to P2**, after them |
+| T-4705 Habit tracker's Done today (Idris with Pernille) | Idris, the Xcode slot | Yes, the same slot. It already needs T-4553, T-4554 and T-4556, Pages steps that follow the Builder (plan.md) | **P1 to P2**, after them |
+| T-4706 Focus timer (Pernille) | Pernille, beside the slot | Yes: her phase B lines and her share of the Builder (T-4477 is Idris with Pernille). It needs T-4556 (Pages, after the Builder) | **P1 to P2**, after them |
+
+</div>
+
+
+The three moves went through `python3 tools/board_tick.py move ... --prio 2` with a note on each line, each in place
+in board order, so the set's own order (premade-inputs.md s0: Day phases, Habit tracker, Focus timer, then the P2
+lines T-4707 on) is unchanged. Maren's open premade fixes (T-5000, T-5001) and T-4766 compete with no open line today;
+if a design line for the IDE, Builder or Developer mode opens on her lane, it goes first and they follow.
+
+**Chair line (Ines, 2026-11-19 4:50 AM ET): T-4673 stays P1.** Why not after the IDE and Builder: it is the one
+premade the Investors named and specified (#278 9:55 PM, with its stations and hours); it runs on Pernille's lane, not
+Idris's slot, so it takes nothing from Developer mode or the Builder; and the P1 lines of hers that are phase B work
+(T-4202, T-4203) already stand above it in board order, so the queue gives them her time first. Two limits keep it to
+the ruling's "sized to that role": its Simulator turns through `tools/xc.sh` yield to phase B and Developer mode runs
+when both wait (plan.md's rule for phase C, applied here), and its Page fields (T-4704) and Done buttons (T-4712, P2)
+wait behind the IDE and Builder, so it ships with the default stations and hours until then. Disagreement welcome:
+if the Investors read Day phases as premade polish too, it moves to P2 like the others.
+
+**Date effect, corrected.** T-4689's chair note (plan.md, 11-17 1:18 PM) did not fold these lines into the dates,
+as this section said it would. Under the range's method (`ops/plans/T-4266-release-range.py`), Pernille's and Maren's
+lines run beside the slot and are not counted, and the habit button is inside step 10 of RUN_AND_BUTTONS. That
+leaves T-4704's one slot day (my estimate, unchecked by Idris), now after the Builder, uncounted. One day sits
+inside the range's width; I count it at the range's next re-dating rather than move `ops/milestones.json` for it
+alone. Because every premade line on Idris's slot now follows the Builder, none of them can move the Builder's first
+phone proof, which fixes the firm date (#270 A).
 
 ## 9. What would make this fail
 

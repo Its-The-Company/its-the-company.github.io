@@ -101,6 +101,14 @@ Without `_hashlib`, `hashlib` falls back to the built-in modules. sha1/2/3, md5,
 5. **What would make this fail.** A server that people use is refused by App Transport Security (unmeasured). So the device test list runs every https host our premades and examples call, and one refused host is a fail line before the freeze. Downloads larger than the cap fail. That is accepted for 1.0 and written in the docs.
 6. **The export answer stays the Investors'.** s5 item 4 goes to them as a comment on #138 (card `ops/requests/t3168-encryption-card.md`). Adding `ITSAppUsesNonExemptEncryption` is T-3399, waiting on their answer. A `NO` lands only in the build that drops `_ssl` and `_hashlib`, never earlier. Nothing here changes `pywidget/ios/project.yml` or either Info.plist.
 7. **Not planned.** TLS sockets through Network.framework over the bridge could bring back mail and raw TLS. That is a candidate for 1.1 if users ask for it, and it is on no plan.
+
+### Check of item 3 (Ines, 2026-11-19 04:52 AM ET, T-3402)
+
+Item 3's question is whether T-3401 has started by 2026-11-23. It has, and a start cannot be undone, so the answer on 11-23 can only be the same. I rule now rather than wait four days for a fact that is already settled. Evidence, both on main: slice 1, the OpenSSL symbol gate (`tools/openssl_gate.py`, fc6e9c8038, 2026-11-09), and slice 2, `net.request` (T-3820, a9108cc747, 2026-11-13). Pernille's half, the https shim (T-3400, ea5eb9a749), is on main too, off in today's build.
+
+**Ruling: the date stands.** (i)+(ii) stays aimed at 1.0, with item 2's cut-off unchanged: the feature freeze, 2026-11-30 11:59 PM ET. Nothing moves to 1.0.1 today, so T-3399 is not told that 1.0 carries OpenSSL, and nothing is posted on #138.
+
+What is still open for the cut-off (ops/board.md): T-3821 (big bodies through a file), T-3822 (gate turned on in the build), T-3823 and T-4142 (gate review and its fix), T-4202 (the strip, only with T-3401) and T-4203 (device test of every https host). If they are not all on main by the freeze, item 2 applies as written: 1.0 ships with OpenSSL, T-3399 gets no key (the Investors' answer F on #138, 2026-11-14), and (i)+(ii) is the first item of 1.0.1. Never (ii) alone.
 {% endraw %}
 
 </div>

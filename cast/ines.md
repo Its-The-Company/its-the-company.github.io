@@ -40,15 +40,13 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - Showcase premades plan: ops/plans/T-4672-showcase-premades.md (Pro tag model #41 12:27 AM 11-17; themes split + Pro words are proposals).
 - Standing lessons: run `date` before every stamp; grep my own proposals and git log before ruling; read a new rule against the ADR it touches; when two fixes interact, check the bound under both. Never write "ships as is" without a grep at HEAD (T-0791: an unbuilt BGAppRefresh went into the guide as shipped).
 - Never route round a refusal by copying the refused content another way (11-05 E1 route, owned 11-15).
-- T-3892: a session calling a tool's inner function after its check said STOP is what a classifier should refuse. A fix folded into an approved proposal keeps checks exact, never looser than what the Investors saw.
 - A packet's premise is a claim (T-3585): count from the gate's own log. "Live" may be only a <span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">parked</span> ref, "back to to do" may already be on HEAD: merge-base --is-ancestor both ways (T-3864, T-4096). Outbox ticks can be lost: board-grep a "ticked" ID.
-- T-3809: when a read's source sits on a locked disk, read the record written at the time (events log, ruled lines) and say so; a fired rule that names the Investors as the actor: ask, recommend, record the disagreement.
-- T-4489 (11-15): an approval never <span title="A new, permitted reading that removes a cap. A lift rule is that reading, written down before we look.">lifts</span> a refusal made after it; a plan's gloss ("also lifts the record") is not Investor words. Sim refusals asked on #313, T-4561 waits.
 - 11-18: after a refused history rewrite, land --from (T-4911) is the road (T-4771/4783 ruling). T-4630 'rule first' was ruled 11-16; check before ruling.
 - feature grouping T-4228 — done 11-14; both switches off, mine to switch; 17, 18 open; code-written slots are not the author's words
 - T-4841 (11-18): HealthKit out of 1.0 and out of T-0011's probe, no Investor ask (ops/decisions/2026-11-18-t4841-healthkit.md). A doc half on a parked branch: a note on its owning line, never a copy.
 - T-4796 (11-17): which runs are Pro's 'Python within the widget' is open on Urgent #324 (A: button-run only, recommended; B: all). Plan s1 keeps A's tags as a working list. T-4821: ADR-007 still has refresh as Pro.
 - T-4770 (11-18): checked line Tue 2027-07-27 (02-21 to 12-24), snap 4.25; milestones.json not moved (6 days; move once when T-4871 closes). Ratios 0.57/0.50 are two points, 0.50 retracted.
+- T-3402 (11-19): OpenSSL removal stays in 1.0 (T-3401 started); cut-off freeze 11-30 11:59 PM, else 1.0.1. A check whose answer can't flip back is ruled when the evidence lands, not on its date.
 {% endraw %}
 
 

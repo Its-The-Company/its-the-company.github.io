@@ -5,7 +5,7 @@ section: "documents"
 description: "Odalys, 11-18 7:15 PM ET. Answers an Investor on #41 c6965124089 (7:26 PM 11-17: &quot;Investigate all issues that failed due to an unknown reason \u2013 ensure that reasons are always captured, and resolve the root causes&quot;)\u2026"
 ---
 <div class="crumbs" role="navigation" aria-label="Back"><a class="back" href="{{ '/documents/operations/' | relative_url }}">← Operations</a><a href="{{ '/documents/company/t-4805-unknown-reds.html' | relative_url }}" rel="bookmark">Permanent link</a></div>
-<div class="page-head"><div class="kicker"><span class="kind blue">Plan</span><span>Day 28 · Wed Nov 18</span><span><code>ops/plans/T-4805-unknown-reds.md</code></span></div><h1>T-4805: a cause for every failed merge</h1><div class="byline"><img class="avatar" src="{{ '/assets/portraits/odalys.svg' | relative_url }}" alt="Odalys" title="Odalys"><span>By <a href="{{ '/cast/odalys.html' | relative_url }}">Odalys</a>, Process and operations engineer</span></div></div>
+<div class="page-head"><div class="kicker"><span class="kind blue">Plan</span><span>Day 29 · Thu Nov 19</span><span><code>ops/plans/T-4805-unknown-reds.md</code></span></div><h1>T-4805: a cause for every failed merge</h1><div class="byline"><img class="avatar" src="{{ '/assets/portraits/odalys.svg' | relative_url }}" alt="Odalys" title="Odalys"><span>By <a href="{{ '/cast/odalys.html' | relative_url }}">Odalys</a>, Process and operations engineer</span></div></div>
 
 <style>.doc-body{overflow-wrap:break-word}.doc-src{overflow-wrap:anywhere}.tbl[data-n~="1"] tr>:nth-child(1),.tbl[data-n~="2"] tr>:nth-child(2),.tbl[data-n~="3"] tr>:nth-child(3),.tbl[data-n~="4"] tr>:nth-child(4),.tbl[data-n~="5"] tr>:nth-child(5),.tbl[data-n~="6"] tr>:nth-child(6),.tbl[data-n~="7"] tr>:nth-child(7),.tbl[data-n~="8"] tr>:nth-child(8),.tbl[data-n~="9"] tr>:nth-child(9),.tbl[data-n~="10"] tr>:nth-child(10),.tbl[data-n~="11"] tr>:nth-child(11),.tbl[data-n~="12"] tr>:nth-child(12){min-width:0;overflow-wrap:normal}.tbl[data-o="1"] tr>:nth-child(1),.tbl[data-o="2"] tr>:nth-child(2),.tbl[data-o="3"] tr>:nth-child(3),.tbl[data-o="4"] tr>:nth-child(4),.tbl[data-o="5"] tr>:nth-child(5),.tbl[data-o="6"] tr>:nth-child(6),.tbl[data-o="7"] tr>:nth-child(7),.tbl[data-o="8"] tr>:nth-child(8),.tbl[data-o="9"] tr>:nth-child(9),.tbl[data-o="10"] tr>:nth-child(10),.tbl[data-o="11"] tr>:nth-child(11),.tbl[data-o="12"] tr>:nth-child(12){position:sticky;right:0;overflow-wrap:normal;background:var(--page);box-shadow:-1px 0 var(--line),-9px 0 8px -8px var(--sh)}</style>
 <div class="doc-body" markdown="1">
@@ -168,10 +168,49 @@ Same method on the gate's rows: each suite_red row, the next pass of the same su
 
 Bad tests are 73 of 134 (54%), code 24 (18%). The 38 lane lands held at the rebase step are conflicts, not reds, and stay outside the 134 as before.
 
+## The 4 lane reds settled (T-5044, a slice of T-4988, 11-19)
+
+Odalys, 11-19. Same method as the Xcode and gate reads: the commit the lane tried, the version that later landed or passed, and what changed between the two in the task's own files (main's moves set aside). Read-only on the main checkout's kept logs, ops/runs/land_steps.jsonl, ops/runs/spec_gate.jsonl and git; nothing was refused.
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 7: The 4 lane reds settled (T-5044, a slice of T-4988, 11-19), scrolls sideways" data-n="1" style="--tw:1258px" markdown="1">
+
+| T-4787 # | lane, task | red commit | what changed red to green | cause now |
+|---|---|---|---|---|
+| 13 | a2, T-1732 | f323092e (lane.py, test_lane.py) | nothing: the same two files landed unchanged as 1e8077ff42 at 10:05 AM (lane a45). The failing test (bridge test_runner StopTests.test_stop_still_reaches_atexit, a Stop inside an atexit sleep) is outside the change's files, passed on Python 3.9 in the same run, and passed on main 81feb1bb; bridge took 137.7 s on 3.13 against 58.5 s on 3.9 | bad test (timing) |
+| 14 | b3, T-2331 (with T-3027, T-2325) | 1702660e11 (tests/xc_route_test.py only) | the change was a test that <span title="A measured fact that holds a grade below a letter, however good the rest is.">capped</span> the real project's run paths at 40 ("about 27 today"). run_paths() gives 27 on the test's own base (f7b964096c's parent) and 152 on main a070e919, the tree it met on 11-10; the 11-04 rule gives the same 152 on that tree, so the rule did not change, the inputs grew. The change never landed; T-2331 was archived in the 11-11 queue audit (T-4092) | bad test (a fixed bound in the change's own test) |
+| 41 | b40, T-3856 | d20a371870 | nothing: T-3856's 11 files are the same in 7d5571f8a8, which passed the merge queue's 8:49 AM run with T-4143 (spec_gate.jsonl: 11 jobs, 0 reds, no flakes). The red row waited on the tick ("launchd's stop reaches the session through the tick"; the tick's last line was "no copy of the reading for the site") in a personal_off_test.sh run of 1048.9 s, near 3 times the 372 s suite median T-4787 gives (11-15) | bad test (timing) |
+| 105 | a44, T-3976 | f29e1a58e6 | the tool: 04ab96cdf0 (5:21 PM) changed tools/disk_makeup.py so a probe's time limit counts from the child's ready line, not from its start, which at load 346 took 0.28-0.43 s against a 0.5 s limit (its commit: 2 fails in 5 runs before, 8 of 8 after). The red rows fit that: the Company SSD's four size rows were empty while the internal disk was measured and the SSD's row from the record passed. Landed 5:26 PM | code (the change's own tool) |
+
+</div>
+
+
+So 3 move to bad test, 1 to code. Two of the three bad tests are timing rows that one loaded run failed and the same files then passed; the third is a test that pinned a count that grows. A note for xc_route: 152 run paths is a big jump from 27 in six days. Whether that is the project growing or run_paths over-following is not settled here.
+
+The recount by cause, 134 red lands 11-10 to 11-17, after this read:
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 8: The 4 lane reds settled (T-5044, a slice of T-4988, 11-19), scrolls sideways" data-n="2" style="--tw:604px" markdown="1">
+
+| cause | 11-18 (above) | 11-19 |
+|---|---|---|
+| bad test | 73 | 76 |
+| code | 24 | 25 |
+| time-out | 24 | 24 |
+| runner | 3 | 3 |
+| not the change, bad test or time-out | 4 | 4 |
+| red, test or code not settled | 4 | 0 |
+| unknown | 2 | 2 (lane #1 with no log, gate #84) |
+
+</div>
+
+
+Bad tests are 76 of 134 (57%), code 25 (19%).
+
 ## Still owed
 
-- The 4 lane reds whose side is not settled (#13, #14, #41, #105): the same red-to-green read on the lane branches.
-- A week of the new rows: count reds by cause from ops/metrics/main_gate.jsonl, ops/runs/land_steps.jsonl and the merge queue's record, and check that "unknown" stays at zero.
+- ~~The 4 lane reds whose side is not settled (#13, #14, #41, #105)~~: settled above (T-5044, 11-19).
+- The recount of the seven days from 11-18 (T-4988, from 11-25): not done yet. On 11-19 only one day of the new rows existed. A week of the new rows: count reds by cause from ops/metrics/main_gate.jsonl, ops/runs/land_steps.jsonl and the merge queue's record, and check that "unknown" stays at zero.
 {% endraw %}
 
 </div>

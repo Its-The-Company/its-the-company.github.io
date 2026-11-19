@@ -2,7 +2,7 @@
 layout: "default"
 title: "T-4806: why merges time out and the runner errors, and the fix for each cause"
 section: "documents"
-description: "Odalys, 11-17 evening ET. Answers an Investor&#x27;s 7:26 PM ruling on #41 (c6965124089; log/rulings.md 2026-11-17 19:26): &quot;fix the timeout errors or macbook runner errors ... ensure that reasons are always captured, and\u2026"
+description: "Odalys, 11-17 evening ET. Answers an Investor&#x27;s 7:26 PM ruling on #41 (c6965124089; log/rulings.md, 2026-11-17 7:26 PM ET): &quot;fix the timeout errors or macbook runner errors ... ensure that reasons are always captured\u2026"
 ---
 <div class="crumbs" role="navigation" aria-label="Back"><a class="back" href="{{ '/documents/operations/' | relative_url }}">← Operations</a><a href="{{ '/documents/company/t-4806-timeouts.html' | relative_url }}" rel="bookmark">Permanent link</a></div>
 <div class="page-head"><div class="kicker"><span class="kind blue">Plan</span><span>Day 27 · Tue Nov 17</span><span><code>ops/plans/T-4806-timeouts.md</code></span></div><h1>T-4806: why merges time out and the runner errors, and the fix for each cause</h1><div class="byline"><img class="avatar" src="{{ '/assets/portraits/odalys.svg' | relative_url }}" alt="Odalys" title="Odalys"><span>By <a href="{{ '/cast/odalys.html' | relative_url }}">Odalys</a>, Process and operations engineer</span></div></div>
@@ -11,7 +11,7 @@ description: "Odalys, 11-17 evening ET. Answers an Investor&#x27;s 7:26 PM rulin
 <div class="doc-body" markdown="1">
 
 {% raw %}
-Odalys, 11-17 evening ET. Answers an Investor's 7:26 PM <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">ruling</span> on #41 (c6965124089; log/rulings.md 2026-11-17 7:26 PM):
+Odalys, 11-17 evening ET. Answers an Investor's 7:26 PM <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">ruling</span> on #41 (c6965124089; log/rulings.md, 2026-11-17 7:26 PM ET):
 "fix the timeout errors or macbook runner errors ... ensure that reasons are always captured, and resolve the root
 causes". Starts from my T-4787 count (ops/plans/T-4787-red-causes.md: 26 "other" reds of 134, 23 time-outs and 3
 runner errors) and Pernille's T-4786 finding (ops/plans/T-4786-bad-tests.md, "Runner time-outs").
@@ -68,6 +68,36 @@ off at once if that ever proves wrong.
 - Every job nobody read: a `dropped` row (why `drop` or `superseded`).
 - Every carried pass: a `verdict` row with `carried_from`, or a `carried` row for a kept waiting job. Count them
   against `queued` rows to see the runner minutes saved.
+
+## Part 5, landed 11-18 night (an Investor #325 c6996487980; an Investor #41 c6965124089)
+
+The rule: a time-out with no failing check is never a failed merge in the lanes either; a check still working is never
+stopped; a hang is a stall. Built on T-4912 (tools/with_timeout.py, ops/plans/time-limits.md), not beside it.
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 2: Part 5, landed 11-18 night (an Investor #325 c6996487980; an Investor #41…, scrolls sideways" style="--tw:960px" markdown="1">
+
+| Where in tools/personal_land.sh | Before | Now |
+|---|---|---|
+| watch_step, at LAND_TEST_SECONDS | the check was stopped (143) whatever it was doing | it goes on while its log grows or its processes use CPU (with_timeout.py's tree_cpu); stopped only after LAND_STALL (300 s) with neither: exit 125, a STALLED line, red (a hang); or at LAND_CEILING_X (5) x its limit: 143, the over-limit retry. LAND_STALL=0: the old stop |
+| a suites run whose only reds are "FAIL <suite> timed out after" rows, no other FAIL or ERROR row | red (exit 1), held | the over-limit retry (main_gate.py load_only's rule); a timed-out suite with a failed row stays red |
+| host: run_host.py TIMEOUT suites only | red | the over-limit retry |
+| over_limit_again past LAND_OVERLIMIT_TRIES (2) | red, held, a "did not land" | no verdict: put back, counted (`overlimit n`); try_land starts it again only at a one-minute load under LAND_LOW_LOAD (40, the gate's line) |
+| the tick's 300 s stop during a check, past the tries | give_up "stopped at the tick's time limit" | the same no-verdict put back |
+
+</div>
+
+
+Tests: tests/personal_land_test.sh part 2, 9 new rows (printing past the limit lands; silent with CPU lands; silent and
+idle is a 125 stall; busy all along stops at the ceiling and is queued; a time-out-only suites run is queued; a
+time-out beside a failed row is red; the third and fourth over-limit are no verdict; at load 55 it waits); 3 old rows
+changed from "red" to "no verdict".
+
+Not in this part: the stall stretch is LAND_STALL (300 s) for the whole check, and T-4912's 180 s of work for each
+suite in tests/run.sh, not yet each suite's own history. A history-sized stretch (the suite's median when longer than
+180 s) was written and taken out before the land: test_health.py's limits never go under 360 s (median floor 180), so
+a test of it waits 180 s or more, and it needs a seam first. A branch past its tries that times out at low load too is
+tried again each tick under load 40; count its `overlimit` rows from 11-19 before adding a cap.
 
 ## Slices left (each about 45 minutes, in this order)
 

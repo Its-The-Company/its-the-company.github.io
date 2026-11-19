@@ -751,6 +751,7 @@ The Effect lines of the amendments.md entries the charter retired (2026-11-04 12
 - **2026-11-18 11:58 PM ET** ((private)): The midnight Lock In is for 2026-11-19 only (it ends at midnight 11-19); it is not a standing nightly Lock In.
 - **2026-11-19 1:40 AM ET** ((private)): Process changes stay P0; the task-queue changes (machine-made lines update open ones, adds join open lines, the new-vs-finished count and fold pass) are pulled forward, aiming for Thursday 11-19 morning, afternoon at the latest, ahead of other process work.
 - **2026-11-19 1:49 AM ET** ((private)): The merge time-out fixes (T-4806) are P0 with the task-list fixes; all recently requested process changes ship as soon as possible, ordered by the efficiency and bottleneck savings each brings.
+- **2026-11-19 9:17 AM ET** ((private)): The company aims for one merge route for every account's work, as part of the one-coordinator change (T-5005); a measured deep dive comes first and says whether it pays off and how best to do it.
 {% endraw %}
 
 </div>

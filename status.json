@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-19T21:13:19.370529+00:00",
+ "at": "2026-11-19T21:29:05.677748+00:00",
  "session": {
   "active": false,
   "kind": "",
@@ -127,7 +127,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 633,
+  "runnable_count": 635,
   "blocked_count": 2
  },
  "meter": {
@@ -172,12 +172,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-19T16:11:45-05:00",
+ "next_tick": "2026-11-19T16:43:25-05:00",
  "personal": {
-  "week_pct": 73.03,
-  "usage_pct": 46.3,
-  "work_pct": 80.4,
-  "read_at": "2026-11-19T21:16:00+00:00",
+  "week_pct": 73.58,
+  "usage_pct": 46.5,
+  "work_pct": 80.5,
+  "read_at": "2026-11-19T21:29:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -302,6 +302,7 @@
     "e": "high",
     "at": "2026-11-19T16:12:10-05:00",
     "n": "Jeremy",
+    "d": 1,
     "src": "plan-b"
    },
    {
@@ -350,6 +351,7 @@
     "e": "high",
     "at": "2026-11-19T16:12:02-05:00",
     "n": "Jeremy",
+    "d": 1,
     "src": "plan-b"
    },
    {
@@ -362,6 +364,7 @@
     "e": "high",
     "at": "2026-11-19T16:12:02-05:00",
     "n": "Jeremy",
+    "d": 1,
     "src": "plan-b"
    }
   ]
@@ -384,7 +387,7 @@
   }
  ],
  "disk": {
-  "free_gb": 33,
+  "free_gb": 34,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -393,14 +396,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-19T16:11:00-05:00",
+   "at": "2026-11-19T16:27:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 3,
-  "at": "2026-11-19T16:16:00-05:00",
+  "at": "2026-11-19T16:29:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -409,7 +412,14 @@
   }
  },
  "next_tick_why": "last_tick",
- "idle": null,
+ "idle": {
+  "since": "2026-11-19T15:16:21-05:00",
+  "minutes": 72,
+  "why": "a tick has spent 3 min on steps before the session",
+  "healed": [
+   "asked for a fresh main meter reading"
+  ]
+ },
  "pool": null,
  "lanes": [
   {
@@ -553,7 +563,7 @@
    }
   ],
   "count": {
-   "next": 633,
+   "next": 635,
    "wait": 2,
    "blocked": 0,
    "you": 2
@@ -598,62 +608,67 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-19T21:13:19Z",
+  "at": "2026-11-19T21:29:05Z",
   "s": {
    "T-4446": [
     "merging",
-    "Host checks on the Mac mini \u00b7 2 of 4 groups of tests done",
-    1795122439370
+    "Host checks on the Mac mini \u00b7 3 of 4 groups of tests done",
+    1795122425677
    ],
    "T-4849": [
     "mergeq",
     "1st to merge",
-    1795121359370
+    1795121345677
    ],
    "T-5162": [
     "mergeq",
     "2nd to merge",
-    1795121539370
+    1795121525677
    ],
    "T-5165": [
     "mergeq",
     "2nd to merge",
-    1795121539370
+    1795121525677
    ],
    "T-3871": [
     "mergeq",
     "3rd to merge",
-    1795122319370
+    1795122365677
    ],
    "T-4196": [
     "mergeq",
     "3rd to merge",
-    1795122319370
+    1795122365677
    ],
    "T-4195": [
     "mergeq",
     "3rd to merge",
-    1795122319370
+    1795122365677
+   ],
+   "T-4878": [
+    "mergeq",
+    "5th to merge",
+    1795123145677
    ],
    "T-4678": [
     "mergeq",
-    "5th to merge",
-    1795121299370
+    "6th to merge",
+    1795121345677
    ],
    "T-4813": [
     "mergeq",
-    "8th to merge",
-    1795122079370
+    "9th to merge",
+    1795122065677
    ],
    "T-4818": [
     "mergeq",
-    "9th to merge",
-    1795122619370
+    "10th to merge",
+    1795122665677
    ],
    "T-2377": [
     "mergeq",
-    "10th to merge",
-    1795121479370
+    "11th to merge",
+    1795121465677
    ],
    "T-3976": [
     "merged",
@@ -700,6 +715,7 @@
    "T-3871": "Archive parked refs whose work main already has",
    "T-4196": "Let app changes waiting to merge share one iPhone run",
    "T-4195": "Reuse an iPhone pass when the app's inputs are unchanged",
+   "T-4878": "Fix the red five hour test",
    "T-4678": "Close the iPhone premade feature and free its steps",
    "T-4813": "Home's numbers update within a minute",
    "T-4818": "Show each bottleneck signal with its limit on Flow",
@@ -719,6 +735,7 @@
    "T-3871": "Odalys",
    "T-4196": "Idris",
    "T-4195": "Idris",
+   "T-4878": "Odalys",
    "T-4678": "Odalys",
    "T-4813": "Maren",
    "T-4818": "Maren",
@@ -732,11 +749,11 @@
   }
  },
  "ln": {
-  "at": "2026-11-19T21:13:19Z",
+  "at": "2026-11-19T21:29:05Z",
   "mq": {
    "n": {
     "checking": 1,
-    "inline": 10,
+    "inline": 11,
     "conflicted": 3,
     "failed": 0,
     "held": 0,
@@ -744,9 +761,9 @@
     "parked": 0
    },
    "m": {
-    "checking": 6,
-    "inline": 16,
-    "conflicted": 293,
+    "checking": 22,
+    "inline": 28,
+    "conflicted": 309,
     "failed": null,
     "held": null,
     "retry": null,
@@ -759,7 +776,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     6
+     22
     ]
    ],
    "ld": [
@@ -769,12 +786,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-19T21:13:22Z",
-    "ld": 4.59,
+    "at": "2026-11-19T21:29:07Z",
+    "ld": 8.4,
     "c": 8,
     "sb": 0,
     "dk": [
-     32.7,
+     34.5,
      228.3
     ],
     "ss": [
@@ -799,6 +816,15 @@
  "operators": [
   {
    "w": "Operator",
+   "a": "Main plan",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session",
+   "at": "2026-11-19T16:29:07-05:00"
+  },
+  {
+   "w": "Operator",
    "a": "Evan's Account",
    "sr": 1,
    "m": "opus",
@@ -821,7 +847,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 4 tasks",
+   "t": "Work session \u2013 1 task",
    "at": "2026-11-19T16:12:10-05:00"
   },
   {
@@ -853,10 +879,10 @@
   "main": 0,
   "lanes": 4,
   "total": 4,
-  "at": "4:16 PM",
+  "at": "4:29 PM",
   "why": "",
-  "at_iso": "2026-11-19T21:16:00+00:00",
+  "at_iso": "2026-11-19T21:29:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 4:16 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 4:29 PM ET</p></section>"
  }
 }

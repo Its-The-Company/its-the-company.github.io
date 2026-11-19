@@ -1,11 +1,22 @@
 {
  "schema": 1,
- "at": "2026-11-19T14:46:56.621627+00:00",
+ "at": "2026-11-19T15:02:18.080808+00:00",
  "session": {
   "active": false,
   "kind": "",
   "started": null,
   "flow": [
+   {
+    "t": "T-0349",
+    "name": "Fix gaps in the package sandbox build step",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "testq",
+      "at": 1795100136
+     }
+    ]
+   },
    {
     "t": "T-5045",
     "name": "Date the Home merge-only line, hide it after a day",
@@ -171,7 +182,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 632,
+  "runnable_count": 635,
   "blocked_count": 1
  },
  "meter": {
@@ -215,12 +226,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-19T08:34:03-05:00",
+ "next_tick": "2026-11-19T10:04:03-05:00",
  "personal": {
-  "week_pct": 68.99,
+  "week_pct": 69.01,
   "usage_pct": 44.9,
-  "work_pct": 81.1,
-  "read_at": "2026-11-19T14:49:00+00:00",
+  "work_pct": 81.2,
+  "read_at": "2026-11-19T15:03:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -290,7 +301,7 @@
   }
  ],
  "disk": {
-  "free_gb": 41,
+  "free_gb": 40,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -299,14 +310,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-19T09:46:00-05:00",
+   "at": "2026-11-19T10:01:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 3,
-  "at": "2026-11-19T09:49:00-05:00",
+  "at": "2026-11-19T10:03:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -335,6 +346,14 @@
    "next": []
   },
   {
+   "name": "Ines",
+   "state": "next",
+   "task": "Ines, P0, Investor an Investor c7012590906 (9:50 AM 11-19:...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
    "name": "Pernille",
    "state": "next",
    "task": "Pernille, P0, from T-4694 (nightly run of every suite,...",
@@ -346,14 +365,6 @@
    "name": "Maren",
    "state": "next",
    "task": "Maren, P0, from T-4694 (nightly run of every suite,...",
-   "model": null,
-   "since": null,
-   "next": []
-  },
-  {
-   "name": "Ines",
-   "state": "next",
-   "task": "Ines, P2, from T-1110 (Wrenna,...",
    "model": null,
    "since": null,
    "next": []
@@ -413,6 +424,13 @@
     "o": "c"
    },
    {
+    "w": "Ines",
+    "k": "ops",
+    "t": "Star the open high-priority process requests...",
+    "s": "next",
+    "o": "c"
+   },
+   {
     "w": "Odalys",
     "k": "tools",
     "t": "Land one personal account slot through the gate",
@@ -430,13 +448,6 @@
     "w": "Odalys",
     "k": "tools",
     "t": "Run main account gate lands detached",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Send every personal account slot through the...",
     "s": "next",
     "o": "c"
    }
@@ -459,7 +470,7 @@
    }
   ],
   "count": {
-   "next": 632,
+   "next": 635,
    "wait": 1,
    "blocked": 0,
    "you": 1
@@ -503,163 +514,35 @@
    "ok"
   ]
  ],
- "stg": {
-  "at": "2026-11-19T14:46:56Z",
-  "s": {
-   "T-5045": [
-    "merging",
-    "Host checks on the Mac mini",
-    1795099616621
-   ],
-   "T-4849": [
-    "mergeq",
-    "1st to merge",
-    1795089716621
-   ],
-   "T-0349": [
-    "mergeq",
-    "2nd to merge",
-    1795084016621
-   ],
-   "T-4681": [
-    "mergeq",
-    "3rd to merge",
-    1795084196621
-   ],
-   "T-5037": [
-    "mergeq",
-    "4th to merge",
-    1795084256621
-   ],
-   "T-3402": [
-    "mergeq",
-    "7th to merge",
-    1795087016621
-   ],
-   "T-5057": [
-    "mergeq",
-    "10th to merge",
-    1795092836621
-   ],
-   "T-0101": [
-    "mergeq",
-    "11th to merge",
-    1795092956621
-   ],
-   "T-0902": [
-    "mergeq",
-    "12th to merge",
-    1795093016621
-   ],
-   "T-5062": [
-    "mergeq",
-    "13th to merge",
-    1795093196621
-   ],
-   "T-2378": [
-    "mergeq",
-    "14th to merge",
-    1795093436621
-   ],
-   "T-4795": [
-    "mergeq",
-    "16th to merge",
-    1795093616621
-   ],
-   "T-4807": [
-    "mergeq",
-    "17th to merge",
-    1795093736621
-   ],
-   "T-4913": [
-    "mergeq",
-    "19th to merge",
-    1795096496621
-   ],
-   "T-4180": [
-    "testing",
-    "Mac Mini \u00b7 test",
-    null
-   ],
-   "T-5113": [
-    "testing",
-    "its own tests, in its copy",
-    1795096616621
-   ],
-   "T-5117": [
-    "testing",
-    "its own tests, in its copy",
-    1795098596621
-   ]
-  },
-  "nm": {
-   "T-5045": "Date the Home merge-only line, hide it after a day",
-   "T-4849": "Shorten the process merge wait for good",
-   "T-0349": "Fix gaps in the package sandbox build step",
-   "T-4681": "Premades default to Paper in light and Studio in dark",
-   "T-5037": "Break the Machine tab's \"Other\" storage into named parts",
-   "T-3402": "Check whether the OpenSSL removal still fits 1.0",
-   "T-5057": "Chat notifications open with the reply's own words",
-   "T-0101": "Write the design note for online packages in 1.1",
-   "T-0902": "Check precedent for an in-app gallery of user code",
-   "T-5062": "The site sends its own push notices to a phone",
-   "T-2378": "Plan version 1.2 and later",
-   "T-4795": "Weigh the showcase set against the Builder-first ruling",
-   "T-4807": "Fix every bad test that failed a merge",
-   "T-4913": "Stop the safety guard refusing safe work",
-   "T-4180": "Every premade widget draws on the iPhone",
-   "T-5113": "Stop the supervisor breaking a live session's lock",
-   "T-5117": "Land the keep-main-green slice from a fresh copy"
-  },
-  "wk": {
-   "T-5045": "Maren",
-   "T-4849": "Odalys",
-   "T-0349": "Pernille",
-   "T-4681": "Idris",
-   "T-5037": "Odalys",
-   "T-3402": "Ines",
-   "T-5057": "Odalys",
-   "T-0101": "Odalys",
-   "T-0902": "Ines",
-   "T-5062": "Odalys",
-   "T-2378": "Ines",
-   "T-4795": "Ines",
-   "T-4807": "Pernille",
-   "T-4913": "Odalys",
-   "T-4180": "Idris",
-   "T-5113": "Odalys",
-   "T-5117": "Odalys"
-  }
- },
  "ln": {
-  "at": "2026-11-19T14:46:56Z",
+  "at": "2026-11-19T15:02:18Z",
   "mq": {
    "n": {
     "checking": 1,
     "inline": 13,
     "conflicted": 2,
-    "failed": 1,
+    "failed": 0,
     "held": 0,
-    "retry": 0,
+    "retry": 1,
     "parked": 0
    },
    "m": {
-    "checking": 0,
-    "inline": 111,
-    "conflicted": 651,
-    "failed": 16,
+    "checking": 6,
+    "inline": 127,
+    "conflicted": 666,
+    "failed": null,
     "held": null,
-    "retry": null,
+    "retry": 14,
     "parked": null
    },
    "cur": [
     [
      [
-      "T-5045"
+      "T-0349"
      ],
      "Mac tests",
      "Mac mini",
-     0
+     6
     ]
    ],
    "ld": [
@@ -669,12 +552,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-19T14:46:39Z",
-    "ld": 18.9,
+    "at": "2026-11-19T15:01:45Z",
+    "ld": 37.14,
     "c": 8,
     "sb": 1,
     "dk": [
-     40.6,
+     39.8,
      228.3
     ],
     "ss": [
@@ -703,35 +586,27 @@
    "w": "Operator",
    "a": "Evan's Account",
    "sr": 1,
-   "m": "opus",
-   "e": "high",
    "t": "Work session \u2013 1 task",
-   "at": "2026-11-19T09:46:42-05:00"
+   "at": "2026-11-19T09:52:15-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Jeremy's Account",
+   "sr": 1,
+   "t": "Work session \u2013 3 tasks",
+   "at": "2026-11-19T09:48:44-05:00"
   }
  ],
  "reply": {
-  "sent": "2026-11-19T14:45:47Z",
-  "seconds": 54.0
+  "sent": "2026-11-19T14:50:12Z",
+  "seconds": 120.0
  },
- "inbox": [
-  {
-   "id": "c7012500881",
-   "state": "received",
-   "position": 1,
-   "eta": "2026-11-19T08:34:03-05:00",
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "I am seeing responses to issues on..."
-  }
- ],
+ "inbox": [],
  "trimmed": [
   "lane_next",
   "queue_text",
   "recent",
   "task_done",
-  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -742,10 +617,10 @@
   "main": 0,
   "lanes": 2,
   "total": 2,
-  "at": "9:49 AM",
+  "at": "10:03 AM",
   "why": "",
-  "at_iso": "2026-11-19T14:49:00+00:00",
+  "at_iso": "2026-11-19T15:03:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 9:49 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 10:03 AM ET</p></section>"
  }
 }

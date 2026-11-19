@@ -1,10 +1,10 @@
 {
  "schema": 1,
- "at": "2026-11-19T16:45:12.811592+00:00",
+ "at": "2026-11-19T16:46:49.189171+00:00",
  "session": {
-  "active": false,
-  "kind": "",
-  "started": null,
+  "active": true,
+  "kind": "work",
+  "started": "2026-11-19T11:45:14-05:00",
   "flow": [
    {
     "t": "T-4565",
@@ -70,7 +70,6 @@
    },
    {
     "t": "T-0101",
-    "name": "Write the design note for online packages in 1.1",
     "acct": "Personal a",
     "steps": [],
     "end": "landed",
@@ -109,7 +108,7 @@
     "end_at": 1795104234
    }
   ],
-  "landed": 48,
+  "landed": 47,
   "failed": 3
  },
  "workers": [],
@@ -163,12 +162,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-19T11:59:36-05:00",
+ "next_tick": null,
  "personal": {
   "week_pct": 70.34,
   "usage_pct": 45.4,
-  "work_pct": 81.2,
-  "read_at": "2026-11-19T16:45:00+00:00",
+  "work_pct": 80.8,
+  "read_at": "2026-11-19T16:50:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -192,6 +191,7 @@
     "e": "high",
     "at": "2026-11-19T11:39:40-05:00",
     "n": "Jeremy",
+    "d": 1,
     "src": "plan-b"
    },
    {
@@ -217,6 +217,7 @@
     "e": "high",
     "at": "2026-11-19T11:39:40-05:00",
     "n": "Jeremy",
+    "d": 1,
     "src": "plan-b"
    },
    {
@@ -273,14 +274,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-19T11:42:00-05:00",
+   "at": "2026-11-19T11:48:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 3,
-  "at": "2026-11-19T11:45:00-05:00",
+  "at": "2026-11-19T11:50:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -288,14 +289,18 @@
    "b": "midnight"
   }
  },
- "next_tick_why": "last_tick",
+ "next_tick_why": "session",
  "idle": {
   "since": "2026-11-19T10:44:09-05:00",
-  "minutes": 61,
+  "minutes": 62,
   "why": "a tick has spent 2 min on steps before the session",
   "healed": []
  },
- "pool": null,
+ "pool": {
+  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 13 (raised a step: load, time-outs, failed lands and redone tasks all under their lines)",
+  "n": 13,
+  "at": "2026-11-19T11:44:36.705729-05:00"
+ },
  "lanes": [
   {
    "name": "Idris",
@@ -442,6 +447,10 @@
    "wait": 1,
    "blocked": 1,
    "you": 2
+  },
+  "fin": {
+   "n": 0,
+   "rows": []
   }
  },
  "qr": [
@@ -483,62 +492,52 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-19T16:45:12Z",
+  "at": "2026-11-19T16:46:49Z",
   "s": {
    "T-4850": [
     "merging",
     "Host checks on the Mac mini",
-    1795105752811
+    1795105729189
    ],
    "T-4913": [
     "merging",
     "Host checks on the Mac mini",
-    1795105752811
+    1795105729189
    ],
    "T-4849": [
     "mergeq",
     "1st to merge",
-    1795106352811
+    1795106389189
    ],
    "T-4891": [
     "mergeq",
     "2nd to merge",
-    1795105452811
+    1795105489189
    ],
    "T-4843": [
     "mergeq",
     "4th to merge",
-    1795103352811
+    1795103329189
    ],
    "T-4012": [
     "mergeq",
     "5th to merge",
-    1795106712811
+    1795106749189
    ],
    "T-3871": [
     "mergeq",
     "6th to merge",
-    1795106532811
+    1795106509189
    ],
    "T-4195": [
     "mergeq",
     "7th to merge",
-    1795106172811
-   ],
-   "T-4180": [
-    "testing",
-    "Mac Mini \u00b7 test",
-    null
-   ],
-   "T-4181": [
-    "testing",
-    "Mac Mini \u00b7 test",
-    null
+    1795106209189
    ],
    "T-4182": [
-    "testq",
-    "1st for a Simulator",
-    1795106592811
+    "testing",
+    "Mac Mini \u00b7 test",
+    null
    ]
   },
   "nm": {
@@ -550,8 +549,6 @@
    "T-4012": "Retire the retry routes the send-back replaces",
    "T-3871": "Archive parked refs whose work main already has",
    "T-4195": "Reuse an iPhone pass when the app's inputs are unchanged",
-   "T-4180": "Every premade widget draws on the iPhone",
-   "T-4181": "Widgets refresh on their own and by a tap",
    "T-4182": "A failing widget says so and can recover"
   },
   "wk": {
@@ -563,13 +560,11 @@
    "T-4012": "Odalys",
    "T-3871": "Odalys",
    "T-4195": "Idris",
-   "T-4180": "Idris",
-   "T-4181": "Idris",
    "T-4182": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-19T16:45:12Z",
+  "at": "2026-11-19T16:46:49Z",
   "mq": {
    "n": {
     "checking": 2,
@@ -581,9 +576,9 @@
     "parked": 0
    },
    "m": {
-    "checking": 16,
-    "inline": 7,
-    "conflicted": 134,
+    "checking": 18,
+    "inline": 8,
+    "conflicted": 136,
     "failed": null,
     "held": null,
     "retry": null,
@@ -596,7 +591,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     16
+     18
     ],
     [
      [
@@ -604,7 +599,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     16
+     18
     ]
    ],
    "ld": [
@@ -614,8 +609,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-19T16:45:14Z",
-    "ld": 8.28,
+    "at": "2026-11-19T16:46:50Z",
+    "ld": 8.08,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -686,9 +681,8 @@
  "inbox": [
   {
    "id": "c7015655505",
-   "state": "received",
+   "state": "in_progress",
    "position": 1,
-   "eta": "2026-11-19T11:59:36-05:00",
    "tasks": {
     "open": 0,
     "done": 0
@@ -711,10 +705,10 @@
   "main": 0,
   "lanes": 3,
   "total": 3,
-  "at": "11:45 AM",
+  "at": "11:50 AM",
   "why": "",
-  "at_iso": "2026-11-19T16:45:00+00:00",
+  "at_iso": "2026-11-19T16:50:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 11:45 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 11:50 AM ET</p></section>"
  }
 }

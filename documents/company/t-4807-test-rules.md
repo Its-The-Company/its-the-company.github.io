@@ -5,7 +5,7 @@ section: "documents"
 description: "Pernille, 11-17 9:35 PM ET. Answers an Investor on #41 (c6965124089, 7:26 PM 11-17: &quot;fix every bad test ... Consult real-world examples of how tests are designed and implemented. Fix the &#x27;big picture&#x27; causes&quot;) and the\u2026"
 ---
 <div class="crumbs" role="navigation" aria-label="Back"><a class="back" href="{{ '/documents/operations/' | relative_url }}">← Operations</a><a href="{{ '/documents/company/t-4807-test-rules.html' | relative_url }}" rel="bookmark">Permanent link</a></div>
-<div class="page-head"><div class="kicker"><span class="kind blue">Plan</span><span>Day 28 · Wed Nov 18</span><span><code>ops/plans/T-4807-test-rules.md</code></span></div><h1>T-4807: rules for new tests</h1><div class="byline"><img class="avatar" src="{{ '/assets/portraits/pernille.svg' | relative_url }}" alt="Pernille" title="Pernille"><span>By <a href="{{ '/cast/pernille.html' | relative_url }}">Pernille</a>, Python runtime engineer</span></div></div>
+<div class="page-head"><div class="kicker"><span class="kind blue">Plan</span><span>Day 29 · Thu Nov 19</span><span><code>ops/plans/T-4807-test-rules.md</code></span></div><h1>T-4807: rules for new tests</h1><div class="byline"><img class="avatar" src="{{ '/assets/portraits/pernille.svg' | relative_url }}" alt="Pernille" title="Pernille"><span>By <a href="{{ '/cast/pernille.html' | relative_url }}">Pernille</a>, Python runtime engineer</span></div></div>
 
 <style>.doc-body{overflow-wrap:break-word}.doc-src{overflow-wrap:anywhere}.tbl[data-n~="1"] tr>:nth-child(1),.tbl[data-n~="2"] tr>:nth-child(2),.tbl[data-n~="3"] tr>:nth-child(3),.tbl[data-n~="4"] tr>:nth-child(4),.tbl[data-n~="5"] tr>:nth-child(5),.tbl[data-n~="6"] tr>:nth-child(6),.tbl[data-n~="7"] tr>:nth-child(7),.tbl[data-n~="8"] tr>:nth-child(8),.tbl[data-n~="9"] tr>:nth-child(9),.tbl[data-n~="10"] tr>:nth-child(10),.tbl[data-n~="11"] tr>:nth-child(11),.tbl[data-n~="12"] tr>:nth-child(12){min-width:0;overflow-wrap:normal}.tbl[data-o="1"] tr>:nth-child(1),.tbl[data-o="2"] tr>:nth-child(2),.tbl[data-o="3"] tr>:nth-child(3),.tbl[data-o="4"] tr>:nth-child(4),.tbl[data-o="5"] tr>:nth-child(5),.tbl[data-o="6"] tr>:nth-child(6),.tbl[data-o="7"] tr>:nth-child(7),.tbl[data-o="8"] tr>:nth-child(8),.tbl[data-o="9"] tr>:nth-child(9),.tbl[data-o="10"] tr>:nth-child(10),.tbl[data-o="11"] tr>:nth-child(11),.tbl[data-o="12"] tr>:nth-child(12){position:sticky;right:0;overflow-wrap:normal;background:var(--page);box-shadow:-1px 0 var(--line),-9px 0 8px -8px var(--sh)}</style>
 <div class="doc-body" markdown="1">
@@ -102,6 +102,18 @@ research/inbound/):
 - site_queued_order_test "live (a)" (11-18): asked the live board to list an umbrella row; on 11-18 none of the 30
   Queued rows was a feature's step and nothing was in flight, so it went red with no code change (rule 2: own the data).
   It now checks the rows that are there; that some exist and say their count is pinned on the suite's own boards.
+- Rule 1 and rule 5, slice 4 (11-19): the tick's process starts per menu line, counted rather than timed. Counted with a
+  logging stand-in for every command on PATH, one fixture tick (five-line menu, pool 4) started 322 processes; most
+  were per menu line: done, tries, tried and tier read with a grep, cat or awk each (about 9 a line), the session menu's
+  attempt check, and four for each line's Model note. tools/personal_tick.sh now reads every account's done, tries and
+  tried lists and the tiers once a tick in one awk (menu_facts; cool_from does cool_left's sum from its counts), reads
+  the Model notes of all lines in one awk, and matches the owned list and the attempts in the shell: 271 starts for
+  the same tick, and on a 200-line board menu about 1,800 fewer a tick. A new row in personal_pool_test.sh counts grep,
+  awk, cat, tail, tr, sed, head and sort starts for a one-line and a five-line menu: red before (68 and 115, about 12 a
+  line), green after (42 and 58, 4 a line: the board line, waits_on's two greps, the board line again on the menu).
+  model_note_fable_test.py found the block by a `done` line it no longer has, and now ends it at the guard's line.
+  Left: personal_off_test.sh (median 372 s), board_line and waits_on per line, and the limit-cut row's 3 s session
+  (PERSONAL_SESSION_SECONDS=3 in personal_pool_test.sh) races the stand-in's commit at high load (rule 1).
 {% endraw %}
 
 </div>

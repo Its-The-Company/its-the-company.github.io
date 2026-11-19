@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-19T02:00:09.871309+00:00",
+ "at": "2026-11-19T02:03:15.548165+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -132,37 +132,10 @@
  "workers": [
   {
    "name": "odalys",
-   "task": "[tools] T-4788 feature sessions on for all",
-   "model": "opus",
-   "started": "2026-11-18T23:37:01.600Z",
-   "seconds": 8588,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-4845 move tools off full",
-   "model": "opus",
-   "started": "2026-11-19T00:54:57.501Z",
-   "seconds": 3912,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "odalys",
    "task": "[tools] T-4805 gate failure causes and T-4792",
    "model": "opus",
    "started": "2026-11-19T00:59:54.758Z",
-   "seconds": 3615,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-4955 refusal count and status sweep",
-   "model": "opus",
-   "started": "2026-11-19T01:11:56.876Z",
-   "seconds": 2892,
+   "seconds": 3800,
    "finished": null,
    "effort": "high"
   },
@@ -171,7 +144,7 @@
    "task": "[design] T-4818 Flow panel signals and pool",
    "model": "opus",
    "started": "2026-11-19T01:34:01.894Z",
-   "seconds": 1567,
+   "seconds": 1753,
    "finished": null,
    "effort": "high"
   },
@@ -180,13 +153,37 @@
    "task": "[tools] T-4909 end sessions on a stall",
    "model": "opus",
    "started": "2026-11-19T00:25:56.669Z",
-   "seconds": 5653,
+   "seconds": 5838,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Odalys x5, Maren",
+ "who": "Odalys x2, Maren",
  "recent": [
+  {
+   "name": "odalys",
+   "task": "[tools] T-4955 refusal count and status sweep",
+   "model": "opus",
+   "started": "2026-11-19T01:11:56.876Z",
+   "seconds": null,
+   "finished": "2026-11-19T02:01:44.713000+00:00"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-4845 move tools off full",
+   "model": "opus",
+   "started": "2026-11-19T00:54:57.501Z",
+   "seconds": null,
+   "finished": "2026-11-19T02:01:05.460000+00:00"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-4788 feature sessions on for all",
+   "model": "opus",
+   "started": "2026-11-18T23:37:01.600Z",
+   "seconds": null,
+   "finished": "2026-11-19T02:00:30.791000+00:00"
+  },
   {
    "name": "pernille",
    "task": "[tools] T-4912 time limits inventory",
@@ -194,53 +191,29 @@
    "started": "2026-11-19T01:00:09.559Z",
    "seconds": null,
    "finished": "2026-11-19T01:45:08.204000+00:00"
-  },
-  {
-   "name": "ines",
-   "task": "[report] weekly",
-   "model": "opus",
-   "started": "2026-11-19T01:10:54.293Z",
-   "seconds": null,
-   "finished": "2026-11-19T01:43:28.697000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-4958 pool check during sessions",
-   "model": "opus",
-   "started": "2026-11-19T00:25:31.113Z",
-   "seconds": null,
-   "finished": "2026-11-19T00:59:27.928000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-4808 merge-step fixes stream",
-   "model": "opus",
-   "started": "2026-11-18T23:26:46.521Z",
-   "seconds": null,
-   "finished": "2026-11-19T00:53:53.247000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 530,
+  "runnable_count": 529,
   "blocked_count": 34
  },
  "meter": {
   "five_hour": {
-   "pct": 13.0,
+   "pct": 14.0,
    "resets_at": "2026-11-19T01:10:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-18T20:57:18.820621-05:00",
+   "read_at": "2026-11-18T21:01:35.478772-05:00",
    "source": "live",
-   "left": 87.0,
+   "left": 86.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 57.0,
    "resets_at": "2026-11-22T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-18T20:57:18.820621-05:00",
+   "read_at": "2026-11-18T21:01:35.478772-05:00",
    "source": "live",
    "left": 43.0,
    "left_words": "of your weekly allowance left"
@@ -252,7 +225,7 @@
    "read_at": "2026-11-18T17:33:56.705931-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-18T20:57:18.820621-05:00"
+  "read_at": "2026-11-18T21:01:35.478772-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -272,7 +245,7 @@
   "week_pct": 52.29,
   "usage_pct": 50.1,
   "work_pct": 81.6,
-  "read_at": "2026-11-19T02:00:00+00:00",
+  "read_at": "2026-11-19T02:03:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -309,7 +282,7 @@
  "lock_in": {
   "on": true,
   "pool": 3,
-  "at": "2026-11-18T21:00:00-05:00",
+  "at": "2026-11-18T21:03:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -328,9 +301,9 @@
   {
    "name": "Odalys",
    "state": "running",
-   "task": "[tools] T-4788 feature sessions on for all",
+   "task": "[tools] T-4909 end sessions on a stall",
    "model": "opus",
-   "since": "2026-11-18T23:37:01.600Z",
+   "since": "2026-11-19T00:25:56.669Z",
    "next": [],
    "effort": "high"
   },
@@ -381,16 +354,6 @@
    {
     "w": "Odalys",
     "k": "tools",
-    "t": "Turn feature sessions on for every app feature",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-18T23:37:01.600Z",
-    "o": "c",
-    "task": "T-4788"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
     "t": "End work sessions on a stall, not on the clock",
     "m": "opus",
     "e": "high",
@@ -401,32 +364,12 @@
    {
     "w": "Odalys",
     "k": "tools",
-    "t": "Move every tool off the full main thread",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-19T00:54:57.501Z",
-    "o": "c",
-    "task": "T-4845"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
     "t": "Record a cause for every failed merge",
     "m": "opus",
     "e": "high",
     "at": "2026-11-19T00:59:54.758Z",
     "o": "c",
     "task": "T-4805"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Count each refused step once, gate apart from guards",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-19T01:11:56.876Z",
-    "o": "i",
-    "task": "T-4955"
    },
    {
     "w": "Maren",
@@ -514,6 +457,11 @@
   ],
   "done": [
    {
+    "w": "Odalys",
+    "t": "The refusals chart now counts each step a guard refused once, and blocked merges as their own...",
+    "at": "2026-11-18T21:01:00-05:00"
+   },
+   {
     "w": "Operator",
     "t": "A later MacBook job for the same work (J-20261118-1733-xc-test-5) passed, so the failed job...",
     "at": "2026-11-18T20:02:00-05:00"
@@ -522,22 +470,21 @@
     "w": "Odalys",
     "t": "The check that sets how many agents may run now runs every 5 minutes during a session, one step...",
     "at": "2026-11-18T19:58:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "A land test row was red on every run because it read the whole log for a line another tool also...",
-    "at": "2026-11-18T19:29:00-05:00"
    }
   ],
   "count": {
-   "next": 530,
+   "next": 529,
    "wait": 31,
    "blocked": 3,
    "you": 10
   },
   "fin": {
-   "n": 8,
+   "n": 9,
    "rows": [
+    [
+     "T-4955",
+     "Count each refused step..."
+    ],
     [
      "T-4958",
      "Run the pool check and..."
@@ -557,10 +504,6 @@
     [
      "T-4771",
      "Gutter marks redraw quickly..."
-    ],
-    [
-     "T-4783",
-     "Keep the gutter mark on its..."
     ]
    ]
   }
@@ -604,54 +547,35 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-19T01:59:46Z",
+  "at": "2026-11-19T02:03:15Z",
   "s": {
-   "T-4788": [
-    "merging",
-    "Mac tests at the main gate",
-    1795052446740
-   ],
-   "T-4845": [
-    "merging",
-    "Mac tests at the main gate",
-    1795052446740
-   ],
-   "T-4955": [
-    "merging",
-    "Mac tests at the main gate",
-    1795052566740
-   ],
    "T-4805": [
     "merging",
     "Mac tests at the main gate",
-    1795052206740
-   ],
-   "T-4818": [
-    "merging",
-    "Mac tests at the main gate",
-    1795052866740
+    1795052235548
    ],
    "T-4909": [
     "merging",
     "Mac tests at the main gate",
-    1795051426740
+    1795051395548
+   ],
+   "T-4818": [
+    "merged",
+    "on main 9:00 PM ET",
+    1795053628000,
+    "Maren"
    ]
   },
   "nm": {
-   "T-4788": "Turn feature sessions on for every app feature",
-   "T-4845": "Move every tool off the full main thread",
-   "T-4955": "Count each refused step once, gate apart from guards",
    "T-4805": "Record a cause for every failed merge",
-   "T-4818": "Show each bottleneck signal with its limit on Flow",
-   "T-4909": "End work sessions on a stall, not on the clock"
+   "T-4909": "End work sessions on a stall, not on the clock",
+   "T-4818": "Show each bottleneck signal with its limit on Flow"
   },
   "wk": {
-   "T-4788": "Odalys",
-   "T-4845": "Odalys",
-   "T-4955": "Odalys",
    "T-4805": "Odalys",
-   "T-4818": "Maren",
    "T-4909": "Odalys",
+   "T-4818": "Maren",
+   "T-4955": "Odalys",
    "T-4958": "Odalys",
    "T-4808": "Odalys",
    "T-4903": "Odalys",
@@ -663,7 +587,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-19T01:59:46Z",
+  "at": "2026-11-19T02:03:15Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -677,11 +601,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 942,
+    "conflicted": 946,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1217
+    "parked": 1220
    },
    "cur": [],
    "ld": [
@@ -691,12 +615,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-19T01:59:48Z",
-    "ld": 4.64,
+    "at": "2026-11-19T02:03:16Z",
+    "ld": 3.73,
     "c": 8,
     "sb": 0,
     "dk": [
-     9.0,
+     9.3,
      228.3
     ],
     "ss": [
@@ -725,43 +649,21 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 14 tasks",
-   "at": "2026-11-18T20:37:16-05:00"
+   "t": "Work session \u2013 11 tasks",
+   "at": "2026-11-18T21:01:32-05:00"
   }
  ],
  "reply": {
-  "sent": "2026-11-19T01:36:33Z",
-  "seconds": 21.0
+  "sent": "2026-11-19T01:57:50Z",
+  "seconds": 211.0
  },
- "inbox": [
-  {
-   "id": "c6997015552",
-   "state": "waiting",
-   "position": 1,
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "Are \"Points\" a published and..."
-  },
-  {
-   "id": "c6997330532",
-   "state": "received",
-   "position": 2,
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "Add to the Flow improvement task to..."
-  }
- ],
+ "inbox": [],
  "trimmed": [
   "lane_next",
   "queue_text",
   "recent",
   "task_done",
   "fin_short",
-  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -770,13 +672,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 6,
+  "main": 3,
   "lanes": 0,
-  "total": 6,
-  "at": "9:00 PM",
+  "total": 3,
+  "at": "9:03 PM",
   "why": "",
-  "at_iso": "2026-11-19T02:00:00+00:00",
+  "at_iso": "2026-11-19T02:03:00+00:00",
   "started": "5:34 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 6, started 5:34 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:00 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 5:34 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:03 PM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-19T08:05:50.158651+00:00",
+ "at": "2026-11-19T08:08:57.209046+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -226,13 +226,39 @@
    "task": "[tools] T-5066 limit auto Lock In to 11-19",
    "model": "opus",
    "started": "2026-11-19T07:47:07.521Z",
-   "seconds": 1122,
+   "seconds": 1309,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-5068 stop test copies scanning disks",
+   "model": "opus",
+   "started": "2026-11-19T08:06:12.621Z",
+   "seconds": 164,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-4726 fix red personal land test",
+   "model": "opus",
+   "started": "2026-11-19T08:07:31.727Z",
+   "seconds": 85,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Odalys",
+ "who": "Odalys x3",
  "recent": [
+  {
+   "name": "odalys",
+   "task": "[tools] T-5063 board growth count and fold",
+   "model": "opus",
+   "started": "2026-11-19T07:05:50.003Z",
+   "seconds": null,
+   "finished": "2026-11-19T08:07:12.415000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[tools] T-4850 bring Mac mini load down",
@@ -240,14 +266,6 @@
    "started": "2026-11-19T07:33:51.570Z",
    "seconds": null,
    "finished": "2026-11-19T08:05:37.350000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-5063 board growth count and fold",
-   "model": "opus",
-   "started": "2026-11-19T07:05:50.003Z",
-   "seconds": null,
-   "finished": "2026-11-19T07:46:41.415000+00:00"
   },
   {
    "name": "odalys",
@@ -310,7 +328,7 @@
   "week_pct": 57.06,
   "usage_pct": 47.1,
   "work_pct": 81.4,
-  "read_at": "2026-11-19T08:05:00+00:00",
+  "read_at": "2026-11-19T08:09:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -373,7 +391,7 @@
  "lock_in": {
   "on": true,
   "pool": 3,
-  "at": "2026-11-19T03:05:00-05:00",
+  "at": "2026-11-19T03:09:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -450,6 +468,26 @@
     "at": "2026-11-19T07:47:07.521Z",
     "o": "c",
     "task": "T-5066"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Stop test copies scanning real disks",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-19T08:06:12.621Z",
+    "o": "c",
+    "task": "T-5068"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Fix the red personal land test",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-19T08:07:31.727Z",
+    "o": "c",
+    "task": "T-4726"
    }
   ],
   "src": "plan",
@@ -601,72 +639,82 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-19T08:05:50Z",
+  "at": "2026-11-19T08:08:46Z",
   "s": {
    "T-4899": [
     "merging",
     "Host checks on the Mac mini",
-    1795074290158
+    1795074286316
    ],
    "T-4919": [
     "merging",
     "Host checks on the Mac mini",
-    1795074290158
+    1795074286316
    ],
    "T-4988": [
     "mergeq",
     "1st to merge",
-    1795071950158
+    1795071946316
    ],
    "T-5006": [
     "mergeq",
     "1st to merge",
-    1795071950158
+    1795071946316
    ],
    "T-5000": [
     "mergeq",
     "2nd to merge",
-    1795066430158
+    1795066426316
    ],
    "T-4916": [
     "mergeq",
     "3rd to merge",
-    1795068410158
+    1795068406316
    ],
    "T-5002": [
     "mergeq",
     "5th to merge",
-    1795068470158
+    1795068466316
    ],
    "T-4931": [
     "mergeq",
     "7th to merge",
-    1795068710158
+    1795068706316
    ],
    "T-4932": [
     "mergeq",
     "9th to merge",
-    1795068950158
+    1795068946316
    ],
    "T-4933": [
     "mergeq",
     "10th to merge",
-    1795069070158
+    1795069066316
    ],
    "T-4934": [
     "mergeq",
     "11th to merge",
-    1795069250158
+    1795069246316
    ],
    "T-4871": [
     "mergeq",
     "14th to merge",
-    1795072970158
+    1795072966316
    ],
    "T-4964": [
     "merging",
     "Mac tests at the main gate",
-    1795074470158
+    1795074466316
+   ],
+   "T-5068": [
+    "testing",
+    "its own tests, in its copy",
+    1795075726316
+   ],
+   "T-4726": [
+    "testing",
+    "its own tests, in its copy",
+    1795075726316
    ]
   },
   "nm": {
@@ -682,7 +730,9 @@
    "T-4933": "Check finished work before it ships",
    "T-4934": "Check finished work before it ships",
    "T-4871": "Check the two-way editing week figure against the code",
-   "T-4964": "Name machine-made task lines by what they fix"
+   "T-4964": "Name machine-made task lines by what they fix",
+   "T-5068": "Stop test copies scanning real disks",
+   "T-4726": "Fix the red personal land test"
   },
   "wk": {
    "T-4899": "Idris",
@@ -698,12 +748,14 @@
    "T-4934": "Pernille",
    "T-4871": "Idris",
    "T-4964": "Odalys",
+   "T-5068": "Odalys",
+   "T-4726": "Odalys",
    "T-5063": "Odalys",
    "T-5034": "Odalys"
   }
  },
  "ln": {
-  "at": "2026-11-19T08:05:50Z",
+  "at": "2026-11-19T08:08:46Z",
   "mq": {
    "n": {
     "checking": 2,
@@ -715,9 +767,9 @@
     "parked": 0
    },
    "m": {
-    "checking": 21,
-    "inline": 109,
-    "conflicted": 885,
+    "checking": 24,
+    "inline": 112,
+    "conflicted": 888,
     "failed": null,
     "held": null,
     "retry": null,
@@ -730,7 +782,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     21
+     24
     ],
     [
      [
@@ -738,7 +790,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     21
+     24
     ]
    ],
    "ld": [
@@ -748,12 +800,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-19T08:05:14Z",
-    "ld": 9.07,
+    "at": "2026-11-19T08:08:48Z",
+    "ld": 6.51,
     "c": 8,
     "sb": 0,
     "dk": [
-     40.3,
+     39.8,
      228.3
     ],
     "ss": [
@@ -782,7 +834,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 1 task",
+   "t": "Work session \u2013 3 tasks",
    "at": "2026-11-19T02:04:21-05:00"
   },
   {
@@ -812,13 +864,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 1,
+  "main": 3,
   "lanes": 1,
-  "total": 2,
-  "at": "3:05 AM",
+  "total": 4,
+  "at": "3:09 AM",
   "why": "",
-  "at_iso": "2026-11-19T08:05:00+00:00",
+  "at_iso": "2026-11-19T08:09:00+00:00",
   "started": "2:04 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 1, started 2:04 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 3:05 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 3, started 2:04 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 3:09 AM ET</p></section>"
  }
 }

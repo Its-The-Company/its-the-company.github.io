@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-19T09:07:09.378535+00:00",
+ "at": "2026-11-19T09:10:37.471426+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -131,6 +131,14 @@
   ],
   "done": [
    {
+    "t": "T-4891",
+    "name": "Work the process and site merge queue under its limit",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1795079395
+   },
+   {
     "t": "T-4871",
     "name": "Check the two-way editing week figure against the code",
     "acct": "Personal a",
@@ -201,17 +209,9 @@
     "steps": [],
     "end": "landed",
     "end_at": 1795070083
-   },
-   {
-    "t": "T-5002",
-    "name": "Say what a run does when its save is unchecked",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1795066595
    }
   ],
-  "landed": 30,
+  "landed": 31,
   "failed": 0
  },
  "workers": [
@@ -220,7 +220,7 @@
    "task": "[tools] T-4726 fix red personal land test",
    "model": "opus",
    "started": "2026-11-19T08:07:31.727Z",
-   "seconds": 3577,
+   "seconds": 3785,
    "finished": null,
    "effort": "high"
   },
@@ -229,7 +229,7 @@
    "task": "[tools] T-4838 gate waits on runner progress",
    "model": "opus",
    "started": "2026-11-19T08:26:43.295Z",
-   "seconds": 2426,
+   "seconds": 2634,
    "finished": null,
    "effort": "high"
   },
@@ -238,7 +238,7 @@
    "task": "[tools] T-4810 land waits fix then T-4809",
    "model": "opus",
    "started": "2026-11-19T08:25:56.830Z",
-   "seconds": 2472,
+   "seconds": 2680,
    "finished": null,
    "effort": "high"
   },
@@ -247,7 +247,7 @@
    "task": "[build] T-4888 wrapped-line tap caret fix",
    "model": "opus",
    "started": "2026-11-19T08:53:21.795Z",
-   "seconds": 827,
+   "seconds": 1035,
    "finished": null,
    "effort": "high"
   },
@@ -256,7 +256,7 @@
    "task": "[tools] T-4992 land then T-4993 disk sweep",
    "model": "opus",
    "started": "2026-11-19T08:59:42.682Z",
-   "seconds": 446,
+   "seconds": 654,
    "finished": null,
    "effort": "high"
   },
@@ -265,7 +265,7 @@
    "task": "[tools] T-4986 T-3806 T-4907 lands",
    "model": "opus",
    "started": "2026-11-19T08:59:52.032Z",
-   "seconds": 437,
+   "seconds": 645,
    "finished": null,
    "effort": "high"
   }
@@ -308,7 +308,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 592,
+  "runnable_count": 591,
   "blocked_count": 28
  },
  "meter": {
@@ -357,7 +357,7 @@
   "week_pct": 57.06,
   "usage_pct": 47.1,
   "work_pct": 81.4,
-  "read_at": "2026-11-19T09:07:00+00:00",
+  "read_at": "2026-11-19T09:10:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -391,6 +391,7 @@
     "e": "high",
     "at": "2026-11-19T03:12:30-05:00",
     "n": "Jeremy",
+    "d": 1,
     "src": "plan-b"
    },
    {
@@ -468,7 +469,7 @@
  "lock_in": {
   "on": true,
   "pool": 3,
-  "at": "2026-11-19T04:07:00-05:00",
+  "at": "2026-11-19T04:10:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -674,6 +675,11 @@
   ],
   "done": [
    {
+    "w": "Odalys",
+    "t": "Lock In now turns itself on each night just after midnight Eastern, so the full work pool holds...",
+    "at": "2026-11-19T04:09:00-05:00"
+   },
+   {
     "w": "Idris",
     "t": "The engineer checked the time for editing a widget both as blocks and as code against the app's...",
     "at": "2026-11-19T03:40:00-05:00"
@@ -682,22 +688,21 @@
     "w": "Operator",
     "t": "Main passes its Xcode checks again: job J-20261119-0310-land-a51-365e88 on the MacBook no longer...",
     "at": "2026-11-19T03:30:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "Lines the tools open on their own now say which test or signal they are about and sit in their...",
-    "at": "2026-11-19T03:26:00-05:00"
    }
   ],
   "count": {
-   "next": 592,
+   "next": 591,
    "wait": 27,
    "blocked": 1,
    "you": 9
   },
   "fin": {
-   "n": 6,
+   "n": 7,
    "rows": [
+    [
+     "T-5006",
+     "Lock In turns itself on..."
+    ],
     [
      "T-4871",
      "Check the two-way editing..."
@@ -717,10 +722,6 @@
     [
      "T-5063",
      "Keep new tasks from..."
-    ],
-    [
-     "T-5034",
-     "Free every held line without..."
     ]
    ]
   }
@@ -764,87 +765,82 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-19T09:07:09Z",
+  "at": "2026-11-19T09:10:37Z",
   "s": {
-   "T-4891": [
-    "mergeq",
-    "",
-    1795076529378
-   ],
    "T-4849": [
     "mergeq",
     "",
-    1795077369378
+    1795077337471
    ],
    "T-5000": [
     "mergeq",
     "",
-    1795066449378
+    1795066417471
    ],
    "T-4916": [
     "mergeq",
     "",
-    1795068429378
+    1795068397471
    ],
    "T-5002": [
     "mergeq",
     "",
-    1795068489378
+    1795068457471
    ],
    "T-4899": [
     "mergeq",
     "",
-    1795068729378
+    1795068757471
    ],
    "T-4931": [
     "mergeq",
     "",
-    1795068789378
+    1795068817471
    ],
    "T-4932": [
     "mergeq",
     "",
-    1795069209378
+    1795069237471
    ],
    "T-4933": [
     "mergeq",
     "",
-    1795069209378
+    1795069237471
    ],
    "T-4934": [
     "mergeq",
     "",
-    1795069209378
+    1795069237471
+   ],
+   "T-4919": [
+    "mergetest",
+    "",
+    1795079317471
    ],
    "T-4961": [
     "mergeq",
     "",
-    1795077069378
-   ],
-   "T-4919": [
-    "mergeq",
-    "",
-    1795075809378
+    1795077097471
    ],
    "T-5075": [
     "merging",
     "",
-    1795077969378
+    1795077997471
    ],
    "T-4986": [
     "merging",
     "",
-    1795078869378
+    1795078897471
    ],
    "T-4992": [
     "merging",
     "",
-    1795078989378
+    1795078957471
    ],
    "T-5065": [
     "merging",
     "",
-    1795078689378
+    1795078657471
    ],
    "T-4888": [
     "testing",
@@ -854,7 +850,13 @@
    "T-4726": [
     "testing",
     "",
-    1795077969378
+    1795077937471
+   ],
+   "T-4891": [
+    "merged",
+    "",
+    1795079389000,
+    ""
    ],
    "T-4871": [
     "merged",
@@ -870,7 +872,6 @@
    ]
   },
   "nm": {
-   "T-4891": "Work the process and site merge queue under its limit",
    "T-4849": "Shorten the process merge wait for good",
    "T-5000": "Draw transit count-downs the way the iPhone draws them",
    "T-4916": "Check the new landing road before it ships",
@@ -880,19 +881,19 @@
    "T-4932": "Check finished work before it ships",
    "T-4933": "Check finished work before it ships",
    "T-4934": "Check finished work before it ships",
-   "T-4961": "Publish the twice-daily reports close to six",
    "T-4919": "Fix a MacBook test job that failed",
+   "T-4961": "Publish the twice-daily reports close to six",
    "T-5075": "Land the waits fix from a fresh copy",
    "T-4986": "Let Chat and approvals read every main thread",
    "T-4992": "Sweep finished task folders in the shared temp folder",
    "T-5065": "Clear answered waits from the supervisor tick",
    "T-4888": "Undo the vertical slide on a wrapped-line tap",
    "T-4726": "Fix the red personal land test",
+   "T-4891": "Work the process and site merge queue under its limit",
    "T-4871": "Check the two-way editing week figure against the code",
    "T-4850": "Bring the Mac mini load back down"
   },
   "wk": {
-   "T-4891": "Odalys",
    "T-4849": "Odalys",
    "T-5000": "Maren",
    "T-4916": "Pernille",
@@ -902,15 +903,17 @@
    "T-4932": "Pernille",
    "T-4933": "Pernille",
    "T-4934": "Pernille",
-   "T-4961": "Odalys",
    "T-4919": "Operator",
+   "T-4961": "Odalys",
    "T-5075": "Odalys",
    "T-4986": "Odalys",
    "T-5065": "Odalys",
    "T-4888": "Idris",
    "T-4726": "Odalys",
+   "T-4891": "Odalys",
    "T-4871": "Idris",
    "T-4850": "Odalys",
+   "T-5006": "Odalys",
    "T-4964": "Odalys",
    "T-5066": "Odalys",
    "T-5068": "Odalys",
@@ -919,11 +922,11 @@
   }
  },
  "ln": {
-  "at": "2026-11-19T09:07:09Z",
+  "at": "2026-11-19T09:10:37Z",
   "mq": {
    "n": {
-    "checking": 0,
-    "inline": 12,
+    "checking": 1,
+    "inline": 10,
     "conflicted": 1,
     "failed": 0,
     "held": 0,
@@ -931,28 +934,37 @@
     "parked": 0
    },
    "m": {
-    "checking": null,
-    "inline": 167,
-    "conflicted": 946,
+    "checking": 2,
+    "inline": 173,
+    "conflicted": 950,
     "failed": null,
     "held": null,
     "retry": null,
     "parked": null
    },
-   "cur": [],
+   "cur": [
+    [
+     [
+      "T-4919"
+     ],
+     "iPhone app tests, sent and waiting its turn",
+     "MacBook",
+     2
+    ]
+   ],
    "ld": [
-    25,
-    "2026-11-19T08:40:15Z"
+    26,
+    "2026-11-19T09:09:55Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-19T09:07:18Z",
-    "ld": 6.45,
+    "at": "2026-11-19T09:10:43Z",
+    "ld": 5.87,
     "c": 8,
     "sb": 0,
     "dk": [
-     35.7,
+     36.3,
      228.3
     ],
     "ss": [
@@ -999,7 +1011,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 1 task",
+   "t": "Work session",
    "at": "2026-11-19T03:12:29-05:00"
   }
  ],
@@ -1017,6 +1029,7 @@
   "task_title",
   "done_text",
   "task_open",
+  "fin_six",
   "lane_task",
   "task_next"
  ],
@@ -1024,10 +1037,10 @@
   "main": 6,
   "lanes": 2,
   "total": 8,
-  "at": "4:07 AM",
+  "at": "4:10 AM",
   "why": "",
-  "at_iso": "2026-11-19T09:07:00+00:00",
+  "at_iso": "2026-11-19T09:10:00+00:00",
   "started": "2:04 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>8</b> agents running now</p><p class=\"an-sub\">Main session 6, started 2:04 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 4:07 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>8</b> agents running now</p><p class=\"an-sub\">Main session 6, started 2:04 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 4:10 AM ET</p></section>"
  }
 }

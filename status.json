@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-19T05:32:09.779793+00:00",
+ "at": "2026-11-19T05:35:33.069355+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -14,17 +14,6 @@
      {
       "s": "landing",
       "at": 1795065516
-     }
-    ]
-   },
-   {
-    "t": "T-4919",
-    "name": "Fix a MacBook test job that failed",
-    "acct": "Personal b",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1795065654
      }
     ]
    },
@@ -77,6 +66,22 @@
    }
   ],
   "done": [
+   {
+    "t": "T-4842",
+    "name": "Plan Controls that run a person's Python",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1795066524
+   },
+   {
+    "t": "T-4919",
+    "name": "Fix a MacBook test job that failed",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1795066502
+   },
    {
     "t": "T-4888",
     "name": "Undo the vertical slide on a wrapped-line tap",
@@ -140,25 +145,9 @@
     "steps": [],
     "end": "landed",
     "end_at": 1795064545
-   },
-   {
-    "t": "T-4937",
-    "name": "Check finished work before it ships",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1795064510
-   },
-   {
-    "t": "T-4768",
-    "name": "Review the truthful widget state save",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1795063806
    }
   ],
-  "landed": 24,
+  "landed": 26,
   "failed": 0
  },
  "workers": [
@@ -167,16 +156,7 @@
    "task": "[build] T-4962 make main pass Xcode checks",
    "model": "opus",
    "started": "2026-11-19T02:38:04.132Z",
-   "seconds": 10445,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-4810 T-4809 waits name tasks, merge label fix",
-   "model": "opus",
-   "started": "2026-11-19T03:52:04.985Z",
-   "seconds": 6004,
+   "seconds": 10648,
    "finished": null,
    "effort": "high"
   },
@@ -185,7 +165,7 @@
    "task": "[tools] T-4571 Chat model and account pickers",
    "model": "opus",
    "started": "2026-11-19T03:59:46.732Z",
-   "seconds": 5543,
+   "seconds": 5746,
    "finished": null,
    "effort": "high"
   },
@@ -194,13 +174,21 @@
    "task": "[tools] T-4964 group and name tool-made lines",
    "model": "opus",
    "started": "2026-11-19T04:19:32.159Z",
-   "seconds": 4357,
+   "seconds": 4560,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Idris, Odalys x2, Maren",
+ "who": "Idris, Maren, Odalys",
  "recent": [
+  {
+   "name": "odalys",
+   "task": "[tools] T-4810 T-4809 waits name tasks, merge label fix",
+   "model": "opus",
+   "started": "2026-11-19T03:52:04.985Z",
+   "seconds": null,
+   "finished": "2026-11-19T05:32:21.605000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[tools] T-3806 answer unclaimed Investor messages",
@@ -224,20 +212,12 @@
    "started": "2026-11-19T04:13:45.752Z",
    "seconds": null,
    "finished": "2026-11-19T04:58:45.285000+00:00"
-  },
-  {
-   "name": "pernille",
-   "task": "[tools] T-4992 sweep finished task temp folders",
-   "model": "opus",
-   "started": "2026-11-19T04:02:09.869Z",
-   "seconds": null,
-   "finished": "2026-11-19T04:51:48.567000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 563,
+  "runnable_count": 564,
   "blocked_count": 34
  },
  "meter": {
@@ -286,34 +266,8 @@
   "week_pct": 52.57,
   "usage_pct": 47.5,
   "work_pct": 81.2,
-  "read_at": "2026-11-19T05:32:00+00:00",
+  "read_at": "2026-11-19T05:35:00+00:00",
   "running": [
-   {
-    "lane": "a",
-    "task": "T-4922",
-    "w": "Pernille",
-    "k": "review",
-    "t": "Check finished work before it ships",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-19T00:21:08-05:00",
-    "n": "Evan",
-    "d": 1,
-    "src": "plan-a"
-   },
-   {
-    "lane": "a",
-    "task": "T-4923",
-    "w": "Pernille",
-    "k": "review",
-    "t": "Check finished work before it ships",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-19T00:21:08-05:00",
-    "n": "Evan",
-    "d": 1,
-    "src": "plan-a"
-   },
    {
     "lane": "a2",
     "task": "T-4927",
@@ -510,7 +464,7 @@
   }
  ],
  "disk": {
-  "free_gb": 39,
+  "free_gb": 36,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -519,14 +473,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-19T00:28:00-05:00",
+   "at": "2026-11-19T00:35:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 3,
-  "at": "2026-11-19T00:32:00-05:00",
+  "at": "2026-11-19T00:35:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -552,20 +506,20 @@
    "effort": "high"
   },
   {
-   "name": "Odalys",
-   "state": "running",
-   "task": "[tools] T-4810 T-4809 waits name tasks, merge label fix",
-   "model": "opus",
-   "since": "2026-11-19T03:52:04.985Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
    "name": "Maren",
    "state": "running",
    "task": "[tools] T-4571 Chat model and account pickers",
    "model": "opus",
    "since": "2026-11-19T03:59:46.732Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
+   "name": "Odalys",
+   "state": "running",
+   "task": "[tools] T-4964 group and name tool-made lines",
+   "model": "opus",
+   "since": "2026-11-19T04:19:32.159Z",
    "next": [],
    "effort": "high"
   },
@@ -605,16 +559,6 @@
     "at": "2026-11-19T02:38:04.132Z",
     "o": "c",
     "task": "T-4962"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Make every wait name a task or an Investor issue",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-19T03:52:04.985Z",
-    "o": "c",
-    "task": "T-4810"
    },
    {
     "w": "Maren",
@@ -712,6 +656,11 @@
   ],
   "done": [
    {
+    "w": "Operator",
+    "t": "Main's own tests pass again on a clean copy of main (80df33f5a), so finished work is no longer...",
+    "at": "2026-11-19T00:34:00-05:00"
+   },
+   {
     "w": "Odalys+operator",
     "t": "Two days after the merge limit went from 12 to 20, 72% of changes that joined a line of 12 or...",
     "at": "2026-11-19T00:09:00-05:00"
@@ -720,15 +669,10 @@
     "w": "Pernille",
     "t": "The fix to the widgets that draw before the app is first opened passed review: they now refuse...",
     "at": "2026-11-19T00:06:00-05:00"
-   },
-   {
-    "w": "Pernille",
-    "t": "Checked Maren's fixes to the drawings of the widget tap settings: all four review points are...",
-    "at": "2026-11-19T00:03:00-05:00"
    }
   ],
   "count": {
-   "next": 563,
+   "next": 564,
    "wait": 32,
    "blocked": 2,
    "you": 9
@@ -802,105 +746,117 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-19T05:32:09Z",
+  "at": "2026-11-19T05:35:33Z",
   "s": {
-   "T-4919": [
+   "T-4930": [
     "merging",
-    "Host checks on the Mac mini",
-    1795065669779
+    "",
+    1795066533069
    ],
    "T-4842": [
     "mergeq",
-    "1st to merge",
-    1795065969779
+    "",
+    1795065993069
    ],
    "T-5002": [
     "mergeq",
-    "3rd to merge",
-    1795066149779
+    "",
+    1795066113069
+   ],
+   "T-5000": [
+    "mergeq",
+    "",
+    1795066413069
    ],
    "T-4933": [
     "mergeq",
-    "4th to merge",
-    1795065549779
+    "",
+    1795065513069
    ],
    "T-4934": [
     "mergeq",
-    "5th to merge",
-    1795065669779
+    "",
+    1795065633069
    ],
    "T-4922": [
     "mergeq",
-    "6th to merge",
-    1795066089779
+    "",
+    1795066113069
    ],
-   "T-4930": [
+   "T-4923": [
     "mergeq",
-    "7th to merge",
-    1795066089779
+    "",
+    1795066413069
    ],
    "T-4909": [
     "merging",
-    "Mac tests at the main gate",
-    1795065669779
+    "",
+    1795065633069
    ],
    "T-4932": [
     "testing",
-    "Mac Mini \u00b7 test",
+    "",
     null
    ],
    "T-4962": [
     "testing",
-    "MacBook \u00b7 test",
+    "",
     null
    ],
    "T-4964": [
     "testing",
-    "its own tests, in its copy",
-    1795064109779
+    "",
+    1795064133069
    ],
    "T-4571": [
     "testing",
-    "its own tests, in its copy",
-    1795063089779
+    "",
+    1795063113069
    ],
    "T-4928": [
     "testq",
-    "1st for a Simulator",
-    1795063929779
+    "",
+    1795063893069
    ],
    "T-4931": [
     "testq",
-    "2nd for a Simulator",
-    1795065729779
+    "",
+    1795065753069
+   ],
+   "T-4919": [
+    "merged",
+    "",
+    1795066492000,
+    "Odalys"
    ],
    "T-4929": [
     "merged",
-    "on main 12:03 AM ET",
+    "",
     1795064635000,
     ""
    ],
    "T-4927": [
     "merged",
-    "on main 11:46 PM ET",
+    "",
     1795063562000,
     ""
    ],
    "T-4960": [
     "merged",
-    "on main 11:33 PM ET",
+    "",
     1795062824000,
     ""
    ]
   },
   "nm": {
-   "T-4919": "Fix a MacBook test job that failed",
+   "T-4930": "Check finished work before it ships",
    "T-4842": "Plan Controls that run a person's Python",
    "T-5002": "Say what a run does when its save is unchecked",
+   "T-5000": "Draw transit count-downs the way the iPhone draws them",
    "T-4933": "Check finished work before it ships",
    "T-4934": "Check finished work before it ships",
    "T-4922": "Check finished work before it ships",
-   "T-4930": "Check finished work before it ships",
+   "T-4923": "Check finished work before it ships",
    "T-4909": "End work sessions on a stall, not on the clock",
    "T-4932": "Check finished work before it ships",
    "T-4962": "Make main pass its Xcode checks again",
@@ -908,18 +864,20 @@
    "T-4571": "Show Chat's model and account pickers and the reply badge",
    "T-4928": "Check finished work before it ships",
    "T-4931": "Check finished work before it ships",
+   "T-4919": "Fix a MacBook test job that failed",
    "T-4929": "Check finished work before it ships",
    "T-4927": "Check finished work before it ships",
    "T-4960": "Propose the five-minute supervisor wording"
   },
   "wk": {
-   "T-4919": "Operator",
+   "T-4930": "Pernille",
    "T-4842": "Idris",
    "T-5002": "Pernille",
+   "T-5000": "Maren",
    "T-4933": "Pernille",
    "T-4934": "Pernille",
    "T-4922": "Pernille",
-   "T-4930": "Pernille",
+   "T-4923": "Pernille",
    "T-4909": "Odalys",
    "T-4932": "Pernille",
    "T-4962": "Operator",
@@ -927,6 +885,7 @@
    "T-4571": "Odalys",
    "T-4928": "Pernille",
    "T-4931": "Pernille",
+   "T-4919": "Operator",
    "T-4929": "Pernille",
    "T-4927": "Pernille",
    "T-4960": "Odalys",
@@ -943,11 +902,11 @@
   }
  },
  "ln": {
-  "at": "2026-11-19T05:32:09Z",
+  "at": "2026-11-19T05:35:33Z",
   "mq": {
    "n": {
     "checking": 1,
-    "inline": 6,
+    "inline": 7,
     "conflicted": 1,
     "failed": 0,
     "held": 0,
@@ -955,37 +914,37 @@
     "parked": 1
    },
    "m": {
-    "checking": 11,
-    "inline": 5,
-    "conflicted": 731,
+    "checking": 0,
+    "inline": 7,
+    "conflicted": 735,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 13
+    "parked": 16
    },
    "cur": [
     [
      [
-      "T-4919"
+      "T-4930"
      ],
-     "Mac tests",
+     "lining up with main",
      "Mac mini",
-     11
+     0
     ]
    ],
    "ld": [
-    9,
-    "2026-11-19T05:19:31Z"
+    11,
+    "2026-11-19T05:35:24Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-19T05:32:20Z",
-    "ld": 68.96,
+    "at": "2026-11-19T05:35:38Z",
+    "ld": 74.12,
     "c": 8,
     "sb": 2,
     "dk": [
-     38.5,
+     36.5,
      228.3
     ],
     "ss": [
@@ -1015,8 +974,8 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Inbox \u2013 Jeremy's 12:29 AM Message on GitHub",
-   "at": "2026-11-19T00:32:09-05:00"
+   "t": "Work session \u2013 1 task",
+   "at": "2026-11-19T00:33:38-05:00"
   },
   {
    "w": "Operator",
@@ -1042,43 +1001,21 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Inbox \u2013 Jeremy's 12:25 AM Message on GitHub",
-   "at": "2026-11-19T00:31:10-05:00"
+   "t": "Work session \u2013 2 tasks",
+   "at": "2026-11-19T00:33:16-05:00"
   }
  ],
  "reply": {
-  "sent": "2026-11-19T05:16:30Z",
-  "seconds": 75.0
+  "sent": "2026-11-19T05:29:22Z",
+  "seconds": 231.0
  },
- "inbox": [
-  {
-   "id": "c7000596420",
-   "state": "received",
-   "position": 1,
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "Yeah if it\u2019s worth doing from a..."
-  },
-  {
-   "id": "c7000660810",
-   "state": "received",
-   "position": 2,
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "I\u2019m a bit perplexed about this..."
-  }
- ],
+ "inbox": [],
  "trimmed": [
   "lane_next",
   "queue_text",
   "recent",
   "task_done",
   "fin_short",
-  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -1087,13 +1024,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 4,
-  "lanes": 5,
-  "total": 9,
-  "at": "12:32 AM",
+  "main": 3,
+  "lanes": 4,
+  "total": 7,
+  "at": "12:35 AM",
   "why": "",
-  "at_iso": "2026-11-19T05:32:00+00:00",
+  "at_iso": "2026-11-19T05:35:00+00:00",
   "started": "9:32 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>9</b> agents running now</p><p class=\"an-sub\">Main session 4, started 9:32 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 12:32 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 3, started 9:32 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 12:35 AM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-19T03:00:00.276446+00:00",
+ "at": "2026-11-19T03:03:03.881089+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -150,20 +150,11 @@
  },
  "workers": [
   {
-   "name": "pernille",
-   "task": "[tools] T-4912 land fixed-limit replacement",
-   "model": "opus",
-   "started": "2026-11-19T02:37:33.346Z",
-   "seconds": 1346,
-   "finished": null,
-   "effort": "high"
-  },
-  {
    "name": "odalys",
    "task": "[tools] T-4805 T-4792 land gate cause and retest",
    "model": "opus",
    "started": "2026-11-19T02:37:38.692Z",
-   "seconds": 1341,
+   "seconds": 1525,
    "finished": null,
    "effort": "high"
   },
@@ -172,7 +163,7 @@
    "task": "[tools] T-4788 T-4956 land feature sessions and status",
    "model": "opus",
    "started": "2026-11-19T02:37:43.446Z",
-   "seconds": 1336,
+   "seconds": 1520,
    "finished": null,
    "effort": "high"
   },
@@ -181,7 +172,7 @@
    "task": "[tools] T-4909 T-4845 land stall end and thread move",
    "model": "opus",
    "started": "2026-11-19T02:37:49.492Z",
-   "seconds": 1330,
+   "seconds": 1514,
    "finished": null,
    "effort": "high"
   },
@@ -190,13 +181,30 @@
    "task": "[build] T-4962 make main pass Xcode checks",
    "model": "opus",
    "started": "2026-11-19T02:38:04.132Z",
-   "seconds": 1316,
+   "seconds": 1499,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-4806 lane time-outs never a failed merge",
+   "model": "opus",
+   "started": "2026-11-19T03:00:38.966Z",
+   "seconds": 144,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Pernille, Odalys x3, Idris",
+ "who": "Odalys x4, Idris",
  "recent": [
+  {
+   "name": "pernille",
+   "task": "[tools] T-4912 land fixed-limit replacement",
+   "model": "opus",
+   "started": "2026-11-19T02:37:33.346Z",
+   "seconds": null,
+   "finished": "2026-11-19T03:00:17.758000+00:00"
+  },
   {
    "name": "ines",
    "task": "[plan] T-4770 redo release re-estimate on main",
@@ -266,7 +274,7 @@
   "week_pct": 52.57,
   "usage_pct": 47.5,
   "work_pct": 81.2,
-  "read_at": "2026-11-19T03:00:00+00:00",
+  "read_at": "2026-11-19T03:03:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -303,7 +311,7 @@
  "lock_in": {
   "on": true,
   "pool": 3,
-  "at": "2026-11-18T22:00:00-05:00",
+  "at": "2026-11-18T22:03:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -319,15 +327,6 @@
   "at": "2026-11-18T21:32:12.847417-05:00"
  },
  "lanes": [
-  {
-   "name": "Pernille",
-   "state": "running",
-   "task": "[tools] T-4912 land fixed-limit replacement",
-   "model": "opus",
-   "since": "2026-11-19T02:37:33.346Z",
-   "next": [],
-   "effort": "high"
-  },
   {
    "name": "Odalys",
    "state": "running",
@@ -345,6 +344,14 @@
    "since": "2026-11-19T02:38:04.132Z",
    "next": [],
    "effort": "high"
+  },
+  {
+   "name": "Pernille",
+   "state": "next",
+   "task": "Pernille, P0, from T-4694 (nightly run of every suite,...",
+   "model": null,
+   "since": null,
+   "next": []
   },
   {
    "name": "Maren",
@@ -373,16 +380,6 @@
  ],
  "tasks": {
   "run": [
-   {
-    "w": "Pernille",
-    "k": "tools",
-    "t": "Replace fixed time limits with stall and error checks",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-19T02:37:33.346Z",
-    "o": "c",
-    "task": "T-4912"
-   },
    {
     "w": "Odalys",
     "k": "tools",
@@ -422,6 +419,16 @@
     "at": "2026-11-19T02:38:04.132Z",
     "o": "c",
     "task": "T-4962"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Fix the causes of merge time-outs and runner errors",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-19T03:00:38.966Z",
+    "o": "c",
+    "task": "T-4806"
    }
   ],
   "src": "plan",
@@ -499,6 +506,11 @@
   ],
   "done": [
    {
+    "w": "Odalys",
+    "t": "The company's automatic notices (starred-task merges, disk keeper, idle and landing alarms) now...",
+    "at": "2026-11-18T22:01:00-05:00"
+   },
+   {
     "w": "Pernille",
     "t": "Test suites in the merge check are now stopped only when they truly stall (no output and no work...",
     "at": "2026-11-18T21:59:00-05:00"
@@ -507,11 +519,6 @@
     "w": "Operator",
     "t": "Guard refusals per day stayed within its limit of 16.49 refusals for a full day, so the...",
     "at": "2026-11-18T21:08:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "The refusals chart now counts each step a guard refused once, and blocked merges as their own...",
-    "at": "2026-11-18T21:01:00-05:00"
    }
   ],
   "count": {
@@ -521,8 +528,12 @@
    "you": 10
   },
   "fin": {
-   "n": 1,
+   "n": 2,
    "rows": [
+    [
+     "T-4845",
+     "Move every tool off the full..."
+    ],
     [
      "T-4912",
      "Replace fixed time limits..."
@@ -569,52 +580,46 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-19T02:59:53Z",
+  "at": "2026-11-19T03:03:03Z",
   "s": {
+   "T-4962": [
+    "mergetest",
+    "iPhone tests on the MacBook",
+    null
+   ],
    "T-4788": [
     "merging",
     "Mac tests at the main gate",
-    1795057193716
+    1795057203881
    ],
-   "T-4845": [
-    "merging",
-    "Mac tests at the main gate",
-    1795056653716
-   ],
-   "T-4962": [
-    "merging",
-    "Mac tests at the main gate",
-    1795056773716
+   "T-4909": [
+    "testing",
+    "its own tests, in its copy",
+    1795057383881
    ],
    "T-4805": [
     "testing",
     "its own tests, in its copy",
-    1795055933716
-   ],
-   "T-4912": [
-    "merged",
-    "on main 9:58 PM ET",
-    1795057139000,
-    "Pernille"
+    1795055943881
    ]
   },
   "nm": {
-   "T-4788": "Turn feature sessions on for every app feature",
-   "T-4845": "Move every tool off the full main thread",
    "T-4962": "Make main pass its Xcode checks again",
-   "T-4805": "Record a cause for every failed merge",
-   "T-4912": "Replace fixed time limits with stall and error checks"
+   "T-4788": "Turn feature sessions on for every app feature",
+   "T-4909": "End work sessions on a stall, not on the clock",
+   "T-4805": "Record a cause for every failed merge"
   },
   "wk": {
-   "T-4788": "Odalys",
-   "T-4845": "Odalys",
    "T-4962": "Operator",
+   "T-4788": "Odalys",
+   "T-4909": "Odalys",
    "T-4805": "Odalys",
+   "T-4845": "Odalys",
    "T-4912": "Odalys"
   }
  },
  "ln": {
-  "at": "2026-11-19T02:59:53Z",
+  "at": "2026-11-19T03:03:03Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -628,7 +633,7 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 579,
+    "conflicted": 582,
     "failed": null,
     "held": null,
     "retry": null,
@@ -642,12 +647,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-19T02:59:04Z",
-    "ld": 4.02,
+    "at": "2026-11-19T03:02:39Z",
+    "ld": 3.52,
     "c": 8,
     "sb": 0,
     "dk": [
-     8.3,
+     10.9,
      228.3
     ],
     "ss": [
@@ -657,8 +662,8 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-19T02:42:52Z",
-    "ld": 0.19,
+    "at": "2026-11-19T03:01:18Z",
+    "ld": 0.15,
     "c": 12,
     "sb": 0,
     "dk": [
@@ -676,7 +681,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 6 tasks",
+   "t": "Work session \u2013 7 tasks",
    "at": "2026-11-18T21:34:08-05:00"
   }
  ],
@@ -700,10 +705,10 @@
   "main": 5,
   "lanes": 0,
   "total": 5,
-  "at": "10:00 PM",
+  "at": "10:03 PM",
   "why": "",
-  "at_iso": "2026-11-19T03:00:00+00:00",
+  "at_iso": "2026-11-19T03:03:00+00:00",
   "started": "9:32 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 5, started 9:32 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 10:00 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 5, started 9:32 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 10:03 PM ET</p></section>"
  }
 }

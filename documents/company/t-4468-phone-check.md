@@ -1,0 +1,145 @@
+---
+layout: "default"
+title: "T-4468: the phone check for the premade settings pages"
+section: "documents"
+description: "Give the widget up to a minute to change after you leave the app. If it has not changed after a minute, write that down with the time; do not keep retrying."
+---
+<div class="crumbs" role="navigation" aria-label="Back"><a class="back" href="{{ '/documents/operations/' | relative_url }}">← Operations</a><a href="{{ '/documents/company/t-4468-phone-check.html' | relative_url }}" rel="bookmark">Permanent link</a></div>
+<div class="page-head"><div class="kicker"><span class="kind blue">Plan</span><span>Day 29 · Thu Nov 19</span><span><code>ops/plans/T-4468-phone-check.md</code></span></div><h1>T-4468: the phone check for the premade settings pages</h1><div class="byline"><img class="avatar" src="{{ '/assets/portraits/idris.svg' | relative_url }}" alt="Idris" title="Idris"><span>By <a href="{{ '/cast/idris.html' | relative_url }}">Idris</a>, Senior iOS engineer</span></div></div>
+
+<style>.doc-body{overflow-wrap:break-word}.doc-src{overflow-wrap:anywhere}.tbl[data-n~="1"] tr>:nth-child(1),.tbl[data-n~="2"] tr>:nth-child(2),.tbl[data-n~="3"] tr>:nth-child(3),.tbl[data-n~="4"] tr>:nth-child(4),.tbl[data-n~="5"] tr>:nth-child(5),.tbl[data-n~="6"] tr>:nth-child(6),.tbl[data-n~="7"] tr>:nth-child(7),.tbl[data-n~="8"] tr>:nth-child(8),.tbl[data-n~="9"] tr>:nth-child(9),.tbl[data-n~="10"] tr>:nth-child(10),.tbl[data-n~="11"] tr>:nth-child(11),.tbl[data-n~="12"] tr>:nth-child(12){min-width:0;overflow-wrap:normal}.tbl[data-o="1"] tr>:nth-child(1),.tbl[data-o="2"] tr>:nth-child(2),.tbl[data-o="3"] tr>:nth-child(3),.tbl[data-o="4"] tr>:nth-child(4),.tbl[data-o="5"] tr>:nth-child(5),.tbl[data-o="6"] tr>:nth-child(6),.tbl[data-o="7"] tr>:nth-child(7),.tbl[data-o="8"] tr>:nth-child(8),.tbl[data-o="9"] tr>:nth-child(9),.tbl[data-o="10"] tr>:nth-child(10),.tbl[data-o="11"] tr>:nth-child(11),.tbl[data-o="12"] tr>:nth-child(12){position:sticky;right:0;overflow-wrap:normal;background:var(--page);box-shadow:-1px 0 var(--line),-9px 0 8px -8px var(--sh)}</style>
+<div class="doc-body" markdown="1">
+
+{% raw %}
+Written by Idris, 2026-11-19. This is the step T-4468's Done when asks for ("seen: on the iPhone, a person sets
+Countdown's event and Sun's place from the app and the placed widgets show them, and each of the other five takes its
+input the same way"). A person runs it on a real iPhone; the company cannot, since the Simulator is not a phone. The
+steps below were not run by anyone yet. Everything before the phone is done: the build (slices 1 to 3a, the file lock,
+the Habits tap), its unit tests on the runner, and the UI test of the three ways in (T-4516, PremadePageUITests, green
+in the daily full suites, ops/runs/t4516-runner-result.txt).
+
+## Before you start
+
+- **Which build.** A TestFlight build made from main at or after cb4bce57e4 (15 Nov, the Habits tap), and after the
+  review lines that hold TestFlight are closed (see "What still holds TestFlight" at the end). The build card names
+  its build number; write it down.
+- **Pro.** In this build four of the seven sit behind Pro: World clocks, Habit tracker, GitHub repository and Shortcuts
+  launcher (pywidget/runtime/pro-flags.json). A locked premade has no settings row, by design. So unlock Pro first on
+  the app's Pro screen (More menu, the sparkles row). In TestFlight an in-app purchase is not charged. If the Pro
+  screen offers no purchase, do the free three (Countdown, Sunrise and sunset, Distance), then write down that the
+  other four were locked and stop there; the company will settle how to check them. (T-4692 will make every premade
+  work for everyone, with only editing a Pro one's code behind Pro; until it lands, the lock above is what you see.)
+- **Location.** Sunrise and sunset can and Distance must use the phone's location. When iOS asks, choose
+  **Allow While Using App**.
+- **Record it.** Turn on Screen Recording in Control Center before step 1 and keep it running through each premade,
+  or take a screenshot at every "Check" below. Send the recordings or shots with the answers; they are the evidence.
+- **How to place a PyWidget widget** (used in every section): on the Home Screen, touch and hold an empty spot, tap
+  **Edit** (top left), then **Add Widget**. Search for **PyWidget**, pick the size named in the section, and tap
+  **Add Widget**. Tap **Done**. The new widget says "Choose a widget". Touch and hold it, tap **Edit Widget**, tap
+  the **Widget** row and choose the premade by name. Tap outside the panel to close it.
+- **How to open the Gallery:** open PyWidget, tap the **More** button (the round "..." at the top right), then
+  **Gallery**. Each premade is a tile; tapping a tile opens its sheet. Under the size chips the sheet has one row with
+  the page's name and a short summary (for Countdown: "Events, No events yet"). Tapping that row opens the settings
+  page. The page saves as you go; there is no Save button on the page itself, only in the sheets that add an item.
+
+Give the widget up to a minute to change after you leave the app. If it has not changed after a minute, write that
+down with the time; do not keep retrying.
+
+## 1. Countdown: an event
+
+1. Open the Gallery, tap **Countdown**. Check: the sheet shows the row **Events** (with "No events yet" if you have
+   none).
+2. Tap the **Events** row. Check: a page titled **Events** with a preview of the widget at the top and an
+   **Add Event** row.
+3. Tap **Add Event**. Name: `Phone test` (at most 16 characters). Date: three days from today (leave Time off).
+   Tap **Save**. Check: the event is listed under Events; the preview at the top shows "Phone test" and 3 days.
+4. Tap the back button. Check: the sheet's row now reads **Events, 1 event** (or one more than before).
+5. Place a **Medium** PyWidget widget and choose **Countdown** in Edit Widget (see "How to place").
+   Check: the widget shows **Phone test** and **3 days**.
+6. Tap the widget. Check: PyWidget opens on the Gallery with Countdown's **Events** page already showing.
+7. Optional, the refusal: tap **Add Event** again, name it `Phone test` again, tap Save. Check: it is refused with
+   "You already have an event called "Phone test"." Tap Cancel.
+
+## 2. Sunrise and sunset: a place
+
+1. In the Gallery, tap **Sunrise and sunset**, then the **Place** row (summary "No place yet").
+2. Leave **Use Current Location** off. Tap the **Choose a Place** row. Type `Lisbon` in the City field and tap the
+   first **Lisbon** (its line ends in Portugal). Check: the page shows Lisbon as the place; the preview shows Lisbon's sunrise and
+   sunset with the name **Lisbon**.
+3. Optional: put the phone in Airplane Mode before typing. Check: Lisbon is still found (the city list is on the
+   phone; nothing is sent).
+4. Back to the sheet. Check: the row reads **Place, Lisbon**.
+5. Place a **Small** PyWidget widget and choose **Sunrise and sunset**.
+   Check: the widget shows the name **Lisbon** and times that match Lisbon's sunrise or sunset today, written in
+   your phone's own time (Lisbon is on UK time in winter, so from New York they read about 5 hours later than
+   Lisbon's clock). The widget must not say "No place set".
+6. Back on the page, turn **Use Current Location** on and allow location if asked. Check: within a minute the widget
+   shows your own area's times (its name reads "Here"). Turn it off again; the widget goes back to Lisbon.
+
+## 3. World clocks: cities (Pro in this build)
+
+1. In the Gallery, tap **World clocks**, then the **Cities** row. Check: four cities are listed, London, Tokyo,
+   Sydney, Los Angeles (what the widget shows before any change).
+2. Tap **Sydney**, tap its **City** row, search `Lisbon`, choose it. Set Name to `Lisbon`. Tap **Save**.
+   Check: the list reads London, Tokyo, Lisbon, Los Angeles.
+3. Place a **Medium** PyWidget widget and choose **World clocks**. Check: it shows **Lisbon** with Lisbon's time
+   (the same time as London) in place of Sydney.
+4. Optional: try to delete the last city when only one is left. Check: it cannot be deleted; the footer says
+   "A clock needs at least one city."
+
+## 4. Distance to a saved place: places
+
+1. In the Gallery, tap **Distance to a saved place**, then the **Places** row.
+2. Tap **Add Place**, then the **Place** row. Check: **Use Current Location** is the first row above the search.
+   Search `Lisbon`, choose it; Name: `Lisbon`. Tap **Save**.
+3. Tap **Add Place** again, then the **Place** row, then **Use Current Location** (allow location if asked). Name:
+   `Here`. Tap **Save**. Check: both places are listed.
+4. Place a **Medium** PyWidget widget and choose **Distance to a saved place**. Check: it lists **Lisbon** with a
+   distance that is right for where you are (from New York, about 5,400 km), and **Here** at about 0 km.
+   It must not say "No saved places". "Open PyWidget once to take a fix" means the app has no location yet: open
+   PyWidget once, then look again.
+5. Optional: on the page change **Units** to Miles. Check: the widget's distances change to miles.
+
+## 5. Habit tracker: habits (Pro in this build)
+
+1. In the Gallery, tap **Habit tracker**, then the **Habits** row.
+2. Tap **Add Habit**. Name: `Walk`. Under **Check-ins**, tap today (the last of the seven days) so it fills.
+   Tap **Save**. Check: Walk is listed with 1 check-in.
+3. Optional: tap Walk, tap yesterday under Check-ins, Save. Check: the count goes to 2.
+4. Place a **Medium** PyWidget widget and choose **Habit tracker**. Check: it shows **Walk** with today checked.
+5. Tap **Walk** on the widget. Check: PyWidget opens on the Habits page, scrolled to Walk, its row outlined briefly
+   in the accent colour.
+
+## 6. GitHub repository: a repository (Pro in this build)
+
+1. In the Gallery, tap **GitHub repository**, then the **Repository** row.
+2. Type `python/cpython` in the Repository field and tap return on the keyboard. Check: it is accepted. Then try `not a repo`. Check: it is refused with
+   "Enter it as owner/name, like python/cpython." Put `python/cpython` back.
+3. Place a **Small** PyWidget widget and choose **GitHub repository**. Check: within a few minutes (the widget asks
+   GitHub at most every 15 minutes) it shows **cpython** with its star count. "Not read yet" means GitHub was not
+   reached; write down the time and look again later. It must not say "No repository".
+
+## 7. Shortcuts launcher: shortcuts (Pro in this build)
+
+1. In the Shortcuts app, make sure you have a shortcut you can run safely, for example one that shows an alert.
+   Note its exact name.
+2. In the Gallery, tap **Shortcuts launcher**, then the **Shortcuts** row. Tap **Add Shortcut**, type the name
+   exactly, pick a symbol. Tap **Try It**. Check: the shortcut runs. Back in PyWidget, tap **Save**.
+3. Place a **Medium** PyWidget widget and choose **Shortcuts launcher**. Check: it shows a tile with that name and
+   symbol. Tap the tile. Check: the shortcut runs.
+4. Tap the widget's background (not a tile). Check: PyWidget opens on the Shortcuts page.
+
+## What to send back
+
+For each of the seven: passed or not, and for any "not", what the widget showed instead, with the time. The build
+number. The recordings or screenshots. Anything that surprised you, even if every check passed.
+
+## What still holds TestFlight (owners, as of 2026-11-19)
+
+- Pernille: the review of T-4183 at 09feb52d (T-4921, covers the UI test T-4516) and the review of the Habits tap
+  cb4bce57e4 (T-5192). Nothing <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span>-landed goes to TestFlight with either open.
+- Not holding TestFlight: Maren's confirmation of five page strings (T-5193); the all-day event after travel
+  (T-4835, Pernille, before the App Store release); the smaller review points (T-4639, T-4640, T-4641, Idris).
+{% endraw %}
+
+</div>

@@ -571,6 +571,36 @@ function fig(lab,v){[].forEach.call(document.querySelectorAll('.lk-bub a[href="#
 function draw(st){var g=st&&st.ln,d=st&&st.disk;LNM=(st&&st.stg&&st.stg.nm)||LNM;if(st&&Date.parse(st.at)>=B&&d&&typeof d.free_gb==='number')fig('Mac Mini',d.free_gb+' GB');
 if(!g||!(Date.parse(g.at)>=B))return;if(g.mq)merge(g.mq,g.at);if(g.mx){mach(g.mx,g.at);if(g.mx.macbook&&g.mx.macbook.dk)fig('MacBook',g.mx.macbook.dk[0]+' GB');var sm=g.mx.mini;if(sm&&sm.ss&&Date.now()-Date.parse(sm.at)<24e5)fig('SSD',sm.ss==='na'?'not answering':sm.ss==='nc'?'not connected':Math.round(sm.ss[0]).toLocaleString('en-US')+' GB')}}
 S.onStatus.push(draw);if(S.status&&S.status())draw(S.status())});
+// T-4813 (friesevan #41 c6966450021, 8:43 PM 11-17: "the merge queue length, and every other dynamic value on Home should
+// update in near real-time, not built between sessions"): the Now line's count of tasks waiting to land (its parts, its
+// gauge, its limit, open or held), the Usage bubble's two figures and Blocked or waiting's count follow the status's hc
+// (live_status read_hc, every 5 s for the count, as `tools/merge_limit.py status` reads it) and meter, once newer than
+// the build, each with its age; the ages count on between reads. A count hc leaves out keeps the build's.
+document.addEventListener('DOMContentLoaded',function(){var S=window.CompanySite,bx=document.getElementById('lk-run'),B=0,L={};if(!S||!S.onStatus)return;
+try{B=JSON.parse(bx&&bx.getAttribute('data-life')||'{}').at||0}catch(e){}
+function mk(p,t,c,x){var e=document.createElement(t);if(c)e.className=c;if(x!=null)e.textContent=x;p.appendChild(e);return e}
+function et(t){var d=new Date(t);return isNaN(d)?'':d.toLocaleTimeString('en-US',{timeZone:'America/New_York',hour:'numeric',minute:'2-digit'})}
+function ago(t){var s=Math.max(0,Math.round((Date.now()-Date.parse(t))/1e3));return isNaN(s)?'':s<60?s+' s ago':s<3600?Math.floor(s/60)+' min ago':Math.floor(s/3600)+' h '+Math.floor(s%3600/60)+' min ago'}
+function nw(t){return t&&Date.parse(t)>=B}
+function ag(id,t){var e=document.getElementById(id);if(e&&t){e.textContent=ago(t);e.title='read '+et(t)+' ET'}}
+function fig(h,lab,v){[].forEach.call(document.querySelectorAll('.lk-bub a[href="#'+h+'"] .lk-f > span'),function(s){var b=s.querySelector('b');if(b&&s.lastChild&&s.lastChild.nodeValue===lab)b.textContent=v})}
+function words(w){var r=w.n-w.in_line-w.parked;if([w.n,w.in_line,w.parked].some(function(x){return typeof x!=='number'}))return 'parts not recorded';
+return w.in_line.toLocaleString('en-US')+' in the merge queue, '+w.parked.toLocaleString('en-US')+' sent back to retry'+(r>0?', '+r+' in neither part':r<0?' (the parts come to '+(w.in_line+w.parked)+', '+(-r)+' over the count)':'')}
+function wait(w){var ln=document.getElementById('lk-now'),c,g,b,i,u,sm,top,when,old;if(!ln)return;c=ln.querySelector('.lk-nc');g=ln.querySelector('.lk-gate');
+if(g){g.className='lk-gate '+(w.open?'ok':'held');g.textContent='';mk(g,'span','lk-wd',w.open?'New work open':'New work held');mk(g,'span','lk-ws',w.open?'Open':'Held').setAttribute('aria-hidden','true')}
+if(c&&typeof w.n==='number'){b=c.querySelector('b');if(b)b.textContent=w.n;sm=c.querySelector('.lk-np');if(sm)sm.textContent=words(w);
+i=c.querySelector('.lk-gg i');u=c.querySelector('.lk-gg u');if(i&&u&&w.limit>0){top=Math.max(w.n,w.limit)*1.15;i.style.width=(w.n/top*100).toFixed(0)+'%';u.style.left=(w.limit/top*100).toFixed(0)+'%';i.parentNode.className='lk-gg'+(w.n>=w.limit?' over':'')}
+sm=c.querySelector(':scope > small');if(sm&&w.limit!=null)sm.textContent='limit '+w.limit}
+when=ln.querySelector('.lk-nwhen');if(when&&w.counted){old=Date.now()-Date.parse(w.counted)>18e5;when.className='lk-nwhen'+(old?' late':'');when.textContent='';mk(when,'span','lk-wd','counted ');
+when.appendChild(document.createTextNode(et(w.counted)+' ET, '+ago(w.counted)));ln.title=(typeof w.n==='number'?w.n+' tasks have finished work waiting to land: '+words(w)+(w.limit!=null?'; new work stops at '+w.limit:''):'The count of tasks waiting to land could not be read')+'. Counted '+et(w.counted)+' ET, read '+et(w.at)+' ET.'}}
+function draw(st){var h=(st&&st.hc)||{},m=(st&&st.meter)||{},e;
+if(h.wait&&nw(h.wait.at))L.wait=h.wait;if(h.bl&&nw(h.bl.at))L.bl=h.bl;
+if(m.five_hour&&nw(m.five_hour.read_at))L.use=m;
+if(L.use){[['five_hour','5 hours'],['weekly','week']].forEach(function(k){var w=L.use[k[0]];if(w&&typeof w.pct==='number')fig('usage',k[1],Math.round(w.pct)+'%')})}
+if(L.bl&&typeof L.bl.n==='number'){e=document.getElementById('lk-bk-n');if(e)e.textContent=L.bl.n}
+tick()}
+function tick(){if(L.wait)wait(L.wait);if(L.use)ag('lk-ag-usage',L.use.five_hour.read_at);if(L.bl)ag('lk-ag-bk',L.bl.at)}
+setInterval(tick,15e3);S.onStatus.push(draw);if(S.status&&S.status())draw(S.status())});
 // T-4110: Flow's queue charts. The switch (Merge Queue or Task Queue; 24 h or 7 days) shows one chart; a tap, a drag or a pointer
 // over it, or an arrow key on it, reads the count at that time from the points the page carries (the page wrote the words).
 document.addEventListener('DOMContentLoaded',function(){var V=document.querySelector('.lk-qv');if(!V)return;

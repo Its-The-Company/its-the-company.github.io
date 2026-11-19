@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-19T01:01:19.577340+00:00",
+ "at": "2026-11-19T01:04:28.431291+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -41,16 +41,6 @@
      {
       "s": "testq",
       "at": 1795008352
-     }
-    ]
-   },
-   {
-    "t": "T-4892",
-    "w": "Idris",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1795006953
      }
     ]
    }
@@ -146,7 +136,7 @@
    "task": "[tools] T-4788 feature sessions on for all",
    "model": "opus",
    "started": "2026-11-18T23:37:01.600Z",
-   "seconds": 5057,
+   "seconds": 5246,
    "finished": null,
    "effort": "high"
   },
@@ -155,7 +145,7 @@
    "task": "[tools] T-4909 end sessions on a stall",
    "model": "opus",
    "started": "2026-11-19T00:25:56.669Z",
-   "seconds": 2122,
+   "seconds": 2311,
    "finished": null,
    "effort": "high"
   },
@@ -164,7 +154,7 @@
    "task": "[tools] T-4845 move tools off full",
    "model": "opus",
    "started": "2026-11-19T00:54:57.501Z",
-   "seconds": 382,
+   "seconds": 570,
    "finished": null,
    "effort": "high"
   },
@@ -173,7 +163,7 @@
    "task": "[tools] T-4805 gate failure causes and T-4792",
    "model": "opus",
    "started": "2026-11-19T00:59:54.758Z",
-   "seconds": 84,
+   "seconds": 273,
    "finished": null,
    "effort": "high"
   },
@@ -182,7 +172,7 @@
    "task": "[tools] T-4912 time limits inventory",
    "model": "opus",
    "started": "2026-11-19T01:00:09.559Z",
-   "seconds": 70,
+   "seconds": 258,
    "finished": null,
    "effort": "high"
   }
@@ -225,7 +215,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 521,
+  "runnable_count": 520,
   "blocked_count": 34
  },
  "meter": {
@@ -274,7 +264,7 @@
   "week_pct": 52.29,
   "usage_pct": 50.1,
   "work_pct": 81.6,
-  "read_at": "2026-11-19T01:01:00+00:00",
+  "read_at": "2026-11-19T01:04:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -311,7 +301,7 @@
  "lock_in": {
   "on": true,
   "pool": 3,
-  "at": "2026-11-18T20:01:00-05:00",
+  "at": "2026-11-18T20:04:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -506,6 +496,11 @@
   ],
   "done": [
    {
+    "w": "Operator",
+    "t": "A later MacBook job for the same work (J-20261118-1733-xc-test-5) passed, so the failed job...",
+    "at": "2026-11-18T20:02:00-05:00"
+   },
+   {
     "w": "Odalys",
     "t": "The check that sets how many agents may run now runs every 5 minutes during a session, one step...",
     "at": "2026-11-18T19:58:00-05:00"
@@ -514,15 +509,10 @@
     "w": "Odalys",
     "t": "A land test row was red on every run because it read the whole log for a line another tool also...",
     "at": "2026-11-18T19:29:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "Work a session saved when it ran out of time no longer counts as waiting to merge, and a task...",
-    "at": "2026-11-18T19:24:00-05:00"
    }
   ],
   "count": {
-   "next": 521,
+   "next": 520,
    "wait": 31,
    "blocked": 3,
    "you": 10
@@ -596,7 +586,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-19T01:01:01Z",
+  "at": "2026-11-19T01:04:13Z",
   "s": {
    "T-3217": [
     "testing",
@@ -606,17 +596,17 @@
    "T-4909": [
     "testing",
     "its own tests, in its copy",
-    1795049461407
+    1795049473123
    ],
    "T-4788": [
     "testing",
     "its own tests, in its copy",
-    1795049281407
+    1795049293123
    ],
    "T-4898": [
     "testq",
     "1st for a Simulator",
-    1795041241407
+    1795041193123
    ],
    "T-4805": [
     "merged",
@@ -649,7 +639,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-19T01:01:01Z",
+  "at": "2026-11-19T01:04:13Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -663,11 +653,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 884,
+    "conflicted": 887,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1158
+    "parked": 1161
    },
    "cur": [],
    "ld": [
@@ -677,8 +667,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-19T01:00:19Z",
-    "ld": 6.16,
+    "at": "2026-11-19T01:04:14Z",
+    "ld": 5.19,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -726,10 +716,10 @@
   "main": 5,
   "lanes": 0,
   "total": 5,
-  "at": "8:01 PM",
+  "at": "8:04 PM",
   "why": "",
-  "at_iso": "2026-11-19T01:01:00+00:00",
+  "at_iso": "2026-11-19T01:04:00+00:00",
   "started": "5:34 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 5, started 5:34 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 8:01 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 5, started 5:34 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 8:04 PM ET</p></section>"
  }
 }

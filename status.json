@@ -1,10 +1,10 @@
 {
  "schema": 1,
- "at": "2026-11-19T14:16:30.108685+00:00",
+ "at": "2026-11-19T14:19:32.538710+00:00",
  "session": {
   "active": true,
   "kind": "work",
-  "started": "2026-11-19T08:19:25-05:00",
+  "started": "2026-11-19T02:04:21-05:00",
   "flow": [
    {
     "t": "T-4962",
@@ -106,55 +106,97 @@
  "workers": [
   {
    "name": "odalys",
-   "task": "[tools] T-5113 supervisor live-lock fix",
+   "task": "[tools] T-4986 T-3806 T-4907 lands",
    "model": "opus",
-   "started": "2026-11-19T13:22:39.171Z",
-   "seconds": 3230,
+   "started": "2026-11-19T08:59:52.032Z",
+   "seconds": 19180,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "pernille",
+   "task": "[tools] T-5095 land disk sweep from fresh copy",
+   "model": "opus",
+   "started": "2026-11-19T11:25:02.967Z",
+   "seconds": 10469,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "idris",
+   "task": "[build] T-5047 token test No view card",
+   "model": "opus",
+   "started": "2026-11-19T12:06:07.166Z",
+   "seconds": 8005,
    "finished": null,
    "effort": "high"
   },
   {
    "name": "odalys",
-   "task": "[tools] T-5128 measure process merge minutes",
+   "task": "[research] T-5135 one merge route deep dive",
    "model": "opus",
-   "started": "2026-11-19T14:08:44.805Z",
-   "seconds": 465,
+   "started": "2026-11-19T14:19:19.776Z",
+   "seconds": 12,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Odalys x2",
+ "who": "Odalys x2, Pernille, Idris",
  "recent": [
   {
-   "name": "pernille",
-   "task": "[build] T-4565 Swift button action request",
+   "name": "idris",
+   "task": "[test] T-4866 rerun Pro row large-text test",
    "model": "opus",
-   "started": "2026-11-19T13:23:10.527Z",
+   "started": "2026-11-19T12:06:13.786Z",
    "seconds": null,
-   "finished": "2026-11-19T14:08:10.583000+00:00"
+   "finished": "2026-11-19T14:05:42.355000+00:00"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-5048 group lines other tools open",
+   "model": "opus",
+   "started": "2026-11-19T11:15:44.648Z",
+   "seconds": null,
+   "finished": "2026-11-19T13:31:37.427000+00:00"
+  },
+  {
+   "name": "pernille",
+   "task": "[design] T-5002 ADR-011 unchecked save run",
+   "model": "opus",
+   "started": "2026-11-19T13:13:32.280Z",
+   "seconds": null,
+   "finished": "2026-11-19T13:15:24.079000+00:00"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-4838 gate waits on runner progress",
+   "model": "opus",
+   "started": "2026-11-19T08:26:43.295Z",
+   "seconds": null,
+   "finished": "2026-11-19T13:12:48.640000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 626,
+  "runnable_count": 631,
   "blocked_count": 1
  },
  "meter": {
   "five_hour": {
-   "pct": 31.0,
+   "pct": 32.0,
    "resets_at": "2026-11-19T11:10:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-19T09:14:40.395255-05:00",
+   "read_at": "2026-11-19T09:18:24.851784-05:00",
    "source": "live",
-   "left": 69.0,
+   "left": 68.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 74.0,
    "resets_at": "2026-11-22T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-19T09:14:40.395255-05:00",
+   "read_at": "2026-11-19T09:18:24.851784-05:00",
    "source": "live",
    "left": 26.0,
    "left_words": "of your weekly allowance left"
@@ -166,7 +208,7 @@
    "read_at": "2026-11-19T08:19:02.638997-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-19T09:14:40.395255-05:00"
+  "read_at": "2026-11-19T09:18:24.851784-05:00"
  },
  "ui": {
   "week_pct": 0.104,
@@ -186,7 +228,7 @@
   "week_pct": 68.99,
   "usage_pct": 48.6,
   "work_pct": 81.9,
-  "read_at": "2026-11-19T14:16:00+00:00",
+  "read_at": "2026-11-19T14:19:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -223,7 +265,7 @@
  "lock_in": {
   "on": true,
   "pool": 3,
-  "at": "2026-11-19T09:16:00-05:00",
+  "at": "2026-11-19T09:19:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -242,27 +284,29 @@
   {
    "name": "Odalys",
    "state": "running",
-   "task": "[tools] T-5113 supervisor live-lock fix",
+   "task": "[tools] T-4986 T-3806 T-4907 lands",
    "model": "opus",
-   "since": "2026-11-19T13:22:39.171Z",
+   "since": "2026-11-19T08:59:52.032Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
+   "name": "Pernille",
+   "state": "running",
+   "task": "[tools] T-5095 land disk sweep from fresh copy",
+   "model": "opus",
+   "since": "2026-11-19T11:25:02.967Z",
    "next": [],
    "effort": "high"
   },
   {
    "name": "Idris",
-   "state": "next",
-   "task": "Idris, P1, from T-4755 (Investor an Investor...",
-   "model": null,
-   "since": null,
-   "next": []
-  },
-  {
-   "name": "Pernille",
-   "state": "next",
-   "task": "Pernille, P0, from T-4694 (nightly run of every suite,...",
-   "model": null,
-   "since": null,
-   "next": []
+   "state": "running",
+   "task": "[build] T-5047 token test No view card",
+   "model": "opus",
+   "since": "2026-11-19T12:06:07.166Z",
+   "next": [],
+   "effort": "high"
   },
   {
    "name": "Maren",
@@ -294,25 +338,44 @@
    {
     "w": "Odalys",
     "k": "tools",
-    "t": "Stop the supervisor breaking a live session's lock",
+    "t": "Let Chat and approvals read every main thread",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-19T13:22:39.171Z",
+    "at": "2026-11-19T08:59:52.032Z",
     "o": "c",
-    "task": "T-5113"
+    "task": "T-4986"
+   },
+   {
+    "w": "Pernille",
+    "k": "tools",
+    "t": "Land the disk sweep job from a fresh copy",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-19T11:25:02.967Z",
+    "o": "c",
+    "task": "T-5095"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "Fix the token test's No view for this size card",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-19T12:06:07.166Z",
+    "o": "c",
+    "task": "T-5047"
    },
    {
     "w": "Odalys",
-    "k": "tools",
-    "t": "Measure where process merge minutes go",
+    "k": "research",
+    "t": "Measure one merge route for every account",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-19T14:08:44.805Z",
+    "at": "2026-11-19T14:19:19.776Z",
     "o": "c",
-    "task": "T-5128"
+    "task": "T-5135"
    }
   ],
-  "src": "plan",
   "open": [
    {
     "w": "Odalys",
@@ -325,6 +388,34 @@
     "w": "Odalys",
     "k": "tools",
     "t": "Make process merge checks finish in minutes",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Keep process checks out of the land turn",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Split the two slow run-loop suites",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Land each batch task on its own check",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Run run-loop suites only when reached",
     "s": "next",
     "o": "c"
    },
@@ -355,34 +446,6 @@
     "t": "Fix the red composer test",
     "s": "next",
     "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Fix the red disk sweep temp test",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Pernille",
-    "k": "tools",
-    "t": "Fix the red guard supervisor test",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Fix the red account env test",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Fix the red personal land test",
-    "s": "next",
-    "o": "c"
    }
   ],
   "done": [
@@ -403,13 +466,13 @@
    }
   ],
   "count": {
-   "next": 626,
+   "next": 631,
    "wait": 1,
    "blocked": 0,
    "you": 1
   },
   "fin": {
-   "n": 5,
+   "n": 22,
    "rows": [
     [
      "T-5128",
@@ -430,6 +493,10 @@
     [
      "T-5048",
      "Group the lines every other..."
+    ],
+    [
+     "T-5002",
+     "Say what a run does when its..."
     ]
    ]
   }
@@ -473,132 +540,127 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-19T14:16:16Z",
+  "at": "2026-11-19T14:19:16Z",
   "s": {
    "T-4850": [
     "merging",
     "",
-    1795096276376
+    1795096276880
    ],
    "T-4994": [
     "mergeq",
     "",
-    1795089616376
+    1795089616880
    ],
    "T-4849": [
     "mergeq",
     "",
-    1795089676376
+    1795089676880
    ],
    "T-4899": [
     "mergeq",
     "",
-    1795075816376
+    1795075816880
    ],
    "T-4919": [
     "mergeq",
     "",
-    1795075816376
+    1795075816880
    ],
    "T-4961": [
     "mergeq",
     "",
-    1795080796376
+    1795080796880
    ],
    "T-4871": [
     "mergeq",
     "",
-    1795080796376
+    1795080796880
    ],
    "T-4795": [
     "mergeq",
     "",
-    1795081996376
+    1795081996880
    ],
    "T-3402": [
     "mergeq",
     "",
-    1795082236376
+    1795082236880
    ],
    "T-0902": [
     "mergeq",
     "",
-    1795082476376
+    1795082476880
    ],
    "T-5057": [
     "mergeq",
     "",
-    1795083076376
+    1795083076880
    ],
    "T-5045": [
     "mergeq",
     "",
-    1795083256376
+    1795083256880
    ],
    "T-0349": [
     "mergeq",
     "",
-    1795084036376
+    1795084036880
    ],
    "T-4681": [
     "mergeq",
     "",
-    1795084216376
+    1795084216880
    ],
    "T-5037": [
     "mergeq",
     "",
-    1795084276376
+    1795084276880
    ],
    "T-0101": [
     "mergeq",
     "",
-    1795092916376
+    1795092916880
    ],
    "T-5062": [
     "mergeq",
     "",
-    1795093216376
+    1795093216880
    ],
    "T-2378": [
     "mergeq",
     "",
-    1795093396376
+    1795093396880
    ],
    "T-4807": [
     "mergeq",
     "",
-    1795093696376
+    1795093696880
    ],
    "T-4913": [
     "mergeq",
     "",
-    1795096456376
-   ],
-   "T-5047": [
-    "mergetest",
-    "",
-    null
+    1795096456880
    ],
    "T-5113": [
     "merging",
     "",
-    1795096576376
+    1795096576880
    ],
    "T-5095": [
     "merging",
     "",
-    1795097776376
+    1795097776880
    ],
    "T-5103": [
     "merging",
     "",
-    1795095376376
+    1795095376880
    ],
    "T-5117": [
     "testing",
     "",
-    1795096096376
+    1795096096880
    ]
   },
   "nm": {
@@ -622,7 +684,6 @@
    "T-2378": "Plan version 1.2 and later",
    "T-4807": "Fix every bad test that...",
    "T-4913": "Stop the safety guard...",
-   "T-5047": "Fix the token test's No view...",
    "T-5113": "Stop the supervisor breaking...",
    "T-5095": "Land the disk sweep job from...",
    "T-5103": "Land the unclaimed-message...",
@@ -649,19 +710,26 @@
    "T-2378": "Ines",
    "T-4807": "Pernille",
    "T-4913": "Odalys",
-   "T-5047": "Idris",
    "T-5113": "Odalys",
    "T-5095": "Pernille",
    "T-5103": "Odalys",
    "T-5117": "Odalys",
+   "T-5128": "Odalys",
    "T-4565": "Pernille",
    "T-4866": "Idris",
    "T-5102": "Odalys",
-   "T-5048": "Odalys"
+   "T-5048": "Odalys",
+   "T-5002": "Pernille",
+   "T-4838": "Odalys",
+   "T-5091": "Odalys",
+   "T-5065": "Odalys",
+   "T-4888": "Idris",
+   "T-5088": "Odalys",
+   "T-4809": "Odalys"
   }
  },
  "ln": {
-  "at": "2026-11-19T14:16:16Z",
+  "at": "2026-11-19T14:19:16Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -673,9 +741,9 @@
     "parked": 0
    },
    "m": {
-    "checking": 25,
-    "inline": 229,
-    "conflicted": 1255,
+    "checking": 28,
+    "inline": 232,
+    "conflicted": 1258,
     "failed": null,
     "held": null,
     "retry": null,
@@ -688,7 +756,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     25
+     28
     ]
    ],
    "ld": [
@@ -698,8 +766,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-19T14:15:53Z",
-    "ld": 5.22,
+    "at": "2026-11-19T14:19:15Z",
+    "ld": 5.19,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -713,12 +781,12 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-19T14:10:57Z",
-    "ld": 1.2,
+    "at": "2026-11-19T14:18:48Z",
+    "ld": 0.89,
     "c": 12,
     "sb": 0,
     "dk": [
-     355.4,
+     355.2,
      926.4
     ],
     "sn": []
@@ -728,47 +796,37 @@
  "operators": [
   {
    "w": "Operator",
-   "a": "Main plan",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session \u2013 4 tasks",
-   "at": "2026-11-19T08:19:25-05:00"
-  },
-  {
-   "w": "Operator",
-   "a": "Evan's Account",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session",
-   "at": "2026-11-19T09:16:29-05:00"
+   "a": "Main",
+   "t": "Work session \u2013 9 tasks",
+   "at": "2026-11-19T02:04:21-05:00"
   }
  ],
  "reply": {
-  "sent": "2026-11-19T14:05:18Z",
-  "seconds": 123.0
+  "sent": "2026-11-19T14:17:52Z",
+  "seconds": 38.0
  },
  "inbox": [],
  "trimmed": [
   "lane_next",
   "queue_text",
+  "recent",
   "task_done",
   "fin_short",
   "task_title",
   "done_text",
   "task_open",
+  "fin_six",
   "lane_task",
   "task_next"
  ],
  "agents_now": {
-  "main": 2,
+  "main": 4,
   "lanes": 0,
-  "total": 2,
-  "at": "9:16 AM",
+  "total": 4,
+  "at": "9:19 AM",
   "why": "",
-  "at_iso": "2026-11-19T14:16:00+00:00",
-  "started": "8:19 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 8:19 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:16 AM ET</p></section>"
+  "at_iso": "2026-11-19T14:19:00+00:00",
+  "started": "2:04 AM",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 4, started 2:04 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:19 AM ET</p></section>"
  }
 }

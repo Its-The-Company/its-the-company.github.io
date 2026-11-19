@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-19T14:32:03.875876+00:00",
+ "at": "2026-11-19T14:34:56.356380+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -18,6 +18,30 @@
    }
   ],
   "done": [
+   {
+    "t": "T-0902",
+    "name": "Check precedent for an in-app gallery of user code",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1795098824
+   },
+   {
+    "t": "T-3402",
+    "name": "Check whether the OpenSSL removal still fits 1.0",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1795098793
+   },
+   {
+    "t": "T-4795",
+    "name": "Weigh the showcase set against the Builder-first ruling",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1795098770
+   },
    {
     "t": "T-4994",
     "name": "Act on the feature record at every add",
@@ -75,33 +99,9 @@
     "steps": [],
     "end": "landed",
     "end_at": 1795080838
-   },
-   {
-    "t": "T-4891",
-    "name": "Work the process and site merge queue under its limit",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1795079395
-   },
-   {
-    "t": "T-4871",
-    "name": "Check the two-way editing week figure against the code",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1795077615
-   },
-   {
-    "t": "T-4931",
-    "name": "Check finished work before it ships",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1795077413
    }
   ],
-  "landed": 36,
+  "landed": 39,
   "failed": 2
  },
  "workers": [
@@ -110,7 +110,7 @@
    "task": "[tools] T-4986 T-3806 T-4907 lands",
    "model": "opus",
    "started": "2026-11-19T08:59:52.032Z",
-   "seconds": 19931,
+   "seconds": 20104,
    "finished": null,
    "effort": "high"
   },
@@ -119,7 +119,7 @@
    "task": "[tools] T-5095 land disk sweep from fresh copy",
    "model": "opus",
    "started": "2026-11-19T11:25:02.967Z",
-   "seconds": 11220,
+   "seconds": 11393,
    "finished": null,
    "effort": "high"
   },
@@ -128,7 +128,7 @@
    "task": "[build] T-5047 token test No view card",
    "model": "opus",
    "started": "2026-11-19T12:06:07.166Z",
-   "seconds": 8756,
+   "seconds": 8929,
    "finished": null,
    "effort": "high"
   }
@@ -171,7 +171,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 630,
+  "runnable_count": 628,
   "blocked_count": 1
  },
  "meter": {
@@ -220,7 +220,7 @@
   "week_pct": 68.99,
   "usage_pct": 48.6,
   "work_pct": 81.9,
-  "read_at": "2026-11-19T14:32:00+00:00",
+  "read_at": "2026-11-19T14:35:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -257,7 +257,7 @@
  "lock_in": {
   "on": true,
   "pool": 3,
-  "at": "2026-11-19T09:32:00-05:00",
+  "at": "2026-11-19T09:35:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -268,8 +268,8 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 16 (held: too few lands in 3 hours to judge a raise)",
-  "n": 16,
+  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 17 (raised a step: load, time-outs, failed lands and redone tasks all under their lines)",
+  "n": 17,
   "at": "2026-11-19T08:19:03.484068-05:00"
  },
  "lanes": [
@@ -432,30 +432,38 @@
   ],
   "done": [
    {
-    "w": "Odalys",
-    "t": "Personal-account work takes about 59 minutes to reach main against about 20 for main-account...",
-    "at": "2026-11-19T09:31:00-05:00"
+    "w": "Ines",
+    "t": "The draft question to Apple no longer says the Builder fills in templates; it now says what the...",
+    "at": "2026-11-19T09:33:00-05:00"
    },
    {
     "w": "Ines",
-    "t": "Every morning and evening report is now also made into a Claude document, with its link posted...",
-    "at": "2026-11-19T09:26:00-05:00"
+    "t": "The check on whether removing OpenSSL still fits version 1.0 was made early, because Idris's...",
+    "at": "2026-11-19T09:33:00-05:00"
    },
    {
     "w": "Odalys",
-    "t": "Process work waits mostly because lane merges go one at a time and each holds that turn through...",
-    "at": "2026-11-19T09:16:00-05:00"
+    "t": "Personal-account work takes about 59 minutes to reach main against about 20 for main-account...",
+    "at": "2026-11-19T09:31:00-05:00"
    }
   ],
   "count": {
-   "next": 630,
+   "next": 628,
    "wait": 1,
    "blocked": 0,
    "you": 1
   },
   "fin": {
-   "n": 24,
+   "n": 26,
    "rows": [
+    [
+     "T-0902",
+     "Check precedent for an..."
+    ],
+    [
+     "T-3402",
+     "Check whether the OpenSSL..."
+    ],
     [
      "T-5135",
      "Measure one merge route for..."
@@ -471,14 +479,6 @@
     [
      "T-4565",
      "Send button actions from..."
-    ],
-    [
-     "T-4866",
-     "Rerun the Pro row large-text..."
-    ],
-    [
-     "T-5102",
-     "Land the main-thread readers..."
     ]
    ]
   }
@@ -522,107 +522,97 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-19T14:31:53Z",
+  "at": "2026-11-19T14:34:56Z",
   "s": {
-   "T-4961": [
-    "merging",
-    "",
-    1795098713984
-   ],
    "T-4849": [
     "mergeq",
     "",
-    1795089713984
-   ],
-   "T-4871": [
-    "mergeq",
-    "",
-    1795080833984
-   ],
-   "T-4795": [
-    "mergeq",
-    "",
-    1795081973984
-   ],
-   "T-3402": [
-    "mergeq",
-    "",
-    1795082213984
-   ],
-   "T-0902": [
-    "mergeq",
-    "",
-    1795082453984
+    1795089716356
    ],
    "T-5057": [
     "mergeq",
     "",
-    1795083053984
+    1795083056356
    ],
    "T-5045": [
     "mergeq",
     "",
-    1795083233984
+    1795083236356
    ],
    "T-0349": [
     "mergeq",
     "",
-    1795084013984
+    1795084016356
    ],
    "T-4681": [
     "mergeq",
     "",
-    1795084193984
+    1795084196356
    ],
    "T-5037": [
     "mergeq",
     "",
-    1795084253984
+    1795084256356
+   ],
+   "T-3402": [
+    "mergeq",
+    "",
+    1795087016356
    ],
    "T-0101": [
     "mergeq",
     "",
-    1795092953984
+    1795092956356
+   ],
+   "T-0902": [
+    "mergeq",
+    "",
+    1795093016356
    ],
    "T-5062": [
     "mergeq",
     "",
-    1795093193984
+    1795093196356
    ],
    "T-2378": [
     "mergeq",
     "",
-    1795093433984
+    1795093436356
+   ],
+   "T-4795": [
+    "mergeq",
+    "",
+    1795093616356
    ],
    "T-4807": [
     "mergeq",
     "",
-    1795093733984
+    1795093736356
    ],
    "T-4913": [
     "mergeq",
     "",
-    1795096493984
+    1795096496356
+   ],
+   "T-5047": [
+    "mergetest",
+    "",
+    null
    ],
    "T-5113": [
     "merging",
     "",
-    1795096613984
-   ],
-   "T-5047": [
-    "merging",
-    "",
-    1795098113984
+    1795096616356
    ],
    "T-5117": [
     "merging",
     "",
-    1795098593984
+    1795098596356
    ],
    "T-5095": [
     "merging",
     "",
-    1795097813984
+    1795097756356
    ],
    "T-4986": [
     "merged",
@@ -632,47 +622,43 @@
    ]
   },
   "nm": {
-   "T-4961": "Publish the twice-daily...",
-   "T-4849": "Shorten the process merge...",
-   "T-4871": "Check the two-way editing...",
-   "T-4795": "Weigh the showcase set...",
-   "T-3402": "Check whether the OpenSSL...",
-   "T-0902": "Check precedent for an...",
-   "T-5057": "Chat notifications open with...",
-   "T-5045": "Date the Home merge-only...",
-   "T-0349": "Fix gaps in the package...",
-   "T-4681": "Premades default to Paper in...",
-   "T-5037": "Break the Machine tab's...",
-   "T-0101": "Write the design note for...",
-   "T-5062": "The site sends its own push...",
+   "T-4849": "Shorten the process merge wait for good",
+   "T-5057": "Chat notifications open with the reply's own words",
+   "T-5045": "Date the Home merge-only line, hide it after a day",
+   "T-0349": "Fix gaps in the package sandbox build step",
+   "T-4681": "Premades default to Paper in light and Studio in dark",
+   "T-5037": "Break the Machine tab's \"Other\" storage into named parts",
+   "T-3402": "Check whether the OpenSSL removal still fits 1.0",
+   "T-0101": "Write the design note for online packages in 1.1",
+   "T-0902": "Check precedent for an in-app gallery of user code",
+   "T-5062": "The site sends its own push notices to a phone",
    "T-2378": "Plan version 1.2 and later",
-   "T-4807": "Fix every bad test that...",
-   "T-4913": "Stop the safety guard...",
-   "T-5113": "Stop the supervisor breaking...",
-   "T-5047": "Fix the token test's No view...",
-   "T-5117": "Land the keep-main-green...",
-   "T-5095": "Land the disk sweep job from...",
-   "T-4986": "Let Chat and approvals read..."
+   "T-4795": "Weigh the showcase set against the Builder-first ruling",
+   "T-4807": "Fix every bad test that failed a merge",
+   "T-4913": "Stop the safety guard refusing safe work",
+   "T-5047": "Fix the token test's No view for this size card",
+   "T-5113": "Stop the supervisor breaking a live session's lock",
+   "T-5117": "Land the keep-main-green slice from a fresh copy",
+   "T-5095": "Land the disk sweep job from a fresh copy",
+   "T-4986": "Let Chat and approvals read every main thread"
   },
   "wk": {
-   "T-4961": "Odalys",
    "T-4849": "Odalys",
-   "T-4871": "Idris",
-   "T-4795": "Ines",
-   "T-3402": "Ines",
-   "T-0902": "Ines",
    "T-5057": "Odalys",
    "T-5045": "Maren",
    "T-0349": "Pernille",
    "T-4681": "Idris",
    "T-5037": "Odalys",
+   "T-3402": "Ines",
    "T-0101": "Odalys",
+   "T-0902": "Ines",
    "T-5062": "Odalys",
    "T-2378": "Ines",
+   "T-4795": "Ines",
    "T-4807": "Pernille",
    "T-4913": "Odalys",
-   "T-5113": "Odalys",
    "T-5047": "Idris",
+   "T-5113": "Odalys",
    "T-5117": "Odalys",
    "T-5095": "Pernille",
    "T-4986": "Odalys",
@@ -685,17 +671,15 @@
    "T-5048": "Odalys",
    "T-5002": "Pernille",
    "T-4838": "Odalys",
-   "T-5091": "Odalys",
-   "T-5065": "Odalys",
-   "T-4888": "Idris"
+   "T-5091": "Odalys"
   }
  },
  "ln": {
-  "at": "2026-11-19T14:31:53Z",
+  "at": "2026-11-19T14:34:56Z",
   "mq": {
    "n": {
-    "checking": 1,
-    "inline": 15,
+    "checking": 0,
+    "inline": 14,
     "conflicted": 2,
     "failed": 1,
     "held": 0,
@@ -703,37 +687,28 @@
     "parked": 0
    },
    "m": {
-    "checking": 0,
-    "inline": 242,
-    "conflicted": 636,
-    "failed": 1,
+    "checking": null,
+    "inline": 126,
+    "conflicted": 639,
+    "failed": 4,
     "held": null,
     "retry": null,
     "parked": null
    },
-   "cur": [
-    [
-     [
-      "T-4961"
-     ],
-     "lining up with main",
-     "Mac mini",
-     0
-    ]
-   ],
+   "cur": [],
    "ld": [
-    33,
-    "2026-11-19T12:44:53Z"
+    37,
+    "2026-11-19T14:33:44Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-19T14:31:39Z",
-    "ld": 4.9,
+    "at": "2026-11-19T14:34:57Z",
+    "ld": 5.47,
     "c": 8,
     "sb": 0,
     "dk": [
-     43.9,
+     43.8,
      228.3
     ],
     "ss": [
@@ -743,12 +718,12 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-19T14:18:48Z",
-    "ld": 0.89,
+    "at": "2026-11-19T14:33:06Z",
+    "ld": 0.27,
     "c": 12,
     "sb": 0,
     "dk": [
-     355.2,
+     355.4,
      926.4
     ],
     "sn": []
@@ -785,10 +760,10 @@
   "main": 3,
   "lanes": 0,
   "total": 3,
-  "at": "9:32 AM",
+  "at": "9:35 AM",
   "why": "",
-  "at_iso": "2026-11-19T14:32:00+00:00",
+  "at_iso": "2026-11-19T14:35:00+00:00",
   "started": "2:04 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 2:04 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:32 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 2:04 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:35 AM ET</p></section>"
  }
 }

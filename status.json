@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-19T06:39:24.562796+00:00",
+ "at": "2026-11-19T06:42:31.016198+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -75,6 +75,17 @@
      {
       "s": "macbook",
       "at": 1795069594
+     }
+    ]
+   },
+   {
+    "t": "T-4899",
+    "name": "Fix a MacBook test job that failed",
+    "acct": "Personal b",
+    "steps": [
+     {
+      "s": "testq",
+      "at": 1795070443
      }
     ]
    },
@@ -225,7 +236,7 @@
    "task": "[tools] T-4907 main green parts 3-4",
    "model": "opus",
    "started": "2026-11-19T06:10:25.463Z",
-   "seconds": 1739,
+   "seconds": 1925,
    "finished": null,
    "effort": "high"
   },
@@ -234,7 +245,7 @@
    "task": "[tools] T-4843 batch size from data",
    "model": "opus",
    "started": "2026-11-19T06:10:37.169Z",
-   "seconds": 1727,
+   "seconds": 1913,
    "finished": null,
    "effort": "high"
   }
@@ -293,7 +304,7 @@
   "week_pct": 52.99,
   "usage_pct": 45.3,
   "work_pct": 80.7,
-  "read_at": "2026-11-19T06:39:00+00:00",
+  "read_at": "2026-11-19T06:42:00+00:00",
   "running": [
    {
     "lane": "b2",
@@ -355,7 +366,7 @@
  "lock_in": {
   "on": true,
   "pool": 3,
-  "at": "2026-11-19T01:39:00-05:00",
+  "at": "2026-11-19T01:42:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -449,6 +460,27 @@
    {
     "w": "Odalys",
     "k": "tools",
+    "t": "Name machine-made task lines by what they fix",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Act on the feature record at every add",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Keep new tasks from outgrowing finished ones",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
     "t": "Fix the red composer test",
     "s": "next",
     "o": "c"
@@ -492,27 +524,6 @@
     "w": "Odalys",
     "k": "tools",
     "t": "Fix the red queue bars test",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Fix the red queue replay test",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Maren",
-    "k": "tools",
-    "t": "Fix the red site dash probe test",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Fix the red site accounts test",
     "s": "next",
     "o": "c"
    }
@@ -584,90 +595,92 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-19T06:39:24Z",
+  "at": "2026-11-19T06:42:31Z",
   "s": {
+   "T-4899": [
+    "merging",
+    "Host checks on the Mac mini",
+    1795070491016
+   ],
+   "T-4919": [
+    "merging",
+    "Host checks on the Mac mini",
+    1795070491016
+   ],
    "T-4933": [
     "mergeq",
     "1st to merge",
-    1795065504562
+    1795065511016
    ],
    "T-4934": [
     "mergeq",
     "2nd to merge",
-    1795065684562
+    1795065631016
    ],
    "T-5000": [
     "mergeq",
     "3rd to merge",
-    1795066404562
+    1795066411016
    ],
    "T-5002": [
     "mergeq",
     "4th to merge",
-    1795068444562
+    1795068451016
    ],
    "T-4916": [
     "mergeq",
     "5th to merge",
-    1795068324562
+    1795068331016
    ],
    "T-4927": [
     "mergeq",
     "8th to merge",
-    1795068204562
+    1795068151016
    ],
    "T-4928": [
     "mergeq",
     "8th to merge",
-    1795068204562
+    1795068151016
    ],
    "T-4929": [
     "mergeq",
     "8th to merge",
-    1795068204562
+    1795068151016
    ],
    "T-4930": [
     "mergeq",
     "8th to merge",
-    1795068204562
+    1795068151016
    ],
    "T-4931": [
     "mergeq",
     "9th to merge",
-    1795069224562
+    1795069231016
    ],
    "T-4932": [
     "mergeq",
     "9th to merge",
-    1795069224562
-   ],
-   "T-4899": [
-    "mergeq",
-    "10th to merge",
-    1795068744562
-   ],
-   "T-4919": [
-    "mergeq",
-    "10th to merge",
-    1795068744562
+    1795069231016
    ],
    "T-4909": [
     "merging",
     "Mac tests at the main gate",
-    1795068624562
+    1795068631016
    ],
    "T-4907": [
     "testing",
     "its own tests, in its copy",
-    1795069644562
+    1795069651016
    ],
    "T-4843": [
     "testing",
     "its own tests, in its copy",
-    1795070304562
+    1795070311016
    ]
   },
   "nm": {
+   "T-4899": "Fix a MacBook test job that failed",
+   "T-4919": "Fix a MacBook test job that failed",
    "T-4933": "Check finished work before it ships",
    "T-4934": "Check finished work before it ships",
    "T-5000": "Draw transit count-downs the way the iPhone draws them",
@@ -679,13 +692,13 @@
    "T-4930": "Check finished work before it ships",
    "T-4931": "Check finished work before it ships",
    "T-4932": "Check finished work before it ships",
-   "T-4899": "Fix a MacBook test job that failed",
-   "T-4919": "Fix a MacBook test job that failed",
    "T-4909": "End work sessions on a stall, not on the clock",
    "T-4907": "Keep main green after every land",
    "T-4843": "Size each merge batch from measured data"
   },
   "wk": {
+   "T-4899": "Idris",
+   "T-4919": "Operator",
    "T-4933": "Pernille",
    "T-4934": "Pernille",
    "T-5000": "Maren",
@@ -697,19 +710,17 @@
    "T-4930": "Pernille",
    "T-4931": "Pernille",
    "T-4932": "Pernille",
-   "T-4899": "Idris",
-   "T-4919": "Operator",
    "T-4909": "Odalys",
    "T-4907": "Odalys",
    "T-4843": "Odalys"
   }
  },
  "ln": {
-  "at": "2026-11-19T06:39:24Z",
+  "at": "2026-11-19T06:42:31Z",
   "mq": {
    "n": {
-    "checking": 0,
-    "inline": 13,
+    "checking": 2,
+    "inline": 11,
     "conflicted": 1,
     "failed": 0,
     "held": 0,
@@ -717,15 +728,32 @@
     "parked": 1
    },
    "m": {
-    "checking": null,
-    "inline": 36,
-    "conflicted": 798,
+    "checking": 1,
+    "inline": 40,
+    "conflicted": 802,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 29
+    "parked": 32
    },
-   "cur": [],
+   "cur": [
+    [
+     [
+      "T-4899"
+     ],
+     "Mac tests",
+     "Mac mini",
+     1
+    ],
+    [
+     [
+      "T-4919"
+     ],
+     "Mac tests",
+     "Mac mini",
+     1
+    ]
+   ],
    "ld": [
     17,
     "2026-11-19T06:35:43Z"
@@ -733,12 +761,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-19T06:39:29Z",
-    "ld": 26.99,
+    "at": "2026-11-19T06:41:42Z",
+    "ld": 27.97,
     "c": 8,
     "sb": 1,
     "dk": [
-     40.0,
+     39.7,
      228.3
     ],
     "ss": [
@@ -769,8 +797,8 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 2 tasks",
-   "at": "2026-11-19T01:28:08-05:00"
+   "t": "Work session \u2013 4 tasks",
+   "at": "2026-11-19T01:41:48-05:00"
   },
   {
    "w": "Operator",
@@ -779,12 +807,12 @@
    "m": "opus",
    "e": "high",
    "t": "Work session \u2013 2 tasks",
-   "at": "2026-11-19T01:36:39-05:00"
+   "at": "2026-11-19T01:41:56-05:00"
   }
  ],
  "reply": {
-  "sent": "2026-11-19T06:34:26Z",
-  "seconds": 131.0
+  "sent": "2026-11-19T06:41:21Z",
+  "seconds": 26.0
  },
  "inbox": [],
  "trimmed": [
@@ -801,10 +829,10 @@
   "main": 2,
   "lanes": 1,
   "total": 3,
-  "at": "1:39 AM",
+  "at": "1:42 AM",
   "why": "",
-  "at_iso": "2026-11-19T06:39:00+00:00",
+  "at_iso": "2026-11-19T06:42:00+00:00",
   "started": "1:08 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 1:08 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 1:39 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 1:08 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 1:42 AM ET</p></section>"
  }
 }

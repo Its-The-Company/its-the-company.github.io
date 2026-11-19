@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-19T16:32:21.510561+00:00",
+ "at": "2026-11-19T16:45:12.811592+00:00",
  "session": {
   "active": false,
   "kind": "",
@@ -22,16 +22,6 @@
      {
       "s": "testq",
       "at": 1795093045
-     }
-    ]
-   },
-   {
-    "t": "T-4962",
-    "w": "Idris",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1795063363
      }
     ]
    }
@@ -119,7 +109,7 @@
     "end_at": 1795104234
    }
   ],
-  "landed": 51,
+  "landed": 48,
   "failed": 3
  },
  "workers": [],
@@ -128,7 +118,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 632,
+  "runnable_count": 633,
   "blocked_count": 2
  },
  "meter": {
@@ -173,50 +163,13 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-19T11:44:16-05:00",
+ "next_tick": "2026-11-19T11:59:36-05:00",
  "personal": {
-  "week_pct": 70.12,
-  "usage_pct": 45.3,
-  "work_pct": 81.1,
-  "read_at": "2026-11-19T16:35:00+00:00",
+  "week_pct": 70.34,
+  "usage_pct": 45.4,
+  "work_pct": 81.2,
+  "read_at": "2026-11-19T16:45:00+00:00",
   "running": [
-   {
-    "lane": "a",
-    "task": "T-3871",
-    "w": "Odalys",
-    "k": "ops",
-    "t": "Archive parked refs whose work main already has",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-19T11:28:40-05:00",
-    "n": "Evan",
-    "src": "plan-a"
-   },
-   {
-    "lane": "a",
-    "task": "T-4012",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Retire the retry routes the send-back replaces",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-19T11:28:40-05:00",
-    "n": "Evan",
-    "src": "plan-a"
-   },
-   {
-    "lane": "a",
-    "task": "T-4195",
-    "w": "Idris",
-    "k": "tools",
-    "t": "Reuse an iPhone pass when the app's inputs are unchanged",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-19T11:28:40-05:00",
-    "n": "Evan",
-    "d": 1,
-    "src": "plan-a"
-   },
    {
     "lane": "a2",
     "task": "T-4181",
@@ -228,6 +181,68 @@
     "at": "2026-11-19T11:28:32-05:00",
     "n": "Evan",
     "src": "plan-a"
+   },
+   {
+    "lane": "b",
+    "task": "T-5146",
+    "w": "Ines",
+    "k": "ops",
+    "t": "Star the open high-priority process requests by impact",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-19T11:39:40-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
+   },
+   {
+    "lane": "b",
+    "task": "T-4734",
+    "w": "Maren",
+    "k": "tools",
+    "t": "Fix the red site merge queue test",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-19T11:39:40-05:00",
+    "n": "Jeremy",
+    "d": 1,
+    "src": "plan-b"
+   },
+   {
+    "lane": "b",
+    "task": "T-4877",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Fix the red experiments test",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-19T11:39:40-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
+   },
+   {
+    "lane": "b",
+    "task": "T-4678",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Close the iPhone premade feature and free its steps",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-19T11:39:40-05:00",
+    "n": "Jeremy",
+    "d": 1,
+    "src": "plan-b"
+   },
+   {
+    "lane": "b3",
+    "task": "T-4182",
+    "w": "Idris",
+    "k": "build",
+    "t": "A failing widget says so and can recover",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-19T11:39:36-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
    }
   ]
  },
@@ -249,7 +264,7 @@
   }
  ],
  "disk": {
-  "free_gb": 36,
+  "free_gb": 35,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -258,14 +273,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-19T11:32:00-05:00",
+   "at": "2026-11-19T11:42:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 3,
-  "at": "2026-11-19T11:35:00-05:00",
+  "at": "2026-11-19T11:45:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -274,7 +289,12 @@
   }
  },
  "next_tick_why": "last_tick",
- "idle": null,
+ "idle": {
+  "since": "2026-11-19T10:44:09-05:00",
+  "minutes": 61,
+  "why": "a tick has spent 2 min on steps before the session",
+  "healed": []
+ },
  "pool": null,
  "lanes": [
   {
@@ -418,7 +438,7 @@
    }
   ],
   "count": {
-   "next": 632,
+   "next": 633,
    "wait": 1,
    "blocked": 1,
    "you": 2
@@ -463,48 +483,97 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-19T16:32:21Z",
+  "at": "2026-11-19T16:45:12Z",
   "s": {
    "T-4850": [
     "merging",
     "Host checks on the Mac mini",
-    1795105761510
+    1795105752811
    ],
    "T-4913": [
     "merging",
     "Host checks on the Mac mini",
-    1795105761510
+    1795105752811
+   ],
+   "T-4849": [
+    "mergeq",
+    "1st to merge",
+    1795106352811
    ],
    "T-4891": [
     "mergeq",
-    "1st to merge",
-    1795105461510
+    "2nd to merge",
+    1795105452811
    ],
    "T-4843": [
     "mergeq",
-    "3rd to merge",
-    1795103361510
+    "4th to merge",
+    1795103352811
+   ],
+   "T-4012": [
+    "mergeq",
+    "5th to merge",
+    1795106712811
+   ],
+   "T-3871": [
+    "mergeq",
+    "6th to merge",
+    1795106532811
+   ],
+   "T-4195": [
+    "mergeq",
+    "7th to merge",
+    1795106172811
+   ],
+   "T-4180": [
+    "testing",
+    "Mac Mini \u00b7 test",
+    null
+   ],
+   "T-4181": [
+    "testing",
+    "Mac Mini \u00b7 test",
+    null
+   ],
+   "T-4182": [
+    "testq",
+    "1st for a Simulator",
+    1795106592811
    ]
   },
   "nm": {
    "T-4850": "Bring the Mac mini load back down",
    "T-4913": "Stop the safety guard refusing safe work",
+   "T-4849": "Shorten the process merge wait for good",
    "T-4891": "Work the process and site merge queue under its limit",
-   "T-4843": "Size each merge batch from measured data"
+   "T-4843": "Size each merge batch from measured data",
+   "T-4012": "Retire the retry routes the send-back replaces",
+   "T-3871": "Archive parked refs whose work main already has",
+   "T-4195": "Reuse an iPhone pass when the app's inputs are unchanged",
+   "T-4180": "Every premade widget draws on the iPhone",
+   "T-4181": "Widgets refresh on their own and by a tap",
+   "T-4182": "A failing widget says so and can recover"
   },
   "wk": {
    "T-4850": "Odalys",
    "T-4913": "Odalys",
+   "T-4849": "Odalys",
    "T-4891": "Odalys",
-   "T-4843": "Odalys"
+   "T-4843": "Odalys",
+   "T-4012": "Odalys",
+   "T-3871": "Odalys",
+   "T-4195": "Idris",
+   "T-4180": "Idris",
+   "T-4181": "Idris",
+   "T-4182": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-19T16:32:21Z",
+  "at": "2026-11-19T16:45:12Z",
   "mq": {
    "n": {
     "checking": 2,
-    "inline": 2,
+    "inline": 6,
     "conflicted": 3,
     "failed": 0,
     "held": 0,
@@ -512,9 +581,9 @@
     "parked": 0
    },
    "m": {
-    "checking": 3,
-    "inline": 25,
-    "conflicted": 122,
+    "checking": 16,
+    "inline": 7,
+    "conflicted": 134,
     "failed": null,
     "held": null,
     "retry": null,
@@ -527,7 +596,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     3
+     16
     ],
     [
      [
@@ -535,7 +604,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     3
+     16
     ]
    ],
    "ld": [
@@ -545,16 +614,16 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-19T16:32:23Z",
-    "ld": 14.3,
+    "at": "2026-11-19T16:45:14Z",
+    "ld": 8.28,
     "c": 8,
     "sb": 0,
     "dk": [
-     36.1,
+     34.9,
      228.3
     ],
     "ss": [
-     171.3,
+     171.2,
      953.7
     ],
     "sn": []
@@ -575,12 +644,12 @@
  "operators": [
   {
    "w": "Operator",
-   "a": "Evan's Account",
+   "a": "Main plan",
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 2 tasks",
-   "at": "2026-11-19T11:28:39-05:00"
+   "t": "Work session",
+   "at": "2026-11-19T11:45:14-05:00"
   },
   {
    "w": "Operator",
@@ -590,17 +659,48 @@
    "e": "high",
    "t": "Work session \u2013 1 task",
    "at": "2026-11-19T11:31:27-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Jeremy's Account",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session \u2013 4 tasks",
+   "at": "2026-11-19T11:39:40-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Jeremy's Account",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Inbox \u2013 Evan's 11:44 AM Message on GitHub",
+   "at": "2026-11-19T11:44:44-05:00"
   }
  ],
  "reply": {
   "sent": "2026-11-19T16:28:38Z",
   "seconds": 167.0
  },
- "inbox": [],
+ "inbox": [
+  {
+   "id": "c7015655505",
+   "state": "received",
+   "position": 1,
+   "eta": "2026-11-19T11:59:36-05:00",
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "Sure, make this a standing rule if..."
+  }
+ ],
  "trimmed": [
   "lane_next",
   "queue_text",
   "task_done",
+  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -609,12 +709,12 @@
  ],
  "agents_now": {
   "main": 0,
-  "lanes": 2,
-  "total": 2,
-  "at": "11:35 AM",
+  "lanes": 3,
+  "total": 3,
+  "at": "11:45 AM",
   "why": "",
-  "at_iso": "2026-11-19T16:35:00+00:00",
+  "at_iso": "2026-11-19T16:45:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 11:35 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 11:45 AM ET</p></section>"
  }
 }

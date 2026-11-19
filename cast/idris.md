@@ -33,7 +33,6 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 ## Open (mine)
 
-- T-4688 11-18 f531d51b2c+8e22b68221: done but tick refused (umbrella waits T-4857/T-4858); phone T-4865, reviews T-4852 PASS, T-4864. Lesson: Debug code lives in PyWidget.debug.dylib; a Release build needs PW_INTERNAL_TESTFLIGHT=YES until the privacy URL exists; copies need scripts/fetch_editor.sh (not main's stale Vendor).
 
 - T-4858 11-18 22016c0c82 (scratch T-4858-idris, not landed): extension AppTransaction bound 2 s + .unknown held 15 min, late answer kept; test + purchases.md. Gate run 1 red only on Bundle.main scan (fixed: TreeHost.isExtension). Stopped: guard refused fetch+rebase after main moved. Open: a way to bring the copy up to main, then land, tick, review line, Evan's phone note. Lesson: Shared code finds the extension via TreeHost.isExtension.
 
@@ -59,6 +58,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - Older lessons and dated logs: archive.md.
 
 - T-4681 11-19 fc3a48d730: premades Paper/Studio-grey via TreeTheme (by widget id); unit + Python green. Open: runner job testT (Home Screen Default/Dark), tick after it. Lesson: UI tests may not set XCUIDevice.appearance (scan test); use setHomeScreenStyle.
+- T-3280 11-19 441efae659: testF red with placedNow mutant, F+M green Debug and Release (ops/runs/t3280-ui-runs.txt); not ticked. Lesson: on the mini `xcodebuild test` can leave an older app installed; simctl install + test-without-building, cmp the executable.
 {% endraw %}
 
 

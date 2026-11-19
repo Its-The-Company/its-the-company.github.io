@@ -1,22 +1,11 @@
 {
  "schema": 1,
- "at": "2026-11-19T16:22:58.175151+00:00",
+ "at": "2026-11-19T16:27:42.226781+00:00",
  "session": {
   "active": false,
   "kind": "",
   "started": null,
   "flow": [
-   {
-    "t": "T-4807",
-    "name": "Fix every bad test that failed a merge",
-    "acct": "Personal b",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1795105308
-     }
-    ]
-   },
    {
     "t": "T-4565",
     "steps": [
@@ -48,6 +37,30 @@
    }
   ],
   "done": [
+   {
+    "t": "T-4180",
+    "name": "Every premade widget draws on the iPhone",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1795105654
+   },
+   {
+    "t": "T-4913",
+    "name": "Stop the safety guard refusing safe work",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1795105452
+   },
+   {
+    "t": "T-4807",
+    "name": "Fix every bad test that failed a merge",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1795105435
+   },
    {
     "t": "T-2378",
     "name": "Plan version 1.2 and later",
@@ -104,32 +117,9 @@
     "steps": [],
     "end": "landed",
     "end_at": 1795104234
-   },
-   {
-    "t": "T-4823",
-    "name": "Group process changes into features",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1795103236
-   },
-   {
-    "t": "T-0349",
-    "name": "Fix gaps in the package sandbox build step",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1795100846
-   },
-   {
-    "t": "T-5057",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1795099480
    }
   ],
-  "landed": 48,
+  "landed": 51,
   "failed": 3
  },
  "workers": [],
@@ -183,47 +173,58 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-19T11:34:34-05:00",
+ "next_tick": "2026-11-19T11:40:42-05:00",
  "personal": {
   "week_pct": 69.36,
   "usage_pct": 45.0,
   "work_pct": 80.9,
-  "read_at": "2026-11-19T16:25:00+00:00",
+  "read_at": "2026-11-19T16:29:00+00:00",
   "running": [
    {
-    "lane": "a3",
-    "task": "T-4891",
+    "lane": "a",
+    "task": "T-3871",
     "w": "Odalys",
-    "k": "tools",
-    "t": "Work the process and site merge queue under its limit",
+    "k": "ops",
+    "t": "Archive parked refs whose work main already has",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-19T11:20:35-05:00",
-    "n": "Evan",
-    "d": 1,
-    "src": "plan-a"
-   },
-   {
-    "lane": "a3",
-    "task": "T-5070",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Shorten the gate change merge wait",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-19T11:20:35-05:00",
+    "at": "2026-11-19T11:28:40-05:00",
     "n": "Evan",
     "src": "plan-a"
    },
    {
-    "lane": "a3",
-    "task": "T-4988",
+    "lane": "a",
+    "task": "T-4012",
     "w": "Odalys",
     "k": "tools",
-    "t": "Recount failed-merge causes after a week of new records",
+    "t": "Retire the retry routes the send-back replaces",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-19T11:20:35-05:00",
+    "at": "2026-11-19T11:28:40-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a",
+    "task": "T-4195",
+    "w": "Idris",
+    "k": "tools",
+    "t": "Reuse an iPhone pass when the app's inputs are unchanged",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-19T11:28:40-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a2",
+    "task": "T-4181",
+    "w": "Idris",
+    "k": "build",
+    "t": "Widgets refresh on their own and by a tap",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-19T11:28:32-05:00",
     "n": "Evan",
     "src": "plan-a"
    }
@@ -247,7 +248,7 @@
   }
  ],
  "disk": {
-  "free_gb": 38,
+  "free_gb": 37,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -256,14 +257,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-19T11:24:00-05:00",
+   "at": "2026-11-19T11:28:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 3,
-  "at": "2026-11-19T11:25:00-05:00",
+  "at": "2026-11-19T11:29:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -461,122 +462,63 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-19T16:22:58Z",
+  "at": "2026-11-19T16:27:42Z",
   "s": {
-   "T-4807": [
-    "merging",
-    "Host checks on the Mac mini \u00b7 1 of 2 groups of tests done",
-    1795105318175
-   ],
-   "T-4823": [
+   "T-4891": [
     "mergeq",
     "1st to merge",
-    1795103338175
+    1795105482226
    ],
    "T-4843": [
     "mergeq",
-    "1st to merge",
-    1795103338175
-   ],
-   "T-2378": [
-    "mergeq",
-    "3rd to merge",
-    1795093738175
-   ],
-   "T-4681": [
-    "mergeq",
-    "3rd to merge",
-    1795093738175
-   ],
-   "T-4795": [
-    "mergeq",
-    "3rd to merge",
-    1795093738175
-   ],
-   "T-4913": [
-    "mergeq",
-    "4th to merge",
-    1795096498175
-   ],
-   "T-4180": [
-    "mergeq",
-    "5th to merge",
-    1795104958175
-   ],
-   "T-4891": [
-    "merged",
-    "on main 4:09 AM ET",
-    1795079389000,
-    ""
+    "2nd to merge",
+    1795103382226
    ]
   },
   "nm": {
-   "T-4807": "Fix every bad test that failed a merge",
-   "T-4823": "Group process changes into features",
-   "T-4843": "Size each merge batch from measured data",
-   "T-2378": "Plan version 1.2 and later",
-   "T-4681": "Premades default to Paper in light and Studio in dark",
-   "T-4795": "Weigh the showcase set against the Builder-first ruling",
-   "T-4913": "Stop the safety guard refusing safe work",
-   "T-4180": "Every premade widget draws on the iPhone",
-   "T-4891": "Work the process and site merge queue under its limit"
+   "T-4891": "Work the process and site merge queue under its limit",
+   "T-4843": "Size each merge batch from measured data"
   },
   "wk": {
-   "T-4807": "Pernille",
-   "T-4823": "Odalys",
-   "T-4843": "Odalys",
-   "T-2378": "Ines",
-   "T-4681": "Idris",
-   "T-4795": "Ines",
-   "T-4913": "Odalys",
-   "T-4180": "Idris",
-   "T-4891": "Odalys"
+   "T-4891": "Odalys",
+   "T-4843": "Odalys"
   }
  },
  "ln": {
-  "at": "2026-11-19T16:22:58Z",
+  "at": "2026-11-19T16:27:42Z",
   "mq": {
    "n": {
-    "checking": 1,
-    "inline": 7,
+    "checking": 0,
+    "inline": 2,
     "conflicted": 3,
     "failed": 0,
     "held": 0,
-    "retry": 1,
+    "retry": 2,
     "parked": 0
    },
    "m": {
-    "checking": 1,
-    "inline": 148,
-    "conflicted": 112,
+    "checking": null,
+    "inline": 20,
+    "conflicted": 117,
     "failed": null,
     "held": null,
-    "retry": 95,
+    "retry": 54,
     "parked": null
    },
-   "cur": [
-    [
-     [
-      "T-4807"
-     ],
-     "Mac tests",
-     "Mac mini",
-     1
-    ]
-   ],
+   "cur": [],
    "ld": [
-    48,
-    "2026-11-19T16:21:33Z"
+    53,
+    "2026-11-19T16:27:34Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-19T16:22:58Z",
-    "ld": 3.45,
+    "at": "2026-11-19T16:27:43Z",
+    "ld": 3.36,
     "c": 8,
     "sb": 0,
     "dk": [
-     37.9,
+     37.8,
      228.3
     ],
     "ss": [
@@ -586,8 +528,8 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-19T15:54:05Z",
-    "ld": 0.88,
+    "at": "2026-11-19T16:24:44Z",
+    "ld": 0.15,
     "c": 12,
     "sb": 0,
     "dk": [
@@ -598,20 +540,10 @@
    }
   }
  },
- "operators": [
-  {
-   "w": "Operator",
-   "a": "Evan's Account",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session \u2013 3 tasks",
-   "at": "2026-11-19T11:21:02-05:00"
-  }
- ],
+ "operators": [],
  "reply": {
-  "sent": "2026-11-19T16:19:10Z",
-  "seconds": 111.0
+  "sent": "2026-11-19T16:25:03Z",
+  "seconds": 79.0
  },
  "inbox": [],
  "trimmed": [
@@ -626,12 +558,12 @@
  ],
  "agents_now": {
   "main": 0,
-  "lanes": 1,
-  "total": 1,
-  "at": "11:25 AM",
+  "lanes": 2,
+  "total": 2,
+  "at": "11:29 AM",
   "why": "",
-  "at_iso": "2026-11-19T16:25:00+00:00",
+  "at_iso": "2026-11-19T16:29:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 11:25 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 11:29 AM ET</p></section>"
  }
 }

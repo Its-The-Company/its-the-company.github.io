@@ -1,23 +1,19 @@
 {
  "schema": 1,
- "at": "2026-11-19T22:35:01.810446+00:00",
+ "at": "2026-11-19T22:42:53.000273+00:00",
  "session": {
   "active": false,
   "kind": "",
   "started": null,
   "flow": [
    {
-    "t": "T-5179",
-    "name": "Merge-queue fixes go first, process work unlimited",
-    "acct": "Personal b",
+    "t": "T-3113",
+    "name": "Build a timeline feed for every picked-up task",
+    "acct": "Personal a",
     "steps": [
      {
-      "s": "landing",
-      "at": 1795127304
-     },
-     {
       "s": "testq",
-      "at": 1795127472
+      "at": 1795128101
      }
     ]
    },
@@ -42,6 +38,41 @@
    }
   ],
   "done": [
+   {
+    "t": "T-5179",
+    "name": "Merge-queue fixes go first, process work unlimited",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "failed",
+    "end_at": 1795128091,
+    "why": "did not merge cleanly"
+   },
+   {
+    "t": "T-3337",
+    "name": "Keep Plan mode answers only in the Investor's reply",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1795128034
+   },
+   {
+    "t": "T-5179",
+    "name": "Merge-queue fixes go first, process work unlimited",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "failed",
+    "end_at": 1795128003,
+    "why": "did not merge cleanly"
+   },
+   {
+    "t": "T-5179",
+    "name": "Merge-queue fixes go first, process work unlimited",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "failed",
+    "end_at": 1795127990,
+    "why": "did not merge cleanly"
+   },
    {
     "t": "T-4010",
     "name": "Rebuild This Session as a full flowchart",
@@ -89,43 +120,10 @@
     "steps": [],
     "end": "landed",
     "end_at": 1795124437
-   },
-   {
-    "t": "T-4196",
-    "name": "Let app changes waiting to merge share one iPhone run",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1795124402
-   },
-   {
-    "t": "T-4813",
-    "name": "Home's numbers update within a minute",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "failed",
-    "end_at": 1795124020,
-    "why": "did not merge cleanly"
-   },
-   {
-    "t": "T-4446",
-    "name": "Commit the company's records once per supervisor round",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1795123959
-   },
-   {
-    "t": "T-2377",
-    "name": "Write the version 1.1 board lines after 1.0 is released",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1795122401
    }
   ],
-  "landed": 46,
-  "failed": 10
+  "landed": 47,
+  "failed": 13
  },
  "workers": [],
  "who": "",
@@ -133,7 +131,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 634,
+  "runnable_count": 633,
   "blocked_count": 2
  },
  "meter": {
@@ -182,8 +180,8 @@
  "personal": {
   "week_pct": 76.54,
   "usage_pct": 47.5,
-  "work_pct": 80.6,
-  "read_at": "2026-11-19T22:35:00+00:00",
+  "work_pct": 80.3,
+  "read_at": "2026-11-19T22:47:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -212,11 +210,7 @@
    {
     "lane": "a",
     "task": "T-3337",
-    "w": "Odalys",
-    "k": "site",
     "t": "Keep Plan mode answers only in the Investor's reply",
-    "m": "opus",
-    "e": "high",
     "at": "2026-11-19T17:25:32-05:00",
     "n": "Evan",
     "d": 1,
@@ -281,6 +275,7 @@
     "e": "high",
     "at": "2026-11-19T17:16:34-05:00",
     "n": "Evan",
+    "d": 1,
     "src": "plan-a"
    },
    {
@@ -292,6 +287,42 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-19T16:34:58-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
+   },
+   {
+    "lane": "b2",
+    "task": "T-4734",
+    "w": "Maren",
+    "k": "tools",
+    "t": "Fix the red site merge queue test",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-19T17:44:18-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
+   },
+   {
+    "lane": "b2",
+    "task": "T-4877",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Fix the red experiments test",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-19T17:44:18-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
+   },
+   {
+    "lane": "b2",
+    "task": "T-4682",
+    "w": "Odalys",
+    "k": "site",
+    "t": "Hide the Issues page's raw list until it loads",
+    "m": "sonnet",
+    "e": "high",
+    "at": "2026-11-19T17:44:18-05:00",
     "n": "Jeremy",
     "src": "plan-b"
    },
@@ -317,6 +348,7 @@
     "e": "high",
     "at": "2026-11-19T17:25:59-05:00",
     "n": "Jeremy",
+    "d": 1,
     "src": "plan-b"
    },
    {
@@ -329,6 +361,7 @@
     "e": "high",
     "at": "2026-11-19T17:25:59-05:00",
     "n": "Jeremy",
+    "d": 1,
     "src": "plan-b"
    }
   ]
@@ -360,14 +393,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-19T17:33:00-05:00",
+   "at": "2026-11-19T17:43:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 3,
-  "at": "2026-11-19T17:35:00-05:00",
+  "at": "2026-11-19T17:47:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -376,14 +409,7 @@
   }
  },
  "next_tick_why": "last_tick",
- "idle": {
-  "since": "2026-11-19T16:29:13-05:00",
-  "minutes": 65,
-  "why": "a tick has spent 2 min on steps before the session",
-  "healed": [
-   "asked for a fresh main meter reading"
-  ]
- },
+ "idle": null,
  "pool": null,
  "lanes": [
   {
@@ -512,6 +538,11 @@
   "done": [
    {
     "w": "Odalys",
+    "t": "In Chat's Plan mode the company's message now lists only its questions, and each chosen answer...",
+    "at": "2026-11-19T17:40:00-05:00"
+   },
+   {
+    "w": "Odalys",
     "t": "How many finished steps merge together is now worked out each day from measured red rates and...",
     "at": "2026-11-19T17:22:00-05:00"
    },
@@ -519,15 +550,10 @@
     "w": "Odalys",
     "t": "The Machine panel on Home now shows what fills each drive, read every 6 hours, and the Company...",
     "at": "2026-11-19T16:06:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "When one account's finished work keeps being turned back, or an Investor ruling sits off main...",
-    "at": "2026-11-19T16:05:00-05:00"
    }
   ],
   "count": {
-   "next": 634,
+   "next": 633,
    "wait": 2,
    "blocked": 0,
    "you": 2
@@ -572,32 +598,18 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-19T22:35:01Z",
+  "at": "2026-11-19T22:42:53Z",
   "s": {
-   "T-5179": [
+   "T-3113": [
     "merging",
     "Host checks on the Mac mini",
-    1795127521810
-   ],
-   "T-4878": [
-    "mergeq",
-    "1st to merge",
-    1795126921810
-   ],
-   "T-4843": [
-    "mergeq",
-    "3rd to merge",
-    1795126201810
-   ],
-   "T-3859": [
-    "mergeq",
-    "4th to merge",
-    1795125481810
+    1795128113000
    ],
    "T-3337": [
-    "mergeq",
-    "5th to merge",
-    1795127461810
+    "merged",
+    "on main 5:40 PM ET",
+    1795128018000,
+    ""
    ],
    "T-4446": [
     "merged",
@@ -619,20 +631,14 @@
    ]
   },
   "nm": {
-   "T-5179": "Merge-queue fixes go first, process work unlimited",
-   "T-4878": "Fix the red five hour test",
-   "T-4843": "Size each merge batch from measured data",
-   "T-3859": "Move everything not needed off the Mac mini disk",
+   "T-3113": "Build a timeline feed for every picked-up task",
    "T-3337": "Keep Plan mode answers only in the Investor's reply",
    "T-4446": "Commit the company's records once per supervisor round",
    "T-4850": "Bring the Mac mini load back down",
    "T-5070": "Shorten the gate change merge wait"
   },
   "wk": {
-   "T-5179": "Odalys",
-   "T-4878": "Odalys",
-   "T-4843": "Odalys",
-   "T-3859": "Odalys",
+   "T-3113": "Odalys",
    "T-3337": "Odalys",
    "T-4446": "Odalys",
    "T-4850": "Odalys",
@@ -640,58 +646,56 @@
   }
  },
  "ln": {
-  "at": "2026-11-19T22:35:01Z",
+  "at": "2026-11-19T22:42:53Z",
   "mq": {
    "n": {
     "checking": 1,
-    "inline": 4,
-    "conflicted": 3,
+    "inline": 0,
+    "conflicted": 4,
     "failed": 0,
     "held": 0,
     "retry": 0,
-    "parked": 0
+    "parked": 1
    },
    "m": {
-    "checking": 3,
-    "inline": 19,
-    "conflicted": 375,
+    "checking": 1,
+    "inline": null,
+    "conflicted": 321,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": null
+    "parked": 1
    },
    "cur": [
     [
      [
-      "T-5179"
+      "T-3113"
      ],
      "Mac tests",
      "Mac mini",
-     3
+     1
     ]
    ],
    "ld": [
-    90,
-    "2026-11-19T22:23:27Z"
+    91,
+    "2026-11-19T22:40:34Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-19T22:35:04Z",
-    "ld": 37.93,
+    "at": "2026-11-19T22:42:55Z",
+    "ld": 37.49,
     "c": 8,
-    "sb": 1,
+    "sb": 0,
     "dk": [
-     48.9,
+     48.4,
      228.3
     ],
     "ss": [
      171.2,
      953.7
     ],
-    "sn": [
-     "iPhone 17e"
-    ]
+    "sn": []
    },
    "macbook": {
     "at": "2026-11-19T22:31:31Z",
@@ -732,23 +736,14 @@
      "open": false
     }
    },
-   "at": "2026-11-19T22:35:01+00:00"
+   "at": "2026-11-19T22:42:53+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-19T22:35:01+00:00"
+   "at": "2026-11-19T22:42:53+00:00"
   }
  },
  "operators": [
-  {
-   "w": "Operator",
-   "a": "Main plan",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session",
-   "at": "2026-11-19T17:35:04-05:00"
-  },
   {
    "w": "Operator",
    "a": "Evan's Account",
@@ -773,7 +768,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 4 tasks",
+   "t": "Work session \u2013 3 tasks",
    "at": "2026-11-19T17:25:28-05:00"
   },
   {
@@ -812,12 +807,12 @@
  ],
  "agents_now": {
   "main": 0,
-  "lanes": 5,
-  "total": 5,
-  "at": "5:35 PM",
+  "lanes": 6,
+  "total": 6,
+  "at": "5:47 PM",
   "why": "",
-  "at_iso": "2026-11-19T22:35:00+00:00",
+  "at_iso": "2026-11-19T22:47:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 5:35 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 6 sessions \u00b7 as of 5:47 PM ET</p></section>"
  }
 }

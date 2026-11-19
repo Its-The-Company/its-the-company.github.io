@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-19T03:15:18.328233+00:00",
+ "at": "2026-11-19T03:18:19.379921+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -145,7 +145,7 @@
    "task": "[tools] T-4805 T-4792 land gate cause and retest",
    "model": "opus",
    "started": "2026-11-19T02:37:38.692Z",
-   "seconds": 2259,
+   "seconds": 2440,
    "finished": null,
    "effort": "high"
   },
@@ -154,7 +154,7 @@
    "task": "[tools] T-4788 T-4956 land feature sessions and status",
    "model": "opus",
    "started": "2026-11-19T02:37:43.446Z",
-   "seconds": 2254,
+   "seconds": 2435,
    "finished": null,
    "effort": "high"
   },
@@ -163,7 +163,7 @@
    "task": "[tools] T-4909 T-4845 land stall end and thread move",
    "model": "opus",
    "started": "2026-11-19T02:37:49.492Z",
-   "seconds": 2248,
+   "seconds": 2429,
    "finished": null,
    "effort": "high"
   },
@@ -172,7 +172,7 @@
    "task": "[build] T-4962 make main pass Xcode checks",
    "model": "opus",
    "started": "2026-11-19T02:38:04.132Z",
-   "seconds": 2234,
+   "seconds": 2415,
    "finished": null,
    "effort": "high"
   },
@@ -181,12 +181,21 @@
    "task": "[tools] T-4806 lane time-outs never a failed merge",
    "model": "opus",
    "started": "2026-11-19T03:00:38.966Z",
-   "seconds": 879,
+   "seconds": 1060,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "pernille",
+   "task": "[tools] T-4851 keep Mac mini disk free for good",
+   "model": "opus",
+   "started": "2026-11-19T03:17:34.802Z",
+   "seconds": 44,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Odalys x4, Idris",
+ "who": "Odalys x4, Idris, Pernille",
  "recent": [
   {
    "name": "pernille",
@@ -216,7 +225,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 528,
+  "runnable_count": 527,
   "blocked_count": 34
  },
  "meter": {
@@ -265,7 +274,7 @@
   "week_pct": 52.57,
   "usage_pct": 47.5,
   "work_pct": 81.2,
-  "read_at": "2026-11-19T03:15:00+00:00",
+  "read_at": "2026-11-19T03:18:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -286,7 +295,7 @@
   }
  ],
  "disk": {
-  "free_gb": 10,
+  "free_gb": 8.4,
   "gate": "closed",
   "ssd": {
    "mounted": true,
@@ -295,14 +304,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions wait until 20 GB is free.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-18T22:09:00-05:00",
+   "at": "2026-11-18T22:16:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 3,
-  "at": "2026-11-18T22:15:00-05:00",
+  "at": "2026-11-18T22:18:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -338,11 +347,12 @@
   },
   {
    "name": "Pernille",
-   "state": "next",
-   "task": "Pernille, P0, from T-4694 (nightly run of every suite,...",
-   "model": null,
-   "since": null,
-   "next": []
+   "state": "running",
+   "task": "[tools] T-4851 keep Mac mini disk free for good",
+   "model": "opus",
+   "since": "2026-11-19T03:17:34.802Z",
+   "next": [],
+   "effort": "high"
   },
   {
    "name": "Maren",
@@ -420,6 +430,16 @@
     "at": "2026-11-19T03:00:38.966Z",
     "o": "c",
     "task": "T-4806"
+   },
+   {
+    "w": "Pernille",
+    "k": "tools",
+    "t": "Keep the Mac mini disk free for good",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-19T03:17:34.802Z",
+    "o": "c",
+    "task": "T-4851"
    }
   ],
   "src": "plan",
@@ -498,29 +518,33 @@
   "done": [
    {
     "w": "Odalys",
-    "t": "The company's automatic notices (starred-task merges, disk keeper, idle and landing alarms) now...",
-    "at": "2026-11-18T22:01:00-05:00"
-   },
-   {
-    "w": "Pernille",
-    "t": "Test suites in the merge check are now stopped only when they truly stall (no output and no work...",
-    "at": "2026-11-18T21:59:00-05:00"
+    "t": "Every app feature now runs as its own feature session automatically: the switch file says \"all\",...",
+    "at": "2026-11-18T22:17:00-05:00"
    },
    {
     "w": "Operator",
-    "t": "Guard refusals per day stayed within its limit of 16.49 refusals for a full day, so the...",
-    "at": "2026-11-18T21:08:00-05:00"
+    "t": "Main passes its Xcode checks again: job J-20261118-2200-land-m-46de23 on the MacBook no longer...",
+    "at": "2026-11-18T22:15:00-05:00"
+   },
+   {
+    "w": "Odalys",
+    "t": "The company's automatic notices (starred-task merges, disk keeper, idle and landing alarms) now...",
+    "at": "2026-11-18T22:01:00-05:00"
    }
   ],
   "count": {
-   "next": 528,
+   "next": 527,
    "wait": 31,
    "blocked": 3,
    "you": 10
   },
   "fin": {
-   "n": 2,
+   "n": 3,
    "rows": [
+    [
+     "T-4788",
+     "Turn feature sessions on for..."
+    ],
     [
      "T-4845",
      "Move every tool off the full..."
@@ -571,53 +595,54 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-19T03:15:05Z",
+  "at": "2026-11-19T03:18:02Z",
   "s": {
-   "T-4962": [
-    "mergetest",
-    "iPhone tests on the MacBook",
-    null
-   ],
    "T-4909": [
     "merging",
     "Mac tests at the main gate",
-    1795057445665
+    1795057442442
    ],
-   "T-4788": [
-    "merging",
-    "Mac tests at the main gate",
-    1795057685665
+   "T-4962": [
+    "testing",
+    "its own tests, in its copy",
+    1795058282442
    ],
    "T-4806": [
     "testing",
     "its own tests, in its copy",
-    1795057685665
+    1795057682442
    ],
    "T-4805": [
     "testing",
     "its own tests, in its copy",
-    1795055945665
+    1795055942442
+   ],
+   "T-4788": [
+    "merged",
+    "on main 10:16 PM ET",
+    1795058219000,
+    "Odalys"
    ]
   },
   "nm": {
-   "T-4962": "Make main pass its Xcode checks again",
    "T-4909": "End work sessions on a stall, not on the clock",
-   "T-4788": "Turn feature sessions on for every app feature",
+   "T-4962": "Make main pass its Xcode checks again",
    "T-4806": "Fix the causes of merge time-outs and runner errors",
-   "T-4805": "Record a cause for every failed merge"
+   "T-4805": "Record a cause for every failed merge",
+   "T-4788": "Turn feature sessions on for every app feature"
   },
   "wk": {
-   "T-4962": "Operator",
    "T-4909": "Odalys",
-   "T-4788": "Odalys",
+   "T-4962": "Operator",
    "T-4806": "Odalys",
    "T-4805": "Odalys",
+   "T-4788": "Odalys",
    "T-4845": "Odalys",
    "T-4912": "Odalys"
   }
  },
  "ln": {
-  "at": "2026-11-19T03:15:05Z",
+  "at": "2026-11-19T03:18:02Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -631,7 +656,7 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 594,
+    "conflicted": 597,
     "failed": null,
     "held": null,
     "retry": null,
@@ -645,12 +670,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-19T03:14:40Z",
-    "ld": 4.85,
+    "at": "2026-11-19T03:17:54Z",
+    "ld": 4.68,
     "c": 8,
     "sb": 0,
     "dk": [
-     8.4,
+     8.5,
      228.3
     ],
     "ss": [
@@ -660,12 +685,12 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-19T03:01:18Z",
-    "ld": 0.15,
+    "at": "2026-11-19T03:14:51Z",
+    "ld": 0.45,
     "c": 12,
     "sb": 0,
     "dk": [
-     357.5,
+     357.6,
      926.4
     ],
     "sn": []
@@ -679,13 +704,13 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 7 tasks",
-   "at": "2026-11-18T21:34:08-05:00"
+   "t": "Work session \u2013 8 tasks",
+   "at": "2026-11-18T22:17:02-05:00"
   }
  ],
  "reply": {
-  "sent": "2026-11-19T02:27:46Z",
-  "seconds": 379.0
+  "sent": "2026-11-19T03:15:03Z",
+  "seconds": 64.0
  },
  "inbox": [],
  "trimmed": [
@@ -700,13 +725,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 5,
+  "main": 6,
   "lanes": 0,
-  "total": 5,
-  "at": "10:15 PM",
+  "total": 6,
+  "at": "10:18 PM",
   "why": "",
-  "at_iso": "2026-11-19T03:15:00+00:00",
+  "at_iso": "2026-11-19T03:18:00+00:00",
   "started": "9:32 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 5, started 9:32 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 10:15 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 6, started 9:32 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 10:18 PM ET</p></section>"
  }
 }

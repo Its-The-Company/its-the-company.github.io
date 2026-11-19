@@ -48,16 +48,19 @@ Records: `ops/metrics/bottleneck.jsonl` (one row of every signal's value, limit 
 | `runner_busy` | share of readings with the MacBook runner busy, hourly | fixed 0.85 (Kingman) | ops/metrics/machine.jsonl `runner.status` |
 | `mini_load` | Mac mini load per core, hourly mean | xmr, cap = load line (10) | ops/metrics/machine.jsonl `load_per_core` |
 | `mini_disk_free` | free GB on the internal disk, hourly mean | xmr lower, floor = disk gate resume (20) | ops/metrics/machine.jsonl `disk_free_gb` |
-| `refusals` | gate refusals and workers' recorded refusals, 24 h | c_chart | ops/metrics/main_gate.jsonl, log/events.jsonl |
+| `refusals` | tool calls refused by a guard hook, the auto-mode classifier, the built-in safety check or a deny rule, 24 h, one per call (T-4955; until 11-18 this counted the gate's check rows and workers' refusal events) | c_chart | session streams ops/runs, ops/runs-archive (main <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> only; ops/plans/guard-refusals.md method) |
+| `gate_blocks` | commits the merge gate's commit check blocked, 24 h, one per commit however many check rows it wrote (T-4955) | c_chart | ops/metrics/main_gate.jsonl `refused`, `host_refused`, `suite_refused` |
 
 </div>
 
+
+Each refused step's wait (T-4955, an Investor #327): `check` writes one row per refused call or blocked commit to ops/metrics/refusal_waits.jsonl once its wait is known: `wait_s` from the refusal until work moved again. For a guard refusal, the next step in the same session thread that went through (the refused item itself stops by Commandment 14, so this is the session's pause, not the item's); a refusal at a stream's end waits until the session ended. For a blocked commit, the first later gate row of that author letting one of its files through, or a commit on main touching one of its files (that author's first, anyone's if none) within 72 h; past that, "not moved in 72 h". The bottleneck rows and `status` carry each signal's last-24-hour waits (n, median, max, still waiting).
 
 First read on real records, 11-17 10:5x PM ET (`status`): every signal within its limit except free disk (15.6 GB, two hours under the 20 GB resume line) and the process queue (10.7 waiting against 8, first hour of its per-queue history). Merge queue per-queue counts began at T-4814 tonight, so those three charts run on the rule in force until they have 8 hours.
 
 ## Not yet written as it happens (follow-up lines)
 
-- **Idle <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lanes</span> with work waiting.** Only text in ops/runs/dispatch.log; no row per tick of slots free and runnable tasks. Needs a row at its source (tools/dispatch.py, a hub file).
+- **Idle lanes with work waiting.** Only text in ops/runs/dispatch.log; no row per tick of slots free and runnable tasks. Needs a row at its source (tools/dispatch.py, a hub file).
 - **Failed lands by cause at the source.** The gate writes the failing rows but no cause field (bad test, broken code, time-out, runner, unknown, as in ops/plans/T-4787-red-causes.md); `red_unknown_share` reads the rows as written. A `cause` field belongs in tools/main_gate.py, which T-4806 is changing now.
 - **Supervisor tick hook.** `check` is not yet run each tick: tools/supervisor.sh is a hub file and its suite has to run green beside the land; a separate line does it.
 {% endraw %}

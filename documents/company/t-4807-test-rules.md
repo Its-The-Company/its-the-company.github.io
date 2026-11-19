@@ -79,7 +79,17 @@ research/inbound/):
   they took 60-418 s each (chain 418, guards 367, evidence 359, timelimit 338, failures 306, limits 303, reports 296,
   canary 290, metrics 232, salvage 202, accounting 194, queuecheck 104, lanestop 60). Thirteen parallel copies at once
   are themselves the load the suite then runs under. personal_pool_test.sh runs about 90 ticks of the real
-  personal_tick.sh one after another. Next: cut the per-tick cost (the stand-ins' process starts) and split by part.
+  personal_tick.sh one after another.
+- Rule 5, slice 3 (11-18): personal_pool_test.sh's reds were all time with no failed row: run alone at load 25-35 it
+  passed all 197 rows in 690 s. One tick of the real personal_tick.sh took 7.5 s there, of which 5.6 s was CPU (about
+  90 process starts), so the time is work, not a wait, and grows with the machine's load; no row waits on a fixed
+  sleep (its waits end on an event: land-live, the pause file, a reading count, or a short limit the row sets
+  itself). It is now three suites on one
+  fixture, tools/test_personal_pool.sh, which each part names: personal_pool_test.sh (60 rows: pool, <span title="A numbered batch of planned work, with its own plan file.">refill</span>, retries,
+  waits), personal_pool_requeue_test.sh (80: requeue, models, disk, merge limit, pins, Fable, cost) and
+  personal_pool_pause_test.sh (57: pause, usage-limit end, feature sessions, chain mark): 123 s, 147 s and 181 s at
+  load 5-18, each with its own limit. Every line of the old file is in one of the four. Left: personal_off_test.sh
+  (median 372 s, the same shape) and cutting the tick's per-run process starts.
 - site_swipe_test.py (T-4735, 11-18): stale, not a page fault. App (/app/, T-4240) became the top tab after Reports,
   so <span title="A memo that proposes one idea to the Investors as the product. Only a B or better becomes one.">Pitches</span>, the Reports section's last subtab, leads on to App as swipe.js's order says; the test still called Pitches
   the last stop, and the rows after it followed from that. Rows now: Pitches -> App, App is the last stop, App back to

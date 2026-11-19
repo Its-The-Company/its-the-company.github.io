@@ -146,6 +146,41 @@ to drain (not measured here).
 - A stuck job: each job has its own lock and time limit, so it holds only itself, never a worker start.
 - The coordinator's context: a restart from the handoff file; workers are not its children.
 - The Investor-owned files: amendment records keep their file-guard path (T-2346); nothing here edits rules/.
+
+## What stays between sessions (T-4958, 2026-11-18)
+
+Evan asked (#325 c6995142803, 6:52 PM) to itemize every between-session process and move into the session each one
+that would gain from it. The jobs loop (step 2, T-3301) was built on 11-07 but never switched on: its launchd job was a
+main-session step (`tools/install-launchd.sh --jobs`) that no lane could run, its line (T-3660) kept coming back
+empty and was archived with the unbuilt process lines on 11-17 (T-4092). T-4958 installs it, so these now run beside
+sessions on their own cadence (tools/jobs_loop.py JOBS): sync and push (2 min, sessions only), the merge queue,
+merge_first, MacBook results, main's green check, the disk keeper, starred-task notices (5 min), board upkeep, the
+records backup, proposal skips, the daily MacBook run (15 min), the runs archive (30 min), the quality and flow charts,
+stale waiting copies, test expiry (hourly), the nightly host suites, the bottleneck watch (15 min), and three new ones: the pool check (5 min,
+sessions only), the supervisor wakes (1 min) and the supervisor's launchd refresh (5 min, only with no supervisor
+process). The supervisor's fixed tick goes from 15 to 5 minutes as the safety net.
+
+Three stay in the supervisor's between-session steps, each for a reason:
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 3: What stays between sessions (T-4958, 2026-11-18), scrolls sideways" style="--tw:640px" markdown="1">
+
+| Job | Why it stays between sessions |
+| --- | --- |
+| The pull into the main folder (step 2, `git pull --rebase`) | It rewrites the folder every worker and the Operator are using; the guard forbids a pull while they work. During a session the loop's sync moves main only by fast-forward or a merge-tree commit under the lands' lock, and holds anything that touches an Investor-owned path or an open file, for this step. |
+| Proposal applies (the applier and amendment records) | They change Investor-owned files (`CLAUDE.md`, `rules/`, settings), which a running session has loaded and the file guard checks at close; they need the folder to themselves. |
+| The full site build (tools/site_publish.sh) | The Investors' 11-10 mandate (T-4141): no 15-minute full rebuild during a session; it adds load and its tests dirty the shared folder. It waits for a session's changes to settle; the live status carries Home meanwhile. Kept in the tick (ops/jobs_config.json switches the loop's copy off), since the loop would only catch the short gaps between chained sessions. |
+
+</div>
+
+
+Also staying in the tick, unchanged: the governor's decision and the session start itself, salvage of what a session
+left uncommitted, the session-end flag, the lane-claim sweep and lane stops (each needs the session to have ended),
+the disk sweep's hourly step 1b (T-3368), and the daily queue check (it runs only under the tick's own lock with no
+session). Investor messages already run during sessions (the inbox watcher).
+
+The old path stays one switch away: ops/jobs_config.json `{"enabled": false}` or `tools/install-launchd.sh --unjobs`
+gives every job back to the tick at once (`jobs_loop.py moved` prints nothing).
 {% endraw %}
 
 </div>

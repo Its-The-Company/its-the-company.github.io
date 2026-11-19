@@ -33,9 +33,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 ## Open (mine)
 
-
 - T-3560/T-3280 11-17 9a71fd25dd: landed (2025/0); T-3560 ticked. 11-18 merge session: <span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">parked</span>/b/...004550 has nothing main lacks (code + 7 <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">rulings</span> all on main). Open: T-3280 UI runs (testF/testM green, testF red mutant, Release). Lesson: check git log main for an earlier landing before replaying a parked ref.
-
 
 - T-4663 11-18: c107cc80d1 on main since 11-17; ticked on gate check J-20261118-0333-land-m (2065/0). Open: XC_TASK job J-20261118-0411 waits a push; review T-4872. Lesson: an xc.sh job waits the supervisor push; `main_gate.py check --task` reads a runner verdict now.
 
@@ -43,20 +41,21 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 - T-4858 11-18 22016c0c82 (scratch T-4858-idris, not landed): extension AppTransaction bound 2 s + .unknown held 15 min, late answer kept; test + purchases.md. Gate run 1 red only on Bundle.main scan (fixed: TreeHost.isExtension). Stopped: guard refused fetch+rebase after main moved. Open: a way to bring the copy up to main, then land, tick, review line, Evan's phone note. Lesson: Shared code finds the extension via TreeHost.isExtension.
 
-
 - T-4887 11-18: tap split into noteTouchDown/tapEnded; 2 unit tests, 5/5 mutants KILLED on runner (ops/runs/t4887-mutants.txt). Open: T-4888 widens the capture to CGPoint. Lesson: land_mutants --base <copy commit> runs before landing, ~15 min for 6.
-
 
 - T-1905 11-18 8ea5016048 landed (part 1: lister+plan+.sent.json+mirror; 2097/0); not ticked: boundary sending every Widget part + edited-sibling inversion. Lesson: local swiftc typecheck misses errors while ProPaywallView's asset errors are in; exclude it (and Runestone files) and it is reliable.
 
-- T-4771+T-4783 11-18 (scratch T-4771-idris, 0b2e1e0508+917c3ef090 on 80aa4318a4, not landed): gate J-20261118-1040-land-m-284df6 green 2101/0, commit refused (main moved); guard refused `rebase main` in the copy (rule 14). Open: same as T-4858. Lesson: a gate land that outlasts a main move can't be finished in-session; land right after a supervisor sync.
+- T-4771+T-4783 11-18: landed 844ef71f3f via land --from (6 files, checked). Not ticked: gate carried the 10:40 AM Xcode pass; owed a runner PyWidgetTests run at 844ef71f3f after the push (Ines's condition).
 
 - T-4631 11-18: premades placed by build scan (<span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span>-app.json) + finder notes every refusal (lane.refused). Lesson: no app code calls send_lane today; a person's script is judged only by its first widget run.
 
+- T-4750 11-18: replay on main since 6ef41bc26a; this land adds mutants-t4750.json + s6a line. Open: runner job J-20261118-1630, land_mutants at the land commit, tick.
+
 ## Lessons
 - Older lessons and dated logs: archive.md.
+- land --from: a carried verdict (main moved only in unnamed files) is not a run on the composed tree; files an earlier bring_up wrote go stale when main moves again: put them back from the copy's HEAD.
 
-
+- T-4784 11-18 412bd77516 landed + ticked: style pin = type(of: view.body) vs the same switch around its own face; no source scan.
 - T-4772 11-18 9496e859fa landed (testQ). Open: 26.0 run, 27.x runner job, Ines's doc-comment ruling.
 - T-4773 11-18: rerun due = a date (max(last+floor, min(ask, last+<span title="A measured fact that holds a grade below a letter, however good the rest is.">cap</span>))), not ask-sampled_at. Red first as a land_mutants job (old rule as the mutant, 4 tests red), 4/4 killed. Lesson: Core `swift test` is broken by LauncherEditorTests; probe Shared files with swiftc + a stub. land_xc drop takes lane ids only.
 {% endraw %}

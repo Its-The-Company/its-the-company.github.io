@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-19T08:45:26.776960+00:00",
+ "at": "2026-11-19T08:48:37.015260+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -220,7 +220,7 @@
    "task": "[tools] T-4726 fix red personal land test",
    "model": "opus",
    "started": "2026-11-19T08:07:31.727Z",
-   "seconds": 2275,
+   "seconds": 2465,
    "finished": null,
    "effort": "high"
   },
@@ -229,7 +229,7 @@
    "task": "[tools] T-4838 gate waits on runner progress",
    "model": "opus",
    "started": "2026-11-19T08:26:43.295Z",
-   "seconds": 1123,
+   "seconds": 1313,
    "finished": null,
    "effort": "high"
   },
@@ -238,7 +238,7 @@
    "task": "[tools] T-5065 clear answered waits each tick",
    "model": "opus",
    "started": "2026-11-19T08:26:51.402Z",
-   "seconds": 1115,
+   "seconds": 1305,
    "finished": null,
    "effort": "high"
   },
@@ -247,7 +247,7 @@
    "task": "[tools] T-4810 land waits fix then T-4809",
    "model": "opus",
    "started": "2026-11-19T08:25:56.830Z",
-   "seconds": 1169,
+   "seconds": 1360,
    "finished": null,
    "effort": "high"
   }
@@ -339,7 +339,7 @@
   "week_pct": 57.06,
   "usage_pct": 47.1,
   "work_pct": 81.4,
-  "read_at": "2026-11-19T08:45:00+00:00",
+  "read_at": "2026-11-19T08:48:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -450,7 +450,7 @@
  "lock_in": {
   "on": true,
   "pool": 3,
-  "at": "2026-11-19T03:45:00-05:00",
+  "at": "2026-11-19T03:48:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -724,82 +724,87 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-19T08:45:06Z",
+  "at": "2026-11-19T08:48:20Z",
   "s": {
    "T-4891": [
     "mergeq",
     "1st to merge",
-    1795076526730
+    1795076480109
    ],
    "T-4849": [
     "mergeq",
     "2nd to merge",
-    1795077366730
+    1795077380109
    ],
    "T-5000": [
     "mergeq",
     "3rd to merge",
-    1795066446730
+    1795066400109
    ],
    "T-4916": [
     "mergeq",
-    "5th to merge",
-    1795068426730
+    "4th to merge",
+    1795068440109
    ],
    "T-5002": [
     "mergeq",
     "6th to merge",
-    1795068486730
+    1795068440109
    ],
    "T-4899": [
-    "mergetest",
-    "Xcode checks on the MacBook, 7th to merge",
-    1795077366730
+    "mergeq",
+    "7th to merge",
+    1795068740109
    ],
    "T-4931": [
     "mergeq",
     "8th to merge",
-    1795068786730
+    1795068800109
    ],
    "T-4932": [
     "mergeq",
     "9th to merge",
-    1795069266730
+    1795069220109
    ],
    "T-4933": [
     "mergeq",
     "9th to merge",
-    1795069266730
+    1795069220109
    ],
    "T-4934": [
     "mergeq",
     "9th to merge",
-    1795069266730
+    1795069220109
    ],
    "T-4961": [
     "mergeq",
     "10th to merge",
-    1795077066730
+    1795077080109
    ],
    "T-4919": [
     "mergeq",
     "11th to merge",
-    1795075806730
+    1795075820109
+   ],
+   "T-5075": [
+    "merging",
+    "Mac tests at the main gate",
+    1795077980109
    ],
    "T-4843": [
     "merging",
     "Mac tests at the main gate",
-    1795076826730
+    1795076840109
    ],
    "T-4726": [
     "testing",
     "its own tests, in its copy",
-    1795076646730
+    1795077920109
    ],
    "T-5065": [
     "testing",
     "its own tests, in its copy",
-    1795077846730
+    1795077800109
    ],
    "T-4871": [
     "merged",
@@ -827,6 +832,7 @@
    "T-4934": "Check finished work before it ships",
    "T-4961": "Publish the twice-daily reports close to six",
    "T-4919": "Fix a MacBook test job that failed",
+   "T-5075": "Land the waits fix from a fresh copy",
    "T-4843": "Size each merge batch from measured data",
    "T-4726": "Fix the red personal land test",
    "T-5065": "Clear answered waits from the supervisor tick",
@@ -846,6 +852,7 @@
    "T-4934": "Pernille",
    "T-4961": "Odalys",
    "T-4919": "Operator",
+   "T-5075": "Odalys",
    "T-4843": "Odalys",
    "T-4726": "Odalys",
    "T-5065": "Odalys",
@@ -859,11 +866,11 @@
   }
  },
  "ln": {
-  "at": "2026-11-19T08:45:06Z",
+  "at": "2026-11-19T08:48:20Z",
   "mq": {
    "n": {
-    "checking": 1,
-    "inline": 11,
+    "checking": 0,
+    "inline": 12,
     "conflicted": 1,
     "failed": 0,
     "held": 0,
@@ -871,24 +878,15 @@
     "parked": 0
    },
    "m": {
-    "checking": 9,
-    "inline": 144,
-    "conflicted": 924,
+    "checking": null,
+    "inline": 148,
+    "conflicted": 927,
     "failed": null,
     "held": null,
     "retry": null,
     "parked": null
    },
-   "cur": [
-    [
-     [
-      "T-4899"
-     ],
-     "iPhone app tests",
-     "MacBook",
-     9
-    ]
-   ],
+   "cur": [],
    "ld": [
     25,
     "2026-11-19T08:40:15Z"
@@ -896,12 +894,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-19T08:44:44Z",
-    "ld": 6.63,
+    "at": "2026-11-19T08:47:33Z",
+    "ld": 5.77,
     "c": 8,
     "sb": 0,
     "dk": [
-     32.0,
+     32.1,
      228.3
     ],
     "ss": [
@@ -911,12 +909,12 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-19T08:37:34Z",
-    "ld": 4.57,
+    "at": "2026-11-19T08:45:26Z",
+    "ld": 1.55,
     "c": 12,
     "sb": 0,
     "dk": [
-     356.9,
+     356.8,
      926.4
     ],
     "sn": []
@@ -973,10 +971,10 @@
   "main": 4,
   "lanes": 2,
   "total": 6,
-  "at": "3:45 AM",
+  "at": "3:48 AM",
   "why": "",
-  "at_iso": "2026-11-19T08:45:00+00:00",
+  "at_iso": "2026-11-19T08:48:00+00:00",
   "started": "2:04 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 4, started 2:04 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 3:45 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 4, started 2:04 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 3:48 AM ET</p></section>"
  }
 }

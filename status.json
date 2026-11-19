@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-19T13:20:28.461378+00:00",
+ "at": "2026-11-19T13:23:29.626513+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -124,31 +124,50 @@
   "landed": 36,
   "failed": 0
  },
- "workers": [],
- "who": "",
+ "workers": [
+  {
+   "name": "odalys",
+   "task": "[tools] T-5113 supervisor live-lock fix",
+   "model": "opus",
+   "started": "2026-11-19T13:22:39.171Z",
+   "seconds": 50,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "pernille",
+   "task": "[build] T-4565 Swift button action request",
+   "model": "opus",
+   "started": "2026-11-19T13:23:10.527Z",
+   "seconds": 19,
+   "finished": null,
+   "effort": "high"
+  }
+ ],
+ "who": "Odalys, Pernille",
  "recent": [],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 623,
+  "runnable_count": 624,
   "blocked_count": 1
  },
  "meter": {
   "five_hour": {
    "pct": 19.0,
-   "resets_at": "2026-11-19T16:10:00.298575+00:00",
+   "resets_at": "2026-11-19T11:10:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-19T08:19:02.638997-05:00",
-   "source": "usage",
+   "read_at": "2026-11-19T08:22:58.456722-05:00",
+   "source": "live",
    "left": 81.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 73.0,
-   "resets_at": "2026-11-22T07:00:00.298605+00:00",
+   "resets_at": "2026-11-22T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-19T08:19:02.638997-05:00",
-   "source": "usage",
+   "read_at": "2026-11-19T08:22:58.456722-05:00",
+   "source": "live",
    "left": 27.0,
    "left_words": "of your weekly allowance left"
   },
@@ -159,7 +178,7 @@
    "read_at": "2026-11-19T08:19:02.638997-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-19T08:19:02.638997-05:00"
+  "read_at": "2026-11-19T08:22:58.456722-05:00"
  },
  "ui": {
   "week_pct": 0.104,
@@ -179,7 +198,7 @@
   "week_pct": 68.99,
   "usage_pct": 48.6,
   "work_pct": 81.9,
-  "read_at": "2026-11-19T13:20:00+00:00",
+  "read_at": "2026-11-19T13:23:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -200,23 +219,23 @@
   }
  ],
  "disk": {
-  "free_gb": 42,
+  "free_gb": 39,
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 169
+   "free_gb": 171
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-19T08:16:00-05:00",
+   "at": "2026-11-19T08:23:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 3,
-  "at": "2026-11-19T08:20:00-05:00",
+  "at": "2026-11-19T08:23:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -233,25 +252,27 @@
  },
  "lanes": [
   {
-   "name": "Idris",
-   "state": "next",
-   "task": "Idris, P1, from T-4755 (Investor an Investor...",
-   "model": null,
-   "since": null,
-   "next": []
-  },
-  {
    "name": "Odalys",
-   "state": "next",
-   "task": "Odalys, P0 (merge-first; process queue; opened by...",
-   "model": null,
-   "since": null,
-   "next": []
+   "state": "running",
+   "task": "[tools] T-5113 supervisor live-lock fix",
+   "model": "opus",
+   "since": "2026-11-19T13:22:39.171Z",
+   "next": [],
+   "effort": "high"
   },
   {
    "name": "Pernille",
+   "state": "running",
+   "task": "[build] T-4565 Swift button action request",
+   "model": "opus",
+   "since": "2026-11-19T13:23:10.527Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
+   "name": "Idris",
    "state": "next",
-   "task": "Pernille, P0, from T-4694 (nightly run of every suite,...",
+   "task": "Idris, P1, from T-4755 (Investor an Investor...",
    "model": null,
    "since": null,
    "next": []
@@ -282,9 +303,37 @@
   }
  ],
  "tasks": {
-  "run": [],
+  "run": [
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Stop the supervisor breaking a live session's lock",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-19T13:22:39.171Z",
+    "o": "c",
+    "task": "T-5113"
+   },
+   {
+    "w": "Pernille",
+    "k": "build",
+    "t": "Send button actions from Swift, schema names checked",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-19T13:23:10.527Z",
+    "o": "c",
+    "task": "T-4565"
+   }
+  ],
   "src": "plan",
   "open": [
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Stop the supervisor breaking a live...",
+    "s": "next",
+    "o": "c"
+   },
    {
     "w": "Odalys",
     "k": "tools",
@@ -347,13 +396,6 @@
     "t": "Fix the red personal account test",
     "s": "next",
     "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Fix the red queue bars test",
-    "s": "next",
-    "o": "c"
    }
   ],
   "done": [
@@ -374,7 +416,7 @@
    }
   ],
   "count": {
-   "next": 623,
+   "next": 624,
    "wait": 1,
    "blocked": 0,
    "you": 1
@@ -423,122 +465,122 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-19T13:20:13Z",
+  "at": "2026-11-19T13:23:29Z",
   "s": {
    "T-4850": [
     "merging",
     "",
-    1795092373627
+    1795092329626
    ],
    "T-4994": [
     "merging",
     "",
-    1795092373627
+    1795092329626
    ],
    "T-4891": [
     "merging",
     "",
-    1795092373627
+    1795092329626
    ],
    "T-4849": [
     "merging",
     "",
-    1795092373627
+    1795092329626
    ],
    "T-4899": [
     "mergeq",
     "",
-    1795075813627
+    1795075829626
    ],
    "T-4919": [
     "mergeq",
     "",
-    1795075813627
+    1795075829626
    ],
    "T-4961": [
     "mergeq",
     "",
-    1795080793627
+    1795080809626
    ],
    "T-4871": [
     "mergeq",
     "",
-    1795080793627
+    1795080809626
    ],
    "T-4795": [
     "mergeq",
     "",
-    1795081993627
+    1795082009626
    ],
    "T-3402": [
     "mergeq",
     "",
-    1795082233627
+    1795082249626
    ],
    "T-0902": [
     "mergeq",
     "",
-    1795082473627
+    1795082489626
    ],
    "T-5057": [
     "mergeq",
     "",
-    1795083073627
+    1795083029626
    ],
    "T-5045": [
     "mergeq",
     "",
-    1795083253627
+    1795083269626
    ],
    "T-0349": [
     "mergeq",
     "",
-    1795084033627
+    1795084049626
    ],
    "T-4681": [
     "mergeq",
     "",
-    1795084213627
+    1795084229626
    ],
    "T-5037": [
     "mergeq",
     "",
-    1795084273627
+    1795084289626
    ],
    "T-2378": [
     "mergeq",
     "",
-    1795093693627
+    1795093709626
    ],
    "T-4807": [
     "mergeq",
     "",
-    1795093693627
+    1795093709626
    ],
    "T-0101": [
     "mergeq",
     "",
-    1795093213627
+    1795093169626
    ],
    "T-5062": [
     "mergeq",
     "",
-    1795093213627
+    1795093169626
    ],
    "T-5095": [
     "merging",
     "",
-    1795092373627
+    1795092389626
    ],
    "T-5102": [
     "merging",
     "",
-    1795094233627
+    1795094249626
    ],
    "T-5048": [
     "merging",
     "",
-    1795093933627
+    1795093949626
    ],
    "T-4866": [
     "testing",
@@ -600,7 +642,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-19T13:20:13Z",
+  "at": "2026-11-19T13:23:29Z",
   "mq": {
    "n": {
     "checking": 4,
@@ -612,9 +654,9 @@
     "parked": 0
    },
    "m": {
-    "checking": 34,
-    "inline": 187,
-    "conflicted": 1199,
+    "checking": 38,
+    "inline": 191,
+    "conflicted": 1203,
     "failed": null,
     "held": null,
     "retry": null,
@@ -627,7 +669,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     34
+     38
     ],
     [
      [
@@ -635,7 +677,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     34
+     38
     ],
     [
      [
@@ -643,7 +685,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     34
+     38
     ],
     [
      [
@@ -651,7 +693,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     34
+     38
     ]
    ],
    "ld": [
@@ -661,8 +703,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-19T13:20:14Z",
-    "ld": 6.04,
+    "at": "2026-11-19T13:22:52Z",
+    "ld": 5.79,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -695,7 +737,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session",
+   "t": "Work session \u2013 2 tasks",
    "at": "2026-11-19T08:19:25-05:00"
   }
  ],
@@ -715,13 +757,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 0,
+  "main": 2,
   "lanes": 0,
-  "total": 0,
-  "at": "8:20 AM",
-  "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
-  "at_iso": "2026-11-19T13:20:00+00:00",
+  "total": 2,
+  "at": "8:23 AM",
+  "why": "",
+  "at_iso": "2026-11-19T13:23:00+00:00",
   "started": "8:19 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0, started 8:19 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 8:20 AM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 8:19 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 8:23 AM ET</p></section>"
  }
 }

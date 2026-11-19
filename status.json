@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-19T18:37:46.315357+00:00",
+ "at": "2026-11-19T18:42:35.525290+00:00",
  "session": {
   "active": false,
   "kind": "",
@@ -22,10 +22,6 @@
     "acct": "Personal b",
     "steps": [
      {
-      "s": "testq",
-      "at": 1795070443
-     },
-     {
       "s": "macbook",
       "at": 1795071746
      },
@@ -45,7 +41,7 @@
     "steps": [
      {
       "s": "macbook",
-      "at": 1795070354
+      "at": 1795073688
      }
     ]
    },
@@ -220,13 +216,61 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-19T13:43:35-05:00",
+ "next_tick": "2026-11-19T13:53:27-05:00",
  "personal": {
   "week_pct": 71.18,
   "usage_pct": 45.7,
   "work_pct": 80.6,
-  "read_at": "2026-11-19T18:38:00+00:00",
+  "read_at": "2026-11-19T18:45:00+00:00",
   "running": [
+   {
+    "lane": "a",
+    "task": "T-3974",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Never leave the merge step idle while work waits",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-19T13:40:22-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a",
+    "task": "T-4843",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Size each merge batch from measured data",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-19T13:40:22-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a",
+    "task": "T-4508",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Alarm when one account's work keeps being refused",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-19T13:40:22-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a",
+    "task": "T-4446",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Commit the company's records once per supervisor round",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-19T13:40:22-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
    {
     "lane": "b3",
     "task": "T-4182",
@@ -268,14 +312,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-19T13:36:00-05:00",
+   "at": "2026-11-19T13:43:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 3,
-  "at": "2026-11-19T13:38:00-05:00",
+  "at": "2026-11-19T13:45:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -473,52 +517,58 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-19T18:37:46Z",
+  "at": "2026-11-19T18:42:35Z",
   "s": {
    "T-4181": [
     "merging",
     "Host checks on the Mac mini",
-    1795112746315
+    1795112735525
    ],
    "T-4850": [
     "mergeq",
     "1st to merge",
-    1795111606315
+    1795111595525
    ],
    "T-4891": [
     "mergeq",
     "2nd to merge",
-    1795111666315
+    1795111655525
    ],
    "T-5070": [
     "mergeq",
     "2nd to merge",
-    1795111666315
+    1795111655525
    ],
    "T-4758": [
     "mergeq",
     "4th to merge",
-    1795112926315
+    1795112915525
    ],
    "T-4787": [
     "mergeq",
     "6th to merge",
-    1795112986315
+    1795112975525
    ],
    "T-4913": [
     "mergeq",
     "8th to merge",
-    1795111666315
+    1795111655525
    ],
    "T-5095": [
     "mergeq",
     "9th to merge",
-    1795113466315
+    1795113455525
    ],
    "T-4960": [
     "mergeq",
     "9th to merge",
-    1795113466315
+    1795113455525
+   ],
+   "T-4843": [
+    "merged",
+    "on main 11:24 AM ET",
+    1795105455000,
+    "Odalys"
    ]
   },
   "nm": {
@@ -530,7 +580,8 @@
    "T-4787": "Count failed merges by cause: bad test or broken code",
    "T-4913": "Stop the safety guard refusing safe work",
    "T-5095": "Land the disk sweep job from a fresh copy",
-   "T-4960": "Propose the five-minute supervisor wording"
+   "T-4960": "Propose the five-minute supervisor wording",
+   "T-4843": "Size each merge batch from measured data"
   },
   "wk": {
    "T-4181": "Idris",
@@ -541,11 +592,12 @@
    "T-4787": "Odalys",
    "T-4913": "Odalys",
    "T-5095": "Pernille",
-   "T-4960": "Odalys"
+   "T-4960": "Odalys",
+   "T-4843": "Odalys"
   }
  },
  "ln": {
-  "at": "2026-11-19T18:37:46Z",
+  "at": "2026-11-19T18:42:35Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -557,9 +609,9 @@
     "parked": 0
    },
    "m": {
-    "checking": 12,
-    "inline": 19,
-    "conflicted": 192,
+    "checking": 17,
+    "inline": 24,
+    "conflicted": 197,
     "failed": null,
     "held": null,
     "retry": null,
@@ -572,7 +624,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     12
+     17
     ]
    ],
    "ld": [
@@ -582,12 +634,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-19T18:37:47Z",
-    "ld": 6.27,
+    "at": "2026-11-19T18:42:36Z",
+    "ld": 5.9,
     "c": 8,
     "sb": 0,
     "dk": [
-     36.2,
+     35.6,
      228.3
     ],
     "ss": [
@@ -610,6 +662,15 @@
   }
  },
  "operators": [
+  {
+   "w": "Operator",
+   "a": "Evan's Account",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session \u2013 4 tasks",
+   "at": "2026-11-19T13:40:22-05:00"
+  },
   {
    "w": "Operator",
    "a": "Jeremy's Account",
@@ -637,12 +698,12 @@
  ],
  "agents_now": {
   "main": 0,
-  "lanes": 1,
-  "total": 1,
-  "at": "1:38 PM",
+  "lanes": 2,
+  "total": 2,
+  "at": "1:45 PM",
   "why": "",
-  "at_iso": "2026-11-19T18:38:00+00:00",
+  "at_iso": "2026-11-19T18:45:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 1:38 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 1:45 PM ET</p></section>"
  }
 }

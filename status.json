@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-19T07:38:07.356110+00:00",
+ "at": "2026-11-19T07:41:04.587104+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -222,7 +222,7 @@
    "task": "[tools] T-5063 board growth count and fold",
    "model": "opus",
    "started": "2026-11-19T07:05:50.003Z",
-   "seconds": 1937,
+   "seconds": 2114,
    "finished": null,
    "effort": "high"
   },
@@ -231,7 +231,7 @@
    "task": "[tools] T-4850 bring Mac mini load down",
    "model": "opus",
    "started": "2026-11-19T07:33:51.570Z",
-   "seconds": 255,
+   "seconds": 433,
    "finished": null,
    "effort": "high"
   }
@@ -250,24 +250,24 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 591,
+  "runnable_count": 592,
   "blocked_count": 28
  },
  "meter": {
   "five_hour": {
-   "pct": 9.0,
+   "pct": 10.0,
    "resets_at": "2026-11-19T06:10:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-19T02:34:36.742610-05:00",
+   "read_at": "2026-11-19T02:39:38.298934-05:00",
    "source": "live",
-   "left": 91.0,
+   "left": 90.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 65.0,
    "resets_at": "2026-11-22T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-19T02:34:36.742610-05:00",
+   "read_at": "2026-11-19T02:39:38.298934-05:00",
    "source": "live",
    "left": 35.0,
    "left_words": "of your weekly allowance left"
@@ -279,7 +279,7 @@
    "read_at": "2026-11-19T02:04:04.659976-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-19T02:34:36.742610-05:00"
+  "read_at": "2026-11-19T02:39:38.298934-05:00"
  },
  "ui": {
   "week_pct": 0.092,
@@ -299,7 +299,7 @@
   "week_pct": 57.06,
   "usage_pct": 47.1,
   "work_pct": 81.4,
-  "read_at": "2026-11-19T07:38:00+00:00",
+  "read_at": "2026-11-19T07:41:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -346,7 +346,7 @@
   }
  ],
  "disk": {
-  "free_gb": 38,
+  "free_gb": 36,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -355,14 +355,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-19T02:35:00-05:00",
+   "at": "2026-11-19T02:39:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 3,
-  "at": "2026-11-19T02:38:00-05:00",
+  "at": "2026-11-19T02:41:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -373,7 +373,7 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 2 (at its floor: load 18.0 a core is over 10)",
+  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 2 (at its floor: load 15.2 a core is over 10)",
   "n": 2,
   "at": "2026-11-19T02:04:05.487764-05:00"
  },
@@ -542,7 +542,7 @@
    }
   ],
   "count": {
-   "next": 591,
+   "next": 592,
    "wait": 27,
    "blocked": 1,
    "you": 9
@@ -596,77 +596,72 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-19T07:38:07Z",
+  "at": "2026-11-19T07:41:04Z",
   "s": {
    "T-4916": [
     "merging",
     "Host checks on the Mac mini",
-    1795073767356
+    1795073764587
    ],
    "T-4988": [
     "mergeq",
     "1st to merge",
-    1795071967356
+    1795071964587
    ],
    "T-5006": [
     "mergeq",
     "1st to merge",
-    1795071967356
+    1795071964587
    ],
    "T-5000": [
     "mergeq",
     "2nd to merge",
-    1795066447356
+    1795066444587
    ],
    "T-5002": [
     "mergeq",
     "4th to merge",
-    1795068487356
+    1795068484587
    ],
    "T-4899": [
     "mergeq",
     "5th to merge",
-    1795068727356
+    1795068724587
    ],
    "T-4931": [
     "mergeq",
     "6th to merge",
-    1795068727356
+    1795068724587
    ],
    "T-4919": [
     "mergeq",
     "7th to merge",
-    1795068727356
+    1795068724587
    ],
    "T-4932": [
     "mergeq",
     "9th to merge",
-    1795068907356
+    1795068904587
    ],
    "T-4933": [
     "mergeq",
     "10th to merge",
-    1795069087356
+    1795069084587
    ],
    "T-4934": [
     "mergeq",
     "11th to merge",
-    1795069207356
+    1795069204587
    ],
    "T-4871": [
     "mergeq",
     "14th to merge",
-    1795072927356
+    1795072924587
    ],
    "T-5063": [
     "merging",
-    "Mac tests at the main gate",
-    1795073827356
-   ],
-   "T-4964": [
-    "merging",
-    "Mac tests at the main gate",
-    1795073887356
+    "Mac tests at the main gate \u00b7 3 groups of tests done, 1 red",
+    1795073824587
    ]
   },
   "nm": {
@@ -682,8 +677,7 @@
    "T-4933": "Check finished work before it ships",
    "T-4934": "Check finished work before it ships",
    "T-4871": "Check the two-way editing week figure against the code",
-   "T-5063": "Keep new tasks from outgrowing finished ones",
-   "T-4964": "Name machine-made task lines by what they fix"
+   "T-5063": "Keep new tasks from outgrowing finished ones"
   },
   "wk": {
    "T-4916": "Pernille",
@@ -699,12 +693,11 @@
    "T-4934": "Pernille",
    "T-4871": "Idris",
    "T-5063": "Odalys",
-   "T-4964": "Odalys",
    "T-5034": "Odalys"
   }
  },
  "ln": {
-  "at": "2026-11-19T07:38:07Z",
+  "at": "2026-11-19T07:41:04Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -716,9 +709,9 @@
     "parked": 0
    },
    "m": {
-    "checking": 2,
-    "inline": 83,
-    "conflicted": 857,
+    "checking": 5,
+    "inline": 86,
+    "conflicted": 860,
     "failed": null,
     "held": null,
     "retry": null,
@@ -731,7 +724,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     2
+     5
     ]
    ],
    "ld": [
@@ -741,21 +734,19 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-19T07:37:46Z",
-    "ld": 14.97,
+    "at": "2026-11-19T07:41:05Z",
+    "ld": 15.97,
     "c": 8,
-    "sb": 1,
+    "sb": 0,
     "dk": [
-     37.6,
+     38.5,
      228.3
     ],
     "ss": [
      170.0,
      953.7
     ],
-    "sn": [
-     "iPhone Air"
-    ]
+    "sn": []
    },
    "macbook": {
     "at": "2026-11-19T07:21:42Z",
@@ -810,10 +801,10 @@
   "main": 2,
   "lanes": 1,
   "total": 3,
-  "at": "2:38 AM",
+  "at": "2:41 AM",
   "why": "",
-  "at_iso": "2026-11-19T07:38:00+00:00",
+  "at_iso": "2026-11-19T07:41:00+00:00",
   "started": "2:04 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 2:04 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 2:38 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 2:04 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 2:41 AM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-19T09:47:51.125960+00:00",
+ "at": "2026-11-19T09:50:58.750704+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -156,7 +156,7 @@
    "task": "[tools] T-4726 fix red personal land test",
    "model": "opus",
    "started": "2026-11-19T08:07:31.727Z",
-   "seconds": 6019,
+   "seconds": 6207,
    "finished": null,
    "effort": "high"
   },
@@ -165,7 +165,7 @@
    "task": "[tools] T-4838 gate waits on runner progress",
    "model": "opus",
    "started": "2026-11-19T08:26:43.295Z",
-   "seconds": 4867,
+   "seconds": 5055,
    "finished": null,
    "effort": "high"
   },
@@ -174,7 +174,7 @@
    "task": "[tools] T-4810 land waits fix then T-4809",
    "model": "opus",
    "started": "2026-11-19T08:25:56.830Z",
-   "seconds": 4914,
+   "seconds": 5101,
    "finished": null,
    "effort": "high"
   },
@@ -183,7 +183,7 @@
    "task": "[build] T-4888 wrapped-line tap caret fix",
    "model": "opus",
    "started": "2026-11-19T08:53:21.795Z",
-   "seconds": 3269,
+   "seconds": 3456,
    "finished": null,
    "effort": "high"
   },
@@ -192,7 +192,7 @@
    "task": "[tools] T-4992 land then T-4993 disk sweep",
    "model": "opus",
    "started": "2026-11-19T08:59:42.682Z",
-   "seconds": 2888,
+   "seconds": 3076,
    "finished": null,
    "effort": "high"
   },
@@ -201,7 +201,7 @@
    "task": "[tools] T-4986 T-3806 T-4907 lands",
    "model": "opus",
    "started": "2026-11-19T08:59:52.032Z",
-   "seconds": 2879,
+   "seconds": 3066,
    "finished": null,
    "effort": "high"
   },
@@ -210,7 +210,7 @@
    "task": "[tools] T-5065 fix supervisor test red and land",
    "model": "opus",
    "started": "2026-11-19T09:40:28.974Z",
-   "seconds": 442,
+   "seconds": 629,
    "finished": null,
    "effort": "high"
   }
@@ -258,19 +258,19 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 24.0,
+   "pct": 25.0,
    "resets_at": "2026-11-19T06:10:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-19T04:43:18.255627-05:00",
+   "read_at": "2026-11-19T04:50:28.907572-05:00",
    "source": "live",
-   "left": 76.0,
+   "left": 75.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 67.0,
    "resets_at": "2026-11-22T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-19T04:43:18.255627-05:00",
+   "read_at": "2026-11-19T04:50:28.907572-05:00",
    "source": "live",
    "left": 33.0,
    "left_words": "of your weekly allowance left"
@@ -282,7 +282,7 @@
    "read_at": "2026-11-19T02:04:04.659976-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-19T04:43:18.255627-05:00"
+  "read_at": "2026-11-19T04:50:28.907572-05:00"
  },
  "ui": {
   "week_pct": 0.092,
@@ -302,8 +302,104 @@
   "week_pct": 57.06,
   "usage_pct": 47.1,
   "work_pct": 81.4,
-  "read_at": "2026-11-19T09:48:00+00:00",
+  "read_at": "2026-11-19T09:51:00+00:00",
   "running": [
+   {
+    "lane": "a",
+    "task": "T-5045",
+    "w": "Maren",
+    "k": "site",
+    "t": "Date the Home merge-only line, hide it after a day",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-19T04:51:16-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a",
+    "task": "T-0349",
+    "w": "Pernille",
+    "k": "tools",
+    "t": "Fix gaps in the package sandbox build step",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-19T04:51:16-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a",
+    "task": "T-3402",
+    "w": "Ines",
+    "k": "plan",
+    "t": "Check whether the OpenSSL removal still fits 1.0",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-19T04:51:16-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a",
+    "task": "T-5037",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Break the Machine tab's \"Other\" storage into named parts",
+    "m": "sonnet",
+    "e": "medium",
+    "at": "2026-11-19T04:51:16-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a3",
+    "task": "T-5057",
+    "w": "Odalys",
+    "k": "site",
+    "t": "Chat notifications open with the reply's own words",
+    "m": "sonnet",
+    "e": "medium",
+    "at": "2026-11-19T04:51:20-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a3",
+    "task": "T-0101",
+    "w": "Odalys",
+    "k": "plan",
+    "t": "Write the design note for online packages in 1.1",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-19T04:51:20-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a3",
+    "task": "T-0902",
+    "w": "Ines",
+    "k": "plan",
+    "t": "Check precedent for an in-app gallery of user code",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-19T04:51:20-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a3",
+    "task": "T-5062",
+    "w": "Odalys",
+    "k": "site",
+    "t": "The site sends its own push notices to a phone",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-19T04:51:20-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
    {
     "lane": "b2",
     "task": "T-4850",
@@ -391,6 +487,7 @@
     "e": "high",
     "at": "2026-11-19T04:45:45-05:00",
     "n": "Jeremy",
+    "d": 1,
     "src": "plan-b"
    },
    {
@@ -425,7 +522,7 @@
   }
  ],
  "disk": {
-  "free_gb": 38,
+  "free_gb": 39,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -434,14 +531,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-19T04:43:00-05:00",
+   "at": "2026-11-19T04:50:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 3,
-  "at": "2026-11-19T04:48:00-05:00",
+  "at": "2026-11-19T04:51:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -452,8 +549,8 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 13 (raised a step: load, time-outs, failed lands and redone tasks all under their lines)",
-  "n": 13,
+  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 14 (raised a step: load, time-outs, failed lands and redone tasks all under their lines)",
+  "n": 14,
   "at": "2026-11-19T02:04:05.487764-05:00"
  },
  "lanes": [
@@ -747,47 +844,47 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-19T09:47:28Z",
+  "at": "2026-11-19T09:50:58Z",
   "s": {
    "T-4850": [
     "mergeq",
     "1st to merge",
-    1795079488785
+    1795079518750
    ],
    "T-4899": [
     "mergeq",
     "2nd to merge",
-    1795075828785
+    1795075798750
    ],
    "T-4919": [
     "mergeq",
     "2nd to merge",
-    1795075828785
+    1795075798750
    ],
    "T-4961": [
     "mergeq",
     "3rd to merge",
-    1795077088785
+    1795077118750
    ],
    "T-4871": [
     "mergeq",
     "4th to merge",
-    1795080808785
+    1795080838750
    ],
    "T-5075": [
     "merging",
     "Mac tests at the main gate",
-    1795081588785
+    1795081618750
    ],
    "T-4993": [
     "merging",
     "Mac tests at the main gate \u00b7 5 groups of tests done, 1 red",
-    1795080988785
+    1795081018750
    ],
    "T-4986": [
     "merging",
     "Mac tests at the main gate",
-    1795080148785
+    1795080118750
    ],
    "T-4888": [
     "testing",
@@ -797,7 +894,7 @@
    "T-5065": [
     "testing",
     "its own tests, in its copy",
-    1795081288785
+    1795081258750
    ],
    "T-4849": [
     "merged",
@@ -863,7 +960,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-19T09:47:28Z",
+  "at": "2026-11-19T09:50:58Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -876,8 +973,8 @@
    },
    "m": {
     "checking": null,
-    "inline": 76,
-    "conflicted": 987,
+    "inline": 79,
+    "conflicted": 990,
     "failed": null,
     "held": null,
     "retry": null,
@@ -891,12 +988,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-19T09:47:05Z",
-    "ld": 3.98,
+    "at": "2026-11-19T09:51:05Z",
+    "ld": 5.21,
     "c": 8,
     "sb": 0,
     "dk": [
-     39.3,
+     39.2,
      228.3
     ],
     "ss": [
@@ -967,12 +1064,12 @@
  ],
  "agents_now": {
   "main": 7,
-  "lanes": 2,
-  "total": 9,
-  "at": "4:48 AM",
+  "lanes": 4,
+  "total": 11,
+  "at": "4:51 AM",
   "why": "",
-  "at_iso": "2026-11-19T09:48:00+00:00",
+  "at_iso": "2026-11-19T09:51:00+00:00",
   "started": "2:04 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>9</b> agents running now</p><p class=\"an-sub\">Main session 7, started 2:04 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 4:48 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>11</b> agents running now</p><p class=\"an-sub\">Main session 7, started 2:04 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 4:51 AM ET</p></section>"
  }
 }

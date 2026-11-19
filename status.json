@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-19T14:25:43.185328+00:00",
+ "at": "2026-11-19T14:28:47.702629+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -109,7 +109,7 @@
    "task": "[tools] T-4986 T-3806 T-4907 lands",
    "model": "opus",
    "started": "2026-11-19T08:59:52.032Z",
-   "seconds": 19551,
+   "seconds": 19735,
    "finished": null,
    "effort": "high"
   },
@@ -118,7 +118,7 @@
    "task": "[tools] T-5095 land disk sweep from fresh copy",
    "model": "opus",
    "started": "2026-11-19T11:25:02.967Z",
-   "seconds": 10840,
+   "seconds": 11024,
    "finished": null,
    "effort": "high"
   },
@@ -127,7 +127,7 @@
    "task": "[build] T-5047 token test No view card",
    "model": "opus",
    "started": "2026-11-19T12:06:07.166Z",
-   "seconds": 8376,
+   "seconds": 8560,
    "finished": null,
    "effort": "high"
   },
@@ -136,22 +136,21 @@
    "task": "[research] T-5135 one merge route deep dive",
    "model": "opus",
    "started": "2026-11-19T14:19:19.776Z",
-   "seconds": 383,
+   "seconds": 567,
    "finished": null,
    "effort": "high"
-  },
+  }
+ ],
+ "who": "Odalys x2, Pernille, Idris",
+ "recent": [
   {
    "name": "ines",
    "task": "[tools] T-5136 every report a Claude doc",
    "model": "opus",
    "started": "2026-11-19T14:23:33.728Z",
-   "seconds": 129,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Odalys x2, Pernille, Idris, Ines",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-19T14:27:04.333000+00:00"
+  },
   {
    "name": "idris",
    "task": "[test] T-4866 rerun Pro row large-text test",
@@ -175,37 +174,29 @@
    "started": "2026-11-19T13:13:32.280Z",
    "seconds": null,
    "finished": "2026-11-19T13:15:24.079000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-4838 gate waits on runner progress",
-   "model": "opus",
-   "started": "2026-11-19T08:26:43.295Z",
-   "seconds": null,
-   "finished": "2026-11-19T13:12:48.640000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 632,
+  "runnable_count": 631,
   "blocked_count": 1
  },
  "meter": {
   "five_hour": {
-   "pct": 34.0,
+   "pct": 35.0,
    "resets_at": "2026-11-19T11:10:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-19T09:21:57.511377-05:00",
+   "read_at": "2026-11-19T09:28:28.630395-05:00",
    "source": "live",
-   "left": 66.0,
+   "left": 65.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 74.0,
    "resets_at": "2026-11-22T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-19T09:21:57.511377-05:00",
+   "read_at": "2026-11-19T09:28:28.630395-05:00",
    "source": "live",
    "left": 26.0,
    "left_words": "of your weekly allowance left"
@@ -217,7 +208,7 @@
    "read_at": "2026-11-19T08:19:02.638997-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-19T09:21:57.511377-05:00"
+  "read_at": "2026-11-19T09:28:28.630395-05:00"
  },
  "ui": {
   "week_pct": 0.104,
@@ -237,7 +228,7 @@
   "week_pct": 68.99,
   "usage_pct": 48.6,
   "work_pct": 81.9,
-  "read_at": "2026-11-19T14:25:00+00:00",
+  "read_at": "2026-11-19T14:28:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -274,7 +265,7 @@
  "lock_in": {
   "on": true,
   "pool": 3,
-  "at": "2026-11-19T09:25:00-05:00",
+  "at": "2026-11-19T09:28:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -318,18 +309,17 @@
    "effort": "high"
   },
   {
-   "name": "Ines",
-   "state": "running",
-   "task": "[tools] T-5136 every report a Claude doc",
-   "model": "opus",
-   "since": "2026-11-19T14:23:33.728Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
    "name": "Maren",
    "state": "next",
    "task": "Maren, P0, from T-4694 (nightly run of every suite,...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
+   "name": "Ines",
+   "state": "next",
+   "task": "Ines, P2, from T-1110 (Wrenna,...",
    "model": null,
    "since": null,
    "next": []
@@ -384,16 +374,6 @@
     "at": "2026-11-19T14:19:19.776Z",
     "o": "c",
     "task": "T-5135"
-   },
-   {
-    "w": "Ines",
-    "k": "tools",
-    "t": "Make every report a Claude document too",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-19T14:23:33.728Z",
-    "o": "c",
-    "task": "T-5136"
    }
   ],
   "open": [
@@ -470,6 +450,11 @@
   ],
   "done": [
    {
+    "w": "Ines",
+    "t": "Every morning and evening report is now also made into a Claude document, with its link posted...",
+    "at": "2026-11-19T09:26:00-05:00"
+   },
+   {
     "w": "Odalys",
     "t": "Process work waits mostly because lane merges go one at a time and each holds that turn through...",
     "at": "2026-11-19T09:16:00-05:00"
@@ -478,22 +463,21 @@
     "w": "Operator",
     "t": "This line duplicated T-5126 (the fix for slow process merges), opened by another session in the...",
     "at": "2026-11-19T09:08:00-05:00"
-   },
-   {
-    "w": "Pernille",
-    "t": "Tapping a widget button now sends the app's Python the name of the function the button calls and...",
-    "at": "2026-11-19T09:07:00-05:00"
    }
   ],
   "count": {
-   "next": 632,
+   "next": 631,
    "wait": 1,
    "blocked": 0,
    "you": 1
   },
   "fin": {
-   "n": 22,
+   "n": 23,
    "rows": [
+    [
+     "T-5136",
+     "Make every report a Claude..."
+    ],
     [
      "T-5128",
      "Measure where process merge..."
@@ -513,10 +497,6 @@
     [
      "T-5048",
      "Group the lines every other..."
-    ],
-    [
-     "T-5002",
-     "Say what a run does when its..."
     ]
    ]
   }
@@ -560,127 +540,127 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-19T14:25:43Z",
+  "at": "2026-11-19T14:28:47Z",
   "s": {
    "T-4850": [
     "merging",
     "",
-    1795096243185
+    1795096247702
    ],
    "T-4994": [
     "mergeq",
     "",
-    1795089643185
+    1795089647702
    ],
    "T-4849": [
     "mergeq",
     "",
-    1795089703185
+    1795089707702
    ],
    "T-4899": [
     "mergeq",
     "",
-    1795075843185
+    1795075787702
    ],
    "T-4919": [
     "mergeq",
     "",
-    1795075843185
+    1795075787702
    ],
    "T-4961": [
     "mergeq",
     "",
-    1795080823185
+    1795080827702
    ],
    "T-4871": [
     "mergeq",
     "",
-    1795080823185
+    1795080827702
    ],
    "T-4795": [
     "mergeq",
     "",
-    1795081963185
+    1795081967702
    ],
    "T-3402": [
     "mergeq",
     "",
-    1795082203185
+    1795082207702
    ],
    "T-0902": [
     "mergeq",
     "",
-    1795082443185
+    1795082447702
    ],
    "T-5057": [
     "mergeq",
     "",
-    1795083043185
+    1795083047702
    ],
    "T-5045": [
     "mergeq",
     "",
-    1795083283185
+    1795083227702
    ],
    "T-0349": [
     "mergeq",
     "",
-    1795084063185
+    1795084067702
    ],
    "T-4681": [
     "mergeq",
     "",
-    1795084243185
+    1795084247702
    ],
    "T-5037": [
     "mergeq",
     "",
-    1795084303185
+    1795084307702
    ],
    "T-0101": [
     "mergeq",
     "",
-    1795092943185
+    1795092947702
    ],
    "T-5062": [
     "mergeq",
     "",
-    1795093183185
+    1795093187702
    ],
    "T-2378": [
     "mergeq",
     "",
-    1795093423185
+    1795093427702
    ],
    "T-4807": [
     "mergeq",
     "",
-    1795093723185
+    1795093727702
    ],
    "T-4913": [
     "mergeq",
     "",
-    1795096483185
+    1795096487702
    ],
    "T-5113": [
     "merging",
     "",
-    1795096603185
+    1795096607702
    ],
    "T-5047": [
     "merging",
     "",
-    1795098103185
+    1795098107702
    ],
    "T-5095": [
     "merging",
     "",
-    1795097803185
+    1795097807702
    ],
    "T-5103": [
     "merging",
     "",
-    1795095403185
+    1795095407702
    ]
   },
   "nm": {
@@ -734,6 +714,7 @@
    "T-5047": "Idris",
    "T-5095": "Pernille",
    "T-5103": "Odalys",
+   "T-5136": "Ines",
    "T-5128": "Odalys",
    "T-4565": "Pernille",
    "T-4866": "Idris",
@@ -744,12 +725,11 @@
    "T-5091": "Odalys",
    "T-5065": "Odalys",
    "T-4888": "Idris",
-   "T-5088": "Odalys",
-   "T-4809": "Odalys"
+   "T-5088": "Odalys"
   }
  },
  "ln": {
-  "at": "2026-11-19T14:25:43Z",
+  "at": "2026-11-19T14:28:47Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -761,9 +741,9 @@
     "parked": 0
    },
    "m": {
-    "checking": 35,
-    "inline": 238,
-    "conflicted": 1265,
+    "checking": 38,
+    "inline": 241,
+    "conflicted": 1268,
     "failed": null,
     "held": null,
     "retry": null,
@@ -776,7 +756,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     35
+     38
     ]
    ],
    "ld": [
@@ -786,12 +766,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-19T14:25:15Z",
-    "ld": 5.32,
+    "at": "2026-11-19T14:28:12Z",
+    "ld": 4.94,
     "c": 8,
     "sb": 0,
     "dk": [
-     39.5,
+     41.6,
      228.3
     ],
     "ss": [
@@ -817,7 +797,7 @@
   {
    "w": "Operator",
    "a": "Main",
-   "t": "Work session \u2013 10 tasks",
+   "t": "Work session \u2013 9 tasks",
    "at": "2026-11-19T02:04:21-05:00"
   }
  ],
@@ -840,13 +820,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 5,
+  "main": 4,
   "lanes": 0,
-  "total": 5,
-  "at": "9:25 AM",
+  "total": 4,
+  "at": "9:28 AM",
   "why": "",
-  "at_iso": "2026-11-19T14:25:00+00:00",
+  "at_iso": "2026-11-19T14:28:00+00:00",
   "started": "2:04 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 5, started 2:04 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:25 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 4, started 2:04 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:28 AM ET</p></section>"
  }
 }

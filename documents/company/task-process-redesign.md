@@ -412,6 +412,27 @@ One point for the builder to settle with a week's numbers: the group's members c
 main (cheaper; main_green.py is the net for two changes that break each other), or be stacked in order (safer; a
 member that is dropped reruns the host step of those behind it). I recommend the stack, counting those reruns.
 
+**Interim measure, Idris, 1:5x PM Thu 2026-11-19 (T-4196).** Grouped runs have been on since 5274377036 landed
+(1:15 AM 11-17, GROUP_JOB on; the daily fit has kept the iPhone step on every day since, size 6 at no red in five).
+Read from the main checkout's `ops/metrics/land_xc.jsonl` and `ops/runs/` land logs, 2.5 days:
+
+- **Grouped runs: 1 of the 20 to be timed.** grp-17205427a2, T-4761 and T-4659 stacked on main a9658866: queued
+  8:54 PM 11-17, run started 9:04 PM, 761 s, both passed in the one run. No red, no runner error, no halving, no
+  host rerun. Both landed (093bcb77da, 6d2369339d). `land_group.py timed`: a single run's median is 435 s, so the
+  pair took 1.75 single runs, +75% for the extra member, against the 10% the fit's `--extra 0.10` allowed above.
+  One run is no measure of that cost; it is the first number.
+- **Landed per slot-hour so far:** that run, 2 in 761 s, 9.46. All runs since the landing, single and grouped
+  (`measured()`): 93 landed in 100 runs over 14.04 slot-hours, 6.63, against the 6.00 measured alone. The last 7
+  days read 7.07 (185 in 202 runs, 26.15 h), almost all of them single runs, so the alone rate itself has risen
+  since 11-12; the comparison at 11-30 has to be against the same week's single runs, not only the old 6.00.
+- **Why so few groups.** `pass` planned a group 30 times; 29 ended "fewer than two can share it; each goes alone".
+  The members were left out 61 times because their own job was queued already: changes reach the land one at a
+  time, and the pass that sees one waiting alone gives it its own job at once, so by the time a second waits the
+  first is taken. At the plan, 31 of those own jobs were running, 1 had finished, and **29 were queued and not yet
+  started**: those could have joined the group. 17 of the 30 plans also passed some branches over for overlapping
+  Targets. At this rate the 20 timed runs and a week with grouping in it will not be had by 11-30; the fix is a
+  pipeline change, so it is its own board line (from T-4196), not made here.
+
 ### 4.4 How the three layers add up, and where they do not
 
 They draw on the same pool. When features are the unit there are far fewer app merges, so the line at the land

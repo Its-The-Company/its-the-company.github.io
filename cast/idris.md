@@ -34,7 +34,6 @@ My notes. They are published on the company site, so nothing sensitive goes here
 ## Open (mine)
 
 
-- T-4858 11-18 22016c0c82 (scratch T-4858-idris, not landed): extension AppTransaction bound 2 s + .unknown held 15 min, late answer kept; test + purchases.md. Gate run 1 red only on Bundle.main scan (fixed: TreeHost.isExtension). Stopped: guard refused fetch+rebase after main moved. Open: a way to bring the copy up to main, then land, tick, review line, Evan's phone note. Lesson: Shared code finds the extension via TreeHost.isExtension.
 
 - T-4887 11-18: tap split into noteTouchDown/tapEnded; 2 unit tests, 5/5 mutants KILLED on runner (ops/runs/t4887-mutants.txt). Open: T-4888 widens the capture to CGPoint. Lesson: land_mutants --base <copy commit> runs before landing, ~15 min for 6.
 
@@ -60,6 +59,8 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - Older lessons and dated logs: archive.md.
 
 - T-3280 11-19 441efae659: testF red with placedNow mutant, F+M green Debug and Release (ops/runs/t3280-ui-runs.txt); not ticked. Lesson: on the mini `xcodebuild test` can leave an older app installed; simctl install + test-without-building, cmp the executable.
+- T-4858 11-18 22016c0c82 (scratch T-4858-idris, not landed): extension AppTransaction bound 2 s + .unknown held 15 min, late answer kept; test + purchases.md. Stopped: guard refused fetch+rebase after main moved. Open: a way to bring the copy up to main, then land, tick, review line, Evan's phone note. Lesson: Shared code finds the extension via TreeHost.isExtension.
+- T-4196 11-19 0ac7b74354: interim in plan 4.3 (1 grouped run of 20; 6.63 vs 6.00). Open: T-5177 (group takes queued-not-started jobs), 20 timed runs, week figure by 11-30. Lesson: main's ops/runs/personal-tick-*.log say why groups fail.
 {% endraw %}
 
 

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-19T21:32:59.661850+00:00",
+ "at": "2026-11-19T21:47:20.382954+00:00",
  "session": {
   "active": false,
   "kind": "",
@@ -27,6 +27,31 @@
    }
   ],
   "done": [
+   {
+    "t": "T-4818",
+    "name": "Show each bottleneck signal with its limit on Flow",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1795124437
+   },
+   {
+    "t": "T-4196",
+    "name": "Let app changes waiting to merge share one iPhone run",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1795124402
+   },
+   {
+    "t": "T-4813",
+    "name": "Home's numbers update within a minute",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "failed",
+    "end_at": 1795124020,
+    "why": "did not merge cleanly"
+   },
    {
     "t": "T-4446",
     "name": "Commit the company's records once per supervisor round",
@@ -80,34 +105,10 @@
     "steps": [],
     "end": "landed",
     "end_at": 1795120617
-   },
-   {
-    "t": "T-3974",
-    "name": "Never leave the merge step idle while work waits",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1795120545
-   },
-   {
-    "t": "T-4181",
-    "name": "Widgets refresh on their own and by a tap",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1795116175
-   },
-   {
-    "t": "T-5095",
-    "name": "Land the disk sweep job from a fresh copy",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1795116132
    }
   ],
-  "landed": 43,
-  "failed": 8
+  "landed": 41,
+  "failed": 10
  },
  "workers": [],
  "who": "",
@@ -160,12 +161,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-19T16:43:25-05:00",
+ "next_tick": "2026-11-19T16:50:31-05:00",
  "personal": {
   "week_pct": 73.58,
   "usage_pct": 46.5,
   "work_pct": 80.2,
-  "read_at": "2026-11-19T21:35:00+00:00",
+  "read_at": "2026-11-19T21:50:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -388,7 +389,7 @@
   }
  ],
  "disk": {
-  "free_gb": 35,
+  "free_gb": 34,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -397,14 +398,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-19T16:33:00-05:00",
+   "at": "2026-11-19T16:44:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 3,
-  "at": "2026-11-19T16:35:00-05:00",
+  "at": "2026-11-19T16:50:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -413,14 +414,7 @@
   }
  },
  "next_tick_why": "last_tick",
- "idle": {
-  "since": "2026-11-19T15:16:21-05:00",
-  "minutes": 76,
-  "why": "a tick has spent 4 min on steps before the session",
-  "healed": [
-   "asked for a fresh main meter reading"
-  ]
- },
+ "idle": null,
  "pool": null,
  "lanes": [
   {
@@ -609,57 +603,18 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-19T21:32:59Z",
+  "at": "2026-11-19T21:47:20Z",
   "s": {
-   "T-4849": [
-    "mergeq",
-    "1st to merge",
-    1795121519661
-   ],
-   "T-5162": [
-    "mergeq",
-    "1st to merge",
-    1795121519661
-   ],
-   "T-5165": [
-    "mergeq",
-    "1st to merge",
-    1795121519661
-   ],
-   "T-3871": [
-    "mergeq",
-    "2nd to merge",
-    1795122359661
-   ],
-   "T-4196": [
-    "mergeq",
-    "2nd to merge",
-    1795122359661
-   ],
-   "T-4195": [
-    "mergeq",
-    "2nd to merge",
-    1795122359661
-   ],
    "T-4878": [
     "mergeq",
-    "4th to merge",
-    1795123139661
-   ],
-   "T-4813": [
-    "mergeq",
-    "7th to merge",
-    1795122059661
+    "1st to merge",
+    1795123160382
    ],
    "T-4818": [
-    "mergeq",
-    "8th to merge",
-    1795122659661
-   ],
-   "T-2377": [
-    "mergeq",
-    "9th to merge",
-    1795121459661
+    "merged",
+    "on main 4:40 PM ET",
+    1795124426000,
+    ""
    ],
    "T-4446": [
     "merged",
@@ -705,16 +660,8 @@
    ]
   },
   "nm": {
-   "T-4849": "Shorten the process merge wait for good",
-   "T-5162": "Let personal accounts merge the company account's...",
-   "T-5165": "Sort every standing rule: keep, automate, edit or drop",
-   "T-3871": "Archive parked refs whose work main already has",
-   "T-4196": "Let app changes waiting to merge share one iPhone run",
-   "T-4195": "Reuse an iPhone pass when the app's inputs are unchanged",
    "T-4878": "Fix the red five hour test",
-   "T-4813": "Home's numbers update within a minute",
    "T-4818": "Show each bottleneck signal with its limit on Flow",
-   "T-2377": "Write the version 1.1 board lines after 1.0 is released",
    "T-4446": "Commit the company's records once per supervisor round",
    "T-3976": "Show each drive's storage makeup on Home",
    "T-4508": "Alarm when one account's work keeps being refused",
@@ -724,16 +671,8 @@
    "T-4734": "Fix the red site merge queue test"
   },
   "wk": {
-   "T-4849": "Odalys",
-   "T-5162": "Odalys",
-   "T-5165": "Ines",
-   "T-3871": "Odalys",
-   "T-4196": "Idris",
-   "T-4195": "Idris",
    "T-4878": "Odalys",
-   "T-4813": "Maren",
    "T-4818": "Maren",
-   "T-2377": "Ines",
    "T-4446": "Odalys",
    "T-3976": "Odalys",
    "T-4508": "Odalys",
@@ -744,12 +683,12 @@
   }
  },
  "ln": {
-  "at": "2026-11-19T21:32:59Z",
+  "at": "2026-11-19T21:47:20Z",
   "mq": {
    "n": {
     "checking": 0,
-    "inline": 10,
-    "conflicted": 3,
+    "inline": 1,
+    "conflicted": 4,
     "failed": 0,
     "held": 0,
     "retry": 0,
@@ -757,8 +696,8 @@
    },
    "m": {
     "checking": null,
-    "inline": 29,
-    "conflicted": 313,
+    "inline": 28,
+    "conflicted": 265,
     "failed": null,
     "held": null,
     "retry": null,
@@ -766,29 +705,31 @@
    },
    "cur": [],
    "ld": [
-    84,
-    "2026-11-19T21:32:39Z"
+    86,
+    "2026-11-19T21:40:37Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-19T21:33:01Z",
-    "ld": 6.69,
+    "at": "2026-11-19T21:47:22Z",
+    "ld": 53.4,
     "c": 8,
-    "sb": 0,
+    "sb": 1,
     "dk": [
-     34.7,
+     32.6,
      228.3
     ],
     "ss": [
      171.2,
      953.7
     ],
-    "sn": []
+    "sn": [
+     "pywidget-wk-check"
+    ]
    },
    "macbook": {
-    "at": "2026-11-19T20:59:35Z",
-    "ld": 0.14,
+    "at": "2026-11-19T21:30:13Z",
+    "ld": 0.23,
     "c": 12,
     "sb": 0,
     "dk": [
@@ -825,7 +766,7 @@
    "m": "opus",
    "e": "high",
    "t": "Work session \u2013 1 task",
-   "at": "2026-11-19T16:12:10-05:00"
+   "at": "2026-11-19T16:34:58-05:00"
   },
   {
    "w": "Operator",
@@ -833,32 +774,28 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Inbox \u2013 Evan's 4:31 PM Message on GitHub",
-   "at": "2026-11-19T16:31:27-05:00"
+   "t": "Work session \u2013 1 task",
+   "at": "2026-11-19T16:40:12-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Jeremy's Account",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session \u2013 4 tasks",
+   "at": "2026-11-19T16:34:29-05:00"
   }
  ],
  "reply": {
-  "sent": "2026-11-19T19:48:45Z",
-  "seconds": 84.0
+  "sent": "2026-11-19T21:38:56Z",
+  "seconds": 74.0
  },
- "inbox": [
-  {
-   "id": "c7022769986",
-   "state": "received",
-   "position": 1,
-   "eta": "2026-11-19T16:43:25-05:00",
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "T-4010 should build This Session as..."
-  }
- ],
+ "inbox": [],
  "trimmed": [
   "lane_next",
   "queue_text",
   "task_done",
-  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -869,10 +806,10 @@
   "main": 0,
   "lanes": 5,
   "total": 5,
-  "at": "4:35 PM",
+  "at": "4:50 PM",
   "why": "",
-  "at_iso": "2026-11-19T21:35:00+00:00",
+  "at_iso": "2026-11-19T21:50:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 4:35 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 4:50 PM ET</p></section>"
  }
 }

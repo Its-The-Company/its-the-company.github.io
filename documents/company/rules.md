@@ -648,6 +648,8 @@ The Effect lines of the amendments.md entries the charter retired (2026-11-04 12
 - **2026-11-19 11:55 AM ET** ((private)): Finished work that an account cannot merge itself, because the account is shut down or has hit its usage limit, is merged by a session on another account that is running, so it does not hold the merge queue; this applies to every account, the company account and the personal ones.
 - **2026-11-19 12:02 PM ET** ((private)): The Standing Investor instructions stay up to date: a new ruling that contradicts or edits an older entry updates or removes it; an entry better done as an automated deterministic process becomes one and its text entry is removed; T-5165 reviews every entry for keep, automate, edit or remove.
 - **2026-11-19 12:03 PM ET** ((private)): Correction to c7016129138: a standing rule is replaced by an automated process, and its text removed, only if that benefits the project's efficiency and accuracy; otherwise it stays as text.
+- **2026-11-19 2:14 PM ET** ((private)): The process and site merge queue limit (limits.other) rises from 8 to 20 tasks waiting to merge; the app (20) and gate and scheduler (1) limits are unchanged.
+- **2026-11-19 4:31 PM ET** ((private)): T-4010 draws the unified flow: one coordinator for every account (T-5005) and one merge route (T-5139), plus the other requested process changes; its live build waits until those are on main, and the mock-ups are redrawn for that flow before they go to the Investors.
 {% endraw %}
 
 </div>

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-19T19:36:08.930225+00:00",
+ "at": "2026-11-19T19:45:30.945954+00:00",
  "session": {
   "active": false,
   "kind": "",
@@ -13,7 +13,7 @@
     "steps": [
      {
       "s": "landing",
-      "at": 1795074240
+      "at": 1795077542
      }
     ]
    },
@@ -24,7 +24,7 @@
     "steps": [
      {
       "s": "landing",
-      "at": 1795074240
+      "at": 1795077542
      }
     ]
    },
@@ -35,7 +35,7 @@
     "steps": [
      {
       "s": "landing",
-      "at": 1795074240
+      "at": 1795077542
      }
     ]
    },
@@ -43,10 +43,6 @@
     "t": "T-4919",
     "acct": "Personal b",
     "steps": [
-     {
-      "s": "testq",
-      "at": 1795074281
-     },
      {
       "s": "macbook",
       "at": 1795079292
@@ -217,12 +213,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-19T14:40:15-05:00",
+ "next_tick": "2026-11-19T14:51:39-05:00",
  "personal": {
   "week_pct": 72.07,
   "usage_pct": 46.0,
   "work_pct": 80.4,
-  "read_at": "2026-11-19T19:37:00+00:00",
+  "read_at": "2026-11-19T19:46:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -274,6 +270,52 @@
     "at": "2026-11-19T13:40:22-05:00",
     "n": "Evan",
     "d": 1,
+    "src": "plan-a"
+   },
+   {
+    "lane": "a2",
+    "task": "T-3976",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Show each drive's storage makeup on Home",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-19T14:45:13-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a2",
+    "task": "T-5103",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Land the unclaimed-message answer from a fresh copy",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-19T14:45:13-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a2",
+    "task": "T-4813",
+    "k": "site",
+    "t": "Home's numbers update within a minute",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-19T14:45:13-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a2",
+    "task": "T-4818",
+    "k": "site",
+    "t": "Show each bottleneck signal with its limit on Flow",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-19T14:45:13-05:00",
+    "n": "Evan",
     "src": "plan-a"
    },
    {
@@ -368,14 +410,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-19T14:33:00-05:00",
+   "at": "2026-11-19T14:44:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 3,
-  "at": "2026-11-19T14:37:00-05:00",
+  "at": "2026-11-19T14:46:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -573,52 +615,57 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-19T19:36:08Z",
+  "at": "2026-11-19T19:45:30Z",
   "s": {
    "T-4182": [
     "merging",
     "Host checks on the Mac mini",
-    1795116248930
+    1795116210945
    ],
    "T-4678": [
     "mergeq",
     "1st to merge",
-    1795115348930
+    1795115370945
+   ],
+   "T-3974": [
+    "mergeq",
+    "2nd to merge",
+    1795117170945
    ],
    "T-4843": [
     "mergeq",
-    "2nd to merge",
-    1795115408930
+    "3rd to merge",
+    1795115430945
    ],
    "T-3871": [
     "mergeq",
-    "3rd to merge",
-    1795114808930
+    "4th to merge",
+    1795114830945
    ],
    "T-5095": [
     "mergeq",
-    "4th to merge",
-    1795113248930
+    "5th to merge",
+    1795113210945
    ],
    "T-4195": [
     "mergeq",
-    "5th to merge",
-    1795114628930
+    "6th to merge",
+    1795114590945
    ],
    "T-4508": [
     "mergeq",
-    "6th to merge",
-    1795115648930
+    "7th to merge",
+    1795115610945
    ],
    "T-4446": [
     "mergeq",
-    "7th to merge",
-    1795116908930
+    "8th to merge",
+    1795116930945
    ],
    "T-4196": [
     "merging",
     "Mac tests at the main gate",
-    1795114328930
+    1795114350945
    ],
    "T-4850": [
     "merged",
@@ -630,6 +677,7 @@
   "nm": {
    "T-4182": "A failing widget says so and can recover",
    "T-4678": "Close the iPhone premade feature and free its steps",
+   "T-3974": "Never leave the merge step idle while work waits",
    "T-4843": "Size each merge batch from measured data",
    "T-3871": "Archive parked refs whose work main already has",
    "T-5095": "Land the disk sweep job from a fresh copy",
@@ -642,6 +690,7 @@
   "wk": {
    "T-4182": "Idris",
    "T-4678": "Odalys",
+   "T-3974": "Odalys",
    "T-4843": "Odalys",
    "T-3871": "Odalys",
    "T-5095": "Pernille",
@@ -653,11 +702,11 @@
   }
  },
  "ln": {
-  "at": "2026-11-19T19:36:08Z",
+  "at": "2026-11-19T19:45:30Z",
   "mq": {
    "n": {
     "checking": 1,
-    "inline": 7,
+    "inline": 8,
     "conflicted": 3,
     "failed": 0,
     "held": 0,
@@ -665,9 +714,9 @@
     "parked": 0
    },
    "m": {
-    "checking": 12,
-    "inline": 27,
-    "conflicted": 196,
+    "checking": 22,
+    "inline": 35,
+    "conflicted": 206,
     "failed": null,
     "held": null,
     "retry": null,
@@ -680,7 +729,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     12
+     22
     ]
    ],
    "ld": [
@@ -690,12 +739,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-19T19:36:10Z",
-    "ld": 8.53,
+    "at": "2026-11-19T19:45:31Z",
+    "ld": 3.81,
     "c": 8,
     "sb": 0,
     "dk": [
-     37.0,
+     33.5,
      228.3
     ],
     "ss": [
@@ -724,8 +773,17 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 1 task",
+   "t": "Work session",
    "at": "2026-11-19T14:17:47-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Evan's Account",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session \u2013 4 tasks",
+   "at": "2026-11-19T14:45:12-05:00"
   },
   {
    "w": "Operator",
@@ -763,12 +821,12 @@
  ],
  "agents_now": {
   "main": 0,
-  "lanes": 3,
-  "total": 3,
-  "at": "2:37 PM",
+  "lanes": 4,
+  "total": 4,
+  "at": "2:46 PM",
   "why": "",
-  "at_iso": "2026-11-19T19:37:00+00:00",
+  "at_iso": "2026-11-19T19:46:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 2:37 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 2:46 PM ET</p></section>"
  }
 }

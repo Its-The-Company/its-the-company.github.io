@@ -54,10 +54,11 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 - T-4866 11-19 done (5d38a8a84e+81a18acbdc). Lesson: the runner carries no TEST_RUNNER_* and only PyWidgetTests filters; a UI test that skips without env proves nothing there, and a UI filter queues the full suite (~60 min).
 
+- T-4181 session 11-19: T-4415 not built (choice is Ines+Maren's; my note: keep the glyph live, taps run in the app on 26/27). T-0972 Swift slice: SendLaneScan (own GIL thread, cache, 0.2 s wait), 12 tests, 4/4 mutants. Open: the send through the real extension (forced-lane UI test); Maren on the words. Lesson: xc_mutants leaves the last mutant's build; rebuild before test-without-building.
+
 ## Lessons
 - Older lessons and dated logs: archive.md.
 
-- T-4681 11-19 fc3a48d730: premades Paper/Studio-grey via TreeTheme (by widget id); unit + Python green. Open: runner job testT (Home Screen Default/Dark), tick after it. Lesson: UI tests may not set XCUIDevice.appearance (scan test); use setHomeScreenStyle.
 - T-3280 11-19 441efae659: testF red with placedNow mutant, F+M green Debug and Release (ops/runs/t3280-ui-runs.txt); not ticked. Lesson: on the mini `xcodebuild test` can leave an older app installed; simctl install + test-without-building, cmp the executable.
 {% endraw %}
 

@@ -40,6 +40,23 @@ T-4656 (2026-11-17): the send writes no <span title="One numbered piece of resea
 3. LaneMirror.plan takes the send's lane as a second input: `app` plans what a typed non-`widget` key plans today (`.remove` if lane-scripts/<id>/ exists, else `.keep`), even over a typed `widget`. ConsoleModel says the line once, as it does for `lastWidgetRefusal`.
    Do T-4494's "every sent script mirrors" and T-0972's "no mirror over a refused import" agree? Not as the code stands: `LaneMirror.plan` reads only the key, so a refused import with no key mirrors and starts in the widget, and a typed `widget` over one mirrors too. They agree once this item lands, because both are per-send rules and neither is stored: T-4494's rule becomes "every sent script mirrors unless its key or this send's scan keeps it out", and its "new text sends it back" holds, since a clean resend gets `widget` and mirrors. Until then nothing breaks: the extension's finder refuses the import on the first run and T-4280 moves the widget to the app; the item saves that one failed run and gives the line at send time.
 4. Swift tests: clean, banned, typed, app-only and no-manifest projects. Plus one two-send test through `WidgetScriptSave` (T-4819, from T-4759 M1), `testRefusedImportThenCleanSendPlansNoMirrorThenPutAndWritesNothing` in WidgetScriptSaveTests: one project sent with a refused import, then sent clean, plans no mirror and then a mirror (`.put`), and its pywidget.json (absent; present with no `lane`) is the same bytes after both sends. `send_lane` has no project path and does no file I/O, so only this test can fail if the Swift send ever stores a lane again. Then a Simulator send of a new project that reaches scripts/<id>/ and lane-scripts/<id>/ and runs with the flag forced on. Then `-only-testing:PyWidgetTests` once through tools/xc.sh.
+
+## Swift slice (2026-11-19, feature session T-4181)
+Left 1-4 built:
+1. `SendLaneScan` (App/Projects/SendLaneScan.swift): its own thread takes the GIL for `lane.send_lane`; the main thread
+   never does. Answers are kept by (text, file name, typed key); the pause in typing prefetches, the boundary's send
+   waits at most 0.2 s. No answer (Python not started, a stuck run or a stop under way, the wait passed): the key alone
+   decides, as before, and no line; the finder and T-4280 then catch the import at the first run.
+2. The send reads pywidget.json's `lane` (`LaneMirror.typedLane`) and passes it as `typed`; nothing writes it.
+3. `LaneMirror.plan(..., scanned:)`: `app` plans `.remove`/`.keep` even over a typed `widget`. ConsoleModel says
+   "<file>: <lane.py's line>" once (the same line is not repeated on the next send).
+4. Tests/SendLaneTests.swift (12, real interpreter): the scan's rows, kept answers, not-ready, clean/refused/app-only/
+   typed widget/typed app/no manifest, a refused send removing an earlier mirror, the two-send test (absent and no-key
+   manifest, same bytes after both), the console line once, and a new project sent with the flag forced on that reaches
+   lane-scripts/<id>/ and runs in the lane (`ExtensionLane.runInBridge`, the app-hosted bridge, iPhone 17e Simulator).
+   Mutants: Tests/mutants-t0972.json, results beside it.
+Not done here: the same send through the real widget extension process (a UI test on a PYWIDGET_LANE_FORCED build);
+Maren's review of the words (lane.py MESSAGES[CODE_SEND], unchanged).
 {% endraw %}
 
 </div>

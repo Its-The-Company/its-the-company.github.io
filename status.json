@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-19T08:51:37.297690+00:00",
+ "at": "2026-11-19T08:54:45.002020+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -220,7 +220,7 @@
    "task": "[tools] T-4726 fix red personal land test",
    "model": "opus",
    "started": "2026-11-19T08:07:31.727Z",
-   "seconds": 2645,
+   "seconds": 2833,
    "finished": null,
    "effort": "high"
   },
@@ -229,7 +229,7 @@
    "task": "[tools] T-4838 gate waits on runner progress",
    "model": "opus",
    "started": "2026-11-19T08:26:43.295Z",
-   "seconds": 1494,
+   "seconds": 1681,
    "finished": null,
    "effort": "high"
   },
@@ -238,7 +238,7 @@
    "task": "[tools] T-5065 clear answered waits each tick",
    "model": "opus",
    "started": "2026-11-19T08:26:51.402Z",
-   "seconds": 1485,
+   "seconds": 1673,
    "finished": null,
    "effort": "high"
   },
@@ -247,12 +247,21 @@
    "task": "[tools] T-4810 land waits fix then T-4809",
    "model": "opus",
    "started": "2026-11-19T08:25:56.830Z",
-   "seconds": 1540,
+   "seconds": 1728,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "idris",
+   "task": "[build] T-4888 wrapped-line tap caret fix",
+   "model": "opus",
+   "started": "2026-11-19T08:53:21.795Z",
+   "seconds": 83,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Odalys x4",
+ "who": "Odalys x4, Idris",
  "recent": [
   {
    "name": "odalys",
@@ -339,7 +348,7 @@
   "week_pct": 57.06,
   "usage_pct": 47.1,
   "work_pct": 81.4,
-  "read_at": "2026-11-19T08:51:00+00:00",
+  "read_at": "2026-11-19T08:54:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -450,7 +459,7 @@
  "lock_in": {
   "on": true,
   "pool": 3,
-  "at": "2026-11-19T03:51:00-05:00",
+  "at": "2026-11-19T03:54:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -477,11 +486,12 @@
   },
   {
    "name": "Idris",
-   "state": "next",
-   "task": "Idris, P1, from T-4755 (Investor an Investor...",
-   "model": null,
-   "since": null,
-   "next": []
+   "state": "running",
+   "task": "[build] T-4888 wrapped-line tap caret fix",
+   "model": "opus",
+   "since": "2026-11-19T08:53:21.795Z",
+   "next": [],
+   "effort": "high"
   },
   {
    "name": "Pernille",
@@ -557,6 +567,16 @@
     "at": "2026-11-19T08:26:51.402Z",
     "o": "c",
     "task": "T-5065"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "Undo the vertical slide on a wrapped-line tap",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-19T08:53:21.795Z",
+    "o": "c",
+    "task": "T-4888"
    }
   ],
   "src": "plan",
@@ -724,87 +744,87 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-19T08:51:37Z",
+  "at": "2026-11-19T08:54:25Z",
   "s": {
    "T-4891": [
     "mergeq",
     "1st to merge",
-    1795076497297
+    1795076485278
    ],
    "T-4849": [
     "mergeq",
     "2nd to merge",
-    1795077337297
+    1795077385278
    ],
    "T-5000": [
     "mergeq",
     "3rd to merge",
-    1795066417297
+    1795066405278
    ],
    "T-4916": [
     "mergeq",
     "5th to merge",
-    1795068397297
+    1795068385278
    ],
    "T-5002": [
     "mergeq",
     "6th to merge",
-    1795068457297
+    1795068445278
    ],
    "T-4899": [
     "mergeq",
     "7th to merge",
-    1795068757297
+    1795068745278
    ],
    "T-4931": [
     "mergeq",
     "8th to merge",
-    1795068817297
+    1795068805278
    ],
    "T-4932": [
     "mergeq",
     "9th to merge",
-    1795069237297
+    1795069225278
    ],
    "T-4933": [
     "mergeq",
     "9th to merge",
-    1795069237297
+    1795069225278
    ],
    "T-4934": [
     "mergeq",
     "9th to merge",
-    1795069237297
+    1795069225278
    ],
    "T-4961": [
     "mergeq",
     "10th to merge",
-    1795077097297
+    1795077085278
    ],
    "T-4919": [
     "mergeq",
     "11th to merge",
-    1795075837297
+    1795075825278
    ],
    "T-5075": [
     "merging",
     "Mac tests at the main gate",
-    1795077997297
+    1795077985278
    ],
    "T-4843": [
     "merging",
     "Mac tests at the main gate",
-    1795076857297
+    1795076845278
    ],
    "T-4726": [
     "testing",
     "its own tests, in its copy",
-    1795077937297
+    1795077925278
    ],
    "T-5065": [
     "testing",
     "its own tests, in its copy",
-    1795077817297
+    1795077805278
    ],
    "T-4871": [
     "merged",
@@ -866,7 +886,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-19T08:51:37Z",
+  "at": "2026-11-19T08:54:25Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -879,8 +899,8 @@
    },
    "m": {
     "checking": null,
-    "inline": 151,
-    "conflicted": 931,
+    "inline": 154,
+    "conflicted": 933,
     "failed": null,
     "held": null,
     "retry": null,
@@ -894,12 +914,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-19T08:51:39Z",
-    "ld": 4.98,
+    "at": "2026-11-19T08:54:28Z",
+    "ld": 5.02,
     "c": 8,
     "sb": 0,
     "dk": [
-     33.6,
+     33.9,
      228.3
     ],
     "ss": [
@@ -928,7 +948,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 7 tasks",
+   "t": "Work session \u2013 8 tasks",
    "at": "2026-11-19T02:04:21-05:00"
   },
   {
@@ -968,13 +988,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 4,
+  "main": 5,
   "lanes": 2,
-  "total": 6,
-  "at": "3:51 AM",
+  "total": 7,
+  "at": "3:54 AM",
   "why": "",
-  "at_iso": "2026-11-19T08:51:00+00:00",
+  "at_iso": "2026-11-19T08:54:00+00:00",
   "started": "2:04 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 4, started 2:04 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 3:51 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 5, started 2:04 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 3:54 AM ET</p></section>"
  }
 }

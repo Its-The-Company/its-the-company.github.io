@@ -1,11 +1,22 @@
 {
  "schema": 1,
- "at": "2026-11-19T06:11:28.129908+00:00",
+ "at": "2026-11-19T06:14:36.763000+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-19T01:08:31-05:00",
   "flow": [
+   {
+    "t": "T-4916",
+    "name": "Check the new landing road before it ships",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "landing",
+      "at": 1795068792
+     }
+    ]
+   },
    {
     "t": "T-4933",
     "name": "Check finished work before it ships",
@@ -33,6 +44,10 @@
      {
       "s": "testq",
       "at": 1795068681
+     },
+     {
+      "s": "macbook",
+      "at": 1795068705
      }
     ]
    },
@@ -182,7 +197,7 @@
    "task": "[tools] T-4907 main green parts 3-4",
    "model": "opus",
    "started": "2026-11-19T06:10:25.463Z",
-   "seconds": 62,
+   "seconds": 251,
    "finished": null,
    "effort": "high"
   },
@@ -191,7 +206,7 @@
    "task": "[tools] T-4843 batch size from data",
    "model": "opus",
    "started": "2026-11-19T06:10:37.169Z",
-   "seconds": 50,
+   "seconds": 239,
    "finished": null,
    "effort": "high"
   }
@@ -206,21 +221,20 @@
  },
  "meter": {
   "five_hour": {
-   "pct": null,
-   "resets_at": null,
+   "pct": 0.0,
+   "resets_at": "2026-11-19T06:10:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-19T01:08:16.567111-05:00",
-   "source": "usage",
-   "last_reset": "2026-11-19T06:09:59.624428+00:00",
-   "left": null,
+   "read_at": "2026-11-19T01:13:35.234112-05:00",
+   "source": "live",
+   "left": 100.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 64.0,
-   "resets_at": "2026-11-22T06:59:59.624448+00:00",
+   "resets_at": "2026-11-22T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-19T01:08:16.567111-05:00",
-   "source": "usage",
+   "read_at": "2026-11-19T01:13:35.234112-05:00",
+   "source": "live",
    "left": 36.0,
    "left_words": "of your weekly allowance left"
   },
@@ -231,7 +245,7 @@
    "read_at": "2026-11-19T01:08:16.567111-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-19T01:08:16.567111-05:00"
+  "read_at": "2026-11-19T01:13:35.234112-05:00"
  },
  "ui": {
   "week_pct": 0.093,
@@ -251,7 +265,7 @@
   "week_pct": 52.99,
   "usage_pct": 45.3,
   "work_pct": 80.7,
-  "read_at": "2026-11-19T06:11:00+00:00",
+  "read_at": "2026-11-19T06:15:00+00:00",
   "running": [
    {
     "lane": "b2",
@@ -297,7 +311,7 @@
   }
  ],
  "disk": {
-  "free_gb": 41,
+  "free_gb": 39,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -306,14 +320,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-19T01:08:00-05:00",
+   "at": "2026-11-19T01:13:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 3,
-  "at": "2026-11-19T01:11:00-05:00",
+  "at": "2026-11-19T01:15:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -324,7 +338,7 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 2 (at its floor: load 35.0 a core is over 10)",
+  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 2 (at its floor: load 27.6 a core is over 10)",
   "n": 2,
   "at": "2026-11-19T01:08:17.235427-05:00"
  },
@@ -542,77 +556,87 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-19T06:11:10Z",
+  "at": "2026-11-19T06:14:36Z",
   "s": {
+   "T-4916": [
+    "merging",
+    "Rebasing onto current main",
+    1795068876763
+   ],
    "T-5002": [
-    "merging",
-    "Rebasing onto current main",
-    1795068670730
-   ],
-   "T-5000": [
-    "merging",
-    "Rebasing onto current main",
-    1795068670730
-   ],
-   "T-4842": [
     "mergeq",
     "1st to merge",
-    1795065970730
+    1795068456763
    ],
-   "T-4916": [
+   "T-5000": [
     "mergeq",
-    "2nd to merge",
-    1795068370730
+    "1st to merge",
+    1795068456763
    ],
    "T-4927": [
     "mergeq",
-    "6th to merge",
-    1795068190730
+    "5th to merge",
+    1795068156763
    ],
    "T-4928": [
     "mergeq",
-    "6th to merge",
-    1795068190730
+    "5th to merge",
+    1795068156763
    ],
    "T-4929": [
     "mergeq",
-    "6th to merge",
-    1795068190730
+    "5th to merge",
+    1795068156763
    ],
    "T-4930": [
     "mergeq",
+    "5th to merge",
+    1795068156763
+   ],
+   "T-4899": [
+    "mergeq",
     "6th to merge",
-    1795068190730
+    1795068756763
+   ],
+   "T-4919": [
+    "mergeq",
+    "6th to merge",
+    1795068756763
    ],
    "T-4933": [
     "mergeq",
     "7th to merge",
-    1795065550730
+    1795065516763
    ],
    "T-4934": [
     "mergeq",
     "8th to merge",
-    1795065670730
+    1795065636763
    ],
    "T-4922": [
     "mergeq",
     "9th to merge",
-    1795066510730
+    1795066536763
    ],
    "T-4923": [
     "mergeq",
     "10th to merge",
-    1795066570730
+    1795066596763
    ],
    "T-4932": [
     "mergeq",
     "11th to merge",
-    1795067590730
+    1795067616763
+   ],
+   "T-4931": [
+    "mergeq",
+    "14th to merge",
+    1795068696763
    ],
    "T-4909": [
     "merging",
     "Mac tests at the main gate",
-    1795068610730
+    1795068576763
    ],
    "T-4907": [
     "merged",
@@ -622,73 +646,69 @@
    ]
   },
   "nm": {
+   "T-4916": "Check the new landing road before it ships",
    "T-5002": "Say what a run does when its save is unchecked",
    "T-5000": "Draw transit count-downs the way the iPhone draws them",
-   "T-4842": "Plan Controls that run a person's Python",
-   "T-4916": "Check the new landing road before it ships",
    "T-4927": "Check finished work before it ships",
    "T-4928": "Check finished work before it ships",
    "T-4929": "Check finished work before it ships",
    "T-4930": "Check finished work before it ships",
+   "T-4899": "Fix a MacBook test job that failed",
+   "T-4919": "Fix a MacBook test job that failed",
    "T-4933": "Check finished work before it ships",
    "T-4934": "Check finished work before it ships",
    "T-4922": "Check finished work before it ships",
    "T-4923": "Check finished work before it ships",
    "T-4932": "Check finished work before it ships",
+   "T-4931": "Check finished work before it ships",
    "T-4909": "End work sessions on a stall, not on the clock",
    "T-4907": "Keep main green after every land"
   },
   "wk": {
+   "T-4916": "Pernille",
    "T-5002": "Pernille",
    "T-5000": "Maren",
-   "T-4842": "Idris",
-   "T-4916": "Pernille",
    "T-4927": "Pernille",
    "T-4928": "Pernille",
    "T-4929": "Pernille",
    "T-4930": "Pernille",
+   "T-4899": "Idris",
+   "T-4919": "Operator",
    "T-4933": "Pernille",
    "T-4934": "Pernille",
    "T-4922": "Pernille",
    "T-4923": "Pernille",
    "T-4932": "Pernille",
+   "T-4931": "Pernille",
    "T-4909": "Odalys",
    "T-4907": "Odalys"
   }
  },
  "ln": {
-  "at": "2026-11-19T06:11:10Z",
+  "at": "2026-11-19T06:14:36Z",
   "mq": {
    "n": {
-    "checking": 2,
-    "inline": 11,
+    "checking": 1,
+    "inline": 14,
     "conflicted": 1,
     "failed": 0,
     "held": 0,
     "retry": 0,
-    "parked": 2
+    "parked": 1
    },
    "m": {
     "checking": 0,
-    "inline": 18,
-    "conflicted": 770,
+    "inline": 12,
+    "conflicted": 774,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 0
+    "parked": 4
    },
    "cur": [
     [
      [
-      "T-5002"
-     ],
-     "lining up with main",
-     "Mac mini",
-     0
-    ],
-    [
-     [
-      "T-5000"
+      "T-4916"
      ],
      "lining up with main",
      "Mac mini",
@@ -702,12 +722,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-19T06:10:38Z",
-    "ld": 30.06,
+    "at": "2026-11-19T06:14:43Z",
+    "ld": 27.45,
     "c": 8,
     "sb": 1,
     "dk": [
-     38.9,
+     38.6,
      228.3
     ],
     "ss": [
@@ -770,10 +790,10 @@
   "main": 2,
   "lanes": 1,
   "total": 3,
-  "at": "1:11 AM",
+  "at": "1:15 AM",
   "why": "",
-  "at_iso": "2026-11-19T06:11:00+00:00",
+  "at_iso": "2026-11-19T06:15:00+00:00",
   "started": "1:08 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 1:08 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 1:11 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 1:08 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 1:15 AM ET</p></section>"
  }
 }

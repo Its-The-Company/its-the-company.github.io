@@ -1,11 +1,22 @@
 {
  "schema": 1,
- "at": "2026-11-19T04:30:52.314509+00:00",
+ "at": "2026-11-19T04:34:12.554082+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-18T21:32:25-05:00",
   "flow": [
+   {
+    "t": "T-4960",
+    "name": "Propose the five-minute supervisor wording",
+    "acct": "Personal b",
+    "steps": [
+     {
+      "s": "landing",
+      "at": 1795062850
+     }
+    ]
+   },
    {
     "t": "T-3217",
     "steps": [
@@ -135,7 +146,7 @@
    "task": "[build] T-4962 make main pass Xcode checks",
    "model": "opus",
    "started": "2026-11-19T02:38:04.132Z",
-   "seconds": 6768,
+   "seconds": 6968,
    "finished": null,
    "effort": "high"
   },
@@ -144,7 +155,7 @@
    "task": "[tools] T-4810 T-4809 waits name tasks, merge label fix",
    "model": "opus",
    "started": "2026-11-19T03:52:04.985Z",
-   "seconds": 2327,
+   "seconds": 2527,
    "finished": null,
    "effort": "high"
   },
@@ -153,7 +164,7 @@
    "task": "[tools] T-3806 answer unclaimed Investor messages",
    "model": "opus",
    "started": "2026-11-19T03:59:34.631Z",
-   "seconds": 1877,
+   "seconds": 2077,
    "finished": null,
    "effort": "high"
   },
@@ -162,7 +173,7 @@
    "task": "[tools] T-4571 Chat model and account pickers",
    "model": "opus",
    "started": "2026-11-19T03:59:46.732Z",
-   "seconds": 1865,
+   "seconds": 2065,
    "finished": null,
    "effort": "high"
   },
@@ -171,7 +182,7 @@
    "task": "[tools] T-4992 sweep finished task temp folders",
    "model": "opus",
    "started": "2026-11-19T04:02:09.869Z",
-   "seconds": 1722,
+   "seconds": 1922,
    "finished": null,
    "effort": "high"
   },
@@ -180,7 +191,7 @@
    "task": "[tools] T-4990 T-4991 free Simulator disk space",
    "model": "opus",
    "started": "2026-11-19T04:13:45.752Z",
-   "seconds": 1026,
+   "seconds": 1226,
    "finished": null,
    "effort": "high"
   },
@@ -189,7 +200,7 @@
    "task": "[tools] T-4986 read every main thread",
    "model": "opus",
    "started": "2026-11-19T04:19:12.138Z",
-   "seconds": 700,
+   "seconds": 900,
    "finished": null,
    "effort": "high"
   },
@@ -198,7 +209,7 @@
    "task": "[tools] T-4964 group and name tool-made lines",
    "model": "opus",
    "started": "2026-11-19T04:19:32.159Z",
-   "seconds": 680,
+   "seconds": 880,
    "finished": null,
    "effort": "high"
   }
@@ -241,8 +252,8 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 539,
-  "blocked_count": 36
+  "runnable_count": 542,
+  "blocked_count": 34
  },
  "meter": {
   "five_hour": {
@@ -290,7 +301,7 @@
   "week_pct": 52.57,
   "usage_pct": 47.5,
   "work_pct": 81.2,
-  "read_at": "2026-11-19T04:31:00+00:00",
+  "read_at": "2026-11-19T04:34:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -617,7 +628,7 @@
  "lock_in": {
   "on": true,
   "pool": 3,
-  "at": "2026-11-18T23:31:00-05:00",
+  "at": "2026-11-18T23:34:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -860,10 +871,10 @@
    }
   ],
   "count": {
-   "next": 539,
+   "next": 542,
    "wait": 32,
-   "blocked": 4,
-   "you": 10
+   "blocked": 2,
+   "you": 9
   },
   "fin": {
    "n": 7,
@@ -934,108 +945,126 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-19T04:30:52Z",
+  "at": "2026-11-19T04:34:12Z",
   "s": {
-   "T-4962": [
+   "T-4960": [
     "merging",
     "",
-    1795062532314
+    1795062852554
+   ],
+   "T-4962": [
+    "mergetest",
+    "",
+    null
+   ],
+   "T-4990": [
+    "merging",
+    "",
+    1795062792554
    ],
    "T-4992": [
     "merging",
     "",
-    1795062652314
+    1795062672554
    ],
    "T-4909": [
     "merging",
     "",
-    1795061932314
+    1795061952554
+   ],
+   "T-4964": [
+    "testing",
+    "",
+    1795062852554
    ],
    "T-4986": [
     "testing",
     "",
-    1795062652314
+    1795062672554
    ],
    "T-4810": [
     "testing",
     "",
-    1795060432314
+    1795060452554
    ],
    "T-4571": [
     "testing",
     "",
-    1795061332314
+    1795061352554
    ],
    "T-3806": [
     "testing",
     "",
-    1795061212314
+    1795061232554
    ],
    "T-4931": [
     "testq",
     "",
-    1795062292314
+    1795062312554
    ],
    "T-4932": [
     "testq",
     "",
-    1795062292314
+    1795062312554
    ],
    "T-4933": [
     "testq",
     "",
-    1795062292314
+    1795062312554
    ],
    "T-4934": [
     "testq",
     "",
-    1795062292314
+    1795062312554
    ],
    "T-4927": [
     "testq",
     "",
-    1795062412314
+    1795062432554
    ],
    "T-4928": [
     "testq",
     "",
-    1795062412314
+    1795062432554
    ],
    "T-4929": [
     "testq",
     "",
-    1795062412314
+    1795062432554
    ],
    "T-4930": [
     "testq",
     "",
-    1795062412314
+    1795062432554
    ],
    "T-4935": [
     "testq",
     "",
-    1795062472314
+    1795062492554
    ],
    "T-4936": [
     "testq",
     "",
-    1795062472314
+    1795062492554
    ],
    "T-4937": [
     "testq",
     "",
-    1795062472314
+    1795062492554
    ],
    "T-4938": [
     "testq",
     "",
-    1795062472314
+    1795062492554
    ]
   },
   "nm": {
+   "T-4960": "Propose the five-minute supervisor wording",
    "T-4962": "Make main pass its Xcode checks again",
+   "T-4990": "Shrink the iPhone 17e Simulator wallpaper store",
    "T-4992": "Sweep finished task folders in the shared temp folder",
    "T-4909": "End work sessions on a stall, not on the clock",
+   "T-4964": "Name machine-made task lines by what they fix",
    "T-4986": "Let Chat and approvals read every main thread",
    "T-4810": "Make every wait name a task or an Investor issue",
    "T-4571": "Show Chat's model and account pickers and the reply badge",
@@ -1054,8 +1083,10 @@
    "T-4938": "Check finished work before it ships"
   },
   "wk": {
+   "T-4960": "Odalys",
    "T-4962": "Operator",
    "T-4909": "Odalys",
+   "T-4964": "Odalys",
    "T-4986": "Odalys",
    "T-4810": "Odalys",
    "T-4571": "Odalys",
@@ -1082,10 +1113,10 @@
   }
  },
  "ln": {
-  "at": "2026-11-19T04:30:52Z",
+  "at": "2026-11-19T04:34:12Z",
   "mq": {
    "n": {
-    "checking": 0,
+    "checking": 1,
     "inline": 0,
     "conflicted": 1,
     "failed": 0,
@@ -1094,28 +1125,37 @@
     "parked": 0
    },
    "m": {
-    "checking": null,
+    "checking": 0,
     "inline": null,
-    "conflicted": 670,
+    "conflicted": 673,
     "failed": null,
     "held": null,
     "retry": null,
     "parked": null
    },
-   "cur": [],
+   "cur": [
+    [
+     [
+      "T-4960"
+     ],
+     "going onto main",
+     "Mac mini",
+     0
+    ]
+   ],
    "ld": [
-    39,
-    "2026-11-18T19:42:59Z"
+    40,
+    "2026-11-19T04:34:22Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-19T04:30:28Z",
-    "ld": 47.7,
+    "at": "2026-11-19T04:33:36Z",
+    "ld": 54.52,
     "c": 8,
     "sb": 1,
     "dk": [
-     18.2,
+     16.7,
      228.3
     ],
     "ss": [
@@ -1127,8 +1167,8 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-19T04:18:49Z",
-    "ld": 0.25,
+    "at": "2026-11-19T04:31:15Z",
+    "ld": 0.16,
     "c": 12,
     "sb": 0,
     "dk": [
@@ -1182,7 +1222,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 4 tasks",
+   "t": "Work session \u2013 3 tasks",
    "at": "2026-11-18T23:20:26-05:00"
   },
   {
@@ -1226,10 +1266,10 @@
   "main": 8,
   "lanes": 6,
   "total": 14,
-  "at": "11:31 PM",
+  "at": "11:34 PM",
   "why": "",
-  "at_iso": "2026-11-19T04:31:00+00:00",
+  "at_iso": "2026-11-19T04:34:00+00:00",
   "started": "9:32 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>14</b> agents running now</p><p class=\"an-sub\">Main session 8, started 9:32 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 6 sessions \u00b7 as of 11:31 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>14</b> agents running now</p><p class=\"an-sub\">Main session 8, started 9:32 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 6 sessions \u00b7 as of 11:34 PM ET</p></section>"
  }
 }

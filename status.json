@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-19T00:42:56.389722+00:00",
+ "at": "2026-11-19T00:45:52.343490+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -146,7 +146,7 @@
    "task": "[tools] T-4808 merge-step fixes stream",
    "model": "opus",
    "started": "2026-11-18T23:26:46.521Z",
-   "seconds": 4569,
+   "seconds": 4745,
    "finished": null,
    "effort": "high"
   },
@@ -155,7 +155,7 @@
    "task": "[tools] T-4788 feature sessions on for all",
    "model": "opus",
    "started": "2026-11-18T23:37:01.600Z",
-   "seconds": 3954,
+   "seconds": 4130,
    "finished": null,
    "effort": "high"
   },
@@ -164,7 +164,7 @@
    "task": "[tools] T-4958 pool check during sessions",
    "model": "opus",
    "started": "2026-11-19T00:25:31.113Z",
-   "seconds": 1045,
+   "seconds": 1221,
    "finished": null,
    "effort": "high"
   },
@@ -173,7 +173,7 @@
    "task": "[tools] T-4909 end sessions on a stall",
    "model": "opus",
    "started": "2026-11-19T00:25:56.669Z",
-   "seconds": 1019,
+   "seconds": 1195,
    "finished": null,
    "effort": "high"
   }
@@ -221,19 +221,19 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 27.0,
+   "pct": 28.0,
    "resets_at": "2026-11-18T20:10:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-18T19:33:33.837652-05:00",
+   "read_at": "2026-11-18T19:45:50.550280-05:00",
    "source": "live",
-   "left": 73.0,
+   "left": 72.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 54.0,
    "resets_at": "2026-11-22T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-18T19:33:33.837652-05:00",
+   "read_at": "2026-11-18T19:45:50.550280-05:00",
    "source": "live",
    "left": 46.0,
    "left_words": "of your weekly allowance left"
@@ -245,7 +245,7 @@
    "read_at": "2026-11-18T17:33:56.705931-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-18T19:33:33.837652-05:00"
+  "read_at": "2026-11-18T19:45:50.550280-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -265,7 +265,7 @@
   "week_pct": 52.29,
   "usage_pct": 50.1,
   "work_pct": 81.6,
-  "read_at": "2026-11-19T00:42:00+00:00",
+  "read_at": "2026-11-19T00:45:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -286,7 +286,7 @@
   }
  ],
  "disk": {
-  "free_gb": 11,
+  "free_gb": 10,
   "gate": "closed",
   "ssd": {
    "mounted": true,
@@ -295,14 +295,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions wait until 20 GB is free.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-18T19:39:00-05:00",
+   "at": "2026-11-18T19:45:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 3,
-  "at": "2026-11-18T19:42:00-05:00",
+  "at": "2026-11-18T19:45:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -576,27 +576,33 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-19T00:42:44Z",
+  "at": "2026-11-19T00:45:52Z",
   "s": {
    "T-4805": [
     "merging",
     "Mac tests at the main gate",
-    1795048304559
+    1795048312343
    ],
    "T-3217": [
     "testing",
     "MacBook \u00b7 test",
     null
    ],
-   "T-4958": [
+   "T-4909": [
     "testing",
     "its own tests, in its copy",
-    1795048484559
+    1795049092343
    ],
    "T-4898": [
     "testq",
     "1st for a Simulator",
-    1795041284559
+    1795041232343
+   ],
+   "T-4958": [
+    "merged",
+    "on main 7:45 PM ET",
+    1795049109000,
+    "Odalys"
    ],
    "T-4808": [
     "merged",
@@ -608,15 +614,17 @@
   "nm": {
    "T-4805": "Record a cause for every failed merge",
    "T-3217": "Fix the three red tests before build 3",
-   "T-4958": "Run the pool check and between-session jobs during sessions",
+   "T-4909": "End work sessions on a stall, not on the clock",
    "T-4898": "Fix the Home Screen token test reading the gallery",
+   "T-4958": "Run the pool check and between-session jobs during sessions",
    "T-4808": "Fix the red board-check row in the land test"
   },
   "wk": {
    "T-4805": "Odalys",
    "T-3217": "Idris",
-   "T-4958": "Odalys",
+   "T-4909": "Odalys",
    "T-4898": "Idris",
+   "T-4958": "Odalys",
    "T-4808": "Odalys",
    "T-4903": "Odalys",
    "T-4750": "Idris",
@@ -627,7 +635,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-19T00:42:44Z",
+  "at": "2026-11-19T00:45:52Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -641,11 +649,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 865,
+    "conflicted": 869,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1140
+    "parked": 1143
    },
    "cur": [],
    "ld": [
@@ -655,8 +663,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-19T00:41:55Z",
-    "ld": 1.93,
+    "at": "2026-11-19T00:45:09Z",
+    "ld": 1.59,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -704,10 +712,10 @@
   "main": 4,
   "lanes": 0,
   "total": 4,
-  "at": "7:42 PM",
+  "at": "7:45 PM",
   "why": "",
-  "at_iso": "2026-11-19T00:42:00+00:00",
+  "at_iso": "2026-11-19T00:45:00+00:00",
   "started": "5:34 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 4, started 5:34 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 7:42 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 4, started 5:34 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 7:45 PM ET</p></section>"
  }
 }

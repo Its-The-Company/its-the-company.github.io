@@ -51,6 +51,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-4823 11-19 25eaaa0974: a <span title="A second worker who grades the idea without seeing the first worker&#x27;s grades, and records them first.">blind</span> replay compares the add's rule with the record's build rule: where they differ (kind, keys) is the 'wrong' count; align the add to build before reading a rate. Steps a person listed are no add case.
 - T-5162 11-19: the company's <span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">parked</span> refs carry no clock (parked/operator/20261108-t3297); order refs by tip commit time. Its real waiting work is the SSD land_cmd.sh copies, not refs (T-5189). git cherry-pick has no -q.
 - T-4849 11-19 81b523c183: a test fixture with dated names (park stamps) must pin now= on every call that ages them; wall clock turned two rows red by date alone.
+- T-5103 11-19: a suite red on main with no fix line: bisect the fixture's inputs (tools it copies), not just the tool under test. personal_off's 32 reds were T-5075's board.py (loose 'waiting on X' no longer holds a line), not T-4807; fixture waits must be '#N'.
 {% endraw %}
 
 

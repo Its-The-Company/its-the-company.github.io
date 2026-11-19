@@ -47,6 +47,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-4796 (11-17): which runs are Pro's 'Python within the widget' is open on Urgent #324 (A: button-run only, recommended; B: all). Plan s1 keeps A's tags as a working list. T-4821: ADR-007 still has refresh as Pro.
 - T-4770 (11-18): checked line Tue 2027-07-27 (02-21 to 12-24), snap 4.25; milestones.json not moved (6 days; move once when T-4871 closes). Ratios 0.57/0.50 are two points, 0.50 retracted.
 - T-3402 (11-19): OpenSSL removal stays in 1.0 (T-3401 started); cut-off freeze 11-30 11:59 PM, else 1.0.1. A check whose answer can't flip back is ruled when the evidence lands, not on its date.
+- T-5165 (11-19): standing list reviewed (ops/plans/standing-rules-review.md); 107 lines retired via ruling_record.py retire/amend, ledger handbook/standing-retired.md; spent entries naming a ban stay.
 {% endraw %}
 
 

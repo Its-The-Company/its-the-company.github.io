@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-19T06:33:18.072826+00:00",
+ "at": "2026-11-19T06:36:22.510914+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -14,17 +14,6 @@
      {
       "s": "landing",
       "at": 1795069827
-     }
-    ]
-   },
-   {
-    "t": "T-4928",
-    "name": "Check finished work before it ships",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "landing",
-      "at": 1795069618
      }
     ]
    },
@@ -149,6 +138,22 @@
   ],
   "done": [
    {
+    "t": "T-4928",
+    "name": "Check finished work before it ships",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1795070143
+   },
+   {
+    "t": "T-4932",
+    "name": "Check finished work before it ships",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1795070083
+   },
+   {
     "t": "T-5002",
     "name": "Say what a run does when its save is unchecked",
     "acct": "Personal a",
@@ -209,21 +214,6 @@
     "steps": [],
     "end": "landed",
     "end_at": 1795064996
-   },
-   {
-    "t": "T-4924",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1795064764
-   },
-   {
-    "t": "T-4929",
-    "name": "Check finished work before it ships",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1795064642
    }
   ],
   "landed": 28,
@@ -235,7 +225,7 @@
    "task": "[tools] T-4907 main green parts 3-4",
    "model": "opus",
    "started": "2026-11-19T06:10:25.463Z",
-   "seconds": 1372,
+   "seconds": 1557,
    "finished": null,
    "effort": "high"
   },
@@ -244,7 +234,7 @@
    "task": "[tools] T-4843 batch size from data",
    "model": "opus",
    "started": "2026-11-19T06:10:37.169Z",
-   "seconds": 1360,
+   "seconds": 1545,
    "finished": null,
    "effort": "high"
   }
@@ -254,24 +244,24 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 588,
+  "runnable_count": 589,
   "blocked_count": 34
  },
  "meter": {
   "five_hour": {
-   "pct": 2.0,
+   "pct": 3.0,
    "resets_at": "2026-11-19T06:10:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-19T01:28:36.216782-05:00",
+   "read_at": "2026-11-19T01:33:57.729816-05:00",
    "source": "live",
-   "left": 98.0,
+   "left": 97.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 64.0,
    "resets_at": "2026-11-22T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-19T01:28:36.216782-05:00",
+   "read_at": "2026-11-19T01:33:57.729816-05:00",
    "source": "live",
    "left": 36.0,
    "left_words": "of your weekly allowance left"
@@ -283,7 +273,7 @@
    "read_at": "2026-11-19T01:08:16.567111-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-19T01:28:36.216782-05:00"
+  "read_at": "2026-11-19T01:33:57.729816-05:00"
  },
  "ui": {
   "week_pct": 0.093,
@@ -303,7 +293,7 @@
   "week_pct": 52.99,
   "usage_pct": 45.3,
   "work_pct": 80.7,
-  "read_at": "2026-11-19T06:33:00+00:00",
+  "read_at": "2026-11-19T06:36:00+00:00",
   "running": [
    {
     "lane": "b2",
@@ -365,7 +355,7 @@
  "lock_in": {
   "on": true,
   "pool": 3,
-  "at": "2026-11-19T01:33:00-05:00",
+  "at": "2026-11-19T01:36:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -376,7 +366,7 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 2 (at its floor: load 22.6 a core is over 10)",
+  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 2 (at its floor: load 25.1 a core is over 10)",
   "n": 2,
   "at": "2026-11-19T01:08:17.235427-05:00"
  },
@@ -545,7 +535,7 @@
    }
   ],
   "count": {
-   "next": 588,
+   "next": 589,
    "wait": 32,
    "blocked": 2,
    "you": 9
@@ -594,99 +584,89 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-19T06:32:52Z",
+  "at": "2026-11-19T06:36:06Z",
   "s": {
    "T-4933": [
     "mergeq",
     "1st to merge",
-    1795065532023
+    1795065546575
    ],
    "T-4934": [
     "mergeq",
     "2nd to merge",
-    1795065652023
-   ],
-   "T-5002": [
-    "mergeq",
-    "3rd to merge",
-    1795068472023
+    1795065666575
    ],
    "T-5000": [
     "mergeq",
     "3rd to merge",
-    1795068472023
+    1795066446575
+   ],
+   "T-5002": [
+    "mergeq",
+    "4th to merge",
+    1795068486575
    ],
    "T-4916": [
     "mergeq",
-    "4th to merge",
-    1795068352023
+    "5th to merge",
+    1795068366575
    ],
    "T-4927": [
     "mergeq",
     "8th to merge",
-    1795068172023
+    1795068186575
    ],
    "T-4928": [
     "mergeq",
     "8th to merge",
-    1795068172023
+    1795068186575
    ],
    "T-4929": [
     "mergeq",
     "8th to merge",
-    1795068172023
+    1795068186575
    ],
    "T-4930": [
     "mergeq",
     "8th to merge",
-    1795068172023
+    1795068186575
    ],
    "T-4931": [
     "mergeq",
     "9th to merge",
-    1795069252023
+    1795069266575
    ],
    "T-4932": [
     "mergeq",
     "9th to merge",
-    1795069252023
+    1795069266575
    ],
    "T-4899": [
     "mergeq",
     "10th to merge",
-    1795068712023
+    1795068726575
    ],
    "T-4919": [
     "mergeq",
     "10th to merge",
-    1795068712023
-   ],
-   "T-4923": [
-    "mergeq",
-    "11th to merge",
-    1795066612023
+    1795068726575
    ],
    "T-4909": [
     "merging",
     "Mac tests at the main gate",
-    1795068592023
+    1795068606575
    ],
    "T-4907": [
     "testing",
     "its own tests, in its copy",
-    1795069672023
-   ],
-   "T-4843": [
-    "testing",
-    "its own tests, in its copy",
-    1795069612023
+    1795069686575
    ]
   },
   "nm": {
    "T-4933": "Check finished work before it ships",
    "T-4934": "Check finished work before it ships",
-   "T-5002": "Say what a run does when its save is unchecked",
    "T-5000": "Draw transit count-downs the way the iPhone draws them",
+   "T-5002": "Say what a run does when its save is unchecked",
    "T-4916": "Check the new landing road before it ships",
    "T-4927": "Check finished work before it ships",
    "T-4928": "Check finished work before it ships",
@@ -696,16 +676,14 @@
    "T-4932": "Check finished work before it ships",
    "T-4899": "Fix a MacBook test job that failed",
    "T-4919": "Fix a MacBook test job that failed",
-   "T-4923": "Check finished work before it ships",
    "T-4909": "End work sessions on a stall, not on the clock",
-   "T-4907": "Keep main green after every land",
-   "T-4843": "Size each merge batch from measured data"
+   "T-4907": "Keep main green after every land"
   },
   "wk": {
    "T-4933": "Pernille",
    "T-4934": "Pernille",
-   "T-5002": "Pernille",
    "T-5000": "Maren",
+   "T-5002": "Pernille",
    "T-4916": "Pernille",
    "T-4927": "Pernille",
    "T-4928": "Pernille",
@@ -715,18 +693,16 @@
    "T-4932": "Pernille",
    "T-4899": "Idris",
    "T-4919": "Operator",
-   "T-4923": "Pernille",
    "T-4909": "Odalys",
-   "T-4907": "Odalys",
-   "T-4843": "Odalys"
+   "T-4907": "Odalys"
   }
  },
  "ln": {
-  "at": "2026-11-19T06:32:52Z",
+  "at": "2026-11-19T06:36:06Z",
   "mq": {
    "n": {
     "checking": 0,
-    "inline": 14,
+    "inline": 13,
     "conflicted": 1,
     "failed": 0,
     "held": 0,
@@ -735,23 +711,23 @@
    },
    "m": {
     "checking": null,
-    "inline": 28,
-    "conflicted": 792,
+    "inline": 33,
+    "conflicted": 795,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 22
+    "parked": 25
    },
    "cur": [],
    "ld": [
-    15,
-    "2026-11-19T05:36:35Z"
+    17,
+    "2026-11-19T06:35:43Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-19T06:32:39Z",
-    "ld": 25.48,
+    "at": "2026-11-19T06:35:43Z",
+    "ld": 25.28,
     "c": 8,
     "sb": 1,
     "dk": [
@@ -795,19 +771,31 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 2 tasks",
-   "at": "2026-11-19T01:19:40-05:00"
+   "t": "Inbox \u2013 Jeremy's 1:34 AM Message on GitHub",
+   "at": "2026-11-19T01:35:21-05:00"
   }
  ],
  "reply": {
   "sent": "2026-11-19T06:25:44Z",
   "seconds": 142.0
  },
- "inbox": [],
+ "inbox": [
+  {
+   "id": "c7001738368",
+   "state": "received",
+   "position": 1,
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "Ok, when do you expect these to land..."
+  }
+ ],
  "trimmed": [
   "lane_next",
   "queue_text",
   "task_done",
+  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -818,10 +806,10 @@
   "main": 2,
   "lanes": 1,
   "total": 3,
-  "at": "1:33 AM",
+  "at": "1:36 AM",
   "why": "",
-  "at_iso": "2026-11-19T06:33:00+00:00",
+  "at_iso": "2026-11-19T06:36:00+00:00",
   "started": "1:08 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 1:08 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 1:33 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 1:08 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 1:36 AM ET</p></section>"
  }
 }

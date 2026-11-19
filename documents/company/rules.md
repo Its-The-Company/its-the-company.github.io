@@ -749,6 +749,8 @@ The Effect lines of the amendments.md entries the charter retired (2026-11-04 12
 - **2026-11-18 11:06 PM ET** ((private)): Disk cleanup is ruthless with anything on GitHub or rebuildable and never touches live, unpushed or personal data, on the Mac mini and both SSDs; it runs in sessions every 15 minutes and at once on low disk, and a task opens only when the sweep cannot recover the line.
 - **2026-11-18 11:42 PM ET** ((private)): Retiring the lane operators (one coordinator for every account, T-5005) is P0 and starts once the top P0 process fixes (T-4993 first) have landed, then runs beside the other process requests flagged in the past few days. Lock In turns on by itself each new day just after midnight ET until an Investor says otherwise (T-5006 builds it); UNLOCK still ends it for the day.
 - **2026-11-18 11:58 PM ET** ((private)): The midnight Lock In is for 2026-11-19 only (it ends at midnight 11-19); it is not a standing nightly Lock In.
+- **2026-11-19 1:40 AM ET** ((private)): Process changes stay P0; the task-queue changes (machine-made lines update open ones, adds join open lines, the new-vs-finished count and fold pass) are pulled forward, aiming for Thursday 11-19 morning, afternoon at the latest, ahead of other process work.
+- **2026-11-19 1:49 AM ET** ((private)): The merge time-out fixes (T-4806) are P0 with the task-list fixes; all recently requested process changes ship as soon as possible, ordered by the efficiency and bottleneck savings each brings.
 {% endraw %}
 
 </div>

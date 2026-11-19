@@ -1,11 +1,22 @@
 {
  "schema": 1,
- "at": "2026-11-19T10:47:29.066933+00:00",
+ "at": "2026-11-19T10:50:52.253036+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-19T02:04:21-05:00",
   "flow": [
+   {
+    "t": "T-4961",
+    "name": "Publish the twice-daily reports close to six",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "testq",
+      "at": 1795085407
+     }
+    ]
+   },
    {
     "t": "T-4962",
     "w": "Idris",
@@ -108,7 +119,7 @@
    "task": "[tools] T-4726 fix red personal land test",
    "model": "opus",
    "started": "2026-11-19T08:07:31.727Z",
-   "seconds": 9597,
+   "seconds": 9800,
    "finished": null,
    "effort": "high"
   },
@@ -117,7 +128,7 @@
    "task": "[tools] T-4838 gate waits on runner progress",
    "model": "opus",
    "started": "2026-11-19T08:26:43.295Z",
-   "seconds": 8445,
+   "seconds": 8648,
    "finished": null,
    "effort": "high"
   },
@@ -126,7 +137,7 @@
    "task": "[build] T-4888 wrapped-line tap caret fix",
    "model": "opus",
    "started": "2026-11-19T08:53:21.795Z",
-   "seconds": 6847,
+   "seconds": 7050,
    "finished": null,
    "effort": "high"
   },
@@ -135,7 +146,7 @@
    "task": "[tools] T-4992 land then T-4993 disk sweep",
    "model": "opus",
    "started": "2026-11-19T08:59:42.682Z",
-   "seconds": 6466,
+   "seconds": 6669,
    "finished": null,
    "effort": "high"
   },
@@ -144,7 +155,7 @@
    "task": "[tools] T-4986 T-3806 T-4907 lands",
    "model": "opus",
    "started": "2026-11-19T08:59:52.032Z",
-   "seconds": 6457,
+   "seconds": 6660,
    "finished": null,
    "effort": "high"
   },
@@ -153,7 +164,7 @@
    "task": "[tools] T-5065 fix supervisor test red and land",
    "model": "opus",
    "started": "2026-11-19T09:40:28.974Z",
-   "seconds": 4020,
+   "seconds": 4223,
    "finished": null,
    "effort": "high"
   }
@@ -245,7 +256,7 @@
   "week_pct": 57.06,
   "usage_pct": 47.1,
   "work_pct": 81.4,
-  "read_at": "2026-11-19T10:48:00+00:00",
+  "read_at": "2026-11-19T10:51:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -483,14 +494,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-19T05:43:00-05:00",
+   "at": "2026-11-19T05:48:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 3,
-  "at": "2026-11-19T05:48:00-05:00",
+  "at": "2026-11-19T05:51:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -786,97 +797,97 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-19T10:47:29Z",
+  "at": "2026-11-19T10:50:52Z",
   "s": {
+   "T-4961": [
+    "merging",
+    "",
+    1795085452253
+   ],
    "T-4850": [
     "mergeq",
     "",
-    1795079489066
+    1795079512253
    ],
    "T-4899": [
     "mergeq",
     "",
-    1795075829066
+    1795075792253
    ],
    "T-4919": [
     "mergeq",
     "",
-    1795075829066
-   ],
-   "T-4961": [
-    "mergeq",
-    "",
-    1795077089066
+    1795075792253
    ],
    "T-4871": [
     "mergeq",
     "",
-    1795080809066
+    1795080832253
    ],
    "T-4795": [
     "mergeq",
     "",
-    1795082009066
+    1795081972253
    ],
    "T-3402": [
     "mergeq",
     "",
-    1795082249066
+    1795082212253
    ],
    "T-5057": [
     "mergeq",
     "",
-    1795083029066
+    1795083052253
    ],
    "T-5045": [
     "mergeq",
     "",
-    1795083269066
+    1795083232253
    ],
    "T-0349": [
     "mergeq",
     "",
-    1795084049066
+    1795084012253
    ],
    "T-5037": [
     "mergeq",
     "",
-    1795084289066
+    1795084252253
    ],
    "T-4681": [
     "mergeq",
     "",
-    1795084229066
+    1795084192253
    ],
    "T-0902": [
     "mergeq",
     "",
-    1795082489066
+    1795082452253
    ],
    "T-4838": [
     "merging",
     "",
-    1795083689066
+    1795083712253
    ],
    "T-4986": [
     "merging",
     "",
-    1795080149066
+    1795080112253
    ],
    "T-4888": [
     "merging",
     "",
-    1795084049066
+    1795084072253
    ],
    "T-4993": [
     "merging",
     "",
-    1795082549066
+    1795082512253
    ],
    "T-5065": [
     "testing",
     "",
-    1795083689066
+    1795083712253
    ],
    "T-4849": [
     "merged",
@@ -904,10 +915,10 @@
    ]
   },
   "nm": {
+   "T-4961": "Publish the twice-daily...",
    "T-4850": "Bring the Mac mini load back...",
    "T-4899": "Fix a MacBook test job that...",
    "T-4919": "Fix a MacBook test job that...",
-   "T-4961": "Publish the twice-daily...",
    "T-4871": "Check the two-way editing...",
    "T-4795": "Weigh the showcase set...",
    "T-3402": "Check whether the OpenSSL...",
@@ -928,10 +939,10 @@
    "T-4807": "Fix every bad test that..."
   },
   "wk": {
+   "T-4961": "Odalys",
    "T-4850": "Odalys",
    "T-4899": "Idris",
    "T-4919": "Operator",
-   "T-4961": "Odalys",
    "T-4871": "Idris",
    "T-4795": "Ines",
    "T-3402": "Ines",
@@ -962,11 +973,11 @@
   }
  },
  "ln": {
-  "at": "2026-11-19T10:47:29Z",
+  "at": "2026-11-19T10:50:52Z",
   "mq": {
    "n": {
-    "checking": 0,
-    "inline": 13,
+    "checking": 1,
+    "inline": 12,
     "conflicted": 1,
     "failed": 0,
     "held": 0,
@@ -974,15 +985,24 @@
     "parked": 0
    },
    "m": {
-    "checking": null,
-    "inline": 50,
-    "conflicted": 1047,
+    "checking": 0,
+    "inline": 52,
+    "conflicted": 1050,
     "failed": null,
     "held": null,
     "retry": null,
     "parked": null
    },
-   "cur": [],
+   "cur": [
+    [
+     [
+      "T-4961"
+     ],
+     "Mac tests",
+     "Mac mini",
+     0
+    ]
+   ],
    "ld": [
     31,
     "2026-11-19T09:43:59Z"
@@ -990,12 +1010,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-19T10:47:46Z",
-    "ld": 27.88,
+    "at": "2026-11-19T10:50:14Z",
+    "ld": 28.14,
     "c": 8,
     "sb": 1,
     "dk": [
-     29.8,
+     31.9,
      228.3
     ],
     "ss": [
@@ -1088,10 +1108,10 @@
   "main": 6,
   "lanes": 4,
   "total": 10,
-  "at": "5:48 AM",
+  "at": "5:51 AM",
   "why": "",
-  "at_iso": "2026-11-19T10:48:00+00:00",
+  "at_iso": "2026-11-19T10:51:00+00:00",
   "started": "2:04 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>10</b> agents running now</p><p class=\"an-sub\">Main session 6, started 2:04 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 5:48 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>10</b> agents running now</p><p class=\"an-sub\">Main session 6, started 2:04 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 5:51 AM ET</p></section>"
  }
 }

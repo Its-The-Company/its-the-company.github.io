@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-19T08:02:41.439380+00:00",
+ "at": "2026-11-19T08:05:50.158651+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -223,25 +223,24 @@
  "workers": [
   {
    "name": "odalys",
-   "task": "[tools] T-4850 bring Mac mini load down",
-   "model": "opus",
-   "started": "2026-11-19T07:33:51.570Z",
-   "seconds": 1729,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "odalys",
    "task": "[tools] T-5066 limit auto Lock In to 11-19",
    "model": "opus",
    "started": "2026-11-19T07:47:07.521Z",
-   "seconds": 933,
+   "seconds": 1122,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Odalys x2",
+ "who": "Odalys",
  "recent": [
+  {
+   "name": "odalys",
+   "task": "[tools] T-4850 bring Mac mini load down",
+   "model": "opus",
+   "started": "2026-11-19T07:33:51.570Z",
+   "seconds": null,
+   "finished": "2026-11-19T08:05:37.350000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[tools] T-5063 board growth count and fold",
@@ -262,7 +261,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 591,
+  "runnable_count": 593,
   "blocked_count": 28
  },
  "meter": {
@@ -311,7 +310,7 @@
   "week_pct": 57.06,
   "usage_pct": 47.1,
   "work_pct": 81.4,
-  "read_at": "2026-11-19T08:02:00+00:00",
+  "read_at": "2026-11-19T08:05:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -358,7 +357,7 @@
   }
  ],
  "disk": {
-  "free_gb": 38,
+  "free_gb": 40,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -367,14 +366,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-19T02:56:00-05:00",
+   "at": "2026-11-19T03:03:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 3,
-  "at": "2026-11-19T03:02:00-05:00",
+  "at": "2026-11-19T03:05:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -385,17 +384,17 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 3 (at its floor: load 15.0 a core is over 10)",
-  "n": 3,
+  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 4 (raised a step toward the floor of 8: new work may start and every signal is under its line)",
+  "n": 4,
   "at": "2026-11-19T02:04:05.487764-05:00"
  },
  "lanes": [
   {
    "name": "Odalys",
    "state": "running",
-   "task": "[tools] T-4850 bring Mac mini load down",
+   "task": "[tools] T-5066 limit auto Lock In to 11-19",
    "model": "opus",
-   "since": "2026-11-19T07:33:51.570Z",
+   "since": "2026-11-19T07:47:07.521Z",
    "next": [],
    "effort": "high"
   },
@@ -442,16 +441,6 @@
  ],
  "tasks": {
   "run": [
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Bring the Mac mini load back down",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-19T07:33:51.570Z",
-    "o": "c",
-    "task": "T-4850"
-   },
    {
     "w": "Odalys",
     "k": "tools",
@@ -554,7 +543,7 @@
    }
   ],
   "count": {
-   "next": 591,
+   "next": 593,
    "wait": 27,
    "blocked": 1,
    "you": 9
@@ -612,77 +601,72 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-19T08:02:41Z",
+  "at": "2026-11-19T08:05:50Z",
   "s": {
    "T-4899": [
     "merging",
     "Host checks on the Mac mini",
-    1795074281439
+    1795074290158
    ],
    "T-4919": [
     "merging",
     "Host checks on the Mac mini",
-    1795074281439
+    1795074290158
    ],
    "T-4988": [
     "mergeq",
     "1st to merge",
-    1795071941439
+    1795071950158
    ],
    "T-5006": [
     "mergeq",
     "1st to merge",
-    1795071941439
+    1795071950158
    ],
    "T-5000": [
     "mergeq",
     "2nd to merge",
-    1795066421439
+    1795066430158
    ],
    "T-4916": [
     "mergeq",
     "3rd to merge",
-    1795068401439
+    1795068410158
    ],
    "T-5002": [
     "mergeq",
     "5th to merge",
-    1795068461439
+    1795068470158
    ],
    "T-4931": [
     "mergeq",
     "7th to merge",
-    1795068701439
+    1795068710158
    ],
    "T-4932": [
     "mergeq",
     "9th to merge",
-    1795068941439
+    1795068950158
    ],
    "T-4933": [
     "mergeq",
     "10th to merge",
-    1795069061439
+    1795069070158
    ],
    "T-4934": [
     "mergeq",
     "11th to merge",
-    1795069241439
+    1795069250158
    ],
    "T-4871": [
     "mergeq",
     "14th to merge",
-    1795072961439
+    1795072970158
    ],
    "T-4964": [
     "merging",
     "Mac tests at the main gate",
-    1795074461439
-   ],
-   "T-4850": [
-    "testing",
-    "its own tests, in its copy",
-    1795074521439
+    1795074470158
    ]
   },
   "nm": {
@@ -698,8 +682,7 @@
    "T-4933": "Check finished work before it ships",
    "T-4934": "Check finished work before it ships",
    "T-4871": "Check the two-way editing week figure against the code",
-   "T-4964": "Name machine-made task lines by what they fix",
-   "T-4850": "Bring the Mac mini load back down"
+   "T-4964": "Name machine-made task lines by what they fix"
   },
   "wk": {
    "T-4899": "Idris",
@@ -715,13 +698,12 @@
    "T-4934": "Pernille",
    "T-4871": "Idris",
    "T-4964": "Odalys",
-   "T-4850": "Odalys",
    "T-5063": "Odalys",
    "T-5034": "Odalys"
   }
  },
  "ln": {
-  "at": "2026-11-19T08:02:41Z",
+  "at": "2026-11-19T08:05:50Z",
   "mq": {
    "n": {
     "checking": 2,
@@ -733,9 +715,9 @@
     "parked": 0
    },
    "m": {
-    "checking": 18,
-    "inline": 106,
-    "conflicted": 882,
+    "checking": 21,
+    "inline": 109,
+    "conflicted": 885,
     "failed": null,
     "held": null,
     "retry": null,
@@ -748,7 +730,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     18
+     21
     ],
     [
      [
@@ -756,7 +738,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     18
+     21
     ]
    ],
    "ld": [
@@ -766,12 +748,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-19T08:02:16Z",
-    "ld": 12.78,
+    "at": "2026-11-19T08:05:14Z",
+    "ld": 9.07,
     "c": 8,
     "sb": 0,
     "dk": [
-     37.9,
+     40.3,
      228.3
     ],
     "ss": [
@@ -800,7 +782,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 2 tasks",
+   "t": "Work session \u2013 1 task",
    "at": "2026-11-19T02:04:21-05:00"
   },
   {
@@ -830,13 +812,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 2,
+  "main": 1,
   "lanes": 1,
-  "total": 3,
-  "at": "3:02 AM",
+  "total": 2,
+  "at": "3:05 AM",
   "why": "",
-  "at_iso": "2026-11-19T08:02:00+00:00",
+  "at_iso": "2026-11-19T08:05:00+00:00",
   "started": "2:04 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 2:04 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 3:02 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 1, started 2:04 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 3:05 AM ET</p></section>"
  }
 }

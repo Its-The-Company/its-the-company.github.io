@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-19T00:12:12.764372+00:00",
+ "at": "2026-11-19T00:15:16.712426+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -146,7 +146,7 @@
    "task": "[tools] T-4917 gate counts own copied files",
    "model": "opus",
    "started": "2026-11-18T22:35:16.121Z",
-   "seconds": 5816,
+   "seconds": 6000,
    "finished": null,
    "effort": "high"
   },
@@ -155,7 +155,7 @@
    "task": "[test] T-4807 bad tests slice 3",
    "model": "opus",
    "started": "2026-11-18T22:58:04.466Z",
-   "seconds": 4448,
+   "seconds": 4632,
    "finished": null,
    "effort": "high"
   },
@@ -164,7 +164,7 @@
    "task": "[tools] T-4808 merge-step fixes stream",
    "model": "opus",
    "started": "2026-11-18T23:26:46.521Z",
-   "seconds": 2726,
+   "seconds": 2910,
    "finished": null,
    "effort": "high"
   },
@@ -173,7 +173,7 @@
    "task": "[tools] T-4788 feature sessions on for all",
    "model": "opus",
    "started": "2026-11-18T23:37:01.600Z",
-   "seconds": 2111,
+   "seconds": 2295,
    "finished": null,
    "effort": "high"
   }
@@ -216,7 +216,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 522,
+  "runnable_count": 523,
   "blocked_count": 34
  },
  "meter": {
@@ -265,7 +265,7 @@
   "week_pct": 52.29,
   "usage_pct": 50.1,
   "work_pct": 81.6,
-  "read_at": "2026-11-19T00:12:00+00:00",
+  "read_at": "2026-11-19T00:15:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -286,7 +286,7 @@
   }
  ],
  "disk": {
-  "free_gb": 12,
+  "free_gb": 13,
   "gate": "closed",
   "ssd": {
    "mounted": true,
@@ -295,14 +295,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions wait until 20 GB is free.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-18T19:06:00-05:00",
+   "at": "2026-11-18T19:13:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 3,
-  "at": "2026-11-18T19:12:00-05:00",
+  "at": "2026-11-18T19:15:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -503,7 +503,7 @@
    }
   ],
   "count": {
-   "next": 522,
+   "next": 523,
    "wait": 31,
    "blocked": 3,
    "you": 10
@@ -573,57 +573,47 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-19T00:11:58Z",
+  "at": "2026-11-19T00:14:56Z",
   "s": {
    "T-4808": [
     "merging",
     "Mac tests at the main gate",
-    1795046398580
+    1795046396358
    ],
    "T-4903": [
     "merging",
     "Mac tests at the main gate",
-    1795045738580
+    1795045736358
    ],
    "T-4807": [
     "merging",
     "Mac tests at the main gate",
-    1795045258580
+    1795045256358
+   ],
+   "T-3217": [
+    "testing",
+    "MacBook \u00b7 test",
+    null
    ],
    "T-4805": [
     "testing",
     "its own tests, in its copy",
-    1795046758580
+    1795046756358
    ],
    "T-4788": [
     "testing",
     "its own tests, in its copy",
-    1795045318580
-   ],
-   "T-4607": [
-    "testq",
-    "1st for a Simulator",
-    1795041238580
-   ],
-   "T-4611": [
-    "testq",
-    "2nd for a Simulator",
-    1795041238580
+    1795045316358
    ],
    "T-4898": [
     "testq",
-    "3rd for a Simulator",
-    1795041238580
-   ],
-   "T-3217": [
-    "testq",
-    "5th for a Simulator",
-    1795041238580
+    "1st for a Simulator",
+    1795041236358
    ],
    "T-4575": [
     "testq",
-    "6th for a Simulator",
-    1795041238580
+    "4th for a Simulator",
+    1795041236358
    ],
    "T-4917": [
     "merged",
@@ -636,12 +626,10 @@
    "T-4808": "Fix the red board-check row in the land test",
    "T-4903": "Drop stale copies from the merge count for good",
    "T-4807": "Fix every bad test that failed a merge",
+   "T-3217": "Fix the three red tests before build 3",
    "T-4805": "Record a cause for every failed merge",
    "T-4788": "Turn feature sessions on for every app feature",
-   "T-4607": "Check finished work before it ships",
-   "T-4611": "Check finished work before it ships",
    "T-4898": "Fix the Home Screen token test reading the gallery",
-   "T-3217": "Fix the three red tests before build 3",
    "T-4575": "Stop an edit from rewriting a pasted Shortcut link",
    "T-4917": "Stop the gate refusing files it copied in itself"
   },
@@ -649,12 +637,10 @@
    "T-4808": "Odalys",
    "T-4903": "Odalys",
    "T-4807": "Pernille",
+   "T-3217": "Idris",
    "T-4805": "Odalys",
    "T-4788": "Odalys",
-   "T-4607": "Odalys",
-   "T-4611": "Pernille",
    "T-4898": "Idris",
-   "T-3217": "Idris",
    "T-4575": "Idris",
    "T-4917": "Odalys",
    "T-4750": "Idris",
@@ -664,7 +650,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-19T00:11:58Z",
+  "at": "2026-11-19T00:14:56Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -678,11 +664,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 835,
+    "conflicted": 838,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1109
+    "parked": 1112
    },
    "cur": [],
    "ld": [
@@ -692,8 +678,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-19T00:11:38Z",
-    "ld": 6.52,
+    "at": "2026-11-19T00:15:01Z",
+    "ld": 6.38,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -707,12 +693,12 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-18T23:32:49Z",
-    "ld": 57.67,
+    "at": "2026-11-19T00:01:24Z",
+    "ld": 0.42,
     "c": 12,
     "sb": 0,
     "dk": [
-     357.2,
+     357.1,
      926.4
     ],
     "sn": []
@@ -727,12 +713,12 @@
    "m": "opus",
    "e": "high",
    "t": "Work session \u2013 12 tasks",
-   "at": "2026-11-18T19:09:13-05:00"
+   "at": "2026-11-18T19:14:17-05:00"
   }
  ],
  "reply": {
-  "sent": "2026-11-19T00:07:59Z",
-  "seconds": 72.0
+  "sent": "2026-11-19T00:13:09Z",
+  "seconds": 67.0
  },
  "inbox": [],
  "trimmed": [
@@ -751,10 +737,10 @@
   "main": 4,
   "lanes": 0,
   "total": 4,
-  "at": "7:12 PM",
+  "at": "7:15 PM",
   "why": "",
-  "at_iso": "2026-11-19T00:12:00+00:00",
+  "at_iso": "2026-11-19T00:15:00+00:00",
   "started": "5:34 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 4, started 5:34 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 7:12 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 4, started 5:34 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 7:15 PM ET</p></section>"
  }
 }

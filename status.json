@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-19T23:09:24.742395+00:00",
+ "at": "2026-11-19T23:25:19.471533+00:00",
  "session": {
   "active": false,
   "kind": "",
@@ -176,12 +176,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-19T18:14:28-05:00",
+ "next_tick": "2026-11-19T18:39:47-05:00",
  "personal": {
   "week_pct": 76.57,
   "usage_pct": 47.5,
   "work_pct": 80.3,
-  "read_at": "2026-11-19T23:11:00+00:00",
+  "read_at": "2026-11-19T23:26:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -388,7 +388,7 @@
   }
  ],
  "disk": {
-  "free_gb": 47,
+  "free_gb": 43,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -397,14 +397,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-19T18:06:00-05:00",
+   "at": "2026-11-19T18:21:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 3,
-  "at": "2026-11-19T18:11:00-05:00",
+  "at": "2026-11-19T18:26:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -602,32 +602,37 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-19T23:09:24Z",
+  "at": "2026-11-19T23:25:19Z",
   "s": {
    "T-5180": [
     "merging",
     "Host checks on the Mac mini",
-    1795128804742
+    1795128799471
    ],
    "T-5070": [
     "mergeq",
     "1st to merge",
-    1795128804742
+    1795128859471
    ],
    "T-4693": [
     "mergeq",
     "2nd to merge",
-    1795129404742
+    1795129399471
+   ],
+   "T-4110": [
+    "mergeq",
+    "3rd to merge",
+    1795130119471
    ],
    "T-4184": [
-    "testing",
-    "Mac Mini \u00b7 test",
-    null
+    "testq",
+    "1st for a Simulator",
+    1795130479471
    ],
    "T-4813": [
-    "testing",
-    "Mac Mini \u00b7 test",
-    null
+    "testq",
+    "1st for a Simulator",
+    1795130479471
    ],
    "T-3113": [
     "merged",
@@ -664,6 +669,7 @@
    "T-5180": "Cut the merge step's wait on the first entry's checks",
    "T-5070": "Shorten the gate change merge wait",
    "T-4693": "Research a permanent name for the app",
+   "T-4110": "Chart the task queue size on Home",
    "T-4184": "A person's own script becomes a Home Screen widget",
    "T-4813": "Home's numbers update within a minute",
    "T-3113": "Build a timeline feed for every picked-up task",
@@ -676,6 +682,7 @@
    "T-5180": "Odalys",
    "T-5070": "Odalys",
    "T-4693": "Wrenna",
+   "T-4110": "Maren",
    "T-4184": "Idris",
    "T-4813": "Maren",
    "T-3113": "Odalys",
@@ -686,11 +693,11 @@
   }
  },
  "ln": {
-  "at": "2026-11-19T23:09:24Z",
+  "at": "2026-11-19T23:25:19Z",
   "mq": {
    "n": {
     "checking": 1,
-    "inline": 2,
+    "inline": 3,
     "conflicted": 4,
     "failed": 0,
     "held": 0,
@@ -698,13 +705,13 @@
     "parked": 1
    },
    "m": {
-    "checking": 16,
-    "inline": 11,
-    "conflicted": 347,
+    "checking": 32,
+    "inline": 22,
+    "conflicted": 363,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 27
+    "parked": 43
    },
    "cur": [
     [
@@ -713,7 +720,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     16
+     32
     ]
    ],
    "ld": [
@@ -723,12 +730,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-19T23:09:32Z",
-    "ld": 61.65,
+    "at": "2026-11-19T23:25:26Z",
+    "ld": 51.93,
     "c": 8,
     "sb": 1,
     "dk": [
-     46.2,
+     42.1,
      228.3
     ],
     "ss": [
@@ -754,13 +761,13 @@
  },
  "hc": {
   "wait": {
-   "n": 7,
+   "n": 9,
    "limit": 20,
-   "in_line": 2,
+   "in_line": 4,
    "parked": 5,
    "open": true,
    "mq": false,
-   "counted": "2026-11-19T22:57:00+00:00",
+   "counted": "2026-11-19T18:24:47-05:00",
    "by": {
     "app": {
      "n": 1,
@@ -768,7 +775,7 @@
      "open": true
     },
     "other": {
-     "n": 6,
+     "n": 8,
      "limit": 20,
      "open": true
     },
@@ -778,11 +785,11 @@
      "open": false
     }
    },
-   "at": "2026-11-19T23:09:24+00:00"
+   "at": "2026-11-19T23:25:19+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-19T23:09:24+00:00"
+   "at": "2026-11-19T23:25:19+00:00"
   }
  },
  "operators": [
@@ -803,15 +810,6 @@
    "e": "high",
    "t": "Work session \u2013 1 task",
    "at": "2026-11-19T17:25:29-05:00"
-  },
-  {
-   "w": "Operator",
-   "a": "Evan's Account",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session \u2013 3 tasks",
-   "at": "2026-11-19T17:56:42-05:00"
   },
   {
    "w": "Operator",
@@ -837,7 +835,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 2 tasks",
+   "t": "Work session \u2013 1 task",
    "at": "2026-11-19T17:25:59-05:00"
   }
  ],
@@ -860,10 +858,10 @@
   "main": 0,
   "lanes": 6,
   "total": 6,
-  "at": "6:11 PM",
+  "at": "6:26 PM",
   "why": "",
-  "at_iso": "2026-11-19T23:11:00+00:00",
+  "at_iso": "2026-11-19T23:26:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 6 sessions \u00b7 as of 6:11 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 6 sessions \u00b7 as of 6:26 PM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-19T04:01:19.586559+00:00",
+ "at": "2026-11-19T04:04:30.301792+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -126,8 +126,8 @@
     "why": "did not merge cleanly"
    }
   ],
-  "landed": 18,
-  "failed": 4
+  "landed": 14,
+  "failed": 5
  },
  "workers": [
   {
@@ -135,7 +135,7 @@
    "task": "[tools] T-4805 T-4792 land gate cause and retest",
    "model": "opus",
    "started": "2026-11-19T02:37:38.692Z",
-   "seconds": 5020,
+   "seconds": 5211,
    "finished": null,
    "effort": "high"
   },
@@ -144,7 +144,7 @@
    "task": "[build] T-4962 make main pass Xcode checks",
    "model": "opus",
    "started": "2026-11-19T02:38:04.132Z",
-   "seconds": 4995,
+   "seconds": 5186,
    "finished": null,
    "effort": "high"
   },
@@ -153,7 +153,7 @@
    "task": "[tools] T-4810 T-4809 waits name tasks, merge label fix",
    "model": "opus",
    "started": "2026-11-19T03:52:04.985Z",
-   "seconds": 554,
+   "seconds": 745,
    "finished": null,
    "effort": "high"
   },
@@ -162,7 +162,7 @@
    "task": "[tools] T-3806 answer unclaimed Investor messages",
    "model": "opus",
    "started": "2026-11-19T03:59:34.631Z",
-   "seconds": 104,
+   "seconds": 295,
    "finished": null,
    "effort": "high"
   },
@@ -171,7 +171,7 @@
    "task": "[tools] T-4823 features as records, join-or-new rule",
    "model": "opus",
    "started": "2026-11-19T03:59:41.880Z",
-   "seconds": 97,
+   "seconds": 288,
    "finished": null,
    "effort": "high"
   },
@@ -180,12 +180,21 @@
    "task": "[tools] T-4571 Chat model and account pickers",
    "model": "opus",
    "started": "2026-11-19T03:59:46.732Z",
-   "seconds": 92,
+   "seconds": 283,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "pernille",
+   "task": "[tools] T-4992 sweep finished task temp folders",
+   "model": "opus",
+   "started": "2026-11-19T04:02:09.869Z",
+   "seconds": 140,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Odalys x4, Idris, Maren",
+ "who": "Odalys x4, Idris, Maren, Pernille",
  "recent": [
   {
    "name": "pernille",
@@ -228,19 +237,19 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 28.0,
+   "pct": 30.0,
    "resets_at": "2026-11-19T01:10:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-18T22:56:57.134073-05:00",
+   "read_at": "2026-11-18T23:04:19.409270-05:00",
    "source": "live",
-   "left": 72.0,
+   "left": 70.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 60.0,
    "resets_at": "2026-11-22T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-18T22:56:57.134073-05:00",
+   "read_at": "2026-11-18T23:04:19.409270-05:00",
    "source": "live",
    "left": 40.0,
    "left_words": "of your weekly allowance left"
@@ -252,7 +261,7 @@
    "read_at": "2026-11-18T21:23:20.295533-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-18T22:56:57.134073-05:00"
+  "read_at": "2026-11-18T23:04:19.409270-05:00"
  },
  "ui": {
   "week_pct": 0.092,
@@ -272,7 +281,7 @@
   "week_pct": 52.57,
   "usage_pct": 47.5,
   "work_pct": 81.2,
-  "read_at": "2026-11-19T04:01:00+00:00",
+  "read_at": "2026-11-19T04:04:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -293,7 +302,7 @@
   }
  ],
  "disk": {
-  "free_gb": 13,
+  "free_gb": 19,
   "gate": "closed",
   "ssd": {
    "mounted": true,
@@ -302,14 +311,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions wait until 20 GB is free.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-18T22:56:00-05:00",
+   "at": "2026-11-18T23:03:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 3,
-  "at": "2026-11-18T23:01:00-05:00",
+  "at": "2026-11-18T23:04:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -354,11 +363,12 @@
   },
   {
    "name": "Pernille",
-   "state": "next",
-   "task": "Pernille, P0, from T-4694 (nightly run of every suite,...",
-   "model": null,
-   "since": null,
-   "next": []
+   "state": "running",
+   "task": "[tools] T-4992 sweep finished task temp folders",
+   "model": "opus",
+   "since": "2026-11-19T04:02:09.869Z",
+   "next": [],
+   "effort": "high"
   },
   {
    "name": "Ines",
@@ -438,6 +448,16 @@
     "at": "2026-11-19T03:59:46.732Z",
     "o": "c",
     "task": "T-4571"
+   },
+   {
+    "w": "Pernille",
+    "k": "tools",
+    "t": "Sweep finished task folders in the shared temp folder",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-19T04:02:09.869Z",
+    "o": "c",
+    "task": "T-4992"
    }
   ],
   "src": "plan",
@@ -605,12 +625,17 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-19T04:01:05Z",
+  "at": "2026-11-19T04:04:15Z",
   "s": {
+   "T-4792": [
+    "merging",
+    "Mac tests at the main gate",
+    1795061055155
+   ],
    "T-4909": [
     "merging",
     "Mac tests at the main gate",
-    1795058705029
+    1795058715155
    ],
    "T-4962": [
     "testing",
@@ -620,12 +645,7 @@
    "T-4810": [
     "testing",
     "its own tests, in its copy",
-    1795060445029
-   ],
-   "T-4792": [
-    "testing",
-    "its own tests, in its copy",
-    1795059665029
+    1795060455155
    ],
    "T-4805": [
     "merged",
@@ -635,17 +655,17 @@
    ]
   },
   "nm": {
+   "T-4792": "Gate lands retest a fixed red on what failed",
    "T-4909": "End work sessions on a stall, not on the clock",
    "T-4962": "Make main pass its Xcode checks again",
    "T-4810": "Make every wait name a task or an Investor issue",
-   "T-4792": "Gate lands retest a fixed red on what failed",
    "T-4805": "Record a cause for every failed merge"
   },
   "wk": {
+   "T-4792": "Odalys",
    "T-4909": "Odalys",
    "T-4962": "Operator",
    "T-4810": "Odalys",
-   "T-4792": "Odalys",
    "T-4805": "Odalys",
    "T-4851": "Odalys",
    "T-4956": "Odalys",
@@ -655,7 +675,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-19T04:01:05Z",
+  "at": "2026-11-19T04:04:15Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -669,7 +689,7 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 640,
+    "conflicted": 643,
     "failed": null,
     "held": null,
     "retry": null,
@@ -683,12 +703,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-19T04:01:10Z",
-    "ld": 5.23,
+    "at": "2026-11-19T04:03:48Z",
+    "ld": 5.72,
     "c": 8,
     "sb": 0,
     "dk": [
-     21.2,
+     20.9,
      228.3
     ],
     "ss": [
@@ -706,42 +726,21 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 13 tasks",
-   "at": "2026-11-18T22:58:55-05:00"
-  },
-  {
-   "w": "Operator",
-   "a": "Evan's Account",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session",
-   "at": "2026-11-18T23:01:16-05:00"
+   "t": "Work session \u2013 14 tasks",
+   "at": "2026-11-18T23:01:53-05:00"
   }
  ],
  "reply": {
-  "sent": "2026-11-19T03:58:22Z",
-  "seconds": 32.0
+  "sent": "2026-11-19T04:01:11Z",
+  "seconds": 40.0
  },
- "inbox": [
-  {
-   "id": "c6999279079",
-   "state": "received",
-   "position": 1,
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "If a task that another task is..."
-  }
- ],
+ "inbox": [],
  "trimmed": [
   "lane_next",
   "queue_text",
   "recent",
   "task_done",
   "fin_short",
-  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -749,13 +748,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 6,
+  "main": 7,
   "lanes": 0,
-  "total": 6,
-  "at": "11:01 PM",
+  "total": 7,
+  "at": "11:04 PM",
   "why": "",
-  "at_iso": "2026-11-19T04:01:00+00:00",
+  "at_iso": "2026-11-19T04:04:00+00:00",
   "started": "9:32 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 6, started 9:32 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 11:01 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 7, started 9:32 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 11:04 PM ET</p></section>"
  }
 }

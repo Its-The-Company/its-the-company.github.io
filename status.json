@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-19T07:44:08.495662+00:00",
+ "at": "2026-11-19T07:47:15.788988+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -14,21 +14,6 @@
      {
       "s": "landing",
       "at": 1795074240
-     }
-    ]
-   },
-   {
-    "t": "T-4899",
-    "name": "Fix a MacBook test job that failed",
-    "acct": "Personal b",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1795070443
-     },
-     {
-      "s": "macbook",
-      "at": 1795071746
      }
     ]
    },
@@ -60,6 +45,25 @@
      {
       "s": "macbook",
       "at": 1795069594
+     }
+    ]
+   },
+   {
+    "t": "T-4899",
+    "name": "Fix a MacBook test job that failed",
+    "acct": "Personal b",
+    "steps": [
+     {
+      "s": "testq",
+      "at": 1795070443
+     },
+     {
+      "s": "macbook",
+      "at": 1795071746
+     },
+     {
+      "s": "testq",
+      "at": 1795074281
      }
     ]
    },
@@ -219,25 +223,33 @@
  "workers": [
   {
    "name": "odalys",
-   "task": "[tools] T-5063 board growth count and fold",
+   "task": "[tools] T-4850 bring Mac mini load down",
    "model": "opus",
-   "started": "2026-11-19T07:05:50.003Z",
-   "seconds": 2298,
+   "started": "2026-11-19T07:33:51.570Z",
+   "seconds": 804,
    "finished": null,
    "effort": "high"
   },
   {
    "name": "odalys",
-   "task": "[tools] T-4850 bring Mac mini load down",
+   "task": "[tools] T-5066 limit auto Lock In to 11-19",
    "model": "opus",
-   "started": "2026-11-19T07:33:51.570Z",
-   "seconds": 616,
+   "started": "2026-11-19T07:47:07.521Z",
+   "seconds": 8,
    "finished": null,
    "effort": "high"
   }
  ],
  "who": "Odalys x2",
  "recent": [
+  {
+   "name": "odalys",
+   "task": "[tools] T-5063 board growth count and fold",
+   "model": "opus",
+   "started": "2026-11-19T07:05:50.003Z",
+   "seconds": null,
+   "finished": "2026-11-19T07:46:41.415000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[tools] T-5034 free held lines check",
@@ -250,7 +262,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 592,
+  "runnable_count": 591,
   "blocked_count": 28
  },
  "meter": {
@@ -299,7 +311,7 @@
   "week_pct": 57.06,
   "usage_pct": 47.1,
   "work_pct": 81.4,
-  "read_at": "2026-11-19T07:44:00+00:00",
+  "read_at": "2026-11-19T07:47:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -362,7 +374,7 @@
  "lock_in": {
   "on": true,
   "pool": 3,
-  "at": "2026-11-19T02:44:00-05:00",
+  "at": "2026-11-19T02:47:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -373,7 +385,7 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 2 (at its floor: load 15.2 a core is over 10)",
+  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 2 (at its floor: load 10.1 a core is over 10)",
   "n": 2,
   "at": "2026-11-19T02:04:05.487764-05:00"
  },
@@ -381,9 +393,9 @@
   {
    "name": "Odalys",
    "state": "running",
-   "task": "[tools] T-5063 board growth count and fold",
+   "task": "[tools] T-4850 bring Mac mini load down",
    "model": "opus",
-   "since": "2026-11-19T07:05:50.003Z",
+   "since": "2026-11-19T07:33:51.570Z",
    "next": [],
    "effort": "high"
   },
@@ -433,22 +445,22 @@
    {
     "w": "Odalys",
     "k": "tools",
-    "t": "Keep new tasks from outgrowing finished ones",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-19T07:05:50.003Z",
-    "o": "c",
-    "task": "T-5063"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
     "t": "Bring the Mac mini load back down",
     "m": "opus",
     "e": "high",
     "at": "2026-11-19T07:33:51.570Z",
     "o": "c",
     "task": "T-4850"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Stop the nightly Lock In after tonight",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-19T07:47:07.521Z",
+    "o": "c",
+    "task": "T-5066"
    }
   ],
   "src": "plan",
@@ -478,13 +490,6 @@
     "w": "Odalys",
     "k": "tools",
     "t": "Act on the feature record at every add",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Keep new tasks from outgrowing finished ones",
     "s": "next",
     "o": "c"
    },
@@ -522,9 +527,21 @@
     "t": "Fix the red personal land test",
     "s": "next",
     "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Fix the red personal account test",
+    "s": "next",
+    "o": "c"
    }
   ],
   "done": [
+   {
+    "w": "Odalys",
+    "t": "Each report now says how many task lines were added against how many were closed the day before,...",
+    "at": "2026-11-19T02:46:00-05:00"
+   },
    {
     "w": "Odalys",
     "t": "Folded into T-2549 (Picture the Pro screen and finish its word changes), which covers the same...",
@@ -534,22 +551,21 @@
     "w": "Odalys",
     "t": "Closed, stale: past its Until 2026-11-18 with no owner action since; it leaves the open queue,...",
     "at": "2026-11-19T02:32:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "A board task can no longer sit blocked with nothing that will ever free it: a daily-visible...",
-    "at": "2026-11-19T02:32:00-05:00"
    }
   ],
   "count": {
-   "next": 592,
+   "next": 591,
    "wait": 27,
    "blocked": 1,
    "you": 9
   },
   "fin": {
-   "n": 1,
+   "n": 2,
    "rows": [
+    [
+     "T-5063",
+     "Keep new tasks from..."
+    ],
     [
      "T-5034",
      "Free every held line without..."
@@ -596,112 +612,106 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-19T07:43:59Z",
+  "at": "2026-11-19T07:47:07Z",
   "s": {
-   "T-4931": [
+   "T-4899": [
     "merging",
-    "Merging onto main",
-    1795074239787
+    "Host checks on the Mac mini",
+    1795074307837
    ],
-   "T-4932": [
+   "T-4919": [
     "merging",
-    "Merging onto main",
-    1795074239787
-   ],
-   "T-4933": [
-    "merging",
-    "Merging onto main",
-    1795074239787
-   ],
-   "T-4934": [
-    "merging",
-    "Merging onto main",
-    1795074239787
+    "Host checks on the Mac mini",
+    1795074307837
    ],
    "T-4988": [
     "mergeq",
     "1st to merge",
-    1795071959787
+    1795071967837
    ],
    "T-5006": [
     "mergeq",
     "1st to merge",
-    1795071959787
+    1795071967837
    ],
    "T-5000": [
     "mergeq",
     "2nd to merge",
-    1795066439787
+    1795066447837
    ],
    "T-4916": [
     "mergeq",
     "3rd to merge",
-    1795068419787
+    1795068427837
    ],
    "T-5002": [
     "mergeq",
     "5th to merge",
-    1795068479787
+    1795068487837
    ],
-   "T-4899": [
+   "T-4931": [
     "mergeq",
-    "6th to merge",
-    1795068719787
+    "7th to merge",
+    1795068727837
    ],
-   "T-4919": [
+   "T-4932": [
     "mergeq",
-    "8th to merge",
-    1795068719787
+    "9th to merge",
+    1795068907837
+   ],
+   "T-4933": [
+    "mergeq",
+    "10th to merge",
+    1795069087837
+   ],
+   "T-4934": [
+    "mergeq",
+    "11th to merge",
+    1795069207837
    ],
    "T-4871": [
     "mergeq",
     "14th to merge",
-    1795072919787
-   ],
-   "T-5063": [
-    "merging",
-    "Mac tests at the main gate \u00b7 3 groups of tests done, 1 red",
-    1795073819787
+    1795072927837
    ]
   },
   "nm": {
-   "T-4931": "Check finished work before it ships",
-   "T-4932": "Check finished work before it ships",
-   "T-4933": "Check finished work before it ships",
-   "T-4934": "Check finished work before it ships",
+   "T-4899": "Fix a MacBook test job that failed",
+   "T-4919": "Fix a MacBook test job that failed",
    "T-4988": "Recount failed-merge causes after a week of new records",
    "T-5006": "Lock In turns itself on after midnight",
    "T-5000": "Draw transit count-downs the way the iPhone draws them",
    "T-4916": "Check the new landing road before it ships",
    "T-5002": "Say what a run does when its save is unchecked",
-   "T-4899": "Fix a MacBook test job that failed",
-   "T-4919": "Fix a MacBook test job that failed",
-   "T-4871": "Check the two-way editing week figure against the code",
-   "T-5063": "Keep new tasks from outgrowing finished ones"
+   "T-4931": "Check finished work before it ships",
+   "T-4932": "Check finished work before it ships",
+   "T-4933": "Check finished work before it ships",
+   "T-4934": "Check finished work before it ships",
+   "T-4871": "Check the two-way editing week figure against the code"
   },
   "wk": {
-   "T-4931": "Pernille",
-   "T-4932": "Pernille",
-   "T-4933": "Pernille",
-   "T-4934": "Pernille",
+   "T-4899": "Idris",
+   "T-4919": "Operator",
    "T-4988": "Odalys",
    "T-5006": "Odalys",
    "T-5000": "Maren",
    "T-4916": "Pernille",
    "T-5002": "Pernille",
-   "T-4899": "Idris",
-   "T-4919": "Operator",
+   "T-4931": "Pernille",
+   "T-4932": "Pernille",
+   "T-4933": "Pernille",
+   "T-4934": "Pernille",
    "T-4871": "Idris",
    "T-5063": "Odalys",
    "T-5034": "Odalys"
   }
  },
  "ln": {
-  "at": "2026-11-19T07:43:59Z",
+  "at": "2026-11-19T07:47:07Z",
   "mq": {
    "n": {
-    "checking": 4,
-    "inline": 8,
+    "checking": 2,
+    "inline": 10,
     "conflicted": 1,
     "failed": 0,
     "held": 0,
@@ -709,9 +719,9 @@
     "parked": 0
    },
    "m": {
-    "checking": 0,
-    "inline": 92,
-    "conflicted": 863,
+    "checking": 2,
+    "inline": 90,
+    "conflicted": 866,
     "failed": null,
     "held": null,
     "retry": null,
@@ -720,35 +730,19 @@
    "cur": [
     [
      [
-      "T-4931"
+      "T-4899"
      ],
-     "going onto main",
+     "Mac tests",
      "Mac mini",
-     0
+     2
     ],
     [
      [
-      "T-4932"
+      "T-4919"
      ],
-     "going onto main",
+     "Mac tests",
      "Mac mini",
-     0
-    ],
-    [
-     [
-      "T-4933"
-     ],
-     "going onto main",
-     "Mac mini",
-     0
-    ],
-    [
-     [
-      "T-4934"
-     ],
-     "going onto main",
-     "Mac mini",
-     0
+     2
     ]
    ],
    "ld": [
@@ -758,12 +752,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-19T07:44:00Z",
-    "ld": 10.91,
+    "at": "2026-11-19T07:46:24Z",
+    "ld": 7.83,
     "c": 8,
     "sb": 0,
     "dk": [
-     40.5,
+     40.8,
      228.3
     ],
     "ss": [
@@ -825,10 +819,10 @@
   "main": 2,
   "lanes": 1,
   "total": 3,
-  "at": "2:44 AM",
+  "at": "2:47 AM",
   "why": "",
-  "at_iso": "2026-11-19T07:44:00+00:00",
+  "at_iso": "2026-11-19T07:47:00+00:00",
   "started": "2:04 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 2:04 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 2:44 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 2:04 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 2:47 AM ET</p></section>"
  }
 }

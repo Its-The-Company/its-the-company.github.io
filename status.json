@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-19T11:22:03.204020+00:00",
+ "at": "2026-11-19T11:25:13.886863+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -119,16 +119,7 @@
    "task": "[tools] T-4838 gate waits on runner progress",
    "model": "opus",
    "started": "2026-11-19T08:26:43.295Z",
-   "seconds": 10519,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "pernille",
-   "task": "[tools] T-4992 land then T-4993 disk sweep",
-   "model": "opus",
-   "started": "2026-11-19T08:59:42.682Z",
-   "seconds": 8540,
+   "seconds": 10710,
    "finished": null,
    "effort": "high"
   },
@@ -137,7 +128,7 @@
    "task": "[tools] T-4986 T-3806 T-4907 lands",
    "model": "opus",
    "started": "2026-11-19T08:59:52.032Z",
-   "seconds": 8531,
+   "seconds": 8721,
    "finished": null,
    "effort": "high"
   },
@@ -146,7 +137,7 @@
    "task": "[report] morning",
    "model": "opus",
    "started": "2026-11-19T11:15:28.468Z",
-   "seconds": 394,
+   "seconds": 585,
    "finished": null,
    "effort": "high"
   },
@@ -155,13 +146,30 @@
    "task": "[tools] T-5048 group lines other tools open",
    "model": "opus",
    "started": "2026-11-19T11:15:44.648Z",
-   "seconds": 378,
+   "seconds": 569,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "pernille",
+   "task": "[tools] T-5095 land disk sweep from fresh copy",
+   "model": "opus",
+   "started": "2026-11-19T11:25:02.967Z",
+   "seconds": 10,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Odalys x3, Pernille, Maren",
+ "who": "Odalys x3, Maren, Pernille",
  "recent": [
+  {
+   "name": "pernille",
+   "task": "[tools] T-4992 land then T-4993 disk sweep",
+   "model": "opus",
+   "started": "2026-11-19T08:59:42.682Z",
+   "seconds": null,
+   "finished": "2026-11-19T11:23:39.865000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[tools] T-5065 fix supervisor test red and land",
@@ -185,37 +193,29 @@
    "started": "2026-11-19T08:07:31.727Z",
    "seconds": null,
    "finished": "2026-11-19T10:59:45.632000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-4810 land waits fix then T-4809",
-   "model": "opus",
-   "started": "2026-11-19T08:25:56.830Z",
-   "seconds": null,
-   "finished": "2026-11-19T10:38:37.599000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 620,
+  "runnable_count": 622,
   "blocked_count": 2
  },
  "meter": {
   "five_hour": {
-   "pct": 2.0,
+   "pct": 3.0,
    "resets_at": "2026-11-19T11:10:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-19T06:17:11.663219-05:00",
+   "read_at": "2026-11-19T06:22:13.281674-05:00",
    "source": "live",
-   "left": 98.0,
+   "left": 97.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 70.0,
    "resets_at": "2026-11-22T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-19T06:17:11.663219-05:00",
+   "read_at": "2026-11-19T06:22:13.281674-05:00",
    "source": "live",
    "left": 30.0,
    "left_words": "of your weekly allowance left"
@@ -227,7 +227,7 @@
    "read_at": "2026-11-19T02:04:04.659976-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-19T06:17:11.663219-05:00"
+  "read_at": "2026-11-19T06:22:13.281674-05:00"
  },
  "ui": {
   "week_pct": 0.092,
@@ -247,7 +247,7 @@
   "week_pct": 57.06,
   "usage_pct": 47.1,
   "work_pct": 81.4,
-  "read_at": "2026-11-19T11:22:00+00:00",
+  "read_at": "2026-11-19T11:25:00+00:00",
   "running": [
    {
     "lane": "a3",
@@ -440,7 +440,7 @@
  "lock_in": {
   "on": true,
   "pool": 3,
-  "at": "2026-11-19T06:22:00-05:00",
+  "at": "2026-11-19T06:25:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -451,8 +451,8 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 11 (raised a step: load, time-outs, failed lands and redone tasks all under their lines)",
-  "n": 11,
+  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 12 (raised a step: load, time-outs, failed lands and redone tasks all under their lines)",
+  "n": 12,
   "at": "2026-11-19T02:04:05.487764-05:00"
  },
  "lanes": [
@@ -466,20 +466,20 @@
    "effort": "high"
   },
   {
-   "name": "Pernille",
-   "state": "running",
-   "task": "[tools] T-4992 land then T-4993 disk sweep",
-   "model": "opus",
-   "since": "2026-11-19T08:59:42.682Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
    "name": "Maren",
    "state": "running",
    "task": "[report] morning",
    "model": "opus",
    "since": "2026-11-19T11:15:28.468Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
+   "name": "Pernille",
+   "state": "running",
+   "task": "[tools] T-5095 land disk sweep from fresh copy",
+   "model": "opus",
+   "since": "2026-11-19T11:25:02.967Z",
    "next": [],
    "effort": "high"
   },
@@ -521,16 +521,6 @@
     "task": "T-4838"
    },
    {
-    "w": "Pernille",
-    "k": "tools",
-    "t": "Sweep finished task folders in the shared temp folder",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-19T08:59:42.682Z",
-    "o": "i",
-    "task": "T-4992"
-   },
-   {
     "w": "Odalys",
     "k": "tools",
     "t": "Let Chat and approvals read every main thread",
@@ -558,6 +548,16 @@
     "at": "2026-11-19T11:15:44.648Z",
     "o": "c",
     "task": "T-5048"
+   },
+   {
+    "w": "Pernille",
+    "k": "tools",
+    "t": "Land the disk sweep job from a fresh copy",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-19T11:25:02.967Z",
+    "o": "c",
+    "task": "T-5095"
    }
   ],
   "src": "plan",
@@ -651,7 +651,7 @@
    }
   ],
   "count": {
-   "next": 620,
+   "next": 622,
    "wait": 1,
    "blocked": 1,
    "you": 2
@@ -725,109 +725,98 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-19T11:21:32Z",
+  "at": "2026-11-19T11:25:13Z",
   "s": {
    "T-4961": [
     "merging",
     "",
-    1795085432127
+    1795085413886
    ],
    "T-4850": [
     "mergeq",
     "",
-    1795079492127
+    1795079533886
    ],
    "T-4899": [
     "mergeq",
     "",
-    1795075832127
+    1795075813886
    ],
    "T-4919": [
     "mergeq",
     "",
-    1795075832127
+    1795075813886
    ],
    "T-4871": [
     "mergeq",
     "",
-    1795080812127
+    1795080793886
    ],
    "T-4795": [
     "mergeq",
     "",
-    1795082012127
+    1795081993886
    ],
    "T-3402": [
     "mergeq",
     "",
-    1795082192127
+    1795082233886
    ],
    "T-0902": [
     "mergeq",
     "",
-    1795082432127
+    1795082473886
    ],
    "T-5057": [
     "mergeq",
     "",
-    1795083032127
+    1795083073886
    ],
    "T-5045": [
     "mergeq",
     "",
-    1795083272127
+    1795083253886
    ],
    "T-0349": [
     "mergeq",
     "",
-    1795087112127
+    1795087153886
    ],
    "T-5037": [
     "mergeq",
     "",
-    1795087112127
+    1795087153886
    ],
    "T-4681": [
     "mergeq",
     "",
-    1795084232127
+    1795084213886
    ],
    "T-4907": [
     "merging",
     "",
-    1795086872127
+    1795086853886
    ],
    "T-4838": [
     "merging",
     "",
-    1795083692127
+    1795083673886
    ],
    "T-5065": [
     "merging",
     "",
-    1795087232127
+    1795087213886
    ],
    "T-5091": [
     "merging",
     "",
-    1795086092127
-   ],
-   "T-4993": [
-    "testing",
-    "",
-    1795086212127
+    1795086073886
    ],
    "T-4849": [
     "merged",
     "",
     1795080833000,
     ""
-   ],
-   "T-4992": [
-    "merged",
-    "",
-    1795079610000,
-    "Pernille"
    ],
    "T-4891": [
     "merged",
@@ -843,28 +832,26 @@
    ]
   },
   "nm": {
-   "T-4961": "Publish the twice-daily...",
-   "T-4850": "Bring the Mac mini load back...",
-   "T-4899": "Fix a MacBook test job that...",
-   "T-4919": "Fix a MacBook test job that...",
-   "T-4871": "Check the two-way editing...",
-   "T-4795": "Weigh the showcase set...",
-   "T-3402": "Check whether the OpenSSL...",
-   "T-0902": "Check precedent for an...",
-   "T-5057": "Chat notifications open with...",
-   "T-5045": "Date the Home merge-only...",
-   "T-0349": "Fix gaps in the package...",
-   "T-5037": "Break the Machine tab's...",
-   "T-4681": "Premades default to Paper in...",
+   "T-4961": "Publish the twice-daily reports close to six",
+   "T-4850": "Bring the Mac mini load back down",
+   "T-4899": "Fix a MacBook test job that failed",
+   "T-4919": "Fix a MacBook test job that failed",
+   "T-4871": "Check the two-way editing week figure against the code",
+   "T-4795": "Weigh the showcase set against the Builder-first ruling",
+   "T-3402": "Check whether the OpenSSL removal still fits 1.0",
+   "T-0902": "Check precedent for an in-app gallery of user code",
+   "T-5057": "Chat notifications open with the reply's own words",
+   "T-5045": "Date the Home merge-only line, hide it after a day",
+   "T-0349": "Fix gaps in the package sandbox build step",
+   "T-5037": "Break the Machine tab's \"Other\" storage into named parts",
+   "T-4681": "Premades default to Paper in light and Studio in dark",
    "T-4907": "Keep main green after every land",
-   "T-4838": "Gate waits while the runner...",
-   "T-5065": "Clear answered waits from...",
-   "T-5091": "Land the land-test fix from...",
-   "T-4993": "Run the disk sweep inside...",
-   "T-4849": "Shorten the process merge...",
-   "T-4992": "Sweep finished task folders...",
-   "T-4891": "Work the process and site...",
-   "T-4807": "Fix every bad test that..."
+   "T-4838": "Gate waits while the runner shows progress",
+   "T-5065": "Clear answered waits from the supervisor tick",
+   "T-5091": "Land the land-test fix from a fresh copy",
+   "T-4849": "Shorten the process merge wait for good",
+   "T-4891": "Work the process and site merge queue under its limit",
+   "T-4807": "Fix every bad test that failed a merge"
   },
   "wk": {
    "T-4961": "Odalys",
@@ -884,7 +871,6 @@
    "T-4838": "Odalys",
    "T-5065": "Odalys",
    "T-5091": "Odalys",
-   "T-4993": "Pernille",
    "T-4849": "Odalys",
    "T-4891": "Odalys",
    "T-4807": "Pernille",
@@ -901,7 +887,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-19T11:21:32Z",
+  "at": "2026-11-19T11:25:13Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -913,9 +899,9 @@
     "parked": 0
    },
    "m": {
-    "checking": 31,
-    "inline": 83,
-    "conflicted": 1081,
+    "checking": 35,
+    "inline": 86,
+    "conflicted": 1084,
     "failed": null,
     "held": null,
     "retry": null,
@@ -928,7 +914,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     31
+     35
     ]
    ],
    "ld": [
@@ -938,12 +924,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-19T11:21:06Z",
-    "ld": 5.3,
+    "at": "2026-11-19T11:25:27Z",
+    "ld": 6.41,
     "c": 8,
     "sb": 0,
     "dk": [
-     32.8,
+     32.5,
      228.3
     ],
     "ss": [
@@ -972,7 +958,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 11 tasks",
+   "t": "Work session \u2013 12 tasks",
    "at": "2026-11-19T02:04:21-05:00"
   },
   {
@@ -1025,10 +1011,10 @@
   "main": 5,
   "lanes": 3,
   "total": 8,
-  "at": "6:22 AM",
+  "at": "6:25 AM",
   "why": "",
-  "at_iso": "2026-11-19T11:22:00+00:00",
+  "at_iso": "2026-11-19T11:25:00+00:00",
   "started": "2:04 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>8</b> agents running now</p><p class=\"an-sub\">Main session 5, started 2:04 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 6:22 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>8</b> agents running now</p><p class=\"an-sub\">Main session 5, started 2:04 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 6:25 AM ET</p></section>"
  }
 }

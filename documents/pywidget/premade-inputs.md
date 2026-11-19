@@ -31,6 +31,26 @@ inset grouped form, with the same cards, rows, sheets and footers as Settings an
 ([`launcher/editor.md`](editor.html)). Strings are DRAFT, like every app string, since no copy guide is approved. The visual
 direction question (#291, Restructuring 22) is open; this Page uses only parts all three of its options keep.
 
+**The premades' colours (T-4681, Idris, 2026-11-19).** #291 was answered on 2026-11-16 at 10:42 PM ET
+(creative/approved.md item 9): "For now, the pre-mades should use Paper/Studio as the default for light/dark mode",
+with Studio plain black or dark grey, not purple. So every premade draws in Paper in light mode and in Studio's black
+and dark greys in dark mode, on the Home Screen and in the Gallery's previews (the Lock Screen draws no colour of its
+own: the system tints it). How it is built:
+
+- The renderer chooses the theme from the widget's id: `pywidget.premade.<name>` takes Paper and Studio
+  (`Premades.theme`, `TreeTheme.paperStudio` in `pywidget/ios/Shared/Premades.swift`); a person's own widget keeps
+  the app's tokens, whose dark set is not changed yet (item 9: "the tokens are not changed yet").
+- Paper is the tokens' light set as approved in item 2. Studio is the tokens' dark set with every value that has a
+  hue drawn as the neutral grey of the same relative luminance, the rule Maren redrew the 04-mockups by in T-4680
+  (render.py `greyed`): the card's gradient #5B33E6 to #1E1450 becomes #5A5A5A to #1F1F1F, the accent #A08BFF
+  becomes #9C9C9C, the grounds and text their greys, so every contrast pair stays within 0.1 of the approved one.
+  The status colours (success, warning, danger) keep their hue, as in the mockups. Increase Contrast is greyed the
+  same way from its own dark set.
+- A premade names only semantic tokens and the widget card, never a colour of its own (`_premade.THEME`), so the
+  theme decides every colour it draws. `pywidget/tests/widgets/test_premade_theme.py` checks that over every view,
+  family and state; `PremadeThemeTests` checks the colours each appearance resolves to.
+- The Page's frames named at the top were drawn before this answer; their Studio is still the purple one.
+
 ## 0. The 1.0 showcase set (T-4672, Ines, 2026-11-17)
 
 Dated line. From #278 (an Investor, 9:55 PM ET 11-16: the twelve built premades are not a limit and may not all ship;

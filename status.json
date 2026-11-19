@@ -1,45 +1,19 @@
 {
  "schema": 1,
- "at": "2026-11-19T15:59:12.121061+00:00",
+ "at": "2026-11-19T16:08:59.802075+00:00",
  "session": {
   "active": false,
   "kind": "",
   "started": null,
   "flow": [
    {
-    "t": "T-4681",
-    "name": "Premades default to Paper in light and Studio in dark",
-    "acct": "Personal b",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1795100877
-     },
-     {
-      "s": "macbook",
-      "at": 1795103080
-     }
-    ]
-   },
-   {
-    "t": "T-4843",
-    "name": "Size each merge batch from measured data",
-    "acct": "Personal b",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1795103291
-     }
-    ]
-   },
-   {
-    "t": "T-5045",
-    "name": "Date the Home merge-only line, hide it after a day",
+    "t": "T-0101",
+    "name": "Write the design note for online packages in 1.1",
     "acct": "Personal a",
     "steps": [
      {
       "s": "testq",
-      "at": 1795099615
+      "at": 1795104501
      }
     ]
    },
@@ -74,6 +48,38 @@
    }
   ],
   "done": [
+   {
+    "t": "T-5037",
+    "name": "Break the Machine tab's \"Other\" storage into named parts",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1795104452
+   },
+   {
+    "t": "T-4681",
+    "name": "Premades default to Paper in light and Studio in dark",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1795104353
+   },
+   {
+    "t": "T-5045",
+    "name": "Date the Home merge-only line, hide it after a day",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1795104336
+   },
+   {
+    "t": "T-4843",
+    "name": "Size each merge batch from measured data",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1795104234
+   },
    {
     "t": "T-4823",
     "name": "Group process changes into features",
@@ -118,43 +124,9 @@
     "steps": [],
     "end": "landed",
     "end_at": 1795098770
-   },
-   {
-    "t": "T-4994",
-    "name": "Act on the feature record at every add",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "failed",
-    "end_at": 1795098621,
-    "why": "did not merge cleanly"
-   },
-   {
-    "t": "T-4994",
-    "name": "Act on the feature record at every add",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "failed",
-    "end_at": 1795096206,
-    "why": "tests failed"
-   },
-   {
-    "t": "T-4850",
-    "name": "Bring the Mac mini load back down",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1795092293
-   },
-   {
-    "t": "T-4961",
-    "name": "Publish the twice-daily reports close to six",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1795089267
    }
   ],
-  "landed": 42,
+  "landed": 46,
   "failed": 2
  },
  "workers": [],
@@ -207,12 +179,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-19T11:10:12-05:00",
+ "next_tick": "2026-11-19T11:16:38-05:00",
  "personal": {
   "week_pct": 69.36,
   "usage_pct": 45.0,
   "work_pct": 80.9,
-  "read_at": "2026-11-19T16:02:00+00:00",
+  "read_at": "2026-11-19T16:09:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -246,7 +218,7 @@
   }
  ],
  "disk": {
-  "free_gb": 40,
+  "free_gb": 41,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -255,14 +227,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-19T11:01:00-05:00",
+   "at": "2026-11-19T11:07:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 3,
-  "at": "2026-11-19T11:02:00-05:00",
+  "at": "2026-11-19T11:09:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -460,125 +432,97 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-19T15:59:12Z",
+  "at": "2026-11-19T16:08:59Z",
   "s": {
-   "T-4843": [
+   "T-0101": [
     "merging",
-    "Host checks on the Mac mini \u00b7 2 of 3 groups of tests done",
-    1795103292121
+    "Host checks on the Mac mini",
+    1795104539802
    ],
    "T-4823": [
     "mergeq",
     "1st to merge",
-    1795103352121
+    1795103339802
    ],
-   "T-5045": [
+   "T-4843": [
     "mergeq",
-    "3rd to merge",
-    1795083252121
-   ],
-   "T-4681": [
-    "mergetest",
-    "Xcode checks on the MacBook, 4th to merge",
-    1795103112121
-   ],
-   "T-5037": [
-    "mergeq",
-    "5th to merge",
-    1795084272121
-   ],
-   "T-0349": [
-    "mergeq",
-    "7th to merge",
-    1795086972121
-   ],
-   "T-3402": [
-    "mergeq",
-    "8th to merge",
-    1795087032121
-   ],
-   "T-5057": [
-    "mergeq",
-    "11th to merge",
-    1795092852121
-   ],
-   "T-0101": [
-    "mergeq",
-    "12th to merge",
-    1795092972121
+    "1st to merge",
+    1795103339802
    ],
    "T-0902": [
     "mergeq",
-    "13th to merge",
-    1795093032121
+    "3rd to merge",
+    1795093019802
+   ],
+   "T-5057": [
+    "mergeq",
+    "4th to merge",
+    1795093199802
    ],
    "T-5062": [
     "mergeq",
-    "14th to merge",
-    1795093212121
+    "4th to merge",
+    1795093199802
    ],
    "T-2378": [
     "mergeq",
-    "15th to merge",
-    1795093392121
+    "5th to merge",
+    1795093439802
+   ],
+   "T-4681": [
+    "mergeq",
+    "6th to merge",
+    1795093499802
    ],
    "T-4795": [
     "mergeq",
-    "17th to merge",
-    1795093632121
+    "7th to merge",
+    1795093619802
    ],
    "T-4807": [
     "mergeq",
-    "18th to merge",
-    1795093692121
+    "8th to merge",
+    1795093739802
    ],
    "T-4913": [
     "mergeq",
-    "20th to merge",
-    1795096452121
+    "10th to merge",
+    1795096439802
    ]
   },
   "nm": {
-   "T-4843": "Size each merge batch from measured data",
-   "T-4823": "Group process changes into features",
-   "T-5045": "Date the Home merge-only line, hide it after a day",
-   "T-4681": "Premades default to Paper in light and Studio in dark",
-   "T-5037": "Break the Machine tab's \"Other\" storage into named parts",
-   "T-0349": "Fix gaps in the package sandbox build step",
-   "T-3402": "Check whether the OpenSSL removal still fits 1.0",
-   "T-5057": "Chat notifications open with the reply's own words",
    "T-0101": "Write the design note for online packages in 1.1",
+   "T-4823": "Group process changes into features",
+   "T-4843": "Size each merge batch from measured data",
    "T-0902": "Check precedent for an in-app gallery of user code",
+   "T-5057": "Chat notifications open with the reply's own words",
    "T-5062": "The site sends its own push notices to a phone",
    "T-2378": "Plan version 1.2 and later",
+   "T-4681": "Premades default to Paper in light and Studio in dark",
    "T-4795": "Weigh the showcase set against the Builder-first ruling",
    "T-4807": "Fix every bad test that failed a merge",
    "T-4913": "Stop the safety guard refusing safe work"
   },
   "wk": {
-   "T-4843": "Odalys",
-   "T-4823": "Odalys",
-   "T-5045": "Maren",
-   "T-4681": "Idris",
-   "T-5037": "Odalys",
-   "T-0349": "Pernille",
-   "T-3402": "Ines",
-   "T-5057": "Odalys",
    "T-0101": "Odalys",
+   "T-4823": "Odalys",
+   "T-4843": "Odalys",
    "T-0902": "Ines",
+   "T-5057": "Odalys",
    "T-5062": "Odalys",
    "T-2378": "Ines",
+   "T-4681": "Idris",
    "T-4795": "Ines",
    "T-4807": "Pernille",
    "T-4913": "Odalys"
   }
  },
  "ln": {
-  "at": "2026-11-19T15:59:12Z",
+  "at": "2026-11-19T16:08:59Z",
   "mq": {
    "n": {
-    "checking": 2,
-    "inline": 13,
+    "checking": 1,
+    "inline": 10,
     "conflicted": 2,
     "failed": 0,
     "held": 0,
@@ -586,62 +530,52 @@
     "parked": 0
    },
    "m": {
-    "checking": 12,
-    "inline": 182,
-    "conflicted": 723,
+    "checking": 0,
+    "inline": 183,
+    "conflicted": 733,
     "failed": null,
     "held": null,
-    "retry": 71,
+    "retry": 81,
     "parked": null
    },
    "cur": [
     [
      [
-      "T-4843"
+      "T-0101"
      ],
      "Mac tests",
      "Mac mini",
-     11
-    ],
-    [
-     [
-      "T-4681"
-     ],
-     "iPhone app tests",
-     "MacBook",
-     14
+     0
     ]
    ],
    "ld": [
-    41,
-    "2026-11-19T15:47:44Z"
+    46,
+    "2026-11-19T16:07:51Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-19T15:59:13Z",
-    "ld": 20.33,
+    "at": "2026-11-19T16:09:00Z",
+    "ld": 6.19,
     "c": 8,
-    "sb": 1,
+    "sb": 0,
     "dk": [
-     38.0,
+     40.5,
      228.3
     ],
     "ss": [
      171.3,
      953.7
     ],
-    "sn": [
-     "iPhone 17e"
-    ]
+    "sn": []
    },
    "macbook": {
-    "at": "2026-11-19T15:46:16Z",
-    "ld": 0.19,
+    "at": "2026-11-19T15:54:05Z",
+    "ld": 0.88,
     "c": 12,
     "sb": 0,
     "dk": [
-     355.2,
+     355.1,
      926.4
     ],
     "sn": []
@@ -656,12 +590,12 @@
    "m": "opus",
    "e": "high",
    "t": "Work session \u2013 1 task",
-   "at": "2026-11-19T10:55:46-05:00"
+   "at": "2026-11-19T11:02:28-05:00"
   }
  ],
  "reply": {
-  "sent": "2026-11-19T15:53:58Z",
-  "seconds": 105.0
+  "sent": "2026-11-19T16:01:07Z",
+  "seconds": 79.0
  },
  "inbox": [],
  "trimmed": [
@@ -678,10 +612,10 @@
   "main": 0,
   "lanes": 1,
   "total": 1,
-  "at": "11:02 AM",
+  "at": "11:09 AM",
   "why": "",
-  "at_iso": "2026-11-19T16:02:00+00:00",
+  "at_iso": "2026-11-19T16:09:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 11:02 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 11:09 AM ET</p></section>"
  }
 }

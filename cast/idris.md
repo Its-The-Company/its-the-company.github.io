@@ -58,7 +58,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 ## Lessons
 - Older lessons and dated logs: archive.md.
 
-- T-4990 11-18: storage_guard resets a shut-down kept device's PRBPosterExtensionDataStore at 1 GB+ and an open task keeps its Simulator only if run in 24 h. Lesson: a `tail -F xcodebuild-*.log` lives on for weeks; match job programs, not words. T-4991: 27.1 runtime decision.
+- T-4681 11-19 fc3a48d730: premades Paper/Studio-grey via TreeTheme (by widget id); unit + Python green. Open: runner job testT (Home Screen Default/Dark), tick after it. Lesson: UI tests may not set XCUIDevice.appearance (scan test); use setHomeScreenStyle.
 {% endraw %}
 
 

@@ -341,6 +341,12 @@ Chair: Ines. Input: Wrenna's T-0060 (b3af7e0b; L6 s1 row "DPLA 3.3.1(B)" and s9)
 
 Ines, CEO
 
+### 12.7 Update (Odalys, 2026-11-19, T-0101): the online-pip design note
+
+*A record, not a ruling; nothing above changes.* The 1.1 design and host-test plan this section and 9.6 asked for is [`pywidget/docs/design/online-pip-1-1.md`](online-pip-1-1.html). It carries 9.4 items 1-11 and section 3 item 3 (c)-(d), each with its test, and the update's own review-note sentence (its s4). Spec only: no online-pip code exists outside a branch, and none is in any release build. Condition 10 quotes 3.3.1(C) and condition 11 quotes 3.3.1(D)(e) from the company's saved copy of the License Agreement (fetched signed out 2026-11-12, T-4127; #64 ruling). That copy's section 6.3 also says an iOS app is made available on macOS and visionOS "unless You opt out ... in App Store Connect", so keeping the Mac off needs a person's step before the pip update goes in.
+
+**The separate update.** Pip ships in its own update (12.3; 13.3 item 6). The note recommends that Install from file (T-0212), which pip builds on and which is its fallback (9.4 item 8), ship in an earlier update, so a pip rejection can't hold it back. Open for the chair (the note's s7): that update order; whether the Investors' Restructuring 15 answer (#284, outside code gets less reach) reaches PyPI packages; how 14.2's S1b row ("the only way another person's Python enters the app") reads beside 14.1, which keeps sections 10-12 standing; and whether 3.3.1(D)(e) reaches an iPad app on a Mac under 6.3.
+
 ## 13. Chair line 2026-10-31 1:14 PM ET (Ines, T-0870): the Explore tab; section 2 re-ruled
 
 Chair, alone. Input: an Investor, #41 c6544328475, 2026-10-31 09:59: "there will be an Explore tab, where users can view the premades and any projects created by other users. They can preview them and install them if they want them. Installed widgets can be edited directly by the user if they choose". Read for this: L6 s1-s4, s6; L12 s6-s8, s10, s13; L17 s0, s5, s6; matrix s3(b); the Apple draft; IDE spec s5.9; plan chair note 1:02 PM; the code at c3709b04. Apple's words below are L6's verbatim quotes. No new fetches. Text that rests on L6's listing snippets or on my memory says so.

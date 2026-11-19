@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-19T00:58:08.836442+00:00",
+ "at": "2026-11-19T01:01:19.577340+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -146,16 +146,7 @@
    "task": "[tools] T-4788 feature sessions on for all",
    "model": "opus",
    "started": "2026-11-18T23:37:01.600Z",
-   "seconds": 4867,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-4958 pool check during sessions",
-   "model": "opus",
-   "started": "2026-11-19T00:25:31.113Z",
-   "seconds": 1957,
+   "seconds": 5057,
    "finished": null,
    "effort": "high"
   },
@@ -164,7 +155,7 @@
    "task": "[tools] T-4909 end sessions on a stall",
    "model": "opus",
    "started": "2026-11-19T00:25:56.669Z",
-   "seconds": 1932,
+   "seconds": 2122,
    "finished": null,
    "effort": "high"
   },
@@ -173,13 +164,39 @@
    "task": "[tools] T-4845 move tools off full",
    "model": "opus",
    "started": "2026-11-19T00:54:57.501Z",
-   "seconds": 191,
+   "seconds": 382,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-4805 gate failure causes and T-4792",
+   "model": "opus",
+   "started": "2026-11-19T00:59:54.758Z",
+   "seconds": 84,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "pernille",
+   "task": "[tools] T-4912 time limits inventory",
+   "model": "opus",
+   "started": "2026-11-19T01:00:09.559Z",
+   "seconds": 70,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Odalys x4",
+ "who": "Odalys x4, Pernille",
  "recent": [
+  {
+   "name": "odalys",
+   "task": "[tools] T-4958 pool check during sessions",
+   "model": "opus",
+   "started": "2026-11-19T00:25:31.113Z",
+   "seconds": null,
+   "finished": "2026-11-19T00:59:27.928000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[tools] T-4808 merge-step fixes stream",
@@ -203,14 +220,6 @@
    "started": "2026-11-18T22:58:04.466Z",
    "seconds": null,
    "finished": "2026-11-19T00:24:50.877000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-4913 post guard proposal per",
-   "model": "opus",
-   "started": "2026-11-18T23:33:55.723Z",
-   "seconds": null,
-   "finished": "2026-11-18T23:36:15.758000+00:00"
   }
  ],
  "queue": {
@@ -221,19 +230,19 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 30.0,
+   "pct": 31.0,
    "resets_at": "2026-11-18T20:10:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-18T19:56:14.333906-05:00",
+   "read_at": "2026-11-18T20:01:12.327988-05:00",
    "source": "live",
-   "left": 70.0,
+   "left": 69.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 55.0,
    "resets_at": "2026-11-22T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-18T19:56:14.333906-05:00",
+   "read_at": "2026-11-18T20:01:12.327988-05:00",
    "source": "live",
    "left": 45.0,
    "left_words": "of your weekly allowance left"
@@ -245,7 +254,7 @@
    "read_at": "2026-11-18T17:33:56.705931-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-18T19:56:14.333906-05:00"
+  "read_at": "2026-11-18T20:01:12.327988-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -265,7 +274,7 @@
   "week_pct": 52.29,
   "usage_pct": 50.1,
   "work_pct": 81.6,
-  "read_at": "2026-11-19T00:58:00+00:00",
+  "read_at": "2026-11-19T01:01:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -286,7 +295,7 @@
   }
  ],
  "disk": {
-  "free_gb": 11,
+  "free_gb": 12,
   "gate": "closed",
   "ssd": {
    "mounted": true,
@@ -295,14 +304,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions wait until 20 GB is free.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-18T19:52:00-05:00",
+   "at": "2026-11-18T20:00:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 3,
-  "at": "2026-11-18T19:58:00-05:00",
+  "at": "2026-11-18T20:01:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -313,8 +322,8 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 5 (raised a step toward the floor of 8: new work may start and every signal is under its line)",
-  "n": 5,
+  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 6 (raised a step toward the floor of 8: new work may start and every signal is under its line)",
+  "n": 6,
   "at": "2026-11-18T17:33:57.067178-05:00"
  },
  "lanes": [
@@ -328,17 +337,18 @@
    "effort": "high"
   },
   {
+   "name": "Pernille",
+   "state": "running",
+   "task": "[tools] T-4912 time limits inventory",
+   "model": "opus",
+   "since": "2026-11-19T01:00:09.559Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
    "name": "Idris",
    "state": "next",
    "task": "Idris, P1, from T-4755 (Investor an Investor...",
-   "model": null,
-   "since": null,
-   "next": []
-  },
-  {
-   "name": "Pernille",
-   "state": "next",
-   "task": "Pernille, P0, Investor an Investor c6963972184 (6:23 PM...",
    "model": null,
    "since": null,
    "next": []
@@ -383,16 +393,6 @@
    {
     "w": "Odalys",
     "k": "tools",
-    "t": "Run the pool check and between-session jobs during sessions",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-19T00:25:31.113Z",
-    "o": "c",
-    "task": "T-4958"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
     "t": "End work sessions on a stall, not on the clock",
     "m": "opus",
     "e": "high",
@@ -409,6 +409,26 @@
     "at": "2026-11-19T00:54:57.501Z",
     "o": "c",
     "task": "T-4845"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Record a cause for every failed merge",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-19T00:59:54.758Z",
+    "o": "c",
+    "task": "T-4805"
+   },
+   {
+    "w": "Pernille",
+    "k": "tools",
+    "t": "Replace fixed time limits with stall and error checks",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-19T01:00:09.559Z",
+    "o": "c",
+    "task": "T-4912"
    }
   ],
   "src": "plan",
@@ -487,6 +507,11 @@
   "done": [
    {
     "w": "Odalys",
+    "t": "The check that sets how many agents may run now runs every 5 minutes during a session, one step...",
+    "at": "2026-11-18T19:58:00-05:00"
+   },
+   {
+    "w": "Odalys",
     "t": "A land test row was red on every run because it read the whole log for a line another tool also...",
     "at": "2026-11-18T19:29:00-05:00"
    },
@@ -494,11 +519,6 @@
     "w": "Odalys",
     "t": "Work a session saved when it ran out of time no longer counts as waiting to merge, and a task...",
     "at": "2026-11-18T19:24:00-05:00"
-   },
-   {
-    "w": "Idris",
-    "t": "The app's own network fetch is now checked against the same six shared test cases the Python...",
-    "at": "2026-11-18T18:33:00-05:00"
    }
   ],
   "count": {
@@ -508,8 +528,12 @@
    "you": 10
   },
   "fin": {
-   "n": 7,
+   "n": 8,
    "rows": [
+    [
+     "T-4958",
+     "Run the pool check and..."
+    ],
     [
      "T-4808",
      "Fix the red board-check row..."
@@ -529,10 +553,6 @@
     [
      "T-4783",
      "Keep the gutter mark on its..."
-    ],
-    [
-     "T-4784",
-     "Pin the refresh glyph's..."
     ]
    ]
   }
@@ -576,13 +596,8 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-19T00:58:08Z",
+  "at": "2026-11-19T01:01:01Z",
   "s": {
-   "T-4958": [
-    "merging",
-    "Mac tests at the main gate",
-    1795049828836
-   ],
    "T-3217": [
     "testing",
     "MacBook \u00b7 test",
@@ -591,32 +606,39 @@
    "T-4909": [
     "testing",
     "its own tests, in its copy",
-    1795049468836
+    1795049461407
    ],
    "T-4788": [
     "testing",
     "its own tests, in its copy",
-    1795049288836
+    1795049281407
    ],
    "T-4898": [
     "testq",
     "1st for a Simulator",
-    1795041188836
+    1795041241407
+   ],
+   "T-4805": [
+    "merged",
+    "on main 7:53 PM ET",
+    1795049580000,
+    "Odalys"
    ]
   },
   "nm": {
-   "T-4958": "Run the pool check and between-session jobs during sessions",
    "T-3217": "Fix the three red tests before build 3",
    "T-4909": "End work sessions on a stall, not on the clock",
    "T-4788": "Turn feature sessions on for every app feature",
-   "T-4898": "Fix the Home Screen token test reading the gallery"
+   "T-4898": "Fix the Home Screen token test reading the gallery",
+   "T-4805": "Record a cause for every failed merge"
   },
   "wk": {
-   "T-4958": "Odalys",
    "T-3217": "Idris",
    "T-4909": "Odalys",
    "T-4788": "Odalys",
    "T-4898": "Idris",
+   "T-4805": "Odalys",
+   "T-4958": "Odalys",
    "T-4808": "Odalys",
    "T-4903": "Odalys",
    "T-4750": "Idris",
@@ -627,7 +649,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-19T00:58:08Z",
+  "at": "2026-11-19T01:01:01Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -641,11 +663,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 881,
+    "conflicted": 884,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1155
+    "parked": 1158
    },
    "cur": [],
    "ld": [
@@ -655,8 +677,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-19T00:58:15Z",
-    "ld": 5.76,
+    "at": "2026-11-19T01:00:19Z",
+    "ld": 6.16,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -678,7 +700,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 9 tasks",
+   "t": "Work session \u2013 11 tasks",
    "at": "2026-11-18T19:54:13-05:00"
   }
  ],
@@ -701,13 +723,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 4,
+  "main": 5,
   "lanes": 0,
-  "total": 4,
-  "at": "7:58 PM",
+  "total": 5,
+  "at": "8:01 PM",
   "why": "",
-  "at_iso": "2026-11-19T00:58:00+00:00",
+  "at_iso": "2026-11-19T01:01:00+00:00",
   "started": "5:34 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 4, started 5:34 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 7:58 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 5, started 5:34 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 8:01 PM ET</p></section>"
  }
 }

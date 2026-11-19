@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-19T16:56:12.701820+00:00",
+ "at": "2026-11-19T17:01:05.275767+00:00",
  "session": {
   "active": false,
   "kind": "",
@@ -117,7 +117,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 633,
+  "runnable_count": 634,
   "blocked_count": 2
  },
  "meter": {
@@ -162,12 +162,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-19T12:05:10-05:00",
+ "next_tick": "2026-11-19T12:12:10-05:00",
  "personal": {
   "week_pct": 70.34,
   "usage_pct": 45.4,
   "work_pct": 80.8,
-  "read_at": "2026-11-19T16:58:00+00:00",
+  "read_at": "2026-11-19T17:05:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -265,7 +265,7 @@
   }
  ],
  "disk": {
-  "free_gb": 35,
+  "free_gb": 33,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -274,14 +274,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-19T11:53:00-05:00",
+   "at": "2026-11-19T12:03:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 3,
-  "at": "2026-11-19T11:58:00-05:00",
+  "at": "2026-11-19T12:05:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -434,7 +434,7 @@
    }
   ],
   "count": {
-   "next": 633,
+   "next": 634,
    "wait": 1,
    "blocked": 1,
    "you": 2
@@ -479,72 +479,77 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-19T16:56:12Z",
+  "at": "2026-11-19T17:01:05Z",
   "s": {
    "T-4850": [
     "merging",
     "Host checks on the Mac mini",
-    1795105752701
+    1795105745275
    ],
    "T-4913": [
     "merging",
     "Host checks on the Mac mini",
-    1795105752701
+    1795105745275
    ],
    "T-4849": [
     "mergeq",
     "1st to merge",
-    1795106352701
+    1795106345275
    ],
    "T-4891": [
     "mergeq",
     "2nd to merge",
-    1795105452701
+    1795105445275
    ],
    "T-5146": [
     "mergeq",
     "4th to merge",
-    1795107312701
+    1795107305275
    ],
    "T-4734": [
     "mergeq",
     "5th to merge",
-    1795107072701
+    1795107065275
    ],
    "T-4877": [
     "mergeq",
     "6th to merge",
-    1795107192701
+    1795107185275
    ],
    "T-4843": [
     "mergeq",
     "7th to merge",
-    1795103352701
+    1795103345275
    ],
    "T-3871": [
     "mergeq",
     "8th to merge",
-    1795106892701
+    1795106885275
    ],
    "T-4012": [
     "mergeq",
     "8th to merge",
-    1795106892701
+    1795106885275
    ],
    "T-4195": [
     "mergeq",
     "8th to merge",
-    1795106892701
+    1795106885275
+   ],
+   "T-4182": [
+    "testing",
+    "Mac Mini \u00b7 test",
+    null
    ],
    "T-4180": [
-    "testing",
-    "Mac Mini \u00b7 test",
-    null
+    "testq",
+    "1st for a Simulator",
+    1795107665275
    ],
    "T-4181": [
-    "testing",
-    "Mac Mini \u00b7 test",
-    null
+    "testq",
+    "1st for a Simulator",
+    1795107665275
    ]
   },
   "nm": {
@@ -559,6 +564,7 @@
    "T-3871": "Archive parked refs whose work main already has",
    "T-4012": "Retire the retry routes the send-back replaces",
    "T-4195": "Reuse an iPhone pass when the app's inputs are unchanged",
+   "T-4182": "A failing widget says so and can recover",
    "T-4180": "Every premade widget draws on the iPhone",
    "T-4181": "Widgets refresh on their own and by a tap"
   },
@@ -574,12 +580,13 @@
    "T-3871": "Odalys",
    "T-4012": "Odalys",
    "T-4195": "Idris",
+   "T-4182": "Idris",
    "T-4180": "Idris",
    "T-4181": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-19T16:56:12Z",
+  "at": "2026-11-19T17:01:05Z",
   "mq": {
    "n": {
     "checking": 2,
@@ -591,9 +598,9 @@
     "parked": 0
    },
    "m": {
-    "checking": 27,
-    "inline": 8,
-    "conflicted": 145,
+    "checking": 32,
+    "inline": 13,
+    "conflicted": 150,
     "failed": null,
     "held": null,
     "retry": null,
@@ -606,7 +613,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     27
+     32
     ],
     [
      [
@@ -614,7 +621,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     27
+     32
     ]
    ],
    "ld": [
@@ -624,12 +631,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-19T16:56:14Z",
-    "ld": 30.41,
+    "at": "2026-11-19T17:01:06Z",
+    "ld": 37.83,
     "c": 8,
     "sb": 1,
     "dk": [
-     35.4,
+     33.3,
      228.3
     ],
     "ss": [
@@ -660,8 +667,8 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Inbox \u2013 Evan's 11:55 AM Message on GitHub",
-   "at": "2026-11-19T11:56:18-05:00"
+   "t": "Work session \u2013 1 task",
+   "at": "2026-11-19T11:59:16-05:00"
   },
   {
    "w": "Operator",
@@ -683,27 +690,14 @@
   }
  ],
  "reply": {
-  "sent": "2026-11-19T16:44:12Z",
-  "seconds": 320.0
+  "sent": "2026-11-19T16:55:51Z",
+  "seconds": 203.0
  },
- "inbox": [
-  {
-   "id": "c7015950358",
-   "state": "received",
-   "position": 1,
-   "eta": "2026-11-19T12:05:10-05:00",
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "This should also work for accounts..."
-  }
- ],
+ "inbox": [],
  "trimmed": [
   "lane_next",
   "queue_text",
   "task_done",
-  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -714,10 +708,10 @@
   "main": 0,
   "lanes": 3,
   "total": 3,
-  "at": "11:58 AM",
+  "at": "12:05 PM",
   "why": "",
-  "at_iso": "2026-11-19T16:58:00+00:00",
+  "at_iso": "2026-11-19T17:05:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 11:58 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 12:05 PM ET</p></section>"
  }
 }

@@ -1,22 +1,11 @@
 {
  "schema": 1,
- "at": "2026-11-19T07:04:19.783740+00:00",
+ "at": "2026-11-19T07:07:30.597763+00:00",
  "session": {
-  "active": false,
-  "kind": "",
-  "started": null,
+  "active": true,
+  "kind": "work",
+  "started": "2026-11-19T02:04:21-05:00",
   "flow": [
-   {
-    "t": "T-4934",
-    "name": "Check finished work before it ships",
-    "acct": "Personal b",
-    "steps": [
-     {
-      "s": "landing",
-      "at": 1795069827
-     }
-    ]
-   },
    {
     "t": "T-4916",
     "name": "Check the new landing road before it ships",
@@ -33,17 +22,6 @@
      {
       "s": "landing",
       "at": 1795069508
-     }
-    ]
-   },
-   {
-    "t": "T-4933",
-    "name": "Check finished work before it ships",
-    "acct": "Personal b",
-    "steps": [
-     {
-      "s": "landing",
-      "at": 1795065516
      }
     ]
    },
@@ -90,6 +68,17 @@
      {
       "s": "macbook",
       "at": 1795069594
+     }
+    ]
+   },
+   {
+    "t": "T-5006",
+    "name": "Lock In turns itself on after midnight",
+    "acct": "Personal b",
+    "steps": [
+     {
+      "s": "testq",
+      "at": 1795071942
      }
     ]
    },
@@ -153,6 +142,22 @@
   ],
   "done": [
    {
+    "t": "T-4934",
+    "name": "Check finished work before it ships",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1795071886
+   },
+   {
+    "t": "T-4933",
+    "name": "Check finished work before it ships",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1795071870
+   },
+   {
     "t": "T-4928",
     "name": "Check finished work before it ships",
     "acct": "Personal a",
@@ -214,46 +219,33 @@
     "steps": [],
     "end": "landed",
     "end_at": 1795066502
-   },
-   {
-    "t": "T-4888",
-    "name": "Undo the vertical slide on a wrapped-line tap",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1795065571
-   },
-   {
-    "t": "T-4618",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1795064996
    }
   ],
-  "landed": 28,
+  "landed": 30,
   "failed": 0
  },
- "workers": [],
- "who": "",
- "recent": [
+ "workers": [
   {
    "name": "odalys",
-   "task": "[tools] T-4907 main green parts 3-4",
+   "task": "[tools] T-5063 board growth count and fold",
    "model": "opus",
-   "started": "2026-11-19T06:10:25.463Z",
-   "seconds": null,
-   "finished": "2026-11-19T06:52:37.545000+00:00"
+   "started": "2026-11-19T07:05:50.003Z",
+   "seconds": 100,
+   "finished": null,
+   "effort": "high"
   },
   {
    "name": "odalys",
-   "task": "[tools] T-4843 batch size from data",
+   "task": "[tools] T-5034 free held lines check",
    "model": "opus",
-   "started": "2026-11-19T06:10:37.169Z",
-   "seconds": null,
-   "finished": "2026-11-19T06:49:40.237000+00:00"
+   "started": "2026-11-19T07:06:01.402Z",
+   "seconds": 89,
+   "finished": null,
+   "effort": "high"
   }
  ],
+ "who": "Odalys x2",
+ "recent": [],
  "queue": {
   "runnable": [],
   "blocked": [],
@@ -263,19 +255,19 @@
  "meter": {
   "five_hour": {
    "pct": 5.0,
-   "resets_at": "2026-11-19T11:09:59.929802+00:00",
+   "resets_at": "2026-11-19T06:10:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-19T02:04:04.659976-05:00",
-   "source": "usage",
+   "read_at": "2026-11-19T02:04:27.017897-05:00",
+   "source": "live",
    "left": 95.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 64.0,
-   "resets_at": "2026-11-22T06:59:59.929825+00:00",
+   "resets_at": "2026-11-22T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-19T02:04:04.659976-05:00",
-   "source": "usage",
+   "read_at": "2026-11-19T02:04:27.017897-05:00",
+   "source": "live",
    "left": 36.0,
    "left_words": "of your weekly allowance left"
   },
@@ -286,7 +278,7 @@
    "read_at": "2026-11-19T02:04:04.659976-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-19T02:04:04.659976-05:00"
+  "read_at": "2026-11-19T02:04:27.017897-05:00"
  },
  "ui": {
   "week_pct": 0.092,
@@ -301,39 +293,13 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-19T02:19:05-05:00",
+ "next_tick": null,
  "personal": {
   "week_pct": 57.06,
   "usage_pct": 47.1,
   "work_pct": 81.4,
-  "read_at": "2026-11-19T07:04:00+00:00",
-  "running": [
-   {
-    "lane": "b2",
-    "task": "T-4988",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Recount failed-merge causes after a week of new records",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-19T00:36:40-05:00",
-    "n": "Jeremy",
-    "src": "plan-b"
-   },
-   {
-    "lane": "b2",
-    "task": "T-5006",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Lock In turns itself on after midnight",
-    "m": "sonnet",
-    "e": "medium",
-    "at": "2026-11-19T00:36:40-05:00",
-    "n": "Jeremy",
-    "d": 1,
-    "src": "plan-b"
-   }
-  ]
+  "read_at": "2026-11-19T07:07:00+00:00",
+  "running": []
  },
  "api_credits": [
   {
@@ -369,7 +335,7 @@
  "lock_in": {
   "on": true,
   "pool": 3,
-  "at": "2026-11-19T02:04:00-05:00",
+  "at": "2026-11-19T02:07:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -377,22 +343,27 @@
    "b": "midnight"
   }
  },
- "next_tick_why": "last_tick",
+ "next_tick_why": "session",
  "idle": null,
- "pool": null,
+ "pool": {
+  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 2 (at its floor: load 17.4 a core is over 10)",
+  "n": 2,
+  "at": "2026-11-19T02:04:05.487764-05:00"
+ },
  "lanes": [
+  {
+   "name": "Odalys",
+   "state": "running",
+   "task": "[tools] T-5063 board growth count and fold",
+   "model": "opus",
+   "since": "2026-11-19T07:05:50.003Z",
+   "next": [],
+   "effort": "high"
+  },
   {
    "name": "Idris",
    "state": "next",
    "task": "Idris, P1, from T-4755 (Investor an Investor...",
-   "model": null,
-   "since": null,
-   "next": []
-  },
-  {
-   "name": "Odalys",
-   "state": "next",
-   "task": "Odalys, P0 (merge-first; process queue; opened by...",
    "model": null,
    "since": null,
    "next": []
@@ -431,7 +402,29 @@
   }
  ],
  "tasks": {
-  "run": [],
+  "run": [
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Keep new tasks from outgrowing finished ones",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-19T07:05:50.003Z",
+    "o": "c",
+    "task": "T-5063"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Free every held line without a session",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-19T07:06:01.402Z",
+    "o": "c",
+    "task": "T-5034"
+   }
+  ],
+  "src": "plan",
   "open": [
    {
     "w": "Odalys",
@@ -526,6 +519,10 @@
    "wait": 32,
    "blocked": 2,
    "you": 9
+  },
+  "fin": {
+   "n": 0,
+   "rows": []
   }
  },
  "qr": [
@@ -567,118 +564,104 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-19T07:04:19Z",
+  "at": "2026-11-19T07:07:15Z",
   "s": {
-   "T-4933": [
+   "T-5006": [
     "merging",
-    "Rebasing onto current main",
-    1795071799783
+    "Host checks on the Mac mini",
+    1795071975610
    ],
-   "T-4934": [
+   "T-4988": [
     "mergeq",
     "1st to merge",
-    1795065679783
+    1795071975610
    ],
    "T-5000": [
     "mergeq",
     "2nd to merge",
-    1795066459783
-   ],
-   "T-4927": [
-    "mergeq",
-    "3rd to merge",
-    1795068199783
-   ],
-   "T-4928": [
-    "mergeq",
-    "3rd to merge",
-    1795068199783
-   ],
-   "T-4929": [
-    "mergeq",
-    "3rd to merge",
-    1795068199783
-   ],
-   "T-4930": [
-    "mergeq",
-    "3rd to merge",
-    1795068199783
-   ],
-   "T-5006": [
-    "mergeq",
-    "4th to merge",
-    1795070899783
-   ],
-   "T-5002": [
-    "mergeq",
-    "5th to merge",
-    1795068439783
+    1795066455610
    ],
    "T-4916": [
     "mergeq",
+    "3rd to merge",
+    1795068375610
+   ],
+   "T-5002": [
+    "mergeq",
     "6th to merge",
-    1795068319783
+    1795068435610
    ],
    "T-4931": [
     "mergeq",
-    "9th to merge",
-    1795069219783
+    "8th to merge",
+    1795069215610
    ],
    "T-4932": [
     "mergeq",
-    "9th to merge",
-    1795069219783
+    "8th to merge",
+    1795069215610
+   ],
+   "T-4933": [
+    "mergeq",
+    "8th to merge",
+    1795069215610
+   ],
+   "T-4934": [
+    "mergeq",
+    "8th to merge",
+    1795069215610
    ],
    "T-4899": [
     "mergeq",
-    "10th to merge",
-    1795068739783
+    "9th to merge",
+    1795068735610
    ],
    "T-4919": [
     "mergeq",
-    "10th to merge",
-    1795068739783
+    "9th to merge",
+    1795068735610
+   ],
+   "T-4806": [
+    "merging",
+    "Mac tests at the main gate",
+    1795071975610
    ]
   },
   "nm": {
-   "T-4933": "Check finished work before it ships",
-   "T-4934": "Check finished work before it ships",
-   "T-5000": "Draw transit count-downs the way the iPhone draws them",
-   "T-4927": "Check finished work before it ships",
-   "T-4928": "Check finished work before it ships",
-   "T-4929": "Check finished work before it ships",
-   "T-4930": "Check finished work before it ships",
    "T-5006": "Lock In turns itself on after midnight",
-   "T-5002": "Say what a run does when its save is unchecked",
+   "T-4988": "Recount failed-merge causes after a week of new records",
+   "T-5000": "Draw transit count-downs the way the iPhone draws them",
    "T-4916": "Check the new landing road before it ships",
+   "T-5002": "Say what a run does when its save is unchecked",
    "T-4931": "Check finished work before it ships",
    "T-4932": "Check finished work before it ships",
+   "T-4933": "Check finished work before it ships",
+   "T-4934": "Check finished work before it ships",
    "T-4899": "Fix a MacBook test job that failed",
-   "T-4919": "Fix a MacBook test job that failed"
+   "T-4919": "Fix a MacBook test job that failed",
+   "T-4806": "Fix the causes of merge time-outs and runner errors"
   },
   "wk": {
-   "T-4933": "Pernille",
-   "T-4934": "Pernille",
-   "T-5000": "Maren",
-   "T-4927": "Pernille",
-   "T-4928": "Pernille",
-   "T-4929": "Pernille",
-   "T-4930": "Pernille",
    "T-5006": "Odalys",
-   "T-5002": "Pernille",
+   "T-4988": "Odalys",
+   "T-5000": "Maren",
    "T-4916": "Pernille",
+   "T-5002": "Pernille",
    "T-4931": "Pernille",
    "T-4932": "Pernille",
+   "T-4933": "Pernille",
+   "T-4934": "Pernille",
    "T-4899": "Idris",
-   "T-4919": "Operator"
+   "T-4919": "Operator",
+   "T-4806": "Odalys"
   }
  },
  "ln": {
-  "at": "2026-11-19T07:04:19Z",
+  "at": "2026-11-19T07:07:15Z",
   "mq": {
    "n": {
     "checking": 1,
-    "inline": 13,
+    "inline": 10,
     "conflicted": 1,
     "failed": 0,
     "held": 0,
@@ -687,8 +670,8 @@
    },
    "m": {
     "checking": 1,
-    "inline": 59,
-    "conflicted": 823,
+    "inline": 51,
+    "conflicted": 826,
     "failed": null,
     "held": null,
     "retry": null,
@@ -697,26 +680,26 @@
    "cur": [
     [
      [
-      "T-4933"
+      "T-5006"
      ],
-     "lining up with main",
+     "Mac tests",
      "Mac mini",
      1
     ]
    ],
    "ld": [
-    17,
-    "2026-11-19T06:35:43Z"
+    20,
+    "2026-11-19T07:05:23Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-19T07:04:20Z",
-    "ld": 17.35,
+    "at": "2026-11-19T07:06:53Z",
+    "ld": 22.22,
     "c": 8,
     "sb": 1,
     "dk": [
-     37.8,
+     38.3,
      228.3
     ],
     "ss": [
@@ -743,12 +726,12 @@
  "operators": [
   {
    "w": "Operator",
-   "a": "Jeremy's Account",
+   "a": "Main plan",
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 1 task",
-   "at": "2026-11-19T01:41:56-05:00"
+   "t": "Work session \u2013 2 tasks",
+   "at": "2026-11-19T02:04:21-05:00"
   }
  ],
  "reply": {
@@ -767,13 +750,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 0,
-  "lanes": 1,
-  "total": 1,
-  "at": "2:04 AM",
+  "main": 2,
+  "lanes": 0,
+  "total": 2,
+  "at": "2:07 AM",
   "why": "",
-  "at_iso": "2026-11-19T07:04:00+00:00",
-  "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 2:04 AM ET</p></section>"
+  "at_iso": "2026-11-19T07:07:00+00:00",
+  "started": "2:04 AM",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 2:04 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 2:07 AM ET</p></section>"
  }
 }

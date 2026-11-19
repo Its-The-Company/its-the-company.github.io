@@ -863,6 +863,35 @@ The check found two things that the week's count should be read with:
   landed, at a review file (5be3b1f655). It cost no job here: the 36 jobs have 36 different gate keys as well. I
   propose no change to the rule today; T-4223 weighs it with the week's numbers.
 
+**Reading, 11:4x AM ET 2026-11-19 (Idris, T-4195's done condition).** The main checkout's
+`ops/metrics/land_xc.jsonl` from 8:02 AM 11-14 to its last row (11:05 AM 11-19): 592 rows, 293 jobs queued (117
+by the main gate's slots, 176 by lanes), 156 results (144 passes, median 454 s; 10 reds; 2 errors). **6 rows are
+"reused", all by the app key (rule t4195-v1), none by tree, none through the main gate** (its own verdict answers
+first, 7.4). Three came through a lane's prequeue, three at a land:
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 4: 7.4 The week&#x27;s count of reuses (T-4223 writes it here), scrolls sideways" style="--tw:761px" markdown="1">
+
+| Time (ET) | Lane, task | Via | Key (first 12) | Pass it named |
+|---|---|---|---|---|
+| 11-15 6:36 AM | a3, T-4089+T-4430+T-4280 | prequeue | 68cd5054abb2 | J-20261115-0550-land-a45-45e595 |
+| 11-15 6:25 PM | a, T-4282+T-4293+T-4512 | prequeue | e464a9e4a815 | J-20261115-1802-land-a45-142e5a |
+| 11-16 7:13 PM | a50, T-4494 | prequeue | 949de4190bfd | J-20261116-1858-land-a3-365856 |
+| 11-17 12:58 AM | b3, T-4182 | at land | c8844b40cfda | J-20261117-0042-land-b3-37aaa8 |
+| 11-18 12:46 AM | g11, T-4817+T-4796 | at land | 2e20d8cde31e | J-20261118-0007-land-g10-56245a |
+| 11-18 1:05 AM | g10, T-4796 | at land | 1d9a618c5b12 | J-20261118-0047-land-b40-549235 |
+
+</div>
+
+
+Each named pass has its own "passed" row in the record, read 0.5 to 30 minutes before the reuse. I made the
+T-4182 key again from the pass's commit (a85e176c83), the landed head (a98d07901f, on main) and the lane's tip
+(8a10936fcb): all three give c8844b40cfda..., and lane b3 queued nothing more until 5:02 PM. One reuse (a50,
+T-4494) was followed 14 s later by a queued job for the same task, a new prequeue on a moved tip, so it saved
+no job. The others each saved one MacBook job: about 5 x 454 s, some 38 minutes in five days, against 293 jobs
+queued. That fits 7.3: the key is rarely the answer, and when it is, the cause is the same content landed again
+after a retry or a shared pass between lanes. No tool changed.
+
 ### 7.5 Not done
 
 - A pass that ran on the Mac mini (the land's fallback, the gate's run "here") is not kept by the key. Only a

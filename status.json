@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-19T18:18:40.094026+00:00",
+ "at": "2026-11-19T18:28:11.176270+00:00",
  "session": {
   "active": false,
   "kind": "",
@@ -39,13 +39,13 @@
     ]
    },
    {
-    "t": "T-4877",
-    "name": "Fix the red experiments test",
-    "acct": "Personal b",
+    "t": "T-4181",
+    "name": "Widgets refresh on their own and by a tap",
+    "acct": "Personal a",
     "steps": [
      {
       "s": "testq",
-      "at": 1795111904
+      "at": 1795112722
      }
     ]
    },
@@ -71,88 +71,92 @@
   ],
   "done": [
    {
+    "t": "T-4195",
+    "name": "Reuse an iPhone pass when the app's inputs are unchanged",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1795112701
+   },
+   {
+    "t": "T-4012",
+    "name": "Retire the retry routes the send-back replaces",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1795112685
+   },
+   {
+    "t": "T-3871",
+    "name": "Archive parked refs whose work main already has",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1795112666
+   },
+   {
+    "t": "T-4678",
+    "name": "Close the iPhone premade feature and free its steps",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1795112610
+   },
+   {
+    "t": "T-5146",
+    "name": "Star the open high-priority process requests by impact",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "failed",
+    "end_at": 1795112586,
+    "why": "did not merge cleanly"
+   },
+   {
+    "t": "T-4678",
+    "name": "Close the iPhone premade feature and free its steps",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "failed",
+    "end_at": 1795112567,
+    "why": "did not merge cleanly"
+   },
+   {
+    "t": "T-5146",
+    "name": "Star the open high-priority process requests by impact",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "failed",
+    "end_at": 1795112567,
+    "why": "did not merge cleanly"
+   },
+   {
+    "t": "T-5146",
+    "name": "Star the open high-priority process requests by impact",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "failed",
+    "end_at": 1795112548,
+    "why": "did not merge cleanly"
+   },
+   {
+    "t": "T-4877",
+    "name": "Fix the red experiments test",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1795112529
+   },
+   {
     "t": "T-4734",
     "name": "Fix the red site merge queue test",
     "acct": "Personal b",
     "steps": [],
     "end": "landed",
     "end_at": 1795111885
-   },
-   {
-    "t": "T-4180",
-    "name": "Every premade widget draws on the iPhone",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1795105654
-   },
-   {
-    "t": "T-4913",
-    "name": "Stop the safety guard refusing safe work",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1795105452
-   },
-   {
-    "t": "T-4807",
-    "name": "Fix every bad test that failed a merge",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1795105435
-   },
-   {
-    "t": "T-2378",
-    "name": "Plan version 1.2 and later",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1795105293
-   },
-   {
-    "t": "T-5062",
-    "name": "The site sends its own push notices to a phone",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "failed",
-    "end_at": 1795105170,
-    "why": "did not merge cleanly"
-   },
-   {
-    "t": "T-0101",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1795105158
-   },
-   {
-    "t": "T-5037",
-    "name": "Break the Machine tab's \"Other\" storage into named parts",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1795104452
-   },
-   {
-    "t": "T-4681",
-    "name": "Premades default to Paper in light and Studio in dark",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1795104353
-   },
-   {
-    "t": "T-5045",
-    "name": "Date the Home merge-only line, hide it after a day",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1795104336
    }
   ],
-  "landed": 34,
-  "failed": 3
+  "landed": 39,
+  "failed": 7
  },
  "workers": [],
  "who": "",
@@ -210,19 +214,58 @@
   "week_pct": 70.58,
   "usage_pct": 45.4,
   "work_pct": 80.5,
-  "read_at": "2026-11-19T18:18:00+00:00",
+  "read_at": "2026-11-19T18:29:00+00:00",
   "running": [
    {
-    "lane": "a2",
-    "task": "T-4181",
+    "lane": "b",
+    "task": "T-4758",
     "w": "Idris",
-    "k": "build",
-    "t": "Widgets refresh on their own and by a tap",
+    "k": "tools",
+    "t": "Keep the shortcut test's pictures out of the source tree",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-19T11:28:32-05:00",
-    "n": "Evan",
-    "src": "plan-a"
+    "at": "2026-11-19T13:25:03-05:00",
+    "n": "Jeremy",
+    "d": 1,
+    "src": "plan-b"
+   },
+   {
+    "lane": "b",
+    "task": "T-4787",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Count failed merges by cause: bad test or broken code",
+    "m": "sonnet",
+    "e": "high",
+    "at": "2026-11-19T13:25:03-05:00",
+    "n": "Jeremy",
+    "d": 1,
+    "src": "plan-b"
+   },
+   {
+    "lane": "b",
+    "task": "T-5095",
+    "w": "Pernille",
+    "k": "tools",
+    "t": "Land the disk sweep job from a fresh copy",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-19T13:25:03-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
+   },
+   {
+    "lane": "b",
+    "task": "T-4960",
+    "w": "Odalys",
+    "k": "process",
+    "t": "Propose the five-minute supervisor wording",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-19T13:25:03-05:00",
+    "n": "Jeremy",
+    "d": 1,
+    "src": "plan-b"
    },
    {
     "lane": "b3",
@@ -256,7 +299,7 @@
   }
  ],
  "disk": {
-  "free_gb": 34,
+  "free_gb": 36,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -265,14 +308,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-19T13:16:00-05:00",
+   "at": "2026-11-19T13:25:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 3,
-  "at": "2026-11-19T13:18:00-05:00",
+  "at": "2026-11-19T13:29:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -470,114 +513,72 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-19T18:18:40Z",
+  "at": "2026-11-19T18:28:11Z",
   "s": {
-   "T-4877": [
+   "T-4181": [
     "merging",
     "Host checks on the Mac mini",
-    1795111960094
+    1795112771176
    ],
    "T-4850": [
     "mergeq",
     "1st to merge",
-    1795111600094
-   ],
-   "T-5146": [
-    "mergeq",
-    "2nd to merge",
-    1795107340094
-   ],
-   "T-4734": [
-    "mergeq",
-    "3rd to merge",
-    1795109020094
-   ],
-   "T-4678": [
-    "mergeq",
-    "3rd to merge",
-    1795109020094
+    1795111631176
    ],
    "T-4891": [
     "mergeq",
-    "6th to merge",
-    1795111660094
+    "2nd to merge",
+    1795111631176
    ],
    "T-5070": [
     "mergeq",
-    "6th to merge",
-    1795111660094
+    "2nd to merge",
+    1795111631176
    ],
-   "T-4843": [
+   "T-4758": [
     "mergeq",
-    "10th to merge",
-    1795103380094
-   ],
-   "T-3871": [
-    "mergeq",
-    "11th to merge",
-    1795106560094
-   ],
-   "T-4012": [
-    "mergeq",
-    "12th to merge",
-    1795106740094
-   ],
-   "T-4195": [
-    "mergeq",
-    "13th to merge",
-    1795106860094
+    "4th to merge",
+    1795112891176
    ],
    "T-4913": [
     "mergeq",
-    "14th to merge",
-    1795111660094
+    "5th to merge",
+    1795111631176
    ]
   },
   "nm": {
-   "T-4877": "Fix the red experiments test",
+   "T-4181": "Widgets refresh on their own and by a tap",
    "T-4850": "Bring the Mac mini load back down",
-   "T-5146": "Star the open high-priority process requests by impact",
-   "T-4734": "Fix the red site merge queue test",
-   "T-4678": "Close the iPhone premade feature and free its steps",
    "T-4891": "Work the process and site merge queue under its limit",
    "T-5070": "Shorten the gate change merge wait",
-   "T-4843": "Size each merge batch from measured data",
-   "T-3871": "Archive parked refs whose work main already has",
-   "T-4012": "Retire the retry routes the send-back replaces",
-   "T-4195": "Reuse an iPhone pass when the app's inputs are unchanged",
+   "T-4758": "Keep the shortcut test's pictures out of the source tree",
    "T-4913": "Stop the safety guard refusing safe work"
   },
   "wk": {
-   "T-4877": "Odalys",
+   "T-4181": "Idris",
    "T-4850": "Odalys",
-   "T-5146": "Ines",
-   "T-4734": "Maren",
-   "T-4678": "Odalys",
    "T-4891": "Odalys",
    "T-5070": "Odalys",
-   "T-4843": "Odalys",
-   "T-3871": "Odalys",
-   "T-4012": "Odalys",
-   "T-4195": "Idris",
+   "T-4758": "Idris",
    "T-4913": "Odalys"
   }
  },
  "ln": {
-  "at": "2026-11-19T18:18:40Z",
+  "at": "2026-11-19T18:28:11Z",
   "mq": {
    "n": {
     "checking": 1,
-    "inline": 11,
-    "conflicted": 3,
+    "inline": 5,
+    "conflicted": 4,
     "failed": 0,
     "held": 0,
     "retry": 0,
     "parked": 0
    },
    "m": {
-    "checking": 6,
-    "inline": 55,
-    "conflicted": 228,
+    "checking": 2,
+    "inline": 21,
+    "conflicted": 182,
     "failed": null,
     "held": null,
     "retry": null,
@@ -586,26 +587,26 @@
    "cur": [
     [
      [
-      "T-4877"
+      "T-4181"
      ],
      "Mac tests",
      "Mac mini",
-     6
+     2
     ]
    ],
    "ld": [
-    56,
-    "2026-11-19T18:11:25Z"
+    61,
+    "2026-11-19T18:25:01Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-19T18:18:41Z",
-    "ld": 4.65,
+    "at": "2026-11-19T18:28:12Z",
+    "ld": 7.66,
     "c": 8,
     "sb": 0,
     "dk": [
-     34.2,
+     38.0,
      228.3
     ],
     "ss": [
@@ -630,12 +631,12 @@
  "operators": [
   {
    "w": "Operator",
-   "a": "Evan's Account",
+   "a": "Jeremy's Account",
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session",
-   "at": "2026-11-19T11:28:31-05:00"
+   "t": "Work session \u2013 1 task",
+   "at": "2026-11-19T13:25:03-05:00"
   },
   {
    "w": "Operator",
@@ -666,10 +667,10 @@
   "main": 0,
   "lanes": 2,
   "total": 2,
-  "at": "1:18 PM",
+  "at": "1:29 PM",
   "why": "",
-  "at_iso": "2026-11-19T18:18:00+00:00",
+  "at_iso": "2026-11-19T18:29:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 1:18 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 1:29 PM ET</p></section>"
  }
 }

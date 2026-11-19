@@ -1051,6 +1051,30 @@ with the Operator's reply c6998606674 item 2. Every task is in one feature; feat
 - Today the add prints the answer and writes no line; `feature_record.py sync --write` puts every open line not
   yet in the record into it by the same rule. Acting on a join at the add, running sync after each add, the
   card's Feature field, and process features in `feature_session.py` are the follow-up line from T-4823.
+
+## 11. T-4823: process lines placed at the add, the replay, and place turned on (11-19)
+
+- The add (`feature_place.py at_add`, from `board_tick.py add`) now places a line that is not app work by the
+  features record's answer (`feature_record.py place`), with the app lines' proof rules. One process feature by
+  proof: the line gets "part of <that feature's line>" (its alias, else its one umbrella: the open member another
+  member names with "part of"); a feature with no line of its own gets no link, only a message naming it. None or
+  two: flagged, never guessed and never held; it runs alone as a one-task feature (Evan #41 c6968663984). A P0 or
+  Investor-cited flag says "for Ines". A line with a gate or scheduler file in its Targets is never grouped. A
+  process line whose source sits in an app feature is flagged, not placed there: the record groups process work
+  with process work (build), and the first replay put 8 lines into app features that way.
+- Replay, board of 9:42 AM ET 11-19, record of 8:31 AM 11-19. App steps (`feature_place.py replay`): 185 judged
+  <span title="A second worker who grades the idea without seeing the first worker&#x27;s grades, and records them first.">blind</span>, 14 placed in the feature the list has, 0 in another, 171 flagged. Process lines (each open process line
+  taken out of the record and judged blind, its own Links set to none; `python3 ops/plans/T-4823-replay-process.py .`):
+  195 lines; 24 put in the feature the record has (5 linked to its line, 19 in a feature with no line, so no link
+  written), 1 in another (T-4823 itself: its source T-4814 is in F-135, the record grouped it by its Investor
+  comment into F-128; no link would be written), 144 flagged, 27 alone for gate or scheduler files. Before the
+  app-feature flag the same replay gave 9 wrong of 33. Two of the 144 flags (T-3823, T-0863) are steps a person
+  listed in an app feature, which no add is.
+- Read with care: the record was built with the same "comes from" key the add uses, so agreement on those lines is
+  partly by construction; the plan, comment and Targets keys the build also used are not in the add's rule, which
+  is why most grouped process lines come back flagged (they run alone, as before).
+- Misplacement rate: 0 of 14 app placements, 1 of 25 process placements (4%), 0 of the 19 links the add would
+  write. `ops/feature_place.json` is set to place on that count. Hold stays off.
 {% endraw %}
 
 </div>

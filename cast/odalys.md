@@ -42,7 +42,6 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 ## Lessons
 - T-4956 11-18: ticked lines leave the board for log/board-archive.md; a claim release writes a new slot, whose mtime is the release time.
-- T-5068 11-19 add470c31f: a detached start from a tick needs a "throwaway copy" check (test env, temp/launch-pack path, no log/); a test that stands a temp root in for main must stub that check. board_tick's plain-title check refused the xc_sim follow-up (snake_case): stopped, owed by a person.
 - T-4810 11-19: main_gate settle can't record a file both sides added; never hand-write main_gate_settled.json (classifier refused it). Give a new plan page a name main won't take, or ask a person.
 - T-5065 11-19 0fd4ff4f65: gate a tick step on input mtimes (stamp written before the read; bash -nt is whole seconds, so test 'stamp not newer'). run_limited leaks 'Terminated: 15 sleep' into captured output: filter it. guard_supervisor_test fails in an SSD copy (space in path), before my change too.
 - T-4809 11-19: <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> done lists are never pruned: trust only merge_limit's count for 'waiting to merge'. Syncing a copy: list deletions from its base, not HEAD. A copy holding files main moved since: land from a fresh copy under its own task number (T-5075), never reset the old one.
@@ -51,6 +50,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-5048 11-19: TOOL_GROUPS rows carry forms/fallback/match, so build groups a tool's pieces with no By slot; a test fixture never reaches the live board (group and note only when reserve/add are the tool's own). main_green.py held by T-4907: patch in scratch, owed.
 - T-4838 11-19 cd29327d14: a land past 20 min runs with run_in_background and a 2 h timeout, not foreground. Before any land retry, set every unnamed copy file to main's tip: my copy's old personal_land_test.sh (pre mask fix) read as my red. main_gate_test waits on real heavy slots (>60 min at load 45; 925 s stubbed). Runner deploy = VERSION bump; it self-updates between jobs. Owed T-5111.
 - T-5135 11-19 0284422ee0: board_tick refuses title words in ops/title_words.txt ('lane'): check that list before an add. Route timing: flow.jsonl ready->merged (src land) vs main_gate.jsonl first row->merged (src main_gate).
+- T-4823 11-19 25eaaa0974: a <span title="A second worker who grades the idea without seeing the first worker&#x27;s grades, and records them first.">blind</span> replay compares the add's rule with the record's build rule: where they differ (kind, keys) is the 'wrong' count; align the add to build before reading a rate. Steps a person listed are no add case.
 {% endraw %}
 
 

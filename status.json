@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-19T02:03:15.548165+00:00",
+ "at": "2026-11-19T02:06:20.402119+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -131,20 +131,11 @@
  },
  "workers": [
   {
-   "name": "odalys",
-   "task": "[tools] T-4805 gate failure causes and T-4792",
-   "model": "opus",
-   "started": "2026-11-19T00:59:54.758Z",
-   "seconds": 3800,
-   "finished": null,
-   "effort": "high"
-  },
-  {
    "name": "maren",
    "task": "[design] T-4818 Flow panel signals and pool",
    "model": "opus",
    "started": "2026-11-19T01:34:01.894Z",
-   "seconds": 1753,
+   "seconds": 1938,
    "finished": null,
    "effort": "high"
   },
@@ -153,13 +144,21 @@
    "task": "[tools] T-4909 end sessions on a stall",
    "model": "opus",
    "started": "2026-11-19T00:25:56.669Z",
-   "seconds": 5838,
+   "seconds": 6023,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Odalys x2, Maren",
+ "who": "Maren, Odalys",
  "recent": [
+  {
+   "name": "odalys",
+   "task": "[tools] T-4805 gate failure causes and T-4792",
+   "model": "opus",
+   "started": "2026-11-19T00:59:54.758Z",
+   "seconds": null,
+   "finished": "2026-11-19T02:06:11.724000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[tools] T-4955 refusal count and status sweep",
@@ -183,14 +182,6 @@
    "started": "2026-11-18T23:37:01.600Z",
    "seconds": null,
    "finished": "2026-11-19T02:00:30.791000+00:00"
-  },
-  {
-   "name": "pernille",
-   "task": "[tools] T-4912 time limits inventory",
-   "model": "opus",
-   "started": "2026-11-19T01:00:09.559Z",
-   "seconds": null,
-   "finished": "2026-11-19T01:45:08.204000+00:00"
   }
  ],
  "queue": {
@@ -245,7 +236,7 @@
   "week_pct": 52.29,
   "usage_pct": 50.1,
   "work_pct": 81.6,
-  "read_at": "2026-11-19T02:03:00+00:00",
+  "read_at": "2026-11-19T02:06:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -266,7 +257,7 @@
   }
  ],
  "disk": {
-  "free_gb": 11,
+  "free_gb": 9.3,
   "gate": "closed",
   "ssd": {
    "mounted": true,
@@ -275,14 +266,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions wait until 20 GB is free.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-18T20:57:00-05:00",
+   "at": "2026-11-18T21:03:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 3,
-  "at": "2026-11-18T21:03:00-05:00",
+  "at": "2026-11-18T21:06:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -360,16 +351,6 @@
     "at": "2026-11-19T00:25:56.669Z",
     "o": "c",
     "task": "T-4909"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Record a cause for every failed merge",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-19T00:59:54.758Z",
-    "o": "c",
-    "task": "T-4805"
    },
    {
     "w": "Maren",
@@ -547,34 +528,35 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-19T02:03:15Z",
+  "at": "2026-11-19T02:06:08Z",
   "s": {
-   "T-4805": [
-    "merging",
-    "Mac tests at the main gate",
-    1795052235548
-   ],
    "T-4909": [
     "merging",
     "Mac tests at the main gate",
-    1795051395548
+    1795051388740
    ],
    "T-4818": [
     "merged",
     "on main 9:00 PM ET",
     1795053628000,
     "Maren"
+   ],
+   "T-4805": [
+    "merged",
+    "on main 7:53 PM ET",
+    1795049580000,
+    "Odalys"
    ]
   },
   "nm": {
-   "T-4805": "Record a cause for every failed merge",
    "T-4909": "End work sessions on a stall, not on the clock",
-   "T-4818": "Show each bottleneck signal with its limit on Flow"
+   "T-4818": "Show each bottleneck signal with its limit on Flow",
+   "T-4805": "Record a cause for every failed merge"
   },
   "wk": {
-   "T-4805": "Odalys",
    "T-4909": "Odalys",
    "T-4818": "Maren",
+   "T-4805": "Odalys",
    "T-4955": "Odalys",
    "T-4958": "Odalys",
    "T-4808": "Odalys",
@@ -587,7 +569,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-19T02:03:15Z",
+  "at": "2026-11-19T02:06:08Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -601,11 +583,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 946,
+    "conflicted": 949,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1220
+    "parked": 1223
    },
    "cur": [],
    "ld": [
@@ -615,12 +597,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-19T02:03:16Z",
-    "ld": 3.73,
+    "at": "2026-11-19T02:06:10Z",
+    "ld": 4.75,
     "c": 8,
     "sb": 0,
     "dk": [
-     9.3,
+     9.0,
      228.3
     ],
     "ss": [
@@ -672,13 +654,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 3,
+  "main": 2,
   "lanes": 0,
-  "total": 3,
-  "at": "9:03 PM",
+  "total": 2,
+  "at": "9:06 PM",
   "why": "",
-  "at_iso": "2026-11-19T02:03:00+00:00",
+  "at_iso": "2026-11-19T02:06:00+00:00",
   "started": "5:34 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 5:34 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:03 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 5:34 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:06 PM ET</p></section>"
  }
 }

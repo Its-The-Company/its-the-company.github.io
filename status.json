@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-19T00:21:26.313223+00:00",
+ "at": "2026-11-19T00:24:33.755034+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -146,7 +146,7 @@
    "task": "[tools] T-4917 gate counts own copied files",
    "model": "opus",
    "started": "2026-11-18T22:35:16.121Z",
-   "seconds": 6370,
+   "seconds": 6557,
    "finished": null,
    "effort": "high"
   },
@@ -155,7 +155,7 @@
    "task": "[test] T-4807 bad tests slice 3",
    "model": "opus",
    "started": "2026-11-18T22:58:04.466Z",
-   "seconds": 5001,
+   "seconds": 5189,
    "finished": null,
    "effort": "high"
   },
@@ -164,7 +164,7 @@
    "task": "[tools] T-4808 merge-step fixes stream",
    "model": "opus",
    "started": "2026-11-18T23:26:46.521Z",
-   "seconds": 3279,
+   "seconds": 3467,
    "finished": null,
    "effort": "high"
   },
@@ -173,7 +173,7 @@
    "task": "[tools] T-4788 feature sessions on for all",
    "model": "opus",
    "started": "2026-11-18T23:37:01.600Z",
-   "seconds": 2664,
+   "seconds": 2852,
    "finished": null,
    "effort": "high"
   }
@@ -216,7 +216,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 523,
+  "runnable_count": 522,
   "blocked_count": 34
  },
  "meter": {
@@ -265,7 +265,7 @@
   "week_pct": 52.29,
   "usage_pct": 50.1,
   "work_pct": 81.6,
-  "read_at": "2026-11-19T00:21:00+00:00",
+  "read_at": "2026-11-19T00:24:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -302,7 +302,7 @@
  "lock_in": {
   "on": true,
   "pool": 3,
-  "at": "2026-11-18T19:21:00-05:00",
+  "at": "2026-11-18T19:24:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -487,6 +487,11 @@
   ],
   "done": [
    {
+    "w": "Odalys",
+    "t": "Work a session saved when it ran out of time no longer counts as waiting to merge, and a task...",
+    "at": "2026-11-18T19:24:00-05:00"
+   },
+   {
     "w": "Idris",
     "t": "The app's own network fetch is now checked against the same six shared test cases the Python...",
     "at": "2026-11-18T18:33:00-05:00"
@@ -495,22 +500,21 @@
     "w": "Idris",
     "t": "Coloured line numbers for warnings and errors now redraw without rescanning the whole script on...",
     "at": "2026-11-18T18:25:00-05:00"
-   },
-   {
-    "w": "Idris",
-    "t": "When an edit moves a line with a warning up or down, its coloured line number and the spoken...",
-    "at": "2026-11-18T18:25:00-05:00"
    }
   ],
   "count": {
-   "next": 523,
+   "next": 522,
    "wait": 31,
    "blocked": 3,
    "you": 10
   },
   "fin": {
-   "n": 5,
+   "n": 6,
    "rows": [
+    [
+     "T-4903",
+     "Drop stale copies from the..."
+    ],
     [
      "T-4750",
      "Check network fetch cases on..."
@@ -573,22 +577,22 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-19T00:21:26Z",
+  "at": "2026-11-19T00:24:18Z",
   "s": {
    "T-4808": [
     "merging",
     "Mac tests at the main gate",
-    1795046426313
+    1795046418311
    ],
    "T-4903": [
     "merging",
-    "Mac tests at the main gate",
-    1795045766313
+    "Mac tests at the main gate \u00b7 11 groups of tests done",
+    1795045758311
    ],
    "T-4807": [
     "merging",
     "Mac tests at the main gate",
-    1795045286313
+    1795045278311
    ],
    "T-3217": [
     "testing",
@@ -598,22 +602,22 @@
    "T-4805": [
     "testing",
     "its own tests, in its copy",
-    1795046786313
+    1795046778311
    ],
    "T-4788": [
     "testing",
     "its own tests, in its copy",
-    1795045346313
+    1795045338311
    ],
    "T-4898": [
     "testq",
     "1st for a Simulator",
-    1795041266313
+    1795041258311
    ],
    "T-4575": [
     "testq",
     "4th for a Simulator",
-    1795041266313
+    1795041258311
    ],
    "T-4917": [
     "merged",
@@ -650,7 +654,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-19T00:21:26Z",
+  "at": "2026-11-19T00:24:18Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -664,11 +668,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 844,
+    "conflicted": 847,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1119
+    "parked": 1121
    },
    "cur": [],
    "ld": [
@@ -678,12 +682,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-19T00:21:03Z",
-    "ld": 5.77,
+    "at": "2026-11-19T00:23:29Z",
+    "ld": 4.92,
     "c": 8,
     "sb": 0,
     "dk": [
-     12.4,
+     12.2,
      228.3
     ],
     "ss": [
@@ -737,10 +741,10 @@
   "main": 4,
   "lanes": 0,
   "total": 4,
-  "at": "7:21 PM",
+  "at": "7:24 PM",
   "why": "",
-  "at_iso": "2026-11-19T00:21:00+00:00",
+  "at_iso": "2026-11-19T00:24:00+00:00",
   "started": "5:34 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 4, started 5:34 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 7:21 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 4, started 5:34 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 7:24 PM ET</p></section>"
  }
 }

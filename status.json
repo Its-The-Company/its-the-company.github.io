@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-19T01:07:36.060843+00:00",
+ "at": "2026-11-19T01:10:45.594321+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -136,7 +136,7 @@
    "task": "[tools] T-4788 feature sessions on for all",
    "model": "opus",
    "started": "2026-11-18T23:37:01.600Z",
-   "seconds": 5434,
+   "seconds": 5623,
    "finished": null,
    "effort": "high"
   },
@@ -145,7 +145,7 @@
    "task": "[tools] T-4909 end sessions on a stall",
    "model": "opus",
    "started": "2026-11-19T00:25:56.669Z",
-   "seconds": 2499,
+   "seconds": 2688,
    "finished": null,
    "effort": "high"
   },
@@ -154,7 +154,7 @@
    "task": "[tools] T-4845 move tools off full",
    "model": "opus",
    "started": "2026-11-19T00:54:57.501Z",
-   "seconds": 758,
+   "seconds": 948,
    "finished": null,
    "effort": "high"
   },
@@ -163,7 +163,7 @@
    "task": "[tools] T-4805 gate failure causes and T-4792",
    "model": "opus",
    "started": "2026-11-19T00:59:54.758Z",
-   "seconds": 461,
+   "seconds": 650,
    "finished": null,
    "effort": "high"
   },
@@ -172,7 +172,7 @@
    "task": "[tools] T-4912 time limits inventory",
    "model": "opus",
    "started": "2026-11-19T01:00:09.559Z",
-   "seconds": 446,
+   "seconds": 636,
    "finished": null,
    "effort": "high"
   }
@@ -220,12 +220,13 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 32.0,
-   "resets_at": "2026-11-18T20:10:00-05:00",
+   "pct": null,
+   "resets_at": null,
    "used_words": "of your 5-hour allowance used",
    "read_at": "2026-11-18T20:06:14.420591-05:00",
    "source": "live",
-   "left": 68.0,
+   "last_reset": "2026-11-18T20:10:00-05:00",
+   "left": null,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
@@ -264,7 +265,7 @@
   "week_pct": 52.29,
   "usage_pct": 50.1,
   "work_pct": 81.6,
-  "read_at": "2026-11-19T01:07:00+00:00",
+  "read_at": "2026-11-19T01:10:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -301,7 +302,7 @@
  "lock_in": {
   "on": true,
   "pool": 3,
-  "at": "2026-11-18T20:07:00-05:00",
+  "at": "2026-11-18T20:10:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -586,7 +587,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-19T01:07:36Z",
+  "at": "2026-11-19T01:10:37Z",
   "s": {
    "T-3217": [
     "testing",
@@ -596,22 +597,27 @@
    "T-4909": [
     "testing",
     "its own tests, in its copy",
-    1795049496060
+    1795049497880
+   ],
+   "T-4912": [
+    "testing",
+    "its own tests, in its copy",
+    1795050517880
    ],
    "T-4845": [
     "testing",
     "its own tests, in its copy",
-    1795050336060
+    1795050277880
    ],
    "T-4788": [
     "testing",
     "its own tests, in its copy",
-    1795049256060
+    1795050637880
    ],
    "T-4898": [
     "testq",
     "1st for a Simulator",
-    1795041216060
+    1795041277880
    ],
    "T-4805": [
     "merged",
@@ -623,6 +629,7 @@
   "nm": {
    "T-3217": "Fix the three red tests before build 3",
    "T-4909": "End work sessions on a stall, not on the clock",
+   "T-4912": "Replace fixed time limits with stall and error checks",
    "T-4845": "Move every tool off the full main thread",
    "T-4788": "Turn feature sessions on for every app feature",
    "T-4898": "Fix the Home Screen token test reading the gallery",
@@ -631,6 +638,7 @@
   "wk": {
    "T-3217": "Idris",
    "T-4909": "Odalys",
+   "T-4912": "Odalys",
    "T-4845": "Odalys",
    "T-4788": "Odalys",
    "T-4898": "Idris",
@@ -646,7 +654,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-19T01:07:36Z",
+  "at": "2026-11-19T01:10:37Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -660,11 +668,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 890,
+    "conflicted": 893,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1165
+    "parked": 1168
    },
    "cur": [],
    "ld": [
@@ -674,16 +682,16 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-19T01:07:39Z",
-    "ld": 4.74,
+    "at": "2026-11-19T01:09:49Z",
+    "ld": 4.5,
     "c": 8,
     "sb": 0,
     "dk": [
-     11.8,
+     14.1,
      228.3
     ],
     "ss": [
-     164.3,
+     164.1,
      953.7
     ],
     "sn": []
@@ -697,21 +705,33 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 11 tasks",
-   "at": "2026-11-18T20:07:06-05:00"
+   "t": "Inbox \u2013 Jeremy's 8:10 PM Message on GitHub",
+   "at": "2026-11-18T20:10:14-05:00"
   }
  ],
  "reply": {
-  "sent": "2026-11-19T01:06:07Z",
-  "seconds": 57.0
+  "sent": "2026-11-19T01:07:44Z",
+  "seconds": 43.0
  },
- "inbox": [],
+ "inbox": [
+  {
+   "id": "c6996538227",
+   "state": "received",
+   "position": 1,
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "Explain how the release of the..."
+  }
+ ],
  "trimmed": [
   "lane_next",
   "queue_text",
   "recent",
   "task_done",
   "fin_short",
+  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -723,10 +743,10 @@
   "main": 5,
   "lanes": 0,
   "total": 5,
-  "at": "8:07 PM",
+  "at": "8:10 PM",
   "why": "",
-  "at_iso": "2026-11-19T01:07:00+00:00",
+  "at_iso": "2026-11-19T01:10:00+00:00",
   "started": "5:34 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 5, started 5:34 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 8:07 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 5, started 5:34 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 8:10 PM ET</p></section>"
  }
 }

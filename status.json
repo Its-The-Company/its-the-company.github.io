@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-19T22:06:50.209725+00:00",
+ "at": "2026-11-19T22:17:06.029334+00:00",
  "session": {
   "active": false,
   "kind": "",
@@ -27,6 +27,14 @@
    }
   ],
   "done": [
+   {
+    "t": "T-4878",
+    "name": "Fix the red five hour test",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1795126194
+   },
    {
     "t": "T-4818",
     "name": "Show each bottleneck signal with its limit on Flow",
@@ -97,17 +105,9 @@
     "steps": [],
     "end": "landed",
     "end_at": 1795122309
-   },
-   {
-    "t": "T-4182",
-    "name": "A failing widget says so and can recover",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1795120617
    }
   ],
-  "landed": 41,
+  "landed": 42,
   "failed": 10
  },
  "workers": [],
@@ -166,17 +166,54 @@
   "week_pct": 74.89,
   "usage_pct": 46.9,
   "work_pct": 80.3,
-  "read_at": "2026-11-19T22:07:00+00:00",
+  "read_at": "2026-11-19T22:19:00+00:00",
   "running": [
    {
     "lane": "a3",
-    "task": "T-4182",
-    "w": "Idris",
-    "k": "build",
-    "t": "A failing widget says so and can recover",
+    "task": "T-4109",
+    "w": "Maren",
+    "k": "site",
+    "t": "Add a newest-first view to the Reports page",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-19T17:01:26-05:00",
+    "at": "2026-11-19T17:16:34-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a3",
+    "task": "T-4446",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Commit the company's records once per supervisor round",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-19T17:16:34-05:00",
+    "n": "Evan",
+    "d": 1,
+    "src": "plan-a"
+   },
+   {
+    "lane": "a3",
+    "task": "T-3107",
+    "w": "Pernille",
+    "k": "measure",
+    "t": "Read the phones' real numbers from the gate build",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-19T17:16:34-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a3",
+    "task": "T-3113",
+    "w": "Odalys",
+    "k": "site",
+    "t": "Build a timeline feed for every picked-up task",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-19T17:16:34-05:00",
     "n": "Evan",
     "src": "plan-a"
    },
@@ -261,7 +298,7 @@
   }
  ],
  "disk": {
-  "free_gb": 42,
+  "free_gb": 45,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -269,15 +306,15 @@
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
-   "ok": false,
-   "at": "2026-11-19T16:56:00-05:00",
+   "ok": true,
+   "at": "2026-11-19T17:14:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 3,
-  "at": "2026-11-19T17:07:00-05:00",
+  "at": "2026-11-19T17:19:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -475,47 +512,64 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-19T22:06:50Z",
+  "at": "2026-11-19T22:17:06Z",
   "s": {
-   "T-4878": [
+   "T-3974": [
     "merging",
-    "Rebasing onto current main",
-    1795126010209
+    "Host checks on the Mac mini",
+    1795126266029
+   ],
+   "T-4843": [
+    "merging",
+    "Host checks on the Mac mini",
+    1795126266029
+   ],
+   "T-5179": [
+    "mergeq",
+    "2nd to merge",
+    1795126506029
    ],
    "T-3976": [
     "mergeq",
-    "1st to merge",
-    1795125590209
+    "4th to merge",
+    1795125546029
    ],
    "T-4813": [
     "mergeq",
-    "1st to merge",
-    1795125590209
+    "4th to merge",
+    1795125546029
    ],
    "T-4818": [
     "mergeq",
-    "1st to merge",
-    1795125590209
+    "4th to merge",
+    1795125546029
    ],
    "T-3859": [
     "mergeq",
-    "2nd to merge",
-    1795125650209
+    "5th to merge",
+    1795125666029
    ],
    "T-4468": [
     "mergeq",
-    "2nd to merge",
-    1795125650209
+    "5th to merge",
+    1795125666029
    ],
    "T-4010": [
     "mergeq",
-    "2nd to merge",
-    1795125650209
+    "5th to merge",
+    1795125666029
    ],
-   "T-4182": [
-    "testq",
-    "1st for a Simulator",
-    1795125890209
+   "T-4878": [
+    "merged",
+    "on main 5:06 PM ET",
+    1795125967000,
+    ""
+   ],
+   "T-4446": [
+    "merged",
+    "on main 4:32 PM ET",
+    1795123953000,
+    ""
    ],
    "T-4877": [
     "merged",
@@ -531,36 +585,42 @@
    ]
   },
   "nm": {
-   "T-4878": "Fix the red five hour test",
+   "T-3974": "Never leave the merge step idle while work waits",
+   "T-4843": "Size each merge batch from measured data",
+   "T-5179": "Merge-queue fixes go first, process work unlimited",
    "T-3976": "Show each drive's storage makeup on Home",
    "T-4813": "Home's numbers update within a minute",
    "T-4818": "Show each bottleneck signal with its limit on Flow",
    "T-3859": "Move everything not needed off the Mac mini disk",
    "T-4468": "Let people set each premade's place, events and lists",
    "T-4010": "Rebuild This Session as a full flowchart",
-   "T-4182": "A failing widget says so and can recover",
+   "T-4878": "Fix the red five hour test",
+   "T-4446": "Commit the company's records once per supervisor round",
    "T-4877": "Fix the red experiments test",
    "T-4734": "Fix the red site merge queue test"
   },
   "wk": {
-   "T-4878": "Odalys",
+   "T-3974": "Odalys",
+   "T-4843": "Odalys",
+   "T-5179": "Odalys",
    "T-3976": "Odalys",
    "T-4813": "Maren",
    "T-4818": "Maren",
    "T-3859": "Odalys",
    "T-4468": "Idris",
    "T-4010": "Odalys",
-   "T-4182": "Idris",
+   "T-4878": "Odalys",
+   "T-4446": "Odalys",
    "T-4877": "Odalys",
    "T-4734": "Maren"
   }
  },
  "ln": {
-  "at": "2026-11-19T22:06:50Z",
+  "at": "2026-11-19T22:17:06Z",
   "mq": {
    "n": {
-    "checking": 1,
-    "inline": 6,
+    "checking": 2,
+    "inline": 7,
     "conflicted": 3,
     "failed": 0,
     "held": 0,
@@ -568,9 +628,9 @@
     "parked": 0
    },
    "m": {
-    "checking": 0,
-    "inline": 6,
-    "conflicted": 347,
+    "checking": 6,
+    "inline": 16,
+    "conflicted": 357,
     "failed": null,
     "held": null,
     "retry": null,
@@ -579,26 +639,34 @@
    "cur": [
     [
      [
-      "T-4878"
+      "T-3974"
      ],
-     "lining up with main",
+     "Mac tests",
      "Mac mini",
-     0
+     6
+    ],
+    [
+     [
+      "T-4843"
+     ],
+     "Mac tests",
+     "Mac mini",
+     6
     ]
    ],
    "ld": [
-    86,
-    "2026-11-19T21:40:37Z"
+    87,
+    "2026-11-19T22:09:54Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-19T22:06:51Z",
-    "ld": 78.49,
+    "at": "2026-11-19T22:17:11Z",
+    "ld": 75.34,
     "c": 8,
     "sb": 1,
     "dk": [
-     45.1,
+     44.5,
      228.3
     ],
     "ss": [
@@ -629,8 +697,8 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 1 task",
-   "at": "2026-11-19T17:01:26-05:00"
+   "t": "Work session \u2013 4 tasks",
+   "at": "2026-11-19T17:16:34-05:00"
   },
   {
    "w": "Operator",
@@ -647,7 +715,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 1 task",
+   "t": "Work session",
    "at": "2026-11-19T16:40:12-05:00"
   }
  ],
@@ -670,10 +738,10 @@
   "main": 0,
   "lanes": 3,
   "total": 3,
-  "at": "5:07 PM",
+  "at": "5:19 PM",
   "why": "",
-  "at_iso": "2026-11-19T22:07:00+00:00",
+  "at_iso": "2026-11-19T22:19:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 5:07 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 5:19 PM ET</p></section>"
  }
 }

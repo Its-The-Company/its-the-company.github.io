@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-19T06:45:33.238524+00:00",
+ "at": "2026-11-19T06:48:34.513167+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -236,7 +236,7 @@
    "task": "[tools] T-4907 main green parts 3-4",
    "model": "opus",
    "started": "2026-11-19T06:10:25.463Z",
-   "seconds": 2107,
+   "seconds": 2289,
    "finished": null,
    "effort": "high"
   },
@@ -245,7 +245,7 @@
    "task": "[tools] T-4843 batch size from data",
    "model": "opus",
    "started": "2026-11-19T06:10:37.169Z",
-   "seconds": 2096,
+   "seconds": 2277,
    "finished": null,
    "effort": "high"
   }
@@ -304,7 +304,7 @@
   "week_pct": 52.99,
   "usage_pct": 45.3,
   "work_pct": 80.7,
-  "read_at": "2026-11-19T06:45:00+00:00",
+  "read_at": "2026-11-19T06:48:00+00:00",
   "running": [
    {
     "lane": "b2",
@@ -328,6 +328,7 @@
     "e": "medium",
     "at": "2026-11-19T00:36:40-05:00",
     "n": "Jeremy",
+    "d": 1,
     "src": "plan-b"
    }
   ]
@@ -366,7 +367,7 @@
  "lock_in": {
   "on": true,
   "pool": 3,
-  "at": "2026-11-19T01:45:00-05:00",
+  "at": "2026-11-19T01:48:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -595,87 +596,92 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-19T06:45:11Z",
+  "at": "2026-11-19T06:48:34Z",
   "s": {
    "T-4899": [
     "merging",
     "Host checks on the Mac mini",
-    1795070471168
+    1795070494513
    ],
    "T-4919": [
     "merging",
     "Host checks on the Mac mini",
-    1795070471168
+    1795070494513
    ],
    "T-4933": [
     "mergeq",
     "1st to merge",
-    1795065551168
+    1795065514513
    ],
    "T-4934": [
     "mergeq",
     "2nd to merge",
-    1795065671168
+    1795065634513
    ],
    "T-5000": [
     "mergeq",
     "3rd to merge",
-    1795066451168
+    1795066414513
+   ],
+   "T-5006": [
+    "mergeq",
+    "4th to merge",
+    1795070854513
    ],
    "T-5002": [
     "mergeq",
-    "4th to merge",
-    1795068491168
+    "5th to merge",
+    1795068454513
    ],
    "T-4916": [
     "mergeq",
-    "5th to merge",
-    1795068371168
+    "6th to merge",
+    1795068334513
    ],
    "T-4927": [
     "mergeq",
-    "8th to merge",
-    1795068191168
+    "9th to merge",
+    1795068154513
    ],
    "T-4928": [
     "mergeq",
-    "8th to merge",
-    1795068191168
+    "9th to merge",
+    1795068154513
    ],
    "T-4929": [
     "mergeq",
-    "8th to merge",
-    1795068191168
+    "9th to merge",
+    1795068154513
    ],
    "T-4930": [
     "mergeq",
-    "8th to merge",
-    1795068191168
+    "9th to merge",
+    1795068154513
    ],
    "T-4931": [
     "mergeq",
-    "9th to merge",
-    1795069211168
+    "10th to merge",
+    1795069234513
    ],
    "T-4932": [
     "mergeq",
-    "9th to merge",
-    1795069211168
+    "10th to merge",
+    1795069234513
    ],
    "T-4909": [
     "merging",
     "Mac tests at the main gate",
-    1795068611168
+    1795068574513
    ],
    "T-4907": [
     "testing",
     "its own tests, in its copy",
-    1795070651168
+    1795070614513
    ],
    "T-4843": [
     "testing",
     "its own tests, in its copy",
-    1795070291168
+    1795070314513
    ]
   },
   "nm": {
@@ -684,6 +690,7 @@
    "T-4933": "Check finished work before it ships",
    "T-4934": "Check finished work before it ships",
    "T-5000": "Draw transit count-downs the way the iPhone draws them",
+   "T-5006": "Lock In turns itself on after midnight",
    "T-5002": "Say what a run does when its save is unchecked",
    "T-4916": "Check the new landing road before it ships",
    "T-4927": "Check finished work before it ships",
@@ -702,6 +709,7 @@
    "T-4933": "Pernille",
    "T-4934": "Pernille",
    "T-5000": "Maren",
+   "T-5006": "Odalys",
    "T-5002": "Pernille",
    "T-4916": "Pernille",
    "T-4927": "Pernille",
@@ -716,11 +724,11 @@
   }
  },
  "ln": {
-  "at": "2026-11-19T06:45:11Z",
+  "at": "2026-11-19T06:48:34Z",
   "mq": {
    "n": {
     "checking": 2,
-    "inline": 11,
+    "inline": 12,
     "conflicted": 1,
     "failed": 0,
     "held": 0,
@@ -728,13 +736,13 @@
     "parked": 1
    },
    "m": {
-    "checking": 4,
-    "inline": 42,
-    "conflicted": 804,
+    "checking": 7,
+    "inline": 46,
+    "conflicted": 808,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 34
+    "parked": 38
    },
    "cur": [
     [
@@ -743,7 +751,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     4
+     7
     ],
     [
      [
@@ -751,7 +759,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     4
+     7
     ]
    ],
    "ld": [
@@ -761,12 +769,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-19T06:45:15Z",
-    "ld": 24.96,
+    "at": "2026-11-19T06:48:36Z",
+    "ld": 22.81,
     "c": 8,
     "sb": 1,
     "dk": [
-     40.4,
+     38.2,
      228.3
     ],
     "ss": [
@@ -806,7 +814,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 2 tasks",
+   "t": "Work session \u2013 1 task",
    "at": "2026-11-19T01:41:56-05:00"
   }
  ],
@@ -829,10 +837,10 @@
   "main": 2,
   "lanes": 1,
   "total": 3,
-  "at": "1:45 AM",
+  "at": "1:48 AM",
   "why": "",
-  "at_iso": "2026-11-19T06:45:00+00:00",
+  "at_iso": "2026-11-19T06:48:00+00:00",
   "started": "1:08 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 1:08 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 1:45 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 1:08 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 1:48 AM ET</p></section>"
  }
 }

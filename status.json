@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-19T02:06:20.402119+00:00",
+ "at": "2026-11-19T02:09:27.607104+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -129,28 +129,25 @@
   "landed": 19,
   "failed": 4
  },
- "workers": [
-  {
-   "name": "maren",
-   "task": "[design] T-4818 Flow panel signals and pool",
-   "model": "opus",
-   "started": "2026-11-19T01:34:01.894Z",
-   "seconds": 1938,
-   "finished": null,
-   "effort": "high"
-  },
+ "workers": [],
+ "who": "",
+ "recent": [
   {
    "name": "odalys",
    "task": "[tools] T-4909 end sessions on a stall",
    "model": "opus",
    "started": "2026-11-19T00:25:56.669Z",
-   "seconds": 6023,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Maren, Odalys",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-19T02:07:39.631000+00:00"
+  },
+  {
+   "name": "maren",
+   "task": "[design] T-4818 Flow panel signals and pool",
+   "model": "opus",
+   "started": "2026-11-19T01:34:01.894Z",
+   "seconds": null,
+   "finished": "2026-11-19T02:07:22.589000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[tools] T-4805 gate failure causes and T-4792",
@@ -166,45 +163,29 @@
    "started": "2026-11-19T01:11:56.876Z",
    "seconds": null,
    "finished": "2026-11-19T02:01:44.713000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-4845 move tools off full",
-   "model": "opus",
-   "started": "2026-11-19T00:54:57.501Z",
-   "seconds": null,
-   "finished": "2026-11-19T02:01:05.460000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-4788 feature sessions on for all",
-   "model": "opus",
-   "started": "2026-11-18T23:37:01.600Z",
-   "seconds": null,
-   "finished": "2026-11-19T02:00:30.791000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 529,
+  "runnable_count": 528,
   "blocked_count": 34
  },
  "meter": {
   "five_hour": {
-   "pct": 14.0,
+   "pct": 15.0,
    "resets_at": "2026-11-19T01:10:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-18T21:01:35.478772-05:00",
+   "read_at": "2026-11-18T21:06:37.741575-05:00",
    "source": "live",
-   "left": 86.0,
+   "left": 85.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 57.0,
    "resets_at": "2026-11-22T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-18T21:01:35.478772-05:00",
+   "read_at": "2026-11-18T21:06:37.741575-05:00",
    "source": "live",
    "left": 43.0,
    "left_words": "of your weekly allowance left"
@@ -216,7 +197,7 @@
    "read_at": "2026-11-18T17:33:56.705931-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-18T21:01:35.478772-05:00"
+  "read_at": "2026-11-18T21:06:37.741575-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -236,7 +217,7 @@
   "week_pct": 52.29,
   "usage_pct": 50.1,
   "work_pct": 81.6,
-  "read_at": "2026-11-19T02:06:00+00:00",
+  "read_at": "2026-11-19T02:09:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -273,7 +254,7 @@
  "lock_in": {
   "on": true,
   "pool": 3,
-  "at": "2026-11-18T21:06:00-05:00",
+  "at": "2026-11-18T21:09:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -290,24 +271,6 @@
  },
  "lanes": [
   {
-   "name": "Odalys",
-   "state": "running",
-   "task": "[tools] T-4909 end sessions on a stall",
-   "model": "opus",
-   "since": "2026-11-19T00:25:56.669Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
-   "name": "Maren",
-   "state": "running",
-   "task": "[design] T-4818 Flow panel signals and pool",
-   "model": "opus",
-   "since": "2026-11-19T01:34:01.894Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
    "name": "Idris",
    "state": "next",
    "task": "Idris, P1, from T-4755 (Investor an Investor...",
@@ -316,9 +279,25 @@
    "next": []
   },
   {
+   "name": "Odalys",
+   "state": "next",
+   "task": "Odalys, P0, from T-4694 (nightly run of every suite,...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
    "name": "Pernille",
    "state": "next",
    "task": "Pernille, P0, from T-4694 (nightly run of every suite,...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
+   "name": "Maren",
+   "state": "next",
+   "task": "Maren, P0, from T-4694 (nightly run of every suite,...",
    "model": null,
    "since": null,
    "next": []
@@ -341,28 +320,7 @@
   }
  ],
  "tasks": {
-  "run": [
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "End work sessions on a stall, not on the clock",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-19T00:25:56.669Z",
-    "o": "c",
-    "task": "T-4909"
-   },
-   {
-    "w": "Maren",
-    "k": "design",
-    "t": "Show each bottleneck signal with its limit on Flow",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-19T01:34:01.894Z",
-    "o": "c",
-    "task": "T-4818"
-   }
-  ],
+  "run": [],
   "src": "plan",
   "open": [
    {
@@ -438,6 +396,11 @@
   ],
   "done": [
    {
+    "w": "Operator",
+    "t": "Guard refusals per day stayed within its limit of 16.49 refusals for a full day, so the...",
+    "at": "2026-11-18T21:08:00-05:00"
+   },
+   {
     "w": "Odalys",
     "t": "The refusals chart now counts each step a guard refused once, and blocked merges as their own...",
     "at": "2026-11-18T21:01:00-05:00"
@@ -446,15 +409,10 @@
     "w": "Operator",
     "t": "A later MacBook job for the same work (J-20261118-1733-xc-test-5) passed, so the failed job...",
     "at": "2026-11-18T20:02:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "The check that sets how many agents may run now runs every 5 minutes during a session, one step...",
-    "at": "2026-11-18T19:58:00-05:00"
    }
   ],
   "count": {
-   "next": 529,
+   "next": 528,
    "wait": 31,
    "blocked": 3,
    "you": 10
@@ -528,35 +486,9 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-19T02:06:08Z",
-  "s": {
-   "T-4909": [
-    "merging",
-    "Mac tests at the main gate",
-    1795051388740
-   ],
-   "T-4818": [
-    "merged",
-    "on main 9:00 PM ET",
-    1795053628000,
-    "Maren"
-   ],
-   "T-4805": [
-    "merged",
-    "on main 7:53 PM ET",
-    1795049580000,
-    "Odalys"
-   ]
-  },
-  "nm": {
-   "T-4909": "End work sessions on a stall, not on the clock",
-   "T-4818": "Show each bottleneck signal with its limit on Flow",
-   "T-4805": "Record a cause for every failed merge"
-  },
+  "at": "2026-11-19T02:09:27Z",
+  "s": {},
   "wk": {
-   "T-4909": "Odalys",
-   "T-4818": "Maren",
-   "T-4805": "Odalys",
    "T-4955": "Odalys",
    "T-4958": "Odalys",
    "T-4808": "Odalys",
@@ -569,7 +501,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-19T02:06:08Z",
+  "at": "2026-11-19T02:09:27Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -583,11 +515,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 949,
+    "conflicted": 952,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1223
+    "parked": 1227
    },
    "cur": [],
    "ld": [
@@ -597,12 +529,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-19T02:06:10Z",
-    "ld": 4.75,
+    "at": "2026-11-19T02:09:03Z",
+    "ld": 4.46,
     "c": 8,
     "sb": 0,
     "dk": [
-     9.0,
+     9.2,
      228.3
     ],
     "ss": [
@@ -654,13 +586,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 2,
+  "main": 0,
   "lanes": 0,
-  "total": 2,
-  "at": "9:06 PM",
-  "why": "",
-  "at_iso": "2026-11-19T02:06:00+00:00",
+  "total": 0,
+  "at": "9:09 PM",
+  "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
+  "at_iso": "2026-11-19T02:09:00+00:00",
   "started": "5:34 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 5:34 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:06 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0, started 5:34 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:09 PM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
  }
 }

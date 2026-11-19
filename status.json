@@ -1,10 +1,10 @@
 {
  "schema": 1,
- "at": "2026-11-19T18:04:10.760938+00:00",
+ "at": "2026-11-19T18:18:40.094026+00:00",
  "session": {
-  "active": true,
-  "kind": "work",
-  "started": "2026-11-19T13:01:28-05:00",
+  "active": false,
+  "kind": "",
+  "started": null,
   "flow": [
    {
     "t": "T-4919",
@@ -33,12 +33,19 @@
     "acct": "Personal a",
     "steps": [
      {
-      "s": "testq",
-      "at": 1795068681
-     },
-     {
       "s": "macbook",
-      "at": 1795068705
+      "at": 1795070226
+     }
+    ]
+   },
+   {
+    "t": "T-4877",
+    "name": "Fix the red experiments test",
+    "acct": "Personal b",
+    "steps": [
+     {
+      "s": "testq",
+      "at": 1795111904
      }
     ]
    },
@@ -63,6 +70,14 @@
    }
   ],
   "done": [
+   {
+    "t": "T-4734",
+    "name": "Fix the red site merge queue test",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1795111885
+   },
    {
     "t": "T-4180",
     "name": "Every premade widget draws on the iPhone",
@@ -134,17 +149,9 @@
     "steps": [],
     "end": "landed",
     "end_at": 1795104336
-   },
-   {
-    "t": "T-4843",
-    "name": "Size each merge batch from measured data",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1795104234
    }
   ],
-  "landed": 33,
+  "landed": 34,
   "failed": 3
  },
  "workers": [],
@@ -198,12 +205,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": null,
+ "next_tick": "2026-11-19T13:33:27-05:00",
  "personal": {
-  "week_pct": 70.34,
+  "week_pct": 70.58,
   "usage_pct": 45.4,
   "work_pct": 80.5,
-  "read_at": "2026-11-19T18:08:00+00:00",
+  "read_at": "2026-11-19T18:18:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -249,7 +256,7 @@
   }
  ],
  "disk": {
-  "free_gb": 37,
+  "free_gb": 34,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -258,14 +265,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-19T13:05:00-05:00",
+   "at": "2026-11-19T13:16:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 3,
-  "at": "2026-11-19T13:08:00-05:00",
+  "at": "2026-11-19T13:18:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -273,13 +280,9 @@
    "b": "midnight"
   }
  },
- "next_tick_why": "session",
+ "next_tick_why": "last_tick",
  "idle": null,
- "pool": {
-  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 8 (cut a step: load 14.4 a core is over 10)",
-  "n": 8,
-  "at": "2026-11-19T13:01:09.425183-05:00"
- },
+ "pool": null,
  "lanes": [
   {
    "name": "Idris",
@@ -407,6 +410,11 @@
   "done": [
    {
     "w": "Odalys",
+    "t": "The process and site merge queue was worked down from 15 waiting to 2 of its limit of 8, and...",
+    "at": "2026-11-19T13:06:00-05:00"
+   },
+   {
+    "w": "Odalys",
     "t": "Wrote the plan for letting people install Python packages from the internet in a later update,...",
     "at": "2026-11-19T11:19:00-05:00"
    },
@@ -414,11 +422,6 @@
     "w": "Operator",
     "t": "Main's own tests pass again on a clean copy of main (da6059203), so finished work is no longer...",
     "at": "2026-11-19T10:50:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "New process tasks are now sorted into their feature when they are added, the same careful way...",
-    "at": "2026-11-19T10:47:00-05:00"
    }
   ],
   "count": {
@@ -426,10 +429,6 @@
    "wait": 1,
    "blocked": 1,
    "you": 2
-  },
-  "fin": {
-   "n": 0,
-   "rows": []
   }
  },
  "qr": [
@@ -471,104 +470,104 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-19T18:04:10Z",
+  "at": "2026-11-19T18:18:40Z",
   "s": {
+   "T-4877": [
+    "merging",
+    "Host checks on the Mac mini",
+    1795111960094
+   ],
    "T-4850": [
-    "merging",
-    "Host checks on the Mac mini",
-    1795107910760
-   ],
-   "T-4913": [
-    "merging",
-    "Host checks on the Mac mini",
-    1795107910760
-   ],
-   "T-4849": [
     "mergeq",
     "1st to merge",
-    1795106350760
-   ],
-   "T-4891": [
-    "mergeq",
-    "2nd to merge",
-    1795105450760
-   ],
-   "T-4734": [
-    "mergeq",
-    "4th to merge",
-    1795107070760
-   ],
-   "T-4877": [
-    "mergeq",
-    "5th to merge",
-    1795107190760
+    1795111600094
    ],
    "T-5146": [
     "mergeq",
-    "6th to merge",
-    1795107310760
+    "2nd to merge",
+    1795107340094
+   ],
+   "T-4734": [
+    "mergeq",
+    "3rd to merge",
+    1795109020094
    ],
    "T-4678": [
     "mergeq",
-    "7th to merge",
-    1795108990760
+    "3rd to merge",
+    1795109020094
+   ],
+   "T-4891": [
+    "mergeq",
+    "6th to merge",
+    1795111660094
+   ],
+   "T-5070": [
+    "mergeq",
+    "6th to merge",
+    1795111660094
    ],
    "T-4843": [
     "mergeq",
-    "12th to merge",
-    1795103350760
+    "10th to merge",
+    1795103380094
    ],
    "T-3871": [
     "mergeq",
-    "13th to merge",
-    1795106530760
+    "11th to merge",
+    1795106560094
    ],
    "T-4012": [
     "mergeq",
-    "14th to merge",
-    1795106710760
+    "12th to merge",
+    1795106740094
    ],
    "T-4195": [
     "mergeq",
-    "15th to merge",
-    1795106890760
+    "13th to merge",
+    1795106860094
+   ],
+   "T-4913": [
+    "mergeq",
+    "14th to merge",
+    1795111660094
    ]
   },
   "nm": {
-   "T-4850": "Bring the Mac mini load back down",
-   "T-4913": "Stop the safety guard refusing safe work",
-   "T-4849": "Shorten the process merge wait for good",
-   "T-4891": "Work the process and site merge queue under its limit",
-   "T-4734": "Fix the red site merge queue test",
    "T-4877": "Fix the red experiments test",
+   "T-4850": "Bring the Mac mini load back down",
    "T-5146": "Star the open high-priority process requests by impact",
+   "T-4734": "Fix the red site merge queue test",
    "T-4678": "Close the iPhone premade feature and free its steps",
+   "T-4891": "Work the process and site merge queue under its limit",
+   "T-5070": "Shorten the gate change merge wait",
    "T-4843": "Size each merge batch from measured data",
    "T-3871": "Archive parked refs whose work main already has",
    "T-4012": "Retire the retry routes the send-back replaces",
-   "T-4195": "Reuse an iPhone pass when the app's inputs are unchanged"
+   "T-4195": "Reuse an iPhone pass when the app's inputs are unchanged",
+   "T-4913": "Stop the safety guard refusing safe work"
   },
   "wk": {
-   "T-4850": "Odalys",
-   "T-4913": "Odalys",
-   "T-4849": "Odalys",
-   "T-4891": "Odalys",
-   "T-4734": "Maren",
    "T-4877": "Odalys",
+   "T-4850": "Odalys",
    "T-5146": "Ines",
+   "T-4734": "Maren",
    "T-4678": "Odalys",
+   "T-4891": "Odalys",
+   "T-5070": "Odalys",
    "T-4843": "Odalys",
    "T-3871": "Odalys",
    "T-4012": "Odalys",
-   "T-4195": "Idris"
+   "T-4195": "Idris",
+   "T-4913": "Odalys"
   }
  },
  "ln": {
-  "at": "2026-11-19T18:04:10Z",
+  "at": "2026-11-19T18:18:40Z",
   "mq": {
    "n": {
-    "checking": 2,
-    "inline": 10,
+    "checking": 1,
+    "inline": 11,
     "conflicted": 3,
     "failed": 0,
     "held": 0,
@@ -576,9 +575,9 @@
     "parked": 0
    },
    "m": {
-    "checking": 59,
-    "inline": 77,
-    "conflicted": 213,
+    "checking": 6,
+    "inline": 55,
+    "conflicted": 228,
     "failed": null,
     "held": null,
     "retry": null,
@@ -587,34 +586,26 @@
    "cur": [
     [
      [
-      "T-4850"
+      "T-4877"
      ],
      "Mac tests",
      "Mac mini",
-     59
-    ],
-    [
-     [
-      "T-4913"
-     ],
-     "Mac tests",
-     "Mac mini",
-     59
+     6
     ]
    ],
    "ld": [
-    53,
-    "2026-11-19T16:27:34Z"
+    56,
+    "2026-11-19T18:11:25Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-19T18:04:11Z",
-    "ld": 9.55,
+    "at": "2026-11-19T18:18:41Z",
+    "ld": 4.65,
     "c": 8,
     "sb": 0,
     "dk": [
-     36.4,
+     34.2,
      228.3
     ],
     "ss": [
@@ -637,15 +628,6 @@
   }
  },
  "operators": [
-  {
-   "w": "Operator",
-   "a": "Main plan",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session",
-   "at": "2026-11-19T13:01:28-05:00"
-  },
   {
    "w": "Operator",
    "a": "Evan's Account",
@@ -684,10 +666,10 @@
   "main": 0,
   "lanes": 2,
   "total": 2,
-  "at": "1:08 PM",
+  "at": "1:18 PM",
   "why": "",
-  "at_iso": "2026-11-19T18:08:00+00:00",
+  "at_iso": "2026-11-19T18:18:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 1:08 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 1:18 PM ET</p></section>"
  }
 }

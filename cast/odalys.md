@@ -42,7 +42,6 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 ## Lessons
 - T-4956 11-18: ticked lines leave the board for log/board-archive.md; a claim release writes a new slot, whose mtime is the release time.
-- T-4810 11-19: main_gate settle can't record a file both sides added; never hand-write main_gate_settled.json (classifier refused it). Give a new plan page a name main won't take, or ask a person.
 - T-5065 11-19 0fd4ff4f65: gate a tick step on input mtimes (stamp written before the read; bash -nt is whole seconds, so test 'stamp not newer'). run_limited leaks 'Terminated: 15 sleep' into captured output: filter it. guard_supervisor_test fails in an SSD copy (space in path), before my change too.
 - T-4809 11-19: <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> done lists are never pruned: trust only merge_limit's count for 'waiting to merge'. Syncing a copy: list deletions from its base, not HEAD. A copy holding files main moved since: land from a fresh copy under its own task number (T-5075), never reset the old one.
 - T-4726 11-19: a "FAIL   :" row under a red is the diagnostic, not the row; read .git/main-gate/red/ for kept outputs first. A tick compare breaks on any clock number (tenths, "N min ago"); a background step's late write needs a wait, not a longer grep. Suite lands that run 3x under load: hand the command to the Operator before starting, not after a cut.

@@ -42,7 +42,6 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 ## Lessons
 - T-4956 11-18: ticked lines leave the board for log/board-archive.md; a claim release writes a new slot, whose mtime is the release time.
-- T-4726 11-19: a "FAIL   :" row under a red is the diagnostic, not the row; read .git/main-gate/red/ for kept outputs first. A tick compare breaks on any clock number (tenths, "N min ago"); a background step's late write needs a wait, not a longer grep. Suite lands that run 3x under load: hand the command to the Operator before starting, not after a cut.
 - T-5065 11-19: the T-2117 close_by row (supervisor_test timelimit) is red by load: 5 reds since 11-09, one with no supervisor.sh change; mine passed 18/0 at load 23. A main probe that passed doesn't prove a branch's red is its own.
 - T-5048 11-19: TOOL_GROUPS rows carry forms/fallback/match, so build groups a tool's pieces with no By slot; a test fixture never reaches the live board (group and note only when reserve/add are the tool's own). main_green.py held by T-4907: patch in scratch, owed.
 - T-4838 11-19 cd29327d14: a land past 20 min runs with run_in_background and a 2 h timeout, not foreground. Before any land retry, set every unnamed copy file to main's tip: my copy's old personal_land_test.sh (pre mask fix) read as my red. main_gate_test waits on real heavy slots (>60 min at load 45; 925 s stubbed). Runner deploy = VERSION bump; it self-updates between jobs. Owed T-5111.

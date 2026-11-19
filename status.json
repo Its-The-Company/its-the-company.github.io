@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-19T18:42:35.525290+00:00",
+ "at": "2026-11-19T18:57:11.117021+00:00",
  "session": {
   "active": false,
   "kind": "",
@@ -14,6 +14,21 @@
      {
       "s": "landing",
       "at": 1795074240
+     }
+    ]
+   },
+   {
+    "t": "T-4181",
+    "name": "Widgets refresh on their own and by a tap",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "testq",
+      "at": 1795112722
+     },
+     {
+      "s": "macbook",
+      "at": 1795114017
      }
     ]
    },
@@ -46,17 +61,6 @@
     ]
    },
    {
-    "t": "T-4181",
-    "name": "Widgets refresh on their own and by a tap",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1795112722
-     }
-    ]
-   },
-   {
     "t": "T-4565",
     "steps": [
      {
@@ -77,6 +81,38 @@
    }
   ],
   "done": [
+   {
+    "t": "T-4960",
+    "name": "Propose the five-minute supervisor wording",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1795114341
+   },
+   {
+    "t": "T-4787",
+    "name": "Count failed merges by cause: bad test or broken code",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1795114272
+   },
+   {
+    "t": "T-4758",
+    "name": "Keep the shortcut test's pictures out of the source tree",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1795114179
+   },
+   {
+    "t": "T-5070",
+    "name": "Shorten the gate change merge wait",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1795114158
+   },
    {
     "t": "T-4195",
     "name": "Reuse an iPhone pass when the app's inputs are unchanged",
@@ -126,43 +162,9 @@
     "end": "failed",
     "end_at": 1795112567,
     "why": "did not merge cleanly"
-   },
-   {
-    "t": "T-5146",
-    "name": "Star the open high-priority process requests by impact",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "failed",
-    "end_at": 1795112567,
-    "why": "did not merge cleanly"
-   },
-   {
-    "t": "T-5146",
-    "name": "Star the open high-priority process requests by impact",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "failed",
-    "end_at": 1795112548,
-    "why": "did not merge cleanly"
-   },
-   {
-    "t": "T-4877",
-    "name": "Fix the red experiments test",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1795112529
-   },
-   {
-    "t": "T-4734",
-    "name": "Fix the red site merge queue test",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1795111885
    }
   ],
-  "landed": 38,
+  "landed": 42,
   "failed": 7
  },
  "workers": [],
@@ -171,7 +173,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 633,
+  "runnable_count": 631,
   "blocked_count": 2
  },
  "meter": {
@@ -216,12 +218,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-19T13:53:27-05:00",
+ "next_tick": "2026-11-19T14:11:43-05:00",
  "personal": {
-  "week_pct": 71.18,
-  "usage_pct": 45.7,
-  "work_pct": 80.6,
-  "read_at": "2026-11-19T18:45:00+00:00",
+  "week_pct": 72.07,
+  "usage_pct": 46.0,
+  "work_pct": 80.8,
+  "read_at": "2026-11-19T18:57:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -233,6 +235,7 @@
     "e": "high",
     "at": "2026-11-19T13:40:22-05:00",
     "n": "Evan",
+    "d": 1,
     "src": "plan-a"
    },
    {
@@ -272,16 +275,55 @@
     "src": "plan-a"
    },
    {
-    "lane": "b3",
-    "task": "T-4182",
-    "w": "Idris",
-    "k": "build",
-    "t": "A failing widget says so and can recover",
+    "lane": "a3",
+    "task": "T-3871",
+    "w": "Odalys",
+    "k": "ops",
+    "t": "Archive parked refs whose work main already has",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-19T11:39:36-05:00",
-    "n": "Jeremy",
-    "src": "plan-b"
+    "at": "2026-11-19T13:51:51-05:00",
+    "n": "Evan",
+    "d": 1,
+    "src": "plan-a"
+   },
+   {
+    "lane": "a3",
+    "task": "T-4196",
+    "w": "Idris",
+    "k": "tools",
+    "t": "Let app changes waiting to merge share one iPhone run",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-19T13:51:51-05:00",
+    "n": "Evan",
+    "d": 1,
+    "src": "plan-a"
+   },
+   {
+    "lane": "a3",
+    "task": "T-3806",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Answer Investor messages that no session claims",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-19T13:51:51-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a3",
+    "task": "T-4195",
+    "w": "Idris",
+    "k": "tools",
+    "t": "Reuse an iPhone pass when the app's inputs are unchanged",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-19T13:51:51-05:00",
+    "n": "Evan",
+    "d": 1,
+    "src": "plan-a"
    }
   ]
  },
@@ -303,7 +345,7 @@
   }
  ],
  "disk": {
-  "free_gb": 36,
+  "free_gb": 38,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -312,14 +354,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-19T13:43:00-05:00",
+   "at": "2026-11-19T13:52:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 3,
-  "at": "2026-11-19T13:45:00-05:00",
+  "at": "2026-11-19T13:57:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -331,14 +373,6 @@
  "idle": null,
  "pool": null,
  "lanes": [
-  {
-   "name": "Idris",
-   "state": "next",
-   "task": "Idris, P1, from T-4755 (Investor an Investor...",
-   "model": null,
-   "since": null,
-   "next": []
-  },
   {
    "name": "Odalys",
    "state": "next",
@@ -367,6 +401,14 @@
    "name": "Maren",
    "state": "next",
    "task": "Maren, P0, from T-4694 (nightly run of every suite,...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
+   "name": "Idris",
+   "state": "next",
+   "task": "Idris, P2, from T-4238 (Pernille's review, from T-3900,...",
    "model": null,
    "since": null,
    "next": []
@@ -457,22 +499,22 @@
   "done": [
    {
     "w": "Odalys",
-    "t": "The process and site merge queue was worked down from 15 waiting to 2 of its limit of 8, and...",
-    "at": "2026-11-19T13:06:00-05:00"
+    "t": "Proposed the Operations Guide wording that the supervisor runs every 5 minutes, and the Handbook...",
+    "at": "2026-11-19T13:52:00-05:00"
    },
    {
     "w": "Odalys",
-    "t": "Wrote the plan for letting people install Python packages from the internet in a later update,...",
-    "at": "2026-11-19T11:19:00-05:00"
+    "t": "Counted failed merges from 11-10 to 11-17 by cause: 46 bad tests, 14 broken code, 26 other, 48...",
+    "at": "2026-11-19T13:51:00-05:00"
    },
    {
-    "w": "Operator",
-    "t": "Main's own tests pass again on a clean copy of main (da6059203), so finished work is no longer...",
-    "at": "2026-11-19T10:50:00-05:00"
+    "w": "Idris",
+    "t": "The Shortcut recipe test no longer saves its six pictures into the app's folder; it keeps them...",
+    "at": "2026-11-19T13:49:00-05:00"
    }
   ],
   "count": {
-   "next": 633,
+   "next": 631,
    "wait": 1,
    "blocked": 1,
    "you": 2
@@ -517,52 +559,53 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-19T18:42:35Z",
+  "at": "2026-11-19T18:57:11Z",
   "s": {
-   "T-4181": [
+   "T-5095": [
     "merging",
-    "Host checks on the Mac mini",
-    1795112735525
-   ],
-   "T-4850": [
-    "mergeq",
-    "1st to merge",
-    1795111595525
-   ],
-   "T-4891": [
-    "mergeq",
-    "2nd to merge",
-    1795111655525
-   ],
-   "T-5070": [
-    "mergeq",
-    "2nd to merge",
-    1795111655525
+    "Rebasing onto current main",
+    1795114391117
    ],
    "T-4758": [
     "mergeq",
-    "4th to merge",
-    1795112915525
+    "1st to merge",
+    1795113491117
    ],
    "T-4787": [
     "mergeq",
-    "6th to merge",
-    1795112975525
-   ],
-   "T-4913": [
-    "mergeq",
-    "8th to merge",
-    1795111655525
-   ],
-   "T-5095": [
-    "mergeq",
-    "9th to merge",
-    1795113455525
+    "1st to merge",
+    1795113491117
    ],
    "T-4960": [
     "mergeq",
-    "9th to merge",
-    1795113455525
+    "1st to merge",
+    1795113491117
+   ],
+   "T-4195": [
+    "mergeq",
+    "3rd to merge",
+    1795114631117
+   ],
+   "T-4181": [
+    "mergetest",
+    "Xcode checks on the MacBook, 4th to merge",
+    1795114031117
+   ],
+   "T-4182": [
+    "mergeq",
+    "5th to merge",
+    1795114211117
+   ],
+   "T-4196": [
+    "merging",
+    "Mac tests at the main gate",
+    1795114331117
+   ],
+   "T-3871": [
+    "merged",
+    "on main 1:24 PM ET",
+    1795112657000,
+    ""
    ],
    "T-4843": [
     "merged",
@@ -572,36 +615,36 @@
    ]
   },
   "nm": {
-   "T-4181": "Widgets refresh on their own and by a tap",
-   "T-4850": "Bring the Mac mini load back down",
-   "T-4891": "Work the process and site merge queue under its limit",
-   "T-5070": "Shorten the gate change merge wait",
+   "T-5095": "Land the disk sweep job from a fresh copy",
    "T-4758": "Keep the shortcut test's pictures out of the source tree",
    "T-4787": "Count failed merges by cause: bad test or broken code",
-   "T-4913": "Stop the safety guard refusing safe work",
-   "T-5095": "Land the disk sweep job from a fresh copy",
    "T-4960": "Propose the five-minute supervisor wording",
+   "T-4195": "Reuse an iPhone pass when the app's inputs are unchanged",
+   "T-4181": "Widgets refresh on their own and by a tap",
+   "T-4182": "A failing widget says so and can recover",
+   "T-4196": "Let app changes waiting to merge share one iPhone run",
+   "T-3871": "Archive parked refs whose work main already has",
    "T-4843": "Size each merge batch from measured data"
   },
   "wk": {
-   "T-4181": "Idris",
-   "T-4850": "Odalys",
-   "T-4891": "Odalys",
-   "T-5070": "Odalys",
+   "T-5095": "Pernille",
    "T-4758": "Idris",
    "T-4787": "Odalys",
-   "T-4913": "Odalys",
-   "T-5095": "Pernille",
    "T-4960": "Odalys",
+   "T-4195": "Idris",
+   "T-4181": "Idris",
+   "T-4182": "Idris",
+   "T-4196": "Idris",
+   "T-3871": "Odalys",
    "T-4843": "Odalys"
   }
  },
  "ln": {
-  "at": "2026-11-19T18:42:35Z",
+  "at": "2026-11-19T18:57:11Z",
   "mq": {
    "n": {
-    "checking": 1,
-    "inline": 8,
+    "checking": 2,
+    "inline": 5,
     "conflicted": 4,
     "failed": 0,
     "held": 0,
@@ -609,9 +652,9 @@
     "parked": 0
    },
    "m": {
-    "checking": 17,
-    "inline": 24,
-    "conflicted": 197,
+    "checking": 7,
+    "inline": 19,
+    "conflicted": 211,
     "failed": null,
     "held": null,
     "retry": null,
@@ -620,26 +663,34 @@
    "cur": [
     [
      [
+      "T-5095"
+     ],
+     "lining up with main",
+     "Mac mini",
+     4
+    ],
+    [
+     [
       "T-4181"
      ],
-     "Mac tests",
-     "Mac mini",
-     17
+     "iPhone app tests",
+     "MacBook",
+     10
     ]
    ],
    "ld": [
-    61,
-    "2026-11-19T18:25:01Z"
+    66,
+    "2026-11-19T18:52:21Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-19T18:42:36Z",
-    "ld": 5.9,
+    "at": "2026-11-19T18:57:12Z",
+    "ld": 8.41,
     "c": 8,
     "sb": 0,
     "dk": [
-     35.6,
+     37.7,
      228.3
     ],
     "ss": [
@@ -649,12 +700,12 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-19T18:27:12Z",
-    "ld": 0.3,
+    "at": "2026-11-19T18:47:35Z",
+    "ld": 0.21,
     "c": 12,
     "sb": 0,
     "dk": [
-     355.2,
+     355.1,
      926.4
     ],
     "sn": []
@@ -669,21 +720,21 @@
    "m": "opus",
    "e": "high",
    "t": "Work session \u2013 4 tasks",
-   "at": "2026-11-19T13:40:22-05:00"
+   "at": "2026-11-19T13:47:31-05:00"
   },
   {
    "w": "Operator",
-   "a": "Jeremy's Account",
+   "a": "Evan's Account",
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session",
-   "at": "2026-11-19T11:39:35-05:00"
+   "t": "Work session \u2013 3 tasks",
+   "at": "2026-11-19T13:51:51-05:00"
   }
  ],
  "reply": {
-  "sent": "2026-11-19T17:02:56Z",
-  "seconds": 82.0
+  "sent": "2026-11-19T18:46:30Z",
+  "seconds": 59.0
  },
  "inbox": [],
  "trimmed": [
@@ -700,10 +751,10 @@
   "main": 0,
   "lanes": 2,
   "total": 2,
-  "at": "1:45 PM",
+  "at": "1:57 PM",
   "why": "",
-  "at_iso": "2026-11-19T18:45:00+00:00",
+  "at_iso": "2026-11-19T18:57:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 1:45 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 1:57 PM ET</p></section>"
  }
 }

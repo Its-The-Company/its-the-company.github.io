@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-19T20:04:45.903728+00:00",
+ "at": "2026-11-19T20:16:13.500901+00:00",
  "session": {
   "active": false,
   "kind": "",
@@ -163,7 +163,7 @@
     "end_at": 1795112610
    }
   ],
-  "landed": 38,
+  "landed": 36,
   "failed": 7
  },
  "workers": [],
@@ -172,7 +172,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 634,
+  "runnable_count": 639,
   "blocked_count": 2
  },
  "meter": {
@@ -217,12 +217,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-19T15:07:28-05:00",
+ "next_tick": "2026-11-19T15:30:35-05:00",
  "personal": {
-  "week_pct": 72.25,
+  "week_pct": 72.29,
   "usage_pct": 46.0,
-  "work_pct": 80.5,
-  "read_at": "2026-11-19T20:06:00+00:00",
+  "work_pct": 80.6,
+  "read_at": "2026-11-19T20:17:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -408,6 +408,7 @@
     "e": "high",
     "at": "2026-11-19T15:00:54-05:00",
     "n": "Jeremy",
+    "d": 1,
     "src": "plan-b"
    }
   ]
@@ -430,7 +431,7 @@
   }
  ],
  "disk": {
-  "free_gb": 32,
+  "free_gb": 33,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -439,14 +440,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-19T15:00:00-05:00",
+   "at": "2026-11-19T15:16:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 3,
-  "at": "2026-11-19T15:06:00-05:00",
+  "at": "2026-11-19T15:17:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -455,7 +456,14 @@
   }
  },
  "next_tick_why": "last_tick",
- "idle": null,
+ "idle": {
+  "since": "2026-11-19T14:08:27-05:00",
+  "minutes": 67,
+  "why": "the last tick ended without starting a session",
+  "healed": [
+   "asked for a fresh main meter reading"
+  ]
+ },
  "pool": null,
  "lanes": [
   {
@@ -599,7 +607,7 @@
    }
   ],
   "count": {
-   "next": 634,
+   "next": 639,
    "wait": 1,
    "blocked": 1,
    "you": 2
@@ -644,67 +652,67 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-19T20:04:45Z",
+  "at": "2026-11-19T20:16:13Z",
   "s": {
    "T-3974": [
     "mergeq",
     "1st to merge",
-    1795117185903
+    1795117153500
    ],
    "T-3871": [
     "mergeq",
     "2nd to merge",
-    1795114845903
+    1795114813500
    ],
    "T-4843": [
     "mergeq",
     "3rd to merge",
-    1795115385903
+    1795115413500
    ],
    "T-5095": [
     "mergeq",
     "4th to merge",
-    1795113225903
+    1795113253500
    ],
    "T-4182": [
     "mergeq",
     "5th to merge",
-    1795114185903
+    1795114213500
    ],
    "T-4195": [
     "mergeq",
     "6th to merge",
-    1795114605903
+    1795114633500
    ],
    "T-4508": [
     "mergeq",
     "7th to merge",
-    1795115625903
+    1795115653500
    ],
    "T-4446": [
     "mergeq",
     "8th to merge",
-    1795116945903
+    1795116913500
    ],
    "T-4180": [
     "mergeq",
     "9th to merge",
-    1795118325903
+    1795118353500
    ],
    "T-3976": [
     "mergeq",
     "10th to merge",
-    1795118145903
+    1795118173500
    ],
    "T-5103": [
     "merging",
     "Mac tests at the main gate",
-    1795117725903
+    1795117753500
    ],
    "T-4196": [
     "merging",
     "Mac tests at the main gate",
-    1795114365903
+    1795114333500
    ],
    "T-4849": [
     "merged",
@@ -745,7 +753,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-19T20:04:45Z",
+  "at": "2026-11-19T20:16:13Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -758,8 +766,8 @@
    },
    "m": {
     "checking": null,
-    "inline": 53,
-    "conflicted": 225,
+    "inline": 64,
+    "conflicted": 236,
     "failed": null,
     "held": null,
     "retry": null,
@@ -773,12 +781,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-19T20:04:47Z",
-    "ld": 8.52,
+    "at": "2026-11-19T20:16:16Z",
+    "ld": 6.59,
     "c": 8,
     "sb": 0,
     "dk": [
-     31.2,
+     33.1,
      228.3
     ],
     "ss": [
@@ -801,6 +809,15 @@
   }
  },
  "operators": [
+  {
+   "w": "Operator",
+   "a": "Main plan",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session",
+   "at": "2026-11-19T15:16:16-05:00"
+  },
   {
    "w": "Operator",
    "a": "Evan's Account",
@@ -857,10 +874,10 @@
   "main": 0,
   "lanes": 4,
   "total": 4,
-  "at": "3:06 PM",
+  "at": "3:17 PM",
   "why": "",
-  "at_iso": "2026-11-19T20:06:00+00:00",
+  "at_iso": "2026-11-19T20:17:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 3:06 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 3:17 PM ET</p></section>"
  }
 }

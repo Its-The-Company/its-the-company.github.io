@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-19T00:24:33.755034+00:00",
+ "at": "2026-11-19T00:27:38.317272+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -143,28 +143,10 @@
  "workers": [
   {
    "name": "odalys",
-   "task": "[tools] T-4917 gate counts own copied files",
-   "model": "opus",
-   "started": "2026-11-18T22:35:16.121Z",
-   "seconds": 6557,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "pernille",
-   "task": "[test] T-4807 bad tests slice 3",
-   "model": "opus",
-   "started": "2026-11-18T22:58:04.466Z",
-   "seconds": 5189,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "odalys",
    "task": "[tools] T-4808 merge-step fixes stream",
    "model": "opus",
    "started": "2026-11-18T23:26:46.521Z",
-   "seconds": 3467,
+   "seconds": 3651,
    "finished": null,
    "effort": "high"
   },
@@ -173,13 +155,47 @@
    "task": "[tools] T-4788 feature sessions on for all",
    "model": "opus",
    "started": "2026-11-18T23:37:01.600Z",
-   "seconds": 2852,
+   "seconds": 3036,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-4958 pool check during sessions",
+   "model": "opus",
+   "started": "2026-11-19T00:25:31.113Z",
+   "seconds": 127,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-4909 end sessions on a stall",
+   "model": "opus",
+   "started": "2026-11-19T00:25:56.669Z",
+   "seconds": 101,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Odalys x3, Pernille",
+ "who": "Odalys x4",
  "recent": [
+  {
+   "name": "odalys",
+   "task": "[tools] T-4917 gate counts own copied files",
+   "model": "opus",
+   "started": "2026-11-18T22:35:16.121Z",
+   "seconds": null,
+   "finished": "2026-11-19T00:24:56.859000+00:00"
+  },
+  {
+   "name": "pernille",
+   "task": "[test] T-4807 bad tests slice 3",
+   "model": "opus",
+   "started": "2026-11-18T22:58:04.466Z",
+   "seconds": null,
+   "finished": "2026-11-19T00:24:50.877000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[tools] T-4913 post guard proposal per",
@@ -195,22 +211,6 @@
    "started": "2026-11-18T22:35:28.268Z",
    "seconds": null,
    "finished": "2026-11-18T23:33:33.873000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-4913 test and post guard proposal",
-   "model": "opus",
-   "started": "2026-11-18T22:48:20.995Z",
-   "seconds": null,
-   "finished": "2026-11-18T22:56:25.730000+00:00"
-  },
-  {
-   "name": "ines",
-   "task": "[plan] T-4950 guard draft test route",
-   "model": "opus",
-   "started": "2026-11-18T22:46:33.650Z",
-   "seconds": null,
-   "finished": "2026-11-18T22:47:53.827000+00:00"
   }
  ],
  "queue": {
@@ -221,21 +221,21 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 23.0,
+   "pct": 25.0,
    "resets_at": "2026-11-18T20:10:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-18T19:06:48.843436-05:00",
+   "read_at": "2026-11-18T19:27:23.006039-05:00",
    "source": "live",
-   "left": 77.0,
+   "left": 75.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 53.0,
+   "pct": 54.0,
    "resets_at": "2026-11-22T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-18T19:06:48.843436-05:00",
+   "read_at": "2026-11-18T19:27:23.006039-05:00",
    "source": "live",
-   "left": 47.0,
+   "left": 46.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
@@ -245,7 +245,7 @@
    "read_at": "2026-11-18T17:33:56.705931-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-18T19:06:48.843436-05:00"
+  "read_at": "2026-11-18T19:27:23.006039-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -265,7 +265,7 @@
   "week_pct": 52.29,
   "usage_pct": 50.1,
   "work_pct": 81.6,
-  "read_at": "2026-11-19T00:24:00+00:00",
+  "read_at": "2026-11-19T00:27:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -286,7 +286,7 @@
   }
  ],
  "disk": {
-  "free_gb": 12,
+  "free_gb": 13,
   "gate": "closed",
   "ssd": {
    "mounted": true,
@@ -295,14 +295,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions wait until 20 GB is free.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-18T19:20:00-05:00",
+   "at": "2026-11-18T19:27:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 3,
-  "at": "2026-11-18T19:24:00-05:00",
+  "at": "2026-11-18T19:27:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -321,18 +321,9 @@
   {
    "name": "Odalys",
    "state": "running",
-   "task": "[tools] T-4917 gate counts own copied files",
+   "task": "[tools] T-4808 merge-step fixes stream",
    "model": "opus",
-   "since": "2026-11-18T22:35:16.121Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
-   "name": "Pernille",
-   "state": "running",
-   "task": "[test] T-4807 bad tests slice 3",
-   "model": "opus",
-   "since": "2026-11-18T22:58:04.466Z",
+   "since": "2026-11-18T23:26:46.521Z",
    "next": [],
    "effort": "high"
   },
@@ -340,6 +331,14 @@
    "name": "Idris",
    "state": "next",
    "task": "Idris, P1, from T-4755 (Investor an Investor...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
+   "name": "Pernille",
+   "state": "next",
+   "task": "Pernille, P0, Investor an Investor c6963972184 (6:23 PM...",
    "model": null,
    "since": null,
    "next": []
@@ -374,26 +373,6 @@
    {
     "w": "Odalys",
     "k": "tools",
-    "t": "Stop the gate refusing files it copied in itself",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-18T22:35:16.121Z",
-    "o": "c",
-    "task": "T-4917"
-   },
-   {
-    "w": "Pernille",
-    "k": "test",
-    "t": "Fix every bad test that failed a merge",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-18T22:58:04.466Z",
-    "o": "c",
-    "task": "T-4807"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
     "t": "Fix the red board-check row in the land test",
     "m": "opus",
     "e": "high",
@@ -410,6 +389,26 @@
     "at": "2026-11-18T23:37:01.600Z",
     "o": "c",
     "task": "T-4788"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Run the pool check and between-session jobs during sessions",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-19T00:25:31.113Z",
+    "o": "c",
+    "task": "T-4958"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "End work sessions on a stall, not on the clock",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-19T00:25:56.669Z",
+    "o": "c",
+    "task": "T-4909"
    }
   ],
   "src": "plan",
@@ -577,23 +576,8 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-19T00:24:18Z",
+  "at": "2026-11-19T00:27:32Z",
   "s": {
-   "T-4808": [
-    "merging",
-    "Mac tests at the main gate",
-    1795046418311
-   ],
-   "T-4903": [
-    "merging",
-    "Mac tests at the main gate \u00b7 11 groups of tests done",
-    1795045758311
-   ],
-   "T-4807": [
-    "merging",
-    "Mac tests at the main gate",
-    1795045278311
-   ],
    "T-3217": [
     "testing",
     "MacBook \u00b7 test",
@@ -602,59 +586,55 @@
    "T-4805": [
     "testing",
     "its own tests, in its copy",
-    1795046778311
+    1795046792501
    ],
    "T-4788": [
     "testing",
     "its own tests, in its copy",
-    1795045338311
+    1795045352501
    ],
    "T-4898": [
     "testq",
     "1st for a Simulator",
-    1795041258311
+    1795041212501
    ],
    "T-4575": [
     "testq",
     "4th for a Simulator",
-    1795041258311
+    1795041212501
    ],
-   "T-4917": [
+   "T-4808": [
     "merged",
-    "on main 5:55 PM ET",
-    1795042549000,
+    "on main 7:26 PM ET",
+    1795048012000,
     "Odalys"
    ]
   },
   "nm": {
-   "T-4808": "Fix the red board-check row in the land test",
-   "T-4903": "Drop stale copies from the merge count for good",
-   "T-4807": "Fix every bad test that failed a merge",
    "T-3217": "Fix the three red tests before build 3",
    "T-4805": "Record a cause for every failed merge",
    "T-4788": "Turn feature sessions on for every app feature",
    "T-4898": "Fix the Home Screen token test reading the gallery",
    "T-4575": "Stop an edit from rewriting a pasted Shortcut link",
-   "T-4917": "Stop the gate refusing files it copied in itself"
+   "T-4808": "Fix the red board-check row in the land test"
   },
   "wk": {
-   "T-4808": "Odalys",
-   "T-4903": "Odalys",
-   "T-4807": "Pernille",
    "T-3217": "Idris",
    "T-4805": "Odalys",
    "T-4788": "Odalys",
    "T-4898": "Idris",
    "T-4575": "Idris",
-   "T-4917": "Odalys",
+   "T-4808": "Odalys",
+   "T-4903": "Odalys",
    "T-4750": "Idris",
    "T-4771": "Idris",
    "T-4783": "Idris",
-   "T-4784": "Idris"
+   "T-4784": "Idris",
+   "T-4917": "Odalys"
   }
  },
  "ln": {
-  "at": "2026-11-19T00:24:18Z",
+  "at": "2026-11-19T00:27:32Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -668,11 +648,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 847,
+    "conflicted": 850,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1121
+    "parked": 1125
    },
    "cur": [],
    "ld": [
@@ -682,12 +662,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-19T00:23:29Z",
-    "ld": 4.92,
+    "at": "2026-11-19T00:27:05Z",
+    "ld": 3.81,
     "c": 8,
     "sb": 0,
     "dk": [
-     12.2,
+     12.6,
      228.3
     ],
     "ss": [
@@ -716,7 +696,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 12 tasks",
+   "t": "Work session \u2013 11 tasks",
    "at": "2026-11-18T19:21:00-05:00"
   }
  ],
@@ -741,10 +721,10 @@
   "main": 4,
   "lanes": 0,
   "total": 4,
-  "at": "7:24 PM",
+  "at": "7:27 PM",
   "why": "",
-  "at_iso": "2026-11-19T00:24:00+00:00",
+  "at_iso": "2026-11-19T00:27:00+00:00",
   "started": "5:34 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 4, started 5:34 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 7:24 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 4, started 5:34 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 7:27 PM ET</p></section>"
  }
 }

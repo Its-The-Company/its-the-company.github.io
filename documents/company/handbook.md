@@ -26,7 +26,7 @@ Every role, reporting line, and change goes in the registry (`personnel/registry
 
 ## 2. The work cycle
 
-One work cycle is one session, started by the run loop about every 15 minutes when there is work.
+One work cycle is one session, started by the run loop about every 5 minutes when there is work, and at once when the inbox watcher or the jobs loop wakes it (an Investor message, a merge that reopens the merge limit, a usage window reset).
 
 1. Read `ops/state.md` and `ops/board.md`. Answer any Investor message first.
 2. Take the top unblocked tasks from the board. Each one goes to a single owner as a task packet (Operations Guide, section 11), with the model named and the kind tag on the call.

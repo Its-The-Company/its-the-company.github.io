@@ -137,6 +137,20 @@ whole word replaced with the name's own case. Ranking is deterministic and agree
 Mediums go to Idris as follow-ups: M1 (Python's fallback still matches case-sensitively), M2 (per-keystroke cost: cheap to
 make bounded), M3 (the line that makes the warm path work has no test). None blocks TestFlight; M3 should land before the
 next change to the popover.
+
+## Addendum 2026-11-19 (T-4922): what changed since c107cc80, and whether the verdict holds
+
+Read `git diff c107cc80d1 HEAD` over every file above. Three changed:
+- python/pywidget_tooling/editor.py, 6bb220c5c1 (T-4873, Idris): M1's fix. `_fallback_names` now matches
+  `n.lower().startswith(word.lower())`, and a row that does not extend the typed text as written gets insert "". The Swift
+  side recomputes insert in `refine` (CompletionList.swift:78) anyway, so rows still replace the whole word. Re-ran my M1
+  probe on the host: "x = P" now holds print, "os.P" holds path. M1 is closed. The list is still sorted case-sensitively
+  before the MAX_ITEMS cut, which is L1 as written, not a new finding.
+- App/Editor/EditorMarks.swift (T-4771, T-4783): gutter-mark drawing and line moves only; `typedWord`, `listOpen` and the
+  completion VoiceOver strings are unchanged.
+- docs/how-it-works/editor.md (T-4662, T-4892): adds the caret half of the page; the completion sections are unchanged.
+
+Verdict holds: PASS with findings. M2 and M3 stay open as T-4874 and T-4875. No new finding.
 {% endraw %}
 
 </div>

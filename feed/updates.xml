@@ -4,8 +4,64 @@
 <link href="https://its-the-company.github.io/feed/updates.xml" rel="self"/>
 <link href="https://its-the-company.github.io/"/>
 <id>https://its-the-company.github.io/feed/updates.xml</id>
-<updated>2026-11-18T19:53:33-05:00</updated>
+<updated>2026-11-19T00:04:01-05:00</updated>
 <author><name>The Company</name></author>
+<entry>
+<title>Review: T-4924: reviewed T-4180 at 72284dc4 (T-4442, Idris): PASS with findings. Closes T-4439 L1-</title>
+<link href="https://its-the-company.github.io/"/>
+<id>tag:its-the-company.github.io,2026-11-19:event/2026-11-19t00-04-01-05-00-review-t-4924-reviewed-t-4180-at-72284dc4-t-4</id>
+<updated>2026-11-19T00:04:01-05:00</updated>
+<summary type="text">T-4924: reviewed T-4180 at 72284dc4 (T-4442, Idris): PASS with findings. Closes T-4439 L1-L3; one Low (per-run stale_after refusal untested) -&gt; T-5020. Swift targeted run stopped by time limit while compiling.</summary>
+</entry>
+<entry>
+<title>Review: T-4926: reviewed T-4183 at cc9297f4 (T-4533, Pernille: premade settings save fails closed </title>
+<link href="https://its-the-company.github.io/"/>
+<id>tag:its-the-company.github.io,2026-11-18:event/2026-11-18t23-57-51-05-00-review-t-4926-reviewed-t-4183-at-cc9297f4-t-4</id>
+<updated>2026-11-18T23:57:51-05:00</updated>
+<summary type="text">T-4926: reviewed T-4183 at cc9297f4 (T-4533, Pernille: premade settings save fails closed on disk errors and flushes before the rename, both halves): PASS with findings; L1 the real sync&#x27;s failure path is untested (a mutant that swallows the fsync error survives), L2 s2.3.1 does not state the sync (</summary>
+</entry>
+<entry>
+<title>Review: Reviewed T-4761 (state.json in L5&#x27;s layout) at 093bcb77: PASS with findings; M1 a 1.0 comm</title>
+<link href="https://its-the-company.github.io/"/>
+<id>tag:its-the-company.github.io,2026-11-18:event/2026-11-18t23-54-32-05-00-review-reviewed-t-4761-state-json-in-l5-s-layo</id>
+<updated>2026-11-18T23:54:32-05:00</updated>
+<summary type="text">Reviewed T-4761 (state.json in L5&#x27;s layout) at 093bcb77: PASS with findings; M1 a 1.0 commit leaves a hole in a carried ops_log, L1 carried-scopes cap untested (mutant survives), L2 folder fsync still open; T-5014, T-5015 added</summary>
+</entry>
+<entry>
+<title>Review: Reviewed T-4750 (the Swift replay of the C2 fixture&#x27;s net.get cases, part of T-4181) at 6e</title>
+<link href="https://its-the-company.github.io/"/>
+<id>tag:its-the-company.github.io,2026-11-18:event/2026-11-18t23-50-35-05-00-review-reviewed-t-4750-the-swift-replay-of-the</id>
+<updated>2026-11-18T23:50:35-05:00</updated>
+<summary type="text">Reviewed T-4750 (the Swift replay of the C2 fixture&#x27;s net.get cases, part of T-4181) at 6ef41bc2: PASS with findings, L1-L3 to T-5007; runner mutants M1-M3 killed for the right reasons; my NetCall probe never ran (lock wait)</summary>
+</entry>
+<entry>
+<title>Review: Reviewed T-4631 (5f3ff4fcf2, Idris): PASS with findings; premade placement and the finder&#x27;</title>
+<link href="https://its-the-company.github.io/"/>
+<id>tag:its-the-company.github.io,2026-11-18:event/2026-11-18t23-43-27-05-00-review-reviewed-t-4631-5f3ff4fcf2-idris-pas</id>
+<updated>2026-11-18T23:43:27-05:00</updated>
+<summary type="text">Reviewed T-4631 (5f3ff4fcf2, Idris): PASS with findings; premade placement and the finder&#x27;s refusal note hold, 7 mutants killed; two Low edges to T-5004</summary>
+</entry>
+<entry>
+<title>Review: T-4925: reviewed T-4765 (72bc8e77, Maren): PASS with findings; T-4602&#x27;s M1, M2, L1, L2 clo</title>
+<link href="https://its-the-company.github.io/"/>
+<id>tag:its-the-company.github.io,2026-11-18:event/2026-11-18t23-40-52-05-00-review-t-4925-reviewed-t-4765-72bc8e77-maren</id>
+<updated>2026-11-18T23:40:52-05:00</updated>
+<summary type="text">T-4925: reviewed T-4765 (72bc8e77, Maren): PASS with findings; T-4602&#x27;s M1, M2, L1, L2 closed, qa.json reproduces; L1 &#x27;Web Page&#x27; title case -&gt; T-4999</summary>
+</entry>
+<entry>
+<title>Review: T-4935: review of T-4796 (Ines) at 94783c0b: PASS with findings. Escalating to #324 was ri</title>
+<link href="https://its-the-company.github.io/"/>
+<id>tag:its-the-company.github.io,2026-11-18:event/2026-11-18t23-37-43-05-00-review-t-4935-review-of-t-4796-ines-at-94783</id>
+<updated>2026-11-18T23:37:43-05:00</updated>
+<summary type="text">T-4935: review of T-4796 (Ines) at 94783c0b: PASS with findings. Escalating to #324 was right and every cited fact agrees with log/; #324 was answered A at 00:36 but the plan s1, premade-inputs s0 and 06-decisions item 9 still call it open (M1, with L1-L3) -&gt; T-4998 (Ines, P1)</summary>
+</entry>
+<entry>
+<title>Review: T-4938 review of T-4180 at 7044464c (T-4898, Idris): FIX FIRST. Placing the widget before </title>
+<link href="https://its-the-company.github.io/"/>
+<id>tag:its-the-company.github.io,2026-11-18:event/2026-11-18t23-34-26-05-00-review-t-4938-review-of-t-4180-at-7044464c-t-4</id>
+<updated>2026-11-18T23:34:26-05:00</updated>
+<summary type="text">T-4938 review of T-4180 at 7044464c (T-4898, Idris): FIX FIRST. Placing the widget before the run did not fix the token test: both runner full runs it queued (J-20261118-1733-xc-test-3, -4) failed testETokenOnTheHomeScreen on the Choose a widget card, so the cause the 11:54 event named is not the ca</summary>
+</entry>
 <entry>
 <title>Milestone: T-4805 slice 1: every held lane land now records its cause, the failing check and its log;</title>
 <link href="https://its-the-company.github.io/"/>
@@ -299,61 +355,5 @@
 <id>tag:its-the-company.github.io,2026-11-16:event/2026-11-16t16-35-39-05-00-review-t-4518-review-of-t-4280-lane-choice-by</id>
 <updated>2026-11-16T16:35:39-05:00</updated>
 <summary type="text">T-4518: review of T-4280 (lane choice by size) FAIL: size moves badge widgets for good; GitHub premade never fetches in the widget lane. Lines T-4630..T-4633.</summary>
-</entry>
-<entry>
-<title>Review: T-4596: reviewed T-2691 (b74b006b91, lane gate product check after the link on both target</title>
-<link href="https://its-the-company.github.io/"/>
-<id>tag:its-the-company.github.io,2026-11-16:event/2026-11-16t16-21-21-05-00-review-t-4596-reviewed-t-2691-b74b006b91-lan</id>
-<updated>2026-11-16T16:21:21-05:00</updated>
-<summary type="text">T-4596: reviewed T-2691 (b74b006b91, lane gate product check after the link on both targets): PASS with findings; L1 the --archive results are not in the logs cited for them (reproduced: exit 0 and exit 1); L2 PW_INTERNAL_TESTFLIGHT unpinned, filed as T-4626 (Idris)</summary>
-</entry>
-<entry>
-<title>Review: T-4068: reviewed T-3763 (a widget tap opens the file the widget runs when two files declar</title>
-<link href="https://its-the-company.github.io/"/>
-<id>tag:its-the-company.github.io,2026-11-16:event/2026-11-16t15-59-43-05-00-review-t-4068-reviewed-t-3763-a-widget-tap-op</id>
-<updated>2026-11-16T15:59:43-05:00</updated>
-<summary type="text">T-4068: reviewed T-3763 (a widget tap opens the file the widget runs when two files declare its id): PASS with findings; L1-L3 noted on T-3765 (Idris)</summary>
-</entry>
-<entry>
-<title>Review: T-4060: reviewed T-2296 slice (gallery family pager and iPad two columns): PASS with findi</title>
-<link href="https://its-the-company.github.io/"/>
-<id>tag:its-the-company.github.io,2026-11-16:event/2026-11-16t15-51-03-05-00-review-t-4060-reviewed-t-2296-slice-gallery-f</id>
-<updated>2026-11-16T15:51:03-05:00</updated>
-<summary type="text">T-4060: reviewed T-2296 slice (gallery family pager and iPad two columns): PASS with findings; board says unmerged but it is on main since 11-10; tile no longer one VoiceOver element (9.7) noted on T-2296</summary>
-</entry>
-<entry>
-<title>Review: T-4058: reviewed T-0703 (zone-file probe for the widget extension, bfeeb6404b): PASS with </title>
-<link href="https://its-the-company.github.io/"/>
-<id>tag:its-the-company.github.io,2026-11-16:event/2026-11-16t15-48-33-05-00-review-t-4058-reviewed-t-0703-zone-file-probe</id>
-<updated>2026-11-16T15:48:33-05:00</updated>
-<summary type="text">T-4058: reviewed T-0703 (zone-file probe for the widget extension, bfeeb6404b): PASS with findings; M1 no caller, M2 lane not ensured in the device template, L1-L3; notes on T-0703, which stays open for the iPhone run</summary>
-</entry>
-<entry>
-<title>Review: T-4076: reviewed T-1643 (LaneDemotions.remove lifts a demotion only under the list&#x27;s lock </title>
-<link href="https://its-the-company.github.io/"/>
-<id>tag:its-the-company.github.io,2026-11-16:event/2026-11-16t15-45-49-05-00-review-t-4076-reviewed-t-1643-lanedemotions-r</id>
-<updated>2026-11-16T15:45:49-05:00</updated>
-<summary type="text">T-4076: reviewed T-1643 (LaneDemotions.remove lifts a demotion only under the list&#x27;s lock after an app run): PASS with findings; M1 untested in-lock dating filed as T-4623 (Idris), L1 call-site rule noted on T-3791</summary>
-</entry>
-<entry>
-<title>Review: T-4046: reviewed T-1972 (run-log writer applies RefreshOutcomeRule): PASS with findings; L</title>
-<link href="https://its-the-company.github.io/"/>
-<id>tag:its-the-company.github.io,2026-11-16:event/2026-11-16t15-12-22-05-00-review-t-4046-reviewed-t-1972-run-log-writer</id>
-<updated>2026-11-16T15:12:22-05:00</updated>
-<summary type="text">T-4046: reviewed T-1972 (run-log writer applies RefreshOutcomeRule): PASS with findings; L1-L2 noted on T-1882, T-1972 found already on main</summary>
-</entry>
-<entry>
-<title>Review: T-4047: reviewed T-2409 (earthquakes example fixes, e6dc5a9e16; Pernille authored it): PAS</title>
-<link href="https://its-the-company.github.io/"/>
-<id>tag:its-the-company.github.io,2026-11-16:event/2026-11-16t14-56-06-05-00-review-t-4047-reviewed-t-2409-earthquakes-exa</id>
-<updated>2026-11-16T14:56:06-05:00</updated>
-<summary type="text">T-4047: reviewed T-2409 (earthquakes example fixes, e6dc5a9e16; Pernille authored it): PASS with findings; L1 filed as T-4622 (Pernille), L2-L3 noted</summary>
-</entry>
-<entry>
-<title>Decision: T-4561: acted on #313 answer A. The two Simulator refusal records (T-2587, T-3189) cleared</title>
-<link href="https://its-the-company.github.io/"/>
-<id>tag:its-the-company.github.io,2026-11-16:event/2026-11-16t12-24-29-05-00-decision-t-4561-acted-on-313-answer-a-the-two</id>
-<updated>2026-11-16T12:24:29-05:00</updated>
-<summary type="text">T-4561: acted on #313 answer A. The two Simulator refusal records (T-2587, T-3189) cleared citing the 11-16 09:21 ruling, via a new refusals.py clear; xc_sim.py unused now writes a disk_keeper.jsonl row per deletion. Nothing deleted: 30 minutes of dry runs, the three closed-task Simulators (6.87 GB)</summary>
 </entry>
 </feed>

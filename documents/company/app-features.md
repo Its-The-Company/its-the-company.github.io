@@ -1027,6 +1027,30 @@ how they look, not which feature builds them).
 - **The merge estimate counts review lines.** "One merge for every ten steps" now gives 31 at the fewest; with
   the 25 review lines left out it is 29. Under 3.2 point 5, still a proposal, a kept review folds into the
   feature's one review.
+
+## 10. T-4823: features become their own record, process work included (11:15 PM ET 11-18)
+
+Asked: an Investor #41 c6968175224 (10:31 PM ET 11-17), ruling #41 c6969647537 (12:06 AM ET 11-18), #325 c6998574912
+with the Operator's reply c6998606674 item 2. Every task is in one feature; features are records F-N in one list.
+
+- The record: `ops/plans/features.json`, written by `tools/feature_record.py build --write` from this plan and the
+  board of 11:15 PM ET 11-18. The 14 app features are F-1..F-14 (their T-IDs kept as `alias`); this file and
+  `app-features.json` stay their plan. Each feature has id, alias, title, kind (app or process), priority, status,
+  scope (its members' Targets), members and origin (why its members are together).
+- Grouping by code, no model: two open lines share a feature when one comes from the other, when they name the same
+  plan page, when they come from the same Investor comment (the request, not a comment cited for context), or when
+  their Targets are the same set. A line whose Targets hold a gate or scheduler file (merge limit 1) is always alone.
+- What it gave: 217 features. Process: 9 features of 2 to 6 lines (29 lines) and 142 one-task features (24 of them
+  alone because they touch the gate or scheduler). App, outside the 14: 6 new groups (42 lines) and 46 one-task.
+  Most process lines share no source, plan, request or Targets with another open line, so by proof they stand alone.
+- The add's rule (`feature_record.py place`, called from `feature_place.py at_add` for every new line, any kind):
+  join an open task with the same Targets and Done when (a tool's line: same tool and same test or record), unless
+  that task is waiting to merge, past ~45 min, has another owner, or sits in another feature than the one the line
+  names; then a new task linked to it in its feature. Otherwise the feature the line names, else the feature of the
+  line it comes from, else the app feature the placing rules give; none or two: a new one-task feature.
+- Today the add prints the answer and writes no line; `feature_record.py sync --write` puts every open line not
+  yet in the record into it by the same rule. Acting on a join at the add, running sync after each add, the
+  card's Feature field, and process features in `feature_session.py` are the follow-up line from T-4823.
 {% endraw %}
 
 </div>

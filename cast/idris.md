@@ -33,7 +33,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 ## Open (mine)
 
-- T-3560/T-3280 11-17 9a71fd25dd: landed (2025/0); T-3560 ticked. 11-18 merge session: <span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">parked</span>/b/...004550 has nothing main lacks (code + 7 <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">rulings</span> all on main). Open: T-3280 UI runs (testF/testM green, testF red mutant, Release). Lesson: check git log main for an earlier landing before replaying a parked ref.
+- T-3560/T-3280 11-17 9a71fd25dd landed; T-3560 ticked. Open: T-3280 UI runs (testF/testM green, testF red mutant, Release). Lesson: check git log main for an earlier landing before replaying a <span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">parked</span> ref.
 
 - T-4663 11-18: c107cc80d1 on main since 11-17; ticked on gate check J-20261118-0333-land-m (2065/0). Open: XC_TASK job J-20261118-0411 waits a push; review T-4872. Lesson: an xc.sh job waits the supervisor push; `main_gate.py check --task` reads a runner verdict now.
 
@@ -51,13 +51,13 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 - T-4750 11-18: replay on main since 6ef41bc26a; this land adds mutants-t4750.json + s6a line. Open: runner job J-20261118-1630, land_mutants at the land commit, tick.
 
+- T-4842 11-19 39f46a7c1c: controls.md plan, 2.8 slot wk (1.6-4.8), 1.0 after ADR-011 step 9 recommended; open: Investors' version answer, Action-button phone. Lesson: Apple's pages don't say which process runs a control's intent; C0 spike checks.
+
 ## Lessons
 - Older lessons and dated logs: archive.md.
-- land --from: a carried verdict (main moved only in unnamed files) is not a run on the composed tree; files an earlier bring_up wrote go stale when main moves again: put them back from the copy's HEAD.
 
-- T-4784 11-18 412bd77516 landed + ticked: style pin = type(of: view.body) vs the same switch around its own face; no source scan.
-- T-4772 11-18 9496e859fa landed (testQ). Open: 26.0 run, 27.x runner job, Ines's doc-comment ruling.
-- T-4773 11-18: rerun due = a date (max(last+floor, min(ask, last+<span title="A measured fact that holds a grade below a letter, however good the rest is.">cap</span>))), not ask-sampled_at. Red first as a land_mutants job (old rule as the mutant, 4 tests red), 4/4 killed. Lesson: Core `swift test` is broken by LauncherEditorTests; probe Shared files with swiftc + a stub. land_xc drop takes lane ids only.
+- T-4962 11-18: testE gets its own id per run (PW_WIDGET_ID), set in Edit Widget (b7d07e38b8); full suite then failed on the picker row (setWidget now waits 20 s). Open: full-suite green. Lesson: UI tests run on the runner only at main commits (land check is unit-only); verify with runner_queue --full after the land.
+- T-4990 11-18: storage_guard resets a shut-down kept device's PRBPosterExtensionDataStore at 1 GB+ and an open task keeps its Simulator only if run in 24 h. Lesson: a `tail -F xcodebuild-*.log` lives on for weeks; match job programs, not words. T-4991: 27.1 runtime decision.
 {% endraw %}
 
 

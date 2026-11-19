@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-19T00:27:38.317272+00:00",
+ "at": "2026-11-19T00:30:42.727323+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -146,7 +146,7 @@
    "task": "[tools] T-4808 merge-step fixes stream",
    "model": "opus",
    "started": "2026-11-18T23:26:46.521Z",
-   "seconds": 3651,
+   "seconds": 3836,
    "finished": null,
    "effort": "high"
   },
@@ -155,7 +155,7 @@
    "task": "[tools] T-4788 feature sessions on for all",
    "model": "opus",
    "started": "2026-11-18T23:37:01.600Z",
-   "seconds": 3036,
+   "seconds": 3221,
    "finished": null,
    "effort": "high"
   },
@@ -164,7 +164,7 @@
    "task": "[tools] T-4958 pool check during sessions",
    "model": "opus",
    "started": "2026-11-19T00:25:31.113Z",
-   "seconds": 127,
+   "seconds": 311,
    "finished": null,
    "effort": "high"
   },
@@ -173,7 +173,7 @@
    "task": "[tools] T-4909 end sessions on a stall",
    "model": "opus",
    "started": "2026-11-19T00:25:56.669Z",
-   "seconds": 101,
+   "seconds": 286,
    "finished": null,
    "effort": "high"
   }
@@ -216,7 +216,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 522,
+  "runnable_count": 521,
   "blocked_count": 34
  },
  "meter": {
@@ -265,7 +265,7 @@
   "week_pct": 52.29,
   "usage_pct": 50.1,
   "work_pct": 81.6,
-  "read_at": "2026-11-19T00:27:00+00:00",
+  "read_at": "2026-11-19T00:30:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -302,7 +302,7 @@
  "lock_in": {
   "on": true,
   "pool": 3,
-  "at": "2026-11-18T19:27:00-05:00",
+  "at": "2026-11-18T19:30:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -470,21 +470,26 @@
     "o": "c"
    },
    {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Fix the red board-check row in the land test",
-    "s": "next",
-    "o": "c"
-   },
-   {
     "w": "Pernille",
     "k": "tools",
     "t": "Rewrite or drop outdated tests that read...",
     "s": "next",
     "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "measure",
+    "t": "Measure real scripts inside the widget on phones",
+    "s": "next",
+    "o": "i"
    }
   ],
   "done": [
+   {
+    "w": "Odalys",
+    "t": "A land test row was red on every run because it read the whole log for a line another tool also...",
+    "at": "2026-11-18T19:29:00-05:00"
+   },
    {
     "w": "Odalys",
     "t": "Work a session saved when it ran out of time no longer counts as waiting to merge, and a task...",
@@ -494,22 +499,21 @@
     "w": "Idris",
     "t": "The app's own network fetch is now checked against the same six shared test cases the Python...",
     "at": "2026-11-18T18:33:00-05:00"
-   },
-   {
-    "w": "Idris",
-    "t": "Coloured line numbers for warnings and errors now redraw without rescanning the whole script on...",
-    "at": "2026-11-18T18:25:00-05:00"
    }
   ],
   "count": {
-   "next": 522,
+   "next": 521,
    "wait": 31,
    "blocked": 3,
    "you": 10
   },
   "fin": {
-   "n": 6,
+   "n": 7,
    "rows": [
+    [
+     "T-4808",
+     "Fix the red board-check row..."
+    ],
     [
      "T-4903",
      "Drop stale copies from the..."
@@ -529,10 +533,6 @@
     [
      "T-4784",
      "Pin the refresh glyph's..."
-    ],
-    [
-     "T-4917",
-     "Stop the gate refusing files..."
     ]
    ]
   }
@@ -576,7 +576,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-19T00:27:32Z",
+  "at": "2026-11-19T00:30:42Z",
   "s": {
    "T-3217": [
     "testing",
@@ -586,22 +586,22 @@
    "T-4805": [
     "testing",
     "its own tests, in its copy",
-    1795046792501
+    1795046742727
    ],
    "T-4788": [
     "testing",
     "its own tests, in its copy",
-    1795045352501
+    1795045302727
    ],
    "T-4898": [
     "testq",
     "1st for a Simulator",
-    1795041212501
+    1795041222727
    ],
    "T-4575": [
     "testq",
     "4th for a Simulator",
-    1795041212501
+    1795041222727
    ],
    "T-4808": [
     "merged",
@@ -634,7 +634,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-19T00:27:32Z",
+  "at": "2026-11-19T00:30:42Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -648,11 +648,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 850,
+    "conflicted": 853,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1125
+    "parked": 1128
    },
    "cur": [],
    "ld": [
@@ -662,8 +662,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-19T00:27:05Z",
-    "ld": 3.81,
+    "at": "2026-11-19T00:30:43Z",
+    "ld": 2.8,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -671,7 +671,7 @@
      228.3
     ],
     "ss": [
-     164.4,
+     164.3,
      953.7
     ],
     "sn": []
@@ -696,24 +696,37 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 11 tasks",
-   "at": "2026-11-18T19:21:00-05:00"
+   "t": "Inbox \u2013 Jeremy's 7:30 PM Message on GitHub",
+   "at": "2026-11-18T19:30:39-05:00"
   }
  ],
  "reply": {
   "sent": "2026-11-19T00:19:55Z",
   "seconds": 65.0
  },
- "inbox": [],
+ "inbox": [
+  {
+   "id": "c6995825095",
+   "state": "received",
+   "position": 1,
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "I did this on the MM. Confirm this..."
+  }
+ ],
  "trimmed": [
   "lane_next",
   "queue_text",
   "recent",
   "task_done",
   "fin_short",
+  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
+  "fin_six",
   "lane_task",
   "task_next"
  ],
@@ -721,10 +734,10 @@
   "main": 4,
   "lanes": 0,
   "total": 4,
-  "at": "7:27 PM",
+  "at": "7:30 PM",
   "why": "",
-  "at_iso": "2026-11-19T00:27:00+00:00",
+  "at_iso": "2026-11-19T00:30:00+00:00",
   "started": "5:34 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 4, started 5:34 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 7:27 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 4, started 5:34 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 7:30 PM ET</p></section>"
  }
 }

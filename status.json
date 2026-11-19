@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-19T10:06:35.705914+00:00",
+ "at": "2026-11-19T10:09:33.534076+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -156,7 +156,7 @@
    "task": "[tools] T-4726 fix red personal land test",
    "model": "opus",
    "started": "2026-11-19T08:07:31.727Z",
-   "seconds": 7143,
+   "seconds": 7321,
    "finished": null,
    "effort": "high"
   },
@@ -165,7 +165,7 @@
    "task": "[tools] T-4838 gate waits on runner progress",
    "model": "opus",
    "started": "2026-11-19T08:26:43.295Z",
-   "seconds": 5992,
+   "seconds": 6170,
    "finished": null,
    "effort": "high"
   },
@@ -174,7 +174,7 @@
    "task": "[tools] T-4810 land waits fix then T-4809",
    "model": "opus",
    "started": "2026-11-19T08:25:56.830Z",
-   "seconds": 6038,
+   "seconds": 6216,
    "finished": null,
    "effort": "high"
   },
@@ -183,7 +183,7 @@
    "task": "[build] T-4888 wrapped-line tap caret fix",
    "model": "opus",
    "started": "2026-11-19T08:53:21.795Z",
-   "seconds": 4393,
+   "seconds": 4571,
    "finished": null,
    "effort": "high"
   },
@@ -192,7 +192,7 @@
    "task": "[tools] T-4992 land then T-4993 disk sweep",
    "model": "opus",
    "started": "2026-11-19T08:59:42.682Z",
-   "seconds": 4013,
+   "seconds": 4190,
    "finished": null,
    "effort": "high"
   },
@@ -201,7 +201,7 @@
    "task": "[tools] T-4986 T-3806 T-4907 lands",
    "model": "opus",
    "started": "2026-11-19T08:59:52.032Z",
-   "seconds": 4003,
+   "seconds": 4181,
    "finished": null,
    "effort": "high"
   },
@@ -210,7 +210,7 @@
    "task": "[tools] T-5065 fix supervisor test red and land",
    "model": "opus",
    "started": "2026-11-19T09:40:28.974Z",
-   "seconds": 1566,
+   "seconds": 1744,
    "finished": null,
    "effort": "high"
   }
@@ -302,7 +302,7 @@
   "week_pct": 57.06,
   "usage_pct": 47.1,
   "work_pct": 81.4,
-  "read_at": "2026-11-19T10:06:00+00:00",
+  "read_at": "2026-11-19T10:10:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -314,6 +314,7 @@
     "e": "high",
     "at": "2026-11-19T04:51:16-05:00",
     "n": "Evan",
+    "d": 1,
     "src": "plan-a"
    },
    {
@@ -542,7 +543,7 @@
  "lock_in": {
   "on": true,
   "pool": 3,
-  "at": "2026-11-19T05:06:00-05:00",
+  "at": "2026-11-19T05:10:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -848,62 +849,67 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-19T10:05:44Z",
+  "at": "2026-11-19T10:09:33Z",
   "s": {
    "T-4850": [
     "mergeq",
     "",
-    1795079504159
+    1795079493534
    ],
    "T-4899": [
     "mergeq",
     "",
-    1795075784159
+    1795075833534
    ],
    "T-4919": [
     "mergeq",
     "",
-    1795075784159
+    1795075833534
    ],
    "T-4961": [
     "mergeq",
     "",
-    1795077104159
+    1795077093534
    ],
    "T-4795": [
     "mergeq",
     "",
-    1795081964159
+    1795082013534
    ],
    "T-3402": [
     "mergeq",
     "",
-    1795082204159
+    1795082193534
    ],
    "T-4871": [
     "mergeq",
     "",
-    1795080824159
+    1795080813534
    ],
    "T-0902": [
     "mergeq",
     "",
-    1795082444159
+    1795082433534
    ],
    "T-4809": [
     "merging",
     "",
-    1795082624159
+    1795082613534
+   ],
+   "T-4888": [
+    "merging",
+    "",
+    1795082853534
    ],
    "T-4986": [
     "merging",
     "",
-    1795080104159
+    1795080153534
    ],
    "T-4993": [
     "merging",
     "",
-    1795082504159
+    1795082553534
    ],
    "T-2378": [
     "testing",
@@ -920,20 +926,15 @@
     "",
     null
    ],
-   "T-4888": [
-    "testing",
-    "",
-    1795082204159
-   ],
    "T-5065": [
     "testing",
     "",
-    1795081304159
+    1795081293534
    ],
    "T-4838": [
     "testing",
     "",
-    1795082744159
+    1795082733534
    ],
    "T-4849": [
     "merged",
@@ -964,12 +965,12 @@
    "T-4871": "Check the two-way editing week figure against the code",
    "T-0902": "Check precedent for an in-app gallery of user code",
    "T-4809": "Settle tasks wrongly shown as waiting to merge",
+   "T-4888": "Undo the vertical slide on a wrapped-line tap",
    "T-4986": "Let Chat and approvals read every main thread",
    "T-4993": "Run the disk sweep inside sessions and on low disk",
    "T-2378": "Plan version 1.2 and later",
    "T-4681": "Premades default to Paper in light and Studio in dark",
    "T-4807": "Fix every bad test that failed a merge",
-   "T-4888": "Undo the vertical slide on a wrapped-line tap",
    "T-5065": "Clear answered waits from the supervisor tick",
    "T-4838": "Gate waits while the runner shows progress",
    "T-4849": "Shorten the process merge wait for good",
@@ -986,12 +987,12 @@
    "T-4871": "Idris",
    "T-0902": "Ines",
    "T-4809": "Odalys",
+   "T-4888": "Idris",
    "T-4986": "Odalys",
    "T-4993": "Pernille",
    "T-2378": "Ines",
    "T-4681": "Idris",
    "T-4807": "Pernille",
-   "T-4888": "Idris",
    "T-5065": "Odalys",
    "T-4838": "Odalys",
    "T-4849": "Odalys",
@@ -1007,7 +1008,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-19T10:05:44Z",
+  "at": "2026-11-19T10:09:33Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -1020,8 +1021,8 @@
    },
    "m": {
     "checking": null,
-    "inline": 43,
-    "conflicted": 1005,
+    "inline": 47,
+    "conflicted": 1009,
     "failed": null,
     "held": null,
     "retry": null,
@@ -1035,12 +1036,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-19T10:06:18Z",
-    "ld": 18.05,
+    "at": "2026-11-19T10:09:47Z",
+    "ld": 30.56,
     "c": 8,
     "sb": 1,
     "dk": [
-     40.8,
+     36.5,
      228.3
     ],
     "ss": [
@@ -1089,7 +1090,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 2 tasks",
+   "t": "Work session \u2013 1 task",
    "at": "2026-11-19T04:51:19-05:00"
   },
   {
@@ -1133,10 +1134,10 @@
   "main": 7,
   "lanes": 4,
   "total": 11,
-  "at": "5:06 AM",
+  "at": "5:10 AM",
   "why": "",
-  "at_iso": "2026-11-19T10:06:00+00:00",
+  "at_iso": "2026-11-19T10:10:00+00:00",
   "started": "2:04 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>11</b> agents running now</p><p class=\"an-sub\">Main session 7, started 2:04 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 5:06 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>11</b> agents running now</p><p class=\"an-sub\">Main session 7, started 2:04 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 5:10 AM ET</p></section>"
  }
 }

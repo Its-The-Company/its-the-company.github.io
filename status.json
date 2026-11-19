@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-19T09:29:19.810975+00:00",
+ "at": "2026-11-19T09:32:21.074708+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -117,16 +117,6 @@
       "at": 1795041182
      }
     ]
-   },
-   {
-    "t": "T-4750",
-    "w": "Idris",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1795037445
-     }
-    ]
    }
   ],
   "done": [
@@ -220,7 +210,7 @@
    "task": "[tools] T-4726 fix red personal land test",
    "model": "opus",
    "started": "2026-11-19T08:07:31.727Z",
-   "seconds": 4908,
+   "seconds": 5089,
    "finished": null,
    "effort": "high"
   },
@@ -229,7 +219,7 @@
    "task": "[tools] T-4838 gate waits on runner progress",
    "model": "opus",
    "started": "2026-11-19T08:26:43.295Z",
-   "seconds": 3756,
+   "seconds": 3937,
    "finished": null,
    "effort": "high"
   },
@@ -238,7 +228,7 @@
    "task": "[tools] T-4810 land waits fix then T-4809",
    "model": "opus",
    "started": "2026-11-19T08:25:56.830Z",
-   "seconds": 3802,
+   "seconds": 3984,
    "finished": null,
    "effort": "high"
   },
@@ -247,7 +237,7 @@
    "task": "[build] T-4888 wrapped-line tap caret fix",
    "model": "opus",
    "started": "2026-11-19T08:53:21.795Z",
-   "seconds": 2158,
+   "seconds": 2339,
    "finished": null,
    "effort": "high"
   },
@@ -256,7 +246,7 @@
    "task": "[tools] T-4992 land then T-4993 disk sweep",
    "model": "opus",
    "started": "2026-11-19T08:59:42.682Z",
-   "seconds": 1777,
+   "seconds": 1958,
    "finished": null,
    "effort": "high"
   },
@@ -265,7 +255,7 @@
    "task": "[tools] T-4986 T-3806 T-4907 lands",
    "model": "opus",
    "started": "2026-11-19T08:59:52.032Z",
-   "seconds": 1767,
+   "seconds": 1949,
    "finished": null,
    "effort": "high"
   }
@@ -357,7 +347,7 @@
   "week_pct": 57.06,
   "usage_pct": 47.1,
   "work_pct": 81.4,
-  "read_at": "2026-11-19T09:29:00+00:00",
+  "read_at": "2026-11-19T09:32:00+00:00",
   "running": [
    {
     "lane": "b2",
@@ -447,7 +437,7 @@
  "lock_in": {
   "on": true,
   "pool": 3,
-  "at": "2026-11-19T04:29:00-05:00",
+  "at": "2026-11-19T04:32:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -743,97 +733,97 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-19T09:29:06Z",
+  "at": "2026-11-19T09:32:09Z",
   "s": {
    "T-4849": [
     "mergeq",
     "",
-    1795077366562
+    1795077369050
    ],
    "T-4850": [
     "mergeq",
     "",
-    1795079526562
+    1795079529050
    ],
    "T-5000": [
     "mergeq",
     "",
-    1795066446562
+    1795066449050
    ],
    "T-4916": [
     "mergeq",
     "",
-    1795068426562
+    1795068429050
    ],
    "T-5002": [
     "mergeq",
     "",
-    1795068486562
+    1795068489050
    ],
    "T-4899": [
     "mergeq",
     "",
-    1795068726562
+    1795068729050
    ],
    "T-4931": [
     "mergeq",
     "",
-    1795068786562
+    1795068789050
    ],
    "T-4932": [
     "mergeq",
     "",
-    1795069266562
+    1795069209050
    ],
    "T-4933": [
     "mergeq",
     "",
-    1795069266562
+    1795069209050
    ],
    "T-4934": [
     "mergeq",
     "",
-    1795069266562
+    1795069209050
    ],
    "T-4919": [
-    "mergetest",
+    "mergeq",
     "",
-    1795079346562
+    1795075809050
    ],
    "T-4961": [
     "mergeq",
     "",
-    1795077066562
+    1795077069050
    ],
    "T-5075": [
     "merging",
     "",
-    1795077966562
+    1795077969050
    ],
    "T-5065": [
     "merging",
     "",
-    1795078686562
+    1795078689050
    ],
    "T-4986": [
     "merging",
     "",
-    1795080126562
+    1795080129050
    ],
    "T-4888": [
     "testing",
     "",
-    1795080186562
+    1795080189050
    ],
    "T-4993": [
     "testing",
     "",
-    1795080546562
+    1795080549050
    ],
    "T-4726": [
     "testing",
     "",
-    1795077966562
+    1795077969050
    ],
    "T-4992": [
     "merged",
@@ -900,11 +890,11 @@
   }
  },
  "ln": {
-  "at": "2026-11-19T09:29:06Z",
+  "at": "2026-11-19T09:32:09Z",
   "mq": {
    "n": {
-    "checking": 1,
-    "inline": 11,
+    "checking": 0,
+    "inline": 12,
     "conflicted": 1,
     "failed": 0,
     "held": 0,
@@ -912,24 +902,15 @@
     "parked": 0
    },
    "m": {
-    "checking": 20,
-    "inline": 188,
-    "conflicted": 968,
+    "checking": null,
+    "inline": 192,
+    "conflicted": 971,
     "failed": null,
     "held": null,
     "retry": null,
     "parked": null
    },
-   "cur": [
-    [
-     [
-      "T-4919"
-     ],
-     "iPhone app tests",
-     "MacBook",
-     20
-    ]
-   ],
+   "cur": [],
    "ld": [
     26,
     "2026-11-19T09:09:55Z"
@@ -937,12 +918,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-19T09:28:37Z",
-    "ld": 4.91,
+    "at": "2026-11-19T09:31:27Z",
+    "ld": 4.77,
     "c": 8,
     "sb": 0,
     "dk": [
-     33.0,
+     33.1,
      228.3
     ],
     "ss": [
@@ -952,12 +933,12 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-19T09:14:34Z",
-    "ld": 44.54,
+    "at": "2026-11-19T09:29:00Z",
+    "ld": 17.78,
     "c": 12,
     "sb": 0,
     "dk": [
-     356.5,
+     355.7,
      926.4
     ],
     "sn": []
@@ -973,15 +954,6 @@
    "e": "high",
    "t": "Work session \u2013 13 tasks",
    "at": "2026-11-19T02:04:21-05:00"
-  },
-  {
-   "w": "Operator",
-   "a": "Evan's Account",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session",
-   "at": "2026-11-19T02:13:47-05:00"
   },
   {
    "w": "Operator",
@@ -1015,10 +987,10 @@
   "main": 6,
   "lanes": 1,
   "total": 7,
-  "at": "4:29 AM",
+  "at": "4:32 AM",
   "why": "",
-  "at_iso": "2026-11-19T09:29:00+00:00",
+  "at_iso": "2026-11-19T09:32:00+00:00",
   "started": "2:04 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 6, started 2:04 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 4:29 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 6, started 2:04 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 4:32 AM ET</p></section>"
  }
 }

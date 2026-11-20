@@ -1,11 +1,51 @@
 {
  "schema": 1,
- "at": "2026-11-20T01:57:24.755255+00:00",
+ "at": "2026-11-20T02:07:17.674851+00:00",
  "session": {
   "active": false,
   "kind": "",
   "started": null,
   "flow": [
+   {
+    "t": "T-0063",
+    "name": "Add a location-off state to the distance premade",
+    "w": "Idris",
+    "acct": "Personal b",
+    "steps": [
+     {
+      "s": "claimed",
+      "at": 1795132126
+     },
+     {
+      "s": "worker",
+      "at": 1795132126
+     },
+     {
+      "s": "macbook",
+      "at": 1795140342
+     }
+    ]
+   },
+   {
+    "t": "T-0043",
+    "name": "Strip unneeded Python modules from the release bundle",
+    "w": "Idris",
+    "acct": "Personal b",
+    "steps": [
+     {
+      "s": "claimed",
+      "at": 1795132332
+     },
+     {
+      "s": "worker",
+      "at": 1795132332
+     },
+     {
+      "s": "macbook",
+      "at": 1795140342
+     }
+    ]
+   },
    {
     "t": "T-4926",
     "steps": [
@@ -39,38 +79,6 @@
      {
       "s": "worker",
       "at": 1795134612
-     }
-    ]
-   },
-   {
-    "t": "T-0043",
-    "name": "Strip unneeded Python modules from the release bundle",
-    "w": "Idris",
-    "acct": "Personal b",
-    "steps": [
-     {
-      "s": "claimed",
-      "at": 1795132332
-     },
-     {
-      "s": "worker",
-      "at": 1795132332
-     }
-    ]
-   },
-   {
-    "t": "T-0063",
-    "name": "Add a location-off state to the distance premade",
-    "w": "Idris",
-    "acct": "Personal b",
-    "steps": [
-     {
-      "s": "claimed",
-      "at": 1795132126
-     },
-     {
-      "s": "worker",
-      "at": 1795132126
      }
     ]
    }
@@ -210,12 +218,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-19T21:05:33-05:00",
+ "next_tick": "2026-11-19T21:14:33-05:00",
  "personal": {
   "week_pct": 80.14,
   "usage_pct": 48.6,
   "work_pct": 80.9,
-  "read_at": "2026-11-20T02:00:00+00:00",
+  "read_at": "2026-11-20T02:10:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -245,14 +253,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-19T20:57:00-05:00",
+   "at": "2026-11-19T21:08:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 3,
-  "at": "2026-11-19T21:00:00-05:00",
+  "at": "2026-11-19T21:10:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -450,42 +458,42 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-20T01:57:24Z",
+  "at": "2026-11-20T02:07:17Z",
   "s": {
+   "T-0043": [
+    "mergetest",
+    "Xcode checks on the MacBook",
+    1795140437674
+   ],
    "T-3859": [
-    "mergeq",
-    "1st to merge",
-    1795138824755
+    "mergetest",
+    "Xcode checks on the MacBook, 1st to merge",
+    1795140377674
    ],
    "T-4693": [
-    "mergeq",
-    "1st to merge",
-    1795138824755
+    "mergetest",
+    "Xcode checks on the MacBook, 1st to merge",
+    1795140377674
    ],
    "T-4573": [
-    "mergeq",
-    "1st to merge",
-    1795138824755
+    "mergetest",
+    "Xcode checks on the MacBook, 1st to merge",
+    1795140377674
    ],
    "T-0063": [
-    "mergeq",
-    "1st to merge",
-    1795138824755
-   ],
-   "T-0043": [
-    "mergeq",
-    "1st to merge",
-    1795138824755
+    "mergetest",
+    "Xcode checks on the MacBook, 1st to merge",
+    1795140377674
    ],
    "T-4446": [
     "mergeq",
     "3rd to merge",
-    1795139844755
+    1795139837674
    ],
    "T-4181": [
     "mergetest",
     "Xcode checks on the MacBook, 4th to merge",
-    1795138944755
+    1795138937674
    ],
    "T-4930": [
     "testing",
@@ -495,26 +503,26 @@
    "T-4926": [
     "testq",
     "2nd for a Simulator",
-    1795137504755
+    1795137497674
    ]
   },
   "nm": {
+   "T-0043": "Strip unneeded Python modules from the release bundle",
    "T-3859": "Move everything not needed off the Mac mini disk",
    "T-4693": "Research a permanent name for the app",
    "T-4573": "Answer when the chosen account cannot take a message",
    "T-0063": "Add a location-off state to the distance premade",
-   "T-0043": "Strip unneeded Python modules from the release bundle",
    "T-4446": "Commit the company's records once per supervisor round",
    "T-4181": "Widgets refresh on their own and by a tap",
    "T-4930": "Check finished work before it ships",
    "T-4926": "Check finished work before it ships"
   },
   "wk": {
+   "T-0043": "Idris",
    "T-3859": "Odalys",
    "T-4693": "Wrenna",
    "T-4573": "Odalys",
    "T-0063": "Idris",
-   "T-0043": "Idris",
    "T-4446": "Odalys",
    "T-4181": "Idris",
    "T-4930": "Pernille",
@@ -522,11 +530,11 @@
   }
  },
  "ln": {
-  "at": "2026-11-20T01:57:24Z",
+  "at": "2026-11-20T02:07:17Z",
   "mq": {
    "n": {
-    "checking": 1,
-    "inline": 6,
+    "checking": 6,
+    "inline": 1,
     "conflicted": 4,
     "failed": 0,
     "held": 0,
@@ -534,9 +542,9 @@
     "parked": 0
    },
    "m": {
-    "checking": 15,
-    "inline": 17,
-    "conflicted": 515,
+    "checking": 1,
+    "inline": 10,
+    "conflicted": 525,
     "failed": null,
     "held": null,
     "retry": null,
@@ -545,11 +553,35 @@
    "cur": [
     [
      [
-      "T-4181"
+      "T-0043"
+     ],
+     "iPhone app tests",
+     "MacBook",
+     0
+    ],
+    [
+     [
+      "T-3859"
      ],
      "iPhone app tests, sent and waiting its turn",
      "MacBook",
-     15
+     1
+    ],
+    [
+     [
+      "T-4693"
+     ],
+     "iPhone app tests, sent and waiting its turn",
+     "MacBook",
+     1
+    ],
+    [
+     [
+      "T-4573"
+     ],
+     "iPhone app tests, sent and waiting its turn",
+     "MacBook",
+     1
     ]
    ],
    "ld": [
@@ -559,28 +591,17 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-20T01:57:27Z",
-    "ld": 6.73,
+    "at": "2026-11-20T02:07:19Z",
+    "ld": 11.87,
     "c": 8,
     "sb": 0,
     "dk": [
-     44.7,
+     44.6,
      228.3
     ],
     "ss": [
      171.2,
      953.7
-    ],
-    "sn": []
-   },
-   "macbook": {
-    "at": "2026-11-20T01:20:52Z",
-    "ld": 0.16,
-    "c": 12,
-    "sb": 0,
-    "dk": [
-     354.8,
-     926.4
     ],
     "sn": []
    }
@@ -612,11 +633,11 @@
      "open": false
     }
    },
-   "at": "2026-11-20T01:57:24+00:00"
+   "at": "2026-11-20T02:07:17+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-20T01:57:24+00:00"
+   "at": "2026-11-20T02:07:17+00:00"
   }
  },
  "operators": [],
@@ -639,10 +660,10 @@
   "main": 0,
   "lanes": 0,
   "total": 0,
-  "at": "9:00 PM",
-  "why": "Claude Code is logged out. Work waits until an Investor logs in. Last check 8:59 PM ET.",
-  "at_iso": "2026-11-20T02:00:00+00:00",
+  "at": "9:10 PM",
+  "why": "Claude Code is logged out. Work waits until an Investor logs in. Last check 9:10 PM ET.",
+  "at_iso": "2026-11-20T02:10:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:00 PM ET</p><p class=\"an-why\">Claude Code is logged out. Work waits until an Investor logs in. Last check 8:59 PM ET.</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:10 PM ET</p><p class=\"an-why\">Claude Code is logged out. Work waits until an Investor logs in. Last check 9:10 PM ET.</p></section>"
  }
 }

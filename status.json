@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-20T04:59:42.888877+00:00",
+ "at": "2026-11-20T05:02:49.798229+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -161,26 +161,26 @@
    "task": "[tools] T-5179 merge-queue fixes first",
    "model": "opus",
    "started": "2026-11-20T04:47:58.749Z",
-   "seconds": 704,
+   "seconds": 891,
    "finished": null,
    "effort": "high"
-  },
+  }
+ ],
+ "who": "Odalys",
+ "recent": [
   {
    "name": "ines",
    "task": "[ops] T-5146 star process requests by impact",
    "model": "opus",
    "started": "2026-11-20T04:48:08.848Z",
-   "seconds": 694,
-   "finished": null,
-   "effort": "high"
+   "seconds": null,
+   "finished": "2026-11-20T05:02:41.382000+00:00"
   }
  ],
- "who": "Odalys, Ines",
- "recent": [],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 641,
+  "runnable_count": 640,
   "blocked_count": 2
  },
  "meter": {
@@ -229,7 +229,7 @@
   "week_pct": 72.95,
   "usage_pct": 49.0,
   "work_pct": 81.3,
-  "read_at": "2026-11-20T04:59:00+00:00",
+  "read_at": "2026-11-20T05:03:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -387,21 +387,21 @@
   }
  },
  "lock_in": {
-  "on": true,
+  "on": false,
   "pool": 3,
-  "at": "2026-11-19T23:59:00-05:00",
-  "mode": "midnight",
+  "at": "2026-11-20T00:03:00-05:00",
+  "mode": null,
   "modes": {
-   "main": "midnight",
-   "a": "midnight",
-   "b": "midnight"
+   "main": "double-spread",
+   "a": "double-spread",
+   "b": "double-spread"
   }
  },
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 14 (cut a step: load 45.9 a core is over 10)",
-  "n": 14,
+  "why": "Double Spread: past the week's halfway point with room left, so twice the even pace until the limit or the reset; the machine allows 13 (cut a step: load 25.6 a core is over 10)",
+  "n": 3,
   "at": "2026-11-19T23:41:21.283033-05:00"
  },
  "lanes": [
@@ -411,15 +411,6 @@
    "task": "[tools] T-5179 merge-queue fixes first",
    "model": "opus",
    "since": "2026-11-20T04:47:58.749Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
-   "name": "Ines",
-   "state": "running",
-   "task": "[ops] T-5146 star process requests by impact",
-   "model": "opus",
-   "since": "2026-11-20T04:48:08.848Z",
    "next": [],
    "effort": "high"
   },
@@ -435,6 +426,14 @@
    "name": "Pernille",
    "state": "next",
    "task": "Pernille, P0, Investor an Investor c6965124089 (7:26 PM...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
+   "name": "Ines",
+   "state": "next",
+   "task": "Ines, P0, from Investor an Investor c7016129138 (12:02 PM...",
    "model": null,
    "since": null,
    "next": []
@@ -467,16 +466,6 @@
     "at": "2026-11-20T04:47:58.749Z",
     "o": "c",
     "task": "T-5179"
-   },
-   {
-    "w": "Ines",
-    "k": "ops",
-    "t": "Star the open high-priority process requests by impact",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-20T04:48:08.848Z",
-    "o": "c",
-    "task": "T-5146"
    }
   ],
   "src": "plan",
@@ -554,6 +543,11 @@
   ],
   "done": [
    {
+    "w": "Ines",
+    "t": "The 70 open high-priority process and site requests from the Investors since 11-15 are now first...",
+    "at": "2026-11-20T00:02:00-05:00"
+   },
+   {
     "w": "Odalys",
     "t": "The four failed merges that the earlier count left unexplained now each have a cause: three were...",
     "at": "2026-11-19T20:17:00-05:00"
@@ -562,15 +556,10 @@
     "w": "Pernille",
     "t": "The disk cleaner now runs every 15 minutes during work sessions, also clears finished work on...",
     "at": "2026-11-19T20:17:00-05:00"
-   },
-   {
-    "w": "Idris",
-    "t": "The app's automatic phone-simulator test of the three ways into a premade's settings page...",
-    "at": "2026-11-19T20:17:00-05:00"
    }
   ],
   "count": {
-   "next": 641,
+   "next": 640,
    "wait": 2,
    "blocked": 0,
    "you": 2
@@ -619,37 +608,37 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-20T04:59:42Z",
+  "at": "2026-11-20T05:02:32Z",
   "s": {
    "T-4806": [
     "merging",
     "Host checks on the Mac mini \u00b7 1 of 2 groups of tests done",
-    1795147842888
+    1795147832119
    ],
    "T-4850": [
     "mergeq",
     "1st to merge",
-    1795148382888
+    1795148372119
    ],
    "T-4995": [
     "mergeq",
     "2nd to merge",
-    1795144902888
+    1795144952119
    ],
    "T-4181": [
     "mergeq",
     "3rd to merge",
-    1795146882888
+    1795146872119
    ],
    "T-0349": [
     "mergeq",
     "5th to merge",
-    1795147962888
+    1795147952119
    ],
    "T-5179": [
     "testing",
     "its own tests, in its copy",
-    1795150782888
+    1795150832119
    ],
    "T-4877": [
     "merged",
@@ -686,7 +675,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-20T04:59:42Z",
+  "at": "2026-11-20T05:02:32Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -698,13 +687,13 @@
     "parked": 2
    },
    "m": {
-    "checking": 49,
-    "inline": 56,
-    "conflicted": 1449,
+    "checking": 52,
+    "inline": 59,
+    "conflicted": 1452,
     "failed": null,
     "held": null,
-    "retry": 54,
-    "parked": 58
+    "retry": 57,
+    "parked": 61
    },
    "cur": [
     [
@@ -713,22 +702,22 @@
      ],
      "Mac tests",
      "Mac mini",
-     49
+     52
     ]
    ],
    "ld": [
-    109,
-    "2026-11-20T04:09:23Z"
+    0,
+    null
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-20T04:59:46Z",
-    "ld": 34.44,
+    "at": "2026-11-20T05:02:07Z",
+    "ld": 26.74,
     "c": 8,
     "sb": 0,
     "dk": [
-     21.2,
+     18.8,
      228.3
     ],
     "ss": [
@@ -776,11 +765,11 @@
      "open": true
     }
    },
-   "at": "2026-11-20T04:59:42+00:00"
+   "at": "2026-11-20T05:02:49+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-20T04:59:42+00:00"
+   "at": "2026-11-20T05:02:32+00:00"
   }
  },
  "operators": [
@@ -817,8 +806,8 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session",
-   "at": "2026-11-19T23:08:09-05:00"
+   "t": "Inbox \u2013 Evan's 12:01 AM Message on GitHub",
+   "at": "2026-11-20T00:01:34-05:00"
   },
   {
    "w": "Operator",
@@ -843,11 +832,23 @@
   "sent": "2026-11-20T04:38:30Z",
   "seconds": 379.0
  },
- "inbox": [],
+ "inbox": [
+  {
+   "id": "c7030913597",
+   "state": "received",
+   "position": 1,
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "What causes errors such as these?..."
+  }
+ ],
  "trimmed": [
   "lane_next",
   "queue_text",
   "task_done",
+  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -855,13 +856,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 2,
+  "main": 1,
   "lanes": 5,
-  "total": 7,
-  "at": "11:59 PM",
+  "total": 6,
+  "at": "12:03 AM",
   "why": "",
-  "at_iso": "2026-11-20T04:59:00+00:00",
+  "at_iso": "2026-11-20T05:03:00+00:00",
   "started": "11:42 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 2, started 11:42 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 11:59 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 1, started 11:42 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 12:03 AM ET</p></section>"
  }
 }

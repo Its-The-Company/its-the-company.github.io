@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-20T10:50:25.352959+00:00",
+ "at": "2026-11-20T10:55:59.170398+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -164,7 +164,7 @@
     "why": "tests failed"
    }
   ],
-  "landed": 21,
+  "landed": 20,
   "failed": 12
  },
  "workers": [
@@ -173,12 +173,30 @@
    "task": "[build] T-5293 drop altitude history when location off",
    "model": "opus",
    "started": "2026-11-20T10:38:12.538Z",
-   "seconds": 732,
+   "seconds": 1066,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "pernille",
+   "task": "[report] morning",
+   "model": "opus",
+   "started": "2026-11-20T10:52:08.891Z",
+   "seconds": 230,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "pernille",
+   "task": "[review] T-4945 widget run lock concurrency check",
+   "model": "opus",
+   "started": "2026-11-20T10:54:05.184Z",
+   "seconds": 113,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Idris",
+ "who": "Idris, Pernille x2",
  "recent": [
   {
    "name": "pernille",
@@ -265,8 +283,45 @@
   "week_pct": 73.63,
   "usage_pct": 48.9,
   "work_pct": 81.3,
-  "read_at": "2026-11-20T10:53:00+00:00",
-  "running": []
+  "read_at": "2026-11-20T10:57:00+00:00",
+  "running": [
+   {
+    "lane": "b",
+    "task": "T-4842",
+    "w": "Idris",
+    "k": "plan",
+    "t": "Plan Controls that run a person's Python",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-20T05:55:25-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
+   },
+   {
+    "lane": "b",
+    "task": "T-4796",
+    "w": "Ines",
+    "k": "plan",
+    "t": "Say which premades carry the Pro tag",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-20T05:55:25-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
+   },
+   {
+    "lane": "b",
+    "task": "T-3107",
+    "w": "Pernille",
+    "k": "measure",
+    "t": "Read the phones' real numbers from the gate build",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-20T05:55:25-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
+   }
+  ]
  },
  "api_credits": [
   {
@@ -295,14 +350,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-20T05:51:00-05:00",
+   "at": "2026-11-20T05:54:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-20T05:53:00-05:00",
+  "at": "2026-11-20T05:57:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -313,7 +368,7 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Double Spread: past the week's halfway point with room left, so twice the even pace until the limit or the reset; the machine allows 4 (at its floor: load 18.4 a core is over 10)",
+  "why": "Double Spread: past the week's halfway point with room left, so twice the even pace until the limit or the reset; the machine allows 4 (at its floor: load 17.1 a core is over 10)",
   "n": 3,
   "at": "2026-11-20T02:09:48.586335-05:00"
  },
@@ -328,17 +383,18 @@
    "effort": "high"
   },
   {
+   "name": "Pernille",
+   "state": "running",
+   "task": "[report] morning",
+   "model": "opus",
+   "since": "2026-11-20T10:52:08.891Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
    "name": "Odalys",
    "state": "next",
    "task": "Odalys, P0, merge-first, Investor an Investor c7031233507...",
-   "model": null,
-   "since": null,
-   "next": []
-  },
-  {
-   "name": "Pernille",
-   "state": "next",
-   "task": "Pernille, P0, Investor an Investor c6965124089 (7:26 PM...",
    "model": null,
    "since": null,
    "next": []
@@ -379,6 +435,25 @@
     "at": "2026-11-20T10:38:12.538Z",
     "o": "c",
     "task": "T-5293"
+   },
+   {
+    "w": "Pernille",
+    "k": "report",
+    "t": "Morning",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-20T10:52:08.891Z",
+    "o": "c"
+   },
+   {
+    "w": "Pernille",
+    "k": "review",
+    "t": "Check finished work before it ships",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-20T10:54:05.184Z",
+    "o": "c",
+    "task": "T-4945"
    }
   ],
   "src": "plan",
@@ -546,37 +621,47 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-20T10:50:25Z",
+  "at": "2026-11-20T10:55:59Z",
   "s": {
    "T-4184": [
     "merging",
     "Host checks on the Mac mini",
-    1795170565352
+    1795170539170
    ],
    "T-5247": [
     "mergeq",
     "1st to merge",
-    1795170565352
+    1795170599170
    ],
    "T-4994": [
     "mergeq",
     "2nd to merge",
-    1795169305352
+    1795169279170
    ],
    "T-5180": [
     "mergeq",
     "2nd to merge",
-    1795169305352
+    1795169279170
    ],
    "T-4182": [
     "mergeq",
     "3rd to merge",
-    1795156885352
+    1795156859170
    ],
    "T-4181": [
     "mergeq",
     "4th to merge",
-    1795157785352
+    1795157759170
+   ],
+   "T-2377": [
+    "mergeq",
+    "5th to merge",
+    1795172099170
+   ],
+   "T-5293": [
+    "testing",
+    "its own tests, in its copy",
+    1795172039170
    ]
   },
   "nm": {
@@ -585,7 +670,9 @@
    "T-4994": "Act on the feature record at every add",
    "T-5180": "Cut the merge step's wait on the first entry's checks",
    "T-4182": "A failing widget says so and can recover",
-   "T-4181": "Widgets refresh on their own and by a tap"
+   "T-4181": "Widgets refresh on their own and by a tap",
+   "T-2377": "Write the version 1.1 board lines after 1.0 is released",
+   "T-5293": "Drop altitude history when location is turned off"
   },
   "wk": {
    "T-4184": "Idris",
@@ -594,6 +681,8 @@
    "T-5180": "Odalys",
    "T-4182": "Idris",
    "T-4181": "Idris",
+   "T-2377": "Ines",
+   "T-5293": "Idris",
    "T-4947": "Odalys",
    "T-4942": "Pernille",
    "T-4768": "Pernille",
@@ -609,11 +698,11 @@
   }
  },
  "ln": {
-  "at": "2026-11-20T10:50:25Z",
+  "at": "2026-11-20T10:55:59Z",
   "mq": {
    "n": {
     "checking": 1,
-    "inline": 5,
+    "inline": 6,
     "conflicted": 2,
     "failed": 0,
     "held": 0,
@@ -621,13 +710,13 @@
     "parked": 2
    },
    "m": {
-    "checking": 21,
-    "inline": 42,
-    "conflicted": 1799,
+    "checking": 27,
+    "inline": 48,
+    "conflicted": 1805,
     "failed": null,
     "held": null,
-    "retry": 87,
-    "parked": 315
+    "retry": 93,
+    "parked": 320
    },
    "cur": [
     [
@@ -636,7 +725,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     21
+     27
     ]
    ],
    "ld": [
@@ -646,12 +735,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-20T10:51:00Z",
-    "ld": 17.11,
+    "at": "2026-11-20T10:56:22Z",
+    "ld": 15.07,
     "c": 8,
     "sb": 0,
     "dk": [
-     24.0,
+     23.5,
      228.3
     ],
     "ss": [
@@ -699,11 +788,11 @@
      "open": false
     }
    },
-   "at": "2026-11-20T10:50:25+00:00"
+   "at": "2026-11-20T10:55:59+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-20T10:50:25+00:00"
+   "at": "2026-11-20T10:55:59+00:00"
   }
  },
  "operators": [
@@ -713,8 +802,17 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 25 tasks",
+   "t": "Work session \u2013 26 tasks",
    "at": "2026-11-20T02:11:05-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Jeremy's Account",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session \u2013 3 tasks",
+   "at": "2026-11-20T05:55:24-05:00"
   }
  ],
  "reply": {
@@ -736,13 +834,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 1,
-  "lanes": 0,
-  "total": 1,
-  "at": "5:53 AM",
+  "main": 3,
+  "lanes": 1,
+  "total": 4,
+  "at": "5:57 AM",
   "why": "",
-  "at_iso": "2026-11-20T10:53:00+00:00",
+  "at_iso": "2026-11-20T10:57:00+00:00",
   "started": "2:11 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 2:11 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 5:53 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 3, started 2:11 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 5:57 AM ET</p></section>"
  }
 }

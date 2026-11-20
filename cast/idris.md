@@ -55,11 +55,11 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 - T-4181 session 11-19: T-4415 not built (choice is Ines+Maren's; my note: keep the glyph live, taps run in the app on 26/27). T-0972 Swift slice: SendLaneScan (own GIL thread, cache, 0.2 s wait), 12 tests, 4/4 mutants. Open: the send through the real extension (forced-lane UI test); Maren on the words. Lesson: xc_mutants leaves the last mutant's build; rebuild before test-without-building.
 
+- T-0043 11-19 04d6503c07 on personal/b2 (recut of 6e5fc761ba): 6 escape tests green on main, 0 skipped. Open: ready b2 T-0043 xc (refused in-session), full PyWidgetTests. Lesson: scratch copy needs Vendor/ links, and Runestone from the lane worktree, not ~/itsthecompany (stale, no lineNumberMarks).
+
 ## Lessons
 - Older lessons and dated logs: archive.md.
 
-- T-3280 11-19 441efae659: testF red with placedNow mutant, F+M green Debug and Release (ops/runs/t3280-ui-runs.txt); not ticked. Lesson: on the mini `xcodebuild test` can leave an older app installed; simctl install + test-without-building, cmp the executable.
-- T-4858 11-18 22016c0c82 (scratch T-4858-idris, not landed): extension AppTransaction bound 2 s + .unknown held 15 min, late answer kept; test + purchases.md. Stopped: guard refused fetch+rebase after main moved. Open: a way to bring the copy up to main, then land, tick, review line, Evan's phone note. Lesson: Shared code finds the extension via TreeHost.isExtension.
 - T-4196 11-19 0ac7b74354: interim in plan 4.3 (1 grouped run of 20; 6.63 vs 6.00). Open: T-5177 (group takes queued-not-started jobs), 20 timed runs, week figure by 11-30. Lesson: main's ops/runs/personal-tick-*.log say why groups fail.
 {% endraw %}
 

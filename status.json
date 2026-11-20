@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-20T04:45:16.681385+00:00",
+ "at": "2026-11-20T04:49:19.501100+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -155,8 +155,27 @@
   "landed": 45,
   "failed": 8
  },
- "workers": [],
- "who": "",
+ "workers": [
+  {
+   "name": "odalys",
+   "task": "[tools] T-5179 merge-queue fixes first",
+   "model": "opus",
+   "started": "2026-11-20T04:47:58.749Z",
+   "seconds": 80,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "ines",
+   "task": "[ops] T-5146 star process requests by impact",
+   "model": "opus",
+   "started": "2026-11-20T04:48:08.848Z",
+   "seconds": 70,
+   "finished": null,
+   "effort": "high"
+  }
+ ],
+ "who": "Odalys, Ines",
  "recent": [],
  "queue": {
   "runnable": [],
@@ -210,7 +229,7 @@
   "week_pct": 72.95,
   "usage_pct": 49.0,
   "work_pct": 81.3,
-  "read_at": "2026-11-20T04:45:00+00:00",
+  "read_at": "2026-11-20T04:50:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -354,7 +373,7 @@
   }
  ],
  "disk": {
-  "free_gb": 25,
+  "free_gb": 22,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -363,14 +382,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-19T23:41:00-05:00",
+   "at": "2026-11-19T23:47:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 3,
-  "at": "2026-11-19T23:45:00-05:00",
+  "at": "2026-11-19T23:50:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -381,26 +400,28 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 17 (held, just changed: load 15.8 a core is over 10)",
-  "n": 17,
+  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 16 (cut a step: load 44.5 a core is over 10)",
+  "n": 16,
   "at": "2026-11-19T23:41:21.283033-05:00"
  },
  "lanes": [
   {
    "name": "Odalys",
-   "state": "next",
-   "task": "Odalys, P0 (Operator 08:2x 11-19, from T-4909: no...",
-   "model": null,
-   "since": null,
-   "next": []
+   "state": "running",
+   "task": "[tools] T-5179 merge-queue fixes first",
+   "model": "opus",
+   "since": "2026-11-20T04:47:58.749Z",
+   "next": [],
+   "effort": "high"
   },
   {
    "name": "Ines",
-   "state": "next",
-   "task": "Ines, P0, Investor an Investor c7012590906 (9:50 AM 11-19:...",
-   "model": null,
-   "since": null,
-   "next": []
+   "state": "running",
+   "task": "[ops] T-5146 star process requests by impact",
+   "model": "opus",
+   "since": "2026-11-20T04:48:08.848Z",
+   "next": [],
+   "effort": "high"
   },
   {
    "name": "Pernille",
@@ -436,7 +457,28 @@
   }
  ],
  "tasks": {
-  "run": [],
+  "run": [
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Merge-queue fixes go first, process work unlimited",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-20T04:47:58.749Z",
+    "o": "c",
+    "task": "T-5179"
+   },
+   {
+    "w": "Ines",
+    "k": "ops",
+    "t": "Star the open high-priority process requests by impact",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-20T04:48:08.848Z",
+    "o": "c",
+    "task": "T-5146"
+   }
+  ],
   "src": "plan",
   "open": [
    {
@@ -577,32 +619,32 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-20T04:45:16Z",
+  "at": "2026-11-20T04:49:19Z",
   "s": {
    "T-4806": [
     "merging",
-    "Host checks on the Mac mini",
-    1795147816681
+    "Host checks on the Mac mini \u00b7 1 of 2 groups of tests done",
+    1795147819501
    ],
    "T-4850": [
     "mergeq",
     "1st to merge",
-    1795148356681
+    1795148359501
    ],
    "T-4995": [
     "mergeq",
     "2nd to merge",
-    1795144936681
+    1795144939501
    ],
    "T-4181": [
     "mergeq",
     "4th to merge",
-    1795146856681
+    1795146859501
    ],
    "T-0349": [
     "mergeq",
     "5th to merge",
-    1795147936681
+    1795147939501
    ],
    "T-4182": [
     "testing",
@@ -613,6 +655,12 @@
     "testing",
     "Mac Mini \u00b7 test",
     null
+   ],
+   "T-5179": [
+    "merged",
+    "on main 5:10 PM ET",
+    1795126205000,
+    ""
    ],
    "T-4877": [
     "merged",
@@ -635,6 +683,7 @@
    "T-0349": "Fix gaps in the package sandbox build step",
    "T-4182": "A failing widget says so and can recover",
    "T-4446": "Commit the company's records once per supervisor round",
+   "T-5179": "Merge-queue fixes go first, process work unlimited",
    "T-4877": "Fix the red experiments test",
    "T-4734": "Fix the red site merge queue test"
   },
@@ -646,30 +695,31 @@
    "T-0349": "Pernille",
    "T-4182": "Idris",
    "T-4446": "Odalys",
+   "T-5179": "Odalys",
    "T-4877": "Odalys",
    "T-4734": "Maren"
   }
  },
  "ln": {
-  "at": "2026-11-20T04:45:16Z",
+  "at": "2026-11-20T04:49:19Z",
   "mq": {
    "n": {
     "checking": 1,
     "inline": 4,
-    "conflicted": 4,
+    "conflicted": 2,
     "failed": 0,
     "held": 0,
     "retry": 2,
     "parked": 2
    },
    "m": {
-    "checking": 35,
-    "inline": 42,
-    "conflicted": 683,
+    "checking": 39,
+    "inline": 46,
+    "conflicted": 1438,
     "failed": null,
     "held": null,
-    "retry": 40,
-    "parked": 44
+    "retry": 44,
+    "parked": 48
    },
    "cur": [
     [
@@ -678,7 +728,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     35
+     39
     ]
    ],
    "ld": [
@@ -688,12 +738,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-20T04:45:01Z",
-    "ld": 36.38,
+    "at": "2026-11-20T04:49:33Z",
+    "ld": 42.31,
     "c": 8,
     "sb": 1,
     "dk": [
-     23.3,
+     21.0,
      228.3
     ],
     "ss": [
@@ -743,11 +793,11 @@
      "open": false
     }
    },
-   "at": "2026-11-20T04:45:16+00:00"
+   "at": "2026-11-20T04:49:19+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-20T04:45:16+00:00"
+   "at": "2026-11-20T04:49:19+00:00"
   }
  },
  "operators": [
@@ -757,7 +807,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session",
+   "t": "Work session \u2013 2 tasks",
    "at": "2026-11-19T23:42:08-05:00"
   },
   {
@@ -803,7 +853,7 @@
    "m": "opus",
    "e": "high",
    "t": "Work session \u2013 1 task",
-   "at": "2026-11-19T23:44:51-05:00"
+   "at": "2026-11-19T23:35:48-05:00"
   }
  ],
  "reply": {
@@ -822,13 +872,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 0,
+  "main": 2,
   "lanes": 5,
-  "total": 5,
-  "at": "11:45 PM",
+  "total": 7,
+  "at": "11:50 PM",
   "why": "",
-  "at_iso": "2026-11-20T04:45:00+00:00",
+  "at_iso": "2026-11-20T04:50:00+00:00",
   "started": "11:42 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 0, started 11:42 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 11:45 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 2, started 11:42 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 11:50 PM ET</p></section>"
  }
 }

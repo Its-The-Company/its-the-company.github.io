@@ -87,12 +87,16 @@ site_task_names_shown and site_t3316 (real Home faults: they wait for the Home h
 **3. Records round skips files gone from disk (T-5306).** Copy `T-5306-odalys/wt`, tip `b5aeda2a64` (WIP: red test
 rows written in `tests/records_round_test.py`, the fix in `tools/records_round.py` not yet written). Left: the fix
 (skip a path that no longer exists, say so, carry on), suite green, on main.
+> 11-20, Odalys, lane b: fixed in a02dc895ef on personal/b; records_round_test.py PASS 57 FAIL 0 there. Left: the
+> lane's land.
 
 **4. The supervisor no longer breaks a live session's lock (T-5113).** Copy `T-5113b-odalys/wt`, tip `2b05ebac64`
 (WIP: the fix in `tools/supervisor.sh` near the `-mmin +360` test and its rows in `tests/supervisor_test.sh` are
 written; the suite has not been run). A lock is stale only when its process is gone or the pid was reused, never by
 age alone. `supervisor_test.sh` is on `ops/land_quarantine.txt` as flaky (T-3118) and slow: run it on plain main
 once to know which rows are red there. Left: suite, on main.
+> 11-20, Odalys, lane b: b60781366f and 04e5479092 on personal/b; supervisor_test.sh PASS 250 FAIL 1 there, the one red the
+> load-flaky close_by row (T-5094, red on main 11-19); the four T-5113 rows pass. Left: the lane's land.
 
 **5. The disk keeper runs the deep cleaner by itself (T-5041's urgent slice; <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">ruling</span> 11-20 12:01 AM).** Copy
 `T-5041-odalys/wt`, tip `744e278969` (WIP: the step in `tools/disk_keeper.py` and rows in
@@ -104,6 +108,10 @@ time limit, at most once per interval, record the command and GB before and afte
 it does, stop and say so. Left: suites (`disk_keeper_test.py storage_guard_test.py`), on main. **Do not run the
 real cleaner from a session**: the keeper's next pass does it once the step is on main (the disk was at 24 GB at
 10:05 AM, line 30, gate 10).
+> 11-20, Odalys, lane b: 350541cefb, 7728f9c193 (the cleaner's temp step never reads the shared /tmp, where removals
+> were refused) and 053cb97833 on personal/b; disk_keeper_test.py PASS 59, storage_guard_test.py OK. The T-2587 and
+> T-3189 refusals are cleared (#313 option A), so the step repeats no live refusal. Left: the lane's land, then the
+> keeper's own pass.
 
 **6. Pre-merge Xcode runs go to the MacBook (T-5263 with T-5247 part 2), and T-4566.** Copy `T-5263-odalys/wt`,
 2 commits, tip `80ed7ff2f0` (the second is "T-4566: WIP ..."). Design: [`ops/plans/T-5247-runner-pre-merge.md`](t-5247-runner-pre-merge.html)
@@ -149,6 +157,16 @@ the Mac mini session's record; the list):
   lane_records_round_test.sh`; a second review of the fixes by a worker who did not write them; then on main with
   the switch "old". Accepted for the test and left alone: a suite red on main too parks a branch on the new road;
   the old road's after-land steps (review board line, feature-step ticks) do not happen on the new one.
+
+## Jobs 1 to 5 on main
+
+- Job 1: on main, aa851bf441 (and its six commits before it).
+- Job 2: on main, 65604e0c76..4b2657def1.
+- Job 3: a02dc895ef; job 4: b60781366f, 04e5479092; job 5: 350541cefb, 7728f9c193, 053cb97833. All on
+  personal/b and green there; they reach main when lane b's branch lands.
+- Left: the main session runs `site_session_chart_test.py` and `site_session_view_test.py` once from the main
+  folder, and the disk keeper does its own first deep-cleanup pass after the land. Nobody runs the real cleaner
+  by hand.
 
 ## How to put a finished job on main
 

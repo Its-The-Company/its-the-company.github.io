@@ -57,6 +57,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 ## 2026-11-17 T-4693 names deep dive (22 names, RDAP 102 lookups; USPTO not run: tmsearch sits behind an AWS WAF challenge)
 ## 2026-11-18 T-4839 widget label name (research/widget-label-name.md)
 - 2026-11-18 T-4839 widget label: Apple docs never describe a label under a placed widget; call it inference and ask for a Simulator test. support.apple.com is terms-barred; fetch developer pages as /tutorials/data/....json.
+## 2026-11-20 T-5301 Altitude heights vs policy: chose (b), T-5315 for Idris (backup-excluded file, delete when access goes); draft note 28d3630209; T-5301 and T-4649 noted, open until T-5315 lands.
 {% endraw %}
 
 

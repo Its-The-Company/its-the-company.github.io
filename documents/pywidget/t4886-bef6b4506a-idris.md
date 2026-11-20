@@ -144,6 +144,35 @@ from it, and the generators reproduce them byte for byte. The new `check_states.
 `state-tokens.json`: no false positives on code names, and both mutants die. Host suites are green on 3.9.6 and 3.13.
 Open: one premade line still says "pywidget" (M1, Steps), and nothing guards the lines this commit fixed (M2). Both
 go to Maren as board lines: T-4895 (M1, with L1 folded in) and T-4896 (M2, with L2 folded in).
+
+## Re-check at main e5b3da87a0 (2026-11-20, T-4889 dispatched again)
+
+The review above landed on 2026-11-18 (f5532eb710) and its findings went to the board as T-4895 and T-4896, but
+T-4889 was never ticked. I re-checked rather than wrote a second review.
+
+- **Name spelling.** Every new name in the commit reads exactly "PyWidget", the spelling in `creative/approved.md`
+  entry 8 (the voice rule). Entry 8 also says the name itself is still open (#90): "PyWidget" there stands for
+  whatever name is chosen. So the commit follows the approved rule; it does not, and cannot, settle the name. No
+  other words in the voice changed.
+- **Nothing moved.** Between bef6b4506a and main, none of the 36 files changed a name string; the changes in
+  `draw_settings.py`, `spec.md`, `premade-inputs.md`, `premade.py` and `altitude.py` are other tasks' (T-4635,
+  T-5293). `steps.py:119` still reads "Turn on Motion & Fitness for pywidget in Settings." (M1, T-4895, still open).
+- **Fixtures, again.** Every JSON leaf in the 13 changed JSON files, old against new: each change is the name's case
+  (or "the app"), except the `tour/index.json` hashes; `make_tour_fixtures.py --check` exit 0.
+- **Tests, in a scratch worktree at e5b3da87a0.** `check_states.py`: fails 0. `test_choose_card_lock_voiceover.py`
+  (the three new tests): 10 OK. `run_host.py --both a11y widgets`: a11y 35/35 on both; widgets green on 3.13.18 (462,
+  8 skipped); on 3.9.6 one failure, `test_http_budget_reserve` `test_headers_that_drip_are_cut_on_time` (median 0.060 s
+  past a 0.05 s bound), a timing test under load in a file this commit never touched. Not this commit's.
+
+### L4 (Low, new): the rule's lookahead lets "pywidget:" through
+
+`LOWER_NAME`'s lookahead `(?![\w:/]|\.\w)` refuses any following colon, not just `://`. Probed directly:
+"pywidget: couldn't save." is not flagged, while "Open pywidget." and "pywidget's list" are. The reverse holds for
+hyphens: "pywidget-run" and "#pywidget-cities" (code tags) are flagged, which matters only once T-4896 widens the
+rule beyond `state-tokens.json`. Fix with T-4896: exclude `://` rather than `:`, and keep a false-positive case for a
+hyphenated tag. Folded into T-4896 as a note, not a new line.
+
+**Verdict unchanged: PASS with findings** (M1 T-4895, M2 T-4896, L1-L4).
 {% endraw %}
 
 </div>

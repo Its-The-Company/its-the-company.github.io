@@ -35,8 +35,6 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 
 
-- T-1905 11-18 8ea5016048 landed (part 1: lister+plan+.sent.json+mirror; 2097/0); not ticked: boundary sending every Widget part + edited-sibling inversion. Lesson: local swiftc typecheck misses errors while ProPaywallView's asset errors are in; exclude it (and Runestone files) and it is reliable.
-
 - T-4771+T-4783 11-18: landed 844ef71f3f via land --from (6 files, checked). Not ticked: gate carried the 10:40 AM Xcode pass; owed a runner PyWidgetTests run at 844ef71f3f after the push (Ines's condition).
 
 - T-4631 11-18: premades placed by build scan (<span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span>-app.json) + finder notes every refusal (lane.refused). Lesson: no app code calls send_lane today; a person's script is judged only by its first widget run.
@@ -56,6 +54,8 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-0043 11-19 04d6503c07 on personal/b2 (recut of 6e5fc761ba): 6 escape tests green on main, 0 skipped. Open: ready b2 T-0043 xc (refused in-session), full PyWidgetTests. Lesson: scratch copy needs Vendor/ links, and Runestone from the lane worktree, not ~/itsthecompany (stale, no lineNumberMarks).
 
 - T-5125 11-20: 8ca8746ce1 xc.sh probes quiet spells (XC_PROBE_AFTER 300 s; spells on stderr). T-5226 = host-wide stall (both slots silent same seconds), requeued J-20261120-0121. Open: T-5124 token test, never green since T-4962's own id; read the 2:00 AM daily's why line (f6a7b386cb ext answers). T-5251 mine: 'slow healthy run' flakes on main too under load. Lesson: runner/progress.json history (git log on macbook-results) gives per-minute log bytes per job.
+
+- T-5315 11-20 (after T-5293): Altitude's heights in scripts/pywidget.premade.altitude/heights/today.json; Swift makes+marks the folder (launch, active) and deletes it in forgetCache under today.json.lock; the run never makes the folder. Open: Wrenna names it (T-5301). Lesson: Python can't set the backup flag, so Swift owns the folder.
 
 ## Lessons
 - Older lessons and dated logs: archive.md.

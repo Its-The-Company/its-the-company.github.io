@@ -66,8 +66,8 @@ path, the step, the commit that switched it off, why, and how to bring it back.
 
 ## Sessions and app areas
 
-**Three area sessions to start, one per area, plus today's short Investor-message and report sessions** (they touch
-no app files). Each area session works in its own worktree, uses subagents inside itself, and merges with
+**One area session for each area that has ready app work and usage left on its account, plus today's short
+Investor-message and report sessions** (they touch no app files). The three areas below are the starting split. Each area session works in its own worktree, uses subagents inside itself, and merges with
 `tools/merge.sh`.
 
 
@@ -86,13 +86,23 @@ Shared files (`project.yml`, `Localization`, shared test helpers, `Acknowledgeme
 whoever needs them and merged on their own. Odalys runs the trim. Wrenna's research is done inside the area that
 needs it.
 
-**The number moves on evidence, not taste.** After two days: go to two sessions if area sessions waited on Xcode for
-more than a quarter of their working time; go to four if both machines were idle for more than a quarter of the
-day while sessions had app work ready.
+**The number of sessions follows signals, not a fixed count or a timer** (Investors, Mac mini session, 11-20
+1:51 AM ET). The rule is checked whenever one of its signals changes, by whatever starts the sessions (the cut-down
+`supervisor.sh` after step 6):
+- *Start* a session for each area that has ready app work and usage left on its account. Reads: the board's
+  startable app lines whose Targets fall in the area's paths (`tools/board.py lanes`); the account's meter
+  (`ops/usage.json`, `ops/live_meter.json`).
+- *Add* a session when ready app work waits while an Xcode machine sits idle. Reads: the same ready lines; the
+  Mac mini's Xcode lock (`tools/xc_lock.py`, `ops/metrics/xc.jsonl`) and the MacBook runner's check-ins
+  (`runner.status` in `ops/metrics/machine.jsonl`, `tools/runner_busy.py`).
+- *Drop* a session when sessions spend more time waiting on Xcode or merges than working. Reads: `wait_s` against
+  run time in `ops/metrics/xc.jsonl` and `xc_route.jsonl`; the wait column of `merge.sh`'s rows; each session's
+  working time from its note in `ops/sessions/<area>.md`.
 
 **The areas follow the work, not the other way round** (an Investor #325 c7032478115, 1:40 AM ET 11-20). The table is
-the starting split. At each two-day check the areas are re-cut by where the ready app work on the board is: an
-area with no ready work hands its session to the area with the most, and an area can be split or merged.
+the starting split. The areas are re-cut whenever the ready app work on the board shifts (the same ready-line count
+as above, per area): an area with no ready work hands its session to the area with the most, and areas split or
+merge as the work needs.
 - *A feature that fits no area* goes to the area that owns most of the files it touches. That session owns it end
   to end and changes another area's files in small separate merges, with a board line naming the area it touched.
 - *Work that needs another area's work* says so on its line ("needs T-X"). The owning area does that piece first.
@@ -101,7 +111,8 @@ area with no ready work hands its session to the area with the most, and an area
 **Accounts.** The main account has about twice the usage of each personal account. It runs the trim session,
 because the trim is the one long continuous job and it runs in the main checkout. After the trim, it runs the
 Builder area, the critical path to the firm date (the Builder working on a phone). The two personal accounts run
-the other two areas.
+the other areas. Once the trim is done, any account with usage to spare (its meter) goes to the area with the most
+ready app work.
 
 ## The Home page during and after the trim
 
@@ -148,6 +159,18 @@ personal-lane tiles (pool controls). Each goes to `retired/` like any tool and c
   sections 6, 7 and 11. The guard suites pass after every step; a step that would weaken a ban or a gate stops.
 
 ## The steps
+
+**How a step is confirmed** (Investors, Mac mini session, 11-20 1:51 AM ET). No step waits a fixed number of hours
+or days. A step is confirmed when its check passes on the real traffic it changes, and its Progress line names the
+events that confirmed it. Where a step below still says "for 24 hours", "for 48 hours" or "a week", read:
+- step 1: the next hand-out ticks of each account give out no process line, and the next reading of a signal past
+  its limit opens no line (`ops/runs/dispatch.log`, the watcher's own output);
+- step 3: the next real app merges through `merge.sh`, main's app tests green after each (its rows);
+- step 5: every merge through `merge.sh` since the step keeps its commits on main (`merge-base --is-ancestor`),
+  checked at each later step;
+- step 6: the next heartbeats arrive on time, the next Investor message is answered once, and the next morning and
+  evening reports build and pass `report_check.py`;
+- step 7: the next report built from the trimmed board passes `report_check.py`.
 
 Each is one board line: steps 1 to 12 are T-5254 to T-5265, in order. "Restore" for every retire step is the
 keep-everything rule above, plus what the step names. Step 10 is the same work as T-5247's part 2: whichever
@@ -220,7 +243,9 @@ line runs it closes both.
 
 ## How app work reaching main is measured
 
-Same commands before and after, over 7 days each. "Before" is 11-13 to 11-19; "after" is the 7 days after step 6.
+Same commands before and after, over windows of equal length. "Before" is 11-13 to 11-19 (7 days); "after" starts
+when step 6 is confirmed and is compared with the same number of days of "before", day for day, as soon as there
+are whole days to compare; the full 7 days are reported when they exist.
 
 
 <div class="tbl" role="region" tabindex="0" aria-label="Table 4: How app work reaching main is measured, scrolls sideways" style="--tw:916px" markdown="1">
@@ -262,6 +287,49 @@ deleted, and the merge script adds a review check and retires no test of a guard
 ## Progress
 
 Each step, when its check passes, adds one line here: "Step N done:" with the date, the commit and the evidence.
+
+**Step 1 done:** 2026-11-20 4:25 AM ET, commits `6962df81d2` (the switch's code and tests), `f37c9f7dcf` and
+`0088a16bc8` (`ops/trim_freeze.json` on; site lines held too), `c70a36fccf` (the main-folder guard's pass for the
+trim session, on the Investors' word, #325 c7032785128). Retired nothing.
+- *Evidence.* Lines the hand-out lists as startable: 398 before the switch, 220 after, none of kind tools, process,
+  ops or site and none naming `tools/` or `tests/` (`python3 tools/dispatch.py order`). The "before" column
+  re-run from the page's commands: 152 app code commits (15, 4, 24, 23, 37, 40, 9), 83 app lines done
+  (14, 8, 16, 5, 14, 19, 7); `tools/` 522 entries (the page's 525 was counted earlier), about 200,000 lines.
+- *Events that confirmed it.* 27 hand-out ticks from 2:11 to 4:22 AM (13 of account a, 14 of b,
+  `ops/runs/dispatch.log`) gave out no process line. They gave out no app line either: every free slot was
+  held by its own branch waiting to land or by the machine's load, the old road's jam, not the freeze (9 tasks
+  started in the four hours before). No tool-opened process line was added to the board after the switch
+  (`git diff f37c9f7dcf 3f28d35d4d -- ops/board.md`).
+- *Tests.* `tests/run.sh --fast` did not pass, and did not pass before the trim: 34 of 576 suites red at
+  `0088a16bc8`. Of those, 28 are red at `7af07ff3da`, the commit before step 1's code (same suites, scratch copy);
+  2 passed on a re-run (`personal_land_test.sh`, `site_t4293_test.py`); 4 (`kind_first_test.py`,
+  `live_meter_test.py`, `site_session_chart_test.py`, `site_session_view_test.py`) are red in the main folder and
+  green in a scratch copy of the same commit `3f28d35d4d`, so they read the main folder's live files. None is red
+  because of step 1. The guard suites are green (`guard_test.sh`, `main_folder_guard_test.py` 85 of 85). The 32
+  standing reds are step 9's work; until then a step's test check is "no suite red that was green at the commit
+  before the step, same folder".
+- *Restore.* `"on": false` in `ops/trim_freeze.json`; remove `.git/main-folder-pass.json`.
+
+**Step 2 done:** 2026-11-20 6:31 AM ET, commits `f52b8ee152` (`tools/retire.sh` and its suite, 24 of 24),
+`b4ea7ffbd9` (99 tools and 38 of their suite files moved to `retired/`, 137 renames, one row each in
+`retired/MANIFEST.tsv`), `4f89e3b078` (the restore drill's rows), `bcee46e391` (one test fix).
+- *Evidence.* `tools/` went from 522 entries to 424 (about 13,200 lines moved). `git grep` at `4f89e3b078` for each
+  retired tool's name in `tools/`, `tests/`, `rules/`, `setup/`, `handbook/`, `ops/launchd`, `ops/prompts`,
+  `personnel/agents`, `.github`, `CLAUDE.md` and the settings finds only test fixture data, no caller. Restore
+  drill: `js_size.py` and `fit_words.py` restored with `retire.sh --restore`, run (the first printed its table,
+  the second's suite passed 15 of 15), and retired again.
+- *Fewer than the page's "about 180", on purpose.* 135 tools have no caller. 36 of them are still named by
+  another suite (the terms guard's and the store-refusal tests among them) and wait for the step that settles
+  those suites; `storage_guard.py`, 7 tools that read the app and 31 on the keep list stay.
+- *Events that confirmed it.* The fast run at `8286528389`: 539 suites, 38 red against 34 after step 1. Seven were
+  newly red. One was this step's: `disk_sweep_test.py` asks that every temp-folder name the sweep cleans has a
+  maker, and `fit_words.py`'s had moved; the check reads `retired/` too now (`bcee46e391`). The other six passed
+  on a re-run with it (7 of 7 green at `fcf13dd375`); the first run overlapped a load of over 800. The guard suites
+  were green in both. The next real events: the inbox answered an Investor's 6:06 AM message once (#325), and the
+  morning report (Report 56) was built at 6:21 AM, both after the retire.
+- *Pace.* A fast run takes about two hours, so from here the next step starts while the last step's run finishes;
+  a red it finds that was green before the step is fixed, or the step restored, before that step is ticked.
+- *Restore.* `tools/retire.sh --restore <path>` for any row of `tools/retire.sh --list`.
 {% endraw %}
 
 </div>

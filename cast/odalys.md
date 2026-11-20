@@ -50,6 +50,8 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-4849 11-19 81b523c183: a test fixture with dated names (park stamps) must pin now= on every call that ages them; wall clock turned two rows red by date alone.
 - T-5103 11-19: a suite red on main with no fix line: bisect the fixture's inputs (tools it copies), not just the tool under test. personal_off's 32 reds were T-5075's board.py (loose 'waiting on X' no longer holds a line), not T-4807; fixture waits must be '#N'.
 - T-5180 11-19 4108e9244d: board_tick add writes the main checkout's board and wants --by, no Base/By slots. A busy line ('being handed to a spare', 'marker is dropped') must end a wait in land_idle, or one branch counts 6 h (11-13: 8.31 -> 2.49 h). Owed T-5197 (24 h read 11-20), T-5198 (pick_now test).
+- T-4920 11-20 c8c8014fd6: xc.sh queues only from pywidget/ios with -project; the job file must land (main_gate) before the runner takes it, and a mutant commit never can (main only). Host suites on the SSD hit 600 s: copy to /tmp.
+- T-5192 11-20: xc.sh leaves its job json untracked in main's ops/jobs; copy it to the scratch copy, rm main's, main_gate land. An app line's Done-when must name a docs page.
 - T-4995 11-19: land_xc.jsonl minutes/land replays exactly (10.70 check passes); gate retest narrowed 0 of 1 retry in 22.5 h (9.92/land from fewer reds). Re-read when retries pile up.
 {% endraw %}
 

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-20T12:40:47.856961+00:00",
+ "at": "2026-11-20T12:44:01.918856+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -179,19 +179,17 @@
   "landed": 21,
   "failed": 13
  },
- "workers": [
+ "workers": [],
+ "who": "",
+ "recent": [
   {
    "name": "idris",
    "task": "[build] T-5315 keep Altitude heights out of backups",
    "model": "opus",
    "started": "2026-11-20T11:54:51.624Z",
-   "seconds": 2756,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Idris",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-20T12:41:47.669000+00:00"
+  },
   {
    "name": "idris",
    "task": "[build] T-5325 second tap on half-hidden row",
@@ -215,37 +213,29 @@
    "started": "2026-11-20T12:15:01.321Z",
    "seconds": null,
    "finished": "2026-11-20T12:23:03.446000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[review] T-4889 PyWidget name case fix check",
-   "model": "opus",
-   "started": "2026-11-20T11:59:19.808Z",
-   "seconds": null,
-   "finished": "2026-11-20T12:14:10.931000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 649,
+  "runnable_count": 648,
   "blocked_count": 2
  },
  "meter": {
   "five_hour": {
-   "pct": 27.0,
+   "pct": 28.0,
    "resets_at": "2026-11-20T08:20:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-20T07:28:19.736091-05:00",
+   "read_at": "2026-11-20T07:43:27.348067-05:00",
    "source": "live",
-   "left": 73.0,
+   "left": 72.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 83.0,
    "resets_at": "2026-11-22T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-20T07:28:19.736091-05:00",
+   "read_at": "2026-11-20T07:43:27.348067-05:00",
    "source": "live",
    "left": 17.0,
    "left_words": "of your weekly allowance left"
@@ -257,7 +247,7 @@
    "read_at": "2026-11-20T02:09:37.522634-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-20T07:28:19.736091-05:00"
+  "read_at": "2026-11-20T07:43:27.348067-05:00"
  },
  "ui": {
   "week_pct": 0.104,
@@ -277,7 +267,7 @@
   "week_pct": 73.63,
   "usage_pct": 48.9,
   "work_pct": 81.3,
-  "read_at": "2026-11-20T12:40:00+00:00",
+  "read_at": "2026-11-20T12:44:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -307,14 +297,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-20T07:40:00-05:00",
+   "at": "2026-11-20T07:41:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-20T07:40:00-05:00",
+  "at": "2026-11-20T07:44:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -331,18 +321,17 @@
  },
  "lanes": [
   {
-   "name": "Idris",
-   "state": "running",
-   "task": "[build] T-5315 keep Altitude heights out of backups",
-   "model": "opus",
-   "since": "2026-11-20T11:54:51.624Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
    "name": "Odalys",
    "state": "next",
    "task": "Odalys, P0, merge-first, Investor an Investor c7031233507...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
+   "name": "Idris",
+   "state": "next",
+   "task": "Idris, P0, from T-4964 (made by tools/runner_watch.py...",
    "model": null,
    "since": null,
    "next": []
@@ -381,18 +370,7 @@
   }
  ],
  "tasks": {
-  "run": [
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "Keep Altitude's heights out of backups",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-20T11:54:51.624Z",
-    "o": "c",
-    "task": "T-5315"
-   }
-  ],
+  "run": [],
   "src": "plan",
   "open": [
    {
@@ -468,6 +446,11 @@
   ],
   "done": [
    {
+    "w": "Idris",
+    "t": "The Altitude widget's saved heights now live in their own file that is kept out of device...",
+    "at": "2026-11-20T07:41:00-05:00"
+   },
+   {
     "w": "Pernille",
     "t": "Pernille's second check of the cursor fixes for taps on long lines passed: they work on ordinary...",
     "at": "2026-11-20T07:27:00-05:00"
@@ -476,22 +459,21 @@
     "w": "Odalys",
     "t": "The Settings fix that keeps the restore message on screen after opening and leaving the Pro...",
     "at": "2026-11-20T07:22:00-05:00"
-   },
-   {
-    "w": "Idris",
-    "t": "Checked Maren's change writing the name as PyWidget: each edit changes only the name. Open:...",
-    "at": "2026-11-20T07:14:00-05:00"
    }
   ],
   "count": {
-   "next": 649,
+   "next": 648,
    "wait": 2,
    "blocked": 0,
    "you": 2
   },
   "fin": {
-   "n": 47,
+   "n": 48,
    "rows": [
+    [
+     "T-5315",
+     "Keep Altitude's heights out..."
+    ],
     [
      "T-5298",
      "Check the caret fixes that..."
@@ -511,10 +493,6 @@
     [
      "T-5192",
      "Review the Habits tap before..."
-    ],
-    [
-     "T-4068",
-     "Check finished work before..."
     ]
    ]
   }
@@ -558,52 +536,47 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-20T12:40:47Z",
+  "at": "2026-11-20T12:43:48Z",
   "s": {
    "T-4796": [
     "mergetest",
     "Xcode checks on the MacBook, 1st to merge",
-    1795178327856
+    1795178328425
    ],
    "T-4182": [
     "mergeq",
     "3rd to merge",
-    1795156847856
+    1795156848425
    ],
    "T-4181": [
     "mergeq",
     "4th to merge",
-    1795157807856
+    1795157808425
    ],
    "T-2377": [
     "mergeq",
     "5th to merge",
-    1795172087856
+    1795172088425
    ],
    "T-4662": [
     "mergeq",
     "6th to merge",
-    1795172267856
+    1795172268425
    ],
    "T-4670": [
     "mergeq",
     "7th to merge",
-    1795172567856
+    1795172568425
    ],
    "T-3107": [
     "mergeq",
     "9th to merge",
-    1795175447856
+    1795175448425
    ],
    "T-4192": [
     "mergeq",
     "10th to merge",
-    1795175687856
-   ],
-   "T-5315": [
-    "mergetest",
-    "iPhone tests on the MacBook",
-    null
+    1795175688425
    ]
   },
   "nm": {
@@ -614,8 +587,7 @@
    "T-4662": "Place the cursor easily on a long line",
    "T-4670": "Draft the letter to Apple about the marketplace rules",
    "T-3107": "Read the phones' real numbers from the gate build",
-   "T-4192": "Python in the app: smaller bundle, installable packages",
-   "T-5315": "Keep Altitude's heights out of backups"
+   "T-4192": "Python in the app: smaller bundle, installable packages"
   },
   "wk": {
    "T-4796": "Ines",
@@ -637,12 +609,11 @@
    "T-4946": "Idris",
    "T-4031": "Pernille",
    "T-4040": "Pernille",
-   "T-4043": "Pernille",
-   "T-4048": "Pernille"
+   "T-4043": "Pernille"
   }
  },
  "ln": {
-  "at": "2026-11-20T12:40:47Z",
+  "at": "2026-11-20T12:43:48Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -654,22 +625,22 @@
     "parked": 2
    },
    "m": {
-    "checking": 2,
-    "inline": 103,
-    "conflicted": 1910,
+    "checking": 5,
+    "inline": 106,
+    "conflicted": 1913,
     "failed": null,
     "held": null,
-    "retry": 198,
-    "parked": 197
+    "retry": 201,
+    "parked": 200
    },
    "cur": [
     [
      [
       "T-4796"
      ],
-     "iPhone app tests, sent and waiting its turn",
+     "iPhone app tests",
      "MacBook",
-     2
+     5
     ]
    ],
    "ld": [
@@ -679,12 +650,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-20T12:40:49Z",
-    "ld": 9.31,
+    "at": "2026-11-20T12:42:59Z",
+    "ld": 8.24,
     "c": 8,
     "sb": 0,
     "dk": [
-     24.6,
+     24.1,
      228.3
     ],
     "ss": [
@@ -694,12 +665,12 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-20T12:32:59Z",
-    "ld": 0.31,
+    "at": "2026-11-20T12:40:55Z",
+    "ld": 0.59,
     "c": 12,
     "sb": 0,
     "dk": [
-     353.8,
+     353.7,
      926.4
     ],
     "sn": []
@@ -732,11 +703,11 @@
      "open": false
     }
    },
-   "at": "2026-11-20T12:40:47+00:00"
+   "at": "2026-11-20T12:44:01+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-20T12:40:47+00:00"
+   "at": "2026-11-20T12:44:01+00:00"
   }
  },
  "operators": [
@@ -769,13 +740,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 1,
+  "main": 0,
   "lanes": 0,
-  "total": 1,
-  "at": "7:40 AM",
-  "why": "",
-  "at_iso": "2026-11-20T12:40:00+00:00",
+  "total": 0,
+  "at": "7:44 AM",
+  "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
+  "at_iso": "2026-11-20T12:44:00+00:00",
   "started": "2:11 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 2:11 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 7:40 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0, started 2:11 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 7:44 AM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
  }
 }

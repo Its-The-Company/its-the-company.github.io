@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-20T15:20:32.280902+00:00",
+ "at": "2026-11-20T15:22:58.892452+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -276,7 +276,7 @@
    "task": "[build] T-5047 token test red card",
    "model": "opus",
    "started": "2026-11-20T14:25:57.326Z",
-   "seconds": 3274,
+   "seconds": 3421,
    "finished": null,
    "effort": "high"
   },
@@ -285,7 +285,7 @@
    "task": "[build] T-4550 button action run, slice 2",
    "model": "opus",
    "started": "2026-11-20T14:26:07.585Z",
-   "seconds": 3264,
+   "seconds": 3411,
    "finished": null,
    "effort": "high"
   },
@@ -294,7 +294,7 @@
    "task": "[test] T-4634 flaky github hang test",
    "model": "opus",
    "started": "2026-11-20T14:44:23.179Z",
-   "seconds": 2169,
+   "seconds": 2315,
    "finished": null,
    "effort": "high"
   }
@@ -378,34 +378,8 @@
   "week_pct": 82.11,
   "usage_pct": 48.3,
   "work_pct": 79.9,
-  "read_at": "2026-11-20T15:21:00+00:00",
+  "read_at": "2026-11-20T15:24:00+00:00",
   "running": [
-   {
-    "lane": "a",
-    "task": "T-4662",
-    "w": "Idris",
-    "k": "build",
-    "t": "Place the cursor easily on a long line",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-20T10:18:29-05:00",
-    "n": "Evan",
-    "d": 1,
-    "src": "plan-a"
-   },
-   {
-    "lane": "a",
-    "task": "T-3107",
-    "w": "Pernille",
-    "k": "measure",
-    "t": "Read the phones' real numbers from the gate build",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-20T10:18:29-05:00",
-    "n": "Evan",
-    "d": 1,
-    "src": "plan-a"
-   },
    {
     "lane": "a3",
     "task": "T-4184",
@@ -454,7 +428,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-20T10:21:00-05:00",
+  "at": "2026-11-20T10:24:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -707,22 +681,22 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-20T15:20:32Z",
+  "at": "2026-11-20T15:22:58Z",
   "s": {
    "T-5236": [
     "merging",
     "Host checks on the Mac mini",
-    1795187432280
+    1795187458892
    ],
    "T-5234": [
     "merging",
     "Host checks on the Mac mini",
-    1795187432280
+    1795187458892
    ],
    "T-4550": [
     "merging",
     "Mac tests at the main gate",
-    1795187192280
+    1795187158892
    ],
    "T-5047": [
     "testing",
@@ -732,13 +706,12 @@
    "T-4634": [
     "testing",
     "its own tests, in its copy",
-    1795187972280
+    1795187938892
    ],
-   "T-4662": [
-    "merged",
-    "on main 8:54 AM ET",
-    1795182872000,
-    ""
+   "T-4184": [
+    "testq",
+    "1st for a Simulator",
+    1795188178892
    ]
   },
   "nm": {
@@ -747,7 +720,7 @@
    "T-4550": "Python contract and action run for widget buttons",
    "T-5047": "Fix the token test's No view for this size card",
    "T-4634": "Github hang test is cut before the GET under load",
-   "T-4662": "Place the cursor easily on a long line"
+   "T-4184": "A person's own script becomes a Home Screen widget"
   },
   "wk": {
    "T-5236": "Odalys",
@@ -755,14 +728,14 @@
    "T-4550": "Pernille",
    "T-5047": "Idris",
    "T-4634": "Pernille",
-   "T-4662": "Idris",
+   "T-4184": "Idris",
    "T-5341": "Ines",
    "T-4842": "Idris",
    "T-4998": "Ines"
   }
  },
  "ln": {
-  "at": "2026-11-20T15:20:32Z",
+  "at": "2026-11-20T15:22:58Z",
   "mq": {
    "n": {
     "checking": 2,
@@ -774,13 +747,13 @@
     "parked": 3
    },
    "m": {
-    "checking": 10,
+    "checking": 12,
     "inline": null,
-    "conflicted": 2070,
-    "failed": 40,
+    "conflicted": 2072,
+    "failed": 43,
     "held": null,
-    "retry": 388,
-    "parked": 223
+    "retry": 391,
+    "parked": 226
    },
    "cur": [
     [
@@ -789,7 +762,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     10
+     12
     ],
     [
      [
@@ -797,7 +770,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     10
+     12
     ]
    ],
    "ld": [
@@ -807,12 +780,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-20T15:20:31Z",
-    "ld": 114.64,
+    "at": "2026-11-20T15:23:11Z",
+    "ld": 109.69,
     "c": 8,
     "sb": 1,
     "dk": [
-     23.8,
+     22.9,
      228.3
     ],
     "ss": [
@@ -824,12 +797,12 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-20T14:50:43Z",
-    "ld": 0.22,
+    "at": "2026-11-20T15:21:22Z",
+    "ld": 0.21,
     "c": 12,
     "sb": 0,
     "dk": [
-     353.6,
+     353.4,
      926.4
     ],
     "sn": []
@@ -838,13 +811,13 @@
  },
  "hc": {
   "wait": {
-   "n": 11,
+   "n": 10,
    "limit": 20,
-   "in_line": 0,
-   "parked": 11,
+   "in_line": 2,
+   "parked": 8,
    "open": true,
    "mq": false,
-   "counted": "2026-11-20T15:05:46+00:00",
+   "counted": "2026-11-20T15:20:53+00:00",
    "by": {
     "app": {
      "n": 4,
@@ -852,7 +825,7 @@
      "open": true
     },
     "other": {
-     "n": 7,
+     "n": 6,
      "limit": 20,
      "open": true
     },
@@ -862,11 +835,11 @@
      "open": false
     }
    },
-   "at": "2026-11-20T15:20:32+00:00"
+   "at": "2026-11-20T15:22:58+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-20T15:20:32+00:00"
+   "at": "2026-11-20T15:22:58+00:00"
   }
  },
  "operators": [
@@ -885,8 +858,8 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 2 tasks",
-   "at": "2026-11-20T10:18:28-05:00"
+   "t": "Work session \u2013 1 task",
+   "at": "2026-11-20T10:21:00-05:00"
   }
  ],
  "reply": {
@@ -907,12 +880,12 @@
  ],
  "agents_now": {
   "main": 3,
-  "lanes": 2,
-  "total": 5,
-  "at": "10:21 AM",
+  "lanes": 1,
+  "total": 4,
+  "at": "10:24 AM",
   "why": "",
-  "at_iso": "2026-11-20T15:21:00+00:00",
+  "at_iso": "2026-11-20T15:24:00+00:00",
   "started": "9:23 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 3, started 9:23 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 10:21 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 3, started 9:23 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 10:24 AM ET</p></section>"
  }
 }

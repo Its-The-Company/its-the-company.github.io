@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-20T10:45:35.345776+00:00",
+ "at": "2026-11-20T10:50:25.352959+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -14,16 +14,6 @@
      {
       "s": "testq",
       "at": 1795170513
-     }
-    ]
-   },
-   {
-    "t": "T-4947",
-    "name": "Check finished work before it ships",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1795169934
      }
     ]
    },
@@ -179,26 +169,25 @@
  },
  "workers": [
   {
-   "name": "pernille",
-   "task": "[review] T-4947 Settings restore line after Pro check",
-   "model": "opus",
-   "started": "2026-11-20T10:07:54.012Z",
-   "seconds": 2261,
-   "finished": null,
-   "effort": "high"
-  },
-  {
    "name": "idris",
    "task": "[build] T-5293 drop altitude history when location off",
    "model": "opus",
    "started": "2026-11-20T10:38:12.538Z",
-   "seconds": 442,
+   "seconds": 732,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Pernille, Idris",
+ "who": "Idris",
  "recent": [
+  {
+   "name": "pernille",
+   "task": "[review] T-4947 Settings restore line after Pro check",
+   "model": "opus",
+   "started": "2026-11-20T10:07:54.012Z",
+   "seconds": null,
+   "finished": "2026-11-20T10:49:18.542000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[review] T-4920 location and notification work check",
@@ -222,14 +211,6 @@
    "started": "2026-11-20T08:50:40.962Z",
    "seconds": null,
    "finished": "2026-11-20T09:47:38.818000+00:00"
-  },
-  {
-   "name": "pernille",
-   "task": "[review] T-4941 refresh tap cost measurement check",
-   "model": "opus",
-   "started": "2026-11-20T08:50:01.752Z",
-   "seconds": null,
-   "finished": "2026-11-20T09:17:01.212000+00:00"
   }
  ],
  "queue": {
@@ -240,19 +221,19 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 10.0,
+   "pct": 11.0,
    "resets_at": "2026-11-20T08:20:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-20T05:30:57.919420-05:00",
+   "read_at": "2026-11-20T05:46:43.097594-05:00",
    "source": "live",
-   "left": 90.0,
+   "left": 89.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 80.0,
    "resets_at": "2026-11-22T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-20T05:30:57.919420-05:00",
+   "read_at": "2026-11-20T05:46:43.097594-05:00",
    "source": "live",
    "left": 20.0,
    "left_words": "of your weekly allowance left"
@@ -264,7 +245,7 @@
    "read_at": "2026-11-20T02:09:37.522634-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-20T05:30:57.919420-05:00"
+  "read_at": "2026-11-20T05:46:43.097594-05:00"
  },
  "ui": {
   "week_pct": 0.104,
@@ -284,47 +265,8 @@
   "week_pct": 73.63,
   "usage_pct": 48.9,
   "work_pct": 81.3,
-  "read_at": "2026-11-20T10:48:00+00:00",
-  "running": [
-   {
-    "lane": "b2",
-    "task": "T-2377",
-    "w": "Ines",
-    "k": "plan",
-    "t": "Write the version 1.1 board lines after 1.0 is released",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-20T05:34:10-05:00",
-    "n": "Jeremy",
-    "d": 1,
-    "src": "plan-b"
-   },
-   {
-    "lane": "b2",
-    "task": "T-4662",
-    "w": "Idris",
-    "k": "build",
-    "t": "Place the cursor easily on a long line",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-20T05:34:10-05:00",
-    "n": "Jeremy",
-    "src": "plan-b"
-   },
-   {
-    "lane": "b2",
-    "task": "T-4670",
-    "w": "Wrenna",
-    "k": "research",
-    "t": "Draft the letter to Apple about the marketplace rules",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-20T05:34:10-05:00",
-    "n": "Jeremy",
-    "d": 1,
-    "src": "plan-b"
-   }
-  ]
+  "read_at": "2026-11-20T10:53:00+00:00",
+  "running": []
  },
  "api_credits": [
   {
@@ -344,7 +286,7 @@
   }
  ],
  "disk": {
-  "free_gb": 22,
+  "free_gb": 24,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -353,14 +295,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-20T05:43:00-05:00",
+   "at": "2026-11-20T05:51:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-20T05:48:00-05:00",
+  "at": "2026-11-20T05:53:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -371,20 +313,11 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Double Spread: past the week's halfway point with room left, so twice the even pace until the limit or the reset; the machine allows 4 (at its floor: load 13.3 a core is over 10)",
+  "why": "Double Spread: past the week's halfway point with room left, so twice the even pace until the limit or the reset; the machine allows 4 (at its floor: load 18.4 a core is over 10)",
   "n": 3,
   "at": "2026-11-20T02:09:48.586335-05:00"
  },
  "lanes": [
-  {
-   "name": "Pernille",
-   "state": "running",
-   "task": "[review] T-4947 Settings restore line after Pro check",
-   "model": "opus",
-   "since": "2026-11-20T10:07:54.012Z",
-   "next": [],
-   "effort": "high"
-  },
   {
    "name": "Idris",
    "state": "running",
@@ -398,6 +331,14 @@
    "name": "Odalys",
    "state": "next",
    "task": "Odalys, P0, merge-first, Investor an Investor c7031233507...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
+   "name": "Pernille",
+   "state": "next",
+   "task": "Pernille, P0, Investor an Investor c6965124089 (7:26 PM...",
    "model": null,
    "since": null,
    "next": []
@@ -429,16 +370,6 @@
  ],
  "tasks": {
   "run": [
-   {
-    "w": "Pernille",
-    "k": "review",
-    "t": "Check finished work before it ships",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-20T10:07:54.012Z",
-    "o": "c",
-    "task": "T-4947"
-   },
    {
     "w": "Idris",
     "k": "build",
@@ -526,6 +457,11 @@
   "done": [
    {
     "w": "Pernille",
+    "t": "Idris's fix T-4635 (clear stale Restore lines) passed review: Settings no longer says no Pro...",
+    "at": "2026-11-20T05:46:00-05:00"
+   },
+   {
+    "w": "Pernille",
     "t": "Pernille's second-person check of the fix that makes a saved widget state report what is really...",
     "at": "2026-11-20T05:41:00-05:00"
    },
@@ -533,11 +469,6 @@
     "w": "Pernille",
     "t": "Pernille's second-person check of the fix that makes a saved widget state report what is really...",
     "at": "2026-11-20T05:40:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "Checked Idris's location, steps and notification work for T-4188 (scripts and widgets reading...",
-    "at": "2026-11-20T05:34:00-05:00"
    }
   ],
   "count": {
@@ -547,8 +478,12 @@
    "you": 2
   },
   "fin": {
-   "n": 25,
+   "n": 26,
    "rows": [
+    [
+     "T-4947",
+     "Check finished work before..."
+    ],
     [
      "T-4942",
      "Check finished work before..."
@@ -567,10 +502,6 @@
     ],
     [
      "T-5216",
-     "Check finished work before..."
-    ],
-    [
-     "T-4943",
      "Check finished work before..."
     ]
    ]
@@ -615,43 +546,37 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-20T10:45:35Z",
+  "at": "2026-11-20T10:50:25Z",
   "s": {
    "T-4184": [
     "merging",
     "Host checks on the Mac mini",
-    1795170515345
+    1795170565352
    ],
    "T-5247": [
     "mergeq",
     "1st to merge",
-    1795170575345
+    1795170565352
    ],
    "T-4994": [
     "mergeq",
     "2nd to merge",
-    1795169315345
+    1795169305352
    ],
    "T-5180": [
     "mergeq",
     "2nd to merge",
-    1795169315345
+    1795169305352
    ],
    "T-4182": [
     "mergeq",
     "3rd to merge",
-    1795156835345
+    1795156885352
    ],
    "T-4181": [
     "mergeq",
     "4th to merge",
-    1795157795345
-   ],
-   "T-4947": [
-    "merged",
-    "on main 5:38 AM ET",
-    1795171100000,
-    ""
+    1795157785352
    ]
   },
   "nm": {
@@ -660,8 +585,7 @@
    "T-4994": "Act on the feature record at every add",
    "T-5180": "Cut the merge step's wait on the first entry's checks",
    "T-4182": "A failing widget says so and can recover",
-   "T-4181": "Widgets refresh on their own and by a tap",
-   "T-4947": "Check finished work before it ships"
+   "T-4181": "Widgets refresh on their own and by a tap"
   },
   "wk": {
    "T-4184": "Idris",
@@ -681,12 +605,11 @@
    "T-4941": "Pernille",
    "T-4789": "Pernille",
    "T-4927": "Pernille",
-   "T-4928": "Pernille",
-   "T-4929": "Pernille"
+   "T-4928": "Pernille"
   }
  },
  "ln": {
-  "at": "2026-11-20T10:45:35Z",
+  "at": "2026-11-20T10:50:25Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -698,13 +621,13 @@
     "parked": 2
    },
    "m": {
-    "checking": 17,
-    "inline": 37,
-    "conflicted": 1795,
+    "checking": 21,
+    "inline": 42,
+    "conflicted": 1799,
     "failed": null,
     "held": null,
-    "retry": 82,
-    "parked": 310
+    "retry": 87,
+    "parked": 315
    },
    "cur": [
     [
@@ -713,7 +636,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     17
+     21
     ]
    ],
    "ld": [
@@ -723,12 +646,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-20T10:45:52Z",
-    "ld": 18.34,
+    "at": "2026-11-20T10:51:00Z",
+    "ld": 17.11,
     "c": 8,
     "sb": 0,
     "dk": [
-     20.9,
+     24.0,
      228.3
     ],
     "ss": [
@@ -758,10 +681,10 @@
    "parked": 9,
    "open": true,
    "mq": false,
-   "counted": "2026-11-20T10:39:45+00:00",
+   "counted": "2026-11-20T10:50:09+00:00",
    "by": {
     "app": {
-     "n": 6,
+     "n": 5,
      "limit": 20,
      "open": true
     },
@@ -776,11 +699,11 @@
      "open": false
     }
    },
-   "at": "2026-11-20T10:45:35+00:00"
+   "at": "2026-11-20T10:50:25+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-20T10:45:35+00:00"
+   "at": "2026-11-20T10:50:25+00:00"
   }
  },
  "operators": [
@@ -792,15 +715,6 @@
    "e": "high",
    "t": "Work session \u2013 25 tasks",
    "at": "2026-11-20T02:11:05-05:00"
-  },
-  {
-   "w": "Operator",
-   "a": "Jeremy's Account",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session \u2013 3 tasks",
-   "at": "2026-11-20T05:34:09-05:00"
   }
  ],
  "reply": {
@@ -822,13 +736,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 2,
-  "lanes": 1,
-  "total": 3,
-  "at": "5:48 AM",
+  "main": 1,
+  "lanes": 0,
+  "total": 1,
+  "at": "5:53 AM",
   "why": "",
-  "at_iso": "2026-11-20T10:48:00+00:00",
+  "at_iso": "2026-11-20T10:53:00+00:00",
   "started": "2:11 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 2:11 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 5:48 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 2:11 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 5:53 AM ET</p></section>"
  }
 }

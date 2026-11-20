@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-20T11:54:27.938260+00:00",
+ "at": "2026-11-20T11:58:02.501630+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -171,7 +171,7 @@
    "task": "[review] T-5192 Habits tap opens its habit check",
    "model": "opus",
    "started": "2026-11-20T11:44:34.885Z",
-   "seconds": 593,
+   "seconds": 807,
    "finished": null,
    "effort": "high"
   },
@@ -180,12 +180,21 @@
    "task": "[review] T-5298 editor caret fixes check",
    "model": "opus",
    "started": "2026-11-20T11:54:01.776Z",
-   "seconds": 26,
+   "seconds": 240,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "idris",
+   "task": "[build] T-5315 keep Altitude heights out of backups",
+   "model": "opus",
+   "started": "2026-11-20T11:54:51.624Z",
+   "seconds": 190,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Odalys, Pernille",
+ "who": "Odalys, Pernille, Idris",
  "recent": [
   {
    "name": "wrenna",
@@ -223,24 +232,24 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 647,
+  "runnable_count": 649,
   "blocked_count": 2
  },
  "meter": {
   "five_hour": {
-   "pct": 22.0,
+   "pct": 23.0,
    "resets_at": "2026-11-20T08:20:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-20T06:52:32.260299-05:00",
+   "read_at": "2026-11-20T06:55:02.386198-05:00",
    "source": "live",
-   "left": 78.0,
+   "left": 77.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 82.0,
    "resets_at": "2026-11-22T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-20T06:52:32.260299-05:00",
+   "read_at": "2026-11-20T06:55:02.386198-05:00",
    "source": "live",
    "left": 18.0,
    "left_words": "of your weekly allowance left"
@@ -252,7 +261,7 @@
    "read_at": "2026-11-20T02:09:37.522634-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-20T06:52:32.260299-05:00"
+  "read_at": "2026-11-20T06:55:02.386198-05:00"
  },
  "ui": {
   "week_pct": 0.104,
@@ -272,7 +281,7 @@
   "week_pct": 73.63,
   "usage_pct": 48.9,
   "work_pct": 81.3,
-  "read_at": "2026-11-20T11:55:00+00:00",
+  "read_at": "2026-11-20T11:58:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -309,7 +318,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-20T06:55:00-05:00",
+  "at": "2026-11-20T06:58:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -345,11 +354,12 @@
   },
   {
    "name": "Idris",
-   "state": "next",
-   "task": "Idris, P0, from T-4964 (made by tools/runner_watch.py...",
-   "model": null,
-   "since": null,
-   "next": []
+   "state": "running",
+   "task": "[build] T-5315 keep Altitude heights out of backups",
+   "model": "opus",
+   "since": "2026-11-20T11:54:51.624Z",
+   "next": [],
+   "effort": "high"
   },
   {
    "name": "Ines",
@@ -397,6 +407,16 @@
     "at": "2026-11-20T11:54:01.776Z",
     "o": "i",
     "task": "T-5298"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "Keep Altitude's heights out of backups",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-20T11:54:51.624Z",
+    "o": "c",
+    "task": "T-5315"
    }
   ],
   "src": "plan",
@@ -490,7 +510,7 @@
    }
   ],
   "count": {
-   "next": 647,
+   "next": 649,
    "wait": 2,
    "blocked": 0,
    "you": 2
@@ -564,67 +584,68 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-20T11:54:27Z",
+  "at": "2026-11-20T11:57:47Z",
   "s": {
    "T-5247": [
     "mergeq",
     "1st to merge",
-    1795175607938
+    1795175627433
    ],
    "T-4994": [
     "mergeq",
     "2nd to merge",
-    1795169307938
+    1795169267433
    ],
    "T-5180": [
     "mergeq",
     "2nd to merge",
-    1795169307938
+    1795169267433
    ],
    "T-4796": [
     "mergeq",
     "3rd to merge",
-    1795172967938
+    1795172987433
    ],
    "T-4182": [
     "mergeq",
     "5th to merge",
-    1795156887938
+    1795156847433
    ],
    "T-4181": [
     "mergeq",
     "6th to merge",
-    1795157787938
+    1795157807433
    ],
    "T-2377": [
     "mergeq",
     "7th to merge",
-    1795172547938
+    1795172087433
    ],
    "T-4662": [
     "mergeq",
-    "7th to merge",
-    1795172547938
+    "8th to merge",
+    1795172267433
    ],
    "T-4670": [
     "mergeq",
-    "7th to merge",
-    1795172547938
+    "9th to merge",
+    1795172567433
    ],
    "T-3107": [
     "mergeq",
-    "8th to merge",
-    1795175427938
+    "10th to merge",
+    1795175447433
    ],
    "T-4192": [
     "mergeq",
-    "10th to merge",
-    1795175667938
+    "11th to merge",
+    1795175687433
    ],
    "T-5192": [
-    "testing",
-    "MacBook \u00b7 test",
-    null
+    "merged",
+    "on main 6:56 AM ET",
+    1795175788000,
+    ""
    ]
   },
   "nm": {
@@ -669,7 +690,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-20T11:54:27Z",
+  "at": "2026-11-20T11:57:47Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -682,12 +703,12 @@
    },
    "m": {
     "checking": null,
-    "inline": 52,
-    "conflicted": 1863,
+    "inline": 60,
+    "conflicted": 1867,
     "failed": null,
     "held": null,
-    "retry": 151,
-    "parked": 17
+    "retry": 155,
+    "parked": 21
    },
    "cur": [],
    "ld": [
@@ -697,12 +718,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-20T11:54:39Z",
-    "ld": 6.31,
+    "at": "2026-11-20T11:57:00Z",
+    "ld": 7.21,
     "c": 8,
     "sb": 0,
     "dk": [
-     26.6,
+     24.4,
      228.3
     ],
     "ss": [
@@ -712,8 +733,8 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-20T11:53:15Z",
-    "ld": 1.89,
+    "at": "2026-11-20T11:54:48Z",
+    "ld": 2.13,
     "c": 12,
     "sb": 0,
     "dk": [
@@ -750,11 +771,11 @@
      "open": false
     }
    },
-   "at": "2026-11-20T11:54:27+00:00"
+   "at": "2026-11-20T11:58:02+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-20T11:54:27+00:00"
+   "at": "2026-11-20T11:58:02+00:00"
   }
  },
  "operators": [
@@ -787,13 +808,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 2,
+  "main": 3,
   "lanes": 0,
-  "total": 2,
-  "at": "6:55 AM",
+  "total": 3,
+  "at": "6:58 AM",
   "why": "",
-  "at_iso": "2026-11-20T11:55:00+00:00",
+  "at_iso": "2026-11-20T11:58:00+00:00",
   "started": "2:11 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 2:11 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 6:55 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 2:11 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 6:58 AM ET</p></section>"
  }
 }

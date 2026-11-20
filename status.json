@@ -1,22 +1,11 @@
 {
  "schema": 1,
- "at": "2026-11-20T21:46:00.970328+00:00",
+ "at": "2026-11-20T21:56:05.817296+00:00",
  "session": {
   "active": false,
   "kind": "",
   "started": null,
   "flow": [
-   {
-    "t": "T-5355",
-    "name": "Finish the MacBook Xcode routing and the merge switch",
-    "acct": "Personal b",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1795211156
-     }
-    ]
-   },
    {
     "t": "T-5298",
     "steps": [
@@ -115,6 +104,23 @@
   ],
   "done": [
    {
+    "t": "T-5234",
+    "name": "Move merge tests to the MacBook under heavy load",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "failed",
+    "end_at": 1795211627,
+    "why": "tests failed"
+   },
+   {
+    "t": "T-5355",
+    "name": "Finish the MacBook Xcode routing and the merge switch",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1795211385
+   },
+   {
     "t": "T-5154",
     "name": "Keep the company account signed in to Claude Code",
     "acct": "Personal a",
@@ -180,28 +186,10 @@
     "end": "failed",
     "end_at": 1795204352,
     "why": "tests failed"
-   },
-   {
-    "t": "T-4807",
-    "name": "Fix every bad test that failed a merge",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "failed",
-    "end_at": 1795204352,
-    "why": "tests failed"
-   },
-   {
-    "t": "T-5234",
-    "name": "Move merge tests to the MacBook under heavy load",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "failed",
-    "end_at": 1795204352,
-    "why": "tests failed"
    }
   ],
-  "landed": 21,
-  "failed": 24
+  "landed": 22,
+  "failed": 25
  },
  "workers": [],
  "who": "",
@@ -242,36 +230,36 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 652,
+  "runnable_count": 653,
   "blocked_count": 2
  },
  "meter": {
   "five_hour": {
    "pct": 7.0,
-   "resets_at": "2026-11-20T23:19:59.795546+00:00",
+   "resets_at": "2026-11-20T23:20:00.456008+00:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-20T16:30:01.859065-05:00",
+   "read_at": "2026-11-20T16:46:14.741671-05:00",
    "source": "usage",
    "left": 93.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 100.0,
-   "resets_at": "2026-11-22T06:59:59.795565+00:00",
+   "resets_at": "2026-11-22T07:00:00.456027+00:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-20T16:30:01.859065-05:00",
+   "read_at": "2026-11-20T16:46:14.741671-05:00",
    "source": "usage",
    "left": 0.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 36.0,
-   "resets_at": "2026-11-22T06:59:59.795703+00:00",
+   "resets_at": "2026-11-22T07:00:00.456226+00:00",
    "used_words": "of the Fable weekly allowance used",
-   "read_at": "2026-11-20T16:30:01.859065-05:00",
+   "read_at": "2026-11-20T16:46:14.741671-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-20T16:30:01.859065-05:00"
+  "read_at": "2026-11-20T16:46:14.741671-05:00"
  },
  "ui": {
   "week_pct": 0.123,
@@ -286,24 +274,47 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-20T16:45:03-05:00",
+ "next_tick": "2026-11-20T17:01:15-05:00",
  "personal": {
   "week_pct": 95.03,
   "usage_pct": 48.7,
   "work_pct": 80.4,
-  "read_at": "2026-11-20T21:46:00+00:00",
+  "read_at": "2026-11-20T21:58:00+00:00",
   "running": [
    {
-    "lane": "b3",
-    "task": "T-4182",
-    "w": "Idris",
-    "k": "build",
-    "t": "A failing widget says so and can recover",
+    "lane": "b",
+    "task": "T-5355",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Finish the MacBook Xcode routing and the merge switch",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-20T15:24:55-05:00",
+    "at": "2026-11-20T16:52:47-05:00",
     "n": "Jeremy",
-    "d": 1,
+    "src": "plan-b"
+   },
+   {
+    "lane": "b2",
+    "task": "T-4807",
+    "w": "Pernille",
+    "k": "test",
+    "t": "Fix every bad test that failed a merge",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-20T16:52:47-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
+   },
+   {
+    "lane": "b2",
+    "task": "T-4468",
+    "w": "Idris",
+    "k": "build",
+    "t": "Let people set each premade's place, events and lists",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-20T16:52:47-05:00",
+    "n": "Jeremy",
     "src": "plan-b"
    }
   ]
@@ -326,7 +337,7 @@
   }
  ],
  "disk": {
-  "free_gb": 20,
+  "free_gb": 21,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -335,14 +346,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-20T16:43:00-05:00",
+   "at": "2026-11-20T16:54:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-20T16:46:00-05:00",
+  "at": "2026-11-20T16:58:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -479,6 +490,11 @@
   ],
   "done": [
    {
+    "w": "Operator",
+    "t": "A later MacBook job for the same work (J-20261120-1646-host-b2-00b7d3) passed, so the failed job...",
+    "at": "2026-11-20T16:50:00-05:00"
+   },
+   {
     "w": "Pernille",
     "t": "A stdlib test run that is killed partway no longer leaves its 0.3 GB working copies on the Mac's...",
     "at": "2026-11-20T14:32:00-05:00"
@@ -487,15 +503,10 @@
     "w": "Pernille",
     "t": "The stdlib tests now reuse a saved install from any working copy, because a saved result is...",
     "at": "2026-11-20T14:32:00-05:00"
-   },
-   {
-    "w": "Pernille",
-    "t": "The Python library checks no longer redo a slow build step eight times on each Python; each...",
-    "at": "2026-11-20T13:57:00-05:00"
    }
   ],
   "count": {
-   "next": 652,
+   "next": 653,
    "wait": 2,
    "blocked": 0,
    "you": 2
@@ -540,34 +551,28 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-20T21:46:00Z",
+  "at": "2026-11-20T21:56:05Z",
   "s": {
-   "T-5355": [
-    "merging",
-    "Host checks on the Mac mini",
-    1795211160970
-   ],
-   "T-5234": [
-    "mergeq",
-    "1st to merge",
-    1795209480970
+   "T-4807": [
+    "merged",
+    "on main 4:12 PM ET",
+    1795209148000,
+    "Pernille"
    ]
   },
   "nm": {
-   "T-5355": "Finish the MacBook Xcode routing and the merge switch",
-   "T-5234": "Move merge tests to the MacBook under heavy load"
+   "T-4807": "Fix every bad test that failed a merge"
   },
   "wk": {
-   "T-5355": "Odalys",
-   "T-5234": "Odalys"
+   "T-4807": "Pernille"
   }
  },
  "ln": {
-  "at": "2026-11-20T21:46:00Z",
+  "at": "2026-11-20T21:56:05Z",
   "mq": {
    "n": {
-    "checking": 1,
-    "inline": 1,
+    "checking": 0,
+    "inline": 0,
     "conflicted": 1,
     "failed": 1,
     "held": 0,
@@ -575,37 +580,28 @@
     "parked": 6
    },
    "m": {
-    "checking": 0,
-    "inline": 28,
-    "conflicted": 1766,
-    "failed": 0,
+    "checking": null,
+    "inline": null,
+    "conflicted": 1776,
+    "failed": 2,
     "held": null,
     "retry": null,
-    "parked": 213
+    "parked": 223
    },
-   "cur": [
-    [
-     [
-      "T-5355"
-     ],
-     "Mac tests",
-     "Mac mini",
-     0
-    ]
-   ],
+   "cur": [],
    "ld": [
-    23,
-    "2026-11-20T21:12:45Z"
+    24,
+    "2026-11-20T21:49:45Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-20T21:46:02Z",
-    "ld": 31.6,
+    "at": "2026-11-20T21:56:07Z",
+    "ld": 7.96,
     "c": 8,
     "sb": 0,
     "dk": [
-     18.0,
+     20.7,
      228.3
     ],
     "ss": [
@@ -615,8 +611,8 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-20T21:15:27Z",
-    "ld": 0.21,
+    "at": "2026-11-20T21:51:30Z",
+    "ld": 0.27,
     "c": 12,
     "sb": 0,
     "dk": [
@@ -653,14 +649,32 @@
      "open": true
     }
    },
-   "at": "2026-11-20T21:46:00+00:00"
+   "at": "2026-11-20T21:56:05+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-20T21:46:00+00:00"
+   "at": "2026-11-20T21:56:05+00:00"
   }
  },
  "operators": [
+  {
+   "w": "Operator",
+   "a": "Jeremy's Account",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session \u2013 1 task",
+   "at": "2026-11-20T16:52:47-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Jeremy's Account",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session \u2013 2 tasks",
+   "at": "2026-11-20T16:52:46-05:00"
+  },
   {
    "w": "Operator",
    "a": "Jeremy's Account",
@@ -689,12 +703,12 @@
  ],
  "agents_now": {
   "main": 0,
-  "lanes": 1,
-  "total": 1,
-  "at": "4:46 PM",
+  "lanes": 2,
+  "total": 2,
+  "at": "4:58 PM",
   "why": "",
-  "at_iso": "2026-11-20T21:46:00+00:00",
+  "at_iso": "2026-11-20T21:58:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 4:46 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 4:58 PM ET</p></section>"
  }
 }

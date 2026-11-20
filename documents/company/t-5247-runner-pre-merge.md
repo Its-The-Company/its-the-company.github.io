@@ -115,6 +115,51 @@ answer, and the Mac mini runs it only when the runner is down. Archive, upload, 
 
 Open: whether `xc_mutants.py` mutants go as one commit each on a check ref (8 to 10 jobs a land) or stay here; and
 the runner's parallel slots for several check refs at once (an Investor 11-05: "as many simulators as is needed").
+
+## 5. Part 2 as built: the first slice (T-5263, 2026-11-20), and what waits
+
+Built on main while T-5236 (runner 33: `kinds.json`, `runner.py`, `VERSION`) is still parked, so **nothing under
+`tools/macbook-runner` changes** and no VERSION is bumped. Tests only; not yet run on the two machines.
+
+- **The check ref is a `land/` ref, not `check/*`** (section 4 item 1, changed). `tools/land_xc.py premerge` pushes
+  the commit under test with its job-file child to `refs/heads/land/chk-<clone>-<n>`: the ref every runner from 16
+  already fetches and accepts (T-2634), as a group's `land/grp-...` does. A separate `check/*` namespace would need
+  the runner's fetch, job list and `commit_allowed` changed and a VERSION bump, and until the MacBook updated every
+  job would be refused. `<clone>` is six letters of the clone's git folder; `<n>` is one of 6 slots, held by a lock
+  file in `<git folder>/xc-check` while the caller waits.
+- **XC_LOCAL=1 is "answer before the push"** (item 3) for a `test` or `build` the runner's `xc-test` / `xc-build`
+  reproduce: `tools/xc_route.py premerge` sends HEAD, or for a dirty tree a temporary child of HEAD with the run's
+  paths (`run_paths()`; a private index, no branch, the checkout untouched). `XC_LOCAL=here` always runs here.
+- **The caller waits** (item 4): `xc.sh` exits with the job's verdict (0, the red's exit, 143, or 75 after
+  `XC_CHECK_WAIT` s, default the job's limit + 600). After a 75 the job stays, and the same request again reads it.
+- **Fallback only when the runner is down** (item 5): no or a silent check-in, paused or blocked, older than 16, a
+  failed fetch or push, silent while the job waits (`why: runner down: ...`), or a job the runner refuses
+  (`why: the runner could not take it: ...`). Busy is a wait. An old runner that checks in but never takes the job
+  (T-4566): a check-in with no version counts as older than 16; and once the waiting job is overdue by `xc_route.py
+  state()`'s rule (no result after the push lag, the poll and a full limit for it and each job ahead, T-1894), the
+  next ask, or the end of a wait, takes the ref back and runs here (`why: the runner could not take it: ... overdue`).
+  So a 75 never repeats for ever, and no road gives a green the runner did not report.
+- **T-4566, for every test run, not only XC_LOCAL=1:** `decide()` keeps a test run that names a build setting here
+  (a job carries none, so the runner would test the plain build); `ENABLE_DEBUG_DYLIB=NO` alone still goes, and an
+  option's value (a `-destination` of `OS=...,platform=...`) is no setting.
+- **Still here with XC_LOCAL=1**: a filter the runner can't carry (its full suite would be another verdict); any
+  argument beyond the runner command's own, so a build setting (`scripts/gate_session_build.sh --test`: the runner
+  would pass without the condition) or a `-derivedDataPath`, with one exception, the land's `ENABLE_DEBUG_DYLIB=NO`,
+  which the land's check has ridden `xc-test` without since T-2634; the
+  callers that ask the runner themselves before their XC_LOCAL=1 step or read their result here (land gate, lane
+  landcheck, main gate, merge queue, park batch, land host, xc_mutants, alpha run); every kind in `decide()`'s list.
+
+**Waits (needs the runner, so after T-5236 lands):**
+
+1. **The split actions (item 2) are not built, and the item is wrong as written.** One `xc-test` job answering both
+   `build-for-testing` and `test-without-building` makes a failing test a red *build* step. `feature_session.py
+   bisect_lines` reads a red build as "skip this commit" (125) and a red test as "bad" (1), so the bisect would skip
+   the commit it is looking for. The smallest correct form: a runner command `xc-build-for-testing` (kinds.json, kind
+   build, VERSION 34) for the build step, and `test-without-building` sent as `xc-test` with its filters (it builds
+   again on the runner). Until then both stay here: 44 of 11-19's 76 runs. The other way, with no runner change:
+   `feature_session.py plan` prints one `test` line with its filters instead of the pair.
+2. `xc_mutants.py` mutants as commits on a check ref, and the runner's parallel slots for several check refs (both
+   open in section 4).
 {% endraw %}
 
 </div>

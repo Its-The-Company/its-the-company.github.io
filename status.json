@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-20T17:44:36.783256+00:00",
+ "at": "2026-11-20T17:49:08.279931+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -383,7 +383,7 @@
   "week_pct": 82.11,
   "usage_pct": 48.3,
   "work_pct": 79.9,
-  "read_at": "2026-11-20T17:46:00+00:00",
+  "read_at": "2026-11-20T17:49:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -481,7 +481,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-20T12:46:00-05:00",
+  "at": "2026-11-20T12:49:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -492,8 +492,8 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Double Spread: past the week's halfway point with room left, so twice the even pace until the limit or the reset; the machine allows 2 (at its floor: load 13.6 a core is over 10)",
-  "n": 2,
+  "why": "Double Spread: past the week's halfway point with room left, so twice the even pace until the limit or the reset; the machine allows 3 (raised a step toward the floor of 8: new work may start and...",
+  "n": 3,
   "at": "2026-11-20T09:22:05.059755-05:00"
  },
  "lanes": [
@@ -701,32 +701,37 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-20T17:44:36Z",
+  "at": "2026-11-20T17:48:39Z",
   "s": {
    "T-5236": [
     "merging",
     "Host checks on the Mac mini",
-    1795195896783
+    1795195899997
    ],
    "T-5234": [
     "merging",
     "Host checks on the Mac mini",
-    1795195896783
+    1795195899997
    ],
    "T-4807": [
     "merging",
     "Host checks on the Mac mini",
-    1795195896783
+    1795195899997
    ],
    "T-5154": [
     "merging",
     "Host checks on the Mac mini",
-    1795195896783
+    1795195899997
    ],
    "T-5047": [
     "merging",
     "Mac tests at the main gate \u00b7 1 group of tests done, 1 red",
-    1795196616783
+    1795196679997
+   ],
+   "T-4188": [
+    "testing",
+    "Mac Mini \u00b7 test",
+    null
    ]
   },
   "nm": {
@@ -734,7 +739,8 @@
    "T-5234": "Move merge tests to the MacBook under heavy load",
    "T-4807": "Fix every bad test that failed a merge",
    "T-5154": "Keep the company account signed in to Claude Code",
-   "T-5047": "Fix the token test's No view for this size card"
+   "T-5047": "Fix the token test's No view for this size card",
+   "T-4188": "Location, steps and notifications work in scripts and..."
   },
   "wk": {
    "T-5236": "Odalys",
@@ -742,13 +748,14 @@
    "T-4807": "Pernille",
    "T-5154": "Odalys",
    "T-5047": "Idris",
+   "T-4188": "Idris",
    "T-5341": "Ines",
    "T-4842": "Idris",
    "T-4998": "Ines"
   }
  },
  "ln": {
-  "at": "2026-11-20T17:44:36Z",
+  "at": "2026-11-20T17:48:39Z",
   "mq": {
    "n": {
     "checking": 4,
@@ -760,13 +767,13 @@
     "parked": 3
    },
    "m": {
-    "checking": 13,
+    "checking": 17,
     "inline": null,
-    "conflicted": 1525,
+    "conflicted": 1529,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 367
+    "parked": 371
    },
    "cur": [
     [
@@ -775,7 +782,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     13
+     17
     ],
     [
      [
@@ -783,7 +790,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     13
+     17
     ],
     [
      [
@@ -791,7 +798,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     13
+     17
     ],
     [
      [
@@ -799,7 +806,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     13
+     17
     ]
    ],
    "ld": [
@@ -809,19 +816,21 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-20T17:43:20Z",
-    "ld": 10.72,
+    "at": "2026-11-20T17:48:47Z",
+    "ld": 40.8,
     "c": 8,
-    "sb": 0,
+    "sb": 1,
     "dk": [
-     15.5,
+     11.7,
      228.3
     ],
     "ss": [
      172.9,
      953.7
     ],
-    "sn": []
+    "sn": [
+     "iPhone 17e"
+    ]
    },
    "macbook": {
     "at": "2026-11-20T17:23:41Z",
@@ -862,11 +871,11 @@
      "open": false
     }
    },
-   "at": "2026-11-20T17:44:36+00:00"
+   "at": "2026-11-20T17:49:08+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-20T17:44:36+00:00"
+   "at": "2026-11-20T17:49:08+00:00"
   }
  },
  "operators": [
@@ -946,10 +955,10 @@
   "main": 0,
   "lanes": 5,
   "total": 5,
-  "at": "12:46 PM",
+  "at": "12:49 PM",
   "why": "",
-  "at_iso": "2026-11-20T17:46:00+00:00",
+  "at_iso": "2026-11-20T17:49:00+00:00",
   "started": "9:23 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 0, started 9:23 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 12:46 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 0, started 9:23 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 12:49 PM ET</p></section>"
  }
 }

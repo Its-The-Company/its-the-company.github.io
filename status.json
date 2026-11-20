@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-20T01:28:28.265907+00:00",
+ "at": "2026-11-20T01:38:08.024962+00:00",
  "session": {
   "active": false,
   "kind": "",
@@ -212,44 +212,13 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-19T20:33:43-05:00",
+ "next_tick": "2026-11-19T20:44:02-05:00",
  "personal": {
-  "week_pct": 78.07,
-  "usage_pct": 48.0,
-  "work_pct": 80.7,
-  "read_at": "2026-11-20T01:29:00+00:00",
+  "week_pct": 79.81,
+  "usage_pct": 48.5,
+  "work_pct": 80.8,
+  "read_at": "2026-11-20T01:39:00+00:00",
   "running": [
-   {
-    "lane": "b2",
-    "task": "T-3859",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Move everything not needed off the Mac mini disk",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-19T17:59:17-05:00",
-    "n": "Jeremy",
-    "d": 1,
-    "src": "plan-b"
-   },
-   {
-    "lane": "b2",
-    "task": "T-4693",
-    "t": "Research a permanent name for the app",
-    "at": "2026-11-19T17:59:17-05:00",
-    "n": "Jeremy",
-    "d": 1,
-    "src": "plan-b"
-   },
-   {
-    "lane": "b2",
-    "task": "T-4573",
-    "t": "Answer when the chosen account cannot take a message",
-    "at": "2026-11-19T17:59:17-05:00",
-    "n": "Jeremy",
-    "d": 1,
-    "src": "plan-b"
-   },
    {
     "lane": "b3",
     "task": "T-4446",
@@ -283,7 +252,7 @@
   }
  ],
  "disk": {
-  "free_gb": 40,
+  "free_gb": 43,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -292,14 +261,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-19T20:27:00-05:00",
+   "at": "2026-11-19T20:36:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 3,
-  "at": "2026-11-19T20:29:00-05:00",
+  "at": "2026-11-19T20:39:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -497,17 +466,32 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-20T01:28:28Z",
+  "at": "2026-11-20T01:38:08Z",
   "s": {
    "T-4110": [
     "mergeq",
     "1st to merge",
-    1795137688265
+    1795137668024
+   ],
+   "T-3859": [
+    "mergeq",
+    "2nd to merge",
+    1795138568024
    ],
    "T-4181": [
     "mergeq",
-    "2nd to merge",
-    1795137628265
+    "3rd to merge",
+    1795137668024
+   ],
+   "T-0043": [
+    "mergeq",
+    "4th to merge",
+    1795138388024
+   ],
+   "T-0063": [
+    "mergeq",
+    "5th to merge",
+    1795138688024
    ],
    "T-4930": [
     "testing",
@@ -517,25 +501,7 @@
    "T-4926": [
     "testq",
     "2nd for a Simulator",
-    1795137508265
-   ],
-   "T-4573": [
-    "merged",
-    "on main 8:11 PM ET",
-    1795137096000,
-    ""
-   ],
-   "T-4693": [
-    "merged",
-    "on main 7:25 PM ET",
-    1795134338000,
-    ""
-   ],
-   "T-3859": [
-    "merged",
-    "on main 5:23 PM ET",
-    1795127001000,
-    ""
+    1795137488024
    ],
    "T-4446": [
     "merged",
@@ -546,31 +512,31 @@
   },
   "nm": {
    "T-4110": "Chart the task queue size on Home",
+   "T-3859": "Move everything not needed off the Mac mini disk",
    "T-4181": "Widgets refresh on their own and by a tap",
+   "T-0043": "Strip unneeded Python modules from the release bundle",
+   "T-0063": "Add a location-off state to the distance premade",
    "T-4930": "Check finished work before it ships",
    "T-4926": "Check finished work before it ships",
-   "T-4573": "Answer when the chosen account cannot take a message",
-   "T-4693": "Research a permanent name for the app",
-   "T-3859": "Move everything not needed off the Mac mini disk",
    "T-4446": "Commit the company's records once per supervisor round"
   },
   "wk": {
    "T-4110": "Maren",
+   "T-3859": "Odalys",
    "T-4181": "Idris",
+   "T-0043": "Idris",
+   "T-0063": "Idris",
    "T-4930": "Pernille",
    "T-4926": "Pernille",
-   "T-4573": "Odalys",
-   "T-4693": "Wrenna",
-   "T-3859": "Odalys",
    "T-4446": "Odalys"
   }
  },
  "ln": {
-  "at": "2026-11-20T01:28:28Z",
+  "at": "2026-11-20T01:38:08Z",
   "mq": {
    "n": {
     "checking": 0,
-    "inline": 2,
+    "inline": 5,
     "conflicted": 4,
     "failed": 0,
     "held": 0,
@@ -579,8 +545,8 @@
    },
    "m": {
     "checking": null,
-    "inline": 7,
-    "conflicted": 486,
+    "inline": 5,
+    "conflicted": 496,
     "failed": null,
     "held": null,
     "retry": null,
@@ -594,12 +560,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-20T01:28:29Z",
-    "ld": 4.11,
+    "at": "2026-11-20T01:38:10Z",
+    "ld": 6.39,
     "c": 8,
     "sb": 0,
     "dk": [
-     40.9,
+     43.0,
      228.3
     ],
     "ss": [
@@ -623,21 +589,21 @@
  },
  "hc": {
   "wait": {
-   "n": 13,
+   "n": 9,
    "limit": 20,
-   "in_line": 2,
-   "parked": 11,
+   "in_line": 4,
+   "parked": 5,
    "open": true,
    "mq": false,
-   "counted": "2026-11-20T01:24:20+00:00",
+   "counted": "2026-11-20T01:36:01+00:00",
    "by": {
     "app": {
-     "n": 7,
+     "n": 5,
      "limit": 20,
      "open": true
     },
     "other": {
-     "n": 7,
+     "n": 4,
      "limit": 20,
      "open": true
     },
@@ -647,23 +613,14 @@
      "open": false
     }
    },
-   "at": "2026-11-20T01:28:28+00:00"
+   "at": "2026-11-20T01:38:08+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-20T01:28:28+00:00"
+   "at": "2026-11-20T01:38:08+00:00"
   }
  },
  "operators": [
-  {
-   "w": "Operator",
-   "a": "Jeremy's Account",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session \u2013 3 tasks",
-   "at": "2026-11-19T17:59:17-05:00"
-  },
   {
    "w": "Operator",
    "a": "Jeremy's Account",
@@ -691,12 +648,12 @@
  ],
  "agents_now": {
   "main": 0,
-  "lanes": 2,
-  "total": 2,
-  "at": "8:29 PM",
+  "lanes": 1,
+  "total": 1,
+  "at": "8:39 PM",
   "why": "",
-  "at_iso": "2026-11-20T01:29:00+00:00",
+  "at_iso": "2026-11-20T01:39:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 8:29 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 8:39 PM ET</p></section>"
  }
 }

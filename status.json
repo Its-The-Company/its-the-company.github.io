@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-20T01:38:08.024962+00:00",
+ "at": "2026-11-20T01:51:50.643057+00:00",
  "session": {
   "active": false,
   "kind": "",
@@ -159,7 +159,7 @@
    }
   ],
   "landed": 53,
-  "failed": 15
+  "failed": 11
  },
  "workers": [],
  "who": "",
@@ -212,12 +212,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-19T20:44:02-05:00",
+ "next_tick": "2026-11-19T21:05:33-05:00",
  "personal": {
-  "week_pct": 79.81,
-  "usage_pct": 48.5,
-  "work_pct": 80.8,
-  "read_at": "2026-11-20T01:39:00+00:00",
+  "week_pct": 80.14,
+  "usage_pct": 48.6,
+  "work_pct": 80.9,
+  "read_at": "2026-11-20T01:52:00+00:00",
   "running": [
    {
     "lane": "b3",
@@ -252,7 +252,7 @@
   }
  ],
  "disk": {
-  "free_gb": 43,
+  "free_gb": 44,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -261,14 +261,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-19T20:36:00-05:00",
+   "at": "2026-11-19T20:52:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 3,
-  "at": "2026-11-19T20:39:00-05:00",
+  "at": "2026-11-19T20:52:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -277,7 +277,14 @@
   }
  },
  "next_tick_why": "last_tick",
- "idle": null,
+ "idle": {
+  "since": "2026-11-19T19:45:21-05:00",
+  "minutes": 66,
+  "why": "a tick has spent 5 min on steps before the session",
+  "healed": [
+   "asked for a fresh main meter reading"
+  ]
+ },
  "pool": null,
  "lanes": [
   {
@@ -466,32 +473,37 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-20T01:38:08Z",
+  "at": "2026-11-20T01:51:50Z",
   "s": {
-   "T-4110": [
-    "mergeq",
-    "1st to merge",
-    1795137668024
-   ],
    "T-3859": [
     "mergeq",
-    "2nd to merge",
-    1795138568024
+    "1st to merge",
+    1795138790643
    ],
-   "T-4181": [
+   "T-4693": [
     "mergeq",
-    "3rd to merge",
-    1795137668024
+    "1st to merge",
+    1795138790643
    ],
-   "T-0043": [
+   "T-4573": [
     "mergeq",
-    "4th to merge",
-    1795138388024
+    "1st to merge",
+    1795138790643
    ],
    "T-0063": [
     "mergeq",
-    "5th to merge",
-    1795138688024
+    "1st to merge",
+    1795138790643
+   ],
+   "T-0043": [
+    "mergeq",
+    "1st to merge",
+    1795138790643
+   ],
+   "T-4181": [
+    "mergetest",
+    "Xcode checks on the MacBook, 3rd to merge",
+    1795138910643
    ],
    "T-4930": [
     "testing",
@@ -501,7 +513,7 @@
    "T-4926": [
     "testq",
     "2nd for a Simulator",
-    1795137488024
+    1795137470643
    ],
    "T-4446": [
     "merged",
@@ -511,31 +523,33 @@
    ]
   },
   "nm": {
-   "T-4110": "Chart the task queue size on Home",
    "T-3859": "Move everything not needed off the Mac mini disk",
-   "T-4181": "Widgets refresh on their own and by a tap",
-   "T-0043": "Strip unneeded Python modules from the release bundle",
+   "T-4693": "Research a permanent name for the app",
+   "T-4573": "Answer when the chosen account cannot take a message",
    "T-0063": "Add a location-off state to the distance premade",
+   "T-0043": "Strip unneeded Python modules from the release bundle",
+   "T-4181": "Widgets refresh on their own and by a tap",
    "T-4930": "Check finished work before it ships",
    "T-4926": "Check finished work before it ships",
    "T-4446": "Commit the company's records once per supervisor round"
   },
   "wk": {
-   "T-4110": "Maren",
    "T-3859": "Odalys",
-   "T-4181": "Idris",
-   "T-0043": "Idris",
+   "T-4693": "Wrenna",
+   "T-4573": "Odalys",
    "T-0063": "Idris",
+   "T-0043": "Idris",
+   "T-4181": "Idris",
    "T-4930": "Pernille",
    "T-4926": "Pernille",
    "T-4446": "Odalys"
   }
  },
  "ln": {
-  "at": "2026-11-20T01:38:08Z",
+  "at": "2026-11-20T01:51:50Z",
   "mq": {
    "n": {
-    "checking": 0,
+    "checking": 1,
     "inline": 5,
     "conflicted": 4,
     "failed": 0,
@@ -544,15 +558,24 @@
     "parked": 0
    },
    "m": {
-    "checking": null,
-    "inline": 5,
-    "conflicted": 496,
+    "checking": 10,
+    "inline": 12,
+    "conflicted": 510,
     "failed": null,
     "held": null,
     "retry": null,
     "parked": null
    },
-   "cur": [],
+   "cur": [
+    [
+     [
+      "T-4181"
+     ],
+     "iPhone app tests, sent and waiting its turn",
+     "MacBook",
+     10
+    ]
+   ],
    "ld": [
     102,
     "2026-11-20T01:22:09Z"
@@ -560,12 +583,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-20T01:38:10Z",
-    "ld": 6.39,
+    "at": "2026-11-20T01:51:52Z",
+    "ld": 5.74,
     "c": 8,
     "sb": 0,
     "dk": [
-     43.0,
+     44.1,
      228.3
     ],
     "ss": [
@@ -589,16 +612,16 @@
  },
  "hc": {
   "wait": {
-   "n": 9,
+   "n": 10,
    "limit": 20,
-   "in_line": 4,
-   "parked": 5,
+   "in_line": 6,
+   "parked": 4,
    "open": true,
    "mq": false,
-   "counted": "2026-11-20T01:36:01+00:00",
+   "counted": "2026-11-20T01:46:42+00:00",
    "by": {
     "app": {
-     "n": 5,
+     "n": 6,
      "limit": 20,
      "open": true
     },
@@ -613,14 +636,23 @@
      "open": false
     }
    },
-   "at": "2026-11-20T01:38:08+00:00"
+   "at": "2026-11-20T01:51:50+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-20T01:38:08+00:00"
+   "at": "2026-11-20T01:51:50+00:00"
   }
  },
  "operators": [
+  {
+   "w": "Operator",
+   "a": "Main plan",
+   "sr": 1,
+   "m": "sonnet",
+   "e": "low",
+   "t": "Evening report",
+   "at": "2026-11-19T20:51:53-05:00"
+  },
   {
    "w": "Operator",
    "a": "Jeremy's Account",
@@ -650,10 +682,10 @@
   "main": 0,
   "lanes": 1,
   "total": 1,
-  "at": "8:39 PM",
+  "at": "8:52 PM",
   "why": "",
-  "at_iso": "2026-11-20T01:39:00+00:00",
+  "at_iso": "2026-11-20T01:52:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 8:39 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 8:52 PM ET</p></section>"
  }
 }

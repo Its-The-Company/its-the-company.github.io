@@ -42,8 +42,6 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 ## Lessons
 - T-4956 11-18: ticked lines leave the board for log/board-archive.md; a claim release writes a new slot, whose mtime is the release time.
-- T-5065 11-19: the T-2117 close_by row (supervisor_test timelimit) is red by load: 5 reds since 11-09, one with no supervisor.sh change; mine passed 18/0 at load 23. A main probe that passed doesn't prove a branch's red is its own.
-- T-5048 11-19: TOOL_GROUPS rows carry forms/fallback/match, so build groups a tool's pieces with no By slot; a test fixture never reaches the live board (group and note only when reserve/add are the tool's own). main_green.py held by T-4907: patch in scratch, owed.
 - T-4838 11-19 cd29327d14: a land past 20 min runs with run_in_background and a 2 h timeout, not foreground. Before any land retry, set every unnamed copy file to main's tip: my copy's old personal_land_test.sh (pre mask fix) read as my red. main_gate_test waits on real heavy slots (>60 min at load 45; 925 s stubbed). Runner deploy = VERSION bump; it self-updates between jobs. Owed T-5111.
 - T-4843 11-19 6d60a7e7b9: a new daily tool needs both a jobs_loop JOBS+TOOL row and a supervisor `! moved <job>` step (jobs_loop_test checks it). board titles max 10 words/64 chars.
 - T-5135 11-19 0284422ee0: board_tick refuses title words in ops/title_words.txt ('<span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span>'): check that list before an add. Route timing: flow.jsonl ready->merged (src land) vs main_gate.jsonl first row->merged (src main_gate).
@@ -52,6 +50,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-4849 11-19 81b523c183: a test fixture with dated names (park stamps) must pin now= on every call that ages them; wall clock turned two rows red by date alone.
 - T-5103 11-19: a suite red on main with no fix line: bisect the fixture's inputs (tools it copies), not just the tool under test. personal_off's 32 reds were T-5075's board.py (loose 'waiting on X' no longer holds a line), not T-4807; fixture waits must be '#N'.
 - T-5180 11-19 4108e9244d: board_tick add writes the main checkout's board and wants --by, no Base/By slots. A busy line ('being handed to a spare', 'marker is dropped') must end a wait in land_idle, or one branch counts 6 h (11-13: 8.31 -> 2.49 h). Owed T-5197 (24 h read 11-20), T-5198 (pick_now test).
+- T-4995 11-19: land_xc.jsonl minutes/land replays exactly (10.70 check passes); gate retest narrowed 0 of 1 retry in 22.5 h (9.92/land from fewer reds). Re-read when retries pile up.
 {% endraw %}
 
 

@@ -70,6 +70,34 @@ lands go through the gate.
    rows. Today's count is 0, because nothing has run narrowed yet.
 4. The minutes above are an estimate from a replay. The real figure comes from `only_testing` result rows once
    lands run.
+
+## MacBook minutes per land after T-4792 (gate retests)
+
+Odalys, 2026-11-19, T-4995. Same method and same proxy as above, on the main checkout's `ops/metrics/land_xc.jsonl`
+(read 10:15 PM 11-19), from fbf1569bf2 (T-4792, on main 2026-11-18 11:18:35 PM, main's reflog) to the ledger's last row
+(9:51 PM 11-19). **That is 22.5 hours, under the 24 asked for**, and a small sample. The check of the method: the same
+script on 11-05 2:57 PM to 11-17 5:27 PM gives 271 results, 1862.3 min, 174 lands, 10.70, 844.0 and 1018 min as above.
+
+- **After T-4792 (measured): 9.92 MacBook min per land** (10.70 before, 10.48 the replay's estimate). 11 result rows
+  (11:39 PM 11-18 to 3:36 PM 11-19), all with seconds, 89.3 min; 10 green, 1 red, 0 could not run; 9 lands. Lane path
+  5 checks, 41.7 min, 5 tasks (8.33); gate path 6 checks, 47.6 min, 4 tasks (11.90). Three lane jobs queued at
+  9:05-9:08 PM (b2, b44, b56) had no result yet and are not counted.
+- **Gate retries narrowed: 0.** One retry after a red in the window, a gate land: T-5047, red
+  J-20261119-0909-land-m-417d66 (code 65, 457.4 s), then J-20261119-0931-land-m-236405, green, 454.3 s, whole unit
+  target (its queued row has no `only_testing`; no row in land_xc.jsonl or main_gate.jsonl has one in the window).
+  The rule replayed with the ledger as it stood at 9:31 AM (head 0c80ca5275, main 8f05c2b061) answers full: "no test
+  class covers pywidget/docs/how-it-works/script-to-home-screen.md". It would be full without that file too:
+  pywidget/ios/Widget/DebugDrawRecord.swift has no test class, and the other files reach far more than 20 classes.
+  So the gate asked the right question and the right answer was the whole target.
+- **Narrowed passes later found red by main's full run: none**, because there was no narrowed pass to check.
+- **Why the figure fell anyway.** Retries were 1 of 11 checks (7.6 min, 8% of land minutes; 15% before), and there
+  were 1.22 checks per land (1.56 before). Each check took longer, not shorter: median 458 s (414 s before). The fall is fewer
+  reds, not T-4792, and 9 lands is too few to call it a trend.
+
+Plain: In the 22.5 hours after the gate started retesting only what failed, the MacBook spent 9.92 minutes of tests
+per finished land, down from 10.70. The new rule did not cause that: only one land needed a second try, and its fix
+touched files no narrow test covers, so it rightly ran every test again. Nothing ran narrowed, so nothing narrowed
+slipped a red past main. The real test of T-4792 needs more retries than one day gave.
 {% endraw %}
 
 </div>

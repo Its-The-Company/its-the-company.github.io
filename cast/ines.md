@@ -37,7 +37,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - account fixes T-4305 — unified session: no; #303 pending
 - 1.0 = Builder + Pages + widget taps/buttons (#270, #272, #41). Likely Wed 2027-07-21, range 04-13 to 12-10 (T-4870, 11-18: snap drag and drop checked at 4.25 slot weeks; two-way editing #287 C still unchecked by Idris). Range: ops/plans/T-4266-release-range.py. B-staged Pro stands.
 - Board: never pre-number lines (`add` assigns IDs, T-2354); grep the board before `add`; stage my lines only (T-3204). A <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> `add` writes main's live board; card: no Base/By (pass --by), one Done-when kind + docs page (T-4672).
-- Showcase premades plan: ops/plans/T-4672-showcase-premades.md (Pro tag model #41 12:27 AM 11-17; themes split + Pro words are proposals).
+- Showcase premades: ops/plans/T-4672-showcase-premades.md (themes split, Pro words are proposals).
 - Standing lessons: run `date` before every stamp; grep my own proposals and git log before ruling; read a new rule against the ADR it touches; when two fixes interact, check the bound under both. Never write "ships as is" without a grep at HEAD (T-0791: an unbuilt BGAppRefresh went into the guide as shipped).
 - Never route round a refusal by copying the refused content another way (11-05 E1 route, owned 11-15).
 - A packet's premise is a claim (T-3585): count from the gate's own log. "Live" may be only a <span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">parked</span> ref, "back to to do" may already be on HEAD: merge-base --is-ancestor both ways (T-3864, T-4096). Outbox ticks can be lost: board-grep a "ticked" ID.
@@ -48,6 +48,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-4770 (11-18): checked line Tue 2027-07-27 (02-21 to 12-24), snap 4.25; milestones.json not moved (6 days; move once when T-4871 closes). Ratios 0.57/0.50 are two points, 0.50 retracted.
 - T-3402 (11-19): OpenSSL removal stays in 1.0 (T-3401 started); cut-off freeze 11-30 11:59 PM, else 1.0.1. A check whose answer can't flip back is ruled when the evidence lands, not on its date.
 - T-5165 (11-19): standing list reviewed (ops/plans/standing-rules-review.md); 107 lines retired via ruling_record.py retire/amend, ledger handbook/standing-retired.md; spent entries naming a ban stay.
+- T-5146 (11-20): 70 lines ordered at board top by a board_tick move chain; stars #338; #325 c7030924746. A note's hash may differ from the landed one: grep git log.
 {% endraw %}
 
 

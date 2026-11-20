@@ -598,9 +598,10 @@ changes Swift.
     in the Investors' hands.
 11. **Order, and how many at once.** The two P0 features first (T-4180, T-4181). Two features that share a Target
     (section 1) go one behind the other. Feature sessions on different lanes still share the one Xcode lock for
-    every build and test run, so they wait on each other there (Idris). Start with two app feature sessions at a
-    time and read the lock wait each run records (ops/metrics/xc.jsonl) before allowing a third. The two is a
-    bound I chose.
+    every build and test run, so they wait on each other there (Idris). There is no bound on how many app feature
+    sessions run at once (T-4587, Investor an Investor #41 c6923065128: remove arbitrary limits): the lanes' own
+    pools are the bound. The lock wait each run records (ops/metrics/xc.jsonl) is still read; the earlier bound of
+    two was one I chose, and it is gone.
 
     **Changed 2026-11-16 (Idris, T-4587).** The Investors asked for feature sessions across the board and for any
     limit that is not needed to go (an Investor, #41

@@ -652,6 +652,8 @@ The Effect lines of the amendments.md entries the charter retired (2026-11-04 12
 - **2026-11-19 2:14 PM ET** ((private)): The process and site merge queue limit (limits.other) rises from 8 to 20 tasks waiting to merge; the app (20) and gate and scheduler (1) limits are unchanged.
 - **2026-11-19 2:48 PM ET** ((private)): Narrows the 2:13 PM ruling: only process work designed to reduce the merge queue runs free of the pool cap and the process and site merge limit; all other process work keeps those limits until the queue is down.
 - **2026-11-19 4:31 PM ET** ((private)): T-4010 draws the unified flow: one coordinator for every account (T-5005) and one merge route (T-5139), plus the other requested process changes; its live build waits until those are on main, and the mock-ups are redrawn for that flow before they go to the Investors.
+- **2026-11-20 12:01 AM ET** ((private)): When the disk keeper can't get the Mac mini's internal disk back over its line, it runs a deeper automatic cleanup aimed at what filled the disk instead of posting an alert; the 'could not get it back over' note is retired once that cleanup exists (T-5041).
+- **2026-11-20 1:51 AM ET** ((private)): For the length of the trim (T-5252) only: a bottleneck no longer opens a big-picture fix task automatically, and process tasks no longer go first; the hand-out's process work is paused and app work goes on. Both rulings return when the trim's last step is done or the Investors say so.
 {% endraw %}
 
 </div>

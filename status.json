@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-20T06:31:43.911029+00:00",
+ "at": "2026-11-20T06:34:50.333113+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -184,7 +184,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 642,
+  "runnable_count": 654,
   "blocked_count": 2
  },
  "meter": {
@@ -233,7 +233,7 @@
   "week_pct": 72.95,
   "usage_pct": 49.0,
   "work_pct": 81.3,
-  "read_at": "2026-11-20T06:31:00+00:00",
+  "read_at": "2026-11-20T06:34:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -324,14 +324,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-20T01:31:00-05:00",
+   "at": "2026-11-20T01:32:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-20T01:31:00-05:00",
+  "at": "2026-11-20T01:34:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -342,8 +342,8 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Double Spread: past the week's halfway point with room left, so twice the even pace until the limit or the reset; the machine allows 2 (new work waits: the count of tasks waiting to merge is 35268...",
-  "n": 2,
+  "why": "Double Spread: past the week's halfway point with room left, so twice the even pace until the limit or the reset; the machine allows 3 (raised a step toward the floor of 8: new work may start and...",
+  "n": 3,
   "at": "2026-11-19T23:41:21.283033-05:00"
  },
  "lanes": [
@@ -489,7 +489,7 @@
    }
   ],
   "count": {
-   "next": 642,
+   "next": 654,
    "wait": 2,
    "blocked": 0,
    "you": 2
@@ -543,37 +543,37 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-20T06:31:36Z",
+  "at": "2026-11-20T06:34:30Z",
   "s": {
    "T-4181": [
     "merging",
     "Host checks on the Mac mini",
-    1795151676290
+    1795151670834
    ],
    "T-4994": [
     "mergeq",
     "1st to merge",
-    1795153236290
+    1795153230834
    ],
    "T-4850": [
     "mergeq",
     "3rd to merge",
-    1795153536290
+    1795153530834
    ],
    "T-4806": [
     "mergeq",
     "4th to merge",
-    1795148316290
+    1795148310834
    ],
    "T-0349": [
     "mergeq",
     "5th to merge",
-    1795147956290
+    1795147950834
    ],
    "T-4184": [
     "mergeq",
     "6th to merge",
-    1795152576290
+    1795152570834
    ],
    "T-4813": [
     "merged",
@@ -603,7 +603,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-20T06:31:36Z",
+  "at": "2026-11-20T06:34:30Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -615,13 +615,13 @@
     "parked": 1
    },
    "m": {
-    "checking": 77,
-    "inline": 62,
-    "conflicted": 1541,
+    "checking": 80,
+    "inline": 65,
+    "conflicted": 1544,
     "failed": null,
     "held": null,
-    "retry": 146,
-    "parked": 151
+    "retry": 149,
+    "parked": 154
    },
    "cur": [
     [
@@ -630,7 +630,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     77
+     80
     ]
    ],
    "ld": [
@@ -640,12 +640,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-20T06:31:28Z",
-    "ld": 11.28,
+    "at": "2026-11-20T06:33:42Z",
+    "ld": 8.56,
     "c": 8,
     "sb": 0,
     "dk": [
-     24.1,
+     23.8,
      228.3
     ],
     "ss": [
@@ -693,11 +693,11 @@
      "open": true
     }
    },
-   "at": "2026-11-20T06:31:43+00:00"
+   "at": "2026-11-20T06:34:50+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-20T06:31:29+00:00"
+   "at": "2026-11-20T06:34:43+00:00"
   }
  },
  "operators": [
@@ -725,8 +725,8 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Inbox \u2013 Evan's 1:28 AM Message on GitHub",
-   "at": "2026-11-20T01:29:08-05:00"
+   "t": "Work session \u2013 2 tasks",
+   "at": "2026-11-20T01:33:36-05:00"
   },
   {
    "w": "Operator",
@@ -739,27 +739,15 @@
   }
  ],
  "reply": {
-  "sent": "2026-11-20T06:20:24Z",
-  "seconds": 80.0
+  "sent": "2026-11-20T06:28:46Z",
+  "seconds": 289.0
  },
- "inbox": [
-  {
-   "id": "c7032290657",
-   "state": "received",
-   "position": 1,
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "Do this immediately and stop all..."
-  }
- ],
+ "inbox": [],
  "trimmed": [
   "lane_next",
   "queue_text",
   "task_done",
   "fin_short",
-  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -770,10 +758,10 @@
   "main": 0,
   "lanes": 3,
   "total": 3,
-  "at": "1:31 AM",
+  "at": "1:34 AM",
   "why": "",
-  "at_iso": "2026-11-20T06:31:00+00:00",
+  "at_iso": "2026-11-20T06:34:00+00:00",
   "started": "11:42 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 11:42 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 1:31 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 11:42 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 1:34 AM ET</p></section>"
  }
 }

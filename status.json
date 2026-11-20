@@ -1,11 +1,55 @@
 {
  "schema": 1,
- "at": "2026-11-20T14:41:56.357776+00:00",
+ "at": "2026-11-20T14:45:13.944900+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-20T09:23:01-05:00",
   "flow": [
+   {
+    "t": "T-5236",
+    "name": "Send land host tests to the MacBook under heavy load",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "testq",
+      "at": 1795185734
+     }
+    ]
+   },
+   {
+    "t": "T-5234",
+    "name": "Move merge tests to the MacBook under heavy load",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "testq",
+      "at": 1795185734
+     }
+    ]
+   },
+   {
+    "t": "T-4807",
+    "name": "Fix every bad test that failed a merge",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "testq",
+      "at": 1795185734
+     }
+    ]
+   },
+   {
+    "t": "T-5154",
+    "name": "Keep the company account signed in to Claude Code",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "testq",
+      "at": 1795185734
+     }
+    ]
+   },
    {
     "t": "T-5298",
     "steps": [
@@ -126,6 +170,22 @@
     ]
    },
    {
+    "t": "T-4847",
+    "name": "Keep every drive clean automatically, for good",
+    "w": "Odalys",
+    "acct": "Personal b",
+    "steps": [
+     {
+      "s": "claimed",
+      "at": 1795185795
+     },
+     {
+      "s": "worker",
+      "at": 1795185795
+     }
+    ]
+   },
+   {
     "t": "T-4726",
     "name": "Fix the red personal land test",
     "w": "Odalys",
@@ -138,22 +198,6 @@
      {
       "s": "worker",
       "at": 1795184527
-     }
-    ]
-   },
-   {
-    "t": "T-4847",
-    "name": "Keep every drive clean automatically, for good",
-    "w": "Odalys",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "claimed",
-      "at": 1795184459
-     },
-     {
-      "s": "worker",
-      "at": 1795184459
      }
     ]
    },
@@ -280,7 +324,7 @@
    "task": "[build] T-5047 token test red card",
    "model": "opus",
    "started": "2026-11-20T14:25:57.326Z",
-   "seconds": 959,
+   "seconds": 1156,
    "finished": null,
    "effort": "high"
   },
@@ -289,22 +333,30 @@
    "task": "[build] T-4550 button action run, slice 2",
    "model": "opus",
    "started": "2026-11-20T14:26:07.585Z",
-   "seconds": 948,
+   "seconds": 1146,
    "finished": null,
    "effort": "high"
   },
+  {
+   "name": "pernille",
+   "task": "[test] T-4634 flaky github hang test",
+   "model": "opus",
+   "started": "2026-11-20T14:44:23.179Z",
+   "seconds": 50,
+   "finished": null,
+   "effort": "high"
+  }
+ ],
+ "who": "Idris, Pernille x2",
+ "recent": [
   {
    "name": "ines",
    "task": "[plan] T-5341 Controls date effect report",
    "model": "fable",
    "started": "2026-11-20T14:33:29.911Z",
-   "seconds": 506,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Idris, Pernille, Ines",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-20T14:42:24.959000+00:00"
+  },
   {
    "name": "idris",
    "task": "[plan] T-4842 confirm and close Controls plan",
@@ -330,21 +382,21 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 25.0,
+   "pct": 28.0,
    "resets_at": "2026-11-20T13:20:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-20T09:38:35.982813-05:00",
+   "read_at": "2026-11-20T09:43:39.402637-05:00",
    "source": "live",
-   "left": 75.0,
+   "left": 72.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 89.0,
+   "pct": 90.0,
    "resets_at": "2026-11-22T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-20T09:38:35.982813-05:00",
+   "read_at": "2026-11-20T09:43:39.402637-05:00",
    "source": "live",
-   "left": 11.0,
+   "left": 10.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
@@ -354,7 +406,7 @@
    "read_at": "2026-11-20T09:21:58.972439-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-20T09:38:35.982813-05:00"
+  "read_at": "2026-11-20T09:43:39.402637-05:00"
  },
  "ui": {
   "week_pct": 0.112,
@@ -374,7 +426,7 @@
   "week_pct": 82.11,
   "usage_pct": 48.3,
   "work_pct": 79.9,
-  "read_at": "2026-11-20T14:42:00+00:00",
+  "read_at": "2026-11-20T14:45:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -432,7 +484,7 @@
   }
  ],
  "disk": {
-  "free_gb": 25,
+  "free_gb": 24,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -441,14 +493,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-20T09:40:00-05:00",
+   "at": "2026-11-20T09:45:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-20T09:42:00-05:00",
+  "at": "2026-11-20T09:45:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -459,7 +511,7 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Double Spread: past the week's halfway point with room left, so twice the even pace until the limit or the reset; the machine allows 8 (at its floor: load 21.7 a core is over 10)",
+  "why": "Double Spread: past the week's halfway point with room left, so twice the even pace until the limit or the reset; the machine allows 8 (at its floor: load 72.3 a core is over 10)",
   "n": 3,
   "at": "2026-11-20T09:22:05.059755-05:00"
  },
@@ -483,18 +535,17 @@
    "effort": "high"
   },
   {
-   "name": "Ines",
-   "state": "running",
-   "task": "[plan] T-5341 Controls date effect report",
-   "model": "fable",
-   "since": "2026-11-20T14:33:29.911Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
    "name": "Odalys",
    "state": "next",
    "task": "Odalys, P0, merge-first, Investor an Investor c7031233507...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
+   "name": "Ines",
+   "state": "next",
+   "task": "Ines, P0, from Investor an Investor c7016129138 (12:02 PM...",
    "model": null,
    "since": null,
    "next": []
@@ -539,14 +590,14 @@
     "task": "T-4550"
    },
    {
-    "w": "Ines",
-    "k": "plan",
-    "t": "Tell the Investors what Controls do to the date",
-    "m": "fable",
+    "w": "Pernille",
+    "k": "test",
+    "t": "Github hang test is cut before the GET under load",
+    "m": "opus",
     "e": "high",
-    "at": "2026-11-20T14:33:29.911Z",
+    "at": "2026-11-20T14:44:23.179Z",
     "o": "c",
-    "task": "T-5341"
+    "task": "T-4634"
    }
   ],
   "src": "plan",
@@ -702,43 +753,42 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-20T14:41:56Z",
+  "at": "2026-11-20T14:44:59Z",
   "s": {
    "T-5236": [
     "merging",
-    "Rebasing onto current main",
-    1795185716357
+    "Host checks on the Mac mini",
+    1795185779096
    ],
    "T-5234": [
     "merging",
-    "Rebasing onto current main",
-    1795185716357
+    "Host checks on the Mac mini",
+    1795185779096
    ],
    "T-4807": [
     "merging",
-    "Rebasing onto current main",
-    1795185716357
+    "Host checks on the Mac mini",
+    1795185779096
    ],
    "T-5154": [
     "merging",
-    "Rebasing onto current main",
-    1795185716357
+    "Host checks on the Mac mini",
+    1795185779096
+   ],
+   "T-4550": [
+    "merging",
+    "Mac tests at the main gate",
+    1795185779096
    ],
    "T-3995": [
     "merging",
     "Mac tests at the main gate",
-    1795184456357
+    1795184459096
    ],
    "T-5047": [
     "testing",
     "Mac Mini \u00b7 test",
     null
-   ],
-   "T-5341": [
-    "merged",
-    "on main 9:40 AM ET",
-    1795185627000,
-    "Ines"
    ]
   },
   "nm": {
@@ -746,15 +796,16 @@
    "T-5234": "Move merge tests to the MacBook under heavy load",
    "T-4807": "Fix every bad test that failed a merge",
    "T-5154": "Keep the company account signed in to Claude Code",
+   "T-4550": "Python contract and action run for widget buttons",
    "T-3995": "Replace the waiting pile with one merge line",
-   "T-5047": "Fix the token test's No view for this size card",
-   "T-5341": "Tell the Investors what Controls do to the date"
+   "T-5047": "Fix the token test's No view for this size card"
   },
   "wk": {
    "T-5236": "Odalys",
    "T-5234": "Odalys",
    "T-4807": "Pernille",
    "T-5154": "Odalys",
+   "T-4550": "Pernille",
    "T-3995": "Operator",
    "T-5047": "Idris",
    "T-5341": "Ines",
@@ -763,7 +814,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-20T14:41:56Z",
+  "at": "2026-11-20T14:44:59Z",
   "mq": {
    "n": {
     "checking": 4,
@@ -771,50 +822,50 @@
     "conflicted": 2,
     "failed": 1,
     "held": 0,
-    "retry": 1,
+    "retry": 0,
     "parked": 3
    },
    "m": {
-    "checking": 0,
+    "checking": 2,
     "inline": null,
-    "conflicted": 2031,
-    "failed": 2,
+    "conflicted": 2034,
+    "failed": 5,
     "held": null,
-    "retry": 185,
-    "parked": 185
+    "retry": null,
+    "parked": 188
    },
    "cur": [
     [
      [
       "T-5236"
      ],
-     "lining up with main",
+     "Mac tests",
      "Mac mini",
-     0
+     2
     ],
     [
      [
       "T-5234"
      ],
-     "lining up with main",
+     "Mac tests",
      "Mac mini",
-     0
+     2
     ],
     [
      [
       "T-4807"
      ],
-     "lining up with main",
+     "Mac tests",
      "Mac mini",
-     0
+     2
     ],
     [
      [
       "T-5154"
      ],
-     "lining up with main",
+     "Mac tests",
      "Mac mini",
-     0
+     2
     ]
    ],
    "ld": [
@@ -824,12 +875,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-20T14:41:27Z",
-    "ld": 56.05,
+    "at": "2026-11-20T14:44:27Z",
+    "ld": 76.87,
     "c": 8,
     "sb": 1,
     "dk": [
-     25.3,
+     24.0,
      228.3
     ],
     "ss": [
@@ -879,11 +930,11 @@
      "open": false
     }
    },
-   "at": "2026-11-20T14:41:56+00:00"
+   "at": "2026-11-20T14:45:13+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-20T14:41:56+00:00"
+   "at": "2026-11-20T14:44:59+00:00"
   }
  },
  "operators": [
@@ -893,7 +944,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 5 tasks",
+   "t": "Work session \u2013 6 tasks",
    "at": "2026-11-20T09:23:01-05:00"
   },
   {
@@ -902,7 +953,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 4 tasks",
+   "t": "Work session \u2013 5 tasks",
    "at": "2026-11-20T09:20:55-05:00"
   }
  ],
@@ -926,10 +977,10 @@
   "main": 3,
   "lanes": 1,
   "total": 4,
-  "at": "9:42 AM",
+  "at": "9:45 AM",
   "why": "",
-  "at_iso": "2026-11-20T14:42:00+00:00",
+  "at_iso": "2026-11-20T14:45:00+00:00",
   "started": "9:23 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 3, started 9:23 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 9:42 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 3, started 9:23 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 9:45 AM ET</p></section>"
  }
 }

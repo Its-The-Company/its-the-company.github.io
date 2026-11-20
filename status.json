@@ -1,10 +1,10 @@
 {
  "schema": 1,
- "at": "2026-11-20T14:09:19.481997+00:00",
+ "at": "2026-11-20T14:22:57.084060+00:00",
  "session": {
-  "active": true,
-  "kind": "work",
-  "started": "2026-11-20T09:02:08-05:00",
+  "active": false,
+  "kind": "",
+  "started": null,
   "flow": [
    {
     "t": "T-4182",
@@ -145,6 +145,38 @@
     ]
    },
    {
+    "t": "T-4726",
+    "name": "Fix the red personal land test",
+    "w": "Odalys",
+    "acct": "Personal b",
+    "steps": [
+     {
+      "s": "claimed",
+      "at": 1795184527
+     },
+     {
+      "s": "worker",
+      "at": 1795184527
+     }
+    ]
+   },
+   {
+    "t": "T-4847",
+    "name": "Keep every drive clean automatically, for good",
+    "w": "Odalys",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "claimed",
+      "at": 1795184459
+     },
+     {
+      "s": "worker",
+      "at": 1795184459
+     }
+    ]
+   },
+   {
     "t": "T-4811",
     "name": "Show waiting tasks under the task they wait on",
     "w": "Maren",
@@ -228,7 +260,6 @@
    },
    {
     "t": "T-4796",
-    "name": "Say which premades carry the Pro tag",
     "acct": "Personal b",
     "steps": [],
     "end": "landed",
@@ -260,7 +291,7 @@
     "why": "tests failed"
    }
   ],
-  "landed": 21,
+  "landed": 20,
   "failed": 13
  },
  "workers": [],
@@ -274,34 +305,34 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 8.0,
-   "resets_at": "2026-11-20T13:20:00-05:00",
+   "pct": 16.0,
+   "resets_at": "2026-11-20T18:20:00.159543+00:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-20T09:07:12.743187-05:00",
-   "source": "live",
-   "left": 92.0,
+   "read_at": "2026-11-20T09:21:58.972439-05:00",
+   "source": "usage",
+   "left": 84.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 85.0,
-   "resets_at": "2026-11-22T02:00:00-05:00",
+   "pct": 88.0,
+   "resets_at": "2026-11-22T07:00:00.159563+00:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-20T09:07:12.743187-05:00",
-   "source": "live",
-   "left": 15.0,
+   "read_at": "2026-11-20T09:21:58.972439-05:00",
+   "source": "usage",
+   "left": 12.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
-   "pct": 11.0,
-   "resets_at": "2026-11-22T07:00:00.812772+00:00",
+   "pct": 16.0,
+   "resets_at": "2026-11-22T07:00:00.159698+00:00",
    "used_words": "of the Fable weekly allowance used",
-   "read_at": "2026-11-20T09:01:33.199258-05:00",
+   "read_at": "2026-11-20T09:21:58.972439-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-20T09:07:12.743187-05:00"
+  "read_at": "2026-11-20T09:21:58.972439-05:00"
  },
  "ui": {
-  "week_pct": 0.108,
+  "week_pct": 0.112,
   "five_hour_pct": 0.0,
   "caps_pct": {
    "week": 3.0,
@@ -313,13 +344,50 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": null,
+ "next_tick": "2026-11-20T09:37:05-05:00",
  "personal": {
-  "week_pct": 79.37,
+  "week_pct": 82.11,
   "usage_pct": 48.3,
-  "work_pct": 80.1,
-  "read_at": "2026-11-20T14:09:00+00:00",
-  "running": []
+  "work_pct": 79.9,
+  "read_at": "2026-11-20T14:23:00+00:00",
+  "running": [
+   {
+    "lane": "b",
+    "task": "T-5258",
+    "w": "Odalys",
+    "k": "ops",
+    "t": "Trim step 5, retire the old landing and retry layer",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-20T09:20:55-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
+   },
+   {
+    "lane": "b",
+    "task": "T-3995",
+    "w": "Operator",
+    "k": "tools",
+    "t": "Replace the waiting pile with one merge line",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-20T09:20:55-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
+   },
+   {
+    "lane": "b",
+    "task": "T-5197",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Read the merge step's idle day after late arrivals join",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-20T09:20:55-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
+   }
+  ]
  },
  "api_credits": [
   {
@@ -339,7 +407,7 @@
   }
  ],
  "disk": {
-  "free_gb": 29,
+  "free_gb": 31,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -348,14 +416,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-20T09:07:00-05:00",
+   "at": "2026-11-20T09:18:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-20T09:09:00-05:00",
+  "at": "2026-11-20T09:23:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -363,13 +431,9 @@
    "b": "double-spread"
   }
  },
- "next_tick_why": "session",
+ "next_tick_why": "last_tick",
  "idle": null,
- "pool": {
-  "why": "Double Spread: past the week's halfway point with room left, so twice the even pace until the limit or the reset; the machine allows 8 (held: too few lands in 3 hours to judge a raise)",
-  "n": 3,
-  "at": "2026-11-20T09:01:34.514365-05:00"
- },
+ "pool": null,
  "lanes": [
   {
    "name": "Odalys",
@@ -422,7 +486,6 @@
  ],
  "tasks": {
   "run": [],
-  "src": "plan",
   "open": [
    {
     "w": "Odalys",
@@ -517,10 +580,6 @@
    "wait": 2,
    "blocked": 0,
    "you": 2
-  },
-  "fin": {
-   "n": 0,
-   "rows": []
   }
  },
  "qr": [
@@ -562,23 +621,30 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-20T14:09:06Z",
+  "at": "2026-11-20T14:22:57Z",
   "s": {
    "T-4182": [
     "merging",
     "Host checks on the Mac mini",
-    1795183146015
+    1795183137084
+   ],
+   "T-3995": [
+    "merging",
+    "Mac tests at the main gate",
+    1795184457084
    ]
   },
   "nm": {
-   "T-4182": "A failing widget says so and can recover"
+   "T-4182": "A failing widget says so and can recover",
+   "T-3995": "Replace the waiting pile with one merge line"
   },
   "wk": {
-   "T-4182": "Idris"
+   "T-4182": "Idris",
+   "T-3995": "Operator"
   }
  },
  "ln": {
-  "at": "2026-11-20T14:09:06Z",
+  "at": "2026-11-20T14:22:57Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -590,13 +656,13 @@
     "parked": 2
    },
    "m": {
-    "checking": 10,
+    "checking": 24,
     "inline": null,
-    "conflicted": 1998,
+    "conflicted": 2012,
     "failed": null,
     "held": null,
-    "retry": 286,
-    "parked": 285
+    "retry": 300,
+    "parked": 299
    },
    "cur": [
     [
@@ -605,7 +671,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     10
+     24
     ]
    ],
    "ld": [
@@ -615,12 +681,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-20T14:09:07Z",
-    "ld": 5.02,
+    "at": "2026-11-20T14:23:00Z",
+    "ld": 4.18,
     "c": 8,
     "sb": 0,
     "dk": [
-     26.4,
+     28.7,
      228.3
     ],
     "ss": [
@@ -650,7 +716,7 @@
    "parked": 9,
    "open": true,
    "mq": false,
-   "counted": "2026-11-20T14:01:10+00:00",
+   "counted": "2026-11-20T14:17:18+00:00",
    "by": {
     "app": {
      "n": 3,
@@ -668,22 +734,22 @@
      "open": false
     }
    },
-   "at": "2026-11-20T14:09:19+00:00"
+   "at": "2026-11-20T14:22:57+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-20T14:09:19+00:00"
+   "at": "2026-11-20T14:22:57+00:00"
   }
  },
  "operators": [
   {
    "w": "Operator",
-   "a": "Main plan",
+   "a": "Jeremy's Account",
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session",
-   "at": "2026-11-20T09:03:55-05:00"
+   "t": "Work session \u2013 4 tasks",
+   "at": "2026-11-20T09:20:55-05:00"
   }
  ],
  "reply": {
@@ -703,12 +769,12 @@
  ],
  "agents_now": {
   "main": 0,
-  "lanes": 0,
-  "total": 0,
-  "at": "9:09 AM",
-  "why": "Between sessions: no session is running. Last check 9:01 AM ET.",
-  "at_iso": "2026-11-20T14:09:00+00:00",
+  "lanes": 1,
+  "total": 1,
+  "at": "9:23 AM",
+  "why": "",
+  "at_iso": "2026-11-20T14:23:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:09 AM ET</p><p class=\"an-why\">Between sessions: no session is running. Last check 9:01 AM ET.</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 9:23 AM ET</p></section>"
  }
 }

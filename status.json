@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-20T11:12:37.849371+00:00",
+ "at": "2026-11-20T11:15:26.529542+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -173,7 +173,7 @@
    "task": "[build] T-5293 drop altitude history when location off",
    "model": "opus",
    "started": "2026-11-20T10:38:12.538Z",
-   "seconds": 2065,
+   "seconds": 2233,
    "finished": null,
    "effort": "high"
   },
@@ -182,7 +182,7 @@
    "task": "[report] morning",
    "model": "opus",
    "started": "2026-11-20T10:52:08.891Z",
-   "seconds": 1228,
+   "seconds": 1397,
    "finished": null,
    "effort": "high"
   },
@@ -191,7 +191,7 @@
    "task": "[review] T-4945 widget run lock concurrency check",
    "model": "opus",
    "started": "2026-11-20T10:54:05.184Z",
-   "seconds": 1112,
+   "seconds": 1281,
    "finished": null,
    "effort": "high"
   }
@@ -239,19 +239,19 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 12.0,
+   "pct": 13.0,
    "resets_at": "2026-11-20T08:20:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-20T06:01:59.605278-05:00",
+   "read_at": "2026-11-20T06:14:21.034246-05:00",
    "source": "live",
-   "left": 88.0,
+   "left": 87.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 80.0,
    "resets_at": "2026-11-22T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-20T06:01:59.605278-05:00",
+   "read_at": "2026-11-20T06:14:21.034246-05:00",
    "source": "live",
    "left": 20.0,
    "left_words": "of your weekly allowance left"
@@ -263,7 +263,7 @@
    "read_at": "2026-11-20T02:09:37.522634-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-20T06:01:59.605278-05:00"
+  "read_at": "2026-11-20T06:14:21.034246-05:00"
  },
  "ui": {
   "week_pct": 0.104,
@@ -283,7 +283,7 @@
   "week_pct": 73.63,
   "usage_pct": 48.9,
   "work_pct": 81.3,
-  "read_at": "2026-11-20T11:12:00+00:00",
+  "read_at": "2026-11-20T11:16:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -351,14 +351,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-20T06:11:00-05:00",
+   "at": "2026-11-20T06:14:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-20T06:12:00-05:00",
+  "at": "2026-11-20T06:16:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -622,62 +622,62 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-20T11:12:37Z",
+  "at": "2026-11-20T11:15:26Z",
   "s": {
    "T-4184": [
     "merging",
     "Host checks on the Mac mini",
-    1795170517849
+    1795170566529
    ],
    "T-5247": [
     "mergeq",
     "1st to merge",
-    1795170577849
+    1795170566529
    ],
    "T-4994": [
     "mergeq",
     "2nd to merge",
-    1795169317849
+    1795169306529
    ],
    "T-5180": [
     "mergeq",
     "2nd to merge",
-    1795169317849
+    1795169306529
    ],
    "T-4796": [
     "mergeq",
     "3rd to merge",
-    1795172977849
+    1795172966529
    ],
    "T-4182": [
     "mergeq",
     "4th to merge",
-    1795156837849
+    1795156886529
    ],
    "T-4181": [
     "mergeq",
     "5th to merge",
-    1795157797849
+    1795157786529
    ],
    "T-2377": [
     "mergeq",
     "6th to merge",
-    1795172557849
+    1795172546529
    ],
    "T-4662": [
     "mergeq",
     "6th to merge",
-    1795172557849
+    1795172546529
    ],
    "T-4670": [
     "mergeq",
     "6th to merge",
-    1795172557849
+    1795172546529
    ],
    "T-5293": [
     "testing",
     "its own tests, in its copy",
-    1795172077849
+    1795172066529
    ],
    "T-4945": [
     "merged",
@@ -728,7 +728,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-20T11:12:37Z",
+  "at": "2026-11-20T11:15:26Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -740,13 +740,13 @@
     "parked": 2
    },
    "m": {
-    "checking": 44,
-    "inline": 43,
-    "conflicted": 1822,
+    "checking": 46,
+    "inline": 46,
+    "conflicted": 1824,
     "failed": null,
     "held": null,
-    "retry": 109,
-    "parked": 337
+    "retry": 112,
+    "parked": 340
    },
    "cur": [
     [
@@ -755,7 +755,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     44
+     46
     ]
    ],
    "ld": [
@@ -765,12 +765,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-20T11:12:44Z",
-    "ld": 12.72,
+    "at": "2026-11-20T11:15:36Z",
+    "ld": 10.74,
     "c": 8,
     "sb": 0,
     "dk": [
-     22.5,
+     22.8,
      228.3
     ],
     "ss": [
@@ -794,16 +794,16 @@
  },
  "hc": {
   "wait": {
-   "n": 18,
+   "n": 19,
    "limit": 20,
-   "in_line": 9,
+   "in_line": 10,
    "parked": 9,
    "open": true,
    "mq": false,
-   "counted": "2026-11-20T11:02:54+00:00",
+   "counted": "2026-11-20T11:13:23+00:00",
    "by": {
     "app": {
-     "n": 6,
+     "n": 7,
      "limit": 20,
      "open": true
     },
@@ -818,11 +818,11 @@
      "open": false
     }
    },
-   "at": "2026-11-20T11:12:37+00:00"
+   "at": "2026-11-20T11:15:26+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-20T11:12:37+00:00"
+   "at": "2026-11-20T11:15:26+00:00"
   }
  },
  "operators": [
@@ -867,10 +867,10 @@
   "main": 3,
   "lanes": 1,
   "total": 4,
-  "at": "6:12 AM",
+  "at": "6:16 AM",
   "why": "",
-  "at_iso": "2026-11-20T11:12:00+00:00",
+  "at_iso": "2026-11-20T11:16:00+00:00",
   "started": "2:11 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 3, started 2:11 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 6:12 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 3, started 2:11 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 6:16 AM ET</p></section>"
  }
 }

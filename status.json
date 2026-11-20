@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-20T07:18:45.598854+00:00",
+ "at": "2026-11-20T07:23:32.085351+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -14,6 +14,21 @@
      {
       "s": "testq",
       "at": 1795158920
+     }
+    ]
+   },
+   {
+    "t": "T-4181",
+    "name": "Widgets refresh on their own and by a tap",
+    "acct": "Personal b",
+    "steps": [
+     {
+      "s": "macbook",
+      "at": 1795138895
+     },
+     {
+      "s": "testq",
+      "at": 1795145119
      }
     ]
    },
@@ -144,7 +159,7 @@
     "end_at": 1795137090
    }
   ],
-  "landed": 42,
+  "landed": 37,
   "failed": 5
  },
  "workers": [
@@ -153,7 +168,7 @@
    "task": "[review] T-5215 widget send lane check",
    "model": "opus",
    "started": "2026-11-20T07:15:20.769Z",
-   "seconds": 204,
+   "seconds": 491,
    "finished": null,
    "effort": "high"
   },
@@ -162,7 +177,7 @@
    "task": "[review] T-5217 Activity open-at-line check",
    "model": "opus",
    "started": "2026-11-20T07:15:31.722Z",
-   "seconds": 193,
+   "seconds": 480,
    "finished": null,
    "effort": "high"
   },
@@ -171,7 +186,7 @@
    "task": "[review] T-4939 launcher Shortcut link check",
    "model": "opus",
    "started": "2026-11-20T07:15:42.642Z",
-   "seconds": 182,
+   "seconds": 469,
    "finished": null,
    "effort": "high"
   }
@@ -186,19 +201,19 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 11.0,
+   "pct": 12.0,
    "resets_at": "2026-11-20T03:20:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-20T02:16:31.194419-05:00",
+   "read_at": "2026-11-20T02:21:32.796613-05:00",
    "source": "live",
-   "left": 89.0,
+   "left": 88.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 77.0,
    "resets_at": "2026-11-22T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-20T02:16:31.194419-05:00",
+   "read_at": "2026-11-20T02:21:32.796613-05:00",
    "source": "live",
    "left": 23.0,
    "left_words": "of your weekly allowance left"
@@ -210,7 +225,7 @@
    "read_at": "2026-11-20T02:09:37.522634-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-20T02:16:31.194419-05:00"
+  "read_at": "2026-11-20T02:21:32.796613-05:00"
  },
  "ui": {
   "week_pct": 0.104,
@@ -230,7 +245,7 @@
   "week_pct": 73.63,
   "usage_pct": 48.9,
   "work_pct": 81.3,
-  "read_at": "2026-11-20T07:20:00+00:00",
+  "read_at": "2026-11-20T07:25:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -267,7 +282,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-20T02:20:00-05:00",
+  "at": "2026-11-20T02:25:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -278,7 +293,7 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Double Spread: past the week's halfway point with room left, so twice the even pace until the limit or the reset; the machine allows 6 (raised a step toward the floor of 8: new work may start and...",
+  "why": "Double Spread: past the week's halfway point with room left, so twice the even pace until the limit or the reset; the machine allows 7 (raised a step toward the floor of 8: new work may start and...",
   "n": 3,
   "at": "2026-11-20T02:09:48.586335-05:00"
  },
@@ -523,47 +538,52 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-20T07:18:45Z",
+  "at": "2026-11-20T07:23:32Z",
   "s": {
    "T-4994": [
     "merging",
-    "Host checks on the Mac mini \u00b7 3 of 7 groups of tests done",
-    1795158945598
+    "Host checks on the Mac mini \u00b7 4 of 7 groups of tests done",
+    1795158932085
    ],
    "T-4850": [
     "mergeq",
     "1st to merge",
-    1795153545598
+    1795153532085
    ],
    "T-4813": [
     "mergeq",
     "2nd to merge",
-    1795157865598
+    1795157852085
    ],
    "T-4806": [
     "mergeq",
     "3rd to merge",
-    1795148265598
+    1795148312085
    ],
    "T-0349": [
     "mergeq",
     "4th to merge",
-    1795147965598
+    1795147952085
    ],
    "T-4184": [
     "mergeq",
     "5th to merge",
-    1795152585598
+    1795152572085
    ],
    "T-4181": [
     "mergeq",
     "6th to merge",
-    1795157805598
+    1795157792085
    ],
    "T-4182": [
     "mergeq",
     "7th to merge",
-    1795156845598
+    1795156892085
+   ],
+   "T-4939": [
+    "testing",
+    "its own tests, in its copy",
+    1795159352085
    ]
   },
   "nm": {
@@ -574,7 +594,8 @@
    "T-0349": "Fix gaps in the package sandbox build step",
    "T-4184": "A person's own script becomes a Home Screen widget",
    "T-4181": "Widgets refresh on their own and by a tap",
-   "T-4182": "A failing widget says so and can recover"
+   "T-4182": "A failing widget says so and can recover",
+   "T-4939": "Check finished work before it ships"
   },
   "wk": {
    "T-4994": "Odalys",
@@ -585,6 +606,7 @@
    "T-4184": "Idris",
    "T-4181": "Idris",
    "T-4182": "Idris",
+   "T-4939": "Pernille",
    "T-4930": "Pernille",
    "T-4933": "Pernille",
    "T-4759": "Pernille",
@@ -592,7 +614,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-20T07:18:45Z",
+  "at": "2026-11-20T07:23:32Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -604,13 +626,13 @@
     "parked": 2
    },
    "m": {
-    "checking": 3,
-    "inline": 93,
-    "conflicted": 1588,
+    "checking": 8,
+    "inline": 98,
+    "conflicted": 1593,
     "failed": null,
     "held": null,
-    "retry": 6,
-    "parked": 103
+    "retry": 10,
+    "parked": 108
    },
    "cur": [
     [
@@ -619,7 +641,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     3
+     8
     ]
    ],
    "ld": [
@@ -629,8 +651,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-20T07:19:16Z",
-    "ld": 8.69,
+    "at": "2026-11-20T07:23:03Z",
+    "ld": 8.18,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -682,11 +704,11 @@
      "open": false
     }
    },
-   "at": "2026-11-20T07:18:45+00:00"
+   "at": "2026-11-20T07:23:32+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-20T07:18:45+00:00"
+   "at": "2026-11-20T07:23:32+00:00"
   }
  },
  "operators": [
@@ -720,10 +742,10 @@
   "main": 3,
   "lanes": 0,
   "total": 3,
-  "at": "2:20 AM",
+  "at": "2:25 AM",
   "why": "",
-  "at_iso": "2026-11-20T07:20:00+00:00",
+  "at_iso": "2026-11-20T07:25:00+00:00",
   "started": "2:11 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 2:11 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 2:20 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 2:11 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 2:25 AM ET</p></section>"
  }
 }

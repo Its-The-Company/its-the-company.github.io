@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-20T08:50:30.287847+00:00",
+ "at": "2026-11-20T08:53:50.938971+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -153,7 +153,7 @@
     "end_at": 1795151564
    }
   ],
-  "landed": 36,
+  "landed": 35,
   "failed": 12
  },
  "workers": [
@@ -162,7 +162,7 @@
    "task": "[review] T-4920 location and notification work check",
    "model": "opus",
    "started": "2026-11-20T08:46:46.300Z",
-   "seconds": 223,
+   "seconds": 424,
    "finished": null,
    "effort": "high"
   },
@@ -171,12 +171,21 @@
    "task": "[review] T-4941 refresh tap cost measurement check",
    "model": "opus",
    "started": "2026-11-20T08:50:01.752Z",
-   "seconds": 28,
+   "seconds": 229,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "pernille",
+   "task": "[review] T-4943 iPad widget tap window check",
+   "model": "opus",
+   "started": "2026-11-20T08:50:40.962Z",
+   "seconds": 189,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Odalys, Pernille",
+ "who": "Odalys, Pernille x2",
  "recent": [
   {
    "name": "pernille",
@@ -219,19 +228,19 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 3.0,
+   "pct": 4.0,
    "resets_at": "2026-11-20T08:20:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-20T03:48:07.715204-05:00",
+   "read_at": "2026-11-20T03:53:10.340379-05:00",
    "source": "live",
-   "left": 97.0,
+   "left": 96.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 78.0,
    "resets_at": "2026-11-22T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-20T03:48:07.715204-05:00",
+   "read_at": "2026-11-20T03:53:10.340379-05:00",
    "source": "live",
    "left": 22.0,
    "left_words": "of your weekly allowance left"
@@ -243,7 +252,7 @@
    "read_at": "2026-11-20T02:09:37.522634-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-20T03:48:07.715204-05:00"
+  "read_at": "2026-11-20T03:53:10.340379-05:00"
  },
  "ui": {
   "week_pct": 0.104,
@@ -263,7 +272,7 @@
   "week_pct": 73.63,
   "usage_pct": 48.9,
   "work_pct": 81.3,
-  "read_at": "2026-11-20T08:51:00+00:00",
+  "read_at": "2026-11-20T08:54:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -293,14 +302,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-20T03:49:00-05:00",
+   "at": "2026-11-20T03:54:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-20T03:51:00-05:00",
+  "at": "2026-11-20T03:54:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -388,6 +397,16 @@
     "at": "2026-11-20T08:50:01.752Z",
     "o": "c",
     "task": "T-4941"
+   },
+   {
+    "w": "Pernille",
+    "k": "review",
+    "t": "Check finished work before it ships",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-20T08:50:40.962Z",
+    "o": "c",
+    "task": "T-4943"
    }
   ],
   "src": "plan",
@@ -555,52 +574,52 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-20T08:50:30Z",
+  "at": "2026-11-20T08:53:50Z",
   "s": {
    "T-4850": [
     "mergeq",
     "1st to merge",
-    1795153530287
+    1795153550938
    ],
    "T-4994": [
     "mergeq",
     "1st to merge",
-    1795153530287
+    1795153550938
    ],
    "T-4813": [
     "mergeq",
     "2nd to merge",
-    1795157850287
+    1795157810938
    ],
    "T-4806": [
     "mergeq",
     "3rd to merge",
-    1795148310287
+    1795148270938
    ],
    "T-0349": [
     "mergeq",
     "4th to merge",
-    1795147950287
+    1795147970938
    ],
    "T-4184": [
     "mergeq",
     "5th to merge",
-    1795152570287
+    1795152590938
    ],
    "T-4182": [
     "mergeq",
     "6th to merge",
-    1795156890287
+    1795156850938
    ],
    "T-4181": [
     "mergeq",
     "7th to merge",
-    1795157790287
+    1795157810938
    ],
    "T-4920": [
     "testing",
     "its own tests, in its copy",
-    1795164630287
+    1795164650938
    ]
   },
   "nm": {
@@ -639,7 +658,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-20T08:50:30Z",
+  "at": "2026-11-20T08:53:50Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -652,12 +671,12 @@
    },
    "m": {
     "checking": null,
-    "inline": 185,
-    "conflicted": 1680,
-    "failed": 285,
+    "inline": 188,
+    "conflicted": 1683,
+    "failed": 289,
     "held": null,
-    "retry": 30,
-    "parked": 195
+    "retry": 34,
+    "parked": 198
    },
    "cur": [],
    "ld": [
@@ -667,12 +686,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-20T08:50:37Z",
-    "ld": 7.01,
+    "at": "2026-11-20T08:54:03Z",
+    "ld": 5.79,
     "c": 8,
     "sb": 0,
     "dk": [
-     24.8,
+     24.6,
      228.3
     ],
     "ss": [
@@ -720,11 +739,11 @@
      "open": false
     }
    },
-   "at": "2026-11-20T08:50:30+00:00"
+   "at": "2026-11-20T08:53:50+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-20T08:50:30+00:00"
+   "at": "2026-11-20T08:53:50+00:00"
   }
  },
  "operators": [
@@ -756,13 +775,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 2,
+  "main": 3,
   "lanes": 0,
-  "total": 2,
-  "at": "3:51 AM",
+  "total": 3,
+  "at": "3:54 AM",
   "why": "",
-  "at_iso": "2026-11-20T08:51:00+00:00",
+  "at_iso": "2026-11-20T08:54:00+00:00",
   "started": "2:11 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 2:11 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 3:51 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 2:11 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 3:54 AM ET</p></section>"
  }
 }

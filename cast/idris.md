@@ -49,7 +49,6 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 - T-4866 11-19 done (5d38a8a84e+81a18acbdc). Lesson: the runner carries no TEST_RUNNER_* and only PyWidgetTests filters; a UI test that skips without env proves nothing there, and a UI filter queues the full suite (~60 min).
 
-- T-4181 session 11-19: T-4415 not built (choice is Ines+Maren's; my note: keep the glyph live, taps run in the app on 26/27). T-0972 Swift slice: SendLaneScan (own GIL thread, cache, 0.2 s wait), 12 tests, 4/4 mutants. Open: the send through the real extension (forced-lane UI test); Maren on the words. Lesson: xc_mutants leaves the last mutant's build; rebuild before test-without-building.
 
 - T-0043 11-19 04d6503c07 on personal/b2 (recut of 6e5fc761ba): 6 escape tests green on main, 0 skipped. Open: ready b2 T-0043 xc (refused in-session), full PyWidgetTests. Lesson: scratch copy needs Vendor/ links, and Runestone from the lane worktree, not ~/itsthecompany (stale, no lineNumberMarks).
 
@@ -61,6 +60,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - Older lessons and dated logs: archive.md.
 
 - T-4196 11-19 0ac7b74354: interim in plan 4.3 (1 grouped run of 20; 6.63 vs 6.00). Open: T-5177 (group takes queued-not-started jobs), 20 timed runs, week figure by 11-30. Lesson: main's ops/runs/personal-tick-*.log say why groups fail.
+- T-4181 11-19: T-4415 waits on Ines+Maren (keep glyph live). T-0972: Swift slice on main; test U (real extension, WK_LANE) green. Open: Maren's words, Pernille's review; testT red on main (T-4681 dark hued 0.168). Lesson: `time` is not on the lane allowlist; a just-run widget isn't due for 15 min.
 {% endraw %}
 
 

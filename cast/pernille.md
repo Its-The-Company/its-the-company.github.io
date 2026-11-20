@@ -46,6 +46,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-4940 11-20 review T-4758@2bdcb20e (ShortcutRecipeTests PNGs off the checkout): PASS, L1-3 T-5310 (a4c7c55641). Lessons: xc.sh queues the runner job (exit 75); commit ops/jobs/<id>.json by pathspec and push, then poll `xc_route.py status` (no `timeout` binary here); the run log stays on the MacBook. XCTAttachment's default lifetime is deleteOnSuccess: "always attached" is false on a green run.
 - T-4068 11-20 review T-3763@f60e2092 (tap picks the file a widget runs; my lost 11-16 review rewritten): PASS, L1-2 T-5314 (2da29495c3). Lessons: xc.sh routes to the runner only when run from pywidget/ios with -project PyWidget.xcodeproj (from the repo root it runs locally and fails); board add issues the T-ID itself (leave it out); a done-note ID needs a gloss in parentheses.
 - T-5298 11-20 re-review T-4662@f3e5e85f (cb4864a877): PASS, M1 (combined x+y visibility check: second tap on a cut edge row no longer restores x), L2-L3; runner 16/0. Board add and tick refused by card checks (title word 'mutant', no docs page/Targets, ID without gloss): stopped per T-0848. Lesson: write cards with Targets, a docs page, glossed IDs and plain title words before the first add.
+- T-3107 11-19: no qualifying export; board note only (#231 files are build 4, no Pro switch). Lesson: a "wait cleared" sweep note on a closed issue proves nothing; check manifest app_build against the build the line needs.
 {% endraw %}
 
 

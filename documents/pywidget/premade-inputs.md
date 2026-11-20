@@ -59,18 +59,18 @@ Pro widgets <span title="The worker who reads both graders and decides. The deci
 tagged Pro, its inputs stay settable, its design, layout and code need Pro). The plan, with each premade's data
 source, terms and Python and iOS features, is [`ops/plans/T-4672-showcase-premades.md`](../company/t-4672-showcase-premades.html).
 
-**Which runs count for the Pro tag: open with the Investors (T-4796, 2026-11-17 10:25 PM ET; <span title="A GitHub issue asking the Investors for something that is blocking work.">Urgent Request</span> #324).**
-"Python running within the widget" is in Pro (#278, 9:43 PM ET 11-16), and every widget, premades included, runs in
-the widget first whenever it fits (#283, 10:46 AM ET 11-13; ADR-007 s3 item 4), as Countdown did 69 times on the
-phone. The record does not say which runs the Investors meant, so the company has asked rather than picked. Reading
-A, the company's recommendation: the Pro feature is Python a button on the widget runs without opening PyWidget
-(ADR-011 s4), and the <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span>'s own runs (the timeline runs ADR-007 s3 places in the widget) are not, for anyone. Reading
-B, word for word: every run inside the widget is Pro, so a person's own widgets run in the app without Pro, and every
-premade the widget lane runs is tagged (all but those the lane refuses, such as GitHub repository). **The tags below
-are reading A's working list until #324 is answered**, not a ruling; the plan's s1 carries the same passage, and both
-lists change together with the answer.
+**Which runs count for the Pro tag: Python a widget button runs (A, #324; T-4796, Ines, 2026-11-20).** The Investors
+answered "A" on <span title="A GitHub issue asking the Investors for something that is blocking work.">Urgent Request</span> #324 (an Investor, 12:36 AM ET 11-18,
+(private) log/rulings.md, 2026-11-18
+12:36 AM). "Python running within the widget" in Pro (#278, 9:43 PM ET 11-16) is Python a button on the widget runs
+without opening PyWidget (ADR-011 s4). In the widget <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span>, the lane's own runs (a widget's own updates, the timeline
+runs ADR-007 s3 places in the widget whenever they fit) are not Pro for anyone: every widget, premades included, keeps
+running in the widget first (#283, 10:46 AM ET 11-13), as Countdown did 69 times on the phone, free and untagged.
+Tagged, in the words of the card the Investors answered: "Habit tracker, Focus timer, Flashcards, Day phases once it
+has buttons (and Pattern of the day only if it uses an advanced library)"; the other eight are untagged. The plan's s1
+carries the same passage, and the brackets below follow it.
 
-**The new set, in build order** (Pro tag in brackets, reading A):
+**The new set, in build order** (Pro tag in brackets, #324 A):
 
 1. **Day phases** (`day_phases.py`, new, T-4673; Pro once Today's three has Done buttons): morning trains, a day
    view, evening trains, a night view, by time of day. Defaults: downtown B and D from 125 St, 6:00 to 10:00 AM;

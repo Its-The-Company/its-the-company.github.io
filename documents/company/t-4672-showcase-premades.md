@@ -69,40 +69,39 @@ US ratings), so design is our quality bar, never our headline. So each premade i
    tickers), no health or fitness trackers, no medical, legal, gambling (no dice or odds), politics, or children's
    content; every data source is free, needs no sign-up by us, and has its terms read before any fetch.
 
-**Pro tag.** A premade that uses a Pro feature (a button, Python running inside the widget, an advanced library)
-carries the Pro tag on its Gallery tile and its page in PyWidget, and works for everyone (which runs count as Python
-running inside the widget: the passage after this one). Without Pro a person sets
-its inputs; its layout, design and code need Pro ("Edit this with Pro"). A premade with no Pro feature has no tag
-and is editable by anyone (T-0901's editable copy). **No tag and no offer appear on the placed widget itself**:
-Apple 4.4 says extensions "may not include marketing, advertising, or in-app purchases" (Maren, live-pro s3).
+**Pro tag.** A premade that uses a Pro feature (a button that runs Python without opening PyWidget, an advanced
+library) carries the Pro tag on its Gallery tile and its page in PyWidget, and works for everyone (which runs are the
+Pro feature: the passage after this one). Without Pro a person sets its inputs; its layout, design and code need Pro
+("Edit this with Pro"). A premade with no Pro feature has no tag and is editable by anyone (T-0901's editable copy).
+**No tag and no offer appear on the placed widget itself**: Apple 4.4 says extensions "may not include marketing,
+advertising, or in-app purchases" (Maren, live-pro s3).
 
-**Which runs count: the <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span>'s own runs (T-4796, Ines, 2026-11-17 10:25 PM ET by `date`; open with the Investors on
-#324).** "Python running within the widget" is in Pro (#278, 9:43 PM ET 11-16), and running code in the widget is the
-first choice for every widget (#283, 10:46 AM ET 11-13: "We should continue to prioritize running the code in the
-widget unless this is proven impossible"). So every premade starts in the widget lane (ADR-007 s3 item 4; T-4280: "A
-premade runs from the app's bundle, every one of them"), and Countdown, free and untagged, ran there 69 times on the
-phone. Read word for word, that tags almost every premade. Neither answer says which runs the Investors meant, and
-06-decisions item 9 already lists the free person's own widget as open for them. So the record does not settle it, and
-this plan does not pick a reading for them. Asked on <span title="A GitHub issue asking the Investors for something that is blocking work.">Urgent Request</span> #324 (10:25 PM ET 11-17), with a deadline of
-Thursday 11-19:
-- **A (the company's recommendation).** The Pro feature is Python that a button on the widget runs without opening
-  PyWidget (ADR-011 s4: in the widget on iOS 18 to 26, in the app's background on iOS 27). The lane's own runs (the
-  timeline runs ADR-007 s3 places in the widget whenever they fit) are not the Pro feature, for anyone. Tagged: Day
-  phases once it has its Done buttons, Habit tracker, Focus timer, Flashcards, and Pattern of the day only with an
-  advanced library. Untagged: the other eight. The cost: this Pro item then mostly overlaps "Buttons in widgets".
-- **B (word for word).** Every run inside the widget is Pro. A person's own widgets run in the app without Pro, and
-  every premade that runs in the widget carries the tag: most of the twelve, all but those the widget refuses (GitHub
-  repository: its `http.client` and `ssl` are off the lane's list).
+**Which runs count: Python a widget button runs (A, #324; T-4796, Ines, 2026-11-20).** The Investors answered "A" on
+<span title="A GitHub issue asking the Investors for something that is blocking work.">Urgent Request</span> #324 (an Investor, 12:36 AM ET 11-18,
+(private) log/rulings.md, 2026-11-18
+12:36 AM). So "Python running within the widget" in Pro (#278, 9:43 PM ET 11-16) is Python that a button on the widget
+runs without opening PyWidget (ADR-011 s4: in the widget on iOS 18 to 26, in the app's background on iOS 27). In the
+widget <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span>, the lane's own runs (a widget's own updates, the timeline runs ADR-007 s3 places in the widget whenever
+they fit) are not Pro for anyone, as the recorded Effect line says ("a widget's own updates running in the widget are
+not Pro for anyone"): a person's own widgets and every premade keep #283's rule (10:46 AM ET 11-13: "We should
+continue to prioritize running the code in the widget unless this is proven impossible"), so Countdown, which ran in
+the widget 69 times on the phone, stays free and untagged. The tags, in the words of the card the Investors answered:
+"Habit tracker, Focus timer, Flashcards, Day phases once it has buttons (and Pattern of the day only if it uses an
+advanced library)". The ruling's recorded Effect line names the first four; Pattern of the day's condition is the
+card's and agrees with #278, which puts advanced libraries in Pro anyway. The other eight (Pattern of the day among
+them unless it uses an advanced library) are untagged and editable by anyone. The cost the card named stands: this Pro
+item mostly overlaps "Buttons in widgets". Not chosen, B: every run inside the widget would have been Pro, tagging
+every premade the lane runs (all but GitHub repository, whose `pywidget.keychain` and `pywidget.http` the lane
+refuses, pywidget/tests/bridge/test_lane.py).
 
-**Until #324 is answered,** s2's Pro tag column and the counts under it are reading A's list, a working list waiting on
-the Investors, not a ruling. Nothing in the set reaches anyone outside the company before then (#271 A: nothing goes
-out near Day 60). The answer is written here, in premade-inputs.md s0 and in 06-decisions item 9, and the lists follow
-it. Lines that depend on it: T-4692 (the tag and the gate), T-4714 (`pro-flags.json`), T-4715 (`row.inwidget` and
-`about.pro`) and T-4793 (under B, a widget-lane fetch alone tags Day phases).
+s2's Pro tag column, the counts under it and premade-inputs.md s0 follow this answer. The lines that build on it:
+T-4692 (the tag and the gate), T-4714 (`pro-flags.json`), T-4715 (`row.inwidget` and `about.pro`) and T-4793 (a
+widget-lane fetch for Day phases does not tag it; only its Done buttons do). The record of #278 in 06-decisions item 9
+still lists the free person's own widget as open; T-4998 writes the answer in there.
 
 ## 2. The set for 1.0
 
-Twelve: six new, two reworked, four kept (two of them with small changes). Order is build order (s8). "Pro tag" follows s1: reading A's working list until #324 is answered.
+Twelve: six new, two reworked, four kept (two of them with small changes). Order is build order (s8). "Pro tag" follows s1: the Investors' answer A on #324 (12:36 AM ET 11-18).
 
 
 <div class="tbl" role="region" tabindex="0" aria-label="Table 1: 2. The set for 1.0, scrolls sideways" data-n="1" style="--tw:1960px" markdown="1">
@@ -125,7 +124,8 @@ Twelve: six new, two reworked, four kept (two of them with small changes). Order
 </div>
 
 
-Under reading A (s1, open on #324), four of the twelve carry the Pro tag (1 after its buttons, 2, 3, 8), which is what "a demo of features that will be
+Under #324's answer A (s1), four of the twelve carry the Pro tag (1 after its buttons, 2, 3, 8; 12 as well only if it uses an advanced
+library), which is what "a demo of features that will be
 unlocked in Pro" asks for, and eight do not, so the free app stays good on its own. Each is a premade only when it
 passes its build line's checks; a premade that fails them waits for 1.1 rather than shipping weak ("never ship
 anything untested", Commandment 1). Twelve is not a <span title="A measured fact that holds a grade below a letter, however good the rest is.">cap</span>: more follow by app update (03-structure.md: "More, by app

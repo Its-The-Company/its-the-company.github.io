@@ -44,7 +44,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - 11-18: after a refused history rewrite, land --from (T-4911) is the road (T-4771/4783 ruling). T-4630 'rule first' was ruled 11-16; check before ruling.
 - feature grouping T-4228 — done 11-14; both switches off, mine to switch; 17, 18 open; code-written slots are not the author's words
 - T-4841 (11-18): HealthKit out of 1.0 and out of T-0011's probe, no Investor ask (ops/decisions/2026-11-18-t4841-healthkit.md). A doc half on a parked branch: a note on its owning line, never a copy.
-- T-4796 (11-17): which runs are Pro's 'Python within the widget' is open on Urgent #324 (A: button-run only, recommended; B: all). Plan s1 keeps A's tags as a working list. T-4821: ADR-007 still has refresh as Pro.
+- T-4796 done 11-20 (d73d09ed5f): #324 A ruled: Pro = Python a widget button runs; lane's own runs free. 06-decisions item 9 left on T-4998. A done-when phrase must sit on one line (greppable).
 - T-4770 (11-18): checked line Tue 2027-07-27 (02-21 to 12-24), snap 4.25; milestones.json not moved (6 days; move once when T-4871 closes). Ratios 0.57/0.50 are two points, 0.50 retracted.
 - T-3402 (11-19): OpenSSL removal stays in 1.0 (T-3401 started); cut-off freeze 11-30 11:59 PM, else 1.0.1. A check whose answer can't flip back is ruled when the evidence lands, not on its date.
 - T-5165 (11-19): standing list reviewed (ops/plans/standing-rules-review.md); 107 lines retired via ruling_record.py retire/amend, ledger handbook/standing-retired.md; spent entries naming a ban stay.

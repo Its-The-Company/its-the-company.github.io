@@ -29,6 +29,15 @@ The limit is how many Xcode and Simulator runs the two machines can do, not how 
 few sessions, Xcode kept busy on both machines, tests that give the same answer every time, and one merge script
 simple enough to almost never need fixing.
 
+**Corrected by the Investors, 11-20 9:01 AM ET** (`log/rulings.md`). The first paragraph above is not evidence
+against the old system: from 11-08, and again from 11-17, the Investors' <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">rulings</span> put process work first, so the
+split between `pywidget/` and `tools/` commits shows what was asked for. The old road also carried a lot in that
+week: 29, 21, 43, 99, 58, 45 and 109 branches reached main on the seven days (`ops/runs/land_steps.jsonl`, rows
+"landed"). Whether the trimmed system is faster is **not proven**. It is judged by one comparison: both systems
+doing app work only, over equal whole days, on the measures below. The old system's app-only days began with the
+freeze (11-20 2:11 AM); the trim's own heavy test runs stay off the machine while they are counted. The switch
+to the new merge road waits for that baseline.
+
 ## The keep-everything rule
 
 **Nothing is deleted.** A part that leaves the system is *retired*: it is switched off or no longer called, then
@@ -267,7 +276,7 @@ Bottlenecks) while the trim runs.
 
 ## What needs the Investors' word
 
-- **Standing <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">rulings</span> the freeze touches** (step 1): an Investor 11-17 9:20 PM (a bottleneck automatically opens a
+- **Standing rulings the freeze touches** (step 1): an Investor 11-17 9:20 PM (a bottleneck automatically opens a
   big-picture fix task), 11-18 8:22 PM (tool-opened lines grouped), and the 11-08 12:23 AM and 12:28 AM rulings on process
   tasks first. The freeze pauses the first and leaves the others idle. Sending the prompt below counts as that word
   only if the Investors say so; otherwise the session asks first.

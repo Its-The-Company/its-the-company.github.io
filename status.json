@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-20T15:49:36.764270+00:00",
+ "at": "2026-11-20T15:52:33.958026+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -276,7 +276,7 @@
    "task": "[build] T-5047 token test red card",
    "model": "opus",
    "started": "2026-11-20T14:25:57.326Z",
-   "seconds": 5019,
+   "seconds": 5196,
    "finished": null,
    "effort": "high"
   },
@@ -285,22 +285,21 @@
    "task": "[build] T-4550 button action run, slice 2",
    "model": "opus",
    "started": "2026-11-20T14:26:07.585Z",
-   "seconds": 5009,
+   "seconds": 5186,
    "finished": null,
    "effort": "high"
-  },
+  }
+ ],
+ "who": "Idris, Pernille",
+ "recent": [
   {
    "name": "pernille",
    "task": "[test] T-4634 flaky github hang test",
    "model": "opus",
    "started": "2026-11-20T14:44:23.179Z",
-   "seconds": 3913,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Idris, Pernille x2",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-20T15:49:54.752000+00:00"
+  },
   {
    "name": "ines",
    "task": "[plan] T-5341 Controls date effect report",
@@ -334,21 +333,21 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 48.0,
+   "pct": 50.0,
    "resets_at": "2026-11-20T13:20:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-20T10:45:13.792123-05:00",
+   "read_at": "2026-11-20T10:50:16.086645-05:00",
    "source": "live",
-   "left": 52.0,
+   "left": 50.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 94.0,
+   "pct": 95.0,
    "resets_at": "2026-11-22T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-20T10:45:13.792123-05:00",
+   "read_at": "2026-11-20T10:50:16.086645-05:00",
    "source": "live",
-   "left": 6.0,
+   "left": 5.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
@@ -358,7 +357,7 @@
    "read_at": "2026-11-20T09:21:58.972439-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-20T10:45:13.792123-05:00"
+  "read_at": "2026-11-20T10:50:16.086645-05:00"
  },
  "ui": {
   "week_pct": 0.112,
@@ -378,7 +377,7 @@
   "week_pct": 82.11,
   "usage_pct": 48.3,
   "work_pct": 79.9,
-  "read_at": "2026-11-20T15:49:00+00:00",
+  "read_at": "2026-11-20T15:52:00+00:00",
   "running": [
    {
     "lane": "a3",
@@ -428,7 +427,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-20T10:49:00-05:00",
+  "at": "2026-11-20T10:52:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -439,7 +438,7 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Double Spread: past the week's halfway point with room left, so twice the even pace until the limit or the reset; the machine allows 8 (at its floor: load 67.0 a core is over 10)",
+  "why": "Double Spread: past the week's halfway point with room left, so twice the even pace until the limit or the reset; the machine allows 8 (at its floor: load 72.2 a core is over 10)",
   "n": 3,
   "at": "2026-11-20T09:22:05.059755-05:00"
  },
@@ -516,16 +515,6 @@
     "at": "2026-11-20T14:26:07.585Z",
     "o": "c",
     "task": "T-4550"
-   },
-   {
-    "w": "Pernille",
-    "k": "test",
-    "t": "Github hang test is cut before the GET under load",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-20T14:44:23.179Z",
-    "o": "c",
-    "task": "T-4634"
    }
   ],
   "src": "plan",
@@ -681,42 +670,37 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-20T15:49:00Z",
+  "at": "2026-11-20T15:52:33Z",
   "s": {
    "T-5236": [
     "merging",
     "Host checks on the Mac mini",
-    1795187460955
+    1795187433958
    ],
    "T-5234": [
     "merging",
     "Host checks on the Mac mini",
-    1795187460955
+    1795187433958
    ],
    "T-4662": [
     "mergeq",
     "1st to merge",
-    1795188420955
+    1795188393958
    ],
    "T-3107": [
     "mergeq",
     "1st to merge",
-    1795188420955
+    1795188393958
    ],
    "T-5047": [
     "merging",
     "Mac tests at the main gate",
-    1795189440955
-   ],
-   "T-4634": [
-    "merging",
-    "Mac tests at the main gate",
-    1795189740955
+    1795189413958
    ],
    "T-4550": [
     "merging",
     "Mac tests at the main gate",
-    1795189200955
+    1795189233958
    ],
    "T-4184": [
     "testing",
@@ -730,7 +714,6 @@
    "T-4662": "Place the cursor easily on a long line",
    "T-3107": "Read the phones' real numbers from the gate build",
    "T-5047": "Fix the token test's No view for this size card",
-   "T-4634": "Github hang test is cut before the GET under load",
    "T-4550": "Python contract and action run for widget buttons",
    "T-4184": "A person's own script becomes a Home Screen widget"
   },
@@ -740,7 +723,6 @@
    "T-4662": "Idris",
    "T-3107": "Pernille",
    "T-5047": "Idris",
-   "T-4634": "Pernille",
    "T-4550": "Pernille",
    "T-4184": "Idris",
    "T-5341": "Ines",
@@ -749,7 +731,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-20T15:49:00Z",
+  "at": "2026-11-20T15:52:33Z",
   "mq": {
    "n": {
     "checking": 2,
@@ -761,13 +743,13 @@
     "parked": 3
    },
    "m": {
-    "checking": 38,
-    "inline": 22,
-    "conflicted": 2098,
-    "failed": 69,
+    "checking": 42,
+    "inline": 26,
+    "conflicted": 2102,
+    "failed": 72,
     "held": null,
-    "retry": 417,
-    "parked": 252
+    "retry": 420,
+    "parked": 255
    },
    "cur": [
     [
@@ -776,7 +758,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     38
+     42
     ],
     [
      [
@@ -784,7 +766,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     38
+     42
     ]
    ],
    "ld": [
@@ -794,12 +776,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-20T15:49:05Z",
-    "ld": 76.01,
+    "at": "2026-11-20T15:52:35Z",
+    "ld": 67.37,
     "c": 8,
     "sb": 1,
     "dk": [
-     20.2,
+     22.7,
      228.3
     ],
     "ss": [
@@ -849,11 +831,11 @@
      "open": false
     }
    },
-   "at": "2026-11-20T15:49:36+00:00"
+   "at": "2026-11-20T15:52:33+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-20T15:49:36+00:00"
+   "at": "2026-11-20T15:52:24+00:00"
   }
  },
  "operators": [
@@ -863,7 +845,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 6 tasks",
+   "t": "Work session \u2013 5 tasks",
    "at": "2026-11-20T09:23:01-05:00"
   },
   {
@@ -893,13 +875,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 3,
+  "main": 2,
   "lanes": 1,
-  "total": 4,
-  "at": "10:49 AM",
+  "total": 3,
+  "at": "10:52 AM",
   "why": "",
-  "at_iso": "2026-11-20T15:49:00+00:00",
+  "at_iso": "2026-11-20T15:52:00+00:00",
   "started": "9:23 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 3, started 9:23 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 10:49 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 9:23 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 10:52 AM ET</p></section>"
  }
 }

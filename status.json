@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-20T21:05:20.479201+00:00",
+ "at": "2026-11-20T21:14:55.378798+00:00",
  "session": {
   "active": false,
   "kind": "",
@@ -80,15 +80,6 @@
     ]
    },
    {
-    "t": "T-4943",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1795165553
-     }
-    ]
-   },
-   {
     "t": "T-4847",
     "name": "Keep every drive clean automatically, for good",
     "w": "Odalys",
@@ -122,6 +113,22 @@
    }
   ],
   "done": [
+   {
+    "t": "T-5154",
+    "name": "Keep the company account signed in to Claude Code",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1795209165
+   },
+   {
+    "t": "T-4807",
+    "name": "Fix every bad test that failed a merge",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1795209165
+   },
    {
     "t": "T-5354",
     "name": "Land the finished test fixes and three small fixes",
@@ -190,26 +197,9 @@
     "end": "failed",
     "end_at": 1795204352,
     "why": "tests failed"
-   },
-   {
-    "t": "T-5236",
-    "name": "Send land host tests to the MacBook under heavy load",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1795203245
-   },
-   {
-    "t": "T-5234",
-    "name": "Move merge tests to the MacBook under heavy load",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "failed",
-    "end_at": 1795200620,
-    "why": "tests failed"
    }
   ],
-  "landed": 19,
+  "landed": 21,
   "failed": 24
  },
  "workers": [],
@@ -300,7 +290,7 @@
   "week_pct": 95.03,
   "usage_pct": 48.7,
   "work_pct": 80.4,
-  "read_at": "2026-11-20T21:05:00+00:00",
+  "read_at": "2026-11-20T21:17:00+00:00",
   "running": [
    {
     "lane": "b3",
@@ -334,7 +324,7 @@
   }
  ],
  "disk": {
-  "free_gb": 22,
+  "free_gb": 24,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -343,14 +333,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-20T16:02:00-05:00",
+   "at": "2026-11-20T16:14:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-20T16:05:00-05:00",
+  "at": "2026-11-20T16:17:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -548,48 +538,34 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-20T21:05:20Z",
+  "at": "2026-11-20T21:14:55Z",
   "s": {
    "T-5354": [
-    "mergeq",
-    "1st to merge",
-    1795206740479
+    "merging",
+    "Host checks on the Mac mini",
+    1795209235378
    ],
    "T-5355": [
     "mergeq",
-    "2nd to merge",
-    1795206980479
-   ],
-   "T-4807": [
-    "mergeq",
-    "3rd to merge",
-    1795206440479
-   ],
-   "T-5154": [
-    "mergeq",
-    "3rd to merge",
-    1795206440479
+    "1st to merge",
+    1795206955378
    ]
   },
   "nm": {
    "T-5354": "Land the finished test fixes and three small fixes",
-   "T-5355": "Finish the MacBook Xcode routing and the merge switch",
-   "T-4807": "Fix every bad test that failed a merge",
-   "T-5154": "Keep the company account signed in to Claude Code"
+   "T-5355": "Finish the MacBook Xcode routing and the merge switch"
   },
   "wk": {
    "T-5354": "Odalys",
-   "T-5355": "Odalys",
-   "T-4807": "Pernille",
-   "T-5154": "Odalys"
+   "T-5355": "Odalys"
   }
  },
  "ln": {
-  "at": "2026-11-20T21:05:20Z",
+  "at": "2026-11-20T21:14:55Z",
   "mq": {
    "n": {
-    "checking": 0,
-    "inline": 4,
+    "checking": 1,
+    "inline": 1,
     "conflicted": 1,
     "failed": 1,
     "held": 0,
@@ -597,28 +573,37 @@
     "parked": 3
    },
    "m": {
-    "checking": null,
-    "inline": 35,
-    "conflicted": 1725,
-    "failed": 40,
+    "checking": 1,
+    "inline": 39,
+    "conflicted": 1735,
+    "failed": 50,
     "held": null,
     "retry": null,
-    "parked": 568
+    "parked": 578
    },
-   "cur": [],
+   "cur": [
+    [
+     [
+      "T-5354"
+     ],
+     "Mac tests",
+     "Mac mini",
+     1
+    ]
+   ],
    "ld": [
-    22,
-    "2026-11-20T20:27:51Z"
+    23,
+    "2026-11-20T21:12:45Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-20T21:05:21Z",
-    "ld": 33.67,
+    "at": "2026-11-20T21:14:58Z",
+    "ld": 9.22,
     "c": 8,
     "sb": 0,
     "dk": [
-     24.3,
+     24.2,
      228.3
     ],
     "ss": [
@@ -648,7 +633,7 @@
    "parked": 5,
    "open": true,
    "mq": false,
-   "counted": "2026-11-20T20:55:32+00:00",
+   "counted": "2026-11-20T21:06:52+00:00",
    "by": {
     "app": {
      "n": 4,
@@ -666,11 +651,11 @@
      "open": true
     }
    },
-   "at": "2026-11-20T21:05:20+00:00"
+   "at": "2026-11-20T21:14:55+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-20T21:05:20+00:00"
+   "at": "2026-11-20T21:14:55+00:00"
   }
  },
  "operators": [
@@ -704,10 +689,10 @@
   "main": 0,
   "lanes": 1,
   "total": 1,
-  "at": "4:05 PM",
+  "at": "4:17 PM",
   "why": "",
-  "at_iso": "2026-11-20T21:05:00+00:00",
+  "at_iso": "2026-11-20T21:17:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 4:05 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 4:17 PM ET</p></section>"
  }
 }

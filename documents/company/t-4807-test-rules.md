@@ -5,7 +5,7 @@ section: "documents"
 description: "Pernille, 11-17 9:35 PM ET. Answers an Investor on #41 (c6965124089, 7:26 PM 11-17: &quot;fix every bad test ... Consult real-world examples of how tests are designed and implemented. Fix the &#x27;big picture&#x27; causes&quot;) and the\u2026"
 ---
 <div class="crumbs" role="navigation" aria-label="Back"><a class="back" href="{{ '/documents/operations/' | relative_url }}">← Operations</a><a href="{{ '/documents/company/t-4807-test-rules.html' | relative_url }}" rel="bookmark">Permanent link</a></div>
-<div class="page-head"><div class="kicker"><span class="kind blue">Plan</span><span>Day 29 · Thu Nov 19</span><span><code>ops/plans/T-4807-test-rules.md</code></span></div><h1>T-4807: rules for new tests</h1><div class="byline"><img class="avatar" src="{{ '/assets/portraits/pernille.svg' | relative_url }}" alt="Pernille" title="Pernille"><span>By <a href="{{ '/cast/pernille.html' | relative_url }}">Pernille</a>, Python runtime engineer</span></div></div>
+<div class="page-head"><div class="kicker"><span class="kind blue">Plan</span><span><span title="Our arithmetic estimate of what the idea would earn by day 30 (the $200 deadline) or day 90. It never raises a grade.">Day 30</span> · Fri Nov 20</span><span><code>ops/plans/T-4807-test-rules.md</code></span></div><h1>T-4807: rules for new tests</h1><div class="byline"><img class="avatar" src="{{ '/assets/portraits/pernille.svg' | relative_url }}" alt="Pernille" title="Pernille"><span>By <a href="{{ '/cast/pernille.html' | relative_url }}">Pernille</a>, Python runtime engineer</span></div></div>
 
 <style>.doc-body{overflow-wrap:break-word}.doc-src{overflow-wrap:anywhere}.tbl[data-n~="1"] tr>:nth-child(1),.tbl[data-n~="2"] tr>:nth-child(2),.tbl[data-n~="3"] tr>:nth-child(3),.tbl[data-n~="4"] tr>:nth-child(4),.tbl[data-n~="5"] tr>:nth-child(5),.tbl[data-n~="6"] tr>:nth-child(6),.tbl[data-n~="7"] tr>:nth-child(7),.tbl[data-n~="8"] tr>:nth-child(8),.tbl[data-n~="9"] tr>:nth-child(9),.tbl[data-n~="10"] tr>:nth-child(10),.tbl[data-n~="11"] tr>:nth-child(11),.tbl[data-n~="12"] tr>:nth-child(12){min-width:0;overflow-wrap:normal}.tbl[data-o="1"] tr>:nth-child(1),.tbl[data-o="2"] tr>:nth-child(2),.tbl[data-o="3"] tr>:nth-child(3),.tbl[data-o="4"] tr>:nth-child(4),.tbl[data-o="5"] tr>:nth-child(5),.tbl[data-o="6"] tr>:nth-child(6),.tbl[data-o="7"] tr>:nth-child(7),.tbl[data-o="8"] tr>:nth-child(8),.tbl[data-o="9"] tr>:nth-child(9),.tbl[data-o="10"] tr>:nth-child(10),.tbl[data-o="11"] tr>:nth-child(11),.tbl[data-o="12"] tr>:nth-child(12){position:sticky;right:0;overflow-wrap:normal;background:var(--page);box-shadow:-1px 0 var(--line),-9px 0 8px -8px var(--sh)}</style>
 <div class="doc-body" markdown="1">
@@ -114,6 +114,18 @@ research/inbound/):
   model_note_fable_test.py found the block by a `done` line it no longer has, and now ends it at the guard's line.
   Left: personal_off_test.sh (median 372 s), board_line and waits_on per line, and the limit-cut row's 3 s session
   (PERSONAL_SESSION_SECONDS=3 in personal_pool_test.sh) races the stand-in's commit at high load (rule 1).
+- Rule 5 and rule 1, slice 5 (11-19): personal_off_test.sh (median 372 s against a 360 s base, cut five times with no
+  failed row, T-4787 rows 76, 77, 83, 89, 93) is three suites on one fixture, tools/test_personal_off.sh (the stand-ins,
+  the test repository's template, fresh and the helpers; each part names it, so the gate runs all three when it
+  changes): personal_off_test.sh (section 1 on this tree, the whole road, <span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">parked</span> branches, refusals, chat replies on a
+  held account: 31 ticks), personal_off_hold_test.sh (meter and holder failures, holds, claims, the done and try lists,
+  tiers, suites, worktree states, the lock, trips and their issue: 42 ticks) and personal_off_stop_test.sh (stops from
+  beside the session, unclean ends, retries, lifts, the Investors' stops, account b: 49 ticks). At load 300-420 on 11-19
+  (about 20 s a tick) they took 194 s, 494 s and 476 s, 52, 42 and 47 rows, all green; every line of the old file is in
+  one of the four. Two waits that load could outrun went with it: the lock row's holder was `sleep 30` (dead before a
+  slow tick read the lock) and is now a process that lives until the row <span title="A test written in advance. If it fires, we drop the idea.">kills</span> it; launchd's stop polled 6 s for the
+  session's keeper and now polls with a 120 s ceiling, with its own row if the keeper never came. Left: the limit-cut
+  row's 3 s session in personal_pool_test.sh (rule 1), board_line and waits_on per line, supervisor_test groups.
 {% endraw %}
 
 </div>

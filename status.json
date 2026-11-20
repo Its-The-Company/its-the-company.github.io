@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-20T07:15:46.361119+00:00",
+ "at": "2026-11-20T07:18:45.598854+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -153,7 +153,7 @@
    "task": "[review] T-5215 widget send lane check",
    "model": "opus",
    "started": "2026-11-20T07:15:20.769Z",
-   "seconds": 25,
+   "seconds": 204,
    "finished": null,
    "effort": "high"
   },
@@ -162,7 +162,7 @@
    "task": "[review] T-5217 Activity open-at-line check",
    "model": "opus",
    "started": "2026-11-20T07:15:31.722Z",
-   "seconds": 14,
+   "seconds": 193,
    "finished": null,
    "effort": "high"
   },
@@ -171,7 +171,7 @@
    "task": "[review] T-4939 launcher Shortcut link check",
    "model": "opus",
    "started": "2026-11-20T07:15:42.642Z",
-   "seconds": 3,
+   "seconds": 182,
    "finished": null,
    "effort": "high"
   }
@@ -187,19 +187,19 @@
  "meter": {
   "five_hour": {
    "pct": 11.0,
-   "resets_at": "2026-11-20T08:20:00.655149+00:00",
+   "resets_at": "2026-11-20T03:20:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-20T02:09:37.522634-05:00",
-   "source": "usage",
+   "read_at": "2026-11-20T02:16:31.194419-05:00",
+   "source": "live",
    "left": 89.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 77.0,
-   "resets_at": "2026-11-22T07:00:00.655168+00:00",
+   "resets_at": "2026-11-22T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-20T02:09:37.522634-05:00",
-   "source": "usage",
+   "read_at": "2026-11-20T02:16:31.194419-05:00",
+   "source": "live",
    "left": 23.0,
    "left_words": "of your weekly allowance left"
   },
@@ -210,7 +210,7 @@
    "read_at": "2026-11-20T02:09:37.522634-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-20T02:09:37.522634-05:00"
+  "read_at": "2026-11-20T02:16:31.194419-05:00"
  },
  "ui": {
   "week_pct": 0.104,
@@ -230,7 +230,7 @@
   "week_pct": 73.63,
   "usage_pct": 48.9,
   "work_pct": 81.3,
-  "read_at": "2026-11-20T07:17:00+00:00",
+  "read_at": "2026-11-20T07:20:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -260,14 +260,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-20T02:16:00-05:00",
+   "at": "2026-11-20T02:19:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-20T02:17:00-05:00",
+  "at": "2026-11-20T02:20:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -278,7 +278,7 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Double Spread: past the week's halfway point with room left, so twice the even pace until the limit or the reset; the machine allows 5 (at its floor: load 10.4 a core is over 10)",
+  "why": "Double Spread: past the week's halfway point with room left, so twice the even pace until the limit or the reset; the machine allows 6 (raised a step toward the floor of 8: new work may start and...",
   "n": 3,
   "at": "2026-11-20T02:09:48.586335-05:00"
  },
@@ -523,47 +523,47 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-20T07:15:46Z",
+  "at": "2026-11-20T07:18:45Z",
   "s": {
    "T-4994": [
     "merging",
     "Host checks on the Mac mini \u00b7 3 of 7 groups of tests done",
-    1795158946361
+    1795158945598
    ],
    "T-4850": [
     "mergeq",
     "1st to merge",
-    1795153546361
+    1795153545598
    ],
    "T-4813": [
     "mergeq",
     "2nd to merge",
-    1795157866361
+    1795157865598
    ],
    "T-4806": [
     "mergeq",
     "3rd to merge",
-    1795148266361
+    1795148265598
    ],
    "T-0349": [
     "mergeq",
     "4th to merge",
-    1795147966361
+    1795147965598
    ],
    "T-4184": [
     "mergeq",
     "5th to merge",
-    1795152586361
+    1795152585598
    ],
    "T-4181": [
     "mergeq",
     "6th to merge",
-    1795157806361
+    1795157805598
    ],
    "T-4182": [
     "mergeq",
     "7th to merge",
-    1795156846361
+    1795156845598
    ]
   },
   "nm": {
@@ -592,7 +592,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-20T07:15:46Z",
+  "at": "2026-11-20T07:18:45Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -604,13 +604,13 @@
     "parked": 2
    },
    "m": {
-    "checking": 0,
-    "inline": 90,
-    "conflicted": 1585,
+    "checking": 3,
+    "inline": 93,
+    "conflicted": 1588,
     "failed": null,
     "held": null,
-    "retry": 3,
-    "parked": 100
+    "retry": 6,
+    "parked": 103
    },
    "cur": [
     [
@@ -619,7 +619,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     0
+     3
     ]
    ],
    "ld": [
@@ -629,12 +629,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-20T07:16:10Z",
-    "ld": 7.35,
+    "at": "2026-11-20T07:19:16Z",
+    "ld": 8.69,
     "c": 8,
     "sb": 0,
     "dk": [
-     25.9,
+     25.7,
      228.3
     ],
     "ss": [
@@ -682,11 +682,11 @@
      "open": false
     }
    },
-   "at": "2026-11-20T07:15:46+00:00"
+   "at": "2026-11-20T07:18:45+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-20T07:15:46+00:00"
+   "at": "2026-11-20T07:18:45+00:00"
   }
  },
  "operators": [
@@ -720,10 +720,10 @@
   "main": 3,
   "lanes": 0,
   "total": 3,
-  "at": "2:17 AM",
+  "at": "2:20 AM",
   "why": "",
-  "at_iso": "2026-11-20T07:17:00+00:00",
+  "at_iso": "2026-11-20T07:20:00+00:00",
   "started": "2:11 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 2:11 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 2:17 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 2:11 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 2:20 AM ET</p></section>"
  }
 }

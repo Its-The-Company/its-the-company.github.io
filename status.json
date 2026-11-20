@@ -1,22 +1,11 @@
 {
  "schema": 1,
- "at": "2026-11-20T05:08:21.347309+00:00",
+ "at": "2026-11-20T05:13:54.805001+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-19T23:42:08-05:00",
   "flow": [
-   {
-    "t": "T-4806",
-    "name": "Fix the causes of merge time-outs and runner errors",
-    "acct": "Personal b",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1795147800
-     }
-    ]
-   },
    {
     "t": "T-4926",
     "steps": [
@@ -71,6 +60,22 @@
    }
   ],
   "done": [
+   {
+    "t": "T-4995",
+    "name": "Measure MacBook minutes per land after gate retests",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1795151642
+   },
+   {
+    "t": "T-4806",
+    "name": "Fix the causes of merge time-outs and runner errors",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1795151564
+   },
    {
     "t": "T-4816",
     "name": "Let the safety check allow routine test fixes",
@@ -135,24 +140,9 @@
     "steps": [],
     "end": "landed",
     "end_at": 1795136485
-   },
-   {
-    "t": "T-4693",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1795134395
-   },
-   {
-    "t": "T-5180",
-    "name": "Cut the merge step's wait on the first entry's checks",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1795132707
    }
   ],
-  "landed": 45,
+  "landed": 47,
   "failed": 8
  },
  "workers": [
@@ -161,7 +151,7 @@
    "task": "[tools] T-5179 merge-queue fixes first",
    "model": "opus",
    "started": "2026-11-20T04:47:58.749Z",
-   "seconds": 1222,
+   "seconds": 1556,
    "finished": null,
    "effort": "high"
   },
@@ -170,7 +160,7 @@
    "task": "[tools] T-5117 land keep-main-green slice",
    "model": "opus",
    "started": "2026-11-20T05:03:31.007Z",
-   "seconds": 290,
+   "seconds": 623,
    "finished": null,
    "effort": "high"
   },
@@ -179,7 +169,7 @@
    "task": "[test] T-5125 fix failing MacBook jobs",
    "model": "opus",
    "started": "2026-11-20T05:03:42.138Z",
-   "seconds": 279,
+   "seconds": 612,
    "finished": null,
    "effort": "high"
   }
@@ -203,19 +193,19 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 5.0,
+   "pct": 6.0,
    "resets_at": "2026-11-20T03:20:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-20T00:07:32.252321-05:00",
+   "read_at": "2026-11-20T00:12:25.517036-05:00",
    "source": "live",
-   "left": 95.0,
+   "left": 94.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 76.0,
    "resets_at": "2026-11-22T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-20T00:07:32.252321-05:00",
+   "read_at": "2026-11-20T00:12:25.517036-05:00",
    "source": "live",
    "left": 24.0,
    "left_words": "of your weekly allowance left"
@@ -227,7 +217,7 @@
    "read_at": "2026-11-19T23:41:19.505503-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-20T00:07:32.252321-05:00"
+  "read_at": "2026-11-20T00:12:25.517036-05:00"
  },
  "ui": {
   "week_pct": 0.104,
@@ -247,7 +237,7 @@
   "week_pct": 72.95,
   "usage_pct": 49.0,
   "work_pct": 81.3,
-  "read_at": "2026-11-20T05:11:00+00:00",
+  "read_at": "2026-11-20T05:15:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -378,23 +368,23 @@
   }
  ],
  "disk": {
-  "free_gb": 18,
+  "free_gb": 20,
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 169
+   "free_gb": 171
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-20T00:09:00-05:00",
+   "at": "2026-11-20T00:15:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-20T00:11:00-05:00",
+  "at": "2026-11-20T00:15:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -405,7 +395,7 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Double Spread: past the week's halfway point with room left, so twice the even pace until the limit or the reset; the machine allows 12 (cut a step: load 14.1 a core is over 10)",
+  "why": "Double Spread: past the week's halfway point with room left, so twice the even pace until the limit or the reset; the machine allows 11 (cut a step: load 40.0 a core is over 10)",
   "n": 3,
   "at": "2026-11-19T23:41:21.283033-05:00"
  },
@@ -634,32 +624,22 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-20T05:08:21Z",
+  "at": "2026-11-20T05:13:54Z",
   "s": {
-   "T-4806": [
+   "T-4181": [
     "merging",
-    "Host checks on the Mac mini \u00b7 1 of 2 groups of tests done",
-    1795147821347
+    "Host checks on the Mac mini",
+    1795151634805
    ],
-   "T-4850": [
+   "T-4806": [
     "mergeq",
     "1st to merge",
-    1795148361347
-   ],
-   "T-4995": [
-    "mergeq",
-    "2nd to merge",
-    1795144941347
-   ],
-   "T-4181": [
-    "mergeq",
-    "3rd to merge",
-    1795146861347
+    1795148274805
    ],
    "T-0349": [
     "mergeq",
-    "5th to merge",
-    1795147941347
+    "2nd to merge",
+    1795147974805
    ],
    "T-4182": [
     "testing",
@@ -669,12 +649,18 @@
    "T-5179": [
     "testing",
     "its own tests, in its copy",
-    1795150821347
+    1795150794805
    ],
    "T-5117": [
     "testing",
     "its own tests, in its copy",
-    1795151301347
+    1795151334805
+   ],
+   "T-4850": [
+    "merged",
+    "on main 12:13 AM ET",
+    1795151611000,
+    ""
    ],
    "T-4813": [
     "merged",
@@ -684,76 +670,74 @@
    ]
   },
   "nm": {
-   "T-4806": "Fix the causes of merge time-outs and runner errors",
-   "T-4850": "Bring the Mac mini load back down",
-   "T-4995": "Measure MacBook minutes per land after gate retests",
    "T-4181": "Widgets refresh on their own and by a tap",
+   "T-4806": "Fix the causes of merge time-outs and runner errors",
    "T-0349": "Fix gaps in the package sandbox build step",
    "T-4182": "A failing widget says so and can recover",
    "T-5179": "Merge-queue fixes go first, process work unlimited",
    "T-5117": "Land the keep-main-green slice from a fresh copy",
+   "T-4850": "Bring the Mac mini load back down",
    "T-4813": "Home's numbers update within a minute"
   },
   "wk": {
-   "T-4806": "Odalys",
-   "T-4850": "Odalys",
-   "T-4995": "Odalys",
    "T-4181": "Idris",
+   "T-4806": "Odalys",
    "T-0349": "Pernille",
    "T-4182": "Idris",
    "T-5179": "Odalys",
    "T-5117": "Odalys",
+   "T-4850": "Odalys",
    "T-4813": "Maren"
   }
  },
  "ln": {
-  "at": "2026-11-20T05:08:21Z",
+  "at": "2026-11-20T05:13:54Z",
   "mq": {
    "n": {
     "checking": 1,
-    "inline": 4,
+    "inline": 2,
     "conflicted": 2,
     "failed": 0,
     "held": 0,
-    "retry": 2,
+    "retry": 3,
     "parked": 2
    },
    "m": {
-    "checking": 58,
-    "inline": 65,
-    "conflicted": 1457,
+    "checking": 0,
+    "inline": 58,
+    "conflicted": 1463,
     "failed": null,
     "held": null,
-    "retry": 63,
-    "parked": 67
+    "retry": 69,
+    "parked": 73
    },
    "cur": [
     [
      [
-      "T-4806"
+      "T-4181"
      ],
      "Mac tests",
      "Mac mini",
-     58
+     0
     ]
    ],
    "ld": [
-    0,
-    null
+    3,
+    "2026-11-20T05:14:02Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-20T05:09:39Z",
-    "ld": 24.34,
+    "at": "2026-11-20T05:14:20Z",
+    "ld": 40.67,
     "c": 8,
     "sb": 1,
     "dk": [
-     18.9,
+     19.6,
      228.3
     ],
     "ss": [
-     168.7,
+     170.9,
      953.7
     ],
     "sn": [
@@ -799,11 +783,11 @@
      "open": true
     }
    },
-   "at": "2026-11-20T05:08:21+00:00"
+   "at": "2026-11-20T05:13:54+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-20T05:08:21+00:00"
+   "at": "2026-11-20T05:13:54+00:00"
   }
  },
  "operators": [
@@ -820,8 +804,13 @@
    "w": "Operator",
    "a": "Evan's Account",
    "sr": 1,
-   "m": "opus",
-   "e": "high",
+   "t": "Work session \u2013 2 tasks",
+   "at": "2026-11-19T23:03:25-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Evan's Account",
+   "sr": 1,
    "t": "Work session \u2013 1 task",
    "at": "2026-11-19T23:27:24-05:00"
   },
@@ -829,8 +818,6 @@
    "w": "Operator",
    "a": "Evan's Account",
    "sr": 1,
-   "m": "opus",
-   "e": "high",
    "t": "Work session",
    "at": "2026-11-20T00:06:00-05:00"
   },
@@ -838,8 +825,6 @@
    "w": "Operator",
    "a": "Jeremy's Account",
    "sr": 1,
-   "m": "opus",
-   "e": "high",
    "t": "Work session \u2013 2 tasks",
    "at": "2026-11-20T00:07:29-05:00"
   },
@@ -847,33 +832,19 @@
    "w": "Operator",
    "a": "Jeremy's Account",
    "sr": 1,
-   "m": "opus",
-   "e": "high",
    "t": "Work session \u2013 1 task",
-   "at": "2026-11-19T23:35:48-05:00"
+   "at": "2026-11-19T23:35:49-05:00"
   }
  ],
  "reply": {
-  "sent": "2026-11-20T05:01:01Z",
-  "seconds": 44.0
+  "sent": "2026-11-20T05:08:02Z",
+  "seconds": 259.0
  },
- "inbox": [
-  {
-   "id": "c7031022612",
-   "state": "received",
-   "position": 1,
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "I am considering using a weekly..."
-  }
- ],
+ "inbox": [],
  "trimmed": [
   "lane_next",
   "queue_text",
   "task_done",
-  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -884,10 +855,10 @@
   "main": 3,
   "lanes": 5,
   "total": 8,
-  "at": "12:11 AM",
+  "at": "12:15 AM",
   "why": "",
-  "at_iso": "2026-11-20T05:11:00+00:00",
+  "at_iso": "2026-11-20T05:15:00+00:00",
   "started": "11:42 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>8</b> agents running now</p><p class=\"an-sub\">Main session 3, started 11:42 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 12:11 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>8</b> agents running now</p><p class=\"an-sub\">Main session 3, started 11:42 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 12:15 AM ET</p></section>"
  }
 }

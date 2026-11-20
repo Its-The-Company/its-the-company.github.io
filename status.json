@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-20T11:51:04.883320+00:00",
+ "at": "2026-11-20T11:54:27.938260+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -13,27 +13,6 @@
      {
       "s": "testq",
       "at": 1795175422
-     }
-    ]
-   },
-   {
-    "t": "T-4068",
-    "name": "Check finished work before it ships",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1795175125
-     }
-    ]
-   },
-   {
-    "t": "T-5247",
-    "name": "MacBook runner takes pre-merge Xcode runs",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1795174633
      }
     ]
    },
@@ -95,6 +74,14 @@
    }
   ],
   "done": [
+   {
+    "t": "T-5247",
+    "name": "MacBook runner takes pre-merge Xcode runs",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1795175513
+   },
    {
     "t": "T-4184",
     "name": "A person's own script becomes a Home Screen widget",
@@ -173,51 +160,49 @@
     "end": "failed",
     "end_at": 1795164548,
     "why": "tests failed"
-   },
-   {
-    "t": "T-4807",
-    "name": "Fix every bad test that failed a merge",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "failed",
-    "end_at": 1795164548,
-    "why": "tests failed"
    }
   ],
-  "landed": 20,
+  "landed": 21,
   "failed": 13
  },
  "workers": [
-  {
-   "name": "pernille",
-   "task": "[review] T-4068 widget tap opens the running file check",
-   "model": "opus",
-   "started": "2026-11-20T11:42:00.403Z",
-   "seconds": 544,
-   "finished": null,
-   "effort": "high"
-  },
   {
    "name": "odalys",
    "task": "[review] T-5192 Habits tap opens its habit check",
    "model": "opus",
    "started": "2026-11-20T11:44:34.885Z",
-   "seconds": 389,
+   "seconds": 593,
    "finished": null,
    "effort": "high"
   },
+  {
+   "name": "pernille",
+   "task": "[review] T-5298 editor caret fixes check",
+   "model": "opus",
+   "started": "2026-11-20T11:54:01.776Z",
+   "seconds": 26,
+   "finished": null,
+   "effort": "high"
+  }
+ ],
+ "who": "Odalys, Pernille",
+ "recent": [
   {
    "name": "wrenna",
    "task": "[research] T-5301 Altitude heights in the privacy policy",
    "model": "opus",
    "started": "2026-11-20T11:49:01.882Z",
-   "seconds": 123,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Pernille, Odalys, Wrenna",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-20T11:54:04.490000+00:00"
+  },
+  {
+   "name": "pernille",
+   "task": "[review] T-4068 widget tap opens the running file check",
+   "model": "opus",
+   "started": "2026-11-20T11:42:00.403Z",
+   "seconds": null,
+   "finished": "2026-11-20T11:53:31.632000+00:00"
+  },
   {
    "name": "idris",
    "task": "[build] T-5293 drop altitude history when location off",
@@ -233,22 +218,6 @@
    "started": "2026-11-20T11:32:05.693Z",
    "seconds": null,
    "finished": "2026-11-20T11:44:06.014000+00:00"
-  },
-  {
-   "name": "pernille",
-   "task": "[report] morning",
-   "model": "opus",
-   "started": "2026-11-20T10:52:08.891Z",
-   "seconds": null,
-   "finished": "2026-11-20T11:42:59.319000+00:00"
-  },
-  {
-   "name": "pernille",
-   "task": "[review] T-4940 Shortcut recipe test scratch output check",
-   "model": "opus",
-   "started": "2026-11-20T11:32:30.771Z",
-   "seconds": null,
-   "finished": "2026-11-20T11:40:32.375000+00:00"
   }
  ],
  "queue": {
@@ -259,19 +228,19 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 21.0,
+   "pct": 22.0,
    "resets_at": "2026-11-20T08:20:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-20T06:47:03.009813-05:00",
+   "read_at": "2026-11-20T06:52:32.260299-05:00",
    "source": "live",
-   "left": 79.0,
+   "left": 78.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 82.0,
    "resets_at": "2026-11-22T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-20T06:47:03.009813-05:00",
+   "read_at": "2026-11-20T06:52:32.260299-05:00",
    "source": "live",
    "left": 18.0,
    "left_words": "of your weekly allowance left"
@@ -283,7 +252,7 @@
    "read_at": "2026-11-20T02:09:37.522634-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-20T06:47:03.009813-05:00"
+  "read_at": "2026-11-20T06:52:32.260299-05:00"
  },
  "ui": {
   "week_pct": 0.104,
@@ -303,21 +272,8 @@
   "week_pct": 73.63,
   "usage_pct": 48.9,
   "work_pct": 81.3,
-  "read_at": "2026-11-20T11:51:00+00:00",
-  "running": [
-   {
-    "lane": "a3",
-    "task": "T-4192",
-    "w": "Pernille",
-    "k": "build",
-    "t": "Python in the app: smaller bundle, installable packages",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-20T06:50:53-05:00",
-    "n": "Evan",
-    "src": "plan-a"
-   }
-  ]
+  "read_at": "2026-11-20T11:55:00+00:00",
+  "running": []
  },
  "api_credits": [
   {
@@ -346,14 +302,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-20T06:48:00-05:00",
+   "at": "2026-11-20T06:54:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-20T06:51:00-05:00",
+  "at": "2026-11-20T06:55:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -370,15 +326,6 @@
  },
  "lanes": [
   {
-   "name": "Pernille",
-   "state": "running",
-   "task": "[review] T-4068 widget tap opens the running file check",
-   "model": "opus",
-   "since": "2026-11-20T11:42:00.403Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
    "name": "Odalys",
    "state": "running",
    "task": "[review] T-5192 Habits tap opens its habit check",
@@ -388,11 +335,11 @@
    "effort": "high"
   },
   {
-   "name": "Wrenna",
+   "name": "Pernille",
    "state": "running",
-   "task": "[research] T-5301 Altitude heights in the privacy policy",
+   "task": "[review] T-5298 editor caret fixes check",
    "model": "opus",
-   "since": "2026-11-20T11:49:01.882Z",
+   "since": "2026-11-20T11:54:01.776Z",
    "next": [],
    "effort": "high"
   },
@@ -419,20 +366,18 @@
    "model": null,
    "since": null,
    "next": []
+  },
+  {
+   "name": "Wrenna",
+   "state": "next",
+   "task": "Wrenna, P2, T-2375 continuation (B-staged item 3...",
+   "model": null,
+   "since": null,
+   "next": []
   }
  ],
  "tasks": {
   "run": [
-   {
-    "w": "Pernille",
-    "k": "review",
-    "t": "Check finished work before it ships",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-20T11:42:00.403Z",
-    "o": "c",
-    "task": "T-4068"
-   },
    {
     "w": "Odalys",
     "k": "review",
@@ -444,14 +389,14 @@
     "task": "T-5192"
    },
    {
-    "w": "Wrenna",
-    "k": "research",
-    "t": "Name Altitude's kept heights in the privacy policy",
+    "w": "Pernille",
+    "k": "review",
+    "t": "Check the caret fixes that followed the first review",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-20T11:49:01.882Z",
-    "o": "c",
-    "task": "T-5301"
+    "at": "2026-11-20T11:54:01.776Z",
+    "o": "i",
+    "task": "T-5298"
    }
   ],
   "src": "plan",
@@ -529,6 +474,11 @@
   ],
   "done": [
    {
+    "w": "Pernille",
+    "t": "When two files claim the same widget, tapping the widget opens the one it actually runs; two...",
+    "at": "2026-11-20T06:53:00-05:00"
+   },
+   {
     "w": "Idris",
     "t": "The Altitude widget now forgets its saved heights and times when Location is turned off, as the...",
     "at": "2026-11-20T06:47:00-05:00"
@@ -537,11 +487,6 @@
     "w": "Idris",
     "t": "Checked Pernille's fix so the button-limit warning counts only the buttons each widget size...",
     "at": "2026-11-20T06:43:00-05:00"
-   },
-   {
-    "w": "Pernille",
-    "t": "Pernille's second-person check of this finished app change was already written and passed and is...",
-    "at": "2026-11-20T06:41:00-05:00"
    }
   ],
   "count": {
@@ -551,8 +496,12 @@
    "you": 2
   },
   "fin": {
-   "n": 41,
+   "n": 42,
    "rows": [
+    [
+     "T-4068",
+     "Check finished work before..."
+    ],
     [
      "T-5293",
      "Drop altitude history when..."
@@ -571,10 +520,6 @@
     ],
     [
      "T-4043",
-     "Check finished work before..."
-    ],
-    [
-     "T-4048",
      "Check finished work before..."
     ]
    ]
@@ -619,64 +564,64 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-20T11:51:04Z",
+  "at": "2026-11-20T11:54:27Z",
   "s": {
    "T-5247": [
-    "merging",
-    "Rebasing onto current main",
-    1795175464883
+    "mergeq",
+    "1st to merge",
+    1795175607938
    ],
    "T-4994": [
     "mergeq",
-    "1st to merge",
-    1795169284883
+    "2nd to merge",
+    1795169307938
    ],
    "T-5180": [
     "mergeq",
-    "1st to merge",
-    1795169284883
+    "2nd to merge",
+    1795169307938
    ],
    "T-4796": [
     "mergeq",
-    "2nd to merge",
-    1795172944883
+    "3rd to merge",
+    1795172967938
    ],
    "T-4182": [
     "mergeq",
-    "4th to merge",
-    1795156864883
+    "5th to merge",
+    1795156887938
    ],
    "T-4181": [
     "mergeq",
-    "5th to merge",
-    1795157764883
+    "6th to merge",
+    1795157787938
    ],
    "T-2377": [
     "mergeq",
-    "6th to merge",
-    1795172584883
+    "7th to merge",
+    1795172547938
    ],
    "T-4662": [
     "mergeq",
-    "6th to merge",
-    1795172584883
+    "7th to merge",
+    1795172547938
    ],
    "T-4670": [
     "mergeq",
-    "6th to merge",
-    1795172584883
+    "7th to merge",
+    1795172547938
    ],
    "T-3107": [
     "mergeq",
-    "7th to merge",
-    1795175464883
+    "8th to merge",
+    1795175427938
+   ],
+   "T-4192": [
+    "mergeq",
+    "10th to merge",
+    1795175667938
    ],
    "T-5192": [
-    "merging",
-    "Mac tests at the main gate",
-    1795175464883
-   ],
-   "T-4068": [
     "testing",
     "MacBook \u00b7 test",
     null
@@ -693,8 +638,8 @@
    "T-4662": "Place the cursor easily on a long line",
    "T-4670": "Draft the letter to Apple about the marketplace rules",
    "T-3107": "Read the phones' real numbers from the gate build",
-   "T-5192": "Review the Habits tap before TestFlight",
-   "T-4068": "Check finished work before it ships"
+   "T-4192": "Python in the app: smaller bundle, installable packages",
+   "T-5192": "Review the Habits tap before TestFlight"
   },
   "wk": {
    "T-5247": "Odalys",
@@ -707,6 +652,7 @@
    "T-4662": "Idris",
    "T-4670": "Wrenna",
    "T-3107": "Pernille",
+   "T-4192": "Pernille",
    "T-5192": "Pernille",
    "T-4068": "Pernille",
    "T-5293": "Idris",
@@ -719,16 +665,15 @@
    "T-4910": "Pernille",
    "T-4940": "Pernille",
    "T-4610": "Odalys",
-   "T-4948": "Pernille",
-   "T-4944": "Pernille"
+   "T-4948": "Pernille"
   }
  },
  "ln": {
-  "at": "2026-11-20T11:51:04Z",
+  "at": "2026-11-20T11:54:27Z",
   "mq": {
    "n": {
-    "checking": 1,
-    "inline": 9,
+    "checking": 0,
+    "inline": 11,
     "conflicted": 2,
     "failed": 0,
     "held": 0,
@@ -736,33 +681,24 @@
     "parked": 3
    },
    "m": {
-    "checking": 0,
-    "inline": 48,
-    "conflicted": 1860,
+    "checking": null,
+    "inline": 52,
+    "conflicted": 1863,
     "failed": null,
     "held": null,
-    "retry": 148,
-    "parked": 14
+    "retry": 151,
+    "parked": 17
    },
-   "cur": [
-    [
-     [
-      "T-5247"
-     ],
-     "lining up with main",
-     "Mac mini",
-     0
-    ]
-   ],
+   "cur": [],
    "ld": [
-    5,
-    "2026-11-20T10:26:52Z"
+    6,
+    "2026-11-20T11:51:53Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-20T11:51:13Z",
-    "ld": 6.7,
+    "at": "2026-11-20T11:54:39Z",
+    "ld": 6.31,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -776,12 +712,12 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-20T11:49:40Z",
-    "ld": 0.83,
+    "at": "2026-11-20T11:53:15Z",
+    "ld": 1.89,
     "c": 12,
     "sb": 0,
     "dk": [
-     353.7,
+     353.6,
      926.4
     ],
     "sn": []
@@ -814,11 +750,11 @@
      "open": false
     }
    },
-   "at": "2026-11-20T11:51:04+00:00"
+   "at": "2026-11-20T11:54:27+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-20T11:51:04+00:00"
+   "at": "2026-11-20T11:54:27+00:00"
   }
  },
  "operators": [
@@ -828,17 +764,8 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 34 tasks",
+   "t": "Work session \u2013 35 tasks",
    "at": "2026-11-20T06:09:42-05:00"
-  },
-  {
-   "w": "Operator",
-   "a": "Evan's Account",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session \u2013 1 task",
-   "at": "2026-11-20T06:50:52-05:00"
   }
  ],
  "reply": {
@@ -860,13 +787,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 3,
-  "lanes": 1,
-  "total": 4,
-  "at": "6:51 AM",
+  "main": 2,
+  "lanes": 0,
+  "total": 2,
+  "at": "6:55 AM",
   "why": "",
-  "at_iso": "2026-11-20T11:51:00+00:00",
+  "at_iso": "2026-11-20T11:55:00+00:00",
   "started": "2:11 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 3, started 2:11 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 6:51 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 2:11 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 6:55 AM ET</p></section>"
  }
 }

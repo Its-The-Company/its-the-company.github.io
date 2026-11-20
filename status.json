@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-20T12:05:05.760646+00:00",
+ "at": "2026-11-20T12:10:19.345651+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -171,7 +171,7 @@
    "task": "[review] T-5298 editor caret fixes check",
    "model": "opus",
    "started": "2026-11-20T11:54:01.776Z",
-   "seconds": 663,
+   "seconds": 977,
    "finished": null,
    "effort": "high"
   },
@@ -180,7 +180,7 @@
    "task": "[build] T-5315 keep Altitude heights out of backups",
    "model": "opus",
    "started": "2026-11-20T11:54:51.624Z",
-   "seconds": 614,
+   "seconds": 927,
    "finished": null,
    "effort": "high"
   },
@@ -189,7 +189,7 @@
    "task": "[review] T-4889 PyWidget name case fix check",
    "model": "opus",
    "started": "2026-11-20T11:59:19.808Z",
-   "seconds": 345,
+   "seconds": 659,
    "finished": null,
    "effort": "high"
   }
@@ -281,7 +281,7 @@
   "week_pct": 73.63,
   "usage_pct": 48.9,
   "work_pct": 81.3,
-  "read_at": "2026-11-20T12:07:00+00:00",
+  "read_at": "2026-11-20T12:10:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -318,7 +318,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-20T07:07:00-05:00",
+  "at": "2026-11-20T07:10:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -329,7 +329,7 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Double Spread: past the week's halfway point with room left, so twice the even pace until the limit or the reset; the machine allows 8 (held: too few lands in 3 hours to judge a raise)",
+  "why": "Double Spread: past the week's halfway point with room left, so twice the even pace until the limit or the reset; the machine allows 8 (at its floor: load 43.6 a core is over 10)",
   "n": 3,
   "at": "2026-11-20T02:09:48.586335-05:00"
  },
@@ -583,62 +583,62 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-20T12:05:05Z",
+  "at": "2026-11-20T12:10:08Z",
   "s": {
    "T-5247": [
     "mergeq",
     "1st to merge",
-    1795175585760
+    1795175588004
    ],
    "T-4994": [
     "mergeq",
     "2nd to merge",
-    1795169285760
+    1795169288004
    ],
    "T-5180": [
     "mergeq",
     "2nd to merge",
-    1795169285760
+    1795169288004
    ],
    "T-4796": [
     "mergeq",
     "3rd to merge",
-    1795172945760
+    1795172948004
    ],
    "T-4182": [
     "mergeq",
     "5th to merge",
-    1795156865760
+    1795156868004
    ],
    "T-4181": [
     "mergeq",
     "6th to merge",
-    1795157765760
+    1795157768004
    ],
    "T-2377": [
     "mergeq",
     "7th to merge",
-    1795172105760
+    1795172108004
    ],
    "T-4662": [
     "mergeq",
     "8th to merge",
-    1795172285760
+    1795172288004
    ],
    "T-4670": [
     "mergeq",
     "9th to merge",
-    1795172585760
+    1795172588004
    ],
    "T-3107": [
     "mergeq",
     "11th to merge",
-    1795175465760
+    1795175468004
    ],
    "T-4192": [
     "mergeq",
     "12th to merge",
-    1795175705760
+    1795175708004
    ],
    "T-5298": [
     "testing",
@@ -648,12 +648,12 @@
    "T-5315": [
     "testing",
     "its own tests, in its copy",
-    1795176245760
+    1795176248004
    ],
    "T-4889": [
     "testing",
     "its own tests, in its copy",
-    1795176185760
+    1795176188004
    ]
   },
   "nm": {
@@ -702,7 +702,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-20T12:05:05Z",
+  "at": "2026-11-20T12:10:08Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -715,12 +715,12 @@
    },
    "m": {
     "checking": null,
-    "inline": 67,
-    "conflicted": 1874,
+    "inline": 72,
+    "conflicted": 1879,
     "failed": null,
     "held": null,
-    "retry": 162,
-    "parked": 28
+    "retry": 167,
+    "parked": 33
    },
    "cur": [],
    "ld": [
@@ -730,8 +730,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-20T12:06:31Z",
-    "ld": 34.54,
+    "at": "2026-11-20T12:10:10Z",
+    "ld": 42.23,
     "c": 8,
     "sb": 1,
     "dk": [
@@ -767,7 +767,7 @@
    "parked": 10,
    "open": true,
    "mq": false,
-   "counted": "2026-11-20T11:57:37+00:00",
+   "counted": "2026-11-20T12:08:41+00:00",
    "by": {
     "app": {
      "n": 9,
@@ -785,11 +785,11 @@
      "open": false
     }
    },
-   "at": "2026-11-20T12:05:05+00:00"
+   "at": "2026-11-20T12:10:19+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-20T12:05:05+00:00"
+   "at": "2026-11-20T12:10:08+00:00"
   }
  },
  "operators": [
@@ -799,7 +799,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session",
+   "t": "Work session \u2013 36 tasks",
    "at": "2026-11-20T06:09:42-05:00"
   }
  ],
@@ -825,10 +825,10 @@
   "main": 3,
   "lanes": 0,
   "total": 3,
-  "at": "7:07 AM",
+  "at": "7:10 AM",
   "why": "",
-  "at_iso": "2026-11-20T12:07:00+00:00",
+  "at_iso": "2026-11-20T12:10:00+00:00",
   "started": "2:11 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 2:11 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 7:07 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 2:11 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 7:10 AM ET</p></section>"
  }
 }

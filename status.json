@@ -1,10 +1,10 @@
 {
  "schema": 1,
- "at": "2026-11-20T04:33:23.975568+00:00",
+ "at": "2026-11-20T04:42:05.850765+00:00",
  "session": {
-  "active": true,
-  "kind": "evening",
-  "started": "2026-11-19T23:22:11-05:00",
+  "active": false,
+  "kind": "",
+  "started": null,
   "flow": [
    {
     "t": "T-4806",
@@ -175,34 +175,34 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 2.0,
-   "resets_at": "2026-11-20T03:20:00-05:00",
+   "pct": 3.0,
+   "resets_at": "2026-11-20T08:20:00.388266+00:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-19T23:22:24.447412-05:00",
-   "source": "live",
-   "left": 98.0,
+   "read_at": "2026-11-19T23:41:19.505503-05:00",
+   "source": "usage",
+   "left": 97.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 75.0,
-   "resets_at": "2026-11-22T02:00:00-05:00",
+   "pct": 76.0,
+   "resets_at": "2026-11-22T07:00:00.388291+00:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-19T23:22:24.447412-05:00",
-   "source": "live",
-   "left": 25.0,
+   "read_at": "2026-11-19T23:41:19.505503-05:00",
+   "source": "usage",
+   "left": 24.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
-   "pct": 2.0,
-   "resets_at": "2026-11-22T07:00:00.298873+00:00",
+   "pct": 3.0,
+   "resets_at": "2026-11-22T07:00:00.388548+00:00",
    "used_words": "of the Fable weekly allowance used",
-   "read_at": "2026-11-19T08:19:02.638997-05:00",
+   "read_at": "2026-11-19T23:41:19.505503-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-19T23:22:24.447412-05:00"
+  "read_at": "2026-11-19T23:41:19.505503-05:00"
  },
  "ui": {
-  "week_pct": 0.117,
+  "week_pct": 0.104,
   "five_hour_pct": 0.071,
   "caps_pct": {
    "week": 3.0,
@@ -214,12 +214,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": null,
+ "next_tick": "2026-11-19T23:56:21-05:00",
  "personal": {
-  "week_pct": 81.43,
+  "week_pct": 72.95,
   "usage_pct": 49.0,
   "work_pct": 81.3,
-  "read_at": "2026-11-20T04:33:00+00:00",
+  "read_at": "2026-11-20T04:42:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -294,6 +294,54 @@
     "at": "2026-11-19T23:03:07-05:00",
     "n": "Evan",
     "src": "plan-a"
+   },
+   {
+    "lane": "b2",
+    "task": "T-4734",
+    "w": "Maren",
+    "k": "tools",
+    "t": "Fix the red site merge queue test",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-19T23:35:48-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
+   },
+   {
+    "lane": "b2",
+    "task": "T-4877",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Fix the red experiments test",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-19T23:35:48-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
+   },
+   {
+    "lane": "b2",
+    "task": "T-4624",
+    "w": "Maren",
+    "k": "site",
+    "t": "Drop Parents and Children from Home's task cards",
+    "m": "sonnet",
+    "e": "medium",
+    "at": "2026-11-19T23:35:48-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
+   },
+   {
+    "lane": "b3",
+    "task": "T-4182",
+    "w": "Idris",
+    "k": "build",
+    "t": "A failing widget says so and can recover",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-19T23:35:49-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
    }
   ]
  },
@@ -315,7 +363,7 @@
   }
  ],
  "disk": {
-  "free_gb": 23,
+  "free_gb": 25,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -324,14 +372,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-19T23:31:00-05:00",
+   "at": "2026-11-19T23:41:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 3,
-  "at": "2026-11-19T23:33:00-05:00",
+  "at": "2026-11-19T23:42:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -339,13 +387,9 @@
    "b": "midnight"
   }
  },
- "next_tick_why": "session",
+ "next_tick_why": "last_tick",
  "idle": null,
- "pool": {
-  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 20 (cut a step: load 39.4 a core is over 10)",
-  "n": 20,
-  "at": "2026-11-19T23:21:21.446658-05:00"
- },
+ "pool": null,
  "lanes": [
   {
    "name": "Odalys",
@@ -398,7 +442,6 @@
  ],
  "tasks": {
   "run": [],
-  "src": "plan",
   "open": [
    {
     "w": "Odalys",
@@ -493,10 +536,6 @@
    "wait": 2,
    "blocked": 0,
    "you": 2
-  },
-  "fin": {
-   "n": 0,
-   "rows": []
   }
  },
  "qr": [
@@ -538,32 +577,54 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-20T04:32:59Z",
+  "at": "2026-11-20T04:42:05Z",
   "s": {
    "T-4806": [
     "merging",
     "Host checks on the Mac mini",
-    1795147859797
+    1795147805850
    ],
    "T-4850": [
     "mergeq",
     "1st to merge",
-    1795148399797
+    1795148405850
    ],
    "T-4995": [
     "mergeq",
     "2nd to merge",
-    1795144919797
+    1795144925850
    ],
    "T-4181": [
     "mergeq",
     "4th to merge",
-    1795146899797
+    1795146905850
    ],
    "T-0349": [
     "mergeq",
     "5th to merge",
-    1795147979797
+    1795147985850
+   ],
+   "T-4182": [
+    "testing",
+    "Mac Mini \u00b7 test",
+    null
+   ],
+   "T-4446": [
+    "testing",
+    "Mac Mini \u00b7 test",
+    null
+   ],
+   "T-4877": [
+    "merged",
+    "on main 1:22 PM ET",
+    1795112524000,
+    ""
+   ],
+   "T-4734": [
+    "merged",
+    "on main 1:10 PM ET",
+    1795111847000,
+    ""
    ]
   },
   "nm": {
@@ -571,18 +632,26 @@
    "T-4850": "Bring the Mac mini load back down",
    "T-4995": "Measure MacBook minutes per land after gate retests",
    "T-4181": "Widgets refresh on their own and by a tap",
-   "T-0349": "Fix gaps in the package sandbox build step"
+   "T-0349": "Fix gaps in the package sandbox build step",
+   "T-4182": "A failing widget says so and can recover",
+   "T-4446": "Commit the company's records once per supervisor round",
+   "T-4877": "Fix the red experiments test",
+   "T-4734": "Fix the red site merge queue test"
   },
   "wk": {
    "T-4806": "Odalys",
    "T-4850": "Odalys",
    "T-4995": "Odalys",
    "T-4181": "Idris",
-   "T-0349": "Pernille"
+   "T-0349": "Pernille",
+   "T-4182": "Idris",
+   "T-4446": "Odalys",
+   "T-4877": "Odalys",
+   "T-4734": "Maren"
   }
  },
  "ln": {
-  "at": "2026-11-20T04:32:59Z",
+  "at": "2026-11-20T04:42:05Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -594,13 +663,13 @@
     "parked": 2
    },
    "m": {
-    "checking": 22,
-    "inline": 29,
-    "conflicted": 671,
+    "checking": 32,
+    "inline": 38,
+    "conflicted": 680,
     "failed": null,
     "held": null,
-    "retry": 28,
-    "parked": 32
+    "retry": 37,
+    "parked": 41
    },
    "cur": [
     [
@@ -609,7 +678,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     22
+     32
     ]
    ],
    "ld": [
@@ -619,21 +688,19 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-20T04:32:40Z",
-    "ld": 36.51,
+    "at": "2026-11-20T04:42:08Z",
+    "ld": 16.15,
     "c": 8,
-    "sb": 1,
+    "sb": 0,
     "dk": [
-     25.6,
+     23.4,
      228.3
     ],
     "ss": [
      171.2,
      953.7
     ],
-    "sn": [
-     "iPhone 17e"
-    ]
+    "sn": []
    },
    "macbook": {
     "at": "2026-11-20T04:25:55Z",
@@ -650,13 +717,13 @@
  },
  "hc": {
   "wait": {
-   "n": 12,
+   "n": 13,
    "limit": 20,
-   "in_line": 4,
+   "in_line": 5,
    "parked": 8,
    "open": true,
    "mq": false,
-   "counted": "2026-11-20T04:16:38+00:00",
+   "counted": "2026-11-20T04:33:25+00:00",
    "by": {
     "app": {
      "n": 3,
@@ -664,7 +731,7 @@
      "open": true
     },
     "other": {
-     "n": 9,
+     "n": 10,
      "limit": 20,
      "open": true
     },
@@ -674,23 +741,14 @@
      "open": false
     }
    },
-   "at": "2026-11-20T04:33:23+00:00"
+   "at": "2026-11-20T04:42:05+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-20T04:33:23+00:00"
+   "at": "2026-11-20T04:42:05+00:00"
   }
  },
  "operators": [
-  {
-   "w": "Operator",
-   "a": "Main plan",
-   "sr": 1,
-   "m": "sonnet",
-   "e": "low",
-   "t": "Evening report",
-   "at": "2026-11-19T23:22:11-05:00"
-  },
   {
    "w": "Operator",
    "a": "Evan's Account",
@@ -717,17 +775,48 @@
    "e": "high",
    "t": "Work session",
    "at": "2026-11-19T23:08:09-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Jeremy's Account",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session \u2013 1 task",
+   "at": "2026-11-19T23:35:47-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Jeremy's Account",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Inbox \u2013 Evan's 11:38 PM Message on GitHub",
+   "at": "2026-11-19T23:39:02-05:00"
   }
  ],
  "reply": {
   "sent": "2026-11-20T04:25:45Z",
   "seconds": 97.0
  },
- "inbox": [],
+ "inbox": [
+  {
+   "id": "c7030573554",
+   "state": "received",
+   "position": 1,
+   "eta": "2026-11-19T23:56:21-05:00",
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "Feel free to use fable as you need..."
+  }
+ ],
  "trimmed": [
   "lane_next",
   "queue_text",
   "task_done",
+  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -736,12 +825,12 @@
  ],
  "agents_now": {
   "main": 0,
-  "lanes": 3,
-  "total": 3,
-  "at": "11:33 PM",
+  "lanes": 5,
+  "total": 5,
+  "at": "11:42 PM",
   "why": "",
-  "at_iso": "2026-11-20T04:33:00+00:00",
+  "at_iso": "2026-11-20T04:42:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 11:33 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 11:42 PM ET</p></section>"
  }
 }

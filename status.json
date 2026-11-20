@@ -1,41 +1,18 @@
 {
  "schema": 1,
- "at": "2026-11-20T10:17:31.380759+00:00",
+ "at": "2026-11-20T10:21:03.980192+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-20T02:11:05-05:00",
   "flow": [
    {
-    "t": "T-5247",
-    "name": "MacBook runner takes pre-merge Xcode runs",
-    "acct": "Personal a",
+    "t": "T-4947",
+    "name": "Check finished work before it ships",
     "steps": [
      {
       "s": "testq",
-      "at": 1795169490
-     }
-    ]
-   },
-   {
-    "t": "T-5236",
-    "name": "Send land host tests to the MacBook under heavy load",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1795169490
-     }
-    ]
-   },
-   {
-    "t": "T-5234",
-    "name": "Move merge tests to the MacBook under heavy load",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1795169490
+      "at": 1795169934
      }
     ]
    },
@@ -109,6 +86,33 @@
   ],
   "done": [
    {
+    "t": "T-5234",
+    "name": "Move merge tests to the MacBook under heavy load",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "failed",
+    "end_at": 1795170010,
+    "why": "tests failed"
+   },
+   {
+    "t": "T-5236",
+    "name": "Send land host tests to the MacBook under heavy load",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "failed",
+    "end_at": 1795170010,
+    "why": "tests failed"
+   },
+   {
+    "t": "T-5247",
+    "name": "MacBook runner takes pre-merge Xcode runs",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "failed",
+    "end_at": 1795170010,
+    "why": "tests failed"
+   },
+   {
     "t": "T-4994",
     "name": "Act on the feature record at every add",
     "acct": "Personal a",
@@ -170,36 +174,10 @@
     "end": "failed",
     "end_at": 1795164548,
     "why": "tests failed"
-   },
-   {
-    "t": "T-4994",
-    "name": "Act on the feature record at every add",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "failed",
-    "end_at": 1795163276,
-    "why": "tests failed"
-   },
-   {
-    "t": "T-4994",
-    "name": "Act on the feature record at every add",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "failed",
-    "end_at": 1795158902,
-    "why": "tests failed"
-   },
-   {
-    "t": "T-4995",
-    "name": "Measure MacBook minutes per land after gate retests",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1795151642
    }
   ],
   "landed": 26,
-  "failed": 13
+  "failed": 16
  },
  "workers": [
   {
@@ -207,7 +185,7 @@
    "task": "[review] T-4920 location and notification work check",
    "model": "opus",
    "started": "2026-11-20T08:46:46.300Z",
-   "seconds": 5445,
+   "seconds": 5657,
    "finished": null,
    "effort": "high"
   },
@@ -216,7 +194,7 @@
    "task": "[review] T-4947 Settings restore line after Pro check",
    "model": "opus",
    "started": "2026-11-20T10:07:54.012Z",
-   "seconds": 577,
+   "seconds": 789,
    "finished": null,
    "effort": "high"
   }
@@ -264,19 +242,19 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 9.0,
+   "pct": 10.0,
    "resets_at": "2026-11-20T08:20:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-20T04:54:32.675617-05:00",
+   "read_at": "2026-11-20T05:18:01.838555-05:00",
    "source": "live",
-   "left": 91.0,
+   "left": 90.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 79.0,
    "resets_at": "2026-11-22T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-20T04:54:32.675617-05:00",
+   "read_at": "2026-11-20T05:18:01.838555-05:00",
    "source": "live",
    "left": 21.0,
    "left_words": "of your weekly allowance left"
@@ -288,7 +266,7 @@
    "read_at": "2026-11-20T02:09:37.522634-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-20T04:54:32.675617-05:00"
+  "read_at": "2026-11-20T05:18:01.838555-05:00"
  },
  "ui": {
   "week_pct": 0.104,
@@ -308,7 +286,7 @@
   "week_pct": 73.63,
   "usage_pct": 48.9,
   "work_pct": 81.3,
-  "read_at": "2026-11-20T10:18:00+00:00",
+  "read_at": "2026-11-20T10:21:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -338,14 +316,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-20T05:17:00-05:00",
+   "at": "2026-11-20T05:20:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-20T05:18:00-05:00",
+  "at": "2026-11-20T05:21:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -356,8 +334,8 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Double Spread: past the week's halfway point with room left, so twice the even pace until the limit or the reset; the machine allows 2 (at its floor: load 13.2 a core is over 10)",
-  "n": 2,
+  "why": "Double Spread: past the week's halfway point with room left, so twice the even pace until the limit or the reset; the machine allows 3 (raised a step toward the floor of 8: new work may start and...",
+  "n": 3,
   "at": "2026-11-20T02:09:48.586335-05:00"
  },
  "lanes": [
@@ -600,78 +578,60 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-20T10:17:31Z",
+  "at": "2026-11-20T10:21:03Z",
   "s": {
-   "T-5247": [
-    "merging",
-    "Host checks on the Mac mini",
-    1795169491380
-   ],
-   "T-5236": [
-    "merging",
-    "Host checks on the Mac mini",
-    1795169491380
-   ],
-   "T-5234": [
-    "merging",
-    "Host checks on the Mac mini",
-    1795169491380
-   ],
    "T-4994": [
     "mergeq",
     "1st to merge",
-    1795169311380
+    1795169283980
    ],
    "T-5180": [
     "mergeq",
     "1st to merge",
-    1795169311380
+    1795169283980
    ],
    "T-4813": [
     "mergeq",
     "2nd to merge",
-    1795157851380
+    1795157823980
    ],
    "T-4806": [
     "mergeq",
     "3rd to merge",
-    1795148311380
+    1795148283980
    ],
    "T-0349": [
     "mergeq",
     "4th to merge",
-    1795147951380
+    1795147983980
    ],
    "T-4184": [
     "mergeq",
     "5th to merge",
-    1795152571380
+    1795152603980
    ],
    "T-4182": [
     "mergeq",
     "6th to merge",
-    1795156891380
+    1795156863980
    ],
    "T-4181": [
     "mergeq",
     "7th to merge",
-    1795157791380
+    1795157763980
    ],
    "T-4920": [
     "testing",
     "its own tests, in its copy",
-    1795168891380
+    1795168923980
    ],
    "T-4947": [
     "testing",
     "its own tests, in its copy",
-    1795169851380
+    1795169883980
    ]
   },
   "nm": {
-   "T-5247": "MacBook runner takes pre-merge Xcode runs",
-   "T-5236": "Send land host tests to the MacBook under heavy load",
-   "T-5234": "Move merge tests to the MacBook under heavy load",
    "T-4994": "Act on the feature record at every add",
    "T-5180": "Cut the merge step's wait on the first entry's checks",
    "T-4813": "Home's numbers update within a minute",
@@ -684,9 +644,6 @@
    "T-4947": "Check finished work before it ships"
   },
   "wk": {
-   "T-5247": "Odalys",
-   "T-5236": "Odalys",
-   "T-5234": "Odalys",
    "T-4994": "Odalys",
    "T-5180": "Odalys",
    "T-4813": "Maren",
@@ -712,52 +669,27 @@
   }
  },
  "ln": {
-  "at": "2026-11-20T10:17:31Z",
+  "at": "2026-11-20T10:21:03Z",
   "mq": {
    "n": {
-    "checking": 3,
+    "checking": 0,
     "inline": 8,
     "conflicted": 2,
     "failed": 0,
     "held": 0,
-    "retry": 3,
+    "retry": 6,
     "parked": 2
    },
    "m": {
-    "checking": 6,
-    "inline": 208,
-    "conflicted": 1767,
+    "checking": null,
+    "inline": 212,
+    "conflicted": 1770,
     "failed": null,
     "held": null,
-    "retry": 117,
-    "parked": 282
+    "retry": 58,
+    "parked": 285
    },
-   "cur": [
-    [
-     [
-      "T-5247"
-     ],
-     "Mac tests",
-     "Mac mini",
-     6
-    ],
-    [
-     [
-      "T-5236"
-     ],
-     "Mac tests",
-     "Mac mini",
-     6
-    ],
-    [
-     [
-      "T-5234"
-     ],
-     "Mac tests",
-     "Mac mini",
-     6
-    ]
-   ],
+   "cur": [],
    "ld": [
     3,
     "2026-11-20T05:14:02Z"
@@ -765,12 +697,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-20T10:17:07Z",
-    "ld": 12.36,
+    "at": "2026-11-20T10:20:38Z",
+    "ld": 9.06,
     "c": 8,
     "sb": 0,
     "dk": [
-     22.0,
+     22.1,
      228.3
     ],
     "ss": [
@@ -818,11 +750,11 @@
      "open": false
     }
    },
-   "at": "2026-11-20T10:17:31+00:00"
+   "at": "2026-11-20T10:21:03+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-20T10:17:31+00:00"
+   "at": "2026-11-20T10:21:03+00:00"
   }
  },
  "operators": [
@@ -858,10 +790,10 @@
   "main": 2,
   "lanes": 0,
   "total": 2,
-  "at": "5:18 AM",
+  "at": "5:21 AM",
   "why": "",
-  "at_iso": "2026-11-20T10:18:00+00:00",
+  "at_iso": "2026-11-20T10:21:00+00:00",
   "started": "2:11 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 2:11 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 5:18 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 2:11 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 5:21 AM ET</p></section>"
  }
 }

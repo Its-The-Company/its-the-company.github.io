@@ -284,6 +284,22 @@ Bottlenecks) while the trim runs.
 Nothing on this page weakens sections 6, 7 or 11, the bans or the gates. The guards stay as they are, nothing is
 deleted, and the merge script adds a review check and retires no test of a guard.
 
+## Order changed by the Investors, 11-20 8:15 AM ET: prove it first, Home untouched
+
+"Hold off on any major changes to Home! We still haven't seen proof that the trimmed system is better, so do not
+rebuild anything until the system is finished and tested." (typed into the Mac mini session; `log/rulings.md`;
+#325 c7040483268). What Home reads is listed in [`ops/plans/T-5257-home-map.md`](t-5257-home-map.html). So:
+
+- **Step 4 is on hold**, and with it every retirement of something Home reads: the old landing layer (step 5), the
+  pool, lanes and hand-out (step 6), `task_stages.py`, `task_names_store.py`, `board_stale.py` (step 7), the
+  dashboards and their records (step 8). They stay switched on and in place.
+- **What goes on, beside the old system:** step 3 (real merges through `tools/merge.sh` while the old road runs),
+  step 9 (tests that give the same answer every time), step 10 (pre-merge Xcode runs on the MacBook), and the
+  parts of steps 5 to 8 nothing on Home or in a report reads, each checked against the map first.
+- **The proof:** the page's measures, old road against new over the same days: the wait from ready to main and main's
+  app tests green after a merge (`ops/metrics/merge.jsonl` against `ops/runs/land_steps.jsonl`), app code commits
+  on main a day. The Investors see those figures, then decide on Home and on the rest of the retiring.
+
 ## Progress
 
 Each step, when its check passes, adds one line here: "Step N done:" with the date, the commit and the evidence.

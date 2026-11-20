@@ -659,6 +659,7 @@ The Effect lines of the amendments.md entries the charter retired (2026-11-04 12
 - **2026-11-20 1:58 AM ET** ((private)): For the trim (T-5252): the trim session may change tools/main_folder_guard.py as far as the trim needs and may edit code in the main folder directly, committing by path. The guard keeps refusing every other session, and its rule against commits that skip the checks stays for all.
 - **2026-11-20 2:11 AM ET** ((private)): For the trim (T-5252): the eight Investor-owned files its page lists are approved for any change the trim needs; a guard or hook refusal no longer stops the trim, and the trim session may edit guards and hooks as needed. Nothing may spend real money or break the law; sections 6, 7 and 11 stand. Each such change is posted on the main thread when made.
 - **2026-11-20 7:27 AM ET** ((private)): While the trim (T-5252) runs, app work pauses as well as process work: no session or lane starts new work; work in progress stops at its next safe point (a change already in a land finishes landing); the Investor inbox, reports, guards and the trim itself go on. Lifted when the trim is done or the Investors say so.
+- **2026-11-20 8:15 AM ET** ((private)): No major change to Home until the trimmed system is finished and tested and the Investors have seen proof it is better: trim step 4 is on hold, nothing Home reads is retired, and the new merge road and sessions are built and proven beside the old ones first.
 {% endraw %}
 
 </div>

@@ -1,22 +1,11 @@
 {
  "schema": 1,
- "at": "2026-11-19T23:50:29.541891+00:00",
+ "at": "2026-11-20T00:05:03.609762+00:00",
  "session": {
   "active": false,
   "kind": "",
   "started": null,
   "flow": [
-   {
-    "t": "T-5180",
-    "name": "Cut the merge step's wait on the first entry's checks",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1795128787
-     }
-    ]
-   },
    {
     "t": "T-4565",
     "steps": [
@@ -33,6 +22,22 @@
      {
       "s": "testq",
       "at": 1795093045
+     }
+    ]
+   },
+   {
+    "t": "T-0043",
+    "name": "Strip unneeded Python modules from the release bundle",
+    "w": "Idris",
+    "acct": "Personal b",
+    "steps": [
+     {
+      "s": "claimed",
+      "at": 1795132332
+     },
+     {
+      "s": "worker",
+      "at": 1795132332
      }
     ]
    },
@@ -54,6 +59,14 @@
    }
   ],
   "done": [
+   {
+    "t": "T-5180",
+    "name": "Cut the merge step's wait on the first entry's checks",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1795132707
+   },
    {
     "t": "T-3113",
     "name": "Build a timeline feed for every picked-up task",
@@ -127,17 +140,9 @@
     "steps": [],
     "end": "landed",
     "end_at": 1795126995
-   },
-   {
-    "t": "T-4878",
-    "name": "Fix the red five hour test",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1795126194
    }
   ],
-  "landed": 48,
+  "landed": 49,
   "failed": 13
  },
  "workers": [],
@@ -191,12 +196,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-19T18:53:50-05:00",
+ "next_tick": "2026-11-19T19:08:04-05:00",
  "personal": {
   "week_pct": 76.57,
   "usage_pct": 47.5,
   "work_pct": 80.3,
-  "read_at": "2026-11-19T23:53:00+00:00",
+  "read_at": "2026-11-20T00:06:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -242,56 +247,6 @@
     "e": "high",
     "at": "2026-11-19T17:25:29-05:00",
     "n": "Evan",
-    "src": "plan-a"
-   },
-   {
-    "lane": "a3",
-    "task": "T-4109",
-    "w": "Maren",
-    "k": "site",
-    "t": "Add a newest-first view to the Reports page",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-19T17:16:34-05:00",
-    "n": "Evan",
-    "src": "plan-a"
-   },
-   {
-    "lane": "a3",
-    "task": "T-4446",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Commit the company's records once per supervisor round",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-19T17:16:34-05:00",
-    "n": "Evan",
-    "d": 1,
-    "src": "plan-a"
-   },
-   {
-    "lane": "a3",
-    "task": "T-3107",
-    "w": "Pernille",
-    "k": "measure",
-    "t": "Read the phones' real numbers from the gate build",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-19T17:16:34-05:00",
-    "n": "Evan",
-    "src": "plan-a"
-   },
-   {
-    "lane": "a3",
-    "task": "T-3113",
-    "w": "Odalys",
-    "k": "site",
-    "t": "Build a timeline feed for every picked-up task",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-19T17:16:34-05:00",
-    "n": "Evan",
-    "d": 1,
     "src": "plan-a"
    },
    {
@@ -404,7 +359,7 @@
   }
  ],
  "disk": {
-  "free_gb": 44,
+  "free_gb": 42,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -413,14 +368,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-19T18:50:00-05:00",
+   "at": "2026-11-19T19:03:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 3,
-  "at": "2026-11-19T18:53:00-05:00",
+  "at": "2026-11-19T19:06:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -618,42 +573,62 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-19T23:50:29Z",
+  "at": "2026-11-20T00:05:03Z",
   "s": {
-   "T-5180": [
+   "T-5070": [
     "merging",
     "Host checks on the Mac mini",
-    1795128809541
+    1795132863609
    ],
-   "T-5070": [
+   "T-4850": [
     "mergeq",
     "1st to merge",
-    1795128809541
+    1795132983609
+   ],
+   "T-5005": [
+    "mergeq",
+    "2nd to merge",
+    1795132923609
    ],
    "T-4693": [
     "mergeq",
-    "2nd to merge",
-    1795129409541
+    "3rd to merge",
+    1795129383609
    ],
    "T-4110": [
     "mergeq",
-    "3rd to merge",
-    1795130129541
+    "4th to merge",
+    1795130103609
    ],
    "T-4573": [
     "mergeq",
-    "4th to merge",
-    1795132229541
+    "5th to merge",
+    1795132203609
    ],
    "T-4184": [
+    "testing",
+    "Mac Mini \u00b7 test",
+    null
+   ],
+   "T-0043": [
     "testq",
     "1st for a Simulator",
-    1795132109541
+    1795132743609
    ],
-   "T-3113": [
+   "T-3859": [
+    "testq",
+    "1st for a Simulator",
+    1795132743609
+   ],
+   "T-5179": [
+    "testq",
+    "1st for a Simulator",
+    1795132743609
+   ],
+   "T-5180": [
     "merged",
-    "on main 5:52 PM ET",
-    1795128776000,
+    "on main 6:58 PM ET",
+    1795132696000,
     ""
    ],
    "T-3337": [
@@ -662,96 +637,88 @@
     1795128018000,
     ""
    ],
-   "T-3859": [
+   "T-4878": [
     "merged",
-    "on main 5:23 PM ET",
-    1795127001000,
+    "on main 5:06 PM ET",
+    1795125967000,
     ""
-   ],
-   "T-4446": [
-    "merged",
-    "on main 4:32 PM ET",
-    1795123953000,
-    ""
-   ],
-   "T-4850": [
-    "merged",
-    "on main 2:52 PM ET",
-    1795117920000,
-    "Odalys"
    ]
   },
   "nm": {
-   "T-5180": "Cut the merge step's wait on the first entry's checks",
    "T-5070": "Shorten the gate change merge wait",
+   "T-4850": "Bring the Mac mini load back down",
+   "T-5005": "One coordinator runs every account's sessions",
    "T-4693": "Research a permanent name for the app",
    "T-4110": "Chart the task queue size on Home",
    "T-4573": "Answer when the chosen account cannot take a message",
    "T-4184": "A person's own script becomes a Home Screen widget",
-   "T-3113": "Build a timeline feed for every picked-up task",
-   "T-3337": "Keep Plan mode answers only in the Investor's reply",
+   "T-0043": "Strip unneeded Python modules from the release bundle",
    "T-3859": "Move everything not needed off the Mac mini disk",
-   "T-4446": "Commit the company's records once per supervisor round",
-   "T-4850": "Bring the Mac mini load back down"
+   "T-5179": "Merge-queue fixes go first, process work unlimited",
+   "T-5180": "Cut the merge step's wait on the first entry's checks",
+   "T-3337": "Keep Plan mode answers only in the Investor's reply",
+   "T-4878": "Fix the red five hour test"
   },
   "wk": {
-   "T-5180": "Odalys",
    "T-5070": "Odalys",
+   "T-4850": "Odalys",
+   "T-5005": "Odalys",
    "T-4693": "Wrenna",
    "T-4110": "Maren",
    "T-4573": "Odalys",
    "T-4184": "Idris",
-   "T-3113": "Odalys",
-   "T-3337": "Odalys",
+   "T-0043": "Idris",
    "T-3859": "Odalys",
-   "T-4446": "Odalys",
-   "T-4850": "Odalys"
+   "T-5179": "Odalys",
+   "T-5180": "Odalys",
+   "T-3337": "Odalys",
+   "T-4878": "Odalys"
   }
  },
  "ln": {
-  "at": "2026-11-19T23:50:29Z",
+  "at": "2026-11-20T00:05:03Z",
   "mq": {
    "n": {
     "checking": 1,
-    "inline": 4,
+    "inline": 5,
     "conflicted": 4,
     "failed": 0,
     "held": 0,
-    "retry": 1,
+    "retry": 0,
     "parked": 0
    },
    "m": {
-    "checking": 57,
-    "inline": 41,
-    "conflicted": 389,
+    "checking": 4,
+    "inline": 15,
+    "conflicted": 403,
     "failed": null,
     "held": null,
-    "retry": 17,
+    "retry": null,
     "parked": null
    },
    "cur": [
     [
      [
-      "T-5180"
+      "T-5070"
      ],
      "Mac tests",
      "Mac mini",
-     57
+     4
     ]
    ],
    "ld": [
-    92,
-    "2026-11-19T22:53:02Z"
+    93,
+    "2026-11-19T23:58:27Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-19T23:50:31Z",
-    "ld": 67.97,
+    "at": "2026-11-20T00:05:08Z",
+    "ld": 62.99,
     "c": 8,
     "sb": 1,
     "dk": [
-     44.1,
+     41.9,
      228.3
     ],
     "ss": [
@@ -763,12 +730,12 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-19T23:32:42Z",
-    "ld": 0.22,
+    "at": "2026-11-20T00:03:19Z",
+    "ld": 0.21,
     "c": 12,
     "sb": 0,
     "dk": [
-     354.7,
+     354.8,
      926.4
     ],
     "sn": []
@@ -777,13 +744,13 @@
  },
  "hc": {
   "wait": {
-   "n": 9,
+   "n": 10,
    "limit": 20,
-   "in_line": 4,
+   "in_line": 5,
    "parked": 5,
    "open": true,
    "mq": false,
-   "counted": "2026-11-19T18:38:50-05:00",
+   "counted": "2026-11-19T18:53:04-05:00",
    "by": {
     "app": {
      "n": 1,
@@ -791,7 +758,7 @@
      "open": true
     },
     "other": {
-     "n": 8,
+     "n": 9,
      "limit": 20,
      "open": true
     },
@@ -801,11 +768,11 @@
      "open": false
     }
    },
-   "at": "2026-11-19T23:50:29+00:00"
+   "at": "2026-11-20T00:05:03+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-19T23:50:29+00:00"
+   "at": "2026-11-20T00:05:03+00:00"
   }
  },
  "operators": [
@@ -842,7 +809,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 2 tasks",
+   "t": "Work session \u2013 3 tasks",
    "at": "2026-11-19T17:59:17-05:00"
   },
   {
@@ -851,7 +818,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 1 task",
+   "t": "Work session",
    "at": "2026-11-19T17:25:59-05:00"
   }
  ],
@@ -872,12 +839,12 @@
  ],
  "agents_now": {
   "main": 0,
-  "lanes": 6,
-  "total": 6,
-  "at": "6:53 PM",
+  "lanes": 5,
+  "total": 5,
+  "at": "7:06 PM",
   "why": "",
-  "at_iso": "2026-11-19T23:53:00+00:00",
+  "at_iso": "2026-11-20T00:06:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 6 sessions \u00b7 as of 6:53 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 7:06 PM ET</p></section>"
  }
 }

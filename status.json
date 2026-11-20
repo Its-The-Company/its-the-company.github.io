@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-20T16:02:00.452867+00:00",
+ "at": "2026-11-20T16:10:51.429944+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -267,7 +267,7 @@
     "end_at": 1795182889
    }
   ],
-  "landed": 18,
+  "landed": 16,
   "failed": 18
  },
  "workers": [
@@ -276,7 +276,7 @@
    "task": "[build] T-5047 token test red card",
    "model": "opus",
    "started": "2026-11-20T14:25:57.326Z",
-   "seconds": 5763,
+   "seconds": 6294,
    "finished": null,
    "effort": "high"
   },
@@ -285,7 +285,7 @@
    "task": "[build] T-4550 button action run, slice 2",
    "model": "opus",
    "started": "2026-11-20T14:26:07.585Z",
-   "seconds": 5752,
+   "seconds": 6283,
    "finished": null,
    "effort": "high"
   }
@@ -333,21 +333,21 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 55.0,
+   "pct": 57.0,
    "resets_at": "2026-11-20T13:20:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-20T10:56:17.192700-05:00",
+   "read_at": "2026-11-20T11:08:28.104218-05:00",
    "source": "live",
-   "left": 45.0,
+   "left": 43.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 96.0,
+   "pct": 97.0,
    "resets_at": "2026-11-22T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-20T10:56:17.192700-05:00",
+   "read_at": "2026-11-20T11:08:28.104218-05:00",
    "source": "live",
-   "left": 4.0,
+   "left": 3.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
@@ -357,7 +357,7 @@
    "read_at": "2026-11-20T09:21:58.972439-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-20T10:56:17.192700-05:00"
+  "read_at": "2026-11-20T11:08:28.104218-05:00"
  },
  "ui": {
   "week_pct": 0.112,
@@ -377,7 +377,7 @@
   "week_pct": 82.11,
   "usage_pct": 48.3,
   "work_pct": 79.9,
-  "read_at": "2026-11-20T16:09:00+00:00",
+  "read_at": "2026-11-20T16:12:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -398,7 +398,7 @@
   }
  ],
  "disk": {
-  "free_gb": 22,
+  "free_gb": 23,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -407,14 +407,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-20T11:04:00-05:00",
+   "at": "2026-11-20T11:09:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-20T11:09:00-05:00",
+  "at": "2026-11-20T11:12:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -425,7 +425,7 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Double Spread: past the week's halfway point with room left, so twice the even pace until the limit or the reset; the machine allows 8 (at its floor: load 59.8 a core is over 10)",
+  "why": "Double Spread: past the week's halfway point with room left, so twice the even pace until the limit or the reset; the machine allows 8 (at its floor: load 24.2 a core is over 10)",
   "n": 3,
   "at": "2026-11-20T09:22:05.059755-05:00"
  },
@@ -657,74 +657,77 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-20T16:02:00Z",
+  "at": "2026-11-20T16:10:51Z",
   "s": {
-   "T-4662": [
-    "merging",
-    "Rebasing onto current main",
-    1795190520452
-   ],
-   "T-3107": [
-    "merging",
-    "Rebasing onto current main",
-    1795190520452
-   ],
    "T-5236": [
-    "mergeq",
-    "1st to merge",
-    1795190400452
+    "merging",
+    "Rebasing onto current main",
+    1795191051429
    ],
    "T-5234": [
+    "merging",
+    "Rebasing onto current main",
+    1795191051429
+   ],
+   "T-4662": [
     "mergeq",
     "1st to merge",
-    1795190400452
+    1795188291429
+   ],
+   "T-3107": [
+    "mergeq",
+    "2nd to merge",
+    1795188411429
    ],
    "T-5047": [
     "merging",
     "Mac tests at the main gate",
-    1795189920452
-   ],
-   "T-4550": [
-    "merging",
-    "Mac tests at the main gate \u00b7 3 groups of tests done, 1 red",
-    1795189140452
+    1795190031429
    ]
   },
   "nm": {
-   "T-4662": "Place the cursor easily on a long line",
-   "T-3107": "Read the phones' real numbers from the gate build",
    "T-5236": "Send land host tests to the MacBook under heavy load",
    "T-5234": "Move merge tests to the MacBook under heavy load",
-   "T-5047": "Fix the token test's No view for this size card",
-   "T-4550": "Python contract and action run for widget buttons"
+   "T-4662": "Place the cursor easily on a long line",
+   "T-3107": "Read the phones' real numbers from the gate build",
+   "T-5047": "Fix the token test's No view for this size card"
   },
   "wk": {
-   "T-4662": "Idris",
-   "T-3107": "Pernille",
    "T-5236": "Odalys",
    "T-5234": "Odalys",
+   "T-4662": "Idris",
+   "T-3107": "Pernille",
    "T-5047": "Idris",
-   "T-4550": "Pernille",
    "T-5341": "Ines",
    "T-4842": "Idris",
    "T-4998": "Ines"
   }
  },
  "ln": {
-  "at": "2026-11-20T16:02:00Z",
+  "at": "2026-11-20T16:10:51Z",
   "mq": {
    "n": {
     "checking": 2,
-    "inline": 2
+    "inline": 2,
+    "conflicted": 2,
+    "failed": 1,
+    "held": 1,
+    "retry": 2,
+    "parked": 3
    },
    "m": {
     "checking": 0,
-    "inline": 2
+    "inline": 45,
+    "conflicted": 2120,
+    "failed": 91,
+    "held": 2,
+    "retry": 439,
+    "parked": 274
    },
    "cur": [
     [
      [
-      "T-4662"
+      "T-5236"
      ],
      "lining up with main",
      "Mac mini",
@@ -732,7 +735,7 @@
     ],
     [
      [
-      "T-3107"
+      "T-5234"
      ],
      "lining up with main",
      "Mac mini",
@@ -740,18 +743,18 @@
     ]
    ],
    "ld": [
-    16,
-    "2026-11-20T14:41:55Z"
+    17,
+    "2026-11-20T16:08:27Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-20T16:03:52Z",
-    "ld": 97.55,
+    "at": "2026-11-20T16:11:15Z",
+    "ld": 85.26,
     "c": 8,
-    "sb": 1,
+    "sb": 2,
     "dk": [
-     22.4,
+     22.6,
      228.3
     ],
     "ss": [
@@ -759,7 +762,8 @@
      953.7
     ],
     "sn": [
-     "iPhone 17e"
+     "iPhone 17e",
+     "pywidget-t5047-fresh"
     ]
    },
    "macbook": {
@@ -777,16 +781,16 @@
  },
  "hc": {
   "wait": {
-   "n": 12,
+   "n": 13,
    "limit": 20,
    "in_line": 4,
-   "parked": 8,
+   "parked": 9,
    "open": true,
    "mq": false,
-   "counted": "2026-11-20T15:53:50+00:00",
+   "counted": "2026-11-20T16:06:51+00:00",
    "by": {
     "app": {
-     "n": 6,
+     "n": 7,
      "limit": 20,
      "open": true
     },
@@ -801,11 +805,11 @@
      "open": false
     }
    },
-   "at": "2026-11-20T16:02:00+00:00"
+   "at": "2026-11-20T16:10:51+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-20T16:02:00+00:00"
+   "at": "2026-11-20T16:10:51+00:00"
   }
  },
  "operators": [
@@ -839,10 +843,10 @@
   "main": 2,
   "lanes": 0,
   "total": 2,
-  "at": "11:09 AM",
+  "at": "11:12 AM",
   "why": "",
-  "at_iso": "2026-11-20T16:09:00+00:00",
+  "at_iso": "2026-11-20T16:12:00+00:00",
   "started": "9:23 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 9:23 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 11:09 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 9:23 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 11:12 AM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-20T16:44:45.364667+00:00",
+ "at": "2026-11-20T16:47:56.415760+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -267,7 +267,7 @@
    "task": "[build] T-5047 token test red card",
    "model": "opus",
    "started": "2026-11-20T14:25:57.326Z",
-   "seconds": 8328,
+   "seconds": 8519,
    "finished": null,
    "effort": "high"
   }
@@ -359,7 +359,7 @@
   "week_pct": 82.11,
   "usage_pct": 48.3,
   "work_pct": 79.9,
-  "read_at": "2026-11-20T16:44:00+00:00",
+  "read_at": "2026-11-20T16:48:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -405,7 +405,7 @@
   }
  ],
  "disk": {
-  "free_gb": 20,
+  "free_gb": 19,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -414,14 +414,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-20T11:43:00-05:00",
+   "at": "2026-11-20T11:46:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-20T11:44:00-05:00",
+  "at": "2026-11-20T11:48:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -653,17 +653,17 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-20T16:44:45Z",
+  "at": "2026-11-20T16:47:31Z",
   "s": {
    "T-5236": [
     "merging",
     "Host checks on the Mac mini",
-    1795192665364
+    1795192651282
    ],
    "T-5047": [
     "merging",
     "Mac tests at the main gate",
-    1795192845364
+    1795192831282
    ]
   },
   "nm": {
@@ -679,25 +679,25 @@
   }
  },
  "ln": {
-  "at": "2026-11-20T16:44:45Z",
+  "at": "2026-11-20T16:47:31Z",
   "mq": {
    "n": {
     "checking": 1,
     "inline": 0,
     "conflicted": 1,
-    "failed": 1,
+    "failed": 0,
     "held": 0,
     "retry": 3,
     "parked": 3
    },
    "m": {
-    "checking": 7,
+    "checking": 10,
     "inline": null,
-    "conflicted": 1465,
-    "failed": 125,
+    "conflicted": 1468,
+    "failed": null,
     "held": null,
-    "retry": 442,
-    "parked": 308
+    "retry": 444,
+    "parked": 310
    },
    "cur": [
     [
@@ -706,7 +706,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     7
+     10
     ]
    ],
    "ld": [
@@ -716,12 +716,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-20T16:44:48Z",
-    "ld": 49.88,
+    "at": "2026-11-20T16:47:34Z",
+    "ld": 46.9,
     "c": 8,
     "sb": 1,
     "dk": [
-     19.1,
+     16.9,
      228.3
     ],
     "ss": [
@@ -747,16 +747,16 @@
  },
  "hc": {
   "wait": {
-   "n": 11,
+   "n": 9,
    "limit": 20,
-   "in_line": 4,
-   "parked": 7,
+   "in_line": 1,
+   "parked": 8,
    "open": true,
    "mq": false,
-   "counted": "2026-11-20T16:31:39+00:00",
+   "counted": "2026-11-20T16:44:48+00:00",
    "by": {
     "app": {
-     "n": 5,
+     "n": 3,
      "limit": 20,
      "open": true
     },
@@ -771,11 +771,11 @@
      "open": false
     }
    },
-   "at": "2026-11-20T16:44:45+00:00"
+   "at": "2026-11-20T16:47:56+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-20T16:44:36+00:00"
+   "at": "2026-11-20T16:47:31+00:00"
   }
  },
  "operators": [
@@ -828,10 +828,10 @@
   "main": 1,
   "lanes": 2,
   "total": 3,
-  "at": "11:44 AM",
+  "at": "11:48 AM",
   "why": "",
-  "at_iso": "2026-11-20T16:44:00+00:00",
+  "at_iso": "2026-11-20T16:48:00+00:00",
   "started": "9:23 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 1, started 9:23 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 11:44 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 1, started 9:23 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 11:48 AM ET</p></section>"
  }
 }

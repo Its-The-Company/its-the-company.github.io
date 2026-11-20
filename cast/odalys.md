@@ -42,8 +42,6 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 ## Lessons
 - T-4956 11-18: ticked lines leave the board for log/board-archive.md; a claim release writes a new slot, whose mtime is the release time.
-- T-4838 11-19 cd29327d14: a land past 20 min runs with run_in_background and a 2 h timeout, not foreground. Before any land retry, set every unnamed copy file to main's tip: my copy's old personal_land_test.sh (pre mask fix) read as my red. main_gate_test waits on real heavy slots (>60 min at load 45; 925 s stubbed). Runner deploy = VERSION bump; it self-updates between jobs. Owed T-5111.
-- T-4843 11-19 6d60a7e7b9: a new daily tool needs both a jobs_loop JOBS+TOOL row and a supervisor `! moved <job>` step (jobs_loop_test checks it). board titles max 10 words/64 chars.
 - T-5135 11-19 0284422ee0: board_tick refuses title words in ops/title_words.txt ('<span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span>'): check that list before an add. Route timing: flow.jsonl ready->merged (src land) vs main_gate.jsonl first row->merged (src main_gate).
 - T-4823 11-19 25eaaa0974: a <span title="A second worker who grades the idea without seeing the first worker&#x27;s grades, and records them first.">blind</span> replay compares the add's rule with the record's build rule: where they differ (kind, keys) is the 'wrong' count; align the add to build before reading a rate. Steps a person listed are no add case.
 - T-5162 11-19: the company's <span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">parked</span> refs carry no clock (parked/operator/20261108-t3297); order refs by tip commit time. Its real waiting work is the SSD land_cmd.sh copies, not refs (T-5189). git cherry-pick has no -q.
@@ -53,6 +51,9 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-4920 11-20 c8c8014fd6: xc.sh queues only from pywidget/ios with -project; the job file must land (main_gate) before the runner takes it, and a mutant commit never can (main only). Host suites on the SSD hit 600 s: copy to /tmp.
 - T-5192 11-20: xc.sh leaves its job json untracked in main's ops/jobs; copy it to the scratch copy, rm main's, main_gate land. An app line's Done-when must name a docs page.
 - T-4995 11-19: land_xc.jsonl minutes/land replays exactly (10.70 check passes); gate retest narrowed 0 of 1 retry in 22.5 h (9.92/land from fewer reds). Re-read when retries pile up.
+- T-5234 11-20: security-guard refuses any Bash command whose text holds a session-launch line (even in a heredoc docstring); keep such example strings out of commands. Design ready: land-only slot, measured in board note.
+- T-5247 11-20 fea3bb96d4: lane metrics (ops/metrics) never travel; a linked worktree's rows can go to main via git's common dir. Mini Xcode runs 11-19 were pre-merge XC_LOCAL=1 callers (feature_session split build/test), not lands.
+- T-5236 11-20 4232c50b76: runner job sandbox has no network (localhost too); 53/578 suites use one, so a MacBook host red is rerun on the mini before a <span title="What keeps an idea below the top: the cap that applies to it now.">hold</span>. tests/run.sh waited 50+ min for a heavy slot at load 30: run a new suite direct, let landcheck take the slot.
 {% endraw %}
 
 

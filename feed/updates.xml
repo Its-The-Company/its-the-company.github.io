@@ -4,8 +4,15 @@
 <link href="https://its-the-company.github.io/feed/updates.xml" rel="self"/>
 <link href="https://its-the-company.github.io/"/>
 <id>https://its-the-company.github.io/feed/updates.xml</id>
-<updated>2026-11-20T07:26:23-05:00</updated>
+<updated>2026-11-20T10:49:42-05:00</updated>
 <author><name>The Company</name></author>
+<entry>
+<title>Test: T-4634: measured the github hang test&#x27;s cold run (GET at 1.46-2.00 s vs a 1.5 s cut; 0.05-</title>
+<link href="https://its-the-company.github.io/"/>
+<id>tag:its-the-company.github.io,2026-11-20:event/2026-11-20t10-49-42-05-00-test-t-4634-measured-the-github-hang-test-s</id>
+<updated>2026-11-20T10:49:42-05:00</updated>
+<summary type="text">T-4634: measured the github hang test&#x27;s cold run (GET at 1.46-2.00 s vs a 1.5 s cut; 0.05-0.19 s after the warm-up). Warm-up fix holds under load; host gate red on 3.13 in two other timed classes at load ~700, line left open.</summary>
+</entry>
 <entry>
 <title>Review: T-5298: re-review of the caret fixes T-4887/T-4888 at f3e5e85f, PASS with findings (M1: a </title>
 <link href="https://its-the-company.github.io/"/>
@@ -348,12 +355,5 @@
 <id>tag:its-the-company.github.io,2026-11-17:event/2026-11-17t16-41-34-05-00-review-t-4612-review-of-t-4181-at-bd131735-co</id>
 <updated>2026-11-17T16:41:34-05:00</updated>
 <summary type="text">T-4612: review of T-4181 at bd131735 (covers T-0678): FIX FIRST. No test has seen a refresh tap redraw a widget; rerun interval still measured from sampled_at. T-4772..T-4775 for Idris.</summary>
-</entry>
-<entry>
-<title>Review: Reviewed T-4186 at f201c3f3 (T-4256 gutter numbers): PASS with findings, two Low on T-4771</title>
-<link href="https://its-the-company.github.io/"/>
-<id>tag:its-the-company.github.io,2026-11-17:event/2026-11-17t16-37-18-05-00-review-reviewed-t-4186-at-f201c3f3-t-4256-gutt</id>
-<updated>2026-11-17T16:37:18-05:00</updated>
-<summary type="text">Reviewed T-4186 at f201c3f3 (T-4256 gutter numbers): PASS with findings, two Low on T-4771 for Idris</summary>
 </entry>
 </feed>

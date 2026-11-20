@@ -43,12 +43,11 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - A packet's premise is a claim (T-3585): count from the gate's own log. "Live" may be only a <span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">parked</span> ref, "back to to do" may already be on HEAD: merge-base --is-ancestor both ways (T-3864, T-4096). Outbox ticks can be lost: board-grep a "ticked" ID.
 - 11-18: after a refused history rewrite, land --from (T-4911) is the road (T-4771/4783 ruling). T-4630 'rule first' was ruled 11-16; check before ruling.
 - feature grouping T-4228 — done 11-14; both switches off, mine to switch; 17, 18 open; code-written slots are not the author's words
-- T-4841 (11-18): HealthKit out of 1.0 and out of T-0011's probe, no Investor ask (ops/decisions/2026-11-18-t4841-healthkit.md). A doc half on a parked branch: a note on its owning line, never a copy.
 - T-4796 done 11-20 (d73d09ed5f): #324 A ruled: Pro = Python a widget button runs; lane's own runs free. 06-decisions item 9 left on T-4998. A done-when phrase must sit on one line (greppable).
-- T-4770 (11-18): checked line Tue 2027-07-27 (02-21 to 12-24), snap 4.25; milestones.json not moved (6 days; move once when T-4871 closes). Ratios 0.57/0.50 are two points, 0.50 retracted.
+- Release line (11-19, T-4871 landed): likely Thu 2027-07-15 (04-04 to 12-01) in milestones.json and T-4266-release-range.py; T-4770's 07-27 checked line predates T-4871. Ratios 0.57/0.50 are two points, 0.50 retracted. Packets quoting an older date are stale: run the tool first.
+- T-5341 (11-20): Controls date effects posted on #325 c7042285567 (A +20 d, B +17 d, C none); I recommended C, Idris A. Waiting on the Investors' letter and the Action-button phone answer; no C0 to C5 board line before it.
 - T-3402 (11-19): OpenSSL removal stays in 1.0 (T-3401 started); cut-off freeze 11-30 11:59 PM, else 1.0.1. A check whose answer can't flip back is ruled when the evidence lands, not on its date.
 - T-5165 (11-19): standing list reviewed (ops/plans/standing-rules-review.md); 107 lines retired via ruling_record.py retire/amend, ledger handbook/standing-retired.md; spent entries naming a ban stay.
-- T-5146 (11-20): 70 lines ordered at board top by a board_tick move chain; stars #338; #325 c7030924746. A note's hash may differ from the landed one: grep git log.
 {% endraw %}
 
 

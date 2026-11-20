@@ -309,6 +309,45 @@ rebuild anything until the system is finished and tested." (typed into the Mac m
   app tests green after a merge (`ops/metrics/merge.jsonl` against `ops/runs/land_steps.jsonl`), app code commits
   on main a day. The Investors see those figures, then decide on Home and on the rest of the retiring.
 
+## The plan in force since 11-20 9:10 AM ET: a smaller trim
+
+The Investors asked for a judgement call and answered "Proceed with these recommendations." (`log/rulings.md`
+11-20 9:10 AM; #325 c7041663284). The judgement: a slimmer system is likely better over the months to release, but
+moderately, since app merges are limited by the Xcode and test runs the two machines can do; the full twelve steps
+cost more than they buy. What is in force:
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 5: The plan in force since 11-20 9:10 AM ET: a smaller trim, scrolls sideways" style="--tw:676px" markdown="1">
+
+| Step | State | What it is now |
+|---|---|---|
+| 1 (T-5254) | done | The freeze on process work stays on: app work only, on the current system. |
+| 2 (T-5255) | done | 99 unused scripts in `retired/`. No more are moved. |
+| 3 (T-5256) | open, changed | `tools/merge.sh` exists and is reviewed. It is tested by one swap: the lanes' ready work goes through it behind a switch ([`ops/plans/T-5256-merge-road-switch.md`](t-5256-merge-road-switch.html)). Kept only if the wait from ready to main clearly drops; else the old road stays and the script is shelved. |
+| 4 to 8 (T-5257 to T-5261) | held | Home, the old landing layer's retirement, the session pool, the board tools and the dashboards are left alone. |
+| 9 (T-5262) | open | The test files that fail or flip are fixed (it helps either road). |
+| 10 (T-5263, with T-5247 part 2) | open | Pre-merge Xcode runs go to the MacBook (it helps either road). |
+| 11 (T-5264) | held | No Handbook or Investor-owned file changes are needed while nothing more is retired. |
+| 12 (T-5265) | open, changed | The comparison below, and the Investors' decision on it. |
+
+</div>
+
+
+T-5179 and T-5117 are **not** landed (corrected 11-20 9:15 AM, once read): T-5179 lets process lines start without
+limits, against the freeze, and T-5117 makes the old gate open new process lines. Both stay as their copies.
+
+**The comparison (app work only on both sides, alternating whole days after the weekly reset;** Investors, 11-20
+about 9:25 AM ET: "I agree that the comparison should be done using alternating days after the weekly reset").
+On 11-20 the accounts were at 96% (a, resets Sat 11-21 10:00 AM), 87% (b, resets Sat 2:00 PM) and about 85% (main,
+resets Sun 11-22 2:00 AM) of their week, so a Saturday start would starve the old road. Days run 2:00 AM to 2:00 AM
+ET: old road Sun 11-22, new road Mon 11-23, old Tue 11-24, new Wed 11-25. The switch is flipped at each 2:00 AM
+after a drain (no ready, held or landing marker); a branch that straddles the flip is counted for the road that
+merged it and named. The trim's own heavy test runs and building are finished before Sunday and kept off the
+machine during the four days. Measures, the same on both sides: app code commits on main a day (the page's command); app
+lines done a day; the wait from ready to main (old: the ready marker's time to the "landed" row in
+`ops/runs/land_steps.jsonl`; new: `ops/metrics/merge.jsonl`); main's app tests after each merge. The personal
+accounts' stop of 7:27 AM (`ops/lane_stops.json` r3) was <span title="A new, permitted reading that removes a cap. A lift rule is that reading, written down before we look.">lifted</span> at 9:10 AM for this.
+
 ## Progress
 
 Each step, when its check passes, adds one line here: "Step N done:" with the date, the commit and the evidence.

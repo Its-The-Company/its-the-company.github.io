@@ -12,7 +12,7 @@ description: "Pernille, 11-17 9:35 PM ET. Answers an Investor on #41 (c696512408
 
 {% raw %}
 Pernille, 11-17 9:35 PM ET. Answers an Investor on #41 (c6965124089, 7:26 PM 11-17: "fix every bad test ... Consult
-real-world examples of how tests are designed and implemented. Fix the 'big picture' causes") and the 17:19 <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">ruling</span>: a red
+real-world examples of how tests are designed and implemented. Fix the 'big picture' causes") and the 5:19 PM <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">ruling</span>: a red
 must mean broken behaviour. Each rule names the cause it answers in Odalys's table (ops/plans/T-4787-red-causes.md, 134
 red lands 11-10 to 11-17: 46 bad test, 14 broken code, 26 other, 48 unknown) and in my ranked list
 (ops/plans/T-4786-bad-tests.md). A reviewer (Commandment 13) refuses a new or changed test that breaks one of these

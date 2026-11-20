@@ -1,11 +1,21 @@
 {
  "schema": 1,
- "at": "2026-11-20T12:25:03.190149+00:00",
+ "at": "2026-11-20T12:28:31.744003+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-20T02:11:05-05:00",
   "flow": [
+   {
+    "t": "T-4693",
+    "acct": "Personal b",
+    "steps": [
+     {
+      "s": "macbook",
+      "at": 1795140342
+     }
+    ]
+   },
    {
     "t": "T-4796",
     "name": "Say which premades carry the Pro tag",
@@ -14,16 +24,6 @@
      {
       "s": "testq",
       "at": 1795176731
-     }
-    ]
-   },
-   {
-    "t": "T-5298",
-    "name": "Check the caret fixes that followed the first review",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1795175902
      }
     ]
    },
@@ -172,31 +172,38 @@
     "why": "tests failed"
    }
   ],
-  "landed": 22,
+  "landed": 21,
   "failed": 13
  },
  "workers": [
-  {
-   "name": "pernille",
-   "task": "[review] T-5298 editor caret fixes check",
-   "model": "opus",
-   "started": "2026-11-20T11:54:01.776Z",
-   "seconds": 1861,
-   "finished": null,
-   "effort": "high"
-  },
   {
    "name": "idris",
    "task": "[build] T-5315 keep Altitude heights out of backups",
    "model": "opus",
    "started": "2026-11-20T11:54:51.624Z",
-   "seconds": 1811,
+   "seconds": 2020,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Pernille, Idris",
+ "who": "Idris",
  "recent": [
+  {
+   "name": "idris",
+   "task": "[build] T-5325 second tap on half-hidden row",
+   "model": "opus",
+   "started": "2026-11-20T12:27:27.844Z",
+   "seconds": null,
+   "finished": "2026-11-20T12:27:44.069000+00:00"
+  },
+  {
+   "name": "pernille",
+   "task": "[review] T-5298 editor caret fixes check",
+   "model": "opus",
+   "started": "2026-11-20T11:54:01.776Z",
+   "seconds": null,
+   "finished": "2026-11-20T12:26:29.326000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[review] T-4077 Settings restore footer check",
@@ -212,45 +219,29 @@
    "started": "2026-11-20T11:59:19.808Z",
    "seconds": null,
    "finished": "2026-11-20T12:14:10.931000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[review] T-5192 Habits tap opens its habit check",
-   "model": "opus",
-   "started": "2026-11-20T11:44:34.885Z",
-   "seconds": null,
-   "finished": "2026-11-20T11:58:38.190000+00:00"
-  },
-  {
-   "name": "wrenna",
-   "task": "[research] T-5301 Altitude heights in the privacy policy",
-   "model": "opus",
-   "started": "2026-11-20T11:49:01.882Z",
-   "seconds": null,
-   "finished": "2026-11-20T11:54:04.490000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 648,
+  "runnable_count": 649,
   "blocked_count": 2
  },
  "meter": {
   "five_hour": {
-   "pct": 26.0,
+   "pct": 27.0,
    "resets_at": "2026-11-20T08:20:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-20T07:20:10.481786-05:00",
+   "read_at": "2026-11-20T07:28:19.736091-05:00",
    "source": "live",
-   "left": 74.0,
+   "left": 73.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 83.0,
    "resets_at": "2026-11-22T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-20T07:20:10.481786-05:00",
+   "read_at": "2026-11-20T07:28:19.736091-05:00",
    "source": "live",
    "left": 17.0,
    "left_words": "of your weekly allowance left"
@@ -262,7 +253,7 @@
    "read_at": "2026-11-20T02:09:37.522634-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-20T07:20:10.481786-05:00"
+  "read_at": "2026-11-20T07:28:19.736091-05:00"
  },
  "ui": {
   "week_pct": 0.104,
@@ -282,7 +273,7 @@
   "week_pct": 73.63,
   "usage_pct": 48.9,
   "work_pct": 81.3,
-  "read_at": "2026-11-20T12:25:00+00:00",
+  "read_at": "2026-11-20T12:28:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -303,7 +294,7 @@
   }
  ],
  "disk": {
-  "free_gb": 22,
+  "free_gb": 23,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -312,14 +303,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-20T07:24:00-05:00",
+   "at": "2026-11-20T07:27:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-20T07:25:00-05:00",
+  "at": "2026-11-20T07:28:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -330,20 +321,11 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Double Spread: past the week's halfway point with room left, so twice the even pace until the limit or the reset; the machine allows 8 (at its floor: load 47.4 a core is over 10)",
+  "why": "Double Spread: past the week's halfway point with room left, so twice the even pace until the limit or the reset; the machine allows 8 (at its floor: load 29.9 a core is over 10)",
   "n": 3,
   "at": "2026-11-20T02:09:48.586335-05:00"
  },
  "lanes": [
-  {
-   "name": "Pernille",
-   "state": "running",
-   "task": "[review] T-5298 editor caret fixes check",
-   "model": "opus",
-   "since": "2026-11-20T11:54:01.776Z",
-   "next": [],
-   "effort": "high"
-  },
   {
    "name": "Idris",
    "state": "running",
@@ -357,6 +339,14 @@
    "name": "Odalys",
    "state": "next",
    "task": "Odalys, P0, merge-first, Investor an Investor c7031233507...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
+   "name": "Pernille",
+   "state": "next",
+   "task": "Pernille, P0, Investor an Investor c6965124089 (7:26 PM...",
    "model": null,
    "since": null,
    "next": []
@@ -388,16 +378,6 @@
  ],
  "tasks": {
   "run": [
-   {
-    "w": "Pernille",
-    "k": "review",
-    "t": "Check the caret fixes that followed the first review",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-20T11:54:01.776Z",
-    "o": "i",
-    "task": "T-5298"
-   },
    {
     "w": "Idris",
     "k": "build",
@@ -484,6 +464,11 @@
   ],
   "done": [
    {
+    "w": "Pernille",
+    "t": "Pernille's second check of the cursor fixes for taps on long lines passed: they work on ordinary...",
+    "at": "2026-11-20T07:27:00-05:00"
+   },
+   {
     "w": "Odalys",
     "t": "The Settings fix that keeps the restore message on screen after opening and leaving the Pro...",
     "at": "2026-11-20T07:22:00-05:00"
@@ -492,22 +477,21 @@
     "w": "Idris",
     "t": "Checked Maren's change writing the name as PyWidget: each edit changes only the name. Open:...",
     "at": "2026-11-20T07:14:00-05:00"
-   },
-   {
-    "w": "Odalys+operator",
-    "t": "already done, on main since 6:58 PM 11-19: no other branch was ever ready while the merge step...",
-    "at": "2026-11-20T07:11:00-05:00"
    }
   ],
   "count": {
-   "next": 648,
+   "next": 649,
    "wait": 2,
    "blocked": 0,
    "you": 2
   },
   "fin": {
-   "n": 46,
+   "n": 47,
    "rows": [
+    [
+     "T-5298",
+     "Check the caret fixes that..."
+    ],
     [
      "T-4077",
      "Check finished work before..."
@@ -527,10 +511,6 @@
     [
      "T-4068",
      "Check finished work before..."
-    ],
-    [
-     "T-5293",
-     "Drop altitude history when..."
     ]
    ]
   }
@@ -573,8 +553,113 @@
    "ok"
   ]
  ],
+ "stg": {
+  "at": "2026-11-20T12:28:31Z",
+  "s": {
+   "T-4796": [
+    "merging",
+    "Host checks on the Mac mini",
+    1795176751744
+   ],
+   "T-5247": [
+    "mergeq",
+    "1st to merge",
+    1795175611744
+   ],
+   "T-4994": [
+    "mergeq",
+    "2nd to merge",
+    1795177111744
+   ],
+   "T-4182": [
+    "mergeq",
+    "4th to merge",
+    1795156891744
+   ],
+   "T-4181": [
+    "mergeq",
+    "5th to merge",
+    1795157791744
+   ],
+   "T-2377": [
+    "mergeq",
+    "6th to merge",
+    1795172131744
+   ],
+   "T-4662": [
+    "mergeq",
+    "7th to merge",
+    1795172311744
+   ],
+   "T-4670": [
+    "mergeq",
+    "8th to merge",
+    1795172551744
+   ],
+   "T-3107": [
+    "mergeq",
+    "10th to merge",
+    1795175431744
+   ],
+   "T-4192": [
+    "mergeq",
+    "11th to merge",
+    1795175671744
+   ],
+   "T-5315": [
+    "merging",
+    "Mac tests at the main gate",
+    1795177711744
+   ],
+   "T-5256": [
+    "merging",
+    "Mac tests at the main gate",
+    1795177291744
+   ]
+  },
+  "nm": {
+   "T-4796": "Say which premades carry the Pro tag",
+   "T-5247": "MacBook runner takes pre-merge Xcode runs",
+   "T-4994": "Act on the feature record at every add",
+   "T-4182": "A failing widget says so and can recover",
+   "T-4181": "Widgets refresh on their own and by a tap",
+   "T-2377": "Write the version 1.1 board lines after 1.0 is released",
+   "T-4662": "Place the cursor easily on a long line",
+   "T-4670": "Draft the letter to Apple about the marketplace rules",
+   "T-3107": "Read the phones' real numbers from the gate build",
+   "T-4192": "Python in the app: smaller bundle, installable packages",
+   "T-5315": "Keep Altitude's heights out of backups",
+   "T-5256": "Trim step 3, one merge script beside the old road"
+  },
+  "wk": {
+   "T-4796": "Ines",
+   "T-5247": "Odalys",
+   "T-4994": "Odalys",
+   "T-4182": "Idris",
+   "T-4181": "Idris",
+   "T-2377": "Ines",
+   "T-4662": "Idris",
+   "T-4670": "Wrenna",
+   "T-3107": "Pernille",
+   "T-4192": "Pernille",
+   "T-5315": "Idris",
+   "T-5256": "Odalys",
+   "T-5298": "Pernille",
+   "T-4077": "Pernille",
+   "T-4889": "Idris",
+   "T-5180": "Odalys",
+   "T-5192": "Pernille",
+   "T-4068": "Pernille",
+   "T-5293": "Idris",
+   "T-4946": "Idris",
+   "T-4031": "Pernille",
+   "T-4040": "Pernille",
+   "T-4043": "Pernille",
+   "T-4048": "Pernille"
+  }
+ },
  "ln": {
-  "at": "2026-11-20T12:25:03Z",
+  "at": "2026-11-20T12:28:31Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -586,13 +671,13 @@
     "parked": 3
    },
    "m": {
-    "checking": 12,
-    "inline": 82,
-    "conflicted": 1894,
+    "checking": 16,
+    "inline": 86,
+    "conflicted": 1898,
     "failed": null,
     "held": null,
-    "retry": 182,
-    "parked": 48
+    "retry": 185,
+    "parked": 51
    },
    "cur": [
     [
@@ -601,7 +686,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     12
+     16
     ]
    ],
    "ld": [
@@ -611,29 +696,27 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-20T12:24:33Z",
-    "ld": 44.8,
+    "at": "2026-11-20T12:28:34Z",
+    "ld": 28.96,
     "c": 8,
-    "sb": 1,
+    "sb": 0,
     "dk": [
-     22.3,
+     22.8,
      228.3
     ],
     "ss": [
      171.8,
      953.7
     ],
-    "sn": [
-     "iPhone 17e"
-    ]
+    "sn": []
    },
    "macbook": {
-    "at": "2026-11-20T11:58:54Z",
-    "ld": 1.09,
+    "at": "2026-11-20T12:24:48Z",
+    "ld": 0.39,
     "c": 12,
     "sb": 0,
     "dk": [
-     353.6,
+     352.9,
      926.4
     ],
     "sn": []
@@ -666,11 +749,11 @@
      "open": false
     }
    },
-   "at": "2026-11-20T12:25:03+00:00"
+   "at": "2026-11-20T12:28:31+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-20T12:25:03+00:00"
+   "at": "2026-11-20T12:28:21+00:00"
   }
  },
  "operators": [
@@ -680,21 +763,33 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 37 tasks",
-   "at": "2026-11-20T07:20:06-05:00"
+   "t": "Inbox \u2013 Jeremy's 7:27 AM Message on GitHub",
+   "at": "2026-11-20T07:27:31-05:00"
   }
  ],
  "reply": {
   "sent": "2026-11-20T12:15:43Z",
   "seconds": 261.0
  },
- "inbox": [],
+ "inbox": [
+  {
+   "id": "c7039523975",
+   "state": "received",
+   "position": 1,
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "Yes, these changes are our current..."
+  }
+ ],
  "trimmed": [
   "lane_next",
   "queue_text",
   "recent",
   "task_done",
   "fin_short",
+  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -703,13 +798,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 2,
+  "main": 1,
   "lanes": 0,
-  "total": 2,
-  "at": "7:25 AM",
+  "total": 1,
+  "at": "7:28 AM",
   "why": "",
-  "at_iso": "2026-11-20T12:25:00+00:00",
+  "at_iso": "2026-11-20T12:28:00+00:00",
   "started": "2:11 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 2:11 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 7:25 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 2:11 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 7:28 AM ET</p></section>"
  }
 }

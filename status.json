@@ -1,10 +1,10 @@
 {
  "schema": 1,
- "at": "2026-11-20T14:22:57.084060+00:00",
+ "at": "2026-11-20T14:26:21.181813+00:00",
  "session": {
-  "active": false,
-  "kind": "",
-  "started": null,
+  "active": true,
+  "kind": "work",
+  "started": "2026-11-20T09:23:01-05:00",
   "flow": [
    {
     "t": "T-4182",
@@ -294,8 +294,36 @@
   "landed": 20,
   "failed": 13
  },
- "workers": [],
- "who": "",
+ "workers": [
+  {
+   "name": "idris",
+   "task": "[build] T-5047 token test red card",
+   "model": "opus",
+   "started": "2026-11-20T14:25:57.326Z",
+   "seconds": 23,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "pernille",
+   "task": "[build] T-4550 button action run, slice 2",
+   "model": "opus",
+   "started": "2026-11-20T14:26:07.585Z",
+   "seconds": 13,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "ines",
+   "task": "[plan] T-4998 Pro tag answer in decisions",
+   "model": "opus",
+   "started": "2026-11-20T14:26:14.338Z",
+   "seconds": 6,
+   "finished": null,
+   "effort": "high"
+  }
+ ],
+ "who": "Idris, Pernille, Ines",
  "recent": [],
  "queue": {
   "runnable": [],
@@ -306,19 +334,19 @@
  "meter": {
   "five_hour": {
    "pct": 16.0,
-   "resets_at": "2026-11-20T18:20:00.159543+00:00",
+   "resets_at": "2026-11-20T13:20:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-20T09:21:58.972439-05:00",
-   "source": "usage",
+   "read_at": "2026-11-20T09:23:11.750348-05:00",
+   "source": "live",
    "left": 84.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 88.0,
-   "resets_at": "2026-11-22T07:00:00.159563+00:00",
+   "resets_at": "2026-11-22T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-20T09:21:58.972439-05:00",
-   "source": "usage",
+   "read_at": "2026-11-20T09:23:11.750348-05:00",
+   "source": "live",
    "left": 12.0,
    "left_words": "of your weekly allowance left"
   },
@@ -329,7 +357,7 @@
    "read_at": "2026-11-20T09:21:58.972439-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-20T09:21:58.972439-05:00"
+  "read_at": "2026-11-20T09:23:11.750348-05:00"
  },
  "ui": {
   "week_pct": 0.112,
@@ -344,12 +372,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-20T09:37:05-05:00",
+ "next_tick": null,
  "personal": {
   "week_pct": 82.11,
   "usage_pct": 48.3,
   "work_pct": 79.9,
-  "read_at": "2026-11-20T14:23:00+00:00",
+  "read_at": "2026-11-20T14:26:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -407,7 +435,7 @@
   }
  ],
  "disk": {
-  "free_gb": 31,
+  "free_gb": 29,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -416,14 +444,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-20T09:18:00-05:00",
+   "at": "2026-11-20T09:23:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-20T09:23:00-05:00",
+  "at": "2026-11-20T09:26:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -431,38 +459,45 @@
    "b": "double-spread"
   }
  },
- "next_tick_why": "last_tick",
+ "next_tick_why": "session",
  "idle": null,
- "pool": null,
+ "pool": {
+  "why": "Double Spread: past the week's halfway point with room left, so twice the even pace until the limit or the reset; the machine allows 8 (held: too few lands in 3 hours to judge a raise)",
+  "n": 3,
+  "at": "2026-11-20T09:22:05.059755-05:00"
+ },
  "lanes": [
+  {
+   "name": "Idris",
+   "state": "running",
+   "task": "[build] T-5047 token test red card",
+   "model": "opus",
+   "since": "2026-11-20T14:25:57.326Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
+   "name": "Pernille",
+   "state": "running",
+   "task": "[build] T-4550 button action run, slice 2",
+   "model": "opus",
+   "since": "2026-11-20T14:26:07.585Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
+   "name": "Ines",
+   "state": "running",
+   "task": "[plan] T-4998 Pro tag answer in decisions",
+   "model": "opus",
+   "since": "2026-11-20T14:26:14.338Z",
+   "next": [],
+   "effort": "high"
+  },
   {
    "name": "Odalys",
    "state": "next",
    "task": "Odalys, P0, merge-first, Investor an Investor c7031233507...",
-   "model": null,
-   "since": null,
-   "next": []
-  },
-  {
-   "name": "Idris",
-   "state": "next",
-   "task": "Idris, P0, from T-4964 (made by tools/runner_watch.py...",
-   "model": null,
-   "since": null,
-   "next": []
-  },
-  {
-   "name": "Pernille",
-   "state": "next",
-   "task": "Pernille, P0, Investor an Investor c6965124089 (7:26 PM...",
-   "model": null,
-   "since": null,
-   "next": []
-  },
-  {
-   "name": "Ines",
-   "state": "next",
-   "task": "Ines, P0, from Investor an Investor c7016129138 (12:02 PM...",
    "model": null,
    "since": null,
    "next": []
@@ -485,7 +520,39 @@
   }
  ],
  "tasks": {
-  "run": [],
+  "run": [
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "Fix the token test's No view for this size card",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-20T14:25:57.326Z",
+    "o": "c",
+    "task": "T-5047"
+   },
+   {
+    "w": "Pernille",
+    "k": "build",
+    "t": "Python contract and action run for widget buttons",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-20T14:26:07.585Z",
+    "o": "c",
+    "task": "T-4550"
+   },
+   {
+    "w": "Ines",
+    "k": "plan",
+    "t": "Write the Pro tag answer into the showcase plan",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-20T14:26:14.338Z",
+    "o": "c",
+    "task": "T-4998"
+   }
+  ],
+  "src": "plan",
   "open": [
    {
     "w": "Odalys",
@@ -580,6 +647,10 @@
    "wait": 2,
    "blocked": 0,
    "you": 2
+  },
+  "fin": {
+   "n": 0,
+   "rows": []
   }
  },
  "qr": [
@@ -621,17 +692,17 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-20T14:22:57Z",
+  "at": "2026-11-20T14:26:13Z",
   "s": {
    "T-4182": [
     "merging",
     "Host checks on the Mac mini",
-    1795183137084
+    1795183153113
    ],
    "T-3995": [
     "merging",
     "Mac tests at the main gate",
-    1795184457084
+    1795184473113
    ]
   },
   "nm": {
@@ -644,7 +715,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-20T14:22:57Z",
+  "at": "2026-11-20T14:26:13Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -656,13 +727,13 @@
     "parked": 2
    },
    "m": {
-    "checking": 24,
+    "checking": 27,
     "inline": null,
-    "conflicted": 2012,
+    "conflicted": 2015,
     "failed": null,
     "held": null,
-    "retry": 300,
-    "parked": 299
+    "retry": 303,
+    "parked": 302
    },
    "cur": [
     [
@@ -671,7 +742,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     24
+     27
     ]
    ],
    "ld": [
@@ -681,12 +752,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-20T14:23:00Z",
-    "ld": 4.18,
+    "at": "2026-11-20T14:25:23Z",
+    "ld": 3.91,
     "c": 8,
     "sb": 0,
     "dk": [
-     28.7,
+     28.6,
      228.3
     ],
     "ss": [
@@ -696,8 +767,8 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-20T13:49:27Z",
-    "ld": 0.67,
+    "at": "2026-11-20T14:20:02Z",
+    "ld": 0.3,
     "c": 12,
     "sb": 0,
     "dk": [
@@ -734,14 +805,23 @@
      "open": false
     }
    },
-   "at": "2026-11-20T14:22:57+00:00"
+   "at": "2026-11-20T14:26:21+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-20T14:22:57+00:00"
+   "at": "2026-11-20T14:26:21+00:00"
   }
  },
  "operators": [
+  {
+   "w": "Operator",
+   "a": "Main plan",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session \u2013 3 tasks",
+   "at": "2026-11-20T09:23:01-05:00"
+  },
   {
    "w": "Operator",
    "a": "Jeremy's Account",
@@ -768,13 +848,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 0,
+  "main": 3,
   "lanes": 1,
-  "total": 1,
-  "at": "9:23 AM",
+  "total": 4,
+  "at": "9:26 AM",
   "why": "",
-  "at_iso": "2026-11-20T14:23:00+00:00",
-  "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 9:23 AM ET</p></section>"
+  "at_iso": "2026-11-20T14:26:00+00:00",
+  "started": "9:23 AM",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 3, started 9:23 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 9:26 AM ET</p></section>"
  }
 }

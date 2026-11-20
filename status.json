@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-20T10:21:03.980192+00:00",
+ "at": "2026-11-20T10:24:32.807637+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -86,6 +86,14 @@
   ],
   "done": [
    {
+    "t": "T-4813",
+    "name": "Home's numbers update within a minute",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1795170160
+   },
+   {
     "t": "T-5234",
     "name": "Move merge tests to the MacBook under heavy load",
     "acct": "Personal a",
@@ -165,18 +173,9 @@
     "end": "failed",
     "end_at": 1795164548,
     "why": "tests failed"
-   },
-   {
-    "t": "T-5247",
-    "name": "MacBook runner takes pre-merge Xcode runs",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "failed",
-    "end_at": 1795164548,
-    "why": "tests failed"
    }
   ],
-  "landed": 26,
+  "landed": 20,
   "failed": 16
  },
  "workers": [
@@ -185,7 +184,7 @@
    "task": "[review] T-4920 location and notification work check",
    "model": "opus",
    "started": "2026-11-20T08:46:46.300Z",
-   "seconds": 5657,
+   "seconds": 5866,
    "finished": null,
    "effort": "high"
   },
@@ -194,7 +193,7 @@
    "task": "[review] T-4947 Settings restore line after Pro check",
    "model": "opus",
    "started": "2026-11-20T10:07:54.012Z",
-   "seconds": 789,
+   "seconds": 998,
    "finished": null,
    "effort": "high"
   }
@@ -237,7 +236,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 651,
+  "runnable_count": 650,
   "blocked_count": 2
  },
  "meter": {
@@ -286,7 +285,7 @@
   "week_pct": 73.63,
   "usage_pct": 48.9,
   "work_pct": 81.3,
-  "read_at": "2026-11-20T10:21:00+00:00",
+  "read_at": "2026-11-20T10:27:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -316,14 +315,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-20T05:20:00-05:00",
+   "at": "2026-11-20T05:25:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-20T05:21:00-05:00",
+  "at": "2026-11-20T05:27:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -504,7 +503,7 @@
    }
   ],
   "count": {
-   "next": 651,
+   "next": 650,
    "wait": 2,
    "blocked": 0,
    "you": 2
@@ -578,82 +577,68 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-20T10:21:03Z",
+  "at": "2026-11-20T10:24:32Z",
   "s": {
+   "T-0349": [
+    "merging",
+    "Rebasing onto current main",
+    1795170272807
+   ],
    "T-4994": [
     "mergeq",
     "1st to merge",
-    1795169283980
+    1795169312807
    ],
    "T-5180": [
     "mergeq",
     "1st to merge",
-    1795169283980
-   ],
-   "T-4813": [
-    "mergeq",
-    "2nd to merge",
-    1795157823980
-   ],
-   "T-4806": [
-    "mergeq",
-    "3rd to merge",
-    1795148283980
-   ],
-   "T-0349": [
-    "mergeq",
-    "4th to merge",
-    1795147983980
+    1795169312807
    ],
    "T-4184": [
     "mergeq",
-    "5th to merge",
-    1795152603980
+    "2nd to merge",
+    1795152572807
    ],
    "T-4182": [
     "mergeq",
-    "6th to merge",
-    1795156863980
+    "3rd to merge",
+    1795156892807
    ],
    "T-4181": [
     "mergeq",
-    "7th to merge",
-    1795157763980
+    "4th to merge",
+    1795157792807
+   ],
+   "T-4947": [
+    "testing",
+    "MacBook \u00b7 test",
+    null
    ],
    "T-4920": [
     "testing",
     "its own tests, in its copy",
-    1795168923980
-   ],
-   "T-4947": [
-    "testing",
-    "its own tests, in its copy",
-    1795169883980
+    1795168892807
    ]
   },
   "nm": {
+   "T-0349": "Fix gaps in the package sandbox build step",
    "T-4994": "Act on the feature record at every add",
    "T-5180": "Cut the merge step's wait on the first entry's checks",
-   "T-4813": "Home's numbers update within a minute",
-   "T-4806": "Fix the causes of merge time-outs and runner errors",
-   "T-0349": "Fix gaps in the package sandbox build step",
    "T-4184": "A person's own script becomes a Home Screen widget",
    "T-4182": "A failing widget says so and can recover",
    "T-4181": "Widgets refresh on their own and by a tap",
-   "T-4920": "Check finished work before it ships",
-   "T-4947": "Check finished work before it ships"
+   "T-4947": "Check finished work before it ships",
+   "T-4920": "Check finished work before it ships"
   },
   "wk": {
+   "T-0349": "Pernille",
    "T-4994": "Odalys",
    "T-5180": "Odalys",
-   "T-4813": "Maren",
-   "T-4806": "Odalys",
-   "T-0349": "Pernille",
    "T-4184": "Idris",
    "T-4182": "Idris",
    "T-4181": "Idris",
-   "T-4920": "Odalys",
    "T-4947": "Odalys",
+   "T-4920": "Odalys",
    "T-5216": "Pernille",
    "T-4943": "Pernille",
    "T-5254": "Odalys",
@@ -669,11 +654,11 @@
   }
  },
  "ln": {
-  "at": "2026-11-20T10:21:03Z",
+  "at": "2026-11-20T10:24:32Z",
   "mq": {
    "n": {
-    "checking": 0,
-    "inline": 8,
+    "checking": 1,
+    "inline": 5,
     "conflicted": 2,
     "failed": 0,
     "held": 0,
@@ -681,24 +666,33 @@
     "parked": 2
    },
    "m": {
-    "checking": null,
-    "inline": 212,
-    "conflicted": 1770,
+    "checking": 0,
+    "inline": 208,
+    "conflicted": 1774,
     "failed": null,
     "held": null,
-    "retry": 58,
-    "parked": 285
+    "retry": 61,
+    "parked": 289
    },
-   "cur": [],
+   "cur": [
+    [
+     [
+      "T-0349"
+     ],
+     "lining up with main",
+     "Mac mini",
+     0
+    ]
+   ],
    "ld": [
-    3,
-    "2026-11-20T05:14:02Z"
+    4,
+    "2026-11-20T10:22:40Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-20T10:20:38Z",
-    "ld": 9.06,
+    "at": "2026-11-20T10:24:57Z",
+    "ld": 9.99,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -712,12 +706,12 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-20T10:03:19Z",
-    "ld": 0.64,
+    "at": "2026-11-20T10:21:41Z",
+    "ld": 0.19,
     "c": 12,
     "sb": 0,
     "dk": [
-     353.6,
+     353.7,
      926.4
     ],
     "sn": []
@@ -750,11 +744,11 @@
      "open": false
     }
    },
-   "at": "2026-11-20T10:21:03+00:00"
+   "at": "2026-11-20T10:24:32+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-20T10:21:03+00:00"
+   "at": "2026-11-20T10:24:32+00:00"
   }
  },
  "operators": [
@@ -790,10 +784,10 @@
   "main": 2,
   "lanes": 0,
   "total": 2,
-  "at": "5:21 AM",
+  "at": "5:27 AM",
   "why": "",
-  "at_iso": "2026-11-20T10:21:00+00:00",
+  "at_iso": "2026-11-20T10:27:00+00:00",
   "started": "2:11 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 2:11 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 5:21 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 2:11 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 5:27 AM ET</p></section>"
  }
 }

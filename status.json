@@ -1,11 +1,22 @@
 {
  "schema": 1,
- "at": "2026-11-20T13:54:26.311687+00:00",
+ "at": "2026-11-20T13:57:45.064926+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-20T08:47:21-05:00",
   "flow": [
+   {
+    "t": "T-3107",
+    "name": "Read the phones' real numbers from the gate build",
+    "acct": "Personal b",
+    "steps": [
+     {
+      "s": "landing",
+      "at": 1795183056
+     }
+    ]
+   },
    {
     "t": "T-4182",
     "name": "A failing widget says so and can recover",
@@ -195,6 +206,30 @@
   ],
   "done": [
    {
+    "t": "T-4192",
+    "name": "Python in the app: smaller bundle, installable packages",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1795182969
+   },
+   {
+    "t": "T-4670",
+    "name": "Draft the letter to Apple about the marketplace rules",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1795182916
+   },
+   {
+    "t": "T-4662",
+    "name": "Place the cursor easily on a long line",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1795182889
+   },
+   {
     "t": "T-2377",
     "name": "Write the version 1.1 board lines after 1.0 is released",
     "acct": "Personal b",
@@ -249,35 +284,9 @@
     "steps": [],
     "end": "landed",
     "end_at": 1795170412
-   },
-   {
-    "t": "T-4813",
-    "name": "Home's numbers update within a minute",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1795170160
-   },
-   {
-    "t": "T-5234",
-    "name": "Move merge tests to the MacBook under heavy load",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "failed",
-    "end_at": 1795170010,
-    "why": "tests failed"
-   },
-   {
-    "t": "T-5236",
-    "name": "Send land host tests to the MacBook under heavy load",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "failed",
-    "end_at": 1795170010,
-    "why": "tests failed"
    }
   ],
-  "landed": 19,
+  "landed": 22,
   "failed": 13
  },
  "workers": [],
@@ -335,7 +344,7 @@
   "week_pct": 79.4,
   "usage_pct": 48.3,
   "work_pct": 80.5,
-  "read_at": "2026-11-20T13:54:00+00:00",
+  "read_at": "2026-11-20T13:58:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -356,7 +365,7 @@
   }
  ],
  "disk": {
-  "free_gb": 26,
+  "free_gb": 27,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -365,14 +374,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-20T08:52:00-05:00",
+   "at": "2026-11-20T08:55:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-20T08:54:00-05:00",
+  "at": "2026-11-20T08:58:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -588,58 +597,30 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-20T13:54:26Z",
+  "at": "2026-11-20T13:56:39Z",
   "s": {
-   "T-4662": [
-    "merging",
-    "Rebasing onto current main",
-    1795182866311
-   ],
-   "T-4670": [
-    "mergeq",
-    "1st to merge",
-    1795172546311
-   ],
-   "T-2377": [
-    "mergeq",
-    "2nd to merge",
-    1795172546311
-   ],
-   "T-4192": [
-    "mergeq",
-    "3rd to merge",
-    1795175666311
-   ],
    "T-4796": [
     "mergeq",
-    "4th to merge",
-    1795180466311
+    "1st to merge",
+    1795180419391
    ],
    "T-3107": [
     "mergeq",
-    "4th to merge",
-    1795180466311
+    "1st to merge",
+    1795180419391
    ],
    "T-4182": [
     "mergeq",
-    "5th to merge",
-    1795181786311
+    "2nd to merge",
+    1795181739391
    ]
   },
   "nm": {
-   "T-4662": "Place the cursor easily on a long line",
-   "T-4670": "Draft the letter to Apple about the marketplace rules",
-   "T-2377": "Write the version 1.1 board lines after 1.0 is released",
-   "T-4192": "Python in the app: smaller bundle, installable packages",
    "T-4796": "Say which premades carry the Pro tag",
    "T-3107": "Read the phones' real numbers from the gate build",
    "T-4182": "A failing widget says so and can recover"
   },
   "wk": {
-   "T-4662": "Idris",
-   "T-4670": "Wrenna",
-   "T-2377": "Ines",
-   "T-4192": "Pernille",
    "T-4796": "Ines",
    "T-3107": "Pernille",
    "T-4182": "Idris",
@@ -647,11 +628,11 @@
   }
  },
  "ln": {
-  "at": "2026-11-20T13:54:26Z",
+  "at": "2026-11-20T13:56:39Z",
   "mq": {
    "n": {
-    "checking": 1,
-    "inline": 6,
+    "checking": 0,
+    "inline": 3,
     "conflicted": 2,
     "failed": 0,
     "held": 0,
@@ -659,37 +640,28 @@
     "parked": 2
    },
    "m": {
-    "checking": 0,
-    "inline": 80,
-    "conflicted": 1983,
+    "checking": null,
+    "inline": 43,
+    "conflicted": 1986,
     "failed": null,
     "held": null,
-    "retry": 271,
-    "parked": 270
+    "retry": 273,
+    "parked": 272
    },
-   "cur": [
-    [
-     [
-      "T-4662"
-     ],
-     "lining up with main",
-     "Mac mini",
-     0
-    ]
-   ],
+   "cur": [],
    "ld": [
-    11,
-    "2026-11-20T13:54:13Z"
+    14,
+    "2026-11-20T13:56:09Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-20T13:54:31Z",
-    "ld": 7.34,
+    "at": "2026-11-20T13:56:32Z",
+    "ld": 7.95,
     "c": 8,
     "sb": 0,
     "dk": [
-     26.2,
+     27.3,
      228.3
     ],
     "ss": [
@@ -737,11 +709,11 @@
      "open": false
     }
    },
-   "at": "2026-11-20T13:54:26+00:00"
+   "at": "2026-11-20T13:57:45+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-20T13:54:26+00:00"
+   "at": "2026-11-20T13:57:45+00:00"
   }
  },
  "operators": [
@@ -787,10 +759,10 @@
   "main": 0,
   "lanes": 0,
   "total": 0,
-  "at": "8:54 AM",
+  "at": "8:58 AM",
   "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
-  "at_iso": "2026-11-20T13:54:00+00:00",
+  "at_iso": "2026-11-20T13:58:00+00:00",
   "started": "8:47 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0, started 8:47 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 8:54 AM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0, started 8:47 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 8:58 AM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
  }
 }

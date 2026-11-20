@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-20T18:33:40.071554+00:00",
+ "at": "2026-11-20T18:36:34.666308+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -13,7 +13,7 @@
     "steps": [
      {
       "s": "testq",
-      "at": 1795195861
+      "at": 1795199746
      }
     ]
    },
@@ -24,29 +24,7 @@
     "steps": [
      {
       "s": "testq",
-      "at": 1795195861
-     }
-    ]
-   },
-   {
-    "t": "T-4807",
-    "name": "Fix every bad test that failed a merge",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1795195861
-     }
-    ]
-   },
-   {
-    "t": "T-5154",
-    "name": "Keep the company account signed in to Claude Code",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1795195861
+      "at": 1795199746
      }
     ]
    },
@@ -194,6 +172,42 @@
   ],
   "done": [
    {
+    "t": "T-5154",
+    "name": "Keep the company account signed in to Claude Code",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "failed",
+    "end_at": 1795199677,
+    "why": "tests failed"
+   },
+   {
+    "t": "T-4807",
+    "name": "Fix every bad test that failed a merge",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "failed",
+    "end_at": 1795199677,
+    "why": "tests failed"
+   },
+   {
+    "t": "T-5234",
+    "name": "Move merge tests to the MacBook under heavy load",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "failed",
+    "end_at": 1795199677,
+    "why": "tests failed"
+   },
+   {
+    "t": "T-5236",
+    "name": "Send land host tests to the MacBook under heavy load",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "failed",
+    "end_at": 1795199677,
+    "why": "tests failed"
+   },
+   {
     "t": "T-5236",
     "name": "Send land host tests to the MacBook under heavy load",
     "acct": "Personal a",
@@ -246,44 +260,10 @@
     "end": "failed",
     "end_at": 1795186714,
     "why": "tests failed"
-   },
-   {
-    "t": "T-5236",
-    "name": "Send land host tests to the MacBook under heavy load",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "failed",
-    "end_at": 1795186714,
-    "why": "tests failed"
-   },
-   {
-    "t": "T-5041",
-    "name": "Disk keeper frees space before the stop line",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1795185715
-   },
-   {
-    "t": "T-4182",
-    "name": "A failing widget says so and can recover",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "failed",
-    "end_at": 1795185588,
-    "why": "tests failed"
-   },
-   {
-    "t": "T-3107",
-    "name": "Read the phones' real numbers from the gate build",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1795183082
    }
   ],
   "landed": 14,
-  "failed": 22
+  "failed": 26
  },
  "workers": [
   {
@@ -291,7 +271,7 @@
    "task": "[test] T-5374 stdlib host suite speed",
    "model": "opus",
    "started": "2026-11-20T18:06:24.643Z",
-   "seconds": 1635,
+   "seconds": 1810,
    "finished": null,
    "effort": "high"
   }
@@ -383,7 +363,7 @@
   "week_pct": 82.11,
   "usage_pct": 48.3,
   "work_pct": 79.9,
-  "read_at": "2026-11-20T18:33:00+00:00",
+  "read_at": "2026-11-20T18:36:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -481,7 +461,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-20T13:33:00-05:00",
+  "at": "2026-11-20T13:36:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -492,7 +472,7 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Double Spread: past the week's halfway point with room left, so twice the even pace until the limit or the reset; the machine allows 3 (at its floor: load 49.5 a core is over 10)",
+  "why": "Double Spread: past the week's halfway point with room left, so twice the even pace until the limit or the reset; the machine allows 3 (at its floor: load 25.8 a core is over 10)",
   "n": 3,
   "at": "2026-11-20T09:22:05.059755-05:00"
  },
@@ -713,46 +693,32 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-20T18:33:40Z",
+  "at": "2026-11-20T18:36:17Z",
   "s": {
    "T-5236": [
     "merging",
-    "Host checks on the Mac mini",
-    1795195900071
+    "Host checks on the Mac mini \u00b7 2 of 6 groups of tests done",
+    1795199777637
    ],
    "T-5234": [
     "merging",
-    "Host checks on the Mac mini",
-    1795195900071
-   ],
-   "T-4807": [
-    "merging",
-    "Host checks on the Mac mini",
-    1795195900071
-   ],
-   "T-5154": [
-    "merging",
-    "Host checks on the Mac mini",
-    1795195900071
+    "Host checks on the Mac mini \u00b7 2 of 6 groups of tests done",
+    1795199777637
    ],
    "T-5374": [
     "testing",
     "its own tests, in its copy",
-    1795199440071
+    1795199477637
    ]
   },
   "nm": {
    "T-5236": "Send land host tests to the MacBook under heavy load",
    "T-5234": "Move merge tests to the MacBook under heavy load",
-   "T-4807": "Fix every bad test that failed a merge",
-   "T-5154": "Keep the company account signed in to Claude Code",
    "T-5374": "Keep the stdlib host suite under its time limit"
   },
   "wk": {
    "T-5236": "Odalys",
    "T-5234": "Odalys",
-   "T-4807": "Pernille",
-   "T-5154": "Odalys",
    "T-5374": "Pernille",
    "T-5341": "Ines",
    "T-4842": "Idris",
@@ -760,25 +726,25 @@
   }
  },
  "ln": {
-  "at": "2026-11-20T18:33:40Z",
+  "at": "2026-11-20T18:36:17Z",
   "mq": {
    "n": {
-    "checking": 4,
+    "checking": 2,
     "inline": 0,
     "conflicted": 1,
     "failed": 0,
     "held": 0,
-    "retry": 0,
+    "retry": 2,
     "parked": 3
    },
    "m": {
-    "checking": 62,
+    "checking": 0,
     "inline": null,
-    "conflicted": 1574,
+    "conflicted": 1576,
     "failed": null,
     "held": null,
-    "retry": null,
-    "parked": 416
+    "retry": 47,
+    "parked": 419
    },
    "cur": [
     [
@@ -787,7 +753,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     62
+     0
     ],
     [
      [
@@ -795,23 +761,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     62
-    ],
-    [
-     [
-      "T-4807"
-     ],
-     "Mac tests",
-     "Mac mini",
-     62
-    ],
-    [
-     [
-      "T-5154"
-     ],
-     "Mac tests",
-     "Mac mini",
-     62
+     0
     ]
    ],
    "ld": [
@@ -821,12 +771,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-20T18:32:54Z",
-    "ld": 41.21,
+    "at": "2026-11-20T18:35:55Z",
+    "ld": 23.98,
     "c": 8,
     "sb": 0,
     "dk": [
-     25.1,
+     25.3,
      228.3
     ],
     "ss": [
@@ -874,11 +824,11 @@
      "open": false
     }
    },
-   "at": "2026-11-20T18:33:40+00:00"
+   "at": "2026-11-20T18:36:34+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-20T18:33:26+00:00"
+   "at": "2026-11-20T18:36:34+00:00"
   }
  },
  "operators": [
@@ -958,10 +908,10 @@
   "main": 1,
   "lanes": 5,
   "total": 6,
-  "at": "1:33 PM",
+  "at": "1:36 PM",
   "why": "",
-  "at_iso": "2026-11-20T18:33:00+00:00",
+  "at_iso": "2026-11-20T18:36:00+00:00",
   "started": "9:23 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 1, started 9:23 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 1:33 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 1, started 9:23 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 1:36 PM ET</p></section>"
  }
 }

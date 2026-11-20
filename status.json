@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-20T06:08:02.270364+00:00",
+ "at": "2026-11-20T06:11:54.138866+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -142,8 +142,8 @@
     "end_at": 1795136485
    }
   ],
-  "landed": 47,
-  "failed": 8
+  "landed": 46,
+  "failed": 9
  },
  "workers": [
   {
@@ -151,7 +151,7 @@
    "task": "[tools] T-5179 merge-queue fixes first",
    "model": "opus",
    "started": "2026-11-20T04:47:58.749Z",
-   "seconds": 4803,
+   "seconds": 5035,
    "finished": null,
    "effort": "high"
   },
@@ -160,7 +160,7 @@
    "task": "[tools] T-5117 land keep-main-green slice",
    "model": "opus",
    "started": "2026-11-20T05:03:31.007Z",
-   "seconds": 3871,
+   "seconds": 4103,
    "finished": null,
    "effort": "high"
   },
@@ -169,7 +169,7 @@
    "task": "[test] T-5125 fix failing MacBook jobs",
    "model": "opus",
    "started": "2026-11-20T05:03:42.138Z",
-   "seconds": 3860,
+   "seconds": 4092,
    "finished": null,
    "effort": "high"
   }
@@ -237,7 +237,7 @@
   "week_pct": 72.95,
   "usage_pct": 49.0,
   "work_pct": 81.3,
-  "read_at": "2026-11-20T06:09:00+00:00",
+  "read_at": "2026-11-20T06:12:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -335,7 +335,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-20T01:09:00-05:00",
+  "at": "2026-11-20T01:12:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -346,7 +346,7 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Double Spread: past the week's halfway point with room left, so twice the even pace until the limit or the reset; the machine allows 8 (at its floor: load 79.7 a core is over 10)",
+  "why": "Double Spread: past the week's halfway point with room left, so twice the even pace until the limit or the reset; the machine allows 8 (at its floor: load 45.0 a core is over 10)",
   "n": 3,
   "at": "2026-11-19T23:41:21.283033-05:00"
  },
@@ -575,42 +575,42 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-20T06:08:02Z",
+  "at": "2026-11-20T06:11:54Z",
   "s": {
    "T-4181": [
     "merging",
     "Host checks on the Mac mini",
-    1795151702270
+    1795151694138
    ],
    "T-4994": [
     "mergeq",
     "1st to merge",
-    1795153262270
+    1795153254138
    ],
    "T-4850": [
     "mergeq",
     "3rd to merge",
-    1795153502270
+    1795153554138
    ],
    "T-4806": [
     "mergeq",
     "4th to merge",
-    1795148282270
+    1795148274138
    ],
    "T-0349": [
     "mergeq",
     "5th to merge",
-    1795147982270
+    1795147974138
    ],
    "T-4184": [
     "mergeq",
     "6th to merge",
-    1795152602270
+    1795152594138
    ],
    "T-5125": [
     "merging",
     "Mac tests at the main gate",
-    1795154642270
+    1795155054138
    ],
    "T-4813": [
     "merged",
@@ -649,7 +649,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-20T06:08:02Z",
+  "at": "2026-11-20T06:11:54Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -661,13 +661,13 @@
     "parked": 1
    },
    "m": {
-    "checking": 53,
-    "inline": 38,
-    "conflicted": 1517,
+    "checking": 57,
+    "inline": 42,
+    "conflicted": 1521,
     "failed": null,
     "held": null,
-    "retry": 123,
-    "parked": 127
+    "retry": 127,
+    "parked": 131
    },
    "cur": [
     [
@@ -676,7 +676,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     53
+     57
     ]
    ],
    "ld": [
@@ -686,12 +686,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-20T06:08:20Z",
-    "ld": 45.87,
+    "at": "2026-11-20T06:12:03Z",
+    "ld": 31.63,
     "c": 8,
     "sb": 0,
     "dk": [
-     25.1,
+     27.1,
      228.3
     ],
     "ss": [
@@ -739,11 +739,11 @@
      "open": true
     }
    },
-   "at": "2026-11-20T06:08:02+00:00"
+   "at": "2026-11-20T06:11:54+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-20T06:08:02+00:00"
+   "at": "2026-11-20T06:11:54+00:00"
   }
  },
  "operators": [
@@ -803,10 +803,10 @@
   "main": 3,
   "lanes": 3,
   "total": 6,
-  "at": "1:09 AM",
+  "at": "1:12 AM",
   "why": "",
-  "at_iso": "2026-11-20T06:09:00+00:00",
+  "at_iso": "2026-11-20T06:12:00+00:00",
   "started": "11:42 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 3, started 11:42 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 1:09 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 3, started 11:42 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 1:12 AM ET</p></section>"
  }
 }

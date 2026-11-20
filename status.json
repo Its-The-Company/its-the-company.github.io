@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-20T03:02:00.328366+00:00",
+ "at": "2026-11-20T03:09:46.018212+00:00",
  "session": {
   "active": false,
   "kind": "",
@@ -43,6 +43,38 @@
      {
       "s": "testq",
       "at": 1795137452
+     }
+    ]
+   },
+   {
+    "t": "T-4811",
+    "name": "Show waiting tasks under the task they wait on",
+    "w": "Maren",
+    "acct": "Personal b",
+    "steps": [
+     {
+      "s": "claimed",
+      "at": 1795143998
+     },
+     {
+      "s": "worker",
+      "at": 1795143998
+     }
+    ]
+   },
+   {
+    "t": "T-4571",
+    "name": "Show Chat's model and account pickers and the reply badge",
+    "w": "Odalys",
+    "acct": "Personal b",
+    "steps": [
+     {
+      "s": "claimed",
+      "at": 1795143977
+     },
+     {
+      "s": "worker",
+      "at": 1795143977
      }
     ]
    }
@@ -188,8 +220,80 @@
   "week_pct": 80.21,
   "usage_pct": 48.6,
   "work_pct": 81.0,
-  "read_at": "2026-11-20T03:02:00+00:00",
+  "read_at": "2026-11-20T03:13:00+00:00",
   "running": [
+   {
+    "lane": "a",
+    "task": "T-5180",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Cut the merge step's wait on the first entry's checks",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-19T22:11:50-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a",
+    "task": "T-5197",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Read the merge step's idle day after late arrivals join",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-19T22:11:50-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a",
+    "task": "T-4624",
+    "w": "Maren",
+    "k": "site",
+    "t": "Drop Parents and Children from Home's task cards",
+    "m": "sonnet",
+    "e": "medium",
+    "at": "2026-11-19T22:11:50-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a",
+    "task": "T-4995",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Measure MacBook minutes per land after gate retests",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-19T22:11:50-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a2",
+    "task": "T-4182",
+    "w": "Idris",
+    "k": "build",
+    "t": "A failing widget says so and can recover",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-19T22:11:45-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a3",
+    "task": "T-4184",
+    "w": "Idris",
+    "k": "build",
+    "t": "A person's own script becomes a Home Screen widget",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-19T22:11:42-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
    {
     "lane": "b",
     "task": "T-4726",
@@ -248,6 +352,7 @@
     "e": "high",
     "at": "2026-11-19T21:51:53-05:00",
     "n": "Jeremy",
+    "d": 1,
     "src": "plan-b"
    },
    {
@@ -260,6 +365,7 @@
     "e": "high",
     "at": "2026-11-19T21:51:53-05:00",
     "n": "Jeremy",
+    "d": 1,
     "src": "plan-b"
    },
    {
@@ -306,7 +412,7 @@
   }
  ],
  "disk": {
-  "free_gb": 42,
+  "free_gb": 39,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -315,14 +421,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-19T21:58:00-05:00",
+   "at": "2026-11-19T22:10:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 3,
-  "at": "2026-11-19T22:02:00-05:00",
+  "at": "2026-11-19T22:13:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -331,12 +437,7 @@
   }
  },
  "next_tick_why": "last_tick",
- "idle": {
-  "since": "2026-11-19T20:51:56-05:00",
-  "minutes": 70,
-  "why": "a tick has spent 0 min on steps before the session",
-  "healed": []
- },
+ "idle": null,
  "pool": null,
  "lanes": [
   {
@@ -525,42 +626,52 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-20T03:02:00Z",
+  "at": "2026-11-20T03:09:46Z",
   "s": {
    "T-0043": [
     "mergeq",
     "1st to merge",
-    1795138380328
+    1795138366018
    ],
    "T-3859": [
     "mergeq",
     "3rd to merge",
-    1795138800328
+    1795138786018
    ],
    "T-4693": [
     "mergeq",
     "3rd to merge",
-    1795138800328
+    1795138786018
    ],
    "T-4573": [
     "mergeq",
     "3rd to merge",
-    1795138800328
+    1795138786018
    ],
    "T-0063": [
     "mergeq",
     "3rd to merge",
-    1795138800328
+    1795138786018
+   ],
+   "T-4816": [
+    "mergeq",
+    "4th to merge",
+    1795144066018
+   ],
+   "T-4806": [
+    "mergeq",
+    "5th to merge",
+    1795144126018
    ],
    "T-4181": [
     "mergeq",
-    "4th to merge",
-    1795143060328
+    "6th to merge",
+    1795143106018
    ],
    "T-3995": [
     "merging",
     "Mac tests at the main gate",
-    1795143120328
+    1795143166018
    ]
   },
   "nm": {
@@ -569,6 +680,8 @@
    "T-4693": "Research a permanent name for the app",
    "T-4573": "Answer when the chosen account cannot take a message",
    "T-0063": "Add a location-off state to the distance premade",
+   "T-4816": "Let the safety check allow routine test fixes",
+   "T-4806": "Fix the causes of merge time-outs and runner errors",
    "T-4181": "Widgets refresh on their own and by a tap",
    "T-3995": "Replace the waiting pile with one merge line"
   },
@@ -578,16 +691,18 @@
    "T-4693": "Wrenna",
    "T-4573": "Odalys",
    "T-0063": "Idris",
+   "T-4816": "Odalys",
+   "T-4806": "Odalys",
    "T-4181": "Idris",
    "T-3995": "Operator"
   }
  },
  "ln": {
-  "at": "2026-11-20T03:02:00Z",
+  "at": "2026-11-20T03:09:46Z",
   "mq": {
    "n": {
     "checking": 0,
-    "inline": 6,
+    "inline": 8,
     "conflicted": 4,
     "failed": 0,
     "held": 0,
@@ -596,8 +711,8 @@
    },
    "m": {
     "checking": null,
-    "inline": 82,
-    "conflicted": 580,
+    "inline": 90,
+    "conflicted": 588,
     "failed": null,
     "held": null,
     "retry": null,
@@ -611,12 +726,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-20T03:02:02Z",
-    "ld": 11.15,
+    "at": "2026-11-20T03:09:47Z",
+    "ld": 5.38,
     "c": 8,
     "sb": 0,
     "dk": [
-     40.9,
+     39.0,
      228.3
     ],
     "ss": [
@@ -664,23 +779,14 @@
      "open": false
     }
    },
-   "at": "2026-11-20T03:02:00+00:00"
+   "at": "2026-11-20T03:09:46+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-20T03:02:00+00:00"
+   "at": "2026-11-20T03:09:46+00:00"
   }
  },
  "operators": [
-  {
-   "w": "Operator",
-   "a": "Main plan",
-   "sr": 1,
-   "m": "sonnet",
-   "e": "low",
-   "t": "Evening report",
-   "at": "2026-11-19T22:02:02-05:00"
-  },
   {
    "w": "Operator",
    "a": "Jeremy's Account",
@@ -708,12 +814,12 @@
  ],
  "agents_now": {
   "main": 0,
-  "lanes": 1,
-  "total": 1,
-  "at": "10:02 PM",
+  "lanes": 4,
+  "total": 4,
+  "at": "10:13 PM",
   "why": "",
-  "at_iso": "2026-11-20T03:02:00+00:00",
+  "at_iso": "2026-11-20T03:13:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 10:02 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 10:13 PM ET</p></section>"
  }
 }

@@ -1,10 +1,10 @@
 {
  "schema": 1,
- "at": "2026-11-20T13:07:42.810779+00:00",
+ "at": "2026-11-20T13:10:50.467380+00:00",
  "session": {
-  "active": false,
-  "kind": "",
-  "started": null,
+  "active": true,
+  "kind": "work",
+  "started": "2026-11-20T08:07:48-05:00",
   "flow": [
    {
     "t": "T-4796",
@@ -28,6 +28,17 @@
      {
       "s": "macbook",
       "at": 1795140342
+     }
+    ]
+   },
+   {
+    "t": "T-4182",
+    "name": "A failing widget says so and can recover",
+    "acct": "Personal b",
+    "steps": [
+     {
+      "s": "testq",
+      "at": 1795180063
      }
     ]
    },
@@ -293,45 +304,12 @@
     "why": "tests failed"
    }
   ],
-  "landed": 21,
+  "landed": 19,
   "failed": 13
  },
  "workers": [],
  "who": "",
- "recent": [
-  {
-   "name": "idris",
-   "task": "[build] T-5315 keep Altitude heights out of backups",
-   "model": "opus",
-   "started": "2026-11-20T11:54:51.624Z",
-   "seconds": null,
-   "finished": "2026-11-20T12:41:47.669000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-5325 second tap on half-hidden row",
-   "model": "opus",
-   "started": "2026-11-20T12:27:27.844Z",
-   "seconds": null,
-   "finished": "2026-11-20T12:27:44.069000+00:00"
-  },
-  {
-   "name": "pernille",
-   "task": "[review] T-5298 editor caret fixes check",
-   "model": "opus",
-   "started": "2026-11-20T11:54:01.776Z",
-   "seconds": null,
-   "finished": "2026-11-20T12:26:29.326000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[review] T-4077 Settings restore footer check",
-   "model": "opus",
-   "started": "2026-11-20T12:15:01.321Z",
-   "seconds": null,
-   "finished": "2026-11-20T12:23:03.446000+00:00"
-  }
- ],
+ "recent": [],
  "queue": {
   "runnable": [],
   "blocked": [],
@@ -341,19 +319,19 @@
  "meter": {
   "five_hour": {
    "pct": 29.0,
-   "resets_at": "2026-11-20T13:20:00.081873+00:00",
+   "resets_at": "2026-11-20T08:20:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-20T08:06:33.815196-05:00",
-   "source": "usage",
+   "read_at": "2026-11-20T08:08:05.223771-05:00",
+   "source": "live",
    "left": 71.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 84.0,
-   "resets_at": "2026-11-22T07:00:00.081895+00:00",
+   "resets_at": "2026-11-22T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-20T08:06:33.815196-05:00",
-   "source": "usage",
+   "read_at": "2026-11-20T08:08:05.223771-05:00",
+   "source": "live",
    "left": 16.0,
    "left_words": "of your weekly allowance left"
   },
@@ -364,7 +342,7 @@
    "read_at": "2026-11-20T08:06:33.815196-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-20T08:06:33.815196-05:00"
+  "read_at": "2026-11-20T08:08:05.223771-05:00"
  },
  "ui": {
   "week_pct": 0.107,
@@ -379,12 +357,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-20T08:21:39-05:00",
+ "next_tick": null,
  "personal": {
   "week_pct": 78.54,
   "usage_pct": 48.3,
   "work_pct": 81.4,
-  "read_at": "2026-11-20T13:07:00+00:00",
+  "read_at": "2026-11-20T13:10:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -421,7 +399,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-20T08:07:00-05:00",
+  "at": "2026-11-20T08:10:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -429,9 +407,13 @@
    "b": "double-spread"
   }
  },
- "next_tick_why": "last_tick",
+ "next_tick_why": "session",
  "idle": null,
- "pool": null,
+ "pool": {
+  "why": "Double Spread: past the week's halfway point with room left, so twice the even pace until the limit or the reset; the machine allows 8 (at its floor: load 31.2 a core is over 10)",
+  "n": 3,
+  "at": "2026-11-20T08:06:39.369218-05:00"
+ },
  "lanes": [
   {
    "name": "Odalys",
@@ -484,6 +466,7 @@
  ],
  "tasks": {
   "run": [],
+  "src": "plan",
   "open": [
    {
     "w": "Odalys",
@@ -578,6 +561,10 @@
    "wait": 2,
    "blocked": 0,
    "you": 2
+  },
+  "fin": {
+   "n": 0,
+   "rows": []
   }
  },
  "qr": [
@@ -619,52 +606,58 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-20T13:07:42Z",
+  "at": "2026-11-20T13:10:40Z",
   "s": {
    "T-4182": [
     "merging",
     "Host checks on the Mac mini",
-    1795180062810
+    1795180120498
    ],
    "T-4796": [
     "mergeq",
     "1st to merge",
-    1795178262810
+    1795178320498
+   ],
+   "T-4995": [
+    "mergeq",
+    "3rd to merge",
+    1795180180498
    ],
    "T-4181": [
     "mergeq",
-    "3rd to merge",
-    1795157802810
+    "4th to merge",
+    1795157800498
    ],
    "T-2377": [
     "mergeq",
-    "4th to merge",
-    1795172082810
+    "5th to merge",
+    1795172080498
    ],
    "T-4662": [
     "mergeq",
-    "5th to merge",
-    1795172262810
+    "6th to merge",
+    1795172260498
    ],
    "T-4670": [
     "mergeq",
-    "6th to merge",
-    1795172562810
+    "7th to merge",
+    1795172560498
    ],
    "T-3107": [
     "mergeq",
-    "8th to merge",
-    1795175442810
+    "9th to merge",
+    1795175440498
    ],
    "T-4192": [
     "mergeq",
-    "9th to merge",
-    1795175682810
+    "10th to merge",
+    1795175680498
    ]
   },
   "nm": {
    "T-4182": "A failing widget says so and can recover",
    "T-4796": "Say which premades carry the Pro tag",
+   "T-4995": "Measure MacBook minutes per land after gate retests",
    "T-4181": "Widgets refresh on their own and by a tap",
    "T-2377": "Write the version 1.1 board lines after 1.0 is released",
    "T-4662": "Place the cursor easily on a long line",
@@ -675,6 +668,7 @@
   "wk": {
    "T-4182": "Idris",
    "T-4796": "Ines",
+   "T-4995": "Odalys",
    "T-4181": "Idris",
    "T-2377": "Ines",
    "T-4662": "Idris",
@@ -684,25 +678,25 @@
   }
  },
  "ln": {
-  "at": "2026-11-20T13:07:42Z",
+  "at": "2026-11-20T13:10:40Z",
   "mq": {
    "n": {
     "checking": 1,
-    "inline": 7,
+    "inline": 8,
     "conflicted": 2,
     "failed": 0,
     "held": 0,
-    "retry": 6,
+    "retry": 5,
     "parked": 2
    },
    "m": {
-    "checking": 0,
-    "inline": 125,
-    "conflicted": 1937,
+    "checking": 2,
+    "inline": 104,
+    "conflicted": 1940,
     "failed": null,
     "held": null,
-    "retry": 225,
-    "parked": 224
+    "retry": 227,
+    "parked": 226
    },
    "cur": [
     [
@@ -711,7 +705,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     0
+     2
     ]
    ],
    "ld": [
@@ -721,12 +715,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-20T13:07:44Z",
-    "ld": 33.27,
+    "at": "2026-11-20T13:10:42Z",
+    "ld": 19.86,
     "c": 8,
     "sb": 0,
     "dk": [
-     31.4,
+     29.0,
      228.3
     ],
     "ss": [
@@ -774,14 +768,24 @@
      "open": false
     }
    },
-   "at": "2026-11-20T13:07:42+00:00"
+   "at": "2026-11-20T13:10:50+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-20T13:07:42+00:00"
+   "at": "2026-11-20T13:10:50+00:00"
   }
  },
- "operators": [],
+ "operators": [
+  {
+   "w": "Operator",
+   "a": "Main plan",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session",
+   "at": "2026-11-20T08:07:48-05:00"
+  }
+ ],
  "reply": {
   "sent": "2026-11-20T12:27:05Z",
   "seconds": 164.0
@@ -790,7 +794,6 @@
  "trimmed": [
   "lane_next",
   "queue_text",
-  "recent",
   "task_done",
   "task_title",
   "done_text",
@@ -802,10 +805,10 @@
   "main": 0,
   "lanes": 0,
   "total": 0,
-  "at": "8:07 AM",
+  "at": "8:10 AM",
   "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
-  "at_iso": "2026-11-20T13:07:00+00:00",
-  "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 8:07 AM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
+  "at_iso": "2026-11-20T13:10:00+00:00",
+  "started": "8:07 AM",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0, started 8:07 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 8:10 AM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
  }
 }

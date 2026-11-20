@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-20T12:01:15.705045+00:00",
+ "at": "2026-11-20T12:05:05.760646+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -171,7 +171,7 @@
    "task": "[review] T-5298 editor caret fixes check",
    "model": "opus",
    "started": "2026-11-20T11:54:01.776Z",
-   "seconds": 433,
+   "seconds": 663,
    "finished": null,
    "effort": "high"
   },
@@ -180,7 +180,7 @@
    "task": "[build] T-5315 keep Altitude heights out of backups",
    "model": "opus",
    "started": "2026-11-20T11:54:51.624Z",
-   "seconds": 384,
+   "seconds": 614,
    "finished": null,
    "effort": "high"
   },
@@ -189,7 +189,7 @@
    "task": "[review] T-4889 PyWidget name case fix check",
    "model": "opus",
    "started": "2026-11-20T11:59:19.808Z",
-   "seconds": 115,
+   "seconds": 345,
    "finished": null,
    "effort": "high"
   }
@@ -237,19 +237,19 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 23.0,
+   "pct": 24.0,
    "resets_at": "2026-11-20T08:20:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-20T06:55:02.386198-05:00",
+   "read_at": "2026-11-20T07:02:39.704546-05:00",
    "source": "live",
-   "left": 77.0,
+   "left": 76.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 82.0,
    "resets_at": "2026-11-22T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-20T06:55:02.386198-05:00",
+   "read_at": "2026-11-20T07:02:39.704546-05:00",
    "source": "live",
    "left": 18.0,
    "left_words": "of your weekly allowance left"
@@ -261,7 +261,7 @@
    "read_at": "2026-11-20T02:09:37.522634-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-20T06:55:02.386198-05:00"
+  "read_at": "2026-11-20T07:02:39.704546-05:00"
  },
  "ui": {
   "week_pct": 0.104,
@@ -281,7 +281,7 @@
   "week_pct": 73.63,
   "usage_pct": 48.9,
   "work_pct": 81.3,
-  "read_at": "2026-11-20T12:01:00+00:00",
+  "read_at": "2026-11-20T12:07:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -302,7 +302,7 @@
   }
  ],
  "disk": {
-  "free_gb": 24,
+  "free_gb": 23,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -310,15 +310,15 @@
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
-   "ok": true,
-   "at": "2026-11-20T06:59:00-05:00",
+   "ok": false,
+   "at": "2026-11-20T07:05:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-20T07:01:00-05:00",
+  "at": "2026-11-20T07:07:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -583,67 +583,77 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-20T12:01:00Z",
+  "at": "2026-11-20T12:05:05Z",
   "s": {
    "T-5247": [
     "mergeq",
     "1st to merge",
-    1795175580939
+    1795175585760
    ],
    "T-4994": [
     "mergeq",
     "2nd to merge",
-    1795169280939
+    1795169285760
    ],
    "T-5180": [
     "mergeq",
     "2nd to merge",
-    1795169280939
+    1795169285760
    ],
    "T-4796": [
     "mergeq",
     "3rd to merge",
-    1795172940939
+    1795172945760
    ],
    "T-4182": [
     "mergeq",
     "5th to merge",
-    1795156860939
+    1795156865760
    ],
    "T-4181": [
     "mergeq",
     "6th to merge",
-    1795157760939
+    1795157765760
    ],
    "T-2377": [
     "mergeq",
     "7th to merge",
-    1795172100939
+    1795172105760
    ],
    "T-4662": [
     "mergeq",
     "8th to merge",
-    1795172280939
+    1795172285760
    ],
    "T-4670": [
     "mergeq",
     "9th to merge",
-    1795172580939
+    1795172585760
    ],
    "T-3107": [
     "mergeq",
-    "10th to merge",
-    1795175460939
+    "11th to merge",
+    1795175465760
    ],
    "T-4192": [
     "mergeq",
-    "11th to merge",
-    1795175700939
+    "12th to merge",
+    1795175705760
    ],
    "T-5298": [
     "testing",
     "MacBook \u00b7 test",
     null
+   ],
+   "T-5315": [
+    "testing",
+    "its own tests, in its copy",
+    1795176245760
+   ],
+   "T-4889": [
+    "testing",
+    "its own tests, in its copy",
+    1795176185760
    ]
   },
   "nm": {
@@ -658,7 +668,9 @@
    "T-4670": "Draft the letter to Apple about the marketplace rules",
    "T-3107": "Read the phones' real numbers from the gate build",
    "T-4192": "Python in the app: smaller bundle, installable packages",
-   "T-5298": "Check the caret fixes that followed the first review"
+   "T-5298": "Check the caret fixes that followed the first review",
+   "T-5315": "Keep Altitude's heights out of backups",
+   "T-4889": "Check the PyWidget case fix in premade lines"
   },
   "wk": {
    "T-5247": "Odalys",
@@ -673,6 +685,8 @@
    "T-3107": "Pernille",
    "T-4192": "Pernille",
    "T-5298": "Pernille",
+   "T-5315": "Idris",
+   "T-4889": "Idris",
    "T-5192": "Pernille",
    "T-4068": "Pernille",
    "T-5293": "Idris",
@@ -688,7 +702,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-20T12:01:00Z",
+  "at": "2026-11-20T12:05:05Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -701,12 +715,12 @@
    },
    "m": {
     "checking": null,
-    "inline": 63,
-    "conflicted": 1870,
+    "inline": 67,
+    "conflicted": 1874,
     "failed": null,
     "held": null,
-    "retry": 158,
-    "parked": 24
+    "retry": 162,
+    "parked": 28
    },
    "cur": [],
    "ld": [
@@ -716,19 +730,21 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-20T12:00:18Z",
-    "ld": 6.49,
+    "at": "2026-11-20T12:06:31Z",
+    "ld": 34.54,
     "c": 8,
-    "sb": 0,
+    "sb": 1,
     "dk": [
-     24.3,
+     23.9,
      228.3
     ],
     "ss": [
      171.8,
      953.7
     ],
-    "sn": []
+    "sn": [
+     "iPhone 17e"
+    ]
    },
    "macbook": {
     "at": "2026-11-20T11:58:54Z",
@@ -769,11 +785,11 @@
      "open": false
     }
    },
-   "at": "2026-11-20T12:01:15+00:00"
+   "at": "2026-11-20T12:05:05+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-20T12:01:15+00:00"
+   "at": "2026-11-20T12:05:05+00:00"
   }
  },
  "operators": [
@@ -783,7 +799,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 36 tasks",
+   "t": "Work session",
    "at": "2026-11-20T06:09:42-05:00"
   }
  ],
@@ -809,10 +825,10 @@
   "main": 3,
   "lanes": 0,
   "total": 3,
-  "at": "7:01 AM",
+  "at": "7:07 AM",
   "why": "",
-  "at_iso": "2026-11-20T12:01:00+00:00",
+  "at_iso": "2026-11-20T12:07:00+00:00",
   "started": "2:11 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 2:11 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 7:01 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 2:11 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 7:07 AM ET</p></section>"
  }
 }

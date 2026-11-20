@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-20T02:50:20.392238+00:00",
+ "at": "2026-11-20T03:02:00.328366+00:00",
  "session": {
   "active": false,
   "kind": "",
@@ -183,13 +183,110 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-19T22:05:05-05:00",
+ "next_tick": "2026-11-19T22:15:54-05:00",
  "personal": {
   "week_pct": 80.21,
   "usage_pct": 48.6,
   "work_pct": 81.0,
-  "read_at": "2026-11-20T02:50:00+00:00",
-  "running": []
+  "read_at": "2026-11-20T03:02:00+00:00",
+  "running": [
+   {
+    "lane": "b",
+    "task": "T-4726",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Fix the red personal land test",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-19T21:51:53-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
+   },
+   {
+    "lane": "b",
+    "task": "T-4830",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Record idle slots and red causes as they happen",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-19T21:51:53-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
+   },
+   {
+    "lane": "b",
+    "task": "T-3995",
+    "w": "Operator",
+    "k": "tools",
+    "t": "Replace the waiting pile with one merge line",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-19T21:51:53-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
+   },
+   {
+    "lane": "b",
+    "task": "T-5197",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Read the merge step's idle day after late arrivals join",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-19T21:51:53-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
+   },
+   {
+    "lane": "b",
+    "task": "T-4806",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Fix the causes of merge time-outs and runner errors",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-19T21:51:53-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
+   },
+   {
+    "lane": "b",
+    "task": "T-4816",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Let the safety check allow routine test fixes",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-19T21:51:53-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
+   },
+   {
+    "lane": "b",
+    "task": "T-4814",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Split the merge limit by what a change touches",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-19T21:51:53-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
+   },
+   {
+    "lane": "b",
+    "task": "T-4113",
+    "w": "Maren",
+    "k": "site",
+    "t": "Show both queues as colour-coded bars on Home",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-19T21:51:53-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
+   }
+  ]
  },
  "api_credits": [
   {
@@ -209,7 +306,7 @@
   }
  ],
  "disk": {
-  "free_gb": 41,
+  "free_gb": 42,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -218,14 +315,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-19T21:47:00-05:00",
+   "at": "2026-11-19T21:58:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 3,
-  "at": "2026-11-19T21:50:00-05:00",
+  "at": "2026-11-19T22:02:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -234,7 +331,12 @@
   }
  },
  "next_tick_why": "last_tick",
- "idle": null,
+ "idle": {
+  "since": "2026-11-19T20:51:56-05:00",
+  "minutes": 70,
+  "why": "a tick has spent 0 min on steps before the session",
+  "healed": []
+ },
  "pool": null,
  "lanes": [
   {
@@ -423,62 +525,69 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-20T02:50:20Z",
+  "at": "2026-11-20T03:02:00Z",
   "s": {
-   "T-4181": [
-    "mergetest",
-    "Xcode checks on the MacBook, 1st to merge",
-    1795138940392
-   ],
    "T-0043": [
-    "mergetest",
-    "Xcode checks on the MacBook, 2nd to merge",
-    1795140440392
+    "mergeq",
+    "1st to merge",
+    1795138380328
    ],
    "T-3859": [
-    "mergetest",
-    "Xcode checks on the MacBook, 4th to merge",
-    1795140380392
+    "mergeq",
+    "3rd to merge",
+    1795138800328
    ],
    "T-4693": [
-    "mergetest",
-    "Xcode checks on the MacBook, 4th to merge",
-    1795140380392
+    "mergeq",
+    "3rd to merge",
+    1795138800328
    ],
    "T-4573": [
-    "mergetest",
-    "Xcode checks on the MacBook, 4th to merge",
-    1795140380392
+    "mergeq",
+    "3rd to merge",
+    1795138800328
    ],
    "T-0063": [
-    "mergetest",
-    "Xcode checks on the MacBook, 4th to merge",
-    1795140380392
+    "mergeq",
+    "3rd to merge",
+    1795138800328
+   ],
+   "T-4181": [
+    "mergeq",
+    "4th to merge",
+    1795143060328
+   ],
+   "T-3995": [
+    "merging",
+    "Mac tests at the main gate",
+    1795143120328
    ]
   },
   "nm": {
-   "T-4181": "Widgets refresh on their own and by a tap",
    "T-0043": "Strip unneeded Python modules from the release bundle",
    "T-3859": "Move everything not needed off the Mac mini disk",
    "T-4693": "Research a permanent name for the app",
    "T-4573": "Answer when the chosen account cannot take a message",
-   "T-0063": "Add a location-off state to the distance premade"
+   "T-0063": "Add a location-off state to the distance premade",
+   "T-4181": "Widgets refresh on their own and by a tap",
+   "T-3995": "Replace the waiting pile with one merge line"
   },
   "wk": {
-   "T-4181": "Idris",
    "T-0043": "Idris",
    "T-3859": "Odalys",
    "T-4693": "Wrenna",
    "T-4573": "Odalys",
-   "T-0063": "Idris"
+   "T-0063": "Idris",
+   "T-4181": "Idris",
+   "T-3995": "Operator"
   }
  },
  "ln": {
-  "at": "2026-11-20T02:50:20Z",
+  "at": "2026-11-20T03:02:00Z",
   "mq": {
    "n": {
-    "checking": 6,
-    "inline": 0,
+    "checking": 0,
+    "inline": 6,
     "conflicted": 4,
     "failed": 0,
     "held": 0,
@@ -486,48 +595,15 @@
     "parked": 0
    },
    "m": {
-    "checking": 44,
-    "inline": null,
-    "conflicted": 568,
+    "checking": null,
+    "inline": 82,
+    "conflicted": 580,
     "failed": null,
     "held": null,
     "retry": null,
     "parked": null
    },
-   "cur": [
-    [
-     [
-      "T-4181"
-     ],
-     "iPhone app tests",
-     "MacBook",
-     68
-    ],
-    [
-     [
-      "T-0043"
-     ],
-     "iPhone app tests",
-     "MacBook",
-     43
-    ],
-    [
-     [
-      "T-3859"
-     ],
-     "iPhone app tests",
-     "MacBook",
-     44
-    ],
-    [
-     [
-      "T-4693"
-     ],
-     "iPhone app tests",
-     "MacBook",
-     44
-    ]
-   ],
+   "cur": [],
    "ld": [
     107,
     "2026-11-20T02:37:21Z"
@@ -535,12 +611,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-20T02:50:22Z",
-    "ld": 4.0,
+    "at": "2026-11-20T03:02:02Z",
+    "ld": 11.15,
     "c": 8,
     "sb": 0,
     "dk": [
-     41.8,
+     40.9,
      228.3
     ],
     "ss": [
@@ -550,12 +626,12 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-20T02:39:54Z",
-    "ld": 0.22,
+    "at": "2026-11-20T02:54:01Z",
+    "ld": 26.55,
     "c": 12,
     "sb": 0,
     "dk": [
-     354.6,
+     353.4,
      926.4
     ],
     "sn": []
@@ -570,7 +646,7 @@
    "parked": 4,
    "open": true,
    "mq": false,
-   "counted": "2026-11-20T02:49:48+00:00",
+   "counted": "2026-11-19T22:00:54-05:00",
    "by": {
     "app": {
      "n": 7,
@@ -588,14 +664,33 @@
      "open": false
     }
    },
-   "at": "2026-11-20T02:50:20+00:00"
+   "at": "2026-11-20T03:02:00+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-20T02:50:20+00:00"
+   "at": "2026-11-20T03:02:00+00:00"
   }
  },
- "operators": [],
+ "operators": [
+  {
+   "w": "Operator",
+   "a": "Main plan",
+   "sr": 1,
+   "m": "sonnet",
+   "e": "low",
+   "t": "Evening report",
+   "at": "2026-11-19T22:02:02-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Jeremy's Account",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session \u2013 8 tasks",
+   "at": "2026-11-19T21:51:53-05:00"
+  }
+ ],
  "reply": {
   "sent": "2026-11-20T02:28:38Z",
   "seconds": 275.0
@@ -613,12 +708,12 @@
  ],
  "agents_now": {
   "main": 0,
-  "lanes": 0,
-  "total": 0,
-  "at": "9:50 PM",
-  "why": "Claude Code is logged out. Work waits until an Investor logs in. Last check 9:50 PM ET.",
-  "at_iso": "2026-11-20T02:50:00+00:00",
+  "lanes": 1,
+  "total": 1,
+  "at": "10:02 PM",
+  "why": "",
+  "at_iso": "2026-11-20T03:02:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:50 PM ET</p><p class=\"an-why\">Claude Code is logged out. Work waits until an Investor logs in. Last check 9:50 PM ET.</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 10:02 PM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-20T08:44:20.451598+00:00",
+ "at": "2026-11-20T08:47:03.342587+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -79,16 +79,6 @@
      {
       "s": "testq",
       "at": 1795160399
-     }
-    ]
-   },
-   {
-    "t": "T-5217",
-    "name": "Check finished work before it ships",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1795159780
      }
     ]
    },
@@ -244,7 +234,7 @@
    "task": "[review] T-5215 widget send lane check",
    "model": "opus",
    "started": "2026-11-20T07:15:20.769Z",
-   "seconds": 5339,
+   "seconds": 5502,
    "finished": null,
    "effort": "high"
   },
@@ -253,22 +243,30 @@
    "task": "[review] T-5217 Activity open-at-line check",
    "model": "opus",
    "started": "2026-11-20T07:15:31.722Z",
-   "seconds": 5328,
+   "seconds": 5491,
    "finished": null,
    "effort": "high"
   },
+  {
+   "name": "odalys",
+   "task": "[review] T-4920 location and notification work check",
+   "model": "opus",
+   "started": "2026-11-20T08:46:46.300Z",
+   "seconds": 17,
+   "finished": null,
+   "effort": "high"
+  }
+ ],
+ "who": "Pernille x2, Odalys",
+ "recent": [
   {
    "name": "pernille",
    "task": "[review] T-4921 premade settings UI tests check",
    "model": "opus",
    "started": "2026-11-20T08:06:59.763Z",
-   "seconds": 2240,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Pernille x3",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-20T08:45:20.648000+00:00"
+  },
   {
    "name": "pernille",
    "task": "[review] T-4939 launcher Shortcut link check",
@@ -281,7 +279,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 652,
+  "runnable_count": 653,
   "blocked_count": 2
  },
  "meter": {
@@ -330,7 +328,7 @@
   "week_pct": 73.63,
   "usage_pct": 48.9,
   "work_pct": 81.3,
-  "read_at": "2026-11-20T08:44:00+00:00",
+  "read_at": "2026-11-20T08:47:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -367,7 +365,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-20T03:44:00-05:00",
+  "at": "2026-11-20T03:47:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -394,11 +392,12 @@
   },
   {
    "name": "Odalys",
-   "state": "next",
-   "task": "Odalys, P0, merge-first, Investor an Investor c7031233507...",
-   "model": null,
-   "since": null,
-   "next": []
+   "state": "running",
+   "task": "[review] T-4920 location and notification work check",
+   "model": "opus",
+   "since": "2026-11-20T08:46:46.300Z",
+   "next": [],
+   "effort": "high"
   },
   {
    "name": "Idris",
@@ -456,14 +455,14 @@
     "task": "T-5217"
    },
    {
-    "w": "Pernille",
+    "w": "Odalys",
     "k": "review",
     "t": "Check finished work before it ships",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-20T08:06:59.763Z",
+    "at": "2026-11-20T08:46:46.300Z",
     "o": "c",
-    "task": "T-4921"
+    "task": "T-4920"
    }
   ],
   "src": "plan",
@@ -542,29 +541,37 @@
   "done": [
    {
     "w": "Pernille",
+    "t": "I checked the new buttons that take a person from a failing widget's history straight to the...",
+    "at": "2026-11-20T03:45:00-05:00"
+   },
+   {
+    "w": "Pernille",
+    "t": "Pernille checked Idris's new Simulator tests for the premade settings screens (T-4516: the tests...",
+    "at": "2026-11-20T03:44:00-05:00"
+   },
+   {
+    "w": "Pernille",
     "t": "Pernille checked Idris's fix that stops editing a launcher slot from silently breaking a pasted...",
     "at": "2026-11-20T03:04:00-05:00"
-   },
-   {
-    "w": "Pernille",
-    "t": "Pernille's second-person check of the Gallery's late location-fix change was already written and...",
-    "at": "2026-11-20T02:14:00-05:00"
-   },
-   {
-    "w": "Pernille",
-    "t": "Pernille's second-person check of the launcher build's unit-test fix was already written and...",
-    "at": "2026-11-20T02:14:00-05:00"
    }
   ],
   "count": {
-   "next": 652,
+   "next": 653,
    "wait": 2,
    "blocked": 0,
    "you": 2
   },
   "fin": {
-   "n": 5,
+   "n": 7,
    "rows": [
+    [
+     "T-5217",
+     "Check finished work before..."
+    ],
+    [
+     "T-4921",
+     "Check finished work before..."
+    ],
     [
      "T-4939",
      "Check finished work before..."
@@ -579,10 +586,6 @@
     ],
     [
      "T-4759",
-     "Check finished work before..."
-    ],
-    [
-     "T-4936",
      "Check finished work before..."
     ]
    ]
@@ -627,87 +630,82 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-20T08:44:20Z",
+  "at": "2026-11-20T08:47:03Z",
   "s": {
    "T-5247": [
     "merging",
     "Host checks on the Mac mini",
-    1795163420451
+    1795163463342
    ],
    "T-5236": [
     "merging",
     "Host checks on the Mac mini",
-    1795163420451
+    1795163463342
    ],
    "T-5234": [
     "merging",
     "Host checks on the Mac mini",
-    1795163420451
+    1795163463342
    ],
    "T-4807": [
     "merging",
     "Host checks on the Mac mini",
-    1795163420451
+    1795163463342
    ],
    "T-5154": [
     "merging",
     "Host checks on the Mac mini",
-    1795163420451
+    1795163463342
    ],
    "T-0349": [
     "merging",
     "Host checks on the Mac mini",
-    1795163420451
+    1795163463342
    ],
    "T-4850": [
     "mergeq",
     "1st to merge",
-    1795153520451
+    1795153503342
    ],
    "T-4994": [
     "mergeq",
     "1st to merge",
-    1795153520451
+    1795153503342
    ],
    "T-4813": [
     "mergeq",
     "2nd to merge",
-    1795157840451
+    1795157823342
    ],
    "T-4806": [
     "mergeq",
     "3rd to merge",
-    1795148300451
+    1795148283342
    ],
    "T-4184": [
     "mergeq",
     "5th to merge",
-    1795152620451
+    1795152603342
    ],
    "T-4182": [
     "mergeq",
     "6th to merge",
-    1795156880451
+    1795156863342
    ],
    "T-4181": [
     "mergeq",
     "7th to merge",
-    1795157780451
-   ],
-   "T-5217": [
-    "merging",
-    "Mac tests at the main gate",
-    1795164260451
+    1795157763342
    ],
    "T-5215": [
-    "testing",
-    "its own tests, in its copy",
-    1795162280451
+    "merging",
+    "Mac tests at the main gate",
+    1795164423342
    ],
-   "T-4921": [
+   "T-5217": [
     "merged",
     "on main 3:44 AM ET",
-    1795164250000,
+    1795164262000,
     ""
    ]
   },
@@ -725,9 +723,8 @@
    "T-4184": "A person's own script becomes a Home Screen widget",
    "T-4182": "A failing widget says so and can recover",
    "T-4181": "Widgets refresh on their own and by a tap",
-   "T-5217": "Check finished work before it ships",
    "T-5215": "Check finished work before it ships",
-   "T-4921": "Check finished work before it ships"
+   "T-5217": "Check finished work before it ships"
   },
   "wk": {
    "T-5247": "Odalys",
@@ -743,8 +740,8 @@
    "T-4184": "Idris",
    "T-4182": "Idris",
    "T-4181": "Idris",
-   "T-5217": "Pernille",
    "T-5215": "Pernille",
+   "T-5217": "Pernille",
    "T-4921": "Pernille",
    "T-4939": "Pernille",
    "T-4930": "Pernille",
@@ -754,7 +751,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-20T08:44:20Z",
+  "at": "2026-11-20T08:47:03Z",
   "mq": {
    "n": {
     "checking": 6,
@@ -766,13 +763,13 @@
     "parked": 2
    },
    "m": {
-    "checking": 14,
-    "inline": 179,
-    "conflicted": 1673,
+    "checking": 16,
+    "inline": 182,
+    "conflicted": 1676,
     "failed": null,
     "held": null,
-    "retry": 279,
-    "parked": 189
+    "retry": 282,
+    "parked": 191
    },
    "cur": [
     [
@@ -781,7 +778,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     14
+     16
     ],
     [
      [
@@ -789,7 +786,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     14
+     16
     ],
     [
      [
@@ -797,7 +794,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     14
+     16
     ],
     [
      [
@@ -805,7 +802,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     14
+     16
     ]
    ],
    "ld": [
@@ -815,12 +812,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-20T08:44:03Z",
-    "ld": 12.6,
+    "at": "2026-11-20T08:47:13Z",
+    "ld": 9.71,
     "c": 8,
     "sb": 0,
     "dk": [
-     22.2,
+     22.4,
      228.3
     ],
     "ss": [
@@ -830,12 +827,12 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-20T08:40:13Z",
-    "ld": 0.34,
+    "at": "2026-11-20T08:43:36Z",
+    "ld": 7.97,
     "c": 12,
     "sb": 0,
     "dk": [
-     352.5,
+     352.3,
      926.4
     ],
     "sn": []
@@ -850,7 +847,7 @@
    "parked": 6,
    "open": true,
    "mq": false,
-   "counted": "2026-11-20T08:35:53+00:00",
+   "counted": "2026-11-20T08:46:59+00:00",
    "by": {
     "app": {
      "n": 7,
@@ -868,11 +865,11 @@
      "open": false
     }
    },
-   "at": "2026-11-20T08:44:20+00:00"
+   "at": "2026-11-20T08:47:03+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-20T08:44:20+00:00"
+   "at": "2026-11-20T08:47:03+00:00"
   }
  },
  "operators": [
@@ -882,7 +879,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 8 tasks",
+   "t": "Work session \u2013 9 tasks",
    "at": "2026-11-20T02:11:05-05:00"
   }
  ],
@@ -899,6 +896,7 @@
   "task_title",
   "done_text",
   "task_open",
+  "fin_six",
   "lane_task",
   "task_next"
  ],
@@ -906,10 +904,10 @@
   "main": 3,
   "lanes": 0,
   "total": 3,
-  "at": "3:44 AM",
+  "at": "3:47 AM",
   "why": "",
-  "at_iso": "2026-11-20T08:44:00+00:00",
+  "at_iso": "2026-11-20T08:47:00+00:00",
   "started": "2:11 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 2:11 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 3:44 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 2:11 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 3:47 AM ET</p></section>"
  }
 }

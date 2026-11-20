@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-20T10:12:38.032547+00:00",
+ "at": "2026-11-20T10:17:31.380759+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -207,7 +207,7 @@
    "task": "[review] T-4920 location and notification work check",
    "model": "opus",
    "started": "2026-11-20T08:46:46.300Z",
-   "seconds": 5151,
+   "seconds": 5445,
    "finished": null,
    "effort": "high"
   },
@@ -216,7 +216,7 @@
    "task": "[review] T-4947 Settings restore line after Pro check",
    "model": "opus",
    "started": "2026-11-20T10:07:54.012Z",
-   "seconds": 284,
+   "seconds": 577,
    "finished": null,
    "effort": "high"
   }
@@ -308,7 +308,7 @@
   "week_pct": 73.63,
   "usage_pct": 48.9,
   "work_pct": 81.3,
-  "read_at": "2026-11-20T10:14:00+00:00",
+  "read_at": "2026-11-20T10:18:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -338,14 +338,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-20T05:14:00-05:00",
+   "at": "2026-11-20T05:17:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-20T05:14:00-05:00",
+  "at": "2026-11-20T05:18:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -356,7 +356,7 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Double Spread: past the week's halfway point with room left, so twice the even pace until the limit or the reset; the machine allows 2 (at its floor: load 16.2 a core is over 10)",
+  "why": "Double Spread: past the week's halfway point with room left, so twice the even pace until the limit or the reset; the machine allows 2 (at its floor: load 13.2 a core is over 10)",
   "n": 2,
   "at": "2026-11-20T02:09:48.586335-05:00"
  },
@@ -600,67 +600,72 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-20T10:12:38Z",
+  "at": "2026-11-20T10:17:31Z",
   "s": {
    "T-5247": [
     "merging",
     "Host checks on the Mac mini",
-    1795169498032
+    1795169491380
    ],
    "T-5236": [
     "merging",
     "Host checks on the Mac mini",
-    1795169498032
+    1795169491380
    ],
    "T-5234": [
     "merging",
     "Host checks on the Mac mini",
-    1795169498032
+    1795169491380
    ],
    "T-4994": [
     "mergeq",
     "1st to merge",
-    1795169318032
+    1795169311380
    ],
    "T-5180": [
     "mergeq",
     "1st to merge",
-    1795169318032
+    1795169311380
    ],
    "T-4813": [
     "mergeq",
     "2nd to merge",
-    1795157858032
+    1795157851380
    ],
    "T-4806": [
     "mergeq",
     "3rd to merge",
-    1795148318032
+    1795148311380
    ],
    "T-0349": [
     "mergeq",
     "4th to merge",
-    1795147958032
+    1795147951380
    ],
    "T-4184": [
     "mergeq",
     "5th to merge",
-    1795152578032
+    1795152571380
    ],
    "T-4182": [
     "mergeq",
     "6th to merge",
-    1795156838032
+    1795156891380
    ],
    "T-4181": [
     "mergeq",
     "7th to merge",
-    1795157798032
+    1795157791380
    ],
    "T-4920": [
     "testing",
     "its own tests, in its copy",
-    1795168898032
+    1795168891380
+   ],
+   "T-4947": [
+    "testing",
+    "its own tests, in its copy",
+    1795169851380
    ]
   },
   "nm": {
@@ -675,7 +680,8 @@
    "T-4184": "A person's own script becomes a Home Screen widget",
    "T-4182": "A failing widget says so and can recover",
    "T-4181": "Widgets refresh on their own and by a tap",
-   "T-4920": "Check finished work before it ships"
+   "T-4920": "Check finished work before it ships",
+   "T-4947": "Check finished work before it ships"
   },
   "wk": {
    "T-5247": "Odalys",
@@ -690,6 +696,7 @@
    "T-4182": "Idris",
    "T-4181": "Idris",
    "T-4920": "Odalys",
+   "T-4947": "Odalys",
    "T-5216": "Pernille",
    "T-4943": "Pernille",
    "T-5254": "Odalys",
@@ -705,7 +712,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-20T10:12:38Z",
+  "at": "2026-11-20T10:17:31Z",
   "mq": {
    "n": {
     "checking": 3,
@@ -717,13 +724,13 @@
     "parked": 2
    },
    "m": {
-    "checking": 1,
-    "inline": 204,
-    "conflicted": 1762,
+    "checking": 6,
+    "inline": 208,
+    "conflicted": 1767,
     "failed": null,
     "held": null,
-    "retry": 113,
-    "parked": 277
+    "retry": 117,
+    "parked": 282
    },
    "cur": [
     [
@@ -732,7 +739,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     1
+     6
     ],
     [
      [
@@ -740,7 +747,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     1
+     6
     ],
     [
      [
@@ -748,7 +755,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     1
+     6
     ]
    ],
    "ld": [
@@ -758,8 +765,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-20T10:12:37Z",
-    "ld": 14.84,
+    "at": "2026-11-20T10:17:07Z",
+    "ld": 12.36,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -811,11 +818,11 @@
      "open": false
     }
    },
-   "at": "2026-11-20T10:12:38+00:00"
+   "at": "2026-11-20T10:17:31+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-20T10:12:38+00:00"
+   "at": "2026-11-20T10:17:31+00:00"
   }
  },
  "operators": [
@@ -851,10 +858,10 @@
   "main": 2,
   "lanes": 0,
   "total": 2,
-  "at": "5:14 AM",
+  "at": "5:18 AM",
   "why": "",
-  "at_iso": "2026-11-20T10:14:00+00:00",
+  "at_iso": "2026-11-20T10:18:00+00:00",
   "started": "2:11 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 2:11 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 5:14 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 2:11 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 5:18 AM ET</p></section>"
  }
 }

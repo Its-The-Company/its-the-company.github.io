@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-20T21:14:55.378798+00:00",
+ "at": "2026-11-20T21:30:13.290687+00:00",
  "session": {
   "active": false,
   "kind": "",
@@ -247,30 +247,30 @@
  "meter": {
   "five_hour": {
    "pct": 7.0,
-   "resets_at": "2026-11-20T23:19:59.643842+00:00",
+   "resets_at": "2026-11-20T23:19:59.795546+00:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-20T16:04:57.425362-05:00",
+   "read_at": "2026-11-20T16:30:01.859065-05:00",
    "source": "usage",
    "left": 93.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 100.0,
-   "resets_at": "2026-11-22T06:59:59.643860+00:00",
+   "resets_at": "2026-11-22T06:59:59.795565+00:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-20T16:04:57.425362-05:00",
+   "read_at": "2026-11-20T16:30:01.859065-05:00",
    "source": "usage",
    "left": 0.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 36.0,
-   "resets_at": "2026-11-22T06:59:59.643977+00:00",
+   "resets_at": "2026-11-22T06:59:59.795703+00:00",
    "used_words": "of the Fable weekly allowance used",
-   "read_at": "2026-11-20T16:04:57.425362-05:00",
+   "read_at": "2026-11-20T16:30:01.859065-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-20T16:04:57.425362-05:00"
+  "read_at": "2026-11-20T16:30:01.859065-05:00"
  },
  "ui": {
   "week_pct": 0.123,
@@ -285,12 +285,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-20T16:19:58-05:00",
+ "next_tick": "2026-11-20T16:31:50-05:00",
  "personal": {
   "week_pct": 95.03,
   "usage_pct": 48.7,
   "work_pct": 80.4,
-  "read_at": "2026-11-20T21:17:00+00:00",
+  "read_at": "2026-11-20T21:31:00+00:00",
   "running": [
    {
     "lane": "b3",
@@ -324,7 +324,7 @@
   }
  ],
  "disk": {
-  "free_gb": 24,
+  "free_gb": 21,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -333,14 +333,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-20T16:14:00-05:00",
+   "at": "2026-11-20T16:25:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-20T16:17:00-05:00",
+  "at": "2026-11-20T16:31:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -538,48 +538,62 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-20T21:14:55Z",
+  "at": "2026-11-20T21:30:13Z",
   "s": {
    "T-5354": [
     "merging",
-    "Host checks on the Mac mini",
-    1795209235378
+    "Host checks on the Mac mini \u00b7 1 of 3 groups of tests done",
+    1795209193290
    ],
    "T-5355": [
     "mergeq",
     "1st to merge",
-    1795206955378
+    1795206973290
+   ],
+   "T-5234": [
+    "mergeq",
+    "2nd to merge",
+    1795209433290
+   ],
+   "T-4182": [
+    "testing",
+    "Mac Mini \u00b7 test",
+    null
    ]
   },
   "nm": {
    "T-5354": "Land the finished test fixes and three small fixes",
-   "T-5355": "Finish the MacBook Xcode routing and the merge switch"
+   "T-5355": "Finish the MacBook Xcode routing and the merge switch",
+   "T-5234": "Move merge tests to the MacBook under heavy load",
+   "T-4182": "A failing widget says so and can recover"
   },
   "wk": {
    "T-5354": "Odalys",
-   "T-5355": "Odalys"
+   "T-5355": "Odalys",
+   "T-5234": "Odalys",
+   "T-4182": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-20T21:14:55Z",
+  "at": "2026-11-20T21:30:13Z",
   "mq": {
    "n": {
     "checking": 1,
-    "inline": 1,
+    "inline": 2,
     "conflicted": 1,
-    "failed": 1,
+    "failed": 0,
     "held": 0,
     "retry": 0,
     "parked": 3
    },
    "m": {
-    "checking": 1,
-    "inline": 39,
-    "conflicted": 1735,
-    "failed": 50,
+    "checking": 17,
+    "inline": 33,
+    "conflicted": 1750,
+    "failed": null,
     "held": null,
     "retry": null,
-    "parked": 578
+    "parked": 593
    },
    "cur": [
     [
@@ -588,7 +602,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     1
+     17
     ]
    ],
    "ld": [
@@ -598,23 +612,25 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-20T21:14:58Z",
-    "ld": 9.22,
+    "at": "2026-11-20T21:30:30Z",
+    "ld": 37.96,
     "c": 8,
-    "sb": 0,
+    "sb": 1,
     "dk": [
-     24.2,
+     19.5,
      228.3
     ],
     "ss": [
      169.1,
      953.7
     ],
-    "sn": []
+    "sn": [
+     "iPhone 17e"
+    ]
    },
    "macbook": {
-    "at": "2026-11-20T20:46:32Z",
-    "ld": 0.19,
+    "at": "2026-11-20T21:15:27Z",
+    "ld": 0.21,
     "c": 12,
     "sb": 0,
     "dk": [
@@ -627,13 +643,13 @@
  },
  "hc": {
   "wait": {
-   "n": 9,
+   "n": 7,
    "limit": 20,
-   "in_line": 4,
-   "parked": 5,
+   "in_line": 3,
+   "parked": 4,
    "open": true,
    "mq": false,
-   "counted": "2026-11-20T21:06:52+00:00",
+   "counted": "2026-11-20T16:30:03-05:00",
    "by": {
     "app": {
      "n": 4,
@@ -641,7 +657,7 @@
      "open": true
     },
     "other": {
-     "n": 5,
+     "n": 3,
      "limit": 20,
      "open": true
     },
@@ -651,11 +667,11 @@
      "open": true
     }
    },
-   "at": "2026-11-20T21:14:55+00:00"
+   "at": "2026-11-20T21:30:13+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-20T21:14:55+00:00"
+   "at": "2026-11-20T21:30:13+00:00"
   }
  },
  "operators": [
@@ -689,10 +705,10 @@
   "main": 0,
   "lanes": 1,
   "total": 1,
-  "at": "4:17 PM",
+  "at": "4:31 PM",
   "why": "",
-  "at_iso": "2026-11-20T21:17:00+00:00",
+  "at_iso": "2026-11-20T21:31:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 4:17 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 4:31 PM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-20T14:54:35.045206+00:00",
+ "at": "2026-11-20T14:57:56.725295+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -324,7 +324,7 @@
    "task": "[build] T-5047 token test red card",
    "model": "opus",
    "started": "2026-11-20T14:25:57.326Z",
-   "seconds": 1717,
+   "seconds": 1919,
    "finished": null,
    "effort": "high"
   },
@@ -333,7 +333,7 @@
    "task": "[build] T-4550 button action run, slice 2",
    "model": "opus",
    "started": "2026-11-20T14:26:07.585Z",
-   "seconds": 1707,
+   "seconds": 1909,
    "finished": null,
    "effort": "high"
   },
@@ -342,7 +342,7 @@
    "task": "[test] T-4634 flaky github hang test",
    "model": "opus",
    "started": "2026-11-20T14:44:23.179Z",
-   "seconds": 611,
+   "seconds": 813,
    "finished": null,
    "effort": "high"
   }
@@ -382,19 +382,19 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 33.0,
+   "pct": 34.0,
    "resets_at": "2026-11-20T13:20:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-20T09:53:52.519484-05:00",
+   "read_at": "2026-11-20T09:57:05.620328-05:00",
    "source": "live",
-   "left": 67.0,
+   "left": 66.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 91.0,
    "resets_at": "2026-11-22T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-20T09:53:52.519484-05:00",
+   "read_at": "2026-11-20T09:57:05.620328-05:00",
    "source": "live",
    "left": 9.0,
    "left_words": "of your weekly allowance left"
@@ -406,7 +406,7 @@
    "read_at": "2026-11-20T09:21:58.972439-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-20T09:53:52.519484-05:00"
+  "read_at": "2026-11-20T09:57:05.620328-05:00"
  },
  "ui": {
   "week_pct": 0.112,
@@ -426,8 +426,20 @@
   "week_pct": 82.11,
   "usage_pct": 48.3,
   "work_pct": 79.9,
-  "read_at": "2026-11-20T14:55:00+00:00",
+  "read_at": "2026-11-20T14:58:00+00:00",
   "running": [
+   {
+    "lane": "a",
+    "task": "T-4192",
+    "w": "Pernille",
+    "k": "build",
+    "t": "Python in the app: smaller bundle, installable packages",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-20T09:57:18-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
    {
     "lane": "b",
     "task": "T-5258",
@@ -484,7 +496,7 @@
   }
  ],
  "disk": {
-  "free_gb": 23,
+  "free_gb": 26,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -493,14 +505,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-20T09:51:00-05:00",
+   "at": "2026-11-20T09:56:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-20T09:55:00-05:00",
+  "at": "2026-11-20T09:58:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -753,47 +765,47 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-20T14:54:35Z",
+  "at": "2026-11-20T14:57:56Z",
   "s": {
    "T-5236": [
     "merging",
     "Host checks on the Mac mini",
-    1795185755045
+    1795185776725
    ],
    "T-5234": [
     "merging",
     "Host checks on the Mac mini",
-    1795185755045
+    1795185776725
    ],
    "T-4807": [
     "merging",
     "Host checks on the Mac mini",
-    1795185755045
+    1795185776725
    ],
    "T-5154": [
     "merging",
     "Host checks on the Mac mini",
-    1795185755045
+    1795185776725
    ],
    "T-4550": [
     "merging",
     "Mac tests at the main gate",
-    1795185815045
+    1795185776725
    ],
    "T-3995": [
     "merging",
     "Mac tests at the main gate",
-    1795184495045
+    1795184456725
    ],
    "T-5047": [
     "testing",
-    "Mac Mini \u00b7 test",
-    null
+    "its own tests, in its copy",
+    1795185416725
    ],
    "T-4634": [
     "testing",
     "its own tests, in its copy",
-    1795186475045
+    1795186496725
    ]
   },
   "nm": {
@@ -821,7 +833,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-20T14:54:35Z",
+  "at": "2026-11-20T14:57:56Z",
   "mq": {
    "n": {
     "checking": 4,
@@ -833,13 +845,13 @@
     "parked": 3
    },
    "m": {
-    "checking": 12,
+    "checking": 15,
     "inline": null,
-    "conflicted": 2044,
-    "failed": 14,
+    "conflicted": 2047,
+    "failed": 18,
     "held": null,
     "retry": null,
-    "parked": 197
+    "parked": 201
    },
    "cur": [
     [
@@ -848,7 +860,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     12
+     15
     ],
     [
      [
@@ -856,7 +868,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     12
+     15
     ],
     [
      [
@@ -864,7 +876,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     12
+     15
     ],
     [
      [
@@ -872,7 +884,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     12
+     15
     ]
    ],
    "ld": [
@@ -882,10 +894,10 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-20T14:54:37Z",
-    "ld": 78.48,
+    "at": "2026-11-20T14:58:01Z",
+    "ld": 75.69,
     "c": 8,
-    "sb": 1,
+    "sb": 0,
     "dk": [
      23.3,
      228.3
@@ -894,9 +906,7 @@
      172.9,
      953.7
     ],
-    "sn": [
-     "pywidget-wk-check"
-    ]
+    "sn": []
    },
    "macbook": {
     "at": "2026-11-20T14:50:43Z",
@@ -937,11 +947,11 @@
      "open": false
     }
    },
-   "at": "2026-11-20T14:54:35+00:00"
+   "at": "2026-11-20T14:57:56+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-20T14:54:35+00:00"
+   "at": "2026-11-20T14:57:47+00:00"
   }
  },
  "operators": [
@@ -953,6 +963,15 @@
    "e": "high",
    "t": "Work session \u2013 6 tasks",
    "at": "2026-11-20T09:23:01-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Evan's Account",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session \u2013 1 task",
+   "at": "2026-11-20T09:57:18-05:00"
   },
   {
    "w": "Operator",
@@ -982,12 +1001,12 @@
  ],
  "agents_now": {
   "main": 3,
-  "lanes": 1,
-  "total": 4,
-  "at": "9:55 AM",
+  "lanes": 2,
+  "total": 5,
+  "at": "9:58 AM",
   "why": "",
-  "at_iso": "2026-11-20T14:55:00+00:00",
+  "at_iso": "2026-11-20T14:58:00+00:00",
   "started": "9:23 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 3, started 9:23 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 9:55 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 3, started 9:23 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 9:58 AM ET</p></section>"
  }
 }

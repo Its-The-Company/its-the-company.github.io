@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-20T11:18:59.417168+00:00",
+ "at": "2026-11-20T11:22:05.254685+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -173,7 +173,7 @@
    "task": "[build] T-5293 drop altitude history when location off",
    "model": "opus",
    "started": "2026-11-20T10:38:12.538Z",
-   "seconds": 2446,
+   "seconds": 2632,
    "finished": null,
    "effort": "high"
   },
@@ -182,12 +182,30 @@
    "task": "[report] morning",
    "model": "opus",
    "started": "2026-11-20T10:52:08.891Z",
-   "seconds": 1610,
+   "seconds": 1796,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "odalys",
+   "task": "[review] T-4948 widget action request test check",
+   "model": "opus",
+   "started": "2026-11-20T11:19:38.988Z",
+   "seconds": 146,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "pernille",
+   "task": "[review] T-4944 widget refresh Pro gate recheck",
+   "model": "opus",
+   "started": "2026-11-20T11:19:50.591Z",
+   "seconds": 134,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Idris, Pernille",
+ "who": "Idris, Pernille x2, Odalys",
  "recent": [
   {
    "name": "pernille",
@@ -274,7 +292,7 @@
   "week_pct": 73.63,
   "usage_pct": 48.9,
   "work_pct": 81.3,
-  "read_at": "2026-11-20T11:19:00+00:00",
+  "read_at": "2026-11-20T11:22:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -349,7 +367,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-20T06:19:00-05:00",
+  "at": "2026-11-20T06:22:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -385,11 +403,12 @@
   },
   {
    "name": "Odalys",
-   "state": "next",
-   "task": "Odalys, P0, merge-first, Investor an Investor c7031233507...",
-   "model": null,
-   "since": null,
-   "next": []
+   "state": "running",
+   "task": "[review] T-4948 widget action request test check",
+   "model": "opus",
+   "since": "2026-11-20T11:19:38.988Z",
+   "next": [],
+   "effort": "high"
   },
   {
    "name": "Ines",
@@ -436,6 +455,26 @@
     "e": "high",
     "at": "2026-11-20T10:52:08.891Z",
     "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "review",
+    "t": "Check finished work before it ships",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-20T11:19:38.988Z",
+    "o": "c",
+    "task": "T-4948"
+   },
+   {
+    "w": "Pernille",
+    "k": "review",
+    "t": "Check finished work before it ships",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-20T11:19:50.591Z",
+    "o": "c",
+    "task": "T-4944"
    }
   ],
   "src": "plan",
@@ -514,6 +553,11 @@
   "done": [
    {
     "w": "Pernille",
+    "t": "Pernille's second-person check of the change that lists the apps a launcher may ask about only...",
+    "at": "2026-11-20T06:20:00-05:00"
+   },
+   {
+    "w": "Pernille",
     "t": "Idris's fix T-4762 (a widget button's run holds its lock while Python works, and a save that...",
     "at": "2026-11-20T06:17:00-05:00"
    },
@@ -521,11 +565,6 @@
     "w": "Pernille",
     "t": "Idris's fix T-4635 (clear stale Restore lines) passed review: Settings no longer says no Pro...",
     "at": "2026-11-20T05:46:00-05:00"
-   },
-   {
-    "w": "Pernille",
-    "t": "Pernille's second-person check of the fix that makes a saved widget state report what is really...",
-    "at": "2026-11-20T05:41:00-05:00"
    }
   ],
   "count": {
@@ -535,8 +574,12 @@
    "you": 2
   },
   "fin": {
-   "n": 27,
+   "n": 28,
    "rows": [
+    [
+     "T-4949",
+     "Check finished work before..."
+    ],
     [
      "T-4945",
      "Check finished work before..."
@@ -556,10 +599,6 @@
     [
      "T-4920",
      "Check finished work before..."
-    ],
-    [
-     "T-0349",
-     "Fix gaps in the package..."
     ]
    ]
   }
@@ -603,62 +642,72 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-20T11:18:59Z",
+  "at": "2026-11-20T11:22:05Z",
   "s": {
    "T-4184": [
     "merging",
     "Host checks on the Mac mini",
-    1795170539417
+    1795170545254
    ],
    "T-5247": [
     "mergeq",
     "1st to merge",
-    1795170599417
+    1795170605254
    ],
    "T-4994": [
     "mergeq",
     "2nd to merge",
-    1795169279417
+    1795169285254
    ],
    "T-5180": [
     "mergeq",
     "2nd to merge",
-    1795169279417
+    1795169285254
    ],
    "T-4796": [
     "mergeq",
     "3rd to merge",
-    1795172939417
+    1795172945254
    ],
    "T-4182": [
     "mergeq",
     "4th to merge",
-    1795156859417
+    1795156865254
    ],
    "T-4181": [
     "mergeq",
     "5th to merge",
-    1795157759417
+    1795157765254
    ],
    "T-2377": [
     "mergeq",
     "6th to merge",
-    1795172579417
+    1795172585254
    ],
    "T-4662": [
     "mergeq",
     "6th to merge",
-    1795172579417
+    1795172585254
    ],
    "T-4670": [
     "mergeq",
     "6th to merge",
-    1795172579417
+    1795172585254
+   ],
+   "T-5255": [
+    "merging",
+    "Mac tests at the main gate",
+    1795173725254
+   ],
+   "T-4944": [
+    "testing",
+    "its own tests, in its copy",
+    1795173725254
    ],
    "T-5293": [
     "testing",
     "its own tests, in its copy",
-    1795172039417
+    1795172045254
    ]
   },
   "nm": {
@@ -672,6 +721,8 @@
    "T-2377": "Write the version 1.1 board lines after 1.0 is released",
    "T-4662": "Place the cursor easily on a long line",
    "T-4670": "Draft the letter to Apple about the marketplace rules",
+   "T-5255": "Trim step 2, retire the scripts nothing calls",
+   "T-4944": "Check finished work before it ships",
    "T-5293": "Drop altitude history when location is turned off"
   },
   "wk": {
@@ -685,7 +736,10 @@
    "T-2377": "Ines",
    "T-4662": "Idris",
    "T-4670": "Wrenna",
+   "T-5255": "Odalys",
+   "T-4944": "Pernille",
    "T-5293": "Idris",
+   "T-4949": "Pernille",
    "T-4945": "Pernille",
    "T-4947": "Odalys",
    "T-4942": "Pernille",
@@ -696,12 +750,11 @@
    "T-4943": "Pernille",
    "T-5254": "Odalys",
    "T-4941": "Pernille",
-   "T-4789": "Pernille",
-   "T-4927": "Pernille"
+   "T-4789": "Pernille"
   }
  },
  "ln": {
-  "at": "2026-11-20T11:18:59Z",
+  "at": "2026-11-20T11:22:05Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -713,13 +766,13 @@
     "parked": 2
    },
    "m": {
-    "checking": 50,
-    "inline": 49,
-    "conflicted": 1828,
+    "checking": 53,
+    "inline": 52,
+    "conflicted": 1831,
     "failed": null,
     "held": null,
-    "retry": 116,
-    "parked": 343
+    "retry": 119,
+    "parked": 346
    },
    "cur": [
     [
@@ -728,7 +781,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     50
+     53
     ]
    ],
    "ld": [
@@ -738,12 +791,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-20T11:19:01Z",
-    "ld": 8.18,
+    "at": "2026-11-20T11:21:43Z",
+    "ld": 6.64,
     "c": 8,
     "sb": 0,
     "dk": [
-     23.1,
+     23.3,
      228.3
     ],
     "ss": [
@@ -791,11 +844,11 @@
      "open": false
     }
    },
-   "at": "2026-11-20T11:18:59+00:00"
+   "at": "2026-11-20T11:22:05+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-20T11:18:50+00:00"
+   "at": "2026-11-20T11:21:57+00:00"
   }
  },
  "operators": [
@@ -805,7 +858,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 19 tasks",
+   "t": "Work session \u2013 22 tasks",
    "at": "2026-11-20T06:09:42-05:00"
   },
   {
@@ -837,13 +890,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 2,
+  "main": 4,
   "lanes": 1,
-  "total": 3,
-  "at": "6:19 AM",
+  "total": 5,
+  "at": "6:22 AM",
   "why": "",
-  "at_iso": "2026-11-20T11:19:00+00:00",
+  "at_iso": "2026-11-20T11:22:00+00:00",
   "started": "2:11 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 2:11 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 6:19 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 4, started 2:11 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 6:22 AM ET</p></section>"
  }
 }

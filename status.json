@@ -1,11 +1,21 @@
 {
  "schema": 1,
- "at": "2026-11-20T09:04:57.444100+00:00",
+ "at": "2026-11-20T09:11:07.022530+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-20T02:11:05-05:00",
   "flow": [
+   {
+    "t": "T-4943",
+    "name": "Check finished work before it ships",
+    "steps": [
+     {
+      "s": "testq",
+      "at": 1795165553
+     }
+    ]
+   },
    {
     "t": "T-4181",
     "name": "Widgets refresh on their own and by a tap",
@@ -153,7 +163,7 @@
     "end_at": 1795151564
    }
   ],
-  "landed": 35,
+  "landed": 29,
   "failed": 12
  },
  "workers": [
@@ -162,7 +172,7 @@
    "task": "[review] T-4920 location and notification work check",
    "model": "opus",
    "started": "2026-11-20T08:46:46.300Z",
-   "seconds": 1091,
+   "seconds": 1460,
    "finished": null,
    "effort": "high"
   },
@@ -171,7 +181,7 @@
    "task": "[review] T-4941 refresh tap cost measurement check",
    "model": "opus",
    "started": "2026-11-20T08:50:01.752Z",
-   "seconds": 895,
+   "seconds": 1265,
    "finished": null,
    "effort": "high"
   },
@@ -180,7 +190,7 @@
    "task": "[review] T-4943 iPad widget tap window check",
    "model": "opus",
    "started": "2026-11-20T08:50:40.962Z",
-   "seconds": 856,
+   "seconds": 1226,
    "finished": null,
    "effort": "high"
   }
@@ -223,7 +233,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 646,
+  "runnable_count": 649,
   "blocked_count": 2
  },
  "meter": {
@@ -272,7 +282,7 @@
   "week_pct": 73.63,
   "usage_pct": 48.9,
   "work_pct": 81.3,
-  "read_at": "2026-11-20T09:08:00+00:00",
+  "read_at": "2026-11-20T09:13:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -293,7 +303,7 @@
   }
  ],
  "disk": {
-  "free_gb": 25,
+  "free_gb": 24,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -309,7 +319,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-20T04:08:00-05:00",
+  "at": "2026-11-20T04:13:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -320,7 +330,7 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Double Spread: past the week's halfway point with room left, so twice the even pace until the limit or the reset; the machine allows 8 (at its floor: load 17.6 a core is over 10)",
+  "why": "Double Spread: past the week's halfway point with room left, so twice the even pace until the limit or the reset; the machine allows 8 (at its floor: load 20.8 a core is over 10)",
   "n": 3,
   "at": "2026-11-20T02:09:48.586335-05:00"
  },
@@ -500,7 +510,7 @@
    }
   ],
   "count": {
-   "next": 646,
+   "next": 649,
    "wait": 2,
    "blocked": 0,
    "you": 2
@@ -574,60 +584,83 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-20T09:04:57Z",
+  "at": "2026-11-20T09:11:07Z",
   "s": {
-   "T-4850": [
+   "T-5247": [
     "mergeq",
     "1st to merge",
-    1795153557444
+    1795165807022
+   ],
+   "T-5236": [
+    "mergeq",
+    "1st to merge",
+    1795165807022
+   ],
+   "T-5234": [
+    "mergeq",
+    "1st to merge",
+    1795165807022
+   ],
+   "T-4850": [
+    "mergeq",
+    "2nd to merge",
+    1795153507022
    ],
    "T-4994": [
     "mergeq",
-    "1st to merge",
-    1795153557444
+    "2nd to merge",
+    1795153507022
    ],
    "T-4813": [
     "mergeq",
-    "2nd to merge",
-    1795157817444
+    "3rd to merge",
+    1795157827022
    ],
    "T-4806": [
     "mergeq",
-    "3rd to merge",
-    1795148277444
+    "4th to merge",
+    1795148287022
    ],
    "T-0349": [
     "mergeq",
-    "4th to merge",
-    1795147977444
+    "5th to merge",
+    1795147927022
    ],
    "T-4184": [
     "mergeq",
-    "5th to merge",
-    1795152597444
+    "6th to merge",
+    1795152607022
    ],
    "T-4182": [
     "mergeq",
-    "6th to merge",
-    1795156857444
+    "7th to merge",
+    1795156867022
    ],
    "T-4181": [
     "mergeq",
-    "7th to merge",
-    1795157757444
+    "8th to merge",
+    1795157767022
+   ],
+   "T-4941": [
+    "merging",
+    "Mac tests at the main gate",
+    1795165807022
    ],
    "T-4943": [
-    "testing",
-    "its own tests, in its copy",
-    1795165377444
+    "merging",
+    "Mac tests at the main gate",
+    1795165807022
    ],
    "T-4920": [
     "testing",
     "its own tests, in its copy",
-    1795164657444
+    1795164607022
    ]
   },
   "nm": {
+   "T-5247": "MacBook runner takes pre-merge Xcode runs",
+   "T-5236": "Send land host tests to the MacBook under heavy load",
+   "T-5234": "Move merge tests to the MacBook under heavy load",
    "T-4850": "Bring the Mac mini load back down",
    "T-4994": "Act on the feature record at every add",
    "T-4813": "Home's numbers update within a minute",
@@ -636,10 +669,14 @@
    "T-4184": "A person's own script becomes a Home Screen widget",
    "T-4182": "A failing widget says so and can recover",
    "T-4181": "Widgets refresh on their own and by a tap",
+   "T-4941": "Check finished work before it ships",
    "T-4943": "Check finished work before it ships",
    "T-4920": "Check finished work before it ships"
   },
   "wk": {
+   "T-5247": "Odalys",
+   "T-5236": "Odalys",
+   "T-5234": "Odalys",
    "T-4850": "Odalys",
    "T-4994": "Odalys",
    "T-4813": "Maren",
@@ -648,6 +685,7 @@
    "T-4184": "Idris",
    "T-4182": "Idris",
    "T-4181": "Idris",
+   "T-4941": "Pernille",
    "T-4943": "Pernille",
    "T-4920": "Odalys",
    "T-4789": "Pernille",
@@ -665,25 +703,25 @@
   }
  },
  "ln": {
-  "at": "2026-11-20T09:04:57Z",
+  "at": "2026-11-20T09:11:07Z",
   "mq": {
    "n": {
     "checking": 0,
-    "inline": 8,
+    "inline": 11,
     "conflicted": 2,
     "failed": 1,
     "held": 0,
-    "retry": 6,
+    "retry": 3,
     "parked": 2
    },
    "m": {
     "checking": null,
-    "inline": 199,
-    "conflicted": 1694,
-    "failed": 300,
+    "inline": 150,
+    "conflicted": 1700,
+    "failed": 306,
     "held": null,
-    "retry": 45,
-    "parked": 209
+    "retry": 306,
+    "parked": 215
    },
    "cur": [],
    "ld": [
@@ -693,12 +731,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-20T09:05:46Z",
-    "ld": 18.74,
+    "at": "2026-11-20T09:11:32Z",
+    "ld": 18.75,
     "c": 8,
     "sb": 0,
     "dk": [
-     25.4,
+     24.3,
      228.3
     ],
     "ss": [
@@ -724,11 +762,11 @@
   "wait": {
    "n": 19,
    "limit": 20,
-   "in_line": 8,
-   "parked": 11,
+   "in_line": 11,
+   "parked": 8,
    "open": true,
    "mq": false,
-   "counted": "2026-11-20T08:57:19+00:00",
+   "counted": "2026-11-20T09:09:29+00:00",
    "by": {
     "app": {
      "n": 7,
@@ -746,11 +784,11 @@
      "open": false
     }
    },
-   "at": "2026-11-20T09:04:57+00:00"
+   "at": "2026-11-20T09:11:07+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-20T09:04:57+00:00"
+   "at": "2026-11-20T09:11:07+00:00"
   }
  },
  "operators": [
@@ -785,10 +823,10 @@
   "main": 3,
   "lanes": 0,
   "total": 3,
-  "at": "4:08 AM",
+  "at": "4:13 AM",
   "why": "",
-  "at_iso": "2026-11-20T09:08:00+00:00",
+  "at_iso": "2026-11-20T09:13:00+00:00",
   "started": "2:11 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 2:11 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 4:08 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 2:11 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 4:13 AM ET</p></section>"
  }
 }

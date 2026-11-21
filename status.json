@@ -1,11 +1,91 @@
 {
  "schema": 1,
- "at": "2026-11-21T16:24:45.079176+00:00",
+ "at": "2026-11-21T16:34:10.508683+00:00",
  "session": {
   "active": false,
   "kind": "",
   "started": null,
   "flow": [
+   {
+    "t": "T-4781",
+    "name": "Retest a fixed red on what failed, not every test",
+    "w": "Odalys",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "claimed",
+      "at": 1795278731
+     },
+     {
+      "s": "worker",
+      "at": 1795278731
+     }
+    ]
+   },
+   {
+    "t": "T-4662",
+    "name": "Place the cursor easily on a long line",
+    "w": "Idris",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "claimed",
+      "at": 1795278398
+     },
+     {
+      "s": "worker",
+      "at": 1795278398
+     }
+    ]
+   },
+   {
+    "t": "T-4286",
+    "name": "Check an imported font draws in a widget",
+    "w": "Idris",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "claimed",
+      "at": 1795278394
+     },
+     {
+      "s": "worker",
+      "at": 1795278394
+     }
+    ]
+   },
+   {
+    "t": "T-3765",
+    "name": "Check a real widget tap on the TestFlight build",
+    "w": "Idris",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "claimed",
+      "at": 1795278325
+     },
+     {
+      "s": "worker",
+      "at": 1795278325
+     }
+    ]
+   },
+   {
+    "t": "T-3495",
+    "name": "Check the upload fix before build 4 goes out",
+    "w": "Pernille",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "claimed",
+      "at": 1795278299
+     },
+     {
+      "s": "worker",
+      "at": 1795278299
+     }
+    ]
+   },
    {
     "t": "T-0678",
     "name": "Run the refresh button inside the widget extension",
@@ -39,70 +119,6 @@
     ]
    },
    {
-    "t": "T-4286",
-    "name": "Check an imported font draws in a widget",
-    "w": "Idris",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "claimed",
-      "at": 1795278035
-     },
-     {
-      "s": "worker",
-      "at": 1795278035
-     }
-    ]
-   },
-   {
-    "t": "T-4477",
-    "name": "People build a widget from blocks without code",
-    "w": "Idris",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "claimed",
-      "at": 1795277996
-     },
-     {
-      "s": "worker",
-      "at": 1795277996
-     }
-    ]
-   },
-   {
-    "t": "T-4010",
-    "name": "Rebuild This Session as a full flowchart",
-    "w": "Odalys",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "claimed",
-      "at": 1795277940
-     },
-     {
-      "s": "worker",
-      "at": 1795277940
-     }
-    ]
-   },
-   {
-    "t": "T-0851",
-    "name": "Split the app guide into one document per section",
-    "w": "Odalys",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "claimed",
-      "at": 1795277890
-     },
-     {
-      "s": "worker",
-      "at": 1795277890
-     }
-    ]
-   },
-   {
     "t": "T-0337",
     "name": "Confirm the revenue memo's facts from Apple pages",
     "w": "Wrenna",
@@ -117,25 +133,54 @@
       "at": 1795277839
      }
     ]
+   }
+  ],
+  "done": [
+   {
+    "t": "T-4477",
+    "name": "People build a widget from blocks without code",
+    "w": "Idris",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1795278643
+   },
+   {
+    "t": "T-4010",
+    "name": "Rebuild This Session as a full flowchart",
+    "w": "Odalys",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1795278592
    },
    {
     "t": "T-2097",
     "name": "Read free memory in the widget extension on a device",
     "w": "Idris",
     "acct": "Personal a",
-    "steps": [
-     {
-      "s": "claimed",
-      "at": 1795277773
-     },
-     {
-      "s": "worker",
-      "at": 1795277773
-     }
-    ]
-   }
-  ],
-  "done": [
+    "steps": [],
+    "end": "landed",
+    "end_at": 1795278539
+   },
+   {
+    "t": "T-0851",
+    "name": "Split the app guide into one document per section",
+    "w": "Odalys",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1795278479
+   },
+   {
+    "t": "T-5234",
+    "name": "Move merge tests to the MacBook under heavy load",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "failed",
+    "end_at": 1795278472,
+    "why": "tests failed"
+   },
    {
     "t": "T-5432",
     "name": "Check the Foundations and Pages week figures",
@@ -176,53 +221,10 @@
     "end": "failed",
     "end_at": 1795275395,
     "why": "tests failed"
-   },
-   {
-    "t": "T-4770",
-    "name": "Re-estimate the release date from measured build speed",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1795274127
-   },
-   {
-    "t": "T-4184",
-    "name": "A person's own script becomes a Home Screen widget",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1795274098
-   },
-   {
-    "t": "T-5234",
-    "name": "Move merge tests to the MacBook under heavy load",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "failed",
-    "end_at": 1795270868,
-    "why": "tests failed"
-   },
-   {
-    "t": "T-5234",
-    "name": "Move merge tests to the MacBook under heavy load",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "failed",
-    "end_at": 1795267025,
-    "why": "tests failed"
-   },
-   {
-    "t": "T-5234",
-    "name": "Move merge tests to the MacBook under heavy load",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "failed",
-    "end_at": 1795263172,
-    "why": "tests failed"
    }
   ],
-  "landed": 6,
-  "failed": 11
+  "landed": 10,
+  "failed": 12
  },
  "workers": [],
  "who": "",
@@ -307,12 +309,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-21T11:31:20-05:00",
+ "next_tick": "2026-11-21T11:40:39-05:00",
  "personal": {
   "week_pct": 98.52,
   "usage_pct": 49.6,
   "work_pct": 81.0,
-  "read_at": "2026-11-21T16:25:00+00:00",
+  "read_at": "2026-11-21T16:34:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -329,31 +331,13 @@
    },
    {
     "lane": "a2",
-    "task": "T-4770",
-    "t": "Re-estimate the release date from measured build speed",
-    "at": "2026-11-21T11:08:29-05:00",
-    "n": "Evan",
-    "d": 1,
-    "src": "plan-a"
-   },
-   {
-    "lane": "a2",
-    "task": "T-5432",
-    "t": "Check the Foundations and Pages week figures",
-    "at": "2026-11-21T11:08:29-05:00",
-    "n": "Evan",
-    "d": 1,
-    "src": "plan-a"
-   },
-   {
-    "lane": "a3",
-    "task": "T-4184",
+    "task": "T-4182",
     "w": "Idris",
     "k": "build",
-    "t": "A person's own script becomes a Home Screen widget",
+    "t": "A failing widget says so and can recover",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-21T10:37:47-05:00",
+    "at": "2026-11-21T11:33:35-05:00",
     "n": "Evan",
     "src": "plan-a"
    }
@@ -377,7 +361,7 @@
   }
  ],
  "disk": {
-  "free_gb": 60,
+  "free_gb": 63,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -386,14 +370,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-21T11:24:00-05:00",
+   "at": "2026-11-21T11:32:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-21T11:25:00-05:00",
+  "at": "2026-11-21T11:34:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -530,6 +514,11 @@
   ],
   "done": [
    {
+    "w": "Odalys",
+    "t": "The app guide was already split into a short index and ten part files on main, so this parked...",
+    "at": "2026-11-21T11:27:00-05:00"
+   },
+   {
     "w": "Ines+idris+operator",
     "t": "The release re-estimate is finished: every phase is now checked against measured speed and the...",
     "at": "2026-11-21T11:19:00-05:00"
@@ -538,11 +527,6 @@
     "w": "Idris",
     "t": "The last two week estimates the CEO had guessed, for foundations and Pages, are now checked...",
     "at": "2026-11-21T11:19:00-05:00"
-   },
-   {
-    "w": "Operator",
-    "t": "Process and site tasks waiting to merge stayed within its limit of 8 tasks for a full day, so...",
-    "at": "2026-11-21T08:38:00-05:00"
    }
   ],
   "count": {
@@ -591,20 +575,8 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-21T16:24:45Z",
+  "at": "2026-11-21T16:34:10Z",
   "s": {
-   "T-4770": [
-    "merged",
-    "on main 11:19 AM ET",
-    1795277971000,
-    ""
-   ],
-   "T-5432": [
-    "merged",
-    "on main 11:19 AM ET",
-    1795277964000,
-    ""
-   ],
    "T-5355": [
     "merged",
     "on main 11:19 AM ET",
@@ -613,51 +585,47 @@
    ]
   },
   "nm": {
-   "T-4770": "Re-estimate the release date from measured build speed",
-   "T-5432": "Check the Foundations and Pages week figures",
    "T-5355": "Finish the MacBook Xcode routing and the merge switch"
   },
   "wk": {
-   "T-4770": "Ines",
-   "T-5432": "Idris",
    "T-5355": "Odalys"
   }
  },
  "ln": {
-  "at": "2026-11-21T16:24:45Z",
+  "at": "2026-11-21T16:34:10Z",
   "mq": {
    "n": {
     "checking": 0,
     "inline": 0,
     "conflicted": 1,
-    "failed": 0,
+    "failed": 1,
     "held": 0,
-    "retry": 1,
+    "retry": 0,
     "parked": 3
    },
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 2885,
-    "failed": null,
+    "conflicted": 2894,
+    "failed": 6,
     "held": null,
-    "retry": 13,
-    "parked": 1728
+    "retry": null,
+    "parked": 1737
    },
    "cur": [],
    "ld": [
-    9,
-    "2026-11-21T16:19:35Z"
+    13,
+    "2026-11-21T16:30:43Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-21T16:24:13Z",
-    "ld": 2.05,
+    "at": "2026-11-21T16:34:11Z",
+    "ld": 0.96,
     "c": 8,
     "sb": 0,
     "dk": [
-     60.2,
+     62.8,
      228.3
     ],
     "ss": [
@@ -670,13 +638,13 @@
  },
  "hc": {
   "wait": {
-   "n": 6,
+   "n": 5,
    "limit": 20,
-   "in_line": 1,
+   "in_line": 0,
    "parked": 5,
    "open": true,
    "mq": false,
-   "counted": "2026-11-21T11:16:20-05:00",
+   "counted": "2026-11-21T16:31:03+00:00",
    "by": {
     "app": {
      "n": 2,
@@ -684,7 +652,7 @@
      "open": true
     },
     "other": {
-     "n": 4,
+     "n": 3,
      "limit": 20,
      "open": true
     },
@@ -694,11 +662,11 @@
      "open": true
     }
    },
-   "at": "2026-11-21T16:24:45+00:00"
+   "at": "2026-11-21T16:34:10+00:00"
   },
   "bl": {
    "n": 3,
-   "at": "2026-11-21T16:24:45+00:00"
+   "at": "2026-11-21T16:34:10+00:00"
   }
  },
  "operators": [
@@ -708,7 +676,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 8 tasks",
+   "t": "Work session \u2013 12 tasks",
    "at": "2026-11-21T11:18:14-05:00"
   },
   {
@@ -718,16 +686,7 @@
    "m": "opus",
    "e": "high",
    "t": "Work session \u2013 1 task",
-   "at": "2026-11-21T11:08:29-05:00"
-  },
-  {
-   "w": "Operator",
-   "a": "Evan's Account",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session \u2013 1 task",
-   "at": "2026-11-21T10:37:47-05:00"
+   "at": "2026-11-21T11:33:35-05:00"
   }
  ],
  "reply": {
@@ -748,12 +707,12 @@
  ],
  "agents_now": {
   "main": 0,
-  "lanes": 3,
-  "total": 3,
-  "at": "11:25 AM",
+  "lanes": 2,
+  "total": 2,
+  "at": "11:34 AM",
   "why": "",
-  "at_iso": "2026-11-21T16:25:00+00:00",
+  "at_iso": "2026-11-21T16:34:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 11:25 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 11:34 AM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-21T18:34:41.196842+00:00",
+ "at": "2026-11-21T18:39:42.106318+00:00",
  "session": {
   "active": false,
   "kind": "",
@@ -37,41 +37,35 @@
       "at": 1795284856
      }
     ]
+   }
+  ],
+  "done": [
+   {
+    "t": "T-5234",
+    "name": "Move merge tests to the MacBook under heavy load",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1795286375
    },
    {
     "t": "T-4850",
     "name": "Bring the Mac mini load back down",
     "w": "Odalys",
     "acct": "Personal a",
-    "steps": [
-     {
-      "s": "claimed",
-      "at": 1795283656
-     },
-     {
-      "s": "worker",
-      "at": 1795283656
-     }
-    ]
+    "steps": [],
+    "end": "landed",
+    "end_at": 1795286305
    },
    {
     "t": "T-4635",
     "name": "Clear the Settings restore line once Pro is bought",
     "w": "Idris",
     "acct": "Personal a",
-    "steps": [
-     {
-      "s": "claimed",
-      "at": 1795283629
-     },
-     {
-      "s": "worker",
-      "at": 1795283629
-     }
-    ]
-   }
-  ],
-  "done": [
+    "steps": [],
+    "end": "landed",
+    "end_at": 1795286247
+   },
    {
     "t": "T-4762",
     "name": "Let the run lock wrap a Python run",
@@ -133,37 +127,10 @@
     "steps": [],
     "end": "landed",
     "end_at": 1795284823
-   },
-   {
-    "t": "T-3765",
-    "name": "Check a real widget tap on the TestFlight build",
-    "w": "Idris",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1795284759
-   },
-   {
-    "t": "T-3495",
-    "name": "Check the upload fix before build 4 goes out",
-    "w": "Pernille",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1795284448
-   },
-   {
-    "t": "T-0337",
-    "name": "Confirm the revenue memo's facts from Apple pages",
-    "w": "Wrenna",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1795284396
    }
   ],
-  "landed": 50,
-  "failed": 12
+  "landed": 53,
+  "failed": 11
  },
  "workers": [],
  "who": "",
@@ -248,12 +215,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-21T13:45:54-05:00",
+ "next_tick": "2026-11-21T13:50:30-05:00",
  "personal": {
   "week_pct": 100.56,
   "usage_pct": 50.1,
   "work_pct": 81.8,
-  "read_at": "2026-11-21T18:35:00+00:00",
+  "read_at": "2026-11-21T18:42:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -299,7 +266,7 @@
   }
  ],
  "disk": {
-  "free_gb": 62,
+  "free_gb": 60,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -308,14 +275,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-21T13:34:00-05:00",
+   "at": "2026-11-21T13:39:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-21T13:35:00-05:00",
+  "at": "2026-11-21T13:42:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -513,13 +480,8 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-21T18:34:41Z",
+  "at": "2026-11-21T18:39:42Z",
   "s": {
-   "T-4635": [
-    "merging",
-    "Rebasing onto current main",
-    1795286081196
-   ],
    "T-4184": [
     "merged",
     "on main 1:12 PM ET",
@@ -528,19 +490,17 @@
    ]
   },
   "nm": {
-   "T-4635": "Clear the Settings restore line once Pro is bought",
    "T-4184": "A person's own script becomes a Home Screen widget"
   },
   "wk": {
-   "T-4635": "Idris",
    "T-4184": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-21T18:34:41Z",
+  "at": "2026-11-21T18:39:42Z",
   "mq": {
    "n": {
-    "checking": 1,
+    "checking": 0,
     "inline": 0,
     "conflicted": 1,
     "failed": 1,
@@ -549,37 +509,28 @@
     "parked": 3
    },
    "m": {
-    "checking": 0,
+    "checking": null,
     "inline": null,
-    "conflicted": 3015,
-    "failed": 5,
+    "conflicted": 3020,
+    "failed": 10,
     "held": null,
     "retry": null,
-    "parked": 1858
+    "parked": 1863
    },
-   "cur": [
-    [
-     [
-      "T-4635"
-     ],
-     "lining up with main",
-     "Mac mini",
-     0
-    ]
-   ],
+   "cur": [],
    "ld": [
-    57,
-    "2026-11-21T18:33:20Z"
+    60,
+    "2026-11-21T18:39:35Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-21T18:33:59Z",
-    "ld": 2.49,
+    "at": "2026-11-21T18:39:43Z",
+    "ld": 1.4,
     "c": 8,
     "sb": 1,
     "dk": [
-     61.9,
+     59.7,
      228.3
     ],
     "ss": [
@@ -629,11 +580,11 @@
      "open": true
     }
    },
-   "at": "2026-11-21T18:34:41+00:00"
+   "at": "2026-11-21T18:39:42+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-21T18:34:41+00:00"
+   "at": "2026-11-21T18:39:42+00:00"
   }
  },
  "operators": [
@@ -644,7 +595,7 @@
    "m": "opus",
    "e": "high",
    "t": "Work session \u2013 1 task",
-   "at": "2026-11-21T13:31:58-05:00"
+   "at": "2026-11-21T13:18:37-05:00"
   },
   {
    "w": "Operator",
@@ -676,10 +627,10 @@
   "main": 0,
   "lanes": 2,
   "total": 2,
-  "at": "1:35 PM",
+  "at": "1:42 PM",
   "why": "",
-  "at_iso": "2026-11-21T18:35:00+00:00",
+  "at_iso": "2026-11-21T18:42:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 1:35 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 1:42 PM ET</p></section>"
  }
 }

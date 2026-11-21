@@ -137,7 +137,7 @@ who did not write it. The switch is `COORD` (environment, else `ops/coord.json` 
 | --- | --- | --- | --- |
 | 1 | T-5447 | dispatch.py: the switch, `coord`, `worker --task` (a one-task worker's plan; starts nothing). Off. | none; committed a3f8fac2d5 |
 | 2 | T-5448 | dispatch.py: with COORD=1 a free slot gets one task, no chain; `kick` on a worker's exit | none |
-| 3 | T-5449 | ops/prompts/coordinator.md: the kept-running session that starts no build agents | none (a hook would be rules/, a proposal) |
+| 3 | T-5449 | ops/prompts/coordinator.md: the kept-running session that starts no build agents | none; the hook is a proposal at the end of this page |
 | 4 | T-5450 | supervisor.sh: start and keep the coordinator; no chain, no hours limit | refused before (11-09, 11-14) |
 | 5 | T-5451 | personal_tick.sh: each slot one task, no chain, hands to the road merge_road.json names | refused before (11-07, 11-21) |
 | 6 | T-5452 | the main plan's work as plain workers in their own copies | its starter is supervisor.sh or an Investor-loaded job |
@@ -207,6 +207,25 @@ session). Investor messages already run during sessions (the inbox watcher).
 
 The old path stays one switch away: ops/jobs_config.json `{"enabled": false}` or `tools/install-launchd.sh --unjobs`
 gives every job back to the tick at once (`jobs_loop.py moved` prints nothing).
+
+## Proposal: a hook that holds "starts no build agents" (T-5449; not applied, the Operator decides)
+
+Slice 3 (ops/prompts/coordinator.md) holds the rule by the prompt alone. Odalys judges a hook worth having: the whole
+saving of step 3 (32.3 seat-h of cold starts, 20.2 of wind-downs) rests on the coordinator not becoming the workers'
+parent again, and a prompt drifts as its context grows, which is exactly when this session runs longest. an Investor
+#325 c7067153738 (1:18 PM ET 11-21, log/<span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">rulings</span>.md) lets workers change guard files through the applier before 2:00 AM
+ET 11-22; this text is for the Operator to apply or drop.
+
+- **Where.** rules/hooks/model-guard.py, already the hook on `Agent|Task` (.claude/settings.json); no new hook entry.
+- **Which session.** The coordinator's starter (slice 4, supervisor.sh) sets `COORD_SESSION=1` in that session's
+  environment only. Not ops/run.json: a worker in its own copy reads that copy's run.json, so a file flag could catch
+  workers or miss the coordinator.
+- **What.** In `main()`, after the tool-name check: if `os.environ.get("COORD_SESSION") == "1"` and the description
+  does not start with `[report]`, print "The coordinator starts no build agents: put the work on the board
+  (ops/prompts/coordinator.md)." to stderr and exit 2. The one report agent of a due report stays allowed.
+- **Test.** tests/guard_test.sh gains three cases: COORD_SESSION=1 refuses "[build] x" (exit 2) and allows
+  "[report] evening"; unset, "[build] x" is allowed as today.
+- **Old path.** Unset COORD_SESSION, or COORD=0, and nothing changes.
 {% endraw %}
 
 </div>

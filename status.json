@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-21T22:50:03.542363+00:00",
+ "at": "2026-11-21T22:59:52.822861+00:00",
  "session": {
   "active": false,
   "kind": "",
@@ -25,6 +25,62 @@
   ],
   "done": [
    {
+    "t": "T-5443",
+    "name": "Check finished work before it ships",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1795301951
+   },
+   {
+    "t": "T-5000",
+    "name": "Draw transit count-downs the way the iPhone draws them",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1795301762
+   },
+   {
+    "t": "T-5043",
+    "name": "Document Developer mode on the Purchases page",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1795301762
+   },
+   {
+    "t": "T-5084",
+    "name": "Rule on the open points in the online packages design",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1795301751
+   },
+   {
+    "t": "T-4841",
+    "name": "Decide whether the widget probe asks for HealthKit",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1795301741
+   },
+   {
+    "t": "T-4916",
+    "name": "Check the new landing road before it ships",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1795301730
+   },
+   {
+    "t": "T-5449",
+    "name": "Write the coordinator session's prompt",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1795301720
+   },
+   {
     "t": "T-4190",
     "name": "Settings and Pro: buy, restore, themes",
     "acct": "Personal a",
@@ -48,65 +104,9 @@
     "end": "failed",
     "end_at": 1795299262,
     "why": "tests failed"
-   },
-   {
-    "t": "T-5397",
-    "name": "Build the one coordinator for both roads by Sunday",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1795298765
-   },
-   {
-    "t": "T-0044",
-    "name": "Test running marketplace Python inside a web view",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1795298750
-   },
-   {
-    "t": "T-5265",
-    "name": "Trim step 12, measure app work reaching main",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1795298661
-   },
-   {
-    "t": "T-4899",
-    "name": "Fix a MacBook test job that failed",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1795298428
-   },
-   {
-    "t": "T-5439",
-    "name": "Find how a ratings graph site gets IMDb data",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1795296517
-   },
-   {
-    "t": "T-5381",
-    "name": "Check finished work before it ships",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1795296504
-   },
-   {
-    "t": "T-4795",
-    "name": "Weigh the showcase set against the Builder-first ruling",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1795296493
    }
   ],
-  "landed": 74,
+  "landed": 81,
   "failed": 23
  },
  "workers": [],
@@ -148,7 +148,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 664,
+  "runnable_count": 660,
   "blocked_count": 2
  },
  "meter": {
@@ -156,28 +156,28 @@
    "pct": 0.0,
    "resets_at": null,
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-21T17:35:25.022532-05:00",
+   "read_at": "2026-11-21T17:52:03.370440-05:00",
    "source": "usage",
    "left": 100.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 100.0,
-   "resets_at": "2026-11-22T07:00:00.350617+00:00",
+   "resets_at": "2026-11-22T07:00:00.317036+00:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-21T17:35:25.022532-05:00",
+   "read_at": "2026-11-21T17:52:03.370440-05:00",
    "source": "usage",
    "left": 0.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 36.0,
-   "resets_at": "2026-11-22T07:00:00.350783+00:00",
+   "resets_at": "2026-11-22T07:00:00.317205+00:00",
    "used_words": "of the Fable weekly allowance used",
-   "read_at": "2026-11-21T17:35:25.022532-05:00",
+   "read_at": "2026-11-21T17:52:03.370440-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-21T17:35:25.022532-05:00"
+  "read_at": "2026-11-21T17:52:03.370440-05:00"
  },
  "ui": {
   "week_pct": 0.123,
@@ -192,37 +192,36 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-21T17:58:28-05:00",
+ "next_tick": "2026-11-21T18:07:03-05:00",
  "personal": {
-  "week_pct": 104.7,
-  "usage_pct": 51.1,
-  "work_pct": 83.2,
-  "read_at": "2026-11-21T22:52:00+00:00",
+  "week_pct": 104.86,
+  "usage_pct": 51.2,
+  "work_pct": 83.5,
+  "read_at": "2026-11-21T23:01:00+00:00",
   "running": [
    {
-    "lane": "a3",
-    "task": "T-4841",
-    "w": "Ines",
-    "k": "plan",
-    "t": "Decide whether the widget probe asks for HealthKit",
+    "lane": "a",
+    "task": "T-5405",
+    "w": "Pernille",
+    "k": "review",
+    "t": "Check finished work before it ships",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-21T17:44:38-05:00",
+    "at": "2026-11-21T17:55:14-05:00",
     "n": "Evan",
     "d": 1,
     "src": "plan-a"
    },
    {
-    "lane": "a3",
-    "task": "T-4916",
-    "w": "Pernille",
+    "lane": "a",
+    "task": "T-5406",
+    "w": "Odalys",
     "k": "review",
-    "t": "Check the new landing road before it ships",
+    "t": "Check finished work before it ships",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-21T17:44:38-05:00",
+    "at": "2026-11-21T17:55:14-05:00",
     "n": "Evan",
-    "d": 1,
     "src": "plan-a"
    },
    {
@@ -247,6 +246,52 @@
     "e": "high",
     "at": "2026-11-21T17:42:54-05:00",
     "n": "Jeremy",
+    "src": "plan-b"
+   },
+   {
+    "lane": "b2",
+    "task": "T-5411",
+    "w": "Pernille",
+    "k": "review",
+    "t": "Check finished work before it ships",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-21T17:56:45-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
+   },
+   {
+    "lane": "b2",
+    "task": "T-5440",
+    "w": "Odalys",
+    "k": "review",
+    "t": "Check finished work before it ships",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-21T17:56:45-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
+   },
+   {
+    "lane": "b3",
+    "task": "T-5443",
+    "t": "Check finished work before it ships",
+    "at": "2026-11-21T17:56:46-05:00",
+    "n": "Jeremy",
+    "d": 1,
+    "src": "plan-b"
+   },
+   {
+    "lane": "b3",
+    "task": "T-5444",
+    "w": "Pernille",
+    "k": "review",
+    "t": "Check finished work before it ships",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-21T17:56:46-05:00",
+    "n": "Jeremy",
+    "d": 1,
     "src": "plan-b"
    }
   ]
@@ -278,14 +323,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-21T17:50:00-05:00",
+   "at": "2026-11-21T17:59:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-21T17:52:00-05:00",
+  "at": "2026-11-21T18:01:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -422,23 +467,23 @@
   ],
   "done": [
    {
-    "w": "Odalys",
-    "t": "The package test box now refuses system services by default and the tests catch most removals,...",
-    "at": "2026-11-21T17:27:00-05:00"
+    "w": "Pernille",
+    "t": "An independent read of the Builder land notes found they add no app code and say only true...",
+    "at": "2026-11-21T17:59:00-05:00"
    },
    {
-    "w": "Operator",
-    "t": "Mac mini load per core stayed within its limit of 10 per core for a full day, so the bottleneck...",
-    "at": "2026-11-21T17:12:00-05:00"
+    "w": "Idris",
+    "t": "The Purchases page now explains Developer mode as one group of its five rows, with a diagram...",
+    "at": "2026-11-21T17:56:00-05:00"
    },
    {
-    "w": "Operator",
-    "t": "A later MacBook job for the same work (J-20261121-1653-host-b44-547672) passed, so the failed...",
-    "at": "2026-11-21T17:04:00-05:00"
+    "w": "Maren",
+    "t": "The Day phases transit frames now show train times as clock times with no count-down, since the...",
+    "at": "2026-11-21T17:56:00-05:00"
    }
   ],
   "count": {
-   "next": 664,
+   "next": 660,
    "wait": 2,
    "blocked": 0,
    "you": 2
@@ -483,32 +528,13 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-21T22:50:03Z",
+  "at": "2026-11-21T22:59:52Z",
   "s": {
-   "T-5234": [
-    "mergeq",
-    "1st to merge",
-    1795301343542
-   ],
-   "T-4182": [
-    "mergeq",
-    "2nd to merge",
-    1795301403542
-   ],
-   "T-4916": [
-    "mergeq",
-    "3rd to merge",
-    1795301283542
-   ],
-   "T-4841": [
-    "mergeq",
-    "4th to merge",
-    1795301223542
-   ],
-   "T-5084": [
-    "mergeq",
-    "5th to merge",
-    1795301343542
+   "T-5443": [
+    "merged",
+    "on main 5:59 PM ET",
+    1795301941000,
+    ""
    ],
    "T-4807": [
     "merged",
@@ -518,47 +544,49 @@
    ]
   },
   "nm": {
-   "T-5234": "Move merge tests to the MacBook under heavy load",
-   "T-4182": "A failing widget says so and can recover",
-   "T-4916": "Check the new landing road before it ships",
-   "T-4841": "Decide whether the widget probe asks for HealthKit",
-   "T-5084": "Rule on the open points in the online packages design",
+   "T-5443": "Check finished work before it ships",
    "T-4807": "Fix every bad test that failed a merge"
   },
   "wk": {
-   "T-5234": "Odalys",
-   "T-4182": "Idris",
-   "T-4916": "Pernille",
-   "T-4841": "Ines",
-   "T-5084": "Ines",
+   "T-5443": "Pernille",
    "T-4807": "Pernille"
   }
  },
  "ln": {
-  "at": "2026-11-21T22:50:03Z",
+  "at": "2026-11-21T22:59:52Z",
   "mq": {
    "n": {
     "checking": 0,
-    "inline": 5
+    "inline": 0,
+    "conflicted": 0,
+    "failed": 1,
+    "held": 0,
+    "retry": 0,
+    "parked": 3
    },
    "m": {
     "checking": null,
-    "inline": 1
+    "inline": null,
+    "conflicted": null,
+    "failed": 5,
+    "held": null,
+    "retry": null,
+    "parked": 2123
    },
    "cur": [],
    "ld": [
-    86,
-    "2026-11-21T22:45:16Z"
+    93,
+    "2026-11-21T22:59:11Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-21T22:50:05Z",
-    "ld": 1.49,
+    "at": "2026-11-21T22:59:28Z",
+    "ld": 1.56,
     "c": 8,
     "sb": 0,
     "dk": [
-     55.8,
+     55.7,
      228.3
     ],
     "ss": [
@@ -568,12 +596,12 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-21T22:30:02Z",
-    "ld": 5.19,
+    "at": "2026-11-21T22:52:46Z",
+    "ld": 0.28,
     "c": 12,
     "sb": 0,
     "dk": [
-     359.7,
+     360.2,
      926.4
     ],
     "sn": []
@@ -582,13 +610,13 @@
  },
  "hc": {
   "wait": {
-   "n": 6,
+   "n": 4,
    "limit": 20,
-   "in_line": 1,
-   "parked": 5,
+   "in_line": 0,
+   "parked": 4,
    "open": true,
    "mq": false,
-   "counted": "2026-11-21T22:47:16+00:00",
+   "counted": "2026-11-21T22:58:01+00:00",
    "by": {
     "app": {
      "n": 2,
@@ -596,7 +624,7 @@
      "open": true
     },
     "other": {
-     "n": 4,
+     "n": 2,
      "limit": 20,
      "open": true
     },
@@ -606,14 +634,23 @@
      "open": true
     }
    },
-   "at": "2026-11-21T22:50:03+00:00"
+   "at": "2026-11-21T22:59:52+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-21T22:50:03+00:00"
+   "at": "2026-11-21T22:59:52+00:00"
   }
  },
  "operators": [
+  {
+   "w": "Operator",
+   "a": "Evan's Account",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session \u2013 2 tasks",
+   "at": "2026-11-21T17:55:14-05:00"
+  },
   {
    "w": "Operator",
    "a": "Jeremy's Account",
@@ -630,19 +667,41 @@
    "m": "opus",
    "e": "high",
    "t": "Work session \u2013 2 tasks",
-   "at": "2026-11-21T17:48:46-05:00"
+   "at": "2026-11-21T17:56:44-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Jeremy's Account",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session",
+   "at": "2026-11-21T17:56:46-05:00"
   }
  ],
  "reply": {
   "sent": "2026-11-21T19:41:05Z",
   "seconds": 601.0
  },
- "inbox": [],
+ "inbox": [
+  {
+   "id": "c7070566958",
+   "state": "received",
+   "position": 1,
+   "eta": "2026-11-21T18:07:03-05:00",
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "Progress update on the..."
+  }
+ ],
  "trimmed": [
   "lane_next",
   "queue_text",
   "recent",
   "task_done",
+  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -651,12 +710,12 @@
  ],
  "agents_now": {
   "main": 0,
-  "lanes": 2,
-  "total": 2,
-  "at": "5:52 PM",
+  "lanes": 4,
+  "total": 4,
+  "at": "6:01 PM",
   "why": "",
-  "at_iso": "2026-11-21T22:52:00+00:00",
+  "at_iso": "2026-11-21T23:01:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 5:52 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 6:01 PM ET</p></section>"
  }
 }

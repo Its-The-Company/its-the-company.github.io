@@ -125,6 +125,32 @@ main, then step 4 measures.
    dispatch.log idle hours, land_stats and tasks finished per day, n beside each. Keep it if machinery, wind-down and
    cold-start seat-h fall by half and the land rate does not drop; otherwise switch back and write what failed.
 
+### Step 3 in slices (T-5397, Odalys, 11-21 1 PM ET)
+
+Seven board lines, each about 45 minutes, each "part of T-5397" (the trim freeze's allow list), each with a reviewer
+who did not write it. The switch is `COORD` (environment, else `ops/coord.json` "coord"; off unless the number 1).
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 3: Step 3 in slices (T-5397, Odalys, 11-21 1 PM ET), scrolls sideways" data-n="1" style="--tw:764px" markdown="1">
+
+| # | Line | What | Guard |
+| --- | --- | --- | --- |
+| 1 | T-5447 | dispatch.py: the switch, `coord`, `worker --task` (a one-task worker's plan; starts nothing). Off. | none; committed a3f8fac2d5 |
+| 2 | T-5448 | dispatch.py: with COORD=1 a free slot gets one task, no chain; `kick` on a worker's exit | none |
+| 3 | T-5449 | ops/prompts/coordinator.md: the kept-running session that starts no build agents | none (a hook would be rules/, a proposal) |
+| 4 | T-5450 | supervisor.sh: start and keep the coordinator; no chain, no hours limit | refused before (11-09, 11-14) |
+| 5 | T-5451 | personal_tick.sh: each slot one task, no chain, hands to the road merge_road.json names | refused before (11-07, 11-21) |
+| 6 | T-5452 | the main plan's work as plain workers in their own copies | its starter is supervisor.sh or an Investor-loaded job |
+| 7 | T-5453 | switch on after a drain and seen working, or COORD stays 0 for the four days and #325 is told | none |
+
+</div>
+
+
+Slices 4 to 6 change the two files that start sessions. Edits to both have been refused by a guard or the auto-mode
+classifier before; each worker tries once in its own copy, and a refusal stops the slice (Commandment 14): the change
+then goes as a patch through the applier's proposal path or to the Investors. Without slices 4 and 5 the switch has
+nothing to turn on, so "on by Saturday 11-21 evening" depends on those two passing the guard today.
+
 ## What it should save
 
 Since 11-04, at the governor's targets: 21.7 (step 1) + 163.3 (step 2; 118.0 without the 11-05 held lock, already fixed) +
@@ -163,7 +189,7 @@ process). The supervisor's fixed tick goes from 15 to 5 minutes as the safety ne
 Three stay in the supervisor's between-session steps, each for a reason:
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 3: What stays between sessions (T-4958, 2026-11-18), scrolls sideways" style="--tw:640px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 4: What stays between sessions (T-4958, 2026-11-18), scrolls sideways" style="--tw:640px" markdown="1">
 
 | Job | Why it stays between sessions |
 | --- | --- |

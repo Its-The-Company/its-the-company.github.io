@@ -257,18 +257,21 @@ when step 6 is confirmed and is compared with the same number of days of "before
 are whole days to compare; the full 7 days are reported when they exist.
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 4: How app work reaching main is measured, scrolls sideways" style="--tw:916px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 4: How app work reaching main is measured, scrolls sideways" style="--tw:1236px" markdown="1">
 
-| Measure | Command (on main) | Before |
-|---|---|---|
-| App code commits on main | `git log main --since D1 --until D2 --oneline -- pywidget/ios pywidget/widgets pywidget/python pywidget/tests pywidget/runtime pywidget/packages \| wc -l` | 152 (a day: 15, 4, 24, 23, 37, 40, 9) |
-| App lines done (`[build]`, `[fix]`) | done-notes in `log/board-archive.md` by date | 83 (14, 8, 16, 5, 14, 19, 7) |
-| Wait from branch ready to main | `merge.sh` rows | not on record for the old road; partial in `ops/runs/land_steps.jsonl` |
-| Main's app tests green after a merge | `merge.sh` rows | not on record |
-| Live process size | `ls tools \| wc -l`; lines in `tools/` (retired files counted apart) | 525 entries, about 200,000 lines |
+| Measure | Command (on main) | Before | After |
+|---|---|---|---|
+| App code commits on main | `git log main --since D1 --until D2 --oneline -- pywidget/ios pywidget/widgets pywidget/python pywidget/tests pywidget/runtime pywidget/packages \| wc -l` | 152 (a day: 15, 4, 24, 23, 37, 40, 9) | to come (see "Step 12, where it stands") |
+| App lines done (`[build]`, `[fix]`) | done-notes in `log/board-archive*.md` and `ops/board.md` on main, one per ID, by the line's last "DONE" stamp | 83 (14, 8, 16, 5, 14, 19, 7) | to come |
+| Wait from branch ready to main | from git, the same on both roads: a lane-landed app commit's first time in main's reflog (main folder) minus its author time | 66 lane-landed app commits, median 2.4 h, 5 over 6 h (a day: 0, 0, 3, 21, 18, 19, 5; medians 0.8, 1.6, 2.5, 3.5, 4.5 h); 94 more written on main itself | to come |
+| Main's app tests green after a merge | `merge.sh` rows | not on record | to come; not on record on the old road either (see below) |
+| Live process size | `git ls-tree --name-only main tools/ \| wc -l`; lines in main's `tools/` (`retired/tools/` counted apart) | 521 entries, 199,969 lines (base `7547fddf4f`, 11-20 1:24 AM; `ls` also counts `__pycache__`, so step 1 read 522) | 427 entries, 189,526 lines on main `4198b9d462` (11-21 3:46 PM); `retired/tools/` 99 entries, 13,205 lines. A reading at one time, not a window |
 
 </div>
 
+
+All but the last row come from one script, `python3 ops/plans/T-5265-measure.py D1 D2` (reads git only), so
+before and after are the same command. Run over 11-13 to 11-20 it gives 152 and 83 again (11-21, about 4:00 PM).
 
 Target, an estimate to be checked: app code commits at or above the before week's median day (23) on most days,
 no red merge left on main, and the live `tools/` at about half its size. The same figures show on Home (Flow and
@@ -276,7 +279,7 @@ Bottlenecks) while the trim runs.
 
 ## What needs the Investors' word
 
-- **Standing rulings the freeze touches** (step 1): an Investor 11-17 9:20 PM (a bottleneck automatically opens a
+- **Standing rulings the freeze touches** (step 1): an Investor 11-17 9:20 PM ET (a bottleneck automatically opens a
   big-picture fix task), 11-18 8:22 PM (tool-opened lines grouped), and the 11-08 12:23 AM and 12:28 AM rulings on process
   tasks first. The freeze pauses the first and leaves the others idle. Sending the prompt below counts as that word
   only if the Investors say so; otherwise the session asks first.
@@ -289,6 +292,19 @@ Bottlenecks) while the trim runs.
     names (`ssd_guard.py`, `main_folder_guard.py`) stay.
 - **The applier's own check** runs the whole `tests/run.sh --fast` (up to three hours, T-5234). In the Investors'
   own session they can make these changes directly with their word.
+- **Step 12's two questions (T-5265; Ines, 11-21 4:03 PM ET).** Asked now so they are in front of you; please
+  answer once the comparison's figures are in the table (Thu 11-26 morning, or Fri 11-27 if the start moves). Reply
+  on #325 with the letters.
+  1. *How many sessions.* **A (recommended, for now):** keep your 11-20 1:51 AM rule: sessions start, are added and
+     are dropped by the signals above (ready app work, usage left, an Xcode machine idle, time spent waiting), with
+     the one coordinator (T-5397) starting them. The comparison's waits tell whether that rule left Xcode idle or
+     jammed. **B:** a fixed number per account, which you name. My recommendation is a guess until the figures are
+     in; if the new road's days show sessions waiting on Xcode more than working, I will say so and suggest B.
+  2. *Deleting anything in `retired/`.* Today it holds 99 tools (13,205 lines) and 39 test files (on main `4198b9d462`).
+     **A (recommended):** delete nothing. Nothing calls them, they cost no run time, and they are the restore road.
+     **B:** after the comparison, remove from the tree any file in `retired/` that nobody has restored in 30 days,
+     in one commit (git history still keeps it). **C:** remove them now. Until you answer, nothing is deleted (the
+     keep-everything rule).
 
 Nothing on this page weakens sections 6, 7 or 11, the bans or the gates. The guards stay as they are, nothing is
 deleted, and the merge script adds a review check and retires no test of a guard.
@@ -394,6 +410,35 @@ trim session, on the Investors' word, #325 c7032785128). Retired nothing.
 - *Pace.* A fast run takes about two hours, so from here the next step starts while the last step's run finishes;
   a red it finds that was green before the step is fixed, or the step restored, before that step is ticked.
 - *Restore.* `tools/retire.sh --restore <path>` for any row of `tools/retire.sh --list`.
+
+
+**Step 12, where it stands** (Ines, 11-21 4:03 PM ET, T-5265; not finished, the line stays open).
+- *The window.* The "7 days after step 6" never opens under the plan in force: step 6 is held (11-20 9:10 AM
+  ruling), and step 12 became the comparison of the two merge roads. So the "after" column is those four days: old
+  road Sun 11-22, new Mon 11-23, old Tue 11-24, new Wed 11-25, each 2:00 AM to 2:00 AM ET. Each day is run with
+  `python3 ops/plans/T-5265-measure.py "D 02:00" "D+1 02:00"` and its road named; the column is written on Thu 11-26
+  after 2:00 AM.
+- *Why it is empty today.* None of the four days has begun, and no app work runs now (an Investor 2:23 PM 11-21:
+  "Stop the app work until the comparison work is done"). The figures from 11-20 and 11-21 so far (6 and 3 app code
+  commits) are not either road's app-only days, so they are not written as "after". Only the live process size is
+  filled: it is a reading at one time, not a window.
+- *The start may move by a day.* The Operator promised on #325 (c7048486517) that if the merge-road switch
+  (T-5256) and the MacBook routing (T-5263) are not ready by tonight, the company says so on #325 and proposes
+  starting a day later; T-5431 says which tonight. At 4:03 PM, from the records on main: the routing is on main and
+  one real pre-merge run went to the MacBook at 1:13 PM (T-5247's done-note); the switch is on main and set "old",
+  fault 2's home was confirmed at 1:18 PM, and the fix for Pernille's three notes (`8582871633`, lane a3) is not on
+  main yet; the one coordinator (T-5397), which is on for the comparison, is not finished. If the start moves: old
+  Mon 11-23, new Tue, old Wed, new Thu 11-26, figures on Fri 11-27 after 2:00 AM. Only D1 and D2 move; the command
+  does not.
+- *Two gaps found while fixing the command.* (1) Neither road writes the time a branch became ready:
+  `ops/runs/land_steps.jsonl` has a land's start and its "landed" row, and `merge.jsonl`'s `wait_s` is the lock wait
+  only. So the wait is counted from each commit's author time to its first time in main's reflog, the same way on
+  both roads; it includes a worker's time between its last commit and the ready marker, on both roads alike, and a
+  branch's earlier commits count longer than its last. (2) I found no record of main's app tests on the commit a
+  landing leaves on main that both roads write the same way (`merge.sh` runs its checks before the fast-forward).
+  Asked on T-5431 whether one can be read or recorded before 2:00 AM without load on the Mac mini; if not, that
+  row is reported as not measured.
+- *What waits on the Investors.* The two questions in "What needs the Investors' word" (sessions; `retired/`).
 {% endraw %}
 
 </div>

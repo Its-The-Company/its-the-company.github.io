@@ -35,8 +35,6 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 
 
-- T-4842 ticked 11-20 (0e72abbb2e). Date report is Ines's T-5341 (none sent by 11-20). Lesson: board_tick add needs a typed Done-when, Targets and --by, and no Until on app lines.
-
 - T-4871 11-19: two-way editing 5.0 wk in all, 2.0 on the slot (1.25-3.25), 3.0 Python beside; release Thu 2027-07-15 (#325 c7002531691). Open: T-4770 script still says 3.5 (Ines's); state.md target line. Lesson: split each part slot vs beside; more work can still move the date earlier.
 
 - T-4888 11-19 f3e5e85f55 landed+ticked (wrapped tap, both axes; 4/4 mutants). Follow-up T-5093 (UI case at an accessibility size). Lesson: in a unit-test window Runestone never measures a wrapped line by scrolling; call scrollRangeToVisible first. A gate >10 min: run it with run_in_background, or the tool limit <span title="A test written in advance. If it fires, we drop the idea.">kills</span> it.
@@ -55,6 +53,8 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-5432 11-21: Foundations 6.0 (3.8-9.7), Pages 4.25 (2.6-7.75) on the slot; release Sat 2027-07-17 (T-4266 range 04-07 to 12-11; T-4770 line Sun 07-18). Lesson: ls Core/Sources shows symlinks; grep with --include needs quotes in zsh; ops/state.md is 14 KB, over its 8 KB aim.
 
 - T-4182 11-21 (a2): T-0048 slice = T-5272 (ConsoleModel.openAt, 3/5 red on mutant) + T-4801 (export names the widget's own project). Left: T-5438 (s3 rows, update steps, Home Screen capture); T-4800, T-4802, T-5273 open. Lesson: board add wants a 3-10 word title, a docs page in Done when, --by.
+
+- T-0044 11-21: spike ran 12/12 on iOS 27.0 Sim (a52aa73d1a); Pyodide via npm registry (sha512 pin). Open: T-5462 device run (background, jetsam). Lesson: first WebKit call off main thread kills the runner; Pyodide stalls silently without wasm-unsafe-eval.
 
 ## Lessons
 - Older lessons and dated logs: archive.md.

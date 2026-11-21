@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-21T17:13:29.651877+00:00",
+ "at": "2026-11-21T17:18:20.697265+00:00",
  "session": {
   "active": false,
   "kind": "",
@@ -151,22 +151,6 @@
     ]
    },
    {
-    "t": "T-2097",
-    "name": "Read free memory in the widget extension on a device",
-    "w": "Idris",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "claimed",
-      "at": 1795280971
-     },
-     {
-      "s": "worker",
-      "at": 1795280971
-     }
-    ]
-   },
-   {
     "t": "T-4772",
     "name": "Prove a refresh tap redraws the widget",
     "w": "Idris",
@@ -179,22 +163,6 @@
      {
       "s": "worker",
       "at": 1795280956
-     }
-    ]
-   },
-   {
-    "t": "T-0337",
-    "name": "Confirm the revenue memo's facts from Apple pages",
-    "w": "Wrenna",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "claimed",
-      "at": 1795280926
-     },
-     {
-      "s": "worker",
-      "at": 1795280926
      }
     ]
    },
@@ -297,6 +265,24 @@
   ],
   "done": [
    {
+    "t": "T-2097",
+    "name": "Read free memory in the widget extension on a device",
+    "w": "Idris",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1795281495
+   },
+   {
+    "t": "T-0337",
+    "name": "Confirm the revenue memo's facts from Apple pages",
+    "w": "Wrenna",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1795281372
+   },
+   {
     "t": "T-4181",
     "name": "Widgets refresh on their own and by a tap",
     "acct": "Personal a",
@@ -350,7 +336,7 @@
     "end_at": 1795278643
    }
   ],
-  "landed": 15,
+  "landed": 17,
   "failed": 11
  },
  "workers": [],
@@ -436,25 +422,13 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-21T12:21:44-05:00",
+ "next_tick": "2026-11-21T12:29:16-05:00",
  "personal": {
-  "week_pct": 99.81,
+  "week_pct": 99.96,
   "usage_pct": 50.0,
-  "work_pct": 81.4,
-  "read_at": "2026-11-21T17:14:00+00:00",
+  "work_pct": 81.5,
+  "read_at": "2026-11-21T17:22:00+00:00",
   "running": [
-   {
-    "lane": "a2",
-    "task": "T-4182",
-    "w": "Idris",
-    "k": "build",
-    "t": "A failing widget says so and can recover",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-21T11:33:35-05:00",
-    "n": "Evan",
-    "src": "plan-a"
-   },
    {
     "lane": "a3",
     "task": "T-4188",
@@ -487,7 +461,7 @@
   }
  ],
  "disk": {
-  "free_gb": 57,
+  "free_gb": 61,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -496,14 +470,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-21T12:12:00-05:00",
+   "at": "2026-11-21T12:21:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-21T12:14:00-05:00",
+  "at": "2026-11-21T12:22:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -701,11 +675,23 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-21T17:13:29Z",
-  "s": {}
+  "at": "2026-11-21T17:18:20Z",
+  "s": {
+   "T-4188": [
+    "testing",
+    "Mac Mini \u00b7 test",
+    null
+   ]
+  },
+  "nm": {
+   "T-4188": "Location, steps and notifications work in scripts and..."
+  },
+  "wk": {
+   "T-4188": "Idris"
+  }
  },
  "ln": {
-  "at": "2026-11-21T17:13:29Z",
+  "at": "2026-11-21T17:18:20Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -719,33 +705,35 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 2934,
-    "failed": 45,
+    "conflicted": 2938,
+    "failed": 50,
     "held": null,
     "retry": null,
-    "parked": 1776
+    "parked": 1781
    },
    "cur": [],
    "ld": [
-    19,
-    "2026-11-21T17:02:54Z"
+    21,
+    "2026-11-21T17:18:15Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-21T17:12:51Z",
-    "ld": 1.82,
+    "at": "2026-11-21T17:18:21Z",
+    "ld": 5.96,
     "c": 8,
-    "sb": 0,
+    "sb": 1,
     "dk": [
-     57.4,
+     57.2,
      228.3
     ],
     "ss": [
      171.9,
      953.7
     ],
-    "sn": []
+    "sn": [
+     "iPhone 17e"
+    ]
    }
   }
  },
@@ -775,11 +763,11 @@
      "open": true
     }
    },
-   "at": "2026-11-21T17:13:29+00:00"
+   "at": "2026-11-21T17:18:20+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-21T17:13:29+00:00"
+   "at": "2026-11-21T17:18:20+00:00"
   }
  },
  "operators": [
@@ -791,6 +779,15 @@
    "e": "high",
    "t": "Work session \u2013 5 tasks",
    "at": "2026-11-21T12:08:04-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Evan's Account",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session \u2013 1 task",
+   "at": "2026-11-21T12:14:18-05:00"
   }
  ],
  "reply": {
@@ -811,12 +808,12 @@
  ],
  "agents_now": {
   "main": 0,
-  "lanes": 2,
-  "total": 2,
-  "at": "12:14 PM",
+  "lanes": 1,
+  "total": 1,
+  "at": "12:22 PM",
   "why": "",
-  "at_iso": "2026-11-21T17:14:00+00:00",
+  "at_iso": "2026-11-21T17:22:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 12:14 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 12:22 PM ET</p></section>"
  }
 }

@@ -126,6 +126,27 @@ research/inbound/):
   slow tick read the lock) and is now a process that lives until the row <span title="A test written in advance. If it fires, we drop the idea.">kills</span> it; launchd's stop polled 6 s for the
   session's keeper and now polls with a 120 s ceiling, with its own row if the keeper never came. Left: the limit-cut
   row's 3 s session in personal_pool_test.sh (rule 1), board_line and waits_on per line, supervisor_test groups.
+- Rule 1 and rule 2, slice 6 (11-20): three rows a clock or the caller's environment decided.
+  personal_pool_test.sh's limit-cut row (T-1192 cut) gave the session 3 s and a 1 s grace, and its last start was the
+  limit itself, so at load the stand-in's commit, its take or its half-work came after the TERM and the row went red
+  with the code right. Now the stand-in traps the limit's TERM on its first line and takes it only once its work is
+  made (bash runs a trap after its foreground command ends), the grace is a 300 s ceiling and the last start is past
+  the limit. Red first: with a 4 s pause put in the stand-in before its work, the old row failed 2 of 3 ("T-0001 left no
+  commit"); the new row passed with a 4 s and a 20 s pause. supervisor_test.sh's close_by row (T-4787 rows 90 and 111,
+  red in two tasks): the stand-in slept 8 s, so a keeper pass slower than that let the session end on its own before
+  session_end.py's check sent SIGTERM, and the name probe read ps 1 s after its start. Now the session waits up to
+  120 s for the SIGTERM (a ceiling, as the PAUSE row's) and the probe is read once its script has run. Red first: with
+  a 10 s heartbeat in each keeper pass, the old row failed and the new one passed in the same run. The time limit row
+  above it counted starts (= 1) to say "not retried", which the 3 s limit could reach before the stand-in counted; it
+  now reads no retry line and at most one start. Rule 2, found on the way: tools/test_personal_pool.sh unsets the
+  caller's ANTHROPIC_* (run from a lane on account b, whose session carries ANTHROPIC_DEFAULT_FABLE_MODEL, three
+  T-4125/T-4161 rows in personal_pool_requeue_test.sh were red). supervisor_test.sh is not split: its base is its own
+  (2x its passing median, 1364 s, T-4701), and its groups already run at once; split into suites they would run one
+  after another in run.sh's shell lane, longer in all. Measured 11-20 at load 40-140: 249/0 in 1523 s, groups 242
+  (lanestop) to 1346 s (chain), over its base and passed inside the load stretch; the cure is less work per group (each
+  group's ticks start the real supervisor), not a split. The pool parts after the change: 61/0 258 s, 80/0 402 s, 57/0
+  334 s at load 27-140. Left: board_line and waits_on per line in the tick; ProStoreTests
+  ask-to-buy under five Simulators.
 {% endraw %}
 
 </div>

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-21T21:53:02.425057+00:00",
+ "at": "2026-11-21T22:02:30.895595+00:00",
  "session": {
   "active": false,
   "kind": "",
@@ -46,6 +46,14 @@
    }
   ],
   "done": [
+   {
+    "t": "T-4899",
+    "name": "Fix a MacBook test job that failed",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1795298428
+   },
    {
     "t": "T-5439",
     "name": "Find how a ratings graph site gets IMDb data",
@@ -122,18 +130,9 @@
     "end": "failed",
     "end_at": 1795294681,
     "why": "tests failed"
-   },
-   {
-    "t": "T-5448",
-    "name": "Give each worker one task and wake on exit",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "failed",
-    "end_at": 1795294681,
-    "why": "tests failed"
    }
   ],
-  "landed": 68,
+  "landed": 69,
   "failed": 23
  },
  "workers": [],
@@ -183,28 +182,28 @@
    "pct": 0.0,
    "resets_at": null,
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-21T16:44:50.003472-05:00",
+   "read_at": "2026-11-21T17:02:06.464086-05:00",
    "source": "usage",
    "left": 100.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 100.0,
-   "resets_at": "2026-11-22T07:00:00.208271+00:00",
+   "resets_at": "2026-11-22T06:59:59.688692+00:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-21T16:44:50.003472-05:00",
+   "read_at": "2026-11-21T17:02:06.464086-05:00",
    "source": "usage",
    "left": 0.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 36.0,
-   "resets_at": "2026-11-22T07:00:00.208441+00:00",
+   "resets_at": "2026-11-22T06:59:59.688868+00:00",
    "used_words": "of the Fable weekly allowance used",
-   "read_at": "2026-11-21T16:44:50.003472-05:00",
+   "read_at": "2026-11-21T17:02:06.464086-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-21T16:44:50.003472-05:00"
+  "read_at": "2026-11-21T17:02:06.464086-05:00"
  },
  "ui": {
   "week_pct": 0.123,
@@ -219,26 +218,13 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-21T16:59:50-05:00",
+ "next_tick": "2026-11-21T17:17:06-05:00",
  "personal": {
-  "week_pct": 104.06,
-  "usage_pct": 51.0,
-  "work_pct": 82.9,
-  "read_at": "2026-11-21T21:53:00+00:00",
-  "running": [
-   {
-    "lane": "a2",
-    "task": "T-4190",
-    "w": "Idris",
-    "k": "build",
-    "t": "Settings and Pro: buy, restore, themes",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-21T16:20:37-05:00",
-    "n": "Evan",
-    "src": "plan-a"
-   }
-  ]
+  "week_pct": 104.57,
+  "usage_pct": 51.1,
+  "work_pct": 83.0,
+  "read_at": "2026-11-21T22:02:00+00:00",
+  "running": []
  },
  "api_credits": [
   {
@@ -258,7 +244,7 @@
   }
  ],
  "disk": {
-  "free_gb": 55,
+  "free_gb": 56,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -267,14 +253,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-21T16:52:00-05:00",
+   "at": "2026-11-21T17:00:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-21T16:53:00-05:00",
+  "at": "2026-11-21T17:02:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -472,85 +458,115 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-21T21:53:02Z",
+  "at": "2026-11-21T22:02:30Z",
   "s": {
+   "T-5265": [
+    "merging",
+    "Rebasing onto current main",
+    1795298490895
+   ],
+   "T-4899": [
+    "merging",
+    "Rebasing onto current main",
+    1795298490895
+   ],
+   "T-5397": [
+    "mergeq",
+    "1st to merge",
+    1795298130895
+   ],
    "T-4793": [
     "mergetest",
-    "Xcode checks on the MacBook",
-    1795297982425
+    "Xcode checks on the MacBook, 3rd to merge",
+    1795298010895
    ],
    "T-4795": [
     "mergetest",
-    "Xcode checks on the MacBook",
-    1795297982425
+    "Xcode checks on the MacBook, 3rd to merge",
+    1795298010895
    ],
-   "T-4899": [
+   "T-4190": [
     "mergeq",
-    "1st to merge",
-    1795296602425
-   ],
-   "T-5265": [
-    "mergeq",
-    "2nd to merge",
-    1795296602425
+    "6th to merge",
+    1795298190895
    ],
    "T-0802": [
     "mergeq",
-    "6th to merge",
-    1795295702425
+    "7th to merge",
+    1795295670895
    ],
    "T-0044": [
     "mergeq",
-    "6th to merge",
-    1795295702425
+    "7th to merge",
+    1795295670895
    ]
   },
   "nm": {
+   "T-5265": "Trim step 12, measure app work reaching main",
+   "T-4899": "Fix a MacBook test job that failed",
+   "T-5397": "Build the one coordinator for both roads by Sunday",
    "T-4793": "Say how Day phases gets fresh train times",
    "T-4795": "Weigh the showcase set against the Builder-first ruling",
-   "T-4899": "Fix a MacBook test job that failed",
-   "T-5265": "Trim step 12, measure app work reaching main",
+   "T-4190": "Settings and Pro: buy, restore, themes",
    "T-0802": "Review the package sandbox Mach change independently",
    "T-0044": "Test running marketplace Python inside a web view"
   },
   "wk": {
+   "T-5265": "Ines",
+   "T-4899": "Idris",
+   "T-5397": "Odalys",
    "T-4793": "Ines",
    "T-4795": "Ines",
-   "T-4899": "Idris",
-   "T-5265": "Ines",
+   "T-4190": "Idris",
    "T-0802": "Odalys",
    "T-0044": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-21T21:53:02Z",
+  "at": "2026-11-21T22:02:30Z",
   "mq": {
    "n": {
-    "checking": 2,
+    "checking": 4,
     "inline": 4,
     "conflicted": 0,
     "failed": 0,
     "held": 0,
-    "retry": 3,
+    "retry": 2,
     "parked": 3
    },
    "m": {
-    "checking": 0,
-    "inline": 30,
+    "checking": 5,
+    "inline": 27,
     "conflicted": null,
     "failed": null,
     "held": null,
-    "retry": 73,
-    "parked": 2056
+    "retry": 52,
+    "parked": 2065
    },
    "cur": [
+    [
+     [
+      "T-5265"
+     ],
+     "lining up with main",
+     "Mac mini",
+     1
+    ],
+    [
+     [
+      "T-4899"
+     ],
+     "lining up with main",
+     "Mac mini",
+     1
+    ],
     [
      [
       "T-4793"
      ],
      "iPhone app tests",
      "MacBook",
-     0
+     9
     ],
     [
      [
@@ -558,18 +574,18 @@
      ],
      "iPhone app tests",
      "MacBook",
-     0
+     9
     ]
    ],
    "ld": [
-    77,
-    "2026-11-21T21:28:37Z"
+    78,
+    "2026-11-21T22:00:28Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-21T21:53:03Z",
-    "ld": 1.26,
+    "at": "2026-11-21T22:02:31Z",
+    "ld": 1.98,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -583,12 +599,12 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-21T21:49:04Z",
-    "ld": 0.94,
+    "at": "2026-11-21T21:59:05Z",
+    "ld": 1.09,
     "c": 12,
     "sb": 0,
     "dk": [
-     360.1,
+     360.3,
      926.4
     ],
     "sn": []
@@ -597,21 +613,21 @@
  },
  "hc": {
   "wait": {
-   "n": 12,
+   "n": 13,
    "limit": 20,
-   "in_line": 6,
-   "parked": 6,
+   "in_line": 8,
+   "parked": 5,
    "open": true,
    "mq": false,
-   "counted": "2026-11-21T21:50:24+00:00",
+   "counted": "2026-11-21T17:02:06-05:00",
    "by": {
     "app": {
-     "n": 6,
+     "n": 8,
      "limit": 20,
      "open": true
     },
     "other": {
-     "n": 6,
+     "n": 5,
      "limit": 20,
      "open": true
     },
@@ -621,24 +637,14 @@
      "open": true
     }
    },
-   "at": "2026-11-21T21:53:02+00:00"
+   "at": "2026-11-21T22:02:30+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-21T21:53:02+00:00"
+   "at": "2026-11-21T22:02:30+00:00"
   }
  },
- "operators": [
-  {
-   "w": "Operator",
-   "a": "Evan's Account",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session",
-   "at": "2026-11-21T16:20:37-05:00"
-  }
- ],
+ "operators": [],
  "reply": {
   "sent": "2026-11-21T19:41:05Z",
   "seconds": 601.0
@@ -657,12 +663,12 @@
  ],
  "agents_now": {
   "main": 0,
-  "lanes": 1,
-  "total": 1,
-  "at": "4:53 PM",
-  "why": "",
-  "at_iso": "2026-11-21T21:53:00+00:00",
+  "lanes": 0,
+  "total": 0,
+  "at": "5:02 PM",
+  "why": "Plan limit: the weekly allowance is used up; it resets Sun 1:59 AM ET. Last check 5:02 PM ET.",
+  "at_iso": "2026-11-21T22:02:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 4:53 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 5:02 PM ET</p><p class=\"an-why\">Plan limit: the weekly allowance is used up; it resets Sun 1:59 AM ET. Last check 5:02 PM ET.</p></section>"
  }
 }

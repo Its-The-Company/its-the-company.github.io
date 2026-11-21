@@ -35,8 +35,6 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 
 
-- T-4750 11-18: replay on main since 6ef41bc26a; this land adds mutants-t4750.json + s6a line. Open: runner job J-20261118-1630, land_mutants at the land commit, tick.
-
 - T-4842 ticked 11-20 (0e72abbb2e). Date report is Ines's T-5341 (none sent by 11-20). Lesson: board_tick add needs a typed Done-when, Targets and --by, and no Until on app lines.
 
 - T-4871 11-19: two-way editing 5.0 wk in all, 2.0 on the slot (1.25-3.25), 3.0 Python beside; release Thu 2027-07-15 (#325 c7002531691). Open: T-4770 script still says 3.5 (Ines's); state.md target line. Lesson: split each part slot vs beside; more work can still move the date earlier.
@@ -61,7 +59,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 ## Lessons
 - Older lessons and dated logs: archive.md.
 
-- T-4181 11-19: T-4415 waits on Ines+Maren (keep glyph live). T-0972: Swift slice on main; test U (real extension, WK_LANE) green. Open: Maren's words, Pernille's review; testT red on main (T-4681 dark hued 0.168). Lesson: `time` is not on the lane allowlist; a just-run widget isn't due for 15 min.
+- T-4181 11-21: T-4415 decided A (glyph live; Idris+Ines+Maren independent views via agents), test 068f1eca97; T-0972 Maren approved CODE_SEND (its step commit). MERGE POINT: waits on Pernille's review. Lesson: a 'with X and Y' step can be unblocked by asking each as an agent, independently; board_tick note/events queue in ops/lane-outbox, so commit the file (no hash in it if amending).
 {% endraw %}
 
 

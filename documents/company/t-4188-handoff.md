@@ -17,6 +17,14 @@ left here. Its open question, C2-Q1's placement, is ruled: ADR-007 s14 <span tit
 `Library/Application Support/pywidget/device/location-refresh.json`; only that extension's Swift reads it; no
 `location/last.json` in the App Group; the app and PyWidgetExtension keep `app_cache` / app-only.
 
+## 11-21 <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span>-b session (stopped 2:2x PM ET by an Investor #325 c7067981085: app work stops until the comparison work is done)
+
+The saved patch applied cleanly onto main 4bbb3f10dc. Build-for-testing passed (ops/runs/xcodebuild-20261121-141909.log),
+and so did the plan's filtered unit run: 263 tests, 0 failures (ops/runs/xcodebuild-20261121-142357.log). Not run: the whole
+PyWidgetTests target, and `host_keep.py run`. Nothing was committed, and the worktree was cleared again; the SanDisk copy is
+current. Next: apply it, run those two, commit as T-5365, then part 3. Part 3 also needs Pernille (lane.py placement) and the
+Investors (the new extension's bundle ID registered).
+
 ## T-0053: parts 1 and 2 written, untested on host, uncommitted (T-5365, part of T-4188); parts 3 and 4 left
 
 Written in the personal/b3 worktree, NOT COMMITTED (stopped 11-20 ~2:40 PM for the Investors' pre-comparison hold,
@@ -26,7 +34,7 @@ skipped (ops/runs/xcodebuild-20261120-124434.log); test_device_modules 37/0; hos
 load and passed on rerun alone; systls, tooling, widget_state, widgets, python-stubs not run. Owed before the commit:
 `python3 -I tools/host_keep.py run --wt . --task T-5365` (kept passes are reused), then commit by path
 (LocationRefresh.swift, LocationRefreshTests.swift, LaneDevice.swift, test_device_modules.py, this note, the
-ops/<span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span>-outbox note file). A copy of the work is saved, in case this worktree is reset to main: `/Volumes/SANDISK SSD/company-scratch/T-5365-idris/T-5365-parts1-2.patch` (git apply on its BASE, plus the two new files beside it). Then part 3. The work:
+ops/lane-outbox note file). A copy of the work is saved, in case this worktree is reset to main: `/Volumes/SANDISK SSD/company-scratch/T-5365-idris/T-5365-parts1-2.patch` (git apply on its BASE, plus the two new files beside it). Then part 3. The work:
 - `pywidget/ios/Shared/Bridge/LocationRefresh.swift`, no CoreLocation: the `getTimeline` policy (`refresh`: guard
   first, deleting the file when location or widget updates are not allowed or Precise Location is off for a fine
   fix; then for a widget that declares location and a kept fix `maxAgeS` (300 s) or older, one fix within

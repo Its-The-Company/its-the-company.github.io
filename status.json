@@ -1,12 +1,21 @@
 {
  "schema": 1,
- "at": "2026-11-21T12:09:55.047567+00:00",
+ "at": "2026-11-21T12:14:34.820689+00:00",
  "session": {
   "active": false,
   "kind": "",
   "started": null,
   "flow": [],
   "done": [
+   {
+    "t": "T-5234",
+    "name": "Move merge tests to the MacBook under heavy load",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "failed",
+    "end_at": 1795263172,
+    "why": "tests failed"
+   },
    {
     "t": "T-5234",
     "name": "Move merge tests to the MacBook under heavy load",
@@ -86,19 +95,10 @@
     "steps": [],
     "end": "landed",
     "end_at": 1795232320
-   },
-   {
-    "t": "T-5234",
-    "name": "Move merge tests to the MacBook under heavy load",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "failed",
-    "end_at": 1795229215,
-    "why": "did not merge cleanly"
    }
   ],
   "landed": 6,
-  "failed": 12
+  "failed": 13
  },
  "workers": [],
  "who": "",
@@ -183,12 +183,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-21T07:16:44-05:00",
+ "next_tick": "2026-11-21T07:24:57-05:00",
  "personal": {
   "week_pct": 97.89,
   "usage_pct": 49.5,
   "work_pct": 80.6,
-  "read_at": "2026-11-21T12:10:00+00:00",
+  "read_at": "2026-11-21T12:18:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -218,14 +218,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-21T07:08:00-05:00",
+   "at": "2026-11-21T07:16:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-21T07:10:00-05:00",
+  "at": "2026-11-21T07:18:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -423,11 +423,11 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-21T12:09:55Z",
+  "at": "2026-11-21T12:14:34Z",
   "s": {}
  },
  "ln": {
-  "at": "2026-11-21T12:09:55Z",
+  "at": "2026-11-21T12:14:34Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -441,11 +441,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 2630,
-    "failed": 60,
+    "conflicted": 2635,
+    "failed": 1,
     "held": null,
     "retry": null,
-    "parked": 1473
+    "parked": 1477
    },
    "cur": [],
    "ld": [
@@ -455,8 +455,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-21T12:09:55Z",
-    "ld": 1.38,
+    "at": "2026-11-21T12:14:35Z",
+    "ld": 0.87,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -497,11 +497,11 @@
      "open": true
     }
    },
-   "at": "2026-11-21T12:09:55+00:00"
+   "at": "2026-11-21T12:14:34+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-21T12:09:55+00:00"
+   "at": "2026-11-21T12:14:34+00:00"
   }
  },
  "operators": [],
@@ -525,10 +525,10 @@
   "main": 0,
   "lanes": 0,
   "total": 0,
-  "at": "7:10 AM",
-  "why": "Plan limit: the weekly allowance is used up; it resets Sun 2:00 AM ET. Last check 7:09 AM ET.",
-  "at_iso": "2026-11-21T12:10:00+00:00",
+  "at": "7:18 AM",
+  "why": "Plan limit: the weekly allowance is used up; it resets Sun 2:00 AM ET. Last check 7:18 AM ET.",
+  "at_iso": "2026-11-21T12:18:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 7:10 AM ET</p><p class=\"an-why\">Plan limit: the weekly allowance is used up; it resets Sun 2:00 AM ET. Last check 7:09 AM ET.</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 7:18 AM ET</p><p class=\"an-why\">Plan limit: the weekly allowance is used up; it resets Sun 2:00 AM ET. Last check 7:18 AM ET.</p></section>"
  }
 }

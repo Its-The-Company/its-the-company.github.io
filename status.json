@@ -1,11 +1,33 @@
 {
  "schema": 1,
- "at": "2026-11-21T19:47:08.661935+00:00",
+ "at": "2026-11-21T19:51:45.662361+00:00",
  "session": {
   "active": false,
   "kind": "",
   "started": null,
   "flow": [
+   {
+    "t": "T-5262",
+    "name": "Trim step 9, merge checks agree on every run",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "testq",
+      "at": 1795290651
+     }
+    ]
+   },
+   {
+    "t": "T-5448",
+    "name": "Give each worker one task and wake on exit",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "testq",
+      "at": 1795290651
+     }
+    ]
+   },
    {
     "t": "T-4010",
     "name": "Rebuild This Session as a full flowchart",
@@ -162,28 +184,28 @@
    "pct": 0.0,
    "resets_at": null,
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-21T14:35:03.720397-05:00",
+   "read_at": "2026-11-21T14:47:41.352163-05:00",
    "source": "usage",
    "left": 100.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 100.0,
-   "resets_at": "2026-11-22T06:59:59.662157+00:00",
+   "resets_at": "2026-11-22T06:59:59.719809+00:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-21T14:35:03.720397-05:00",
+   "read_at": "2026-11-21T14:47:41.352163-05:00",
    "source": "usage",
    "left": 0.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 36.0,
-   "resets_at": "2026-11-22T06:59:59.662298+00:00",
+   "resets_at": "2026-11-22T06:59:59.719947+00:00",
    "used_words": "of the Fable weekly allowance used",
-   "read_at": "2026-11-21T14:35:03.720397-05:00",
+   "read_at": "2026-11-21T14:47:41.352163-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-21T14:35:03.720397-05:00"
+  "read_at": "2026-11-21T14:47:41.352163-05:00"
  },
  "ui": {
   "week_pct": 0.123,
@@ -198,12 +220,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-21T14:59:18-05:00",
+ "next_tick": "2026-11-21T15:02:41-05:00",
  "personal": {
   "week_pct": 103.18,
   "usage_pct": 50.8,
   "work_pct": 82.3,
-  "read_at": "2026-11-21T19:47:00+00:00",
+  "read_at": "2026-11-21T19:53:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -224,7 +246,7 @@
   }
  ],
  "disk": {
-  "free_gb": 57,
+  "free_gb": 58,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -233,14 +255,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-21T14:47:00-05:00",
+   "at": "2026-11-21T14:52:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-21T14:47:00-05:00",
+  "at": "2026-11-21T14:53:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -438,31 +460,103 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-21T19:47:08Z",
-  "s": {}
+  "at": "2026-11-21T19:51:45Z",
+  "s": {
+   "T-5247": [
+    "merging",
+    "Host checks on the Mac mini",
+    1795290705662
+   ],
+   "T-5262": [
+    "merging",
+    "Host checks on the Mac mini",
+    1795290705662
+   ],
+   "T-5448": [
+    "merging",
+    "Host checks on the Mac mini",
+    1795290705662
+   ],
+   "T-5447": [
+    "mergeq",
+    "1st to merge",
+    1795290645662
+   ],
+   "T-5256": [
+    "mergeq",
+    "1st to merge",
+    1795290645662
+   ],
+   "T-5450": [
+    "mergeq",
+    "1st to merge",
+    1795290645662
+   ]
+  },
+  "nm": {
+   "T-5247": "MacBook runner takes pre-merge Xcode runs",
+   "T-5262": "Trim step 9, merge checks agree on every run",
+   "T-5448": "Give each worker one task and wake on exit",
+   "T-5447": "Add the coordinator switch and one-task worker plan, off",
+   "T-5256": "Trim step 3, one merge script beside the old road",
+   "T-5450": "Keep one coordinator session running from the supervisor"
+  },
+  "wk": {
+   "T-5247": "Odalys",
+   "T-5262": "Odalys",
+   "T-5448": "Odalys",
+   "T-5447": "Odalys",
+   "T-5256": "Odalys",
+   "T-5450": "Odalys"
+  }
  },
  "ln": {
-  "at": "2026-11-21T19:47:08Z",
+  "at": "2026-11-21T19:51:45Z",
   "mq": {
    "n": {
-    "checking": 0,
-    "inline": 0,
+    "checking": 3,
+    "inline": 3,
     "conflicted": 1,
-    "failed": 1,
+    "failed": 0,
     "held": 0,
-    "retry": 7,
+    "retry": 3,
     "parked": 5
    },
    "m": {
-    "checking": null,
-    "inline": null,
-    "conflicted": 3087,
-    "failed": 7,
+    "checking": 0,
+    "inline": 1,
+    "conflicted": 3092,
+    "failed": null,
     "held": null,
-    "retry": 16,
-    "parked": 1747
+    "retry": 21,
+    "parked": 1752
    },
-   "cur": [],
+   "cur": [
+    [
+     [
+      "T-5247"
+     ],
+     "Mac tests",
+     "Mac mini",
+     0
+    ],
+    [
+     [
+      "T-5262"
+     ],
+     "Mac tests",
+     "Mac mini",
+     0
+    ],
+    [
+     [
+      "T-5448"
+     ],
+     "Mac tests",
+     "Mac mini",
+     0
+    ]
+   ],
    "ld": [
     69,
     "2026-11-21T19:40:36Z"
@@ -470,12 +564,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-21T19:47:09Z",
-    "ld": 2.71,
+    "at": "2026-11-21T19:51:46Z",
+    "ld": 3.64,
     "c": 8,
     "sb": 1,
     "dk": [
-     56.5,
+     57.6,
      228.3
     ],
     "ss": [
@@ -487,8 +581,8 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-21T19:39:05Z",
-    "ld": 0.77,
+    "at": "2026-11-21T19:51:37Z",
+    "ld": 0.24,
     "c": 12,
     "sb": 0,
     "dk": [
@@ -525,37 +619,52 @@
      "open": false
     }
    },
-   "at": "2026-11-21T19:47:08+00:00"
+   "at": "2026-11-21T19:51:45+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-21T19:47:08+00:00"
+   "at": "2026-11-21T19:51:45+00:00"
   }
  },
- "operators": [],
- "reply": {
-  "sent": "2026-11-21T19:25:35Z",
-  "seconds": 18.0
- },
- "inbox": [
+ "operators": [
   {
-   "id": "c7068201481",
-   "state": "waiting",
-   "position": 1,
-   "eta": "2026-11-21T14:59:18-05:00",
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "Home doesn't show anything is..."
+   "w": "Operator",
+   "a": "Jeremy's Account",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session \u2013 1 task",
+   "at": "2026-11-21T14:51:38-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Jeremy's Account",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session \u2013 1 task",
+   "at": "2026-11-21T14:51:39-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Jeremy's Account",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session \u2013 1 task",
+   "at": "2026-11-21T14:51:41-05:00"
   }
  ],
+ "reply": {
+  "sent": "2026-11-21T19:41:05Z",
+  "seconds": 601.0
+ },
+ "inbox": [],
  "trimmed": [
   "lane_next",
   "queue_text",
   "recent",
   "task_done",
-  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -566,10 +675,10 @@
   "main": 0,
   "lanes": 0,
   "total": 0,
-  "at": "2:47 PM",
-  "why": "Plan limit: the weekly allowance is used up; it resets Sun 1:59 AM ET. Last check 2:47 PM ET.",
-  "at_iso": "2026-11-21T19:47:00+00:00",
+  "at": "2:53 PM",
+  "why": "Plan limit: the weekly allowance is used up; it resets Sun 1:59 AM ET. Last check 2:52 PM ET.",
+  "at_iso": "2026-11-21T19:53:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 2:47 PM ET</p><p class=\"an-why\">Plan limit: the weekly allowance is used up; it resets Sun 1:59 AM ET. Last check 2:47 PM ET.</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 2:53 PM ET</p><p class=\"an-why\">Plan limit: the weekly allowance is used up; it resets Sun 1:59 AM ET. Last check 2:52 PM ET.</p></section>"
  }
 }

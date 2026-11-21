@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-21T21:24:22.623217+00:00",
+ "at": "2026-11-21T21:33:59.947013+00:00",
  "session": {
   "active": false,
   "kind": "",
@@ -24,6 +24,39 @@
    }
   ],
   "done": [
+   {
+    "t": "T-5439",
+    "name": "Find how a ratings graph site gets IMDb data",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1795296517
+   },
+   {
+    "t": "T-5381",
+    "name": "Check finished work before it ships",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1795296504
+   },
+   {
+    "t": "T-4795",
+    "name": "Weigh the showcase set against the Builder-first ruling",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1795296493
+   },
+   {
+    "t": "T-4793",
+    "name": "Say how Day phases gets fresh train times",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "failed",
+    "end_at": 1795296478,
+    "why": "did not merge cleanly"
+   },
    {
     "t": "T-5449",
     "name": "Write the coordinator session's prompt",
@@ -76,43 +109,10 @@
     "end": "failed",
     "end_at": 1795294681,
     "why": "tests failed"
-   },
-   {
-    "t": "T-0802",
-    "name": "Review the package sandbox Mach change independently",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1795294277
-   },
-   {
-    "t": "T-5448",
-    "name": "Give each worker one task and wake on exit",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "failed",
-    "end_at": 1795292454,
-    "why": "tests failed"
-   },
-   {
-    "t": "T-5262",
-    "name": "Trim step 9, merge checks agree on every run",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1795292274
-   },
-   {
-    "t": "T-5433",
-    "name": "A person confirms where the held-path fix lives",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1795290913
    }
   ],
-  "landed": 65,
-  "failed": 22
+  "landed": 68,
+  "failed": 23
  },
  "workers": [],
  "who": "",
@@ -161,28 +161,28 @@
    "pct": 0.0,
    "resets_at": null,
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-21T16:13:45.652532-05:00",
+   "read_at": "2026-11-21T16:24:32.419084-05:00",
    "source": "usage",
    "left": 100.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 100.0,
-   "resets_at": "2026-11-22T07:00:00.369170+00:00",
+   "resets_at": "2026-11-22T07:00:00.068146+00:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-21T16:13:45.652532-05:00",
+   "read_at": "2026-11-21T16:24:32.419084-05:00",
    "source": "usage",
    "left": 0.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 36.0,
-   "resets_at": "2026-11-22T07:00:00.369387+00:00",
+   "resets_at": "2026-11-22T07:00:00.068298+00:00",
    "used_words": "of the Fable weekly allowance used",
-   "read_at": "2026-11-21T16:13:45.652532-05:00",
+   "read_at": "2026-11-21T16:24:32.419084-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-21T16:13:45.652532-05:00"
+  "read_at": "2026-11-21T16:24:32.419084-05:00"
  },
  "ui": {
   "week_pct": 0.123,
@@ -197,12 +197,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-21T16:28:46-05:00",
+ "next_tick": "2026-11-21T16:48:51-05:00",
  "personal": {
-  "week_pct": 103.89,
+  "week_pct": 104.06,
   "usage_pct": 51.0,
   "work_pct": 82.9,
-  "read_at": "2026-11-21T21:25:00+00:00",
+  "read_at": "2026-11-21T21:34:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -215,32 +215,6 @@
     "at": "2026-11-21T16:20:37-05:00",
     "n": "Evan",
     "src": "plan-a"
-   },
-   {
-    "lane": "b3",
-    "task": "T-5265",
-    "w": "Ines",
-    "k": "ops",
-    "t": "Trim step 12, measure app work reaching main",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-21T15:46:38-05:00",
-    "n": "Jeremy",
-    "d": 1,
-    "src": "plan-b"
-   },
-   {
-    "lane": "b3",
-    "task": "T-4899",
-    "w": "Idris",
-    "k": "fix",
-    "t": "Fix a MacBook test job that failed",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-21T15:46:38-05:00",
-    "n": "Jeremy",
-    "d": 1,
-    "src": "plan-b"
    }
   ]
  },
@@ -262,7 +236,7 @@
   }
  ],
  "disk": {
-  "free_gb": 57,
+  "free_gb": 58,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -271,14 +245,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-21T16:21:00-05:00",
+   "at": "2026-11-21T16:32:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-21T16:25:00-05:00",
+  "at": "2026-11-21T16:34:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -415,6 +389,11 @@
   ],
   "done": [
    {
+    "w": "Wrenna",
+    "t": "Evan can build an IMDb ratings widget for his own phone from IMDb's free non-commercial data...",
+    "at": "2026-11-21T16:28:00-05:00"
+   },
+   {
     "w": "Odalys",
     "t": "With the new one-coordinator switch on, each free work slot now gets exactly one task, and a...",
     "at": "2026-11-21T16:06:00-05:00"
@@ -423,11 +402,6 @@
     "w": "Operator",
     "t": "A later MacBook job for the same work (J-20261121-1512-host-a3-02986a) passed, so the failed job...",
     "at": "2026-11-21T15:18:00-05:00"
-   },
-   {
-    "w": "Operator",
-    "t": "Evan confirmed that the fix keeping a held branch's task and reason stays in the lane landing...",
-    "at": "2026-11-21T14:55:00-05:00"
    }
   ],
   "count": {
@@ -476,37 +450,47 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-21T21:24:22Z",
+  "at": "2026-11-21T21:33:59Z",
   "s": {
-   "T-5381": [
+   "T-4899": [
     "mergeq",
     "1st to merge",
-    1795295302623
+    1795296599947
+   ],
+   "T-5265": [
+    "mergeq",
+    "2nd to merge",
+    1795296599947
+   ],
+   "T-5381": [
+    "mergeq",
+    "4th to merge",
+    1795295279947
    ],
    "T-5439": [
     "mergeq",
-    "1st to merge",
-    1795295302623
+    "4th to merge",
+    1795295279947
    ],
    "T-4793": [
     "mergeq",
-    "2nd to merge",
-    1795295962623
+    "5th to merge",
+    1795295939947
    ],
    "T-4795": [
     "mergeq",
-    "2nd to merge",
-    1795295962623
+    "5th to merge",
+    1795295939947
    ],
    "T-0802": [
     "mergeq",
-    "11th to merge",
-    1795295662623
+    "9th to merge",
+    1795295699947
    ],
    "T-0044": [
     "mergeq",
-    "11th to merge",
-    1795295662623
+    "9th to merge",
+    1795295699947
    ],
    "T-4190": [
     "testing",
@@ -515,6 +499,8 @@
    ]
   },
   "nm": {
+   "T-4899": "Fix a MacBook test job that failed",
+   "T-5265": "Trim step 12, measure app work reaching main",
    "T-5381": "Check finished work before it ships",
    "T-5439": "Find how a ratings graph site gets IMDb data",
    "T-4793": "Say how Day phases gets fresh train times",
@@ -524,6 +510,8 @@
    "T-4190": "Settings and Pro: buy, restore, themes"
   },
   "wk": {
+   "T-4899": "Idris",
+   "T-5265": "Ines",
    "T-5381": "Idris",
    "T-5439": "Wrenna",
    "T-4793": "Ines",
@@ -534,11 +522,11 @@
   }
  },
  "ln": {
-  "at": "2026-11-21T21:24:22Z",
+  "at": "2026-11-21T21:33:59Z",
   "mq": {
    "n": {
     "checking": 0,
-    "inline": 6,
+    "inline": 8,
     "conflicted": 0,
     "failed": 0,
     "held": 0,
@@ -547,36 +535,34 @@
    },
    "m": {
     "checking": null,
-    "inline": 10,
+    "inline": 17,
     "conflicted": null,
     "failed": null,
     "held": null,
-    "retry": 45,
-    "parked": 2027
+    "retry": 54,
+    "parked": 2037
    },
    "cur": [],
    "ld": [
-    74,
-    "2026-11-21T21:06:46Z"
+    77,
+    "2026-11-21T21:28:37Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-21T21:24:23Z",
-    "ld": 7.91,
+    "at": "2026-11-21T21:34:00Z",
+    "ld": 4.53,
     "c": 8,
-    "sb": 1,
+    "sb": 0,
     "dk": [
-     57.5,
+     57.7,
      228.3
     ],
     "ss": [
      171.9,
      953.7
     ],
-    "sn": [
-     "iPhone 17e"
-    ]
+    "sn": []
    },
    "macbook": {
     "at": "2026-11-21T21:08:28Z",
@@ -593,16 +579,16 @@
  },
  "hc": {
   "wait": {
-   "n": 12,
+   "n": 14,
    "limit": 20,
-   "in_line": 6,
-   "parked": 6,
+   "in_line": 7,
+   "parked": 7,
    "open": true,
    "mq": false,
-   "counted": "2026-11-21T21:19:12+00:00",
+   "counted": "2026-11-21T21:29:34+00:00",
    "by": {
     "app": {
-     "n": 6,
+     "n": 8,
      "limit": 20,
      "open": true
     },
@@ -617,11 +603,11 @@
      "open": true
     }
    },
-   "at": "2026-11-21T21:24:22+00:00"
+   "at": "2026-11-21T21:33:59+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-21T21:24:22+00:00"
+   "at": "2026-11-21T21:33:59+00:00"
   }
  },
  "operators": [
@@ -633,15 +619,6 @@
    "e": "high",
    "t": "Work session \u2013 1 task",
    "at": "2026-11-21T16:20:37-05:00"
-  },
-  {
-   "w": "Operator",
-   "a": "Jeremy's Account",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session \u2013 2 tasks",
-   "at": "2026-11-21T15:46:37-05:00"
   }
  ],
  "reply": {
@@ -662,12 +639,12 @@
  ],
  "agents_now": {
   "main": 0,
-  "lanes": 2,
-  "total": 2,
-  "at": "4:25 PM",
+  "lanes": 1,
+  "total": 1,
+  "at": "4:34 PM",
   "why": "",
-  "at_iso": "2026-11-21T21:25:00+00:00",
+  "at_iso": "2026-11-21T21:34:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 4:25 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 4:34 PM ET</p></section>"
  }
 }

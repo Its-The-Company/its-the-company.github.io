@@ -459,6 +459,30 @@ inside the range's width; I count it at the range's next re-dating rather than m
 alone. Because every premade line on Idris's slot now follows the Builder, none of them can move the Builder's first
 phone proof, which fixes the firm date (#270 A).
 
+**Re-checked 2026-11-21 4:03 PM ET by `date` (T-4795, Ines).** The weighing above landed on 11-19 (69770633cc, an
+ancestor of HEAD), but the board line T-4795 stayed open, so I checked it again against today's board and dates.
+- *The rulings' words*, from `log/rulings.md` (2026-11-16 11:26 PM and 11:37 PM entries), match s0 and the paragraph above:
+  c6938306456's Effect, "where premade polish and IDE or Builder work compete, the IDE and Builder go first", and
+  c6938494530's Effect, "Build a Developer mode next, as a priority".
+- *The five lines, board grep at 4:03 PM:* T-4673 is open, Pernille, P1, at board line 602, below her phase B lines
+  (T-4189 umbrella, T-4202, T-4203, T-4192 umbrella), so the chair line holds. T-4703 is done. T-4704, T-4705 and
+  T-4706 are open at P2 (board lines 618 to 620, in the set's order), after T-4688 Developer mode (Idris, P1, line 604)
+  and the Builder (T-4477, P1). Nothing to move.
+- *Two Maren lines at P1 not weighed on 11-19:* T-4766 (frames for the other six showcase premades, then her review
+  of T-4673's render) and T-5000 (the transit count-down fix from T-4927's review). Neither competes: they run on
+  Maren's lane beside the slot, and no open Maren line is IDE, Builder or Developer mode work (her open lines are site,
+  test and premade design lines). They stay P1. If a Builder design line opens for her, it goes first.
+- *The release range does not move.* It stands at likely Sat 2027-07-17, range 2027-04-07 to 2027-12-11
+  (`ops/milestones.json` release row and `ops/state.md` Target, after T-5432 on 11-21). Pernille's and Maren's lines
+  run beside the slot and are not counted by the range's method; the habit button sits in step 10 of RUN_AND_BUTTONS.
+  **Correction:** I said T-4704's one slot day would be counted at the range's next re-dating. T-5432 re-dated the
+  range today and does not count it, because I did not hand it on; `ops/plans/T-4266-release-range.py` names no T-4704.
+  One unchecked day of my own estimate is inside the range's width and under the two-week line for the next report
+  (an Investor #325 c6977134306), so I am not moving the date for it alone. A note on T-4704 now asks Idris to size it
+  so the next re-dating can count it.
+- *premade-inputs.md s0* still states the same build order (Day phases, Habit tracker, Focus timer, then Next 24
+  hours on). The priority moves kept that order, so it is not edited.
+
 ## 9. What would make this fail
 
 - The MTA's terms forbid our use, or need an account: Day phases ships with Today and Night only until the

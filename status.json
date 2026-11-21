@@ -253,7 +253,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 652,
+  "runnable_count": 653,
   "blocked_count": 2
  },
  "meter": {
@@ -302,8 +302,20 @@
   "week_pct": 100.37,
   "usage_pct": 50.1,
   "work_pct": 81.7,
-  "read_at": "2026-11-21T17:43:00+00:00",
+  "read_at": "2026-11-21T17:46:00+00:00",
   "running": [
+   {
+    "lane": "a2",
+    "task": "T-4185",
+    "w": "Idris",
+    "k": "build",
+    "t": "Launcher widgets open the apps a person chose",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-21T12:44:20-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
    {
     "lane": "a3",
     "task": "T-4184",
@@ -336,7 +348,7 @@
   }
  ],
  "disk": {
-  "free_gb": 61,
+  "free_gb": 60,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -345,14 +357,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-21T12:41:00-05:00",
+   "at": "2026-11-21T12:45:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-21T12:43:00-05:00",
+  "at": "2026-11-21T12:46:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -505,7 +517,7 @@
    }
   ],
   "count": {
-   "next": 652,
+   "next": 653,
    "wait": 2,
    "blocked": 0,
    "you": 2
@@ -681,12 +693,12 @@
  ],
  "agents_now": {
   "main": 0,
-  "lanes": 1,
-  "total": 1,
-  "at": "12:43 PM",
+  "lanes": 2,
+  "total": 2,
+  "at": "12:46 PM",
   "why": "",
-  "at_iso": "2026-11-21T17:43:00+00:00",
+  "at_iso": "2026-11-21T17:46:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 12:43 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 12:46 PM ET</p></section>"
  }
 }

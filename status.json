@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-21T19:28:09.123741+00:00",
+ "at": "2026-11-21T19:32:52.700409+00:00",
  "session": {
   "active": false,
   "kind": "",
@@ -24,6 +24,22 @@
    }
   ],
   "done": [
+   {
+    "t": "T-4192",
+    "name": "Python in the app: smaller bundle, installable packages",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1795289564
+   },
+   {
+    "t": "T-4183",
+    "name": "The Gallery shows, previews and opens every premade",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1795289554
+   },
    {
     "t": "T-2097",
     "name": "Read free memory in the widget extension on a device",
@@ -93,27 +109,9 @@
     "steps": [],
     "end": "landed",
     "end_at": 1795285790
-   },
-   {
-    "t": "T-5234",
-    "name": "Move merge tests to the MacBook under heavy load",
-    "w": "Odalys",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "failed",
-    "end_at": 1795285759,
-    "why": "tests failed"
-   },
-   {
-    "t": "T-5256",
-    "name": "Trim step 3, one merge script beside the old road",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1795285354
    }
   ],
-  "landed": 55,
+  "landed": 57,
   "failed": 11
  },
  "workers": [],
@@ -199,38 +197,13 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-21T14:40:56-05:00",
+ "next_tick": "2026-11-21T14:44:51-05:00",
  "personal": {
-  "week_pct": 102.92,
+  "week_pct": 102.94,
   "usage_pct": 50.7,
-  "work_pct": 82.1,
-  "read_at": "2026-11-21T19:30:00+00:00",
-  "running": [
-   {
-    "lane": "b",
-    "task": "T-4188",
-    "w": "Idris",
-    "k": "build",
-    "t": "Location, steps and notifications work in scripts and widgets",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-21T14:17:56-05:00",
-    "n": "Jeremy",
-    "src": "plan-b"
-   },
-   {
-    "lane": "b2",
-    "task": "T-4185",
-    "w": "Idris",
-    "k": "build",
-    "t": "Launcher widgets open the apps a person chose",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-21T14:12:35-05:00",
-    "n": "Jeremy",
-    "src": "plan-b"
-   }
-  ]
+  "work_pct": 82.2,
+  "read_at": "2026-11-21T19:35:00+00:00",
+  "running": []
  },
  "api_credits": [
   {
@@ -250,7 +223,7 @@
   }
  ],
  "disk": {
-  "free_gb": 59,
+  "free_gb": 57,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -259,14 +232,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-21T14:28:00-05:00",
+   "at": "2026-11-21T14:33:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-21T14:30:00-05:00",
+  "at": "2026-11-21T14:35:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -464,62 +437,55 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-21T19:28:09Z",
+  "at": "2026-11-21T19:32:52Z",
   "s": {
    "T-4181": [
     "mergetest",
-    "Xcode checks on the MacBook",
-    1795289289123
+    "Xcode checks on the MacBook, 1st to merge",
+    1795289272700
    ],
    "T-0337": [
     "mergetest",
-    "Xcode checks on the MacBook",
-    1795289289123
+    "Xcode checks on the MacBook, 1st to merge",
+    1795289272700
    ],
    "T-2097": [
     "mergetest",
-    "Xcode checks on the MacBook",
-    1795289289123
-   ],
-   "T-4192": [
-    "mergeq",
-    "1st to merge",
-    1795289109123
+    "Xcode checks on the MacBook, 1st to merge",
+    1795289272700
    ]
   },
   "nm": {
    "T-4181": "Widgets refresh on their own and by a tap",
    "T-0337": "Confirm the revenue memo's facts from Apple pages",
-   "T-2097": "Read free memory in the widget extension on a device",
-   "T-4192": "Python in the app: smaller bundle, installable packages"
+   "T-2097": "Read free memory in the widget extension on a device"
   },
   "wk": {
    "T-4181": "Idris",
    "T-0337": "Wrenna",
-   "T-2097": "Idris",
-   "T-4192": "Pernille"
+   "T-2097": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-21T19:28:09Z",
+  "at": "2026-11-21T19:32:52Z",
   "mq": {
    "n": {
     "checking": 3,
-    "inline": 1,
+    "inline": 0,
     "conflicted": 1,
     "failed": 0,
     "held": 0,
-    "retry": 1,
-    "parked": 12
+    "retry": 8,
+    "parked": 5
    },
    "m": {
-    "checking": 0,
-    "inline": 3,
-    "conflicted": 3068,
+    "checking": 5,
+    "inline": null,
+    "conflicted": 3073,
     "failed": null,
     "held": null,
-    "retry": 58,
-    "parked": 4
+    "retry": 2,
+    "parked": 1733
    },
    "cur": [
     [
@@ -528,7 +494,7 @@
      ],
      "iPhone app tests",
      "MacBook",
-     0
+     5
     ],
     [
      [
@@ -536,7 +502,7 @@
      ],
      "iPhone app tests",
      "MacBook",
-     0
+     5
     ],
     [
      [
@@ -544,22 +510,22 @@
      ],
      "iPhone app tests",
      "MacBook",
-     0
+     5
     ]
    ],
    "ld": [
-    64,
-    "2026-11-21T19:19:28Z"
+    66,
+    "2026-11-21T19:32:44Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-21T19:28:09Z",
-    "ld": 1.72,
+    "at": "2026-11-21T19:32:53Z",
+    "ld": 1.88,
     "c": 8,
     "sb": 1,
     "dk": [
-     58.9,
+     56.7,
      228.3
     ],
     "ss": [
@@ -571,8 +537,8 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-21T18:58:02Z",
-    "ld": 0.26,
+    "at": "2026-11-21T19:28:41Z",
+    "ld": 0.28,
     "c": 12,
     "sb": 0,
     "dk": [
@@ -609,22 +575,22 @@
      "open": false
     }
    },
-   "at": "2026-11-21T19:28:09+00:00"
+   "at": "2026-11-21T19:32:52+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-21T19:28:09+00:00"
+   "at": "2026-11-21T19:32:52+00:00"
   }
  },
  "operators": [
   {
    "w": "Operator",
-   "a": "Evan's Account",
+   "a": "Jeremy's Account",
    "sr": 1,
    "m": "opus",
    "e": "high",
    "t": "Work session \u2013 1 task",
-   "at": "2026-11-21T14:27:33-05:00"
+   "at": "2026-11-21T14:29:05-05:00"
   },
   {
    "w": "Operator",
@@ -633,41 +599,19 @@
    "m": "opus",
    "e": "high",
    "t": "Work session \u2013 1 task",
-   "at": "2026-11-21T14:25:54-05:00"
-  },
-  {
-   "w": "Operator",
-   "a": "Jeremy's Account",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Inbox \u2013 Evan's 2:25 PM Message on GitHub",
-   "at": "2026-11-21T14:25:50-05:00"
+   "at": "2026-11-21T14:30:11-05:00"
   }
  ],
  "reply": {
-  "sent": "2026-11-21T19:23:04Z",
-  "seconds": 169.0
+  "sent": "2026-11-21T19:25:35Z",
+  "seconds": 18.0
  },
- "inbox": [
-  {
-   "id": "c7068011280",
-   "state": "waiting",
-   "position": 1,
-   "eta": "2026-11-21T14:40:56-05:00",
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "The one coordinator should be on for..."
-  }
- ],
+ "inbox": [],
  "trimmed": [
   "lane_next",
   "queue_text",
   "recent",
   "task_done",
-  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -676,12 +620,12 @@
  ],
  "agents_now": {
   "main": 0,
-  "lanes": 2,
-  "total": 2,
-  "at": "2:30 PM",
-  "why": "",
-  "at_iso": "2026-11-21T19:30:00+00:00",
+  "lanes": 0,
+  "total": 0,
+  "at": "2:35 PM",
+  "why": "Plan limit: the weekly allowance is used up; it resets Sun 2:00 AM ET. Last check 2:35 PM ET.",
+  "at_iso": "2026-11-21T19:35:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 2:30 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 2:35 PM ET</p><p class=\"an-why\">Plan limit: the weekly allowance is used up; it resets Sun 2:00 AM ET. Last check 2:35 PM ET.</p></section>"
  }
 }

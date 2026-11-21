@@ -35,8 +35,6 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 
 
-- T-4631 11-18: premades placed by build scan (<span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span>-app.json) + finder notes every refusal (lane.refused). Lesson: no app code calls send_lane today; a person's script is judged only by its first widget run.
-
 - T-4750 11-18: replay on main since 6ef41bc26a; this land adds mutants-t4750.json + s6a line. Open: runner job J-20261118-1630, land_mutants at the land commit, tick.
 
 - T-4842 ticked 11-20 (0e72abbb2e). Date report is Ines's T-5341 (none sent by 11-20). Lesson: board_tick add needs a typed Done-when, Targets and --by, and no Until on app lines.
@@ -48,7 +46,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-4866 11-19 done (5d38a8a84e+81a18acbdc). Lesson: the runner carries no TEST_RUNNER_* and only PyWidgetTests filters; a UI test that skips without env proves nothing there, and a UI filter queues the full suite (~60 min).
 
 
-- T-0043 11-19 04d6503c07 on personal/b2 (recut of 6e5fc761ba): 6 escape tests green on main, 0 skipped. Open: ready b2 T-0043 xc (refused in-session), full PyWidgetTests. Lesson: scratch copy needs Vendor/ links, and Runestone from the lane worktree, not ~/itsthecompany (stale, no lineNumberMarks).
+- T-0043 11-19 04d6503c07 on personal/b2 (recut of 6e5fc761ba): 6 escape tests green on main, 0 skipped. Open: ready b2 T-0043 xc (refused in-session), full PyWidgetTests. Lesson: scratch copy needs Vendor/ links, and Runestone from the <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> worktree, not ~/itsthecompany (stale, no lineNumberMarks).
 
 - T-5125 11-20: 8ca8746ce1 xc.sh probes quiet spells (XC_PROBE_AFTER 300 s; spells on stderr). T-5226 = host-wide stall (both slots silent same seconds), requeued J-20261120-0121. Open: T-5124 token test, never green since T-4962's own id; read the 2:00 AM daily's why line (f6a7b386cb ext answers). T-5251 mine: 'slow healthy run' flakes on main too under load. Lesson: runner/progress.json history (git log on macbook-results) gives per-minute log bytes per job.
 
@@ -57,6 +55,8 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-0053 11-20: C2-Q1 ruled (fix only in 2nd extension's container). Parts 1-2 as T-5365 (Shared/Bridge/LocationRefresh.swift, route not installed). Open: part 3 target + lane placement (Pernille), part 4 footprint. Lesson: XCTAssert autoclosures take no await; hoist into a let.
 
 - T-5432 11-21: Foundations 6.0 (3.8-9.7), Pages 4.25 (2.6-7.75) on the slot; release Sat 2027-07-17 (T-4266 range 04-07 to 12-11; T-4770 line Sun 07-18). Lesson: ls Core/Sources shows symlinks; grep with --include needs quotes in zsh; ops/state.md is 14 KB, over its 8 KB aim.
+
+- T-4182 11-21 (a2): T-0048 slice = T-5272 (ConsoleModel.openAt, 3/5 red on mutant) + T-4801 (export names the widget's own project). Left: T-5438 (s3 rows, update steps, Home Screen capture); T-4800, T-4802, T-5273 open. Lesson: board add wants a 3-10 word title, a docs page in Done when, --by.
 
 ## Lessons
 - Older lessons and dated logs: archive.md.

@@ -1,12 +1,21 @@
 {
  "schema": 1,
- "at": "2026-11-21T14:16:11.507903+00:00",
+ "at": "2026-11-21T14:25:32.160120+00:00",
  "session": {
   "active": false,
   "kind": "",
   "started": null,
   "flow": [],
   "done": [
+   {
+    "t": "T-5234",
+    "name": "Move merge tests to the MacBook under heavy load",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "failed",
+    "end_at": 1795270868,
+    "why": "tests failed"
+   },
    {
     "t": "T-5234",
     "name": "Move merge tests to the MacBook under heavy load",
@@ -87,19 +96,10 @@
     "end": "failed",
     "end_at": 1795236175,
     "why": "tests failed"
-   },
-   {
-    "t": "T-5234",
-    "name": "Move merge tests to the MacBook under heavy load",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "failed",
-    "end_at": 1795232324,
-    "why": "did not merge cleanly"
    }
   ],
   "landed": 3,
-  "failed": 12
+  "failed": 13
  },
  "workers": [],
  "who": "",
@@ -184,12 +184,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-21T09:26:56-05:00",
+ "next_tick": "2026-11-21T09:34:57-05:00",
  "personal": {
   "week_pct": 97.89,
   "usage_pct": 49.5,
   "work_pct": 80.6,
-  "read_at": "2026-11-21T14:20:00+00:00",
+  "read_at": "2026-11-21T14:28:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -219,14 +219,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-21T09:18:00-05:00",
+   "at": "2026-11-21T09:26:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-21T09:20:00-05:00",
+  "at": "2026-11-21T09:28:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -424,11 +424,11 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-21T14:16:11Z",
+  "at": "2026-11-21T14:25:32Z",
   "s": {}
  },
  "ln": {
-  "at": "2026-11-21T14:16:11Z",
+  "at": "2026-11-21T14:25:32Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -442,11 +442,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 2756,
-    "failed": 59,
+    "conflicted": 2766,
+    "failed": 4,
     "held": null,
     "retry": null,
-    "parked": 1599
+    "parked": 1608
    },
    "cur": [],
    "ld": [
@@ -456,8 +456,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-21T14:16:12Z",
-    "ld": 0.37,
+    "at": "2026-11-21T14:25:32Z",
+    "ld": 0.33,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -498,11 +498,11 @@
      "open": true
     }
    },
-   "at": "2026-11-21T14:16:11+00:00"
+   "at": "2026-11-21T14:25:32+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-21T14:16:11+00:00"
+   "at": "2026-11-21T14:25:32+00:00"
   }
  },
  "operators": [],
@@ -526,10 +526,10 @@
   "main": 0,
   "lanes": 0,
   "total": 0,
-  "at": "9:20 AM",
-  "why": "Plan limit: the weekly allowance is used up; it resets Sun 2:00 AM ET. Last check 9:19 AM ET.",
-  "at_iso": "2026-11-21T14:20:00+00:00",
+  "at": "9:28 AM",
+  "why": "Plan limit: the weekly allowance is used up; it resets Sun 2:00 AM ET. Last check 9:28 AM ET.",
+  "at_iso": "2026-11-21T14:28:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:20 AM ET</p><p class=\"an-why\">Plan limit: the weekly allowance is used up; it resets Sun 2:00 AM ET. Last check 9:19 AM ET.</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:28 AM ET</p><p class=\"an-why\">Plan limit: the weekly allowance is used up; it resets Sun 2:00 AM ET. Last check 9:28 AM ET.</p></section>"
  }
 }

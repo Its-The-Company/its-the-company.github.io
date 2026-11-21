@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-21T19:23:14.467143+00:00",
+ "at": "2026-11-21T19:28:09.123741+00:00",
  "session": {
   "active": false,
   "kind": "",
@@ -199,12 +199,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-21T14:36:02-05:00",
+ "next_tick": "2026-11-21T14:40:56-05:00",
  "personal": {
-  "week_pct": 100.91,
-  "usage_pct": 50.2,
-  "work_pct": 82.0,
-  "read_at": "2026-11-21T19:26:00+00:00",
+  "week_pct": 102.92,
+  "usage_pct": 50.7,
+  "work_pct": 82.1,
+  "read_at": "2026-11-21T19:30:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -259,14 +259,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-21T14:24:00-05:00",
+   "at": "2026-11-21T14:28:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-21T14:26:00-05:00",
+  "at": "2026-11-21T14:30:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -464,88 +464,87 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-21T19:23:14Z",
+  "at": "2026-11-21T19:28:09Z",
   "s": {
    "T-4181": [
-    "merging",
-    "Host checks on the Mac mini",
-    1795288814467
+    "mergetest",
+    "Xcode checks on the MacBook",
+    1795289289123
    ],
    "T-0337": [
-    "merging",
-    "Host checks on the Mac mini",
-    1795288814467
+    "mergetest",
+    "Xcode checks on the MacBook",
+    1795289289123
    ],
    "T-2097": [
-    "merging",
-    "Host checks on the Mac mini",
-    1795288814467
+    "mergetest",
+    "Xcode checks on the MacBook",
+    1795289289123
    ],
-   "T-4184": [
-    "merged",
-    "on main 1:12 PM ET",
-    1795284761000,
-    ""
+   "T-4192": [
+    "mergeq",
+    "1st to merge",
+    1795289109123
    ]
   },
   "nm": {
    "T-4181": "Widgets refresh on their own and by a tap",
    "T-0337": "Confirm the revenue memo's facts from Apple pages",
    "T-2097": "Read free memory in the widget extension on a device",
-   "T-4184": "A person's own script becomes a Home Screen widget"
+   "T-4192": "Python in the app: smaller bundle, installable packages"
   },
   "wk": {
    "T-4181": "Idris",
    "T-0337": "Wrenna",
    "T-2097": "Idris",
-   "T-4184": "Idris"
+   "T-4192": "Pernille"
   }
  },
  "ln": {
-  "at": "2026-11-21T19:23:14Z",
+  "at": "2026-11-21T19:28:09Z",
   "mq": {
    "n": {
     "checking": 3,
-    "inline": 0,
+    "inline": 1,
     "conflicted": 1,
     "failed": 0,
     "held": 0,
     "retry": 1,
-    "parked": 3
+    "parked": 12
    },
    "m": {
-    "checking": 3,
-    "inline": null,
-    "conflicted": 3063,
+    "checking": 0,
+    "inline": 3,
+    "conflicted": 3068,
     "failed": null,
     "held": null,
-    "retry": 53,
-    "parked": 1906
+    "retry": 58,
+    "parked": 4
    },
    "cur": [
     [
      [
       "T-4181"
      ],
-     "Mac tests",
-     "Mac mini",
-     3
+     "iPhone app tests",
+     "MacBook",
+     0
     ],
     [
      [
       "T-0337"
      ],
-     "Mac tests",
-     "Mac mini",
-     3
+     "iPhone app tests",
+     "MacBook",
+     0
     ],
     [
      [
       "T-2097"
      ],
-     "Mac tests",
-     "Mac mini",
-     3
+     "iPhone app tests",
+     "MacBook",
+     0
     ]
    ],
    "ld": [
@@ -555,12 +554,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-21T19:23:15Z",
-    "ld": 2.43,
+    "at": "2026-11-21T19:28:09Z",
+    "ld": 1.72,
     "c": 8,
     "sb": 1,
     "dk": [
-     59.1,
+     58.9,
      228.3
     ],
     "ss": [
@@ -586,35 +585,35 @@
  },
  "hc": {
   "wait": {
-   "n": 6,
+   "n": 18,
    "limit": 20,
-   "in_line": 1,
-   "parked": 5,
+   "in_line": 4,
+   "parked": 14,
    "open": true,
    "mq": false,
-   "counted": "2026-11-21T19:15:40+00:00",
+   "counted": "2026-11-21T14:25:56-05:00",
    "by": {
     "app": {
-     "n": 3,
+     "n": 6,
      "limit": 20,
      "open": true
     },
     "other": {
-     "n": 3,
+     "n": 12,
      "limit": 20,
      "open": true
     },
     "hub": {
-     "n": 0,
+     "n": 2,
      "limit": 1,
-     "open": true
+     "open": false
     }
    },
-   "at": "2026-11-21T19:23:14+00:00"
+   "at": "2026-11-21T19:28:09+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-21T19:23:14+00:00"
+   "at": "2026-11-21T19:28:09+00:00"
   }
  },
  "operators": [
@@ -624,17 +623,8 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 4 tasks",
-   "at": "2026-11-21T14:21:36-05:00"
-  },
-  {
-   "w": "Operator",
-   "a": "Jeremy's Account",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Inbox \u2013 Evan's 2:23 PM Message on GitHub",
-   "at": "2026-11-21T14:23:19-05:00"
+   "t": "Work session \u2013 1 task",
+   "at": "2026-11-21T14:27:33-05:00"
   },
   {
    "w": "Operator",
@@ -643,7 +633,7 @@
    "m": "opus",
    "e": "high",
    "t": "Work session \u2013 1 task",
-   "at": "2026-11-21T14:12:35-05:00"
+   "at": "2026-11-21T14:25:54-05:00"
   },
   {
    "w": "Operator",
@@ -651,25 +641,25 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 1 task",
-   "at": "2026-11-21T14:17:55-05:00"
+   "t": "Inbox \u2013 Evan's 2:25 PM Message on GitHub",
+   "at": "2026-11-21T14:25:50-05:00"
   }
  ],
  "reply": {
-  "sent": "2026-11-21T19:20:40Z",
-  "seconds": 55.0
+  "sent": "2026-11-21T19:23:04Z",
+  "seconds": 169.0
  },
  "inbox": [
   {
-   "id": "c7067981085",
+   "id": "c7068011280",
    "state": "waiting",
    "position": 1,
-   "eta": "2026-11-21T14:36:02-05:00",
+   "eta": "2026-11-21T14:40:56-05:00",
    "tasks": {
     "open": 0,
     "done": 0
    },
-   "title": "Stop the app work until the..."
+   "title": "The one coordinator should be on for..."
   }
  ],
  "trimmed": [
@@ -688,10 +678,10 @@
   "main": 0,
   "lanes": 2,
   "total": 2,
-  "at": "2:26 PM",
+  "at": "2:30 PM",
   "why": "",
-  "at_iso": "2026-11-21T19:26:00+00:00",
+  "at_iso": "2026-11-21T19:30:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 2:26 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 2:30 PM ET</p></section>"
  }
 }

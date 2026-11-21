@@ -1,67 +1,11 @@
 {
  "schema": 1,
- "at": "2026-11-21T17:32:46.801519+00:00",
+ "at": "2026-11-21T17:37:35.048224+00:00",
  "session": {
   "active": false,
   "kind": "",
   "started": null,
   "flow": [
-   {
-    "t": "T-4286",
-    "name": "Check an imported font draws in a widget",
-    "w": "Idris",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "claimed",
-      "at": 1795281057
-     },
-     {
-      "s": "worker",
-      "at": 1795281057
-     },
-     {
-      "s": "testq",
-      "at": 1795281861
-     }
-    ]
-   },
-   {
-    "t": "T-4477",
-    "name": "People build a widget from blocks without code",
-    "w": "Idris",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "claimed",
-      "at": 1795281033
-     },
-     {
-      "s": "worker",
-      "at": 1795281033
-     },
-     {
-      "s": "testq",
-      "at": 1795281861
-     }
-    ]
-   },
-   {
-    "t": "T-4435",
-    "name": "Draw the wrapped refresh glyph on both runtimes",
-    "w": "Idris",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "claimed",
-      "at": 1795282314
-     },
-     {
-      "s": "worker",
-      "at": 1795282314
-     }
-    ]
-   },
    {
     "t": "T-5354",
     "name": "Land the finished test fixes and three small fixes",
@@ -189,57 +133,71 @@
       "at": 1795280889
      }
     ]
-   },
+   }
+  ],
+  "done": [
    {
     "t": "T-3765",
     "name": "Check a real widget tap on the TestFlight build",
     "w": "Idris",
     "acct": "Personal a",
-    "steps": [
-     {
-      "s": "claimed",
-      "at": 1795280857
-     },
-     {
-      "s": "worker",
-      "at": 1795280857
-     }
-    ]
+    "steps": [],
+    "end": "landed",
+    "end_at": 1795282636
    },
    {
     "t": "T-3495",
     "name": "Check the upload fix before build 4 goes out",
     "w": "Pernille",
     "acct": "Personal a",
-    "steps": [
-     {
-      "s": "claimed",
-      "at": 1795280828
-     },
-     {
-      "s": "worker",
-      "at": 1795280828
-     }
-    ]
+    "steps": [],
+    "end": "landed",
+    "end_at": 1795282591
    },
    {
     "t": "T-0678",
     "name": "Run the refresh button inside the widget extension",
     "w": "Idris",
     "acct": "Personal a",
-    "steps": [
-     {
-      "s": "claimed",
-      "at": 1795280789
-     },
-     {
-      "s": "worker",
-      "at": 1795280789
-     }
-    ]
-   }
-  ],
-  "done": [
+    "steps": [],
+    "end": "landed",
+    "end_at": 1795282555
+   },
+   {
+    "t": "T-4435",
+    "name": "Draw the wrapped refresh glyph on both runtimes",
+    "w": "Idris",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1795282385
+   },
+   {
+    "t": "T-4188",
+    "name": "Location, steps and notifications work in scripts and widgets",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1795282385
+   },
+   {
+    "t": "T-4286",
+    "name": "Check an imported font draws in a widget",
+    "w": "Idris",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1795282380
+   },
+   {
+    "t": "T-4477",
+    "name": "People build a widget from blocks without code",
+    "w": "Idris",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1795282380
+   },
    {
     "t": "T-4010",
     "name": "Rebuild This Session as a full flowchart",
@@ -267,71 +225,9 @@
     "steps": [],
     "end": "landed",
     "end_at": 1795281495
-   },
-   {
-    "t": "T-0337",
-    "name": "Confirm the revenue memo's facts from Apple pages",
-    "w": "Wrenna",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1795281372
-   },
-   {
-    "t": "T-4181",
-    "name": "Widgets refresh on their own and by a tap",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1795280567
-   },
-   {
-    "t": "T-0337",
-    "name": "Confirm the revenue memo's facts from Apple pages",
-    "w": "Wrenna",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1795280021
-   },
-   {
-    "t": "T-2097",
-    "name": "Read free memory in the widget extension on a device",
-    "w": "Idris",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1795279533
-   },
-   {
-    "t": "T-5234",
-    "name": "Move merge tests to the MacBook under heavy load",
-    "w": "Odalys",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1795279528
-   },
-   {
-    "t": "T-0337",
-    "name": "Confirm the revenue memo's facts from Apple pages",
-    "w": "Wrenna",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1795279485
-   },
-   {
-    "t": "T-4477",
-    "name": "People build a widget from blocks without code",
-    "w": "Idris",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1795278643
    }
   ],
-  "landed": 18,
+  "landed": 25,
   "failed": 11
  },
  "workers": [],
@@ -381,28 +277,28 @@
    "pct": 0.0,
    "resets_at": null,
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-21T12:22:31.518995-05:00",
+   "read_at": "2026-11-21T12:33:48.720347-05:00",
    "source": "usage",
    "left": 100.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 100.0,
-   "resets_at": "2026-11-22T06:59:59.690975+00:00",
+   "resets_at": "2026-11-22T07:00:00.047939+00:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-21T12:22:31.518995-05:00",
+   "read_at": "2026-11-21T12:33:48.720347-05:00",
    "source": "usage",
    "left": 0.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 36.0,
-   "resets_at": "2026-11-22T06:59:59.691154+00:00",
+   "resets_at": "2026-11-22T07:00:00.048093+00:00",
    "used_words": "of the Fable weekly allowance used",
-   "read_at": "2026-11-21T12:22:31.518995-05:00",
+   "read_at": "2026-11-21T12:33:48.720347-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-21T12:22:31.518995-05:00"
+  "read_at": "2026-11-21T12:33:48.720347-05:00"
  },
  "ui": {
   "week_pct": 0.123,
@@ -417,12 +313,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-21T12:45:39-05:00",
+ "next_tick": "2026-11-21T12:48:49-05:00",
  "personal": {
-  "week_pct": 100.24,
+  "week_pct": 100.37,
   "usage_pct": 50.1,
-  "work_pct": 81.6,
-  "read_at": "2026-11-21T17:34:00+00:00",
+  "work_pct": 81.7,
+  "read_at": "2026-11-21T17:39:00+00:00",
   "running": [
    {
     "lane": "a3",
@@ -465,14 +361,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-21T12:33:00-05:00",
+   "at": "2026-11-21T12:37:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-21T12:34:00-05:00",
+  "at": "2026-11-21T12:39:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -670,140 +566,51 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-21T17:32:46Z",
-  "s": {
-   "T-0337": [
-    "mergetest",
-    "Xcode checks on the Mac mini",
-    1795281886801
-   ],
-   "T-2097": [
-    "mergetest",
-    "Xcode checks on the Mac mini",
-    1795281886801
-   ],
-   "T-4010": [
-    "mergetest",
-    "Xcode checks on the Mac mini",
-    1795281886801
-   ],
-   "T-4477": [
-    "mergetest",
-    "Xcode checks on the Mac mini",
-    1795281886801
-   ],
-   "T-4286": [
-    "mergetest",
-    "Xcode checks on the Mac mini",
-    1795281886801
-   ],
-   "T-4188": [
-    "mergeq",
-    "1st to merge",
-    1795282366801
-   ],
-   "T-4435": [
-    "mergeq",
-    "1st to merge",
-    1795282366801
-   ]
-  },
-  "nm": {
-   "T-0337": "Confirm the revenue memo's facts from Apple pages",
-   "T-2097": "Read free memory in the widget extension on a device",
-   "T-4010": "Rebuild This Session as a full flowchart",
-   "T-4477": "People build a widget from blocks without code",
-   "T-4286": "Check an imported font draws in a widget",
-   "T-4188": "Location, steps and notifications work in scripts and...",
-   "T-4435": "Draw the wrapped refresh glyph on both runtimes"
-  },
-  "wk": {
-   "T-0337": "Wrenna",
-   "T-2097": "Idris",
-   "T-4010": "Odalys",
-   "T-4477": "Idris",
-   "T-4286": "Idris",
-   "T-4188": "Idris",
-   "T-4435": "Idris"
-  }
+  "at": "2026-11-21T17:37:35Z",
+  "s": {}
  },
  "ln": {
-  "at": "2026-11-21T17:32:46Z",
+  "at": "2026-11-21T17:37:35Z",
   "mq": {
    "n": {
-    "checking": 5,
-    "inline": 2,
+    "checking": 0,
+    "inline": 0,
     "conflicted": 1,
-    "failed": 1,
+    "failed": 0,
     "held": 0,
-    "retry": 0,
+    "retry": 1,
     "parked": 3
    },
    "m": {
-    "checking": 8,
-    "inline": 0,
-    "conflicted": 2953,
-    "failed": 11,
+    "checking": null,
+    "inline": null,
+    "conflicted": 2958,
+    "failed": null,
     "held": null,
-    "retry": null,
-    "parked": 1796
+    "retry": 15,
+    "parked": 1800
    },
-   "cur": [
-    [
-     [
-      "T-0337"
-     ],
-     "iPhone app tests",
-     "Mac mini",
-     8
-    ],
-    [
-     [
-      "T-2097"
-     ],
-     "iPhone app tests",
-     "Mac mini",
-     8
-    ],
-    [
-     [
-      "T-4010"
-     ],
-     "iPhone app tests",
-     "Mac mini",
-     8
-    ],
-    [
-     [
-      "T-4477"
-     ],
-     "iPhone app tests",
-     "Mac mini",
-     8
-    ]
-   ],
+   "cur": [],
    "ld": [
-    22,
-    "2026-11-21T17:24:19Z"
+    30,
+    "2026-11-21T17:37:16Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-21T17:32:47Z",
-    "ld": 2.11,
+    "at": "2026-11-21T17:37:35Z",
+    "ld": 1.14,
     "c": 8,
-    "sb": 1,
+    "sb": 0,
     "dk": [
-     61.7,
+     62.2,
      228.3
     ],
     "ss": [
      171.9,
      953.7
     ],
-    "sn": [
-     "iPhone 17e"
-    ]
+    "sn": []
    }
   }
  },
@@ -833,17 +640,27 @@
      "open": true
     }
    },
-   "at": "2026-11-21T17:32:46+00:00"
+   "at": "2026-11-21T17:37:35+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-21T17:32:46+00:00"
+   "at": "2026-11-21T17:37:35+00:00"
   }
  },
- "operators": [],
+ "operators": [
+  {
+   "w": "Operator",
+   "a": "Evan's Account",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session \u2013 1 task",
+   "at": "2026-11-21T12:35:41-05:00"
+  }
+ ],
  "reply": {
-  "sent": "2026-11-21T17:30:10Z",
-  "seconds": 58.0
+  "sent": "2026-11-21T17:34:46Z",
+  "seconds": 11.0
  },
  "inbox": [],
  "trimmed": [
@@ -861,10 +678,10 @@
   "main": 0,
   "lanes": 1,
   "total": 1,
-  "at": "12:34 PM",
+  "at": "12:39 PM",
   "why": "",
-  "at_iso": "2026-11-21T17:34:00+00:00",
+  "at_iso": "2026-11-21T17:39:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 12:34 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 12:39 PM ET</p></section>"
  }
 }

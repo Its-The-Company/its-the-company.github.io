@@ -15,6 +15,14 @@ Ines, 2026-10-25 7:27 PM ET; redrawn 2026-10-31 1:02 PM ET (T-0888). Scope: pywi
 
 **Goal (11-04, replaced by the <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span> notes of 2026-11-13 10:53 AM, 2026-11-15 6:34 AM, 2026-11-15 10:00 PM, 2026-11-15 10:15 PM and 2026-11-17 1:18 PM below; kept as written).** Release version 1.0 on Tuesday 2026-12-15 (Day 55), inside the Investors' goal of release by Day 60 (2026-12-20). Feature freeze Monday 2026-11-30 (Day 40). Submit Tuesday 2026-12-08 (Day 48), with the Investors' approval. The date can move either way; every move goes in the next report and a comment on #41. v1 = the IDE (runtime, editor, console, projects, native prompts, Shortcuts) plus a narrow widget engine and 12 premade widgets, with one Pro purchase. Widget freshness is the first product priority (amendment 2026-10-29 7:33 AM).
 
+## Chair note, 2026-11-21 10:10 AM ET (Ines, T-4770): the release re-estimated from measured build speed; likely Thu 2027-07-15 stands
+
+an Investor asked on #41 (c6961475730, 4:26 PM 11-17) whether the July date was estimating error. The answer, in [`ops/plans/T-4770-reestimate.md`](../company/t-4770-reestimate.html): mostly no. On the work measured to its end, the company has built at about its estimates or slower (two points only: phase A 0.57 by its done-line, near 1.4 with its review tail; the freshness group at least 1.7). The date comes from the scope added 11-13 to 11-16, not from pessimistic figures.
+
+Two checks by Idris moved the line after 11-17 (07-12 below). Snap-to-layout went to 4.25 slot weeks (T-4870, 11-18: Wed 2027-07-21). Two-way editing went to 2.0 on the slot (T-4871, 11-19, abd01d6c48: **Thu 2027-07-15, Day 267, range 2027-04-04 to 2027-12-01**). `ops/milestones.json` carries that line. The measured-rate script (`ops/plans/T-4770-release-estimate.py`, with both checks) gives likely Fri 2027-07-16, one day later, range 2027-02-16 to 2027-12-04. The likely dates agree, so the milestones do not move. The script's earlier best end rests on phase A's 0.57 alone, which Idris puts near 1.4 with its tail, so the milestones keep the 04-04 best end.
+
+Still not checked by Idris: Foundations (5 slot weeks, 3 to 8) and Pages (5, 3 to 8), both my figures from 05-timeline.md. His check is T-5432 (Idris, small). This is a small move under an Investor's rule (#325 c6977134306): it goes in the next report, not in its own comment.
+
 ## Chair note, 2026-11-17 1:18 PM ET (Ines, T-4689): phase A closed, Developer mode next, phase C may start beside B; the release moves 1 day
 
 an Investor ruled at 11:37 PM ET 11-16 (11:37 PM ET, #41 c6938494530; log/rulings.md 2026-11-16 11:37 PM, in the Handbook's standing instructions). Recorded as chair; this note is the record.

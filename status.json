@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-21T20:50:34.251797+00:00",
+ "at": "2026-11-21T21:00:16.062511+00:00",
  "session": {
   "active": false,
   "kind": "",
@@ -24,6 +24,41 @@
    }
   ],
   "done": [
+   {
+    "t": "T-5449",
+    "name": "Write the coordinator session's prompt",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "failed",
+    "end_at": 1795294681,
+    "why": "tests failed"
+   },
+   {
+    "t": "T-5397",
+    "name": "Build the one coordinator for both roads by Sunday",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "failed",
+    "end_at": 1795294681,
+    "why": "tests failed"
+   },
+   {
+    "t": "T-5448",
+    "name": "Give each worker one task and wake on exit",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "failed",
+    "end_at": 1795294681,
+    "why": "tests failed"
+   },
+   {
+    "t": "T-0802",
+    "name": "Review the package sandbox Mach change independently",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1795294277
+   },
    {
     "t": "T-5448",
     "name": "Give each worker one task and wake on exit",
@@ -72,45 +107,10 @@
     "steps": [],
     "end": "landed",
     "end_at": 1795290907
-   },
-   {
-    "t": "T-5448",
-    "name": "Give each worker one task and wake on exit",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "failed",
-    "end_at": 1795290801,
-    "why": "tests failed"
-   },
-   {
-    "t": "T-5262",
-    "name": "Trim step 9, merge checks agree on every run",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "failed",
-    "end_at": 1795290801,
-    "why": "tests failed"
-   },
-   {
-    "t": "T-4185",
-    "name": "Launcher widgets open the apps a person chose",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1795290031
-   },
-   {
-    "t": "T-5433",
-    "name": "A person confirms where the held-path fix lives",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "failed",
-    "end_at": 1795290013,
-    "why": "did not merge cleanly"
    }
   ],
-  "landed": 63,
-  "failed": 18
+  "landed": 64,
+  "failed": 21
  },
  "workers": [],
  "who": "",
@@ -151,7 +151,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 661,
+  "runnable_count": 663,
   "blocked_count": 2
  },
  "meter": {
@@ -195,13 +195,38 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-21T15:59:27-05:00",
+ "next_tick": "2026-11-21T16:09:24-05:00",
  "personal": {
   "week_pct": 103.35,
   "usage_pct": 50.8,
   "work_pct": 82.7,
-  "read_at": "2026-11-21T20:54:00+00:00",
+  "read_at": "2026-11-21T21:03:00+00:00",
   "running": [
+   {
+    "lane": "a",
+    "task": "T-4793",
+    "w": "Ines",
+    "k": "plan",
+    "t": "Say how Day phases gets fresh train times",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-21T15:55:37-05:00",
+    "n": "Evan",
+    "d": 1,
+    "src": "plan-a"
+   },
+   {
+    "lane": "a",
+    "task": "T-4795",
+    "w": "Ines",
+    "k": "plan",
+    "t": "Weigh the showcase set against the Builder-first ruling",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-21T15:55:37-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
    {
     "lane": "b",
     "task": "T-0802",
@@ -224,6 +249,32 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-21T15:26:25-05:00",
+    "n": "Jeremy",
+    "d": 1,
+    "src": "plan-b"
+   },
+   {
+    "lane": "b2",
+    "task": "T-5381",
+    "w": "Idris",
+    "k": "review",
+    "t": "Check finished work before it ships",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-21T15:57:24-05:00",
+    "n": "Jeremy",
+    "d": 1,
+    "src": "plan-b"
+   },
+   {
+    "lane": "b2",
+    "task": "T-5439",
+    "w": "Wrenna",
+    "k": "research",
+    "t": "Find how a ratings graph site gets IMDb data",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-21T15:57:24-05:00",
     "n": "Jeremy",
     "src": "plan-b"
    },
@@ -280,14 +331,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-21T15:51:00-05:00",
+   "at": "2026-11-21T16:01:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-21T15:54:00-05:00",
+  "at": "2026-11-21T16:03:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -440,7 +491,7 @@
    }
   ],
   "count": {
-   "next": 661,
+   "next": 663,
    "wait": 2,
    "blocked": 0,
    "you": 2
@@ -485,11 +536,24 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-21T20:50:34Z",
-  "s": {}
+  "at": "2026-11-21T21:00:16Z",
+  "s": {
+   "T-0802": [
+    "merged",
+    "on main 3:51 PM ET",
+    1795294266000,
+    ""
+   ]
+  },
+  "nm": {
+   "T-0802": "Review the package sandbox Mach change independently"
+  },
+  "wk": {
+   "T-0802": "Odalys"
+  }
  },
  "ln": {
-  "at": "2026-11-21T20:50:34Z",
+  "at": "2026-11-21T21:00:16Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -504,42 +568,40 @@
     "checking": null,
     "inline": null,
     "conflicted": null,
-    "failed": 29,
+    "failed": 39,
     "held": null,
-    "retry": 11,
-    "parked": 1993
+    "retry": 21,
+    "parked": 2003
    },
    "cur": [],
    "ld": [
-    72,
-    "2026-11-21T20:17:54Z"
+    73,
+    "2026-11-21T20:51:17Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-21T20:50:37Z",
-    "ld": 15.89,
+    "at": "2026-11-21T21:00:17Z",
+    "ld": 9.53,
     "c": 8,
-    "sb": 1,
+    "sb": 0,
     "dk": [
-     54.7,
+     52.3,
      228.3
     ],
     "ss": [
      171.9,
      953.7
     ],
-    "sn": [
-     "T0044-idris"
-    ]
+    "sn": []
    },
    "macbook": {
-    "at": "2026-11-21T20:19:03Z",
-    "ld": 0.21,
+    "at": "2026-11-21T20:55:59Z",
+    "ld": 0.22,
     "c": 12,
     "sb": 0,
     "dk": [
-     360.8,
+     360.9,
      926.4
     ],
     "sn": []
@@ -548,13 +610,13 @@
  },
  "hc": {
   "wait": {
-   "n": 8,
+   "n": 7,
    "limit": 20,
-   "in_line": 0,
-   "parked": 8,
+   "in_line": 4,
+   "parked": 3,
    "open": true,
    "mq": false,
-   "counted": "2026-11-21T20:45:46+00:00",
+   "counted": "2026-11-21T20:55:56+00:00",
    "by": {
     "app": {
      "n": 2,
@@ -562,7 +624,7 @@
      "open": true
     },
     "other": {
-     "n": 6,
+     "n": 5,
      "limit": 20,
      "open": true
     },
@@ -572,14 +634,23 @@
      "open": false
     }
    },
-   "at": "2026-11-21T20:50:34+00:00"
+   "at": "2026-11-21T21:00:16+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-21T20:50:34+00:00"
+   "at": "2026-11-21T21:00:16+00:00"
   }
  },
  "operators": [
+  {
+   "w": "Operator",
+   "a": "Evan's Account",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session \u2013 2 tasks",
+   "at": "2026-11-21T15:55:36-05:00"
+  },
   {
    "w": "Operator",
    "a": "Jeremy's Account",
@@ -588,6 +659,15 @@
    "e": "high",
    "t": "Work session \u2013 1 task",
    "at": "2026-11-21T15:26:25-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Jeremy's Account",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session \u2013 2 tasks",
+   "at": "2026-11-21T15:57:24-05:00"
   },
   {
    "w": "Operator",
@@ -617,12 +697,12 @@
  ],
  "agents_now": {
   "main": 0,
-  "lanes": 2,
-  "total": 2,
-  "at": "3:54 PM",
+  "lanes": 4,
+  "total": 4,
+  "at": "4:03 PM",
   "why": "",
-  "at_iso": "2026-11-21T20:54:00+00:00",
+  "at_iso": "2026-11-21T21:03:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 3:54 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 4:03 PM ET</p></section>"
  }
 }

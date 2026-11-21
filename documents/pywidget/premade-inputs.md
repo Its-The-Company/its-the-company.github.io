@@ -88,6 +88,18 @@ carries the same passage, and the brackets below follow it.
 11. **Countdown** (kept, s3.1; no tag).
 12. **Pattern of the day** (new, last, conditional; Pro only if it uses an advanced library that ships in 1.0).
 
+**How Day phases refreshes (T-4793, Ines, 2026-11-21; plan s4.3).** The view changes at each phase start from
+timeline entries, with no run. The train times come from the widget lane first. When iOS reloads the widget, its
+script fetches and decodes the MTA feed inside the widget, at most once every 15 minutes, free for everyone (#324 A).
+That holds only if four things are true: the fetch plus decode fits 2.0 s at P <= 11 MB, measured in T-4673; the feed
+fits the extension's 256 KiB cap; `pywidget.net.get` can return the binary feed intact (at HEAD it returns text only);
+and the lane is on in the store build (at HEAD it is on only in Debug and gate builds). Otherwise Day phases runs in
+the app lane. It then fetches when PyWidget opens, when a Shortcuts automation runs Refresh Widgets, or on a refresh
+tap (its face has none). An iOS reload then only redraws the saved times. Background refresh counts only once T-0793
+is built and kept in 1.0. The widget always shows "Updated" with the time, and "No recent times. Open PyWidget to
+update." after 30 minutes. Its Gallery page claims only what the build does, with no refresh figure and never "live"
+(ADR-007 s10).
+
 **Leaving the Gallery** (code and tests stay in the repo): Day progress (folds into Day phases), Steps and floors,
 Distance to a saved place (s3.4), Altitude, Storage, Quote of the day. Sections 3 and 9 below describe the built
 premades as designed; the reworked ones get their Page fields in their own build lines. No Pro tag or offer is ever

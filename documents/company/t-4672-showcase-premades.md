@@ -221,13 +221,81 @@ only.
   phase's view, so the widget changes at 6:00, 10:00 AM, 5:00 and 9:00 even if no code runs then.
 - **Inside a transit phase**, entries at most every 5 minutes (Apple: entries "at least about 5 minutes apart", L2),
   each showing only arrivals after its own time.
-- **Fetching** happens in PyWidget's run (the app lane, as GitHub repository does), never in a widget-side run: a run
-  inside the widget has no network wait (ADR-011 s4). It runs when PyWidget opens, on background refresh (free under
-  #278), and on a reload requested for 5 minutes before each transit phase and every 15 minutes inside one. iOS
-  decides when; a frequently viewed widget gets 40 to 70 reloads a day (L2), and this plan asks for about 20.
-  `stale_after_seconds` 900 in transit phases.
+- **Fetching: the widget lane first** (rewritten 2026-11-21 under T-4793, from Pernille's review T-4720 H1). The
+  first text here kept the fetch out of the widget because "a run inside the widget has no network wait (ADR-011
+  s4)". ADR-011 s4 says no such thing, and `pywidget.net.get` is the same call in both processes (ADR-007 s2 table;
+  `Shared/Bridge/LaneDevice.swift:38` answers it in the extension). It also said the app-lane fetch ran on
+  background refresh and on WidgetKit's reloads. Neither is true: background refresh is not built, and a WidgetKit
+  reload of an app-lane widget runs no Python (ADR-007 s4.1 T6). Day phases is placed like every widget, in the
+  widget when it fits and in the app when it does not (ADR-007 s3 items 3, 4 and 7; #283, `log/rulings.md:2102`).
+  The paths to fresh times, in order:
+  1. **The widget lane, first.** When WidgetKit asks for a timeline, a `lane: widget` script runs in the widget
+     (ADR-007 s4.1 T6 and s5). It runs again only 15 minutes or more after its last run (`LaneRerunRule.due`,
+     `Shared/LaneRerunRule.swift:40-47`; `RefreshSchedule.floor`). This is the only path on which iOS's own reloads
+     fetch new times without PyWidget opening. It is free for everyone: a widget's own updates in the widget are not
+     Pro (#324 A, `log/rulings.md`, 2026-11-18 12:36 AM). It holds only if all four of these do, and T-4673 checks or
+     measures each:
+     - **It fits the lane.** One fetch plus the pure-Python decode inside the lane's 2.0 s budget (ADR-007 s5
+       "Time") at P <= 11 MB (s3 item 3, W = 23 MB). Measured in the widget in the Day phases build, then on a
+       phone. The extension cuts a request to the time left and never past 3.0 s (`Shared/NetFetch.swift:18`), so
+       the fetch has well under 2 s.
+     - **The feed fits the extension's caps.** At most 256 KiB of body and 512 KiB of reply as escaped text
+       (`NetFetch.swift:16`, `:32`). The feed's size is unknown until the terms are read (s4.4) and one fetch is
+       made in the app.
+     - **The body arrives as bytes.** At HEAD `net.get` returns text only: the charset the server names, else
+       UTF-8, and bytes that do not decode become U+FFFD (`pywidget/ios/App/Runtime/pywidget/net.py:19-27`). A
+       GTFS-realtime file is binary protobuf, so it cannot pass through `net.get` intact in either process.
+       `net.request` (T-3401) has binary responses but is app-only (`APP_ONLY_NET_METHODS`, `lane.py:522`). The
+       widget-lane path needs a binary-safe answer from `net.get` in the extension. That is Swift and runtime work
+       not yet on the board. T-4673 opens it as its own line, with Idris, once the terms are read and the app-side
+       fetch shows the feed fits the caps above. If the feed does not fit, Day phases runs in the app lane, and the
+       editor says so as it does for any widget (ADR-007 s3 item 8).
+     - **The lane is in the store build.** At HEAD the extension lane is on only in a forced Debug build and in the
+       gate build (`Shared/LaneGuard.swift:16-19`). The phone sitting's chair line sets the store build's default
+       (ADR-007 s3 "The lane flag", T-4282). T-2317 (open, from release ruling R1 of 2026-11-04) would compile the
+       lane out of the Release extension. It predates #283 and ADR-007 revision 2, and the two must be reconciled
+       before any store text counts on this path (s10 item 4).
+  2. **The app lane, as fallback.** This is also how a store build runs at HEAD. The fetch reads the body as bytes
+     (`pywidget.http`'s `content`, or `urllib`, both in the app's runtime, ADR-007 s2), on these triggers:
+     - **PyWidget opening** (T1, ADR-007 s4.1). Every placed app-lane widget runs, and the foreground reload costs
+       no budget (L2). A tap on the widget opens PyWidget (s4.2 "No recent times"), so this path is always there.
+     - **A Shortcuts automation that runs Refresh Widgets**, set up by the person (T3).
+       `Shared/RefreshWidgetsIntent.swift` runs every placed widget's script when iOS runs the intent in PyWidget's
+       process. Not yet tried with Day phases on a phone.
+     - **A refresh tap**, if the face has one. Maren's frames draw none ([`pywidget/docs/design/widgets/showcase.md`](../pywidget/showcase.html),
+       Day phases), and T-4673 adds none. On iOS 18 to 26 an app-lane widget's refresh button runs only where iOS
+       puts its intent: in the extension an app-lane widget runs nothing (`Shared/RefreshTapRule.swift`;
+       `ExtensionLane.refresh` returns `notInLane`, `Shared/ExtensionLane.swift:288-290`). On iOS 27+ it runs in the
+       app in the background (`Shared/RefreshWidgetIntent.swift`). Whether a refresh button counts as a Pro button
+       under #324 A is not settled (s10 item 5).
+     - Nothing else. A WidgetKit reload of an app-lane widget draws the saved tree and runs no Python (ADR-007 s4.1
+       T6), so an app-lane Day phases shows times as old as the last of the triggers above.
+  3. **Background refresh, only once it is built.** T2 would run app-lane widgets in the background (ADR-007 s4.1,
+     s12). It is free under #278 (`log/rulings.md:2640`; ADR-007 s12's "only while the person has Pro" predates
+     that ruling). It is not built: `pywidget/ios` has no `BGTaskScheduler`, `.backgroundTask` or
+     `UIBackgroundModes` at HEAD, only `Shared/RefreshSchedule.swift`'s interval helper. T-0793 (build it) and T-0795
+     (whether it stays in 1.0) are open. Day phases counts on it for nothing until T-0793 lands, T-0795 keeps it,
+     and a signed phone has seen it fire (ADR-007 s12 "Whether it ships").
+- **The asks.** In either lane the tree asks for a reload 5 minutes before each transit phase and every 15 minutes
+  inside one. Over the 8 default transit hours that is 2 + 32, about 34 a day. (The first text said about 20; that
+  was my miscount.) iOS decides when. A widget viewed often typically gets 40 to 70 reloads a day, and one viewed
+  rarely gets fewer (L2). In the app lane these reloads only redraw: they drop arrivals already gone and fetch
+  nothing. `stale_after_seconds` 900 in transit phases.
+- **What the Gallery page may claim** (Commandment 6, no misleading claims; ADR-007 s10: "A widget shows its
+  script's last run, not a live feed"):
+  - Always true, so always allowed: Day phases shows the MTA's predicted times as of the "Updated" time on the
+    widget, and opening PyWidget updates them.
+  - Only once the widget lane is on in the store build and Day phases has run in it on a phone, add: it also
+    updates itself when iOS refreshes the widget, and iOS decides how often. No number.
+  - Only once background refresh ships (item 3): nothing beyond what ADR-007 s10 allows.
+  - Never: "live", "real-time" (naming the MTA's own feed by its name in the "Uses" line is fine), "updates every
+    15 minutes", or any other refresh figure. ADR-007 s10 allows a number only through a new chair line meeting
+    r1 10-30 5:14 PM's four conditions, and store copy also needs creative approval. The same limits bind the
+    store page, the Pro screen (s7) and posts.
 - **Parsing**: the feed is GTFS-realtime, a protobuf file. Python decodes only the fields it needs (the trip's route,
   each stop time's stop and arrival time) with a small wire-format reader in pure Python, so no package is added.
+  The reader uses only the lane's allowlist (ADR-007 s5: no `struct`; `int.from_bytes` and byte indexing), so the
+  same code runs in either lane.
   Host tests decode a saved sample feed (fixture) and a hand-built one with odd cases: a stop with no arrival time, a
   route not chosen, a time in the past, an empty feed, a truncated file. A bad or partial file never draws times: it
   draws the "No recent times" state and keeps the last good tree.
@@ -235,7 +303,8 @@ only.
   southbound, uptown = northbound). Their stop IDs, which I recall as A15 and D17 with an S or N suffix, are
   **taken from the MTA's own static stop list after its terms are read**, never from memory.
 - **Lane rules**: imports from the allowlist only; the run's measured time and memory recorded as for the other
-  premades (ADR-007 s3).
+  premades (ADR-007 s3). T-4673's done-note names the lane the times came from, with P and T. A Simulator run says
+  nothing about real refresh rates (L2), so "live B and D times" in s4.7 means one real fetch, not a cadence.
 
 ### 4.4 The MTA's terms come first (Commandments 6 and 58; gate 3)
 
@@ -487,9 +556,16 @@ ancestor of HEAD), but the board line T-4795 stayed open, so I checked it again 
 
 - The MTA's terms forbid our use, or need an account: Day phases ships with Today and Night only until the
   Investors decide, and #278 hears why the same day.
-- Refresh is too slow for transit to be useful: iOS gives 40 to 70 reloads to a widget that is viewed often, not a
-  schedule. The clock times and "Updated" line keep it honest; if real phones show long gaps, we say so on the Gallery
-  page rather than promise "live".
+- The train times are only as fresh as the path that fetched them (s4.3). In a store build at HEAD that is the last
+  time PyWidget opened. The extension lane is off outside Debug and gate builds, `net.get` cannot carry the binary
+  feed, and background refresh is not built. If the widget lane cannot carry Day phases (no binary-safe `net.get`,
+  a feed over 256 KiB, or a run over 2.0 s or 11 MB on a phone), Day phases ships in the app lane. It is then fresh
+  when PyWidget opens or a Shortcuts automation runs, and shows "No recent times" after 30 minutes otherwise. The
+  Gallery page says exactly that and nothing more (s4.3, "What the Gallery page may claim"). If that leaves the
+  transit view mostly "No recent times" on a commute, #278 hears it the same day, with what each path would take.
+- Even in the widget lane, iOS's reloads are a budget, not a schedule. A widget viewed often typically gets 40 to 70
+  a day (L2), and Day phases asks for about 34. The clock times and the "Updated" line keep it honest. If real phones
+  show long gaps, we say so on the Gallery page rather than promise "live".
 - The in-widget run's memory (W = 23 MB, P <= 11 MB, ADR-011 s4) refuses the focus timer's or the flashcards'
   handlers: their buttons fall back to opening PyWidget, which works but no longer demos Pro well. Measured in each
   build line before the tag is claimed.
@@ -501,6 +577,12 @@ ancestor of HEAD), but the board line T-4795 stayed open, so I checked it again 
 2. Whether the advanced libraries are in 1.0 (decides `row.packages` and Pattern of the day's tag): T-4669 and
    T-4689.
 3. MTA terms (s4.4): unread until T-4673's first step.
+4. The extension lane in the store build (s4.3 item 1): T-2317, from release ruling R1 of 2026-11-04, would compile
+   it out of Release. ADR-007 s3 "The lane flag" and #283 keep the widget first and leave the default to the phone
+   sitting. These must be reconciled by my chair line before any store text counts on the widget lane. Raised by
+   T-4793.
+5. Whether a widget's refresh button, which reruns the widget's own update without opening PyWidget, is a Pro button
+   under #324 A. Day phases adds no refresh button, so its build does not wait on this.
 {% endraw %}
 
 </div>

@@ -51,6 +51,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-5236 11-20 4232c50b76: runner job sandbox has no network (localhost too); 53/578 suites use one, so a MacBook host red is rerun on the mini before a <span title="What keeps an idea below the top: the cap that applies to it now.">hold</span>. tests/run.sh waited 50+ min for a heavy slot at load 30: run a new suite direct, let landcheck take the slot.
 - T-5354 11-21 09476d6389: a lane's board_tick only queues (ops/lane-outbox/*.json, untracked): commit it by path or the tick never lands. Keeper's records: main's ops/metrics/disk_keeper.jsonl + <common dir>/company-jobs/disk_keeper.json.
 - T-5397 11-21 a3f8fac2d5: board_tick add from a lane wrote main's board directly (not the outbox); task_names_store add writes the lane's ops/task-names.tsv (commit it). test_health lint refuses a test that reads a tool's source as text: check behaviour (rig the reader to fail). Slices 4-6 hit guarded supervisor.sh/personal_tick.sh.
+- T-5406 11-21: tick after the final commit (its note cites the hash; an amend orphans it), outbox file in a second commit. board_tick add refuses a bare T-ID in text with no link.
 {% endraw %}
 
 

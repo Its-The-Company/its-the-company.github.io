@@ -162,8 +162,11 @@ the Mac mini session's record; the list):
 
 - Job 1: on main, aa851bf441 (and its six commits before it).
 - Job 2: on main, 65604e0c76..4b2657def1.
-- Job 3: a02dc895ef; job 4: b60781366f, 04e5479092; job 5: 350541cefb, 7728f9c193, 053cb97833. All on
-  personal/b and green there; they reach main when lane b's branch lands.
+- Jobs 3 to 5: on main since 11-20 evening (lane b3's land; the commits are dated 9:06 to 10:24 PM ET). Job 3 (records round):
+  8540429b3a. Job 4 (supervisor lock): e872eff502, cbcf239b45. Job 5 (keeper's deep cleanup): ec15088976,
+  24616ed689, b6cb56cca2. The three test fixes: c7f6dcaee9, 4d65732fdc, 80df62afce. Checked by subject on 11-21,
+  each an ancestor of main. Their first copies on personal/b (a02dc895ef; b60781366f, 04e5479092; 350541cefb,
+  7728f9c193, 053cb97833) are not needed any more.
 - 11-20 evening, Odalys (T-5354): lane b's land sent the branch back once (one more and it goes back to to-do), so
   jobs 3 to 5 were copied to personal/b3 (698be22b97, 92c1889c02, 8eb387e6ca, c5a3f09d56, 7b58212306,
   ac8c631e11) with three test fixes, no tool change: d54bdddf8e (records_round_test's T-4479 row read every
@@ -174,10 +177,17 @@ the Mac mini session's record; the list):
   named, its files unchanged after it: records_round_test.py PASS 57 FAIL 0 (d54bdddf8e), supervisor_test.sh
   PASS 250 FAIL 1 (561e45d8d9; the one red the load-flaky close_by row, T-5094), personal_land_test.sh PASS 446
   FAIL 0 (5a9a5f1699); disk_keeper_test.py PASS 59 and storage_guard_test.py OK at the land,
-  their files unchanged since. Left: lane b3's land.
-- Left: the main session runs `site_session_chart_test.py` and `site_session_view_test.py` once from the main
-  folder, and the disk keeper does its own first deep-cleanup pass after the land. Nobody runs the real cleaner
-  by hand.
+  their files unchanged since. Lane b3 has landed since (above).
+- 11-21, Odalys (T-5354, lane a3, `personal/a3` at bcc3963928, which holds all of the above): the two site suites,
+  once each by name in the lane checkout (not the main folder): `site_session_chart_test.py` PASS 68 FAIL 0,
+  `site_session_view_test.py` PASS 102 FAIL 0.
+- The disk keeper's first deep-cleanup pass ran by itself, from its records only (`ops/metrics/disk_keeper.jsonl`
+  in the main folder, and its state file): 11-20 9:46:45 PM ET, the first deep row in those records; command
+  `storage_guard.py clean --yes --keep-posters`, exit 1, internal disk 19.8 -> 20.1 GB free (the cleaner deleted
+  0.32 GB of temp items and left 17 in use or not ours). The next two ticks skipped it (under its one-hour spacing).
+  At 10:01 PM the disk read 61.4 GB free, a rise none of the keeper's steps in that row made (they freed nothing);
+  its state at 11-21 12:48 PM says 59.9 GB free, over the 30 GB line. Nobody ran the real cleaner by hand.
+- Nothing left in jobs 1 to 5.
 
 ## Jobs 6 and 7 on main
 

@@ -1,11 +1,107 @@
 {
  "schema": 1,
- "at": "2026-11-21T16:34:10.508683+00:00",
+ "at": "2026-11-21T16:39:14.703349+00:00",
  "session": {
   "active": false,
   "kind": "",
   "started": null,
   "flow": [
+   {
+    "t": "T-0048",
+    "name": "Add the per-widget Activity screen and Run as widget",
+    "w": "Idris",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "claimed",
+      "at": 1795279113
+     },
+     {
+      "s": "worker",
+      "at": 1795279113
+     }
+    ]
+   },
+   {
+    "t": "T-5234",
+    "name": "Move merge tests to the MacBook under heavy load",
+    "w": "Odalys",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "claimed",
+      "at": 1795279051
+     },
+     {
+      "s": "worker",
+      "at": 1795279051
+     }
+    ]
+   },
+   {
+    "t": "T-4850",
+    "name": "Bring the Mac mini load back down",
+    "w": "Odalys",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "claimed",
+      "at": 1795279024
+     },
+     {
+      "s": "worker",
+      "at": 1795279024
+     }
+    ]
+   },
+   {
+    "t": "T-4635",
+    "name": "Clear the Settings restore line once Pro is bought",
+    "w": "Idris",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "claimed",
+      "at": 1795278995
+     },
+     {
+      "s": "worker",
+      "at": 1795278995
+     }
+    ]
+   },
+   {
+    "t": "T-4762",
+    "name": "Let the run lock wrap a Python run",
+    "w": "Idris",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "claimed",
+      "at": 1795278930
+     },
+     {
+      "s": "worker",
+      "at": 1795278930
+     }
+    ]
+   },
+   {
+    "t": "T-4772",
+    "name": "Prove a refresh tap redraws the widget",
+    "w": "Idris",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "claimed",
+      "at": 1795278865
+     },
+     {
+      "s": "worker",
+      "at": 1795278865
+     }
+    ]
+   },
    {
     "t": "T-4781",
     "name": "Retest a fixed red on what failed, not every test",
@@ -273,28 +369,28 @@
    "pct": 0.0,
    "resets_at": null,
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-21T11:16:20.199677-05:00",
+   "read_at": "2026-11-21T11:34:17.171542-05:00",
    "source": "usage",
    "left": 100.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 100.0,
-   "resets_at": "2026-11-22T07:00:00.400362+00:00",
+   "resets_at": "2026-11-22T07:00:00.497891+00:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-21T11:16:20.199677-05:00",
+   "read_at": "2026-11-21T11:34:17.171542-05:00",
    "source": "usage",
    "left": 0.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 36.0,
-   "resets_at": "2026-11-22T07:00:00.400539+00:00",
+   "resets_at": "2026-11-22T07:00:00.498076+00:00",
    "used_words": "of the Fable weekly allowance used",
-   "read_at": "2026-11-21T11:16:20.199677-05:00",
+   "read_at": "2026-11-21T11:34:17.171542-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-21T11:16:20.199677-05:00"
+  "read_at": "2026-11-21T11:34:17.171542-05:00"
  },
  "ui": {
   "week_pct": 0.123,
@@ -309,12 +405,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-21T11:40:39-05:00",
+ "next_tick": "2026-11-21T11:49:17-05:00",
  "personal": {
-  "week_pct": 98.52,
-  "usage_pct": 49.6,
-  "work_pct": 81.0,
-  "read_at": "2026-11-21T16:34:00+00:00",
+  "week_pct": 98.82,
+  "usage_pct": 49.7,
+  "work_pct": 81.1,
+  "read_at": "2026-11-21T16:43:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -340,6 +436,18 @@
     "at": "2026-11-21T11:33:35-05:00",
     "n": "Evan",
     "src": "plan-a"
+   },
+   {
+    "lane": "a3",
+    "task": "T-4185",
+    "w": "Idris",
+    "k": "build",
+    "t": "Launcher widgets open the apps a person chose",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-21T11:38:11-05:00",
+    "n": "Evan",
+    "src": "plan-a"
    }
   ]
  },
@@ -361,7 +469,7 @@
   }
  ],
  "disk": {
-  "free_gb": 63,
+  "free_gb": 60,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -370,14 +478,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-21T11:32:00-05:00",
+   "at": "2026-11-21T11:41:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-21T11:34:00-05:00",
+  "at": "2026-11-21T11:43:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -575,8 +683,18 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-21T16:34:10Z",
+  "at": "2026-11-21T16:39:14Z",
   "s": {
+   "T-4182": [
+    "testing",
+    "Mac Mini \u00b7 test",
+    null
+   ],
+   "T-4807": [
+    "testing",
+    "Mac Mini \u00b7 test",
+    null
+   ],
    "T-5355": [
     "merged",
     "on main 11:19 AM ET",
@@ -585,14 +703,18 @@
    ]
   },
   "nm": {
+   "T-4182": "A failing widget says so and can recover",
+   "T-4807": "Fix every bad test that failed a merge",
    "T-5355": "Finish the MacBook Xcode routing and the merge switch"
   },
   "wk": {
+   "T-4182": "Idris",
+   "T-4807": "Pernille",
    "T-5355": "Odalys"
   }
  },
  "ln": {
-  "at": "2026-11-21T16:34:10Z",
+  "at": "2026-11-21T16:39:14Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -606,11 +728,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 2894,
-    "failed": 6,
+    "conflicted": 2899,
+    "failed": 11,
     "held": null,
     "retry": null,
-    "parked": 1737
+    "parked": 1742
    },
    "cur": [],
    "ld": [
@@ -620,19 +742,21 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-21T16:34:11Z",
-    "ld": 0.96,
+    "at": "2026-11-21T16:39:17Z",
+    "ld": 4.31,
     "c": 8,
-    "sb": 0,
+    "sb": 1,
     "dk": [
-     62.8,
+     62.0,
      228.3
     ],
     "ss": [
      171.9,
      953.7
     ],
-    "sn": []
+    "sn": [
+     "iPhone 17e"
+    ]
    }
   }
  },
@@ -662,11 +786,11 @@
      "open": true
     }
    },
-   "at": "2026-11-21T16:34:10+00:00"
+   "at": "2026-11-21T16:39:14+00:00"
   },
   "bl": {
    "n": 3,
-   "at": "2026-11-21T16:34:10+00:00"
+   "at": "2026-11-21T16:39:14+00:00"
   }
  },
  "operators": [
@@ -676,7 +800,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 12 tasks",
+   "t": "Work session \u2013 18 tasks",
    "at": "2026-11-21T11:18:14-05:00"
   },
   {
@@ -687,6 +811,15 @@
    "e": "high",
    "t": "Work session \u2013 1 task",
    "at": "2026-11-21T11:33:35-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Evan's Account",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session \u2013 1 task",
+   "at": "2026-11-21T11:38:11-05:00"
   }
  ],
  "reply": {
@@ -707,12 +840,12 @@
  ],
  "agents_now": {
   "main": 0,
-  "lanes": 2,
-  "total": 2,
-  "at": "11:34 AM",
+  "lanes": 3,
+  "total": 3,
+  "at": "11:43 AM",
   "why": "",
-  "at_iso": "2026-11-21T16:34:00+00:00",
+  "at_iso": "2026-11-21T16:43:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 11:34 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 11:43 AM ET</p></section>"
  }
 }

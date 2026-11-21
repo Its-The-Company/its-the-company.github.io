@@ -1,22 +1,11 @@
 {
  "schema": 1,
- "at": "2026-11-21T01:06:27.007089+00:00",
+ "at": "2026-11-21T01:16:05.970881+00:00",
  "session": {
   "active": false,
   "kind": "",
   "started": null,
   "flow": [
-   {
-    "t": "T-5234",
-    "name": "Move merge tests to the MacBook under heavy load",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1795222571
-     }
-    ]
-   },
    {
     "t": "T-4847",
     "name": "Keep every drive clean automatically, for good",
@@ -51,6 +40,15 @@
    }
   ],
   "done": [
+   {
+    "t": "T-5234",
+    "name": "Move merge tests to the MacBook under heavy load",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "failed",
+    "end_at": 1795223525,
+    "why": "tests failed"
+   },
    {
     "t": "T-5306",
     "name": "Records round skips files gone from disk",
@@ -127,18 +125,10 @@
     "steps": [],
     "end": "landed",
     "end_at": 1795209165
-   },
-   {
-    "t": "T-5354",
-    "name": "Land the finished test fixes and three small fixes",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1795206471
    }
   ],
   "landed": 18,
-  "failed": 23
+  "failed": 24
  },
  "workers": [],
  "who": "",
@@ -187,28 +177,28 @@
    "pct": 0.0,
    "resets_at": null,
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-20T19:58:03.422514-05:00",
+   "read_at": "2026-11-20T20:10:12.028805-05:00",
    "source": "usage",
    "left": 100.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 100.0,
-   "resets_at": "2026-11-22T06:59:59.960480+00:00",
+   "resets_at": "2026-11-22T06:59:59.928360+00:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-20T19:58:03.422514-05:00",
+   "read_at": "2026-11-20T20:10:12.028805-05:00",
    "source": "usage",
    "left": 0.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 36.0,
-   "resets_at": "2026-11-22T06:59:59.960641+00:00",
+   "resets_at": "2026-11-22T06:59:59.928517+00:00",
    "used_words": "of the Fable weekly allowance used",
-   "read_at": "2026-11-20T19:58:03.422514-05:00",
+   "read_at": "2026-11-20T20:10:12.028805-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-20T19:58:03.422514-05:00"
+  "read_at": "2026-11-20T20:10:12.028805-05:00"
  },
  "ui": {
   "week_pct": 0.123,
@@ -223,12 +213,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-20T20:13:04-05:00",
+ "next_tick": "2026-11-20T20:25:13-05:00",
  "personal": {
   "week_pct": 96.0,
   "usage_pct": 49.0,
   "work_pct": 80.5,
-  "read_at": "2026-11-21T01:10:00+00:00",
+  "read_at": "2026-11-21T01:18:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -276,7 +266,7 @@
   }
  ],
  "disk": {
-  "free_gb": 18,
+  "free_gb": 19,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -285,14 +275,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-20T20:07:00-05:00",
+   "at": "2026-11-20T20:15:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-20T20:10:00-05:00",
+  "at": "2026-11-20T20:18:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -490,18 +480,8 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-21T01:06:27Z",
+  "at": "2026-11-21T01:16:05Z",
   "s": {
-   "T-5234": [
-    "merging",
-    "Host checks on the Mac mini",
-    1795222587007
-   ],
-   "T-4807": [
-    "mergeq",
-    "1st to merge",
-    1795217307007
-   ],
    "T-5354": [
     "merged",
     "on main 3:27 PM ET",
@@ -510,47 +490,34 @@
    ]
   },
   "nm": {
-   "T-5234": "Move merge tests to the MacBook under heavy load",
-   "T-4807": "Fix every bad test that failed a merge",
    "T-5354": "Land the finished test fixes and three small fixes"
   },
   "wk": {
-   "T-5234": "Odalys",
-   "T-4807": "Pernille",
    "T-5354": "Odalys"
   }
  },
  "ln": {
-  "at": "2026-11-21T01:06:27Z",
+  "at": "2026-11-21T01:16:05Z",
   "mq": {
    "n": {
-    "checking": 1,
-    "inline": 1,
+    "checking": 0,
+    "inline": 0,
     "conflicted": 1,
-    "failed": 0,
+    "failed": 1,
     "held": 0,
     "retry": 3,
     "parked": 3
    },
    "m": {
-    "checking": 10,
-    "inline": 98,
-    "conflicted": 1966,
-    "failed": null,
+    "checking": null,
+    "inline": null,
+    "conflicted": 1976,
+    "failed": 4,
     "held": null,
-    "retry": 181,
-    "parked": 809
+    "retry": 190,
+    "parked": 819
    },
-   "cur": [
-    [
-     [
-      "T-5234"
-     ],
-     "Mac tests",
-     "Mac mini",
-     10
-    ]
-   ],
+   "cur": [],
    "ld": [
     26,
     "2026-11-21T00:53:23Z"
@@ -558,12 +525,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-21T01:06:29Z",
-    "ld": 8.97,
+    "at": "2026-11-21T01:15:40Z",
+    "ld": 4.74,
     "c": 8,
     "sb": 0,
     "dk": [
-     17.8,
+     18.5,
      228.3
     ],
     "ss": [
@@ -593,7 +560,7 @@
    "parked": 7,
    "open": true,
    "mq": false,
-   "counted": "2026-11-20T19:58:04-05:00",
+   "counted": "2026-11-21T01:08:52+00:00",
    "by": {
     "app": {
      "n": 3,
@@ -611,11 +578,11 @@
      "open": false
     }
    },
-   "at": "2026-11-21T01:06:27+00:00"
+   "at": "2026-11-21T01:16:05+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-21T01:06:27+00:00"
+   "at": "2026-11-21T01:16:05+00:00"
   }
  },
  "operators": [
@@ -625,8 +592,8 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 1 task",
-   "at": "2026-11-20T19:57:31-05:00"
+   "t": "Inbox \u2013 Evan's 8:15 PM Message on GitHub",
+   "at": "2026-11-20T20:15:21-05:00"
   },
   {
    "w": "Operator",
@@ -642,12 +609,25 @@
   "sent": "2026-11-21T00:55:41Z",
   "seconds": 108.0
  },
- "inbox": [],
+ "inbox": [
+  {
+   "id": "c7054935349",
+   "state": "received",
+   "position": 1,
+   "eta": "2026-11-20T20:25:13-05:00",
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "Is T-5354 handed off too? Want to..."
+  }
+ ],
  "trimmed": [
   "lane_next",
   "queue_text",
   "recent",
   "task_done",
+  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -658,10 +638,10 @@
   "main": 0,
   "lanes": 2,
   "total": 2,
-  "at": "8:10 PM",
+  "at": "8:18 PM",
   "why": "",
-  "at_iso": "2026-11-21T01:10:00+00:00",
+  "at_iso": "2026-11-21T01:18:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 8:10 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 8:18 PM ET</p></section>"
  }
 }

@@ -15,7 +15,7 @@ Ines, Tue 2026-11-17, 5:20 PM ET; settled 5:30 PM ET after Idris's check (sectio
 
 **Reconciled 11-18 (Ines, T-4770 redo on fresh main).** Two things moved after this was written. T-4870 (11-18) put the uncalibrated model's likely date at Wed 2027-07-21 (range 2027-04-13 to 2027-12-10) after Idris checked snap-to-layout at 4.25 slot weeks, not 3 (T-4285). This file's figures now carry that check (script: snap 4.25, 2 to 6.5), so the checked line below is **Tue 2027-07-27**, 6 days after T-4870's, in the same direction. T-4871 (two-way editing's week figure) is still open, so Idris's 3.5 here stands for now. **`ops/milestones.json` is not moved by this slice:** a 6-day move is under the two-week line (an Investor, #325 c6977134306), so it goes in the next report only, and the date is moved once, when T-4871 closes, not twice in a day. The measured ratio (section 2.1) is two data points only and is kept as a finding, not as an input to the likely line.
 
-**Closed 11-21 (Ines, T-4770 closing slice).** T-4871 landed 11-19 (Idris, abd01d6c48): two-way editing is 2.0 slot weeks (1.25 to 3.25), not 2.75 on the card and not the 3.5 he gave in s7; 3.0 more weeks of Python run beside the slot and are not counted. The script now carries it. **The checked line is likely Fri 2027-07-16 (Day 268), range Tue 2027-02-16 (Day 118) to Sat 2027-12-04 (Day 409)**, 34.49 weeks (12.96 to 54.61). `ops/milestones.json` already carries T-4871's line, Thu 2027-07-15 (2027-04-04 to 2027-12-01). One day apart, so the milestones do not move: the move I promised above is not warranted. The earlier best end here (02-16 against 04-04) comes only from phase A's 0.57, one point, near 1.4 with A's review tail (s7 Q5). The milestones keep 04-04. `plan.md` has a <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span> note of 11-21. **Still not checked by Idris: Foundations (5, 3 to 8) and Pages (5, 3 to 8), the CEO's figures**; his check is T-5432 (Idris, small, Sonnet). **Small move** under an Investor's rule (#325 c6977134306): 1 day, inside the range. It goes in the next report and is not posted on #41 on its own. Sections 1 and 4 below are the 11-18 figures, with two-way editing at 3.5. With 2.0, phase D is 12.75 weeks and ends Tue 2027-05-04, Pages ends Fri 2027-06-25, and two-way editing adds 2 weeks (0.71 to 3.25; without it, Fri 2027-07-02).
+**Closed 11-21 (Ines, T-4770 closing slice).** T-4871 landed 11-19 (Idris, abd01d6c48): two-way editing is 2.0 slot weeks (1.25 to 3.25), not 2.75 on the card and not the 3.5 he gave in s7; 3.0 more weeks of Python run beside the slot and are not counted. The script now carries it. **The checked line is likely Fri 2027-07-16 (Day 268), range Tue 2027-02-16 (Day 118) to Sat 2027-12-04 (Day 409)**, 34.49 weeks (12.96 to 54.61). `ops/milestones.json` already carries T-4871's line, Thu 2027-07-15 (2027-04-04 to 2027-12-01). One day apart, so the milestones do not move: the move I promised above is not warranted. The earlier best end here (02-16 against 04-04) comes only from phase A's 0.57, one point, near 1.4 with A's review tail (s7 Q5). The milestones keep 04-04. `plan.md` has a <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span> note of 11-21. **Foundations (5, 3 to 8) and Pages (5, 3 to 8) were still the CEO's figures when this was written; Idris checked them the same day (T-5432, section "Idris checked Foundations and Pages" at the end): Foundations 6.0, Pages 4.25, so the line above is now likely Sun 2027-07-18, range Wed 2027-02-17 to Tue 2027-12-14, and the milestones moved 2 days to Sat 2027-07-17.** **Small move** under an Investor's rule (#325 c6977134306): 1 day, inside the range. It goes in the next report and is not posted on #41 on its own. Sections 1 and 4 below are the 11-18 figures, with two-way editing at 3.5. With 2.0, phase D is 12.75 weeks and ends Tue 2027-05-04, Pages ends Fri 2027-06-25, and two-way editing adds 2 weeks (0.71 to 3.25; without it, Fri 2027-07-02).
 
 ## 1. The short answer
 
@@ -108,7 +108,7 @@ Moving 4, 6 and 7 together (two-way editing, snap-to-layout, run-a-function and 
 ## 5. Limits, stated plainly
 
 1. Two measured points, one below 1.0 (phase A, 0.57 by its done-line) and one above (the freshness group, at least 1.7 and open). The two points are not enough for a rate (a direction at most), so the likely line takes 1.0 between them; the best line is phase A's ratio; the worst line uses Idris's worst figures, 1.6 to 1.9 times the likely ones.
-2. The figures multiplied are estimates: Idris's for B, the ADR-011 steps and the Builder (s7); the CEO's for Foundations and Pages (05-timeline.md s1, s4), not re-checked.
+2. The figures multiplied are estimates: Idris's for B, the ADR-011 steps and the Builder (s7); Idris's code check of 11-21 for Foundations and Pages (T-5432; the CEO's 5 and 5 in 05-timeline.md s1, s4 replaced by 6.0 and 4.25); the other figures are as above.
 3. 157 landed app tasks have actuals but no per-task estimates; xc.jsonl tags tasks only from 11-08. The task process redesign (T-4122) should put an estimate on each card, so the next measurement rests on tens of tasks, not two.
 4. The usage split is my grouping of `ops_metrics.py`'s kinds (site counted as process).
 5. The concurrent-build figure rests on 13 rows and compares unlike runs.
@@ -117,7 +117,7 @@ Moving 4, 6 and 7 together (two-way editing, snap-to-layout, run-a-function and 
 
 ## 6. What Idris checked
 
-His check is section 7; each answer is folded in above, with snap-to-layout as he later checked it in code (T-4870, 4.25). Not done in this slice, on purpose: moving `ops/milestones.json`, `plan.md` and `ops/state.md` (6 days, under the two-week line; moved once when T-4871 closes), and any post on #41 (full) or #325. T-4871 closed 11-19 (2.0 on the slot; folded in 11-21, see the closing note at the top). Open: Foundations and Pages are the CEO's figures, not yet checked by Idris (T-5432, 11-21).
+His check is section 7; each answer is folded in above, with snap-to-layout as he later checked it in code (T-4870, 4.25). Not done in this slice, on purpose: moving `ops/milestones.json`, `plan.md` and `ops/state.md` (6 days, under the two-week line; moved once when T-4871 closes), and any post on #41 (full) or #325. T-4871 closed 11-19 (2.0 on the slot; folded in 11-21, see the closing note at the top). Foundations and Pages, the last two CEO figures, were checked by Idris on 11-21 (T-5432, last section); every phase's figure is now his.
 
 ## 7. Idris's check (11-17)
 
@@ -136,6 +136,49 @@ Idris, Tue 2026-11-17, from the board lines named below, ADR-011 s13 and `git lo
 6. **Phase-B end.** I will not commit to Tue 12-01. I commit to **Wed 2026-12-16** (the script's B end on my figures) for everything in B that runs on the Mac. The phone items close at the first Investor phone session after that, and B's end moves to that session's date if it comes later.
 
 **What the script prints now (with snap-to-layout at 4.25, T-4870):** likely **Tue 2027-07-27 (Day 279)**, range **Sun 2027-02-21 (Day 123) to Fri 2027-12-24 (Day 429)**. Idris's own printout on 11-17, with snap at 3, was Sun 2027-07-18 (2027-02-21 to 2027-12-13). Ines's draft line was Sat 2027-04-10 (2027-02-04 to 2027-11-26), and the old line was Mon 2027-07-12. Phase ends on the likely line: B Wed 12-16, C Thu 2027-02-04, D Fri 2027-05-14, Pages Tue 2027-07-06. If C's interface work runs beside B (Q4), the likely date comes about a week earlier. So my answer to an Investor's question is no. The July date is not mostly estimating error. On the work measured to its end, the company has built at about its estimates or slower. The date moved because of the added scope (section 4's per-feature table, now in the script's output) and the share of usage spent on process work (section 2.3). Sections 1 and 4 above carry his figures; his snap-to-layout 3 (2 to 5) was replaced on 11-18 by his own code check, 4.25 (2 to 6.5), T-4870.
+
+## Idris checked Foundations and Pages
+
+Idris, Sat 2026-11-21, from the code on main (f1a5dbed51), the steps of T-4476 and T-4478, ADR-001 s6 and ADR-002's Pages amendment; nothing was built or measured, no Xcode run, no research, so these are estimates. Same method as T-4870 and T-4871: the CEO's figure for each (5 slot weeks, 3 to 8, `05-timeline.md` s1 and s4) against what exists. The ADR-011 steps (tap choice in C, run-a-function and buttons in Pages) are counted apart, as before, and are not in these figures.
+
+**Foundations: 6.0 slot weeks (3.8 to 9.7), not 5 (3 to 8); 3.0 more (2.0 to 5.75) run beside the slot.** Slot parts, likely (best to worst):
+
+- Manifest in the app, 0.6 (0.4 to 1.0): the reader, the Python half, the schema and the shared fixtures exist (`ProjectManifestReader` 584 lines, `app_manifest.py`, T-0448, T-1124) with id, name and entry, but no app code uses the reader: `ProjectStore.Project`'s id is its name, so a rename changes it. New: an ID written once, outputs, version fields (#285 B), an atomic first write.
+- Tested move of existing projects, 1.0 (0.6 to 1.8): none exists. A project today is a folder of `.py` files, its widget a copy in the App Group (`widgets/<id>/`, `lane-scripts/<id>/`, `.sent.json`); the done-line needs a project from B's build to open on C's with its placed widget still drawing. Code, old-build fixtures, interrupted and full-disk cases, and an update over an old install in the Simulator.
+- Public `read()` and `draw()` contract, 0.5 (0.3 to 0.9): premades are single `.py` files of widget code with no `read()`; the queue's one read handed to every output (ADR-007 s4.2) is new, in both lanes (app and widget extension), with the 12 premades unchanged.
+- "Touches" enforced, 1.0 (0.6 to 1.6): `DeviceContext` carries a mode and a script id, not a project or a manifest, so nothing can refuse a call by what a project declared. Seven device modules (files, keychain, http, location, notifications, clipboard, pedometer) each need a gate, in `DeviceRouter` and in `LaneDevice`, plus a test per module and lane.
+- Outside-code notice before first run, 0.8 (0.6 to 1.2): code and what it touches shown first, VoiceOver and Dynamic Type, a remembered answer that is asked again when the code changes; entry points are `ProjectTransfer`'s zip and file imports, which exist.
+- Tab shell, project page, three ways to start, first run, 1.6 (1.0 to 2.5): there is no `TabView`; the app is one `NavigationStack` around the editor and console (`PyWidgetApp.swift`, 1,223 lines) with Projects, Gallery and Settings as sheets and pushes. Four tabs on iPhone and iPad, the editor under Projects, the route cases of `WidgetTapRouting`, and nine UI test files that tap those screens. The Docs tab's content is not counted.
+- The Gallery's three choices, 0.5 (0.3 to 0.7): the Gallery's browse and preview exist (`GalleryView`, `GalleryPreview`); Get as a new Project with its origin recorded, and Add to project, are new.
+
+Beside the slot, not counted: the manifest ADR and its reviews 0.75 (0.5 to 1.25), the manifest's two halves and fixtures 0.5, the Python half of the contract 0.75, the migration planner and its fixtures in Core 0.5, the permission rules in both halves 0.5. It holds only if the ADR is written before any of the rest starts: the tap step 2 (T-4549) waits on it.
+
+**Pages: 4.25 slot weeks (2.6 to 7.75), not 5 (3 to 8); 2.25 more (1.5 to 4.25) beside the slot.** Smaller than the CEO's likely because three things are on main:
+
+- Page-only nodes drawn (scroll, list, text entry), Dynamic Type, VoiceOver, iPad, 1.25 (0.75 to 2.25): the renderer (`TreeView` 878 lines) already draws every widget node in the app, the Gallery and the editor preview, so these are new nodes in a known place.
+- Full-screen Page host, 1.5 (1.0 to 2.5): opening from the app and from a Shortcuts Open action (`RunScriptIntents.swift` has no Open intent yet), taps and text entry as runs on the one run queue (`PyBridge.onRunQueue` exists, and so does the Python action contract: `Widget.action`, T-4550, 6d40381d88), state kept across a <span title="A test written in advance. If it fires, we drop the idea.">kill</span>.
+- Builder blocks' Page preview 0.5 (0.25 to 1.0); the premade settings screens registered as Pages 0.25 (0.1 to 0.75; they stay native, `SettingsPage` and `PremadeSettings`, 1,560 lines, not rewritten as tree-drawn Pages); proofs 0.75 (0.5 to 1.25): the test that a Page answers a tap while a widget refresh waits on the same queue, UI tests, a Simulator run.
+- Beside, not counted: Page-only nodes and checkers in both halves 1.0, the Page's session contract in Python 0.75, the Builder's compiler and parser for the new nodes 0.5. The Builder blocks need the Builder (T-4477), which has no code yet, so Pages cannot end before D does.
+- Not counted: the Docs tab's content, the Investor-phone sittings, App Review's higher risk for app-like Pages (taken on, #272 A).
+
+**What the scripts print now** (`ops/plans/T-4266-release-range.py`, new last line; `ops/plans/T-4770-release-estimate.py`):
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 4: Idris checked Foundations and Pages, scrolls sideways" style="--tw:746px" markdown="1">
+
+| | Before | Now |
+| --- | --- | --- |
+| T-4266 (uncalibrated), likely | Thu 2027-07-15 (Day 267) | **Sat 2027-07-17 (Day 269)**, 35.17 weeks |
+| T-4266 range | 2027-04-04 to 2027-12-01 | **2027-04-07 (Day 168) to 2027-12-11 (Day 416)**, 20.72 to 56.17 weeks |
+| T-4770 (measured-rate), likely | Fri 2027-07-16 (Day 268) | **Sun 2027-07-18 (Day 270)**, 34.74 weeks |
+| T-4770 range | 2027-02-16 to 2027-12-04 | **2027-02-17 (Day 119) to 2027-12-14 (Day 419)**, 13.18 to 56.06 weeks |
+
+</div>
+
+
+Foundations adds 1.0 week on the likely line and Pages takes off 0.75, a net 0.25 week (2 days). Phase ends on the T-4266 line: C Mon 2027-02-08 (was 02-01), D Sat 2027-05-08 (was 05-01), Pages Sat 2027-06-26 (was 06-24), release Sat 2027-07-17. On the T-4770 line C ends Thu 2027-02-11, D Tue 2027-05-11, Pages Sun 2027-06-27. Without Foundations the T-4770 line reads Sun 2027-06-06, without Pages Fri 2027-06-18 (the section 4 list's items 2 and 3, now at 6 and 4.25). `ops/milestones.json` moved 2 days with the T-4266 line (phase-c, phase-d, phase-pages, submit, app-name, final-report, release); a small move inside the range, so it goes in the next report and is not posted (#325 c6977134306).
+
+What would make this fail: the manifest ADR is late or changes shape (the tap steps and the migration wait on it); the tab shell breaks more of the nine UI test files than I expect; the outside-code gate needs a change in the widget extension's budget, which T-4280's rule already watches. Foundations' worst, 9.7, is the sum of every worst end together, as in the T-4266 method; the 3.0 beside the slot lands on the slot if the Python work is not done beside phase B.
 {% endraw %}
 
 </div>

@@ -35,8 +35,6 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 
 
-- T-4771+T-4783 11-18: landed 844ef71f3f via land --from (6 files, checked). Not ticked: gate carried the 10:40 AM Xcode pass; owed a runner PyWidgetTests run at 844ef71f3f after the push (Ines's condition).
-
 - T-4631 11-18: premades placed by build scan (<span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span>-app.json) + finder notes every refusal (lane.refused). Lesson: no app code calls send_lane today; a person's script is judged only by its first widget run.
 
 - T-4750 11-18: replay on main since 6ef41bc26a; this land adds mutants-t4750.json + s6a line. Open: runner job J-20261118-1630, land_mutants at the land commit, tick.
@@ -57,6 +55,8 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-5315 11-20 (after T-5293): Altitude's heights in scripts/pywidget.premade.altitude/heights/today.json; Swift makes+marks the folder (launch, active) and deletes it in forgetCache under today.json.lock; the run never makes the folder. Open: Wrenna names it (T-5301). Lesson: Python can't set the backup flag, so Swift owns the folder.
 
 - T-0053 11-20: C2-Q1 ruled (fix only in 2nd extension's container). Parts 1-2 as T-5365 (Shared/Bridge/LocationRefresh.swift, route not installed). Open: part 3 target + lane placement (Pernille), part 4 footprint. Lesson: XCTAssert autoclosures take no await; hoist into a let.
+
+- T-5432 11-21: Foundations 6.0 (3.8-9.7), Pages 4.25 (2.6-7.75) on the slot; release Sat 2027-07-17 (T-4266 range 04-07 to 12-11; T-4770 line Sun 07-18). Lesson: ls Core/Sources shows symlinks; grep with --include needs quotes in zsh; ops/state.md is 14 KB, over its 8 KB aim.
 
 ## Lessons
 - Older lessons and dated logs: archive.md.

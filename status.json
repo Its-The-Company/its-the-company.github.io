@@ -1,19 +1,88 @@
 {
  "schema": 1,
- "at": "2026-11-21T16:15:15.485805+00:00",
+ "at": "2026-11-21T16:24:45.079176+00:00",
  "session": {
   "active": false,
   "kind": "",
   "started": null,
   "flow": [
    {
-    "t": "T-5355",
-    "name": "Finish the MacBook Xcode routing and the merge switch",
+    "t": "T-0678",
+    "name": "Run the refresh button inside the widget extension",
+    "w": "Idris",
     "acct": "Personal a",
     "steps": [
      {
-      "s": "testq",
-      "at": 1795277329
+      "s": "claimed",
+      "at": 1795278238
+     },
+     {
+      "s": "worker",
+      "at": 1795278238
+     }
+    ]
+   },
+   {
+    "t": "T-4435",
+    "name": "Draw the wrapped refresh glyph on both runtimes",
+    "w": "Idris",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "claimed",
+      "at": 1795278094
+     },
+     {
+      "s": "worker",
+      "at": 1795278094
+     }
+    ]
+   },
+   {
+    "t": "T-4286",
+    "name": "Check an imported font draws in a widget",
+    "w": "Idris",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "claimed",
+      "at": 1795278035
+     },
+     {
+      "s": "worker",
+      "at": 1795278035
+     }
+    ]
+   },
+   {
+    "t": "T-4477",
+    "name": "People build a widget from blocks without code",
+    "w": "Idris",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "claimed",
+      "at": 1795277996
+     },
+     {
+      "s": "worker",
+      "at": 1795277996
+     }
+    ]
+   },
+   {
+    "t": "T-4010",
+    "name": "Rebuild This Session as a full flowchart",
+    "w": "Odalys",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "claimed",
+      "at": 1795277940
+     },
+     {
+      "s": "worker",
+      "at": 1795277940
      }
     ]
    },
@@ -25,11 +94,11 @@
     "steps": [
      {
       "s": "claimed",
-      "at": 1795277705
+      "at": 1795277890
      },
      {
       "s": "worker",
-      "at": 1795277705
+      "at": 1795277890
      }
     ]
    },
@@ -41,16 +110,48 @@
     "steps": [
      {
       "s": "claimed",
-      "at": 1795277438
+      "at": 1795277839
      },
      {
       "s": "worker",
-      "at": 1795277438
+      "at": 1795277839
+     }
+    ]
+   },
+   {
+    "t": "T-2097",
+    "name": "Read free memory in the widget extension on a device",
+    "w": "Idris",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "claimed",
+      "at": 1795277773
+     },
+     {
+      "s": "worker",
+      "at": 1795277773
      }
     ]
    }
   ],
   "done": [
+   {
+    "t": "T-5432",
+    "name": "Check the Foundations and Pages week figures",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1795277969
+   },
+   {
+    "t": "T-5355",
+    "name": "Finish the MacBook Xcode routing and the merge switch",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1795277961
+   },
    {
     "t": "T-4807",
     "name": "Fix every bad test that failed a merge",
@@ -118,27 +219,9 @@
     "end": "failed",
     "end_at": 1795263172,
     "why": "tests failed"
-   },
-   {
-    "t": "T-5234",
-    "name": "Move merge tests to the MacBook under heavy load",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "failed",
-    "end_at": 1795259369,
-    "why": "tests failed"
-   },
-   {
-    "t": "T-5234",
-    "name": "Move merge tests to the MacBook under heavy load",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "failed",
-    "end_at": 1795255560,
-    "why": "tests failed"
    }
   ],
-  "landed": 4,
+  "landed": 6,
   "failed": 11
  },
  "workers": [],
@@ -180,36 +263,36 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 645,
-  "blocked_count": 2
+  "runnable_count": 644,
+  "blocked_count": 3
  },
  "meter": {
   "five_hour": {
    "pct": 0.0,
    "resets_at": null,
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-21T10:58:25.702628-05:00",
+   "read_at": "2026-11-21T11:16:20.199677-05:00",
    "source": "usage",
    "left": 100.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 100.0,
-   "resets_at": "2026-11-22T06:59:59.525379+00:00",
+   "resets_at": "2026-11-22T07:00:00.400362+00:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-21T10:58:25.702628-05:00",
+   "read_at": "2026-11-21T11:16:20.199677-05:00",
    "source": "usage",
    "left": 0.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 36.0,
-   "resets_at": "2026-11-22T06:59:59.525560+00:00",
+   "resets_at": "2026-11-22T07:00:00.400539+00:00",
    "used_words": "of the Fable weekly allowance used",
-   "read_at": "2026-11-21T10:58:25.702628-05:00",
+   "read_at": "2026-11-21T11:16:20.199677-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-21T10:58:25.702628-05:00"
+  "read_at": "2026-11-21T11:16:20.199677-05:00"
  },
  "ui": {
   "week_pct": 0.123,
@@ -224,12 +307,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-21T11:22:23-05:00",
+ "next_tick": "2026-11-21T11:31:20-05:00",
  "personal": {
   "week_pct": 98.52,
   "usage_pct": 49.6,
   "work_pct": 81.0,
-  "read_at": "2026-11-21T16:16:00+00:00",
+  "read_at": "2026-11-21T16:25:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -247,23 +330,16 @@
    {
     "lane": "a2",
     "task": "T-4770",
-    "w": "Ines",
-    "k": "plan",
     "t": "Re-estimate the release date from measured build speed",
-    "m": "fable",
-    "e": "high",
     "at": "2026-11-21T11:08:29-05:00",
     "n": "Evan",
+    "d": 1,
     "src": "plan-a"
    },
    {
     "lane": "a2",
     "task": "T-5432",
-    "w": "Idris",
-    "k": "plan",
     "t": "Check the Foundations and Pages week figures",
-    "m": "opus",
-    "e": "high",
     "at": "2026-11-21T11:08:29-05:00",
     "n": "Evan",
     "d": 1,
@@ -301,7 +377,7 @@
   }
  ],
  "disk": {
-  "free_gb": 58,
+  "free_gb": 60,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -310,14 +386,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-21T11:14:00-05:00",
+   "at": "2026-11-21T11:24:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-21T11:16:00-05:00",
+  "at": "2026-11-21T11:25:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -454,25 +530,25 @@
   ],
   "done": [
    {
+    "w": "Ines+idris+operator",
+    "t": "The release re-estimate is finished: every phase is now checked against measured speed and the...",
+    "at": "2026-11-21T11:19:00-05:00"
+   },
+   {
+    "w": "Idris",
+    "t": "The last two week estimates the CEO had guessed, for foundations and Pages, are now checked...",
+    "at": "2026-11-21T11:19:00-05:00"
+   },
+   {
     "w": "Operator",
     "t": "Process and site tasks waiting to merge stayed within its limit of 8 tasks for a full day, so...",
     "at": "2026-11-21T08:38:00-05:00"
-   },
-   {
-    "w": "Operator",
-    "t": "The test file composer_test.py passes again on a clean copy of main (7e052d810) in the nightly...",
-    "at": "2026-11-21T04:27:00-05:00"
-   },
-   {
-    "w": "Operator",
-    "t": "The test file disk_sweep_temp_test.py passes again on a clean copy of main (7e052d810) in the...",
-    "at": "2026-11-21T04:27:00-05:00"
    }
   ],
   "count": {
-   "next": 645,
+   "next": 644,
    "wait": 2,
-   "blocked": 0,
+   "blocked": 1,
    "you": 2
   }
  },
@@ -515,34 +591,43 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-21T16:15:15Z",
+  "at": "2026-11-21T16:24:45Z",
   "s": {
-   "T-5355": [
-    "merging",
-    "Host checks on the Mac mini \u00b7 1 of 2 groups of tests done",
-    1795277355485
-   ],
    "T-4770": [
     "merged",
-    "on main 10:56 AM ET",
-    1795276618000,
-    "Ines"
+    "on main 11:19 AM ET",
+    1795277971000,
+    ""
+   ],
+   "T-5432": [
+    "merged",
+    "on main 11:19 AM ET",
+    1795277964000,
+    ""
+   ],
+   "T-5355": [
+    "merged",
+    "on main 11:19 AM ET",
+    1795277956000,
+    ""
    ]
   },
   "nm": {
-   "T-5355": "Finish the MacBook Xcode routing and the merge switch",
-   "T-4770": "Re-estimate the release date from measured build speed"
+   "T-4770": "Re-estimate the release date from measured build speed",
+   "T-5432": "Check the Foundations and Pages week figures",
+   "T-5355": "Finish the MacBook Xcode routing and the merge switch"
   },
   "wk": {
-   "T-5355": "Odalys",
-   "T-4770": "Ines"
+   "T-4770": "Ines",
+   "T-5432": "Idris",
+   "T-5355": "Odalys"
   }
  },
  "ln": {
-  "at": "2026-11-21T16:15:15Z",
+  "at": "2026-11-21T16:24:45Z",
   "mq": {
    "n": {
-    "checking": 1,
+    "checking": 0,
     "inline": 0,
     "conflicted": 1,
     "failed": 0,
@@ -551,37 +636,28 @@
     "parked": 3
    },
    "m": {
-    "checking": 6,
+    "checking": null,
     "inline": null,
-    "conflicted": 2875,
+    "conflicted": 2885,
     "failed": null,
     "held": null,
-    "retry": 3,
-    "parked": 1718
+    "retry": 13,
+    "parked": 1728
    },
-   "cur": [
-    [
-     [
-      "T-5355"
-     ],
-     "Mac tests",
-     "Mac mini",
-     6
-    ]
-   ],
+   "cur": [],
    "ld": [
-    6,
-    "2026-11-21T16:01:18Z"
+    9,
+    "2026-11-21T16:19:35Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-21T16:14:38Z",
-    "ld": 1.7,
+    "at": "2026-11-21T16:24:13Z",
+    "ld": 2.05,
     "c": 8,
     "sb": 0,
     "dk": [
-     58.0,
+     60.2,
      228.3
     ],
     "ss": [
@@ -594,13 +670,13 @@
  },
  "hc": {
   "wait": {
-   "n": 5,
+   "n": 6,
    "limit": 20,
-   "in_line": 0,
+   "in_line": 1,
    "parked": 5,
    "open": true,
    "mq": false,
-   "counted": "2026-11-21T16:01:44+00:00",
+   "counted": "2026-11-21T11:16:20-05:00",
    "by": {
     "app": {
      "n": 2,
@@ -608,7 +684,7 @@
      "open": true
     },
     "other": {
-     "n": 3,
+     "n": 4,
      "limit": 20,
      "open": true
     },
@@ -618,11 +694,11 @@
      "open": true
     }
    },
-   "at": "2026-11-21T16:15:15+00:00"
+   "at": "2026-11-21T16:24:45+00:00"
   },
   "bl": {
-   "n": 2,
-   "at": "2026-11-21T16:15:15+00:00"
+   "n": 3,
+   "at": "2026-11-21T16:24:45+00:00"
   }
  },
  "operators": [
@@ -632,8 +708,8 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 2 tasks",
-   "at": "2026-11-21T10:08:18-05:00"
+   "t": "Work session \u2013 8 tasks",
+   "at": "2026-11-21T11:18:14-05:00"
   },
   {
    "w": "Operator",
@@ -641,7 +717,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 2 tasks",
+   "t": "Work session \u2013 1 task",
    "at": "2026-11-21T11:08:29-05:00"
   },
   {
@@ -655,8 +731,8 @@
   }
  ],
  "reply": {
-  "sent": "2026-11-21T15:19:32Z",
-  "seconds": 327.0
+  "sent": "2026-11-21T16:17:03Z",
+  "seconds": 70.0
  },
  "inbox": [],
  "trimmed": [
@@ -674,10 +750,10 @@
   "main": 0,
   "lanes": 3,
   "total": 3,
-  "at": "11:16 AM",
+  "at": "11:25 AM",
   "why": "",
-  "at_iso": "2026-11-21T16:16:00+00:00",
+  "at_iso": "2026-11-21T16:25:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 11:16 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 11:25 AM ET</p></section>"
  }
 }

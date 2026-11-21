@@ -5,7 +5,7 @@ section: "documents"
 description: "Odalys. The main account reached 96% of its week at 11:00 AM on 11-20 (it resets Sun 11-22 2:00 AM ET) and is kept for the Investor inbox and the reports. The Investors asked that the unfinished work be handed to a\u2026"
 ---
 <div class="crumbs" role="navigation" aria-label="Back"><a class="back" href="{{ '/documents/operations/' | relative_url }}">← Operations</a><a href="{{ '/documents/company/t-5252-handoff.html' | relative_url }}" rel="bookmark">Permanent link</a></div>
-<div class="page-head"><div class="kicker"><span class="kind blue">Plan</span><span><span title="Our arithmetic estimate of what the idea would earn by day 30 (the $200 deadline) or day 90. It never raises a grade.">Day 30</span> · Fri Nov 20</span><span><code>ops/plans/T-5252-handoff.md</code></span></div><h1>T-5252: hand-off of the pre-comparison work to the personal accounts (11-20, 11:05 AM ET)</h1><div class="byline"><img class="avatar" src="{{ '/assets/portraits/odalys.svg' | relative_url }}" alt="Odalys" title="Odalys"><span>By <a href="{{ '/cast/odalys.html' | relative_url }}">Odalys</a>, Process and operations engineer</span></div></div>
+<div class="page-head"><div class="kicker"><span class="kind blue">Plan</span><span>Day 31 · Sat Nov 21</span><span><code>ops/plans/T-5252-handoff.md</code></span></div><h1>T-5252: hand-off of the pre-comparison work to the personal accounts (11-20, 11:05 AM ET)</h1><div class="byline"><img class="avatar" src="{{ '/assets/portraits/odalys.svg' | relative_url }}" alt="Odalys" title="Odalys"><span>By <a href="{{ '/cast/odalys.html' | relative_url }}">Odalys</a>, Process and operations engineer</span></div></div>
 
 <style>.doc-body{overflow-wrap:break-word}.doc-src{overflow-wrap:anywhere}.tbl[data-n~="1"] tr>:nth-child(1),.tbl[data-n~="2"] tr>:nth-child(2),.tbl[data-n~="3"] tr>:nth-child(3),.tbl[data-n~="4"] tr>:nth-child(4),.tbl[data-n~="5"] tr>:nth-child(5),.tbl[data-n~="6"] tr>:nth-child(6),.tbl[data-n~="7"] tr>:nth-child(7),.tbl[data-n~="8"] tr>:nth-child(8),.tbl[data-n~="9"] tr>:nth-child(9),.tbl[data-n~="10"] tr>:nth-child(10),.tbl[data-n~="11"] tr>:nth-child(11),.tbl[data-n~="12"] tr>:nth-child(12){min-width:0;overflow-wrap:normal}.tbl[data-o="1"] tr>:nth-child(1),.tbl[data-o="2"] tr>:nth-child(2),.tbl[data-o="3"] tr>:nth-child(3),.tbl[data-o="4"] tr>:nth-child(4),.tbl[data-o="5"] tr>:nth-child(5),.tbl[data-o="6"] tr>:nth-child(6),.tbl[data-o="7"] tr>:nth-child(7),.tbl[data-o="8"] tr>:nth-child(8),.tbl[data-o="9"] tr>:nth-child(9),.tbl[data-o="10"] tr>:nth-child(10),.tbl[data-o="11"] tr>:nth-child(11),.tbl[data-o="12"] tr>:nth-child(12){position:sticky;right:0;overflow-wrap:normal;background:var(--page);box-shadow:-1px 0 var(--line),-9px 0 8px -8px var(--sh)}</style>
 <div class="doc-body" markdown="1">
@@ -81,7 +81,7 @@ times in the copy: site_work, site_no_live, site_dashboard, site_lanes, site_t33
 site_session_chart, site_session_view, site_t3190, site_t4313. Left: get them on main; then run
 `site_session_chart_test.py` and `site_session_view_test.py` once from the main folder (they failed only there).
 Not fixed, on purpose: site_dash_probe (its subject left Home on 11-04: retire it with `tools/retire.sh`, step 9,
-reason "tests the Overview dashboard removed 57bd3d0a45"); site_home_replace and site_personal (red only on Day 30);
+reason "tests the Overview dashboard removed 57bd3d0a45"); site_home_replace and site_personal (red only on <span title="Our arithmetic estimate of what the idea would earn by day 30 (the $200 deadline) or day 90. It never raises a grade.">Day 30</span>);
 site_task_names_shown and site_t3316 (real Home faults: they wait for the Home hold to <span title="A new, permitted reading that removes a cap. A lift rule is that reading, written down before we look.">lift</span>).
 
 **3. Records round skips files gone from disk (T-5306).** Copy `T-5306-odalys/wt`, tip `b5aeda2a64` (WIP: red test
@@ -178,6 +178,55 @@ the Mac mini session's record; the list):
 - Left: the main session runs `site_session_chart_test.py` and `site_session_view_test.py` once from the main
   folder, and the disk keeper does its own first deep-cleanup pass after the land. Nobody runs the real cleaner
   by hand.
+
+## Jobs 6 and 7 on main
+
+T-5355, closed 11-21 by Odalys (lane a, `personal/a`). Its hand-off note (`ops/plans/T-5355-handoff.md`) is removed in
+this commit; git history keeps it.
+
+- **Job 6** (pre-merge Xcode runs go to the MacBook; T-5263, with T-5247 part 2 and T-4566) is on main:
+  `fcc5de5a3e..344e90dfa9`.
+  - Review: Idris, who did not write it, said it is safe to land. His three should-fix findings are fixed in the last
+    commit.
+  - Suites: xc_route_test 107, land_xc_test 115, xc_route_local_test 6, xc_inputs_test 87, xc_rerun_test 60.
+  - On 11-21, after it was on main: xc_route_test 107/0 and land_xc_test 115/0 again.
+- **Job 7** (the merge-road switch, left off; T-5256) is on main: `614c350473..a58eb025f7`.
+- **Its two switch-on fault fixes:**
+  - Fault 2 (the tick's held path keeps the task and reason): `ac0f9f795d`, on main.
+  - Fault 1 (a check whose setup fails waited for ever): the first try `f97a321967` is on main. The second try,
+    `1d50b1578f`, lands with this branch. Now every setup failure (the editor's sources, xcodegen missing,
+    `xcodegen generate`) ends `tools/merge.sh` with exit 3, a wait the tick counts toward its 6-hour cap.
+- **The switch** (`ops/merge_road.json`) stays "old".
+- **Reviews:**
+  - Pernille's second review of job 7: safe to land with the switch "old", not safe to switch on, because of the two
+    faults.
+  - Her review of fault 2's fix: it closes the fault.
+  - Her re-review of `1d50b1578f`: it closes fault 1 and is safe to land with the switch "old"; nothing to fix.
+- **Suites, each run once, `env -u ANTHROPIC_DEFAULT_FABLE_MODEL`, all green:**
+  - On `1d50b1578f`'s own files: merge_sh_test 51/0, personal_pool_requeue_test 129/0.
+  - Then: personal_pool_test 61, personal_pool_pause_test 57, personal_off_test 52, personal_land_test 476,
+    personal_parked_test 96, personal_train_test 26, personal_slots_test 32, land_first_try_test 53,
+    land_next_test 13, lane_records_round_test 18, xc_route_test 107, land_xc_test 115.
+  - App unit tests through `tools/xc.sh` (iPhone 17e, PyWidgetTests): 2176 run, 0 failed, 2 skipped. This ran on the
+    Mac mini (see open item a).
+- **Pernille's notes on `1d50b1578f`** (none blocks landing; all are for before the switch is turned on):
+  - `tests/merge_sh_test.sh:248`: the 75 control row replaces the whole Xcode check with a stand-in, so it does not
+    go through the real `xc_check`.
+  - `ops/metrics/merge.jsonl` records "wait" for both exit 3 and exit 75, so the row alone does not tell a counted wait
+    from an uncounted one.
+  - On a machine with no xcodegen, every lane would be sent back to its author after 6 hours, not just the broken one.
+    She accepts the trade, but it is the cost of counting setup waits.
+  - In the same review: no row for "xcodegen not installed" (it takes the same path as the rows that exist). The
+    comment at about line 245 of `tools/personal_tick.sh` could say that exit 3 is counted, but the guard refuses
+    edits to that file.
+
+Still open:
+- **(a)** The real pre-merge run on the runner is still owed. The 10:11 AM ET 11-21 run went local: the route row in
+  `ops/metrics/xc_route.jsonl` says "runner silent since 2026-11-21T05:31:56-05:00". This is carried as a note on
+  T-5247's board line.
+- **(b)** A person confirms that fault 2's fix belongs in `tools/personal_land.sh` `park_one` and is not a way around
+  the guard that refused the edit to `tools/personal_tick.sh`. The switch is not flipped until then, even if
+  `road-check` passes. This item is board line T-5433, held waiting on #325. It is done when this page says "fault 2's home confirmed".
 
 ## How to put a finished job on main
 

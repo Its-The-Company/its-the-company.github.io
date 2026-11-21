@@ -1,24 +1,29 @@
 {
  "schema": 1,
- "at": "2026-11-21T15:27:13.341805+00:00",
+ "at": "2026-11-21T15:36:53.057487+00:00",
  "session": {
   "active": false,
   "kind": "",
   "started": null,
-  "flow": [
+  "flow": [],
+  "done": [
+   {
+    "t": "T-4182",
+    "name": "A failing widget says so and can recover",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1795275400
+   },
    {
     "t": "T-5234",
     "name": "Move merge tests to the MacBook under heavy load",
     "acct": "Personal a",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1795274823
-     }
-    ]
-   }
-  ],
-  "done": [
+    "steps": [],
+    "end": "failed",
+    "end_at": 1795275395,
+    "why": "tests failed"
+   },
    {
     "t": "T-4770",
     "name": "Re-estimate the release date from measured build speed",
@@ -88,28 +93,10 @@
     "end": "failed",
     "end_at": 1795251768,
     "why": "tests failed"
-   },
-   {
-    "t": "T-5234",
-    "name": "Move merge tests to the MacBook under heavy load",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "failed",
-    "end_at": 1795246828,
-    "why": "tests failed"
-   },
-   {
-    "t": "T-5234",
-    "name": "Move merge tests to the MacBook under heavy load",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "failed",
-    "end_at": 1795242971,
-    "why": "tests failed"
    }
   ],
-  "landed": 3,
-  "failed": 11
+  "landed": 4,
+  "failed": 12
  },
  "workers": [],
  "who": "",
@@ -194,12 +181,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-21T10:40:20-05:00",
+ "next_tick": "2026-11-21T10:45:31-05:00",
  "personal": {
-  "week_pct": 97.98,
+  "week_pct": 98.05,
   "usage_pct": 49.5,
   "work_pct": 80.8,
-  "read_at": "2026-11-21T15:30:00+00:00",
+  "read_at": "2026-11-21T15:40:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -237,6 +224,18 @@
     "at": "2026-11-21T10:09:06-05:00",
     "n": "Evan",
     "src": "plan-a"
+   },
+   {
+    "lane": "a3",
+    "task": "T-4184",
+    "w": "Idris",
+    "k": "build",
+    "t": "A person's own script becomes a Home Screen widget",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-21T10:37:47-05:00",
+    "n": "Evan",
+    "src": "plan-a"
    }
   ]
  },
@@ -267,14 +266,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-21T10:28:00-05:00",
+   "at": "2026-11-21T10:38:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-21T10:30:00-05:00",
+  "at": "2026-11-21T10:40:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -472,18 +471,8 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-21T15:27:13Z",
+  "at": "2026-11-21T15:36:53Z",
   "s": {
-   "T-5234": [
-    "merging",
-    "Host checks on the Mac mini \u00b7 1 of 3 groups of tests done",
-    1795274833341
-   ],
-   "T-4182": [
-    "mergeq",
-    "1st to merge",
-    1795274773341
-   ],
    "T-4770": [
     "merged",
     "on main 10:15 AM ET",
@@ -492,60 +481,47 @@
    ]
   },
   "nm": {
-   "T-5234": "Move merge tests to the MacBook under heavy load",
-   "T-4182": "A failing widget says so and can recover",
    "T-4770": "Re-estimate the release date from measured build speed"
   },
   "wk": {
-   "T-5234": "Odalys",
-   "T-4182": "Idris",
    "T-4770": "Ines"
   }
  },
  "ln": {
-  "at": "2026-11-21T15:27:13Z",
+  "at": "2026-11-21T15:36:53Z",
   "mq": {
    "n": {
-    "checking": 1,
-    "inline": 1,
+    "checking": 0,
+    "inline": 0,
     "conflicted": 1,
-    "failed": 0,
+    "failed": 1,
     "held": 0,
     "retry": 0,
     "parked": 3
    },
    "m": {
-    "checking": 0,
-    "inline": 1,
-    "conflicted": 2827,
-    "failed": null,
+    "checking": null,
+    "inline": null,
+    "conflicted": 2837,
+    "failed": 0,
     "held": null,
     "retry": null,
-    "parked": 1670
+    "parked": 1680
    },
-   "cur": [
-    [
-     [
-      "T-5234"
-     ],
-     "Mac tests",
-     "Mac mini",
-     0
-    ]
-   ],
+   "cur": [],
    "ld": [
-    2,
-    "2026-11-21T15:15:27Z"
+    3,
+    "2026-11-21T15:36:40Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-21T15:27:14Z",
-    "ld": 3.74,
+    "at": "2026-11-21T15:36:53Z",
+    "ld": 3.91,
     "c": 8,
     "sb": 0,
     "dk": [
-     61.3,
+     61.1,
      228.3
     ],
     "ss": [
@@ -582,11 +558,11 @@
      "open": true
     }
    },
-   "at": "2026-11-21T15:27:13+00:00"
+   "at": "2026-11-21T15:36:53+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-21T15:27:13+00:00"
+   "at": "2026-11-21T15:36:53+00:00"
   }
  },
  "operators": [
@@ -627,12 +603,12 @@
  ],
  "agents_now": {
   "main": 0,
-  "lanes": 2,
-  "total": 2,
-  "at": "10:30 AM",
+  "lanes": 3,
+  "total": 3,
+  "at": "10:40 AM",
   "why": "",
-  "at_iso": "2026-11-21T15:30:00+00:00",
+  "at_iso": "2026-11-21T15:40:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 10:30 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 10:40 AM ET</p></section>"
  }
 }

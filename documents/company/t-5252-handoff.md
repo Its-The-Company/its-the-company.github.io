@@ -164,6 +164,17 @@ the Mac mini session's record; the list):
 - Job 2: on main, 65604e0c76..4b2657def1.
 - Job 3: a02dc895ef; job 4: b60781366f, 04e5479092; job 5: 350541cefb, 7728f9c193, 053cb97833. All on
   personal/b and green there; they reach main when lane b's branch lands.
+- 11-20 evening, Odalys (T-5354): lane b's land sent the branch back once (one more and it goes back to to-do), so
+  jobs 3 to 5 were copied to personal/b3 (698be22b97, 92c1889c02, 8eb387e6ca, c5a3f09d56, 7b58212306,
+  ac8c631e11) with three test fixes, no tool change: d54bdddf8e (records_round_test's T-4479 row read every
+  record as untracked on the MacBook, where a job's files are a git archive with no .git; it now reads the
+  archive there and the index in a checkout), 561e45d8d9 (supervisor_test's report rows went red when a slow
+  tick chained into a work session, on load alone; they no longer chain) and 5a9a5f1699 (personal_land_test's
+  hook row counted T-5113's lock-holder pattern as a land call). Suites on personal/b3, each at the commit
+  named, its files unchanged after it: records_round_test.py PASS 57 FAIL 0 (d54bdddf8e), supervisor_test.sh
+  PASS 250 FAIL 1 (561e45d8d9; the one red the load-flaky close_by row, T-5094), personal_land_test.sh PASS 446
+  FAIL 0 (5a9a5f1699); disk_keeper_test.py PASS 59 and storage_guard_test.py OK at the land,
+  their files unchanged since. Left: lane b3's land.
 - Left: the main session runs `site_session_chart_test.py` and `site_session_view_test.py` once from the main
   folder, and the disk keeper does its own first deep-cleanup pass after the land. Nobody runs the real cleaner
   by hand.

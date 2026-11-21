@@ -1,11 +1,51 @@
 {
  "schema": 1,
- "at": "2026-11-21T17:18:20.697265+00:00",
+ "at": "2026-11-21T17:27:58.277173+00:00",
  "session": {
   "active": false,
   "kind": "",
   "started": null,
   "flow": [
+   {
+    "t": "T-4286",
+    "name": "Check an imported font draws in a widget",
+    "w": "Idris",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "claimed",
+      "at": 1795281057
+     },
+     {
+      "s": "worker",
+      "at": 1795281057
+     },
+     {
+      "s": "testq",
+      "at": 1795281861
+     }
+    ]
+   },
+   {
+    "t": "T-4477",
+    "name": "People build a widget from blocks without code",
+    "w": "Idris",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "claimed",
+      "at": 1795281033
+     },
+     {
+      "s": "worker",
+      "at": 1795281033
+     },
+     {
+      "s": "testq",
+      "at": 1795281861
+     }
+    ]
+   },
    {
     "t": "T-5354",
     "name": "Land the finished test fixes and three small fixes",
@@ -39,38 +79,6 @@
     ]
    },
    {
-    "t": "T-5234",
-    "name": "Move merge tests to the MacBook under heavy load",
-    "w": "Odalys",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "claimed",
-      "at": 1795281063
-     },
-     {
-      "s": "worker",
-      "at": 1795281063
-     }
-    ]
-   },
-   {
-    "t": "T-4286",
-    "name": "Check an imported font draws in a widget",
-    "w": "Idris",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "claimed",
-      "at": 1795281057
-     },
-     {
-      "s": "worker",
-      "at": 1795281057
-     }
-    ]
-   },
-   {
     "t": "T-4850",
     "name": "Bring the Mac mini load back down",
     "w": "Odalys",
@@ -87,22 +95,6 @@
     ]
    },
    {
-    "t": "T-4477",
-    "name": "People build a widget from blocks without code",
-    "w": "Idris",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "claimed",
-      "at": 1795281033
-     },
-     {
-      "s": "worker",
-      "at": 1795281033
-     }
-    ]
-   },
-   {
     "t": "T-4635",
     "name": "Clear the Settings restore line once Pro is bought",
     "w": "Idris",
@@ -115,22 +107,6 @@
      {
       "s": "worker",
       "at": 1795281013
-     }
-    ]
-   },
-   {
-    "t": "T-4010",
-    "name": "Rebuild This Session as a full flowchart",
-    "w": "Odalys",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "claimed",
-      "at": 1795281008
-     },
-     {
-      "s": "worker",
-      "at": 1795281008
      }
     ]
    },
@@ -265,6 +241,25 @@
   ],
   "done": [
    {
+    "t": "T-4010",
+    "name": "Rebuild This Session as a full flowchart",
+    "w": "Odalys",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1795281859
+   },
+   {
+    "t": "T-5234",
+    "name": "Move merge tests to the MacBook under heavy load",
+    "w": "Odalys",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "failed",
+    "end_at": 1795281706,
+    "why": "tests failed"
+   },
+   {
     "t": "T-2097",
     "name": "Read free memory in the widget extension on a device",
     "w": "Idris",
@@ -336,8 +331,8 @@
     "end_at": 1795278643
    }
   ],
-  "landed": 17,
-  "failed": 11
+  "landed": 18,
+  "failed": 12
  },
  "workers": [],
  "who": "",
@@ -386,28 +381,28 @@
    "pct": 0.0,
    "resets_at": null,
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-21T12:06:43.588030-05:00",
+   "read_at": "2026-11-21T12:22:31.518995-05:00",
    "source": "usage",
    "left": 100.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 100.0,
-   "resets_at": "2026-11-22T07:00:00.007100+00:00",
+   "resets_at": "2026-11-22T06:59:59.690975+00:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-21T12:06:43.588030-05:00",
+   "read_at": "2026-11-21T12:22:31.518995-05:00",
    "source": "usage",
    "left": 0.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 36.0,
-   "resets_at": "2026-11-22T07:00:00.007284+00:00",
+   "resets_at": "2026-11-22T06:59:59.691154+00:00",
    "used_words": "of the Fable weekly allowance used",
-   "read_at": "2026-11-21T12:06:43.588030-05:00",
+   "read_at": "2026-11-21T12:22:31.518995-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-21T12:06:43.588030-05:00"
+  "read_at": "2026-11-21T12:22:31.518995-05:00"
  },
  "ui": {
   "week_pct": 0.123,
@@ -422,12 +417,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-21T12:29:16-05:00",
+ "next_tick": "2026-11-21T12:37:31-05:00",
  "personal": {
-  "week_pct": 99.96,
-  "usage_pct": 50.0,
-  "work_pct": 81.5,
-  "read_at": "2026-11-21T17:22:00+00:00",
+  "week_pct": 100.24,
+  "usage_pct": 50.1,
+  "work_pct": 81.6,
+  "read_at": "2026-11-21T17:30:00+00:00",
   "running": [
    {
     "lane": "a3",
@@ -461,7 +456,7 @@
   }
  ],
  "disk": {
-  "free_gb": 61,
+  "free_gb": 62,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -470,14 +465,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-21T12:21:00-05:00",
+   "at": "2026-11-21T12:29:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-21T12:22:00-05:00",
+  "at": "2026-11-21T12:30:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -675,26 +670,54 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-21T17:18:20Z",
+  "at": "2026-11-21T17:27:58Z",
   "s": {
-   "T-4188": [
-    "testing",
-    "Mac Mini \u00b7 test",
-    null
+   "T-0337": [
+    "mergetest",
+    "Xcode checks on the Mac mini",
+    1795281898277
+   ],
+   "T-2097": [
+    "mergetest",
+    "Xcode checks on the Mac mini",
+    1795281898277
+   ],
+   "T-4010": [
+    "mergetest",
+    "Xcode checks on the Mac mini",
+    1795281898277
+   ],
+   "T-4477": [
+    "mergetest",
+    "Xcode checks on the Mac mini",
+    1795281898277
+   ],
+   "T-4286": [
+    "mergetest",
+    "Xcode checks on the Mac mini",
+    1795281898277
    ]
   },
   "nm": {
-   "T-4188": "Location, steps and notifications work in scripts and..."
+   "T-0337": "Confirm the revenue memo's facts from Apple pages",
+   "T-2097": "Read free memory in the widget extension on a device",
+   "T-4010": "Rebuild This Session as a full flowchart",
+   "T-4477": "People build a widget from blocks without code",
+   "T-4286": "Check an imported font draws in a widget"
   },
   "wk": {
-   "T-4188": "Idris"
+   "T-0337": "Wrenna",
+   "T-2097": "Idris",
+   "T-4010": "Odalys",
+   "T-4477": "Idris",
+   "T-4286": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-21T17:18:20Z",
+  "at": "2026-11-21T17:27:58Z",
   "mq": {
    "n": {
-    "checking": 0,
+    "checking": 5,
     "inline": 0,
     "conflicted": 1,
     "failed": 1,
@@ -703,28 +726,61 @@
     "parked": 3
    },
    "m": {
-    "checking": null,
+    "checking": 3,
     "inline": null,
-    "conflicted": 2938,
-    "failed": 50,
+    "conflicted": 2948,
+    "failed": 6,
     "held": null,
     "retry": null,
-    "parked": 1781
+    "parked": 1791
    },
-   "cur": [],
+   "cur": [
+    [
+     [
+      "T-0337"
+     ],
+     "iPhone app tests",
+     "Mac mini",
+     3
+    ],
+    [
+     [
+      "T-2097"
+     ],
+     "iPhone app tests",
+     "Mac mini",
+     3
+    ],
+    [
+     [
+      "T-4010"
+     ],
+     "iPhone app tests",
+     "Mac mini",
+     3
+    ],
+    [
+     [
+      "T-4477"
+     ],
+     "iPhone app tests",
+     "Mac mini",
+     3
+    ]
+   ],
    "ld": [
-    21,
-    "2026-11-21T17:18:15Z"
+    22,
+    "2026-11-21T17:24:19Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-21T17:18:21Z",
-    "ld": 5.96,
+    "at": "2026-11-21T17:27:59Z",
+    "ld": 4.45,
     "c": 8,
     "sb": 1,
     "dk": [
-     57.2,
+     61.8,
      228.3
     ],
     "ss": [
@@ -739,21 +795,21 @@
  },
  "hc": {
   "wait": {
-   "n": 5,
+   "n": 10,
    "limit": 20,
-   "in_line": 0,
-   "parked": 5,
+   "in_line": 6,
+   "parked": 4,
    "open": true,
    "mq": false,
-   "counted": "2026-11-21T12:06:44-05:00",
+   "counted": "2026-11-21T17:21:24+00:00",
    "by": {
     "app": {
-     "n": 2,
+     "n": 6,
      "limit": 20,
      "open": true
     },
     "other": {
-     "n": 3,
+     "n": 4,
      "limit": 20,
      "open": true
     },
@@ -763,23 +819,14 @@
      "open": true
     }
    },
-   "at": "2026-11-21T17:18:20+00:00"
+   "at": "2026-11-21T17:27:58+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-21T17:18:20+00:00"
+   "at": "2026-11-21T17:27:58+00:00"
   }
  },
  "operators": [
-  {
-   "w": "Operator",
-   "a": "Evan's Account",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session \u2013 5 tasks",
-   "at": "2026-11-21T12:08:04-05:00"
-  },
   {
    "w": "Operator",
    "a": "Evan's Account",
@@ -810,10 +857,10 @@
   "main": 0,
   "lanes": 1,
   "total": 1,
-  "at": "12:22 PM",
+  "at": "12:30 PM",
   "why": "",
-  "at_iso": "2026-11-21T17:22:00+00:00",
+  "at_iso": "2026-11-21T17:30:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 12:22 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 12:30 PM ET</p></section>"
  }
 }

@@ -1,33 +1,11 @@
 {
  "schema": 1,
- "at": "2026-11-21T21:09:47.393447+00:00",
+ "at": "2026-11-21T21:24:22.623217+00:00",
  "session": {
   "active": false,
   "kind": "",
   "started": null,
   "flow": [
-   {
-    "t": "T-5397",
-    "name": "Build the one coordinator for both roads by Sunday",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1795295214
-     }
-    ]
-   },
-   {
-    "t": "T-5449",
-    "name": "Write the coordinator session's prompt",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1795295214
-     }
-    ]
-   },
    {
     "t": "T-4010",
     "name": "Rebuild This Session as a full flowchart",
@@ -46,6 +24,24 @@
    }
   ],
   "done": [
+   {
+    "t": "T-5449",
+    "name": "Write the coordinator session's prompt",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "failed",
+    "end_at": 1795295764,
+    "why": "tests failed"
+   },
+   {
+    "t": "T-5397",
+    "name": "Build the one coordinator for both roads by Sunday",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "failed",
+    "end_at": 1795295764,
+    "why": "tests failed"
+   },
    {
     "t": "T-5448",
     "name": "Give each worker one task and wake on exit",
@@ -113,26 +109,10 @@
     "steps": [],
     "end": "landed",
     "end_at": 1795290913
-   },
-   {
-    "t": "T-5454",
-    "name": "Home shows each merge queue on its own",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1795290913
-   },
-   {
-    "t": "T-5450",
-    "name": "Keep one coordinator session running from the supervisor",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1795290907
    }
   ],
   "landed": 65,
-  "failed": 20
+  "failed": 22
  },
  "workers": [],
  "who": "",
@@ -181,28 +161,28 @@
    "pct": 0.0,
    "resets_at": null,
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-21T16:03:32.482498-05:00",
+   "read_at": "2026-11-21T16:13:45.652532-05:00",
    "source": "usage",
    "left": 100.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 100.0,
-   "resets_at": "2026-11-22T07:00:00.482787+00:00",
+   "resets_at": "2026-11-22T07:00:00.369170+00:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-21T16:03:32.482498-05:00",
+   "read_at": "2026-11-21T16:13:45.652532-05:00",
    "source": "usage",
    "left": 0.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 36.0,
-   "resets_at": "2026-11-22T07:00:00.482961+00:00",
+   "resets_at": "2026-11-22T07:00:00.369387+00:00",
    "used_words": "of the Fable weekly allowance used",
-   "read_at": "2026-11-21T16:03:32.482498-05:00",
+   "read_at": "2026-11-21T16:13:45.652532-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-21T16:03:32.482498-05:00"
+  "read_at": "2026-11-21T16:13:45.652532-05:00"
  },
  "ui": {
   "week_pct": 0.123,
@@ -217,37 +197,23 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-21T16:18:33-05:00",
+ "next_tick": "2026-11-21T16:28:46-05:00",
  "personal": {
-  "week_pct": 103.35,
-  "usage_pct": 50.8,
-  "work_pct": 82.7,
-  "read_at": "2026-11-21T21:14:00+00:00",
+  "week_pct": 103.89,
+  "usage_pct": 51.0,
+  "work_pct": 82.9,
+  "read_at": "2026-11-21T21:25:00+00:00",
   "running": [
    {
-    "lane": "a",
-    "task": "T-4793",
-    "w": "Ines",
-    "k": "plan",
-    "t": "Say how Day phases gets fresh train times",
+    "lane": "a2",
+    "task": "T-4190",
+    "w": "Idris",
+    "k": "build",
+    "t": "Settings and Pro: buy, restore, themes",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-21T15:55:37-05:00",
+    "at": "2026-11-21T16:20:37-05:00",
     "n": "Evan",
-    "d": 1,
-    "src": "plan-a"
-   },
-   {
-    "lane": "a",
-    "task": "T-4795",
-    "w": "Ines",
-    "k": "plan",
-    "t": "Weigh the showcase set against the Builder-first ruling",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-21T15:55:37-05:00",
-    "n": "Evan",
-    "d": 1,
     "src": "plan-a"
    },
    {
@@ -273,6 +239,7 @@
     "e": "high",
     "at": "2026-11-21T15:46:38-05:00",
     "n": "Jeremy",
+    "d": 1,
     "src": "plan-b"
    }
   ]
@@ -295,7 +262,7 @@
   }
  ],
  "disk": {
-  "free_gb": 53,
+  "free_gb": 57,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -304,14 +271,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-21T16:11:00-05:00",
+   "at": "2026-11-21T16:21:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-21T16:14:00-05:00",
+  "at": "2026-11-21T16:25:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -509,103 +476,85 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-21T21:09:47Z",
+  "at": "2026-11-21T21:24:22Z",
   "s": {
-   "T-5397": [
-    "merging",
-    "Host checks on the Mac mini \u00b7 1 of 2 groups of tests done, 1 red",
-    1795295267393
-   ],
-   "T-5449": [
-    "merging",
-    "Host checks on the Mac mini \u00b7 1 of 2 groups of tests done, 1 red",
-    1795295267393
-   ],
    "T-5381": [
     "mergeq",
     "1st to merge",
-    1795295327393
+    1795295302623
    ],
    "T-5439": [
     "mergeq",
     "1st to merge",
-    1795295327393
-   ],
-   "T-4795": [
-    "mergeq",
-    "3rd to merge",
-    1795295207393
+    1795295302623
    ],
    "T-4793": [
     "mergeq",
-    "5th to merge",
-    1795295027393
+    "2nd to merge",
+    1795295962623
+   ],
+   "T-4795": [
+    "mergeq",
+    "2nd to merge",
+    1795295962623
    ],
    "T-0802": [
-    "merged",
-    "on main 3:51 PM ET",
-    1795294266000,
-    ""
+    "mergeq",
+    "11th to merge",
+    1795295662623
+   ],
+   "T-0044": [
+    "mergeq",
+    "11th to merge",
+    1795295662623
+   ],
+   "T-4190": [
+    "testing",
+    "Mac Mini \u00b7 test",
+    null
    ]
   },
   "nm": {
-   "T-5397": "Build the one coordinator for both roads by Sunday",
-   "T-5449": "Write the coordinator session's prompt",
    "T-5381": "Check finished work before it ships",
    "T-5439": "Find how a ratings graph site gets IMDb data",
-   "T-4795": "Weigh the showcase set against the Builder-first ruling",
    "T-4793": "Say how Day phases gets fresh train times",
-   "T-0802": "Review the package sandbox Mach change independently"
+   "T-4795": "Weigh the showcase set against the Builder-first ruling",
+   "T-0802": "Review the package sandbox Mach change independently",
+   "T-0044": "Test running marketplace Python inside a web view",
+   "T-4190": "Settings and Pro: buy, restore, themes"
   },
   "wk": {
-   "T-5397": "Odalys",
-   "T-5449": "Odalys",
    "T-5381": "Idris",
    "T-5439": "Wrenna",
-   "T-4795": "Ines",
    "T-4793": "Ines",
-   "T-0802": "Odalys"
+   "T-4795": "Ines",
+   "T-0802": "Odalys",
+   "T-0044": "Idris",
+   "T-4190": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-21T21:09:47Z",
+  "at": "2026-11-21T21:24:22Z",
   "mq": {
    "n": {
-    "checking": 2,
-    "inline": 4,
+    "checking": 0,
+    "inline": 6,
     "conflicted": 0,
     "failed": 0,
     "held": 0,
-    "retry": 1,
+    "retry": 3,
     "parked": 3
    },
    "m": {
-    "checking": 2,
-    "inline": 2,
+    "checking": null,
+    "inline": 10,
     "conflicted": null,
     "failed": null,
     "held": null,
-    "retry": 10,
-    "parked": 2013
+    "retry": 45,
+    "parked": 2027
    },
-   "cur": [
-    [
-     [
-      "T-5397"
-     ],
-     "Mac tests",
-     "Mac mini",
-     2
-    ],
-    [
-     [
-      "T-5449"
-     ],
-     "Mac tests",
-     "Mac mini",
-     2
-    ]
-   ],
+   "cur": [],
    "ld": [
     74,
     "2026-11-21T21:06:46Z"
@@ -613,19 +562,21 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-21T21:09:48Z",
-    "ld": 3.54,
+    "at": "2026-11-21T21:24:23Z",
+    "ld": 7.91,
     "c": 8,
-    "sb": 0,
+    "sb": 1,
     "dk": [
-     51.0,
+     57.5,
      228.3
     ],
     "ss": [
      171.9,
      953.7
     ],
-    "sn": []
+    "sn": [
+     "iPhone 17e"
+    ]
    },
    "macbook": {
     "at": "2026-11-21T21:08:28Z",
@@ -642,16 +593,16 @@
  },
  "hc": {
   "wait": {
-   "n": 10,
+   "n": 12,
    "limit": 20,
    "in_line": 6,
-   "parked": 4,
+   "parked": 6,
    "open": true,
    "mq": false,
-   "counted": "2026-11-21T21:08:14+00:00",
+   "counted": "2026-11-21T21:19:12+00:00",
    "by": {
     "app": {
-     "n": 4,
+     "n": 6,
      "limit": 20,
      "open": true
     },
@@ -666,11 +617,11 @@
      "open": true
     }
    },
-   "at": "2026-11-21T21:09:47+00:00"
+   "at": "2026-11-21T21:24:22+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-21T21:09:47+00:00"
+   "at": "2026-11-21T21:24:22+00:00"
   }
  },
  "operators": [
@@ -680,17 +631,8 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session",
-   "at": "2026-11-21T15:55:36-05:00"
-  },
-  {
-   "w": "Operator",
-   "a": "Jeremy's Account",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
    "t": "Work session \u2013 1 task",
-   "at": "2026-11-21T15:26:25-05:00"
+   "at": "2026-11-21T16:20:37-05:00"
   },
   {
    "w": "Operator",
@@ -722,10 +664,10 @@
   "main": 0,
   "lanes": 2,
   "total": 2,
-  "at": "4:14 PM",
+  "at": "4:25 PM",
   "why": "",
-  "at_iso": "2026-11-21T21:14:00+00:00",
+  "at_iso": "2026-11-21T21:25:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 4:14 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 4:25 PM ET</p></section>"
  }
 }

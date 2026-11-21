@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-21T01:54:35.696309+00:00",
+ "at": "2026-11-21T02:08:59.114762+00:00",
  "session": {
   "active": false,
   "kind": "",
@@ -40,6 +40,23 @@
    }
   ],
   "done": [
+   {
+    "t": "T-5113",
+    "name": "Stop the supervisor breaking a live session's lock",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1795226792
+   },
+   {
+    "t": "T-5234",
+    "name": "Move merge tests to the MacBook under heavy load",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "failed",
+    "end_at": 1795226782,
+    "why": "did not merge cleanly"
+   },
    {
     "t": "T-5234",
     "name": "Move merge tests to the MacBook under heavy load",
@@ -109,26 +126,10 @@
     "steps": [],
     "end": "landed",
     "end_at": 1795211385
-   },
-   {
-    "t": "T-5154",
-    "name": "Keep the company account signed in to Claude Code",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1795209165
-   },
-   {
-    "t": "T-4807",
-    "name": "Fix every bad test that failed a merge",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1795209165
    }
   ],
-  "landed": 15,
-  "failed": 24
+  "landed": 13,
+  "failed": 25
  },
  "workers": [],
  "who": "",
@@ -177,28 +178,28 @@
    "pct": 0.0,
    "resets_at": null,
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-20T20:48:45.545273-05:00",
+   "read_at": "2026-11-20T20:58:54.287814-05:00",
    "source": "usage",
    "left": 100.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 100.0,
-   "resets_at": "2026-11-22T07:00:00.168901+00:00",
+   "resets_at": "2026-11-22T07:00:00.066848+00:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-20T20:48:45.545273-05:00",
+   "read_at": "2026-11-20T20:58:54.287814-05:00",
    "source": "usage",
    "left": 0.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 36.0,
-   "resets_at": "2026-11-22T07:00:00.169015+00:00",
+   "resets_at": "2026-11-22T07:00:00.066974+00:00",
    "used_words": "of the Fable weekly allowance used",
-   "read_at": "2026-11-20T20:48:45.545273-05:00",
+   "read_at": "2026-11-20T20:58:54.287814-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-20T20:48:45.545273-05:00"
+  "read_at": "2026-11-20T20:58:54.287814-05:00"
  },
  "ui": {
   "week_pct": 0.123,
@@ -213,27 +214,13 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-20T21:03:46-05:00",
+ "next_tick": "2026-11-20T21:13:54-05:00",
  "personal": {
   "week_pct": 96.94,
   "usage_pct": 49.2,
   "work_pct": 80.6,
-  "read_at": "2026-11-21T01:59:00+00:00",
-  "running": [
-   {
-    "lane": "b3",
-    "task": "T-5354",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Land the finished test fixes and three small fixes",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-20T17:21:51-05:00",
-    "n": "Jeremy",
-    "d": 1,
-    "src": "plan-b"
-   }
-  ]
+  "read_at": "2026-11-21T02:09:00+00:00",
+  "running": []
  },
  "api_credits": [
   {
@@ -253,7 +240,7 @@
   }
  ],
  "disk": {
-  "free_gb": 21,
+  "free_gb": 19,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -262,14 +249,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-20T20:56:00-05:00",
+   "at": "2026-11-20T21:06:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-20T20:59:00-05:00",
+  "at": "2026-11-20T21:09:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -467,87 +454,79 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-21T01:54:35Z",
+  "at": "2026-11-21T02:08:59Z",
   "s": {
-   "T-5355": [
+   "T-5354": [
     "merging",
-    "Host checks on the Mac mini",
-    1795224215696
+    "Host checks on the Mac mini \u00b7 2 of 5 groups of tests done",
+    1795226879114
    ],
-   "T-5234": [
+   "T-5041": [
     "mergeq",
     "1st to merge",
-    1795224095696
+    1795226879114
    ],
-   "T-5113": [
+   "T-5306": [
     "mergeq",
-    "2nd to merge",
-    1795224215696
-   ],
-   "T-5354": [
-    "merged",
-    "on main 3:27 PM ET",
-    1795206457000,
-    ""
+    "1st to merge",
+    1795226879114
    ]
   },
   "nm": {
-   "T-5355": "Finish the MacBook Xcode routing and the merge switch",
-   "T-5234": "Move merge tests to the MacBook under heavy load",
-   "T-5113": "Stop the supervisor breaking a live session's lock",
-   "T-5354": "Land the finished test fixes and three small fixes"
+   "T-5354": "Land the finished test fixes and three small fixes",
+   "T-5041": "Disk keeper frees space before the stop line",
+   "T-5306": "Records round skips files gone from disk"
   },
   "wk": {
-   "T-5355": "Odalys",
-   "T-5234": "Odalys",
-   "T-5113": "Odalys",
-   "T-5354": "Odalys"
+   "T-5354": "Odalys",
+   "T-5041": "Odalys",
+   "T-5306": "Odalys"
   }
  },
  "ln": {
-  "at": "2026-11-21T01:54:35Z",
+  "at": "2026-11-21T02:08:59Z",
   "mq": {
    "n": {
     "checking": 1,
     "inline": 2,
-    "conflicted": 1,
+    "conflicted": 2,
     "failed": 0,
     "held": 0,
-    "retry": 2,
-    "parked": 4
+    "retry": 0,
+    "parked": 3
    },
    "m": {
-    "checking": 31,
-    "inline": 32,
-    "conflicted": 2015,
+    "checking": 1,
+    "inline": 1,
+    "conflicted": 1015,
     "failed": null,
     "held": null,
-    "retry": 229,
-    "parked": 765
+    "retry": null,
+    "parked": 872
    },
    "cur": [
     [
      [
-      "T-5355"
+      "T-5354"
      ],
      "Mac tests",
      "Mac mini",
-     31
+     1
     ]
    ],
    "ld": [
-    26,
-    "2026-11-21T00:53:23Z"
+    28,
+    "2026-11-21T02:06:32Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-21T01:54:37Z",
-    "ld": 8.81,
+    "at": "2026-11-21T02:09:00Z",
+    "ld": 3.72,
     "c": 8,
     "sb": 0,
     "dk": [
-     21.3,
+     19.2,
      228.3
     ],
     "ss": [
@@ -557,12 +536,12 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-21T01:30:56Z",
-    "ld": 0.5,
+    "at": "2026-11-21T02:01:32Z",
+    "ld": 0.24,
     "c": 12,
     "sb": 0,
     "dk": [
-     353.0,
+     353.4,
      926.4
     ],
     "sn": []
@@ -577,7 +556,7 @@
    "parked": 7,
    "open": true,
    "mq": false,
-   "counted": "2026-11-21T01:49:59+00:00",
+   "counted": "2026-11-21T02:00:08+00:00",
    "by": {
     "app": {
      "n": 2,
@@ -595,24 +574,14 @@
      "open": false
     }
    },
-   "at": "2026-11-21T01:54:35+00:00"
+   "at": "2026-11-21T02:08:59+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-21T01:54:35+00:00"
+   "at": "2026-11-21T02:08:59+00:00"
   }
  },
- "operators": [
-  {
-   "w": "Operator",
-   "a": "Jeremy's Account",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session \u2013 1 task",
-   "at": "2026-11-20T18:50:01-05:00"
-  }
- ],
+ "operators": [],
  "reply": {
   "sent": "2026-11-21T01:15:02Z",
   "seconds": 76.0
@@ -631,12 +600,12 @@
  ],
  "agents_now": {
   "main": 0,
-  "lanes": 1,
-  "total": 1,
-  "at": "8:59 PM",
-  "why": "",
-  "at_iso": "2026-11-21T01:59:00+00:00",
+  "lanes": 0,
+  "total": 0,
+  "at": "9:09 PM",
+  "why": "Plan limit: the weekly allowance is used up; it resets Sun 2:00 AM ET. Last check 9:09 PM ET.",
+  "at_iso": "2026-11-21T02:09:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 8:59 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:09 PM ET</p><p class=\"an-why\">Plan limit: the weekly allowance is used up; it resets Sun 2:00 AM ET. Last check 9:09 PM ET.</p></section>"
  }
 }

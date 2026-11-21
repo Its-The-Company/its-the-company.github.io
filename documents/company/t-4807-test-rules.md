@@ -5,7 +5,7 @@ section: "documents"
 description: "Pernille, 11-17 9:35 PM ET. Answers an Investor on #41 (c6965124089, 7:26 PM 11-17: &quot;fix every bad test ... Consult real-world examples of how tests are designed and implemented. Fix the &#x27;big picture&#x27; causes&quot;) and the\u2026"
 ---
 <div class="crumbs" role="navigation" aria-label="Back"><a class="back" href="{{ '/documents/operations/' | relative_url }}">← Operations</a><a href="{{ '/documents/company/t-4807-test-rules.html' | relative_url }}" rel="bookmark">Permanent link</a></div>
-<div class="page-head"><div class="kicker"><span class="kind blue">Plan</span><span><span title="Our arithmetic estimate of what the idea would earn by day 30 (the $200 deadline) or day 90. It never raises a grade.">Day 30</span> · Fri Nov 20</span><span><code>ops/plans/T-4807-test-rules.md</code></span></div><h1>T-4807: rules for new tests</h1><div class="byline"><img class="avatar" src="{{ '/assets/portraits/pernille.svg' | relative_url }}" alt="Pernille" title="Pernille"><span>By <a href="{{ '/cast/pernille.html' | relative_url }}">Pernille</a>, Python runtime engineer</span></div></div>
+<div class="page-head"><div class="kicker"><span class="kind blue">Plan</span><span>Day 31 · Sat Nov 21</span><span><code>ops/plans/T-4807-test-rules.md</code></span></div><h1>T-4807: rules for new tests</h1><div class="byline"><img class="avatar" src="{{ '/assets/portraits/pernille.svg' | relative_url }}" alt="Pernille" title="Pernille"><span>By <a href="{{ '/cast/pernille.html' | relative_url }}">Pernille</a>, Python runtime engineer</span></div></div>
 
 <style>.doc-body{overflow-wrap:break-word}.doc-src{overflow-wrap:anywhere}.tbl[data-n~="1"] tr>:nth-child(1),.tbl[data-n~="2"] tr>:nth-child(2),.tbl[data-n~="3"] tr>:nth-child(3),.tbl[data-n~="4"] tr>:nth-child(4),.tbl[data-n~="5"] tr>:nth-child(5),.tbl[data-n~="6"] tr>:nth-child(6),.tbl[data-n~="7"] tr>:nth-child(7),.tbl[data-n~="8"] tr>:nth-child(8),.tbl[data-n~="9"] tr>:nth-child(9),.tbl[data-n~="10"] tr>:nth-child(10),.tbl[data-n~="11"] tr>:nth-child(11),.tbl[data-n~="12"] tr>:nth-child(12){min-width:0;overflow-wrap:normal}.tbl[data-o="1"] tr>:nth-child(1),.tbl[data-o="2"] tr>:nth-child(2),.tbl[data-o="3"] tr>:nth-child(3),.tbl[data-o="4"] tr>:nth-child(4),.tbl[data-o="5"] tr>:nth-child(5),.tbl[data-o="6"] tr>:nth-child(6),.tbl[data-o="7"] tr>:nth-child(7),.tbl[data-o="8"] tr>:nth-child(8),.tbl[data-o="9"] tr>:nth-child(9),.tbl[data-o="10"] tr>:nth-child(10),.tbl[data-o="11"] tr>:nth-child(11),.tbl[data-o="12"] tr>:nth-child(12){position:sticky;right:0;overflow-wrap:normal;background:var(--page);box-shadow:-1px 0 var(--line),-9px 0 8px -8px var(--sh)}</style>
 <div class="doc-body" markdown="1">
@@ -147,6 +147,19 @@ research/inbound/):
   group's ticks start the real supervisor), not a split. The pool parts after the change: 61/0 258 s, 80/0 402 s, 57/0
   334 s at load 27-140. Left: board_line and waits_on per line in the tick; ProStoreTests
   ask-to-buy under five Simulators.
+- Rule 8 and rule 2, slice 7 (11-21): ProStoreTests ask-to-buy under five Simulators (T-4787 rows 2, 11, 17-20; six
+  reds, the most of any bad test). Its fix was T-4008 (Idris, 0dc00ac09b, 11-10): a pending request that StoreKit's
+  test environment lists as bought ends skipped with what StoreKit listed, and the app's own part is still checked on
+  every read. Measured from origin/macbook-results, jobs' started and finished times overlapped: 369 land checks from
+  11-11 to 11-21, 58 of them with 4 to 6 jobs on the MacBook at once (25 with 6), and none named a ProStoreTests test
+  failed or skipped (the 350 that ran tests each listed every skip by name); 11-07 to 11-10 had 19 such checks, and
+  ops/metrics/xc_rerun.jsonl has no rerun at all. So the four ProStoreTests lines came off ops/xc_rerun_tests.txt, which
+  is now empty. Two suites read main's list as their fixture: tests/xc_rerun_test.py copied it into its throwaway
+  repository and required it to be non-empty, and tests/personal_land_test.sh's rerun rows copied it too. Each now
+  writes its own one-line list (rule 2). Red first: on the emptied list the old xc_rerun_test.py failed 11 rows ("is
+  not on the list") and stopped; the new one passes 61/0 on both the old list and the empty one. The old
+  personal_land_test.sh failed its five T-3995 rows and only those (471/5, 479 s); the new one passes 476/0 (491 s),
+  both through tests/run.sh at load 10-57. ProStoreTests.swift itself is unchanged, so no Xcode run was needed.
 {% endraw %}
 
 </div>

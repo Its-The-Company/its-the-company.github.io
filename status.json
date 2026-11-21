@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-21T16:59:05.909357+00:00",
+ "at": "2026-11-21T17:04:03.359469+00:00",
  "session": {
   "active": false,
   "kind": "",
@@ -14,11 +14,11 @@
     "steps": [
      {
       "s": "claimed",
-      "at": 1795279955
+      "at": 1795280639
      },
      {
       "s": "worker",
-      "at": 1795279955
+      "at": 1795280639
      }
     ]
    },
@@ -30,11 +30,27 @@
     "steps": [
      {
       "s": "claimed",
-      "at": 1795279890
+      "at": 1795280585
      },
      {
       "s": "worker",
-      "at": 1795279890
+      "at": 1795280585
+     }
+    ]
+   },
+   {
+    "t": "T-0337",
+    "name": "Confirm the revenue memo's facts from Apple pages",
+    "w": "Wrenna",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "claimed",
+      "at": 1795280530
+     },
+     {
+      "s": "worker",
+      "at": 1795280530
      }
     ]
    },
@@ -265,6 +281,14 @@
   ],
   "done": [
    {
+    "t": "T-4181",
+    "name": "Widgets refresh on their own and by a tap",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1795280567
+   },
+   {
     "t": "T-0337",
     "name": "Confirm the revenue memo's facts from Apple pages",
     "w": "Wrenna",
@@ -317,27 +341,9 @@
     "steps": [],
     "end": "landed",
     "end_at": 1795278592
-   },
-   {
-    "t": "T-2097",
-    "name": "Read free memory in the widget extension on a device",
-    "w": "Idris",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1795278539
-   },
-   {
-    "t": "T-0851",
-    "name": "Split the app guide into one document per section",
-    "w": "Odalys",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1795278479
    }
   ],
-  "landed": 14,
+  "landed": 15,
   "failed": 11
  },
  "workers": [],
@@ -380,7 +386,7 @@
   "runnable": [],
   "blocked": [],
   "runnable_count": 646,
-  "blocked_count": 3
+  "blocked_count": 2
  },
  "meter": {
   "five_hour": {
@@ -423,23 +429,20 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-21T12:06:12-05:00",
+ "next_tick": "2026-11-21T12:15:48-05:00",
  "personal": {
-  "week_pct": 99.66,
+  "week_pct": 99.75,
   "usage_pct": 49.9,
-  "work_pct": 81.3,
-  "read_at": "2026-11-21T17:01:00+00:00",
+  "work_pct": 81.4,
+  "read_at": "2026-11-21T17:07:00+00:00",
   "running": [
    {
     "lane": "a",
     "task": "T-5355",
-    "w": "Odalys",
-    "k": "tools",
     "t": "Finish the MacBook Xcode routing and the merge switch",
-    "m": "opus",
-    "e": "high",
     "at": "2026-11-21T12:01:04-05:00",
     "n": "Evan",
+    "d": 1,
     "src": "plan-a"
    },
    {
@@ -474,7 +477,7 @@
   }
  ],
  "disk": {
-  "free_gb": 62,
+  "free_gb": 59,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -483,14 +486,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-21T11:58:00-05:00",
+   "at": "2026-11-21T12:06:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-21T12:01:00-05:00",
+  "at": "2026-11-21T12:07:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -627,6 +630,11 @@
   ],
   "done": [
    {
+    "w": "Odalys+operator",
+    "t": "Jobs 6 and 7 are on main: pre-merge Xcode runs can go to the MacBook, and the merge-road switch...",
+    "at": "2026-11-21T12:02:00-05:00"
+   },
+   {
     "w": "Odalys",
     "t": "The app guide was already split into a short index and ten part files on main, so this parked...",
     "at": "2026-11-21T11:27:00-05:00"
@@ -635,17 +643,12 @@
     "w": "Ines+idris+operator",
     "t": "The release re-estimate is finished: every phase is now checked against measured speed and the...",
     "at": "2026-11-21T11:19:00-05:00"
-   },
-   {
-    "w": "Idris",
-    "t": "The last two week estimates the CEO had guessed, for foundations and Pages, are now checked...",
-    "at": "2026-11-21T11:19:00-05:00"
    }
   ],
   "count": {
    "next": 646,
    "wait": 2,
-   "blocked": 1,
+   "blocked": 0,
    "you": 2
   }
  },
@@ -688,37 +691,38 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-21T16:59:05Z",
+  "at": "2026-11-21T17:04:03Z",
   "s": {
-   "T-4181": [
+   "T-4182": [
     "testing",
     "Mac Mini \u00b7 test",
     null
    ],
-   "T-4182": [
-    "testq",
-    "1st for a Simulator",
-    1795280345909
-   ],
    "T-4807": [
-    "testq",
-    "1st for a Simulator",
-    1795280345909
+    "testing",
+    "Mac Mini \u00b7 test",
+    null
+   ],
+   "T-5355": [
+    "merged",
+    "on main 12:02 PM ET",
+    1795280570000,
+    ""
    ]
   },
   "nm": {
-   "T-4181": "Widgets refresh on their own and by a tap",
    "T-4182": "A failing widget says so and can recover",
-   "T-4807": "Fix every bad test that failed a merge"
+   "T-4807": "Fix every bad test that failed a merge",
+   "T-5355": "Finish the MacBook Xcode routing and the merge switch"
   },
   "wk": {
-   "T-4181": "Idris",
    "T-4182": "Idris",
-   "T-4807": "Pernille"
+   "T-4807": "Pernille",
+   "T-5355": "Odalys"
   }
  },
  "ln": {
-  "at": "2026-11-21T16:59:05Z",
+  "at": "2026-11-21T17:04:03Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -732,26 +736,26 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 2919,
-    "failed": 31,
+    "conflicted": 2924,
+    "failed": 36,
     "held": null,
     "retry": null,
-    "parked": 1762
+    "parked": 1767
    },
    "cur": [],
    "ld": [
-    17,
-    "2026-11-21T16:53:41Z"
+    19,
+    "2026-11-21T17:02:54Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-21T16:59:12Z",
-    "ld": 6.66,
+    "at": "2026-11-21T17:04:04Z",
+    "ld": 5.03,
     "c": 8,
     "sb": 1,
     "dk": [
-     61.8,
+     59.4,
      228.3
     ],
     "ss": [
@@ -790,11 +794,11 @@
      "open": true
     }
    },
-   "at": "2026-11-21T16:59:05+00:00"
+   "at": "2026-11-21T17:04:03+00:00"
   },
   "bl": {
    "n": 3,
-   "at": "2026-11-21T16:59:05+00:00"
+   "at": "2026-11-21T17:04:03+00:00"
   }
  },
  "operators": [
@@ -804,8 +808,8 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 1 task",
-   "at": "2026-11-21T11:33:35-05:00"
+   "t": "Work session \u2013 3 tasks",
+   "at": "2026-11-21T12:01:04-05:00"
   },
   {
    "w": "Operator",
@@ -814,7 +818,7 @@
    "m": "opus",
    "e": "high",
    "t": "Work session \u2013 1 task",
-   "at": "2026-11-21T11:52:09-05:00"
+   "at": "2026-11-21T11:33:35-05:00"
   }
  ],
  "reply": {
@@ -837,10 +841,10 @@
   "main": 0,
   "lanes": 2,
   "total": 2,
-  "at": "12:01 PM",
+  "at": "12:07 PM",
   "why": "",
-  "at_iso": "2026-11-21T17:01:00+00:00",
+  "at_iso": "2026-11-21T17:07:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 12:01 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 12:07 PM ET</p></section>"
  }
 }

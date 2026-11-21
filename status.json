@@ -1,33 +1,11 @@
 {
  "schema": 1,
- "at": "2026-11-21T19:51:45.662361+00:00",
+ "at": "2026-11-21T19:56:29.696606+00:00",
  "session": {
   "active": false,
   "kind": "",
   "started": null,
   "flow": [
-   {
-    "t": "T-5262",
-    "name": "Trim step 9, merge checks agree on every run",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1795290651
-     }
-    ]
-   },
-   {
-    "t": "T-5448",
-    "name": "Give each worker one task and wake on exit",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1795290651
-     }
-    ]
-   },
    {
     "t": "T-4010",
     "name": "Rebuild This Session as a full flowchart",
@@ -46,6 +24,56 @@
    }
   ],
   "done": [
+   {
+    "t": "T-5433",
+    "name": "A person confirms where the held-path fix lives",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1795290913
+   },
+   {
+    "t": "T-5454",
+    "name": "Home shows each merge queue on its own",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1795290913
+   },
+   {
+    "t": "T-5450",
+    "name": "Keep one coordinator session running from the supervisor",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1795290907
+   },
+   {
+    "t": "T-5447",
+    "name": "Add the coordinator switch and one-task worker plan, off",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1795290907
+   },
+   {
+    "t": "T-5448",
+    "name": "Give each worker one task and wake on exit",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "failed",
+    "end_at": 1795290801,
+    "why": "tests failed"
+   },
+   {
+    "t": "T-5262",
+    "name": "Trim step 9, merge checks agree on every run",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "failed",
+    "end_at": 1795290801,
+    "why": "tests failed"
+   },
    {
     "t": "T-4185",
     "name": "Launcher widgets open the apps a person chose",
@@ -80,62 +108,10 @@
     "end": "failed",
     "end_at": 1795290013,
     "why": "did not merge cleanly"
-   },
-   {
-    "t": "T-5448",
-    "name": "Give each worker one task and wake on exit",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "failed",
-    "end_at": 1795290013,
-    "why": "did not merge cleanly"
-   },
-   {
-    "t": "T-5262",
-    "name": "Trim step 9, merge checks agree on every run",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "failed",
-    "end_at": 1795290013,
-    "why": "did not merge cleanly"
-   },
-   {
-    "t": "T-4192",
-    "name": "Python in the app: smaller bundle, installable packages",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1795289564
-   },
-   {
-    "t": "T-4183",
-    "name": "The Gallery shows, previews and opens every premade",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1795289554
-   },
-   {
-    "t": "T-2097",
-    "name": "Read free memory in the widget extension on a device",
-    "w": "Idris",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1795288768
-   },
-   {
-    "t": "T-0337",
-    "name": "Confirm the revenue memo's facts from Apple pages",
-    "w": "Wrenna",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1795288453
    }
   ],
-  "landed": 58,
-  "failed": 15
+  "landed": 62,
+  "failed": 17
  },
  "workers": [],
  "who": "",
@@ -176,7 +152,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 662,
+  "runnable_count": 661,
   "blocked_count": 2
  },
  "meter": {
@@ -220,12 +196,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-21T15:02:41-05:00",
+ "next_tick": "2026-11-21T15:07:58-05:00",
  "personal": {
-  "week_pct": 103.18,
+  "week_pct": 103.26,
   "usage_pct": 50.8,
-  "work_pct": 82.3,
-  "read_at": "2026-11-21T19:53:00+00:00",
+  "work_pct": 82.5,
+  "read_at": "2026-11-21T19:59:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -255,14 +231,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-21T14:52:00-05:00",
+   "at": "2026-11-21T14:58:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-21T14:53:00-05:00",
+  "at": "2026-11-21T14:59:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -399,6 +375,11 @@
   ],
   "done": [
    {
+    "w": "Operator",
+    "t": "Evan confirmed that the fix keeping a held branch's task and reason stays in the lane landing...",
+    "at": "2026-11-21T14:55:00-05:00"
+   },
+   {
     "w": "Odalys",
     "t": "A worker's test run before merging now goes to the MacBook test machine instead of the busy Mac...",
     "at": "2026-11-21T13:30:00-05:00"
@@ -407,15 +388,10 @@
     "w": "Odalys",
     "t": "The finished test fixes, the records round fix, the supervisor lock fix and the disk keeper's...",
     "at": "2026-11-21T12:54:00-05:00"
-   },
-   {
-    "w": "Odalys+operator",
-    "t": "Jobs 6 and 7 are on main: pre-merge Xcode runs can go to the MacBook, and the merge-road switch...",
-    "at": "2026-11-21T12:02:00-05:00"
    }
   ],
   "count": {
-   "next": 662,
+   "next": 661,
    "wait": 2,
    "blocked": 0,
    "you": 2
@@ -460,62 +436,15 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-21T19:51:45Z",
-  "s": {
-   "T-5247": [
-    "merging",
-    "Host checks on the Mac mini",
-    1795290705662
-   ],
-   "T-5262": [
-    "merging",
-    "Host checks on the Mac mini",
-    1795290705662
-   ],
-   "T-5448": [
-    "merging",
-    "Host checks on the Mac mini",
-    1795290705662
-   ],
-   "T-5447": [
-    "mergeq",
-    "1st to merge",
-    1795290645662
-   ],
-   "T-5256": [
-    "mergeq",
-    "1st to merge",
-    1795290645662
-   ],
-   "T-5450": [
-    "mergeq",
-    "1st to merge",
-    1795290645662
-   ]
-  },
-  "nm": {
-   "T-5247": "MacBook runner takes pre-merge Xcode runs",
-   "T-5262": "Trim step 9, merge checks agree on every run",
-   "T-5448": "Give each worker one task and wake on exit",
-   "T-5447": "Add the coordinator switch and one-task worker plan, off",
-   "T-5256": "Trim step 3, one merge script beside the old road",
-   "T-5450": "Keep one coordinator session running from the supervisor"
-  },
-  "wk": {
-   "T-5247": "Odalys",
-   "T-5262": "Odalys",
-   "T-5448": "Odalys",
-   "T-5447": "Odalys",
-   "T-5256": "Odalys",
-   "T-5450": "Odalys"
-  }
+  "at": "2026-11-21T19:56:29Z",
+  "s": {}
  },
  "ln": {
-  "at": "2026-11-21T19:51:45Z",
+  "at": "2026-11-21T19:56:29Z",
   "mq": {
    "n": {
-    "checking": 3,
-    "inline": 3,
+    "checking": 0,
+    "inline": 0,
     "conflicted": 1,
     "failed": 0,
     "held": 0,
@@ -523,53 +452,28 @@
     "parked": 5
    },
    "m": {
-    "checking": 0,
-    "inline": 1,
-    "conflicted": 3092,
+    "checking": null,
+    "inline": null,
+    "conflicted": 3097,
     "failed": null,
     "held": null,
-    "retry": 21,
-    "parked": 1752
+    "retry": 26,
+    "parked": 1756
    },
-   "cur": [
-    [
-     [
-      "T-5247"
-     ],
-     "Mac tests",
-     "Mac mini",
-     0
-    ],
-    [
-     [
-      "T-5262"
-     ],
-     "Mac tests",
-     "Mac mini",
-     0
-    ],
-    [
-     [
-      "T-5448"
-     ],
-     "Mac tests",
-     "Mac mini",
-     0
-    ]
-   ],
+   "cur": [],
    "ld": [
-    69,
-    "2026-11-21T19:40:36Z"
+    71,
+    "2026-11-21T19:55:13Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-21T19:51:46Z",
-    "ld": 3.64,
+    "at": "2026-11-21T19:56:30Z",
+    "ld": 2.69,
     "c": 8,
     "sb": 1,
     "dk": [
-     57.6,
+     57.7,
      228.3
     ],
     "ss": [
@@ -595,13 +499,13 @@
  },
  "hc": {
   "wait": {
-   "n": 14,
+   "n": 15,
    "limit": 20,
-   "in_line": 0,
-   "parked": 14,
+   "in_line": 6,
+   "parked": 9,
    "open": true,
    "mq": false,
-   "counted": "2026-11-21T14:41:27-05:00",
+   "counted": "2026-11-21T14:52:58-05:00",
    "by": {
     "app": {
      "n": 2,
@@ -609,7 +513,7 @@
      "open": true
     },
     "other": {
-     "n": 12,
+     "n": 13,
      "limit": 20,
      "open": true
     },
@@ -619,42 +523,14 @@
      "open": false
     }
    },
-   "at": "2026-11-21T19:51:45+00:00"
+   "at": "2026-11-21T19:56:29+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-21T19:51:45+00:00"
+   "at": "2026-11-21T19:56:29+00:00"
   }
  },
- "operators": [
-  {
-   "w": "Operator",
-   "a": "Jeremy's Account",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session \u2013 1 task",
-   "at": "2026-11-21T14:51:38-05:00"
-  },
-  {
-   "w": "Operator",
-   "a": "Jeremy's Account",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session \u2013 1 task",
-   "at": "2026-11-21T14:51:39-05:00"
-  },
-  {
-   "w": "Operator",
-   "a": "Jeremy's Account",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session \u2013 1 task",
-   "at": "2026-11-21T14:51:41-05:00"
-  }
- ],
+ "operators": [],
  "reply": {
   "sent": "2026-11-21T19:41:05Z",
   "seconds": 601.0
@@ -675,10 +551,10 @@
   "main": 0,
   "lanes": 0,
   "total": 0,
-  "at": "2:53 PM",
-  "why": "Plan limit: the weekly allowance is used up; it resets Sun 1:59 AM ET. Last check 2:52 PM ET.",
-  "at_iso": "2026-11-21T19:53:00+00:00",
+  "at": "2:59 PM",
+  "why": "Plan limit: the weekly allowance is used up; it resets Sun 1:59 AM ET. Last check 2:59 PM ET.",
+  "at_iso": "2026-11-21T19:59:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 2:53 PM ET</p><p class=\"an-why\">Plan limit: the weekly allowance is used up; it resets Sun 1:59 AM ET. Last check 2:52 PM ET.</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 2:59 PM ET</p><p class=\"an-why\">Plan limit: the weekly allowance is used up; it resets Sun 1:59 AM ET. Last check 2:59 PM ET.</p></section>"
  }
 }

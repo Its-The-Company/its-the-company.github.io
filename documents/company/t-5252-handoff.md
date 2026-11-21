@@ -237,6 +237,8 @@ Still open:
 - **(b)** A person confirms that fault 2's fix belongs in `tools/personal_land.sh` `park_one` and is not a way around
   the guard that refused the edit to `tools/personal_tick.sh`. The switch is not flipped until then, even if
   `road-check` passes. This item is board line T-5433, held waiting on #325. It is done when this page says "fault 2's home confirmed".
+  - Done 11-21 1:18 PM ET: an Investor wrote "Fault 2's home confirmed" (#325 c7067153738; log/rulings.md). The fix stays
+    in `park_one`; the switch may be flipped Monday 2:00 AM once `road-check` passes.
 
 ## How to put a finished job on main
 

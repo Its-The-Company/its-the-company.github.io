@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-22T09:33:49.268654+00:00",
+ "at": "2026-11-22T09:36:05.992737+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -144,7 +144,7 @@
   "week_pct": 1.69,
   "usage_pct": 90.5,
   "work_pct": 84.6,
-  "read_at": "2026-11-22T09:33:00+00:00",
+  "read_at": "2026-11-22T09:39:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -179,7 +179,7 @@
   }
  ],
  "disk": {
-  "free_gb": 53,
+  "free_gb": 55,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -188,14 +188,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-22T04:29:00-05:00",
+   "at": "2026-11-22T04:35:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-22T04:33:00-05:00",
+  "at": "2026-11-22T04:39:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -411,8 +411,13 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-22T09:33:49Z",
+  "at": "2026-11-22T09:36:05Z",
   "s": {
+   "T-5262": [
+    "merging",
+    "Mac tests at the main gate",
+    1795340105992
+   ],
    "T-5399": [
     "merged",
     "on main 2:43 AM ET",
@@ -421,16 +426,18 @@
    ]
   },
   "nm": {
+   "T-5262": "Trim step 9, merge checks agree on every run",
    "T-5399": "Add the coordinator's land job and side jobs by Sunday"
   },
   "wk": {
+   "T-5262": "Odalys",
    "T-5399": "Odalys",
    "T-5550": "Pernille",
    "T-5568": "Odalys"
   }
  },
  "ln": {
-  "at": "2026-11-22T09:33:49Z",
+  "at": "2026-11-22T09:36:05Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -448,7 +455,7 @@
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 292
+    "parked": 294
    },
    "cur": [],
    "ld": [
@@ -458,12 +465,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-22T09:33:24Z",
-    "ld": 3.95,
+    "at": "2026-11-22T09:35:11Z",
+    "ld": 4.04,
     "c": 8,
     "sb": 0,
     "dk": [
-     53.0,
+     55.2,
      228.3
     ],
     "ss": [
@@ -511,11 +518,11 @@
      "open": true
     }
    },
-   "at": "2026-11-22T09:33:49+00:00"
+   "at": "2026-11-22T09:36:05+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-22T09:33:36+00:00"
+   "at": "2026-11-22T09:36:05+00:00"
   }
  },
  "operators": [
@@ -558,10 +565,10 @@
   "main": 0,
   "lanes": 1,
   "total": 1,
-  "at": "4:33 AM",
+  "at": "4:39 AM",
   "why": "",
-  "at_iso": "2026-11-22T09:33:00+00:00",
+  "at_iso": "2026-11-22T09:39:00+00:00",
   "started": "3:26 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0, started 3:26 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 4:33 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0, started 3:26 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 4:39 AM ET</p></section>"
  }
 }

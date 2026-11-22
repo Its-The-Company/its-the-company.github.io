@@ -59,10 +59,16 @@ Pro widgets <span title="The worker who reads both graders and decides. The deci
 tagged Pro, its inputs stay settable, its design, layout and code need Pro). The plan, with each premade's data
 source, terms and Python and iOS features, is [`ops/plans/T-4672-showcase-premades.md`](../company/t-4672-showcase-premades.html).
 
+**The three Pro features (#278; T-5504, Ines, 2026-11-21).** In an Investor's #278 words (9:43 PM ET 11-16): "Pro
+should expand the use of "advanced" Python libraries, Buttons in widgets, and Python running within the widget." A
+premade that uses any of the three carries the Pro tag. #324 settled only the third, below; it did not redefine
+"Buttons in widgets". Whether a widget's refresh button is a Pro button waits on the Investors (<span title="A GitHub issue asking the Investors for something that is blocking work.">Urgent Request</span> #340;
+plan s10 item 5); no premade draws one (s9.3).
+
 **Which runs count for the Pro tag: Python a widget button runs (A, #324; T-4796, Ines, 2026-11-20).** The Investors
-answered "A" on <span title="A GitHub issue asking the Investors for something that is blocking work.">Urgent Request</span> #324 (an Investor, 12:36 AM ET 11-18,
-(private) log/rulings.md, 2026-11-18
-12:36 AM). "Python running within the widget" in Pro (#278, 9:43 PM ET 11-16) is Python a button on the widget runs
+answered "A" on Urgent Request #324 (an Investor, 12:36 AM ET 11-18, c6970133683,
+(private) log/rulings.md, entry of
+12:36 AM ET 11-18). "Python running within the widget" in Pro (#278, 9:43 PM ET 11-16) is Python a button on the widget runs
 without opening PyWidget (ADR-011 s4). In the widget <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span>, the lane's own runs (a widget's own updates, the timeline
 runs ADR-007 s3 places in the widget whenever they fit) are not Pro for anyone: every widget, premades included, keeps
 running in the widget first (#283, 10:46 AM ET 11-13), as Countdown did 69 times on the phone, free and untagged.

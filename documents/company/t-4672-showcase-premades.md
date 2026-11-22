@@ -69,17 +69,21 @@ US ratings), so design is our quality bar, never our headline. So each premade i
    tickers), no health or fitness trackers, no medical, legal, gambling (no dice or odds), politics, or children's
    content; every data source is free, needs no sign-up by us, and has its terms read before any fetch.
 
-**Pro tag.** A premade that uses a Pro feature (a button that runs Python without opening PyWidget, an advanced
-library) carries the Pro tag on its Gallery tile and its page in PyWidget, and works for everyone (which runs are the
-Pro feature: the passage after this one). Without Pro a person sets its inputs; its layout, design and code need Pro
-("Edit this with Pro"). A premade with no Pro feature has no tag and is editable by anyone (T-0901's editable copy).
+**Pro tag.** Pro holds three features, in an Investor's #278 words (9:43 PM ET 11-16): "Pro should expand the use of
+"advanced" Python libraries, Buttons in widgets, and Python running within the widget." #324 settled only the third
+(which runs count as Python running within the widget: the passage after this one); it did not redefine "Buttons in
+widgets", the second. Whether a widget's refresh button is a Pro button falls between the two and waits on the
+Investors (s10 item 5, <span title="A GitHub issue asking the Investors for something that is blocking work.">Urgent Request</span> #340). A premade that uses a Pro feature carries the Pro tag on its Gallery tile
+and its page in PyWidget, and works for everyone. Without Pro a person sets its inputs; its layout, design and code
+need Pro ("Edit this with Pro"). A premade with no Pro feature has no tag and is editable by anyone (T-0901's
+editable copy).
 **No tag and no offer appear on the placed widget itself**: Apple 4.4 says extensions "may not include marketing,
 advertising, or in-app purchases" (Maren, live-pro s3).
 
 **Which runs count: Python a widget button runs (A, #324; T-4796, Ines, 2026-11-20).** The Investors answered "A" on
-<span title="A GitHub issue asking the Investors for something that is blocking work.">Urgent Request</span> #324 (an Investor, 12:36 AM ET 11-18,
-(private) log/rulings.md, 2026-11-18
-12:36 AM). So "Python running within the widget" in Pro (#278, 9:43 PM ET 11-16) is Python that a button on the widget
+Urgent Request #324 (an Investor, 12:36 AM ET 11-18,
+c6970133683, (private) log/rulings.md, entry of
+12:36 AM ET 11-18). So "Python running within the widget" in Pro (#278, 9:43 PM ET 11-16) is Python that a button on the widget
 runs without opening PyWidget (ADR-011 s4: in the widget on iOS 18 to 26, in the app's background on iOS 27). In the
 widget <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span>, the lane's own runs (a widget's own updates, the timeline runs ADR-007 s3 places in the widget whenever
 they fit) are not Pro for anyone, as the recorded Effect line says ("a widget's own updates running in the widget are
@@ -91,13 +95,14 @@ advanced library)". The ruling's recorded Effect line names the first four; Patt
 card's and agrees with #278, which puts advanced libraries in Pro anyway. The other eight (Pattern of the day among
 them unless it uses an advanced library) are untagged and editable by anyone. The cost the card named stands: this Pro
 item mostly overlaps "Buttons in widgets". Not chosen, B: every run inside the widget would have been Pro, tagging
-every premade the lane runs (all but GitHub repository, whose `pywidget.keychain` and `pywidget.http` the lane
-refuses, pywidget/tests/bridge/test_lane.py).
+every premade the lane runs: all but those the lane refuses (pywidget/tests/bridge/test_lane.py:820-834 at HEAD:
+GitHub repository, for `pywidget.keychain` and `pywidget.http`; Shortcuts launcher, for `urllib.parse`; and Sky's
+source `sun.py`, for `pywidget.device.location`).
 
 s2's Pro tag column, the counts under it and premade-inputs.md s0 follow this answer. The lines that build on it:
 T-4692 (the tag and the gate), T-4714 (`pro-flags.json`), T-4715 (`row.inwidget` and `about.pro`) and T-4793 (a
 widget-lane fetch for Day phases does not tag it; only its Done buttons do). The record of #278 in 06-decisions item 9
-still lists the free person's own widget as open; T-4998 writes the answer in there.
+records this answer (T-4998, f3788781d6, 11-20) and no longer lists the free person's own widget as open.
 
 ## 2. The set for 1.0
 
@@ -233,7 +238,7 @@ only.
      (ADR-007 s4.1 T6 and s5). It runs again only 15 minutes or more after its last run (`LaneRerunRule.due`,
      `Shared/LaneRerunRule.swift:40-47`; `RefreshSchedule.floor`). This is the only path on which iOS's own reloads
      fetch new times without PyWidget opening. It is free for everyone: a widget's own updates in the widget are not
-     Pro (#324 A, `log/rulings.md`, 2026-11-18 12:36 AM). It holds only if all four of these do, and T-4673 checks or
+     Pro (#324 A, `log/rulings.md`, 12:36 AM ET 11-18). It holds only if all four of these do, and T-4673 checks or
      measures each:
      - **It fits the lane.** One fetch plus the pure-Python decode inside the lane's 2.0 s budget (ADR-007 s5
        "Time") at P <= 11 MB (s3 item 3, W = 23 MB). Measured in the widget in the Day phases build, then on a
@@ -267,7 +272,7 @@ only.
        puts its intent: in the extension an app-lane widget runs nothing (`Shared/RefreshTapRule.swift`;
        `ExtensionLane.refresh` returns `notInLane`, `Shared/ExtensionLane.swift:288-290`). On iOS 27+ it runs in the
        app in the background (`Shared/RefreshWidgetIntent.swift`). Whether a refresh button counts as a Pro button
-       under #324 A is not settled (s10 item 5).
+       under #324 A is not settled; it waits on the Investors (s10 item 5, Urgent Request #340).
      - Nothing else. A WidgetKit reload of an app-lane widget draws the saved tree and runs no Python (ADR-007 s4.1
        T6), so an app-lane Day phases shows times as old as the last of the triggers above.
   3. **Background refresh, only once it is built.** T2 would run app-lane widgets in the background (ADR-007 s4.1,
@@ -501,7 +506,7 @@ within a priority.
 | Line | Lane | Competes? | Placed |
 | --- | --- | --- | --- |
 | T-4673 Day phases (Pernille) | Pernille, beside the slot | Partly: her time against her open phase B lines (T-4202 and T-4203, part of T-4189), her open Pages step (T-4550, the widget buttons' Python contract, step of T-4478) and her Python share of the Builder (T-4477 is Idris with Pernille), and the Simulator for its done-when. Not with Developer mode (T-4688, Idris's slot). *T-5489 correction (11-21): the 11-19 row said "Not with Developer mode or the Builder (Idris's work; phase D has not started)"; that left out T-4550 and her share of T-4477, which the T-4706 row below counts* | **Stays P1, by chair line below, under T-5489's lane rule** |
-| T-4703 Maren's frames | Maren, beside the slot | No: done 11-18 3:51 AM (f32bea8ad4). No open Maren line for the IDE, Builder or Developer mode existed then or now (board grep, 4:50 AM 11-19). Its rest, the render review, is on T-4766 and waits on T-4673 | Nothing to move |
+| T-4703 Maren's frames | Maren, beside the slot | No: done 3:51 AM 11-18 (f32bea8ad4). No open Maren line for the IDE, Builder or Developer mode existed then or now (board grep, 4:50 AM 11-19). Its rest, the render review, is on T-4766 and waits on T-4673 | Nothing to move |
 | T-4704 the Page's `time` and `stop` kinds (Idris) | Idris, the Xcode slot | Yes: the same slot as T-4688 Developer mode, phase B's editor and run lines (T-4186, T-4187) and the Builder | **P1 to P2**, after them |
 | T-4705 Habit tracker's Done today (Idris with Pernille) | Idris, the Xcode slot | Yes, the same slot. It already needs T-4553, T-4554 and T-4556, Pages steps that follow the Builder (plan.md) | **P1 to P2**, after them |
 | T-4706 Focus timer (Pernille) | Pernille, beside the slot | Yes: her phase B lines and her share of the Builder (T-4477 is Idris with Pernille). It needs T-4556 (Pages, after the Builder) | **P1 to P2**, after them |
@@ -560,7 +565,7 @@ phone proof, which fixes the firm date (#270 A).
 
 **Re-checked 2026-11-21 4:03 PM ET by `date` (T-4795, Ines).** The weighing above landed on 11-19 (69770633cc, an
 ancestor of HEAD), but the board line T-4795 stayed open, so I checked it again against today's board and dates.
-- *The rulings' words*, from `log/rulings.md` (2026-11-16 11:26 PM and 11:37 PM entries), match s0 and the paragraph above:
+- *The rulings' words*, from `log/rulings.md` (the 11:26 PM and 11:37 PM ET 11-16 entries), match s0 and the paragraph above:
   c6938306456's Effect, "where premade polish and IDE or Builder work compete, the IDE and Builder go first", and
   c6938494530's Effect, "Build a Developer mode next, as a priority".
 - *The five lines, board grep at 4:03 PM:* T-4673 is open, Pernille, P1, at board line 602, below her phase B lines
@@ -584,7 +589,7 @@ ancestor of HEAD), but the board line T-4795 stayed open, so I checked it again 
     on his slot.
   - T-4895 (P2, the Console note's name; no parent line) and T-4999 (P2, the When tapped link screen's title; part
     of T-4193) are copy fixes, not steps of any of the four.
-  T-5000 has since been ticked (11-21 5:56 PM, 45c94d08e3).
+  T-5000 has since been ticked (5:56 PM 11-21, 45c94d08e3).
 - *The release range does not move.* It stands at likely Sat 2027-07-17, range 2027-04-07 to 2027-12-11
   (`ops/milestones.json` release row and `ops/state.md` Target, after T-5432 on 11-21). Pernille's and Maren's lines
   run beside the slot and are not counted by the range's method; the habit button sits in step 10 of RUN_AND_BUTTONS.
@@ -612,7 +617,11 @@ ancestor of HEAD), but the board line T-4795 stayed open, so I checked it again 
   show long gaps, we say so on the Gallery page rather than promise "live".
 - The in-widget run's memory (W = 23 MB, P <= 11 MB, ADR-011 s4) refuses the focus timer's or the flashcards'
   handlers: their buttons fall back to opening PyWidget, which works but no longer demos Pro well. Measured in each
-  build line before the tag is claimed.
+  build line before the Gallery page or the Pro screen claims the buttons run without opening PyWidget. *The tag does
+  not wait on it (T-5504):* the card the Investors answered on #324 tags Focus timer and Flashcards outright, and
+  their buttons are #278's "Buttons in widgets" either way (s1), so in the fallback both still ship tagged. Only the
+  words change: their pages then say the buttons open PyWidget, and T-4692 builds the tag from the Investors' list,
+  never from whether a handler ran in the widget.
 - Too many premades for the lane: the order above is the cut line; the last ones move to 1.1, never ship half-built.
 
 ## 10. Open
@@ -626,7 +635,13 @@ ancestor of HEAD), but the board line T-4795 stayed open, so I checked it again 
    sitting. These must be reconciled by my chair line before any store text counts on the widget lane. Raised by
    T-4793.
 5. Whether a widget's refresh button, which reruns the widget's own update without opening PyWidget, is a Pro button
-   under #324 A. Day phases adds no refresh button, so its build does not wait on this.
+   under #324 A. The record does not settle it: #278 puts "Buttons in widgets" in Pro, and #324 A makes "a widget's
+   own updates running in the widget" free for anyone (log/rulings.md, 12:36 AM ET 11-18); a refresh button is both.
+   **Asked of the Investors** on Urgent Request #340 (9:43 PM ET 11-21, T-5504; my recommendation A, not Pro),
+   deadline Wednesday 11-25. Owner: Ines, who writes the answer into s1, this item, premade-inputs.md s0 and
+   06-decisions item 9 when it lands. **Waiting on it:** T-4692's gate (Idris, P1), for refresh buttons on a person's
+   own widgets, and T-0678 (Idris, P1, the refresh button in the widget extension). The premade tags do not wait: no
+   premade draws a refresh button (premade-inputs.md s9.3), and Day phases adds none.
 {% endraw %}
 
 </div>

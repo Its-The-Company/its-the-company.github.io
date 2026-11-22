@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-22T03:12:26.821734+00:00",
+ "at": "2026-11-22T03:17:13.926606+00:00",
  "session": {
   "active": false,
   "kind": "",
@@ -14,6 +14,17 @@
      {
       "s": "landing",
       "at": 1795316177
+     }
+    ]
+   },
+   {
+    "t": "T-5504",
+    "name": "Name all three Pro features in the showcase plan",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "testq",
+      "at": 1795317308
      }
     ]
    },
@@ -202,12 +213,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-21T22:24:00-05:00",
+ "next_tick": "2026-11-21T22:28:54-05:00",
  "personal": {
   "week_pct": 110.97,
   "usage_pct": 52.6,
   "work_pct": 85.5,
-  "read_at": "2026-11-22T03:14:00+00:00",
+  "read_at": "2026-11-22T03:17:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -228,7 +239,7 @@
   }
  ],
  "disk": {
-  "free_gb": 58,
+  "free_gb": 60,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -237,14 +248,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-21T22:14:00-05:00",
+   "at": "2026-11-21T22:15:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-21T22:14:00-05:00",
+  "at": "2026-11-21T22:17:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -442,62 +453,62 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-22T03:12:26Z",
+  "at": "2026-11-22T03:17:13Z",
   "s": {
+   "T-5504": [
+    "merging",
+    "Host checks on the Mac mini",
+    1795317313926
+   ],
    "T-4807": [
     "mergeq",
     "1st to merge",
-    1795316846821
-   ],
-   "T-5504": [
-    "mergeq",
-    "2nd to merge",
-    1795316906821
+    1795316893926
    ],
    "T-5021": [
     "mergeq",
     "3rd to merge",
-    1795315586821
+    1795315573926
    ],
    "T-5023": [
     "mergeq",
     "3rd to merge",
-    1795315586821
+    1795315573926
    ],
    "T-5457": [
     "mergeq",
-    "7th to merge",
-    1795315886821
+    "5th to merge",
+    1795315873926
    ],
    "T-5471": [
     "mergeq",
-    "7th to merge",
-    1795315886821
+    "5th to merge",
+    1795315873926
    ],
    "T-5447": [
     "mergeq",
-    "8th to merge",
-    1795316366821
+    "6th to merge",
+    1795316353926
    ],
    "T-5454": [
     "mergeq",
-    "8th to merge",
-    1795316366821
+    "6th to merge",
+    1795316353926
    ],
    "T-5108": [
     "mergeq",
-    "9th to merge",
-    1795316666821
+    "7th to merge",
+    1795316653926
    ],
    "T-5124": [
     "mergeq",
-    "9th to merge",
-    1795316666821
+    "7th to merge",
+    1795316653926
    ]
   },
   "nm": {
-   "T-4807": "Fix every bad test that failed a merge",
    "T-5504": "Name all three Pro features in the showcase plan",
+   "T-4807": "Fix every bad test that failed a merge",
    "T-5021": "Run the other ladder checks before a gate upload",
    "T-5023": "Put all 12 rungs in the phone request",
    "T-5457": "Check finished work before it ships",
@@ -508,8 +519,8 @@
    "T-5124": "Fix a MacBook test job that failed"
   },
   "wk": {
-   "T-4807": "Pernille",
    "T-5504": "Ines",
+   "T-4807": "Pernille",
    "T-5021": "Idris",
    "T-5023": "Idris",
    "T-5457": "Odalys",
@@ -521,11 +532,11 @@
   }
  },
  "ln": {
-  "at": "2026-11-22T03:12:26Z",
+  "at": "2026-11-22T03:17:13Z",
   "mq": {
    "n": {
-    "checking": 0,
-    "inline": 10,
+    "checking": 1,
+    "inline": 9,
     "conflicted": 0,
     "failed": 0,
     "held": 0,
@@ -533,15 +544,24 @@
     "parked": 3
    },
    "m": {
-    "checking": null,
-    "inline": 13,
+    "checking": 2,
+    "inline": 18,
     "conflicted": null,
     "failed": null,
     "held": null,
-    "retry": 13,
-    "parked": 2375
+    "retry": 18,
+    "parked": 2380
    },
-   "cur": [],
+   "cur": [
+    [
+     [
+      "T-5504"
+     ],
+     "Mac tests",
+     "Mac mini",
+     2
+    ]
+   ],
    "ld": [
     144,
     "2026-11-22T03:03:54Z"
@@ -549,12 +569,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-22T03:11:57Z",
-    "ld": 3.38,
+    "at": "2026-11-22T03:17:14Z",
+    "ld": 2.23,
     "c": 8,
     "sb": 1,
     "dk": [
-     58.2,
+     60.4,
      228.3
     ],
     "ss": [
@@ -604,11 +624,11 @@
      "open": true
     }
    },
-   "at": "2026-11-22T03:12:26+00:00"
+   "at": "2026-11-22T03:17:13+00:00"
   },
   "bl": {
    "n": 3,
-   "at": "2026-11-22T03:12:26+00:00"
+   "at": "2026-11-22T03:17:13+00:00"
   }
  },
  "operators": [
@@ -631,7 +651,7 @@
    "id": "c7073346852",
    "state": "waiting",
    "position": 1,
-   "eta": "2026-11-21T22:24:00-05:00",
+   "eta": "2026-11-21T22:28:54-05:00",
    "tasks": {
     "open": 0,
     "done": 0
@@ -642,7 +662,7 @@
    "id": "c7073355865",
    "state": "waiting",
    "position": 2,
-   "eta": "2026-11-21T22:24:00-05:00",
+   "eta": "2026-11-21T22:28:54-05:00",
    "tasks": {
     "open": 0,
     "done": 0
@@ -666,10 +686,10 @@
   "main": 0,
   "lanes": 0,
   "total": 0,
-  "at": "10:14 PM",
-  "why": "Plan limit: the weekly allowance is used up; it resets Sun 1:59 AM ET. Last check 10:13 PM ET.",
-  "at_iso": "2026-11-22T03:14:00+00:00",
+  "at": "10:17 PM",
+  "why": "Plan limit: the weekly allowance is used up; it resets Sun 1:59 AM ET. Last check 10:17 PM ET.",
+  "at_iso": "2026-11-22T03:17:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 10:14 PM ET</p><p class=\"an-why\">Plan limit: the weekly allowance is used up; it resets Sun 1:59 AM ET. Last check 10:13 PM ET.</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 10:17 PM ET</p><p class=\"an-why\">Plan limit: the weekly allowance is used up; it resets Sun 1:59 AM ET. Last check 10:17 PM ET.</p></section>"
  }
 }

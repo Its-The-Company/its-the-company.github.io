@@ -1,11 +1,22 @@
 {
  "schema": 1,
- "at": "2026-11-22T03:48:15.998521+00:00",
+ "at": "2026-11-22T03:53:16.627292+00:00",
  "session": {
   "active": false,
   "kind": "",
   "started": null,
   "flow": [
+   {
+    "t": "T-5193",
+    "name": "Confirm the five page strings the build added",
+    "acct": "Personal b",
+    "steps": [
+     {
+      "s": "testq",
+      "at": 1795319317
+     }
+    ]
+   },
    {
     "t": "T-4010",
     "name": "Rebuild This Session as a full flowchart",
@@ -147,7 +158,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 682,
+  "runnable_count": 685,
   "blocked_count": 3
  },
  "meter": {
@@ -191,37 +202,13 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-21T22:59:01-05:00",
+ "next_tick": "2026-11-21T23:06:35-05:00",
  "personal": {
-  "week_pct": 111.07,
+  "week_pct": 111.11,
   "usage_pct": 52.6,
   "work_pct": 85.6,
-  "read_at": "2026-11-22T03:52:00+00:00",
+  "read_at": "2026-11-22T03:57:00+00:00",
   "running": [
-   {
-    "lane": "a",
-    "task": "T-4477",
-    "w": "Idris",
-    "k": "build",
-    "t": "People build a widget from blocks without code",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-21T22:32:56-05:00",
-    "n": "Evan",
-    "src": "plan-a"
-   },
-   {
-    "lane": "a",
-    "task": "T-5047",
-    "w": "Idris",
-    "k": "build",
-    "t": "Fix the token test's No view for this size card",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-21T22:32:56-05:00",
-    "n": "Evan",
-    "src": "plan-a"
-   },
    {
     "lane": "a2",
     "task": "T-4477",
@@ -269,31 +256,6 @@
     "at": "2026-11-21T22:38:25-05:00",
     "n": "Evan",
     "src": "plan-a"
-   },
-   {
-    "lane": "b",
-    "task": "T-5537",
-    "w": "Pernille",
-    "k": "review",
-    "t": "Check finished work before it ships",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-21T22:45:07-05:00",
-    "n": "Jeremy",
-    "d": 1,
-    "src": "plan-b"
-   },
-   {
-    "lane": "b",
-    "task": "T-5538",
-    "w": "Pernille",
-    "k": "review",
-    "t": "Check finished work before it ships",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-21T22:45:07-05:00",
-    "n": "Jeremy",
-    "src": "plan-b"
    },
    {
     "lane": "b3",
@@ -350,14 +312,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-21T22:49:00-05:00",
+   "at": "2026-11-21T22:57:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-21T22:52:00-05:00",
+  "at": "2026-11-21T22:57:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -510,7 +472,7 @@
    }
   ],
   "count": {
-   "next": 682,
+   "next": 685,
    "wait": 3,
    "blocked": 0,
    "you": 3
@@ -555,32 +517,32 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-22T03:48:15Z",
+  "at": "2026-11-22T03:53:16Z",
   "s": {
    "T-5193": [
+    "merging",
+    "Host checks on the Mac mini",
+    1795319356627
+   ],
+   "T-4897": [
     "mergeq",
     "1st to merge",
-    1795319295998
+    1795319356627
+   ],
+   "T-5284": [
+    "mergeq",
+    "3rd to merge",
+    1795319596627
+   ],
+   "T-4999": [
+    "mergeq",
+    "6th to merge",
+    1795319596627
    ],
    "T-5047": [
     "merging",
     "Mac tests at the main gate",
-    1795318395998
-   ],
-   "T-4581": [
-    "testing",
-    "Mac Mini \u00b7 test",
-    null
-   ],
-   "T-5447": [
-    "testing",
-    "Mac Mini \u00b7 test",
-    null
-   ],
-   "T-5454": [
-    "testing",
-    "Mac Mini \u00b7 test",
-    null
+    1795318396627
    ],
    "T-4477": [
     "merged",
@@ -591,27 +553,27 @@
   },
   "nm": {
    "T-5193": "Confirm the five page strings the build added",
+   "T-4897": "Check an all-day event keeps its date after travel",
+   "T-5284": "Say only what was seen about iPad taps",
+   "T-4999": "Write the web link screen's title in sentence case",
    "T-5047": "Fix the token test's No view for this size card",
-   "T-4581": "Test a real widget tap in iPad windows",
-   "T-5447": "Add the coordinator switch and one-task worker plan, off",
-   "T-5454": "Home shows each merge queue on its own",
    "T-4477": "People build a widget from blocks without code"
   },
   "wk": {
    "T-5193": "Maren",
+   "T-4897": "Idris",
+   "T-5284": "Idris",
+   "T-4999": "Maren",
    "T-5047": "Idris",
-   "T-4581": "Idris",
-   "T-5447": "Odalys",
-   "T-5454": "Odalys",
    "T-4477": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-22T03:48:15Z",
+  "at": "2026-11-22T03:53:16Z",
   "mq": {
    "n": {
-    "checking": 0,
-    "inline": 1,
+    "checking": 1,
+    "inline": 3,
     "conflicted": 0,
     "failed": 0,
     "held": 0,
@@ -619,15 +581,24 @@
     "parked": 3
    },
    "m": {
-    "checking": null,
+    "checking": 4,
     "inline": 0,
     "conflicted": null,
     "failed": null,
     "held": null,
-    "retry": 11,
-    "parked": 2411
+    "retry": 16,
+    "parked": 2416
    },
-   "cur": [],
+   "cur": [
+    [
+     [
+      "T-5193"
+     ],
+     "Mac tests",
+     "Mac mini",
+     4
+    ]
+   ],
    "ld": [
     148,
     "2026-11-22T03:38:47Z"
@@ -635,12 +606,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-22T03:48:19Z",
-    "ld": 38.51,
+    "at": "2026-11-22T03:53:18Z",
+    "ld": 32.79,
     "c": 8,
-    "sb": 2,
+    "sb": 1,
     "dk": [
-     56.4,
+     54.3,
      228.3
     ],
     "ss": [
@@ -648,7 +619,6 @@
      953.7
     ],
     "sn": [
-     "t4581-ipad",
      "iPhone 17e"
     ]
    },
@@ -691,11 +661,11 @@
      "open": true
     }
    },
-   "at": "2026-11-22T03:48:15+00:00"
+   "at": "2026-11-22T03:53:16+00:00"
   },
   "bl": {
    "n": 3,
-   "at": "2026-11-22T03:48:15+00:00"
+   "at": "2026-11-22T03:53:16+00:00"
   }
  },
  "operators": [
@@ -715,7 +685,7 @@
    "m": "opus",
    "e": "high",
    "t": "Work session \u2013 2 tasks",
-   "at": "2026-11-21T22:45:37-05:00"
+   "at": "2026-11-21T22:53:26-05:00"
   },
   {
    "w": "Operator",
@@ -723,26 +693,8 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Inbox \u2013 Evan's 10:47 PM Message on GitHub",
-   "at": "2026-11-21T22:47:53-05:00"
-  },
-  {
-   "w": "Operator",
-   "a": "Jeremy's Account",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
    "t": "Work session \u2013 2 tasks",
-   "at": "2026-11-21T22:45:07-05:00"
-  },
-  {
-   "w": "Operator",
-   "a": "Jeremy's Account",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session",
-   "at": "2026-11-21T22:45:10-05:00"
+   "at": "2026-11-21T22:50:53-05:00"
   },
   {
    "w": "Operator",
@@ -752,23 +704,32 @@
    "e": "high",
    "t": "Work session \u2013 1 task",
    "at": "2026-11-21T22:45:07-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Jeremy's Account",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session",
+   "at": "2026-11-21T22:45:07-05:00"
   }
  ],
  "reply": {
-  "sent": "2026-11-22T03:40:30Z",
-  "seconds": 305.0
+  "sent": "2026-11-22T03:47:33Z",
+  "seconds": 196.0
  },
  "inbox": [
   {
-   "id": "c7073782597",
+   "id": "c7073837019",
    "state": "received",
    "position": 1,
-   "eta": "2026-11-21T22:59:01-05:00",
+   "eta": "2026-11-21T23:06:35-05:00",
    "tasks": {
     "open": 0,
     "done": 0
    },
-   "title": "Use all accounts. Work on..."
+   "title": "Tell me what you are currently..."
   }
  ],
  "trimmed": [
@@ -785,12 +746,12 @@
  ],
  "agents_now": {
   "main": 0,
-  "lanes": 5,
-  "total": 5,
-  "at": "10:52 PM",
+  "lanes": 3,
+  "total": 3,
+  "at": "10:57 PM",
   "why": "",
-  "at_iso": "2026-11-22T03:52:00+00:00",
+  "at_iso": "2026-11-22T03:57:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 10:52 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 10:57 PM ET</p></section>"
  }
 }

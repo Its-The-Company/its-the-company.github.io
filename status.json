@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-22T17:09:00.799582+00:00",
+ "at": "2026-11-22T17:12:01.537006+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -12,17 +12,6 @@
    "last_handoff": 1795342476
   },
   "flow": [
-   {
-    "t": "T-5399",
-    "name": "Add the coordinator's land job and side jobs by Sunday",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1795365581
-     }
-    ]
-   },
    {
     "t": "T-5262",
     "name": "Trim step 9, merge checks agree on every run",
@@ -36,6 +25,15 @@
    }
   ],
   "done": [
+   {
+    "t": "T-5399",
+    "name": "Add the coordinator's land job and side jobs by Sunday",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "failed",
+    "end_at": 1795367452,
+    "why": "tests failed"
+   },
    {
     "t": "T-5399",
     "name": "Add the coordinator's land job and side jobs by Sunday",
@@ -56,7 +54,7 @@
    }
   ],
   "landed": 0,
-  "failed": 2
+  "failed": 3
  },
  "workers": [],
  "who": "",
@@ -122,7 +120,7 @@
   "week_pct": 2.42,
   "usage_pct": 79.3,
   "work_pct": 88.2,
-  "read_at": "2026-11-22T17:09:00+00:00",
+  "read_at": "2026-11-22T17:12:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -143,7 +141,7 @@
   }
  ],
  "disk": {
-  "free_gb": 52,
+  "free_gb": 53,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -152,14 +150,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-22T12:06:00-05:00",
+   "at": "2026-11-22T12:10:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 3,
-  "at": "2026-11-22T12:09:00-05:00",
+  "at": "2026-11-22T12:12:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -371,60 +369,44 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-22T17:08:47Z",
+  "at": "2026-11-22T17:12:01Z",
   "s": {
-   "T-5399": [
-    "merging",
-    "Host checks on the Mac mini \u00b7 2 of 3 groups of tests done",
-    1795365587325
-   ],
    "T-5262": [
-    "testq",
-    "1st for a Simulator",
-    1795365347325
+    "testing",
+    "MacBook \u00b7 test",
+    null
    ]
   },
   "nm": {
-   "T-5399": "Add the coordinator's land job and side jobs by Sunday",
    "T-5262": "Trim step 9, merge checks agree on every run"
   },
   "wk": {
-   "T-5399": "Odalys",
    "T-5262": "Odalys",
    "T-5588": "Odalys"
   }
  },
  "ln": {
-  "at": "2026-11-22T17:08:47Z",
+  "at": "2026-11-22T17:12:01Z",
   "mq": {
    "n": {
-    "checking": 1,
+    "checking": 0,
     "inline": 0,
     "conflicted": 0,
-    "failed": 0,
+    "failed": 1,
     "held": 0,
     "retry": 0,
     "parked": 4
    },
    "m": {
-    "checking": 29,
+    "checking": null,
     "inline": null,
     "conflicted": null,
-    "failed": null,
+    "failed": 1,
     "held": null,
     "retry": null,
-    "parked": 730
+    "parked": 733
    },
-   "cur": [
-    [
-     [
-      "T-5399"
-     ],
-     "Mac tests",
-     "Mac mini",
-     29
-    ]
-   ],
+   "cur": [],
    "ld": [
     11,
     "2026-11-22T09:51:12Z"
@@ -432,12 +414,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-22T17:08:48Z",
-    "ld": 3.94,
+    "at": "2026-11-22T17:11:12Z",
+    "ld": 3.5,
     "c": 8,
     "sb": 0,
     "dk": [
-     52.3,
+     52.6,
      228.3
     ],
     "ss": [
@@ -447,8 +429,8 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-22T17:05:59Z",
-    "ld": 0.24,
+    "at": "2026-11-22T17:08:04Z",
+    "ld": 0.2,
     "c": 12,
     "sb": 0,
     "dk": [
@@ -485,11 +467,11 @@
      "open": false
     }
    },
-   "at": "2026-11-22T17:09:00+00:00"
+   "at": "2026-11-22T17:12:01+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-22T17:08:47+00:00"
+   "at": "2026-11-22T17:11:53+00:00"
   }
  },
  "operators": [
@@ -500,21 +482,12 @@
    "m": "opus",
    "e": "high",
    "t": "Work session \u2013 1 task",
-   "at": "2026-11-22T11:31:08-05:00"
-  },
-  {
-   "w": "Operator",
-   "a": "Evan's Account",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session",
-   "at": "2026-11-22T12:08:59-05:00"
+   "at": "2026-11-22T12:11:41-05:00"
   }
  ],
  "reply": {
-  "sent": "2026-11-22T16:29:31Z",
-  "seconds": 95.0
+  "sent": "2026-11-22T17:10:54Z",
+  "seconds": 45.0
  },
  "inbox": [],
  "trimmed": [
@@ -532,10 +505,10 @@
   "main": 0,
   "lanes": 0,
   "total": 0,
-  "at": "12:09 PM",
+  "at": "12:12 PM",
   "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
-  "at_iso": "2026-11-22T17:09:00+00:00",
+  "at_iso": "2026-11-22T17:12:00+00:00",
   "started": "11:04 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0, started 11:04 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 12:09 PM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0, started 11:04 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 12:12 PM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-22T16:33:05.045879+00:00",
+ "at": "2026-11-22T16:39:40.288109+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -15,6 +15,7 @@
    {
     "t": "T-5262",
     "name": "Trim step 9, merge checks agree on every run",
+    "w": "Idris",
     "steps": [
      {
       "s": "testq",
@@ -52,7 +53,7 @@
    "task": "[report] morning",
    "model": "opus",
    "started": "2026-11-22T16:12:41.682Z",
-   "seconds": 1223,
+   "seconds": 1618,
    "finished": null
   }
  ],
@@ -110,7 +111,7 @@
   "week_pct": 2.42,
   "usage_pct": 79.3,
   "work_pct": 88.2,
-  "read_at": "2026-11-22T16:36:00+00:00",
+  "read_at": "2026-11-22T16:39:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -147,7 +148,7 @@
  "lock_in": {
   "on": true,
   "pool": 3,
-  "at": "2026-11-22T11:36:00-05:00",
+  "at": "2026-11-22T11:39:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -363,7 +364,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-22T16:33:05Z",
+  "at": "2026-11-22T16:39:22Z",
   "s": {
    "T-5262": [
     "testing",
@@ -379,7 +380,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-22T16:33:05Z",
+  "at": "2026-11-22T16:39:22Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -394,10 +395,10 @@
     "checking": null,
     "inline": null,
     "conflicted": null,
-    "failed": 0,
+    "failed": 7,
     "held": null,
     "retry": null,
-    "parked": 694
+    "parked": 700
    },
    "cur": [],
    "ld": [
@@ -407,12 +408,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-22T16:34:05Z",
-    "ld": 9.51,
+    "at": "2026-11-22T16:39:14Z",
+    "ld": 9.77,
     "c": 8,
     "sb": 0,
     "dk": [
-     54.7,
+     55.0,
      228.3
     ],
     "ss": [
@@ -438,11 +439,11 @@
   "wait": {
    "n": 5,
    "limit": 20,
-   "in_line": 1,
-   "parked": 4,
+   "in_line": 0,
+   "parked": 5,
    "open": true,
    "mq": false,
-   "counted": "2026-11-22T16:20:53+00:00",
+   "counted": "2026-11-22T16:37:42+00:00",
    "by": {
     "app": {
      "n": 2,
@@ -460,11 +461,11 @@
      "open": false
     }
    },
-   "at": "2026-11-22T16:33:05+00:00"
+   "at": "2026-11-22T16:39:40+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-22T16:33:05+00:00"
+   "at": "2026-11-22T16:39:22+00:00"
   }
  },
  "operators": [
@@ -497,10 +498,10 @@
   "main": 1,
   "lanes": 0,
   "total": 1,
-  "at": "11:36 AM",
+  "at": "11:39 AM",
   "why": "",
-  "at_iso": "2026-11-22T16:36:00+00:00",
+  "at_iso": "2026-11-22T16:39:00+00:00",
   "started": "11:04 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 11:04 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 11:36 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 11:04 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 11:39 AM ET</p></section>"
  }
 }

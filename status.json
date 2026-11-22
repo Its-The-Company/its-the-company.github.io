@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-22T04:02:52.625694+00:00",
+ "at": "2026-11-22T04:12:46.064295+00:00",
  "session": {
   "active": false,
   "kind": "",
@@ -202,12 +202,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-21T23:12:20-05:00",
+ "next_tick": "2026-11-21T23:21:21-05:00",
  "personal": {
-  "week_pct": 111.36,
+  "week_pct": 111.52,
   "usage_pct": 52.7,
-  "work_pct": 85.7,
-  "read_at": "2026-11-22T04:06:00+00:00",
+  "work_pct": 85.8,
+  "read_at": "2026-11-22T04:16:00+00:00",
   "running": [
    {
     "lane": "a3",
@@ -279,7 +279,7 @@
   }
  ],
  "disk": {
-  "free_gb": 55,
+  "free_gb": 59,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -288,14 +288,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-21T23:04:00-05:00",
+   "at": "2026-11-21T23:13:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-21T23:06:00-05:00",
+  "at": "2026-11-21T23:16:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -493,97 +493,97 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-22T04:02:52Z",
+  "at": "2026-11-22T04:12:46Z",
   "s": {
    "T-5193": [
     "merging",
     "Host checks on the Mac mini",
-    1795319332625
+    1795319326064
    ],
    "T-4897": [
     "mergeq",
     "1st to merge",
-    1795319392625
+    1795319386064
+   ],
+   "T-5535": [
+    "mergeq",
+    "3rd to merge",
+    1795320286064
    ],
    "T-4914": [
     "mergeq",
-    "3rd to merge",
-    1795320172625
+    "4th to merge",
+    1795320166064
    ],
    "T-5284": [
     "mergeq",
-    "4th to merge",
-    1795319632625
+    "5th to merge",
+    1795319626064
    ],
    "T-4999": [
     "mergeq",
-    "7th to merge",
-    1795319632625
+    "8th to merge",
+    1795319626064
    ],
    "T-5537": [
     "mergeq",
-    "8th to merge",
-    1795319992625
+    "9th to merge",
+    1795319986064
    ],
    "T-5538": [
     "mergeq",
-    "8th to merge",
-    1795319992625
+    "9th to merge",
+    1795319986064
    ],
    "T-5108": [
     "testing",
     "MacBook \u00b7 test",
     null
-   ],
-   "T-5021": [
-    "testq",
-    "2nd for a Simulator",
-    1795319032625
    ]
   },
   "nm": {
    "T-5193": "Confirm the five page strings the build added",
    "T-4897": "Check an all-day event keeps its date after travel",
+   "T-5535": "Start the comparison after its prep, new road first",
    "T-4914": "Check the keep-main-green change before it ships",
    "T-5284": "Say only what was seen about iPad taps",
    "T-4999": "Write the web link screen's title in sentence case",
    "T-5537": "Check finished work before it ships",
    "T-5538": "Check finished work before it ships",
-   "T-5108": "Fix a MacBook test job that failed",
-   "T-5021": "Run the other ladder checks before a gate upload"
+   "T-5108": "Fix a MacBook test job that failed"
   },
   "wk": {
    "T-5193": "Maren",
    "T-4897": "Idris",
+   "T-5535": "Ines",
    "T-4914": "Pernille",
    "T-5284": "Idris",
    "T-4999": "Maren",
    "T-5537": "Pernille",
    "T-5538": "Pernille",
-   "T-5108": "Operator",
-   "T-5021": "Idris"
+   "T-5108": "Operator"
   }
  },
  "ln": {
-  "at": "2026-11-22T04:02:52Z",
+  "at": "2026-11-22T04:12:46Z",
   "mq": {
    "n": {
     "checking": 1,
-    "inline": 6,
+    "inline": 7,
     "conflicted": 0,
     "failed": 0,
     "held": 0,
-    "retry": 2,
+    "retry": 1,
     "parked": 3
    },
    "m": {
-    "checking": 14,
-    "inline": 6,
+    "checking": 24,
+    "inline": 13,
     "conflicted": null,
     "failed": null,
     "held": null,
-    "retry": 0,
-    "parked": 2426
+    "retry": 10,
+    "parked": 2436
    },
    "cur": [
     [
@@ -592,7 +592,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     14
+     24
     ]
    ],
    "ld": [
@@ -602,12 +602,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-22T04:02:54Z",
-    "ld": 9.14,
+    "at": "2026-11-22T04:12:47Z",
+    "ld": 3.99,
     "c": 8,
     "sb": 1,
     "dk": [
-     55.0,
+     59.1,
      228.3
     ],
     "ss": [
@@ -633,21 +633,21 @@
  },
  "hc": {
   "wait": {
-   "n": 9,
+   "n": 12,
    "limit": 20,
-   "in_line": 5,
+   "in_line": 8,
    "parked": 4,
    "open": true,
    "mq": false,
-   "counted": "2026-11-22T03:53:54+00:00",
+   "counted": "2026-11-22T04:04:01+00:00",
    "by": {
     "app": {
-     "n": 7,
+     "n": 9,
      "limit": 20,
      "open": true
     },
     "other": {
-     "n": 2,
+     "n": 3,
      "limit": 20,
      "open": true
     },
@@ -657,11 +657,11 @@
      "open": true
     }
    },
-   "at": "2026-11-22T04:02:52+00:00"
+   "at": "2026-11-22T04:12:46+00:00"
   },
   "bl": {
    "n": 3,
-   "at": "2026-11-22T04:02:52+00:00"
+   "at": "2026-11-22T04:12:46+00:00"
   }
  },
  "operators": [
@@ -672,21 +672,12 @@
    "m": "opus",
    "e": "high",
    "t": "Work session \u2013 2 tasks",
-   "at": "2026-11-21T23:01:19-05:00"
-  },
-  {
-   "w": "Operator",
-   "a": "Jeremy's Account",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session",
-   "at": "2026-11-21T22:45:07-05:00"
+   "at": "2026-11-21T23:08:52-05:00"
   }
  ],
  "reply": {
-  "sent": "2026-11-22T04:00:07Z",
-  "seconds": 69.0
+  "sent": "2026-11-22T04:07:39Z",
+  "seconds": 72.0
  },
  "inbox": [],
  "trimmed": [
@@ -704,10 +695,10 @@
   "main": 0,
   "lanes": 2,
   "total": 2,
-  "at": "11:06 PM",
+  "at": "11:16 PM",
   "why": "",
-  "at_iso": "2026-11-22T04:06:00+00:00",
+  "at_iso": "2026-11-22T04:16:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 11:06 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 11:16 PM ET</p></section>"
  }
 }

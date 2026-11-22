@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-22T22:15:50.853650+00:00",
+ "at": "2026-11-22T22:18:55.661784+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -20,6 +20,10 @@
      {
       "s": "testq",
       "at": 1795385244
+     },
+     {
+      "s": "macbook",
+      "at": 1795385807
      }
     ]
    },
@@ -131,21 +135,8 @@
   "week_pct": 2.42,
   "usage_pct": 68.7,
   "work_pct": 88.2,
-  "read_at": "2026-11-22T22:15:00+00:00",
-  "running": [
-   {
-    "lane": "b",
-    "task": "T-5607",
-    "w": "Idris",
-    "k": "ops",
-    "t": "Step 9's MacBook runs disagree on two Pro tests",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-22T16:08:04-05:00",
-    "n": "Jeremy",
-    "src": "plan-b"
-   }
-  ]
+  "read_at": "2026-11-22T22:18:00+00:00",
+  "running": []
  },
  "api_credits": [
   {
@@ -165,7 +156,7 @@
   }
  ],
  "disk": {
-  "free_gb": 64,
+  "free_gb": 66,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -174,7 +165,7 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-22T17:11:00-05:00",
+   "at": "2026-11-22T17:18:00-05:00",
    "recovery": {
     "what": "recovered",
     "at": "2026-11-22T15:08:00-05:00"
@@ -184,7 +175,7 @@
  "lock_in": {
   "on": true,
   "pool": 3,
-  "at": "2026-11-22T17:15:00-05:00",
+  "at": "2026-11-22T17:18:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -396,12 +387,12 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-22T22:15:43Z",
+  "at": "2026-11-22T22:18:36Z",
   "s": {
    "T-5607": [
-    "merging",
-    "Host checks on the Mac mini",
-    1795385263891
+    "mergetest",
+    "Xcode checks on the MacBook",
+    1795385856954
    ],
    "T-5262": [
     "testing",
@@ -420,7 +411,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-22T22:15:43Z",
+  "at": "2026-11-22T22:18:36Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -432,22 +423,22 @@
     "parked": 4
    },
    "m": {
-    "checking": 8,
+    "checking": 1,
     "inline": null,
     "conflicted": null,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1037
+    "parked": 1040
    },
    "cur": [
     [
      [
       "T-5607"
      ],
-     "Mac tests",
-     "Mac mini",
-     8
+     "iPhone app tests",
+     "MacBook",
+     1
     ]
    ],
    "ld": [
@@ -457,12 +448,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-22T22:15:44Z",
-    "ld": 1.31,
+    "at": "2026-11-22T22:18:11Z",
+    "ld": 1.02,
     "c": 8,
     "sb": 0,
     "dk": [
-     63.9,
+     66.2,
      228.3
     ],
     "ss": [
@@ -492,7 +483,7 @@
    "parked": 4,
    "open": true,
    "mq": false,
-   "counted": "2026-11-22T22:07:54+00:00",
+   "counted": "2026-11-22T22:18:15+00:00",
    "by": {
     "app": {
      "n": 3,
@@ -510,11 +501,11 @@
      "open": true
     }
    },
-   "at": "2026-11-22T22:15:50+00:00"
+   "at": "2026-11-22T22:18:55+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-22T22:15:37+00:00"
+   "at": "2026-11-22T22:18:42+00:00"
   }
  },
  "operators": [
@@ -546,12 +537,12 @@
  ],
  "agents_now": {
   "main": 0,
-  "lanes": 1,
-  "total": 1,
-  "at": "5:15 PM",
-  "why": "",
-  "at_iso": "2026-11-22T22:15:00+00:00",
+  "lanes": 0,
+  "total": 0,
+  "at": "5:18 PM",
+  "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
+  "at_iso": "2026-11-22T22:18:00+00:00",
   "started": "2:57 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0, started 2:57 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 5:15 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0, started 2:57 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 5:18 PM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
  }
 }

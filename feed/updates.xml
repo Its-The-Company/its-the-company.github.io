@@ -4,8 +4,15 @@
 <link href="https://its-the-company.github.io/feed/updates.xml" rel="self"/>
 <link href="https://its-the-company.github.io/"/>
 <id>https://its-the-company.github.io/feed/updates.xml</id>
-<updated>2026-11-21T21:47:33-05:00</updated>
+<updated>2026-11-22T01:54:24-05:00</updated>
 <author><name>The Company</name></author>
+<entry>
+<title>Outage: The run loop was down for about 1 h, from Sun 1:04 AM to Sun 1:54 AM (no ticks: the Mac wa</title>
+<link href="https://its-the-company.github.io/"/>
+<id>tag:its-the-company.github.io,2026-11-22:event/2026-11-22t01-54-24-05-00-outage-the-run-loop-was-down-for-about-1-h-fro</id>
+<updated>2026-11-22T01:54:24-05:00</updated>
+<summary type="text">The run loop was down for about 1 h, from Sun 1:04 AM to Sun 1:54 AM (no ticks: the Mac was off, offline, asleep, or stuck at the FileVault screen).</summary>
+</entry>
 <entry>
 <title>Review: Reviewed T-4193 at 9fe16e65 (covers T-0337): PASS with findings (2 Medium, 3 Low); note on</title>
 <link href="https://its-the-company.github.io/"/>
@@ -348,12 +355,5 @@
 <id>tag:its-the-company.github.io,2026-11-17:event/2026-11-17t19-53-39-05-00-decision-t-2296-ssd-guard-t-2999-stopped-idris</id>
 <updated>2026-11-17T19:53:39-05:00</updated>
 <summary type="text">T-2296: ssd_guard (T-2999) stopped Idris at 7:50 PM because the Company SSD hung; it answered again at 7:53 PM (238 entries listed). A liveness wait, not a policy refusal: the same land command reruns unchanged once the drive answers. If the guard stops it again, the item waits for the next session.</summary>
-</entry>
-<entry>
-<title>Decision: T-2296 restart under the T-0848 chair line: guard refused Idris&#x27;s rebase of the copy onto </title>
-<link href="https://its-the-company.github.io/"/>
-<id>tag:its-the-company.github.io,2026-11-17:event/2026-11-17t19-29-01-05-00-decision-t-2296-restart-under-the-t-0848-chair-li</id>
-<updated>2026-11-17T19:29:01-05:00</updated>
-<summary type="text">T-2296 restart under the T-0848 chair line: guard refused Idris&#x27;s rebase of the copy onto main (reason: brings GitHub&#x27;s changes in). That effect is dropped: no rebase, pull or merge. The job does its packet&#x27;s step only: git -C copy checkout --merge --detach main (local main). A second refusal goes t</summary>
 </entry>
 </feed>

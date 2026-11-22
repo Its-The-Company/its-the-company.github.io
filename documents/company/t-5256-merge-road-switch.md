@@ -79,6 +79,23 @@ in the tick's log, the marker gone, the outbox drained, no new row in `ops/runs/
 
 **The lanes are stopped today** by `ops/lane_stops.json` rule r3 (an Investor, #325 c7039523975, 7:27 AM 11-20:
 the personal accounts start no new work while the trim runs). Any test, on either road, needs that lifted first.
+
+## Progress
+
+- 2026-11-22 1:10 AM ET, Odalys: **ready for the swap; the switch stays "old".** On main: the switch, off
+  (`614c350473..a58eb025f7`, review findings F1-F12 and ROAD_WORDS fixed), the review pre-check in `merge_now`
+  (open risk 1), the time cap on waits (risk 4), `road-check` (the drain look), both switch-on fault fixes
+  (`ac0f9f795d`, `4828911555`), Pernille's three pre-switch notes (`99365e8c9d`, reviewed) and her two low notes on
+  that (`f4db056758`, re-review `5110e2b314`: safe). Fault 2's home was confirmed on #325 (c7067153738). The 99 suites
+  that name `tools/merge.sh`, `personal_land.sh`, `merge_queue.py` or `personal_tick.sh`, one run at main
+  `25d12cbdb2`: 97 green (merge_sh 55, personal_land 476, merge_queue 140, personal_pool_requeue 129,
+  personal_parked 96, supervisor 258), 2 red and not this switch's: `personal_land_product_test.sh` "past its tries
+  it is red" (red on main's nightly since 11-19, on T-5262's list), `land_parallel_test.sh`, a wall-clock row (12 s of
+  checks took 13 s at load 66; 26/1 again at load 108; it has flickered on the nightly since 11-16; a T-5262 matter). No pre-comparison gap found, so nothing new
+  was built. **Left for the comparison:** the swap (Monday 2:00 AM: `road-check` clear, the meter readings, then
+  "merge.sh"; back and forth on the days in [`ops/plans/T-5252-handoff.md`](t-5252-handoff.html)), and the 10 merges through `merge.sh`
+  with main green after each, which are "Step 3 done" on [`ops/plans/T-5252-target-system.md`](t-5252-target-system.html). The heading's
+  "design only, nothing built" is from 11-20 and no longer true.
 {% endraw %}
 
 </div>

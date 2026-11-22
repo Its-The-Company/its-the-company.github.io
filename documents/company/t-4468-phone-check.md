@@ -102,13 +102,62 @@ down with the time; do not keep retrying.
 
 ## 5. Habit tracker: habits (Pro in this build)
 
+Steps 4 to 13 were added on 2026-11-22 (T-5318, from the review of the Habits tap, T-5192 M2): with one habit the
+row is on screen already, so "scrolled to Walk" passes whether or not the scroll works. What the app does on a
+Habits row's tap, read from its code (SettingsPage.showFocus): the Habit tracker sheet opens with the Habits page
+already showing; about a third of a second (350 ms) later the page scrolls to the tapped habit, with a short smooth
+movement (0.3 s), bringing its row as near the middle of the screen as the list can scroll. At the same moment the
+row gets a 2-point accent-coloured border inside its own background, which stays 1.5 seconds and then fades out
+quickly (0.2 s). VoiceOver's cursor moves to that row. A habit the file no longer has opens the page at the top, with
+nothing outlined and no message. **Between taps** (every step from 6 on except 8 and 9): close the sheet first with
+**Done** at its top right, so each tap opens it fresh.
+
 1. In the Gallery, tap **Habit tracker**, then the **Habits** row.
 2. Tap **Add Habit**. Name: `Walk`. Under **Check-ins**, tap today (the last of the seven days) so it fills.
    Tap **Save**. Check: Walk is listed with 1 check-in.
 3. Optional: tap Walk, tap yesterday under Check-ins, Save. Check: the count goes to 2.
-4. Place a **Medium** PyWidget widget and choose **Habit tracker**. Check: it shows **Walk** with today checked.
-5. Tap **Walk** on the widget. Check: PyWidget opens on the Habits page, scrolled to Walk, its row outlined briefly
-   in the accent colour.
+4. Add five more the same way, with no check-ins: `Read`, `Water`, `Stretch`, `Journal`, `Run`. Check: six habits
+   are listed, Walk first and Run last (if not, tap **Edit** at the top and drag Run to the bottom), and **Add Habit**
+   is greyed out (six is the most the list takes). Now look at the page without scrolling: Run's row must be below
+   the bottom edge of the screen. If all six fit, raise the text size (Settings, Accessibility, Display & Text Size,
+   **Larger Text**) until Run is off screen when the page is opened, and write down the size you used.
+5. Place a **Large** PyWidget widget and choose **Habit tracker** (a Medium one shows only the first three). Check:
+   it shows all six, **Walk** at the top with today checked and **Run** at the bottom.
+6. From a cold start. Close PyWidget fully: swipe up from the bottom edge and pause to show the open apps, then swipe
+   PyWidget's card up. Tap **Run** on the widget. Check: PyWidget opens on the Habits page (its Back button leads to
+   the Habit tracker sheet), the page moves down to Run on its own, and Run's row is outlined in the accent colour
+   for about a second and a half. If the page stays at the top with nothing outlined, write that down: it means the
+   app's wait was too short for a cold start.
+7. From the background. Close the sheet with **Done**, go to the Home Screen (do not close the app), and tap **Run**.
+   Check: the same as step 6.
+8. A second habit with the page still up. After step 7, leave the Habits page showing at Run and go to the Home
+   Screen without tapping Done. Tap **Walk**. What the tap should do: the page moves up to Walk and outlines it.
+   What the review found by reading the code (T-5192 M1, fixed by T-5317, open as of 2026-11-22): the page stays
+   where it was and nothing is outlined. Write down which you see.
+9. The same, from the sheet's summary. Tap the page's Back button so the Habit tracker sheet shows, go to the Home
+   Screen, and tap **Read**. What the tap should do: the Habits page opens again at Read, outlined. What the review
+   found (the same M1): the sheet stays as it was and the page is not opened. Write down which you see, then tap
+   **Done**.
+10. Reduce Motion. Turn on Settings, Accessibility, Motion, **Reduce Motion**. Tap **Run** on the widget. Check: the
+    page shows Run with no scrolling movement (it jumps there), and the outline appears and goes after about a
+    second and a half with no fade either way. The sheet's own arrival is iOS's and may cross-fade instead of
+    sliding; that is not part of this check. Turn Reduce Motion off again.
+11. VoiceOver. In Settings, Accessibility, **Accessibility Shortcut**, choose **VoiceOver**, so three presses of the
+    side button turn it on and off. Close the sheet, go to the Home Screen, press the side button three times. Touch
+    **Run** on the widget once (VoiceOver reads it) and double-tap to open it. Check: VoiceOver's cursor lands on
+    Run's row and it reads Run (with the number shown under the name, if any), then "Opens its settings."; it does
+    not start at the page's title or the Back button. Write down the words it read. Press the side button three
+    times to turn VoiceOver off.
+12. A deleted habit. On the Habits page, tap **Run**, tap **Delete** and confirm ("Delete “Run”? Its check-ins are
+    deleted too."). Tap **Done** to close the sheet and go straight to the Home Screen. If the widget still shows
+    Run, tap it. Check: PyWidget opens on the Habits page at the top, nothing is outlined, and no message or alert
+    appears. If the widget had already redrawn without Run, write "redrawn first" with the time; this check was then
+    not reached (a typed pywidget:// link does not open a TestFlight build, so there is no other way in).
+13. Put things back: Larger Text to your usual size if you changed it, and the Accessibility Shortcut as it was. The
+    habits can stay or be deleted on the page.
+
+A UI test that opens the link with six habits and checks the scroll without a phone is T-5542, not built as of
+2026-11-22.
 
 ## 6. GitHub repository: a repository (Pro in this build)
 
@@ -132,7 +181,15 @@ down with the time; do not keep retrying.
 ## What to send back
 
 For each of the seven: passed or not, and for any "not", what the widget showed instead, with the time. The build
-number. The recordings or screenshots. Anything that surprised you, even if every check passed.
+number and the iPhone model. The recordings or screenshots. Anything that surprised you, even if every check passed.
+
+For the Habit tracker, one answer per step from 6 to 12, since each looks at a different part:
+- Step 4: whether Run was below the bottom edge as the page opened, and the Larger Text size if you changed it.
+- Steps 6, 7 and 10: whether the page moved to the tapped habit (or stayed at the top), whether its row was
+  outlined and for about how long; for step 10, whether you saw any scrolling movement or fade.
+- Steps 8 and 9: which of the two outcomes you saw.
+- Step 11: the words VoiceOver read, and where its cursor was.
+- Step 12: what the page showed, or "redrawn first" with the time.
 
 ## What still holds TestFlight (owners, as of 2026-11-19)
 

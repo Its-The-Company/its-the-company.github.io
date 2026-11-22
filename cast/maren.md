@@ -38,7 +38,6 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - Older entries (Day 2-6: hunt grades, site v2, <span title="A memo that proposes one idea to the Investors as the product. Only a B or better becomes one.">pitch</span> QA, H-codes, probation (a), packet 3) and their kept lessons: archive.md.
 - (b) drawn in design/; Ines's fixes c22b4e9, Idris's S-1..S-5 76f3774; Ines rechecks, C51 after #23. Detail: Probation (b)
 
-- 11-18 T-4703 f32bea8ad4: all 8 showcase premades drawn (render.py --set showcase NN takes ~5 s a sheet). Open: review Pernille's day_phases.py when T-4673 lands; T-4766 duplicates 06-11. Lesson: stacked marks (accent on grey) fail the card 3:1 check; set them side by side on the card.
 - 11-17 landed T-4779 837b985bcc (mockup times 12-hour), T-4780 4eb4d80b32, T-4730 09eb93e1f3. Lesson: a check green in the main folder but red in a copy reads git-ignored state (ops/live.json); fixture it by patching build.load_json. Bring the copy up to main and land in one command: main moves within minutes.
 - 11-18 T-4763: s9.2 checked against code. Lesson: a spec that names a gate must name where it runs (the handler runs outside ui._first_party(); validate(doc) never sees the request); trace the call path before naming one.
 - 11-18 T-4764: premade-inputs s9.2 gives the order text yields to Dynamic Type (head, name, cell shape; buttons and dots never). Lesson: minimumScaleFactor fits width, not height; use line limits for height. Two docs disagree on widget text sizes (ADR-011 AX5 vs renderer xxxLarge clamp): Idris settles it.
@@ -46,6 +45,8 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - 11-18 T-4818 slice 1: Flow pool figure + <span title="A measured fact that holds a grade below a letter, however good the rest is.">cap</span> graph (tools/site/flow_pool.py). Lesson: symbols over a stretched SVG go as small SVGs placed by percent; Flow's words may not name a .py file or '<span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lanes</span>' (site_home_flow_test).
 - 11-19 T-5000 ef0cffe6bc: transit frames clock times only (no count-down); fmt_rel draws SwiftUI .relative ("3 min, 59 sec", counts up after). Lesson: any relative text needs a timeline entry at its date or it counts up; iOS has no self-stopping "in 4 min".
 - 11-19 T-4813 (live Home counts, hc payload + look.js redraw) brought from my copy onto a2; follow-up T-5181 holds what is not live (Queued 24.8 s a read, Work done 6.5 s, Flow, Progress, 10-min sample). Lesson: time each source before promising it live; under load ~100 a full-build test needs 10 min, run it alone.
+- 11-21 T-4999: link screen title "Web Page" to "Web page" (sentence case). Lesson: T-5255 retired tools/png_small.py but ide/draw_ide.py still imports it; every design script fails until it is restored (ran with retired/tools on PYTHONPATH).
+- 11-21 T-5193: five build-added page strings kept word for word, written into premade-inputs s5; no Swift change. Apostrophes mixed (straight in four "couldn't" lines, curly elsewhere); left as built.
 {% endraw %}
 
 

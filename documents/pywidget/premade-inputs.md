@@ -558,7 +558,9 @@ docstring), plus Countdown's `all_day` and the Habits `id` rule.
 ## 5. Strings (DRAFT; no copy guide is approved)
 
 This table is the full set. The strings the frames draw are the drawing script's own table (`draw_premade_inputs.py
---strings`); where both have a string, they match.
+--strings`); where both have a string, they match. T-5193 (Maren): the five rows from `page.dup` to `page.loc.nofix` were written
+by the build (Idris, T-4468); each follows the voice rule (approved.md section 8) and is kept word for word. Apostrophes are
+mixed already (straight in the four "couldn't" lines, curly in "hasn’t", "can’t"); the table copies the Swift exactly.
 
 
 <div class="tbl" role="region" tabindex="0" aria-label="Table 11: 5. Strings (DRAFT; no copy guide is approved), scrolls sideways" style="--tw:790px" markdown="1">
@@ -596,6 +598,11 @@ This table is the full set. The strings the frames draw are the drawing script's
 | `page.gh.bad` | Enter it as owner/name, like python/cpython. | refusal |
 | `page.gh.foot` | Public repositories only. The widget asks GitHub for this repository’s numbers about every 15 minutes. | GitHub footer |
 | `page.sc.foot` | Type the name exactly as it is in Shortcuts. PyWidget can’t see your shortcuts to check it. | Shortcuts footer |
+| `page.dup` | You already have one called “{name}”. | refusal; a list other than Countdown's events |
+| `page.full` | This list is full. Delete one to add another. | footer at a list's cap, where no cap-specific line exists |
+| `page.required` | This can’t be empty. | refusal, a required text field |
+| `page.nocities` | PyWidget couldn't read its city list. Reinstall PyWidget to get it back. | in place of the search, when the city list cannot be read |
+| `page.loc.nofix` | PyWidget couldn't find where this iPhone is. Try again outside or near a window. | Use Current Location, when no fix comes |
 | `page.sum.*` | “{n} events”, “No events yet”, the place's name, “{n} cities”, “No places yet”, “{n} habits”, the repository, “{n} shortcuts” | Gallery row detail |
 
 </div>

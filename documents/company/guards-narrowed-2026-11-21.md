@@ -81,7 +81,7 @@ At no step is a kept guard (a) to (d) lighter than today.
 | second pass: Claude Code started at all outside CLI_OK ("starts Claude Code outside the governor") | not a-d | **narrow** like `claude -p` above: any start allowed unless it names a key, an endpoint, a provider or `rules/api-settings*.json` | 2 |
 | second pass: "points Claude Code at another profile" (`CLAUDE_CONFIG_DIR`) | **unsure** (a profile holds an account's credentials) | keep | - |
 | second pass: "reaches the personal lane's profile" | (d) credentials | keep | - |
-| second pass: "changes the personal lane's state" (`personal_lane.py` beyond LANE_OK) | not a-d | remove | 2 |
+| second pass: "changes the personal lane's state" (`personal_lane.py` beyond LANE_OK) | **unsure** (b), changed in slice 2: `meter` writes the reading the overage hold reads, `clear` <span title="A new, permitted reading that removes a cap. A lift rule is that reading, written down before we look.">lifts</span> a stop that may be for a key | keep | - |
 | second pass: "reads or copies the whole home folder" | (d) `.ssh`, Keychain files | keep | - |
 | second pass: reads a secret (`.ssh`, `.appstoreconnect/private_keys`, `ops/secrets.local`) | (d) | keep | - |
 | second pass: "prints the GitHub login's token" | (d) | keep | - |
@@ -208,35 +208,46 @@ heartbeat stops; it refuses nothing: keep. supervisor-keychain.sh holds the API 
 </div>
 
 
-Counts (table rows): 22 removed or narrowed, 44 kept (12 rows carry an **unsure**), 3 tool rows narrow by
-themselves when PATHS does, 1 out of scope. Settings: the deny list has 174 entries; stage A
-leaves 108 (the `claude -p`, `--print` and `--bg` denies, and per checkout form `setup/**`, `CLAUDE.local.md`,
+Counts (table rows; slice 2 moved the lane-state rule to kept): 21 removed or narrowed, 45 kept (13 rows carry an
+**unsure**), 3 tool rows narrow by themselves when PATHS does, 1 out of scope. Settings: the deny list has 174 entries;
+stage A leaves 108 (the `claude -p`, `--print` and `--bg` denies, and per checkout form `setup/**`, `CLAUDE.local.md`,
 `.claude/CLAUDE.md`, `agents`, `commands`, `rules`, `output-styles` go; `.github/**` becomes `.github/workflows/**`);
-stage B leaves 163, because `rules/**` and `investors/**` become their kept files one by one and
-`ops/personal_usage.json` goes.
+stage B leaves 171, because `rules/**` and `investors/**` become their kept files one by one. Slice 2 keeps
+`ops/personal_usage.json` denied in both stages (it was lifted in #341's first stage B): the five-hour overage hold
+reads that meter, so a session that could write it could spend past the plan.
 
-## Tests the proposal (slice 2) carries
+## Slice 2: the guard proposal (ops/plans/guards-narrowed-2026-11-21.diff)
 
-- tests/guard_test (security-guard rows): `claude -p "x"` and `claude --print` pass; `ANTHROPIC_API_KEY=k claude -p x`,
-  `env ANTHROPIC_BASE_URL=u claude -p x`, `claude -p --settings rules/api-settings.json x`,
-  `claude -p --settings rules/api-settings-b.json x`, `CLAUDE_CODE_USE_BEDROCK=1 claude -p x` still refuse; writes to
-  `setup/`, `rules/lookup.py`, `investors/favorites.json`, `.claude/agents/x.md` pass; writes to
-  `investors/allowlist.md`, `investors/billing.json`, `rules/hooks/x`, `rules/api-settings.json`, `.mcp.json`,
-  `.claude/settings.json` still refuse; `personal_lane.py trip` passes; `git pull` in a company session passes; every
-  (d) row unchanged.
-- model-guard rows: an untagged work call and a `[diary]` call on Opus pass; Fable on `billing=api` and past
-  `fable_ok` still refuse.
-- file-guard rows (tests/file_guard_test.sh): a session's edit to `setup/OPERATIONS.md` stays; one to
-  `investors/allowlist.md` or `rules/hooks/security-guard.py` goes back.
-- tools/test_personal_lane.py: a new Claude Code version, an unknown tool or skill, an unknown event pass; an
-  `apiKeySource` other than none, an `ANTHROPIC_*` variable and a risky settings key still refuse.
+What the diff changes, and only this:
+- rules/hooks/security-guard.py: a Claude Code start (`claude -p` included, plain and in the second pass) is allowed
+  unless the command names an API key or token, `ANTHROPIC_BASE_URL`, a Bedrock, Vertex or Foundry provider,
+  `apiKeyHelper` or `rules/api-settings*.json` (MONEY_START); `--cloud`, `--teleport`, `remote-control` and
+  `ultrareview` stay refused (unsure); the company-session rule against `git pull/merge/rebase` goes;
+  PROTECTED_DIRS and PROTECTED_FILES narrow to the kept list above, and a delete of a folder that holds a kept file
+  (`rm -rf rules`) is still refused.
+- rules/personal_lane.py: `guard_cases` asks the guard for money starts and `rules/hooks/` writes instead of
+  `claude hello` and `rules/x`; `REQUIRED_DENY` is met by either the broad `rules/**` and `investors/**` rules or
+  stage B's narrow ones (NARROW_DENY, deny_has), so stage A, stage B and today's settings all pass.
+- tests/guard_test.sh and tools/test_personal_lane.py: the rows above, and 19 new refusal rows for money starts and
+  kept files.
 
-## Not done in this slice
+Tested in a throwaway copy (`git archive` of main 38f6dfeb4d on the SanDisk SSD, the diff applied there, nothing
+landed from it): tests/guard_test.sh 517 pass, 0 fail; tools/test_personal_lane.py 249 run, 5 fail, 3 skipped, and
+the same 5 fail on main's unchanged files (Accounts lock-in two, Inert two, Meter even pace); guard_replay 14/0,
+guard_supervisor 23/0, five_hour 58/0, lane_settle 8/0, lane_stop 88/0, personal_cred, supervisor_lane_stop,
+account_pace, refusals_by_day, sent_back and dispatch_hold green. Not run: the shell suites that start a lane
+(personal_*_test.sh, supervisor_test.sh, dispatch_tick_test.sh, inbox_test.sh): the machine's load was 130 to 450.
 
-The guard diff itself (slice 2) and the tools' own lists (slice 3); see the board lines. Older Standing Investor
-instructions that ruling 2 may overtake (2026-11-18 6:05 PM "No permission rule changes", 7:16 PM "only through the
-applier after an approve") are left for the Operator's T-5165 reading: this slice still uses the applier, so it
-contradicts neither.
+Left for slice 2b (a second proposal, after this one): model-guard's talk and kind-tag rules (supervisor_test.sh and
+governor_test.sh pin them), protect-records narrowing, file-guard PATHS with the tools' own copies of the list
+(T-5556: tools/personal_tick.sh's must list and tools/personal_land.sh OWNED_MUST would stop every lane if PATHS
+narrowed alone), and the personal lane's word lists (version pin, tools, skills, commands, events). Until then
+file-guard still restores setup/, the rest of rules/ and investors/ after a supervisor session.
+
+
+Older Standing Investor instructions that ruling 2 may overtake (2026-11-18 6:05 PM "No permission rule changes",
+7:16 PM "only through the applier after an approve") are left for the Operator's T-5165 reading: both slices use the
+applier, so they contradict neither.
 {% endraw %}
 
 </div>

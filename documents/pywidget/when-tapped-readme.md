@@ -48,7 +48,7 @@ Pushed, titled "When tapped" (a button's picker is titled by its row title). Fou
 
 One checkmark, in a **leading** 22 pt column, so a chosen row can still show its chevron and its second choice ("Run a function … add_glass"). Rows that need a second choice (Page, code, web page, app, function) push; Default and Open Projects apply on tap. A button name drawn more than once gets the line "Applies to all 5 buttons named check" above the list (frame 7).
 
-A choice applies when the row (or the pushed list's row) is chosen and the person goes back; no Done. The Web Page screen is the one exception: Save.
+A choice applies when the row (or the pushed list's row) is chosen and the person goes back; no Done. The Web page screen is the one exception: Save.
 
 ## 3. Second choices (frames 8-13, 32)
 
@@ -56,9 +56,9 @@ A choice applies when the row (or the pushed list's row) is chosen and the perso
 - **Open an app**: saved slots with their tile (30 pt, hidden at AX sizes) and name; a sub-line says where else the slot is used ("Also in 2 launcher widgets and 1 script"). Then "Add an app" in its own group, which opens the launcher editor's Add App. Empty: only "Add an app" (frame 11).
 - **Open its Page**: the project's Pages. **Open its code**: the project's `.py` files, the widget's own file first with "The file this widget runs"; long paths truncate in the **middle**, one line, at every size (frames 13, 32).
 
-## 4. The Web Page field (frames 14-19, 33)
+## 4. The Web page field (frames 14-19, 33)
 
-Pushed from "Open a web page"; back, title "Web Page", **Save** trailing, disabled (`text.tertiary`) until the field passes section 5's check. One field, monospace once it has text, clear button, keyboard `.URL`, no autocorrect, no capitals, submit label Done. Placeholder "example.com".
+Pushed from "Open a web page"; back, title "Web page", **Save** trailing, disabled (`text.tertiary`) until the field passes section 5's check. One field, monospace once it has text, clear button, keyboard `.URL`, no autocorrect, no capitals, submit label Done. Placeholder "example.com".
 - Typed without a scheme: a line under the field, "Saves as https://example.com/train-times" (new words); Save on (frame 15).
 - Errors under the field, one at a time, in `status.danger` with the warning glyph, the field's edge in `status.danger`: "Links start with https://." (frame 16), "This isn't a web address." (17), "This link is too long (2,048 characters at most)." (18). Each is posted to VoiceOver when it appears.
 - When an error shows: the scheme error as soon as the text before `://` is complete and is not `https` (never while the text is still a prefix of `https://`); the bad-character error at once; the no-host error when editing ends or Save is tapped. Save stays off while any error stands.
@@ -102,7 +102,7 @@ Two independent reads by Idris, neither shown this README's reasoning: **F** (re
 **F2 (Save and the no-host error).** One rule: Save is on exactly when the field passes s5's check. Errors show at once, except the no-host one, which waits for editing to end. So Save is off with no reason shown only while the field is empty or still a prefix of `https://`. `exam` is a valid single-label host, so Save is on.
 **F3, E14, E11 (unit, case, schemes).** The cap counts the stored form (after `https://` is added and the host is in `xn--` form), which is ASCII, so bytes and characters are the same and the words stay "characters". Scheme and host are lower-cased silently on save; `HTTPS://` is accepted. Text with `://` takes its scheme from before it. Without `://`, `name:` followed by anything but digits is a scheme (`tel:x`, `mailto:x` give "Links start with https://."), and `localhost:3000` is a host with a port. The Return key is labelled Done: it saves when Save is on, otherwise it ends editing and shows the error.
 **F4 (newlines).** Pasted text is trimmed at both ends. A newline inside it is a bad character ("This isn't a web address."). If a vertical-axis field makes Return insert a newline on the Simulator, use a single-line field that scrolls. Frame 33 draws the field that way (one line, clipped at its edge); frame 18's wrap and "…" are only the drawing's, so the whole long link can be read.
-**F5, E12 (IDN shown as typed).** The action keeps no second field (s1 refuses unknown fields), and there is no public decoder. In 1.0 the Web Page field shows what the person typed while they are on it; the row shows the stored host, `xn--` form included. This narrows s5's "shown to the person as typed" to the field. Proposed to Idris as an ADR-011 s5 wording change; nothing is decided here.
+**F5, E12 (IDN shown as typed).** The action keeps no second field (s1 refuses unknown fields), and there is no public decoder. In 1.0 the Web page field shows what the person typed while they are on it; the row shows the stored host, `xn--` form included. This narrows s5's "shown to the person as typed" to the field. Proposed to Idris as an ADR-011 s5 wording change; nothing is decided here.
 **F6, E18 (Buttons rows' data; drops).** They are read from the widget's last `tree.json`, across its entries and families (the same read as step 3's defaults). Names are listed in depth-first order of the largest family drawn. Caps grow with size, so a name dropped in Medium is dropped in Small too. The sub-line names each family that drops every instance, smallest first ("Not shown in Small", "Not shown in Small or Medium", new `ws.drop.2`). A family that drops only some instances gives "Not all shown in Small" (new `ws.drop.some`). A premade's caption is "Widget · {premade name}". The detail screen's existing top (preview, families) is T-4476's and is not drawn here; these two parts sit under it.
 **F7, E6 (where else an app is used).** The counts are read from the caches the app already has: launcher widgets' slots, other widgets' `actions.json`, and every last tree's `p.open` for script defaults (no source scan). This widget's own place is never counted. Words: "Also in" plus the parts joined by commas and "and", with plural forms in the String Catalog (new `l.app.used.l`, `.s`, `.c`). This is Idris's, app side.
 **F8, E6, E7 (Add an app; Change).** Add an app presents the launcher editor's Add App sheet (editor.md frame 5). On Save the new slot is chosen and checked; Cancel changes nothing. Change (on a notice, or in frame 26's sheet) closes the notice or sheet and sets the Projects tab's path to that project, then that widget's settings, replacing the path that was there. The editor saves on leaving as it does today; if it does not, that is a QUESTION back to Idris before step 8. In frame 27 Save writes the slot under its fixed id, `music-2` (editor.md s7, Set Up App for `.unknown`), so the stored action works again.
@@ -181,7 +181,7 @@ Printed by `python3 draw_when_tapped.py --strings`.
 | `l.app.foot` | Your saved apps are shared with your launcher widgets. | footer under the app list | new, DRAFT |
 | `l.page.foot` | Pages in this project. | footer under the Page list | new, DRAFT |
 | `l.code.this` | The file this widget runs | sub-line on the widget's own file in the Code list | new, DRAFT |
-| `f.title` | Web Page | the link screen's title | new, DRAFT |
+| `f.title` | Web page | the link screen's title | new, DRAFT |
 | `f.save` | Save | trailing nav button; disabled until the field passes s5 | ADR-011, DRAFT |
 | `f.ph` | example.com | placeholder | ADR-011, DRAFT |
 | `f.will` | Saves as {url} | line under the field when https:// will be added | new, DRAFT |

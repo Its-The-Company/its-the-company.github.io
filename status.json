@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-22T01:06:11.387747+00:00",
+ "at": "2026-11-22T01:10:57.016535+00:00",
  "session": {
   "active": false,
   "kind": "",
@@ -14,6 +14,10 @@
      {
       "s": "testq",
       "at": 1795308207
+     },
+     {
+      "s": "macbook",
+      "at": 1795309609
      }
     ]
    },
@@ -202,12 +206,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-21T20:15:18-05:00",
+ "next_tick": "2026-11-21T20:24:21-05:00",
  "personal": {
-  "week_pct": 107.76,
+  "week_pct": 107.79,
   "usage_pct": 51.9,
-  "work_pct": 84.7,
-  "read_at": "2026-11-22T01:09:00+00:00",
+  "work_pct": 84.8,
+  "read_at": "2026-11-22T01:14:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -229,6 +233,31 @@
     "at": "2026-11-21T19:36:15-05:00",
     "n": "Evan",
     "d": 1,
+    "src": "plan-a"
+   },
+   {
+    "lane": "a3",
+    "task": "T-5447",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Add the coordinator switch and one-task worker plan, off",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-21T20:12:20-05:00",
+    "n": "Evan",
+    "d": 1,
+    "src": "plan-a"
+   },
+   {
+    "lane": "a3",
+    "task": "T-5454",
+    "w": "Odalys",
+    "k": "site",
+    "t": "Home shows each merge queue on its own",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-21T20:12:20-05:00",
+    "n": "Evan",
     "src": "plan-a"
    },
    {
@@ -255,6 +284,30 @@
     "n": "Jeremy",
     "d": 1,
     "src": "plan-b"
+   },
+   {
+    "lane": "b2",
+    "task": "T-5489",
+    "w": "Ines",
+    "k": "plan",
+    "t": "Put Day phases behind the Builder's Python steps",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-21T20:14:44-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
+   },
+   {
+    "lane": "b2",
+    "task": "T-4798",
+    "w": "Ines",
+    "k": "plan",
+    "t": "Mark Graphite as a new app theme needing a preview",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-21T20:14:44-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
    }
   ]
  },
@@ -276,7 +329,7 @@
   }
  ],
  "disk": {
-  "free_gb": 59,
+  "free_gb": 61,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -285,14 +338,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-21T20:07:00-05:00",
+   "at": "2026-11-21T20:14:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-21T20:09:00-05:00",
+  "at": "2026-11-21T20:14:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -490,37 +543,47 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-22T01:06:11Z",
+  "at": "2026-11-22T01:10:57Z",
   "s": {
-   "T-4593": [
+   "T-4188": [
     "merging",
-    "Host checks on the Mac mini",
-    1795308251387
+    "Rebasing onto current main",
+    1795309737016
+   ],
+   "T-4793": [
+    "mergeq",
+    "1st to merge",
+    1795309617016
    ],
    "T-4846": [
     "mergeq",
-    "1st to merge",
-    1795309091387
+    "3rd to merge",
+    1795309077016
    ],
    "T-5440": [
     "mergeq",
-    "1st to merge",
-    1795309091387
+    "3rd to merge",
+    1795309077016
    ],
-   "T-4188": [
+   "T-4795": [
     "mergeq",
-    "2nd to merge",
-    1795308791387
+    "4th to merge",
+    1795309797016
+   ],
+   "T-4593": [
+    "mergetest",
+    "Xcode checks on the MacBook, 7th to merge",
+    1795309617016
    ],
    "T-4831": [
     "mergeq",
-    "3rd to merge",
-    1795309211387
+    "8th to merge",
+    1795309197016
    ],
    "T-5470": [
     "mergeq",
-    "3rd to merge",
-    1795309211387
+    "8th to merge",
+    1795309197016
    ],
    "T-4442": [
     "merged",
@@ -533,51 +596,39 @@
     "on main 7:08 PM ET",
     1795306098000,
     "Pernille"
-   ],
-   "T-4793": [
-    "merged",
-    "on main 5:14 PM ET",
-    1795299266000,
-    ""
-   ],
-   "T-4795": [
-    "merged",
-    "on main 4:28 PM ET",
-    1795296485000,
-    ""
    ]
   },
   "nm": {
-   "T-4593": "Check the inherited versions in the licence list",
+   "T-4188": "Location, steps and notifications work in scripts and...",
+   "T-4793": "Say how Day phases gets fresh train times",
    "T-4846": "Review the bottleneck watch on every tick",
    "T-5440": "Check finished work before it ships",
-   "T-4188": "Location, steps and notifications work in scripts and...",
+   "T-4795": "Weigh the showcase set against the Builder-first ruling",
+   "T-4593": "Check the inherited versions in the licence list",
    "T-4831": "Review the bottleneck watch",
    "T-5470": "Check finished work before it ships",
    "T-4442": "Tidy the bundled first renders' small edges",
-   "T-4807": "Fix every bad test that failed a merge",
-   "T-4793": "Say how Day phases gets fresh train times",
-   "T-4795": "Weigh the showcase set against the Builder-first ruling"
+   "T-4807": "Fix every bad test that failed a merge"
   },
   "wk": {
-   "T-4593": "Odalys",
+   "T-4188": "Idris",
+   "T-4793": "Ines",
    "T-4846": "Pernille",
    "T-5440": "Odalys",
-   "T-4188": "Idris",
+   "T-4795": "Ines",
+   "T-4593": "Odalys",
    "T-4831": "Pernille",
    "T-5470": "Pernille",
    "T-4442": "Idris",
-   "T-4807": "Pernille",
-   "T-4793": "Ines",
-   "T-4795": "Ines"
+   "T-4807": "Pernille"
   }
  },
  "ln": {
-  "at": "2026-11-22T01:06:11Z",
+  "at": "2026-11-22T01:10:57Z",
   "mq": {
    "n": {
-    "checking": 1,
-    "inline": 5,
+    "checking": 2,
+    "inline": 6,
     "conflicted": 0,
     "failed": 0,
     "held": 0,
@@ -585,22 +636,30 @@
     "parked": 3
    },
    "m": {
-    "checking": 22,
-    "inline": 8,
+    "checking": 3,
+    "inline": 11,
     "conflicted": null,
     "failed": null,
     "held": null,
-    "retry": 10,
-    "parked": 2249
+    "retry": 14,
+    "parked": 2254
    },
    "cur": [
     [
      [
+      "T-4188"
+     ],
+     "lining up with main",
+     "Mac mini",
+     2
+    ],
+    [
+     [
       "T-4593"
      ],
-     "Mac tests",
-     "Mac mini",
-     22
+     "iPhone app tests",
+     "MacBook",
+     4
     ]
    ],
    "ld": [
@@ -610,8 +669,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-22T01:06:12Z",
-    "ld": 8.11,
+    "at": "2026-11-22T01:10:57Z",
+    "ld": 3.98,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -625,12 +684,12 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-22T00:44:58Z",
-    "ld": 0.22,
+    "at": "2026-11-22T01:07:28Z",
+    "ld": 0.17,
     "c": 12,
     "sb": 0,
     "dk": [
-     360.1,
+     359.9,
      926.4
     ],
     "sn": []
@@ -663,11 +722,11 @@
      "open": true
     }
    },
-   "at": "2026-11-22T01:06:11+00:00"
+   "at": "2026-11-22T01:10:57+00:00"
   },
   "bl": {
    "n": 3,
-   "at": "2026-11-22T01:06:11+00:00"
+   "at": "2026-11-22T01:10:57+00:00"
   }
  },
  "operators": [
@@ -708,12 +767,12 @@
  ],
  "agents_now": {
   "main": 0,
-  "lanes": 2,
-  "total": 2,
-  "at": "8:09 PM",
+  "lanes": 4,
+  "total": 4,
+  "at": "8:14 PM",
   "why": "",
-  "at_iso": "2026-11-22T01:09:00+00:00",
+  "at_iso": "2026-11-22T01:14:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 8:09 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 8:14 PM ET</p></section>"
  }
 }

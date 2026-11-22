@@ -160,6 +160,17 @@ research/inbound/):
   not on the list") and stopped; the new one passes 61/0 on both the old list and the empty one. The old
   personal_land_test.sh failed its five T-3995 rows and only those (471/5, 479 s); the new one passes 476/0 (491 s),
   both through tests/run.sh at load 10-57. ProStoreTests.swift itself is unchanged, so no Xcode run was needed.
+- Rule 1 and rule 5, slice 8 (11-21): what slice 4 left per menu line in tools/personal_tick.sh, its board line (a
+  grep), waits_on (two greps), a grep for each task it waits on, and its board line again on the session's menu, is
+  now read once a tick: menu_facts reads the board (and the expanded board when a line points at moved notes) in the
+  same awk as the lists, and gives each line its board line and the first open task it waits on. The menu stage asks
+  menu_facts again for the candidates, so it still reads the board as it is then. Old and new gave the same line and
+  wait for all 697 IDs on the 11-21 board and on a board of edge cases (case, letter suffixes, clause ends, held
+  lines). A new row in personal_pool_test.sh counts small-tool starts for one menu line against five, two of them
+  waiting on open tasks: red before (43 and 60), green after (41 and 41), with the waits, the queue and the menu as
+  before. tests/board_notes_readers_test.py's tick probe now runs menu_facts. Left from T-4787's bad-test list, each
+  on the board: systls big bodies' 1 s bounds, the bridge swallow test's 5 s bound, main_folder_guard_test's 30 s
+  subprocess limit, and site_test.sh's no-second-commit row.
 {% endraw %}
 
 </div>

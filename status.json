@@ -1,26 +1,11 @@
 {
  "schema": 1,
- "at": "2026-11-22T00:03:23.858971+00:00",
+ "at": "2026-11-22T00:08:13.083783+00:00",
  "session": {
   "active": false,
   "kind": "",
   "started": null,
   "flow": [
-   {
-    "t": "T-5047",
-    "name": "Fix the token test's No view for this size card",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1795304589
-     },
-     {
-      "s": "macbook",
-      "at": 1795305339
-     }
-    ]
-   },
    {
     "t": "T-4010",
     "name": "Rebuild This Session as a full flowchart",
@@ -39,6 +24,38 @@
    }
   ],
   "done": [
+   {
+    "t": "T-5407",
+    "name": "Check finished work before it ships",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1795306039
+   },
+   {
+    "t": "T-5219",
+    "name": "Check finished work before it ships",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1795306020
+   },
+   {
+    "t": "T-5218",
+    "name": "Check finished work before it ships",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1795306020
+   },
+   {
+    "t": "T-5047",
+    "name": "Fix the token test's No view for this size card",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1795305991
+   },
    {
     "t": "T-5468",
     "name": "Check finished work before it ships",
@@ -86,41 +103,9 @@
     "steps": [],
     "end": "landed",
     "end_at": 1795302225
-   },
-   {
-    "t": "T-5405",
-    "name": "Check finished work before it ships",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1795302207
-   },
-   {
-    "t": "T-5444",
-    "name": "Check finished work before it ships",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1795302200
-   },
-   {
-    "t": "T-5443",
-    "name": "Check finished work before it ships",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1795301951
-   },
-   {
-    "t": "T-5000",
-    "name": "Draw transit count-downs the way the iPhone draws them",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1795301762
    }
   ],
-  "landed": 89,
+  "landed": 93,
   "failed": 22
  },
  "workers": [],
@@ -162,8 +147,8 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 680,
-  "blocked_count": 2
+  "runnable_count": 677,
+  "blocked_count": 3
  },
  "meter": {
   "five_hour": {
@@ -206,12 +191,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-21T19:10:00-05:00",
+ "next_tick": "2026-11-21T19:18:54-05:00",
  "personal": {
-  "week_pct": 106.86,
+  "week_pct": 107.04,
   "usage_pct": 51.7,
   "work_pct": 84.1,
-  "read_at": "2026-11-22T00:04:00+00:00",
+  "read_at": "2026-11-22T00:12:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -232,7 +217,7 @@
   }
  ],
  "disk": {
-  "free_gb": 62,
+  "free_gb": 64,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -241,14 +226,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-21T19:01:00-05:00",
+   "at": "2026-11-21T19:11:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-21T19:04:00-05:00",
+  "at": "2026-11-21T19:12:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -385,26 +370,26 @@
   ],
   "done": [
    {
+    "w": "Pernille",
+    "t": "Pernille's second-person check of Ines's showcase plan update passed: it says exactly what the...",
+    "at": "2026-11-21T19:07:00-05:00"
+   },
+   {
+    "w": "Pernille+operator",
+    "t": "The review of the failing-widget cards was already written and is on main; it found them safe to...",
+    "at": "2026-11-21T19:07:00-05:00"
+   },
+   {
     "w": "Odalys",
     "t": "The tests that try to break out of the app's Python sandbox were checked by a second engineer;...",
     "at": "2026-11-21T18:35:00-05:00"
-   },
-   {
-    "w": "Pernille",
-    "t": "The plan for how the transit widget (Day phases) gets fresh train times was checked and is...",
-    "at": "2026-11-21T18:30:00-05:00"
-   },
-   {
-    "w": "Pernille",
-    "t": "The showcase plan quotes both Investor rulings exactly and rightly moved three premade tasks...",
-    "at": "2026-11-21T18:30:00-05:00"
    }
   ],
   "count": {
-   "next": 680,
-   "wait": 2,
+   "next": 677,
+   "wait": 3,
    "blocked": 0,
-   "you": 2
+   "you": 3
   }
  },
  "qr": [
@@ -446,83 +431,62 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-22T00:03:23Z",
+  "at": "2026-11-22T00:08:13Z",
   "s": {
-   "T-5450": [
-    "merging",
-    "Host checks on the Mac mini",
-    1795305443858
-   ],
    "T-4807": [
     "mergeq",
     "1st to merge",
-    1795304183858
+    1795304233083
    ],
-   "T-4831": [
+   "T-5263": [
     "mergeq",
-    "3rd to merge",
-    1795305023858
-   ],
-   "T-5047": [
-    "mergetest",
-    "Xcode checks on the MacBook, 4th to merge",
-    1795305383858
-   ],
-   "T-4190": [
-    "mergeq",
-    "6th to merge",
-    1795304783858
-   ],
-   "T-5218": [
-    "mergeq",
-    "7th to merge",
-    1795304963858
-   ],
-   "T-5219": [
-    "mergeq",
-    "7th to merge",
-    1795304963858
+    "2nd to merge",
+    1795306093083
    ],
    "T-5407": [
     "mergeq",
-    "8th to merge",
-    1795305563858
+    "3rd to merge",
+    1795305553083
    ],
    "T-5411": [
     "mergeq",
-    "8th to merge",
-    1795305563858
+    "3rd to merge",
+    1795305553083
+   ],
+   "T-5218": [
+    "mergeq",
+    "4th to merge",
+    1795306093083
+   ],
+   "T-5047": [
+    "mergetest",
+    "iPhone tests on the MacBook",
+    null
    ]
   },
   "nm": {
-   "T-5450": "Keep one coordinator session running from the supervisor",
    "T-4807": "Fix every bad test that failed a merge",
-   "T-4831": "Review the bottleneck watch",
-   "T-5047": "Fix the token test's No view for this size card",
-   "T-4190": "Settings and Pro: buy, restore, themes",
-   "T-5218": "Check finished work before it ships",
-   "T-5219": "Check finished work before it ships",
+   "T-5263": "Trim step 10, pre-merge Xcode runs on the MacBook",
    "T-5407": "Check finished work before it ships",
-   "T-5411": "Check finished work before it ships"
+   "T-5411": "Check finished work before it ships",
+   "T-5218": "Check finished work before it ships",
+   "T-5047": "Fix the token test's No view for this size card"
   },
   "wk": {
-   "T-5450": "Odalys",
    "T-4807": "Pernille",
-   "T-4831": "Pernille",
-   "T-5047": "Idris",
-   "T-4190": "Idris",
-   "T-5218": "Pernille",
-   "T-5219": "Pernille",
+   "T-5263": "Odalys",
    "T-5407": "Pernille",
-   "T-5411": "Pernille"
+   "T-5411": "Pernille",
+   "T-5218": "Pernille",
+   "T-5047": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-22T00:03:23Z",
+  "at": "2026-11-22T00:08:13Z",
   "mq": {
    "n": {
-    "checking": 2,
-    "inline": 7,
+    "checking": 0,
+    "inline": 5,
     "conflicted": 0,
     "failed": 0,
     "held": 0,
@@ -530,45 +494,28 @@
     "parked": 3
    },
    "m": {
-    "checking": 6,
-    "inline": 14,
+    "checking": null,
+    "inline": 9,
     "conflicted": null,
     "failed": null,
     "held": null,
-    "retry": 12,
-    "parked": 2186
+    "retry": 17,
+    "parked": 2191
    },
-   "cur": [
-    [
-     [
-      "T-5450"
-     ],
-     "Mac tests",
-     "Mac mini",
-     6
-    ],
-    [
-     [
-      "T-5047"
-     ],
-     "iPhone app tests",
-     "MacBook",
-     7
-    ]
-   ],
+   "cur": [],
    "ld": [
-    103,
-    "2026-11-21T23:42:54Z"
+    109,
+    "2026-11-22T00:07:19Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-22T00:03:24Z",
-    "ld": 2.35,
+    "at": "2026-11-22T00:08:13Z",
+    "ld": 2.66,
     "c": 8,
     "sb": 0,
     "dk": [
-     61.8,
+     64.2,
      228.3
     ],
     "ss": [
@@ -578,12 +525,12 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-21T23:56:08Z",
-    "ld": 0.16,
+    "at": "2026-11-22T00:06:05Z",
+    "ld": 0.45,
     "c": 12,
     "sb": 0,
     "dk": [
-     360.1,
+     360.0,
      926.4
     ],
     "sn": []
@@ -616,14 +563,24 @@
      "open": false
     }
    },
-   "at": "2026-11-22T00:03:23+00:00"
+   "at": "2026-11-22T00:08:13+00:00"
   },
   "bl": {
-   "n": 2,
-   "at": "2026-11-22T00:03:23+00:00"
+   "n": 3,
+   "at": "2026-11-22T00:08:13+00:00"
   }
  },
- "operators": [],
+ "operators": [
+  {
+   "w": "Operator",
+   "a": "Jeremy's Account",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session \u2013 1 task",
+   "at": "2026-11-21T19:08:08-05:00"
+  }
+ ],
  "reply": {
   "sent": "2026-11-21T23:08:30Z",
   "seconds": 90.0
@@ -644,10 +601,10 @@
   "main": 0,
   "lanes": 0,
   "total": 0,
-  "at": "7:04 PM",
-  "why": "Plan limit: the weekly allowance is used up; it resets Sun 1:59 AM ET. Last check 7:03 PM ET.",
-  "at_iso": "2026-11-22T00:04:00+00:00",
+  "at": "7:12 PM",
+  "why": "Plan limit: the weekly allowance is used up; it resets Sun 1:59 AM ET. Last check 7:12 PM ET.",
+  "at_iso": "2026-11-22T00:12:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 7:04 PM ET</p><p class=\"an-why\">Plan limit: the weekly allowance is used up; it resets Sun 1:59 AM ET. Last check 7:03 PM ET.</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 7:12 PM ET</p><p class=\"an-why\">Plan limit: the weekly allowance is used up; it resets Sun 1:59 AM ET. Last check 7:12 PM ET.</p></section>"
  }
 }

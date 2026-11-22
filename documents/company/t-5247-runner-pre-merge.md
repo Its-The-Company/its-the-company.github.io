@@ -149,6 +149,17 @@ Built on main while T-5236 (runner 33: `kinds.json`, `runner.py`, `VERSION`) is 
   callers that ask the runner themselves before their XC_LOCAL=1 step or read their result here (land gate, lane
   landcheck, main gate, merge queue, park batch, land host, xc_mutants, alpha run); every kind in `decide()`'s list.
 
+**Slice 1 of step 10 (T-5263, 2026-11-21, fefe69614e).** Runner 34 takes `only_testing` values of the UI target,
+`PyWidgetUITests/Class[/method]` (never the whole UI target), in `validate_job` and in `job_argv` (the 11-20 copy's
+diff for 33 changed only `validate_job`, so the job would have been refused at run time; 33 went to T-5236).
+`xc_route.only_testing` carries a UI filter only to a runner that checks in at 34 or later; until then such a run stays
+here as "a filter the runner can't carry". The lane's quick check (`lane_landcheck.py --xc-quick`) left
+`LOCAL_CALLERS`: it asks the runner nothing first, so its touched classes now ride a `land/chk-` ref, with
+`XC_CHECK_WAIT` the time left less 30 s, so no answer in time is xc.sh's 75 (skipped), not its own 300 s cut. Not
+done: `caller_from` still reads a Claude Bash call's own shell line (its text may name a gate); the test fixture for
+it was refused by security-guard, so it stopped and is a note on T-5476. Left: T-5476 (the split pair, below) and
+T-5477 (the before/after report, then "Step 10 done" in T-5252-target-system.md).
+
 **Waits (needs the runner, so after T-5236 lands):**
 
 1. **The split actions (item 2) are not built, and the item is wrong as written.** One `xc-test` job answering both

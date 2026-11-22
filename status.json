@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-22T20:39:42.111880+00:00",
+ "at": "2026-11-22T20:42:50.959359+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -12,17 +12,6 @@
    "last_handoff": 1795367557
   },
   "flow": [
-   {
-    "t": "T-5399",
-    "name": "Add the coordinator's land job and side jobs by Sunday",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1795377782
-     }
-    ]
-   },
    {
     "t": "T-5262",
     "name": "Trim step 9, merge checks agree on every run",
@@ -36,6 +25,15 @@
    }
   ],
   "done": [
+   {
+    "t": "T-5399",
+    "name": "Add the coordinator's land job and side jobs by Sunday",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "failed",
+    "end_at": 1795380074,
+    "why": "tests failed"
+   },
    {
     "t": "T-5399",
     "name": "Add the coordinator's land job and side jobs by Sunday",
@@ -65,7 +63,7 @@
    }
   ],
   "landed": 0,
-  "failed": 3
+  "failed": 4
  },
  "workers": [],
  "who": "",
@@ -122,7 +120,7 @@
   "week_pct": 2.42,
   "usage_pct": 68.7,
   "work_pct": 88.2,
-  "read_at": "2026-11-22T20:39:00+00:00",
+  "read_at": "2026-11-22T20:42:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -156,7 +154,7 @@
   }
  ],
  "disk": {
-  "free_gb": 64,
+  "free_gb": 67,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -165,7 +163,7 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-22T15:34:00-05:00",
+   "at": "2026-11-22T15:41:00-05:00",
    "recovery": {
     "what": "recovered",
     "at": "2026-11-22T15:08:00-05:00"
@@ -175,7 +173,7 @@
  "lock_in": {
   "on": true,
   "pool": 3,
-  "at": "2026-11-22T15:39:00-05:00",
+  "at": "2026-11-22T15:42:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -382,12 +380,12 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-22T20:39:32Z",
+  "at": "2026-11-22T20:42:50Z",
   "s": {
    "T-5399": [
     "merging",
-    "Host checks on the Mac mini \u00b7 2 of 3 groups of tests done",
-    1795377812558
+    "Mac tests at the main gate",
+    1795378910959
    ],
    "T-5607": [
     "merged",
@@ -406,36 +404,27 @@
   }
  },
  "ln": {
-  "at": "2026-11-22T20:39:32Z",
+  "at": "2026-11-22T20:42:50Z",
   "mq": {
    "n": {
-    "checking": 1,
+    "checking": 0,
     "inline": 0,
     "conflicted": 0,
-    "failed": 0,
+    "failed": 1,
     "held": 0,
     "retry": 0,
     "parked": 4
    },
    "m": {
-    "checking": 36,
+    "checking": null,
     "inline": null,
     "conflicted": null,
-    "failed": null,
+    "failed": 1,
     "held": null,
     "retry": null,
-    "parked": 941
+    "parked": 944
    },
-   "cur": [
-    [
-     [
-      "T-5399"
-     ],
-     "Mac tests",
-     "Mac mini",
-     36
-    ]
-   ],
+   "cur": [],
    "ld": [
     11,
     "2026-11-22T09:51:12Z"
@@ -443,12 +432,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-22T20:39:34Z",
-    "ld": 35.94,
+    "at": "2026-11-22T20:42:26Z",
+    "ld": 32.16,
     "c": 8,
     "sb": 1,
     "dk": [
-     64.3,
+     66.4,
      228.3
     ],
     "ss": [
@@ -498,11 +487,11 @@
      "open": false
     }
    },
-   "at": "2026-11-22T20:39:42+00:00"
+   "at": "2026-11-22T20:42:50+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-22T20:39:32+00:00"
+   "at": "2026-11-22T20:42:42+00:00"
   }
  },
  "operators": [
@@ -544,10 +533,10 @@
   "main": 0,
   "lanes": 1,
   "total": 1,
-  "at": "3:39 PM",
+  "at": "3:42 PM",
   "why": "",
-  "at_iso": "2026-11-22T20:39:00+00:00",
+  "at_iso": "2026-11-22T20:42:00+00:00",
   "started": "2:57 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0, started 2:57 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 3:39 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0, started 2:57 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 3:42 PM ET</p></section>"
  }
 }

@@ -404,6 +404,9 @@ grey; editor themes Quill (light) and Lumen (dark) with them; Ember, Fern and Gr
 **Proposal A (recommended):**
 - **Free:** three prebuilt themes, **Paper, Studio and Graphite** (Graphite's neutral greys sit with the new plain
   Studio), each with its light and dark designs, and choosing a light theme and a dark theme separately.
+  Graphite is an editor theme today (item 5 approves it for the code editor only); an app-wide Graphite is new, is not
+  drawn, and needs its own preview under item 9 ("which other prebuilt themes ship and how each looks") before this
+  proposal goes to the Investors, as Ember and Fern do (T-4798).
 - **Pro:** the expanded set, **Ember, Fern and every prebuilt theme added later** (each one comes to the Investors
   as its own preview first; item 9 does not approve them), and the **theme editor**: fonts, sizes and colours for
   each part, light and dark separately.
@@ -493,11 +496,11 @@ phase B); the Builder is phase D (T-4477), whose steps open when it starts. The 
 within a priority.
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 6: 278 9:55 PM ask for &quot;many high-quality pre-made widgets&quot; stands; these two…, scrolls sideways" style="--tw:1066px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 6: 278 9:55 PM ask for &quot;many high-quality pre-made widgets&quot; stands; these two…, scrolls sideways" style="--tw:1159px" markdown="1">
 
 | Line | Lane | Competes? | Placed |
 | --- | --- | --- | --- |
-| T-4673 Day phases (Pernille) | Pernille, beside the slot | Partly: her time against her open phase B lines (T-4202 and T-4203, part of T-4189), and the Simulator for its done-when. Not with Developer mode or the Builder (Idris's work; phase D has not started) | **Stays P1, by chair line below** |
+| T-4673 Day phases (Pernille) | Pernille, beside the slot | Partly: her time against her open phase B lines (T-4202 and T-4203, part of T-4189), her open Pages step (T-4550, the widget buttons' Python contract, step of T-4478) and her Python share of the Builder (T-4477 is Idris with Pernille), and the Simulator for its done-when. Not with Developer mode (T-4688, Idris's slot). *T-5489 correction (11-21): the 11-19 row said "Not with Developer mode or the Builder (Idris's work; phase D has not started)"; that left out T-4550 and her share of T-4477, which the T-4706 row below counts* | **Stays P1, by chair line below, under T-5489's lane rule** |
 | T-4703 Maren's frames | Maren, beside the slot | No: done 11-18 3:51 AM (f32bea8ad4). No open Maren line for the IDE, Builder or Developer mode existed then or now (board grep, 4:50 AM 11-19). Its rest, the render review, is on T-4766 and waits on T-4673 | Nothing to move |
 | T-4704 the Page's `time` and `stop` kinds (Idris) | Idris, the Xcode slot | Yes: the same slot as T-4688 Developer mode, phase B's editor and run lines (T-4186, T-4187) and the Builder | **P1 to P2**, after them |
 | T-4705 Habit tracker's Done today (Idris with Pernille) | Idris, the Xcode slot | Yes, the same slot. It already needs T-4553, T-4554 and T-4556, Pages steps that follow the Builder (plan.md) | **P1 to P2**, after them |
@@ -513,12 +516,39 @@ if a design line for the IDE, Builder or Developer mode opens on her lane, it go
 
 **Chair line (Ines, 2026-11-19 4:50 AM ET): T-4673 stays P1.** Why not after the IDE and Builder: it is the one
 premade the Investors named and specified (#278 9:55 PM, with its stations and hours); it runs on Pernille's lane, not
-Idris's slot, so it takes nothing from Developer mode or the Builder; and the P1 lines of hers that are phase B work
-(T-4202, T-4203) already stand above it in board order, so the queue gives them her time first. Two limits keep it to
-the ruling's "sized to that role": its Simulator turns through `tools/xc.sh` yield to phase B and Developer mode runs
-when both wait (plan.md's rule for phase C, applied here), and its Page fields (T-4704) and Done buttons (T-4712, P2)
+Idris's slot, so it takes nothing from Developer mode; it does share her lane with Pages and Builder work (T-4550, and
+her Python share of T-4477), and the P1 lines of hers that are phase B or Pages work (T-4202, T-4203, T-4550) already
+stand above it in board order, so the queue gives them her time first. *(T-5489 correction, 11-21: the 11-19 words
+were "so it takes nothing from Developer mode or the Builder; and the P1 lines of hers that are phase B work (T-4202,
+T-4203)"; the rule that keeps this true when a new step opens is in the T-5489 paragraph below.)* Two limits keep it to
+the ruling's "sized to that role": its Simulator test runs go to the MacBook runner, never a local run on the Mac
+mini's lock (how, T-5489 below; the 11-19 words, "yield to phase B and Developer mode runs when both wait", named no
+way to do it), and its Page fields (T-4704) and Done buttons (T-4712, P2)
 wait behind the IDE and Builder, so it ships with the default stations and hours until then. Disagreement welcome:
 if the Investors read Day phases as premade polish too, it moves to P2 like the others.
+
+**Pernille's lane and the Simulator (T-5489, Ines, 2026-11-21 8:18 PM ET by `date`; from Pernille's review
+pywidget/docs/reviews/t4795-d0c4f506-pernille.md, M1 and L1).**
+- *Her lane gets Maren's rule.* A Builder step (T-4477) or Pages step (T-4478) that opens on Pernille's lane, or that
+  she shares, goes ahead of T-4673. Whoever adds it puts it above T-4673 with `python3 tools/board_tick.py add --before
+  "- [ ] [build] T-4673 "`. If it has already landed below, T-4673 is given a wait on it (T-4673 already waits after
+  T-0793 that way). Without this, a step added later at P1 with `add --end` or before a later heading would land below
+  T-4673 and lose her time to it, which is the reverse of c6938306456's Effect.
+- *Where the queue stands now* (`python3 tools/dispatch.py order --json`, 8:17 PM): T-4202 is 295th in start order,
+  T-4203 296th, T-4550 520th, T-4673 601st, T-4688 604th. T-4550 also waits after T-4556, Idris's Pages step. While
+  that holds, T-4673 takes no time that T-4550 could use.
+- *How the Simulator yield is carried out (L1).* Board order does not decide Simulator turns, so moving T-4673 below
+  T-4688 would not make it yield. It would not change Pernille's time either, because T-4688 is Idris's. A PyWidget
+  Simulator test run goes to the MacBook runner by default (`tools/xc.sh` through `tools/xc_route.py`, T-1116). The
+  runner takes merge-queue jobs first and then the rest in the order they were created, several at once, each on its
+  own Simulator (`tools/macbook-runner/runner.py`). A local run takes the Mac mini's one machine lock, first come.
+  So the board order stays, and T-4673 keeps off the lock that Idris's slot, T-4688 and phase B builds use:
+  - its test runs are queued to the runner (`tools/runner_queue.py --task T-4673`), never run with `XC_LOCAL=1`;
+  - its build loop runs on host tests;
+  - a run that has to stay on the Mac mini (a build, or a run on one Simulator by id) is for its done-when check only,
+    and only one is run at a time.
+  Anyone can check this afterwards: every T-4673 row in `ops/metrics/xc_route.jsonl` should be a runner answer, except
+  those done-when runs.
 
 **Date effect, corrected.** T-4689's chair note (plan.md, 11-17 1:18 PM) did not fold these lines into the dates,
 as this section said it would. Under the range's method (`ops/plans/T-4266-release-range.py`), Pernille's and Maren's
@@ -534,13 +564,27 @@ ancestor of HEAD), but the board line T-4795 stayed open, so I checked it again 
   c6938306456's Effect, "where premade polish and IDE or Builder work compete, the IDE and Builder go first", and
   c6938494530's Effect, "Build a Developer mode next, as a priority".
 - *The five lines, board grep at 4:03 PM:* T-4673 is open, Pernille, P1, at board line 602, below her phase B lines
-  (T-4189 umbrella, T-4202, T-4203, T-4192 umbrella), so the chair line holds. T-4703 is done. T-4704, T-4705 and
+  (T-4189 umbrella, T-4202, T-4203, T-4192 umbrella), so the chair line holds. *T-5489: this list left out her Pages
+  step T-4550 (Pernille, P1, board line 417 at d0c4f506), which also stands above T-4673. T-4673 is also above T-4688,
+  which matters only for Simulator turns, covered in the T-5489 paragraph above.* T-4703 is done. T-4704, T-4705 and
   T-4706 are open at P2 (board lines 618 to 620, in the set's order), after T-4688 Developer mode (Idris, P1, line 604)
   and the Builder (T-4477, P1). Nothing to move.
 - *Two Maren lines at P1 not weighed on 11-19:* T-4766 (frames for the other six showcase premades, then her review
   of T-4673's render) and T-5000 (the transit count-down fix from T-4927's review). Neither competes: they run on
   Maren's lane beside the slot, and no open Maren line is IDE, Builder or Developer mode work (her open lines are site,
   test and premade design lines). They stay P1. If a Builder design line opens for her, it goes first.
+  *T-5489 correction (board grep and `tools/dispatch.py order`, 8:17 PM 11-21).* The words in brackets were not exact.
+  The review proposed "no open Maren line is a step of phase B, the Builder, Pages or Developer mode", but that is not
+  exact either:
+  - No open line Maren owns is a step of the Builder (T-4477), Pages (T-4478) or Developer mode (T-4688).
+  - One is a step of phase B: T-5193 (P2, "Confirm the five page strings the build added", part of T-4183; the line
+    says "Not a TestFlight hold"). It is open on her lane, so by her rule it goes first, and it does: it can start
+    now (54th in start order). T-4766 needs T-4673 and cannot start until Day phases is done.
+  - She is the "with" on two of Idris's T-4183 lines, T-4468 (P1) and T-4639 (P2). Both are owned by Idris and sit
+    on his slot.
+  - T-4895 (P2, the Console note's name; no parent line) and T-4999 (P2, the When tapped link screen's title; part
+    of T-4193) are copy fixes, not steps of any of the four.
+  T-5000 has since been ticked (11-21 5:56 PM, 45c94d08e3).
 - *The release range does not move.* It stands at likely Sat 2027-07-17, range 2027-04-07 to 2027-12-11
   (`ops/milestones.json` release row and `ops/state.md` Target, after T-5432 on 11-21). Pernille's and Maren's lines
   run beside the slot and are not counted by the range's method; the habit button sits in step 10 of RUN_AND_BUTTONS.

@@ -171,6 +171,66 @@ research/inbound/):
   before. tests/board_notes_readers_test.py's tick probe now runs menu_facts. Left from T-4787's bad-test list, each
   on the board: systls big bodies' 1 s bounds, the bridge swallow test's 5 s bound, main_folder_guard_test's 30 s
   subprocess limit, and site_test.sh's no-second-commit row.
+
+## Audit of T-4787's 46 bad-test reds (slice 9, 11-21)
+
+Pernille, 11-21. Each bad-test row of ops/plans/T-4787-red-causes.md (its row numbers), with the commit on main that
+fixed it or the open board line that carries it. Every commit named here is an ancestor of main at 8215ffa180. A row
+whose failing test the records did not keep says so; its fix is then the removal of the load-dependent part, not a
+proven cure.
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 2: Audit of T-4787&#x27;s 46 bad-test reds (slice 9, 11-21), scrolls sideways" data-n="3" style="--tw:800px" markdown="1">
+
+| T-4787 rows | test | reds | fixed by (on main) or carried by (open) |
+|---|---|---|---|
+| 2, 11, 17-20 | ProStoreTests ask-to-buy (Xcode, five Simulators) | 6 | 0dc00ac09b (T-4008, Idris); off the rerun list 51e9a962a7 (slice 7: none of 369 land checks 11-11 to 11-21 failed or skipped it) |
+| 120-122, 124 | site_test.sh "the seven diagrams" | 4 | f7403c95e5 (T-4756, Maren: one diagram per declared part) |
+| 31, 94, 95 | disk_sweep_test holder check `_is_fast` | 3 | f689f57b02 (T-4560: CPU time, not the wall clock) |
+| 33, 57 | site_live_test, green on the same tree | 2 | 200ee75601 (slice 2: 128-deep listen queue, waits for the drawn count, not 5 s); no failing row kept, so which part failed is not proven |
+| 54, 127 | UITestLaunchScanTests named a UI test launching the app directly | 2 | the scan was right; each offender was fixed before its task landed: 3d68e5a96b (T-4212), 9213af9de8 (T-3764). The scan reads source text: T-4754 |
+| 55, 134 | pywidget:widgets, green on the same tree | 2 | no failing test kept (the gate kept the summary only). The suite's clock-bound classes are in test_http_budget_reserve.py: 12e5386c6c (T-4614, 11-16) fixed one before row 134, so not enough; the two still red at load on 11-20 are on T-4634 (open, Pernille). Since 11-20 the gate's red log names the failing case |
+| 66, 74 | site_test.sh "nothing changed: no second commit" | 2 | T-5493 (open, Odalys) |
+| 90, 111 | supervisor_test.sh close_by row | 2 | 8251344275 (slice 6: waits for the keeper's SIGTERM) |
+| 119, 128 | personal_land_test.sh, quarantined | 2 | b6b0ab5a6b (T-4726, Odalys, 11-19; quarantine entry removed). T-4726 is still open: the 11-21 nightly run found other rows red on main |
+| 22, 100 | bridge test_swallow_ends_by_hard_stop_twice | 2 | T-5491 (open, Pernille) |
+| 5 | BridgeTests writer stands down | 1 | 754d97edc1 (T-2491, test-only fix) |
+| 6 | lane host rows "waited 1.2s for the xcodebuild lock" in two export cases | 1 | the suite and rows were not kept (land_steps.jsonl keeps no rows; the lane log is gone). No test on main now runs tools/xc.sh export on the machine's lock (searched tests/ for it). T-5515 |
+| 12 | site_s30_test | 1 | a15dd24770 (T-3996: the test moved with Home's change) |
+| 21 | AcknowledgementsUITests did not compile | 1 | T-0623's own copy, never landed; main's file declares `certifi` once. New cases: rule 9 |
+| 42 | site_issue_page_test box rows, "Locator.click: Timeout 30000ms" | 1 | this slice moved it to site_shots.Server (rule 4), but the red was not reproduced (below), so not proven fixed. T-5515 |
+| 51 | LaunchRunLogTests.swift:156 did not compile | 1 | 84505c1f81 (T-4198, the file as landed) |
+| 60 | site_t2940_test page-load time-out | 1 | 200ee75601 (it serves through site_send_test.serve, now site_shots.Server) |
+| 63 | EditorToolingTests.swift:104 did not compile | 1 | 32e92ab4e6 (T-2261, the file as landed) |
+| 65 | site_home_t4094_test, green on the same tree | 1 | no failing row kept. The page is a file:// page with no server; its 300 ms and 150 ms sleeps are guesses but not the cause (the list draws on DOMContentLoaded, before goto returns, and the sorts redraw synchronously). T-5515 |
+| 79 | site_t3201_test page-load time-out | 1 | 200ee75601 (site_shots.Server) |
+| 104 | bridge test_a_stop_after_the_users_code_does_not_escape_the_tail | 1 | 12e5386c6c (T-4614: Stop keyed to `_epilogue`'s start, not 0.1 s) |
+| 106 | queue_check_test "under 3 s" | 1 | 16dbf89a13 (T-4749 batch 1: the hook's own answer, no sleep) |
+| 109 | heavy_slot_test start race | 1 | 5274377036 (T-4665), 199951063a (T-4769) |
+| 110 | main_folder_guard_test's 30 s subprocess limit | 1 | T-5492 (open, Odalys) |
+| 112 | personal_land_product_test.sh stale mutant | 1 | 5274377036 (T-4665); 16dbf89a13 makes a mutant whose pattern matches nothing its own FAIL |
+| 113 | personal_pool_test.sh stale row | 1 | 5274377036 (T-4665) |
+| 116 | board_tick_test stale fixture | 1 | 92521ed099 (T-4694) |
+| 117 | systls ten MiB bodies "linear" | 1 | T-5490 (open, Pernille) |
+| 118 | lane_env_test red on main | 1 | T-4725 (open, Odalys) |
+
+</div>
+
+
+Sum: 46. Fixed on main: 34 reds. Carried by an open line: 9 (T-4634 2, T-5493 2, T-5491 2, T-5492 1, T-5490 1,
+T-4725 1). Not reproduced, on T-5515: 3 (rows 6, 42, 65).
+
+Slice 9, row 42 (rule 4): site_issue_page_test.py and its sibling site_t3418_test.py (same Issues page, same task)
+served the browser with bare `http.server.ThreadingHTTPServer`, listen queue 5. Both now subclass `site_shots.Server`
+(queue 128), as rule 4 says. That is the rule followed, not a proven cure: I could not make the old server fail. In a
+scratch copy, with a mutant of the environment rather than of the test, I delayed the server's first accept by 2 s,
+the way a descheduled accept thread is late at load. The old server passed 95/0 and the new one 84/0 (load 7 to 270;
+the row count changes with the timing rows site_timing adds). A 0.4 s delay before every accept failed both (an
+8 s locator wait ran out with the accepts one after another), so it cannot tell them apart either. Unmutated, the new
+files pass 83/0 and 18/0. What reset the box rows on 11-12 is still unknown; it is on T-5515 with rows 6 and 65.
+Fifteen more browser suites in tests/ build their own server on http.server's queue of 5 (one, site_s30_test, had a
+red in the window for another reason). Since no red of theirs is traced to the queue, moving them is T-5516 at P3,
+done only when one of them is touched.
 {% endraw %}
 
 </div>

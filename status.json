@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-22T07:51:09.484716+00:00",
+ "at": "2026-11-22T07:53:47.728375+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -88,7 +88,7 @@
    }
   ],
   "landed": 79,
-  "failed": 14
+  "failed": 11
  },
  "workers": [],
  "who": "",
@@ -145,17 +145,17 @@
   "week_pct": 1.56,
   "usage_pct": 93.8,
   "work_pct": 87.5,
-  "read_at": "2026-11-22T07:51:00+00:00",
+  "read_at": "2026-11-22T07:58:00+00:00",
   "running": [
    {
-    "lane": "b3",
+    "lane": "b2",
     "task": "T-5453",
     "w": "Odalys",
     "k": "ops",
     "t": "Switch the coordinator on, or record it off",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-22T02:51:17-05:00",
+    "at": "2026-11-22T02:58:17-05:00",
     "n": "Jeremy",
     "src": "plan-b"
    }
@@ -188,14 +188,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-22T02:49:00-05:00",
+   "at": "2026-11-22T02:58:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-22T02:51:00-05:00",
+  "at": "2026-11-22T02:58:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -402,38 +402,30 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-22T07:48:21Z",
+  "at": "2026-11-22T07:53:47Z",
   "s": {
    "T-5555": [
     "merging",
     "Mac tests at the main gate",
-    1795333521052
+    1795333607728
    ],
    "T-5262": [
     "merging",
     "Mac tests at the main gate \u00b7 1 group of tests done",
-    1795333161052
-   ],
-   "T-5477": [
-    "merged",
-    "on main 1:29 AM ET",
-    1795328947000,
-    "Odalys"
+    1795333187728
    ]
   },
   "nm": {
    "T-5555": "Give the coordinator its own run kind",
-   "T-5262": "Trim step 9, merge checks agree on every run",
-   "T-5477": "Count before and after for runner pre-merge runs"
+   "T-5262": "Trim step 9, merge checks agree on every run"
   },
   "wk": {
    "T-5555": "Odalys",
-   "T-5262": "Odalys",
-   "T-5477": "Odalys"
+   "T-5262": "Odalys"
   }
  },
  "ln": {
-  "at": "2026-11-22T07:48:21Z",
+  "at": "2026-11-22T07:53:47Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -441,17 +433,17 @@
     "conflicted": 0,
     "failed": 1,
     "held": 0,
-    "retry": 1,
-    "parked": 6
+    "retry": 0,
+    "parked": 7
    },
    "m": {
     "checking": null,
     "inline": null,
     "conflicted": null,
-    "failed": 45,
+    "failed": 51,
     "held": null,
-    "retry": 186,
-    "parked": 1327
+    "retry": null,
+    "parked": 192
    },
    "cur": [],
    "ld": [
@@ -461,12 +453,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-22T07:49:12Z",
-    "ld": 11.96,
+    "at": "2026-11-22T07:53:48Z",
+    "ld": 8.48,
     "c": 8,
     "sb": 0,
     "dk": [
-     55.6,
+     56.0,
      228.3
     ],
     "ss": [
@@ -474,37 +466,26 @@
      953.7
     ],
     "sn": []
-   },
-   "macbook": {
-    "at": "2026-11-22T07:09:57Z",
-    "ld": 0.18,
-    "c": 12,
-    "sb": 0,
-    "dk": [
-     358.7,
-     926.4
-    ],
-    "sn": []
    }
   }
  },
  "hc": {
   "wait": {
-   "n": 10,
+   "n": 8,
    "limit": 20,
    "in_line": 0,
-   "parked": 10,
+   "parked": 8,
    "open": true,
    "mq": false,
-   "counted": "2026-11-22T07:36:32+00:00",
+   "counted": "2026-11-22T07:46:51+00:00",
    "by": {
     "app": {
-     "n": 6,
+     "n": 5,
      "limit": 20,
      "open": true
     },
     "other": {
-     "n": 5,
+     "n": 4,
      "limit": 20,
      "open": true
     },
@@ -514,11 +495,11 @@
      "open": true
     }
    },
-   "at": "2026-11-22T07:51:09+00:00"
+   "at": "2026-11-22T07:53:47+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-22T07:48:21+00:00"
+   "at": "2026-11-22T07:53:47+00:00"
   }
  },
  "operators": [
@@ -551,10 +532,10 @@
   "main": 0,
   "lanes": 1,
   "total": 1,
-  "at": "2:51 AM",
+  "at": "2:58 AM",
   "why": "",
-  "at_iso": "2026-11-22T07:51:00+00:00",
+  "at_iso": "2026-11-22T07:58:00+00:00",
   "started": "2:43 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0, started 2:43 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 2:51 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0, started 2:43 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 2:58 AM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-22T00:46:38.572116+00:00",
+ "at": "2026-11-22T00:56:32.665129+00:00",
  "session": {
   "active": false,
   "kind": "",
@@ -166,28 +166,28 @@
    "pct": 0.0,
    "resets_at": null,
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-21T19:29:22.949218-05:00",
+   "read_at": "2026-11-21T19:49:27.552608-05:00",
    "source": "usage",
    "left": 100.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 100.0,
-   "resets_at": "2026-11-22T07:00:00.162292+00:00",
+   "resets_at": "2026-11-22T06:59:59.866003+00:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-21T19:29:22.949218-05:00",
+   "read_at": "2026-11-21T19:49:27.552608-05:00",
    "source": "usage",
    "left": 0.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 36.0,
-   "resets_at": "2026-11-22T07:00:00.162419+00:00",
+   "resets_at": "2026-11-22T06:59:59.866185+00:00",
    "used_words": "of the Fable weekly allowance used",
-   "read_at": "2026-11-21T19:29:22.949218-05:00",
+   "read_at": "2026-11-21T19:49:27.552608-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-21T19:29:22.949218-05:00"
+  "read_at": "2026-11-21T19:49:27.552608-05:00"
  },
  "ui": {
   "week_pct": 0.123,
@@ -202,12 +202,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-21T19:52:56-05:00",
+ "next_tick": "2026-11-21T20:04:28-05:00",
  "personal": {
-  "week_pct": 107.32,
+  "week_pct": 107.34,
   "usage_pct": 51.8,
-  "work_pct": 84.5,
-  "read_at": "2026-11-22T00:49:00+00:00",
+  "work_pct": 84.6,
+  "read_at": "2026-11-22T01:00:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -254,50 +254,6 @@
     "at": "2026-11-21T19:26:06-05:00",
     "n": "Jeremy",
     "src": "plan-b"
-   },
-   {
-    "lane": "b2",
-    "task": "T-4846",
-    "w": "Pernille",
-    "k": "review",
-    "t": "Review the bottleneck watch on every tick",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-21T19:19:09-05:00",
-    "n": "Jeremy",
-    "d": 1,
-    "src": "plan-b"
-   },
-   {
-    "lane": "b2",
-    "task": "T-5440",
-    "t": "Check finished work before it ships",
-    "at": "2026-11-21T19:19:09-05:00",
-    "n": "Jeremy",
-    "d": 1,
-    "src": "plan-b"
-   },
-   {
-    "lane": "b3",
-    "task": "T-4831",
-    "t": "Review the bottleneck watch",
-    "at": "2026-11-21T19:34:40-05:00",
-    "n": "Jeremy",
-    "d": 1,
-    "src": "plan-b"
-   },
-   {
-    "lane": "b3",
-    "task": "T-5470",
-    "w": "Pernille",
-    "k": "review",
-    "t": "Check finished work before it ships",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-21T19:34:40-05:00",
-    "n": "Jeremy",
-    "d": 1,
-    "src": "plan-b"
    }
   ]
  },
@@ -319,7 +275,7 @@
   }
  ],
  "disk": {
-  "free_gb": 55,
+  "free_gb": 57,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -328,14 +284,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-21T19:47:00-05:00",
+   "at": "2026-11-21T19:57:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-21T19:49:00-05:00",
+  "at": "2026-11-21T20:00:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -472,6 +428,11 @@
   ],
   "done": [
    {
+    "w": "Operator",
+    "t": "A later MacBook job for the same work (J-20261121-1943-host-a51-36abf7) passed, so the failed...",
+    "at": "2026-11-21T19:47:00-05:00"
+   },
+   {
     "w": "Pernille",
     "t": "An outside review of the tool that watches for slowdowns found that it can raise urgent tasks...",
     "at": "2026-11-21T19:42:00-05:00"
@@ -480,11 +441,6 @@
     "w": "Idris",
     "t": "A premade's ready-made first picture can no longer carry a staleness mark or an 'Updated' time,...",
     "at": "2026-11-21T19:42:00-05:00"
-   },
-   {
-    "w": "Pernille",
-    "t": "The check that premade widgets turn plain grey on the dark Home Screen was reviewed: its MacBook...",
-    "at": "2026-11-21T19:29:00-05:00"
    }
   ],
   "count": {
@@ -533,17 +489,22 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-22T00:46:38Z",
+  "at": "2026-11-22T00:56:32Z",
   "s": {
    "T-4593": [
     "merging",
     "Host checks on the Mac mini",
-    1795308218572
+    1795308212665
+   ],
+   "T-4188": [
+    "mergeq",
+    "1st to merge",
+    1795308812665
    ],
    "T-5470": [
     "mergeq",
-    "1st to merge",
-    1795308398572
+    "2nd to merge",
+    1795308452665
    ],
    "T-4846": [
     "merged",
@@ -578,6 +539,7 @@
   },
   "nm": {
    "T-4593": "Check the inherited versions in the licence list",
+   "T-4188": "Location, steps and notifications work in scripts and...",
    "T-5470": "Check finished work before it ships",
    "T-4846": "Review the bottleneck watch on every tick",
    "T-4831": "Review the bottleneck watch",
@@ -587,6 +549,7 @@
   },
   "wk": {
    "T-4593": "Odalys",
+   "T-4188": "Idris",
    "T-5470": "Pernille",
    "T-4846": "Pernille",
    "T-4831": "Pernille",
@@ -596,11 +559,11 @@
   }
  },
  "ln": {
-  "at": "2026-11-22T00:46:38Z",
+  "at": "2026-11-22T00:56:32Z",
   "mq": {
    "n": {
     "checking": 1,
-    "inline": 1,
+    "inline": 2,
     "conflicted": 0,
     "failed": 0,
     "held": 0,
@@ -608,13 +571,13 @@
     "parked": 3
    },
    "m": {
-    "checking": 3,
-    "inline": 0,
+    "checking": 13,
+    "inline": 6,
     "conflicted": null,
     "failed": null,
     "held": null,
-    "retry": 28,
-    "parked": 2229
+    "retry": 0,
+    "parked": 2239
    },
    "cur": [
     [
@@ -623,7 +586,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     3
+     13
     ]
    ],
    "ld": [
@@ -633,12 +596,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-22T00:46:40Z",
-    "ld": 20.57,
+    "at": "2026-11-22T00:56:33Z",
+    "ld": 23.73,
     "c": 8,
     "sb": 1,
     "dk": [
-     56.8,
+     54.7,
      228.3
     ],
     "ss": [
@@ -664,21 +627,21 @@
  },
  "hc": {
   "wait": {
-   "n": 5,
+   "n": 7,
    "limit": 20,
-   "in_line": 1,
+   "in_line": 3,
    "parked": 4,
    "open": true,
    "mq": false,
-   "counted": "2026-11-22T00:43:55+00:00",
+   "counted": "2026-11-22T00:53:57+00:00",
    "by": {
     "app": {
-     "n": 3,
+     "n": 4,
      "limit": 20,
      "open": true
     },
     "other": {
-     "n": 3,
+     "n": 4,
      "limit": 20,
      "open": true
     },
@@ -688,11 +651,11 @@
      "open": true
     }
    },
-   "at": "2026-11-22T00:46:38+00:00"
+   "at": "2026-11-22T00:56:32+00:00"
   },
   "bl": {
    "n": 3,
-   "at": "2026-11-22T00:46:38+00:00"
+   "at": "2026-11-22T00:56:32+00:00"
   }
  },
  "operators": [
@@ -751,12 +714,12 @@
  ],
  "agents_now": {
   "main": 0,
-  "lanes": 4,
-  "total": 4,
-  "at": "7:49 PM",
+  "lanes": 2,
+  "total": 2,
+  "at": "8:00 PM",
   "why": "",
-  "at_iso": "2026-11-22T00:49:00+00:00",
+  "at_iso": "2026-11-22T01:00:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 7:49 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 8:00 PM ET</p></section>"
  }
 }

@@ -4,8 +4,15 @@
 <link href="https://its-the-company.github.io/feed/updates.xml" rel="self"/>
 <link href="https://its-the-company.github.io/"/>
 <id>https://its-the-company.github.io/feed/updates.xml</id>
-<updated>2026-11-21T19:21:42-05:00</updated>
+<updated>2026-11-21T19:37:49-05:00</updated>
 <author><name>The Company</name></author>
+<entry>
+<title>Review: T-4846: review of 4878b47357 (bottleneck watch on every tick): safe, no must-fix, 3 should</title>
+<link href="https://its-the-company.github.io/"/>
+<id>tag:its-the-company.github.io,2026-11-21:event/2026-11-21t19-37-49-05-00-review-t-4846-review-of-4878b47357-bottleneck</id>
+<updated>2026-11-21T19:37:49-05:00</updated>
+<summary type="text">T-4846: review of 4878b47357 (bottleneck watch on every tick): safe, no must-fix, 3 should-fixes; the gate&#x27;s 3-run deflake on T-4829 was one real run (known-red skips), my T-4701 bug; a refused board_tick add still joined S1 to T-5113 on main.</summary>
+</entry>
 <entry>
 <title>Review: T-5442: reviewed 504705b48e for T-4010; safe, only board-note records landed, the parked f</title>
 <link href="https://its-the-company.github.io/"/>
@@ -348,12 +355,5 @@
 <id>tag:its-the-company.github.io,2026-11-17:event/2026-11-17t18-14-04-05-00-milestone-t-4774-first-measured-cost-of-a-widget</id>
 <updated>2026-11-17T18:14:04-05:00</updated>
 <summary type="text">T-4774: first measured cost of a widget refresh tap. The app&#x27;s peak footprint per tap on the Simulator: cold 34.2 MiB (iOS 27.0) and 48.5 MiB (26.0), warm 33.3 and 47.8 MiB. Cold tap to row: 3.4 s and 1.3 s. One tap in 24 on 26.0 did nothing.</summary>
-</entry>
-<entry>
-<title>Review: T-4609: reviewed T-4181 at 8db4535c (T-4433, T-4435): PASS with findings. T-4433&#x27;s Lock Sc</title>
-<link href="https://its-the-company.github.io/"/>
-<id>tag:its-the-company.github.io,2026-11-17:event/2026-11-17t17-34-44-05-00-review-t-4609-reviewed-t-4181-at-8db4535c-t-4</id>
-<updated>2026-11-17T17:34:44-05:00</updated>
-<summary type="text">T-4609: reviewed T-4181 at 8db4535c (T-4433, T-4435): PASS with findings. T-4433&#x27;s Lock Screen gate is backed out, so the tap is live and TestFlight stays held (H1, noted on T-4433); the wrapper test misses a .buttonStyle(.plain) deletion (L1, T-4784).</summary>
 </entry>
 </feed>

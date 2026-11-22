@@ -680,6 +680,7 @@ The Effect lines of the amendments.md entries the charter retired (2026-11-04 12
 - **2026-11-21 2:28 PM ET** ((private)): The one coordinator (T-5397) is on for the comparison: it is switched on (COORD=1) the moment it is finished and is seen working before the comparison starts; the old path stays one setting away.
 - **2026-11-21 9:48 PM ET** ((private)): #340 A: a widget's refresh button is not a Pro button, for anyone: it only reruns the widget's own update, which #324 A made free; Pro buttons are those that run a widget's own handlers
 - **2026-11-21 10:32 PM ET** ((private)): The comparison no longer waits for the Sun 11-22 2:00 AM reset as a fixed start: it starts the moment every pre-comparison line is on main (at 2:00 AM if they are all done before then), each road's day runs 24 hours from that start, and the company may run the new (stripped-down) road on the first day, then alternate: new, old, new, old.
+- **2026-11-21 11:38 PM ET** (typed into a Claude session on the Mac mini (answering whether the comparison's start waits for lines that can only finish during or after it)): The comparison's start waits only for the pre-comparison lines that can finish before it (not T-5256's swap and 10 merges, T-5265's after column, or T-5477/T-5263's Step 10 done); T-5256's 10-merge test runs as soon as all its dependencies are complete, on open app work if needed, without waiting for the comparison.
 {% endraw %}
 
 </div>

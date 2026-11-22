@@ -293,7 +293,8 @@ Bottlenecks) while the trim runs.
 - **The applier's own check** runs the whole `tests/run.sh --fast` (up to three hours, T-5234). In the Investors'
   own session they can make these changes directly with their word.
 - **Step 12's two questions (T-5265; Ines, 11-21 4:03 PM ET).** Asked now so they are in front of you; please
-  answer once the comparison's figures are in the table (Thu 11-26 morning, or Fri 11-27 if the start moves). Reply
+  answer once the comparison's figures are in the table (after its fourth day ends, 96 hours after its start; Thu
+  11-26 2:00 AM at the earliest). Reply
   on #325 with the letters.
   1. *How many sessions.* **A (recommended, for now):** keep your 11-20 1:51 AM rule: sessions start, are added and
      are dropped by the signals above (ready app work, usage left, an Xcode machine idle, time spent waiting), with
@@ -352,17 +353,42 @@ cost more than they buy. What is in force:
 T-5179 and T-5117 are **not** landed (corrected 11-20 9:15 AM, once read): T-5179 lets process lines start without
 limits, against the freeze, and T-5117 makes the old gate open new process lines. Both stay as their copies.
 
-**The comparison (app work only on both sides, alternating whole days after the weekly reset;** Investors, 11-20
-about 9:25 AM ET: "I agree that the comparison should be done using alternating days after the weekly reset").
-On 11-20 the accounts were at 96% (a, resets Sat 11-21 10:00 AM), 87% (b, resets Sat 2:00 PM) and about 85% (main,
-resets Sun 11-22 2:00 AM) of their week, so a Saturday start would starve the old road. Days run 2:00 AM to 2:00 AM
-ET: old road Sun 11-22, new road Mon 11-23, old Tue 11-24, new Wed 11-25. The switch is flipped at each 2:00 AM
-after a drain (no ready, held or landing marker); a branch that straddles the flip is counted for the road that
-merged it and named. The trim's own heavy test runs and building are finished before Sunday and kept off the
-machine during the four days. Measures, the same on both sides: app code commits on main a day (the page's command); app
-lines done a day; the wait from ready to main (old: the ready marker's time to the "landed" row in
-`ops/runs/land_steps.jsonl`; new: `ops/metrics/merge.jsonl`); main's app tests after each merge. The personal
-accounts' stop of 7:27 AM (`ops/lane_stops.json` r3) was <span title="A new, permitted reading that removes a cap. A lift rule is that reading, written down before we look.">lifted</span> at 9:10 AM for this.
+**The comparison (app work only on both sides, alternating whole days, new road first, starting once its prep is on
+main;** Investors, 11-20 about 9:25 AM ET: "I agree that the comparison should be done using alternating days after
+the weekly reset"; changed by an Investor, 11-21 10:32 PM ET, #325 c7073601543, `log/rulings.md`: "The comparison
+doesn't need to start right at 2am; start ot whenever all pre-comparison work is done if it is done after 2am. You
+may start using the stripped-down version first"). On 11-20 the accounts were at 96% (a, resets Sat 11-21 10:00
+AM), 87% (b, resets Sat 2:00 PM) and about 85% (main, resets Sun 11-22 2:00 AM) of their week, so a Saturday start
+would starve the old road; Sun 11-22 2:00 AM ET stays the earliest start.
+- *The start, S.* The moment the last pre-comparison line that can finish before the comparison is on main: the
+  lines on `ops/trim_freeze.json`'s allow list (the pre-comparison set, as the list stands then), each with its work
+  and its tick on main, timed by main's reflog in the main folder (the time main first held the last of those
+  commits). If that is before Sun 11-22 2:00 AM ET, S is 2:00 AM. S is written here and on T-5265's line to the
+  minute once it is known; no date is set for it before then.
+- *What the start does not wait for* (an Investor, typed into a session, 11:38 PM 11-21, `log/rulings.md` commit
+  `95a992a488`: "The start only waits for lines that can finish before the comparison. The 10-merge test can be tested
+  as soon as it is able to (all of its dependencies are complete). This can be tested on open app work if needed"):
+  T-5256's swap and 10 merges, T-5265's after column (it counts by its pre-comparison part, the command and this
+  page), and T-5263's "Step 10 done" (with its slice T-5477). T-5256's 10-merge test runs as soon as all its
+  dependencies are complete, on open app work if needed, without waiting for the comparison. T-5431 counts by its post
+  below.
+- *The days, new road first.* Each road's day is 24 hours from S: day 1 **new road** (`tools/merge.sh`), S to
+  S+24 h; day 2 old road, S+24 h to S+48 h; day 3 new road, S+48 h to S+72 h; day 4 old road, S+72 h to S+96 h. Each
+  road gets two whole days.
+- *The switch* (`ops/merge_road.json`, "old" today). At each boundary (S, S+24 h, S+48 h, S+72 h) the lanes are
+  drained first (no ready, held or landing marker, an empty outbox: the cut-over in
+  [`ops/plans/T-5256-merge-road-switch.md`](t-5256-merge-road-switch.html)), then the switch is flipped: to "merge.sh" at S and S+48 h, to "old" at
+  S+24 h and S+72 h. After day 4 it stays "old" until the Investors decide (step 3's row above). A branch that
+  straddles a flip is counted for the road that merged it and named.
+- *Measured* with `python3 ops/plans/T-5265-measure.py "<day start>" "<day end>"` (ET, "YYYY-MM-DD HH:MM"), once
+  for each of the four days with those times and its road named. Measures, the same on both sides: app code commits
+  on main a day (the page's command); app lines done a day; the wait from ready to main (old: the ready marker's
+  time to the "landed" row in `ops/runs/land_steps.jsonl`; new: `ops/metrics/merge.jsonl`); main's app tests after
+  each merge.
+- *Named on #325.* T-5431's #325 post that every pre-comparison line is on main names S, and with it the four
+  days' times and roads.
+- The trim's own heavy test runs and building are finished before S and kept off the machine during the four days.
+  The personal accounts' stop of 7:27 AM (`ops/lane_stops.json` r3) was <span title="A new, permitted reading that removes a cap. A lift rule is that reading, written down before we look.">lifted</span> at 9:10 AM for this.
 
 ## Progress
 
@@ -414,22 +440,25 @@ trim session, on the Investors' word, #325 c7032785128). Retired nothing.
 
 **Step 12, where it stands** (Ines, 11-21 4:03 PM ET, T-5265; not finished, the line stays open).
 - *The window.* The "7 days after step 6" never opens under the plan in force: step 6 is held (11-20 9:10 AM
-  ruling), and step 12 became the comparison of the two merge roads. So the "after" column is those four days: old
-  road Sun 11-22, new Mon 11-23, old Tue 11-24, new Wed 11-25, each 2:00 AM to 2:00 AM ET. Each day is run with
-  `python3 ops/plans/T-5265-measure.py "D 02:00" "D+1 02:00"` and its road named; the column is written on Thu 11-26
-  after 2:00 AM.
+  ruling), and step 12 became the comparison of the two merge roads. So the "after" column is those four days, new
+  road first, from the start S in "The comparison" above (the moment the last pre-comparison line that can finish
+  before the comparison is on main, Sun 11-22 2:00 AM ET at the earliest): new road S to S+24 h, old S+24 h to S+48 h, new S+48 h to S+72 h, old S+72 h to
+  S+96 h. Each day is run with `python3 ops/plans/T-5265-measure.py "<day start>" "<day end>"` with those times and
+  its road named; the column is written after S+96 h (Thu 11-26 2:00 AM at the earliest). (Updated 11-21 11:31 PM
+  ET, T-5535, for an Investor #325 c7073601543 and an Investor's 11:38 PM 11-21 words typed into a session; before, the
+  days were fixed at 2:00 AM with the old road first.)
 - *Why it is empty today.* None of the four days has begun, and no app work runs now (an Investor 2:23 PM 11-21:
   "Stop the app work until the comparison work is done"). The figures from 11-20 and 11-21 so far (6 and 3 app code
   commits) are not either road's app-only days, so they are not written as "after". Only the live process size is
   filled: it is a reading at one time, not a window.
-- *The start may move by a day.* The Operator promised on #325 (c7048486517) that if the merge-road switch
-  (T-5256) and the MacBook routing (T-5263) are not ready by tonight, the company says so on #325 and proposes
-  starting a day later; T-5431 says which tonight. At 4:03 PM, from the records on main: the routing is on main and
+- *The start follows the prep, not a day's move.* The Operator promised on #325 (c7048486517) that if the
+  merge-road switch (T-5256) and the MacBook routing (T-5263) are not ready by tonight, the company says so on #325
+  and proposes starting a day later. Since an Investor's 10:32 PM ruling (c7073601543) the start is S instead, and
+  T-5431's post names it. At 4:03 PM, from the records on main: the routing is on main and
   one real pre-merge run went to the MacBook at 1:13 PM (T-5247's done-note); the switch is on main and set "old",
   fault 2's home was confirmed at 1:18 PM, and the fix for Pernille's three notes (`8582871633`, lane a3) is not on
-  main yet; the one coordinator (T-5397), which is on for the comparison, is not finished. If the start moves: old
-  Mon 11-23, new Tue, old Wed, new Thu 11-26, figures on Fri 11-27 after 2:00 AM. Only D1 and D2 move; the command
-  does not.
+  main yet; the one coordinator (T-5397), which is on for the comparison, is not finished. Only the times move; the
+  command does not.
 - *Two gaps found while fixing the command.* (1) Neither road writes the time a branch became ready:
   `ops/runs/land_steps.jsonl` has a land's start and its "landed" row, and `merge.jsonl`'s `wait_s` is the lock wait
   only. So the wait is counted from each commit's author time to its first time in main's reflog, the same way on

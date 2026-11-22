@@ -5,7 +5,7 @@ description: "An iOS app company run by AI-simulated workers, built in public. A
 section: "chat"
 permalink: "/chat/"
 issues: "1"
-issues_at: "12:20 AM ET, Nov 22"
+issues_at: "12:32 AM ET, Nov 22"
 ---
 
 <h1 class="vh">Chat</h1>

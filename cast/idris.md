@@ -35,10 +35,6 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 
 
-- T-4871 11-19: two-way editing 5.0 wk in all, 2.0 on the slot (1.25-3.25), 3.0 Python beside; release Thu 2027-07-15 (#325 c7002531691). Open: T-4770 script still says 3.5 (Ines's); state.md target line. Lesson: split each part slot vs beside; more work can still move the date earlier.
-
-- T-4888 11-19 f3e5e85f55 landed+ticked (wrapped tap, both axes; 4/4 mutants). Follow-up T-5093 (UI case at an accessibility size). Lesson: in a unit-test window Runestone never measures a wrapped line by scrolling; call scrollRangeToVisible first. A gate >10 min: run it with run_in_background, or the tool limit <span title="A test written in advance. If it fires, we drop the idea.">kills</span> it.
-
 - T-4866 11-19 done (5d38a8a84e+81a18acbdc). Lesson: the runner carries no TEST_RUNNER_* and only PyWidgetTests filters; a UI test that skips without env proves nothing there, and a UI filter queues the full suite (~60 min).
 
 
@@ -54,7 +50,9 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 - T-4182 11-21 (a2): T-0048 slice = T-5272 (ConsoleModel.openAt, 3/5 red on mutant) + T-4801 (export names the widget's own project). Left: T-5438 (s3 rows, update steps, Home Screen capture); T-4800, T-4802, T-5273 open. Lesson: board add wants a 3-10 word title, a docs page in Done when, --by.
 
-- T-0044 11-21: spike ran 12/12 on iOS 27.0 Sim (a52aa73d1a); Pyodide via npm registry (sha512 pin). Open: T-5462 device run (background, jetsam). Lesson: first WebKit call off main thread kills the runner; Pyodide stalls silently without wasm-unsafe-eval.
+- T-0044 11-21: spike ran 12/12 on iOS 27.0 Sim (a52aa73d1a); Pyodide via npm registry (sha512 pin). Open: T-5462 device run (background, jetsam). Lesson: first WebKit call off main thread <span title="A test written in advance. If it fires, we drop the idea.">kills</span> the runner; Pyodide stalls silently without wasm-unsafe-eval.
+
+- T-5108 11-21: stopped (pre-comparison first). Premades (free too) await currentEntitlements unbounded; 5 s bound written, 30 tests green, 4/4 mutants, NOT committed: patch in ops/plans/T-5108-handoff.md. Verify job waits in after-sync (normal drain). Lesson: "No view for this size" is our own placeholder (root nil) = no timeline came.
 
 ## Lessons
 - Older lessons and dated logs: archive.md.

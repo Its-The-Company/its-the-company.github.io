@@ -42,8 +42,6 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 ## Lessons
 - T-4956 11-18: ticked lines leave the board for log/board-archive.md; a claim release writes a new slot, whose mtime is the release time.
-- T-5192 11-20: xc.sh leaves its job json untracked in main's ops/jobs; copy it to the scratch copy, rm main's, main_gate land. An app line's Done-when must name a docs page.
-- T-5234 11-20: security-guard refuses any Bash command whose text holds a session-launch line (even in a heredoc docstring); keep such example strings out of commands. Design ready: land-only slot, measured in board note.
 - T-5247 11-20 fea3bb96d4: <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> metrics (ops/metrics) never travel; a linked worktree's rows can go to main via git's common dir. Mini Xcode runs 11-19 were pre-merge XC_LOCAL=1 callers (feature_session split build/test), not lands.
 - T-5236 11-20 4232c50b76: runner job sandbox has no network (localhost too); 53/578 suites use one, so a MacBook host red is rerun on the mini before a <span title="What keeps an idea below the top: the cap that applies to it now.">hold</span>. tests/run.sh waited 50+ min for a heavy slot at load 30: run a new suite direct, let landcheck take the slot.
 - T-5354 11-21 09476d6389: a lane's board_tick only queues (ops/lane-outbox/*.json, untracked): commit it by path or the tick never lands. Keeper's records: main's ops/metrics/disk_keeper.jsonl + <common dir>/company-jobs/disk_keeper.json.
@@ -51,6 +49,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-5406 11-21: tick after the final commit (its note cites the hash; an amend orphans it), outbox file in a second commit. board_tick add refuses a bare T-ID in text with no link.
 - T-5450 11-21: the red restart row was the fixture: an empty board just after a <span title="A numbered batch of planned work, with its own plan file.">refill</span> makes the governor queue (by design), so tick 2 never ran; '- [ ] x (waiting on #12)' counts for the governor, not runnable for the chain. run.sh shows only FAIL lines: debug to a /tmp file.
 - T-5473 11-21 85e0b74e17: in a gate test, mutate each term by hand; a term the reader already enforces (ProConfig refuses gates on with no product) is an equivalent mutant, note it, no fix. A bundled() check must unwrap first, or nil (closed state) passes. App line add: no Base/By/Until, Done when 'test: land:xc; docs page ...'; reserve the ID first.
+- T-5457 11-21 4368b340bc: an empty pick is a tree test (git merge-tree --write-tree --merge-base c^ main c == main's tree); git cherry's patch-id says '+' for reapplied work. A Low left "for the task's next session" needs a line if that session never comes. A pywidget/ target makes a line "app": no Until. Another session may share the worktree: commit by path only.
 {% endraw %}
 
 

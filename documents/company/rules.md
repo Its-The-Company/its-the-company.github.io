@@ -678,6 +678,7 @@ The Effect lines of the amendments.md entries the charter retired (2026-11-04 12
 - **2026-11-21 2:23 PM ET** ((private)): No lane starts or continues app work until the merge-road comparison work is done; sessions take only pre-comparison lines, and app work in progress stops with nothing half-made committed.
 - **2026-11-21 2:25 PM ET** ((private)): The one coordinator (T-5397) is on for the comparison: T-5453 switches it on (COORD=1, both roads) as soon as T-5448 to T-5452 are on main, without waiting for Saturday evening or the 2:00 AM ET Sunday 11-22 reset, so it is seen working before the comparison starts.
 - **2026-11-21 2:28 PM ET** ((private)): The one coordinator (T-5397) is on for the comparison: it is switched on (COORD=1) the moment it is finished and is seen working before the comparison starts; the old path stays one setting away.
+- **2026-11-21 9:48 PM ET** ((private)): #340 A: a widget's refresh button is not a Pro button, for anyone: it only reruns the widget's own update, which #324 A made free; Pro buttons are those that run a widget's own handlers
 {% endraw %}
 
 </div>

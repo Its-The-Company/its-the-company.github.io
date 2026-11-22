@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-22T08:35:47.766926+00:00",
+ "at": "2026-11-22T08:38:50.823755+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -145,7 +145,7 @@
   "week_pct": 1.69,
   "usage_pct": 90.5,
   "work_pct": 84.6,
-  "read_at": "2026-11-22T08:35:00+00:00",
+  "read_at": "2026-11-22T08:38:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -179,7 +179,7 @@
   }
  ],
  "disk": {
-  "free_gb": 58,
+  "free_gb": 55,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -188,14 +188,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-22T03:31:00-05:00",
+   "at": "2026-11-22T03:37:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-22T03:35:00-05:00",
+  "at": "2026-11-22T03:38:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -206,7 +206,7 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Double Spread: 100% of the week left, paced to last until Wed 14:00, the week's halfway point; the machine allows 44 (cut a step: 4 of 6 lands failed in 3 hours (2 red))",
+  "why": "Double Spread: 100% of the week left, paced to last until Wed 14:00, the week's halfway point; the machine allows 43 (cut a step: 4 of 6 lands failed in 3 hours (2 red))",
   "n": 2,
   "at": "2026-11-22T03:25:46.917996-05:00"
  },
@@ -402,7 +402,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-22T08:35:34Z",
+  "at": "2026-11-22T08:38:38Z",
   "s": {
    "T-5399": [
     "merged",
@@ -419,7 +419,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-22T08:35:34Z",
+  "at": "2026-11-22T08:38:38Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -436,8 +436,8 @@
     "conflicted": null,
     "failed": null,
     "held": null,
-    "retry": 13,
-    "parked": 234
+    "retry": 16,
+    "parked": 237
    },
    "cur": [],
    "ld": [
@@ -447,8 +447,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-22T08:35:35Z",
-    "ld": 4.03,
+    "at": "2026-11-22T08:37:50Z",
+    "ld": 3.04,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -476,21 +476,21 @@
  },
  "hc": {
   "wait": {
-   "n": 9,
+   "n": 8,
    "limit": 20,
-   "in_line": 1,
+   "in_line": 0,
    "parked": 8,
    "open": true,
    "mq": false,
-   "counted": "2026-11-22T08:23:34+00:00",
+   "counted": "2026-11-22T08:36:21+00:00",
    "by": {
     "app": {
-     "n": 5,
+     "n": 4,
      "limit": 20,
      "open": true
     },
     "other": {
-     "n": 5,
+     "n": 4,
      "limit": 20,
      "open": true
     },
@@ -500,11 +500,11 @@
      "open": true
     }
    },
-   "at": "2026-11-22T08:35:47+00:00"
+   "at": "2026-11-22T08:38:50+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-22T08:35:34+00:00"
+   "at": "2026-11-22T08:38:44+00:00"
   }
  },
  "operators": [
@@ -546,10 +546,10 @@
   "main": 0,
   "lanes": 1,
   "total": 1,
-  "at": "3:35 AM",
+  "at": "3:38 AM",
   "why": "",
-  "at_iso": "2026-11-22T08:35:00+00:00",
+  "at_iso": "2026-11-22T08:38:00+00:00",
   "started": "3:26 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0, started 3:26 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 3:35 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0, started 3:26 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 3:38 AM ET</p></section>"
  }
 }

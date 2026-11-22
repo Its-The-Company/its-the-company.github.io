@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-22T05:02:34.861177+00:00",
+ "at": "2026-11-22T05:18:06.648425+00:00",
  "session": {
   "active": false,
   "kind": "",
@@ -121,7 +121,7 @@
     "end_at": 1795317789
    }
   ],
-  "landed": 112,
+  "landed": 111,
   "failed": 18
  },
  "workers": [],
@@ -163,7 +163,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 683,
+  "runnable_count": 684,
   "blocked_count": 3
  },
  "meter": {
@@ -207,13 +207,38 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-21T23:53:10-05:00",
+ "next_tick": "2026-11-22T00:10:27-05:00",
  "personal": {
   "week_pct": 111.65,
   "usage_pct": 52.8,
   "work_pct": 85.9,
-  "read_at": "2026-11-22T05:04:00+00:00",
-  "running": []
+  "read_at": "2026-11-22T05:19:00+00:00",
+  "running": [
+   {
+    "lane": "a2",
+    "task": "T-4630",
+    "w": "Idris",
+    "k": "fix",
+    "t": "Stop badging widgets moved to the app by size",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-22T00:13:49-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a2",
+    "task": "T-5524",
+    "w": "Idris",
+    "k": "build",
+    "t": "Make the widget's Debug ask record say what it saw",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-22T00:13:49-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   }
+  ]
  },
  "api_credits": [
   {
@@ -242,14 +267,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-21T23:46:00-05:00",
+   "at": "2026-11-22T00:15:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-22T00:04:00-05:00",
+  "at": "2026-11-22T00:19:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -402,7 +427,7 @@
    }
   ],
   "count": {
-   "next": 683,
+   "next": 684,
    "wait": 3,
    "blocked": 0,
    "you": 3
@@ -447,73 +472,64 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-22T05:02:34Z",
+  "at": "2026-11-22T05:18:06Z",
   "s": {
    "T-4182": [
     "mergeq",
     "1st to merge",
-    1795322674861
+    1795322646648
    ],
    "T-4999": [
-    "mergetest",
-    "Xcode checks on the MacBook, 2nd to merge",
-    1795322374861
+    "mergeq",
+    "2nd to merge",
+    1795319586648
    ],
    "T-5193": [
     "mergeq",
     "3rd to merge",
-    1795322494861
+    1795322466648
    ],
-   "T-5108": [
-    "testing",
-    "MacBook \u00b7 test",
-    null
+   "T-5452": [
+    "mergeq",
+    "4th to merge",
+    1795324686648
    ]
   },
   "nm": {
    "T-4182": "A failing widget says so and can recover",
    "T-4999": "Write the web link screen's title in sentence case",
    "T-5193": "Confirm the five page strings the build added",
-   "T-5108": "Fix a MacBook test job that failed"
+   "T-5452": "Start the main plan's work as plain workers"
   },
   "wk": {
    "T-4182": "Idris",
    "T-4999": "Maren",
    "T-5193": "Maren",
-   "T-5108": "Operator"
+   "T-5452": "Odalys"
   }
  },
  "ln": {
-  "at": "2026-11-22T05:02:34Z",
+  "at": "2026-11-22T05:18:06Z",
   "mq": {
    "n": {
-    "checking": 1,
-    "inline": 2,
+    "checking": 0,
+    "inline": 4,
     "conflicted": 0,
     "failed": 0,
     "held": 0,
-    "retry": 1,
-    "parked": 10
+    "retry": 5,
+    "parked": 5
    },
    "m": {
-    "checking": 23,
-    "inline": 19,
+    "checking": null,
+    "inline": 35,
     "conflicted": null,
     "failed": null,
     "held": null,
-    "retry": 85,
-    "parked": 18
+    "retry": 3,
+    "parked": 2318
    },
-   "cur": [
-    [
-     [
-      "T-4999"
-     ],
-     "iPhone app tests, sent and waiting its turn",
-     "MacBook",
-     23
-    ]
-   ],
+   "cur": [],
    "ld": [
     0,
     null
@@ -521,12 +537,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-22T05:02:55Z",
-    "ld": 48.16,
+    "at": "2026-11-22T05:18:09Z",
+    "ld": 8.09,
     "c": 8,
     "sb": 1,
     "dk": [
-     56.3,
+     52.2,
      228.3
     ],
     "ss": [
@@ -536,43 +552,64 @@
     "sn": [
      "iPhone 17e"
     ]
+   },
+   "macbook": {
+    "at": "2026-11-22T05:17:36Z",
+    "ld": 3.74,
+    "c": 12,
+    "sb": 0,
+    "dk": [
+     357.3,
+     926.4
+    ],
+    "sn": []
    }
   }
  },
  "hc": {
   "wait": {
-   "n": 13,
+   "n": 15,
    "limit": 20,
-   "in_line": 6,
-   "parked": 7,
+   "in_line": 3,
+   "parked": 12,
    "open": true,
    "mq": false,
-   "counted": "2026-11-22T04:36:02+00:00",
+   "counted": "2026-11-22T05:16:26+00:00",
    "by": {
     "app": {
-     "n": 8,
+     "n": 7,
      "limit": 20,
      "open": true
     },
     "other": {
-     "n": 5,
+     "n": 9,
      "limit": 20,
      "open": true
     },
     "hub": {
-     "n": 2,
+     "n": 1,
      "limit": 1,
      "open": false
     }
    },
-   "at": "2026-11-22T05:02:34+00:00"
+   "at": "2026-11-22T05:18:06+00:00"
   },
   "bl": {
    "n": 3,
-   "at": "2026-11-22T05:02:34+00:00"
+   "at": "2026-11-22T05:18:06+00:00"
   }
  },
- "operators": [],
+ "operators": [
+  {
+   "w": "Operator",
+   "a": "Evan's Account",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session \u2013 2 tasks",
+   "at": "2026-11-22T00:13:48-05:00"
+  }
+ ],
  "reply": {
   "sent": "2026-11-22T04:07:39Z",
   "seconds": 72.0
@@ -591,12 +628,12 @@
  ],
  "agents_now": {
   "main": 0,
-  "lanes": 0,
-  "total": 0,
-  "at": "12:04 AM",
-  "why": "Plan limit: the weekly allowance is used up; it resets Sun 1:59 AM ET. Last check 11:55 PM ET.",
-  "at_iso": "2026-11-22T05:04:00+00:00",
+  "lanes": 1,
+  "total": 1,
+  "at": "12:19 AM",
+  "why": "",
+  "at_iso": "2026-11-22T05:19:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 12:04 AM ET</p><p class=\"an-why\">Plan limit: the weekly allowance is used up; it resets Sun 1:59 AM ET. Last check 11:55 PM ET.</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 12:19 AM ET</p></section>"
  }
 }

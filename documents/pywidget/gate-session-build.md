@@ -253,6 +253,13 @@ arithmetic above, the reload policy, the Swift table) and ExtensionLaneTests' T-
 `.lane-demoted.json` and its rows say `memory`; the same for `time`; an enforcing lane moves the id; a killed rung
 still moves).
 
+**The phone steps (T-4536, T-5023).** The phone session installs a gate build carrying 98b2f14988 (T-4643) from
+TestFlight and places Ladder 1 to 12 and Memory overrun (gate), one or two at a time, two rungs side by side once for
+G2. Rungs 1 to 9 read memory and rungs 10 to 12 read time, so a session that stops at Ladder 7 has no time reading at
+all. Build 0.1 (7) does not carry 98b2f14988 and holds only `ladder1` to `ladder7`, so the next upload (T-2943) comes
+first. The request tells the Investors the export carries device model, iOS version, run rows and memory figures, and
+the names of their own widgets; no personal data.
+
 ## Left open
 
 - The Swift half and the wiring go on a [build] continuation line for the runner: the condition in LaneGuard,

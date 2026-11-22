@@ -18,49 +18,99 @@ red lands 11-10 to 11-17: 46 bad test, 14 broken code, 26 other, 48 unknown) and
 (ops/plans/T-4786-bad-tests.md). A reviewer (Commandment 13) refuses a new or changed test that breaks one of these
 rules, the same as a product bug.
 
-Sources, as published (cited from their text as I know it; none was fetched tonight, so none is saved in
-research/inbound/):
-- [<span title="The starting recipe a lane uses to look for ideas. G2, for example, starts from public datasets.">G1</span>] Google Testing Blog, John Micco, "Flaky Tests at Google and How We Mitigate Them" (2016): about 1 in 7 of
-  Google's tests showed some flakiness; a flaky result is quarantined with an owner and fixed, not rerun until green.
-- [G2] Google Testing Blog, Jeff Listfield, "Where do our flaky tests come from?" (2017): flakiness grows with a test's
-  size (binary size, memory) and with tools like WebDriver; small hermetic tests are the least flaky.
-- [G3] Winters, Manshreck and Wright, *Software Engineering at Google* (O'Reilly, 2020), ch. 11 "Testing Overview" and
-  ch. 14 "Larger Testing": test sizes (small: one process, no sleep, no network; medium: one machine, localhost only;
-  large: anything), each with its own time limit; hermetic tests that own their data; "a test should fail only when
-  the behaviour it checks is broken".
-- [A1] Apple, XCTest documentation, "Asynchronous Tests and Expectations" and `XCTestExpectation` /
-  `fulfillment(of:timeout:)`: wait for an event, never sleep; the timeout is a ceiling on a hang, not a measurement.
-- [A2] Apple, Xcode Help, "Run tests in parallel" (test plans, parallel testing on clones of a Simulator): each test
-  must run alone and in any order; nothing shared between test classes.
-- [A3] Apple, StoreKit Testing in Xcode, `SKTestSession` (`clearTransactions()`, `resetToDefaultState()`): each test
-  starts from a session state it set itself.
-- [P1] Playwright documentation, "Auto-waiting" and `page.waitForTimeout` ("Discouraged: never wait for timeout in
-  production. Tests that wait for time are inherently flaky"): wait for a locator or a condition.
+Sources, as published. Slice 1 cited them from memory; slice 10 (Pernille, 11-21) read each one, one page per source,
+signed out, through tools/terms_guard.py (live robots.txt first) and, for Apple, `tools/fetch_cite.py --apple` under
+the Investors' standing ruling (#64 c6408282742). Every fetch and its terms check is in
+research/inbound/t4807-test-practice/sources.md; Apple's pages are in research/inbound/apple/index.tsv. Short quotes
+only, with attribution; the rest is my paraphrase. Where the page said something else than slice 1 claimed, the
+correction is marked "was:".
+- [<span title="The starting recipe a lane uses to look for ideas. G2, for example, starts from public datasets.">G1</span>] Google Testing Blog, John Micco, "Flaky Tests at Google and How We Mitigate Them", Friday, May 27, 2016.
+  Fetched 2026-11-21 9:28:02 PM ET, research/inbound/t4807-test-practice/g1-micco-2016.html. Confirmed: "Almost 16% of
+  our tests have some level of flakiness" ("more than 1 in 7"); about 1.5% of all runs flaky; about 84% of observed
+  pass-to-fail transitions involve a flaky test. Was: "quarantined with an owner and fixed, not rerun until green".
+  The post says Google does rerun (failing tests only, automatic reruns, and a "flaky" mark that reports a failure
+  only after 3 in a row) and calls that mark "hardly a perfect solution", since it teaches people to ignore flakiness.
+  Its quarantine is a tool that takes a too-flaky test off the critical path and files a bug, and the post warns it
+  "could easily mask a real race condition". So G1 grounds rule 8's quarantine-with-a-bug and its warning, not a ban
+  on reruns (G3 grounds that).
+- [G2] Google Testing Blog, Jeff Listfield, "Where do our flaky tests come from?", Monday, April 17, 2017. Fetched
+  2026-11-21 9:28:09 PM ET, research/inbound/t4807-test-practice/g2-listfield-2017.html. Confirmed: the larger the test
+  (binary size, RAM), the more likely it is flaky (r2 0.82 and 0.76); in one week 0.5% of small, 1.6% of medium and
+  14% of large tests were flaky. Was: "and with tools like WebDriver". WebDriver and emulator tests are flakier, but
+  the post finds size more predictive than tool and "the tool itself seems to contribute only a small amount". It also
+  says a flaky test whose cause is in the product means "ignoring a production bug" if ignored. So G2 grounds rule 5
+  (keep it small) and rule 8's warning, not rule 4 (dropped there).
+- [G3] *Software Engineering at Google*, ch. 11 "Testing Overview", written by Adam Bender, edited by Tom Manshreck
+  (abseil.io edition, CC BY-NC-ND 4.0). Fetched 2026-11-21 9:28:15 PM ET,
+  research/inbound/t4807-test-practice/g3-swe-book-ch11.html. Was: credited to the book's three editors, with ch. 14;
+  ch. 14 was not fetched (one page per source), so nothing here rests on it now. Confirmed: small tests run in a
+  single process and "aren't allowed to sleep, perform I/O operations, or make any other blocking calls"; medium
+  tests stay on one machine, network to localhost only; large tests may span machines. Hermetic: a test "should
+  contain all of the information necessary to set up, execute, and tear down its environment" and assume as little
+  as possible, "such as the order in which the tests are run"; no shared database. On sleeps: a "wait-and-check" sleep
+  is a naive heuristic; "actively poll for a state transition", with a timeout in case it never settles. On reruns:
+  rerunning "is only delaying the need to address the root cause". Fixing a broken test within minutes keeps the
+  suite trusted. Was: "each with its own time limit" and the quoted "a test should fail only when the behaviour it
+  checks is broken": neither is in ch. 11. The time limits in rule 5 are ours; the quote is withdrawn.
+- [A1] Apple, XCTest, "Asynchronous Tests and Expectations" (API collection). Fetched 2026-11-21 9:28:32 PM ET, the
+  page's data file https://developer.apple.com/tutorials/data/documentation/xctest/asynchronous-tests-and-expectations.json
+  (the HTML page is a script shell; same precedent as T-2113), research/inbound/apple/developer.apple.com/
+  tutorials_data_documentation_xctest_asynchronous-tests-and-expectations.json-3426dc0b.json. Confirmed: for Swift
+  `async` code, mark the test method `async` and await it; for other asynchronous code, create expectations,
+  fulfill them when the work finishes, and the test "waits until all expectations are fulfilled or a specified
+  timeout expires"; an unfulfilled expectation at the timeout is a failure. Was: "never sleep" and "the timeout is a
+  ceiling on a hang, not a measurement": the page says neither; those words are ours (rule 1). The page also lists
+  "a situation where it needs to complete within a specific amount of time" as a use of expectations, so Apple allows
+  a timed check; rule 1 is stricter on purpose, because our timing reds came at land load (G3: clock time and thread
+  scheduling are sources of nondeterminism). `fulfillment(of:timeout:)` is not on this page.
+- [A2] Was: Apple, Xcode Help, "Run tests in parallel". Fetched instead Apple's current Xcode page on running tests,
+  "Running tests and interpreting results", 2026-11-21 9:28:53 PM ET, data file
+  https://developer.apple.com/tutorials/data/documentation/xcode/running-tests-and-interpreting-results.json,
+  research/inbound/apple/developer.apple.com/tutorials_data_documentation_xcode_running-tests-and-interpreting-results.json-1b091f7c.json.
+  It has no parallel-testing section, so slice 1's claim ("each test must run alone and in any order; nothing shared
+  between test classes") is not confirmed from Apple; the "Run tests in parallel" page was not fetched (one page per
+  source) and the order rule now rests on G3. What the page does say: "Run testing repeatedly to determine
+  reliability", with Stop after failure, and in Terminal, for example,
+  `-run-tests-until-failure -test-iterations 20`. Rule 8 now uses it.
+- [A3] Apple, StoreKit Test, `SKTestSession`. Fetched 2026-11-21 9:28:39 PM ET, data file
+  https://developer.apple.com/tutorials/data/documentation/storekittest/sktestsession.json,
+  research/inbound/apple/developer.apple.com/tutorials_data_documentation_storekittest_sktestsession.json-cc01eba8.json.
+  Confirmed: `clearTransactions()` and `resetToDefaultState()` exist. Was: "each test starts from a session state it
+  set itself", which reads as if a test could own its session. The page says "There's a single instance of the test
+  environment. All SKTestSession instances control the same test environment", and "Run tests that reconfigure the
+  environment serially, not concurrently". Rule 2 changes to say so.
+- [P1] Playwright docs, class Page (playwright.dev/docs/api/class-page), `page.waitForTimeout`. Fetched 2026-11-21
+  9:28:21 PM ET, research/inbound/t4807-test-practice/p1-playwright-class-page.html (footer "Copyright © 2026
+  Microsoft"). Confirmed, marked Discouraged: "Never wait for timeout in production. Tests that wait for time are
+  inherently flaky." (slice 1 had "never" in lower case); use locator actions and web assertions, which wait
+  themselves. Was: also "Auto-waiting", which was not fetched (one page per source). New from the page: the
+  `networkidle` wait state is marked DISCOURAGED too ("Don't use this method for testing, rely on web assertions to
+  assess readiness instead"). Rule 1 now names it.
 
 ## The rules
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 1: The rules, scrolls sideways" data-n="1" style="--tw:774px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 1: The rules, scrolls sideways" data-n="1" style="--tw:1000px" markdown="1">
 
 | # | rule | the cause in T-4787 / T-4786 it answers | source |
 |---|------|-------------------------------------------|--------|
-| 1 | **No fixed sleep, no wall-clock bound.** Wait for the event itself (an expectation, a go file, a condition with `wait_for_function`, a polled state). A timeout is only a ceiling on a hang, at least 10x the normal time; it never decides a pass. A speed claim is checked by counting work (bytes per piece, calls, CPU time), never seconds. | "wall-clock assertion" (disk_sweep_test 3, queue_check_test 1, systls linear 1); timing (PromptDeskTests, heavy_slot_test, bridge hard stop 2) | G3, A1, P1 |
-| 2 | **Own every resource: data, folders, ports, Simulator state, locks.** A test makes its own temporary repository, its own server on port 0, its own StoreKit session cleared in setUp, its own state files; it never reads another run's lock or file. | "test depends on a lock another run holds" (xc.sh lock, 1); "same failing row in two tasks" (site_test.sh 2, supervisor_test.sh 2, bridge 2); ProStoreTests under five Simulators (6) | G3, A2, A3 |
+| 1 | **No fixed sleep, no wall-clock bound.** Wait for the event itself (an expectation, a go file, a condition with `wait_for_function`, a polled state). A timeout is only a ceiling on a hang, at least 10x the normal time; it never decides a pass. A speed claim is checked by counting work (bytes per piece, calls, CPU time), never seconds. Swift `async` code is awaited from an `async` test method; expectations only where there is no `async` form (A1). A browser test waits on a locator or a web assertion, never on `wait_for_timeout` or `wait_until="networkidle"` (both Discouraged in P1; 7 suites in tests/ used `networkidle` on 11-21, fixed when touched). | "wall-clock assertion" (disk_sweep_test 3, queue_check_test 1, systls linear 1); timing (PromptDeskTests, heavy_slot_test, bridge hard stop 2) | G3, A1, P1 |
+| 2 | **Own every resource: data, folders, ports, Simulator state, locks.** A test makes its own temporary repository, its own server on port 0, its own state files; it never reads another run's lock or file. StoreKit is the exception that cannot be owned: every `SKTestSession` drives the one test environment (A3), so a StoreKit test resets it in setUp (`resetToDefaultState()`, `clearTransactions()`) and StoreKit tests that reconfigure it run serially, never in parallel (A3). | "test depends on a lock another run holds" (xc.sh lock, 1); "same failing row in two tasks" (site_test.sh 2, supervisor_test.sh 2, bridge 2); ProStoreTests under five Simulators (6) | G3, A3 (was G3, A2, A3) |
 | 3 | **Run the code; never read its source text.** A rule about code is a lint or a build setting with its own owner, not a row in a behaviour suite. A test checks what the code does. | the 13 "broken code" reds that were checks reading source text or a table (T-4787 caveat); site_test.sh "the seven diagrams" (4) | G3 |
-| 4 | **A local server is built for a browser's load.** Every browser test serves through a server with a backlog of 128 (`tools/site_shots.Server`, once T-4807's fix lands), never bare `http.server` (backlog 5: macOS resets the sixth connect at once, and a reset inside a route's fetch leaves the request unanswered until goto's 30 s runs out). Routes answer from fixtures in the test; a route that must fetch catches the error and fails the row. | browser page-load time-outs: site_t2940 "Page.goto: Timeout 30000ms" and "Route.fetch: connect ECONNRESET", site_t3201, <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> box rows "Locator.click: Timeout 30000ms" (6) | P1, G2 |
-| 5 | **Size the suite; keep it small.** A suite states its size (small, medium, large) and stays inside the time of its size at land load, not alone. A suite over 120 s of work is split by part, each with its own limit, so a cut names the part. Rows share setup only when it is read-only. Never raise a <span title="A measured fact that holds a grade below a letter, however good the rest is.">cap</span> to make a suite fit. | host suites cut at their limit: personal_pool_test 7, supervisor_test 3, personal_off_test 2, lane host step 8 (about 20; T-4787 "other", 23 time-outs) | G2, G3 |
-| 6 | **Fixtures and mutants move with the code.** A change that alters a tool's output updates its fixtures and mutants in the same commit; a test that is red on main is fixed or quarantined within the hour, not carried. | stale fixture or mutant, red on main (board_tick_test, personal_land_product_test, personal_pool_test row, lane_env_test, personal_land_test: 6) | G1 |
-| 7 | **Every red keeps its failing row.** A suite prints the failing row's name and what it saw (the value, not only "false"); a runner keeps the first failing row, not only "stopped at the first red". A red with no row is a test bug. | "unknown" (48): no failed row kept (pywidget:* suites, site_live_test 11-17, gate logs that keep only the summary) | G1 |
-| 8 | **A test that is not deterministic is quarantined with an owner and a fix line, never rerun until green.** The quarantine entry names the owner, the fix line and the date; it leaves when three runs at land load pass. A rerun list (ops/xc_rerun_tests.txt) is a quarantine with the same rules. | ProStoreTests on the rerun list since 11-07; known_red rows repeated (10) | G1 |
-| 9 | **A new test compiles and passes at land load before it lands.** A new Swift test file goes through the MacBook runner (`tools/xc.sh test`) once; a new host suite runs once beside the land load (`tests/run.sh` inside a heavy slot), not only alone. | new test files that did not compile (AcknowledgementsUITests, LaunchRunLogTests, EditorToolingTests: 3); "green alone, red at land load" | A2, G2 |
-| 10 | **UI tests launch the app the one way.** UI tests start the app through the shared launcher with its arguments (no direct `XCUIApplication()` launch), so Simulator state is set by the test. | UITestLaunchScanTests (2): it caught a real breach each time; the rule stays, as a lint, under rule 3 | A2 |
+| 4 | **A local server is built for a browser's load.** Every browser test serves through a server with a backlog of 128 (`tools/site_shots.Server`, once T-4807's fix lands), never bare `http.server` (backlog 5: macOS resets the sixth connect at once, and a reset inside a route's fetch leaves the request unanswered until goto's 30 s runs out). Routes answer from fixtures in the test; a route that must fetch catches the error and fails the row. | browser page-load time-outs: site_t2940 "Page.goto: Timeout 30000ms" and "Route.fetch: connect ECONNRESET", site_t3201, <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> box rows "Locator.click: Timeout 30000ms" (6) | P1; the backlog is our own measurement (slice 9). Was P1, G2: G2 finds the browser tool matters little next to size |
+| 5 | **Size the suite; keep it small.** A suite states its size (small, medium, large) and stays inside the time of its size at land load, not alone. A suite over 120 s of work is split by part, each with its own limit, so a cut names the part. Rows share setup only when it is read-only. Never raise a <span title="A measured fact that holds a grade below a letter, however good the rest is.">cap</span> to make a suite fit. | host suites cut at their limit: personal_pool_test 7, supervisor_test 3, personal_off_test 2, lane host step 8 (about 20; T-4787 "other", 23 time-outs) | G2, G3 (the sizes); the time per size is ours, not G3's |
+| 6 | **Fixtures and mutants move with the code.** A change that alters a tool's output updates its fixtures and mutants in the same commit; a test that is red on main is fixed or quarantined within the hour, not carried. | stale fixture or mutant, red on main (board_tick_test, personal_land_product_test, personal_pool_test row, lane_env_test, personal_land_test: 6) | G3 (fix a broken test within minutes). Was G1, which says nothing on fixtures |
+| 7 | **Every red keeps its failing row.** A suite prints the failing row's name and what it saw (the value, not only "false"); a runner keeps the first failing row, not only "stopped at the first red". A red with no row is a test bug. | "unknown" (48): no failed row kept (pywidget:* suites, site_live_test 11-17, gate logs that keep only the summary) | ours. Was G1, which says nothing on keeping rows |
+| 8 | **A test that is not deterministic is quarantined with an owner and a fix line, never rerun until green.** The quarantine entry names the owner, the fix line and the date; the fix line first rules out the product, since a flaky result can be a real race (G1, G2). It leaves when three runs at land load pass, run as a repeat that stops at the first failure (Xcode: `-run-tests-until-failure -test-iterations N`, A2; a host suite: the same loop). A rerun list (ops/xc_rerun_tests.txt) is a quarantine with the same rules. | ProStoreTests on the rerun list since 11-07; known_red rows repeated (10) | G1, G2, G3, A2 |
+| 9 | **A new test compiles and passes at land load before it lands.** A new Swift test file goes through the MacBook runner (`tools/xc.sh test`) once; a new host suite runs once beside the land load (`tests/run.sh` inside a heavy slot), not only alone. | new test files that did not compile (AcknowledgementsUITests, LaunchRunLogTests, EditorToolingTests: 3); "green alone, red at land load" | ours. Was A2, G2: neither page says it |
+| 10 | **UI tests launch the app the one way.** UI tests start the app through the shared launcher with its arguments (no direct `XCUIApplication()` launch), so Simulator state is set by the test. | UITestLaunchScanTests (2): it caught a real breach each time; the rule stays, as a lint, under rule 3 | ours. Was A2, not confirmed |
 
 </div>
 
 
 ## How a reviewer applies them
 
-- Read the test's waits first: any `sleep`, `wait_for_timeout`, `Thread.sleep`, `asyncAfter` with a fixed delay, or a
+- Read the test's waits first: any `sleep`, `wait_for_timeout`, `wait_until="networkidle"`, `Thread.sleep`, `asyncAfter` with a fixed delay, or a
   bound on elapsed seconds is a FIX FIRST unless it is a ceiling on a hang (rule 1).
 - Ask where every file, port, lock and Simulator state comes from (rule 2), and whether the suite's time at load is
   inside its size (rule 5).
@@ -219,6 +269,13 @@ proven cure.
 
 Sum: 46. Fixed on main: 34 reds. Carried by an open line: 9 (T-4634 2, T-5493 2, T-5491 2, T-5492 1, T-5490 1,
 T-4725 1). Not reproduced, on T-5515: 3 (rows 6, 42, 65).
+
+Slice 10 check, 11-21 9:30 PM ET, main at 4fefafaf80 (`grep -m1 -E "\] T-NNNN "` on ops/board.md here and on
+`git show main:ops/board.md`; both agree): every line this audit names is still open, unticked, and none has moved to
+ops/archive. T-4634 (Pernille), T-5490 (Pernille), T-5491 (Pernille), T-5492 (Odalys), T-5493 (Odalys), T-4725
+(Odalys), T-5515 (Pernille), T-5516 (Pernille, P3), and the two named in passing, T-4726 (Odalys) and T-4754
+(Pernille): all `- [ ]`. So the count is unchanged: 34 fixed on main, 9 carried, 3 not reproduced, and T-4807 stays
+open until those lines close.
 
 Slice 9, row 42 (rule 4): site_issue_page_test.py and its sibling site_t3418_test.py (same Issues page, same task)
 served the browser with bare `http.server.ThreadingHTTPServer`, listen queue 5. Both now subclass `site_shots.Server`

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-22T16:47:43.553506+00:00",
+ "at": "2026-11-22T16:50:46.804649+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -58,39 +58,39 @@
   "landed": 0,
   "failed": 2
  },
- "workers": [
+ "workers": [],
+ "who": "",
+ "recent": [
   {
    "name": "maren",
    "task": "[report] morning",
    "model": "opus",
    "started": "2026-11-22T16:12:41.682Z",
-   "seconds": 2101,
-   "finished": null
+   "seconds": null,
+   "finished": "2026-11-22T16:48:57.519000+00:00"
   }
  ],
- "who": "Maren",
- "recent": [],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 687,
+  "runnable_count": 686,
   "blocked_count": 2
  },
  "meter": {
   "five_hour": {
-   "pct": 1.0,
+   "pct": 2.0,
    "resets_at": "2026-11-22T16:00:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-22T11:17:40.130499-05:00",
+   "read_at": "2026-11-22T11:49:55.563415-05:00",
    "source": "live",
-   "left": 99.0,
+   "left": 98.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 1.0,
    "resets_at": "2026-11-29T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-22T11:17:40.130499-05:00",
+   "read_at": "2026-11-22T11:49:55.563415-05:00",
    "source": "live",
    "left": 99.0,
    "left_words": "of your weekly allowance left"
@@ -102,7 +102,7 @@
    "read_at": "2026-11-22T11:02:09.049035-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-22T11:17:40.130499-05:00"
+  "read_at": "2026-11-22T11:49:55.563415-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -122,7 +122,7 @@
   "week_pct": 2.42,
   "usage_pct": 79.3,
   "work_pct": 88.2,
-  "read_at": "2026-11-22T16:47:00+00:00",
+  "read_at": "2026-11-22T16:50:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -152,14 +152,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-22T11:44:00-05:00",
+   "at": "2026-11-22T11:49:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 3,
-  "at": "2026-11-22T11:47:00-05:00",
+  "at": "2026-11-22T11:50:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -175,14 +175,6 @@
   "at": "2026-11-22T11:02:11.913997-05:00"
  },
  "lanes": [
-  {
-   "name": "Maren",
-   "state": "running",
-   "task": "[report] morning",
-   "model": "opus",
-   "since": "2026-11-22T16:12:41.682Z",
-   "next": []
-  },
   {
    "name": "Odalys",
    "state": "next",
@@ -216,6 +208,14 @@
    "next": []
   },
   {
+   "name": "Maren",
+   "state": "next",
+   "task": "Maren with Odalys, P1, follow-up of T-4813 (Investor...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
    "name": "Wrenna",
    "state": "next",
    "task": "Wrenna, P2, T-2375 continuation (B-staged item 3...",
@@ -225,16 +225,7 @@
   }
  ],
  "tasks": {
-  "run": [
-   {
-    "w": "Maren",
-    "k": "report",
-    "t": "Morning",
-    "m": "opus",
-    "at": "2026-11-22T16:12:41.682Z",
-    "o": "c"
-   }
-  ],
+  "run": [],
   "src": "plan",
   "open": [
    {
@@ -310,6 +301,11 @@
   ],
   "done": [
    {
+    "w": "Odalys",
+    "t": "Before each session the supervisor and the personal tick check that the settings file parses and...",
+    "at": "2026-11-22T11:48:00-05:00"
+   },
+   {
     "w": "Operator",
     "t": "Not needed any more: Evan pasted the settings file again on GitHub at 5:11 AM, and it now...",
     "at": "2026-11-22T05:13:00-05:00"
@@ -318,22 +314,22 @@
     "w": "Pernille",
     "t": "An independent check of how Xcode build-then-test pairs now run on the MacBook found it sound,...",
     "at": "2026-11-22T04:05:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "The hand-out now waits only for pre-comparison lines that can finish before the comparison...",
-    "at": "2026-11-22T03:49:00-05:00"
    }
   ],
   "count": {
-   "next": 687,
+   "next": 686,
    "wait": 2,
    "blocked": 0,
    "you": 2
   },
   "fin": {
-   "n": 0,
-   "rows": []
+   "n": 1,
+   "rows": [
+    [
+     "T-5588",
+     "Refuse a session when a..."
+    ]
+   ]
   }
  },
  "qr": [
@@ -375,17 +371,12 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-22T16:47:32Z",
+  "at": "2026-11-22T16:50:39Z",
   "s": {
    "T-5399": [
     "merging",
     "Host checks on the Mac mini \u00b7 1 of 3 groups of tests done",
-    1795365632779
-   ],
-   "T-5588": [
-    "merging",
-    "Mac tests at the main gate",
-    1795365632779
+    1795365639026
    ],
    "T-5262": [
     "testing",
@@ -395,17 +386,16 @@
   },
   "nm": {
    "T-5399": "Add the coordinator's land job and side jobs by Sunday",
-   "T-5588": "Refuse a session when a settings file breaks",
    "T-5262": "Trim step 9, merge checks agree on every run"
   },
   "wk": {
    "T-5399": "Odalys",
-   "T-5588": "Odalys",
-   "T-5262": "Odalys"
+   "T-5262": "Odalys",
+   "T-5588": "Odalys"
   }
  },
  "ln": {
-  "at": "2026-11-22T16:47:32Z",
+  "at": "2026-11-22T16:50:39Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -417,13 +407,13 @@
     "parked": 4
    },
    "m": {
-    "checking": 7,
+    "checking": 10,
     "inline": null,
     "conflicted": null,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 709
+    "parked": 712
    },
    "cur": [
     [
@@ -432,7 +422,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     7
+     10
     ]
    ],
    "ld": [
@@ -442,12 +432,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-22T16:47:36Z",
-    "ld": 13.67,
+    "at": "2026-11-22T16:50:40Z",
+    "ld": 11.24,
     "c": 8,
     "sb": 0,
     "dk": [
-     54.4,
+     54.5,
      228.3
     ],
     "ss": [
@@ -484,11 +474,11 @@
      "open": false
     }
    },
-   "at": "2026-11-22T16:47:43+00:00"
+   "at": "2026-11-22T16:50:46+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-22T16:47:43+00:00"
+   "at": "2026-11-22T16:50:46+00:00"
   }
  },
  "operators": [
@@ -511,6 +501,7 @@
   "lane_next",
   "queue_text",
   "task_done",
+  "fin_short",
   "task_title",
   "done_text",
   "task_open",
@@ -518,13 +509,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 1,
+  "main": 0,
   "lanes": 0,
-  "total": 1,
-  "at": "11:47 AM",
-  "why": "",
-  "at_iso": "2026-11-22T16:47:00+00:00",
+  "total": 0,
+  "at": "11:50 AM",
+  "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
+  "at_iso": "2026-11-22T16:50:00+00:00",
   "started": "11:04 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 11:04 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 11:47 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0, started 11:04 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 11:50 AM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
  }
 }

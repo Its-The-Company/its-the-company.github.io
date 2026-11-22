@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-22T09:46:50.097597+00:00",
+ "at": "2026-11-22T09:52:33.539976+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -144,21 +144,8 @@
   "week_pct": 1.69,
   "usage_pct": 90.5,
   "work_pct": 84.6,
-  "read_at": "2026-11-22T09:49:00+00:00",
-  "running": [
-   {
-    "lane": "b",
-    "task": "T-5399",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Add the coordinator's land job and side jobs by Sunday",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-22T04:43:34-05:00",
-    "n": "Jeremy",
-    "src": "plan-b"
-   }
-  ]
+  "read_at": "2026-11-22T09:52:00+00:00",
+  "running": []
  },
  "api_credits": [
   {
@@ -194,7 +181,7 @@
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-22T04:49:00-05:00",
+  "at": "2026-11-22T04:52:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -205,7 +192,7 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Double Spread: 100% of the week left, paced to last until Wed 14:00, the week's halfway point (no fresh plan meter reading: the recorded spend stands in); the machine allows 48 (cut a step: load...",
+  "why": "Double Spread: 100% of the week left, paced to last until Wed 14:00, the week's halfway point (no fresh plan meter reading: the recorded spend stands in); the machine allows 47 (cut a step: load...",
   "n": 2,
   "at": "2026-11-22T03:25:46.917996-05:00"
  },
@@ -410,33 +397,25 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-22T09:46:50Z",
+  "at": "2026-11-22T09:52:19Z",
   "s": {
    "T-5262": [
     "merging",
     "Mac tests at the main gate \u00b7 9 groups of tests done, 1 red",
-    1795340090097
-   ],
-   "T-5399": [
-    "merged",
-    "on main 2:43 AM ET",
-    1795333403000,
-    ""
+    1795340179212
    ]
   },
   "nm": {
-   "T-5262": "Trim step 9, merge checks agree on every run",
-   "T-5399": "Add the coordinator's land job and side jobs by Sunday"
+   "T-5262": "Trim step 9, merge checks agree on every run"
   },
   "wk": {
    "T-5262": "Odalys",
-   "T-5399": "Odalys",
    "T-5550": "Pernille",
    "T-5568": "Odalys"
   }
  },
  "ln": {
-  "at": "2026-11-22T09:46:50Z",
+  "at": "2026-11-22T09:52:19Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -454,22 +433,22 @@
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 288
+    "parked": 293
    },
    "cur": [],
    "ld": [
-    10,
-    "2026-11-22T09:05:25Z"
+    11,
+    "2026-11-22T09:51:12Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-22T09:44:44Z",
-    "ld": 12.52,
+    "at": "2026-11-22T09:51:45Z",
+    "ld": 13.59,
     "c": 8,
     "sb": 0,
     "dk": [
-     56.8,
+     55.2,
      228.3
     ],
     "ss": [
@@ -493,13 +472,13 @@
  },
  "hc": {
   "wait": {
-   "n": 5,
+   "n": 6,
    "limit": 20,
    "in_line": 0,
-   "parked": 5,
+   "parked": 6,
    "open": true,
    "mq": false,
-   "counted": "2026-11-22T09:39:57+00:00",
+   "counted": "2026-11-22T09:51:30+00:00",
    "by": {
     "app": {
      "n": 3,
@@ -507,48 +486,48 @@
      "open": true
     },
     "other": {
-     "n": 2,
+     "n": 3,
      "limit": 20,
      "open": true
     },
     "hub": {
-     "n": 0,
+     "n": 1,
      "limit": 1,
-     "open": true
+     "open": false
     }
    },
-   "at": "2026-11-22T09:46:50+00:00"
+   "at": "2026-11-22T09:52:33+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-22T09:46:50+00:00"
+   "at": "2026-11-22T09:52:19+00:00"
   }
  },
  "operators": [
   {
    "w": "Operator",
-   "a": "Jeremy's Account",
+   "a": "Main plan",
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 1 task",
-   "at": "2026-11-22T04:43:33-05:00"
+   "t": "Inbox \u2013 Evan's 4:51 AM Message on GitHub",
+   "at": "2026-11-22T04:51:43-05:00"
   }
  ],
  "reply": {
-  "sent": "2026-11-22T05:41:01Z",
-  "seconds": 675.0
+  "sent": "2026-11-22T09:46:23Z",
+  "seconds": 279.0
  },
  "inbox": [
   {
-   "id": "c7077360564",
+   "id": "c7077411150",
    "state": "received",
    "position": 1,
    "tasks": {
     "open": 0,
     "done": 0
    },
-   "title": "approve"
+   "title": "I updated .claude/settings.json!..."
   }
  ],
  "trimmed": [
@@ -556,6 +535,7 @@
   "queue_text",
   "task_done",
   "fin_short",
+  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -564,12 +544,12 @@
  ],
  "agents_now": {
   "main": 0,
-  "lanes": 1,
-  "total": 1,
-  "at": "4:49 AM",
-  "why": "",
-  "at_iso": "2026-11-22T09:49:00+00:00",
+  "lanes": 0,
+  "total": 0,
+  "at": "4:52 AM",
+  "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
+  "at_iso": "2026-11-22T09:52:00+00:00",
   "started": "3:26 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0, started 3:26 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 4:49 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0, started 3:26 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 4:52 AM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
  }
 }

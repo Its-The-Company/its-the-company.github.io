@@ -584,13 +584,19 @@ function ago(t){var s=Math.max(0,Math.round((Date.now()-Date.parse(t))/1e3));ret
 function nw(t){return t&&Date.parse(t)>=B}
 function ag(id,t){var e=document.getElementById(id);if(e&&t){e.textContent=ago(t);e.title='read '+et(t)+' ET'}}
 function fig(h,lab,v){[].forEach.call(document.querySelectorAll('.lk-bub a[href="#'+h+'"] .lk-f > span'),function(s){var b=s.querySelector('b');if(b&&s.lastChild&&s.lastChild.nodeValue===lab)b.textContent=v})}
-function words(w){var r=w.n-w.in_line-w.parked;if([w.n,w.in_line,w.parked].some(function(x){return typeof x!=='number'}))return 'parts not recorded';
-return w.in_line.toLocaleString('en-US')+' in the merge queue, '+w.parked.toLocaleString('en-US')+' sent back to retry'+(r>0?', '+r+' in neither part':r<0?' (the parts come to '+(w.in_line+w.parked)+', '+(-r)+' over the count)':'')}
+function words(w){var r=w.n-w.in_line-w.parked,ln=document.getElementById('lk-now'),nr=ln&&ln.getAttribute('data-road')==='merge.sh';if([w.n,w.in_line,w.parked].some(function(x){return typeof x!=='number'}))return 'parts not recorded';
+return w.in_line.toLocaleString('en-US')+(nr?' in line for tools/merge.sh, ':' in the merge queue, ')+w.parked.toLocaleString('en-US')+(nr?' sent back for a fix':' sent back to retry')+(r>0?', '+r+' in neither part':r<0?' (the parts come to '+(w.in_line+w.parked)+', '+(-r)+' over the count)':'')}
+// T-5454: the per-queue figures follow the same status (its by: merge_limit's queues of the same row); a queue the row
+// lacks reads "not known", and the count in both is app + other less the one count
+function qk(ln,w){var by=w.by,a,o,e;if(!by||typeof by!=='object')return;[].forEach.call(ln.querySelectorAll('.lk-nk[data-k]'),function(s){var q=by[s.getAttribute('data-k')]||{},b=s.querySelector('b'),i=s.querySelector('.lk-gg i'),u=s.querySelector('.lk-gg u'),m=s.querySelector('small'),top;
+if(!b)return;if(typeof q.n!=='number'){b.textContent='not known';b.className='lk-nr';if(i)i.parentNode.hidden=true;return}b.textContent=q.n;b.className='';
+if(i&&u&&q.limit>0){i.parentNode.hidden=false;top=Math.max(q.n,q.limit)*1.15;i.style.width=(q.n/top*100).toFixed(0)+'%';u.style.left=(q.limit/top*100).toFixed(0)+'%';i.parentNode.className='lk-gg'+(q.n>=q.limit?' over':'')}if(m&&q.limit!=null)m.textContent='of '+q.limit});
+a=(by.app||{}).n;o=(by.other||{}).n;e=ln.querySelector('.lk-nb');if(e&&typeof a==='number'&&typeof o==='number'){e.textContent=Math.max(0,a+o-w.n)+' in both';e.hidden=a+o-w.n<=0}}
 function wait(w){var ln=document.getElementById('lk-now'),c,g,b,i,u,sm,top,when,old;if(!ln)return;c=ln.querySelector('.lk-nc');g=ln.querySelector('.lk-gate');
 if(g){g.className='lk-gate '+(w.open?'ok':'held');g.textContent='';mk(g,'span','lk-wd',w.open?'New work open':'New work held');mk(g,'span','lk-ws',w.open?'Open':'Held').setAttribute('aria-hidden','true')}
 if(c&&typeof w.n==='number'){b=c.querySelector('b');if(b)b.textContent=w.n;sm=c.querySelector('.lk-np');if(sm)sm.textContent=words(w);
 i=c.querySelector('.lk-gg i');u=c.querySelector('.lk-gg u');if(i&&u&&w.limit>0){top=Math.max(w.n,w.limit)*1.15;i.style.width=(w.n/top*100).toFixed(0)+'%';u.style.left=(w.limit/top*100).toFixed(0)+'%';i.parentNode.className='lk-gg'+(w.n>=w.limit?' over':'')}
-sm=c.querySelector(':scope > small');if(sm&&w.limit!=null)sm.textContent='limit '+w.limit}
+sm=c.querySelector(':scope > small');if(sm&&w.limit!=null)sm.textContent='limit '+w.limit;qk(ln,w)}
 when=ln.querySelector('.lk-nwhen');if(when&&w.counted){old=Date.now()-Date.parse(w.counted)>18e5;when.className='lk-nwhen'+(old?' late':'');when.textContent='';mk(when,'span','lk-wd','counted ');
 when.appendChild(document.createTextNode(et(w.counted)+' ET, '+ago(w.counted)));ln.title=(typeof w.n==='number'?w.n+' tasks have finished work waiting to land: '+words(w)+(w.limit!=null?'; new work stops at '+w.limit:''):'The count of tasks waiting to land could not be read')+'. Counted '+et(w.counted)+' ET, read '+et(w.at)+' ET.'}}
 function draw(st){var h=(st&&st.hc)||{},m=(st&&st.meter)||{},e;

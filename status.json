@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-22T08:57:03.197086+00:00",
+ "at": "2026-11-22T09:00:08.053707+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -88,7 +88,7 @@
    }
   ],
   "landed": 78,
-  "failed": 11
+  "failed": 7
  },
  "workers": [],
  "who": "",
@@ -145,7 +145,7 @@
   "week_pct": 1.69,
   "usage_pct": 90.5,
   "work_pct": 84.6,
-  "read_at": "2026-11-22T08:57:00+00:00",
+  "read_at": "2026-11-22T09:00:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -207,7 +207,7 @@
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-22T03:57:00-05:00",
+  "at": "2026-11-22T04:00:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -218,7 +218,7 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Double Spread: 100% of the week left, paced to last until Wed 14:00, the week's halfway point; the machine allows 42 (raised a step: load, time-outs, failed lands and redone tasks all under their...",
+  "why": "Double Spread: 100% of the week left, paced to last until Wed 14:00, the week's halfway point; the machine allows 43 (raised a step: load, time-outs, failed lands and redone tasks all under their...",
   "n": 2,
   "at": "2026-11-22T03:25:46.917996-05:00"
  },
@@ -419,7 +419,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-22T08:56:41Z",
+  "at": "2026-11-22T08:59:45Z",
   "s": {
    "T-5399": [
     "merged",
@@ -437,7 +437,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-22T08:56:41Z",
+  "at": "2026-11-22T08:59:45Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -455,7 +455,7 @@
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 255
+    "parked": 258
    },
    "cur": [],
    "ld": [
@@ -465,12 +465,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-22T08:56:43Z",
-    "ld": 4.79,
+    "at": "2026-11-22T08:59:46Z",
+    "ld": 4.59,
     "c": 8,
     "sb": 0,
     "dk": [
-     55.4,
+     57.5,
      228.3
     ],
     "ss": [
@@ -480,12 +480,12 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-22T08:28:02Z",
-    "ld": 1.43,
+    "at": "2026-11-22T08:58:40Z",
+    "ld": 0.29,
     "c": 12,
     "sb": 0,
     "dk": [
-     356.9,
+     358.4,
      926.4
     ],
     "sn": []
@@ -494,21 +494,21 @@
  },
  "hc": {
   "wait": {
-   "n": 8,
+   "n": 5,
    "limit": 20,
    "in_line": 0,
-   "parked": 8,
+   "parked": 5,
    "open": true,
    "mq": false,
-   "counted": "2026-11-22T08:46:39+00:00",
+   "counted": "2026-11-22T08:56:59+00:00",
    "by": {
     "app": {
-     "n": 4,
+     "n": 3,
      "limit": 20,
      "open": true
     },
     "other": {
-     "n": 4,
+     "n": 2,
      "limit": 20,
      "open": true
     },
@@ -518,11 +518,11 @@
      "open": true
     }
    },
-   "at": "2026-11-22T08:57:03+00:00"
+   "at": "2026-11-22T09:00:08+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-22T08:56:50+00:00"
+   "at": "2026-11-22T09:00:08+00:00"
   }
  },
  "operators": [
@@ -574,10 +574,10 @@
   "main": 0,
   "lanes": 2,
   "total": 2,
-  "at": "3:57 AM",
+  "at": "4:00 AM",
   "why": "",
-  "at_iso": "2026-11-22T08:57:00+00:00",
+  "at_iso": "2026-11-22T09:00:00+00:00",
   "started": "3:26 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0, started 3:26 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 3:57 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0, started 3:26 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 4:00 AM ET</p></section>"
  }
 }

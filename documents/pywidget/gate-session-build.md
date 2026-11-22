@@ -214,13 +214,19 @@ the rung is there to show.
 The export's manifest lists each rung under `ladder` with `rung`, `id`, `kind`, `hold_mib` and `work_s`, so a
 reader can put each `runs-<id>.jsonl` beside what that rung was asked to do.
 
-**What holds the ladder in the gate build (T-4644, review L2, L3).** Three tests:
+**What holds the ladder in the gate build (T-4644, review L2, L3; T-5021).** Five tests:
 
 - `GatePremadeTests` (Swift; `gate_session_build.sh --test` runs it with the condition on): every name in
   `GatePremade.names` is a premade the built bundle has (`Premades.all()`), `_ladder.py` is in `Runtime/premade/`, and
   `LaneEntry.resolve` answers `<name>.py` for `overrun` and each rung. The picker's names come from a Swift table, so
   only the bundle check can see a build phase that failed to copy a rung. Without the condition the same test asserts
   that none of them is there.
+- `ExtensionLaneTests/testOnlyTheGateBuildExemptsItsOwnPremades` (Swift; `--test` runs it too): with the condition
+  on, `ExtensionLane.sizeMoveExempt` is exactly `GatePremade.names` as premade ids, `ladder12` among them, so no rung
+  moves to the app for size (see "How often" below). Without it, nobody is exempt.
+- `WidgetPlacementTests` (Swift; `--test` runs the class): with the condition on, the picker lists every gate premade
+  after the shipping ones, with Pro, without it and with the Pro table missing, and each gate premade's title is
+  `GatePremade.titles`' and in no title table. Without it, the picker adds nothing.
 - `tests/widgets/test_gate_premade.py` (host): the shipping files name no rung, and the copy script puts them in.
 - The same file runs `ladder1`'s provider on a temp `Store`: the climb (the MiB it holds, the time it works), the tree
   checked with `doc_errors`, its text and the record it leaves in the folder.

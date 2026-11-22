@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-22T10:03:25.853257+00:00",
+ "at": "2026-11-22T10:06:28.883251+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -83,7 +83,7 @@
   "week_pct": 2.42,
   "usage_pct": 84.5,
   "work_pct": 88.2,
-  "read_at": "2026-11-22T10:03:00+00:00",
+  "read_at": "2026-11-22T10:06:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -113,14 +113,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-22T04:59:00-05:00",
+   "at": "2026-11-22T05:05:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-22T05:03:00-05:00",
+  "at": "2026-11-22T05:06:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -131,7 +131,7 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Double Spread: 100% of the week left, paced to last until Wed 14:00, the week's halfway point; the machine allows 47 (held: all signals under their lines, a raise waits for the next 5-minute check)",
+  "why": "Double Spread: 100% of the week left, paced to last until Wed 14:00, the week's halfway point; the machine allows 48 (raised a step: load, time-outs, failed lands and redone tasks all under their...",
   "n": 2,
   "at": "2026-11-22T04:59:35.065622-05:00"
  },
@@ -327,17 +327,17 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-22T10:03:17Z",
+  "at": "2026-11-22T10:06:20Z",
   "s": {
    "T-5399": [
     "merging",
     "Host checks on the Mac mini \u00b7 1 of 3 groups of tests done",
-    1795341677983
+    1795341680529
    ],
    "T-5262": [
     "merging",
     "Mac tests at the main gate \u00b7 9 groups of tests done, 1 red",
-    1795340177983
+    1795340180529
    ]
   },
   "nm": {
@@ -350,7 +350,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-22T10:03:17Z",
+  "at": "2026-11-22T10:06:20Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -362,13 +362,13 @@
     "parked": 5
    },
    "m": {
-    "checking": 2,
+    "checking": 5,
     "inline": null,
     "conflicted": null,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 321
+    "parked": 324
    },
    "cur": [
     [
@@ -377,7 +377,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     2
+     5
     ]
    ],
    "ld": [
@@ -387,8 +387,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-22T10:03:19Z",
-    "ld": 4.84,
+    "at": "2026-11-22T10:06:22Z",
+    "ld": 4.96,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -440,11 +440,11 @@
      "open": false
     }
    },
-   "at": "2026-11-22T10:03:25+00:00"
+   "at": "2026-11-22T10:06:28+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-22T10:03:11+00:00"
+   "at": "2026-11-22T10:06:20+00:00"
   }
  },
  "operators": [
@@ -454,19 +454,31 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session",
-   "at": "2026-11-22T05:03:01-05:00"
+   "t": "Inbox \u2013 Evan's 5:05 AM Message on GitHub",
+   "at": "2026-11-22T05:05:52-05:00"
   }
  ],
  "reply": {
   "sent": "2026-11-22T09:56:58Z",
   "seconds": 362.0
  },
- "inbox": [],
+ "inbox": [
+  {
+   "id": "c7077563938",
+   "state": "received",
+   "position": 1,
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "I auto-approve any proposal that..."
+  }
+ ],
  "trimmed": [
   "lane_next",
   "queue_text",
   "task_done",
+  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -477,10 +489,10 @@
   "main": 0,
   "lanes": 0,
   "total": 0,
-  "at": "5:03 AM",
+  "at": "5:06 AM",
   "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
-  "at_iso": "2026-11-22T10:03:00+00:00",
+  "at_iso": "2026-11-22T10:06:00+00:00",
   "started": "5:00 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0, started 5:00 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 5:03 AM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0, started 5:00 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 5:06 AM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
  }
 }

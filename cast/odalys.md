@@ -42,9 +42,6 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 ## Lessons
 - T-4956 11-18: ticked lines leave the board for log/board-archive.md; a claim release writes a new slot, whose mtime is the release time.
-- T-5103 11-19: a suite red on main with no fix line: bisect the fixture's inputs (tools it copies), not just the tool under test. personal_off's 32 reds were T-5075's board.py (loose 'waiting on X' no longer holds a line), not T-4807; fixture waits must be '#N'.
-- T-5180 11-19 4108e9244d: board_tick add writes the main checkout's board and wants --by, no Base/By slots. A busy line ('being handed to a spare', 'marker is dropped') must end a wait in land_idle, or one branch counts 6 h (11-13: 8.31 -> 2.49 h). Owed T-5197 (24 h read 11-20), T-5198 (pick_now test).
-- T-4920 11-20 c8c8014fd6: xc.sh queues only from pywidget/ios with -project; the job file must land (main_gate) before the runner takes it, and a mutant commit never can (main only). Host suites on the SSD hit 600 s: copy to /tmp.
 - T-5192 11-20: xc.sh leaves its job json untracked in main's ops/jobs; copy it to the scratch copy, rm main's, main_gate land. An app line's Done-when must name a docs page.
 - T-5234 11-20: security-guard refuses any Bash command whose text holds a session-launch line (even in a heredoc docstring); keep such example strings out of commands. Design ready: land-only slot, measured in board note.
 - T-5247 11-20 fea3bb96d4: <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> metrics (ops/metrics) never travel; a linked worktree's rows can go to main via git's common dir. Mini Xcode runs 11-19 were pre-merge XC_LOCAL=1 callers (feature_session split build/test), not lands.
@@ -53,6 +50,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-5397 11-21 a3f8fac2d5: board_tick add from a lane wrote main's board directly (not the outbox); task_names_store add writes the lane's ops/task-names.tsv (commit it). test_health lint refuses a test that reads a tool's source as text: check behaviour (rig the reader to fail). Slices 4-6 hit guarded supervisor.sh/personal_tick.sh.
 - T-5406 11-21: tick after the final commit (its note cites the hash; an amend orphans it), outbox file in a second commit. board_tick add refuses a bare T-ID in text with no link.
 - T-5450 11-21: the red restart row was the fixture: an empty board just after a <span title="A numbered batch of planned work, with its own plan file.">refill</span> makes the governor queue (by design), so tick 2 never ran; '- [ ] x (waiting on #12)' counts for the governor, not runnable for the chain. run.sh shows only FAIL lines: debug to a /tmp file.
+- T-5473 11-21 85e0b74e17: in a gate test, mutate each term by hand; a term the reader already enforces (ProConfig refuses gates on with no product) is an equivalent mutant, note it, no fix. A bundled() check must unwrap first, or nil (closed state) passes. App line add: no Base/By/Until, Done when 'test: land:xc; docs page ...'; reserve the ID first.
 {% endraw %}
 
 

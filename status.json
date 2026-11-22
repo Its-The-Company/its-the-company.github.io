@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-22T03:31:32.988336+00:00",
+ "at": "2026-11-22T03:36:17.435592+00:00",
  "session": {
   "active": false,
   "kind": "",
@@ -170,7 +170,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 677,
+  "runnable_count": 678,
   "blocked_count": 3
  },
  "meter": {
@@ -178,28 +178,28 @@
    "pct": 0.0,
    "resets_at": null,
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-21T22:20:50.782822-05:00",
+   "read_at": "2026-11-21T22:32:39.959122-05:00",
    "source": "usage",
    "left": 100.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 100.0,
-   "resets_at": "2026-11-22T07:00:00.115722+00:00",
+   "resets_at": "2026-11-22T07:00:00.315799+00:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-21T22:20:50.782822-05:00",
+   "read_at": "2026-11-21T22:32:39.959122-05:00",
    "source": "usage",
    "left": 0.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 36.0,
-   "resets_at": "2026-11-22T07:00:00.115865+00:00",
+   "resets_at": "2026-11-22T07:00:00.315945+00:00",
    "used_words": "of the Fable weekly allowance used",
-   "read_at": "2026-11-21T22:20:50.782822-05:00",
+   "read_at": "2026-11-21T22:32:39.959122-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-21T22:20:50.782822-05:00"
+  "read_at": "2026-11-21T22:32:39.959122-05:00"
  },
  "ui": {
   "week_pct": 0.123,
@@ -214,13 +214,38 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-21T22:44:10-05:00",
+ "next_tick": "2026-11-21T22:47:40-05:00",
  "personal": {
-  "week_pct": 111.01,
+  "week_pct": 111.03,
   "usage_pct": 52.6,
   "work_pct": 85.5,
-  "read_at": "2026-11-22T03:32:00+00:00",
-  "running": []
+  "read_at": "2026-11-22T03:37:00+00:00",
+  "running": [
+   {
+    "lane": "a",
+    "task": "T-4477",
+    "w": "Idris",
+    "k": "build",
+    "t": "People build a widget from blocks without code",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-21T22:32:56-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a",
+    "task": "T-5047",
+    "w": "Idris",
+    "k": "build",
+    "t": "Fix the token test's No view for this size card",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-21T22:32:56-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   }
+  ]
  },
  "api_credits": [
   {
@@ -249,14 +274,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-21T22:32:00-05:00",
+   "at": "2026-11-21T22:36:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-21T22:32:00-05:00",
+  "at": "2026-11-21T22:37:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -409,7 +434,7 @@
    }
   ],
   "count": {
-   "next": 677,
+   "next": 678,
    "wait": 3,
    "blocked": 0,
    "you": 3
@@ -454,44 +479,59 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-22T03:31:32Z",
+  "at": "2026-11-22T03:36:17Z",
   "s": {
-   "T-5504": [
-    "mergetest",
-    "Xcode checks on the MacBook",
-    1795318292988
-   ],
    "T-5234": [
-    "mergeq",
-    "1st to merge",
-    1795317872988
+    "merging",
+    "Host checks on the Mac mini",
+    1795318397435
    ],
    "T-5021": [
     "mergeq",
-    "2nd to merge",
-    1795315592988
+    "1st to merge",
+    1795315577435
    ],
    "T-5023": [
     "mergeq",
+    "1st to merge",
+    1795315577435
+   ],
+   "T-5504": [
+    "mergeq",
     "2nd to merge",
-    1795315592988
+    1795315637435
+   ],
+   "T-5047": [
+    "merging",
+    "Mac tests at the main gate",
+    1795318397435
+   ],
+   "T-4477": [
+    "merged",
+    "on main 12:59 PM ET",
+    1795283987000,
+    ""
    ]
   },
   "nm": {
-   "T-5504": "Name all three Pro features in the showcase plan",
    "T-5234": "Move merge tests to the MacBook under heavy load",
    "T-5021": "Run the other ladder checks before a gate upload",
-   "T-5023": "Put all 12 rungs in the phone request"
+   "T-5023": "Put all 12 rungs in the phone request",
+   "T-5504": "Name all three Pro features in the showcase plan",
+   "T-5047": "Fix the token test's No view for this size card",
+   "T-4477": "People build a widget from blocks without code"
   },
   "wk": {
-   "T-5504": "Ines",
    "T-5234": "Odalys",
    "T-5021": "Idris",
-   "T-5023": "Idris"
+   "T-5023": "Idris",
+   "T-5504": "Ines",
+   "T-5047": "Idris",
+   "T-4477": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-22T03:31:32Z",
+  "at": "2026-11-22T03:36:17Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -503,22 +543,22 @@
     "parked": 3
    },
    "m": {
-    "checking": 0,
-    "inline": 45,
+    "checking": 3,
+    "inline": 50,
     "conflicted": null,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 2394
+    "parked": 2399
    },
    "cur": [
     [
      [
-      "T-5504"
+      "T-5234"
      ],
-     "iPhone app tests",
-     "MacBook",
-     0
+     "Mac tests",
+     "Mac mini",
+     3
     ]
    ],
    "ld": [
@@ -528,8 +568,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-22T03:31:33Z",
-    "ld": 0.85,
+    "at": "2026-11-22T03:36:06Z",
+    "ld": 0.92,
     "c": 8,
     "sb": 1,
     "dk": [
@@ -545,12 +585,12 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-22T03:24:28Z",
-    "ld": 0.32,
+    "at": "2026-11-22T03:34:28Z",
+    "ld": 0.44,
     "c": 12,
     "sb": 0,
     "dk": [
-     359.3,
+     359.5,
      926.4
     ],
     "sn": []
@@ -559,21 +599,21 @@
  },
  "hc": {
   "wait": {
-   "n": 14,
+   "n": 7,
    "limit": 20,
-   "in_line": 10,
-   "parked": 4,
+   "in_line": 4,
+   "parked": 3,
    "open": true,
    "mq": false,
-   "counted": "2026-11-22T03:21:47+00:00",
+   "counted": "2026-11-22T03:31:59+00:00",
    "by": {
     "app": {
-     "n": 12,
+     "n": 5,
      "limit": 20,
      "open": true
     },
     "other": {
-     "n": 2,
+     "n": 3,
      "limit": 20,
      "open": true
     },
@@ -583,24 +623,56 @@
      "open": true
     }
    },
-   "at": "2026-11-22T03:31:32+00:00"
+   "at": "2026-11-22T03:36:17+00:00"
   },
   "bl": {
    "n": 3,
-   "at": "2026-11-22T03:31:32+00:00"
+   "at": "2026-11-22T03:36:17+00:00"
   }
  },
- "operators": [],
+ "operators": [
+  {
+   "w": "Operator",
+   "a": "Evan's Account",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session \u2013 2 tasks",
+   "at": "2026-11-21T22:36:18-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Evan's Account",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session \u2013 2 tasks",
+   "at": "2026-11-21T22:35:59-05:00"
+  }
+ ],
  "reply": {
   "sent": "2026-11-22T03:08:54Z",
   "seconds": 553.0
  },
- "inbox": [],
+ "inbox": [
+  {
+   "id": "c7073601543",
+   "state": "waiting",
+   "position": 1,
+   "eta": "2026-11-21T22:47:40-05:00",
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "The comparison doesn't need to start..."
+  }
+ ],
  "trimmed": [
   "lane_next",
   "queue_text",
   "recent",
   "task_done",
+  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -609,12 +681,12 @@
  ],
  "agents_now": {
   "main": 0,
-  "lanes": 0,
-  "total": 0,
-  "at": "10:32 PM",
-  "why": "Plan limit: the weekly allowance is used up; it resets Sun 2:00 AM ET. Last check 10:32 PM ET.",
-  "at_iso": "2026-11-22T03:32:00+00:00",
+  "lanes": 1,
+  "total": 1,
+  "at": "10:37 PM",
+  "why": "",
+  "at_iso": "2026-11-22T03:37:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 10:32 PM ET</p><p class=\"an-why\">Plan limit: the weekly allowance is used up; it resets Sun 2:00 AM ET. Last check 10:32 PM ET.</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 10:37 PM ET</p></section>"
  }
 }

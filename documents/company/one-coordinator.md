@@ -151,7 +151,10 @@ classifier before; each worker tries once in its own copy, and a refusal stops t
 then goes as a patch through the applier's proposal path or to the Investors. Without slices 4 and 5 the switch has
 nothing to turn on, so "on by Saturday 11-21 evening" depends on those two passing the guard today.
 
-### Step 3 not on main: COORD stays 0 for the comparison (T-5453, Odalys, 11-21 11:25 PM ET)
+### Step 3 not on main: COORD stays 0 for the comparison (T-5453, Odalys, 11-21 11:25 PM ET; reversed 11-22 12:41 AM)
+
+History. The Investors reversed this record-off at 12:41 AM ET 11-22 (an Investor #325 c7074887817); the section that
+follows it says what holds now. Kept as written at the time.
 
 T-5453 switches the coordinator on only if slices 2 to 6 (T-5448 to T-5452) are on main by Saturday 11-21 evening.
 They were not, so the line takes its other path, as the Operator ruled on the Investors' decision: Step 3 is not on
@@ -185,7 +188,8 @@ to check, and T-5399's own changes to tools/supervisor.sh, tools/personal_tick.s
 tools/jobs_loop.py were not made. The land and the between-session jobs run on each road as they did before the
 comparison; the jobs loop T-4958 installed is unchanged.
 
-Left for after the comparison (from 11-26):
+Left for after the comparison (from 11-26), as written at 11:25 PM 11-21; items 1 to 3 are overtaken by the next
+section.
 
 1. T-5450: Pernille's review, then its tick.
 2. T-5451 and T-5452 on main. Both change a guarded starter; a refusal still goes as a proposal (Commandment 14).
@@ -197,6 +201,52 @@ Left for after the comparison (from 11-26):
    landed.
 5. Step 4 (T-3303), the 48-hour check, against the numbers at the top of this page.
 6. The hook proposal at the end of this page stays with the Operator.
+
+### Step 3 on main and switched on: COORD=1 for the comparison (T-5453, Odalys, 11-22)
+
+The Investors ruled at 12:41 AM ET 11-22 (an Investor #325 c7074887817, log/<span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">rulings</span>.md): "COORD=1 will be set for the
+comparison. We want to use one operator for both merge roads during rhe comparison. Fix this immediately". The
+record-off above is reversed: one coordinator serves both merge roads for the comparison, 11-22 to 11-25.
+
+Every slice of Step 3 is now on main (`git log main`):
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 5: Step 3 on main and switched on: COORD=1 for the comparison (T-5453, Odalys…, scrolls sideways" data-n="1" style="--tw:449px" markdown="1">
+
+| # | Line | On main |
+| --- | --- | --- |
+| 1 | T-5447 | 56e8481df0, bf0cf7516f (the switch and the one-task worker plan, off) |
+| 2 | T-5448 | 2675da5575 (one task per free slot, `kick` on a worker's exit) |
+| 3 | T-5449 | b4dae2ee5e, 66299e9ee4 (the coordinator's prompt) |
+| 4 | T-5450 | 9decedf6fe (the supervisor starts and keeps the coordinator) |
+| 5 | T-5451 | 87ff1e51ac (each personal slot a one-task worker, handing to the road ops/merge_road.json names) |
+| 6 | T-5452 | 21fd2671f9 (the main plan's work as plain one-task workers in their own copies) |
+| fix | T-5555 | c25cf2f841 (the coordinator's own run kind, coord, fixing Pernille's H1/M1/M2 FAIL of T-5450) |
+
+</div>
+
+
+T-5555 also set ops/coord.json "coord" to 1 (c25cf2f841, 3:13 AM ET 11-22), so the switch is on. With it the main plan's work
+and each personal slot run as plain one-task workers, and one coordinator, kept running by the keeper, holds the
+inbox, board, plans, review assignments and reports for both roads. The old path stays one setting away (COORD=0).
+T-5555's own line is still open on the board.
+
+Not yet recorded on this page: the drain and `tools/personal_land.sh road-check` that T-5453's line puts before the
+switch (the ruling asked for the switch at once), one worker seen from start to its branch reaching the road, and the
+keeper restarting the coordinator once. They are noted here when seen; they are also the brief check T-5399 waits on.
+
+What is left, under the ruling:
+
+1. Seeing Step 3 work, as in the paragraph above, on both roads' days.
+2. T-5399 (Steps 1 and 2). The 12:41 AM ruling names Step 3 only; it does not reverse T-5399's record-off (b63ff702d5),
+   so Steps 1 and 2 stay off and none of T-5399's target files is changed. T-5399's condition (Step 3 on, and a
+   brief check that it works) can now be met once the check above is seen, but the comparison began at 2:00 AM
+   11-22 and Steps 1 and 2 change the old road itself (an Investor #325 c7049480636, 11-20 3:08 PM), while #325
+   c7049941829 (3:32 PM) wanted them in before the comparison. Whether they go in during the four days is for the
+   Operator to settle with the Investors; until then the cautious reading holds: off for 11-22 to 11-25, re-cut
+   against main from 11-26, and this page records them when they land.
+3. Step 4 (T-3303), the 48-hour check, against the numbers at the top of this page.
+4. The hook proposal at the end of this page stays with the Operator.
 
 ## What it should save
 
@@ -236,7 +286,7 @@ process). The supervisor's fixed tick goes from 15 to 5 minutes as the safety ne
 Three stay in the supervisor's between-session steps, each for a reason:
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 5: What stays between sessions (T-4958, 2026-11-18), scrolls sideways" style="--tw:640px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 6: What stays between sessions (T-4958, 2026-11-18), scrolls sideways" style="--tw:640px" markdown="1">
 
 | Job | Why it stays between sessions |
 | --- | --- |
@@ -260,7 +310,7 @@ gives every job back to the tick at once (`jobs_loop.py moved` prints nothing).
 Slice 3 (ops/prompts/coordinator.md) holds the rule by the prompt alone. Odalys judges a hook worth having: the whole
 saving of step 3 (32.3 seat-h of cold starts, 20.2 of wind-downs) rests on the coordinator not becoming the workers'
 parent again, and a prompt drifts as its context grows, which is exactly when this session runs longest. an Investor
-#325 c7067153738 (1:18 PM ET 11-21, log/<span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">rulings</span>.md) lets workers change guard files through the applier before 2:00 AM
+#325 c7067153738 (1:18 PM ET 11-21, log/rulings.md) lets workers change guard files through the applier before 2:00 AM
 ET 11-22; this text is for the Operator to apply or drop.
 
 - **Where.** rules/hooks/model-guard.py, already the hook on `Agent|Task` (.claude/settings.json); no new hook entry.

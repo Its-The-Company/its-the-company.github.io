@@ -126,6 +126,8 @@ None.
 ### Board lines
 
 None filed. No must-fix, so none is required. My `board_tick.py add --end --by "review of T-4846"` for S1, S2+S3 and the deflake fix was refused (7:35 PM): two titles were over 10 words / 64 characters. Under the refusal rule I stopped that item there. Even though it was refused, the add joined S1 to open T-5113 (a lock fix, unrelated), because the Targets and Done when matched: main's live `ops/board.md` now says "notes: 2" on T-5113, and `ops/board_notes/T-5113.md` has a "joined at add 2026-11-21 19:35 (by review of T-4846)" note. Both are uncommitted on main, and I did not edit them by hand. Left for the Operator: undo that join, file S1-S3 for Odalys (P2) and the deflake fix for me (P1), and note that a refused add still wrote a join (it was not all or nothing).
+
+**Follow-ups, filed after that refusal (checked on main's board 2026-11-21).** S1 and S2 are T-5510 (Odalys, P2: `python3 -u -I`, the print-then-cut-off row, the stderr traceback row, no "Terminated" on stderr); S3 is T-5511 (Odalys, P2: the off switch in `tests/run.sh`); the deflake fix is T-5512 (Pernille, P1: reruns without the known-red skip, red then green gives "flip"). The join on T-5113 stays as a note there, with the Operator's note that it is T-5510's work, not T-5113's. personal_land_test's two rows are on T-4807's notes as one row, fixed by b6b0ab5a6b (T-4726).
 {% endraw %}
 
 </div>

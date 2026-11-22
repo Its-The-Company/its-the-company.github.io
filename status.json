@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-22T16:40:13.315899+00:00",
+ "at": "2026-11-22T16:47:43.553506+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -64,7 +64,7 @@
    "task": "[report] morning",
    "model": "opus",
    "started": "2026-11-22T16:12:41.682Z",
-   "seconds": 1651,
+   "seconds": 2101,
    "finished": null
   }
  ],
@@ -122,7 +122,7 @@
   "week_pct": 2.42,
   "usage_pct": 79.3,
   "work_pct": 88.2,
-  "read_at": "2026-11-22T16:44:00+00:00",
+  "read_at": "2026-11-22T16:47:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -159,7 +159,7 @@
  "lock_in": {
   "on": true,
   "pool": 3,
-  "at": "2026-11-22T11:44:00-05:00",
+  "at": "2026-11-22T11:47:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -375,17 +375,17 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-22T16:40:13Z",
+  "at": "2026-11-22T16:47:32Z",
   "s": {
    "T-5399": [
     "merging",
     "Host checks on the Mac mini \u00b7 1 of 3 groups of tests done",
-    1795365613315
+    1795365632779
    ],
    "T-5588": [
     "merging",
     "Mac tests at the main gate",
-    1795365553315
+    1795365632779
    ],
    "T-5262": [
     "testing",
@@ -405,7 +405,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-22T16:40:13Z",
+  "at": "2026-11-22T16:47:32Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -417,13 +417,13 @@
     "parked": 4
    },
    "m": {
-    "checking": 0,
+    "checking": 7,
     "inline": null,
     "conflicted": null,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 701
+    "parked": 709
    },
    "cur": [
     [
@@ -432,7 +432,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     0
+     7
     ]
    ],
    "ld": [
@@ -442,28 +442,17 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-22T16:41:03Z",
-    "ld": 11.23,
+    "at": "2026-11-22T16:47:36Z",
+    "ld": 13.67,
     "c": 8,
     "sb": 0,
     "dk": [
-     54.6,
+     54.4,
      228.3
     ],
     "ss": [
      171.6,
      953.7
-    ],
-    "sn": []
-   },
-   "macbook": {
-    "at": "2026-11-22T16:05:36Z",
-    "ld": 0.22,
-    "c": 12,
-    "sb": 0,
-    "dk": [
-     356.9,
-     926.4
     ],
     "sn": []
    }
@@ -495,11 +484,11 @@
      "open": false
     }
    },
-   "at": "2026-11-22T16:40:13+00:00"
+   "at": "2026-11-22T16:47:43+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-22T16:40:13+00:00"
+   "at": "2026-11-22T16:47:43+00:00"
   }
  },
  "operators": [
@@ -532,10 +521,10 @@
   "main": 1,
   "lanes": 0,
   "total": 1,
-  "at": "11:44 AM",
+  "at": "11:47 AM",
   "why": "",
-  "at_iso": "2026-11-22T16:44:00+00:00",
+  "at_iso": "2026-11-22T16:47:00+00:00",
   "started": "11:04 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 11:04 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 11:44 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 11:04 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 11:47 AM ET</p></section>"
  }
 }

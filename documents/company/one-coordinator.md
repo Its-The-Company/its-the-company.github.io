@@ -151,6 +151,53 @@ classifier before; each worker tries once in its own copy, and a refusal stops t
 then goes as a patch through the applier's proposal path or to the Investors. Without slices 4 and 5 the switch has
 nothing to turn on, so "on by Saturday 11-21 evening" depends on those two passing the guard today.
 
+### Step 3 not on main: COORD stays 0 for the comparison (T-5453, Odalys, 11-21 11:25 PM ET)
+
+T-5453 switches the coordinator on only if slices 2 to 6 (T-5448 to T-5452) are on main by Saturday 11-21 evening.
+They were not, so the line takes its other path, as the Operator ruled on the Investors' decision: Step 3 is not on
+main, and `COORD` stays 0 (ops/coord.json "coord": 0) for all four comparison days, 11-22 to 11-25. Both roads run the
+comparison on today's path.
+
+At the cutoff (`git log main` and the board, 11:25 PM ET 11-21):
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 4: Step 3 not on main: COORD stays 0 for the comparison (T-5453, Odalys, 11-21…, scrolls sideways" data-n="1" style="--tw:444px" markdown="1">
+
+| # | Line | State |
+| --- | --- | --- |
+| 2 | T-5448 | on main, ticked |
+| 3 | T-5449 | on main, ticked |
+| 4 | T-5450 | code on main (9decedf6fe, off by default); Pernille's review still under way, not ticked |
+| 5 | T-5451 | not on main, open |
+| 6 | T-5452 | not on main, open (needs T-5450) |
+
+</div>
+
+
+Without slice 5 the personal slots still run chained sessions, and without slice 6 the main plan's work has no
+plain-worker starter, so COORD=1 would have had nothing to turn on for either road. No drain was run and nothing was
+switched.
+
+Steps 1 and 2 as T-5399 re-cuts them (the land as its own job, and the between-session jobs beside the workers, the
+same change on both roads) are left off for the same four days. That line adds them only after Step 3 is on and a
+brief check shows it works, by Saturday evening (an Investor #325 c7049941829). Step 3 is not on, so there was nothing
+to check, and T-5399's own changes to tools/supervisor.sh, tools/personal_tick.sh, tools/personal_land.sh and
+tools/jobs_loop.py were not made. The land and the between-session jobs run on each road as they did before the
+comparison; the jobs loop T-4958 installed is unchanged.
+
+Left for after the comparison (from 11-26):
+
+1. T-5450: Pernille's review, then its tick.
+2. T-5451 and T-5452 on main. Both change a guarded starter; a refusal still goes as a proposal (Commandment 14).
+3. T-5453's other path: a drain, `tools/personal_land.sh road-check` clear, COORD=1 on both roads, one worker seen
+   from start to its branch reaching the road, the keeper restarting the coordinator once; then this page records
+   Step 3 as landed and on.
+4. T-5399: Steps 1 and 2 re-cut against main as it is then, after a brief check of Step 3 (each account runs work
+   sessions under it, no gap left by the coordinator, the figures on this page); then this page records them as
+   landed.
+5. Step 4 (T-3303), the 48-hour check, against the numbers at the top of this page.
+6. The hook proposal at the end of this page stays with the Operator.
+
 ## What it should save
 
 Since 11-04, at the governor's targets: 21.7 (step 1) + 163.3 (step 2; 118.0 without the 11-05 held lock, already fixed) +
@@ -189,7 +236,7 @@ process). The supervisor's fixed tick goes from 15 to 5 minutes as the safety ne
 Three stay in the supervisor's between-session steps, each for a reason:
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 4: What stays between sessions (T-4958, 2026-11-18), scrolls sideways" style="--tw:640px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 5: What stays between sessions (T-4958, 2026-11-18), scrolls sideways" style="--tw:640px" markdown="1">
 
 | Job | Why it stays between sessions |
 | --- | --- |

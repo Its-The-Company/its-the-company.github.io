@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-22T08:01:34.614949+00:00",
+ "at": "2026-11-22T08:14:19.045277+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -96,7 +96,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 681,
+  "runnable_count": 680,
   "blocked_count": 2
  },
  "meter": {
@@ -145,7 +145,7 @@
   "week_pct": 1.56,
   "usage_pct": 93.8,
   "work_pct": 87.5,
-  "read_at": "2026-11-22T08:12:00+00:00",
+  "read_at": "2026-11-22T08:14:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -182,7 +182,7 @@
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-22T03:12:00-05:00",
+  "at": "2026-11-22T03:14:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -193,7 +193,7 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Double Spread: 100% of the week left, paced to last until Wed 14:00, the week's halfway point; the machine allows 47 (cut a step: load 13.1 a core is over 10)",
+  "why": "Double Spread: 100% of the week left, paced to last until Wed 14:00, the week's halfway point; the machine allows 46 (cut a step: load 21.9 a core is over 10)",
   "n": 2,
   "at": "2026-11-22T02:43:32.655332-05:00"
  },
@@ -325,6 +325,11 @@
   "done": [
    {
     "w": "Odalys",
+    "t": "The coordinator now has its own run kind, coord, with its own stream, record and budget cap,...",
+    "at": "2026-11-22T03:14:00-05:00"
+   },
+   {
+    "w": "Odalys",
     "t": "The split build-for-testing and test-without-building pair now runs on the MacBook runner as one...",
     "at": "2026-11-22T02:39:00-05:00"
    },
@@ -332,22 +337,22 @@
     "w": "Operator",
     "t": "A later MacBook job for the same work (J-20261122-0202-xc-test-launcher) passed, so the failed...",
     "at": "2026-11-22T02:20:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "With COORD=1 each personal slot runs one task with no chain, hands its branch to the road...",
-    "at": "2026-11-22T01:57:00-05:00"
    }
   ],
   "count": {
-   "next": 681,
+   "next": 680,
    "wait": 2,
    "blocked": 0,
    "you": 2
   },
   "fin": {
-   "n": 0,
-   "rows": []
+   "n": 1,
+   "rows": [
+    [
+     "T-5555",
+     "Give the coordinator its own..."
+    ]
+   ]
   }
  },
  "qr": [
@@ -389,38 +394,30 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-22T08:01:34Z",
+  "at": "2026-11-22T08:12:40Z",
   "s": {
    "T-5262": [
     "merging",
-    "Mac tests at the main gate",
-    1795334434614
+    "Mac tests at the main gate \u00b7 1 group of tests done",
+    1795334560071
    ],
    "T-5555": [
     "merging",
     "Mac tests at the main gate",
-    1795333474614
-   ],
-   "T-5453": [
-    "merged",
-    "on main 2:43 AM ET",
-    1795333403000,
-    ""
+    1795333540071
    ]
   },
   "nm": {
    "T-5262": "Trim step 9, merge checks agree on every run",
-   "T-5555": "Give the coordinator its own run kind",
-   "T-5453": "Switch the coordinator on, or record it off"
+   "T-5555": "Give the coordinator its own run kind"
   },
   "wk": {
    "T-5262": "Odalys",
-   "T-5555": "Odalys",
-   "T-5453": "Odalys"
+   "T-5555": "Odalys"
   }
  },
  "ln": {
-  "at": "2026-11-22T08:01:34Z",
+  "at": "2026-11-22T08:12:40Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -435,10 +432,10 @@
     "checking": null,
     "inline": null,
     "conflicted": null,
-    "failed": 59,
+    "failed": 70,
     "held": null,
     "retry": null,
-    "parked": 200
+    "parked": 211
    },
    "cur": [],
    "ld": [
@@ -448,12 +445,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-22T08:01:01Z",
-    "ld": 10.74,
+    "at": "2026-11-22T08:12:38Z",
+    "ld": 21.27,
     "c": 8,
     "sb": 0,
     "dk": [
-     56.0,
+     57.9,
      228.3
     ],
     "ss": [
@@ -490,11 +487,11 @@
      "open": true
     }
    },
-   "at": "2026-11-22T08:01:34+00:00"
+   "at": "2026-11-22T08:14:19+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-22T08:01:34+00:00"
+   "at": "2026-11-22T08:14:19+00:00"
   }
  },
  "operators": [
@@ -517,6 +514,7 @@
   "lane_next",
   "queue_text",
   "task_done",
+  "fin_short",
   "task_title",
   "done_text",
   "task_open",
@@ -527,10 +525,10 @@
   "main": 0,
   "lanes": 0,
   "total": 0,
-  "at": "3:12 AM",
-  "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
-  "at_iso": "2026-11-22T08:12:00+00:00",
-  "started": "2:43 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0, started 2:43 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 3:12 AM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
+  "at": "3:14 AM",
+  "why": "Between sessions: no session is running. Last check 2:43 AM ET.",
+  "at_iso": "2026-11-22T08:14:00+00:00",
+  "started": "",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 3:14 AM ET</p><p class=\"an-why\">Between sessions: no session is running. Last check 2:43 AM ET.</p></section>"
  }
 }

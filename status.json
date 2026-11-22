@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-22T22:06:42.654761+00:00",
+ "at": "2026-11-22T22:09:45.615843+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -12,6 +12,17 @@
    "last_handoff": 1795367557
   },
   "flow": [
+   {
+    "t": "T-5607",
+    "name": "Step 9's MacBook runs disagree on two Pro tests",
+    "acct": "Personal b",
+    "steps": [
+     {
+      "s": "testq",
+      "at": 1795385244
+     }
+    ]
+   },
    {
     "t": "T-5262",
     "name": "Trim step 9, merge checks agree on every run",
@@ -120,7 +131,7 @@
   "week_pct": 2.42,
   "usage_pct": 68.7,
   "work_pct": 88.2,
-  "read_at": "2026-11-22T22:06:00+00:00",
+  "read_at": "2026-11-22T22:09:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -173,7 +184,7 @@
  "lock_in": {
   "on": true,
   "pool": 3,
-  "at": "2026-11-22T17:06:00-05:00",
+  "at": "2026-11-22T17:09:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -385,35 +396,34 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-22T22:06:42Z",
+  "at": "2026-11-22T22:09:33Z",
   "s": {
-   "T-5262": [
-    "mergetest",
-    "iPhone tests on the MacBook",
-    null
-   ],
    "T-5607": [
-    "merged",
-    "on main 4:21 PM ET",
-    1795382503000,
-    "Idris"
+    "merging",
+    "Host checks on the Mac mini",
+    1795385253902
+   ],
+   "T-5262": [
+    "testq",
+    "1st for a Simulator",
+    1795385313902
    ]
   },
   "nm": {
-   "T-5262": "Trim step 9, merge checks agree on every run",
-   "T-5607": "Step 9's MacBook runs disagree on two Pro tests"
+   "T-5607": "Step 9's MacBook runs disagree on two Pro tests",
+   "T-5262": "Trim step 9, merge checks agree on every run"
   },
   "wk": {
-   "T-5262": "Odalys",
    "T-5607": "Idris",
+   "T-5262": "Odalys",
    "T-5399": "Odalys"
   }
  },
  "ln": {
-  "at": "2026-11-22T22:06:42Z",
+  "at": "2026-11-22T22:09:33Z",
   "mq": {
    "n": {
-    "checking": 0,
+    "checking": 1,
     "inline": 0,
     "conflicted": 0,
     "failed": 0,
@@ -422,15 +432,24 @@
     "parked": 4
    },
    "m": {
-    "checking": null,
+    "checking": 2,
     "inline": null,
     "conflicted": null,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1028
+    "parked": 1031
    },
-   "cur": [],
+   "cur": [
+    [
+     [
+      "T-5607"
+     ],
+     "Mac tests",
+     "Mac mini",
+     2
+    ]
+   ],
    "ld": [
     11,
     "2026-11-22T09:51:12Z"
@@ -438,12 +457,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-22T22:06:19Z",
-    "ld": 1.71,
+    "at": "2026-11-22T22:09:08Z",
+    "ld": 1.41,
     "c": 8,
     "sb": 0,
     "dk": [
-     66.2,
+     66.1,
      228.3
     ],
     "ss": [
@@ -453,12 +472,12 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-22T21:59:04Z",
-    "ld": 0.63,
+    "at": "2026-11-22T22:06:53Z",
+    "ld": 0.68,
     "c": 12,
     "sb": 0,
     "dk": [
-     354.8,
+     354.7,
      926.4
     ],
     "sn": []
@@ -467,16 +486,16 @@
  },
  "hc": {
   "wait": {
-   "n": 4,
+   "n": 5,
    "limit": 20,
-   "in_line": 0,
+   "in_line": 1,
    "parked": 4,
    "open": true,
    "mq": false,
-   "counted": "2026-11-22T21:57:30+00:00",
+   "counted": "2026-11-22T22:07:54+00:00",
    "by": {
     "app": {
-     "n": 2,
+     "n": 3,
      "limit": 20,
      "open": true
     },
@@ -491,11 +510,11 @@
      "open": true
     }
    },
-   "at": "2026-11-22T22:06:42+00:00"
+   "at": "2026-11-22T22:09:45+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-22T22:06:42+00:00"
+   "at": "2026-11-22T22:09:39+00:00"
   }
  },
  "operators": [
@@ -507,15 +526,6 @@
    "e": "high",
    "t": "Work session",
    "at": "2026-11-22T15:06:25-05:00"
-  },
-  {
-   "w": "Operator",
-   "a": "Jeremy's Account",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session \u2013 1 task",
-   "at": "2026-11-22T16:48:40-05:00"
   }
  ],
  "reply": {
@@ -538,10 +548,10 @@
   "main": 0,
   "lanes": 1,
   "total": 1,
-  "at": "5:06 PM",
+  "at": "5:09 PM",
   "why": "",
-  "at_iso": "2026-11-22T22:06:00+00:00",
+  "at_iso": "2026-11-22T22:09:00+00:00",
   "started": "2:57 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0, started 2:57 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 5:06 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0, started 2:57 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 5:09 PM ET</p></section>"
  }
 }

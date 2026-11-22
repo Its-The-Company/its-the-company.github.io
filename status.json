@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-22T10:06:28.883251+00:00",
+ "at": "2026-11-22T10:09:33.202510+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -83,7 +83,7 @@
   "week_pct": 2.42,
   "usage_pct": 84.5,
   "work_pct": 88.2,
-  "read_at": "2026-11-22T10:06:00+00:00",
+  "read_at": "2026-11-22T10:09:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -120,7 +120,7 @@
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-22T05:06:00-05:00",
+  "at": "2026-11-22T05:09:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -327,17 +327,17 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-22T10:06:20Z",
+  "at": "2026-11-22T10:09:19Z",
   "s": {
    "T-5399": [
     "merging",
     "Host checks on the Mac mini \u00b7 1 of 3 groups of tests done",
-    1795341680529
+    1795341679585
    ],
    "T-5262": [
     "merging",
     "Mac tests at the main gate \u00b7 9 groups of tests done, 1 red",
-    1795340180529
+    1795340179585
    ]
   },
   "nm": {
@@ -350,7 +350,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-22T10:06:20Z",
+  "at": "2026-11-22T10:09:19Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -362,13 +362,13 @@
     "parked": 5
    },
    "m": {
-    "checking": 5,
+    "checking": 8,
     "inline": null,
     "conflicted": null,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 324
+    "parked": 327
    },
    "cur": [
     [
@@ -377,7 +377,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     5
+     8
     ]
    ],
    "ld": [
@@ -387,12 +387,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-22T10:06:22Z",
-    "ld": 4.96,
+    "at": "2026-11-22T10:08:31Z",
+    "ld": 4.74,
     "c": 8,
     "sb": 0,
     "dk": [
-     54.6,
+     56.9,
      228.3
     ],
     "ss": [
@@ -418,11 +418,11 @@
   "wait": {
    "n": 6,
    "limit": 20,
-   "in_line": 0,
-   "parked": 6,
+   "in_line": 1,
+   "parked": 5,
    "open": true,
    "mq": false,
-   "counted": "2026-11-22T09:51:30+00:00",
+   "counted": "2026-11-22T10:08:35+00:00",
    "by": {
     "app": {
      "n": 3,
@@ -440,11 +440,11 @@
      "open": false
     }
    },
-   "at": "2026-11-22T10:06:28+00:00"
+   "at": "2026-11-22T10:09:33+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-22T10:06:20+00:00"
+   "at": "2026-11-22T10:09:26+00:00"
   }
  },
  "operators": [
@@ -454,31 +454,19 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Inbox \u2013 Evan's 5:05 AM Message on GitHub",
-   "at": "2026-11-22T05:05:52-05:00"
+   "t": "Work session",
+   "at": "2026-11-22T05:07:26-05:00"
   }
  ],
  "reply": {
-  "sent": "2026-11-22T09:56:58Z",
-  "seconds": 362.0
+  "sent": "2026-11-22T10:05:19Z",
+  "seconds": 126.0
  },
- "inbox": [
-  {
-   "id": "c7077563938",
-   "state": "received",
-   "position": 1,
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "I auto-approve any proposal that..."
-  }
- ],
+ "inbox": [],
  "trimmed": [
   "lane_next",
   "queue_text",
   "task_done",
-  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -489,10 +477,10 @@
   "main": 0,
   "lanes": 0,
   "total": 0,
-  "at": "5:06 AM",
+  "at": "5:09 AM",
   "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
-  "at_iso": "2026-11-22T10:06:00+00:00",
+  "at_iso": "2026-11-22T10:09:00+00:00",
   "started": "5:00 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0, started 5:00 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 5:06 AM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0, started 5:00 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 5:09 AM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
  }
 }

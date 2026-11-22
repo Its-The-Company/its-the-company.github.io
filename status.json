@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-22T07:16:13.246997+00:00",
+ "at": "2026-11-22T07:19:57.502261+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -147,7 +147,7 @@
   "week_pct": 1.55,
   "usage_pct": 100.0,
   "work_pct": 100.0,
-  "read_at": "2026-11-22T07:16:00+00:00",
+  "read_at": "2026-11-22T07:20:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -184,7 +184,7 @@
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-22T02:16:00-05:00",
+  "at": "2026-11-22T02:20:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -391,12 +391,12 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-22T07:16:13Z",
+  "at": "2026-11-22T07:19:39Z",
   "s": {
    "T-5262": [
     "merging",
-    "Mac tests at the main gate \u00b7 5 groups of tests done, 1 red",
-    1795331053246
+    "Mac tests at the main gate \u00b7 7 groups of tests done, 1 red",
+    1795331079290
    ]
   },
   "nm": {
@@ -407,7 +407,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-22T07:16:13Z",
+  "at": "2026-11-22T07:19:39Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -422,10 +422,10 @@
     "checking": null,
     "inline": null,
     "conflicted": null,
-    "failed": 13,
+    "failed": 17,
     "held": null,
-    "retry": 154,
-    "parked": 2436
+    "retry": 158,
+    "parked": 2439
    },
    "cur": [],
    "ld": [
@@ -435,12 +435,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-22T07:16:18Z",
-    "ld": 1.81,
+    "at": "2026-11-22T07:19:16Z",
+    "ld": 2.45,
     "c": 8,
     "sb": 0,
     "dk": [
-     58.0,
+     57.9,
      228.3
     ],
     "ss": [
@@ -464,13 +464,13 @@
  },
  "hc": {
   "wait": {
-   "n": 9,
+   "n": 7,
    "limit": 20,
-   "in_line": 3,
-   "parked": 6,
+   "in_line": 0,
+   "parked": 7,
    "open": true,
    "mq": false,
-   "counted": "2026-11-22T07:01:14+00:00",
+   "counted": "2026-11-22T07:19:12+00:00",
    "by": {
     "app": {
      "n": 4,
@@ -478,7 +478,7 @@
      "open": true
     },
     "other": {
-     "n": 6,
+     "n": 4,
      "limit": 20,
      "open": true
     },
@@ -488,11 +488,11 @@
      "open": true
     }
    },
-   "at": "2026-11-22T07:16:13+00:00"
+   "at": "2026-11-22T07:19:57+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-22T07:16:13+00:00"
+   "at": "2026-11-22T07:19:57+00:00"
   }
  },
  "operators": [
@@ -525,10 +525,10 @@
   "main": 0,
   "lanes": 0,
   "total": 0,
-  "at": "2:16 AM",
+  "at": "2:20 AM",
   "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
-  "at_iso": "2026-11-22T07:16:00+00:00",
+  "at_iso": "2026-11-22T07:20:00+00:00",
   "started": "2:10 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0, started 2:10 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 2:16 AM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0, started 2:10 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 2:20 AM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
  }
 }

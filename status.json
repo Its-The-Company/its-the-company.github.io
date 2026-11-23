@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-23T15:40:41.885331+00:00",
+ "at": "2026-11-23T15:43:56.893918+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -425,7 +425,7 @@
   "week_pct": 63.62,
   "usage_pct": 85.3,
   "work_pct": 96.6,
-  "read_at": "2026-11-23T15:40:00+00:00",
+  "read_at": "2026-11-23T15:44:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -471,7 +471,7 @@
   }
  ],
  "disk": {
-  "free_gb": 39,
+  "free_gb": 41,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -480,14 +480,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-23T10:36:00-05:00",
+   "at": "2026-11-23T10:42:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-23T10:40:00-05:00",
+  "at": "2026-11-23T10:44:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -498,7 +498,7 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 8 (at its floor: load 19.3 a core is over 10)",
+  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 8 (at its floor: load 26.4 a core is over 10)",
   "n": 8,
   "at": "2026-11-23T09:25:38.709305-05:00"
  },
@@ -774,27 +774,27 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-23T15:40:41Z",
+  "at": "2026-11-23T15:43:56Z",
   "s": {
    "T-4184": [
     "mergetest",
     "Xcode checks on the MacBook, 1st to merge",
-    1795448321885
+    1795448336893
    ],
    "T-5688": [
     "mergeq",
     "2nd to merge",
-    1795447421885
+    1795447436893
    ],
    "T-5491": [
     "mergeq",
     "3rd to merge",
-    1795446161885
+    1795446176893
    ],
    "T-4192": [
     "mergeq",
     "4th to merge",
-    1795445201885
+    1795445216893
    ],
    "T-5524": [
     "mergetest",
@@ -805,6 +805,21 @@
     "testing",
     "Mac Mini \u00b7 test",
     null
+   ],
+   "T-4715": [
+    "testq",
+    "1st for a Simulator",
+    1795448456893
+   ],
+   "T-5256": [
+    "testq",
+    "1st for a Simulator",
+    1795448456893
+   ],
+   "T-5602": [
+    "testq",
+    "1st for a Simulator",
+    1795448456893
    ]
   },
   "nm": {
@@ -813,7 +828,10 @@
    "T-5491": "Drop the swallow test's five-second bound",
    "T-4192": "Python in the app: smaller bundle, installable packages",
    "T-5524": "Make the widget's Debug ask record say what it saw",
-   "T-5480": "Escape corpus sends wrong-shaped calls to known capabilities"
+   "T-5480": "Escape corpus sends wrong-shaped calls to known capabilities",
+   "T-4715": "Put the new Pro screen words into the app",
+   "T-5256": "Trim step 3, one merge script beside the old road",
+   "T-5602": "Brief for a new look for the app"
   },
   "wk": {
    "T-4184": "Idris",
@@ -822,6 +840,9 @@
    "T-4192": "Idris",
    "T-5524": "Idris",
    "T-5480": "Idris",
+   "T-4715": "Maren",
+   "T-5256": "Odalys",
+   "T-5602": "Maren",
    "T-4220": "Idris",
    "T-3847": "Idris",
    "T-4692": "Idris",
@@ -833,7 +854,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-23T15:40:41Z",
+  "at": "2026-11-23T15:43:56Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -845,13 +866,13 @@
     "parked": 13
    },
    "m": {
-    "checking": 2,
-    "inline": 38,
+    "checking": 5,
+    "inline": 41,
     "conflicted": null,
     "failed": null,
-    "held": 372,
+    "held": 375,
     "retry": null,
-    "parked": 372
+    "parked": 375
    },
    "cur": [
     [
@@ -860,7 +881,7 @@
      ],
      "iPhone app tests, sent and waiting its turn",
      "MacBook",
-     2
+     5
     ]
    ],
    "ld": [
@@ -870,12 +891,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-23T15:40:48Z",
-    "ld": 19.83,
+    "at": "2026-11-23T15:43:59Z",
+    "ld": 25.17,
     "c": 8,
     "sb": 1,
     "dk": [
-     39.3,
+     41.5,
      228.3
     ],
     "ss": [
@@ -901,16 +922,16 @@
  },
  "hc": {
   "wait": {
-   "n": 21,
+   "n": 20,
    "limit": 20,
    "in_line": 4,
-   "parked": 17,
+   "parked": 16,
    "open": true,
    "mq": false,
-   "counted": "2026-11-23T15:32:09+00:00",
+   "counted": "2026-11-23T15:42:25+00:00",
    "by": {
     "app": {
-     "n": 14,
+     "n": 13,
      "limit": 20,
      "open": true
     },
@@ -925,11 +946,11 @@
      "open": true
     }
    },
-   "at": "2026-11-23T15:40:41+00:00"
+   "at": "2026-11-23T15:43:56+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-23T15:40:41+00:00"
+   "at": "2026-11-23T15:43:56+00:00"
   }
  },
  "operators": [
@@ -946,6 +967,8 @@
    "w": "Operator",
    "a": "Jeremy's Account",
    "sr": 1,
+   "m": "opus",
+   "e": "high",
    "t": "Work session \u2013 1 task",
    "at": "2026-11-23T10:04:45-05:00"
   },
@@ -953,8 +976,10 @@
    "w": "Operator",
    "a": "Jeremy's Account",
    "sr": 1,
+   "m": "opus",
+   "e": "high",
    "t": "Work session \u2013 1 task",
-   "at": "2026-11-23T10:13:47-05:00"
+   "at": "2026-11-23T10:13:46-05:00"
   }
  ],
  "reply": {
@@ -978,10 +1003,10 @@
   "main": 0,
   "lanes": 2,
   "total": 2,
-  "at": "10:40 AM",
+  "at": "10:44 AM",
   "why": "",
-  "at_iso": "2026-11-23T15:40:00+00:00",
+  "at_iso": "2026-11-23T15:44:00+00:00",
   "started": "9:27 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0, started 9:27 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 10:40 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0, started 9:27 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 10:44 AM ET</p></section>"
  }
 }

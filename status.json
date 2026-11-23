@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-23T20:03:53.676448+00:00",
+ "at": "2026-11-23T20:07:05.056063+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -425,20 +425,8 @@
   "week_pct": 75.19,
   "usage_pct": 85.3,
   "work_pct": 96.6,
-  "read_at": "2026-11-23T20:04:00+00:00",
+  "read_at": "2026-11-23T20:07:00+00:00",
   "running": [
-   {
-    "lane": "a",
-    "task": "T-4185",
-    "w": "Idris",
-    "k": "build",
-    "t": "Launcher widgets open the apps a person chose",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-23T13:14:48-05:00",
-    "n": "Evan",
-    "src": "plan-a"
-   },
    {
     "lane": "a2",
     "task": "T-5722",
@@ -487,7 +475,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-23T15:04:00-05:00",
+  "at": "2026-11-23T15:07:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -555,15 +543,6 @@
  "tasks": {
   "run": [
    {
-    "w": "Idris",
-    "t": "Second tap on a half-hidden row keeps the text",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-23T13:47:34-05:00",
-    "o": "c",
-    "task": "T-5325"
-   },
-   {
     "w": "Pernille",
     "t": "UI test holds the Habits tap scroll",
     "m": "opus",
@@ -607,6 +586,15 @@
     "at": "2026-11-23T15:02:20-05:00",
     "o": "c",
     "task": "T-4183"
+   },
+   {
+    "w": "Idris",
+    "t": "Badge a distrusted widget even after a size move",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-23T15:04:02-05:00",
+    "o": "c",
+    "task": "T-4804"
    }
   ],
   "src": "plan",
@@ -774,37 +762,37 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-23T20:03:53Z",
+  "at": "2026-11-23T20:07:05Z",
   "s": {
    "T-5256": [
     "mergeq",
     "1st to merge",
-    1795461353676
+    1795461365056
    ],
    "T-5688": [
     "mergeq",
     "2nd to merge",
-    1795447433676
+    1795447445056
    ],
    "T-4715": [
     "mergeq",
     "3rd to merge",
-    1795460393676
+    1795460405056
    ],
    "T-5708": [
     "mergeq",
     "4th to merge",
-    1795460393676
+    1795460405056
    ],
-   "T-5325": [
+   "T-4185": [
+    "mergeq",
+    "5th to merge",
+    1795464365056
+   ],
+   "T-5542": [
     "testing",
     "Mac Mini \u00b7 test",
     null
-   ],
-   "T-5542": [
-    "testq",
-    "1st for a Simulator",
-    1795463633676
    ],
    "T-4190": [
     "merged",
@@ -818,7 +806,7 @@
    "T-5688": "Land finished work whose copy also changed the board",
    "T-4715": "Put the new Pro screen words into the app",
    "T-5708": "Clear the add-to-home steps before TestFlight",
-   "T-5325": "Second tap on a half-hidden row keeps the text",
+   "T-4185": "Launcher widgets open the apps a person chose",
    "T-5542": "UI test holds the Habits tap scroll",
    "T-4190": "Settings and Pro: buy, restore, themes"
   },
@@ -827,7 +815,7 @@
    "T-5688": "Odalys",
    "T-4715": "Maren",
    "T-5708": "Maren",
-   "T-5325": "Idris",
+   "T-4185": "Idris",
    "T-5542": "Idris",
    "T-4190": "Idris",
    "T-5713": "Pernille",
@@ -844,11 +832,11 @@
   }
  },
  "ln": {
-  "at": "2026-11-23T20:03:53Z",
+  "at": "2026-11-23T20:07:05Z",
   "mq": {
    "n": {
     "checking": 0,
-    "inline": 4,
+    "inline": 5,
     "conflicted": 0,
     "failed": 0,
     "held": 3,
@@ -857,12 +845,12 @@
    },
    "m": {
     "checking": null,
-    "inline": 64,
+    "inline": 67,
     "conflicted": null,
     "failed": null,
-    "held": 635,
+    "held": 638,
     "retry": null,
-    "parked": 635
+    "parked": 638
    },
    "cur": [],
    "ld": [
@@ -872,12 +860,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-23T20:03:20Z",
-    "ld": 15.13,
+    "at": "2026-11-23T20:06:30Z",
+    "ld": 21.53,
     "c": 8,
     "sb": 1,
     "dk": [
-     34.2,
+     36.5,
      228.3
     ],
     "ss": [
@@ -903,13 +891,13 @@
  },
  "hc": {
   "wait": {
-   "n": 21,
+   "n": 22,
    "limit": 20,
-   "in_line": 4,
+   "in_line": 5,
    "parked": 17,
    "open": true,
    "mq": false,
-   "counted": "2026-11-23T19:49:06+00:00",
+   "counted": "2026-11-23T20:06:02+00:00",
    "by": {
     "app": {
      "n": 14,
@@ -917,7 +905,7 @@
      "open": true
     },
     "other": {
-     "n": 12,
+     "n": 13,
      "limit": 20,
      "open": true
     },
@@ -927,11 +915,11 @@
      "open": true
     }
    },
-   "at": "2026-11-23T20:03:53+00:00"
+   "at": "2026-11-23T20:07:05+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-23T20:03:53+00:00"
+   "at": "2026-11-23T20:07:05+00:00"
   }
  },
  "operators": [
@@ -943,15 +931,6 @@
    "e": "high",
    "t": "Work session",
    "at": "2026-11-23T14:22:36-05:00"
-  },
-  {
-   "w": "Operator",
-   "a": "Evan's Account",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session \u2013 1 task",
-   "at": "2026-11-23T13:14:47-05:00"
   },
   {
    "w": "Operator",
@@ -982,12 +961,12 @@
  ],
  "agents_now": {
   "main": 0,
-  "lanes": 2,
-  "total": 2,
-  "at": "3:04 PM",
+  "lanes": 1,
+  "total": 1,
+  "at": "3:07 PM",
   "why": "",
-  "at_iso": "2026-11-23T20:04:00+00:00",
+  "at_iso": "2026-11-23T20:07:00+00:00",
   "started": "9:27 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0, started 9:27 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 3:04 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0, started 9:27 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 3:07 PM ET</p></section>"
  }
 }

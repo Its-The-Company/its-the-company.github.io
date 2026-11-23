@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-23T13:08:41.258182+00:00",
+ "at": "2026-11-23T13:13:36.105160+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -434,7 +434,7 @@
   "week_pct": 102.36,
   "usage_pct": 84.0,
   "work_pct": 95.0,
-  "read_at": "2026-11-23T13:10:00+00:00",
+  "read_at": "2026-11-23T13:13:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -510,7 +510,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-23T08:10:00-05:00",
+  "at": "2026-11-23T08:13:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -521,7 +521,7 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 8 (held: too few lands in 3 hours to judge a raise)",
+  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 8 (at its floor: load 20.0 a core is over 10)",
   "n": 8,
   "at": "2026-11-23T02:28:27.861501-05:00"
  },
@@ -621,6 +621,15 @@
     "at": "2026-11-23T08:05:15-05:00",
     "o": "c",
     "task": "T-4182"
+   },
+   {
+    "w": "Odalys",
+    "t": "Make main workers land their work",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-23T08:07:48-05:00",
+    "o": "c",
+    "task": "T-5675"
    }
   ],
   "src": "plan",
@@ -784,52 +793,62 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-23T13:08:41Z",
+  "at": "2026-11-23T13:13:36Z",
   "s": {
    "T-2076": [
     "mergeq",
     "1st to merge",
-    1795438661258
+    1795438656105
    ],
    "T-4468": [
     "mergeq",
     "1st to merge",
-    1795438661258
+    1795438656105
    ],
    "T-4282": [
     "mergeq",
     "1st to merge",
-    1795438661258
+    1795438656105
    ],
    "T-4554": [
     "mergeq",
     "1st to merge",
-    1795438661258
+    1795438656105
    ],
    "T-5479": [
     "mergeq",
     "2nd to merge",
-    1795439021258
+    1795439016105
    ],
    "T-0337": [
     "mergeq",
     "2nd to merge",
-    1795439021258
+    1795439016105
    ],
    "T-2097": [
     "mergeq",
     "2nd to merge",
-    1795439021258
+    1795439016105
    ],
    "T-4010": [
     "mergeq",
     "2nd to merge",
-    1795439021258
+    1795439016105
    ],
    "T-5602": [
     "mergeq",
     "3rd to merge",
-    1795438781258
+    1795438776105
+   ],
+   "T-4192": [
+    "testing",
+    "Mac Mini \u00b7 test",
+    null
+   ],
+   "T-5490": [
+    "testing",
+    "Mac Mini \u00b7 test",
+    null
    ],
    "T-4182": [
     "merged",
@@ -860,6 +879,8 @@
    "T-2097": "Read free memory in the widget extension on a device",
    "T-4010": "Rebuild This Session as a full flowchart",
    "T-5602": "Brief for a new look for the app",
+   "T-4192": "Python in the app: smaller bundle, installable packages",
+   "T-5490": "Make the https big-body test count work, not seconds",
    "T-4182": "A failing widget says so and can recover",
    "T-4184": "A person's own script becomes a Home Screen widget",
    "T-4692": "Pro showcase widgets work free, editing them needs Pro"
@@ -874,6 +895,8 @@
    "T-2097": "Idris",
    "T-4010": "Odalys",
    "T-5602": "Maren",
+   "T-4192": "Idris",
+   "T-5490": "Pernille",
    "T-4182": "Idris",
    "T-4184": "Idris",
    "T-4692": "Idris",
@@ -885,7 +908,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-23T13:08:41Z",
+  "at": "2026-11-23T13:13:36Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -898,12 +921,12 @@
    },
    "m": {
     "checking": null,
-    "inline": 9,
+    "inline": 14,
     "conflicted": null,
     "failed": null,
-    "held": 220,
+    "held": 225,
     "retry": null,
-    "parked": 263
+    "parked": 268
    },
    "cur": [],
    "ld": [
@@ -913,16 +936,16 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-23T13:10:01Z",
-    "ld": 20.01,
+    "at": "2026-11-23T13:13:37Z",
+    "ld": 44.93,
     "c": 8,
     "sb": 1,
     "dk": [
-     37.6,
+     37.3,
      228.3
     ],
     "ss": [
-     168.8,
+     168.5,
      953.7
     ],
     "sn": [
@@ -968,11 +991,11 @@
      "open": true
     }
    },
-   "at": "2026-11-23T13:08:41+00:00"
+   "at": "2026-11-23T13:13:36+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-23T13:08:41+00:00"
+   "at": "2026-11-23T13:13:36+00:00"
   }
  },
  "operators": [
@@ -983,7 +1006,7 @@
    "m": "opus",
    "e": "high",
    "t": "Work session",
-   "at": "2026-11-23T08:06:19-05:00"
+   "at": "2026-11-23T08:12:34-05:00"
   },
   {
    "w": "Operator",
@@ -1008,8 +1031,8 @@
   }
  ],
  "reply": {
-  "sent": "2026-11-23T13:05:29Z",
-  "seconds": 48.0
+  "sent": "2026-11-23T13:10:41Z",
+  "seconds": 111.0
  },
  "inbox": [],
  "trimmed": [
@@ -1027,10 +1050,10 @@
   "main": 0,
   "lanes": 3,
   "total": 3,
-  "at": "8:10 AM",
+  "at": "8:13 AM",
   "why": "",
-  "at_iso": "2026-11-23T13:10:00+00:00",
+  "at_iso": "2026-11-23T13:13:00+00:00",
   "started": "2:29 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 2:29 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 8:10 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 2:29 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 8:13 AM ET</p></section>"
  }
 }

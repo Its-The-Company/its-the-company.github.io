@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-23T21:22:14.044000+00:00",
+ "at": "2026-11-23T21:25:22.575705+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -425,7 +425,7 @@
   "week_pct": 80.98,
   "usage_pct": 85.3,
   "work_pct": 96.6,
-  "read_at": "2026-11-23T21:22:00+00:00",
+  "read_at": "2026-11-23T21:25:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -446,7 +446,7 @@
   }
  ],
  "disk": {
-  "free_gb": 32,
+  "free_gb": 35,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -455,14 +455,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-23T16:16:00-05:00",
+   "at": "2026-11-23T16:22:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-23T16:22:00-05:00",
+  "at": "2026-11-23T16:25:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -540,21 +540,39 @@
    },
    {
     "w": "Idris",
-    "t": "Keep typo matching cheap on every keystroke",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-23T15:35:32-05:00",
-    "o": "c",
-    "task": "T-4874"
-   },
-   {
-    "w": "Idris",
     "t": "Drop the swallow test's five-second bound",
     "m": "opus",
     "e": "high",
     "at": "2026-11-23T15:56:29-05:00",
     "o": "c",
     "task": "T-5491"
+   },
+   {
+    "w": "Odalys",
+    "t": "A land told to run again is retried, not held",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-23T16:22:04-05:00",
+    "o": "c",
+    "task": "T-5698"
+   },
+   {
+    "w": "Idris",
+    "t": "Review the merge script's record take-out",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-23T16:22:04-05:00",
+    "o": "c",
+    "task": "T-5731"
+   },
+   {
+    "w": "Pernille",
+    "t": "Keep typo matching cheap on every keystroke",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-23T16:22:58-05:00",
+    "o": "c",
+    "task": "T-4874"
    }
   ],
   "src": "plan",
@@ -722,38 +740,37 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-23T21:21:52Z",
+  "at": "2026-11-23T21:25:22Z",
   "s": {
    "T-5688": [
     "mergeq",
     "1st to merge",
-    1795447432148
+    1795447462575
    ],
    "T-4715": [
     "mergeq",
     "2nd to merge",
-    1795460392148
+    1795460362575
    ],
    "T-5708": [
     "mergeq",
     "3rd to merge",
-    1795460392148
+    1795460362575
    ],
    "T-5644": [
     "mergeq",
     "4th to merge",
-    1795466332148
+    1795466302575
+   ],
+   "T-5490": [
+    "mergeq",
+    "5th to merge",
+    1795469002575
    ],
    "T-4185": [
     "mergeq",
-    "5th to merge",
-    1795467052148
-   ],
-   "T-5697": [
-    "merged",
-    "on main 4:15 PM ET",
-    1795468546000,
-    "Odalys"
+    "6th to merge",
+    1795467022575
    ],
    "T-5491": [
     "merged",
@@ -767,8 +784,8 @@
    "T-4715": "Put the new Pro screen words into the app",
    "T-5708": "Clear the add-to-home steps before TestFlight",
    "T-5644": "Account b used up by midweek without skewing the comparison",
+   "T-5490": "Make the https big-body test count work, not seconds",
    "T-4185": "Launcher widgets open the apps a person chose",
-   "T-5697": "Nothing a worker committed vanishes from a land unsaid",
    "T-5491": "Drop the swallow test's five-second bound"
   },
   "wk": {
@@ -776,9 +793,10 @@
    "T-4715": "Maren",
    "T-5708": "Maren",
    "T-5644": "Ines",
+   "T-5490": "Pernille",
    "T-4185": "Idris",
-   "T-5697": "Odalys",
    "T-5491": "Pernille",
+   "T-5697": "Odalys",
    "T-5722": "Odalys",
    "T-5256": "Odalys",
    "T-5713": "Pernille",
@@ -792,25 +810,25 @@
   }
  },
  "ln": {
-  "at": "2026-11-23T21:21:52Z",
+  "at": "2026-11-23T21:25:22Z",
   "mq": {
    "n": {
     "checking": 0,
-    "inline": 5,
+    "inline": 6,
     "conflicted": 0,
     "failed": 0,
     "held": 3,
     "retry": 0,
-    "parked": 13
+    "parked": 12
    },
    "m": {
     "checking": null,
-    "inline": 142,
+    "inline": 96,
     "conflicted": null,
     "failed": null,
-    "held": 713,
+    "held": 717,
     "retry": null,
-    "parked": 713
+    "parked": 717
    },
    "cur": [],
    "ld": [
@@ -820,12 +838,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-23T21:21:53Z",
-    "ld": 2.59,
+    "at": "2026-11-23T21:24:57Z",
+    "ld": 3.02,
     "c": 8,
     "sb": 0,
     "dk": [
-     32.3,
+     34.2,
      228.3
     ],
     "ss": [
@@ -873,11 +891,11 @@
      "open": true
     }
    },
-   "at": "2026-11-23T21:22:14+00:00"
+   "at": "2026-11-23T21:25:22+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-23T21:22:14+00:00"
+   "at": "2026-11-23T21:25:16+00:00"
   }
  },
  "operators": [
@@ -912,10 +930,10 @@
   "main": 0,
   "lanes": 0,
   "total": 0,
-  "at": "4:22 PM",
+  "at": "4:25 PM",
   "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
-  "at_iso": "2026-11-23T21:22:00+00:00",
+  "at_iso": "2026-11-23T21:25:00+00:00",
   "started": "9:27 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0, started 9:27 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 4:22 PM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0, started 9:27 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 4:25 PM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
  }
 }

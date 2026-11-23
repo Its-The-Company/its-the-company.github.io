@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-23T08:34:05.469421+00:00",
+ "at": "2026-11-23T08:37:11.808372+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -435,7 +435,7 @@
   "week_pct": 59.57,
   "usage_pct": 84.0,
   "work_pct": 95.0,
-  "read_at": "2026-11-23T08:34:00+00:00",
+  "read_at": "2026-11-23T08:37:00+00:00",
   "running": [
    {
     "lane": "a3",
@@ -509,7 +509,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-23T03:34:00-05:00",
+  "at": "2026-11-23T03:37:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -520,8 +520,8 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 20 (held: too few lands in 3 hours to judge a raise)",
-  "n": 20,
+  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 19 (cut a step: load 33.2 a core is over 10)",
+  "n": 19,
   "at": "2026-11-23T02:28:27.861501-05:00"
  },
  "lanes": [
@@ -599,36 +599,36 @@
     "t": "Account b used up by midweek without skewing the comparison",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-23T03:12:33-05:00",
+    "at": "2026-11-23T03:34:19-05:00",
     "o": "c",
     "task": "T-5644"
-   },
-   {
-    "w": "Odalys",
-    "t": "Stall watch stops killing the waiting coordinator",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-23T03:32:20-05:00",
-    "o": "c",
-    "task": "T-5673"
    },
    {
     "w": "Idris",
     "t": "Settings and Pro: buy, restore, themes",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-23T03:32:51-05:00",
+    "at": "2026-11-23T03:35:42-05:00",
     "o": "c",
     "task": "T-4190"
    },
    {
-    "w": "Idris",
-    "t": "TestFlight builds and the App Store page are ready",
+    "w": "Maren",
+    "t": "Brief for a new look for the app",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-23T03:32:51-05:00",
+    "at": "2026-11-23T03:35:42-05:00",
     "o": "c",
-    "task": "T-4193"
+    "task": "T-5602"
+   },
+   {
+    "w": "Idris",
+    "t": "Second tap on a half-hidden row keeps the text",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-23T03:35:56-05:00",
+    "o": "c",
+    "task": "T-5325"
    }
   ],
   "src": "plan",
@@ -776,63 +776,58 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-23T08:33:57Z",
+  "at": "2026-11-23T08:37:11Z",
   "s": {
    "T-4184": [
     "mergeq",
     "1st to merge",
-    1795420677010
-   ],
-   "T-4185": [
-    "mergeq",
-    "2nd to merge",
-    1795418697010
+    1795420691808
    ],
    "T-0337": [
     "mergeq",
-    "3rd to merge",
-    1795422357010
+    "2nd to merge",
+    1795422371808
    ],
    "T-2097": [
     "mergeq",
-    "3rd to merge",
-    1795422357010
+    "2nd to merge",
+    1795422371808
    ],
    "T-4010": [
     "mergeq",
-    "3rd to merge",
-    1795422357010
+    "2nd to merge",
+    1795422371808
    ],
    "T-4477": [
     "mergeq",
-    "3rd to merge",
-    1795422357010
+    "2nd to merge",
+    1795422371808
    ],
    "T-4286": [
     "mergeq",
-    "3rd to merge",
-    1795422357010
+    "2nd to merge",
+    1795422371808
    ],
    "T-4635": [
     "mergeq",
-    "3rd to merge",
-    1795422357010
+    "2nd to merge",
+    1795422371808
    ],
    "T-0657": [
     "mergeq",
-    "3rd to merge",
-    1795422357010
+    "2nd to merge",
+    1795422371808
    ],
    "T-4681": [
     "mergetest",
     "iPhone tests on the MacBook",
     null
    ],
-   "T-5673": [
+   "T-5602": [
     "merged",
-    "on main 3:30 AM ET",
-    1795422623000,
-    ""
+    "on main 1:46 AM ET",
+    1795416386000,
+    "Maren"
    ],
    "T-5644": [
     "merged",
@@ -843,7 +838,6 @@
   },
   "nm": {
    "T-4184": "A person's own script becomes a Home Screen widget",
-   "T-4185": "Launcher widgets open the apps a person chose",
    "T-0337": "Confirm the revenue memo's facts from Apple pages",
    "T-2097": "Read free memory in the widget extension on a device",
    "T-4010": "Rebuild This Session as a full flowchart",
@@ -852,12 +846,11 @@
    "T-4635": "Clear the Settings restore line once Pro is bought",
    "T-0657": "Build the Settings screen",
    "T-4681": "Premades default to Paper in light and Studio in dark",
-   "T-5673": "Stall watch stops killing the waiting coordinator",
+   "T-5602": "Brief for a new look for the app",
    "T-5644": "Account b used up by midweek without skewing the comparison"
   },
   "wk": {
    "T-4184": "Idris",
-   "T-4185": "Idris",
    "T-0337": "Wrenna",
    "T-2097": "Idris",
    "T-4010": "Odalys",
@@ -866,31 +859,31 @@
    "T-4635": "Idris",
    "T-0657": "Idris",
    "T-4681": "Idris",
-   "T-5673": "Odalys",
+   "T-5602": "Maren",
    "T-5644": "Ines",
    "T-5381": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-23T08:33:57Z",
+  "at": "2026-11-23T08:37:11Z",
   "mq": {
    "n": {
     "checking": 0,
-    "inline": 9,
+    "inline": 8,
     "conflicted": 0,
     "failed": 0,
     "held": 0,
     "retry": 0,
-    "parked": 4
+    "parked": 5
    },
    "m": {
     "checking": null,
-    "inline": 8,
+    "inline": 11,
     "conflicted": null,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 271
+    "parked": 215
    },
    "cur": [],
    "ld": [
@@ -900,8 +893,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-23T08:33:32Z",
-    "ld": 26.69,
+    "at": "2026-11-23T08:36:27Z",
+    "ld": 32.83,
     "c": 8,
     "sb": 1,
     "dk": [
@@ -931,21 +924,21 @@
  },
  "hc": {
   "wait": {
-   "n": 21,
+   "n": 13,
    "limit": 20,
-   "in_line": 16,
+   "in_line": 8,
    "parked": 5,
    "open": true,
    "mq": false,
-   "counted": "2026-11-23T08:25:16+00:00",
+   "counted": "2026-11-23T08:35:20+00:00",
    "by": {
     "app": {
-     "n": 16,
+     "n": 9,
      "limit": 20,
      "open": true
     },
     "other": {
-     "n": 7,
+     "n": 6,
      "limit": 20,
      "open": true
     },
@@ -955,11 +948,11 @@
      "open": true
     }
    },
-   "at": "2026-11-23T08:34:05+00:00"
+   "at": "2026-11-23T08:37:11+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-23T08:33:57+00:00"
+   "at": "2026-11-23T08:37:05+00:00"
   }
  },
  "operators": [
@@ -1020,10 +1013,10 @@
   "main": 0,
   "lanes": 3,
   "total": 3,
-  "at": "3:34 AM",
+  "at": "3:37 AM",
   "why": "",
-  "at_iso": "2026-11-23T08:34:00+00:00",
+  "at_iso": "2026-11-23T08:37:00+00:00",
   "started": "2:29 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 2:29 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 3:34 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 2:29 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 3:37 AM ET</p></section>"
  }
 }

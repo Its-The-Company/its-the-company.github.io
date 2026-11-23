@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-23T18:25:22.092499+00:00",
+ "at": "2026-11-23T18:28:38.378757+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -425,7 +425,7 @@
   "week_pct": 69.41,
   "usage_pct": 85.3,
   "work_pct": 96.6,
-  "read_at": "2026-11-23T18:25:00+00:00",
+  "read_at": "2026-11-23T18:28:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -488,7 +488,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-23T13:25:00-05:00",
+  "at": "2026-11-23T13:28:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -499,7 +499,7 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 8 (at its floor: load 21.5 a core is over 10)",
+  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 8 (at its floor: load 19.9 a core is over 10)",
   "n": 8,
   "at": "2026-11-23T09:25:38.709305-05:00"
  },
@@ -601,13 +601,13 @@
     "task": "T-5007"
    },
    {
-    "w": "Maren",
-    "t": "Clear the add-to-home steps before TestFlight",
+    "w": "Idris",
+    "t": "UI test holds the Habits tap scroll",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-23T13:24:32-05:00",
+    "at": "2026-11-23T13:26:07-05:00",
     "o": "c",
-    "task": "T-5708"
+    "task": "T-5542"
    }
   ],
   "src": "plan",
@@ -775,42 +775,37 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-23T18:25:09Z",
+  "at": "2026-11-23T18:28:38Z",
   "s": {
    "T-4183": [
     "mergetest",
     "Xcode checks on the MacBook, 1st to merge",
-    1795457169168
+    1795457138378
    ],
    "T-5688": [
     "mergeq",
     "2nd to merge",
-    1795447449168
+    1795447418378
    ],
    "T-5616": [
     "mergeq",
     "3rd to merge",
-    1795455789168
+    1795455758378
    ],
    "T-4192": [
     "mergetest",
     "Xcode checks on the MacBook, 4th to merge",
-    1795457169168
-   ],
-   "T-4715": [
-    "testing",
-    "Mac Mini \u00b7 test",
-    null
-   ],
-   "T-5256": [
-    "testing",
-    "Mac Mini \u00b7 test",
-    null
+    1795457138378
    ],
    "T-4772": [
+    "testing",
+    "Mac Mini \u00b7 test",
+    null
+   ],
+   "T-4715": [
     "testq",
     "1st for a Simulator",
-    1795457709168
+    1795458518378
    ],
    "T-4184": [
     "merged",
@@ -830,9 +825,8 @@
    "T-5688": "Land finished work whose copy also changed the board",
    "T-5616": "Fix the city list test after the tzdata update",
    "T-4192": "Python in the app: smaller bundle, installable packages",
-   "T-4715": "Put the new Pro screen words into the app",
-   "T-5256": "Trim step 3, one merge script beside the old road",
    "T-4772": "Prove a refresh tap redraws the widget",
+   "T-4715": "Put the new Pro screen words into the app",
    "T-4184": "A person's own script becomes a Home Screen widget",
    "T-5700": "Lands stop queuing behind one MacBook check"
   },
@@ -841,9 +835,8 @@
    "T-5688": "Odalys",
    "T-5616": "Pernille",
    "T-4192": "Idris",
-   "T-4715": "Maren",
-   "T-5256": "Odalys",
    "T-4772": "Idris",
+   "T-4715": "Maren",
    "T-4184": "Idris",
    "T-5700": "Odalys",
    "T-0749": "Idris",
@@ -860,7 +853,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-23T18:25:09Z",
+  "at": "2026-11-23T18:28:38Z",
   "mq": {
    "n": {
     "checking": 2,
@@ -872,13 +865,13 @@
     "parked": 14
    },
    "m": {
-    "checking": 19,
-    "inline": 111,
+    "checking": 23,
+    "inline": 115,
     "conflicted": null,
     "failed": null,
-    "held": 537,
+    "held": 540,
     "retry": null,
-    "parked": 537
+    "parked": 540
    },
    "cur": [
     [
@@ -887,7 +880,7 @@
      ],
      "iPhone app tests",
      "MacBook",
-     19
+     23
     ],
     [
      [
@@ -895,7 +888,7 @@
      ],
      "iPhone app tests",
      "MacBook",
-     19
+     23
     ]
    ],
    "ld": [
@@ -905,12 +898,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-23T18:24:51Z",
-    "ld": 21.17,
+    "at": "2026-11-23T18:28:41Z",
+    "ld": 22.77,
     "c": 8,
     "sb": 1,
     "dk": [
-     34.6,
+     34.5,
      228.3
     ],
     "ss": [
@@ -918,7 +911,7 @@
      953.7
     ],
     "sn": [
-     "iPhone 18 Pro"
+     "iPhone 17e"
     ]
    },
    "macbook": {
@@ -960,11 +953,11 @@
      "open": true
     }
    },
-   "at": "2026-11-23T18:25:22+00:00"
+   "at": "2026-11-23T18:28:38+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-23T18:25:22+00:00"
+   "at": "2026-11-23T18:28:38+00:00"
   }
  },
  "operators": [
@@ -981,19 +974,15 @@
    "w": "Operator",
    "a": "Evan's Account",
    "sr": 1,
-   "m": "opus",
-   "e": "high",
    "t": "Work session \u2013 1 task",
-   "at": "2026-11-23T13:14:47-05:00"
+   "at": "2026-11-23T13:14:48-05:00"
   },
   {
    "w": "Operator",
    "a": "Jeremy's Account",
    "sr": 1,
-   "m": "opus",
-   "e": "high",
    "t": "Work session",
-   "at": "2026-11-23T10:13:46-05:00"
+   "at": "2026-11-23T10:13:47-05:00"
   }
  ],
  "reply": {
@@ -1017,10 +1006,10 @@
   "main": 0,
   "lanes": 2,
   "total": 2,
-  "at": "1:25 PM",
+  "at": "1:28 PM",
   "why": "",
-  "at_iso": "2026-11-23T18:25:00+00:00",
+  "at_iso": "2026-11-23T18:28:00+00:00",
   "started": "9:27 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0, started 9:27 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 1:25 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0, started 9:27 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 1:28 PM ET</p></section>"
  }
 }

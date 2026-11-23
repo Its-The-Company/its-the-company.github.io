@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-23T14:48:03.852010+00:00",
+ "at": "2026-11-23T14:51:04.685231+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -376,7 +376,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 715,
+  "runnable_count": 714,
   "blocked_count": 2
  },
  "meter": {
@@ -425,7 +425,7 @@
   "week_pct": 57.84,
   "usage_pct": 85.3,
   "work_pct": 96.6,
-  "read_at": "2026-11-23T14:48:00+00:00",
+  "read_at": "2026-11-23T14:51:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -488,7 +488,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-23T09:48:00-05:00",
+  "at": "2026-11-23T09:51:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -592,15 +592,6 @@
     "task": "T-4182"
    },
    {
-    "w": "Idris",
-    "t": "Let a cleaned script return to the widget on resend",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-23T09:46:28-05:00",
-    "o": "c",
-    "task": "T-4656"
-   },
-   {
     "w": "Pernille",
     "t": "Fix the city list test after the tzdata update",
     "m": "opus",
@@ -608,6 +599,15 @@
     "at": "2026-11-23T09:46:28-05:00",
     "o": "c",
     "task": "T-5616"
+   },
+   {
+    "w": "Idris",
+    "t": "Keep one layout for the widget state format",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-23T09:50:07-05:00",
+    "o": "c",
+    "task": "T-4761"
    }
   ],
   "src": "plan",
@@ -686,6 +686,11 @@
   "done": [
    {
     "w": "Idris",
+    "t": "The second reading of the fix that makes workers land their finished work is done and passed:...",
+    "at": "2026-11-23T09:51:00-05:00"
+   },
+   {
+    "w": "Idris",
     "t": "The test build's size ladder now keeps every rung in the widget and refreshes it every 15...",
     "at": "2026-11-23T09:39:00-05:00"
    },
@@ -693,22 +698,21 @@
     "w": "Idris",
     "t": "The second reading of the fix that lets separate work copies share the app's Python test setup...",
     "at": "2026-11-23T09:38:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "Workers' notes now reach the main board, a session lands its own finished work, and a task with...",
-    "at": "2026-11-23T09:12:00-05:00"
    }
   ],
   "count": {
-   "next": 715,
+   "next": 714,
    "wait": 2,
    "blocked": 0,
    "you": 2
   },
   "fin": {
-   "n": 2,
+   "n": 3,
    "rows": [
+    [
+     "T-5687",
+     "Review the fix that makes..."
+    ],
     [
      "T-4643",
      "Make the size ladder measure..."
@@ -759,27 +763,33 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-23T14:47:48Z",
+  "at": "2026-11-23T14:50:42Z",
   "s": {
    "T-5256": [
     "mergeq",
     "1st to merge",
-    1795444848302
+    1795444842943
    ],
    "T-4662": [
     "mergeq",
     "2nd to merge",
-    1795440528302
+    1795440522943
    ],
    "T-4692": [
     "mergeq",
     "3rd to merge",
-    1795441128302
+    1795441122943
    ],
    "T-4192": [
     "mergeq",
     "4th to merge",
-    1795445208302
+    1795445202943
+   ],
+   "T-5687": [
+    "merged",
+    "on main 9:50 AM ET",
+    1795445437000,
+    "Idris"
    ],
    "T-4182": [
     "merged",
@@ -799,6 +809,7 @@
    "T-4662": "Place the cursor easily on a long line",
    "T-4692": "Pro showcase widgets work free, editing them needs Pro",
    "T-4192": "Python in the app: smaller bundle, installable packages",
+   "T-5687": "Review the fix that makes workers land",
    "T-4182": "A failing widget says so and can recover",
    "T-4184": "A person's own script becomes a Home Screen widget"
   },
@@ -807,6 +818,7 @@
    "T-4662": "Idris",
    "T-4692": "Idris",
    "T-4192": "Idris",
+   "T-5687": "Idris",
    "T-4182": "Idris",
    "T-4184": "Idris",
    "T-4643": "Idris",
@@ -814,7 +826,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-23T14:47:48Z",
+  "at": "2026-11-23T14:50:42Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -827,12 +839,12 @@
    },
    "m": {
     "checking": null,
-    "inline": 38,
+    "inline": 41,
     "conflicted": null,
     "failed": null,
-    "held": 319,
+    "held": 322,
     "retry": null,
-    "parked": 319
+    "parked": 322
    },
    "cur": [],
    "ld": [
@@ -842,8 +854,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-23T14:47:27Z",
-    "ld": 10.97,
+    "at": "2026-11-23T14:50:21Z",
+    "ld": 7.39,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -871,21 +883,21 @@
  },
  "hc": {
   "wait": {
-   "n": 18,
+   "n": 20,
    "limit": 20,
-   "in_line": 2,
+   "in_line": 4,
    "parked": 16,
    "open": true,
    "mq": false,
-   "counted": "2026-11-23T14:36:35+00:00",
+   "counted": "2026-11-23T14:47:55+00:00",
    "by": {
     "app": {
-     "n": 14,
+     "n": 15,
      "limit": 20,
      "open": true
     },
     "other": {
-     "n": 8,
+     "n": 9,
      "limit": 20,
      "open": true
     },
@@ -895,11 +907,11 @@
      "open": true
     }
    },
-   "at": "2026-11-23T14:48:03+00:00"
+   "at": "2026-11-23T14:51:04+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-23T14:47:48+00:00"
+   "at": "2026-11-23T14:51:04+00:00"
   }
  },
  "operators": [
@@ -951,10 +963,10 @@
   "main": 0,
   "lanes": 2,
   "total": 2,
-  "at": "9:48 AM",
+  "at": "9:51 AM",
   "why": "",
-  "at_iso": "2026-11-23T14:48:00+00:00",
+  "at_iso": "2026-11-23T14:51:00+00:00",
   "started": "9:27 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0, started 9:27 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 9:48 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0, started 9:27 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 9:51 AM ET</p></section>"
  }
 }

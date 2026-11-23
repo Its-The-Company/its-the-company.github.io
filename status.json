@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-23T16:55:47.269615+00:00",
+ "at": "2026-11-23T16:59:02.458826+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -425,8 +425,20 @@
   "week_pct": 69.41,
   "usage_pct": 85.3,
   "work_pct": 96.6,
-  "read_at": "2026-11-23T16:56:00+00:00",
+  "read_at": "2026-11-23T16:59:00+00:00",
   "running": [
+   {
+    "lane": "a",
+    "task": "T-5697",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Nothing a worker committed vanishes from a land unsaid",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-23T11:58:37-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
    {
     "lane": "b",
     "task": "T-4183",
@@ -488,7 +500,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-23T11:56:00-05:00",
+  "at": "2026-11-23T11:59:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -565,15 +577,6 @@
     "task": "T-4185"
    },
    {
-    "w": "Pernille",
-    "t": "Second tap on a half-hidden row keeps the text",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-23T11:14:09-05:00",
-    "o": "c",
-    "task": "T-5325"
-   },
-   {
     "w": "Odalys",
     "t": "Lands stop queuing behind one MacBook check",
     "m": "opus",
@@ -608,6 +611,15 @@
     "at": "2026-11-23T11:49:31-05:00",
     "o": "c",
     "task": "T-4896"
+   },
+   {
+    "w": "Idris",
+    "t": "Stop an oversized number crashing a widget's state",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-23T11:57:33-05:00",
+    "o": "c",
+    "task": "T-5003"
    }
   ],
   "src": "plan",
@@ -775,42 +787,43 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-23T16:55:47Z",
+  "at": "2026-11-23T16:59:02Z",
   "s": {
    "T-4184": [
     "mergeq",
     "1st to merge",
-    1795451927269
+    1795451942458
    ],
    "T-4192": [
     "mergeq",
     "2nd to merge",
-    1795445207269
+    1795445222458
    ],
    "T-5688": [
     "mergeq",
     "3rd to merge",
-    1795447427269
+    1795447442458
    ],
    "T-2296": [
     "mergetest",
     "iPhone tests on the MacBook",
     null
    ],
-   "T-5325": [
+   "T-4715": [
     "testing",
     "Mac Mini \u00b7 test",
     null
    ],
-   "T-4715": [
-    "testq",
-    "1st for a Simulator",
-    1795451807269
-   ],
    "T-5256": [
-    "testq",
-    "1st for a Simulator",
-    1795451807269
+    "testing",
+    "Mac Mini \u00b7 test",
+    null
+   ],
+   "T-5697": [
+    "merged",
+    "on main 11:36 AM ET",
+    1795451779000,
+    "Odalys"
    ],
    "T-4772": [
     "merged",
@@ -824,9 +837,9 @@
    "T-4192": "Python in the app: smaller bundle, installable packages",
    "T-5688": "Land finished work whose copy also changed the board",
    "T-2296": "Finish the gallery pager, iPad layout and detail foot",
-   "T-5325": "Second tap on a half-hidden row keeps the text",
    "T-4715": "Put the new Pro screen words into the app",
    "T-5256": "Trim step 3, one merge script beside the old road",
+   "T-5697": "Nothing a worker committed vanishes from a land unsaid",
    "T-4772": "Prove a refresh tap redraws the widget"
   },
   "wk": {
@@ -834,9 +847,9 @@
    "T-4192": "Idris",
    "T-5688": "Odalys",
    "T-2296": "Idris",
-   "T-5325": "Idris",
    "T-4715": "Maren",
    "T-5256": "Odalys",
+   "T-5697": "Odalys",
    "T-4772": "Idris",
    "T-3350": "Idris",
    "T-5693": "Idris",
@@ -851,7 +864,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-23T16:55:47Z",
+  "at": "2026-11-23T16:59:02Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -864,12 +877,12 @@
    },
    "m": {
     "checking": null,
-    "inline": 110,
+    "inline": 113,
     "conflicted": null,
-    "failed": 3,
-    "held": 447,
+    "failed": 6,
+    "held": 450,
     "retry": null,
-    "parked": 447
+    "parked": 450
    },
    "cur": [],
    "ld": [
@@ -879,12 +892,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-23T16:55:10Z",
-    "ld": 14.95,
+    "at": "2026-11-23T16:58:32Z",
+    "ld": 14.37,
     "c": 8,
     "sb": 1,
     "dk": [
-     37.7,
+     37.6,
      228.3
     ],
     "ss": [
@@ -934,11 +947,11 @@
      "open": true
     }
    },
-   "at": "2026-11-23T16:55:47+00:00"
+   "at": "2026-11-23T16:59:02+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-23T16:55:47+00:00"
+   "at": "2026-11-23T16:59:02+00:00"
   }
  },
  "operators": [
@@ -948,8 +961,17 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Inbox \u2013 Evan's 11:55 AM Message on GitHub",
-   "at": "2026-11-23T11:55:52-05:00"
+   "t": "Work session",
+   "at": "2026-11-23T11:58:56-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Evan's Account",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session \u2013 1 task",
+   "at": "2026-11-23T11:58:36-05:00"
   },
   {
    "w": "Operator",
@@ -971,27 +993,15 @@
   }
  ],
  "reply": {
-  "sent": "2026-11-23T14:28:18Z",
-  "seconds": 147.0
+  "sent": "2026-11-23T16:55:26Z",
+  "seconds": 207.0
  },
- "inbox": [
-  {
-   "id": "c7107881896",
-   "state": "received",
-   "position": 1,
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "When this fix is done do we expect..."
-  }
- ],
+ "inbox": [],
  "trimmed": [
   "lane_next",
   "queue_text",
   "task_done",
   "fin_short",
-  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -1001,12 +1011,12 @@
  ],
  "agents_now": {
   "main": 0,
-  "lanes": 2,
-  "total": 2,
-  "at": "11:56 AM",
+  "lanes": 3,
+  "total": 3,
+  "at": "11:59 AM",
   "why": "",
-  "at_iso": "2026-11-23T16:56:00+00:00",
+  "at_iso": "2026-11-23T16:59:00+00:00",
   "started": "9:27 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0, started 9:27 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 11:56 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 9:27 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 11:59 AM ET</p></section>"
  }
 }

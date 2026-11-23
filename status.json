@@ -1,10 +1,10 @@
 {
  "schema": 1,
- "at": "2026-11-23T05:54:17.165742+00:00",
+ "at": "2026-11-23T06:06:54.709600+00:00",
  "session": {
   "active": true,
   "kind": "coord",
-  "started": "2026-11-22T23:16:52-05:00",
+  "started": "2026-11-23T01:04:13-05:00",
   "coord": {
    "active": true,
    "started": 1795341309,
@@ -12,6 +12,22 @@
    "last_handoff": 1795407234
   },
   "flow": [
+   {
+    "t": "T-0337",
+    "name": "Confirm the revenue memo's facts from Apple pages",
+    "w": "Wrenna",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "claimed",
+      "at": 1795413670
+     },
+     {
+      "s": "worker",
+      "at": 1795413670
+     }
+    ]
+   },
    {
     "t": "T-4010",
     "name": "Rebuild This Session as a full flowchart",
@@ -41,22 +57,6 @@
      {
       "s": "worker",
       "at": 1795410994
-     }
-    ]
-   },
-   {
-    "t": "T-0337",
-    "name": "Confirm the revenue memo's facts from Apple pages",
-    "w": "Wrenna",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "claimed",
-      "at": 1795410932
-     },
-     {
-      "s": "worker",
-      "at": 1795410932
      }
     ]
    },
@@ -329,31 +329,31 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 5.0,
-   "resets_at": "2026-11-23T07:10:00.603697+00:00",
+   "pct": 7.0,
+   "resets_at": "2026-11-23T07:10:00.339138+00:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-23T00:20:54.321313-05:00",
+   "read_at": "2026-11-23T00:54:22.753135-05:00",
    "source": "usage",
-   "left": 95.0,
+   "left": 93.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 4.0,
-   "resets_at": "2026-11-29T07:00:00.603720+00:00",
+   "resets_at": "2026-11-29T07:00:00.339157+00:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-23T00:20:54.321313-05:00",
+   "read_at": "2026-11-23T00:54:22.753135-05:00",
    "source": "usage",
    "left": 96.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 4.0,
-   "resets_at": "2026-11-29T06:59:59.603881+00:00",
+   "resets_at": "2026-11-29T07:00:00.339299+00:00",
    "used_words": "of the Fable weekly allowance used",
-   "read_at": "2026-11-23T00:20:54.321313-05:00",
+   "read_at": "2026-11-23T00:54:22.753135-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-23T00:20:54.321313-05:00"
+  "read_at": "2026-11-23T00:54:22.753135-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -370,10 +370,10 @@
  },
  "next_tick": null,
  "personal": {
-  "week_pct": 2.42,
-  "usage_pct": 68.7,
-  "work_pct": 88.2,
-  "read_at": "2026-11-23T05:58:00+00:00",
+  "week_pct": 7.04,
+  "usage_pct": 84.6,
+  "work_pct": 94.7,
+  "read_at": "2026-11-23T06:06:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -441,27 +441,27 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-23T00:54:00-05:00",
+   "at": "2026-11-23T01:00:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
-  "on": false,
+  "on": true,
   "pool": 3,
-  "at": "2026-11-23T00:58:00-05:00",
-  "mode": null,
+  "at": "2026-11-23T01:06:00-05:00",
+  "mode": "midnight",
   "modes": {
-   "main": "double-spread",
-   "a": "double-spread",
-   "b": "double-spread"
+   "main": "midnight",
+   "a": "midnight",
+   "b": "midnight"
   }
  },
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Double Spread: 99% of the week left, paced to last until Wed 14:00, the week's halfway point (no fresh plan meter reading: the recorded spend stands in); the machine allows 37 (held: too few lands...",
-  "n": 3,
-  "at": "2026-11-22T23:16:13.826263-05:00"
+  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 37 (held: too few lands in 3 hours to judge a raise)",
+  "n": 37,
+  "at": "2026-11-23T01:03:33.210113-05:00"
  },
  "lanes": [
   {
@@ -514,7 +514,62 @@
   }
  ],
  "tasks": {
-  "run": [],
+  "run": [
+   {
+    "w": "Idris",
+    "t": "Premades default to Paper in light and Studio in dark",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-23T00:38:46-05:00",
+    "o": "c",
+    "task": "T-4681"
+   },
+   {
+    "w": "Ines",
+    "t": "List the test widgets that ship only in TestFlight builds",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-23T00:44:47-05:00",
+    "o": "c",
+    "task": "T-5643"
+   },
+   {
+    "w": "Odalys",
+    "t": "Queued test requests replay while the coordinator runs",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-23T01:03:48-05:00",
+    "o": "c",
+    "task": "T-5620"
+   },
+   {
+    "w": "Maren",
+    "t": "Brief for a new look for the app",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-23T01:04:48-05:00",
+    "o": "c",
+    "task": "T-5602"
+   },
+   {
+    "w": "Odalys",
+    "t": "Only the coordinator answers Investor messages",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-23T01:05:20-05:00",
+    "o": "i",
+    "task": "T-5613"
+   },
+   {
+    "w": "Idris",
+    "t": "Make the widget's Debug ask record say what it saw",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-23T01:05:28-05:00",
+    "o": "c",
+    "task": "T-5524"
+   }
+  ],
   "src": "plan",
   "open": [
    {
@@ -612,21 +667,8 @@
    "you": 2
   },
   "fin": {
-   "n": 3,
-   "rows": [
-    [
-     "T-4630",
-     "Stop badging widgets moved..."
-    ],
-    [
-     "T-5193",
-     "Confirm the five page..."
-    ],
-    [
-     "T-5628",
-     "The main account takes work..."
-    ]
-   ]
+   "n": 0,
+   "rows": []
   }
  },
  "qr": [
@@ -668,184 +710,56 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-23T05:54:01Z",
+  "at": "2026-11-23T06:06:37Z",
   "s": {
-   "T-5642": [
-    "mergeq",
-    "",
-    1795413181423
-   ],
-   "T-0337": [
-    "mergeq",
-    "",
-    1795413181423
-   ],
-   "T-2097": [
-    "mergeq",
-    "",
-    1795413181423
-   ],
-   "T-4010": [
-    "mergeq",
-    "",
-    1795413181423
-   ],
-   "T-4477": [
-    "mergeq",
-    "",
-    1795413181423
-   ],
-   "T-4286": [
-    "mergeq",
-    "",
-    1795413181423
-   ],
-   "T-4435": [
-    "mergeq",
-    "",
-    1795413181423
-   ],
-   "T-0678": [
-    "mergeq",
-    "",
-    1795413181423
-   ],
-   "T-3495": [
-    "mergeq",
-    "",
-    1795413181423
-   ],
-   "T-3765": [
-    "mergeq",
-    "",
-    1795413181423
-   ],
-   "T-4662": [
-    "mergeq",
-    "",
-    1795413181423
-   ],
-   "T-4781": [
-    "mergeq",
-    "",
-    1795413181423
-   ],
-   "T-4772": [
-    "mergeq",
-    "",
-    1795413181423
-   ],
-   "T-4762": [
-    "mergeq",
-    "",
-    1795413181423
-   ],
-   "T-4635": [
-    "mergeq",
-    "",
-    1795413181423
-   ],
-   "T-5193": [
-    "mergeq",
-    "",
-    1795413181423
-   ],
    "T-4182": [
-    "mergeq",
-    "",
-    1795413181423
-   ],
-   "T-0657": [
-    "mergeq",
-    "",
-    1795413181423
-   ],
-   "T-4692": [
     "mergetest",
-    "",
+    "iPhone tests on the MacBook",
     null
    ],
    "T-4681": [
     "testing",
-    "",
+    "Mac Mini \u00b7 test",
     null
    ],
    "T-4184": [
     "merged",
-    "",
+    "on main 12:11 AM ET",
     1795410693000,
     ""
    ]
   },
   "nm": {
-   "T-5642": "Alarm when an account stops taking work",
-   "T-0337": "Confirm the revenue memo's facts from Apple pages",
-   "T-2097": "Read free memory in the widget extension on a device",
-   "T-4010": "Rebuild This Session as a full flowchart",
-   "T-4477": "People build a widget from blocks without code",
-   "T-4286": "Check an imported font draws in a widget",
-   "T-4435": "Draw the wrapped refresh glyph on both runtimes",
-   "T-0678": "Run the refresh button inside the widget extension",
-   "T-3495": "Check the upload fix before build 4 goes out",
-   "T-3765": "Check a real widget tap on the TestFlight build",
-   "T-4662": "Place the cursor easily on a long line",
-   "T-4781": "Retest a fixed red on what failed, not every test",
-   "T-4772": "Prove a refresh tap redraws the widget",
-   "T-4762": "Let the run lock wrap a Python run",
-   "T-4635": "Clear the Settings restore line once Pro is bought",
-   "T-5193": "Confirm the five page strings the build added",
    "T-4182": "A failing widget says so and can recover",
-   "T-0657": "Build the Settings screen",
-   "T-4692": "Pro showcase widgets work free, editing them needs Pro",
    "T-4681": "Premades default to Paper in light and Studio in dark",
    "T-4184": "A person's own script becomes a Home Screen widget"
   },
   "wk": {
-   "T-5642": "Odalys",
-   "T-0337": "Wrenna",
-   "T-2097": "Idris",
-   "T-4010": "Odalys",
-   "T-4477": "Idris",
-   "T-4286": "Idris",
-   "T-4435": "Idris",
-   "T-0678": "Idris",
-   "T-3495": "Pernille",
-   "T-3765": "Idris",
-   "T-4662": "Idris",
-   "T-4781": "Odalys",
-   "T-4772": "Idris",
-   "T-4762": "Idris",
-   "T-4635": "Idris",
-   "T-5193": "Maren",
    "T-4182": "Idris",
-   "T-0657": "Idris",
-   "T-4692": "Idris",
    "T-4681": "Idris",
-   "T-4184": "Idris",
-   "T-4630": "Idris",
-   "T-5628": "Odalys"
+   "T-4184": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-23T05:54:01Z",
+  "at": "2026-11-23T06:06:37Z",
   "mq": {
    "n": {
     "checking": 0,
-    "inline": 18,
+    "inline": 0,
     "conflicted": 0,
     "failed": 0,
     "held": 0,
     "retry": 0,
-    "parked": 3
+    "parked": 4
    },
    "m": {
     "checking": null,
-    "inline": 1,
+    "inline": null,
     "conflicted": null,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 171
+    "parked": 149
    },
    "cur": [],
    "ld": [
@@ -855,12 +769,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-23T05:53:37Z",
-    "ld": 7.89,
+    "at": "2026-11-23T06:06:39Z",
+    "ld": 4.85,
     "c": 8,
     "sb": 1,
     "dk": [
-     63.5,
+     59.4,
      228.3
     ],
     "ss": [
@@ -872,12 +786,12 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-23T05:45:43Z",
-    "ld": 3.06,
+    "at": "2026-11-23T06:01:55Z",
+    "ld": 1.0,
     "c": 12,
     "sb": 0,
     "dk": [
-     353.2,
+     353.0,
      926.4
     ],
     "sn": []
@@ -892,7 +806,7 @@
    "parked": 4,
    "open": true,
    "mq": false,
-   "counted": "2026-11-23T05:44:51+00:00",
+   "counted": "2026-11-23T05:55:01+00:00",
    "by": {
     "app": {
      "n": 3,
@@ -910,11 +824,11 @@
      "open": true
     }
    },
-   "at": "2026-11-23T05:54:17+00:00"
+   "at": "2026-11-23T06:06:54+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-23T05:54:09+00:00"
+   "at": "2026-11-23T06:06:47+00:00"
   }
  },
  "operators": [
@@ -925,7 +839,16 @@
    "m": "opus",
    "e": "high",
    "t": "Work session",
-   "at": "2026-11-22T23:16:52-05:00"
+   "at": "2026-11-23T01:04:13-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Evan's Account",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session \u2013 1 task",
+   "at": "2026-11-23T00:56:12-05:00"
   },
   {
    "w": "Operator",
@@ -955,7 +878,6 @@
   "lane_next",
   "queue_text",
   "task_done",
-  "fin_short",
   "task_title",
   "done_text",
   "task_open",
@@ -966,10 +888,10 @@
   "main": 0,
   "lanes": 3,
   "total": 3,
-  "at": "12:58 AM",
+  "at": "1:06 AM",
   "why": "",
-  "at_iso": "2026-11-23T05:58:00+00:00",
-  "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 12:58 AM ET</p></section>"
+  "at_iso": "2026-11-23T06:06:00+00:00",
+  "started": "1:04 AM",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 1:04 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 1:06 AM ET</p></section>"
  }
 }

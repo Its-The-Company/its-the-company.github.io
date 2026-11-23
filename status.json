@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-23T16:00:02.196849+00:00",
+ "at": "2026-11-23T16:03:03.164983+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -425,7 +425,7 @@
   "week_pct": 63.62,
   "usage_pct": 85.3,
   "work_pct": 96.6,
-  "read_at": "2026-11-23T16:00:00+00:00",
+  "read_at": "2026-11-23T16:03:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -488,7 +488,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-23T11:00:00-05:00",
+  "at": "2026-11-23T11:03:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -566,24 +566,6 @@
    },
    {
     "w": "Idris",
-    "t": "TestFlight builds and the App Store page are ready",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-23T10:08:47-05:00",
-    "o": "c",
-    "task": "T-4193"
-   },
-   {
-    "w": "Idris",
-    "t": "Review the fix that lands copies that changed the board",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-23T10:20:44-05:00",
-    "o": "c",
-    "task": "T-5693"
-   },
-   {
-    "w": "Idris",
     "t": "Launcher widgets open the apps a person chose",
     "m": "opus",
     "e": "high",
@@ -608,6 +590,15 @@
     "at": "2026-11-23T10:57:01-05:00",
     "o": "c",
     "task": "T-5058"
+   },
+   {
+    "w": "Pernille",
+    "t": "Make the https big-body test count work, not seconds",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-23T11:00:09-05:00",
+    "o": "c",
+    "task": "T-5490"
    }
   ],
   "src": "plan",
@@ -685,19 +676,19 @@
   ],
   "done": [
    {
-    "w": "Idris+odalys",
-    "t": "The MacBook now tests the launcher version of the app once a day on its own, and a failed run...",
-    "at": "2026-11-23T10:34:00-05:00"
+    "w": "Idris",
+    "t": "Every TestFlight upload now writes a plain list of what the build adds and fixes, taken from the...",
+    "at": "2026-11-23T11:02:00-05:00"
    },
    {
-    "w": "Idris+pernille",
-    "t": "The launcher widget test now opens the app the same way a real widget tap does, so a broken tap...",
-    "at": "2026-11-23T10:32:00-05:00"
+    "w": "Odalys",
+    "t": "Finished work whose copy also changed the task board now lands: the board edits are taken out,...",
+    "at": "2026-11-23T11:01:00-05:00"
    },
    {
-    "w": "Idris+pernille",
-    "t": "The Pro tag now comes only from the Investors' November 18 list: Habit tracker is the one Pro...",
-    "at": "2026-11-23T10:01:00-05:00"
+    "w": "Idris",
+    "t": "Idris reviewed the fix that lets finished work land when its copy also changed the task board,...",
+    "at": "2026-11-23T11:01:00-05:00"
    }
   ],
   "count": {
@@ -707,8 +698,20 @@
    "you": 2
   },
   "fin": {
-   "n": 8,
+   "n": 11,
    "rows": [
+    [
+     "T-3350",
+     "Describe each TestFlight..."
+    ],
+    [
+     "T-5688",
+     "Land finished work whose..."
+    ],
+    [
+     "T-5693",
+     "Review the fix that lands..."
+    ],
     [
      "T-4220",
      "Run the launcher build's..."
@@ -720,18 +723,6 @@
     [
      "T-4692",
      "Pro showcase widgets work..."
-    ],
-    [
-     "T-4762",
-     "Let the run lock wrap a..."
-    ],
-    [
-     "T-4761",
-     "Keep one layout for the..."
-    ],
-    [
-     "T-5687",
-     "Review the fix that makes..."
     ]
    ]
   }
@@ -775,61 +766,69 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-23T15:59:52Z",
+  "at": "2026-11-23T16:03:03Z",
   "s": {
    "T-4184": [
     "mergetest",
     "Xcode checks on the MacBook, 1st to merge",
-    1795448332856
+    1795448343164
    ],
    "T-4192": [
     "mergeq",
     "2nd to merge",
-    1795445212856
-   ],
-   "T-5688": [
-    "mergeq",
-    "3rd to merge",
-    1795447432856
+    1795445223164
    ],
    "T-5491": [
     "mergeq",
+    "3rd to merge",
+    1795446183164
+   ],
+   "T-5688": [
+    "mergeq",
     "4th to merge",
-    1795446172856
+    1795447443164
    ],
    "T-5524": [
     "mergetest",
     "iPhone tests on the MacBook",
     null
    ],
-   "T-4185": [
+   "T-4715": [
     "testing",
     "Mac Mini \u00b7 test",
     null
    ],
-   "T-5693": [
-    "merged",
-    "on main 10:56 AM ET",
-    1795449360000,
-    "Idris"
+   "T-5256": [
+    "testing",
+    "Mac Mini \u00b7 test",
+    null
+   ],
+   "T-4185": [
+    "testq",
+    "1st for a Simulator",
+    1795449783164
    ]
   },
   "nm": {
    "T-4184": "A person's own script becomes a Home Screen widget",
    "T-4192": "Python in the app: smaller bundle, installable packages",
-   "T-5688": "Land finished work whose copy also changed the board",
    "T-5491": "Drop the swallow test's five-second bound",
+   "T-5688": "Land finished work whose copy also changed the board",
    "T-5524": "Make the widget's Debug ask record say what it saw",
-   "T-4185": "Launcher widgets open the apps a person chose",
-   "T-5693": "Review the fix that lands copies that changed the board"
+   "T-4715": "Put the new Pro screen words into the app",
+   "T-5256": "Trim step 3, one merge script beside the old road",
+   "T-4185": "Launcher widgets open the apps a person chose"
   },
   "wk": {
    "T-4184": "Idris",
    "T-4192": "Idris",
-   "T-5688": "Odalys",
    "T-5491": "Pernille",
+   "T-5688": "Odalys",
    "T-5524": "Idris",
+   "T-4715": "Maren",
+   "T-5256": "Odalys",
    "T-4185": "Idris",
+   "T-3350": "Idris",
    "T-5693": "Idris",
    "T-4220": "Idris",
    "T-3847": "Idris",
@@ -842,7 +841,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-23T15:59:52Z",
+  "at": "2026-11-23T16:03:03Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -854,13 +853,13 @@
     "parked": 13
    },
    "m": {
-    "checking": 21,
-    "inline": 57,
+    "checking": 24,
+    "inline": 60,
     "conflicted": null,
     "failed": null,
-    "held": 391,
+    "held": 394,
     "retry": null,
-    "parked": 391
+    "parked": 394
    },
    "cur": [
     [
@@ -869,7 +868,7 @@
      ],
      "iPhone app tests, sent and waiting its turn",
      "MacBook",
-     21
+     24
     ]
    ],
    "ld": [
@@ -879,12 +878,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-23T15:59:25Z",
-    "ld": 23.53,
+    "at": "2026-11-23T16:02:15Z",
+    "ld": 20.75,
     "c": 8,
     "sb": 1,
     "dk": [
-     41.0,
+     40.7,
      228.3
     ],
     "ss": [
@@ -934,11 +933,11 @@
      "open": true
     }
    },
-   "at": "2026-11-23T16:00:02+00:00"
+   "at": "2026-11-23T16:03:03+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-23T16:00:02+00:00"
+   "at": "2026-11-23T16:03:03+00:00"
   }
  },
  "operators": [
@@ -991,10 +990,10 @@
   "main": 0,
   "lanes": 2,
   "total": 2,
-  "at": "11:00 AM",
+  "at": "11:03 AM",
   "why": "",
-  "at_iso": "2026-11-23T16:00:00+00:00",
+  "at_iso": "2026-11-23T16:03:00+00:00",
   "started": "9:27 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0, started 9:27 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 11:00 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0, started 9:27 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 11:03 AM ET</p></section>"
  }
 }

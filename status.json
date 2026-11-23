@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-23T13:50:48.382202+00:00",
+ "at": "2026-11-23T13:53:56.014839+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -385,36 +385,36 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 710,
+  "runnable_count": 711,
   "blocked_count": 2
  },
  "meter": {
   "five_hour": {
-   "pct": 6.0,
-   "resets_at": "2026-11-23T12:10:00-05:00",
+   "pct": 7.0,
+   "resets_at": "2026-11-23T17:10:00.468903+00:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-23T08:29:36.603196-05:00",
-   "source": "live",
-   "left": 94.0,
+   "read_at": "2026-11-23T08:50:52.833708-05:00",
+   "source": "usage",
+   "left": 93.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 10.0,
-   "resets_at": "2026-11-29T02:00:00-05:00",
+   "resets_at": "2026-11-29T07:00:00.468923+00:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-23T08:29:36.603196-05:00",
-   "source": "live",
+   "read_at": "2026-11-23T08:50:52.833708-05:00",
+   "source": "usage",
    "left": 90.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 4.0,
-   "resets_at": "2026-11-29T07:00:00.255108+00:00",
+   "resets_at": "2026-11-29T07:00:00.469090+00:00",
    "used_words": "of the Fable weekly allowance used",
-   "read_at": "2026-11-23T08:16:12.871134-05:00",
+   "read_at": "2026-11-23T08:50:52.833708-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-23T08:29:36.603196-05:00"
+  "read_at": "2026-11-23T08:50:52.833708-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -431,10 +431,10 @@
  },
  "next_tick": null,
  "personal": {
-  "week_pct": 68.24,
+  "week_pct": 52.31,
   "usage_pct": 84.0,
   "work_pct": 95.0,
-  "read_at": "2026-11-23T13:50:00+00:00",
+  "read_at": "2026-11-23T13:53:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -496,7 +496,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-23T08:50:00-05:00",
+  "at": "2026-11-23T08:53:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -709,7 +709,7 @@
    }
   ],
   "count": {
-   "next": 710,
+   "next": 711,
    "wait": 2,
    "blocked": 0,
    "you": 2
@@ -779,51 +779,46 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-23T13:50:30Z",
+  "at": "2026-11-23T13:53:45Z",
   "s": {
    "T-5479": [
     "mergetest",
     "Xcode checks on the MacBook, 1st to merge",
-    1795441650815
+    1795441665858
    ],
    "T-0337": [
     "mergetest",
     "Xcode checks on the MacBook, 1st to merge",
-    1795441650815
+    1795441665858
    ],
    "T-2097": [
     "mergetest",
     "Xcode checks on the MacBook, 1st to merge",
-    1795441650815
+    1795441665858
    ],
    "T-4010": [
     "mergetest",
     "Xcode checks on the MacBook, 1st to merge",
-    1795441650815
+    1795441665858
    ],
    "T-4662": [
     "mergeq",
     "2nd to merge",
-    1795440570815
+    1795440525858
    ],
    "T-5602": [
     "mergeq",
     "3rd to merge",
-    1795438830815
+    1795438785858
    ],
    "T-4692": [
     "mergeq",
     "4th to merge",
-    1795441110815
+    1795441125858
    ],
    "T-0749": [
     "mergetest",
     "iPhone tests on the MacBook",
-    null
-   ],
-   "T-4183": [
-    "testing",
-    "Mac Mini \u00b7 test",
     null
    ],
    "T-5256": [
@@ -860,7 +855,6 @@
    "T-5602": "Brief for a new look for the app",
    "T-4692": "Pro showcase widgets work free, editing them needs Pro",
    "T-0749": "Copy a project's sibling files when saving a widget",
-   "T-4183": "The Gallery shows, previews and opens every premade",
    "T-5256": "Trim step 3, one merge script beside the old road",
    "T-4182": "A failing widget says so and can recover",
    "T-4184": "A person's own script becomes a Home Screen widget",
@@ -875,7 +869,6 @@
    "T-5602": "Maren",
    "T-4692": "Idris",
    "T-0749": "Idris",
-   "T-4183": "Idris",
    "T-5256": "Odalys",
    "T-4182": "Idris",
    "T-4184": "Idris",
@@ -888,7 +881,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-23T13:50:30Z",
+  "at": "2026-11-23T13:53:45Z",
   "mq": {
    "n": {
     "checking": 4,
@@ -900,13 +893,13 @@
     "parked": 11
    },
    "m": {
-    "checking": 3,
-    "inline": 21,
+    "checking": 6,
+    "inline": 25,
     "conflicted": null,
     "failed": null,
-    "held": 262,
+    "held": 265,
     "retry": null,
-    "parked": 262
+    "parked": 265
    },
    "cur": [
     [
@@ -915,7 +908,7 @@
      ],
      "iPhone app tests",
      "MacBook",
-     3
+     6
     ],
     [
      [
@@ -923,7 +916,7 @@
      ],
      "iPhone app tests",
      "MacBook",
-     3
+     6
     ],
     [
      [
@@ -931,7 +924,7 @@
      ],
      "iPhone app tests",
      "MacBook",
-     3
+     6
     ],
     [
      [
@@ -939,7 +932,7 @@
      ],
      "iPhone app tests",
      "MacBook",
-     3
+     6
     ]
    ],
    "ld": [
@@ -949,12 +942,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-23T13:49:44Z",
-    "ld": 10.63,
+    "at": "2026-11-23T13:53:25Z",
+    "ld": 6.3,
     "c": 8,
     "sb": 1,
     "dk": [
-     41.9,
+     39.1,
      228.3
     ],
     "ss": [
@@ -1004,11 +997,11 @@
      "open": true
     }
    },
-   "at": "2026-11-23T13:50:48+00:00"
+   "at": "2026-11-23T13:53:56+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-23T13:50:30+00:00"
+   "at": "2026-11-23T13:53:45+00:00"
   }
  },
  "operators": [
@@ -1060,10 +1053,10 @@
   "main": 0,
   "lanes": 2,
   "total": 2,
-  "at": "8:50 AM",
+  "at": "8:53 AM",
   "why": "",
-  "at_iso": "2026-11-23T13:50:00+00:00",
+  "at_iso": "2026-11-23T13:53:00+00:00",
   "started": "2:29 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0, started 2:29 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 8:50 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0, started 2:29 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 8:53 AM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-23T12:53:09.314276+00:00",
+ "at": "2026-11-23T12:56:14.230426+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -12,6 +12,38 @@
    "last_handoff": 1795407234
   },
   "flow": [
+   {
+    "t": "T-4554",
+    "name": "One state commit per widget across app and widget",
+    "w": "Idris",
+    "acct": "Personal b",
+    "steps": [
+     {
+      "s": "claimed",
+      "at": 1795438509
+     },
+     {
+      "s": "worker",
+      "at": 1795438509
+     }
+    ]
+   },
+   {
+    "t": "T-4282",
+    "name": "Measure real scripts inside the widget on phones",
+    "w": "Idris",
+    "acct": "Personal b",
+    "steps": [
+     {
+      "s": "claimed",
+      "at": 1795438403
+     },
+     {
+      "s": "worker",
+      "at": 1795438403
+     }
+    ]
+   },
    {
     "t": "T-4468",
     "name": "Let people set each premade's place, events and lists",
@@ -331,38 +363,6 @@
       "at": 1795424153
      }
     ]
-   },
-   {
-    "t": "T-3495",
-    "name": "Check the upload fix before build 4 goes out",
-    "w": "Pernille",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "claimed",
-      "at": 1795423957
-     },
-     {
-      "s": "worker",
-      "at": 1795423957
-     }
-    ]
-   },
-   {
-    "t": "T-4181",
-    "name": "Widgets refresh on their own and by a tap",
-    "w": "Idris",
-    "acct": "Personal b",
-    "steps": [
-     {
-      "s": "claimed",
-      "at": 1795420690
-     },
-     {
-      "s": "worker",
-      "at": 1795420690
-     }
-    ]
    }
   ],
   "flow_n": 26,
@@ -434,7 +434,7 @@
   "week_pct": 102.36,
   "usage_pct": 84.0,
   "work_pct": 95.0,
-  "read_at": "2026-11-23T12:53:00+00:00",
+  "read_at": "2026-11-23T12:56:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -535,7 +535,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-23T07:53:00-05:00",
+  "at": "2026-11-23T07:56:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -546,7 +546,7 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 8 (held: too few lands in 3 hours to judge a raise)",
+  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 8 (at its floor: load 11.2 a core is over 10)",
   "n": 8,
   "at": "2026-11-23T02:28:27.861501-05:00"
  },
@@ -622,15 +622,6 @@
    },
    {
     "w": "Idris",
-    "t": "Location, steps and notifications work in scripts and widgets",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-23T07:33:30-05:00",
-    "o": "c",
-    "task": "T-4188"
-   },
-   {
-    "w": "Idris",
     "t": "Python in the app: smaller bundle, installable packages",
     "m": "opus",
     "e": "high",
@@ -655,6 +646,15 @@
     "at": "2026-11-23T07:46:17-05:00",
     "o": "c",
     "task": "T-4182"
+   },
+   {
+    "w": "Idris",
+    "t": "Location, steps and notifications work in scripts and widgets",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-23T07:55:34-05:00",
+    "o": "c",
+    "task": "T-4188"
    }
   ],
   "src": "plan",
@@ -810,13 +810,8 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-23T12:52:59Z",
+  "at": "2026-11-23T12:56:02Z",
   "s": {
-   "T-5490": [
-    "mergeq",
-    "1st to merge",
-    1795438259518
-   ],
    "T-4184": [
     "merged",
     "on main 7:31 AM ET",
@@ -843,14 +838,12 @@
    ]
   },
   "nm": {
-   "T-5490": "Make the https big-body test count work, not seconds",
    "T-4184": "A person's own script becomes a Home Screen widget",
    "T-4692": "Pro showcase widgets work free, editing them needs Pro",
    "T-5602": "Brief for a new look for the app",
    "T-4182": "A failing widget says so and can recover"
   },
   "wk": {
-   "T-5490": "Pernille",
    "T-4184": "Idris",
    "T-4692": "Idris",
    "T-5602": "Maren",
@@ -861,11 +854,11 @@
   }
  },
  "ln": {
-  "at": "2026-11-23T12:52:59Z",
+  "at": "2026-11-23T12:56:02Z",
   "mq": {
    "n": {
     "checking": 0,
-    "inline": 1,
+    "inline": 0,
     "conflicted": 0,
     "failed": 0,
     "held": 3,
@@ -874,12 +867,12 @@
    },
    "m": {
     "checking": null,
-    "inline": 2,
+    "inline": null,
     "conflicted": null,
     "failed": null,
-    "held": 204,
+    "held": 207,
     "retry": null,
-    "parked": 247
+    "parked": 250
    },
    "cur": [],
    "ld": [
@@ -889,12 +882,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-23T12:52:35Z",
-    "ld": 10.74,
+    "at": "2026-11-23T12:56:03Z",
+    "ld": 10.1,
     "c": 8,
     "sb": 1,
     "dk": [
-     39.2,
+     38.5,
      228.3
     ],
     "ss": [
@@ -944,11 +937,11 @@
      "open": true
     }
    },
-   "at": "2026-11-23T12:53:09+00:00"
+   "at": "2026-11-23T12:56:14+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-23T12:52:59+00:00"
+   "at": "2026-11-23T12:56:02+00:00"
   }
  },
  "operators": [
@@ -1003,7 +996,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 2 tasks",
+   "t": "Work session \u2013 4 tasks",
    "at": "2026-11-23T07:43:38-05:00"
   }
  ],
@@ -1027,10 +1020,10 @@
   "main": 0,
   "lanes": 5,
   "total": 5,
-  "at": "7:53 AM",
+  "at": "7:56 AM",
   "why": "",
-  "at_iso": "2026-11-23T12:53:00+00:00",
+  "at_iso": "2026-11-23T12:56:00+00:00",
   "started": "2:29 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 0, started 2:29 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 7:53 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 0, started 2:29 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 7:56 AM ET</p></section>"
  }
 }

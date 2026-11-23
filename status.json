@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-23T05:21:17.816676+00:00",
+ "at": "2026-11-23T05:24:29.361371+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -373,7 +373,7 @@
   "week_pct": 2.42,
   "usage_pct": 68.7,
   "work_pct": 88.2,
-  "read_at": "2026-11-23T05:21:00+00:00",
+  "read_at": "2026-11-23T05:24:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -397,6 +397,18 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-23T00:14:41-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a3",
+    "task": "T-4692",
+    "w": "Idris",
+    "k": "build",
+    "t": "Pro showcase widgets work free, editing them needs Pro",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-23T00:21:44-05:00",
     "n": "Evan",
     "src": "plan-a"
    }
@@ -436,7 +448,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-23T00:21:00-05:00",
+  "at": "2026-11-23T00:24:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -652,13 +664,8 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-23T05:21:17Z",
+  "at": "2026-11-23T05:24:08Z",
   "s": {
-   "T-0657": [
-    "mergetest",
-    "iPhone tests on the MacBook",
-    null
-   ],
    "T-4184": [
     "merged",
     "on main 12:11 AM ET",
@@ -667,18 +674,16 @@
    ]
   },
   "nm": {
-   "T-0657": "Build the Settings screen",
    "T-4184": "A person's own script becomes a Home Screen widget"
   },
   "wk": {
-   "T-0657": "Idris",
    "T-4184": "Idris",
    "T-5193": "Maren",
    "T-5628": "Odalys"
   }
  },
  "ln": {
-  "at": "2026-11-23T05:21:17Z",
+  "at": "2026-11-23T05:24:08Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -696,7 +701,7 @@
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 104
+    "parked": 107
    },
    "cur": [],
    "ld": [
@@ -706,8 +711,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-23T05:20:34Z",
-    "ld": 3.05,
+    "at": "2026-11-23T05:24:10Z",
+    "ld": 2.71,
     "c": 8,
     "sb": 1,
     "dk": [
@@ -723,12 +728,12 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-23T05:14:42Z",
-    "ld": 0.16,
+    "at": "2026-11-23T05:22:36Z",
+    "ld": 0.69,
     "c": 12,
     "sb": 0,
     "dk": [
-     353.2,
+     353.1,
      926.4
     ],
     "sn": []
@@ -761,11 +766,11 @@
      "open": true
     }
    },
-   "at": "2026-11-23T05:21:17+00:00"
+   "at": "2026-11-23T05:24:29+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-23T05:21:17+00:00"
+   "at": "2026-11-23T05:24:22+00:00"
   }
  },
  "operators": [
@@ -795,6 +800,15 @@
    "e": "high",
    "t": "Work session \u2013 1 task",
    "at": "2026-11-23T00:14:41-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Evan's Account",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session \u2013 1 task",
+   "at": "2026-11-23T00:21:44-05:00"
   }
  ],
  "reply": {
@@ -815,12 +829,12 @@
  ],
  "agents_now": {
   "main": 0,
-  "lanes": 2,
-  "total": 2,
-  "at": "12:21 AM",
+  "lanes": 3,
+  "total": 3,
+  "at": "12:24 AM",
   "why": "",
-  "at_iso": "2026-11-23T05:21:00+00:00",
+  "at_iso": "2026-11-23T05:24:00+00:00",
   "started": "11:16 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0, started 11:16 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 12:21 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 11:16 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 12:24 AM ET</p></section>"
  }
 }

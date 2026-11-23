@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-23T10:56:12.962683+00:00",
+ "at": "2026-11-23T10:59:13.225931+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -400,31 +400,31 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 16.0,
-   "resets_at": "2026-11-23T07:10:00-05:00",
+   "pct": 17.0,
+   "resets_at": "2026-11-23T12:10:00.859394+00:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-23T05:42:51.914545-05:00",
-   "source": "live",
-   "left": 84.0,
+   "read_at": "2026-11-23T05:57:38.093010-05:00",
+   "source": "usage",
+   "left": 83.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 8.0,
-   "resets_at": "2026-11-29T02:00:00-05:00",
+   "resets_at": "2026-11-29T07:00:00.859419+00:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-23T05:42:51.914545-05:00",
-   "source": "live",
+   "read_at": "2026-11-23T05:57:38.093010-05:00",
+   "source": "usage",
    "left": 92.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 4.0,
-   "resets_at": "2026-11-29T06:59:59.795208+00:00",
+   "resets_at": "2026-11-29T06:59:59.859596+00:00",
    "used_words": "of the Fable weekly allowance used",
-   "read_at": "2026-11-23T05:24:43.513524-05:00",
+   "read_at": "2026-11-23T05:57:38.093010-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-23T05:42:51.914545-05:00"
+  "read_at": "2026-11-23T05:57:38.093010-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -441,10 +441,10 @@
  },
  "next_tick": null,
  "personal": {
-  "week_pct": 122.84,
+  "week_pct": 143.31,
   "usage_pct": 84.0,
   "work_pct": 95.0,
-  "read_at": "2026-11-23T10:56:00+00:00",
+  "read_at": "2026-11-23T10:59:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -465,7 +465,7 @@
   }
  ],
  "disk": {
-  "free_gb": 50,
+  "free_gb": 53,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -474,14 +474,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-23T05:51:00-05:00",
+   "at": "2026-11-23T05:57:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-23T05:56:00-05:00",
+  "at": "2026-11-23T05:59:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -556,6 +556,33 @@
     "at": "2026-11-23T05:37:12-05:00",
     "o": "c",
     "task": "T-4192"
+   },
+   {
+    "w": "Idris",
+    "t": "A person's own script becomes a Home Screen widget",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-23T05:57:38-05:00",
+    "o": "c",
+    "task": "T-4184"
+   },
+   {
+    "w": "Idris",
+    "t": "Settings and Pro: buy, restore, themes",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-23T05:58:37-05:00",
+    "o": "c",
+    "task": "T-4190"
+   },
+   {
+    "w": "Ines",
+    "t": "Account b used up by midweek without skewing the comparison",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-23T05:58:37-05:00",
+    "o": "c",
+    "task": "T-5644"
    }
   ],
   "src": "plan",
@@ -707,87 +734,99 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-23T10:56:00Z",
+  "at": "2026-11-23T10:59:13Z",
   "s": {
    "T-5484": [
     "mergeq",
     "1st to merge",
-    1795431300031
+    1795431313225
    ],
    "T-0337": [
     "mergeq",
     "1st to merge",
-    1795431300031
+    1795431313225
    ],
    "T-2097": [
     "mergeq",
     "1st to merge",
-    1795431300031
+    1795431313225
    ],
    "T-4010": [
     "mergeq",
     "1st to merge",
-    1795431300031
+    1795431313225
    ],
    "T-4477": [
     "mergeq",
     "1st to merge",
-    1795431300031
+    1795431313225
    ],
    "T-4286": [
     "mergeq",
     "1st to merge",
-    1795431300031
+    1795431313225
    ],
    "T-4435": [
     "mergeq",
     "1st to merge",
-    1795431300031
+    1795431313225
    ],
    "T-0678": [
     "mergeq",
     "1st to merge",
-    1795431300031
+    1795431313225
    ],
    "T-3765": [
     "mergeq",
     "1st to merge",
-    1795431300031
+    1795431313225
    ],
    "T-4662": [
     "mergeq",
     "1st to merge",
-    1795431300031
+    1795431313225
    ],
    "T-4781": [
     "mergeq",
     "1st to merge",
-    1795431300031
+    1795431313225
    ],
    "T-4762": [
     "mergeq",
     "1st to merge",
-    1795431300031
+    1795431313225
    ],
    "T-4635": [
     "mergeq",
     "1st to merge",
-    1795431300031
+    1795431313225
    ],
    "T-4182": [
     "mergeq",
     "1st to merge",
-    1795431300031
+    1795431313225
    ],
    "T-5620": [
     "mergeq",
     "1st to merge",
-    1795431300031
+    1795431313225
    ],
    "T-0657": [
     "mergeq",
     "1st to merge",
-    1795431300031
+    1795431313225
+   ],
+   "T-4184": [
+    "merged",
+    "on main 4:04 AM ET",
+    1795424645000,
+    "Pernille"
+   ],
+   "T-5644": [
+    "merged",
+    "on main 1:43 AM ET",
+    1795416206000,
+    ""
    ]
   },
   "nm": {
@@ -806,7 +845,9 @@
    "T-4635": "Clear the Settings restore line once Pro is bought",
    "T-4182": "A failing widget says so and can recover",
    "T-5620": "Queued test requests replay while the coordinator runs",
-   "T-0657": "Build the Settings screen"
+   "T-0657": "Build the Settings screen",
+   "T-4184": "A person's own script becomes a Home Screen widget",
+   "T-5644": "Account b used up by midweek without skewing the comparison"
   },
   "wk": {
    "T-5484": "Odalys",
@@ -825,12 +866,14 @@
    "T-4182": "Idris",
    "T-5620": "Odalys",
    "T-0657": "Idris",
+   "T-4184": "Idris",
+   "T-5644": "Ines",
    "T-5673": "Odalys",
    "T-5381": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-23T10:56:00Z",
+  "at": "2026-11-23T10:59:13Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -843,12 +886,12 @@
    },
    "m": {
     "checking": null,
-    "inline": 1,
+    "inline": 4,
     "conflicted": null,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 157
+    "parked": 161
    },
    "cur": [],
    "ld": [
@@ -858,12 +901,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-23T10:55:32Z",
-    "ld": 5.47,
+    "at": "2026-11-23T10:59:14Z",
+    "ld": 5.52,
     "c": 8,
     "sb": 0,
     "dk": [
-     52.6,
+     55.0,
      228.3
     ],
     "ss": [
@@ -911,11 +954,11 @@
      "open": true
     }
    },
-   "at": "2026-11-23T10:56:12+00:00"
+   "at": "2026-11-23T10:59:13+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-23T10:56:12+00:00"
+   "at": "2026-11-23T10:59:05+00:00"
   }
  },
  "operators": [
@@ -949,10 +992,10 @@
   "main": 0,
   "lanes": 0,
   "total": 0,
-  "at": "5:56 AM",
+  "at": "5:59 AM",
   "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
-  "at_iso": "2026-11-23T10:56:00+00:00",
+  "at_iso": "2026-11-23T10:59:00+00:00",
   "started": "2:29 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0, started 2:29 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 5:56 AM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0, started 2:29 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 5:59 AM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
  }
 }

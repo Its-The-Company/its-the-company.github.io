@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-23T20:13:23.752453+00:00",
+ "at": "2026-11-23T20:16:34.759879+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -376,7 +376,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 713,
+  "runnable_count": 714,
   "blocked_count": 2
  },
  "meter": {
@@ -425,20 +425,8 @@
   "week_pct": 75.19,
   "usage_pct": 85.3,
   "work_pct": 96.6,
-  "read_at": "2026-11-23T20:13:00+00:00",
+  "read_at": "2026-11-23T20:16:00+00:00",
   "running": [
-   {
-    "lane": "a2",
-    "task": "T-5722",
-    "w": "Odalys",
-    "k": "review",
-    "t": "Review the fix for guard tests that fail under load",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-23T14:29:48-05:00",
-    "n": "Evan",
-    "src": "plan-a"
-   },
    {
     "lane": "a3",
     "task": "T-5490",
@@ -471,7 +459,7 @@
   }
  ],
  "disk": {
-  "free_gb": 37,
+  "free_gb": 34,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -480,14 +468,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-23T15:07:00-05:00",
+   "at": "2026-11-23T15:13:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-23T15:13:00-05:00",
+  "at": "2026-11-23T15:16:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -700,7 +688,7 @@
    }
   ],
   "count": {
-   "next": 713,
+   "next": 714,
    "wait": 2,
    "blocked": 0,
    "you": 2
@@ -774,27 +762,32 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-23T20:13:23Z",
+  "at": "2026-11-23T20:16:24Z",
   "s": {
-   "T-5688": [
+   "T-5722": [
     "mergeq",
     "1st to merge",
-    1795447463752
+    1795464924968
+   ],
+   "T-5688": [
+    "mergeq",
+    "2nd to merge",
+    1795447464968
    ],
    "T-4715": [
     "mergeq",
-    "2nd to merge",
-    1795460363752
+    "3rd to merge",
+    1795460364968
    ],
    "T-5708": [
     "mergeq",
-    "3rd to merge",
-    1795460363752
+    "4th to merge",
+    1795460364968
    ],
    "T-4185": [
     "mergeq",
-    "4th to merge",
-    1795464383752
+    "5th to merge",
+    1795464384968
    ],
    "T-5542": [
     "testing",
@@ -804,7 +797,7 @@
    "T-4192": [
     "testq",
     "1st for a Simulator",
-    1795464743752
+    1795464804968
    ],
    "T-4190": [
     "merged",
@@ -814,6 +807,7 @@
    ]
   },
   "nm": {
+   "T-5722": "Review the fix for guard tests that fail under load",
    "T-5688": "Land finished work whose copy also changed the board",
    "T-4715": "Put the new Pro screen words into the app",
    "T-5708": "Clear the add-to-home steps before TestFlight",
@@ -823,6 +817,7 @@
    "T-4190": "Settings and Pro: buy, restore, themes"
   },
   "wk": {
+   "T-5722": "Odalys",
    "T-5688": "Odalys",
    "T-4715": "Maren",
    "T-5708": "Maren",
@@ -844,11 +839,11 @@
   }
  },
  "ln": {
-  "at": "2026-11-23T20:13:23Z",
+  "at": "2026-11-23T20:16:24Z",
   "mq": {
    "n": {
     "checking": 0,
-    "inline": 4,
+    "inline": 5,
     "conflicted": 0,
     "failed": 0,
     "held": 3,
@@ -857,12 +852,12 @@
    },
    "m": {
     "checking": null,
-    "inline": 74,
+    "inline": 77,
     "conflicted": null,
     "failed": null,
-    "held": 645,
+    "held": 648,
     "retry": null,
-    "parked": 645
+    "parked": 648
    },
    "cur": [],
    "ld": [
@@ -872,12 +867,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-23T20:13:25Z",
-    "ld": 18.18,
+    "at": "2026-11-23T20:15:42Z",
+    "ld": 17.07,
     "c": 8,
     "sb": 1,
     "dk": [
-     34.7,
+     34.3,
      228.3
     ],
     "ss": [
@@ -927,11 +922,11 @@
      "open": true
     }
    },
-   "at": "2026-11-23T20:13:23+00:00"
+   "at": "2026-11-23T20:16:34+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-23T20:13:16+00:00"
+   "at": "2026-11-23T20:16:34+00:00"
   }
  },
  "operators": [
@@ -943,15 +938,6 @@
    "e": "high",
    "t": "Work session",
    "at": "2026-11-23T14:22:36-05:00"
-  },
-  {
-   "w": "Operator",
-   "a": "Evan's Account",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session \u2013 1 task",
-   "at": "2026-11-23T14:29:48-05:00"
   },
   {
    "w": "Operator",
@@ -982,12 +968,12 @@
  ],
  "agents_now": {
   "main": 0,
-  "lanes": 2,
-  "total": 2,
-  "at": "3:13 PM",
+  "lanes": 1,
+  "total": 1,
+  "at": "3:16 PM",
   "why": "",
-  "at_iso": "2026-11-23T20:13:00+00:00",
+  "at_iso": "2026-11-23T20:16:00+00:00",
   "started": "9:27 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0, started 9:27 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 3:13 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0, started 9:27 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 3:16 PM ET</p></section>"
  }
 }

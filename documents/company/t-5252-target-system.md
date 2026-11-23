@@ -390,6 +390,27 @@ would starve the old road; Sun 11-22 2:00 AM ET stays the earliest start.
 - The trim's own heavy test runs and building are finished before S and kept off the machine during the four days.
   The personal accounts' stop of 7:27 AM (`ops/lane_stops.json` r3) was <span title="A new, permitted reading that removes a cap. A lift rule is that reading, written down before we look.">lifted</span> at 9:10 AM for this.
 
+### Is account b apart? No: every account counts alike (T-5644)
+
+Ines, 11-23 1:45 AM ET. Jeremy asked at 11:25 PM 11-22 (an Investor #325 c7091571989, `log/rulings.md`) for account
+b on Double Spread, its whole week used by the halfway point, without skewing the comparison; the first answer was to
+measure the roads on main and a only and report b apart. Evan replaced that at 11:36 PM (an Investor #325 c7091713826,
+`log/rulings.md`): "The comparison will run on all accounts. They will all be locked in for the entire comparison and
+will reset if they hit their limits, so their should be no difference between the performance of any account". So:
+- *Not set apart.* All three accounts (main, a, b) count in the road-against-road result on all four days, the same
+  way; b's figures are not reported apart. An account that reaches its limit is reset by the Investors, so b using its
+  week by midweek does not leave day 3 or day 4 with less capacity.
+- *Locked in throughout.* Every account is on Lock In for the whole comparison (`ops/lock_in.json`, renewed each day
+  11-23 to 11-26 by `tools/usage_mode.py`'s AUTO_SPANS). Lock In gives the full pool, at least as fast as Double Spread.
+- *b's pace.* b's pace is Double Spread (`ops/usage_mode.json`, an Investor 11-22 5:16 AM). Its week runs Sat 11-21
+  2:00 PM to Sat 11-28 2:00 PM, so the halfway point is Wed 11-25 2:00 AM ET.
+- *The pace check, 11-23 1:38 AM* (`python3 tools/account_pace.py` on the main folder's meters): b at 38% of its week
+  (read Sun 11-22 11:11 PM), 21% of its week gone; its 5-hour window full until 2:10 AM. The straight Double Spread
+  line stood at 42%, so b was about 4 points under it, held only by the 5-hour window. From 2:10 AM to Wed 2:00 AM is
+  about 48 hours, nine and a half 5-hour windows; the 62 points left need about 6.5 a window (1.3 an hour). b used 17
+  points from 6:55 PM to 11:11 PM (21% to 38%), so it reaches 100% by Wed 2:00 AM if its lanes keep taking work. If a
+  later reading shows it will not, the company says so on #325.
+
 ## Progress
 
 Each step, when its check passes, adds one line here: "Step N done:" with the date, the commit and the evidence.

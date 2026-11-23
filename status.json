@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-23T17:37:29.070245+00:00",
+ "at": "2026-11-23T17:40:36.279637+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -425,7 +425,7 @@
   "week_pct": 69.41,
   "usage_pct": 85.3,
   "work_pct": 96.6,
-  "read_at": "2026-11-23T17:37:00+00:00",
+  "read_at": "2026-11-23T17:40:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -488,7 +488,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-23T12:37:00-05:00",
+  "at": "2026-11-23T12:40:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -499,7 +499,7 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 8 (at its floor: load 25.8 a core is over 10)",
+  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 8 (at its floor: load 21.0 a core is over 10)",
   "n": 8,
   "at": "2026-11-23T09:25:38.709305-05:00"
  },
@@ -775,27 +775,22 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-23T17:37:29Z",
+  "at": "2026-11-23T17:40:28Z",
   "s": {
-   "T-4184": [
-    "mergetest",
-    "Xcode checks on the MacBook, 1st to merge",
-    1795454849070
-   ],
    "T-4192": [
     "mergeq",
-    "2nd to merge",
-    1795445189070
+    "1st to merge",
+    1795445188867
    ],
    "T-5688": [
     "mergeq",
-    "3rd to merge",
-    1795447409070
+    "2nd to merge",
+    1795447408867
    ],
    "T-5697": [
     "mergeq",
-    "4th to merge",
-    1795454789070
+    "3rd to merge",
+    1795454788867
    ],
    "T-4772": [
     "testing",
@@ -805,12 +800,12 @@
    "T-4715": [
     "testq",
     "1st for a Simulator",
-    1795455149070
+    1795455148867
    ],
    "T-5256": [
     "testq",
     "1st for a Simulator",
-    1795455149070
+    1795455148867
    ],
    "T-5700": [
     "merged",
@@ -820,7 +815,6 @@
    ]
   },
   "nm": {
-   "T-4184": "A person's own script becomes a Home Screen widget",
    "T-4192": "Python in the app: smaller bundle, installable packages",
    "T-5688": "Land finished work whose copy also changed the board",
    "T-5697": "Nothing a worker committed vanishes from a land unsaid",
@@ -830,7 +824,6 @@
    "T-5700": "Lands stop queuing behind one MacBook check"
   },
   "wk": {
-   "T-4184": "Idris",
    "T-4192": "Idris",
    "T-5688": "Odalys",
    "T-5697": "Odalys",
@@ -851,10 +844,10 @@
   }
  },
  "ln": {
-  "at": "2026-11-23T17:37:29Z",
+  "at": "2026-11-23T17:40:28Z",
   "mq": {
    "n": {
-    "checking": 1,
+    "checking": 0,
     "inline": 3,
     "conflicted": 0,
     "failed": 0,
@@ -863,24 +856,15 @@
     "parked": 13
    },
    "m": {
-    "checking": 10,
-    "inline": 134,
+    "checking": null,
+    "inline": 137,
     "conflicted": null,
     "failed": null,
-    "held": 489,
+    "held": 492,
     "retry": null,
-    "parked": 489
+    "parked": 492
    },
-   "cur": [
-    [
-     [
-      "T-4184"
-     ],
-     "iPhone app tests",
-     "MacBook",
-     10
-    ]
-   ],
+   "cur": [],
    "ld": [
     0,
     null
@@ -888,8 +872,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-23T17:37:08Z",
-    "ld": 23.3,
+    "at": "2026-11-23T17:40:02Z",
+    "ld": 20.69,
     "c": 8,
     "sb": 1,
     "dk": [
@@ -905,12 +889,12 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-23T17:28:52Z",
-    "ld": 1.45,
+    "at": "2026-11-23T17:38:49Z",
+    "ld": 0.8,
     "c": 12,
     "sb": 0,
     "dk": [
-     349.3,
+     349.2,
      926.4
     ],
     "sn": []
@@ -925,7 +909,7 @@
    "parked": 16,
    "open": true,
    "mq": false,
-   "counted": "2026-11-23T17:27:35+00:00",
+   "counted": "2026-11-23T17:38:21+00:00",
    "by": {
     "app": {
      "n": 12,
@@ -943,11 +927,11 @@
      "open": true
     }
    },
-   "at": "2026-11-23T17:37:29+00:00"
+   "at": "2026-11-23T17:40:36+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-23T17:37:29+00:00"
+   "at": "2026-11-23T17:40:22+00:00"
   }
  },
  "operators": [
@@ -1000,10 +984,10 @@
   "main": 0,
   "lanes": 2,
   "total": 2,
-  "at": "12:37 PM",
+  "at": "12:40 PM",
   "why": "",
-  "at_iso": "2026-11-23T17:37:00+00:00",
+  "at_iso": "2026-11-23T17:40:00+00:00",
   "started": "9:27 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0, started 9:27 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 12:37 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0, started 9:27 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 12:40 PM ET</p></section>"
  }
 }

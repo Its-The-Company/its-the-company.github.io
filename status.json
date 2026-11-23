@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-23T20:10:18.359325+00:00",
+ "at": "2026-11-23T20:13:23.752453+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -425,7 +425,7 @@
   "week_pct": 75.19,
   "usage_pct": 85.3,
   "work_pct": 96.6,
-  "read_at": "2026-11-23T20:10:00+00:00",
+  "read_at": "2026-11-23T20:13:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -487,7 +487,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-23T15:10:00-05:00",
+  "at": "2026-11-23T15:13:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -498,7 +498,7 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 8 (at its floor: load 24.2 a core is over 10)",
+  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 8 (at its floor: load 18.5 a core is over 10)",
   "n": 8,
   "at": "2026-11-23T09:25:38.709305-05:00"
  },
@@ -774,32 +774,37 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-23T20:10:09Z",
+  "at": "2026-11-23T20:13:23Z",
   "s": {
    "T-5688": [
     "mergeq",
     "1st to merge",
-    1795447449374
+    1795447463752
    ],
    "T-4715": [
     "mergeq",
     "2nd to merge",
-    1795460349374
+    1795460363752
    ],
    "T-5708": [
     "mergeq",
     "3rd to merge",
-    1795460409374
+    1795460363752
    ],
    "T-4185": [
     "mergeq",
     "4th to merge",
-    1795464369374
+    1795464383752
    ],
    "T-5542": [
     "testing",
     "Mac Mini \u00b7 test",
     null
+   ],
+   "T-4192": [
+    "testq",
+    "1st for a Simulator",
+    1795464743752
    ],
    "T-4190": [
     "merged",
@@ -814,6 +819,7 @@
    "T-5708": "Clear the add-to-home steps before TestFlight",
    "T-4185": "Launcher widgets open the apps a person chose",
    "T-5542": "UI test holds the Habits tap scroll",
+   "T-4192": "Python in the app: smaller bundle, installable packages",
    "T-4190": "Settings and Pro: buy, restore, themes"
   },
   "wk": {
@@ -822,6 +828,7 @@
    "T-5708": "Maren",
    "T-4185": "Idris",
    "T-5542": "Idris",
+   "T-4192": "Idris",
    "T-4190": "Idris",
    "T-5256": "Odalys",
    "T-5713": "Pernille",
@@ -837,7 +844,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-23T20:10:09Z",
+  "at": "2026-11-23T20:13:23Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -850,12 +857,12 @@
    },
    "m": {
     "checking": null,
-    "inline": 70,
+    "inline": 74,
     "conflicted": null,
     "failed": null,
-    "held": 642,
+    "held": 645,
     "retry": null,
-    "parked": 642
+    "parked": 645
    },
    "cur": [],
    "ld": [
@@ -865,12 +872,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-23T20:10:11Z",
-    "ld": 22.78,
+    "at": "2026-11-23T20:13:25Z",
+    "ld": 18.18,
     "c": 8,
     "sb": 1,
     "dk": [
-     36.5,
+     34.7,
      228.3
     ],
     "ss": [
@@ -920,11 +927,11 @@
      "open": true
     }
    },
-   "at": "2026-11-23T20:10:18+00:00"
+   "at": "2026-11-23T20:13:23+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-23T20:10:09+00:00"
+   "at": "2026-11-23T20:13:16+00:00"
   }
  },
  "operators": [
@@ -977,10 +984,10 @@
   "main": 0,
   "lanes": 2,
   "total": 2,
-  "at": "3:10 PM",
+  "at": "3:13 PM",
   "why": "",
-  "at_iso": "2026-11-23T20:10:00+00:00",
+  "at_iso": "2026-11-23T20:13:00+00:00",
   "started": "9:27 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0, started 9:27 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 3:10 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0, started 9:27 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 3:13 PM ET</p></section>"
  }
 }

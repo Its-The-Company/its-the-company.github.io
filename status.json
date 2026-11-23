@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-23T12:00:56.636044+00:00",
+ "at": "2026-11-23T12:04:01.671887+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -400,20 +400,20 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 20.0,
-   "resets_at": "2026-11-23T12:10:00.915049+00:00",
+   "pct": 21.0,
+   "resets_at": "2026-11-23T07:10:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-23T06:32:02.098064-05:00",
-   "source": "usage",
-   "left": 80.0,
+   "read_at": "2026-11-23T07:03:48.750769-05:00",
+   "source": "live",
+   "left": 79.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 9.0,
-   "resets_at": "2026-11-29T07:00:00.915067+00:00",
+   "resets_at": "2026-11-29T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-23T06:32:02.098064-05:00",
-   "source": "usage",
+   "read_at": "2026-11-23T07:03:48.750769-05:00",
+   "source": "live",
    "left": 91.0,
    "left_words": "of your weekly allowance left"
   },
@@ -424,7 +424,7 @@
    "read_at": "2026-11-23T06:32:02.098064-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-23T06:32:02.098064-05:00"
+  "read_at": "2026-11-23T07:03:48.750769-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -444,7 +444,7 @@
   "week_pct": 143.31,
   "usage_pct": 84.0,
   "work_pct": 95.0,
-  "read_at": "2026-11-23T12:00:00+00:00",
+  "read_at": "2026-11-23T12:04:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -520,7 +520,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-23T07:00:00-05:00",
+  "at": "2026-11-23T07:04:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -531,7 +531,7 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 8 (at its floor: load 11.0 a core is over 10)",
+  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 8 (held: too few lands in 3 hours to judge a raise)",
   "n": 8,
   "at": "2026-11-23T02:28:27.861501-05:00"
  },
@@ -606,15 +606,6 @@
     "task": "T-5644"
    },
    {
-    "w": "Idris",
-    "t": "Python in the app: smaller bundle, installable packages",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-23T06:58:53-05:00",
-    "o": "c",
-    "task": "T-4192"
-   },
-   {
     "w": "Odalys",
     "t": "Trim step 3, one merge script beside the old road",
     "m": "opus",
@@ -631,6 +622,24 @@
     "at": "2026-11-23T07:00:16-05:00",
     "o": "c",
     "task": "T-4183"
+   },
+   {
+    "w": "Pernille",
+    "t": "Fix the city list test after the tzdata update",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-23T07:01:06-05:00",
+    "o": "c",
+    "task": "T-5616"
+   },
+   {
+    "w": "Idris",
+    "t": "Settings and Pro: buy, restore, themes",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-23T07:01:47-05:00",
+    "o": "c",
+    "task": "T-4190"
    }
   ],
   "src": "plan",
@@ -782,17 +791,12 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-23T12:00:39Z",
+  "at": "2026-11-23T12:03:51Z",
   "s": {
-   "T-4184": [
+   "T-4615": [
     "testing",
     "Mac Mini \u00b7 test",
     null
-   ],
-   "T-4615": [
-    "testq",
-    "1st for a Simulator",
-    1795435059280
    ],
    "T-5644": [
     "merged",
@@ -800,30 +804,28 @@
     1795432889000,
     ""
    ],
-   "T-5256": [
+   "T-4184": [
     "merged",
-    "on main 7:02 PM ET",
-    1795392138000,
-    ""
+    "on main 4:04 AM ET",
+    1795424645000,
+    "Pernille"
    ]
   },
   "nm": {
-   "T-4184": "A person's own script becomes a Home Screen widget",
    "T-4615": "Widget taps on iPad reuse an open window",
    "T-5644": "Account b used up by midweek without skewing the comparison",
-   "T-5256": "Trim step 3, one merge script beside the old road"
+   "T-4184": "A person's own script becomes a Home Screen widget"
   },
   "wk": {
-   "T-4184": "Idris",
    "T-4615": "Idris",
    "T-5644": "Ines",
-   "T-5256": "Odalys",
+   "T-4184": "Idris",
    "T-5673": "Odalys",
    "T-5381": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-23T12:00:39Z",
+  "at": "2026-11-23T12:03:51Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -839,9 +841,9 @@
     "inline": null,
     "conflicted": null,
     "failed": null,
-    "held": 152,
+    "held": 155,
     "retry": null,
-    "parked": 195
+    "parked": 198
    },
    "cur": [],
    "ld": [
@@ -851,12 +853,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-23T12:00:19Z",
-    "ld": 11.53,
+    "at": "2026-11-23T12:03:05Z",
+    "ld": 7.6,
     "c": 8,
-    "sb": 2,
+    "sb": 1,
     "dk": [
-     39.3,
+     40.3,
      228.3
     ],
     "ss": [
@@ -864,8 +866,7 @@
      953.7
     ],
     "sn": [
-     "T4615 iPad Air 11",
-     "iPhone 17e"
+     "T4615 iPad Air 11"
     ]
    },
    "macbook": {
@@ -907,11 +908,11 @@
      "open": true
     }
    },
-   "at": "2026-11-23T12:00:56+00:00"
+   "at": "2026-11-23T12:04:01+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-23T12:00:56+00:00"
+   "at": "2026-11-23T12:04:01+00:00"
   }
  },
  "operators": [
@@ -972,10 +973,10 @@
   "main": 0,
   "lanes": 3,
   "total": 3,
-  "at": "7:00 AM",
+  "at": "7:04 AM",
   "why": "",
-  "at_iso": "2026-11-23T12:00:00+00:00",
+  "at_iso": "2026-11-23T12:04:00+00:00",
   "started": "2:29 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 2:29 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 7:00 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 2:29 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 7:04 AM ET</p></section>"
  }
 }

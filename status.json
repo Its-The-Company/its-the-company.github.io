@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-23T12:56:14.230426+00:00",
+ "at": "2026-11-23T12:59:16.491428+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -434,7 +434,7 @@
   "week_pct": 102.36,
   "usage_pct": 84.0,
   "work_pct": 95.0,
-  "read_at": "2026-11-23T12:56:00+00:00",
+  "read_at": "2026-11-23T12:59:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -463,6 +463,18 @@
     "src": "plan-a"
    },
    {
+    "lane": "a3",
+    "task": "T-4192",
+    "w": "Idris",
+    "k": "build",
+    "t": "Python in the app: smaller bundle, installable packages",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-23T07:57:28-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
     "lane": "b",
     "task": "T-4692",
     "w": "Idris",
@@ -471,31 +483,6 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-23T07:14:11-05:00",
-    "n": "Jeremy",
-    "src": "plan-b"
-   },
-   {
-    "lane": "b2",
-    "task": "T-5602",
-    "w": "Maren",
-    "k": "design",
-    "t": "Brief for a new look for the app",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-23T07:14:07-05:00",
-    "n": "Jeremy",
-    "d": 1,
-    "src": "plan-b"
-   },
-   {
-    "lane": "b3",
-    "task": "T-4193",
-    "w": "Idris",
-    "k": "build",
-    "t": "TestFlight builds and the App Store page are ready",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-23T07:43:38-05:00",
     "n": "Jeremy",
     "src": "plan-b"
    }
@@ -535,7 +522,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-23T07:56:00-05:00",
+  "at": "2026-11-23T07:59:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -622,15 +609,6 @@
    },
    {
     "w": "Idris",
-    "t": "Python in the app: smaller bundle, installable packages",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-23T07:34:37-05:00",
-    "o": "c",
-    "task": "T-4192"
-   },
-   {
-    "w": "Idris",
     "t": "A person's own script becomes a Home Screen widget",
     "m": "opus",
     "e": "high",
@@ -655,6 +633,15 @@
     "at": "2026-11-23T07:55:34-05:00",
     "o": "c",
     "task": "T-4188"
+   },
+   {
+    "w": "Pernille",
+    "t": "Fix the city list test after the tzdata update",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-23T07:56:26-05:00",
+    "o": "c",
+    "task": "T-5616"
    }
   ],
   "src": "plan",
@@ -810,8 +797,28 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-23T12:56:02Z",
+  "at": "2026-11-23T12:59:07Z",
   "s": {
+   "T-2076": [
+    "mergeq",
+    "1st to merge",
+    1795438627828
+   ],
+   "T-4468": [
+    "mergeq",
+    "1st to merge",
+    1795438627828
+   ],
+   "T-4282": [
+    "mergeq",
+    "1st to merge",
+    1795438627828
+   ],
+   "T-4554": [
+    "mergeq",
+    "1st to merge",
+    1795438627828
+   ],
    "T-4184": [
     "merged",
     "on main 7:31 AM ET",
@@ -838,12 +845,20 @@
    ]
   },
   "nm": {
+   "T-2076": "Build the site stages behind off-by-default switches",
+   "T-4468": "Let people set each premade's place, events and lists",
+   "T-4282": "Measure real scripts inside the widget on phones",
+   "T-4554": "One state commit per widget across app and widget",
    "T-4184": "A person's own script becomes a Home Screen widget",
    "T-4692": "Pro showcase widgets work free, editing them needs Pro",
    "T-5602": "Brief for a new look for the app",
    "T-4182": "A failing widget says so and can recover"
   },
   "wk": {
+   "T-2076": "Odalys",
+   "T-4468": "Idris",
+   "T-4282": "Idris",
+   "T-4554": "Idris",
    "T-4184": "Idris",
    "T-4692": "Idris",
    "T-5602": "Maren",
@@ -854,25 +869,25 @@
   }
  },
  "ln": {
-  "at": "2026-11-23T12:56:02Z",
+  "at": "2026-11-23T12:59:07Z",
   "mq": {
    "n": {
     "checking": 0,
-    "inline": 0,
+    "inline": 4,
     "conflicted": 0,
     "failed": 0,
     "held": 3,
     "retry": 0,
-    "parked": 11
+    "parked": 12
    },
    "m": {
     "checking": null,
-    "inline": null,
+    "inline": 2,
     "conflicted": null,
     "failed": null,
-    "held": 207,
+    "held": 211,
     "retry": null,
-    "parked": 250
+    "parked": 232
    },
    "cur": [],
    "ld": [
@@ -882,12 +897,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-23T12:56:03Z",
-    "ld": 10.1,
+    "at": "2026-11-23T12:59:09Z",
+    "ld": 6.47,
     "c": 8,
     "sb": 1,
     "dk": [
-     38.5,
+     39.5,
      228.3
     ],
     "ss": [
@@ -913,21 +928,21 @@
  },
  "hc": {
   "wait": {
-   "n": 14,
+   "n": 15,
    "limit": 20,
    "in_line": 0,
-   "parked": 14,
+   "parked": 15,
    "open": true,
    "mq": false,
-   "counted": "2026-11-23T12:37:41+00:00",
+   "counted": "2026-11-23T12:56:01+00:00",
    "by": {
     "app": {
-     "n": 10,
+     "n": 11,
      "limit": 20,
      "open": true
     },
     "other": {
-     "n": 5,
+     "n": 6,
      "limit": 20,
      "open": true
     },
@@ -937,11 +952,11 @@
      "open": true
     }
    },
-   "at": "2026-11-23T12:56:14+00:00"
+   "at": "2026-11-23T12:59:16+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-23T12:56:02+00:00"
+   "at": "2026-11-23T12:59:07+00:00"
   }
  },
  "operators": [
@@ -974,30 +989,21 @@
   },
   {
    "w": "Operator",
+   "a": "Evan's Account",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session \u2013 1 task",
+   "at": "2026-11-23T07:57:28-05:00"
+  },
+  {
+   "w": "Operator",
    "a": "Jeremy's Account",
    "sr": 1,
    "m": "opus",
    "e": "high",
    "t": "Work session \u2013 1 task",
    "at": "2026-11-23T07:14:10-05:00"
-  },
-  {
-   "w": "Operator",
-   "a": "Jeremy's Account",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session",
-   "at": "2026-11-23T07:14:07-05:00"
-  },
-  {
-   "w": "Operator",
-   "a": "Jeremy's Account",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session \u2013 4 tasks",
-   "at": "2026-11-23T07:43:38-05:00"
   }
  ],
  "reply": {
@@ -1018,12 +1024,12 @@
  ],
  "agents_now": {
   "main": 0,
-  "lanes": 5,
-  "total": 5,
-  "at": "7:56 AM",
+  "lanes": 4,
+  "total": 4,
+  "at": "7:59 AM",
   "why": "",
-  "at_iso": "2026-11-23T12:56:00+00:00",
+  "at_iso": "2026-11-23T12:59:00+00:00",
   "started": "2:29 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 0, started 2:29 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 7:56 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 0, started 2:29 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 7:59 AM ET</p></section>"
  }
 }

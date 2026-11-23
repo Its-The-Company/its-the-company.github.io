@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-23T17:28:07.124222+00:00",
+ "at": "2026-11-23T17:31:15.854457+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -425,7 +425,7 @@
   "week_pct": 69.41,
   "usage_pct": 85.3,
   "work_pct": 96.6,
-  "read_at": "2026-11-23T17:28:00+00:00",
+  "read_at": "2026-11-23T17:31:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -481,14 +481,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-23T12:22:00-05:00",
+   "at": "2026-11-23T12:29:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-23T12:28:00-05:00",
+  "at": "2026-11-23T12:31:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -499,7 +499,7 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 8 (at its floor: load 17.2 a core is over 10)",
+  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 8 (at its floor: load 29.1 a core is over 10)",
   "n": 8,
   "at": "2026-11-23T09:25:38.709305-05:00"
  },
@@ -555,15 +555,6 @@
  ],
  "tasks": {
   "run": [
-   {
-    "w": "Idris",
-    "t": "Launcher widgets open the apps a person chose",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-23T10:31:57-05:00",
-    "o": "c",
-    "task": "T-4185"
-   },
    {
     "w": "Odalys",
     "t": "Lands stop queuing behind one MacBook check",
@@ -775,27 +766,27 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-23T17:28:07Z",
+  "at": "2026-11-23T17:31:15Z",
   "s": {
    "T-4184": [
     "mergetest",
     "Xcode checks on the MacBook, 1st to merge",
-    1795454887124
+    1795454835854
    ],
    "T-4192": [
     "mergeq",
     "2nd to merge",
-    1795445167124
+    1795445175854
    ],
    "T-5688": [
     "mergeq",
     "3rd to merge",
-    1795447447124
+    1795447455854
    ],
    "T-5697": [
     "mergeq",
     "4th to merge",
-    1795454767124
+    1795454775854
    ],
    "T-4715": [
     "testing",
@@ -808,10 +799,15 @@
     null
    ],
    "T-4772": [
+    "testq",
+    "1st for a Simulator",
+    1795455075854
+   ],
+   "T-5700": [
     "merged",
-    "on main 3:27 AM ET",
-    1795422463000,
-    ""
+    "on main 12:22 PM ET",
+    1795454558000,
+    "Odalys"
    ]
   },
   "nm": {
@@ -821,7 +817,8 @@
    "T-5697": "Nothing a worker committed vanishes from a land unsaid",
    "T-4715": "Put the new Pro screen words into the app",
    "T-5256": "Trim step 3, one merge script beside the old road",
-   "T-4772": "Prove a refresh tap redraws the widget"
+   "T-4772": "Prove a refresh tap redraws the widget",
+   "T-5700": "Lands stop queuing behind one MacBook check"
   },
   "wk": {
    "T-4184": "Idris",
@@ -831,6 +828,7 @@
    "T-4715": "Maren",
    "T-5256": "Odalys",
    "T-4772": "Idris",
+   "T-5700": "Odalys",
    "T-3350": "Idris",
    "T-5693": "Idris",
    "T-4220": "Idris",
@@ -844,7 +842,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-23T17:28:07Z",
+  "at": "2026-11-23T17:31:15Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -856,22 +854,22 @@
     "parked": 13
    },
    "m": {
-    "checking": 0,
-    "inline": 124,
+    "checking": 4,
+    "inline": 127,
     "conflicted": null,
     "failed": null,
-    "held": 480,
+    "held": 483,
     "retry": null,
-    "parked": 480
+    "parked": 483
    },
    "cur": [
     [
      [
       "T-4184"
      ],
-     "iPhone app tests, sent and waiting its turn",
+     "iPhone app tests",
      "MacBook",
-     0
+     4
     ]
    ],
    "ld": [
@@ -881,12 +879,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-23T17:28:09Z",
-    "ld": 23.68,
+    "at": "2026-11-23T17:31:18Z",
+    "ld": 33.02,
     "c": 8,
     "sb": 1,
     "dk": [
-     34.4,
+     35.2,
      228.3
     ],
     "ss": [
@@ -894,12 +892,12 @@
      953.7
     ],
     "sn": [
-     "iPhone 17"
+     "iPhone 18 Pro"
     ]
    },
    "macbook": {
-    "at": "2026-11-23T17:24:45Z",
-    "ld": 3.1,
+    "at": "2026-11-23T17:28:52Z",
+    "ld": 1.45,
     "c": 12,
     "sb": 0,
     "dk": [
@@ -936,11 +934,11 @@
      "open": true
     }
    },
-   "at": "2026-11-23T17:28:07+00:00"
+   "at": "2026-11-23T17:31:15+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-23T17:28:07+00:00"
+   "at": "2026-11-23T17:31:15+00:00"
   }
  },
  "operators": [
@@ -957,8 +955,6 @@
    "w": "Operator",
    "a": "Jeremy's Account",
    "sr": 1,
-   "m": "opus",
-   "e": "high",
    "t": "Work session",
    "at": "2026-11-23T10:04:45-05:00"
   },
@@ -966,10 +962,8 @@
    "w": "Operator",
    "a": "Jeremy's Account",
    "sr": 1,
-   "m": "opus",
-   "e": "high",
    "t": "Work session",
-   "at": "2026-11-23T10:13:46-05:00"
+   "at": "2026-11-23T10:13:47-05:00"
   }
  ],
  "reply": {
@@ -993,10 +987,10 @@
   "main": 0,
   "lanes": 2,
   "total": 2,
-  "at": "12:28 PM",
+  "at": "12:31 PM",
   "why": "",
-  "at_iso": "2026-11-23T17:28:00+00:00",
+  "at_iso": "2026-11-23T17:31:00+00:00",
   "started": "9:27 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0, started 9:27 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 12:28 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0, started 9:27 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 12:31 PM ET</p></section>"
  }
 }

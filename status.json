@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-23T06:41:11.498977+00:00",
+ "at": "2026-11-23T06:44:14.782302+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -373,7 +373,7 @@
   "week_pct": 7.04,
   "usage_pct": 84.6,
   "work_pct": 94.7,
-  "read_at": "2026-11-23T06:41:00+00:00",
+  "read_at": "2026-11-23T06:44:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -432,7 +432,7 @@
   }
  ],
  "disk": {
-  "free_gb": 59,
+  "free_gb": 57,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -441,14 +441,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-23T01:37:00-05:00",
+   "at": "2026-11-23T01:44:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 3,
-  "at": "2026-11-23T01:41:00-05:00",
+  "at": "2026-11-23T01:44:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -525,24 +525,6 @@
     "task": "T-5620"
    },
    {
-    "w": "Odalys",
-    "t": "Only the coordinator answers Investor messages",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-23T01:05:20-05:00",
-    "o": "i",
-    "task": "T-5613"
-   },
-   {
-    "w": "Idris",
-    "t": "Prove a refresh tap redraws the widget",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-23T01:10:21-05:00",
-    "o": "c",
-    "task": "T-4772"
-   },
-   {
     "w": "Pernille",
     "t": "Make the premade settings save sturdier on disk errors",
     "m": "opus",
@@ -561,13 +543,22 @@
     "task": "T-4188"
    },
    {
-    "w": "Ines",
-    "t": "Account b used up by midweek without skewing the comparison",
+    "w": "Idris",
+    "t": "Second tap on a half-hidden row keeps the text",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-23T01:38:03-05:00",
+    "at": "2026-11-23T01:41:14-05:00",
     "o": "c",
-    "task": "T-5644"
+    "task": "T-5325"
+   },
+   {
+    "w": "Maren",
+    "t": "Brief for a new look for the app",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-23T01:41:18-05:00",
+    "o": "c",
+    "task": "T-5602"
    }
   ],
   "src": "plan",
@@ -719,25 +710,8 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-23T06:40:58Z",
+  "at": "2026-11-23T06:44:14Z",
   "s": {
-   "T-0866": [
-    "mergetest",
-    "iPhone tests on the MacBook",
-    null
-   ],
-   "T-5613": [
-    "merged",
-    "on main 1:40 AM ET",
-    1795416047000,
-    "Odalys"
-   ],
-   "T-4772": [
-    "merged",
-    "on main 1:37 AM ET",
-    1795415827000,
-    "Idris"
-   ],
    "T-4182": [
     "merged",
     "on main 12:11 AM ET",
@@ -752,16 +726,10 @@
    ]
   },
   "nm": {
-   "T-0866": "Tell people when a sibling file leaves widgets stale",
-   "T-5613": "Only the coordinator answers Investor messages",
-   "T-4772": "Prove a refresh tap redraws the widget",
    "T-4182": "A failing widget says so and can recover",
    "T-4184": "A person's own script becomes a Home Screen widget"
   },
   "wk": {
-   "T-0866": "Idris",
-   "T-5613": "Odalys",
-   "T-4772": "Idris",
    "T-4182": "Idris",
    "T-4184": "Idris",
    "T-5643": "Ines",
@@ -769,7 +737,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-23T06:40:58Z",
+  "at": "2026-11-23T06:44:14Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -787,7 +755,7 @@
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 183
+    "parked": 187
    },
    "cur": [],
    "ld": [
@@ -797,12 +765,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-23T06:40:13Z",
-    "ld": 13.97,
+    "at": "2026-11-23T06:43:56Z",
+    "ld": 8.62,
     "c": 8,
     "sb": 0,
     "dk": [
-     58.8,
+     56.6,
      228.3
     ],
     "ss": [
@@ -812,12 +780,12 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-23T06:33:45Z",
-    "ld": 2.13,
+    "at": "2026-11-23T06:42:38Z",
+    "ld": 3.98,
     "c": 12,
     "sb": 0,
     "dk": [
-     352.4,
+     352.1,
      926.4
     ],
     "sn": []
@@ -850,11 +818,11 @@
      "open": true
     }
    },
-   "at": "2026-11-23T06:41:11+00:00"
+   "at": "2026-11-23T06:44:14+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-23T06:40:58+00:00"
+   "at": "2026-11-23T06:44:05+00:00"
   }
  },
  "operators": [
@@ -915,10 +883,10 @@
   "main": 0,
   "lanes": 3,
   "total": 3,
-  "at": "1:41 AM",
+  "at": "1:44 AM",
   "why": "",
-  "at_iso": "2026-11-23T06:41:00+00:00",
+  "at_iso": "2026-11-23T06:44:00+00:00",
   "started": "1:04 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 1:04 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 1:41 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 1:04 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 1:44 AM ET</p></section>"
  }
 }

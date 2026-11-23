@@ -46,6 +46,8 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-5537 11-21 review of T-4442 at 18acc6b6 (pywidget/docs/reviews/t4442-18acc6b6-pernille.md): PASS with findings, 3 Lows, no board lines. Lessons: run a pywidget host test as `python3 pywidget/tests/widgets/test_x.py` (not -m unittest); a red-first copy via git archive needs pywidget/tests and docs/design too; mutate each new branch, not only the one the mutant names.
 - T-5538 11-21 review of T-4593 at 18acc6b6 (pywidget/docs/reviews/t4593-18acc6b6-pernille.md): FAIL, H1 new cases pasted over a SKIP branch's early return left 54 asserts dead while green; M1 copied part versions; T-5545, T-5546 (Odalys). Lessons: compare a test's PASS count with its parent's (git archive); a stated "was N before" needs a rerun.
 - T-4807 slice 12 11-22: Links "needs" the ten open lines (queued in outbox), so the umbrella waits off the menu. Lesson: a queued link can be checked before it lands with board_links set_field + index + held_by on a copy of main's board text.
+- T-4184 re-review 11-23 of 4dda1e2329 (SentStale FIFO fix): pass. Lesson: in a <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> worktree xc.sh queues tests until landing; swiftc a Shared/*.swift file with a probe main.swift in /tmp for Darwin checks.
+- Report 59 11-23 (morning, author+operator): report_check has no --sent mode; requests_close sweep closes the new copy too; site_shots ~8 min (jekyll), run it in background.
 {% endraw %}
 
 

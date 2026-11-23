@@ -410,6 +410,19 @@ will reset if they hit their limits, so their should be no difference between th
   about 48 hours, nine and a half 5-hour windows; the 62 points left need about 6.5 a window (1.3 an hour). b used 17
   points from 6:55 PM to 11:11 PM (21% to 38%), so it reaches 100% by Wed 2:00 AM if its lanes keep taking work. If a
   later reading shows it will not, the company says so on #325.
+- *Rechecked 11-23 2:30 AM and 3:13 AM* (same command): b at 40% (read 2:28 AM), then 46% (read 3:10 AM), 22% of
+  its week gone; its 5-hour window reset at 2:10 AM and its lanes are taking work again; Lock In is on for 11-23
+  (`ops/lock_in.json`). At 3:10 AM the straight Double Spread line stood at 44%, so b is about 2 points ahead of it;
+  the 54 points left in about 47 hours need about 5.8 a 5-hour window. On track, so no #325 post.
+  Again at 3:35 AM: b at 49% (read 3:27 AM) against a line of 45%, about 4 points ahead; 51 points left in about
+  46 hours, about 5.5 a 5-hour window. Again at 4:02 AM: b at 51% (read 3:45 AM) against a line of 45%, about 6
+  points ahead, its 5-hour window full again; 49 points left in about 46 hours, about 5.3 a 5-hour window.
+  Again at 5:12 AM: b still at 51% (no newer reading since 3:45 AM, its 5-hour window full) against a line of 47%,
+  about 4 points ahead; 49 points left in about 45 hours, about 5.4 a 5-hour window. Lock In is on for 11-23.
+  Again at 5:59 AM: b still at 51% (no newer reading since 3:45 AM, its 5-hour window full) against a line of 48%,
+  about 3 points ahead; 49 points left in about 44 hours, about 5.6 a 5-hour window. On track, so no #325 post.
+  Again at 6:21 AM: b still at 51% (no newer reading since 3:45 AM, its 5-hour window full) against a line of 48%,
+  about 3 points ahead; 49 points left in about 44 hours, about 5.6 a 5-hour window. On track, so no #325 post.
 
 ## Progress
 
@@ -457,6 +470,30 @@ trim session, on the Investors' word, #325 c7032785128). Retired nothing.
 - *Pace.* A fast run takes about two hours, so from here the next step starts while the last step's run finishes;
   a red it finds that was green before the step is fixed, or the step restored, before that step is ticked.
 - *Restore.* `tools/retire.sh --restore <path>` for any row of `tools/retire.sh --list`.
+
+**Step 3 done:** 2026-11-23 7:05 AM ET, at main `2b21ad158f` (Odalys, T-5256). The road: `tools/merge.sh`
+(`99365e8c9d`, `f4db056758`, reviewed by Pernille), and the switch that sends every lane's ready work to it,
+`ops/merge_road.json` "merge.sh" since `bf2ab2be17` (Sun 11-22 7:02 PM).
+- *Events that confirmed it.* From 8:44 PM 11-22 to 6:24 AM 11-23, 31 real merges through `merge.sh`, run by the
+  lanes' ticks, every one still on main (`git merge-base --is-ancestor`). Six are app code, and each ran the app's
+  unit tests through `tools/xc.sh` green on the app code that went to main (under the lock it rebases again only
+  past commits that touch no app code), with a review record by a worker who wrote none of it:
+  `208df3a3a6` (T-3847, reviewed under T-4185, 10:38 PM, 2187 tests), `b08b576587` (T-4184, 11:16 PM, 2190),
+  `f697ccf8d0` (T-4192, 11:38 PM, 2190), `f6c3908254` (T-4692 and others, 3:27 AM, 2195), `157e4308c6` (T-4184,
+  4:04 AM, 2199), `f2f45aeda4` (T-5484 and others, 6:17 AM, 2199). Every app commit that reached main in those hours
+  came in one of these six. The other 25 had the guard suites and the host suites they touch green. Nothing reached
+  main on a red: 55 runs ended red, 13 were refused and 5 stopped by a signal; `merge.sh` retried and parked none
+  of them (a lane ran it again after a fix).
+- *Main's own check.* The every-30-minutes check of main's host suites was red twice, each time one suite that
+  passed when run alone at the same commit: `widgets` on Python 3.9.6 at 11:35 PM (green again 12:18 AM) and
+  `state_commit` on 3.13.18 at 1:52 AM (green again 2:36 AM). Neither was in the app's tests.
+- *Rows lost, not by `merge.sh`.* The rows from 8:39 to 10:52 PM (7 merges, among them `208df3a3a6`, and 2 reds) are
+  missing from `ops/metrics/merge.jsonl`. The supervisor's sync at 11:16 PM (`git pull --rebase --autostash` in the
+  main folder) could not put the folder's uncommitted changes back, kept GitHub's version, and left them in the
+  autostash `dd609cb82f` (22 files, all records). The 9 rows can be read there and in `ops/runs/merge-road-<lane>.log`.
+  The comparison's measure reads main's reflog, not this file. Any uncommitted record in the main folder can be lost
+  the same way; that is the supervisor's sync, not this step.
+- *Restore.* `"road": "old"` in `ops/merge_road.json`.
 
 **Step 9 done:** 2026-11-22 5:28 PM ET, at main `e28f70ce74`. The check, merge.sh's checks three times on one main
 commit on both machines: on the Mac mini the eight guard suites and the app's host tests

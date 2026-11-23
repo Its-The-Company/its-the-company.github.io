@@ -551,6 +551,23 @@ Read at 5dfcf280b7: `widgets/premade/_premade.py` `kept_reading` and `notice`, `
 **(b) Inside the rule: dropping the failed-run badge is confirmed.** No badge, the reading's own time on the stamp, the clock when its time comes. The script did not fail: it handled a sensor that was slow, and the badge means "your run failed, look in Activity" (s11), where the person would find nothing to fix. Past the rule the same holds, so no badge there either; the clock is the one mark. This also covers a Refresh tap (s10 d) whose sensor times out: the age line does not move, which is the answer, as in T-1863 decision 2 ("the tap was answered"). A tap-only badge would need the premade to know its trigger; that comes back as its own line only if testers report a Refresh that seemed to do nothing.
 
 **Build (Idris, one line, from T-3565).** In `kept_reading`, past the stale rule return the kept reading while it is from today's local day instead of None: Steps and Altitude drop the `< stale_after` cap and keep `since=local midnight`; Distance keeps its in-rule window and adds "or from today". The `notice` stays for no reading from today. Tests in `test_premade_sensor_timeout.py`: past the rule, same day, the tree carries the kept value and `sampled_at`, and the run is `ok`; past midnight (Steps, Altitude) and past rule plus midnight (Distance), the notice. No words change, so nothing here waits on C51.
+
+## The Investors' Pro tag list, 2026-11-18 (#324 A; recorded by Idris, T-4692, 2026-11-23)
+
+Supersedes the Free/Pro split of the 2026-10-26 12:05 AM chair ruling above; its standing rule (Pro never gates a premade
+that needs a permission grant) stays. The Investors answered "A" on <span title="A GitHub issue asking the Investors for something that is blocking work.">Urgent Request</span> #324 (an Investor, 12:36 AM ET 11-18,
+(private) log/rulings.md): the Pro tags are
+"Habit tracker, Focus timer, Flashcards, Day phases once it has buttons". Only that list sets a tag (charter 57, 58);
+never whether a handler ran in the widget (showcase plan T-4672 s9). Of the premades built today only Habit tracker is
+on it; Focus timer, Flashcards and Day phases join the Pro line when each is built with its buttons. #340 A (11-21
+9:48 PM): a widget's refresh button is not a Pro button and tags nothing.
+
+What the tag means is #41 (an Investor 00:27 AM ET 11-17): every premade works for everyone; a Pro-tagged one can have
+its inputs set by anyone, and editing its design, layout or code needs Pro. `pywidget/runtime/pro-flags.json` carries
+the tag as `"pro"`; `pro_flags.validate()` and `tests/test_pro_grants.py` read the two lines below.
+
+- Free (11): Countdown, Sunrise and sunset, Steps and floors, Distance to a saved place, Altitude, Shortcuts launcher, Storage, Day progress, Quote of the day, World clocks, GitHub repository.
+- Pro (1): Habit tracker.
 {% endraw %}
 
 </div>

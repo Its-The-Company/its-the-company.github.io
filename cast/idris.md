@@ -35,9 +35,6 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 
 
-- T-4866 11-19 done (5d38a8a84e+81a18acbdc). Lesson: the runner carries no TEST_RUNNER_* and only PyWidgetTests filters; a UI test that skips without env proves nothing there, and a UI filter queues the full suite (~60 min).
-
-
 - T-0043 11-19 04d6503c07 on personal/b2 (recut of 6e5fc761ba): 6 escape tests green on main, 0 skipped. Open: ready b2 T-0043 xc (refused in-session), full PyWidgetTests. Lesson: scratch copy needs Vendor/ links, and Runestone from the <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> worktree, not ~/itsthecompany (stale, no lineNumberMarks).
 
 - T-5125 11-20: 8ca8746ce1 xc.sh probes quiet spells (XC_PROBE_AFTER 300 s; spells on stderr). T-5226 = host-wide stall (both slots silent same seconds), requeued J-20261120-0121. Open: T-5124 token test, never green since T-4962's own id; read the 2:00 AM daily's why line (f6a7b386cb ext answers). T-5251 mine: 'slow healthy run' flakes on main too under load. Lesson: runner/progress.json history (git log on macbook-results) gives per-minute log bytes per job.
@@ -56,10 +53,10 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 - T-5607 11-22: 86cf99245a on personal/b (after d01a7a1f1e). Cause: a job stopped at its limit in the UI target leaves Pro/tester switch on its slot's Simulator; next job there reads Pro. Open: Pernille review, merge, 3 runs on main. Lesson: result.json's simulator.slot/udid across jobs finds a device-carried leftover.
 
+- T-4692 11-23: part 1 867acca236 on personal/a3 (tag = #324 A list: only habits Pro; isProTagged for chips; 2195/0). Open: review, land; gate flip waits T-0901 + T-4715. Lesson: purchases.md box order is pinned by tests/site_how_it_works_test.py (new box after Pro card).
+
 ## Lessons
 - Older lessons and dated logs: archive.md.
-
-- T-3847 11-22: a6b76bfdd1 + 5ea8f59d6a, MERGE POINT yes (Pernille review). Lesson: XC_LOCAL=1 now goes to the runner as a land-check (T-5247): build-for-testing runs the whole unit target, and test-without-building may reuse that job.
 {% endraw %}
 
 

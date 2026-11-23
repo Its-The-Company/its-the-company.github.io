@@ -104,17 +104,17 @@ Scale in AGE: 4+, 9+, 13+, 16+, 18+, Unrated ("An Unrated app can't be published
 The form's key question, "does your app use encryption", is **Yes in the plain sense** (TLS, hashing, Keychain), because ENC says "including any third-party libraries it links against", and CPython's OpenSSL is one. The follow-up (non-exempt or exempt) is the part that turns on law.
 
 - **Where my reading ends.** The system-TLS part is Apple's stated exempt case. The OpenSSL part is standard, public, unmodified, used for ordinary HTTPS and hashing, and is not proprietary. Apple's page gives operating-system encryption (HTTPS through URLSession) as its typical exempt example; whether standard open-source TLS inside a bundled interpreter also meets the exemption, and whether a year-end self-classification report to the U.S. government is owed, I have not read from a primary text (BIS rules, Apple's "Determine and upload app encryption documentation" page, not saved). That is a question of law and the form's declaration is a legal statement. **[theirs]**, under Commandment 6.
-- **Questions for the Investors** (raise in ops/questions.md):
+- **Questions for the Investors**, as first drafted (Wrenna, 2026-11-02). Status checked 2026-11-23 by Ines (T-1119): these went to #138, and the answer table at the top is the one to use. Questions 1 and 3 are closed by F; question 2 is still the Investors' and was not asked as its own question; question 4 was settled on the company side by ADR-009 (decided 2026-11-07, OpenSSL removal planned before the 2026-11-30 freeze).
   1. At submission, answer the encryption question yourself on the form. A Python IDE with a full OpenSSL is probably a case Apple expects to say "Yes, standard encryption only", but I have not confirmed it and will not guess. Do you want the company to fetch the one Apple page, "Determine and upload app encryption documentation" (a single public page under the standing ruling), before Day 47? I did not, to keep to one page budget; I can on your word.
   2. Do you accept filing, or deciding about, the BIS annual self-classification report that ENC mentions? It is a government filing and only you can make it.
   3. Do you want `ITSAppUsesNonExemptEncryption` set in the plist once you decide (Idris's file edit; `YES` or `NO` is your declaration)? Until then there is no key, so App Store Connect asks every upload.
   4. Would you prefer to remove the OpenSSL question altogether by pointing Python's `ssl` at system TLS? ADR-003 line 118 floats it for 1.1 at best; it is Pernille's and Idris's decision, and it would not remove the hashing library.
-- **No one has claimed** the app uses no encryption. Do not type "No" on the strength of this sheet.
+- **No one has claimed** the app uses no encryption. Do not type "No" on the strength of this sheet. Under F, "None" and the plist key NO apply only to the first build without Python's OpenSSL (T-3399); every build before it is "Standard encryption algorithms".
 
 ## 3. What is left
 
 - Item 12 in `ops/questions.md` (named in the matrix, [`app-review-matrix.md`](app-review-matrix.html) lines 256, 276) is not in the file as written; the matrix points to it for the encryption question. I added no pointer, as there is nothing to attach it to; Ines should open it from section 2c (task note).
-- Row 9 (premade list) and the OpenSSL question are the only two answers that could move the result. If row 1 is "Yes", the rating is 16+.
+- Both #138 questions are answered (table at the top): row 1 is "No" (A), so the rating is 4+, and the encryption answer is F. Row 9 (premade list) is the one row still open that could move the rating (to 9+). Under F, France stays out of the App Store countries until the OpenSSL-free build ships; that setting and every form entry are the Investors', behind their sign-in.
 - Not read: the form's own question text; Apple's "Set an app age rating" and "Determine and upload app encryption documentation" pages; BIS rules.
 {% endraw %}
 

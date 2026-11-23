@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-23T14:12:16.334258+00:00",
+ "at": "2026-11-23T14:14:38.338752+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -8,8 +8,8 @@
   "coord": {
    "active": true,
    "started": 1795341309,
-   "restarts": 4,
-   "last_handoff": 1795407234
+   "restarts": 5,
+   "last_handoff": 1795443262
   },
   "flow": [
    {
@@ -434,7 +434,7 @@
   "week_pct": 52.31,
   "usage_pct": 84.0,
   "work_pct": 95.0,
-  "read_at": "2026-11-23T14:12:00+00:00",
+  "read_at": "2026-11-23T14:15:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -508,7 +508,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-23T09:12:00-05:00",
+  "at": "2026-11-23T09:15:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -705,6 +705,11 @@
   ],
   "done": [
    {
+    "w": "Odalys",
+    "t": "Workers' notes now reach the main board, a session lands its own finished work, and a task with...",
+    "at": "2026-11-23T09:12:00-05:00"
+   },
+   {
     "w": "Operator",
     "t": "The test file lane_env_test.py passes again on a clean copy of main (c6a15cec5) in the nightly...",
     "at": "2026-11-23T07:48:00-05:00"
@@ -712,11 +717,6 @@
    {
     "w": "Operator",
     "t": "The test file personal_lane_test.py passes again on a clean copy of main (c6a15cec5) in the...",
-    "at": "2026-11-23T07:48:00-05:00"
-   },
-   {
-    "w": "Operator",
-    "t": "The test file queue_bars_test.py passes again on a clean copy of main (c6a15cec5) in the nightly...",
     "at": "2026-11-23T07:48:00-05:00"
    }
   ],
@@ -727,8 +727,12 @@
    "you": 2
   },
   "fin": {
-   "n": 5,
+   "n": 6,
    "rows": [
+    [
+     "T-5675",
+     "Make main workers land their..."
+    ],
     [
      "T-1764",
      "Write each widget run record..."
@@ -791,22 +795,22 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-23T14:11:55Z",
+  "at": "2026-11-23T14:14:19Z",
   "s": {
    "T-5602": [
     "mergeq",
     "1st to merge",
-    1795438795533
+    1795438819580
    ],
    "T-4662": [
     "mergeq",
     "2nd to merge",
-    1795440535533
+    1795440559580
    ],
    "T-4692": [
     "mergeq",
     "3rd to merge",
-    1795441135533
+    1795441099580
    ],
    "T-0749": [
     "mergetest",
@@ -857,6 +861,7 @@
    "T-4182": "Idris",
    "T-4184": "Idris",
    "T-5644": "Ines",
+   "T-5675": "Odalys",
    "T-1764": "Idris",
    "T-4244": "Idris",
    "T-1905": "Idris",
@@ -865,7 +870,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-23T14:11:55Z",
+  "at": "2026-11-23T14:14:19Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -878,12 +883,12 @@
    },
    "m": {
     "checking": null,
-    "inline": 43,
+    "inline": 45,
     "conflicted": null,
     "failed": null,
-    "held": 283,
+    "held": 286,
     "retry": null,
-    "parked": 283
+    "parked": 286
    },
    "cur": [],
    "ld": [
@@ -893,8 +898,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-23T14:11:12Z",
-    "ld": 4.69,
+    "at": "2026-11-23T14:13:42Z",
+    "ld": 5.84,
     "c": 8,
     "sb": 1,
     "dk": [
@@ -948,11 +953,11 @@
      "open": true
     }
    },
-   "at": "2026-11-23T14:12:16+00:00"
+   "at": "2026-11-23T14:14:38+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-23T14:12:16+00:00"
+   "at": "2026-11-23T14:14:19+00:00"
   }
  },
  "operators": [
@@ -962,8 +967,8 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Inbox \u2013 Evan's 9:11 AM Message on GitHub",
-   "at": "2026-11-23T09:11:57-05:00"
+   "t": "Work session",
+   "at": "2026-11-23T09:12:26-05:00"
   },
   {
    "w": "Operator",
@@ -994,21 +999,10 @@
   }
  ],
  "reply": {
-  "sent": "2026-11-23T13:27:02Z",
-  "seconds": 95.0
+  "sent": "2026-11-23T14:11:38Z",
+  "seconds": 47.0
  },
- "inbox": [
-  {
-   "id": "c7103622341",
-   "state": "received",
-   "position": 1,
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "Progress on the fix?"
-  }
- ],
+ "inbox": [],
  "trimmed": [
   "lane_next",
   "queue_text",
@@ -1024,10 +1018,10 @@
   "main": 0,
   "lanes": 3,
   "total": 3,
-  "at": "9:12 AM",
+  "at": "9:15 AM",
   "why": "",
-  "at_iso": "2026-11-23T14:12:00+00:00",
-  "started": "2:29 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 2:29 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 9:12 AM ET</p></section>"
+  "at_iso": "2026-11-23T14:15:00+00:00",
+  "started": "",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 9:15 AM ET</p></section>"
  }
 }

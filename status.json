@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-23T08:58:55.027987+00:00",
+ "at": "2026-11-23T09:01:53.785800+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -19,6 +19,22 @@
      {
       "s": "testq",
       "at": 1795349545
+     }
+    ]
+   },
+   {
+    "t": "T-3847",
+    "name": "Test the launcher link through the real URL entry point",
+    "w": "Idris",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "claimed",
+      "at": 1795424374
+     },
+     {
+      "s": "worker",
+      "at": 1795424374
      }
     ]
    },
@@ -357,25 +373,9 @@
       "at": 1795417383
      }
     ]
-   },
-   {
-    "t": "T-2097",
-    "name": "Read free memory in the widget extension on a device",
-    "w": "Idris",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "claimed",
-      "at": 1795417195
-     },
-     {
-      "s": "worker",
-      "at": 1795417195
-     }
-    ]
    }
   ],
-  "flow_n": 25,
+  "flow_n": 26,
   "done": [],
   "landed": 1,
   "failed": 4
@@ -435,7 +435,7 @@
   "week_pct": 102.36,
   "usage_pct": 84.0,
   "work_pct": 95.0,
-  "read_at": "2026-11-23T08:58:00+00:00",
+  "read_at": "2026-11-23T09:01:00+00:00",
   "running": [
    {
     "lane": "a3",
@@ -486,7 +486,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-23T03:58:00-05:00",
+  "at": "2026-11-23T04:01:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -572,15 +572,6 @@
     "task": "T-4192"
    },
    {
-    "w": "Ines",
-    "t": "Account b used up by midweek without skewing the comparison",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-23T03:34:19-05:00",
-    "o": "c",
-    "task": "T-5644"
-   },
-   {
     "w": "Pernille",
     "t": "Make the https big-body test count work, not seconds",
     "m": "opus",
@@ -599,13 +590,22 @@
     "task": "T-5491"
    },
    {
-    "w": "Idris",
-    "t": "Settings and Pro: buy, restore, themes",
+    "w": "Odalys",
+    "t": "Stall watch stops killing the waiting coordinator",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-23T03:58:05-05:00",
+    "at": "2026-11-23T04:01:15-05:00",
     "o": "c",
-    "task": "T-4190"
+    "task": "T-5673"
+   },
+   {
+    "w": "Idris",
+    "t": "A failing widget says so and can recover",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-23T04:01:24-05:00",
+    "o": "c",
+    "task": "T-4182"
    }
   ],
   "src": "plan",
@@ -753,52 +753,52 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-23T08:58:41Z",
+  "at": "2026-11-23T09:01:35Z",
   "s": {
    "T-4184": [
     "mergetest",
     "Xcode checks on the MacBook, 1st to merge",
-    1795424141644
+    1795424135173
    ],
    "T-0337": [
     "mergeq",
     "2nd to merge",
-    1795422401644
+    1795422395173
    ],
    "T-2097": [
     "mergeq",
     "2nd to merge",
-    1795422401644
+    1795422395173
    ],
    "T-4010": [
     "mergeq",
     "2nd to merge",
-    1795422401644
+    1795422395173
    ],
    "T-4477": [
     "mergeq",
     "2nd to merge",
-    1795422401644
+    1795422395173
    ],
    "T-4286": [
     "mergeq",
     "2nd to merge",
-    1795422401644
+    1795422395173
    ],
    "T-4635": [
     "mergeq",
     "2nd to merge",
-    1795422401644
+    1795422395173
    ],
    "T-0657": [
     "mergeq",
     "2nd to merge",
-    1795422401644
+    1795422395173
    ],
-   "T-5644": [
+   "T-5620": [
     "merged",
-    "on main 1:43 AM ET",
-    1795416206000,
+    "on main 3:59 AM ET",
+    1795424368000,
     ""
    ]
   },
@@ -811,7 +811,7 @@
    "T-4286": "Check an imported font draws in a widget",
    "T-4635": "Clear the Settings restore line once Pro is bought",
    "T-0657": "Build the Settings screen",
-   "T-5644": "Account b used up by midweek without skewing the comparison"
+   "T-5620": "Queued test requests replay while the coordinator runs"
   },
   "wk": {
    "T-4184": "Idris",
@@ -822,12 +822,12 @@
    "T-4286": "Idris",
    "T-4635": "Idris",
    "T-0657": "Idris",
-   "T-5644": "Ines",
+   "T-5620": "Odalys",
    "T-5381": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-23T08:58:41Z",
+  "at": "2026-11-23T09:01:35Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -839,13 +839,13 @@
     "parked": 7
    },
    "m": {
-    "checking": 3,
-    "inline": 32,
+    "checking": 6,
+    "inline": 35,
     "conflicted": null,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 58
+    "parked": 61
    },
    "cur": [
     [
@@ -854,7 +854,7 @@
      ],
      "iPhone app tests",
      "MacBook",
-     3
+     6
     ]
    ],
    "ld": [
@@ -864,12 +864,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-23T08:58:18Z",
-    "ld": 7.2,
+    "at": "2026-11-23T09:01:09Z",
+    "ld": 5.52,
     "c": 8,
     "sb": 0,
     "dk": [
-     58.0,
+     53.7,
      228.3
     ],
     "ss": [
@@ -917,11 +917,11 @@
      "open": true
     }
    },
-   "at": "2026-11-23T08:58:55+00:00"
+   "at": "2026-11-23T09:01:53+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-23T08:58:55+00:00"
+   "at": "2026-11-23T09:01:45+00:00"
   }
  },
  "operators": [
@@ -940,7 +940,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 10 tasks",
+   "t": "Work session \u2013 11 tasks",
    "at": "2026-11-23T03:29:34-05:00"
   }
  ],
@@ -964,10 +964,10 @@
   "main": 0,
   "lanes": 1,
   "total": 1,
-  "at": "3:58 AM",
+  "at": "4:01 AM",
   "why": "",
-  "at_iso": "2026-11-23T08:58:00+00:00",
+  "at_iso": "2026-11-23T09:01:00+00:00",
   "started": "2:29 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0, started 2:29 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 3:58 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0, started 2:29 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 4:01 AM ET</p></section>"
  }
 }

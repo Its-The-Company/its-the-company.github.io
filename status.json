@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-23T22:35:44.774604+00:00",
+ "at": "2026-11-23T22:38:51.267576+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -370,13 +370,22 @@
   "landed": 1,
   "failed": 4
  },
- "workers": [],
- "who": "",
+ "workers": [
+  {
+   "name": "wrenna",
+   "task": "[report] evening",
+   "model": "opus",
+   "started": "2026-11-23T22:36:14.087Z",
+   "seconds": 157,
+   "finished": null
+  }
+ ],
+ "who": "Wrenna",
  "recent": [],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 724,
+  "runnable_count": 723,
   "blocked_count": 2
  },
  "meter": {
@@ -425,7 +434,7 @@
   "week_pct": 86.76,
   "usage_pct": 85.3,
   "work_pct": 96.6,
-  "read_at": "2026-11-23T22:35:00+00:00",
+  "read_at": "2026-11-23T22:39:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -475,7 +484,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-23T17:35:00-05:00",
+  "at": "2026-11-23T17:39:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -491,6 +500,14 @@
   "at": "2026-11-23T09:25:38.709305-05:00"
  },
  "lanes": [
+  {
+   "name": "Wrenna",
+   "state": "running",
+   "task": "[report] evening",
+   "model": "opus",
+   "since": "2026-11-23T22:36:14.087Z",
+   "next": []
+  },
   {
    "name": "Odalys",
    "state": "next",
@@ -530,14 +547,6 @@
    "model": null,
    "since": null,
    "next": []
-  },
-  {
-   "name": "Wrenna",
-   "state": "next",
-   "task": "Wrenna, P2, T-2375 continuation (B-staged item 3...",
-   "model": null,
-   "since": null,
-   "next": []
   }
  ],
  "tasks": {
@@ -568,6 +577,14 @@
     "at": "2026-11-23T17:29:54-05:00",
     "o": "c",
     "task": "T-5739"
+   },
+   {
+    "w": "Wrenna",
+    "k": "report",
+    "t": "Evening",
+    "m": "opus",
+    "at": "2026-11-23T22:36:14.087Z",
+    "o": "c"
    }
   ],
   "src": "plan",
@@ -645,30 +662,38 @@
   ],
   "done": [
    {
+    "w": "Odalys",
+    "t": "Lanes waiting for the merge road now go in the order they asked, so one that keeps losing the...",
+    "at": "2026-11-23T17:36:00-05:00"
+   },
+   {
+    "w": "Idris",
+    "t": "Idris reviewed the cap on landings that keep retrying and passed it; two follow-ups on the...",
+    "at": "2026-11-23T17:36:00-05:00"
+   },
+   {
     "w": "Idris",
     "t": "Idris reviewed the turn kept by work that steps aside on the merge road and passed it on safety,...",
     "at": "2026-11-23T17:28:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "A review that ends without a record now goes to another reviewer, and only a reviewer's signed...",
-    "at": "2026-11-23T17:25:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "A landing that keeps being told to run again now stops going round: after two rounds or six...",
-    "at": "2026-11-23T17:14:00-05:00"
    }
   ],
   "count": {
-   "next": 724,
+   "next": 723,
    "wait": 2,
    "blocked": 0,
    "you": 2
   },
   "fin": {
-   "n": 28,
+   "n": 30,
    "rows": [
+    [
+     "T-5739",
+     "Waiting work gets the merge..."
+    ],
+    [
+     "T-5745",
+     "Review the cap on landings..."
+    ],
     [
      "T-5738",
      "Review the turn kept by work..."
@@ -684,14 +709,6 @@
     [
      "T-5704",
      "Account for finished app..."
-    ],
-    [
-     "T-5731",
-     "Review the merge script's..."
-    ],
-    [
-     "T-5733",
-     "Review the retry for lands..."
     ]
    ]
   }
@@ -735,22 +752,22 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-23T22:35:24Z",
+  "at": "2026-11-23T22:38:51Z",
   "s": {
    "T-4715": [
     "mergeq",
     "1st to merge",
-    1795460364181
+    1795460391267
    ],
    "T-5708": [
     "mergeq",
     "2nd to merge",
-    1795460364181
+    1795460391267
    ],
    "T-5743": [
     "mergeq",
     "3rd to merge",
-    1795472964181
+    1795472931267
    ],
    "T-5739": [
     "merged",
@@ -778,6 +795,7 @@
    "T-5743": "Idris",
    "T-5739": "Odalys",
    "T-5735": "Odalys",
+   "T-5745": "Idris",
    "T-5738": "Idris",
    "T-5734": "Odalys",
    "T-5704": "Odalys",
@@ -786,13 +804,11 @@
    "T-5715": "Odalys",
    "T-5698": "Odalys",
    "T-5697": "Odalys",
-   "T-5722": "Odalys",
-   "T-5256": "Odalys",
-   "T-5713": "Pernille"
+   "T-5722": "Odalys"
   }
  },
  "ln": {
-  "at": "2026-11-23T22:35:24Z",
+  "at": "2026-11-23T22:38:51Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -805,12 +821,12 @@
    },
    "m": {
     "checking": null,
-    "inline": 216,
+    "inline": 219,
     "conflicted": null,
     "failed": null,
-    "held": 787,
+    "held": 790,
     "retry": null,
-    "parked": 787
+    "parked": 790
    },
    "cur": [],
    "ld": [
@@ -820,12 +836,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-23T22:35:27Z",
-    "ld": 4.12,
+    "at": "2026-11-23T22:38:53Z",
+    "ld": 5.74,
     "c": 8,
     "sb": 0,
     "dk": [
-     35.1,
+     33.1,
      228.3
     ],
     "ss": [
@@ -873,11 +889,11 @@
      "open": true
     }
    },
-   "at": "2026-11-23T22:35:44+00:00"
+   "at": "2026-11-23T22:38:51+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-23T22:35:44+00:00"
+   "at": "2026-11-23T22:38:42+00:00"
   }
  },
  "operators": [
@@ -918,13 +934,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 0,
+  "main": 1,
   "lanes": 1,
-  "total": 1,
-  "at": "5:35 PM",
+  "total": 2,
+  "at": "5:39 PM",
   "why": "",
-  "at_iso": "2026-11-23T22:35:00+00:00",
+  "at_iso": "2026-11-23T22:39:00+00:00",
   "started": "9:27 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0, started 9:27 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 5:35 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 1, started 9:27 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 5:39 PM ET</p></section>"
  }
 }

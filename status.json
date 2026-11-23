@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-23T08:24:39.980219+00:00",
+ "at": "2026-11-23T08:27:45.521715+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -386,7 +386,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 715,
+  "runnable_count": 714,
   "blocked_count": 2
  },
  "meter": {
@@ -435,20 +435,8 @@
   "week_pct": 59.57,
   "usage_pct": 84.0,
   "work_pct": 95.0,
-  "read_at": "2026-11-23T08:24:00+00:00",
+  "read_at": "2026-11-23T08:27:00+00:00",
   "running": [
-   {
-    "lane": "a",
-    "task": "T-4182",
-    "w": "Idris",
-    "k": "build",
-    "t": "A failing widget says so and can recover",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-23T00:56:12-05:00",
-    "n": "Evan",
-    "src": "plan-a"
-   },
    {
     "lane": "b2",
     "task": "T-4188",
@@ -502,14 +490,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-23T03:18:00-05:00",
+   "at": "2026-11-23T03:26:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-23T03:24:00-05:00",
+  "at": "2026-11-23T03:27:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -520,8 +508,8 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 21 (cut a step: load 23.9 a core is over 10)",
-  "n": 21,
+  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 20 (cut a step: load 17.2 a core is over 10)",
+  "n": 20,
   "at": "2026-11-23T02:28:27.861501-05:00"
  },
  "lanes": [
@@ -613,15 +601,6 @@
     "task": "T-5644"
    },
    {
-    "w": "Idris",
-    "t": "Check finished work before it ships",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-23T03:19:38-05:00",
-    "o": "c",
-    "task": "T-5381"
-   },
-   {
     "w": "Odalys",
     "t": "Stall watch stops killing the waiting coordinator",
     "m": "opus",
@@ -629,6 +608,15 @@
     "at": "2026-11-23T03:23:47-05:00",
     "o": "c",
     "task": "T-5673"
+   },
+   {
+    "w": "Idris",
+    "t": "A failing widget says so and can recover",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-23T03:26:48-05:00",
+    "o": "c",
+    "task": "T-4182"
    }
   ],
   "src": "plan",
@@ -706,6 +694,11 @@
   ],
   "done": [
    {
+    "w": "Idris",
+    "t": "The second reading of the faster test setup for the app's bundled Python is done and passed. Its...",
+    "at": "2026-11-23T02:30:00-05:00"
+   },
+   {
     "w": "Odalys",
     "t": "With the one-coordinator switch on and the coordinator session running, only the coordinator...",
     "at": "2026-11-23T02:20:00-05:00"
@@ -714,22 +707,22 @@
     "w": "Odalys",
     "t": "Dispatch now checks every account each tick; one stuck for 45 minutes with an old usage reading,...",
     "at": "2026-11-23T02:19:00-05:00"
-   },
-   {
-    "w": "Operator",
-    "t": "A later MacBook job for the same work (J-20261123-0143-mut-t5325-1) passed, so the failed job...",
-    "at": "2026-11-23T01:56:00-05:00"
    }
   ],
   "count": {
-   "next": 715,
+   "next": 714,
    "wait": 2,
    "blocked": 0,
    "you": 2
   },
   "fin": {
-   "n": 0,
-   "rows": []
+   "n": 1,
+   "rows": [
+    [
+     "T-5381",
+     "Check finished work before..."
+    ]
+   ]
   }
  },
  "qr": [
@@ -771,204 +764,123 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-23T08:24:39Z",
+  "at": "2026-11-23T08:27:45Z",
   "s": {
    "T-4184": [
     "mergeq",
-    "",
-    1795420659980
-   ],
-   "T-4692": [
-    "mergetest",
-    "",
-    1795419099980
-   ],
-   "T-0337": [
-    "mergetest",
-    "",
-    1795419099980
-   ],
-   "T-2097": [
-    "mergetest",
-    "",
-    1795419099980
-   ],
-   "T-4010": [
-    "mergetest",
-    "",
-    1795419099980
-   ],
-   "T-4477": [
-    "mergetest",
-    "",
-    1795419099980
-   ],
-   "T-4286": [
-    "mergetest",
-    "",
-    1795419099980
-   ],
-   "T-4435": [
-    "mergetest",
-    "",
-    1795419099980
-   ],
-   "T-0678": [
-    "mergetest",
-    "",
-    1795419099980
-   ],
-   "T-3495": [
-    "mergetest",
-    "",
-    1795419099980
-   ],
-   "T-3765": [
-    "mergetest",
-    "",
-    1795419099980
-   ],
-   "T-4662": [
-    "mergetest",
-    "",
-    1795419099980
-   ],
-   "T-4781": [
-    "mergetest",
-    "",
-    1795419099980
-   ],
-   "T-4772": [
-    "mergetest",
-    "",
-    1795419099980
-   ],
-   "T-4762": [
-    "mergetest",
-    "",
-    1795419099980
+    "1st to merge",
+    1795420665521
    ],
    "T-4185": [
     "mergeq",
-    "",
-    1795418679980
+    "2nd to merge",
+    1795418685521
+   ],
+   "T-0337": [
+    "mergeq",
+    "3rd to merge",
+    1795422405521
+   ],
+   "T-2097": [
+    "mergeq",
+    "3rd to merge",
+    1795422405521
+   ],
+   "T-4010": [
+    "mergeq",
+    "3rd to merge",
+    1795422405521
+   ],
+   "T-4477": [
+    "mergeq",
+    "3rd to merge",
+    1795422405521
+   ],
+   "T-4286": [
+    "mergeq",
+    "3rd to merge",
+    1795422405521
+   ],
+   "T-4635": [
+    "mergeq",
+    "3rd to merge",
+    1795422405521
+   ],
+   "T-0657": [
+    "mergeq",
+    "3rd to merge",
+    1795422405521
    ],
    "T-0749": [
     "mergetest",
-    "",
+    "iPhone tests on the MacBook",
     null
    ],
    "T-5644": [
     "merged",
-    "",
+    "on main 1:43 AM ET",
     1795416206000,
     ""
    ],
    "T-4182": [
     "merged",
-    "",
+    "on main 12:11 AM ET",
     1795410693000,
     ""
    ]
   },
   "nm": {
    "T-4184": "A person's own script becomes a Home Screen widget",
-   "T-4692": "Pro showcase widgets work free, editing them needs Pro",
+   "T-4185": "Launcher widgets open the apps a person chose",
    "T-0337": "Confirm the revenue memo's facts from Apple pages",
    "T-2097": "Read free memory in the widget extension on a device",
    "T-4010": "Rebuild This Session as a full flowchart",
    "T-4477": "People build a widget from blocks without code",
    "T-4286": "Check an imported font draws in a widget",
-   "T-4435": "Draw the wrapped refresh glyph on both runtimes",
-   "T-0678": "Run the refresh button inside the widget extension",
-   "T-3495": "Check the upload fix before build 4 goes out",
-   "T-3765": "Check a real widget tap on the TestFlight build",
-   "T-4662": "Place the cursor easily on a long line",
-   "T-4781": "Retest a fixed red on what failed, not every test",
-   "T-4772": "Prove a refresh tap redraws the widget",
-   "T-4762": "Let the run lock wrap a Python run",
-   "T-4185": "Launcher widgets open the apps a person chose",
+   "T-4635": "Clear the Settings restore line once Pro is bought",
+   "T-0657": "Build the Settings screen",
    "T-0749": "Copy a project's sibling files when saving a widget",
    "T-5644": "Account b used up by midweek without skewing the comparison",
    "T-4182": "A failing widget says so and can recover"
   },
   "wk": {
    "T-4184": "Idris",
-   "T-4692": "Idris",
+   "T-4185": "Idris",
    "T-0337": "Wrenna",
    "T-2097": "Idris",
    "T-4010": "Odalys",
    "T-4477": "Idris",
    "T-4286": "Idris",
-   "T-4435": "Idris",
-   "T-0678": "Idris",
-   "T-3495": "Pernille",
-   "T-3765": "Idris",
-   "T-4662": "Idris",
-   "T-4781": "Odalys",
-   "T-4772": "Idris",
-   "T-4762": "Idris",
-   "T-4185": "Idris",
+   "T-4635": "Idris",
+   "T-0657": "Idris",
    "T-0749": "Idris",
    "T-5644": "Ines",
-   "T-4182": "Idris"
+   "T-4182": "Idris",
+   "T-5381": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-23T08:24:39Z",
+  "at": "2026-11-23T08:27:45Z",
   "mq": {
    "n": {
-    "checking": 14,
-    "inline": 2,
+    "checking": 0,
+    "inline": 9,
     "conflicted": 0,
     "failed": 0,
     "held": 0,
     "retry": 0,
-    "parked": 5
+    "parked": 4
    },
    "m": {
-    "checking": 53,
-    "inline": 43,
+    "checking": null,
+    "inline": 1,
     "conflicted": null,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 253
+    "parked": 265
    },
-   "cur": [
-    [
-     [
-      "T-4692"
-     ],
-     "iPhone app tests",
-     "MacBook",
-     53
-    ],
-    [
-     [
-      "T-0337"
-     ],
-     "iPhone app tests",
-     "MacBook",
-     53
-    ],
-    [
-     [
-      "T-2097"
-     ],
-     "iPhone app tests",
-     "MacBook",
-     53
-    ],
-    [
-     [
-      "T-4010"
-     ],
-     "iPhone app tests",
-     "MacBook",
-     53
-    ]
-   ],
+   "cur": [],
    "ld": [
     0,
     null
@@ -976,12 +888,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-23T08:24:42Z",
-    "ld": 19.99,
+    "at": "2026-11-23T08:27:47Z",
+    "ld": 12.23,
     "c": 8,
     "sb": 0,
     "dk": [
-     54.4,
+     56.5,
      228.3
     ],
     "ss": [
@@ -1011,7 +923,7 @@
    "parked": 5,
    "open": true,
    "mq": false,
-   "counted": "2026-11-23T08:15:11+00:00",
+   "counted": "2026-11-23T08:25:16+00:00",
    "by": {
     "app": {
      "n": 16,
@@ -1029,11 +941,11 @@
      "open": true
     }
    },
-   "at": "2026-11-23T08:24:39+00:00"
+   "at": "2026-11-23T08:27:45+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-23T08:24:29+00:00"
+   "at": "2026-11-23T08:27:45+00:00"
   }
  },
  "operators": [
@@ -1045,15 +957,6 @@
    "e": "high",
    "t": "Work session",
    "at": "2026-11-23T02:29:08-05:00"
-  },
-  {
-   "w": "Operator",
-   "a": "Evan's Account",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session \u2013 7 tasks",
-   "at": "2026-11-23T00:56:12-05:00"
   },
   {
    "w": "Operator",
@@ -1083,6 +986,7 @@
   "lane_next",
   "queue_text",
   "task_done",
+  "fin_short",
   "task_title",
   "done_text",
   "task_open",
@@ -1091,12 +995,12 @@
  ],
  "agents_now": {
   "main": 0,
-  "lanes": 3,
-  "total": 3,
-  "at": "3:24 AM",
+  "lanes": 2,
+  "total": 2,
+  "at": "3:27 AM",
   "why": "",
-  "at_iso": "2026-11-23T08:24:00+00:00",
+  "at_iso": "2026-11-23T08:27:00+00:00",
   "started": "2:29 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 2:29 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 3:24 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0, started 2:29 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 3:27 AM ET</p></section>"
  }
 }

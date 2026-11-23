@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-23T07:37:38.519195+00:00",
+ "at": "2026-11-23T07:40:50.534941+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -349,19 +349,19 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 1.0,
+   "pct": 2.0,
    "resets_at": "2026-11-23T07:10:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-23T02:29:19.916215-05:00",
+   "read_at": "2026-11-23T02:39:34.094517-05:00",
    "source": "live",
-   "left": 99.0,
+   "left": 98.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 6.0,
    "resets_at": "2026-11-29T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-23T02:29:19.916215-05:00",
+   "read_at": "2026-11-23T02:39:34.094517-05:00",
    "source": "live",
    "left": 94.0,
    "left_words": "of your weekly allowance left"
@@ -373,7 +373,7 @@
    "read_at": "2026-11-23T02:28:26.610692-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-23T02:29:19.916215-05:00"
+  "read_at": "2026-11-23T02:39:34.094517-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -393,7 +393,7 @@
   "week_pct": 23.2,
   "usage_pct": 84.0,
   "work_pct": 95.0,
-  "read_at": "2026-11-23T07:38:00+00:00",
+  "read_at": "2026-11-23T07:41:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -480,7 +480,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-23T02:38:00-05:00",
+  "at": "2026-11-23T02:41:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -491,8 +491,8 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 26 (cut a step: load 24.1 a core is over 10)",
-  "n": 26,
+  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 25 (cut a step: load 21.4 a core is over 10)",
+  "n": 25,
   "at": "2026-11-23T02:28:27.861501-05:00"
  },
  "lanes": [
@@ -567,15 +567,6 @@
    },
    {
     "w": "Idris",
-    "t": "Python in the app: smaller bundle, installable packages",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-23T01:59:06-05:00",
-    "o": "c",
-    "task": "T-4192"
-   },
-   {
-    "w": "Idris",
     "t": "Check finished work before it ships",
     "m": "opus",
     "e": "high",
@@ -600,6 +591,15 @@
     "at": "2026-11-23T02:33:52-05:00",
     "o": "c",
     "task": "T-5673"
+   },
+   {
+    "w": "Idris",
+    "t": "Python in the app: smaller bundle, installable packages",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-23T02:39:11-05:00",
+    "o": "c",
+    "task": "T-4192"
    }
   ],
   "src": "plan",
@@ -742,87 +742,82 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-23T07:37:38Z",
+  "at": "2026-11-23T07:40:50Z",
   "s": {
    "T-4692": [
     "mergetest",
     "",
-    1795419098519
+    1795419110534
    ],
    "T-0337": [
     "mergetest",
     "",
-    1795419098519
+    1795419110534
    ],
    "T-2097": [
     "mergetest",
     "",
-    1795419098519
+    1795419110534
    ],
    "T-4010": [
     "mergetest",
     "",
-    1795419098519
+    1795419110534
    ],
    "T-4477": [
     "mergetest",
     "",
-    1795419098519
+    1795419110534
    ],
    "T-4286": [
     "mergetest",
     "",
-    1795419098519
+    1795419110534
    ],
    "T-4435": [
     "mergetest",
     "",
-    1795419098519
+    1795419110534
    ],
    "T-0678": [
     "mergetest",
     "",
-    1795419098519
+    1795419110534
    ],
    "T-3495": [
     "mergetest",
     "",
-    1795419098519
+    1795419110534
    ],
    "T-3765": [
     "mergetest",
     "",
-    1795419098519
+    1795419110534
    ],
    "T-4662": [
     "mergetest",
     "",
-    1795419098519
+    1795419110534
    ],
    "T-4781": [
     "mergetest",
     "",
-    1795419098519
+    1795419110534
    ],
    "T-4772": [
     "mergetest",
     "",
-    1795419098519
+    1795419110534
    ],
    "T-4762": [
     "mergetest",
     "",
-    1795419098519
+    1795419110534
    ],
    "T-4185": [
     "mergeq",
     "",
-    1795418678519
-   ],
-   "T-5479": [
-    "testing",
-    "",
-    null
+    1795418690534
    ],
    "T-5644": [
     "merged",
@@ -859,7 +854,6 @@
    "T-4772": "Prove a refresh tap redraws the widget",
    "T-4762": "Let the run lock wrap a Python run",
    "T-4185": "Launcher widgets open the apps a person chose",
-   "T-5479": "Make the escape corpus Link case fail instead of skip",
    "T-5644": "Account b used up by midweek without skewing the comparison",
    "T-4182": "A failing widget says so and can recover",
    "T-4184": "A person's own script becomes a Home Screen widget"
@@ -880,14 +874,13 @@
    "T-4772": "Idris",
    "T-4762": "Idris",
    "T-4185": "Idris",
-   "T-5479": "Idris",
    "T-5644": "Ines",
    "T-4182": "Idris",
    "T-4184": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-23T07:37:38Z",
+  "at": "2026-11-23T07:40:50Z",
   "mq": {
    "n": {
     "checking": 14,
@@ -899,13 +892,13 @@
     "parked": 4
    },
    "m": {
-    "checking": 6,
-    "inline": 13,
+    "checking": 9,
+    "inline": 16,
     "conflicted": null,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 240
+    "parked": 243
    },
    "cur": [
     [
@@ -914,7 +907,7 @@
      ],
      "iPhone app tests, sent and waiting its turn",
      "MacBook",
-     6
+     9
     ],
     [
      [
@@ -922,7 +915,7 @@
      ],
      "iPhone app tests, sent and waiting its turn",
      "MacBook",
-     6
+     9
     ],
     [
      [
@@ -930,7 +923,7 @@
      ],
      "iPhone app tests, sent and waiting its turn",
      "MacBook",
-     6
+     9
     ],
     [
      [
@@ -938,7 +931,7 @@
      ],
      "iPhone app tests, sent and waiting its turn",
      "MacBook",
-     6
+     9
     ]
    ],
    "ld": [
@@ -948,21 +941,19 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-23T07:37:43Z",
-    "ld": 25.27,
+    "at": "2026-11-23T07:40:57Z",
+    "ld": 16.85,
     "c": 8,
-    "sb": 1,
+    "sb": 0,
     "dk": [
-     52.8,
+     52.6,
      228.3
     ],
     "ss": [
      173.1,
      953.7
     ],
-    "sn": [
-     "iPhone 17e"
-    ]
+    "sn": []
    },
    "macbook": {
     "at": "2026-11-23T07:03:32Z",
@@ -1003,11 +994,11 @@
      "open": true
     }
    },
-   "at": "2026-11-23T07:37:38+00:00"
+   "at": "2026-11-23T07:40:50+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-23T07:37:38+00:00"
+   "at": "2026-11-23T07:40:43+00:00"
   }
  },
  "operators": [
@@ -1024,6 +1015,8 @@
    "w": "Operator",
    "a": "Evan's Account",
    "sr": 1,
+   "m": "opus",
+   "e": "high",
    "t": "Work session \u2013 7 tasks",
    "at": "2026-11-23T00:56:12-05:00"
   },
@@ -1031,6 +1024,8 @@
    "w": "Operator",
    "a": "Evan's Account",
    "sr": 1,
+   "m": "opus",
+   "e": "high",
    "t": "Work session \u2013 1 task",
    "at": "2026-11-23T00:14:41-05:00"
   },
@@ -1038,13 +1033,17 @@
    "w": "Operator",
    "a": "Jeremy's Account",
    "sr": 1,
+   "m": "opus",
+   "e": "high",
    "t": "Work session \u2013 1 task",
-   "at": "2026-11-23T02:21:50-05:00"
+   "at": "2026-11-23T02:21:49-05:00"
   },
   {
    "w": "Operator",
    "a": "Jeremy's Account",
    "sr": 1,
+   "m": "opus",
+   "e": "high",
    "t": "Work session \u2013 1 task",
    "at": "2026-11-23T02:21:46-05:00"
   }
@@ -1068,10 +1067,10 @@
   "main": 0,
   "lanes": 4,
   "total": 4,
-  "at": "2:38 AM",
+  "at": "2:41 AM",
   "why": "",
-  "at_iso": "2026-11-23T07:38:00+00:00",
+  "at_iso": "2026-11-23T07:41:00+00:00",
   "started": "2:29 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 0, started 2:29 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 2:38 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 0, started 2:29 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 2:41 AM ET</p></section>"
  }
 }

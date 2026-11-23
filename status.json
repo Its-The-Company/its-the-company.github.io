@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-23T05:30:37.302342+00:00",
+ "at": "2026-11-23T05:33:38.464058+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -324,7 +324,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 706,
+  "runnable_count": 705,
   "blocked_count": 2
  },
  "meter": {
@@ -373,7 +373,7 @@
   "week_pct": 2.42,
   "usage_pct": 68.7,
   "work_pct": 88.2,
-  "read_at": "2026-11-23T05:30:00+00:00",
+  "read_at": "2026-11-23T05:33:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -448,7 +448,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-23T00:30:00-05:00",
+  "at": "2026-11-23T00:33:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -590,6 +590,11 @@
   ],
   "done": [
    {
+    "w": "Idris",
+    "t": "A widget moved to the app because it is too big or too slow (T-4630: the badge fix) now shows no...",
+    "at": "2026-11-23T00:18:00-05:00"
+   },
+   {
     "w": "Maren",
     "t": "the design's string table now lists the five settings-page messages the build added (a duplicate...",
     "at": "2026-11-23T00:13:00-05:00"
@@ -598,22 +603,21 @@
     "w": "Odalys",
     "t": "The main account now takes a fresh usage reading and gets its workers while the coordinator...",
     "at": "2026-11-22T23:19:00-05:00"
-   },
-   {
-    "w": "Idris",
-    "t": "The test that proves a placed widget gets its picture when tapped, and the one that proves a...",
-    "at": "2026-11-22T21:40:00-05:00"
    }
   ],
   "count": {
-   "next": 706,
+   "next": 705,
    "wait": 2,
    "blocked": 0,
    "you": 2
   },
   "fin": {
-   "n": 2,
+   "n": 3,
    "rows": [
+    [
+     "T-4630",
+     "Stop badging widgets moved..."
+    ],
     [
      "T-5193",
      "Confirm the five page..."
@@ -664,39 +668,27 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-23T05:30:21Z",
+  "at": "2026-11-23T05:33:31Z",
   "s": {
    "T-4184": [
-    "mergetest",
-    "iPhone tests on the MacBook",
-    null
-   ],
-   "T-4188": [
-    "testing",
-    "Mac Mini \u00b7 test",
-    null
-   ],
-   "T-4692": [
-    "testing",
-    "Mac Mini \u00b7 test",
-    null
+    "merged",
+    "on main 12:11 AM ET",
+    1795410693000,
+    ""
    ]
   },
   "nm": {
-   "T-4184": "A person's own script becomes a Home Screen widget",
-   "T-4188": "Location, steps and notifications work in scripts and...",
-   "T-4692": "Pro showcase widgets work free, editing them needs Pro"
+   "T-4184": "A person's own script becomes a Home Screen widget"
   },
   "wk": {
    "T-4184": "Idris",
-   "T-4188": "Idris",
-   "T-4692": "Idris",
+   "T-4630": "Idris",
    "T-5193": "Maren",
    "T-5628": "Odalys"
   }
  },
  "ln": {
-  "at": "2026-11-23T05:30:21Z",
+  "at": "2026-11-23T05:33:31Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -714,7 +706,7 @@
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 113
+    "parked": 116
    },
    "cur": [],
    "ld": [
@@ -724,8 +716,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-23T05:29:37Z",
-    "ld": 2.13,
+    "at": "2026-11-23T05:33:09Z",
+    "ld": 2.05,
     "c": 8,
     "sb": 1,
     "dk": [
@@ -741,12 +733,12 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-23T05:24:41Z",
-    "ld": 0.54,
+    "at": "2026-11-23T05:32:35Z",
+    "ld": 0.88,
     "c": 12,
     "sb": 0,
     "dk": [
-     353.1,
+     353.0,
      926.4
     ],
     "sn": []
@@ -779,11 +771,11 @@
      "open": true
     }
    },
-   "at": "2026-11-23T05:30:37+00:00"
+   "at": "2026-11-23T05:33:38+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-23T05:30:21+00:00"
+   "at": "2026-11-23T05:33:38+00:00"
   }
  },
  "operators": [
@@ -844,10 +836,10 @@
   "main": 0,
   "lanes": 3,
   "total": 3,
-  "at": "12:30 AM",
+  "at": "12:33 AM",
   "why": "",
-  "at_iso": "2026-11-23T05:30:00+00:00",
+  "at_iso": "2026-11-23T05:33:00+00:00",
   "started": "11:16 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 11:16 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 12:30 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 11:16 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 12:33 AM ET</p></section>"
  }
 }

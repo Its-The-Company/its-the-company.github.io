@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-23T09:47:00.731316+00:00",
+ "at": "2026-11-23T09:50:41.313148+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -435,7 +435,7 @@
   "week_pct": 102.36,
   "usage_pct": 84.0,
   "work_pct": 95.0,
-  "read_at": "2026-11-23T09:47:00+00:00",
+  "read_at": "2026-11-23T09:50:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -472,7 +472,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-23T04:47:00-05:00",
+  "at": "2026-11-23T04:50:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -549,24 +549,6 @@
     "task": "T-5491"
    },
    {
-    "w": "Odalys",
-    "t": "Trim step 3, one merge script beside the old road",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-23T04:45:53-05:00",
-    "o": "c",
-    "task": "T-5256"
-   },
-   {
-    "w": "Idris",
-    "t": "A person's own script becomes a Home Screen widget",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-23T04:46:43-05:00",
-    "o": "c",
-    "task": "T-4184"
-   },
-   {
     "w": "Idris",
     "t": "Python in the app: smaller bundle, installable packages",
     "m": "opus",
@@ -576,22 +558,31 @@
     "task": "T-4192"
    },
    {
-    "w": "Idris",
-    "t": "Second tap on a half-hidden row keeps the text",
+    "w": "Pernille",
+    "t": "Make the https big-body test count work, not seconds",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-23T04:46:43-05:00",
+    "at": "2026-11-23T04:47:29-05:00",
     "o": "c",
-    "task": "T-5325"
+    "task": "T-5490"
    },
    {
     "w": "Idris",
-    "t": "Make the escape corpus Link case fail instead of skip",
+    "t": "Make the widget's Debug ask record say what it saw",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-23T04:46:43-05:00",
+    "at": "2026-11-23T04:48:04-05:00",
     "o": "c",
-    "task": "T-5479"
+    "task": "T-5524"
+   },
+   {
+    "w": "Idris",
+    "t": "Check finished work before it ships",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-23T04:48:09-05:00",
+    "o": "c",
+    "task": "T-5391"
    }
   ],
   "src": "plan",
@@ -743,34 +734,15 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-23T09:47:00Z",
-  "s": {
-   "T-4184": [
-    "merged",
-    "on main 4:04 AM ET",
-    1795424645000,
-    "Pernille"
-   ],
-   "T-5256": [
-    "merged",
-    "on main 7:02 PM ET",
-    1795392138000,
-    ""
-   ]
-  },
-  "nm": {
-   "T-4184": "A person's own script becomes a Home Screen widget",
-   "T-5256": "Trim step 3, one merge script beside the old road"
-  },
+  "at": "2026-11-23T09:50:41Z",
+  "s": {},
   "wk": {
-   "T-4184": "Idris",
-   "T-5256": "Odalys",
    "T-5673": "Odalys",
    "T-5381": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-23T09:47:00Z",
+  "at": "2026-11-23T09:50:41Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -786,9 +758,9 @@
     "inline": null,
     "conflicted": null,
     "failed": null,
-    "held": 18,
+    "held": 22,
     "retry": null,
-    "parked": 9
+    "parked": 12
    },
    "cur": [],
    "ld": [
@@ -798,12 +770,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-23T09:46:34Z",
-    "ld": 36.61,
+    "at": "2026-11-23T09:50:42Z",
+    "ld": 22.29,
     "c": 8,
     "sb": 1,
     "dk": [
-     53.1,
+     52.9,
      228.3
     ],
     "ss": [
@@ -829,18 +801,18 @@
  },
  "hc": {
   "wait": {
-   "n": 24,
+   "n": 26,
    "limit": 20,
    "in_line": 0,
-   "parked": 24,
+   "parked": 26,
    "open": true,
    "mq": false,
-   "counted": "2026-11-23T09:39:03+00:00",
+   "counted": "2026-11-23T09:49:54+00:00",
    "by": {
     "app": {
-     "n": 19,
+     "n": 21,
      "limit": 20,
-     "open": true
+     "open": false
     },
     "other": {
      "n": 7,
@@ -853,11 +825,11 @@
      "open": true
     }
    },
-   "at": "2026-11-23T09:47:00+00:00"
+   "at": "2026-11-23T09:50:41+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-23T09:46:52+00:00"
+   "at": "2026-11-23T09:50:41+00:00"
   }
  },
  "operators": [
@@ -891,10 +863,10 @@
   "main": 0,
   "lanes": 0,
   "total": 0,
-  "at": "4:47 AM",
+  "at": "4:50 AM",
   "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
-  "at_iso": "2026-11-23T09:47:00+00:00",
+  "at_iso": "2026-11-23T09:50:00+00:00",
   "started": "2:29 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0, started 2:29 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 4:47 AM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0, started 2:29 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 4:50 AM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
  }
 }

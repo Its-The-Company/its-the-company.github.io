@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-23T13:53:56.014839+00:00",
+ "at": "2026-11-23T13:56:57.124167+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -434,7 +434,7 @@
   "week_pct": 52.31,
   "usage_pct": 84.0,
   "work_pct": 95.0,
-  "read_at": "2026-11-23T13:53:00+00:00",
+  "read_at": "2026-11-23T13:57:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -496,7 +496,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-23T08:53:00-05:00",
+  "at": "2026-11-23T08:57:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -600,15 +600,6 @@
     "task": "T-5256"
    },
    {
-    "w": "Idris",
-    "t": "A failing widget says so and can recover",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-23T08:27:54-05:00",
-    "o": "c",
-    "task": "T-4182"
-   },
-   {
     "w": "Ines",
     "t": "Account b used up by midweek without skewing the comparison",
     "m": "opus",
@@ -616,6 +607,15 @@
     "at": "2026-11-23T08:40:57-05:00",
     "o": "c",
     "task": "T-5644"
+   },
+   {
+    "w": "Idris",
+    "t": "A failing widget says so and can recover",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-23T08:54:44-05:00",
+    "o": "c",
+    "task": "T-4182"
    }
   ],
   "src": "plan",
@@ -779,47 +779,22 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-23T13:53:45Z",
+  "at": "2026-11-23T13:56:57Z",
   "s": {
-   "T-5479": [
-    "mergetest",
-    "Xcode checks on the MacBook, 1st to merge",
-    1795441665858
-   ],
-   "T-0337": [
-    "mergetest",
-    "Xcode checks on the MacBook, 1st to merge",
-    1795441665858
-   ],
-   "T-2097": [
-    "mergetest",
-    "Xcode checks on the MacBook, 1st to merge",
-    1795441665858
-   ],
-   "T-4010": [
-    "mergetest",
-    "Xcode checks on the MacBook, 1st to merge",
-    1795441665858
-   ],
    "T-4662": [
     "mergeq",
-    "2nd to merge",
-    1795440525858
+    "1st to merge",
+    1795440537124
    ],
    "T-5602": [
     "mergeq",
-    "3rd to merge",
-    1795438785858
+    "2nd to merge",
+    1795438797124
    ],
    "T-4692": [
     "mergeq",
-    "4th to merge",
-    1795441125858
-   ],
-   "T-0749": [
-    "mergetest",
-    "iPhone tests on the MacBook",
-    null
+    "3rd to merge",
+    1795441137124
    ],
    "T-5256": [
     "merged",
@@ -847,28 +822,18 @@
    ]
   },
   "nm": {
-   "T-5479": "Make the escape corpus Link case fail instead of skip",
-   "T-0337": "Confirm the revenue memo's facts from Apple pages",
-   "T-2097": "Read free memory in the widget extension on a device",
-   "T-4010": "Rebuild This Session as a full flowchart",
    "T-4662": "Place the cursor easily on a long line",
    "T-5602": "Brief for a new look for the app",
    "T-4692": "Pro showcase widgets work free, editing them needs Pro",
-   "T-0749": "Copy a project's sibling files when saving a widget",
    "T-5256": "Trim step 3, one merge script beside the old road",
    "T-4182": "A failing widget says so and can recover",
    "T-4184": "A person's own script becomes a Home Screen widget",
    "T-5644": "Account b used up by midweek without skewing the comparison"
   },
   "wk": {
-   "T-5479": "Idris",
-   "T-0337": "Wrenna",
-   "T-2097": "Idris",
-   "T-4010": "Odalys",
    "T-4662": "Idris",
    "T-5602": "Maren",
    "T-4692": "Idris",
-   "T-0749": "Idris",
    "T-5256": "Odalys",
    "T-4182": "Idris",
    "T-4184": "Idris",
@@ -881,60 +846,27 @@
   }
  },
  "ln": {
-  "at": "2026-11-23T13:53:45Z",
+  "at": "2026-11-23T13:56:57Z",
   "mq": {
    "n": {
-    "checking": 4,
+    "checking": 0,
     "inline": 3,
     "conflicted": 0,
     "failed": 0,
-    "held": 1,
+    "held": 3,
     "retry": 0,
-    "parked": 11
+    "parked": 12
    },
    "m": {
-    "checking": 6,
-    "inline": 25,
+    "checking": null,
+    "inline": 28,
     "conflicted": null,
     "failed": null,
-    "held": 265,
+    "held": 268,
     "retry": null,
-    "parked": 265
+    "parked": 268
    },
-   "cur": [
-    [
-     [
-      "T-5479"
-     ],
-     "iPhone app tests",
-     "MacBook",
-     6
-    ],
-    [
-     [
-      "T-0337"
-     ],
-     "iPhone app tests",
-     "MacBook",
-     6
-    ],
-    [
-     [
-      "T-2097"
-     ],
-     "iPhone app tests",
-     "MacBook",
-     6
-    ],
-    [
-     [
-      "T-4010"
-     ],
-     "iPhone app tests",
-     "MacBook",
-     6
-    ]
-   ],
+   "cur": [],
    "ld": [
     0,
     null
@@ -942,8 +874,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-23T13:53:25Z",
-    "ld": 6.3,
+    "at": "2026-11-23T13:56:58Z",
+    "ld": 4.29,
     "c": 8,
     "sb": 1,
     "dk": [
@@ -959,12 +891,12 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-23T13:47:22Z",
-    "ld": 2.19,
+    "at": "2026-11-23T13:56:17Z",
+    "ld": 4.44,
     "c": 12,
     "sb": 0,
     "dk": [
-     351.1,
+     350.9,
      926.4
     ],
     "sn": []
@@ -979,7 +911,7 @@
    "parked": 12,
    "open": true,
    "mq": false,
-   "counted": "2026-11-23T13:38:36+00:00",
+   "counted": "2026-11-23T13:55:09+00:00",
    "by": {
     "app": {
      "n": 15,
@@ -997,11 +929,11 @@
      "open": true
     }
    },
-   "at": "2026-11-23T13:53:56+00:00"
+   "at": "2026-11-23T13:56:57+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-23T13:53:45+00:00"
+   "at": "2026-11-23T13:56:49+00:00"
   }
  },
  "operators": [
@@ -1053,10 +985,10 @@
   "main": 0,
   "lanes": 2,
   "total": 2,
-  "at": "8:53 AM",
+  "at": "8:57 AM",
   "why": "",
-  "at_iso": "2026-11-23T13:53:00+00:00",
+  "at_iso": "2026-11-23T13:57:00+00:00",
   "started": "2:29 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0, started 2:29 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 8:53 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0, started 2:29 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 8:57 AM ET</p></section>"
  }
 }

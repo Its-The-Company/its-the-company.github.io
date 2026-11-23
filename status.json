@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-23T14:54:06.583673+00:00",
+ "at": "2026-11-23T14:57:14.010954+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -425,7 +425,7 @@
   "week_pct": 57.84,
   "usage_pct": 85.3,
   "work_pct": 96.6,
-  "read_at": "2026-11-23T14:54:00+00:00",
+  "read_at": "2026-11-23T14:57:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -476,7 +476,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-23T09:54:00-05:00",
+  "at": "2026-11-23T09:57:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -562,15 +562,6 @@
     "task": "T-5524"
    },
    {
-    "w": "Idris",
-    "t": "A failing widget says so and can recover",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-23T09:31:29-05:00",
-    "o": "c",
-    "task": "T-4182"
-   },
-   {
     "w": "Pernille",
     "t": "Fix the city list test after the tzdata update",
     "m": "opus",
@@ -587,6 +578,24 @@
     "at": "2026-11-23T09:51:57-05:00",
     "o": "c",
     "task": "T-5688"
+   },
+   {
+    "w": "Idris",
+    "t": "Let the run lock wrap a Python run",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-23T09:52:32-05:00",
+    "o": "c",
+    "task": "T-4762"
+   },
+   {
+    "w": "Idris",
+    "t": "Make the sensor row prove its phone lock reading",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-23T09:55:04-05:00",
+    "o": "c",
+    "task": "T-5058"
    }
   ],
   "src": "plan",
@@ -746,38 +755,38 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-23T14:53:47Z",
+  "at": "2026-11-23T14:57:14Z",
   "s": {
    "T-4184": [
     "mergeq",
     "1st to merge",
-    1795445567280
+    1795445594010
    ],
    "T-5256": [
     "mergeq",
     "2nd to merge",
-    1795444847280
+    1795444814010
    ],
    "T-4662": [
     "mergeq",
     "3rd to merge",
-    1795440527280
+    1795440554010
    ],
    "T-4692": [
     "mergetest",
     "Xcode checks on the MacBook, 4th to merge",
-    1795445627280
+    1795445594010
    ],
    "T-4192": [
     "mergeq",
     "5th to merge",
-    1795445207280
+    1795445174010
    ],
-   "T-4182": [
+   "T-4762": [
     "merged",
-    "on main 7:59 AM ET",
-    1795438771000,
-    "Idris"
+    "on main 3:27 AM ET",
+    1795422463000,
+    ""
    ]
   },
   "nm": {
@@ -786,7 +795,7 @@
    "T-4662": "Place the cursor easily on a long line",
    "T-4692": "Pro showcase widgets work free, editing them needs Pro",
    "T-4192": "Python in the app: smaller bundle, installable packages",
-   "T-4182": "A failing widget says so and can recover"
+   "T-4762": "Let the run lock wrap a Python run"
   },
   "wk": {
    "T-4184": "Idris",
@@ -794,7 +803,7 @@
    "T-4662": "Idris",
    "T-4692": "Idris",
    "T-4192": "Idris",
-   "T-4182": "Idris",
+   "T-4762": "Idris",
    "T-4761": "Idris",
    "T-5687": "Idris",
    "T-4643": "Idris",
@@ -802,7 +811,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-23T14:53:47Z",
+  "at": "2026-11-23T14:57:14Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -814,13 +823,13 @@
     "parked": 13
    },
    "m": {
-    "checking": 0,
-    "inline": 10,
+    "checking": 4,
+    "inline": 14,
     "conflicted": null,
     "failed": null,
-    "held": 325,
+    "held": 329,
     "retry": null,
-    "parked": 325
+    "parked": 329
    },
    "cur": [
     [
@@ -829,7 +838,7 @@
      ],
      "iPhone app tests",
      "MacBook",
-     0
+     4
     ]
    ],
    "ld": [
@@ -839,12 +848,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-23T14:53:23Z",
-    "ld": 5.79,
+    "at": "2026-11-23T14:57:17Z",
+    "ld": 4.27,
     "c": 8,
     "sb": 0,
     "dk": [
-     41.2,
+     41.1,
      228.3
     ],
     "ss": [
@@ -854,8 +863,8 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-23T14:29:48Z",
-    "ld": 2.56,
+    "at": "2026-11-23T14:53:44Z",
+    "ld": 0.23,
     "c": 12,
     "sb": 0,
     "dk": [
@@ -892,11 +901,11 @@
      "open": true
     }
    },
-   "at": "2026-11-23T14:54:06+00:00"
+   "at": "2026-11-23T14:57:14+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-23T14:54:06+00:00"
+   "at": "2026-11-23T14:57:14+00:00"
   }
  },
  "operators": [
@@ -939,10 +948,10 @@
   "main": 0,
   "lanes": 1,
   "total": 1,
-  "at": "9:54 AM",
+  "at": "9:57 AM",
   "why": "",
-  "at_iso": "2026-11-23T14:54:00+00:00",
+  "at_iso": "2026-11-23T14:57:00+00:00",
   "started": "9:27 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0, started 9:27 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 9:54 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0, started 9:27 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 9:57 AM ET</p></section>"
  }
 }

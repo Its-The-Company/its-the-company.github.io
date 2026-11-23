@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-23T21:19:10.151920+00:00",
+ "at": "2026-11-23T21:22:14.044000+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -425,22 +425,8 @@
   "week_pct": 80.98,
   "usage_pct": 85.3,
   "work_pct": 96.6,
-  "read_at": "2026-11-23T21:19:00+00:00",
-  "running": [
-   {
-    "lane": "a3",
-    "task": "T-5490",
-    "w": "Pernille",
-    "k": "test",
-    "t": "Make the https big-body test count work, not seconds",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-23T15:09:55-05:00",
-    "n": "Evan",
-    "d": 1,
-    "src": "plan-a"
-   }
-  ]
+  "read_at": "2026-11-23T21:22:00+00:00",
+  "running": []
  },
  "api_credits": [
   {
@@ -476,7 +462,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-23T16:19:00-05:00",
+  "at": "2026-11-23T16:22:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -560,15 +546,6 @@
     "at": "2026-11-23T15:35:32-05:00",
     "o": "c",
     "task": "T-4874"
-   },
-   {
-    "w": "Odalys",
-    "t": "Nothing a worker committed vanishes from a land unsaid",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-23T15:51:56-05:00",
-    "o": "c",
-    "task": "T-5697"
    },
    {
     "w": "Idris",
@@ -656,6 +633,11 @@
   "done": [
    {
     "w": "Odalys",
+    "t": "Nothing a worker commits disappears from a landing without a word, and the merge script now...",
+    "at": "2026-11-23T16:21:00-05:00"
+   },
+   {
+    "w": "Odalys",
     "t": "Odalys reviewed the fix that stops two guard tests failing merges on a busy machine and accepted...",
     "at": "2026-11-23T15:31:00-05:00"
    },
@@ -663,11 +645,6 @@
     "w": "Odalys+pernille",
     "t": "Work now goes to main through one merge script instead of the old several-step road, and it ran...",
     "at": "2026-11-23T15:07:00-05:00"
-   },
-   {
-    "w": "Pernille",
-    "t": "The records-protection and disk-guard test suites no longer fail a land because the Mac mini is...",
-    "at": "2026-11-23T14:54:00-05:00"
    }
   ],
   "count": {
@@ -677,8 +654,12 @@
    "you": 2
   },
   "fin": {
-   "n": 19,
+   "n": 20,
    "rows": [
+    [
+     "T-5697",
+     "Nothing a worker committed..."
+    ],
     [
      "T-5722",
      "Review the fix for guard..."
@@ -698,10 +679,6 @@
     [
      "T-5700",
      "Lands stop queuing behind..."
-    ],
-    [
-     "T-5616",
-     "Fix the city list test after..."
     ]
    ]
   }
@@ -745,44 +722,44 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-23T21:18:56Z",
+  "at": "2026-11-23T21:21:52Z",
   "s": {
    "T-5688": [
     "mergeq",
     "1st to merge",
-    1795447436189
+    1795447432148
    ],
    "T-4715": [
     "mergeq",
     "2nd to merge",
-    1795460396189
+    1795460392148
    ],
    "T-5708": [
     "mergeq",
     "3rd to merge",
-    1795460396189
+    1795460392148
    ],
    "T-5644": [
     "mergeq",
     "4th to merge",
-    1795466276189
+    1795466332148
    ],
    "T-4185": [
     "mergeq",
     "5th to merge",
-    1795467056189
+    1795467052148
+   ],
+   "T-5697": [
+    "merged",
+    "on main 4:15 PM ET",
+    1795468546000,
+    "Odalys"
    ],
    "T-5491": [
     "merged",
     "on main 11:55 AM ET",
     1795452901000,
     ""
-   ],
-   "T-5697": [
-    "merged",
-    "on main 11:36 AM ET",
-    1795451779000,
-    "Odalys"
    ]
   },
   "nm": {
@@ -791,8 +768,8 @@
    "T-5708": "Clear the add-to-home steps before TestFlight",
    "T-5644": "Account b used up by midweek without skewing the comparison",
    "T-4185": "Launcher widgets open the apps a person chose",
-   "T-5491": "Drop the swallow test's five-second bound",
-   "T-5697": "Nothing a worker committed vanishes from a land unsaid"
+   "T-5697": "Nothing a worker committed vanishes from a land unsaid",
+   "T-5491": "Drop the swallow test's five-second bound"
   },
   "wk": {
    "T-5688": "Odalys",
@@ -800,8 +777,8 @@
    "T-5708": "Maren",
    "T-5644": "Ines",
    "T-4185": "Idris",
-   "T-5491": "Pernille",
    "T-5697": "Odalys",
+   "T-5491": "Pernille",
    "T-5722": "Odalys",
    "T-5256": "Odalys",
    "T-5713": "Pernille",
@@ -811,12 +788,11 @@
    "T-5710": "Idris",
    "T-0749": "Idris",
    "T-3350": "Idris",
-   "T-5693": "Idris",
-   "T-4220": "Idris"
+   "T-5693": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-23T21:18:56Z",
+  "at": "2026-11-23T21:21:52Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -825,16 +801,16 @@
     "failed": 0,
     "held": 3,
     "retry": 0,
-    "parked": 14
+    "parked": 13
    },
    "m": {
     "checking": null,
-    "inline": 139,
+    "inline": 142,
     "conflicted": null,
     "failed": null,
-    "held": 710,
+    "held": 713,
     "retry": null,
-    "parked": 710
+    "parked": 713
    },
    "cur": [],
    "ld": [
@@ -844,8 +820,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-23T21:18:33Z",
-    "ld": 3.47,
+    "at": "2026-11-23T21:21:53Z",
+    "ld": 2.59,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -897,11 +873,11 @@
      "open": true
     }
    },
-   "at": "2026-11-23T21:19:10+00:00"
+   "at": "2026-11-23T21:22:14+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-23T21:18:56+00:00"
+   "at": "2026-11-23T21:22:14+00:00"
   }
  },
  "operators": [
@@ -913,15 +889,6 @@
    "e": "high",
    "t": "Work session",
    "at": "2026-11-23T15:50:25-05:00"
-  },
-  {
-   "w": "Operator",
-   "a": "Evan's Account",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session",
-   "at": "2026-11-23T15:09:54-05:00"
   }
  ],
  "reply": {
@@ -943,12 +910,12 @@
  ],
  "agents_now": {
   "main": 0,
-  "lanes": 1,
-  "total": 1,
-  "at": "4:19 PM",
-  "why": "",
-  "at_iso": "2026-11-23T21:19:00+00:00",
+  "lanes": 0,
+  "total": 0,
+  "at": "4:22 PM",
+  "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
+  "at_iso": "2026-11-23T21:22:00+00:00",
   "started": "9:27 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0, started 9:27 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 4:19 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0, started 9:27 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 4:22 PM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
  }
 }

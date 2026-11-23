@@ -1,10 +1,10 @@
 {
  "schema": 1,
- "at": "2026-11-23T07:18:41.952753+00:00",
+ "at": "2026-11-23T07:31:53.695691+00:00",
  "session": {
   "active": true,
   "kind": "coord",
-  "started": "2026-11-23T01:04:13-05:00",
+  "started": "2026-11-23T02:29:08-05:00",
   "coord": {
    "active": true,
    "started": 1795341309,
@@ -12,6 +12,16 @@
    "last_handoff": 1795407234
   },
   "flow": [
+   {
+    "t": "T-5262",
+    "w": "Idris",
+    "steps": [
+     {
+      "s": "testq",
+      "at": 1795349545
+     }
+    ]
+   },
    {
     "t": "T-0657",
     "name": "Build the Settings screen",
@@ -267,12 +277,26 @@
       "at": 1795410628
      }
     ]
+   },
+   {
+    "t": "T-5193",
+    "w": "Maren",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "claimed",
+      "at": 1795410572
+     },
+     {
+      "s": "worker",
+      "at": 1795410572
+     }
+    ]
    }
   ],
   "done": [
    {
     "t": "T-5607",
-    "name": "Step 9's MacBook runs disagree on two Pro tests",
     "acct": "Personal b",
     "steps": [],
     "end": "landed",
@@ -280,7 +304,6 @@
    },
    {
     "t": "T-5399",
-    "name": "Add the coordinator's land job and side jobs by Sunday",
     "acct": "Personal a",
     "steps": [],
     "end": "failed",
@@ -289,7 +312,6 @@
    },
    {
     "t": "T-5399",
-    "name": "Add the coordinator's land job and side jobs by Sunday",
     "acct": "Personal a",
     "steps": [],
     "end": "failed",
@@ -298,7 +320,6 @@
    },
    {
     "t": "T-5399",
-    "name": "Add the coordinator's land job and side jobs by Sunday",
     "acct": "Personal a",
     "steps": [],
     "end": "failed",
@@ -307,7 +328,6 @@
    },
    {
     "t": "T-5399",
-    "name": "Add the coordinator's land job and side jobs by Sunday",
     "acct": "Personal a",
     "steps": [],
     "end": "failed",
@@ -324,37 +344,36 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 715,
+  "runnable_count": 713,
   "blocked_count": 2
  },
  "meter": {
   "five_hour": {
-   "pct": null,
-   "resets_at": null,
+   "pct": 1.0,
+   "resets_at": "2026-11-23T07:10:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-23T02:05:32.537115-05:00",
-   "source": "usage",
-   "last_reset": "2026-11-23T07:10:00.728881+00:00",
-   "left": null,
+   "read_at": "2026-11-23T02:29:19.916215-05:00",
+   "source": "live",
+   "left": 99.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 5.0,
-   "resets_at": "2026-11-29T07:00:00.728900+00:00",
+   "pct": 6.0,
+   "resets_at": "2026-11-29T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-23T02:05:32.537115-05:00",
-   "source": "usage",
-   "left": 95.0,
+   "read_at": "2026-11-23T02:29:19.916215-05:00",
+   "source": "live",
+   "left": 94.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 4.0,
-   "resets_at": "2026-11-29T06:59:59.729038+00:00",
+   "resets_at": "2026-11-29T06:59:59.918585+00:00",
    "used_words": "of the Fable weekly allowance used",
-   "read_at": "2026-11-23T02:05:32.537115-05:00",
+   "read_at": "2026-11-23T02:28:26.610692-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-23T02:05:32.537115-05:00"
+  "read_at": "2026-11-23T02:29:19.916215-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -371,10 +390,10 @@
  },
  "next_tick": null,
  "personal": {
-  "week_pct": 7.04,
-  "usage_pct": 84.6,
-  "work_pct": 94.7,
-  "read_at": "2026-11-23T07:19:00+00:00",
+  "week_pct": 23.2,
+  "usage_pct": 84.0,
+  "work_pct": 95.0,
+  "read_at": "2026-11-23T07:32:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -398,7 +417,32 @@
     "e": "high",
     "at": "2026-11-23T00:14:41-05:00",
     "n": "Evan",
+    "d": 1,
     "src": "plan-a"
+   },
+   {
+    "lane": "b2",
+    "task": "T-4188",
+    "w": "Idris",
+    "k": "build",
+    "t": "Location, steps and notifications work in scripts and widgets",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-23T02:21:50-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
+   },
+   {
+    "lane": "b3",
+    "task": "T-4193",
+    "w": "Idris",
+    "k": "build",
+    "t": "TestFlight builds and the App Store page are ready",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-23T02:21:46-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
    }
   ]
  },
@@ -429,14 +473,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-23T02:18:00-05:00",
+   "at": "2026-11-23T02:23:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
-  "pool": 3,
-  "at": "2026-11-23T02:19:00-05:00",
+  "pool": 1,
+  "at": "2026-11-23T02:32:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -449,7 +493,7 @@
  "pool": {
   "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 27 (held: too few lands in 3 hours to judge a raise)",
   "n": 27,
-  "at": "2026-11-23T01:03:33.210113-05:00"
+  "at": "2026-11-23T02:28:27.861501-05:00"
  },
  "lanes": [
   {
@@ -540,13 +584,22 @@
     "task": "T-4192"
    },
    {
-    "w": "Odalys",
-    "t": "Only the coordinator answers Investor messages",
+    "w": "Idris",
+    "t": "Check finished work before it ships",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-23T02:13:29-05:00",
-    "o": "i",
-    "task": "T-5613"
+    "at": "2026-11-23T02:28:55-05:00",
+    "o": "c",
+    "task": "T-5381"
+   },
+   {
+    "w": "Ines",
+    "t": "Account b used up by midweek without skewing the comparison",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-23T02:29:41-05:00",
+    "o": "c",
+    "task": "T-5644"
    }
   ],
   "src": "plan",
@@ -624,43 +677,30 @@
   ],
   "done": [
    {
+    "w": "Odalys",
+    "t": "With the one-coordinator switch on and the coordinator session running, only the coordinator...",
+    "at": "2026-11-23T02:20:00-05:00"
+   },
+   {
+    "w": "Odalys",
+    "t": "Dispatch now checks every account each tick; one stuck for 45 minutes with an old usage reading,...",
+    "at": "2026-11-23T02:19:00-05:00"
+   },
+   {
     "w": "Operator",
     "t": "A later MacBook job for the same work (J-20261123-0143-mut-t5325-1) passed, so the failed job...",
     "at": "2026-11-23T01:56:00-05:00"
-   },
-   {
-    "w": "Pernille",
-    "t": "A ready-made widget's saved settings now survive a full disk or a power cut: the save gives up...",
-    "at": "2026-11-23T01:19:00-05:00"
-   },
-   {
-    "w": "Ines+operator",
-    "t": "The list of seven TestFlight-only test widgets is written, with a plain page for the Investors;...",
-    "at": "2026-11-23T01:13:00-05:00"
    }
   ],
   "count": {
-   "next": 715,
+   "next": 713,
    "wait": 2,
    "blocked": 0,
    "you": 2
   },
   "fin": {
-   "n": 3,
-   "rows": [
-    [
-     "T-4533",
-     "Make the premade settings..."
-    ],
-    [
-     "T-5643",
-     "List the test widgets that..."
-    ],
-    [
-     "T-0043",
-     "Strip unneeded Python..."
-    ]
-   ]
+   "n": 0,
+   "rows": []
   }
  },
  "qr": [
@@ -702,93 +742,98 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-23T07:18:33Z",
+  "at": "2026-11-23T07:31:53Z",
   "s": {
    "T-4692": [
-    "mergeq",
-    "1st to merge",
-    1795417773493
+    "mergetest",
+    "",
+    1795419113695
    ],
    "T-0337": [
-    "mergeq",
-    "1st to merge",
-    1795417773493
+    "mergetest",
+    "",
+    1795419113695
    ],
    "T-2097": [
-    "mergeq",
-    "1st to merge",
-    1795417773493
+    "mergetest",
+    "",
+    1795419113695
    ],
    "T-4010": [
-    "mergeq",
-    "1st to merge",
-    1795417773493
+    "mergetest",
+    "",
+    1795419113695
    ],
    "T-4477": [
-    "mergeq",
-    "1st to merge",
-    1795417773493
+    "mergetest",
+    "",
+    1795419113695
    ],
    "T-4286": [
-    "mergeq",
-    "1st to merge",
-    1795417773493
+    "mergetest",
+    "",
+    1795419113695
    ],
    "T-4435": [
-    "mergeq",
-    "1st to merge",
-    1795417773493
+    "mergetest",
+    "",
+    1795419113695
    ],
    "T-0678": [
-    "mergeq",
-    "1st to merge",
-    1795417773493
+    "mergetest",
+    "",
+    1795419113695
    ],
    "T-3495": [
-    "mergeq",
-    "1st to merge",
-    1795417773493
+    "mergetest",
+    "",
+    1795419113695
    ],
    "T-3765": [
-    "mergeq",
-    "1st to merge",
-    1795417773493
+    "mergetest",
+    "",
+    1795419113695
    ],
    "T-4662": [
-    "mergeq",
-    "1st to merge",
-    1795417773493
+    "mergetest",
+    "",
+    1795419113695
    ],
    "T-4781": [
-    "mergeq",
-    "1st to merge",
-    1795417773493
+    "mergetest",
+    "",
+    1795419113695
    ],
    "T-4772": [
-    "mergeq",
-    "1st to merge",
-    1795417773493
+    "mergetest",
+    "",
+    1795419113695
    ],
    "T-4762": [
-    "mergeq",
-    "1st to merge",
-    1795417773493
+    "mergetest",
+    "",
+    1795419113695
    ],
-   "T-5613": [
+   "T-4185": [
+    "mergeq",
+    "",
+    1795418693695
+   ],
+   "T-5644": [
     "merged",
-    "on main 1:40 AM ET",
-    1795416047000,
-    "Odalys"
+    "",
+    1795416206000,
+    ""
    ],
    "T-4182": [
     "merged",
-    "on main 12:11 AM ET",
+    "",
     1795410693000,
     ""
    ],
    "T-4184": [
     "merged",
-    "on main 12:11 AM ET",
+    "",
     1795410693000,
     ""
    ]
@@ -808,7 +853,8 @@
    "T-4781": "Retest a fixed red on what failed, not every test",
    "T-4772": "Prove a refresh tap redraws the widget",
    "T-4762": "Let the run lock wrap a Python run",
-   "T-5613": "Only the coordinator answers Investor messages",
+   "T-4185": "Launcher widgets open the apps a person chose",
+   "T-5644": "Account b used up by midweek without skewing the comparison",
    "T-4182": "A failing widget says so and can recover",
    "T-4184": "A person's own script becomes a Home Screen widget"
   },
@@ -827,20 +873,18 @@
    "T-4781": "Odalys",
    "T-4772": "Idris",
    "T-4762": "Idris",
-   "T-5613": "Odalys",
+   "T-4185": "Idris",
+   "T-5644": "Ines",
    "T-4182": "Idris",
-   "T-4184": "Idris",
-   "T-4533": "Pernille",
-   "T-5643": "Ines",
-   "T-0043": "Idris"
+   "T-4184": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-23T07:18:33Z",
+  "at": "2026-11-23T07:31:53Z",
   "mq": {
    "n": {
-    "checking": 0,
-    "inline": 14,
+    "checking": 14,
+    "inline": 1,
     "conflicted": 0,
     "failed": 0,
     "held": 0,
@@ -848,15 +892,48 @@
     "parked": 4
    },
    "m": {
-    "checking": null,
-    "inline": 9,
+    "checking": 0,
+    "inline": 7,
     "conflicted": null,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 221
+    "parked": 234
    },
-   "cur": [],
+   "cur": [
+    [
+     [
+      "T-4692"
+     ],
+     "iPhone app tests, sent and waiting its turn",
+     "MacBook",
+     0
+    ],
+    [
+     [
+      "T-0337"
+     ],
+     "iPhone app tests, sent and waiting its turn",
+     "MacBook",
+     0
+    ],
+    [
+     [
+      "T-2097"
+     ],
+     "iPhone app tests, sent and waiting its turn",
+     "MacBook",
+     0
+    ],
+    [
+     [
+      "T-4010"
+     ],
+     "iPhone app tests, sent and waiting its turn",
+     "MacBook",
+     0
+    ]
+   ],
    "ld": [
     0,
     null
@@ -864,12 +941,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-23T07:18:35Z",
-    "ld": 6.83,
+    "at": "2026-11-23T07:31:30Z",
+    "ld": 8.46,
     "c": 8,
     "sb": 0,
     "dk": [
-     57.9,
+     55.0,
      228.3
     ],
     "ss": [
@@ -893,21 +970,21 @@
  },
  "hc": {
   "wait": {
-   "n": 4,
+   "n": 19,
    "limit": 20,
-   "in_line": 0,
+   "in_line": 15,
    "parked": 4,
    "open": true,
    "mq": false,
-   "counted": "2026-11-23T07:04:01+00:00",
+   "counted": "2026-11-23T07:30:59+00:00",
    "by": {
     "app": {
-     "n": 3,
+     "n": 15,
      "limit": 20,
      "open": true
     },
     "other": {
-     "n": 2,
+     "n": 6,
      "limit": 20,
      "open": true
     },
@@ -917,11 +994,11 @@
      "open": true
     }
    },
-   "at": "2026-11-23T07:18:41+00:00"
+   "at": "2026-11-23T07:31:53+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-23T07:18:41+00:00"
+   "at": "2026-11-23T07:31:53+00:00"
   }
  },
  "operators": [
@@ -932,7 +1009,7 @@
    "m": "opus",
    "e": "high",
    "t": "Work session",
-   "at": "2026-11-23T01:04:13-05:00"
+   "at": "2026-11-23T02:29:08-05:00"
   },
   {
    "w": "Operator",
@@ -951,6 +1028,24 @@
    "e": "high",
    "t": "Work session \u2013 1 task",
    "at": "2026-11-23T00:14:41-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Jeremy's Account",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session \u2013 1 task",
+   "at": "2026-11-23T02:21:49-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Jeremy's Account",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session \u2013 1 task",
+   "at": "2026-11-23T02:21:46-05:00"
   }
  ],
  "reply": {
@@ -962,7 +1057,6 @@
   "lane_next",
   "queue_text",
   "task_done",
-  "fin_short",
   "task_title",
   "done_text",
   "task_open",
@@ -971,12 +1065,12 @@
  ],
  "agents_now": {
   "main": 0,
-  "lanes": 2,
-  "total": 2,
-  "at": "2:19 AM",
+  "lanes": 4,
+  "total": 4,
+  "at": "2:32 AM",
   "why": "",
-  "at_iso": "2026-11-23T07:19:00+00:00",
-  "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 2:19 AM ET</p></section>"
+  "at_iso": "2026-11-23T07:32:00+00:00",
+  "started": "2:29 AM",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 0, started 2:29 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 2:32 AM ET</p></section>"
  }
 }

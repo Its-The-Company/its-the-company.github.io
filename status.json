@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-23T03:15:02.493367+00:00",
+ "at": "2026-11-23T03:18:07.514467+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -125,7 +125,7 @@
   "week_pct": 2.42,
   "usage_pct": 68.7,
   "work_pct": 88.2,
-  "read_at": "2026-11-23T03:15:00+00:00",
+  "read_at": "2026-11-23T03:18:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -216,7 +216,7 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-22T22:10:00-05:00",
+   "at": "2026-11-22T22:16:00-05:00",
    "recovery": {
     "what": "recovered",
     "at": "2026-11-22T15:08:00-05:00"
@@ -226,7 +226,7 @@
  "lock_in": {
   "on": true,
   "pool": 3,
-  "at": "2026-11-22T22:15:00-05:00",
+  "at": "2026-11-22T22:18:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -458,9 +458,26 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-23T03:14:45Z",
-  "s": {},
+  "at": "2026-11-23T03:17:47Z",
+  "s": {
+   "T-4185": [
+    "mergeq",
+    "1st to merge",
+    1795403747638
+   ],
+   "T-0053": [
+    "mergetest",
+    "iPhone tests on the MacBook",
+    null
+   ]
+  },
+  "nm": {
+   "T-4185": "Launcher widgets open the apps a person chose",
+   "T-0053": "Fix widget extension location updates"
+  },
   "wk": {
+   "T-4185": "Idris",
+   "T-0053": "Idris",
    "T-3280": "Idris",
    "T-5622": "Odalys",
    "T-5624": "Odalys",
@@ -471,11 +488,11 @@
   }
  },
  "ln": {
-  "at": "2026-11-23T03:14:45Z",
+  "at": "2026-11-23T03:17:47Z",
   "mq": {
    "n": {
     "checking": 0,
-    "inline": 0,
+    "inline": 1,
     "conflicted": 0,
     "failed": 0,
     "held": 0,
@@ -484,12 +501,12 @@
    },
    "m": {
     "checking": null,
-    "inline": null,
+    "inline": 2,
     "conflicted": null,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1170
+    "parked": 1173
    },
    "cur": [],
    "ld": [
@@ -499,12 +516,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-23T03:14:46Z",
-    "ld": 1.78,
+    "at": "2026-11-23T03:17:48Z",
+    "ld": 1.64,
     "c": 8,
     "sb": 0,
     "dk": [
-     65.4,
+     63.2,
      228.3
     ],
     "ss": [
@@ -514,8 +531,8 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-23T03:13:55Z",
-    "ld": 8.73,
+    "at": "2026-11-23T03:16:01Z",
+    "ld": 5.81,
     "c": 12,
     "sb": 0,
     "dk": [
@@ -552,11 +569,11 @@
      "open": true
     }
    },
-   "at": "2026-11-23T03:15:02+00:00"
+   "at": "2026-11-23T03:18:07+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-23T03:15:02+00:00"
+   "at": "2026-11-23T03:17:55+00:00"
   }
  },
  "operators": [
@@ -636,10 +653,10 @@
   "main": 0,
   "lanes": 5,
   "total": 5,
-  "at": "10:15 PM",
+  "at": "10:18 PM",
   "why": "",
-  "at_iso": "2026-11-23T03:15:00+00:00",
+  "at_iso": "2026-11-23T03:18:00+00:00",
   "started": "2:57 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 0, started 2:57 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 10:15 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 0, started 2:57 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 10:18 PM ET</p></section>"
  }
 }

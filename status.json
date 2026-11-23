@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-23T10:15:51.344455+00:00",
+ "at": "2026-11-23T10:18:35.663206+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -19,6 +19,38 @@
      {
       "s": "testq",
       "at": 1795349545
+     }
+    ]
+   },
+   {
+    "t": "T-4781",
+    "name": "Retest a fixed red on what failed, not every test",
+    "w": "Odalys",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "claimed",
+      "at": 1795429104
+     },
+     {
+      "s": "worker",
+      "at": 1795429104
+     }
+    ]
+   },
+   {
+    "t": "T-4662",
+    "name": "Place the cursor easily on a long line",
+    "w": "Idris",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "claimed",
+      "at": 1795428992
+     },
+     {
+      "s": "worker",
+      "at": 1795428992
      }
     ]
    },
@@ -231,38 +263,6 @@
     ]
    },
    {
-    "t": "T-4781",
-    "name": "Retest a fixed red on what failed, not every test",
-    "w": "Odalys",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "claimed",
-      "at": 1795424110
-     },
-     {
-      "s": "worker",
-      "at": 1795424110
-     }
-    ]
-   },
-   {
-    "t": "T-4662",
-    "name": "Place the cursor easily on a long line",
-    "w": "Idris",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "claimed",
-      "at": 1795424052
-     },
-     {
-      "s": "worker",
-      "at": 1795424052
-     }
-    ]
-   },
-   {
     "t": "T-3495",
     "name": "Check the upload fix before build 4 goes out",
     "w": "Pernille",
@@ -435,7 +435,7 @@
   "week_pct": 122.84,
   "usage_pct": 84.0,
   "work_pct": 95.0,
-  "read_at": "2026-11-23T10:15:00+00:00",
+  "read_at": "2026-11-23T10:19:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -470,7 +470,7 @@
   }
  ],
  "disk": {
-  "free_gb": 51,
+  "free_gb": 53,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -479,14 +479,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-23T05:11:00-05:00",
+   "at": "2026-11-23T05:18:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-23T05:15:00-05:00",
+  "at": "2026-11-23T05:19:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -497,7 +497,7 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 8 (held: too few lands in 3 hours to judge a raise)",
+  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 8 (at its floor: load 20.5 a core is over 10)",
   "n": 8,
   "at": "2026-11-23T02:28:27.861501-05:00"
  },
@@ -588,15 +588,6 @@
     "at": "2026-11-23T05:12:58-05:00",
     "o": "c",
     "task": "T-5491"
-   },
-   {
-    "w": "Idris",
-    "t": "Check finished work before it ships",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-23T05:15:08-05:00",
-    "o": "c",
-    "task": "T-5391"
    }
   ],
   "src": "plan",
@@ -748,18 +739,12 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-23T10:15:51Z",
+  "at": "2026-11-23T10:18:35Z",
   "s": {
    "T-4192": [
     "testing",
     "Mac Mini \u00b7 test",
     null
-   ],
-   "T-5391": [
-    "merged",
-    "on main 4:53 AM ET",
-    1795427594000,
-    "Idris"
    ],
    "T-5644": [
     "merged",
@@ -770,19 +755,17 @@
   },
   "nm": {
    "T-4192": "Python in the app: smaller bundle, installable packages",
-   "T-5391": "Check finished work before it ships",
    "T-5644": "Account b used up by midweek without skewing the comparison"
   },
   "wk": {
    "T-4192": "Idris",
-   "T-5391": "Idris",
    "T-5644": "Ines",
    "T-5673": "Odalys",
    "T-5381": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-23T10:15:51Z",
+  "at": "2026-11-23T10:18:35Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -798,9 +781,9 @@
     "inline": null,
     "conflicted": null,
     "failed": null,
-    "held": 47,
+    "held": 50,
     "retry": null,
-    "parked": 90
+    "parked": 93
    },
    "cur": [],
    "ld": [
@@ -810,8 +793,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-23T10:15:52Z",
-    "ld": 19.15,
+    "at": "2026-11-23T10:19:26Z",
+    "ld": 24.19,
     "c": 8,
     "sb": 1,
     "dk": [
@@ -865,11 +848,11 @@
      "open": true
     }
    },
-   "at": "2026-11-23T10:15:51+00:00"
+   "at": "2026-11-23T10:18:35+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-23T10:15:51+00:00"
+   "at": "2026-11-23T10:18:35+00:00"
   }
  },
  "operators": [
@@ -886,9 +869,7 @@
    "w": "Operator",
    "a": "Evan's Account",
    "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session \u2013 8 tasks",
+   "t": "Work session \u2013 10 tasks",
    "at": "2026-11-23T05:02:35-05:00"
   }
  ],
@@ -912,10 +893,10 @@
   "main": 0,
   "lanes": 1,
   "total": 1,
-  "at": "5:15 AM",
+  "at": "5:19 AM",
   "why": "",
-  "at_iso": "2026-11-23T10:15:00+00:00",
+  "at_iso": "2026-11-23T10:19:00+00:00",
   "started": "2:29 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0, started 2:29 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 5:15 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0, started 2:29 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 5:19 AM ET</p></section>"
  }
 }

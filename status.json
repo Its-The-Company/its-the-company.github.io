@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-23T06:13:01.080132+00:00",
+ "at": "2026-11-23T06:16:31.123306+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -329,19 +329,19 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 8.0,
+   "pct": 9.0,
    "resets_at": "2026-11-23T02:10:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-23T01:08:49.575583-05:00",
+   "read_at": "2026-11-23T01:15:38.449002-05:00",
    "source": "live",
-   "left": 92.0,
+   "left": 91.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 4.0,
    "resets_at": "2026-11-29T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-23T01:08:49.575583-05:00",
+   "read_at": "2026-11-23T01:15:38.449002-05:00",
    "source": "live",
    "left": 96.0,
    "left_words": "of your weekly allowance left"
@@ -353,7 +353,7 @@
    "read_at": "2026-11-23T00:54:22.753135-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-23T01:08:49.575583-05:00"
+  "read_at": "2026-11-23T01:15:38.449002-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -373,7 +373,7 @@
   "week_pct": 7.04,
   "usage_pct": 84.6,
   "work_pct": 94.7,
-  "read_at": "2026-11-23T06:13:00+00:00",
+  "read_at": "2026-11-23T06:16:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -432,7 +432,7 @@
   }
  ],
  "disk": {
-  "free_gb": 59,
+  "free_gb": 60,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -441,14 +441,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-23T01:08:00-05:00",
+   "at": "2026-11-23T01:15:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 3,
-  "at": "2026-11-23T01:13:00-05:00",
+  "at": "2026-11-23T01:16:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -459,8 +459,8 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 37 (held: too few lands in 3 hours to judge a raise)",
-  "n": 37,
+  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 36 (cut a step: load 21.5 a core is over 10)",
+  "n": 36,
   "at": "2026-11-23T01:03:33.210113-05:00"
  },
  "lanes": [
@@ -516,15 +516,6 @@
  "tasks": {
   "run": [
    {
-    "w": "Idris",
-    "t": "Premades default to Paper in light and Studio in dark",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-23T00:38:46-05:00",
-    "o": "c",
-    "task": "T-4681"
-   },
-   {
     "w": "Odalys",
     "t": "Queued test requests replay while the coordinator runs",
     "m": "opus",
@@ -568,6 +559,15 @@
     "at": "2026-11-23T01:10:21-05:00",
     "o": "c",
     "task": "T-4772"
+   },
+   {
+    "w": "Idris",
+    "t": "Premades default to Paper in light and Studio in dark",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-23T01:15:41-05:00",
+    "o": "c",
+    "task": "T-4681"
    }
   ],
   "src": "plan",
@@ -645,6 +645,11 @@
   ],
   "done": [
    {
+    "w": "Ines+operator",
+    "t": "The list of seven TestFlight-only test widgets is written, with a plain page for the Investors;...",
+    "at": "2026-11-23T01:13:00-05:00"
+   },
+   {
     "w": "Idris+odalys",
     "t": "The release app no longer carries the Python modules it never needs, and a build check now...",
     "at": "2026-11-23T01:07:00-05:00"
@@ -653,11 +658,6 @@
     "w": "Idris",
     "t": "A widget moved to the app because it is too big or too slow (T-4630: the badge fix) now shows no...",
     "at": "2026-11-23T00:18:00-05:00"
-   },
-   {
-    "w": "Maren",
-    "t": "the design's string table now lists the five settings-page messages the build added (a duplicate...",
-    "at": "2026-11-23T00:13:00-05:00"
    }
   ],
   "count": {
@@ -667,8 +667,12 @@
    "you": 2
   },
   "fin": {
-   "n": 1,
+   "n": 2,
    "rows": [
+    [
+     "T-5643",
+     "List the test widgets that..."
+    ],
     [
      "T-0043",
      "Strip unneeded Python..."
@@ -715,22 +719,17 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-23T06:13:01Z",
+  "at": "2026-11-23T06:16:31Z",
   "s": {
    "T-4692": [
     "mergetest",
     "iPhone tests on the MacBook",
     null
    ],
-   "T-4681": [
+   "T-4772": [
     "testing",
     "Mac Mini \u00b7 test",
     null
-   ],
-   "T-4772": [
-    "testq",
-    "1st for a Simulator",
-    1795414381080
    ],
    "T-4182": [
     "merged",
@@ -747,22 +746,21 @@
   },
   "nm": {
    "T-4692": "Pro showcase widgets work free, editing them needs Pro",
-   "T-4681": "Premades default to Paper in light and Studio in dark",
    "T-4772": "Prove a refresh tap redraws the widget",
    "T-4182": "A failing widget says so and can recover",
    "T-4184": "A person's own script becomes a Home Screen widget"
   },
   "wk": {
    "T-4692": "Idris",
-   "T-4681": "Idris",
    "T-4772": "Idris",
    "T-4182": "Idris",
    "T-4184": "Idris",
+   "T-5643": "Ines",
    "T-0043": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-23T06:13:01Z",
+  "at": "2026-11-23T06:16:31Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -780,7 +778,7 @@
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 155
+    "parked": 159
    },
    "cur": [],
    "ld": [
@@ -790,12 +788,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-23T06:13:25Z",
-    "ld": 16.28,
+    "at": "2026-11-23T06:16:38Z",
+    "ld": 32.29,
     "c": 8,
-    "sb": 2,
+    "sb": 1,
     "dk": [
-     60.1,
+     60.3,
      228.3
     ],
     "ss": [
@@ -803,8 +801,7 @@
      953.7
     ],
     "sn": [
-     "pywidget-wk-check",
-     "iPhone 17e"
+     "pywidget-wk-check"
     ]
    },
    "macbook": {
@@ -828,7 +825,7 @@
    "parked": 4,
    "open": true,
    "mq": false,
-   "counted": "2026-11-23T05:55:01+00:00",
+   "counted": "2026-11-23T06:16:19+00:00",
    "by": {
     "app": {
      "n": 3,
@@ -846,11 +843,11 @@
      "open": true
     }
    },
-   "at": "2026-11-23T06:13:01+00:00"
+   "at": "2026-11-23T06:16:31+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-23T06:13:01+00:00"
+   "at": "2026-11-23T06:16:31+00:00"
   }
  },
  "operators": [
@@ -867,6 +864,8 @@
    "w": "Operator",
    "a": "Evan's Account",
    "sr": 1,
+   "m": "opus",
+   "e": "high",
    "t": "Work session \u2013 1 task",
    "at": "2026-11-23T00:56:12-05:00"
   },
@@ -874,6 +873,8 @@
    "w": "Operator",
    "a": "Evan's Account",
    "sr": 1,
+   "m": "opus",
+   "e": "high",
    "t": "Work session \u2013 1 task",
    "at": "2026-11-23T00:14:41-05:00"
   },
@@ -881,6 +882,8 @@
    "w": "Operator",
    "a": "Evan's Account",
    "sr": 1,
+   "m": "opus",
+   "e": "high",
    "t": "Work session \u2013 1 task",
    "at": "2026-11-23T00:21:44-05:00"
   }
@@ -905,10 +908,10 @@
   "main": 0,
   "lanes": 3,
   "total": 3,
-  "at": "1:13 AM",
+  "at": "1:16 AM",
   "why": "",
-  "at_iso": "2026-11-23T06:13:00+00:00",
+  "at_iso": "2026-11-23T06:16:00+00:00",
   "started": "1:04 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 1:04 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 1:13 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 1:04 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 1:16 AM ET</p></section>"
  }
 }

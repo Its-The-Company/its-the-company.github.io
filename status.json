@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-23T06:56:41.045383+00:00",
+ "at": "2026-11-23T06:59:46.846578+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -12,6 +12,54 @@
    "last_handoff": 1795407234
   },
   "flow": [
+   {
+    "t": "T-0678",
+    "name": "Run the refresh button inside the widget extension",
+    "w": "Idris",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "claimed",
+      "at": 1795417136
+     },
+     {
+      "s": "worker",
+      "at": 1795417136
+     }
+    ]
+   },
+   {
+    "t": "T-4435",
+    "name": "Draw the wrapped refresh glyph on both runtimes",
+    "w": "Idris",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "claimed",
+      "at": 1795417059
+     },
+     {
+      "s": "worker",
+      "at": 1795417059
+     }
+    ]
+   },
+   {
+    "t": "T-0337",
+    "name": "Confirm the revenue memo's facts from Apple pages",
+    "w": "Wrenna",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "claimed",
+      "at": 1795417050
+     },
+     {
+      "s": "worker",
+      "at": 1795417050
+     }
+    ]
+   },
    {
     "t": "T-4286",
     "name": "Check an imported font draws in a widget",
@@ -77,22 +125,6 @@
     ]
    },
    {
-    "t": "T-0337",
-    "name": "Confirm the revenue memo's facts from Apple pages",
-    "w": "Wrenna",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "claimed",
-      "at": 1795416672
-     },
-     {
-      "s": "worker",
-      "at": 1795416672
-     }
-    ]
-   },
-   {
     "t": "T-4182",
     "name": "A failing widget says so and can recover",
     "w": "Idris",
@@ -121,22 +153,6 @@
      {
       "s": "worker",
       "at": 1795410529
-     }
-    ]
-   },
-   {
-    "t": "T-4435",
-    "name": "Draw the wrapped refresh glyph on both runtimes",
-    "w": "Idris",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "claimed",
-      "at": 1795410507
-     },
-     {
-      "s": "worker",
-      "at": 1795410507
      }
     ]
    },
@@ -251,22 +267,6 @@
       "at": 1795410172
      }
     ]
-   },
-   {
-    "t": "T-0678",
-    "name": "Run the refresh button inside the widget extension",
-    "w": "Idris",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "claimed",
-      "at": 1795410137
-     },
-     {
-      "s": "worker",
-      "at": 1795410137
-     }
-    ]
    }
   ],
   "done": [
@@ -373,7 +373,7 @@
   "week_pct": 7.04,
   "usage_pct": 84.6,
   "work_pct": 94.7,
-  "read_at": "2026-11-23T06:56:00+00:00",
+  "read_at": "2026-11-23T06:59:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -432,7 +432,7 @@
   }
  ],
  "disk": {
-  "free_gb": 59,
+  "free_gb": 58,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -441,14 +441,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-23T01:50:00-05:00",
+   "at": "2026-11-23T01:57:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 3,
-  "at": "2026-11-23T01:56:00-05:00",
+  "at": "2026-11-23T01:59:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -541,6 +541,33 @@
     "at": "2026-11-23T01:46:17-05:00",
     "o": "c",
     "task": "T-5479"
+   },
+   {
+    "w": "Idris",
+    "t": "Location, steps and notifications work in scripts and widgets",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-23T01:57:47-05:00",
+    "o": "c",
+    "task": "T-4188"
+   },
+   {
+    "w": "Odalys",
+    "t": "Alarm when an account stops taking work",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-23T01:57:47-05:00",
+    "o": "c",
+    "task": "T-5642"
+   },
+   {
+    "w": "Idris",
+    "t": "Python in the app: smaller bundle, installable packages",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-23T01:59:06-05:00",
+    "o": "c",
+    "task": "T-4192"
    }
   ],
   "src": "plan",
@@ -696,8 +723,14 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-23T06:56:29Z",
+  "at": "2026-11-23T06:59:35Z",
   "s": {
+   "T-5642": [
+    "merged",
+    "on main 12:52 AM ET",
+    1795413142000,
+    ""
+   ],
    "T-4182": [
     "merged",
     "on main 12:11 AM ET",
@@ -712,10 +745,12 @@
    ]
   },
   "nm": {
+   "T-5642": "Alarm when an account stops taking work",
    "T-4182": "A failing widget says so and can recover",
    "T-4184": "A person's own script becomes a Home Screen widget"
   },
   "wk": {
+   "T-5642": "Odalys",
    "T-4182": "Idris",
    "T-4184": "Idris",
    "T-4533": "Pernille",
@@ -724,7 +759,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-23T06:56:29Z",
+  "at": "2026-11-23T06:59:35Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -742,7 +777,7 @@
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 199
+    "parked": 202
    },
    "cur": [],
    "ld": [
@@ -752,8 +787,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-23T06:56:32Z",
-    "ld": 22.77,
+    "at": "2026-11-23T06:59:17Z",
+    "ld": 24.47,
     "c": 8,
     "sb": 1,
     "dk": [
@@ -807,11 +842,11 @@
      "open": true
     }
    },
-   "at": "2026-11-23T06:56:41+00:00"
+   "at": "2026-11-23T06:59:46+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-23T06:56:29+00:00"
+   "at": "2026-11-23T06:59:46+00:00"
   }
  },
  "operators": [
@@ -848,7 +883,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 5 tasks",
+   "t": "Work session \u2013 7 tasks",
    "at": "2026-11-23T00:21:44-05:00"
   }
  ],
@@ -872,10 +907,10 @@
   "main": 0,
   "lanes": 3,
   "total": 3,
-  "at": "1:56 AM",
+  "at": "1:59 AM",
   "why": "",
-  "at_iso": "2026-11-23T06:56:00+00:00",
+  "at_iso": "2026-11-23T06:59:00+00:00",
   "started": "1:04 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 1:04 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 1:56 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 1:04 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 1:59 AM ET</p></section>"
  }
 }

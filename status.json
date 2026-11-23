@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-23T18:54:04.337430+00:00",
+ "at": "2026-11-23T18:57:16.167972+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -376,7 +376,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 718,
+  "runnable_count": 717,
   "blocked_count": 2
  },
  "meter": {
@@ -425,7 +425,7 @@
   "week_pct": 75.19,
   "usage_pct": 85.3,
   "work_pct": 96.6,
-  "read_at": "2026-11-23T18:54:00+00:00",
+  "read_at": "2026-11-23T18:57:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -438,6 +438,18 @@
     "at": "2026-11-23T13:14:48-05:00",
     "n": "Evan",
     "src": "plan-a"
+   },
+   {
+    "lane": "b",
+    "task": "T-5708",
+    "w": "Maren",
+    "k": "fix",
+    "t": "Clear the add-to-home steps before TestFlight",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-23T13:56:45-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
    },
    {
     "lane": "b2",
@@ -488,7 +500,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-23T13:54:00-05:00",
+  "at": "2026-11-23T13:57:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -499,7 +511,7 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 8 (at its floor: load 44.2 a core is over 10)",
+  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 8 (at its floor: load 31.0 a core is over 10)",
   "n": 8,
   "at": "2026-11-23T09:25:38.709305-05:00"
  },
@@ -685,6 +697,11 @@
   ],
   "done": [
    {
+    "w": "Pernille+operator",
+    "t": "The city list test no longer turns red when the Mac mini's time zone data updates; the bundled...",
+    "at": "2026-11-23T13:55:00-05:00"
+   },
+   {
     "w": "Idris",
     "t": "Idris reviewed the fix that stops lanes waiting on the MacBook while holding the merge road and...",
     "at": "2026-11-23T13:37:00-05:00"
@@ -693,22 +710,21 @@
     "w": "Idris",
     "t": "A widget whose script reads a text file kept beside it in its project now has tests proving it...",
     "at": "2026-11-23T13:07:00-05:00"
-   },
-   {
-    "w": "Idris",
-    "t": "Every TestFlight upload now writes a plain list of what the build adds and fixes, taken from the...",
-    "at": "2026-11-23T11:02:00-05:00"
    }
   ],
   "count": {
-   "next": 718,
+   "next": 717,
    "wait": 2,
    "blocked": 0,
    "you": 2
   },
   "fin": {
-   "n": 13,
+   "n": 14,
    "rows": [
+    [
+     "T-5616",
+     "Fix the city list test after..."
+    ],
     [
      "T-5710",
      "Review the fix that stops..."
@@ -728,10 +744,6 @@
     [
      "T-5693",
      "Review the fix that lands..."
-    ],
-    [
-     "T-4220",
-     "Run the launcher build's..."
     ]
    ]
   }
@@ -775,22 +787,17 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-23T18:54:04Z",
+  "at": "2026-11-23T18:57:02Z",
   "s": {
    "T-5688": [
     "mergeq",
     "1st to merge",
-    1795447444337
-   ],
-   "T-5616": [
-    "mergeq",
-    "2nd to merge",
-    1795455784337
+    1795447442429
    ],
    "T-4192": [
     "mergeq",
-    "3rd to merge",
-    1795458484337
+    "2nd to merge",
+    1795458482429
    ],
    "T-4185": [
     "mergetest",
@@ -811,7 +818,6 @@
   },
   "nm": {
    "T-5688": "Land finished work whose copy also changed the board",
-   "T-5616": "Fix the city list test after the tzdata update",
    "T-4192": "Python in the app: smaller bundle, installable packages",
    "T-4185": "Launcher widgets open the apps a person chose",
    "T-4715": "Put the new Pro screen words into the app",
@@ -819,11 +825,11 @@
   },
   "wk": {
    "T-5688": "Odalys",
-   "T-5616": "Pernille",
    "T-4192": "Idris",
    "T-4185": "Idris",
    "T-4715": "Maren",
    "T-5700": "Odalys",
+   "T-5616": "Pernille",
    "T-5710": "Idris",
    "T-0749": "Idris",
    "T-3350": "Idris",
@@ -833,16 +839,15 @@
    "T-4692": "Idris",
    "T-4762": "Idris",
    "T-4761": "Idris",
-   "T-5687": "Idris",
-   "T-4643": "Idris"
+   "T-5687": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-23T18:54:04Z",
+  "at": "2026-11-23T18:57:02Z",
   "mq": {
    "n": {
     "checking": 0,
-    "inline": 3,
+    "inline": 2,
     "conflicted": 0,
     "failed": 0,
     "held": 3,
@@ -851,12 +856,12 @@
    },
    "m": {
     "checking": null,
-    "inline": 71,
+    "inline": 121,
     "conflicted": null,
     "failed": null,
-    "held": 565,
+    "held": 568,
     "retry": null,
-    "parked": 565
+    "parked": 568
    },
    "cur": [],
    "ld": [
@@ -866,12 +871,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-23T18:54:12Z",
-    "ld": 39.7,
+    "at": "2026-11-23T18:56:39Z",
+    "ld": 29.73,
     "c": 8,
     "sb": 1,
     "dk": [
-     32.2,
+     31.9,
      228.3
     ],
     "ss": [
@@ -899,11 +904,11 @@
   "wait": {
    "n": 21,
    "limit": 20,
-   "in_line": 4,
-   "parked": 17,
+   "in_line": 3,
+   "parked": 18,
    "open": true,
    "mq": false,
-   "counted": "2026-11-23T18:42:06+00:00",
+   "counted": "2026-11-23T18:53:57+00:00",
    "by": {
     "app": {
      "n": 14,
@@ -911,7 +916,7 @@
      "open": true
     },
     "other": {
-     "n": 10,
+     "n": 11,
      "limit": 20,
      "open": true
     },
@@ -921,11 +926,11 @@
      "open": true
     }
    },
-   "at": "2026-11-23T18:54:04+00:00"
+   "at": "2026-11-23T18:57:16+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-23T18:54:04+00:00"
+   "at": "2026-11-23T18:57:02+00:00"
   }
  },
  "operators": [
@@ -946,6 +951,15 @@
    "e": "high",
    "t": "Work session \u2013 1 task",
    "at": "2026-11-23T13:14:47-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Jeremy's Account",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session \u2013 1 task",
+   "at": "2026-11-23T13:56:45-05:00"
   },
   {
    "w": "Operator",
@@ -976,12 +990,12 @@
  ],
  "agents_now": {
   "main": 0,
-  "lanes": 2,
-  "total": 2,
-  "at": "1:54 PM",
+  "lanes": 3,
+  "total": 3,
+  "at": "1:57 PM",
   "why": "",
-  "at_iso": "2026-11-23T18:54:00+00:00",
+  "at_iso": "2026-11-23T18:57:00+00:00",
   "started": "9:27 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0, started 9:27 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 1:54 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 9:27 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 1:57 PM ET</p></section>"
  }
 }

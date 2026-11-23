@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-23T22:23:25.062229+00:00",
+ "at": "2026-11-23T22:26:29.556617+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -376,7 +376,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 717,
+  "runnable_count": 722,
   "blocked_count": 2
  },
  "meter": {
@@ -425,7 +425,7 @@
   "week_pct": 86.76,
   "usage_pct": 85.3,
   "work_pct": 96.6,
-  "read_at": "2026-11-23T22:23:00+00:00",
+  "read_at": "2026-11-23T22:26:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -475,7 +475,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-23T17:23:00-05:00",
+  "at": "2026-11-23T17:26:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -561,15 +561,6 @@
     "task": "T-5738"
    },
    {
-    "w": "Odalys",
-    "t": "A review ending without a record goes elsewhere",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-23T17:15:28-05:00",
-    "o": "c",
-    "task": "T-5735"
-   },
-   {
     "w": "Idris",
     "t": "Review the cap on landings that keep retrying",
     "m": "opus",
@@ -577,6 +568,15 @@
     "at": "2026-11-23T17:15:28-05:00",
     "o": "c",
     "task": "T-5745"
+   },
+   {
+    "w": "Odalys",
+    "t": "A review ending without a record goes elsewhere",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-23T17:25:00-05:00",
+    "o": "c",
+    "task": "T-5735"
    }
   ],
   "src": "plan",
@@ -655,6 +655,11 @@
   "done": [
    {
     "w": "Odalys",
+    "t": "A review that ends without a record now goes to another reviewer, and only a reviewer's signed...",
+    "at": "2026-11-23T17:25:00-05:00"
+   },
+   {
+    "w": "Odalys",
     "t": "A landing that keeps being told to run again now stops going round: after two rounds or six...",
     "at": "2026-11-23T17:14:00-05:00"
    },
@@ -662,22 +667,21 @@
     "w": "Odalys+operator",
     "t": "The 18 left-over worker copies are accounted for: 7 superseded, 11 with wanted work, each named...",
     "at": "2026-11-23T17:06:00-05:00"
-   },
-   {
-    "w": "Idris",
-    "t": "Idris reviewed the merge script's record take-out and accepted it; two follow-ups, a guard...",
-    "at": "2026-11-23T16:46:00-05:00"
    }
   ],
   "count": {
-   "next": 717,
+   "next": 722,
    "wait": 2,
    "blocked": 0,
    "you": 2
   },
   "fin": {
-   "n": 26,
+   "n": 27,
    "rows": [
+    [
+     "T-5735",
+     "A review ending without a..."
+    ],
     [
      "T-5734",
      "A land that keeps saying run..."
@@ -697,10 +701,6 @@
     [
      "T-5715",
      "Work that steps aside keeps..."
-    ],
-    [
-     "T-5698",
-     "A land told to run again is..."
     ]
    ]
   }
@@ -744,33 +744,41 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-23T22:23:09Z",
+  "at": "2026-11-23T22:26:29Z",
   "s": {
    "T-4715": [
     "mergeq",
     "1st to merge",
-    1795460349101
+    1795460369556
    ],
    "T-5708": [
     "mergeq",
     "2nd to merge",
-    1795460409101
+    1795460369556
    ],
    "T-5490": [
     "mergeq",
     "3rd to merge",
-    1795468989101
+    1795468949556
+   ],
+   "T-5735": [
+    "merged",
+    "on main 5:22 PM ET",
+    1795472567000,
+    "Odalys"
    ]
   },
   "nm": {
    "T-4715": "Put the new Pro screen words into the app",
    "T-5708": "Clear the add-to-home steps before TestFlight",
-   "T-5490": "Make the https big-body test count work, not seconds"
+   "T-5490": "Make the https big-body test count work, not seconds",
+   "T-5735": "A review ending without a record goes elsewhere"
   },
   "wk": {
    "T-4715": "Maren",
    "T-5708": "Maren",
    "T-5490": "Pernille",
+   "T-5735": "Odalys",
    "T-5734": "Odalys",
    "T-5704": "Odalys",
    "T-5731": "Idris",
@@ -781,12 +789,11 @@
    "T-5722": "Odalys",
    "T-5256": "Odalys",
    "T-5713": "Pernille",
-   "T-5479": "Idris",
-   "T-5700": "Odalys"
+   "T-5479": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-23T22:23:09Z",
+  "at": "2026-11-23T22:26:29Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -799,12 +806,12 @@
    },
    "m": {
     "checking": null,
-    "inline": 203,
+    "inline": 207,
     "conflicted": null,
     "failed": null,
-    "held": 775,
+    "held": 778,
     "retry": null,
-    "parked": 775
+    "parked": 778
    },
    "cur": [],
    "ld": [
@@ -814,8 +821,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-23T22:22:48Z",
-    "ld": 3.69,
+    "at": "2026-11-23T22:25:46Z",
+    "ld": 3.54,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -867,11 +874,11 @@
      "open": true
     }
    },
-   "at": "2026-11-23T22:23:25+00:00"
+   "at": "2026-11-23T22:26:29+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-23T22:23:09+00:00"
+   "at": "2026-11-23T22:26:29+00:00"
   }
  },
  "operators": [
@@ -915,10 +922,10 @@
   "main": 0,
   "lanes": 1,
   "total": 1,
-  "at": "5:23 PM",
+  "at": "5:26 PM",
   "why": "",
-  "at_iso": "2026-11-23T22:23:00+00:00",
+  "at_iso": "2026-11-23T22:26:00+00:00",
   "started": "9:27 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0, started 9:27 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 5:23 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0, started 9:27 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 5:26 PM ET</p></section>"
  }
 }

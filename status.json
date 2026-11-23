@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-23T22:51:11.273105+00:00",
+ "at": "2026-11-23T22:54:04.548112+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -370,18 +370,18 @@
   "landed": 1,
   "failed": 4
  },
- "workers": [
+ "workers": [],
+ "who": "",
+ "recent": [
   {
    "name": "wrenna",
    "task": "[report] evening",
    "model": "opus",
    "started": "2026-11-23T22:36:14.087Z",
-   "seconds": 897,
-   "finished": null
+   "seconds": null,
+   "finished": "2026-11-23T22:52:17.672000+00:00"
   }
  ],
- "who": "Wrenna",
- "recent": [],
  "queue": {
   "runnable": [],
   "blocked": [],
@@ -434,7 +434,7 @@
   "week_pct": 86.76,
   "usage_pct": 85.3,
   "work_pct": 96.6,
-  "read_at": "2026-11-23T22:51:00+00:00",
+  "read_at": "2026-11-23T22:55:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -508,7 +508,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-23T17:51:00-05:00",
+  "at": "2026-11-23T17:55:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -524,14 +524,6 @@
   "at": "2026-11-23T09:25:38.709305-05:00"
  },
  "lanes": [
-  {
-   "name": "Wrenna",
-   "state": "running",
-   "task": "[report] evening",
-   "model": "opus",
-   "since": "2026-11-23T22:36:14.087Z",
-   "next": []
-  },
   {
    "name": "Odalys",
    "state": "next",
@@ -571,6 +563,14 @@
    "model": null,
    "since": null,
    "next": []
+  },
+  {
+   "name": "Wrenna",
+   "state": "next",
+   "task": "Wrenna, P2, T-2375 continuation (B-staged item 3...",
+   "model": null,
+   "since": null,
+   "next": []
   }
  ],
  "tasks": {
@@ -601,14 +601,6 @@
     "at": "2026-11-23T17:29:54-05:00",
     "o": "c",
     "task": "T-5739"
-   },
-   {
-    "w": "Wrenna",
-    "k": "report",
-    "t": "Evening",
-    "m": "opus",
-    "at": "2026-11-23T22:36:14.087Z",
-    "o": "c"
    }
   ],
   "src": "plan",
@@ -776,17 +768,17 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-23T22:50:50Z",
+  "at": "2026-11-23T22:54:04Z",
   "s": {
    "T-4715": [
     "mergeq",
     "1st to merge",
-    1795460390668
+    1795460404548
    ],
    "T-5708": [
     "mergeq",
     "2nd to merge",
-    1795460390668
+    1795460404548
    ],
    "T-5739": [
     "merged",
@@ -825,7 +817,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-23T22:50:50Z",
+  "at": "2026-11-23T22:54:04Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -834,16 +826,16 @@
     "failed": 0,
     "held": 3,
     "retry": 0,
-    "parked": 14
+    "parked": 13
    },
    "m": {
     "checking": null,
-    "inline": 231,
+    "inline": 234,
     "conflicted": null,
     "failed": null,
-    "held": 802,
+    "held": 805,
     "retry": null,
-    "parked": 802
+    "parked": 805
    },
    "cur": [],
    "ld": [
@@ -853,12 +845,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-23T22:50:21Z",
-    "ld": 5.23,
+    "at": "2026-11-23T22:53:49Z",
+    "ld": 6.37,
     "c": 8,
     "sb": 0,
     "dk": [
-     32.9,
+     32.3,
      228.3
     ],
     "ss": [
@@ -906,11 +898,11 @@
      "open": true
     }
    },
-   "at": "2026-11-23T22:51:11+00:00"
+   "at": "2026-11-23T22:54:04+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-23T22:51:11+00:00"
+   "at": "2026-11-23T22:54:04+00:00"
   }
  },
  "operators": [
@@ -969,13 +961,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 1,
+  "main": 0,
   "lanes": 3,
-  "total": 4,
-  "at": "5:51 PM",
+  "total": 3,
+  "at": "5:55 PM",
   "why": "",
-  "at_iso": "2026-11-23T22:51:00+00:00",
+  "at_iso": "2026-11-23T22:55:00+00:00",
   "started": "9:27 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 1, started 9:27 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 5:51 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 9:27 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 5:55 PM ET</p></section>"
  }
 }

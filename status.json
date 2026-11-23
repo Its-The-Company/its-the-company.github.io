@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-23T07:05:55.629296+00:00",
+ "at": "2026-11-23T07:09:01.031061+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -12,6 +12,70 @@
    "last_handoff": 1795407234
   },
   "flow": [
+   {
+    "t": "T-4762",
+    "name": "Let the run lock wrap a Python run",
+    "w": "Idris",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "claimed",
+      "at": 1795417675
+     },
+     {
+      "s": "worker",
+      "at": 1795417675
+     }
+    ]
+   },
+   {
+    "t": "T-4286",
+    "name": "Check an imported font draws in a widget",
+    "w": "Idris",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "claimed",
+      "at": 1795417645
+     },
+     {
+      "s": "worker",
+      "at": 1795417645
+     }
+    ]
+   },
+   {
+    "t": "T-4772",
+    "name": "Prove a refresh tap redraws the widget",
+    "w": "Idris",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "claimed",
+      "at": 1795417624
+     },
+     {
+      "s": "worker",
+      "at": 1795417624
+     }
+    ]
+   },
+   {
+    "t": "T-4781",
+    "name": "Retest a fixed red on what failed, not every test",
+    "w": "Odalys",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "claimed",
+      "at": 1795417565
+     },
+     {
+      "s": "worker",
+      "at": 1795417565
+     }
+    ]
+   },
    {
     "t": "T-4477",
     "name": "People build a widget from blocks without code",
@@ -157,22 +221,6 @@
     ]
    },
    {
-    "t": "T-4286",
-    "name": "Check an imported font draws in a widget",
-    "w": "Idris",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "claimed",
-      "at": 1795416990
-     },
-     {
-      "s": "worker",
-      "at": 1795416990
-     }
-    ]
-   },
-   {
     "t": "T-4182",
     "name": "A failing widget says so and can recover",
     "w": "Idris",
@@ -205,22 +253,6 @@
     ]
    },
    {
-    "t": "T-4762",
-    "name": "Let the run lock wrap a Python run",
-    "w": "Idris",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "claimed",
-      "at": 1795410496
-     },
-     {
-      "s": "worker",
-      "at": 1795410496
-     }
-    ]
-   },
-   {
     "t": "T-0657",
     "name": "Build the Settings screen",
     "w": "Idris",
@@ -233,38 +265,6 @@
      {
       "s": "worker",
       "at": 1795410492
-     }
-    ]
-   },
-   {
-    "t": "T-4772",
-    "name": "Prove a refresh tap redraws the widget",
-    "w": "Idris",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "claimed",
-      "at": 1795410445
-     },
-     {
-      "s": "worker",
-      "at": 1795410445
-     }
-    ]
-   },
-   {
-    "t": "T-4781",
-    "name": "Retest a fixed red on what failed, not every test",
-    "w": "Odalys",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "claimed",
-      "at": 1795410405
-     },
-     {
-      "s": "worker",
-      "at": 1795410405
      }
     ]
    }
@@ -324,7 +324,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 714,
+  "runnable_count": 715,
   "blocked_count": 2
  },
  "meter": {
@@ -373,7 +373,7 @@
   "week_pct": 7.04,
   "usage_pct": 84.6,
   "work_pct": 94.7,
-  "read_at": "2026-11-23T07:06:00+00:00",
+  "read_at": "2026-11-23T07:09:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -397,19 +397,6 @@
     "e": "high",
     "at": "2026-11-23T00:14:41-05:00",
     "n": "Evan",
-    "src": "plan-a"
-   },
-   {
-    "lane": "a3",
-    "task": "T-4692",
-    "w": "Idris",
-    "k": "build",
-    "t": "Pro showcase widgets work free, editing them needs Pro",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-23T00:21:44-05:00",
-    "n": "Evan",
-    "d": 1,
     "src": "plan-a"
    }
   ]
@@ -448,7 +435,7 @@
  "lock_in": {
   "on": true,
   "pool": 3,
-  "at": "2026-11-23T02:06:00-05:00",
+  "at": "2026-11-23T02:09:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -459,8 +446,8 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 29 (cut a step: load 28.6 a core is over 10)",
-  "n": 29,
+  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 28 (cut a step: load 29.2 a core is over 10)",
+  "n": 28,
   "at": "2026-11-23T01:03:33.210113-05:00"
  },
  "lanes": [
@@ -643,7 +630,7 @@
    }
   ],
   "count": {
-   "next": 714,
+   "next": 715,
    "wait": 2,
    "blocked": 0,
    "you": 2
@@ -705,8 +692,78 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-23T07:05:55Z",
+  "at": "2026-11-23T07:08:52Z",
   "s": {
+   "T-4692": [
+    "mergeq",
+    "1st to merge",
+    1795417732112
+   ],
+   "T-0337": [
+    "mergeq",
+    "1st to merge",
+    1795417732112
+   ],
+   "T-2097": [
+    "mergeq",
+    "1st to merge",
+    1795417732112
+   ],
+   "T-4010": [
+    "mergeq",
+    "1st to merge",
+    1795417732112
+   ],
+   "T-4477": [
+    "mergeq",
+    "1st to merge",
+    1795417732112
+   ],
+   "T-4286": [
+    "mergeq",
+    "1st to merge",
+    1795417732112
+   ],
+   "T-4435": [
+    "mergeq",
+    "1st to merge",
+    1795417732112
+   ],
+   "T-0678": [
+    "mergeq",
+    "1st to merge",
+    1795417732112
+   ],
+   "T-3495": [
+    "mergeq",
+    "1st to merge",
+    1795417732112
+   ],
+   "T-3765": [
+    "mergeq",
+    "1st to merge",
+    1795417732112
+   ],
+   "T-4662": [
+    "mergeq",
+    "1st to merge",
+    1795417732112
+   ],
+   "T-4781": [
+    "mergeq",
+    "1st to merge",
+    1795417732112
+   ],
+   "T-4772": [
+    "mergeq",
+    "1st to merge",
+    1795417732112
+   ],
+   "T-4762": [
+    "mergeq",
+    "1st to merge",
+    1795417732112
+   ],
    "T-4182": [
     "merged",
     "on main 12:11 AM ET",
@@ -721,10 +778,38 @@
    ]
   },
   "nm": {
+   "T-4692": "Pro showcase widgets work free, editing them needs Pro",
+   "T-0337": "Confirm the revenue memo's facts from Apple pages",
+   "T-2097": "Read free memory in the widget extension on a device",
+   "T-4010": "Rebuild This Session as a full flowchart",
+   "T-4477": "People build a widget from blocks without code",
+   "T-4286": "Check an imported font draws in a widget",
+   "T-4435": "Draw the wrapped refresh glyph on both runtimes",
+   "T-0678": "Run the refresh button inside the widget extension",
+   "T-3495": "Check the upload fix before build 4 goes out",
+   "T-3765": "Check a real widget tap on the TestFlight build",
+   "T-4662": "Place the cursor easily on a long line",
+   "T-4781": "Retest a fixed red on what failed, not every test",
+   "T-4772": "Prove a refresh tap redraws the widget",
+   "T-4762": "Let the run lock wrap a Python run",
    "T-4182": "A failing widget says so and can recover",
    "T-4184": "A person's own script becomes a Home Screen widget"
   },
   "wk": {
+   "T-4692": "Idris",
+   "T-0337": "Wrenna",
+   "T-2097": "Idris",
+   "T-4010": "Odalys",
+   "T-4477": "Idris",
+   "T-4286": "Idris",
+   "T-4435": "Idris",
+   "T-0678": "Idris",
+   "T-3495": "Pernille",
+   "T-3765": "Idris",
+   "T-4662": "Idris",
+   "T-4781": "Odalys",
+   "T-4772": "Idris",
+   "T-4762": "Idris",
    "T-4182": "Idris",
    "T-4184": "Idris",
    "T-4533": "Pernille",
@@ -733,11 +818,11 @@
   }
  },
  "ln": {
-  "at": "2026-11-23T07:05:55Z",
+  "at": "2026-11-23T07:08:52Z",
   "mq": {
    "n": {
     "checking": 0,
-    "inline": 0,
+    "inline": 14,
     "conflicted": 0,
     "failed": 0,
     "held": 0,
@@ -746,12 +831,12 @@
    },
    "m": {
     "checking": null,
-    "inline": null,
+    "inline": 0,
     "conflicted": null,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 208
+    "parked": 211
    },
    "cur": [],
    "ld": [
@@ -761,25 +846,23 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-23T07:05:07Z",
-    "ld": 30.65,
+    "at": "2026-11-23T07:08:08Z",
+    "ld": 27.57,
     "c": 8,
-    "sb": 1,
+    "sb": 0,
     "dk": [
-     58.0,
+     58.8,
      228.3
     ],
     "ss": [
      173.1,
      953.7
     ],
-    "sn": [
-     "iPhone 18 Pro"
-    ]
+    "sn": []
    },
    "macbook": {
-    "at": "2026-11-23T06:55:20Z",
-    "ld": 39.88,
+    "at": "2026-11-23T07:03:32Z",
+    "ld": 7.87,
     "c": 12,
     "sb": 0,
     "dk": [
@@ -816,11 +899,11 @@
      "open": true
     }
    },
-   "at": "2026-11-23T07:05:55+00:00"
+   "at": "2026-11-23T07:09:01+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-23T07:05:55+00:00"
+   "at": "2026-11-23T07:09:01+00:00"
   }
  },
  "operators": [
@@ -839,7 +922,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 4 tasks",
+   "t": "Work session \u2013 5 tasks",
    "at": "2026-11-23T00:56:12-05:00"
   },
   {
@@ -850,15 +933,6 @@
    "e": "high",
    "t": "Work session \u2013 1 task",
    "at": "2026-11-23T00:14:41-05:00"
-  },
-  {
-   "w": "Operator",
-   "a": "Evan's Account",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session \u2013 10 tasks",
-   "at": "2026-11-23T00:21:44-05:00"
   }
  ],
  "reply": {
@@ -879,12 +953,12 @@
  ],
  "agents_now": {
   "main": 0,
-  "lanes": 3,
-  "total": 3,
-  "at": "2:06 AM",
+  "lanes": 2,
+  "total": 2,
+  "at": "2:09 AM",
   "why": "",
-  "at_iso": "2026-11-23T07:06:00+00:00",
+  "at_iso": "2026-11-23T07:09:00+00:00",
   "started": "1:04 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 1:04 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 2:06 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0, started 1:04 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 2:09 AM ET</p></section>"
  }
 }

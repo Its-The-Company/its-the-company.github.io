@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-23T03:30:17.027621+00:00",
+ "at": "2026-11-23T03:33:23.327062+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -125,7 +125,7 @@
   "week_pct": 2.42,
   "usage_pct": 68.7,
   "work_pct": 88.2,
-  "read_at": "2026-11-23T03:30:00+00:00",
+  "read_at": "2026-11-23T03:33:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -214,7 +214,7 @@
  "lock_in": {
   "on": true,
   "pool": 3,
-  "at": "2026-11-22T22:30:00-05:00",
+  "at": "2026-11-22T22:33:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -446,12 +446,17 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-23T03:30:09Z",
+  "at": "2026-11-23T03:33:23Z",
   "s": {
+   "T-5628": [
+    "mergeq",
+    "1st to merge",
+    1795404623327
+   ],
    "T-4185": [
     "mergetest",
-    "Xcode checks on the MacBook, 1st to merge",
-    1795404549081
+    "Xcode checks on the MacBook, 2nd to merge",
+    1795404563327
    ],
    "T-0657": [
     "mergetest",
@@ -460,10 +465,12 @@
    ]
   },
   "nm": {
+   "T-5628": "The main account takes work while the coordinator runs",
    "T-4185": "Launcher widgets open the apps a person chose",
    "T-0657": "Build the Settings screen"
   },
   "wk": {
+   "T-5628": "Odalys",
    "T-4185": "Idris",
    "T-0657": "Idris",
    "T-3280": "Idris",
@@ -476,11 +483,11 @@
   }
  },
  "ln": {
-  "at": "2026-11-23T03:30:09Z",
+  "at": "2026-11-23T03:33:23Z",
   "mq": {
    "n": {
     "checking": 1,
-    "inline": 0,
+    "inline": 1,
     "conflicted": 0,
     "failed": 0,
     "held": 0,
@@ -488,13 +495,13 @@
     "parked": 3
    },
    "m": {
-    "checking": 1,
-    "inline": null,
+    "checking": 4,
+    "inline": 3,
     "conflicted": null,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1186
+    "parked": 1189
    },
    "cur": [
     [
@@ -503,7 +510,7 @@
      ],
      "iPhone app tests",
      "MacBook",
-     1
+     4
     ]
    ],
    "ld": [
@@ -513,8 +520,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-23T03:30:09Z",
-    "ld": 1.82,
+    "at": "2026-11-23T03:32:58Z",
+    "ld": 1.32,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -542,13 +549,13 @@
  },
  "hc": {
   "wait": {
-   "n": 3,
+   "n": 5,
    "limit": 20,
-   "in_line": 0,
+   "in_line": 2,
    "parked": 3,
    "open": true,
    "mq": false,
-   "counted": "2026-11-23T03:03:11+00:00",
+   "counted": "2026-11-23T03:30:31+00:00",
    "by": {
     "app": {
      "n": 2,
@@ -556,21 +563,21 @@
      "open": true
     },
     "other": {
-     "n": 1,
+     "n": 3,
      "limit": 20,
      "open": true
     },
     "hub": {
-     "n": 1,
+     "n": 2,
      "limit": 5,
      "open": true
     }
    },
-   "at": "2026-11-23T03:30:17+00:00"
+   "at": "2026-11-23T03:33:23+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-23T03:30:02+00:00"
+   "at": "2026-11-23T03:33:17+00:00"
   }
  },
  "operators": [
@@ -641,10 +648,10 @@
   "main": 0,
   "lanes": 4,
   "total": 4,
-  "at": "10:30 PM",
+  "at": "10:33 PM",
   "why": "",
-  "at_iso": "2026-11-23T03:30:00+00:00",
+  "at_iso": "2026-11-23T03:33:00+00:00",
   "started": "2:57 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 0, started 2:57 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 10:30 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 0, started 2:57 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 10:33 PM ET</p></section>"
  }
 }

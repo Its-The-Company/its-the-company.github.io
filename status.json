@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-23T08:06:08.870167+00:00",
+ "at": "2026-11-23T08:09:14.275887+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -435,7 +435,7 @@
   "week_pct": 59.57,
   "usage_pct": 84.0,
   "work_pct": 95.0,
-  "read_at": "2026-11-23T08:06:00+00:00",
+  "read_at": "2026-11-23T08:09:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -509,7 +509,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-23T03:06:00-05:00",
+  "at": "2026-11-23T03:09:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -584,15 +584,6 @@
     "at": "2026-11-23T01:03:48-05:00",
     "o": "c",
     "task": "T-5620"
-   },
-   {
-    "w": "Idris",
-    "t": "Make the escape corpus Link case fail instead of skip",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-23T01:46:17-05:00",
-    "o": "c",
-    "task": "T-5479"
    },
    {
     "w": "Ines",
@@ -771,92 +762,97 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-23T08:05:54Z",
+  "at": "2026-11-23T08:09:14Z",
   "s": {
    "T-4184": [
     "mergeq",
     "",
-    1795420674723
+    1795420694275
    ],
    "T-4692": [
     "mergetest",
     "",
-    1795419114723
+    1795419134275
    ],
    "T-0337": [
     "mergetest",
     "",
-    1795419114723
+    1795419134275
    ],
    "T-2097": [
     "mergetest",
     "",
-    1795419114723
+    1795419134275
    ],
    "T-4010": [
     "mergetest",
     "",
-    1795419114723
+    1795419134275
    ],
    "T-4477": [
     "mergetest",
     "",
-    1795419114723
+    1795419134275
    ],
    "T-4286": [
     "mergetest",
     "",
-    1795419114723
+    1795419134275
    ],
    "T-4435": [
     "mergetest",
     "",
-    1795419114723
+    1795419134275
    ],
    "T-0678": [
     "mergetest",
     "",
-    1795419114723
+    1795419134275
    ],
    "T-3495": [
     "mergetest",
     "",
-    1795419114723
+    1795419134275
    ],
    "T-3765": [
     "mergetest",
     "",
-    1795419114723
+    1795419134275
    ],
    "T-4662": [
     "mergetest",
     "",
-    1795419114723
+    1795419134275
    ],
    "T-4781": [
     "mergetest",
     "",
-    1795419114723
+    1795419134275
    ],
    "T-4772": [
     "mergetest",
     "",
-    1795419114723
+    1795419134275
    ],
    "T-4762": [
     "mergetest",
     "",
-    1795419114723
+    1795419134275
    ],
    "T-4185": [
     "mergeq",
     "",
-    1795418694723
+    1795418714275
    ],
    "T-4192": [
     "testing",
     "",
     null
+   ],
+   "T-4681": [
+    "testq",
+    "",
+    1795421294275
    ],
    "T-5644": [
     "merged",
@@ -889,6 +885,7 @@
    "T-4762": "Let the run lock wrap a Python run",
    "T-4185": "Launcher widgets open the apps a person chose",
    "T-4192": "Python in the app: smaller bundle, installable packages",
+   "T-4681": "Premades default to Paper in light and Studio in dark",
    "T-5644": "Account b used up by midweek without skewing the comparison",
    "T-4182": "A failing widget says so and can recover"
   },
@@ -910,12 +907,13 @@
    "T-4762": "Idris",
    "T-4185": "Idris",
    "T-4192": "Idris",
+   "T-4681": "Idris",
    "T-5644": "Ines",
    "T-4182": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-23T08:05:54Z",
+  "at": "2026-11-23T08:09:14Z",
   "mq": {
    "n": {
     "checking": 14,
@@ -927,13 +925,13 @@
     "parked": 5
    },
    "m": {
-    "checking": 34,
-    "inline": 24,
+    "checking": 37,
+    "inline": 27,
     "conflicted": null,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 234
+    "parked": 238
    },
    "cur": [
     [
@@ -942,7 +940,7 @@
      ],
      "iPhone app tests, sent and waiting its turn",
      "MacBook",
-     34
+     37
     ],
     [
      [
@@ -950,7 +948,7 @@
      ],
      "iPhone app tests, sent and waiting its turn",
      "MacBook",
-     34
+     37
     ],
     [
      [
@@ -958,7 +956,7 @@
      ],
      "iPhone app tests, sent and waiting its turn",
      "MacBook",
-     34
+     37
     ],
     [
      [
@@ -966,7 +964,7 @@
      ],
      "iPhone app tests, sent and waiting its turn",
      "MacBook",
-     34
+     37
     ]
    ],
    "ld": [
@@ -976,12 +974,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-23T08:06:01Z",
-    "ld": 24.74,
+    "at": "2026-11-23T08:09:18Z",
+    "ld": 28.25,
     "c": 8,
     "sb": 1,
     "dk": [
-     57.1,
+     57.0,
      228.3
     ],
     "ss": [
@@ -1020,11 +1018,11 @@
      "open": true
     }
    },
-   "at": "2026-11-23T08:06:08+00:00"
+   "at": "2026-11-23T08:09:14+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-23T08:05:54+00:00"
+   "at": "2026-11-23T08:09:14+00:00"
   }
  },
  "operators": [
@@ -1084,10 +1082,10 @@
   "main": 0,
   "lanes": 3,
   "total": 3,
-  "at": "3:06 AM",
+  "at": "3:09 AM",
   "why": "",
-  "at_iso": "2026-11-23T08:06:00+00:00",
+  "at_iso": "2026-11-23T08:09:00+00:00",
   "started": "2:29 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 2:29 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 3:06 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 2:29 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 3:09 AM ET</p></section>"
  }
 }

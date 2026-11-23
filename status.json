@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-23T04:26:00.662347+00:00",
+ "at": "2026-11-23T04:28:54.347445+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -67,7 +67,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 704,
+  "runnable_count": 705,
   "blocked_count": 2
  },
  "meter": {
@@ -116,7 +116,7 @@
   "week_pct": 2.42,
   "usage_pct": 68.7,
   "work_pct": 88.2,
-  "read_at": "2026-11-23T04:26:00+00:00",
+  "read_at": "2026-11-23T04:29:00+00:00",
   "running": [
    {
     "lane": "a3",
@@ -150,7 +150,7 @@
   }
  ],
  "disk": {
-  "free_gb": 65,
+  "free_gb": 63,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -159,14 +159,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-22T23:21:00-05:00",
+   "at": "2026-11-22T23:28:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 3,
-  "at": "2026-11-22T23:26:00-05:00",
+  "at": "2026-11-22T23:29:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -177,7 +177,7 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 39 (cut a step: load 10.2 a core is over 10)",
+  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 39 (held: too few lands in 3 hours to judge a raise)",
   "n": 39,
   "at": "2026-11-22T23:16:13.826263-05:00"
  },
@@ -324,7 +324,7 @@
    }
   ],
   "count": {
-   "next": 704,
+   "next": 705,
    "wait": 2,
    "blocked": 0,
    "you": 2
@@ -378,35 +378,42 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-23T04:25:52Z",
+  "at": "2026-11-23T04:28:54Z",
   "s": {
    "T-4477": [
     "mergeq",
     "1st to merge",
-    1795407592491
+    1795407594347
    ],
    "T-4192": [
-    "mergeq",
-    "2nd to merge",
-    1795406212491
+    "mergetest",
+    "Xcode checks on the MacBook, 2nd to merge",
+    1795408134347
+   ],
+   "T-4190": [
+    "testing",
+    "Mac Mini \u00b7 test",
+    null
    ]
   },
   "nm": {
    "T-4477": "People build a widget from blocks without code",
-   "T-4192": "Python in the app: smaller bundle, installable packages"
+   "T-4192": "Python in the app: smaller bundle, installable packages",
+   "T-4190": "Settings and Pro: buy, restore, themes"
   },
   "wk": {
    "T-4477": "Idris",
    "T-4192": "Pernille",
+   "T-4190": "Idris",
    "T-5628": "Odalys"
   }
  },
  "ln": {
-  "at": "2026-11-23T04:25:52Z",
+  "at": "2026-11-23T04:28:54Z",
   "mq": {
    "n": {
-    "checking": 0,
-    "inline": 2,
+    "checking": 1,
+    "inline": 1,
     "conflicted": 0,
     "failed": 0,
     "held": 0,
@@ -414,15 +421,24 @@
     "parked": 4
    },
    "m": {
-    "checking": null,
-    "inline": 17,
+    "checking": 0,
+    "inline": 9,
     "conflicted": null,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 662
+    "parked": 665
    },
-   "cur": [],
+   "cur": [
+    [
+     [
+      "T-4192"
+     ],
+     "iPhone app tests, sent and waiting its turn",
+     "MacBook",
+     0
+    ]
+   ],
    "ld": [
     12,
     "2026-11-22T22:31:07Z"
@@ -430,10 +446,10 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-23T04:25:53Z",
-    "ld": 7.29,
+    "at": "2026-11-23T04:29:08Z",
+    "ld": 11.22,
     "c": 8,
-    "sb": 0,
+    "sb": 1,
     "dk": [
      63.1,
      228.3
@@ -442,7 +458,9 @@
      171.4,
      953.7
     ],
-    "sn": []
+    "sn": [
+     "iPhone 17e"
+    ]
    },
    "macbook": {
     "at": "2026-11-23T04:15:48Z",
@@ -483,11 +501,11 @@
      "open": true
     }
    },
-   "at": "2026-11-23T04:26:00+00:00"
+   "at": "2026-11-23T04:28:54+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-23T04:25:46+00:00"
+   "at": "2026-11-23T04:28:54+00:00"
   }
  },
  "operators": [
@@ -506,42 +524,20 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Inbox \u2013 Evan's 11:24 PM Message on GitHub",
-   "at": "2026-11-22T23:25:09-05:00"
+   "t": "Work session",
+   "at": "2026-11-22T21:33:57-05:00"
   }
  ],
  "reply": {
-  "sent": "2026-11-23T04:15:50Z",
-  "seconds": 78.0
+  "sent": "2026-11-23T04:25:42Z",
+  "seconds": 35.0
  },
- "inbox": [
-  {
-   "id": "c7091558334",
-   "state": "received",
-   "position": 1,
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "We should narrow down a list of..."
-  },
-  {
-   "id": "c7091571989",
-   "state": "received",
-   "position": 2,
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "On my personal account (b), I\u2019m..."
-  }
- ],
+ "inbox": [],
  "trimmed": [
   "lane_next",
   "queue_text",
   "task_done",
   "fin_short",
-  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -552,10 +548,10 @@
   "main": 0,
   "lanes": 1,
   "total": 1,
-  "at": "11:26 PM",
+  "at": "11:29 PM",
   "why": "",
-  "at_iso": "2026-11-23T04:26:00+00:00",
+  "at_iso": "2026-11-23T04:29:00+00:00",
   "started": "11:16 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0, started 11:16 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 11:26 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0, started 11:16 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 11:29 PM ET</p></section>"
  }
 }

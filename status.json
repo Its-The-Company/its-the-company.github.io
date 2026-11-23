@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-23T18:37:54.574742+00:00",
+ "at": "2026-11-23T18:40:54.868886+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -425,7 +425,7 @@
   "week_pct": 75.19,
   "usage_pct": 85.3,
   "work_pct": 96.6,
-  "read_at": "2026-11-23T18:38:00+00:00",
+  "read_at": "2026-11-23T18:41:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -488,7 +488,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-23T13:38:00-05:00",
+  "at": "2026-11-23T13:41:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -499,7 +499,7 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 8 (at its floor: load 23.8 a core is over 10)",
+  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 8 (at its floor: load 21.8 a core is over 10)",
   "n": 8,
   "at": "2026-11-23T09:25:38.709305-05:00"
  },
@@ -686,6 +686,11 @@
   "done": [
    {
     "w": "Idris",
+    "t": "Idris reviewed the fix that stops lanes waiting on the MacBook while holding the merge road and...",
+    "at": "2026-11-23T13:37:00-05:00"
+   },
+   {
+    "w": "Idris",
     "t": "A widget whose script reads a text file kept beside it in its project now has tests proving it...",
     "at": "2026-11-23T13:07:00-05:00"
    },
@@ -693,11 +698,6 @@
     "w": "Idris",
     "t": "Every TestFlight upload now writes a plain list of what the build adds and fixes, taken from the...",
     "at": "2026-11-23T11:02:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "Finished work whose copy also changed the task board now lands: the board edits are taken out,...",
-    "at": "2026-11-23T11:01:00-05:00"
    }
   ],
   "count": {
@@ -707,8 +707,12 @@
    "you": 2
   },
   "fin": {
-   "n": 12,
+   "n": 13,
    "rows": [
+    [
+     "T-5710",
+     "Review the fix that stops..."
+    ],
     [
      "T-0749",
      "Copy a project's sibling..."
@@ -728,10 +732,6 @@
     [
      "T-4220",
      "Run the launcher build's..."
-    ],
-    [
-     "T-3847",
-     "Test the launcher link..."
     ]
    ]
   }
@@ -775,27 +775,27 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-23T18:37:54Z",
+  "at": "2026-11-23T18:40:40Z",
   "s": {
    "T-4183": [
     "mergeq",
     "1st to merge",
-    1795456074574
+    1795456060902
    ],
    "T-5688": [
     "mergeq",
     "2nd to merge",
-    1795447434574
+    1795447420902
    ],
    "T-5616": [
     "mergeq",
     "3rd to merge",
-    1795455774574
+    1795455760902
    ],
    "T-4192": [
     "mergeq",
     "4th to merge",
-    1795458474574
+    1795458460902
    ],
    "T-4185": [
     "mergetest",
@@ -810,12 +810,13 @@
    "T-4715": [
     "testq",
     "1st for a Simulator",
-    1795458534574
+    1795458580902
    ],
    "T-4184": [
-    "testq",
-    "2nd for a Simulator",
-    1795459014574
+    "merged",
+    "on main 12:39 PM ET",
+    1795455547000,
+    "Idris"
    ],
    "T-5700": [
     "merged",
@@ -845,6 +846,7 @@
    "T-4715": "Maren",
    "T-4184": "Idris",
    "T-5700": "Odalys",
+   "T-5710": "Idris",
    "T-0749": "Idris",
    "T-3350": "Idris",
    "T-5693": "Idris",
@@ -854,12 +856,11 @@
    "T-4762": "Idris",
    "T-4761": "Idris",
    "T-5687": "Idris",
-   "T-4643": "Idris",
-   "T-5391": "Idris"
+   "T-4643": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-23T18:37:54Z",
+  "at": "2026-11-23T18:40:40Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -872,12 +873,12 @@
    },
    "m": {
     "checking": null,
-    "inline": 52,
+    "inline": 55,
     "conflicted": null,
     "failed": null,
-    "held": 549,
+    "held": 552,
     "retry": null,
-    "parked": 549
+    "parked": 552
    },
    "cur": [],
    "ld": [
@@ -887,12 +888,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-23T18:37:56Z",
-    "ld": 21.57,
+    "at": "2026-11-23T18:40:20Z",
+    "ld": 21.67,
     "c": 8,
     "sb": 1,
     "dk": [
-     32.1,
+     32.2,
      228.3
     ],
     "ss": [
@@ -942,11 +943,11 @@
      "open": true
     }
    },
-   "at": "2026-11-23T18:37:54+00:00"
+   "at": "2026-11-23T18:40:54+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-23T18:37:45+00:00"
+   "at": "2026-11-23T18:40:54+00:00"
   }
  },
  "operators": [
@@ -999,10 +1000,10 @@
   "main": 0,
   "lanes": 2,
   "total": 2,
-  "at": "1:38 PM",
+  "at": "1:41 PM",
   "why": "",
-  "at_iso": "2026-11-23T18:38:00+00:00",
+  "at_iso": "2026-11-23T18:41:00+00:00",
   "started": "9:27 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0, started 9:27 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 1:38 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0, started 9:27 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 1:41 PM ET</p></section>"
  }
 }

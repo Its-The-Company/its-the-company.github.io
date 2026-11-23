@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-23T21:37:36.908196+00:00",
+ "at": "2026-11-23T21:40:40.387839+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -376,7 +376,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 713,
+  "runnable_count": 716,
   "blocked_count": 2
  },
  "meter": {
@@ -425,7 +425,7 @@
   "week_pct": 80.98,
   "usage_pct": 85.3,
   "work_pct": 96.6,
-  "read_at": "2026-11-23T21:37:00+00:00",
+  "read_at": "2026-11-23T21:40:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -462,7 +462,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-23T16:37:00-05:00",
+  "at": "2026-11-23T16:40:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -473,7 +473,7 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 8 (held: too few lands in 3 hours to judge a raise)",
+  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 8 (at its floor: load 10.2 a core is over 10)",
   "n": 8,
   "at": "2026-11-23T09:25:38.709305-05:00"
  },
@@ -529,15 +529,6 @@
  ],
  "tasks": {
   "run": [
-   {
-    "w": "Odalys",
-    "t": "Work that steps aside keeps its place to land",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-23T15:18:02-05:00",
-    "o": "c",
-    "task": "T-5715"
-   },
    {
     "w": "Idris",
     "t": "Review the merge script's record take-out",
@@ -666,7 +657,7 @@
    }
   ],
   "count": {
-   "next": 713,
+   "next": 716,
    "wait": 2,
    "blocked": 0,
    "you": 2
@@ -740,32 +731,37 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-23T21:37:36Z",
+  "at": "2026-11-23T21:40:26Z",
   "s": {
    "T-5688": [
     "mergeq",
     "1st to merge",
-    1795447416908
+    1795447466905
    ],
    "T-4715": [
     "mergeq",
     "2nd to merge",
-    1795460376908
+    1795460366905
    ],
    "T-5708": [
     "mergeq",
     "3rd to merge",
-    1795460376908
+    1795460366905
    ],
    "T-5490": [
     "mergeq",
     "4th to merge",
-    1795468956908
+    1795468946905
    ],
    "T-4185": [
     "mergeq",
     "5th to merge",
-    1795469676908
+    1795469666905
+   ],
+   "T-4874": [
+    "testing",
+    "Mac Mini \u00b7 test",
+    null
    ]
   },
   "nm": {
@@ -773,7 +769,8 @@
    "T-4715": "Put the new Pro screen words into the app",
    "T-5708": "Clear the add-to-home steps before TestFlight",
    "T-5490": "Make the https big-body test count work, not seconds",
-   "T-4185": "Launcher widgets open the apps a person chose"
+   "T-4185": "Launcher widgets open the apps a person chose",
+   "T-4874": "Keep typo matching cheap on every keystroke"
   },
   "wk": {
    "T-5688": "Odalys",
@@ -781,6 +778,7 @@
    "T-5708": "Maren",
    "T-5490": "Pernille",
    "T-4185": "Idris",
+   "T-4874": "Idris",
    "T-5698": "Odalys",
    "T-5697": "Odalys",
    "T-5722": "Odalys",
@@ -795,7 +793,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-23T21:37:36Z",
+  "at": "2026-11-23T21:40:26Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -808,12 +806,12 @@
    },
    "m": {
     "checking": null,
-    "inline": 158,
+    "inline": 161,
     "conflicted": null,
     "failed": null,
-    "held": 729,
+    "held": 732,
     "retry": null,
-    "parked": 729
+    "parked": 732
    },
    "cur": [],
    "ld": [
@@ -823,19 +821,21 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-23T21:37:06Z",
-    "ld": 3.39,
+    "at": "2026-11-23T21:40:30Z",
+    "ld": 14.91,
     "c": 8,
-    "sb": 0,
+    "sb": 1,
     "dk": [
-     36.7,
+     36.1,
      228.3
     ],
     "ss": [
      168.6,
      953.7
     ],
-    "sn": []
+    "sn": [
+     "iPhone 17e"
+    ]
    },
    "macbook": {
     "at": "2026-11-23T21:32:03Z",
@@ -876,11 +876,11 @@
      "open": true
     }
    },
-   "at": "2026-11-23T21:37:36+00:00"
+   "at": "2026-11-23T21:40:40+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-23T21:37:36+00:00"
+   "at": "2026-11-23T21:40:40+00:00"
   }
  },
  "operators": [
@@ -915,10 +915,10 @@
   "main": 0,
   "lanes": 0,
   "total": 0,
-  "at": "4:37 PM",
+  "at": "4:40 PM",
   "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
-  "at_iso": "2026-11-23T21:37:00+00:00",
+  "at_iso": "2026-11-23T21:40:00+00:00",
   "started": "9:27 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0, started 9:27 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 4:37 PM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0, started 9:27 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 4:40 PM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
  }
 }

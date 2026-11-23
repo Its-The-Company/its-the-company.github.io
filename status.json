@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-23T09:28:38.973026+00:00",
+ "at": "2026-11-23T09:31:37.178644+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -435,8 +435,20 @@
   "week_pct": 102.36,
   "usage_pct": 84.0,
   "work_pct": 95.0,
-  "read_at": "2026-11-23T09:28:00+00:00",
+  "read_at": "2026-11-23T09:31:00+00:00",
   "running": [
+   {
+    "lane": "a",
+    "task": "T-4615",
+    "w": "Idris",
+    "k": "fix",
+    "t": "Widget taps on iPad reuse an open window",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-23T04:29:48-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
    {
     "lane": "a2",
     "task": "T-5479",
@@ -498,7 +510,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-23T04:28:00-05:00",
+  "at": "2026-11-23T04:31:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -509,8 +521,8 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 12 (cut a step: load 30.7 a core is over 10)",
-  "n": 12,
+  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 11 (cut a step: load 19.6 a core is over 10)",
+  "n": 11,
   "at": "2026-11-23T02:28:27.861501-05:00"
  },
  "lanes": [
@@ -751,7 +763,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-23T09:28:30Z",
+  "at": "2026-11-23T09:31:25Z",
   "s": {
    "T-5479": [
     "testing",
@@ -769,25 +781,25 @@
   }
  },
  "ln": {
-  "at": "2026-11-23T09:28:30Z",
+  "at": "2026-11-23T09:31:25Z",
   "mq": {
    "n": {
     "checking": 0,
     "inline": 0,
     "conflicted": 0,
     "failed": 0,
-    "held": 0,
+    "held": 3,
     "retry": 0,
-    "parked": 7
+    "parked": 11
    },
    "m": {
     "checking": null,
     "inline": null,
     "conflicted": null,
     "failed": null,
-    "held": null,
+    "held": 3,
     "retry": null,
-    "parked": 266
+    "parked": 46
    },
    "cur": [],
    "ld": [
@@ -797,8 +809,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-23T09:28:31Z",
-    "ld": 25.37,
+    "at": "2026-11-23T09:31:27Z",
+    "ld": 19.55,
     "c": 8,
     "sb": 1,
     "dk": [
@@ -828,16 +840,16 @@
  },
  "hc": {
   "wait": {
-   "n": 13,
+   "n": 14,
    "limit": 20,
-   "in_line": 7,
-   "parked": 6,
+   "in_line": 0,
+   "parked": 14,
    "open": true,
    "mq": false,
-   "counted": "2026-11-23T09:17:29+00:00",
+   "counted": "2026-11-23T09:28:31+00:00",
    "by": {
     "app": {
-     "n": 10,
+     "n": 11,
      "limit": 20,
      "open": true
     },
@@ -852,11 +864,11 @@
      "open": true
     }
    },
-   "at": "2026-11-23T09:28:38+00:00"
+   "at": "2026-11-23T09:31:37+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-23T09:28:30+00:00"
+   "at": "2026-11-23T09:31:37+00:00"
   }
  },
  "operators": [
@@ -868,6 +880,15 @@
    "e": "high",
    "t": "Work session",
    "at": "2026-11-23T02:29:08-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Evan's Account",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session \u2013 1 task",
+   "at": "2026-11-23T04:29:48-05:00"
   },
   {
    "w": "Operator",
@@ -906,12 +927,12 @@
  ],
  "agents_now": {
   "main": 0,
-  "lanes": 2,
-  "total": 2,
-  "at": "4:28 AM",
+  "lanes": 3,
+  "total": 3,
+  "at": "4:31 AM",
   "why": "",
-  "at_iso": "2026-11-23T09:28:00+00:00",
+  "at_iso": "2026-11-23T09:31:00+00:00",
   "started": "2:29 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0, started 2:29 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 4:28 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 2:29 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 4:31 AM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-23T09:18:17.291876+00:00",
+ "at": "2026-11-23T09:22:17.145429+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -392,19 +392,19 @@
  "meter": {
   "five_hour": {
    "pct": 10.0,
-   "resets_at": "2026-11-23T12:10:00.292533+00:00",
+   "resets_at": "2026-11-23T07:10:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-23T04:16:54.678850-05:00",
-   "source": "usage",
+   "read_at": "2026-11-23T04:21:28.867418-05:00",
+   "source": "live",
    "left": 90.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 7.0,
-   "resets_at": "2026-11-29T07:00:00.292555+00:00",
+   "resets_at": "2026-11-29T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-23T04:16:54.678850-05:00",
-   "source": "usage",
+   "read_at": "2026-11-23T04:21:28.867418-05:00",
+   "source": "live",
    "left": 93.0,
    "left_words": "of your weekly allowance left"
   },
@@ -415,7 +415,7 @@
    "read_at": "2026-11-23T04:16:54.678850-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-23T04:16:54.678850-05:00"
+  "read_at": "2026-11-23T04:21:28.867418-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -435,7 +435,7 @@
   "week_pct": 102.36,
   "usage_pct": 84.0,
   "work_pct": 95.0,
-  "read_at": "2026-11-23T09:19:00+00:00",
+  "read_at": "2026-11-23T09:22:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -498,7 +498,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-23T04:19:00-05:00",
+  "at": "2026-11-23T04:22:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -509,8 +509,8 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 14 (cut a step: load 23.3 a core is over 10)",
-  "n": 14,
+  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 13 (cut a step: load 27.8 a core is over 10)",
+  "n": 13,
   "at": "2026-11-23T02:28:27.861501-05:00"
  },
  "lanes": [
@@ -566,15 +566,6 @@
  "tasks": {
   "run": [
    {
-    "w": "Idris",
-    "t": "Python in the app: smaller bundle, installable packages",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-23T02:39:11-05:00",
-    "o": "c",
-    "task": "T-4192"
-   },
-   {
     "w": "Pernille",
     "t": "Drop the swallow test's five-second bound",
     "m": "opus",
@@ -618,6 +609,15 @@
     "at": "2026-11-23T04:09:49-05:00",
     "o": "c",
     "task": "T-5391"
+   },
+   {
+    "w": "Idris",
+    "t": "A person's own script becomes a Home Screen widget",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-23T04:20:17-05:00",
+    "o": "c",
+    "task": "T-4184"
    }
   ],
   "src": "plan",
@@ -695,6 +695,11 @@
   ],
   "done": [
    {
+    "w": "Odalys",
+    "t": "The supervisor's stall check no longer ends the coordinator while it waits up to 90 minutes for...",
+    "at": "2026-11-23T04:19:00-05:00"
+   },
+   {
     "w": "Idris",
     "t": "The second reading of the faster test setup for the app's bundled Python is done and passed. Its...",
     "at": "2026-11-23T02:30:00-05:00"
@@ -703,11 +708,6 @@
     "w": "Odalys",
     "t": "With the one-coordinator switch on and the coordinator session running, only the coordinator...",
     "at": "2026-11-23T02:20:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "Dispatch now checks every account each tick; one stuck for 45 minutes with an old usage reading,...",
-    "at": "2026-11-23T02:19:00-05:00"
    }
   ],
   "count": {
@@ -717,8 +717,12 @@
    "you": 2
   },
   "fin": {
-   "n": 1,
+   "n": 2,
    "rows": [
+    [
+     "T-5673",
+     "Stall watch stops killing..."
+    ],
     [
      "T-5381",
      "Check finished work before..."
@@ -764,8 +768,83 @@
    "ok"
   ]
  ],
+ "stg": {
+  "at": "2026-11-23T09:22:17Z",
+  "s": {
+   "T-0337": [
+    "mergeq",
+    "1st to merge",
+    1795422377145
+   ],
+   "T-2097": [
+    "mergeq",
+    "1st to merge",
+    1795422377145
+   ],
+   "T-4010": [
+    "mergeq",
+    "1st to merge",
+    1795422377145
+   ],
+   "T-4477": [
+    "mergeq",
+    "1st to merge",
+    1795422377145
+   ],
+   "T-4286": [
+    "mergeq",
+    "1st to merge",
+    1795422377145
+   ],
+   "T-4635": [
+    "mergeq",
+    "1st to merge",
+    1795422377145
+   ],
+   "T-0657": [
+    "mergeq",
+    "1st to merge",
+    1795422377145
+   ],
+   "T-5479": [
+    "testing",
+    "Mac Mini \u00b7 test",
+    null
+   ],
+   "T-4184": [
+    "merged",
+    "on main 4:04 AM ET",
+    1795424645000,
+    "Pernille"
+   ]
+  },
+  "nm": {
+   "T-0337": "Confirm the revenue memo's facts from Apple pages",
+   "T-2097": "Read free memory in the widget extension on a device",
+   "T-4010": "Rebuild This Session as a full flowchart",
+   "T-4477": "People build a widget from blocks without code",
+   "T-4286": "Check an imported font draws in a widget",
+   "T-4635": "Clear the Settings restore line once Pro is bought",
+   "T-0657": "Build the Settings screen",
+   "T-5479": "Make the escape corpus Link case fail instead of skip",
+   "T-4184": "A person's own script becomes a Home Screen widget"
+  },
+  "wk": {
+   "T-0337": "Wrenna",
+   "T-2097": "Idris",
+   "T-4010": "Odalys",
+   "T-4477": "Idris",
+   "T-4286": "Idris",
+   "T-4635": "Idris",
+   "T-0657": "Idris",
+   "T-5479": "Idris",
+   "T-4184": "Idris",
+   "T-5673": "Odalys",
+   "T-5381": "Idris"
+  }
+ },
  "ln": {
-  "at": "2026-11-23T09:18:17Z",
+  "at": "2026-11-23T09:22:17Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -778,12 +857,12 @@
    },
    "m": {
     "checking": null,
-    "inline": 52,
+    "inline": 56,
     "conflicted": null,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 167
+    "parked": 171
    },
    "cur": [],
    "ld": [
@@ -793,19 +872,21 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-23T09:18:20Z",
-    "ld": 25.22,
+    "at": "2026-11-23T09:22:27Z",
+    "ld": 28.85,
     "c": 8,
-    "sb": 0,
+    "sb": 1,
     "dk": [
-     49.2,
+     55.8,
      228.3
     ],
     "ss": [
      173.1,
      953.7
     ],
-    "sn": []
+    "sn": [
+     "iPhone 17e"
+    ]
    },
    "macbook": {
     "at": "2026-11-23T09:09:39Z",
@@ -846,11 +927,11 @@
      "open": true
     }
    },
-   "at": "2026-11-23T09:18:17+00:00"
+   "at": "2026-11-23T09:22:17+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-23T09:18:17+00:00"
+   "at": "2026-11-23T09:22:17+00:00"
   }
  },
  "operators": [
@@ -867,18 +948,14 @@
    "w": "Operator",
    "a": "Evan's Account",
    "sr": 1,
-   "m": "opus",
-   "e": "high",
    "t": "Work session \u2013 1 task",
-   "at": "2026-11-23T04:05:48-05:00"
+   "at": "2026-11-23T04:05:49-05:00"
   },
   {
    "w": "Operator",
    "a": "Evan's Account",
    "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session \u2013 11 tasks",
+   "t": "Work session \u2013 9 tasks",
    "at": "2026-11-23T03:29:34-05:00"
   }
  ],
@@ -902,10 +979,10 @@
   "main": 0,
   "lanes": 2,
   "total": 2,
-  "at": "4:19 AM",
+  "at": "4:22 AM",
   "why": "",
-  "at_iso": "2026-11-23T09:19:00+00:00",
+  "at_iso": "2026-11-23T09:22:00+00:00",
   "started": "2:29 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0, started 2:29 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 4:19 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0, started 2:29 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 4:22 AM ET</p></section>"
  }
 }

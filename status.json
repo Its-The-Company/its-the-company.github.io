@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-23T11:11:28.677501+00:00",
+ "at": "2026-11-23T11:14:27.580695+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -444,7 +444,7 @@
   "week_pct": 143.31,
   "usage_pct": 84.0,
   "work_pct": 95.0,
-  "read_at": "2026-11-23T11:11:00+00:00",
+  "read_at": "2026-11-23T11:14:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -481,7 +481,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-23T06:11:00-05:00",
+  "at": "2026-11-23T06:14:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -707,93 +707,92 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-23T11:11:08Z",
+  "at": "2026-11-23T11:14:20Z",
   "s": {
    "T-5484": [
     "mergetest",
     "",
-    1795432148299
+    1795432160181
    ],
    "T-0337": [
     "mergetest",
     "",
-    1795432148299
+    1795432160181
    ],
    "T-2097": [
     "mergetest",
     "",
-    1795432148299
+    1795432160181
    ],
    "T-4010": [
     "mergetest",
     "",
-    1795432148299
+    1795432160181
    ],
    "T-4477": [
     "mergetest",
     "",
-    1795432148299
+    1795432160181
    ],
    "T-4286": [
     "mergetest",
     "",
-    1795432148299
+    1795432160181
    ],
    "T-4435": [
     "mergetest",
     "",
-    1795432148299
+    1795432160181
    ],
    "T-0678": [
     "mergetest",
     "",
-    1795432148299
+    1795432160181
    ],
    "T-3765": [
     "mergetest",
     "",
-    1795432148299
+    1795432160181
    ],
    "T-4662": [
     "mergetest",
     "",
-    1795432148299
+    1795432160181
    ],
    "T-4781": [
     "mergetest",
     "",
-    1795432148299
+    1795432160181
    ],
    "T-4762": [
     "mergetest",
     "",
-    1795432148299
+    1795432160181
    ],
    "T-4635": [
     "mergetest",
     "",
-    1795432148299
+    1795432160181
    ],
    "T-4182": [
     "mergetest",
     "",
-    1795432148299
+    1795432160181
    ],
    "T-5620": [
     "mergetest",
     "",
-    1795432148299
+    1795432160181
    ],
    "T-0657": [
     "mergetest",
     "",
-    1795432148299
+    1795432160181
    ],
    "T-4184": [
-    "merged",
+    "testing",
     "",
-    1795424645000,
-    "Pernille"
+    null
    ]
   },
   "nm": {
@@ -838,7 +837,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-23T11:11:08Z",
+  "at": "2026-11-23T11:14:20Z",
   "mq": {
    "n": {
     "checking": 16,
@@ -850,13 +849,13 @@
     "parked": 6
    },
    "m": {
-    "checking": 2,
+    "checking": 5,
     "inline": null,
     "conflicted": null,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 173
+    "parked": 176
    },
    "cur": [
     [
@@ -865,7 +864,7 @@
      ],
      "iPhone app tests",
      "MacBook",
-     2
+     5
     ],
     [
      [
@@ -873,7 +872,7 @@
      ],
      "iPhone app tests",
      "MacBook",
-     2
+     5
     ],
     [
      [
@@ -881,7 +880,7 @@
      ],
      "iPhone app tests",
      "MacBook",
-     2
+     5
     ],
     [
      [
@@ -889,7 +888,7 @@
      ],
      "iPhone app tests",
      "MacBook",
-     2
+     5
     ]
    ],
    "ld": [
@@ -899,19 +898,21 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-23T11:10:43Z",
-    "ld": 3.3,
+    "at": "2026-11-23T11:13:35Z",
+    "ld": 7.34,
     "c": 8,
-    "sb": 0,
+    "sb": 1,
     "dk": [
-     54.9,
+     54.7,
      228.3
     ],
     "ss": [
      173.1,
      953.7
     ],
-    "sn": []
+    "sn": [
+     "iPhone 17e"
+    ]
    },
    "macbook": {
     "at": "2026-11-23T11:09:31Z",
@@ -952,11 +953,11 @@
      "open": true
     }
    },
-   "at": "2026-11-23T11:11:28+00:00"
+   "at": "2026-11-23T11:14:27+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-23T11:11:28+00:00"
+   "at": "2026-11-23T11:14:27+00:00"
   }
  },
  "operators": [
@@ -990,10 +991,10 @@
   "main": 0,
   "lanes": 0,
   "total": 0,
-  "at": "6:11 AM",
+  "at": "6:14 AM",
   "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
-  "at_iso": "2026-11-23T11:11:00+00:00",
+  "at_iso": "2026-11-23T11:14:00+00:00",
   "started": "2:29 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0, started 2:29 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 6:11 AM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0, started 2:29 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 6:14 AM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
  }
 }

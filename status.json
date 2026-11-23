@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-23T14:42:01.617412+00:00",
+ "at": "2026-11-23T14:45:03.489597+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -376,7 +376,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 711,
+  "runnable_count": 715,
   "blocked_count": 2
  },
  "meter": {
@@ -425,7 +425,7 @@
   "week_pct": 57.84,
   "usage_pct": 85.3,
   "work_pct": 96.6,
-  "read_at": "2026-11-23T14:42:00+00:00",
+  "read_at": "2026-11-23T14:45:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -500,7 +500,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-23T09:42:00-05:00",
+  "at": "2026-11-23T09:45:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -511,7 +511,7 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 8 (at its floor: load 29.4 a core is over 10)",
+  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 8 (at its floor: load 20.2 a core is over 10)",
   "n": 8,
   "at": "2026-11-23T09:25:38.709305-05:00"
  },
@@ -695,7 +695,7 @@
    }
   ],
   "count": {
-   "next": 711,
+   "next": 715,
    "wait": 2,
    "blocked": 0,
    "you": 2
@@ -753,22 +753,22 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-23T14:41:42Z",
+  "at": "2026-11-23T14:44:50Z",
   "s": {
    "T-5256": [
     "mergeq",
     "1st to merge",
-    1795444842765
+    1795444850255
    ],
    "T-4662": [
     "mergeq",
     "2nd to merge",
-    1795440522765
+    1795440530255
    ],
    "T-4692": [
     "mergeq",
     "3rd to merge",
-    1795441122765
+    1795441130255
    ],
    "T-4182": [
     "merged",
@@ -801,7 +801,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-23T14:41:42Z",
+  "at": "2026-11-23T14:44:50Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -814,12 +814,12 @@
    },
    "m": {
     "checking": null,
-    "inline": 63,
+    "inline": 66,
     "conflicted": null,
     "failed": null,
-    "held": 313,
+    "held": 316,
     "retry": null,
-    "parked": 313
+    "parked": 316
    },
    "cur": [],
    "ld": [
@@ -829,21 +829,19 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-23T14:41:20Z",
-    "ld": 23.91,
+    "at": "2026-11-23T14:44:27Z",
+    "ld": 16.59,
     "c": 8,
-    "sb": 1,
+    "sb": 0,
     "dk": [
-     36.7,
+     36.8,
      228.3
     ],
     "ss": [
      168.6,
      953.7
     ],
-    "sn": [
-     "iPhone 17e"
-    ]
+    "sn": []
    },
    "macbook": {
     "at": "2026-11-23T14:29:48Z",
@@ -884,11 +882,11 @@
      "open": true
     }
    },
-   "at": "2026-11-23T14:42:01+00:00"
+   "at": "2026-11-23T14:45:03+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-23T14:42:01+00:00"
+   "at": "2026-11-23T14:44:50+00:00"
   }
  },
  "operators": [
@@ -949,10 +947,10 @@
   "main": 0,
   "lanes": 3,
   "total": 3,
-  "at": "9:42 AM",
+  "at": "9:45 AM",
   "why": "",
-  "at_iso": "2026-11-23T14:42:00+00:00",
+  "at_iso": "2026-11-23T14:45:00+00:00",
   "started": "9:27 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 9:27 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 9:42 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 9:27 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 9:45 AM ET</p></section>"
  }
 }

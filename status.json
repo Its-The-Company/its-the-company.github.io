@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-23T04:56:48.245251+00:00",
+ "at": "2026-11-23T04:59:52.938151+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -20,11 +20,59 @@
     "steps": [
      {
       "s": "claimed",
-      "at": 1795409790
+      "at": 1795409914
      },
      {
       "s": "worker",
-      "at": 1795409790
+      "at": 1795409914
+     }
+    ]
+   },
+   {
+    "t": "T-4286",
+    "name": "Check an imported font draws in a widget",
+    "w": "Idris",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "claimed",
+      "at": 1795409905
+     },
+     {
+      "s": "worker",
+      "at": 1795409905
+     }
+    ]
+   },
+   {
+    "t": "T-4477",
+    "name": "People build a widget from blocks without code",
+    "w": "Idris",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "claimed",
+      "at": 1795409844
+     },
+     {
+      "s": "worker",
+      "at": 1795409844
+     }
+    ]
+   },
+   {
+    "t": "T-2097",
+    "name": "Read free memory in the widget extension on a device",
+    "w": "Idris",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "claimed",
+      "at": 1795409834
+     },
+     {
+      "s": "worker",
+      "at": 1795409834
      }
     ]
    },
@@ -41,22 +89,6 @@
      {
       "s": "worker",
       "at": 1795409758
-     }
-    ]
-   },
-   {
-    "t": "T-2097",
-    "name": "Read free memory in the widget extension on a device",
-    "w": "Idris",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "claimed",
-      "at": 1795409735
-     },
-     {
-      "s": "worker",
-      "at": 1795409735
      }
     ]
    }
@@ -165,7 +197,7 @@
   "week_pct": 2.42,
   "usage_pct": 68.7,
   "work_pct": 88.2,
-  "read_at": "2026-11-23T04:56:00+00:00",
+  "read_at": "2026-11-23T04:59:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -191,18 +223,6 @@
     "at": "2026-11-22T23:54:14-05:00",
     "n": "Evan",
     "d": 1,
-    "src": "plan-a"
-   },
-   {
-    "lane": "a3",
-    "task": "T-4188",
-    "w": "Idris",
-    "k": "build",
-    "t": "Location, steps and notifications work in scripts and widgets",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-22T21:33:58-05:00",
-    "n": "Evan",
     "src": "plan-a"
    }
   ]
@@ -241,7 +261,7 @@
  "lock_in": {
   "on": true,
   "pool": 3,
-  "at": "2026-11-22T23:56:00-05:00",
+  "at": "2026-11-22T23:59:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -453,8 +473,13 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-23T04:56:29Z",
+  "at": "2026-11-23T04:59:43Z",
   "s": {
+   "T-4188": [
+    "mergeq",
+    "1st to merge",
+    1795409923409
+   ],
    "T-4190": [
     "testing",
     "Mac Mini \u00b7 test",
@@ -462,19 +487,21 @@
    ]
   },
   "nm": {
+   "T-4188": "Location, steps and notifications work in scripts and...",
    "T-4190": "Settings and Pro: buy, restore, themes"
   },
   "wk": {
+   "T-4188": "Idris",
    "T-4190": "Idris",
    "T-5628": "Odalys"
   }
  },
  "ln": {
-  "at": "2026-11-23T04:56:29Z",
+  "at": "2026-11-23T04:59:43Z",
   "mq": {
    "n": {
     "checking": 0,
-    "inline": 0,
+    "inline": 1,
     "conflicted": 0,
     "failed": 0,
     "held": 0,
@@ -483,12 +510,12 @@
    },
    "m": {
     "checking": null,
-    "inline": null,
+    "inline": 1,
     "conflicted": null,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 693
+    "parked": 696
    },
    "cur": [],
    "ld": [
@@ -498,12 +525,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-23T04:56:31Z",
-    "ld": 2.46,
+    "at": "2026-11-23T04:59:45Z",
+    "ld": 3.11,
     "c": 8,
     "sb": 1,
     "dk": [
-     63.1,
+     65.3,
      228.3
     ],
     "ss": [
@@ -553,11 +580,11 @@
      "open": true
     }
    },
-   "at": "2026-11-23T04:56:48+00:00"
+   "at": "2026-11-23T04:59:52+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-23T04:56:48+00:00"
+   "at": "2026-11-23T04:59:43+00:00"
   }
  },
  "operators": [
@@ -576,7 +603,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 3 tasks",
+   "t": "Work session \u2013 5 tasks",
    "at": "2026-11-22T23:49:41-05:00"
   },
   {
@@ -585,17 +612,8 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 2 tasks",
+   "t": "Work session \u2013 4 tasks",
    "at": "2026-11-22T23:54:14-05:00"
-  },
-  {
-   "w": "Operator",
-   "a": "Evan's Account",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session",
-   "at": "2026-11-22T23:36:56-05:00"
   }
  ],
  "reply": {
@@ -616,12 +634,12 @@
  ],
  "agents_now": {
   "main": 0,
-  "lanes": 3,
-  "total": 3,
-  "at": "11:56 PM",
+  "lanes": 2,
+  "total": 2,
+  "at": "11:59 PM",
   "why": "",
-  "at_iso": "2026-11-23T04:56:00+00:00",
+  "at_iso": "2026-11-23T04:59:00+00:00",
   "started": "11:16 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 11:16 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 11:56 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0, started 11:16 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 11:59 PM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-23T19:29:31.782238+00:00",
+ "at": "2026-11-23T19:32:41.346777+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -425,7 +425,7 @@
   "week_pct": 75.19,
   "usage_pct": 85.3,
   "work_pct": 96.6,
-  "read_at": "2026-11-23T19:29:00+00:00",
+  "read_at": "2026-11-23T19:32:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -436,6 +436,18 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-23T13:14:48-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a2",
+    "task": "T-5722",
+    "w": "Odalys",
+    "k": "review",
+    "t": "Review the fix for guard tests that fail under load",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-23T14:29:48-05:00",
     "n": "Evan",
     "src": "plan-a"
    }
@@ -475,7 +487,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-23T14:29:00-05:00",
+  "at": "2026-11-23T14:32:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -486,7 +498,7 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 8 (at its floor: load 27.8 a core is over 10)",
+  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 8 (at its floor: load 20.2 a core is over 10)",
   "n": 8,
   "at": "2026-11-23T09:25:38.709305-05:00"
  },
@@ -762,27 +774,27 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-23T19:29:12Z",
+  "at": "2026-11-23T19:32:41Z",
   "s": {
    "T-5256": [
     "mergeq",
     "1st to merge",
-    1795461372629
+    1795461401346
    ],
    "T-5688": [
     "mergeq",
     "2nd to merge",
-    1795447452629
+    1795447421346
    ],
    "T-5708": [
     "mergeq",
     "3rd to merge",
-    1795460352629
+    1795460381346
    ],
    "T-4715": [
     "mergetest",
     "Xcode checks on the MacBook, 4th to merge",
-    1795461132629
+    1795461161346
    ],
    "T-4185": [
     "mergetest",
@@ -832,7 +844,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-23T19:29:12Z",
+  "at": "2026-11-23T19:32:41Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -844,13 +856,13 @@
     "parked": 14
    },
    "m": {
-    "checking": 17,
-    "inline": 30,
+    "checking": 20,
+    "inline": 33,
     "conflicted": null,
     "failed": null,
-    "held": 601,
+    "held": 604,
     "retry": null,
-    "parked": 601
+    "parked": 604
    },
    "cur": [
     [
@@ -859,7 +871,7 @@
      ],
      "iPhone app tests, sent and waiting its turn",
      "MacBook",
-     17
+     20
     ]
    ],
    "ld": [
@@ -869,8 +881,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-23T19:29:02Z",
-    "ld": 26.87,
+    "at": "2026-11-23T19:32:16Z",
+    "ld": 20.07,
     "c": 8,
     "sb": 1,
     "dk": [
@@ -913,11 +925,11 @@
      "open": true
     }
    },
-   "at": "2026-11-23T19:29:31+00:00"
+   "at": "2026-11-23T19:32:41+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-23T19:29:25+00:00"
+   "at": "2026-11-23T19:32:33+00:00"
   }
  },
  "operators": [
@@ -938,6 +950,15 @@
    "e": "high",
    "t": "Work session \u2013 1 task",
    "at": "2026-11-23T13:14:47-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Evan's Account",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session \u2013 1 task",
+   "at": "2026-11-23T14:29:48-05:00"
   }
  ],
  "reply": {
@@ -959,12 +980,12 @@
  ],
  "agents_now": {
   "main": 0,
-  "lanes": 1,
-  "total": 1,
-  "at": "2:29 PM",
+  "lanes": 2,
+  "total": 2,
+  "at": "2:32 PM",
   "why": "",
-  "at_iso": "2026-11-23T19:29:00+00:00",
+  "at_iso": "2026-11-23T19:32:00+00:00",
   "started": "9:27 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0, started 9:27 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 2:29 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0, started 9:27 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 2:32 PM ET</p></section>"
  }
 }

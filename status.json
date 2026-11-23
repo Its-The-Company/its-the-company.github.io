@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-23T15:15:42.939515+00:00",
+ "at": "2026-11-23T15:18:48.175207+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -425,7 +425,7 @@
   "week_pct": 63.62,
   "usage_pct": 85.3,
   "work_pct": 96.6,
-  "read_at": "2026-11-23T15:15:00+00:00",
+  "read_at": "2026-11-23T15:18:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -448,6 +448,18 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-23T10:13:47-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
+   },
+   {
+    "lane": "b3",
+    "task": "T-5688",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Land finished work whose copy also changed the board",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-23T10:18:49-05:00",
     "n": "Jeremy",
     "src": "plan-b"
    }
@@ -487,7 +499,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-23T10:15:00-05:00",
+  "at": "2026-11-23T10:18:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -498,7 +510,7 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 8 (at its floor: load 21.0 a core is over 10)",
+  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 8 (at its floor: load 10.6 a core is over 10)",
   "n": 8,
   "at": "2026-11-23T09:25:38.709305-05:00"
  },
@@ -770,32 +782,22 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-23T15:15:35Z",
+  "at": "2026-11-23T15:18:29Z",
   "s": {
    "T-4184": [
     "mergeq",
     "1st to merge",
-    1795445555727
-   ],
-   "T-4190": [
-    "mergeq",
-    "2nd to merge",
-    1795446635727
+    1795445549346
    ],
    "T-5491": [
     "mergeq",
-    "3rd to merge",
-    1795446155727
+    "2nd to merge",
+    1795446209346
    ],
    "T-4192": [
     "mergeq",
-    "4th to merge",
-    1795445195727
-   ],
-   "T-4183": [
-    "mergetest",
-    "iPhone tests on the MacBook",
-    null
+    "3rd to merge",
+    1795445189346
    ],
    "T-4762": [
     "merged",
@@ -806,18 +808,14 @@
   },
   "nm": {
    "T-4184": "A person's own script becomes a Home Screen widget",
-   "T-4190": "Settings and Pro: buy, restore, themes",
    "T-5491": "Drop the swallow test's five-second bound",
    "T-4192": "Python in the app: smaller bundle, installable packages",
-   "T-4183": "The Gallery shows, previews and opens every premade",
    "T-4762": "Let the run lock wrap a Python run"
   },
   "wk": {
    "T-4184": "Idris",
-   "T-4190": "Idris",
    "T-5491": "Pernille",
    "T-4192": "Idris",
-   "T-4183": "Idris",
    "T-4762": "Idris",
    "T-4692": "Idris",
    "T-4761": "Idris",
@@ -827,11 +825,11 @@
   }
  },
  "ln": {
-  "at": "2026-11-23T15:15:35Z",
+  "at": "2026-11-23T15:18:29Z",
   "mq": {
    "n": {
     "checking": 0,
-    "inline": 4,
+    "inline": 3,
     "conflicted": 0,
     "failed": 0,
     "held": 3,
@@ -840,12 +838,12 @@
    },
    "m": {
     "checking": null,
-    "inline": 18,
+    "inline": 26,
     "conflicted": null,
     "failed": null,
-    "held": 347,
+    "held": 350,
     "retry": null,
-    "parked": 347
+    "parked": 350
    },
    "cur": [],
    "ld": [
@@ -855,12 +853,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-23T15:15:09Z",
-    "ld": 14.82,
+    "at": "2026-11-23T15:18:32Z",
+    "ld": 10.15,
     "c": 8,
     "sb": 0,
     "dk": [
-     42.2,
+     42.5,
      228.3
     ],
     "ss": [
@@ -870,12 +868,12 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-23T15:07:48Z",
-    "ld": 0.26,
+    "at": "2026-11-23T15:15:37Z",
+    "ld": 0.8,
     "c": 12,
     "sb": 0,
     "dk": [
-     350.5,
+     350.8,
      926.4
     ],
     "sn": []
@@ -908,11 +906,11 @@
      "open": true
     }
    },
-   "at": "2026-11-23T15:15:42+00:00"
+   "at": "2026-11-23T15:18:48+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-23T15:15:29+00:00"
+   "at": "2026-11-23T15:18:41+00:00"
   }
  },
  "operators": [
@@ -962,12 +960,12 @@
  ],
  "agents_now": {
   "main": 0,
-  "lanes": 2,
-  "total": 2,
-  "at": "10:15 AM",
+  "lanes": 3,
+  "total": 3,
+  "at": "10:18 AM",
   "why": "",
-  "at_iso": "2026-11-23T15:15:00+00:00",
+  "at_iso": "2026-11-23T15:18:00+00:00",
   "started": "9:27 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0, started 9:27 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 10:15 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 9:27 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 10:18 AM ET</p></section>"
  }
 }

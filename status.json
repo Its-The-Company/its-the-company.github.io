@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-23T23:29:30.273828+00:00",
+ "at": "2026-11-23T23:32:30.769225+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -434,7 +434,7 @@
   "week_pct": 92.55,
   "usage_pct": 85.3,
   "work_pct": 96.6,
-  "read_at": "2026-11-23T23:29:00+00:00",
+  "read_at": "2026-11-23T23:32:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -508,7 +508,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-23T18:29:00-05:00",
+  "at": "2026-11-23T18:32:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -750,26 +750,34 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-23T23:29:30Z",
+  "at": "2026-11-23T23:32:30Z",
   "s": {
-   "T-4715": [
-    "mergeq",
-    "1st to merge",
-    1795460370273
-   ],
    "T-5749": [
     "mergeq",
-    "2nd to merge",
-    1795476270273
+    "1st to merge",
+    1795476270769
+   ],
+   "T-4715": [
+    "mergetest",
+    "Xcode checks on the MacBook, 2nd to merge",
+    1795476750769
+   ],
+   "T-5760": [
+    "merged",
+    "on main 6:32 PM ET",
+    1795476734000,
+    "Odalys"
    ]
   },
   "nm": {
+   "T-5749": "Review how unfinished reviews are handed on",
    "T-4715": "Put the new Pro screen words into the app",
-   "T-5749": "Review how unfinished reviews are handed on"
+   "T-5760": "The disk keeper deletes review scratch without asking"
   },
   "wk": {
-   "T-4715": "Maren",
    "T-5749": "Idris",
+   "T-4715": "Maren",
+   "T-5760": "Odalys",
    "T-5739": "Odalys",
    "T-5745": "Idris",
    "T-5738": "Idris",
@@ -785,11 +793,11 @@
   }
  },
  "ln": {
-  "at": "2026-11-23T23:29:30Z",
+  "at": "2026-11-23T23:32:30Z",
   "mq": {
    "n": {
-    "checking": 0,
-    "inline": 2,
+    "checking": 1,
+    "inline": 1,
     "conflicted": 0,
     "failed": 0,
     "held": 3,
@@ -797,15 +805,24 @@
     "parked": 13
    },
    "m": {
-    "checking": null,
-    "inline": 137,
+    "checking": 0,
+    "inline": 8,
     "conflicted": null,
     "failed": null,
-    "held": 841,
+    "held": 844,
     "retry": null,
-    "parked": 841
+    "parked": 844
    },
-   "cur": [],
+   "cur": [
+    [
+     [
+      "T-4715"
+     ],
+     "iPhone app tests",
+     "MacBook",
+     0
+    ]
+   ],
    "ld": [
     0,
     null
@@ -813,12 +830,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-23T23:28:44Z",
-    "ld": 3.29,
+    "at": "2026-11-23T23:32:06Z",
+    "ld": 4.01,
     "c": 8,
     "sb": 0,
     "dk": [
-     32.9,
+     32.8,
      228.3
     ],
     "ss": [
@@ -842,16 +859,16 @@
  },
  "hc": {
   "wait": {
-   "n": 17,
+   "n": 18,
    "limit": 20,
-   "in_line": 1,
+   "in_line": 2,
    "parked": 16,
    "open": true,
    "mq": false,
-   "counted": "2026-11-23T23:21:01+00:00",
+   "counted": "2026-11-23T23:31:08+00:00",
    "by": {
     "app": {
-     "n": 13,
+     "n": 14,
      "limit": 20,
      "open": true
     },
@@ -866,11 +883,11 @@
      "open": true
     }
    },
-   "at": "2026-11-23T23:29:30+00:00"
+   "at": "2026-11-23T23:32:30+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-23T23:29:22+00:00"
+   "at": "2026-11-23T23:32:17+00:00"
   }
  },
  "operators": [
@@ -932,10 +949,10 @@
   "main": 0,
   "lanes": 3,
   "total": 3,
-  "at": "6:29 PM",
+  "at": "6:32 PM",
   "why": "",
-  "at_iso": "2026-11-23T23:29:00+00:00",
+  "at_iso": "2026-11-23T23:32:00+00:00",
   "started": "9:27 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 9:27 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 6:29 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 9:27 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 6:32 PM ET</p></section>"
  }
 }

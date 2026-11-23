@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-23T18:40:54.868886+00:00",
+ "at": "2026-11-23T18:44:02.062455+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -425,7 +425,7 @@
   "week_pct": 75.19,
   "usage_pct": 85.3,
   "work_pct": 96.6,
-  "read_at": "2026-11-23T18:41:00+00:00",
+  "read_at": "2026-11-23T18:44:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -488,7 +488,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-23T13:41:00-05:00",
+  "at": "2026-11-23T13:44:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -565,24 +565,6 @@
     "task": "T-5700"
    },
    {
-    "w": "Pernille",
-    "t": "Prove a refresh tap redraws the widget",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-23T12:45:24-05:00",
-    "o": "c",
-    "task": "T-4772"
-   },
-   {
-    "w": "Idris",
-    "t": "A person's own script becomes a Home Screen widget",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-23T13:05:28-05:00",
-    "o": "c",
-    "task": "T-4184"
-   },
-   {
     "w": "Idris",
     "t": "Ship test widgets in internal TestFlight builds only",
     "m": "opus",
@@ -608,6 +590,24 @@
     "at": "2026-11-23T13:26:07-05:00",
     "o": "c",
     "task": "T-5542"
+   },
+   {
+    "w": "Pernille",
+    "t": "A person's own script becomes a Home Screen widget",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-23T13:42:24-05:00",
+    "o": "c",
+    "task": "T-4184"
+   },
+   {
+    "w": "Pernille",
+    "t": "Guard timing tests stop failing lands under load",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-23T13:42:24-05:00",
+    "o": "c",
+    "task": "T-5713"
    }
   ],
   "src": "plan",
@@ -775,42 +775,37 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-23T18:40:40Z",
+  "at": "2026-11-23T18:43:46Z",
   "s": {
    "T-4183": [
     "mergeq",
     "1st to merge",
-    1795456060902
+    1795456066090
    ],
    "T-5688": [
     "mergeq",
     "2nd to merge",
-    1795447420902
+    1795447426090
    ],
    "T-5616": [
     "mergeq",
     "3rd to merge",
-    1795455760902
+    1795455766090
    ],
    "T-4192": [
     "mergeq",
     "4th to merge",
-    1795458460902
+    1795458466090
    ],
    "T-4185": [
     "mergetest",
     "iPhone tests on the MacBook",
     null
    ],
-   "T-4772": [
+   "T-4715": [
     "testing",
     "Mac Mini \u00b7 test",
     null
-   ],
-   "T-4715": [
-    "testq",
-    "1st for a Simulator",
-    1795458580902
    ],
    "T-4184": [
     "merged",
@@ -831,7 +826,6 @@
    "T-5616": "Fix the city list test after the tzdata update",
    "T-4192": "Python in the app: smaller bundle, installable packages",
    "T-4185": "Launcher widgets open the apps a person chose",
-   "T-4772": "Prove a refresh tap redraws the widget",
    "T-4715": "Put the new Pro screen words into the app",
    "T-4184": "A person's own script becomes a Home Screen widget",
    "T-5700": "Lands stop queuing behind one MacBook check"
@@ -842,7 +836,6 @@
    "T-5616": "Pernille",
    "T-4192": "Idris",
    "T-4185": "Idris",
-   "T-4772": "Idris",
    "T-4715": "Maren",
    "T-4184": "Idris",
    "T-5700": "Odalys",
@@ -860,7 +853,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-23T18:40:40Z",
+  "at": "2026-11-23T18:43:46Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -873,12 +866,12 @@
    },
    "m": {
     "checking": null,
-    "inline": 55,
+    "inline": 58,
     "conflicted": null,
     "failed": null,
-    "held": 552,
+    "held": 555,
     "retry": null,
-    "parked": 552
+    "parked": 555
    },
    "cur": [],
    "ld": [
@@ -888,8 +881,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-23T18:40:20Z",
-    "ld": 21.67,
+    "at": "2026-11-23T18:43:10Z",
+    "ld": 29.01,
     "c": 8,
     "sb": 1,
     "dk": [
@@ -901,7 +894,7 @@
      953.7
     ],
     "sn": [
-     "iPhone 17e"
+     "iPhone 18 Pro"
     ]
    },
    "macbook": {
@@ -925,7 +918,7 @@
    "parked": 17,
    "open": true,
    "mq": false,
-   "counted": "2026-11-23T18:31:41+00:00",
+   "counted": "2026-11-23T18:42:06+00:00",
    "by": {
     "app": {
      "n": 14,
@@ -943,11 +936,11 @@
      "open": true
     }
    },
-   "at": "2026-11-23T18:40:54+00:00"
+   "at": "2026-11-23T18:44:02+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-23T18:40:54+00:00"
+   "at": "2026-11-23T18:43:46+00:00"
   }
  },
  "operators": [
@@ -1000,10 +993,10 @@
   "main": 0,
   "lanes": 2,
   "total": 2,
-  "at": "1:41 PM",
+  "at": "1:44 PM",
   "why": "",
-  "at_iso": "2026-11-23T18:41:00+00:00",
+  "at_iso": "2026-11-23T18:44:00+00:00",
   "started": "9:27 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0, started 9:27 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 1:41 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0, started 9:27 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 1:44 PM ET</p></section>"
  }
 }

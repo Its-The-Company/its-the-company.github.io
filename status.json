@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-23T09:43:55.128752+00:00",
+ "at": "2026-11-23T09:47:00.731316+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -435,33 +435,8 @@
   "week_pct": 102.36,
   "usage_pct": 84.0,
   "work_pct": 95.0,
-  "read_at": "2026-11-23T09:43:00+00:00",
-  "running": [
-   {
-    "lane": "a",
-    "task": "T-4615",
-    "w": "Idris",
-    "k": "fix",
-    "t": "Widget taps on iPad reuse an open window",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-23T04:29:48-05:00",
-    "n": "Evan",
-    "src": "plan-a"
-   },
-   {
-    "lane": "a3",
-    "task": "T-5479",
-    "w": "Idris",
-    "k": "test",
-    "t": "Make the escape corpus Link case fail instead of skip",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-23T04:40:36-05:00",
-    "n": "Evan",
-    "src": "plan-a"
-   }
-  ]
+  "read_at": "2026-11-23T09:47:00+00:00",
+  "running": []
  },
  "api_credits": [
   {
@@ -481,7 +456,7 @@
   }
  ],
  "disk": {
-  "free_gb": 54,
+  "free_gb": 53,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -490,14 +465,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-23T04:39:00-05:00",
+   "at": "2026-11-23T04:45:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-23T04:43:00-05:00",
+  "at": "2026-11-23T04:47:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -508,8 +483,8 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 9 (cut a step: load 52.0 a core is over 10)",
-  "n": 9,
+  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 8 (cut a step: load 34.7 a core is over 10)",
+  "n": 8,
   "at": "2026-11-23T02:28:27.861501-05:00"
  },
  "lanes": [
@@ -572,6 +547,51 @@
     "at": "2026-11-23T03:47:21-05:00",
     "o": "c",
     "task": "T-5491"
+   },
+   {
+    "w": "Odalys",
+    "t": "Trim step 3, one merge script beside the old road",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-23T04:45:53-05:00",
+    "o": "c",
+    "task": "T-5256"
+   },
+   {
+    "w": "Idris",
+    "t": "A person's own script becomes a Home Screen widget",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-23T04:46:43-05:00",
+    "o": "c",
+    "task": "T-4184"
+   },
+   {
+    "w": "Idris",
+    "t": "Python in the app: smaller bundle, installable packages",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-23T04:46:43-05:00",
+    "o": "c",
+    "task": "T-4192"
+   },
+   {
+    "w": "Idris",
+    "t": "Second tap on a half-hidden row keeps the text",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-23T04:46:43-05:00",
+    "o": "c",
+    "task": "T-5325"
+   },
+   {
+    "w": "Idris",
+    "t": "Make the escape corpus Link case fail instead of skip",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-23T04:46:43-05:00",
+    "o": "c",
+    "task": "T-5479"
    }
   ],
   "src": "plan",
@@ -723,46 +743,34 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-23T09:43:42Z",
+  "at": "2026-11-23T09:47:00Z",
   "s": {
-   "T-1119": [
-    "testq",
-    "1st for a Simulator",
-    1795427022756
+   "T-4184": [
+    "merged",
+    "on main 4:04 AM ET",
+    1795424645000,
+    "Pernille"
    ],
-   "T-3847": [
-    "testq",
-    "1st for a Simulator",
-    1795427022756
-   ],
-   "T-5365": [
-    "testq",
-    "1st for a Simulator",
-    1795427022756
-   ],
-   "T-5479": [
-    "testq",
-    "1st for a Simulator",
-    1795427022756
+   "T-5256": [
+    "merged",
+    "on main 7:02 PM ET",
+    1795392138000,
+    ""
    ]
   },
   "nm": {
-   "T-1119": "Investors answer two App Store Connect questions",
-   "T-3847": "Test the launcher link through the real URL entry point",
-   "T-5365": "Location refresh policy, file and route",
-   "T-5479": "Make the escape corpus Link case fail instead of skip"
+   "T-4184": "A person's own script becomes a Home Screen widget",
+   "T-5256": "Trim step 3, one merge script beside the old road"
   },
   "wk": {
-   "T-1119": "Ines",
-   "T-3847": "Idris",
-   "T-5365": "Idris",
-   "T-5479": "Idris",
+   "T-4184": "Idris",
+   "T-5256": "Odalys",
    "T-5673": "Odalys",
    "T-5381": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-23T09:43:42Z",
+  "at": "2026-11-23T09:47:00Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -771,16 +779,16 @@
     "failed": 0,
     "held": 4,
     "retry": 0,
-    "parked": 20
+    "parked": 22
    },
    "m": {
     "checking": null,
     "inline": null,
     "conflicted": null,
     "failed": null,
-    "held": 15,
+    "held": 18,
     "retry": null,
-    "parked": 5
+    "parked": 9
    },
    "cur": [],
    "ld": [
@@ -790,12 +798,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-23T09:42:55Z",
-    "ld": 46.24,
+    "at": "2026-11-23T09:46:34Z",
+    "ld": 36.61,
     "c": 8,
     "sb": 1,
     "dk": [
-     54.0,
+     53.1,
      228.3
     ],
     "ss": [
@@ -803,7 +811,7 @@
      953.7
     ],
     "sn": [
-     "T4615 iPad Air 11"
+     "iPhone 17"
     ]
    },
    "macbook": {
@@ -845,11 +853,11 @@
      "open": true
     }
    },
-   "at": "2026-11-23T09:43:55+00:00"
+   "at": "2026-11-23T09:47:00+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-23T09:43:42+00:00"
+   "at": "2026-11-23T09:46:52+00:00"
   }
  },
  "operators": [
@@ -861,24 +869,6 @@
    "e": "high",
    "t": "Work session",
    "at": "2026-11-23T02:29:08-05:00"
-  },
-  {
-   "w": "Operator",
-   "a": "Evan's Account",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session \u2013 1 task",
-   "at": "2026-11-23T04:29:48-05:00"
-  },
-  {
-   "w": "Operator",
-   "a": "Evan's Account",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session \u2013 1 task",
-   "at": "2026-11-23T04:40:35-05:00"
   }
  ],
  "reply": {
@@ -899,12 +889,12 @@
  ],
  "agents_now": {
   "main": 0,
-  "lanes": 2,
-  "total": 2,
-  "at": "4:43 AM",
-  "why": "",
-  "at_iso": "2026-11-23T09:43:00+00:00",
+  "lanes": 0,
+  "total": 0,
+  "at": "4:47 AM",
+  "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
+  "at_iso": "2026-11-23T09:47:00+00:00",
   "started": "2:29 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0, started 2:29 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 4:43 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0, started 2:29 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 4:47 AM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
  }
 }

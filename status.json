@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-23T04:59:52.938151+00:00",
+ "at": "2026-11-23T05:02:59.094083+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -12,6 +12,118 @@
    "last_handoff": 1795407234
   },
   "flow": [
+   {
+    "t": "T-4662",
+    "name": "Place the cursor easily on a long line",
+    "w": "Idris",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "claimed",
+      "at": 1795410173
+     },
+     {
+      "s": "worker",
+      "at": 1795410173
+     }
+    ]
+   },
+   {
+    "t": "T-3495",
+    "name": "Check the upload fix before build 4 goes out",
+    "w": "Pernille",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "claimed",
+      "at": 1795410172
+     },
+     {
+      "s": "worker",
+      "at": 1795410172
+     }
+    ]
+   },
+   {
+    "t": "T-0678",
+    "name": "Run the refresh button inside the widget extension",
+    "w": "Idris",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "claimed",
+      "at": 1795410137
+     },
+     {
+      "s": "worker",
+      "at": 1795410137
+     }
+    ]
+   },
+   {
+    "t": "T-3765",
+    "name": "Check a real widget tap on the TestFlight build",
+    "w": "Idris",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "claimed",
+      "at": 1795410137
+     },
+     {
+      "s": "worker",
+      "at": 1795410137
+     }
+    ]
+   },
+   {
+    "t": "T-4435",
+    "name": "Draw the wrapped refresh glyph on both runtimes",
+    "w": "Idris",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "claimed",
+      "at": 1795410099
+     },
+     {
+      "s": "worker",
+      "at": 1795410099
+     }
+    ]
+   },
+   {
+    "t": "T-4286",
+    "name": "Check an imported font draws in a widget",
+    "w": "Idris",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "claimed",
+      "at": 1795410047
+     },
+     {
+      "s": "worker",
+      "at": 1795410047
+     }
+    ]
+   },
+   {
+    "t": "T-4477",
+    "name": "People build a widget from blocks without code",
+    "w": "Idris",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "claimed",
+      "at": 1795410001
+     },
+     {
+      "s": "worker",
+      "at": 1795410001
+     }
+    ]
+   },
    {
     "t": "T-4010",
     "name": "Rebuild This Session as a full flowchart",
@@ -25,38 +137,6 @@
      {
       "s": "worker",
       "at": 1795409914
-     }
-    ]
-   },
-   {
-    "t": "T-4286",
-    "name": "Check an imported font draws in a widget",
-    "w": "Idris",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "claimed",
-      "at": 1795409905
-     },
-     {
-      "s": "worker",
-      "at": 1795409905
-     }
-    ]
-   },
-   {
-    "t": "T-4477",
-    "name": "People build a widget from blocks without code",
-    "w": "Idris",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "claimed",
-      "at": 1795409844
-     },
-     {
-      "s": "worker",
-      "at": 1795409844
      }
     ]
    },
@@ -197,7 +277,7 @@
   "week_pct": 2.42,
   "usage_pct": 68.7,
   "work_pct": 88.2,
-  "read_at": "2026-11-23T04:59:00+00:00",
+  "read_at": "2026-11-23T05:03:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -245,7 +325,7 @@
   }
  ],
  "disk": {
-  "free_gb": 63,
+  "free_gb": 65,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -254,26 +334,26 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-22T23:55:00-05:00",
+   "at": "2026-11-23T00:01:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
-  "on": true,
+  "on": false,
   "pool": 3,
-  "at": "2026-11-22T23:59:00-05:00",
-  "mode": "midnight",
+  "at": "2026-11-23T00:03:00-05:00",
+  "mode": null,
   "modes": {
-   "main": "midnight",
-   "a": "midnight",
-   "b": "midnight"
+   "main": "double-spread",
+   "a": "double-spread",
+   "b": "double-spread"
   }
  },
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 37 (held: too few lands in 3 hours to judge a raise)",
-  "n": 37,
+  "why": "Double Spread: 96% of the week left, paced to last until Wed 14:00, the week's halfway point; the machine allows 37 (held: too few lands in 3 hours to judge a raise)",
+  "n": 3,
   "at": "2026-11-22T23:16:13.826263-05:00"
  },
  "lanes": [
@@ -473,13 +553,8 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-23T04:59:43Z",
+  "at": "2026-11-23T05:02:59Z",
   "s": {
-   "T-4188": [
-    "mergeq",
-    "1st to merge",
-    1795409923409
-   ],
    "T-4190": [
     "testing",
     "Mac Mini \u00b7 test",
@@ -487,21 +562,19 @@
    ]
   },
   "nm": {
-   "T-4188": "Location, steps and notifications work in scripts and...",
    "T-4190": "Settings and Pro: buy, restore, themes"
   },
   "wk": {
-   "T-4188": "Idris",
    "T-4190": "Idris",
    "T-5628": "Odalys"
   }
  },
  "ln": {
-  "at": "2026-11-23T04:59:43Z",
+  "at": "2026-11-23T05:02:59Z",
   "mq": {
    "n": {
     "checking": 0,
-    "inline": 1,
+    "inline": 0,
     "conflicted": 0,
     "failed": 0,
     "held": 0,
@@ -510,23 +583,23 @@
    },
    "m": {
     "checking": null,
-    "inline": 1,
+    "inline": null,
     "conflicted": null,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 696
+    "parked": 699
    },
    "cur": [],
    "ld": [
-    12,
-    "2026-11-22T22:31:07Z"
+    0,
+    null
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-23T04:59:45Z",
-    "ld": 3.11,
+    "at": "2026-11-23T05:02:11Z",
+    "ld": 2.56,
     "c": 8,
     "sb": 1,
     "dk": [
@@ -580,11 +653,11 @@
      "open": true
     }
    },
-   "at": "2026-11-23T04:59:52+00:00"
+   "at": "2026-11-23T05:02:59+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-23T04:59:43+00:00"
+   "at": "2026-11-23T05:02:45+00:00"
   }
  },
  "operators": [
@@ -603,7 +676,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 5 tasks",
+   "t": "Work session \u2013 10 tasks",
    "at": "2026-11-22T23:49:41-05:00"
   },
   {
@@ -612,7 +685,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 4 tasks",
+   "t": "Work session \u2013 9 tasks",
    "at": "2026-11-22T23:54:14-05:00"
   }
  ],
@@ -636,10 +709,10 @@
   "main": 0,
   "lanes": 2,
   "total": 2,
-  "at": "11:59 PM",
+  "at": "12:03 AM",
   "why": "",
-  "at_iso": "2026-11-23T04:59:00+00:00",
+  "at_iso": "2026-11-23T05:03:00+00:00",
   "started": "11:16 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0, started 11:16 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 11:59 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0, started 11:16 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 12:03 AM ET</p></section>"
  }
 }

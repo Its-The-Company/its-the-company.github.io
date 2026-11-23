@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-23T18:19:12.200793+00:00",
+ "at": "2026-11-23T18:22:17.789436+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -425,7 +425,7 @@
   "week_pct": 69.41,
   "usage_pct": 85.3,
   "work_pct": 96.6,
-  "read_at": "2026-11-23T18:19:00+00:00",
+  "read_at": "2026-11-23T18:22:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -488,7 +488,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-23T13:19:00-05:00",
+  "at": "2026-11-23T13:22:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -499,7 +499,7 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 8 (at its floor: load 23.8 a core is over 10)",
+  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 8 (at its floor: load 21.5 a core is over 10)",
   "n": 8,
   "at": "2026-11-23T09:25:38.709305-05:00"
  },
@@ -565,15 +565,6 @@
     "task": "T-5700"
    },
    {
-    "w": "Idris",
-    "t": "Review the fix that stops lands waiting on the MacBook",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-23T12:43:03-05:00",
-    "o": "c",
-    "task": "T-5710"
-   },
-   {
     "w": "Pernille",
     "t": "Prove a refresh tap redraws the widget",
     "m": "opus",
@@ -608,6 +599,15 @@
     "at": "2026-11-23T13:10:30-05:00",
     "o": "c",
     "task": "T-5657"
+   },
+   {
+    "w": "Idris",
+    "t": "Test web fetches the way the widget really makes them",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-23T13:21:03-05:00",
+    "o": "c",
+    "task": "T-5007"
    }
   ],
   "src": "plan",
@@ -775,27 +775,27 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-23T18:18:58Z",
+  "at": "2026-11-23T18:22:17Z",
   "s": {
    "T-4183": [
     "mergetest",
     "Xcode checks on the MacBook, 1st to merge",
-    1795457158007
+    1795457177789
    ],
    "T-5688": [
     "mergeq",
     "2nd to merge",
-    1795447438007
+    1795447457789
    ],
    "T-5616": [
     "mergeq",
     "3rd to merge",
-    1795455778007
+    1795455797789
    ],
    "T-4192": [
     "mergetest",
     "Xcode checks on the MacBook, 4th to merge",
-    1795457158007
+    1795457177789
    ],
    "T-4715": [
     "testing",
@@ -810,7 +810,7 @@
    "T-4772": [
     "testq",
     "1st for a Simulator",
-    1795457758007
+    1795457717789
    ],
    "T-4184": [
     "merged",
@@ -860,7 +860,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-23T18:18:58Z",
+  "at": "2026-11-23T18:22:17Z",
   "mq": {
    "n": {
     "checking": 2,
@@ -872,13 +872,13 @@
     "parked": 14
    },
    "m": {
-    "checking": 13,
-    "inline": 105,
+    "checking": 16,
+    "inline": 108,
     "conflicted": null,
     "failed": null,
-    "held": 530,
+    "held": 534,
     "retry": null,
-    "parked": 530
+    "parked": 534
    },
    "cur": [
     [
@@ -887,7 +887,7 @@
      ],
      "iPhone app tests",
      "MacBook",
-     13
+     16
     ],
     [
      [
@@ -895,7 +895,7 @@
      ],
      "iPhone app tests",
      "MacBook",
-     13
+     16
     ]
    ],
    "ld": [
@@ -905,12 +905,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-23T18:18:31Z",
-    "ld": 21.83,
+    "at": "2026-11-23T18:21:51Z",
+    "ld": 21.26,
     "c": 8,
     "sb": 1,
     "dk": [
-     35.5,
+     34.8,
      228.3
     ],
     "ss": [
@@ -938,11 +938,11 @@
   "wait": {
    "n": 21,
    "limit": 20,
-   "in_line": 5,
-   "parked": 16,
+   "in_line": 4,
+   "parked": 17,
    "open": true,
    "mq": false,
-   "counted": "2026-11-23T18:10:56+00:00",
+   "counted": "2026-11-23T18:21:01+00:00",
    "by": {
     "app": {
      "n": 14,
@@ -960,11 +960,11 @@
      "open": true
     }
    },
-   "at": "2026-11-23T18:19:12+00:00"
+   "at": "2026-11-23T18:22:17+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-23T18:18:58+00:00"
+   "at": "2026-11-23T18:22:11+00:00"
   }
  },
  "operators": [
@@ -974,8 +974,8 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session",
-   "at": "2026-11-23T13:09:46-05:00"
+   "t": "Inbox \u2013 Evan's 1:21 PM Message on GitHub",
+   "at": "2026-11-23T13:21:55-05:00"
   },
   {
    "w": "Operator",
@@ -1000,12 +1000,24 @@
   "sent": "2026-11-23T18:07:55Z",
   "seconds": 71.0
  },
- "inbox": [],
+ "inbox": [
+  {
+   "id": "c7110045864",
+   "state": "received",
+   "position": 1,
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "A. Prioritize this and fix the..."
+  }
+ ],
  "trimmed": [
   "lane_next",
   "queue_text",
   "task_done",
   "fin_short",
+  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -1017,10 +1029,10 @@
   "main": 0,
   "lanes": 2,
   "total": 2,
-  "at": "1:19 PM",
+  "at": "1:22 PM",
   "why": "",
-  "at_iso": "2026-11-23T18:19:00+00:00",
+  "at_iso": "2026-11-23T18:22:00+00:00",
   "started": "9:27 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0, started 9:27 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 1:19 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0, started 9:27 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 1:22 PM ET</p></section>"
  }
 }

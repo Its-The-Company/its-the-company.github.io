@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-23T15:12:37.524774+00:00",
+ "at": "2026-11-23T15:15:42.939515+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -381,20 +381,20 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 13.0,
-   "resets_at": "2026-11-23T17:10:00.397336+00:00",
+   "pct": 14.0,
+   "resets_at": "2026-11-23T12:10:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-23T10:00:19.281608-05:00",
-   "source": "usage",
-   "left": 87.0,
+   "read_at": "2026-11-23T10:14:44.446839-05:00",
+   "source": "live",
+   "left": 86.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 11.0,
-   "resets_at": "2026-11-29T07:00:00.397362+00:00",
+   "resets_at": "2026-11-29T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-23T10:00:19.281608-05:00",
-   "source": "usage",
+   "read_at": "2026-11-23T10:14:44.446839-05:00",
+   "source": "live",
    "left": 89.0,
    "left_words": "of your weekly allowance left"
   },
@@ -405,7 +405,7 @@
    "read_at": "2026-11-23T10:00:19.281608-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-23T10:00:19.281608-05:00"
+  "read_at": "2026-11-23T10:14:44.446839-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -425,7 +425,7 @@
   "week_pct": 63.62,
   "usage_pct": 85.3,
   "work_pct": 96.6,
-  "read_at": "2026-11-23T15:12:00+00:00",
+  "read_at": "2026-11-23T15:15:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -436,6 +436,18 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-23T10:04:45-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
+   },
+   {
+    "lane": "b2",
+    "task": "T-4715",
+    "w": "Maren",
+    "k": "design",
+    "t": "Put the new Pro screen words into the app",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-23T10:13:47-05:00",
     "n": "Jeremy",
     "src": "plan-b"
    }
@@ -468,14 +480,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-23T10:07:00-05:00",
+   "at": "2026-11-23T10:14:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-23T10:12:00-05:00",
+  "at": "2026-11-23T10:15:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -486,7 +498,7 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 8 (at its floor: load 22.6 a core is over 10)",
+  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 8 (at its floor: load 21.0 a core is over 10)",
   "n": 8,
   "at": "2026-11-23T09:25:38.709305-05:00"
  },
@@ -544,30 +556,12 @@
   "run": [
    {
     "w": "Idris",
-    "t": "Escape corpus sends wrong-shaped calls to known capabilities",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-23T09:10:35-05:00",
-    "o": "c",
-    "task": "T-5480"
-   },
-   {
-    "w": "Idris",
     "t": "Make the widget's Debug ask record say what it saw",
     "m": "opus",
     "e": "high",
     "at": "2026-11-23T09:30:36-05:00",
     "o": "c",
     "task": "T-5524"
-   },
-   {
-    "w": "Pernille",
-    "t": "Fix the city list test after the tzdata update",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-23T09:46:28-05:00",
-    "o": "c",
-    "task": "T-5616"
    },
    {
     "w": "Idris",
@@ -595,6 +589,24 @@
     "at": "2026-11-23T10:08:47-05:00",
     "o": "c",
     "task": "T-4193"
+   },
+   {
+    "w": "Pernille",
+    "t": "Escape corpus sends wrong-shaped calls to known capabilities",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-23T10:13:29-05:00",
+    "o": "c",
+    "task": "T-5480"
+   },
+   {
+    "w": "Idris",
+    "t": "Fix the city list test after the tzdata update",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-23T10:14:27-05:00",
+    "o": "c",
+    "task": "T-5616"
    }
   ],
   "src": "plan",
@@ -758,36 +770,31 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-23T15:12:37Z",
+  "at": "2026-11-23T15:15:35Z",
   "s": {
    "T-4184": [
     "mergeq",
     "1st to merge",
-    1795445557524
+    1795445555727
    ],
    "T-4190": [
     "mergeq",
     "2nd to merge",
-    1795446637524
+    1795446635727
    ],
    "T-5491": [
     "mergeq",
     "3rd to merge",
-    1795446157524
+    1795446155727
    ],
    "T-4192": [
     "mergeq",
     "4th to merge",
-    1795445197524
+    1795445195727
    ],
    "T-4183": [
     "mergetest",
     "iPhone tests on the MacBook",
-    null
-   ],
-   "T-5480": [
-    "testing",
-    "Mac Mini \u00b7 test",
     null
    ],
    "T-4762": [
@@ -803,7 +810,6 @@
    "T-5491": "Drop the swallow test's five-second bound",
    "T-4192": "Python in the app: smaller bundle, installable packages",
    "T-4183": "The Gallery shows, previews and opens every premade",
-   "T-5480": "Escape corpus sends wrong-shaped calls to known capabilities",
    "T-4762": "Let the run lock wrap a Python run"
   },
   "wk": {
@@ -812,7 +818,6 @@
    "T-5491": "Pernille",
    "T-4192": "Idris",
    "T-4183": "Idris",
-   "T-5480": "Idris",
    "T-4762": "Idris",
    "T-4692": "Idris",
    "T-4761": "Idris",
@@ -822,7 +827,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-23T15:12:37Z",
+  "at": "2026-11-23T15:15:35Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -835,12 +840,12 @@
    },
    "m": {
     "checking": null,
-    "inline": 15,
+    "inline": 18,
     "conflicted": null,
     "failed": null,
-    "held": 344,
+    "held": 347,
     "retry": null,
-    "parked": 344
+    "parked": 347
    },
    "cur": [],
    "ld": [
@@ -850,21 +855,19 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-23T15:11:49Z",
-    "ld": 21.19,
+    "at": "2026-11-23T15:15:09Z",
+    "ld": 14.82,
     "c": 8,
-    "sb": 1,
+    "sb": 0,
     "dk": [
-     40.2,
+     42.2,
      228.3
     ],
     "ss": [
      168.6,
      953.7
     ],
-    "sn": [
-     "iPhone 17e"
-    ]
+    "sn": []
    },
    "macbook": {
     "at": "2026-11-23T15:07:48Z",
@@ -905,11 +908,11 @@
      "open": true
     }
    },
-   "at": "2026-11-23T15:12:37+00:00"
+   "at": "2026-11-23T15:15:42+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-23T15:12:31+00:00"
+   "at": "2026-11-23T15:15:29+00:00"
   }
  },
  "operators": [
@@ -930,6 +933,15 @@
    "e": "high",
    "t": "Work session \u2013 1 task",
    "at": "2026-11-23T10:04:45-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Jeremy's Account",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session \u2013 1 task",
+   "at": "2026-11-23T10:13:46-05:00"
   }
  ],
  "reply": {
@@ -950,12 +962,12 @@
  ],
  "agents_now": {
   "main": 0,
-  "lanes": 1,
-  "total": 1,
-  "at": "10:12 AM",
+  "lanes": 2,
+  "total": 2,
+  "at": "10:15 AM",
   "why": "",
-  "at_iso": "2026-11-23T15:12:00+00:00",
+  "at_iso": "2026-11-23T15:15:00+00:00",
   "started": "9:27 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0, started 9:27 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 10:12 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0, started 9:27 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 10:15 AM ET</p></section>"
  }
 }

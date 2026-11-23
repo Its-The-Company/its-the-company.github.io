@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-23T11:51:47.635782+00:00",
+ "at": "2026-11-23T11:54:50.882760+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -19,6 +19,38 @@
      {
       "s": "testq",
       "at": 1795349545
+     }
+    ]
+   },
+   {
+    "t": "T-2097",
+    "name": "Read free memory in the widget extension on a device",
+    "w": "Idris",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "claimed",
+      "at": 1795434879
+     },
+     {
+      "s": "worker",
+      "at": 1795434879
+     }
+    ]
+   },
+   {
+    "t": "T-0337",
+    "name": "Confirm the revenue memo's facts from Apple pages",
+    "w": "Wrenna",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "claimed",
+      "at": 1795434833
+     },
+     {
+      "s": "worker",
+      "at": 1795434833
      }
     ]
    },
@@ -231,38 +263,6 @@
     ]
    },
    {
-    "t": "T-2097",
-    "name": "Read free memory in the widget extension on a device",
-    "w": "Idris",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "claimed",
-      "at": 1795428376
-     },
-     {
-      "s": "worker",
-      "at": 1795428376
-     }
-    ]
-   },
-   {
-    "t": "T-0337",
-    "name": "Confirm the revenue memo's facts from Apple pages",
-    "w": "Wrenna",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "claimed",
-      "at": 1795428296
-     },
-     {
-      "s": "worker",
-      "at": 1795428296
-     }
-    ]
-   },
-   {
     "t": "T-3847",
     "name": "Test the launcher link through the real URL entry point",
     "w": "Idris",
@@ -444,7 +444,7 @@
   "week_pct": 143.31,
   "usage_pct": 84.0,
   "work_pct": 95.0,
-  "read_at": "2026-11-23T11:51:00+00:00",
+  "read_at": "2026-11-23T11:54:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -456,6 +456,7 @@
     "e": "high",
     "at": "2026-11-23T06:35:17-05:00",
     "n": "Evan",
+    "d": 1,
     "src": "plan-a"
    },
    {
@@ -503,7 +504,7 @@
   }
  ],
  "disk": {
-  "free_gb": 50,
+  "free_gb": 43,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -511,15 +512,15 @@
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
-   "ok": false,
-   "at": "2026-11-23T06:45:00-05:00",
+   "ok": true,
+   "at": "2026-11-23T06:52:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-23T06:51:00-05:00",
+  "at": "2026-11-23T06:54:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -530,7 +531,7 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 8 (at its floor: load 17.2 a core is over 10)",
+  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 8 (held: too few lands in 3 hours to judge a raise)",
   "n": 8,
   "at": "2026-11-23T02:28:27.861501-05:00"
  },
@@ -754,13 +755,8 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-23T11:51:33Z",
+  "at": "2026-11-23T11:54:41Z",
   "s": {
-   "T-5479": [
-    "mergetest",
-    "iPhone tests on the MacBook",
-    null
-   ],
    "T-4615": [
     "testing",
     "Mac Mini \u00b7 test",
@@ -769,7 +765,7 @@
    "T-4184": [
     "testq",
     "1st for a Simulator",
-    1795433973919
+    1795433921643
    ],
    "T-5644": [
     "merged",
@@ -779,13 +775,11 @@
    ]
   },
   "nm": {
-   "T-5479": "Make the escape corpus Link case fail instead of skip",
    "T-4615": "Widget taps on iPad reuse an open window",
    "T-4184": "A person's own script becomes a Home Screen widget",
    "T-5644": "Account b used up by midweek without skewing the comparison"
   },
   "wk": {
-   "T-5479": "Idris",
    "T-4615": "Idris",
    "T-4184": "Idris",
    "T-5644": "Ines",
@@ -794,7 +788,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-23T11:51:33Z",
+  "at": "2026-11-23T11:54:41Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -810,9 +804,9 @@
     "inline": null,
     "conflicted": null,
     "failed": null,
-    "held": 143,
+    "held": 146,
     "retry": null,
-    "parked": 186
+    "parked": 189
    },
    "cur": [],
    "ld": [
@@ -822,16 +816,16 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-23T11:50:45Z",
-    "ld": 11.61,
+    "at": "2026-11-23T11:54:42Z",
+    "ld": 5.73,
     "c": 8,
     "sb": 1,
     "dk": [
-     43.5,
+     41.1,
      228.3
     ],
     "ss": [
-     173.1,
+     168.8,
      953.7
     ],
     "sn": [
@@ -839,12 +833,12 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-23T11:45:06Z",
-    "ld": 1.51,
+    "at": "2026-11-23T11:52:55Z",
+    "ld": 1.04,
     "c": 12,
     "sb": 0,
     "dk": [
-     351.6,
+     350.7,
      926.4
     ],
     "sn": []
@@ -877,11 +871,11 @@
      "open": true
     }
    },
-   "at": "2026-11-23T11:51:47+00:00"
+   "at": "2026-11-23T11:54:50+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-23T11:51:33+00:00"
+   "at": "2026-11-23T11:54:41+00:00"
   }
  },
  "operators": [
@@ -900,7 +894,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 1 task",
+   "t": "Work session \u2013 2 tasks",
    "at": "2026-11-23T06:35:16-05:00"
   },
   {
@@ -942,10 +936,10 @@
   "main": 0,
   "lanes": 3,
   "total": 3,
-  "at": "6:51 AM",
+  "at": "6:54 AM",
   "why": "",
-  "at_iso": "2026-11-23T11:51:00+00:00",
+  "at_iso": "2026-11-23T11:54:00+00:00",
   "started": "2:29 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 2:29 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 6:51 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 2:29 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 6:54 AM ET</p></section>"
  }
 }

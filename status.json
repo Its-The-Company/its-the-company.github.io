@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-23T13:38:31.758836+00:00",
+ "at": "2026-11-23T13:41:35.212104+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -434,7 +434,7 @@
   "week_pct": 68.24,
   "usage_pct": 84.0,
   "work_pct": 95.0,
-  "read_at": "2026-11-23T13:38:00+00:00",
+  "read_at": "2026-11-23T13:41:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -496,7 +496,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-23T08:38:00-05:00",
+  "at": "2026-11-23T08:41:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -592,15 +592,6 @@
    },
    {
     "w": "Odalys",
-    "t": "Make main workers land their work",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-23T08:07:48-05:00",
-    "o": "c",
-    "task": "T-5675"
-   },
-   {
-    "w": "Odalys",
     "t": "Trim step 3, one merge script beside the old road",
     "m": "opus",
     "e": "high",
@@ -616,6 +607,15 @@
     "at": "2026-11-23T08:27:54-05:00",
     "o": "c",
     "task": "T-4182"
+   },
+   {
+    "w": "Ines",
+    "t": "Account b used up by midweek without skewing the comparison",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-23T08:40:57-05:00",
+    "o": "c",
+    "task": "T-5644"
    }
   ],
   "src": "plan",
@@ -779,37 +779,42 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-23T13:38:12Z",
+  "at": "2026-11-23T13:41:35Z",
   "s": {
    "T-5479": [
     "mergeq",
     "1st to merge",
-    1795439052924
+    1795439015212
    ],
    "T-0337": [
     "mergeq",
     "1st to merge",
-    1795439052924
+    1795439015212
    ],
    "T-2097": [
     "mergeq",
     "1st to merge",
-    1795439052924
+    1795439015212
    ],
    "T-4010": [
     "mergeq",
     "1st to merge",
-    1795439052924
+    1795439015212
    ],
    "T-4662": [
     "mergeq",
     "2nd to merge",
-    1795440552924
+    1795440575212
    ],
    "T-5602": [
     "mergeq",
     "3rd to merge",
-    1795438812924
+    1795438775212
+   ],
+   "T-4692": [
+    "mergeq",
+    "4th to merge",
+    1795441115212
    ],
    "T-4184": [
     "mergetest",
@@ -827,6 +832,12 @@
     "on main 7:59 AM ET",
     1795438771000,
     "Idris"
+   ],
+   "T-5644": [
+    "merged",
+    "on main 6:21 AM ET",
+    1795432889000,
+    ""
    ]
   },
   "nm": {
@@ -836,9 +847,11 @@
    "T-4010": "Rebuild This Session as a full flowchart",
    "T-4662": "Place the cursor easily on a long line",
    "T-5602": "Brief for a new look for the app",
+   "T-4692": "Pro showcase widgets work free, editing them needs Pro",
    "T-4184": "A person's own script becomes a Home Screen widget",
    "T-5256": "Trim step 3, one merge script beside the old road",
-   "T-4182": "A failing widget says so and can recover"
+   "T-4182": "A failing widget says so and can recover",
+   "T-5644": "Account b used up by midweek without skewing the comparison"
   },
   "wk": {
    "T-5479": "Idris",
@@ -847,9 +860,11 @@
    "T-4010": "Odalys",
    "T-4662": "Idris",
    "T-5602": "Maren",
+   "T-4692": "Idris",
    "T-4184": "Idris",
    "T-5256": "Odalys",
    "T-4182": "Idris",
+   "T-5644": "Ines",
    "T-1764": "Idris",
    "T-4244": "Idris",
    "T-1905": "Idris",
@@ -858,11 +873,11 @@
   }
  },
  "ln": {
-  "at": "2026-11-23T13:38:12Z",
+  "at": "2026-11-23T13:41:35Z",
   "mq": {
    "n": {
     "checking": 0,
-    "inline": 6,
+    "inline": 7,
     "conflicted": 0,
     "failed": 0,
     "held": 1,
@@ -871,12 +886,12 @@
    },
    "m": {
     "checking": null,
-    "inline": 34,
+    "inline": 38,
     "conflicted": null,
     "failed": null,
-    "held": 250,
+    "held": 253,
     "retry": null,
-    "parked": 250
+    "parked": 253
    },
    "cur": [],
    "ld": [
@@ -886,12 +901,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-23T13:38:15Z",
-    "ld": 4.92,
+    "at": "2026-11-23T13:41:36Z",
+    "ld": 3.53,
     "c": 8,
     "sb": 0,
     "dk": [
-     43.0,
+     43.1,
      228.3
     ],
     "ss": [
@@ -915,21 +930,21 @@
  },
  "hc": {
   "wait": {
-   "n": 17,
+   "n": 19,
    "limit": 20,
-   "in_line": 6,
-   "parked": 11,
+   "in_line": 7,
+   "parked": 12,
    "open": true,
    "mq": false,
-   "counted": "2026-11-23T13:28:19+00:00",
+   "counted": "2026-11-23T13:38:36+00:00",
    "by": {
     "app": {
-     "n": 13,
+     "n": 15,
      "limit": 20,
      "open": true
     },
     "other": {
-     "n": 8,
+     "n": 9,
      "limit": 20,
      "open": true
     },
@@ -939,11 +954,11 @@
      "open": true
     }
    },
-   "at": "2026-11-23T13:38:31+00:00"
+   "at": "2026-11-23T13:41:35+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-23T13:38:31+00:00"
+   "at": "2026-11-23T13:41:28+00:00"
   }
  },
  "operators": [
@@ -995,10 +1010,10 @@
   "main": 0,
   "lanes": 2,
   "total": 2,
-  "at": "8:38 AM",
+  "at": "8:41 AM",
   "why": "",
-  "at_iso": "2026-11-23T13:38:00+00:00",
+  "at_iso": "2026-11-23T13:41:00+00:00",
   "started": "2:29 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0, started 2:29 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 8:38 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0, started 2:29 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 8:41 AM ET</p></section>"
  }
 }

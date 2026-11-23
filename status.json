@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-23T11:54:50.882760+00:00",
+ "at": "2026-11-23T11:57:51.564711+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -19,6 +19,22 @@
      {
       "s": "testq",
       "at": 1795349545
+     }
+    ]
+   },
+   {
+    "t": "T-4010",
+    "name": "Rebuild This Session as a full flowchart",
+    "w": "Odalys",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "claimed",
+      "at": 1795434985
+     },
+     {
+      "s": "worker",
+      "at": 1795434985
      }
     ]
    },
@@ -247,22 +263,6 @@
     ]
    },
    {
-    "t": "T-4010",
-    "name": "Rebuild This Session as a full flowchart",
-    "w": "Odalys",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "claimed",
-      "at": 1795428443
-     },
-     {
-      "s": "worker",
-      "at": 1795428443
-     }
-    ]
-   },
-   {
     "t": "T-3847",
     "name": "Test the launcher link through the real URL entry point",
     "w": "Idris",
@@ -444,7 +444,7 @@
   "week_pct": 143.31,
   "usage_pct": 84.0,
   "work_pct": 95.0,
-  "read_at": "2026-11-23T11:54:00+00:00",
+  "read_at": "2026-11-23T11:58:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -520,7 +520,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-23T06:54:00-05:00",
+  "at": "2026-11-23T06:58:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -755,17 +755,17 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-23T11:54:41Z",
+  "at": "2026-11-23T11:57:51Z",
   "s": {
-   "T-4615": [
+   "T-4184": [
     "testing",
     "Mac Mini \u00b7 test",
     null
    ],
-   "T-4184": [
+   "T-4615": [
     "testq",
     "1st for a Simulator",
-    1795433921643
+    1795435011564
    ],
    "T-5644": [
     "merged",
@@ -775,20 +775,20 @@
    ]
   },
   "nm": {
-   "T-4615": "Widget taps on iPad reuse an open window",
    "T-4184": "A person's own script becomes a Home Screen widget",
+   "T-4615": "Widget taps on iPad reuse an open window",
    "T-5644": "Account b used up by midweek without skewing the comparison"
   },
   "wk": {
-   "T-4615": "Idris",
    "T-4184": "Idris",
+   "T-4615": "Idris",
    "T-5644": "Ines",
    "T-5673": "Odalys",
    "T-5381": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-23T11:54:41Z",
+  "at": "2026-11-23T11:57:51Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -804,9 +804,9 @@
     "inline": null,
     "conflicted": null,
     "failed": null,
-    "held": 146,
+    "held": 149,
     "retry": null,
-    "parked": 189
+    "parked": 192
    },
    "cur": [],
    "ld": [
@@ -816,12 +816,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-23T11:54:42Z",
-    "ld": 5.73,
+    "at": "2026-11-23T11:57:54Z",
+    "ld": 10.29,
     "c": 8,
-    "sb": 1,
+    "sb": 2,
     "dk": [
-     41.1,
+     41.3,
      228.3
     ],
     "ss": [
@@ -829,7 +829,8 @@
      953.7
     ],
     "sn": [
-     "T4615 iPad Air 11"
+     "T4615 iPad Air 11",
+     "iPhone 17e"
     ]
    },
    "macbook": {
@@ -853,7 +854,7 @@
    "parked": 14,
    "open": true,
    "mq": false,
-   "counted": "2026-11-23T11:39:59+00:00",
+   "counted": "2026-11-23T11:56:06+00:00",
    "by": {
     "app": {
      "n": 10,
@@ -871,11 +872,11 @@
      "open": true
     }
    },
-   "at": "2026-11-23T11:54:50+00:00"
+   "at": "2026-11-23T11:57:51+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-23T11:54:41+00:00"
+   "at": "2026-11-23T11:57:51+00:00"
   }
  },
  "operators": [
@@ -894,7 +895,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 2 tasks",
+   "t": "Work session \u2013 3 tasks",
    "at": "2026-11-23T06:35:16-05:00"
   },
   {
@@ -936,10 +937,10 @@
   "main": 0,
   "lanes": 3,
   "total": 3,
-  "at": "6:54 AM",
+  "at": "6:58 AM",
   "why": "",
-  "at_iso": "2026-11-23T11:54:00+00:00",
+  "at_iso": "2026-11-23T11:58:00+00:00",
   "started": "2:29 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 2:29 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 6:54 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 2:29 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 6:58 AM ET</p></section>"
  }
 }

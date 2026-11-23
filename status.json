@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-23T15:09:32.092941+00:00",
+ "at": "2026-11-23T15:12:37.524774+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -376,7 +376,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 712,
+  "runnable_count": 713,
   "blocked_count": 2
  },
  "meter": {
@@ -425,7 +425,7 @@
   "week_pct": 63.62,
   "usage_pct": 85.3,
   "work_pct": 96.6,
-  "read_at": "2026-11-23T15:09:00+00:00",
+  "read_at": "2026-11-23T15:12:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -436,18 +436,6 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-23T10:04:45-05:00",
-    "n": "Jeremy",
-    "src": "plan-b"
-   },
-   {
-    "lane": "b3",
-    "task": "T-4190",
-    "w": "Idris",
-    "k": "build",
-    "t": "Settings and Pro: buy, restore, themes",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-23T10:07:56-05:00",
     "n": "Jeremy",
     "src": "plan-b"
    }
@@ -487,7 +475,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-23T10:09:00-05:00",
+  "at": "2026-11-23T10:12:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -700,7 +688,7 @@
    }
   ],
   "count": {
-   "next": 712,
+   "next": 713,
    "wait": 2,
    "blocked": 0,
    "you": 2
@@ -770,27 +758,27 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-23T15:09:21Z",
+  "at": "2026-11-23T15:12:37Z",
   "s": {
    "T-4184": [
     "mergeq",
     "1st to merge",
-    1795445601570
+    1795445557524
    ],
-   "T-5256": [
+   "T-4190": [
     "mergeq",
     "2nd to merge",
-    1795444821570
+    1795446637524
    ],
    "T-5491": [
     "mergeq",
     "3rd to merge",
-    1795446201570
+    1795446157524
    ],
    "T-4192": [
     "mergeq",
     "4th to merge",
-    1795445181570
+    1795445197524
    ],
    "T-4183": [
     "mergetest",
@@ -811,7 +799,7 @@
   },
   "nm": {
    "T-4184": "A person's own script becomes a Home Screen widget",
-   "T-5256": "Trim step 3, one merge script beside the old road",
+   "T-4190": "Settings and Pro: buy, restore, themes",
    "T-5491": "Drop the swallow test's five-second bound",
    "T-4192": "Python in the app: smaller bundle, installable packages",
    "T-4183": "The Gallery shows, previews and opens every premade",
@@ -820,7 +808,7 @@
   },
   "wk": {
    "T-4184": "Idris",
-   "T-5256": "Odalys",
+   "T-4190": "Idris",
    "T-5491": "Pernille",
    "T-4192": "Idris",
    "T-4183": "Idris",
@@ -834,7 +822,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-23T15:09:21Z",
+  "at": "2026-11-23T15:12:37Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -843,16 +831,16 @@
     "failed": 0,
     "held": 3,
     "retry": 0,
-    "parked": 13
+    "parked": 14
    },
    "m": {
     "checking": null,
-    "inline": 19,
+    "inline": 15,
     "conflicted": null,
     "failed": null,
-    "held": 341,
+    "held": 344,
     "retry": null,
-    "parked": 341
+    "parked": 344
    },
    "cur": [],
    "ld": [
@@ -862,12 +850,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-23T15:08:55Z",
-    "ld": 21.82,
+    "at": "2026-11-23T15:11:49Z",
+    "ld": 21.19,
     "c": 8,
     "sb": 1,
     "dk": [
-     40.3,
+     40.2,
      228.3
     ],
     "ss": [
@@ -899,7 +887,7 @@
    "parked": 16,
    "open": true,
    "mq": false,
-   "counted": "2026-11-23T14:58:26+00:00",
+   "counted": "2026-11-23T15:10:42+00:00",
    "by": {
     "app": {
      "n": 15,
@@ -917,11 +905,11 @@
      "open": true
     }
    },
-   "at": "2026-11-23T15:09:32+00:00"
+   "at": "2026-11-23T15:12:37+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-23T15:09:21+00:00"
+   "at": "2026-11-23T15:12:31+00:00"
   }
  },
  "operators": [
@@ -942,15 +930,6 @@
    "e": "high",
    "t": "Work session \u2013 1 task",
    "at": "2026-11-23T10:04:45-05:00"
-  },
-  {
-   "w": "Operator",
-   "a": "Jeremy's Account",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session \u2013 1 task",
-   "at": "2026-11-23T10:07:56-05:00"
   }
  ],
  "reply": {
@@ -971,12 +950,12 @@
  ],
  "agents_now": {
   "main": 0,
-  "lanes": 2,
-  "total": 2,
-  "at": "10:09 AM",
+  "lanes": 1,
+  "total": 1,
+  "at": "10:12 AM",
   "why": "",
-  "at_iso": "2026-11-23T15:09:00+00:00",
+  "at_iso": "2026-11-23T15:12:00+00:00",
   "started": "9:27 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0, started 9:27 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 10:09 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0, started 9:27 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 10:12 AM ET</p></section>"
  }
 }

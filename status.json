@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-23T11:30:03.287257+00:00",
+ "at": "2026-11-23T11:33:13.694535+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -400,31 +400,31 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 17.0,
-   "resets_at": "2026-11-23T12:10:00.859394+00:00",
+   "pct": 20.0,
+   "resets_at": "2026-11-23T12:10:00.915049+00:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-23T05:57:38.093010-05:00",
+   "read_at": "2026-11-23T06:32:02.098064-05:00",
    "source": "usage",
-   "left": 83.0,
+   "left": 80.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 8.0,
-   "resets_at": "2026-11-29T07:00:00.859419+00:00",
+   "pct": 9.0,
+   "resets_at": "2026-11-29T07:00:00.915067+00:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-23T05:57:38.093010-05:00",
+   "read_at": "2026-11-23T06:32:02.098064-05:00",
    "source": "usage",
-   "left": 92.0,
+   "left": 91.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 4.0,
-   "resets_at": "2026-11-29T06:59:59.859596+00:00",
+   "resets_at": "2026-11-29T06:59:59.915249+00:00",
    "used_words": "of the Fable weekly allowance used",
-   "read_at": "2026-11-23T05:57:38.093010-05:00",
+   "read_at": "2026-11-23T06:32:02.098064-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-23T05:57:38.093010-05:00"
+  "read_at": "2026-11-23T06:32:02.098064-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -444,7 +444,7 @@
   "week_pct": 143.31,
   "usage_pct": 84.0,
   "work_pct": 95.0,
-  "read_at": "2026-11-23T11:30:00+00:00",
+  "read_at": "2026-11-23T11:33:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -465,7 +465,7 @@
   }
  ],
  "disk": {
-  "free_gb": 52,
+  "free_gb": 51,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -474,14 +474,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-23T06:25:00-05:00",
+   "at": "2026-11-23T06:31:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-23T06:30:00-05:00",
+  "at": "2026-11-23T06:33:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -716,7 +716,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-23T11:30:03Z",
+  "at": "2026-11-23T11:33:13Z",
   "s": {
    "T-4184": [
     "testing",
@@ -734,7 +734,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-23T11:30:03Z",
+  "at": "2026-11-23T11:33:13Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -750,9 +750,9 @@
     "inline": null,
     "conflicted": null,
     "failed": null,
-    "held": 121,
+    "held": 125,
     "retry": null,
-    "parked": 164
+    "parked": 168
    },
    "cur": [],
    "ld": [
@@ -762,12 +762,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-23T11:30:08Z",
-    "ld": 6.02,
+    "at": "2026-11-23T11:33:14Z",
+    "ld": 6.05,
     "c": 8,
     "sb": 1,
     "dk": [
-     51.0,
+     50.7,
      228.3
     ],
     "ss": [
@@ -817,11 +817,11 @@
      "open": true
     }
    },
-   "at": "2026-11-23T11:30:03+00:00"
+   "at": "2026-11-23T11:33:13+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-23T11:30:03+00:00"
+   "at": "2026-11-23T11:33:06+00:00"
   }
  },
  "operators": [
@@ -855,10 +855,10 @@
   "main": 0,
   "lanes": 0,
   "total": 0,
-  "at": "6:30 AM",
+  "at": "6:33 AM",
   "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
-  "at_iso": "2026-11-23T11:30:00+00:00",
+  "at_iso": "2026-11-23T11:33:00+00:00",
   "started": "2:29 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0, started 2:29 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 6:30 AM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0, started 2:29 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 6:33 AM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
  }
 }

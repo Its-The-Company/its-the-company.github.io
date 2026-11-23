@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-23T01:37:08.954365+00:00",
+ "at": "2026-11-23T01:40:11.369425+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -125,7 +125,7 @@
   "week_pct": 2.42,
   "usage_pct": 68.7,
   "work_pct": 88.2,
-  "read_at": "2026-11-23T01:37:00+00:00",
+  "read_at": "2026-11-23T01:40:00+00:00",
   "running": [
    {
     "lane": "b2",
@@ -137,6 +137,7 @@
     "e": "high",
     "at": "2026-11-22T20:20:52-05:00",
     "n": "Jeremy",
+    "d": 1,
     "src": "plan-b"
    }
   ]
@@ -178,7 +179,7 @@
  "lock_in": {
   "on": true,
   "pool": 3,
-  "at": "2026-11-22T20:37:00-05:00",
+  "at": "2026-11-22T20:40:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -402,19 +403,9 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-23T01:36:56Z",
-  "s": {
-   "T-5620": [
-    "mergeq",
-    "1st to merge",
-    1795397456442
-   ]
-  },
-  "nm": {
-   "T-5620": "Queued test requests replay while the coordinator runs"
-  },
+  "at": "2026-11-23T01:40:11Z",
+  "s": {},
   "wk": {
-   "T-5620": "Odalys",
    "T-5431": "Odalys",
    "T-5262": "Odalys",
    "T-5607": "Idris",
@@ -422,11 +413,11 @@
   }
  },
  "ln": {
-  "at": "2026-11-23T01:36:56Z",
+  "at": "2026-11-23T01:40:11Z",
   "mq": {
    "n": {
     "checking": 0,
-    "inline": 1,
+    "inline": 0,
     "conflicted": 0,
     "failed": 0,
     "held": 0,
@@ -435,12 +426,12 @@
    },
    "m": {
     "checking": null,
-    "inline": 6,
+    "inline": null,
     "conflicted": null,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1163
+    "parked": 1167
    },
    "cur": [],
    "ld": [
@@ -450,12 +441,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-23T01:36:26Z",
-    "ld": 1.42,
+    "at": "2026-11-23T01:39:27Z",
+    "ld": 1.38,
     "c": 8,
     "sb": 0,
     "dk": [
-     65.6,
+     65.5,
      228.3
     ],
     "ss": [
@@ -503,11 +494,11 @@
      "open": true
     }
    },
-   "at": "2026-11-23T01:37:08+00:00"
+   "at": "2026-11-23T01:40:11+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-23T01:37:08+00:00"
+   "at": "2026-11-23T01:39:59+00:00"
   }
  },
  "operators": [
@@ -550,10 +541,10 @@
   "main": 0,
   "lanes": 1,
   "total": 1,
-  "at": "8:37 PM",
+  "at": "8:40 PM",
   "why": "",
-  "at_iso": "2026-11-23T01:37:00+00:00",
+  "at_iso": "2026-11-23T01:40:00+00:00",
   "started": "2:57 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0, started 2:57 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 8:37 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0, started 2:57 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 8:40 PM ET</p></section>"
  }
 }

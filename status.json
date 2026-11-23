@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-23T17:31:15.854457+00:00",
+ "at": "2026-11-23T17:34:22.160878+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -376,7 +376,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 714,
+  "runnable_count": 717,
   "blocked_count": 2
  },
  "meter": {
@@ -425,7 +425,7 @@
   "week_pct": 69.41,
   "usage_pct": 85.3,
   "work_pct": 96.6,
-  "read_at": "2026-11-23T17:31:00+00:00",
+  "read_at": "2026-11-23T17:34:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -488,7 +488,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-23T12:31:00-05:00",
+  "at": "2026-11-23T12:34:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -556,15 +556,6 @@
  "tasks": {
   "run": [
    {
-    "w": "Odalys",
-    "t": "Lands stop queuing behind one MacBook check",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-23T11:34:07-05:00",
-    "o": "c",
-    "task": "T-5700"
-   },
-   {
     "w": "Idris",
     "t": "Prove a refresh tap redraws the widget",
     "m": "opus",
@@ -572,15 +563,6 @@
     "at": "2026-11-23T11:39:47-05:00",
     "o": "c",
     "task": "T-4772"
-   },
-   {
-    "w": "Pernille",
-    "t": "Github hang test is cut before the GET under load",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-23T11:43:34-05:00",
-    "o": "c",
-    "task": "T-4634"
    },
    {
     "w": "Maren",
@@ -599,6 +581,33 @@
     "at": "2026-11-23T12:25:41-05:00",
     "o": "c",
     "task": "T-5003"
+   },
+   {
+    "w": "Pernille",
+    "t": "Launcher widgets open the apps a person chose",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-23T12:30:57-05:00",
+    "o": "c",
+    "task": "T-4185"
+   },
+   {
+    "w": "Odalys",
+    "t": "Lands stop queuing behind one MacBook check",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-23T12:32:01-05:00",
+    "o": "c",
+    "task": "T-5700"
+   },
+   {
+    "w": "Pernille",
+    "t": "Github hang test is cut before the GET under load",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-23T12:33:21-05:00",
+    "o": "c",
+    "task": "T-4634"
    }
   ],
   "src": "plan",
@@ -692,7 +701,7 @@
    }
   ],
   "count": {
-   "next": 714,
+   "next": 717,
    "wait": 2,
    "blocked": 0,
    "you": 2
@@ -766,42 +775,42 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-23T17:31:15Z",
+  "at": "2026-11-23T17:34:22Z",
   "s": {
    "T-4184": [
     "mergetest",
     "Xcode checks on the MacBook, 1st to merge",
-    1795454835854
+    1795454842160
    ],
    "T-4192": [
     "mergeq",
     "2nd to merge",
-    1795445175854
+    1795445182160
    ],
    "T-5688": [
     "mergeq",
     "3rd to merge",
-    1795447455854
+    1795447462160
    ],
    "T-5697": [
     "mergeq",
     "4th to merge",
-    1795454775854
-   ],
-   "T-4715": [
-    "testing",
-    "Mac Mini \u00b7 test",
-    null
-   ],
-   "T-5256": [
-    "testing",
-    "Mac Mini \u00b7 test",
-    null
+    1795454782160
    ],
    "T-4772": [
+    "testing",
+    "Mac Mini \u00b7 test",
+    null
+   ],
+   "T-4715": [
     "testq",
     "1st for a Simulator",
-    1795455075854
+    1795455142160
+   ],
+   "T-5256": [
+    "testq",
+    "1st for a Simulator",
+    1795455142160
    ],
    "T-5700": [
     "merged",
@@ -815,9 +824,9 @@
    "T-4192": "Python in the app: smaller bundle, installable packages",
    "T-5688": "Land finished work whose copy also changed the board",
    "T-5697": "Nothing a worker committed vanishes from a land unsaid",
+   "T-4772": "Prove a refresh tap redraws the widget",
    "T-4715": "Put the new Pro screen words into the app",
    "T-5256": "Trim step 3, one merge script beside the old road",
-   "T-4772": "Prove a refresh tap redraws the widget",
    "T-5700": "Lands stop queuing behind one MacBook check"
   },
   "wk": {
@@ -825,9 +834,9 @@
    "T-4192": "Idris",
    "T-5688": "Odalys",
    "T-5697": "Odalys",
+   "T-4772": "Idris",
    "T-4715": "Maren",
    "T-5256": "Odalys",
-   "T-4772": "Idris",
    "T-5700": "Odalys",
    "T-3350": "Idris",
    "T-5693": "Idris",
@@ -842,7 +851,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-23T17:31:15Z",
+  "at": "2026-11-23T17:34:22Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -854,13 +863,13 @@
     "parked": 13
    },
    "m": {
-    "checking": 4,
-    "inline": 127,
+    "checking": 7,
+    "inline": 130,
     "conflicted": null,
     "failed": null,
-    "held": 483,
+    "held": 486,
     "retry": null,
-    "parked": 483
+    "parked": 486
    },
    "cur": [
     [
@@ -869,7 +878,7 @@
      ],
      "iPhone app tests",
      "MacBook",
-     4
+     7
     ]
    ],
    "ld": [
@@ -879,12 +888,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-23T17:31:18Z",
-    "ld": 33.02,
+    "at": "2026-11-23T17:34:24Z",
+    "ld": 25.98,
     "c": 8,
     "sb": 1,
     "dk": [
-     35.2,
+     34.1,
      228.3
     ],
     "ss": [
@@ -892,7 +901,7 @@
      953.7
     ],
     "sn": [
-     "iPhone 18 Pro"
+     "iPhone 17e"
     ]
    },
    "macbook": {
@@ -934,11 +943,11 @@
      "open": true
     }
    },
-   "at": "2026-11-23T17:31:15+00:00"
+   "at": "2026-11-23T17:34:22+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-23T17:31:15+00:00"
+   "at": "2026-11-23T17:34:22+00:00"
   }
  },
  "operators": [
@@ -955,6 +964,8 @@
    "w": "Operator",
    "a": "Jeremy's Account",
    "sr": 1,
+   "m": "opus",
+   "e": "high",
    "t": "Work session",
    "at": "2026-11-23T10:04:45-05:00"
   },
@@ -962,8 +973,10 @@
    "w": "Operator",
    "a": "Jeremy's Account",
    "sr": 1,
+   "m": "opus",
+   "e": "high",
    "t": "Work session",
-   "at": "2026-11-23T10:13:47-05:00"
+   "at": "2026-11-23T10:13:46-05:00"
   }
  ],
  "reply": {
@@ -987,10 +1000,10 @@
   "main": 0,
   "lanes": 2,
   "total": 2,
-  "at": "12:31 PM",
+  "at": "12:34 PM",
   "why": "",
-  "at_iso": "2026-11-23T17:31:00+00:00",
+  "at_iso": "2026-11-23T17:34:00+00:00",
   "started": "9:27 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0, started 9:27 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 12:31 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0, started 9:27 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 12:34 PM ET</p></section>"
  }
 }

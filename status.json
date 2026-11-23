@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-23T09:40:53.965444+00:00",
+ "at": "2026-11-23T09:43:55.128752+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -19,6 +19,22 @@
      {
       "s": "testq",
       "at": 1795349545
+     }
+    ]
+   },
+   {
+    "t": "T-0337",
+    "name": "Confirm the revenue memo's facts from Apple pages",
+    "w": "Wrenna",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "claimed",
+      "at": 1795426926
+     },
+     {
+      "s": "worker",
+      "at": 1795426926
      }
     ]
    },
@@ -357,22 +373,6 @@
       "at": 1795417524
      }
     ]
-   },
-   {
-    "t": "T-4010",
-    "name": "Rebuild This Session as a full flowchart",
-    "w": "Odalys",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "claimed",
-      "at": 1795417383
-     },
-     {
-      "s": "worker",
-      "at": 1795417383
-     }
-    ]
    }
   ],
   "flow_n": 26,
@@ -435,7 +435,7 @@
   "week_pct": 102.36,
   "usage_pct": 84.0,
   "work_pct": 95.0,
-  "read_at": "2026-11-23T09:40:00+00:00",
+  "read_at": "2026-11-23T09:43:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -446,18 +446,6 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-23T04:29:48-05:00",
-    "n": "Evan",
-    "src": "plan-a"
-   },
-   {
-    "lane": "a2",
-    "task": "T-4692",
-    "w": "Idris",
-    "k": "build",
-    "t": "Pro showcase widgets work free, editing them needs Pro",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-23T04:39:51-05:00",
     "n": "Evan",
     "src": "plan-a"
    },
@@ -509,7 +497,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-23T04:40:00-05:00",
+  "at": "2026-11-23T04:43:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -520,8 +508,8 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 10 (cut a step: load 29.0 a core is over 10)",
-  "n": 10,
+  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 9 (cut a step: load 52.0 a core is over 10)",
+  "n": 9,
   "at": "2026-11-23T02:28:27.861501-05:00"
  },
  "lanes": [
@@ -584,24 +572,6 @@
     "at": "2026-11-23T03:47:21-05:00",
     "o": "c",
     "task": "T-5491"
-   },
-   {
-    "w": "Pernille",
-    "t": "Make the https big-body test count work, not seconds",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-23T04:27:27-05:00",
-    "o": "c",
-    "task": "T-5490"
-   },
-   {
-    "w": "Idris",
-    "t": "Make the widget's Debug ask record say what it saw",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-23T04:27:40-05:00",
-    "o": "c",
-    "task": "T-5524"
    }
   ],
   "src": "plan",
@@ -753,26 +723,46 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-23T09:40:53Z",
+  "at": "2026-11-23T09:43:42Z",
   "s": {
-   "T-4692": [
-    "merged",
-    "on main 3:27 AM ET",
-    1795422463000,
-    ""
+   "T-1119": [
+    "testq",
+    "1st for a Simulator",
+    1795427022756
+   ],
+   "T-3847": [
+    "testq",
+    "1st for a Simulator",
+    1795427022756
+   ],
+   "T-5365": [
+    "testq",
+    "1st for a Simulator",
+    1795427022756
+   ],
+   "T-5479": [
+    "testq",
+    "1st for a Simulator",
+    1795427022756
    ]
   },
   "nm": {
-   "T-4692": "Pro showcase widgets work free, editing them needs Pro"
+   "T-1119": "Investors answer two App Store Connect questions",
+   "T-3847": "Test the launcher link through the real URL entry point",
+   "T-5365": "Location refresh policy, file and route",
+   "T-5479": "Make the escape corpus Link case fail instead of skip"
   },
   "wk": {
-   "T-4692": "Idris",
+   "T-1119": "Ines",
+   "T-3847": "Idris",
+   "T-5365": "Idris",
+   "T-5479": "Idris",
    "T-5673": "Odalys",
    "T-5381": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-23T09:40:53Z",
+  "at": "2026-11-23T09:43:42Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -788,9 +778,9 @@
     "inline": null,
     "conflicted": null,
     "failed": null,
-    "held": 12,
+    "held": 15,
     "retry": null,
-    "parked": 3
+    "parked": 5
    },
    "cur": [],
    "ld": [
@@ -800,12 +790,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-23T09:40:47Z",
-    "ld": 57.14,
+    "at": "2026-11-23T09:42:55Z",
+    "ld": 46.24,
     "c": 8,
     "sb": 1,
     "dk": [
-     54.1,
+     54.0,
      228.3
     ],
     "ss": [
@@ -855,11 +845,11 @@
      "open": true
     }
    },
-   "at": "2026-11-23T09:40:53+00:00"
+   "at": "2026-11-23T09:43:55+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-23T09:40:46+00:00"
+   "at": "2026-11-23T09:43:42+00:00"
   }
  },
  "operators": [
@@ -880,15 +870,6 @@
    "e": "high",
    "t": "Work session \u2013 1 task",
    "at": "2026-11-23T04:29:48-05:00"
-  },
-  {
-   "w": "Operator",
-   "a": "Evan's Account",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session \u2013 1 task",
-   "at": "2026-11-23T04:39:51-05:00"
   },
   {
    "w": "Operator",
@@ -918,12 +899,12 @@
  ],
  "agents_now": {
   "main": 0,
-  "lanes": 3,
-  "total": 3,
-  "at": "4:40 AM",
+  "lanes": 2,
+  "total": 2,
+  "at": "4:43 AM",
   "why": "",
-  "at_iso": "2026-11-23T09:40:00+00:00",
+  "at_iso": "2026-11-23T09:43:00+00:00",
   "started": "2:29 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 2:29 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 4:40 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0, started 2:29 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 4:43 AM ET</p></section>"
  }
 }

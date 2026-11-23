@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-23T01:09:35.761309+00:00",
+ "at": "2026-11-23T01:12:40.842671+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -125,7 +125,7 @@
   "week_pct": 2.42,
   "usage_pct": 68.7,
   "work_pct": 88.2,
-  "read_at": "2026-11-23T01:09:00+00:00",
+  "read_at": "2026-11-23T01:12:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -155,7 +155,7 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-22T20:04:00-05:00",
+   "at": "2026-11-22T20:10:00-05:00",
    "recovery": {
     "what": "recovered",
     "at": "2026-11-22T15:08:00-05:00"
@@ -165,7 +165,7 @@
  "lock_in": {
   "on": true,
   "pool": 3,
-  "at": "2026-11-22T20:09:00-05:00",
+  "at": "2026-11-22T20:12:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -389,7 +389,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-23T01:09:29Z",
+  "at": "2026-11-23T01:12:40Z",
   "s": {},
   "wk": {
    "T-5431": "Odalys",
@@ -399,7 +399,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-23T01:09:29Z",
+  "at": "2026-11-23T01:12:40Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -417,7 +417,7 @@
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1136
+    "parked": 1139
    },
    "cur": [],
    "ld": [
@@ -427,8 +427,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-23T01:08:42Z",
-    "ld": 0.48,
+    "at": "2026-11-23T01:12:41Z",
+    "ld": 0.37,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -480,11 +480,11 @@
      "open": false
     }
    },
-   "at": "2026-11-23T01:09:35+00:00"
+   "at": "2026-11-23T01:12:40+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-23T01:09:35+00:00"
+   "at": "2026-11-23T01:12:33+00:00"
   }
  },
  "operators": [
@@ -502,7 +502,18 @@
   "sent": "2026-11-23T01:07:40Z",
   "seconds": 45.0
  },
- "inbox": [],
+ "inbox": [
+  {
+   "id": "c7088957002",
+   "state": "received",
+   "position": 1,
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "T-5622 may start beside T-5620"
+  }
+ ],
  "trimmed": [
   "lane_next",
   "queue_text",
@@ -518,10 +529,10 @@
   "main": 0,
   "lanes": 0,
   "total": 0,
-  "at": "8:09 PM",
+  "at": "8:12 PM",
   "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
-  "at_iso": "2026-11-23T01:09:00+00:00",
+  "at_iso": "2026-11-23T01:12:00+00:00",
   "started": "2:57 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0, started 2:57 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 8:09 PM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0, started 2:57 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 8:12 PM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
  }
 }

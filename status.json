@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-23T07:12:07.036243+00:00",
+ "at": "2026-11-23T07:15:07.488590+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -374,7 +374,7 @@
   "week_pct": 7.04,
   "usage_pct": 84.6,
   "work_pct": 94.7,
-  "read_at": "2026-11-23T07:12:00+00:00",
+  "read_at": "2026-11-23T07:15:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -429,14 +429,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-23T02:05:00-05:00",
+   "at": "2026-11-23T02:12:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 3,
-  "at": "2026-11-23T02:12:00-05:00",
+  "at": "2026-11-23T02:15:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -538,6 +538,15 @@
     "at": "2026-11-23T01:59:06-05:00",
     "o": "c",
     "task": "T-4192"
+   },
+   {
+    "w": "Odalys",
+    "t": "Only the coordinator answers Investor messages",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-23T02:13:29-05:00",
+    "o": "i",
+    "task": "T-5613"
    }
   ],
   "src": "plan",
@@ -693,77 +702,83 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-23T07:11:54Z",
+  "at": "2026-11-23T07:15:07Z",
   "s": {
    "T-4692": [
     "mergeq",
     "1st to merge",
-    1795417734057
+    1795417747488
    ],
    "T-0337": [
     "mergeq",
     "1st to merge",
-    1795417734057
+    1795417747488
    ],
    "T-2097": [
     "mergeq",
     "1st to merge",
-    1795417734057
+    1795417747488
    ],
    "T-4010": [
     "mergeq",
     "1st to merge",
-    1795417734057
+    1795417747488
    ],
    "T-4477": [
     "mergeq",
     "1st to merge",
-    1795417734057
+    1795417747488
    ],
    "T-4286": [
     "mergeq",
     "1st to merge",
-    1795417734057
+    1795417747488
    ],
    "T-4435": [
     "mergeq",
     "1st to merge",
-    1795417734057
+    1795417747488
    ],
    "T-0678": [
     "mergeq",
     "1st to merge",
-    1795417734057
+    1795417747488
    ],
    "T-3495": [
     "mergeq",
     "1st to merge",
-    1795417734057
+    1795417747488
    ],
    "T-3765": [
     "mergeq",
     "1st to merge",
-    1795417734057
+    1795417747488
    ],
    "T-4662": [
     "mergeq",
     "1st to merge",
-    1795417734057
+    1795417747488
    ],
    "T-4781": [
     "mergeq",
     "1st to merge",
-    1795417734057
+    1795417747488
    ],
    "T-4772": [
     "mergeq",
     "1st to merge",
-    1795417734057
+    1795417747488
    ],
    "T-4762": [
     "mergeq",
     "1st to merge",
-    1795417734057
+    1795417747488
+   ],
+   "T-5613": [
+    "merged",
+    "on main 1:40 AM ET",
+    1795416047000,
+    "Odalys"
    ],
    "T-4182": [
     "merged",
@@ -793,6 +808,7 @@
    "T-4781": "Retest a fixed red on what failed, not every test",
    "T-4772": "Prove a refresh tap redraws the widget",
    "T-4762": "Let the run lock wrap a Python run",
+   "T-5613": "Only the coordinator answers Investor messages",
    "T-4182": "A failing widget says so and can recover",
    "T-4184": "A person's own script becomes a Home Screen widget"
   },
@@ -811,6 +827,7 @@
    "T-4781": "Odalys",
    "T-4772": "Idris",
    "T-4762": "Idris",
+   "T-5613": "Odalys",
    "T-4182": "Idris",
    "T-4184": "Idris",
    "T-4533": "Pernille",
@@ -819,7 +836,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-23T07:11:54Z",
+  "at": "2026-11-23T07:15:07Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -832,12 +849,12 @@
    },
    "m": {
     "checking": null,
-    "inline": 3,
+    "inline": 6,
     "conflicted": null,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 214
+    "parked": 217
    },
    "cur": [],
    "ld": [
@@ -847,12 +864,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-23T07:11:05Z",
-    "ld": 16.1,
+    "at": "2026-11-23T07:14:43Z",
+    "ld": 9.62,
     "c": 8,
     "sb": 0,
     "dk": [
-     60.0,
+     57.7,
      228.3
     ],
     "ss": [
@@ -900,11 +917,11 @@
      "open": true
     }
    },
-   "at": "2026-11-23T07:12:07+00:00"
+   "at": "2026-11-23T07:15:07+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-23T07:12:00+00:00"
+   "at": "2026-11-23T07:15:01+00:00"
   }
  },
  "operators": [
@@ -956,10 +973,10 @@
   "main": 0,
   "lanes": 2,
   "total": 2,
-  "at": "2:12 AM",
+  "at": "2:15 AM",
   "why": "",
-  "at_iso": "2026-11-23T07:12:00+00:00",
+  "at_iso": "2026-11-23T07:15:00+00:00",
   "started": "1:04 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0, started 1:04 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 2:12 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0, started 1:04 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 2:15 AM ET</p></section>"
  }
 }

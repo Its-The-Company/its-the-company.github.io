@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-23T17:52:58.572987+00:00",
+ "at": "2026-11-23T17:56:11.824015+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -425,7 +425,7 @@
   "week_pct": 69.41,
   "usage_pct": 85.3,
   "work_pct": 96.6,
-  "read_at": "2026-11-23T17:53:00+00:00",
+  "read_at": "2026-11-23T17:56:00+00:00",
   "running": [
    {
     "lane": "b2",
@@ -476,7 +476,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-23T12:53:00-05:00",
+  "at": "2026-11-23T12:56:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -487,7 +487,7 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 8 (at its floor: load 24.6 a core is over 10)",
+  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 8 (at its floor: load 32.6 a core is over 10)",
   "n": 8,
   "at": "2026-11-23T09:25:38.709305-05:00"
  },
@@ -763,32 +763,32 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-23T17:52:08Z",
+  "at": "2026-11-23T17:55:54Z",
   "s": {
    "T-4183": [
     "mergeq",
     "1st to merge",
-    1795456028263
+    1795456074218
    ],
    "T-4192": [
     "mergeq",
     "2nd to merge",
-    1795445168263
+    1795445214218
    ],
    "T-5688": [
     "mergeq",
     "3rd to merge",
-    1795447448263
+    1795447434218
    ],
    "T-5697": [
     "mergeq",
     "4th to merge",
-    1795454768263
+    1795454814218
    ],
    "T-5616": [
     "mergeq",
     "5th to merge",
-    1795455788263
+    1795455774218
    ],
    "T-4185": [
     "testing",
@@ -798,12 +798,24 @@
    "T-4715": [
     "testq",
     "1st for a Simulator",
-    1795456328263
+    1795456434218
    ],
    "T-5256": [
     "testq",
     "1st for a Simulator",
-    1795456328263
+    1795456434218
+   ],
+   "T-5700": [
+    "merged",
+    "on main 12:22 PM ET",
+    1795454558000,
+    "Odalys"
+   ],
+   "T-4772": [
+    "merged",
+    "on main 3:27 AM ET",
+    1795422463000,
+    ""
    ]
   },
   "nm": {
@@ -814,7 +826,9 @@
    "T-5616": "Fix the city list test after the tzdata update",
    "T-4185": "Launcher widgets open the apps a person chose",
    "T-4715": "Put the new Pro screen words into the app",
-   "T-5256": "Trim step 3, one merge script beside the old road"
+   "T-5256": "Trim step 3, one merge script beside the old road",
+   "T-5700": "Lands stop queuing behind one MacBook check",
+   "T-4772": "Prove a refresh tap redraws the widget"
   },
   "wk": {
    "T-4183": "Idris",
@@ -825,6 +839,8 @@
    "T-4185": "Idris",
    "T-4715": "Maren",
    "T-5256": "Odalys",
+   "T-5700": "Odalys",
+   "T-4772": "Idris",
    "T-3350": "Idris",
    "T-5693": "Idris",
    "T-4220": "Idris",
@@ -838,7 +854,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-23T17:52:08Z",
+  "at": "2026-11-23T17:55:54Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -851,12 +867,12 @@
    },
    "m": {
     "checking": null,
-    "inline": 26,
+    "inline": 29,
     "conflicted": null,
     "failed": null,
-    "held": 504,
+    "held": 507,
     "retry": null,
-    "parked": 504
+    "parked": 507
    },
    "cur": [],
    "ld": [
@@ -866,12 +882,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-23T17:52:45Z",
-    "ld": 27.55,
+    "at": "2026-11-23T17:55:38Z",
+    "ld": 32.72,
     "c": 8,
     "sb": 1,
     "dk": [
-     34.0,
+     34.2,
      228.3
     ],
     "ss": [
@@ -921,11 +937,11 @@
      "open": true
     }
    },
-   "at": "2026-11-23T17:52:58+00:00"
+   "at": "2026-11-23T17:56:11+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-23T17:52:58+00:00"
+   "at": "2026-11-23T17:56:11+00:00"
   }
  },
  "operators": [
@@ -969,10 +985,10 @@
   "main": 0,
   "lanes": 1,
   "total": 1,
-  "at": "12:53 PM",
+  "at": "12:56 PM",
   "why": "",
-  "at_iso": "2026-11-23T17:53:00+00:00",
+  "at_iso": "2026-11-23T17:56:00+00:00",
   "started": "9:27 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0, started 9:27 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 12:53 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0, started 9:27 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 12:56 PM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-23T01:43:14.694547+00:00",
+ "at": "2026-11-23T01:46:20.147662+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -76,7 +76,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 692,
+  "runnable_count": 690,
   "blocked_count": 2
  },
  "meter": {
@@ -125,7 +125,7 @@
   "week_pct": 2.42,
   "usage_pct": 68.7,
   "work_pct": 88.2,
-  "read_at": "2026-11-23T01:43:00+00:00",
+  "read_at": "2026-11-23T01:46:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -165,7 +165,7 @@
  "lock_in": {
   "on": true,
   "pool": 3,
-  "at": "2026-11-22T20:43:00-05:00",
+  "at": "2026-11-22T20:46:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -307,30 +307,38 @@
   ],
   "done": [
    {
+    "w": "Odalys",
+    "t": "During the comparison the task hand-out now gives out only app work: a line counts only when it...",
+    "at": "2026-11-22T20:44:00-05:00"
+   },
+   {
+    "w": "Odalys",
+    "t": "Each app feature now gives the hand-out exactly one thing to start, its feature session or else...",
+    "at": "2026-11-22T20:44:00-05:00"
+   },
+   {
     "w": "Operator",
     "t": "every line that had to finish before the comparison is on main, and the comparison began Sunday...",
     "at": "2026-11-22T19:02:00-05:00"
-   },
-   {
-    "w": "Odalys+idris+pernille+operator",
-    "t": "The checks a merge runs now give the same answer every time: three runs on one commit passed on...",
-    "at": "2026-11-22T17:31:00-05:00"
-   },
-   {
-    "w": "Idris+operator",
-    "t": "The two Pro tests and the notification test that made MacBook runs disagree are fixed, and three...",
-    "at": "2026-11-22T17:31:00-05:00"
    }
   ],
   "count": {
-   "next": 692,
+   "next": 690,
    "wait": 2,
    "blocked": 0,
    "you": 2
   },
   "fin": {
-   "n": 4,
+   "n": 6,
    "rows": [
+    [
+     "T-5622",
+     "Hand out only app work..."
+    ],
+    [
+     "T-5624",
+     "App features start during..."
+    ],
     [
      "T-5431",
      "Personal accounts do..."
@@ -389,19 +397,11 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-23T01:43:06Z",
-  "s": {
-   "T-5622": [
-    "mergeq",
-    "1st to merge",
-    1795398186674
-   ]
-  },
-  "nm": {
-   "T-5622": "Hand out only app work during the comparison"
-  },
+  "at": "2026-11-23T01:46:20Z",
+  "s": {},
   "wk": {
    "T-5622": "Odalys",
+   "T-5624": "Odalys",
    "T-5431": "Odalys",
    "T-5262": "Odalys",
    "T-5607": "Idris",
@@ -409,11 +409,11 @@
   }
  },
  "ln": {
-  "at": "2026-11-23T01:43:06Z",
+  "at": "2026-11-23T01:46:20Z",
   "mq": {
    "n": {
     "checking": 0,
-    "inline": 1,
+    "inline": 0,
     "conflicted": 0,
     "failed": 0,
     "held": 0,
@@ -422,12 +422,12 @@
    },
    "m": {
     "checking": null,
-    "inline": 0,
+    "inline": null,
     "conflicted": null,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1079
+    "parked": 1082
    },
    "cur": [],
    "ld": [
@@ -437,8 +437,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-23T01:42:52Z",
-    "ld": 1.15,
+    "at": "2026-11-23T01:45:56Z",
+    "ld": 0.92,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -468,11 +468,11 @@
   "wait": {
    "n": 3,
    "limit": 20,
-   "in_line": 1,
-   "parked": 2,
+   "in_line": 0,
+   "parked": 3,
    "open": true,
    "mq": false,
-   "counted": "2026-11-23T01:34:58+00:00",
+   "counted": "2026-11-23T01:45:59+00:00",
    "by": {
     "app": {
      "n": 2,
@@ -490,11 +490,11 @@
      "open": true
     }
    },
-   "at": "2026-11-23T01:43:14+00:00"
+   "at": "2026-11-23T01:46:20+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-23T01:43:06+00:00"
+   "at": "2026-11-23T01:46:07+00:00"
   }
  },
  "operators": [
@@ -528,10 +528,10 @@
   "main": 0,
   "lanes": 0,
   "total": 0,
-  "at": "8:43 PM",
+  "at": "8:46 PM",
   "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
-  "at_iso": "2026-11-23T01:43:00+00:00",
+  "at_iso": "2026-11-23T01:46:00+00:00",
   "started": "2:57 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0, started 2:57 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 8:43 PM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0, started 2:57 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 8:46 PM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-23T09:34:50.399085+00:00",
+ "at": "2026-11-23T09:37:46.587442+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -435,7 +435,7 @@
   "week_pct": 102.36,
   "usage_pct": 84.0,
   "work_pct": 95.0,
-  "read_at": "2026-11-23T09:34:00+00:00",
+  "read_at": "2026-11-23T09:37:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -447,31 +447,6 @@
     "e": "high",
     "at": "2026-11-23T04:29:48-05:00",
     "n": "Evan",
-    "src": "plan-a"
-   },
-   {
-    "lane": "a2",
-    "task": "T-5479",
-    "w": "Idris",
-    "k": "test",
-    "t": "Make the escape corpus Link case fail instead of skip",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-23T04:05:49-05:00",
-    "n": "Evan",
-    "src": "plan-a"
-   },
-   {
-    "lane": "a3",
-    "task": "T-5365",
-    "w": "Idris",
-    "k": "build",
-    "t": "Location refresh policy, file and route",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-23T03:29:34-05:00",
-    "n": "Evan",
-    "d": 1,
     "src": "plan-a"
    }
   ]
@@ -510,7 +485,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-23T04:34:00-05:00",
+  "at": "2026-11-23T04:37:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -521,8 +496,8 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 11 (cut a step: load 19.6 a core is over 10)",
-  "n": 11,
+  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 10 (cut a step: load 29.0 a core is over 10)",
+  "n": 10,
   "at": "2026-11-23T02:28:27.861501-05:00"
  },
  "lanes": [
@@ -763,25 +738,15 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-23T09:34:36Z",
-  "s": {
-   "T-5479": [
-    "testing",
-    "Mac Mini \u00b7 test",
-    null
-   ]
-  },
-  "nm": {
-   "T-5479": "Make the escape corpus Link case fail instead of skip"
-  },
+  "at": "2026-11-23T09:35:27Z",
+  "s": {},
   "wk": {
-   "T-5479": "Idris",
    "T-5673": "Odalys",
    "T-5381": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-23T09:34:36Z",
+  "at": "2026-11-23T09:35:27Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -797,9 +762,9 @@
     "inline": null,
     "conflicted": null,
     "failed": null,
-    "held": 6,
+    "held": 7,
     "retry": null,
-    "parked": 49
+    "parked": 50
    },
    "cur": [],
    "ld": [
@@ -809,12 +774,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-23T09:34:13Z",
-    "ld": 15.64,
+    "at": "2026-11-23T09:37:11Z",
+    "ld": 34.38,
     "c": 8,
     "sb": 1,
     "dk": [
-     55.6,
+     54.2,
      228.3
     ],
     "ss": [
@@ -822,7 +787,7 @@
      953.7
     ],
     "sn": [
-     "iPhone 17e"
+     "T4615 iPad Air 11"
     ]
    },
    "macbook": {
@@ -864,11 +829,11 @@
      "open": true
     }
    },
-   "at": "2026-11-23T09:34:50+00:00"
+   "at": "2026-11-23T09:37:46+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-23T09:34:36+00:00"
+   "at": "2026-11-23T09:35:27+00:00"
   }
  },
  "operators": [
@@ -889,24 +854,6 @@
    "e": "high",
    "t": "Work session \u2013 1 task",
    "at": "2026-11-23T04:29:48-05:00"
-  },
-  {
-   "w": "Operator",
-   "a": "Evan's Account",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session \u2013 1 task",
-   "at": "2026-11-23T04:05:48-05:00"
-  },
-  {
-   "w": "Operator",
-   "a": "Evan's Account",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session \u2013 9 tasks",
-   "at": "2026-11-23T03:29:34-05:00"
   }
  ],
  "reply": {
@@ -927,12 +874,12 @@
  ],
  "agents_now": {
   "main": 0,
-  "lanes": 3,
-  "total": 3,
-  "at": "4:34 AM",
+  "lanes": 1,
+  "total": 1,
+  "at": "4:37 AM",
   "why": "",
-  "at_iso": "2026-11-23T09:34:00+00:00",
+  "at_iso": "2026-11-23T09:37:00+00:00",
   "started": "2:29 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 2:29 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 4:34 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0, started 2:29 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 4:37 AM ET</p></section>"
  }
 }

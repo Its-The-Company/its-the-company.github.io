@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-23T21:43:48.024601+00:00",
+ "at": "2026-11-23T21:46:54.849846+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -376,7 +376,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 717,
+  "runnable_count": 715,
   "blocked_count": 2
  },
  "meter": {
@@ -425,7 +425,7 @@
   "week_pct": 80.98,
   "usage_pct": 85.3,
   "work_pct": 96.6,
-  "read_at": "2026-11-23T21:43:00+00:00",
+  "read_at": "2026-11-23T21:46:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -462,7 +462,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-23T16:43:00-05:00",
+  "at": "2026-11-23T16:46:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -473,7 +473,7 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 8 (at its floor: load 10.2 a core is over 10)",
+  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 8 (at its floor: load 16.0 a core is over 10)",
   "n": 8,
   "at": "2026-11-23T09:25:38.709305-05:00"
  },
@@ -530,15 +530,6 @@
  "tasks": {
   "run": [
    {
-    "w": "Idris",
-    "t": "Review the merge script's record take-out",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-23T16:22:04-05:00",
-    "o": "c",
-    "task": "T-5731"
-   },
-   {
     "w": "Pernille",
     "t": "Keep typo matching cheap on every keystroke",
     "m": "opus",
@@ -576,12 +567,12 @@
    },
    {
     "w": "Idris",
-    "t": "Review the retry for lands told to run again",
+    "t": "Review the turn kept by work that steps aside",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-23T16:43:15-05:00",
+    "at": "2026-11-23T16:44:06-05:00",
     "o": "c",
-    "task": "T-5733"
+    "task": "T-5738"
    }
   ],
   "src": "plan",
@@ -659,30 +650,38 @@
   ],
   "done": [
    {
+    "w": "Idris",
+    "t": "Idris reviewed the merge script's record take-out and accepted it; two follow-ups, a guard...",
+    "at": "2026-11-23T16:46:00-05:00"
+   },
+   {
+    "w": "Idris",
+    "t": "Idris reviewed the retry for landings told to run again and passed it on safety, with two...",
+    "at": "2026-11-23T16:43:00-05:00"
+   },
+   {
     "w": "Odalys",
     "t": "A lane that steps aside on the merge road while its iPhone tests run now keeps its place:...",
     "at": "2026-11-23T16:41:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "A landing told to run again, for example because main moved during its tests, is now retried at...",
-    "at": "2026-11-23T16:31:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "Nothing a worker commits disappears from a landing without a word, and the merge script now...",
-    "at": "2026-11-23T16:21:00-05:00"
    }
   ],
   "count": {
-   "next": 717,
+   "next": 715,
    "wait": 2,
    "blocked": 0,
    "you": 2
   },
   "fin": {
-   "n": 22,
+   "n": 24,
    "rows": [
+    [
+     "T-5731",
+     "Review the merge script's..."
+    ],
+    [
+     "T-5733",
+     "Review the retry for lands..."
+    ],
     [
      "T-5715",
      "Work that steps aside keeps..."
@@ -698,14 +697,6 @@
     [
      "T-5722",
      "Review the fix for guard..."
-    ],
-    [
-     "T-5256",
-     "Trim step 3, one merge..."
-    ],
-    [
-     "T-5713",
-     "Guard timing tests stop..."
     ]
    ]
   }
@@ -749,32 +740,32 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-23T21:43:28Z",
+  "at": "2026-11-23T21:46:47Z",
   "s": {
    "T-5688": [
     "mergeq",
     "1st to merge",
-    1795447408217
+    1795447427287
    ],
    "T-4715": [
     "mergeq",
     "2nd to merge",
-    1795460368217
+    1795460387287
    ],
    "T-5708": [
     "mergeq",
     "3rd to merge",
-    1795460368217
+    1795460387287
    ],
    "T-5490": [
     "mergeq",
     "4th to merge",
-    1795468948217
+    1795468967287
    ],
    "T-4185": [
     "mergeq",
     "5th to merge",
-    1795469668217
+    1795469627287
    ],
    "T-4874": [
     "testing",
@@ -805,6 +796,8 @@
    "T-4185": "Idris",
    "T-4874": "Idris",
    "T-5715": "Odalys",
+   "T-5731": "Idris",
+   "T-5733": "Idris",
    "T-5698": "Odalys",
    "T-5697": "Odalys",
    "T-5722": "Odalys",
@@ -813,13 +806,11 @@
    "T-5479": "Idris",
    "T-5700": "Odalys",
    "T-5616": "Pernille",
-   "T-5710": "Idris",
-   "T-0749": "Idris",
-   "T-3350": "Idris"
+   "T-5710": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-23T21:43:28Z",
+  "at": "2026-11-23T21:46:47Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -832,12 +823,12 @@
    },
    "m": {
     "checking": null,
-    "inline": 164,
+    "inline": 167,
     "conflicted": null,
     "failed": null,
-    "held": 735,
+    "held": 738,
     "retry": null,
-    "parked": 735
+    "parked": 738
    },
    "cur": [],
    "ld": [
@@ -847,12 +838,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-23T21:42:41Z",
-    "ld": 15.78,
+    "at": "2026-11-23T21:45:58Z",
+    "ld": 13.7,
     "c": 8,
     "sb": 1,
     "dk": [
-     35.9,
+     35.7,
      228.3
     ],
     "ss": [
@@ -878,13 +869,13 @@
  },
  "hc": {
   "wait": {
-   "n": 21,
+   "n": 20,
    "limit": 20,
-   "in_line": 6,
+   "in_line": 5,
    "parked": 15,
    "open": true,
    "mq": false,
-   "counted": "2026-11-23T21:26:01+00:00",
+   "counted": "2026-11-23T21:46:05+00:00",
    "by": {
     "app": {
      "n": 14,
@@ -892,7 +883,7 @@
      "open": true
     },
     "other": {
-     "n": 12,
+     "n": 11,
      "limit": 20,
      "open": true
     },
@@ -902,11 +893,11 @@
      "open": true
     }
    },
-   "at": "2026-11-23T21:43:48+00:00"
+   "at": "2026-11-23T21:46:54+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-23T21:43:38+00:00"
+   "at": "2026-11-23T21:46:47+00:00"
   }
  },
  "operators": [
@@ -941,10 +932,10 @@
   "main": 0,
   "lanes": 0,
   "total": 0,
-  "at": "4:43 PM",
+  "at": "4:46 PM",
   "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
-  "at_iso": "2026-11-23T21:43:00+00:00",
+  "at_iso": "2026-11-23T21:46:00+00:00",
   "started": "9:27 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0, started 9:27 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 4:43 PM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0, started 9:27 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 4:46 PM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
  }
 }

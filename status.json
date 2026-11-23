@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-23T23:20:22.258807+00:00",
+ "at": "2026-11-23T23:23:22.246690+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -434,7 +434,7 @@
   "week_pct": 86.76,
   "usage_pct": 85.3,
   "work_pct": 96.6,
-  "read_at": "2026-11-23T23:20:00+00:00",
+  "read_at": "2026-11-23T23:23:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -508,7 +508,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-23T18:20:00-05:00",
+  "at": "2026-11-23T18:23:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -575,15 +575,6 @@
  ],
  "tasks": {
   "run": [
-   {
-    "w": "Odalys",
-    "t": "A review ending without a record goes elsewhere",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-23T17:25:00-05:00",
-    "o": "c",
-    "task": "T-5735"
-   },
    {
     "w": "Odalys",
     "t": "The disk keeper deletes review scratch without asking",
@@ -759,30 +750,31 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-23T23:20:22Z",
+  "at": "2026-11-23T23:23:12Z",
   "s": {
    "T-4715": [
     "mergeq",
     "1st to merge",
-    1795460362258
+    1795460352424
    ],
-   "T-5735": [
+   "T-5749": [
     "merged",
-    "on main 5:22 PM ET",
-    1795472567000,
-    "Odalys"
+    "on main 6:15 PM ET",
+    1795475750000,
+    "Idris"
    ]
   },
   "nm": {
    "T-4715": "Put the new Pro screen words into the app",
-   "T-5735": "A review ending without a record goes elsewhere"
+   "T-5749": "Review how unfinished reviews are handed on"
   },
   "wk": {
    "T-4715": "Maren",
-   "T-5735": "Odalys",
+   "T-5749": "Idris",
    "T-5739": "Odalys",
    "T-5745": "Idris",
    "T-5738": "Idris",
+   "T-5735": "Odalys",
    "T-5734": "Odalys",
    "T-5704": "Odalys",
    "T-5731": "Idris",
@@ -794,7 +786,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-23T23:20:22Z",
+  "at": "2026-11-23T23:23:12Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -807,12 +799,12 @@
    },
    "m": {
     "checking": null,
-    "inline": 261,
+    "inline": 264,
     "conflicted": null,
     "failed": null,
-    "held": 832,
+    "held": 835,
     "retry": null,
-    "parked": 832
+    "parked": 835
    },
    "cur": [],
    "ld": [
@@ -822,12 +814,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-23T23:19:56Z",
-    "ld": 4.73,
+    "at": "2026-11-23T23:22:23Z",
+    "ld": 3.81,
     "c": 8,
     "sb": 0,
     "dk": [
-     34.4,
+     34.9,
      228.3
     ],
     "ss": [
@@ -857,7 +849,7 @@
    "parked": 16,
    "open": true,
    "mq": false,
-   "counted": "2026-11-23T23:10:03+00:00",
+   "counted": "2026-11-23T23:21:01+00:00",
    "by": {
     "app": {
      "n": 13,
@@ -875,11 +867,11 @@
      "open": true
     }
    },
-   "at": "2026-11-23T23:20:22+00:00"
+   "at": "2026-11-23T23:23:22+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-23T23:20:09+00:00"
+   "at": "2026-11-23T23:23:12+00:00"
   }
  },
  "operators": [
@@ -900,6 +892,15 @@
    "e": "high",
    "t": "Work session \u2013 1 task",
    "at": "2026-11-23T17:28:45-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Evan's Account",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session",
+   "at": "2026-11-23T18:22:21-05:00"
   },
   {
    "w": "Operator",
@@ -941,10 +942,10 @@
   "main": 0,
   "lanes": 3,
   "total": 3,
-  "at": "6:20 PM",
+  "at": "6:23 PM",
   "why": "",
-  "at_iso": "2026-11-23T23:20:00+00:00",
+  "at_iso": "2026-11-23T23:23:00+00:00",
   "started": "9:27 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 9:27 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 6:20 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 9:27 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 6:23 PM ET</p></section>"
  }
 }

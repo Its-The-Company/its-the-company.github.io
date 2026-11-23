@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-23T23:51:03.927038+00:00",
+ "at": "2026-11-23T23:54:10.519581+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -434,7 +434,7 @@
   "week_pct": 92.55,
   "usage_pct": 85.3,
   "work_pct": 96.6,
-  "read_at": "2026-11-23T23:51:00+00:00",
+  "read_at": "2026-11-23T23:54:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -468,7 +468,7 @@
   }
  ],
  "disk": {
-  "free_gb": 33,
+  "free_gb": 35,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -477,14 +477,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-23T18:45:00-05:00",
+   "at": "2026-11-23T18:52:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-23T18:51:00-05:00",
+  "at": "2026-11-23T18:54:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -716,24 +716,31 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-23T23:50:51Z",
+  "at": "2026-11-23T23:53:51Z",
   "s": {
-   "T-5758": [
+   "T-5755": [
     "mergeq",
     "1st to merge",
-    1795477551116
+    1795477911529
+   ],
+   "T-5758": [
+    "mergeq",
+    "2nd to merge",
+    1795477551529
    ],
    "T-4715": [
     "mergeq",
-    "2nd to merge",
-    1795477431116
+    "3rd to merge",
+    1795477431529
    ]
   },
   "nm": {
+   "T-5755": "A merge turn ends at its time limit",
    "T-5758": "Review the order for work waiting on the merge road",
    "T-4715": "Put the new Pro screen words into the app"
   },
   "wk": {
+   "T-5755": "Odalys",
    "T-5758": "Idris",
    "T-4715": "Maren",
    "T-5760": "Odalys",
@@ -751,11 +758,11 @@
   }
  },
  "ln": {
-  "at": "2026-11-23T23:50:51Z",
+  "at": "2026-11-23T23:53:51Z",
   "mq": {
    "n": {
     "checking": 0,
-    "inline": 2,
+    "inline": 3,
     "conflicted": 0,
     "failed": 0,
     "held": 3,
@@ -764,12 +771,12 @@
    },
    "m": {
     "checking": null,
-    "inline": 6,
+    "inline": 8,
     "conflicted": null,
     "failed": null,
-    "held": 862,
+    "held": 865,
     "retry": null,
-    "parked": 862
+    "parked": 865
    },
    "cur": [],
    "ld": [
@@ -779,12 +786,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-23T23:50:04Z",
-    "ld": 3.17,
+    "at": "2026-11-23T23:53:41Z",
+    "ld": 3.16,
     "c": 8,
     "sb": 0,
     "dk": [
-     32.6,
+     34.8,
      228.3
     ],
     "ss": [
@@ -808,13 +815,13 @@
  },
  "hc": {
   "wait": {
-   "n": 17,
+   "n": 19,
    "limit": 20,
-   "in_line": 1,
+   "in_line": 3,
    "parked": 16,
    "open": true,
    "mq": false,
-   "counted": "2026-11-23T23:41:25+00:00",
+   "counted": "2026-11-23T23:51:47+00:00",
    "by": {
     "app": {
      "n": 13,
@@ -822,21 +829,21 @@
      "open": true
     },
     "other": {
-     "n": 9,
+     "n": 11,
      "limit": 20,
      "open": true
     },
     "hub": {
-     "n": 1,
+     "n": 2,
      "limit": 5,
      "open": true
     }
    },
-   "at": "2026-11-23T23:51:03+00:00"
+   "at": "2026-11-23T23:54:10+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-23T23:50:51+00:00"
+   "at": "2026-11-23T23:54:10+00:00"
   }
  },
  "operators": [
@@ -880,10 +887,10 @@
   "main": 0,
   "lanes": 1,
   "total": 1,
-  "at": "6:51 PM",
+  "at": "6:54 PM",
   "why": "",
-  "at_iso": "2026-11-23T23:51:00+00:00",
+  "at_iso": "2026-11-23T23:54:00+00:00",
   "started": "9:27 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0, started 9:27 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 6:51 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0, started 9:27 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 6:54 PM ET</p></section>"
  }
 }

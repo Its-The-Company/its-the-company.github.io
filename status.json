@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-23T09:37:46.587442+00:00",
+ "at": "2026-11-23T09:40:53.965444+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -435,7 +435,7 @@
   "week_pct": 102.36,
   "usage_pct": 84.0,
   "work_pct": 95.0,
-  "read_at": "2026-11-23T09:37:00+00:00",
+  "read_at": "2026-11-23T09:40:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -446,6 +446,30 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-23T04:29:48-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a2",
+    "task": "T-4692",
+    "w": "Idris",
+    "k": "build",
+    "t": "Pro showcase widgets work free, editing them needs Pro",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-23T04:39:51-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a3",
+    "task": "T-5479",
+    "w": "Idris",
+    "k": "test",
+    "t": "Make the escape corpus Link case fail instead of skip",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-23T04:40:36-05:00",
     "n": "Evan",
     "src": "plan-a"
    }
@@ -478,14 +502,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-23T04:32:00-05:00",
+   "at": "2026-11-23T04:39:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-23T04:37:00-05:00",
+  "at": "2026-11-23T04:40:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -560,15 +584,6 @@
     "at": "2026-11-23T03:47:21-05:00",
     "o": "c",
     "task": "T-5491"
-   },
-   {
-    "w": "Idris",
-    "t": "Ship test widgets in internal TestFlight builds only",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-23T04:02:21-05:00",
-    "o": "c",
-    "task": "T-5657"
    },
    {
     "w": "Pernille",
@@ -738,33 +753,44 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-23T09:35:27Z",
-  "s": {},
+  "at": "2026-11-23T09:40:53Z",
+  "s": {
+   "T-4692": [
+    "merged",
+    "on main 3:27 AM ET",
+    1795422463000,
+    ""
+   ]
+  },
+  "nm": {
+   "T-4692": "Pro showcase widgets work free, editing them needs Pro"
+  },
   "wk": {
+   "T-4692": "Idris",
    "T-5673": "Odalys",
    "T-5381": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-23T09:35:27Z",
+  "at": "2026-11-23T09:40:53Z",
   "mq": {
    "n": {
     "checking": 0,
     "inline": 0,
     "conflicted": 0,
     "failed": 0,
-    "held": 3,
+    "held": 4,
     "retry": 0,
-    "parked": 11
+    "parked": 20
    },
    "m": {
     "checking": null,
     "inline": null,
     "conflicted": null,
     "failed": null,
-    "held": 7,
+    "held": 12,
     "retry": null,
-    "parked": 50
+    "parked": 3
    },
    "cur": [],
    "ld": [
@@ -774,12 +800,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-23T09:37:11Z",
-    "ld": 34.38,
+    "at": "2026-11-23T09:40:47Z",
+    "ld": 57.14,
     "c": 8,
     "sb": 1,
     "dk": [
-     54.2,
+     54.1,
      228.3
     ],
     "ss": [
@@ -791,12 +817,12 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-23T09:09:39Z",
-    "ld": 2.33,
+    "at": "2026-11-23T09:40:14Z",
+    "ld": 0.33,
     "c": 12,
     "sb": 0,
     "dk": [
-     351.7,
+     351.6,
      926.4
     ],
     "sn": []
@@ -805,21 +831,21 @@
  },
  "hc": {
   "wait": {
-   "n": 14,
+   "n": 24,
    "limit": 20,
    "in_line": 0,
-   "parked": 14,
+   "parked": 24,
    "open": true,
    "mq": false,
-   "counted": "2026-11-23T09:28:31+00:00",
+   "counted": "2026-11-23T09:39:03+00:00",
    "by": {
     "app": {
-     "n": 11,
+     "n": 19,
      "limit": 20,
      "open": true
     },
     "other": {
-     "n": 5,
+     "n": 7,
      "limit": 20,
      "open": true
     },
@@ -829,11 +855,11 @@
      "open": true
     }
    },
-   "at": "2026-11-23T09:37:46+00:00"
+   "at": "2026-11-23T09:40:53+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-23T09:35:27+00:00"
+   "at": "2026-11-23T09:40:46+00:00"
   }
  },
  "operators": [
@@ -854,6 +880,24 @@
    "e": "high",
    "t": "Work session \u2013 1 task",
    "at": "2026-11-23T04:29:48-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Evan's Account",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session \u2013 1 task",
+   "at": "2026-11-23T04:39:51-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Evan's Account",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session \u2013 1 task",
+   "at": "2026-11-23T04:40:35-05:00"
   }
  ],
  "reply": {
@@ -874,12 +918,12 @@
  ],
  "agents_now": {
   "main": 0,
-  "lanes": 1,
-  "total": 1,
-  "at": "4:37 AM",
+  "lanes": 3,
+  "total": 3,
+  "at": "4:40 AM",
   "why": "",
-  "at_iso": "2026-11-23T09:37:00+00:00",
+  "at_iso": "2026-11-23T09:40:00+00:00",
   "started": "2:29 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0, started 2:29 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 4:37 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 2:29 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 4:40 AM ET</p></section>"
  }
 }

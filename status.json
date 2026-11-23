@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-23T16:12:34.492449+00:00",
+ "at": "2026-11-23T16:15:38.226258+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -425,7 +425,7 @@
   "week_pct": 63.62,
   "usage_pct": 85.3,
   "work_pct": 96.6,
-  "read_at": "2026-11-23T16:12:00+00:00",
+  "read_at": "2026-11-23T16:15:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -488,7 +488,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-23T11:12:00-05:00",
+  "at": "2026-11-23T11:15:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -499,7 +499,7 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 8 (at its floor: load 16.7 a core is over 10)",
+  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 8 (at its floor: load 18.8 a core is over 10)",
   "n": 8,
   "at": "2026-11-23T09:25:38.709305-05:00"
  },
@@ -574,15 +574,6 @@
     "task": "T-4185"
    },
    {
-    "w": "Idris",
-    "t": "Second tap on a half-hidden row keeps the text",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-23T10:52:43-05:00",
-    "o": "c",
-    "task": "T-5325"
-   },
-   {
     "w": "Pernille",
     "t": "Make the sensor row prove its phone lock reading",
     "m": "opus",
@@ -608,6 +599,15 @@
     "at": "2026-11-23T11:02:35-05:00",
     "o": "c",
     "task": "T-5697"
+   },
+   {
+    "w": "Pernille",
+    "t": "Second tap on a half-hidden row keeps the text",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-23T11:14:09-05:00",
+    "o": "c",
+    "task": "T-5325"
    }
   ],
   "src": "plan",
@@ -775,32 +775,27 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-23T16:12:17Z",
+  "at": "2026-11-23T16:15:26Z",
   "s": {
    "T-4184": [
     "mergetest",
     "Xcode checks on the MacBook, 1st to merge",
-    1795448357497
+    1795448366127
    ],
    "T-4192": [
     "mergeq",
     "2nd to merge",
-    1795445177497
+    1795445186127
    ],
    "T-5491": [
     "mergeq",
     "3rd to merge",
-    1795446197497
+    1795446206127
    ],
    "T-5688": [
     "mergeq",
     "4th to merge",
-    1795447457497
-   ],
-   "T-5524": [
-    "mergetest",
-    "iPhone tests on the MacBook",
-    null
+    1795447466127
    ],
    "T-4185": [
     "testing",
@@ -810,12 +805,12 @@
    "T-4715": [
     "testq",
     "1st for a Simulator",
-    1795450097497
+    1795450106127
    ],
    "T-5256": [
     "testq",
     "1st for a Simulator",
-    1795450097497
+    1795450106127
    ]
   },
   "nm": {
@@ -823,7 +818,6 @@
    "T-4192": "Python in the app: smaller bundle, installable packages",
    "T-5491": "Drop the swallow test's five-second bound",
    "T-5688": "Land finished work whose copy also changed the board",
-   "T-5524": "Make the widget's Debug ask record say what it saw",
    "T-4185": "Launcher widgets open the apps a person chose",
    "T-4715": "Put the new Pro screen words into the app",
    "T-5256": "Trim step 3, one merge script beside the old road"
@@ -833,7 +827,6 @@
    "T-4192": "Idris",
    "T-5491": "Pernille",
    "T-5688": "Odalys",
-   "T-5524": "Idris",
    "T-4185": "Idris",
    "T-4715": "Maren",
    "T-5256": "Odalys",
@@ -850,7 +843,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-23T16:12:17Z",
+  "at": "2026-11-23T16:15:26Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -862,13 +855,13 @@
     "parked": 13
    },
    "m": {
-    "checking": 33,
-    "inline": 69,
+    "checking": 36,
+    "inline": 72,
     "conflicted": null,
     "failed": null,
-    "held": 404,
+    "held": 407,
     "retry": null,
-    "parked": 404
+    "parked": 407
    },
    "cur": [
     [
@@ -877,7 +870,7 @@
      ],
      "iPhone app tests, sent and waiting its turn",
      "MacBook",
-     33
+     36
     ]
    ],
    "ld": [
@@ -887,12 +880,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-23T16:11:57Z",
-    "ld": 19.2,
+    "at": "2026-11-23T16:15:03Z",
+    "ld": 19.4,
     "c": 8,
     "sb": 1,
     "dk": [
-     40.5,
+     38.3,
      228.3
     ],
     "ss": [
@@ -902,6 +895,17 @@
     "sn": [
      "iPhone 17e"
     ]
+   },
+   "macbook": {
+    "at": "2026-11-23T16:13:56Z",
+    "ld": 4.85,
+    "c": 12,
+    "sb": 0,
+    "dk": [
+     350.4,
+     926.4
+    ],
+    "sn": []
    }
   }
  },
@@ -913,7 +917,7 @@
    "parked": 16,
    "open": true,
    "mq": false,
-   "counted": "2026-11-23T16:03:37+00:00",
+   "counted": "2026-11-23T16:14:03+00:00",
    "by": {
     "app": {
      "n": 13,
@@ -931,11 +935,11 @@
      "open": true
     }
    },
-   "at": "2026-11-23T16:12:34+00:00"
+   "at": "2026-11-23T16:15:38+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-23T16:12:34+00:00"
+   "at": "2026-11-23T16:15:26+00:00"
   }
  },
  "operators": [
@@ -988,10 +992,10 @@
   "main": 0,
   "lanes": 2,
   "total": 2,
-  "at": "11:12 AM",
+  "at": "11:15 AM",
   "why": "",
-  "at_iso": "2026-11-23T16:12:00+00:00",
+  "at_iso": "2026-11-23T16:15:00+00:00",
   "started": "9:27 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0, started 9:27 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 11:12 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0, started 9:27 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 11:15 AM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-23T11:17:32.696380+00:00",
+ "at": "2026-11-23T11:20:35.468294+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -444,7 +444,7 @@
   "week_pct": 143.31,
   "usage_pct": 84.0,
   "work_pct": 95.0,
-  "read_at": "2026-11-23T11:17:00+00:00",
+  "read_at": "2026-11-23T11:20:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -465,7 +465,7 @@
   }
  ],
  "disk": {
-  "free_gb": 55,
+  "free_gb": 54,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -474,14 +474,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-23T06:11:00-05:00",
+   "at": "2026-11-23T06:18:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-23T06:17:00-05:00",
+  "at": "2026-11-23T06:20:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -556,6 +556,24 @@
     "at": "2026-11-23T05:57:38-05:00",
     "o": "c",
     "task": "T-4184"
+   },
+   {
+    "w": "Idris",
+    "t": "Python in the app: smaller bundle, installable packages",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-23T06:18:43-05:00",
+    "o": "c",
+    "task": "T-4192"
+   },
+   {
+    "w": "Odalys",
+    "t": "Trim step 3, one merge script beside the old road",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-23T06:18:43-05:00",
+    "o": "c",
+    "task": "T-5256"
    }
   ],
   "src": "plan",
@@ -707,190 +725,54 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-23T11:17:00Z",
+  "at": "2026-11-23T11:20:28Z",
   "s": {
-   "T-5484": [
-    "mergetest",
-    "",
-    1795432140194
-   ],
-   "T-0337": [
-    "mergetest",
-    "",
-    1795432140194
-   ],
-   "T-2097": [
-    "mergetest",
-    "",
-    1795432140194
-   ],
-   "T-4010": [
-    "mergetest",
-    "",
-    1795432140194
-   ],
-   "T-4477": [
-    "mergetest",
-    "",
-    1795432140194
-   ],
-   "T-4286": [
-    "mergetest",
-    "",
-    1795432140194
-   ],
-   "T-4435": [
-    "mergetest",
-    "",
-    1795432140194
-   ],
-   "T-0678": [
-    "mergetest",
-    "",
-    1795432140194
-   ],
-   "T-3765": [
-    "mergetest",
-    "",
-    1795432140194
-   ],
-   "T-4662": [
-    "mergetest",
-    "",
-    1795432140194
-   ],
-   "T-4781": [
-    "mergetest",
-    "",
-    1795432140194
-   ],
-   "T-4762": [
-    "mergetest",
-    "",
-    1795432140194
-   ],
-   "T-4635": [
-    "mergetest",
-    "",
-    1795432140194
-   ],
-   "T-4182": [
-    "mergetest",
-    "",
-    1795432140194
-   ],
-   "T-5620": [
-    "mergetest",
-    "",
-    1795432140194
-   ],
-   "T-0657": [
-    "mergetest",
-    "",
-    1795432140194
-   ],
    "T-4184": [
-    "testing",
-    "",
-    null
+    "merged",
+    "on main 4:04 AM ET",
+    1795424645000,
+    "Pernille"
+   ],
+   "T-5256": [
+    "merged",
+    "on main 7:02 PM ET",
+    1795392138000,
+    ""
    ]
   },
   "nm": {
-   "T-5484": "Stop bottleneck lines opening below the rule in force",
-   "T-0337": "Confirm the revenue memo's facts from Apple pages",
-   "T-2097": "Read free memory in the widget extension on a device",
-   "T-4010": "Rebuild This Session as a full flowchart",
-   "T-4477": "People build a widget from blocks without code",
-   "T-4286": "Check an imported font draws in a widget",
-   "T-4435": "Draw the wrapped refresh glyph on both runtimes",
-   "T-0678": "Run the refresh button inside the widget extension",
-   "T-3765": "Check a real widget tap on the TestFlight build",
-   "T-4662": "Place the cursor easily on a long line",
-   "T-4781": "Retest a fixed red on what failed, not every test",
-   "T-4762": "Let the run lock wrap a Python run",
-   "T-4635": "Clear the Settings restore line once Pro is bought",
-   "T-4182": "A failing widget says so and can recover",
-   "T-5620": "Queued test requests replay while the coordinator runs",
-   "T-0657": "Build the Settings screen",
-   "T-4184": "A person's own script becomes a Home Screen widget"
+   "T-4184": "A person's own script becomes a Home Screen widget",
+   "T-5256": "Trim step 3, one merge script beside the old road"
   },
   "wk": {
-   "T-5484": "Odalys",
-   "T-0337": "Wrenna",
-   "T-2097": "Idris",
-   "T-4010": "Odalys",
-   "T-4477": "Idris",
-   "T-4286": "Idris",
-   "T-4435": "Idris",
-   "T-0678": "Idris",
-   "T-3765": "Idris",
-   "T-4662": "Idris",
-   "T-4781": "Odalys",
-   "T-4762": "Idris",
-   "T-4635": "Idris",
-   "T-4182": "Idris",
-   "T-5620": "Odalys",
-   "T-0657": "Idris",
    "T-4184": "Idris",
+   "T-5256": "Odalys",
    "T-5673": "Odalys",
    "T-5381": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-23T11:17:00Z",
+  "at": "2026-11-23T11:20:28Z",
   "mq": {
    "n": {
-    "checking": 16,
+    "checking": 0,
     "inline": 0,
     "conflicted": 0,
     "failed": 0,
-    "held": 0,
+    "held": 3,
     "retry": 0,
-    "parked": 6
+    "parked": 11
    },
    "m": {
-    "checking": 8,
+    "checking": null,
     "inline": null,
     "conflicted": null,
     "failed": null,
-    "held": null,
+    "held": 112,
     "retry": null,
-    "parked": 178
+    "parked": 155
    },
-   "cur": [
-    [
-     [
-      "T-5484"
-     ],
-     "iPhone app tests",
-     "MacBook",
-     8
-    ],
-    [
-     [
-      "T-0337"
-     ],
-     "iPhone app tests",
-     "MacBook",
-     8
-    ],
-    [
-     [
-      "T-2097"
-     ],
-     "iPhone app tests",
-     "MacBook",
-     8
-    ],
-    [
-     [
-      "T-4010"
-     ],
-     "iPhone app tests",
-     "MacBook",
-     8
-    ]
-   ],
+   "cur": [],
    "ld": [
     0,
     null
@@ -898,29 +780,27 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-23T11:17:16Z",
-    "ld": 8.98,
+    "at": "2026-11-23T11:20:23Z",
+    "ld": 8.41,
     "c": 8,
-    "sb": 1,
+    "sb": 0,
     "dk": [
-     54.1,
+     51.9,
      228.3
     ],
     "ss": [
      173.1,
      953.7
     ],
-    "sn": [
-     "iPhone 17e"
-    ]
+    "sn": []
    },
    "macbook": {
-    "at": "2026-11-23T11:09:31Z",
-    "ld": 0.18,
+    "at": "2026-11-23T11:17:23Z",
+    "ld": 0.64,
     "c": 12,
     "sb": 0,
     "dk": [
-     351.7,
+     351.6,
      926.4
     ],
     "sn": []
@@ -953,11 +833,11 @@
      "open": true
     }
    },
-   "at": "2026-11-23T11:17:32+00:00"
+   "at": "2026-11-23T11:20:35+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-23T11:17:32+00:00"
+   "at": "2026-11-23T11:20:22+00:00"
   }
  },
  "operators": [
@@ -991,10 +871,10 @@
   "main": 0,
   "lanes": 0,
   "total": 0,
-  "at": "6:17 AM",
+  "at": "6:20 AM",
   "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
-  "at_iso": "2026-11-23T11:17:00+00:00",
+  "at_iso": "2026-11-23T11:20:00+00:00",
   "started": "2:29 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0, started 2:29 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 6:17 AM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0, started 2:29 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 6:20 AM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
  }
 }

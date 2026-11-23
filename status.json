@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-23T10:12:11.797863+00:00",
+ "at": "2026-11-23T10:15:51.344455+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -19,6 +19,38 @@
      {
       "s": "testq",
       "at": 1795349545
+     }
+    ]
+   },
+   {
+    "t": "T-3765",
+    "name": "Check a real widget tap on the TestFlight build",
+    "w": "Idris",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "claimed",
+      "at": 1795428893
+     },
+     {
+      "s": "worker",
+      "at": 1795428893
+     }
+    ]
+   },
+   {
+    "t": "T-0678",
+    "name": "Run the refresh button inside the widget extension",
+    "w": "Idris",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "claimed",
+      "at": 1795428762
+     },
+     {
+      "s": "worker",
+      "at": 1795428762
      }
     ]
    },
@@ -231,22 +263,6 @@
     ]
    },
    {
-    "t": "T-3765",
-    "name": "Check a real widget tap on the TestFlight build",
-    "w": "Idris",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "claimed",
-      "at": 1795424007
-     },
-     {
-      "s": "worker",
-      "at": 1795424007
-     }
-    ]
-   },
-   {
     "t": "T-3495",
     "name": "Check the upload fix before build 4 goes out",
     "w": "Pernille",
@@ -259,22 +275,6 @@
      {
       "s": "worker",
       "at": 1795423957
-     }
-    ]
-   },
-   {
-    "t": "T-0678",
-    "name": "Run the refresh button inside the widget extension",
-    "w": "Idris",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "claimed",
-      "at": 1795423907
-     },
-     {
-      "s": "worker",
-      "at": 1795423907
      }
     ]
    },
@@ -435,7 +435,7 @@
   "week_pct": 122.84,
   "usage_pct": 84.0,
   "work_pct": 95.0,
-  "read_at": "2026-11-23T10:12:00+00:00",
+  "read_at": "2026-11-23T10:15:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -486,7 +486,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-23T05:12:00-05:00",
+  "at": "2026-11-23T05:15:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -555,30 +555,12 @@
   "run": [
    {
     "w": "Idris",
-    "t": "Settings and Pro: buy, restore, themes",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-23T05:11:32-05:00",
-    "o": "c",
-    "task": "T-4190"
-   },
-   {
-    "w": "Idris",
     "t": "Python in the app: smaller bundle, installable packages",
     "m": "opus",
     "e": "high",
     "at": "2026-11-23T05:11:32-05:00",
     "o": "c",
     "task": "T-4192"
-   },
-   {
-    "w": "Odalys",
-    "t": "Trim step 3, one merge script beside the old road",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-23T05:11:32-05:00",
-    "o": "c",
-    "task": "T-5256"
    },
    {
     "w": "Ines",
@@ -597,6 +579,24 @@
     "at": "2026-11-23T05:11:32-05:00",
     "o": "c",
     "task": "T-5657"
+   },
+   {
+    "w": "Pernille",
+    "t": "Drop the swallow test's five-second bound",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-23T05:12:58-05:00",
+    "o": "c",
+    "task": "T-5491"
+   },
+   {
+    "w": "Idris",
+    "t": "Check finished work before it ships",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-23T05:15:08-05:00",
+    "o": "c",
+    "task": "T-5391"
    }
   ],
   "src": "plan",
@@ -748,34 +748,41 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-23T10:12:11Z",
+  "at": "2026-11-23T10:15:51Z",
   "s": {
+   "T-4192": [
+    "testing",
+    "Mac Mini \u00b7 test",
+    null
+   ],
+   "T-5391": [
+    "merged",
+    "on main 4:53 AM ET",
+    1795427594000,
+    "Idris"
+   ],
    "T-5644": [
     "merged",
     "on main 1:43 AM ET",
     1795416206000,
     ""
-   ],
-   "T-5256": [
-    "merged",
-    "on main 7:02 PM ET",
-    1795392138000,
-    ""
    ]
   },
   "nm": {
-   "T-5644": "Account b used up by midweek without skewing the comparison",
-   "T-5256": "Trim step 3, one merge script beside the old road"
+   "T-4192": "Python in the app: smaller bundle, installable packages",
+   "T-5391": "Check finished work before it ships",
+   "T-5644": "Account b used up by midweek without skewing the comparison"
   },
   "wk": {
+   "T-4192": "Idris",
+   "T-5391": "Idris",
    "T-5644": "Ines",
-   "T-5256": "Odalys",
    "T-5673": "Odalys",
    "T-5381": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-23T10:12:11Z",
+  "at": "2026-11-23T10:15:51Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -791,9 +798,9 @@
     "inline": null,
     "conflicted": null,
     "failed": null,
-    "held": 44,
+    "held": 47,
     "retry": null,
-    "parked": 86
+    "parked": 90
    },
    "cur": [],
    "ld": [
@@ -803,19 +810,21 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-23T10:12:12Z",
-    "ld": 3.59,
+    "at": "2026-11-23T10:15:52Z",
+    "ld": 19.15,
     "c": 8,
-    "sb": 0,
+    "sb": 1,
     "dk": [
-     53.1,
+     53.0,
      228.3
     ],
     "ss": [
      173.1,
      953.7
     ],
-    "sn": []
+    "sn": [
+     "iPhone 17e"
+    ]
    },
    "macbook": {
     "at": "2026-11-23T10:10:50Z",
@@ -856,11 +865,11 @@
      "open": true
     }
    },
-   "at": "2026-11-23T10:12:11+00:00"
+   "at": "2026-11-23T10:15:51+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-23T10:12:05+00:00"
+   "at": "2026-11-23T10:15:51+00:00"
   }
  },
  "operators": [
@@ -879,7 +888,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 6 tasks",
+   "t": "Work session \u2013 8 tasks",
    "at": "2026-11-23T05:02:35-05:00"
   }
  ],
@@ -903,10 +912,10 @@
   "main": 0,
   "lanes": 1,
   "total": 1,
-  "at": "5:12 AM",
+  "at": "5:15 AM",
   "why": "",
-  "at_iso": "2026-11-23T10:12:00+00:00",
+  "at_iso": "2026-11-23T10:15:00+00:00",
   "started": "2:29 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0, started 2:29 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 5:12 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0, started 2:29 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 5:15 AM ET</p></section>"
  }
 }

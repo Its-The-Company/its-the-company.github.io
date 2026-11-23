@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-23T06:22:48.154650+00:00",
+ "at": "2026-11-23T06:25:51.331124+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -373,7 +373,7 @@
   "week_pct": 7.04,
   "usage_pct": 84.6,
   "work_pct": 94.7,
-  "read_at": "2026-11-23T06:22:00+00:00",
+  "read_at": "2026-11-23T06:25:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -432,7 +432,7 @@
   }
  ],
  "disk": {
-  "free_gb": 60,
+  "free_gb": 62,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -441,14 +441,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-23T01:15:00-05:00",
+   "at": "2026-11-23T01:23:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 3,
-  "at": "2026-11-23T01:22:00-05:00",
+  "at": "2026-11-23T01:25:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -459,8 +459,8 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 35 (cut a step: load 34.8 a core is over 10)",
-  "n": 35,
+  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 34 (cut a step: load 32.2 a core is over 10)",
+  "n": 34,
   "at": "2026-11-23T01:03:33.210113-05:00"
  },
  "lanes": [
@@ -719,15 +719,19 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-23T06:22:48Z",
+  "at": "2026-11-23T06:25:36Z",
   "s": {
-   "T-4182": [
-    "merged",
-    "on main 12:11 AM ET",
-    1795410693000,
-    ""
+   "T-4692": [
+    "mergetest",
+    "iPhone tests on the MacBook",
+    null
    ],
    "T-4772": [
+    "testing",
+    "Mac Mini \u00b7 test",
+    null
+   ],
+   "T-4182": [
     "merged",
     "on main 12:11 AM ET",
     1795410693000,
@@ -741,20 +745,22 @@
    ]
   },
   "nm": {
-   "T-4182": "A failing widget says so and can recover",
+   "T-4692": "Pro showcase widgets work free, editing them needs Pro",
    "T-4772": "Prove a refresh tap redraws the widget",
+   "T-4182": "A failing widget says so and can recover",
    "T-4184": "A person's own script becomes a Home Screen widget"
   },
   "wk": {
-   "T-4182": "Idris",
+   "T-4692": "Idris",
    "T-4772": "Idris",
+   "T-4182": "Idris",
    "T-4184": "Idris",
    "T-5643": "Ines",
    "T-0043": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-23T06:22:48Z",
+  "at": "2026-11-23T06:25:36Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -772,7 +778,7 @@
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 165
+    "parked": 168
    },
    "cur": [],
    "ld": [
@@ -782,12 +788,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-23T06:22:49Z",
-    "ld": 33.13,
+    "at": "2026-11-23T06:25:31Z",
+    "ld": 35.61,
     "c": 8,
     "sb": 1,
     "dk": [
-     61.9,
+     60.3,
      228.3
     ],
     "ss": [
@@ -795,12 +801,12 @@
      953.7
     ],
     "sn": [
-     "pywidget-wk-check"
+     "pywidget-wk-check-26"
     ]
    },
    "macbook": {
-    "at": "2026-11-23T06:20:47Z",
-    "ld": 3.41,
+    "at": "2026-11-23T06:22:53Z",
+    "ld": 2.3,
     "c": 12,
     "sb": 0,
     "dk": [
@@ -837,11 +843,11 @@
      "open": true
     }
    },
-   "at": "2026-11-23T06:22:48+00:00"
+   "at": "2026-11-23T06:25:51+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-23T06:22:41+00:00"
+   "at": "2026-11-23T06:25:51+00:00"
   }
  },
  "operators": [
@@ -902,10 +908,10 @@
   "main": 0,
   "lanes": 3,
   "total": 3,
-  "at": "1:22 AM",
+  "at": "1:25 AM",
   "why": "",
-  "at_iso": "2026-11-23T06:22:00+00:00",
+  "at_iso": "2026-11-23T06:25:00+00:00",
   "started": "1:04 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 1:04 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 1:22 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 1:04 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 1:25 AM ET</p></section>"
  }
 }

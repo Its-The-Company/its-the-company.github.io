@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-23T06:35:05.466140+00:00",
+ "at": "2026-11-23T06:38:13.466161+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -373,7 +373,7 @@
   "week_pct": 7.04,
   "usage_pct": 84.6,
   "work_pct": 94.7,
-  "read_at": "2026-11-23T06:35:00+00:00",
+  "read_at": "2026-11-23T06:38:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -432,7 +432,7 @@
   }
  ],
  "disk": {
-  "free_gb": 60,
+  "free_gb": 59,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -441,14 +441,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-23T01:30:00-05:00",
+   "at": "2026-11-23T01:37:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 3,
-  "at": "2026-11-23T01:35:00-05:00",
+  "at": "2026-11-23T01:38:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -559,15 +559,6 @@
     "at": "2026-11-23T01:30:46-05:00",
     "o": "c",
     "task": "T-4188"
-   },
-   {
-    "w": "Idris",
-    "t": "Python in the app: smaller bundle, installable packages",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-23T01:34:38-05:00",
-    "o": "c",
-    "task": "T-4192"
    }
   ],
   "src": "plan",
@@ -719,19 +710,20 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-23T06:35:05Z",
+  "at": "2026-11-23T06:37:56Z",
   "s": {
    "T-0866": [
     "mergetest",
     "iPhone tests on the MacBook",
     null
    ],
-   "T-4772": [
-    "testing",
-    "Mac Mini \u00b7 test",
-    null
-   ],
    "T-4182": [
+    "merged",
+    "on main 12:11 AM ET",
+    1795410693000,
+    ""
+   ],
+   "T-4772": [
     "merged",
     "on main 12:11 AM ET",
     1795410693000,
@@ -746,21 +738,21 @@
   },
   "nm": {
    "T-0866": "Tell people when a sibling file leaves widgets stale",
-   "T-4772": "Prove a refresh tap redraws the widget",
    "T-4182": "A failing widget says so and can recover",
+   "T-4772": "Prove a refresh tap redraws the widget",
    "T-4184": "A person's own script becomes a Home Screen widget"
   },
   "wk": {
    "T-0866": "Idris",
-   "T-4772": "Idris",
    "T-4182": "Idris",
+   "T-4772": "Idris",
    "T-4184": "Idris",
    "T-5643": "Ines",
    "T-0043": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-23T06:35:05Z",
+  "at": "2026-11-23T06:37:56Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -778,7 +770,7 @@
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 177
+    "parked": 180
    },
    "cur": [],
    "ld": [
@@ -788,21 +780,19 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-23T06:34:42Z",
-    "ld": 31.65,
+    "at": "2026-11-23T06:37:57Z",
+    "ld": 19.66,
     "c": 8,
-    "sb": 1,
+    "sb": 0,
     "dk": [
-     58.5,
+     58.9,
      228.3
     ],
     "ss": [
      173.1,
      953.7
     ],
-    "sn": [
-     "pywidget-wk-check-26"
-    ]
+    "sn": []
    },
    "macbook": {
     "at": "2026-11-23T06:33:45Z",
@@ -843,11 +833,11 @@
      "open": true
     }
    },
-   "at": "2026-11-23T06:35:05+00:00"
+   "at": "2026-11-23T06:38:13+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-23T06:35:05+00:00"
+   "at": "2026-11-23T06:37:56+00:00"
   }
  },
  "operators": [
@@ -908,10 +898,10 @@
   "main": 0,
   "lanes": 3,
   "total": 3,
-  "at": "1:35 AM",
+  "at": "1:38 AM",
   "why": "",
-  "at_iso": "2026-11-23T06:35:00+00:00",
+  "at_iso": "2026-11-23T06:38:00+00:00",
   "started": "1:04 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 1:04 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 1:35 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 1:04 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 1:38 AM ET</p></section>"
  }
 }

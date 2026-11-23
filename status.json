@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-23T03:54:59.565425+00:00",
+ "at": "2026-11-23T03:58:01.698501+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -125,20 +125,8 @@
   "week_pct": 2.42,
   "usage_pct": 68.7,
   "work_pct": 88.2,
-  "read_at": "2026-11-23T03:55:00+00:00",
+  "read_at": "2026-11-23T03:58:00+00:00",
   "running": [
-   {
-    "lane": "a",
-    "task": "T-4192",
-    "w": "Pernille",
-    "k": "build",
-    "t": "Python in the app: smaller bundle, installable packages",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-22T21:39:41-05:00",
-    "n": "Evan",
-    "src": "plan-a"
-   },
    {
     "lane": "a3",
     "task": "T-4188",
@@ -202,7 +190,7 @@
  "lock_in": {
   "on": true,
   "pool": 3,
-  "at": "2026-11-22T22:55:00-05:00",
+  "at": "2026-11-22T22:58:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -434,12 +422,17 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-23T03:54:43Z",
+  "at": "2026-11-23T03:58:01Z",
   "s": {
    "T-4184": [
     "mergeq",
     "1st to merge",
-    1795404883798
+    1795404901698
+   ],
+   "T-4192": [
+    "mergeq",
+    "2nd to merge",
+    1795406221698
    ],
    "T-4188": [
     "mergetest",
@@ -449,10 +442,12 @@
   },
   "nm": {
    "T-4184": "A person's own script becomes a Home Screen widget",
+   "T-4192": "Python in the app: smaller bundle, installable packages",
    "T-4188": "Location, steps and notifications work in scripts and..."
   },
   "wk": {
    "T-4184": "Idris",
+   "T-4192": "Pernille",
    "T-4188": "Idris",
    "T-3280": "Idris",
    "T-5622": "Odalys",
@@ -464,11 +459,11 @@
   }
  },
  "ln": {
-  "at": "2026-11-23T03:54:43Z",
+  "at": "2026-11-23T03:58:01Z",
   "mq": {
    "n": {
     "checking": 0,
-    "inline": 1,
+    "inline": 2,
     "conflicted": 0,
     "failed": 0,
     "held": 0,
@@ -477,12 +472,12 @@
    },
    "m": {
     "checking": null,
-    "inline": 20,
+    "inline": 12,
     "conflicted": null,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1210
+    "parked": 1214
    },
    "cur": [],
    "ld": [
@@ -492,12 +487,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-23T03:54:44Z",
-    "ld": 1.57,
+    "at": "2026-11-23T03:58:03Z",
+    "ld": 2.25,
     "c": 8,
     "sb": 0,
     "dk": [
-     63.1,
+     65.3,
      228.3
     ],
     "ss": [
@@ -545,11 +540,11 @@
      "open": true
     }
    },
-   "at": "2026-11-23T03:54:59+00:00"
+   "at": "2026-11-23T03:58:01+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-23T03:54:59+00:00"
+   "at": "2026-11-23T03:58:01+00:00"
   }
  },
  "operators": [
@@ -561,15 +556,6 @@
    "e": "high",
    "t": "Work session",
    "at": "2026-11-22T21:32:53-05:00"
-  },
-  {
-   "w": "Operator",
-   "a": "Evan's Account",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session",
-   "at": "2026-11-22T22:29:16-05:00"
   },
   {
    "w": "Operator",
@@ -609,12 +595,12 @@
  ],
  "agents_now": {
   "main": 0,
-  "lanes": 3,
-  "total": 3,
-  "at": "10:55 PM",
+  "lanes": 2,
+  "total": 2,
+  "at": "10:58 PM",
   "why": "",
-  "at_iso": "2026-11-23T03:55:00+00:00",
+  "at_iso": "2026-11-23T03:58:00+00:00",
   "started": "2:57 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 2:57 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 10:55 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0, started 2:57 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 10:58 PM ET</p></section>"
  }
 }

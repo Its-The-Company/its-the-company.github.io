@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-23T16:21:46.995405+00:00",
+ "at": "2026-11-23T16:24:57.979073+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -425,7 +425,7 @@
   "week_pct": 63.62,
   "usage_pct": 85.3,
   "work_pct": 96.6,
-  "read_at": "2026-11-23T16:22:00+00:00",
+  "read_at": "2026-11-23T16:25:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -488,7 +488,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-23T11:22:00-05:00",
+  "at": "2026-11-23T11:25:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -499,7 +499,7 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 8 (at its floor: load 20.2 a core is over 10)",
+  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 8 (at its floor: load 19.1 a core is over 10)",
   "n": 8,
   "at": "2026-11-23T09:25:38.709305-05:00"
  },
@@ -775,32 +775,37 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-23T16:21:46Z",
+  "at": "2026-11-23T16:24:57Z",
   "s": {
    "T-4184": [
     "mergetest",
     "Xcode checks on the MacBook, 1st to merge",
-    1795448326995
+    1795448337979
    ],
    "T-4192": [
     "mergeq",
     "2nd to merge",
-    1795445206995
+    1795445217979
    ],
    "T-5491": [
     "mergeq",
     "3rd to merge",
-    1795446166995
+    1795446177979
    ],
    "T-5688": [
     "mergeq",
     "4th to merge",
-    1795447426995
+    1795447437979
    ],
    "T-5058": [
     "testing",
     "Mac Mini \u00b7 test",
     null
+   ],
+   "T-5524": [
+    "testq",
+    "1st for a Simulator",
+    1795451037979
    ]
   },
   "nm": {
@@ -808,7 +813,8 @@
    "T-4192": "Python in the app: smaller bundle, installable packages",
    "T-5491": "Drop the swallow test's five-second bound",
    "T-5688": "Land finished work whose copy also changed the board",
-   "T-5058": "Make the sensor row prove its phone lock reading"
+   "T-5058": "Make the sensor row prove its phone lock reading",
+   "T-5524": "Make the widget's Debug ask record say what it saw"
   },
   "wk": {
    "T-4184": "Idris",
@@ -816,6 +822,7 @@
    "T-5491": "Pernille",
    "T-5688": "Odalys",
    "T-5058": "Idris",
+   "T-5524": "Idris",
    "T-3350": "Idris",
    "T-5693": "Idris",
    "T-4220": "Idris",
@@ -829,7 +836,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-23T16:21:46Z",
+  "at": "2026-11-23T16:24:57Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -841,13 +848,13 @@
     "parked": 13
    },
    "m": {
-    "checking": 43,
-    "inline": 79,
+    "checking": 46,
+    "inline": 82,
     "conflicted": null,
     "failed": null,
-    "held": 413,
+    "held": 416,
     "retry": null,
-    "parked": 413
+    "parked": 416
    },
    "cur": [
     [
@@ -856,7 +863,7 @@
      ],
      "iPhone app tests",
      "MacBook",
-     43
+     46
     ]
    ],
    "ld": [
@@ -866,12 +873,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-23T16:21:28Z",
-    "ld": 19.13,
+    "at": "2026-11-23T16:24:37Z",
+    "ld": 19.45,
     "c": 8,
     "sb": 1,
     "dk": [
-     37.8,
+     37.5,
      228.3
     ],
     "ss": [
@@ -903,7 +910,7 @@
    "parked": 16,
    "open": true,
    "mq": false,
-   "counted": "2026-11-23T16:14:03+00:00",
+   "counted": "2026-11-23T16:24:12+00:00",
    "by": {
     "app": {
      "n": 13,
@@ -921,11 +928,11 @@
      "open": true
     }
    },
-   "at": "2026-11-23T16:21:46+00:00"
+   "at": "2026-11-23T16:24:57+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-23T16:21:46+00:00"
+   "at": "2026-11-23T16:24:57+00:00"
   }
  },
  "operators": [
@@ -978,10 +985,10 @@
   "main": 0,
   "lanes": 2,
   "total": 2,
-  "at": "11:22 AM",
+  "at": "11:25 AM",
   "why": "",
-  "at_iso": "2026-11-23T16:22:00+00:00",
+  "at_iso": "2026-11-23T16:25:00+00:00",
   "started": "9:27 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0, started 9:27 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 11:22 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0, started 9:27 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 11:25 AM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-23T05:42:45.471848+00:00",
+ "at": "2026-11-23T05:45:47.762455+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -373,7 +373,7 @@
   "week_pct": 2.42,
   "usage_pct": 68.7,
   "work_pct": 88.2,
-  "read_at": "2026-11-23T05:42:00+00:00",
+  "read_at": "2026-11-23T05:45:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -448,7 +448,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-23T00:42:00-05:00",
+  "at": "2026-11-23T00:45:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -668,11 +668,16 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-23T05:42:30Z",
+  "at": "2026-11-23T05:45:47Z",
   "s": {
    "T-4692": [
     "mergetest",
     "iPhone tests on the MacBook",
+    null
+   ],
+   "T-4681": [
+    "testing",
+    "Mac Mini \u00b7 test",
     null
    ],
    "T-4184": [
@@ -684,10 +689,12 @@
   },
   "nm": {
    "T-4692": "Pro showcase widgets work free, editing them needs Pro",
+   "T-4681": "Premades default to Paper in light and Studio in dark",
    "T-4184": "A person's own script becomes a Home Screen widget"
   },
   "wk": {
    "T-4692": "Idris",
+   "T-4681": "Idris",
    "T-4184": "Idris",
    "T-4630": "Idris",
    "T-5193": "Maren",
@@ -695,7 +702,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-23T05:42:30Z",
+  "at": "2026-11-23T05:45:47Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -713,7 +720,7 @@
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 125
+    "parked": 128
    },
    "cur": [],
    "ld": [
@@ -723,12 +730,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-23T05:42:31Z",
-    "ld": 7.92,
+    "at": "2026-11-23T05:45:51Z",
+    "ld": 6.77,
     "c": 8,
     "sb": 1,
     "dk": [
-     64.7,
+     64.1,
      228.3
     ],
     "ss": [
@@ -740,12 +747,12 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-23T05:34:41Z",
-    "ld": 0.64,
+    "at": "2026-11-23T05:45:43Z",
+    "ld": 3.06,
     "c": 12,
     "sb": 0,
     "dk": [
-     353.0,
+     353.2,
      926.4
     ],
     "sn": []
@@ -760,7 +767,7 @@
    "parked": 4,
    "open": true,
    "mq": false,
-   "counted": "2026-11-23T05:29:04+00:00",
+   "counted": "2026-11-23T05:44:51+00:00",
    "by": {
     "app": {
      "n": 3,
@@ -778,11 +785,11 @@
      "open": true
     }
    },
-   "at": "2026-11-23T05:42:45+00:00"
+   "at": "2026-11-23T05:45:47+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-23T05:42:30+00:00"
+   "at": "2026-11-23T05:45:39+00:00"
   }
  },
  "operators": [
@@ -843,10 +850,10 @@
   "main": 0,
   "lanes": 3,
   "total": 3,
-  "at": "12:42 AM",
+  "at": "12:45 AM",
   "why": "",
-  "at_iso": "2026-11-23T05:42:00+00:00",
+  "at_iso": "2026-11-23T05:45:00+00:00",
   "started": "11:16 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 11:16 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 12:42 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 11:16 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 12:45 AM ET</p></section>"
  }
 }

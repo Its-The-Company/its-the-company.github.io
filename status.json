@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-23T15:03:21.446628+00:00",
+ "at": "2026-11-23T15:06:18.097179+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -425,8 +425,21 @@
   "week_pct": 63.62,
   "usage_pct": 85.3,
   "work_pct": 96.6,
-  "read_at": "2026-11-23T15:03:00+00:00",
-  "running": []
+  "read_at": "2026-11-23T15:06:00+00:00",
+  "running": [
+   {
+    "lane": "b",
+    "task": "T-4183",
+    "w": "Idris",
+    "k": "build",
+    "t": "The Gallery shows, previews and opens every premade",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-23T10:04:45-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
+   }
+  ]
  },
  "api_credits": [
   {
@@ -462,7 +475,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-23T10:03:00-05:00",
+  "at": "2026-11-23T10:06:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -745,32 +758,27 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-23T15:03:09Z",
+  "at": "2026-11-23T15:06:18Z",
   "s": {
    "T-4184": [
     "mergeq",
     "1st to merge",
-    1795445589598
+    1795445598097
    ],
    "T-5256": [
     "mergeq",
     "2nd to merge",
-    1795444809598
-   ],
-   "T-4662": [
-    "mergeq",
-    "3rd to merge",
-    1795440549598
+    1795444818097
    ],
    "T-5491": [
     "mergeq",
-    "4th to merge",
-    1795446189598
+    "3rd to merge",
+    1795446198097
    ],
    "T-4192": [
     "mergeq",
-    "5th to merge",
-    1795445169598
+    "4th to merge",
+    1795445178097
    ],
    "T-5480": [
     "testing",
@@ -787,7 +795,6 @@
   "nm": {
    "T-4184": "A person's own script becomes a Home Screen widget",
    "T-5256": "Trim step 3, one merge script beside the old road",
-   "T-4662": "Place the cursor easily on a long line",
    "T-5491": "Drop the swallow test's five-second bound",
    "T-4192": "Python in the app: smaller bundle, installable packages",
    "T-5480": "Escape corpus sends wrong-shaped calls to known capabilities",
@@ -796,7 +803,6 @@
   "wk": {
    "T-4184": "Idris",
    "T-5256": "Odalys",
-   "T-4662": "Idris",
    "T-5491": "Pernille",
    "T-4192": "Idris",
    "T-5480": "Idris",
@@ -809,11 +815,11 @@
   }
  },
  "ln": {
-  "at": "2026-11-23T15:03:09Z",
+  "at": "2026-11-23T15:06:18Z",
   "mq": {
    "n": {
     "checking": 0,
-    "inline": 5,
+    "inline": 4,
     "conflicted": 0,
     "failed": 0,
     "held": 3,
@@ -822,12 +828,12 @@
    },
    "m": {
     "checking": null,
-    "inline": 17,
+    "inline": 16,
     "conflicted": null,
     "failed": null,
-    "held": 335,
+    "held": 338,
     "retry": null,
-    "parked": 335
+    "parked": 338
    },
    "cur": [],
    "ld": [
@@ -837,12 +843,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-23T15:02:31Z",
-    "ld": 15.81,
+    "at": "2026-11-23T15:05:43Z",
+    "ld": 25.08,
     "c": 8,
     "sb": 1,
     "dk": [
-     43.0,
+     40.4,
      228.3
     ],
     "ss": [
@@ -892,11 +898,11 @@
      "open": true
     }
    },
-   "at": "2026-11-23T15:03:21+00:00"
+   "at": "2026-11-23T15:06:18+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-23T15:03:09+00:00"
+   "at": "2026-11-23T15:06:18+00:00"
   }
  },
  "operators": [
@@ -908,6 +914,13 @@
    "e": "high",
    "t": "Work session",
    "at": "2026-11-23T09:30:47-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Jeremy's Account",
+   "sr": 1,
+   "t": "Work session \u2013 1 task",
+   "at": "2026-11-23T10:04:45-05:00"
   }
  ],
  "reply": {
@@ -928,12 +941,12 @@
  ],
  "agents_now": {
   "main": 0,
-  "lanes": 0,
-  "total": 0,
-  "at": "10:03 AM",
-  "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
-  "at_iso": "2026-11-23T15:03:00+00:00",
+  "lanes": 1,
+  "total": 1,
+  "at": "10:06 AM",
+  "why": "",
+  "at_iso": "2026-11-23T15:06:00+00:00",
   "started": "9:27 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0, started 9:27 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 10:03 AM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0, started 9:27 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 10:06 AM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-23T19:23:19.265566+00:00",
+ "at": "2026-11-23T19:26:23.001494+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -376,7 +376,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 715,
+  "runnable_count": 716,
   "blocked_count": 2
  },
  "meter": {
@@ -425,7 +425,7 @@
   "week_pct": 75.19,
   "usage_pct": 85.3,
   "work_pct": 96.6,
-  "read_at": "2026-11-23T19:23:00+00:00",
+  "read_at": "2026-11-23T19:26:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -475,7 +475,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-23T14:23:00-05:00",
+  "at": "2026-11-23T14:26:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -543,15 +543,6 @@
  "tasks": {
   "run": [
    {
-    "w": "Pernille",
-    "t": "Guard timing tests stop failing lands under load",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-23T13:42:24-05:00",
-    "o": "c",
-    "task": "T-5713"
-   },
-   {
     "w": "Idris",
     "t": "Second tap on a half-hidden row keeps the text",
     "m": "opus",
@@ -595,6 +586,15 @@
     "at": "2026-11-23T14:22:37-05:00",
     "o": "c",
     "task": "T-5542"
+   },
+   {
+    "w": "Idris",
+    "t": "Settings and Pro: buy, restore, themes",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-23T14:24:43-05:00",
+    "o": "c",
+    "task": "T-4190"
    }
   ],
   "src": "plan",
@@ -688,7 +688,7 @@
    }
   ],
   "count": {
-   "next": 715,
+   "next": 716,
    "wait": 2,
    "blocked": 0,
    "you": 2
@@ -762,32 +762,32 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-23T19:22:59Z",
+  "at": "2026-11-23T19:26:01Z",
   "s": {
    "T-5256": [
     "mergeq",
     "1st to merge",
-    1795461359851
+    1795461361366
    ],
    "T-5688": [
     "mergeq",
     "2nd to merge",
-    1795447439851
+    1795447441366
    ],
    "T-5708": [
     "mergeq",
     "3rd to merge",
-    1795460399851
+    1795460401366
    ],
    "T-4615": [
     "mergeq",
     "4th to merge",
-    1795461179851
+    1795461181366
    ],
    "T-4715": [
     "mergetest",
     "Xcode checks on the MacBook, 5th to merge",
-    1795461179851
+    1795461181366
    ],
    "T-4185": [
     "mergetest",
@@ -831,7 +831,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-23T19:22:59Z",
+  "at": "2026-11-23T19:26:01Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -843,13 +843,13 @@
     "parked": 13
    },
    "m": {
-    "checking": 10,
-    "inline": 16,
+    "checking": 13,
+    "inline": 19,
     "conflicted": null,
     "failed": null,
-    "held": 594,
+    "held": 597,
     "retry": null,
-    "parked": 594
+    "parked": 597
    },
    "cur": [
     [
@@ -858,7 +858,7 @@
      ],
      "iPhone app tests, sent and waiting its turn",
      "MacBook",
-     10
+     13
     ]
    ],
    "ld": [
@@ -868,12 +868,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-23T19:22:22Z",
-    "ld": 16.63,
+    "at": "2026-11-23T19:25:31Z",
+    "ld": 25.84,
     "c": 8,
     "sb": 1,
     "dk": [
-     37.8,
+     37.3,
      228.3
     ],
     "ss": [
@@ -912,11 +912,11 @@
      "open": true
     }
    },
-   "at": "2026-11-23T19:23:19+00:00"
+   "at": "2026-11-23T19:26:23+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-23T19:23:19+00:00"
+   "at": "2026-11-23T19:26:23+00:00"
   }
  },
  "operators": [
@@ -960,10 +960,10 @@
   "main": 0,
   "lanes": 1,
   "total": 1,
-  "at": "2:23 PM",
+  "at": "2:26 PM",
   "why": "",
-  "at_iso": "2026-11-23T19:23:00+00:00",
+  "at_iso": "2026-11-23T19:26:00+00:00",
   "started": "9:27 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0, started 9:27 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 2:23 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0, started 9:27 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 2:26 PM ET</p></section>"
  }
 }

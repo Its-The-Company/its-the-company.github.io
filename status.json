@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-23T07:59:33.293459+00:00",
+ "at": "2026-11-23T08:02:46.004852+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -435,7 +435,7 @@
   "week_pct": 23.2,
   "usage_pct": 84.0,
   "work_pct": 95.0,
-  "read_at": "2026-11-23T07:59:00+00:00",
+  "read_at": "2026-11-23T08:03:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -463,13 +463,13 @@
    },
    {
     "lane": "b3",
-    "task": "T-4193",
+    "task": "T-4681",
     "w": "Idris",
     "k": "build",
-    "t": "TestFlight builds and the App Store page are ready",
+    "t": "Premades default to Paper in light and Studio in dark",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-23T02:21:46-05:00",
+    "at": "2026-11-23T03:03:11-05:00",
     "n": "Jeremy",
     "src": "plan-b"
    }
@@ -509,7 +509,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-23T02:59:00-05:00",
+  "at": "2026-11-23T03:03:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -771,87 +771,92 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-23T07:59:33Z",
+  "at": "2026-11-23T08:02:46Z",
   "s": {
    "T-4184": [
     "mergeq",
     "",
-    1795420653293
+    1795420666004
    ],
    "T-4692": [
     "mergetest",
     "",
-    1795419153293
+    1795419106004
    ],
    "T-0337": [
     "mergetest",
     "",
-    1795419153293
+    1795419106004
    ],
    "T-2097": [
     "mergetest",
     "",
-    1795419153293
+    1795419106004
    ],
    "T-4010": [
     "mergetest",
     "",
-    1795419153293
+    1795419106004
    ],
    "T-4477": [
     "mergetest",
     "",
-    1795419153293
+    1795419106004
    ],
    "T-4286": [
     "mergetest",
     "",
-    1795419153293
+    1795419106004
    ],
    "T-4435": [
     "mergetest",
     "",
-    1795419153293
+    1795419106004
    ],
    "T-0678": [
     "mergetest",
     "",
-    1795419153293
+    1795419106004
    ],
    "T-3495": [
     "mergetest",
     "",
-    1795419153293
+    1795419106004
    ],
    "T-3765": [
     "mergetest",
     "",
-    1795419153293
+    1795419106004
    ],
    "T-4662": [
     "mergetest",
     "",
-    1795419153293
+    1795419106004
    ],
    "T-4781": [
     "mergetest",
     "",
-    1795419153293
+    1795419106004
    ],
    "T-4772": [
     "mergetest",
     "",
-    1795419153293
+    1795419106004
    ],
    "T-4762": [
     "mergetest",
     "",
-    1795419153293
+    1795419106004
    ],
    "T-4185": [
     "mergeq",
     "",
-    1795418673293
+    1795418686004
+   ],
+   "T-4192": [
+    "testing",
+    "",
+    null
    ],
    "T-5644": [
     "merged",
@@ -883,6 +888,7 @@
    "T-4772": "Prove a refresh tap redraws the widget",
    "T-4762": "Let the run lock wrap a Python run",
    "T-4185": "Launcher widgets open the apps a person chose",
+   "T-4192": "Python in the app: smaller bundle, installable packages",
    "T-5644": "Account b used up by midweek without skewing the comparison",
    "T-4182": "A failing widget says so and can recover"
   },
@@ -903,12 +909,13 @@
    "T-4772": "Idris",
    "T-4762": "Idris",
    "T-4185": "Idris",
+   "T-4192": "Idris",
    "T-5644": "Ines",
    "T-4182": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-23T07:59:33Z",
+  "at": "2026-11-23T08:02:46Z",
   "mq": {
    "n": {
     "checking": 14,
@@ -917,16 +924,16 @@
     "failed": 0,
     "held": 0,
     "retry": 0,
-    "parked": 4
+    "parked": 5
    },
    "m": {
-    "checking": 27,
-    "inline": 18,
+    "checking": 31,
+    "inline": 21,
     "conflicted": null,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 262
+    "parked": 231
    },
    "cur": [
     [
@@ -935,7 +942,7 @@
      ],
      "iPhone app tests, sent and waiting its turn",
      "MacBook",
-     27
+     31
     ],
     [
      [
@@ -943,7 +950,7 @@
      ],
      "iPhone app tests, sent and waiting its turn",
      "MacBook",
-     27
+     31
     ],
     [
      [
@@ -951,7 +958,7 @@
      ],
      "iPhone app tests, sent and waiting its turn",
      "MacBook",
-     27
+     31
     ],
     [
      [
@@ -959,7 +966,7 @@
      ],
      "iPhone app tests, sent and waiting its turn",
      "MacBook",
-     27
+     31
     ]
    ],
    "ld": [
@@ -969,10 +976,10 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-23T07:58:51Z",
-    "ld": 4.63,
+    "at": "2026-11-23T08:02:54Z",
+    "ld": 11.43,
     "c": 8,
-    "sb": 0,
+    "sb": 1,
     "dk": [
      57.2,
      228.3
@@ -981,7 +988,9 @@
      173.1,
      953.7
     ],
-    "sn": []
+    "sn": [
+     "iPhone 17e"
+    ]
    }
   }
  },
@@ -1011,11 +1020,11 @@
      "open": true
     }
    },
-   "at": "2026-11-23T07:59:33+00:00"
+   "at": "2026-11-23T08:02:46+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-23T07:59:33+00:00"
+   "at": "2026-11-23T08:02:46+00:00"
   }
  },
  "operators": [
@@ -1045,15 +1054,6 @@
    "e": "high",
    "t": "Work session \u2013 1 task",
    "at": "2026-11-23T02:21:49-05:00"
-  },
-  {
-   "w": "Operator",
-   "a": "Jeremy's Account",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session \u2013 6 tasks",
-   "at": "2026-11-23T02:21:46-05:00"
   }
  ],
  "reply": {
@@ -1075,10 +1075,10 @@
   "main": 0,
   "lanes": 3,
   "total": 3,
-  "at": "2:59 AM",
+  "at": "3:03 AM",
   "why": "",
-  "at_iso": "2026-11-23T07:59:00+00:00",
+  "at_iso": "2026-11-23T08:03:00+00:00",
   "started": "2:29 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 2:29 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 2:59 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 2:29 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 3:03 AM ET</p></section>"
  }
 }

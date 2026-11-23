@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-23T12:04:01.671887+00:00",
+ "at": "2026-11-23T12:07:06.837015+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -30,11 +30,11 @@
     "steps": [
      {
       "s": "claimed",
-      "at": 1795434985
+      "at": 1795435567
      },
      {
       "s": "worker",
-      "at": 1795434985
+      "at": 1795435567
      }
     ]
    },
@@ -46,11 +46,11 @@
     "steps": [
      {
       "s": "claimed",
-      "at": 1795434879
+      "at": 1795435451
      },
      {
       "s": "worker",
-      "at": 1795434879
+      "at": 1795435451
      }
     ]
    },
@@ -400,31 +400,31 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 21.0,
-   "resets_at": "2026-11-23T07:10:00-05:00",
+   "pct": 22.0,
+   "resets_at": "2026-11-23T12:10:00.245330+00:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-23T07:03:48.750769-05:00",
-   "source": "live",
-   "left": 79.0,
+   "read_at": "2026-11-23T07:06:12.419372-05:00",
+   "source": "usage",
+   "left": 78.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 9.0,
-   "resets_at": "2026-11-29T02:00:00-05:00",
+   "resets_at": "2026-11-29T07:00:00.245349+00:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-23T07:03:48.750769-05:00",
-   "source": "live",
+   "read_at": "2026-11-23T07:06:12.419372-05:00",
+   "source": "usage",
    "left": 91.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 4.0,
-   "resets_at": "2026-11-29T06:59:59.915249+00:00",
+   "resets_at": "2026-11-29T07:00:00.245486+00:00",
    "used_words": "of the Fable weekly allowance used",
-   "read_at": "2026-11-23T06:32:02.098064-05:00",
+   "read_at": "2026-11-23T07:06:12.419372-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-23T07:03:48.750769-05:00"
+  "read_at": "2026-11-23T07:06:12.419372-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -444,7 +444,7 @@
   "week_pct": 143.31,
   "usage_pct": 84.0,
   "work_pct": 95.0,
-  "read_at": "2026-11-23T12:04:00+00:00",
+  "read_at": "2026-11-23T12:07:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -504,7 +504,7 @@
   }
  ],
  "disk": {
-  "free_gb": 39,
+  "free_gb": 40,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -513,14 +513,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-23T06:58:00-05:00",
+   "at": "2026-11-23T07:06:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-23T07:04:00-05:00",
+  "at": "2026-11-23T07:07:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -597,15 +597,6 @@
     "task": "T-4184"
    },
    {
-    "w": "Ines",
-    "t": "Account b used up by midweek without skewing the comparison",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-23T06:43:05-05:00",
-    "o": "c",
-    "task": "T-5644"
-   },
-   {
     "w": "Odalys",
     "t": "Trim step 3, one merge script beside the old road",
     "m": "opus",
@@ -640,6 +631,15 @@
     "at": "2026-11-23T07:01:47-05:00",
     "o": "c",
     "task": "T-4190"
+   },
+   {
+    "w": "Ines",
+    "t": "Account b used up by midweek without skewing the comparison",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-23T07:06:42-05:00",
+    "o": "c",
+    "task": "T-5644"
    }
   ],
   "src": "plan",
@@ -791,18 +791,12 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-23T12:03:51Z",
+  "at": "2026-11-23T12:06:46Z",
   "s": {
    "T-4615": [
     "testing",
     "Mac Mini \u00b7 test",
     null
-   ],
-   "T-5644": [
-    "merged",
-    "on main 6:21 AM ET",
-    1795432889000,
-    ""
    ],
    "T-4184": [
     "merged",
@@ -813,19 +807,17 @@
   },
   "nm": {
    "T-4615": "Widget taps on iPad reuse an open window",
-   "T-5644": "Account b used up by midweek without skewing the comparison",
    "T-4184": "A person's own script becomes a Home Screen widget"
   },
   "wk": {
    "T-4615": "Idris",
-   "T-5644": "Ines",
    "T-4184": "Idris",
    "T-5673": "Odalys",
    "T-5381": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-23T12:03:51Z",
+  "at": "2026-11-23T12:06:46Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -841,9 +833,9 @@
     "inline": null,
     "conflicted": null,
     "failed": null,
-    "held": 155,
+    "held": 158,
     "retry": null,
-    "parked": 198
+    "parked": 201
    },
    "cur": [],
    "ld": [
@@ -853,12 +845,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-23T12:03:05Z",
-    "ld": 7.6,
+    "at": "2026-11-23T12:06:48Z",
+    "ld": 5.6,
     "c": 8,
     "sb": 1,
     "dk": [
-     40.3,
+     39.8,
      228.3
     ],
     "ss": [
@@ -908,11 +900,11 @@
      "open": true
     }
    },
-   "at": "2026-11-23T12:04:01+00:00"
+   "at": "2026-11-23T12:07:06+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-23T12:04:01+00:00"
+   "at": "2026-11-23T12:07:06+00:00"
   }
  },
  "operators": [
@@ -949,7 +941,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 1 task",
+   "t": "Work session \u2013 3 tasks",
    "at": "2026-11-23T06:35:17-05:00"
   }
  ],
@@ -973,10 +965,10 @@
   "main": 0,
   "lanes": 3,
   "total": 3,
-  "at": "7:04 AM",
+  "at": "7:07 AM",
   "why": "",
-  "at_iso": "2026-11-23T12:04:00+00:00",
+  "at_iso": "2026-11-23T12:07:00+00:00",
   "started": "2:29 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 2:29 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 7:04 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 2:29 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 7:07 AM ET</p></section>"
  }
 }

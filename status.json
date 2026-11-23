@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-23T21:53:01.950381+00:00",
+ "at": "2026-11-23T21:56:04.072291+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -425,7 +425,7 @@
   "week_pct": 80.98,
   "usage_pct": 85.3,
   "work_pct": 96.6,
-  "read_at": "2026-11-23T21:53:00+00:00",
+  "read_at": "2026-11-23T21:56:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -446,7 +446,7 @@
   }
  ],
  "disk": {
-  "free_gb": 36,
+  "free_gb": 34,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -455,14 +455,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-23T16:48:00-05:00",
+   "at": "2026-11-23T16:55:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-23T16:53:00-05:00",
+  "at": "2026-11-23T16:56:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -473,7 +473,7 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 8 (at its floor: load 11.3 a core is over 10)",
+  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 8 (held: too few lands in 3 hours to judge a raise)",
   "n": 8,
   "at": "2026-11-23T09:25:38.709305-05:00"
  },
@@ -731,27 +731,27 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-23T21:52:37Z",
+  "at": "2026-11-23T21:56:04Z",
   "s": {
    "T-4715": [
     "mergeq",
     "1st to merge",
-    1795460377661
+    1795460404072
    ],
    "T-5708": [
     "mergeq",
     "2nd to merge",
-    1795460377661
+    1795460404072
    ],
    "T-5490": [
     "mergeq",
     "3rd to merge",
-    1795468957661
+    1795468984072
    ],
    "T-4185": [
     "mergeq",
     "4th to merge",
-    1795469677661
+    1795469644072
    ],
    "T-5715": [
     "merged",
@@ -787,7 +787,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-23T21:52:37Z",
+  "at": "2026-11-23T21:56:04Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -800,12 +800,12 @@
    },
    "m": {
     "checking": null,
-    "inline": 101,
+    "inline": 104,
     "conflicted": null,
     "failed": null,
-    "held": 744,
+    "held": 747,
     "retry": null,
-    "parked": 744
+    "parked": 747
    },
    "cur": [],
    "ld": [
@@ -815,8 +815,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-23T21:52:39Z",
-    "ld": 7.64,
+    "at": "2026-11-23T21:55:38Z",
+    "ld": 6.69,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -868,11 +868,11 @@
      "open": true
     }
    },
-   "at": "2026-11-23T21:53:01+00:00"
+   "at": "2026-11-23T21:56:04+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-23T21:52:48+00:00"
+   "at": "2026-11-23T21:55:57+00:00"
   }
  },
  "operators": [
@@ -907,10 +907,10 @@
   "main": 0,
   "lanes": 0,
   "total": 0,
-  "at": "4:53 PM",
+  "at": "4:56 PM",
   "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
-  "at_iso": "2026-11-23T21:53:00+00:00",
+  "at_iso": "2026-11-23T21:56:00+00:00",
   "started": "9:27 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0, started 9:27 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 4:53 PM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0, started 9:27 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 4:56 PM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
  }
 }

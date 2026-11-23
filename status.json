@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-23T06:50:20.982933+00:00",
+ "at": "2026-11-23T06:53:35.580435+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -13,6 +13,22 @@
   },
   "flow": [
    {
+    "t": "T-2097",
+    "name": "Read free memory in the widget extension on a device",
+    "w": "Idris",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "claimed",
+      "at": 1795416807
+     },
+     {
+      "s": "worker",
+      "at": 1795416807
+     }
+    ]
+   },
+   {
     "t": "T-0337",
     "name": "Confirm the revenue memo's facts from Apple pages",
     "w": "Wrenna",
@@ -20,11 +36,11 @@
     "steps": [
      {
       "s": "claimed",
-      "at": 1795413670
+      "at": 1795416672
      },
      {
       "s": "worker",
-      "at": 1795413670
+      "at": 1795416672
      }
     ]
    },
@@ -41,22 +57,6 @@
      {
       "s": "worker",
       "at": 1795411044
-     }
-    ]
-   },
-   {
-    "t": "T-2097",
-    "name": "Read free memory in the widget extension on a device",
-    "w": "Idris",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "claimed",
-      "at": 1795410994
-     },
-     {
-      "s": "worker",
-      "at": 1795410994
      }
     ]
    },
@@ -373,7 +373,7 @@
   "week_pct": 7.04,
   "usage_pct": 84.6,
   "work_pct": 94.7,
-  "read_at": "2026-11-23T06:50:00+00:00",
+  "read_at": "2026-11-23T06:53:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -432,7 +432,7 @@
   }
  ],
  "disk": {
-  "free_gb": 57,
+  "free_gb": 59,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -441,14 +441,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-23T01:44:00-05:00",
+   "at": "2026-11-23T01:50:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 3,
-  "at": "2026-11-23T01:50:00-05:00",
+  "at": "2026-11-23T01:53:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -705,16 +705,11 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-23T06:50:20Z",
+  "at": "2026-11-23T06:53:35Z",
   "s": {
    "T-0048": [
     "mergetest",
     "iPhone tests on the MacBook",
-    null
-   ],
-   "T-4188": [
-    "testing",
-    "Mac Mini \u00b7 test",
     null
    ],
    "T-4182": [
@@ -732,13 +727,11 @@
   },
   "nm": {
    "T-0048": "Add the per-widget Activity screen and Run as widget",
-   "T-4188": "Location, steps and notifications work in scripts and...",
    "T-4182": "A failing widget says so and can recover",
    "T-4184": "A person's own script becomes a Home Screen widget"
   },
   "wk": {
    "T-0048": "Idris",
-   "T-4188": "Idris",
    "T-4182": "Idris",
    "T-4184": "Idris",
    "T-4533": "Pernille",
@@ -747,7 +740,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-23T06:50:20Z",
+  "at": "2026-11-23T06:53:35Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -765,7 +758,7 @@
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 193
+    "parked": 196
    },
    "cur": [],
    "ld": [
@@ -775,12 +768,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-23T06:50:26Z",
-    "ld": 9.37,
+    "at": "2026-11-23T06:53:37Z",
+    "ld": 19.2,
     "c": 8,
     "sb": 1,
     "dk": [
-     58.7,
+     59.6,
      228.3
     ],
     "ss": [
@@ -830,11 +823,11 @@
      "open": true
     }
    },
-   "at": "2026-11-23T06:50:20+00:00"
+   "at": "2026-11-23T06:53:35+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-23T06:50:20+00:00"
+   "at": "2026-11-23T06:53:35+00:00"
   }
  },
  "operators": [
@@ -871,7 +864,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 1 task",
+   "t": "Work session \u2013 2 tasks",
    "at": "2026-11-23T00:21:44-05:00"
   }
  ],
@@ -895,10 +888,10 @@
   "main": 0,
   "lanes": 3,
   "total": 3,
-  "at": "1:50 AM",
+  "at": "1:53 AM",
   "why": "",
-  "at_iso": "2026-11-23T06:50:00+00:00",
+  "at_iso": "2026-11-23T06:53:00+00:00",
   "started": "1:04 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 1:04 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 1:50 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 1:04 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 1:53 AM ET</p></section>"
  }
 }

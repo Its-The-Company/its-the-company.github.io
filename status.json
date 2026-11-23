@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-23T14:38:58.232983+00:00",
+ "at": "2026-11-23T14:42:01.617412+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -376,7 +376,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 712,
+  "runnable_count": 711,
   "blocked_count": 2
  },
  "meter": {
@@ -425,7 +425,7 @@
   "week_pct": 57.84,
   "usage_pct": 85.3,
   "work_pct": 96.6,
-  "read_at": "2026-11-23T14:39:00+00:00",
+  "read_at": "2026-11-23T14:42:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -463,18 +463,6 @@
     "at": "2026-11-23T07:57:28-05:00",
     "n": "Evan",
     "src": "plan-a"
-   },
-   {
-    "lane": "b2",
-    "task": "T-5256",
-    "w": "Odalys",
-    "k": "ops",
-    "t": "Trim step 3, one merge script beside the old road",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-23T09:38:36-05:00",
-    "n": "Jeremy",
-    "src": "plan-b"
    }
   ]
  },
@@ -496,7 +484,7 @@
   }
  ],
  "disk": {
-  "free_gb": 41,
+  "free_gb": 39,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -504,15 +492,15 @@
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
-   "ok": true,
-   "at": "2026-11-23T09:31:00-05:00",
+   "ok": false,
+   "at": "2026-11-23T09:38:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-23T09:39:00-05:00",
+  "at": "2026-11-23T09:42:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -580,15 +568,6 @@
  "tasks": {
   "run": [
    {
-    "w": "Pernille",
-    "t": "Fix the city list test after the tzdata update",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-23T07:56:26-05:00",
-    "o": "c",
-    "task": "T-5616"
-   },
-   {
     "w": "Idris",
     "t": "Escape corpus sends wrong-shaped calls to known capabilities",
     "m": "opus",
@@ -623,15 +602,6 @@
     "at": "2026-11-23T09:31:29-05:00",
     "o": "c",
     "task": "T-4182"
-   },
-   {
-    "w": "Idris",
-    "t": "Make the size ladder measure each rung more than once",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-23T09:38:22-05:00",
-    "o": "c",
-    "task": "T-4643"
    }
   ],
   "src": "plan",
@@ -710,6 +680,11 @@
   "done": [
    {
     "w": "Idris",
+    "t": "The test build's size ladder now keeps every rung in the widget and refreshes it every 15...",
+    "at": "2026-11-23T09:39:00-05:00"
+   },
+   {
+    "w": "Idris",
     "t": "The second reading of the fix that lets separate work copies share the app's Python test setup...",
     "at": "2026-11-23T09:38:00-05:00"
    },
@@ -717,22 +692,21 @@
     "w": "Odalys",
     "t": "Workers' notes now reach the main board, a session lands its own finished work, and a task with...",
     "at": "2026-11-23T09:12:00-05:00"
-   },
-   {
-    "w": "Operator",
-    "t": "The test file lane_env_test.py passes again on a clean copy of main (c6a15cec5) in the nightly...",
-    "at": "2026-11-23T07:48:00-05:00"
    }
   ],
   "count": {
-   "next": 712,
+   "next": 711,
    "wait": 2,
    "blocked": 0,
    "you": 2
   },
   "fin": {
-   "n": 1,
+   "n": 2,
    "rows": [
+    [
+     "T-4643",
+     "Make the size ladder measure..."
+    ],
     [
      "T-5391",
      "Check finished work before..."
@@ -779,17 +753,22 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-23T14:38:32Z",
+  "at": "2026-11-23T14:41:42Z",
   "s": {
-   "T-4662": [
+   "T-5256": [
     "mergeq",
     "1st to merge",
-    1795440572069
+    1795444842765
+   ],
+   "T-4662": [
+    "mergeq",
+    "2nd to merge",
+    1795440522765
    ],
    "T-4692": [
     "mergeq",
-    "2nd to merge",
-    1795441112069
+    "3rd to merge",
+    1795441122765
    ],
    "T-4182": [
     "merged",
@@ -805,25 +784,28 @@
    ]
   },
   "nm": {
+   "T-5256": "Trim step 3, one merge script beside the old road",
    "T-4662": "Place the cursor easily on a long line",
    "T-4692": "Pro showcase widgets work free, editing them needs Pro",
    "T-4182": "A failing widget says so and can recover",
    "T-4184": "A person's own script becomes a Home Screen widget"
   },
   "wk": {
+   "T-5256": "Odalys",
    "T-4662": "Idris",
    "T-4692": "Idris",
    "T-4182": "Idris",
    "T-4184": "Idris",
+   "T-4643": "Idris",
    "T-5391": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-23T14:38:32Z",
+  "at": "2026-11-23T14:41:42Z",
   "mq": {
    "n": {
     "checking": 0,
-    "inline": 2,
+    "inline": 3,
     "conflicted": 0,
     "failed": 0,
     "held": 3,
@@ -832,12 +814,12 @@
    },
    "m": {
     "checking": null,
-    "inline": 64,
+    "inline": 63,
     "conflicted": null,
     "failed": null,
-    "held": 310,
+    "held": 313,
     "retry": null,
-    "parked": 310
+    "parked": 313
    },
    "cur": [],
    "ld": [
@@ -847,16 +829,20 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-23T14:38:34Z",
-    "ld": 28.46,
+    "at": "2026-11-23T14:41:20Z",
+    "ld": 23.91,
     "c": 8,
+    "sb": 1,
     "dk": [
-     39.0,
+     36.7,
      228.3
     ],
     "ss": [
      168.6,
      953.7
+    ],
+    "sn": [
+     "iPhone 17e"
     ]
    },
    "macbook": {
@@ -898,11 +884,11 @@
      "open": true
     }
    },
-   "at": "2026-11-23T14:38:58+00:00"
+   "at": "2026-11-23T14:42:01+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-23T14:38:32+00:00"
+   "at": "2026-11-23T14:42:01+00:00"
   }
  },
  "operators": [
@@ -941,15 +927,6 @@
    "e": "high",
    "t": "Work session",
    "at": "2026-11-23T07:57:28-05:00"
-  },
-  {
-   "w": "Operator",
-   "a": "Jeremy's Account",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session \u2013 1 task",
-   "at": "2026-11-23T09:38:36-05:00"
   }
  ],
  "reply": {
@@ -970,12 +947,12 @@
  ],
  "agents_now": {
   "main": 0,
-  "lanes": 4,
-  "total": 4,
-  "at": "9:39 AM",
+  "lanes": 3,
+  "total": 3,
+  "at": "9:42 AM",
   "why": "",
-  "at_iso": "2026-11-23T14:39:00+00:00",
+  "at_iso": "2026-11-23T14:42:00+00:00",
   "started": "9:27 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 0, started 9:27 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 9:39 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 9:27 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 9:42 AM ET</p></section>"
  }
 }

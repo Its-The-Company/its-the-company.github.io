@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-23T20:22:50.382941+00:00",
+ "at": "2026-11-23T20:25:47.076742+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -425,7 +425,7 @@
   "week_pct": 75.19,
   "usage_pct": 85.3,
   "work_pct": 96.6,
-  "read_at": "2026-11-23T20:23:00+00:00",
+  "read_at": "2026-11-23T20:26:00+00:00",
   "running": [
    {
     "lane": "a3",
@@ -475,7 +475,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-23T15:23:00-05:00",
+  "at": "2026-11-23T15:26:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -486,7 +486,7 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 8 (at its floor: load 19.1 a core is over 10)",
+  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 8 (at its floor: load 29.6 a core is over 10)",
   "n": 8,
   "at": "2026-11-23T09:25:38.709305-05:00"
  },
@@ -762,32 +762,32 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-23T20:21:55Z",
+  "at": "2026-11-23T20:25:47Z",
   "s": {
    "T-5722": [
     "mergeq",
     "1st to merge",
-    1795464955630
+    1795464947076
    ],
    "T-5688": [
     "mergeq",
     "2nd to merge",
-    1795447435630
+    1795447427076
    ],
    "T-4715": [
     "mergeq",
     "3rd to merge",
-    1795460395630
+    1795460387076
    ],
    "T-5708": [
     "mergeq",
     "4th to merge",
-    1795460395630
+    1795460387076
    ],
    "T-4185": [
     "mergeq",
     "5th to merge",
-    1795464415630
+    1795464407076
    ],
    "T-4192": [
     "testing",
@@ -832,7 +832,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-23T20:21:55Z",
+  "at": "2026-11-23T20:25:47Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -845,12 +845,12 @@
    },
    "m": {
     "checking": null,
-    "inline": 82,
+    "inline": 86,
     "conflicted": null,
     "failed": null,
-    "held": 653,
+    "held": 657,
     "retry": null,
-    "parked": 653
+    "parked": 657
    },
    "cur": [],
    "ld": [
@@ -860,12 +860,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-23T20:22:29Z",
-    "ld": 29.17,
+    "at": "2026-11-23T20:25:22Z",
+    "ld": 27.77,
     "c": 8,
     "sb": 1,
     "dk": [
-     33.7,
+     33.5,
      228.3
     ],
     "ss": [
@@ -915,11 +915,11 @@
      "open": true
     }
    },
-   "at": "2026-11-23T20:22:50+00:00"
+   "at": "2026-11-23T20:25:47+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-23T20:21:55+00:00"
+   "at": "2026-11-23T20:25:47+00:00"
   }
  },
  "operators": [
@@ -936,10 +936,8 @@
    "w": "Operator",
    "a": "Evan's Account",
    "sr": 1,
-   "m": "opus",
-   "e": "high",
    "t": "Work session \u2013 1 task",
-   "at": "2026-11-23T15:09:54-05:00"
+   "at": "2026-11-23T15:09:55-05:00"
   }
  ],
  "reply": {
@@ -963,10 +961,10 @@
   "main": 0,
   "lanes": 1,
   "total": 1,
-  "at": "3:23 PM",
+  "at": "3:26 PM",
   "why": "",
-  "at_iso": "2026-11-23T20:23:00+00:00",
+  "at_iso": "2026-11-23T20:26:00+00:00",
   "started": "9:27 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0, started 9:27 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 3:23 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0, started 9:27 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 3:26 PM ET</p></section>"
  }
 }

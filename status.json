@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-23T01:40:11.369425+00:00",
+ "at": "2026-11-23T01:43:14.694547+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -125,22 +125,8 @@
   "week_pct": 2.42,
   "usage_pct": 68.7,
   "work_pct": 88.2,
-  "read_at": "2026-11-23T01:40:00+00:00",
-  "running": [
-   {
-    "lane": "b2",
-    "task": "T-5622",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Hand out only app work during the comparison",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-22T20:20:52-05:00",
-    "n": "Jeremy",
-    "d": 1,
-    "src": "plan-b"
-   }
-  ]
+  "read_at": "2026-11-23T01:43:00+00:00",
+  "running": []
  },
  "api_credits": [
   {
@@ -169,7 +155,7 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-22T20:35:00-05:00",
+   "at": "2026-11-22T20:41:00-05:00",
    "recovery": {
     "what": "recovered",
     "at": "2026-11-22T15:08:00-05:00"
@@ -179,7 +165,7 @@
  "lock_in": {
   "on": true,
   "pool": 3,
-  "at": "2026-11-22T20:40:00-05:00",
+  "at": "2026-11-22T20:43:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -403,9 +389,19 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-23T01:40:11Z",
-  "s": {},
+  "at": "2026-11-23T01:43:06Z",
+  "s": {
+   "T-5622": [
+    "mergeq",
+    "1st to merge",
+    1795398186674
+   ]
+  },
+  "nm": {
+   "T-5622": "Hand out only app work during the comparison"
+  },
   "wk": {
+   "T-5622": "Odalys",
    "T-5431": "Odalys",
    "T-5262": "Odalys",
    "T-5607": "Idris",
@@ -413,25 +409,25 @@
   }
  },
  "ln": {
-  "at": "2026-11-23T01:40:11Z",
+  "at": "2026-11-23T01:43:06Z",
   "mq": {
    "n": {
     "checking": 0,
-    "inline": 0,
+    "inline": 1,
     "conflicted": 0,
     "failed": 0,
     "held": 0,
     "retry": 0,
-    "parked": 2
+    "parked": 3
    },
    "m": {
     "checking": null,
-    "inline": null,
+    "inline": 0,
     "conflicted": null,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1167
+    "parked": 1079
    },
    "cur": [],
    "ld": [
@@ -441,12 +437,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-23T01:39:27Z",
-    "ld": 1.38,
+    "at": "2026-11-23T01:42:52Z",
+    "ld": 1.15,
     "c": 8,
     "sb": 0,
     "dk": [
-     65.5,
+     65.7,
      228.3
     ],
     "ss": [
@@ -494,11 +490,11 @@
      "open": true
     }
    },
-   "at": "2026-11-23T01:40:11+00:00"
+   "at": "2026-11-23T01:43:14+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-23T01:39:59+00:00"
+   "at": "2026-11-23T01:43:06+00:00"
   }
  },
  "operators": [
@@ -510,15 +506,6 @@
    "e": "high",
    "t": "Work session",
    "at": "2026-11-22T20:14:40-05:00"
-  },
-  {
-   "w": "Operator",
-   "a": "Jeremy's Account",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session \u2013 1 task",
-   "at": "2026-11-22T20:20:52-05:00"
   }
  ],
  "reply": {
@@ -539,12 +526,12 @@
  ],
  "agents_now": {
   "main": 0,
-  "lanes": 1,
-  "total": 1,
-  "at": "8:40 PM",
-  "why": "",
-  "at_iso": "2026-11-23T01:40:00+00:00",
+  "lanes": 0,
+  "total": 0,
+  "at": "8:43 PM",
+  "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
+  "at_iso": "2026-11-23T01:43:00+00:00",
   "started": "2:57 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0, started 2:57 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 8:40 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0, started 2:57 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 8:43 PM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
  }
 }

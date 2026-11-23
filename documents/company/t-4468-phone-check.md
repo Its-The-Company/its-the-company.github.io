@@ -20,15 +20,23 @@ in the daily full suites, ops/runs/t4516-runner-result.txt).
 
 ## Before you start
 
-- **Which build.** A TestFlight build made from main at or after cb4bce57e4 (15 Nov, the Habits tap), and after the
-  review lines that hold TestFlight are closed (see "What still holds TestFlight" at the end). The build card names
-  its build number; write it down.
+- **Which build.** The TestFlight build that T-5050 sends, the first with Developer mode, or a later one. It goes
+  out only once the review lines that hold TestFlight are closed (see "What still holds TestFlight" at the end), so
+  it carries everything this check looks at (main at or after cb4bce57e4, 15 Nov, the Habits tap). Its request card,
+  "Install the Developer mode build from TestFlight and try Pro widgets on the iPhone"
+  (ops/requests/t4865-developer-mode-phone-card.md), names its build number; write it down. This check uses the same
+  build, so one phone session covers both cards.
 - **Pro.** In this build four of the seven sit behind Pro: World clocks, Habit tracker, GitHub repository and Shortcuts
-  launcher (pywidget/runtime/pro-flags.json). A locked premade has no settings row, by design. So unlock Pro first on
-  the app's Pro screen (More menu, the sparkles row). In TestFlight an in-app purchase is not charged. If the Pro
-  screen offers no purchase, do the free three (Countdown, Sunrise and sunset, Distance), then write down that the
-  other four were locked and stop there; the company will settle how to check them. (T-4692 will make every premade
-  work for everyone, with only editing a Pro one's code behind Pro; until it lands, the lock above is what you see.)
+  launcher (pywidget/runtime/pro-flags.json). A locked premade has no settings row, by design. So unlock Pro first,
+  with nothing bought: open PyWidget, tap the **More** button (the round "..." at the top right), then **Settings**.
+  The **Developer mode** group is just below the Pro group. Check its row **This copy** says **TestFlight**, then
+  turn **Unlock Pro** on. The four now show their settings rows in the Gallery. If there is no Developer mode group,
+  or no Unlock Pro switch in it, do the free three (Countdown, Sunrise and sunset, Distance), then write down what
+  Settings showed and that the other four were locked, and stop there. (T-4692 will make every premade work for
+  everyone, with only editing a Pro one's code behind Pro; until it lands, the lock above is what you see.)
+- **Order, with the Developer mode card.** That card's step 5, **Reset to first launch**, erases everything the app
+  holds, including the events, places and lists set here, and turns Unlock Pro off. Run this whole check before that
+  step, or after it turn Unlock Pro on again and start from section 1.
 - **Location.** Sunrise and sunset can and Distance must use the phone's location. When iOS asks, choose
   **Allow While Using App**.
 - **Record it.** Turn on Screen Recording in Control Center before step 1 and keep it running through each premade,
@@ -173,7 +181,9 @@ A UI test that opens the link with six habits and checks the scroll without a ph
 1. In the Shortcuts app, make sure you have a shortcut you can run safely, for example one that shows an alert.
    Note its exact name.
 2. In the Gallery, tap **Shortcuts launcher**, then the **Shortcuts** row. Tap **Add Shortcut**, type the name
-   exactly, pick a symbol. Tap **Try It**. Check: the shortcut runs. Back in PyWidget, tap **Save**.
+   exactly, pick a symbol. Tap **Save**. Check: the shortcut is listed. (The design gives this sheet a **Try It**
+   row; as of 2026-11-22 the build does not draw one, so the tile in step 3 is the first place the name is tried.
+   If a Try It row is there, tap it and write down whether the shortcut ran.)
 3. Place a **Medium** PyWidget widget and choose **Shortcuts launcher**. Check: it shows a tile with that name and
    symbol. Tap the tile. Check: the shortcut runs.
 4. Tap the widget's background (not a tile). Check: PyWidget opens on the Shortcuts page.
@@ -191,12 +201,16 @@ For the Habit tracker, one answer per step from 6 to 12, since each looks at a d
 - Step 11: the words VoiceOver read, and where its cursor was.
 - Step 12: what the page showed, or "redrawn first" with the time.
 
-## What still holds TestFlight (owners, as of 2026-11-19)
+## What still holds TestFlight (owners, as of 2026-11-22)
 
-- Pernille: the review of T-4183 at 09feb52d (T-4921, covers the UI test T-4516) and the review of the Habits tap
-  cb4bce57e4 (T-5192). Nothing <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span>-landed goes to TestFlight with either open.
-- Not holding TestFlight: Maren's confirmation of five page strings (T-5193); the all-day event after travel
-  (T-4835, Pernille, before the App Store release); the smaller review points (T-4639, T-4640, T-4641, Idris).
+- Pernille: the review of T-4183 at 14765044 (T-5561). Nothing <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span>-landed goes to TestFlight with it open. The two
+  reviews this list named on 11-19 are done: T-4921 (T-4516 at 54a0c7cb, a99dc30359, PASS with findings, which are
+  T-5269 and T-5270) and T-5192 (the Habits tap at cb4bce57, 2d9c651f24, PASS with findings, which are T-5317,
+  T-5318 and T-5319).
+- Not holding TestFlight: Maren's confirmation of five page strings (T-5193, whose merge T-5561 covers); the second
+  Habits tap with the page up (T-5317, open: steps 8 and 9 record which outcome the phone shows); the all-day event
+  after travel (T-4835, Pernille, before the App Store release); the smaller review points (T-4639, T-4640, T-4641,
+  Idris).
 {% endraw %}
 
 </div>

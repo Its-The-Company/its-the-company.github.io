@@ -248,6 +248,66 @@ What is left, under the ruling:
 3. Step 4 (T-3303), the 48-hour check, against the numbers at the top of this page.
 4. The hook proposal at the end of this page stays with the Operator.
 
+### Step 1 on main, off (T-5399 slice 1, Odalys, 11-22)
+
+What landed: tools/land_job.py, the land as its own job with its own loop lock and pass lock (a second loop or pass
+refuses, exit 3) and a heartbeat, in the pattern of tools/jobs_loop.py. A pass runs every 60 s, and at once when a
+MacBook land job reports (main's refs/remotes/origin/macbook-results moved since the last pass) or on
+`tools/land_job.py kick`. It runs the road ops/merge_road.json names, read with personal_land.sh's own test: on the old
+road `tools/personal_land.sh land-live`, which lands every ready branch and takes the supervisor's ops/.lock only for
+the merge, push and records (T-3995); on the merge.sh road the same command, which there lands no branch and replays
+the records, posts waiting lines and pushes what is due. Its launchd template is ops/launchd/com.company.land.plist.template
+(`tools/install-launchd.sh --land`, `--unland`); it is not installed or loaded.
+
+The setting: ops/land_job.json "enabled", shipped false. Only the JSON value true is on. Off, not installed, or a
+heartbeat older than 180 s: `tools/land_job.py live` says no, tools/supervisor.sh step 4b passes LAND_JOB_LIVE=0, and
+the tick's land is today's. On and live: the tick passes LAND_JOB_LIVE=1 and its land starts no branch ("leaves ... to
+the land job"), keeping only what it alone does under the tick's lock (the records after the sync, the drains, the
+waiting lines, the personal total; seconds). Tests: tests/land_job_test.py, and rows in tests/supervisor_test.sh and
+tests/personal_land_test.sh.
+
+Switching it on waited on the Operator and the Investors; it was switched on at 4:09 PM ET 11-22, before the
+comparison's start (next section).
+
+Left open for Step 1: on the merge.sh road each ready branch's tools/merge.sh run is still its lane's tick's
+(tools/personal_tick.sh merge_now), outside the supervisor's tick already but on the lane tick's cadence, not 60 s.
+Moving that run into the land job needs merge_now (with its red, wait-<span title="A measured fact that holds a grade below a letter, however good the rest is.">cap</span> and done-list handling) out of
+personal_tick.sh, a guarded starter; it was not tried in this slice. Nothing yet calls `kick` (tools/land_xc.py or
+tools/runner_watch.py could, when a result arrives). Left for Step 2 (tools/jobs_loop.py's docstring, "Not here yet"):
+the applier and amendment records (T-2346's guard path) and the sync between sessions (the supervisor's step 2).
+
+### Steps 1 and 2 on main (T-5399, 11-22 4:15 PM ET)
+
+an Investor chose B on #325 (c7077473399, 4:56 AM 11-22: "turn T-5399 on!"): both steps in before the comparison
+starts, so both roads run with them for all four days. an Investor's Mac mini session finished it at his word
+(`log/rulings.md`, 3:06 PM 11-22).
+
+**Step 1, the land as its own job: on main, on.** `0b9252074d` (lane a's slice `b2ed3d4305` with the Operator's
+fix `c736e78c3b`). The slice's land had been red three times that day (5:56 AM, 11:32 AM, 12:10 PM, and a fourth
+time at 3:41 PM on the unfixed branch) on one row of tests/personal_land_test.sh, "a hook in HEAD is these two lines:
+the no-hook arm names no land script": the slice changed the supervisor's land line and put four lines between the 4b
+comment and it, while the test's pin still held the old line. The land-job read now stands above step 4a2's call and
+the pin holds the new line. The gate's run before the commit: jobs_loop_test.py, land_job_test.py,
+personal_land_test.sh, personal_load_test.sh and supervisor_test.sh green, the three changed suites three times each.
+Installed with `tools/install-launchd.sh --land` (com.company.land, pid 17629) and `ops/land_job.json` set to true at
+4:09 PM ET. Seen: `tools/land_job.py status` at 4:09 PM: "on; heartbeat 1 s ago; live: yes; road now: old", one pass
+(trigger macbook) exit 0 in 0.6 s with nothing ready. **Not yet seen:** a branch landed by the job; the first ready
+branch after this shows it, and its line in ops/runs/land-job.log is the evidence. Back to the tick's land: set
+`ops/land_job.json` to false, or `tools/install-launchd.sh --unland`.
+
+**Step 2, the between-session jobs beside the workers: on main, on since T-4958 (11-18).** Re-cut against main as it
+is, nothing was left to build for the jobs the line names. `tools/jobs_loop.py status` at 4:08 PM ET 11-22: heartbeat
+9 s old, and the loop runs sync and push (every 2 min, last 4:07 PM, "pushed 0b9252074"), the merge queue (old road;
+5 min), merge_first, the MacBook results, main's green check, the metrics (quality_metrics, metric_series,
+bottleneck_watch, board_growth, batch_size), board upkeep (board_stale, board_similar), the records backup, the runs
+archive, the disk keeper and sweep, and the nightly suites and mutation runs. The site build stays between sessions on
+purpose (`ops/jobs_config.json` site_publish off; "What stays between sessions" below), as do the applier and
+amendment records (T-2346's guard path) and the pull between sessions. Each has the old path one setting away
+(`ops/jobs_config.json` "enabled": false).
+
+Still open from Step 1, for after the comparison: moving the merge.sh road's per-branch run out of the lane's tick
+into the land job, and a caller for `kick`.
+
 ## What it should save
 
 Since 11-04, at the governor's targets: 21.7 (step 1) + 163.3 (step 2; 118.0 without the 11-05 held lock, already fixed) +

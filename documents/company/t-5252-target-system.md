@@ -437,6 +437,30 @@ trim session, on the Investors' word, #325 c7032785128). Retired nothing.
   a red it finds that was green before the step is fixed, or the step restored, before that step is ticked.
 - *Restore.* `tools/retire.sh --restore <path>` for any row of `tools/retire.sh --list`.
 
+**Step 9 done:** 2026-11-22 5:28 PM ET, at main `e28f70ce74`. The check, merge.sh's checks three times on one main
+commit on both machines: on the Mac mini the eight guard suites and the app's host tests
+(`pywidget/tests/run_host.py --both`: 42 suites, 3862 tests) green 3 of 3 (5:07 to 5:28 PM); on the MacBook
+PyWidgetTests green 3 of 3, 2185 tests each (J-20261122-1707-xc-test, -2, -3, side by side). What it took that day:
+the two free-<span title="The App Store results a buyer sees for a search phrase. The top 10 is the first ten, dated the day we read them.">shelf</span> pass tests set up their own no-Pro state (`d01a7a1f1e`, T-5607; a job stopped at its time limit
+had left a test purchase on one runner Simulator), the notification bridge test waits for the Simulator's
+notification center (`0adae9d357`, T-5607), and the city list was rebuilt on tzdata 2026f after the Mac mini's
+restart moved macOS to it (`e28f70ce74`). Earlier slices: `ops/board_notes/T-5262.md` (ops/land_quarantine.txt is
+empty; mutation rows run in the nightly MacBook job). Known and left open as their own lines: the cities row turns
+red again at the next macOS time zone update, and the runner's result keeps only the start of a failure's text.
+
+**The comparison's official start, moved: S = Sun 2026-11-22 9:33 PM ET**, when the first app work was handed out (T-4807, T-4184, T-4188 on account a; an Investor #325 c7089960090, 9:28 PM: "officially start the comparison as soon as app work starts. We shouldn't include these technical difficulties in the comparison"). The days: day 1, new road, Sun 11-22 9:33 PM to Mon 11-23 9:33 PM; day 2, old road, to Tue 11-24 9:33 PM; day 3, new road, to Wed 11-25 9:33 PM; day 4, old road, to Thu 11-26 9:33 PM. From 7:02 to 9:33 PM no app work could start (dispatcher faults, T-5622, T-5624, T-5620), so those hours are not counted.
+
+First record, kept for the history: **the comparison began: S = Sun 2026-11-22 7:02 PM ET** (main `bf2ab2be17`, the flip of `ops/merge_road.json` to
+"merge.sh"; Jeremy, typed into the Mac mini session 11-22: switch when the pre-comparison work is done). The days as first set:
+day 1, new road, Sun 11-22 7:02 PM to Mon 11-23 7:02 PM; day 2, old road, to Tue 11-24 7:02 PM; day 3, new road, to
+Wed 11-25 7:02 PM; day 4, old road, to Thu 11-26 7:02 PM. Lock In holds on all four days (Jeremy; `tools/usage_mode.py`
+renews it each day 11-23 to 11-26). The drain look: Jeremy ran `road-check` in Terminal at 6:48 PM and it listed three
+lane records (lane b's three more MacBook runs for step 9, waiting for a gap between coordinator sessions); they were
+replayed at 7:01 PM (`434d4b865e`, J-20261122-1901-xc-test, -2, -3), and the same places read by hand at 7:02 PM
+showed nothing in the way; the tool itself was not run a second time. Meters at the start: main 4% of its 5 hours and
+3% of its week (6:56 PM); account a 1% and 24% (6:54 PM); account b 21% and 21% (6:55 PM). Each later flip needs the
+drain look outside a session, and lane records that wait for the sync replayed first.
+
 
 **Step 12, where it stands** (Ines, 11-21 4:03 PM ET, T-5265; not finished, the line stays open).
 - *The window.* The "7 days after step 6" never opens under the plan in force: step 6 is held (11-20 9:10 AM

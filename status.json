@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-23T05:52:00.951215+00:00",
+ "at": "2026-11-23T05:54:17.165742+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -324,7 +324,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 705,
+  "runnable_count": 706,
   "blocked_count": 2
  },
  "meter": {
@@ -373,19 +373,18 @@
   "week_pct": 2.42,
   "usage_pct": 68.7,
   "work_pct": 88.2,
-  "read_at": "2026-11-23T05:52:00+00:00",
+  "read_at": "2026-11-23T05:58:00+00:00",
   "running": [
    {
     "lane": "a",
-    "task": "T-5642",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Alarm when an account stops taking work",
+    "task": "T-4182",
+    "w": "Idris",
+    "k": "build",
+    "t": "A failing widget says so and can recover",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-22T23:40:58-05:00",
+    "at": "2026-11-23T00:56:12-05:00",
     "n": "Evan",
-    "d": 1,
     "src": "plan-a"
    },
    {
@@ -410,6 +409,7 @@
     "e": "high",
     "at": "2026-11-23T00:21:44-05:00",
     "n": "Evan",
+    "d": 1,
     "src": "plan-a"
    }
   ]
@@ -441,14 +441,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-23T00:47:00-05:00",
+   "at": "2026-11-23T00:54:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-23T00:52:00-05:00",
+  "at": "2026-11-23T00:58:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -606,7 +606,7 @@
    }
   ],
   "count": {
-   "next": 705,
+   "next": 706,
    "wait": 2,
    "blocked": 0,
    "you": 2
@@ -668,59 +668,184 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-23T05:51:47Z",
+  "at": "2026-11-23T05:54:01Z",
   "s": {
+   "T-5642": [
+    "mergeq",
+    "",
+    1795413181423
+   ],
+   "T-0337": [
+    "mergeq",
+    "",
+    1795413181423
+   ],
+   "T-2097": [
+    "mergeq",
+    "",
+    1795413181423
+   ],
+   "T-4010": [
+    "mergeq",
+    "",
+    1795413181423
+   ],
+   "T-4477": [
+    "mergeq",
+    "",
+    1795413181423
+   ],
+   "T-4286": [
+    "mergeq",
+    "",
+    1795413181423
+   ],
+   "T-4435": [
+    "mergeq",
+    "",
+    1795413181423
+   ],
+   "T-0678": [
+    "mergeq",
+    "",
+    1795413181423
+   ],
+   "T-3495": [
+    "mergeq",
+    "",
+    1795413181423
+   ],
+   "T-3765": [
+    "mergeq",
+    "",
+    1795413181423
+   ],
+   "T-4662": [
+    "mergeq",
+    "",
+    1795413181423
+   ],
+   "T-4781": [
+    "mergeq",
+    "",
+    1795413181423
+   ],
+   "T-4772": [
+    "mergeq",
+    "",
+    1795413181423
+   ],
+   "T-4762": [
+    "mergeq",
+    "",
+    1795413181423
+   ],
+   "T-4635": [
+    "mergeq",
+    "",
+    1795413181423
+   ],
+   "T-5193": [
+    "mergeq",
+    "",
+    1795413181423
+   ],
+   "T-4182": [
+    "mergeq",
+    "",
+    1795413181423
+   ],
+   "T-0657": [
+    "mergeq",
+    "",
+    1795413181423
+   ],
    "T-4692": [
     "mergetest",
-    "iPhone tests on the MacBook",
+    "",
     null
    ],
    "T-4681": [
     "testing",
-    "Mac Mini \u00b7 test",
+    "",
     null
    ],
    "T-4184": [
     "merged",
-    "on main 12:11 AM ET",
+    "",
     1795410693000,
     ""
    ]
   },
   "nm": {
+   "T-5642": "Alarm when an account stops taking work",
+   "T-0337": "Confirm the revenue memo's facts from Apple pages",
+   "T-2097": "Read free memory in the widget extension on a device",
+   "T-4010": "Rebuild This Session as a full flowchart",
+   "T-4477": "People build a widget from blocks without code",
+   "T-4286": "Check an imported font draws in a widget",
+   "T-4435": "Draw the wrapped refresh glyph on both runtimes",
+   "T-0678": "Run the refresh button inside the widget extension",
+   "T-3495": "Check the upload fix before build 4 goes out",
+   "T-3765": "Check a real widget tap on the TestFlight build",
+   "T-4662": "Place the cursor easily on a long line",
+   "T-4781": "Retest a fixed red on what failed, not every test",
+   "T-4772": "Prove a refresh tap redraws the widget",
+   "T-4762": "Let the run lock wrap a Python run",
+   "T-4635": "Clear the Settings restore line once Pro is bought",
+   "T-5193": "Confirm the five page strings the build added",
+   "T-4182": "A failing widget says so and can recover",
+   "T-0657": "Build the Settings screen",
    "T-4692": "Pro showcase widgets work free, editing them needs Pro",
    "T-4681": "Premades default to Paper in light and Studio in dark",
    "T-4184": "A person's own script becomes a Home Screen widget"
   },
   "wk": {
+   "T-5642": "Odalys",
+   "T-0337": "Wrenna",
+   "T-2097": "Idris",
+   "T-4010": "Odalys",
+   "T-4477": "Idris",
+   "T-4286": "Idris",
+   "T-4435": "Idris",
+   "T-0678": "Idris",
+   "T-3495": "Pernille",
+   "T-3765": "Idris",
+   "T-4662": "Idris",
+   "T-4781": "Odalys",
+   "T-4772": "Idris",
+   "T-4762": "Idris",
+   "T-4635": "Idris",
+   "T-5193": "Maren",
+   "T-4182": "Idris",
+   "T-0657": "Idris",
    "T-4692": "Idris",
    "T-4681": "Idris",
    "T-4184": "Idris",
    "T-4630": "Idris",
-   "T-5193": "Maren",
    "T-5628": "Odalys"
   }
  },
  "ln": {
-  "at": "2026-11-23T05:51:47Z",
+  "at": "2026-11-23T05:54:01Z",
   "mq": {
    "n": {
     "checking": 0,
-    "inline": 0,
+    "inline": 18,
     "conflicted": 0,
     "failed": 0,
     "held": 0,
     "retry": 0,
-    "parked": 4
+    "parked": 3
    },
    "m": {
     "checking": null,
-    "inline": null,
+    "inline": 1,
     "conflicted": null,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 134
+    "parked": 171
    },
    "cur": [],
    "ld": [
@@ -730,12 +855,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-23T05:51:22Z",
-    "ld": 6.58,
+    "at": "2026-11-23T05:53:37Z",
+    "ld": 7.89,
     "c": 8,
     "sb": 1,
     "dk": [
-     62.0,
+     63.5,
      228.3
     ],
     "ss": [
@@ -785,11 +910,11 @@
      "open": true
     }
    },
-   "at": "2026-11-23T05:52:00+00:00"
+   "at": "2026-11-23T05:54:17+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-23T05:51:47+00:00"
+   "at": "2026-11-23T05:54:09+00:00"
   }
  },
  "operators": [
@@ -801,15 +926,6 @@
    "e": "high",
    "t": "Work session",
    "at": "2026-11-22T23:16:52-05:00"
-  },
-  {
-   "w": "Operator",
-   "a": "Evan's Account",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session \u2013 17 tasks",
-   "at": "2026-11-22T23:40:58-05:00"
   },
   {
    "w": "Operator",
@@ -850,10 +966,10 @@
   "main": 0,
   "lanes": 3,
   "total": 3,
-  "at": "12:52 AM",
+  "at": "12:58 AM",
   "why": "",
-  "at_iso": "2026-11-23T05:52:00+00:00",
-  "started": "11:16 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 11:16 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 12:52 AM ET</p></section>"
+  "at_iso": "2026-11-23T05:58:00+00:00",
+  "started": "",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 12:58 AM ET</p></section>"
  }
 }

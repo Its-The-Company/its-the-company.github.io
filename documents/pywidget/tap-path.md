@@ -38,9 +38,10 @@ Investors are told before any of them ships (#41 c6653117254).
    waits out a presentation still moving, and a second tap <span title="A numbered batch of planned work, with its own plan file.">refills</span> the sheet already up rather than dismissing it
    (T-3848, Pernille's T-3680 M2: a dismiss would also take down a script's prompt sitting on the sheet, with no
    answer; Tests/LauncherSheetPresenterTests.swift). The UI test opens a gallery
-   entry, goes Home, comes back with `pywidget://open?slot=x` (a Debug launch argument, `-ui-launcher-url`, since
-   XCUITest can't send an unregistered scheme), and checks that the sheet shows and that Cancel leaves the gallery's
-   sheet under it.
+   entry, goes Home, and opens `pywidget://open?slot=x` as a widget tap does, through the system and the window's
+   onOpenURL (`XCUIDevice.shared.system.open`; the Debug build registers the scheme, scripts/debug_url_scheme.sh;
+   T-3847, Pernille's T-3680 M1, which also removed the old Debug launch-argument hook). It checks that the sheet shows
+   and that Cancel leaves the gallery's sheet under it.
 7. A file the app can't read gets its own sheet that says so, with no link field, since a save would be refused
    (T-3663 L1). Unreadable means: not a JSON object, a `slots` that isn't a list, over 64 KiB (L2: a tap reads it on
    the main thread), or a `format` other than 1 (L3: this build never rewrites a later build's file). A tap reads the

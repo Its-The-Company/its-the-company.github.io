@@ -50,6 +50,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-5450 11-21: the red restart row was the fixture: an empty board just after a <span title="A numbered batch of planned work, with its own plan file.">refill</span> makes the governor queue (by design), so tick 2 never ran; '- [ ] x (waiting on #12)' counts for the governor, not runnable for the chain. run.sh shows only FAIL lines: debug to a /tmp file.
 - T-5473 11-21 85e0b74e17: in a gate test, mutate each term by hand; a term the reader already enforces (ProConfig refuses gates on with no product) is an equivalent mutant, note it, no fix. A bundled() check must unwrap first, or nil (closed state) passes. App line add: no Base/By/Until, Done when 'test: land:xc; docs page ...'; reserve the ID first.
 - T-5457 11-21 4368b340bc: an empty pick is a tree test (git merge-tree --write-tree --merge-base c^ main c == main's tree); git cherry's patch-id says '+' for reapplied work. A Low left "for the task's next session" needs a line if that session never comes. A pywidget/ target makes a line "app": no Until. Another session may share the worktree: commit by path only.
+- T-5622/T-5624 11-22 2f370af682: 'no app line' at the comparison start was T-5530's exclusive allow-list hold (any open allow ID, e.g. the coordinator's own unblock fix, stops all app work; lane_take too), not the steps map; order --json now names it 'freeze'. Simulate with a patched read_json, main's merge count and a /tmp copy of .done_seen.json.
 {% endraw %}
 
 

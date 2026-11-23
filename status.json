@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-23T17:08:22.854859+00:00",
+ "at": "2026-11-23T17:11:34.340749+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -381,12 +381,13 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 22.0,
-   "resets_at": "2026-11-23T12:10:00-05:00",
+   "pct": null,
+   "resets_at": null,
    "used_words": "of your 5-hour allowance used",
    "read_at": "2026-11-23T11:59:03.564059-05:00",
    "source": "live",
-   "left": 78.0,
+   "last_reset": "2026-11-23T12:10:00-05:00",
+   "left": null,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
@@ -425,7 +426,7 @@
   "week_pct": 69.41,
   "usage_pct": 85.3,
   "work_pct": 96.6,
-  "read_at": "2026-11-23T17:08:00+00:00",
+  "read_at": "2026-11-23T17:12:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -501,7 +502,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-23T12:08:00-05:00",
+  "at": "2026-11-23T12:12:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -512,7 +513,7 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 8 (at its floor: load 15.8 a core is over 10)",
+  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 8 (held: too few lands in 3 hours to judge a raise)",
   "n": 8,
   "at": "2026-11-23T09:25:38.709305-05:00"
  },
@@ -788,27 +789,22 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-23T17:08:15Z",
+  "at": "2026-11-23T17:11:34Z",
   "s": {
    "T-4184": [
     "mergeq",
     "1st to merge",
-    1795451955766
+    1795451914340
    ],
    "T-4192": [
     "mergeq",
     "2nd to merge",
-    1795445175766
+    1795445194340
    ],
    "T-5688": [
     "mergeq",
     "3rd to merge",
-    1795447455766
-   ],
-   "T-2296": [
-    "mergetest",
-    "iPhone tests on the MacBook",
-    null
+    1795447414340
    ],
    "T-5697": [
     "merged",
@@ -827,7 +823,6 @@
    "T-4184": "A person's own script becomes a Home Screen widget",
    "T-4192": "Python in the app: smaller bundle, installable packages",
    "T-5688": "Land finished work whose copy also changed the board",
-   "T-2296": "Finish the gallery pager, iPad layout and detail foot",
    "T-5697": "Nothing a worker committed vanishes from a land unsaid",
    "T-4772": "Prove a refresh tap redraws the widget"
   },
@@ -835,7 +830,6 @@
    "T-4184": "Idris",
    "T-4192": "Idris",
    "T-5688": "Odalys",
-   "T-2296": "Idris",
    "T-5697": "Odalys",
    "T-4772": "Idris",
    "T-3350": "Idris",
@@ -851,7 +845,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-23T17:08:15Z",
+  "at": "2026-11-23T17:11:34Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -864,12 +858,12 @@
    },
    "m": {
     "checking": null,
-    "inline": 123,
+    "inline": 126,
     "conflicted": null,
-    "failed": 15,
-    "held": 460,
+    "failed": 19,
+    "held": 463,
     "retry": null,
-    "parked": 460
+    "parked": 463
    },
    "cur": [],
    "ld": [
@@ -879,27 +873,25 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-23T17:07:53Z",
-    "ld": 11.12,
+    "at": "2026-11-23T17:12:01Z",
+    "ld": 18.2,
     "c": 8,
-    "sb": 0,
     "dk": [
-     33.1,
+     32.9,
      228.3
     ],
     "ss": [
      168.6,
      953.7
-    ],
-    "sn": []
+    ]
    },
    "macbook": {
-    "at": "2026-11-23T16:54:32Z",
-    "ld": 3.25,
+    "at": "2026-11-23T17:11:19Z",
+    "ld": 3.56,
     "c": 12,
     "sb": 0,
     "dk": [
-     350.1,
+     350.0,
      926.4
     ],
     "sn": []
@@ -932,11 +924,11 @@
      "open": true
     }
    },
-   "at": "2026-11-23T17:08:22+00:00"
+   "at": "2026-11-23T17:11:34+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-23T17:08:09+00:00"
+   "at": "2026-11-23T17:11:34+00:00"
   }
  },
  "operators": [
@@ -953,17 +945,13 @@
    "w": "Operator",
    "a": "Evan's Account",
    "sr": 1,
-   "m": "opus",
-   "e": "high",
    "t": "Work session",
-   "at": "2026-11-23T11:58:36-05:00"
+   "at": "2026-11-23T11:58:37-05:00"
   },
   {
    "w": "Operator",
    "a": "Jeremy's Account",
    "sr": 1,
-   "m": "opus",
-   "e": "high",
    "t": "Work session \u2013 1 task",
    "at": "2026-11-23T10:04:45-05:00"
   },
@@ -971,10 +959,8 @@
    "w": "Operator",
    "a": "Jeremy's Account",
    "sr": 1,
-   "m": "opus",
-   "e": "high",
    "t": "Work session",
-   "at": "2026-11-23T10:13:46-05:00"
+   "at": "2026-11-23T10:13:47-05:00"
   }
  ],
  "reply": {
@@ -998,10 +984,10 @@
   "main": 0,
   "lanes": 3,
   "total": 3,
-  "at": "12:08 PM",
+  "at": "12:12 PM",
   "why": "",
-  "at_iso": "2026-11-23T17:08:00+00:00",
+  "at_iso": "2026-11-23T17:12:00+00:00",
   "started": "9:27 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 9:27 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 12:08 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 9:27 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 12:12 PM ET</p></section>"
  }
 }

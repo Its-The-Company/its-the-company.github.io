@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-23T21:00:36.922318+00:00",
+ "at": "2026-11-23T21:03:43.382564+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -425,7 +425,7 @@
   "week_pct": 80.98,
   "usage_pct": 85.3,
   "work_pct": 96.6,
-  "read_at": "2026-11-23T21:00:00+00:00",
+  "read_at": "2026-11-23T21:03:00+00:00",
   "running": [
    {
     "lane": "a3",
@@ -469,14 +469,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-23T15:56:00-05:00",
+   "at": "2026-11-23T16:03:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-23T16:00:00-05:00",
+  "at": "2026-11-23T16:03:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -560,15 +560,6 @@
     "at": "2026-11-23T15:18:02-05:00",
     "o": "c",
     "task": "T-5715"
-   },
-   {
-    "w": "Pernille",
-    "t": "Badge a distrusted widget even after a size move",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-23T15:28:03-05:00",
-    "o": "c",
-    "task": "T-4804"
    },
    {
     "w": "Idris",
@@ -763,42 +754,37 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-23T21:00:19Z",
+  "at": "2026-11-23T21:03:33Z",
   "s": {
    "T-5688": [
     "mergeq",
     "1st to merge",
-    1795447459417
+    1795447413387
    ],
    "T-4715": [
     "mergeq",
     "2nd to merge",
-    1795460359417
+    1795460373387
    ],
    "T-5708": [
     "mergeq",
     "3rd to merge",
-    1795460359417
+    1795460373387
    ],
    "T-5644": [
     "mergeq",
     "4th to merge",
-    1795466299417
+    1795466313387
    ],
    "T-4185": [
-    "mergetest",
-    "Xcode checks on the MacBook, 5th to merge",
-    1795467019417
+    "mergeq",
+    "5th to merge",
+    1795467033387
    ],
-   "T-4804": [
+   "T-5480": [
     "testing",
     "Mac Mini \u00b7 test",
     null
-   ],
-   "T-5480": [
-    "testq",
-    "1st for a Simulator",
-    1795466539417
    ],
    "T-5491": [
     "merged",
@@ -819,7 +805,6 @@
    "T-5708": "Clear the add-to-home steps before TestFlight",
    "T-5644": "Account b used up by midweek without skewing the comparison",
    "T-4185": "Launcher widgets open the apps a person chose",
-   "T-4804": "Badge a distrusted widget even after a size move",
    "T-5480": "Escape corpus sends wrong-shaped calls to known capabilities",
    "T-5491": "Drop the swallow test's five-second bound",
    "T-5697": "Nothing a worker committed vanishes from a land unsaid"
@@ -830,7 +815,6 @@
    "T-5708": "Maren",
    "T-5644": "Ines",
    "T-4185": "Idris",
-   "T-4804": "Idris",
    "T-5480": "Idris",
    "T-5491": "Pernille",
    "T-5697": "Odalys",
@@ -848,11 +832,11 @@
   }
  },
  "ln": {
-  "at": "2026-11-23T21:00:19Z",
+  "at": "2026-11-23T21:03:33Z",
   "mq": {
    "n": {
-    "checking": 1,
-    "inline": 4,
+    "checking": 0,
+    "inline": 5,
     "conflicted": 0,
     "failed": 0,
     "held": 3,
@@ -860,24 +844,15 @@
     "parked": 14
    },
    "m": {
-    "checking": 10,
-    "inline": 121,
+    "checking": null,
+    "inline": 124,
     "conflicted": null,
     "failed": null,
-    "held": 692,
+    "held": 695,
     "retry": null,
-    "parked": 692
+    "parked": 695
    },
-   "cur": [
-    [
-     [
-      "T-4185"
-     ],
-     "iPhone app tests",
-     "MacBook",
-     10
-    ]
-   ],
+   "cur": [],
    "ld": [
     0,
     null
@@ -885,8 +860,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-23T20:59:58Z",
-    "ld": 20.83,
+    "at": "2026-11-23T21:03:10Z",
+    "ld": 22.82,
     "c": 8,
     "sb": 1,
     "dk": [
@@ -940,11 +915,11 @@
      "open": true
     }
    },
-   "at": "2026-11-23T21:00:36+00:00"
+   "at": "2026-11-23T21:03:43+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-23T21:00:19+00:00"
+   "at": "2026-11-23T21:03:43+00:00"
   }
  },
  "operators": [
@@ -956,6 +931,15 @@
    "e": "high",
    "t": "Work session",
    "at": "2026-11-23T15:50:25-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Evan's Account",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session",
+   "at": "2026-11-23T16:03:41-05:00"
   },
   {
    "w": "Operator",
@@ -988,10 +972,10 @@
   "main": 0,
   "lanes": 1,
   "total": 1,
-  "at": "4:00 PM",
+  "at": "4:03 PM",
   "why": "",
-  "at_iso": "2026-11-23T21:00:00+00:00",
+  "at_iso": "2026-11-23T21:03:00+00:00",
   "started": "9:27 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0, started 9:27 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 4:00 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0, started 9:27 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 4:03 PM ET</p></section>"
  }
 }

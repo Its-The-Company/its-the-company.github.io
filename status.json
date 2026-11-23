@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-23T12:22:24.422085+00:00",
+ "at": "2026-11-23T12:25:30.245676+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -385,24 +385,24 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 715,
+  "runnable_count": 716,
   "blocked_count": 2
  },
  "meter": {
   "five_hour": {
-   "pct": 0.0,
+   "pct": 1.0,
    "resets_at": "2026-11-23T12:10:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-23T07:13:54.329277-05:00",
+   "read_at": "2026-11-23T07:23:56.808690-05:00",
    "source": "live",
-   "left": 100.0,
+   "left": 99.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 9.0,
    "resets_at": "2026-11-29T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-23T07:13:54.329277-05:00",
+   "read_at": "2026-11-23T07:23:56.808690-05:00",
    "source": "live",
    "left": 91.0,
    "left_words": "of your weekly allowance left"
@@ -414,7 +414,7 @@
    "read_at": "2026-11-23T07:06:12.419372-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-23T07:13:54.329277-05:00"
+  "read_at": "2026-11-23T07:23:56.808690-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -434,7 +434,7 @@
   "week_pct": 143.31,
   "usage_pct": 84.0,
   "work_pct": 95.0,
-  "read_at": "2026-11-23T12:22:00+00:00",
+  "read_at": "2026-11-23T12:25:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -535,7 +535,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-23T07:22:00-05:00",
+  "at": "2026-11-23T07:25:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -646,6 +646,15 @@
     "at": "2026-11-23T07:06:42-05:00",
     "o": "c",
     "task": "T-5644"
+   },
+   {
+    "w": "Idris",
+    "t": "A failing widget says so and can recover",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-23T07:22:06-05:00",
+    "o": "c",
+    "task": "T-4182"
    }
   ],
   "src": "plan",
@@ -739,7 +748,7 @@
    }
   ],
   "count": {
-   "next": 715,
+   "next": 716,
    "wait": 2,
    "blocked": 0,
    "you": 2
@@ -797,7 +806,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-23T12:22:08Z",
+  "at": "2026-11-23T12:25:23Z",
   "s": {
    "T-2296": [
     "mergetest",
@@ -826,6 +835,12 @@
     "on main 1:46 AM ET",
     1795416386000,
     "Maren"
+   ],
+   "T-4182": [
+    "merged",
+    "on main 12:11 AM ET",
+    1795410693000,
+    ""
    ]
   },
   "nm": {
@@ -833,7 +848,8 @@
    "T-4615": "Widget taps on iPad reuse an open window",
    "T-5644": "Account b used up by midweek without skewing the comparison",
    "T-4692": "Pro showcase widgets work free, editing them needs Pro",
-   "T-5602": "Brief for a new look for the app"
+   "T-5602": "Brief for a new look for the app",
+   "T-4182": "A failing widget says so and can recover"
   },
   "wk": {
    "T-2296": "Idris",
@@ -841,12 +857,13 @@
    "T-5644": "Ines",
    "T-4692": "Idris",
    "T-5602": "Maren",
+   "T-4182": "Idris",
    "T-5673": "Odalys",
    "T-5381": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-23T12:22:08Z",
+  "at": "2026-11-23T12:25:23Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -862,9 +879,9 @@
     "inline": null,
     "conflicted": null,
     "failed": null,
-    "held": 174,
+    "held": 177,
     "retry": null,
-    "parked": 216
+    "parked": 220
    },
    "cur": [],
    "ld": [
@@ -874,12 +891,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-23T12:21:27Z",
-    "ld": 2.58,
+    "at": "2026-11-23T12:25:24Z",
+    "ld": 1.69,
     "c": 8,
     "sb": 1,
     "dk": [
-     36.5,
+     36.7,
      228.3
     ],
     "ss": [
@@ -929,11 +946,11 @@
      "open": true
     }
    },
-   "at": "2026-11-23T12:22:24+00:00"
+   "at": "2026-11-23T12:25:30+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-23T12:22:24+00:00"
+   "at": "2026-11-23T12:25:17+00:00"
   }
  },
  "operators": [
@@ -943,8 +960,8 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Inbox \u2013 Evan's 7:22 AM Message on GitHub",
-   "at": "2026-11-23T07:22:24-05:00"
+   "t": "Work session",
+   "at": "2026-11-23T07:22:57-05:00"
   },
   {
    "w": "Operator",
@@ -993,27 +1010,15 @@
   }
  ],
  "reply": {
-  "sent": "2026-11-23T04:46:12Z",
-  "seconds": 207.0
+  "sent": "2026-11-23T12:22:04Z",
+  "seconds": 52.0
  },
- "inbox": [
-  {
-   "id": "c7100949230",
-   "state": "received",
-   "position": 1,
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "Why is very little getting done?..."
-  }
- ],
+ "inbox": [],
  "trimmed": [
   "lane_next",
   "queue_text",
   "task_done",
   "fin_short",
-  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -1024,10 +1029,10 @@
   "main": 0,
   "lanes": 5,
   "total": 5,
-  "at": "7:22 AM",
+  "at": "7:25 AM",
   "why": "",
-  "at_iso": "2026-11-23T12:22:00+00:00",
+  "at_iso": "2026-11-23T12:25:00+00:00",
   "started": "2:29 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 0, started 2:29 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 7:22 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 0, started 2:29 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 7:25 AM ET</p></section>"
  }
 }

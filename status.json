@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-23T09:12:05.689191+00:00",
+ "at": "2026-11-23T09:15:11.968993+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -435,7 +435,7 @@
   "week_pct": 102.36,
   "usage_pct": 84.0,
   "work_pct": 95.0,
-  "read_at": "2026-11-23T09:12:00+00:00",
+  "read_at": "2026-11-23T09:15:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -498,7 +498,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-23T04:12:00-05:00",
+  "at": "2026-11-23T04:15:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -765,42 +765,47 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-23T09:12:05Z",
+  "at": "2026-11-23T09:14:17Z",
   "s": {
    "T-0337": [
     "mergeq",
     "1st to merge",
-    1795422365689
+    1795422377184
    ],
    "T-2097": [
     "mergeq",
     "1st to merge",
-    1795422365689
+    1795422377184
    ],
    "T-4010": [
     "mergeq",
     "1st to merge",
-    1795422365689
+    1795422377184
    ],
    "T-4477": [
     "mergeq",
     "1st to merge",
-    1795422365689
+    1795422377184
    ],
    "T-4286": [
     "mergeq",
     "1st to merge",
-    1795422365689
+    1795422377184
    ],
    "T-4635": [
     "mergeq",
     "1st to merge",
-    1795422365689
+    1795422377184
    ],
    "T-0657": [
     "mergeq",
     "1st to merge",
-    1795422365689
+    1795422377184
+   ],
+   "T-5479": [
+    "testing",
+    "Mac Mini \u00b7 test",
+    null
    ]
   },
   "nm": {
@@ -810,7 +815,8 @@
    "T-4477": "People build a widget from blocks without code",
    "T-4286": "Check an imported font draws in a widget",
    "T-4635": "Clear the Settings restore line once Pro is bought",
-   "T-0657": "Build the Settings screen"
+   "T-0657": "Build the Settings screen",
+   "T-5479": "Make the escape corpus Link case fail instead of skip"
   },
   "wk": {
    "T-0337": "Wrenna",
@@ -820,11 +826,12 @@
    "T-4286": "Idris",
    "T-4635": "Idris",
    "T-0657": "Idris",
+   "T-5479": "Idris",
    "T-5381": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-23T09:12:05Z",
+  "at": "2026-11-23T09:14:17Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -837,12 +844,12 @@
    },
    "m": {
     "checking": null,
-    "inline": 46,
+    "inline": 48,
     "conflicted": null,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 161
+    "parked": 163
    },
    "cur": [],
    "ld": [
@@ -852,16 +859,20 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-23T09:11:33Z",
-    "ld": 17.73,
+    "at": "2026-11-23T09:14:57Z",
+    "ld": 21.71,
     "c": 8,
+    "sb": 1,
     "dk": [
-     47.1,
+     46.8,
      228.3
     ],
     "ss": [
      173.1,
      953.7
+    ],
+    "sn": [
+     "iPhone 17e"
     ]
    },
    "macbook": {
@@ -903,11 +914,11 @@
      "open": true
     }
    },
-   "at": "2026-11-23T09:12:05+00:00"
+   "at": "2026-11-23T09:15:11+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-23T09:12:05+00:00"
+   "at": "2026-11-23T09:14:17+00:00"
   }
  },
  "operators": [
@@ -924,13 +935,17 @@
    "w": "Operator",
    "a": "Evan's Account",
    "sr": 1,
+   "m": "opus",
+   "e": "high",
    "t": "Work session \u2013 1 task",
-   "at": "2026-11-23T04:05:49-05:00"
+   "at": "2026-11-23T04:05:48-05:00"
   },
   {
    "w": "Operator",
    "a": "Evan's Account",
    "sr": 1,
+   "m": "opus",
+   "e": "high",
    "t": "Work session \u2013 11 tasks",
    "at": "2026-11-23T03:29:34-05:00"
   }
@@ -955,10 +970,10 @@
   "main": 0,
   "lanes": 2,
   "total": 2,
-  "at": "4:12 AM",
+  "at": "4:15 AM",
   "why": "",
-  "at_iso": "2026-11-23T09:12:00+00:00",
+  "at_iso": "2026-11-23T09:15:00+00:00",
   "started": "2:29 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0, started 2:29 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 4:12 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0, started 2:29 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 4:15 AM ET</p></section>"
  }
 }

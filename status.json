@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-23T12:25:30.245676+00:00",
+ "at": "2026-11-23T12:28:35.676752+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -434,7 +434,7 @@
   "week_pct": 143.31,
   "usage_pct": 84.0,
   "work_pct": 95.0,
-  "read_at": "2026-11-23T12:25:00+00:00",
+  "read_at": "2026-11-23T12:28:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -528,14 +528,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-23T07:20:00-05:00",
+   "at": "2026-11-23T07:26:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-23T07:25:00-05:00",
+  "at": "2026-11-23T07:28:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -639,15 +639,6 @@
     "task": "T-4190"
    },
    {
-    "w": "Ines",
-    "t": "Account b used up by midweek without skewing the comparison",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-23T07:06:42-05:00",
-    "o": "c",
-    "task": "T-5644"
-   },
-   {
     "w": "Idris",
     "t": "A failing widget says so and can recover",
     "m": "opus",
@@ -655,6 +646,15 @@
     "at": "2026-11-23T07:22:06-05:00",
     "o": "c",
     "task": "T-4182"
+   },
+   {
+    "w": "Idris",
+    "t": "A person's own script becomes a Home Screen widget",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-23T07:28:03-05:00",
+    "o": "c",
+    "task": "T-4184"
    }
   ],
   "src": "plan",
@@ -806,23 +806,18 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-23T12:25:23Z",
+  "at": "2026-11-23T12:28:35Z",
   "s": {
-   "T-2296": [
-    "mergetest",
-    "iPhone tests on the MacBook",
-    null
-   ],
    "T-4615": [
     "testing",
     "Mac Mini \u00b7 test",
     null
    ],
-   "T-5644": [
+   "T-4184": [
     "merged",
-    "on main 6:21 AM ET",
-    1795432889000,
-    ""
+    "on main 4:04 AM ET",
+    1795424645000,
+    "Pernille"
    ],
    "T-4692": [
     "merged",
@@ -844,17 +839,15 @@
    ]
   },
   "nm": {
-   "T-2296": "Finish the gallery pager, iPad layout and detail foot",
    "T-4615": "Widget taps on iPad reuse an open window",
-   "T-5644": "Account b used up by midweek without skewing the comparison",
+   "T-4184": "A person's own script becomes a Home Screen widget",
    "T-4692": "Pro showcase widgets work free, editing them needs Pro",
    "T-5602": "Brief for a new look for the app",
    "T-4182": "A failing widget says so and can recover"
   },
   "wk": {
-   "T-2296": "Idris",
    "T-4615": "Idris",
-   "T-5644": "Ines",
+   "T-4184": "Idris",
    "T-4692": "Idris",
    "T-5602": "Maren",
    "T-4182": "Idris",
@@ -863,7 +856,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-23T12:25:23Z",
+  "at": "2026-11-23T12:28:35Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -879,9 +872,9 @@
     "inline": null,
     "conflicted": null,
     "failed": null,
-    "held": 177,
+    "held": 180,
     "retry": null,
-    "parked": 220
+    "parked": 223
    },
    "cur": [],
    "ld": [
@@ -891,12 +884,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-23T12:25:24Z",
-    "ld": 1.69,
+    "at": "2026-11-23T12:28:36Z",
+    "ld": 1.26,
     "c": 8,
     "sb": 1,
     "dk": [
-     36.7,
+     38.7,
      228.3
     ],
     "ss": [
@@ -908,8 +901,8 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-23T12:19:12Z",
-    "ld": 0.57,
+    "at": "2026-11-23T12:28:06Z",
+    "ld": 0.76,
     "c": 12,
     "sb": 0,
     "dk": [
@@ -928,7 +921,7 @@
    "parked": 14,
    "open": true,
    "mq": false,
-   "counted": "2026-11-23T12:12:15+00:00",
+   "counted": "2026-11-23T12:27:19+00:00",
    "by": {
     "app": {
      "n": 10,
@@ -946,11 +939,11 @@
      "open": true
     }
    },
-   "at": "2026-11-23T12:25:30+00:00"
+   "at": "2026-11-23T12:28:35+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-23T12:25:17+00:00"
+   "at": "2026-11-23T12:28:22+00:00"
   }
  },
  "operators": [
@@ -1029,10 +1022,10 @@
   "main": 0,
   "lanes": 5,
   "total": 5,
-  "at": "7:25 AM",
+  "at": "7:28 AM",
   "why": "",
-  "at_iso": "2026-11-23T12:25:00+00:00",
+  "at_iso": "2026-11-23T12:28:00+00:00",
   "started": "2:29 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 0, started 2:29 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 7:25 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 0, started 2:29 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 7:28 AM ET</p></section>"
  }
 }

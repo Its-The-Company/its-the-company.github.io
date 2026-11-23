@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-23T06:44:14.782302+00:00",
+ "at": "2026-11-23T06:47:21.215962+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -373,7 +373,7 @@
   "week_pct": 7.04,
   "usage_pct": 84.6,
   "work_pct": 94.7,
-  "read_at": "2026-11-23T06:44:00+00:00",
+  "read_at": "2026-11-23T06:47:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -448,7 +448,7 @@
  "lock_in": {
   "on": true,
   "pool": 3,
-  "at": "2026-11-23T01:44:00-05:00",
+  "at": "2026-11-23T01:47:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -459,7 +459,7 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 31 (cut a step: load 14.9 a core is over 10)",
+  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 31 (held: too few lands in 3 hours to judge a raise)",
   "n": 31,
   "at": "2026-11-23T01:03:33.210113-05:00"
  },
@@ -552,13 +552,13 @@
     "task": "T-5325"
    },
    {
-    "w": "Maren",
-    "t": "Brief for a new look for the app",
+    "w": "Idris",
+    "t": "Make the escape corpus Link case fail instead of skip",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-23T01:41:18-05:00",
+    "at": "2026-11-23T01:46:17-05:00",
     "o": "c",
-    "task": "T-5602"
+    "task": "T-5479"
    }
   ],
   "src": "plan",
@@ -710,8 +710,13 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-23T06:44:14Z",
+  "at": "2026-11-23T06:47:13Z",
   "s": {
+   "T-0048": [
+    "mergetest",
+    "iPhone tests on the MacBook",
+    null
+   ],
    "T-4182": [
     "merged",
     "on main 12:11 AM ET",
@@ -726,10 +731,12 @@
    ]
   },
   "nm": {
+   "T-0048": "Add the per-widget Activity screen and Run as widget",
    "T-4182": "A failing widget says so and can recover",
    "T-4184": "A person's own script becomes a Home Screen widget"
   },
   "wk": {
+   "T-0048": "Idris",
    "T-4182": "Idris",
    "T-4184": "Idris",
    "T-5643": "Ines",
@@ -737,7 +744,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-23T06:44:14Z",
+  "at": "2026-11-23T06:47:13Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -755,7 +762,7 @@
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 187
+    "parked": 190
    },
    "cur": [],
    "ld": [
@@ -765,12 +772,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-23T06:43:56Z",
-    "ld": 8.62,
+    "at": "2026-11-23T06:46:45Z",
+    "ld": 6.15,
     "c": 8,
     "sb": 0,
     "dk": [
-     56.6,
+     58.8,
      228.3
     ],
     "ss": [
@@ -780,12 +787,12 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-23T06:42:38Z",
-    "ld": 3.98,
+    "at": "2026-11-23T06:44:43Z",
+    "ld": 2.69,
     "c": 12,
     "sb": 0,
     "dk": [
-     352.1,
+     352.5,
      926.4
     ],
     "sn": []
@@ -818,11 +825,11 @@
      "open": true
     }
    },
-   "at": "2026-11-23T06:44:14+00:00"
+   "at": "2026-11-23T06:47:21+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-23T06:44:05+00:00"
+   "at": "2026-11-23T06:47:06+00:00"
   }
  },
  "operators": [
@@ -883,10 +890,10 @@
   "main": 0,
   "lanes": 3,
   "total": 3,
-  "at": "1:44 AM",
+  "at": "1:47 AM",
   "why": "",
-  "at_iso": "2026-11-23T06:44:00+00:00",
+  "at_iso": "2026-11-23T06:47:00+00:00",
   "started": "1:04 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 1:04 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 1:44 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 1:04 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 1:47 AM ET</p></section>"
  }
 }

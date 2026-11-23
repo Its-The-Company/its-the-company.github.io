@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-23T22:29:35.257290+00:00",
+ "at": "2026-11-23T22:32:41.347614+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -425,7 +425,7 @@
   "week_pct": 86.76,
   "usage_pct": 85.3,
   "work_pct": 96.6,
-  "read_at": "2026-11-23T22:29:00+00:00",
+  "read_at": "2026-11-23T22:32:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -475,7 +475,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-23T17:29:00-05:00",
+  "at": "2026-11-23T17:32:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -544,15 +544,6 @@
   "run": [
    {
     "w": "Odalys",
-    "t": "Waiting work gets the merge road in order",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-23T16:42:11-05:00",
-    "o": "c",
-    "task": "T-5739"
-   },
-   {
-    "w": "Odalys",
     "t": "A review ending without a record goes elsewhere",
     "m": "opus",
     "e": "high",
@@ -570,13 +561,13 @@
     "task": "T-5749"
    },
    {
-    "w": "Idris",
-    "t": "Review the cap on landings that keep retrying",
+    "w": "Odalys",
+    "t": "Waiting work gets the merge road in order",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-23T17:29:09-05:00",
+    "at": "2026-11-23T17:29:54-05:00",
     "o": "c",
-    "task": "T-5745"
+    "task": "T-5739"
    }
   ],
   "src": "plan",
@@ -744,33 +735,33 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-23T22:29:28Z",
+  "at": "2026-11-23T22:32:20Z",
   "s": {
    "T-4715": [
     "mergeq",
     "1st to merge",
-    1795460368571
+    1795460360122
    ],
    "T-5708": [
     "mergeq",
     "2nd to merge",
-    1795460368571
+    1795460360122
    ],
    "T-5490": [
     "mergeq",
     "3rd to merge",
-    1795468948571
+    1795469000122
    ],
    "T-5743": [
     "mergeq",
     "4th to merge",
-    1795472968571
+    1795472960122
    ],
-   "T-5745": [
+   "T-5739": [
     "merged",
-    "on main 5:28 PM ET",
-    1795472934000,
-    "Idris"
+    "on main 5:29 PM ET",
+    1795472974000,
+    "Odalys"
    ],
    "T-5735": [
     "merged",
@@ -784,7 +775,7 @@
    "T-5708": "Clear the add-to-home steps before TestFlight",
    "T-5490": "Make the https big-body test count work, not seconds",
    "T-5743": "Review the check that landed means every app file",
-   "T-5745": "Review the cap on landings that keep retrying",
+   "T-5739": "Waiting work gets the merge road in order",
    "T-5735": "A review ending without a record goes elsewhere"
   },
   "wk": {
@@ -792,7 +783,7 @@
    "T-5708": "Maren",
    "T-5490": "Pernille",
    "T-5743": "Idris",
-   "T-5745": "Idris",
+   "T-5739": "Odalys",
    "T-5735": "Odalys",
    "T-5738": "Idris",
    "T-5734": "Odalys",
@@ -808,7 +799,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-23T22:29:28Z",
+  "at": "2026-11-23T22:32:20Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -821,12 +812,12 @@
    },
    "m": {
     "checking": null,
-    "inline": 138,
+    "inline": 141,
     "conflicted": null,
     "failed": null,
-    "held": 781,
+    "held": 784,
     "retry": null,
-    "parked": 781
+    "parked": 784
    },
    "cur": [],
    "ld": [
@@ -836,12 +827,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-23T22:29:04Z",
-    "ld": 3.61,
+    "at": "2026-11-23T22:32:21Z",
+    "ld": 3.45,
     "c": 8,
     "sb": 0,
     "dk": [
-     35.7,
+     35.3,
      228.3
     ],
     "ss": [
@@ -889,11 +880,11 @@
      "open": true
     }
    },
-   "at": "2026-11-23T22:29:35+00:00"
+   "at": "2026-11-23T22:32:41+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-23T22:29:20+00:00"
+   "at": "2026-11-23T22:32:41+00:00"
   }
  },
  "operators": [
@@ -937,10 +928,10 @@
   "main": 0,
   "lanes": 1,
   "total": 1,
-  "at": "5:29 PM",
+  "at": "5:32 PM",
   "why": "",
-  "at_iso": "2026-11-23T22:29:00+00:00",
+  "at_iso": "2026-11-23T22:32:00+00:00",
   "started": "9:27 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0, started 9:27 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 5:29 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0, started 9:27 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 5:32 PM ET</p></section>"
  }
 }

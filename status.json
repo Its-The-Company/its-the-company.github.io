@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-23T12:40:53.971393+00:00",
+ "at": "2026-11-23T12:43:56.707824+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -434,7 +434,7 @@
   "week_pct": 102.36,
   "usage_pct": 84.0,
   "work_pct": 95.0,
-  "read_at": "2026-11-23T12:40:00+00:00",
+  "read_at": "2026-11-23T12:43:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -499,6 +499,18 @@
     "n": "Jeremy",
     "d": 1,
     "src": "plan-b"
+   },
+   {
+    "lane": "b3",
+    "task": "T-4193",
+    "w": "Idris",
+    "k": "build",
+    "t": "TestFlight builds and the App Store page are ready",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-23T07:43:38-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
    }
   ]
  },
@@ -536,7 +548,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-23T07:40:00-05:00",
+  "at": "2026-11-23T07:43:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -632,15 +644,6 @@
    },
    {
     "w": "Idris",
-    "t": "A person's own script becomes a Home Screen widget",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-23T07:28:03-05:00",
-    "o": "c",
-    "task": "T-4184"
-   },
-   {
-    "w": "Idris",
     "t": "Location, steps and notifications work in scripts and widgets",
     "m": "opus",
     "e": "high",
@@ -656,6 +659,15 @@
     "at": "2026-11-23T07:34:37-05:00",
     "o": "c",
     "task": "T-4192"
+   },
+   {
+    "w": "Idris",
+    "t": "A person's own script becomes a Home Screen widget",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-23T07:41:49-05:00",
+    "o": "c",
+    "task": "T-4184"
    }
   ],
   "src": "plan",
@@ -733,6 +745,11 @@
   ],
   "done": [
    {
+    "w": "Idris",
+    "t": "When a person changes a helper file their widget's script uses, every widget in that project now...",
+    "at": "2026-11-23T05:59:00-05:00"
+   },
+   {
     "w": "Odalys",
     "t": "The supervisor's stall check no longer ends the coordinator while it waits up to 90 minutes for...",
     "at": "2026-11-23T04:19:00-05:00"
@@ -741,11 +758,6 @@
     "w": "Idris",
     "t": "The second reading of the faster test setup for the app's bundled Python is done and passed. Its...",
     "at": "2026-11-23T02:30:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "With the one-coordinator switch on and the coordinator session running, only the coordinator...",
-    "at": "2026-11-23T02:20:00-05:00"
    }
   ],
   "count": {
@@ -755,8 +767,12 @@
    "you": 2
   },
   "fin": {
-   "n": 2,
+   "n": 3,
    "rows": [
+    [
+     "T-1905",
+     "Send project files in one..."
+    ],
     [
      "T-5673",
      "Stall watch stops killing..."
@@ -807,7 +823,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-23T12:40:53Z",
+  "at": "2026-11-23T12:43:56Z",
   "s": {
    "T-2296": [
     "mergetest",
@@ -816,9 +832,9 @@
    ],
    "T-4184": [
     "merged",
-    "on main 4:04 AM ET",
-    1795424645000,
-    "Pernille"
+    "on main 7:31 AM ET",
+    1795437097000,
+    "Idris"
    ],
    "T-4692": [
     "merged",
@@ -852,12 +868,13 @@
    "T-4692": "Idris",
    "T-5602": "Maren",
    "T-4182": "Idris",
+   "T-1905": "Idris",
    "T-5673": "Odalys",
    "T-5381": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-23T12:40:53Z",
+  "at": "2026-11-23T12:43:56Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -873,9 +890,9 @@
     "inline": null,
     "conflicted": null,
     "failed": null,
-    "held": 192,
+    "held": 195,
     "retry": null,
-    "parked": 235
+    "parked": 238
    },
    "cur": [],
    "ld": [
@@ -885,12 +902,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-23T12:40:54Z",
-    "ld": 3.53,
+    "at": "2026-11-23T12:43:16Z",
+    "ld": 2.69,
     "c": 8,
     "sb": 0,
     "dk": [
-     39.1,
+     37.0,
      228.3
     ],
     "ss": [
@@ -938,11 +955,11 @@
      "open": true
     }
    },
-   "at": "2026-11-23T12:40:53+00:00"
+   "at": "2026-11-23T12:43:56+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-23T12:40:41+00:00"
+   "at": "2026-11-23T12:43:56+00:00"
   }
  },
  "operators": [
@@ -999,6 +1016,15 @@
    "e": "high",
    "t": "Work session",
    "at": "2026-11-23T07:14:07-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Jeremy's Account",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session \u2013 1 task",
+   "at": "2026-11-23T07:43:38-05:00"
   }
  ],
  "reply": {
@@ -1019,12 +1045,12 @@
  ],
  "agents_now": {
   "main": 0,
-  "lanes": 5,
-  "total": 5,
-  "at": "7:40 AM",
+  "lanes": 6,
+  "total": 6,
+  "at": "7:43 AM",
   "why": "",
-  "at_iso": "2026-11-23T12:40:00+00:00",
+  "at_iso": "2026-11-23T12:43:00+00:00",
   "started": "2:29 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 0, started 2:29 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 7:40 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 0, started 2:29 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 6 sessions \u00b7 as of 7:43 AM ET</p></section>"
  }
 }

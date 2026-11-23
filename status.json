@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-23T06:16:31.123306+00:00",
+ "at": "2026-11-23T06:19:42.478381+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -324,7 +324,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 714,
+  "runnable_count": 715,
   "blocked_count": 2
  },
  "meter": {
@@ -373,7 +373,7 @@
   "week_pct": 7.04,
   "usage_pct": 84.6,
   "work_pct": 94.7,
-  "read_at": "2026-11-23T06:16:00+00:00",
+  "read_at": "2026-11-23T06:19:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -448,7 +448,7 @@
  "lock_in": {
   "on": true,
   "pool": 3,
-  "at": "2026-11-23T01:16:00-05:00",
+  "at": "2026-11-23T01:19:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -459,8 +459,8 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 36 (cut a step: load 21.5 a core is over 10)",
-  "n": 36,
+  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 35 (cut a step: load 34.8 a core is over 10)",
+  "n": 35,
   "at": "2026-11-23T01:03:33.210113-05:00"
  },
  "lanes": [
@@ -561,13 +561,13 @@
     "task": "T-4772"
    },
    {
-    "w": "Idris",
-    "t": "Premades default to Paper in light and Studio in dark",
+    "w": "Pernille",
+    "t": "Make the premade settings save sturdier on disk errors",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-23T01:15:41-05:00",
+    "at": "2026-11-23T01:17:58-05:00",
     "o": "c",
-    "task": "T-4681"
+    "task": "T-4533"
    }
   ],
   "src": "plan",
@@ -661,7 +661,7 @@
    }
   ],
   "count": {
-   "next": 714,
+   "next": 715,
    "wait": 2,
    "blocked": 0,
    "you": 2
@@ -719,7 +719,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-23T06:16:31Z",
+  "at": "2026-11-23T06:19:42Z",
   "s": {
    "T-4692": [
     "mergetest",
@@ -760,7 +760,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-23T06:16:31Z",
+  "at": "2026-11-23T06:19:42Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -778,7 +778,7 @@
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 159
+    "parked": 162
    },
    "cur": [],
    "ld": [
@@ -788,12 +788,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-23T06:16:38Z",
-    "ld": 32.29,
+    "at": "2026-11-23T06:18:57Z",
+    "ld": 35.31,
     "c": 8,
     "sb": 1,
     "dk": [
-     60.3,
+     59.8,
      228.3
     ],
     "ss": [
@@ -843,11 +843,11 @@
      "open": true
     }
    },
-   "at": "2026-11-23T06:16:31+00:00"
+   "at": "2026-11-23T06:19:42+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-23T06:16:31+00:00"
+   "at": "2026-11-23T06:19:34+00:00"
   }
  },
  "operators": [
@@ -908,10 +908,10 @@
   "main": 0,
   "lanes": 3,
   "total": 3,
-  "at": "1:16 AM",
+  "at": "1:19 AM",
   "why": "",
-  "at_iso": "2026-11-23T06:16:00+00:00",
+  "at_iso": "2026-11-23T06:19:00+00:00",
   "started": "1:04 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 1:04 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 1:16 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 1:04 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 1:19 AM ET</p></section>"
  }
 }

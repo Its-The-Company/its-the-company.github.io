@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-23T16:52:37.420849+00:00",
+ "at": "2026-11-23T16:55:47.269615+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -425,7 +425,7 @@
   "week_pct": 69.41,
   "usage_pct": 85.3,
   "work_pct": 96.6,
-  "read_at": "2026-11-23T16:52:00+00:00",
+  "read_at": "2026-11-23T16:56:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -481,14 +481,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-23T11:46:00-05:00",
+   "at": "2026-11-23T11:53:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-23T11:52:00-05:00",
+  "at": "2026-11-23T11:56:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -499,7 +499,7 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 8 (at its floor: load 19.2 a core is over 10)",
+  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 8 (at its floor: load 14.8 a core is over 10)",
   "n": 8,
   "at": "2026-11-23T09:25:38.709305-05:00"
  },
@@ -775,27 +775,27 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-23T16:52:37Z",
+  "at": "2026-11-23T16:55:47Z",
   "s": {
    "T-4184": [
     "mergeq",
     "1st to merge",
-    1795451917420
+    1795451927269
    ],
    "T-4192": [
     "mergeq",
     "2nd to merge",
-    1795445197420
-   ],
-   "T-5491": [
-    "mergeq",
-    "3rd to merge",
-    1795446157420
+    1795445207269
    ],
    "T-5688": [
     "mergeq",
-    "4th to merge",
-    1795447417420
+    "3rd to merge",
+    1795447427269
+   ],
+   "T-2296": [
+    "mergetest",
+    "iPhone tests on the MacBook",
+    null
    ],
    "T-5325": [
     "testing",
@@ -805,12 +805,12 @@
    "T-4715": [
     "testq",
     "1st for a Simulator",
-    1795451737420
+    1795451807269
    ],
    "T-5256": [
     "testq",
     "1st for a Simulator",
-    1795451737420
+    1795451807269
    ],
    "T-4772": [
     "merged",
@@ -822,8 +822,8 @@
   "nm": {
    "T-4184": "A person's own script becomes a Home Screen widget",
    "T-4192": "Python in the app: smaller bundle, installable packages",
-   "T-5491": "Drop the swallow test's five-second bound",
    "T-5688": "Land finished work whose copy also changed the board",
+   "T-2296": "Finish the gallery pager, iPad layout and detail foot",
    "T-5325": "Second tap on a half-hidden row keeps the text",
    "T-4715": "Put the new Pro screen words into the app",
    "T-5256": "Trim step 3, one merge script beside the old road",
@@ -832,8 +832,8 @@
   "wk": {
    "T-4184": "Idris",
    "T-4192": "Idris",
-   "T-5491": "Pernille",
    "T-5688": "Odalys",
+   "T-2296": "Idris",
    "T-5325": "Idris",
    "T-4715": "Maren",
    "T-5256": "Odalys",
@@ -851,11 +851,11 @@
   }
  },
  "ln": {
-  "at": "2026-11-23T16:52:37Z",
+  "at": "2026-11-23T16:55:47Z",
   "mq": {
    "n": {
     "checking": 0,
-    "inline": 3,
+    "inline": 2,
     "conflicted": 0,
     "failed": 1,
     "held": 3,
@@ -866,10 +866,10 @@
     "checking": null,
     "inline": 110,
     "conflicted": null,
-    "failed": 0,
-    "held": 444,
+    "failed": 3,
+    "held": 447,
     "retry": null,
-    "parked": 444
+    "parked": 447
    },
    "cur": [],
    "ld": [
@@ -879,8 +879,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-23T16:52:43Z",
-    "ld": 15.65,
+    "at": "2026-11-23T16:55:10Z",
+    "ld": 14.95,
     "c": 8,
     "sb": 1,
     "dk": [
@@ -896,12 +896,12 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-23T16:16:02Z",
-    "ld": 3.24,
+    "at": "2026-11-23T16:54:32Z",
+    "ld": 3.25,
     "c": 12,
     "sb": 0,
     "dk": [
-     350.4,
+     350.1,
      926.4
     ],
     "sn": []
@@ -910,21 +910,21 @@
  },
  "hc": {
   "wait": {
-   "n": 20,
+   "n": 19,
    "limit": 20,
-   "in_line": 4,
+   "in_line": 3,
    "parked": 16,
    "open": true,
    "mq": false,
-   "counted": "2026-11-23T16:44:38+00:00",
+   "counted": "2026-11-23T16:55:12+00:00",
    "by": {
     "app": {
-     "n": 13,
+     "n": 12,
      "limit": 20,
      "open": true
     },
     "other": {
-     "n": 11,
+     "n": 10,
      "limit": 20,
      "open": true
     },
@@ -934,11 +934,11 @@
      "open": true
     }
    },
-   "at": "2026-11-23T16:52:37+00:00"
+   "at": "2026-11-23T16:55:47+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-23T16:52:37+00:00"
+   "at": "2026-11-23T16:55:47+00:00"
   }
  },
  "operators": [
@@ -948,8 +948,8 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session",
-   "at": "2026-11-23T09:30:47-05:00"
+   "t": "Inbox \u2013 Evan's 11:55 AM Message on GitHub",
+   "at": "2026-11-23T11:55:52-05:00"
   },
   {
    "w": "Operator",
@@ -974,12 +974,24 @@
   "sent": "2026-11-23T14:28:18Z",
   "seconds": 147.0
  },
- "inbox": [],
+ "inbox": [
+  {
+   "id": "c7107881896",
+   "state": "received",
+   "position": 1,
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "When this fix is done do we expect..."
+  }
+ ],
  "trimmed": [
   "lane_next",
   "queue_text",
   "task_done",
   "fin_short",
+  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -991,10 +1003,10 @@
   "main": 0,
   "lanes": 2,
   "total": 2,
-  "at": "11:52 AM",
+  "at": "11:56 AM",
   "why": "",
-  "at_iso": "2026-11-23T16:52:00+00:00",
+  "at_iso": "2026-11-23T16:56:00+00:00",
   "started": "9:27 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0, started 9:27 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 11:52 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0, started 9:27 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 11:56 AM ET</p></section>"
  }
 }

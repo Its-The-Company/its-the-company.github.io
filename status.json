@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-23T07:09:01.031061+00:00",
+ "at": "2026-11-23T07:12:07.036243+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -12,6 +12,38 @@
    "last_handoff": 1795407234
   },
   "flow": [
+   {
+    "t": "T-0657",
+    "name": "Build the Settings screen",
+    "w": "Idris",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "claimed",
+      "at": 1795417860
+     },
+     {
+      "s": "worker",
+      "at": 1795417860
+     }
+    ]
+   },
+   {
+    "t": "T-4635",
+    "name": "Clear the Settings restore line once Pro is bought",
+    "w": "Idris",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "claimed",
+      "at": 1795417776
+     },
+     {
+      "s": "worker",
+      "at": 1795417776
+     }
+    ]
+   },
    {
     "t": "T-4762",
     "name": "Let the run lock wrap a Python run",
@@ -235,38 +267,6 @@
       "at": 1795410628
      }
     ]
-   },
-   {
-    "t": "T-4635",
-    "name": "Clear the Settings restore line once Pro is bought",
-    "w": "Idris",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "claimed",
-      "at": 1795410529
-     },
-     {
-      "s": "worker",
-      "at": 1795410529
-     }
-    ]
-   },
-   {
-    "t": "T-0657",
-    "name": "Build the Settings screen",
-    "w": "Idris",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "claimed",
-      "at": 1795410492
-     },
-     {
-      "s": "worker",
-      "at": 1795410492
-     }
-    ]
    }
   ],
   "done": [
@@ -329,12 +329,13 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 13.0,
-   "resets_at": "2026-11-23T07:10:00.728881+00:00",
+   "pct": null,
+   "resets_at": null,
    "used_words": "of your 5-hour allowance used",
    "read_at": "2026-11-23T02:05:32.537115-05:00",
    "source": "usage",
-   "left": 87.0,
+   "last_reset": "2026-11-23T07:10:00.728881+00:00",
+   "left": null,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
@@ -373,7 +374,7 @@
   "week_pct": 7.04,
   "usage_pct": 84.6,
   "work_pct": 94.7,
-  "read_at": "2026-11-23T07:09:00+00:00",
+  "read_at": "2026-11-23T07:12:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -435,7 +436,7 @@
  "lock_in": {
   "on": true,
   "pool": 3,
-  "at": "2026-11-23T02:09:00-05:00",
+  "at": "2026-11-23T02:12:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -446,8 +447,8 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 28 (cut a step: load 29.2 a core is over 10)",
-  "n": 28,
+  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 27 (cut a step: load 15.3 a core is over 10)",
+  "n": 27,
   "at": "2026-11-23T01:03:33.210113-05:00"
  },
  "lanes": [
@@ -692,77 +693,77 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-23T07:08:52Z",
+  "at": "2026-11-23T07:11:54Z",
   "s": {
    "T-4692": [
     "mergeq",
     "1st to merge",
-    1795417732112
+    1795417734057
    ],
    "T-0337": [
     "mergeq",
     "1st to merge",
-    1795417732112
+    1795417734057
    ],
    "T-2097": [
     "mergeq",
     "1st to merge",
-    1795417732112
+    1795417734057
    ],
    "T-4010": [
     "mergeq",
     "1st to merge",
-    1795417732112
+    1795417734057
    ],
    "T-4477": [
     "mergeq",
     "1st to merge",
-    1795417732112
+    1795417734057
    ],
    "T-4286": [
     "mergeq",
     "1st to merge",
-    1795417732112
+    1795417734057
    ],
    "T-4435": [
     "mergeq",
     "1st to merge",
-    1795417732112
+    1795417734057
    ],
    "T-0678": [
     "mergeq",
     "1st to merge",
-    1795417732112
+    1795417734057
    ],
    "T-3495": [
     "mergeq",
     "1st to merge",
-    1795417732112
+    1795417734057
    ],
    "T-3765": [
     "mergeq",
     "1st to merge",
-    1795417732112
+    1795417734057
    ],
    "T-4662": [
     "mergeq",
     "1st to merge",
-    1795417732112
+    1795417734057
    ],
    "T-4781": [
     "mergeq",
     "1st to merge",
-    1795417732112
+    1795417734057
    ],
    "T-4772": [
     "mergeq",
     "1st to merge",
-    1795417732112
+    1795417734057
    ],
    "T-4762": [
     "mergeq",
     "1st to merge",
-    1795417732112
+    1795417734057
    ],
    "T-4182": [
     "merged",
@@ -818,7 +819,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-23T07:08:52Z",
+  "at": "2026-11-23T07:11:54Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -831,12 +832,12 @@
    },
    "m": {
     "checking": null,
-    "inline": 0,
+    "inline": 3,
     "conflicted": null,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 211
+    "parked": 214
    },
    "cur": [],
    "ld": [
@@ -846,12 +847,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-23T07:08:08Z",
-    "ld": 27.57,
+    "at": "2026-11-23T07:11:05Z",
+    "ld": 16.1,
     "c": 8,
     "sb": 0,
     "dk": [
-     58.8,
+     60.0,
      228.3
     ],
     "ss": [
@@ -899,11 +900,11 @@
      "open": true
     }
    },
-   "at": "2026-11-23T07:09:01+00:00"
+   "at": "2026-11-23T07:12:07+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-23T07:09:01+00:00"
+   "at": "2026-11-23T07:12:00+00:00"
   }
  },
  "operators": [
@@ -922,7 +923,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 5 tasks",
+   "t": "Work session \u2013 7 tasks",
    "at": "2026-11-23T00:56:12-05:00"
   },
   {
@@ -955,10 +956,10 @@
   "main": 0,
   "lanes": 2,
   "total": 2,
-  "at": "2:09 AM",
+  "at": "2:12 AM",
   "why": "",
-  "at_iso": "2026-11-23T07:09:00+00:00",
+  "at_iso": "2026-11-23T07:12:00+00:00",
   "started": "1:04 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0, started 1:04 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 2:09 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0, started 1:04 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 2:12 AM ET</p></section>"
  }
 }

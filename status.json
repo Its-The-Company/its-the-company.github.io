@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-23T23:35:33.773857+00:00",
+ "at": "2026-11-23T23:38:39.596524+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -385,7 +385,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 727,
+  "runnable_count": 726,
   "blocked_count": 2
  },
  "meter": {
@@ -434,7 +434,7 @@
   "week_pct": 92.55,
   "usage_pct": 85.3,
   "work_pct": 96.6,
-  "read_at": "2026-11-23T23:35:00+00:00",
+  "read_at": "2026-11-23T23:38:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -508,7 +508,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-23T18:35:00-05:00",
+  "at": "2026-11-23T18:38:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -650,6 +650,11 @@
   ],
   "done": [
    {
+    "w": "Idris+operator",
+    "t": "Idris reviewed how unfinished reviews are handed on and passed it on safety; the review reached...",
+    "at": "2026-11-23T18:36:00-05:00"
+   },
+   {
     "w": "Odalys",
     "t": "Lanes waiting for the merge road now go in the order they asked, so one that keeps losing the...",
     "at": "2026-11-23T17:36:00-05:00"
@@ -658,22 +663,21 @@
     "w": "Idris",
     "t": "Idris reviewed the cap on landings that keep retrying and passed it; two follow-ups on the...",
     "at": "2026-11-23T17:36:00-05:00"
-   },
-   {
-    "w": "Idris",
-    "t": "Idris reviewed the turn kept by work that steps aside on the merge road and passed it on safety,...",
-    "at": "2026-11-23T17:28:00-05:00"
    }
   ],
   "count": {
-   "next": 727,
+   "next": 726,
    "wait": 2,
    "blocked": 0,
    "you": 2
   },
   "fin": {
-   "n": 30,
+   "n": 31,
    "rows": [
+    [
+     "T-5749",
+     "Review how unfinished..."
+    ],
     [
      "T-5739",
      "Waiting work gets the merge..."
@@ -693,10 +697,6 @@
     [
      "T-5734",
      "A land that keeps saying run..."
-    ],
-    [
-     "T-5704",
-     "Account for finished app..."
     ]
    ]
   }
@@ -740,26 +740,27 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-23T23:35:33Z",
+  "at": "2026-11-23T23:38:39Z",
   "s": {
-   "T-5749": [
+   "T-5760": [
     "mergeq",
     "1st to merge",
-    1795476273773
+    1795477119596
    ],
    "T-4715": [
     "mergetest",
     "Xcode checks on the MacBook, 2nd to merge",
-    1795476753773
+    1795476759596
    ]
   },
   "nm": {
-   "T-5749": "Review how unfinished reviews are handed on",
+   "T-5760": "The disk keeper deletes review scratch without asking",
    "T-4715": "Put the new Pro screen words into the app"
   },
   "wk": {
-   "T-5749": "Idris",
+   "T-5760": "Odalys",
    "T-4715": "Maren",
+   "T-5749": "Idris",
    "T-5739": "Odalys",
    "T-5745": "Idris",
    "T-5738": "Idris",
@@ -770,12 +771,11 @@
    "T-5733": "Idris",
    "T-5715": "Odalys",
    "T-5698": "Odalys",
-   "T-5697": "Odalys",
-   "T-5722": "Odalys"
+   "T-5697": "Odalys"
   }
  },
  "ln": {
-  "at": "2026-11-23T23:35:33Z",
+  "at": "2026-11-23T23:38:39Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -787,13 +787,13 @@
     "parked": 13
    },
    "m": {
-    "checking": 3,
-    "inline": 11,
+    "checking": 6,
+    "inline": 0,
     "conflicted": null,
     "failed": null,
-    "held": 847,
+    "held": 850,
     "retry": null,
-    "parked": 847
+    "parked": 850
    },
    "cur": [
     [
@@ -802,7 +802,7 @@
      ],
      "iPhone app tests",
      "MacBook",
-     3
+     6
     ]
    ],
    "ld": [
@@ -812,8 +812,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-23T23:35:35Z",
-    "ld": 3.77,
+    "at": "2026-11-23T23:37:55Z",
+    "ld": 3.51,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -865,11 +865,11 @@
      "open": true
     }
    },
-   "at": "2026-11-23T23:35:33+00:00"
+   "at": "2026-11-23T23:38:39+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-23T23:35:25+00:00"
+   "at": "2026-11-23T23:38:31+00:00"
   }
  },
  "operators": [
@@ -931,10 +931,10 @@
   "main": 0,
   "lanes": 3,
   "total": 3,
-  "at": "6:35 PM",
+  "at": "6:38 PM",
   "why": "",
-  "at_iso": "2026-11-23T23:35:00+00:00",
+  "at_iso": "2026-11-23T23:38:00+00:00",
   "started": "9:27 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 9:27 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 6:35 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 9:27 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 6:38 PM ET</p></section>"
  }
 }

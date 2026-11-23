@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-23T06:47:21.215962+00:00",
+ "at": "2026-11-23T06:50:20.982933+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -324,7 +324,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 716,
+  "runnable_count": 715,
   "blocked_count": 2
  },
  "meter": {
@@ -373,7 +373,7 @@
   "week_pct": 7.04,
   "usage_pct": 84.6,
   "work_pct": 94.7,
-  "read_at": "2026-11-23T06:47:00+00:00",
+  "read_at": "2026-11-23T06:50:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -448,7 +448,7 @@
  "lock_in": {
   "on": true,
   "pool": 3,
-  "at": "2026-11-23T01:47:00-05:00",
+  "at": "2026-11-23T01:50:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -523,15 +523,6 @@
     "at": "2026-11-23T01:03:48-05:00",
     "o": "c",
     "task": "T-5620"
-   },
-   {
-    "w": "Pernille",
-    "t": "Make the premade settings save sturdier on disk errors",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-23T01:17:58-05:00",
-    "o": "c",
-    "task": "T-4533"
    },
    {
     "w": "Idris",
@@ -636,6 +627,11 @@
   ],
   "done": [
    {
+    "w": "Pernille",
+    "t": "A ready-made widget's saved settings now survive a full disk or a power cut: the save gives up...",
+    "at": "2026-11-23T01:19:00-05:00"
+   },
+   {
     "w": "Ines+operator",
     "t": "The list of seven TestFlight-only test widgets is written, with a plain page for the Investors;...",
     "at": "2026-11-23T01:13:00-05:00"
@@ -644,22 +640,21 @@
     "w": "Idris+odalys",
     "t": "The release app no longer carries the Python modules it never needs, and a build check now...",
     "at": "2026-11-23T01:07:00-05:00"
-   },
-   {
-    "w": "Idris",
-    "t": "A widget moved to the app because it is too big or too slow (T-4630: the badge fix) now shows no...",
-    "at": "2026-11-23T00:18:00-05:00"
    }
   ],
   "count": {
-   "next": 716,
+   "next": 715,
    "wait": 2,
    "blocked": 0,
    "you": 2
   },
   "fin": {
-   "n": 2,
+   "n": 3,
    "rows": [
+    [
+     "T-4533",
+     "Make the premade settings..."
+    ],
     [
      "T-5643",
      "List the test widgets that..."
@@ -710,11 +705,16 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-23T06:47:13Z",
+  "at": "2026-11-23T06:50:20Z",
   "s": {
    "T-0048": [
     "mergetest",
     "iPhone tests on the MacBook",
+    null
+   ],
+   "T-4188": [
+    "testing",
+    "Mac Mini \u00b7 test",
     null
    ],
    "T-4182": [
@@ -732,19 +732,22 @@
   },
   "nm": {
    "T-0048": "Add the per-widget Activity screen and Run as widget",
+   "T-4188": "Location, steps and notifications work in scripts and...",
    "T-4182": "A failing widget says so and can recover",
    "T-4184": "A person's own script becomes a Home Screen widget"
   },
   "wk": {
    "T-0048": "Idris",
+   "T-4188": "Idris",
    "T-4182": "Idris",
    "T-4184": "Idris",
+   "T-4533": "Pernille",
    "T-5643": "Ines",
    "T-0043": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-23T06:47:13Z",
+  "at": "2026-11-23T06:50:20Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -762,7 +765,7 @@
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 190
+    "parked": 193
    },
    "cur": [],
    "ld": [
@@ -772,19 +775,21 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-23T06:46:45Z",
-    "ld": 6.15,
+    "at": "2026-11-23T06:50:26Z",
+    "ld": 9.37,
     "c": 8,
-    "sb": 0,
+    "sb": 1,
     "dk": [
-     58.8,
+     58.7,
      228.3
     ],
     "ss": [
      173.1,
      953.7
     ],
-    "sn": []
+    "sn": [
+     "iPhone 17e"
+    ]
    },
    "macbook": {
     "at": "2026-11-23T06:44:43Z",
@@ -807,7 +812,7 @@
    "parked": 4,
    "open": true,
    "mq": false,
-   "counted": "2026-11-23T06:32:16+00:00",
+   "counted": "2026-11-23T06:48:12+00:00",
    "by": {
     "app": {
      "n": 3,
@@ -825,11 +830,11 @@
      "open": true
     }
    },
-   "at": "2026-11-23T06:47:21+00:00"
+   "at": "2026-11-23T06:50:20+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-23T06:47:06+00:00"
+   "at": "2026-11-23T06:50:20+00:00"
   }
  },
  "operators": [
@@ -890,10 +895,10 @@
   "main": 0,
   "lanes": 3,
   "total": 3,
-  "at": "1:47 AM",
+  "at": "1:50 AM",
   "why": "",
-  "at_iso": "2026-11-23T06:47:00+00:00",
+  "at_iso": "2026-11-23T06:50:00+00:00",
   "started": "1:04 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 1:04 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 1:47 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 1:04 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 1:50 AM ET</p></section>"
  }
 }

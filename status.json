@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-23T15:31:05.481670+00:00",
+ "at": "2026-11-23T15:34:09.003264+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -301,22 +301,6 @@
     ]
    },
    {
-    "t": "T-3847",
-    "name": "Test the launcher link through the real URL entry point",
-    "w": "Idris",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "claimed",
-      "at": 1795424374
-     },
-     {
-      "s": "worker",
-      "at": 1795424374
-     }
-    ]
-   },
-   {
     "t": "T-1119",
     "name": "Investors answer two App Store Connect questions",
     "w": "Ines",
@@ -363,9 +347,25 @@
       "at": 1795423957
      }
     ]
+   },
+   {
+    "t": "T-4181",
+    "name": "Widgets refresh on their own and by a tap",
+    "w": "Idris",
+    "acct": "Personal b",
+    "steps": [
+     {
+      "s": "claimed",
+      "at": 1795420690
+     },
+     {
+      "s": "worker",
+      "at": 1795420690
+     }
+    ]
    }
   ],
-  "flow_n": 25,
+  "flow_n": 24,
   "done": [],
   "landed": 1,
   "failed": 4
@@ -376,7 +376,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 712,
+  "runnable_count": 710,
   "blocked_count": 2
  },
  "meter": {
@@ -425,7 +425,7 @@
   "week_pct": 63.62,
   "usage_pct": 85.3,
   "work_pct": 96.6,
-  "read_at": "2026-11-23T15:31:00+00:00",
+  "read_at": "2026-11-23T15:34:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -487,7 +487,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-23T10:31:00-05:00",
+  "at": "2026-11-23T10:34:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -498,7 +498,7 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 8 (at its floor: load 20.0 a core is over 10)",
+  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 8 (at its floor: load 22.2 a core is over 10)",
   "n": 8,
   "at": "2026-11-23T09:25:38.709305-05:00"
  },
@@ -592,21 +592,21 @@
    },
    {
     "w": "Idris",
-    "t": "Fix the city list test after the tzdata update",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-23T10:14:27-05:00",
-    "o": "c",
-    "task": "T-5616"
-   },
-   {
-    "w": "Idris",
     "t": "Review the fix that lands copies that changed the board",
     "m": "opus",
     "e": "high",
     "at": "2026-11-23T10:20:44-05:00",
     "o": "c",
     "task": "T-5693"
+   },
+   {
+    "w": "Idris",
+    "t": "Launcher widgets open the apps a person chose",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-23T10:31:57-05:00",
+    "o": "c",
+    "task": "T-4185"
    }
   ],
   "src": "plan",
@@ -685,6 +685,11 @@
   "done": [
    {
     "w": "Idris+pernille",
+    "t": "The launcher widget test now opens the app the same way a real widget tap does, so a broken tap...",
+    "at": "2026-11-23T10:32:00-05:00"
+   },
+   {
+    "w": "Idris+pernille",
     "t": "The Pro tag now comes only from the Investors' November 18 list: Habit tracker is the one Pro...",
     "at": "2026-11-23T10:01:00-05:00"
    },
@@ -692,22 +697,21 @@
     "w": "Idris+pernille",
     "t": "A widget button's Python run now keeps the widget locked for the whole run, so a second tap...",
     "at": "2026-11-23T09:55:00-05:00"
-   },
-   {
-    "w": "Idris+pernille",
-    "t": "The widget's saved-state file now uses one layout for version 1.0 and the later 1.1, so a file...",
-    "at": "2026-11-23T09:51:00-05:00"
    }
   ],
   "count": {
-   "next": 712,
+   "next": 710,
    "wait": 2,
    "blocked": 0,
    "you": 2
   },
   "fin": {
-   "n": 6,
+   "n": 7,
    "rows": [
+    [
+     "T-3847",
+     "Test the launcher link..."
+    ],
     [
      "T-4692",
      "Pro showcase widgets work..."
@@ -727,10 +731,6 @@
     [
      "T-4643",
      "Make the size ladder measure..."
-    ],
-    [
-     "T-5391",
-     "Check finished work before..."
     ]
    ]
   }
@@ -774,27 +774,32 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-23T15:31:05Z",
+  "at": "2026-11-23T15:33:51Z",
   "s": {
    "T-4184": [
     "mergeq",
     "1st to merge",
-    1795445585481
+    1795445571590
    ],
    "T-5688": [
     "mergeq",
     "2nd to merge",
-    1795447445481
+    1795447431590
    ],
    "T-5491": [
     "mergeq",
     "3rd to merge",
-    1795446185481
+    1795446171590
    ],
    "T-4192": [
     "mergeq",
     "4th to merge",
-    1795445225481
+    1795445211590
+   ],
+   "T-5524": [
+    "mergetest",
+    "iPhone tests on the MacBook",
+    null
    ],
    "T-4715": [
     "testing",
@@ -810,6 +815,12 @@
     "testing",
     "Mac Mini \u00b7 test",
     null
+   ],
+   "T-4185": [
+    "merged",
+    "on main 10:38 PM ET",
+    1795405118000,
+    "Pernille"
    ]
   },
   "nm": {
@@ -817,18 +828,23 @@
    "T-5688": "Land finished work whose copy also changed the board",
    "T-5491": "Drop the swallow test's five-second bound",
    "T-4192": "Python in the app: smaller bundle, installable packages",
+   "T-5524": "Make the widget's Debug ask record say what it saw",
    "T-4715": "Put the new Pro screen words into the app",
    "T-5256": "Trim step 3, one merge script beside the old road",
-   "T-5602": "Brief for a new look for the app"
+   "T-5602": "Brief for a new look for the app",
+   "T-4185": "Launcher widgets open the apps a person chose"
   },
   "wk": {
    "T-4184": "Idris",
    "T-5688": "Odalys",
    "T-5491": "Pernille",
    "T-4192": "Idris",
+   "T-5524": "Idris",
    "T-4715": "Maren",
    "T-5256": "Odalys",
    "T-5602": "Maren",
+   "T-4185": "Idris",
+   "T-3847": "Idris",
    "T-4692": "Idris",
    "T-4762": "Idris",
    "T-4761": "Idris",
@@ -838,7 +854,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-23T15:31:05Z",
+  "at": "2026-11-23T15:33:51Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -851,12 +867,12 @@
    },
    "m": {
     "checking": null,
-    "inline": 33,
+    "inline": 36,
     "conflicted": null,
     "failed": null,
-    "held": 362,
+    "held": 365,
     "retry": null,
-    "parked": 362
+    "parked": 365
    },
    "cur": [],
    "ld": [
@@ -866,8 +882,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-23T15:30:58Z",
-    "ld": 23.85,
+    "at": "2026-11-23T15:33:53Z",
+    "ld": 21.64,
     "c": 8,
     "sb": 1,
     "dk": [
@@ -883,8 +899,8 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-23T15:29:35Z",
-    "ld": 0.66,
+    "at": "2026-11-23T15:31:41Z",
+    "ld": 0.48,
     "c": 12,
     "sb": 0,
     "dk": [
@@ -897,13 +913,13 @@
  },
  "hc": {
   "wait": {
-   "n": 20,
+   "n": 21,
    "limit": 20,
-   "in_line": 3,
+   "in_line": 4,
    "parked": 17,
    "open": true,
    "mq": false,
-   "counted": "2026-11-23T15:21:27+00:00",
+   "counted": "2026-11-23T15:32:09+00:00",
    "by": {
     "app": {
      "n": 14,
@@ -911,21 +927,21 @@
      "open": true
     },
     "other": {
-     "n": 10,
+     "n": 11,
      "limit": 20,
      "open": true
     },
     "hub": {
-     "n": 1,
+     "n": 2,
      "limit": 5,
      "open": true
     }
    },
-   "at": "2026-11-23T15:31:05+00:00"
+   "at": "2026-11-23T15:34:09+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-23T15:31:05+00:00"
+   "at": "2026-11-23T15:34:01+00:00"
   }
  },
  "operators": [
@@ -970,6 +986,7 @@
   "task_title",
   "done_text",
   "task_open",
+  "fin_six",
   "lane_task",
   "task_next"
  ],
@@ -977,10 +994,10 @@
   "main": 0,
   "lanes": 2,
   "total": 2,
-  "at": "10:31 AM",
+  "at": "10:34 AM",
   "why": "",
-  "at_iso": "2026-11-23T15:31:00+00:00",
+  "at_iso": "2026-11-23T15:34:00+00:00",
   "started": "9:27 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0, started 9:27 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 10:31 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0, started 9:27 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 10:34 AM ET</p></section>"
  }
 }

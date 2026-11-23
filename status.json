@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-23T18:44:02.062455+00:00",
+ "at": "2026-11-23T18:47:10.369631+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -425,7 +425,7 @@
   "week_pct": 75.19,
   "usage_pct": 85.3,
   "work_pct": 96.6,
-  "read_at": "2026-11-23T18:44:00+00:00",
+  "read_at": "2026-11-23T18:47:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -472,7 +472,7 @@
   }
  ],
  "disk": {
-  "free_gb": 34,
+  "free_gb": 32,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -481,14 +481,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-23T13:36:00-05:00",
+   "at": "2026-11-23T13:44:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-23T13:44:00-05:00",
+  "at": "2026-11-23T13:47:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -499,7 +499,7 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 8 (at its floor: load 21.8 a core is over 10)",
+  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 8 (at its floor: load 31.2 a core is over 10)",
   "n": 8,
   "at": "2026-11-23T09:25:38.709305-05:00"
  },
@@ -775,36 +775,31 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-23T18:43:46Z",
+  "at": "2026-11-23T18:46:59Z",
   "s": {
    "T-4183": [
     "mergeq",
     "1st to merge",
-    1795456066090
+    1795456079043
    ],
    "T-5688": [
     "mergeq",
     "2nd to merge",
-    1795447426090
+    1795447439043
    ],
    "T-5616": [
     "mergeq",
     "3rd to merge",
-    1795455766090
+    1795455779043
    ],
    "T-4192": [
     "mergeq",
     "4th to merge",
-    1795458466090
+    1795458479043
    ],
    "T-4185": [
     "mergetest",
     "iPhone tests on the MacBook",
-    null
-   ],
-   "T-4715": [
-    "testing",
-    "Mac Mini \u00b7 test",
     null
    ],
    "T-4184": [
@@ -826,7 +821,6 @@
    "T-5616": "Fix the city list test after the tzdata update",
    "T-4192": "Python in the app: smaller bundle, installable packages",
    "T-4185": "Launcher widgets open the apps a person chose",
-   "T-4715": "Put the new Pro screen words into the app",
    "T-4184": "A person's own script becomes a Home Screen widget",
    "T-5700": "Lands stop queuing behind one MacBook check"
   },
@@ -836,7 +830,6 @@
    "T-5616": "Pernille",
    "T-4192": "Idris",
    "T-4185": "Idris",
-   "T-4715": "Maren",
    "T-4184": "Idris",
    "T-5700": "Odalys",
    "T-5710": "Idris",
@@ -853,7 +846,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-23T18:43:46Z",
+  "at": "2026-11-23T18:46:59Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -866,12 +859,12 @@
    },
    "m": {
     "checking": null,
-    "inline": 58,
+    "inline": 61,
     "conflicted": null,
     "failed": null,
-    "held": 555,
+    "held": 558,
     "retry": null,
-    "parked": 555
+    "parked": 558
    },
    "cur": [],
    "ld": [
@@ -881,12 +874,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-23T18:43:10Z",
-    "ld": 29.01,
+    "at": "2026-11-23T18:46:29Z",
+    "ld": 32.41,
     "c": 8,
     "sb": 1,
     "dk": [
-     32.2,
+     32.1,
      228.3
     ],
     "ss": [
@@ -894,7 +887,7 @@
      953.7
     ],
     "sn": [
-     "iPhone 18 Pro"
+     "iPhone 17e"
     ]
    },
    "macbook": {
@@ -936,11 +929,11 @@
      "open": true
     }
    },
-   "at": "2026-11-23T18:44:02+00:00"
+   "at": "2026-11-23T18:47:10+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-23T18:43:46+00:00"
+   "at": "2026-11-23T18:46:59+00:00"
   }
  },
  "operators": [
@@ -993,10 +986,10 @@
   "main": 0,
   "lanes": 2,
   "total": 2,
-  "at": "1:44 PM",
+  "at": "1:47 PM",
   "why": "",
-  "at_iso": "2026-11-23T18:44:00+00:00",
+  "at_iso": "2026-11-23T18:47:00+00:00",
   "started": "9:27 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0, started 9:27 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 1:44 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0, started 9:27 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 1:47 PM ET</p></section>"
  }
 }

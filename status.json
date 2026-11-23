@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-23T08:52:31.306776+00:00",
+ "at": "2026-11-23T08:55:40.897623+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -19,6 +19,54 @@
      {
       "s": "testq",
       "at": 1795349545
+     }
+    ]
+   },
+   {
+    "t": "T-4781",
+    "name": "Retest a fixed red on what failed, not every test",
+    "w": "Odalys",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "claimed",
+      "at": 1795424110
+     },
+     {
+      "s": "worker",
+      "at": 1795424110
+     }
+    ]
+   },
+   {
+    "t": "T-4662",
+    "name": "Place the cursor easily on a long line",
+    "w": "Idris",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "claimed",
+      "at": 1795424052
+     },
+     {
+      "s": "worker",
+      "at": 1795424052
+     }
+    ]
+   },
+   {
+    "t": "T-3765",
+    "name": "Check a real widget tap on the TestFlight build",
+    "w": "Idris",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "claimed",
+      "at": 1795424007
+     },
+     {
+      "s": "worker",
+      "at": 1795424007
      }
     ]
    },
@@ -247,22 +295,6 @@
     ]
    },
    {
-    "t": "T-4781",
-    "name": "Retest a fixed red on what failed, not every test",
-    "w": "Odalys",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "claimed",
-      "at": 1795417565
-     },
-     {
-      "s": "worker",
-      "at": 1795417565
-     }
-    ]
-   },
-   {
     "t": "T-4477",
     "name": "People build a widget from blocks without code",
     "w": "Idris",
@@ -279,22 +311,6 @@
     ]
    },
    {
-    "t": "T-4662",
-    "name": "Place the cursor easily on a long line",
-    "w": "Idris",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "claimed",
-      "at": 1795417454
-     },
-     {
-      "s": "worker",
-      "at": 1795417454
-     }
-    ]
-   },
-   {
     "t": "T-4010",
     "name": "Rebuild This Session as a full flowchart",
     "w": "Odalys",
@@ -307,22 +323,6 @@
      {
       "s": "worker",
       "at": 1795417383
-     }
-    ]
-   },
-   {
-    "t": "T-3765",
-    "name": "Check a real widget tap on the TestFlight build",
-    "w": "Idris",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "claimed",
-      "at": 1795417356
-     },
-     {
-      "s": "worker",
-      "at": 1795417356
      }
     ]
    },
@@ -435,7 +435,7 @@
   "week_pct": 102.36,
   "usage_pct": 84.0,
   "work_pct": 95.0,
-  "read_at": "2026-11-23T08:52:00+00:00",
+  "read_at": "2026-11-23T08:55:00+00:00",
   "running": [
    {
     "lane": "a3",
@@ -479,14 +479,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-23T03:47:00-05:00",
+   "at": "2026-11-23T03:55:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-23T03:52:00-05:00",
+  "at": "2026-11-23T03:55:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -603,7 +603,7 @@
     "t": "A failing widget says so and can recover",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-23T03:50:53-05:00",
+    "at": "2026-11-23T03:54:52-05:00",
     "o": "c",
     "task": "T-4182"
    }
@@ -753,47 +753,47 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-23T08:52:31Z",
+  "at": "2026-11-23T08:55:40Z",
   "s": {
    "T-4184": [
-    "mergeq",
-    "1st to merge",
-    1795420651306
+    "mergetest",
+    "Xcode checks on the MacBook, 1st to merge",
+    1795424140897
    ],
    "T-0337": [
     "mergeq",
     "2nd to merge",
-    1795422391306
+    1795422400897
    ],
    "T-2097": [
     "mergeq",
     "2nd to merge",
-    1795422391306
+    1795422400897
    ],
    "T-4010": [
     "mergeq",
     "2nd to merge",
-    1795422391306
+    1795422400897
    ],
    "T-4477": [
     "mergeq",
     "2nd to merge",
-    1795422391306
+    1795422400897
    ],
    "T-4286": [
     "mergeq",
     "2nd to merge",
-    1795422391306
+    1795422400897
    ],
    "T-4635": [
     "mergeq",
     "2nd to merge",
-    1795422391306
+    1795422400897
    ],
    "T-0657": [
     "mergeq",
     "2nd to merge",
-    1795422391306
+    1795422400897
    ],
    "T-5644": [
     "merged",
@@ -835,11 +835,11 @@
   }
  },
  "ln": {
-  "at": "2026-11-23T08:52:31Z",
+  "at": "2026-11-23T08:55:40Z",
   "mq": {
    "n": {
-    "checking": 0,
-    "inline": 8,
+    "checking": 1,
+    "inline": 7,
     "conflicted": 0,
     "failed": 0,
     "held": 0,
@@ -847,15 +847,24 @@
     "parked": 7
    },
    "m": {
-    "checking": null,
-    "inline": 26,
+    "checking": 0,
+    "inline": 29,
     "conflicted": null,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 52
+    "parked": 55
    },
-   "cur": [],
+   "cur": [
+    [
+     [
+      "T-4184"
+     ],
+     "iPhone app tests, sent and waiting its turn",
+     "MacBook",
+     0
+    ]
+   ],
    "ld": [
     0,
     null
@@ -863,12 +872,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-23T08:52:01Z",
-    "ld": 15.85,
+    "at": "2026-11-23T08:55:19Z",
+    "ld": 10.46,
     "c": 8,
     "sb": 0,
     "dk": [
-     58.1,
+     58.0,
      228.3
     ],
     "ss": [
@@ -916,11 +925,11 @@
      "open": true
     }
    },
-   "at": "2026-11-23T08:52:31+00:00"
+   "at": "2026-11-23T08:55:40+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-23T08:52:31+00:00"
+   "at": "2026-11-23T08:55:40+00:00"
   }
  },
  "operators": [
@@ -939,7 +948,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 3 tasks",
+   "t": "Work session \u2013 6 tasks",
    "at": "2026-11-23T03:29:34-05:00"
   }
  ],
@@ -963,10 +972,10 @@
   "main": 0,
   "lanes": 1,
   "total": 1,
-  "at": "3:52 AM",
+  "at": "3:55 AM",
   "why": "",
-  "at_iso": "2026-11-23T08:52:00+00:00",
+  "at_iso": "2026-11-23T08:55:00+00:00",
   "started": "2:29 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0, started 2:29 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 3:52 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0, started 2:29 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 3:55 AM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-23T01:18:47.013184+00:00",
+ "at": "2026-11-23T01:21:52.657066+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -125,7 +125,7 @@
   "week_pct": 2.42,
   "usage_pct": 68.7,
   "work_pct": 88.2,
-  "read_at": "2026-11-23T01:18:00+00:00",
+  "read_at": "2026-11-23T01:21:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -138,6 +138,18 @@
     "at": "2026-11-22T20:15:19-05:00",
     "n": "Jeremy",
     "d": 1,
+    "src": "plan-b"
+   },
+   {
+    "lane": "b2",
+    "task": "T-5622",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Hand out only app work during the comparison",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-22T20:20:52-05:00",
+    "n": "Jeremy",
     "src": "plan-b"
    }
   ]
@@ -179,7 +191,7 @@
  "lock_in": {
   "on": true,
   "pool": 3,
-  "at": "2026-11-22T20:18:00-05:00",
+  "at": "2026-11-22T20:21:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -403,7 +415,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-23T01:18:41Z",
+  "at": "2026-11-23T01:21:33Z",
   "s": {},
   "wk": {
    "T-5431": "Odalys",
@@ -413,7 +425,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-23T01:18:41Z",
+  "at": "2026-11-23T01:21:33Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -431,7 +443,7 @@
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1145
+    "parked": 1148
    },
    "cur": [],
    "ld": [
@@ -441,12 +453,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-23T01:18:41Z",
-    "ld": 0.39,
+    "at": "2026-11-23T01:21:09Z",
+    "ld": 0.76,
     "c": 8,
     "sb": 0,
     "dk": [
-     68.1,
+     67.9,
      228.3
     ],
     "ss": [
@@ -494,11 +506,11 @@
      "open": true
     }
    },
-   "at": "2026-11-23T01:18:47+00:00"
+   "at": "2026-11-23T01:21:52+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-23T01:18:47+00:00"
+   "at": "2026-11-23T01:21:52+00:00"
   }
  },
  "operators": [
@@ -519,6 +531,15 @@
    "e": "high",
    "t": "Work session \u2013 1 task",
    "at": "2026-11-22T20:15:19-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Jeremy's Account",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session \u2013 1 task",
+   "at": "2026-11-22T20:20:52-05:00"
   }
  ],
  "reply": {
@@ -539,12 +560,12 @@
  ],
  "agents_now": {
   "main": 0,
-  "lanes": 1,
-  "total": 1,
-  "at": "8:18 PM",
+  "lanes": 2,
+  "total": 2,
+  "at": "8:21 PM",
   "why": "",
-  "at_iso": "2026-11-23T01:18:00+00:00",
+  "at_iso": "2026-11-23T01:21:00+00:00",
   "started": "2:57 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0, started 2:57 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 8:18 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0, started 2:57 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 8:21 PM ET</p></section>"
  }
 }

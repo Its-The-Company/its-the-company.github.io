@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-23T08:43:20.779110+00:00",
+ "at": "2026-11-23T08:46:12.368967+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -435,7 +435,7 @@
   "week_pct": 102.36,
   "usage_pct": 84.0,
   "work_pct": 95.0,
-  "read_at": "2026-11-23T08:43:00+00:00",
+  "read_at": "2026-11-23T08:46:00+00:00",
   "running": [
    {
     "lane": "a3",
@@ -448,31 +448,6 @@
     "at": "2026-11-23T03:29:34-05:00",
     "n": "Evan",
     "src": "plan-a"
-   },
-   {
-    "lane": "b2",
-    "task": "T-4188",
-    "w": "Idris",
-    "k": "build",
-    "t": "Location, steps and notifications work in scripts and widgets",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-23T02:21:50-05:00",
-    "n": "Jeremy",
-    "src": "plan-b"
-   },
-   {
-    "lane": "b3",
-    "task": "T-4681",
-    "w": "Idris",
-    "k": "build",
-    "t": "Premades default to Paper in light and Studio in dark",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-23T03:03:11-05:00",
-    "n": "Jeremy",
-    "d": 1,
-    "src": "plan-b"
    }
   ]
  },
@@ -510,7 +485,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-23T03:43:00-05:00",
+  "at": "2026-11-23T03:46:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -521,8 +496,8 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 18 (cut a step: load 21.2 a core is over 10)",
-  "n": 18,
+  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 17 (cut a step: load 23.0 a core is over 10)",
+  "n": 17,
   "at": "2026-11-23T02:28:27.861501-05:00"
  },
  "lanes": [
@@ -759,51 +734,56 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-23T08:43:20Z",
+  "at": "2026-11-23T08:46:12Z",
   "s": {
    "T-4184": [
     "mergeq",
     "1st to merge",
-    1795420700779
+    1795420692368
    ],
    "T-0337": [
     "mergeq",
     "2nd to merge",
-    1795422380779
+    1795422372368
    ],
    "T-2097": [
     "mergeq",
     "2nd to merge",
-    1795422380779
+    1795422372368
    ],
    "T-4010": [
     "mergeq",
     "2nd to merge",
-    1795422380779
+    1795422372368
    ],
    "T-4477": [
     "mergeq",
     "2nd to merge",
-    1795422380779
+    1795422372368
    ],
    "T-4286": [
     "mergeq",
     "2nd to merge",
-    1795422380779
+    1795422372368
    ],
    "T-4635": [
     "mergeq",
     "2nd to merge",
-    1795422380779
+    1795422372368
    ],
    "T-0657": [
     "mergeq",
     "2nd to merge",
-    1795422380779
+    1795422372368
    ],
    "T-5365": [
     "mergetest",
     "iPhone tests on the MacBook",
+    null
+   ],
+   "T-4192": [
+    "testing",
+    "Mac Mini \u00b7 test",
     null
    ],
    "T-5644": [
@@ -823,6 +803,7 @@
    "T-4635": "Clear the Settings restore line once Pro is bought",
    "T-0657": "Build the Settings screen",
    "T-5365": "Location refresh policy, file and route",
+   "T-4192": "Python in the app: smaller bundle, installable packages",
    "T-5644": "Account b used up by midweek without skewing the comparison"
   },
   "wk": {
@@ -835,12 +816,13 @@
    "T-4635": "Idris",
    "T-0657": "Idris",
    "T-5365": "Idris",
+   "T-4192": "Idris",
    "T-5644": "Ines",
    "T-5381": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-23T08:43:20Z",
+  "at": "2026-11-23T08:46:12Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -849,16 +831,16 @@
     "failed": 0,
     "held": 0,
     "retry": 0,
-    "parked": 5
+    "parked": 7
    },
    "m": {
     "checking": null,
-    "inline": 17,
+    "inline": 20,
     "conflicted": null,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 221
+    "parked": 46
    },
    "cur": [],
    "ld": [
@@ -868,19 +850,21 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-23T08:43:22Z",
-    "ld": 14.12,
+    "at": "2026-11-23T08:46:19Z",
+    "ld": 24.31,
     "c": 8,
-    "sb": 0,
+    "sb": 1,
     "dk": [
-     55.8,
+     58.1,
      228.3
     ],
     "ss": [
      173.1,
      953.7
     ],
-    "sn": []
+    "sn": [
+     "iPhone 17e"
+    ]
    },
    "macbook": {
     "at": "2026-11-23T08:39:51Z",
@@ -897,16 +881,16 @@
  },
  "hc": {
   "wait": {
-   "n": 13,
+   "n": 15,
    "limit": 20,
    "in_line": 8,
-   "parked": 5,
+   "parked": 7,
    "open": true,
    "mq": false,
-   "counted": "2026-11-23T08:35:20+00:00",
+   "counted": "2026-11-23T08:45:38+00:00",
    "by": {
     "app": {
-     "n": 9,
+     "n": 11,
      "limit": 20,
      "open": true
     },
@@ -921,11 +905,11 @@
      "open": true
     }
    },
-   "at": "2026-11-23T08:43:20+00:00"
+   "at": "2026-11-23T08:46:12+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-23T08:43:07+00:00"
+   "at": "2026-11-23T08:46:12+00:00"
   }
  },
  "operators": [
@@ -946,24 +930,6 @@
    "e": "high",
    "t": "Work session \u2013 1 task",
    "at": "2026-11-23T03:29:34-05:00"
-  },
-  {
-   "w": "Operator",
-   "a": "Jeremy's Account",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session \u2013 1 task",
-   "at": "2026-11-23T02:21:49-05:00"
-  },
-  {
-   "w": "Operator",
-   "a": "Jeremy's Account",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session",
-   "at": "2026-11-23T03:03:10-05:00"
   }
  ],
  "reply": {
@@ -984,12 +950,12 @@
  ],
  "agents_now": {
   "main": 0,
-  "lanes": 3,
-  "total": 3,
-  "at": "3:43 AM",
+  "lanes": 1,
+  "total": 1,
+  "at": "3:46 AM",
   "why": "",
-  "at_iso": "2026-11-23T08:43:00+00:00",
+  "at_iso": "2026-11-23T08:46:00+00:00",
   "started": "2:29 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 2:29 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 3:43 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0, started 2:29 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 3:46 AM ET</p></section>"
  }
 }

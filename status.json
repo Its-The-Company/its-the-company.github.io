@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-23T12:46:57.999222+00:00",
+ "at": "2026-11-23T12:50:01.449948+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -12,6 +12,22 @@
    "last_handoff": 1795407234
   },
   "flow": [
+   {
+    "t": "T-4468",
+    "name": "Let people set each premade's place, events and lists",
+    "w": "Idris",
+    "acct": "Personal b",
+    "steps": [
+     {
+      "s": "claimed",
+      "at": 1795438199
+     },
+     {
+      "s": "worker",
+      "at": 1795438199
+     }
+    ]
+   },
    {
     "t": "T-2076",
     "name": "Build the site stages behind off-by-default switches",
@@ -347,22 +363,6 @@
       "at": 1795420690
      }
     ]
-   },
-   {
-    "t": "T-4494",
-    "name": "Prove widgets move to the app by size",
-    "w": "Idris",
-    "acct": "Personal b",
-    "steps": [
-     {
-      "s": "claimed",
-      "at": 1795420590
-     },
-     {
-      "s": "worker",
-      "at": 1795420590
-     }
-    ]
    }
   ],
   "flow_n": 26,
@@ -385,7 +385,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 716,
+  "runnable_count": 711,
   "blocked_count": 2
  },
  "meter": {
@@ -434,7 +434,7 @@
   "week_pct": 102.36,
   "usage_pct": 84.0,
   "work_pct": 95.0,
-  "read_at": "2026-11-23T12:47:00+00:00",
+  "read_at": "2026-11-23T12:50:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -548,7 +548,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-23T07:47:00-05:00",
+  "at": "2026-11-23T07:50:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -745,23 +745,23 @@
   ],
   "done": [
    {
-    "w": "Idris",
-    "t": "When a person changes a helper file their widget's script uses, every widget in that project now...",
-    "at": "2026-11-23T05:59:00-05:00"
+    "w": "Operator",
+    "t": "The test file lane_env_test.py passes again on a clean copy of main (c6a15cec5) in the nightly...",
+    "at": "2026-11-23T07:48:00-05:00"
    },
    {
-    "w": "Odalys",
-    "t": "The supervisor's stall check no longer ends the coordinator while it waits up to 90 minutes for...",
-    "at": "2026-11-23T04:19:00-05:00"
+    "w": "Operator",
+    "t": "The test file personal_lane_test.py passes again on a clean copy of main (c6a15cec5) in the...",
+    "at": "2026-11-23T07:48:00-05:00"
    },
    {
-    "w": "Idris",
-    "t": "The second reading of the faster test setup for the app's bundled Python is done and passed. Its...",
-    "at": "2026-11-23T02:30:00-05:00"
+    "w": "Operator",
+    "t": "The test file queue_bars_test.py passes again on a clean copy of main (c6a15cec5) in the nightly...",
+    "at": "2026-11-23T07:48:00-05:00"
    }
   ],
   "count": {
-   "next": 716,
+   "next": 711,
    "wait": 2,
    "blocked": 0,
    "you": 2
@@ -823,7 +823,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-23T12:46:57Z",
+  "at": "2026-11-23T12:49:53Z",
   "s": {
    "T-2296": [
     "mergetest",
@@ -873,7 +873,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-23T12:46:57Z",
+  "at": "2026-11-23T12:49:53Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -889,9 +889,9 @@
     "inline": null,
     "conflicted": null,
     "failed": null,
-    "held": 198,
+    "held": 201,
     "retry": null,
-    "parked": 241
+    "parked": 244
    },
    "cur": [],
    "ld": [
@@ -901,12 +901,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-23T12:46:30Z",
-    "ld": 8.98,
+    "at": "2026-11-23T12:49:12Z",
+    "ld": 7.92,
     "c": 8,
     "sb": 1,
     "dk": [
-     37.0,
+     36.9,
      228.3
     ],
     "ss": [
@@ -956,11 +956,11 @@
      "open": true
     }
    },
-   "at": "2026-11-23T12:46:57+00:00"
+   "at": "2026-11-23T12:50:01+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-23T12:46:48+00:00"
+   "at": "2026-11-23T12:50:01+00:00"
   }
  },
  "operators": [
@@ -1024,7 +1024,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 1 task",
+   "t": "Work session \u2013 2 tasks",
    "at": "2026-11-23T07:43:38-05:00"
   }
  ],
@@ -1048,10 +1048,10 @@
   "main": 0,
   "lanes": 6,
   "total": 6,
-  "at": "7:47 AM",
+  "at": "7:50 AM",
   "why": "",
-  "at_iso": "2026-11-23T12:47:00+00:00",
+  "at_iso": "2026-11-23T12:50:00+00:00",
   "started": "2:29 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 0, started 2:29 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 6 sessions \u00b7 as of 7:47 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 0, started 2:29 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 6 sessions \u00b7 as of 7:50 AM ET</p></section>"
  }
 }

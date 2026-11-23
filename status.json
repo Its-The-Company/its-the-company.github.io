@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-23T15:18:48.175207+00:00",
+ "at": "2026-11-23T15:21:47.521056+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -269,22 +269,6 @@
     ]
    },
    {
-    "t": "T-4762",
-    "name": "Let the run lock wrap a Python run",
-    "w": "Idris",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "claimed",
-      "at": 1795429195
-     },
-     {
-      "s": "worker",
-      "at": 1795429195
-     }
-    ]
-   },
-   {
     "t": "T-4781",
     "name": "Retest a fixed red on what failed, not every test",
     "w": "Odalys",
@@ -363,9 +347,25 @@
       "at": 1795424153
      }
     ]
+   },
+   {
+    "t": "T-3495",
+    "name": "Check the upload fix before build 4 goes out",
+    "w": "Pernille",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "claimed",
+      "at": 1795423957
+     },
+     {
+      "s": "worker",
+      "at": 1795423957
+     }
+    ]
    }
   ],
-  "flow_n": 26,
+  "flow_n": 25,
   "done": [],
   "landed": 1,
   "failed": 4
@@ -376,7 +376,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 713,
+  "runnable_count": 712,
   "blocked_count": 2
  },
  "meter": {
@@ -425,7 +425,7 @@
   "week_pct": 63.62,
   "usage_pct": 85.3,
   "work_pct": 96.6,
-  "read_at": "2026-11-23T15:18:00+00:00",
+  "read_at": "2026-11-23T15:21:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -461,6 +461,7 @@
     "e": "high",
     "at": "2026-11-23T10:18:49-05:00",
     "n": "Jeremy",
+    "d": 1,
     "src": "plan-b"
    }
   ]
@@ -483,7 +484,7 @@
   }
  ],
  "disk": {
-  "free_gb": 40,
+  "free_gb": 42,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -492,14 +493,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-23T10:14:00-05:00",
+   "at": "2026-11-23T10:21:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-23T10:18:00-05:00",
+  "at": "2026-11-23T10:21:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -577,15 +578,6 @@
    },
    {
     "w": "Idris",
-    "t": "Let the run lock wrap a Python run",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-23T09:52:32-05:00",
-    "o": "c",
-    "task": "T-4762"
-   },
-   {
-    "w": "Idris",
     "t": "Make the sensor row prove its phone lock reading",
     "m": "opus",
     "e": "high",
@@ -619,6 +611,15 @@
     "at": "2026-11-23T10:14:27-05:00",
     "o": "c",
     "task": "T-5616"
+   },
+   {
+    "w": "Idris",
+    "t": "Review the fix that lands copies that changed the board",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-23T10:20:44-05:00",
+    "o": "c",
+    "task": "T-5693"
    }
   ],
   "src": "plan",
@@ -702,27 +703,31 @@
    },
    {
     "w": "Idris+pernille",
-    "t": "The widget's saved-state file now uses one layout for version 1.0 and the later 1.1, so a file...",
-    "at": "2026-11-23T09:51:00-05:00"
+    "t": "A widget button's Python run now keeps the widget locked for the whole run, so a second tap...",
+    "at": "2026-11-23T09:55:00-05:00"
    },
    {
-    "w": "Idris",
-    "t": "The second reading of the fix that makes workers land their finished work is done and passed:...",
+    "w": "Idris+pernille",
+    "t": "The widget's saved-state file now uses one layout for version 1.0 and the later 1.1, so a file...",
     "at": "2026-11-23T09:51:00-05:00"
    }
   ],
   "count": {
-   "next": 713,
+   "next": 712,
    "wait": 2,
    "blocked": 0,
    "you": 2
   },
   "fin": {
-   "n": 5,
+   "n": 6,
    "rows": [
     [
      "T-4692",
      "Pro showcase widgets work..."
+    ],
+    [
+     "T-4762",
+     "Let the run lock wrap a..."
     ],
     [
      "T-4761",
@@ -782,42 +787,43 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-23T15:18:29Z",
+  "at": "2026-11-23T15:21:36Z",
   "s": {
    "T-4184": [
     "mergeq",
     "1st to merge",
-    1795445549346
+    1795445556956
    ],
    "T-5491": [
     "mergeq",
     "2nd to merge",
-    1795446209346
+    1795446156956
    ],
    "T-4192": [
     "mergeq",
     "3rd to merge",
-    1795445189346
+    1795445196956
    ],
-   "T-4762": [
+   "T-5688": [
     "merged",
-    "on main 3:27 AM ET",
-    1795422463000,
-    ""
+    "on main 10:08 AM ET",
+    1795446498000,
+    "Odalys"
    ]
   },
   "nm": {
    "T-4184": "A person's own script becomes a Home Screen widget",
    "T-5491": "Drop the swallow test's five-second bound",
    "T-4192": "Python in the app: smaller bundle, installable packages",
-   "T-4762": "Let the run lock wrap a Python run"
+   "T-5688": "Land finished work whose copy also changed the board"
   },
   "wk": {
    "T-4184": "Idris",
    "T-5491": "Pernille",
    "T-4192": "Idris",
-   "T-4762": "Idris",
+   "T-5688": "Odalys",
    "T-4692": "Idris",
+   "T-4762": "Idris",
    "T-4761": "Idris",
    "T-5687": "Idris",
    "T-4643": "Idris",
@@ -825,7 +831,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-23T15:18:29Z",
+  "at": "2026-11-23T15:21:36Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -838,12 +844,12 @@
    },
    "m": {
     "checking": null,
-    "inline": 26,
+    "inline": 29,
     "conflicted": null,
     "failed": null,
-    "held": 350,
+    "held": 353,
     "retry": null,
-    "parked": 350
+    "parked": 353
    },
    "cur": [],
    "ld": [
@@ -853,8 +859,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-23T15:18:32Z",
-    "ld": 10.15,
+    "at": "2026-11-23T15:21:06Z",
+    "ld": 7.36,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -906,11 +912,11 @@
      "open": true
     }
    },
-   "at": "2026-11-23T15:18:48+00:00"
+   "at": "2026-11-23T15:21:47+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-23T15:18:41+00:00"
+   "at": "2026-11-23T15:21:36+00:00"
   }
  },
  "operators": [
@@ -940,6 +946,15 @@
    "e": "high",
    "t": "Work session \u2013 1 task",
    "at": "2026-11-23T10:13:46-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Jeremy's Account",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session \u2013 1 task",
+   "at": "2026-11-23T10:18:49-05:00"
   }
  ],
  "reply": {
@@ -962,10 +977,10 @@
   "main": 0,
   "lanes": 3,
   "total": 3,
-  "at": "10:18 AM",
+  "at": "10:21 AM",
   "why": "",
-  "at_iso": "2026-11-23T15:18:00+00:00",
+  "at_iso": "2026-11-23T15:21:00+00:00",
   "started": "9:27 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 9:27 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 10:18 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 9:27 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 10:21 AM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-23T23:48:01.468110+00:00",
+ "at": "2026-11-23T23:51:03.927038+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -434,7 +434,7 @@
   "week_pct": 92.55,
   "usage_pct": 85.3,
   "work_pct": 96.6,
-  "read_at": "2026-11-23T23:48:00+00:00",
+  "read_at": "2026-11-23T23:51:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -445,18 +445,6 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-23T17:28:45-05:00",
-    "n": "Evan",
-    "src": "plan-a"
-   },
-   {
-    "lane": "a3",
-    "task": "T-5755",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "A merge turn ends at its time limit",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-23T17:41:21-05:00",
     "n": "Evan",
     "src": "plan-a"
    }
@@ -496,7 +484,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-23T18:48:00-05:00",
+  "at": "2026-11-23T18:51:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -728,17 +716,17 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-23T23:47:54Z",
+  "at": "2026-11-23T23:50:51Z",
   "s": {
    "T-5758": [
     "mergeq",
     "1st to merge",
-    1795477554807
+    1795477551116
    ],
    "T-4715": [
     "mergeq",
     "2nd to merge",
-    1795477434807
+    1795477431116
    ]
   },
   "nm": {
@@ -763,7 +751,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-23T23:47:54Z",
+  "at": "2026-11-23T23:50:51Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -776,12 +764,12 @@
    },
    "m": {
     "checking": null,
-    "inline": 3,
+    "inline": 6,
     "conflicted": null,
     "failed": null,
-    "held": 859,
+    "held": 862,
     "retry": null,
-    "parked": 859
+    "parked": 862
    },
    "cur": [],
    "ld": [
@@ -791,12 +779,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-23T23:47:24Z",
-    "ld": 2.95,
+    "at": "2026-11-23T23:50:04Z",
+    "ld": 3.17,
     "c": 8,
     "sb": 0,
     "dk": [
-     32.7,
+     32.6,
      228.3
     ],
     "ss": [
@@ -844,11 +832,11 @@
      "open": true
     }
    },
-   "at": "2026-11-23T23:48:01+00:00"
+   "at": "2026-11-23T23:51:03+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-23T23:48:01+00:00"
+   "at": "2026-11-23T23:50:51+00:00"
   }
  },
  "operators": [
@@ -869,15 +857,6 @@
    "e": "high",
    "t": "Work session \u2013 1 task",
    "at": "2026-11-23T17:28:45-05:00"
-  },
-  {
-   "w": "Operator",
-   "a": "Evan's Account",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session",
-   "at": "2026-11-23T17:41:19-05:00"
   }
  ],
  "reply": {
@@ -899,12 +878,12 @@
  ],
  "agents_now": {
   "main": 0,
-  "lanes": 2,
-  "total": 2,
-  "at": "6:48 PM",
+  "lanes": 1,
+  "total": 1,
+  "at": "6:51 PM",
   "why": "",
-  "at_iso": "2026-11-23T23:48:00+00:00",
+  "at_iso": "2026-11-23T23:51:00+00:00",
   "started": "9:27 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0, started 9:27 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 6:48 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0, started 9:27 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 6:51 PM ET</p></section>"
  }
 }

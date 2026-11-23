@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-23T19:41:55.505797+00:00",
+ "at": "2026-11-23T19:45:00.839893+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -425,7 +425,7 @@
   "week_pct": 75.19,
   "usage_pct": 85.3,
   "work_pct": 96.6,
-  "read_at": "2026-11-23T19:41:00+00:00",
+  "read_at": "2026-11-23T19:45:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -487,7 +487,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-23T14:41:00-05:00",
+  "at": "2026-11-23T14:45:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -498,7 +498,7 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 8 (at its floor: load 19.2 a core is over 10)",
+  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 8 (at its floor: load 21.7 a core is over 10)",
   "n": 8,
   "at": "2026-11-23T09:25:38.709305-05:00"
  },
@@ -573,15 +573,6 @@
     "task": "T-5007"
    },
    {
-    "w": "Idris",
-    "t": "Python in the app: smaller bundle, installable packages",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-23T14:20:08-05:00",
-    "o": "c",
-    "task": "T-4192"
-   },
-   {
     "w": "Pernille",
     "t": "UI test holds the Habits tap scroll",
     "m": "opus",
@@ -607,6 +598,15 @@
     "at": "2026-11-23T14:40:16-05:00",
     "o": "c",
     "task": "T-4183"
+   },
+   {
+    "w": "Odalys",
+    "t": "Python in the app: smaller bundle, installable packages",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-23T14:42:40-05:00",
+    "o": "c",
+    "task": "T-4192"
    }
   ],
   "src": "plan",
@@ -774,27 +774,27 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-23T19:41:45Z",
+  "at": "2026-11-23T19:44:53Z",
   "s": {
    "T-5256": [
     "mergeq",
     "1st to merge",
-    1795461405895
+    1795461353924
    ],
    "T-5688": [
     "mergeq",
     "2nd to merge",
-    1795447425895
+    1795447433924
    ],
    "T-5708": [
     "mergeq",
     "3rd to merge",
-    1795460385895
+    1795460393924
    ],
    "T-4715": [
     "mergetest",
     "Xcode checks on the MacBook, 4th to merge",
-    1795461165895
+    1795461173924
    ],
    "T-5007": [
     "testing",
@@ -804,7 +804,7 @@
    "T-5325": [
     "testq",
     "1st for a Simulator",
-    1795462725895
+    1795462733924
    ],
    "T-4190": [
     "merged",
@@ -844,7 +844,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-23T19:41:45Z",
+  "at": "2026-11-23T19:44:53Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -856,13 +856,13 @@
     "parked": 14
    },
    "m": {
-    "checking": 29,
-    "inline": 42,
+    "checking": 32,
+    "inline": 45,
     "conflicted": null,
     "failed": null,
-    "held": 613,
+    "held": 616,
     "retry": null,
-    "parked": 613
+    "parked": 616
    },
    "cur": [
     [
@@ -871,7 +871,7 @@
      ],
      "iPhone app tests",
      "MacBook",
-     29
+     32
     ]
    ],
    "ld": [
@@ -881,12 +881,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-23T19:41:23Z",
-    "ld": 23.47,
+    "at": "2026-11-23T19:44:54Z",
+    "ld": 17.58,
     "c": 8,
     "sb": 1,
     "dk": [
-     32.0,
+     31.8,
      228.3
     ],
     "ss": [
@@ -936,11 +936,11 @@
      "open": true
     }
    },
-   "at": "2026-11-23T19:41:55+00:00"
+   "at": "2026-11-23T19:45:00+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-23T19:41:45+00:00"
+   "at": "2026-11-23T19:44:47+00:00"
   }
  },
  "operators": [
@@ -993,10 +993,10 @@
   "main": 0,
   "lanes": 2,
   "total": 2,
-  "at": "2:41 PM",
+  "at": "2:45 PM",
   "why": "",
-  "at_iso": "2026-11-23T19:41:00+00:00",
+  "at_iso": "2026-11-23T19:45:00+00:00",
   "started": "9:27 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0, started 9:27 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 2:41 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0, started 9:27 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 2:45 PM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-23T22:57:52.386042+00:00",
+ "at": "2026-11-23T23:01:05.387819+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -434,7 +434,7 @@
   "week_pct": 86.76,
   "usage_pct": 85.3,
   "work_pct": 96.6,
-  "read_at": "2026-11-23T22:58:00+00:00",
+  "read_at": "2026-11-23T23:02:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -492,7 +492,7 @@
   }
  ],
  "disk": {
-  "free_gb": 33,
+  "free_gb": 32,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -501,14 +501,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-23T17:50:00-05:00",
+   "at": "2026-11-23T18:00:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-23T17:58:00-05:00",
+  "at": "2026-11-23T18:02:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -768,17 +768,17 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-23T22:57:52Z",
+  "at": "2026-11-23T23:01:05Z",
   "s": {
    "T-4715": [
     "mergeq",
     "1st to merge",
-    1795460392386
+    1795460405387
    ],
    "T-5708": [
     "mergeq",
     "2nd to merge",
-    1795460392386
+    1795460405387
    ],
    "T-5739": [
     "merged",
@@ -817,7 +817,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-23T22:57:52Z",
+  "at": "2026-11-23T23:01:05Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -830,12 +830,12 @@
    },
    "m": {
     "checking": null,
-    "inline": 238,
+    "inline": 241,
     "conflicted": null,
     "failed": null,
-    "held": 809,
+    "held": 812,
     "retry": null,
-    "parked": 809
+    "parked": 812
    },
    "cur": [],
    "ld": [
@@ -845,12 +845,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-23T22:57:35Z",
-    "ld": 8.37,
+    "at": "2026-11-23T23:00:51Z",
+    "ld": 9.48,
     "c": 8,
     "sb": 0,
     "dk": [
-     32.2,
+     32.3,
      228.3
     ],
     "ss": [
@@ -874,13 +874,13 @@
  },
  "hc": {
   "wait": {
-   "n": 19,
+   "n": 18,
    "limit": 20,
-   "in_line": 3,
+   "in_line": 2,
    "parked": 16,
    "open": true,
    "mq": false,
-   "counted": "2026-11-23T22:43:45+00:00",
+   "counted": "2026-11-23T22:56:07+00:00",
    "by": {
     "app": {
      "n": 14,
@@ -888,7 +888,7 @@
      "open": true
     },
     "other": {
-     "n": 10,
+     "n": 9,
      "limit": 20,
      "open": true
     },
@@ -898,11 +898,11 @@
      "open": true
     }
    },
-   "at": "2026-11-23T22:57:52+00:00"
+   "at": "2026-11-23T23:01:05+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-23T22:57:52+00:00"
+   "at": "2026-11-23T23:01:05+00:00"
   }
  },
  "operators": [
@@ -912,8 +912,8 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session",
-   "at": "2026-11-23T17:11:38-05:00"
+   "t": "Inbox \u2013 Jeremy's 5:59 PM Message on GitHub",
+   "at": "2026-11-23T18:00:16-05:00"
   },
   {
    "w": "Operator",
@@ -947,12 +947,24 @@
   "sent": "2026-11-23T22:10:22Z",
   "seconds": 75.0
  },
- "inbox": [],
+ "inbox": [
+  {
+   "id": "c7116420442",
+   "state": "received",
+   "position": 1,
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "When was the last time an account..."
+  }
+ ],
  "trimmed": [
   "lane_next",
   "queue_text",
   "task_done",
   "fin_short",
+  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -964,10 +976,10 @@
   "main": 0,
   "lanes": 3,
   "total": 3,
-  "at": "5:58 PM",
+  "at": "6:02 PM",
   "why": "",
-  "at_iso": "2026-11-23T22:58:00+00:00",
+  "at_iso": "2026-11-23T23:02:00+00:00",
   "started": "9:27 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 9:27 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 5:58 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 9:27 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 6:02 PM ET</p></section>"
  }
 }

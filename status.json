@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-23T19:50:43.259816+00:00",
+ "at": "2026-11-23T19:54:30.881954+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -376,25 +376,25 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 715,
+  "runnable_count": 714,
   "blocked_count": 2
  },
  "meter": {
   "five_hour": {
    "pct": 11.0,
-   "resets_at": "2026-11-23T22:10:00.324411+00:00",
+   "resets_at": "2026-11-23T17:10:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-23T14:47:50.009848-05:00",
-   "source": "usage",
+   "read_at": "2026-11-23T14:54:16.351001-05:00",
+   "source": "live",
    "left": 89.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 13.0,
-   "resets_at": "2026-11-29T07:00:00.324434+00:00",
+   "resets_at": "2026-11-29T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-23T14:47:50.009848-05:00",
-   "source": "usage",
+   "read_at": "2026-11-23T14:54:16.351001-05:00",
+   "source": "live",
    "left": 87.0,
    "left_words": "of your weekly allowance left"
   },
@@ -405,7 +405,7 @@
    "read_at": "2026-11-23T14:47:50.009848-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-23T14:47:50.009848-05:00"
+  "read_at": "2026-11-23T14:54:16.351001-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -425,7 +425,7 @@
   "week_pct": 75.19,
   "usage_pct": 85.3,
   "work_pct": 96.6,
-  "read_at": "2026-11-23T19:51:00+00:00",
+  "read_at": "2026-11-23T19:54:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -471,7 +471,7 @@
   }
  ],
  "disk": {
-  "free_gb": 32,
+  "free_gb": 34,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -480,14 +480,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-23T14:47:00-05:00",
+   "at": "2026-11-23T14:54:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-23T14:51:00-05:00",
+  "at": "2026-11-23T14:54:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -498,7 +498,7 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 8 (at its floor: load 13.7 a core is over 10)",
+  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 8 (at its floor: load 22.1 a core is over 10)",
   "n": 8,
   "at": "2026-11-23T09:25:38.709305-05:00"
  },
@@ -565,15 +565,6 @@
    },
    {
     "w": "Pernille",
-    "t": "Test web fetches the way the widget really makes them",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-23T14:12:21-05:00",
-    "o": "c",
-    "task": "T-5007"
-   },
-   {
-    "w": "Pernille",
     "t": "UI test holds the Habits tap scroll",
     "m": "opus",
     "e": "high",
@@ -607,6 +598,15 @@
     "at": "2026-11-23T14:42:40-05:00",
     "o": "c",
     "task": "T-4192"
+   },
+   {
+    "w": "Pernille",
+    "t": "Guard timing tests stop failing lands under load",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-23T14:53:39-05:00",
+    "o": "c",
+    "task": "T-5713"
    }
   ],
   "src": "plan",
@@ -684,6 +684,11 @@
   ],
   "done": [
    {
+    "w": "Pernille",
+    "t": "The records-protection and disk-guard test suites no longer fail a land because the Mac mini is...",
+    "at": "2026-11-23T14:54:00-05:00"
+   },
+   {
     "w": "Idris",
     "t": "the test that checks a widget link can only open pywidget itself now fails outright if that rule...",
     "at": "2026-11-23T14:40:00-05:00"
@@ -692,22 +697,21 @@
     "w": "Odalys",
     "t": "A lane's land no longer holds the merge road while it waits for the MacBook test, and a MacBook...",
     "at": "2026-11-23T14:19:00-05:00"
-   },
-   {
-    "w": "Operator",
-    "t": "A later MacBook job for the same work (J-20261123-1325-mut-t5007-idris-1) passed, so the failed...",
-    "at": "2026-11-23T14:11:00-05:00"
    }
   ],
   "count": {
-   "next": 715,
+   "next": 714,
    "wait": 2,
    "blocked": 0,
    "you": 2
   },
   "fin": {
-   "n": 16,
+   "n": 17,
    "rows": [
+    [
+     "T-5713",
+     "Guard timing tests stop..."
+    ],
     [
      "T-5479",
      "Make the escape corpus Link..."
@@ -727,10 +731,6 @@
     [
      "T-0749",
      "Copy a project's sibling..."
-    ],
-    [
-     "T-3350",
-     "Describe each TestFlight..."
     ]
    ]
   }
@@ -773,8 +773,85 @@
    "ok"
   ]
  ],
+ "stg": {
+  "at": "2026-11-23T19:54:07Z",
+  "s": {
+   "T-5256": [
+    "mergeq",
+    "1st to merge",
+    1795461367770
+   ],
+   "T-5688": [
+    "mergeq",
+    "2nd to merge",
+    1795447447770
+   ],
+   "T-5708": [
+    "mergeq",
+    "3rd to merge",
+    1795460407770
+   ],
+   "T-4715": [
+    "mergeq",
+    "4th to merge",
+    1795460347770
+   ],
+   "T-5325": [
+    "testing",
+    "Mac Mini \u00b7 test",
+    null
+   ],
+   "T-5542": [
+    "testq",
+    "1st for a Simulator",
+    1795463647770
+   ],
+   "T-5713": [
+    "merged",
+    "on main 2:24 PM ET",
+    1795461864000,
+    ""
+   ],
+   "T-4190": [
+    "merged",
+    "on main 10:11 AM ET",
+    1795446707000,
+    ""
+   ]
+  },
+  "nm": {
+   "T-5256": "Trim step 3, one merge script beside the old road",
+   "T-5688": "Land finished work whose copy also changed the board",
+   "T-5708": "Clear the add-to-home steps before TestFlight",
+   "T-4715": "Put the new Pro screen words into the app",
+   "T-5325": "Second tap on a half-hidden row keeps the text",
+   "T-5542": "UI test holds the Habits tap scroll",
+   "T-5713": "Guard timing tests stop failing lands under load",
+   "T-4190": "Settings and Pro: buy, restore, themes"
+  },
+  "wk": {
+   "T-5256": "Odalys",
+   "T-5688": "Odalys",
+   "T-5708": "Maren",
+   "T-4715": "Maren",
+   "T-5325": "Idris",
+   "T-5542": "Idris",
+   "T-5713": "Pernille",
+   "T-4190": "Idris",
+   "T-5479": "Idris",
+   "T-5700": "Odalys",
+   "T-5616": "Pernille",
+   "T-5710": "Idris",
+   "T-0749": "Idris",
+   "T-3350": "Idris",
+   "T-5693": "Idris",
+   "T-4220": "Idris",
+   "T-3847": "Idris",
+   "T-4692": "Idris"
+  }
+ },
  "ln": {
-  "at": "2026-11-23T19:50:43Z",
+  "at": "2026-11-23T19:54:07Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -787,12 +864,12 @@
    },
    "m": {
     "checking": null,
-    "inline": 51,
+    "inline": 54,
     "conflicted": null,
     "failed": null,
-    "held": 622,
+    "held": 626,
     "retry": null,
-    "parked": 622
+    "parked": 626
    },
    "cur": [],
    "ld": [
@@ -802,12 +879,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-23T19:49:59Z",
-    "ld": 11.92,
+    "at": "2026-11-23T19:53:49Z",
+    "ld": 22.77,
     "c": 8,
     "sb": 1,
     "dk": [
-     31.6,
+     33.9,
      228.3
     ],
     "ss": [
@@ -857,11 +934,11 @@
      "open": true
     }
    },
-   "at": "2026-11-23T19:50:43+00:00"
+   "at": "2026-11-23T19:54:30+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-23T19:50:43+00:00"
+   "at": "2026-11-23T19:54:30+00:00"
   }
  },
  "operators": [
@@ -878,13 +955,17 @@
    "w": "Operator",
    "a": "Evan's Account",
    "sr": 1,
+   "m": "opus",
+   "e": "high",
    "t": "Work session \u2013 1 task",
-   "at": "2026-11-23T13:14:48-05:00"
+   "at": "2026-11-23T13:14:47-05:00"
   },
   {
    "w": "Operator",
    "a": "Evan's Account",
    "sr": 1,
+   "m": "opus",
+   "e": "high",
    "t": "Work session \u2013 1 task",
    "at": "2026-11-23T14:29:48-05:00"
   }
@@ -910,10 +991,10 @@
   "main": 0,
   "lanes": 2,
   "total": 2,
-  "at": "2:51 PM",
+  "at": "2:54 PM",
   "why": "",
-  "at_iso": "2026-11-23T19:51:00+00:00",
+  "at_iso": "2026-11-23T19:54:00+00:00",
   "started": "9:27 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0, started 9:27 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 2:51 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0, started 9:27 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 2:54 PM ET</p></section>"
  }
 }

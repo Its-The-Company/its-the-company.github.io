@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-24T01:17:22.481061+00:00",
+ "at": "2026-11-24T01:20:27.303076+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -439,7 +439,7 @@
   "week_pct": 63.21,
   "usage_pct": 79.8,
   "work_pct": 97.6,
-  "read_at": "2026-11-24T01:17:00+00:00",
+  "read_at": "2026-11-24T01:20:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -498,7 +498,7 @@
   }
  ],
  "disk": {
-  "free_gb": 31,
+  "free_gb": 30,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -507,14 +507,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-23T20:11:00-05:00",
+   "at": "2026-11-23T20:18:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-23T20:17:00-05:00",
+  "at": "2026-11-23T20:20:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -525,7 +525,7 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 8 (at its floor: load 14.0 a core is over 10)",
+  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 8 (held: too few lands in 3 hours to judge a raise)",
   "n": 8,
   "at": "2026-11-23T19:06:23.900656-05:00"
  },
@@ -793,29 +793,9 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-24T01:17:22Z",
+  "at": "2026-11-24T01:20:11Z",
   "s": {
-   "T-1119": [
-    "testing",
-    "Mac Mini \u00b7 test",
-    null
-   ],
-   "T-4190": [
-    "testing",
-    "Mac Mini \u00b7 test",
-    null
-   ],
-   "T-4681": [
-    "testing",
-    "Mac Mini \u00b7 test",
-    null
-   ],
-   "T-5602": [
-    "testing",
-    "Mac Mini \u00b7 test",
-    null
-   ],
-   "T-5743": [
+   "T-4772": [
     "testing",
     "Mac Mini \u00b7 test",
     null
@@ -825,36 +805,37 @@
     "MacBook \u00b7 test",
     null
    ],
-   "T-4772": [
+   "T-4192": [
     "testq",
     "1st for a Simulator",
-    1795483042481
+    1795483211568
+   ],
+   "T-4190": [
+    "merged",
+    "on main 10:11 AM ET",
+    1795446707000,
+    ""
    ]
   },
   "nm": {
-   "T-1119": "Investors answer two App Store Connect questions",
-   "T-4190": "Settings and Pro: buy, restore, themes",
-   "T-4681": "Premades default to Paper in light and Studio in dark",
-   "T-5602": "Brief for a new look for the app",
-   "T-5743": "Review the check that landed means every app file",
+   "T-4772": "Prove a refresh tap redraws the widget",
    "T-5059": "Test that App Store builds write no sensor rows",
-   "T-4772": "Prove a refresh tap redraws the widget"
+   "T-4192": "Python in the app: smaller bundle, installable packages",
+   "T-4190": "Settings and Pro: buy, restore, themes"
   },
   "wk": {
-   "T-1119": "Ines",
-   "T-4190": "Idris",
-   "T-4681": "Idris",
-   "T-5602": "Maren",
-   "T-5743": "Idris",
-   "T-5059": "Idris",
    "T-4772": "Idris",
+   "T-5059": "Idris",
+   "T-4192": "Idris",
+   "T-4190": "Idris",
    "T-5755": "Odalys",
    "T-5691": "Odalys",
-   "T-5758": "Idris"
+   "T-5758": "Idris",
+   "T-5743": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-24T01:17:22Z",
+  "at": "2026-11-24T01:20:11Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -870,9 +851,9 @@
     "inline": null,
     "conflicted": null,
     "failed": null,
-    "held": 949,
+    "held": 952,
     "retry": null,
-    "parked": 949
+    "parked": 952
    },
    "cur": [],
    "ld": [
@@ -882,12 +863,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-24T01:17:23Z",
-    "ld": 8.85,
+    "at": "2026-11-24T01:19:24Z",
+    "ld": 7.83,
     "c": 8,
     "sb": 1,
     "dk": [
-     31.6,
+     30.8,
      228.3
     ],
     "ss": [
@@ -908,7 +889,7 @@
    "parked": 17,
    "open": true,
    "mq": false,
-   "counted": "2026-11-24T01:03:14+00:00",
+   "counted": "2026-11-24T01:19:14+00:00",
    "by": {
     "app": {
      "n": 13,
@@ -926,11 +907,11 @@
      "open": true
     }
    },
-   "at": "2026-11-24T01:17:22+00:00"
+   "at": "2026-11-24T01:20:27+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-24T01:17:22+00:00"
+   "at": "2026-11-24T01:20:27+00:00"
   }
  },
  "operators": [
@@ -991,10 +972,10 @@
   "main": 0,
   "lanes": 3,
   "total": 3,
-  "at": "8:17 PM",
+  "at": "8:20 PM",
   "why": "",
-  "at_iso": "2026-11-24T01:17:00+00:00",
+  "at_iso": "2026-11-24T01:20:00+00:00",
   "started": "7:06 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 7:06 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 8:17 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 7:06 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 8:20 PM ET</p></section>"
  }
 }

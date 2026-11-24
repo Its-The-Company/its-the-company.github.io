@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-24T01:48:03.523408+00:00",
+ "at": "2026-11-24T01:51:18.523961+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -425,7 +425,7 @@
   "week_pct": 63.21,
   "usage_pct": 79.8,
   "work_pct": 97.6,
-  "read_at": "2026-11-24T01:48:00+00:00",
+  "read_at": "2026-11-24T01:51:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -500,7 +500,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-23T20:48:00-05:00",
+  "at": "2026-11-23T20:51:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -613,13 +613,13 @@
     "task": "T-4623"
    },
    {
-    "w": "Odalys",
-    "t": "Name every record a land takes out of a copy",
+    "w": "Idris",
+    "t": "Make the Release privacy scan fail when nm cannot run",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-23T20:44:54-05:00",
+    "at": "2026-11-23T20:48:32-05:00",
     "o": "c",
-    "task": "T-5703"
+    "task": "T-4637"
    }
   ],
   "src": "plan",
@@ -779,7 +779,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-24T01:48:03Z",
+  "at": "2026-11-24T01:51:18Z",
   "s": {
    "T-5657": [
     "mergetest",
@@ -794,13 +794,7 @@
    "T-5634": [
     "testq",
     "1st for a Simulator",
-    1795483623523
-   ],
-   "T-5703": [
-    "merged",
-    "on main 8:44 PM ET",
-    1795484679000,
-    "Odalys"
+    1795483638523
    ],
    "T-4190": [
     "merged",
@@ -813,14 +807,12 @@
    "T-5657": "Ship test widgets in internal TestFlight builds only",
    "T-4875": "Test that suggestions are asked after the first letter",
    "T-5634": "Retry a refused widget send at the project boundary",
-   "T-5703": "Name every record a land takes out of a copy",
    "T-4190": "Settings and Pro: buy, restore, themes"
   },
   "wk": {
    "T-5657": "Idris",
    "T-4875": "Idris",
    "T-5634": "Idris",
-   "T-5703": "Odalys",
    "T-4190": "Idris",
    "T-5755": "Odalys",
    "T-5691": "Odalys",
@@ -829,7 +821,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-24T01:48:03Z",
+  "at": "2026-11-24T01:51:18Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -845,9 +837,9 @@
     "inline": null,
     "conflicted": null,
     "failed": null,
-    "held": 979,
+    "held": 983,
     "retry": null,
-    "parked": 979
+    "parked": 983
    },
    "cur": [],
    "ld": [
@@ -857,12 +849,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-24T01:48:09Z",
-    "ld": 7.18,
+    "at": "2026-11-24T01:51:26Z",
+    "ld": 7.1,
     "c": 8,
     "sb": 1,
     "dk": [
-     29.1,
+     28.8,
      228.3
     ],
     "ss": [
@@ -894,7 +886,7 @@
    "parked": 17,
    "open": true,
    "mq": false,
-   "counted": "2026-11-24T01:35:10+00:00",
+   "counted": "2026-11-24T01:51:08+00:00",
    "by": {
     "app": {
      "n": 13,
@@ -912,11 +904,11 @@
      "open": true
     }
    },
-   "at": "2026-11-24T01:48:03+00:00"
+   "at": "2026-11-24T01:51:18+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-24T01:47:51+00:00"
+   "at": "2026-11-24T01:51:18+00:00"
   }
  },
  "operators": [
@@ -926,8 +918,8 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Inbox \u2013 Evan's 8:45 PM Message on GitHub",
-   "at": "2026-11-23T20:45:57-05:00"
+   "t": "Work session",
+   "at": "2026-11-23T20:48:11-05:00"
   },
   {
    "w": "Operator",
@@ -958,27 +950,15 @@
   }
  ],
  "reply": {
-  "sent": "2026-11-24T01:43:10Z",
-  "seconds": 67.0
+  "sent": "2026-11-24T01:45:31Z",
+  "seconds": 3.0
  },
- "inbox": [
-  {
-   "id": "c7119418085",
-   "state": "received",
-   "position": 1,
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "The remaining process work that will..."
-  }
- ],
+ "inbox": [],
  "trimmed": [
   "lane_next",
   "queue_text",
   "task_done",
   "fin_short",
-  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -989,10 +969,10 @@
   "main": 0,
   "lanes": 3,
   "total": 3,
-  "at": "8:48 PM",
+  "at": "8:51 PM",
   "why": "",
-  "at_iso": "2026-11-24T01:48:00+00:00",
+  "at_iso": "2026-11-24T01:51:00+00:00",
   "started": "7:06 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 7:06 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 8:48 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 7:06 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 8:51 PM ET</p></section>"
  }
 }

@@ -191,9 +191,10 @@ No label row changes here (that is a decision; the findings went to Ines as one 
 
 ### 8a. What pywidget/tests/privacy already checks (all three files pass at HEAD)
 
-- **test_privacy_scan.py** (8 tests, synthetic bundles): `scripts/privacy_scan.py` fails a framework without a manifest, a missing or empty reason, an `[unconfirmed]` code in Release, and an .app or .appex whose manifest has `NSPrivacyTracking` not false or `NSPrivacyCollectedDataTypes` not an empty array (privacy_scan.py:154-157). This is the only automated guard on label row 1.
+- **test_privacy_scan.py** (9 tests, synthetic bundles): `scripts/privacy_scan.py` fails a framework without a manifest, a missing or empty reason, an `[unconfirmed]` code in Release, an .app or .appex whose manifest has `NSPrivacyTracking` not false or `NSPrivacyCollectedDataTypes` not an empty array (privacy_scan.py:172-175), and an `nm` that cannot run (a stand-in `xcrun` that exits 72: the problem names the file, the exit and nm's stderr; before T-4637 this read as "no symbols" and passed). This is the only automated guard on label row 1.
 - **test_manifest_sources.py** (4 tests): each target's own Swift and C sources call no required-reason API its manifest does not declare (App: C617.1, CA92.1; Widget: C617.1), including the extension lane a Release build compiles out.
 - **test_check_legal_links.py** (8 tests): a Release or archive build fails without an https privacy URL in App/LegalLinks.swift (label row 4).
+- **tests/privacy_scan_phase_test.py** (outside this folder; T-1839, order check added by T-4637 on 2026-11-23): the Release-only "Privacy manifest scan" phase fails a stripped or `[unconfirmed]` manifest, is off for Debug, and, when a generated PyWidget.xcodeproj is there, comes after `Embed Foundation Extensions` and `Embed Frameworks` in the PyWidget target's `buildPhases` (skipped, and said, when none is generated).
 - **Not checked by any test:** what code sends off the device. That rests on `tools/privacy_prepublish_grep.py` (run today: "clean: 0 hits" with NetFetch.swift excepted; `--policy` check: "ok: policy names the run log") and on reading, below.
 
 ### 8b. Every kind of data the app or its extensions touch
@@ -232,7 +233,7 @@ No label row changes here (that is a decision; the findings went to Ines as one 
 
 | Label row (s1) | The code that makes it true at HEAD | Holds? |
 |---|---|---|
-| Data collected: **No** | Privacy/App/PrivacyInfo.xcprivacy and Privacy/Widget/PrivacyInfo.xcprivacy: `NSPrivacyCollectedDataTypes` and `NSPrivacyTrackingDomains` empty, enforced by scripts/privacy_scan.py:154-157. The only outbound path is NetFetch (8b), which carries only what a script asks for to the host it names; no SDK, no server of ours, no web view; premade traffic is github.py to GitHub only | Yes |
+| Data collected: **No** | Privacy/App/PrivacyInfo.xcprivacy and Privacy/Widget/PrivacyInfo.xcprivacy: `NSPrivacyCollectedDataTypes` and `NSPrivacyTrackingDomains` empty, enforced by scripts/privacy_scan.py:172-175. The only outbound path is NetFetch (8b), which carries only what a script asks for to the host it names; no SDK, no server of ours, no web view; premade traffic is github.py to GitHub only | Yes |
 | Data types: **None** | Conditions 1-9 checked in 8b: 1 (no SDK: grep), 2 (no host of ours in Swift), 3 (ProStore.swift:13-19), 4 (github.py, KeychainCall.swift, NetFetch.swift:339-341), 5 (no WeatherKit, no weather premade), 6 (LocationCall.swift:317, :437; PedometerCall.swift; no CLGeocoder or MapKit, prepublish grep 0), 7 (no web view), 8 (support email outside the app), 9 (run log local) | Yes; condition 9 rewritten to match the build (F1, T-2111) |
 | Tracking: **No** | `NSPrivacyTracking` false in both manifests; no ATTrackingManager, no advertisingIdentifier (grep 0) | Yes |
 | Privacy policy URL: **Required** | App/LegalLinks.swift privacyPolicy nil until published; tests/privacy/test_check_legal_links.py fails a Release build without an https URL | Not yet true by design: blocked on the SLOT 2A address and publishing |

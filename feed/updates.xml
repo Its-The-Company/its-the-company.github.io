@@ -4,8 +4,29 @@
 <link href="https://its-the-company.github.io/feed/updates.xml" rel="self"/>
 <link href="https://its-the-company.github.io/"/>
 <id>https://its-the-company.github.io/feed/updates.xml</id>
-<updated>2026-11-24T08:22:52-05:00</updated>
+<updated>2026-11-24T16:19:07-05:00</updated>
 <author><name>The Company</name></author>
+<entry>
+<title>Build: Build 0.1 (8) uploaded to internal TestFlight (exit 0) from clean clone of eadd3d414b; gat</title>
+<link href="https://its-the-company.github.io/"/>
+<id>tag:its-the-company.github.io,2026-11-24:event/2026-11-24t16-19-07-05-00-build-build-0-1-8-uploaded-to-internal-testf</id>
+<updated>2026-11-24T16:19:07-05:00</updated>
+<summary type="text">Build 0.1 (8) uploaded to internal TestFlight (exit 0) from clean clone of eadd3d414b; gate --test 31/0; gate mark in both executables, ladder1..12 byte-equal (T-2943, T-5023)</summary>
+</entry>
+<entry>
+<title>Build: T-5047: answered Pernille&#x27;s FAIL on the token test: the widget id no longer holds the toke</title>
+<link href="https://its-the-company.github.io/"/>
+<id>tag:its-the-company.github.io,2026-11-24:event/2026-11-24t09-40-18-05-00-build-t-5047-answered-pernille-s-fail-on-the</id>
+<updated>2026-11-24T09:40:18-05:00</updated>
+<summary type="text">T-5047: answered Pernille&#x27;s FAIL on the token test: the widget id no longer holds the token, so a card naming the widget cannot pass the pixel read (da4c8d0743)</summary>
+</entry>
+<entry>
+<title>Review: T-5047 at 50a2c3dd reviewed: FAIL, the token test&#x27;s pixel check passes a card that names t</title>
+<link href="https://its-the-company.github.io/"/>
+<id>tag:its-the-company.github.io,2026-11-24:event/2026-11-24t09-14-05-05-00-review-t-5047-at-50a2c3dd-reviewed-fail-the-t</id>
+<updated>2026-11-24T09:14:05-05:00</updated>
+<summary type="text">T-5047 at 50a2c3dd reviewed: FAIL, the token test&#x27;s pixel check passes a card that names the widget (H1)</summary>
+</entry>
 <entry>
 <title>Build: T-0696: net.get&#x27;s peak memory measured inside the widget extension on the iPhone 17e Simul</title>
 <link href="https://its-the-company.github.io/"/>
@@ -334,26 +355,5 @@
 <id>tag:its-the-company.github.io,2026-11-18:event/2026-11-18t03-33-16-05-00-review-t-4864-reviewed-idris-s-t-4688-part-2</id>
 <updated>2026-11-18T03:33:16-05:00</updated>
 <summary type="text">T-4864: reviewed Idris&#x27;s T-4688 part 2 (8e22b68221): PASS with findings; Reset to first launch stays in the app&#x27;s containers and never calls StoreKit; new T-4866 (UI test rerun before TestFlight), T-4867 (pin needles).</summary>
-</entry>
-<entry>
-<title>Build: T-4688 part 2 landed 8e22b68221: reset to first launch, App Store build check (Release bin</title>
-<link href="https://its-the-company.github.io/"/>
-<id>tag:its-the-company.github.io,2026-11-18:event/2026-11-18t03-24-57-05-00-build-t-4688-part-2-landed-8e22b68221-reset-t</id>
-<updated>2026-11-18T03:24:57-05:00</updated>
-<summary type="text">T-4688 part 2 landed 8e22b68221: reset to first launch, App Store build check (Release binaries clean), iPhone 17e shots. Tick refused (umbrella waits on T-4857/T-4858); phone check T-4865, review T-4864.</summary>
-</entry>
-<entry>
-<title>Review: T-4852: review of T-4688 (f531d51b2c) PASS with findings. Tester Pro stays out of App Revi</title>
-<link href="https://its-the-company.github.io/"/>
-<id>tag:its-the-company.github.io,2026-11-18:event/2026-11-18t01-53-29-05-00-review-t-4852-review-of-t-4688-f531d51b2c-pa</id>
-<updated>2026-11-18T01:53:29-05:00</updated>
-<summary type="text">T-4852: review of T-4688 (f531d51b2c) PASS with findings. Tester Pro stays out of App Review and the App Store: Debug-only flag, upload.sh internal-only export Apple will not send to review, mark scans. Findings T-4857, T-4858 (Idris, P3); screen and Release checks still open on T-4688.</summary>
-</entry>
-<entry>
-<title>Build: T-4688: Developer mode landed f531d51b2c (unit target 2062/0). Evan&#x27;s missing switch on bu</title>
-<link href="https://its-the-company.github.io/"/>
-<id>tag:its-the-company.github.io,2026-11-18:event/2026-11-18t01-26-50-05-00-build-t-4688-developer-mode-landed-f531d51b2c</id>
-<updated>2026-11-18T01:26:50-05:00</updated>
-<summary type="text">T-4688: Developer mode landed f531d51b2c (unit target 2062/0). Evan&#x27;s missing switch on builds 6-7: flag was compiled in; an unread AppTransaction hid the group silently. Not ticked: Simulator shot, App Store build check, reset to first launch, review T-4852.</summary>
 </entry>
 </feed>

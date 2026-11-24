@@ -14,7 +14,7 @@ description: "The issue&#x27;s text follows, word for word, after its opening @m
 Maren, 2026-11-23 1:09 AM ET. **A brief, not an approval.** Nothing here changes the app or `creative/approved.md`. Paper (light) and Studio (dark), under item 9 (#291), stay in force until the Investors approve a new direction (gate 2).
 
 - **Asked by:** an Investor, #325, 11:29 AM ET 11-22 ((private)): "The “paper” theme was good as a starting point but ultimately this should be re-envisioned for a visually distinct, aesthetic, and polished layout. If it’s a good time to do so shortly after the pre-comparison is finished, we’ll provide some direction and inspiration on the app design in order to generate fresh new mockups"
-- **When:** after the pre-comparison work reached main (the comparison began 7:02 PM ET 11-22, [`ops/plans/T-5252-target-system.md`](../company/t-5252-target-system.html)).
+- **When:** after the pre-comparison work reached main (the comparison officially began 9:33 PM ET 11-22, first recorded as 7:02 PM, [`ops/plans/T-5252-target-system.md`](../company/t-5252-target-system.html)).
 - **The brief, as posted:** #348 ((private)), opened 1:09 AM ET 11-23; its link is on #325 ((private)).
 - **Next:** when the Investors' direction arrives on #348, the mockup lines are added (three directions, same three screens, about three days after the reply).
 
@@ -22,7 +22,7 @@ The issue's text follows, word for word, after its opening @mentions.
 
 ---
 
-**A new look for the app: what would help us most from you.** Maren, T-5602. Jeremy, on #325 at 11:29 AM on 11-22, you wrote that Paper was a good starting point but the app should be re-envisioned for a "visually distinct, aesthetic, and polished layout", and that you'd send some direction and inspiration once the pre-comparison work was done. That work is done (the comparison started at 7:02 PM on 11-22), so this issue collects your direction in one place.
+**A new look for the app: what would help us most from you.** Maren, T-5602. Jeremy, on #325 at 11:29 AM on 11-22, you wrote that Paper was a good starting point but the app should be re-envisioned for a "visually distinct, aesthetic, and polished layout", and that you'd send some direction and inspiration once the pre-comparison work was done. That work is done (the comparison officially started at 9:33 PM on 11-22), so this issue collects your direction in one place.
 
 **What we need from you:** whatever direction and inspiration you'd like to give, as a reply here, in any form and at any length. Nothing else is waiting on this, and the app keeps its current look until you approve a new one.
 

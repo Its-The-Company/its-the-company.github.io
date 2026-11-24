@@ -5,7 +5,7 @@ section: "documents"
 description: "Pernille, 11-17 9:35 PM ET. Answers an Investor on #41 (c6965124089, 7:26 PM 11-17: &quot;fix every bad test ... Consult real-world examples of how tests are designed and implemented. Fix the &#x27;big picture&#x27; causes&quot;) and the\u2026"
 ---
 <div class="crumbs" role="navigation" aria-label="Back"><a class="back" href="{{ '/documents/operations/' | relative_url }}">← Operations</a><a href="{{ '/documents/company/t-4807-test-rules.html' | relative_url }}" rel="bookmark">Permanent link</a></div>
-<div class="page-head"><div class="kicker"><span class="kind blue">Plan</span><span>Day 33 · Mon Nov 23</span><span><code>ops/plans/T-4807-test-rules.md</code></span></div><h1>T-4807: rules for new tests</h1><div class="byline"><img class="avatar" src="{{ '/assets/portraits/pernille.svg' | relative_url }}" alt="Pernille" title="Pernille"><span>By <a href="{{ '/cast/pernille.html' | relative_url }}">Pernille</a>, Python runtime engineer</span></div></div>
+<div class="page-head"><div class="kicker"><span class="kind blue">Plan</span><span>Day 34 · Tue Nov 24</span><span><code>ops/plans/T-4807-test-rules.md</code></span></div><h1>T-4807: rules for new tests</h1><div class="byline"><img class="avatar" src="{{ '/assets/portraits/pernille.svg' | relative_url }}" alt="Pernille" title="Pernille"><span>By <a href="{{ '/cast/pernille.html' | relative_url }}">Pernille</a>, Python runtime engineer</span></div></div>
 
 <style>.doc-body{overflow-wrap:break-word}.doc-src{overflow-wrap:anywhere}.tbl[data-n~="1"] tr>:nth-child(1),.tbl[data-n~="2"] tr>:nth-child(2),.tbl[data-n~="3"] tr>:nth-child(3),.tbl[data-n~="4"] tr>:nth-child(4),.tbl[data-n~="5"] tr>:nth-child(5),.tbl[data-n~="6"] tr>:nth-child(6),.tbl[data-n~="7"] tr>:nth-child(7),.tbl[data-n~="8"] tr>:nth-child(8),.tbl[data-n~="9"] tr>:nth-child(9),.tbl[data-n~="10"] tr>:nth-child(10),.tbl[data-n~="11"] tr>:nth-child(11),.tbl[data-n~="12"] tr>:nth-child(12){min-width:0;overflow-wrap:normal}.tbl[data-o="1"] tr>:nth-child(1),.tbl[data-o="2"] tr>:nth-child(2),.tbl[data-o="3"] tr>:nth-child(3),.tbl[data-o="4"] tr>:nth-child(4),.tbl[data-o="5"] tr>:nth-child(5),.tbl[data-o="6"] tr>:nth-child(6),.tbl[data-o="7"] tr>:nth-child(7),.tbl[data-o="8"] tr>:nth-child(8),.tbl[data-o="9"] tr>:nth-child(9),.tbl[data-o="10"] tr>:nth-child(10),.tbl[data-o="11"] tr>:nth-child(11),.tbl[data-o="12"] tr>:nth-child(12){position:sticky;right:0;overflow-wrap:normal;background:var(--page);box-shadow:-1px 0 var(--line),-9px 0 8px -8px var(--sh)}</style>
 <div class="doc-body" markdown="1">
@@ -222,8 +222,22 @@ correction is marked "was:".
   on the board: systls big bodies' 1 s bounds, the bridge swallow test's 5 s bound, main_folder_guard_test's 30 s
   subprocess limit, and site_test.sh's no-second-commit row.
 - Rule 1, T-5491 (Pernille, 11-23): pywidget/tests/bridge/test_runner.py test_swallow_ends_by_hard_stop_twice (T-4787
-  rows 22, 100). The lane logs of 11-10 and 11-16 are gone, so the failing row is not kept. CPU load did not make it
-  red: 220 runs of its scenario in a scratch copy beside 24-32 CPU burners and the suite itself (load 43-94 on 8
+  rows 22, 100). Which check went red: `assertTrue(hard_called)`, not the 5 s bound. Both lane logs are kept, in the
+  main folder's ops/runs (personal-land-a3-20261110-093316.log, personal-land-a45-20261116-045702.log): "None is not
+  true : a soft Stop got past the swallow", stop_dt 2.28 and 2.20 s, last user line 10, the outer
+  `except BaseException:`. Was: "The lane logs of 11-10 and 11-16 are gone, so the failing row is not kept", and the
+  table below said which bound failed was shown only by a stall mutant. So the run ended with no hard stop: a soft
+  Stop landed in the outer except, which no try covers, and ended it. That is how Python handles an exception raised
+  inside an except body, so a try/except swallow can never be airtight against soft Stops. With the fake's wake every
+  2 ms (not 250 ms) the old test went red that way 1 of 66 (Pernille, 11-23 morning). With both except bodies kept
+  busy (a 3,000,000-step loop each, an environment mutant of the scenario that widens the window), the test as
+  first landed (88899de658) went red 10 of 10 with the lanes' message: hard_called None, stop_dt 0.15-0.47 s. Its 30 s
+  hang ceiling below is right but did not touch this cause. What replaced it (Pernille, 11-23 afternoon): the
+  scenario installs a SIGINT handler that does nothing, so every soft Stop reaches user code and is swallowed, and
+  only the hard stop can end the run. The same window mutant: 10 of 10 green, and 40 of 40 with the 2 ms wake alone,
+  at load 130-185. Mutants of the product with the handler in: the hard stop's callback never raising (hang at
+  120 s) and hard_stop answering False (hard_called False) both go red. Earlier findings, still true: CPU load did not
+  make it red: 220 runs of its scenario in a scratch copy beside 24-32 CPU burners and the suite itself (load 43-94 on 8
   cores) all had the hard stop called, the run interrupted, and stop_dt 2.15-2.91 s. A stall does (an environment
   mutant: SIGSTOP of the driver, as a descheduled or paging process is stalled). Stalled 3 s after the hard stop,
   `assertLess(stop_dt, 5.0)` went red at 5.54 s with the hard stop called and the run interrupted: a bound that
@@ -237,7 +251,8 @@ correction is marked "was:".
   0.5 s (floor, stop_dt 0.72 s), hard_stop answers True but arms no events (hang at 120 s). The bridge suite passes
   through pywidget/tests/run_host.py --both bridge (the land's host step; tests/run.sh selects only tests/ suites):
   347 tests on 3.9 and 3.13, three runs, at load 59 and beside 24 burners at 93 and 339; the test alone 10 of 10
-  beside 24 burners (load 385).
+  beside 24 burners (load 385). With the handler (11-23 afternoon): run_host.py --both bridge, 347 tests green on
+  3.9.6 and 3.13.18 at load 129.
 
 ## Audit of T-4787's 46 bad-test reds (slice 9, 11-21)
 
@@ -260,7 +275,7 @@ proven cure.
 | 66, 74 | site_test.sh "nothing changed: no second commit" | 2 | T-5493 (open, Odalys) |
 | 90, 111 | supervisor_test.sh close_by row | 2 | 8251344275 (slice 6: waits for the keeper's SIGTERM) |
 | 119, 128 | personal_land_test.sh, quarantined | 2 | b6b0ab5a6b (T-4726, Odalys, 11-19; quarantine entry removed). T-4726 is still open: the 11-21 nightly run found other rows red on main |
-| 22, 100 | bridge test_swallow_ends_by_hard_stop_twice | 2 | T-5491 (Pernille, 11-23, on personal/a until it lands): the 5.0 s ceiling and the ladder's 5.0 s stuck deadline replaced by a 30 s hang ceiling (below). No failing row kept, so which bound failed is shown by a stall mutant, not proven |
+| 22, 100 | bridge test_swallow_ends_by_hard_stop_twice | 2 | T-5491 (Pernille, 11-23): the red was the hard-stop check, not the 5 s bound (both lane logs kept); a no-op SIGINT handler leaves the hard stop the only way out, and the 5.0 s bounds became a 30 s hang ceiling (Where the fixes stand) |
 | 5 | BridgeTests writer stands down | 1 | 754d97edc1 (T-2491, test-only fix) |
 | 6 | lane host rows "waited 1.2s for the xcodebuild lock" in two export cases | 1 | the suite and rows were not kept (land_steps.jsonl keeps no rows; the lane log is gone). No test on main now runs tools/xc.sh export on the machine's lock (searched tests/ for it). T-5515 |
 | 12 | site_s30_test | 1 | a15dd24770 (T-3996: the test moved with Home's change) |
@@ -284,8 +299,8 @@ proven cure.
 </div>
 
 
-Sum: 46. Fixed on main: 34 reds. Carried by an open line: 9 (T-4634 2, T-5493 2, T-5491 2, T-5492 1, T-5490 1,
-T-4725 1). Not reproduced, on T-5515: 3 (rows 6, 42, 65).
+Sum: 46. Fixed on main: 36 reds (34 at slice 9, and T-5491's 2 on 11-23). Carried by an open line: 7 (T-4634 2,
+T-5493 2, T-5492 1, T-5490 1, T-4725 1). Not reproduced, on T-5515: 3 (rows 6, 42, 65).
 
 Slice 10 check, 11-21 9:30 PM ET, main at 4fefafaf80 (`grep -m1 -E "\] T-NNNN "` on ops/board.md here and on
 `git show main:ops/board.md`; both agree): every line this audit names is still open, unticked, and none has moved to

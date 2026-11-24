@@ -49,6 +49,9 @@ own: the system tints it). How it is built:
 - A premade names only semantic tokens and the widget card, never a colour of its own (`_premade.THEME`), so the
   theme decides every colour it draws. `pywidget/tests/widgets/test_premade_theme.py` checks that over every view,
   family and state; `PremadeThemeTests` checks the colours each appearance resolves to.
+- On the Home Screen, `WidgetKitCheckTests/testTPremadeDrawsPaperInLightAndStudioGreyInDark` places Countdown and
+  reads its card in each appearance (iPhone 17e Simulator, 2026-11-23): light 94 % Paper white; dark 95 % dark and no
+  hued pixel. It reads the card only: the placed widget's frame also holds its label and some wallpaper.
 - The Page's frames named at the top were drawn before this answer; their Studio is still the purple one.
 
 ## 0. The 1.0 showcase set (T-4672, Ines, 2026-11-17)

@@ -151,6 +151,72 @@ an Investor resumed the company at 7:00 AM ET. an Investor then asked for these 
   heavy test slots at 8:00 AM ET while a worker's app tests waited. A build made while the sessions work runs one
   suite at a time, and only when `python3 tools/heavy_slot.py status` shows nobody waiting.
 
+## The merge watch of 11-24 (an Investor, typed 9:06 AM ET)
+
+an Investor told the Mac mini session to watch every merge for the rest of 11-24, fix the root cause of each one
+that fails or runs long, merge the fix without asking, and say so on the main thread (`log/rulings.md`). Seven app
+merge runs between 7:00 and 9:32 AM ET merged once; none of the six that failed was the change's own fault. What
+each fault was, and its fix:
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 3: The merge watch of 11-24 (an Investor, typed 9:06 AM ET), scrolls sideways" style="--tw:797px" markdown="1">
+
+| Fault (11-24, ET) | Fix | On main |
+|---|---|---|
+| 8:14 AM: a copy ran its own older merge script; a stale review was found after 51 minutes | The script hands over to the main folder's (T-5793) | 8:31 AM |
+| 8:34 AM: every check green in 19 minutes, refused because main had changed the same worker's memory notes | Memory notes never refuse a merge; both sides' lines are kept at the rebase (T-5799) | 9:11 AM |
+| 7:22 and 8:14 AM: the review no longer matched after the change was moved onto a newer main | A review made before a rebase counts while the patch is line for line the same (T-5801); any changed line, context line or added commit needs a new review | 9:40 AM |
+| 7:22, 8:45 and 9:32 AM: a wall-clock test in the app's host tests failed while a worker's Xcode run loaded the Mac mini (load 50 to 400) | A failed host suite gets one recorded second run by itself; six clock-bound tests made load-tolerant; a cheaper process listing (T-5800) | 11:30 AM |
+| Most app merges lost 4 to 10 minutes waiting for the MacBook to start their unit tests, while holding the one app merge turn | The runner keeps taking jobs while a poll runs (T-5805, runner 35) | see the main thread |
+
+</div>
+
+
+- **The second run** (`pywidget/tests/run_host.py`): a suite that ends FAIL or TIMEOUT runs once more after the
+  others; green then is PASS, said on its line, with one row in `ops/metrics/host_second_runs.jsonl` in the main
+  folder. That file is the list of tests to fix properly. Red twice is red. `PYWIDGET_HOST_SECOND_RUN=0` turns it
+  off. Its first form put each suite in its own process group and failed its review: four tools stop a run by
+  killing its group. That part was taken out before it merged.
+- **Built and held:** a worker's local Xcode test run waits while a merge's host tests run (T-5804, in its copy,
+  not merged). It would make the lanes wait up to 20 minutes for their own runs. It lands only if the second-run
+  record shows load still fails merges: one or more rows a day with a second-run pass from a merge, or the
+  merge's host tests still red or over about 700 s.
+- **Built and switched off:** the tool suites on the MacBook (T-5798, `ops/merge_macbook.json`). 99 of the 580
+  suites fail only in the MacBook's sandbox, so today it would slow merges.
+- **Not done:** the app's host tests on the MacBook. They run beside the unit tests, so it would save no merge
+  time, and the MacBook has no Python 3.13.
+- **The rule for this session's own builds:** one suite at a time, only when nobody waits for a test slot, and no
+  long run (a whole mutants check) while the sessions work. Twice on 11-24 its builds held slots a session waited
+  for (8:00 and 11:00 AM ET).
+
+## What an Investor's 11:47 AM ET instruction of 11-24 changed
+
+an Investor, #325 c7138212344 (`log/rulings.md`): change the setup so new work is picked up, remove old parked
+branches whose changes are on main, make a session's time limit hand work off safely, and do the next task
+instead of waiting for a blocked one. By noon on 11-24 no personal account had merged an app change: their
+sessions were on old parked branches, account b's morning ran into the session limit, and account a's first merge
+gave its turn away.
+
+- **Land items are off** (`ops/dispatch.json` "land_others": false, 11:52 AM). A session takes its own area's
+  lines. Finished work that still waits on a parked branch is landed by the main account's session (T-5788) or the
+  Mac mini session.
+- **180 of the 244 parked branches were archived** (`tools/parked_archive.py --settled --apply`, then `--days 0
+  --apply`, 11:54 AM): each is at `refs/archive/parked/...` and comes back with `git branch parked/X
+  refs/archive/parked/X`. 64 were left, 17 of them holding work main lacks (`parked_archive.py --settle` lists them).
+- **A lane's merge keeps its turn** (T-5809, 11:57 AM): after its host tests pass it waits up to 900 s
+  (`XC_AGAIN_WAIT` in `tools/merge.sh`) for the unit-test job it queued, where before it ended in a wait at once
+  and the next app change took the turn.
+- **A session hands in by the clock** (T-5808 part 1, 11:59 AM): `tools/feature_session.py check` answers MERGE
+  POINT: yes once a lane's session has run `hand_in_after_min` minutes (`ops/feature_sessions.json`, 100; 0 is
+  off) with a step committed. On 11-24 account b's session reached its merge point at minute 201 of 225; a step
+  took 39 to 67 minutes over three days. The 225-minute limit stays as the stop for a hung session.
+- **Being built (T-5808 parts 3 and 2):** an account starts its next work on another slot while its finished
+  branch waits to merge, still one session at a time; work set aside at the limit comes back to its own account
+  as its next session.
+- **The parked editor work** of account b's morning (five commits, T-5807): in a copy on main's tip. Its review
+  found two real faults (a Stop that does not cancel a check just taken; two Stops that switch completion off),
+  so it merges after the fix and a second review. Board line T-4186 waits on T-5807 meanwhile.
+
 ## How we will know (48 hours from the RESUME)
 
 Same script as the comparison: `python3 ops/plans/T-5265-measure.py "<start>" "<end>"`. Before: about 22 app code

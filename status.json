@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-24T00:25:04.783924+00:00",
+ "at": "2026-11-24T00:28:09.734700+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -439,7 +439,7 @@
   "week_pct": 88.17,
   "usage_pct": 79.8,
   "work_pct": 97.6,
-  "read_at": "2026-11-24T00:25:00+00:00",
+  "read_at": "2026-11-24T00:28:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -476,7 +476,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-23T19:25:00-05:00",
+  "at": "2026-11-23T19:28:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -692,36 +692,29 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-24T00:25:04Z",
+  "at": "2026-11-24T00:27:51Z",
   "s": {
-   "T-5755": [
-    "mergeq",
-    "1st to merge",
-    1795477864783
-   ],
    "T-5691": [
     "mergeq",
-    "2nd to merge",
-    1795479784783
+    "1st to merge",
+    1795479771994
    ]
   },
   "nm": {
-   "T-5755": "A merge turn ends at its time limit",
    "T-5691": "Land committed work after a cut-off session"
   },
   "wk": {
-   "T-5755": "Odalys",
    "T-5691": "Odalys",
    "T-5758": "Idris",
    "T-5743": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-24T00:25:04Z",
+  "at": "2026-11-24T00:27:51Z",
   "mq": {
    "n": {
     "checking": 0,
-    "inline": 2,
+    "inline": 1,
     "conflicted": 0,
     "failed": 0,
     "held": 3,
@@ -730,12 +723,12 @@
    },
    "m": {
     "checking": null,
-    "inline": 18,
+    "inline": 5,
     "conflicted": null,
     "failed": null,
-    "held": 896,
+    "held": 899,
     "retry": null,
-    "parked": 896
+    "parked": 899
    },
    "cur": [],
    "ld": [
@@ -745,8 +738,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-24T00:24:44Z",
-    "ld": 3.62,
+    "at": "2026-11-24T00:27:03Z",
+    "ld": 2.51,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -798,11 +791,11 @@
      "open": true
     }
    },
-   "at": "2026-11-24T00:25:04+00:00"
+   "at": "2026-11-24T00:28:09+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-24T00:24:51+00:00"
+   "at": "2026-11-24T00:27:58+00:00"
   }
  },
  "operators": [
@@ -836,10 +829,10 @@
   "main": 0,
   "lanes": 0,
   "total": 0,
-  "at": "7:25 PM",
+  "at": "7:28 PM",
   "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
-  "at_iso": "2026-11-24T00:25:00+00:00",
+  "at_iso": "2026-11-24T00:28:00+00:00",
   "started": "7:06 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0, started 7:06 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 7:25 PM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0, started 7:06 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 7:28 PM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
  }
 }

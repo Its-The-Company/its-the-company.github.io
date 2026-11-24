@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-24T02:52:54.788248+00:00",
+ "at": "2026-11-24T02:55:57.963717+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -12,6 +12,22 @@
    "last_handoff": 1795478327
   },
   "flow": [
+   {
+    "t": "T-0337",
+    "name": "Confirm the revenue memo's facts from Apple pages",
+    "w": "Wrenna",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "claimed",
+      "at": 1795488914
+     },
+     {
+      "s": "worker",
+      "at": 1795488914
+     }
+    ]
+   },
    {
     "t": "T-4715",
     "name": "Put the new Pro screen words into the app",
@@ -269,22 +285,6 @@
     ]
    },
    {
-    "t": "T-0337",
-    "name": "Confirm the revenue memo's facts from Apple pages",
-    "w": "Wrenna",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "claimed",
-      "at": 1795481220
-     },
-     {
-      "s": "worker",
-      "at": 1795481220
-     }
-    ]
-   },
-   {
     "t": "T-4554",
     "name": "One state commit per widget across app and widget",
     "w": "Idris",
@@ -425,7 +425,7 @@
   "week_pct": 67.16,
   "usage_pct": 79.8,
   "work_pct": 97.6,
-  "read_at": "2026-11-24T02:53:00+00:00",
+  "read_at": "2026-11-24T02:56:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -500,7 +500,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-23T21:53:00-05:00",
+  "at": "2026-11-23T21:56:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -779,68 +779,27 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-24T02:52:54Z",
+  "at": "2026-11-24T02:55:40Z",
   "s": {
    "T-0048": [
     "mergetest",
     "iPhone tests on the MacBook",
     null
    ],
-   "T-5657": [
-    "testing",
-    "Mac Mini \u00b7 test",
-    null
-   ],
-   "T-1119": [
-    "testq",
-    "1st for a Simulator",
-    1795488474788
-   ],
-   "T-2296": [
-    "testq",
-    "1st for a Simulator",
-    1795488474788
-   ],
    "T-4190": [
-    "testq",
-    "1st for a Simulator",
-    1795488474788
-   ],
-   "T-4681": [
-    "testq",
-    "1st for a Simulator",
-    1795488474788
-   ],
-   "T-4715": [
-    "testq",
-    "1st for a Simulator",
-    1795488474788
-   ],
-   "T-5602": [
-    "testq",
-    "1st for a Simulator",
-    1795488474788
+    "merged",
+    "on main 10:11 AM ET",
+    1795446707000,
+    ""
    ]
   },
   "nm": {
    "T-0048": "Add the per-widget Activity screen and Run as widget",
-   "T-5657": "Ship test widgets in internal TestFlight builds only",
-   "T-1119": "Investors answer two App Store Connect questions",
-   "T-2296": "Finish the gallery pager, iPad layout and detail foot",
-   "T-4190": "Settings and Pro: buy, restore, themes",
-   "T-4681": "Premades default to Paper in light and Studio in dark",
-   "T-4715": "Put the new Pro screen words into the app",
-   "T-5602": "Brief for a new look for the app"
+   "T-4190": "Settings and Pro: buy, restore, themes"
   },
   "wk": {
    "T-0048": "Idris",
-   "T-5657": "Idris",
-   "T-1119": "Ines",
-   "T-2296": "Idris",
    "T-4190": "Idris",
-   "T-4681": "Idris",
-   "T-4715": "Maren",
-   "T-5602": "Maren",
    "T-5755": "Odalys",
    "T-5691": "Odalys",
    "T-5758": "Idris",
@@ -848,7 +807,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-24T02:52:54Z",
+  "at": "2026-11-24T02:55:40Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -864,9 +823,9 @@
     "inline": null,
     "conflicted": null,
     "failed": null,
-    "held": 1044,
+    "held": 1047,
     "retry": null,
-    "parked": 1044
+    "parked": 1047
    },
    "cur": [],
    "ld": [
@@ -876,8 +835,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-24T02:52:56Z",
-    "ld": 2.22,
+    "at": "2026-11-24T02:55:21Z",
+    "ld": 2.4,
     "c": 8,
     "sb": 1,
     "dk": [
@@ -913,7 +872,7 @@
    "parked": 17,
    "open": true,
    "mq": false,
-   "counted": "2026-11-24T02:38:40+00:00",
+   "counted": "2026-11-24T02:54:34+00:00",
    "by": {
     "app": {
      "n": 13,
@@ -931,11 +890,11 @@
      "open": true
     }
    },
-   "at": "2026-11-24T02:52:54+00:00"
+   "at": "2026-11-24T02:55:57+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-24T02:52:45+00:00"
+   "at": "2026-11-24T02:55:57+00:00"
   }
  },
  "operators": [
@@ -996,10 +955,10 @@
   "main": 0,
   "lanes": 3,
   "total": 3,
-  "at": "9:53 PM",
+  "at": "9:56 PM",
   "why": "",
-  "at_iso": "2026-11-24T02:53:00+00:00",
+  "at_iso": "2026-11-24T02:56:00+00:00",
   "started": "7:06 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 7:06 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 9:53 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 7:06 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 9:56 PM ET</p></section>"
  }
 }

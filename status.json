@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-24T23:11:51.227750+00:00",
+ "at": "2026-11-24T23:14:54.205298+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -390,7 +390,7 @@
    "task": "[build] T-5815 finish shell checks",
    "model": "opus",
    "started": "2026-11-24T22:01:37.992Z",
-   "seconds": 4213,
+   "seconds": 4396,
    "finished": null
   },
   {
@@ -398,7 +398,7 @@
    "task": "[ops] merge watch restart",
    "model": "opus",
    "started": "2026-11-24T22:02:04.950Z",
-   "seconds": 4186,
+   "seconds": 4369,
    "finished": null
   },
   {
@@ -406,7 +406,7 @@
    "task": "[review] T-5832 fix commit check",
    "model": "opus",
    "started": "2026-11-24T23:03:58.502Z",
-   "seconds": 472,
+   "seconds": 655,
    "finished": null
   }
  ],
@@ -497,7 +497,7 @@
   "week_pct": 166.51,
   "usage_pct": 68.4,
   "work_pct": 98.0,
-  "read_at": "2026-11-24T23:11:00+00:00",
+  "read_at": "2026-11-24T23:14:00+00:00",
   "running": [
    {
     "lane": "a3",
@@ -540,14 +540,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-24T18:07:00-05:00",
+   "at": "2026-11-24T18:14:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-24T18:11:00-05:00",
+  "at": "2026-11-24T18:14:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -806,33 +806,40 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-24T23:11:38Z",
+  "at": "2026-11-24T23:14:54Z",
   "s": {
    "T-5797": [
     "mergeq",
     "1st to merge",
-    1795559738984
+    1795559694205
    ],
    "T-4186": [
-    "mergetest",
-    "Xcode checks on the MacBook, 2nd to merge",
-    1795559978984
+    "mergeq",
+    "2nd to merge",
+    1795558554205
    ],
    "T-4824": [
-    "mergetest",
-    "Xcode checks on the MacBook, 3rd to merge",
-    1795559978984
+    "mergeq",
+    "3rd to merge",
+    1795561374205
+   ],
+   "T-4776": [
+    "testing",
+    "Mac Mini \u00b7 test",
+    null
    ]
   },
   "nm": {
    "T-5797": "Widgets animate smoothly within what Apple allows",
    "T-4186": "The editor completes code, shows errors and previews",
-   "T-4824": "Add motion and location probes to the measurement export"
+   "T-4824": "Add motion and location probes to the measurement export",
+   "T-4776": "Register the probe font where the widget draws too"
   },
   "wk": {
    "T-5797": "Idris",
    "T-4186": "Idris",
    "T-4824": "Idris",
+   "T-4776": "Idris",
    "T-4644": "Idris",
    "T-5638": "Idris",
    "T-0212": "Idris",
@@ -846,11 +853,11 @@
   }
  },
  "ln": {
-  "at": "2026-11-24T23:11:38Z",
+  "at": "2026-11-24T23:14:54Z",
   "mq": {
    "n": {
-    "checking": 2,
-    "inline": 1,
+    "checking": 1,
+    "inline": 2,
     "conflicted": 0,
     "failed": 0,
     "held": 4,
@@ -858,13 +865,13 @@
     "parked": 14
    },
    "m": {
-    "checking": 32,
-    "inline": 36,
+    "checking": 35,
+    "inline": 26,
     "conflicted": null,
     "failed": null,
-    "held": 2263,
+    "held": 2266,
     "retry": null,
-    "parked": 1528
+    "parked": 1532
    },
    "cur": [
     [
@@ -873,15 +880,7 @@
      ],
      "iPhone app tests",
      "MacBook",
-     32
-    ],
-    [
-     [
-      "T-4824"
-     ],
-     "iPhone app tests",
-     "MacBook",
-     32
+     35
     ]
    ],
    "ld": [
@@ -891,12 +890,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-24T23:10:55Z",
-    "ld": 1.48,
+    "at": "2026-11-24T23:14:55Z",
+    "ld": 2.2,
     "c": 8,
     "sb": 0,
     "dk": [
-     28.8,
+     28.7,
      228.3
     ],
     "ss": [
@@ -906,12 +905,12 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-24T23:00:02Z",
-    "ld": 2.61,
+    "at": "2026-11-24T23:12:27Z",
+    "ld": 6.94,
     "c": 12,
     "sb": 0,
     "dk": [
-     338.7,
+     337.6,
      926.4
     ],
     "sn": []
@@ -920,16 +919,16 @@
  },
  "hc": {
   "wait": {
-   "n": 22,
+   "n": 21,
    "limit": 20,
-   "in_line": 4,
+   "in_line": 3,
    "parked": 18,
    "open": true,
    "mq": false,
-   "counted": "2026-11-24T23:01:10+00:00",
+   "counted": "2026-11-24T23:12:16+00:00",
    "by": {
     "app": {
-     "n": 15,
+     "n": 14,
      "limit": 20,
      "open": true
     },
@@ -944,11 +943,11 @@
      "open": true
     }
    },
-   "at": "2026-11-24T23:11:51+00:00"
+   "at": "2026-11-24T23:14:54+00:00"
   },
   "bl": {
    "n": 3,
-   "at": "2026-11-24T23:11:38+00:00"
+   "at": "2026-11-24T23:14:41+00:00"
   }
  },
  "operators": [
@@ -993,10 +992,10 @@
   "main": 3,
   "lanes": 1,
   "total": 4,
-  "at": "6:11 PM",
+  "at": "6:14 PM",
   "why": "",
-  "at_iso": "2026-11-24T23:11:00+00:00",
+  "at_iso": "2026-11-24T23:14:00+00:00",
   "started": "4:58 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 3, started 4:58 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 6:11 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 3, started 4:58 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 6:14 PM ET</p></section>"
  }
 }

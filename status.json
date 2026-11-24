@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-24T00:43:09.890975+00:00",
+ "at": "2026-11-24T00:46:29.731135+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -439,8 +439,46 @@
   "week_pct": 63.21,
   "usage_pct": 79.8,
   "work_pct": 97.6,
-  "read_at": "2026-11-24T00:43:00+00:00",
-  "running": []
+  "read_at": "2026-11-24T00:46:00+00:00",
+  "running": [
+   {
+    "lane": "a",
+    "task": "T-4182",
+    "w": "Idris",
+    "k": "build",
+    "t": "A failing widget says so and can recover",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-23T19:45:25-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a2",
+    "task": "T-4190",
+    "w": "Idris",
+    "k": "build",
+    "t": "Settings and Pro: buy, restore, themes",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-23T19:45:27-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a3",
+    "task": "T-5657",
+    "w": "Idris",
+    "k": "build",
+    "t": "Ship test widgets in internal TestFlight builds only",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-23T19:45:27-05:00",
+    "n": "Evan",
+    "d": 1,
+    "src": "plan-a"
+   }
+  ]
  },
  "api_credits": [
   {
@@ -469,14 +507,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-23T19:37:00-05:00",
+   "at": "2026-11-23T19:43:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-23T19:43:00-05:00",
+  "at": "2026-11-23T19:46:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -755,7 +793,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-24T00:43:09Z",
+  "at": "2026-11-24T00:46:29Z",
   "s": {
    "T-5524": [
     "testing",
@@ -770,18 +808,34 @@
    "T-4772": [
     "testq",
     "1st for a Simulator",
-    1795480989890
+    1795481009731
+   ],
+   "T-4190": [
+    "merged",
+    "on main 10:11 AM ET",
+    1795446707000,
+    ""
+   ],
+   "T-4182": [
+    "merged",
+    "on main 7:59 AM ET",
+    1795438771000,
+    "Idris"
    ]
   },
   "nm": {
    "T-5524": "Make the widget's Debug ask record say what it saw",
    "T-5059": "Test that App Store builds write no sensor rows",
-   "T-4772": "Prove a refresh tap redraws the widget"
+   "T-4772": "Prove a refresh tap redraws the widget",
+   "T-4190": "Settings and Pro: buy, restore, themes",
+   "T-4182": "A failing widget says so and can recover"
   },
   "wk": {
    "T-5524": "Idris",
    "T-5059": "Idris",
    "T-4772": "Idris",
+   "T-4190": "Idris",
+   "T-4182": "Idris",
    "T-5755": "Odalys",
    "T-5691": "Odalys",
    "T-5758": "Idris",
@@ -789,7 +843,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-24T00:43:09Z",
+  "at": "2026-11-24T00:46:29Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -805,9 +859,9 @@
     "inline": null,
     "conflicted": null,
     "failed": null,
-    "held": 915,
+    "held": 918,
     "retry": null,
-    "parked": 915
+    "parked": 918
    },
    "cur": [],
    "ld": [
@@ -817,12 +871,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-24T00:43:28Z",
-    "ld": 6.37,
+    "at": "2026-11-24T00:46:36Z",
+    "ld": 9.53,
     "c": 8,
     "sb": 1,
     "dk": [
-     34.9,
+     34.7,
      228.3
     ],
     "ss": [
@@ -848,13 +902,13 @@
  },
  "hc": {
   "wait": {
-   "n": 19,
+   "n": 17,
    "limit": 20,
-   "in_line": 2,
+   "in_line": 0,
    "parked": 17,
    "open": true,
    "mq": false,
-   "counted": "2026-11-24T00:22:54+00:00",
+   "counted": "2026-11-24T00:43:46+00:00",
    "by": {
     "app": {
      "n": 13,
@@ -862,21 +916,21 @@
      "open": true
     },
     "other": {
-     "n": 11,
+     "n": 9,
      "limit": 20,
      "open": true
     },
     "hub": {
-     "n": 3,
+     "n": 1,
      "limit": 5,
      "open": true
     }
    },
-   "at": "2026-11-24T00:43:09+00:00"
+   "at": "2026-11-24T00:46:29+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-24T00:43:09+00:00"
+   "at": "2026-11-24T00:46:29+00:00"
   }
  },
  "operators": [
@@ -888,6 +942,33 @@
    "e": "high",
    "t": "Work session",
    "at": "2026-11-23T19:09:50-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Evan's Account",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session \u2013 1 task",
+   "at": "2026-11-23T19:45:25-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Evan's Account",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session",
+   "at": "2026-11-23T19:45:27-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Evan's Account",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session \u2013 1 task",
+   "at": "2026-11-23T19:45:27-05:00"
   }
  ],
  "reply": {
@@ -908,12 +989,12 @@
  ],
  "agents_now": {
   "main": 0,
-  "lanes": 0,
-  "total": 0,
-  "at": "7:43 PM",
-  "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
-  "at_iso": "2026-11-24T00:43:00+00:00",
+  "lanes": 3,
+  "total": 3,
+  "at": "7:46 PM",
+  "why": "",
+  "at_iso": "2026-11-24T00:46:00+00:00",
   "started": "7:06 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0, started 7:06 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 7:43 PM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 7:06 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 7:46 PM ET</p></section>"
  }
 }

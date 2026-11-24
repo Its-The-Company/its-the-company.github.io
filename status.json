@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-24T04:12:47.853189+00:00",
+ "at": "2026-11-24T04:15:52.114190+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -425,7 +425,7 @@
   "week_pct": 71.11,
   "usage_pct": 79.8,
   "work_pct": 97.6,
-  "read_at": "2026-11-24T04:12:00+00:00",
+  "read_at": "2026-11-24T04:16:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -460,18 +460,6 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-23T22:44:38-05:00",
-    "n": "Jeremy",
-    "src": "plan-b"
-   },
-   {
-    "lane": "b2",
-    "task": "T-5773",
-    "w": "Idris",
-    "k": "review",
-    "t": "Review naming the records a land takes out",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-23T22:44:40-05:00",
     "n": "Jeremy",
     "src": "plan-b"
    }
@@ -511,7 +499,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-23T23:12:00-05:00",
+  "at": "2026-11-23T23:16:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -578,15 +566,6 @@
  ],
  "tasks": {
   "run": [
-   {
-    "w": "Pernille",
-    "t": "Test that App Store builds write no sensor rows",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-23T20:59:20-05:00",
-    "o": "c",
-    "task": "T-5059"
-   },
    {
     "w": "Idris",
     "t": "Make the Mac network stand-in refuse what phones refuse",
@@ -816,96 +795,97 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-24T04:12:47Z",
+  "at": "2026-11-24T04:15:52Z",
   "s": {
    "T-5777": [
     "mergeq",
     "1st to merge",
-    1795493267853
+    1795493272114
+   ],
+   "T-5773": [
+    "mergeq",
+    "2nd to merge",
+    1795493752114
    ],
    "T-5657": [
     "mergeq",
-    "2nd to merge",
-    1795491827853
+    "3rd to merge",
+    1795491832114
    ],
    "T-0337": [
     "mergeq",
-    "2nd to merge",
-    1795491827853
+    "3rd to merge",
+    1795491832114
    ],
    "T-2097": [
     "mergeq",
-    "2nd to merge",
-    1795491827853
+    "3rd to merge",
+    1795491832114
    ],
    "T-4010": [
     "mergeq",
-    "2nd to merge",
-    1795491827853
+    "3rd to merge",
+    1795491832114
    ],
    "T-4477": [
     "mergeq",
-    "2nd to merge",
-    1795491827853
+    "3rd to merge",
+    1795491832114
    ],
    "T-4286": [
     "mergeq",
-    "2nd to merge",
-    1795491827853
+    "3rd to merge",
+    1795491832114
    ],
    "T-4435": [
     "mergeq",
-    "2nd to merge",
-    1795491827853
+    "3rd to merge",
+    1795491832114
    ],
    "T-5634": [
     "testing",
     "Mac Mini \u00b7 test",
     null
    ],
-   "T-5059": [
-    "testq",
-    "1st for a Simulator",
-    1795492007853
-   ],
    "T-1119": [
     "testq",
-    "2nd for a Simulator",
-    1795493147853
+    "1st for a Simulator",
+    1795493152114
    ],
    "T-2296": [
     "testq",
-    "2nd for a Simulator",
-    1795493147853
+    "1st for a Simulator",
+    1795493152114
    ],
    "T-4190": [
     "testq",
-    "2nd for a Simulator",
-    1795493147853
+    "1st for a Simulator",
+    1795493152114
    ],
    "T-4681": [
     "testq",
-    "2nd for a Simulator",
-    1795493147853
+    "1st for a Simulator",
+    1795493152114
    ],
    "T-4715": [
     "testq",
-    "2nd for a Simulator",
-    1795493147853
+    "1st for a Simulator",
+    1795493152114
    ],
    "T-5602": [
     "testq",
-    "2nd for a Simulator",
-    1795493147853
+    "1st for a Simulator",
+    1795493152114
    ],
    "T-5274": [
     "testq",
-    "3rd for a Simulator",
-    1795493327853
+    "2nd for a Simulator",
+    1795493272114
    ]
   },
   "nm": {
    "T-5777": "Review the stuck-account alarm fix",
+   "T-5773": "Review naming the records a land takes out",
    "T-5657": "Ship test widgets in internal TestFlight builds only",
    "T-0337": "Confirm the revenue memo's facts from Apple pages",
    "T-2097": "Read free memory in the widget extension on a device",
@@ -914,7 +894,6 @@
    "T-4286": "Check an imported font draws in a widget",
    "T-4435": "Draw the wrapped refresh glyph on both runtimes",
    "T-5634": "Retry a refused widget send at the project boundary",
-   "T-5059": "Test that App Store builds write no sensor rows",
    "T-1119": "Investors answer two App Store Connect questions",
    "T-2296": "Finish the gallery pager, iPad layout and detail foot",
    "T-4190": "Settings and Pro: buy, restore, themes",
@@ -925,6 +904,7 @@
   },
   "wk": {
    "T-5777": "Idris",
+   "T-5773": "Idris",
    "T-5657": "Idris",
    "T-0337": "Wrenna",
    "T-2097": "Idris",
@@ -933,7 +913,6 @@
    "T-4286": "Idris",
    "T-4435": "Idris",
    "T-5634": "Idris",
-   "T-5059": "Idris",
    "T-1119": "Ines",
    "T-2296": "Idris",
    "T-4190": "Idris",
@@ -951,11 +930,11 @@
   }
  },
  "ln": {
-  "at": "2026-11-24T04:12:47Z",
+  "at": "2026-11-24T04:15:52Z",
   "mq": {
    "n": {
     "checking": 0,
-    "inline": 8,
+    "inline": 9,
     "conflicted": 0,
     "failed": 0,
     "held": 0,
@@ -964,12 +943,12 @@
    },
    "m": {
     "checking": null,
-    "inline": 29,
+    "inline": 32,
     "conflicted": null,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1124
+    "parked": 1127
    },
    "cur": [],
    "ld": [
@@ -979,8 +958,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-24T04:12:11Z",
-    "ld": 7.02,
+    "at": "2026-11-24T04:15:25Z",
+    "ld": 5.61,
     "c": 8,
     "sb": 1,
     "dk": [
@@ -1034,11 +1013,11 @@
      "open": true
     }
    },
-   "at": "2026-11-24T04:12:47+00:00"
+   "at": "2026-11-24T04:15:52+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-24T04:12:47+00:00"
+   "at": "2026-11-24T04:15:44+00:00"
   }
  },
  "operators": [
@@ -1077,15 +1056,6 @@
    "e": "high",
    "t": "Work session \u2013 1 task",
    "at": "2026-11-23T22:44:38-05:00"
-  },
-  {
-   "w": "Operator",
-   "a": "Jeremy's Account",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session \u2013 1 task",
-   "at": "2026-11-23T22:44:40-05:00"
   }
  ],
  "reply": {
@@ -1107,12 +1077,12 @@
  ],
  "agents_now": {
   "main": 0,
-  "lanes": 4,
-  "total": 4,
-  "at": "11:12 PM",
+  "lanes": 3,
+  "total": 3,
+  "at": "11:16 PM",
   "why": "",
-  "at_iso": "2026-11-24T04:12:00+00:00",
+  "at_iso": "2026-11-24T04:16:00+00:00",
   "started": "7:06 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 0, started 7:06 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 11:12 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 7:06 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 11:16 PM ET</p></section>"
  }
 }

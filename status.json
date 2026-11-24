@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-24T00:34:17.596603+00:00",
+ "at": "2026-11-24T00:37:20.250812+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -439,7 +439,7 @@
   "week_pct": 63.21,
   "usage_pct": 79.8,
   "work_pct": 97.6,
-  "read_at": "2026-11-24T00:34:00+00:00",
+  "read_at": "2026-11-24T00:37:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -476,7 +476,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-23T19:34:00-05:00",
+  "at": "2026-11-23T19:37:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -755,9 +755,19 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-24T00:34:17Z",
-  "s": {},
+  "at": "2026-11-24T00:37:06Z",
+  "s": {
+   "T-5059": [
+    "testing",
+    "MacBook \u00b7 test",
+    null
+   ]
+  },
+  "nm": {
+   "T-5059": "Test that App Store builds write no sensor rows"
+  },
   "wk": {
+   "T-5059": "Idris",
    "T-5755": "Odalys",
    "T-5691": "Odalys",
    "T-5758": "Idris",
@@ -765,7 +775,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-24T00:34:17Z",
+  "at": "2026-11-24T00:37:06Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -781,9 +791,9 @@
     "inline": null,
     "conflicted": null,
     "failed": null,
-    "held": 906,
+    "held": 909,
     "retry": null,
-    "parked": 906
+    "parked": 909
    },
    "cur": [],
    "ld": [
@@ -793,8 +803,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-24T00:33:34Z",
-    "ld": 2.8,
+    "at": "2026-11-24T00:37:07Z",
+    "ld": 2.57,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -808,12 +818,12 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-24T00:10:30Z",
-    "ld": 0.19,
+    "at": "2026-11-24T00:36:58Z",
+    "ld": 0.18,
     "c": 12,
     "sb": 0,
     "dk": [
-     348.0,
+     347.5,
      926.4
     ],
     "sn": []
@@ -846,11 +856,11 @@
      "open": true
     }
    },
-   "at": "2026-11-24T00:34:17+00:00"
+   "at": "2026-11-24T00:37:20+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-24T00:34:11+00:00"
+   "at": "2026-11-24T00:37:14+00:00"
   }
  },
  "operators": [
@@ -884,10 +894,10 @@
   "main": 0,
   "lanes": 0,
   "total": 0,
-  "at": "7:34 PM",
+  "at": "7:37 PM",
   "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
-  "at_iso": "2026-11-24T00:34:00+00:00",
+  "at_iso": "2026-11-24T00:37:00+00:00",
   "started": "7:06 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0, started 7:06 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 7:34 PM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0, started 7:06 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 7:37 PM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
  }
 }

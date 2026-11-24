@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-24T15:20:34.333548+00:00",
+ "at": "2026-11-24T15:23:39.641434+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -351,7 +351,7 @@
    "task": "[build] T-4183 Gallery tour examples",
    "model": "",
    "started": "2026-11-24T14:21:14.744Z",
-   "seconds": 3559,
+   "seconds": 3744,
    "finished": null
   }
  ],
@@ -369,7 +369,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 740,
+  "runnable_count": 739,
   "blocked_count": 2
  },
  "meter": {
@@ -418,7 +418,7 @@
   "week_pct": 91.95,
   "usage_pct": 74.2,
   "work_pct": 97.8,
-  "read_at": "2026-11-24T15:20:00+00:00",
+  "read_at": "2026-11-24T15:23:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -481,7 +481,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-24T10:20:00-05:00",
+  "at": "2026-11-24T10:23:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -633,6 +633,11 @@
   "done": [
    {
     "w": "Idris",
+    "t": "The Mac stand-in for the phone's network now refuses the same bad requests a phone refuses, so...",
+    "at": "2026-11-24T10:21:00-05:00"
+   },
+   {
+    "w": "Idris",
     "t": "A test now proves the editor never freezes when a widget script is sent while another script is...",
     "at": "2026-11-24T10:09:00-05:00"
    },
@@ -640,22 +645,21 @@
     "w": "Maren",
     "t": "The mockup of the new Home now keeps Usage, Progress, Machine and Work, nests every task in its...",
     "at": "2026-11-24T09:58:00-05:00"
-   },
-   {
-    "w": "Operator",
-    "t": "A reviewed app change that is moved onto a newer main keeps its review while its patch stays...",
-    "at": "2026-11-24T09:40:00-05:00"
    }
   ],
   "count": {
-   "next": 740,
+   "next": 739,
    "wait": 2,
    "blocked": 0,
    "you": 2
   },
   "fin": {
-   "n": 3,
+   "n": 4,
    "rows": [
+    [
+     "T-4751",
+     "Make the Mac network..."
+    ],
     [
      "T-5274",
      "Test that a send never..."
@@ -710,33 +714,27 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-24T15:20:20Z",
+  "at": "2026-11-24T15:23:39Z",
   "s": {
-   "T-0193": [
-    "mergetest",
-    "iPhone tests on the MacBook",
-    null
-   ],
    "T-5047": [
     "merging",
     "Mac tests at the main gate",
-    1795526720986
+    1795526739641
    ]
   },
   "nm": {
-   "T-0193": "Build page three of the first-run tour",
    "T-5047": "Fix the token test's No view for this size card"
   },
   "wk": {
-   "T-0193": "Idris",
    "T-5047": "Idris",
+   "T-4751": "Idris",
    "T-5274": "Idris",
    "T-5802": "Maren",
    "T-5801": "Operator"
   }
  },
  "ln": {
-  "at": "2026-11-24T15:20:20Z",
+  "at": "2026-11-24T15:23:39Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -752,9 +750,9 @@
     "inline": null,
     "conflicted": null,
     "failed": null,
-    "held": 1792,
+    "held": 1795,
     "retry": null,
-    "parked": 790
+    "parked": 793
    },
    "cur": [],
    "ld": [
@@ -764,12 +762,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-24T15:19:35Z",
-    "ld": 1.54,
+    "at": "2026-11-24T15:22:50Z",
+    "ld": 1.69,
     "c": 8,
     "sb": 0,
     "dk": [
-     39.4,
+     38.0,
      228.3
     ],
     "ss": [
@@ -779,12 +777,12 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-24T15:10:42Z",
-    "ld": 6.6,
+    "at": "2026-11-24T15:21:03Z",
+    "ld": 8.43,
     "c": 12,
     "sb": 0,
     "dk": [
-     344.7,
+     345.0,
      926.4
     ],
     "sn": []
@@ -817,11 +815,11 @@
      "open": true
     }
    },
-   "at": "2026-11-24T15:20:34+00:00"
+   "at": "2026-11-24T15:23:39+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-24T15:20:34+00:00"
+   "at": "2026-11-24T15:23:27+00:00"
   }
  },
  "operators": [
@@ -873,10 +871,10 @@
   "main": 1,
   "lanes": 2,
   "total": 3,
-  "at": "10:20 AM",
+  "at": "10:23 AM",
   "why": "",
-  "at_iso": "2026-11-24T15:20:00+00:00",
+  "at_iso": "2026-11-24T15:23:00+00:00",
   "started": "9:18 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 1, started 9:18 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 10:20 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 1, started 9:18 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 10:23 AM ET</p></section>"
  }
 }

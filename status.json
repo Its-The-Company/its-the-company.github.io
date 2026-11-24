@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-24T16:45:51.915350+00:00",
+ "at": "2026-11-24T16:48:53.181328+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -376,7 +376,7 @@
    "task": "[build] T-4183 review fixes",
    "model": "",
    "started": "2026-11-24T16:38:54.576Z",
-   "seconds": 417,
+   "seconds": 598,
    "finished": null
   }
  ],
@@ -459,7 +459,7 @@
   "week_pct": 106.32,
   "usage_pct": 74.2,
   "work_pct": 97.8,
-  "read_at": "2026-11-24T16:45:00+00:00",
+  "read_at": "2026-11-24T16:48:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -510,7 +510,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-24T11:45:00-05:00",
+  "at": "2026-11-24T11:48:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -751,92 +751,92 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-24T16:45:42Z",
+  "at": "2026-11-24T16:48:33Z",
   "s": {
    "T-5047": [
     "mergeq",
     "1st to merge",
-    1795538562785
+    1795538553683
    ],
    "T-0337": [
     "mergeq",
     "1st to merge",
-    1795538562785
+    1795538553683
    ],
    "T-2097": [
     "mergeq",
     "1st to merge",
-    1795538562785
+    1795538553683
    ],
    "T-4010": [
     "mergeq",
     "1st to merge",
-    1795538562785
+    1795538553683
    ],
    "T-4477": [
     "mergeq",
     "1st to merge",
-    1795538562785
+    1795538553683
    ],
    "T-4286": [
     "mergeq",
     "1st to merge",
-    1795538562785
+    1795538553683
    ],
    "T-4435": [
     "mergeq",
     "1st to merge",
-    1795538562785
+    1795538553683
    ],
    "T-0678": [
     "mergeq",
     "1st to merge",
-    1795538562785
+    1795538553683
    ],
    "T-3765": [
     "mergeq",
     "1st to merge",
-    1795538562785
+    1795538553683
    ],
    "T-4662": [
     "mergeq",
     "1st to merge",
-    1795538562785
+    1795538553683
    ],
    "T-4781": [
     "mergeq",
     "1st to merge",
-    1795538562785
+    1795538553683
    ],
    "T-4635": [
     "mergeq",
     "1st to merge",
-    1795538562785
+    1795538553683
    ],
    "T-4182": [
     "mergeq",
     "1st to merge",
-    1795538562785
+    1795538553683
    ],
    "T-5620": [
     "mergeq",
     "1st to merge",
-    1795538562785
+    1795538553683
    ],
    "T-1119": [
     "mergeq",
     "1st to merge",
-    1795538562785
+    1795538553683
    ],
    "T-4681": [
     "mergeq",
     "1st to merge",
-    1795538562785
+    1795538553683
    ],
    "T-5602": [
     "mergeq",
     "1st to merge",
-    1795538562785
+    1795538553683
    ],
    "T-0811": [
     "mergetest",
@@ -896,7 +896,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-24T16:45:42Z",
+  "at": "2026-11-24T16:48:33Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -909,12 +909,12 @@
    },
    "m": {
     "checking": null,
-    "inline": 3,
+    "inline": 6,
     "conflicted": null,
-    "failed": 45,
-    "held": 744,
+    "failed": 48,
+    "held": 746,
     "retry": null,
-    "parked": 744
+    "parked": 746
    },
    "cur": [],
    "ld": [
@@ -924,8 +924,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-24T16:45:44Z",
-    "ld": 5.13,
+    "at": "2026-11-24T16:48:08Z",
+    "ld": 4.62,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -979,11 +979,11 @@
      "open": true
     }
    },
-   "at": "2026-11-24T16:45:51+00:00"
+   "at": "2026-11-24T16:48:53+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-24T16:45:51+00:00"
+   "at": "2026-11-24T16:48:46+00:00"
   }
  },
  "operators": [
@@ -993,8 +993,8 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session",
-   "at": "2026-11-24T11:41:58-05:00"
+   "t": "Inbox \u2013 Evan's 11:47 AM Message on GitHub",
+   "at": "2026-11-24T11:47:39-05:00"
   },
   {
    "w": "Operator",
@@ -1010,12 +1010,24 @@
   "sent": "2026-11-24T16:40:34Z",
   "seconds": 82.0
  },
- "inbox": [],
+ "inbox": [
+  {
+   "id": "c7138212344",
+   "state": "received",
+   "position": 1,
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "Re: the 11:41 message, Change the..."
+  }
+ ],
  "trimmed": [
   "lane_next",
   "queue_text",
   "task_done",
   "fin_short",
+  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -1027,10 +1039,10 @@
   "main": 1,
   "lanes": 1,
   "total": 2,
-  "at": "11:45 AM",
+  "at": "11:48 AM",
   "why": "",
-  "at_iso": "2026-11-24T16:45:00+00:00",
+  "at_iso": "2026-11-24T16:48:00+00:00",
   "started": "9:18 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 1, started 9:18 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 11:45 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 1, started 9:18 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 11:48 AM ET</p></section>"
  }
 }

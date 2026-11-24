@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-24T22:13:52.845222+00:00",
+ "at": "2026-11-24T22:16:55.294510+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -390,7 +390,7 @@
    "task": "[build] T-5815 finish shell checks",
    "model": "opus",
    "started": "2026-11-24T22:01:37.992Z",
-   "seconds": 734,
+   "seconds": 917,
    "finished": null
   },
   {
@@ -398,20 +398,36 @@
    "task": "[ops] merge watch restart",
    "model": "opus",
    "started": "2026-11-24T22:02:04.950Z",
-   "seconds": 707,
+   "seconds": 890,
    "finished": null
   },
+  {
+   "name": "pernille",
+   "task": "[review] T-5524 re-read after rebase",
+   "model": "opus",
+   "started": "2026-11-24T22:16:12.037Z",
+   "seconds": 43,
+   "finished": null
+  }
+ ],
+ "who": "Idris, Odalys, Pernille",
+ "recent": [
   {
    "name": "idris",
    "task": "[build] settle T-5524 T-5490 rebases",
    "model": "opus",
    "started": "2026-11-24T22:03:06.305Z",
-   "seconds": 646,
-   "finished": null
-  }
- ],
- "who": "Idris x2, Odalys",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-24T22:15:44.731000+00:00"
+  },
+  {
+   "name": "pernille",
+   "task": "[review] T-5825 re-read after fixes",
+   "model": "opus",
+   "started": "2026-11-24T22:14:19.499Z",
+   "seconds": null,
+   "finished": "2026-11-24T22:15:43.798000+00:00"
+  },
   {
    "name": "maren",
    "task": "[review] T-5828 merge.sh trap order",
@@ -427,20 +443,12 @@
    "started": "2026-11-24T22:01:46.136Z",
    "seconds": null,
    "finished": "2026-11-24T22:04:29.683000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[watch] merge watch restart",
-   "model": "opus",
-   "started": "2026-11-24T22:01:55.805Z",
-   "seconds": null,
-   "finished": "2026-11-24T22:01:56.013Z"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 727,
+  "runnable_count": 725,
   "blocked_count": 3
  },
  "meter": {
@@ -489,7 +497,7 @@
   "week_pct": 166.51,
   "usage_pct": 68.4,
   "work_pct": 98.0,
-  "read_at": "2026-11-24T22:13:00+00:00",
+  "read_at": "2026-11-24T22:16:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -502,18 +510,6 @@
     "at": "2026-11-24T17:08:42-05:00",
     "n": "Evan",
     "src": "plan-a"
-   },
-   {
-    "lane": "b",
-    "task": "T-4186",
-    "w": "Idris",
-    "k": "build",
-    "t": "The editor completes code, shows errors and previews",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-24T14:50:46-05:00",
-    "n": "Jeremy",
-    "src": "plan-b"
    }
   ]
  },
@@ -535,7 +531,7 @@
   }
  ],
  "disk": {
-  "free_gb": 40,
+  "free_gb": 41,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -544,14 +540,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-24T17:11:00-05:00",
+   "at": "2026-11-24T17:16:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-24T17:13:00-05:00",
+  "at": "2026-11-24T17:16:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -585,10 +581,10 @@
   },
   {
    "name": "Pernille",
-   "state": "next",
-   "task": "Pernille, P0, Investor an Investor c6965124089 (7:26 PM...",
-   "model": null,
-   "since": null,
+   "state": "running",
+   "task": "[review] T-5524 re-read after rebase",
+   "model": "opus",
+   "since": "2026-11-24T22:16:12.037Z",
    "next": []
   },
   {
@@ -636,11 +632,11 @@
     "o": "c"
    },
    {
-    "w": "Idris",
-    "k": "build",
+    "w": "Pernille",
+    "k": "review",
     "t": "Make the widget's Debug ask record say what it saw",
     "m": "opus",
-    "at": "2026-11-24T22:03:06.305Z",
+    "at": "2026-11-24T22:16:12.037Z",
     "o": "c",
     "task": "T-5524"
    }
@@ -720,30 +716,38 @@
   ],
   "done": [
    {
+    "w": "Pernille",
+    "t": "The test that sends large bodies over https now counts the work the buffer does for each byte...",
+    "at": "2026-11-24T17:16:00-05:00"
+   },
+   {
+    "w": "Odalys",
+    "t": "A merge that ends early (a conflict, a refusal, a wait) no longer prints a false 'command not...",
+    "at": "2026-11-24T17:14:00-05:00"
+   },
+   {
     "w": "Odalys",
     "t": "Home's Completed tasks graph now updates during the day while sessions run, instead of showing...",
-    "at": "2026-11-24T17:07:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "The MacBook test machine now runs two test jobs at a time instead of three, because with three...",
-    "at": "2026-11-24T17:07:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "A message to the company now pauses, stops or resumes it only when the whole message is that one...",
     "at": "2026-11-24T17:07:00-05:00"
    }
   ],
   "count": {
-   "next": 727,
+   "next": 725,
    "wait": 2,
    "blocked": 1,
    "you": 2
   },
   "fin": {
-   "n": 3,
+   "n": 5,
    "rows": [
+    [
+     "T-5490",
+     "Make the https big-body test..."
+    ],
+    [
+     "T-5828",
+     "A merge that ends early says..."
+    ],
     [
      "T-5823",
      "Home's Completed tasks graph..."
@@ -798,17 +802,22 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-24T22:13:52Z",
+  "at": "2026-11-24T22:16:48Z",
   "s": {
    "T-4644": [
     "mergeq",
     "1st to merge",
-    1795556152845
+    1795556148722
+   ],
+   "T-4186": [
+    "mergeq",
+    "2nd to merge",
+    1795558548722
    ],
    "T-4824": [
     "mergeq",
-    "2nd to merge",
-    1795555072845
+    "3rd to merge",
+    1795555068722
    ],
    "T-5308": [
     "mergetest",
@@ -818,38 +827,42 @@
   },
   "nm": {
    "T-4644": "Check the ladder's files in the gate build's own tests",
+   "T-4186": "The editor completes code, shows errors and previews",
    "T-4824": "Add motion and location probes to the measurement export",
    "T-5308": "Tighten the queued pass gate test"
   },
   "wk": {
    "T-4644": "Idris",
+   "T-4186": "Idris",
    "T-4824": "Idris",
    "T-5308": "Idris",
+   "T-5490": "Pernille",
+   "T-5828": "Odalys",
    "T-5823": "Operator",
    "T-5821": "Odalys",
    "T-5824": "Odalys"
   }
  },
  "ln": {
-  "at": "2026-11-24T22:13:52Z",
+  "at": "2026-11-24T22:16:48Z",
   "mq": {
    "n": {
     "checking": 0,
-    "inline": 2,
+    "inline": 3,
     "conflicted": 0,
     "failed": 0,
     "held": 4,
     "retry": 0,
-    "parked": 15
+    "parked": 14
    },
    "m": {
     "checking": null,
-    "inline": 47,
+    "inline": 41,
     "conflicted": null,
     "failed": null,
-    "held": 2205,
+    "held": 2208,
     "retry": null,
-    "parked": 1605
+    "parked": 1474
    },
    "cur": [],
    "ld": [
@@ -859,8 +872,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-24T22:13:05Z",
-    "ld": 2.31,
+    "at": "2026-11-24T22:16:37Z",
+    "ld": 1.61,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -914,11 +927,11 @@
      "open": true
     }
    },
-   "at": "2026-11-24T22:13:52+00:00"
+   "at": "2026-11-24T22:16:55+00:00"
   },
   "bl": {
    "n": 3,
-   "at": "2026-11-24T22:13:40+00:00"
+   "at": "2026-11-24T22:16:55+00:00"
   }
  },
  "operators": [
@@ -939,15 +952,6 @@
    "e": "high",
    "t": "Work session \u2013 1 task",
    "at": "2026-11-24T17:08:42-05:00"
-  },
-  {
-   "w": "Operator",
-   "a": "Jeremy's Account",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session",
-   "at": "2026-11-24T14:50:46-05:00"
   }
  ],
  "reply": {
@@ -958,6 +962,7 @@
  "trimmed": [
   "lane_next",
   "queue_text",
+  "recent",
   "task_done",
   "fin_short",
   "task_title",
@@ -968,12 +973,12 @@
  ],
  "agents_now": {
   "main": 3,
-  "lanes": 2,
-  "total": 5,
-  "at": "5:13 PM",
+  "lanes": 1,
+  "total": 4,
+  "at": "5:16 PM",
   "why": "",
-  "at_iso": "2026-11-24T22:13:00+00:00",
+  "at_iso": "2026-11-24T22:16:00+00:00",
   "started": "4:58 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 3, started 4:58 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 5:13 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 3, started 4:58 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 5:16 PM ET</p></section>"
  }
 }

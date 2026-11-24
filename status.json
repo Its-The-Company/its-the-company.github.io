@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-24T12:23:09.563460+00:00",
+ "at": "2026-11-24T12:26:13.173602+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -375,16 +375,7 @@
    "task": "[review] T-4751",
    "model": "opus",
    "started": "2026-11-24T12:06:24.666Z",
-   "seconds": 1004,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "pernille",
-   "task": "[review] T-5274",
-   "model": "opus",
-   "started": "2026-11-24T12:06:30.524Z",
-   "seconds": 999,
+   "seconds": 1188,
    "finished": null,
    "effort": "high"
   },
@@ -393,13 +384,38 @@
    "task": "[build] T-4239 fix review finding",
    "model": "opus",
    "started": "2026-11-24T12:08:21.801Z",
-   "seconds": 887,
+   "seconds": 1071,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "idris",
+   "task": "[report] morning",
+   "model": "opus",
+   "started": "2026-11-24T12:24:46.274Z",
+   "seconds": 86,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Pernille x2, Idris",
+ "who": "Pernille, Idris x2",
  "recent": [
+  {
+   "name": "pernille",
+   "task": "[review] T-4182",
+   "model": "opus",
+   "started": "2026-11-24T12:23:36.663Z",
+   "seconds": null,
+   "finished": "2026-11-24T12:24:15.977000+00:00"
+  },
+  {
+   "name": "pernille",
+   "task": "[review] T-5274",
+   "model": "opus",
+   "started": "2026-11-24T12:06:30.524Z",
+   "seconds": null,
+   "finished": "2026-11-24T12:24:02.332000+00:00"
+  },
   {
    "name": "pernille",
    "task": "[review] T-5524",
@@ -415,22 +431,6 @@
    "started": "2026-11-24T12:06:02.002Z",
    "seconds": null,
    "finished": "2026-11-24T12:07:59.897000+00:00"
-  },
-  {
-   "name": "pernille",
-   "task": "[review] T-4681",
-   "model": "opus",
-   "started": "2026-11-24T12:06:07.662Z",
-   "seconds": null,
-   "finished": "2026-11-24T12:07:54.115000+00:00"
-  },
-  {
-   "name": "pernille",
-   "task": "[review] T-5479",
-   "model": "opus",
-   "started": "2026-11-24T12:06:13.363Z",
-   "seconds": null,
-   "finished": "2026-11-24T12:06:49.015000+00:00"
   }
  ],
  "queue": {
@@ -441,19 +441,19 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 6.0,
+   "pct": 7.0,
    "resets_at": "2026-11-24T12:00:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-24T07:15:53.190386-05:00",
+   "read_at": "2026-11-24T07:24:18.174551-05:00",
    "source": "live",
-   "left": 94.0,
+   "left": 93.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 25.0,
    "resets_at": "2026-11-29T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-24T07:15:53.190386-05:00",
+   "read_at": "2026-11-24T07:24:18.174551-05:00",
    "source": "live",
    "left": 75.0,
    "left_words": "of your weekly allowance left"
@@ -465,7 +465,7 @@
    "read_at": "2026-11-24T07:02:49.035243-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-24T07:15:53.190386-05:00"
+  "read_at": "2026-11-24T07:24:18.174551-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -485,7 +485,7 @@
   "week_pct": 86.23,
   "usage_pct": 77.5,
   "work_pct": 97.8,
-  "read_at": "2026-11-24T12:23:00+00:00",
+  "read_at": "2026-11-24T12:26:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -547,7 +547,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-24T07:23:00-05:00",
+  "at": "2026-11-24T07:26:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -627,16 +627,6 @@
     "task": "T-4751"
    },
    {
-    "w": "Pernille",
-    "k": "review",
-    "t": "Test that a send never freezes the editor",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-24T12:06:30.524Z",
-    "o": "c",
-    "task": "T-5274"
-   },
-   {
     "w": "Idris",
     "k": "build",
     "t": "Tidy the five small points from the refresh review",
@@ -645,6 +635,15 @@
     "at": "2026-11-24T12:08:21.801Z",
     "o": "c",
     "task": "T-4239"
+   },
+   {
+    "w": "Idris",
+    "k": "report",
+    "t": "Morning",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-24T12:24:46.274Z",
+    "o": "c"
    }
   ],
   "src": "plan",
@@ -787,7 +786,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-24T12:23:02Z",
+  "at": "2026-11-24T12:25:52Z",
   "s": {
    "T-4186": [
     "mergetest",
@@ -797,7 +796,7 @@
    "T-4239": [
     "testq",
     "1st for a Simulator",
-    1795522982102
+    1795523032864
    ]
   },
   "nm": {
@@ -810,7 +809,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-24T12:23:02Z",
+  "at": "2026-11-24T12:25:52Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -826,9 +825,9 @@
     "inline": null,
     "conflicted": null,
     "failed": null,
-    "held": 1614,
+    "held": 1617,
     "retry": null,
-    "parked": 613
+    "parked": 616
    },
    "cur": [],
    "ld": [
@@ -838,12 +837,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-24T12:22:40Z",
-    "ld": 24.68,
+    "at": "2026-11-24T12:25:04Z",
+    "ld": 19.97,
     "c": 8,
     "sb": 1,
     "dk": [
-     31.3,
+     32.1,
      228.3
     ],
     "ss": [
@@ -869,13 +868,13 @@
  },
  "hc": {
   "wait": {
-   "n": 23,
+   "n": 22,
    "limit": 20,
-   "in_line": 2,
-   "parked": 21,
+   "in_line": 0,
+   "parked": 22,
    "open": true,
    "mq": false,
-   "counted": "2026-11-24T12:12:58+00:00",
+   "counted": "2026-11-24T12:22:58+00:00",
    "by": {
     "app": {
      "n": 15,
@@ -883,7 +882,7 @@
      "open": true
     },
     "other": {
-     "n": 13,
+     "n": 12,
      "limit": 20,
      "open": true
     },
@@ -893,11 +892,11 @@
      "open": true
     }
    },
-   "at": "2026-11-24T12:23:09+00:00"
+   "at": "2026-11-24T12:26:13+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-24T12:23:02+00:00"
+   "at": "2026-11-24T12:26:01+00:00"
   }
  },
  "operators": [
@@ -937,6 +936,7 @@
  "trimmed": [
   "lane_next",
   "queue_text",
+  "recent",
   "task_done",
   "task_title",
   "done_text",
@@ -948,10 +948,10 @@
   "main": 3,
   "lanes": 2,
   "total": 5,
-  "at": "7:23 AM",
+  "at": "7:26 AM",
   "why": "",
-  "at_iso": "2026-11-24T12:23:00+00:00",
+  "at_iso": "2026-11-24T12:26:00+00:00",
   "started": "7:03 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 3, started 7:03 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 7:23 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 3, started 7:03 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 7:26 AM ET</p></section>"
  }
 }

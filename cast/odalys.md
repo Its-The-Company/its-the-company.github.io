@@ -50,6 +50,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-5622/T-5624 11-22 2f370af682: 'no app line' at the comparison start was T-5530's exclusive allow-list hold (any open allow ID, e.g. the coordinator's own unblock fix, stops all app work; lane_take too), not the steps map; order --json now names it 'freeze'. Simulate with a patched read_json, main's merge count and a /tmp copy of .done_seen.json.
 - T-5620 11-22: personal_land.sh in a session runs road-check alone (<span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">ruling</span> c7088040339); land job replays after-sync each pass. Suites need T: run via tests/run.sh <suite>. board_tick Evidence: one path, rest in Detail:.
 - T-5722 11-23 2895cbadcc: reviewing a wall-clock -> count/ratio swap, put back the faults the OLD limit caught (pre-fix suite from git show c^:path) too: a probe with note=False passed the new note-count check, failed the old 1.5 s. Shared mini already at load 100-280: measure, don't add yes load. A queued tick with a wrong note: rm the untracked outbox file, tick again.
+- T-5755 11-23: background runs die at 10 min unless given a timeout (land_xc_test under load). Old-vs-new proof: short copy (setup+section) in two git-archive dirs, ~2 min; rm -rf "$VAR" is refused, mkdir fresh.
 {% endraw %}
 
 

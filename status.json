@@ -1,10 +1,10 @@
 {
  "schema": 1,
- "at": "2026-11-24T04:17:19.953050+00:00",
+ "at": "2026-11-24T12:03:17.564851+00:00",
  "session": {
-  "active": true,
-  "kind": "coord",
-  "started": "2026-11-23T19:06:43-05:00",
+  "active": false,
+  "kind": "",
+  "started": null,
   "coord": {
    "active": true,
    "started": 1795341309,
@@ -347,26 +347,25 @@
       "at": 1795437990
      }
     ]
-   },
-   {
-    "t": "T-0657",
-    "name": "Build the Settings screen",
-    "w": "Idris",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "claimed",
-      "at": 1795429472
-     },
-     {
-      "s": "worker",
-      "at": 1795429472
-     }
-    ]
    }
   ],
-  "flow_n": 30,
-  "done": [],
+  "done": [
+   {
+    "t": "T-5607",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1795386667
+   },
+   {
+    "t": "T-5399",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "failed",
+    "end_at": 1795380074,
+    "why": "tests failed"
+   }
+  ],
   "landed": 1,
   "failed": 4
  },
@@ -381,31 +380,31 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 4.0,
-   "resets_at": "2026-11-24T03:10:00-05:00",
+   "pct": 3.0,
+   "resets_at": "2026-11-24T16:59:59.897797+00:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-23T23:10:08.731372-05:00",
-   "source": "live",
-   "left": 96.0,
+   "read_at": "2026-11-24T07:02:49.035243-05:00",
+   "source": "usage",
+   "left": 97.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 18.0,
-   "resets_at": "2026-11-29T02:00:00-05:00",
+   "pct": 25.0,
+   "resets_at": "2026-11-29T06:59:59.897821+00:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-23T23:10:08.731372-05:00",
-   "source": "live",
-   "left": 82.0,
+   "read_at": "2026-11-24T07:02:49.035243-05:00",
+   "source": "usage",
+   "left": 75.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
-   "pct": 4.0,
-   "resets_at": "2026-11-29T07:00:00.214022+00:00",
+   "pct": 13.0,
+   "resets_at": "2026-11-29T06:59:59.898025+00:00",
    "used_words": "of the Fable weekly allowance used",
-   "read_at": "2026-11-23T22:55:22.893119-05:00",
+   "read_at": "2026-11-24T07:02:49.035243-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-23T23:10:08.731372-05:00"
+  "read_at": "2026-11-24T07:02:49.035243-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -420,50 +419,13 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": null,
+ "next_tick": "2026-11-24T07:17:49-05:00",
  "personal": {
-  "week_pct": 71.11,
-  "usage_pct": 79.8,
-  "work_pct": 97.6,
-  "read_at": "2026-11-24T04:17:00+00:00",
-  "running": [
-   {
-    "lane": "a",
-    "task": "T-4182",
-    "w": "Idris",
-    "k": "build",
-    "t": "A failing widget says so and can recover",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-23T19:45:25-05:00",
-    "n": "Evan",
-    "src": "plan-a"
-   },
-   {
-    "lane": "a2",
-    "task": "T-4190",
-    "w": "Idris",
-    "k": "build",
-    "t": "Settings and Pro: buy, restore, themes",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-23T19:45:27-05:00",
-    "n": "Evan",
-    "src": "plan-a"
-   },
-   {
-    "lane": "b",
-    "task": "T-5767",
-    "w": "Idris",
-    "k": "review",
-    "t": "Review the time limit on a merge turn",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-23T22:44:38-05:00",
-    "n": "Jeremy",
-    "src": "plan-b"
-   }
-  ]
+  "week_pct": 86.23,
+  "usage_pct": 77.5,
+  "work_pct": 97.8,
+  "read_at": "2026-11-24T12:03:00+00:00",
+  "running": []
  },
  "api_credits": [
   {
@@ -483,7 +445,7 @@
   }
  ],
  "disk": {
-  "free_gb": 23,
+  "free_gb": 33,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -492,14 +454,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-23T23:17:00-05:00",
+   "at": "2026-11-24T07:02:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-23T23:17:00-05:00",
+  "at": "2026-11-24T07:03:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -507,13 +469,14 @@
    "b": "midnight"
   }
  },
- "next_tick_why": "session",
- "idle": null,
- "pool": {
-  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 8 (held: too few lands in 3 hours to judge a raise)",
-  "n": 8,
-  "at": "2026-11-23T19:06:23.900656-05:00"
+ "next_tick_why": "last_tick",
+ "idle": {
+  "since": "2026-11-23T23:17:18-05:00",
+  "minutes": 465,
+  "why": "the last tick ended without starting a session",
+  "healed": []
  },
+ "pool": null,
  "lanes": [
   {
    "name": "Odalys",
@@ -565,72 +528,7 @@
   }
  ],
  "tasks": {
-  "run": [
-   {
-    "w": "Idris",
-    "t": "Make the Mac network stand-in refuse what phones refuse",
-    "m": "sonnet",
-    "e": "high",
-    "at": "2026-11-23T21:26:32-05:00",
-    "o": "c",
-    "task": "T-4751"
-   },
-   {
-    "w": "Idris",
-    "t": "Test that a send never freezes the editor",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-23T22:25:48-05:00",
-    "o": "c",
-    "task": "T-5274"
-   },
-   {
-    "w": "Odalys",
-    "t": "Main workers' app lands use the MacBook too",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-23T22:26:29-05:00",
-    "o": "c",
-    "task": "T-5771"
-   },
-   {
-    "w": "Idris",
-    "t": "Test that suggestions are asked after the first letter",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-23T22:32:11-05:00",
-    "o": "c",
-    "task": "T-4875"
-   },
-   {
-    "w": "Odalys",
-    "t": "Landed checks every copy of the task, on every disk",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-23T22:33:38-05:00",
-    "o": "c",
-    "task": "T-5750"
-   },
-   {
-    "w": "Pernille",
-    "t": "Retry a refused widget send at the project boundary",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-23T22:34:40-05:00",
-    "o": "c",
-    "task": "T-5634"
-   },
-   {
-    "w": "Pernille",
-    "t": "Stop the Sun premade counting up after sunset",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-23T23:09:56-05:00",
-    "o": "c",
-    "task": "T-5289"
-   }
-  ],
-  "src": "plan",
+  "run": [],
   "open": [
    {
     "w": "Odalys",
@@ -705,19 +603,19 @@
   ],
   "done": [
    {
-    "w": "Odalys",
-    "t": "The alarm that says an account is stuck now counts an account as busy while it lands or holds...",
-    "at": "2026-11-23T22:33:00-05:00"
+    "w": "Operator",
+    "t": "The hand-out can now run one session for each account, each on its own part of the app, with no...",
+    "at": "2026-11-24T02:15:00-05:00"
    },
    {
     "w": "Operator",
-    "t": "The main account may now run 8 workers at once instead of 6, so the speed-up fixes get slots...",
-    "at": "2026-11-23T22:23:00-05:00"
+    "t": "A feature's session now takes three steps before it merges instead of one, and 117 app lines...",
+    "at": "2026-11-24T02:15:00-05:00"
    },
    {
-    "w": "Odalys",
-    "t": "When finished work lands, every record taken out of the worker's copy is now named on its line...",
-    "at": "2026-11-23T22:03:00-05:00"
+    "w": "Operator",
+    "t": "A merge check that already passed is no longer run again while the files it reads are unchanged,...",
+    "at": "2026-11-24T02:14:00-05:00"
    }
   ],
   "count": {
@@ -725,35 +623,6 @@
    "wait": 2,
    "blocked": 0,
    "you": 2
-  },
-  "fin": {
-   "n": 7,
-   "rows": [
-    [
-     "T-5676",
-     "Stuck-account alarm skips..."
-    ],
-    [
-     "T-5774",
-     "Raise the main account's..."
-    ],
-    [
-     "T-5703",
-     "Name every record a land..."
-    ],
-    [
-     "T-5755",
-     "A merge turn ends at its..."
-    ],
-    [
-     "T-5691",
-     "Land committed work after a..."
-    ],
-    [
-     "T-5758",
-     "Review the order for work..."
-    ]
-   ]
   }
  },
  "qr": [
@@ -795,160 +664,48 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-24T04:17:12Z",
+  "at": "2026-11-24T12:03:17Z",
   "s": {
    "T-5777": [
     "mergeq",
     "1st to merge",
-    1795493292081
+    1795493297564
    ],
    "T-5773": [
     "mergeq",
     "2nd to merge",
-    1795493772081
-   ],
-   "T-5657": [
-    "mergeq",
-    "3rd to merge",
-    1795491852081
-   ],
-   "T-0337": [
-    "mergeq",
-    "3rd to merge",
-    1795491852081
-   ],
-   "T-2097": [
-    "mergeq",
-    "3rd to merge",
-    1795491852081
-   ],
-   "T-4010": [
-    "mergeq",
-    "3rd to merge",
-    1795491852081
-   ],
-   "T-4477": [
-    "mergeq",
-    "3rd to merge",
-    1795491852081
-   ],
-   "T-4286": [
-    "mergeq",
-    "3rd to merge",
-    1795491852081
-   ],
-   "T-4435": [
-    "mergeq",
-    "3rd to merge",
-    1795491852081
-   ],
-   "T-5634": [
-    "testing",
-    "Mac Mini \u00b7 test",
-    null
-   ],
-   "T-1119": [
-    "testq",
-    "1st for a Simulator",
-    1795493172081
-   ],
-   "T-2296": [
-    "testq",
-    "1st for a Simulator",
-    1795493172081
-   ],
-   "T-4190": [
-    "testq",
-    "1st for a Simulator",
-    1795493172081
-   ],
-   "T-4681": [
-    "testq",
-    "1st for a Simulator",
-    1795493172081
-   ],
-   "T-4715": [
-    "testq",
-    "1st for a Simulator",
-    1795493172081
-   ],
-   "T-5602": [
-    "testq",
-    "1st for a Simulator",
-    1795493172081
-   ],
-   "T-5274": [
-    "testq",
-    "2nd for a Simulator",
-    1795493292081
+    1795493777564
    ]
   },
   "nm": {
    "T-5777": "Review the stuck-account alarm fix",
-   "T-5773": "Review naming the records a land takes out",
-   "T-5657": "Ship test widgets in internal TestFlight builds only",
-   "T-0337": "Confirm the revenue memo's facts from Apple pages",
-   "T-2097": "Read free memory in the widget extension on a device",
-   "T-4010": "Rebuild This Session as a full flowchart",
-   "T-4477": "People build a widget from blocks without code",
-   "T-4286": "Check an imported font draws in a widget",
-   "T-4435": "Draw the wrapped refresh glyph on both runtimes",
-   "T-5634": "Retry a refused widget send at the project boundary",
-   "T-1119": "Investors answer two App Store Connect questions",
-   "T-2296": "Finish the gallery pager, iPad layout and detail foot",
-   "T-4190": "Settings and Pro: buy, restore, themes",
-   "T-4681": "Premades default to Paper in light and Studio in dark",
-   "T-4715": "Put the new Pro screen words into the app",
-   "T-5602": "Brief for a new look for the app",
-   "T-5274": "Test that a send never freezes the editor"
+   "T-5773": "Review naming the records a land takes out"
   },
   "wk": {
    "T-5777": "Idris",
-   "T-5773": "Idris",
-   "T-5657": "Idris",
-   "T-0337": "Wrenna",
-   "T-2097": "Idris",
-   "T-4010": "Odalys",
-   "T-4477": "Idris",
-   "T-4286": "Idris",
-   "T-4435": "Idris",
-   "T-5634": "Idris",
-   "T-1119": "Ines",
-   "T-2296": "Idris",
-   "T-4190": "Idris",
-   "T-4681": "Idris",
-   "T-4715": "Maren",
-   "T-5602": "Maren",
-   "T-5274": "Idris",
-   "T-5676": "Odalys",
-   "T-5774": "Operator",
-   "T-5703": "Odalys",
-   "T-5755": "Odalys",
-   "T-5691": "Odalys",
-   "T-5758": "Idris",
-   "T-5743": "Idris"
+   "T-5773": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-24T04:17:12Z",
+  "at": "2026-11-24T12:03:17Z",
   "mq": {
    "n": {
     "checking": 0,
-    "inline": 9,
+    "inline": 2,
     "conflicted": 0,
     "failed": 0,
-    "held": 0,
+    "held": 4,
     "retry": 0,
-    "parked": 13
+    "parked": 17
    },
    "m": {
     "checking": null,
-    "inline": 33,
+    "inline": 471,
     "conflicted": null,
     "failed": null,
-    "held": null,
+    "held": 1595,
     "retry": null,
-    "parked": 1129
+    "parked": 726
    },
    "cur": [],
    "ld": [
@@ -958,29 +715,27 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-24T04:16:24Z",
-    "ld": 5.84,
+    "at": "2026-11-24T12:02:37Z",
+    "ld": 0.53,
     "c": 8,
-    "sb": 1,
+    "sb": 0,
     "dk": [
-     23.1,
+     32.6,
      228.3
     ],
     "ss": [
      168.5,
      953.7
     ],
-    "sn": [
-     "iPhone 17e"
-    ]
+    "sn": []
    },
    "macbook": {
-    "at": "2026-11-24T03:54:13Z",
-    "ld": 1.01,
+    "at": "2026-11-24T11:50:00Z",
+    "ld": 0.14,
     "c": 12,
     "sb": 0,
     "dk": [
-     346.7,
+     347.1,
      926.4
     ],
     "sn": []
@@ -989,21 +744,21 @@
  },
  "hc": {
   "wait": {
-   "n": 21,
+   "n": 23,
    "limit": 20,
-   "in_line": 8,
-   "parked": 13,
+   "in_line": 2,
+   "parked": 21,
    "open": true,
    "mq": false,
-   "counted": "2026-11-24T04:07:50+00:00",
+   "counted": "2026-11-24T07:02:49-05:00",
    "by": {
     "app": {
-     "n": 16,
+     "n": 15,
      "limit": 20,
      "open": true
     },
     "other": {
-     "n": 11,
+     "n": 13,
      "limit": 20,
      "open": true
     },
@@ -1013,76 +768,50 @@
      "open": true
     }
    },
-   "at": "2026-11-24T04:17:19+00:00"
+   "at": "2026-11-24T12:03:17+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-24T04:17:19+00:00"
+   "at": "2026-11-24T12:03:17+00:00"
   }
  },
- "operators": [
-  {
-   "w": "Operator",
-   "a": "Main plan",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session",
-   "at": "2026-11-23T23:11:00-05:00"
-  },
-  {
-   "w": "Operator",
-   "a": "Evan's Account",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session",
-   "at": "2026-11-23T19:45:25-05:00"
-  },
-  {
-   "w": "Operator",
-   "a": "Evan's Account",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session \u2013 13 tasks",
-   "at": "2026-11-23T19:45:27-05:00"
-  },
-  {
-   "w": "Operator",
-   "a": "Jeremy's Account",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session \u2013 1 task",
-   "at": "2026-11-23T22:44:38-05:00"
-  }
- ],
+ "operators": [],
  "reply": {
   "sent": "2026-11-24T04:09:10Z",
   "seconds": 108.0
  },
- "inbox": [],
+ "inbox": [
+  {
+   "id": "c7130872629",
+   "state": "received",
+   "position": 1,
+   "eta": "2026-11-24T07:17:49-05:00",
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "Are there any open process..."
+  }
+ ],
  "trimmed": [
   "lane_next",
   "queue_text",
   "task_done",
-  "fin_short",
+  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
-  "fin_six",
   "lane_task",
   "task_next"
  ],
  "agents_now": {
   "main": 0,
-  "lanes": 3,
-  "total": 3,
-  "at": "11:17 PM",
-  "why": "",
-  "at_iso": "2026-11-24T04:17:00+00:00",
+  "lanes": 0,
+  "total": 0,
+  "at": "7:03 AM",
+  "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
+  "at_iso": "2026-11-24T12:03:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 11:17 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 7:03 AM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
  }
 }

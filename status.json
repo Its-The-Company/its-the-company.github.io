@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-24T03:41:58.748043+00:00",
+ "at": "2026-11-24T03:44:58.435306+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -381,19 +381,19 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 2.0,
+   "pct": 3.0,
    "resets_at": "2026-11-24T03:10:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-23T22:28:47.989607-05:00",
+   "read_at": "2026-11-23T22:43:55.152349-05:00",
    "source": "live",
-   "left": 98.0,
+   "left": 97.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 17.0,
    "resets_at": "2026-11-29T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-23T22:28:47.989607-05:00",
+   "read_at": "2026-11-23T22:43:55.152349-05:00",
    "source": "live",
    "left": 83.0,
    "left_words": "of your weekly allowance left"
@@ -405,7 +405,7 @@
    "read_at": "2026-11-23T22:18:36.403368-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-23T22:28:47.989607-05:00"
+  "read_at": "2026-11-23T22:43:55.152349-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -425,7 +425,7 @@
   "week_pct": 67.16,
   "usage_pct": 79.8,
   "work_pct": 97.6,
-  "read_at": "2026-11-24T03:42:00+00:00",
+  "read_at": "2026-11-24T03:45:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -450,6 +450,42 @@
     "at": "2026-11-23T19:45:27-05:00",
     "n": "Evan",
     "src": "plan-a"
+   },
+   {
+    "lane": "b",
+    "task": "T-5767",
+    "w": "Idris",
+    "k": "review",
+    "t": "Review the time limit on a merge turn",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-23T22:44:38-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
+   },
+   {
+    "lane": "b2",
+    "task": "T-5773",
+    "w": "Idris",
+    "k": "review",
+    "t": "Review naming the records a land takes out",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-23T22:44:40-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
+   },
+   {
+    "lane": "b3",
+    "task": "T-5777",
+    "w": "Idris",
+    "k": "review",
+    "t": "Review the stuck-account alarm fix",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-23T22:44:38-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
    }
   ]
  },
@@ -487,7 +523,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-23T22:42:00-05:00",
+  "at": "2026-11-23T22:45:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -792,42 +828,42 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-24T03:41:39Z",
+  "at": "2026-11-24T03:44:58Z",
   "s": {
    "T-5657": [
-    "mergeq",
-    "1st to merge",
-    1795490019748
+    "mergetest",
+    "Xcode checks on the MacBook, 1st to merge",
+    1795491838435
    ],
    "T-0337": [
-    "mergeq",
-    "1st to merge",
-    1795490019748
+    "mergetest",
+    "Xcode checks on the MacBook, 1st to merge",
+    1795491838435
    ],
    "T-2097": [
-    "mergeq",
-    "1st to merge",
-    1795490019748
+    "mergetest",
+    "Xcode checks on the MacBook, 1st to merge",
+    1795491838435
    ],
    "T-4010": [
-    "mergeq",
-    "1st to merge",
-    1795490019748
+    "mergetest",
+    "Xcode checks on the MacBook, 1st to merge",
+    1795491838435
    ],
    "T-4477": [
-    "mergeq",
-    "1st to merge",
-    1795490019748
+    "mergetest",
+    "Xcode checks on the MacBook, 1st to merge",
+    1795491838435
    ],
    "T-4286": [
-    "mergeq",
-    "1st to merge",
-    1795490019748
+    "mergetest",
+    "Xcode checks on the MacBook, 1st to merge",
+    1795491838435
    ],
    "T-4435": [
-    "mergeq",
-    "1st to merge",
-    1795490019748
+    "mergetest",
+    "Xcode checks on the MacBook, 1st to merge",
+    1795491838435
    ],
    "T-5274": [
     "testing",
@@ -837,32 +873,32 @@
    "T-1119": [
     "testq",
     "1st for a Simulator",
-    1795491579748
+    1795491538435
    ],
    "T-2296": [
     "testq",
     "1st for a Simulator",
-    1795491579748
+    1795491538435
    ],
    "T-4190": [
     "testq",
     "1st for a Simulator",
-    1795491579748
+    1795491538435
    ],
    "T-4681": [
     "testq",
     "1st for a Simulator",
-    1795491579748
+    1795491538435
    ],
    "T-4715": [
     "testq",
     "1st for a Simulator",
-    1795491579748
+    1795491538435
    ],
    "T-5602": [
     "testq",
     "1st for a Simulator",
-    1795491579748
+    1795491538435
    ]
   },
   "nm": {
@@ -906,11 +942,11 @@
   }
  },
  "ln": {
-  "at": "2026-11-24T03:41:39Z",
+  "at": "2026-11-24T03:44:58Z",
   "mq": {
    "n": {
-    "checking": 0,
-    "inline": 7,
+    "checking": 7,
+    "inline": 0,
     "conflicted": 0,
     "failed": 0,
     "held": 0,
@@ -918,15 +954,48 @@
     "parked": 13
    },
    "m": {
-    "checking": null,
-    "inline": 28,
+    "checking": 1,
+    "inline": null,
     "conflicted": null,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1093
+    "parked": 1096
    },
-   "cur": [],
+   "cur": [
+    [
+     [
+      "T-5657"
+     ],
+     "iPhone app tests",
+     "MacBook",
+     1
+    ],
+    [
+     [
+      "T-0337"
+     ],
+     "iPhone app tests",
+     "MacBook",
+     1
+    ],
+    [
+     [
+      "T-2097"
+     ],
+     "iPhone app tests",
+     "MacBook",
+     1
+    ],
+    [
+     [
+      "T-4010"
+     ],
+     "iPhone app tests",
+     "MacBook",
+     1
+    ]
+   ],
    "ld": [
     0,
     null
@@ -934,12 +1003,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-24T03:40:53Z",
-    "ld": 8.0,
+    "at": "2026-11-24T03:45:02Z",
+    "ld": 6.7,
     "c": 8,
     "sb": 1,
     "dk": [
-     30.9,
+     30.4,
      228.3
     ],
     "ss": [
@@ -951,12 +1020,12 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-24T03:33:17Z",
-    "ld": 1.94,
+    "at": "2026-11-24T03:43:30Z",
+    "ld": 0.46,
     "c": 12,
     "sb": 0,
     "dk": [
-     346.8,
+     347.5,
      926.4
     ],
     "sn": []
@@ -971,7 +1040,7 @@
    "parked": 13,
    "open": true,
    "mq": false,
-   "counted": "2026-11-24T03:26:23+00:00",
+   "counted": "2026-11-24T03:42:52+00:00",
    "by": {
     "app": {
      "n": 16,
@@ -989,11 +1058,11 @@
      "open": true
     }
    },
-   "at": "2026-11-24T03:41:58+00:00"
+   "at": "2026-11-24T03:44:58+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-24T03:41:58+00:00"
+   "at": "2026-11-24T03:44:50+00:00"
   }
  },
  "operators": [
@@ -1004,7 +1073,7 @@
    "m": "opus",
    "e": "high",
    "t": "Work session",
-   "at": "2026-11-23T22:32:35-05:00"
+   "at": "2026-11-23T22:44:36-05:00"
   },
   {
    "w": "Operator",
@@ -1023,11 +1092,38 @@
    "e": "high",
    "t": "Work session \u2013 13 tasks",
    "at": "2026-11-23T19:45:27-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Jeremy's Account",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session \u2013 1 task",
+   "at": "2026-11-23T22:44:38-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Jeremy's Account",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session \u2013 1 task",
+   "at": "2026-11-23T22:44:40-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Jeremy's Account",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session \u2013 1 task",
+   "at": "2026-11-23T22:44:38-05:00"
   }
  ],
  "reply": {
-  "sent": "2026-11-24T03:30:30Z",
-  "seconds": 122.0
+  "sent": "2026-11-24T03:41:49Z",
+  "seconds": 167.0
  },
  "inbox": [],
  "trimmed": [
@@ -1044,12 +1140,12 @@
  ],
  "agents_now": {
   "main": 0,
-  "lanes": 2,
-  "total": 2,
-  "at": "10:42 PM",
+  "lanes": 5,
+  "total": 5,
+  "at": "10:45 PM",
   "why": "",
-  "at_iso": "2026-11-24T03:42:00+00:00",
+  "at_iso": "2026-11-24T03:45:00+00:00",
   "started": "7:06 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0, started 7:06 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 10:42 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 0, started 7:06 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 10:45 PM ET</p></section>"
  }
 }

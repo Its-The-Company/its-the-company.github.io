@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-24T17:41:14.241037+00:00",
+ "at": "2026-11-24T17:44:19.011317+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -253,22 +253,6 @@
     ]
    },
    {
-    "t": "T-5602",
-    "name": "Brief for a new look for the app",
-    "w": "Maren",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "claimed",
-      "at": 1795535032
-     },
-     {
-      "s": "worker",
-      "at": 1795535032
-     }
-    ]
-   },
-   {
     "t": "T-4681",
     "name": "Premades default to Paper in light and Studio in dark",
     "w": "Idris",
@@ -281,22 +265,6 @@
      {
       "s": "worker",
       "at": 1795534828
-     }
-    ]
-   },
-   {
-    "t": "T-1119",
-    "name": "Investors answer two App Store Connect questions",
-    "w": "Ines",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "claimed",
-      "at": 1795533542
-     },
-     {
-      "s": "worker",
-      "at": 1795533542
      }
     ]
    },
@@ -363,9 +331,41 @@
       "at": 1795533318
      }
     ]
+   },
+   {
+    "t": "T-4662",
+    "name": "Place the cursor easily on a long line",
+    "w": "Idris",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "claimed",
+      "at": 1795533238
+     },
+     {
+      "s": "worker",
+      "at": 1795533238
+     }
+    ]
+   },
+   {
+    "t": "T-3765",
+    "name": "Check a real widget tap on the TestFlight build",
+    "w": "Idris",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "claimed",
+      "at": 1795533135
+     },
+     {
+      "s": "worker",
+      "at": 1795533135
+     }
+    ]
    }
   ],
-  "flow_n": 33,
+  "flow_n": 31,
   "done": [],
   "landed": 1,
   "failed": 4
@@ -376,7 +376,7 @@
    "task": "[build] T-4183 review fixes",
    "model": "",
    "started": "2026-11-24T16:38:54.576Z",
-   "seconds": 3739,
+   "seconds": 3924,
    "finished": null
   }
  ],
@@ -410,7 +410,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 729,
+  "runnable_count": 727,
   "blocked_count": 2
  },
  "meter": {
@@ -459,7 +459,7 @@
   "week_pct": 117.81,
   "usage_pct": 74.2,
   "work_pct": 97.8,
-  "read_at": "2026-11-24T17:41:00+00:00",
+  "read_at": "2026-11-24T17:44:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -503,14 +503,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-24T12:39:00-05:00",
+   "at": "2026-11-24T12:43:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-24T12:41:00-05:00",
+  "at": "2026-11-24T12:44:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -661,30 +661,38 @@
   ],
   "done": [
    {
+    "w": "Ines",
+    "t": "both App Store Connect answers from the Investors are recorded with their sources: web access...",
+    "at": "2026-11-24T12:44:00-05:00"
+   },
+   {
+    "w": "Maren",
+    "t": "The Investors now have one page asking for their direction on a new look for the app, listing...",
+    "at": "2026-11-24T12:44:00-05:00"
+   },
+   {
     "w": "Pernille",
     "t": "A Python test that sometimes failed on a busy machine now checks what it means to check, so it...",
     "at": "2026-11-24T12:31:00-05:00"
-   },
-   {
-    "w": "Operator",
-    "t": "App changes that are ready to merge now take their turn in the order they arrived, so the one...",
-    "at": "2026-11-24T12:23:00-05:00"
-   },
-   {
-    "w": "Idris",
-    "t": "The editor's code suggestions and error marks were already built; on 11-24 their on-screen test...",
-    "at": "2026-11-24T12:19:00-05:00"
    }
   ],
   "count": {
-   "next": 729,
+   "next": 727,
    "wait": 2,
    "blocked": 0,
    "you": 2
   },
   "fin": {
-   "n": 20,
+   "n": 22,
    "rows": [
+    [
+     "T-1119",
+     "Investors answer two App..."
+    ],
+    [
+     "T-5602",
+     "Brief for a new look for the app"
+    ],
     [
      "T-5491",
      "Drop the swallow test's..."
@@ -700,14 +708,6 @@
     [
      "T-2261",
      "Build and test the editor..."
-    ],
-    [
-     "T-2512",
-     "Editor checks never wait..."
-    ],
-    [
-     "T-2513",
-     "Completion sees the same..."
     ]
    ]
   }
@@ -751,130 +751,10 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-24T17:41:14Z",
-  "s": {
-   "T-5047": [
-    "mergeq",
-    "1st to merge",
-    1795539974241
-   ],
-   "T-0337": [
-    "mergeq",
-    "1st to merge",
-    1795539974241
-   ],
-   "T-2097": [
-    "mergeq",
-    "1st to merge",
-    1795539974241
-   ],
-   "T-4010": [
-    "mergeq",
-    "1st to merge",
-    1795539974241
-   ],
-   "T-4477": [
-    "mergeq",
-    "1st to merge",
-    1795539974241
-   ],
-   "T-4286": [
-    "mergeq",
-    "1st to merge",
-    1795539974241
-   ],
-   "T-4435": [
-    "mergeq",
-    "1st to merge",
-    1795539974241
-   ],
-   "T-0678": [
-    "mergeq",
-    "1st to merge",
-    1795539974241
-   ],
-   "T-3765": [
-    "mergeq",
-    "1st to merge",
-    1795539974241
-   ],
-   "T-4662": [
-    "mergeq",
-    "1st to merge",
-    1795539974241
-   ],
-   "T-4781": [
-    "mergeq",
-    "1st to merge",
-    1795539974241
-   ],
-   "T-4635": [
-    "mergeq",
-    "1st to merge",
-    1795539974241
-   ],
-   "T-4182": [
-    "mergeq",
-    "1st to merge",
-    1795539974241
-   ],
-   "T-5620": [
-    "mergeq",
-    "1st to merge",
-    1795539974241
-   ],
-   "T-1119": [
-    "mergeq",
-    "1st to merge",
-    1795539974241
-   ],
-   "T-4681": [
-    "mergeq",
-    "1st to merge",
-    1795539974241
-   ],
-   "T-5602": [
-    "mergeq",
-    "1st to merge",
-    1795539974241
-   ]
-  },
-  "nm": {
-   "T-5047": "Fix the token test's No view for this size card",
-   "T-0337": "Confirm the revenue memo's facts from Apple pages",
-   "T-2097": "Read free memory in the widget extension on a device",
-   "T-4010": "Rebuild This Session as a full flowchart",
-   "T-4477": "People build a widget from blocks without code",
-   "T-4286": "Check an imported font draws in a widget",
-   "T-4435": "Draw the wrapped refresh glyph on both runtimes",
-   "T-0678": "Run the refresh button inside the widget extension",
-   "T-3765": "Check a real widget tap on the TestFlight build",
-   "T-4662": "Place the cursor easily on a long line",
-   "T-4781": "Retest a fixed red on what failed, not every test",
-   "T-4635": "Clear the Settings restore line once Pro is bought",
-   "T-4182": "A failing widget says so and can recover",
-   "T-5620": "Queued test requests replay while the coordinator runs",
-   "T-1119": "Investors answer two App Store Connect questions",
-   "T-4681": "Premades default to Paper in light and Studio in dark",
-   "T-5602": "Brief for a new look for the app"
-  },
+  "at": "2026-11-24T17:44:07Z",
+  "s": {},
   "wk": {
-   "T-5047": "Idris",
-   "T-0337": "Wrenna",
-   "T-2097": "Idris",
-   "T-4010": "Odalys",
-   "T-4477": "Idris",
-   "T-4286": "Idris",
-   "T-4435": "Idris",
-   "T-0678": "Idris",
-   "T-3765": "Idris",
-   "T-4662": "Idris",
-   "T-4781": "Odalys",
-   "T-4635": "Idris",
-   "T-4182": "Idris",
-   "T-5620": "Odalys",
    "T-1119": "Ines",
-   "T-4681": "Idris",
    "T-5602": "Maren",
    "T-5491": "Pernille",
    "T-5811": "Operator",
@@ -885,31 +765,29 @@
    "T-2870": "Idris",
    "T-5807": "Operator",
    "T-5809": "Operator",
-   "T-5480": "Idris",
-   "T-5805": "Operator",
-   "T-5800": "Operator"
+   "T-5480": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-24T17:41:14Z",
+  "at": "2026-11-24T17:44:07Z",
   "mq": {
    "n": {
     "checking": 0,
-    "inline": 17,
+    "inline": 0,
     "conflicted": 0,
     "failed": 0,
-    "held": 1,
+    "held": 4,
     "retry": 0,
-    "parked": 10
+    "parked": 15
    },
    "m": {
     "checking": null,
-    "inline": 35,
+    "inline": null,
     "conflicted": null,
     "failed": null,
-    "held": 799,
+    "held": 1936,
     "retry": null,
-    "parked": 931
+    "parked": 1335
    },
    "cur": [],
    "ld": [
@@ -919,12 +797,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-24T17:40:53Z",
-    "ld": 4.06,
+    "at": "2026-11-24T17:44:09Z",
+    "ld": 2.93,
     "c": 8,
     "sb": 0,
     "dk": [
-     53.8,
+     58.1,
      228.3
     ],
     "ss": [
@@ -954,7 +832,7 @@
    "parked": 11,
    "open": true,
    "mq": false,
-   "counted": "2026-11-24T17:33:10+00:00",
+   "counted": "2026-11-24T17:43:27+00:00",
    "by": {
     "app": {
      "n": 20,
@@ -972,11 +850,11 @@
      "open": true
     }
    },
-   "at": "2026-11-24T17:41:14+00:00"
+   "at": "2026-11-24T17:44:19+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-24T17:41:02+00:00"
+   "at": "2026-11-24T17:44:19+00:00"
   }
  },
  "operators": [
@@ -1020,10 +898,10 @@
   "main": 1,
   "lanes": 1,
   "total": 2,
-  "at": "12:41 PM",
+  "at": "12:44 PM",
   "why": "",
-  "at_iso": "2026-11-24T17:41:00+00:00",
+  "at_iso": "2026-11-24T17:44:00+00:00",
   "started": "9:18 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 1, started 9:18 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 12:41 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 1, started 9:18 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 12:44 PM ET</p></section>"
  }
 }

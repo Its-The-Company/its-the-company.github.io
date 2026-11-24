@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-24T16:18:21.091209+00:00",
+ "at": "2026-11-24T16:21:25.517206+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -12,6 +12,22 @@
    "last_handoff": 1795529387
   },
   "flow": [
+   {
+    "t": "T-5365",
+    "name": "Location refresh policy, file and route",
+    "w": "Idris",
+    "acct": "Personal b",
+    "steps": [
+     {
+      "s": "claimed",
+      "at": 1795537147
+     },
+     {
+      "s": "worker",
+      "at": 1795537147
+     }
+    ]
+   },
    {
     "t": "T-4807",
     "name": "Fix every bad test that failed a merge",
@@ -347,41 +363,33 @@
       "at": 1795533318
      }
     ]
-   },
-   {
-    "t": "T-4662",
-    "name": "Place the cursor easily on a long line",
-    "w": "Idris",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "claimed",
-      "at": 1795533238
-     },
-     {
-      "s": "worker",
-      "at": 1795533238
-     }
-    ]
    }
   ],
-  "flow_n": 32,
+  "flow_n": 33,
   "done": [],
   "landed": 1,
   "failed": 4
  },
  "workers": [
   {
+   "name": "pernille",
+   "task": "[review] T-4183",
+   "model": "",
+   "started": "2026-11-24T16:20:01.856Z",
+   "seconds": 83,
+   "finished": null
+  }
+ ],
+ "who": "Pernille",
+ "recent": [
+  {
    "name": "idris",
    "task": "[build] T-4183 Gallery tour examples",
    "model": "",
    "started": "2026-11-24T14:21:14.744Z",
-   "seconds": 7026,
-   "finished": null
-  }
- ],
- "who": "Idris",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-24T16:19:29.398000+00:00"
+  },
   {
    "name": "maren",
    "task": "[build] T-5802 revise Home mockup",
@@ -394,24 +402,24 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 736,
+  "runnable_count": 735,
   "blocked_count": 2
  },
  "meter": {
   "five_hour": {
-   "pct": 53.0,
+   "pct": 54.0,
    "resets_at": "2026-11-24T12:00:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-24T11:17:33.694657-05:00",
+   "read_at": "2026-11-24T11:20:11.673213-05:00",
    "source": "live",
-   "left": 47.0,
+   "left": 46.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 36.0,
    "resets_at": "2026-11-29T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-24T11:17:33.694657-05:00",
+   "read_at": "2026-11-24T11:20:11.673213-05:00",
    "source": "live",
    "left": 64.0,
    "left_words": "of your weekly allowance left"
@@ -423,7 +431,7 @@
    "read_at": "2026-11-24T10:57:22.571340-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-24T11:17:33.694657-05:00"
+  "read_at": "2026-11-24T11:20:11.673213-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -443,7 +451,7 @@
   "week_pct": 100.57,
   "usage_pct": 74.2,
   "work_pct": 97.8,
-  "read_at": "2026-11-24T16:18:00+00:00",
+  "read_at": "2026-11-24T16:21:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -487,14 +495,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-24T11:17:00-05:00",
+   "at": "2026-11-24T11:18:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-24T11:18:00-05:00",
+  "at": "2026-11-24T11:21:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -511,11 +519,11 @@
  },
  "lanes": [
   {
-   "name": "Idris",
+   "name": "Pernille",
    "state": "running",
-   "task": "[build] T-4183 Gallery tour examples",
+   "task": "[review] T-4183",
    "model": null,
-   "since": "2026-11-24T14:21:14.744Z",
+   "since": "2026-11-24T16:20:01.856Z",
    "next": []
   },
   {
@@ -527,9 +535,9 @@
    "next": []
   },
   {
-   "name": "Pernille",
+   "name": "Idris",
    "state": "next",
-   "task": "Pernille, P0, Investor an Investor c6965124089 (7:26 PM...",
+   "task": "Idris, P0, from T-4964 (made by tools/runner_watch.py...",
    "model": null,
    "since": null,
    "next": []
@@ -562,10 +570,10 @@
  "tasks": {
   "run": [
    {
-    "w": "Idris",
-    "k": "build",
+    "w": "Pernille",
+    "k": "review",
     "t": "The Gallery shows, previews and opens every premade",
-    "at": "2026-11-24T14:21:14.744Z",
+    "at": "2026-11-24T16:20:01.856Z",
     "o": "c",
     "task": "T-4183"
    }
@@ -646,6 +654,11 @@
   "done": [
    {
     "w": "Idris",
+    "t": "Tapping twice on a long line that is partly hidden now keeps the text where it was, instead of...",
+    "at": "2026-11-24T11:19:00-05:00"
+   },
+   {
+    "w": "Idris",
     "t": "A project folder named like the widget's own script is now turned down with a message that says...",
     "at": "2026-11-24T10:46:00-05:00"
    },
@@ -653,22 +666,21 @@
     "w": "Idris",
     "t": "The code's note now says plainly that old copies of a project's files stay after a rename, so...",
     "at": "2026-11-24T10:46:00-05:00"
-   },
-   {
-    "w": "Idris",
-    "t": "A network test that failed whenever the Mac was busy now times its cuts against a control run,...",
-    "at": "2026-11-24T10:30:00-05:00"
    }
   ],
   "count": {
-   "next": 736,
+   "next": 735,
    "wait": 2,
    "blocked": 0,
    "you": 2
   },
   "fin": {
-   "n": 7,
+   "n": 8,
    "rows": [
+    [
+     "T-5325",
+     "Second tap on a half-hidden..."
+    ],
     [
      "T-2154",
      "Stop a project folder..."
@@ -688,10 +700,6 @@
     [
      "T-5274",
      "Test that a send never..."
-    ],
-    [
-     "T-5802",
-     "Revise the Home mockup from..."
     ]
    ]
   }
@@ -735,97 +743,92 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-24T16:18:15Z",
+  "at": "2026-11-24T16:21:25Z",
   "s": {
    "T-5047": [
     "mergeq",
     "1st to merge",
-    1795536975141
+    1795536985517
    ],
    "T-0337": [
     "mergeq",
     "1st to merge",
-    1795536975141
+    1795536985517
    ],
    "T-2097": [
     "mergeq",
     "1st to merge",
-    1795536975141
+    1795536985517
    ],
    "T-4010": [
     "mergeq",
     "1st to merge",
-    1795536975141
+    1795536985517
    ],
    "T-4477": [
     "mergeq",
     "1st to merge",
-    1795536975141
+    1795536985517
    ],
    "T-4286": [
     "mergeq",
     "1st to merge",
-    1795536975141
+    1795536985517
    ],
    "T-4435": [
     "mergeq",
     "1st to merge",
-    1795536975141
+    1795536985517
    ],
    "T-0678": [
     "mergeq",
     "1st to merge",
-    1795536975141
+    1795536985517
    ],
    "T-3765": [
     "mergeq",
     "1st to merge",
-    1795536975141
+    1795536985517
    ],
    "T-4662": [
     "mergeq",
     "1st to merge",
-    1795536975141
+    1795536985517
    ],
    "T-4781": [
     "mergeq",
     "1st to merge",
-    1795536975141
+    1795536985517
    ],
    "T-4635": [
     "mergeq",
     "1st to merge",
-    1795536975141
+    1795536985517
    ],
    "T-4182": [
     "mergeq",
     "1st to merge",
-    1795536975141
+    1795536985517
    ],
    "T-5620": [
     "mergeq",
     "1st to merge",
-    1795536975141
+    1795536985517
    ],
    "T-1119": [
     "mergeq",
     "1st to merge",
-    1795536975141
+    1795536985517
    ],
    "T-4681": [
     "mergeq",
     "1st to merge",
-    1795536975141
+    1795536985517
    ],
    "T-5602": [
     "mergeq",
     "1st to merge",
-    1795536975141
-   ],
-   "T-5325": [
-    "mergetest",
-    "iPhone tests on the MacBook",
-    null
+    1795536985517
    ]
   },
   "nm": {
@@ -845,8 +848,7 @@
    "T-5620": "Queued test requests replay while the coordinator runs",
    "T-1119": "Investors answer two App Store Connect questions",
    "T-4681": "Premades default to Paper in light and Studio in dark",
-   "T-5602": "Brief for a new look for the app",
-   "T-5325": "Second tap on a half-hidden row keeps the text"
+   "T-5602": "Brief for a new look for the app"
   },
   "wk": {
    "T-5047": "Idris",
@@ -877,7 +879,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-24T16:18:15Z",
+  "at": "2026-11-24T16:21:25Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -890,12 +892,12 @@
    },
    "m": {
     "checking": null,
-    "inline": 2,
+    "inline": 5,
     "conflicted": null,
-    "failed": 18,
-    "held": 716,
+    "failed": 21,
+    "held": 719,
     "retry": null,
-    "parked": 716
+    "parked": 719
    },
    "cur": [],
    "ld": [
@@ -905,8 +907,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-24T16:17:48Z",
-    "ld": 0.89,
+    "at": "2026-11-24T16:21:01Z",
+    "ld": 1.2,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -920,12 +922,12 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-24T16:09:38Z",
-    "ld": 1.26,
+    "at": "2026-11-24T16:19:15Z",
+    "ld": 5.63,
     "c": 12,
     "sb": 0,
     "dk": [
-     344.0,
+     344.2,
      926.4
     ],
     "sn": []
@@ -934,21 +936,21 @@
  },
  "hc": {
   "wait": {
-   "n": 27,
+   "n": 33,
    "limit": 20,
-   "in_line": 0,
-   "parked": 27,
+   "in_line": 17,
+   "parked": 16,
    "open": true,
    "mq": false,
-   "counted": "2026-11-24T16:08:27+00:00",
+   "counted": "2026-11-24T16:18:43+00:00",
    "by": {
     "app": {
-     "n": 20,
+     "n": 25,
      "limit": 20,
      "open": true
     },
     "other": {
-     "n": 12,
+     "n": 13,
      "limit": 20,
      "open": true
     },
@@ -958,11 +960,11 @@
      "open": true
     }
    },
-   "at": "2026-11-24T16:18:21+00:00"
+   "at": "2026-11-24T16:21:25+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-24T16:18:09+00:00"
+   "at": "2026-11-24T16:21:25+00:00"
   }
  },
  "operators": [
@@ -981,7 +983,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 14 tasks",
+   "t": "Work session \u2013 15 tasks",
    "at": "2026-11-24T11:01:21-05:00"
   }
  ],
@@ -1006,10 +1008,10 @@
   "main": 1,
   "lanes": 1,
   "total": 2,
-  "at": "11:18 AM",
+  "at": "11:21 AM",
   "why": "",
-  "at_iso": "2026-11-24T16:18:00+00:00",
+  "at_iso": "2026-11-24T16:21:00+00:00",
   "started": "9:18 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 1, started 9:18 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 11:18 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 1, started 9:18 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 11:21 AM ET</p></section>"
  }
 }

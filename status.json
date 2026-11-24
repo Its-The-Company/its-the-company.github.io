@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-24T22:29:12.642855+00:00",
+ "at": "2026-11-24T22:32:13.880228+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -390,7 +390,7 @@
    "task": "[build] T-5815 finish shell checks",
    "model": "opus",
    "started": "2026-11-24T22:01:37.992Z",
-   "seconds": 1654,
+   "seconds": 1835,
    "finished": null
   },
   {
@@ -398,11 +398,19 @@
    "task": "[ops] merge watch restart",
    "model": "opus",
    "started": "2026-11-24T22:02:04.950Z",
-   "seconds": 1627,
+   "seconds": 1808,
+   "finished": null
+  },
+  {
+   "name": "ines",
+   "task": "[report] evening",
+   "model": "opus",
+   "started": "2026-11-24T22:30:34.209Z",
+   "seconds": 99,
    "finished": null
   }
  ],
- "who": "Idris, Odalys",
+ "who": "Idris, Odalys, Ines",
  "recent": [
   {
    "name": "pernille",
@@ -489,7 +497,7 @@
   "week_pct": 166.51,
   "usage_pct": 68.4,
   "work_pct": 98.0,
-  "read_at": "2026-11-24T22:29:00+00:00",
+  "read_at": "2026-11-24T22:32:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -523,7 +531,7 @@
   }
  ],
  "disk": {
-  "free_gb": 40,
+  "free_gb": 42,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -532,14 +540,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-24T17:26:00-05:00",
+   "at": "2026-11-24T17:31:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-24T17:29:00-05:00",
+  "at": "2026-11-24T17:32:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -572,17 +580,17 @@
    "next": []
   },
   {
-   "name": "Pernille",
-   "state": "next",
-   "task": "Pernille, P0, Investor an Investor c6965124089 (7:26 PM...",
-   "model": null,
-   "since": null,
+   "name": "Ines",
+   "state": "running",
+   "task": "[report] evening",
+   "model": "opus",
+   "since": "2026-11-24T22:30:34.209Z",
    "next": []
   },
   {
-   "name": "Ines",
+   "name": "Pernille",
    "state": "next",
-   "task": "Ines, P0, from Investor an Investor c7016129138 (12:02 PM...",
+   "task": "Pernille, P0, Investor an Investor c6965124089 (7:26 PM...",
    "model": null,
    "since": null,
    "next": []
@@ -621,6 +629,14 @@
     "t": "Merge watch restart",
     "m": "opus",
     "at": "2026-11-24T22:02:04.950Z",
+    "o": "c"
+   },
+   {
+    "w": "Ines",
+    "k": "report",
+    "t": "Evening",
+    "m": "opus",
+    "at": "2026-11-24T22:30:34.209Z",
     "o": "c"
    }
   ],
@@ -785,22 +801,22 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-24T22:29:00Z",
+  "at": "2026-11-24T22:32:07Z",
   "s": {
    "T-4644": [
     "mergeq",
     "1st to merge",
-    1795556160483
+    1795556167722
    ],
    "T-4824": [
     "mergeq",
     "2nd to merge",
-    1795555080483
+    1795555087722
    ],
    "T-4186": [
     "mergeq",
     "3rd to merge",
-    1795558500483
+    1795558507722
    ],
    "T-4192": [
     "mergetest",
@@ -827,7 +843,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-24T22:29:00Z",
+  "at": "2026-11-24T22:32:07Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -840,12 +856,12 @@
    },
    "m": {
     "checking": null,
-    "inline": 53,
+    "inline": 56,
     "conflicted": null,
     "failed": null,
-    "held": 2220,
+    "held": 2224,
     "retry": null,
-    "parked": 1486
+    "parked": 1489
    },
    "cur": [],
    "ld": [
@@ -855,12 +871,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-24T22:29:01Z",
-    "ld": 0.89,
+    "at": "2026-11-24T22:31:59Z",
+    "ld": 0.71,
     "c": 8,
     "sb": 0,
     "dk": [
-     40.1,
+     42.4,
      228.3
     ],
     "ss": [
@@ -890,7 +906,7 @@
    "parked": 18,
    "open": true,
    "mq": false,
-   "counted": "2026-11-24T22:19:43+00:00",
+   "counted": "2026-11-24T22:30:37+00:00",
    "by": {
     "app": {
      "n": 14,
@@ -908,11 +924,11 @@
      "open": true
     }
    },
-   "at": "2026-11-24T22:29:12+00:00"
+   "at": "2026-11-24T22:32:13+00:00"
   },
   "bl": {
    "n": 3,
-   "at": "2026-11-24T22:29:06+00:00"
+   "at": "2026-11-24T22:32:00+00:00"
   }
  },
  "operators": [
@@ -953,13 +969,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 2,
+  "main": 3,
   "lanes": 1,
-  "total": 3,
-  "at": "5:29 PM",
+  "total": 4,
+  "at": "5:32 PM",
   "why": "",
-  "at_iso": "2026-11-24T22:29:00+00:00",
+  "at_iso": "2026-11-24T22:32:00+00:00",
   "started": "4:58 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 4:58 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 5:29 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 3, started 4:58 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 5:32 PM ET</p></section>"
  }
 }

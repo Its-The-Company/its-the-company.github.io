@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-24T16:09:09.701038+00:00",
+ "at": "2026-11-24T16:12:18.644315+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -12,6 +12,70 @@
    "last_handoff": 1795529387
   },
   "flow": [
+   {
+    "t": "T-4749",
+    "name": "Rewrite or drop outdated tests that read code text",
+    "w": "Pernille",
+    "acct": "Personal b",
+    "steps": [
+     {
+      "s": "claimed",
+      "at": 1795536735
+     },
+     {
+      "s": "worker",
+      "at": 1795536735
+     }
+    ]
+   },
+   {
+    "t": "T-0687",
+    "name": "Run network fetches inside the extension on the Simulator",
+    "w": "Idris",
+    "acct": "Personal b",
+    "steps": [
+     {
+      "s": "claimed",
+      "at": 1795536676
+     },
+     {
+      "s": "worker",
+      "at": 1795536676
+     }
+    ]
+   },
+   {
+    "t": "T-4181",
+    "name": "Widgets refresh on their own and by a tap",
+    "w": "Idris",
+    "acct": "Personal b",
+    "steps": [
+     {
+      "s": "claimed",
+      "at": 1795536622
+     },
+     {
+      "s": "worker",
+      "at": 1795536622
+     }
+    ]
+   },
+   {
+    "t": "T-4184",
+    "name": "A person's own script becomes a Home Screen widget",
+    "w": "Idris",
+    "acct": "Personal b",
+    "steps": [
+     {
+      "s": "claimed",
+      "at": 1795536555
+     },
+     {
+      "s": "worker",
+      "at": 1795536555
+     }
+    ]
+   },
    {
     "t": "T-4494",
     "name": "Prove widgets move to the app by size",
@@ -299,81 +363,10 @@
       "at": 1795532528
      }
     ]
-   },
-   {
-    "t": "T-2097",
-    "name": "Read free memory in the widget extension on a device",
-    "w": "Idris",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "claimed",
-      "at": 1795532394
-     },
-     {
-      "s": "worker",
-      "at": 1795532394
-     }
-    ]
-   },
-   {
-    "t": "T-0337",
-    "name": "Confirm the revenue memo's facts from Apple pages",
-    "w": "Wrenna",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "claimed",
-      "at": 1795532281
-     },
-     {
-      "s": "worker",
-      "at": 1795532281
-     }
-    ]
-   },
-   {
-    "t": "T-4715",
-    "name": "Put the new Pro screen words into the app",
-    "w": "Maren",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "claimed",
-      "at": 1795486526
-     },
-     {
-      "s": "worker",
-      "at": 1795486526
-     }
-    ]
-   },
-   {
-    "t": "T-2296",
-    "name": "Finish the gallery pager, iPad layout and detail foot",
-    "w": "Idris",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "claimed",
-      "at": 1795483569
-     },
-     {
-      "s": "worker",
-      "at": 1795483569
-     }
-    ]
    }
   ],
-  "done": [
-   {
-    "t": "T-5607",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1795386667
-   }
-  ],
+  "flow_n": 26,
+  "done": [],
   "landed": 1,
   "failed": 4
  },
@@ -383,7 +376,7 @@
    "task": "[build] T-4183 Gallery tour examples",
    "model": "",
    "started": "2026-11-24T14:21:14.744Z",
-   "seconds": 6474,
+   "seconds": 6663,
    "finished": null
   }
  ],
@@ -406,19 +399,19 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 49.0,
+   "pct": 51.0,
    "resets_at": "2026-11-24T12:00:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-24T11:04:34.726481-05:00",
+   "read_at": "2026-11-24T11:10:01.168123-05:00",
    "source": "live",
-   "left": 51.0,
+   "left": 49.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 35.0,
    "resets_at": "2026-11-29T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-24T11:04:34.726481-05:00",
+   "read_at": "2026-11-24T11:10:01.168123-05:00",
    "source": "live",
    "left": 65.0,
    "left_words": "of your weekly allowance left"
@@ -430,7 +423,7 @@
    "read_at": "2026-11-24T10:57:22.571340-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-24T11:04:34.726481-05:00"
+  "read_at": "2026-11-24T11:10:01.168123-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -450,7 +443,7 @@
   "week_pct": 100.57,
   "usage_pct": 74.2,
   "work_pct": 97.8,
-  "read_at": "2026-11-24T16:09:00+00:00",
+  "read_at": "2026-11-24T16:12:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -498,7 +491,7 @@
   }
  ],
  "disk": {
-  "free_gb": 54,
+  "free_gb": 56,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -507,14 +500,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-24T11:08:00-05:00",
+   "at": "2026-11-24T11:11:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-24T11:09:00-05:00",
+  "at": "2026-11-24T11:12:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -755,18 +748,25 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-24T16:09:09Z",
+  "at": "2026-11-24T16:12:00Z",
   "s": {
+   "T-5325": [
+    "mergetest",
+    "iPhone tests on the MacBook",
+    null
+   ],
    "T-5047": [
     "merging",
     "Mac tests at the main gate",
-    1795526709701
+    1795526760726
    ]
   },
   "nm": {
+   "T-5325": "Second tap on a half-hidden row keeps the text",
    "T-5047": "Fix the token test's No view for this size card"
   },
   "wk": {
+   "T-5325": "Idris",
    "T-5047": "Idris",
    "T-2154": "Idris",
    "T-2155": "Idris",
@@ -778,7 +778,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-24T16:09:09Z",
+  "at": "2026-11-24T16:12:00Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -793,10 +793,10 @@
     "checking": null,
     "inline": null,
     "conflicted": null,
-    "failed": 9,
-    "held": 1841,
+    "failed": 12,
+    "held": 1843,
     "retry": null,
-    "parked": 707
+    "parked": 710
    },
    "cur": [],
    "ld": [
@@ -806,12 +806,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-24T16:08:21Z",
-    "ld": 2.22,
+    "at": "2026-11-24T16:11:35Z",
+    "ld": 1.72,
     "c": 8,
     "sb": 0,
     "dk": [
-     54.2,
+     56.3,
      228.3
     ],
     "ss": [
@@ -821,8 +821,8 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-24T16:07:32Z",
-    "ld": 1.75,
+    "at": "2026-11-24T16:09:38Z",
+    "ld": 1.26,
     "c": 12,
     "sb": 0,
     "dk": [
@@ -859,11 +859,11 @@
      "open": true
     }
    },
-   "at": "2026-11-24T16:09:09+00:00"
+   "at": "2026-11-24T16:12:18+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-24T16:09:02+00:00"
+   "at": "2026-11-24T16:12:06+00:00"
   }
  },
  "operators": [
@@ -891,7 +891,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 4 tasks",
+   "t": "Work session \u2013 8 tasks",
    "at": "2026-11-24T11:01:21-05:00"
   }
  ],
@@ -916,10 +916,10 @@
   "main": 1,
   "lanes": 2,
   "total": 3,
-  "at": "11:09 AM",
+  "at": "11:12 AM",
   "why": "",
-  "at_iso": "2026-11-24T16:09:00+00:00",
+  "at_iso": "2026-11-24T16:12:00+00:00",
   "started": "9:18 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 1, started 9:18 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 11:09 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 1, started 9:18 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 11:12 AM ET</p></section>"
  }
 }

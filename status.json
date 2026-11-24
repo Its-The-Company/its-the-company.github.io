@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-24T00:52:37.053119+00:00",
+ "at": "2026-11-24T00:55:43.127727+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -12,6 +12,54 @@
    "last_handoff": 1795478327
   },
   "flow": [
+   {
+    "t": "T-4781",
+    "name": "Retest a fixed red on what failed, not every test",
+    "w": "Odalys",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "claimed",
+      "at": 1795481722
+     },
+     {
+      "s": "worker",
+      "at": 1795481722
+     }
+    ]
+   },
+   {
+    "t": "T-4662",
+    "name": "Place the cursor easily on a long line",
+    "w": "Idris",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "claimed",
+      "at": 1795481651
+     },
+     {
+      "s": "worker",
+      "at": 1795481651
+     }
+    ]
+   },
+   {
+    "t": "T-3765",
+    "name": "Check a real widget tap on the TestFlight build",
+    "w": "Idris",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "claimed",
+      "at": 1795481584
+     },
+     {
+      "s": "worker",
+      "at": 1795481584
+     }
+    ]
+   },
    {
     "t": "T-0678",
     "name": "Run the refresh button inside the widget extension",
@@ -189,22 +237,6 @@
     ]
    },
    {
-    "t": "T-3765",
-    "name": "Check a real widget tap on the TestFlight build",
-    "w": "Idris",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "claimed",
-      "at": 1795435928
-     },
-     {
-      "s": "worker",
-      "at": 1795435928
-     }
-    ]
-   },
-   {
     "t": "T-0657",
     "name": "Build the Settings screen",
     "w": "Idris",
@@ -284,38 +316,6 @@
     ]
    },
    {
-    "t": "T-4781",
-    "name": "Retest a fixed red on what failed, not every test",
-    "w": "Odalys",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "claimed",
-      "at": 1795429104
-     },
-     {
-      "s": "worker",
-      "at": 1795429104
-     }
-    ]
-   },
-   {
-    "t": "T-4662",
-    "name": "Place the cursor easily on a long line",
-    "w": "Idris",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "claimed",
-      "at": 1795428992
-     },
-     {
-      "s": "worker",
-      "at": 1795428992
-     }
-    ]
-   },
-   {
     "t": "T-3847",
     "w": "Idris",
     "acct": "Personal a",
@@ -390,7 +390,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 723,
+  "runnable_count": 724,
   "blocked_count": 2
  },
  "meter": {
@@ -439,7 +439,7 @@
   "week_pct": 63.21,
   "usage_pct": 79.8,
   "work_pct": 97.6,
-  "read_at": "2026-11-24T00:52:00+00:00",
+  "read_at": "2026-11-24T00:55:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -514,7 +514,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-23T19:52:00-05:00",
+  "at": "2026-11-23T19:55:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -591,15 +591,6 @@
     "task": "T-4192"
    },
    {
-    "w": "Idris",
-    "t": "Make the widget's Debug ask record say what it saw",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-23T19:31:09-05:00",
-    "o": "c",
-    "task": "T-5524"
-   },
-   {
     "w": "Odalys",
     "t": "Name every record a land takes out of a copy",
     "m": "opus",
@@ -634,6 +625,15 @@
     "at": "2026-11-23T19:33:38-05:00",
     "o": "c",
     "task": "T-5634"
+   },
+   {
+    "w": "Idris",
+    "t": "Test that suggestions are asked after the first letter",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-23T19:52:43-05:00",
+    "o": "c",
+    "task": "T-4875"
    }
   ],
   "src": "plan",
@@ -727,7 +727,7 @@
    }
   ],
   "count": {
-   "next": 723,
+   "next": 724,
    "wait": 2,
    "blocked": 0,
    "you": 2
@@ -793,9 +793,9 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-24T00:52:15Z",
+  "at": "2026-11-24T00:55:43Z",
   "s": {
-   "T-5524": [
+   "T-5634": [
     "testing",
     "Mac Mini \u00b7 test",
     null
@@ -804,11 +804,6 @@
     "testing",
     "MacBook \u00b7 test",
     null
-   ],
-   "T-4772": [
-    "testq",
-    "1st for a Simulator",
-    1795480995572
    ],
    "T-4190": [
     "merged",
@@ -824,16 +819,14 @@
    ]
   },
   "nm": {
-   "T-5524": "Make the widget's Debug ask record say what it saw",
+   "T-5634": "Retry a refused widget send at the project boundary",
    "T-5059": "Test that App Store builds write no sensor rows",
-   "T-4772": "Prove a refresh tap redraws the widget",
    "T-4190": "Settings and Pro: buy, restore, themes",
    "T-4182": "A failing widget says so and can recover"
   },
   "wk": {
-   "T-5524": "Idris",
+   "T-5634": "Idris",
    "T-5059": "Idris",
-   "T-4772": "Idris",
    "T-4190": "Idris",
    "T-4182": "Idris",
    "T-5755": "Odalys",
@@ -843,7 +836,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-24T00:52:15Z",
+  "at": "2026-11-24T00:55:43Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -859,9 +852,9 @@
     "inline": null,
     "conflicted": null,
     "failed": null,
-    "held": 924,
+    "held": 927,
     "retry": null,
-    "parked": 924
+    "parked": 927
    },
    "cur": [],
    "ld": [
@@ -871,12 +864,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-24T00:52:08Z",
-    "ld": 5.15,
+    "at": "2026-11-24T00:55:47Z",
+    "ld": 8.62,
     "c": 8,
     "sb": 1,
     "dk": [
-     34.5,
+     34.2,
      228.3
     ],
     "ss": [
@@ -926,11 +919,11 @@
      "open": true
     }
    },
-   "at": "2026-11-24T00:52:37+00:00"
+   "at": "2026-11-24T00:55:43+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-24T00:52:37+00:00"
+   "at": "2026-11-24T00:55:35+00:00"
   }
  },
  "operators": [
@@ -941,7 +934,7 @@
    "m": "opus",
    "e": "high",
    "t": "Work session",
-   "at": "2026-11-23T19:09:50-05:00"
+   "at": "2026-11-23T19:54:15-05:00"
   },
   {
    "w": "Operator",
@@ -958,7 +951,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 7 tasks",
+   "t": "Work session \u2013 10 tasks",
    "at": "2026-11-23T19:45:27-05:00"
   },
   {
@@ -972,8 +965,8 @@
   }
  ],
  "reply": {
-  "sent": "2026-11-24T00:08:15Z",
-  "seconds": 94.0
+  "sent": "2026-11-24T00:52:47Z",
+  "seconds": 86.0
  },
  "inbox": [],
  "trimmed": [
@@ -991,10 +984,10 @@
   "main": 0,
   "lanes": 3,
   "total": 3,
-  "at": "7:52 PM",
+  "at": "7:55 PM",
   "why": "",
-  "at_iso": "2026-11-24T00:52:00+00:00",
+  "at_iso": "2026-11-24T00:55:00+00:00",
   "started": "7:06 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 7:06 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 7:52 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 7:06 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 7:55 PM ET</p></section>"
  }
 }

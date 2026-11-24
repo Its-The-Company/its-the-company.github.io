@@ -5,7 +5,7 @@ section: "documents"
 description: "Pernille, 11-17 9:35 PM ET. Answers an Investor on #41 (c6965124089, 7:26 PM 11-17: &quot;fix every bad test ... Consult real-world examples of how tests are designed and implemented. Fix the &#x27;big picture&#x27; causes&quot;) and the\u2026"
 ---
 <div class="crumbs" role="navigation" aria-label="Back"><a class="back" href="{{ '/documents/operations/' | relative_url }}">← Operations</a><a href="{{ '/documents/company/t-4807-test-rules.html' | relative_url }}" rel="bookmark">Permanent link</a></div>
-<div class="page-head"><div class="kicker"><span class="kind blue">Plan</span><span>Day 31 · Sat Nov 21</span><span><code>ops/plans/T-4807-test-rules.md</code></span></div><h1>T-4807: rules for new tests</h1><div class="byline"><img class="avatar" src="{{ '/assets/portraits/pernille.svg' | relative_url }}" alt="Pernille" title="Pernille"><span>By <a href="{{ '/cast/pernille.html' | relative_url }}">Pernille</a>, Python runtime engineer</span></div></div>
+<div class="page-head"><div class="kicker"><span class="kind blue">Plan</span><span>Day 33 · Mon Nov 23</span><span><code>ops/plans/T-4807-test-rules.md</code></span></div><h1>T-4807: rules for new tests</h1><div class="byline"><img class="avatar" src="{{ '/assets/portraits/pernille.svg' | relative_url }}" alt="Pernille" title="Pernille"><span>By <a href="{{ '/cast/pernille.html' | relative_url }}">Pernille</a>, Python runtime engineer</span></div></div>
 
 <style>.doc-body{overflow-wrap:break-word}.doc-src{overflow-wrap:anywhere}.tbl[data-n~="1"] tr>:nth-child(1),.tbl[data-n~="2"] tr>:nth-child(2),.tbl[data-n~="3"] tr>:nth-child(3),.tbl[data-n~="4"] tr>:nth-child(4),.tbl[data-n~="5"] tr>:nth-child(5),.tbl[data-n~="6"] tr>:nth-child(6),.tbl[data-n~="7"] tr>:nth-child(7),.tbl[data-n~="8"] tr>:nth-child(8),.tbl[data-n~="9"] tr>:nth-child(9),.tbl[data-n~="10"] tr>:nth-child(10),.tbl[data-n~="11"] tr>:nth-child(11),.tbl[data-n~="12"] tr>:nth-child(12){min-width:0;overflow-wrap:normal}.tbl[data-o="1"] tr>:nth-child(1),.tbl[data-o="2"] tr>:nth-child(2),.tbl[data-o="3"] tr>:nth-child(3),.tbl[data-o="4"] tr>:nth-child(4),.tbl[data-o="5"] tr>:nth-child(5),.tbl[data-o="6"] tr>:nth-child(6),.tbl[data-o="7"] tr>:nth-child(7),.tbl[data-o="8"] tr>:nth-child(8),.tbl[data-o="9"] tr>:nth-child(9),.tbl[data-o="10"] tr>:nth-child(10),.tbl[data-o="11"] tr>:nth-child(11),.tbl[data-o="12"] tr>:nth-child(12){position:sticky;right:0;overflow-wrap:normal;background:var(--page);box-shadow:-1px 0 var(--line),-9px 0 8px -8px var(--sh)}</style>
 <div class="doc-body" markdown="1">
@@ -221,6 +221,23 @@ correction is marked "was:".
   before. tests/board_notes_readers_test.py's tick probe now runs menu_facts. Left from T-4787's bad-test list, each
   on the board: systls big bodies' 1 s bounds, the bridge swallow test's 5 s bound, main_folder_guard_test's 30 s
   subprocess limit, and site_test.sh's no-second-commit row.
+- Rule 1, T-5491 (Pernille, 11-23): pywidget/tests/bridge/test_runner.py test_swallow_ends_by_hard_stop_twice (T-4787
+  rows 22, 100). The lane logs of 11-10 and 11-16 are gone, so the failing row is not kept. CPU load did not make it
+  red: 220 runs of its scenario in a scratch copy beside 24-32 CPU burners and the suite itself (load 43-94 on 8
+  cores) all had the hard stop called, the run interrupted, and stop_dt 2.15-2.91 s. A stall does (an environment
+  mutant: SIGSTOP of the driver, as a descheduled or paging process is stalled). Stalled 3 s after the hard stop,
+  `assertLess(stop_dt, 5.0)` went red at 5.54 s with the hard stop called and the run interrupted: a bound that
+  judged the clock, not the stop. The fake <span title="Our grade scale, nine steps: D, D+, C-, C, C+, B-, B, B+, A. An idea&#x27;s ladder is the letter it reaches before any cap.">ladder</span>'s 5.0 s stuck deadline was the same bound and worse: stalled 4.5 s
+  from before the 2.0 s hard stop, the ladder saw 5 s pass, marked the run stuck and never called the hard stop, and
+  the test errored at go's 60 s time-out. Replaced: the test sets the ladder's deadline to a 30 s hang ceiling (about
+  12x the 2.4 s a stop takes) and asserts the hard stop was called and answered True, the run ended interrupted, and
+  it was not stuck at the ceiling; the scenario's own time-out (120 s) fails as "hang" with its limit. The 1.95 s
+  floor stays: the ladder never calls the hard stop before 2.0 s, so load cannot make it early. Both stalls now pass.
+  Mutants of the product all go red: hard_stop arms but answers False (hard_called False), the ladder's hard stop at
+  0.5 s (floor, stop_dt 0.72 s), hard_stop answers True but arms no events (hang at 120 s). The bridge suite passes
+  through pywidget/tests/run_host.py --both bridge (the land's host step; tests/run.sh selects only tests/ suites):
+  347 tests on 3.9 and 3.13, three runs, at load 59 and beside 24 burners at 93 and 339; the test alone 10 of 10
+  beside 24 burners (load 385).
 
 ## Audit of T-4787's 46 bad-test reds (slice 9, 11-21)
 
@@ -243,7 +260,7 @@ proven cure.
 | 66, 74 | site_test.sh "nothing changed: no second commit" | 2 | T-5493 (open, Odalys) |
 | 90, 111 | supervisor_test.sh close_by row | 2 | 8251344275 (slice 6: waits for the keeper's SIGTERM) |
 | 119, 128 | personal_land_test.sh, quarantined | 2 | b6b0ab5a6b (T-4726, Odalys, 11-19; quarantine entry removed). T-4726 is still open: the 11-21 nightly run found other rows red on main |
-| 22, 100 | bridge test_swallow_ends_by_hard_stop_twice | 2 | T-5491 (open, Pernille) |
+| 22, 100 | bridge test_swallow_ends_by_hard_stop_twice | 2 | T-5491 (Pernille, 11-23, on personal/a until it lands): the 5.0 s ceiling and the ladder's 5.0 s stuck deadline replaced by a 30 s hang ceiling (below). No failing row kept, so which bound failed is shown by a stall mutant, not proven |
 | 5 | BridgeTests writer stands down | 1 | 754d97edc1 (T-2491, test-only fix) |
 | 6 | lane host rows "waited 1.2s for the xcodebuild lock" in two export cases | 1 | the suite and rows were not kept (land_steps.jsonl keeps no rows; the lane log is gone). No test on main now runs tools/xc.sh export on the machine's lock (searched tests/ for it). T-5515 |
 | 12 | site_s30_test | 1 | a15dd24770 (T-3996: the test moved with Home's change) |
@@ -261,7 +278,7 @@ proven cure.
 | 112 | personal_land_product_test.sh stale mutant | 1 | 5274377036 (T-4665); 16dbf89a13 makes a mutant whose pattern matches nothing its own FAIL |
 | 113 | personal_pool_test.sh stale row | 1 | 5274377036 (T-4665) |
 | 116 | board_tick_test stale fixture | 1 | 92521ed099 (T-4694) |
-| 117 | systls ten MiB bodies "linear" | 1 | T-5490 (open, Pernille) |
+| 117 | systls ten MiB bodies "linear" | 1 | T-5490 (Pernille, 11-23, on its lane): counted buffer work replaces the 1 s bounds, see below |
 | 118 | lane_env_test red on main | 1 | T-4725 (open, Odalys) |
 
 </div>
@@ -288,6 +305,19 @@ files pass 83/0 and 18/0. What reset the box rows on 11-12 is still unknown; it 
 Fifteen more browser suites in tests/ build their own server on http.server's queue of 5 (one, site_s30_test, had a
 red in the window for another reason). Since no red of theirs is traced to the queue, moving them is T-5516 at P3,
 done only when one of them is touched.
+
+T-5490, row 117 (rule 1; Pernille, 11-23). s_big_bodies in pywidget/tests/systls/systls_driver.py no longer times its
+three 10 MiB uploads (was: under 1.0 s each by time.monotonic). The count that replaced the seconds: bytes of buffer
+work per body byte. While the scenario runs, systls's `bytearray` is CountingBuf, a stand-in that counts each piece
+appended (`+=` or `+`) and each byte copied or scanned (slices, bytes(), concatenation, find, the tail a delete
+leaves). Each upload must arrive in at least size / piece pieces (the control: the stand-in is on the path) and cost
+at most 8 bytes of work per body byte. Today: 2.00 (Content-Length from a file, 1,281 pieces), 4.00 (http.client
+chunked, 2,560), 4.00 (requests generator, 1,280). Red first, against copies of systls.py: rejoining the buffer per
+piece (`self._buf = self._buf + data`) counts 641.5 per byte, a per-piece bytes() copy 642.5, rejoining the chunked
+body 643.0; the old driver caught these only by seconds (4.00, 1.31, 1.81 s on this host). Each body is now
+a pattern that changes along it and is checked by length and CRC-32 (was: length only); a changed first byte and a
+reversed chunk fail the new driver and passed the old. Host: systls 23/23 on 3.9.6 and 3.13.18. The sums above count
+row 117 as carried until T-5490 lands.
 {% endraw %}
 
 </div>

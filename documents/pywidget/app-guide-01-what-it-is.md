@@ -15,7 +15,7 @@ Part 1 of 10 of the pywidget app guide. The index, with the reading notes, is [a
 
 pywidget is an iPhone and iPad app where you write and run real Python (a popular programming language, written as lines of text instructions) and can turn the same Python into widgets, the small live tiles on the Home Screen, Lock Screen and StandBy. It is for people who already like to script: they want to try an idea on the phone, automate something small, or put their own information on the Home Screen. It is also for people who would never write code but want a good-looking widget, because the app comes with 12 ready-made ones (called premades), whose source they can open and change.
 
-Running any script is free. A single one-time purchase, called Pro (the name of the paid upgrade), unlocks the seven premade widgets that are not free and, once built in, three extra editor themes (section 3.5). The Investors set the price on 2026-10-30: $14.99, once. There is no account, no server run by the company, no tracking and no subscription (decision record ADR-001, "Version 1 scope and phasing").
+Running any script is free. A single one-time purchase, called Pro (the name of the paid upgrade), unlocks the premade widgets that are not free (today only Habit tracker, on the Investors' list of issue #324) and, once built in, three extra editor themes (section 3.5). The Investors set the price on 2026-10-30: $14.99, once. There is no account, no server run by the company, no tracking and no subscription (decision record ADR-001, "Version 1 scope and phasing").
 {% endraw %}
 
 </div>

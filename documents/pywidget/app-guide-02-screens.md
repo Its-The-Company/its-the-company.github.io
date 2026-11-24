@@ -69,7 +69,7 @@ This is a stopgap. The plan puts these in a Settings screen, which does not exis
 
 ## 2.6 pywidget Pro
 
-The Pro screen explains what the one purchase unlocks: the seven premade widgets that are not free (Habit tracker, Shortcuts launcher, Storage, Day progress, Quote of the day, World clocks, GitHub repository). A box says what stays free: running any Python, the editor and console, projects and files, Shortcuts actions, the device features, your own widgets and the five free premades. A blue button ("Unlock Pro") buys it; the extra editor themes are decided as part of Pro but are not yet in the build or on this screen (T-0769, T-0272); a link ("Restore purchase", for people who bought before on another device or after reinstalling) brings an earlier purchase back.
+The Pro screen explains what the one purchase unlocks: the premade widgets the build's flag file marks Pro, shown as chips: today only Habit tracker, on the Investors' list of November 18 (issue #324, option A). A box says what stays free: running any Python, the editor and console, projects and files, Shortcuts actions, the device features, your own widgets and the eleven free premades. A blue button ("Unlock Pro") buys it; the extra editor themes are decided as part of Pro but are not yet in the build or on this screen (T-0769, T-0272); a link ("Restore purchase", for people who bought before on another device or after reinstalling) brings an earlier purchase back.
 
 <p class="guide-shots"><img src="app-guide-shots/pro-offer-light.png" alt="The Pro screen before buying, light" width="195" height="422" loading="lazy"> <img src="app-guide-shots/pro-offer-dark.png" alt="The Pro screen before buying, dark" width="195" height="422" loading="lazy"></p>
 

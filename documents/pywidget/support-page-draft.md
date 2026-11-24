@@ -25,7 +25,7 @@ pywidget is made by an AI-run company. Say so if you are asked.
 
 ### 1. How do I put a widget on my Home Screen?
 
-Touch and hold the Home Screen, tap the plus button, and pick pywidget's "Python widget". Then choose which widget it shows. The list offers your own widgets and the five free ready-made ones. The seven Pro ready-made ones appear only after you have bought Pro. Adding it from iOS this way is the only route in 1.0; the app has no "Add to Home Screen" button of its own. [unverified on a phone]
+Touch and hold the Home Screen, tap the plus button, and pick pywidget's "Python widget". Then choose which widget it shows. The list offers your own widgets and the eleven free ready-made ones. The one Pro ready-made widget, Habit tracker, appears only after you have bought Pro. Adding it from iOS this way is the only route in 1.0; the app has no "Add to Home Screen" button of its own. [unverified on a phone]
 
 Source: `ios/Widget/PyWidget.swift` ("Python widget", "Draws your script's widget."); `ios/Shared/WidgetPlacement.swift`; tests `testPickerListsOwnWidgetsAndFreePremadesWithoutPro` and `testPickerAddsProPremadesWithPro` in `ios/Tests/WidgetPlacementTests.swift`.
 
@@ -55,7 +55,7 @@ Source: `ios/App/Store/ProStore.swift` (`restore()` calls `AppStore.sync()`, the
 
 ### 6. What does Pro unlock?
 
-Pro is one purchase, not a subscription. In the build's flag file it unlocks the seven Pro ready-made widgets: Habit tracker, Shortcuts launcher, Storage, Day progress, Quote of the day, World clocks and GitHub repository. Five are free: Countdown, Sunrise and sunset, Steps and floors, Distance to a saved place, and Altitude. Editor themes are off in this build and no package is gated behind Pro. The price comes from the App Store, not from a file in the app. The app guide says $14.99 once (issue #87); the build does not hold that figure.
+Pro is one purchase, not a subscription. In the build's flag file it unlocks one ready-made widget, Habit tracker. The other eleven are free: Countdown, Sunrise and sunset, Steps and floors, Distance to a saved place, Altitude, Shortcuts launcher, Storage, Day progress, Quote of the day, World clocks and GitHub repository. Editor themes are off in this build and no package is gated behind Pro. The price comes from the App Store, not from a file in the app. The app guide says $14.99 once (issue #87); the build does not hold that figure.
 
 Source: `runtime/pro-flags.json` (premades free or pro by id; `themes.on` false; `packages.on` false); `runtime/pro_flags.py`; `ios/Shared/ProFlags.swift`. Names: the `make()` calls in `widgets/premade/*.py`.
 
@@ -117,7 +117,7 @@ A small clock means the picture is older than your script allowed (`stale_after`
 | 4 | Clock icon is "Stale", exclamation is "Last run was stopped" | `TreeView.swift` | code |
 | 4 | No `stale_after` means never stale | `TreeTimelineTests.swift` | test |
 | 5 | Restore calls `AppStore.sync()` then re-reads | `ProStore.swift` | code and tests |
-| 6 | 5 free and 7 Pro premades; themes and packages off | `runtime/pro-flags.json` | file |
+| 6 | 11 free premades and 1 Pro (Habit tracker); themes and packages off | `runtime/pro-flags.json` | file |
 | 7 | Eight pure packages; three native are 1.1 | `AppPackagesLayoutTests.swift`, ADR-003 S1 trigger | code and ADR |
 | 8 | 3.15.1, iOS 18.0 | `manifest.toml`, `project.yml` | file |
 | 9 | Three Shortcuts actions | `RunScriptIntents.swift`, `AppIntentsTests.swift` | code and test |

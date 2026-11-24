@@ -164,8 +164,11 @@ nothing outlined and no message. **Between taps** (every step from 6 on except 8
 13. Put things back: Larger Text to your usual size if you changed it, and the Accessibility Shortcut as it was. The
     habits can stay or be deleted on the page.
 
-A UI test that opens the link with six habits and checks the scroll without a phone is T-5542, not built as of
-2026-11-22.
+On a Simulator, pywidget/ios/UITests/HabitsFocusUITests.swift (T-5542, 2026-11-23) does steps 4, 7 and 12 without a
+phone: it writes six habits into the file, opens `pywidget://widget/habits/open?habit=<Run's id>` from the Home Screen
+at Accessibility Large text, and checks that Run's row is on screen and outlined in the accent colour, then not; an id
+the file does not hold opens the page at the top, with Run below the screen and nothing outlined. Steps 5, 6, 8 to 11
+and the widget itself stay with the phone.
 
 ## 6. GitHub repository: a repository (Pro in this build)
 

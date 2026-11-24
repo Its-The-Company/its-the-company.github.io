@@ -119,7 +119,7 @@ Failure behaviour (input to the ADR, not yet a spec): every extension run gets a
 ## 7. Open
 
 - Device run on the oldest supported phone: cold start, peak, and the real ceiling by allocation ramp. Needs a device and signing (Apple membership pending, due Day 7, 2026-10-28).
-- Frozen-modules measurement; a Release-build run.
+- ~~Frozen-modules measurement; a Release-build run.~~ Done 2026-11-23, section 9 (T-0213).
 - T-1853 (2026-11-04): the device session's Release build runs the lane with a record-only margin under `PYWIDGET_LANE_GATE`; how <span title="The starting recipe a lane uses to look for ideas. G2, for example, starts from public datasets.">G1</span>-G3 get their numbers: `docs/decisions/gate-session-build.md`.
 - Execution ADR (ADR-003) and failure-mode spec, from section 5.
 - Logged: CPython 3.15.1 iOS XCframework and the libraries linked into its modules in `log/software.md`.
@@ -130,9 +130,9 @@ No device numbers yet. They come from the Investors' Settings > Export measureme
 
 **What exists at HEAD (checked in code, 2026-11-17).** The pedometer (`App/Device/PedometerCall.swift`, CMPedometer, last 7 days) and location (`App/Device/LocationCall.swift`) are read in the app process only. Their purpose strings (`NSMotionUsageDescription`, `NSLocationWhenInUseUsageDescription`) are in the app's Info.plist only; the widget extension's has neither, nor `NSWidgetWantsLocation`, and it imports no CoreMotion, CoreLocation or HealthKit. There is no second extension target in `project.yml` (T-0680 item 6's pedometer half, T-0682's steps query): T-0798 item 2 records that half as not run while it is absent. HealthKit is in no target and has no entitlement. Run rows (`runs-<id>.jsonl`) already tell a refresh-button run (`trigger: intent`, ExtensionLane) from a reload (`system`); a Shortcuts reload (RefreshWidgetsIntent) runs nothing in the extension and shows as `system`, so `shortcut` (reserved in RunTrigger) is never written.
 
-**Added (T-0011).** `Shared/SensorProbe.swift`, in the same two builds as `lane-rest.jsonl` (gate build, forced Simulator run): one row per process per step in the App Group's `sensors.jsonl`, `rest` at getTimeline's top and `intent` at RefreshWidgetIntent's perform, with process, bundle, pid, battery level (null when unknown) and state, Low Power Mode, thermal state, and `protected_data` (a FileProtectionType.complete file: `unreadable` while locked). Each row lists `not_probed`. RefreshWidgetsIntent's perform appends a `{"step": "shortcut_reload", "t": ...}` row on every call (item 5 below, done here). Export measurements copies it; the manifest names it missing when absent. Unit tests: `SensorProbeTests`, `MeasurementExportTests`.
+**Added (T-0011).** `Shared/SensorProbe.swift`, in the same two builds as `lane-rest.jsonl` (gate build, forced Simulator run): one row per process per step in the App Group's `sensors.jsonl`, `rest` at getTimeline's top and `intent` at RefreshWidgetIntent's perform, with process, bundle, pid, battery level (null when unknown) and state, Low Power Mode, thermal state, and `protected_data` (a FileProtectionType.complete file: `unreadable` while locked). Each row also has `protection_class` (T-5058): that file's class as the file system reports it (`.protectionKey`'s raw value, `NSFileProtectionComplete` on a phone), null where none is reported. The Simulator has no data protection, so a build that lost the flag passed every unit test (T-4928 M1); the write options are now one constant, `SensorProbe.lockProbeWriteOptions`, and `testTheLockProbeIsWrittenWithCompleteProtection` is red without `.completeFileProtection`. Each row lists `not_probed`. RefreshWidgetsIntent's perform appends a `{"step": "shortcut_reload", "t": ...}` row on every call (item 5 below, done here). Export measurements copies it; the manifest names it missing when absent. Unit tests: `SensorProbeTests`, `MeasurementExportTests`.
 
-**What reading it answers.** Battery in the extension: a non-null level in an extension `rest` row. Locked against unlocked: rows with `protected_data` `unreadable` against `readable`, from the same phone. An intent run's process: the `intent` row's bundle (app or extension, by iOS version, RefreshTapRule).
+**What reading it answers.** Battery in the extension: a non-null level in an extension `rest` row. Locked against unlocked: rows with `protected_data` `unreadable` against `readable`, from the same phone, and only where `protection_class` reads `NSFileProtectionComplete`; any other class or null means `readable` says nothing about the lock. An intent run's process: the `intent` row's bundle (app or extension, by iOS version, RefreshTapRule).
 
 **Not probed, and the spec for the build line that adds it.** Each needs a purpose string in the extension's own Info.plist first: a bundle that references these APIs without one is the upload's risk (App Store Connect's missing-purpose-string check, recalled, unchecked; the internal upload is the check). The strings are user copy (Maren), the same words as the app's.
 1. Pedometer and motion activity: `CMPedometer.authorizationStatus()`, `isStepCountingAvailable()`, `CMMotionActivityManager.isActivityAvailable()`. Only when the status reads authorized (granted in the app by a script's pedometer call): one `queryPedometerData(from: start of today, to: now)`, bounded at 3 s; the row records `answered`, the error's domain and code, or `no answer within 3 s`, and the milliseconds. Never the count. Before the query, an install-once marker in the App Group; a marker with no result row means the query killed the process, and it is never tried again, so a crash costs one process of T-4282's numbers.
@@ -140,6 +140,76 @@ No device numbers yet. They come from the Investors' Settings > Export measureme
 3. Location: `CLLocationManager` `authorizationStatus`, `accuracyAuthorization`, `isAuthorizedForWidgetUpdates`; no fix asked for. It needs `NSWidgetWantsLocation` and the when-in-use string in the extension, which T-0053 adds; ride on T-0053.
 4. HealthKit: not probed and not asked for; out of 1.0 (ops/decisions/2026-11-18-t4841-healthkit.md).
 5. Done in T-0011 (`SensorProbe.recordShortcutReload`, test `testEveryShortcutReloadIsARow`). Shortcuts reloads: RefreshWidgetsIntent's perform appends one `{"step": "shortcut_reload", "t": ...}` row per call (not once per process), so reloads it asked for can be counted against the extension's `system` rows that follow.
+
+## 9. Release build, frozen modules, zip default (T-0213, 2026-11-23, Simulator only)
+
+Idris, runs 8:10-8:21 AM ET, built from main at b52edd9c15 (this worktree, clean). Simulator only; the device run (T-0008, T-4282's gate build) still decides. A per-task iPhone 17e Simulator ("T0213 iPhone 17e"), iOS 27.0, arm64 only (`ONLY_ACTIVE_ARCH=YES`). Release built with `PW_EDITOR_BENCH=YES`, the legal-links check's switch for a non-archive bench build (T-0497); it is not a shippable build. Driver and raw lines: `pywidget/ios/bench/t0213/` (`run.sh`, `frozen_probe.c`, `*.jsonl`, `size-*.txt`; `summary.py` prints the medians below). The driver and probe are from a 2026-11-02 run of the same task that was never merged (<span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">parked</span> at refs/archive/parked/b/20261102-084136-20620, built from d5e3dc89); its figures are quoted below only as "11-02" for comparison.
+
+**Zip default.** Already in main: `STDLIB_MODE: zip` in `project.yml`, base and Release (f4934e8752, T-0052, 2026-10-27). Both builds read `zip` back from the bundle's `python/STDLIB_MODE`; `python315.zip` is 11,081,068 B, the same as on 11-02. Nothing to flip. The board line's "project.yml says full" was written before T-0052 landed.
+
+### 9.1 Read the deltas, not the totals
+
+The host was loaded: load average 505 / 224 / 117 (1 / 5 / 15 min) at 8:10 AM, during the Release build, on 8 cores; 180 / 289 / 235 at 8:21 AM. Other sessions were building. "To entry" (process start to the bench's entry) was 2.0-3.6 s, against 0.3 s on 2026-10-25 (section 3) and 1.9-2.1 s on 11-02. That measures the machine. Compare rows with each other, and with section 3 only for memory and Python's own init.
+
+### 9.2 Release against Debug (app, zip, 6 cold launches each, medians, max in brackets)
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 3: 9.2 Release against Debug (app, zip, 6 cold launches each, medians, max in…, scrolls sideways" data-n="2 7 8 9 10" style="--tw:902px" markdown="1">
+
+| config | lazy | to entry ms | Py init ms | script ms | heavy ms | MB before | MB after init | MB peak | MB peak heavy | modules |
+|---|---|---|---|---|---|---|---|---|---|---|
+| Release | no | 2465.8 (3000.6) | 11.3 (24.0) | 27.9 (36.0) | 238.2 (256.5) | 6.9 | 9.8 | 11.5 | 20.3 | 63/218 |
+| Release | yes | 2193.0 (2211.1) | 11.3 (12.2) | 25.8 (27.0) | 119.6 (128.2) | 6.9 | 9.8 | 11.2 | 17.6 | 59/153 |
+| Debug | no | 2063.8 (3565.4) | 10.4 (26.6) | 23.0 (38.1) | 178.3 (269.8) | 7.0 | 9.9 | 11.6 | 20.3 | 63/218 |
+| Debug | yes | 2242.8 (2373.2) | 10.8 (11.6) | 23.6 (27.5) | 113.9 (124.3) | 7.0 | 9.9 | 11.3 | 17.7 | 59/153 |
+
+</div>
+
+
+No errors in any of the 24 lines; every heavy import loaded.
+
+- **Release changes nothing on the Python side**, as on 11-02. Init and memory are the same within noise (memory within 0.1 MB). The interpreter is the same prebuilt `Python.framework` in both; only our Swift compiles differently. Release's slower heavy set (238 against 178 ms) is not a Release cost: it is pure Python in the same framework, and the run-to-run spread on this host is wider than the gap (the Debug max is 270 ms). I don't claim either direction.
+- **Lazy imports hold up**: the heavy set 238 -> 120 ms and 20.3 -> 17.6 MB peak (Release); 178 -> 114 ms and 20.3 -> 17.7 MB (Debug). On 11-02: 157 -> 96 ms, 20.2 -> 17.4 MB. The memory saving (2.6-2.7 MB) repeats; the times are slower today on both sides, which the load explains as well as anything in the app.
+- **Memory before Python** is 6.9 MB (6.8 on 11-02, 5.1 on 10-25); peak after the heavy set 20.3 MB (20.2). The app's launch cost hasn't moved since 11-02.
+
+### 9.3 Bundle (arm64 Simulator, zip; `du -sk`, MB = KiB/1024)
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 4: 9.3 Bundle (arm64 Simulator, zip; du -sk, MB = KiB/1024), scrolls sideways" data-n="2 3 4 5 6" style="--tw:763px" markdown="1">
+
+| config | .app | python/ | Frameworks/ (52) | of which Python.framework | PlugIns/ | our binary |
+|---|---|---|---|---|---|---|
+| Release | 68.9 | 10.8 | 28.1 | 12.0 | 2.3 | `PyWidget` 12.7 |
+| Debug | 85.9 | 10.8 | 28.1 | 12.0 | 7.4 | `PyWidget.debug.dylib` 24.2 |
+| Release, 11-02 | 61.5 | 10.8 | 28.1 | 12.0 | 1.6 | `PyWidget` 7.3 |
+
+</div>
+
+
+- Python's part (`python/` and `Frameworks/`, 38.9 MB) is unchanged since 11-02. The Release app grew 7.4 MB in three weeks, all of it our code: the `PyWidget` binary 7.3 -> 12.7 MB and `PlugIns` 1.6 -> 2.3 MB. Since d5e3dc89, 294 commits touched `App/` and `Shared/` (T-0642's plain targets for the editor engine among them); which of them grew the binary is not broken down here.
+- Not the App Store size: no thinning, no device slice, no archive. The figure the store page states comes from App Store Connect's own size report for an uploaded build (T-4192's Done-when), not from this table.
+
+### 9.4 Frozen modules (A/B on `PyConfig.use_frozen_modules`)
+
+Method as on 11-02: `frozen_probe.c`, a bare process (no UIKit, no SwiftUI) linked against the Release bundle's own `Python.framework`, started with `xcrun simctl spawn`. It initializes CPython as `Shared/PythonRuntime.swift` does (isolated config, the bundle's `python/` as home, no bytecode writes; checked unchanged at b52edd9c15) and changes one field, `use_frozen_modules`. Then it runs `App/Bench.swift`'s tiny and heavy scripts. 6 runs per setting, interleaved on/off. The probe reads the switch back by counting the modules whose `__spec__.origin` is `frozen`.
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 5: 9.4 Frozen modules (A/B on PyConfig.use_frozen_modules), scrolls sideways" data-n="1 2 7 8 9 11" style="--tw:1092px" markdown="1">
+
+| frozen | n | Py init ms | script ms | to result ms | heavy ms | MB after init | MB peak | MB peak heavy | frozen modules loaded (init/tiny/heavy) | frozen available |
+|---|---|---|---|---|---|---|---|---|---|---|
+| on | 6 | 9.4 (46.7) | 12.4 (37.5) | 239.4 (364.5) | 111.7 (292.1) | 6.8 | 8.0 | 16.9 | 14/15/21 | 29 |
+| off | 6 | 11.0 (14.7) | 12.0 (13.9) | 233.3 (238.1) | 108.4 (112.5) | 6.9 | 8.1 | 17.0 | 3/3/5 | 3 |
+
+</div>
+
+
+- **Frozen modules save about 1.6 ms of init and nothing else measurable** (11-02: about 2 ms). Per-run init, on: 46.7 (the first run, first touch of the framework), 9.5, 9.3, 9.0, 13.6, 9.2; off: 14.7, 10.6, 11.7, 11.1, 11.0, 10.7. Script, heavy imports and memory are the same within noise and 0.1 MB. With the switch off, 3 modules stay frozen (the import system's bootstrap), which can't be turned off.
+- **Is it on in the shipped app?** Still not read back from inside the app: `PythonRuntime.swift` doesn't set the field, so the app runs with CPython's default, which turns it off only for a run from a source tree [recalled, unchecked]. Setting `use_frozen_modules = 1` explicitly is a one-line change for about 2 ms; it can ride with the next change to `PythonRuntime.swift`, as 11-02 said.
+
+### 9.5 What changes in the recommendation
+
+Nothing in section 5. Release doesn't change the runtime's cost; frozen modules are a rounding error; zip is the default and has been since 10-27. The lever that moves time and memory is still the import set (lazy imports: about 60-120 ms and 2.6 MB on the heavy set). The bundle's growth since 11-02 is our own binary, not Python, so the next size work is there and in the device-thinned figure, not in the stdlib. Open: the device run (T-0008) and the store's own size figure for T-4192.
 {% endraw %}
 
 </div>

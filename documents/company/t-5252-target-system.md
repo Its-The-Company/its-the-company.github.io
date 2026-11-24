@@ -423,6 +423,9 @@ will reset if they hit their limits, so their should be no difference between th
   about 3 points ahead; 49 points left in about 44 hours, about 5.6 a 5-hour window. On track, so no #325 post.
   Again at 6:21 AM: b still at 51% (no newer reading since 3:45 AM, its 5-hour window full) against a line of 48%,
   about 3 points ahead; 49 points left in about 44 hours, about 5.6 a 5-hour window. On track, so no #325 post.
+  Again at 3:35 PM: b at 56% (read 3:24 PM) against a line of 59%, about 3 points behind; 44 points left in about
+  34 hours, about 6.4 a 5-hour window (1.3 an hour), but b gained only 5 points since 3:45 AM; its 5-hour window is
+  at 23%, and its three lanes each hold a finished branch waiting for the merge road. Behind, so posted on #325 (c7113296129).
 
 ## Progress
 
@@ -550,6 +553,21 @@ drain look outside a session, and lane records that wait for the sync replayed f
   Asked on T-5431 whether one can be read or recorded before 2:00 AM without load on the Mac mini; if not, that
   row is reported as not measured.
 - *What waits on the Investors.* The two questions in "What needs the Investors' word" (sessions; `retired/`).
+
+### The new road's day, restarted (Operator, 11-23 6:10 PM ET)
+
+- *Why.* On day 1 (new road) finished work did not reach main: workers' notes and work never landed (T-5675, fixed
+  8:40 AM), copies that changed the board were refused (T-5688), lanes waited behind one MacBook check (T-5700),
+  guard tests failed under load (T-5713), main-moved lands were held for hours (T-5698), and lane b3 lost the road
+  for six hours (T-5739). Evan (#325 c7110045864, 1:21 PM): keep the new road and restart its day once T-5698 and
+  T-5691 land. Evan (c7113589110, 3:48 PM): only the landing fixes run until merges land first try (the freeze
+  file's listed lines). Jeremy (c7116551381, 6:06 PM, option B of c7116478707): all work restarts when T-5691
+  lands; the comparison clock starts after one full hour in which finished work lands on the first try (a land
+  stopped by its own failing test or a missing review does not count against it).
+- *To restart work.* Put the listed fix IDs back on ops/trim_freeze.json "not_listed" (the FIXES ONLY note there
+  names them); they stay first through ops/merge_first.txt.
+- *To start the clock.* Record the start time here and on #325, with the hour's lands from ops/metrics/merge.jsonl;
+  days then run 24 h each from that start, new road first.
 {% endraw %}
 
 </div>

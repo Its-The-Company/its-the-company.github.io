@@ -5,7 +5,7 @@ section: "documents"
 description: "Idris, Mon 11-16. Drafted here, then posted by the main session as #319 (task packet: no worker posts to GitHub)."
 ---
 <div class="crumbs" role="navigation" aria-label="Back"><a class="back" href="{{ '/documents/operations/' | relative_url }}">← Operations</a><a href="{{ '/documents/company/t-3765-device-check.html' | relative_url }}" rel="bookmark">Permanent link</a></div>
-<div class="page-head"><div class="kicker"><span class="kind blue">Plan</span><span>Day 28 · Wed Nov 18</span><span><code>ops/plans/T-3765-device-check.md</code></span></div><h1>T-3765: the phone check of a real widget tap on build 7 (draft for the main session)</h1><div class="byline"><img class="avatar" src="{{ '/assets/portraits/idris.svg' | relative_url }}" alt="Idris" title="Idris"><span>By <a href="{{ '/cast/idris.html' | relative_url }}">Idris</a>, Senior iOS engineer</span></div></div>
+<div class="page-head"><div class="kicker"><span class="kind blue">Plan</span><span>Day 33 · Mon Nov 23</span><span><code>ops/plans/T-3765-device-check.md</code></span></div><h1>T-3765: the phone check of a real widget tap on build 7 (draft for the main session)</h1><div class="byline"><img class="avatar" src="{{ '/assets/portraits/idris.svg' | relative_url }}" alt="Idris" title="Idris"><span>By <a href="{{ '/cast/idris.html' | relative_url }}">Idris</a>, Senior iOS engineer</span></div></div>
 
 <style>.doc-body{overflow-wrap:break-word}.doc-src{overflow-wrap:anywhere}.tbl[data-n~="1"] tr>:nth-child(1),.tbl[data-n~="2"] tr>:nth-child(2),.tbl[data-n~="3"] tr>:nth-child(3),.tbl[data-n~="4"] tr>:nth-child(4),.tbl[data-n~="5"] tr>:nth-child(5),.tbl[data-n~="6"] tr>:nth-child(6),.tbl[data-n~="7"] tr>:nth-child(7),.tbl[data-n~="8"] tr>:nth-child(8),.tbl[data-n~="9"] tr>:nth-child(9),.tbl[data-n~="10"] tr>:nth-child(10),.tbl[data-n~="11"] tr>:nth-child(11),.tbl[data-n~="12"] tr>:nth-child(12){min-width:0;overflow-wrap:normal}.tbl[data-o="1"] tr>:nth-child(1),.tbl[data-o="2"] tr>:nth-child(2),.tbl[data-o="3"] tr>:nth-child(3),.tbl[data-o="4"] tr>:nth-child(4),.tbl[data-o="5"] tr>:nth-child(5),.tbl[data-o="6"] tr>:nth-child(6),.tbl[data-o="7"] tr>:nth-child(7),.tbl[data-o="8"] tr>:nth-child(8),.tbl[data-o="9"] tr>:nth-child(9),.tbl[data-o="10"] tr>:nth-child(10),.tbl[data-o="11"] tr>:nth-child(11),.tbl[data-o="12"] tr>:nth-child(12){position:sticky;right:0;overflow-wrap:normal;background:var(--page);box-shadow:-1px 0 var(--line),-9px 0 8px -8px var(--sh)}</style>
 <div class="doc-body" markdown="1">
@@ -69,21 +69,29 @@ the company's own Release Simulator measure, board line T-4638, and the steps be
 
 **iPad:** the Investors have no iPad and none is bought (ruling 6:27 PM ET on 11-14, #299: every iPad step of a phone
 proof runs in the Simulator, and the closing note says so). So the iPad part, Windowed Apps with two windows, is the
-company's own Simulator step and is **not** asked of the Investors below. On the Simulator, the iPad part ran on the Simulator on 11-16 and **found a fault**, so #41 is not told the iPad tap is fixed.
+company's own Simulator step and is **not** asked of the Investors below. On the Simulator, the iPad part ran on 11-16 and **found a fault**, fixed and seen on the Simulator on 11-23 (T-4615, below).
 Windowed Apps was set in Settings and read back; a second window (tip_splitter.py) was opened; the widget was tapped
 cold and backgrounded. Each tap opened the right screen (Countdown's Events page, the script's main.py), but:
 
 - **Backgrounded, two windows open, both taps made a third window** instead of using an open one: after the
-  Countdown tap the app had a new Gallery window beside its two Console windows; after the script tap, a new main.py
-  window beside the two it had. That is the very thing T-3667's fix (`handlesExternalEvents(preferring:)`) was meant to
+  Countdown tap the app had a third window (Gallery, Console, Console where Console, Console had been); after the
+  script tap, a third window (main.py, Console, main.py where Console, main.py had been). The printed lines show the
+  count, not which window is new (T-4698 L1); T-4615's red run prints each window's editor text to say that. That is the very thing T-3667's fix (`handlesExternalEvents(preferring:)`) was meant to
   stop, and its Debug test (a link opened through the Debug-only URL scheme) passes: WidgetKit's real tap in Release
   takes a path that test does not cover, which is review finding F4's worry, now seen.
+- **Fixed and seen (T-4615, 11-23):** the path is SpringBoard's icon launch carrying the widget's link as an action, which
+  no open window matching `"pywidget:"` accepted (T-4890's SceneResolution finding); IDEScene now prefers and allows
+  `"*"` (T-4890, 7a7fb27930). On the iPad Simulator in Windowed Apps, Release: with `"pywidget:"` put back for one run
+  the backgrounded taps made a third window, and the editor lines show it is new (the two windows from before keep
+  their files, the third is the Gallery, then the tapped script's main.py): `ipad-run-windows-t4615-red.txt`. With
+  `"*"` as on main, 2 windows after each backgrounded tap and 0 failures; the premade tap reused the dice_roller
+  window, the script tap the Tip splitter one: `ipad-run-windows-t4615-green.txt`.
 - **Cold:** after the app was ended, the system brought back one window, not two, so the cold tap met one window and
   added none. The two-window cold case was not reached on the Simulator.
 - Evidence: `pywidget/docs/screenshots/t3765/ipad-*.png` (each shot is the front window only) and
   `ipad-run-windows.txt`, the window-by-window count the test printed.
-- The fix is a new board line, T-4615 ("Widget taps on iPad reuse an open window", P1); the iPad tap is "not confirmed" until that line's test passes on the iPad
-  Simulator, as the ruling says it must.
+- The fix was board line T-4615 ("Widget taps on iPad reuse an open window", P1); its test passed on the iPad Simulator
+  on 11-23 (above), as the ruling says it must. Full Screen Apps and Stage Manager are not run (T-5283).
 
 ## The section to post (its own request, or a comment on T-4536's)
 
@@ -95,8 +103,8 @@ Since build 6, tapping a widget should open that widget's own screen in the app;
 its own settings page (for Countdown: Events), and your own script widget opens its file. Before this fix (your
 report on #41), every tap opened the Console. Our tests pass, and we checked the same build setup on the Mac's iPhone Simulator, but only a real
 iPhone with the TestFlight build shows whether iOS hands the tap to the app there. We will not tell you the fix works
-until this check passes. (iPad is not part of this: on the iPad Simulator the taps open the right screen but can open
-an extra window, which we are fixing first.)
+until this check passes. (iPad is not part of this: on the iPad Simulator the taps open the right screen; an extra
+window they also opened is fixed in our code and was seen fixed on the iPad Simulator on 11-23.)
 
 What is needed: about 10 minutes on the iPhone, with build 7 installed from TestFlight (version 0.1, build 7). Please
 delete any other PyWidget copy first, so the app the taps open is the TestFlight one.

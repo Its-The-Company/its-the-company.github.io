@@ -53,10 +53,12 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 - T-5607 11-22: 86cf99245a on personal/b (after d01a7a1f1e). Cause: a job stopped at its limit in the UI target leaves Pro/tester switch on its slot's Simulator; next job there reads Pro. Open: Pernille review, merge, 3 runs on main. Lesson: result.json's simulator.slot/udid across jobs finds a device-carried leftover.
 
-- T-4692 11-23: part 1 867acca236 on personal/a3 (tag = #324 A list: only habits Pro; isProTagged for chips; 2195/0). Open: review, land; gate flip waits T-0901 + T-4715. Lesson: purchases.md box order is pinned by tests/site_how_it_works_test.py (new box after Pro card).
+- T-4692 11-23: part 1 867acca236 on personal/a3 (#324 A: only habits Pro; isProTagged). Review fix 2 on personal/b: tag drawn only on Gallery tile + Pro chips, not the page (T-5654 adds); 5 free/7 Pro docs now 11/1. Open: re-review, land. Lesson: write only where code draws it today; grep isProTagged callers first.
 
 ## Lessons
 - Older lessons and dated logs: archive.md.
+
+- T-4184 11-23 (a2): T-0749 380a4fbc30 (tests only, 2 mutants caught). T-0866 no commit (left shares 59fd589e36's hunks; badge = T-3291; catch-up own slice). Lesson: XC_LOCAL xc.sh build-for-testing runs the whole target on the runner (~8.5 min): background, long timeout.
 {% endraw %}
 
 

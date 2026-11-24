@@ -286,6 +286,11 @@ match on the folded name, largest population first, at most 20, each labelled "n
 `cities.tsv`, counted 2026-11-15). No hits: `page.place.none`. The search makes no network request and needs no
 permission.
 
+The bundled city list was built from Natural Earth 5.1.2 and **tzdata 2026f** (line 1 of `cities.tsv`; rebuilt on
+2026f by T-5262 on 2026-11-22, the zone table unchanged from 2026b). The host tests hold line 1 to this name, not to
+the build machine's current tzdata, so a macOS time zone update does not turn main red; rebuild with
+`pywidget/tools/city_list.py` and change this name together.
+
 Where the premade allows it, a **current location** is offered:
 - Sun: it is the `use_current` toggle on the Page itself, not a row here (s3.2).
 - Distance: a row "Use Current Location" above the hits saves the last When In Use fix as a place, rounded (s2.2).

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-24T14:40:13.963159+00:00",
+ "at": "2026-11-24T14:43:44.953610+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -335,7 +335,7 @@
    "task": "[build] T-4183 Gallery tour examples",
    "model": "",
    "started": "2026-11-24T14:21:14.744Z",
-   "seconds": 1139,
+   "seconds": 1350,
    "finished": null
   }
  ],
@@ -344,7 +344,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 740,
+  "runnable_count": 739,
   "blocked_count": 2
  },
  "meter": {
@@ -393,7 +393,7 @@
   "week_pct": 89.08,
   "usage_pct": 74.2,
   "work_pct": 97.8,
-  "read_at": "2026-11-24T14:40:00+00:00",
+  "read_at": "2026-11-24T14:43:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -440,7 +440,7 @@
   }
  ],
  "disk": {
-  "free_gb": 36,
+  "free_gb": 38,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -449,14 +449,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-24T09:36:00-05:00",
+   "at": "2026-11-24T09:42:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-24T09:40:00-05:00",
+  "at": "2026-11-24T09:43:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -608,6 +608,11 @@
   "done": [
    {
     "w": "Operator",
+    "t": "A reviewed app change that is moved onto a newer main keeps its review while its patch stays...",
+    "at": "2026-11-24T09:40:00-05:00"
+   },
+   {
+    "w": "Operator",
     "t": "The merge script can now send the tool suites to the MacBook when a switch is turned on, and the...",
     "at": "2026-11-24T09:16:00-05:00"
    },
@@ -615,22 +620,22 @@
     "w": "Operator",
     "t": "An app change is no longer refused after all its checks pass just because another landing...",
     "at": "2026-11-24T09:16:00-05:00"
-   },
-   {
-    "w": "Idris+pernille",
-    "t": "A widget whose saved state holds a number too big for the phone no longer crashes the app or...",
-    "at": "2026-11-24T09:07:00-05:00"
    }
   ],
   "count": {
-   "next": 740,
+   "next": 739,
    "wait": 2,
    "blocked": 0,
    "you": 2
   },
   "fin": {
-   "n": 0,
-   "rows": []
+   "n": 1,
+   "rows": [
+    [
+     "T-5801",
+     "A review carries over a..."
+    ]
+   ]
   }
  },
  "qr": [
@@ -672,9 +677,9 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-24T14:39:57Z",
+  "at": "2026-11-24T14:43:44Z",
   "s": {
-   "T-2513": [
+   "T-4239": [
     "mergetest",
     "iPhone tests on the MacBook",
     null
@@ -682,20 +687,21 @@
    "T-5047": [
     "merging",
     "Mac tests at the main gate",
-    1795526757326
+    1795526744953
    ]
   },
   "nm": {
-   "T-2513": "Completion sees the same modules during a run",
+   "T-4239": "Tidy the five small points from the refresh review",
    "T-5047": "Fix the token test's No view for this size card"
   },
   "wk": {
-   "T-2513": "Idris",
-   "T-5047": "Idris"
+   "T-4239": "Idris",
+   "T-5047": "Idris",
+   "T-5801": "Operator"
   }
  },
  "ln": {
-  "at": "2026-11-24T14:39:57Z",
+  "at": "2026-11-24T14:43:44Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -711,9 +717,9 @@
     "inline": null,
     "conflicted": null,
     "failed": null,
-    "held": 1751,
+    "held": 1755,
     "retry": null,
-    "parked": 750
+    "parked": 754
    },
    "cur": [],
    "ld": [
@@ -723,27 +729,29 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-24T14:39:52Z",
-    "ld": 17.05,
+    "at": "2026-11-24T14:43:53Z",
+    "ld": 11.7,
     "c": 8,
-    "sb": 0,
+    "sb": 1,
     "dk": [
-     35.9,
+     38.1,
      228.3
     ],
     "ss": [
      168.5,
      953.7
     ],
-    "sn": []
+    "sn": [
+     "pywidget-wk-check"
+    ]
    },
    "macbook": {
-    "at": "2026-11-24T14:31:39Z",
-    "ld": 0.69,
+    "at": "2026-11-24T14:42:48Z",
+    "ld": 3.29,
     "c": 12,
     "sb": 0,
     "dk": [
-     345.1,
+     346.1,
      926.4
     ],
     "sn": []
@@ -776,11 +784,11 @@
      "open": true
     }
    },
-   "at": "2026-11-24T14:40:13+00:00"
+   "at": "2026-11-24T14:43:44+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-24T14:40:07+00:00"
+   "at": "2026-11-24T14:43:44+00:00"
   }
  },
  "operators": [
@@ -797,8 +805,6 @@
    "w": "Operator",
    "a": "Evan's Account",
    "sr": 1,
-   "m": "opus",
-   "e": "high",
    "t": "Work session \u2013 1 task",
    "at": "2026-11-24T08:25:08-05:00"
   },
@@ -806,8 +812,6 @@
    "w": "Operator",
    "a": "Jeremy's Account",
    "sr": 1,
-   "m": "opus",
-   "e": "high",
    "t": "Work session \u2013 1 task",
    "at": "2026-11-24T07:14:45-05:00"
   }
@@ -821,6 +825,7 @@
   "lane_next",
   "queue_text",
   "task_done",
+  "fin_short",
   "task_title",
   "done_text",
   "task_open",
@@ -831,10 +836,10 @@
   "main": 1,
   "lanes": 2,
   "total": 3,
-  "at": "9:40 AM",
+  "at": "9:43 AM",
   "why": "",
-  "at_iso": "2026-11-24T14:40:00+00:00",
+  "at_iso": "2026-11-24T14:43:00+00:00",
   "started": "9:18 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 1, started 9:18 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 9:40 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 1, started 9:18 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 9:43 AM ET</p></section>"
  }
 }

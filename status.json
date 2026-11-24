@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-24T12:44:30.757247+00:00",
+ "at": "2026-11-24T12:47:40.096077+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -331,22 +331,6 @@
       "at": 1795438199
      }
     ]
-   },
-   {
-    "t": "T-2076",
-    "name": "Build the site stages behind off-by-default switches",
-    "w": "Odalys",
-    "acct": "Personal b",
-    "steps": [
-     {
-      "s": "claimed",
-      "at": 1795437990
-     },
-     {
-      "s": "worker",
-      "at": 1795437990
-     }
-    ]
    }
   ],
   "done": [
@@ -364,6 +348,22 @@
     "end": "failed",
     "end_at": 1795380074,
     "why": "tests failed"
+   },
+   {
+    "t": "T-5399",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "failed",
+    "end_at": 1795367452,
+    "why": "tests failed"
+   },
+   {
+    "t": "T-5399",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "failed",
+    "end_at": 1795365128,
+    "why": "tests failed"
    }
   ],
   "landed": 1,
@@ -375,7 +375,7 @@
    "task": "[build] T-4239 fix review finding",
    "model": "opus",
    "started": "2026-11-24T12:08:21.801Z",
-   "seconds": 2168,
+   "seconds": 2358,
    "finished": null,
    "effort": "high"
   }
@@ -467,7 +467,7 @@
   "week_pct": 86.23,
   "usage_pct": 77.5,
   "work_pct": 97.8,
-  "read_at": "2026-11-24T12:44:00+00:00",
+  "read_at": "2026-11-24T12:47:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -529,7 +529,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-24T07:44:00-05:00",
+  "at": "2026-11-24T07:47:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -748,17 +748,17 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-24T12:44:30Z",
+  "at": "2026-11-24T12:47:40Z",
   "s": {
    "T-4239": [
     "testq",
     "1st for a Simulator",
-    1795522950757
+    1795522960096
    ],
    "T-5003": [
     "testq",
     "2nd for a Simulator",
-    1795523670757
+    1795523680096
    ]
   },
   "nm": {
@@ -771,7 +771,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-24T12:44:30Z",
+  "at": "2026-11-24T12:47:40Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -787,9 +787,9 @@
     "inline": null,
     "conflicted": null,
     "failed": null,
-    "held": 1636,
+    "held": 1639,
     "retry": null,
-    "parked": 634
+    "parked": 638
    },
    "cur": [],
    "ld": [
@@ -799,12 +799,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-24T12:44:35Z",
-    "ld": 2.91,
+    "at": "2026-11-24T12:47:41Z",
+    "ld": 2.51,
     "c": 8,
     "sb": 1,
     "dk": [
-     32.8,
+     30.3,
      228.3
     ],
     "ss": [
@@ -854,11 +854,11 @@
      "open": true
     }
    },
-   "at": "2026-11-24T12:44:30+00:00"
+   "at": "2026-11-24T12:47:40+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-24T12:44:30+00:00"
+   "at": "2026-11-24T12:47:27+00:00"
   }
  },
  "operators": [
@@ -910,10 +910,10 @@
   "main": 1,
   "lanes": 2,
   "total": 3,
-  "at": "7:44 AM",
+  "at": "7:47 AM",
   "why": "",
-  "at_iso": "2026-11-24T12:44:00+00:00",
+  "at_iso": "2026-11-24T12:47:00+00:00",
   "started": "7:03 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 1, started 7:03 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 7:44 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 1, started 7:03 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 7:47 AM ET</p></section>"
  }
 }

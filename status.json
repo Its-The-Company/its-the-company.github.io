@@ -1,10 +1,10 @@
 {
  "schema": 1,
- "at": "2026-11-24T12:03:17.564851+00:00",
+ "at": "2026-11-24T12:06:27.287494+00:00",
  "session": {
-  "active": false,
-  "kind": "",
-  "started": null,
+  "active": true,
+  "kind": "coord",
+  "started": "2026-11-24T07:03:21-05:00",
   "coord": {
    "active": true,
    "started": 1795341309,
@@ -369,8 +369,54 @@
   "landed": 1,
   "failed": 4
  },
- "workers": [],
- "who": "",
+ "workers": [
+  {
+   "name": "pernille",
+   "task": "[review] T-4239",
+   "model": "opus",
+   "started": "2026-11-24T12:06:02.002Z",
+   "seconds": 25,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "pernille",
+   "task": "[review] T-4681",
+   "model": "opus",
+   "started": "2026-11-24T12:06:07.662Z",
+   "seconds": 19,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "pernille",
+   "task": "[review] T-5479",
+   "model": "opus",
+   "started": "2026-11-24T12:06:13.363Z",
+   "seconds": 13,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "pernille",
+   "task": "[review] T-5524",
+   "model": "opus",
+   "started": "2026-11-24T12:06:18.914Z",
+   "seconds": 8,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "pernille",
+   "task": "[review] T-4751",
+   "model": "opus",
+   "started": "2026-11-24T12:06:24.666Z",
+   "seconds": 2,
+   "finished": null,
+   "effort": "high"
+  }
+ ],
+ "who": "Pernille x5",
  "recent": [],
  "queue": {
   "runnable": [],
@@ -419,12 +465,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-24T07:17:49-05:00",
+ "next_tick": null,
  "personal": {
   "week_pct": 86.23,
   "usage_pct": 77.5,
   "work_pct": 97.8,
-  "read_at": "2026-11-24T12:03:00+00:00",
+  "read_at": "2026-11-24T12:06:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -454,14 +500,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-24T07:02:00-05:00",
+   "at": "2026-11-24T07:05:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-24T07:03:00-05:00",
+  "at": "2026-11-24T07:06:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -469,15 +515,23 @@
    "b": "midnight"
   }
  },
- "next_tick_why": "last_tick",
- "idle": {
-  "since": "2026-11-23T23:17:18-05:00",
-  "minutes": 465,
-  "why": "the last tick ended without starting a session",
-  "healed": []
+ "next_tick_why": "session",
+ "idle": null,
+ "pool": {
+  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 8 (held: too few lands in 3 hours to judge a raise)",
+  "n": 8,
+  "at": "2026-11-24T07:02:49.591076-05:00"
  },
- "pool": null,
  "lanes": [
+  {
+   "name": "Pernille",
+   "state": "running",
+   "task": "[review] T-4239",
+   "model": "opus",
+   "since": "2026-11-24T12:06:02.002Z",
+   "next": [],
+   "effort": "high"
+  },
   {
    "name": "Odalys",
    "state": "next",
@@ -490,14 +544,6 @@
    "name": "Idris",
    "state": "next",
    "task": "Idris, P0, from T-4964 (made by tools/runner_watch.py...",
-   "model": null,
-   "since": null,
-   "next": []
-  },
-  {
-   "name": "Pernille",
-   "state": "next",
-   "task": "Pernille, P0, Investor an Investor c6965124089 (7:26 PM...",
    "model": null,
    "since": null,
    "next": []
@@ -528,7 +574,59 @@
   }
  ],
  "tasks": {
-  "run": [],
+  "run": [
+   {
+    "w": "Pernille",
+    "k": "review",
+    "t": "Tidy the five small points from the refresh review",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-24T12:06:02.002Z",
+    "o": "c",
+    "task": "T-4239"
+   },
+   {
+    "w": "Pernille",
+    "k": "review",
+    "t": "Premades default to Paper in light and Studio in dark",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-24T12:06:07.662Z",
+    "o": "c",
+    "task": "T-4681"
+   },
+   {
+    "w": "Pernille",
+    "k": "review",
+    "t": "T-5479",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-24T12:06:13.363Z",
+    "o": "c",
+    "task": "T-5479"
+   },
+   {
+    "w": "Pernille",
+    "k": "review",
+    "t": "Make the widget's Debug ask record say what it saw",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-24T12:06:18.914Z",
+    "o": "c",
+    "task": "T-5524"
+   },
+   {
+    "w": "Pernille",
+    "k": "review",
+    "t": "Make the Mac network stand-in refuse what phones refuse",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-24T12:06:24.666Z",
+    "o": "c",
+    "task": "T-4751"
+   }
+  ],
+  "src": "plan",
   "open": [
    {
     "w": "Odalys",
@@ -623,6 +721,10 @@
    "wait": 2,
    "blocked": 0,
    "you": 2
+  },
+  "fin": {
+   "n": 0,
+   "rows": []
   }
  },
  "qr": [
@@ -664,17 +766,17 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-24T12:03:17Z",
+  "at": "2026-11-24T12:06:11Z",
   "s": {
    "T-5777": [
     "mergeq",
     "1st to merge",
-    1795493297564
+    1795493291307
    ],
    "T-5773": [
     "mergeq",
     "2nd to merge",
-    1795493777564
+    1795493771307
    ]
   },
   "nm": {
@@ -687,7 +789,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-24T12:03:17Z",
+  "at": "2026-11-24T12:06:11Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -700,12 +802,12 @@
    },
    "m": {
     "checking": null,
-    "inline": 471,
+    "inline": 474,
     "conflicted": null,
     "failed": null,
-    "held": 1595,
+    "held": 1598,
     "retry": null,
-    "parked": 726
+    "parked": 729
    },
    "cur": [],
    "ld": [
@@ -715,8 +817,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-24T12:02:37Z",
-    "ld": 0.53,
+    "at": "2026-11-24T12:05:23Z",
+    "ld": 0.77,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -768,36 +870,33 @@
      "open": true
     }
    },
-   "at": "2026-11-24T12:03:17+00:00"
+   "at": "2026-11-24T12:06:27+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-24T12:03:17+00:00"
+   "at": "2026-11-24T12:06:19+00:00"
   }
  },
- "operators": [],
- "reply": {
-  "sent": "2026-11-24T04:09:10Z",
-  "seconds": 108.0
- },
- "inbox": [
+ "operators": [
   {
-   "id": "c7130872629",
-   "state": "received",
-   "position": 1,
-   "eta": "2026-11-24T07:17:49-05:00",
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "Are there any open process..."
+   "w": "Operator",
+   "a": "Main plan",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session",
+   "at": "2026-11-24T07:04:15-05:00"
   }
  ],
+ "reply": {
+  "sent": "2026-11-24T12:02:11Z",
+  "seconds": 123.0
+ },
+ "inbox": [],
  "trimmed": [
   "lane_next",
   "queue_text",
   "task_done",
-  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -805,13 +904,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 0,
+  "main": 5,
   "lanes": 0,
-  "total": 0,
-  "at": "7:03 AM",
-  "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
-  "at_iso": "2026-11-24T12:03:00+00:00",
-  "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 7:03 AM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
+  "total": 5,
+  "at": "7:06 AM",
+  "why": "",
+  "at_iso": "2026-11-24T12:06:00+00:00",
+  "started": "7:03 AM",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 5, started 7:03 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 7:06 AM ET</p></section>"
  }
 }

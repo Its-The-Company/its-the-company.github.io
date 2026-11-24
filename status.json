@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-24T16:36:39.441898+00:00",
+ "at": "2026-11-24T16:39:47.192040+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -372,16 +372,24 @@
  },
  "workers": [
   {
+   "name": "idris",
+   "task": "[build] T-4183 review fixes",
+   "model": "",
+   "started": "2026-11-24T16:38:54.576Z",
+   "seconds": 52,
+   "finished": null
+  }
+ ],
+ "who": "Idris",
+ "recent": [
+  {
    "name": "pernille",
    "task": "[review] T-4183",
    "model": "",
    "started": "2026-11-24T16:20:01.856Z",
-   "seconds": 997,
-   "finished": null
-  }
- ],
- "who": "Pernille",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-24T16:38:24.798000+00:00"
+  },
   {
    "name": "idris",
    "task": "[build] T-4183 Gallery tour examples",
@@ -451,7 +459,7 @@
   "week_pct": 106.32,
   "usage_pct": 74.2,
   "work_pct": 97.8,
-  "read_at": "2026-11-24T16:36:00+00:00",
+  "read_at": "2026-11-24T16:39:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -486,7 +494,7 @@
   }
  ],
  "disk": {
-  "free_gb": 54,
+  "free_gb": 55,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -495,14 +503,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-24T11:36:00-05:00",
+   "at": "2026-11-24T11:38:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-24T11:36:00-05:00",
+  "at": "2026-11-24T11:39:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -519,11 +527,11 @@
  },
  "lanes": [
   {
-   "name": "Pernille",
+   "name": "Idris",
    "state": "running",
-   "task": "[review] T-4183",
+   "task": "[build] T-4183 review fixes",
    "model": null,
-   "since": "2026-11-24T16:20:01.856Z",
+   "since": "2026-11-24T16:38:54.576Z",
    "next": []
   },
   {
@@ -535,9 +543,9 @@
    "next": []
   },
   {
-   "name": "Idris",
+   "name": "Pernille",
    "state": "next",
-   "task": "Idris, P0, from T-4964 (made by tools/runner_watch.py...",
+   "task": "Pernille, P0, Investor an Investor c6965124089 (7:26 PM...",
    "model": null,
    "since": null,
    "next": []
@@ -570,10 +578,10 @@
  "tasks": {
   "run": [
    {
-    "w": "Pernille",
-    "k": "review",
+    "w": "Idris",
+    "k": "build",
     "t": "The Gallery shows, previews and opens every premade",
-    "at": "2026-11-24T16:20:01.856Z",
+    "at": "2026-11-24T16:38:54.576Z",
     "o": "c",
     "task": "T-4183"
    }
@@ -743,100 +751,95 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-24T16:36:39Z",
+  "at": "2026-11-24T16:39:35Z",
   "s": {
    "T-5047": [
     "mergetest",
     "",
-    1795537899441
+    1795537895061
    ],
    "T-0337": [
     "mergetest",
     "",
-    1795537899441
+    1795537895061
    ],
    "T-2097": [
     "mergetest",
     "",
-    1795537899441
+    1795537895061
    ],
    "T-4010": [
     "mergetest",
     "",
-    1795537899441
+    1795537895061
    ],
    "T-4477": [
     "mergetest",
     "",
-    1795537899441
+    1795537895061
    ],
    "T-4286": [
     "mergetest",
     "",
-    1795537899441
+    1795537895061
    ],
    "T-4435": [
     "mergetest",
     "",
-    1795537899441
+    1795537895061
    ],
    "T-0678": [
     "mergetest",
     "",
-    1795537899441
+    1795537895061
    ],
    "T-3765": [
     "mergetest",
     "",
-    1795537899441
+    1795537895061
    ],
    "T-4662": [
     "mergetest",
     "",
-    1795537899441
+    1795537895061
    ],
    "T-4781": [
     "mergetest",
     "",
-    1795537899441
+    1795537895061
    ],
    "T-4635": [
     "mergetest",
     "",
-    1795537899441
+    1795537895061
    ],
    "T-4182": [
     "mergetest",
     "",
-    1795537899441
+    1795537895061
    ],
    "T-5620": [
     "mergetest",
     "",
-    1795537899441
+    1795537895061
    ],
    "T-1119": [
     "mergetest",
     "",
-    1795537899441
+    1795537895061
    ],
    "T-4681": [
     "mergetest",
     "",
-    1795537899441
+    1795537895061
    ],
    "T-5602": [
     "mergetest",
     "",
-    1795537899441
+    1795537895061
    ],
    "T-5365": [
     "mergetest",
-    "",
-    null
-   ],
-   "T-4183": [
-    "testing",
     "",
     null
    ]
@@ -859,8 +862,7 @@
    "T-1119": "Investors answer two App Store Connect questions",
    "T-4681": "Premades default to Paper in light and Studio in dark",
    "T-5602": "Brief for a new look for the app",
-   "T-5365": "Location refresh policy, file and route",
-   "T-4183": "The Gallery shows, previews and opens every premade"
+   "T-5365": "Location refresh policy, file and route"
   },
   "wk": {
    "T-5047": "Idris",
@@ -881,7 +883,6 @@
    "T-4681": "Idris",
    "T-5602": "Maren",
    "T-5365": "Idris",
-   "T-4183": "Idris",
    "T-5800": "Operator",
    "T-5325": "Idris",
    "T-2154": "Idris",
@@ -894,7 +895,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-24T16:36:39Z",
+  "at": "2026-11-24T16:39:35Z",
   "mq": {
    "n": {
     "checking": 17,
@@ -906,13 +907,13 @@
     "parked": 14
    },
    "m": {
-    "checking": 5,
+    "checking": 8,
     "inline": null,
     "conflicted": null,
-    "failed": 36,
-    "held": 734,
+    "failed": 39,
+    "held": 737,
     "retry": null,
-    "parked": 734
+    "parked": 737
    },
    "cur": [
     [
@@ -921,7 +922,7 @@
      ],
      "iPhone app tests",
      "MacBook",
-     5
+     8
     ],
     [
      [
@@ -929,7 +930,7 @@
      ],
      "iPhone app tests",
      "MacBook",
-     5
+     8
     ],
     [
      [
@@ -937,7 +938,7 @@
      ],
      "iPhone app tests",
      "MacBook",
-     5
+     8
     ],
     [
      [
@@ -945,7 +946,7 @@
      ],
      "iPhone app tests",
      "MacBook",
-     5
+     8
     ]
    ],
    "ld": [
@@ -955,21 +956,19 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-24T16:36:41Z",
-    "ld": 12.1,
+    "at": "2026-11-24T16:38:50Z",
+    "ld": 8.77,
     "c": 8,
-    "sb": 1,
+    "sb": 0,
     "dk": [
-     54.4,
+     54.6,
      228.3
     ],
     "ss": [
      130.5,
      953.7
     ],
-    "sn": [
-     "iPhone 17e"
-    ]
+    "sn": []
    },
    "macbook": {
     "at": "2026-11-24T16:35:34Z",
@@ -992,7 +991,7 @@
    "parked": 16,
    "open": true,
    "mq": false,
-   "counted": "2026-11-24T16:28:58+00:00",
+   "counted": "2026-11-24T16:39:14+00:00",
    "by": {
     "app": {
      "n": 25,
@@ -1010,11 +1009,11 @@
      "open": true
     }
    },
-   "at": "2026-11-24T16:36:39+00:00"
+   "at": "2026-11-24T16:39:47+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-24T16:36:39+00:00"
+   "at": "2026-11-24T16:39:35+00:00"
   }
  },
  "operators": [
@@ -1058,10 +1057,10 @@
   "main": 1,
   "lanes": 1,
   "total": 2,
-  "at": "11:36 AM",
+  "at": "11:39 AM",
   "why": "",
-  "at_iso": "2026-11-24T16:36:00+00:00",
+  "at_iso": "2026-11-24T16:39:00+00:00",
   "started": "9:18 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 1, started 9:18 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 11:36 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 1, started 9:18 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 11:39 AM ET</p></section>"
  }
 }

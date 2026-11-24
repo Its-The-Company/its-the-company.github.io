@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-24T19:28:27.474481+00:00",
+ "at": "2026-11-24T19:31:33.114857+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -376,15 +376,7 @@
    "task": "[build] T-4190 Settings Pro themes",
    "model": "",
    "started": "2026-11-24T18:15:29.891Z",
-   "seconds": 4377,
-   "finished": null
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-2943 build 8 number",
-   "model": "",
-   "started": "2026-11-24T18:49:18.799Z",
-   "seconds": 2348,
+   "seconds": 4563,
    "finished": null
   },
   {
@@ -392,12 +384,28 @@
    "task": "[build] T-5815 four-tab shell",
    "model": "",
    "started": "2026-11-24T19:12:40.306Z",
-   "seconds": 947,
+   "seconds": 1132,
    "finished": null
   }
  ],
- "who": "Idris x3",
+ "who": "Idris x2",
  "recent": [
+  {
+   "name": "pernille",
+   "task": "[review] T-2943",
+   "model": "",
+   "started": "2026-11-24T19:30:50.338Z",
+   "seconds": null,
+   "finished": "2026-11-24T19:31:25.422000+00:00"
+  },
+  {
+   "name": "idris",
+   "task": "[build] T-2943 build 8 number",
+   "model": "",
+   "started": "2026-11-24T18:49:18.799Z",
+   "seconds": null,
+   "finished": "2026-11-24T19:30:37.080000+00:00"
+  },
   {
    "name": "pernille",
    "task": "[review] T-4183",
@@ -413,22 +421,6 @@
    "started": "2026-11-24T16:38:54.576Z",
    "seconds": null,
    "finished": "2026-11-24T18:07:29.631000+00:00"
-  },
-  {
-   "name": "pernille",
-   "task": "[review] T-4183",
-   "model": "",
-   "started": "2026-11-24T16:20:01.856Z",
-   "seconds": null,
-   "finished": "2026-11-24T16:38:24.798000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-4183 Gallery tour examples",
-   "model": "",
-   "started": "2026-11-24T14:21:14.744Z",
-   "seconds": null,
-   "finished": "2026-11-24T16:19:29.398000+00:00"
   }
  ],
  "queue": {
@@ -483,7 +475,7 @@
   "week_pct": 132.18,
   "usage_pct": 74.2,
   "work_pct": 97.8,
-  "read_at": "2026-11-24T19:28:00+00:00",
+  "read_at": "2026-11-24T19:32:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -538,14 +530,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-24T14:27:00-05:00",
+   "at": "2026-11-24T14:29:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-24T14:28:00-05:00",
+  "at": "2026-11-24T14:32:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -619,14 +611,6 @@
     "at": "2026-11-24T18:15:29.891Z",
     "o": "c",
     "task": "T-4190"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "Send up the gate build and confirm it stays internal",
-    "at": "2026-11-24T18:49:18.799Z",
-    "o": "c",
-    "task": "T-2943"
    },
    {
     "w": "Idris",
@@ -802,18 +786,8 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-24T19:28:27Z",
+  "at": "2026-11-24T19:31:33Z",
   "s": {
-   "T-5047": [
-    "mergetest",
-    "Xcode checks on the MacBook, 1st to merge",
-    1795547427474
-   ],
-   "T-4290": [
-    "mergetest",
-    "iPhone tests on the MacBook",
-    null
-   ],
    "T-4190": [
     "testing",
     "Mac Mini \u00b7 test",
@@ -821,13 +795,9 @@
    ]
   },
   "nm": {
-   "T-5047": "Fix the token test's No view for this size card",
-   "T-4290": "Measure the list text inset per size",
    "T-4190": "Settings and Pro: buy, restore, themes"
   },
   "wk": {
-   "T-5047": "Idris",
-   "T-4290": "Idris",
    "T-4190": "Idris",
    "T-4875": "Idris",
    "T-0811": "Idris",
@@ -844,36 +814,27 @@
   }
  },
  "ln": {
-  "at": "2026-11-24T19:28:27Z",
+  "at": "2026-11-24T19:31:33Z",
   "mq": {
    "n": {
-    "checking": 1,
+    "checking": 0,
     "inline": 0,
     "conflicted": 0,
     "failed": 0,
     "held": 5,
     "retry": 0,
-    "parked": 14
+    "parked": 15
    },
    "m": {
-    "checking": 18,
+    "checking": null,
     "inline": null,
     "conflicted": null,
     "failed": null,
-    "held": 2040,
+    "held": 2043,
     "retry": null,
-    "parked": 1636
+    "parked": 1443
    },
-   "cur": [
-    [
-     [
-      "T-5047"
-     ],
-     "iPhone app tests",
-     "MacBook",
-     18
-    ]
-   ],
+   "cur": [],
    "ld": [
     0,
     null
@@ -881,12 +842,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-24T19:28:28Z",
-    "ld": 17.73,
+    "at": "2026-11-24T19:31:56Z",
+    "ld": 11.07,
     "c": 8,
     "sb": 1,
     "dk": [
-     51.3,
+     51.2,
      228.3
     ],
     "ss": [
@@ -898,19 +859,15 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-24T19:23:26Z",
-    "ld": 31.37,
+    "at": "2026-11-24T19:30:34Z",
+    "ld": 36.74,
     "c": 12,
-    "sb": 3,
+    "sb": 0,
     "dk": [
-     336.4,
+     340.3,
      926.4
     ],
-    "sn": [
-     "itsthecompany-runner",
-     "itsthecompany-runner-2",
-     "itsthecompany-runner-3"
-    ]
+    "sn": []
    }
   }
  },
@@ -940,11 +897,11 @@
      "open": true
     }
    },
-   "at": "2026-11-24T19:28:27+00:00"
+   "at": "2026-11-24T19:31:33+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-24T19:28:27+00:00"
+   "at": "2026-11-24T19:31:33+00:00"
   }
  },
  "operators": [
@@ -995,13 +952,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 3,
+  "main": 2,
   "lanes": 2,
-  "total": 5,
-  "at": "2:28 PM",
+  "total": 4,
+  "at": "2:32 PM",
   "why": "",
-  "at_iso": "2026-11-24T19:28:00+00:00",
+  "at_iso": "2026-11-24T19:32:00+00:00",
   "started": "9:18 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 3, started 9:18 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 2:28 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 2, started 9:18 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 2:32 PM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-24T01:41:56.829246+00:00",
+ "at": "2026-11-24T01:44:56.533828+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -376,7 +376,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 724,
+  "runnable_count": 725,
   "blocked_count": 2
  },
  "meter": {
@@ -425,7 +425,7 @@
   "week_pct": 63.21,
   "usage_pct": 79.8,
   "work_pct": 97.6,
-  "read_at": "2026-11-24T01:42:00+00:00",
+  "read_at": "2026-11-24T01:45:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -484,7 +484,7 @@
   }
  ],
  "disk": {
-  "free_gb": 30,
+  "free_gb": 32,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -493,14 +493,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-23T20:38:00-05:00",
+   "at": "2026-11-23T20:45:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-23T20:42:00-05:00",
+  "at": "2026-11-23T20:45:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -567,15 +567,6 @@
  ],
  "tasks": {
   "run": [
-   {
-    "w": "Odalys",
-    "t": "Name every record a land takes out of a copy",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-23T19:31:09-05:00",
-    "o": "c",
-    "task": "T-5703"
-   },
    {
     "w": "Idris",
     "t": "Test that App Store builds write no sensor rows",
@@ -713,7 +704,7 @@
    }
   ],
   "count": {
-   "next": 724,
+   "next": 725,
    "wait": 2,
    "blocked": 0,
    "you": 2
@@ -779,8 +770,13 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-24T01:41:43Z",
+  "at": "2026-11-24T01:44:56Z",
   "s": {
+   "T-5657": [
+    "mergetest",
+    "iPhone tests on the MacBook",
+    null
+   ],
    "T-1119": [
     "testing",
     "Mac Mini \u00b7 test",
@@ -814,15 +810,16 @@
    "T-5634": [
     "testq",
     "1st for a Simulator",
-    1795483663246
+    1795483616533
    ],
    "T-4875": [
     "testq",
     "2nd for a Simulator",
-    1795484383246
+    1795484336533
    ]
   },
   "nm": {
+   "T-5657": "Ship test widgets in internal TestFlight builds only",
    "T-1119": "Investors answer two App Store Connect questions",
    "T-2296": "Finish the gallery pager, iPad layout and detail foot",
    "T-4190": "Settings and Pro: buy, restore, themes",
@@ -833,6 +830,7 @@
    "T-4875": "Test that suggestions are asked after the first letter"
   },
   "wk": {
+   "T-5657": "Idris",
    "T-1119": "Ines",
    "T-2296": "Idris",
    "T-4190": "Idris",
@@ -847,7 +845,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-24T01:41:43Z",
+  "at": "2026-11-24T01:44:56Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -863,9 +861,9 @@
     "inline": null,
     "conflicted": null,
     "failed": null,
-    "held": 973,
+    "held": 976,
     "retry": null,
-    "parked": 973
+    "parked": 976
    },
    "cur": [],
    "ld": [
@@ -875,12 +873,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-24T01:40:56Z",
-    "ld": 5.83,
+    "at": "2026-11-24T01:45:00Z",
+    "ld": 5.06,
     "c": 8,
     "sb": 1,
     "dk": [
-     31.9,
+     31.7,
      228.3
     ],
     "ss": [
@@ -892,12 +890,12 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-24T01:37:29Z",
-    "ld": 38.46,
+    "at": "2026-11-24T01:43:17Z",
+    "ld": 25.08,
     "c": 12,
     "sb": 0,
     "dk": [
-     348.6,
+     347.1,
      926.4
     ],
     "sn": []
@@ -930,11 +928,11 @@
      "open": true
     }
    },
-   "at": "2026-11-24T01:41:56+00:00"
+   "at": "2026-11-24T01:44:56+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-24T01:41:50+00:00"
+   "at": "2026-11-24T01:44:49+00:00"
   }
  },
  "operators": [
@@ -945,7 +943,7 @@
    "m": "opus",
    "e": "high",
    "t": "Work session",
-   "at": "2026-11-23T20:36:29-05:00"
+   "at": "2026-11-23T20:44:18-05:00"
   },
   {
    "w": "Operator",
@@ -976,8 +974,8 @@
   }
  ],
  "reply": {
-  "sent": "2026-11-24T01:35:41Z",
-  "seconds": 46.0
+  "sent": "2026-11-24T01:43:10Z",
+  "seconds": 67.0
  },
  "inbox": [],
  "trimmed": [
@@ -995,10 +993,10 @@
   "main": 0,
   "lanes": 3,
   "total": 3,
-  "at": "8:42 PM",
+  "at": "8:45 PM",
   "why": "",
-  "at_iso": "2026-11-24T01:42:00+00:00",
+  "at_iso": "2026-11-24T01:45:00+00:00",
   "started": "7:06 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 7:06 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 8:42 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 7:06 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 8:45 PM ET</p></section>"
  }
 }

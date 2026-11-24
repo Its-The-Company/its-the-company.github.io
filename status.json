@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-24T02:49:54.196466+00:00",
+ "at": "2026-11-24T02:52:54.788248+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -425,7 +425,7 @@
   "week_pct": 67.16,
   "usage_pct": 79.8,
   "work_pct": 97.6,
-  "read_at": "2026-11-24T02:49:00+00:00",
+  "read_at": "2026-11-24T02:53:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -484,7 +484,7 @@
   }
  ],
  "disk": {
-  "free_gb": 27,
+  "free_gb": 31,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -493,14 +493,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-23T21:44:00-05:00",
+   "at": "2026-11-23T21:51:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-23T21:49:00-05:00",
+  "at": "2026-11-23T21:53:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -779,58 +779,52 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-24T02:49:54Z",
+  "at": "2026-11-24T02:52:54Z",
   "s": {
-   "T-5657": [
+   "T-0048": [
     "mergetest",
     "iPhone tests on the MacBook",
     null
    ],
-   "T-5634": [
-    "testq",
-    "1st for a Simulator",
-    1795486854196
-   ],
-   "T-4875": [
-    "testq",
-    "2nd for a Simulator",
-    1795486914196
+   "T-5657": [
+    "testing",
+    "Mac Mini \u00b7 test",
+    null
    ],
    "T-1119": [
     "testq",
-    "3rd for a Simulator",
-    1795488474196
+    "1st for a Simulator",
+    1795488474788
    ],
    "T-2296": [
     "testq",
-    "3rd for a Simulator",
-    1795488474196
+    "1st for a Simulator",
+    1795488474788
    ],
    "T-4190": [
     "testq",
-    "3rd for a Simulator",
-    1795488474196
+    "1st for a Simulator",
+    1795488474788
    ],
    "T-4681": [
     "testq",
-    "3rd for a Simulator",
-    1795488474196
+    "1st for a Simulator",
+    1795488474788
    ],
    "T-4715": [
     "testq",
-    "3rd for a Simulator",
-    1795488474196
+    "1st for a Simulator",
+    1795488474788
    ],
    "T-5602": [
     "testq",
-    "3rd for a Simulator",
-    1795488474196
+    "1st for a Simulator",
+    1795488474788
    ]
   },
   "nm": {
+   "T-0048": "Add the per-widget Activity screen and Run as widget",
    "T-5657": "Ship test widgets in internal TestFlight builds only",
-   "T-5634": "Retry a refused widget send at the project boundary",
-   "T-4875": "Test that suggestions are asked after the first letter",
    "T-1119": "Investors answer two App Store Connect questions",
    "T-2296": "Finish the gallery pager, iPad layout and detail foot",
    "T-4190": "Settings and Pro: buy, restore, themes",
@@ -839,9 +833,8 @@
    "T-5602": "Brief for a new look for the app"
   },
   "wk": {
+   "T-0048": "Idris",
    "T-5657": "Idris",
-   "T-5634": "Idris",
-   "T-4875": "Idris",
    "T-1119": "Ines",
    "T-2296": "Idris",
    "T-4190": "Idris",
@@ -855,7 +848,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-24T02:49:54Z",
+  "at": "2026-11-24T02:52:54Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -871,9 +864,9 @@
     "inline": null,
     "conflicted": null,
     "failed": null,
-    "held": 1041,
+    "held": 1044,
     "retry": null,
-    "parked": 1041
+    "parked": 1044
    },
    "cur": [],
    "ld": [
@@ -883,12 +876,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-24T02:49:13Z",
-    "ld": 2.5,
+    "at": "2026-11-24T02:52:56Z",
+    "ld": 2.22,
     "c": 8,
     "sb": 1,
     "dk": [
-     28.6,
+     30.8,
      228.3
     ],
     "ss": [
@@ -898,6 +891,17 @@
     "sn": [
      "iPhone 17e"
     ]
+   },
+   "macbook": {
+    "at": "2026-11-24T02:51:41Z",
+    "ld": 10.28,
+    "c": 12,
+    "sb": 0,
+    "dk": [
+     347.5,
+     926.4
+    ],
+    "sn": []
    }
   }
  },
@@ -927,11 +931,11 @@
      "open": true
     }
    },
-   "at": "2026-11-24T02:49:54+00:00"
+   "at": "2026-11-24T02:52:54+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-24T02:49:54+00:00"
+   "at": "2026-11-24T02:52:45+00:00"
   }
  },
  "operators": [
@@ -992,10 +996,10 @@
   "main": 0,
   "lanes": 3,
   "total": 3,
-  "at": "9:49 PM",
+  "at": "9:53 PM",
   "why": "",
-  "at_iso": "2026-11-24T02:49:00+00:00",
+  "at_iso": "2026-11-24T02:53:00+00:00",
   "started": "7:06 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 7:06 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 9:49 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 7:06 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 9:53 PM ET</p></section>"
  }
 }

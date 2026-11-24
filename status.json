@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-24T19:02:27.798543+00:00",
+ "at": "2026-11-24T19:05:53.875717+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -376,7 +376,7 @@
    "task": "[build] T-4190 Settings Pro themes",
    "model": "",
    "started": "2026-11-24T18:15:29.891Z",
-   "seconds": 2817,
+   "seconds": 3023,
    "finished": null
   },
   {
@@ -384,7 +384,7 @@
    "task": "[build] T-2943 build 8 number",
    "model": "",
    "started": "2026-11-24T18:49:18.799Z",
-   "seconds": 788,
+   "seconds": 995,
    "finished": null
   }
  ],
@@ -475,7 +475,7 @@
   "week_pct": 126.43,
   "usage_pct": 74.2,
   "work_pct": 97.8,
-  "read_at": "2026-11-24T19:03:00+00:00",
+  "read_at": "2026-11-24T19:06:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -525,7 +525,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-24T14:03:00-05:00",
+  "at": "2026-11-24T14:06:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -774,26 +774,33 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-24T19:02:27Z",
+  "at": "2026-11-24T19:05:34Z",
   "s": {
    "T-5047": [
     "mergeq",
     "1st to merge",
-    1795545087798
+    1795545094893
    ],
    "T-4290": [
     "mergetest",
     "iPhone tests on the MacBook",
     null
+   ],
+   "T-2943": [
+    "testing",
+    "Mac Mini \u00b7 test",
+    null
    ]
   },
   "nm": {
    "T-5047": "Fix the token test's No view for this size card",
-   "T-4290": "Measure the list text inset per size"
+   "T-4290": "Measure the list text inset per size",
+   "T-2943": "Send up the gate build and confirm it stays internal"
   },
   "wk": {
    "T-5047": "Idris",
    "T-4290": "Idris",
+   "T-2943": "Idris",
    "T-0811": "Idris",
    "T-0193": "Idris",
    "T-2296": "Idris",
@@ -809,7 +816,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-24T19:02:27Z",
+  "at": "2026-11-24T19:05:34Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -822,12 +829,12 @@
    },
    "m": {
     "checking": null,
-    "inline": 31,
+    "inline": 34,
     "conflicted": null,
     "failed": null,
-    "held": 2014,
+    "held": 2017,
     "retry": null,
-    "parked": 1610
+    "parked": 1613
    },
    "cur": [],
    "ld": [
@@ -837,9 +844,10 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-24T19:02:59Z",
-    "ld": 34.18,
+    "at": "2026-11-24T19:05:14Z",
+    "ld": 34.97,
     "c": 8,
+    "sb": 1,
     "dk": [
      55.5,
      228.3
@@ -847,6 +855,9 @@
     "ss": [
      132.1,
      953.7
+    ],
+    "sn": [
+     "iPhone Air"
     ]
    },
    "macbook": {
@@ -888,11 +899,11 @@
      "open": true
     }
    },
-   "at": "2026-11-24T19:02:27+00:00"
+   "at": "2026-11-24T19:05:53+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-24T19:02:27+00:00"
+   "at": "2026-11-24T19:05:53+00:00"
   }
  },
  "operators": [
@@ -937,10 +948,10 @@
   "main": 2,
   "lanes": 1,
   "total": 3,
-  "at": "2:03 PM",
+  "at": "2:06 PM",
   "why": "",
-  "at_iso": "2026-11-24T19:03:00+00:00",
+  "at_iso": "2026-11-24T19:06:00+00:00",
   "started": "9:18 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 9:18 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 2:03 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 9:18 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 2:06 PM ET</p></section>"
  }
 }

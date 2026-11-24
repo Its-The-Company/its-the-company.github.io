@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-24T01:14:13.180318+00:00",
+ "at": "2026-11-24T01:17:22.481061+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -439,7 +439,7 @@
   "week_pct": 63.21,
   "usage_pct": 79.8,
   "work_pct": 97.6,
-  "read_at": "2026-11-24T01:14:00+00:00",
+  "read_at": "2026-11-24T01:17:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -514,7 +514,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-23T20:14:00-05:00",
+  "at": "2026-11-23T20:17:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -793,7 +793,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-24T01:14:04Z",
+  "at": "2026-11-24T01:17:22Z",
   "s": {
    "T-1119": [
     "testing",
@@ -824,6 +824,11 @@
     "testing",
     "MacBook \u00b7 test",
     null
+   ],
+   "T-4772": [
+    "testq",
+    "1st for a Simulator",
+    1795483042481
    ]
   },
   "nm": {
@@ -832,7 +837,8 @@
    "T-4681": "Premades default to Paper in light and Studio in dark",
    "T-5602": "Brief for a new look for the app",
    "T-5743": "Review the check that landed means every app file",
-   "T-5059": "Test that App Store builds write no sensor rows"
+   "T-5059": "Test that App Store builds write no sensor rows",
+   "T-4772": "Prove a refresh tap redraws the widget"
   },
   "wk": {
    "T-1119": "Ines",
@@ -841,13 +847,14 @@
    "T-5602": "Maren",
    "T-5743": "Idris",
    "T-5059": "Idris",
+   "T-4772": "Idris",
    "T-5755": "Odalys",
    "T-5691": "Odalys",
    "T-5758": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-24T01:14:04Z",
+  "at": "2026-11-24T01:17:22Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -863,9 +870,9 @@
     "inline": null,
     "conflicted": null,
     "failed": null,
-    "held": 945,
+    "held": 949,
     "retry": null,
-    "parked": 945
+    "parked": 949
    },
    "cur": [],
    "ld": [
@@ -875,12 +882,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-24T01:13:46Z",
-    "ld": 12.39,
+    "at": "2026-11-24T01:17:23Z",
+    "ld": 8.85,
     "c": 8,
     "sb": 1,
     "dk": [
-     30.8,
+     31.6,
      228.3
     ],
     "ss": [
@@ -890,17 +897,6 @@
     "sn": [
      "iPhone 17e"
     ]
-   },
-   "macbook": {
-    "at": "2026-11-24T00:36:58Z",
-    "ld": 0.18,
-    "c": 12,
-    "sb": 0,
-    "dk": [
-     347.5,
-     926.4
-    ],
-    "sn": []
    }
   }
  },
@@ -930,11 +926,11 @@
      "open": true
     }
    },
-   "at": "2026-11-24T01:14:13+00:00"
+   "at": "2026-11-24T01:17:22+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-24T01:14:04+00:00"
+   "at": "2026-11-24T01:17:22+00:00"
   }
  },
  "operators": [
@@ -995,10 +991,10 @@
   "main": 0,
   "lanes": 3,
   "total": 3,
-  "at": "8:14 PM",
+  "at": "8:17 PM",
   "why": "",
-  "at_iso": "2026-11-24T01:14:00+00:00",
+  "at_iso": "2026-11-24T01:17:00+00:00",
   "started": "7:06 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 7:06 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 8:14 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 7:06 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 8:17 PM ET</p></section>"
  }
 }

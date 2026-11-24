@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-24T04:06:46.001845+00:00",
+ "at": "2026-11-24T04:09:21.579019+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -425,7 +425,7 @@
   "week_pct": 71.11,
   "usage_pct": 79.8,
   "work_pct": 97.6,
-  "read_at": "2026-11-24T04:06:00+00:00",
+  "read_at": "2026-11-24T04:09:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -511,7 +511,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-23T23:06:00-05:00",
+  "at": "2026-11-23T23:09:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -816,44 +816,49 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-24T04:06:36Z",
+  "at": "2026-11-24T04:09:21Z",
   "s": {
-   "T-5657": [
+   "T-5777": [
     "mergeq",
     "1st to merge",
-    1795491816598
+    1795493301579
+   ],
+   "T-5657": [
+    "mergeq",
+    "2nd to merge",
+    1795491861579
    ],
    "T-0337": [
     "mergeq",
-    "1st to merge",
-    1795491816598
+    "2nd to merge",
+    1795491861579
    ],
    "T-2097": [
     "mergeq",
-    "1st to merge",
-    1795491816598
+    "2nd to merge",
+    1795491861579
    ],
    "T-4010": [
     "mergeq",
-    "1st to merge",
-    1795491816598
+    "2nd to merge",
+    1795491861579
    ],
    "T-4477": [
     "mergeq",
-    "1st to merge",
-    1795491816598
+    "2nd to merge",
+    1795491861579
    ],
    "T-4286": [
     "mergeq",
-    "1st to merge",
-    1795491816598
+    "2nd to merge",
+    1795491861579
    ],
    "T-4435": [
     "mergeq",
-    "1st to merge",
-    1795491816598
+    "2nd to merge",
+    1795491861579
    ],
-   "T-5274": [
+   "T-5634": [
     "testing",
     "Mac Mini \u00b7 test",
     null
@@ -861,45 +866,46 @@
    "T-5059": [
     "testq",
     "1st for a Simulator",
-    1795491936598
+    1795491981579
    ],
    "T-1119": [
     "testq",
     "2nd for a Simulator",
-    1795493136598
+    1795493181579
    ],
    "T-2296": [
     "testq",
     "2nd for a Simulator",
-    1795493136598
+    1795493181579
    ],
    "T-4190": [
     "testq",
     "2nd for a Simulator",
-    1795493136598
+    1795493181579
    ],
    "T-4681": [
     "testq",
     "2nd for a Simulator",
-    1795493136598
+    1795493181579
    ],
    "T-4715": [
     "testq",
     "2nd for a Simulator",
-    1795493136598
+    1795493181579
    ],
    "T-5602": [
     "testq",
     "2nd for a Simulator",
-    1795493136598
+    1795493181579
    ],
-   "T-5634": [
+   "T-5274": [
     "testq",
     "3rd for a Simulator",
-    1795493196598
+    1795493301579
    ]
   },
   "nm": {
+   "T-5777": "Review the stuck-account alarm fix",
    "T-5657": "Ship test widgets in internal TestFlight builds only",
    "T-0337": "Confirm the revenue memo's facts from Apple pages",
    "T-2097": "Read free memory in the widget extension on a device",
@@ -907,7 +913,7 @@
    "T-4477": "People build a widget from blocks without code",
    "T-4286": "Check an imported font draws in a widget",
    "T-4435": "Draw the wrapped refresh glyph on both runtimes",
-   "T-5274": "Test that a send never freezes the editor",
+   "T-5634": "Retry a refused widget send at the project boundary",
    "T-5059": "Test that App Store builds write no sensor rows",
    "T-1119": "Investors answer two App Store Connect questions",
    "T-2296": "Finish the gallery pager, iPad layout and detail foot",
@@ -915,9 +921,10 @@
    "T-4681": "Premades default to Paper in light and Studio in dark",
    "T-4715": "Put the new Pro screen words into the app",
    "T-5602": "Brief for a new look for the app",
-   "T-5634": "Retry a refused widget send at the project boundary"
+   "T-5274": "Test that a send never freezes the editor"
   },
   "wk": {
+   "T-5777": "Idris",
    "T-5657": "Idris",
    "T-0337": "Wrenna",
    "T-2097": "Idris",
@@ -925,7 +932,7 @@
    "T-4477": "Idris",
    "T-4286": "Idris",
    "T-4435": "Idris",
-   "T-5274": "Idris",
+   "T-5634": "Idris",
    "T-5059": "Idris",
    "T-1119": "Ines",
    "T-2296": "Idris",
@@ -933,7 +940,7 @@
    "T-4681": "Idris",
    "T-4715": "Maren",
    "T-5602": "Maren",
-   "T-5634": "Idris",
+   "T-5274": "Idris",
    "T-5676": "Odalys",
    "T-5774": "Operator",
    "T-5703": "Odalys",
@@ -944,11 +951,11 @@
   }
  },
  "ln": {
-  "at": "2026-11-24T04:06:36Z",
+  "at": "2026-11-24T04:09:21Z",
   "mq": {
    "n": {
     "checking": 0,
-    "inline": 7,
+    "inline": 8,
     "conflicted": 0,
     "failed": 0,
     "held": 0,
@@ -957,12 +964,12 @@
    },
    "m": {
     "checking": null,
-    "inline": 23,
+    "inline": 25,
     "conflicted": null,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1118
+    "parked": 1121
    },
    "cur": [],
    "ld": [
@@ -972,12 +979,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-24T04:06:15Z",
-    "ld": 8.74,
+    "at": "2026-11-24T04:09:00Z",
+    "ld": 7.56,
     "c": 8,
     "sb": 1,
     "dk": [
-     25.6,
+     25.5,
      228.3
     ],
     "ss": [
@@ -1003,13 +1010,13 @@
  },
  "hc": {
   "wait": {
-   "n": 20,
+   "n": 21,
    "limit": 20,
-   "in_line": 7,
+   "in_line": 8,
    "parked": 13,
    "open": true,
    "mq": false,
-   "counted": "2026-11-24T03:42:52+00:00",
+   "counted": "2026-11-24T04:07:50+00:00",
    "by": {
     "app": {
      "n": 16,
@@ -1017,7 +1024,7 @@
      "open": true
     },
     "other": {
-     "n": 10,
+     "n": 11,
      "limit": 20,
      "open": true
     },
@@ -1027,11 +1034,11 @@
      "open": true
     }
    },
-   "at": "2026-11-24T04:06:46+00:00"
+   "at": "2026-11-24T04:09:21+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-24T04:06:36+00:00"
+   "at": "2026-11-24T04:09:21+00:00"
   }
  },
  "operators": [
@@ -1041,8 +1048,8 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session",
-   "at": "2026-11-23T22:44:36-05:00"
+   "t": "Inbox \u2013 Evan's 11:09 PM Message on GitHub",
+   "at": "2026-11-23T23:09:36-05:00"
   },
   {
    "w": "Operator",
@@ -1079,22 +1086,24 @@
    "e": "high",
    "t": "Work session \u2013 1 task",
    "at": "2026-11-23T22:44:40-05:00"
-  },
-  {
-   "w": "Operator",
-   "a": "Jeremy's Account",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session",
-   "at": "2026-11-23T22:44:38-05:00"
   }
  ],
  "reply": {
   "sent": "2026-11-24T03:41:49Z",
   "seconds": 167.0
  },
- "inbox": [],
+ "inbox": [
+  {
+   "id": "c7121754648",
+   "state": "received",
+   "position": 1,
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "Has any app work been landing?"
+  }
+ ],
  "trimmed": [
   "lane_next",
   "queue_text",
@@ -1111,10 +1120,10 @@
   "main": 0,
   "lanes": 4,
   "total": 4,
-  "at": "11:06 PM",
+  "at": "11:09 PM",
   "why": "",
-  "at_iso": "2026-11-24T04:06:00+00:00",
+  "at_iso": "2026-11-24T04:09:00+00:00",
   "started": "7:06 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 0, started 7:06 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 11:06 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 0, started 7:06 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 11:09 PM ET</p></section>"
  }
 }

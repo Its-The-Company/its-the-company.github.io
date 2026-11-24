@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-24T20:04:26.467574+00:00",
+ "at": "2026-11-24T20:07:31.831332+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -376,7 +376,7 @@
    "task": "[build] T-5815 four-tab shell",
    "model": "",
    "started": "2026-11-24T19:12:40.306Z",
-   "seconds": 3106,
+   "seconds": 3291,
    "finished": null
   }
  ],
@@ -418,7 +418,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 724,
+  "runnable_count": 726,
   "blocked_count": 2
  },
  "meter": {
@@ -467,7 +467,7 @@
   "week_pct": 132.18,
   "usage_pct": 74.2,
   "work_pct": 97.8,
-  "read_at": "2026-11-24T20:04:00+00:00",
+  "read_at": "2026-11-24T20:07:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -529,7 +529,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-24T15:04:00-05:00",
+  "at": "2026-11-24T15:07:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -680,6 +680,11 @@
   ],
   "done": [
    {
+    "w": "Operator",
+    "t": "A unit test that fails once and passes on its second try no longer fails a whole merge, and...",
+    "at": "2026-11-24T15:06:00-05:00"
+   },
+   {
     "w": "Idris",
     "t": "A test now proves the editor asks for suggestions once the first letter is typed, so a change...",
     "at": "2026-11-24T14:09:00-05:00"
@@ -688,22 +693,21 @@
     "w": "Idris",
     "t": "On an iPhone, Projects now has an Open an Example entry that lists the bundled example scripts...",
     "at": "2026-11-24T13:46:00-05:00"
-   },
-   {
-    "w": "Idris",
-    "t": "Page three of the first-run tour shows the countdown widget with a date picker; picking another...",
-    "at": "2026-11-24T13:46:00-05:00"
    }
   ],
   "count": {
-   "next": 724,
+   "next": 726,
    "wait": 2,
    "blocked": 0,
    "you": 2
   },
   "fin": {
-   "n": 29,
+   "n": 30,
    "rows": [
+    [
+     "T-5814",
+     "A failed unit test gets one..."
+    ],
     [
      "T-4875",
      "Test that suggestions are..."
@@ -723,10 +727,6 @@
     [
      "T-4896",
      "Guard the name's case in..."
-    ],
-    [
-     "T-5059",
-     "Test that App Store builds..."
     ]
    ]
   }
@@ -770,9 +770,20 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-24T20:04:26Z",
-  "s": {},
+  "at": "2026-11-24T20:07:31Z",
+  "s": {
+   "T-4186": [
+    "mergetest",
+    "iPhone tests on the MacBook",
+    null
+   ]
+  },
+  "nm": {
+   "T-4186": "The editor completes code, shows errors and previews"
+  },
   "wk": {
+   "T-4186": "Idris",
+   "T-5814": "Operator",
    "T-4875": "Idris",
    "T-0811": "Idris",
    "T-0193": "Idris",
@@ -783,12 +794,11 @@
    "T-1119": "Ines",
    "T-5602": "Maren",
    "T-5491": "Pernille",
-   "T-5811": "Operator",
-   "T-0656": "Idris"
+   "T-5811": "Operator"
   }
  },
  "ln": {
-  "at": "2026-11-24T20:04:26Z",
+  "at": "2026-11-24T20:07:31Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -804,9 +814,9 @@
     "inline": null,
     "conflicted": null,
     "failed": null,
-    "held": 2076,
+    "held": 2079,
     "retry": null,
-    "parked": 1207
+    "parked": 1210
    },
    "cur": [],
    "ld": [
@@ -816,12 +826,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-24T20:03:54Z",
-    "ld": 26.85,
+    "at": "2026-11-24T20:07:05Z",
+    "ld": 24.15,
     "c": 8,
     "sb": 1,
     "dk": [
-     49.9,
+     50.0,
      228.3
     ],
     "ss": [
@@ -833,15 +843,18 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-24T20:03:39Z",
-    "ld": 12.37,
+    "at": "2026-11-24T20:06:31Z",
+    "ld": 11.65,
     "c": 12,
-    "sb": 0,
+    "sb": 2,
     "dk": [
-     340.4,
+     339.6,
      926.4
     ],
-    "sn": []
+    "sn": [
+     "itsthecompany-runner",
+     "itsthecompany-runner-2"
+    ]
    }
   }
  },
@@ -871,11 +884,11 @@
      "open": true
     }
    },
-   "at": "2026-11-24T20:04:26+00:00"
+   "at": "2026-11-24T20:07:31+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-24T20:04:16+00:00"
+   "at": "2026-11-24T20:07:31+00:00"
   }
  },
  "operators": [
@@ -929,10 +942,10 @@
   "main": 1,
   "lanes": 2,
   "total": 3,
-  "at": "3:04 PM",
+  "at": "3:07 PM",
   "why": "",
-  "at_iso": "2026-11-24T20:04:00+00:00",
+  "at_iso": "2026-11-24T20:07:00+00:00",
   "started": "9:18 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 1, started 9:18 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 3:04 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 1, started 9:18 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 3:07 PM ET</p></section>"
  }
 }

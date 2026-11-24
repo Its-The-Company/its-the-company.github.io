@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-24T22:04:41.738908+00:00",
+ "at": "2026-11-24T22:07:45.008062+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -390,7 +390,7 @@
    "task": "[build] T-5815 finish shell checks",
    "model": "opus",
    "started": "2026-11-24T22:01:37.992Z",
-   "seconds": 183,
+   "seconds": 367,
    "finished": null
   },
   {
@@ -398,7 +398,7 @@
    "task": "[ops] merge watch restart",
    "model": "opus",
    "started": "2026-11-24T22:02:04.950Z",
-   "seconds": 156,
+   "seconds": 340,
    "finished": null
   },
   {
@@ -406,20 +406,20 @@
    "task": "[build] settle T-5524 T-5490 rebases",
    "model": "opus",
    "started": "2026-11-24T22:03:06.305Z",
-   "seconds": 95,
+   "seconds": 278,
    "finished": null
-  },
+  }
+ ],
+ "who": "Idris x2, Odalys",
+ "recent": [
   {
    "name": "maren",
    "task": "[review] T-5828 merge.sh trap order",
    "model": "opus",
    "started": "2026-11-24T22:04:29.304Z",
-   "seconds": 12,
-   "finished": null
-  }
- ],
- "who": "Idris x2, Odalys, Maren",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-24T22:06:26.574000+00:00"
+  },
   {
    "name": "pernille",
    "task": "[review] T-5825 dispatch order",
@@ -440,7 +440,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 726,
+  "runnable_count": 727,
   "blocked_count": 3
  },
  "meter": {
@@ -489,7 +489,7 @@
   "week_pct": 166.51,
   "usage_pct": 68.4,
   "work_pct": 98.0,
-  "read_at": "2026-11-24T22:04:00+00:00",
+  "read_at": "2026-11-24T22:07:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -523,7 +523,7 @@
   }
  ],
  "disk": {
-  "free_gb": 38,
+  "free_gb": 41,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -532,14 +532,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-24T17:03:00-05:00",
+   "at": "2026-11-24T17:06:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-24T17:04:00-05:00",
+  "at": "2026-11-24T17:07:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -572,14 +572,6 @@
    "next": []
   },
   {
-   "name": "Maren",
-   "state": "running",
-   "task": "[review] T-5828 merge.sh trap order",
-   "model": "opus",
-   "since": "2026-11-24T22:04:29.304Z",
-   "next": []
-  },
-  {
    "name": "Pernille",
    "state": "next",
    "task": "Pernille, P0, Investor an Investor c6965124089 (7:26 PM...",
@@ -591,6 +583,14 @@
    "name": "Ines",
    "state": "next",
    "task": "Ines, P0, from Investor an Investor c7016129138 (12:02 PM...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
+   "name": "Maren",
+   "state": "next",
+   "task": "Maren with Odalys, P1, follow-up of T-4813 (Investor...",
    "model": null,
    "since": null,
    "next": []
@@ -631,15 +631,6 @@
     "at": "2026-11-24T22:03:06.305Z",
     "o": "c",
     "task": "T-5524"
-   },
-   {
-    "w": "Maren",
-    "k": "review",
-    "t": "T-5828 merge.sh trap order",
-    "m": "opus",
-    "at": "2026-11-24T22:04:29.304Z",
-    "o": "c",
-    "task": "T-5828"
    }
   ],
   "src": "plan",
@@ -717,30 +708,43 @@
   ],
   "done": [
    {
-    "w": "Operator",
-    "t": "A worker's own Simulator test run on the Mac mini now waits while an app merge is running its...",
-    "at": "2026-11-24T16:20:00-05:00"
+    "w": "Odalys",
+    "t": "Home's Completed tasks graph now updates during the day while sessions run, instead of showing...",
+    "at": "2026-11-24T17:07:00-05:00"
    },
    {
-    "w": "Operator",
-    "t": "The MacBook now runs at most three test jobs at once, starts a job a merge is waiting on before...",
-    "at": "2026-11-24T15:39:00-05:00"
+    "w": "Odalys",
+    "t": "The MacBook test machine now runs two test jobs at a time instead of three, because with three...",
+    "at": "2026-11-24T17:07:00-05:00"
    },
    {
-    "w": "Idris",
-    "t": "One thin line of the page's background used to show through the About card between two links...",
-    "at": "2026-11-24T15:22:00-05:00"
+    "w": "Odalys",
+    "t": "A message to the company now pauses, stops or resumes it only when the whole message is that one...",
+    "at": "2026-11-24T17:07:00-05:00"
    }
   ],
   "count": {
-   "next": 726,
+   "next": 727,
    "wait": 2,
    "blocked": 1,
    "you": 2
   },
   "fin": {
-   "n": 0,
-   "rows": []
+   "n": 3,
+   "rows": [
+    [
+     "T-5823",
+     "Home's Completed tasks graph..."
+    ],
+    [
+     "T-5821",
+     "The MacBook runs two test..."
+    ],
+    [
+     "T-5824",
+     "Session commands count only..."
+    ]
+   ]
   }
  },
  "qr": [
@@ -782,22 +786,22 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-24T22:04:31Z",
+  "at": "2026-11-24T22:07:34Z",
   "s": {
    "T-4644": [
     "mergeq",
     "1st to merge",
-    1795556191029
+    1795556194007
    ],
    "T-4824": [
     "mergeq",
     "2nd to merge",
-    1795555051029
+    1795555054007
    ],
    "T-5308": [
     "mergetest",
-    "Xcode checks on the MacBook, 3rd to merge",
-    1795557091029
+    "iPhone tests on the MacBook",
+    null
    ]
   },
   "nm": {
@@ -808,14 +812,17 @@
   "wk": {
    "T-4644": "Idris",
    "T-4824": "Idris",
-   "T-5308": "Idris"
+   "T-5308": "Idris",
+   "T-5823": "Operator",
+   "T-5821": "Odalys",
+   "T-5824": "Odalys"
   }
  },
  "ln": {
-  "at": "2026-11-24T22:04:31Z",
+  "at": "2026-11-24T22:07:34Z",
   "mq": {
    "n": {
-    "checking": 1,
+    "checking": 0,
     "inline": 2,
     "conflicted": 0,
     "failed": 0,
@@ -824,24 +831,15 @@
     "parked": 15
    },
    "m": {
-    "checking": 13,
-    "inline": 37,
+    "checking": null,
+    "inline": 40,
     "conflicted": null,
     "failed": null,
-    "held": 2196,
+    "held": 2199,
     "retry": null,
-    "parked": 1596
+    "parked": 1599
    },
-   "cur": [
-    [
-     [
-      "T-5308"
-     ],
-     "iPhone app tests",
-     "MacBook",
-     13
-    ]
-   ],
+   "cur": [],
    "ld": [
     0,
     null
@@ -849,12 +847,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-24T22:03:47Z",
-    "ld": 2.96,
+    "at": "2026-11-24T22:07:35Z",
+    "ld": 3.32,
     "c": 8,
     "sb": 0,
     "dk": [
-     38.4,
+     40.6,
      228.3
     ],
     "ss": [
@@ -864,15 +862,17 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-24T21:54:25Z",
-    "ld": 6.65,
+    "at": "2026-11-24T22:04:36Z",
+    "ld": 2.35,
     "c": 12,
-    "sb": 0,
+    "sb": 1,
     "dk": [
-     339.1,
+     337.6,
      926.4
     ],
-    "sn": []
+    "sn": [
+     "itsthecompany-runner"
+    ]
    }
   }
  },
@@ -902,11 +902,11 @@
      "open": true
     }
    },
-   "at": "2026-11-24T22:04:41+00:00"
+   "at": "2026-11-24T22:07:45+00:00"
   },
   "bl": {
    "n": 3,
-   "at": "2026-11-24T22:04:41+00:00"
+   "at": "2026-11-24T22:07:34+00:00"
   }
  },
  "operators": [
@@ -938,6 +938,7 @@
   "lane_next",
   "queue_text",
   "task_done",
+  "fin_short",
   "task_title",
   "done_text",
   "task_open",
@@ -945,13 +946,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 4,
+  "main": 3,
   "lanes": 1,
-  "total": 5,
-  "at": "5:04 PM",
+  "total": 4,
+  "at": "5:07 PM",
   "why": "",
-  "at_iso": "2026-11-24T22:04:00+00:00",
+  "at_iso": "2026-11-24T22:07:00+00:00",
   "started": "4:58 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 4, started 4:58 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 5:04 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 3, started 4:58 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 5:07 PM ET</p></section>"
  }
 }

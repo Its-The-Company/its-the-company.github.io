@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-24T13:06:26.488921+00:00",
+ "at": "2026-11-24T13:09:33.942723+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -331,17 +331,25 @@
  },
  "workers": [
   {
-   "name": "idris",
-   "task": "[build] T-4239 fix review finding",
+   "name": "pernille",
+   "task": "[review] T-4239",
    "model": "opus",
-   "started": "2026-11-24T12:08:21.801Z",
-   "seconds": 3484,
+   "started": "2026-11-24T13:09:06.568Z",
+   "seconds": 27,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Idris",
+ "who": "Pernille",
  "recent": [
+  {
+   "name": "idris",
+   "task": "[build] T-4239 fix review finding",
+   "model": "opus",
+   "started": "2026-11-24T12:08:21.801Z",
+   "seconds": null,
+   "finished": "2026-11-24T13:08:43.400000+00:00"
+  },
   {
    "name": "idris",
    "task": "[report] morning",
@@ -365,14 +373,6 @@
    "started": "2026-11-24T12:23:36.663Z",
    "seconds": null,
    "finished": "2026-11-24T12:24:15.977000+00:00"
-  },
-  {
-   "name": "pernille",
-   "task": "[review] T-5274",
-   "model": "opus",
-   "started": "2026-11-24T12:06:30.524Z",
-   "seconds": null,
-   "finished": "2026-11-24T12:24:02.332000+00:00"
   }
  ],
  "queue": {
@@ -427,7 +427,7 @@
   "week_pct": 86.23,
   "usage_pct": 77.5,
   "work_pct": 97.8,
-  "read_at": "2026-11-24T13:06:00+00:00",
+  "read_at": "2026-11-24T13:09:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -489,7 +489,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-24T08:06:00-05:00",
+  "at": "2026-11-24T08:09:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -506,11 +506,11 @@
  },
  "lanes": [
   {
-   "name": "Idris",
+   "name": "Pernille",
    "state": "running",
-   "task": "[build] T-4239 fix review finding",
+   "task": "[review] T-4239",
    "model": "opus",
-   "since": "2026-11-24T12:08:21.801Z",
+   "since": "2026-11-24T13:09:06.568Z",
    "next": [],
    "effort": "high"
   },
@@ -523,9 +523,9 @@
    "next": []
   },
   {
-   "name": "Pernille",
+   "name": "Idris",
    "state": "next",
-   "task": "Pernille, P0, Investor an Investor c6965124089 (7:26 PM...",
+   "task": "Idris, P0, from T-4964 (made by tools/runner_watch.py...",
    "model": null,
    "since": null,
    "next": []
@@ -558,12 +558,12 @@
  "tasks": {
   "run": [
    {
-    "w": "Idris",
-    "k": "build",
+    "w": "Pernille",
+    "k": "review",
     "t": "Tidy the five small points from the refresh review",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-24T12:08:21.801Z",
+    "at": "2026-11-24T13:09:06.568Z",
     "o": "c",
     "task": "T-4239"
    }
@@ -708,7 +708,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-24T13:06:08Z",
+  "at": "2026-11-24T13:09:21Z",
   "s": {
    "T-5003": [
     "testing",
@@ -724,7 +724,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-24T13:06:08Z",
+  "at": "2026-11-24T13:09:21Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -740,9 +740,9 @@
     "inline": null,
     "conflicted": null,
     "failed": null,
-    "held": 1658,
+    "held": 1661,
     "retry": null,
-    "parked": 656
+    "parked": 659
    },
    "cur": [],
    "ld": [
@@ -752,12 +752,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-24T13:05:20Z",
-    "ld": 22.17,
+    "at": "2026-11-24T13:08:35Z",
+    "ld": 16.95,
     "c": 8,
     "sb": 1,
     "dk": [
-     36.6,
+     36.0,
      228.3
     ],
     "ss": [
@@ -769,8 +769,8 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-24T13:04:31Z",
-    "ld": 0.67,
+    "at": "2026-11-24T13:08:24Z",
+    "ld": 1.63,
     "c": 12,
     "sb": 0,
     "dk": [
@@ -807,11 +807,11 @@
      "open": true
     }
    },
-   "at": "2026-11-24T13:06:26+00:00"
+   "at": "2026-11-24T13:09:33+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-24T13:06:26+00:00"
+   "at": "2026-11-24T13:09:27+00:00"
   }
  },
  "operators": [
@@ -863,10 +863,10 @@
   "main": 1,
   "lanes": 2,
   "total": 3,
-  "at": "8:06 AM",
+  "at": "8:09 AM",
   "why": "",
-  "at_iso": "2026-11-24T13:06:00+00:00",
+  "at_iso": "2026-11-24T13:09:00+00:00",
   "started": "7:03 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 1, started 7:03 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 8:06 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 1, started 7:03 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 8:09 AM ET</p></section>"
  }
 }

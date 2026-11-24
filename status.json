@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-24T23:33:14.529922+00:00",
+ "at": "2026-11-24T23:36:16.836723+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -390,7 +390,7 @@
    "task": "[build] T-5815 finish shell checks",
    "model": "opus",
    "started": "2026-11-24T22:01:37.992Z",
-   "seconds": 5496,
+   "seconds": 5678,
    "finished": null
   },
   {
@@ -398,7 +398,7 @@
    "task": "[ops] merge watch restart",
    "model": "opus",
    "started": "2026-11-24T22:02:04.950Z",
-   "seconds": 5469,
+   "seconds": 5651,
    "finished": null
   }
  ],
@@ -489,7 +489,7 @@
   "week_pct": 166.51,
   "usage_pct": 68.4,
   "work_pct": 98.0,
-  "read_at": "2026-11-24T23:33:00+00:00",
+  "read_at": "2026-11-24T23:36:00+00:00",
   "running": [
    {
     "lane": "a3",
@@ -523,7 +523,7 @@
   }
  ],
  "disk": {
-  "free_gb": 38,
+  "free_gb": 40,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -532,14 +532,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-24T18:28:00-05:00",
+   "at": "2026-11-24T18:34:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-24T18:33:00-05:00",
+  "at": "2026-11-24T18:36:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -789,22 +789,22 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-24T23:33:00Z",
+  "at": "2026-11-24T23:35:57Z",
   "s": {
-   "T-4186": [
-    "mergetest",
-    "Xcode checks on the MacBook, 1st to merge",
-    1795562640488
-   ],
    "T-5797": [
     "mergeq",
-    "2nd to merge",
-    1795559700488
+    "1st to merge",
+    1795559697620
    ],
    "T-4824": [
     "mergeq",
-    "3rd to merge",
-    1795561380488
+    "2nd to merge",
+    1795561377620
+   ],
+   "T-4186": [
+    "mergetest",
+    "iPhone tests on the MacBook",
+    null
    ],
    "T-4776": [
     "testing",
@@ -813,15 +813,15 @@
    ]
   },
   "nm": {
-   "T-4186": "The editor completes code, shows errors and previews",
    "T-5797": "Widgets animate smoothly within what Apple allows",
    "T-4824": "Add motion and location probes to the measurement export",
+   "T-4186": "The editor completes code, shows errors and previews",
    "T-4776": "Register the probe font where the widget draws too"
   },
   "wk": {
-   "T-4186": "Idris",
    "T-5797": "Idris",
    "T-4824": "Idris",
+   "T-4186": "Idris",
    "T-4776": "Idris",
    "T-5832": "Odalys",
    "T-5524": "Idris",
@@ -838,10 +838,10 @@
   }
  },
  "ln": {
-  "at": "2026-11-24T23:33:00Z",
+  "at": "2026-11-24T23:35:57Z",
   "mq": {
    "n": {
-    "checking": 1,
+    "checking": 0,
     "inline": 2,
     "conflicted": 0,
     "failed": 0,
@@ -850,24 +850,15 @@
     "parked": 14
    },
    "m": {
-    "checking": 9,
-    "inline": 44,
+    "checking": null,
+    "inline": 47,
     "conflicted": null,
     "failed": null,
-    "held": 2284,
+    "held": 2287,
     "retry": null,
-    "parked": 1550
+    "parked": 1553
    },
-   "cur": [
-    [
-     [
-      "T-4186"
-     ],
-     "iPhone app tests",
-     "MacBook",
-     9
-    ]
-   ],
+   "cur": [],
    "ld": [
     0,
     null
@@ -875,12 +866,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-24T23:32:33Z",
-    "ld": 5.22,
+    "at": "2026-11-24T23:35:13Z",
+    "ld": 4.29,
     "c": 8,
     "sb": 1,
     "dk": [
-     40.5,
+     39.2,
      228.3
     ],
     "ss": [
@@ -912,7 +903,7 @@
    "parked": 18,
    "open": true,
    "mq": false,
-   "counted": "2026-11-24T23:23:06+00:00",
+   "counted": "2026-11-24T23:34:09+00:00",
    "by": {
     "app": {
      "n": 14,
@@ -930,11 +921,11 @@
      "open": true
     }
    },
-   "at": "2026-11-24T23:33:14+00:00"
+   "at": "2026-11-24T23:36:16+00:00"
   },
   "bl": {
    "n": 3,
-   "at": "2026-11-24T23:33:14+00:00"
+   "at": "2026-11-24T23:36:10+00:00"
   }
  },
  "operators": [
@@ -945,7 +936,7 @@
    "m": "opus",
    "e": "high",
    "t": "Work session",
-   "at": "2026-11-24T18:21:49-05:00"
+   "at": "2026-11-24T18:35:21-05:00"
   },
   {
    "w": "Operator",
@@ -958,8 +949,8 @@
   }
  ],
  "reply": {
-  "sent": "2026-11-24T23:20:11Z",
-  "seconds": 97.0
+  "sent": "2026-11-24T23:34:33Z",
+  "seconds": 47.0
  },
  "inbox": [],
  "trimmed": [
@@ -979,10 +970,10 @@
   "main": 2,
   "lanes": 1,
   "total": 3,
-  "at": "6:33 PM",
+  "at": "6:36 PM",
   "why": "",
-  "at_iso": "2026-11-24T23:33:00+00:00",
+  "at_iso": "2026-11-24T23:36:00+00:00",
   "started": "4:58 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 4:58 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 6:33 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 4:58 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 6:36 PM ET</p></section>"
  }
 }

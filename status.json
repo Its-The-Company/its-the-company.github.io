@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-24T00:49:37.699642+00:00",
+ "at": "2026-11-24T00:52:37.053119+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -12,6 +12,70 @@
    "last_handoff": 1795478327
   },
   "flow": [
+   {
+    "t": "T-0678",
+    "name": "Run the refresh button inside the widget extension",
+    "w": "Idris",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "claimed",
+      "at": 1795481526
+     },
+     {
+      "s": "worker",
+      "at": 1795481526
+     }
+    ]
+   },
+   {
+    "t": "T-4435",
+    "name": "Draw the wrapped refresh glyph on both runtimes",
+    "w": "Idris",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "claimed",
+      "at": 1795481478
+     },
+     {
+      "s": "worker",
+      "at": 1795481478
+     }
+    ]
+   },
+   {
+    "t": "T-4286",
+    "name": "Check an imported font draws in a widget",
+    "w": "Idris",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "claimed",
+      "at": 1795481440
+     },
+     {
+      "s": "worker",
+      "at": 1795481440
+     }
+    ]
+   },
+   {
+    "t": "T-4477",
+    "name": "People build a widget from blocks without code",
+    "w": "Idris",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "claimed",
+      "at": 1795481401
+     },
+     {
+      "s": "worker",
+      "at": 1795481401
+     }
+    ]
+   },
    {
     "t": "T-4010",
     "name": "Rebuild This Session as a full flowchart",
@@ -137,70 +201,6 @@
      {
       "s": "worker",
       "at": 1795435928
-     }
-    ]
-   },
-   {
-    "t": "T-0678",
-    "name": "Run the refresh button inside the widget extension",
-    "w": "Idris",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "claimed",
-      "at": 1795435857
-     },
-     {
-      "s": "worker",
-      "at": 1795435857
-     }
-    ]
-   },
-   {
-    "t": "T-4435",
-    "name": "Draw the wrapped refresh glyph on both runtimes",
-    "w": "Idris",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "claimed",
-      "at": 1795435782
-     },
-     {
-      "s": "worker",
-      "at": 1795435782
-     }
-    ]
-   },
-   {
-    "t": "T-4286",
-    "name": "Check an imported font draws in a widget",
-    "w": "Idris",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "claimed",
-      "at": 1795435705
-     },
-     {
-      "s": "worker",
-      "at": 1795435705
-     }
-    ]
-   },
-   {
-    "t": "T-4477",
-    "name": "People build a widget from blocks without code",
-    "w": "Idris",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "claimed",
-      "at": 1795435642
-     },
-     {
-      "s": "worker",
-      "at": 1795435642
      }
     ]
    },
@@ -395,19 +395,19 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 7.0,
+   "pct": 8.0,
    "resets_at": "2026-11-23T22:10:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-23T19:32:00.625026-05:00",
+   "read_at": "2026-11-23T19:52:15.874306-05:00",
    "source": "live",
-   "left": 93.0,
+   "left": 92.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 16.0,
    "resets_at": "2026-11-29T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-23T19:32:00.625026-05:00",
+   "read_at": "2026-11-23T19:52:15.874306-05:00",
    "source": "live",
    "left": 84.0,
    "left_words": "of your weekly allowance left"
@@ -419,7 +419,7 @@
    "read_at": "2026-11-23T19:31:15.235429-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-23T19:32:00.625026-05:00"
+  "read_at": "2026-11-23T19:52:15.874306-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -439,7 +439,7 @@
   "week_pct": 63.21,
   "usage_pct": 79.8,
   "work_pct": 97.6,
-  "read_at": "2026-11-24T00:49:00+00:00",
+  "read_at": "2026-11-24T00:52:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -507,14 +507,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-23T19:43:00-05:00",
+   "at": "2026-11-23T19:50:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-23T19:49:00-05:00",
+  "at": "2026-11-23T19:52:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -793,7 +793,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-24T00:49:23Z",
+  "at": "2026-11-24T00:52:15Z",
   "s": {
    "T-5524": [
     "testing",
@@ -808,12 +808,7 @@
    "T-4772": [
     "testq",
     "1st for a Simulator",
-    1795481003724
-   ],
-   "T-4192": [
-    "testq",
-    "2nd for a Simulator",
-    1795481243724
+    1795480995572
    ],
    "T-4190": [
     "merged",
@@ -832,7 +827,6 @@
    "T-5524": "Make the widget's Debug ask record say what it saw",
    "T-5059": "Test that App Store builds write no sensor rows",
    "T-4772": "Prove a refresh tap redraws the widget",
-   "T-4192": "Python in the app: smaller bundle, installable packages",
    "T-4190": "Settings and Pro: buy, restore, themes",
    "T-4182": "A failing widget says so and can recover"
   },
@@ -840,7 +834,6 @@
    "T-5524": "Idris",
    "T-5059": "Idris",
    "T-4772": "Idris",
-   "T-4192": "Idris",
    "T-4190": "Idris",
    "T-4182": "Idris",
    "T-5755": "Odalys",
@@ -850,7 +843,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-24T00:49:23Z",
+  "at": "2026-11-24T00:52:15Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -866,9 +859,9 @@
     "inline": null,
     "conflicted": null,
     "failed": null,
-    "held": 921,
+    "held": 924,
     "retry": null,
-    "parked": 921
+    "parked": 924
    },
    "cur": [],
    "ld": [
@@ -878,12 +871,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-24T00:48:59Z",
-    "ld": 8.13,
+    "at": "2026-11-24T00:52:08Z",
+    "ld": 5.15,
     "c": 8,
     "sb": 1,
     "dk": [
-     34.6,
+     34.5,
      228.3
     ],
     "ss": [
@@ -933,11 +926,11 @@
      "open": true
     }
    },
-   "at": "2026-11-24T00:49:37+00:00"
+   "at": "2026-11-24T00:52:37+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-24T00:49:31+00:00"
+   "at": "2026-11-24T00:52:37+00:00"
   }
  },
  "operators": [
@@ -965,7 +958,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 3 tasks",
+   "t": "Work session \u2013 7 tasks",
    "at": "2026-11-23T19:45:27-05:00"
   },
   {
@@ -998,10 +991,10 @@
   "main": 0,
   "lanes": 3,
   "total": 3,
-  "at": "7:49 PM",
+  "at": "7:52 PM",
   "why": "",
-  "at_iso": "2026-11-24T00:49:00+00:00",
+  "at_iso": "2026-11-24T00:52:00+00:00",
   "started": "7:06 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 7:06 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 7:49 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 7:06 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 7:52 PM ET</p></section>"
  }
 }

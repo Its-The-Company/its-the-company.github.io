@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-24T00:46:29.731135+00:00",
+ "at": "2026-11-24T00:49:37.699642+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -12,6 +12,54 @@
    "last_handoff": 1795478327
   },
   "flow": [
+   {
+    "t": "T-4010",
+    "name": "Rebuild This Session as a full flowchart",
+    "w": "Odalys",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "claimed",
+      "at": 1795481358
+     },
+     {
+      "s": "worker",
+      "at": 1795481358
+     }
+    ]
+   },
+   {
+    "t": "T-2097",
+    "name": "Read free memory in the widget extension on a device",
+    "w": "Idris",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "claimed",
+      "at": 1795481301
+     },
+     {
+      "s": "worker",
+      "at": 1795481301
+     }
+    ]
+   },
+   {
+    "t": "T-0337",
+    "name": "Confirm the revenue memo's facts from Apple pages",
+    "w": "Wrenna",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "claimed",
+      "at": 1795481220
+     },
+     {
+      "s": "worker",
+      "at": 1795481220
+     }
+    ]
+   },
    {
     "t": "T-4554",
     "name": "One state commit per widget across app and widget",
@@ -153,54 +201,6 @@
      {
       "s": "worker",
       "at": 1795435642
-     }
-    ]
-   },
-   {
-    "t": "T-4010",
-    "name": "Rebuild This Session as a full flowchart",
-    "w": "Odalys",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "claimed",
-      "at": 1795435567
-     },
-     {
-      "s": "worker",
-      "at": 1795435567
-     }
-    ]
-   },
-   {
-    "t": "T-2097",
-    "name": "Read free memory in the widget extension on a device",
-    "w": "Idris",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "claimed",
-      "at": 1795435451
-     },
-     {
-      "s": "worker",
-      "at": 1795435451
-     }
-    ]
-   },
-   {
-    "t": "T-0337",
-    "name": "Confirm the revenue memo's facts from Apple pages",
-    "w": "Wrenna",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "claimed",
-      "at": 1795434833
-     },
-     {
-      "s": "worker",
-      "at": 1795434833
      }
     ]
    },
@@ -439,7 +439,7 @@
   "week_pct": 63.21,
   "usage_pct": 79.8,
   "work_pct": 97.6,
-  "read_at": "2026-11-24T00:46:00+00:00",
+  "read_at": "2026-11-24T00:49:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -514,7 +514,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-23T19:46:00-05:00",
+  "at": "2026-11-23T19:49:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -793,7 +793,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-24T00:46:29Z",
+  "at": "2026-11-24T00:49:23Z",
   "s": {
    "T-5524": [
     "testing",
@@ -808,7 +808,12 @@
    "T-4772": [
     "testq",
     "1st for a Simulator",
-    1795481009731
+    1795481003724
+   ],
+   "T-4192": [
+    "testq",
+    "2nd for a Simulator",
+    1795481243724
    ],
    "T-4190": [
     "merged",
@@ -827,6 +832,7 @@
    "T-5524": "Make the widget's Debug ask record say what it saw",
    "T-5059": "Test that App Store builds write no sensor rows",
    "T-4772": "Prove a refresh tap redraws the widget",
+   "T-4192": "Python in the app: smaller bundle, installable packages",
    "T-4190": "Settings and Pro: buy, restore, themes",
    "T-4182": "A failing widget says so and can recover"
   },
@@ -834,6 +840,7 @@
    "T-5524": "Idris",
    "T-5059": "Idris",
    "T-4772": "Idris",
+   "T-4192": "Idris",
    "T-4190": "Idris",
    "T-4182": "Idris",
    "T-5755": "Odalys",
@@ -843,7 +850,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-24T00:46:29Z",
+  "at": "2026-11-24T00:49:23Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -859,9 +866,9 @@
     "inline": null,
     "conflicted": null,
     "failed": null,
-    "held": 918,
+    "held": 921,
     "retry": null,
-    "parked": 918
+    "parked": 921
    },
    "cur": [],
    "ld": [
@@ -871,12 +878,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-24T00:46:36Z",
-    "ld": 9.53,
+    "at": "2026-11-24T00:48:59Z",
+    "ld": 8.13,
     "c": 8,
     "sb": 1,
     "dk": [
-     34.7,
+     34.6,
      228.3
     ],
     "ss": [
@@ -926,11 +933,11 @@
      "open": true
     }
    },
-   "at": "2026-11-24T00:46:29+00:00"
+   "at": "2026-11-24T00:49:37+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-24T00:46:29+00:00"
+   "at": "2026-11-24T00:49:31+00:00"
   }
  },
  "operators": [
@@ -958,7 +965,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session",
+   "t": "Work session \u2013 3 tasks",
    "at": "2026-11-23T19:45:27-05:00"
   },
   {
@@ -991,10 +998,10 @@
   "main": 0,
   "lanes": 3,
   "total": 3,
-  "at": "7:46 PM",
+  "at": "7:49 PM",
   "why": "",
-  "at_iso": "2026-11-24T00:46:00+00:00",
+  "at_iso": "2026-11-24T00:49:00+00:00",
   "started": "7:06 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 7:06 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 7:46 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 7:06 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 7:49 PM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-24T17:59:34.502961+00:00",
+ "at": "2026-11-24T18:02:35.993485+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -376,7 +376,7 @@
    "task": "[build] T-4183 review fixes",
    "model": "",
    "started": "2026-11-24T16:38:54.576Z",
-   "seconds": 4839,
+   "seconds": 5021,
    "finished": null
   }
  ],
@@ -459,8 +459,21 @@
   "week_pct": 117.81,
   "usage_pct": 74.2,
   "work_pct": 97.8,
-  "read_at": "2026-11-24T17:59:00+00:00",
-  "running": []
+  "read_at": "2026-11-24T18:02:00+00:00",
+  "running": [
+   {
+    "lane": "a",
+    "task": "T-5047",
+    "w": "Idris",
+    "k": "build",
+    "t": "Fix the token test's No view for this size card",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-24T13:00:27-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   }
+  ]
  },
  "api_credits": [
   {
@@ -489,14 +502,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-24T12:56:00-05:00",
+   "at": "2026-11-24T12:59:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-24T12:59:00-05:00",
+  "at": "2026-11-24T13:02:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -737,92 +750,97 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-24T17:59:14Z",
+  "at": "2026-11-24T18:02:35Z",
   "s": {
    "T-4896": [
     "mergeq",
     "1st to merge",
-    1795543034086
+    1795542995993
    ],
    "T-4468": [
     "mergeq",
     "1st to merge",
-    1795543034086
+    1795542995993
    ],
    "T-4282": [
     "mergeq",
     "1st to merge",
-    1795543034086
+    1795542995993
    ],
    "T-4554": [
     "mergeq",
     "1st to merge",
-    1795543034086
+    1795542995993
    ],
    "T-4494": [
     "mergeq",
     "1st to merge",
-    1795543034086
+    1795542995993
    ],
    "T-4184": [
     "mergeq",
     "1st to merge",
-    1795543034086
+    1795542995993
    ],
    "T-4181": [
     "mergeq",
     "1st to merge",
-    1795543034086
+    1795542995993
    ],
    "T-0687": [
     "mergeq",
     "1st to merge",
-    1795543034086
+    1795542995993
    ],
    "T-4749": [
     "mergeq",
     "1st to merge",
-    1795543034086
+    1795542995993
    ],
    "T-0011": [
     "mergeq",
     "1st to merge",
-    1795543034086
+    1795542995993
    ],
    "T-5131": [
     "mergeq",
     "1st to merge",
-    1795543034086
+    1795542995993
    ],
    "T-5154": [
     "mergeq",
     "1st to merge",
-    1795543034086
+    1795542995993
    ],
    "T-4813": [
     "mergeq",
     "1st to merge",
-    1795543034086
+    1795542995993
    ],
    "T-5236": [
     "mergeq",
     "1st to merge",
-    1795543034086
+    1795542995993
    ],
    "T-4807": [
     "mergeq",
     "1st to merge",
-    1795543034086
+    1795542995993
    ],
    "T-5365": [
     "mergeq",
     "1st to merge",
-    1795543034086
+    1795542995993
    ],
    "T-0811": [
     "mergetest",
     "iPhone tests on the MacBook",
     null
+   ],
+   "T-5047": [
+    "merging",
+    "Mac tests at the main gate",
+    1795543235993
    ]
   },
   "nm": {
@@ -842,7 +860,8 @@
    "T-5236": "Send land host tests to the MacBook under heavy load",
    "T-4807": "Fix every bad test that failed a merge",
    "T-5365": "Location refresh policy, file and route",
-   "T-0811": "Give the bundled examples an iPhone entry point"
+   "T-0811": "Give the bundled examples an iPhone entry point",
+   "T-5047": "Fix the token test's No view for this size card"
   },
   "wk": {
    "T-4896": "Maren",
@@ -862,6 +881,7 @@
    "T-4807": "Pernille",
    "T-5365": "Idris",
    "T-0811": "Idris",
+   "T-5047": "Idris",
    "T-4637": "Idris",
    "T-1119": "Ines",
    "T-5602": "Maren",
@@ -877,7 +897,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-24T17:59:14Z",
+  "at": "2026-11-24T18:02:35Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -890,12 +910,12 @@
    },
    "m": {
     "checking": null,
-    "inline": 2,
+    "inline": 6,
     "conflicted": null,
     "failed": null,
-    "held": 1951,
+    "held": 1954,
     "retry": null,
-    "parked": 1216
+    "parked": 1219
    },
    "cur": [],
    "ld": [
@@ -905,7 +925,7 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-24T17:58:49Z",
+    "at": "2026-11-24T18:02:11Z",
     "ld": 1.12,
     "c": 8,
     "sb": 0,
@@ -920,15 +940,17 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-24T17:57:58Z",
-    "ld": 6.81,
+    "at": "2026-11-24T17:58:33Z",
+    "ld": 6.98,
     "c": 12,
-    "sb": 0,
+    "sb": 1,
     "dk": [
-     342.1,
+     341.4,
      926.4
     ],
-    "sn": []
+    "sn": [
+     "itsthecompany-runner"
+    ]
    }
   }
  },
@@ -958,11 +980,11 @@
      "open": true
     }
    },
-   "at": "2026-11-24T17:59:34+00:00"
+   "at": "2026-11-24T18:02:35+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-24T17:59:34+00:00"
+   "at": "2026-11-24T18:02:23+00:00"
   }
  },
  "operators": [
@@ -974,6 +996,15 @@
    "e": "high",
    "t": "Work session",
    "at": "2026-11-24T11:48:54-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Evan's Account",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session \u2013 1 task",
+   "at": "2026-11-24T13:00:27-05:00"
   }
  ],
  "reply": {
@@ -995,12 +1026,12 @@
  ],
  "agents_now": {
   "main": 1,
-  "lanes": 0,
-  "total": 1,
-  "at": "12:59 PM",
+  "lanes": 1,
+  "total": 2,
+  "at": "1:02 PM",
   "why": "",
-  "at_iso": "2026-11-24T17:59:00+00:00",
+  "at_iso": "2026-11-24T18:02:00+00:00",
   "started": "9:18 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 9:18 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 12:59 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 1, started 9:18 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 1:02 PM ET</p></section>"
  }
 }

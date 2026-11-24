@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-24T03:48:14.472111+00:00",
+ "at": "2026-11-24T03:51:18.861016+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -425,7 +425,7 @@
   "week_pct": 67.16,
   "usage_pct": 79.8,
   "work_pct": 97.6,
-  "read_at": "2026-11-24T03:48:00+00:00",
+  "read_at": "2026-11-24T03:51:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -523,7 +523,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-23T22:48:00-05:00",
+  "at": "2026-11-23T22:51:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -534,7 +534,7 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 8 (held: too few lands in 3 hours to judge a raise)",
+  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 8 (at its floor: load 12.1 a core is over 10)",
   "n": 8,
   "at": "2026-11-23T19:06:23.900656-05:00"
  },
@@ -828,42 +828,42 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-24T03:48:14Z",
+  "at": "2026-11-24T03:51:18Z",
   "s": {
    "T-5657": [
     "mergetest",
     "Xcode checks on the MacBook, 1st to merge",
-    1795491794472
+    1795491798861
    ],
    "T-0337": [
     "mergetest",
     "Xcode checks on the MacBook, 1st to merge",
-    1795491794472
+    1795491798861
    ],
    "T-2097": [
     "mergetest",
     "Xcode checks on the MacBook, 1st to merge",
-    1795491794472
+    1795491798861
    ],
    "T-4010": [
     "mergetest",
     "Xcode checks on the MacBook, 1st to merge",
-    1795491794472
+    1795491798861
    ],
    "T-4477": [
     "mergetest",
     "Xcode checks on the MacBook, 1st to merge",
-    1795491794472
+    1795491798861
    ],
    "T-4286": [
     "mergetest",
     "Xcode checks on the MacBook, 1st to merge",
-    1795491794472
+    1795491798861
    ],
    "T-4435": [
     "mergetest",
     "Xcode checks on the MacBook, 1st to merge",
-    1795491794472
+    1795491798861
    ],
    "T-1119": [
     "testing",
@@ -898,12 +898,12 @@
    "T-5059": [
     "testq",
     "1st for a Simulator",
-    1795491974472
+    1795491918861
    ],
    "T-5274": [
     "testq",
     "2nd for a Simulator",
-    1795492034472
+    1795491978861
    ]
   },
   "nm": {
@@ -949,7 +949,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-24T03:48:14Z",
+  "at": "2026-11-24T03:51:18Z",
   "mq": {
    "n": {
     "checking": 7,
@@ -961,13 +961,13 @@
     "parked": 13
    },
    "m": {
-    "checking": 5,
+    "checking": 8,
     "inline": null,
     "conflicted": null,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1100
+    "parked": 1103
    },
    "cur": [
     [
@@ -976,7 +976,7 @@
      ],
      "iPhone app tests",
      "MacBook",
-     5
+     8
     ],
     [
      [
@@ -984,7 +984,7 @@
      ],
      "iPhone app tests",
      "MacBook",
-     5
+     8
     ],
     [
      [
@@ -992,7 +992,7 @@
      ],
      "iPhone app tests",
      "MacBook",
-     5
+     8
     ],
     [
      [
@@ -1000,7 +1000,7 @@
      ],
      "iPhone app tests",
      "MacBook",
-     5
+     8
     ]
    ],
    "ld": [
@@ -1010,12 +1010,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-24T03:47:50Z",
-    "ld": 11.19,
+    "at": "2026-11-24T03:51:23Z",
+    "ld": 11.44,
     "c": 8,
     "sb": 1,
     "dk": [
-     26.9,
+     26.6,
      228.3
     ],
     "ss": [
@@ -1065,11 +1065,11 @@
      "open": true
     }
    },
-   "at": "2026-11-24T03:48:14+00:00"
+   "at": "2026-11-24T03:51:18+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-24T03:48:14+00:00"
+   "at": "2026-11-24T03:51:18+00:00"
   }
  },
  "operators": [
@@ -1149,10 +1149,10 @@
   "main": 0,
   "lanes": 5,
   "total": 5,
-  "at": "10:48 PM",
+  "at": "10:51 PM",
   "why": "",
-  "at_iso": "2026-11-24T03:48:00+00:00",
+  "at_iso": "2026-11-24T03:51:00+00:00",
   "started": "7:06 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 0, started 7:06 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 10:48 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 0, started 7:06 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 10:51 PM ET</p></section>"
  }
 }

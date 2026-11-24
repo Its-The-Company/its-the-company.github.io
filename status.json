@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-24T00:21:59.483284+00:00",
+ "at": "2026-11-24T00:25:04.783924+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -439,21 +439,8 @@
   "week_pct": 88.17,
   "usage_pct": 79.8,
   "work_pct": 97.6,
-  "read_at": "2026-11-24T00:22:00+00:00",
-  "running": [
-   {
-    "lane": "a",
-    "task": "T-5691",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Land committed work after a cut-off session",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-23T17:28:45-05:00",
-    "n": "Evan",
-    "src": "plan-a"
-   }
-  ]
+  "read_at": "2026-11-24T00:25:00+00:00",
+  "running": []
  },
  "api_credits": [
   {
@@ -482,14 +469,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-23T19:18:00-05:00",
+   "at": "2026-11-23T19:24:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-23T19:22:00-05:00",
+  "at": "2026-11-23T19:25:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -705,29 +692,36 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-24T00:21:45Z",
+  "at": "2026-11-24T00:25:04Z",
   "s": {
    "T-5755": [
     "mergeq",
     "1st to merge",
-    1795477905185
+    1795477864783
+   ],
+   "T-5691": [
+    "mergeq",
+    "2nd to merge",
+    1795479784783
    ]
   },
   "nm": {
-   "T-5755": "A merge turn ends at its time limit"
+   "T-5755": "A merge turn ends at its time limit",
+   "T-5691": "Land committed work after a cut-off session"
   },
   "wk": {
    "T-5755": "Odalys",
+   "T-5691": "Odalys",
    "T-5758": "Idris",
    "T-5743": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-24T00:21:45Z",
+  "at": "2026-11-24T00:25:04Z",
   "mq": {
    "n": {
     "checking": 0,
-    "inline": 1,
+    "inline": 2,
     "conflicted": 0,
     "failed": 0,
     "held": 3,
@@ -736,12 +730,12 @@
    },
    "m": {
     "checking": null,
-    "inline": 30,
+    "inline": 18,
     "conflicted": null,
     "failed": null,
-    "held": 893,
+    "held": 896,
     "retry": null,
-    "parked": 893
+    "parked": 896
    },
    "cur": [],
    "ld": [
@@ -751,8 +745,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-24T00:21:45Z",
-    "ld": 5.16,
+    "at": "2026-11-24T00:24:44Z",
+    "ld": 3.62,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -786,7 +780,7 @@
    "parked": 17,
    "open": true,
    "mq": false,
-   "counted": "2026-11-24T00:12:34+00:00",
+   "counted": "2026-11-24T00:22:54+00:00",
    "by": {
     "app": {
      "n": 13,
@@ -799,16 +793,16 @@
      "open": true
     },
     "hub": {
-     "n": 2,
+     "n": 3,
      "limit": 5,
      "open": true
     }
    },
-   "at": "2026-11-24T00:21:59+00:00"
+   "at": "2026-11-24T00:25:04+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-24T00:21:53+00:00"
+   "at": "2026-11-24T00:24:51+00:00"
   }
  },
  "operators": [
@@ -820,15 +814,6 @@
    "e": "high",
    "t": "Work session",
    "at": "2026-11-23T19:09:50-05:00"
-  },
-  {
-   "w": "Operator",
-   "a": "Evan's Account",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session \u2013 1 task",
-   "at": "2026-11-23T17:28:45-05:00"
   }
  ],
  "reply": {
@@ -849,12 +834,12 @@
  ],
  "agents_now": {
   "main": 0,
-  "lanes": 1,
-  "total": 1,
-  "at": "7:22 PM",
-  "why": "",
-  "at_iso": "2026-11-24T00:22:00+00:00",
+  "lanes": 0,
+  "total": 0,
+  "at": "7:25 PM",
+  "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
+  "at_iso": "2026-11-24T00:25:00+00:00",
   "started": "7:06 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0, started 7:06 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 7:22 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0, started 7:06 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 7:25 PM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
  }
 }

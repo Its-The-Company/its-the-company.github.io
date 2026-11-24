@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-24T21:21:37.532499+00:00",
+ "at": "2026-11-24T21:24:39.073746+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -376,12 +376,29 @@
    "task": "[build] T-5815 four-tab shell",
    "model": "",
    "started": "2026-11-24T19:12:40.306Z",
-   "seconds": 7737,
+   "seconds": 7918,
    "finished": null
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] merge watch Opus high",
+   "model": "opus",
+   "started": "2026-11-24T21:22:56.240Z",
+   "seconds": 102,
+   "finished": null,
+   "effort": "high"
   }
  ],
- "who": "Idris",
+ "who": "Idris, Odalys",
  "recent": [
+  {
+   "name": "odalys",
+   "task": "[merge watch] Opus high watcher",
+   "model": "opus",
+   "started": "2026-11-24T21:22:42.815Z",
+   "seconds": null,
+   "finished": "2026-11-24T21:22:42.852Z"
+  },
   {
    "name": "idris",
    "task": "[build] T-2943 upload build 8",
@@ -405,37 +422,29 @@
    "started": "2026-11-24T18:15:29.891Z",
    "seconds": null,
    "finished": "2026-11-24T19:36:35.329000+00:00"
-  },
-  {
-   "name": "pernille",
-   "task": "[review] T-2943",
-   "model": "",
-   "started": "2026-11-24T19:30:50.338Z",
-   "seconds": null,
-   "finished": "2026-11-24T19:31:25.422000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 726,
-  "blocked_count": 2
+  "runnable_count": 725,
+  "blocked_count": 3
  },
  "meter": {
   "five_hour": {
-   "pct": 66.0,
+   "pct": 67.0,
    "resets_at": "2026-11-24T17:00:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-24T16:20:59.489457-05:00",
+   "read_at": "2026-11-24T16:22:12.636757-05:00",
    "source": "live",
-   "left": 34.0,
+   "left": 33.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 54.0,
    "resets_at": "2026-11-29T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-24T16:20:59.489457-05:00",
+   "read_at": "2026-11-24T16:22:12.636757-05:00",
    "source": "live",
    "left": 46.0,
    "left_words": "of your weekly allowance left"
@@ -447,7 +456,7 @@
    "read_at": "2026-11-24T14:15:11.103453-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-24T16:20:59.489457-05:00"
+  "read_at": "2026-11-24T16:22:12.636757-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -467,7 +476,7 @@
   "week_pct": 132.18,
   "usage_pct": 74.2,
   "work_pct": 97.8,
-  "read_at": "2026-11-24T21:21:00+00:00",
+  "read_at": "2026-11-24T21:24:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -510,14 +519,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-24T16:20:00-05:00",
+   "at": "2026-11-24T16:22:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-24T16:21:00-05:00",
+  "at": "2026-11-24T16:24:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -543,11 +552,12 @@
   },
   {
    "name": "Odalys",
-   "state": "next",
-   "task": "Odalys, P0, Investor an Investor c7030179059 (11:12 PM...",
-   "model": null,
-   "since": null,
-   "next": []
+   "state": "running",
+   "task": "[tools] merge watch Opus high",
+   "model": "opus",
+   "since": "2026-11-24T21:22:56.240Z",
+   "next": [],
+   "effort": "high"
   },
   {
    "name": "Pernille",
@@ -591,6 +601,15 @@
     "at": "2026-11-24T19:12:40.306Z",
     "o": "c",
     "task": "T-5815"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Merge watch Opus high",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-24T21:22:56.240Z",
+    "o": "c"
    }
   ],
   "src": "plan",
@@ -684,9 +703,9 @@
    }
   ],
   "count": {
-   "next": 726,
+   "next": 725,
    "wait": 2,
-   "blocked": 0,
+   "blocked": 1,
    "you": 2
   },
   "fin": {
@@ -758,17 +777,17 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-24T21:21:25Z",
+  "at": "2026-11-24T21:24:19Z",
   "s": {
    "T-4824": [
     "mergeq",
     "1st to merge",
-    1795555045495
+    1795555039137
    ],
    "T-5308": [
     "mergeq",
     "2nd to merge",
-    1795554325495
+    1795554319137
    ]
   },
   "nm": {
@@ -793,7 +812,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-24T21:21:25Z",
+  "at": "2026-11-24T21:24:19Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -805,13 +824,13 @@
     "parked": 15
    },
    "m": {
-    "checking": 28,
-    "inline": 16,
+    "checking": 30,
+    "inline": 19,
     "conflicted": null,
     "failed": null,
-    "held": 2153,
+    "held": 2156,
     "retry": null,
-    "parked": 1552
+    "parked": 1555
    },
    "cur": [
     [
@@ -820,7 +839,7 @@
      ],
      "iPhone app tests",
      "MacBook",
-     28
+     30
     ]
    ],
    "ld": [
@@ -830,8 +849,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-24T21:21:26Z",
-    "ld": 2.28,
+    "at": "2026-11-24T21:24:19Z",
+    "ld": 1.89,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -886,11 +905,11 @@
      "open": true
     }
    },
-   "at": "2026-11-24T21:21:37+00:00"
+   "at": "2026-11-24T21:24:39+00:00"
   },
   "bl": {
-   "n": 2,
-   "at": "2026-11-24T21:21:37+00:00"
+   "n": 3,
+   "at": "2026-11-24T21:24:27+00:00"
   }
  },
  "operators": [
@@ -932,13 +951,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 1,
+  "main": 2,
   "lanes": 1,
-  "total": 2,
-  "at": "4:21 PM",
+  "total": 3,
+  "at": "4:24 PM",
   "why": "",
-  "at_iso": "2026-11-24T21:21:00+00:00",
+  "at_iso": "2026-11-24T21:24:00+00:00",
   "started": "9:18 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 1, started 9:18 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 4:21 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 9:18 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 4:24 PM ET</p></section>"
  }
 }

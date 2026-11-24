@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-24T23:27:08.245527+00:00",
+ "at": "2026-11-24T23:30:08.126446+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -390,7 +390,7 @@
    "task": "[build] T-5815 finish shell checks",
    "model": "opus",
    "started": "2026-11-24T22:01:37.992Z",
-   "seconds": 5130,
+   "seconds": 5310,
    "finished": null
   },
   {
@@ -398,7 +398,7 @@
    "task": "[ops] merge watch restart",
    "model": "opus",
    "started": "2026-11-24T22:02:04.950Z",
-   "seconds": 5103,
+   "seconds": 5283,
    "finished": null
   }
  ],
@@ -440,7 +440,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 723,
+  "runnable_count": 722,
   "blocked_count": 3
  },
  "meter": {
@@ -489,7 +489,7 @@
   "week_pct": 166.51,
   "usage_pct": 68.4,
   "work_pct": 98.0,
-  "read_at": "2026-11-24T23:27:00+00:00",
+  "read_at": "2026-11-24T23:30:00+00:00",
   "running": [
    {
     "lane": "a3",
@@ -532,14 +532,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-24T18:23:00-05:00",
+   "at": "2026-11-24T18:28:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-24T18:27:00-05:00",
+  "at": "2026-11-24T18:30:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -699,6 +699,11 @@
   ],
   "done": [
    {
+    "w": "Odalys",
+    "t": "A test job sent to the MacBook now starts as soon as a slot is free instead of waiting up to 20...",
+    "at": "2026-11-24T18:28:00-05:00"
+   },
+   {
     "w": "Idris+pernille",
     "t": "The widget's hidden debug record now notes only the times iOS asked for a stand-in picture,...",
     "at": "2026-11-24T18:23:00-05:00"
@@ -707,22 +712,21 @@
     "w": "Idris+operator",
     "t": "The gate build's own tests now check that every ladder file and test widget it lists is really...",
     "at": "2026-11-24T18:03:00-05:00"
-   },
-   {
-    "w": "Idris",
-    "t": "The build step that trims Python from the app now judges folders the same way whether they sit...",
-    "at": "2026-11-24T17:37:00-05:00"
    }
   ],
   "count": {
-   "next": 723,
+   "next": 722,
    "wait": 2,
    "blocked": 1,
    "you": 2
   },
   "fin": {
-   "n": 11,
+   "n": 12,
    "rows": [
+    [
+     "T-5832",
+     "A MacBook job starts when a..."
+    ],
     [
      "T-5524",
      "Make the widget's Debug ask..."
@@ -742,10 +746,6 @@
     [
      "T-0422",
      "Tighten the package install..."
-    ],
-    [
-     "T-5825",
-     "Feature steps go out before..."
     ]
    ]
   }
@@ -789,22 +789,22 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-24T23:26:55Z",
+  "at": "2026-11-24T23:30:08Z",
   "s": {
    "T-4186": [
     "mergetest",
     "Xcode checks on the MacBook, 1st to merge",
-    1795562635753
+    1795562648126
    ],
    "T-5797": [
     "mergeq",
     "2nd to merge",
-    1795559695753
+    1795559708126
    ],
    "T-4824": [
     "mergeq",
     "3rd to merge",
-    1795561375753
+    1795561388126
    ]
   },
   "nm": {
@@ -816,6 +816,7 @@
    "T-4186": "Idris",
    "T-5797": "Idris",
    "T-4824": "Idris",
+   "T-5832": "Odalys",
    "T-5524": "Idris",
    "T-4644": "Idris",
    "T-5638": "Idris",
@@ -830,7 +831,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-24T23:26:55Z",
+  "at": "2026-11-24T23:30:08Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -842,13 +843,13 @@
     "parked": 14
    },
    "m": {
-    "checking": 3,
-    "inline": 38,
+    "checking": 6,
+    "inline": 41,
     "conflicted": null,
     "failed": null,
-    "held": 2278,
+    "held": 2282,
     "retry": null,
-    "parked": 1544
+    "parked": 1547
    },
    "cur": [
     [
@@ -857,7 +858,7 @@
      ],
      "iPhone app tests",
      "MacBook",
-     3
+     6
     ]
    ],
    "ld": [
@@ -867,12 +868,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-24T23:26:07Z",
-    "ld": 6.3,
+    "at": "2026-11-24T23:30:08Z",
+    "ld": 3.23,
     "c": 8,
     "sb": 0,
     "dk": [
-     38.5,
+     40.6,
      228.3
     ],
     "ss": [
@@ -920,11 +921,11 @@
      "open": true
     }
    },
-   "at": "2026-11-24T23:27:08+00:00"
+   "at": "2026-11-24T23:30:08+00:00"
   },
   "bl": {
    "n": 3,
-   "at": "2026-11-24T23:26:55+00:00"
+   "at": "2026-11-24T23:30:08+00:00"
   }
  },
  "operators": [
@@ -969,10 +970,10 @@
   "main": 2,
   "lanes": 1,
   "total": 3,
-  "at": "6:27 PM",
+  "at": "6:30 PM",
   "why": "",
-  "at_iso": "2026-11-24T23:27:00+00:00",
+  "at_iso": "2026-11-24T23:30:00+00:00",
   "started": "4:58 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 4:58 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 6:27 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 4:58 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 6:30 PM ET</p></section>"
  }
 }

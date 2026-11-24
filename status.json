@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-24T03:44:58.435306+00:00",
+ "at": "2026-11-24T03:48:14.472111+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -376,7 +376,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 728,
+  "runnable_count": 729,
   "blocked_count": 2
  },
  "meter": {
@@ -425,7 +425,7 @@
   "week_pct": 67.16,
   "usage_pct": 79.8,
   "work_pct": 97.6,
-  "read_at": "2026-11-24T03:45:00+00:00",
+  "read_at": "2026-11-24T03:48:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -507,7 +507,7 @@
   }
  ],
  "disk": {
-  "free_gb": 29,
+  "free_gb": 28,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -516,14 +516,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-23T22:39:00-05:00",
+   "at": "2026-11-23T22:47:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-23T22:45:00-05:00",
+  "at": "2026-11-23T22:48:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -754,7 +754,7 @@
    }
   ],
   "count": {
-   "next": 728,
+   "next": 729,
    "wait": 2,
    "blocked": 0,
    "you": 2
@@ -828,77 +828,82 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-24T03:44:58Z",
+  "at": "2026-11-24T03:48:14Z",
   "s": {
    "T-5657": [
     "mergetest",
     "Xcode checks on the MacBook, 1st to merge",
-    1795491838435
+    1795491794472
    ],
    "T-0337": [
     "mergetest",
     "Xcode checks on the MacBook, 1st to merge",
-    1795491838435
+    1795491794472
    ],
    "T-2097": [
     "mergetest",
     "Xcode checks on the MacBook, 1st to merge",
-    1795491838435
+    1795491794472
    ],
    "T-4010": [
     "mergetest",
     "Xcode checks on the MacBook, 1st to merge",
-    1795491838435
+    1795491794472
    ],
    "T-4477": [
     "mergetest",
     "Xcode checks on the MacBook, 1st to merge",
-    1795491838435
+    1795491794472
    ],
    "T-4286": [
     "mergetest",
     "Xcode checks on the MacBook, 1st to merge",
-    1795491838435
+    1795491794472
    ],
    "T-4435": [
     "mergetest",
     "Xcode checks on the MacBook, 1st to merge",
-    1795491838435
+    1795491794472
    ],
-   "T-5274": [
+   "T-1119": [
     "testing",
     "Mac Mini \u00b7 test",
     null
    ],
-   "T-1119": [
-    "testq",
-    "1st for a Simulator",
-    1795491538435
-   ],
    "T-2296": [
-    "testq",
-    "1st for a Simulator",
-    1795491538435
+    "testing",
+    "Mac Mini \u00b7 test",
+    null
    ],
    "T-4190": [
-    "testq",
-    "1st for a Simulator",
-    1795491538435
+    "testing",
+    "Mac Mini \u00b7 test",
+    null
    ],
    "T-4681": [
-    "testq",
-    "1st for a Simulator",
-    1795491538435
+    "testing",
+    "Mac Mini \u00b7 test",
+    null
    ],
    "T-4715": [
-    "testq",
-    "1st for a Simulator",
-    1795491538435
+    "testing",
+    "Mac Mini \u00b7 test",
+    null
    ],
    "T-5602": [
+    "testing",
+    "Mac Mini \u00b7 test",
+    null
+   ],
+   "T-5059": [
     "testq",
     "1st for a Simulator",
-    1795491538435
+    1795491974472
+   ],
+   "T-5274": [
+    "testq",
+    "2nd for a Simulator",
+    1795492034472
    ]
   },
   "nm": {
@@ -909,13 +914,14 @@
    "T-4477": "People build a widget from blocks without code",
    "T-4286": "Check an imported font draws in a widget",
    "T-4435": "Draw the wrapped refresh glyph on both runtimes",
-   "T-5274": "Test that a send never freezes the editor",
    "T-1119": "Investors answer two App Store Connect questions",
    "T-2296": "Finish the gallery pager, iPad layout and detail foot",
    "T-4190": "Settings and Pro: buy, restore, themes",
    "T-4681": "Premades default to Paper in light and Studio in dark",
    "T-4715": "Put the new Pro screen words into the app",
-   "T-5602": "Brief for a new look for the app"
+   "T-5602": "Brief for a new look for the app",
+   "T-5059": "Test that App Store builds write no sensor rows",
+   "T-5274": "Test that a send never freezes the editor"
   },
   "wk": {
    "T-5657": "Idris",
@@ -925,13 +931,14 @@
    "T-4477": "Idris",
    "T-4286": "Idris",
    "T-4435": "Idris",
-   "T-5274": "Idris",
    "T-1119": "Ines",
    "T-2296": "Idris",
    "T-4190": "Idris",
    "T-4681": "Idris",
    "T-4715": "Maren",
    "T-5602": "Maren",
+   "T-5059": "Idris",
+   "T-5274": "Idris",
    "T-5676": "Odalys",
    "T-5774": "Operator",
    "T-5703": "Odalys",
@@ -942,7 +949,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-24T03:44:58Z",
+  "at": "2026-11-24T03:48:14Z",
   "mq": {
    "n": {
     "checking": 7,
@@ -954,13 +961,13 @@
     "parked": 13
    },
    "m": {
-    "checking": 1,
+    "checking": 5,
     "inline": null,
     "conflicted": null,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1096
+    "parked": 1100
    },
    "cur": [
     [
@@ -969,7 +976,7 @@
      ],
      "iPhone app tests",
      "MacBook",
-     1
+     5
     ],
     [
      [
@@ -977,7 +984,7 @@
      ],
      "iPhone app tests",
      "MacBook",
-     1
+     5
     ],
     [
      [
@@ -985,7 +992,7 @@
      ],
      "iPhone app tests",
      "MacBook",
-     1
+     5
     ],
     [
      [
@@ -993,7 +1000,7 @@
      ],
      "iPhone app tests",
      "MacBook",
-     1
+     5
     ]
    ],
    "ld": [
@@ -1003,12 +1010,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-24T03:45:02Z",
-    "ld": 6.7,
+    "at": "2026-11-24T03:47:50Z",
+    "ld": 11.19,
     "c": 8,
     "sb": 1,
     "dk": [
-     30.4,
+     26.9,
      228.3
     ],
     "ss": [
@@ -1058,11 +1065,11 @@
      "open": true
     }
    },
-   "at": "2026-11-24T03:44:58+00:00"
+   "at": "2026-11-24T03:48:14+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-24T03:44:50+00:00"
+   "at": "2026-11-24T03:48:14+00:00"
   }
  },
  "operators": [
@@ -1142,10 +1149,10 @@
   "main": 0,
   "lanes": 5,
   "total": 5,
-  "at": "10:45 PM",
+  "at": "10:48 PM",
   "why": "",
-  "at_iso": "2026-11-24T03:45:00+00:00",
+  "at_iso": "2026-11-24T03:48:00+00:00",
   "started": "7:06 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 0, started 7:06 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 10:45 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 0, started 7:06 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 10:48 PM ET</p></section>"
  }
 }

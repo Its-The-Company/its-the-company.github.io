@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-24T14:37:09.374926+00:00",
+ "at": "2026-11-24T14:40:13.963159+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -335,7 +335,7 @@
    "task": "[build] T-4183 Gallery tour examples",
    "model": "",
    "started": "2026-11-24T14:21:14.744Z",
-   "seconds": 954,
+   "seconds": 1139,
    "finished": null
   }
  ],
@@ -393,7 +393,7 @@
   "week_pct": 89.08,
   "usage_pct": 74.2,
   "work_pct": 97.8,
-  "read_at": "2026-11-24T14:37:00+00:00",
+  "read_at": "2026-11-24T14:40:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -456,7 +456,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-24T09:37:00-05:00",
+  "at": "2026-11-24T09:40:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -467,7 +467,7 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 8 (held: too few lands in 3 hours to judge a raise)",
+  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 8 (at its floor: load 17.6 a core is over 10)",
   "n": 8,
   "at": "2026-11-24T09:17:56.072770-05:00"
  },
@@ -672,7 +672,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-24T14:36:58Z",
+  "at": "2026-11-24T14:39:57Z",
   "s": {
    "T-2513": [
     "mergetest",
@@ -682,7 +682,7 @@
    "T-5047": [
     "merging",
     "Mac tests at the main gate",
-    1795526758282
+    1795526757326
    ]
   },
   "nm": {
@@ -695,7 +695,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-24T14:36:58Z",
+  "at": "2026-11-24T14:39:57Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -711,9 +711,9 @@
     "inline": null,
     "conflicted": null,
     "failed": null,
-    "held": 1748,
+    "held": 1751,
     "retry": null,
-    "parked": 747
+    "parked": 750
    },
    "cur": [],
    "ld": [
@@ -723,21 +723,19 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-24T14:36:23Z",
-    "ld": 8.37,
+    "at": "2026-11-24T14:39:52Z",
+    "ld": 17.05,
     "c": 8,
-    "sb": 1,
+    "sb": 0,
     "dk": [
-     36.1,
+     35.9,
      228.3
     ],
     "ss": [
      168.5,
      953.7
     ],
-    "sn": [
-     "pywidget-wk-check"
-    ]
+    "sn": []
    },
    "macbook": {
     "at": "2026-11-24T14:31:39Z",
@@ -778,11 +776,11 @@
      "open": true
     }
    },
-   "at": "2026-11-24T14:37:09+00:00"
+   "at": "2026-11-24T14:40:13+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-24T14:37:09+00:00"
+   "at": "2026-11-24T14:40:07+00:00"
   }
  },
  "operators": [
@@ -833,10 +831,10 @@
   "main": 1,
   "lanes": 2,
   "total": 3,
-  "at": "9:37 AM",
+  "at": "9:40 AM",
   "why": "",
-  "at_iso": "2026-11-24T14:37:00+00:00",
+  "at_iso": "2026-11-24T14:40:00+00:00",
   "started": "9:18 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 1, started 9:18 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 9:37 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 1, started 9:18 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 9:40 AM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-24T02:22:11.873598+00:00",
+ "at": "2026-11-24T02:25:12.206362+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -425,7 +425,7 @@
   "week_pct": 67.16,
   "usage_pct": 79.8,
   "work_pct": 97.6,
-  "read_at": "2026-11-24T02:22:00+00:00",
+  "read_at": "2026-11-24T02:25:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -500,7 +500,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-23T21:22:00-05:00",
+  "at": "2026-11-23T21:25:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -596,15 +596,6 @@
    },
    {
     "w": "Pernille",
-    "t": "Test the commit and close ordering inside the run lock",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-23T20:52:23-05:00",
-    "o": "c",
-    "task": "T-5303"
-   },
-   {
-    "w": "Pernille",
     "t": "Test that App Store builds write no sensor rows",
     "m": "opus",
     "e": "high",
@@ -620,6 +611,15 @@
     "at": "2026-11-23T21:13:07-05:00",
     "o": "c",
     "task": "T-4637"
+   },
+   {
+    "w": "Idris",
+    "t": "Test the commit and close ordering inside the run lock",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-23T21:24:43-05:00",
+    "o": "c",
+    "task": "T-5303"
    }
   ],
   "src": "plan",
@@ -779,14 +779,14 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-24T02:21:53Z",
+  "at": "2026-11-24T02:25:12Z",
   "s": {
    "T-5657": [
     "mergetest",
     "iPhone tests on the MacBook",
     null
    ],
-   "T-5303": [
+   "T-4623": [
     "testing",
     "Mac Mini \u00b7 test",
     null
@@ -794,52 +794,58 @@
    "T-5059": [
     "testq",
     "1st for a Simulator",
-    1795486613521
+    1795486572206
    ],
    "T-5634": [
     "testq",
     "3rd for a Simulator",
-    1795486853521
+    1795486812206
    ],
    "T-1119": [
     "testq",
     "4th for a Simulator",
-    1795486913521
+    1795486872206
    ],
    "T-2296": [
     "testq",
     "4th for a Simulator",
-    1795486913521
+    1795486872206
    ],
    "T-4190": [
     "testq",
     "4th for a Simulator",
-    1795486913521
+    1795486872206
    ],
    "T-4681": [
     "testq",
     "4th for a Simulator",
-    1795486913521
+    1795486872206
    ],
    "T-4715": [
     "testq",
     "4th for a Simulator",
-    1795486913521
+    1795486872206
    ],
    "T-5602": [
     "testq",
     "4th for a Simulator",
-    1795486913521
+    1795486872206
    ],
    "T-4875": [
     "testq",
     "5th for a Simulator",
-    1795486913521
+    1795486872206
+   ],
+   "T-5303": [
+    "merged",
+    "on main 9:24 PM ET",
+    1795487079000,
+    "Idris"
    ]
   },
   "nm": {
    "T-5657": "Ship test widgets in internal TestFlight builds only",
-   "T-5303": "Test the commit and close ordering inside the run lock",
+   "T-4623": "Test that a lift dates its proof under the lock",
    "T-5059": "Test that App Store builds write no sensor rows",
    "T-5634": "Retry a refused widget send at the project boundary",
    "T-1119": "Investors answer two App Store Connect questions",
@@ -848,11 +854,12 @@
    "T-4681": "Premades default to Paper in light and Studio in dark",
    "T-4715": "Put the new Pro screen words into the app",
    "T-5602": "Brief for a new look for the app",
-   "T-4875": "Test that suggestions are asked after the first letter"
+   "T-4875": "Test that suggestions are asked after the first letter",
+   "T-5303": "Test the commit and close ordering inside the run lock"
   },
   "wk": {
    "T-5657": "Idris",
-   "T-5303": "Idris",
+   "T-4623": "Idris",
    "T-5059": "Idris",
    "T-5634": "Idris",
    "T-1119": "Ines",
@@ -862,6 +869,7 @@
    "T-4715": "Maren",
    "T-5602": "Maren",
    "T-4875": "Idris",
+   "T-5303": "Idris",
    "T-5755": "Odalys",
    "T-5691": "Odalys",
    "T-5758": "Idris",
@@ -869,7 +877,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-24T02:21:53Z",
+  "at": "2026-11-24T02:25:12Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -885,9 +893,9 @@
     "inline": null,
     "conflicted": null,
     "failed": null,
-    "held": 1013,
+    "held": 1017,
     "retry": null,
-    "parked": 1013
+    "parked": 1017
    },
    "cur": [],
    "ld": [
@@ -897,12 +905,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-24T02:21:25Z",
-    "ld": 4.78,
+    "at": "2026-11-24T02:25:13Z",
+    "ld": 3.08,
     "c": 8,
     "sb": 1,
     "dk": [
-     28.2,
+     27.8,
      228.3
     ],
     "ss": [
@@ -912,17 +920,6 @@
     "sn": [
      "iPhone 17e"
     ]
-   },
-   "macbook": {
-    "at": "2026-11-24T01:43:17Z",
-    "ld": 25.08,
-    "c": 12,
-    "sb": 0,
-    "dk": [
-     347.1,
-     926.4
-    ],
-    "sn": []
    }
   }
  },
@@ -934,7 +931,7 @@
    "parked": 17,
    "open": true,
    "mq": false,
-   "counted": "2026-11-24T02:07:04+00:00",
+   "counted": "2026-11-24T02:22:57+00:00",
    "by": {
     "app": {
      "n": 13,
@@ -952,11 +949,11 @@
      "open": true
     }
    },
-   "at": "2026-11-24T02:22:11+00:00"
+   "at": "2026-11-24T02:25:12+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-24T02:22:11+00:00"
+   "at": "2026-11-24T02:25:04+00:00"
   }
  },
  "operators": [
@@ -1017,10 +1014,10 @@
   "main": 0,
   "lanes": 3,
   "total": 3,
-  "at": "9:22 PM",
+  "at": "9:25 PM",
   "why": "",
-  "at_iso": "2026-11-24T02:22:00+00:00",
+  "at_iso": "2026-11-24T02:25:00+00:00",
   "started": "7:06 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 7:06 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 9:22 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 7:06 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 9:25 PM ET</p></section>"
  }
 }

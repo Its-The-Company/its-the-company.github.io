@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-24T15:08:22.321387+00:00",
+ "at": "2026-11-24T15:11:28.491027+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -12,6 +12,38 @@
    "last_handoff": 1795529387
   },
   "flow": [
+   {
+    "t": "T-0678",
+    "name": "Run the refresh button inside the widget extension",
+    "w": "Idris",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "claimed",
+      "at": 1795533035
+     },
+     {
+      "s": "worker",
+      "at": 1795533035
+     }
+    ]
+   },
+   {
+    "t": "T-4435",
+    "name": "Draw the wrapped refresh glyph on both runtimes",
+    "w": "Idris",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "claimed",
+      "at": 1795532927
+     },
+     {
+      "s": "worker",
+      "at": 1795532927
+     }
+    ]
+   },
    {
     "t": "T-4286",
     "name": "Check an imported font draws in a widget",
@@ -89,22 +121,6 @@
      {
       "s": "worker",
       "at": 1795532281
-     }
-    ]
-   },
-   {
-    "t": "T-4435",
-    "name": "Draw the wrapped refresh glyph on both runtimes",
-    "w": "Idris",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "claimed",
-      "at": 1795489208
-     },
-     {
-      "s": "worker",
-      "at": 1795489208
      }
     ]
    },
@@ -267,22 +283,6 @@
       "at": 1795481584
      }
     ]
-   },
-   {
-    "t": "T-0678",
-    "name": "Run the refresh button inside the widget extension",
-    "w": "Idris",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "claimed",
-      "at": 1795481526
-     },
-     {
-      "s": "worker",
-      "at": 1795481526
-     }
-    ]
    }
   ],
   "done": [
@@ -335,7 +335,7 @@
    "task": "[build] T-4183 Gallery tour examples",
    "model": "",
    "started": "2026-11-24T14:21:14.744Z",
-   "seconds": 2827,
+   "seconds": 3013,
    "finished": null
   }
  ],
@@ -353,24 +353,24 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 740,
+  "runnable_count": 739,
   "blocked_count": 2
  },
  "meter": {
   "five_hour": {
-   "pct": 39.0,
+   "pct": 40.0,
    "resets_at": "2026-11-24T12:00:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-24T10:04:35.072880-05:00",
+   "read_at": "2026-11-24T10:09:35.082433-05:00",
    "source": "live",
-   "left": 61.0,
+   "left": 60.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 33.0,
    "resets_at": "2026-11-29T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-24T10:04:35.072880-05:00",
+   "read_at": "2026-11-24T10:09:35.082433-05:00",
    "source": "live",
    "left": 67.0,
    "left_words": "of your weekly allowance left"
@@ -382,7 +382,7 @@
    "read_at": "2026-11-24T09:52:12.085188-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-24T10:04:35.072880-05:00"
+  "read_at": "2026-11-24T10:09:35.082433-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -402,7 +402,7 @@
   "week_pct": 91.95,
   "usage_pct": 74.2,
   "work_pct": 97.8,
-  "read_at": "2026-11-24T15:08:00+00:00",
+  "read_at": "2026-11-24T15:11:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -449,7 +449,7 @@
   }
  ],
  "disk": {
-  "free_gb": 37,
+  "free_gb": 35,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -458,14 +458,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-24T10:04:00-05:00",
+   "at": "2026-11-24T10:09:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-24T10:08:00-05:00",
+  "at": "2026-11-24T10:11:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -616,6 +616,11 @@
   ],
   "done": [
    {
+    "w": "Idris",
+    "t": "A test now proves the editor never freezes when a widget script is sent while another script is...",
+    "at": "2026-11-24T10:09:00-05:00"
+   },
+   {
     "w": "Maren",
     "t": "The mockup of the new Home now keeps Usage, Progress, Machine and Work, nests every task in its...",
     "at": "2026-11-24T09:58:00-05:00"
@@ -624,22 +629,21 @@
     "w": "Operator",
     "t": "A reviewed app change that is moved onto a newer main keeps its review while its patch stays...",
     "at": "2026-11-24T09:40:00-05:00"
-   },
-   {
-    "w": "Operator",
-    "t": "The merge script can now send the tool suites to the MacBook when a switch is turned on, and the...",
-    "at": "2026-11-24T09:16:00-05:00"
    }
   ],
   "count": {
-   "next": 740,
+   "next": 739,
    "wait": 2,
    "blocked": 0,
    "you": 2
   },
   "fin": {
-   "n": 2,
+   "n": 3,
    "rows": [
+    [
+     "T-5274",
+     "Test that a send never..."
+    ],
     [
      "T-5802",
      "Revise the Home mockup from..."
@@ -690,7 +694,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-24T15:08:22Z",
+  "at": "2026-11-24T15:11:14Z",
   "s": {
    "T-0193": [
     "mergetest",
@@ -700,7 +704,7 @@
    "T-5047": [
     "merging",
     "Mac tests at the main gate",
-    1795526722321
+    1795526714032
    ]
   },
   "nm": {
@@ -710,12 +714,13 @@
   "wk": {
    "T-0193": "Idris",
    "T-5047": "Idris",
+   "T-5274": "Idris",
    "T-5802": "Maren",
    "T-5801": "Operator"
   }
  },
  "ln": {
-  "at": "2026-11-24T15:08:22Z",
+  "at": "2026-11-24T15:11:14Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -731,9 +736,9 @@
     "inline": null,
     "conflicted": null,
     "failed": null,
-    "held": 1780,
+    "held": 1783,
     "retry": null,
-    "parked": 778
+    "parked": 781
    },
    "cur": [],
    "ld": [
@@ -743,12 +748,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-24T15:08:22Z",
-    "ld": 2.06,
+    "at": "2026-11-24T15:11:15Z",
+    "ld": 1.5,
     "c": 8,
     "sb": 0,
     "dk": [
-     37.1,
+     35.7,
      228.3
     ],
     "ss": [
@@ -758,12 +763,12 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-24T14:57:45Z",
-    "ld": 5.42,
+    "at": "2026-11-24T15:10:42Z",
+    "ld": 6.6,
     "c": 12,
     "sb": 0,
     "dk": [
-     345.1,
+     344.7,
      926.4
     ],
     "sn": []
@@ -796,11 +801,11 @@
      "open": true
     }
    },
-   "at": "2026-11-24T15:08:22+00:00"
+   "at": "2026-11-24T15:11:28+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-24T15:08:10+00:00"
+   "at": "2026-11-24T15:11:14+00:00"
   }
  },
  "operators": [
@@ -819,7 +824,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 5 tasks",
+   "t": "Work session \u2013 7 tasks",
    "at": "2026-11-24T08:25:08-05:00"
   },
   {
@@ -852,10 +857,10 @@
   "main": 1,
   "lanes": 2,
   "total": 3,
-  "at": "10:08 AM",
+  "at": "10:11 AM",
   "why": "",
-  "at_iso": "2026-11-24T15:08:00+00:00",
+  "at_iso": "2026-11-24T15:11:00+00:00",
   "started": "9:18 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 1, started 9:18 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 10:08 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 1, started 9:18 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 10:11 AM ET</p></section>"
  }
 }

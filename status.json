@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-24T18:12:05.628461+00:00",
+ "at": "2026-11-24T18:15:09.517875+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -376,7 +376,7 @@
    "task": "[review] T-4183",
    "model": "",
    "started": "2026-11-24T18:07:46.017Z",
-   "seconds": 259,
+   "seconds": 443,
    "finished": null
   }
  ],
@@ -467,7 +467,7 @@
   "week_pct": 120.69,
   "usage_pct": 74.2,
   "work_pct": 97.8,
-  "read_at": "2026-11-24T18:12:00+00:00",
+  "read_at": "2026-11-24T18:15:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -518,7 +518,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-24T13:12:00-05:00",
+  "at": "2026-11-24T13:15:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -759,97 +759,92 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-24T18:11:50Z",
+  "at": "2026-11-24T18:15:09Z",
   "s": {
    "T-4896": [
     "mergetest",
     "",
-    1795543790994
+    1795543809517
    ],
    "T-4468": [
     "mergetest",
     "",
-    1795543790994
+    1795543809517
    ],
    "T-4282": [
     "mergetest",
     "",
-    1795543790994
+    1795543809517
    ],
    "T-4554": [
     "mergetest",
     "",
-    1795543790994
+    1795543809517
    ],
    "T-4494": [
     "mergetest",
     "",
-    1795543790994
+    1795543809517
    ],
    "T-4184": [
     "mergetest",
     "",
-    1795543790994
+    1795543809517
    ],
    "T-4181": [
     "mergetest",
     "",
-    1795543790994
+    1795543809517
    ],
    "T-0687": [
     "mergetest",
     "",
-    1795543790994
+    1795543809517
    ],
    "T-4749": [
     "mergetest",
     "",
-    1795543790994
+    1795543809517
    ],
    "T-0011": [
     "mergetest",
     "",
-    1795543790994
+    1795543809517
    ],
    "T-5131": [
     "mergetest",
     "",
-    1795543790994
+    1795543809517
    ],
    "T-5154": [
     "mergetest",
     "",
-    1795543790994
+    1795543809517
    ],
    "T-4813": [
     "mergetest",
     "",
-    1795543790994
+    1795543809517
    ],
    "T-5236": [
     "mergetest",
     "",
-    1795543790994
+    1795543809517
    ],
    "T-4807": [
     "mergetest",
     "",
-    1795543790994
+    1795543809517
    ],
    "T-5365": [
     "mergetest",
     "",
-    1795543790994
+    1795543809517
    ],
    "T-5047": [
     "merging",
     "",
-    1795543250994
-   ],
-   "T-4183": [
-    "testing",
-    "",
-    null
+    1795543269517
    ]
   },
   "nm": {
@@ -869,8 +864,7 @@
    "T-5236": "Send land host tests to the MacBook under heavy load",
    "T-4807": "Fix every bad test that failed a merge",
    "T-5365": "Location refresh policy, file and route",
-   "T-5047": "Fix the token test's No view for this size card",
-   "T-4183": "The Gallery shows, previews and opens every premade"
+   "T-5047": "Fix the token test's No view for this size card"
   },
   "wk": {
    "T-4896": "Maren",
@@ -890,7 +884,6 @@
    "T-4807": "Pernille",
    "T-5365": "Idris",
    "T-5047": "Idris",
-   "T-4183": "Idris",
    "T-5059": "Idris",
    "T-4637": "Idris",
    "T-1119": "Ines",
@@ -906,7 +899,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-24T18:11:50Z",
+  "at": "2026-11-24T18:15:09Z",
   "mq": {
    "n": {
     "checking": 16,
@@ -918,13 +911,13 @@
     "parked": 14
    },
    "m": {
-    "checking": 2,
+    "checking": 5,
     "inline": null,
     "conflicted": null,
     "failed": null,
-    "held": 1963,
+    "held": 1967,
     "retry": null,
-    "parked": 1229
+    "parked": 1232
    },
    "cur": [
     [
@@ -933,7 +926,7 @@
      ],
      "iPhone app tests",
      "MacBook",
-     2
+     5
     ],
     [
      [
@@ -941,7 +934,7 @@
      ],
      "iPhone app tests",
      "MacBook",
-     2
+     5
     ],
     [
      [
@@ -949,7 +942,7 @@
      ],
      "iPhone app tests",
      "MacBook",
-     2
+     5
     ],
     [
      [
@@ -957,7 +950,7 @@
      ],
      "iPhone app tests",
      "MacBook",
-     2
+     5
     ]
    ],
    "ld": [
@@ -967,21 +960,19 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-24T18:11:26Z",
-    "ld": 7.79,
+    "at": "2026-11-24T18:14:46Z",
+    "ld": 5.47,
     "c": 8,
-    "sb": 1,
+    "sb": 0,
     "dk": [
-     57.4,
+     57.3,
      228.3
     ],
     "ss": [
      130.0,
      953.7
     ],
-    "sn": [
-     "iPhone 17e"
-    ]
+    "sn": []
    },
    "macbook": {
     "at": "2026-11-24T18:10:05Z",
@@ -1004,7 +995,7 @@
    "parked": 18,
    "open": true,
    "mq": false,
-   "counted": "2026-11-24T18:04:47+00:00",
+   "counted": "2026-11-24T18:14:54+00:00",
    "by": {
     "app": {
      "n": 24,
@@ -1022,11 +1013,11 @@
      "open": true
     }
    },
-   "at": "2026-11-24T18:12:05+00:00"
+   "at": "2026-11-24T18:15:09+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-24T18:11:50+00:00"
+   "at": "2026-11-24T18:15:09+00:00"
   }
  },
  "operators": [
@@ -1070,10 +1061,10 @@
   "main": 1,
   "lanes": 1,
   "total": 2,
-  "at": "1:12 PM",
+  "at": "1:15 PM",
   "why": "",
-  "at_iso": "2026-11-24T18:12:00+00:00",
+  "at_iso": "2026-11-24T18:15:00+00:00",
   "started": "9:18 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 1, started 9:18 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 1:12 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 1, started 9:18 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 1:15 PM ET</p></section>"
  }
 }

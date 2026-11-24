@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-24T22:23:02.717021+00:00",
+ "at": "2026-11-24T22:26:06.379458+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -390,7 +390,7 @@
    "task": "[build] T-5815 finish shell checks",
    "model": "opus",
    "started": "2026-11-24T22:01:37.992Z",
-   "seconds": 1284,
+   "seconds": 1468,
    "finished": null
   },
   {
@@ -398,12 +398,20 @@
    "task": "[ops] merge watch restart",
    "model": "opus",
    "started": "2026-11-24T22:02:04.950Z",
-   "seconds": 1257,
+   "seconds": 1441,
    "finished": null
   }
  ],
  "who": "Idris, Odalys",
  "recent": [
+  {
+   "name": "pernille",
+   "task": "[review] T-5825 N1 fix check",
+   "model": "opus",
+   "started": "2026-11-24T22:24:14.123Z",
+   "seconds": null,
+   "finished": "2026-11-24T22:25:25.730000+00:00"
+  },
   {
    "name": "pernille",
    "task": "[review] T-5524 re-read after rebase",
@@ -427,20 +435,12 @@
    "started": "2026-11-24T22:14:19.499Z",
    "seconds": null,
    "finished": "2026-11-24T22:15:43.798000+00:00"
-  },
-  {
-   "name": "maren",
-   "task": "[review] T-5828 merge.sh trap order",
-   "model": "opus",
-   "started": "2026-11-24T22:04:29.304Z",
-   "seconds": null,
-   "finished": "2026-11-24T22:06:26.574000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 725,
+  "runnable_count": 728,
   "blocked_count": 3
  },
  "meter": {
@@ -489,7 +489,7 @@
   "week_pct": 166.51,
   "usage_pct": 68.4,
   "work_pct": 98.0,
-  "read_at": "2026-11-24T22:23:00+00:00",
+  "read_at": "2026-11-24T22:26:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -532,14 +532,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-24T17:21:00-05:00",
+   "at": "2026-11-24T17:23:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-24T17:23:00-05:00",
+  "at": "2026-11-24T17:26:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -715,7 +715,7 @@
    }
   ],
   "count": {
-   "next": 725,
+   "next": 728,
    "wait": 2,
    "blocked": 1,
    "you": 2
@@ -785,40 +785,33 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-24T22:22:56Z",
+  "at": "2026-11-24T22:26:06Z",
   "s": {
    "T-4644": [
     "mergeq",
     "1st to merge",
-    1795556156253
+    1795556166379
    ],
    "T-4824": [
     "mergeq",
     "2nd to merge",
-    1795555076253
+    1795555086379
    ],
    "T-4186": [
     "mergeq",
     "3rd to merge",
-    1795558556253
-   ],
-   "T-5308": [
-    "mergetest",
-    "iPhone tests on the MacBook",
-    null
+    1795558506379
    ]
   },
   "nm": {
    "T-4644": "Check the ladder's files in the gate build's own tests",
    "T-4824": "Add motion and location probes to the measurement export",
-   "T-4186": "The editor completes code, shows errors and previews",
-   "T-5308": "Tighten the queued pass gate test"
+   "T-4186": "The editor completes code, shows errors and previews"
   },
   "wk": {
    "T-4644": "Idris",
    "T-4824": "Idris",
    "T-4186": "Idris",
-   "T-5308": "Idris",
    "T-5490": "Pernille",
    "T-5828": "Odalys",
    "T-5823": "Operator",
@@ -827,7 +820,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-24T22:22:56Z",
+  "at": "2026-11-24T22:26:06Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -840,12 +833,12 @@
    },
    "m": {
     "checking": null,
-    "inline": 47,
+    "inline": 50,
     "conflicted": null,
     "failed": null,
-    "held": 2214,
+    "held": 2218,
     "retry": null,
-    "parked": 1480
+    "parked": 1483
    },
    "cur": [],
    "ld": [
@@ -855,12 +848,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-24T22:22:56Z",
-    "ld": 1.26,
+    "at": "2026-11-24T22:26:07Z",
+    "ld": 1.1,
     "c": 8,
     "sb": 0,
     "dk": [
-     40.5,
+     40.2,
      228.3
     ],
     "ss": [
@@ -870,17 +863,15 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-24T22:04:36Z",
-    "ld": 2.35,
+    "at": "2026-11-24T22:24:55Z",
+    "ld": 0.66,
     "c": 12,
-    "sb": 1,
+    "sb": 0,
     "dk": [
-     337.6,
+     339.5,
      926.4
     ],
-    "sn": [
-     "itsthecompany-runner"
-    ]
+    "sn": []
    }
   }
  },
@@ -910,11 +901,11 @@
      "open": true
     }
    },
-   "at": "2026-11-24T22:23:02+00:00"
+   "at": "2026-11-24T22:26:06+00:00"
   },
   "bl": {
    "n": 3,
-   "at": "2026-11-24T22:22:56+00:00"
+   "at": "2026-11-24T22:26:00+00:00"
   }
  },
  "operators": [
@@ -958,10 +949,10 @@
   "main": 2,
   "lanes": 1,
   "total": 3,
-  "at": "5:23 PM",
+  "at": "5:26 PM",
   "why": "",
-  "at_iso": "2026-11-24T22:23:00+00:00",
+  "at_iso": "2026-11-24T22:26:00+00:00",
   "started": "4:58 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 4:58 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 5:23 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 4:58 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 5:26 PM ET</p></section>"
  }
 }

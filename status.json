@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-24T16:30:34.592458+00:00",
+ "at": "2026-11-24T16:33:33.211625+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -376,7 +376,7 @@
    "task": "[review] T-4183",
    "model": "",
    "started": "2026-11-24T16:20:01.856Z",
-   "seconds": 632,
+   "seconds": 811,
    "finished": null
   }
  ],
@@ -402,7 +402,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 735,
+  "runnable_count": 736,
   "blocked_count": 2
  },
  "meter": {
@@ -451,7 +451,7 @@
   "week_pct": 106.32,
   "usage_pct": 74.2,
   "work_pct": 97.8,
-  "read_at": "2026-11-24T16:30:00+00:00",
+  "read_at": "2026-11-24T16:33:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -502,7 +502,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-24T11:30:00-05:00",
+  "at": "2026-11-24T11:33:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -653,6 +653,11 @@
   ],
   "done": [
    {
+    "w": "Operator",
+    "t": "An app change is no longer refused because one timing test failed while the machine was busy:...",
+    "at": "2026-11-24T11:31:00-05:00"
+   },
+   {
     "w": "Idris",
     "t": "Tapping twice on a long line that is partly hidden now keeps the text where it was, instead of...",
     "at": "2026-11-24T11:19:00-05:00"
@@ -661,22 +666,21 @@
     "w": "Idris",
     "t": "A project folder named like the widget's own script is now turned down with a message that says...",
     "at": "2026-11-24T10:46:00-05:00"
-   },
-   {
-    "w": "Idris",
-    "t": "The code's note now says plainly that old copies of a project's files stay after a rename, so...",
-    "at": "2026-11-24T10:46:00-05:00"
    }
   ],
   "count": {
-   "next": 735,
+   "next": 736,
    "wait": 2,
    "blocked": 0,
    "you": 2
   },
   "fin": {
-   "n": 8,
+   "n": 9,
    "rows": [
+    [
+     "T-5800",
+     "Host tests stop failing when..."
+    ],
     [
      "T-5325",
      "Second tap on a half-hidden..."
@@ -696,10 +700,6 @@
     [
      "T-4751",
      "Make the Mac network..."
-    ],
-    [
-     "T-5274",
-     "Test that a send never..."
     ]
    ]
   }
@@ -743,96 +743,96 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-24T16:30:26Z",
+  "at": "2026-11-24T16:33:33Z",
   "s": {
    "T-5047": [
-    "mergeq",
-    "1st to merge",
-    1795536986371
+    "mergetest",
+    "",
+    1795537893211
    ],
    "T-0337": [
-    "mergeq",
-    "1st to merge",
-    1795536986371
+    "mergetest",
+    "",
+    1795537893211
    ],
    "T-2097": [
-    "mergeq",
-    "1st to merge",
-    1795536986371
+    "mergetest",
+    "",
+    1795537893211
    ],
    "T-4010": [
-    "mergeq",
-    "1st to merge",
-    1795536986371
+    "mergetest",
+    "",
+    1795537893211
    ],
    "T-4477": [
-    "mergeq",
-    "1st to merge",
-    1795536986371
+    "mergetest",
+    "",
+    1795537893211
    ],
    "T-4286": [
-    "mergeq",
-    "1st to merge",
-    1795536986371
+    "mergetest",
+    "",
+    1795537893211
    ],
    "T-4435": [
-    "mergeq",
-    "1st to merge",
-    1795536986371
+    "mergetest",
+    "",
+    1795537893211
    ],
    "T-0678": [
-    "mergeq",
-    "1st to merge",
-    1795536986371
+    "mergetest",
+    "",
+    1795537893211
    ],
    "T-3765": [
-    "mergeq",
-    "1st to merge",
-    1795536986371
+    "mergetest",
+    "",
+    1795537893211
    ],
    "T-4662": [
-    "mergeq",
-    "1st to merge",
-    1795536986371
+    "mergetest",
+    "",
+    1795537893211
    ],
    "T-4781": [
-    "mergeq",
-    "1st to merge",
-    1795536986371
+    "mergetest",
+    "",
+    1795537893211
    ],
    "T-4635": [
-    "mergeq",
-    "1st to merge",
-    1795536986371
+    "mergetest",
+    "",
+    1795537893211
    ],
    "T-4182": [
-    "mergeq",
-    "1st to merge",
-    1795536986371
+    "mergetest",
+    "",
+    1795537893211
    ],
    "T-5620": [
-    "mergeq",
-    "1st to merge",
-    1795536986371
+    "mergetest",
+    "",
+    1795537893211
    ],
    "T-1119": [
-    "mergeq",
-    "1st to merge",
-    1795536986371
+    "mergetest",
+    "",
+    1795537893211
    ],
    "T-4681": [
-    "mergeq",
-    "1st to merge",
-    1795536986371
+    "mergetest",
+    "",
+    1795537893211
    ],
    "T-5602": [
-    "mergeq",
-    "1st to merge",
-    1795536986371
+    "mergetest",
+    "",
+    1795537893211
    ],
    "T-4183": [
-    "mergetest",
-    "iPhone tests on the MacBook",
+    "testing",
+    "",
     null
    ]
   },
@@ -875,6 +875,7 @@
    "T-4681": "Idris",
    "T-5602": "Maren",
    "T-4183": "Idris",
+   "T-5800": "Operator",
    "T-5325": "Idris",
    "T-2154": "Idris",
    "T-2155": "Idris",
@@ -886,11 +887,11 @@
   }
  },
  "ln": {
-  "at": "2026-11-24T16:30:26Z",
+  "at": "2026-11-24T16:33:33Z",
   "mq": {
    "n": {
-    "checking": 0,
-    "inline": 17,
+    "checking": 17,
+    "inline": 0,
     "conflicted": 0,
     "failed": 1,
     "held": 1,
@@ -898,15 +899,48 @@
     "parked": 14
    },
    "m": {
-    "checking": null,
-    "inline": 14,
+    "checking": 2,
+    "inline": null,
     "conflicted": null,
-    "failed": 30,
-    "held": 728,
+    "failed": 33,
+    "held": 731,
     "retry": null,
-    "parked": 728
+    "parked": 731
    },
-   "cur": [],
+   "cur": [
+    [
+     [
+      "T-5047"
+     ],
+     "iPhone app tests, sent and waiting its turn",
+     "MacBook",
+     2
+    ],
+    [
+     [
+      "T-0337"
+     ],
+     "iPhone app tests, sent and waiting its turn",
+     "MacBook",
+     2
+    ],
+    [
+     [
+      "T-2097"
+     ],
+     "iPhone app tests, sent and waiting its turn",
+     "MacBook",
+     2
+    ],
+    [
+     [
+      "T-4010"
+     ],
+     "iPhone app tests, sent and waiting its turn",
+     "MacBook",
+     2
+    ]
+   ],
    "ld": [
     0,
     null
@@ -914,27 +948,29 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-24T16:29:41Z",
-    "ld": 0.77,
+    "at": "2026-11-24T16:33:36Z",
+    "ld": 11.38,
     "c": 8,
-    "sb": 0,
+    "sb": 1,
     "dk": [
-     56.4,
+     51.0,
      228.3
     ],
     "ss": [
      130.5,
      953.7
     ],
-    "sn": []
+    "sn": [
+     "iPhone 17e"
+    ]
    },
    "macbook": {
-    "at": "2026-11-24T16:23:23Z",
-    "ld": 2.6,
+    "at": "2026-11-24T16:33:26Z",
+    "ld": 0.87,
     "c": 12,
     "sb": 0,
     "dk": [
-     344.2,
+     344.1,
      926.4
     ],
     "sn": []
@@ -967,11 +1003,11 @@
      "open": true
     }
    },
-   "at": "2026-11-24T16:30:34+00:00"
+   "at": "2026-11-24T16:33:33+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-24T16:30:26+00:00"
+   "at": "2026-11-24T16:33:33+00:00"
   }
  },
  "operators": [
@@ -1015,10 +1051,10 @@
   "main": 1,
   "lanes": 1,
   "total": 2,
-  "at": "11:30 AM",
+  "at": "11:33 AM",
   "why": "",
-  "at_iso": "2026-11-24T16:30:00+00:00",
+  "at_iso": "2026-11-24T16:33:00+00:00",
   "started": "9:18 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 1, started 9:18 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 11:30 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 1, started 9:18 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 11:33 AM ET</p></section>"
  }
 }

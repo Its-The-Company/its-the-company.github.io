@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-24T02:25:12.206362+00:00",
+ "at": "2026-11-24T02:28:19.016702+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -425,7 +425,7 @@
   "week_pct": 67.16,
   "usage_pct": 79.8,
   "work_pct": 97.6,
-  "read_at": "2026-11-24T02:25:00+00:00",
+  "read_at": "2026-11-24T02:28:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -484,7 +484,7 @@
   }
  ],
  "disk": {
-  "free_gb": 30,
+  "free_gb": 28,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -493,14 +493,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-23T21:18:00-05:00",
+   "at": "2026-11-23T21:25:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-23T21:25:00-05:00",
+  "at": "2026-11-23T21:28:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -614,12 +614,12 @@
    },
    {
     "w": "Idris",
-    "t": "Test the commit and close ordering inside the run lock",
-    "m": "opus",
+    "t": "Make the Mac network stand-in refuse what phones refuse",
+    "m": "sonnet",
     "e": "high",
-    "at": "2026-11-23T21:24:43-05:00",
+    "at": "2026-11-23T21:26:32-05:00",
     "o": "c",
-    "task": "T-5303"
+    "task": "T-4751"
    }
   ],
   "src": "plan",
@@ -779,7 +779,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-24T02:25:12Z",
+  "at": "2026-11-24T02:28:05Z",
   "s": {
    "T-5657": [
     "mergetest",
@@ -794,53 +794,52 @@
    "T-5059": [
     "testq",
     "1st for a Simulator",
-    1795486572206
+    1795486625247
    ],
    "T-5634": [
     "testq",
     "3rd for a Simulator",
-    1795486812206
+    1795486805247
    ],
    "T-1119": [
     "testq",
     "4th for a Simulator",
-    1795486872206
+    1795486865247
    ],
    "T-2296": [
     "testq",
     "4th for a Simulator",
-    1795486872206
+    1795486865247
    ],
    "T-4190": [
     "testq",
     "4th for a Simulator",
-    1795486872206
+    1795486865247
    ],
    "T-4681": [
     "testq",
     "4th for a Simulator",
-    1795486872206
+    1795486865247
    ],
    "T-4715": [
     "testq",
     "4th for a Simulator",
-    1795486872206
+    1795486865247
    ],
    "T-5602": [
     "testq",
     "4th for a Simulator",
-    1795486872206
+    1795486865247
    ],
    "T-4875": [
     "testq",
     "5th for a Simulator",
-    1795486872206
+    1795486925247
    ],
-   "T-5303": [
-    "merged",
-    "on main 9:24 PM ET",
-    1795487079000,
-    "Idris"
+   "T-4637": [
+    "testq",
+    "6th for a Simulator",
+    1795487165247
    ]
   },
   "nm": {
@@ -855,7 +854,7 @@
    "T-4715": "Put the new Pro screen words into the app",
    "T-5602": "Brief for a new look for the app",
    "T-4875": "Test that suggestions are asked after the first letter",
-   "T-5303": "Test the commit and close ordering inside the run lock"
+   "T-4637": "Make the Release privacy scan fail when nm cannot run"
   },
   "wk": {
    "T-5657": "Idris",
@@ -869,7 +868,7 @@
    "T-4715": "Maren",
    "T-5602": "Maren",
    "T-4875": "Idris",
-   "T-5303": "Idris",
+   "T-4637": "Idris",
    "T-5755": "Odalys",
    "T-5691": "Odalys",
    "T-5758": "Idris",
@@ -877,7 +876,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-24T02:25:12Z",
+  "at": "2026-11-24T02:28:05Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -893,9 +892,9 @@
     "inline": null,
     "conflicted": null,
     "failed": null,
-    "held": 1017,
+    "held": 1019,
     "retry": null,
-    "parked": 1017
+    "parked": 1019
    },
    "cur": [],
    "ld": [
@@ -905,12 +904,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-24T02:25:13Z",
-    "ld": 3.08,
+    "at": "2026-11-24T02:28:06Z",
+    "ld": 3.04,
     "c": 8,
     "sb": 1,
     "dk": [
-     27.8,
+     25.1,
      228.3
     ],
     "ss": [
@@ -949,11 +948,11 @@
      "open": true
     }
    },
-   "at": "2026-11-24T02:25:12+00:00"
+   "at": "2026-11-24T02:28:19+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-24T02:25:04+00:00"
+   "at": "2026-11-24T02:28:19+00:00"
   }
  },
  "operators": [
@@ -1014,10 +1013,10 @@
   "main": 0,
   "lanes": 3,
   "total": 3,
-  "at": "9:25 PM",
+  "at": "9:28 PM",
   "why": "",
-  "at_iso": "2026-11-24T02:25:00+00:00",
+  "at_iso": "2026-11-24T02:28:00+00:00",
   "started": "7:06 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 7:06 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 9:25 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 7:06 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 9:28 PM ET</p></section>"
  }
 }

@@ -568,6 +568,19 @@ drain look outside a session, and lane records that wait for the sync replayed f
   names them); they stay first through ops/merge_first.txt.
 - *To start the clock.* Record the start time here and on #325, with the hour's lands from ops/metrics/merge.jsonl;
   days then run 24 h each from that start, new road first.
+
+### The comparison ended; three sessions (Operator, 11-24 2:30 AM ET)
+
+- *Ended, with no day counted.* The hour of first-try landings never held, so the clock never started; an Investor
+  paused the company at 11:16 PM ET 11-23. an Investor (typed into the Mac mini session, 12:10 AM ET 11-24,
+  `log/rulings.md`) then had that session build this page's own design instead: a few sessions, one merge script.
+  The switch stays "merge.sh"; no flip is due.
+- *What the records say for step 12.* By `ops/plans/T-5265-measure.py`: the old road, 11-13 to 11-19, about 22 app
+  code commits and 12 app tasks a day; the new road's first 24 hours (11-22 7:02 PM to 11-23 7:02 PM), 20 and 13.
+  Neither figure is an app-only day of a healthy road, so the "after" column stays unfilled for the roads.
+- *What is in force now:* [`ops/plans/three-sessions.md`](three-sessions.html). It is step 6 of this page done by switches: nothing is
+  retired and nothing in `retired/` changed. Steps 4, 5, 7, 8 and 11 stay held. T-5265 and T-5567 stay open until the
+  Investors say what the 48-hour check there is measured against.
 {% endraw %}
 
 </div>

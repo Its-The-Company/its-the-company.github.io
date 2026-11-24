@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-24T14:07:57.319597+00:00",
+ "at": "2026-11-24T14:09:49.866990+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -8,8 +8,8 @@
   "coord": {
    "active": true,
    "started": 1795341309,
-   "restarts": 6,
-   "last_handoff": 1795478327
+   "restarts": 7,
+   "last_handoff": 1795529387
   },
   "flow": [
    {
@@ -417,7 +417,7 @@
   "week_pct": 86.23,
   "usage_pct": 77.5,
   "work_pct": 97.8,
-  "read_at": "2026-11-24T14:08:00+00:00",
+  "read_at": "2026-11-24T14:13:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -473,14 +473,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-24T09:04:00-05:00",
+   "at": "2026-11-24T09:09:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-24T09:08:00-05:00",
+  "at": "2026-11-24T09:13:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -708,26 +708,20 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-24T14:07:57Z",
+  "at": "2026-11-24T14:09:40Z",
   "s": {
-   "T-5003": [
-    "mergetest",
-    "iPhone tests on the MacBook",
-    null
-   ],
    "T-5047": [
     "merging",
     "Mac tests at the main gate",
-    1795526757319
+    1795526740157
    ]
   },
   "nm": {
-   "T-5003": "Stop an oversized number crashing a widget's state",
    "T-5047": "Fix the token test's No view for this size card"
   },
   "wk": {
-   "T-5003": "Idris",
    "T-5047": "Idris",
+   "T-5003": "Idris",
    "T-5791": "Operator",
    "T-5792": "Operator",
    "T-5793": "Operator",
@@ -735,7 +729,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-24T14:07:57Z",
+  "at": "2026-11-24T14:09:40Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -751,9 +745,9 @@
     "inline": null,
     "conflicted": null,
     "failed": null,
-    "held": 1719,
+    "held": 1721,
     "retry": null,
-    "parked": 718
+    "parked": 720
    },
    "cur": [],
    "ld": [
@@ -763,12 +757,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-24T14:07:10Z",
-    "ld": 7.14,
+    "at": "2026-11-24T14:09:16Z",
+    "ld": 5.13,
     "c": 8,
     "sb": 0,
     "dk": [
-     38.1,
+     38.0,
      228.3
     ],
     "ss": [
@@ -778,12 +772,12 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-24T13:59:16Z",
-    "ld": 0.34,
+    "at": "2026-11-24T14:07:16Z",
+    "ld": 1.2,
     "c": 12,
     "sb": 0,
     "dk": [
-     345.0,
+     344.8,
      926.4
     ],
     "sn": []
@@ -816,11 +810,11 @@
      "open": true
     }
    },
-   "at": "2026-11-24T14:07:57+00:00"
+   "at": "2026-11-24T14:09:49+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-24T14:07:45+00:00"
+   "at": "2026-11-24T14:09:40+00:00"
   }
  },
  "operators": [
@@ -831,7 +825,7 @@
    "m": "opus",
    "e": "high",
    "t": "Work session",
-   "at": "2026-11-24T08:16:42-05:00"
+   "at": "2026-11-24T09:08:39-05:00"
   },
   {
    "w": "Operator",
@@ -853,21 +847,10 @@
   }
  ],
  "reply": {
-  "sent": "2026-11-24T13:11:38Z",
-  "seconds": 302.0
+  "sent": "2026-11-24T13:17:39Z",
+  "seconds": 1733.0
  },
- "inbox": [
-  {
-   "id": "c7132622990",
-   "state": "waiting",
-   "position": 1,
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "Fix this ASAP. This is P0"
-  }
- ],
+ "inbox": [],
  "trimmed": [
   "lane_next",
   "queue_text",
@@ -884,10 +867,10 @@
   "main": 0,
   "lanes": 2,
   "total": 2,
-  "at": "9:08 AM",
+  "at": "9:13 AM",
   "why": "",
-  "at_iso": "2026-11-24T14:08:00+00:00",
-  "started": "7:03 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0, started 7:03 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 9:08 AM ET</p></section>"
+  "at_iso": "2026-11-24T14:13:00+00:00",
+  "started": "",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 9:13 AM ET</p></section>"
  }
 }

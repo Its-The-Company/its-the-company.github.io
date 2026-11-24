@@ -43,7 +43,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 - T-0053 11-20: C2-Q1 ruled (fix only in 2nd extension's container). Parts 1-2 as T-5365 (Shared/Bridge/LocationRefresh.swift, route not installed). Open: part 3 target + lane placement (Pernille), part 4 footprint. Lesson: XCTAssert autoclosures take no await; hoist into a let.
 
-- T-5432 11-21: Foundations 6.0 (3.8-9.7), Pages 4.25 (2.6-7.75) on the slot; release Sat 2027-07-17 (T-4266 range 04-07 to 12-11; T-4770 line Sun 07-18). Lesson: grep --include needs quotes in zsh.
+- T-4181 11-24: T-0696 c0625c5f4a (36 cold ext samples, lane-peak max 11.86 MiB). Other 6 steps already on main, wait on review/records/phone. Lesson: run-ext.sh ~60 s/sample.
 
 - T-4182 11-21 (a2): T-0048 slice = T-5272 (ConsoleModel.openAt, 3/5 red on mutant) + T-4801 (export names the widget's own project). Left: T-5438 (s3 rows, update steps, Home Screen capture); T-4800, T-4802, T-5273 open. Lesson: board add wants a 3-10 word title, a docs page in Done when, --by.
 

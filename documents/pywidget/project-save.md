@@ -41,7 +41,7 @@ On a widget whose own file is `main.py`, case 4 does not apply. On the row `st.m
 ## 2. One send
 
 1. **When.** T-0747's boundaries, after every window has saved. Never at the pause in typing. At HEAD `save(widget:)` skips the send when the open file's text is unchanged, and `deleteProjectFile` sends nothing, so the check belongs above ConsoleModel, where `everyModel` is.
-2. **Changed.** Path, size and date for the project, from attributes, compared per widget with `.sent.json`. No file is read unless the list differs. `pywidget.json` counts as a change (the mirror carries it) but does not go to `widgets/<id>/`. T-0972 writes the manifest during the send, so take the list after that write, or every boundary sends again. A refused widget's list still differs, so the next boundary retries it, which is T-0881 M3 for free.
+2. **Changed.** Path, size and date for the project, from attributes, compared per widget with `.sent.json`. No file is read unless the list differs. `pywidget.json` counts as a change (the mirror carries it) but does not go to `widgets/<id>/`. T-0972 writes the manifest during the send, so take the list after that write, or every boundary sends again. A refused widget's list still differs, so the next boundary retries it, which is T-0881 M3 for free. *Built (T-5634):* the widget's own file no longer matches its record once it is saved and refused, so the editor keeps that refusal in memory and every boundary of the project retries it while the file holds the refused text; a project that can't be listed still finds its parts by their one recorded file and says the refusal.
 3. **What goes.** Everything except links (refused by name), hidden files, `__pycache__` and `pywidget.json`. The widget's own file lands as `main.py`; a top-level project `main.py` stays out (T-0844). lane-scripts/<id>/ gets the same set.
 4. **Run-file names.** A top-level project name equal to one the widget folder keeps for itself is refused by name: `tree.json`, `status.json`, `state.json`, `render-fault.json`, `state.lock`, `ext.marker`, `lane-peak`, `lane-refused`, compared by `nameKey`. One constant, with a test that every name written to `widgets/<id>/` is in it.
 5. **Budget.** `MiniZip.Limits` from attributes before any read, as T-0881. Clone, don't read: T-0881 reads bytes on the main actor at every boundary, and this send can be 32 MB times the number of widgets. A clone must keep `tree.json`'s date (s4, s3).
@@ -80,12 +80,13 @@ What has to exist for this, none of it at HEAD:
 New strings, DRAFT C51, not yet on the sheets. 0 hits for "app".
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 3: 3. The word when it goes wrong, scrolls sideways" style="--tw:755px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 3: 3. The word when it goes wrong, scrolls sideways" style="--tw:776px" markdown="1">
 
 | Key | Text | Where |
 |---|---|---|
 | `st.name` | [file] is a name a widget keeps for itself; rename it | the [reason] for s2 item 4 |
 | `vo.stale.sent` | {widget}. Last updated {good_time}. | VoiceOver for the new clock triggers; the current string needs a `stale_after` |
+| `con.part.notsent` | [file] didn't reach its widget [id] with its project's changes. [reason] | console, once per file and reason: a Widget part other than the open file refused at a boundary (T-1905), or a refused part retried (T-5634); added by Idris 11-23, not yet reviewed |
 
 </div>
 

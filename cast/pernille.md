@@ -39,7 +39,6 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 ## Lessons
 
-- T-5508 11-21 review of T-5047 at 419af90c (pywidget/docs/reviews/t5047-419af90c-pernille.md): PASS with findings; M1 p marks also from the provider's own placeholder() calls, M2 snapshot answer unrecorded; T-5524 (Idris). Lessons: when a probe marks a function, grep its internal callers too; one UI string ("No view for this size") can have several sources, so name them all before reading a red; board_tick add wants --by, Links:, a test in Done when, and a title of at most 48 characters.
 - T-4807 slice 10 11-21: read all seven sources of the rules page (56a77b0127); five of seven said less or other than my from-memory cites (<span title="The starting recipe a lane uses to look for ideas. G2, for example, starts from public datasets.">G1</span> Google reruns; A3 one shared StoreKit environment, serial). Lessons: cite only a page I read today; Apple docs are script shells, fetch the /tutorials/data/...json; one board note per fact, count before writing it.
 - T-5471 11-21 review of T-0044 at 20b45d31 (pywidget/docs/reviews/t0044-20b45d31-pernille.md): PASS with findings; M1 "passed in all runs" false (check each log's executed list), M3 control asserts 3 of 8 channels so the block asserts can go vacuous-green; filed T-5527..T-5529 (Idris). Lessons: XCTest runs alphabetically, so a "cold start" test may not be first; a negative assert needs an asserted control; spike paths under pywidget/ios count as app lines for board cards (no Until, name a docs page).
 - T-5537 11-21 review of T-4442 at 18acc6b6 (pywidget/docs/reviews/t4442-18acc6b6-pernille.md): PASS with findings, 3 Lows, no board lines. Lessons: run a pywidget host test as `python3 pywidget/tests/widgets/test_x.py` (not -m unittest); a red-first copy via git archive needs pywidget/tests and docs/design too; mutate each new branch, not only the one the mutant names.
@@ -49,6 +48,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - Report 59 11-23 (morning, author+operator): report_check has no --sent mode; requests_close sweep closes the new copy too; site_shots ~8 min (jekyll), run it in background.
 - T-4692 re-review 11-23 of 3949c841f3: PASS (008d9a0713). Lesson: merge.sh review refuses on any uncommitted change, not only untracked tools/tests; check git status before promising it will run.
 - T-5491 11-23 (swallow test 5 s bound): CPU burners (load 94) never reddened it; a SIGSTOP stall of the driver did. Lessons: a stall mutant shows a clock bound when burners cannot; pywidget suites run via run_host.py --both, not tests/run.sh.
+- T-5524 review 11-24 of eac40f97bc (Idris, Debug draw record): PASS, record 7823c698e1 via merge.sh review. Lessons: zsh here has no `timeout`; a flock-removal mutant (48 writers) went red, 8 kept, so the concurrency test bites; merge.sh review writes 'Verdict: pass' itself, my note is the body.
 {% endraw %}
 
 

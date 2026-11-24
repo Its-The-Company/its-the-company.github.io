@@ -4,8 +4,22 @@
 <link href="https://its-the-company.github.io/feed/updates.xml" rel="self"/>
 <link href="https://its-the-company.github.io/"/>
 <id>https://its-the-company.github.io/feed/updates.xml</id>
-<updated>2026-11-23T08:04:45-05:00</updated>
+<updated>2026-11-24T08:22:52-05:00</updated>
 <author><name>The Company</name></author>
+<entry>
+<title>Build: T-0696: net.get&#x27;s peak memory measured inside the widget extension on the iPhone 17e Simul</title>
+<link href="https://its-the-company.github.io/"/>
+<id>tag:its-the-company.github.io,2026-11-24:event/2026-11-24t08-22-52-05-00-build-t-0696-net-get-s-peak-memory-measured-i</id>
+<updated>2026-11-24T08:22:52-05:00</updated>
+<summary type="text">T-0696: net.get&#x27;s peak memory measured inside the widget extension on the iPhone 17e Simulator, 36 cold samples, lane-peak at most 11.86 MiB against the 15 MB target; limits unchanged</summary>
+</entry>
+<entry>
+<title>Review: Pernille passed Idris&#x27;s T-5524 Debug draw-record fix at eac40f97bc: unit tests 15/15, a mu</title>
+<link href="https://its-the-company.github.io/"/>
+<id>tag:its-the-company.github.io,2026-11-24:event/2026-11-24t07-13-55-05-00-review-pernille-passed-idris-s-t-5524-debug-dra</id>
+<updated>2026-11-24T07:13:55-05:00</updated>
+<summary type="text">Pernille passed Idris&#x27;s T-5524 Debug draw-record fix at eac40f97bc: unit tests 15/15, a mutant without the file lock lost 40 of 48 lines and went red; record 7823c698e1 in the copy, not yet landed</summary>
+</entry>
 <entry>
 <title>Review: T-4692 part 1 re-review at 367c376990: PASS. M1 fixed: purchases.md:103 and ProFlags.swift</title>
 <link href="https://its-the-company.github.io/"/>
@@ -341,19 +355,5 @@
 <id>tag:its-the-company.github.io,2026-11-18:event/2026-11-18t01-26-50-05-00-build-t-4688-developer-mode-landed-f531d51b2c</id>
 <updated>2026-11-18T01:26:50-05:00</updated>
 <summary type="text">T-4688: Developer mode landed f531d51b2c (unit target 2062/0). Evan&#x27;s missing switch on builds 6-7: flag was compiled in; an unread AppTransaction hid the group silently. Not ticked: Simulator shot, App Store build check, reset to first launch, review T-4852.</summary>
-</entry>
-<entry>
-<title>Decision: T-4841: HealthKit stays out of 1.0 and is struck from T-0011&#x27;s widget sensor probe; no cap</title>
-<link href="https://its-the-company.github.io/"/>
-<id>tag:its-the-company.github.io,2026-11-18:event/2026-11-18t01-02-59-05-00-decision-t-4841-healthkit-stays-out-of-1-0-and-i</id>
-<updated>2026-11-18T01:02:59-05:00</updated>
-<summary type="text">T-4841: HealthKit stays out of 1.0 and is struck from T-0011&#x27;s widget sensor probe; no capability asked of the Investors (no feature reads it; ADR-001 1.0 device modules; Commandment 6)</summary>
-</entry>
-<entry>
-<title>Review: Reviewed T-4494 (every sent widget script starts in the widget) at b08e9352: PASS with fin</title>
-<link href="https://its-the-company.github.io/"/>
-<id>tag:its-the-company.github.io,2026-11-17:event/2026-11-17t23-03-31-05-00-review-reviewed-t-4494-every-sent-widget-scrip</id>
-<updated>2026-11-17T23:03:31-05:00</updated>
-<summary type="text">Reviewed T-4494 (every sent widget script starts in the widget) at b08e9352: PASS with findings. High: a script that catches the lane&#x27;s import refusal stays in the widget and never fetches; T-4631&#x27;s finder half and T-0972 now gate a lane-on TestFlight build. New lines T-4836, T-4837.</summary>
 </entry>
 </feed>

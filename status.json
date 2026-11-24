@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-24T14:21:17.928993+00:00",
+ "at": "2026-11-24T14:24:19.931589+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -335,7 +335,7 @@
    "task": "[build] T-4183 Gallery tour examples",
    "model": "",
    "started": "2026-11-24T14:21:14.744Z",
-   "seconds": 3,
+   "seconds": 185,
    "finished": null
   }
  ],
@@ -350,19 +350,19 @@
  "meter": {
   "five_hour": {
    "pct": 31.0,
-   "resets_at": "2026-11-24T16:59:59.912723+00:00",
+   "resets_at": "2026-11-24T12:00:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-24T09:17:55.606192-05:00",
-   "source": "usage",
+   "read_at": "2026-11-24T09:23:11.331936-05:00",
+   "source": "live",
    "left": 69.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 31.0,
-   "resets_at": "2026-11-29T06:59:59.912745+00:00",
+   "resets_at": "2026-11-29T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-24T09:17:55.606192-05:00",
-   "source": "usage",
+   "read_at": "2026-11-24T09:23:11.331936-05:00",
+   "source": "live",
    "left": 69.0,
    "left_words": "of your weekly allowance left"
   },
@@ -373,7 +373,7 @@
    "read_at": "2026-11-24T09:17:55.606192-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-24T09:17:55.606192-05:00"
+  "read_at": "2026-11-24T09:23:11.331936-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -393,7 +393,7 @@
   "week_pct": 89.08,
   "usage_pct": 74.2,
   "work_pct": 97.8,
-  "read_at": "2026-11-24T14:21:00+00:00",
+  "read_at": "2026-11-24T14:24:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -440,7 +440,7 @@
   }
  ],
  "disk": {
-  "free_gb": 36,
+  "free_gb": 35,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -449,14 +449,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-24T09:20:00-05:00",
+   "at": "2026-11-24T09:23:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-24T09:21:00-05:00",
+  "at": "2026-11-24T09:24:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -672,23 +672,30 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-24T14:21:17Z",
+  "at": "2026-11-24T14:23:56Z",
   "s": {
+   "T-4239": [
+    "mergetest",
+    "iPhone tests on the MacBook",
+    null
+   ],
    "T-5047": [
     "merging",
     "Mac tests at the main gate",
-    1795526717928
+    1795526756163
    ]
   },
   "nm": {
+   "T-4239": "Tidy the five small points from the refresh review",
    "T-5047": "Fix the token test's No view for this size card"
   },
   "wk": {
+   "T-4239": "Idris",
    "T-5047": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-24T14:21:17Z",
+  "at": "2026-11-24T14:23:56Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -704,9 +711,9 @@
     "inline": null,
     "conflicted": null,
     "failed": null,
-    "held": 1733,
+    "held": 1735,
     "retry": null,
-    "parked": 731
+    "parked": 734
    },
    "cur": [],
    "ld": [
@@ -716,12 +723,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-24T14:20:53Z",
-    "ld": 6.56,
+    "at": "2026-11-24T14:24:02Z",
+    "ld": 12.37,
     "c": 8,
     "sb": 1,
     "dk": [
-     35.6,
+     35.3,
      228.3
     ],
     "ss": [
@@ -733,12 +740,12 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-24T14:07:16Z",
-    "ld": 1.2,
+    "at": "2026-11-24T14:21:35Z",
+    "ld": 0.37,
     "c": 12,
     "sb": 0,
     "dk": [
-     344.8,
+     345.2,
      926.4
     ],
     "sn": []
@@ -771,11 +778,11 @@
      "open": true
     }
    },
-   "at": "2026-11-24T14:21:17+00:00"
+   "at": "2026-11-24T14:24:19+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-24T14:21:17+00:00"
+   "at": "2026-11-24T14:24:19+00:00"
   }
  },
  "operators": [
@@ -826,10 +833,10 @@
   "main": 1,
   "lanes": 2,
   "total": 3,
-  "at": "9:21 AM",
+  "at": "9:24 AM",
   "why": "",
-  "at_iso": "2026-11-24T14:21:00+00:00",
+  "at_iso": "2026-11-24T14:24:00+00:00",
   "started": "9:18 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 1, started 9:18 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 9:21 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 1, started 9:18 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 9:24 AM ET</p></section>"
  }
 }

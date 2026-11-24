@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-24T18:18:15.170000+00:00",
+ "at": "2026-11-24T18:21:19.704148+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -376,7 +376,7 @@
    "task": "[build] T-4190 Settings Pro themes",
    "model": "",
    "started": "2026-11-24T18:15:29.891Z",
-   "seconds": 165,
+   "seconds": 349,
    "finished": null
   }
  ],
@@ -418,24 +418,24 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 725,
+  "runnable_count": 724,
   "blocked_count": 2
  },
  "meter": {
   "five_hour": {
-   "pct": 16.0,
+   "pct": 17.0,
    "resets_at": "2026-11-24T17:00:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-24T13:16:30.549581-05:00",
+   "read_at": "2026-11-24T13:21:16.929898-05:00",
    "source": "live",
-   "left": 84.0,
+   "left": 83.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 42.0,
    "resets_at": "2026-11-29T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-24T13:16:30.549581-05:00",
+   "read_at": "2026-11-24T13:21:16.929898-05:00",
    "source": "live",
    "left": 58.0,
    "left_words": "of your weekly allowance left"
@@ -447,7 +447,7 @@
    "read_at": "2026-11-24T13:09:47.461744-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-24T13:16:30.549581-05:00"
+  "read_at": "2026-11-24T13:21:16.929898-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -467,7 +467,7 @@
   "week_pct": 120.69,
   "usage_pct": 74.2,
   "work_pct": 97.8,
-  "read_at": "2026-11-24T18:18:00+00:00",
+  "read_at": "2026-11-24T18:21:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -481,6 +481,18 @@
     "n": "Evan",
     "d": 1,
     "src": "plan-a"
+   },
+   {
+    "lane": "b",
+    "task": "T-4186",
+    "w": "Idris",
+    "k": "build",
+    "t": "The editor completes code, shows errors and previews",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-24T13:20:08-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
    }
   ]
  },
@@ -502,7 +514,7 @@
   }
  ],
  "disk": {
-  "free_gb": 57,
+  "free_gb": 54,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -511,14 +523,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-24T13:16:00-05:00",
+   "at": "2026-11-24T13:20:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-24T13:18:00-05:00",
+  "at": "2026-11-24T13:21:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -669,6 +681,11 @@
   ],
   "done": [
    {
+    "w": "Maren+pernille",
+    "t": "A host test now fails if the app's name is written in lower case in the ready-made widgets'...",
+    "at": "2026-11-24T13:18:00-05:00"
+   },
+   {
     "w": "Idris",
     "t": "New tests prove that builds sold on the App Store never record the widget's sensor readings, and...",
     "at": "2026-11-24T13:09:00-05:00"
@@ -677,22 +694,21 @@
     "w": "Idris",
     "t": "The app's privacy check before release now fails loudly if its scanning tool cannot run, instead...",
     "at": "2026-11-24T12:56:00-05:00"
-   },
-   {
-    "w": "Ines",
-    "t": "both App Store Connect answers from the Investors are recorded with their sources: web access...",
-    "at": "2026-11-24T12:44:00-05:00"
    }
   ],
   "count": {
-   "next": 725,
+   "next": 724,
    "wait": 2,
    "blocked": 0,
    "you": 2
   },
   "fin": {
-   "n": 24,
+   "n": 25,
    "rows": [
+    [
+     "T-4896",
+     "Guard the name's case in..."
+    ],
     [
      "T-5059",
      "Test that App Store builds..."
@@ -712,10 +728,6 @@
     [
      "T-5491",
      "Drop the swallow test's..."
-    ],
-    [
-     "T-5811",
-     "App merges take their turn..."
     ]
    ]
   }
@@ -759,131 +771,27 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-24T18:18:01Z",
+  "at": "2026-11-24T18:21:10Z",
   "s": {
-   "T-4896": [
+   "T-4190": [
     "mergetest",
-    "",
-    1795543801597
-   ],
-   "T-4468": [
-    "mergetest",
-    "",
-    1795543801597
-   ],
-   "T-4282": [
-    "mergetest",
-    "",
-    1795543801597
-   ],
-   "T-4554": [
-    "mergetest",
-    "",
-    1795543801597
-   ],
-   "T-4494": [
-    "mergetest",
-    "",
-    1795543801597
-   ],
-   "T-4184": [
-    "mergetest",
-    "",
-    1795543801597
-   ],
-   "T-4181": [
-    "mergetest",
-    "",
-    1795543801597
-   ],
-   "T-0687": [
-    "mergetest",
-    "",
-    1795543801597
-   ],
-   "T-4749": [
-    "mergetest",
-    "",
-    1795543801597
-   ],
-   "T-0011": [
-    "mergetest",
-    "",
-    1795543801597
-   ],
-   "T-5131": [
-    "mergetest",
-    "",
-    1795543801597
-   ],
-   "T-5154": [
-    "mergetest",
-    "",
-    1795543801597
-   ],
-   "T-4813": [
-    "mergetest",
-    "",
-    1795543801597
-   ],
-   "T-5236": [
-    "mergetest",
-    "",
-    1795543801597
-   ],
-   "T-4807": [
-    "mergetest",
-    "",
-    1795543801597
-   ],
-   "T-5365": [
-    "mergetest",
-    "",
-    1795543801597
+    "iPhone tests on the MacBook",
+    null
    ],
    "T-5047": [
     "merging",
-    "",
-    1795543261597
+    "Mac tests at the main gate",
+    1795543270309
    ]
   },
   "nm": {
-   "T-4896": "Guard the name's case in premade and Settings lines",
-   "T-4468": "Let people set each premade's place, events and lists",
-   "T-4282": "Measure real scripts inside the widget on phones",
-   "T-4554": "One state commit per widget across app and widget",
-   "T-4494": "Prove widgets move to the app by size",
-   "T-4184": "A person's own script becomes a Home Screen widget",
-   "T-4181": "Widgets refresh on their own and by a tap",
-   "T-0687": "Run network fetches inside the extension on the Simulator",
-   "T-4749": "Rewrite or drop outdated tests that read code text",
-   "T-0011": "Check motion, health and battery sensors on a device",
-   "T-5131": "Keep process checks out of the land turn",
-   "T-5154": "Keep the company account signed in to Claude Code",
-   "T-4813": "Home's numbers update within a minute",
-   "T-5236": "Send land host tests to the MacBook under heavy load",
-   "T-4807": "Fix every bad test that failed a merge",
-   "T-5365": "Location refresh policy, file and route",
+   "T-4190": "Settings and Pro: buy, restore, themes",
    "T-5047": "Fix the token test's No view for this size card"
   },
   "wk": {
-   "T-4896": "Maren",
-   "T-4468": "Idris",
-   "T-4282": "Idris",
-   "T-4554": "Idris",
-   "T-4494": "Idris",
-   "T-4184": "Idris",
-   "T-4181": "Idris",
-   "T-0687": "Idris",
-   "T-4749": "Pernille",
-   "T-0011": "Idris",
-   "T-5131": "Odalys",
-   "T-5154": "Odalys",
-   "T-4813": "Maren",
-   "T-5236": "Odalys",
-   "T-4807": "Pernille",
-   "T-5365": "Idris",
+   "T-4190": "Idris",
    "T-5047": "Idris",
+   "T-4896": "Maren",
    "T-5059": "Idris",
    "T-4637": "Idris",
    "T-1119": "Ines",
@@ -894,65 +802,31 @@
    "T-2261": "Idris",
    "T-2512": "Idris",
    "T-2513": "Idris",
-   "T-2870": "Idris",
-   "T-5807": "Operator"
+   "T-2870": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-24T18:18:01Z",
+  "at": "2026-11-24T18:21:10Z",
   "mq": {
    "n": {
-    "checking": 16,
+    "checking": 0,
     "inline": 0,
     "conflicted": 0,
     "failed": 0,
     "held": 4,
     "retry": 0,
-    "parked": 14
+    "parked": 15
    },
    "m": {
-    "checking": 8,
+    "checking": null,
     "inline": null,
     "conflicted": null,
     "failed": null,
-    "held": 1969,
+    "held": 1973,
     "retry": null,
-    "parked": 1235
+    "parked": 1372
    },
-   "cur": [
-    [
-     [
-      "T-4896"
-     ],
-     "iPhone app tests",
-     "MacBook",
-     8
-    ],
-    [
-     [
-      "T-4468"
-     ],
-     "iPhone app tests",
-     "MacBook",
-     8
-    ],
-    [
-     [
-      "T-4282"
-     ],
-     "iPhone app tests",
-     "MacBook",
-     8
-    ],
-    [
-     [
-      "T-4554"
-     ],
-     "iPhone app tests",
-     "MacBook",
-     8
-    ]
-   ],
+   "cur": [],
    "ld": [
     0,
     null
@@ -960,12 +834,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-24T18:17:45Z",
-    "ld": 3.45,
+    "at": "2026-11-24T18:21:11Z",
+    "ld": 2.61,
     "c": 8,
     "sb": 0,
     "dk": [
-     57.2,
+     52.4,
      228.3
     ],
     "ss": [
@@ -975,16 +849,16 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-24T18:16:14Z",
-    "ld": 2.26,
+    "at": "2026-11-24T18:19:18Z",
+    "ld": 5.25,
     "c": 12,
     "sb": 1,
     "dk": [
-     340.7,
+     340.6,
      926.4
     ],
     "sn": [
-     "itsthecompany-runner"
+     "itsthecompany-runner-2"
     ]
    }
   }
@@ -1015,11 +889,11 @@
      "open": true
     }
    },
-   "at": "2026-11-24T18:18:15+00:00"
+   "at": "2026-11-24T18:21:19+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-24T18:18:15+00:00"
+   "at": "2026-11-24T18:21:10+00:00"
   }
  },
  "operators": [
@@ -1029,8 +903,8 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session",
-   "at": "2026-11-24T13:18:00-05:00"
+   "t": "Inbox \u2013 Evan's 1:20 PM Message on GitHub",
+   "at": "2026-11-24T13:21:05-05:00"
   },
   {
    "w": "Operator",
@@ -1038,21 +912,42 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session",
-   "at": "2026-11-24T13:18:09-05:00"
+   "t": "Work session \u2013 1 task",
+   "at": "2026-11-24T13:00:27-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Jeremy's Account",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session \u2013 1 task",
+   "at": "2026-11-24T13:20:08-05:00"
   }
  ],
  "reply": {
   "sent": "2026-11-24T18:16:47Z",
   "seconds": 70.0
  },
- "inbox": [],
+ "inbox": [
+  {
+   "id": "c7140512789",
+   "state": "received",
+   "position": 1,
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "Great! Is the Macbook runner picking..."
+  }
+ ],
  "trimmed": [
   "lane_next",
   "queue_text",
   "recent",
   "task_done",
   "fin_short",
+  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -1062,12 +957,12 @@
  ],
  "agents_now": {
   "main": 1,
-  "lanes": 1,
-  "total": 2,
-  "at": "1:18 PM",
+  "lanes": 2,
+  "total": 3,
+  "at": "1:21 PM",
   "why": "",
-  "at_iso": "2026-11-24T18:18:00+00:00",
+  "at_iso": "2026-11-24T18:21:00+00:00",
   "started": "9:18 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 1, started 9:18 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 1:18 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 1, started 9:18 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 1:21 PM ET</p></section>"
  }
 }

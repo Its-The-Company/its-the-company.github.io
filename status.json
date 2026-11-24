@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-24T01:35:44.556484+00:00",
+ "at": "2026-11-24T01:38:43.503471+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -381,31 +381,31 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 10.0,
-   "resets_at": "2026-11-24T03:10:00.279443+00:00",
+   "pct": 11.0,
+   "resets_at": "2026-11-24T03:10:00.069324+00:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-23T20:04:46.645791-05:00",
+   "read_at": "2026-11-23T20:38:10.469454-05:00",
    "source": "usage",
-   "left": 90.0,
+   "left": 89.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 16.0,
-   "resets_at": "2026-11-29T07:00:00.279464+00:00",
+   "resets_at": "2026-11-29T07:00:00.069344+00:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-23T20:04:46.645791-05:00",
+   "read_at": "2026-11-23T20:38:10.469454-05:00",
    "source": "usage",
    "left": 84.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 4.0,
-   "resets_at": "2026-11-29T07:00:00.279595+00:00",
+   "resets_at": "2026-11-29T07:00:00.069475+00:00",
    "used_words": "of the Fable weekly allowance used",
-   "read_at": "2026-11-23T20:04:46.645791-05:00",
+   "read_at": "2026-11-23T20:38:10.469454-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-23T20:04:46.645791-05:00"
+  "read_at": "2026-11-23T20:38:10.469454-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -425,7 +425,7 @@
   "week_pct": 63.21,
   "usage_pct": 79.8,
   "work_pct": 97.6,
-  "read_at": "2026-11-24T01:35:00+00:00",
+  "read_at": "2026-11-24T01:38:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -484,7 +484,7 @@
   }
  ],
  "disk": {
-  "free_gb": 28,
+  "free_gb": 30,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -493,14 +493,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-23T20:31:00-05:00",
+   "at": "2026-11-23T20:38:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-23T20:35:00-05:00",
+  "at": "2026-11-23T20:38:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -568,15 +568,6 @@
  "tasks": {
   "run": [
    {
-    "w": "Idris",
-    "t": "Python in the app: smaller bundle, installable packages",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-23T19:31:09-05:00",
-    "o": "c",
-    "task": "T-4192"
-   },
-   {
     "w": "Odalys",
     "t": "Name every record a land takes out of a copy",
     "m": "opus",
@@ -620,6 +611,15 @@
     "at": "2026-11-23T20:26:54-05:00",
     "o": "c",
     "task": "T-5303"
+   },
+   {
+    "w": "Idris",
+    "t": "Make the unit tests pass in a launcher build",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-23T20:37:53-05:00",
+    "o": "c",
+    "task": "T-4679"
    }
   ],
   "src": "plan",
@@ -779,82 +779,75 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-24T01:35:44Z",
+  "at": "2026-11-24T01:38:43Z",
   "s": {
-   "T-4192": [
+   "T-1119": [
     "testing",
     "Mac Mini \u00b7 test",
     null
    ],
-   "T-5059": [
+   "T-2296": [
     "testing",
-    "MacBook \u00b7 test",
+    "Mac Mini \u00b7 test",
+    null
+   ],
+   "T-4190": [
+    "testing",
+    "Mac Mini \u00b7 test",
+    null
+   ],
+   "T-4681": [
+    "testing",
+    "Mac Mini \u00b7 test",
+    null
+   ],
+   "T-5602": [
+    "testing",
+    "Mac Mini \u00b7 test",
+    null
+   ],
+   "T-5743": [
+    "testing",
+    "Mac Mini \u00b7 test",
     null
    ],
    "T-5634": [
     "testq",
     "1st for a Simulator",
-    1795483604556
+    1795483603503
    ],
-   "T-1119": [
+   "T-4875": [
     "testq",
     "2nd for a Simulator",
-    1795483904556
-   ],
-   "T-2296": [
-    "testq",
-    "2nd for a Simulator",
-    1795483904556
-   ],
-   "T-4190": [
-    "testq",
-    "2nd for a Simulator",
-    1795483904556
-   ],
-   "T-4681": [
-    "testq",
-    "2nd for a Simulator",
-    1795483904556
-   ],
-   "T-5602": [
-    "testq",
-    "2nd for a Simulator",
-    1795483904556
-   ],
-   "T-5743": [
-    "testq",
-    "2nd for a Simulator",
-    1795483904556
+    1795484323503
    ]
   },
   "nm": {
-   "T-4192": "Python in the app: smaller bundle, installable packages",
-   "T-5059": "Test that App Store builds write no sensor rows",
-   "T-5634": "Retry a refused widget send at the project boundary",
    "T-1119": "Investors answer two App Store Connect questions",
    "T-2296": "Finish the gallery pager, iPad layout and detail foot",
    "T-4190": "Settings and Pro: buy, restore, themes",
    "T-4681": "Premades default to Paper in light and Studio in dark",
    "T-5602": "Brief for a new look for the app",
-   "T-5743": "Review the check that landed means every app file"
+   "T-5743": "Review the check that landed means every app file",
+   "T-5634": "Retry a refused widget send at the project boundary",
+   "T-4875": "Test that suggestions are asked after the first letter"
   },
   "wk": {
-   "T-4192": "Idris",
-   "T-5059": "Idris",
-   "T-5634": "Idris",
    "T-1119": "Ines",
    "T-2296": "Idris",
    "T-4190": "Idris",
    "T-4681": "Idris",
    "T-5602": "Maren",
    "T-5743": "Idris",
+   "T-5634": "Idris",
+   "T-4875": "Idris",
    "T-5755": "Odalys",
    "T-5691": "Odalys",
    "T-5758": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-24T01:35:44Z",
+  "at": "2026-11-24T01:38:43Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -870,9 +863,9 @@
     "inline": null,
     "conflicted": null,
     "failed": null,
-    "held": 967,
+    "held": 970,
     "retry": null,
-    "parked": 967
+    "parked": 970
    },
    "cur": [],
    "ld": [
@@ -882,12 +875,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-24T01:35:45Z",
-    "ld": 2.71,
+    "at": "2026-11-24T01:38:45Z",
+    "ld": 3.79,
     "c": 8,
     "sb": 1,
     "dk": [
-     30.5,
+     29.9,
      228.3
     ],
     "ss": [
@@ -897,6 +890,17 @@
     "sn": [
      "iPhone 17e"
     ]
+   },
+   "macbook": {
+    "at": "2026-11-24T01:37:29Z",
+    "ld": 38.46,
+    "c": 12,
+    "sb": 0,
+    "dk": [
+     348.6,
+     926.4
+    ],
+    "sn": []
    }
   }
  },
@@ -926,11 +930,11 @@
      "open": true
     }
    },
-   "at": "2026-11-24T01:35:44+00:00"
+   "at": "2026-11-24T01:38:43+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-24T01:35:37+00:00"
+   "at": "2026-11-24T01:38:43+00:00"
   }
  },
  "operators": [
@@ -941,7 +945,7 @@
    "m": "opus",
    "e": "high",
    "t": "Work session",
-   "at": "2026-11-23T20:22:13-05:00"
+   "at": "2026-11-23T20:36:29-05:00"
   },
   {
    "w": "Operator",
@@ -972,8 +976,8 @@
   }
  ],
  "reply": {
-  "sent": "2026-11-24T01:20:37Z",
-  "seconds": 95.0
+  "sent": "2026-11-24T01:35:41Z",
+  "seconds": 46.0
  },
  "inbox": [],
  "trimmed": [
@@ -991,10 +995,10 @@
   "main": 0,
   "lanes": 3,
   "total": 3,
-  "at": "8:35 PM",
+  "at": "8:38 PM",
   "why": "",
-  "at_iso": "2026-11-24T01:35:00+00:00",
+  "at_iso": "2026-11-24T01:38:00+00:00",
   "started": "7:06 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 7:06 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 8:35 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 7:06 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 8:38 PM ET</p></section>"
  }
 }

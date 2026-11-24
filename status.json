@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-24T16:33:33.211625+00:00",
+ "at": "2026-11-24T16:36:39.441898+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -376,7 +376,7 @@
    "task": "[review] T-4183",
    "model": "",
    "started": "2026-11-24T16:20:01.856Z",
-   "seconds": 811,
+   "seconds": 997,
    "finished": null
   }
  ],
@@ -408,19 +408,19 @@
  "meter": {
   "five_hour": {
    "pct": 55.0,
-   "resets_at": "2026-11-24T17:00:00.003842+00:00",
+   "resets_at": "2026-11-24T12:00:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-24T11:30:12.265534-05:00",
-   "source": "usage",
+   "read_at": "2026-11-24T11:35:30.486049-05:00",
+   "source": "live",
    "left": 45.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 37.0,
-   "resets_at": "2026-11-29T07:00:00.003865+00:00",
+   "resets_at": "2026-11-29T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-24T11:30:12.265534-05:00",
-   "source": "usage",
+   "read_at": "2026-11-24T11:35:30.486049-05:00",
+   "source": "live",
    "left": 63.0,
    "left_words": "of your weekly allowance left"
   },
@@ -431,7 +431,7 @@
    "read_at": "2026-11-24T11:30:12.265534-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-24T11:30:12.265534-05:00"
+  "read_at": "2026-11-24T11:35:30.486049-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -451,7 +451,7 @@
   "week_pct": 106.32,
   "usage_pct": 74.2,
   "work_pct": 97.8,
-  "read_at": "2026-11-24T16:33:00+00:00",
+  "read_at": "2026-11-24T16:36:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -495,14 +495,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-24T11:30:00-05:00",
+   "at": "2026-11-24T11:36:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-24T11:33:00-05:00",
+  "at": "2026-11-24T11:36:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -513,7 +513,7 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Locked in for today by an Investor: full speed until midnight; the 5-hour window allows 3; the machine allows 8 (held: too few lands in 3 hours to judge a raise)",
+  "why": "Locked in for today by an Investor: full speed until midnight; the 5-hour window allows 3; the machine allows 8 (at its floor: load 13.3 a core is over 10)",
   "n": 3,
   "at": "2026-11-24T09:17:56.072770-05:00"
  },
@@ -743,92 +743,97 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-24T16:33:33Z",
+  "at": "2026-11-24T16:36:39Z",
   "s": {
    "T-5047": [
     "mergetest",
     "",
-    1795537893211
+    1795537899441
    ],
    "T-0337": [
     "mergetest",
     "",
-    1795537893211
+    1795537899441
    ],
    "T-2097": [
     "mergetest",
     "",
-    1795537893211
+    1795537899441
    ],
    "T-4010": [
     "mergetest",
     "",
-    1795537893211
+    1795537899441
    ],
    "T-4477": [
     "mergetest",
     "",
-    1795537893211
+    1795537899441
    ],
    "T-4286": [
     "mergetest",
     "",
-    1795537893211
+    1795537899441
    ],
    "T-4435": [
     "mergetest",
     "",
-    1795537893211
+    1795537899441
    ],
    "T-0678": [
     "mergetest",
     "",
-    1795537893211
+    1795537899441
    ],
    "T-3765": [
     "mergetest",
     "",
-    1795537893211
+    1795537899441
    ],
    "T-4662": [
     "mergetest",
     "",
-    1795537893211
+    1795537899441
    ],
    "T-4781": [
     "mergetest",
     "",
-    1795537893211
+    1795537899441
    ],
    "T-4635": [
     "mergetest",
     "",
-    1795537893211
+    1795537899441
    ],
    "T-4182": [
     "mergetest",
     "",
-    1795537893211
+    1795537899441
    ],
    "T-5620": [
     "mergetest",
     "",
-    1795537893211
+    1795537899441
    ],
    "T-1119": [
     "mergetest",
     "",
-    1795537893211
+    1795537899441
    ],
    "T-4681": [
     "mergetest",
     "",
-    1795537893211
+    1795537899441
    ],
    "T-5602": [
     "mergetest",
     "",
-    1795537893211
+    1795537899441
+   ],
+   "T-5365": [
+    "mergetest",
+    "",
+    null
    ],
    "T-4183": [
     "testing",
@@ -854,6 +859,7 @@
    "T-1119": "Investors answer two App Store Connect questions",
    "T-4681": "Premades default to Paper in light and Studio in dark",
    "T-5602": "Brief for a new look for the app",
+   "T-5365": "Location refresh policy, file and route",
    "T-4183": "The Gallery shows, previews and opens every premade"
   },
   "wk": {
@@ -874,6 +880,7 @@
    "T-1119": "Ines",
    "T-4681": "Idris",
    "T-5602": "Maren",
+   "T-5365": "Idris",
    "T-4183": "Idris",
    "T-5800": "Operator",
    "T-5325": "Idris",
@@ -887,7 +894,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-24T16:33:33Z",
+  "at": "2026-11-24T16:36:39Z",
   "mq": {
    "n": {
     "checking": 17,
@@ -899,46 +906,46 @@
     "parked": 14
    },
    "m": {
-    "checking": 2,
+    "checking": 5,
     "inline": null,
     "conflicted": null,
-    "failed": 33,
-    "held": 731,
+    "failed": 36,
+    "held": 734,
     "retry": null,
-    "parked": 731
+    "parked": 734
    },
    "cur": [
     [
      [
       "T-5047"
      ],
-     "iPhone app tests, sent and waiting its turn",
+     "iPhone app tests",
      "MacBook",
-     2
+     5
     ],
     [
      [
       "T-0337"
      ],
-     "iPhone app tests, sent and waiting its turn",
+     "iPhone app tests",
      "MacBook",
-     2
+     5
     ],
     [
      [
       "T-2097"
      ],
-     "iPhone app tests, sent and waiting its turn",
+     "iPhone app tests",
      "MacBook",
-     2
+     5
     ],
     [
      [
       "T-4010"
      ],
-     "iPhone app tests, sent and waiting its turn",
+     "iPhone app tests",
      "MacBook",
-     2
+     5
     ]
    ],
    "ld": [
@@ -948,12 +955,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-24T16:33:36Z",
-    "ld": 11.38,
+    "at": "2026-11-24T16:36:41Z",
+    "ld": 12.1,
     "c": 8,
     "sb": 1,
     "dk": [
-     51.0,
+     54.4,
      228.3
     ],
     "ss": [
@@ -965,8 +972,8 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-24T16:33:26Z",
-    "ld": 0.87,
+    "at": "2026-11-24T16:35:34Z",
+    "ld": 0.69,
     "c": 12,
     "sb": 0,
     "dk": [
@@ -1003,11 +1010,11 @@
      "open": true
     }
    },
-   "at": "2026-11-24T16:33:33+00:00"
+   "at": "2026-11-24T16:36:39+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-24T16:33:33+00:00"
+   "at": "2026-11-24T16:36:39+00:00"
   }
  },
  "operators": [
@@ -1051,10 +1058,10 @@
   "main": 1,
   "lanes": 1,
   "total": 2,
-  "at": "11:33 AM",
+  "at": "11:36 AM",
   "why": "",
-  "at_iso": "2026-11-24T16:33:00+00:00",
+  "at_iso": "2026-11-24T16:36:00+00:00",
   "started": "9:18 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 1, started 9:18 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 11:33 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 1, started 9:18 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 11:36 AM ET</p></section>"
  }
 }

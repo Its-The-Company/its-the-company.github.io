@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-24T16:00:04.130050+00:00",
+ "at": "2026-11-24T16:03:06.273393+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -12,6 +12,22 @@
    "last_handoff": 1795529387
   },
   "flow": [
+   {
+    "t": "T-4468",
+    "name": "Let people set each premade's place, events and lists",
+    "w": "Idris",
+    "acct": "Personal b",
+    "steps": [
+     {
+      "s": "claimed",
+      "at": 1795536146
+     },
+     {
+      "s": "worker",
+      "at": 1795536146
+     }
+    ]
+   },
    {
     "t": "T-5602",
     "name": "Brief for a new look for the app",
@@ -351,7 +367,7 @@
    "task": "[build] T-4183 Gallery tour examples",
    "model": "",
    "started": "2026-11-24T14:21:14.744Z",
-   "seconds": 5929,
+   "seconds": 6111,
    "finished": null
   }
  ],
@@ -418,7 +434,7 @@
   "week_pct": 100.57,
   "usage_pct": 74.2,
   "work_pct": 97.8,
-  "read_at": "2026-11-24T16:00:00+00:00",
+  "read_at": "2026-11-24T16:03:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -432,6 +448,19 @@
     "n": "Evan",
     "d": 1,
     "src": "plan-a"
+   },
+   {
+    "lane": "b",
+    "task": "T-4896",
+    "w": "Maren",
+    "k": "test",
+    "t": "Guard the name's case in premade and Settings lines",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-24T11:01:21-05:00",
+    "n": "Jeremy",
+    "d": 1,
+    "src": "plan-b"
    }
   ]
  },
@@ -469,7 +498,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-24T11:00:00-05:00",
+  "at": "2026-11-24T11:03:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -710,18 +739,25 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-24T15:59:49Z",
+  "at": "2026-11-24T16:03:06Z",
   "s": {
+   "T-0811": [
+    "mergetest",
+    "iPhone tests on the MacBook",
+    null
+   ],
    "T-5047": [
     "merging",
     "Mac tests at the main gate",
-    1795526749561
+    1795526766273
    ]
   },
   "nm": {
+   "T-0811": "Give the bundled examples an iPhone entry point",
    "T-5047": "Fix the token test's No view for this size card"
   },
   "wk": {
+   "T-0811": "Idris",
    "T-5047": "Idris",
    "T-2154": "Idris",
    "T-2155": "Idris",
@@ -733,25 +769,25 @@
   }
  },
  "ln": {
-  "at": "2026-11-24T15:59:49Z",
+  "at": "2026-11-24T16:03:06Z",
   "mq": {
    "n": {
     "checking": 0,
     "inline": 0,
     "conflicted": 0,
-    "failed": 0,
+    "failed": 1,
     "held": 4,
     "retry": 0,
-    "parked": 18
+    "parked": 22
    },
    "m": {
     "checking": null,
     "inline": null,
     "conflicted": null,
-    "failed": null,
-    "held": 1831,
+    "failed": 3,
+    "held": 1835,
     "retry": null,
-    "parked": 830
+    "parked": 701
    },
    "cur": [],
    "ld": [
@@ -761,12 +797,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-24T15:59:27Z",
-    "ld": 2.11,
+    "at": "2026-11-24T16:02:38Z",
+    "ld": 1.7,
     "c": 8,
     "sb": 0,
     "dk": [
-     53.2,
+     53.1,
      228.3
     ],
     "ss": [
@@ -776,8 +812,8 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-24T15:57:31Z",
-    "ld": 5.73,
+    "at": "2026-11-24T15:59:37Z",
+    "ld": 3.83,
     "c": 12,
     "sb": 0,
     "dk": [
@@ -814,11 +850,11 @@
      "open": true
     }
    },
-   "at": "2026-11-24T16:00:04+00:00"
+   "at": "2026-11-24T16:03:06+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-24T15:59:49+00:00"
+   "at": "2026-11-24T16:02:59+00:00"
   }
  },
  "operators": [
@@ -839,6 +875,15 @@
    "e": "high",
    "t": "Work session \u2013 15 tasks",
    "at": "2026-11-24T08:25:08-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Jeremy's Account",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session \u2013 1 task",
+   "at": "2026-11-24T11:01:21-05:00"
   }
  ],
  "reply": {
@@ -860,12 +905,12 @@
  ],
  "agents_now": {
   "main": 1,
-  "lanes": 1,
-  "total": 2,
-  "at": "11:00 AM",
+  "lanes": 2,
+  "total": 3,
+  "at": "11:03 AM",
   "why": "",
-  "at_iso": "2026-11-24T16:00:00+00:00",
+  "at_iso": "2026-11-24T16:03:00+00:00",
   "started": "9:18 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 1, started 9:18 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 11:00 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 1, started 9:18 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 11:03 AM ET</p></section>"
  }
 }

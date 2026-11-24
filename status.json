@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-24T02:19:08.820629+00:00",
+ "at": "2026-11-24T02:22:11.873598+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -425,7 +425,7 @@
   "week_pct": 67.16,
   "usage_pct": 79.8,
   "work_pct": 97.6,
-  "read_at": "2026-11-24T02:19:00+00:00",
+  "read_at": "2026-11-24T02:22:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -500,7 +500,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-23T21:19:00-05:00",
+  "at": "2026-11-23T21:22:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -779,7 +779,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-24T02:18:59Z",
+  "at": "2026-11-24T02:21:53Z",
   "s": {
    "T-5657": [
     "mergetest",
@@ -794,26 +794,74 @@
    "T-5059": [
     "testq",
     "1st for a Simulator",
-    1795486619418
+    1795486613521
+   ],
+   "T-5634": [
+    "testq",
+    "3rd for a Simulator",
+    1795486853521
+   ],
+   "T-1119": [
+    "testq",
+    "4th for a Simulator",
+    1795486913521
+   ],
+   "T-2296": [
+    "testq",
+    "4th for a Simulator",
+    1795486913521
    ],
    "T-4190": [
-    "merged",
-    "on main 10:11 AM ET",
-    1795446707000,
-    ""
+    "testq",
+    "4th for a Simulator",
+    1795486913521
+   ],
+   "T-4681": [
+    "testq",
+    "4th for a Simulator",
+    1795486913521
+   ],
+   "T-4715": [
+    "testq",
+    "4th for a Simulator",
+    1795486913521
+   ],
+   "T-5602": [
+    "testq",
+    "4th for a Simulator",
+    1795486913521
+   ],
+   "T-4875": [
+    "testq",
+    "5th for a Simulator",
+    1795486913521
    ]
   },
   "nm": {
    "T-5657": "Ship test widgets in internal TestFlight builds only",
    "T-5303": "Test the commit and close ordering inside the run lock",
    "T-5059": "Test that App Store builds write no sensor rows",
-   "T-4190": "Settings and Pro: buy, restore, themes"
+   "T-5634": "Retry a refused widget send at the project boundary",
+   "T-1119": "Investors answer two App Store Connect questions",
+   "T-2296": "Finish the gallery pager, iPad layout and detail foot",
+   "T-4190": "Settings and Pro: buy, restore, themes",
+   "T-4681": "Premades default to Paper in light and Studio in dark",
+   "T-4715": "Put the new Pro screen words into the app",
+   "T-5602": "Brief for a new look for the app",
+   "T-4875": "Test that suggestions are asked after the first letter"
   },
   "wk": {
    "T-5657": "Idris",
    "T-5303": "Idris",
    "T-5059": "Idris",
+   "T-5634": "Idris",
+   "T-1119": "Ines",
+   "T-2296": "Idris",
    "T-4190": "Idris",
+   "T-4681": "Idris",
+   "T-4715": "Maren",
+   "T-5602": "Maren",
+   "T-4875": "Idris",
    "T-5755": "Odalys",
    "T-5691": "Odalys",
    "T-5758": "Idris",
@@ -821,7 +869,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-24T02:18:59Z",
+  "at": "2026-11-24T02:21:53Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -837,9 +885,9 @@
     "inline": null,
     "conflicted": null,
     "failed": null,
-    "held": 1010,
+    "held": 1013,
     "retry": null,
-    "parked": 1010
+    "parked": 1013
    },
    "cur": [],
    "ld": [
@@ -849,12 +897,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-24T02:19:00Z",
-    "ld": 5.47,
+    "at": "2026-11-24T02:21:25Z",
+    "ld": 4.78,
     "c": 8,
     "sb": 1,
     "dk": [
-     30.4,
+     28.2,
      228.3
     ],
     "ss": [
@@ -904,11 +952,11 @@
      "open": true
     }
    },
-   "at": "2026-11-24T02:19:08+00:00"
+   "at": "2026-11-24T02:22:11+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-24T02:19:08+00:00"
+   "at": "2026-11-24T02:22:11+00:00"
   }
  },
  "operators": [
@@ -969,10 +1017,10 @@
   "main": 0,
   "lanes": 3,
   "total": 3,
-  "at": "9:19 PM",
+  "at": "9:22 PM",
   "why": "",
-  "at_iso": "2026-11-24T02:19:00+00:00",
+  "at_iso": "2026-11-24T02:22:00+00:00",
   "started": "7:06 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 7:06 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 9:19 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 7:06 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 9:22 PM ET</p></section>"
  }
 }

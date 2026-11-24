@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-24T00:58:47.827463+00:00",
+ "at": "2026-11-24T01:01:54.604365+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -12,6 +12,22 @@
    "last_handoff": 1795478327
   },
   "flow": [
+   {
+    "t": "T-4681",
+    "name": "Premades default to Paper in light and Studio in dark",
+    "w": "Idris",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "claimed",
+      "at": 1795482009
+     },
+     {
+      "s": "worker",
+      "at": 1795482009
+     }
+    ]
+   },
    {
     "t": "T-1119",
     "name": "Investors answer two App Store Connect questions",
@@ -361,25 +377,9 @@
       "at": 1795424153
      }
     ]
-   },
-   {
-    "t": "T-3495",
-    "name": "Check the upload fix before build 4 goes out",
-    "w": "Pernille",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "claimed",
-      "at": 1795423957
-     },
-     {
-      "s": "worker",
-      "at": 1795423957
-     }
-    ]
    }
   ],
-  "flow_n": 26,
+  "flow_n": 27,
   "done": [],
   "landed": 1,
   "failed": 4
@@ -439,7 +439,7 @@
   "week_pct": 63.21,
   "usage_pct": 79.8,
   "work_pct": 97.6,
-  "read_at": "2026-11-24T00:58:00+00:00",
+  "read_at": "2026-11-24T01:01:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -514,7 +514,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-23T19:58:00-05:00",
+  "at": "2026-11-23T20:01:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -793,13 +793,8 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-24T00:58:32Z",
+  "at": "2026-11-24T01:01:43Z",
   "s": {
-   "T-5634": [
-    "testing",
-    "Mac Mini \u00b7 test",
-    null
-   ],
    "T-5059": [
     "testing",
     "MacBook \u00b7 test",
@@ -810,25 +805,15 @@
     "on main 10:11 AM ET",
     1795446707000,
     ""
-   ],
-   "T-4182": [
-    "merged",
-    "on main 7:59 AM ET",
-    1795438771000,
-    "Idris"
    ]
   },
   "nm": {
-   "T-5634": "Retry a refused widget send at the project boundary",
    "T-5059": "Test that App Store builds write no sensor rows",
-   "T-4190": "Settings and Pro: buy, restore, themes",
-   "T-4182": "A failing widget says so and can recover"
+   "T-4190": "Settings and Pro: buy, restore, themes"
   },
   "wk": {
-   "T-5634": "Idris",
    "T-5059": "Idris",
    "T-4190": "Idris",
-   "T-4182": "Idris",
    "T-5755": "Odalys",
    "T-5691": "Odalys",
    "T-5758": "Idris",
@@ -836,7 +821,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-24T00:58:32Z",
+  "at": "2026-11-24T01:01:43Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -852,9 +837,9 @@
     "inline": null,
     "conflicted": null,
     "failed": null,
-    "held": 930,
+    "held": 933,
     "retry": null,
-    "parked": 930
+    "parked": 933
    },
    "cur": [],
    "ld": [
@@ -864,12 +849,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-24T00:58:37Z",
-    "ld": 9.02,
+    "at": "2026-11-24T01:01:45Z",
+    "ld": 12.03,
     "c": 8,
     "sb": 1,
     "dk": [
-     33.9,
+     29.3,
      228.3
     ],
     "ss": [
@@ -919,11 +904,11 @@
      "open": true
     }
    },
-   "at": "2026-11-24T00:58:47+00:00"
+   "at": "2026-11-24T01:01:54+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-24T00:58:32+00:00"
+   "at": "2026-11-24T01:01:43+00:00"
   }
  },
  "operators": [
@@ -984,10 +969,10 @@
   "main": 0,
   "lanes": 3,
   "total": 3,
-  "at": "7:58 PM",
+  "at": "8:01 PM",
   "why": "",
-  "at_iso": "2026-11-24T00:58:00+00:00",
+  "at_iso": "2026-11-24T01:01:00+00:00",
   "started": "7:06 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 7:06 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 7:58 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 7:06 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 8:01 PM ET</p></section>"
  }
 }

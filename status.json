@@ -1,10 +1,10 @@
 {
  "schema": 1,
- "at": "2026-11-24T14:18:07.588813+00:00",
+ "at": "2026-11-24T14:21:17.928993+00:00",
  "session": {
-  "active": false,
-  "kind": "",
-  "started": null,
+  "active": true,
+  "kind": "coord",
+  "started": "2026-11-24T09:18:08-05:00",
   "coord": {
    "active": true,
    "started": 1795341309,
@@ -329,42 +329,18 @@
   "landed": 1,
   "failed": 4
  },
- "workers": [],
- "who": "",
- "recent": [
-  {
-   "name": "pernille",
-   "task": "[review] T-5003",
-   "model": "opus",
-   "started": "2026-11-24T13:15:32.358Z",
-   "seconds": null,
-   "finished": "2026-11-24T13:16:00.790000+00:00"
-  },
-  {
-   "name": "pernille",
-   "task": "[review] T-4239",
-   "model": "opus",
-   "started": "2026-11-24T13:09:06.568Z",
-   "seconds": null,
-   "finished": "2026-11-24T13:10:17.429000+00:00"
-  },
+ "workers": [
   {
    "name": "idris",
-   "task": "[build] T-4239 fix review finding",
-   "model": "opus",
-   "started": "2026-11-24T12:08:21.801Z",
-   "seconds": null,
-   "finished": "2026-11-24T13:08:43.400000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[report] morning",
-   "model": "opus",
-   "started": "2026-11-24T12:24:46.274Z",
-   "seconds": null,
-   "finished": "2026-11-24T12:34:14.662000+00:00"
+   "task": "[build] T-4183 Gallery tour examples",
+   "model": "",
+   "started": "2026-11-24T14:21:14.744Z",
+   "seconds": 3,
+   "finished": null
   }
  ],
+ "who": "Idris",
+ "recent": [],
  "queue": {
   "runnable": [],
   "blocked": [],
@@ -412,12 +388,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-24T09:32:56-05:00",
+ "next_tick": null,
  "personal": {
   "week_pct": 89.08,
   "usage_pct": 74.2,
   "work_pct": 97.8,
-  "read_at": "2026-11-24T14:18:00+00:00",
+  "read_at": "2026-11-24T14:21:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -464,7 +440,7 @@
   }
  ],
  "disk": {
-  "free_gb": 38,
+  "free_gb": 36,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -473,14 +449,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-24T09:15:00-05:00",
+   "at": "2026-11-24T09:20:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-24T09:18:00-05:00",
+  "at": "2026-11-24T09:21:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -488,22 +464,26 @@
    "b": "midnight"
   }
  },
- "next_tick_why": "last_tick",
+ "next_tick_why": "session",
  "idle": null,
- "pool": null,
+ "pool": {
+  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 8 (held: too few lands in 3 hours to judge a raise)",
+  "n": 8,
+  "at": "2026-11-24T09:17:56.072770-05:00"
+ },
  "lanes": [
+  {
+   "name": "Idris",
+   "state": "running",
+   "task": "[build] T-4183 Gallery tour examples",
+   "model": null,
+   "since": "2026-11-24T14:21:14.744Z",
+   "next": []
+  },
   {
    "name": "Odalys",
    "state": "next",
    "task": "Odalys, P0, Investor an Investor c7030179059 (11:12 PM...",
-   "model": null,
-   "since": null,
-   "next": []
-  },
-  {
-   "name": "Idris",
-   "state": "next",
-   "task": "Idris, P0, from T-4964 (made by tools/runner_watch.py...",
    "model": null,
    "since": null,
    "next": []
@@ -542,7 +522,17 @@
   }
  ],
  "tasks": {
-  "run": [],
+  "run": [
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "The Gallery shows, previews and opens every premade",
+    "at": "2026-11-24T14:21:14.744Z",
+    "o": "c",
+    "task": "T-4183"
+   }
+  ],
+  "src": "plan",
   "open": [
    {
     "w": "Odalys",
@@ -637,6 +627,10 @@
    "wait": 2,
    "blocked": 0,
    "you": 2
+  },
+  "fin": {
+   "n": 0,
+   "rows": []
   }
  },
  "qr": [
@@ -678,12 +672,12 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-24T14:18:07Z",
+  "at": "2026-11-24T14:21:17Z",
   "s": {
    "T-5047": [
     "merging",
     "Mac tests at the main gate",
-    1795526707588
+    1795526717928
    ]
   },
   "nm": {
@@ -694,7 +688,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-24T14:18:07Z",
+  "at": "2026-11-24T14:21:17Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -710,9 +704,9 @@
     "inline": null,
     "conflicted": null,
     "failed": null,
-    "held": 1730,
+    "held": 1733,
     "retry": null,
-    "parked": 728
+    "parked": 731
    },
    "cur": [],
    "ld": [
@@ -722,19 +716,21 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-24T14:18:08Z",
-    "ld": 1.91,
+    "at": "2026-11-24T14:20:53Z",
+    "ld": 6.56,
     "c": 8,
-    "sb": 0,
+    "sb": 1,
     "dk": [
-     38.0,
+     35.6,
      228.3
     ],
     "ss": [
      168.5,
      953.7
     ],
-    "sn": []
+    "sn": [
+     "pywidget-wk-check"
+    ]
    },
    "macbook": {
     "at": "2026-11-24T14:07:16Z",
@@ -775,14 +771,23 @@
      "open": true
     }
    },
-   "at": "2026-11-24T14:18:07+00:00"
+   "at": "2026-11-24T14:21:17+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-24T14:18:07+00:00"
+   "at": "2026-11-24T14:21:17+00:00"
   }
  },
  "operators": [
+  {
+   "w": "Operator",
+   "a": "Main plan",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session",
+   "at": "2026-11-24T09:18:08-05:00"
+  },
   {
    "w": "Operator",
    "a": "Evan's Account",
@@ -810,7 +815,6 @@
  "trimmed": [
   "lane_next",
   "queue_text",
-  "recent",
   "task_done",
   "task_title",
   "done_text",
@@ -819,13 +823,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 0,
+  "main": 1,
   "lanes": 2,
-  "total": 2,
-  "at": "9:18 AM",
+  "total": 3,
+  "at": "9:21 AM",
   "why": "",
-  "at_iso": "2026-11-24T14:18:00+00:00",
-  "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 9:18 AM ET</p></section>"
+  "at_iso": "2026-11-24T14:21:00+00:00",
+  "started": "9:18 AM",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 1, started 9:18 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 9:21 AM ET</p></section>"
  }
 }

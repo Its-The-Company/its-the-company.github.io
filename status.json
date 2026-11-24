@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-24T17:56:31.623375+00:00",
+ "at": "2026-11-24T17:59:34.502961+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -376,7 +376,7 @@
    "task": "[build] T-4183 review fixes",
    "model": "",
    "started": "2026-11-24T16:38:54.576Z",
-   "seconds": 4657,
+   "seconds": 4839,
    "finished": null
   }
  ],
@@ -459,7 +459,7 @@
   "week_pct": 117.81,
   "usage_pct": 74.2,
   "work_pct": 97.8,
-  "read_at": "2026-11-24T17:56:00+00:00",
+  "read_at": "2026-11-24T17:59:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -496,7 +496,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-24T12:56:00-05:00",
+  "at": "2026-11-24T12:59:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -647,6 +647,11 @@
   ],
   "done": [
    {
+    "w": "Idris",
+    "t": "The app's privacy check before release now fails loudly if its scanning tool cannot run, instead...",
+    "at": "2026-11-24T12:56:00-05:00"
+   },
+   {
     "w": "Ines",
     "t": "both App Store Connect answers from the Investors are recorded with their sources: web access...",
     "at": "2026-11-24T12:44:00-05:00"
@@ -655,11 +660,6 @@
     "w": "Maren",
     "t": "The Investors now have one page asking for their direction on a new look for the app, listing...",
     "at": "2026-11-24T12:44:00-05:00"
-   },
-   {
-    "w": "Pernille",
-    "t": "A Python test that sometimes failed on a busy machine now checks what it means to check, so it...",
-    "at": "2026-11-24T12:31:00-05:00"
    }
   ],
   "count": {
@@ -669,8 +669,12 @@
    "you": 2
   },
   "fin": {
-   "n": 22,
+   "n": 23,
    "rows": [
+    [
+     "T-4637",
+     "Make the Release privacy..."
+    ],
     [
      "T-1119",
      "Investors answer two App..."
@@ -690,10 +694,6 @@
     [
      "T-0656",
      "Add completions and inline..."
-    ],
-    [
-     "T-2261",
-     "Build and test the editor..."
     ]
    ]
   }
@@ -737,18 +737,131 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-24T17:56:23Z",
+  "at": "2026-11-24T17:59:14Z",
   "s": {
-   "T-4637": [
+   "T-4896": [
+    "mergeq",
+    "1st to merge",
+    1795543034086
+   ],
+   "T-4468": [
+    "mergeq",
+    "1st to merge",
+    1795543034086
+   ],
+   "T-4282": [
+    "mergeq",
+    "1st to merge",
+    1795543034086
+   ],
+   "T-4554": [
+    "mergeq",
+    "1st to merge",
+    1795543034086
+   ],
+   "T-4494": [
+    "mergeq",
+    "1st to merge",
+    1795543034086
+   ],
+   "T-4184": [
+    "mergeq",
+    "1st to merge",
+    1795543034086
+   ],
+   "T-4181": [
+    "mergeq",
+    "1st to merge",
+    1795543034086
+   ],
+   "T-0687": [
+    "mergeq",
+    "1st to merge",
+    1795543034086
+   ],
+   "T-4749": [
+    "mergeq",
+    "1st to merge",
+    1795543034086
+   ],
+   "T-0011": [
+    "mergeq",
+    "1st to merge",
+    1795543034086
+   ],
+   "T-5131": [
+    "mergeq",
+    "1st to merge",
+    1795543034086
+   ],
+   "T-5154": [
+    "mergeq",
+    "1st to merge",
+    1795543034086
+   ],
+   "T-4813": [
+    "mergeq",
+    "1st to merge",
+    1795543034086
+   ],
+   "T-5236": [
+    "mergeq",
+    "1st to merge",
+    1795543034086
+   ],
+   "T-4807": [
+    "mergeq",
+    "1st to merge",
+    1795543034086
+   ],
+   "T-5365": [
+    "mergeq",
+    "1st to merge",
+    1795543034086
+   ],
+   "T-0811": [
     "mergetest",
     "iPhone tests on the MacBook",
     null
    ]
   },
   "nm": {
-   "T-4637": "Make the Release privacy scan fail when nm cannot run"
+   "T-4896": "Guard the name's case in premade and Settings lines",
+   "T-4468": "Let people set each premade's place, events and lists",
+   "T-4282": "Measure real scripts inside the widget on phones",
+   "T-4554": "One state commit per widget across app and widget",
+   "T-4494": "Prove widgets move to the app by size",
+   "T-4184": "A person's own script becomes a Home Screen widget",
+   "T-4181": "Widgets refresh on their own and by a tap",
+   "T-0687": "Run network fetches inside the extension on the Simulator",
+   "T-4749": "Rewrite or drop outdated tests that read code text",
+   "T-0011": "Check motion, health and battery sensors on a device",
+   "T-5131": "Keep process checks out of the land turn",
+   "T-5154": "Keep the company account signed in to Claude Code",
+   "T-4813": "Home's numbers update within a minute",
+   "T-5236": "Send land host tests to the MacBook under heavy load",
+   "T-4807": "Fix every bad test that failed a merge",
+   "T-5365": "Location refresh policy, file and route",
+   "T-0811": "Give the bundled examples an iPhone entry point"
   },
   "wk": {
+   "T-4896": "Maren",
+   "T-4468": "Idris",
+   "T-4282": "Idris",
+   "T-4554": "Idris",
+   "T-4494": "Idris",
+   "T-4184": "Idris",
+   "T-4181": "Idris",
+   "T-0687": "Idris",
+   "T-4749": "Pernille",
+   "T-0011": "Idris",
+   "T-5131": "Odalys",
+   "T-5154": "Odalys",
+   "T-4813": "Maren",
+   "T-5236": "Odalys",
+   "T-4807": "Pernille",
+   "T-5365": "Idris",
+   "T-0811": "Idris",
    "T-4637": "Idris",
    "T-1119": "Ines",
    "T-5602": "Maren",
@@ -760,30 +873,29 @@
    "T-2513": "Idris",
    "T-2870": "Idris",
    "T-5807": "Operator",
-   "T-5809": "Operator",
-   "T-5480": "Idris"
+   "T-5809": "Operator"
   }
  },
  "ln": {
-  "at": "2026-11-24T17:56:23Z",
+  "at": "2026-11-24T17:59:14Z",
   "mq": {
    "n": {
     "checking": 0,
-    "inline": 0,
+    "inline": 16,
     "conflicted": 0,
     "failed": 0,
     "held": 4,
     "retry": 0,
-    "parked": 15
+    "parked": 14
    },
    "m": {
     "checking": null,
-    "inline": null,
+    "inline": 2,
     "conflicted": null,
     "failed": null,
-    "held": 1948,
+    "held": 1951,
     "retry": null,
-    "parked": 1347
+    "parked": 1216
    },
    "cur": [],
    "ld": [
@@ -793,12 +905,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-24T17:55:59Z",
-    "ld": 1.01,
+    "at": "2026-11-24T17:58:49Z",
+    "ld": 1.12,
     "c": 8,
     "sb": 0,
     "dk": [
-     53.5,
+     55.5,
      228.3
     ],
     "ss": [
@@ -808,17 +920,15 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-24T17:46:57Z",
-    "ld": 3.66,
+    "at": "2026-11-24T17:57:58Z",
+    "ld": 6.81,
     "c": 12,
-    "sb": 1,
+    "sb": 0,
     "dk": [
-     343.2,
+     342.1,
      926.4
     ],
-    "sn": [
-     "itsthecompany-runner"
-    ]
+    "sn": []
    }
   }
  },
@@ -848,11 +958,11 @@
      "open": true
     }
    },
-   "at": "2026-11-24T17:56:31+00:00"
+   "at": "2026-11-24T17:59:34+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-24T17:56:31+00:00"
+   "at": "2026-11-24T17:59:34+00:00"
   }
  },
  "operators": [
@@ -887,10 +997,10 @@
   "main": 1,
   "lanes": 0,
   "total": 1,
-  "at": "12:56 PM",
+  "at": "12:59 PM",
   "why": "",
-  "at_iso": "2026-11-24T17:56:00+00:00",
+  "at_iso": "2026-11-24T17:59:00+00:00",
   "started": "9:18 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 9:18 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 12:56 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 9:18 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 12:59 PM ET</p></section>"
  }
 }

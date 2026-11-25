@@ -41,7 +41,7 @@ SHORTCUTS
 App Intents: Run Script, Run Script with Input, Refresh Widgets. They run one of the user's widget scripts[T-0790: , or any script from the user's library]; the input is data passed to that script, not code.
 
 IN-APP PURCHASE
-One non-consumable, "[Pro name]", unlocks [G6: [T-2373: background refresh and ][T-0272: editor themes]]. More > pywidget Pro shows it and has a Restore purchase link[T-0657: ; Settings > Pro shows it too]. The free app is complete for writing and running your own Python.
+One non-consumable, "[Pro name]", unlocks [G6: [T-2373: background refresh and ][T-0272: editor themes]]. [T-5815: Settings tab > pywidget Pro shows it and has a Restore purchase link.] The free app is complete for writing and running your own Python.
 
 PRIVACY
 No account, no sign-in, no server, no analytics, no tracking. Scripts, widgets and logs stay on the device and in folders the user chooses.
@@ -50,11 +50,11 @@ NO HIDDEN FEATURES
 There are no hidden, dormant or server-enabled features. [G8: lane out of the Release extension: The build has no code paths for features not described here.]
 
 DEMO (no account needed)
-1. [iPad: More > Open in New Window > tip_splitter.py > Run.][T-0811: iPhone: [Examples entry] > tip_splitter.py > Run.] It asks three questions with input() and prints the result.
-2. On the main screen, type print("hello") in the editor and tap Run.
+1. [iPad: More > Open in New Window > tip_splitter.py > Run.][T-0811: iPhone: [Examples entry] > tip_splitter.py > Run.][T-5815: iPhone: Projects tab > Examples > tip_splitter.py > Run.] It asks three questions with input() and prints the result.
+2. [T-5815: On Projects, tap With Python and name the project; its editor opens.] In the editor type print("hello") and tap Run.
 3. [G9: In the editor type: from pywidget.device import pedometer; print(pedometer.today()). Tap Run. Allow Motion when asked.]
 4. [G5: Long-press the home screen > + > [App Name] > Python widget, then Edit Widget > [Sunrise].][T-0191: Open its source in the app.]
-5. More > pywidget Pro to see and test the purchase.
+5. [T-5815: Settings tab >] pywidget Pro to see and test the purchase.
 
 
 ## Gates the bracketed text depends on

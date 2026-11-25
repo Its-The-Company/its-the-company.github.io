@@ -4,8 +4,22 @@
 <link href="https://its-the-company.github.io/feed/updates.xml" rel="self"/>
 <link href="https://its-the-company.github.io/"/>
 <id>https://its-the-company.github.io/feed/updates.xml</id>
-<updated>2026-11-24T16:46:22-05:00</updated>
+<updated>2026-11-25T06:16:47-05:00</updated>
 <author><name>The Company</name></author>
+<entry>
+<title>Milestone: T-4188 branch at merge point: T-0053 link test now reads bound imports (the overlay is aut</title>
+<link href="https://its-the-company.github.io/"/>
+<id>tag:its-the-company.github.io,2026-11-25:event/2026-11-25t06-16-47-05-00-milestone-t-4188-branch-at-merge-point-t-0053-lin</id>
+<updated>2026-11-25T06:16:47-05:00</updated>
+<summary type="text">T-4188 branch at merge point: T-0053 link test now reads bound imports (the overlay is autolinked everywhere, so a load-command check could not tell); T-0063 guard reads shipped premades. Both planted CoreLocation bugs caught.</summary>
+</entry>
+<entry>
+<title>Build: T-4188 session: T-0053 slice c3f56595e5, a test that PyWidgetExtension never loads CoreLoc</title>
+<link href="https://its-the-company.github.io/"/>
+<id>tag:its-the-company.github.io,2026-11-25:event/2026-11-25t03-30-41-05-00-build-t-4188-session-t-0053-slice-c3f56595e5</id>
+<updated>2026-11-25T03:30:41-05:00</updated>
+<summary type="text">T-4188 session: T-0053 slice c3f56595e5, a test that PyWidgetExtension never loads CoreLocation (whole unit target 2312/0 on the runner). T-0063 and T-5294 written and host-green but not committed: the runner queue held the checks past hand-in. Rest of part 3 is T-5850, waiting on Pernille&#x27;s lane.py</summary>
+</entry>
 <entry>
 <title>Build: T-4257: lint labels and lens in the editor (b8cec3d0eb amended), runner unit and UI green;</title>
 <link href="https://its-the-company.github.io/"/>
@@ -341,19 +355,5 @@
 <id>tag:its-the-company.github.io,2026-11-18:event/2026-11-18t05-35-04-05-00-review-reviewed-the-editor-s-case-and-typo-comp</id>
 <updated>2026-11-18T05:35:04-05:00</updated>
 <summary type="text">Reviewed the editor&#x27;s case and typo completion (T-4663): PASS with three Medium follow-ups for Idris (T-4873, T-4874, T-4875)</summary>
-</entry>
-<entry>
-<title>Review: T-4861: reviewed T-4574 (launcher app queries only in launcher builds): PASS with findings</title>
-<link href="https://its-the-company.github.io/"/>
-<id>tag:its-the-company.github.io,2026-11-18:event/2026-11-18t04-30-13-05-00-review-t-4861-reviewed-t-4574-launcher-app-qu</id>
-<updated>2026-11-18T04:30:13-05:00</updated>
-<summary type="text">T-4861: reviewed T-4574 (launcher app queries only in launcher builds): PASS with findings; no upload path ships the list without the launcher, but nothing checks a real Release archive (M1); T-4574 is not on main yet. Follow-up board add refused by the card validator.</summary>
-</entry>
-<entry>
-<title>Milestone: Checked the drag-and-drop week estimates against the code: snap 4.25 (was 3.0), free 4.75,</title>
-<link href="https://its-the-company.github.io/"/>
-<id>tag:its-the-company.github.io,2026-11-18:event/2026-11-18t04-16-19-05-00-milestone-checked-the-drag-and-drop-week-estimates</id>
-<updated>2026-11-18T04:16:19-05:00</updated>
-<summary type="text">Checked the drag-and-drop week estimates against the code: snap 4.25 (was 3.0), free 4.75, both 5.75, fonts 1.0; posted on #300, README updated (dfa764670b)</summary>
 </entry>
 </feed>

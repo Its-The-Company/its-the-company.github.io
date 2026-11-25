@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-25T20:39:08.961394+00:00",
+ "at": "2026-11-25T20:42:10.486042+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -66,9 +66,26 @@
   "landed": 1,
   "failed": 4
  },
- "workers": [],
- "who": "",
+ "workers": [
+  {
+   "name": "idris",
+   "task": "[build] T-4191 VoiceOver and text",
+   "model": "",
+   "started": "2026-11-25T20:39:20.572Z",
+   "seconds": 169,
+   "finished": null
+  }
+ ],
+ "who": "Idris",
  "recent": [
+  {
+   "name": "idris",
+   "task": "[build] T-5050 TestFlight phone build",
+   "model": "",
+   "started": "2026-11-25T20:40:23.716Z",
+   "seconds": null,
+   "finished": "2026-11-25T20:41:23.752000+00:00"
+  },
   {
    "name": "pernille",
    "task": "[review] T-4190",
@@ -92,14 +109,6 @@
    "started": "2026-11-25T19:35:16.708Z",
    "seconds": null,
    "finished": "2026-11-25T19:50:42.033000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-4183 finish review fixes",
-   "model": "",
-   "started": "2026-11-25T18:07:31.355Z",
-   "seconds": null,
-   "finished": "2026-11-25T19:35:00.329000+00:00"
   }
  ],
  "queue": {
@@ -110,20 +119,20 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 15.0,
-   "resets_at": "2026-11-25T22:59:59.557193+00:00",
+   "pct": 16.0,
+   "resets_at": "2026-11-25T18:00:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-25T15:15:03.392381-05:00",
-   "source": "usage",
-   "left": 85.0,
+   "read_at": "2026-11-25T15:40:26.423635-05:00",
+   "source": "live",
+   "left": 84.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 78.0,
-   "resets_at": "2026-11-29T06:59:59.557213+00:00",
+   "resets_at": "2026-11-29T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-25T15:15:03.392381-05:00",
-   "source": "usage",
+   "read_at": "2026-11-25T15:40:26.423635-05:00",
+   "source": "live",
    "left": 22.0,
    "left_words": "of your weekly allowance left"
   },
@@ -134,7 +143,7 @@
    "read_at": "2026-11-25T15:15:03.392381-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-25T15:15:03.392381-05:00"
+  "read_at": "2026-11-25T15:40:26.423635-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -154,7 +163,7 @@
   "week_pct": 117.85,
   "usage_pct": 60.2,
   "work_pct": 98.3,
-  "read_at": "2026-11-25T20:39:00+00:00",
+  "read_at": "2026-11-25T20:42:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -209,14 +218,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-25T15:35:00-05:00",
+   "at": "2026-11-25T15:40:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-25T15:39:00-05:00",
+  "at": "2026-11-25T15:42:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -234,10 +243,10 @@
  "lanes": [
   {
    "name": "Idris",
-   "state": "next",
-   "task": "Idris, P2, from T-1105 (Maren's spoken-label table,...",
+   "state": "running",
+   "task": "[build] T-4191 VoiceOver and text",
    "model": null,
-   "since": null,
+   "since": "2026-11-25T20:39:20.572Z",
    "next": []
   },
   {
@@ -282,7 +291,16 @@
   }
  ],
  "tasks": {
-  "run": [],
+  "run": [
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "VoiceOver and large text work on every screen",
+    "at": "2026-11-25T20:39:20.572Z",
+    "o": "c",
+    "task": "T-4191"
+   }
+  ],
   "src": "plan",
   "open": [
    {
@@ -440,17 +458,12 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-25T20:38:50Z",
+  "at": "2026-11-25T20:42:10Z",
   "s": {
-   "T-1457": [
-    "mergetest",
-    "iPhone tests on the MacBook",
-    null
-   ],
    "T-5870": [
-    "testq",
-    "1st for a Simulator",
-    1795637390790
+    "testing",
+    "MacBook \u00b7 test",
+    null
    ],
    "T-4188": [
     "merged",
@@ -460,12 +473,10 @@
    ]
   },
   "nm": {
-   "T-1457": "Match the corner glyphs to the app's accent colors",
    "T-5870": "runner_queue test request: only PyWidgetTests",
    "T-4188": "Location, steps and notifications work in scripts and..."
   },
   "wk": {
-   "T-1457": "Idris",
    "T-4188": "Idris",
    "T-4139": "Idris",
    "T-0901": "Idris",
@@ -474,7 +485,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-25T20:38:50Z",
+  "at": "2026-11-25T20:42:10Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -488,11 +499,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 857,
+    "conflicted": 860,
     "failed": null,
-    "held": 2417,
+    "held": 2420,
     "retry": null,
-    "parked": 1182
+    "parked": 1185
    },
    "cur": [],
    "ld": [
@@ -502,8 +513,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-25T20:38:51Z",
-    "ld": 0.78,
+    "at": "2026-11-25T20:41:48Z",
+    "ld": 0.77,
     "c": 8,
     "sb": 1,
     "dk": [
@@ -519,18 +530,15 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-25T20:30:31Z",
-    "ld": 73.87,
+    "at": "2026-11-25T20:41:42Z",
+    "ld": 19.28,
     "c": 12,
-    "sb": 5,
+    "sb": 2,
     "dk": [
-     444.9,
+     448.0,
      926.4
     ],
     "sn": [
-     "itsthecompany-runner",
-     "itsthecompany-runner-3",
-     "itsthecompany-runner-4",
      "itsthecompany-runner-5",
      "itsthecompany-runner-6"
     ]
@@ -563,11 +571,11 @@
      "open": true
     }
    },
-   "at": "2026-11-25T20:39:08+00:00"
+   "at": "2026-11-25T20:42:10+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-25T20:39:03+00:00"
+   "at": "2026-11-25T20:42:02+00:00"
   }
  },
  "operators": [
@@ -586,7 +594,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 1 task",
+   "t": "Work session",
    "at": "2026-11-25T12:59:14-05:00"
   },
   {
@@ -607,6 +615,7 @@
  "trimmed": [
   "lane_next",
   "queue_text",
+  "recent",
   "task_done",
   "fin_short",
   "task_title",
@@ -615,13 +624,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 0,
+  "main": 1,
   "lanes": 2,
-  "total": 2,
-  "at": "3:39 PM",
+  "total": 3,
+  "at": "3:42 PM",
   "why": "",
-  "at_iso": "2026-11-25T20:39:00+00:00",
+  "at_iso": "2026-11-25T20:42:00+00:00",
   "started": "1:03 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0, started 1:03 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 3:39 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 1, started 1:03 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 3:42 PM ET</p></section>"
  }
 }

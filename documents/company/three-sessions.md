@@ -257,6 +257,14 @@ Done-when asks for here, with the time.
   old road. Left as they are: app work only.
 - **Account b** had used 73% of its week at 11:16 PM 11-23 (resets Sat 11-28 2:00 PM ET).
 - **A step that needs a real iPhone or an Investor's answer** stops its feature's session, as before.
+
+## Leftover copies landed
+
+T-5788 (from T-5786): the 22 workers' copies holding app commits main lacked when the many-worker hand-out stopped
+(11:16 PM ET 11-23) are all landed, superseded or already on main. The last, T-4182-idris (T-0048's "Failing since" on
+the error card, reviewed by Pernille), merged at 12:05 AM ET 11-25 as b48092fcd6, its review record carried over the
+rebase (same patch). Earlier: T-4681 at 4:50 PM, T-4192 at 5:37 PM, T-5524 at 6:23 PM ET 11-24; T-5490 was already
+on main. The four app steps that waited on this line (T-4239, T-4681, T-5007, T-5657) wait on it no more.
 {% endraw %}
 
 </div>

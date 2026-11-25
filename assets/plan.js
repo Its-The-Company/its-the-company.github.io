@@ -26,7 +26,8 @@ var a;
 C.items().forEach((y) => { if (C.isInv(y.l) && lines(y.body).indexOf(mark(x.id)) >= 0) a = y; });
 return a;
 }
-function one(s) { return (s || '').replace(/<!--|-->/g, '').replace(/\s+/g, ' ').trim().slice(0, 1000); }
+var MAX = 1000;
+function one(s) { return (s || '').replace(/<!--|-->/g, '').replace(/\s+/g, ' ').trim().slice(0, MAX); }
 function said(t) {
 t = t.replace(/[*<>]/g, '').trim();
 if (t.length > 80) t = t.slice(0, 80).replace(/\s+\S*$/, '') + '\u2026';
@@ -73,7 +74,7 @@ a.p = a.p === o[0] ? '' : o[0]; save(); count();
 };
 });
 }
-ta = mk(mk(sec, 'div', 'ny-form'), 'textarea', null, null, { 'aria-label': 'Your answer to question ' + k });
+ta = mk(mk(sec, 'div', 'ny-form'), 'textarea', null, null, { 'aria-label': 'Your answer to question ' + k, maxlength: MAX });
 ta.rows = 2; ta.placeholder = q.o.length ? 'Add a note, or write your own answer' : 'Your answer'; ta.value = a.t || '';
 ta.oninput = () => { a.t = ta.value; save(); count(); };
 });

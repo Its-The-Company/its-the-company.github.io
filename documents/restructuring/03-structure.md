@@ -5,7 +5,7 @@ section: "documents"
 description: "The project model, the app&#x27;s navigation, the Builder and the marketplace, drawn so that one Project serves the programmer, the casual creator and the person who only wants finished things."
 ---
 <div class="crumbs" role="navigation" aria-label="Back"><a class="back" href="{{ '/documents/restructuring/' | relative_url }}">← The Restructuring</a><a href="{{ '/documents/restructuring/03-structure.html' | relative_url }}" rel="bookmark">Permanent link</a></div>
-<div class="page-head"><div class="kicker"><span class="kind grey">Restructuring</span><span>Day 25 · Sun Nov 15, 6:37 AM ET</span><span><code>documents/restructuring/03-structure.md</code></span></div><h1>The Restructuring, phase 3: structure</h1><div class="byline"><img class="avatar" src="{{ '/assets/portraits/ines.svg' | relative_url }}" alt="Ines" title="Ines"><span>By <a href="{{ '/cast/ines.html' | relative_url }}">Ines</a>, CEO</span></div></div>
+<div class="page-head"><div class="kicker"><span class="kind grey">Restructuring</span><span>Day 34 · Tue Nov 24, 8:30 PM ET</span><span><code>documents/restructuring/03-structure.md</code></span></div><h1>The Restructuring, phase 3: structure</h1><div class="byline"><img class="avatar" src="{{ '/assets/portraits/ines.svg' | relative_url }}" alt="Ines" title="Ines"><span>By <a href="{{ '/cast/ines.html' | relative_url }}">Ines</a>, CEO</span></div></div>
 
 <style>.doc-body{overflow-wrap:break-word}.doc-src{overflow-wrap:anywhere}.tbl[data-n~="1"] tr>:nth-child(1),.tbl[data-n~="2"] tr>:nth-child(2),.tbl[data-n~="3"] tr>:nth-child(3),.tbl[data-n~="4"] tr>:nth-child(4),.tbl[data-n~="5"] tr>:nth-child(5),.tbl[data-n~="6"] tr>:nth-child(6),.tbl[data-n~="7"] tr>:nth-child(7),.tbl[data-n~="8"] tr>:nth-child(8),.tbl[data-n~="9"] tr>:nth-child(9),.tbl[data-n~="10"] tr>:nth-child(10),.tbl[data-n~="11"] tr>:nth-child(11),.tbl[data-n~="12"] tr>:nth-child(12){min-width:0;overflow-wrap:normal}.tbl[data-o="1"] tr>:nth-child(1),.tbl[data-o="2"] tr>:nth-child(2),.tbl[data-o="3"] tr>:nth-child(3),.tbl[data-o="4"] tr>:nth-child(4),.tbl[data-o="5"] tr>:nth-child(5),.tbl[data-o="6"] tr>:nth-child(6),.tbl[data-o="7"] tr>:nth-child(7),.tbl[data-o="8"] tr>:nth-child(8),.tbl[data-o="9"] tr>:nth-child(9),.tbl[data-o="10"] tr>:nth-child(10),.tbl[data-o="11"] tr>:nth-child(11),.tbl[data-o="12"] tr>:nth-child(12){position:sticky;right:0;overflow-wrap:normal;background:var(--page);box-shadow:-1px 0 var(--line),-9px 0 8px -8px var(--sh)}</style>
 <div class="doc-body" markdown="1">
@@ -24,8 +24,8 @@ Phases 4 to 6 work from the recommendations, as working assumptions.
 3. **How do updates reach an installed copy?** Recommend: the app offers a newer version and the person chooses. Never silent. A file they changed is kept unless they say otherwise.
 4. **Keep the four approved tabs, with three ways to start on Projects?** Recommend: yes. It stays inside `creative/approved.md` item 2. Any other tab set is a new layout and needs your "approve". *Answered A (#286, 4:58 PM ET 11-14): the four approved tabs (Projects as home, Gallery, Docs, Settings), with three ways to start a project on Projects.*
 5. **One first-run question that picks where a person lands?** Recommend: yes. It can be skipped and hides nothing. *Answered A (#286, the same answer): one first-run question that can be skipped.*
-6. **How do blocks and hand-written code live together?** Recommend: the generated Python is always on view, read-only; "Edit as code" detaches a file and can be undone; hand-written code joins a Builder project as a custom block. Editing either side freely comes later. *Answered C, against the recommendation (#287, 4:51 PM ET 11-14): blocks and written code can both be edited freely, each kept in step with the other, in 1.0; about 2.5 to 3 weeks more, estimated. Section 3 follows.*
-7. **May a Gallery item offer its parts in 1.0?** Recommend: yes, for our own items, which ship inside the app: "Get" the whole Weather widget, or "Add to project" only its weather source.
+6. **How do blocks and hand-written code live together?** Recommend: the generated Python is always on view, read-only; "Edit as code" detaches a file and can be undone; hand-written code joins a Builder project as a custom block. Editing either side freely comes later. *Answered C, against the recommendation (#287, 4:51 PM ET 11-14): blocks and written code can both be edited freely, each kept in step with the other, in 1.0; about 2.5 to 3 weeks more, estimated. ~~Section 3 follows.~~* *11-24 (T-5819; an Investor, #325 c7142863083) and c7149027427), option A, strict): C is replaced. The Builder is one-way for 1.0 and owns its files: blocks write the code, and code never goes back into blocks. The generated Python is on view in the code editor, highlighted and locked; "Edit by hand" turns the Builder off for that project after a warning, and Undo turns it back on. Hand-written code joins a Builder project as a custom block, as recommended. Section 3 follows.*
+7. **May a Gallery item offer its parts in 1.0?** Recommend: yes, for our own items, which ship inside the app: "Get" the whole Weather widget, or "Add to project" only its weather source. *11-24 (T-5819, #325 c7142863083): a Gallery item offers Get and View only. View shows its files and its Builder view, read-only, and a part can be saved from there as a component to the person's library; "Add to project" and "Make it mine" are dropped.*
 8. **May items shared with other people carry pictures?** Recommend: a person's own project holds any media; an item listed in the app for others is text and system symbols only at first, so moderation stays a reading job. *Answered A (#277, 5:36 PM ET 11-14): items shared with other people carry text and Apple's system symbols only, at first; a person's own projects may hold any pictures.*
 9. **Where does each part's documentation live?** Recommend: one plain-English page per part beside the code, its diagram drawn from the code onto the site. A new part's design starts with that page.
 
@@ -127,6 +127,14 @@ Gallery item ── Get ─────────────► a new Project
 A file from outside ── Open ─────► the outside-code notice ► the same three choices
 ```
 
+*11-24 (T-5819, #325 c7142863083): two choices, not three.*
+
+```
+Gallery item ── Get ──► a new Project, new ID, origin recorded; a Builder item opens in the Builder
+             ── View ─► its files and its Builder view, read-only ► Save as component ► the person's library
+A file from outside ── Open ─► the outside-code notice ► a new Project, as Get makes
+```
+
 - An installed item is always the person's own editable copy. The author's later changes never overwrite it (ADR-006 13.3).
 - A component that touches more than the project does asks first: "This adds: your location."
 
@@ -212,7 +220,7 @@ On iPhone the tool fills the screen, a switch chooses Blocks or Code, and the pr
 - **(b) Round trip.** Edit either side. One loop the Builder has no block for and the file is code only: a rule people meet by surprise. It costs 2.5 to 3 engineer-weeks over (c), an estimate (L17 s4).
 - **(d) Custom block.** Hand-written Python is its own file, a source or a view, which the Builder shows as one block with its settings and never rewrites. New here, and unsized.
 
-*11-15 (#287 C): the Investors chose (b), editing either side, for 1.0. The custom block (d) stays beside it. ADR-008 must say what a person sees when written code has no block (the surprise (b) describes), before any Builder code.* ~~Recommend (c) with (d): the hybrid inside a file, the custom block across files.~~ The folder does the work a parser would otherwise do, the statement's "option to edit the underlying code" is met, and neither side can break the other. ~~(b) is the first follow-up, if people are seen detaching and coming back.~~
+~~*11-15 (#287 C): the Investors chose (b), editing either side, for 1.0. The custom block (d) stays beside it. ADR-008 must say what a person sees when written code has no block (the surprise (b) describes), before any Builder code.*~~ *11-24: replaced by one way, strict, below; (b) is not in 1.0.* ~~Recommend (c) with (d): the hybrid inside a file, the custom block across files.~~ The folder does the work a parser would otherwise do, the statement's "option to edit the underlying code" is met, and neither side can break the other. ~~(b) is the first follow-up, if people are seen detaching and coming back.~~
 
 ```
 blocks/today.blocks.json ── compile on the device ──► views/today.py    generated
@@ -221,6 +229,41 @@ blocks/today.blocks.json ── compile on the device ──► views/today.py  
 
 custom block "weather" ──── points at ────► sources/weather.py    never rewritten
 ```
+
+**The Builder in 1.0: one way, strict** *(11-24, Idris, T-5819; an Investor, #325 c7142863083), and option A of c7149027427), `log/rulings.md` 2026-11-24 7:55 PM; it replaces two-way editing, #287 C).* The Builder owns its files. It writes them; a person can read them anywhere, and changes them in the Builder. Nothing goes from code back into blocks. The Builder's files are a design file (`blocks/<name>.blocks.json`) and the Python it compiles from it. Everything else in a project is ordinary Python: backend scripts, a custom block's file, helpers.
+
+```
+blocks/today.blocks.json ── compile on the device ──► views/today.py    Builder file: highlighted, locked
+      ▲ the Builder edits; settings too                  │
+      │                                                  └─ Edit by hand (turns off the Builder for this project)
+      └──────────── Undo / Back to the Builder ◄──────────── hand-written from here; the design file is kept
+
+custom block "weather" ──── points at ────► sources/weather.py    ordinary Python, never rewritten
+```
+
+What the Builder supports in 1.0:
+
+- Building a widget from blocks, with snap-to-layout drag and drop on the live widget (#300 A), every move also possible without a drag.
+- Readable Python, as above, on view in the code editor. A Builder file is highlighted, locked, and says it is made by the Builder.
+- Component settings, edited in the Builder's settings form, never by hand in a file.
+- Backend scripts in ordinary Python, edited in the code editor as always, and used in the Builder through a custom block, (d) above, which the Builder shows as one block and never rewrites.
+- A component library for each person, inside the Builder, in three parts: built-in (ours, inside the app); their own (saved with "Save as component" from a project, or from a Gallery item's View); and imported from their other projects. Inserting a component copies it into the project, so a project file sent to someone carries everything it uses, and a change in the library never changes a widget already placed.
+- The Gallery's two choices: Get, a new project of the person's own with the Builder on; and View, the item's files and its Builder view, read-only, where a selected part can be saved as a component.
+- Builder files shown or hidden in a project's file list, one switch per project. Shown by default, with the Builder's mark: the code behind every block stays visible (ADR-001 s2), and hiding is the person's choice.
+- A way out, and a way back (settled below).
+- A Builder file changed where the Builder cannot stop it (in Files, on a Mac, in a project file someone sent) is caught. The Builder keeps a fingerprint of each file it wrote, with its compiler's version, in the project's manifest. A mismatch turns the Builder off with the same warning and the same way back. When a project file is opened from outside, the app compiles its design file again on the device; if the Python that came with it differs, the outside-code notice says so, and the person keeps the Builder's version or the code as sent, with the Builder off. A shared project cannot show blocks that differ from the code it runs. ADR-008 settles the details.
+
+What it does not support in 1.0:
+
+- No read-back. Code edited by hand never becomes blocks again; Undo restores the Builder's own last version and does not keep the hand edits.
+- No hand edit while the Builder stays on. One edit turns the Builder off for the whole project, not one file or one block.
+- No turning written code into blocks, except by wrapping a backend script's function as a custom block.
+- No live link from a project to a library component. Inserting copies; a newer version of a library component is not offered to the projects that already use it (later).
+- No "Make it mine" and no "Add to project" in the Gallery: Get makes the copy, and parts come in through the library.
+
+**The lock, settled: (b), the warning offers a way out** (Idris, T-5819; as recommended on #325 c7149038506)). In the code editor a Builder file shows locked, with "Made by the Builder. Change it in the Builder." and one button: "Edit by hand (turns off the Builder for this project)". The button unlocks the project's Builder files, turns the Builder off for that project, and shows a banner with Undo. Undo, and later "Back to the Builder" on the project page, puts every Builder file back as the Builder last wrote it and turns the Builder on again; if hand edits have been made since, it first says what will be lost. The design file is never touched while the Builder is off, so nothing built in blocks is lost either way.
+
+Why not (a), staying locked: the off switch is needed anyway, because a Builder file can change where the Builder cannot stop it, and the fingerprint must turn the Builder off then. Locking for good would save only the button and the banner, about a day, and would leave someone who wants one line changed no way but copying the code into a new project by hand. (b) shows the same rule before the edit instead of after it.
 
 **Making a component publishable.** "Save as component" on a group of blocks, a source or a view writes the component folder and checks it on the device:
 

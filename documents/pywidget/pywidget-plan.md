@@ -2,7 +2,7 @@
 layout: "default"
 title: "pywidget build plan (one page)"
 section: "documents"
-description: "Goal (11-04, replaced by the chair notes of 2026-11-13 10:53 AM, 2026-11-15 6:34 AM, 2026-11-15 10:00 PM, 2026-11-15 10:15 PM and 2026-11-17 1:18 PM below; kept as written). Release version 1.0 on Tuesday 2026-12-15\u2026"
+description: "Dated line, 2026-11-24 (Idris, T-5819): the Builder is one-way and strict for 1.0, in place of two-way editing (#287 C). an Investor, #325 c7142863083 and c7149027427 (option A; log/rulings.md 2026-11-24 19:55). The\u2026"
 ---
 <div class="crumbs" role="navigation" aria-label="Back"><a class="back" href="{{ '/documents/pywidget/build-plan/' | relative_url }}">← Build Plan</a><a href="{{ '/documents/pywidget/pywidget-plan.html' | relative_url }}" rel="bookmark">Permanent link</a></div>
 <div class="page-head"><div class="kicker"><span class="kind blue">Plan</span><span>Day 4 · Sun Oct 25</span><span><code>ops/plans/pywidget/plan.md</code></span></div><h1>pywidget build plan (one page)</h1><div class="byline"><img class="avatar" src="{{ '/assets/portraits/ines.svg' | relative_url }}" alt="Ines" title="Ines"><span>By <a href="{{ '/cast/ines.html' | relative_url }}">Ines</a>, CEO</span></div></div>
@@ -12,6 +12,8 @@ description: "Goal (11-04, replaced by the chair notes of 2026-11-13 10:53 AM, 2
 
 {% raw %}
 Ines, 2026-10-25 7:27 PM ET; redrawn 2026-10-31 1:02 PM ET (T-0888). Scope: pywidget/docs/decisions/ADR-001-mvp-and-phasing.md. Money: ops/requests/PROPOSAL-001-card.md "Decided" (#87). Brief: ops/plans/pywidget/build-brief.md. Every task is a line under "## Build: pywidget" on ops/board.md. Current dates and status: ops/milestones.json.
+
+*Dated line, 2026-11-24 (Idris, T-5819): the Builder is one-way and strict for 1.0, in place of two-way editing (#287 C). an Investor, #325 c7142863083 and c7149027427 (option A; `log/rulings.md` 2026-11-24 7:55 PM). The Builder owns its files: blocks write the code, code never goes back into blocks; in the code editor a Builder file is highlighted and locked, and "Edit by hand" turns the Builder off for that project after a warning, with Undo. Each person gets a component library; Gallery items offer Get and View only. What the Builder supports and does not: [`documents/restructuring/03-structure.md`](../restructuring/03-structure.html) s3. Phase D re-checked at 12.0 slot weeks (5.75 to 19.0), 0.75 less; the likely release would move 5 days earlier, to Mon 2027-07-12 (`05-timeline.md` s2). No date here or in `ops/milestones.json` moves until the Investors have seen it on #325. Where the notes below say two-way editing, they describe the plan before this change.*
 
 **Goal (11-04, replaced by the <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span> notes of 2026-11-13 10:53 AM, 2026-11-15 6:34 AM, 2026-11-15 10:00 PM, 2026-11-15 10:15 PM and 2026-11-17 1:18 PM below; kept as written).** Release version 1.0 on Tuesday 2026-12-15 (Day 55), inside the Investors' goal of release by Day 60 (2026-12-20). Feature freeze Monday 2026-11-30 (Day 40). Submit Tuesday 2026-12-08 (Day 48), with the Investors' approval. The date can move either way; every move goes in the next report and a comment on #41. v1 = the IDE (runtime, editor, console, projects, native prompts, Shortcuts) plus a narrow widget engine and 12 premade widgets, with one Pro purchase. Widget freshness is the first product priority (amendment 2026-10-29 7:33 AM).
 
@@ -154,7 +156,7 @@ an Investor answered ten more items on Saturday 11-14, between 4:34 and 5:42 PM 
 | Item | His answer | What it means for the plan |
 | --- | --- | --- |
 | #303, the main session on a personal account | "A" (4:34 PM) | Kept. Operations, not the app: Odalys writes the security-guard change as its own card (T-3371), then the dispatcher half (T-3365). No product date moves |
-| 18. Blocks and code (#287) | "C" (4:51 PM), against our recommendation B | Blocks and written code can both be edited, each kept in step with the other, in 1.0. About 2.75 more weeks on the slot (2.5 to 4.5). The custom block stays |
+| 18. Blocks and code (#287) | "C" (4:51 PM), against our recommendation B | Blocks and written code can both be edited, each kept in step with the other, in 1.0. About 2.75 more weeks on the slot (2.5 to 4.5). The custom block stays. *Replaced 11-24 (#325 c7142863083, c7149027427, option A): one way, strict; see the dated line at the top (T-5819)* |
 | 21. Mission statement (#290) | "B" (4:56 PM) | "pywidget lets people make, run and use Python-powered widgets and other small services on iPhone and iPad: write Python, build with blocks, or pick one ready-made." In `creative/approved.md` item 7; the charter's Mission line goes by proposal #309, which needs their approve |
 | 17. Navigation (#286) | "A" (4:58 PM) | The four approved tabs, Projects as home, three ways to start on Projects, one first-run question that can be skipped. Phase C's tab shell, as planned |
 | 20. iOS 27 features (#289) | "A" (4:59 PM) | Used where a phone has them, never required; the minimum iOS does not change |
@@ -176,25 +178,25 @@ an Investor answered ten more items on Saturday 11-14, between 4:34 and 5:42 PM 
 - The Final Report moves with the release, to 2027-06-06 (Commandment 48).
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 6: Chair note, 2026-11-15 6:34 AM ET (Ines, T-4467): ten more answers of 11-14…, scrolls sideways" style="--tw:816px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 6: Chair note, 2026-11-15 6:34 AM ET (Ines, T-4467): ten more answers of 11-14…, scrolls sideways" style="--tw:839px" markdown="1">
 
 | Phase | Weeks (range) | Likely end |
 | --- | --- | --- |
 | A. Prove what exists | 1 (0.5 to 2) | Fri 2026-11-20, unchanged |
 | B. Finish the IDE and widgets, beside A | 3 (2.5 to 5) | Fri 2026-12-11, unchanged |
 | C. Foundations | 5 (3 to 8) | Fri 2027-01-15, unchanged |
-| D. The Builder: compiler, block editor with snap-to-layout drag and drop, two-way editing, custom block, "Save as component" | 12.25 on the slot (7 to 19), 3.5 beside | Sun 2027-04-11 |
+| D. The Builder: compiler, block editor with snap-to-layout drag and drop, ~~two-way editing~~ *one-way, strict, with Builder files locked in the code editor (11-24, T-5819)*, custom block, "Save as component" *and a component library* | 12.25 on the slot (7 to 19), 3.5 beside *(11-24: 12.0, 5.75 to 19.0, and 4.5 beside, `05-timeline.md` s2)* | Sun 2027-04-11 |
 | Pages | 5 (3 to 8) | Sun 2027-05-16 |
 | E. Release 1.0 | 3 calendar (2 to 4) | **Sun 2027-06-06** |
 
 </div>
 
 
-**#287 C is against our recommendation, and I say what it costs.** We recommended B: the Python always on view, read-only, with "Edit as code" and the custom block, and two-way editing left for later. C costs about 2.75 more weeks, and it brings one rule people meet by surprise: a piece of written code the Builder has no block for (a loop, say) stays code only. ADR-008 must say what the person sees then, before any Builder code. Nothing else in 1.0 is cut to pay for it; the date takes the weeks.
+**#287 C is against our recommendation, and I say what it costs.** We recommended B: the Python always on view, read-only, with "Edit as code" and the custom block, and two-way editing left for later. C costs about 2.75 more weeks, and it brings one rule people meet by surprise: a piece of written code the Builder has no block for (a loop, say) stays code only. ADR-008 must say what the person sees then, before any Builder code. Nothing else in 1.0 is cut to pay for it; the date takes the weeks. *11-24 (T-5819): replaced by a one-way, strict Builder (#325 c7142863083, c7149027427). The surprise rule no longer arises: written code never becomes blocks, and a hand edit to a Builder file turns the Builder off for that project after a warning, with Undo. What the Builder supports and does not: [`documents/restructuring/03-structure.md`](../restructuring/03-structure.html) s3.*
 
-**Waiting.** Maren redraws the chosen drag-and-drop option with #291's direction, as #300's card said; #291 is not answered, so the redraw waits on it (noted on T-4467). ADR-008 is not written yet: it is the Builder feature's first step (T-4477) and must carry #287 C and #300 A (ADR-001 section 6).
+**Waiting.** Maren redraws the chosen drag-and-drop option with #291's direction, as #300's card said; #291 is not answered, so the redraw waits on it (noted on T-4467). ADR-008 is not written yet: it is the Builder feature's first step (T-4477) and must carry #287 C and #300 A (ADR-001 section 6). *11-24: #287 C is replaced by the one-way, strict Builder (T-5819); ADR-008 carries that instead.*
 
-What would make this fail: the drag-and-drop weeks were never checked by the engineer who builds them; two-way editing is the costliest part of the Builder and has no prototype; #291 stays open and the Builder's screens cannot start. Each moves the likely line, and each move goes in that day's report and on #41.
+What would make this fail: the drag-and-drop weeks were never checked by the engineer who builds them; two-way editing is the costliest part of the Builder and has no prototype *(11-24: out of 1.0, T-5819)*; #291 stays open and the Builder's screens cannot start. Each moves the likely line, and each move goes in that day's report and on #41.
 
 ## Chair note, 2026-11-15 2:14 AM ET (Ines, T-4465): six answers of 11-14, and the versions after 1.0
 

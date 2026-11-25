@@ -4,7 +4,7 @@ title: "Issues"
 section: "requests"
 permalink: "/issues/"
 issues: "2"
-issues_at: "8:02 PM ET, Nov 24"
+issues_at: "12:07 AM ET, Nov 25"
 ---
 
 # Issues

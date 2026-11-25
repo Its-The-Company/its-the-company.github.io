@@ -1,10 +1,10 @@
 {
  "schema": 1,
- "at": "2026-11-25T10:27:22.473942+00:00",
+ "at": "2026-11-25T10:30:25.992728+00:00",
  "session": {
   "active": true,
-  "kind": "coord",
-  "started": "2026-11-25T00:10:17-05:00",
+  "kind": "morning",
+  "started": "2026-11-25T05:30:15-05:00",
   "coord": {
    "active": true,
    "started": 1795341309,
@@ -414,51 +414,9 @@
   "landed": 1,
   "failed": 4
  },
- "workers": [
-  {
-   "name": "idris",
-   "task": "[build] T-5815 settle rebase conflict",
-   "model": "opus",
-   "started": "2026-11-25T10:23:16.905Z",
-   "seconds": 245,
-   "finished": null
-  }
- ],
- "who": "Idris",
- "recent": [
-  {
-   "name": "pernille",
-   "task": "[review] T-5815",
-   "model": "opus",
-   "started": "2026-11-25T10:21:26.403Z",
-   "seconds": null,
-   "finished": "2026-11-25T10:22:42.549000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-5815 review fixes",
-   "model": "opus",
-   "started": "2026-11-25T09:20:35.800Z",
-   "seconds": null,
-   "finished": "2026-11-25T10:21:04.560000+00:00"
-  },
-  {
-   "name": "pernille",
-   "task": "[review] T-5815",
-   "model": "opus",
-   "started": "2026-11-25T09:16:33.953Z",
-   "seconds": null,
-   "finished": "2026-11-25T09:20:13.295000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-5815 fix two UI tests",
-   "model": "opus",
-   "started": "2026-11-25T05:10:53.997Z",
-   "seconds": null,
-   "finished": "2026-11-25T09:16:19.152000+00:00"
-  }
- ],
+ "workers": [],
+ "who": "",
+ "recent": [],
  "queue": {
   "runnable": [],
   "blocked": [],
@@ -511,7 +469,7 @@
   "week_pct": 121.28,
   "usage_pct": 64.4,
   "work_pct": 98.1,
-  "read_at": "2026-11-25T10:27:00+00:00",
+  "read_at": "2026-11-25T10:30:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -573,7 +531,7 @@
  "lock_in": {
   "on": true,
   "pool": 2,
-  "at": "2026-11-25T05:27:00-05:00",
+  "at": "2026-11-25T05:30:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -583,18 +541,14 @@
  },
  "next_tick_why": "session",
  "idle": null,
- "pool": {
-  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 8 (held: too few lands in 3 hours to judge a raise)",
-  "n": 8,
-  "at": "2026-11-25T00:10:06.003441-05:00"
- },
+ "pool": null,
  "lanes": [
   {
    "name": "Idris",
-   "state": "running",
-   "task": "[build] T-5815 settle rebase conflict",
-   "model": "opus",
-   "since": "2026-11-25T10:23:16.905Z",
+   "state": "next",
+   "task": "Idris, P2, from T-1105 (Maren's spoken-label table,...",
+   "model": null,
+   "since": null,
    "next": []
   },
   {
@@ -639,18 +593,7 @@
   }
  ],
  "tasks": {
-  "run": [
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "Build the four-tab shell with Projects as home",
-    "m": "opus",
-    "at": "2026-11-25T10:23:16.905Z",
-    "o": "c",
-    "task": "T-5815"
-   }
-  ],
-  "src": "plan",
+  "run": [],
   "open": [
    {
     "w": "Idris",
@@ -751,33 +694,8 @@
    "you": 0
   },
   "fin": {
-   "n": 65,
-   "rows": [
-    [
-     "T-5849",
-     "A weekly read of the open..."
-    ],
-    [
-     "T-5848",
-     "Tick finished tasks right..."
-    ],
-    [
-     "T-5845",
-     "Keep Spotlight out of..."
-    ],
-    [
-     "T-4239",
-     "Tidy the five small points..."
-    ],
-    [
-     "T-1440",
-     "Add a refresh control and..."
-    ],
-    [
-     "T-1652",
-     "Fix two UI tests that fail..."
-    ]
-   ]
+   "n": 0,
+   "rows": []
   }
  },
  "qr": [
@@ -819,7 +737,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-25T10:27:15Z",
+  "at": "2026-11-25T10:30:25Z",
   "s": {
    "T-4182": [
     "mergetest",
@@ -831,23 +749,11 @@
    "T-4182": "A failing widget says so and can recover"
   },
   "wk": {
-   "T-4182": "Idris",
-   "T-5849": "Wrenna",
-   "T-5848": "Odalys",
-   "T-5845": "Odalys",
-   "T-4239": "Idris",
-   "T-1440": "Idris",
-   "T-1652": "Idris",
-   "T-2097": "Idris",
-   "T-0687": "Idris",
-   "T-4615": "Idris",
-   "T-3765": "Idris",
-   "T-1643": "Idris",
-   "T-2583": "Idris"
+   "T-4182": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-25T10:27:15Z",
+  "at": "2026-11-25T10:30:25Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -861,11 +767,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 245,
+    "conflicted": 248,
     "failed": null,
-    "held": 1805,
+    "held": 1808,
     "retry": null,
-    "parked": 896
+    "parked": 899
    },
    "cur": [],
    "ld": [
@@ -875,8 +781,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-25T10:26:49Z",
-    "ld": 0.57,
+    "at": "2026-11-25T10:30:26Z",
+    "ld": 0.52,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -930,22 +836,19 @@
      "open": true
     }
    },
-   "at": "2026-11-25T10:27:22+00:00"
+   "at": "2026-11-25T10:30:25+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-25T10:27:22+00:00"
+   "at": "2026-11-25T10:30:25+00:00"
   }
  },
  "operators": [
   {
    "w": "Operator",
-   "a": "Main plan",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session",
-   "at": "2026-11-25T02:16:43-05:00"
+   "a": "Main",
+   "t": "Morning report",
+   "at": "2026-11-25T05:30:15-05:00"
   },
   {
    "w": "Operator",
@@ -974,23 +877,20 @@
  "trimmed": [
   "lane_next",
   "queue_text",
-  "recent",
   "task_done",
-  "fin_short",
   "task_title",
   "done_text",
-  "fin_six",
   "lane_task",
   "task_next"
  ],
  "agents_now": {
-  "main": 1,
+  "main": 0,
   "lanes": 2,
-  "total": 3,
-  "at": "5:27 AM",
+  "total": 2,
+  "at": "5:30 AM",
   "why": "",
-  "at_iso": "2026-11-25T10:27:00+00:00",
-  "started": "12:10 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 1, started 12:10 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 5:27 AM ET</p></section>"
+  "at_iso": "2026-11-25T10:30:00+00:00",
+  "started": "5:30 AM",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0, started 5:30 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 5:30 AM ET</p></section>"
  }
 }

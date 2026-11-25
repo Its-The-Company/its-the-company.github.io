@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-25T19:35:06.277589+00:00",
+ "at": "2026-11-25T19:38:08.290868+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -72,11 +72,19 @@
    "task": "[build] T-4190 Settings and Pro",
    "model": "",
    "started": "2026-11-25T18:07:43.594Z",
-   "seconds": 5242,
+   "seconds": 5424,
+   "finished": null
+  },
+  {
+   "name": "pernille",
+   "task": "[review] T-4183",
+   "model": "",
+   "started": "2026-11-25T19:35:16.708Z",
+   "seconds": 171,
    "finished": null
   }
  ],
- "who": "Idris",
+ "who": "Idris, Pernille",
  "recent": [
   {
    "name": "idris",
@@ -139,7 +147,7 @@
   "week_pct": 114.83,
   "usage_pct": 60.2,
   "work_pct": 98.3,
-  "read_at": "2026-11-25T19:35:00+00:00",
+  "read_at": "2026-11-25T19:38:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -189,7 +197,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-25T14:35:00-05:00",
+  "at": "2026-11-25T14:38:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -215,10 +223,10 @@
   },
   {
    "name": "Pernille",
-   "state": "next",
-   "task": "Pernille, P1, continuation of T-2609: after...",
+   "state": "running",
+   "task": "[review] T-4183",
    "model": null,
-   "since": null,
+   "since": "2026-11-25T19:35:16.708Z",
    "next": []
   },
   {
@@ -263,6 +271,14 @@
     "at": "2026-11-25T18:07:43.594Z",
     "o": "c",
     "task": "T-4190"
+   },
+   {
+    "w": "Pernille",
+    "k": "review",
+    "t": "The Gallery shows, previews and opens every premade",
+    "at": "2026-11-25T19:35:16.708Z",
+    "o": "c",
+    "task": "T-4183"
    }
   ],
   "src": "plan",
@@ -405,29 +421,20 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-25T19:35:06Z",
+  "at": "2026-11-25T19:37:54Z",
   "s": {
-   "T-1457": [
-    "mergetest",
-    "iPhone tests on the MacBook",
-    null
-   ],
    "T-5870": [
-    "testq",
-    "1st for a Simulator",
-    1795633626277
+    "testing",
+    "MacBook \u00b7 test",
+    null
    ]
   },
   "nm": {
-   "T-1457": "Match the corner glyphs to the app's accent colors",
    "T-5870": "runner_queue test request: only PyWidgetTests"
-  },
-  "wk": {
-   "T-1457": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-25T19:35:06Z",
+  "at": "2026-11-25T19:37:54Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -441,11 +448,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 793,
+    "conflicted": 796,
     "failed": null,
-    "held": 2353,
+    "held": 2356,
     "retry": null,
-    "parked": 1118
+    "parked": 1121
    },
    "cur": [],
    "ld": [
@@ -455,12 +462,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-25T19:34:33Z",
-    "ld": 0.83,
+    "at": "2026-11-25T19:37:30Z",
+    "ld": 1.4,
     "c": 8,
     "sb": 1,
     "dk": [
-     25.3,
+     25.2,
      228.3
     ],
     "ss": [
@@ -472,16 +479,16 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-25T19:26:06Z",
-    "ld": 39.37,
+    "at": "2026-11-25T19:36:33Z",
+    "ld": 23.67,
     "c": 12,
     "sb": 3,
     "dk": [
-     356.7,
+     356.8,
      926.4
     ],
     "sn": [
-     "itsthecompany-runner",
+     "itsthecompany-runner-2",
      "itsthecompany-runner-3",
      "itsthecompany-runner-4"
     ]
@@ -514,11 +521,11 @@
      "open": true
     }
    },
-   "at": "2026-11-25T19:35:06+00:00"
+   "at": "2026-11-25T19:38:08+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-25T19:35:06+00:00"
+   "at": "2026-11-25T19:38:08+00:00"
   }
  },
  "operators": [
@@ -556,13 +563,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 1,
+  "main": 2,
   "lanes": 1,
-  "total": 2,
-  "at": "2:35 PM",
+  "total": 3,
+  "at": "2:38 PM",
   "why": "",
-  "at_iso": "2026-11-25T19:35:00+00:00",
+  "at_iso": "2026-11-25T19:38:00+00:00",
   "started": "1:03 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 1, started 1:03 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 2:35 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 1:03 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 2:38 PM ET</p></section>"
  }
 }

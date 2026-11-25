@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-25T06:16:40.194614+00:00",
+ "at": "2026-11-25T06:18:39.663625+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -414,7 +414,7 @@
    "task": "[build] T-5815 fix two UI tests",
    "model": "opus",
    "started": "2026-11-25T05:10:53.997Z",
-   "seconds": 3946,
+   "seconds": 4065,
    "finished": null
   }
  ],
@@ -481,21 +481,8 @@
   "week_pct": 114.04,
   "usage_pct": 64.4,
   "work_pct": 98.1,
-  "read_at": "2026-11-25T06:17:00+00:00",
-  "running": [
-   {
-    "lane": "a",
-    "task": "T-4181",
-    "w": "Idris",
-    "k": "build",
-    "t": "Widgets refresh on their own and by a tap",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-24T23:14:45-05:00",
-    "n": "Evan",
-    "src": "plan-a"
-   }
-  ]
+  "read_at": "2026-11-25T06:21:00+00:00",
+  "running": []
  },
  "api_credits": [
   {
@@ -531,7 +518,7 @@
  "lock_in": {
   "on": true,
   "pool": 2,
-  "at": "2026-11-25T01:17:00-05:00",
+  "at": "2026-11-25T01:21:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -760,33 +747,8 @@
    "ok"
   ]
  ],
- "stg": {
-  "at": "2026-11-25T06:16:40Z",
-  "s": {
-   "T-4404": [
-    "mergetest",
-    "iPhone tests on the MacBook",
-    null
-   ],
-   "T-5843": [
-    "testing",
-    "Mac Mini \u00b7 test",
-    null
-   ]
-  },
-  "nm": {
-   "T-4404": "Stop late widget reloads writing as the extension ends",
-   "T-5843": "End the widget process only after widgets draw"
-  },
-  "wk": {
-   "T-4404": "Idris",
-   "T-5843": "Idris",
-   "T-5846": "Operator",
-   "T-5844": "Operator"
-  }
- },
  "ln": {
-  "at": "2026-11-25T06:16:40Z",
+  "at": "2026-11-25T06:18:39Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -802,9 +764,9 @@
     "inline": null,
     "conflicted": null,
     "failed": null,
-    "held": 2688,
+    "held": 2690,
     "retry": null,
-    "parked": 1819
+    "parked": 1821
    },
    "cur": [],
    "ld": [
@@ -814,21 +776,19 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-25T06:16:25Z",
-    "ld": 22.83,
+    "at": "2026-11-25T06:17:40Z",
+    "ld": 21.26,
     "c": 8,
-    "sb": 1,
+    "sb": 0,
     "dk": [
-     30.8,
+     30.4,
      228.3
     ],
     "ss": [
      132.1,
      953.7
     ],
-    "sn": [
-     "itsthecompany-runner"
-    ]
+    "sn": []
    },
    "macbook": {
     "at": "2026-11-25T06:15:54Z",
@@ -847,16 +807,16 @@
  },
  "hc": {
   "wait": {
-   "n": 13,
+   "n": 14,
    "limit": 20,
    "in_line": 0,
-   "parked": 13,
+   "parked": 14,
    "open": true,
    "mq": false,
-   "counted": "2026-11-25T06:07:15+00:00",
+   "counted": "2026-11-25T06:17:25+00:00",
    "by": {
     "app": {
-     "n": 12,
+     "n": 13,
      "limit": 20,
      "open": true
     },
@@ -871,11 +831,11 @@
      "open": true
     }
    },
-   "at": "2026-11-25T06:16:40+00:00"
+   "at": "2026-11-25T06:18:39+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-25T06:16:40+00:00"
+   "at": "2026-11-25T06:18:39+00:00"
   }
  },
  "operators": [
@@ -887,15 +847,6 @@
    "e": "high",
    "t": "Work session",
    "at": "2026-11-25T00:30:04-05:00"
-  },
-  {
-   "w": "Operator",
-   "a": "Evan's Account",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session",
-   "at": "2026-11-24T23:14:45-05:00"
   }
  ],
  "reply": {
@@ -916,12 +867,12 @@
  ],
  "agents_now": {
   "main": 1,
-  "lanes": 1,
-  "total": 2,
-  "at": "1:17 AM",
+  "lanes": 0,
+  "total": 1,
+  "at": "1:21 AM",
   "why": "",
-  "at_iso": "2026-11-25T06:17:00+00:00",
+  "at_iso": "2026-11-25T06:21:00+00:00",
   "started": "12:10 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 1, started 12:10 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 1:17 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 12:10 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 1:21 AM ET</p></section>"
  }
 }

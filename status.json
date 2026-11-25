@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-25T19:25:57.807339+00:00",
+ "at": "2026-11-25T19:28:58.808958+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -72,7 +72,7 @@
    "task": "[build] T-4183 finish review fixes",
    "model": "",
    "started": "2026-11-25T18:07:31.355Z",
-   "seconds": 4706,
+   "seconds": 4887,
    "finished": null
   },
   {
@@ -80,7 +80,7 @@
    "task": "[build] T-4190 Settings and Pro",
    "model": "",
    "started": "2026-11-25T18:07:43.594Z",
-   "seconds": 4694,
+   "seconds": 4875,
    "finished": null
   }
  ],
@@ -138,7 +138,7 @@
   "week_pct": 114.83,
   "usage_pct": 60.2,
   "work_pct": 98.3,
-  "read_at": "2026-11-25T19:25:00+00:00",
+  "read_at": "2026-11-25T19:28:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -172,7 +172,7 @@
   }
  ],
  "disk": {
-  "free_gb": 25,
+  "free_gb": 28,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -181,14 +181,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-25T14:19:00-05:00",
+   "at": "2026-11-25T14:26:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-25T14:25:00-05:00",
+  "at": "2026-11-25T14:28:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -412,9 +412,9 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-25T19:25:40Z",
+  "at": "2026-11-25T19:28:46Z",
   "s": {
-   "T-5047": [
+   "T-1457": [
     "mergetest",
     "iPhone tests on the MacBook",
     null
@@ -422,19 +422,19 @@
    "T-5870": [
     "testq",
     "1st for a Simulator",
-    1795633600666
+    1795633606774
    ]
   },
   "nm": {
-   "T-5047": "Fix the token test's No view for this size card",
+   "T-1457": "Match the corner glyphs to the app's accent colors",
    "T-5870": "runner_queue test request: only PyWidgetTests"
   },
   "wk": {
-   "T-5047": "Idris"
+   "T-1457": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-25T19:25:40Z",
+  "at": "2026-11-25T19:28:46Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -448,11 +448,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 784,
+    "conflicted": 787,
     "failed": null,
-    "held": 2344,
+    "held": 2347,
     "retry": null,
-    "parked": 1109
+    "parked": 1112
    },
    "cur": [],
    "ld": [
@@ -462,8 +462,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-25T19:25:16Z",
-    "ld": 1.31,
+    "at": "2026-11-25T19:28:08Z",
+    "ld": 0.93,
     "c": 8,
     "sb": 1,
     "dk": [
@@ -479,16 +479,16 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-25T19:24:45Z",
-    "ld": 37.49,
+    "at": "2026-11-25T19:26:06Z",
+    "ld": 39.37,
     "c": 12,
     "sb": 3,
     "dk": [
-     355.2,
+     356.7,
      926.4
     ],
     "sn": [
-     "itsthecompany-runner-2",
+     "itsthecompany-runner",
      "itsthecompany-runner-3",
      "itsthecompany-runner-4"
     ]
@@ -521,11 +521,11 @@
      "open": true
     }
    },
-   "at": "2026-11-25T19:25:57+00:00"
+   "at": "2026-11-25T19:28:58+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-25T19:25:57+00:00"
+   "at": "2026-11-25T19:28:53+00:00"
   }
  },
  "operators": [
@@ -566,10 +566,10 @@
   "main": 2,
   "lanes": 1,
   "total": 3,
-  "at": "2:25 PM",
+  "at": "2:28 PM",
   "why": "",
-  "at_iso": "2026-11-25T19:25:00+00:00",
+  "at_iso": "2026-11-25T19:28:00+00:00",
   "started": "1:03 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 1:03 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 2:25 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 1:03 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 2:28 PM ET</p></section>"
  }
 }

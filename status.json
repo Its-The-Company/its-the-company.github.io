@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-25T03:54:39.262915+00:00",
+ "at": "2026-11-25T03:57:44.656441+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -447,7 +447,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 435,
+  "runnable_count": 434,
   "blocked_count": 2
  },
  "meter": {
@@ -496,7 +496,7 @@
   "week_pct": 111.84,
   "usage_pct": 65.1,
   "work_pct": 98.1,
-  "read_at": "2026-11-25T03:54:00+00:00",
+  "read_at": "2026-11-25T03:57:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -533,7 +533,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-24T22:54:00-05:00",
+  "at": "2026-11-24T22:57:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -675,6 +675,11 @@
   ],
   "done": [
    {
+    "w": "Wrenna",
+    "t": "The research on which widget animations Apple allows is done and on main, with the Pro Animation...",
+    "at": "2026-11-24T22:56:00-05:00"
+   },
+   {
     "w": "Odalys+pernille+operator",
     "t": "When several finished app changes are waiting for their turn to merge, the one whose turn it is...",
     "at": "2026-11-24T22:50:00-05:00"
@@ -683,22 +688,21 @@
     "w": "Operator",
     "t": "A new working copy no longer compiles the whole app from scratch: Xcode now reuses what any...",
     "at": "2026-11-24T22:50:00-05:00"
-   },
-   {
-    "w": "Operator",
-    "t": "An account's tick now frees its claim on a task that is already done, so a merged task can no...",
-    "at": "2026-11-24T22:25:00-05:00"
    }
   ],
   "count": {
-   "next": 435,
+   "next": 434,
    "wait": 1,
    "blocked": 1,
    "you": 1
   },
   "fin": {
-   "n": 10,
+   "n": 11,
    "rows": [
+    [
+     "T-5635",
+     "Find the widget animations..."
+    ],
     [
      "T-5822",
      "Waiting app changes are..."
@@ -718,10 +722,6 @@
     [
      "T-5617",
      "Show a report's evening time..."
-    ],
-    [
-     "T-5813",
-     "The app's Python tests run..."
     ]
    ]
   }
@@ -765,9 +765,10 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-25T03:54:39Z",
+  "at": "2026-11-25T03:57:27Z",
   "s": {},
   "wk": {
+   "T-5635": "Wrenna",
    "T-5822": "Operator",
    "T-5840": "Operator",
    "T-5838": "Operator",
@@ -781,7 +782,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-25T03:54:39Z",
+  "at": "2026-11-25T03:57:27Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -797,9 +798,9 @@
     "inline": null,
     "conflicted": null,
     "failed": null,
-    "held": 2546,
+    "held": 2549,
     "retry": null,
-    "parked": 1946
+    "parked": 1949
    },
    "cur": [],
    "ld": [
@@ -809,12 +810,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-25T03:54:15Z",
-    "ld": 0.52,
+    "at": "2026-11-25T03:56:39Z",
+    "ld": 0.66,
     "c": 8,
     "sb": 0,
     "dk": [
-     35.5,
+     33.2,
      228.3
     ],
     "ss": [
@@ -844,7 +845,7 @@
    "parked": 14,
    "open": true,
    "mq": false,
-   "counted": "2026-11-25T03:40:39+00:00",
+   "counted": "2026-11-25T03:56:09+00:00",
    "by": {
     "app": {
      "n": 11,
@@ -862,11 +863,11 @@
      "open": true
     }
    },
-   "at": "2026-11-25T03:54:39+00:00"
+   "at": "2026-11-25T03:57:44+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-25T03:54:28+00:00"
+   "at": "2026-11-25T03:57:44+00:00"
   }
  },
  "operators": [
@@ -901,10 +902,10 @@
   "main": 0,
   "lanes": 0,
   "total": 0,
-  "at": "10:54 PM",
+  "at": "10:57 PM",
   "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
-  "at_iso": "2026-11-25T03:54:00+00:00",
+  "at_iso": "2026-11-25T03:57:00+00:00",
   "started": "8:05 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0, started 8:05 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 10:54 PM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0, started 8:05 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 10:57 PM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
  }
 }

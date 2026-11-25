@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-25T01:27:16.661606+00:00",
+ "at": "2026-11-25T01:30:24.130606+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -408,18 +408,25 @@
   "landed": 1,
   "failed": 4
  },
- "workers": [
+ "workers": [],
+ "who": "",
+ "recent": [
+  {
+   "name": "pernille",
+   "task": "[review] T-4477",
+   "model": "opus",
+   "started": "2026-11-25T01:27:35.180Z",
+   "seconds": null,
+   "finished": "2026-11-25T01:27:54.570000+00:00"
+  },
   {
    "name": "idris",
    "task": "[build] T-4477 review fix",
    "model": "opus",
    "started": "2026-11-25T01:26:14.771Z",
-   "seconds": 61,
-   "finished": null
-  }
- ],
- "who": "Idris",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-25T01:27:24.068000+00:00"
+  },
   {
    "name": "pernille",
    "task": "[review] T-4477",
@@ -440,7 +447,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 436,
+  "runnable_count": 437,
   "blocked_count": 2
  },
  "meter": {
@@ -489,7 +496,7 @@
   "week_pct": 175.72,
   "usage_pct": 65.1,
   "work_pct": 98.1,
-  "read_at": "2026-11-25T01:27:00+00:00",
+  "read_at": "2026-11-25T01:30:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -523,7 +530,7 @@
   }
  ],
  "disk": {
-  "free_gb": 39,
+  "free_gb": 37,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -532,14 +539,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-24T20:23:00-05:00",
+   "at": "2026-11-24T20:29:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-24T20:27:00-05:00",
+  "at": "2026-11-24T20:30:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -557,10 +564,10 @@
  "lanes": [
   {
    "name": "Idris",
-   "state": "running",
-   "task": "[build] T-4477 review fix",
-   "model": "opus",
-   "since": "2026-11-25T01:26:14.771Z",
+   "state": "next",
+   "task": "Idris, P2, from T-4238 (Pernille's review, from T-3900,...",
+   "model": null,
+   "since": null,
    "next": []
   },
   {
@@ -605,17 +612,7 @@
   }
  ],
  "tasks": {
-  "run": [
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "People build a widget from blocks without code",
-    "m": "opus",
-    "at": "2026-11-25T01:26:14.771Z",
-    "o": "c",
-    "task": "T-4477"
-   }
-  ],
+  "run": [],
   "src": "plan",
   "open": [
    {
@@ -675,21 +672,26 @@
     "o": "c"
    },
    {
+    "w": "Operator",
+    "k": "tools",
+    "t": "Reports go out at their time",
+    "s": "next",
+    "o": "c"
+   },
+   {
     "w": "Idris",
     "k": "build",
     "t": "Add a refresh control and age line to widgets",
     "s": "next",
     "o": "c"
-   },
-   {
-    "w": "Pernille",
-    "k": "build",
-    "t": "Show the age line in premade widgets and gallery",
-    "s": "next",
-    "o": "c"
    }
   ],
   "done": [
+   {
+    "w": "Operator",
+    "t": "When a merge's push to GitHub fails, the merge script now shows git's own words, checks whether...",
+    "at": "2026-11-24T20:28:00-05:00"
+   },
    {
     "w": "Odalys",
     "t": "A test job sent to the MacBook now starts as soon as a slot is free instead of waiting up to 20...",
@@ -699,22 +701,22 @@
     "w": "Idris+pernille",
     "t": "The widget's hidden debug record now notes only the times iOS asked for a stand-in picture,...",
     "at": "2026-11-24T18:23:00-05:00"
-   },
-   {
-    "w": "Idris+operator",
-    "t": "The gate build's own tests now check that every ladder file and test widget it lists is really...",
-    "at": "2026-11-24T18:03:00-05:00"
    }
   ],
   "count": {
-   "next": 436,
+   "next": 437,
    "wait": 1,
    "blocked": 1,
    "you": 1
   },
   "fin": {
-   "n": 0,
-   "rows": []
+   "n": 1,
+   "rows": [
+    [
+     "T-5833",
+     "A failed push is checked..."
+    ]
+   ]
   }
  },
  "qr": [
@@ -756,32 +758,25 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-25T01:27:16Z",
+  "at": "2026-11-25T01:30:17Z",
   "s": {
    "T-4186": [
     "merged",
     "on main 6:35 PM ET",
     1795563344000,
     "Pernille"
-   ],
-   "T-4477": [
-    "merged",
-    "on main 12:31 PM ET",
-    1795541466000,
-    ""
    ]
   },
   "nm": {
-   "T-4186": "The editor completes code, shows errors and previews",
-   "T-4477": "People build a widget from blocks without code"
+   "T-4186": "The editor completes code, shows errors and previews"
   },
   "wk": {
    "T-4186": "Idris",
-   "T-4477": "Idris"
+   "T-5833": "Operator"
   }
  },
  "ln": {
-  "at": "2026-11-25T01:27:16Z",
+  "at": "2026-11-25T01:30:17Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -797,9 +792,9 @@
     "inline": null,
     "conflicted": null,
     "failed": null,
-    "held": 2399,
+    "held": 2402,
     "retry": null,
-    "parked": 1798
+    "parked": 1801
    },
    "cur": [],
    "ld": [
@@ -809,12 +804,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-25T01:26:51Z",
-    "ld": 21.42,
+    "at": "2026-11-25T01:29:33Z",
+    "ld": 20.62,
     "c": 8,
     "sb": 1,
     "dk": [
-     38.1,
+     37.1,
      228.3
     ],
     "ss": [
@@ -864,11 +859,11 @@
      "open": true
     }
    },
-   "at": "2026-11-25T01:27:16+00:00"
+   "at": "2026-11-25T01:30:24+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-25T01:27:16+00:00"
+   "at": "2026-11-25T01:30:17+00:00"
   }
  },
  "operators": [
@@ -885,8 +880,10 @@
    "w": "Operator",
    "a": "Jeremy's Account",
    "sr": 1,
+   "m": "opus",
+   "e": "high",
    "t": "Work session \u2013 1 task",
-   "at": "2026-11-24T20:10:41-05:00"
+   "at": "2026-11-24T20:10:40-05:00"
   }
  ],
  "reply": {
@@ -898,6 +895,7 @@
   "lane_next",
   "queue_text",
   "task_done",
+  "fin_short",
   "task_title",
   "done_text",
   "task_open",
@@ -905,13 +903,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 1,
+  "main": 0,
   "lanes": 1,
-  "total": 2,
-  "at": "8:27 PM",
+  "total": 1,
+  "at": "8:30 PM",
   "why": "",
-  "at_iso": "2026-11-25T01:27:00+00:00",
+  "at_iso": "2026-11-25T01:30:00+00:00",
   "started": "8:05 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 1, started 8:05 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 8:27 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0, started 8:05 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 8:30 PM ET</p></section>"
  }
 }

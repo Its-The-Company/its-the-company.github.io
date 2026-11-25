@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-25T23:52:01.127717+00:00",
+ "at": "2026-11-25T23:54:59.625825+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -78,24 +78,40 @@
  },
  "workers": [
   {
-   "name": "odalys",
-   "task": "[review] T-5796",
-   "model": "",
-   "started": "2026-11-25T23:42:06.152Z",
-   "seconds": 594,
-   "finished": null
-  },
-  {
    "name": "idris",
    "task": "[build] T-4191 large text steps",
    "model": "",
    "started": "2026-11-25T23:44:39.050Z",
-   "seconds": 442,
+   "seconds": 620,
+   "finished": null
+  },
+  {
+   "name": "idris",
+   "task": "[build] T-4476 Foundations actions",
+   "model": "",
+   "started": "2026-11-25T23:52:18.482Z",
+   "seconds": 161,
+   "finished": null
+  },
+  {
+   "name": "odalys",
+   "task": "[build] T-5883 usage limit alarm",
+   "model": "",
+   "started": "2026-11-25T23:53:56.907Z",
+   "seconds": 62,
    "finished": null
   }
  ],
- "who": "Odalys, Idris",
+ "who": "Idris x2, Odalys",
  "recent": [
+  {
+   "name": "odalys",
+   "task": "[review] T-5796",
+   "model": "",
+   "started": "2026-11-25T23:42:06.152Z",
+   "seconds": null,
+   "finished": "2026-11-25T23:54:30.244000+00:00"
+  },
   {
    "name": "idris",
    "task": "[build] T-5796 widget buttons steps",
@@ -119,14 +135,6 @@
    "started": "2026-11-25T20:39:20.572Z",
    "seconds": null,
    "finished": "2026-11-25T23:21:47.735000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-5050 TestFlight phone build",
-   "model": "",
-   "started": "2026-11-25T20:52:32.853Z",
-   "seconds": null,
-   "finished": "2026-11-25T20:54:04.574000+00:00"
   }
  ],
  "queue": {
@@ -181,7 +189,7 @@
   "week_pct": 123.16,
   "usage_pct": 60.0,
   "work_pct": 98.3,
-  "read_at": "2026-11-25T23:52:00+00:00",
+  "read_at": "2026-11-25T23:55:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -192,6 +200,18 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-25T18:04:48-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a2",
+    "task": "T-5797",
+    "w": "Idris",
+    "k": "build",
+    "t": "Widgets animate smoothly within what Apple allows",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-25T18:53:29-05:00",
     "n": "Evan",
     "src": "plan-a"
    }
@@ -231,7 +251,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-25T18:52:00-05:00",
+  "at": "2026-11-25T18:55:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -248,19 +268,19 @@
  },
  "lanes": [
   {
-   "name": "Odalys",
-   "state": "running",
-   "task": "[review] T-5796",
-   "model": null,
-   "since": "2026-11-25T23:42:06.152Z",
-   "next": []
-  },
-  {
    "name": "Idris",
    "state": "running",
    "task": "[build] T-4191 large text steps",
    "model": null,
    "since": "2026-11-25T23:44:39.050Z",
+   "next": []
+  },
+  {
+   "name": "Odalys",
+   "state": "running",
+   "task": "[build] T-5883 usage limit alarm",
+   "model": null,
+   "since": "2026-11-25T23:53:56.907Z",
    "next": []
   },
   {
@@ -299,20 +319,28 @@
  "tasks": {
   "run": [
    {
-    "w": "Odalys",
-    "k": "review",
-    "t": "Internal TestFlight builds carry the test widgets",
-    "at": "2026-11-25T23:42:06.152Z",
-    "o": "c",
-    "task": "T-5796"
-   },
-   {
     "w": "Idris",
     "k": "build",
     "t": "VoiceOver and large text work on every screen",
     "at": "2026-11-25T23:44:39.050Z",
     "o": "c",
     "task": "T-4191"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "Projects get one file, one ID and guarded outside code",
+    "at": "2026-11-25T23:52:18.482Z",
+    "o": "c",
+    "task": "T-4476"
+   },
+   {
+    "w": "Odalys",
+    "k": "build",
+    "t": "T-5883 usage limit alarm",
+    "at": "2026-11-25T23:53:56.907Z",
+    "o": "i",
+    "task": "T-5883"
    }
   ],
   "src": "plan",
@@ -480,12 +508,12 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-25T23:51:51Z",
+  "at": "2026-11-25T23:54:59Z",
   "s": {
    "T-4192": [
     "mergetest",
-    "Xcode checks on the MacBook, 1st to merge",
-    1795650291838
+    "iPhone tests on the MacBook",
+    null
    ]
   },
   "nm": {
@@ -506,10 +534,10 @@
   }
  },
  "ln": {
-  "at": "2026-11-25T23:51:51Z",
+  "at": "2026-11-25T23:54:59Z",
   "mq": {
    "n": {
-    "checking": 1,
+    "checking": 0,
     "inline": 0,
     "conflicted": 1,
     "failed": 0,
@@ -518,24 +546,15 @@
     "parked": 4
    },
    "m": {
-    "checking": 7,
+    "checking": null,
     "inline": null,
-    "conflicted": 1050,
+    "conflicted": 1053,
     "failed": null,
-    "held": 2610,
+    "held": 2613,
     "retry": null,
-    "parked": 1375
+    "parked": 1378
    },
-   "cur": [
-    [
-     [
-      "T-4192"
-     ],
-     "iPhone app tests",
-     "MacBook",
-     7
-    ]
-   ],
+   "cur": [],
    "ld": [
     0,
     null
@@ -543,30 +562,31 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-25T23:51:52Z",
-    "ld": 0.96,
+    "at": "2026-11-25T23:54:12Z",
+    "ld": 1.33,
     "c": 8,
     "sb": 0,
     "dk": [
-     22.5,
+     24.7,
      228.3
     ],
     "ss": [
-     172.3,
+     172.6,
      953.7
     ],
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-25T23:51:07Z",
-    "ld": 2.99,
+    "at": "2026-11-25T23:53:09Z",
+    "ld": 3.56,
     "c": 12,
-    "sb": 2,
+    "sb": 3,
     "dk": [
-     431.5,
+     429.8,
      926.4
     ],
     "sn": [
+     "itsthecompany-runner",
      "itsthecompany-runner-2",
      "itsthecompany-runner-3"
     ]
@@ -581,7 +601,7 @@
    "parked": 6,
    "open": true,
    "mq": false,
-   "counted": "2026-11-25T23:40:12+00:00",
+   "counted": "2026-11-25T23:52:22+00:00",
    "by": {
     "app": {
      "n": 7,
@@ -599,11 +619,11 @@
      "open": true
     }
    },
-   "at": "2026-11-25T23:52:01+00:00"
+   "at": "2026-11-25T23:54:59+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-25T23:51:51+00:00"
+   "at": "2026-11-25T23:54:53+00:00"
   }
  },
  "operators": [
@@ -613,8 +633,8 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Inbox \u2013 Evan's 6:49 PM Message on GitHub",
-   "at": "2026-11-25T18:49:24-05:00"
+   "t": "Work session",
+   "at": "2026-11-25T18:54:07-05:00"
   },
   {
    "w": "Operator",
@@ -624,41 +644,28 @@
    "e": "high",
    "t": "Work session \u2013 1 task",
    "at": "2026-11-25T18:04:48-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Evan's Account",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session \u2013 1 task",
+   "at": "2026-11-25T18:53:29-05:00"
   }
  ],
  "reply": {
-  "sent": "2026-11-25T23:47:18Z",
-  "seconds": 42.0
+  "sent": "2026-11-25T23:49:46Z",
+  "seconds": 160.0
  },
- "inbox": [
-  {
-   "id": "c7178095872",
-   "state": "received",
-   "position": 1,
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "do it"
-  },
-  {
-   "id": "c7178109423",
-   "state": "received",
-   "position": 2,
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "make sure all work is saved as it..."
-  }
- ],
+ "inbox": [],
  "trimmed": [
   "lane_next",
   "queue_text",
   "recent",
   "task_done",
   "fin_short",
-  "inbox_title",
   "task_title",
   "done_text",
   "fin_six",
@@ -666,13 +673,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 2,
-  "lanes": 1,
-  "total": 3,
-  "at": "6:52 PM",
+  "main": 3,
+  "lanes": 2,
+  "total": 5,
+  "at": "6:55 PM",
   "why": "",
-  "at_iso": "2026-11-25T23:52:00+00:00",
+  "at_iso": "2026-11-25T23:55:00+00:00",
   "started": "1:03 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 1:03 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 6:52 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 3, started 1:03 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 6:55 PM ET</p></section>"
  }
 }

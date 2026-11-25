@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-25T09:32:12.494437+00:00",
+ "at": "2026-11-25T09:35:18.378733+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -420,7 +420,7 @@
    "task": "[build] T-5815 review fixes",
    "model": "opus",
    "started": "2026-11-25T09:20:35.800Z",
-   "seconds": 696,
+   "seconds": 882,
    "finished": null
   }
  ],
@@ -503,7 +503,7 @@
   "week_pct": 119.47,
   "usage_pct": 64.4,
   "work_pct": 98.1,
-  "read_at": "2026-11-25T09:32:00+00:00",
+  "read_at": "2026-11-25T09:35:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -546,14 +546,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-25T04:29:00-05:00",
+   "at": "2026-11-25T04:34:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 2,
-  "at": "2026-11-25T04:32:00-05:00",
+  "at": "2026-11-25T04:35:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -564,7 +564,7 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 8 (at its floor: load 18.2 a core is over 10)",
+  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 8 (at its floor: load 34.1 a core is over 10)",
   "n": 8,
   "at": "2026-11-25T00:10:06.003441-05:00"
  },
@@ -799,7 +799,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-25T09:31:54Z",
+  "at": "2026-11-25T09:35:03Z",
   "s": {
    "T-4415": [
     "mergetest",
@@ -827,7 +827,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-25T09:31:54Z",
+  "at": "2026-11-25T09:35:03Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -841,11 +841,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 190,
+    "conflicted": 193,
     "failed": null,
-    "held": 2316,
+    "held": 2319,
     "retry": null,
-    "parked": 841
+    "parked": 844
    },
    "cur": [],
    "ld": [
@@ -855,12 +855,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-25T09:31:28Z",
-    "ld": 38.14,
+    "at": "2026-11-25T09:34:25Z",
+    "ld": 33.76,
     "c": 8,
     "sb": 1,
     "dk": [
-     25.8,
+     25.4,
      228.3
     ],
     "ss": [
@@ -872,16 +872,16 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-25T09:29:57Z",
-    "ld": 4.05,
+    "at": "2026-11-25T09:31:46Z",
+    "ld": 5.16,
     "c": 12,
     "sb": 1,
     "dk": [
-     366.3,
+     366.9,
      926.4
     ],
     "sn": [
-     "itsthecompany-runner-2"
+     "itsthecompany-runner"
     ]
    }
   }
@@ -912,11 +912,11 @@
      "open": true
     }
    },
-   "at": "2026-11-25T09:32:12+00:00"
+   "at": "2026-11-25T09:35:18+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-25T09:32:12+00:00"
+   "at": "2026-11-25T09:35:03+00:00"
   }
  },
  "operators": [
@@ -928,6 +928,15 @@
    "e": "high",
    "t": "Work session",
    "at": "2026-11-25T02:16:43-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Evan's Account",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session",
+   "at": "2026-11-25T04:35:16-05:00"
   },
   {
    "w": "Operator",
@@ -959,10 +968,10 @@
   "main": 1,
   "lanes": 1,
   "total": 2,
-  "at": "4:32 AM",
+  "at": "4:35 AM",
   "why": "",
-  "at_iso": "2026-11-25T09:32:00+00:00",
+  "at_iso": "2026-11-25T09:35:00+00:00",
   "started": "12:10 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 1, started 12:10 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 4:32 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 1, started 12:10 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 4:35 AM ET</p></section>"
  }
 }

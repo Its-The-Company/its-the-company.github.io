@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-25T06:06:21.648486+00:00",
+ "at": "2026-11-25T06:10:00.536126+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -414,7 +414,7 @@
    "task": "[build] T-5815 fix two UI tests",
    "model": "opus",
    "started": "2026-11-25T05:10:53.997Z",
-   "seconds": 3327,
+   "seconds": 3546,
    "finished": null
   }
  ],
@@ -437,31 +437,31 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 11.0,
-   "resets_at": "2026-11-25T03:00:00-05:00",
+   "pct": 12.0,
+   "resets_at": "2026-11-25T07:59:59.608494+00:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-25T01:00:28.334894-05:00",
-   "source": "live",
-   "left": 89.0,
+   "read_at": "2026-11-25T01:07:26.058488-05:00",
+   "source": "usage",
+   "left": 88.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 62.0,
-   "resets_at": "2026-11-29T02:00:00-05:00",
+   "pct": 63.0,
+   "resets_at": "2026-11-29T06:59:59.608515+00:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-25T01:00:28.334894-05:00",
-   "source": "live",
-   "left": 38.0,
+   "read_at": "2026-11-25T01:07:26.058488-05:00",
+   "source": "usage",
+   "left": 37.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 33.0,
-   "resets_at": "2026-11-29T06:59:59.819888+00:00",
+   "resets_at": "2026-11-29T06:59:59.608689+00:00",
    "used_words": "of the Fable weekly allowance used",
-   "read_at": "2026-11-25T00:35:29.500934-05:00",
+   "read_at": "2026-11-25T01:07:26.058488-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-25T01:00:28.334894-05:00"
+  "read_at": "2026-11-25T01:07:26.058488-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -478,10 +478,10 @@
  },
  "next_tick": null,
  "personal": {
-  "week_pct": 112.23,
+  "week_pct": 114.04,
   "usage_pct": 64.4,
   "work_pct": 98.1,
-  "read_at": "2026-11-25T06:07:00+00:00",
+  "read_at": "2026-11-25T06:10:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -515,7 +515,7 @@
   }
  ],
  "disk": {
-  "free_gb": 35,
+  "free_gb": 31,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -524,14 +524,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-25T01:05:00-05:00",
+   "at": "2026-11-25T01:08:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 2,
-  "at": "2026-11-25T01:07:00-05:00",
+  "at": "2026-11-25T01:10:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -542,7 +542,7 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Locked in for today by an Investor: full speed until midnight; the 5-hour window allows 6; the machine allows 8 (held: too few lands in 3 hours to judge a raise)",
+  "why": "Locked in for today by an Investor: full speed until midnight; the 5-hour window allows 6; the machine allows 8 (at its floor: load 14.2 a core is over 10)",
   "n": 6,
   "at": "2026-11-25T00:10:06.003441-05:00"
  },
@@ -761,7 +761,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-25T06:06:21Z",
+  "at": "2026-11-25T06:10:00Z",
   "s": {
    "T-4404": [
     "mergetest",
@@ -772,37 +772,21 @@
     "testing",
     "Mac Mini \u00b7 test",
     null
-   ],
-   "T-4192": [
-    "merged",
-    "on main 5:37 PM ET",
-    1795559850000,
-    ""
-   ],
-   "T-4181": [
-    "merged",
-    "on main 1:09 PM ET",
-    1795543754000,
-    ""
    ]
   },
   "nm": {
    "T-4404": "Stop late widget reloads writing as the extension ends",
-   "T-5843": "End the widget process only after widgets draw",
-   "T-4192": "Python in the app: smaller bundle, installable packages",
-   "T-4181": "Widgets refresh on their own and by a tap"
+   "T-5843": "End the widget process only after widgets draw"
   },
   "wk": {
    "T-4404": "Idris",
    "T-5843": "Idris",
-   "T-4192": "Idris",
-   "T-4181": "Idris",
    "T-5846": "Operator",
    "T-5844": "Operator"
   }
  },
  "ln": {
-  "at": "2026-11-25T06:06:21Z",
+  "at": "2026-11-25T06:10:00Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -811,16 +795,16 @@
     "failed": 0,
     "held": 3,
     "retry": 0,
-    "parked": 10
+    "parked": 11
    },
    "m": {
     "checking": null,
     "inline": null,
     "conflicted": null,
     "failed": null,
-    "held": 2678,
+    "held": 2681,
     "retry": null,
-    "parked": 1943
+    "parked": 1813
    },
    "cur": [],
    "ld": [
@@ -830,12 +814,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-25T06:07:23Z",
-    "ld": 19.51,
+    "at": "2026-11-25T06:09:55Z",
+    "ld": 28.8,
     "c": 8,
     "sb": 1,
     "dk": [
-     32.8,
+     31.4,
      228.3
     ],
     "ss": [
@@ -869,7 +853,7 @@
    "parked": 13,
    "open": true,
    "mq": false,
-   "counted": "2026-11-25T05:56:55+00:00",
+   "counted": "2026-11-25T06:07:15+00:00",
    "by": {
     "app": {
      "n": 12,
@@ -887,11 +871,11 @@
      "open": true
     }
    },
-   "at": "2026-11-25T06:06:21+00:00"
+   "at": "2026-11-25T06:10:00+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-25T06:06:21+00:00"
+   "at": "2026-11-25T06:10:00+00:00"
   }
  },
  "operators": [
@@ -934,10 +918,10 @@
   "main": 1,
   "lanes": 1,
   "total": 2,
-  "at": "1:07 AM",
+  "at": "1:10 AM",
   "why": "",
-  "at_iso": "2026-11-25T06:07:00+00:00",
+  "at_iso": "2026-11-25T06:10:00+00:00",
   "started": "12:10 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 1, started 12:10 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 1:07 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 1, started 12:10 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 1:10 AM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-25T15:23:17.349597+00:00",
+ "at": "2026-11-25T15:26:20.781407+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -248,7 +248,7 @@
    "task": "[build] T-4183 Gallery Get copy",
    "model": "opus",
    "started": "2026-11-25T12:28:50.173Z",
-   "seconds": 10467,
+   "seconds": 10650,
    "finished": null
   }
  ],
@@ -339,7 +339,7 @@
   "week_pct": 124.45,
   "usage_pct": 64.3,
   "work_pct": 98.1,
-  "read_at": "2026-11-25T15:23:00+00:00",
+  "read_at": "2026-11-25T15:26:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -394,14 +394,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-25T10:20:00-05:00",
+   "at": "2026-11-25T10:23:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 3,
-  "at": "2026-11-25T10:23:00-05:00",
+  "at": "2026-11-25T10:26:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -553,19 +553,19 @@
   ],
   "done": [
    {
-    "w": "Idris",
-    "t": "A file written by anything other than iOS's own stop signal can no longer pretend a widget's...",
-    "at": "2026-11-25T09:46:00-05:00"
+    "w": "Operator",
+    "t": "An account whose first task is waiting after two failed tries now starts its next ready task...",
+    "at": "2026-11-25T10:25:00-05:00"
    },
    {
-    "w": "Idris",
-    "t": "When a widget has been moved to run in the app after failing, its Activity screen now shows a...",
-    "at": "2026-11-25T09:46:00-05:00"
+    "w": "Operator",
+    "t": "The main account now works on two app features at the same time, and the plan for Home adds a...",
+    "at": "2026-11-25T10:25:00-05:00"
    },
    {
-    "w": "Idris",
-    "t": "A new check proves the main widget extension, and every library it loads, never uses Apple's...",
-    "at": "2026-11-25T09:46:00-05:00"
+    "w": "Operator",
+    "t": "A finished task now ticks itself after its merge even when the worker's evidence line lists test...",
+    "at": "2026-11-25T10:25:00-05:00"
    }
   ],
   "count": {
@@ -575,8 +575,20 @@
    "you": 0
   },
   "fin": {
-   "n": 70,
+   "n": 73,
    "rows": [
+    [
+     "T-5862",
+     "A cooling task passes the..."
+    ],
+    [
+     "T-5863",
+     "The main account builds two..."
+    ],
+    [
+     "T-5864",
+     "Merged tasks tick even with..."
+    ],
     [
      "T-1765",
      "Stop a file from forging..."
@@ -588,18 +600,6 @@
     [
      "T-0053",
      "Fix widget extension..."
-    ],
-    [
-     "T-0063",
-     "Add a location-off state to..."
-    ],
-    [
-     "T-5815",
-     "Build the four-tab shell..."
-    ],
-    [
-     "T-5849",
-     "A weekly read of the open..."
     ]
    ]
   }
@@ -643,7 +643,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-25T15:23:05Z",
+  "at": "2026-11-25T15:26:20Z",
   "s": {
    "T-5709": [
     "mergetest",
@@ -672,6 +672,9 @@
    "T-5709": "Idris",
    "T-4188": "Idris",
    "T-4182": "Idris",
+   "T-5862": "Operator",
+   "T-5863": "Operator",
+   "T-5864": "Operator",
    "T-1765": "Idris",
    "T-3791": "Idris",
    "T-0053": "Idris",
@@ -680,14 +683,11 @@
    "T-5849": "Wrenna",
    "T-5848": "Odalys",
    "T-5845": "Odalys",
-   "T-4239": "Idris",
-   "T-1440": "Idris",
-   "T-1652": "Idris",
-   "T-2097": "Idris"
+   "T-4239": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-25T15:23:05Z",
+  "at": "2026-11-25T15:26:20Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -701,11 +701,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 541,
+    "conflicted": 544,
     "failed": null,
-    "held": 2101,
+    "held": 2104,
     "retry": null,
-    "parked": 866
+    "parked": 869
    },
    "cur": [],
    "ld": [
@@ -715,8 +715,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-25T15:22:18Z",
-    "ld": 0.74,
+    "at": "2026-11-25T15:26:21Z",
+    "ld": 0.68,
     "c": 8,
     "sb": 1,
     "dk": [
@@ -772,11 +772,11 @@
      "open": true
     }
    },
-   "at": "2026-11-25T15:23:17+00:00"
+   "at": "2026-11-25T15:26:20+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-25T15:23:11+00:00"
+   "at": "2026-11-25T15:26:09+00:00"
   }
  },
  "operators": [
@@ -829,10 +829,10 @@
   "main": 1,
   "lanes": 2,
   "total": 3,
-  "at": "10:23 AM",
+  "at": "10:26 AM",
   "why": "",
-  "at_iso": "2026-11-25T15:23:00+00:00",
+  "at_iso": "2026-11-25T15:26:00+00:00",
   "started": "12:10 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 1, started 12:10 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 10:23 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 1, started 12:10 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 10:26 AM ET</p></section>"
  }
 }

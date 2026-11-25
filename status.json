@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-25T12:26:18.464605+00:00",
+ "at": "2026-11-25T12:29:19.666537+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -414,8 +414,17 @@
   "landed": 1,
   "failed": 4
  },
- "workers": [],
- "who": "",
+ "workers": [
+  {
+   "name": "idris",
+   "task": "[build] T-4183 Gallery Get copy",
+   "model": "opus",
+   "started": "2026-11-25T12:28:50.173Z",
+   "seconds": 29,
+   "finished": null
+  }
+ ],
+ "who": "Idris",
  "recent": [
   {
    "name": "pernille",
@@ -453,7 +462,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 356,
+  "runnable_count": 355,
   "blocked_count": 0
  },
  "meter": {
@@ -502,7 +511,7 @@
   "week_pct": 120.85,
   "usage_pct": 64.3,
   "work_pct": 98.1,
-  "read_at": "2026-11-25T12:26:00+00:00",
+  "read_at": "2026-11-25T12:29:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -545,14 +554,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-25T07:23:00-05:00",
+   "at": "2026-11-25T07:29:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 2,
-  "at": "2026-11-25T07:26:00-05:00",
+  "at": "2026-11-25T07:29:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -570,10 +579,10 @@
  "lanes": [
   {
    "name": "Idris",
-   "state": "next",
-   "task": "Idris, P2, from T-1105 (Maren's spoken-label table,...",
-   "model": null,
-   "since": null,
+   "state": "running",
+   "task": "[build] T-4183 Gallery Get copy",
+   "model": "opus",
+   "since": "2026-11-25T12:28:50.173Z",
    "next": []
   },
   {
@@ -618,7 +627,17 @@
   }
  ],
  "tasks": {
-  "run": [],
+  "run": [
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "The Gallery shows, previews and opens every premade",
+    "m": "opus",
+    "at": "2026-11-25T12:28:50.173Z",
+    "o": "c",
+    "task": "T-4183"
+   }
+  ],
   "src": "plan",
   "open": [
    {
@@ -698,6 +717,11 @@
   ],
   "done": [
    {
+    "w": "Idris",
+    "t": "The Pro purchase screen now covers the tab bar while it is open, so its buy and restore buttons...",
+    "at": "2026-11-25T07:27:00-05:00"
+   },
+   {
     "w": "Wrenna+operator+pernille",
     "t": "Every Sunday morning a session now reads the new and changed open tasks against the app's design...",
     "at": "2026-11-25T02:31:00-05:00"
@@ -706,22 +730,21 @@
     "w": "Odalys+operator+pernille",
     "t": "A task's line is now ticked done by itself right after its merge when the worker's finishing...",
     "at": "2026-11-25T02:19:00-05:00"
-   },
-   {
-    "w": "Odalys+operator+pernille",
-    "t": "The MacBook's test job folders now carry a name Spotlight skips, so the MacBook stops indexing...",
-    "at": "2026-11-25T02:09:00-05:00"
    }
   ],
   "count": {
-   "next": 356,
+   "next": 355,
    "wait": 0,
    "blocked": 0,
    "you": 0
   },
   "fin": {
-   "n": 65,
+   "n": 66,
    "rows": [
+    [
+     "T-5815",
+     "Build the four-tab shell..."
+    ],
     [
      "T-5849",
      "A weekly read of the open..."
@@ -741,10 +764,6 @@
     [
      "T-1440",
      "Add a refresh control and..."
-    ],
-    [
-     "T-1652",
-     "Fix two UI tests that fail..."
     ]
    ]
   }
@@ -788,19 +807,10 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-25T12:26:18Z",
-  "s": {
-   "T-4188": [
-    "mergetest",
-    "iPhone tests on the MacBook",
-    null
-   ]
-  },
-  "nm": {
-   "T-4188": "Location, steps and notifications work in scripts and..."
-  },
+  "at": "2026-11-25T12:29:05Z",
+  "s": {},
   "wk": {
-   "T-4188": "Idris",
+   "T-5815": "Idris",
    "T-5849": "Wrenna",
    "T-5848": "Odalys",
    "T-5845": "Odalys",
@@ -811,12 +821,11 @@
    "T-0687": "Idris",
    "T-4615": "Idris",
    "T-3765": "Idris",
-   "T-1643": "Idris",
-   "T-2583": "Idris"
+   "T-1643": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-25T12:26:18Z",
+  "at": "2026-11-25T12:29:05Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -830,11 +839,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 364,
+    "conflicted": 367,
     "failed": null,
-    "held": 1924,
+    "held": 1927,
     "retry": null,
-    "parked": 1015
+    "parked": 1018
    },
    "cur": [],
    "ld": [
@@ -844,12 +853,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-25T12:26:18Z",
-    "ld": 0.41,
+    "at": "2026-11-25T12:28:53Z",
+    "ld": 0.39,
     "c": 8,
     "sb": 0,
     "dk": [
-     27.9,
+     28.3,
      228.3
     ],
     "ss": [
@@ -859,17 +868,15 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-25T12:15:44Z",
-    "ld": 6.62,
+    "at": "2026-11-25T12:27:22Z",
+    "ld": 1.81,
     "c": 12,
-    "sb": 1,
+    "sb": 0,
     "dk": [
-     363.9,
+     365.3,
      926.4
     ],
-    "sn": [
-     "itsthecompany-runner-2"
-    ]
+    "sn": []
    }
   }
  },
@@ -899,11 +906,11 @@
      "open": true
     }
    },
-   "at": "2026-11-25T12:26:18+00:00"
+   "at": "2026-11-25T12:29:19+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-25T12:26:18+00:00"
+   "at": "2026-11-25T12:29:19+00:00"
   }
  },
  "operators": [
@@ -944,13 +951,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 0,
+  "main": 1,
   "lanes": 1,
-  "total": 1,
-  "at": "7:26 AM",
+  "total": 2,
+  "at": "7:29 AM",
   "why": "",
-  "at_iso": "2026-11-25T12:26:00+00:00",
+  "at_iso": "2026-11-25T12:29:00+00:00",
   "started": "12:10 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0, started 12:10 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 7:26 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 1, started 12:10 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 7:29 AM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-25T02:26:07.324044+00:00",
+ "at": "2026-11-25T02:29:08.321747+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -447,7 +447,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 440,
+  "runnable_count": 439,
   "blocked_count": 2
  },
  "meter": {
@@ -496,7 +496,7 @@
   "week_pct": 111.84,
   "usage_pct": 65.1,
   "work_pct": 98.1,
-  "read_at": "2026-11-25T02:26:00+00:00",
+  "read_at": "2026-11-25T02:29:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -546,7 +546,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-24T21:26:00-05:00",
+  "at": "2026-11-24T21:29:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -688,6 +688,11 @@
   ],
   "done": [
    {
+    "w": "Operator+pernille",
+    "t": "An app merge's Python tests now run on the MacBook whenever the Mac mini is busy enough that the...",
+    "at": "2026-11-24T21:28:00-05:00"
+   },
+   {
     "w": "Operator",
     "t": "Every part of the company that writes to or reads from the main conversation thread now follows...",
     "at": "2026-11-24T21:22:00-05:00"
@@ -696,22 +701,21 @@
     "w": "Operator",
     "t": "Each twice-daily report now starts at its scheduled time in a session of its own, started by the...",
     "at": "2026-11-24T20:40:00-05:00"
-   },
-   {
-    "w": "Idris",
-    "t": "The plan now says the Builder writes its own files one way: people can read the code, and...",
-    "at": "2026-11-24T20:30:00-05:00"
    }
   ],
   "count": {
-   "next": 440,
+   "next": 439,
    "wait": 1,
    "blocked": 1,
    "you": 1
   },
   "fin": {
-   "n": 4,
+   "n": 5,
    "rows": [
+    [
+     "T-5813",
+     "The app's Python tests run..."
+    ],
     [
      "T-4986",
      "Let Chat and approvals read..."
@@ -770,11 +774,11 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-25T02:26:01Z",
+  "at": "2026-11-25T02:28:50Z",
   "s": {
-   "T-4257": [
-    "mergetest",
-    "iPhone tests on the MacBook",
+   "T-5813": [
+    "testing",
+    "MacBook \u00b7 test",
     null
    ],
    "T-4186": [
@@ -785,11 +789,11 @@
    ]
   },
   "nm": {
-   "T-4257": "Show problem words beside the marked line",
+   "T-5813": "The app's Python tests run on the MacBook under load",
    "T-4186": "The editor completes code, shows errors and previews"
   },
   "wk": {
-   "T-4257": "Idris",
+   "T-5813": "Operator",
    "T-4186": "Idris",
    "T-4986": "Odalys",
    "T-5834": "Operator",
@@ -798,7 +802,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-25T02:26:01Z",
+  "at": "2026-11-25T02:28:50Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -814,9 +818,9 @@
     "inline": null,
     "conflicted": null,
     "failed": null,
-    "held": 2457,
+    "held": 2460,
     "retry": null,
-    "parked": 1857
+    "parked": 1860
    },
    "cur": [],
    "ld": [
@@ -826,12 +830,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-25T02:25:35Z",
-    "ld": 4.59,
+    "at": "2026-11-25T02:28:51Z",
+    "ld": 2.87,
     "c": 8,
     "sb": 0,
     "dk": [
-     32.9,
+     32.8,
      228.3
     ],
     "ss": [
@@ -841,17 +845,15 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-25T02:22:53Z",
-    "ld": 0.63,
+    "at": "2026-11-25T02:25:50Z",
+    "ld": 0.65,
     "c": 12,
-    "sb": 1,
+    "sb": 0,
     "dk": [
-     368.6,
+     370.4,
      926.4
     ],
-    "sn": [
-     "itsthecompany-runner"
-    ]
+    "sn": []
    }
   }
  },
@@ -881,11 +883,11 @@
      "open": true
     }
    },
-   "at": "2026-11-25T02:26:07+00:00"
+   "at": "2026-11-25T02:29:08+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-25T02:26:01+00:00"
+   "at": "2026-11-25T02:29:08+00:00"
   }
  },
  "operators": [
@@ -928,10 +930,10 @@
   "main": 0,
   "lanes": 1,
   "total": 1,
-  "at": "9:26 PM",
+  "at": "9:29 PM",
   "why": "",
-  "at_iso": "2026-11-25T02:26:00+00:00",
+  "at_iso": "2026-11-25T02:29:00+00:00",
   "started": "8:05 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0, started 8:05 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 9:26 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0, started 8:05 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 9:29 PM ET</p></section>"
  }
 }

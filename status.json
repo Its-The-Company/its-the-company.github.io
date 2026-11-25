@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-25T07:29:02.995181+00:00",
+ "at": "2026-11-25T07:32:10.127011+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -420,7 +420,7 @@
    "task": "[build] T-5815 fix two UI tests",
    "model": "opus",
    "started": "2026-11-25T05:10:53.997Z",
-   "seconds": 8288,
+   "seconds": 8476,
    "finished": null
   }
  ],
@@ -487,7 +487,7 @@
   "week_pct": 117.66,
   "usage_pct": 64.4,
   "work_pct": 98.1,
-  "read_at": "2026-11-25T07:29:00+00:00",
+  "read_at": "2026-11-25T07:32:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -542,14 +542,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-25T02:28:00-05:00",
+   "at": "2026-11-25T02:31:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 2,
-  "at": "2026-11-25T02:29:00-05:00",
+  "at": "2026-11-25T02:32:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -705,6 +705,11 @@
   ],
   "done": [
    {
+    "w": "Wrenna+operator+pernille",
+    "t": "Every Sunday morning a session now reads the new and changed open tasks against the app's design...",
+    "at": "2026-11-25T02:31:00-05:00"
+   },
+   {
     "w": "Odalys+operator+pernille",
     "t": "A task's line is now ticked done by itself right after its merge when the worker's finishing...",
     "at": "2026-11-25T02:19:00-05:00"
@@ -713,11 +718,6 @@
     "w": "Odalys+operator+pernille",
     "t": "The MacBook's test job folders now carry a name Spotlight skips, so the MacBook stops indexing...",
     "at": "2026-11-25T02:09:00-05:00"
-   },
-   {
-    "w": "Operator",
-    "t": "Found already finished in the app backlog audit of 25 November and ticked by the Operator: run...",
-    "at": "2026-11-25T01:31:00-05:00"
    }
   ],
   "count": {
@@ -727,8 +727,12 @@
    "you": 0
   },
   "fin": {
-   "n": 64,
+   "n": 65,
    "rows": [
+    [
+     "T-5849",
+     "A weekly read of the open..."
+    ],
     [
      "T-5848",
      "Tick finished tasks right..."
@@ -748,10 +752,6 @@
     [
      "T-1652",
      "Fix two UI tests that fail..."
-    ],
-    [
-     "T-2097",
-     "Read free memory in the..."
     ]
    ]
   }
@@ -795,9 +795,10 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-25T07:28:54Z",
+  "at": "2026-11-25T07:32:03Z",
   "s": {},
   "wk": {
+   "T-5849": "Wrenna",
    "T-5848": "Odalys",
    "T-5845": "Odalys",
    "T-4239": "Idris",
@@ -808,12 +809,11 @@
    "T-4615": "Idris",
    "T-3765": "Idris",
    "T-1643": "Idris",
-   "T-2583": "Idris",
-   "T-2551": "Pernille"
+   "T-2583": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-25T07:28:54Z",
+  "at": "2026-11-25T07:32:03Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -827,11 +827,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 67,
+    "conflicted": 70,
     "failed": null,
-    "held": 2760,
+    "held": 2763,
     "retry": null,
-    "parked": 1627
+    "parked": 1630
    },
    "cur": [],
    "ld": [
@@ -841,8 +841,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-25T07:28:32Z",
-    "ld": 0.68,
+    "at": "2026-11-25T07:31:42Z",
+    "ld": 0.8,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -896,11 +896,11 @@
      "open": true
     }
    },
-   "at": "2026-11-25T07:29:02+00:00"
+   "at": "2026-11-25T07:32:10+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-25T07:28:47+00:00"
+   "at": "2026-11-25T07:32:03+00:00"
   }
  },
  "operators": [
@@ -952,10 +952,10 @@
   "main": 1,
   "lanes": 2,
   "total": 3,
-  "at": "2:29 AM",
+  "at": "2:32 AM",
   "why": "",
-  "at_iso": "2026-11-25T07:29:00+00:00",
+  "at_iso": "2026-11-25T07:32:00+00:00",
   "started": "12:10 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 1, started 12:10 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 2:29 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 1, started 12:10 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 2:32 AM ET</p></section>"
  }
 }

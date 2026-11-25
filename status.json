@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-25T16:12:56.528819+00:00",
+ "at": "2026-11-25T16:16:05.948267+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -56,36 +56,6 @@
       "at": 1795536968
      }
     ]
-   },
-   {
-    "t": "T-5154",
-    "w": "Odalys",
-    "acct": "Personal b",
-    "steps": [
-     {
-      "s": "claimed",
-      "at": 1795536915
-     },
-     {
-      "s": "worker",
-      "at": 1795536915
-     }
-    ]
-   },
-   {
-    "t": "T-5131",
-    "w": "Odalys",
-    "acct": "Personal b",
-    "steps": [
-     {
-      "s": "claimed",
-      "at": 1795536866
-     },
-     {
-      "s": "worker",
-      "at": 1795536866
-     }
-    ]
    }
   ],
   "done": [
@@ -138,7 +108,7 @@
    "task": "[build] T-4183 Gallery Get copy",
    "model": "opus",
    "started": "2026-11-25T12:28:50.173Z",
-   "seconds": 13446,
+   "seconds": 13635,
    "finished": null
   }
  ],
@@ -185,19 +155,19 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 18.0,
+   "pct": 21.0,
    "resets_at": "2026-11-25T13:00:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-25T11:00:02.713444-05:00",
+   "read_at": "2026-11-25T11:13:42.278879-05:00",
    "source": "live",
-   "left": 82.0,
+   "left": 79.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 70.0,
    "resets_at": "2026-11-29T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-25T11:00:02.713444-05:00",
+   "read_at": "2026-11-25T11:13:42.278879-05:00",
    "source": "live",
    "left": 30.0,
    "left_words": "of your weekly allowance left"
@@ -209,7 +179,7 @@
    "read_at": "2026-11-25T10:46:07.897583-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-25T11:00:02.713444-05:00"
+  "read_at": "2026-11-25T11:13:42.278879-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -229,7 +199,7 @@
   "week_pct": 126.26,
   "usage_pct": 64.3,
   "work_pct": 98.1,
-  "read_at": "2026-11-25T16:13:00+00:00",
+  "read_at": "2026-11-25T16:16:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -284,14 +254,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-25T11:08:00-05:00",
+   "at": "2026-11-25T11:13:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 4,
-  "at": "2026-11-25T11:13:00-05:00",
+  "at": "2026-11-25T11:16:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -302,7 +272,7 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 8 (at its floor: load 13.7 a core is over 10)",
+  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 8 (at its floor: load 16.0 a core is over 10)",
   "n": 8,
   "at": "2026-11-25T00:10:06.003441-05:00"
  },
@@ -533,13 +503,8 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-25T16:12:56Z",
+  "at": "2026-11-25T16:15:57Z",
   "s": {
-   "T-5709": [
-    "mergetest",
-    "iPhone tests on the MacBook",
-    null
-   ],
    "T-4188": [
     "merged",
     "on main 7:50 AM ET",
@@ -554,12 +519,10 @@
    ]
   },
   "nm": {
-   "T-5709": "Test the locked Gallery foot and its sheet neighbours",
    "T-4188": "Location, steps and notifications work in scripts and...",
    "T-4182": "A failing widget says so and can recover"
   },
   "wk": {
-   "T-5709": "Idris",
    "T-4188": "Idris",
    "T-4182": "Idris",
    "T-5862": "Operator",
@@ -577,7 +540,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-25T16:12:56Z",
+  "at": "2026-11-25T16:15:57Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -591,11 +554,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 591,
+    "conflicted": 594,
     "failed": null,
-    "held": 2151,
+    "held": 2154,
     "retry": null,
-    "parked": 916
+    "parked": 919
    },
    "cur": [],
    "ld": [
@@ -605,12 +568,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-25T16:13:06Z",
-    "ld": 16.58,
+    "at": "2026-11-25T16:15:19Z",
+    "ld": 14.21,
     "c": 8,
     "sb": 2,
     "dk": [
-     27.6,
+     27.5,
      228.3
     ],
     "ss": [
@@ -623,17 +586,15 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-25T16:02:24Z",
-    "ld": 6.71,
+    "at": "2026-11-25T16:14:37Z",
+    "ld": 1.63,
     "c": 12,
-    "sb": 1,
+    "sb": 0,
     "dk": [
-     361.0,
+     362.4,
      926.4
     ],
-    "sn": [
-     "itsthecompany-runner-2"
-    ]
+    "sn": []
    }
   }
  },
@@ -663,11 +624,11 @@
      "open": true
     }
    },
-   "at": "2026-11-25T16:12:56+00:00"
+   "at": "2026-11-25T16:16:05+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-25T16:12:56+00:00"
+   "at": "2026-11-25T16:16:05+00:00"
   }
  },
  "operators": [
@@ -720,10 +681,10 @@
   "main": 1,
   "lanes": 2,
   "total": 3,
-  "at": "11:13 AM",
+  "at": "11:16 AM",
   "why": "",
-  "at_iso": "2026-11-25T16:13:00+00:00",
+  "at_iso": "2026-11-25T16:16:00+00:00",
   "started": "12:10 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 1, started 12:10 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 11:13 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 1, started 12:10 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 11:16 AM ET</p></section>"
  }
 }

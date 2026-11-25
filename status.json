@@ -1,10 +1,10 @@
 {
  "schema": 1,
- "at": "2026-11-25T05:03:17.164665+00:00",
+ "at": "2026-11-25T05:10:16.351118+00:00",
  "session": {
-  "active": true,
-  "kind": "coord",
-  "started": "2026-11-24T20:05:37-05:00",
+  "active": false,
+  "kind": "",
+  "started": null,
   "coord": {
    "active": true,
    "started": 1795341309,
@@ -491,12 +491,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": null,
+ "next_tick": "2026-11-25T00:25:06-05:00",
  "personal": {
-  "week_pct": 113.7,
-  "usage_pct": 65.1,
+  "week_pct": 115.97,
+  "usage_pct": 64.4,
   "work_pct": 98.1,
-  "read_at": "2026-11-25T05:06:00+00:00",
+  "read_at": "2026-11-25T05:10:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -530,7 +530,7 @@
   }
  ],
  "disk": {
-  "free_gb": 36,
+  "free_gb": 33,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -539,28 +539,24 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-25T00:04:00-05:00",
+   "at": "2026-11-25T00:09:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
-  "on": false,
+  "on": true,
   "pool": 1,
-  "at": "2026-11-25T00:06:00-05:00",
-  "mode": null,
+  "at": "2026-11-25T00:10:00-05:00",
+  "mode": "midnight",
   "modes": {
-   "main": "double-spread",
-   "a": "double-spread",
-   "b": "double-spread"
+   "main": "midnight",
+   "a": "midnight",
+   "b": "midnight"
   }
  },
- "next_tick_why": "session",
+ "next_tick_why": "last_tick",
  "idle": null,
- "pool": {
-  "why": "Double Spread: 39% of the week left, paced to last until Wed 14:00, the week's halfway point; the machine allows 8 (held: too few lands in 3 hours to judge a raise)",
-  "n": 2,
-  "at": "2026-11-24T20:05:21.683458-05:00"
- },
+ "pool": null,
  "lanes": [
   {
    "name": "Idris",
@@ -613,7 +609,6 @@
  ],
  "tasks": {
   "run": [],
-  "src": "plan",
   "open": [
    {
     "w": "Idris",
@@ -665,13 +660,6 @@
     "o": "c"
    },
    {
-    "w": "Operator",
-    "k": "ops",
-    "t": "Land the finished work left in workers' copies",
-    "s": "next",
-    "o": "c"
-   },
-   {
     "w": "Idris",
     "k": "tools",
     "t": "Fix the MacBook test jobs that keep failing",
@@ -684,9 +672,21 @@
     "t": "Add a refresh control and age line to widgets",
     "s": "next",
     "o": "c"
+   },
+   {
+    "w": "Pernille",
+    "k": "build",
+    "t": "Show the age line in premade widgets and gallery",
+    "s": "next",
+    "o": "c"
    }
   ],
   "done": [
+   {
+    "w": "Operator+idris",
+    "t": "All the finished app work that was left in the old workers' copies when the company moved to...",
+    "at": "2026-11-25T00:05:00-05:00"
+   },
    {
     "w": "Operator",
     "t": "A feature's linked steps are now built in one session, in order, and merged together, and a step...",
@@ -696,11 +696,6 @@
     "w": "Wrenna",
     "t": "The research on which widget animations Apple allows is done and on main, with the Pro Animation...",
     "at": "2026-11-24T22:56:00-05:00"
-   },
-   {
-    "w": "Odalys+pernille+operator",
-    "t": "When several finished app changes are waiting for their turn to merge, the one whose turn it is...",
-    "at": "2026-11-24T22:50:00-05:00"
    }
   ],
   "count": {
@@ -708,35 +703,6 @@
    "wait": 1,
    "blocked": 1,
    "you": 1
-  },
-  "fin": {
-   "n": 12,
-   "rows": [
-    [
-     "T-5841",
-     "A feature's chain is built..."
-    ],
-    [
-     "T-5635",
-     "Find the widget animations..."
-    ],
-    [
-     "T-5822",
-     "Waiting app changes are..."
-    ],
-    [
-     "T-5840",
-     "New copies reuse earlier..."
-    ],
-    [
-     "T-5838",
-     "A finished task's claim..."
-    ],
-    [
-     "T-3348",
-     "Find why a Plan mode answer..."
-    ]
-   ]
   }
  },
  "qr": [
@@ -778,9 +744,9 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-25T05:02:56Z",
+  "at": "2026-11-25T05:10:16Z",
   "s": {
-   "T-0700": [
+   "T-2260": [
     "mergetest",
     "iPhone tests on the MacBook",
     null
@@ -793,28 +759,16 @@
    ]
   },
   "nm": {
-   "T-0700": "Use one check for being in the extension",
+   "T-2260": "Make closed widget turns draw their timeline",
    "T-4181": "Widgets refresh on their own and by a tap"
   },
   "wk": {
-   "T-0700": "Idris",
-   "T-4181": "Idris",
-   "T-5841": "Operator",
-   "T-5635": "Wrenna",
-   "T-5822": "Operator",
-   "T-5840": "Operator",
-   "T-5838": "Operator",
-   "T-3348": "Odalys",
-   "T-5617": "Odalys",
-   "T-5813": "Operator",
-   "T-4986": "Odalys",
-   "T-5834": "Operator",
-   "T-5819": "Idris",
-   "T-5833": "Operator"
+   "T-2260": "Idris",
+   "T-4181": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-25T05:02:56Z",
+  "at": "2026-11-25T05:10:16Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -830,9 +784,9 @@
     "inline": null,
     "conflicted": null,
     "failed": null,
-    "held": 2614,
+    "held": 2622,
     "retry": null,
-    "parked": 2014
+    "parked": 2021
    },
    "cur": [],
    "ld": [
@@ -842,12 +796,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-25T05:02:11Z",
-    "ld": 0.61,
+    "at": "2026-11-25T05:09:41Z",
+    "ld": 0.56,
     "c": 8,
     "sb": 0,
     "dk": [
-     35.5,
+     33.3,
      228.3
     ],
     "ss": [
@@ -857,17 +811,15 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-25T04:56:49Z",
-    "ld": 1.51,
+    "at": "2026-11-25T05:07:35Z",
+    "ld": 1.22,
     "c": 12,
-    "sb": 1,
+    "sb": 0,
     "dk": [
-     368.4,
+     369.5,
      926.4
     ],
-    "sn": [
-     "itsthecompany-runner"
-    ]
+    "sn": []
    }
   }
  },
@@ -879,15 +831,15 @@
    "parked": 14,
    "open": true,
    "mq": false,
-   "counted": "2026-11-25T04:55:11+00:00",
+   "counted": "2026-11-25T05:05:33+00:00",
    "by": {
     "app": {
-     "n": 11,
+     "n": 12,
      "limit": 20,
      "open": true
     },
     "other": {
-     "n": 6,
+     "n": 5,
      "limit": 20,
      "open": true
     },
@@ -897,23 +849,14 @@
      "open": true
     }
    },
-   "at": "2026-11-25T05:03:17+00:00"
+   "at": "2026-11-25T05:10:16+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-25T05:03:02+00:00"
+   "at": "2026-11-25T05:10:16+00:00"
   }
  },
  "operators": [
-  {
-   "w": "Operator",
-   "a": "Main plan",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session",
-   "at": "2026-11-24T22:32:15-05:00"
-  },
   {
    "w": "Operator",
    "a": "Evan's Account",
@@ -933,11 +876,9 @@
   "lane_next",
   "queue_text",
   "task_done",
-  "fin_short",
   "task_title",
   "done_text",
   "task_open",
-  "fin_six",
   "lane_task",
   "task_next"
  ],
@@ -945,10 +886,10 @@
   "main": 0,
   "lanes": 1,
   "total": 1,
-  "at": "12:06 AM",
+  "at": "12:10 AM",
   "why": "",
-  "at_iso": "2026-11-25T05:06:00+00:00",
+  "at_iso": "2026-11-25T05:10:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 12:06 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 12:10 AM ET</p></section>"
  }
 }

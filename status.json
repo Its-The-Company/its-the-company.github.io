@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-25T22:53:48.311974+00:00",
+ "at": "2026-11-25T22:56:51.433576+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -72,7 +72,7 @@
    "task": "[build] T-4191 VoiceOver and text",
    "model": "",
    "started": "2026-11-25T20:39:20.572Z",
-   "seconds": 8067,
+   "seconds": 8250,
    "finished": null
   },
   {
@@ -80,7 +80,7 @@
    "task": "[build] T-5796 widget buttons steps",
    "model": "",
    "started": "2026-11-25T20:58:11.478Z",
-   "seconds": 6936,
+   "seconds": 7119,
    "finished": null
   }
  ],
@@ -127,19 +127,19 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 33.0,
+   "pct": 34.0,
    "resets_at": "2026-11-25T18:00:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-25T17:36:29.262567-05:00",
+   "read_at": "2026-11-25T17:56:48.540256-05:00",
    "source": "live",
-   "left": 67.0,
+   "left": 66.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 82.0,
    "resets_at": "2026-11-29T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-25T17:36:29.262567-05:00",
+   "read_at": "2026-11-25T17:56:48.540256-05:00",
    "source": "live",
    "left": 18.0,
    "left_words": "of your weekly allowance left"
@@ -151,7 +151,7 @@
    "read_at": "2026-11-25T17:25:49.754495-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-25T17:36:29.262567-05:00"
+  "read_at": "2026-11-25T17:56:48.540256-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -171,7 +171,7 @@
   "week_pct": 123.89,
   "usage_pct": 60.0,
   "work_pct": 98.3,
-  "read_at": "2026-11-25T22:53:00+00:00",
+  "read_at": "2026-11-25T22:56:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -233,7 +233,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-25T17:53:00-05:00",
+  "at": "2026-11-25T17:56:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -482,26 +482,19 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-25T22:53:37Z",
+  "at": "2026-11-25T22:56:51Z",
   "s": {
    "T-4638": [
     "mergetest",
     "iPhone tests on the MacBook",
     null
-   ],
-   "T-5796": [
-    "testing",
-    "Mac Mini \u00b7 test",
-    null
    ]
   },
   "nm": {
-   "T-4638": "Time the script-widget tap's file scan on a large library",
-   "T-5796": "Internal TestFlight builds carry the test widgets"
+   "T-4638": "Time the script-widget tap's file scan on a large library"
   },
   "wk": {
    "T-4638": "Idris",
-   "T-5796": "Idris",
    "T-5539": "Pernille",
    "T-5540": "Pernille",
    "T-5561": "Pernille",
@@ -513,7 +506,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-25T22:53:37Z",
+  "at": "2026-11-25T22:56:51Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -527,11 +520,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 992,
+    "conflicted": 995,
     "failed": null,
-    "held": 2551,
+    "held": 2555,
     "retry": null,
-    "parked": 1317
+    "parked": 1320
    },
    "cur": [],
    "ld": [
@@ -541,21 +534,19 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-25T22:53:11Z",
-    "ld": 5.18,
+    "at": "2026-11-25T22:56:05Z",
+    "ld": 5.14,
     "c": 8,
-    "sb": 1,
+    "sb": 0,
     "dk": [
-     25.1,
+     25.0,
      228.3
     ],
     "ss": [
      172.3,
      953.7
     ],
-    "sn": [
-     "iPhone 17e"
-    ]
+    "sn": []
    },
    "macbook": {
     "at": "2026-11-25T22:50:09Z",
@@ -598,11 +589,11 @@
      "open": true
     }
    },
-   "at": "2026-11-25T22:53:48+00:00"
+   "at": "2026-11-25T22:56:51+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-25T22:53:37+00:00"
+   "at": "2026-11-25T22:56:40+00:00"
   }
  },
  "operators": [
@@ -621,7 +612,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 1 task",
+   "t": "Work session",
    "at": "2026-11-25T16:03:59-05:00"
   },
   {
@@ -655,10 +646,10 @@
   "main": 2,
   "lanes": 2,
   "total": 4,
-  "at": "5:53 PM",
+  "at": "5:56 PM",
   "why": "",
-  "at_iso": "2026-11-25T22:53:00+00:00",
+  "at_iso": "2026-11-25T22:56:00+00:00",
   "started": "1:03 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 2, started 1:03 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 5:53 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 2, started 1:03 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 5:56 PM ET</p></section>"
  }
 }

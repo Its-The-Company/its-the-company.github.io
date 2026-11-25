@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-25T02:41:22.513644+00:00",
+ "at": "2026-11-25T02:44:22.974727+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -452,20 +452,20 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 20.0,
-   "resets_at": "2026-11-25T03:00:00.470265+00:00",
+   "pct": 21.0,
+   "resets_at": "2026-11-24T22:00:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-24T21:25:30.161477-05:00",
-   "source": "usage",
-   "left": 80.0,
+   "read_at": "2026-11-24T21:42:30.771993-05:00",
+   "source": "live",
+   "left": 79.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 60.0,
-   "resets_at": "2026-11-29T07:00:00.470284+00:00",
+   "resets_at": "2026-11-29T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-24T21:25:30.161477-05:00",
-   "source": "usage",
+   "read_at": "2026-11-24T21:42:30.771993-05:00",
+   "source": "live",
    "left": 40.0,
    "left_words": "of your weekly allowance left"
   },
@@ -476,7 +476,7 @@
    "read_at": "2026-11-24T21:25:30.161477-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-24T21:25:30.161477-05:00"
+  "read_at": "2026-11-24T21:42:30.771993-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -496,7 +496,7 @@
   "week_pct": 111.84,
   "usage_pct": 65.1,
   "work_pct": 98.1,
-  "read_at": "2026-11-25T02:41:00+00:00",
+  "read_at": "2026-11-25T02:44:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -546,7 +546,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-24T21:41:00-05:00",
+  "at": "2026-11-24T21:44:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -778,7 +778,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-25T02:41:03Z",
+  "at": "2026-11-25T02:44:17Z",
   "s": {
    "T-4186": [
     "merged",
@@ -802,7 +802,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-25T02:41:03Z",
+  "at": "2026-11-25T02:44:17Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -818,9 +818,9 @@
     "inline": null,
     "conflicted": null,
     "failed": null,
-    "held": 2472,
+    "held": 2476,
     "retry": null,
-    "parked": 1872
+    "parked": 1875
    },
    "cur": [],
    "ld": [
@@ -830,8 +830,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-25T02:40:31Z",
-    "ld": 2.51,
+    "at": "2026-11-25T02:43:52Z",
+    "ld": 1.5,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -865,7 +865,7 @@
    "parked": 14,
    "open": true,
    "mq": false,
-   "counted": "2026-11-25T02:32:42+00:00",
+   "counted": "2026-11-25T02:43:02+00:00",
    "by": {
     "app": {
      "n": 11,
@@ -883,11 +883,11 @@
      "open": true
     }
    },
-   "at": "2026-11-25T02:41:22+00:00"
+   "at": "2026-11-25T02:44:22+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-25T02:41:22+00:00"
+   "at": "2026-11-25T02:44:22+00:00"
   }
  },
  "operators": [
@@ -931,10 +931,10 @@
   "main": 0,
   "lanes": 1,
   "total": 1,
-  "at": "9:41 PM",
+  "at": "9:44 PM",
   "why": "",
-  "at_iso": "2026-11-25T02:41:00+00:00",
+  "at_iso": "2026-11-25T02:44:00+00:00",
   "started": "8:05 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0, started 8:05 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 9:41 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0, started 8:05 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 9:44 PM ET</p></section>"
  }
 }

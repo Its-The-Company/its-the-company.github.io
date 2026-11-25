@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-25T20:08:35.292724+00:00",
+ "at": "2026-11-25T20:11:41.164100+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -154,7 +154,7 @@
   "week_pct": 116.34,
   "usage_pct": 60.2,
   "work_pct": 98.3,
-  "read_at": "2026-11-25T20:08:00+00:00",
+  "read_at": "2026-11-25T20:11:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -204,7 +204,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-25T15:08:00-05:00",
+  "at": "2026-11-25T15:11:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -428,9 +428,19 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-25T20:08:17Z",
-  "s": {},
+  "at": "2026-11-25T20:11:27Z",
+  "s": {
+   "T-1457": [
+    "mergetest",
+    "iPhone tests on the MacBook",
+    null
+   ]
+  },
+  "nm": {
+   "T-1457": "Match the corner glyphs to the app's accent colors"
+  },
   "wk": {
+   "T-1457": "Idris",
    "T-4139": "Idris",
    "T-0901": "Idris",
    "T-5709": "Idris",
@@ -438,7 +448,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-25T20:08:17Z",
+  "at": "2026-11-25T20:11:27Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -452,11 +462,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 826,
+    "conflicted": 829,
     "failed": null,
-    "held": 2386,
+    "held": 2389,
     "retry": null,
-    "parked": 1477
+    "parked": 1480
    },
    "cur": [],
    "ld": [
@@ -466,8 +476,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-25T20:08:18Z",
-    "ld": 1.76,
+    "at": "2026-11-25T20:11:02Z",
+    "ld": 1.83,
     "c": 8,
     "sb": 1,
     "dk": [
@@ -483,12 +493,12 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-25T20:06:56Z",
-    "ld": 5.25,
+    "at": "2026-11-25T20:09:05Z",
+    "ld": 3.48,
     "c": 12,
     "sb": 0,
     "dk": [
-     358.7,
+     360.8,
      926.4
     ],
     "sn": []
@@ -521,11 +531,11 @@
      "open": true
     }
    },
-   "at": "2026-11-25T20:08:35+00:00"
+   "at": "2026-11-25T20:11:41+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-25T20:08:17+00:00"
+   "at": "2026-11-25T20:11:41+00:00"
   }
  },
  "operators": [
@@ -567,10 +577,10 @@
   "main": 0,
   "lanes": 1,
   "total": 1,
-  "at": "3:08 PM",
+  "at": "3:11 PM",
   "why": "",
-  "at_iso": "2026-11-25T20:08:00+00:00",
+  "at_iso": "2026-11-25T20:11:00+00:00",
   "started": "1:03 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0, started 1:03 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 3:08 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0, started 1:03 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 3:11 PM ET</p></section>"
  }
 }

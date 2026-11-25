@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-25T07:44:21.411279+00:00",
+ "at": "2026-11-25T07:47:23.264264+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -420,7 +420,7 @@
    "task": "[build] T-5815 fix two UI tests",
    "model": "opus",
    "started": "2026-11-25T05:10:53.997Z",
-   "seconds": 9207,
+   "seconds": 9389,
    "finished": null
   }
  ],
@@ -444,30 +444,30 @@
  "meter": {
   "five_hour": {
    "pct": 23.0,
-   "resets_at": "2026-11-25T03:00:00-05:00",
+   "resets_at": "2026-11-25T08:00:00.345985+00:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-25T02:42:43.702700-05:00",
-   "source": "live",
+   "read_at": "2026-11-25T02:47:17.564062-05:00",
+   "source": "usage",
    "left": 77.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 65.0,
-   "resets_at": "2026-11-29T02:00:00-05:00",
+   "resets_at": "2026-11-29T07:00:00.346004+00:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-25T02:42:43.702700-05:00",
-   "source": "live",
+   "read_at": "2026-11-25T02:47:17.564062-05:00",
+   "source": "usage",
    "left": 35.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 33.0,
-   "resets_at": "2026-11-29T06:59:59.552079+00:00",
+   "resets_at": "2026-11-29T07:00:00.346141+00:00",
    "used_words": "of the Fable weekly allowance used",
-   "read_at": "2026-11-25T02:15:39.976086-05:00",
+   "read_at": "2026-11-25T02:47:17.564062-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-25T02:42:43.702700-05:00"
+  "read_at": "2026-11-25T02:47:17.564062-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -487,7 +487,7 @@
   "week_pct": 117.66,
   "usage_pct": 64.4,
   "work_pct": 98.1,
-  "read_at": "2026-11-25T07:44:00+00:00",
+  "read_at": "2026-11-25T07:47:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -542,14 +542,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-25T02:42:00-05:00",
+   "at": "2026-11-25T02:47:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 2,
-  "at": "2026-11-25T02:44:00-05:00",
+  "at": "2026-11-25T02:47:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -795,7 +795,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-25T07:44:04Z",
+  "at": "2026-11-25T07:47:10Z",
   "s": {},
   "wk": {
    "T-5849": "Wrenna",
@@ -813,7 +813,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-25T07:44:04Z",
+  "at": "2026-11-25T07:47:10Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -827,11 +827,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 82,
+    "conflicted": 85,
     "failed": null,
-    "held": 2775,
+    "held": 2779,
     "retry": null,
-    "parked": 1642
+    "parked": 1645
    },
    "cur": [],
    "ld": [
@@ -841,12 +841,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-25T07:43:18Z",
-    "ld": 0.36,
+    "at": "2026-11-25T07:46:47Z",
+    "ld": 0.51,
     "c": 8,
     "sb": 0,
     "dk": [
-     26.9,
+     27.3,
      228.3
     ],
     "ss": [
@@ -856,8 +856,8 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-25T07:40:13Z",
-    "ld": 1.32,
+    "at": "2026-11-25T07:43:56Z",
+    "ld": 3.27,
     "c": 12,
     "sb": 1,
     "dk": [
@@ -896,11 +896,11 @@
      "open": true
     }
    },
-   "at": "2026-11-25T07:44:21+00:00"
+   "at": "2026-11-25T07:47:23+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-25T07:44:21+00:00"
+   "at": "2026-11-25T07:47:16+00:00"
   }
  },
  "operators": [
@@ -952,10 +952,10 @@
   "main": 1,
   "lanes": 2,
   "total": 3,
-  "at": "2:44 AM",
+  "at": "2:47 AM",
   "why": "",
-  "at_iso": "2026-11-25T07:44:00+00:00",
+  "at_iso": "2026-11-25T07:47:00+00:00",
   "started": "12:10 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 1, started 12:10 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 2:44 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 1, started 12:10 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 2:47 AM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-25T19:50:25.439935+00:00",
+ "at": "2026-11-25T19:53:27.031200+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -72,20 +72,20 @@
    "task": "[build] T-4190 Settings and Pro",
    "model": "",
    "started": "2026-11-25T18:07:43.594Z",
-   "seconds": 6161,
+   "seconds": 6343,
    "finished": null
-  },
+  }
+ ],
+ "who": "Idris",
+ "recent": [
   {
    "name": "pernille",
    "task": "[review] T-4183",
    "model": "",
    "started": "2026-11-25T19:35:16.708Z",
-   "seconds": 908,
-   "finished": null
-  }
- ],
- "who": "Idris, Pernille",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-25T19:50:42.033000+00:00"
+  },
   {
    "name": "idris",
    "task": "[build] T-4183 finish review fixes",
@@ -147,7 +147,7 @@
   "week_pct": 116.34,
   "usage_pct": 60.2,
   "work_pct": 98.3,
-  "read_at": "2026-11-25T19:50:00+00:00",
+  "read_at": "2026-11-25T19:53:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -197,7 +197,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-25T14:50:00-05:00",
+  "at": "2026-11-25T14:53:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -223,10 +223,10 @@
   },
   {
    "name": "Pernille",
-   "state": "running",
-   "task": "[review] T-4183",
+   "state": "next",
+   "task": "Pernille, P1, continuation of T-2609: after...",
    "model": null,
-   "since": "2026-11-25T19:35:16.708Z",
+   "since": null,
    "next": []
   },
   {
@@ -271,14 +271,6 @@
     "at": "2026-11-25T18:07:43.594Z",
     "o": "c",
     "task": "T-4190"
-   },
-   {
-    "w": "Pernille",
-    "k": "review",
-    "t": "The Gallery shows, previews and opens every premade",
-    "at": "2026-11-25T19:35:16.708Z",
-    "o": "c",
-    "task": "T-4183"
    }
   ],
   "src": "plan",
@@ -421,7 +413,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-25T19:50:25Z",
+  "at": "2026-11-25T19:53:18Z",
   "s": {
    "T-5870": [
     "testing",
@@ -434,7 +426,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-25T19:50:25Z",
+  "at": "2026-11-25T19:53:18Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -448,11 +440,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 808,
+    "conflicted": 811,
     "failed": null,
-    "held": 2368,
+    "held": 2371,
     "retry": null,
-    "parked": 1133
+    "parked": 1136
    },
    "cur": [],
    "ld": [
@@ -462,8 +454,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-25T19:50:01Z",
-    "ld": 1.54,
+    "at": "2026-11-25T19:53:20Z",
+    "ld": 1.34,
     "c": 8,
     "sb": 1,
     "dk": [
@@ -479,12 +471,12 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-25T19:49:43Z",
+    "at": "2026-11-25T19:49:48Z",
     "ld": 15.55,
     "c": 12,
     "sb": 2,
     "dk": [
-     356.3,
+     356.7,
      926.4
     ],
     "sn": [
@@ -502,7 +494,7 @@
    "parked": 6,
    "open": true,
    "mq": false,
-   "counted": "2026-11-25T19:40:58+00:00",
+   "counted": "2026-11-25T19:51:12+00:00",
    "by": {
     "app": {
      "n": 6,
@@ -520,11 +512,11 @@
      "open": true
     }
    },
-   "at": "2026-11-25T19:50:25+00:00"
+   "at": "2026-11-25T19:53:27+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-25T19:50:19+00:00"
+   "at": "2026-11-25T19:53:18+00:00"
   }
  },
  "operators": [
@@ -562,13 +554,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 2,
+  "main": 1,
   "lanes": 1,
-  "total": 3,
-  "at": "2:50 PM",
+  "total": 2,
+  "at": "2:53 PM",
   "why": "",
-  "at_iso": "2026-11-25T19:50:00+00:00",
+  "at_iso": "2026-11-25T19:53:00+00:00",
   "started": "1:03 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 1:03 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 2:50 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 1, started 1:03 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 2:53 PM ET</p></section>"
  }
 }

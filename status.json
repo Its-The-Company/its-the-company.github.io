@@ -1,10 +1,10 @@
 {
  "schema": 1,
- "at": "2026-11-25T17:41:15.125336+00:00",
+ "at": "2026-11-25T17:44:20.459755+00:00",
  "session": {
-  "active": false,
-  "kind": "",
-  "started": null,
+  "active": true,
+  "kind": "coord",
+  "started": "2026-11-25T12:41:16-05:00",
   "coord": {
    "active": true,
    "started": 1795341309,
@@ -56,42 +56,28 @@
   "landed": 1,
   "failed": 4
  },
- "workers": [],
- "who": "",
- "recent": [
-  {
-   "name": "idris",
-   "task": "[build] T-4183 Gallery Get copy",
-   "model": "opus",
-   "started": "2026-11-25T12:28:50.173Z",
-   "seconds": null,
-   "finished": "2026-11-25T17:29:04.197000+00:00"
-  },
+ "workers": [
   {
    "name": "pernille",
-   "task": "[review] T-5815",
+   "task": "[review] T-4183",
    "model": "opus",
-   "started": "2026-11-25T12:09:56.237Z",
-   "seconds": null,
-   "finished": "2026-11-25T12:10:38.632000+00:00"
+   "started": "2026-11-25T17:43:40.217Z",
+   "seconds": 40,
+   "finished": null,
+   "effort": "high"
   },
   {
    "name": "idris",
-   "task": "[build] T-5815 settle rebase conflict",
+   "task": "[build] T-4190 Settings and Pro",
    "model": "opus",
-   "started": "2026-11-25T10:23:16.905Z",
-   "seconds": null,
-   "finished": "2026-11-25T12:09:38.954000+00:00"
-  },
-  {
-   "name": "pernille",
-   "task": "[review] T-5815",
-   "model": "opus",
-   "started": "2026-11-25T10:21:26.403Z",
-   "seconds": null,
-   "finished": "2026-11-25T10:22:42.549000+00:00"
+   "started": "2026-11-25T17:44:07.920Z",
+   "seconds": 12,
+   "finished": null,
+   "effort": "high"
   }
  ],
+ "who": "Pernille, Idris",
+ "recent": [],
  "queue": {
   "runnable": [],
   "blocked": [],
@@ -101,19 +87,19 @@
  "meter": {
   "five_hour": {
    "pct": 39.0,
-   "resets_at": "2026-11-25T18:00:00.335486+00:00",
+   "resets_at": "2026-11-25T13:00:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-25T12:41:02.510079-05:00",
-   "source": "usage",
+   "read_at": "2026-11-25T12:41:22.150646-05:00",
+   "source": "live",
    "left": 61.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 74.0,
-   "resets_at": "2026-11-29T07:00:00.335507+00:00",
+   "resets_at": "2026-11-29T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-25T12:41:02.510079-05:00",
-   "source": "usage",
+   "read_at": "2026-11-25T12:41:22.150646-05:00",
+   "source": "live",
    "left": 26.0,
    "left_words": "of your weekly allowance left"
   },
@@ -124,7 +110,7 @@
    "read_at": "2026-11-25T12:41:02.510079-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-25T12:41:02.510079-05:00"
+  "read_at": "2026-11-25T12:41:22.150646-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -139,12 +125,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-25T12:56:02-05:00",
+ "next_tick": null,
  "personal": {
   "week_pct": 108.79,
   "usage_pct": 59.5,
   "work_pct": 98.3,
-  "read_at": "2026-11-25T17:41:00+00:00",
+  "read_at": "2026-11-25T17:44:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -205,8 +191,8 @@
  },
  "lock_in": {
   "on": true,
-  "pool": 0,
-  "at": "2026-11-25T12:41:00-05:00",
+  "pool": 8,
+  "at": "2026-11-25T12:44:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -214,25 +200,31 @@
    "b": "midnight"
   }
  },
- "next_tick_why": "last_tick",
+ "next_tick_why": "session",
  "idle": null,
- "pool": null,
+ "pool": {
+  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 8 (held: too few lands in 3 hours to judge a raise)",
+  "n": 8,
+  "at": "2026-11-25T12:41:02.904928-05:00"
+ },
  "lanes": [
   {
-   "name": "Idris",
-   "state": "next",
-   "task": "Idris, P2, from T-1105 (Maren's spoken-label table,...",
-   "model": null,
-   "since": null,
-   "next": []
+   "name": "Pernille",
+   "state": "running",
+   "task": "[review] T-4183",
+   "model": "opus",
+   "since": "2026-11-25T17:43:40.217Z",
+   "next": [],
+   "effort": "high"
   },
   {
-   "name": "Pernille",
-   "state": "next",
-   "task": "Pernille, P1, continuation of T-2609: after...",
-   "model": null,
-   "since": null,
-   "next": []
+   "name": "Idris",
+   "state": "running",
+   "task": "[build] T-4190 Settings and Pro",
+   "model": "opus",
+   "since": "2026-11-25T17:44:07.920Z",
+   "next": [],
+   "effort": "high"
   },
   {
    "name": "Ines",
@@ -268,7 +260,29 @@
   }
  ],
  "tasks": {
-  "run": [],
+  "run": [
+   {
+    "w": "Pernille",
+    "k": "review",
+    "t": "The Gallery shows, previews and opens every premade",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-25T17:43:40.217Z",
+    "o": "c",
+    "task": "T-4183"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "Settings and Pro: buy, restore, themes",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-25T17:44:07.920Z",
+    "o": "c",
+    "task": "T-4190"
+   }
+  ],
+  "src": "plan",
   "open": [
    {
     "w": "Idris",
@@ -363,6 +377,10 @@
    "wait": 0,
    "blocked": 0,
    "you": 0
+  },
+  "fin": {
+   "n": 0,
+   "rows": []
   }
  },
  "qr": [
@@ -404,13 +422,8 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-25T17:41:15Z",
+  "at": "2026-11-25T17:44:00Z",
   "s": {
-   "T-5709": [
-    "mergetest",
-    "iPhone tests on the MacBook",
-    null
-   ],
    "T-5850": [
     "testing",
     "Mac Mini \u00b7 test",
@@ -424,18 +437,16 @@
    ]
   },
   "nm": {
-   "T-5709": "Test the locked Gallery foot and its sheet neighbours",
    "T-5850": "Second widget extension for location widgets",
    "T-4182": "A failing widget says so and can recover"
   },
   "wk": {
-   "T-5709": "Idris",
    "T-5850": "Idris",
    "T-4182": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-25T17:41:15Z",
+  "at": "2026-11-25T17:44:00Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -449,11 +460,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 679,
+    "conflicted": 682,
     "failed": null,
-    "held": 2239,
+    "held": 2242,
     "retry": null,
-    "parked": 1004
+    "parked": 1007
    },
    "cur": [],
    "ld": [
@@ -463,8 +474,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-25T17:41:16Z",
-    "ld": 1.55,
+    "at": "2026-11-25T17:43:38Z",
+    "ld": 1.23,
     "c": 8,
     "sb": 1,
     "dk": [
@@ -480,17 +491,15 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-25T17:22:07Z",
-    "ld": 1.74,
+    "at": "2026-11-25T17:42:25Z",
+    "ld": 0.64,
     "c": 12,
-    "sb": 1,
+    "sb": 0,
     "dk": [
-     359.6,
+     360.8,
      926.4
     ],
-    "sn": [
-     "itsthecompany-runner"
-    ]
+    "sn": []
    }
   }
  },
@@ -520,14 +529,23 @@
      "open": true
     }
    },
-   "at": "2026-11-25T17:41:15+00:00"
+   "at": "2026-11-25T17:44:20+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-25T17:41:15+00:00"
+   "at": "2026-11-25T17:44:06+00:00"
   }
  },
  "operators": [
+  {
+   "w": "Operator",
+   "a": "Main plan",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session",
+   "at": "2026-11-25T12:41:16-05:00"
+  },
   {
    "w": "Operator",
    "a": "Evan's Account",
@@ -555,7 +573,6 @@
  "trimmed": [
   "lane_next",
   "queue_text",
-  "recent",
   "task_done",
   "task_title",
   "done_text",
@@ -563,13 +580,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 0,
+  "main": 2,
   "lanes": 2,
-  "total": 2,
-  "at": "12:41 PM",
+  "total": 4,
+  "at": "12:44 PM",
   "why": "",
-  "at_iso": "2026-11-25T17:41:00+00:00",
-  "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 12:41 PM ET</p></section>"
+  "at_iso": "2026-11-25T17:44:00+00:00",
+  "started": "12:41 PM",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 2, started 12:41 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 12:44 PM ET</p></section>"
  }
 }

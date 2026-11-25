@@ -1,10 +1,10 @@
 {
  "schema": 1,
- "at": "2026-11-25T17:29:19.204571+00:00",
+ "at": "2026-11-25T17:33:51.809039+00:00",
  "session": {
-  "active": true,
-  "kind": "coord",
-  "started": "2026-11-25T00:10:17-05:00",
+  "active": false,
+  "kind": "",
+  "started": null,
   "coord": {
    "active": true,
    "started": 1795341309,
@@ -139,12 +139,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": null,
+ "next_tick": "2026-11-25T00:25:06-05:00",
  "personal": {
   "week_pct": 131.67,
-  "usage_pct": 64.3,
+  "usage_pct": 55.1,
   "work_pct": 98.1,
-  "read_at": "2026-11-25T17:29:00+00:00",
+  "read_at": "2026-11-25T17:35:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -199,14 +199,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-25T12:28:00-05:00",
+   "at": "2026-11-25T12:34:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-25T12:29:00-05:00",
+  "at": "2026-11-25T12:35:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -214,13 +214,9 @@
    "b": "midnight"
   }
  },
- "next_tick_why": "session",
+ "next_tick_why": "last_tick",
  "idle": null,
- "pool": {
-  "why": "Locked in for today by an Investor: full speed until midnight; the 5-hour window allows 6; the machine allows 8 (held: too few lands in 3 hours to judge a raise)",
-  "n": 6,
-  "at": "2026-11-25T00:10:06.003441-05:00"
- },
+ "pool": null,
  "lanes": [
   {
    "name": "Idris",
@@ -273,7 +269,6 @@
  ],
  "tasks": {
   "run": [],
-  "src": "plan",
   "open": [
    {
     "w": "Idris",
@@ -368,35 +363,6 @@
    "wait": 0,
    "blocked": 0,
    "you": 0
-  },
-  "fin": {
-   "n": 74,
-   "rows": [
-    [
-     "T-2027",
-     "Re-run the notification test..."
-    ],
-    [
-     "T-5862",
-     "A cooling task passes the..."
-    ],
-    [
-     "T-5863",
-     "The main account builds two..."
-    ],
-    [
-     "T-5864",
-     "Merged tasks tick even with..."
-    ],
-    [
-     "T-1765",
-     "Stop a file from forging..."
-    ],
-    [
-     "T-3791",
-     "Add the say-so button that..."
-    ]
-   ]
   }
  },
  "qr": [
@@ -438,7 +404,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-25T17:29:19Z",
+  "at": "2026-11-25T17:33:51Z",
   "s": {
    "T-5709": [
     "mergetest",
@@ -465,23 +431,11 @@
   "wk": {
    "T-5709": "Idris",
    "T-5850": "Idris",
-   "T-4182": "Idris",
-   "T-2027": "Idris",
-   "T-5862": "Operator",
-   "T-5863": "Operator",
-   "T-5864": "Operator",
-   "T-1765": "Idris",
-   "T-3791": "Idris",
-   "T-0053": "Idris",
-   "T-0063": "Idris",
-   "T-5815": "Idris",
-   "T-5849": "Wrenna",
-   "T-5848": "Odalys",
-   "T-5845": "Odalys"
+   "T-4182": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-25T17:29:19Z",
+  "at": "2026-11-25T17:33:51Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -495,11 +449,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 667,
+    "conflicted": 672,
     "failed": null,
-    "held": 2227,
+    "held": 2232,
     "retry": null,
-    "parked": 992
+    "parked": 997
    },
    "cur": [],
    "ld": [
@@ -509,8 +463,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-25T17:29:03Z",
-    "ld": 2.35,
+    "at": "2026-11-25T17:33:53Z",
+    "ld": 2.26,
     "c": 8,
     "sb": 1,
     "dk": [
@@ -566,23 +520,14 @@
      "open": true
     }
    },
-   "at": "2026-11-25T17:29:19+00:00"
+   "at": "2026-11-25T17:33:51+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-25T17:29:19+00:00"
+   "at": "2026-11-25T17:33:51+00:00"
   }
  },
  "operators": [
-  {
-   "w": "Operator",
-   "a": "Main plan",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session",
-   "at": "2026-11-25T09:45:45-05:00"
-  },
   {
    "w": "Operator",
    "a": "Evan's Account",
@@ -612,10 +557,8 @@
   "queue_text",
   "recent",
   "task_done",
-  "fin_short",
   "task_title",
   "done_text",
-  "fin_six",
   "lane_task",
   "task_next"
  ],
@@ -623,10 +566,10 @@
   "main": 0,
   "lanes": 2,
   "total": 2,
-  "at": "12:29 PM",
+  "at": "12:35 PM",
   "why": "",
-  "at_iso": "2026-11-25T17:29:00+00:00",
+  "at_iso": "2026-11-25T17:35:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 12:29 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 12:35 PM ET</p></section>"
  }
 }

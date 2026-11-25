@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-25T21:49:55.841381+00:00",
+ "at": "2026-11-25T21:52:59.292423+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -72,7 +72,7 @@
    "task": "[build] T-4191 VoiceOver and text",
    "model": "",
    "started": "2026-11-25T20:39:20.572Z",
-   "seconds": 4235,
+   "seconds": 4418,
    "finished": null
   },
   {
@@ -80,7 +80,7 @@
    "task": "[build] T-5796 widget buttons steps",
    "model": "",
    "started": "2026-11-25T20:58:11.478Z",
-   "seconds": 3104,
+   "seconds": 3287,
    "finished": null
   }
  ],
@@ -171,7 +171,7 @@
   "week_pct": 120.87,
   "usage_pct": 60.2,
   "work_pct": 98.3,
-  "read_at": "2026-11-25T21:49:00+00:00",
+  "read_at": "2026-11-25T21:53:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -221,7 +221,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-25T16:49:00-05:00",
+  "at": "2026-11-25T16:53:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -470,8 +470,13 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-25T21:49:55Z",
+  "at": "2026-11-25T21:52:41Z",
   "s": {
+   "T-4577": [
+    "mergetest",
+    "iPhone tests on the MacBook",
+    null
+   ],
    "T-4185": [
     "testing",
     "Mac Mini \u00b7 test",
@@ -479,9 +484,11 @@
    ]
   },
   "nm": {
+   "T-4577": "Keep a widget run safe when the app is suspended",
    "T-4185": "Launcher widgets open the apps a person chose"
   },
   "wk": {
+   "T-4577": "Idris",
    "T-4185": "Idris",
    "T-5539": "Pernille",
    "T-5540": "Pernille",
@@ -494,7 +501,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-25T21:49:55Z",
+  "at": "2026-11-25T21:52:41Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -508,11 +515,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 928,
+    "conflicted": 931,
     "failed": null,
-    "held": 2488,
+    "held": 2491,
     "retry": null,
-    "parked": 1253
+    "parked": 1256
    },
    "cur": [],
    "ld": [
@@ -522,12 +529,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-25T21:49:56Z",
-    "ld": 1.24,
+    "at": "2026-11-25T21:52:17Z",
+    "ld": 0.97,
     "c": 8,
     "sb": 1,
     "dk": [
-     23.4,
+     23.2,
      228.3
     ],
     "ss": [
@@ -539,8 +546,8 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-25T21:48:17Z",
-    "ld": 18.86,
+    "at": "2026-11-25T21:50:22Z",
+    "ld": 12.53,
     "c": 12,
     "sb": 0,
     "dk": [
@@ -577,11 +584,11 @@
      "open": true
     }
    },
-   "at": "2026-11-25T21:49:55+00:00"
+   "at": "2026-11-25T21:52:59+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-25T21:49:55+00:00"
+   "at": "2026-11-25T21:52:59+00:00"
   }
  },
  "operators": [
@@ -625,10 +632,10 @@
   "main": 2,
   "lanes": 1,
   "total": 3,
-  "at": "4:49 PM",
+  "at": "4:53 PM",
   "why": "",
-  "at_iso": "2026-11-25T21:49:00+00:00",
+  "at_iso": "2026-11-25T21:53:00+00:00",
   "started": "1:03 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 1:03 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 4:49 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 1:03 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 4:53 PM ET</p></section>"
  }
 }

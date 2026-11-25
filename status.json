@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-25T08:32:55.741883+00:00",
+ "at": "2026-11-25T08:35:55.776268+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -420,7 +420,7 @@
    "task": "[build] T-5815 fix two UI tests",
    "model": "opus",
    "started": "2026-11-25T05:10:53.997Z",
-   "seconds": 12121,
+   "seconds": 12301,
    "finished": null
   }
  ],
@@ -487,7 +487,7 @@
   "week_pct": 119.47,
   "usage_pct": 64.4,
   "work_pct": 98.1,
-  "read_at": "2026-11-25T08:32:00+00:00",
+  "read_at": "2026-11-25T08:35:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -521,7 +521,7 @@
   }
  ],
  "disk": {
-  "free_gb": 26,
+  "free_gb": 29,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -530,14 +530,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-25T03:31:00-05:00",
+   "at": "2026-11-25T03:34:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 2,
-  "at": "2026-11-25T03:32:00-05:00",
+  "at": "2026-11-25T03:35:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -783,12 +783,12 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-25T08:32:48Z",
+  "at": "2026-11-25T08:35:37Z",
   "s": {
    "T-4182": [
-    "mergeq",
-    "1st to merge",
-    1795595568229
+    "mergetest",
+    "Xcode checks on the MacBook, 1st to merge",
+    1795595617672
    ]
   },
   "nm": {
@@ -811,11 +811,11 @@
   }
  },
  "ln": {
-  "at": "2026-11-25T08:32:48Z",
+  "at": "2026-11-25T08:35:37Z",
   "mq": {
    "n": {
-    "checking": 0,
-    "inline": 1,
+    "checking": 1,
+    "inline": 0,
     "conflicted": 1,
     "failed": 0,
     "held": 3,
@@ -823,15 +823,24 @@
     "parked": 7
    },
    "m": {
-    "checking": null,
-    "inline": 0,
-    "conflicted": 131,
+    "checking": 2,
+    "inline": null,
+    "conflicted": 134,
     "failed": null,
-    "held": 2824,
+    "held": 2827,
     "retry": null,
-    "parked": 1691
+    "parked": 1693
    },
-   "cur": [],
+   "cur": [
+    [
+     [
+      "T-4182"
+     ],
+     "iPhone app tests, sent and waiting its turn",
+     "MacBook",
+     2
+    ]
+   ],
    "ld": [
     0,
     null
@@ -839,8 +848,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-25T08:32:44Z",
-    "ld": 1.88,
+    "at": "2026-11-25T08:35:14Z",
+    "ld": 1.53,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -894,11 +903,11 @@
      "open": true
     }
    },
-   "at": "2026-11-25T08:32:55+00:00"
+   "at": "2026-11-25T08:35:55+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-25T08:32:40+00:00"
+   "at": "2026-11-25T08:35:43+00:00"
   }
  },
  "operators": [
@@ -941,10 +950,10 @@
   "main": 1,
   "lanes": 1,
   "total": 2,
-  "at": "3:32 AM",
+  "at": "3:35 AM",
   "why": "",
-  "at_iso": "2026-11-25T08:32:00+00:00",
+  "at_iso": "2026-11-25T08:35:00+00:00",
   "started": "12:10 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 1, started 12:10 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 3:32 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 1, started 12:10 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 3:35 AM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-25T04:12:51.410424+00:00",
+ "at": "2026-11-25T04:15:53.983611+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -496,8 +496,21 @@
   "week_pct": 113.7,
   "usage_pct": 65.1,
   "work_pct": 98.1,
-  "read_at": "2026-11-25T04:12:00+00:00",
-  "running": []
+  "read_at": "2026-11-25T04:15:00+00:00",
+  "running": [
+   {
+    "lane": "a",
+    "task": "T-4181",
+    "w": "Idris",
+    "k": "build",
+    "t": "Widgets refresh on their own and by a tap",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-24T23:14:45-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   }
+  ]
  },
  "api_credits": [
   {
@@ -526,14 +539,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-24T23:10:00-05:00",
+   "at": "2026-11-24T23:13:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-24T23:12:00-05:00",
+  "at": "2026-11-24T23:15:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -675,6 +688,11 @@
   ],
   "done": [
    {
+    "w": "Operator",
+    "t": "A feature's linked steps are now built in one session, in order, and merged together, and a step...",
+    "at": "2026-11-24T23:14:00-05:00"
+   },
+   {
     "w": "Wrenna",
     "t": "The research on which widget animations Apple allows is done and on main, with the Pro Animation...",
     "at": "2026-11-24T22:56:00-05:00"
@@ -682,11 +700,6 @@
    {
     "w": "Odalys+pernille+operator",
     "t": "When several finished app changes are waiting for their turn to merge, the one whose turn it is...",
-    "at": "2026-11-24T22:50:00-05:00"
-   },
-   {
-    "w": "Operator",
-    "t": "A new working copy no longer compiles the whole app from scratch: Xcode now reuses what any...",
     "at": "2026-11-24T22:50:00-05:00"
    }
   ],
@@ -697,8 +710,12 @@
    "you": 1
   },
   "fin": {
-   "n": 11,
+   "n": 12,
    "rows": [
+    [
+     "T-5841",
+     "A feature's chain is built..."
+    ],
     [
      "T-5635",
      "Find the widget animations..."
@@ -718,10 +735,6 @@
     [
      "T-3348",
      "Find why a Plan mode answer..."
-    ],
-    [
-     "T-5617",
-     "Show a report's evening time..."
     ]
    ]
   }
@@ -765,9 +778,21 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-25T04:12:34Z",
-  "s": {},
+  "at": "2026-11-25T04:15:46Z",
+  "s": {
+   "T-4181": [
+    "merged",
+    "on main 1:09 PM ET",
+    1795543754000,
+    ""
+   ]
+  },
+  "nm": {
+   "T-4181": "Widgets refresh on their own and by a tap"
+  },
   "wk": {
+   "T-4181": "Idris",
+   "T-5841": "Operator",
    "T-5635": "Wrenna",
    "T-5822": "Operator",
    "T-5840": "Operator",
@@ -782,7 +807,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-25T04:12:34Z",
+  "at": "2026-11-25T04:15:46Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -798,9 +823,9 @@
     "inline": null,
     "conflicted": null,
     "failed": null,
-    "held": 2564,
+    "held": 2567,
     "retry": null,
-    "parked": 1964
+    "parked": 1967
    },
    "cur": [],
    "ld": [
@@ -810,12 +835,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-25T04:12:11Z",
-    "ld": 0.71,
+    "at": "2026-11-25T04:15:24Z",
+    "ld": 0.56,
     "c": 8,
     "sb": 0,
     "dk": [
-     35.3,
+     35.5,
      228.3
     ],
     "ss": [
@@ -863,11 +888,11 @@
      "open": true
     }
    },
-   "at": "2026-11-25T04:12:51+00:00"
+   "at": "2026-11-25T04:15:53+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-25T04:12:40+00:00"
+   "at": "2026-11-25T04:15:46+00:00"
   }
  },
  "operators": [
@@ -879,6 +904,15 @@
    "e": "high",
    "t": "Work session",
    "at": "2026-11-24T22:32:15-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Evan's Account",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session \u2013 1 task",
+   "at": "2026-11-24T23:14:45-05:00"
   }
  ],
  "reply": {
@@ -900,12 +934,12 @@
  ],
  "agents_now": {
   "main": 0,
-  "lanes": 0,
-  "total": 0,
-  "at": "11:12 PM",
-  "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
-  "at_iso": "2026-11-25T04:12:00+00:00",
+  "lanes": 1,
+  "total": 1,
+  "at": "11:15 PM",
+  "why": "",
+  "at_iso": "2026-11-25T04:15:00+00:00",
   "started": "8:05 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0, started 8:05 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 11:12 PM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0, started 8:05 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 11:15 PM ET</p></section>"
  }
 }

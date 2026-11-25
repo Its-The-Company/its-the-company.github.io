@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-25T12:08:05.471469+00:00",
+ "at": "2026-11-25T12:11:06.073657+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -414,18 +414,25 @@
   "landed": 1,
   "failed": 4
  },
- "workers": [
+ "workers": [],
+ "who": "",
+ "recent": [
+  {
+   "name": "pernille",
+   "task": "[review] T-5815",
+   "model": "opus",
+   "started": "2026-11-25T12:09:56.237Z",
+   "seconds": null,
+   "finished": "2026-11-25T12:10:38.632000+00:00"
+  },
   {
    "name": "idris",
    "task": "[build] T-5815 settle rebase conflict",
    "model": "opus",
    "started": "2026-11-25T10:23:16.905Z",
-   "seconds": 6288,
-   "finished": null
-  }
- ],
- "who": "Idris",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-25T12:09:38.954000+00:00"
+  },
   {
    "name": "pernille",
    "task": "[review] T-5815",
@@ -441,22 +448,6 @@
    "started": "2026-11-25T09:20:35.800Z",
    "seconds": null,
    "finished": "2026-11-25T10:21:04.560000+00:00"
-  },
-  {
-   "name": "pernille",
-   "task": "[review] T-5815",
-   "model": "opus",
-   "started": "2026-11-25T09:16:33.953Z",
-   "seconds": null,
-   "finished": "2026-11-25T09:20:13.295000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-5815 fix two UI tests",
-   "model": "opus",
-   "started": "2026-11-25T05:10:53.997Z",
-   "seconds": null,
-   "finished": "2026-11-25T09:16:19.152000+00:00"
   }
  ],
  "queue": {
@@ -468,19 +459,19 @@
  "meter": {
   "five_hour": {
    "pct": 9.0,
-   "resets_at": "2026-11-25T12:59:59.863966+00:00",
+   "resets_at": "2026-11-25T08:00:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-25T07:02:33.964081-05:00",
-   "source": "usage",
+   "read_at": "2026-11-25T07:11:01.297026-05:00",
+   "source": "live",
    "left": 91.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 67.0,
-   "resets_at": "2026-11-29T06:59:59.863983+00:00",
+   "resets_at": "2026-11-29T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-25T07:02:33.964081-05:00",
-   "source": "usage",
+   "read_at": "2026-11-25T07:11:01.297026-05:00",
+   "source": "live",
    "left": 33.0,
    "left_words": "of your weekly allowance left"
   },
@@ -491,7 +482,7 @@
    "read_at": "2026-11-25T07:02:33.964081-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-25T07:02:33.964081-05:00"
+  "read_at": "2026-11-25T07:11:01.297026-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -511,7 +502,7 @@
   "week_pct": 120.85,
   "usage_pct": 64.3,
   "work_pct": 98.1,
-  "read_at": "2026-11-25T12:08:00+00:00",
+  "read_at": "2026-11-25T12:11:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -561,7 +552,7 @@
  "lock_in": {
   "on": true,
   "pool": 2,
-  "at": "2026-11-25T07:08:00-05:00",
+  "at": "2026-11-25T07:11:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -579,10 +570,10 @@
  "lanes": [
   {
    "name": "Idris",
-   "state": "running",
-   "task": "[build] T-5815 settle rebase conflict",
-   "model": "opus",
-   "since": "2026-11-25T10:23:16.905Z",
+   "state": "next",
+   "task": "Idris, P2, from T-1105 (Maren's spoken-label table,...",
+   "model": null,
+   "since": null,
    "next": []
   },
   {
@@ -627,17 +618,7 @@
   }
  ],
  "tasks": {
-  "run": [
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "Build the four-tab shell with Projects as home",
-    "m": "opus",
-    "at": "2026-11-25T10:23:16.905Z",
-    "o": "c",
-    "task": "T-5815"
-   }
-  ],
+  "run": [],
   "src": "plan",
   "open": [
    {
@@ -807,19 +788,19 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-25T12:07:54Z",
+  "at": "2026-11-25T12:11:06Z",
   "s": {
-   "T-5815": [
+   "T-4188": [
     "mergetest",
     "iPhone tests on the MacBook",
     null
    ]
   },
   "nm": {
-   "T-5815": "Build the four-tab shell with Projects as home"
+   "T-4188": "Location, steps and notifications work in scripts and..."
   },
   "wk": {
-   "T-5815": "Idris",
+   "T-4188": "Idris",
    "T-5849": "Wrenna",
    "T-5848": "Odalys",
    "T-5845": "Odalys",
@@ -835,7 +816,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-25T12:07:54Z",
+  "at": "2026-11-25T12:11:06Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -849,11 +830,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 346,
+    "conflicted": 349,
     "failed": null,
-    "held": 1906,
+    "held": 1909,
     "retry": null,
-    "parked": 997
+    "parked": 1000
    },
    "cur": [],
    "ld": [
@@ -863,8 +844,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-25T12:07:09Z",
-    "ld": 0.47,
+    "at": "2026-11-25T12:11:06Z",
+    "ld": 0.41,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -878,16 +859,16 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-25T12:04:35Z",
-    "ld": 3.72,
+    "at": "2026-11-25T12:09:21Z",
+    "ld": 4.45,
     "c": 12,
     "sb": 1,
     "dk": [
-     364.1,
+     363.6,
      926.4
     ],
     "sn": [
-     "itsthecompany-runner-2"
+     "itsthecompany-runner"
     ]
    }
   }
@@ -918,11 +899,11 @@
      "open": true
     }
    },
-   "at": "2026-11-25T12:08:05+00:00"
+   "at": "2026-11-25T12:11:06+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-25T12:08:05+00:00"
+   "at": "2026-11-25T12:11:06+00:00"
   }
  },
  "operators": [
@@ -963,13 +944,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 1,
+  "main": 0,
   "lanes": 1,
-  "total": 2,
-  "at": "7:08 AM",
+  "total": 1,
+  "at": "7:11 AM",
   "why": "",
-  "at_iso": "2026-11-25T12:08:00+00:00",
+  "at_iso": "2026-11-25T12:11:00+00:00",
   "started": "12:10 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 1, started 12:10 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 7:08 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0, started 12:10 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 7:11 AM ET</p></section>"
  }
 }

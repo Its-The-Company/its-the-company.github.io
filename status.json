@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-25T23:30:38.400212+00:00",
+ "at": "2026-11-25T23:33:39.756435+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -82,20 +82,20 @@
    "task": "[build] T-5796 widget buttons steps",
    "model": "",
    "started": "2026-11-25T20:58:11.478Z",
-   "seconds": 9146,
+   "seconds": 9328,
    "finished": null
-  },
+  }
+ ],
+ "who": "Idris",
+ "recent": [
   {
    "name": "maren",
    "task": "[review] T-4191",
    "model": "",
    "started": "2026-11-25T23:22:05.986Z",
-   "seconds": 512,
-   "finished": null
-  }
- ],
- "who": "Idris, Maren",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-25T23:32:47.714000+00:00"
+  },
   {
    "name": "idris",
    "task": "[build] T-4191 VoiceOver and text",
@@ -119,20 +119,12 @@
    "started": "2026-11-25T20:42:28.648Z",
    "seconds": null,
    "finished": "2026-11-25T20:48:40.658000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-5050 TestFlight phone build",
-   "model": "",
-   "started": "2026-11-25T20:40:23.716Z",
-   "seconds": null,
-   "finished": "2026-11-25T20:41:23.752000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 348,
+  "runnable_count": 349,
   "blocked_count": 0
  },
  "meter": {
@@ -181,7 +173,7 @@
   "week_pct": 123.16,
   "usage_pct": 60.0,
   "work_pct": 98.3,
-  "read_at": "2026-11-25T23:30:00+00:00",
+  "read_at": "2026-11-25T23:33:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -243,7 +235,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-25T18:30:00-05:00",
+  "at": "2026-11-25T18:33:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -265,14 +257,6 @@
    "task": "[build] T-5796 widget buttons steps",
    "model": null,
    "since": "2026-11-25T20:58:11.478Z",
-   "next": []
-  },
-  {
-   "name": "Maren",
-   "state": "running",
-   "task": "[review] T-4191",
-   "model": null,
-   "since": "2026-11-25T23:22:05.986Z",
    "next": []
   },
   {
@@ -306,6 +290,14 @@
    "model": null,
    "since": null,
    "next": []
+  },
+  {
+   "name": "Maren",
+   "state": "next",
+   "task": "Maren, P1, from T-2296 review M2...",
+   "model": null,
+   "since": null,
+   "next": []
   }
  ],
  "tasks": {
@@ -317,14 +309,6 @@
     "at": "2026-11-25T20:58:11.478Z",
     "o": "c",
     "task": "T-5796"
-   },
-   {
-    "w": "Maren",
-    "k": "review",
-    "t": "VoiceOver and large text work on every screen",
-    "at": "2026-11-25T23:22:05.986Z",
-    "o": "c",
-    "task": "T-4191"
    }
   ],
   "src": "plan",
@@ -418,7 +402,7 @@
    }
   ],
   "count": {
-   "next": 348,
+   "next": 349,
    "wait": 0,
    "blocked": 0,
    "you": 0
@@ -492,32 +476,25 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-25T23:30:25Z",
+  "at": "2026-11-25T23:33:39Z",
   "s": {
    "T-4415": [
     "mergetest",
     "iPhone tests on the MacBook",
     null
    ],
-   "T-5796": [
-    "testing",
-    "Mac Mini \u00b7 test",
-    null
-   ],
    "T-4185": [
     "testq",
     "1st for a Simulator",
-    1795648345024
+    1795648359756
    ]
   },
   "nm": {
    "T-4415": "Decide what the refresh button shows when nothing can run",
-   "T-5796": "Internal TestFlight builds carry the test widgets",
    "T-4185": "Launcher widgets open the apps a person chose"
   },
   "wk": {
    "T-4415": "Idris",
-   "T-5796": "Idris",
    "T-4185": "Idris",
    "T-5539": "Pernille",
    "T-5540": "Pernille",
@@ -530,7 +507,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-25T23:30:25Z",
+  "at": "2026-11-25T23:33:39Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -544,11 +521,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 1028,
+    "conflicted": 1032,
     "failed": null,
-    "held": 2588,
+    "held": 2591,
     "retry": null,
-    "parked": 1353
+    "parked": 1357
    },
    "cur": [],
    "ld": [
@@ -558,12 +535,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-25T23:29:57Z",
-    "ld": 7.18,
+    "at": "2026-11-25T23:32:52Z",
+    "ld": 8.65,
     "c": 8,
     "sb": 1,
     "dk": [
-     22.4,
+     22.1,
      228.3
     ],
     "ss": [
@@ -616,11 +593,11 @@
      "open": true
     }
    },
-   "at": "2026-11-25T23:30:38+00:00"
+   "at": "2026-11-25T23:33:39+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-25T23:30:32+00:00"
+   "at": "2026-11-25T23:33:34+00:00"
   }
  },
  "operators": [
@@ -670,13 +647,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 2,
+  "main": 1,
   "lanes": 2,
-  "total": 4,
-  "at": "6:30 PM",
+  "total": 3,
+  "at": "6:33 PM",
   "why": "",
-  "at_iso": "2026-11-25T23:30:00+00:00",
+  "at_iso": "2026-11-25T23:33:00+00:00",
   "started": "1:03 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 2, started 1:03 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 6:30 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 1, started 1:03 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 6:33 PM ET</p></section>"
  }
 }

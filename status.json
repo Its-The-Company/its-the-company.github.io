@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-25T02:14:52.916267+00:00",
+ "at": "2026-11-25T02:19:58.243618+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -403,7 +403,7 @@
     ]
    }
   ],
-  "flow_n": 32,
+  "flow_n": 31,
   "done": [],
   "landed": 1,
   "failed": 4
@@ -453,19 +453,19 @@
  "meter": {
   "five_hour": {
    "pct": 19.0,
-   "resets_at": "2026-11-25T02:59:59.654547+00:00",
+   "resets_at": "2026-11-24T22:00:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-24T20:51:51.202780-05:00",
-   "source": "usage",
+   "read_at": "2026-11-24T21:18:31.555684-05:00",
+   "source": "live",
    "left": 81.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 59.0,
-   "resets_at": "2026-11-29T06:59:59.654566+00:00",
+   "resets_at": "2026-11-29T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-24T20:51:51.202780-05:00",
-   "source": "usage",
+   "read_at": "2026-11-24T21:18:31.555684-05:00",
+   "source": "live",
    "left": 41.0,
    "left_words": "of your weekly allowance left"
   },
@@ -476,7 +476,7 @@
    "read_at": "2026-11-24T20:51:51.202780-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-24T20:51:51.202780-05:00"
+  "read_at": "2026-11-24T21:18:31.555684-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -496,7 +496,7 @@
   "week_pct": 117.15,
   "usage_pct": 65.1,
   "work_pct": 98.1,
-  "read_at": "2026-11-25T02:17:00+00:00",
+  "read_at": "2026-11-25T02:20:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -546,7 +546,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-24T21:17:00-05:00",
+  "at": "2026-11-24T21:20:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -557,7 +557,7 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Locked in for today by an Investor: full speed until midnight; the 5-hour window allows 6; the machine allows 8 (held: too few lands in 3 hours to judge a raise)",
+  "why": "Locked in for today by an Investor: full speed until midnight; the 5-hour window allows 6; the machine allows 8 (at its floor: load 12.3 a core is over 10)",
   "n": 6,
   "at": "2026-11-24T20:05:21.683458-05:00"
  },
@@ -766,7 +766,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-25T02:14:52Z",
+  "at": "2026-11-25T02:19:52Z",
   "s": {
    "T-4257": [
     "mergetest",
@@ -793,7 +793,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-25T02:14:52Z",
+  "at": "2026-11-25T02:19:52Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -809,9 +809,9 @@
     "inline": null,
     "conflicted": null,
     "failed": null,
-    "held": 2446,
+    "held": 2451,
     "retry": null,
-    "parked": 1846
+    "parked": 1851
    },
    "cur": [],
    "ld": [
@@ -821,12 +821,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-25T02:13:44Z",
-    "ld": 6.4,
+    "at": "2026-11-25T02:19:05Z",
+    "ld": 13.13,
     "c": 8,
     "sb": 0,
     "dk": [
-     35.3,
+     34.9,
      228.3
     ],
     "ss": [
@@ -874,11 +874,11 @@
      "open": true
     }
    },
-   "at": "2026-11-25T02:14:52+00:00"
+   "at": "2026-11-25T02:19:58+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-25T02:14:52+00:00"
+   "at": "2026-11-25T02:19:52+00:00"
   }
  },
  "operators": [
@@ -889,7 +889,7 @@
    "m": "opus",
    "e": "high",
    "t": "Work session",
-   "at": "2026-11-24T20:34:50-05:00"
+   "at": "2026-11-24T21:19:40-05:00"
   },
   {
    "w": "Operator",
@@ -902,8 +902,8 @@
   }
  ],
  "reply": {
-  "sent": "2026-11-25T01:33:36Z",
-  "seconds": 73.0
+  "sent": "2026-11-25T02:16:30Z",
+  "seconds": 189.0
  },
  "inbox": [],
  "trimmed": [
@@ -921,10 +921,10 @@
   "main": 0,
   "lanes": 1,
   "total": 1,
-  "at": "9:17 PM",
+  "at": "9:20 PM",
   "why": "",
-  "at_iso": "2026-11-25T02:17:00+00:00",
+  "at_iso": "2026-11-25T02:20:00+00:00",
   "started": "8:05 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0, started 8:05 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 9:17 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0, started 8:05 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 9:20 PM ET</p></section>"
  }
 }

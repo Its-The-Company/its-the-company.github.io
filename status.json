@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-25T09:18:38.641317+00:00",
+ "at": "2026-11-25T09:21:43.798966+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -416,16 +416,24 @@
  },
  "workers": [
   {
+   "name": "idris",
+   "task": "[build] T-5815 review fixes",
+   "model": "opus",
+   "started": "2026-11-25T09:20:35.800Z",
+   "seconds": 67,
+   "finished": null
+  }
+ ],
+ "who": "Idris",
+ "recent": [
+  {
    "name": "pernille",
    "task": "[review] T-5815",
    "model": "opus",
    "started": "2026-11-25T09:16:33.953Z",
-   "seconds": 124,
-   "finished": null
-  }
- ],
- "who": "Pernille",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-25T09:20:13.295000+00:00"
+  },
   {
    "name": "idris",
    "task": "[build] T-5815 fix two UI tests",
@@ -495,7 +503,7 @@
   "week_pct": 119.47,
   "usage_pct": 64.4,
   "work_pct": 98.1,
-  "read_at": "2026-11-25T09:18:00+00:00",
+  "read_at": "2026-11-25T09:21:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -557,7 +565,7 @@
  "lock_in": {
   "on": true,
   "pool": 2,
-  "at": "2026-11-25T04:18:00-05:00",
+  "at": "2026-11-25T04:21:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -574,17 +582,17 @@
  },
  "lanes": [
   {
-   "name": "Pernille",
+   "name": "Idris",
    "state": "running",
-   "task": "[review] T-5815",
+   "task": "[build] T-5815 review fixes",
    "model": "opus",
-   "since": "2026-11-25T09:16:33.953Z",
+   "since": "2026-11-25T09:20:35.800Z",
    "next": []
   },
   {
-   "name": "Idris",
+   "name": "Pernille",
    "state": "next",
-   "task": "Idris, P2, from T-1105 (Maren's spoken-label table,...",
+   "task": "Pernille, P1, continuation of T-2609: after...",
    "model": null,
    "since": null,
    "next": []
@@ -625,11 +633,11 @@
  "tasks": {
   "run": [
    {
-    "w": "Pernille",
-    "k": "review",
+    "w": "Idris",
+    "k": "build",
     "t": "Build the four-tab shell with Projects as home",
     "m": "opus",
-    "at": "2026-11-25T09:16:33.953Z",
+    "at": "2026-11-25T09:20:35.800Z",
     "o": "c",
     "task": "T-5815"
    }
@@ -803,7 +811,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-25T09:18:38Z",
+  "at": "2026-11-25T09:21:26Z",
   "s": {
    "T-4188": [
     "mergetest",
@@ -831,7 +839,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-25T09:18:38Z",
+  "at": "2026-11-25T09:21:26Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -845,11 +853,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 177,
+    "conflicted": 179,
     "failed": null,
-    "held": 2870,
+    "held": 2873,
     "retry": null,
-    "parked": 1736
+    "parked": 1739
    },
    "cur": [],
    "ld": [
@@ -859,12 +867,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-25T09:18:18Z",
-    "ld": 1.86,
+    "at": "2026-11-25T09:20:38Z",
+    "ld": 1.44,
     "c": 8,
     "sb": 0,
     "dk": [
-     27.2,
+     29.2,
      228.3
     ],
     "ss": [
@@ -914,11 +922,11 @@
      "open": true
     }
    },
-   "at": "2026-11-25T09:18:38+00:00"
+   "at": "2026-11-25T09:21:43+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-25T09:18:25+00:00"
+   "at": "2026-11-25T09:21:43+00:00"
   }
  },
  "operators": [
@@ -970,10 +978,10 @@
   "main": 1,
   "lanes": 2,
   "total": 3,
-  "at": "4:18 AM",
+  "at": "4:21 AM",
   "why": "",
-  "at_iso": "2026-11-25T09:18:00+00:00",
+  "at_iso": "2026-11-25T09:21:00+00:00",
   "started": "12:10 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 1, started 12:10 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 4:18 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 1, started 12:10 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 4:21 AM ET</p></section>"
  }
 }

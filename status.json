@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-25T02:19:58.243618+00:00",
+ "at": "2026-11-25T02:23:03.029949+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -447,24 +447,24 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 441,
+  "runnable_count": 440,
   "blocked_count": 2
  },
  "meter": {
   "five_hour": {
-   "pct": 19.0,
+   "pct": 20.0,
    "resets_at": "2026-11-24T22:00:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-24T21:18:31.555684-05:00",
+   "read_at": "2026-11-24T21:22:08.135495-05:00",
    "source": "live",
-   "left": 81.0,
+   "left": 80.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 59.0,
    "resets_at": "2026-11-29T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-24T21:18:31.555684-05:00",
+   "read_at": "2026-11-24T21:22:08.135495-05:00",
    "source": "live",
    "left": 41.0,
    "left_words": "of your weekly allowance left"
@@ -476,7 +476,7 @@
    "read_at": "2026-11-24T20:51:51.202780-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-24T21:18:31.555684-05:00"
+  "read_at": "2026-11-24T21:22:08.135495-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -496,7 +496,7 @@
   "week_pct": 117.15,
   "usage_pct": 65.1,
   "work_pct": 98.1,
-  "read_at": "2026-11-25T02:20:00+00:00",
+  "read_at": "2026-11-25T02:23:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -546,7 +546,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-24T21:20:00-05:00",
+  "at": "2026-11-24T21:23:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -557,7 +557,7 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Locked in for today by an Investor: full speed until midnight; the 5-hour window allows 6; the machine allows 8 (at its floor: load 12.3 a core is over 10)",
+  "why": "Locked in for today by an Investor: full speed until midnight; the 5-hour window allows 6; the machine allows 8 (held: too few lands in 3 hours to judge a raise)",
   "n": 6,
   "at": "2026-11-24T20:05:21.683458-05:00"
  },
@@ -597,7 +597,7 @@
   {
    "name": "Odalys",
    "state": "next",
-   "task": "Odalys, P0, from T-4845 (slice 2; blocker part of...",
+   "task": "Odalys, P3, from T-4468: the city list...",
    "model": null,
    "since": null,
    "next": []
@@ -644,13 +644,6 @@
     "o": "c"
    },
    {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Let Chat and approvals read every main thread",
-    "s": "next",
-    "o": "c"
-   },
-   {
     "w": "Idris",
     "k": "build",
     "t": "Widgets refresh on their own and by a tap",
@@ -684,9 +677,21 @@
     "t": "Fix the MacBook test jobs that keep failing",
     "s": "next",
     "o": "c"
+   },
+   {
+    "w": "Operator",
+    "k": "fix",
+    "t": "Fix a MacBook test job that failed",
+    "s": "next",
+    "o": "c"
    }
   ],
   "done": [
+   {
+    "w": "Operator",
+    "t": "Every part of the company that writes to or reads from the main conversation thread now follows...",
+    "at": "2026-11-24T21:22:00-05:00"
+   },
    {
     "w": "Operator",
     "t": "Each twice-daily report now starts at its scheduled time in a session of its own, started by the...",
@@ -696,22 +701,21 @@
     "w": "Idris",
     "t": "The plan now says the Builder writes its own files one way: people can read the code, and...",
     "at": "2026-11-24T20:30:00-05:00"
-   },
-   {
-    "w": "Operator",
-    "t": "When a merge's push to GitHub fails, the merge script now shows git's own words, checks whether...",
-    "at": "2026-11-24T20:28:00-05:00"
    }
   ],
   "count": {
-   "next": 441,
+   "next": 440,
    "wait": 1,
    "blocked": 1,
    "you": 1
   },
   "fin": {
-   "n": 3,
+   "n": 4,
    "rows": [
+    [
+     "T-4986",
+     "Let Chat and approvals read..."
+    ],
     [
      "T-5834",
      "Reports go out at their time"
@@ -766,7 +770,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-25T02:19:52Z",
+  "at": "2026-11-25T02:22:44Z",
   "s": {
    "T-4257": [
     "mergetest",
@@ -787,13 +791,14 @@
   "wk": {
    "T-4257": "Idris",
    "T-4186": "Idris",
+   "T-4986": "Odalys",
    "T-5834": "Operator",
    "T-5819": "Idris",
    "T-5833": "Operator"
   }
  },
  "ln": {
-  "at": "2026-11-25T02:19:52Z",
+  "at": "2026-11-25T02:22:44Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -809,9 +814,9 @@
     "inline": null,
     "conflicted": null,
     "failed": null,
-    "held": 2451,
+    "held": 2454,
     "retry": null,
-    "parked": 1851
+    "parked": 1854
    },
    "cur": [],
    "ld": [
@@ -821,12 +826,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-25T02:19:05Z",
-    "ld": 13.13,
+    "at": "2026-11-25T02:22:44Z",
+    "ld": 7.28,
     "c": 8,
     "sb": 0,
     "dk": [
-     34.9,
+     35.1,
      228.3
     ],
     "ss": [
@@ -856,7 +861,7 @@
    "parked": 14,
    "open": true,
    "mq": false,
-   "counted": "2026-11-25T02:12:13+00:00",
+   "counted": "2026-11-25T02:22:20+00:00",
    "by": {
     "app": {
      "n": 11,
@@ -874,11 +879,11 @@
      "open": true
     }
    },
-   "at": "2026-11-25T02:19:58+00:00"
+   "at": "2026-11-25T02:23:03+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-25T02:19:52+00:00"
+   "at": "2026-11-25T02:22:57+00:00"
   }
  },
  "operators": [
@@ -921,10 +926,10 @@
   "main": 0,
   "lanes": 1,
   "total": 1,
-  "at": "9:20 PM",
+  "at": "9:23 PM",
   "why": "",
-  "at_iso": "2026-11-25T02:20:00+00:00",
+  "at_iso": "2026-11-25T02:23:00+00:00",
   "started": "8:05 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0, started 8:05 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 9:20 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0, started 8:05 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 9:23 PM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-25T23:33:39.756435+00:00",
+ "at": "2026-11-25T23:36:41.334100+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -82,7 +82,7 @@
    "task": "[build] T-5796 widget buttons steps",
    "model": "",
    "started": "2026-11-25T20:58:11.478Z",
-   "seconds": 9328,
+   "seconds": 9509,
    "finished": null
   }
  ],
@@ -173,7 +173,7 @@
   "week_pct": 123.16,
   "usage_pct": 60.0,
   "work_pct": 98.3,
-  "read_at": "2026-11-25T23:33:00+00:00",
+  "read_at": "2026-11-25T23:36:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -235,7 +235,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-25T18:33:00-05:00",
+  "at": "2026-11-25T18:36:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -476,25 +476,18 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-25T23:33:39Z",
+  "at": "2026-11-25T23:36:35Z",
   "s": {
-   "T-4415": [
-    "mergetest",
-    "iPhone tests on the MacBook",
-    null
-   ],
    "T-4185": [
-    "testq",
-    "1st for a Simulator",
-    1795648359756
+    "testing",
+    "MacBook \u00b7 test",
+    null
    ]
   },
   "nm": {
-   "T-4415": "Decide what the refresh button shows when nothing can run",
    "T-4185": "Launcher widgets open the apps a person chose"
   },
   "wk": {
-   "T-4415": "Idris",
    "T-4185": "Idris",
    "T-5539": "Pernille",
    "T-5540": "Pernille",
@@ -507,7 +500,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-25T23:33:39Z",
+  "at": "2026-11-25T23:36:35Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -521,11 +514,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 1032,
+    "conflicted": 1035,
     "failed": null,
-    "held": 2591,
+    "held": 2594,
     "retry": null,
-    "parked": 1357
+    "parked": 1360
    },
    "cur": [],
    "ld": [
@@ -535,12 +528,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-25T23:32:52Z",
-    "ld": 8.65,
+    "at": "2026-11-25T23:36:11Z",
+    "ld": 5.58,
     "c": 8,
     "sb": 1,
     "dk": [
-     22.1,
+     22.2,
      228.3
     ],
     "ss": [
@@ -552,12 +545,12 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-25T23:29:18Z",
-    "ld": 6.03,
+    "at": "2026-11-25T23:33:27Z",
+    "ld": 5.14,
     "c": 12,
     "sb": 2,
     "dk": [
-     432.5,
+     433.4,
      926.4
     ],
     "sn": [
@@ -593,11 +586,11 @@
      "open": true
     }
    },
-   "at": "2026-11-25T23:33:39+00:00"
+   "at": "2026-11-25T23:36:41+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-25T23:33:34+00:00"
+   "at": "2026-11-25T23:36:29+00:00"
   }
  },
  "operators": [
@@ -633,13 +626,25 @@
   "sent": "2026-11-25T21:22:19Z",
   "seconds": 58.0
  },
- "inbox": [],
+ "inbox": [
+  {
+   "id": "c7177791995",
+   "state": "received",
+   "position": 1,
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "progress update on the process..."
+  }
+ ],
  "trimmed": [
   "lane_next",
   "queue_text",
   "recent",
   "task_done",
   "fin_short",
+  "inbox_title",
   "task_title",
   "done_text",
   "fin_six",
@@ -650,10 +655,10 @@
   "main": 1,
   "lanes": 2,
   "total": 3,
-  "at": "6:33 PM",
+  "at": "6:36 PM",
   "why": "",
-  "at_iso": "2026-11-25T23:33:00+00:00",
+  "at_iso": "2026-11-25T23:36:00+00:00",
   "started": "1:03 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 1, started 1:03 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 6:33 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 1, started 1:03 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 6:36 PM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-25T12:41:33.228688+00:00",
+ "at": "2026-11-25T12:44:34.025843+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -420,7 +420,7 @@
    "task": "[build] T-4183 Gallery Get copy",
    "model": "opus",
    "started": "2026-11-25T12:28:50.173Z",
-   "seconds": 763,
+   "seconds": 943,
    "finished": null
   }
  ],
@@ -462,7 +462,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 355,
+  "runnable_count": 361,
   "blocked_count": 0
  },
  "meter": {
@@ -511,7 +511,7 @@
   "week_pct": 120.85,
   "usage_pct": 64.3,
   "work_pct": 98.1,
-  "read_at": "2026-11-25T12:41:00+00:00",
+  "read_at": "2026-11-25T12:44:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -548,7 +548,7 @@
  "lock_in": {
   "on": true,
   "pool": 2,
-  "at": "2026-11-25T07:41:00-05:00",
+  "at": "2026-11-25T07:44:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -667,11 +667,7 @@
     "k": "build",
     "t": "Get puts a Gallery item into Projects",
     "s": "next",
-    "o": "c",
-    "p": [
-     1,
-     1
-    ]
+    "o": "c"
    },
    {
     "w": "Idris",
@@ -720,7 +716,7 @@
    }
   ],
   "count": {
-   "next": 355,
+   "next": 361,
    "wait": 0,
    "blocked": 0,
    "you": 0
@@ -794,26 +790,19 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-25T12:41:33Z",
+  "at": "2026-11-25T12:44:22Z",
   "s": {
    "T-4188": [
     "mergetest",
     "Xcode checks on the MacBook, 1st to merge",
-    1795610313228
-   ],
-   "T-4183": [
-    "mergetest",
-    "iPhone tests on the MacBook",
-    null
+    1795610302407
    ]
   },
   "nm": {
-   "T-4188": "Location, steps and notifications work in scripts and...",
-   "T-4183": "The Gallery shows, previews and opens every premade"
+   "T-4188": "Location, steps and notifications work in scripts and..."
   },
   "wk": {
    "T-4188": "Idris",
-   "T-4183": "Idris",
    "T-5815": "Idris",
    "T-5849": "Wrenna",
    "T-5848": "Odalys",
@@ -829,7 +818,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-25T12:41:33Z",
+  "at": "2026-11-25T12:44:22Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -841,13 +830,13 @@
     "parked": 5
    },
    "m": {
-    "checking": 3,
+    "checking": 6,
     "inline": null,
-    "conflicted": 380,
+    "conflicted": 382,
     "failed": null,
-    "held": 1939,
+    "held": 1942,
     "retry": null,
-    "parked": 1030
+    "parked": 1033
    },
    "cur": [
     [
@@ -856,7 +845,7 @@
      ],
      "iPhone app tests",
      "MacBook",
-     3
+     6
     ]
    ],
    "ld": [
@@ -866,8 +855,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-25T12:41:10Z",
-    "ld": 0.88,
+    "at": "2026-11-25T12:43:56Z",
+    "ld": 0.75,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -881,16 +870,16 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-25T12:38:08Z",
-    "ld": 1.2,
+    "at": "2026-11-25T12:41:31Z",
+    "ld": 5.93,
     "c": 12,
     "sb": 1,
     "dk": [
-     363.8,
+     363.9,
      926.4
     ],
     "sn": [
-     "itsthecompany-runner"
+     "itsthecompany-runner-2"
     ]
    }
   }
@@ -921,11 +910,11 @@
      "open": true
     }
    },
-   "at": "2026-11-25T12:41:33+00:00"
+   "at": "2026-11-25T12:44:34+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-25T12:41:27+00:00"
+   "at": "2026-11-25T12:44:28+00:00"
   }
  },
  "operators": [
@@ -936,12 +925,12 @@
    "m": "opus",
    "e": "high",
    "t": "Work session",
-   "at": "2026-11-25T07:35:26-05:00"
+   "at": "2026-11-25T07:44:15-05:00"
   }
  ],
  "reply": {
-  "sent": "2026-11-25T12:33:42Z",
-  "seconds": 103.0
+  "sent": "2026-11-25T12:42:13Z",
+  "seconds": 121.0
  },
  "inbox": [],
  "trimmed": [
@@ -960,10 +949,10 @@
   "main": 1,
   "lanes": 0,
   "total": 1,
-  "at": "7:41 AM",
+  "at": "7:44 AM",
   "why": "",
-  "at_iso": "2026-11-25T12:41:00+00:00",
+  "at_iso": "2026-11-25T12:44:00+00:00",
   "started": "12:10 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 12:10 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 7:41 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 12:10 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 7:44 AM ET</p></section>"
  }
 }

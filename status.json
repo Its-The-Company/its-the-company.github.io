@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-25T06:30:25.584873+00:00",
+ "at": "2026-11-25T06:33:29.183226+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -12,22 +12,6 @@
    "last_handoff": 1795582978
   },
   "flow": [
-   {
-    "t": "T-5365",
-    "name": "Location refresh policy, file and route",
-    "w": "Idris",
-    "acct": "Personal b",
-    "steps": [
-     {
-      "s": "claimed",
-      "at": 1795537147
-     },
-     {
-      "s": "worker",
-      "at": 1795537147
-     }
-    ]
-   },
    {
     "t": "T-4807",
     "w": "Pernille",
@@ -104,22 +88,6 @@
     ]
    },
    {
-    "t": "T-0011",
-    "name": "Check motion, health and battery sensors on a device",
-    "w": "Idris",
-    "acct": "Personal b",
-    "steps": [
-     {
-      "s": "claimed",
-      "at": 1795536797
-     },
-     {
-      "s": "worker",
-      "at": 1795536797
-     }
-    ]
-   },
-   {
     "t": "T-4749",
     "w": "Pernille",
     "acct": "Personal b",
@@ -131,22 +99,6 @@
      {
       "s": "worker",
       "at": 1795536735
-     }
-    ]
-   },
-   {
-    "t": "T-0687",
-    "name": "Run network fetches inside the extension on the Simulator",
-    "w": "Idris",
-    "acct": "Personal b",
-    "steps": [
-     {
-      "s": "claimed",
-      "at": 1795536676
-     },
-     {
-      "s": "worker",
-      "at": 1795536676
      }
     ]
    },
@@ -199,22 +151,6 @@
     ]
    },
    {
-    "t": "T-4554",
-    "name": "One state commit per widget across app and widget",
-    "w": "Idris",
-    "acct": "Personal b",
-    "steps": [
-     {
-      "s": "claimed",
-      "at": 1795536419
-     },
-     {
-      "s": "worker",
-      "at": 1795536419
-     }
-    ]
-   },
-   {
     "t": "T-4282",
     "name": "Measure real scripts inside the widget on phones",
     "w": "Idris",
@@ -258,22 +194,6 @@
      {
       "s": "worker",
       "at": 1795535032
-     }
-    ]
-   },
-   {
-    "t": "T-4681",
-    "name": "Premades default to Paper in light and Studio in dark",
-    "w": "Idris",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "claimed",
-      "at": 1795534828
-     },
-     {
-      "s": "worker",
-      "at": 1795534828
      }
     ]
    },
@@ -355,38 +275,6 @@
     ]
    },
    {
-    "t": "T-4662",
-    "name": "Place the cursor easily on a long line",
-    "w": "Idris",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "claimed",
-      "at": 1795533238
-     },
-     {
-      "s": "worker",
-      "at": 1795533238
-     }
-    ]
-   },
-   {
-    "t": "T-3765",
-    "name": "Check a real widget tap on the TestFlight build",
-    "w": "Idris",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "claimed",
-      "at": 1795533135
-     },
-     {
-      "s": "worker",
-      "at": 1795533135
-     }
-    ]
-   },
-   {
     "t": "T-0678",
     "name": "Run the refresh button inside the widget extension",
     "w": "Idris",
@@ -401,10 +289,128 @@
       "at": 1795533035
      }
     ]
+   },
+   {
+    "t": "T-4435",
+    "name": "Draw the wrapped refresh glyph on both runtimes",
+    "w": "Idris",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "claimed",
+      "at": 1795532927
+     },
+     {
+      "s": "worker",
+      "at": 1795532927
+     }
+    ]
+   },
+   {
+    "t": "T-4286",
+    "name": "Check an imported font draws in a widget",
+    "w": "Idris",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "claimed",
+      "at": 1795532793
+     },
+     {
+      "s": "worker",
+      "at": 1795532793
+     }
+    ]
+   },
+   {
+    "t": "T-4477",
+    "name": "People build a widget from blocks without code",
+    "w": "Idris",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "claimed",
+      "at": 1795532662
+     },
+     {
+      "s": "worker",
+      "at": 1795532662
+     }
+    ]
+   },
+   {
+    "t": "T-4010",
+    "w": "Odalys",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "claimed",
+      "at": 1795532528
+     },
+     {
+      "s": "worker",
+      "at": 1795532528
+     }
+    ]
+   },
+   {
+    "t": "T-0337",
+    "name": "Confirm the revenue memo's facts from Apple pages",
+    "w": "Wrenna",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "claimed",
+      "at": 1795532281
+     },
+     {
+      "s": "worker",
+      "at": 1795532281
+     }
+    ]
    }
   ],
-  "flow_n": 31,
-  "done": [],
+  "done": [
+   {
+    "t": "T-5607",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1795386667
+   },
+   {
+    "t": "T-5399",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "failed",
+    "end_at": 1795380074,
+    "why": "tests failed"
+   },
+   {
+    "t": "T-5399",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "failed",
+    "end_at": 1795367452,
+    "why": "tests failed"
+   },
+   {
+    "t": "T-5399",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "failed",
+    "end_at": 1795365128,
+    "why": "tests failed"
+   },
+   {
+    "t": "T-5399",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "failed",
+    "end_at": 1795344996,
+    "why": "tests failed"
+   }
+  ],
   "landed": 1,
   "failed": 4
  },
@@ -414,7 +420,7 @@
    "task": "[build] T-5815 fix two UI tests",
    "model": "opus",
    "started": "2026-11-25T05:10:53.997Z",
-   "seconds": 4771,
+   "seconds": 4955,
    "finished": null
   }
  ],
@@ -432,8 +438,8 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 436,
-  "blocked_count": 2
+  "runnable_count": 350,
+  "blocked_count": 1
  },
  "meter": {
   "five_hour": {
@@ -481,7 +487,7 @@
   "week_pct": 114.04,
   "usage_pct": 64.4,
   "work_pct": 98.1,
-  "read_at": "2026-11-25T06:30:00+00:00",
+  "read_at": "2026-11-25T06:33:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -524,14 +530,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-25T01:29:00-05:00",
+   "at": "2026-11-25T01:32:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 2,
-  "at": "2026-11-25T01:30:00-05:00",
+  "at": "2026-11-25T01:33:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -542,7 +548,7 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Locked in for today by an Investor: full speed until midnight; the 5-hour window allows 6; the machine allows 8 (at its floor: load 32.0 a core is over 10)",
+  "why": "Locked in for today by an Investor: full speed until midnight; the 5-hour window allows 6; the machine allows 8 (at its floor: load 12.3 a core is over 10)",
   "n": 6,
   "at": "2026-11-25T00:10:06.003441-05:00"
  },
@@ -556,25 +562,17 @@
    "next": []
   },
   {
-   "name": "Ines",
-   "state": "next",
-   "task": "Ines, P2, the C51 voice card (Maren's...",
-   "model": null,
-   "since": null,
-   "next": []
-  },
-  {
    "name": "Pernille",
    "state": "next",
-   "task": "Pernille, P1, premades and gallery take the age line...",
+   "task": "Pernille, P1, continuation of T-2609: after...",
    "model": null,
    "since": null,
    "next": []
   },
   {
-   "name": "Wrenna",
+   "name": "Ines",
    "state": "next",
-   "task": "Wrenna, P2, T-2375 continuation (B-staged item 3...",
+   "task": "Ines, P2, from T-5470...",
    "model": null,
    "since": null,
    "next": []
@@ -583,6 +581,14 @@
    "name": "Odalys",
    "state": "next",
    "task": "Odalys, P3, from T-4468: the city list...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
+   "name": "Wrenna",
+   "state": "next",
+   "task": "Read developer.apple.com \"Keeping a widget up to date\",...",
    "model": null,
    "since": null,
    "next": []
@@ -687,37 +693,53 @@
   ],
   "done": [
    {
-    "w": "Operator+pernille",
-    "t": "When app changes are queuing to merge, each feature session now plans five to eight steps...",
-    "at": "2026-11-25T00:38:00-05:00"
+    "w": "Operator",
+    "t": "Found already finished in the app backlog audit of 25 November and ticked by the Operator: run...",
+    "at": "2026-11-25T01:31:00-05:00"
    },
    {
-    "w": "Operator+pernille",
-    "t": "A feature session now also builds the tasks its steps are waiting on, when they belong to its...",
-    "at": "2026-11-25T00:26:00-05:00"
+    "w": "Idris+operator",
+    "t": "Found already finished in the app backlog audit of 25 November and ticked by the Operator: tidy...",
+    "at": "2026-11-25T01:30:00-05:00"
    },
    {
-    "w": "Operator+idris",
-    "t": "All the finished app work that was left in the old workers' copies when the company moved to...",
-    "at": "2026-11-25T00:05:00-05:00"
+    "w": "Ines+operator",
+    "t": "Found already finished in the app backlog audit of 25 November and ticked by the Operator: ask...",
+    "at": "2026-11-25T01:30:00-05:00"
    }
   ],
   "count": {
-   "next": 436,
-   "wait": 1,
+   "next": 350,
+   "wait": 0,
    "blocked": 1,
-   "you": 1
+   "you": 0
   },
   "fin": {
-   "n": 2,
+   "n": 62,
    "rows": [
     [
-     "T-5846",
-     "App merges carry more steps..."
+     "T-4239",
+     "Tidy the five small points..."
     ],
     [
-     "T-5844",
-     "A feature session builds..."
+     "T-1440",
+     "Add a refresh control and..."
+    ],
+    [
+     "T-1652",
+     "Fix two UI tests that fail..."
+    ],
+    [
+     "T-2097",
+     "Read free memory in the..."
+    ],
+    [
+     "T-0687",
+     "Run network fetches inside..."
+    ],
+    [
+     "T-4615",
+     "Widget taps on iPad reuse an..."
     ]
    ]
   }
@@ -761,7 +783,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-25T06:30:25Z",
+  "at": "2026-11-25T06:33:17Z",
   "s": {
    "T-4182": [
     "mergetest",
@@ -781,12 +803,22 @@
   "wk": {
    "T-4182": "Idris",
    "T-5843": "Idris",
-   "T-5846": "Operator",
-   "T-5844": "Operator"
+   "T-4239": "Idris",
+   "T-1440": "Idris",
+   "T-1652": "Idris",
+   "T-2097": "Idris",
+   "T-0687": "Idris",
+   "T-4615": "Idris",
+   "T-3765": "Idris",
+   "T-1643": "Idris",
+   "T-2583": "Idris",
+   "T-2551": "Pernille",
+   "T-0198": "Idris",
+   "T-0272": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-25T06:30:25Z",
+  "at": "2026-11-25T06:33:17Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -795,16 +827,16 @@
     "failed": 0,
     "held": 3,
     "retry": 0,
-    "parked": 13
+    "parked": 8
    },
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 8,
+    "conflicted": 11,
     "failed": null,
-    "held": 2702,
+    "held": 2705,
     "retry": null,
-    "parked": 1568
+    "parked": 1116
    },
    "cur": [],
    "ld": [
@@ -814,12 +846,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-25T06:30:01Z",
-    "ld": 17.42,
+    "at": "2026-11-25T06:32:53Z",
+    "ld": 9.97,
     "c": 8,
     "sb": 1,
     "dk": [
-     24.6,
+     26.7,
      228.3
     ],
     "ss": [
@@ -869,11 +901,11 @@
      "open": true
     }
    },
-   "at": "2026-11-25T06:30:25+00:00"
+   "at": "2026-11-25T06:33:29+00:00"
   },
   "bl": {
-   "n": 2,
-   "at": "2026-11-25T06:30:25+00:00"
+   "n": 1,
+   "at": "2026-11-25T06:33:29+00:00"
   }
  },
  "operators": [
@@ -909,6 +941,7 @@
   "task_title",
   "done_text",
   "task_open",
+  "fin_six",
   "lane_task",
   "task_next"
  ],
@@ -916,10 +949,10 @@
   "main": 1,
   "lanes": 1,
   "total": 2,
-  "at": "1:30 AM",
+  "at": "1:33 AM",
   "why": "",
-  "at_iso": "2026-11-25T06:30:00+00:00",
+  "at_iso": "2026-11-25T06:33:00+00:00",
   "started": "12:10 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 1, started 12:10 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 1:30 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 1, started 12:10 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 1:33 AM ET</p></section>"
  }
 }

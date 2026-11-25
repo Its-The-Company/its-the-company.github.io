@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-25T20:05:36.162863+00:00",
+ "at": "2026-11-25T20:08:35.292724+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -105,7 +105,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 356,
+  "runnable_count": 352,
   "blocked_count": 0
  },
  "meter": {
@@ -154,7 +154,7 @@
   "week_pct": 116.34,
   "usage_pct": 60.2,
   "work_pct": 98.3,
-  "read_at": "2026-11-25T20:05:00+00:00",
+  "read_at": "2026-11-25T20:08:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -197,14 +197,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-25T15:00:00-05:00",
+   "at": "2026-11-25T15:07:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-25T15:05:00-05:00",
+  "at": "2026-11-25T15:08:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -310,13 +310,6 @@
    },
    {
     "w": "Idris",
-    "k": "build",
-    "t": "Get puts a Gallery item into Projects",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
     "k": "fix",
     "t": "Fix a MacBook test job that failed",
     "s": "next",
@@ -342,34 +335,58 @@
     "t": "Fix a MacBook test job that failed",
     "s": "next",
     "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "tools",
+    "t": "Clear the Xcode failures that hold main",
+    "s": "next",
+    "o": "c"
    }
   ],
   "done": [
    {
     "w": "Idris",
-    "t": "The notification test now passes on a brand-new Simulator that has never been asked for...",
-    "at": "2026-11-25T11:46:00-05:00"
+    "t": "The ready-made widgets in the Gallery no longer have the first letters of their words cut off at...",
+    "at": "2026-11-25T15:06:00-05:00"
    },
    {
-    "w": "Operator",
-    "t": "An account whose first task is waiting after two failed tries now starts its next ready task...",
-    "at": "2026-11-25T10:25:00-05:00"
+    "w": "Idris",
+    "t": "The copy of a ready-made widget that Get makes now runs its own files, so a change a person...",
+    "at": "2026-11-25T15:06:00-05:00"
    },
    {
-    "w": "Operator",
-    "t": "The main account now works on two app features at the same time, and the plan for Home adds a...",
-    "at": "2026-11-25T10:25:00-05:00"
+    "w": "Idris",
+    "t": "The rule that hides Get on a locked ready-made widget is now tested on its own, and the screens...",
+    "at": "2026-11-25T15:06:00-05:00"
    }
   ],
   "count": {
-   "next": 356,
+   "next": 352,
    "wait": 0,
    "blocked": 0,
    "you": 0
   },
   "fin": {
-   "n": 0,
-   "rows": []
+   "n": 4,
+   "rows": [
+    [
+     "T-4139",
+     "Check the gallery well's..."
+    ],
+    [
+     "T-0901",
+     "Open a free premade as an..."
+    ],
+    [
+     "T-5709",
+     "Test the locked Gallery foot..."
+    ],
+    [
+     "T-5842",
+     "Get puts a Gallery item into..."
+    ]
+   ]
   }
  },
  "qr": [
@@ -411,23 +428,17 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-25T20:05:18Z",
-  "s": {
-   "T-5047": [
-    "mergetest",
-    "iPhone tests on the MacBook",
-    null
-   ]
-  },
-  "nm": {
-   "T-5047": "Fix the token test's No view for this size card"
-  },
+  "at": "2026-11-25T20:08:17Z",
+  "s": {},
   "wk": {
-   "T-5047": "Idris"
+   "T-4139": "Idris",
+   "T-0901": "Idris",
+   "T-5709": "Idris",
+   "T-5842": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-25T20:05:18Z",
+  "at": "2026-11-25T20:08:17Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -441,11 +452,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 823,
+    "conflicted": 826,
     "failed": null,
-    "held": 2383,
+    "held": 2386,
     "retry": null,
-    "parked": 1474
+    "parked": 1477
    },
    "cur": [],
    "ld": [
@@ -455,12 +466,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-25T20:04:32Z",
-    "ld": 1.4,
+    "at": "2026-11-25T20:08:18Z",
+    "ld": 1.76,
     "c": 8,
     "sb": 1,
     "dk": [
-     27.4,
+     25.1,
      228.3
     ],
     "ss": [
@@ -472,19 +483,15 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-25T19:53:25Z",
-    "ld": 25.34,
+    "at": "2026-11-25T20:06:56Z",
+    "ld": 5.25,
     "c": 12,
-    "sb": 3,
+    "sb": 0,
     "dk": [
-     355.8,
+     358.7,
      926.4
     ],
-    "sn": [
-     "itsthecompany-runner",
-     "itsthecompany-runner-3",
-     "itsthecompany-runner-4"
-    ]
+    "sn": []
    }
   }
  },
@@ -514,11 +521,11 @@
      "open": true
     }
    },
-   "at": "2026-11-25T20:05:36+00:00"
+   "at": "2026-11-25T20:08:35+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-25T20:05:24+00:00"
+   "at": "2026-11-25T20:08:17+00:00"
   }
  },
  "operators": [
@@ -550,6 +557,7 @@
   "lane_next",
   "queue_text",
   "task_done",
+  "fin_short",
   "task_title",
   "done_text",
   "lane_task",
@@ -559,10 +567,10 @@
   "main": 0,
   "lanes": 1,
   "total": 1,
-  "at": "3:05 PM",
+  "at": "3:08 PM",
   "why": "",
-  "at_iso": "2026-11-25T20:05:00+00:00",
+  "at_iso": "2026-11-25T20:08:00+00:00",
   "started": "1:03 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0, started 1:03 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 3:05 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0, started 1:03 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 3:08 PM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-25T23:39:47.493613+00:00",
+ "at": "2026-11-25T23:42:51.960631+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -78,16 +78,24 @@
  },
  "workers": [
   {
+   "name": "odalys",
+   "task": "[review] T-5796",
+   "model": "",
+   "started": "2026-11-25T23:42:06.152Z",
+   "seconds": 45,
+   "finished": null
+  }
+ ],
+ "who": "Odalys",
+ "recent": [
+  {
    "name": "idris",
    "task": "[build] T-5796 widget buttons steps",
    "model": "",
    "started": "2026-11-25T20:58:11.478Z",
-   "seconds": 9696,
-   "finished": null
-  }
- ],
- "who": "Idris",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-25T23:41:41.380000+00:00"
+  },
   {
    "name": "maren",
    "task": "[review] T-4191",
@@ -111,14 +119,6 @@
    "started": "2026-11-25T20:52:32.853Z",
    "seconds": null,
    "finished": "2026-11-25T20:54:04.574000+00:00"
-  },
-  {
-   "name": "pernille",
-   "task": "[review] T-5561 release reads",
-   "model": "",
-   "started": "2026-11-25T20:42:28.648Z",
-   "seconds": null,
-   "finished": "2026-11-25T20:48:40.658000+00:00"
   }
  ],
  "queue": {
@@ -173,7 +173,7 @@
   "week_pct": 123.16,
   "usage_pct": 60.0,
   "work_pct": 98.3,
-  "read_at": "2026-11-25T23:39:00+00:00",
+  "read_at": "2026-11-25T23:42:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -186,6 +186,18 @@
     "at": "2026-11-25T18:04:48-05:00",
     "n": "Evan",
     "src": "plan-a"
+   },
+   {
+    "lane": "b2",
+    "task": "T-4777",
+    "w": "Idris",
+    "k": "test",
+    "t": "Make the tester-flag parser see block-scalar settings again",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-25T18:42:25-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
    }
   ]
  },
@@ -223,7 +235,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-25T18:39:00-05:00",
+  "at": "2026-11-25T18:42:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -240,11 +252,19 @@
  },
  "lanes": [
   {
-   "name": "Idris",
+   "name": "Odalys",
    "state": "running",
-   "task": "[build] T-5796 widget buttons steps",
+   "task": "[review] T-5796",
    "model": null,
-   "since": "2026-11-25T20:58:11.478Z",
+   "since": "2026-11-25T23:42:06.152Z",
+   "next": []
+  },
+  {
+   "name": "Idris",
+   "state": "next",
+   "task": "Idris, P2, from T-1105 (Maren's spoken-label table,...",
+   "model": null,
+   "since": null,
    "next": []
   },
   {
@@ -259,14 +279,6 @@
    "name": "Ines",
    "state": "next",
    "task": "Ines, P2, from T-5470...",
-   "model": null,
-   "since": null,
-   "next": []
-  },
-  {
-   "name": "Odalys",
-   "state": "next",
-   "task": "Odalys, P3, from T-4468: the city list...",
    "model": null,
    "since": null,
    "next": []
@@ -291,10 +303,10 @@
  "tasks": {
   "run": [
    {
-    "w": "Idris",
-    "k": "build",
+    "w": "Odalys",
+    "k": "review",
     "t": "Internal TestFlight builds carry the test widgets",
-    "at": "2026-11-25T20:58:11.478Z",
+    "at": "2026-11-25T23:42:06.152Z",
     "o": "c",
     "task": "T-5796"
    }
@@ -464,33 +476,34 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-25T23:39:24Z",
+  "at": "2026-11-25T23:42:44Z",
   "s": {
    "T-4192": [
     "mergeq",
     "1st to merge",
-    1795649904926
+    1795649924702
    ],
-   "T-5796": [
-    "testing",
-    "Mac Mini \u00b7 test",
+   "T-4191": [
+    "mergetest",
+    "iPhone tests on the MacBook",
     null
    ],
-   "T-4185": [
-    "testing",
-    "MacBook \u00b7 test",
-    null
+   "T-4777": [
+    "merged",
+    "on main 1:35 PM ET",
+    1795631716000,
+    "Idris"
    ]
   },
   "nm": {
    "T-4192": "Python in the app: smaller bundle, installable packages",
-   "T-5796": "Internal TestFlight builds carry the test widgets",
-   "T-4185": "Launcher widgets open the apps a person chose"
+   "T-4191": "VoiceOver and large text work on every screen",
+   "T-4777": "Make the tester-flag parser see block-scalar settings again"
   },
   "wk": {
    "T-4192": "Idris",
-   "T-5796": "Idris",
-   "T-4185": "Idris",
+   "T-4191": "Idris",
+   "T-4777": "Idris",
    "T-5539": "Pernille",
    "T-5540": "Pernille",
    "T-5561": "Pernille",
@@ -502,7 +515,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-25T23:39:24Z",
+  "at": "2026-11-25T23:42:44Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -515,12 +528,12 @@
    },
    "m": {
     "checking": null,
-    "inline": 1,
-    "conflicted": 1037,
+    "inline": 4,
+    "conflicted": 1041,
     "failed": null,
-    "held": 2597,
+    "held": 2601,
     "retry": null,
-    "parked": 1362
+    "parked": 1366
    },
    "cur": [],
    "ld": [
@@ -530,50 +543,47 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-25T23:39:26Z",
-    "ld": 3.76,
+    "at": "2026-11-25T23:42:24Z",
+    "ld": 2.62,
     "c": 8,
-    "sb": 1,
+    "sb": 0,
     "dk": [
-     24.5,
+     24.8,
      228.3
     ],
     "ss": [
      172.3,
      953.7
     ],
-    "sn": [
-     "iPhone 17e"
-    ]
+    "sn": []
    },
    "macbook": {
-    "at": "2026-11-25T23:33:27Z",
-    "ld": 5.14,
+    "at": "2026-11-25T23:41:32Z",
+    "ld": 3.81,
     "c": 12,
-    "sb": 2,
+    "sb": 1,
     "dk": [
-     433.4,
+     433.5,
      926.4
     ],
     "sn": [
-     "itsthecompany-runner",
-     "itsthecompany-runner-3"
+     "itsthecompany-runner-2"
     ]
    }
   }
  },
  "hc": {
   "wait": {
-   "n": 6,
+   "n": 7,
    "limit": 20,
-   "in_line": 0,
+   "in_line": 1,
    "parked": 6,
    "open": true,
    "mq": false,
-   "counted": "2026-11-25T23:29:58+00:00",
+   "counted": "2026-11-25T23:40:12+00:00",
    "by": {
     "app": {
-     "n": 6,
+     "n": 7,
      "limit": 20,
      "open": true
     },
@@ -588,11 +598,11 @@
      "open": true
     }
    },
-   "at": "2026-11-25T23:39:47+00:00"
+   "at": "2026-11-25T23:42:51+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-25T23:39:34+00:00"
+   "at": "2026-11-25T23:42:44+00:00"
   }
  },
  "operators": [
@@ -603,7 +613,7 @@
    "m": "opus",
    "e": "high",
    "t": "Work session",
-   "at": "2026-11-25T18:37:20-05:00"
+   "at": "2026-11-25T18:40:51-05:00"
   },
   {
    "w": "Operator",
@@ -613,11 +623,20 @@
    "e": "high",
    "t": "Work session \u2013 1 task",
    "at": "2026-11-25T18:04:48-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Jeremy's Account",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session \u2013 1 task",
+   "at": "2026-11-25T18:42:25-05:00"
   }
  ],
  "reply": {
-  "sent": "2026-11-25T23:36:10Z",
-  "seconds": 69.0
+  "sent": "2026-11-25T23:40:12Z",
+  "seconds": 37.0
  },
  "inbox": [],
  "trimmed": [
@@ -634,12 +653,12 @@
  ],
  "agents_now": {
   "main": 1,
-  "lanes": 1,
-  "total": 2,
-  "at": "6:39 PM",
+  "lanes": 2,
+  "total": 3,
+  "at": "6:42 PM",
   "why": "",
-  "at_iso": "2026-11-25T23:39:00+00:00",
+  "at_iso": "2026-11-25T23:42:00+00:00",
   "started": "1:03 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 1, started 1:03 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 6:39 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 1, started 1:03 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 6:42 PM ET</p></section>"
  }
 }

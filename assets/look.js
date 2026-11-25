@@ -628,6 +628,24 @@ e.addEventListener('pointerdown',go);e.addEventListener('pointermove',function(e
 e.addEventListener('keydown',function(ev){var d=pts(p),i=e._i==null||e._i<0?d.length:e._i;if(ev.key==='ArrowLeft')i=Math.max(0,i-1);else if(ev.key==='ArrowRight')i=Math.min(d.length-1,i+1);
 else if(ev.key==='Escape'){clear(p);e._i=-1;return}else return;ev.preventDefault();mark(p,i)})});
 if(sw){sw.hidden=false;show()}});
+// T-5823 (friesevan #325 c7144608599, 4:11 PM 11-24): the Work panel's Completed work follows work_done.json, which
+// tools/site_live.py writes beside status.json during a session, at most every 15 minutes, with the function and the
+// steps the build draws it with (work_panel.panel_html, build.written_text). With a status, at most every 5 minutes, the
+// file is read; once its read time is newer than the page's, the two graphs (#mx-done, #mx-usd), their read line and the
+// Work bubble's 24-hour figure are replaced by its own. A failed or older read leaves them as they are.
+document.addEventListener('DOMContentLoaded',function(){var S=window.CompanySite,sec=document.getElementById('bottlenecks'),np=document.getElementById('now-panel'),bx=document.getElementById('lk-run'),B=0,T=0,busy=0,url;
+if(!S||!S.onStatus||!sec||!np||!window.fetch||!window.DOMParser)return;
+try{B=JSON.parse(bx&&bx.getAttribute('data-life')||'{}').at||0}catch(e){}
+url=String(np.getAttribute('data-status')||'').replace(/status\.json$/,'work_done.json');if(!/work_done\.json$/.test(url))return;
+function rl(r){var h=r.querySelector('h3.mx-s'),p=h&&h.previousElementSibling;return p&&p.matches('p.meta')?p:null}
+function swap(d){var at=Date.parse(d&&d.at),f,a,b;if(!(at>B)||typeof d.html!=='string'||!document.getElementById('mx-done'))return;
+f=new DOMParser().parseFromString(d.html,'text/html').getElementById('bottlenecks');if(!f||!f.querySelector('#mx-done'))return;
+['mx-done','mx-usd'].forEach(function(id){var o=document.getElementById(id),x=f.querySelector('#'+id);if(o&&x)o.replaceWith(document.importNode(x,true))});
+a=rl(sec);b=rl(f);if(a&&b)a.replaceWith(document.importNode(b,true));
+if(typeof d.n24==='number')[].forEach.call(document.querySelectorAll('.lk-bub a[href="#bottlenecks"] .lk-f > span'),function(s){var e=s.querySelector('b');if(e&&s.lastChild&&s.lastChild.nodeValue==='done, 24 h')e.textContent=d.n24.toLocaleString('en-US')});
+B=at}
+function read(){if(busy||Date.now()-T<3e5)return;busy=1;T=Date.now();fetch(url,{cache:'no-store'}).then(function(r){if(!r.ok)throw new Error(r.status);return r.json()}).then(swap).catch(function(){}).then(function(){busy=0})}
+S.onStatus.push(read);if(S.status&&S.status())read()});
 
 // T-4136 (friesevan #41 c6816980644): Operators & Direct follows each status newer than the build that carries the
 // "operators" block; a status without it leaves the build's cards (tools/site/ops_look.py). Text goes in as textContent.

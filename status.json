@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-25T00:58:40.417642+00:00",
+ "at": "2026-11-25T01:01:24.861156+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -8,8 +8,8 @@
   "coord": {
    "active": true,
    "started": 1795341309,
-   "restarts": 8,
-   "last_handoff": 1795557100
+   "restarts": 9,
+   "last_handoff": 1795568468
   },
   "flow": [
    {
@@ -393,7 +393,7 @@
    "model": "opus",
    "started": "2026-11-24T22:01:37.992Z",
    "seconds": null,
-   "finished": "2026-11-25T00:42:32.223000+00:00"
+   "finished": "2026-11-25T01:00:18.034000+00:00"
   },
   {
    "name": "odalys",
@@ -428,19 +428,19 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 13.0,
+   "pct": 14.0,
    "resets_at": "2026-11-24T22:00:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-24T19:43:00.871613-05:00",
+   "read_at": "2026-11-24T19:59:39.708388-05:00",
    "source": "live",
-   "left": 87.0,
+   "left": 86.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 58.0,
    "resets_at": "2026-11-29T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-24T19:43:00.871613-05:00",
+   "read_at": "2026-11-24T19:59:39.708388-05:00",
    "source": "live",
    "left": 42.0,
    "left_words": "of your weekly allowance left"
@@ -452,7 +452,7 @@
    "read_at": "2026-11-24T14:15:11.103453-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-24T19:43:00.871613-05:00"
+  "read_at": "2026-11-24T19:59:39.708388-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -472,7 +472,7 @@
   "week_pct": 166.51,
   "usage_pct": 68.4,
   "work_pct": 98.0,
-  "read_at": "2026-11-25T00:58:00+00:00",
+  "read_at": "2026-11-25T01:01:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -509,7 +509,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-24T19:58:00-05:00",
+  "at": "2026-11-24T20:01:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -741,19 +741,9 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-25T00:58:40Z",
-  "s": {
-   "T-5815": [
-    "mergetest",
-    "iPhone tests on the MacBook",
-    null
-   ]
-  },
-  "nm": {
-   "T-5815": "Build the four-tab shell with Projects as home"
-  },
+  "at": "2026-11-25T01:01:05Z",
+  "s": {},
   "wk": {
-   "T-5815": "Idris",
    "T-5832": "Odalys",
    "T-5524": "Idris",
    "T-4644": "Idris",
@@ -769,7 +759,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-25T00:58:40Z",
+  "at": "2026-11-25T01:01:05Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -785,9 +775,9 @@
     "inline": null,
     "conflicted": null,
     "failed": null,
-    "held": 2370,
+    "held": 2372,
     "retry": null,
-    "parked": 1635
+    "parked": 1638
    },
    "cur": [],
    "ld": [
@@ -797,12 +787,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-25T00:58:41Z",
-    "ld": 0.57,
+    "at": "2026-11-25T01:00:40Z",
+    "ld": 0.63,
     "c": 8,
     "sb": 0,
     "dk": [
-     37.3,
+     39.4,
      228.3
     ],
     "ss": [
@@ -812,12 +802,12 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-25T00:51:00Z",
-    "ld": 3.18,
+    "at": "2026-11-25T00:59:19Z",
+    "ld": 2.53,
     "c": 12,
     "sb": 0,
     "dk": [
-     371.8,
+     371.6,
      926.4
     ],
     "sn": []
@@ -850,11 +840,11 @@
      "open": true
     }
    },
-   "at": "2026-11-25T00:58:40+00:00"
+   "at": "2026-11-25T01:01:24+00:00"
   },
   "bl": {
    "n": 3,
-   "at": "2026-11-25T00:58:34+00:00"
+   "at": "2026-11-25T01:01:11+00:00"
   }
  },
  "operators": [
@@ -865,12 +855,12 @@
    "m": "opus",
    "e": "high",
    "t": "Work session",
-   "at": "2026-11-24T19:56:03-05:00"
+   "at": "2026-11-24T20:00:23-05:00"
   }
  ],
  "reply": {
-  "sent": "2026-11-25T00:55:25Z",
-  "seconds": 37.0
+  "sent": "2026-11-25T00:58:41Z",
+  "seconds": 101.0
  },
  "inbox": [],
  "trimmed": [
@@ -890,10 +880,10 @@
   "main": 0,
   "lanes": 0,
   "total": 0,
-  "at": "7:58 PM",
-  "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
-  "at_iso": "2026-11-25T00:58:00+00:00",
-  "started": "4:58 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0, started 4:58 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 7:58 PM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
+  "at": "8:01 PM",
+  "why": "Between sessions: no session is running. Last check 4:58 PM ET.",
+  "at_iso": "2026-11-25T01:01:00+00:00",
+  "started": "",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 8:01 PM ET</p><p class=\"an-why\">Between sessions: no session is running. Last check 4:58 PM ET.</p></section>"
  }
 }

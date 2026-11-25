@@ -49,6 +49,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-5524 review 11-24 of eac40f97bc (Idris, Debug draw record): PASS, record 7823c698e1 via merge.sh review. Lessons: zsh here has no `timeout`; a flock-removal mutant (48 writers) went red, 8 kept, so the concurrency test bites; merge.sh review writes 'Verdict: pass' itself, my note is the body.
 - T-5508 11-24 review of T-5047 at 50a2c3dd (t5047-50a2c3dd-pernille.md): FAIL H1, widget id holds the token and own-widget cards draw the id in capitals, so a Vision "contains" passes a card. Lessons: when a gate drops, check what the remaining gate accepts; continueAfterFailure=false means later checks never ran on a red; board_tick add may join a note to another line.
 - T-5508 re-review 11-24 of T-5047 at da4c8d07 (t5047-da4c8d07-pernille.md): PASS, M1 docs "shares no letter" false for prefix token_; T-5803 boarded. merge.sh review refused on others' uncommitted site-check pngs. Lesson: UITests-only checks never run in a landing (land_xc runs PyWidgetTests).
+- T-4186 review 11-24 of T-4257 at b076f0ea (t4257-b076f0ea-pernille.md): PASS, M1 lens eats taps, M2 lens clipped at bottom, M3 labels over pinned gutter on sideways scroll. Lesson: an overlay sibling of Runestone: check pinned gutter, no bottom overscroll, and interaction on non-controls.
 {% endraw %}
 
 

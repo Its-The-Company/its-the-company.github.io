@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-25T02:29:08.321747+00:00",
+ "at": "2026-11-25T02:32:06.575622+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -447,7 +447,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 439,
+  "runnable_count": 438,
   "blocked_count": 2
  },
  "meter": {
@@ -496,7 +496,7 @@
   "week_pct": 111.84,
   "usage_pct": 65.1,
   "work_pct": 98.1,
-  "read_at": "2026-11-25T02:29:00+00:00",
+  "read_at": "2026-11-25T02:32:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -530,7 +530,7 @@
   }
  ],
  "disk": {
-  "free_gb": 33,
+  "free_gb": 35,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -539,14 +539,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-24T21:25:00-05:00",
+   "at": "2026-11-24T21:31:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-24T21:29:00-05:00",
+  "at": "2026-11-24T21:32:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -679,14 +679,19 @@
     "o": "c"
    },
    {
-    "w": "Operator",
-    "k": "fix",
-    "t": "Fix a MacBook test job that failed",
+    "w": "Idris",
+    "k": "build",
+    "t": "Add a refresh control and age line to widgets",
     "s": "next",
     "o": "c"
    }
   ],
   "done": [
+   {
+    "w": "Operator",
+    "t": "A later MacBook job for the same work (J-20261124-2122-host-chk-a5ab71-1-432159) passed, so the...",
+    "at": "2026-11-24T21:29:00-05:00"
+   },
    {
     "w": "Operator+pernille",
     "t": "An app merge's Python tests now run on the MacBook whenever the Mac mini is busy enough that the...",
@@ -696,15 +701,10 @@
     "w": "Operator",
     "t": "Every part of the company that writes to or reads from the main conversation thread now follows...",
     "at": "2026-11-24T21:22:00-05:00"
-   },
-   {
-    "w": "Operator",
-    "t": "Each twice-daily report now starts at its scheduled time in a session of its own, started by the...",
-    "at": "2026-11-24T20:40:00-05:00"
    }
   ],
   "count": {
-   "next": 439,
+   "next": 438,
    "wait": 1,
    "blocked": 1,
    "you": 1
@@ -774,7 +774,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-25T02:28:50Z",
+  "at": "2026-11-25T02:32:06Z",
   "s": {
    "T-5813": [
     "testing",
@@ -802,7 +802,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-25T02:28:50Z",
+  "at": "2026-11-25T02:32:06Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -818,9 +818,9 @@
     "inline": null,
     "conflicted": null,
     "failed": null,
-    "held": 2460,
+    "held": 2464,
     "retry": null,
-    "parked": 1860
+    "parked": 1863
    },
    "cur": [],
    "ld": [
@@ -830,19 +830,21 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-25T02:28:51Z",
-    "ld": 2.87,
+    "at": "2026-11-25T02:32:07Z",
+    "ld": 6.82,
     "c": 8,
-    "sb": 0,
+    "sb": 1,
     "dk": [
-     32.8,
+     34.8,
      228.3
     ],
     "ss": [
      132.1,
      953.7
     ],
-    "sn": []
+    "sn": [
+     "iPhone 17e"
+    ]
    },
    "macbook": {
     "at": "2026-11-25T02:25:50Z",
@@ -883,11 +885,11 @@
      "open": true
     }
    },
-   "at": "2026-11-25T02:29:08+00:00"
+   "at": "2026-11-25T02:32:06+00:00"
   },
   "bl": {
    "n": 2,
-   "at": "2026-11-25T02:29:08+00:00"
+   "at": "2026-11-25T02:32:06+00:00"
   }
  },
  "operators": [
@@ -897,8 +899,8 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session",
-   "at": "2026-11-24T21:19:40-05:00"
+   "t": "Inbox \u2013 Evan's 9:31 PM Message on GitHub",
+   "at": "2026-11-24T21:31:52-05:00"
   },
   {
    "w": "Operator",
@@ -914,12 +916,24 @@
   "sent": "2026-11-25T02:16:30Z",
   "seconds": 189.0
  },
- "inbox": [],
+ "inbox": [
+  {
+   "id": "c7150827839",
+   "state": "received",
+   "position": 1,
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "What will cause the 5-minute load to..."
+  }
+ ],
  "trimmed": [
   "lane_next",
   "queue_text",
   "task_done",
   "fin_short",
+  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -930,10 +944,10 @@
   "main": 0,
   "lanes": 1,
   "total": 1,
-  "at": "9:29 PM",
+  "at": "9:32 PM",
   "why": "",
-  "at_iso": "2026-11-25T02:29:00+00:00",
+  "at_iso": "2026-11-25T02:32:00+00:00",
   "started": "8:05 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0, started 8:05 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 9:29 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0, started 8:05 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 9:32 PM ET</p></section>"
  }
 }

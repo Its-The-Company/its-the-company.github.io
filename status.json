@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-25T13:27:17.162989+00:00",
+ "at": "2026-11-25T13:30:23.832897+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -420,7 +420,7 @@
    "task": "[build] T-4183 Gallery Get copy",
    "model": "opus",
    "started": "2026-11-25T12:28:50.173Z",
-   "seconds": 3506,
+   "seconds": 3693,
    "finished": null
   }
  ],
@@ -511,7 +511,7 @@
   "week_pct": 122.65,
   "usage_pct": 64.3,
   "work_pct": 98.1,
-  "read_at": "2026-11-25T13:27:00+00:00",
+  "read_at": "2026-11-25T13:30:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -548,7 +548,7 @@
  "lock_in": {
   "on": true,
   "pool": 2,
-  "at": "2026-11-25T08:27:00-05:00",
+  "at": "2026-11-25T08:30:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -790,9 +790,19 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-25T13:27:17Z",
-  "s": {},
+  "at": "2026-11-25T13:30:23Z",
+  "s": {
+   "T-0901": [
+    "mergetest",
+    "iPhone tests on the MacBook",
+    null
+   ]
+  },
+  "nm": {
+   "T-0901": "Open a free premade as an editable copy"
+  },
   "wk": {
+   "T-0901": "Idris",
    "T-5815": "Idris",
    "T-5849": "Wrenna",
    "T-5848": "Odalys",
@@ -808,7 +818,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-25T13:27:17Z",
+  "at": "2026-11-25T13:30:23Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -822,11 +832,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 425,
+    "conflicted": 428,
     "failed": null,
-    "held": 1985,
+    "held": 1988,
     "retry": null,
-    "parked": 1076
+    "parked": 1079
    },
    "cur": [],
    "ld": [
@@ -836,8 +846,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-25T13:26:54Z",
-    "ld": 0.62,
+    "at": "2026-11-25T13:29:37Z",
+    "ld": 0.54,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -851,8 +861,8 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-25T13:25:10Z",
-    "ld": 2.17,
+    "at": "2026-11-25T13:29:16Z",
+    "ld": 1.03,
     "c": 12,
     "sb": 0,
     "dk": [
@@ -889,11 +899,11 @@
      "open": true
     }
    },
-   "at": "2026-11-25T13:27:17+00:00"
+   "at": "2026-11-25T13:30:23+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-25T13:27:17+00:00"
+   "at": "2026-11-25T13:30:12+00:00"
   }
  },
  "operators": [
@@ -928,10 +938,10 @@
   "main": 1,
   "lanes": 0,
   "total": 1,
-  "at": "8:27 AM",
+  "at": "8:30 AM",
   "why": "",
-  "at_iso": "2026-11-25T13:27:00+00:00",
+  "at_iso": "2026-11-25T13:30:00+00:00",
   "started": "12:10 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 12:10 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 8:27 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 12:10 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 8:30 AM ET</p></section>"
  }
 }

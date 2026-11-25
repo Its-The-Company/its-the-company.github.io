@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-25T21:12:49.638061+00:00",
+ "at": "2026-11-25T21:16:18.214097+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -72,7 +72,7 @@
    "task": "[build] T-4191 VoiceOver and text",
    "model": "",
    "started": "2026-11-25T20:39:20.572Z",
-   "seconds": 2009,
+   "seconds": 2217,
    "finished": null
   },
   {
@@ -80,7 +80,7 @@
    "task": "[build] T-5796 widget buttons steps",
    "model": "",
    "started": "2026-11-25T20:58:11.478Z",
-   "seconds": 878,
+   "seconds": 1086,
    "finished": null
   }
  ],
@@ -171,7 +171,7 @@
   "week_pct": 117.85,
   "usage_pct": 60.2,
   "work_pct": 98.3,
-  "read_at": "2026-11-25T21:13:00+00:00",
+  "read_at": "2026-11-25T21:16:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -233,7 +233,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-25T16:13:00-05:00",
+  "at": "2026-11-25T16:16:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -482,17 +482,22 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-25T21:12:49Z",
+  "at": "2026-11-25T21:16:00Z",
   "s": {
-   "T-4191": [
+   "T-4185": [
     "mergetest",
     "iPhone tests on the MacBook",
+    null
+   ],
+   "T-5796": [
+    "testing",
+    "Mac Mini \u00b7 test",
     null
    ],
    "T-5870": [
     "testq",
     "1st for a Simulator",
-    1795640389638
+    1795640460919
    ],
    "T-4188": [
     "merged",
@@ -502,12 +507,14 @@
    ]
   },
   "nm": {
-   "T-4191": "VoiceOver and large text work on every screen",
+   "T-4185": "Launcher widgets open the apps a person chose",
+   "T-5796": "Internal TestFlight builds carry the test widgets",
    "T-5870": "runner_queue test request: only PyWidgetTests",
    "T-4188": "Location, steps and notifications work in scripts and..."
   },
   "wk": {
-   "T-4191": "Idris",
+   "T-4185": "Idris",
+   "T-5796": "Idris",
    "T-4188": "Idris",
    "T-5539": "Pernille",
    "T-5540": "Pernille",
@@ -520,7 +527,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-25T21:12:49Z",
+  "at": "2026-11-25T21:16:00Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -534,11 +541,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 891,
+    "conflicted": 894,
     "failed": null,
-    "held": 2451,
+    "held": 2454,
     "retry": null,
-    "parked": 1216
+    "parked": 1219
    },
    "cur": [],
    "ld": [
@@ -548,12 +555,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-25T21:13:03Z",
-    "ld": 6.57,
+    "at": "2026-11-25T21:15:31Z",
+    "ld": 7.6,
     "c": 8,
     "sb": 1,
     "dk": [
-     25.0,
+     25.1,
      228.3
     ],
     "ss": [
@@ -565,33 +572,37 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-25T21:11:44Z",
-    "ld": 25.04,
+    "at": "2026-11-25T21:14:43Z",
+    "ld": 74.85,
     "c": 12,
-    "sb": 2,
+    "sb": 6,
     "dk": [
-     441.1,
+     438.8,
      926.4
     ],
     "sn": [
      "itsthecompany-runner-2",
-     "itsthecompany-runner-4"
+     "itsthecompany-runner-3",
+     "itsthecompany-runner-5",
+     "itsthecompany-runner-6",
+     "itsthecompany-runner-7",
+     "itsthecompany-runner-8"
     ]
    }
   }
  },
  "hc": {
   "wait": {
-   "n": 7,
+   "n": 6,
    "limit": 20,
-   "in_line": 1,
+   "in_line": 0,
    "parked": 6,
    "open": true,
    "mq": false,
-   "counted": "2026-11-25T21:04:06+00:00",
+   "counted": "2026-11-25T21:14:21+00:00",
    "by": {
     "app": {
-     "n": 7,
+     "n": 6,
      "limit": 20,
      "open": true
     },
@@ -606,11 +617,11 @@
      "open": true
     }
    },
-   "at": "2026-11-25T21:12:49+00:00"
+   "at": "2026-11-25T21:16:18+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-25T21:12:49+00:00"
+   "at": "2026-11-25T21:16:00+00:00"
   }
  },
  "operators": [
@@ -663,10 +674,10 @@
   "main": 2,
   "lanes": 2,
   "total": 4,
-  "at": "4:13 PM",
+  "at": "4:16 PM",
   "why": "",
-  "at_iso": "2026-11-25T21:13:00+00:00",
+  "at_iso": "2026-11-25T21:16:00+00:00",
   "started": "1:03 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 2, started 1:03 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 4:13 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 2, started 1:03 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 4:16 PM ET</p></section>"
  }
 }

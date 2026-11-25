@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-25T20:51:17.394911+00:00",
+ "at": "2026-11-25T20:54:25.378716+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -72,12 +72,20 @@
    "task": "[build] T-4191 VoiceOver and text",
    "model": "",
    "started": "2026-11-25T20:39:20.572Z",
-   "seconds": 716,
+   "seconds": 904,
    "finished": null
   }
  ],
  "who": "Idris",
  "recent": [
+  {
+   "name": "idris",
+   "task": "[build] T-5050 TestFlight phone build",
+   "model": "",
+   "started": "2026-11-25T20:52:32.853Z",
+   "seconds": null,
+   "finished": "2026-11-25T20:54:04.574000+00:00"
+  },
   {
    "name": "pernille",
    "task": "[review] T-5561 release reads",
@@ -101,37 +109,29 @@
    "started": "2026-11-25T19:58:12.896Z",
    "seconds": null,
    "finished": "2026-11-25T20:00:06.385000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-4190 Settings and Pro",
-   "model": "",
-   "started": "2026-11-25T18:07:43.594Z",
-   "seconds": null,
-   "finished": "2026-11-25T19:57:17.191000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 352,
+  "runnable_count": 348,
   "blocked_count": 0
  },
  "meter": {
   "five_hour": {
-   "pct": 18.0,
+   "pct": 19.0,
    "resets_at": "2026-11-25T18:00:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-25T15:49:59.544061-05:00",
+   "read_at": "2026-11-25T15:53:20.046997-05:00",
    "source": "live",
-   "left": 82.0,
+   "left": 81.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 78.0,
    "resets_at": "2026-11-29T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-25T15:49:59.544061-05:00",
+   "read_at": "2026-11-25T15:53:20.046997-05:00",
    "source": "live",
    "left": 22.0,
    "left_words": "of your weekly allowance left"
@@ -143,7 +143,7 @@
    "read_at": "2026-11-25T15:46:55.446133-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-25T15:49:59.544061-05:00"
+  "read_at": "2026-11-25T15:53:20.046997-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -163,7 +163,7 @@
   "week_pct": 117.85,
   "usage_pct": 60.2,
   "work_pct": 98.3,
-  "read_at": "2026-11-25T20:51:00+00:00",
+  "read_at": "2026-11-25T20:54:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -206,14 +206,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-25T15:46:00-05:00",
+   "at": "2026-11-25T15:53:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-25T15:51:00-05:00",
+  "at": "2026-11-25T15:54:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -364,30 +364,46 @@
   ],
   "done": [
    {
-    "w": "Idris",
-    "t": "The ready-made widgets in the Gallery no longer have the first letters of their words cut off at...",
-    "at": "2026-11-25T15:06:00-05:00"
+    "w": "Pernille",
+    "t": "Ines's showcase plan now names all three Pro features correctly, but it still says one Pro...",
+    "at": "2026-11-25T15:52:00-05:00"
    },
    {
-    "w": "Idris",
-    "t": "The copy of a ready-made widget that Get makes now runs its own files, so a change a person...",
-    "at": "2026-11-25T15:06:00-05:00"
+    "w": "Pernille",
+    "t": "The gate build's pre-upload test run now includes the two ladder checks that used to run only by...",
+    "at": "2026-11-25T15:52:00-05:00"
    },
    {
-    "w": "Idris",
-    "t": "The rule that hides Get on a locked ready-made widget is now tested on its own, and the screens...",
-    "at": "2026-11-25T15:06:00-05:00"
+    "w": "Pernille",
+    "t": "One sentence in my review of the settings-page strings claimed curly apostrophes were the common...",
+    "at": "2026-11-25T15:52:00-05:00"
    }
   ],
   "count": {
-   "next": 352,
+   "next": 348,
    "wait": 0,
    "blocked": 0,
    "you": 0
   },
   "fin": {
-   "n": 4,
+   "n": 8,
    "rows": [
+    [
+     "T-5539",
+     "Check finished work before..."
+    ],
+    [
+     "T-5540",
+     "Check finished work before..."
+    ],
+    [
+     "T-5561",
+     "Check finished work before..."
+    ],
+    [
+     "T-5562",
+     "Check finished work before..."
+    ],
     [
      "T-4139",
      "Check the gallery well's..."
@@ -395,14 +411,6 @@
     [
      "T-0901",
      "Open a free premade as an..."
-    ],
-    [
-     "T-5709",
-     "Test the locked Gallery foot..."
-    ],
-    [
-     "T-5842",
-     "Get puts a Gallery item into..."
     ]
    ]
   }
@@ -446,8 +454,13 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-25T20:50:57Z",
+  "at": "2026-11-25T20:54:25Z",
   "s": {
+   "T-4181": [
+    "mergeq",
+    "1st to merge",
+    1795639945378
+   ],
    "T-5870": [
     "testing",
     "MacBook \u00b7 test",
@@ -461,11 +474,17 @@
    ]
   },
   "nm": {
+   "T-4181": "Widgets refresh on their own and by a tap",
    "T-5870": "runner_queue test request: only PyWidgetTests",
    "T-4188": "Location, steps and notifications work in scripts and..."
   },
   "wk": {
+   "T-4181": "Idris",
    "T-4188": "Idris",
+   "T-5539": "Pernille",
+   "T-5540": "Pernille",
+   "T-5561": "Pernille",
+   "T-5562": "Odalys",
    "T-4139": "Idris",
    "T-0901": "Idris",
    "T-5709": "Idris",
@@ -473,11 +492,11 @@
   }
  },
  "ln": {
-  "at": "2026-11-25T20:50:57Z",
+  "at": "2026-11-25T20:54:25Z",
   "mq": {
    "n": {
     "checking": 0,
-    "inline": 0,
+    "inline": 1,
     "conflicted": 1,
     "failed": 0,
     "held": 1,
@@ -486,12 +505,12 @@
    },
    "m": {
     "checking": null,
-    "inline": null,
-    "conflicted": 869,
+    "inline": 2,
+    "conflicted": 872,
     "failed": null,
-    "held": 2429,
+    "held": 2432,
     "retry": null,
-    "parked": 1194
+    "parked": 1197
    },
    "cur": [],
    "ld": [
@@ -501,8 +520,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-25T20:50:31Z",
-    "ld": 0.78,
+    "at": "2026-11-25T20:54:28Z",
+    "ld": 1.75,
     "c": 8,
     "sb": 1,
     "dk": [
@@ -535,16 +554,16 @@
  },
  "hc": {
   "wait": {
-   "n": 6,
+   "n": 7,
    "limit": 20,
-   "in_line": 0,
+   "in_line": 1,
    "parked": 6,
    "open": true,
    "mq": false,
-   "counted": "2026-11-25T20:42:30+00:00",
+   "counted": "2026-11-25T20:52:56+00:00",
    "by": {
     "app": {
-     "n": 6,
+     "n": 7,
      "limit": 20,
      "open": true
     },
@@ -559,11 +578,11 @@
      "open": true
     }
    },
-   "at": "2026-11-25T20:51:17+00:00"
+   "at": "2026-11-25T20:54:25+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-25T20:51:17+00:00"
+   "at": "2026-11-25T20:54:25+00:00"
   }
  },
  "operators": [
@@ -599,6 +618,7 @@
   "fin_short",
   "task_title",
   "done_text",
+  "fin_six",
   "lane_task",
   "task_next"
  ],
@@ -606,10 +626,10 @@
   "main": 1,
   "lanes": 1,
   "total": 2,
-  "at": "3:51 PM",
+  "at": "3:54 PM",
   "why": "",
-  "at_iso": "2026-11-25T20:51:00+00:00",
+  "at_iso": "2026-11-25T20:54:00+00:00",
   "started": "1:03 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 1, started 1:03 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 3:51 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 1, started 1:03 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 3:54 PM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-25T07:07:42.557843+00:00",
+ "at": "2026-11-25T07:10:43.132801+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -420,7 +420,7 @@
    "task": "[build] T-5815 fix two UI tests",
    "model": "opus",
    "started": "2026-11-25T05:10:53.997Z",
-   "seconds": 7008,
+   "seconds": 7189,
    "finished": null
   }
  ],
@@ -438,7 +438,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 350,
+  "runnable_count": 351,
   "blocked_count": 1
  },
  "meter": {
@@ -487,7 +487,7 @@
   "week_pct": 115.85,
   "usage_pct": 64.4,
   "work_pct": 98.1,
-  "read_at": "2026-11-25T07:07:00+00:00",
+  "read_at": "2026-11-25T07:10:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -542,14 +542,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-25T02:04:00-05:00",
+   "at": "2026-11-25T02:10:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 2,
-  "at": "2026-11-25T02:07:00-05:00",
+  "at": "2026-11-25T02:10:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -705,6 +705,11 @@
   ],
   "done": [
    {
+    "w": "Odalys+operator+pernille",
+    "t": "The MacBook's test job folders now carry a name Spotlight skips, so the MacBook stops indexing...",
+    "at": "2026-11-25T02:09:00-05:00"
+   },
+   {
     "w": "Operator",
     "t": "Found already finished in the app backlog audit of 25 November and ticked by the Operator: run...",
     "at": "2026-11-25T01:31:00-05:00"
@@ -713,22 +718,21 @@
     "w": "Idris+operator",
     "t": "Found already finished in the app backlog audit of 25 November and ticked by the Operator: tidy...",
     "at": "2026-11-25T01:30:00-05:00"
-   },
-   {
-    "w": "Ines+operator",
-    "t": "Found already finished in the app backlog audit of 25 November and ticked by the Operator: ask...",
-    "at": "2026-11-25T01:30:00-05:00"
    }
   ],
   "count": {
-   "next": 350,
+   "next": 351,
    "wait": 0,
    "blocked": 1,
    "you": 0
   },
   "fin": {
-   "n": 62,
+   "n": 63,
    "rows": [
+    [
+     "T-5845",
+     "Keep Spotlight out of..."
+    ],
     [
      "T-4239",
      "Tidy the five small points..."
@@ -748,10 +752,6 @@
     [
      "T-0687",
      "Run network fetches inside..."
-    ],
-    [
-     "T-4615",
-     "Widget taps on iPad reuse an..."
     ]
    ]
   }
@@ -795,7 +795,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-25T07:07:23Z",
+  "at": "2026-11-25T07:10:37Z",
   "s": {
    "T-4188": [
     "mergetest",
@@ -808,6 +808,7 @@
   },
   "wk": {
    "T-4188": "Idris",
+   "T-5845": "Odalys",
    "T-4239": "Idris",
    "T-1440": "Idris",
    "T-1652": "Idris",
@@ -818,12 +819,11 @@
    "T-1643": "Idris",
    "T-2583": "Idris",
    "T-2551": "Pernille",
-   "T-0198": "Idris",
-   "T-0272": "Idris"
+   "T-0198": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-25T07:07:23Z",
+  "at": "2026-11-25T07:10:37Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -837,11 +837,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 45,
+    "conflicted": 49,
     "failed": null,
-    "held": 2739,
+    "held": 2742,
     "retry": null,
-    "parked": 1150
+    "parked": 1153
    },
    "cur": [],
    "ld": [
@@ -851,8 +851,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-25T07:07:00Z",
-    "ld": 1.34,
+    "at": "2026-11-25T07:10:32Z",
+    "ld": 1.22,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -888,7 +888,7 @@
    "parked": 12,
    "open": true,
    "mq": false,
-   "counted": "2026-11-25T06:58:06+00:00",
+   "counted": "2026-11-25T07:08:21+00:00",
    "by": {
     "app": {
      "n": 11,
@@ -906,11 +906,11 @@
      "open": true
     }
    },
-   "at": "2026-11-25T07:07:42+00:00"
+   "at": "2026-11-25T07:10:43+00:00"
   },
   "bl": {
    "n": 1,
-   "at": "2026-11-25T07:07:36+00:00"
+   "at": "2026-11-25T07:10:43+00:00"
   }
  },
  "operators": [
@@ -963,10 +963,10 @@
   "main": 1,
   "lanes": 2,
   "total": 3,
-  "at": "2:07 AM",
+  "at": "2:10 AM",
   "why": "",
-  "at_iso": "2026-11-25T07:07:00+00:00",
+  "at_iso": "2026-11-25T07:10:00+00:00",
   "started": "12:10 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 1, started 12:10 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 2:07 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 1, started 12:10 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 2:10 AM ET</p></section>"
  }
 }

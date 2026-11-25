@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-25T16:37:24.634954+00:00",
+ "at": "2026-11-25T16:40:28.069904+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -62,7 +62,7 @@
    "task": "[build] T-4183 Gallery Get copy",
    "model": "opus",
    "started": "2026-11-25T12:28:50.173Z",
-   "seconds": 14914,
+   "seconds": 15097,
    "finished": null
   }
  ],
@@ -153,7 +153,7 @@
   "week_pct": 128.06,
   "usage_pct": 64.3,
   "work_pct": 98.1,
-  "read_at": "2026-11-25T16:37:00+00:00",
+  "read_at": "2026-11-25T16:40:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -208,14 +208,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-25T11:34:00-05:00",
+   "at": "2026-11-25T11:39:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
-  "pool": 4,
-  "at": "2026-11-25T11:37:00-05:00",
+  "pool": 5,
+  "at": "2026-11-25T11:40:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -457,14 +457,14 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-25T16:37:24Z",
+  "at": "2026-11-25T16:40:14Z",
   "s": {
    "T-4188": [
     "mergetest",
     "Xcode checks on the MacBook, 1st to merge",
-    1795623804634
+    1795623794613
    ],
-   "T-3792": [
+   "T-5709": [
     "mergetest",
     "iPhone tests on the MacBook",
     null
@@ -478,12 +478,12 @@
   },
   "nm": {
    "T-4188": "Location, steps and notifications work in scripts and...",
-   "T-3792": "Show a lifted widget running again in test L",
+   "T-5709": "Test the locked Gallery foot and its sheet neighbours",
    "T-4182": "A failing widget says so and can recover"
   },
   "wk": {
    "T-4188": "Idris",
-   "T-3792": "Idris",
+   "T-5709": "Idris",
    "T-4182": "Idris",
    "T-5862": "Operator",
    "T-5863": "Operator",
@@ -500,7 +500,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-25T16:37:24Z",
+  "at": "2026-11-25T16:40:14Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -512,22 +512,22 @@
     "parked": 4
    },
    "m": {
-    "checking": 14,
+    "checking": 17,
     "inline": null,
-    "conflicted": 615,
+    "conflicted": 618,
     "failed": null,
-    "held": 2175,
+    "held": 2178,
     "retry": null,
-    "parked": 940
+    "parked": 943
    },
    "cur": [
     [
      [
       "T-4188"
      ],
-     "iPhone app tests, sent and waiting its turn",
+     "iPhone app tests",
      "MacBook",
-     14
+     17
     ]
    ],
    "ld": [
@@ -537,8 +537,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-25T16:37:00Z",
-    "ld": 3.01,
+    "at": "2026-11-25T16:40:01Z",
+    "ld": 2.14,
     "c": 8,
     "sb": 1,
     "dk": [
@@ -554,16 +554,16 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-25T16:33:02Z",
-    "ld": 4.95,
+    "at": "2026-11-25T16:37:48Z",
+    "ld": 3.06,
     "c": 12,
     "sb": 1,
     "dk": [
-     360.6,
+     360.7,
      926.4
     ],
     "sn": [
-     "itsthecompany-runner-2"
+     "itsthecompany-runner"
     ]
    }
   }
@@ -594,11 +594,11 @@
      "open": true
     }
    },
-   "at": "2026-11-25T16:37:24+00:00"
+   "at": "2026-11-25T16:40:28+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-25T16:37:24+00:00"
+   "at": "2026-11-25T16:40:21+00:00"
   }
  },
  "operators": [
@@ -651,10 +651,10 @@
   "main": 1,
   "lanes": 2,
   "total": 3,
-  "at": "11:37 AM",
+  "at": "11:40 AM",
   "why": "",
-  "at_iso": "2026-11-25T16:37:00+00:00",
+  "at_iso": "2026-11-25T16:40:00+00:00",
   "started": "12:10 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 1, started 12:10 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 11:37 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 1, started 12:10 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 11:40 AM ET</p></section>"
  }
 }

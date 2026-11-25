@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-25T16:16:05.948267+00:00",
+ "at": "2026-11-25T16:18:51.440348+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -8,56 +8,10 @@
   "coord": {
    "active": true,
    "started": 1795341309,
-   "restarts": 10,
-   "last_handoff": 1795582978
+   "restarts": 11,
+   "last_handoff": 1795623451
   },
-  "flow": [
-   {
-    "t": "T-4807",
-    "w": "Pernille",
-    "acct": "Personal b",
-    "steps": [
-     {
-      "s": "claimed",
-      "at": 1795537079
-     },
-     {
-      "s": "worker",
-      "at": 1795537079
-     }
-    ]
-   },
-   {
-    "t": "T-5236",
-    "w": "Odalys",
-    "acct": "Personal b",
-    "steps": [
-     {
-      "s": "claimed",
-      "at": 1795537024
-     },
-     {
-      "s": "worker",
-      "at": 1795537024
-     }
-    ]
-   },
-   {
-    "t": "T-4813",
-    "w": "Maren",
-    "acct": "Personal b",
-    "steps": [
-     {
-      "s": "claimed",
-      "at": 1795536968
-     },
-     {
-      "s": "worker",
-      "at": 1795536968
-     }
-    ]
-   }
-  ],
+  "flow": [],
   "done": [
    {
     "t": "T-5607",
@@ -108,7 +62,7 @@
    "task": "[build] T-4183 Gallery Get copy",
    "model": "opus",
    "started": "2026-11-25T12:28:50.173Z",
-   "seconds": 13635,
+   "seconds": 13801,
    "finished": null
   }
  ],
@@ -199,7 +153,7 @@
   "week_pct": 126.26,
   "usage_pct": 64.3,
   "work_pct": 98.1,
-  "read_at": "2026-11-25T16:16:00+00:00",
+  "read_at": "2026-11-25T16:19:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -212,18 +166,6 @@
     "at": "2026-11-25T10:18:36-05:00",
     "n": "Evan",
     "src": "plan-a"
-   },
-   {
-    "lane": "b",
-    "task": "T-4188",
-    "w": "Idris",
-    "k": "build",
-    "t": "Location, steps and notifications work in scripts and widgets",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-25T09:30:14-05:00",
-    "n": "Jeremy",
-    "src": "plan-b"
    }
   ]
  },
@@ -261,7 +203,7 @@
  "lock_in": {
   "on": true,
   "pool": 4,
-  "at": "2026-11-25T11:16:00-05:00",
+  "at": "2026-11-25T11:19:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -503,13 +445,12 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-25T16:15:57Z",
+  "at": "2026-11-25T16:18:51Z",
   "s": {
-   "T-4188": [
-    "merged",
-    "on main 7:50 AM ET",
-    1795611011000,
-    "Idris"
+   "T-3792": [
+    "mergetest",
+    "iPhone tests on the MacBook",
+    null
    ],
    "T-4182": [
     "merged",
@@ -519,11 +460,11 @@
    ]
   },
   "nm": {
-   "T-4188": "Location, steps and notifications work in scripts and...",
+   "T-3792": "Show a lifted widget running again in test L",
    "T-4182": "A failing widget says so and can recover"
   },
   "wk": {
-   "T-4188": "Idris",
+   "T-3792": "Idris",
    "T-4182": "Idris",
    "T-5862": "Operator",
    "T-5863": "Operator",
@@ -540,7 +481,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-25T16:15:57Z",
+  "at": "2026-11-25T16:18:51Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -554,11 +495,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 594,
+    "conflicted": 597,
     "failed": null,
-    "held": 2154,
+    "held": 2157,
     "retry": null,
-    "parked": 919
+    "parked": 922
    },
    "cur": [],
    "ld": [
@@ -568,12 +509,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-25T16:15:19Z",
-    "ld": 14.21,
+    "at": "2026-11-25T16:18:34Z",
+    "ld": 15.85,
     "c": 8,
     "sb": 2,
     "dk": [
-     27.5,
+     29.9,
      228.3
     ],
     "ss": [
@@ -586,8 +527,8 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-25T16:14:37Z",
-    "ld": 1.63,
+    "at": "2026-11-25T16:16:43Z",
+    "ld": 1.13,
     "c": 12,
     "sb": 0,
     "dk": [
@@ -624,11 +565,11 @@
      "open": true
     }
    },
-   "at": "2026-11-25T16:16:05+00:00"
+   "at": "2026-11-25T16:18:51+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-25T16:16:05+00:00"
+   "at": "2026-11-25T16:18:51+00:00"
   }
  },
  "operators": [
@@ -649,15 +590,6 @@
    "e": "high",
    "t": "Work session \u2013 1 task",
    "at": "2026-11-25T10:18:36-05:00"
-  },
-  {
-   "w": "Operator",
-   "a": "Jeremy's Account",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session",
-   "at": "2026-11-25T09:30:14-05:00"
   }
  ],
  "reply": {
@@ -679,12 +611,12 @@
  ],
  "agents_now": {
   "main": 1,
-  "lanes": 2,
-  "total": 3,
-  "at": "11:16 AM",
+  "lanes": 1,
+  "total": 2,
+  "at": "11:19 AM",
   "why": "",
-  "at_iso": "2026-11-25T16:16:00+00:00",
+  "at_iso": "2026-11-25T16:19:00+00:00",
   "started": "12:10 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 1, started 12:10 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 11:16 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 1, started 12:10 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 11:19 AM ET</p></section>"
  }
 }

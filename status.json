@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-25T23:21:30.623457+00:00",
+ "at": "2026-11-25T23:24:24.098434+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -79,23 +79,31 @@
  "workers": [
   {
    "name": "idris",
-   "task": "[build] T-4191 VoiceOver and text",
-   "model": "",
-   "started": "2026-11-25T20:39:20.572Z",
-   "seconds": 9730,
-   "finished": null
-  },
-  {
-   "name": "idris",
    "task": "[build] T-5796 widget buttons steps",
    "model": "",
    "started": "2026-11-25T20:58:11.478Z",
-   "seconds": 8599,
+   "seconds": 8772,
+   "finished": null
+  },
+  {
+   "name": "maren",
+   "task": "[review] T-4191",
+   "model": "",
+   "started": "2026-11-25T23:22:05.986Z",
+   "seconds": 138,
    "finished": null
   }
  ],
- "who": "Idris x2",
+ "who": "Idris, Maren",
  "recent": [
+  {
+   "name": "idris",
+   "task": "[build] T-4191 VoiceOver and text",
+   "model": "",
+   "started": "2026-11-25T20:39:20.572Z",
+   "seconds": null,
+   "finished": "2026-11-25T23:21:47.735000+00:00"
+  },
   {
    "name": "idris",
    "task": "[build] T-5050 TestFlight phone build",
@@ -119,14 +127,6 @@
    "started": "2026-11-25T20:40:23.716Z",
    "seconds": null,
    "finished": "2026-11-25T20:41:23.752000+00:00"
-  },
-  {
-   "name": "pernille",
-   "task": "[review] T-4190",
-   "model": "",
-   "started": "2026-11-25T19:58:12.896Z",
-   "seconds": null,
-   "finished": "2026-11-25T20:00:06.385000+00:00"
   }
  ],
  "queue": {
@@ -181,7 +181,7 @@
   "week_pct": 123.16,
   "usage_pct": 60.0,
   "work_pct": 98.3,
-  "read_at": "2026-11-25T23:21:00+00:00",
+  "read_at": "2026-11-25T23:24:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -236,14 +236,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-25T18:16:00-05:00",
+   "at": "2026-11-25T18:22:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-25T18:21:00-05:00",
+  "at": "2026-11-25T18:24:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -262,9 +262,17 @@
   {
    "name": "Idris",
    "state": "running",
-   "task": "[build] T-4191 VoiceOver and text",
+   "task": "[build] T-5796 widget buttons steps",
    "model": null,
-   "since": "2026-11-25T20:39:20.572Z",
+   "since": "2026-11-25T20:58:11.478Z",
+   "next": []
+  },
+  {
+   "name": "Maren",
+   "state": "running",
+   "task": "[review] T-4191",
+   "model": null,
+   "since": "2026-11-25T23:22:05.986Z",
    "next": []
   },
   {
@@ -298,14 +306,6 @@
    "model": null,
    "since": null,
    "next": []
-  },
-  {
-   "name": "Maren",
-   "state": "next",
-   "task": "Maren, P1, from T-2296 review M2...",
-   "model": null,
-   "since": null,
-   "next": []
   }
  ],
  "tasks": {
@@ -313,18 +313,18 @@
    {
     "w": "Idris",
     "k": "build",
-    "t": "VoiceOver and large text work on every screen",
-    "at": "2026-11-25T20:39:20.572Z",
-    "o": "c",
-    "task": "T-4191"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
     "t": "Internal TestFlight builds carry the test widgets",
     "at": "2026-11-25T20:58:11.478Z",
     "o": "c",
     "task": "T-5796"
+   },
+   {
+    "w": "Maren",
+    "k": "review",
+    "t": "VoiceOver and large text work on every screen",
+    "at": "2026-11-25T23:22:05.986Z",
+    "o": "c",
+    "task": "T-4191"
    }
   ],
   "src": "plan",
@@ -492,26 +492,19 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-25T23:21:12Z",
+  "at": "2026-11-25T23:24:24Z",
   "s": {
-   "T-4181": [
+   "T-4415": [
     "mergetest",
     "iPhone tests on the MacBook",
-    null
-   ],
-   "T-5796": [
-    "testing",
-    "Mac Mini \u00b7 test",
     null
    ]
   },
   "nm": {
-   "T-4181": "Widgets refresh on their own and by a tap",
-   "T-5796": "Internal TestFlight builds carry the test widgets"
+   "T-4415": "Decide what the refresh button shows when nothing can run"
   },
   "wk": {
-   "T-4181": "Idris",
-   "T-5796": "Idris",
+   "T-4415": "Idris",
    "T-5539": "Pernille",
    "T-5540": "Pernille",
    "T-5561": "Pernille",
@@ -523,25 +516,25 @@
   }
  },
  "ln": {
-  "at": "2026-11-25T23:21:12Z",
+  "at": "2026-11-25T23:24:24Z",
   "mq": {
    "n": {
     "checking": 0,
     "inline": 0,
-    "conflicted": 1,
+    "conflicted": 0,
     "failed": 0,
     "held": 1,
     "retry": 0,
-    "parked": 4
+    "parked": 2
    },
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 1019,
+    "conflicted": null,
     "failed": null,
-    "held": 2579,
+    "held": 2582,
     "retry": null,
-    "parked": 1344
+    "parked": 2260
    },
    "cur": [],
    "ld": [
@@ -551,12 +544,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-25T23:20:48Z",
-    "ld": 6.57,
+    "at": "2026-11-25T23:24:27Z",
+    "ld": 9.86,
     "c": 8,
     "sb": 1,
     "dk": [
-     22.4,
+     22.6,
      228.3
     ],
     "ss": [
@@ -568,18 +561,15 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-25T23:15:37Z",
-    "ld": 5.61,
+    "at": "2026-11-25T23:23:10Z",
+    "ld": 2.1,
     "c": 12,
-    "sb": 2,
+    "sb": 0,
     "dk": [
-     433.2,
+     436.1,
      926.4
     ],
-    "sn": [
-     "itsthecompany-runner",
-     "itsthecompany-runner-2"
-    ]
+    "sn": []
    }
   }
  },
@@ -609,11 +599,11 @@
      "open": true
     }
    },
-   "at": "2026-11-25T23:21:30+00:00"
+   "at": "2026-11-25T23:24:24+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-25T23:21:30+00:00"
+   "at": "2026-11-25T23:24:24+00:00"
   }
  },
  "operators": [
@@ -666,10 +656,10 @@
   "main": 2,
   "lanes": 2,
   "total": 4,
-  "at": "6:21 PM",
+  "at": "6:24 PM",
   "why": "",
-  "at_iso": "2026-11-25T23:21:00+00:00",
+  "at_iso": "2026-11-25T23:24:00+00:00",
   "started": "1:03 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 2, started 1:03 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 6:21 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 2, started 1:03 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 6:24 PM ET</p></section>"
  }
 }

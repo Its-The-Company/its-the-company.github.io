@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-26T05:16:12.525898+00:00",
+ "at": "2026-11-26T05:19:24.210445+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -92,7 +92,7 @@
    "task": "[build] T-5795 weather chart screenshot",
    "model": "opus",
    "started": "2026-11-26T04:51:14.099Z",
-   "seconds": 1498,
+   "seconds": 1690,
    "finished": null
   },
   {
@@ -100,7 +100,7 @@
    "task": "[build] T-5893 location widget ID",
    "model": "opus",
    "started": "2026-11-26T05:15:58.514Z",
-   "seconds": 14,
+   "seconds": 205,
    "finished": null
   }
  ],
@@ -142,7 +142,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 340,
+  "runnable_count": 341,
   "blocked_count": 0
  },
  "meter": {
@@ -191,7 +191,7 @@
   "week_pct": 132.95,
   "usage_pct": 58.8,
   "work_pct": 98.5,
-  "read_at": "2026-11-26T05:16:00+00:00",
+  "read_at": "2026-11-26T05:19:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -277,7 +277,7 @@
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-26T00:16:00-05:00",
+  "at": "2026-11-26T00:19:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -288,7 +288,7 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Double Spread: past the week's halfway point with room left, so twice the even pace until the limit or the reset; the machine allows 8 (at its floor: load 12.1 a core is over 10)",
+  "why": "Double Spread: past the week's halfway point with room left, so twice the even pace until the limit or the reset; the machine allows 8 (held: too few lands in 3 hours to judge a raise)",
   "n": 1,
   "at": "2026-11-25T23:19:24.355533-05:00"
  },
@@ -454,7 +454,7 @@
    }
   ],
   "count": {
-   "next": 340,
+   "next": 341,
    "wait": 0,
    "blocked": 0,
    "you": 0
@@ -528,12 +528,18 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-26T05:15:55Z",
+  "at": "2026-11-26T05:19:24Z",
   "s": {
    "T-3291": [
     "mergetest",
     "iPhone tests on the MacBook",
     null
+   ],
+   "T-5893": [
+    "merged",
+    "on main 12:15 AM ET",
+    1795670108000,
+    "Operator"
    ],
    "T-5795": [
     "merged",
@@ -544,10 +550,12 @@
   },
   "nm": {
    "T-3291": "Mark failed widgets with the red badge",
+   "T-5893": "Give the location widget an ID Apple accepts",
    "T-5795": "The 1.0 showcase premades are built and in the Gallery"
   },
   "wk": {
    "T-3291": "Idris",
+   "T-5893": "Idris",
    "T-5795": "Pernille",
    "T-5630": "Idris",
    "T-4639": "Idris",
@@ -558,7 +566,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-26T05:15:55Z",
+  "at": "2026-11-26T05:19:24Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -572,11 +580,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 42,
+    "conflicted": 46,
     "failed": null,
-    "held": 42,
+    "held": 46,
     "retry": null,
-    "parked": 42
+    "parked": 46
    },
    "cur": [],
    "ld": [
@@ -586,12 +594,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-26T05:15:56Z",
-    "ld": 7.06,
+    "at": "2026-11-26T05:19:26Z",
+    "ld": 12.38,
     "c": 8,
-    "sb": 1,
+    "sb": 2,
     "dk": [
-     24.8,
+     24.6,
      228.3
     ],
     "ss": [
@@ -599,20 +607,22 @@
      953.7
     ],
     "sn": [
-     "iPhone 17e"
+     "iPhone 17e",
+     "pywidget-wk-check"
     ]
    },
    "macbook": {
-    "at": "2026-11-26T05:14:10Z",
-    "ld": 2.31,
+    "at": "2026-11-26T05:17:40Z",
+    "ld": 4.76,
     "c": 12,
-    "sb": 1,
+    "sb": 2,
     "dk": [
-     417.6,
+     414.9,
      926.4
     ],
     "sn": [
-     "itsthecompany-runner"
+     "itsthecompany-runner",
+     "itsthecompany-runner-2"
     ]
    }
   }
@@ -643,11 +653,11 @@
      "open": true
     }
    },
-   "at": "2026-11-26T05:16:12+00:00"
+   "at": "2026-11-26T05:19:24+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-26T05:16:12+00:00"
+   "at": "2026-11-26T05:19:24+00:00"
   }
  },
  "operators": [
@@ -664,8 +674,6 @@
    "w": "Operator",
    "a": "Evan's Account",
    "sr": 1,
-   "m": "opus",
-   "e": "high",
    "t": "Work session \u2013 1 task",
    "at": "2026-11-25T23:34:52-05:00"
   },
@@ -673,8 +681,6 @@
    "w": "Operator",
    "a": "Evan's Account",
    "sr": 1,
-   "m": "opus",
-   "e": "high",
    "t": "Work session \u2013 1 task",
    "at": "2026-11-25T23:44:28-05:00"
   },
@@ -682,8 +688,6 @@
    "w": "Operator",
    "a": "Jeremy's Account",
    "sr": 1,
-   "m": "opus",
-   "e": "high",
    "t": "Work session \u2013 1 task",
    "at": "2026-11-25T23:51:01-05:00"
   },
@@ -691,8 +695,6 @@
    "w": "Operator",
    "a": "Jeremy's Account",
    "sr": 1,
-   "m": "opus",
-   "e": "high",
    "t": "Work session \u2013 1 task",
    "at": "2026-11-25T23:56:18-05:00"
   }
@@ -717,10 +719,10 @@
   "main": 2,
   "lanes": 4,
   "total": 6,
-  "at": "12:16 AM",
+  "at": "12:19 AM",
   "why": "",
-  "at_iso": "2026-11-26T05:16:00+00:00",
+  "at_iso": "2026-11-26T05:19:00+00:00",
   "started": "11:19 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 2, started 11:19 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 12:16 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 2, started 11:19 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 12:19 AM ET</p></section>"
  }
 }

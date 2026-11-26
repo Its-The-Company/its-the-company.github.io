@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-26T05:22:35.486033+00:00",
+ "at": "2026-11-26T05:25:38.203794+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -92,20 +92,20 @@
    "task": "[build] T-5795 weather chart screenshot",
    "model": "opus",
    "started": "2026-11-26T04:51:14.099Z",
-   "seconds": 1881,
+   "seconds": 2064,
    "finished": null
-  },
+  }
+ ],
+ "who": "Pernille",
+ "recent": [
   {
    "name": "odalys",
    "task": "[review] T-5893",
    "model": "opus",
    "started": "2026-11-26T05:21:51.381Z",
-   "seconds": 44,
-   "finished": null
-  }
- ],
- "who": "Pernille, Odalys",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-26T05:22:38.713000+00:00"
+  },
   {
    "name": "idris",
    "task": "[build] T-5893 location widget ID",
@@ -129,14 +129,6 @@
    "started": "2026-11-26T04:48:53.381Z",
    "seconds": null,
    "finished": "2026-11-26T05:05:57.159000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[report] afternoon work timeline",
-   "model": "opus",
-   "started": "2026-11-26T04:48:11.373Z",
-   "seconds": null,
-   "finished": "2026-11-26T04:56:34.149000+00:00"
   }
  ],
  "queue": {
@@ -191,7 +183,7 @@
   "week_pct": 132.95,
   "usage_pct": 58.8,
   "work_pct": 98.5,
-  "read_at": "2026-11-26T05:22:00+00:00",
+  "read_at": "2026-11-26T05:25:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -277,7 +269,7 @@
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-26T00:22:00-05:00",
+  "at": "2026-11-26T00:25:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -299,14 +291,6 @@
    "task": "[build] T-5795 weather chart screenshot",
    "model": "opus",
    "since": "2026-11-26T04:51:14.099Z",
-   "next": []
-  },
-  {
-   "name": "Odalys",
-   "state": "running",
-   "task": "[review] T-5893",
-   "model": "opus",
-   "since": "2026-11-26T05:21:51.381Z",
    "next": []
   },
   {
@@ -334,6 +318,14 @@
    "next": []
   },
   {
+   "name": "Odalys",
+   "state": "next",
+   "task": "Odalys, P3, host-only, from...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
    "name": "Maren",
    "state": "next",
    "task": "Maren, P1, from T-2296 review M2...",
@@ -352,15 +344,6 @@
     "at": "2026-11-26T04:51:14.099Z",
     "o": "c",
     "task": "T-5795"
-   },
-   {
-    "w": "Odalys",
-    "k": "review",
-    "t": "Give the location widget an ID Apple accepts",
-    "m": "opus",
-    "at": "2026-11-26T05:21:51.381Z",
-    "o": "c",
-    "task": "T-5893"
    }
   ],
   "src": "plan",
@@ -528,18 +511,12 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-26T05:22:22Z",
+  "at": "2026-11-26T05:25:30Z",
   "s": {
-   "T-3291": [
+   "T-5893": [
     "mergetest",
     "iPhone tests on the MacBook",
     null
-   ],
-   "T-5893": [
-    "merged",
-    "on main 12:15 AM ET",
-    1795670108000,
-    "Operator"
    ],
    "T-5795": [
     "merged",
@@ -549,12 +526,10 @@
    ]
   },
   "nm": {
-   "T-3291": "Mark failed widgets with the red badge",
    "T-5893": "Give the location widget an ID Apple accepts",
    "T-5795": "The 1.0 showcase premades are built and in the Gallery"
   },
   "wk": {
-   "T-3291": "Idris",
    "T-5893": "Idris",
    "T-5795": "Pernille",
    "T-5630": "Idris",
@@ -566,7 +541,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-26T05:22:22Z",
+  "at": "2026-11-26T05:25:30Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -580,11 +555,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 49,
+    "conflicted": 52,
     "failed": null,
-    "held": 49,
+    "held": 52,
     "retry": null,
-    "parked": 49
+    "parked": 52
    },
    "cur": [],
    "ld": [
@@ -594,12 +569,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-26T05:22:23Z",
-    "ld": 7.53,
+    "at": "2026-11-26T05:24:48Z",
+    "ld": 5.55,
     "c": 8,
     "sb": 1,
     "dk": [
-     24.8,
+     24.7,
      228.3
     ],
     "ss": [
@@ -611,17 +586,17 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-26T05:17:40Z",
-    "ld": 4.76,
+    "at": "2026-11-26T05:24:23Z",
+    "ld": 6.7,
     "c": 12,
     "sb": 2,
     "dk": [
-     414.9,
+     416.7,
      926.4
     ],
     "sn": [
      "itsthecompany-runner",
-     "itsthecompany-runner-2"
+     "itsthecompany-runner-3"
     ]
    }
   }
@@ -652,11 +627,11 @@
      "open": true
     }
    },
-   "at": "2026-11-26T05:22:35+00:00"
+   "at": "2026-11-26T05:25:38+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-26T05:22:29+00:00"
+   "at": "2026-11-26T05:25:24+00:00"
   }
  },
  "operators": [
@@ -723,13 +698,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 2,
+  "main": 1,
   "lanes": 4,
-  "total": 6,
-  "at": "12:22 AM",
+  "total": 5,
+  "at": "12:25 AM",
   "why": "",
-  "at_iso": "2026-11-26T05:22:00+00:00",
+  "at_iso": "2026-11-26T05:25:00+00:00",
   "started": "11:19 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 2, started 11:19 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 12:22 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 1, started 11:19 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 12:25 AM ET</p></section>"
  }
 }

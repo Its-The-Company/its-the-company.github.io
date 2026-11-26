@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-26T18:25:03.853741+00:00",
+ "at": "2026-11-26T18:28:06.989425+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -82,7 +82,7 @@
    "task": "[build] T-4476 tap actions manifest",
    "model": "opus",
    "started": "2026-11-26T17:25:36.297Z",
-   "seconds": 3567,
+   "seconds": 3750,
    "finished": null,
    "effort": "high"
   },
@@ -91,7 +91,7 @@
    "task": "[build] T-4190 Settings Pro themes",
    "model": "opus",
    "started": "2026-11-26T17:25:48.856Z",
-   "seconds": 3554,
+   "seconds": 3738,
    "finished": null,
    "effort": "high"
   },
@@ -100,22 +100,30 @@
    "task": "[build] T-5795 Sky premade finish",
    "model": "opus",
    "started": "2026-11-26T17:25:59.464Z",
-   "seconds": 3544,
+   "seconds": 3727,
    "finished": null,
    "effort": "high"
   },
+  {
+   "name": "maren",
+   "task": "[build] T-5859 Swiss editorial look",
+   "model": "opus",
+   "started": "2026-11-26T18:27:03.766Z",
+   "seconds": 63,
+   "finished": null,
+   "effort": "high"
+  }
+ ],
+ "who": "Idris x2, Pernille, Maren",
+ "recent": [
   {
    "name": "ines",
    "task": "[review] T-5858",
    "model": "opus",
    "started": "2026-11-26T18:24:28.213Z",
-   "seconds": 35,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Idris x2, Pernille, Ines",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-26T18:26:24.412000+00:00"
+  },
   {
    "name": "maren",
    "task": "[build] T-5858 risograph new look",
@@ -139,49 +147,41 @@
    "started": "2026-11-26T17:54:09.834Z",
    "seconds": null,
    "finished": "2026-11-26T18:03:23.420000+00:00"
-  },
-  {
-   "name": "ines",
-   "task": "[review] T-5856",
-   "model": "opus",
-   "started": "2026-11-26T17:51:14.946Z",
-   "seconds": null,
-   "finished": "2026-11-26T17:53:27.456000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 319,
+  "runnable_count": 318,
   "blocked_count": 0
  },
  "meter": {
   "five_hour": {
-   "pct": 17.0,
-   "resets_at": "2026-11-26T16:30:00-05:00",
+   "pct": 18.0,
+   "resets_at": "2026-11-26T21:29:59.724218+00:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-26T13:24:02.226714-05:00",
-   "source": "live",
-   "left": 83.0,
+   "read_at": "2026-11-26T13:26:13.458806-05:00",
+   "source": "usage",
+   "left": 82.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 2.0,
-   "resets_at": "2026-11-29T02:00:00-05:00",
+   "pct": 3.0,
+   "resets_at": "2026-11-29T06:59:59.724238+00:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-26T13:24:02.226714-05:00",
-   "source": "live",
-   "left": 98.0,
+   "read_at": "2026-11-26T13:26:13.458806-05:00",
+   "source": "usage",
+   "left": 97.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 0.0,
    "resets_at": "2026-11-29T07:00:00+00:00",
    "used_words": "of the Fable weekly allowance used",
-   "read_at": "2026-11-26T12:54:39.241533-05:00",
+   "read_at": "2026-11-26T13:26:13.458806-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-26T13:24:02.226714-05:00"
+  "read_at": "2026-11-26T13:26:13.458806-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -201,7 +201,7 @@
   "week_pct": 161.94,
   "usage_pct": 62.0,
   "work_pct": 98.8,
-  "read_at": "2026-11-26T18:25:00+00:00",
+  "read_at": "2026-11-26T18:28:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -271,7 +271,7 @@
   }
  ],
  "disk": {
-  "free_gb": 21,
+  "free_gb": 19,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -280,14 +280,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-26T13:19:00-05:00",
+   "at": "2026-11-26T13:26:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-26T13:25:00-05:00",
+  "at": "2026-11-26T13:28:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -322,26 +322,26 @@
    "effort": "high"
   },
   {
-   "name": "Ines",
+   "name": "Maren",
    "state": "running",
-   "task": "[review] T-5858",
+   "task": "[build] T-5859 Swiss editorial look",
    "model": "opus",
-   "since": "2026-11-26T18:24:28.213Z",
+   "since": "2026-11-26T18:27:03.766Z",
    "next": [],
    "effort": "high"
   },
   {
-   "name": "Wrenna",
+   "name": "Ines",
    "state": "next",
-   "task": "Read developer.apple.com \"Keeping a widget up to date\",...",
+   "task": "Ines, P2, from T-5470...",
    "model": null,
    "since": null,
    "next": []
   },
   {
-   "name": "Maren",
+   "name": "Wrenna",
    "state": "next",
-   "task": "Maren, P2, from T-0306 (Simulator check of the L4...",
+   "task": "Read developer.apple.com \"Keeping a widget up to date\",...",
    "model": null,
    "since": null,
    "next": []
@@ -388,14 +388,14 @@
     "task": "T-5795"
    },
    {
-    "w": "Ines",
-    "k": "review",
-    "t": "Draw the risograph print direction for the new look",
+    "w": "Maren",
+    "k": "build",
+    "t": "Draw the Swiss editorial direction for the new look",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-26T18:24:28.213Z",
-    "o": "c",
-    "task": "T-5858"
+    "at": "2026-11-26T18:27:03.766Z",
+    "o": "i",
+    "task": "T-5859"
    }
   ],
   "src": "plan",
@@ -474,6 +474,11 @@
   "done": [
    {
     "w": "Maren",
+    "t": "The third look for the app is drawn: screens printed as if by a two-ink risograph press, teal...",
+    "at": "2026-11-26T13:26:00-05:00"
+   },
+   {
+    "w": "Maren",
     "t": "The second new look for the app is drawn: every main screen in light and dark, styled as a...",
     "at": "2026-11-26T13:06:00-05:00"
    },
@@ -481,22 +486,21 @@
     "w": "Maren",
     "t": "The first new-look mockups are drawn: a code-drawn watercolor wash in three palettes, then every...",
     "at": "2026-11-26T12:53:00-05:00"
-   },
-   {
-    "w": "Idris",
-    "t": "If a widget that once hung is later killed by iOS, its Activity screen now shows that kill and...",
-    "at": "2026-11-26T11:16:00-05:00"
    }
   ],
   "count": {
-   "next": 319,
+   "next": 318,
    "wait": 0,
    "blocked": 0,
    "you": 0
   },
   "fin": {
-   "n": 2,
+   "n": 3,
    "rows": [
+    [
+     "T-5858",
+     "Draw the risograph print..."
+    ],
     [
      "T-5857",
      "Draw the blueprint direction..."
@@ -547,7 +551,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-26T18:24:45Z",
+  "at": "2026-11-26T18:27:59Z",
   "s": {
    "T-0623": [
     "mergetest",
@@ -592,12 +596,13 @@
    "T-4185": "Idris",
    "T-4181": "Idris",
    "T-4476": "Idris",
+   "T-5858": "Maren",
    "T-5857": "Maren",
    "T-5856": "Maren"
   }
  },
  "ln": {
-  "at": "2026-11-26T18:24:45Z",
+  "at": "2026-11-26T18:27:59Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -615,7 +620,7 @@
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 710
+    "parked": 713
    },
    "cur": [],
    "ld": [
@@ -625,12 +630,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-26T18:24:03Z",
-    "ld": 4.24,
+    "at": "2026-11-26T18:27:35Z",
+    "ld": 3.09,
     "c": 8,
     "sb": 0,
     "dk": [
-     21.2,
+     18.9,
      228.3
     ],
     "ss": [
@@ -640,15 +645,21 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-26T18:22:18Z",
-    "ld": 8.44,
+    "at": "2026-11-26T18:26:39Z",
+    "ld": 47.93,
     "c": 12,
-    "sb": 0,
+    "sb": 5,
     "dk": [
-     389.6,
+     385.7,
      926.4
     ],
-    "sn": []
+    "sn": [
+     "itsthecompany-runner",
+     "itsthecompany-runner-2",
+     "itsthecompany-runner-3",
+     "itsthecompany-runner-4",
+     "itsthecompany-runner-5"
+    ]
    }
   }
  },
@@ -678,11 +689,11 @@
      "open": true
     }
    },
-   "at": "2026-11-26T18:25:03+00:00"
+   "at": "2026-11-26T18:28:06+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-26T18:24:51+00:00"
+   "at": "2026-11-26T18:27:59+00:00"
   }
  },
  "operators": [
@@ -752,10 +763,10 @@
   "main": 4,
   "lanes": 4,
   "total": 8,
-  "at": "1:25 PM",
+  "at": "1:28 PM",
   "why": "",
-  "at_iso": "2026-11-26T18:25:00+00:00",
+  "at_iso": "2026-11-26T18:28:00+00:00",
   "started": "12:21 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>8</b> agents running now</p><p class=\"an-sub\">Main session 4, started 12:21 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 1:25 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>8</b> agents running now</p><p class=\"an-sub\">Main session 4, started 12:21 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 1:28 PM ET</p></section>"
  }
 }

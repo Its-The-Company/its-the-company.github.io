@@ -43,7 +43,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 - T-4183 11-26: settled on main ddbc366df6 in scratch T-4183-idris/wt (detached): 9bec59faa1 T-5035, 044d065078 T-4646, 01f654162e T-5012, 7be984c672 T-4641 slice 1. Host 4408/0, unit 2528/0 J-...0953-...5213d3, UI 24/0 J-...1006-...28a810, landcheck green. Open: land; T-4641 L3 (Maren's words), onRunQueue. Lesson: lane_settle refuses a detached copy; cherry-pick onto main by hand.
 
-- T-4190 11-26 (b2): in scratch T-4190-idris/wt, 8b2c9924d5 T-5906 (clear StoreKit after launch) + c04e4bbfd6 T-0623 lows. Open: Odalys review, land; check FAULTs T-5906 as not a T-4190 step (Operator). Lesson: a StoreKit clear made while the app is not running leaves the purchase in the app; clear with the app open.
+- T-4190 11-26 (b2): in scratch T-4190-idris/wt, 8b2c9924d5 T-5906 + c04e4bbfd6 T-0623 lows; 995a216526 T-5909 (buy elsewhere with the app open; class 3x green on runner). Open: Odalys review, land. Lesson: a StoreKit clear made while the app is not running leaves the purchase in the app; clear with the app open.
 - T-4302 11-25 (b): own-widget save test in WidgetStepTimeoutTests (test only). Open: review, land.
 - T-4476 11-26: ADR-012 accepted (eefbcd4a72); T-5907 389c36dc9a (Make It Mine refuses a clashing id; unit 2603/0 J-...1645-...14689f, guard off red). Scratch T-4476-idris/wt. Open: Pernille review, land; Operator adds s10 lines. Lessons: a board line newer than the copy needs feature_session --features/--board from `git show main:`; a failed test's retry counts twice in the totals.
 
@@ -52,8 +52,8 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-4188 (merge point) and T-5796 re-reviews still open; detail and xc.sh lessons in archive.md.
 - T-4692 11-23 (personal/b): re-review, land. T-5047 11-24 (50a2c3dd39, da4c8d0743): re-review, land. T-5607 86cf99245a: review, merge. T-5108: patch in ops/plans/T-5108-handoff.md, uncommitted. T-0053: part 3 target, part 4 footprint. T-0044/T-4181: see archive.md.
 - T-4185 11-26 (a3): T-5268 2781480048, T-5016 b45c86c35b (partial); T-4638 needs Ines; T-5283 iPad diff in scratch. Detail in archive.md.
-- T-4182 11-26 (b2, 12:50 PM): a315e05d1e T-3291 moved-badge time (partial), 611745fbce T-4802; no merge point. Open: T-3792 test L (exit 75 twice, wt ready), T-3291 item 1 + T-2232 asked of Ines (events), T-4801 already on main (c0e4a0f0b7), needs its tick. Lesson: a working-tree edit changes the runner snapshot; keep the tree still while queued checks run.
 - T-4185 11-26 (a2): T-4582 5e10c91f7a (cause T-3552, mutant red 1st try), T-5633 (helper openAsWidgetTap, gate-off mutant red). No commit: T-4638 (editor open 206-540 ms, needs Ines's re-scope), T-5016 (Maren's board line, Operator). T-5285 patch in scratch T-4185-idris/bin/t5285_patch.py + docs (f3-runs.txt). Lesson: xc.sh retries hide a timing red; read the first try.
+- T-4182 11-26 (a2, 4:40 PM): no step commit; handoff 58c477b922. Test L exit 75 seven times (load spikes to 130-209 seconds after each launch; cause unproven). T-3291 i1 + T-2232 wait on Ines; i4 asked of Maren; T-4801 and T-5272 already on main (c0e4a0f0b7), need ticks. Lesson: pgrep -f "xcodebuild.* test" matches the loop's own text; use pgrep -x.
 {% endraw %}
 
 

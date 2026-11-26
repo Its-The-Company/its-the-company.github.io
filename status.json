@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-26T23:14:53.845020+00:00",
+ "at": "2026-11-26T23:17:58.184256+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -72,7 +72,7 @@
    "task": "[build] T-5894 premade page test order",
    "model": "opus",
    "started": "2026-11-26T20:25:04.046Z",
-   "seconds": 10189,
+   "seconds": 10374,
    "finished": null,
    "effort": "high"
   },
@@ -81,7 +81,7 @@
    "task": "[build] T-4476 format 2 manifest",
    "model": "opus",
    "started": "2026-11-26T22:42:59.531Z",
-   "seconds": 1914,
+   "seconds": 2098,
    "finished": null,
    "effort": "high"
   },
@@ -90,12 +90,21 @@
    "task": "[design] T-4190 Pro screen words",
    "model": "opus",
    "started": "2026-11-26T23:09:35.413Z",
-   "seconds": 318,
+   "seconds": 502,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-5917 release landed claims",
+   "model": "opus",
+   "started": "2026-11-26T23:16:21.475Z",
+   "seconds": 96,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Idris x2, Maren",
+ "who": "Idris x2, Maren, Odalys",
  "recent": [
   {
    "name": "odalys",
@@ -133,7 +142,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 308,
+  "runnable_count": 307,
   "blocked_count": 0
  },
  "meter": {
@@ -182,8 +191,20 @@
   "week_pct": 607.4,
   "usage_pct": 62.0,
   "work_pct": 98.8,
-  "read_at": "2026-11-26T23:14:00+00:00",
+  "read_at": "2026-11-26T23:18:00+00:00",
   "running": [
+   {
+    "lane": "a",
+    "task": "T-4185",
+    "w": "Idris",
+    "k": "build",
+    "t": "Launcher widgets open the apps a person chose",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-26T18:15:19-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
    {
     "lane": "b",
     "task": "T-4192",
@@ -232,7 +253,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-26T18:14:00-05:00",
+  "at": "2026-11-26T18:18:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -267,6 +288,15 @@
    "effort": "high"
   },
   {
+   "name": "Odalys",
+   "state": "running",
+   "task": "[tools] T-5917 release landed claims",
+   "model": "opus",
+   "since": "2026-11-26T23:16:21.475Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
    "name": "Pernille",
    "state": "next",
    "task": "Pernille, P1, continuation of T-2609: after...",
@@ -286,14 +316,6 @@
    "name": "Wrenna",
    "state": "next",
    "task": "Read developer.apple.com \"Keeping a widget up to date\",...",
-   "model": null,
-   "since": null,
-   "next": []
-  },
-  {
-   "name": "Odalys",
-   "state": "next",
-   "task": "Odalys, P3, host-only, from...",
    "model": null,
    "since": null,
    "next": []
@@ -330,6 +352,16 @@
     "at": "2026-11-26T23:09:35.413Z",
     "o": "c",
     "task": "T-4190"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Release a lane's claim when its work merges",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-26T23:16:21.475Z",
+    "o": "c",
+    "task": "T-5917"
    }
   ],
   "src": "plan",
@@ -408,6 +440,11 @@
   "done": [
    {
     "w": "Idris",
+    "t": "A code note and the app's how-it-works page now say correctly that a widget run that never...",
+    "at": "2026-11-26T18:17:00-05:00"
+   },
+   {
+    "w": "Idris",
     "t": "The Pro screen's automated tests now pass every run in any order. The test that restores a...",
     "at": "2026-11-26T18:08:00-05:00"
    },
@@ -415,22 +452,21 @@
     "w": "Idris",
     "t": "Making someone else's project your own no longer lets one of its widgets take over a widget of...",
     "at": "2026-11-26T17:41:00-05:00"
-   },
-   {
-    "w": "Idris",
-    "t": "The spike's downloaded Python engine is now listed in the company's software log, and the...",
-    "at": "2026-11-26T17:19:00-05:00"
    }
   ],
   "count": {
-   "next": 308,
+   "next": 307,
    "wait": 0,
    "blocked": 0,
    "you": 0
   },
   "fin": {
-   "n": 25,
+   "n": 26,
    "rows": [
+    [
+     "T-4802",
+     "Correct the widget comment..."
+    ],
     [
      "T-5909",
      "Make the restore elsewhere..."
@@ -450,10 +486,6 @@
     [
      "T-5283",
      "Check widget taps in every..."
-    ],
-    [
-     "T-5900",
-     "Decide the sparkline area in..."
     ]
    ]
   }
@@ -497,22 +529,18 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-26T23:14:53Z",
+  "at": "2026-11-26T23:17:51Z",
   "s": {
-   "T-4182": [
-    "mergeq",
-    "1st to merge",
-    1795734833845
-   ],
    "T-4192": [
     "mergetest",
     "iPhone tests on the MacBook",
     null
    ],
-   "T-5894": [
-    "testing",
-    "Mac Mini \u00b7 test",
-    null
+   "T-5917": [
+    "merged",
+    "on main 6:12 PM ET",
+    1795734741000,
+    "Operator"
    ],
    "T-4476": [
     "merged",
@@ -525,21 +553,28 @@
     "on main 5:06 PM ET",
     1795730812000,
     "Idris"
+   ],
+   "T-4185": [
+    "merged",
+    "on main 9:49 AM ET",
+    1795704592000,
+    "Idris"
    ]
   },
   "nm": {
-   "T-4182": "A failing widget says so and can recover",
    "T-4192": "Python in the app: smaller bundle, installable packages",
-   "T-5894": "Make the Sun page link test pass in any order",
+   "T-5917": "Release a lane's claim when its work merges",
    "T-4476": "Projects get one file, one ID and guarded outside code",
-   "T-4190": "Settings and Pro: buy, restore, themes"
+   "T-4190": "Settings and Pro: buy, restore, themes",
+   "T-4185": "Launcher widgets open the apps a person chose"
   },
   "wk": {
-   "T-4182": "Idris",
    "T-4192": "Idris",
-   "T-5894": "Idris",
+   "T-5917": "Odalys",
    "T-4476": "Idris",
    "T-4190": "Idris",
+   "T-4185": "Idris",
+   "T-4802": "Idris",
    "T-5909": "Idris",
    "T-5907": "Idris",
    "T-5529": "Idris",
@@ -550,16 +585,15 @@
    "T-5902": "Maren",
    "T-5891": "Idris",
    "T-5001": "Maren",
-   "T-5290": "Maren",
-   "T-2044": "Idris"
+   "T-5290": "Maren"
   }
  },
  "ln": {
-  "at": "2026-11-26T23:14:53Z",
+  "at": "2026-11-26T23:17:51Z",
   "mq": {
    "n": {
     "checking": 0,
-    "inline": 1,
+    "inline": 0,
     "conflicted": 0,
     "failed": 0,
     "held": 0,
@@ -568,12 +602,12 @@
    },
    "m": {
     "checking": null,
-    "inline": 1,
+    "inline": null,
     "conflicted": null,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1000
+    "parked": 1003
    },
    "cur": [],
    "ld": [
@@ -583,50 +617,49 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-26T23:14:16Z",
-    "ld": 4.86,
+    "at": "2026-11-26T23:17:29Z",
+    "ld": 7.72,
     "c": 8,
-    "sb": 1,
+    "sb": 0,
     "dk": [
-     21.2,
+     23.7,
      228.3
     ],
     "ss": [
      172.6,
      953.7
     ],
-    "sn": [
-     "pywidget-wk-check"
-    ]
+    "sn": []
    },
    "macbook": {
-    "at": "2026-11-26T23:13:13Z",
-    "ld": 1.97,
+    "at": "2026-11-26T23:17:19Z",
+    "ld": 4.23,
     "c": 12,
-    "sb": 2,
+    "sb": 3,
     "dk": [
-     373.8,
+     371.8,
      926.4
     ],
     "sn": [
      "itsthecompany-runner",
-     "itsthecompany-runner-2"
+     "itsthecompany-runner-3",
+     "itsthecompany-runner-4"
     ]
    }
   }
  },
  "hc": {
   "wait": {
-   "n": 6,
+   "n": 7,
    "limit": 20,
-   "in_line": 0,
+   "in_line": 1,
    "parked": 6,
    "open": true,
    "mq": false,
-   "counted": "2026-11-26T23:03:50+00:00",
+   "counted": "2026-11-26T23:15:17+00:00",
    "by": {
     "app": {
-     "n": 5,
+     "n": 6,
      "limit": 20,
      "open": true
     },
@@ -641,11 +674,11 @@
      "open": true
     }
    },
-   "at": "2026-11-26T23:14:53+00:00"
+   "at": "2026-11-26T23:17:58+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-26T23:14:53+00:00"
+   "at": "2026-11-26T23:17:58+00:00"
   }
  },
  "operators": [
@@ -655,8 +688,17 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Inbox \u2013 Jeremy's 6:13 PM Message on GitHub",
-   "at": "2026-11-26T18:14:07-05:00"
+   "t": "Inbox \u2013 Jeremy's 6:16 PM Message on GitHub",
+   "at": "2026-11-26T18:17:06-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Evan's Account",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session \u2013 1 task",
+   "at": "2026-11-26T18:15:19-05:00"
   },
   {
    "w": "Operator",
@@ -669,19 +711,19 @@
   }
  ],
  "reply": {
-  "sent": "2026-11-26T23:12:41Z",
-  "seconds": 60.0
+  "sent": "2026-11-26T23:13:21Z",
+  "seconds": 20.0
  },
  "inbox": [
   {
-   "id": "c7205357609",
+   "id": "c7205407706",
    "state": "received",
    "position": 1,
    "tasks": {
     "open": 0,
     "done": 0
    },
-   "title": "Neither of the Investors will be by..."
+   "title": "draft it"
   }
  ],
  "trimmed": [
@@ -690,7 +732,6 @@
   "recent",
   "task_done",
   "fin_short",
-  "inbox_title",
   "task_title",
   "done_text",
   "fin_six",
@@ -698,13 +739,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 3,
-  "lanes": 1,
-  "total": 4,
-  "at": "6:14 PM",
+  "main": 4,
+  "lanes": 2,
+  "total": 6,
+  "at": "6:18 PM",
   "why": "",
-  "at_iso": "2026-11-26T23:14:00+00:00",
+  "at_iso": "2026-11-26T23:18:00+00:00",
   "started": "12:21 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 3, started 12:21 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 6:14 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 4, started 12:21 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 6:18 PM ET</p></section>"
  }
 }

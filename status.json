@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-26T19:11:50.802473+00:00",
+ "at": "2026-11-26T19:19:46.030960+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -78,20 +78,11 @@
  },
  "workers": [
   {
-   "name": "idris",
-   "task": "[build] T-4190 Settings Pro themes",
-   "model": "opus",
-   "started": "2026-11-26T17:25:48.856Z",
-   "seconds": 6361,
-   "finished": null,
-   "effort": "high"
-  },
-  {
    "name": "pernille",
    "task": "[build] T-5795 Sky premade finish",
    "model": "opus",
    "started": "2026-11-26T17:25:59.464Z",
-   "seconds": 6351,
+   "seconds": 6826,
    "finished": null,
    "effort": "high"
   },
@@ -100,22 +91,47 @@
    "task": "[build] T-4476 import screen fix",
    "model": "opus",
    "started": "2026-11-26T18:45:56.171Z",
-   "seconds": 1554,
+   "seconds": 2029,
    "finished": null,
    "effort": "high"
   },
+  {
+   "name": "odalys",
+   "task": "[review] T-4190",
+   "model": "opus",
+   "started": "2026-11-26T19:13:56.525Z",
+   "seconds": 349,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "ines",
+   "task": "[review] T-5860",
+   "model": "opus",
+   "started": "2026-11-26T19:18:04.731Z",
+   "seconds": 101,
+   "finished": null,
+   "effort": "high"
+  }
+ ],
+ "who": "Pernille, Idris, Odalys, Ines",
+ "recent": [
   {
    "name": "maren",
    "task": "[build] T-5860 live wash page",
    "model": "opus",
    "started": "2026-11-26T18:52:35.005Z",
-   "seconds": 1155,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Idris x2, Pernille, Maren",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-26T19:17:44.112000+00:00"
+  },
+  {
+   "name": "idris",
+   "task": "[build] T-4190 Settings Pro themes",
+   "model": "opus",
+   "started": "2026-11-26T17:25:48.856Z",
+   "seconds": null,
+   "finished": "2026-11-26T19:13:32.788000+00:00"
+  },
   {
    "name": "ines",
    "task": "[review] T-5859",
@@ -131,22 +147,6 @@
    "started": "2026-11-26T18:27:03.766Z",
    "seconds": null,
    "finished": "2026-11-26T18:49:31.162000+00:00"
-  },
-  {
-   "name": "pernille",
-   "task": "[review] T-4476",
-   "model": "opus",
-   "started": "2026-11-26T18:32:59.547Z",
-   "seconds": null,
-   "finished": "2026-11-26T18:45:11.121000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-4476 tap actions manifest",
-   "model": "opus",
-   "started": "2026-11-26T17:25:36.297Z",
-   "seconds": null,
-   "finished": "2026-11-26T18:32:35.312000+00:00"
   }
  ],
  "queue": {
@@ -157,20 +157,20 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 26.0,
-   "resets_at": "2026-11-26T21:29:59.895114+00:00",
+   "pct": 27.0,
+   "resets_at": "2026-11-26T16:30:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-26T14:02:53.438480-05:00",
-   "source": "usage",
-   "left": 74.0,
+   "read_at": "2026-11-26T14:14:49.926444-05:00",
+   "source": "live",
+   "left": 73.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 3.0,
-   "resets_at": "2026-11-29T06:59:59.895134+00:00",
+   "resets_at": "2026-11-29T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-26T14:02:53.438480-05:00",
-   "source": "usage",
+   "read_at": "2026-11-26T14:14:49.926444-05:00",
+   "source": "live",
    "left": 97.0,
    "left_words": "of your weekly allowance left"
   },
@@ -181,7 +181,7 @@
    "read_at": "2026-11-26T14:02:53.438480-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-26T14:02:53.438480-05:00"
+  "read_at": "2026-11-26T14:14:49.926444-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -201,7 +201,7 @@
   "week_pct": 161.94,
   "usage_pct": 62.0,
   "work_pct": 98.8,
-  "read_at": "2026-11-26T19:11:00+00:00",
+  "read_at": "2026-11-26T19:19:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -256,14 +256,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-26T14:09:00-05:00",
+   "at": "2026-11-26T14:15:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-26T14:11:00-05:00",
+  "at": "2026-11-26T14:19:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -274,20 +274,11 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 8 (held: too few lands in 3 hours to judge a raise)",
+  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 8 (at its floor: load 11.8 a core is over 10)",
   "n": 8,
   "at": "2026-11-26T12:21:25.895161-05:00"
  },
  "lanes": [
-  {
-   "name": "Idris",
-   "state": "running",
-   "task": "[build] T-4190 Settings Pro themes",
-   "model": "opus",
-   "since": "2026-11-26T17:25:48.856Z",
-   "next": [],
-   "effort": "high"
-  },
   {
    "name": "Pernille",
    "state": "running",
@@ -298,21 +289,31 @@
    "effort": "high"
   },
   {
-   "name": "Maren",
+   "name": "Idris",
    "state": "running",
-   "task": "[build] T-5860 live wash page",
+   "task": "[build] T-4476 import screen fix",
    "model": "opus",
-   "since": "2026-11-26T18:52:35.005Z",
+   "since": "2026-11-26T18:45:56.171Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
+   "name": "Odalys",
+   "state": "running",
+   "task": "[review] T-4190",
+   "model": "opus",
+   "since": "2026-11-26T19:13:56.525Z",
    "next": [],
    "effort": "high"
   },
   {
    "name": "Ines",
-   "state": "next",
-   "task": "Ines, P2, from T-5470...",
-   "model": null,
-   "since": null,
-   "next": []
+   "state": "running",
+   "task": "[review] T-5860",
+   "model": "opus",
+   "since": "2026-11-26T19:18:04.731Z",
+   "next": [],
+   "effort": "high"
   },
   {
    "name": "Wrenna",
@@ -323,9 +324,9 @@
    "next": []
   },
   {
-   "name": "Odalys",
+   "name": "Maren",
    "state": "next",
-   "task": "Odalys, P3, host-only, from...",
+   "task": "Maren, P2, from T-0306 (Simulator check of the L4...",
    "model": null,
    "since": null,
    "next": []
@@ -333,16 +334,6 @@
  ],
  "tasks": {
   "run": [
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "Settings and Pro: buy, restore, themes",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-26T17:25:48.856Z",
-    "o": "c",
-    "task": "T-4190"
-   },
    {
     "w": "Pernille",
     "k": "build",
@@ -364,13 +355,23 @@
     "task": "T-4476"
    },
    {
-    "w": "Maren",
-    "k": "build",
+    "w": "Odalys",
+    "k": "review",
+    "t": "Settings and Pro: buy, restore, themes",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-26T19:13:56.525Z",
+    "o": "c",
+    "task": "T-4190"
+   },
+   {
+    "w": "Ines",
+    "k": "review",
     "t": "Show the watercolor wash moving on a phone",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-26T18:52:35.005Z",
-    "o": "i",
+    "at": "2026-11-26T19:18:04.731Z",
+    "o": "c",
     "task": "T-5860"
    }
   ],
@@ -449,6 +450,11 @@
   ],
   "done": [
    {
+    "w": "Idris",
+    "t": "A launcher slot set to run a Shortcut whose name hides characters (a reversed-text mark, a line...",
+    "at": "2026-11-26T14:16:00-05:00"
+   },
+   {
     "w": "Pernille",
     "t": "The tip splitter example now asks for the bill, tip and number of people in proper iPhone pop-up...",
     "at": "2026-11-26T13:54:00-05:00"
@@ -457,11 +463,6 @@
     "w": "Maren",
     "t": "The fourth look for the app is drawn, light and dark: a strict four-column grid, very large...",
     "at": "2026-11-26T13:52:00-05:00"
-   },
-   {
-    "w": "Maren",
-    "t": "The third look for the app is drawn: screens printed as if by a two-ink risograph press, teal...",
-    "at": "2026-11-26T13:26:00-05:00"
    }
   ],
   "count": {
@@ -471,8 +472,12 @@
    "you": 0
   },
   "fin": {
-   "n": 5,
+   "n": 6,
    "rows": [
+    [
+     "T-5268",
+     "Show a Shortcut's hidden..."
+    ],
     [
      "T-0458",
      "Make the tip splitter use..."
@@ -535,12 +540,12 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-26T19:11:38Z",
+  "at": "2026-11-26T19:19:46Z",
   "s": {
    "T-4185": [
     "mergetest",
-    "Xcode checks on the MacBook, 1st to merge",
-    1795719518172
+    "iPhone tests on the MacBook",
+    null
    ],
    "T-4182": [
     "merged",
@@ -564,6 +569,7 @@
    "T-4185": "Idris",
    "T-4182": "Idris",
    "T-4181": "Idris",
+   "T-5268": "Idris",
    "T-0458": "Pernille",
    "T-5859": "Maren",
    "T-5858": "Maren",
@@ -572,10 +578,10 @@
   }
  },
  "ln": {
-  "at": "2026-11-26T19:11:38Z",
+  "at": "2026-11-26T19:19:46Z",
   "mq": {
    "n": {
-    "checking": 1,
+    "checking": 0,
     "inline": 0,
     "conflicted": 0,
     "failed": 0,
@@ -584,24 +590,15 @@
     "parked": 7
    },
    "m": {
-    "checking": 13,
+    "checking": null,
     "inline": null,
     "conflicted": null,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 756
+    "parked": 765
    },
-   "cur": [
-    [
-     [
-      "T-4185"
-     ],
-     "iPhone app tests",
-     "MacBook",
-     13
-    ]
-   ],
+   "cur": [],
    "ld": [
     0,
     null
@@ -609,8 +606,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-26T19:11:14Z",
-    "ld": 5.34,
+    "at": "2026-11-26T19:19:15Z",
+    "ld": 14.26,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -649,7 +646,7 @@
    "parked": 7,
    "open": true,
    "mq": false,
-   "counted": "2026-11-26T19:05:09+00:00",
+   "counted": "2026-11-26T19:15:36+00:00",
    "by": {
     "app": {
      "n": 7,
@@ -667,11 +664,11 @@
      "open": true
     }
    },
-   "at": "2026-11-26T19:11:50+00:00"
+   "at": "2026-11-26T19:19:46+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-26T19:11:38+00:00"
+   "at": "2026-11-26T19:19:46+00:00"
   }
  },
  "operators": [
@@ -723,10 +720,10 @@
   "main": 4,
   "lanes": 2,
   "total": 6,
-  "at": "2:11 PM",
+  "at": "2:19 PM",
   "why": "",
-  "at_iso": "2026-11-26T19:11:00+00:00",
+  "at_iso": "2026-11-26T19:19:00+00:00",
   "started": "12:21 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 4, started 12:21 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 2:11 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 4, started 12:21 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 2:19 PM ET</p></section>"
  }
 }

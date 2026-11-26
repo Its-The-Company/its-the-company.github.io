@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-26T19:29:05.734909+00:00",
+ "at": "2026-11-26T19:32:11.001250+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -78,26 +78,50 @@
  },
  "workers": [
   {
+   "name": "pernille",
+   "task": "[review] T-4476 import page",
+   "model": "opus",
+   "started": "2026-11-26T19:30:38.492Z",
+   "seconds": 92,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "maren",
+   "task": "[build] T-5795 relative-text gaps",
+   "model": "opus",
+   "started": "2026-11-26T19:31:55.314Z",
+   "seconds": 15,
+   "finished": null,
+   "effort": "high"
+  }
+ ],
+ "who": "Pernille, Maren",
+ "recent": [
+  {
    "name": "idris",
    "task": "[build] T-4476 import screen fix",
    "model": "opus",
    "started": "2026-11-26T18:45:56.171Z",
-   "seconds": 2589,
-   "finished": null,
-   "effort": "high"
+   "seconds": null,
+   "finished": "2026-11-26T19:30:17.011000+00:00"
+  },
+  {
+   "name": "maren",
+   "task": "[build] T-5861 card review fixes",
+   "model": "opus",
+   "started": "2026-11-26T19:29:25.662Z",
+   "seconds": null,
+   "finished": "2026-11-26T19:30:10.831000+00:00"
   },
   {
    "name": "ines",
    "task": "[review] T-5861",
    "model": "opus",
    "started": "2026-11-26T19:28:29.493Z",
-   "seconds": 36,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Idris, Ines",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-26T19:29:16.579000+00:00"
+  },
   {
    "name": "maren",
    "task": "[build] T-5861 new-look comparison card",
@@ -105,36 +129,12 @@
    "started": "2026-11-26T19:22:49.829Z",
    "seconds": null,
    "finished": "2026-11-26T19:28:05.549000+00:00"
-  },
-  {
-   "name": "ines",
-   "task": "[review] T-5860",
-   "model": "opus",
-   "started": "2026-11-26T19:18:04.731Z",
-   "seconds": null,
-   "finished": "2026-11-26T19:21:57.835000+00:00"
-  },
-  {
-   "name": "pernille",
-   "task": "[build] T-5795 Sky premade finish",
-   "model": "opus",
-   "started": "2026-11-26T17:25:59.464Z",
-   "seconds": null,
-   "finished": "2026-11-26T19:21:22.404000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[review] T-4190",
-   "model": "opus",
-   "started": "2026-11-26T19:13:56.525Z",
-   "seconds": null,
-   "finished": "2026-11-26T19:20:34.948000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 315,
+  "runnable_count": 314,
   "blocked_count": 0
  },
  "meter": {
@@ -183,7 +183,7 @@
   "week_pct": 161.94,
   "usage_pct": 62.0,
   "work_pct": 98.8,
-  "read_at": "2026-11-26T19:29:00+00:00",
+  "read_at": "2026-11-26T19:32:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -257,7 +257,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-26T14:29:00-05:00",
+  "at": "2026-11-26T14:32:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -274,27 +274,35 @@
  },
  "lanes": [
   {
-   "name": "Idris",
+   "name": "Pernille",
    "state": "running",
-   "task": "[build] T-4476 import screen fix",
+   "task": "[review] T-4476 import page",
    "model": "opus",
-   "since": "2026-11-26T18:45:56.171Z",
+   "since": "2026-11-26T19:30:38.492Z",
    "next": [],
    "effort": "high"
+  },
+  {
+   "name": "Maren",
+   "state": "running",
+   "task": "[build] T-5795 relative-text gaps",
+   "model": "opus",
+   "since": "2026-11-26T19:31:55.314Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
+   "name": "Idris",
+   "state": "next",
+   "task": "Idris, P2, from T-1282 F1 (not before TestFlight):...",
+   "model": null,
+   "since": null,
+   "next": []
   },
   {
    "name": "Ines",
-   "state": "running",
-   "task": "[review] T-5861",
-   "model": "opus",
-   "since": "2026-11-26T19:28:29.493Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
-   "name": "Pernille",
    "state": "next",
-   "task": "Pernille, P1, continuation of T-2609: after...",
+   "task": "Ines, P2, from T-5470...",
    "model": null,
    "since": null,
    "next": []
@@ -303,14 +311,6 @@
    "name": "Wrenna",
    "state": "next",
    "task": "Read developer.apple.com \"Keeping a widget up to date\",...",
-   "model": null,
-   "since": null,
-   "next": []
-  },
-  {
-   "name": "Maren",
-   "state": "next",
-   "task": "Maren, P2, from T-0306 (Simulator check of the L4...",
    "model": null,
    "since": null,
    "next": []
@@ -327,24 +327,24 @@
  "tasks": {
   "run": [
    {
-    "w": "Idris",
-    "k": "build",
+    "w": "Pernille",
+    "k": "review",
     "t": "Projects get one file, one ID and guarded outside code",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-26T18:45:56.171Z",
+    "at": "2026-11-26T19:30:38.492Z",
     "o": "c",
     "task": "T-4476"
    },
    {
-    "w": "Ines",
-    "k": "review",
-    "t": "Put the four new-look directions to the Investors",
+    "w": "Maren",
+    "k": "build",
+    "t": "The 1.0 showcase premades are built and in the Gallery",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-26T19:28:29.493Z",
+    "at": "2026-11-26T19:31:55.314Z",
     "o": "c",
-    "task": "T-5861"
+    "task": "T-5795"
    }
   ],
   "src": "plan",
@@ -422,6 +422,11 @@
   ],
   "done": [
    {
+    "w": "Maren+operator",
+    "t": "The four mockup looks for the app (watercolor, blueprint, risograph, Swiss) went to the...",
+    "at": "2026-11-26T14:31:00-05:00"
+   },
+   {
     "w": "Maren",
     "t": "A page now shows the watercolor background moving slowly on a phone-sized screen, with a pause...",
     "at": "2026-11-26T14:22:00-05:00"
@@ -430,22 +435,21 @@
     "w": "Idris",
     "t": "A launcher slot set to run a Shortcut whose name hides characters (a reversed-text mark, a line...",
     "at": "2026-11-26T14:16:00-05:00"
-   },
-   {
-    "w": "Pernille",
-    "t": "The tip splitter example now asks for the bill, tip and number of people in proper iPhone pop-up...",
-    "at": "2026-11-26T13:54:00-05:00"
    }
   ],
   "count": {
-   "next": 315,
+   "next": 314,
    "wait": 0,
    "blocked": 0,
    "you": 0
   },
   "fin": {
-   "n": 7,
+   "n": 8,
    "rows": [
+    [
+     "T-5861",
+     "Put the four new-look..."
+    ],
     [
      "T-5860",
      "Show the watercolor wash..."
@@ -465,10 +469,6 @@
     [
      "T-5858",
      "Draw the risograph print..."
-    ],
-    [
-     "T-5857",
-     "Draw the blueprint direction..."
     ]
    ]
   }
@@ -512,7 +512,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-26T19:29:05Z",
+  "at": "2026-11-26T19:31:57Z",
   "s": {
    "T-4190": [
     "mergetest",
@@ -549,6 +549,7 @@
    "T-4182": "Idris",
    "T-4185": "Idris",
    "T-4181": "Idris",
+   "T-5861": "Maren",
    "T-5860": "Maren",
    "T-5268": "Idris",
    "T-0458": "Pernille",
@@ -559,7 +560,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-26T19:29:05Z",
+  "at": "2026-11-26T19:31:57Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -577,7 +578,7 @@
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 774
+    "parked": 777
    },
    "cur": [],
    "ld": [
@@ -587,12 +588,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-26T19:28:17Z",
-    "ld": 4.23,
+    "at": "2026-11-26T19:31:10Z",
+    "ld": 2.55,
     "c": 8,
     "sb": 0,
     "dk": [
-     25.4,
+     25.3,
      228.3
     ],
     "ss": [
@@ -602,18 +603,18 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-26T19:25:40Z",
-    "ld": 20.2,
+    "at": "2026-11-26T19:29:42Z",
+    "ld": 24.97,
     "c": 12,
     "sb": 3,
     "dk": [
-     383.0,
+     381.7,
      926.4
     ],
     "sn": [
      "itsthecompany-runner",
-     "itsthecompany-runner-2",
-     "itsthecompany-runner-3"
+     "itsthecompany-runner-3",
+     "itsthecompany-runner-4"
     ]
    }
   }
@@ -644,11 +645,11 @@
      "open": true
     }
    },
-   "at": "2026-11-26T19:29:05+00:00"
+   "at": "2026-11-26T19:32:11+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-26T19:29:05+00:00"
+   "at": "2026-11-26T19:32:11+00:00"
   }
  },
  "operators": [
@@ -710,10 +711,10 @@
   "main": 2,
   "lanes": 3,
   "total": 5,
-  "at": "2:29 PM",
+  "at": "2:32 PM",
   "why": "",
-  "at_iso": "2026-11-26T19:29:00+00:00",
+  "at_iso": "2026-11-26T19:32:00+00:00",
   "started": "12:21 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 2, started 12:21 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 2:29 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 2, started 12:21 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 2:32 PM ET</p></section>"
  }
 }

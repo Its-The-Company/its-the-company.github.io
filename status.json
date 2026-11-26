@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-26T08:23:37.664165+00:00",
+ "at": "2026-11-26T08:26:38.607476+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -82,7 +82,7 @@
    "task": "[build] T-5796 refresh taps pin",
    "model": "opus",
    "started": "2026-11-26T07:06:58.763Z",
-   "seconds": 4598,
+   "seconds": 4779,
    "finished": null
   }
  ],
@@ -124,7 +124,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 334,
+  "runnable_count": 335,
   "blocked_count": 0
  },
  "meter": {
@@ -173,20 +173,8 @@
   "week_pct": 135.44,
   "usage_pct": 58.8,
   "work_pct": 98.6,
-  "read_at": "2026-11-26T08:23:00+00:00",
+  "read_at": "2026-11-26T08:26:00+00:00",
   "running": [
-   {
-    "lane": "a",
-    "task": "T-4185",
-    "w": "Idris",
-    "k": "build",
-    "t": "Launcher widgets open the apps a person chose",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-26T01:22:55-05:00",
-    "n": "Evan",
-    "src": "plan-a"
-   },
    {
     "lane": "a3",
     "task": "T-4181",
@@ -198,18 +186,6 @@
     "at": "2026-11-26T01:49:18-05:00",
     "n": "Evan",
     "src": "plan-a"
-   },
-   {
-    "lane": "b",
-    "task": "T-4192",
-    "w": "Idris",
-    "k": "build",
-    "t": "Python in the app: smaller bundle, installable packages",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-26T00:56:27-05:00",
-    "n": "Jeremy",
-    "src": "plan-b"
    },
    {
     "lane": "b2",
@@ -259,7 +235,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-26T03:23:00-05:00",
+  "at": "2026-11-26T03:26:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -427,7 +403,7 @@
    }
   ],
   "count": {
-   "next": 334,
+   "next": 335,
    "wait": 0,
    "blocked": 0,
    "you": 0
@@ -485,8 +461,18 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-26T08:23:18Z",
+  "at": "2026-11-26T08:26:17Z",
   "s": {
+   "T-4192": [
+    "mergetest",
+    "Xcode checks on the MacBook, 1st to merge",
+    1795681577995
+   ],
+   "T-4185": [
+    "mergeq",
+    "2nd to merge",
+    1795681577995
+   ],
    "T-4181": [
     "merged",
     "on main 1:11 AM ET",
@@ -501,10 +487,14 @@
    ]
   },
   "nm": {
+   "T-4192": "Python in the app: smaller bundle, installable packages",
+   "T-4185": "Launcher widgets open the apps a person chose",
    "T-4181": "Widgets refresh on their own and by a tap",
    "T-5796": "Internal TestFlight builds carry the test widgets"
   },
   "wk": {
+   "T-4192": "Idris",
+   "T-4185": "Idris",
    "T-4181": "Idris",
    "T-5796": "Idris",
    "T-4707": "Pernille",
@@ -512,11 +502,11 @@
   }
  },
  "ln": {
-  "at": "2026-11-26T08:23:18Z",
+  "at": "2026-11-26T08:26:17Z",
   "mq": {
    "n": {
-    "checking": 0,
-    "inline": 0,
+    "checking": 1,
+    "inline": 1,
     "conflicted": 0,
     "failed": 0,
     "held": 0,
@@ -524,15 +514,24 @@
     "parked": 10
    },
    "m": {
-    "checking": null,
-    "inline": null,
+    "checking": 0,
+    "inline": 0,
     "conflicted": null,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 203
+    "parked": 206
    },
-   "cur": [],
+   "cur": [
+    [
+     [
+      "T-4192"
+     ],
+     "iPhone app tests, sent and waiting its turn",
+     "MacBook",
+     0
+    ]
+   ],
    "ld": [
     0,
     null
@@ -540,12 +539,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-26T08:23:19Z",
-    "ld": 2.66,
+    "at": "2026-11-26T08:26:18Z",
+    "ld": 2.28,
     "c": 8,
     "sb": 0,
     "dk": [
-     13.9,
+     18.4,
      228.3
     ],
     "ss": [
@@ -597,11 +596,11 @@
      "open": true
     }
    },
-   "at": "2026-11-26T08:23:37+00:00"
+   "at": "2026-11-26T08:26:38+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-26T08:23:31+00:00"
+   "at": "2026-11-26T08:26:38+00:00"
   }
  },
  "operators": [
@@ -620,26 +619,8 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session",
-   "at": "2026-11-26T01:22:54-05:00"
-  },
-  {
-   "w": "Operator",
-   "a": "Evan's Account",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
    "t": "Work session \u2013 1 task",
    "at": "2026-11-26T01:49:17-05:00"
-  },
-  {
-   "w": "Operator",
-   "a": "Jeremy's Account",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session",
-   "at": "2026-11-26T00:56:27-05:00"
   },
   {
    "w": "Operator",
@@ -669,12 +650,12 @@
  ],
  "agents_now": {
   "main": 1,
-  "lanes": 4,
-  "total": 5,
-  "at": "3:23 AM",
+  "lanes": 2,
+  "total": 3,
+  "at": "3:26 AM",
   "why": "",
-  "at_iso": "2026-11-26T08:23:00+00:00",
+  "at_iso": "2026-11-26T08:26:00+00:00",
   "started": "1:29 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 1, started 1:29 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 3:23 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 1, started 1:29 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 3:26 AM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-26T21:25:58.684910+00:00",
+ "at": "2026-11-26T21:28:59.640518+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -82,7 +82,7 @@
    "task": "[build] T-4190 Ask to Buy order",
    "model": "opus",
    "started": "2026-11-26T19:36:17.023Z",
-   "seconds": 6581,
+   "seconds": 6762,
    "finished": null,
    "effort": "high"
   },
@@ -91,31 +91,38 @@
    "task": "[build] T-5894 premade page test order",
    "model": "opus",
    "started": "2026-11-26T20:25:04.046Z",
-   "seconds": 3654,
+   "seconds": 3835,
    "finished": null,
    "effort": "high"
   },
   {
    "name": "idris",
+   "task": "[build] T-4476 Make It Mine clash",
+   "model": "opus",
+   "started": "2026-11-26T21:27:23.726Z",
+   "seconds": 95,
+   "finished": null,
+   "effort": "high"
+  }
+ ],
+ "who": "Idris x3",
+ "recent": [
+  {
+   "name": "idris",
    "task": "[review] T-5900 gallery decisions",
    "model": "opus",
    "started": "2026-11-26T21:23:57.143Z",
-   "seconds": 121,
-   "finished": null,
-   "effort": "high"
+   "seconds": null,
+   "finished": "2026-11-26T21:28:17.365000+00:00"
   },
   {
    "name": "pernille",
    "task": "[review] T-4476 ADR-012 rev 10",
    "model": "opus",
    "started": "2026-11-26T21:24:31.729Z",
-   "seconds": 86,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Idris x3, Pernille",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-26T21:26:27.027000+00:00"
+  },
   {
    "name": "idris",
    "task": "[build] T-4476 ADR-012 rule b hole",
@@ -131,45 +138,29 @@
    "started": "2026-11-26T20:44:45.337Z",
    "seconds": null,
    "finished": "2026-11-26T21:23:39.576000+00:00"
-  },
-  {
-   "name": "pernille",
-   "task": "[review] T-4476 ADR-012 rev 9",
-   "model": "opus",
-   "started": "2026-11-26T21:17:27.135Z",
-   "seconds": null,
-   "finished": "2026-11-26T21:18:54.160000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-4476 ADR-012 docs pages",
-   "model": "opus",
-   "started": "2026-11-26T21:13:14.196Z",
-   "seconds": null,
-   "finished": "2026-11-26T21:17:06.334000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 305,
+  "runnable_count": 306,
   "blocked_count": 0
  },
  "meter": {
   "five_hour": {
-   "pct": 46.0,
+   "pct": 48.0,
    "resets_at": "2026-11-26T16:30:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-26T16:19:59.327529-05:00",
+   "read_at": "2026-11-26T16:26:18.987521-05:00",
    "source": "live",
-   "left": 54.0,
+   "left": 52.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 7.0,
    "resets_at": "2026-11-29T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-26T16:19:59.327529-05:00",
+   "read_at": "2026-11-26T16:26:18.987521-05:00",
    "source": "live",
    "left": 93.0,
    "left_words": "of your weekly allowance left"
@@ -181,7 +172,7 @@
    "read_at": "2026-11-26T16:13:46.874364-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-26T16:19:59.327529-05:00"
+  "read_at": "2026-11-26T16:26:18.987521-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -201,7 +192,7 @@
   "week_pct": 379.62,
   "usage_pct": 62.0,
   "work_pct": 98.8,
-  "read_at": "2026-11-26T21:26:00+00:00",
+  "read_at": "2026-11-26T21:29:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -235,7 +226,7 @@
   }
  ],
  "disk": {
-  "free_gb": 22,
+  "free_gb": 21,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -244,14 +235,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-26T16:19:00-05:00",
+   "at": "2026-11-26T16:26:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-26T16:26:00-05:00",
+  "at": "2026-11-26T16:29:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -278,12 +269,11 @@
   },
   {
    "name": "Pernille",
-   "state": "running",
-   "task": "[review] T-4476 ADR-012 rev 10",
-   "model": "opus",
-   "since": "2026-11-26T21:24:31.729Z",
-   "next": [],
-   "effort": "high"
+   "state": "next",
+   "task": "Pernille, P1, continuation of T-2609: after...",
+   "model": null,
+   "since": null,
+   "next": []
   },
   {
    "name": "Ines",
@@ -342,21 +332,11 @@
    },
    {
     "w": "Idris",
-    "k": "review",
-    "t": "Decide the sparkline area in accented mode",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-26T21:23:57.143Z",
-    "o": "c",
-    "task": "T-5900"
-   },
-   {
-    "w": "Pernille",
-    "k": "review",
+    "k": "build",
     "t": "Projects get one file, one ID and guarded outside code",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-26T21:24:31.729Z",
+    "at": "2026-11-26T21:27:23.726Z",
     "o": "c",
     "task": "T-4476"
    }
@@ -452,7 +432,7 @@
    }
   ],
   "count": {
-   "next": 305,
+   "next": 306,
    "wait": 0,
    "blocked": 0,
    "you": 0
@@ -526,14 +506,14 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-26T21:25:58Z",
+  "at": "2026-11-26T21:28:59Z",
   "s": {
    "T-4192": [
     "mergetest",
     "iPhone tests on the MacBook",
     null
    ],
-   "T-5894": [
+   "T-4190": [
     "testing",
     "Mac Mini \u00b7 test",
     null
@@ -553,13 +533,13 @@
   },
   "nm": {
    "T-4192": "Python in the app: smaller bundle, installable packages",
-   "T-5894": "Make the Sun page link test pass in any order",
+   "T-4190": "Settings and Pro: buy, restore, themes",
    "T-4476": "Projects get one file, one ID and guarded outside code",
    "T-4185": "Launcher widgets open the apps a person chose"
   },
   "wk": {
    "T-4192": "Idris",
-   "T-5894": "Idris",
+   "T-4190": "Idris",
    "T-4476": "Idris",
    "T-4185": "Idris",
    "T-5891": "Idris",
@@ -577,7 +557,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-26T21:25:58Z",
+  "at": "2026-11-26T21:28:59Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -595,7 +575,7 @@
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 891
+    "parked": 894
    },
    "cur": [],
    "ld": [
@@ -605,12 +585,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-26T21:25:33Z",
-    "ld": 5.25,
+    "at": "2026-11-26T21:29:04Z",
+    "ld": 7.65,
     "c": 8,
     "sb": 1,
     "dk": [
-     22.2,
+     20.2,
      228.3
     ],
     "ss": [
@@ -664,11 +644,11 @@
      "open": true
     }
    },
-   "at": "2026-11-26T21:25:58+00:00"
+   "at": "2026-11-26T21:28:59+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-26T21:25:45+00:00"
+   "at": "2026-11-26T21:28:59+00:00"
   }
  },
  "operators": [
@@ -709,13 +689,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 4,
+  "main": 3,
   "lanes": 1,
-  "total": 5,
-  "at": "4:26 PM",
+  "total": 4,
+  "at": "4:29 PM",
   "why": "",
-  "at_iso": "2026-11-26T21:26:00+00:00",
+  "at_iso": "2026-11-26T21:29:00+00:00",
   "started": "12:21 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 4, started 12:21 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 4:26 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 3, started 12:21 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 4:29 PM ET</p></section>"
  }
 }

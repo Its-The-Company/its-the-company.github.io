@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-26T04:36:28.766308+00:00",
+ "at": "2026-11-26T04:39:33.558487+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -92,7 +92,7 @@
    "task": "[build] T-4476 manifest decision record",
    "model": "opus",
    "started": "2026-11-26T04:22:41.811Z",
-   "seconds": 826,
+   "seconds": 1011,
    "finished": null
   },
   {
@@ -100,7 +100,7 @@
    "task": "[build] T-5796 two review Lows",
    "model": "opus",
    "started": "2026-11-26T04:28:07.673Z",
-   "seconds": 501,
+   "seconds": 685,
    "finished": null
   }
  ],
@@ -147,19 +147,19 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 1.0,
+   "pct": 2.0,
    "resets_at": "2026-11-26T04:00:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-25T23:24:41.378126-05:00",
+   "read_at": "2026-11-25T23:36:54.704290-05:00",
    "source": "live",
-   "left": 99.0,
+   "left": 98.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 92.0,
    "resets_at": "2026-11-29T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-25T23:24:41.378126-05:00",
+   "read_at": "2026-11-25T23:36:54.704290-05:00",
    "source": "live",
    "left": 8.0,
    "left_words": "of your weekly allowance left"
@@ -171,7 +171,7 @@
    "read_at": "2026-11-25T23:19:23.870409-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-25T23:24:41.378126-05:00"
+  "read_at": "2026-11-25T23:36:54.704290-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -191,7 +191,7 @@
   "week_pct": 131.52,
   "usage_pct": 58.8,
   "work_pct": 98.5,
-  "read_at": "2026-11-26T04:36:00+00:00",
+  "read_at": "2026-11-26T04:39:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -237,7 +237,7 @@
   }
  ],
  "disk": {
-  "free_gb": 24,
+  "free_gb": 22,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -246,14 +246,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-25T23:32:00-05:00",
+   "at": "2026-11-25T23:39:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-25T23:36:00-05:00",
+  "at": "2026-11-25T23:39:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -264,7 +264,7 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 8 (at its floor: load 34.9 a core is over 10)",
+  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 8 (at its floor: load 22.7 a core is over 10)",
   "n": 8,
   "at": "2026-11-25T23:19:24.355533-05:00"
  },
@@ -484,7 +484,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-26T04:36:10Z",
+  "at": "2026-11-26T04:39:26Z",
   "s": {
    "T-0725": [
     "mergetest",
@@ -509,7 +509,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-26T04:36:10Z",
+  "at": "2026-11-26T04:39:26Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -523,11 +523,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 3,
+    "conflicted": 6,
     "failed": null,
-    "held": 3,
+    "held": 6,
     "retry": null,
-    "parked": 668
+    "parked": 671
    },
    "cur": [],
    "ld": [
@@ -537,12 +537,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-26T04:35:23Z",
-    "ld": 29.96,
+    "at": "2026-11-26T04:39:01Z",
+    "ld": 15.1,
     "c": 8,
     "sb": 1,
     "dk": [
-     21.6,
+     21.5,
      228.3
     ],
     "ss": [
@@ -554,15 +554,18 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-26T04:32:15Z",
-    "ld": 3.41,
+    "at": "2026-11-26T04:36:21Z",
+    "ld": 7.34,
     "c": 12,
-    "sb": 0,
+    "sb": 2,
     "dk": [
-     420.0,
+     416.6,
      926.4
     ],
-    "sn": []
+    "sn": [
+     "itsthecompany-runner",
+     "itsthecompany-runner-2"
+    ]
    }
   }
  },
@@ -592,11 +595,11 @@
      "open": true
     }
    },
-   "at": "2026-11-26T04:36:28+00:00"
+   "at": "2026-11-26T04:39:33+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-26T04:36:17+00:00"
+   "at": "2026-11-26T04:39:20+00:00"
   }
  },
  "operators": [
@@ -648,10 +651,10 @@
   "main": 2,
   "lanes": 2,
   "total": 4,
-  "at": "11:36 PM",
+  "at": "11:39 PM",
   "why": "",
-  "at_iso": "2026-11-26T04:36:00+00:00",
+  "at_iso": "2026-11-26T04:39:00+00:00",
   "started": "11:19 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 2, started 11:19 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 11:36 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 2, started 11:19 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 11:39 PM ET</p></section>"
  }
 }

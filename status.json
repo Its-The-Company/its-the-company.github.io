@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-26T00:56:53.815704+00:00",
+ "at": "2026-11-26T00:59:55.322467+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -82,15 +82,7 @@
    "task": "[build] T-4191 large text steps",
    "model": "",
    "started": "2026-11-25T23:44:39.050Z",
-   "seconds": 4334,
-   "finished": null
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-4476 Foundations actions",
-   "model": "",
-   "started": "2026-11-25T23:52:18.482Z",
-   "seconds": 3875,
+   "seconds": 4516,
    "finished": null
   },
   {
@@ -98,7 +90,7 @@
    "task": "[build] T-5795 weather chart premade",
    "model": "",
    "started": "2026-11-25T23:55:22.267Z",
-   "seconds": 3691,
+   "seconds": 3873,
    "finished": null
   },
   {
@@ -106,12 +98,28 @@
    "task": "[build] T-5796 second batch",
    "model": "",
    "started": "2026-11-26T00:11:05.709Z",
-   "seconds": 2748,
+   "seconds": 2929,
+   "finished": null
+  },
+  {
+   "name": "pernille",
+   "task": "[review] T-4476",
+   "model": "",
+   "started": "2026-11-26T00:57:28.517Z",
+   "seconds": 146,
    "finished": null
   }
  ],
- "who": "Idris x3, Pernille",
+ "who": "Idris x2, Pernille x2",
  "recent": [
+  {
+   "name": "idris",
+   "task": "[build] T-4476 Foundations actions",
+   "model": "",
+   "started": "2026-11-25T23:52:18.482Z",
+   "seconds": null,
+   "finished": "2026-11-26T00:57:08.524000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[build] T-5883 usage limit alarm",
@@ -135,14 +143,6 @@
    "started": "2026-11-25T20:58:11.478Z",
    "seconds": null,
    "finished": "2026-11-25T23:41:41.380000+00:00"
-  },
-  {
-   "name": "maren",
-   "task": "[review] T-4191",
-   "model": "",
-   "started": "2026-11-25T23:22:05.986Z",
-   "seconds": null,
-   "finished": "2026-11-25T23:32:47.714000+00:00"
   }
  ],
  "queue": {
@@ -153,21 +153,21 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 14.0,
+   "pct": 16.0,
    "resets_at": "2026-11-25T23:00:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-25T19:52:53.460900-05:00",
+   "read_at": "2026-11-25T19:58:35.496775-05:00",
    "source": "live",
-   "left": 86.0,
+   "left": 84.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 84.0,
+   "pct": 85.0,
    "resets_at": "2026-11-29T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-25T19:52:53.460900-05:00",
+   "read_at": "2026-11-25T19:58:35.496775-05:00",
    "source": "live",
-   "left": 16.0,
+   "left": 15.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
@@ -177,7 +177,7 @@
    "read_at": "2026-11-25T19:38:19.347946-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-25T19:52:53.460900-05:00"
+  "read_at": "2026-11-25T19:58:35.496775-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -197,7 +197,7 @@
   "week_pct": 126.16,
   "usage_pct": 60.0,
   "work_pct": 98.3,
-  "read_at": "2026-11-26T00:56:00+00:00",
+  "read_at": "2026-11-26T01:00:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -271,7 +271,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-25T19:56:00-05:00",
+  "at": "2026-11-25T20:00:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -347,14 +347,6 @@
     "task": "T-4191"
    },
    {
-    "w": "Idris",
-    "k": "build",
-    "t": "Projects get one file, one ID and guarded outside code",
-    "at": "2026-11-25T23:52:18.482Z",
-    "o": "c",
-    "task": "T-4476"
-   },
-   {
     "w": "Pernille",
     "k": "build",
     "t": "The 1.0 showcase premades are built and in the Gallery",
@@ -369,6 +361,14 @@
     "at": "2026-11-26T00:11:05.709Z",
     "o": "c",
     "task": "T-5796"
+   },
+   {
+    "w": "Pernille",
+    "k": "review",
+    "t": "Projects get one file, one ID and guarded outside code",
+    "at": "2026-11-26T00:57:28.517Z",
+    "o": "c",
+    "task": "T-4476"
    }
   ],
   "src": "plan",
@@ -536,19 +536,19 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-26T00:56:53Z",
+  "at": "2026-11-26T00:59:42Z",
   "s": {
-   "T-5659": [
+   "T-0725": [
     "mergetest",
     "iPhone tests on the MacBook",
     null
    ]
   },
   "nm": {
-   "T-5659": "Build the taps and buttons test widget"
+   "T-0725": "Fix small faults in project export"
   },
   "wk": {
-   "T-5659": "Idris",
+   "T-0725": "Idris",
    "T-4550": "Pernille",
    "T-5309": "Idris",
    "T-5014": "Idris",
@@ -564,7 +564,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-26T00:56:53Z",
+  "at": "2026-11-26T00:59:42Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -578,11 +578,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 1115,
+    "conflicted": 1118,
     "failed": null,
-    "held": 2675,
+    "held": 2678,
     "retry": null,
-    "parked": 1440
+    "parked": 1443
    },
    "cur": [],
    "ld": [
@@ -592,12 +592,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-26T00:56:30Z",
-    "ld": 4.65,
+    "at": "2026-11-26T00:59:47Z",
+    "ld": 3.5,
     "c": 8,
     "sb": 0,
     "dk": [
-     19.7,
+     19.6,
      228.3
     ],
     "ss": [
@@ -607,15 +607,18 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-26T00:56:03Z",
-    "ld": 17.34,
+    "at": "2026-11-26T00:57:33Z",
+    "ld": 16.78,
     "c": 12,
-    "sb": 0,
+    "sb": 2,
     "dk": [
-     429.7,
+     429.0,
      926.4
     ],
-    "sn": []
+    "sn": [
+     "itsthecompany-runner",
+     "itsthecompany-runner-2"
+    ]
    }
   }
  },
@@ -645,11 +648,11 @@
      "open": true
     }
    },
-   "at": "2026-11-26T00:56:53+00:00"
+   "at": "2026-11-26T00:59:55+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-26T00:56:53+00:00"
+   "at": "2026-11-26T00:59:55+00:00"
   }
  },
  "operators": [
@@ -659,8 +662,8 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session",
-   "at": "2026-11-25T19:42:43-05:00"
+   "t": "Inbox \u2013 Jeremy's 7:58 PM Message on GitHub",
+   "at": "2026-11-25T19:59:22-05:00"
   },
   {
    "w": "Operator",
@@ -694,13 +697,25 @@
   "sent": "2026-11-26T00:42:07Z",
   "seconds": 35.0
  },
- "inbox": [],
+ "inbox": [
+  {
+   "id": "c7179305023",
+   "state": "received",
+   "position": 1,
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "The twice daily reports are still..."
+  }
+ ],
  "trimmed": [
   "lane_next",
   "queue_text",
   "recent",
   "task_done",
   "fin_short",
+  "inbox_title",
   "task_title",
   "done_text",
   "fin_six",
@@ -711,10 +726,10 @@
   "main": 4,
   "lanes": 3,
   "total": 7,
-  "at": "7:56 PM",
+  "at": "8:00 PM",
   "why": "",
-  "at_iso": "2026-11-26T00:56:00+00:00",
+  "at_iso": "2026-11-26T01:00:00+00:00",
   "started": "1:03 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 4, started 1:03 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 7:56 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 4, started 1:03 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 8:00 PM ET</p></section>"
  }
 }

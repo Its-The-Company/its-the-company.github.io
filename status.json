@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-26T05:34:44.792147+00:00",
+ "at": "2026-11-26T05:37:48.431223+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -92,7 +92,7 @@
    "task": "[build] T-5795 weather chart screenshot",
    "model": "opus",
    "started": "2026-11-26T04:51:14.099Z",
-   "seconds": 2610,
+   "seconds": 2794,
    "finished": null
   }
  ],
@@ -134,7 +134,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 341,
+  "runnable_count": 340,
   "blocked_count": 0
  },
  "meter": {
@@ -183,7 +183,7 @@
   "week_pct": 132.95,
   "usage_pct": 58.8,
   "work_pct": 98.5,
-  "read_at": "2026-11-26T05:34:00+00:00",
+  "read_at": "2026-11-26T05:37:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -269,7 +269,7 @@
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-26T00:34:00-05:00",
+  "at": "2026-11-26T00:37:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -422,6 +422,11 @@
   "done": [
    {
     "w": "Idris",
+    "t": "The location widget now carries the ID app.pywidget.location, the app's own ID plus one part,...",
+    "at": "2026-11-26T00:37:00-05:00"
+   },
+   {
+    "w": "Idris",
     "t": "The app now opens a pywidget run link for a shortcut and hands its name to Shortcuts, and the...",
     "at": "2026-11-25T23:59:00-05:00"
    },
@@ -429,22 +434,21 @@
     "w": "Idris",
     "t": "Picking a different city for a clock or a Distance place now renames it, as long as the person...",
     "at": "2026-11-25T23:59:00-05:00"
-   },
-   {
-    "w": "Idris",
-    "t": "On the Pro screen at large text sizes, only the price button and its one line stay fixed at the...",
-    "at": "2026-11-25T23:50:00-05:00"
    }
   ],
   "count": {
-   "next": 341,
+   "next": 340,
    "wait": 0,
    "blocked": 0,
    "you": 0
   },
   "fin": {
-   "n": 6,
+   "n": 7,
    "rows": [
+    [
+     "T-5893",
+     "Give the location widget an..."
+    ],
     [
      "T-5630",
      "Shortcuts settings sheet..."
@@ -464,10 +468,6 @@
     [
      "T-1243",
      "Fix a should-fix..."
-    ],
-    [
-     "T-4777",
-     "Make the tester-flag parser..."
     ]
    ]
   }
@@ -511,7 +511,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-26T05:34:27Z",
+  "at": "2026-11-26T05:37:42Z",
   "s": {
    "T-5893": [
     "mergetest",
@@ -541,7 +541,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-26T05:34:27Z",
+  "at": "2026-11-26T05:37:42Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -555,11 +555,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 1392,
+    "conflicted": 1396,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 713
+    "parked": 717
    },
    "cur": [],
    "ld": [
@@ -569,8 +569,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-26T05:34:01Z",
-    "ld": 1.68,
+    "at": "2026-11-26T05:37:16Z",
+    "ld": 1.37,
     "c": 8,
     "sb": 1,
     "dk": [
@@ -586,18 +586,20 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-26T05:29:55Z",
-    "ld": 22.31,
+    "at": "2026-11-26T05:35:31Z",
+    "ld": 29.79,
     "c": 12,
-    "sb": 3,
+    "sb": 5,
     "dk": [
-     412.8,
+     410.3,
      926.4
     ],
     "sn": [
      "itsthecompany-runner",
      "itsthecompany-runner-2",
-     "itsthecompany-runner-4"
+     "itsthecompany-runner-3",
+     "itsthecompany-runner-4",
+     "itsthecompany-runner-5"
     ]
    }
   }
@@ -610,7 +612,7 @@
    "parked": 7,
    "open": true,
    "mq": false,
-   "counted": "2026-11-26T05:25:58+00:00",
+   "counted": "2026-11-26T05:36:07+00:00",
    "by": {
     "app": {
      "n": 7,
@@ -628,11 +630,11 @@
      "open": true
     }
    },
-   "at": "2026-11-26T05:34:44+00:00"
+   "at": "2026-11-26T05:37:48+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-26T05:34:38+00:00"
+   "at": "2026-11-26T05:37:48+00:00"
   }
  },
  "operators": [
@@ -695,6 +697,7 @@
   "fin_short",
   "task_title",
   "done_text",
+  "fin_six",
   "lane_task",
   "task_next"
  ],
@@ -702,10 +705,10 @@
   "main": 1,
   "lanes": 4,
   "total": 5,
-  "at": "12:34 AM",
+  "at": "12:37 AM",
   "why": "",
-  "at_iso": "2026-11-26T05:34:00+00:00",
+  "at_iso": "2026-11-26T05:37:00+00:00",
   "started": "11:19 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 1, started 11:19 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 12:34 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 1, started 11:19 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 12:37 AM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-26T06:54:04.906938+00:00",
+ "at": "2026-11-26T06:57:05.511305+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -78,16 +78,24 @@
  },
  "workers": [
   {
+   "name": "idris",
+   "task": "[build] T-4476 ADR-012 seventh round",
+   "model": "opus",
+   "started": "2026-11-26T06:56:48.090Z",
+   "seconds": 17,
+   "finished": null
+  }
+ ],
+ "who": "Idris",
+ "recent": [
+  {
    "name": "pernille",
    "task": "[review] T-4476",
    "model": "opus",
    "started": "2026-11-26T06:53:36.541Z",
-   "seconds": 28,
-   "finished": null
-  }
- ],
- "who": "Pernille",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-26T06:56:27.289000+00:00"
+  },
   {
    "name": "idris",
    "task": "[build] T-4476 ADR-012 sixth round",
@@ -111,14 +119,6 @@
    "started": "2026-11-26T06:46:53.986Z",
    "seconds": null,
    "finished": "2026-11-26T06:48:52.114000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[review] T-5795",
-   "model": "opus",
-   "started": "2026-11-26T06:47:40.873Z",
-   "seconds": null,
-   "finished": "2026-11-26T06:48:26.844000+00:00"
   }
  ],
  "queue": {
@@ -173,7 +173,7 @@
   "week_pct": 134.01,
   "usage_pct": 58.8,
   "work_pct": 98.6,
-  "read_at": "2026-11-26T06:54:00+00:00",
+  "read_at": "2026-11-26T06:57:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -243,7 +243,7 @@
   }
  ],
  "disk": {
-  "free_gb": 23,
+  "free_gb": 24,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -252,14 +252,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-26T01:48:00-05:00",
+   "at": "2026-11-26T01:55:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-26T01:54:00-05:00",
+  "at": "2026-11-26T01:57:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -276,17 +276,17 @@
  },
  "lanes": [
   {
-   "name": "Pernille",
+   "name": "Idris",
    "state": "running",
-   "task": "[review] T-4476",
+   "task": "[build] T-4476 ADR-012 seventh round",
    "model": "opus",
-   "since": "2026-11-26T06:53:36.541Z",
+   "since": "2026-11-26T06:56:48.090Z",
    "next": []
   },
   {
-   "name": "Idris",
+   "name": "Pernille",
    "state": "next",
-   "task": "Idris, P2, from T-1282 F1 (not before TestFlight):...",
+   "task": "Pernille, P1, continuation of T-2609: after...",
    "model": null,
    "since": null,
    "next": []
@@ -327,11 +327,11 @@
  "tasks": {
   "run": [
    {
-    "w": "Pernille",
-    "k": "review",
+    "w": "Idris",
+    "k": "build",
     "t": "Projects get one file, one ID and guarded outside code",
     "m": "opus",
-    "at": "2026-11-26T06:53:36.541Z",
+    "at": "2026-11-26T06:56:48.090Z",
     "o": "c",
     "task": "T-4476"
    }
@@ -476,17 +476,12 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-26T06:53:46Z",
+  "at": "2026-11-26T06:56:57Z",
   "s": {
    "T-4182": [
     "mergetest",
     "Xcode checks on the MacBook, 1st to merge",
-    1795675666486
-   ],
-   "T-5797": [
-    "mergetest",
-    "iPhone tests on the MacBook",
-    null
+    1795675677858
    ],
    "T-4181": [
     "merged",
@@ -503,19 +498,17 @@
   },
   "nm": {
    "T-4182": "A failing widget says so and can recover",
-   "T-5797": "Widgets animate smoothly within what Apple allows",
    "T-4181": "Widgets refresh on their own and by a tap",
    "T-4476": "Projects get one file, one ID and guarded outside code"
   },
   "wk": {
    "T-4182": "Idris",
-   "T-5797": "Idris",
    "T-4181": "Idris",
    "T-4476": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-26T06:53:46Z",
+  "at": "2026-11-26T06:56:57Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -527,13 +520,13 @@
     "parked": 13
    },
    "m": {
-    "checking": 6,
+    "checking": 9,
     "inline": null,
     "conflicted": null,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 19
+    "parked": 22
    },
    "cur": [
     [
@@ -542,7 +535,7 @@
      ],
      "iPhone app tests",
      "MacBook",
-     6
+     9
     ]
    ],
    "ld": [
@@ -552,33 +545,35 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-26T06:53:20Z",
-    "ld": 3.77,
+    "at": "2026-11-26T06:56:58Z",
+    "ld": 8.69,
     "c": 8,
-    "sb": 0,
+    "sb": 1,
     "dk": [
-     24.3,
+     24.1,
      228.3
     ],
     "ss": [
      172.6,
      953.7
     ],
-    "sn": []
+    "sn": [
+     "pywidget-wk-check"
+    ]
    },
    "macbook": {
-    "at": "2026-11-26T06:51:02Z",
-    "ld": 9.31,
+    "at": "2026-11-26T06:54:32Z",
+    "ld": 11.85,
     "c": 12,
     "sb": 3,
     "dk": [
-     408.3,
+     407.8,
      926.4
     ],
     "sn": [
      "itsthecompany-runner",
-     "itsthecompany-runner-2",
-     "itsthecompany-runner-3"
+     "itsthecompany-runner-3",
+     "itsthecompany-runner-4"
     ]
    }
   }
@@ -609,11 +604,11 @@
      "open": true
     }
    },
-   "at": "2026-11-26T06:54:04+00:00"
+   "at": "2026-11-26T06:57:05+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-26T06:53:53+00:00"
+   "at": "2026-11-26T06:57:05+00:00"
   }
  },
  "operators": [
@@ -682,10 +677,10 @@
   "main": 1,
   "lanes": 4,
   "total": 5,
-  "at": "1:54 AM",
+  "at": "1:57 AM",
   "why": "",
-  "at_iso": "2026-11-26T06:54:00+00:00",
+  "at_iso": "2026-11-26T06:57:00+00:00",
   "started": "1:29 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 1, started 1:29 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 1:54 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 1, started 1:29 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 1:57 AM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-26T12:30:55.259960+00:00",
+ "at": "2026-11-26T12:33:59.914760+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -91,7 +91,7 @@
    "task": "[build] T-5795 Sky premade rework",
    "model": "opus",
    "started": "2026-11-26T12:03:28.392Z",
-   "seconds": 1646,
+   "seconds": 1831,
    "finished": null
   }
  ],
@@ -166,8 +166,20 @@
   "week_pct": 142.65,
   "usage_pct": 59.8,
   "work_pct": 98.6,
-  "read_at": "2026-11-26T12:30:00+00:00",
+  "read_at": "2026-11-26T12:34:00+00:00",
   "running": [
+   {
+    "lane": "a",
+    "task": "T-0306",
+    "w": "Idris",
+    "k": "build",
+    "t": "Check the gallery trees in every widget family",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-26T07:32:22-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
    {
     "lane": "a2",
     "task": "T-4182",
@@ -179,18 +191,6 @@
     "at": "2026-11-26T05:07:58-05:00",
     "n": "Evan",
     "src": "plan-a"
-   },
-   {
-    "lane": "b",
-    "task": "T-4192",
-    "w": "Idris",
-    "k": "build",
-    "t": "Python in the app: smaller bundle, installable packages",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-26T03:56:30-05:00",
-    "n": "Jeremy",
-    "src": "plan-b"
    },
    {
     "lane": "b2",
@@ -240,7 +240,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-26T07:30:00-05:00",
+  "at": "2026-11-26T07:34:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -482,9 +482,9 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-26T12:30:55Z",
+  "at": "2026-11-26T12:33:48Z",
   "s": {
-   "T-4708": [
+   "T-5796": [
     "mergetest",
     "iPhone tests on the MacBook",
     null
@@ -503,12 +503,12 @@
    ]
   },
   "nm": {
-   "T-4708": "Rework Sunrise and sunset into the Sky premade",
+   "T-5796": "Internal TestFlight builds carry the test widgets",
    "T-4182": "A failing widget says so and can recover",
    "T-5795": "The 1.0 showcase premades are built and in the Gallery"
   },
   "wk": {
-   "T-4708": "Pernille",
+   "T-5796": "Idris",
    "T-4182": "Idris",
    "T-5795": "Pernille",
    "T-5314": "Idris",
@@ -522,7 +522,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-26T12:30:55Z",
+  "at": "2026-11-26T12:33:48Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -531,7 +531,7 @@
     "failed": 0,
     "held": 0,
     "retry": 0,
-    "parked": 6
+    "parked": 7
    },
    "m": {
     "checking": null,
@@ -540,7 +540,7 @@
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 356
+    "parked": 359
    },
    "cur": [],
    "ld": [
@@ -550,12 +550,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-26T12:30:09Z",
-    "ld": 8.33,
+    "at": "2026-11-26T12:32:59Z",
+    "ld": 9.3,
     "c": 8,
     "sb": 1,
     "dk": [
-     29.8,
+     31.8,
      228.3
     ],
     "ss": [
@@ -567,16 +567,16 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-26T12:25:16Z",
-    "ld": 15.93,
+    "at": "2026-11-26T12:32:53Z",
+    "ld": 4.43,
     "c": 12,
     "sb": 1,
     "dk": [
-     403.8,
+     403.5,
      926.4
     ],
     "sn": [
-     "itsthecompany-runner"
+     "itsthecompany-runner-2"
     ]
    }
   }
@@ -607,11 +607,11 @@
      "open": true
     }
    },
-   "at": "2026-11-26T12:30:55+00:00"
+   "at": "2026-11-26T12:33:59+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-26T12:30:48+00:00"
+   "at": "2026-11-26T12:33:48+00:00"
   }
  },
  "operators": [
@@ -630,17 +630,17 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session",
-   "at": "2026-11-26T05:07:57-05:00"
+   "t": "Work session \u2013 1 task",
+   "at": "2026-11-26T07:32:21-05:00"
   },
   {
    "w": "Operator",
-   "a": "Jeremy's Account",
+   "a": "Evan's Account",
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 1 task",
-   "at": "2026-11-26T03:56:30-05:00"
+   "t": "Work session",
+   "at": "2026-11-26T05:07:57-05:00"
   },
   {
    "w": "Operator",
@@ -672,10 +672,10 @@
   "main": 1,
   "lanes": 3,
   "total": 4,
-  "at": "7:30 AM",
+  "at": "7:34 AM",
   "why": "",
-  "at_iso": "2026-11-26T12:30:00+00:00",
+  "at_iso": "2026-11-26T12:34:00+00:00",
   "started": "4:33 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 1, started 4:33 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 7:30 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 1, started 4:33 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 7:34 AM ET</p></section>"
  }
 }

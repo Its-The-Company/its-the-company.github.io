@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-26T20:15:23.661833+00:00",
+ "at": "2026-11-26T20:18:23.663431+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -82,7 +82,7 @@
    "task": "[build] T-4476 tap guard fix",
    "model": "opus",
    "started": "2026-11-26T19:33:37.966Z",
-   "seconds": 2505,
+   "seconds": 2685,
    "finished": null,
    "effort": "high"
   },
@@ -91,12 +91,21 @@
    "task": "[build] T-4190 Ask to Buy order",
    "model": "opus",
    "started": "2026-11-26T19:36:17.023Z",
-   "seconds": 2346,
+   "seconds": 2526,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "maren",
+   "task": "[build] T-5795 never-fetched frame",
+   "model": "opus",
+   "started": "2026-11-26T20:16:33.249Z",
+   "seconds": 110,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Idris x2",
+ "who": "Idris x2, Maren",
  "recent": [
   {
    "name": "pernille",
@@ -134,7 +143,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 308,
+  "runnable_count": 307,
   "blocked_count": 0
  },
  "meter": {
@@ -183,7 +192,7 @@
   "week_pct": 167.48,
   "usage_pct": 62.0,
   "work_pct": 98.8,
-  "read_at": "2026-11-26T20:15:00+00:00",
+  "read_at": "2026-11-26T20:18:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -233,7 +242,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-26T15:15:00-05:00",
+  "at": "2026-11-26T15:18:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -259,6 +268,15 @@
    "effort": "high"
   },
   {
+   "name": "Maren",
+   "state": "running",
+   "task": "[build] T-5795 never-fetched frame",
+   "model": "opus",
+   "since": "2026-11-26T20:16:33.249Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
    "name": "Pernille",
    "state": "next",
    "task": "Pernille, P1, continuation of T-2609: after...",
@@ -278,14 +296,6 @@
    "name": "Wrenna",
    "state": "next",
    "task": "Read developer.apple.com \"Keeping a widget up to date\",...",
-   "model": null,
-   "since": null,
-   "next": []
-  },
-  {
-   "name": "Maren",
-   "state": "next",
-   "task": "Maren, P2, from T-0306 (Simulator check of the L4...",
    "model": null,
    "since": null,
    "next": []
@@ -320,6 +330,16 @@
     "at": "2026-11-26T19:36:17.023Z",
     "o": "c",
     "task": "T-4190"
+   },
+   {
+    "w": "Maren",
+    "k": "build",
+    "t": "The 1.0 showcase premades are built and in the Gallery",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-26T20:16:33.249Z",
+    "o": "c",
+    "task": "T-5795"
    }
   ],
   "src": "plan",
@@ -397,6 +417,11 @@
   ],
   "done": [
    {
+    "w": "Maren",
+    "t": "The design sheets now print countdown and \"time ago\" text exactly as the iPhone draws it, and...",
+    "at": "2026-11-26T15:16:00-05:00"
+   },
+   {
     "w": "Idris",
     "t": "A widget test that sometimes failed on a busy build machine now checks the order things happen...",
     "at": "2026-11-26T15:13:00-05:00"
@@ -405,22 +430,21 @@
     "w": "Idris",
     "t": "A widget test that could quietly miss the bug it guards when the build machine was busy now sets...",
     "at": "2026-11-26T15:13:00-05:00"
-   },
-   {
-    "w": "Idris",
-    "t": "A widget-safety test whose name promised more than it could check now says exactly what it...",
-    "at": "2026-11-26T15:00:00-05:00"
    }
   ],
   "count": {
-   "next": 308,
+   "next": 307,
    "wait": 0,
    "blocked": 0,
    "you": 0
   },
   "fin": {
-   "n": 14,
+   "n": 15,
    "rows": [
+    [
+     "T-5290",
+     "Close the relative-text test..."
+    ],
     [
      "T-2044",
      "Widen the timing margin of a..."
@@ -440,10 +464,6 @@
     [
      "T-4800",
      "Delete the Activity export..."
-    ],
-    [
-     "T-0623",
-     "Fix the licence wording in..."
     ]
    ]
   }
@@ -487,7 +507,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-26T20:15:17Z",
+  "at": "2026-11-26T20:18:23Z",
   "s": {
    "T-4582": [
     "mergetest",
@@ -508,6 +528,7 @@
   "wk": {
    "T-4582": "Idris",
    "T-4185": "Idris",
+   "T-5290": "Maren",
    "T-2044": "Idris",
    "T-2046": "Idris",
    "T-2497": "Idris",
@@ -518,12 +539,11 @@
    "T-5860": "Maren",
    "T-5268": "Idris",
    "T-0458": "Pernille",
-   "T-5859": "Maren",
-   "T-5858": "Maren"
+   "T-5859": "Maren"
   }
  },
  "ln": {
-  "at": "2026-11-26T20:15:17Z",
+  "at": "2026-11-26T20:18:23Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -541,7 +561,7 @@
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 820
+    "parked": 823
    },
    "cur": [],
    "ld": [
@@ -551,12 +571,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-26T20:14:53Z",
-    "ld": 1.57,
+    "at": "2026-11-26T20:18:00Z",
+    "ld": 1.05,
     "c": 8,
     "sb": 1,
     "dk": [
-     24.3,
+     24.4,
      228.3
     ],
     "ss": [
@@ -609,11 +629,11 @@
      "open": true
     }
    },
-   "at": "2026-11-26T20:15:23+00:00"
+   "at": "2026-11-26T20:18:23+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-26T20:15:17+00:00"
+   "at": "2026-11-26T20:18:17+00:00"
   }
  },
  "operators": [
@@ -654,13 +674,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 2,
+  "main": 3,
   "lanes": 1,
-  "total": 3,
-  "at": "3:15 PM",
+  "total": 4,
+  "at": "3:18 PM",
   "why": "",
-  "at_iso": "2026-11-26T20:15:00+00:00",
+  "at_iso": "2026-11-26T20:18:00+00:00",
   "started": "12:21 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 12:21 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 3:15 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 3, started 12:21 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 3:18 PM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-26T06:14:28.433359+00:00",
+ "at": "2026-11-26T06:17:33.149093+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -92,7 +92,7 @@
    "task": "[build] T-5795 weather chart screenshot",
    "model": "opus",
    "started": "2026-11-26T04:51:14.099Z",
-   "seconds": 4994,
+   "seconds": 5179,
    "finished": null
   }
  ],
@@ -183,7 +183,7 @@
   "week_pct": 132.95,
   "usage_pct": 58.8,
   "work_pct": 98.5,
-  "read_at": "2026-11-26T06:14:00+00:00",
+  "read_at": "2026-11-26T06:17:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -206,18 +206,6 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-26T00:56:27-05:00",
-    "n": "Jeremy",
-    "src": "plan-b"
-   },
-   {
-    "lane": "b2",
-    "task": "T-4188",
-    "w": "Idris",
-    "k": "build",
-    "t": "Location, steps and notifications work in scripts and widgets",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-25T23:56:18-05:00",
     "n": "Jeremy",
     "src": "plan-b"
    }
@@ -257,7 +245,7 @@
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-26T01:14:00-05:00",
+  "at": "2026-11-26T01:17:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -499,12 +487,17 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-26T06:14:14Z",
+  "at": "2026-11-26T06:17:16Z",
   "s": {
    "T-4181": [
     "mergetest",
     "Xcode checks on the MacBook, 1st to merge",
-    1795673534020
+    1795673536886
+   ],
+   "T-4188": [
+    "mergeq",
+    "2nd to merge",
+    1795673836886
    ],
    "T-2841": [
     "mergetest",
@@ -512,19 +505,20 @@
     null
    ],
    "T-5795": [
-    "merged",
-    "on main 9:35 PM ET",
-    1795660500000,
-    "Pernille"
+    "testing",
+    "Mac Mini \u00b7 test",
+    null
    ]
   },
   "nm": {
    "T-4181": "Widgets refresh on their own and by a tap",
+   "T-4188": "Location, steps and notifications work in scripts and...",
    "T-2841": "Pin the two open cases of the memory-skip badge gap",
    "T-5795": "The 1.0 showcase premades are built and in the Gallery"
   },
   "wk": {
    "T-4181": "Idris",
+   "T-4188": "Idris",
    "T-2841": "Idris",
    "T-5795": "Pernille",
    "T-5893": "Idris",
@@ -537,11 +531,11 @@
   }
  },
  "ln": {
-  "at": "2026-11-26T06:14:14Z",
+  "at": "2026-11-26T06:17:16Z",
   "mq": {
    "n": {
     "checking": 1,
-    "inline": 0,
+    "inline": 1,
     "conflicted": 1,
     "failed": 0,
     "held": 0,
@@ -549,13 +543,13 @@
     "parked": 6
    },
    "m": {
-    "checking": 2,
-    "inline": null,
-    "conflicted": 1432,
+    "checking": 5,
+    "inline": 0,
+    "conflicted": 1435,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 753
+    "parked": 756
    },
    "cur": [
     [
@@ -564,7 +558,7 @@
      ],
      "iPhone app tests",
      "MacBook",
-     2
+     5
     ]
    ],
    "ld": [
@@ -574,19 +568,21 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-26T06:14:15Z",
-    "ld": 4.59,
+    "at": "2026-11-26T06:17:18Z",
+    "ld": 9.03,
     "c": 8,
-    "sb": 0,
+    "sb": 1,
     "dk": [
-     22.3,
+     24.6,
      228.3
     ],
     "ss": [
      172.6,
      953.7
     ],
-    "sn": []
+    "sn": [
+     "iPhone 17e"
+    ]
    },
    "macbook": {
     "at": "2026-11-26T06:12:08Z",
@@ -606,13 +602,13 @@
  },
  "hc": {
   "wait": {
-   "n": 7,
+   "n": 8,
    "limit": 20,
-   "in_line": 0,
+   "in_line": 1,
    "parked": 7,
    "open": true,
    "mq": false,
-   "counted": "2026-11-26T06:06:41+00:00",
+   "counted": "2026-11-26T06:16:53+00:00",
    "by": {
     "app": {
      "n": 7,
@@ -620,7 +616,7 @@
      "open": true
     },
     "other": {
-     "n": 2,
+     "n": 3,
      "limit": 20,
      "open": true
     },
@@ -630,11 +626,11 @@
      "open": true
     }
    },
-   "at": "2026-11-26T06:14:28+00:00"
+   "at": "2026-11-26T06:17:33+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-26T06:14:14+00:00"
+   "at": "2026-11-26T06:17:26+00:00"
   }
  },
  "operators": [
@@ -664,15 +660,6 @@
    "e": "high",
    "t": "Work session \u2013 1 task",
    "at": "2026-11-26T00:56:27-05:00"
-  },
-  {
-   "w": "Operator",
-   "a": "Jeremy's Account",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session",
-   "at": "2026-11-25T23:56:18-05:00"
   }
  ],
  "reply": {
@@ -694,12 +681,12 @@
  ],
  "agents_now": {
   "main": 1,
-  "lanes": 3,
-  "total": 4,
-  "at": "1:14 AM",
+  "lanes": 2,
+  "total": 3,
+  "at": "1:17 AM",
   "why": "",
-  "at_iso": "2026-11-26T06:14:00+00:00",
+  "at_iso": "2026-11-26T06:17:00+00:00",
   "started": "11:19 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 1, started 11:19 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 1:14 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 1, started 11:19 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 1:17 AM ET</p></section>"
  }
 }

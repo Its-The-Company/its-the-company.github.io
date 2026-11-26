@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-26T07:43:07.171627+00:00",
+ "at": "2026-11-26T07:46:19.244130+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -82,7 +82,7 @@
    "task": "[build] T-5796 refresh taps pin",
    "model": "opus",
    "started": "2026-11-26T07:06:58.763Z",
-   "seconds": 2168,
+   "seconds": 2360,
    "finished": null
   }
  ],
@@ -173,7 +173,7 @@
   "week_pct": 134.01,
   "usage_pct": 58.8,
   "work_pct": 98.6,
-  "read_at": "2026-11-26T07:43:00+00:00",
+  "read_at": "2026-11-26T07:46:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -259,7 +259,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-26T02:43:00-05:00",
+  "at": "2026-11-26T02:46:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -485,7 +485,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-26T07:43:07Z",
+  "at": "2026-11-26T07:46:19Z",
   "s": {
    "T-4181": [
     "merged",
@@ -512,7 +512,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-26T07:43:07Z",
+  "at": "2026-11-26T07:46:19Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -530,7 +530,7 @@
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 163
+    "parked": 166
    },
    "cur": [],
    "ld": [
@@ -540,19 +540,21 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-26T07:43:00Z",
-    "ld": 5.55,
+    "at": "2026-11-26T07:45:53Z",
+    "ld": 8.13,
     "c": 8,
-    "sb": 0,
+    "sb": 1,
     "dk": [
-     18.9,
+     18.5,
      228.3
     ],
     "ss": [
      172.6,
      953.7
     ],
-    "sn": []
+    "sn": [
+     "pywidget-wk-check"
+    ]
    },
    "macbook": {
     "at": "2026-11-26T07:42:12Z",
@@ -597,11 +599,11 @@
      "open": true
     }
    },
-   "at": "2026-11-26T07:43:07+00:00"
+   "at": "2026-11-26T07:46:19+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-26T07:43:01+00:00"
+   "at": "2026-11-26T07:46:19+00:00"
   }
  },
  "operators": [
@@ -671,10 +673,10 @@
   "main": 1,
   "lanes": 4,
   "total": 5,
-  "at": "2:43 AM",
+  "at": "2:46 AM",
   "why": "",
-  "at_iso": "2026-11-26T07:43:00+00:00",
+  "at_iso": "2026-11-26T07:46:00+00:00",
   "started": "1:29 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 1, started 1:29 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 2:43 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 1, started 1:29 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 2:46 AM ET</p></section>"
  }
 }

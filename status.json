@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-26T07:12:27.347921+00:00",
+ "at": "2026-11-26T07:15:29.935155+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -82,7 +82,7 @@
    "task": "[build] T-5796 refresh taps pin",
    "model": "opus",
    "started": "2026-11-26T07:06:58.763Z",
-   "seconds": 328,
+   "seconds": 511,
    "finished": null
   }
  ],
@@ -124,7 +124,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 333,
+  "runnable_count": 332,
   "blocked_count": 0
  },
  "meter": {
@@ -173,7 +173,7 @@
   "week_pct": 134.01,
   "usage_pct": 58.8,
   "work_pct": 98.6,
-  "read_at": "2026-11-26T07:12:00+00:00",
+  "read_at": "2026-11-26T07:15:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -252,14 +252,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-26T02:08:00-05:00",
+   "at": "2026-11-26T02:15:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-26T02:12:00-05:00",
+  "at": "2026-11-26T02:15:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -411,6 +411,11 @@
   ],
   "done": [
    {
+    "w": "Pernille",
+    "t": "The Next 24 hours widget now shows a saved place's temperature curve and rain bars with the...",
+    "at": "2026-11-26T02:14:00-05:00"
+   },
+   {
     "w": "Idris",
     "t": "Decided how each project is stored: one folder, one small file saying what it makes, and one ID...",
     "at": "2026-11-26T02:05:00-05:00"
@@ -419,22 +424,21 @@
     "w": "Idris",
     "t": "An editor save of the person's own widget is now tested to run at once even when the App Store...",
     "at": "2026-11-26T01:27:00-05:00"
-   },
-   {
-    "w": "Pernille",
-    "t": "A test now proves that packages a person installs are looked up after the ones built into the...",
-    "at": "2026-11-26T01:27:00-05:00"
    }
   ],
   "count": {
-   "next": 333,
+   "next": 332,
    "wait": 0,
    "blocked": 0,
    "you": 0
   },
   "fin": {
-   "n": 1,
+   "n": 2,
    "rows": [
+    [
+     "T-4707",
+     "Build the Next 24 hours..."
+    ],
     [
      "T-5889",
      "Decide the project file: one..."
@@ -481,11 +485,16 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-26T07:12:15Z",
+  "at": "2026-11-26T07:15:29Z",
   "s": {
-   "T-5795": [
-    "mergetest",
-    "iPhone tests on the MacBook",
+   "T-4188": [
+    "testing",
+    "Mac Mini \u00b7 test",
+    null
+   ],
+   "T-5797": [
+    "testing",
+    "Mac Mini \u00b7 test",
     null
    ],
    "T-4181": [
@@ -502,19 +511,22 @@
    ]
   },
   "nm": {
-   "T-5795": "The 1.0 showcase premades are built and in the Gallery",
+   "T-4188": "Location, steps and notifications work in scripts and...",
+   "T-5797": "Widgets animate smoothly within what Apple allows",
    "T-4181": "Widgets refresh on their own and by a tap",
    "T-5796": "Internal TestFlight builds carry the test widgets"
   },
   "wk": {
-   "T-5795": "Pernille",
+   "T-4188": "Idris",
+   "T-5797": "Idris",
    "T-4181": "Idris",
    "T-5796": "Idris",
+   "T-4707": "Pernille",
    "T-5889": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-26T07:12:15Z",
+  "at": "2026-11-26T07:15:29Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -532,7 +544,7 @@
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 132
+    "parked": 135
    },
    "cur": [],
    "ld": [
@@ -542,12 +554,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-26T07:12:16Z",
-    "ld": 5.19,
+    "at": "2026-11-26T07:14:40Z",
+    "ld": 4.28,
     "c": 8,
     "sb": 1,
     "dk": [
-     22.9,
+     22.8,
      228.3
     ],
     "ss": [
@@ -559,17 +571,17 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-26T07:08:10Z",
-    "ld": 34.28,
+    "at": "2026-11-26T07:13:45Z",
+    "ld": 44.14,
     "c": 12,
     "sb": 5,
     "dk": [
-     407.1,
+     404.9,
      926.4
     ],
     "sn": [
-     "itsthecompany-runner",
      "itsthecompany-runner-2",
+     "itsthecompany-runner-3",
      "itsthecompany-runner-4",
      "itsthecompany-runner-5",
      "itsthecompany-runner-6"
@@ -603,11 +615,11 @@
      "open": true
     }
    },
-   "at": "2026-11-26T07:12:27+00:00"
+   "at": "2026-11-26T07:15:29+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-26T07:12:27+00:00"
+   "at": "2026-11-26T07:15:24+00:00"
   }
  },
  "operators": [
@@ -677,10 +689,10 @@
   "main": 1,
   "lanes": 4,
   "total": 5,
-  "at": "2:12 AM",
+  "at": "2:15 AM",
   "why": "",
-  "at_iso": "2026-11-26T07:12:00+00:00",
+  "at_iso": "2026-11-26T07:15:00+00:00",
   "started": "1:29 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 1, started 1:29 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 2:12 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 1, started 1:29 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 2:15 AM ET</p></section>"
  }
 }

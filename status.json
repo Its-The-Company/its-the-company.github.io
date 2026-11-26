@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-26T15:37:32.214782+00:00",
+ "at": "2026-11-26T15:40:37.798067+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -85,8 +85,17 @@
   "landed": 1,
   "failed": 4
  },
- "workers": [],
- "who": "",
+ "workers": [
+  {
+   "name": "idris",
+   "task": "[build] T-4476 run paths refuse outside",
+   "model": "opus",
+   "started": "2026-11-26T15:39:11.964Z",
+   "seconds": 85,
+   "finished": null
+  }
+ ],
+ "who": "Idris",
  "recent": [
   {
    "name": "pernille",
@@ -124,7 +133,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 326,
+  "runnable_count": 323,
   "blocked_count": 0
  },
  "meter": {
@@ -173,7 +182,7 @@
   "week_pct": 155.91,
   "usage_pct": 61.6,
   "work_pct": 98.7,
-  "read_at": "2026-11-26T15:37:00+00:00",
+  "read_at": "2026-11-26T15:40:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -235,7 +244,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-26T10:37:00-05:00",
+  "at": "2026-11-26T10:40:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -253,10 +262,10 @@
  "lanes": [
   {
    "name": "Idris",
-   "state": "next",
-   "task": "Idris, P2, from T-1282 F1 (not before TestFlight):...",
-   "model": null,
-   "since": null,
+   "state": "running",
+   "task": "[build] T-4476 run paths refuse outside",
+   "model": "opus",
+   "since": "2026-11-26T15:39:11.964Z",
    "next": []
   },
   {
@@ -301,7 +310,17 @@
   }
  ],
  "tasks": {
-  "run": [],
+  "run": [
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "Projects get one file, one ID and guarded outside code",
+    "m": "opus",
+    "at": "2026-11-26T15:39:11.964Z",
+    "o": "c",
+    "task": "T-4476"
+   }
+  ],
   "src": "plan",
   "open": [
    {
@@ -378,29 +397,41 @@
   "done": [
    {
     "w": "Idris",
-    "t": "When the launcher editor copies a person's chosen apps into a launcher widget's settings file,...",
-    "at": "2026-11-26T09:49:00-05:00"
+    "t": "A power cut at the wrong moment could leave the launcher widget's list of apps unreadable for...",
+    "at": "2026-11-26T10:38:00-05:00"
    },
    {
     "w": "Idris",
-    "t": "the widget process can no longer be told to shut down twice when two different problems end it.",
-    "at": "2026-11-26T09:34:00-05:00"
+    "t": "If one ready-made widget's settings description had a mistake in it, the whole Gallery used to...",
+    "at": "2026-11-26T10:38:00-05:00"
    },
    {
     "w": "Idris",
-    "t": "a widget test that failed on a busy test machine for no fault of the app now waits on the right...",
-    "at": "2026-11-26T09:34:00-05:00"
+    "t": "If someone tapped Use Current Location and then chose a city while the phone was still finding...",
+    "at": "2026-11-26T10:38:00-05:00"
    }
   ],
   "count": {
-   "next": 326,
+   "next": 323,
    "wait": 0,
    "blocked": 0,
    "you": 0
   },
   "fin": {
-   "n": 3,
+   "n": 6,
    "rows": [
+    [
+     "T-5012",
+     "Flush the launcher's saved..."
+    ],
+    [
+     "T-4646",
+     "Keep the Gallery when one..."
+    ],
+    [
+     "T-5035",
+     "Drop a late fix once Choose..."
+    ],
     [
      "T-4570",
      "Launcher slot copy takes the..."
@@ -455,9 +486,9 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-26T15:37:18Z",
+  "at": "2026-11-26T15:40:30Z",
   "s": {
-   "T-4183": [
+   "T-0976": [
     "mergetest",
     "iPhone tests on the MacBook",
     null
@@ -467,22 +498,33 @@
     "on main 7:51 AM ET",
     1795697481000,
     "Idris"
+   ],
+   "T-4476": [
+    "merged",
+    "on main 2:06 AM ET",
+    1795676782000,
+    "Operator"
    ]
   },
   "nm": {
-   "T-4183": "The Gallery shows, previews and opens every premade",
-   "T-4182": "A failing widget says so and can recover"
+   "T-0976": "Ignore a run that started before the send",
+   "T-4182": "A failing widget says so and can recover",
+   "T-4476": "Projects get one file, one ID and guarded outside code"
   },
   "wk": {
-   "T-4183": "Idris",
+   "T-0976": "Idris",
    "T-4182": "Idris",
+   "T-4476": "Idris",
+   "T-5012": "Idris",
+   "T-4646": "Idris",
+   "T-5035": "Idris",
    "T-4570": "Idris",
    "T-4405": "Idris",
    "T-4406": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-26T15:37:18Z",
+  "at": "2026-11-26T15:40:30Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -500,7 +542,7 @@
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 542
+    "parked": 545
    },
    "cur": [],
    "ld": [
@@ -510,12 +552,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-26T15:36:31Z",
-    "ld": 1.22,
+    "at": "2026-11-26T15:40:30Z",
+    "ld": 0.76,
     "c": 8,
     "sb": 1,
     "dk": [
-     25.6,
+     25.5,
      228.3
     ],
     "ss": [
@@ -527,16 +569,17 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-26T15:31:36Z",
-    "ld": 8.78,
+    "at": "2026-11-26T15:40:14Z",
+    "ld": 5.34,
     "c": 12,
-    "sb": 1,
+    "sb": 2,
     "dk": [
-     395.3,
+     393.4,
      926.4
     ],
     "sn": [
-     "itsthecompany-runner"
+     "itsthecompany-runner-2",
+     "itsthecompany-runner-3"
     ]
    }
   }
@@ -567,11 +610,11 @@
      "open": true
     }
    },
-   "at": "2026-11-26T15:37:32+00:00"
+   "at": "2026-11-26T15:40:37+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-26T15:37:32+00:00"
+   "at": "2026-11-26T15:40:30+00:00"
   }
  },
  "operators": [
@@ -620,13 +663,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 0,
+  "main": 1,
   "lanes": 2,
-  "total": 2,
-  "at": "10:37 AM",
+  "total": 3,
+  "at": "10:40 AM",
   "why": "",
-  "at_iso": "2026-11-26T15:37:00+00:00",
+  "at_iso": "2026-11-26T15:40:00+00:00",
   "started": "8:47 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0, started 8:47 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 10:37 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 1, started 8:47 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 10:40 AM ET</p></section>"
  }
 }

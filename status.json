@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-26T03:33:19.081181+00:00",
+ "at": "2026-11-26T03:36:21.546958+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -92,7 +92,7 @@
    "task": "[build] T-4191 large text steps",
    "model": "",
    "started": "2026-11-25T23:44:39.050Z",
-   "seconds": 13720,
+   "seconds": 13902,
    "finished": null
   },
   {
@@ -100,7 +100,7 @@
    "task": "[build] T-5796 name check fix",
    "model": "",
    "started": "2026-11-26T03:20:58.422Z",
-   "seconds": 740,
+   "seconds": 923,
    "finished": null
   }
  ],
@@ -191,7 +191,7 @@
   "week_pct": 138.18,
   "usage_pct": 60.0,
   "work_pct": 98.3,
-  "read_at": "2026-11-26T03:33:00+00:00",
+  "read_at": "2026-11-26T03:36:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -253,7 +253,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-25T22:33:00-05:00",
+  "at": "2026-11-25T22:36:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -502,9 +502,19 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-26T03:33:19Z",
-  "s": {},
+  "at": "2026-11-26T03:36:21Z",
+  "s": {
+   "T-0972": [
+    "mergetest",
+    "iPhone tests on the MacBook",
+    null
+   ]
+  },
+  "nm": {
+   "T-0972": "Decide how a script's refresh path is chosen on send"
+  },
   "wk": {
+   "T-0972": "Idris",
    "T-4548": "Idris",
    "T-4856": "Idris",
    "T-1457": "Idris",
@@ -520,7 +530,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-26T03:33:19Z",
+  "at": "2026-11-26T03:36:21Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -534,11 +544,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 1271,
+    "conflicted": 1274,
     "failed": null,
-    "held": 2831,
+    "held": 2834,
     "retry": null,
-    "parked": 1271
+    "parked": 1274
    },
    "cur": [],
    "ld": [
@@ -548,12 +558,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-26T03:32:53Z",
-    "ld": 11.81,
+    "at": "2026-11-26T03:36:22Z",
+    "ld": 11.1,
     "c": 8,
     "sb": 0,
     "dk": [
-     27.6,
+     27.5,
      228.3
     ],
     "ss": [
@@ -563,15 +573,17 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-26T03:32:41Z",
-    "ld": 3.24,
+    "at": "2026-11-26T03:35:51Z",
+    "ld": 3.41,
     "c": 12,
-    "sb": 0,
+    "sb": 1,
     "dk": [
-     423.0,
+     421.9,
      926.4
     ],
-    "sn": []
+    "sn": [
+     "itsthecompany-runner"
+    ]
    }
   }
  },
@@ -601,11 +613,11 @@
      "open": true
     }
    },
-   "at": "2026-11-26T03:33:19+00:00"
+   "at": "2026-11-26T03:36:21+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-26T03:33:04+00:00"
+   "at": "2026-11-26T03:36:21+00:00"
   }
  },
  "operators": [
@@ -658,10 +670,10 @@
   "main": 2,
   "lanes": 2,
   "total": 4,
-  "at": "10:33 PM",
+  "at": "10:36 PM",
   "why": "",
-  "at_iso": "2026-11-26T03:33:00+00:00",
+  "at_iso": "2026-11-26T03:36:00+00:00",
   "started": "1:03 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 2, started 1:03 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 10:33 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 2, started 1:03 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 10:36 PM ET</p></section>"
  }
 }

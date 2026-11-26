@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-26T14:39:22.608795+00:00",
+ "at": "2026-11-26T14:42:29.945722+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -87,16 +87,25 @@
  },
  "workers": [
   {
+   "name": "pernille",
+   "task": "[review] T-4183",
+   "model": "opus",
+   "started": "2026-11-26T14:41:13.648Z",
+   "seconds": 76,
+   "finished": null
+  }
+ ],
+ "who": "Pernille",
+ "recent": [
+  {
    "name": "idris",
    "task": "[build] T-4183 Gallery small fixes",
    "model": "opus",
    "started": "2026-11-26T13:48:47.348Z",
-   "seconds": 3035,
-   "finished": null
+   "seconds": null,
+   "finished": "2026-11-26T14:40:56.065000+00:00"
   }
  ],
- "who": "Idris",
- "recent": [],
  "queue": {
   "runnable": [],
   "blocked": [],
@@ -149,20 +158,8 @@
   "week_pct": 154.3,
   "usage_pct": 61.6,
   "work_pct": 98.7,
-  "read_at": "2026-11-26T14:39:00+00:00",
+  "read_at": "2026-11-26T14:42:00+00:00",
   "running": [
-   {
-    "lane": "a3",
-    "task": "T-4185",
-    "w": "Idris",
-    "k": "build",
-    "t": "Launcher widgets open the apps a person chose",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-26T07:41:40-05:00",
-    "n": "Evan",
-    "src": "plan-a"
-   },
    {
     "lane": "b",
     "task": "T-4192",
@@ -223,7 +220,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-26T09:39:00-05:00",
+  "at": "2026-11-26T09:42:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -240,17 +237,17 @@
  },
  "lanes": [
   {
-   "name": "Idris",
+   "name": "Pernille",
    "state": "running",
-   "task": "[build] T-4183 Gallery small fixes",
+   "task": "[review] T-4183",
    "model": "opus",
-   "since": "2026-11-26T13:48:47.348Z",
+   "since": "2026-11-26T14:41:13.648Z",
    "next": []
   },
   {
-   "name": "Pernille",
+   "name": "Idris",
    "state": "next",
-   "task": "Pernille, P1, continuation of T-2609: after...",
+   "task": "Idris, P2, from T-1282 F1 (not before TestFlight):...",
    "model": null,
    "since": null,
    "next": []
@@ -291,11 +288,11 @@
  "tasks": {
   "run": [
    {
-    "w": "Idris",
-    "k": "build",
+    "w": "Pernille",
+    "k": "review",
     "t": "The Gallery shows, previews and opens every premade",
     "m": "opus",
-    "at": "2026-11-26T13:48:47.348Z",
+    "at": "2026-11-26T14:41:13.648Z",
     "o": "c",
     "task": "T-4183"
    }
@@ -449,8 +446,13 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-26T14:39:22Z",
+  "at": "2026-11-26T14:42:16Z",
   "s": {
+   "T-4185": [
+    "mergetest",
+    "Xcode checks on the MacBook, 1st to merge",
+    1795704016677
+   ],
    "T-2497": [
     "mergetest",
     "iPhone tests on the MacBook",
@@ -464,10 +466,12 @@
    ]
   },
   "nm": {
+   "T-4185": "Launcher widgets open the apps a person chose",
    "T-2497": "Fix the stuck-row test that cannot fail",
    "T-4182": "A failing widget says so and can recover"
   },
   "wk": {
+   "T-4185": "Idris",
    "T-2497": "Idris",
    "T-4182": "Idris",
    "T-4405": "Idris",
@@ -475,10 +479,10 @@
   }
  },
  "ln": {
-  "at": "2026-11-26T14:39:22Z",
+  "at": "2026-11-26T14:42:16Z",
   "mq": {
    "n": {
-    "checking": 0,
+    "checking": 1,
     "inline": 0,
     "conflicted": 0,
     "failed": 0,
@@ -487,15 +491,24 @@
     "parked": 7
    },
    "m": {
-    "checking": null,
+    "checking": 2,
     "inline": null,
     "conflicted": null,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 484
+    "parked": 487
    },
-   "cur": [],
+   "cur": [
+    [
+     [
+      "T-4185"
+     ],
+     "iPhone app tests",
+     "MacBook",
+     2
+    ]
+   ],
    "ld": [
     0,
     null
@@ -503,12 +516,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-26T14:38:35Z",
-    "ld": 0.98,
+    "at": "2026-11-26T14:42:17Z",
+    "ld": 1.27,
     "c": 8,
     "sb": 1,
     "dk": [
-     20.7,
+     22.8,
      228.3
     ],
     "ss": [
@@ -520,17 +533,16 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-26T14:37:01Z",
-    "ld": 20.37,
+    "at": "2026-11-26T14:40:03Z",
+    "ld": 15.13,
     "c": 12,
-    "sb": 2,
+    "sb": 1,
     "dk": [
-     395.9,
+     397.3,
      926.4
     ],
     "sn": [
-     "itsthecompany-runner",
-     "itsthecompany-runner-2"
+     "itsthecompany-runner"
     ]
    }
   }
@@ -561,11 +573,11 @@
      "open": true
     }
    },
-   "at": "2026-11-26T14:39:22+00:00"
+   "at": "2026-11-26T14:42:29+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-26T14:39:22+00:00"
+   "at": "2026-11-26T14:42:23+00:00"
   }
  },
  "operators": [
@@ -577,15 +589,6 @@
    "e": "high",
    "t": "Work session",
    "at": "2026-11-26T08:47:03-05:00"
-  },
-  {
-   "w": "Operator",
-   "a": "Evan's Account",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session",
-   "at": "2026-11-26T07:41:40-05:00"
   },
   {
    "w": "Operator",
@@ -623,12 +626,12 @@
  ],
  "agents_now": {
   "main": 1,
-  "lanes": 3,
-  "total": 4,
-  "at": "9:39 AM",
+  "lanes": 2,
+  "total": 3,
+  "at": "9:42 AM",
   "why": "",
-  "at_iso": "2026-11-26T14:39:00+00:00",
+  "at_iso": "2026-11-26T14:42:00+00:00",
   "started": "8:47 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 1, started 8:47 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 9:39 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 1, started 8:47 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 9:42 AM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-26T22:23:08.165267+00:00",
+ "at": "2026-11-26T22:27:59.172663+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -82,16 +82,7 @@
    "task": "[build] T-5894 premade page test order",
    "model": "opus",
    "started": "2026-11-26T20:25:04.046Z",
-   "seconds": 7084,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-4476 T-5907 review fixes",
-   "model": "opus",
-   "started": "2026-11-26T22:07:32.088Z",
-   "seconds": 936,
+   "seconds": 7375,
    "finished": null,
    "effort": "high"
   },
@@ -100,13 +91,30 @@
    "task": "[build] T-4190 restore test T-5909",
    "model": "opus",
    "started": "2026-11-26T22:07:40.488Z",
-   "seconds": 927,
+   "seconds": 1218,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "pernille",
+   "task": "[review] T-4476 T-5907 re-review",
+   "model": "opus",
+   "started": "2026-11-26T22:25:55.718Z",
+   "seconds": 123,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Idris x3",
+ "who": "Idris x2, Pernille",
  "recent": [
+  {
+   "name": "idris",
+   "task": "[build] T-4476 T-5907 review fixes",
+   "model": "opus",
+   "started": "2026-11-26T22:07:32.088Z",
+   "seconds": null,
+   "finished": "2026-11-26T22:25:39.666000+00:00"
+  },
   {
    "name": "pernille",
    "task": "[review] T-4476 T-5907 clash fix",
@@ -130,14 +138,6 @@
    "started": "2026-11-26T22:01:15.195Z",
    "seconds": null,
    "finished": "2026-11-26T22:01:47.883000+00:00"
-  },
-  {
-   "name": "pernille",
-   "task": "[review] T-5529 Pyodide pin",
-   "model": "opus",
-   "started": "2026-11-26T21:53:38.693Z",
-   "seconds": null,
-   "finished": "2026-11-26T22:00:45.517000+00:00"
   }
  ],
  "queue": {
@@ -149,19 +149,19 @@
  "meter": {
   "five_hour": {
    "pct": 8.0,
-   "resets_at": "2026-11-27T02:30:00.356270+00:00",
+   "resets_at": "2026-11-26T21:30:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-26T17:20:27.002487-05:00",
-   "source": "usage",
+   "read_at": "2026-11-26T17:26:47.125404-05:00",
+   "source": "live",
    "left": 92.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 8.0,
-   "resets_at": "2026-11-29T07:00:00.356296+00:00",
+   "resets_at": "2026-11-29T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-26T17:20:27.002487-05:00",
-   "source": "usage",
+   "read_at": "2026-11-26T17:26:47.125404-05:00",
+   "source": "live",
    "left": 92.0,
    "left_words": "of your weekly allowance left"
   },
@@ -172,7 +172,7 @@
    "read_at": "2026-11-26T17:20:27.002487-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-26T17:20:27.002487-05:00"
+  "read_at": "2026-11-26T17:26:47.125404-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -192,7 +192,7 @@
   "week_pct": 531.49,
   "usage_pct": 62.0,
   "work_pct": 98.8,
-  "read_at": "2026-11-26T22:23:00+00:00",
+  "read_at": "2026-11-26T22:28:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -247,14 +247,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-26T17:20:00-05:00",
+   "at": "2026-11-26T17:26:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-26T17:23:00-05:00",
+  "at": "2026-11-26T17:28:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -265,7 +265,7 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Locked in for today by an Investor: full speed until midnight; the 5-hour window allows 5; the machine allows 8 (held: too few lands in 3 hours to judge a raise)",
+  "why": "Locked in for today by an Investor: full speed until midnight; the 5-hour window allows 5; the machine allows 8 (at its floor: load 11.5 a core is over 10)",
   "n": 5,
   "at": "2026-11-26T12:21:25.895161-05:00"
  },
@@ -281,11 +281,12 @@
   },
   {
    "name": "Pernille",
-   "state": "next",
-   "task": "Pernille, P1, continuation of T-2609: after...",
-   "model": null,
-   "since": null,
-   "next": []
+   "state": "running",
+   "task": "[review] T-4476 T-5907 re-review",
+   "model": "opus",
+   "since": "2026-11-26T22:25:55.718Z",
+   "next": [],
+   "effort": "high"
   },
   {
    "name": "Ines",
@@ -335,22 +336,22 @@
    {
     "w": "Idris",
     "k": "build",
-    "t": "Projects get one file, one ID and guarded outside code",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-26T22:07:32.088Z",
-    "o": "c",
-    "task": "T-4476"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
     "t": "Settings and Pro: buy, restore, themes",
     "m": "opus",
     "e": "high",
     "at": "2026-11-26T22:07:40.488Z",
     "o": "c",
     "task": "T-4190"
+   },
+   {
+    "w": "Pernille",
+    "k": "review",
+    "t": "Projects get one file, one ID and guarded outside code",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-26T22:25:55.718Z",
+    "o": "c",
+    "task": "T-4476"
    }
   ],
   "src": "plan",
@@ -518,9 +519,9 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-26T22:23:08Z",
+  "at": "2026-11-26T22:27:59Z",
   "s": {
-   "T-5909": [
+   "T-4192": [
     "mergetest",
     "iPhone tests on the MacBook",
     null
@@ -545,13 +546,13 @@
    ]
   },
   "nm": {
-   "T-5909": "Make the restore elsewhere test pass every run",
+   "T-4192": "Python in the app: smaller bundle, installable packages",
    "T-4190": "Settings and Pro: buy, restore, themes",
    "T-4476": "Projects get one file, one ID and guarded outside code",
    "T-4182": "A failing widget says so and can recover"
   },
   "wk": {
-   "T-5909": "Idris",
+   "T-4192": "Idris",
    "T-4190": "Idris",
    "T-4476": "Idris",
    "T-4182": "Idris",
@@ -570,7 +571,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-26T22:23:08Z",
+  "at": "2026-11-26T22:27:59Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -588,7 +589,7 @@
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 948
+    "parked": 953
    },
    "cur": [],
    "ld": [
@@ -598,31 +599,32 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-26T22:22:48Z",
-    "ld": 4.94,
+    "at": "2026-11-26T22:27:14Z",
+    "ld": 11.72,
     "c": 8,
-    "sb": 0,
+    "sb": 1,
     "dk": [
-     20.8,
+     20.5,
      228.3
     ],
     "ss": [
      172.6,
      953.7
     ],
-    "sn": []
+    "sn": [
+     "pywidget-wk-check"
+    ]
    },
    "macbook": {
-    "at": "2026-11-26T22:22:07Z",
-    "ld": 4.6,
+    "at": "2026-11-26T22:25:42Z",
+    "ld": 3.95,
     "c": 12,
-    "sb": 2,
+    "sb": 1,
     "dk": [
-     375.6,
+     376.9,
      926.4
     ],
     "sn": [
-     "itsthecompany-runner-2",
      "itsthecompany-runner-3"
     ]
    }
@@ -654,11 +656,11 @@
      "open": true
     }
    },
-   "at": "2026-11-26T22:23:08+00:00"
+   "at": "2026-11-26T22:27:59+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-26T22:23:08+00:00"
+   "at": "2026-11-26T22:27:59+00:00"
   }
  },
  "operators": [
@@ -711,10 +713,10 @@
   "main": 3,
   "lanes": 2,
   "total": 5,
-  "at": "5:23 PM",
+  "at": "5:28 PM",
   "why": "",
-  "at_iso": "2026-11-26T22:23:00+00:00",
+  "at_iso": "2026-11-26T22:28:00+00:00",
   "started": "12:21 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 3, started 12:21 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 5:23 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 3, started 12:21 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 5:28 PM ET</p></section>"
  }
 }

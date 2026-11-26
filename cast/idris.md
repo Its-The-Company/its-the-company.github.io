@@ -43,13 +43,13 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 - T-4185 11-25 (a2): T-4638 041a7f6bc9 partial (scan 1.6-2.0 s -> 37-62 ms; tap-to-frame 206-540 ms is the editor's open, done-when needs a decision). T-5314/T-4576 patches drafted in scratch T-4185-idris/; T-4906: move the plist test to an app-target file; T-5283 needs an iPad Simulator (none on the Mac mini). Lesson: Simulator xc.sh waits for 1- and 5-min load < 40; background commands die at 10 min, so poll a log file.
 
+- T-4302 11-25 (b): own-widget save test in WidgetStepTimeoutTests (test only). Open: review, land.
+
 ## Lessons
+- xc.sh from pywidget/ios with XC_LOCAL=1 goes to the runner via a check ref (dirty tree ok); from the root it waits on Mac mini load (75).
 - Older lessons and dated logs: archive.md.
-- memory_archive.py --limit 1 moved nearly everything; use --dry-run first.
-- T-4186 11-24: T-4257 5d97e58743 (lint labels + lens, LintLabelsView over editor). Open: Pernille review, iPhone run; L2 fit test drafted, untested, in scratch T-4186-idris/CompletionRowFitTests.swift.step3 (T-4291). Lesson: a plain UIControl never sends .primaryActionTriggered; use .touchUpInside.
-- T-4824 11-24: c08d9c8062 (L3 s8 items 1-3, ext NSMotionUsageDescription; 2291 green). Open: review (Maren words), T-5820 ASC upload check (Investors). Lesson: xc_mutants control always prints SURVIVED, exit 1 is expected.
-- T-4182 11-25 (a, 2nd): T-3791 23b64c9a8f committed, all plan checks green. Next T-3792, T-3291, T-2836 (scratch t2836), T-2841. Lesson: XC_LOCAL=1 build-for-testing is one runner job for the whole unit target; queue the UI job beside it at the same tree.
 - T-4188 11-25 (b): MERGE POINT. T-0053 47f1ee158b + eea3f347a6 (Odalys fixes: walks @rpath libs, red on plant), T-0063 cbe9e5ff9f. Open: Odalys re-review, iPhone run, merge; T-3554 F7 + review, T-5294 in scratch. Lessons: libswiftCoreLocation is autolinked into every Swift binary, so check bound imports; never report a runner verdict before reading it; the runner runs a build-for-testing as whole PyWidgetTests.
+- T-5797 11-25 (a2): T-5640 slices 1-3 on personal/a2 (mask fonts, AnimationPlan, TimerMaskLoop, frames, ui.Animation node). Left: Home Screen limits run never passed the load gate (60-300); harness + draft limits doc in scratch T-5640-idris/. Then T-5662/T-5829/T-5831; T-3792 untouched. Lessons: re-run the same xc.sh to read a runner job; never loop widgetkit_check.sh on exit 75 (each try boots a Simulator), poll sysctl vm.loadavg first.
 {% endraw %}
 
 

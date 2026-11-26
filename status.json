@@ -1,10 +1,10 @@
 {
  "schema": 1,
- "at": "2026-11-26T17:21:36.515056+00:00",
+ "at": "2026-11-26T17:24:43.028522+00:00",
  "session": {
   "active": true,
   "kind": "coord",
-  "started": "2026-11-26T10:56:18-05:00",
+  "started": "2026-11-26T12:21:37-05:00",
   "coord": {
    "active": true,
    "started": 1795341309,
@@ -87,40 +87,7 @@
  },
  "workers": [],
  "who": "",
- "recent": [
-  {
-   "name": "idris",
-   "task": "[build] T-4183 Gallery next batch",
-   "model": "opus",
-   "started": "2026-11-26T16:35:00.764Z",
-   "seconds": null,
-   "finished": "2026-11-26T17:18:49.542000+00:00"
-  },
-  {
-   "name": "pernille",
-   "task": "[review] T-4476",
-   "model": "opus",
-   "started": "2026-11-26T17:02:59.065Z",
-   "seconds": null,
-   "finished": "2026-11-26T17:04:41.082000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-4476 review fixes",
-   "model": "opus",
-   "started": "2026-11-26T16:37:55.969Z",
-   "seconds": null,
-   "finished": "2026-11-26T17:02:41.729000+00:00"
-  },
-  {
-   "name": "pernille",
-   "task": "[review] T-4476",
-   "model": "opus",
-   "started": "2026-11-26T16:34:50.806Z",
-   "seconds": null,
-   "finished": "2026-11-26T16:37:31.807000+00:00"
-  }
- ],
+ "recent": [],
  "queue": {
   "runnable": [],
   "blocked": [],
@@ -130,20 +97,20 @@
  "meter": {
   "five_hour": {
    "pct": 5.0,
-   "resets_at": "2026-11-26T21:29:59.578952+00:00",
+   "resets_at": "2026-11-26T16:30:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-26T12:21:25.548317-05:00",
-   "source": "usage",
+   "read_at": "2026-11-26T12:22:19.394664-05:00",
+   "source": "live",
    "left": 95.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 0.0,
-   "resets_at": "2026-11-29T06:59:59.578978+00:00",
+   "pct": 1.0,
+   "resets_at": "2026-11-29T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-26T12:21:25.548317-05:00",
-   "source": "usage",
-   "left": 100.0,
+   "read_at": "2026-11-26T12:22:19.394664-05:00",
+   "source": "live",
+   "left": 99.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
@@ -153,7 +120,7 @@
    "read_at": "2026-11-26T12:21:25.548317-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-26T12:21:25.548317-05:00"
+  "read_at": "2026-11-26T12:22:19.394664-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -173,7 +140,7 @@
   "week_pct": 161.94,
   "usage_pct": 62.0,
   "work_pct": 98.8,
-  "read_at": "2026-11-26T17:21:00+00:00",
+  "read_at": "2026-11-26T17:24:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -247,7 +214,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-26T12:21:00-05:00",
+  "at": "2026-11-26T12:24:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -314,6 +281,7 @@
  ],
  "tasks": {
   "run": [],
+  "src": "plan",
   "open": [
    {
     "w": "Idris",
@@ -410,17 +378,8 @@
    "you": 0
   },
   "fin": {
-   "n": 2,
-   "rows": [
-    [
-     "T-2492",
-     "Record a widget kill after..."
-    ],
-    [
-     "T-2493",
-     "Keep locked premades out of..."
-    ]
-   ]
+   "n": 0,
+   "rows": []
   }
  },
  "qr": [
@@ -462,7 +421,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-26T17:21:36Z",
+  "at": "2026-11-26T17:24:25Z",
   "s": {
    "T-5269": [
     "mergetest",
@@ -490,13 +449,11 @@
   "wk": {
    "T-5269": "Idris",
    "T-4185": "Idris",
-   "T-4181": "Idris",
-   "T-2492": "Idris",
-   "T-2493": "Idris"
+   "T-4181": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-26T17:21:36Z",
+  "at": "2026-11-26T17:24:25Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -514,7 +471,7 @@
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 646
+    "parked": 649
    },
    "cur": [],
    "ld": [
@@ -524,21 +481,19 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-26T17:21:37Z",
-    "ld": 1.49,
+    "at": "2026-11-26T17:24:01Z",
+    "ld": 1.94,
     "c": 8,
-    "sb": 1,
+    "sb": 0,
     "dk": [
-     23.7,
+     24.3,
      228.3
     ],
     "ss": [
      172.6,
      953.7
     ],
-    "sn": [
-     "t5283-ipad"
-    ]
+    "sn": []
    },
    "macbook": {
     "at": "2026-11-26T17:21:15Z",
@@ -564,7 +519,7 @@
    "parked": 7,
    "open": true,
    "mq": false,
-   "counted": "2026-11-26T17:11:49+00:00",
+   "counted": "2026-11-26T17:22:08+00:00",
    "by": {
     "app": {
      "n": 6,
@@ -582,19 +537,22 @@
      "open": true
     }
    },
-   "at": "2026-11-26T17:21:36+00:00"
+   "at": "2026-11-26T17:24:43+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-26T17:21:36+00:00"
+   "at": "2026-11-26T17:24:31+00:00"
   }
  },
  "operators": [
   {
    "w": "Operator",
-   "a": "Main",
+   "a": "Main plan",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
    "t": "Work session",
-   "at": "2026-11-26T11:34:09-05:00"
+   "at": "2026-11-26T12:21:37-05:00"
   },
   {
    "w": "Operator",
@@ -632,9 +590,7 @@
  "trimmed": [
   "lane_next",
   "queue_text",
-  "recent",
   "task_done",
-  "fin_short",
   "task_title",
   "done_text",
   "lane_task",
@@ -644,10 +600,10 @@
   "main": 0,
   "lanes": 3,
   "total": 3,
-  "at": "12:21 PM",
+  "at": "12:24 PM",
   "why": "",
-  "at_iso": "2026-11-26T17:21:00+00:00",
-  "started": "10:56 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 10:56 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 12:21 PM ET</p></section>"
+  "at_iso": "2026-11-26T17:24:00+00:00",
+  "started": "12:21 PM",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 12:21 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 12:24 PM ET</p></section>"
  }
 }

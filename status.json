@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-26T04:53:48.231066+00:00",
+ "at": "2026-11-26T05:00:59.469457+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -88,19 +88,11 @@
  },
  "workers": [
   {
-   "name": "odalys",
-   "task": "[report] afternoon work timeline",
-   "model": "opus",
-   "started": "2026-11-26T04:48:11.373Z",
-   "seconds": 336,
-   "finished": null
-  },
-  {
    "name": "idris",
    "task": "[build] T-4476 manifest review fixes",
    "model": "opus",
    "started": "2026-11-26T04:48:53.381Z",
-   "seconds": 294,
+   "seconds": 726,
    "finished": null
   },
   {
@@ -108,12 +100,20 @@
    "task": "[build] T-5795 weather chart screenshot",
    "model": "opus",
    "started": "2026-11-26T04:51:14.099Z",
-   "seconds": 154,
+   "seconds": 585,
    "finished": null
   }
  ],
- "who": "Odalys, Idris, Pernille",
+ "who": "Idris, Pernille",
  "recent": [
+  {
+   "name": "odalys",
+   "task": "[report] afternoon work timeline",
+   "model": "opus",
+   "started": "2026-11-26T04:48:11.373Z",
+   "seconds": null,
+   "finished": "2026-11-26T04:56:34.149000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[review] T-5796 after rebase",
@@ -137,38 +137,30 @@
    "started": "2026-11-26T04:44:31.904Z",
    "seconds": null,
    "finished": "2026-11-26T04:47:36.850000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[review] T-5796 fourth read",
-   "model": "opus",
-   "started": "2026-11-26T04:45:35.994Z",
-   "seconds": null,
-   "finished": "2026-11-26T04:46:02.583000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 341,
+  "runnable_count": 339,
   "blocked_count": 0
  },
  "meter": {
   "five_hour": {
-   "pct": 4.0,
-   "resets_at": "2026-11-26T08:59:59.525902+00:00",
+   "pct": 5.0,
+   "resets_at": "2026-11-26T04:00:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-25T23:52:18.234271-05:00",
-   "source": "usage",
-   "left": 96.0,
+   "read_at": "2026-11-25T23:59:30.172766-05:00",
+   "source": "live",
+   "left": 95.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 93.0,
-   "resets_at": "2026-11-29T06:59:59.525919+00:00",
+   "resets_at": "2026-11-29T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-25T23:52:18.234271-05:00",
-   "source": "usage",
+   "read_at": "2026-11-25T23:59:30.172766-05:00",
+   "source": "live",
    "left": 7.0,
    "left_words": "of your weekly allowance left"
   },
@@ -179,7 +171,7 @@
    "read_at": "2026-11-25T23:52:18.234271-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-25T23:52:18.234271-05:00"
+  "read_at": "2026-11-25T23:59:30.172766-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -199,7 +191,7 @@
   "week_pct": 132.95,
   "usage_pct": 58.8,
   "work_pct": 98.5,
-  "read_at": "2026-11-26T04:53:00+00:00",
+  "read_at": "2026-11-26T05:01:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -236,6 +228,18 @@
     "at": "2026-11-25T23:51:01-05:00",
     "n": "Jeremy",
     "src": "plan-b"
+   },
+   {
+    "lane": "b2",
+    "task": "T-4188",
+    "w": "Idris",
+    "k": "build",
+    "t": "Location, steps and notifications work in scripts and widgets",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-25T23:56:18-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
    }
   ]
  },
@@ -266,19 +270,19 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-25T23:52:00-05:00",
+   "at": "2026-11-25T23:59:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
-  "on": true,
+  "on": false,
   "pool": 1,
-  "at": "2026-11-25T23:53:00-05:00",
-  "mode": "midnight",
+  "at": "2026-11-26T00:01:00-05:00",
+  "mode": null,
   "modes": {
-   "main": "midnight",
-   "a": "midnight",
-   "b": "midnight"
+   "main": "double-spread",
+   "a": "double-spread",
+   "b": "double-spread"
   }
  },
  "next_tick_why": "session",
@@ -289,14 +293,6 @@
   "at": "2026-11-25T23:19:24.355533-05:00"
  },
  "lanes": [
-  {
-   "name": "Odalys",
-   "state": "running",
-   "task": "[report] afternoon work timeline",
-   "model": "opus",
-   "since": "2026-11-26T04:48:11.373Z",
-   "next": []
-  },
   {
    "name": "Idris",
    "state": "running",
@@ -330,6 +326,14 @@
    "next": []
   },
   {
+   "name": "Odalys",
+   "state": "next",
+   "task": "Odalys, P3, host-only, from...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
    "name": "Maren",
    "state": "next",
    "task": "Maren, P1, from T-2296 review M2...",
@@ -340,14 +344,6 @@
  ],
  "tasks": {
   "run": [
-   {
-    "w": "Odalys",
-    "k": "report",
-    "t": "Afternoon work timeline",
-    "m": "opus",
-    "at": "2026-11-26T04:48:11.373Z",
-    "o": "i"
-   },
    {
     "w": "Idris",
     "k": "build",
@@ -443,29 +439,37 @@
   "done": [
    {
     "w": "Idris",
+    "t": "The app now opens a pywidget run link for a shortcut and hands its name to Shortcuts, and the...",
+    "at": "2026-11-25T23:59:00-05:00"
+   },
+   {
+    "w": "Idris",
+    "t": "Picking a different city for a clock or a Distance place now renames it, as long as the person...",
+    "at": "2026-11-25T23:59:00-05:00"
+   },
+   {
+    "w": "Idris",
     "t": "On the Pro screen at large text sizes, only the price button and its one line stay fixed at the...",
-    "at": "2026-11-25T23:50:00-05:00"
-   },
-   {
-    "w": "Idris",
-    "t": "Settings > Acknowledgements now lists Natural Earth, the source of the city list, with its...",
-    "at": "2026-11-25T23:50:00-05:00"
-   },
-   {
-    "w": "Idris",
-    "t": "The Copy All announcement now goes out at high priority, so the menu closing should not cut it...",
     "at": "2026-11-25T23:50:00-05:00"
    }
   ],
   "count": {
-   "next": 341,
+   "next": 339,
    "wait": 0,
    "blocked": 0,
    "you": 0
   },
   "fin": {
-   "n": 4,
+   "n": 6,
    "rows": [
+    [
+     "T-5630",
+     "Shortcuts settings sheet..."
+    ],
+    [
+     "T-4639",
+     "Keep a place's name in step..."
+    ],
     [
      "T-1444",
      "Make the Pro footer and..."
@@ -524,14 +528,9 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-26T04:53:40Z",
+  "at": "2026-11-26T05:00:44Z",
   "s": {
-   "T-4185": [
-    "mergeq",
-    "1st to merge",
-    1795668700211
-   ],
-   "T-4182": [
+   "T-5796": [
     "mergetest",
     "iPhone tests on the MacBook",
     null
@@ -550,16 +549,16 @@
    ]
   },
   "nm": {
-   "T-4185": "Launcher widgets open the apps a person chose",
-   "T-4182": "A failing widget says so and can recover",
+   "T-5796": "Internal TestFlight builds carry the test widgets",
    "T-4476": "Projects get one file, one ID and guarded outside code",
    "T-5795": "The 1.0 showcase premades are built and in the Gallery"
   },
   "wk": {
-   "T-4185": "Idris",
-   "T-4182": "Idris",
+   "T-5796": "Idris",
    "T-4476": "Idris",
    "T-5795": "Pernille",
+   "T-5630": "Idris",
+   "T-4639": "Idris",
    "T-1444": "Idris",
    "T-4517": "Odalys",
    "T-1243": "Idris",
@@ -567,25 +566,25 @@
   }
  },
  "ln": {
-  "at": "2026-11-26T04:53:40Z",
+  "at": "2026-11-26T05:00:44Z",
   "mq": {
    "n": {
     "checking": 0,
-    "inline": 1,
+    "inline": 0,
     "conflicted": 1,
     "failed": 0,
     "held": 1,
     "retry": 0,
-    "parked": 6
+    "parked": 9
    },
    "m": {
     "checking": null,
-    "inline": 2,
-    "conflicted": 20,
+    "inline": null,
+    "conflicted": 27,
     "failed": null,
-    "held": 20,
+    "held": 27,
     "retry": null,
-    "parked": 686
+    "parked": 27
    },
    "cur": [],
    "ld": [
@@ -595,32 +594,35 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-26T04:53:17Z",
-    "ld": 4.0,
+    "at": "2026-11-26T05:00:20Z",
+    "ld": 12.53,
     "c": 8,
-    "sb": 0,
+    "sb": 1,
     "dk": [
-     21.1,
+     23.4,
      228.3
     ],
     "ss": [
      172.6,
      953.7
     ],
-    "sn": []
+    "sn": [
+     "iPhone 17e"
+    ]
    },
    "macbook": {
-    "at": "2026-11-26T04:52:08Z",
-    "ld": 2.71,
+    "at": "2026-11-26T04:57:45Z",
+    "ld": 8.61,
     "c": 12,
-    "sb": 2,
+    "sb": 3,
     "dk": [
-     415.9,
+     414.0,
      926.4
     ],
     "sn": [
      "itsthecompany-runner",
-     "itsthecompany-runner-2"
+     "itsthecompany-runner-3",
+     "itsthecompany-runner-4"
     ]
    }
   }
@@ -633,7 +635,7 @@
    "parked": 8,
    "open": true,
    "mq": false,
-   "counted": "2026-11-26T04:43:52+00:00",
+   "counted": "2026-11-26T04:55:04+00:00",
    "by": {
     "app": {
      "n": 9,
@@ -651,11 +653,11 @@
      "open": true
     }
    },
-   "at": "2026-11-26T04:53:48+00:00"
+   "at": "2026-11-26T05:00:59+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-26T04:53:40+00:00"
+   "at": "2026-11-26T05:00:59+00:00"
   }
  },
  "operators": [
@@ -666,7 +668,7 @@
    "m": "opus",
    "e": "high",
    "t": "Work session",
-   "at": "2026-11-25T23:46:50-05:00"
+   "at": "2026-11-25T23:57:57-05:00"
   },
   {
    "w": "Operator",
@@ -694,11 +696,20 @@
    "e": "high",
    "t": "Work session \u2013 1 task",
    "at": "2026-11-25T23:51:01-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Jeremy's Account",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session \u2013 1 task",
+   "at": "2026-11-25T23:56:18-05:00"
   }
  ],
  "reply": {
-  "sent": "2026-11-26T04:45:35Z",
-  "seconds": 74.0
+  "sent": "2026-11-26T04:55:38Z",
+  "seconds": 137.0
  },
  "inbox": [],
  "trimmed": [
@@ -713,13 +724,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 3,
-  "lanes": 3,
+  "main": 2,
+  "lanes": 4,
   "total": 6,
-  "at": "11:53 PM",
+  "at": "12:01 AM",
   "why": "",
-  "at_iso": "2026-11-26T04:53:00+00:00",
+  "at_iso": "2026-11-26T05:01:00+00:00",
   "started": "11:19 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 3, started 11:19 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 11:53 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 2, started 11:19 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 12:01 AM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-26T18:50:05.148258+00:00",
+ "at": "2026-11-26T18:53:31.618700+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -82,7 +82,7 @@
    "task": "[build] T-4190 Settings Pro themes",
    "model": "opus",
    "started": "2026-11-26T17:25:48.856Z",
-   "seconds": 5056,
+   "seconds": 5262,
    "finished": null,
    "effort": "high"
   },
@@ -91,7 +91,7 @@
    "task": "[build] T-5795 Sky premade finish",
    "model": "opus",
    "started": "2026-11-26T17:25:59.464Z",
-   "seconds": 5045,
+   "seconds": 5252,
    "finished": null,
    "effort": "high"
   },
@@ -100,22 +100,30 @@
    "task": "[build] T-4476 import screen fix",
    "model": "opus",
    "started": "2026-11-26T18:45:56.171Z",
-   "seconds": 248,
+   "seconds": 455,
    "finished": null,
    "effort": "high"
   },
+  {
+   "name": "maren",
+   "task": "[build] T-5860 live wash page",
+   "model": "opus",
+   "started": "2026-11-26T18:52:35.005Z",
+   "seconds": 56,
+   "finished": null,
+   "effort": "high"
+  }
+ ],
+ "who": "Idris x2, Pernille, Maren",
+ "recent": [
   {
    "name": "ines",
    "task": "[review] T-5859",
    "model": "opus",
    "started": "2026-11-26T18:49:41.363Z",
-   "seconds": 23,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Idris x2, Pernille, Ines",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-26T18:51:47.316000+00:00"
+  },
   {
    "name": "maren",
    "task": "[build] T-5859 Swiss editorial look",
@@ -139,20 +147,12 @@
    "started": "2026-11-26T17:25:36.297Z",
    "seconds": null,
    "finished": "2026-11-26T18:32:35.312000+00:00"
-  },
-  {
-   "name": "ines",
-   "task": "[review] T-5858",
-   "model": "opus",
-   "started": "2026-11-26T18:24:28.213Z",
-   "seconds": null,
-   "finished": "2026-11-26T18:26:24.412000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 318,
+  "runnable_count": 317,
   "blocked_count": 0
  },
  "meter": {
@@ -201,7 +201,7 @@
   "week_pct": 161.94,
   "usage_pct": 62.0,
   "work_pct": 98.8,
-  "read_at": "2026-11-26T18:50:00+00:00",
+  "read_at": "2026-11-26T18:53:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -263,7 +263,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-26T13:50:00-05:00",
+  "at": "2026-11-26T13:53:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -298,26 +298,26 @@
    "effort": "high"
   },
   {
-   "name": "Ines",
+   "name": "Maren",
    "state": "running",
-   "task": "[review] T-5859",
+   "task": "[build] T-5860 live wash page",
    "model": "opus",
-   "since": "2026-11-26T18:49:41.363Z",
+   "since": "2026-11-26T18:52:35.005Z",
    "next": [],
    "effort": "high"
   },
   {
-   "name": "Wrenna",
+   "name": "Ines",
    "state": "next",
-   "task": "Read developer.apple.com \"Keeping a widget up to date\",...",
+   "task": "Ines, P2, from T-5470...",
    "model": null,
    "since": null,
    "next": []
   },
   {
-   "name": "Maren",
+   "name": "Wrenna",
    "state": "next",
-   "task": "Maren, P2, from T-0306 (Simulator check of the L4...",
+   "task": "Read developer.apple.com \"Keeping a widget up to date\",...",
    "model": null,
    "since": null,
    "next": []
@@ -364,14 +364,14 @@
     "task": "T-4476"
    },
    {
-    "w": "Ines",
-    "k": "review",
-    "t": "Draw the Swiss editorial direction for the new look",
+    "w": "Maren",
+    "k": "build",
+    "t": "Show the watercolor wash moving on a phone",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-26T18:49:41.363Z",
-    "o": "c",
-    "task": "T-5859"
+    "at": "2026-11-26T18:52:35.005Z",
+    "o": "i",
+    "task": "T-5860"
    }
   ],
   "src": "plan",
@@ -450,6 +450,11 @@
   "done": [
    {
     "w": "Maren",
+    "t": "The fourth look for the app is drawn, light and dark: a strict four-column grid, very large...",
+    "at": "2026-11-26T13:52:00-05:00"
+   },
+   {
+    "w": "Maren",
     "t": "The third look for the app is drawn: screens printed as if by a two-ink risograph press, teal...",
     "at": "2026-11-26T13:26:00-05:00"
    },
@@ -457,22 +462,21 @@
     "w": "Maren",
     "t": "The second new look for the app is drawn: every main screen in light and dark, styled as a...",
     "at": "2026-11-26T13:06:00-05:00"
-   },
-   {
-    "w": "Maren",
-    "t": "The first new-look mockups are drawn: a code-drawn watercolor wash in three palettes, then every...",
-    "at": "2026-11-26T12:53:00-05:00"
    }
   ],
   "count": {
-   "next": 318,
+   "next": 317,
    "wait": 0,
    "blocked": 0,
    "you": 0
   },
   "fin": {
-   "n": 3,
+   "n": 4,
    "rows": [
+    [
+     "T-5859",
+     "Draw the Swiss editorial..."
+    ],
     [
      "T-5858",
      "Draw the risograph print..."
@@ -527,21 +531,21 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-26T18:49:53Z",
+  "at": "2026-11-26T18:53:31Z",
   "s": {
    "T-4192": [
     "mergetest",
     "Xcode checks on the MacBook, 1st to merge",
-    1795718333406
+    1795718311618
    ],
    "T-4185": [
     "mergeq",
     "2nd to merge",
-    1795718873406
+    1795718851618
    ],
-   "T-0623": [
-    "mergetest",
-    "iPhone tests on the MacBook",
+   "T-5795": [
+    "testing",
+    "Mac Mini \u00b7 test",
     null
    ],
    "T-4182": [
@@ -566,7 +570,7 @@
   "nm": {
    "T-4192": "Python in the app: smaller bundle, installable packages",
    "T-4185": "Launcher widgets open the apps a person chose",
-   "T-0623": "Fix the licence wording in Acknowledgements rows",
+   "T-5795": "The 1.0 showcase premades are built and in the Gallery",
    "T-4182": "A failing widget says so and can recover",
    "T-4181": "Widgets refresh on their own and by a tap",
    "T-4476": "Projects get one file, one ID and guarded outside code"
@@ -574,17 +578,18 @@
   "wk": {
    "T-4192": "Idris",
    "T-4185": "Idris",
-   "T-0623": "Idris",
+   "T-5795": "Pernille",
    "T-4182": "Idris",
    "T-4181": "Idris",
    "T-4476": "Idris",
+   "T-5859": "Maren",
    "T-5858": "Maren",
    "T-5857": "Maren",
    "T-5856": "Maren"
   }
  },
  "ln": {
-  "at": "2026-11-26T18:49:53Z",
+  "at": "2026-11-26T18:53:31Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -596,13 +601,13 @@
     "parked": 7
    },
    "m": {
-    "checking": 11,
-    "inline": 2,
+    "checking": 15,
+    "inline": 6,
     "conflicted": null,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 735
+    "parked": 738
    },
    "cur": [
     [
@@ -611,7 +616,7 @@
      ],
      "iPhone app tests",
      "MacBook",
-     11
+     15
     ]
    ],
    "ld": [
@@ -621,34 +626,35 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-26T18:49:25Z",
-    "ld": 7.2,
+    "at": "2026-11-26T18:53:37Z",
+    "ld": 9.11,
     "c": 8,
-    "sb": 0,
+    "sb": 1,
     "dk": [
-     25.8,
+     25.7,
      228.3
     ],
     "ss": [
      172.6,
      953.7
     ],
-    "sn": []
+    "sn": [
+     "iPhone 17e"
+    ]
    },
    "macbook": {
-    "at": "2026-11-26T18:41:26Z",
-    "ld": 24.88,
+    "at": "2026-11-26T18:53:05Z",
+    "ld": 24.27,
     "c": 12,
-    "sb": 4,
+    "sb": 3,
     "dk": [
-     385.0,
+     384.8,
      926.4
     ],
     "sn": [
      "itsthecompany-runner",
-     "itsthecompany-runner-2",
-     "itsthecompany-runner-3",
-     "itsthecompany-runner-4"
+     "itsthecompany-runner-4",
+     "itsthecompany-runner-5"
     ]
    }
   }
@@ -679,11 +685,11 @@
      "open": true
     }
    },
-   "at": "2026-11-26T18:50:05+00:00"
+   "at": "2026-11-26T18:53:31+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-26T18:50:05+00:00"
+   "at": "2026-11-26T18:53:31+00:00"
   }
  },
  "operators": [
@@ -735,10 +741,10 @@
   "main": 4,
   "lanes": 2,
   "total": 6,
-  "at": "1:50 PM",
+  "at": "1:53 PM",
   "why": "",
-  "at_iso": "2026-11-26T18:50:00+00:00",
+  "at_iso": "2026-11-26T18:53:00+00:00",
   "started": "12:21 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 4, started 12:21 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 1:50 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 4, started 12:21 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 1:53 PM ET</p></section>"
  }
 }

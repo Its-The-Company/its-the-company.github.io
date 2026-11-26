@@ -34,6 +34,32 @@ This session resumed the 11-25 <span title="An idea that reaches B or better but
 
 - `plan` printed 29 unit filters for T-4404, but the runner takes at most 20 `-only-testing` filters; more send the
   run to the Mac mini, unbuilt, and nothing runs. Split them (20 + 9).
+
+## Session 2026-11-26 03:xx ET (Idris, lane a3, from main f1ff0fdb7f)
+
+- T-4405 f3aacaeffc: judge hands carryOut a closure that sets `ended` under the lock and calls exit once. Two
+  mutants in Tests/mutants-t1852.json, both killed by hand (xc_mutants.py waits while the Mac mini is busy: exit 75).
+- T-4406 17440be024: c's hold now ends on a flag set after b's turn returns; <span title="A measured fact that holds a grade below a letter, however good the rest is.">caps</span> 3 s. Mutant (no closedWriters
+  check) killed.
+- T-0793 a0973c1126, slice 1 only: App/Bridge/BackgroundRefresh.swift (read placed widgets, submit or cancel through
+  a stub). Left on its line: BGTaskScheduler registration at launch, Info.plist keys (BGTaskSchedulerPermittedIdentifiers,
+  UIBackgroundModes fetch), the run through WidgetWriter's pass, the 5.1 batch bound, 5.3 expiry handler, 7.2 loop
+  breaker (status.json has no `background` field yet), `oom_guard`. Mutants 2 and 3 in Tests/mutants-t0793.json not run.
+- No commit: T-4280 and T-1882 (unchanged from above); T-2021 needs a forced-lane Simulator bench of 40+ extension
+  runs, not done; T-2044 not started as a commit: a drafted test (order of the gather naps against the runs instead
+  of the 1.4 s clock bound) is in scratch T-4181-idris/t2044.py, unbuilt.
+- The plan's build-for-testing runs the full unit suite on the MacBook (10-25 min with the queue); give a background
+  xc.sh a 3600000 ms timeout.
+
+## Settle and review, 2026-11-26 4:55 AM ET (Operator, lane a3)
+
+- Main's T-2836 (3a71fc12c1) added `demoted:` to judge's carryOut call; the branch was settled onto main 322b5ed0e8
+  keeping both. New hashes: T-4405 0c17be86bd, T-4406 68fcaad072, T-0793 slice 1 f1dce89d7d, note 3f6db36eee.
+- Open, first thing next session: the mutant "guard-exit-leaves-ended-unset" in Tests/mutants-t1852.json no longer
+  matches. Its find must end `        }, demoted: { $0.forEach(logReportDemotion) })\n` and its replace becomes
+  `        WidgetLaneGuard.carryOut(decision, store: store, exit: exit, demoted: { $0.forEach(logReportDemotion) })\n`.
+  Not committed: xc.sh refused for load (exit 75) for 20 minutes, so ExtensionLaneTests did not run at the settled tip.
+- Review: Pernille 7fb1686fd5, nothing blocking; the stale mutant is its one non-blocking finding.
 {% endraw %}
 
 </div>

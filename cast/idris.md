@@ -50,6 +50,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - Older lessons and dated logs: archive.md.
 - T-4188 (merge point) and T-5796 re-reviews still open; detail and xc.sh lessons in archive.md.
 - T-5797 11-26 (b2): T-5640 harness + limits doc (partial). Finding: the mask loop does NOT move on the 17e Sim; the timer text ('7903:54:00') tail-truncates in the widget, so the ones digit never draws (font itself reaches it). Head-truncation trial (aside/ in scratch T-5797-idris, unit 2438/0) shows a frame but still static. T-5662 files, T-5831 drafts <span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">parked</span> in scratch aside/. Lessons: macOS awk -v compares as strings (use a+0); the coordinator's argv holds 'run_host.py', so pgrep needs the Python path.
+- T-4181 11-26 (a3): T-4405 f3aacaeffc, T-4406 17440be024, T-0793 slice 1 (BackgroundRefresh, not wired). No commit: T-4280 (T-4494 phone proof), T-1882 (no fields.json writer), T-2021 (forced-lane bench). T-2044 nap-order test in scratch T-4181-idris/t2044.py. Lesson: give background xc.sh a 3600000 ms timeout; the MacBook queue waits 15+ min.
 {% endraw %}
 
 

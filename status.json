@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-26T05:00:59.469457+00:00",
+ "at": "2026-11-26T05:04:02.775406+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -92,7 +92,7 @@
    "task": "[build] T-4476 manifest review fixes",
    "model": "opus",
    "started": "2026-11-26T04:48:53.381Z",
-   "seconds": 726,
+   "seconds": 909,
    "finished": null
   },
   {
@@ -100,7 +100,7 @@
    "task": "[build] T-5795 weather chart screenshot",
    "model": "opus",
    "started": "2026-11-26T04:51:14.099Z",
-   "seconds": 585,
+   "seconds": 768,
    "finished": null
   }
  ],
@@ -147,19 +147,19 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 5.0,
+   "pct": 6.0,
    "resets_at": "2026-11-26T04:00:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-25T23:59:30.172766-05:00",
+   "read_at": "2026-11-26T00:02:14.292021-05:00",
    "source": "live",
-   "left": 95.0,
+   "left": 94.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 93.0,
    "resets_at": "2026-11-29T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-25T23:59:30.172766-05:00",
+   "read_at": "2026-11-26T00:02:14.292021-05:00",
    "source": "live",
    "left": 7.0,
    "left_words": "of your weekly allowance left"
@@ -171,7 +171,7 @@
    "read_at": "2026-11-25T23:52:18.234271-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-25T23:59:30.172766-05:00"
+  "read_at": "2026-11-26T00:02:14.292021-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -191,7 +191,7 @@
   "week_pct": 132.95,
   "usage_pct": 58.8,
   "work_pct": 98.5,
-  "read_at": "2026-11-26T05:01:00+00:00",
+  "read_at": "2026-11-26T05:04:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -277,7 +277,7 @@
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-26T00:01:00-05:00",
+  "at": "2026-11-26T00:04:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -288,8 +288,8 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 8 (held: too few lands in 3 hours to judge a raise)",
-  "n": 8,
+  "why": "Double Spread: past the week's halfway point with room left, so twice the even pace until the limit or the reset; the machine allows 8 (at its floor: load 18.1 a core is over 10)",
+  "n": 1,
   "at": "2026-11-25T23:19:24.355533-05:00"
  },
  "lanes": [
@@ -528,9 +528,9 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-26T05:00:44Z",
+  "at": "2026-11-26T05:04:02Z",
   "s": {
-   "T-5796": [
+   "T-5795": [
     "mergetest",
     "iPhone tests on the MacBook",
     null
@@ -540,23 +540,15 @@
     "on main 9:52 PM ET",
     1795661561000,
     "Idris"
-   ],
-   "T-5795": [
-    "merged",
-    "on main 9:35 PM ET",
-    1795660500000,
-    "Pernille"
    ]
   },
   "nm": {
-   "T-5796": "Internal TestFlight builds carry the test widgets",
-   "T-4476": "Projects get one file, one ID and guarded outside code",
-   "T-5795": "The 1.0 showcase premades are built and in the Gallery"
+   "T-5795": "The 1.0 showcase premades are built and in the Gallery",
+   "T-4476": "Projects get one file, one ID and guarded outside code"
   },
   "wk": {
-   "T-5796": "Idris",
-   "T-4476": "Idris",
    "T-5795": "Pernille",
+   "T-4476": "Idris",
    "T-5630": "Idris",
    "T-4639": "Idris",
    "T-1444": "Idris",
@@ -566,7 +558,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-26T05:00:44Z",
+  "at": "2026-11-26T05:04:02Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -580,11 +572,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 27,
+    "conflicted": 30,
     "failed": null,
-    "held": 27,
+    "held": 30,
     "retry": null,
-    "parked": 27
+    "parked": 30
    },
    "cur": [],
    "ld": [
@@ -594,8 +586,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-26T05:00:20Z",
-    "ld": 12.53,
+    "at": "2026-11-26T05:03:17Z",
+    "ld": 18.81,
     "c": 8,
     "sb": 1,
     "dk": [
@@ -611,16 +603,16 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-26T04:57:45Z",
-    "ld": 8.61,
+    "at": "2026-11-26T05:02:20Z",
+    "ld": 5.39,
     "c": 12,
     "sb": 3,
     "dk": [
-     414.0,
+     413.7,
      926.4
     ],
     "sn": [
-     "itsthecompany-runner",
+     "itsthecompany-runner-2",
      "itsthecompany-runner-3",
      "itsthecompany-runner-4"
     ]
@@ -653,11 +645,11 @@
      "open": true
     }
    },
-   "at": "2026-11-26T05:00:59+00:00"
+   "at": "2026-11-26T05:04:02+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-26T05:00:59+00:00"
+   "at": "2026-11-26T05:03:55+00:00"
   }
  },
  "operators": [
@@ -668,7 +660,7 @@
    "m": "opus",
    "e": "high",
    "t": "Work session",
-   "at": "2026-11-25T23:57:57-05:00"
+   "at": "2026-11-26T00:02:40-05:00"
   },
   {
    "w": "Operator",
@@ -708,8 +700,8 @@
   }
  ],
  "reply": {
-  "sent": "2026-11-26T04:55:38Z",
-  "seconds": 137.0
+  "sent": "2026-11-26T05:01:40Z",
+  "seconds": 59.0
  },
  "inbox": [],
  "trimmed": [
@@ -727,10 +719,10 @@
   "main": 2,
   "lanes": 4,
   "total": 6,
-  "at": "12:01 AM",
+  "at": "12:04 AM",
   "why": "",
-  "at_iso": "2026-11-26T05:01:00+00:00",
+  "at_iso": "2026-11-26T05:04:00+00:00",
   "started": "11:19 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 2, started 11:19 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 12:01 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 2, started 11:19 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 12:04 AM ET</p></section>"
  }
 }

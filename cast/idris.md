@@ -45,7 +45,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-4183 11-26: settled on main ddbc366df6 in scratch T-4183-idris/wt (detached): 9bec59faa1 T-5035, 044d065078 T-4646, 01f654162e T-5012, 7be984c672 T-4641 slice 1. Host 4408/0, unit 2528/0 J-...0953-...5213d3, UI 24/0 J-...1006-...28a810, landcheck green. Open: land; T-4641 L3 (Maren's words), onRunQueue. Lesson: lane_settle refuses a detached copy; cherry-pick onto main by hand.
 
 - T-4302 11-25 (b): own-widget save test in WidgetStepTimeoutTests (test only). Open: review, land.
-- T-5891 11-26: slice 2 in scratch T-4476-idris/wt: 54bfaf4efe Run, 81b0ab437b send, a5de96c51c sendProject; tests 1ba6497a07, 85d1a3bedf (OutsideProjectRunPathsTests, each red with its guard off). Unit 2532/0/2, host 4408/0. Open: Pernille review, land, page (Maren). Lesson: openProjectFile counts the text as sent; edit before saveNow in a send test.
+- T-5891 11-26: slice 2 in scratch T-4476-idris/wt: 54bfaf4efe Run, 81b0ab437b send, a5de96c51c sendProject; tests 1ba6497a07, 85d1a3bedf (OutsideProjectRunPathsTests, each red with its guard off). Unit 2532/0/2, host 4408/0. Review fixes 11-26: 53d401bff6 M1 (restore keeps mark, by name when stale; delete drops it), bc9345fe90 M2 (Run refusal above bridge), 69f05d35e6 page; unit 2535/0/2 J-...1150-...136aef, 3/3 mutants red. Open: Pernille re-review, land, Maren's page; lows (Make it mine send, Save a copy unmarked) on page. Lesson: openProjectFile counts the text as sent; edit before saveNow in a send test.
 
 ## Lessons
 - Older lessons and dated logs: archive.md.

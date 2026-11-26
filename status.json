@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-26T22:03:01.020045+00:00",
+ "at": "2026-11-26T22:06:11.497318+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -82,22 +82,30 @@
    "task": "[build] T-5894 premade page test order",
    "model": "opus",
    "started": "2026-11-26T20:25:04.046Z",
-   "seconds": 5876,
+   "seconds": 6067,
    "finished": null,
    "effort": "high"
   },
+  {
+   "name": "pernille",
+   "task": "[review] T-4476 T-5907 clash fix",
+   "model": "opus",
+   "started": "2026-11-26T22:04:32.857Z",
+   "seconds": 98,
+   "finished": null,
+   "effort": "high"
+  }
+ ],
+ "who": "Idris, Pernille",
+ "recent": [
   {
    "name": "idris",
    "task": "[build] T-4476 Make It Mine clash",
    "model": "opus",
    "started": "2026-11-26T21:27:23.726Z",
-   "seconds": 2137,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Idris x2",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-26T22:04:05.225000+00:00"
+  },
   {
    "name": "pernille",
    "task": "[review] T-5529 record the pass",
@@ -121,14 +129,6 @@
    "started": "2026-11-26T21:54:23.225Z",
    "seconds": null,
    "finished": "2026-11-26T21:56:12.274000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-4190 Ask to Buy order",
-   "model": "opus",
-   "started": "2026-11-26T19:36:17.023Z",
-   "seconds": null,
-   "finished": "2026-11-26T21:53:59.581000+00:00"
   }
  ],
  "queue": {
@@ -139,19 +139,19 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 4.0,
+   "pct": 5.0,
    "resets_at": "2026-11-26T21:30:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-26T17:02:05.342520-05:00",
+   "read_at": "2026-11-26T17:06:11.653907-05:00",
    "source": "live",
-   "left": 96.0,
+   "left": 95.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 8.0,
    "resets_at": "2026-11-29T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-26T17:02:05.342520-05:00",
+   "read_at": "2026-11-26T17:06:11.653907-05:00",
    "source": "live",
    "left": 92.0,
    "left_words": "of your weekly allowance left"
@@ -163,7 +163,7 @@
    "read_at": "2026-11-26T16:46:57.619113-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-26T17:02:05.342520-05:00"
+  "read_at": "2026-11-26T17:06:11.653907-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -183,7 +183,7 @@
   "week_pct": 455.55,
   "usage_pct": 62.0,
   "work_pct": 98.8,
-  "read_at": "2026-11-26T22:03:00+00:00",
+  "read_at": "2026-11-26T22:06:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -226,14 +226,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-26T16:59:00-05:00",
+   "at": "2026-11-26T17:06:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-26T17:03:00-05:00",
+  "at": "2026-11-26T17:06:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -260,11 +260,12 @@
   },
   {
    "name": "Pernille",
-   "state": "next",
-   "task": "Pernille, P1, continuation of T-2609: after...",
-   "model": null,
-   "since": null,
-   "next": []
+   "state": "running",
+   "task": "[review] T-4476 T-5907 clash fix",
+   "model": "opus",
+   "since": "2026-11-26T22:04:32.857Z",
+   "next": [],
+   "effort": "high"
   },
   {
    "name": "Ines",
@@ -312,12 +313,12 @@
     "task": "T-5894"
    },
    {
-    "w": "Idris",
-    "k": "build",
+    "w": "Pernille",
+    "k": "review",
     "t": "Projects get one file, one ID and guarded outside code",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-26T21:27:23.726Z",
+    "at": "2026-11-26T22:04:32.857Z",
     "o": "c",
     "task": "T-4476"
    }
@@ -487,11 +488,16 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-26T22:03:01Z",
+  "at": "2026-11-26T22:05:59Z",
   "s": {
    "T-4190": [
     "mergetest",
     "iPhone tests on the MacBook",
+    null
+   ],
+   "T-5894": [
+    "testing",
+    "Mac Mini \u00b7 test",
     null
    ],
    "T-4476": [
@@ -509,11 +515,13 @@
   },
   "nm": {
    "T-4190": "Settings and Pro: buy, restore, themes",
+   "T-5894": "Make the Sun page link test pass in any order",
    "T-4476": "Projects get one file, one ID and guarded outside code",
    "T-4182": "A failing widget says so and can recover"
   },
   "wk": {
    "T-4190": "Idris",
+   "T-5894": "Idris",
    "T-4476": "Idris",
    "T-4182": "Idris",
    "T-5283": "Idris",
@@ -531,7 +539,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-26T22:03:01Z",
+  "at": "2026-11-26T22:05:59Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -549,7 +557,7 @@
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 928
+    "parked": 931
    },
    "cur": [],
    "ld": [
@@ -559,12 +567,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-26T22:03:04Z",
-    "ld": 17.87,
+    "at": "2026-11-26T22:05:10Z",
+    "ld": 16.88,
     "c": 8,
     "sb": 1,
     "dk": [
-     22.3,
+     22.1,
      228.3
     ],
     "ss": [
@@ -616,11 +624,11 @@
      "open": true
     }
    },
-   "at": "2026-11-26T22:03:01+00:00"
+   "at": "2026-11-26T22:06:11+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-26T22:03:01+00:00"
+   "at": "2026-11-26T22:05:59+00:00"
   }
  },
  "operators": [
@@ -664,10 +672,10 @@
   "main": 2,
   "lanes": 1,
   "total": 3,
-  "at": "5:03 PM",
+  "at": "5:06 PM",
   "why": "",
-  "at_iso": "2026-11-26T22:03:00+00:00",
+  "at_iso": "2026-11-26T22:06:00+00:00",
   "started": "12:21 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 12:21 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 5:03 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 12:21 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 5:06 PM ET</p></section>"
  }
 }

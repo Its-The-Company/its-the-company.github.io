@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-26T10:34:35.205494+00:00",
+ "at": "2026-11-26T10:37:40.764079+00:00",
  "session": {
   "active": true,
   "kind": "morning",
@@ -149,7 +149,7 @@
   "week_pct": 141.43,
   "usage_pct": 59.8,
   "work_pct": 98.6,
-  "read_at": "2026-11-26T10:34:00+00:00",
+  "read_at": "2026-11-26T10:37:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -235,7 +235,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-26T05:34:00-05:00",
+  "at": "2026-11-26T05:37:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -437,8 +437,13 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-26T10:34:35Z",
+  "at": "2026-11-26T10:37:21Z",
   "s": {
+   "T-3291": [
+    "mergetest",
+    "iPhone tests on the MacBook",
+    null
+   ],
    "T-4182": [
     "merged",
     "on main 1:59 AM ET",
@@ -447,14 +452,16 @@
    ]
   },
   "nm": {
+   "T-3291": "Mark failed widgets with the red badge",
    "T-4182": "A failing widget says so and can recover"
   },
   "wk": {
+   "T-3291": "Idris",
    "T-4182": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-26T10:34:35Z",
+  "at": "2026-11-26T10:37:21Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -472,7 +479,7 @@
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 239
+    "parked": 242
    },
    "cur": [],
    "ld": [
@@ -482,12 +489,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-26T10:33:56Z",
-    "ld": 5.23,
+    "at": "2026-11-26T10:37:22Z",
+    "ld": 4.33,
     "c": 8,
     "sb": 1,
     "dk": [
-     31.0,
+     31.2,
      228.3
     ],
     "ss": [
@@ -499,8 +506,8 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-26T10:24:34Z",
-    "ld": 1.16,
+    "at": "2026-11-26T10:34:48Z",
+    "ld": 0.25,
     "c": 12,
     "sb": 0,
     "dk": [
@@ -537,11 +544,11 @@
      "open": true
     }
    },
-   "at": "2026-11-26T10:34:35+00:00"
+   "at": "2026-11-26T10:37:40+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-26T10:34:35+00:00"
+   "at": "2026-11-26T10:37:28+00:00"
   }
  },
  "operators": [
@@ -606,10 +613,10 @@
   "main": 0,
   "lanes": 4,
   "total": 4,
-  "at": "5:34 AM",
+  "at": "5:37 AM",
   "why": "",
-  "at_iso": "2026-11-26T10:34:00+00:00",
+  "at_iso": "2026-11-26T10:37:00+00:00",
   "started": "5:30 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 0, started 5:30 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 5:34 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 0, started 5:30 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 5:37 AM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-26T20:39:43.651299+00:00",
+ "at": "2026-11-26T20:42:48.313938+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -82,7 +82,7 @@
    "task": "[build] T-4190 Ask to Buy order",
    "model": "opus",
    "started": "2026-11-26T19:36:17.023Z",
-   "seconds": 3806,
+   "seconds": 3991,
    "finished": null,
    "effort": "high"
   },
@@ -91,22 +91,21 @@
    "task": "[build] T-5894 premade page test order",
    "model": "opus",
    "started": "2026-11-26T20:25:04.046Z",
-   "seconds": 879,
+   "seconds": 1064,
    "finished": null,
    "effort": "high"
-  },
+  }
+ ],
+ "who": "Idris x2",
+ "recent": [
   {
    "name": "pernille",
    "task": "[review] T-5795 T-5001",
    "model": "opus",
    "started": "2026-11-26T20:35:26.242Z",
-   "seconds": 257,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Idris x2, Pernille",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-26T20:41:28.476000+00:00"
+  },
   {
    "name": "pernille",
    "task": "[review] T-4476 tap guard",
@@ -130,14 +129,6 @@
    "started": "2026-11-26T19:33:37.966Z",
    "seconds": null,
    "finished": "2026-11-26T20:33:51.188000+00:00"
-  },
-  {
-   "name": "pernille",
-   "task": "[review] T-5795 T-5290",
-   "model": "opus",
-   "started": "2026-11-26T20:11:04.047Z",
-   "seconds": null,
-   "finished": "2026-11-26T20:14:31.640000+00:00"
   }
  ],
  "queue": {
@@ -148,31 +139,31 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 39.0,
-   "resets_at": "2026-11-26T16:30:00-05:00",
+   "pct": 40.0,
+   "resets_at": "2026-11-26T21:29:59.518178+00:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-26T15:35:46.520476-05:00",
-   "source": "live",
-   "left": 61.0,
+   "read_at": "2026-11-26T15:40:19.122987-05:00",
+   "source": "usage",
+   "left": 60.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 5.0,
-   "resets_at": "2026-11-29T02:00:00-05:00",
+   "pct": 6.0,
+   "resets_at": "2026-11-29T06:59:59.518201+00:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-26T15:35:46.520476-05:00",
-   "source": "live",
-   "left": 95.0,
+   "read_at": "2026-11-26T15:40:19.122987-05:00",
+   "source": "usage",
+   "left": 94.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 0.0,
    "resets_at": "2026-11-29T07:00:00+00:00",
    "used_words": "of the Fable weekly allowance used",
-   "read_at": "2026-11-26T15:08:20.042987-05:00",
+   "read_at": "2026-11-26T15:40:19.122987-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-26T15:35:46.520476-05:00"
+  "read_at": "2026-11-26T15:40:19.122987-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -192,7 +183,7 @@
   "week_pct": 167.48,
   "usage_pct": 62.0,
   "work_pct": 98.8,
-  "read_at": "2026-11-26T20:39:00+00:00",
+  "read_at": "2026-11-26T20:42:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -238,7 +229,7 @@
   }
  ],
  "disk": {
-  "free_gb": 23,
+  "free_gb": 21,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -247,14 +238,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-26T15:33:00-05:00",
+   "at": "2026-11-26T15:40:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-26T15:39:00-05:00",
+  "at": "2026-11-26T15:42:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -265,8 +256,8 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Locked in for today by an Investor: full speed until midnight; the 5-hour window allows 4; the machine allows 8 (held: too few lands in 3 hours to judge a raise)",
-  "n": 4,
+  "why": "Locked in for today by an Investor: full speed until midnight; the 5-hour window allows 3; the machine allows 8 (held: too few lands in 3 hours to judge a raise)",
+  "n": 3,
   "at": "2026-11-26T12:21:25.895161-05:00"
  },
  "lanes": [
@@ -281,12 +272,11 @@
   },
   {
    "name": "Pernille",
-   "state": "running",
-   "task": "[review] T-5795 T-5001",
-   "model": "opus",
-   "since": "2026-11-26T20:35:26.242Z",
-   "next": [],
-   "effort": "high"
+   "state": "next",
+   "task": "Pernille, P1, continuation of T-2609: after...",
+   "model": null,
+   "since": null,
+   "next": []
   },
   {
    "name": "Ines",
@@ -342,16 +332,6 @@
     "at": "2026-11-26T20:25:04.046Z",
     "o": "c",
     "task": "T-5894"
-   },
-   {
-    "w": "Pernille",
-    "k": "review",
-    "t": "The 1.0 showcase premades are built and in the Gallery",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-26T20:35:26.242Z",
-    "o": "c",
-    "task": "T-5795"
    }
   ],
   "src": "plan",
@@ -519,7 +499,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-26T20:39:35Z",
+  "at": "2026-11-26T20:42:48Z",
   "s": {
    "T-4192": [
     "mergetest",
@@ -555,7 +535,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-26T20:39:35Z",
+  "at": "2026-11-26T20:42:48Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -573,7 +553,7 @@
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 844
+    "parked": 848
    },
    "cur": [],
    "ld": [
@@ -583,12 +563,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-26T20:39:37Z",
-    "ld": 1.19,
+    "at": "2026-11-26T20:42:49Z",
+    "ld": 1.69,
     "c": 8,
     "sb": 1,
     "dk": [
-     20.8,
+     21.1,
      228.3
     ],
     "ss": [
@@ -642,11 +622,11 @@
      "open": true
     }
    },
-   "at": "2026-11-26T20:39:43+00:00"
+   "at": "2026-11-26T20:42:48+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-26T20:39:43+00:00"
+   "at": "2026-11-26T20:42:36+00:00"
   }
  },
  "operators": [
@@ -696,13 +676,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 3,
+  "main": 2,
   "lanes": 2,
-  "total": 5,
-  "at": "3:39 PM",
+  "total": 4,
+  "at": "3:42 PM",
   "why": "",
-  "at_iso": "2026-11-26T20:39:00+00:00",
+  "at_iso": "2026-11-26T20:42:00+00:00",
   "started": "12:21 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 3, started 12:21 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 3:39 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 2, started 12:21 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 3:42 PM ET</p></section>"
  }
 }

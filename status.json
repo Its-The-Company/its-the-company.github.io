@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-26T17:48:50.481877+00:00",
+ "at": "2026-11-26T17:53:19.895173+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -91,7 +91,7 @@
    "task": "[build] T-4476 tap actions manifest",
    "model": "opus",
    "started": "2026-11-26T17:25:36.297Z",
-   "seconds": 1394,
+   "seconds": 1663,
    "finished": null,
    "effort": "high"
   },
@@ -100,7 +100,7 @@
    "task": "[build] T-4190 Settings Pro themes",
    "model": "opus",
    "started": "2026-11-26T17:25:48.856Z",
-   "seconds": 1381,
+   "seconds": 1651,
    "finished": null,
    "effort": "high"
   },
@@ -109,22 +109,31 @@
    "task": "[build] T-5795 Sky premade finish",
    "model": "opus",
    "started": "2026-11-26T17:25:59.464Z",
-   "seconds": 1371,
+   "seconds": 1640,
    "finished": null,
    "effort": "high"
   },
+  {
+   "name": "ines",
+   "task": "[review] T-5856",
+   "model": "opus",
+   "started": "2026-11-26T17:51:14.946Z",
+   "seconds": 124,
+   "finished": null,
+   "effort": "high"
+  }
+ ],
+ "who": "Idris x2, Pernille, Ines",
+ "recent": [
   {
    "name": "maren",
    "task": "[build] T-5856 watercolor new look",
    "model": "opus",
    "started": "2026-11-26T17:29:24.493Z",
-   "seconds": 1165,
-   "finished": null,
-   "effort": "high"
+   "seconds": null,
+   "finished": "2026-11-26T17:50:59.505000+00:00"
   }
  ],
- "who": "Idris x2, Pernille, Maren",
- "recent": [],
  "queue": {
   "runnable": [],
   "blocked": [],
@@ -133,19 +142,19 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 10.0,
+   "pct": 11.0,
    "resets_at": "2026-11-26T16:30:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-26T12:46:13.370276-05:00",
+   "read_at": "2026-11-26T12:52:47.080717-05:00",
    "source": "live",
-   "left": 90.0,
+   "left": 89.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 1.0,
    "resets_at": "2026-11-29T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-26T12:46:13.370276-05:00",
+   "read_at": "2026-11-26T12:52:47.080717-05:00",
    "source": "live",
    "left": 99.0,
    "left_words": "of your weekly allowance left"
@@ -157,7 +166,7 @@
    "read_at": "2026-11-26T12:21:25.548317-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-26T12:46:13.370276-05:00"
+  "read_at": "2026-11-26T12:52:47.080717-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -177,7 +186,7 @@
   "week_pct": 161.94,
   "usage_pct": 62.0,
   "work_pct": 98.8,
-  "read_at": "2026-11-26T17:50:00+00:00",
+  "read_at": "2026-11-26T17:53:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -212,6 +221,18 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-26T11:44:06-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
+   },
+   {
+    "lane": "b2",
+    "task": "T-4182",
+    "w": "Idris",
+    "k": "build",
+    "t": "A failing widget says so and can recover",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-26T12:51:09-05:00",
     "n": "Jeremy",
     "src": "plan-b"
    }
@@ -251,7 +272,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-26T12:50:00-05:00",
+  "at": "2026-11-26T12:53:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -262,7 +283,7 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 8 (held: too few lands in 3 hours to judge a raise)",
+  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 8 (at its floor: load 11.6 a core is over 10)",
   "n": 8,
   "at": "2026-11-26T12:21:25.895161-05:00"
  },
@@ -286,26 +307,26 @@
    "effort": "high"
   },
   {
-   "name": "Maren",
+   "name": "Ines",
    "state": "running",
-   "task": "[build] T-5856 watercolor new look",
+   "task": "[review] T-5856",
    "model": "opus",
-   "since": "2026-11-26T17:29:24.493Z",
+   "since": "2026-11-26T17:51:14.946Z",
    "next": [],
    "effort": "high"
-  },
-  {
-   "name": "Ines",
-   "state": "next",
-   "task": "Ines, P2, from T-5470...",
-   "model": null,
-   "since": null,
-   "next": []
   },
   {
    "name": "Wrenna",
    "state": "next",
    "task": "Read developer.apple.com \"Keeping a widget up to date\",...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
+   "name": "Maren",
+   "state": "next",
+   "task": "Maren, P2, from T-0306 (Simulator check of the L4...",
    "model": null,
    "since": null,
    "next": []
@@ -352,12 +373,12 @@
     "task": "T-5795"
    },
    {
-    "w": "Maren",
-    "k": "build",
+    "w": "Ines",
+    "k": "review",
     "t": "Draw the watercolor direction for the new look",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-26T17:29:24.493Z",
+    "at": "2026-11-26T17:51:14.946Z",
     "o": "c",
     "task": "T-5856"
    }
@@ -501,8 +522,56 @@
    "ok"
   ]
  ],
+ "stg": {
+  "at": "2026-11-26T17:53:19Z",
+  "s": {
+   "T-5891": [
+    "mergetest",
+    "iPhone tests on the MacBook",
+    null
+   ],
+   "T-4182": [
+    "merged",
+    "on main 11:16 AM ET",
+    1795709790000,
+    "Idris"
+   ],
+   "T-4185": [
+    "merged",
+    "on main 9:49 AM ET",
+    1795704592000,
+    "Idris"
+   ],
+   "T-4181": [
+    "merged",
+    "on main 9:34 AM ET",
+    1795703656000,
+    "Operator"
+   ],
+   "T-4476": [
+    "merged",
+    "on main 2:06 AM ET",
+    1795676782000,
+    "Operator"
+   ]
+  },
+  "nm": {
+   "T-5891": "Ask before code from an imported file first runs",
+   "T-4182": "A failing widget says so and can recover",
+   "T-4185": "Launcher widgets open the apps a person chose",
+   "T-4181": "Widgets refresh on their own and by a tap",
+   "T-4476": "Projects get one file, one ID and guarded outside code"
+  },
+  "wk": {
+   "T-5891": "Idris",
+   "T-4182": "Idris",
+   "T-4185": "Idris",
+   "T-4181": "Idris",
+   "T-4476": "Idris"
+  }
+ },
  "ln": {
-  "at": "2026-11-26T17:48:50Z",
+  "at": "2026-11-26T17:53:19Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -520,7 +589,7 @@
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 674
+    "parked": 678
    },
    "cur": [],
    "ld": [
@@ -530,30 +599,32 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-26T17:49:20Z",
-    "ld": 14.76,
+    "at": "2026-11-26T17:52:57Z",
+    "ld": 11.26,
     "c": 8,
+    "sb": 0,
     "dk": [
-     21.5,
+     23.8,
      228.3
     ],
     "ss": [
      172.6,
      953.7
-    ]
+    ],
+    "sn": []
    },
    "macbook": {
-    "at": "2026-11-26T17:44:56Z",
-    "ld": 15.13,
+    "at": "2026-11-26T17:52:32Z",
+    "ld": 8.89,
     "c": 12,
     "sb": 2,
     "dk": [
-     388.8,
+     388.3,
      926.4
     ],
     "sn": [
-     "itsthecompany-runner",
-     "itsthecompany-runner-2"
+     "itsthecompany-runner-2",
+     "itsthecompany-runner-3"
     ]
    }
   }
@@ -566,7 +637,7 @@
    "parked": 7,
    "open": true,
    "mq": false,
-   "counted": "2026-11-26T17:42:31+00:00",
+   "counted": "2026-11-26T17:52:35+00:00",
    "by": {
     "app": {
      "n": 6,
@@ -584,11 +655,11 @@
      "open": true
     }
    },
-   "at": "2026-11-26T17:48:50+00:00"
+   "at": "2026-11-26T17:53:19+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-26T17:48:50+00:00"
+   "at": "2026-11-26T17:53:14+00:00"
   }
  },
  "operators": [
@@ -627,6 +698,15 @@
    "e": "high",
    "t": "Work session \u2013 1 task",
    "at": "2026-11-26T11:44:06-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Jeremy's Account",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session \u2013 1 task",
+   "at": "2026-11-26T12:51:09-05:00"
   }
  ],
  "reply": {
@@ -645,12 +725,12 @@
  ],
  "agents_now": {
   "main": 4,
-  "lanes": 3,
-  "total": 7,
-  "at": "12:50 PM",
+  "lanes": 4,
+  "total": 8,
+  "at": "12:53 PM",
   "why": "",
-  "at_iso": "2026-11-26T17:50:00+00:00",
+  "at_iso": "2026-11-26T17:53:00+00:00",
   "started": "12:21 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 4, started 12:21 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 12:50 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>8</b> agents running now</p><p class=\"an-sub\">Main session 4, started 12:21 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 12:53 PM ET</p></section>"
  }
 }

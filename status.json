@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-26T05:59:07.270088+00:00",
+ "at": "2026-11-26T06:02:07.982580+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -92,7 +92,7 @@
    "task": "[build] T-5795 weather chart screenshot",
    "model": "opus",
    "started": "2026-11-26T04:51:14.099Z",
-   "seconds": 4073,
+   "seconds": 4253,
    "finished": null
   }
  ],
@@ -183,7 +183,7 @@
   "week_pct": 132.95,
   "usage_pct": 58.8,
   "work_pct": 98.5,
-  "read_at": "2026-11-26T05:59:00+00:00",
+  "read_at": "2026-11-26T06:02:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -269,7 +269,7 @@
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-26T00:59:00-05:00",
+  "at": "2026-11-26T01:02:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -511,7 +511,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-26T05:58:46Z",
+  "at": "2026-11-26T06:02:07Z",
   "s": {
    "T-4652": [
     "mergetest",
@@ -519,9 +519,10 @@
     null
    ],
    "T-5795": [
-    "testing",
-    "Mac Mini \u00b7 test",
-    null
+    "merged",
+    "on main 9:35 PM ET",
+    1795660500000,
+    "Pernille"
    ]
   },
   "nm": {
@@ -541,7 +542,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-26T05:58:46Z",
+  "at": "2026-11-26T06:02:07Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -555,11 +556,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 1417,
+    "conflicted": 1420,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 738
+    "parked": 741
    },
    "cur": [],
    "ld": [
@@ -569,34 +570,33 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-26T05:58:24Z",
-    "ld": 7.63,
+    "at": "2026-11-26T06:02:08Z",
+    "ld": 7.83,
     "c": 8,
-    "sb": 1,
+    "sb": 0,
     "dk": [
-     22.8,
+     24.4,
      228.3
     ],
     "ss": [
      172.6,
      953.7
     ],
-    "sn": [
-     "iPhone 17e"
-    ]
+    "sn": []
    },
    "macbook": {
-    "at": "2026-11-26T05:54:23Z",
-    "ld": 33.36,
+    "at": "2026-11-26T05:58:39Z",
+    "ld": 30.68,
     "c": 12,
-    "sb": 3,
+    "sb": 4,
     "dk": [
-     412.2,
+     409.2,
      926.4
     ],
     "sn": [
      "itsthecompany-runner",
      "itsthecompany-runner-2",
+     "itsthecompany-runner-3",
      "itsthecompany-runner-4"
     ]
    }
@@ -628,11 +628,11 @@
      "open": true
     }
    },
-   "at": "2026-11-26T05:59:07+00:00"
+   "at": "2026-11-26T06:02:07+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-26T05:59:07+00:00"
+   "at": "2026-11-26T06:01:56+00:00"
   }
  },
  "operators": [
@@ -703,10 +703,10 @@
   "main": 1,
   "lanes": 4,
   "total": 5,
-  "at": "12:59 AM",
+  "at": "1:02 AM",
   "why": "",
-  "at_iso": "2026-11-26T05:59:00+00:00",
+  "at_iso": "2026-11-26T06:02:00+00:00",
   "started": "11:19 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 1, started 11:19 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 12:59 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 1, started 11:19 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 1:02 AM ET</p></section>"
  }
 }

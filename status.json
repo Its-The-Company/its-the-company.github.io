@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-26T23:36:24.435309+00:00",
+ "at": "2026-11-26T23:39:26.707781+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -8,8 +8,8 @@
   "coord": {
    "active": true,
    "started": 1795341309,
-   "restarts": 17,
-   "last_handoff": 1795713519
+   "restarts": 18,
+   "last_handoff": 1795736348
   },
   "flow": [
    {
@@ -69,19 +69,10 @@
  "workers": [
   {
    "name": "idris",
-   "task": "[build] T-5894 premade page test order",
-   "model": "opus",
-   "started": "2026-11-26T20:25:04.046Z",
-   "seconds": 11480,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "idris",
    "task": "[build] T-4476 format 2 manifest",
    "model": "opus",
    "started": "2026-11-26T22:42:59.531Z",
-   "seconds": 3204,
+   "seconds": 3387,
    "finished": null,
    "effort": "high"
   },
@@ -90,7 +81,7 @@
    "task": "[design] T-4190 Pro screen words",
    "model": "opus",
    "started": "2026-11-26T23:09:35.413Z",
-   "seconds": 1609,
+   "seconds": 1791,
    "finished": null,
    "effort": "high"
   },
@@ -99,13 +90,21 @@
    "task": "[tools] T-5917 release landed claims",
    "model": "opus",
    "started": "2026-11-26T23:16:21.475Z",
-   "seconds": 1202,
+   "seconds": 1385,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Idris x2, Maren, Odalys",
+ "who": "Idris, Maren, Odalys",
  "recent": [
+  {
+   "name": "idris",
+   "task": "[build] T-5894 premade page test order",
+   "model": "opus",
+   "started": "2026-11-26T20:25:04.046Z",
+   "seconds": null,
+   "finished": "2026-11-26T23:38:55.630000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[review] T-5909 record the pass",
@@ -129,37 +128,29 @@
    "started": "2026-11-26T22:53:45.754Z",
    "seconds": null,
    "finished": "2026-11-26T22:55:08.464000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-4190 restore test T-5909",
-   "model": "opus",
-   "started": "2026-11-26T22:07:40.488Z",
-   "seconds": null,
-   "finished": "2026-11-26T22:53:29.927000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 308,
+  "runnable_count": 309,
   "blocked_count": 0
  },
  "meter": {
   "five_hour": {
-   "pct": 20.0,
+   "pct": 21.0,
    "resets_at": "2026-11-26T21:30:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-26T18:31:38.401325-05:00",
+   "read_at": "2026-11-26T18:38:13.152231-05:00",
    "source": "live",
-   "left": 80.0,
+   "left": 79.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 10.0,
    "resets_at": "2026-11-29T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-26T18:31:38.401325-05:00",
+   "read_at": "2026-11-26T18:38:13.152231-05:00",
    "source": "live",
    "left": 90.0,
    "left_words": "of your weekly allowance left"
@@ -171,7 +162,7 @@
    "read_at": "2026-11-26T18:25:26.365989-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-26T18:31:38.401325-05:00"
+  "read_at": "2026-11-26T18:38:13.152231-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -191,7 +182,7 @@
   "week_pct": 404.94,
   "usage_pct": 62.0,
   "work_pct": 98.8,
-  "read_at": "2026-11-26T23:36:00+00:00",
+  "read_at": "2026-11-26T23:39:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -246,14 +237,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-26T18:31:00-05:00",
+   "at": "2026-11-26T18:38:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-26T18:36:00-05:00",
+  "at": "2026-11-26T18:39:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -272,9 +263,9 @@
   {
    "name": "Idris",
    "state": "running",
-   "task": "[build] T-5894 premade page test order",
+   "task": "[build] T-4476 format 2 manifest",
    "model": "opus",
-   "since": "2026-11-26T20:25:04.046Z",
+   "since": "2026-11-26T22:42:59.531Z",
    "next": [],
    "effort": "high"
   },
@@ -323,16 +314,6 @@
  ],
  "tasks": {
   "run": [
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "Make the Sun page link test pass in any order",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-26T20:25:04.046Z",
-    "o": "c",
-    "task": "T-5894"
-   },
    {
     "w": "Idris",
     "k": "build",
@@ -455,7 +436,7 @@
    }
   ],
   "count": {
-   "next": 308,
+   "next": 309,
    "wait": 0,
    "blocked": 0,
    "you": 0
@@ -529,9 +510,9 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-26T23:36:02Z",
+  "at": "2026-11-26T23:39:15Z",
   "s": {
-   "T-5894": [
+   "T-4715": [
     "mergetest",
     "iPhone tests on the MacBook",
     null
@@ -562,14 +543,14 @@
    ]
   },
   "nm": {
-   "T-5894": "Make the Sun page link test pass in any order",
+   "T-4715": "Put the new Pro screen words into the app",
    "T-5917": "Release a lane's claim when its work merges",
    "T-4476": "Projects get one file, one ID and guarded outside code",
    "T-4190": "Settings and Pro: buy, restore, themes",
    "T-4185": "Launcher widgets open the apps a person chose"
   },
   "wk": {
-   "T-5894": "Idris",
+   "T-4715": "Maren",
    "T-5917": "Odalys",
    "T-4476": "Idris",
    "T-4190": "Idris",
@@ -589,7 +570,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-26T23:36:02Z",
+  "at": "2026-11-26T23:39:15Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -607,7 +588,7 @@
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1021
+    "parked": 1024
    },
    "cur": [],
    "ld": [
@@ -617,12 +598,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-26T23:35:17Z",
-    "ld": 1.57,
+    "at": "2026-11-26T23:38:54Z",
+    "ld": 1.23,
     "c": 8,
     "sb": 0,
     "dk": [
-     23.3,
+     23.5,
      228.3
     ],
     "ss": [
@@ -632,19 +613,18 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-26T23:33:45Z",
-    "ld": 53.35,
+    "at": "2026-11-26T23:38:42Z",
+    "ld": 39.66,
     "c": 12,
-    "sb": 4,
+    "sb": 3,
     "dk": [
-     370.5,
+     371.0,
      926.4
     ],
     "sn": [
      "itsthecompany-runner",
-     "itsthecompany-runner-2",
      "itsthecompany-runner-3",
-     "itsthecompany-runner-5"
+     "itsthecompany-runner-4"
     ]
    }
   }
@@ -675,11 +655,11 @@
      "open": true
     }
    },
-   "at": "2026-11-26T23:36:24+00:00"
+   "at": "2026-11-26T23:39:26+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-26T23:36:24+00:00"
+   "at": "2026-11-26T23:39:26+00:00"
   }
  },
  "operators": [
@@ -689,8 +669,8 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Inbox \u2013 Evan's 6:35 PM Message on GitHub",
-   "at": "2026-11-26T18:36:02-05:00"
+   "t": "Work session",
+   "at": "2026-11-26T18:37:54-05:00"
   },
   {
    "w": "Operator",
@@ -712,21 +692,10 @@
   }
  ],
  "reply": {
-  "sent": "2026-11-26T23:24:47Z",
-  "seconds": 76.0
+  "sent": "2026-11-26T23:36:49Z",
+  "seconds": 1.0
  },
- "inbox": [
-  {
-   "id": "c7205676859",
-   "state": "received",
-   "position": 1,
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "Proceed with this recommendation"
-  }
- ],
+ "inbox": [],
  "trimmed": [
   "lane_next",
   "queue_text",
@@ -740,13 +709,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 4,
+  "main": 3,
   "lanes": 2,
-  "total": 6,
-  "at": "6:36 PM",
+  "total": 5,
+  "at": "6:39 PM",
   "why": "",
-  "at_iso": "2026-11-26T23:36:00+00:00",
+  "at_iso": "2026-11-26T23:39:00+00:00",
   "started": "12:21 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 4, started 12:21 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 6:36 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 3, started 12:21 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 6:39 PM ET</p></section>"
  }
 }

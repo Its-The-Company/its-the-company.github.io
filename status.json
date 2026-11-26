@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-26T04:23:09.055397+00:00",
+ "at": "2026-11-26T04:27:17.532738+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -92,15 +92,7 @@
    "task": "[review] T-5796",
    "model": "opus",
    "started": "2026-11-26T04:21:58.828Z",
-   "seconds": 70,
-   "finished": null
-  },
-  {
-   "name": "maren",
-   "task": "[review] T-4191",
-   "model": "opus",
-   "started": "2026-11-26T04:22:05.230Z",
-   "seconds": 63,
+   "seconds": 318,
    "finished": null
   },
   {
@@ -108,12 +100,37 @@
    "task": "[build] T-4476 manifest decision record",
    "model": "opus",
    "started": "2026-11-26T04:22:41.811Z",
-   "seconds": 27,
+   "seconds": 275,
+   "finished": null
+  },
+  {
+   "name": "idris",
+   "task": "[build] T-4191 one record commit",
+   "model": "opus",
+   "started": "2026-11-26T04:27:12.355Z",
+   "seconds": 5,
    "finished": null
   }
  ],
- "who": "Odalys, Maren, Idris",
- "recent": [],
+ "who": "Odalys, Idris x2",
+ "recent": [
+  {
+   "name": "idris",
+   "task": "[build] T-4191 record fixes",
+   "model": "opus",
+   "started": "2026-11-26T04:24:45.207Z",
+   "seconds": null,
+   "finished": "2026-11-26T04:25:13.062000+00:00"
+  },
+  {
+   "name": "maren",
+   "task": "[review] T-4191",
+   "model": "opus",
+   "started": "2026-11-26T04:22:05.230Z",
+   "seconds": null,
+   "finished": "2026-11-26T04:24:08.993000+00:00"
+  }
+ ],
  "queue": {
   "runnable": [],
   "blocked": [],
@@ -122,19 +139,19 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 0.0,
+   "pct": 1.0,
    "resets_at": "2026-11-26T04:00:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-25T23:21:30.950196-05:00",
+   "read_at": "2026-11-25T23:24:41.378126-05:00",
    "source": "live",
-   "left": 100.0,
+   "left": 99.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 92.0,
    "resets_at": "2026-11-29T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-25T23:21:30.950196-05:00",
+   "read_at": "2026-11-25T23:24:41.378126-05:00",
    "source": "live",
    "left": 8.0,
    "left_words": "of your weekly allowance left"
@@ -146,7 +163,7 @@
    "read_at": "2026-11-25T23:19:23.870409-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-25T23:21:30.950196-05:00"
+  "read_at": "2026-11-25T23:24:41.378126-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -166,7 +183,7 @@
   "week_pct": 131.52,
   "usage_pct": 58.8,
   "work_pct": 98.5,
-  "read_at": "2026-11-26T04:24:00+00:00",
+  "read_at": "2026-11-26T04:27:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -224,7 +241,7 @@
   }
  ],
  "disk": {
-  "free_gb": 24,
+  "free_gb": 26,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -233,14 +250,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-25T23:14:00-05:00",
+   "at": "2026-11-25T23:24:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-25T23:24:00-05:00",
+  "at": "2026-11-25T23:27:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -251,7 +268,7 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 8 (at its floor: load 35.5 a core is over 10)",
+  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 8 (at its floor: load 36.5 a core is over 10)",
   "n": 8,
   "at": "2026-11-25T23:19:24.355533-05:00"
  },
@@ -262,14 +279,6 @@
    "task": "[review] T-5796",
    "model": "opus",
    "since": "2026-11-26T04:21:58.828Z",
-   "next": []
-  },
-  {
-   "name": "Maren",
-   "state": "running",
-   "task": "[review] T-4191",
-   "model": "opus",
-   "since": "2026-11-26T04:22:05.230Z",
    "next": []
   },
   {
@@ -303,6 +312,14 @@
    "model": null,
    "since": null,
    "next": []
+  },
+  {
+   "name": "Maren",
+   "state": "next",
+   "task": "Maren, P1, from T-2296 review M2...",
+   "model": null,
+   "since": null,
+   "next": []
   }
  ],
  "tasks": {
@@ -317,15 +334,6 @@
     "task": "T-5796"
    },
    {
-    "w": "Maren",
-    "k": "review",
-    "t": "VoiceOver and large text work on every screen",
-    "m": "opus",
-    "at": "2026-11-26T04:22:05.230Z",
-    "o": "c",
-    "task": "T-4191"
-   },
-   {
     "w": "Idris",
     "k": "build",
     "t": "Projects get one file, one ID and guarded outside code",
@@ -333,6 +341,15 @@
     "at": "2026-11-26T04:22:41.811Z",
     "o": "c",
     "task": "T-4476"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "VoiceOver and large text work on every screen",
+    "m": "opus",
+    "at": "2026-11-26T04:27:12.355Z",
+    "o": "c",
+    "task": "T-4191"
    }
   ],
   "src": "plan",
@@ -475,7 +492,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-26T04:23:09Z",
+  "at": "2026-11-26T04:26:36Z",
   "s": {
    "T-4404": [
     "mergetest",
@@ -499,25 +516,25 @@
   }
  },
  "ln": {
-  "at": "2026-11-26T04:23:09Z",
+  "at": "2026-11-26T04:26:36Z",
   "mq": {
    "n": {
     "checking": 0,
     "inline": 0,
     "conflicted": 1,
     "failed": 0,
-    "held": 1,
+    "held": 0,
     "retry": 0,
-    "parked": 4
+    "parked": 3
    },
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 1321,
+    "conflicted": 1325,
     "failed": null,
-    "held": 2881,
+    "held": null,
     "retry": null,
-    "parked": 1321
+    "parked": 1325
    },
    "cur": [],
    "ld": [
@@ -527,12 +544,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-26T04:24:01Z",
-    "ld": 35.92,
+    "at": "2026-11-26T04:27:03Z",
+    "ld": 38.56,
     "c": 8,
     "sb": 1,
     "dk": [
-     24.7,
+     24.5,
      228.3
     ],
     "ss": [
@@ -585,11 +602,11 @@
      "open": true
     }
    },
-   "at": "2026-11-26T04:23:09+00:00"
+   "at": "2026-11-26T04:27:17+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-26T04:23:09+00:00"
+   "at": "2026-11-26T04:26:36+00:00"
   }
  },
  "operators": [
@@ -606,6 +623,8 @@
    "w": "Operator",
    "a": "Evan's Account",
    "sr": 1,
+   "m": "opus",
+   "e": "high",
    "t": "Work session \u2013 1 task",
    "at": "2026-11-25T22:10:00-05:00"
   },
@@ -613,6 +632,8 @@
    "w": "Operator",
    "a": "Evan's Account",
    "sr": 1,
+   "m": "opus",
+   "e": "high",
    "t": "Work session \u2013 1 task",
    "at": "2026-11-25T22:13:04-05:00"
   },
@@ -620,6 +641,8 @@
    "w": "Operator",
    "a": "Jeremy's Account",
    "sr": 1,
+   "m": "opus",
+   "e": "high",
    "t": "Work session \u2013 1 task",
    "at": "2026-11-25T23:19:18-05:00"
   }
@@ -642,10 +665,10 @@
   "main": 3,
   "lanes": 3,
   "total": 6,
-  "at": "11:24 PM",
+  "at": "11:27 PM",
   "why": "",
-  "at_iso": "2026-11-26T04:24:00+00:00",
+  "at_iso": "2026-11-26T04:27:00+00:00",
   "started": "11:19 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 3, started 11:19 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 11:24 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 3, started 11:19 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 11:27 PM ET</p></section>"
  }
 }

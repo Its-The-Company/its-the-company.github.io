@@ -37,7 +37,11 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 - T-5815 11-25: settled on main 12177bf00c (main since +7983a347, records only), scratch T-5815-idris/wt detached at 83694fa549 (review record carried; +1 test commit: Settings tests scroll to About). Unit 2315/0 (J-…0624-2), Settings 13/0 (J-…0644), Shell green in J-…0624-1. Open: Pernille re-review of 83694fa549, land; iPad windows + LauncherWindows gallery-tab not run. Lesson: one runner job over the whole unit target plus UI classes hits the 20-min limit; split them.
 
+- T-5850 11-25 (b2): e036cda87c, 2cbd111d64, 7d2635baa4 (second widget extension, location <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> Swift side; unit 2345/0, host 2076/0, 5/5 mutants). Left: Simulator run (item 5), Odalys review, bundle ID, Maren draft words, lane flag off in Release (ops/plans/T-5850-handoff.md). Lessons: xcodegen again after each new test file; a <span title="A test written in advance. If it fires, we drop the idea.">kill</span> of another process was refused by the classifier (rule 14), so never kill host runs, wait.
+
 - T-5819 11-24: c7e24affaa in scratch T-4477-idris/wt (Builder one-way strict, lock (b), D 12.0 slot; release would be 07-12, not moved). Open: Pernille review, land. Lesson: check a scratch copy's HEAD against main first (it was 697 behind).
+
+- T-4185 11-25 (a2): T-4638 041a7f6bc9 partial (scan 1.6-2.0 s -> 37-62 ms; tap-to-frame 206-540 ms is the editor's open, done-when needs a decision). T-5314/T-4576 patches drafted in scratch T-4185-idris/; T-4906: move the plist test to an app-target file; T-5283 needs an iPad Simulator (none on the Mac mini). Lesson: Simulator xc.sh waits for 1- and 5-min load < 40; background commands die at 10 min, so poll a log file.
 
 ## Lessons
 - Older lessons and dated logs: archive.md.

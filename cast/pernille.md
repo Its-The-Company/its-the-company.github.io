@@ -39,8 +39,6 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 ## Lessons
 
-- T-5537 11-21 review of T-4442 at 18acc6b6 (pywidget/docs/reviews/t4442-18acc6b6-pernille.md): PASS with findings, 3 Lows, no board lines. Lessons: run a pywidget host test as `python3 pywidget/tests/widgets/test_x.py` (not -m unittest); a red-first copy via git archive needs pywidget/tests and docs/design too; mutate each new branch, not only the one the mutant names.
-- T-5538 11-21 review of T-4593 at 18acc6b6 (pywidget/docs/reviews/t4593-18acc6b6-pernille.md): FAIL, H1 new cases pasted over a SKIP branch's early return left 54 asserts dead while green; M1 copied part versions; T-5545, T-5546 (Odalys). Lessons: compare a test's PASS count with its parent's (git archive); a stated "was N before" needs a rerun.
 - T-4807 slice 12 11-22: Links "needs" the ten open lines (queued in outbox), so the umbrella waits off the menu. Lesson: a queued link can be checked before it lands with board_links set_field + index + held_by on a copy of main's board text.
 - T-4184 re-review 11-23 of 4dda1e2329 (SentStale FIFO fix): pass. Lesson: in a <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> worktree xc.sh queues tests until landing; swiftc a Shared/*.swift file with a probe main.swift in /tmp for Darwin checks.
 - Report 59 11-23 (morning, author+operator): report_check has no --sent mode; requests_close sweep closes the new copy too; site_shots ~8 min (jekyll), run it in background.
@@ -50,6 +48,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-5508 11-24 review of T-5047 at 50a2c3dd (t5047-50a2c3dd-pernille.md): FAIL H1, widget id holds the token and own-widget cards draw the id in capitals, so a Vision "contains" passes a card. Lessons: when a gate drops, check what the remaining gate accepts; continueAfterFailure=false means later checks never ran on a red; board_tick add may join a note to another line.
 - T-5508 re-review 11-24 of T-5047 at da4c8d07 (t5047-da4c8d07-pernille.md): PASS, M1 docs "shares no letter" false for prefix token_; T-5803 boarded. merge.sh review refused on others' uncommitted site-check pngs. Lesson: UITests-only checks never run in a landing (land_xc runs PyWidgetTests).
 - T-4186 review 11-24 of T-4257 at b076f0ea (t4257-b076f0ea-pernille.md): PASS, M1 lens eats taps, M2 lens clipped at bottom, M3 labels over pinned gutter on sideways scroll. Lesson: an overlay sibling of Runestone: check pinned gutter, no bottom overscroll, and interaction on non-controls.
+- T-4192 session 11-25 (personal/b): T-0631, T-5435, T-5463 committed; T-0866 catch-up slice. Lessons: a build-for-testing via xc.sh runs the whole unit target on the MacBook (~9 min); PreviewQueueTests guards who names tree.json, so route through RunResultSink; phase_cache.py edits re-key every RealPhase record (host run ~15 min).
 {% endraw %}
 
 

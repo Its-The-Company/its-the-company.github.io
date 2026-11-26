@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-26T19:04:00.760262+00:00",
+ "at": "2026-11-26T19:07:04.518231+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -82,7 +82,7 @@
    "task": "[build] T-4190 Settings Pro themes",
    "model": "opus",
    "started": "2026-11-26T17:25:48.856Z",
-   "seconds": 5891,
+   "seconds": 6075,
    "finished": null,
    "effort": "high"
   },
@@ -91,7 +91,7 @@
    "task": "[build] T-5795 Sky premade finish",
    "model": "opus",
    "started": "2026-11-26T17:25:59.464Z",
-   "seconds": 5881,
+   "seconds": 6065,
    "finished": null,
    "effort": "high"
   },
@@ -100,7 +100,7 @@
    "task": "[build] T-4476 import screen fix",
    "model": "opus",
    "started": "2026-11-26T18:45:56.171Z",
-   "seconds": 1084,
+   "seconds": 1268,
    "finished": null,
    "effort": "high"
   },
@@ -109,7 +109,7 @@
    "task": "[build] T-5860 live wash page",
    "model": "opus",
    "started": "2026-11-26T18:52:35.005Z",
-   "seconds": 685,
+   "seconds": 869,
    "finished": null,
    "effort": "high"
   }
@@ -201,7 +201,7 @@
   "week_pct": 161.94,
   "usage_pct": 62.0,
   "work_pct": 98.8,
-  "read_at": "2026-11-26T19:04:00+00:00",
+  "read_at": "2026-11-26T19:07:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -263,7 +263,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-26T14:04:00-05:00",
+  "at": "2026-11-26T14:07:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -274,7 +274,7 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 8 (at its floor: load 31.1 a core is over 10)",
+  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 8 (at its floor: load 17.4 a core is over 10)",
   "n": 8,
   "at": "2026-11-26T12:21:25.895161-05:00"
  },
@@ -535,21 +535,16 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-26T19:03:49Z",
+  "at": "2026-11-26T19:07:04Z",
   "s": {
    "T-4185": [
     "mergetest",
     "Xcode checks on the MacBook, 1st to merge",
-    1795719529074
+    1795719484518
    ],
-   "T-5891": [
+   "T-4802": [
     "mergetest",
     "iPhone tests on the MacBook",
-    null
-   ],
-   "T-5795": [
-    "testing",
-    "Mac Mini \u00b7 test",
     null
    ],
    "T-4182": [
@@ -563,29 +558,19 @@
     "on main 9:34 AM ET",
     1795703656000,
     "Operator"
-   ],
-   "T-4476": [
-    "merged",
-    "on main 2:06 AM ET",
-    1795676782000,
-    "Operator"
    ]
   },
   "nm": {
    "T-4185": "Launcher widgets open the apps a person chose",
-   "T-5891": "Ask before code from an imported file first runs",
-   "T-5795": "The 1.0 showcase premades are built and in the Gallery",
+   "T-4802": "Correct the widget comment on runs that never started",
    "T-4182": "A failing widget says so and can recover",
-   "T-4181": "Widgets refresh on their own and by a tap",
-   "T-4476": "Projects get one file, one ID and guarded outside code"
+   "T-4181": "Widgets refresh on their own and by a tap"
   },
   "wk": {
    "T-4185": "Idris",
-   "T-5891": "Idris",
-   "T-5795": "Pernille",
+   "T-4802": "Idris",
    "T-4182": "Idris",
    "T-4181": "Idris",
-   "T-4476": "Idris",
    "T-0458": "Pernille",
    "T-5859": "Maren",
    "T-5858": "Maren",
@@ -594,7 +579,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-26T19:03:49Z",
+  "at": "2026-11-26T19:07:04Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -606,13 +591,13 @@
     "parked": 7
    },
    "m": {
-    "checking": 5,
+    "checking": 9,
     "inline": null,
     "conflicted": null,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 749
+    "parked": 752
    },
    "cur": [
     [
@@ -621,7 +606,7 @@
      ],
      "iPhone app tests",
      "MacBook",
-     5
+     9
     ]
    ],
    "ld": [
@@ -631,12 +616,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-26T19:03:01Z",
-    "ld": 23.66,
+    "at": "2026-11-26T19:07:05Z",
+    "ld": 10.87,
     "c": 8,
     "sb": 0,
     "dk": [
-     25.3,
+     23.2,
      228.3
     ],
     "ss": [
@@ -646,19 +631,20 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-26T18:59:01Z",
-    "ld": 26.78,
+    "at": "2026-11-26T19:05:17Z",
+    "ld": 51.25,
     "c": 12,
-    "sb": 4,
+    "sb": 5,
     "dk": [
-     383.4,
+     382.0,
      926.4
     ],
     "sn": [
      "itsthecompany-runner",
      "itsthecompany-runner-2",
      "itsthecompany-runner-3",
-     "itsthecompany-runner-5"
+     "itsthecompany-runner-4",
+     "itsthecompany-runner-6"
     ]
    }
   }
@@ -671,7 +657,7 @@
    "parked": 7,
    "open": true,
    "mq": false,
-   "counted": "2026-11-26T18:54:59+00:00",
+   "counted": "2026-11-26T19:05:09+00:00",
    "by": {
     "app": {
      "n": 7,
@@ -689,11 +675,11 @@
      "open": true
     }
    },
-   "at": "2026-11-26T19:04:00+00:00"
+   "at": "2026-11-26T19:07:04+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-26T19:03:55+00:00"
+   "at": "2026-11-26T19:06:58+00:00"
   }
  },
  "operators": [
@@ -745,10 +731,10 @@
   "main": 4,
   "lanes": 2,
   "total": 6,
-  "at": "2:04 PM",
+  "at": "2:07 PM",
   "why": "",
-  "at_iso": "2026-11-26T19:04:00+00:00",
+  "at_iso": "2026-11-26T19:07:00+00:00",
   "started": "12:21 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 4, started 12:21 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 2:04 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 4, started 12:21 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 2:07 PM ET</p></section>"
  }
 }

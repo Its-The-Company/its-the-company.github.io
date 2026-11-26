@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-26T18:53:31.618700+00:00",
+ "at": "2026-11-26T18:57:48.535171+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -82,7 +82,7 @@
    "task": "[build] T-4190 Settings Pro themes",
    "model": "opus",
    "started": "2026-11-26T17:25:48.856Z",
-   "seconds": 5262,
+   "seconds": 5519,
    "finished": null,
    "effort": "high"
   },
@@ -91,7 +91,7 @@
    "task": "[build] T-5795 Sky premade finish",
    "model": "opus",
    "started": "2026-11-26T17:25:59.464Z",
-   "seconds": 5252,
+   "seconds": 5509,
    "finished": null,
    "effort": "high"
   },
@@ -100,7 +100,7 @@
    "task": "[build] T-4476 import screen fix",
    "model": "opus",
    "started": "2026-11-26T18:45:56.171Z",
-   "seconds": 455,
+   "seconds": 712,
    "finished": null,
    "effort": "high"
   },
@@ -109,7 +109,7 @@
    "task": "[build] T-5860 live wash page",
    "model": "opus",
    "started": "2026-11-26T18:52:35.005Z",
-   "seconds": 56,
+   "seconds": 313,
    "finished": null,
    "effort": "high"
   }
@@ -152,24 +152,24 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 317,
+  "runnable_count": 316,
   "blocked_count": 0
  },
  "meter": {
   "five_hour": {
-   "pct": 23.0,
+   "pct": 24.0,
    "resets_at": "2026-11-26T16:30:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-26T13:49:19.491961-05:00",
+   "read_at": "2026-11-26T13:54:31.119192-05:00",
    "source": "live",
-   "left": 77.0,
+   "left": 76.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 3.0,
    "resets_at": "2026-11-29T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-26T13:49:19.491961-05:00",
+   "read_at": "2026-11-26T13:54:31.119192-05:00",
    "source": "live",
    "left": 97.0,
    "left_words": "of your weekly allowance left"
@@ -181,7 +181,7 @@
    "read_at": "2026-11-26T13:26:13.458806-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-26T13:49:19.491961-05:00"
+  "read_at": "2026-11-26T13:54:31.119192-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -201,7 +201,7 @@
   "week_pct": 161.94,
   "usage_pct": 62.0,
   "work_pct": 98.8,
-  "read_at": "2026-11-26T18:53:00+00:00",
+  "read_at": "2026-11-26T18:58:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -256,14 +256,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-26T13:49:00-05:00",
+   "at": "2026-11-26T13:55:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-26T13:53:00-05:00",
+  "at": "2026-11-26T13:58:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -274,7 +274,7 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 8 (held: too few lands in 3 hours to judge a raise)",
+  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 8 (at its floor: load 13.2 a core is over 10)",
   "n": 8,
   "at": "2026-11-26T12:21:25.895161-05:00"
  },
@@ -449,6 +449,11 @@
   ],
   "done": [
    {
+    "w": "Pernille",
+    "t": "The tip splitter example now asks for the bill, tip and number of people in proper iPhone pop-up...",
+    "at": "2026-11-26T13:54:00-05:00"
+   },
+   {
     "w": "Maren",
     "t": "The fourth look for the app is drawn, light and dark: a strict four-column grid, very large...",
     "at": "2026-11-26T13:52:00-05:00"
@@ -457,22 +462,21 @@
     "w": "Maren",
     "t": "The third look for the app is drawn: screens printed as if by a two-ink risograph press, teal...",
     "at": "2026-11-26T13:26:00-05:00"
-   },
-   {
-    "w": "Maren",
-    "t": "The second new look for the app is drawn: every main screen in light and dark, styled as a...",
-    "at": "2026-11-26T13:06:00-05:00"
    }
   ],
   "count": {
-   "next": 317,
+   "next": 316,
    "wait": 0,
    "blocked": 0,
    "you": 0
   },
   "fin": {
-   "n": 4,
+   "n": 5,
    "rows": [
+    [
+     "T-0458",
+     "Make the tip splitter use..."
+    ],
     [
      "T-5859",
      "Draw the Swiss editorial..."
@@ -531,21 +535,16 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-26T18:53:31Z",
+  "at": "2026-11-26T18:57:48Z",
   "s": {
-   "T-4192": [
-    "mergetest",
-    "Xcode checks on the MacBook, 1st to merge",
-    1795718311618
-   ],
    "T-4185": [
     "mergeq",
-    "2nd to merge",
-    1795718851618
+    "1st to merge",
+    1795718868535
    ],
-   "T-5795": [
-    "testing",
-    "Mac Mini \u00b7 test",
+   "T-5891": [
+    "mergetest",
+    "iPhone tests on the MacBook",
     null
    ],
    "T-4182": [
@@ -568,20 +567,19 @@
    ]
   },
   "nm": {
-   "T-4192": "Python in the app: smaller bundle, installable packages",
    "T-4185": "Launcher widgets open the apps a person chose",
-   "T-5795": "The 1.0 showcase premades are built and in the Gallery",
+   "T-5891": "Ask before code from an imported file first runs",
    "T-4182": "A failing widget says so and can recover",
    "T-4181": "Widgets refresh on their own and by a tap",
    "T-4476": "Projects get one file, one ID and guarded outside code"
   },
   "wk": {
-   "T-4192": "Idris",
    "T-4185": "Idris",
-   "T-5795": "Pernille",
+   "T-5891": "Idris",
    "T-4182": "Idris",
    "T-4181": "Idris",
    "T-4476": "Idris",
+   "T-0458": "Pernille",
    "T-5859": "Maren",
    "T-5858": "Maren",
    "T-5857": "Maren",
@@ -589,10 +587,10 @@
   }
  },
  "ln": {
-  "at": "2026-11-26T18:53:31Z",
+  "at": "2026-11-26T18:57:48Z",
   "mq": {
    "n": {
-    "checking": 1,
+    "checking": 0,
     "inline": 1,
     "conflicted": 0,
     "failed": 0,
@@ -601,24 +599,15 @@
     "parked": 7
    },
    "m": {
-    "checking": 15,
-    "inline": 6,
+    "checking": null,
+    "inline": 10,
     "conflicted": null,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 738
+    "parked": 743
    },
-   "cur": [
-    [
-     [
-      "T-4192"
-     ],
-     "iPhone app tests",
-     "MacBook",
-     15
-    ]
-   ],
+   "cur": [],
    "ld": [
     0,
     null
@@ -626,34 +615,29 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-26T18:53:37Z",
-    "ld": 9.11,
+    "at": "2026-11-26T18:57:37Z",
+    "ld": 26.12,
     "c": 8,
-    "sb": 1,
     "dk": [
-     25.7,
+     25.6,
      228.3
     ],
     "ss": [
      172.6,
      953.7
-    ],
-    "sn": [
-     "iPhone 17e"
     ]
    },
    "macbook": {
-    "at": "2026-11-26T18:53:05Z",
-    "ld": 24.27,
+    "at": "2026-11-26T18:56:40Z",
+    "ld": 25.78,
     "c": 12,
-    "sb": 3,
+    "sb": 2,
     "dk": [
-     384.8,
+     385.2,
      926.4
     ],
     "sn": [
-     "itsthecompany-runner",
-     "itsthecompany-runner-4",
+     "itsthecompany-runner-2",
      "itsthecompany-runner-5"
     ]
    }
@@ -667,15 +651,15 @@
    "parked": 7,
    "open": true,
    "mq": false,
-   "counted": "2026-11-26T18:44:39+00:00",
+   "counted": "2026-11-26T18:54:59+00:00",
    "by": {
     "app": {
-     "n": 6,
+     "n": 7,
      "limit": 20,
      "open": true
     },
     "other": {
-     "n": 3,
+     "n": 2,
      "limit": 20,
      "open": true
     },
@@ -685,11 +669,11 @@
      "open": true
     }
    },
-   "at": "2026-11-26T18:53:31+00:00"
+   "at": "2026-11-26T18:57:48+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-26T18:53:31+00:00"
+   "at": "2026-11-26T18:57:48+00:00"
   }
  },
  "operators": [
@@ -706,8 +690,6 @@
    "w": "Operator",
    "a": "Evan's Account",
    "sr": 1,
-   "m": "opus",
-   "e": "high",
    "t": "Work session \u2013 1 task",
    "at": "2026-11-26T12:08:04-05:00"
   },
@@ -715,8 +697,6 @@
    "w": "Operator",
    "a": "Jeremy's Account",
    "sr": 1,
-   "m": "opus",
-   "e": "high",
    "t": "Work session \u2013 1 task",
    "at": "2026-11-26T12:51:09-05:00"
   }
@@ -741,10 +721,10 @@
   "main": 4,
   "lanes": 2,
   "total": 6,
-  "at": "1:53 PM",
+  "at": "1:58 PM",
   "why": "",
-  "at_iso": "2026-11-26T18:53:00+00:00",
+  "at_iso": "2026-11-26T18:58:00+00:00",
   "started": "12:21 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 4, started 12:21 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 1:53 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 4, started 12:21 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 1:58 PM ET</p></section>"
  }
 }

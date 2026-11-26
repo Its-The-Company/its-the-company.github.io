@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-26T05:37:48.431223+00:00",
+ "at": "2026-11-26T05:40:48.484138+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -92,7 +92,7 @@
    "task": "[build] T-5795 weather chart screenshot",
    "model": "opus",
    "started": "2026-11-26T04:51:14.099Z",
-   "seconds": 2794,
+   "seconds": 2974,
    "finished": null
   }
  ],
@@ -183,7 +183,7 @@
   "week_pct": 132.95,
   "usage_pct": 58.8,
   "work_pct": 98.5,
-  "read_at": "2026-11-26T05:37:00+00:00",
+  "read_at": "2026-11-26T05:40:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -262,14 +262,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-26T00:32:00-05:00",
+   "at": "2026-11-26T00:39:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-26T00:37:00-05:00",
+  "at": "2026-11-26T00:40:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -511,9 +511,9 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-26T05:37:42Z",
+  "at": "2026-11-26T05:40:30Z",
   "s": {
-   "T-5893": [
+   "T-4404": [
     "mergetest",
     "iPhone tests on the MacBook",
     null
@@ -526,12 +526,13 @@
    ]
   },
   "nm": {
-   "T-5893": "Give the location widget an ID Apple accepts",
+   "T-4404": "Stop late widget reloads writing as the extension ends",
    "T-5795": "The 1.0 showcase premades are built and in the Gallery"
   },
   "wk": {
-   "T-5893": "Idris",
+   "T-4404": "Idris",
    "T-5795": "Pernille",
+   "T-5893": "Idris",
    "T-5630": "Idris",
    "T-4639": "Idris",
    "T-1444": "Idris",
@@ -541,7 +542,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-26T05:37:42Z",
+  "at": "2026-11-26T05:40:30Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -555,11 +556,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 1396,
+    "conflicted": 1398,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 717
+    "parked": 719
    },
    "cur": [],
    "ld": [
@@ -569,8 +570,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-26T05:37:16Z",
-    "ld": 1.37,
+    "at": "2026-11-26T05:40:12Z",
+    "ld": 1.07,
     "c": 8,
     "sb": 1,
     "dk": [
@@ -586,20 +587,19 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-26T05:35:31Z",
-    "ld": 29.79,
+    "at": "2026-11-26T05:39:08Z",
+    "ld": 33.97,
     "c": 12,
-    "sb": 5,
+    "sb": 4,
     "dk": [
-     410.3,
+     411.0,
      926.4
     ],
     "sn": [
-     "itsthecompany-runner",
      "itsthecompany-runner-2",
      "itsthecompany-runner-3",
-     "itsthecompany-runner-4",
-     "itsthecompany-runner-5"
+     "itsthecompany-runner-5",
+     "itsthecompany-runner-6"
     ]
    }
   }
@@ -630,11 +630,11 @@
      "open": true
     }
    },
-   "at": "2026-11-26T05:37:48+00:00"
+   "at": "2026-11-26T05:40:48+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-26T05:37:48+00:00"
+   "at": "2026-11-26T05:40:48+00:00"
   }
  },
  "operators": [
@@ -705,10 +705,10 @@
   "main": 1,
   "lanes": 4,
   "total": 5,
-  "at": "12:37 AM",
+  "at": "12:40 AM",
   "why": "",
-  "at_iso": "2026-11-26T05:37:00+00:00",
+  "at_iso": "2026-11-26T05:40:00+00:00",
   "started": "11:19 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 1, started 11:19 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 12:37 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 1, started 11:19 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 12:40 AM ET</p></section>"
  }
 }

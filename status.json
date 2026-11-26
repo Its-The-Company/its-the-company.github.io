@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-26T04:42:33.738233+00:00",
+ "at": "2026-11-26T04:45:36.022882+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -88,24 +88,40 @@
  },
  "workers": [
   {
-   "name": "idris",
-   "task": "[build] T-4476 manifest decision record",
+   "name": "pernille",
+   "task": "[review] T-4476",
    "model": "opus",
-   "started": "2026-11-26T04:22:41.811Z",
-   "seconds": 1191,
+   "started": "2026-11-26T04:44:31.904Z",
+   "seconds": 64,
    "finished": null
   },
+  {
+   "name": "odalys",
+   "task": "[review] T-5796 fourth read",
+   "model": "opus",
+   "started": "2026-11-26T04:45:35.994Z",
+   "seconds": 0,
+   "finished": null
+  }
+ ],
+ "who": "Pernille, Odalys",
+ "recent": [
   {
    "name": "idris",
    "task": "[build] T-5796 two review Lows",
    "model": "opus",
    "started": "2026-11-26T04:28:07.673Z",
-   "seconds": 866,
-   "finished": null
-  }
- ],
- "who": "Idris x2",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-26T04:45:15.142000+00:00"
+  },
+  {
+   "name": "idris",
+   "task": "[build] T-4476 manifest decision record",
+   "model": "opus",
+   "started": "2026-11-26T04:22:41.811Z",
+   "seconds": null,
+   "finished": "2026-11-26T04:44:13.857000+00:00"
+  },
   {
    "name": "maren",
    "task": "[review] T-4191 records pass",
@@ -121,28 +137,12 @@
    "started": "2026-11-26T04:21:58.828Z",
    "seconds": null,
    "finished": "2026-11-26T04:27:42.550000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-4191 one record commit",
-   "model": "opus",
-   "started": "2026-11-26T04:27:12.355Z",
-   "seconds": null,
-   "finished": "2026-11-26T04:27:39.392000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-4191 record fixes",
-   "model": "opus",
-   "started": "2026-11-26T04:24:45.207Z",
-   "seconds": null,
-   "finished": "2026-11-26T04:25:13.062000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 342,
+  "runnable_count": 343,
   "blocked_count": 0
  },
  "meter": {
@@ -191,7 +191,7 @@
   "week_pct": 131.52,
   "usage_pct": 58.8,
   "work_pct": 98.5,
-  "read_at": "2026-11-26T04:42:00+00:00",
+  "read_at": "2026-11-26T04:45:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -202,6 +202,18 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-25T23:34:52-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a2",
+    "task": "T-4182",
+    "w": "Idris",
+    "k": "build",
+    "t": "A failing widget says so and can recover",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-25T23:44:28-05:00",
     "n": "Evan",
     "src": "plan-a"
    }
@@ -241,7 +253,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-25T23:42:00-05:00",
+  "at": "2026-11-25T23:45:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -258,17 +270,25 @@
  },
  "lanes": [
   {
-   "name": "Idris",
+   "name": "Pernille",
    "state": "running",
-   "task": "[build] T-4476 manifest decision record",
+   "task": "[review] T-4476",
    "model": "opus",
-   "since": "2026-11-26T04:22:41.811Z",
+   "since": "2026-11-26T04:44:31.904Z",
    "next": []
   },
   {
-   "name": "Pernille",
+   "name": "Odalys",
+   "state": "running",
+   "task": "[review] T-5796 fourth read",
+   "model": "opus",
+   "since": "2026-11-26T04:45:35.994Z",
+   "next": []
+  },
+  {
+   "name": "Idris",
    "state": "next",
-   "task": "Pernille, P1, continuation of T-2609: after...",
+   "task": "Idris, P2, from T-1282 F1 (not before TestFlight):...",
    "model": null,
    "since": null,
    "next": []
@@ -277,14 +297,6 @@
    "name": "Ines",
    "state": "next",
    "task": "Ines, P2, from T-5470...",
-   "model": null,
-   "since": null,
-   "next": []
-  },
-  {
-   "name": "Odalys",
-   "state": "next",
-   "task": "Odalys, P3, from T-4468: the city list...",
    "model": null,
    "since": null,
    "next": []
@@ -309,20 +321,20 @@
  "tasks": {
   "run": [
    {
-    "w": "Idris",
-    "k": "build",
+    "w": "Pernille",
+    "k": "review",
     "t": "Projects get one file, one ID and guarded outside code",
     "m": "opus",
-    "at": "2026-11-26T04:22:41.811Z",
+    "at": "2026-11-26T04:44:31.904Z",
     "o": "c",
     "task": "T-4476"
    },
    {
-    "w": "Idris",
-    "k": "build",
+    "w": "Odalys",
+    "k": "review",
     "t": "Internal TestFlight builds carry the test widgets",
     "m": "opus",
-    "at": "2026-11-26T04:28:07.673Z",
+    "at": "2026-11-26T04:45:35.994Z",
     "o": "c",
     "task": "T-5796"
    }
@@ -418,7 +430,7 @@
    }
   ],
   "count": {
-   "next": 342,
+   "next": 343,
    "wait": 0,
    "blocked": 0,
    "you": 0
@@ -472,12 +484,12 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-26T04:42:15Z",
+  "at": "2026-11-26T04:45:29Z",
   "s": {
    "T-4185": [
     "mergeq",
     "1st to merge",
-    1795668135556
+    1795668149273
    ],
    "T-5630": [
     "mergetest",
@@ -504,7 +516,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-26T04:42:15Z",
+  "at": "2026-11-26T04:45:29Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -517,12 +529,12 @@
    },
    "m": {
     "checking": null,
-    "inline": 0,
-    "conflicted": 9,
+    "inline": 3,
+    "conflicted": 12,
     "failed": null,
-    "held": 9,
+    "held": 12,
     "retry": null,
-    "parked": 674
+    "parked": 677
    },
    "cur": [],
    "ld": [
@@ -532,8 +544,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-26T04:41:53Z",
-    "ld": 9.12,
+    "at": "2026-11-26T04:45:29Z",
+    "ld": 4.91,
     "c": 8,
     "sb": 1,
     "dk": [
@@ -566,16 +578,16 @@
  },
  "hc": {
   "wait": {
-   "n": 4,
+   "n": 9,
    "limit": 20,
-   "in_line": 0,
-   "parked": 4,
+   "in_line": 1,
+   "parked": 8,
    "open": true,
    "mq": false,
-   "counted": "2026-11-26T04:32:35+00:00",
+   "counted": "2026-11-26T04:43:52+00:00",
    "by": {
     "app": {
-     "n": 4,
+     "n": 9,
      "limit": 20,
      "open": true
     },
@@ -590,11 +602,11 @@
      "open": true
     }
    },
-   "at": "2026-11-26T04:42:33+00:00"
+   "at": "2026-11-26T04:45:36+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-26T04:42:27+00:00"
+   "at": "2026-11-26T04:45:36+00:00"
   }
  },
  "operators": [
@@ -615,6 +627,15 @@
    "e": "high",
    "t": "Work session \u2013 1 task",
    "at": "2026-11-25T23:34:52-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Evan's Account",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session \u2013 1 task",
+   "at": "2026-11-25T23:44:28-05:00"
   }
  ],
  "reply": {
@@ -635,12 +656,12 @@
  ],
  "agents_now": {
   "main": 2,
-  "lanes": 1,
-  "total": 3,
-  "at": "11:42 PM",
+  "lanes": 2,
+  "total": 4,
+  "at": "11:45 PM",
   "why": "",
-  "at_iso": "2026-11-26T04:42:00+00:00",
+  "at_iso": "2026-11-26T04:45:00+00:00",
   "started": "11:19 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 11:19 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 11:42 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 2, started 11:19 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 11:45 PM ET</p></section>"
  }
 }

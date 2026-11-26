@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-26T11:47:59.705585+00:00",
+ "at": "2026-11-26T11:51:05.747597+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -91,7 +91,7 @@
    "task": "[build] T-5796 finish TestFlight batch",
    "model": "opus",
    "started": "2026-11-26T09:34:46.191Z",
-   "seconds": 7993,
+   "seconds": 8179,
    "finished": null
   }
  ],
@@ -149,7 +149,7 @@
   "week_pct": 141.16,
   "usage_pct": 59.8,
   "work_pct": 98.6,
-  "read_at": "2026-11-26T11:48:00+00:00",
+  "read_at": "2026-11-26T11:51:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -186,18 +186,6 @@
     "at": "2026-11-26T03:56:30-05:00",
     "n": "Jeremy",
     "src": "plan-b"
-   },
-   {
-    "lane": "b3",
-    "task": "T-4188",
-    "w": "Idris",
-    "k": "build",
-    "t": "Location, steps and notifications work in scripts and widgets",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-26T03:45:33-05:00",
-    "n": "Jeremy",
-    "src": "plan-b"
    }
   ]
  },
@@ -219,7 +207,7 @@
   }
  ],
  "disk": {
-  "free_gb": 30,
+  "free_gb": 27,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -228,14 +216,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-26T06:44:00-05:00",
+   "at": "2026-11-26T06:50:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-26T06:48:00-05:00",
+  "at": "2026-11-26T06:51:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -473,9 +461,14 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-26T11:47:39Z",
+  "at": "2026-11-26T11:50:55Z",
   "s": {
-   "T-4570": [
+   "T-4188": [
+    "mergetest",
+    "Xcode checks on the MacBook, 1st to merge",
+    1795693795045
+   ],
+   "T-2493": [
     "mergetest",
     "iPhone tests on the MacBook",
     null
@@ -483,7 +476,7 @@
    "T-5796": [
     "testq",
     "1st for a Simulator",
-    1795692639647
+    1795692595045
    ],
    "T-4182": [
     "merged",
@@ -493,12 +486,14 @@
    ]
   },
   "nm": {
-   "T-4570": "Launcher slot copy takes the premade file lock",
+   "T-4188": "Location, steps and notifications work in scripts and...",
+   "T-2493": "Keep locked premades out of the run log",
    "T-5796": "Internal TestFlight builds carry the test widgets",
    "T-4182": "A failing widget says so and can recover"
   },
   "wk": {
-   "T-4570": "Idris",
+   "T-4188": "Idris",
+   "T-2493": "Idris",
    "T-5796": "Idris",
    "T-4182": "Idris",
    "T-0972": "Idris",
@@ -509,27 +504,36 @@
   }
  },
  "ln": {
-  "at": "2026-11-26T11:47:39Z",
+  "at": "2026-11-26T11:50:55Z",
   "mq": {
    "n": {
-    "checking": 0,
+    "checking": 1,
     "inline": 0,
     "conflicted": 0,
     "failed": 0,
     "held": 0,
     "retry": 0,
-    "parked": 7
+    "parked": 6
    },
    "m": {
-    "checking": null,
+    "checking": 1,
     "inline": null,
     "conflicted": null,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 312
+    "parked": 316
    },
-   "cur": [],
+   "cur": [
+    [
+     [
+      "T-4188"
+     ],
+     "iPhone app tests",
+     "MacBook",
+     1
+    ]
+   ],
    "ld": [
     0,
     null
@@ -537,8 +541,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-26T11:47:40Z",
-    "ld": 1.24,
+    "at": "2026-11-26T11:50:56Z",
+    "ld": 1.31,
     "c": 8,
     "sb": 1,
     "dk": [
@@ -554,17 +558,17 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-26T11:44:03Z",
-    "ld": 1.86,
+    "at": "2026-11-26T11:50:04Z",
+    "ld": 3.97,
     "c": 12,
     "sb": 2,
     "dk": [
-     405.4,
+     404.1,
      926.4
     ],
     "sn": [
-     "itsthecompany-runner",
-     "itsthecompany-runner-2"
+     "itsthecompany-runner-2",
+     "itsthecompany-runner-3"
     ]
    }
   }
@@ -595,11 +599,11 @@
      "open": true
     }
    },
-   "at": "2026-11-26T11:47:59+00:00"
+   "at": "2026-11-26T11:51:05+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-26T11:47:47+00:00"
+   "at": "2026-11-26T11:50:55+00:00"
   }
  },
  "operators": [
@@ -638,15 +642,6 @@
    "e": "high",
    "t": "Work session \u2013 1 task",
    "at": "2026-11-26T03:56:30-05:00"
-  },
-  {
-   "w": "Operator",
-   "a": "Jeremy's Account",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session",
-   "at": "2026-11-26T03:45:32-05:00"
   }
  ],
  "reply": {
@@ -666,12 +661,12 @@
  ],
  "agents_now": {
   "main": 1,
-  "lanes": 4,
-  "total": 5,
-  "at": "6:48 AM",
+  "lanes": 3,
+  "total": 4,
+  "at": "6:51 AM",
   "why": "",
-  "at_iso": "2026-11-26T11:48:00+00:00",
+  "at_iso": "2026-11-26T11:51:00+00:00",
   "started": "4:33 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 1, started 4:33 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 6:48 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 1, started 4:33 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 6:51 AM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-26T21:38:08.051811+00:00",
+ "at": "2026-11-26T21:41:19.263598+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -82,7 +82,7 @@
    "task": "[build] T-4190 Ask to Buy order",
    "model": "opus",
    "started": "2026-11-26T19:36:17.023Z",
-   "seconds": 7311,
+   "seconds": 7502,
    "finished": null,
    "effort": "high"
   },
@@ -91,7 +91,7 @@
    "task": "[build] T-5894 premade page test order",
    "model": "opus",
    "started": "2026-11-26T20:25:04.046Z",
-   "seconds": 4384,
+   "seconds": 4575,
    "finished": null,
    "effort": "high"
   },
@@ -100,12 +100,21 @@
    "task": "[build] T-4476 Make It Mine clash",
    "model": "opus",
    "started": "2026-11-26T21:27:23.726Z",
-   "seconds": 644,
+   "seconds": 835,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "idris",
+   "task": "[research] T-5527 web view spike records",
+   "model": "opus",
+   "started": "2026-11-26T21:40:53.343Z",
+   "seconds": 25,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Idris x3",
+ "who": "Idris x4",
  "recent": [
   {
    "name": "maren",
@@ -143,7 +152,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 307,
+  "runnable_count": 304,
   "blocked_count": 0
  },
  "meter": {
@@ -192,7 +201,7 @@
   "week_pct": 379.62,
   "usage_pct": 62.0,
   "work_pct": 98.8,
-  "read_at": "2026-11-26T21:38:00+00:00",
+  "read_at": "2026-11-26T21:41:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -213,7 +222,7 @@
   }
  ],
  "disk": {
-  "free_gb": 18,
+  "free_gb": 20,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -222,14 +231,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-26T16:32:00-05:00",
+   "at": "2026-11-26T16:39:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-26T16:38:00-05:00",
+  "at": "2026-11-26T16:41:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -279,17 +288,17 @@
    "next": []
   },
   {
-   "name": "Maren",
+   "name": "Odalys",
    "state": "next",
-   "task": "Maren, P2, from T-0306 (Simulator check of the L4...",
+   "task": "Odalys, P3, host-only, from...",
    "model": null,
    "since": null,
    "next": []
   },
   {
-   "name": "Odalys",
+   "name": "Maren",
    "state": "next",
-   "task": "Odalys, P3, host-only, from...",
+   "task": "Maren, P1, from T-2296 review M2...",
    "model": null,
    "since": null,
    "next": []
@@ -326,6 +335,16 @@
     "at": "2026-11-26T21:27:23.726Z",
     "o": "c",
     "task": "T-4476"
+   },
+   {
+    "w": "Idris",
+    "k": "research",
+    "t": "Correct the web view spike's records",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-26T21:40:53.343Z",
+    "o": "c",
+    "task": "T-5527"
    }
   ],
   "src": "plan",
@@ -403,30 +422,42 @@
   ],
   "done": [
    {
-    "w": "Idris",
-    "t": "A project opened from a file now shows its code and what it says it uses, and never runs or...",
-    "at": "2026-11-26T15:49:00-05:00"
+    "w": "Maren",
+    "t": "In tinted Home Screen mode the CSV sparkline widget now shows just its line and today's dot, the...",
+    "at": "2026-11-26T16:39:00-05:00"
    },
    {
     "w": "Maren",
-    "t": "The design sheet for a transit widget that has never loaded no longer pretends it was just...",
-    "at": "2026-11-26T15:43:00-05:00"
+    "t": "On iPad the Month widget's year panel now looks the same in our design sheets as on the device:...",
+    "at": "2026-11-26T16:39:00-05:00"
    },
    {
     "w": "Maren",
-    "t": "The design sheets now print countdown and \"time ago\" text exactly as the iPhone draws it, and...",
-    "at": "2026-11-26T15:16:00-05:00"
+    "t": "On iPad the Script output widget's run summary now sits at the bottom in our design sheets, as...",
+    "at": "2026-11-26T16:39:00-05:00"
    }
   ],
   "count": {
-   "next": 307,
+   "next": 304,
    "wait": 0,
    "blocked": 0,
    "you": 0
   },
   "fin": {
-   "n": 17,
+   "n": 20,
    "rows": [
+    [
+     "T-5900",
+     "Decide the sparkline area in..."
+    ],
+    [
+     "T-5901",
+     "Settle the month year panel..."
+    ],
+    [
+     "T-5902",
+     "Settle the script output..."
+    ],
     [
      "T-5891",
      "Ask before code from an..."
@@ -438,18 +469,6 @@
     [
      "T-5290",
      "Close the relative-text test..."
-    ],
-    [
-     "T-2044",
-     "Widen the timing margin of a..."
-    ],
-    [
-     "T-2046",
-     "Make an early-ending widget..."
-    ],
-    [
-     "T-2497",
-     "Fix the stuck-row test that..."
     ]
    ]
   }
@@ -493,14 +512,14 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-26T21:38:08Z",
+  "at": "2026-11-26T21:41:19Z",
   "s": {
    "T-4185": [
-    "mergeq",
-    "1st to merge",
-    1795728968051
+    "mergetest",
+    "Xcode checks on the MacBook, 1st to merge",
+    1795729219263
    ],
-   "T-5900": [
+   "T-5907": [
     "mergetest",
     "iPhone tests on the MacBook",
     null
@@ -519,15 +538,18 @@
   },
   "nm": {
    "T-4185": "Launcher widgets open the apps a person chose",
-   "T-5900": "Decide the sparkline area in accented mode",
+   "T-5907": "Stop Make It Mine taking over a person's widget",
    "T-5894": "Make the Sun page link test pass in any order",
    "T-4476": "Projects get one file, one ID and guarded outside code"
   },
   "wk": {
    "T-4185": "Idris",
-   "T-5900": "Maren",
+   "T-5907": "Idris",
    "T-5894": "Idris",
    "T-4476": "Idris",
+   "T-5900": "Maren",
+   "T-5901": "Maren",
+   "T-5902": "Maren",
    "T-5891": "Idris",
    "T-5001": "Maren",
    "T-5290": "Maren",
@@ -536,18 +558,15 @@
    "T-2497": "Idris",
    "T-3294": "Idris",
    "T-4800": "Idris",
-   "T-0623": "Idris",
-   "T-5861": "Maren",
-   "T-5860": "Maren",
-   "T-5268": "Idris"
+   "T-0623": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-26T21:38:08Z",
+  "at": "2026-11-26T21:41:19Z",
   "mq": {
    "n": {
-    "checking": 0,
-    "inline": 1,
+    "checking": 1,
+    "inline": 0,
     "conflicted": 0,
     "failed": 0,
     "held": 0,
@@ -555,15 +574,24 @@
     "parked": 6
    },
    "m": {
-    "checking": null,
-    "inline": 2,
+    "checking": 1,
+    "inline": null,
     "conflicted": null,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 903
+    "parked": 906
    },
-   "cur": [],
+   "cur": [
+    [
+     [
+      "T-4185"
+     ],
+     "iPhone app tests",
+     "MacBook",
+     1
+    ]
+   ],
    "ld": [
     0,
     null
@@ -571,12 +599,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-26T21:38:13Z",
-    "ld": 7.49,
+    "at": "2026-11-26T21:40:52Z",
+    "ld": 8.68,
     "c": 8,
     "sb": 1,
     "dk": [
-     20.0,
+     19.8,
      228.3
     ],
     "ss": [
@@ -588,16 +616,16 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-26T21:35:01Z",
-    "ld": 8.54,
+    "at": "2026-11-26T21:40:37Z",
+    "ld": 5.01,
     "c": 12,
     "sb": 2,
     "dk": [
-     377.5,
+     376.9,
      926.4
     ],
     "sn": [
-     "itsthecompany-runner",
+     "itsthecompany-runner-2",
      "itsthecompany-runner-3"
     ]
    }
@@ -605,16 +633,16 @@
  },
  "hc": {
   "wait": {
-   "n": 6,
+   "n": 7,
    "limit": 20,
-   "in_line": 0,
+   "in_line": 1,
    "parked": 6,
    "open": true,
    "mq": false,
-   "counted": "2026-11-26T21:30:27+00:00",
+   "counted": "2026-11-26T21:40:37+00:00",
    "by": {
     "app": {
-     "n": 5,
+     "n": 6,
      "limit": 20,
      "open": true
     },
@@ -629,11 +657,11 @@
      "open": true
     }
    },
-   "at": "2026-11-26T21:38:08+00:00"
+   "at": "2026-11-26T21:41:19+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-26T21:38:08+00:00"
+   "at": "2026-11-26T21:41:19+00:00"
   }
  },
  "operators": [
@@ -665,13 +693,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 3,
+  "main": 4,
   "lanes": 0,
-  "total": 3,
-  "at": "4:38 PM",
+  "total": 4,
+  "at": "4:41 PM",
   "why": "",
-  "at_iso": "2026-11-26T21:38:00+00:00",
+  "at_iso": "2026-11-26T21:41:00+00:00",
   "started": "12:21 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 12:21 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 4:38 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 4, started 12:21 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 4:41 PM ET</p></section>"
  }
 }

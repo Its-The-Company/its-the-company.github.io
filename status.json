@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-26T22:18:27.058607+00:00",
+ "at": "2026-11-26T22:21:30.609076+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -82,7 +82,7 @@
    "task": "[build] T-5894 premade page test order",
    "model": "opus",
    "started": "2026-11-26T20:25:04.046Z",
-   "seconds": 6803,
+   "seconds": 6986,
    "finished": null,
    "effort": "high"
   },
@@ -91,7 +91,7 @@
    "task": "[build] T-4476 T-5907 review fixes",
    "model": "opus",
    "started": "2026-11-26T22:07:32.088Z",
-   "seconds": 654,
+   "seconds": 838,
    "finished": null,
    "effort": "high"
   },
@@ -100,7 +100,7 @@
    "task": "[build] T-4190 restore test T-5909",
    "model": "opus",
    "started": "2026-11-26T22:07:40.488Z",
-   "seconds": 646,
+   "seconds": 830,
    "finished": null,
    "effort": "high"
   }
@@ -143,25 +143,25 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 303,
+  "runnable_count": 302,
   "blocked_count": 0
  },
  "meter": {
   "five_hour": {
-   "pct": 7.0,
-   "resets_at": "2026-11-26T21:30:00-05:00",
+   "pct": 8.0,
+   "resets_at": "2026-11-27T02:30:00.356270+00:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-26T17:17:21.414494-05:00",
-   "source": "live",
-   "left": 93.0,
+   "read_at": "2026-11-26T17:20:27.002487-05:00",
+   "source": "usage",
+   "left": 92.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 8.0,
-   "resets_at": "2026-11-29T02:00:00-05:00",
+   "resets_at": "2026-11-29T07:00:00.356296+00:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-26T17:17:21.414494-05:00",
-   "source": "live",
+   "read_at": "2026-11-26T17:20:27.002487-05:00",
+   "source": "usage",
    "left": 92.0,
    "left_words": "of your weekly allowance left"
   },
@@ -169,10 +169,10 @@
    "pct": 0.0,
    "resets_at": "2026-11-29T07:00:00+00:00",
    "used_words": "of the Fable weekly allowance used",
-   "read_at": "2026-11-26T16:46:57.619113-05:00",
+   "read_at": "2026-11-26T17:20:27.002487-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-26T17:17:21.414494-05:00"
+  "read_at": "2026-11-26T17:20:27.002487-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -189,10 +189,10 @@
  },
  "next_tick": null,
  "personal": {
-  "week_pct": 455.55,
+  "week_pct": 531.49,
   "usage_pct": 62.0,
   "work_pct": 98.8,
-  "read_at": "2026-11-26T22:18:00+00:00",
+  "read_at": "2026-11-26T22:21:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -238,7 +238,7 @@
   }
  ],
  "disk": {
-  "free_gb": 22,
+  "free_gb": 21,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -247,14 +247,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-26T17:12:00-05:00",
+   "at": "2026-11-26T17:20:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-26T17:18:00-05:00",
+  "at": "2026-11-26T17:21:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -429,6 +429,11 @@
   "done": [
    {
     "w": "Idris",
+    "t": "The spike's downloaded Python engine is now listed in the company's software log, and the...",
+    "at": "2026-11-26T17:19:00-05:00"
+   },
+   {
+    "w": "Idris",
     "t": "The Settings screen's automated tests now pass in any order. Before, after any test that bought...",
     "at": "2026-11-26T17:06:00-05:00"
    },
@@ -436,22 +441,21 @@
     "w": "Idris",
     "t": "A tap on a Home Screen widget on an iPad was checked in all three ways an iPad can show apps,...",
     "at": "2026-11-26T16:51:00-05:00"
-   },
-   {
-    "w": "Maren",
-    "t": "In tinted Home Screen mode the CSV sparkline widget now shows just its line and today's dot, the...",
-    "at": "2026-11-26T16:39:00-05:00"
    }
   ],
   "count": {
-   "next": 303,
+   "next": 302,
    "wait": 0,
    "blocked": 0,
    "you": 0
   },
   "fin": {
-   "n": 22,
+   "n": 23,
    "rows": [
+    [
+     "T-5529",
+     "Log and pin the spike's..."
+    ],
     [
      "T-5906",
      "Make the Ask to Buy test..."
@@ -471,10 +475,6 @@
     [
      "T-5902",
      "Settle the script output..."
-    ],
-    [
-     "T-5891",
-     "Ask before code from an..."
     ]
    ]
   }
@@ -518,16 +518,11 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-26T22:18:08Z",
+  "at": "2026-11-26T22:21:30Z",
   "s": {
    "T-5529": [
     "mergetest",
     "iPhone tests on the MacBook",
-    null
-   ],
-   "T-5894": [
-    "testing",
-    "Mac Mini \u00b7 test",
     null
    ],
    "T-4190": [
@@ -551,14 +546,12 @@
   },
   "nm": {
    "T-5529": "Log and pin the spike's Pyodide download",
-   "T-5894": "Make the Sun page link test pass in any order",
    "T-4190": "Settings and Pro: buy, restore, themes",
    "T-4476": "Projects get one file, one ID and guarded outside code",
    "T-4182": "A failing widget says so and can recover"
   },
   "wk": {
    "T-5529": "Idris",
-   "T-5894": "Idris",
    "T-4190": "Idris",
    "T-4476": "Idris",
    "T-4182": "Idris",
@@ -572,12 +565,11 @@
    "T-5290": "Maren",
    "T-2044": "Idris",
    "T-2046": "Idris",
-   "T-2497": "Idris",
-   "T-3294": "Idris"
+   "T-2497": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-26T22:18:08Z",
+  "at": "2026-11-26T22:21:30Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -595,7 +587,7 @@
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 943
+    "parked": 946
    },
    "cur": [],
    "ld": [
@@ -605,21 +597,19 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-26T22:17:22Z",
-    "ld": 8.66,
+    "at": "2026-11-26T22:21:31Z",
+    "ld": 6.04,
     "c": 8,
-    "sb": 1,
+    "sb": 0,
     "dk": [
-     19.6,
+     20.8,
      228.3
     ],
     "ss": [
      172.6,
      953.7
     ],
-    "sn": [
-     "iPhone 17e"
-    ]
+    "sn": []
    },
    "macbook": {
     "at": "2026-11-26T22:17:01Z",
@@ -663,11 +653,11 @@
      "open": true
     }
    },
-   "at": "2026-11-26T22:18:27+00:00"
+   "at": "2026-11-26T22:21:30+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-26T22:18:27+00:00"
+   "at": "2026-11-26T22:21:30+00:00"
   }
  },
  "operators": [
@@ -720,10 +710,10 @@
   "main": 3,
   "lanes": 2,
   "total": 5,
-  "at": "5:18 PM",
+  "at": "5:21 PM",
   "why": "",
-  "at_iso": "2026-11-26T22:18:00+00:00",
+  "at_iso": "2026-11-26T22:21:00+00:00",
   "started": "12:21 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 3, started 12:21 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 5:18 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 3, started 12:21 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 5:21 PM ET</p></section>"
  }
 }

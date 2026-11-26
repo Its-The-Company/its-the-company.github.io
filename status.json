@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-26T02:25:23.158177+00:00",
+ "at": "2026-11-26T02:28:26.394915+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -82,7 +82,7 @@
    "task": "[build] T-4191 large text steps",
    "model": "",
    "started": "2026-11-25T23:44:39.050Z",
-   "seconds": 9644,
+   "seconds": 9827,
    "finished": null
   },
   {
@@ -90,11 +90,19 @@
    "task": "[build] T-5796 review fixes",
    "model": "",
    "started": "2026-11-26T02:04:29.058Z",
-   "seconds": 1254,
+   "seconds": 1437,
+   "finished": null
+  },
+  {
+   "name": "idris",
+   "task": "[build] T-4476 settle rebase",
+   "model": "",
+   "started": "2026-11-26T02:25:48.153Z",
+   "seconds": 158,
    "finished": null
   }
  ],
- "who": "Idris x2",
+ "who": "Idris x3",
  "recent": [
   {
    "name": "pernille",
@@ -181,7 +189,7 @@
   "week_pct": 133.67,
   "usage_pct": 60.0,
   "work_pct": 98.3,
-  "read_at": "2026-11-26T02:25:00+00:00",
+  "read_at": "2026-11-26T02:28:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -218,6 +226,18 @@
     "at": "2026-11-25T21:05:53-05:00",
     "n": "Jeremy",
     "src": "plan-b"
+   },
+   {
+    "lane": "b2",
+    "task": "T-4776",
+    "w": "Idris",
+    "k": "build",
+    "t": "Register the probe font where the widget draws too",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-25T21:28:30-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
    }
   ]
  },
@@ -248,14 +268,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-25T21:19:00-05:00",
+   "at": "2026-11-25T21:25:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-25T21:25:00-05:00",
+  "at": "2026-11-25T21:28:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -337,6 +357,14 @@
     "at": "2026-11-26T02:04:29.058Z",
     "o": "c",
     "task": "T-5796"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "Projects get one file, one ID and guarded outside code",
+    "at": "2026-11-26T02:25:48.153Z",
+    "o": "c",
+    "task": "T-4476"
    }
   ],
   "src": "plan",
@@ -503,8 +531,36 @@
    "ok"
   ]
  ],
+ "stg": {
+  "at": "2026-11-26T02:27:58Z",
+  "s": {
+   "T-4576": [
+    "mergetest",
+    "iPhone tests on the MacBook",
+    null
+   ]
+  },
+  "nm": {
+   "T-4576": "Tidy the launcher store's small edges"
+  },
+  "wk": {
+   "T-4576": "Idris",
+   "T-1457": "Idris",
+   "T-4550": "Pernille",
+   "T-5309": "Idris",
+   "T-5014": "Idris",
+   "T-1117": "Idris",
+   "T-1445": "Idris",
+   "T-5539": "Pernille",
+   "T-5540": "Pernille",
+   "T-5561": "Pernille",
+   "T-5562": "Odalys",
+   "T-4139": "Idris",
+   "T-0901": "Idris"
+  }
+ },
  "ln": {
-  "at": "2026-11-26T02:23:46Z",
+  "at": "2026-11-26T02:27:58Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -513,16 +569,16 @@
     "failed": 0,
     "held": 1,
     "retry": 0,
-    "parked": 4
+    "parked": 3
    },
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 1202,
+    "conflicted": 1206,
     "failed": null,
-    "held": 2762,
+    "held": 2766,
     "retry": null,
-    "parked": 1202
+    "parked": 1206
    },
    "cur": [],
    "ld": [
@@ -532,16 +588,20 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-26T02:24:26Z",
-    "ld": 14.71,
+    "at": "2026-11-26T02:28:04Z",
+    "ld": 19.6,
     "c": 8,
+    "sb": 1,
     "dk": [
-     27.7,
+     27.8,
      228.3
     ],
     "ss": [
      172.6,
      953.7
+    ],
+    "sn": [
+     "pywidget-wk-check"
     ]
    },
    "macbook": {
@@ -587,11 +647,11 @@
      "open": true
     }
    },
-   "at": "2026-11-26T02:25:23+00:00"
+   "at": "2026-11-26T02:28:26+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-26T02:25:23+00:00"
+   "at": "2026-11-26T02:28:26+00:00"
   }
  },
  "operators": [
@@ -650,13 +710,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 2,
-  "lanes": 3,
-  "total": 5,
-  "at": "9:25 PM",
+  "main": 3,
+  "lanes": 4,
+  "total": 7,
+  "at": "9:28 PM",
   "why": "",
-  "at_iso": "2026-11-26T02:25:00+00:00",
+  "at_iso": "2026-11-26T02:28:00+00:00",
   "started": "1:03 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 2, started 1:03 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 9:25 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 3, started 1:03 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 9:28 PM ET</p></section>"
  }
 }

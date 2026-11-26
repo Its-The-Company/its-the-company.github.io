@@ -38,7 +38,6 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - Older entries (Day 2-6: hunt grades, site v2, <span title="A memo that proposes one idea to the Investors as the product. Only a B or better becomes one.">pitch</span> QA, H-codes, probation (a), packet 3) and their kept lessons: archive.md.
 - (b) drawn in design/; Ines's fixes c22b4e9, Idris's S-1..S-5 76f3774; Ines rechecks, C51 after #23. Detail: Probation (b)
 
-- 11-17 landed T-4779 837b985bcc (mockup times 12-hour), T-4780 4eb4d80b32, T-4730 09eb93e1f3. Lesson: a check green in the main folder but red in a copy reads git-ignored state (ops/live.json); fixture it by patching build.load_json. Bring the copy up to main and land in one command: main moves within minutes.
 - 11-18 T-4763: s9.2 checked against code. Lesson: a spec that names a gate must name where it runs (the handler runs outside ui._first_party(); validate(doc) never sees the request); trace the call path before naming one.
 - 11-18 T-4764: premade-inputs s9.2 gives the order text yields to Dynamic Type (head, name, cell shape; buttons and dots never). Lesson: minimumScaleFactor fits width, not height; use line limits for height. Two docs disagree on widget text sizes (ADR-011 AX5 vs renderer xxxLarge clamp): Idris settles it.
 - 11-18 T-4886: case-fixed "PyWidget" in 14 premade lines, first renders, Settings page; check_states.py fails on lower-case name in copy/voiceover. Lesson: a copy change moves generated fixtures (tour, premade-trees, design trees); run the whole widgets suite, then regenerate each. premade.py also rewrites unrelated showcase trees: git checkout them.
@@ -47,6 +46,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - 11-19 T-4813 (live Home counts, hc payload + look.js redraw) brought from my copy onto a2; follow-up T-5181 holds what is not live (Queued 24.8 s a read, Work done 6.5 s, Flow, Progress, 10-min sample). Lesson: time each source before promising it live; under load ~100 a full-build test needs 10 min, run it alone.
 - 11-21 T-4999: link screen title "Web Page" to "Web page" (sentence case). Lesson: T-5255 retired tools/png_small.py but ide/draw_ide.py still imports it; every design script fails until it is restored (ran with retired/tools on PYTHONPATH).
 - 11-21 T-5193: five build-added page strings kept word for word, written into premade-inputs s5; no Swift change. Apostrophes mixed (straight in four "couldn't" lines, curly elsewhere); left as built.
+- 11-26 T-5001 8431896520 (branch, at merge point, Pernille reviews): never_fetched flag drops Updated; idle chart 3 bars; trees take sheet now. Lesson: ui.Timeline fills a missing sampled_at with the clock, so "no sample" never hides a line; flag it in state.
 {% endraw %}
 
 

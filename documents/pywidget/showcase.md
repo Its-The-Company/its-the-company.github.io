@@ -11,7 +11,7 @@ description: "Drawn: all eight on the board line, in its order: Day phases (all 
 <div class="doc-body" markdown="1">
 
 {% raw %}
-Maren, 2026-11-17, 1:05 PM to 1:40 PM ET, and 2026-11-18 from 2:50 AM ET (sheets 06 to 11), by `date`. Transit's count-down taken out and relative text drawn as SwiftUI draws it on 2026-11-19 (T-5000, from Pernille's review T-4927 H1). Board line T-4703, from T-4672 (plan [`ops/plans/T-4672-showcase-premades.md`](../company/t-4672-showcase-premades.html) s2, s3 and s4.2; #278, an Investor 2026-11-16 9:55 PM ET).
+Maren, 2026-11-17, 1:05 PM to 1:40 PM ET, and 2026-11-18 from 2:50 AM ET (sheets 06 to 11), by `date`. Transit's count-down taken out and relative text drawn as SwiftUI draws it on 2026-11-19 (T-5000, from Pernille's review T-4927 H1). The never-fetched frame, Focus timer's idle chart, the trees' sample time and two gaps fixed on 2026-11-26 (T-5001, from the same review's M1 and L1 to L4). Board line T-4703, from T-4672 (plan [`ops/plans/T-4672-showcase-premades.md`](../company/t-4672-showcase-premades.html) s2, s3 and s4.2; #278, an Investor 2026-11-16 9:55 PM ET).
 
 **Status.** These frames are drawn inside approved items 2 and 9 (`creative/approved.md`): Paper in light, Studio in black and dark grey in dark, with the existing tokens, faces and widget vocabulary. Nothing in them adds a colour, face, icon or arrangement outside the guide. Ideas that would add one are listed under "Proposals (not used)" and are not drawn. The samples are made up for layout: the arrivals are not MTA data, the forecast is not MET Norway data, and the to-do items, places, sites, deck and star counts are invented.
 
@@ -24,14 +24,14 @@ Maren, 2026-11-17, 1:05 PM to 1:40 PM ET, and 2026-11-18 from 2:50 AM ET (sheets
 
 | File | What |
 |---|---|
-| `premade.py` | The section "1.0 showcase premades (T-4703)" writes each view with `pywidget_ui`, using only viewtree v1 nodes. `python3 premade.py` writes `showcase/trees/NN-slug.json` and validates every document and every state variant, with 0 problems. The 12 v1 premades and their trees do not change. |
-| `render.py --set showcase` | Draws the sheets into `showcase/*.jpg` (1x, JPEG q78, 4.0 MB for all eleven) and writes `showcase/qa.json`. It uses the same interpreter and QA as the 12 premades (README "How it is made"). Each sheet has its own "now", so relative text reads as it would at that time of day, in SwiftUI's own form: `Text(date, style: .relative)` under an hour is "39 min, 59 sec" and ticks every second, over an hour "2 hr, 54 min" (Pernille's SwiftUI probe, T-4927). Every sheet measures that string. |
+| `premade.py` | The section "1.0 showcase premades (T-4703)" writes each view with `pywidget_ui`, using only viewtree v1 nodes. `python3 premade.py` writes `showcase/trees/NN-slug.json` and validates every document and every state variant, with 0 problems. A view with no fetched sample carries the sheet's own now as `sampled_at` (what `ui.Timeline` would fill in at that time), so every tree is the same from run to run; before T-5001, trees 02, 03, 05, 07, 08 and 10 carried the time the script ran. `tests/showcase_trees_test.py` checks this. The 12 v1 premades and their trees do not change. |
+| `render.py --set showcase` | Draws the sheets into `showcase/*.jpg` (1x, JPEG q78, 4.0 MB for all eleven) and writes `showcase/qa.json`. It uses the same interpreter and QA as the 12 premades (README "How it is made"). Each sheet has its own "now", so relative text reads as it would at that time of day, in SwiftUI's own form: `Text(date, style: .relative)` under an hour is "39 min, 59 sec" and ticks every second, over an hour "2 hr, 54 min" (Pernille's SwiftUI probe, T-4927). A zero second unit is drawn under a day ("34 min, 0 sec") and dropped from a day up ("6 days", "1 mth"); past a month the units are calendar months and years counted from the date ("1 mth, 22 days" for 53 days ahead of Nov 26), and the offset style is one signed word unit ("−3 minutes" for 4 minutes ahead), as Maren's probe of 2026-11-26 drew them (T-5290, from Pernille's T-5216 L1 and L2; pinned in `tests/showcase_relative_test.py`). Every sheet measures that string. |
 | Studio grey | With `--set showcase`, every hued value Studio supplies (grounds, lines, text greys, accent, the widget card gradient, Increase Contrast set) becomes the neutral grey of the same relative luminance. T-4680 did the same for the 04-mockups: canvas #0A0C13 becomes #0C0C0C, the card #5B33E6 to #1E1450 becomes #5A5A5A to #1F1F1F, and the accent #A08BFF becomes #9C9C9C. The status colours stay. `tokens.json` is not changed: item 9 records that "the tokens are not changed yet". |
 
 </div>
 
 
-Each sheet shows every family the view claims in full colour light and dark, accented light and dark (sample tint #5AA9C8), and iOS 26 clear in both appearances over a light and a dark wallpaper. The Lock Screen families are shown vibrant in both appearances over two wallpapers. Every state is drawn in light and in dark. No image model, stock art or photo is used. SF Symbols are stand-in glyphs, and a symbol with no stand-in (`tram.fill`, `sunrise.fill`, `play.fill`, `timer`, `umbrella`, `eye`, and others) shows as a dotted circle. The tree names the real symbol.
+Each sheet shows every family the view claims in full colour light and dark, accented light and dark (sample tint #5AA9C8), and iOS 26 clear in both appearances over a light and a dark wallpaper. The Lock Screen families are shown vibrant in both appearances over two wallpapers. Every state is drawn in light and in dark. No image model, stock art or photo is used. SF Symbols are stand-in glyphs. A symbol with no stand-in shows as a dotted rounded square; in these sheets that is `arrow.counterclockwise`, `checklist` (Today's inline), `checkmark`, `cloud.rain`, `eye`, `play.fill`, `rectangle.on.rectangle`, `sunrise.fill`, `thermometer.high`, `thermometer.low`, `tram.fill` and `umbrella`. (`timer` has a stand-in, so it is not on the list; T-5001.) The tree names the real symbol, and `tests/showcase_trees_test.py` keeps this list equal to what render.py draws.
 
 ## Day phases
 
@@ -68,7 +68,7 @@ Plan s4. Families: systemSmall, systemMedium, systemLarge, accessoryRectangular,
 
 
 - The data is 41 minutes old (more than 30). The view reads "No recent times." and "Open PyWidget to update." and keeps the Updated line. The stale clock in the corner slot (state-spec s2) is measured on the QA card page, which is not saved as an image. This sheet does not draw it. A tap opens PyWidget (`widgetURL`; `pywidget://open` stands in for the app's own link).
-- State: never fetched. The same words show with no Updated line, because there is no `sampled_at`.
+- State: never fetched. The same words show with no Updated line. The view leaves `ui.Updated()` out by a state flag (`never_fetched`), not by a missing `sampled_at`: `ui.Timeline` fills a missing `sampled_at` with the clock, so the first draw of this frame said "Updated 2:34 PM" (the time the script ran) under "No recent times", a freshness the premade does not have (T-5001, from Pernille's T-4927 M1). The build takes the same flag.
 
 ### Pernille's render, reviewed against these frames
 
@@ -79,7 +79,7 @@ Plan s4. Families: systemSmall, systemMedium, systemLarge, accessoryRectangular,
 3. Medium fits three arrivals per line. If the build keeps "AM", it does not fit (see above).
 4. "Updated" is in the bottom row, never the top. The credit line yields to it.
 5. "No B times right now" appears per line, and nothing is guessed.
-6. The no-recent-times words appear after 30 minutes, and a tap opens PyWidget.
+6. The no-recent-times words appear after 30 minutes, and a tap opens PyWidget. Never fetched shows no Updated line, left out by a state flag (T-5001).
 7. Night has no network.
 8. The Simulator check (Idris) decides clear and vibrant on a light wallpaper. Those modes fail contrast here for the same reason as the 12 premades (README "Re-render").
 
@@ -94,6 +94,8 @@ Plan s4. Families: systemSmall, systemMedium, systemLarge, accessoryRectangular,
 7. **Next 24 hours on the Lock Screen.** L16's condition is the credit line "on the widget". The rectangular widget has three lines and no room for it. Wrenna or Ines should say whether the Lock Screen families need it (and so need to drop a line), or whether the credit on the system families and in PyWidget is enough.
 8. **The driest window when several tie** (for example, a dry day with one shower). The frames pick the sooner. The plan does not say.
 9. **Site status "down" thresholds.** The frames show a single "Down" (no answer, or an error). A "slow" state (the build line tests it) has no mark in the strip yet. If the build wants one, it would be a third bar height, not a new colour.
+10. **Night after midnight.** Night runs from 9:00 PM to 6:00 AM, and the frame at 10:20 PM says "Tomorrow, Wednesday October 28". From 12:00 PM to 6:00 AM that is wrong: the sunrise is this morning's. The plan does not say what the words are then ("This morning", or the date alone). Pernille takes it in the Day phases build (T-4927 L3 a).
+11. **Focus timer's task name has no input.** Medium and large show a task name ("Draft the notes"), and plan s2 row 3 has none. Either the plan adds it as a Page field, or the frames drop the line (and medium and large each gain a line of room). For Ines (T-4927 L3 b).
 
 ## Focus timer
 
@@ -104,7 +106,7 @@ Plan s2 row 3, Pro. Never called "Pomodoro" (a trademark). Families: systemSmall
 - **The countdown** is timer text in the display face (34 pt, or 56 in large) with a `ProgressView` timer bar. Both tick alone, so one entry covers a block.
 - **Buttons.** The Gallery 09 pill (T-0429 <span title="The starting recipe a lane uses to look for ideas. G2, for example, starts from public datasets.">G1</span>): Pause and Skip while a block runs, Resume when paused, and Start alone when nothing runs, since there is nothing to skip then. Each is a `Button` with a declared action (`start`, `pause`, `resume`, `skip`). The handlers are the build's. The Lock Screen draws no buttons.
 - **Today's blocks** are bars, one per block, with height by minutes and the running block in primary, the way Steps draws today. They appear in medium (34 pt) and large (56 pt) with "4 blocks, 1 hr 47 min". Small has no chart.
-- **States:** paused, which shows "7 of 25 min" and the bar held at 0.28, and no block running, in medium and small.
+- **States:** paused, which shows "7 of 25 min" and the bar held at 0.28, and no block running, in medium and small. With no block running the chart draws the three blocks done and none in primary, matching its words ("3 blocks, 1 hr 40 min"); the first draw had a fourth bar in primary as if a block were running (T-5001, from T-4927 L1).
 
 ## Next 24 hours
 

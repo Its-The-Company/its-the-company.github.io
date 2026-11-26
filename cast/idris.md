@@ -44,7 +44,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-4183 11-26: settled on main ddbc366df6 in scratch T-4183-idris/wt (detached): 9bec59faa1 T-5035, 044d065078 T-4646, 01f654162e T-5012, 7be984c672 T-4641 slice 1. Host 4408/0, unit 2528/0 J-...0953-...5213d3, UI 24/0 J-...1006-...28a810, landcheck green. Open: land; T-4641 L3 (Maren's words), onRunQueue. Lesson: lane_settle refuses a detached copy; cherry-pick onto main by hand.
 
 - T-4302 11-25 (b): own-widget save test in WidgetStepTimeoutTests (test only). Open: review, land.
-- T-5891 11-26 (b): 4e12412e68 in scratch T-4476-idris/wt: outside project page (OutsidePage, Make It Mine after warning) + Pernille's L2/L3. Host 4422/0, unit 2573/0 J-...1404-...566aac, UI 1/0 J-...1420-...108ddd. Rewrote ed96a6b0d3 (Plain/Evidence/ws stripped, partial). Open: Pernille re-review of the page, land, Maren's words; no mutant run of the 3 page tests. Lesson: ShortcutRun.source throws when widgets/ is missing.
+- T-4476 11-26: T-5891 merged 4f8813f02e. In scratch T-4476-idris/wt: 66f9af5883 (findMark low, J-20261126-1553-...078e79 17/0), bbddaeb984 (ADR-012 8th rev for acceptance, s10 = 7 board lines). Open: Pernille accepts ADR-012 + reviews low; Operator adds lines. Lesson: xc.sh goes to the MacBook only from a commit on origin/main.
 
 ## Lessons
 - Older lessons and dated logs: archive.md.

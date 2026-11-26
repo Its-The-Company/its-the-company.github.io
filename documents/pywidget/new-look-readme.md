@@ -13,8 +13,8 @@ description: "The wash is the same in every palette, and only the pigments chang
 {% raw %}
 Maren, 2026-11-26. **Mockups for the Investors to choose from, not an approval and not a change to the app.** Paper (light) and Studio (dark), `creative/approved.md` item 9 (#291), stay the app's look until the Investors approve a direction.
 
-- **Directions on this page:** watercolor, sections 1 to 7; blueprint, [section 8](#8-direction-2-blueprint-t-5857); risograph print, [section 9](#9-direction-3-risograph-print-t-5858); Swiss editorial, [section 10](#10-direction-4-swiss-editorial-t-5859).
-- **Asked by:** an Investor on #325 (c7162542094)), with his answers in c7162738460). The plan is [`ops/plans/new-look-directions.md`](../company/new-look-directions.html), and this page holds its steps 1 (watercolor), 2 (blueprint), 3 (risograph print) and 4 (Swiss editorial).
+- **Directions on this page:** watercolor, sections 1 to 7; blueprint, [section 8](#8-direction-2-blueprint-t-5857); risograph print, [section 9](#9-direction-3-risograph-print-t-5858); Swiss editorial, [section 10](#10-direction-4-swiss-editorial-t-5859); the watercolor wash moving, [section 11](#11-the-wash-live-t-5860); **the four side by side, with costs and a recommendation, [section 12](#12-the-four-side-by-side-t-5861)**.
+- **Asked by:** an Investor on #325 (c7162542094)), with his answers in c7162738460). The plan is [`ops/plans/new-look-directions.md`](../company/new-look-directions.html), and this page holds its steps 1 (watercolor), 2 (blueprint), 3 (risograph print), 4 (Swiss editorial), 5 (the live wash) and 6 (the comparison).
 - **What it shows:** a watercolor wash drawn in code from one seed, Projects in three palettes, the full set in the strongest palette (warm), light and dark, and the Builder drawn in the blueprint editing language.
 - **Where the wash sits:** in headers, project cards, Gallery tiles, the first run and the Builder stage. The editor and Settings stay calm. Text never sits on the wash except the large titles, and every run of text is measured against the pixels behind it (section 5).
 - **Layout:** as item 9 has it. A is the base, with C's Builder stage (widget on top, chosen block ringed), C's plain-words run card and the three start buttons. Only the look changes; nothing moves. (The Swiss direction is the exception: it moves a few things by a few points onto its grid, named in section 10.)
@@ -38,7 +38,7 @@ The wash is the same in every palette, and only the pigments change. Grounds sta
 
 ## 2. The strongest palette: warm
 
-- **Warm has the most personality in both modes.** Its terracotta accent looks like nothing iOS ships with, its wash still shows on the dark ground, and it carries on Paper's paper-and-ink feel without copying it.
+- **Warm has the most personality in both modes.** Its terracotta accent is unlike iOS's standard blue, its wash still shows on the dark ground, and it carries on Paper's paper-and-ink feel without copying it.
 - **Cool looks like a stock app.** Its accent sits close to the system blue, and system blue is a large part of the "vibe-coded" feel the Investors want to lose.
 - **Muted is calm but goes flat.** In light mode the wash turns khaki, and in dark mode it nearly disappears, so the motif stops doing its job.
 - **All three pass the contrast check.** The lowest text ratios are warm 4.90 (light) and 5.50 (dark), cool 5.32 and 6.65, and muted 4.98 and 6.34, so legibility doesn't decide between them.
@@ -105,11 +105,13 @@ It needs Playwright with Chromium, as `../mockups/draw.py` does, and took about 
 |---|---|---|
 | `kit.py` | page and fonts, icons drawn as SVG paths, `Look` (tokens plus a `motif()` hook), `render()` and the contrast check | yes, as it is |
 | `screens.py` | Projects, the first run, the Gallery, the editor with its run card, the Builder (and its blueprint stage) and Settings, for any `Look` | yes, as it is |
-| `wash.py` | the seeded wash: pools of pigment, layers deformed by midpoint displacement, crops ("windows") | watercolor, and step 5's live page, which can run the same numbers in JavaScript |
+| `wash.py` | the seeded wash: pools of pigment, layers deformed by midpoint displacement, crops ("windows") | watercolor, and step 5's live page, whose `wash.js` runs the same numbers in JavaScript (section 11) |
 | `watercolor.py` | the three palettes, light and dark, and where the wash goes | watercolor only |
 | `blueprint.py` | the blueprint direction (section 8): two prints, the drafting marks, its frames and its diagram | blueprint only |
 | `risograph.py` | the risograph direction (section 9): paper and two inks, halftone, grain, proof marks, its frames and its diagram | risograph only |
 | `swiss.py` | the Swiss editorial direction (section 10): the grid, the type, the red accent, its CSS, its frames and its diagram | Swiss only |
+| `live.py` | checks the live page (section 11) in headless Chromium and draws its diagram | step 5 only |
+| `compare.py` | the contact sheet of the four directions (section 12), from the Projects frames `draw.py` wrote | step 6 only |
 | `draw.py` | the frame lists, the watercolor diagram and the command, one output folder per direction | add each new direction here |
 
 </div>
@@ -128,7 +130,7 @@ It needs Playwright with Chromium, as `../mockups/draw.py` does, and took about 
 
 ## 7. Not in this step
 
-- **Motion.** These are stills. The live wash comes in step 5: one static page that draws this wash from the same seed, with a pause switch, and honours Reduce Motion.
+- **Motion.** These are stills. The live wash is step 5, now [section 11](#11-the-wash-live-t-5860): one static page that draws this wash from the same seed, with a pause switch, and honours Reduce Motion.
 - **High-contrast sets at 7:1.** The plan asks for 7:1 there. The check takes a minimum (`kit.report(..., minimum=7)`), but no high-contrast palettes are drawn yet.
 - **iPad, the Activity screen, the Pro screen, the icon and the store page.**
 - **The other directions.** Blueprint is step 2 (section 8) and risograph print step 3 (section 9); Swiss editorial is step 4 (section 10).
@@ -184,7 +186,7 @@ The diagram above is drawn by the same command as the frames, in the blueprint l
 
 - **Motion.** The plan's live page is for the wash (step 5). If blueprint is chosen, its motion would be the Builder's: dimension lines drawing in when a block is chosen, stopped by Reduce Motion. That is not drawn here.
 - **A second palette, and the high-contrast sets at 7:1.**
-- **The Swiss editorial set** (step 4, now section 10; risograph print is section 9) and the side-by-side comparison (step 6).
+- **The Swiss editorial set** (step 4, now section 10; risograph print is section 9) and the side-by-side comparison (step 6, now section 12).
 
 ## 9. Direction 3: risograph print (T-5858)
 
@@ -238,14 +240,14 @@ The diagram above is drawn by the same command as the frames, in the risograph l
 - **One new file.** `risograph.py` holds the paper and inks, `mix()`, the halftone, the grain filter, the proof marks and a `kit.Look` whose `motif()` places them. `screens.py`, `kit.py` and the check are shared. The only shared change in this step went in with the blueprint fixes: widgets, the chosen segment and the toggle knob read `--lift`, `--seg-shadow` and `--knob-shadow`, which fall back to the old shadows, so watercolor is unchanged.
 - **Deterministic.** The shapes are fixed numbers, and the grain's seed is fixed. Two full runs gave byte-identical files: `shasum` on all 48 outputs (watercolor, blueprint and risograph) matched.
 - **Legibility first.** In the twelve frames, no word but the large titles on Projects and the Gallery sits on dots or grain. I checked this run by run, not by eye: every other run of text in the frames has a flat colour as its worst background. All 484 runs of text in the twelve frames pass 4.5:1 against the real pixels behind them, and so do the diagram's 59. The lowest are 6.31 in light (teal words on a teal-tinted field) and 6.79 in dark (the plain widget's grey caption); the titles on the grain are 7.28 and 8.90. The full list is in `risograph/contrast.tsv`. While drawing, the check caught the first grain: it was dark enough to pull "9:41" and the titles under 4.5:1. The grain is now kept off the status bar and is much fainter. The header's two discs are kept off it too: since Ines's T-5858 review they sit below the status bar, so no dot is behind "9:41" or the signal and battery icons on Projects and the Gallery.
-- **Size.** 13 PNGs (12 frames and the diagram) come to about 3.7 MB. Most of that is the dots; the grain costs about 70 KB on the busiest frames (Projects).
+- **Size.** 13 PNGs (12 frames and the diagram) come to about 3.5 MB (3,535,232 bytes). Most of that is the dots; the grain costs about 70 KB on the busiest frames (Projects).
 - **Code-drawn only.** Every dot, disc and mark is SVG or CSS written in `risograph.py` and `screens.py`. Nothing is AI-made, stock, scanned or traced, and nothing comes from the inspiration images in `research/inbound/325/`. The ink values are screen colours chosen to suggest riso inks, not matched to any maker's ink, and a real print would differ.
 
 ### Not in this step
 
 - **Motion.** If risograph is chosen, its motion could be the press: a new card printing in its two inks, one after the other, stopped by Reduce Motion. That is not drawn here.
 - **A second ink pair, and the high-contrast sets at 7:1.** `STOCK` in `risograph.py` holds the paper and inks, so another pair redraws the whole set with one command.
-- **The Swiss editorial set** (step 4, now section 10) and the side-by-side comparison (step 6).
+- **The Swiss editorial set** (step 4, now section 10) and the side-by-side comparison (step 6, now section 12).
 
 ## 10. Direction 4: Swiss editorial (T-5859)
 
@@ -314,7 +316,175 @@ The diagram above is drawn by the same command as the frames, in the Swiss look.
 
 - **Motion.** If Swiss is chosen, its motion could be the red bar moving to the next title on a tab change, stopped by Reduce Motion. That is not drawn here.
 - **A second accent, and the high-contrast sets at 7:1.** `INKS` in `swiss.py` holds both modes, so another accent redraws the whole set with one command. The light red is 5.56:1 on white and 4.92:1 on the grey controls, so a 7:1 set would need a darker red.
-- **The side-by-side comparison** (step 6).
+- **The side-by-side comparison** (step 6, now section 12).
+
+## 11. The wash, live (T-5860)
+
+Maren, 2026-11-26. Step 5 of the plan: an Investor asked for stills plus one live page, so the wash can be judged moving on a phone (#325 c7162738460)). It is a proposal, like the rest of this page.
+
+### What it is
+
+- **One static page:** `documents/new-look/index.html` and its script `wash.js`. Together they are 18.6 KB, or 7.3 KB gzipped. There is no outside library, no network fetch, no build step, no image and no font file. The page sets its own Content-Security-Policy, which lets it load only its own script, and it has no inline script.
+- **The same wash as the stills.** `wash.js` is `wash.py` in JavaScript: the same seed (5856), the same <span title="The starting recipe a lane uses to look for ideas. G2, for example, starts from public datasets.">generator</span> (mulberry32), and the same pools, layers, crops and rounding, in the same order. It also has the same three palettes, light and dark. The page shows two windows: the Projects header (with the large title on it, as in the stills) and the field behind the first run. Each is the same crop as its still.
+- **Slow and subtle.** Each of the 12 pools of pigment sways, turns and swells on its own waves of 50 to 90 seconds. At the widest a pool sways over 28 to 52 wash units (about 20 to 40 points on the phone), turns through 1.4° to 3.4° and swells by 2.4% to 5%. It never moves faster than about 3 points a second. The cycles come from a second seed, so the motion is the same on every phone. Every cycle starts at zero, so the first frame is the still.
+- **Pause** stops the clock and keeps the frame, and the button then reads Play.
+- **Reduce Motion** makes the page draw the first frame once and never start the clock. The Pause button is turned off, and the page says "Reduce Motion is on, so the wash stays still." If the setting changes while the page is open, the page follows it.
+- **Light and dark** follow the phone's setting. A palette control (Warm, Cool, Muted) redraws the wash in any of the three palettes.
+- **Battery.** The page draws at most 20 frames a second, at up to 2x (the stills' own scale). It skips a window that is off screen and draws nothing while the tab is hidden.
+- **Legibility first.** No word sits on the wash except the large title, as in the stills. Section 5's contrast check, run on the page itself, measures every run of text against the real pixels behind it in all three palettes (warm, cool, muted), light and dark, at the first frame and at a moving one: twelve states, and all pass (below). Until T-5861 it measured warm only.
+
+### Where the Investors can open it
+
+**The page isn't on the site yet, and making it reachable needs a site change I didn't make.** The site's Documents section (`tools/site/documents.py`) publishes three things: `documents/*.md` at the top level, the hunt's <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> notes and `documents/restructuring/`. It copies the restructuring folder's HTML mock-ups with every `` cut out. No rule reads `documents/new-look/`, and the restructuring rule would remove the script that draws the wash. The task said not to change a site tool, so I didn't.
+
+- **Its address once published:** **https://its-the-company.github.io/documents/new-look/**. This needs one rule that copies `index.html` and `wash.js` as they are, scripts kept. The site's own policy (`script-src 'self'`) allows the page as it is, because it loads only its own file.
+- **Until then:** from a copy of the repository, open `documents/new-look/index.html` in Safari. With the window narrowed (or Develop > Enter Responsive Design Mode at 390 wide), it shows as it would on an iPhone.
+
+### On an iPhone-sized screen (390 pt)
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 8: On an iPhone-sized screen (390 pt), scrolls sideways" data-n="1 2" style="--tw:132px" markdown="1">
+
+| Light, moving | Dark, moving |
+|---|---|
+|  |  |
+
+</div>
+
+
+**Moving.** These are two frames 8 seconds apart in light. The drift is slow, so look at the edges of the ochre pool behind the title and the green pool in the field.
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 9: On an iPhone-sized screen (390 pt), scrolls sideways" data-n="1 2" style="--tw:132px" markdown="1">
+
+| A frame | 8 seconds later |
+|---|---|
+|  |  |
+
+</div>
+
+
+**Reduce Motion.** These are two frames 8 seconds apart with Reduce Motion on. They are identical, byte for byte, and both are the still's first frame.
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 10: On an iPhone-sized screen (390 pt), scrolls sideways" data-n="1 2" style="--tw:132px" markdown="1">
+
+| A frame | 8 seconds later |
+|---|---|
+|  |  |
+
+</div>
+
+
+**First frame against the still.** On the left is the Projects header's wash drawn as the stills draw it (SVG, by `wash.window()`). On the right is the page's header canvas with the title hidden, both 393 pt wide at 2x.
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 11: On an iPhone-sized screen (390 pt), scrolls sideways" data-n="1 2" style="--tw:153px" markdown="1">
+
+| The still's wash (SVG) | The page's first frame (canvas) |
+|---|---|
+|  |  |
+
+</div>
+
+
+### How it draws
+
+
+
+The diagram above is drawn in code by `live.py`, in the watercolor look.
+
+### How it was checked
+
+```
+python3 pywidget/docs/design/new-look/live.py     # about 90 seconds; exits 1 on any failure
+```
+
+`live.py` serves `documents/new-look/` on 127.0.0.1, so nothing leaves this Mac and the page runs under its own policy as the site would serve it. It drives headless Chromium (Playwright, already on this Mac; nothing was installed) at 390 × 844 pt, 2x, as a phone with touch. It writes `live/check.txt`, which on 2026-11-26 (the T-5861 run, with all three palettes measured) read:
+
+```
+live.py: the live wash page, checked in headless Chromium (Playwright)
+ok   port: wash.js draws the same 12 pools, 336 layers, 107520 points as wash.py, point for point (12 pools equal)
+ok   port: the crops match wash.crop() (largest difference 0.0e+00 wash units)
+ok   port: the three palettes match watercolor.py, light and dark (14 tokens each)
+ok   page: no script error and no CSP refusal in the console
+ok   frame 0: the page's header against the still's (SVG) at 786 x 500 px: mean difference 0.18 of 255, 2.43% of pixels off by more than 2 (edge antialiasing), largest 15
+ok   moving, light: 165 frames drawn in 8 s (clock 9.17 s); 10.3% of pixels changed, mean 1.56 of 255
+ok   paused, light: 0 frames drawn in 8 s, largest pixel change 0, button reads 'Play'
+ok   moving, dark: 166 frames drawn in 8 s (clock 9.52 s); 9.9% of pixels changed, mean 1.15 of 255
+ok   paused, dark: 0 frames drawn in 8 s, largest pixel change 0, button reads 'Play'
+ok   Reduce Motion, light: 0 frames drawn in 8 s after the first, largest pixel change 0, Pause disabled, status 'Reduce Motion is on, so the wash stays still.'
+ok   Reduce Motion, dark: 0 frames drawn in 8 s after the first, largest pixel change 0, Pause disabled, status 'Reduce Motion is on, so the wash stays still.'
+ok   contrast: 336 runs of text over twelve page states (three palettes, light and dark, first frame and moving), lowest 5.20:1 ('Pause', page-warm-light-frame0); lowest by palette warm 5.20, cool 5.32, muted 5.24
+ok   diagram: 43 runs of text pass 4.5:1
+```
+
+- **What a browser on this Mac can't show:** a real iPhone. Safari on iOS hasn't run the page, so its frame rate and battery cost on a phone are not measured. The script uses only standard canvas and media queries that Safari supports. The first look on a real phone is a good next step.
+- **Frame counts depend on how busy the Mac is.** In the first run (T-5860) the load average was about 160, and headless Chromium drew 63 to 98 frames in 8 seconds where the page asks for 160. In the T-5861 run above, with the load near 20 at its start, it drew 165 and 166. The clock moves at most 0.1 s a frame, so on a slow machine the wash moves more slowly but never jumps. The check asks only that it moves. The screenshots in this section are from the T-5861 run.
+- **Why frame 0 is not byte-identical to the still.** Canvas and SVG smooth the edges of 336 overlapping layers a little differently. The mean difference is a fifth of one level in 255, and no pixel is off by more than 15 levels. Side by side, the two read the same (above).
+
+### Not in this step
+
+- **Publishing it on the site.** This needs a rule in `tools/site/documents.py` that copies the two files with the script kept. It should be its own board line, for whoever owns that file.
+- **Motion in the app.** If watercolor is chosen, the app's wash would move as this page does, behind headers and cards only, stopped by Reduce Motion. Home Screen widgets would not move.
+- **Motion for the other three directions.** Each direction's "Not in this step" says what its motion could be. None is drawn.
+
+## 12. The four side by side (T-5861)
+
+Maren, 2026-11-26. Step 6 of the plan: one card for the Investors with every set side by side, light and dark, the live page, what each direction costs to build and a recommendation. The card's words are in [`card.md`](card.html); the Operator posts it on #325, and nothing here is posted by me. Like the rest of this page, it proposes and changes nothing in the app.
+
+
+
+The sheet above is drawn in code by `compare.py`. It sets the eight Projects frames that `draw.py` wrote at half size, each direction's light frame beside its dark one, with the direction's name and idea. It draws no new pixels of the frames themselves.
+
+```
+python3 pywidget/docs/design/new-look/compare.py     # compare/sheet.png and compare/contrast.tsv; exits 1 under 4.5:1
+```
+
+- **Contrast.** The sheet's own 21 runs of text pass kit's check: the lowest is 7.64:1 (the grey lines on the sheet's ground). The list is in `compare/contrast.tsv`.
+- **Deterministic.** Two runs gave the same `sheet.png`, checked with `shasum`.
+- **Size.** 1,156,733 bytes (1920 × 2532 px). Most of it is the two watercolor frames and the risograph dots.
+
+### The comparison
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 12: The comparison, scrolls sideways" style="--tw:1526px" markdown="1">
+
+| Direction | The idea | Where it departs from today's look | Cost, first guess (engineer-weeks) | Likely release (today Mon 2027-07-12) |
+|---|---|---|---|---|
+| **1. Watercolor, warm** (sections 1 to 7) | A wash of pigment from one seed behind headers, cards, Gallery tiles, the first run and the Builder stage; the editor and Settings calm | Colour lives in the wash; a terracotta accent unlike iOS's standard blue | 2.5 (1.5 to 4), with the Builder as a drawing board (section 4) | about Thu 2027-07-29 |
+| ... and the wash moving (section 11) | The pools drift slowly, at most about 3 pt a second; Reduce Motion stops it | Motion behind headers and cards, nowhere else | +1 (0.5 to 2) | about Thu 2027-08-05 |
+| **2. Blueprint** (section 8) | The app as the plan of what you build: whiteprint in light, blueprint in dark, grid, hairlines, red pencil on the chosen block, true measures | A blue dark ground where #291 asked Studio for a neutral one; no shadows | 2 (1.25 to 3.5) | about Mon 2027-07-26 |
+| **3. Risograph print** (section 9) | Teal and fluorescent pink overprinting, halftone, sparse grain, titles a hair out of register | A loud pink accent; printed offsets in place of shadows | 2.5 (1.5 to 4) | about Thu 2027-07-29 |
+| **4. Swiss editorial** (section 10) | Four-column grid, 52 pt titles, one red accent, rules not shadows | The only set that moves things (a few points, onto the grid); square cards; the most likely to read as "not iOS" | 1.5 (1 to 2.5) | about Thu 2027-07-22 |
+
+</div>
+
+
+### How the costs were sized, and how far to trust them
+
+- **They are weeks of one engineer's work: my first guesses.** Idris, who would build the chosen direction, has not checked them. The next plan (tokens, then screens) sizes the chosen one properly, step by step, and its figure replaces these.
+- **The unit is the plan's.** A week is one engineer's week of work, as [`documents/restructuring/05-timeline.md`](../restructuring/05-timeline.html) and [`ops/plans/pywidget/plan.md`](pywidget-plan.html) count it. The look's work sits on the plan's path for the interface, so each week of it is likely to move the release (Monday, July 12, 2027) by up to about a week: to about July 22 (Swiss), July 26 (blueprint), July 29 (risograph, or a still watercolor) or August 5 (moving watercolor). The dates add the likely figure to today's likely release in `ops/milestones.json` (Mon 2027-07-12); I did not run the release scripts, and the ranges would move the release by their own low and high ends.
+- **What every figure covers.** One set of colours and type for light and dark, put into the app, and the motif drawn natively in SwiftUI where this page draws it. The screens themselves are already in the plan (phase C builds the tab shell and the Gallery on whichever look is approved), so only the look's own work is counted. Any overlap with phase C that would absorb part of it is not netted off.
+- **What drives each figure.**
+  - *Watercolor:* porting the seeded wash (12 pools, 336 layers, 107,520 points) to Swift, drawn once per size and kept, placed in five kinds of window; and the Builder's drawing board (grid, dashed outlines, dimension lines from the layout's own numbers). The motion is apart because it is the least known: a redraw on every frame, a frame cap, stopping off screen, Reduce Motion, and the battery cost, which nobody has measured on an iPhone (section 11).
+  - *Blueprint:* the grid, centre lines, corner marks and title guidelines; hairline outlines in place of every shadow; dimension lines in the Builder.
+  - *Risograph:* halftone screens and grain, which need a shader or images drawn once; the two-ink titles out of register, which mean a custom title; the colour mixing.
+  - *Swiss:* the least drawing, but a 52 pt title is not iOS's own large title, so it needs a custom header that still collapses as the system's does, and the square shapes and moved spacing touch every screen.
+- **Not counted in any:** the high-contrast sets at 7:1, iPad layouts, the icon and the store page, and motion for blueprint, risograph or Swiss (each set's "Not in this step" says what it could be).
+
+### The live page, and the choice it needs
+
+The live wash page (section 11) is not on the site, because `tools/site/documents.py` has no rule for `documents/new-look/` and strips scripts from mock-ups. The card offers the Investors the choice: reply "do it" and the company lets this one page run its script on the site (only the site's own pages, such as Home and the ideas library, run scripts today), so the page opens at https://its-the-company.github.io/documents/new-look/; or open `documents/new-look/index.html` from the repository in Safari on a Mac. The card shows the stills `live/live-light-390.png` and `live/live-dark-390.png` meanwhile.
+
+### The recommendation
+
+**Watercolor in the warm palette, with the Builder drawn as a measured drawing board (section 4); the wash still first, the drift added after it has run on a real iPhone.**
+
+- It sheds the stock-app feel most: the terracotta accent is far from the system blue, and the wash gives each screen a personality the other three get from rules or ink.
+- It keeps legibility first. Words sit on the wash only in the large titles, and every run of text passes 4.5:1 against the pixels behind it in all three palettes (sections 5 and 11).
+- It answers both of an Investor's ideas in one look: the wash where people browse, the blueprint language where they build.
+- Its risk is the motion's cost on a phone, which is unmeasured, so the drift waits for that measure. If the Investors want the cheapest change, Swiss is about a week less, at the price of looking least like an iPhone app.
 {% endraw %}
 
 </div>

@@ -155,6 +155,24 @@ Counts: High 0, Medium 5, Low 6.
     it (115024.log, 26/0), so the red is how they run inside the full target on this Simulator, not this change.
   - Not covered: Release and a real iPad (F4, T-4615).
 
+- **The whole class, and the real tap in all three window modes (T-5283, from T-4943 M1, Idris, 2026-11-26).** iPad
+  Simulator t5283-ipad (B8C8B5CD-D275-492B-A7B5-DFE7DD9817D3), iOS 27.0, Debug, main 1d3768ea24 plus the test changes.
+  `windowedApps(_:)` now takes a mode (Windowed Apps, Full Screen Apps, Stage Manager) and sets it in Settings >
+  Multitasking & Gestures whenever a test asks for another one; `testRealWidgetTapGoesToAnOpenWindowInFullScreenApps`
+  and `...InStageManager` run the same real Home Screen tap as `testRealWidgetTapGoesToAnOpenWindow`, with one window
+  and then with two (Open in New Window). Lines from both runs: pywidget/docs/reviews/t5283-evidence/test-results.txt.
+  1. 11:57 AM ET, ops/runs/xcodebuild-20261126-115745.log: 8 tests, 1 red. `testAppNotRunningLauncherLinkOpensOneWindow`
+     (red twice, the runner retried it): "0 windows by their controls, want 1". Not a routing fault: since T-5815's tab
+     shell an app a link starts opens on the Projects list, where `shown` counted neither control it knew (More,
+     the Gallery mode picker). The other 7 green, the three real-tap tests among them, each with probe
+     `sessions=1 scenes=1` after the one-window tap and `sessions=2 scenes=2` after the two-window tap.
+  2. Fix in the test only: `shown` counts per window a More button, a Gallery mode picker or the Projects list's New
+     Project button; the launcher test's first wait accepts either. 12:24 PM ET, ops/runs/xcodebuild-20261126-122446.log:
+     8 executed, 0 failures, the whole class in Windowed Apps and the real tap in Full Screen Apps and Stage Manager.
+  - `testAppNotRunningWidgetLinkOpensOneWindow`, red on 11-16 at the countdown page's well (T-4582), was green in both
+    runs, its window count 1 each time.
+  - Not covered: Release, a real iPad, a script or launcher widget placed on the iPad Home Screen.
+
 ### F4 (Medium, T-3765): the only tested path registers the scheme, and the shipping build does not; a real widget tap in Release is unverified
 
 - Where: pywidget/ios/scripts/debug_url_scheme.sh:13-20, pywidget/ios/project.yml (phase "Register pywidget scheme (Debug

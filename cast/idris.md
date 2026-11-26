@@ -32,7 +32,6 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - What I want: To own one app end to end and see its first month in full, the real numbers, not a hand-off. Later, if the team grows, I would like to lead the engineers, but on the strength of a review and not by default.
 
 ## Open (mine)
-- T-2943 11-24: build 0.1 (8) uploaded exit 0 (clean clone of eadd3d414b; mark + ladder1..12 verified). Open: Investor export-compliance + internal-only read; build notes to #325 (ops/build-notes-0.1-8.txt). Lesson: fresh clone needs scripts/bootstrap.sh and PW_MAIN_CHECKOUT=<main checkout>.
 
 
 - T-5850 11-25 (b2): e036cda87c, 2cbd111d64, 7d2635baa4 (second widget extension, location <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> Swift side; unit 2345/0, host 2076/0, 5/5 mutants). Left: Simulator run (item 5), Odalys review, bundle ID, Maren draft words, lane flag off in Release (ops/plans/T-5850-handoff.md). Lessons: xcodegen again after each new test file; a <span title="A test written in advance. If it fires, we drop the idea.">kill</span> of another process was refused by the classifier (rule 14), so never kill host runs, wait.
@@ -45,13 +44,15 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-4183 11-26: settled on main ddbc366df6 in scratch T-4183-idris/wt (detached): 9bec59faa1 T-5035, 044d065078 T-4646, 01f654162e T-5012, 7be984c672 T-4641 slice 1. Host 4408/0, unit 2528/0 J-...0953-...5213d3, UI 24/0 J-...1006-...28a810, landcheck green. Open: land; T-4641 L3 (Maren's words), onRunQueue. Lesson: lane_settle refuses a detached copy; cherry-pick onto main by hand.
 
 - T-4302 11-25 (b): own-widget save test in WidgetStepTimeoutTests (test only). Open: review, land.
-- T-5891 11-26: slice 2 in scratch T-4476-idris/wt: 54bfaf4efe Run, 81b0ab437b send, a5de96c51c sendProject; tests 1ba6497a07, 85d1a3bedf (OutsideProjectRunPathsTests, each red with its guard off). Unit 2532/0/2, host 4408/0. Review fixes 11-26: 53d401bff6 M1 (restore keeps mark, by name when stale; delete drops it), bc9345fe90 M2 (Run refusal above bridge), 69f05d35e6 page; unit 2535/0/2 J-...1150-...136aef, 3/3 mutants red. Open: Pernille re-review, land, Maren's page; lows (Make it mine send, Save a copy unmarked) on page. Lesson: openProjectFile counts the text as sent; edit before saveNow in a send test.
+- T-5891 11-26 (b): 4e12412e68 in scratch T-4476-idris/wt: outside project page (OutsidePage, Make It Mine after warning) + Pernille's L2/L3. Host 4422/0, unit 2573/0 J-...1404-...566aac, UI 1/0 J-...1420-...108ddd. Rewrote ed96a6b0d3 (Plain/Evidence/ws stripped, partial). Open: Pernille re-review of the page, land, Maren's words; no mutant run of the 3 page tests. Lesson: ShortcutRun.source throws when widgets/ is missing.
 
 ## Lessons
 - Older lessons and dated logs: archive.md.
 - T-4188 (merge point) and T-5796 re-reviews still open; detail and xc.sh lessons in archive.md.
 - T-4692 11-23 (personal/b): re-review, land. T-5047 11-24 (50a2c3dd39, da4c8d0743): re-review, land. T-5607 86cf99245a: review, merge. T-5108: patch in ops/plans/T-5108-handoff.md, uncommitted. T-0053: part 3 target, part 4 footprint. T-0044/T-4181: see archive.md.
-- T-4185 11-26 (a3): T-5268 2781480048, T-5016 b45c86c35b (partial: Maren's board line not added, refused earlier, rule 14). T-4638: needs Ines's done-when call (scan 37-62 ms ok, tap-to-frame 206-540); my board add for it refused by the card guard, rule 14. T-5283: iPad fix found (openTab: iPad tabs are buttons outside TabBar; cold link opens Projects list, not editor), diff in scratch T-4185-idris/t5283-modes-opentab.diff, last iPad run stopped by a stall waiter, rerun gated by Mac mini load (exit 75). T-4582 not reached. Lesson: iPad UI tree is in the xcresult (xcresulttool export attachments).
+- T-4185 11-26 (a): T-5283 fdc198e4ca (3 iPad modes, class 8/0, log 122446). Merge point at 110 min. Open: T-4638 (Ines's done-when), T-5016 (Maren's line, Operator), T-4582 (green 2x on iPad cold start; test T-3552 mutant to prove cause), T-5633 diff in scratch T-4185-idris/t5633.diff (shared openAsWidgetTap; mutant run owed). Lesson: settle()-style counts break when the start screen changes; count per window.
+- T-4185 11-26 (a3): T-5268 2781480048, T-5016 b45c86c35b (partial); T-4638 needs Ines; T-5283 iPad diff in scratch. Detail in archive.md.
+- T-4182 11-26 (b2, 12:50 PM): a315e05d1e T-3291 moved-badge time (partial), 611745fbce T-4802; no merge point. Open: T-3792 test L (exit 75 twice, wt ready), T-3291 item 1 + T-2232 asked of Ines (events), T-4801 already on main (c0e4a0f0b7), needs its tick. Lesson: a working-tree edit changes the runner snapshot; keep the tree still while queued checks run.
 {% endraw %}
 
 

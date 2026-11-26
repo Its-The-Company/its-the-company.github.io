@@ -90,6 +90,69 @@ This session resumed the 11-25 <span title="An idea that reaches B or better but
   2. ecc981092e's subject says "5.1"; the rule is ADR-007 4.3, and the note's "5.3 expiry handler" is 4.3 too.
   3. "queued-turn-runs-on-closed-lane" in Tests/mutants-t1852.json matches nothing (stale before this branch).
   4. `RefreshBatch.budget(.infinity)` gives 5, not 20: defensible, not covered by the ADR.
+
+## Session 2026-11-26 12:05-2:30 PM ET (Idris, lane a2, from main 7eff1b673d)
+
+- T-0793 37261505d9, slice 3 only: App/Bridge/BackgroundRefreshTask.swift. BGTaskScheduler as the Submitting conformer;
+  `com.pywidget.refresh` registered in PyWidgetApp.init (the launches that write widgets); each firing sets its expiry
+  handler first, reschedules, ends once (an expiry ends it at once, success false, and cancels the work); the scene
+  entering the background reschedules under a background-task assertion. BackgroundRefresh.placedNow reads
+  .lane-demoted.json for the (c) filter. project.yml and App/Info.plist: BGTaskSchedulerPermittedIdentifiers
+  [com.pywidget.refresh] and UIBackgroundModes [fetch], held by BackgroundRefreshTaskTests against the built plist.
+  4 new mutants in Tests/mutants-t0793.json, all killed by hand. Full unit suite with it 2557/0/2
+  (J-20261126-1221-land-chk-a5ab71-1-0354fb); LaneWarmWindowTests 6/0 (the app launches with the registration).
+  A firing runs no script yet. Still left on its line: the run through WidgetWriter's pass calling RefreshBatch (T3
+  too) and a stored count of deferrals in a row, the second submit at the task's end (after that run), the ADR-007 4.3
+  expiry marker (`expired`, `deferred`, `backgrounded`, `expired_runs`), the 7.2 loop breaker (status.json
+  `background`), `oom_guard`. The Simulator never fires the task and refuses every submit: a real firing is T-0680's.
+- T-2047 ff3eebfd17: testATurnWithNobodyOwedLongerLeavesTheWaitToTheNext (x owed longest runs at once, y gives way
+  to o from its first nap; ordered by LaneSteps). Its mutant (flag taken above `guard !older.isEmpty`) is in
+  bench/t2037-mutants.json, killed by hand (y wrote; J-20261126-1320-land-chk-a5ab71-1-126920).
+- T-2099 a801f7a7e3: ExtensionLaneTests' helper defaults `headroom` to Stub(.max); 0 only in the tests about 0.
+  LaneGuard's promise of a `headroom=unknown` shipping row (nothing wrote it) is cut; only the gate build's row has
+  the column. Its build job's suite: 2559 executed, 3 skipped, 0 failed; the third skip (not one of the two Gallery
+  ones) is outside ExtensionLaneTests and did not recur in the whole-suite run below.
+- No commit: T-4280 (rule on main since c76347c124; the proof is T-4494 item 3, the Investors' iPhone) and T-1882
+  (part 1 still needs B5/T-0678 to write and read fields.json; no Swift or runtime code writes it at 7eff1b673d).
+  T-2021: not started; it needs a forced-lane bench (PYWIDGET_LANE_FORCED is set by no scheme) and a quiet runner
+  for 20+ warm and 20+ cold guard-to-clearMarker timings. MERGE POINT reached at minute 115.
+- Each build-for-testing through the runner runs the whole unit suite (10-15 min); the plan's unit filters are
+  then answered from that job. A hand mutant costs one build (about 8-10 min each).
+- Whole PyWidgetTests at a801f7a7e3 (XC_TASK=T-4181): 2558 executed, 2 skipped (the two Gallery snapshot tests, as on
+  main), 0 failed (J-20261126-1404-land-chk-a5ab71-1-048f8a).
+
+## Pernille's review of the merge point (2026-11-26, Idris, lane a2)
+
+- Blocking, fixed in the T-2047 follow-up commit: the test's `mayRun` gate on "x" never ran (ExtensionLane.turn asks
+  `mayRun` of `pywidget.premade.` ids only), so y was not held until x's turn was queued; the mutant was killed only
+  when y queued inside x's 50 ms run, flaky on a loaded runner. The test now holds x's run itself (the helper's new
+  `hold` closure) until y's turn is queued, so the burst never empties between them. Mutant entry unchanged.
+- Comment fixed: BackgroundRefreshTask.register() returns false for an identifier not in Info.plist; a second
+  registration (or one after launch) raises and ends the app.
+- Open, no code change yet (non-blocking):
+  1. WidgetWriter.placedNow turns a WidgetKit error into [], so a background firing that hits one cancels the
+     pending request (no placed widget asks). An expiry before the submit has the same effect. Either way background
+     refresh stops until the app next goes to the background. Whoever takes the firing's run (T-0793 next slice)
+     should tell "WidgetKit failed" apart from "nothing placed" and keep the request on the first.
+  2. testPlacedNowWithNoAppGroupStillAsks does not kill the "demotion list is not read" mutant (with no group there
+     is no list to read). testPlacedNowReadsTheDemotionListBesideTheWidgets is the test meant to kill it; a mutant
+     entry for it should name that test, not this one. Not re-run by hand in this pass.
+  3. (Pernille's re-review of 100d07129d) The test's hold on x's run lets go after 2 s. If y's refresh stalls more
+     than 2 s before its turn is queued, x's run ends, the burst can empty, and the mutant would pass when it should
+     fail. No test hangs on it; it is a weak spot in the kill, not a hang.
+- Checks for the follow-up: whole PyWidgetTests 2558/0 (2 Gallery skips, as on main), J-20261126-1425-land-chk-a5ab71-4-12b081;
+  host_keep --task T-2047 42 suites, 4422 tests, 0 failed; the mutant re-run against the reworked test failed it in
+  2 of 2 runs (`-test-iterations 2`, "Iteration 1 of 2" and "2 of 2" both failed), y wrote instead of giving way
+  (ExtensionLaneTests.swift:836, ops/runs/xcodebuild-20261126-143755.log). Correction: the 100d07129d commit message
+  says "5 tries"; that is wrong, the run had 2 iterations and failed both.
+  xc_mutants.py printed NOVERDICT (exit 65, "no failed test") for that run although the log lists the failing test:
+  its failure parser misses this log. A tool bug, not looked into here.
+
+## Re-review, 2026-11-26 ET (Operator, lane a2)
+
+- Pernille re-read 100d07129d: nothing blocking. The mutant's find string still matches, and it is now killed by
+  ordering (hold(x) keeps `queued` at 2 or more until y's turn is queued); the <span title="What keeps an idea below the top: the cap that applies to it now.">hold</span> cannot deadlock (every wait capped
+  at 2 s). Her two non-blocking points are in the open list above (the 2 of 2 record, the 2 s stall).
 {% endraw %}
 
 </div>

@@ -41,7 +41,13 @@ Investors are told before any of them ships (#41 c6653117254).
    entry, goes Home, and opens `pywidget://open?slot=x` as a widget tap does, through the system and the window's
    onOpenURL (`XCUIDevice.shared.system.open`; the Debug build registers the scheme, scripts/debug_url_scheme.sh;
    T-3847, Pernille's T-3680 M1, which also removed the old Debug launch-argument hook). It checks that the sheet shows
-   and that Cancel leaves the gallery's sheet under it.
+   and that Cancel leaves the gallery's sheet under it. Since T-5633 (Pernille's T-3847 review, L1 and L2) every
+   launcher UI test opens the link through one helper, `XCUIApplication.openAsWidgetTap` (ios/UITests/UITestLaunch.swift),
+   shared by LauncherTapUITests and LauncherWindowsUITests: `system.open`, then for up to 20 s it taps Springboard's
+   "Open in PyWidget?" prompt whenever it shows (the old copies gave it 2 s) until the app is in front. The gate that
+   keeps a launcher link inert where the launcher is off is `LauncherTapRoute.tap`'s first guard
+   (App/LauncherTapHandling.swift), and `testLauncherLinkOpensNothingWithTheGateOff` was seen red through this real
+   link with that guard removed, then green with it back.
 7. A file the app can't read gets its own sheet that says so, with no link field, since a save would be refused
    (T-3663 L1). Unreadable means: not a JSON object, a `slots` that isn't a list, over 64 KiB (L2: a tap reads it on
    the main thread), or a `format` other than 1 (L3: this build never rewrites a later build's file). A tap reads the

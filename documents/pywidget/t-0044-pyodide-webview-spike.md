@@ -108,9 +108,12 @@ deploy docs say the core tarball is "the same set of files that are installed if
 www.npmjs.com, not the registry. Pages saved with URL and date in `research/inbound/t0044-pyodide-route/`.
 
 `fetch_pyodide.py` makes two requests, 5 s apart, signed out: the version document, then the one tarball it names.
-**The pin is npm's, not a sha256.** npm publishes no sha256 for the file, and the only sha256 on file (the GitHub
+On 11-21 the pin was npm's, not a sha256. npm publishes no sha256 for the file, and the only sha256 on file (the GitHub
 digest) belongs to the `.tar.bz2`, a different file. So the tarball was checked against the registry's
-`dist.integrity` (sha512) and `dist.shasum` (sha1). Both matched. Its sha256 is recorded here so a later fetch can pin it:
+`dist.integrity` (sha512) and `dist.shasum` (sha1). Both matched. A registry document fetched seconds earlier from the
+same host proves the transfer, not the bytes reviewed, so since T-5529 the script holds the size, sha256 and sha512
+below as constants and refuses any other file before it compares npm's hashes (checked with no download by
+`pywidget/tests/spikes/test_t0044_fetch_pyodide.py`). The software log row is in `log/software.md`. The file run here:
 
 - `pyodide-314.0.7.tgz`, 6,488,647 bytes, sha256 `66b7949e5a0cba2250b586d7e368bf12fb482800748d182c4618254b685ffaa0`,
   sha512 `0YvXxEhfEdpLfb/XkM2BFAeMROq0iMUX2bzzH9pOttyMcWkwq+HbE5uyuGD82LN7y2q+SNvi/6V5JEsOlD2R1A==`, MPL-2.0,

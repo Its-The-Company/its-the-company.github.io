@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-26T15:47:19.991961+00:00",
+ "at": "2026-11-26T15:47:58.310667+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -91,7 +91,7 @@
    "task": "[build] T-4476 run paths refuse outside",
    "model": "opus",
    "started": "2026-11-26T15:39:11.964Z",
-   "seconds": 488,
+   "seconds": 526,
    "finished": null
   }
  ],
@@ -486,7 +486,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-26T15:47:03Z",
+  "at": "2026-11-26T15:47:46Z",
   "s": {
    "T-4800": [
     "mergetest",
@@ -524,7 +524,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-26T15:47:03Z",
+  "at": "2026-11-26T15:47:46Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -542,7 +542,7 @@
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 552
+    "parked": 553
    },
    "cur": [],
    "ld": [
@@ -552,8 +552,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-26T15:46:38Z",
-    "ld": 6.29,
+    "at": "2026-11-26T15:47:47Z",
+    "ld": 5.07,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -590,7 +590,7 @@
    "parked": 7,
    "open": true,
    "mq": false,
-   "counted": "2026-11-26T15:37:15+00:00",
+   "counted": "2026-11-26T15:47:35+00:00",
    "by": {
     "app": {
      "n": 6,
@@ -608,11 +608,11 @@
      "open": true
     }
    },
-   "at": "2026-11-26T15:47:19+00:00"
+   "at": "2026-11-26T15:47:58+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-26T15:47:19+00:00"
+   "at": "2026-11-26T15:47:58+00:00"
   }
  },
  "operators": [
@@ -622,8 +622,8 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session",
-   "at": "2026-11-26T10:30:11-05:00"
+   "t": "Inbox \u2013 Evan's 10:47 AM Message on GitHub",
+   "at": "2026-11-26T10:47:32-05:00"
   },
   {
    "w": "Operator",
@@ -648,7 +648,18 @@
   "sent": "2026-11-26T15:29:26Z",
   "seconds": 43.0
  },
- "inbox": [],
+ "inbox": [
+  {
+   "id": "c7196748897",
+   "state": "received",
+   "position": 1,
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "Spend 100% anyway"
+  }
+ ],
  "trimmed": [
   "lane_next",
   "queue_text",

@@ -350,6 +350,11 @@ contents are unconfirmed, and Wrenna or Idris may grow the set.
   lock and the reload after it (`LauncherSlotSyncTests.testTwoSavesThatCrossLeaveEveryPremadeWithTheNewerSlots`
   interleaves the two). A launcher premade whose Python saved its file would write back the `slots` it read, so it
   would need that lock first.
+- **Flushed before the rename (T-5012, 2026-11-26):** each launcher premade's premade.json is written as the settings
+  Page writes it: a new temp file (`.slots-...`), flushed to the disk (`F_FULLFSYNC`, else `fsync`) before it is renamed
+  over the old one. A power loss leaves the old file or the new one whole; the slots file is never renamed in before
+  its bytes reach the disk. A sync that fails renames nothing and removes its temp file
+  (`LauncherPremadeSlotsTests.testTheSlotsFileIsSyncedBeforeItsRenameAndAFailedSyncRenamesNothing`).
 - **Still unconfirmed:** `shortcuts://run-shortcut?name=` (s11) is kept as Maren drew it, untested on a device.
 
 ## 11b. Which premade lists hold the launchers (T-4679, Idris, 2026-11-18)
@@ -366,7 +371,7 @@ without the condition holds them in none. This stays until #192's release step, 
 | Widget picker and the app's widget pass (`WidgetChoices.premades`, `WidgetWriter.offeredPremades`) | Yes, after every shipping premade, in launcher-catalog.json's order, as free rows, with or without Pro | T-4212: a tester must be able to place one. The 2026-11-17 12:27 AM <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">ruling</span> (#41 c6939492685) says every premade works for everyone, so a launcher is never locked. |
 | Gallery <span title="The App Store results a buyer sees for a search phrase. The top 10 is the first ten, dated the day we read them.">shelf</span> (catalog.json, `GalleryEntry.shelf`) and its free shelf | No | The shelf is what a customer is shown and sold. An unreleased widget has no page there. |
 | Pro (pro-flags.json, `ProGates`) | No: never locked, never sold, and in no Pro tag | Nobody has priced them. The ruling's Pro tag goes on a premade that uses a Pro feature, and that choice belongs to #192 together with the move into pro-flags.json (review t4185 N10 to N12). |
-| Gallery pages (where a widget's own tap goes) | No page | A tap on a launcher's app box opens that app through PyWidget (tap-path.md). A tap anywhere else sends the premade's Gallery link. The Gallery finds no page for it and stays at its root. Open for Maren at #192: should that tap open Launcher Apps instead? |
+| Gallery pages (where a widget's own tap goes) | No page | A tap on a launcher's app box opens that app through PyWidget (tap-path.md). A tap anywhere else sends the premade's Gallery link. The Gallery finds no page for it and stays at its root. Open for Maren at #192 (s11c item 3): should that tap open Launcher Apps instead? |
 
 </div>
 
@@ -375,7 +380,27 @@ The tests read the build they run in: `LauncherPickerTests.idsHere` is the six i
 other build. FirstOpenPassTests (the T-3557 pass and offered list), ProFlagsContractTests (the flag file covers
 every bundled premade except these), ProStoreTests' T-0051 picker lists, WidgetTapRoutingTests (a Gallery page
 for every premade except these), and the T-3364 and T-3393 shelf checks (every bundled premade except these is on
-the shelf) each add it.
+the shelf) each add it. The release step's three open choices are on one list, s11c.
+
+## 11c. The launcher release step's checklist (#192; T-5016, Idris, 2026-11-26)
+
+The launchers ship only after the real-iPhone test (#192) says a tap does not flash PyWidget too long (tap-path.md).
+The commit that releases them is the release step. s11b's per-list call holds until then; these three things are
+decided or done in that step, and none of them is done before it. Pernille's review of T-4679
+(reviews/t4679-a16af478-pernille.md, L1) found them in prose only; this is their one list. The T-4185 card in
+ops/plans/app-features.md names it.
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 4: 11c. The launcher release step&#x27;s checklist (#192; T-5016, Idris, 2026-11-26), scrolls sideways" data-n="1" style="--tw:802px" markdown="1">
+
+| # | What the release step does | Owner | Where it is carried |
+|---|---|---|---|
+| 1 | Decide each premade list again for the six launchers: the Gallery shelf and its free shelf (catalog.json), the Pro tag (pro-flags.json, `ProGates`), and a Gallery page (where a tap outside the app boxes goes). s11b's table is the starting point; each row's "No" is changed or kept on purpose, and the tests that add the six as an exception (s11b's last paragraph) are changed with it. | Idris (T-4185) | this table; the release step's own board line when #192 passes |
+| 2 | Delete `LauncherPremade` in the same commit that moves the six into pro-flags.json. Otherwise `order + LauncherPremade.names` lists each launcher twice in Edit Widget (review t4185 N11; only the launcher-build half of LauncherPickerTests would see 12 against 6). Keep the ids `launcher-<name>` (N10). | Idris (T-4185) | this table |
+| 3 | Answer where a tap outside a launcher's app boxes goes: the Gallery's root, as now (`GalleryView.show(_:)` finds no page and opens nothing; `GalleryPushTests.testAnUnknownPremadeNameLeavesTheGalleryAtItsRoot` pins it), or Launcher Apps in Settings. | Maren | her own board line (not yet written: the 2026-11-26 add was refused, so the Operator places it) |
+
+</div>
+
 
 ## 12. Strings
 
@@ -383,7 +408,7 @@ Printed from `draw_editor.py` (`--strings`), so the frames and this table cannot
 time. Typographic quotes and apostrophes are as they ship.
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 4: 12. Strings, scrolls sideways" style="--tw:769px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 5: 12. Strings, scrolls sideways" style="--tw:769px" markdown="1">
 
 | ID | String | Where |
 |---|---|---|

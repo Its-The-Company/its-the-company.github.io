@@ -42,17 +42,18 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 - T-5893 11-26: e83f525050 in scratch T-5893-idris/wt (location widget ID app.pywidget.location; ExtensionLinkTests 8/0 J-20261126-0017, host 4388/0). Open: Odalys review, land; Investors register the new ID. Lesson: an extension ID is the app ID plus exactly one part.
 
-- T-4183 11-26: in scratch T-4183-idris/wt, 79cb199a26 T-5035, ae7591c6cf T-4646, 88189e4ca5 T-5012, 7c46729842 T-4641 slice 1 (2530/0, J-...0916-...297f16; mutants J-...0936-...40a980). Open: review, land; T-4641 L3 (Maren's words), onRunQueue. Lesson: XCTAssert(await ...) does not compile; Core runs Tests/Core too, so app-only types need #if !SWIFT_PACKAGE.
+- T-4183 11-26: settled on main ddbc366df6 in scratch T-4183-idris/wt (detached): 9bec59faa1 T-5035, 044d065078 T-4646, 01f654162e T-5012, 7be984c672 T-4641 slice 1. Host 4408/0, unit 2528/0 J-...0953-...5213d3, UI 24/0 J-...1006-...28a810, landcheck green. Open: land; T-4641 L3 (Maren's words), onRunQueue. Lesson: lane_settle refuses a detached copy; cherry-pick onto main by hand.
 
 - T-4302 11-25 (b): own-widget save test in WidgetStepTimeoutTests (test only). Open: review, land.
+- T-5891 11-26: 06e5d61832 in scratch T-4476-idris/wt (outside mark + runRefusal; 31/0). Open: run paths call runRefusal, page (Maren), Pernille review.
 
 ## Lessons
 - Older lessons and dated logs: archive.md.
 - T-4188 (merge point) and T-5796 re-reviews still open; detail and xc.sh lessons in archive.md.
-- T-4185 11-26 (a2 session): T-4570 committed (lock, 3 tests red without it). T-4638 needs a done-when decision (scan 37-62 ms, open 206-540). T-5283 diff + T-5016 diff <span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">parked</span> in scratch T-4185-idris (iPad id= runs gated by T-5865 load/busy; board add for Maren's line refused, rule 14). Lessons: run host_keep with run_in_background and a long timeout (a 10-min <span title="A measured fact that holds a grade below a letter, however good the rest is.">cap</span> kills it); Core swift test after touching Shared/.
 - T-4692 11-23 (personal/b): re-review, land. T-5047 11-24 (50a2c3dd39, da4c8d0743): re-review, land. T-5607 86cf99245a: review, merge. T-5108: patch in ops/plans/T-5108-handoff.md, uncommitted. T-0053: part 3 target, part 4 footprint. T-0044/T-4181: see archive.md.
 - T-4182 11-26 (a2): 8199273c87 T-3291 norun card (partial), 6c112dc987 T-2492, 578e382441 T-2493; merge point. Open: T-2232 waits on Ines (app row peak_mb), T-2497 (script in scratch), T-3291 <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span> q + Sim check. ops/plans/T-4182-handoff.md. Lesson: bound every wait loop in a test, or a red-first run hangs the job.
 - T-0306 11-26: committed on personal/a (class 8/0, unit 2497/0/2). Open: review, land. Lesson: under T-5865 load, run xc.sh from pywidget/ios with XC_LOCAL=1 so it goes to the MacBook runner.
+- T-4185 11-26 (a3): T-5268 2781480048, T-5016 b45c86c35b (partial: Maren's board line not added, refused earlier, rule 14). T-4638: needs Ines's done-when call (scan 37-62 ms ok, tap-to-frame 206-540); my board add for it refused by the card guard, rule 14. T-5283: iPad fix found (openTab: iPad tabs are buttons outside TabBar; cold link opens Projects list, not editor), diff in scratch T-4185-idris/t5283-modes-opentab.diff, last iPad run stopped by a stall waiter, rerun gated by Mac mini load (exit 75). T-4582 not reached. Lesson: iPad UI tree is in the xcresult (xcresulttool export attachments).
 {% endraw %}
 
 

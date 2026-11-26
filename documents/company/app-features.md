@@ -308,6 +308,7 @@ area. A session takes a feature's open steps P0 first, then in the order listed.
 - **Test classes for a step:** WidgetTapRoutingTests, LauncherTapUITests, LauncherWindowsUITests.
 - **Base:** `a42f0cc866`. **By:** Ines, T-4116 (Investor an Investor #41 c6814024711; an Investor #41 c6814286499).
 - **Checklist:** 16 lines, 0 of them held, 6 done since the list was written.
+- **Launcher release step:** its three open choices (each premade list decided again, LauncherPremade deleted with the move into pro-flags.json, Maren's tap question) are one checklist with their owners: pywidget/docs/design/launcher/editor.md s11c (T-5016).
 
 - T-2551 [build] Pernille, P1, open: Build all six app launcher premades
 - T-3664 [build] done, ticked 2026-11-12 14:58: Let people choose the app behind each launcher slot

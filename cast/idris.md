@@ -48,6 +48,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 ## Lessons
 - xc.sh from pywidget/ios with XC_LOCAL=1 goes to the runner via a check ref (dirty tree ok); from the root it waits on Mac mini load (75).
 - Older lessons and dated logs: archive.md.
+- T-5796 87210f30d7: Odalys re-review, land. xc.sh 'executed' counts a second try twice; compare counts with that.
 - T-4188 11-25 (b): MERGE POINT. T-0053 47f1ee158b + eea3f347a6 (Odalys fixes: walks @rpath libs, red on plant), T-0063 cbe9e5ff9f. Open: Odalys re-review, iPhone run, merge; T-3554 F7 + review, T-5294 in scratch. Lessons: libswiftCoreLocation is autolinked into every Swift binary, so check bound imports; never report a runner verdict before reading it; the runner runs a build-for-testing as whole PyWidgetTests.
 - T-5797 11-25 (a2): T-5640 slices 1-3 on personal/a2 (mask fonts, AnimationPlan, TimerMaskLoop, frames, ui.Animation node). Left: Home Screen limits run never passed the load gate (60-300); harness + draft limits doc in scratch T-5640-idris/. Then T-5662/T-5829/T-5831; T-3792 untouched. Lessons: re-run the same xc.sh to read a runner job; never loop widgetkit_check.sh on exit 75 (each try boots a Simulator), poll sysctl vm.loadavg first.
 {% endraw %}

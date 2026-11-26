@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-26T20:42:48.313938+00:00",
+ "at": "2026-11-26T20:45:54.756611+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -82,7 +82,7 @@
    "task": "[build] T-4190 Ask to Buy order",
    "model": "opus",
    "started": "2026-11-26T19:36:17.023Z",
-   "seconds": 3991,
+   "seconds": 4177,
    "finished": null,
    "effort": "high"
   },
@@ -91,12 +91,21 @@
    "task": "[build] T-5894 premade page test order",
    "model": "opus",
    "started": "2026-11-26T20:25:04.046Z",
-   "seconds": 1064,
+   "seconds": 1250,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "maren",
+   "task": "[design] T-5900 gallery tree choices",
+   "model": "opus",
+   "started": "2026-11-26T20:44:45.337Z",
+   "seconds": 69,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Idris x2",
+ "who": "Idris x2, Maren",
  "recent": [
   {
    "name": "pernille",
@@ -134,25 +143,25 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 307,
+  "runnable_count": 306,
   "blocked_count": 0
  },
  "meter": {
   "five_hour": {
    "pct": 40.0,
-   "resets_at": "2026-11-26T21:29:59.518178+00:00",
+   "resets_at": "2026-11-26T16:30:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-26T15:40:19.122987-05:00",
-   "source": "usage",
+   "read_at": "2026-11-26T15:45:50.618787-05:00",
+   "source": "live",
    "left": 60.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 6.0,
-   "resets_at": "2026-11-29T06:59:59.518201+00:00",
+   "resets_at": "2026-11-29T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-26T15:40:19.122987-05:00",
-   "source": "usage",
+   "read_at": "2026-11-26T15:45:50.618787-05:00",
+   "source": "live",
    "left": 94.0,
    "left_words": "of your weekly allowance left"
   },
@@ -163,7 +172,7 @@
    "read_at": "2026-11-26T15:40:19.122987-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-26T15:40:19.122987-05:00"
+  "read_at": "2026-11-26T15:45:50.618787-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -183,7 +192,7 @@
   "week_pct": 167.48,
   "usage_pct": 62.0,
   "work_pct": 98.8,
-  "read_at": "2026-11-26T20:42:00+00:00",
+  "read_at": "2026-11-26T20:45:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -245,7 +254,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-26T15:42:00-05:00",
+  "at": "2026-11-26T15:45:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -271,6 +280,15 @@
    "effort": "high"
   },
   {
+   "name": "Maren",
+   "state": "running",
+   "task": "[design] T-5900 gallery tree choices",
+   "model": "opus",
+   "since": "2026-11-26T20:44:45.337Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
    "name": "Pernille",
    "state": "next",
    "task": "Pernille, P1, continuation of T-2609: after...",
@@ -290,14 +308,6 @@
    "name": "Wrenna",
    "state": "next",
    "task": "Read developer.apple.com \"Keeping a widget up to date\",...",
-   "model": null,
-   "since": null,
-   "next": []
-  },
-  {
-   "name": "Maren",
-   "state": "next",
-   "task": "Maren, P2, from T-0306 (Simulator check of the L4...",
    "model": null,
    "since": null,
    "next": []
@@ -332,6 +342,16 @@
     "at": "2026-11-26T20:25:04.046Z",
     "o": "c",
     "task": "T-5894"
+   },
+   {
+    "w": "Maren",
+    "k": "design",
+    "t": "Decide the sparkline area in accented mode",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-26T20:44:45.337Z",
+    "o": "c",
+    "task": "T-5900"
    }
   ],
   "src": "plan",
@@ -410,6 +430,11 @@
   "done": [
    {
     "w": "Maren",
+    "t": "The design sheet for a transit widget that has never loaded no longer pretends it was just...",
+    "at": "2026-11-26T15:43:00-05:00"
+   },
+   {
+    "w": "Maren",
     "t": "The design sheets now print countdown and \"time ago\" text exactly as the iPhone draws it, and...",
     "at": "2026-11-26T15:16:00-05:00"
    },
@@ -417,22 +442,21 @@
     "w": "Idris",
     "t": "A widget test that sometimes failed on a busy build machine now checks the order things happen...",
     "at": "2026-11-26T15:13:00-05:00"
-   },
-   {
-    "w": "Idris",
-    "t": "A widget test that could quietly miss the bug it guards when the build machine was busy now sets...",
-    "at": "2026-11-26T15:13:00-05:00"
    }
   ],
   "count": {
-   "next": 307,
+   "next": 306,
    "wait": 0,
    "blocked": 0,
    "you": 0
   },
   "fin": {
-   "n": 15,
+   "n": 16,
    "rows": [
+    [
+     "T-5001",
+     "Fix the never-fetched frame..."
+    ],
     [
      "T-5290",
      "Close the relative-text test..."
@@ -452,10 +476,6 @@
     [
      "T-3294",
      "Close four small holes in..."
-    ],
-    [
-     "T-4800",
-     "Delete the Activity export..."
     ]
    ]
   }
@@ -499,7 +519,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-26T20:42:48Z",
+  "at": "2026-11-26T20:45:42Z",
   "s": {
    "T-4192": [
     "mergetest",
@@ -520,6 +540,7 @@
   "wk": {
    "T-4192": "Idris",
    "T-4185": "Idris",
+   "T-5001": "Maren",
    "T-5290": "Maren",
    "T-2044": "Idris",
    "T-2046": "Idris",
@@ -530,12 +551,11 @@
    "T-5861": "Maren",
    "T-5860": "Maren",
    "T-5268": "Idris",
-   "T-0458": "Pernille",
-   "T-5859": "Maren"
+   "T-0458": "Pernille"
   }
  },
  "ln": {
-  "at": "2026-11-26T20:42:48Z",
+  "at": "2026-11-26T20:45:42Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -553,7 +573,7 @@
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 848
+    "parked": 850
    },
    "cur": [],
    "ld": [
@@ -563,8 +583,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-26T20:42:49Z",
-    "ld": 1.69,
+    "at": "2026-11-26T20:44:54Z",
+    "ld": 1.5,
     "c": 8,
     "sb": 1,
     "dk": [
@@ -580,18 +600,18 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-26T20:36:52Z",
-    "ld": 24.5,
+    "at": "2026-11-26T20:42:49Z",
+    "ld": 23.87,
     "c": 12,
     "sb": 3,
     "dk": [
-     380.4,
+     377.9,
      926.4
     ],
     "sn": [
      "itsthecompany-runner",
-     "itsthecompany-runner-2",
-     "itsthecompany-runner-3"
+     "itsthecompany-runner-3",
+     "itsthecompany-runner-4"
     ]
    }
   }
@@ -622,11 +642,11 @@
      "open": true
     }
    },
-   "at": "2026-11-26T20:42:48+00:00"
+   "at": "2026-11-26T20:45:54+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-26T20:42:36+00:00"
+   "at": "2026-11-26T20:45:54+00:00"
   }
  },
  "operators": [
@@ -676,13 +696,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 2,
+  "main": 3,
   "lanes": 2,
-  "total": 4,
-  "at": "3:42 PM",
+  "total": 5,
+  "at": "3:45 PM",
   "why": "",
-  "at_iso": "2026-11-26T20:42:00+00:00",
+  "at_iso": "2026-11-26T20:45:00+00:00",
   "started": "12:21 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 2, started 12:21 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 3:42 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 3, started 12:21 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 3:45 PM ET</p></section>"
  }
 }

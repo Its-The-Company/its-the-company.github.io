@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-26T13:29:11.561362+00:00",
+ "at": "2026-11-26T13:32:18.244108+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -173,7 +173,7 @@
   "week_pct": 142.65,
   "usage_pct": 59.8,
   "work_pct": 98.6,
-  "read_at": "2026-11-26T13:29:00+00:00",
+  "read_at": "2026-11-26T13:32:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -247,7 +247,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-26T08:29:00-05:00",
+  "at": "2026-11-26T08:32:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -479,8 +479,13 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-26T13:28:59Z",
+  "at": "2026-11-26T13:31:59Z",
   "s": {
+   "T-0793": [
+    "mergetest",
+    "iPhone tests on the MacBook",
+    null
+   ],
    "T-4185": [
     "testing",
     "Mac Mini \u00b7 test",
@@ -494,10 +499,12 @@
    ]
   },
   "nm": {
+   "T-0793": "Add background refresh for widgets in version 1.0",
    "T-4185": "Launcher widgets open the apps a person chose",
    "T-4181": "Widgets refresh on their own and by a tap"
   },
   "wk": {
+   "T-0793": "Idris",
    "T-4185": "Idris",
    "T-4181": "Idris",
    "T-2612": "Idris",
@@ -514,7 +521,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-26T13:28:59Z",
+  "at": "2026-11-26T13:31:59Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -532,7 +539,7 @@
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 414
+    "parked": 417
    },
    "cur": [],
    "ld": [
@@ -542,12 +549,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-26T13:28:32Z",
-    "ld": 3.95,
+    "at": "2026-11-26T13:32:00Z",
+    "ld": 2.72,
     "c": 8,
     "sb": 1,
     "dk": [
-     30.1,
+     29.7,
      228.3
     ],
     "ss": [
@@ -559,15 +566,17 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-26T13:27:42Z",
-    "ld": 1.99,
+    "at": "2026-11-26T13:30:51Z",
+    "ld": 2.63,
     "c": 12,
-    "sb": 0,
+    "sb": 1,
     "dk": [
-     402.7,
+     401.5,
      926.4
     ],
-    "sn": []
+    "sn": [
+     "itsthecompany-runner"
+    ]
    }
   }
  },
@@ -575,11 +584,11 @@
   "wait": {
    "n": 7,
    "limit": 20,
-   "in_line": 1,
-   "parked": 6,
+   "in_line": 0,
+   "parked": 7,
    "open": true,
    "mq": false,
-   "counted": "2026-11-26T13:21:34+00:00",
+   "counted": "2026-11-26T13:31:42+00:00",
    "by": {
     "app": {
      "n": 6,
@@ -587,7 +596,7 @@
      "open": true
     },
     "other": {
-     "n": 3,
+     "n": 2,
      "limit": 20,
      "open": true
     },
@@ -597,11 +606,11 @@
      "open": true
     }
    },
-   "at": "2026-11-26T13:29:11+00:00"
+   "at": "2026-11-26T13:32:18+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-26T13:29:11+00:00"
+   "at": "2026-11-26T13:32:06+00:00"
   }
  },
  "operators": [
@@ -662,10 +671,10 @@
   "main": 0,
   "lanes": 3,
   "total": 3,
-  "at": "8:29 AM",
+  "at": "8:32 AM",
   "why": "",
-  "at_iso": "2026-11-26T13:29:00+00:00",
+  "at_iso": "2026-11-26T13:32:00+00:00",
   "started": "4:33 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 4:33 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 8:29 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 4:33 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 8:32 AM ET</p></section>"
  }
 }

@@ -184,9 +184,9 @@ and the widget itself stay with the phone.
 1. In the Shortcuts app, make sure you have a shortcut you can run safely, for example one that shows an alert.
    Note its exact name.
 2. In the Gallery, tap **Shortcuts launcher**, then the **Shortcuts** row. Tap **Add Shortcut**, type the name
-   exactly, pick a symbol. Tap **Save**. Check: the shortcut is listed. (The design gives this sheet a **Try It**
-   row; as of 2026-11-22 the build does not draw one, so the tile in step 3 is the first place the name is tried.
-   If a Try It row is there, tap it and write down whether the shortcut ran.)
+   exactly, pick a symbol. Check: a **Try It** row appears under the fields once the name has text. Tap **Try It**
+   and write down whether the shortcut ran: it hands the name to Shortcuts the way a tap on the tile does, so it
+   answers the same question as the tile in step 3, before a widget is placed. Then tap **Save**. Check: the shortcut is listed.
 3. Place a **Medium** PyWidget widget and choose **Shortcuts launcher**. Check: it shows a tile with that name and
    symbol. Tap the tile. Check: the shortcut runs.
 4. Tap the widget's background (not a tile). Check: PyWidget opens on the Shortcuts page.

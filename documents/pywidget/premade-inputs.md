@@ -305,7 +305,12 @@ Clocks needs a zone: a hit with no zone in `cities.tsv` (for example Lisburn, Un
 `page.place.nozone` and cannot be chosen.
 
 Choosing a hit returns with the place filled, and puts the city's name in the item's Name field when that field is
-still empty (the person may change it: "Home", "Mum's").
+empty or still holds the name the sheet copied from an earlier pick (the person may change it: "Home", "Mum's").
+So Lisbon then Tokyo, with Name untouched, gives "Tokyo"; a Name the person typed, or edited after the copy, is kept
+by every later pick. The sheet remembers only the one name it copied, and only while it is open: a Name the item
+opened with is never replaced. Use Current Location has no city name, so it clears a copied Name (Save then asks for
+one, `page.required`: "Home") and leaves a typed one. The Place row shows the place, never the Name: the picked
+city's label ("Lisbon, Portugal"), else the zone, else the rounded coordinates (a fix) (T-4639).
 
 ### 2.5 Where the Page is reached from
 
@@ -497,7 +502,14 @@ repositories need none, and a token is a secret the Page would have to hold (s7 
 
 
 The edit sheet has the launcher editor's Try It row, which runs the shortcut through the tile's own link
-(`pywidget://run?shortcut=`), so the person sees whether the name is right, and an Open Shortcuts row.
+(`pywidget://run?shortcut=`), so the person sees whether the name is right, and an Open Shortcuts row. Built (T-5630):
+Try It, drawn under the fields once Name has text, builds the tile's link for that Name exactly as the tile writes it
+(the Name percent-encoded, `safe=""`), so a name the tile would draw wrongly is wrong in Try It too. The app reads that
+link in one place (`ShortcutRunLink`, Shared/LauncherSlots.swift), for the tile's tap (the window's `onOpenURL`) and for
+Try It alike, and opens `shortcuts://run-shortcut?name=<name>` (unconfirmed on a device until #192). A name that is
+empty, over 40 characters, or holds a control or direction character opens nothing, and Try It is not drawn for it.
+Try It opens the Shortcuts url itself rather than the `pywidget` link: a released app registers no `pywidget` scheme.
+The Open Shortcuts row is not built.
 
 ### 3.8 Next 24 hours (`weather.py`; T-4707, Pernille, 2026-11-25)
 
@@ -669,6 +681,8 @@ mixed already (straight in the four "couldn't" lines, curly in "hasn’t", "can�
 | `page.gh.foot` | Public repositories only. The widget asks GitHub for this repository’s numbers about every 15 minutes. | GitHub footer |
 | `page.wx.foot` | The widget asks MET Norway for this place’s forecast, when PyWidget is open. Its coordinates and this iPhone’s address are sent and logged there. | Next 24 hours footer (DRAFT, T-4707) |
 | `page.sc.foot` | Type the name exactly as it is in Shortcuts. PyWidget can’t see your shortcuts to check it. | Shortcuts footer |
+| `page.try` | Try It | Shortcuts edit sheet's row; the launcher editor's own word |
+| `page.try.hint` | Runs the shortcut with this name, to check that it is right. | its VoiceOver hint |
 | `page.dup` | You already have one called “{name}”. | refusal; a list other than Countdown's events |
 | `page.full` | This list is full. Delete one to add another. | footer at a list's cap, where no cap-specific line exists |
 | `page.required` | This can’t be empty. | refusal, a required text field |

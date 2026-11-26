@@ -43,14 +43,14 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 - T-4185 11-25 (a2): T-4638 041a7f6bc9 partial (scan 1.6-2.0 s -> 37-62 ms; tap-to-frame 206-540 ms is the editor's open, done-when needs a decision). T-5314/T-4576 patches drafted in scratch T-4185-idris/; T-4906: move the plist test to an app-target file; T-5283 needs an iPad Simulator (none on the Mac mini). Lesson: Simulator xc.sh waits for 1- and 5-min load < 40; background commands die at 10 min, so poll a log file.
 
+- T-5893 11-26: e83f525050 in scratch T-5893-idris/wt (location widget ID app.pywidget.location; ExtensionLinkTests 8/0 J-20261126-0017, host 4388/0). Open: Odalys review, land; Investors register the new ID. Lesson: an extension ID is the app ID plus exactly one part.
+
 - T-4302 11-25 (b): own-widget save test in WidgetStepTimeoutTests (test only). Open: review, land.
 
 ## Lessons
-- xc.sh from pywidget/ios with XC_LOCAL=1 goes to the runner via a check ref (dirty tree ok); from the root it waits on Mac mini load (75).
 - Older lessons and dated logs: archive.md.
-- T-5796 87210f30d7: Odalys re-review, land. xc.sh 'executed' counts a second try twice; compare counts with that.
-- T-4188 11-25 (b): MERGE POINT. T-0053 47f1ee158b + eea3f347a6 (Odalys fixes: walks @rpath libs, red on plant), T-0063 cbe9e5ff9f. Open: Odalys re-review, iPhone run, merge; T-3554 F7 + review, T-5294 in scratch. Lessons: libswiftCoreLocation is autolinked into every Swift binary, so check bound imports; never report a runner verdict before reading it; the runner runs a build-for-testing as whole PyWidgetTests.
-- T-5797 11-25 (a2): T-5640 slices 1-3 on personal/a2 (mask fonts, AnimationPlan, TimerMaskLoop, frames, ui.Animation node). Left: Home Screen limits run never passed the load gate (60-300); harness + draft limits doc in scratch T-5640-idris/. Then T-5662/T-5829/T-5831; T-3792 untouched. Lessons: re-run the same xc.sh to read a runner job; never loop widgetkit_check.sh on exit 75 (each try boots a Simulator), poll sysctl vm.loadavg first.
+- T-4188 (merge point) and T-5796 re-reviews still open; detail and xc.sh lessons in archive.md.
+- T-5797 11-26 (b): slices 1-3 on main. Limits run exit 75 twice: our own Simulator boot lifts the 1-min load to 250-394, past xc.sh's 40 gate, so the Mac mini can't measure; needs a quiet machine or a gate ruling. Harness (+footprint sampler) parked in scratch T-5797-idris/t5640-harness; T-5662 widget, test, docs in scratch T-5797-idris/t5662. T-5829/5831/3792 wait. Lesson: never report a run started until the log says so.
 {% endraw %}
 
 

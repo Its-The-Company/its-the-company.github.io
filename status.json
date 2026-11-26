@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-26T20:06:15.989312+00:00",
+ "at": "2026-11-26T20:09:16.094772+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -82,7 +82,7 @@
    "task": "[build] T-5795 relative-text gaps",
    "model": "opus",
    "started": "2026-11-26T19:31:55.314Z",
-   "seconds": 2060,
+   "seconds": 2240,
    "finished": null,
    "effort": "high"
   },
@@ -91,7 +91,7 @@
    "task": "[build] T-4476 tap guard fix",
    "model": "opus",
    "started": "2026-11-26T19:33:37.966Z",
-   "seconds": 1958,
+   "seconds": 2138,
    "finished": null,
    "effort": "high"
   },
@@ -100,22 +100,21 @@
    "task": "[build] T-4190 Ask to Buy order",
    "model": "opus",
    "started": "2026-11-26T19:36:17.023Z",
-   "seconds": 1798,
+   "seconds": 1979,
    "finished": null,
    "effort": "high"
-  },
+  }
+ ],
+ "who": "Maren, Idris x2",
+ "recent": [
   {
    "name": "odalys",
    "task": "[ops] diagnose account b idle",
    "model": "opus",
    "started": "2026-11-26T20:02:24.161Z",
-   "seconds": 231,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Maren, Idris x2, Odalys",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-26T20:06:34.832000+00:00"
+  },
   {
    "name": "odalys",
    "task": "Diagnose account b idle",
@@ -139,14 +138,6 @@
    "started": "2026-11-26T18:45:56.171Z",
    "seconds": null,
    "finished": "2026-11-26T19:30:17.011000+00:00"
-  },
-  {
-   "name": "maren",
-   "task": "[build] T-5861 card review fixes",
-   "model": "opus",
-   "started": "2026-11-26T19:29:25.662Z",
-   "seconds": null,
-   "finished": "2026-11-26T19:30:10.831000+00:00"
   }
  ],
  "queue": {
@@ -157,31 +148,31 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 33.0,
-   "resets_at": "2026-11-26T16:30:00-05:00",
+   "pct": 35.0,
+   "resets_at": "2026-11-26T21:29:59.625486+00:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-26T15:00:29.755178-05:00",
-   "source": "live",
-   "left": 67.0,
+   "read_at": "2026-11-26T15:08:20.042987-05:00",
+   "source": "usage",
+   "left": 65.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 4.0,
-   "resets_at": "2026-11-29T02:00:00-05:00",
+   "pct": 5.0,
+   "resets_at": "2026-11-29T06:59:59.625507+00:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-26T15:00:29.755178-05:00",
-   "source": "live",
-   "left": 96.0,
+   "read_at": "2026-11-26T15:08:20.042987-05:00",
+   "source": "usage",
+   "left": 95.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 0.0,
    "resets_at": "2026-11-29T07:00:00+00:00",
    "used_words": "of the Fable weekly allowance used",
-   "read_at": "2026-11-26T14:35:13.424801-05:00",
+   "read_at": "2026-11-26T15:08:20.042987-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-26T15:00:29.755178-05:00"
+  "read_at": "2026-11-26T15:08:20.042987-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -198,10 +189,10 @@
  },
  "next_tick": null,
  "personal": {
-  "week_pct": 161.94,
+  "week_pct": 167.48,
   "usage_pct": 62.0,
   "work_pct": 98.8,
-  "read_at": "2026-11-26T20:06:00+00:00",
+  "read_at": "2026-11-26T20:09:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -244,14 +235,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-26T15:01:00-05:00",
+   "at": "2026-11-26T15:08:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-26T15:06:00-05:00",
+  "at": "2026-11-26T15:09:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -286,15 +277,6 @@
    "effort": "high"
   },
   {
-   "name": "Odalys",
-   "state": "running",
-   "task": "[ops] diagnose account b idle",
-   "model": "opus",
-   "since": "2026-11-26T20:02:24.161Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
    "name": "Pernille",
    "state": "next",
    "task": "Pernille, P1, continuation of T-2609: after...",
@@ -314,6 +296,14 @@
    "name": "Wrenna",
    "state": "next",
    "task": "Read developer.apple.com \"Keeping a widget up to date\",...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
+   "name": "Odalys",
+   "state": "next",
+   "task": "Odalys, P3, host-only, from...",
    "model": null,
    "since": null,
    "next": []
@@ -350,15 +340,6 @@
     "at": "2026-11-26T19:36:17.023Z",
     "o": "c",
     "task": "T-4190"
-   },
-   {
-    "w": "Odalys",
-    "k": "ops",
-    "t": "Diagnose account b idle",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-26T20:02:24.161Z",
-    "o": "c"
    }
   ],
   "src": "plan",
@@ -526,14 +507,14 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-26T20:06:08Z",
+  "at": "2026-11-26T20:09:02Z",
   "s": {
    "T-4181": [
     "mergetest",
     "Xcode checks on the MacBook, 1st to merge",
-    1795723328635
+    1795723322872
    ],
-   "T-4190": [
+   "T-5891": [
     "mergetest",
     "iPhone tests on the MacBook",
     null
@@ -547,12 +528,12 @@
   },
   "nm": {
    "T-4181": "Widgets refresh on their own and by a tap",
-   "T-4190": "Settings and Pro: buy, restore, themes",
+   "T-5891": "Ask before code from an imported file first runs",
    "T-4185": "Launcher widgets open the apps a person chose"
   },
   "wk": {
    "T-4181": "Idris",
-   "T-4190": "Idris",
+   "T-5891": "Idris",
    "T-4185": "Idris",
    "T-2497": "Idris",
    "T-3294": "Idris",
@@ -569,7 +550,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-26T20:06:08Z",
+  "at": "2026-11-26T20:09:02Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -581,13 +562,13 @@
     "parked": 7
    },
    "m": {
-    "checking": 4,
+    "checking": 7,
     "inline": null,
     "conflicted": null,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 811
+    "parked": 814
    },
    "cur": [
     [
@@ -596,7 +577,7 @@
      ],
      "iPhone app tests",
      "MacBook",
-     4
+     7
     ]
    ],
    "ld": [
@@ -606,12 +587,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-26T20:06:09Z",
-    "ld": 3.99,
+    "at": "2026-11-26T20:09:03Z",
+    "ld": 2.74,
     "c": 8,
     "sb": 1,
     "dk": [
-     22.1,
+     22.2,
      228.3
     ],
     "ss": [
@@ -623,16 +604,16 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-26T20:01:43Z",
-    "ld": 12.32,
+    "at": "2026-11-26T20:06:49Z",
+    "ld": 8.75,
     "c": 12,
     "sb": 2,
     "dk": [
-     381.9,
+     381.7,
      926.4
     ],
     "sn": [
-     "itsthecompany-runner-2",
+     "itsthecompany-runner",
      "itsthecompany-runner-3"
     ]
    }
@@ -646,7 +627,7 @@
    "parked": 7,
    "open": true,
    "mq": false,
-   "counted": "2026-11-26T19:56:59+00:00",
+   "counted": "2026-11-26T20:07:21+00:00",
    "by": {
     "app": {
      "n": 6,
@@ -664,11 +645,11 @@
      "open": true
     }
    },
-   "at": "2026-11-26T20:06:15+00:00"
+   "at": "2026-11-26T20:09:16+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-26T20:06:08+00:00"
+   "at": "2026-11-26T20:09:02+00:00"
   }
  },
  "operators": [
@@ -709,13 +690,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 4,
+  "main": 3,
   "lanes": 1,
-  "total": 5,
-  "at": "3:06 PM",
+  "total": 4,
+  "at": "3:09 PM",
   "why": "",
-  "at_iso": "2026-11-26T20:06:00+00:00",
+  "at_iso": "2026-11-26T20:09:00+00:00",
   "started": "12:21 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 4, started 12:21 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 3:06 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 3, started 12:21 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 3:09 PM ET</p></section>"
  }
 }

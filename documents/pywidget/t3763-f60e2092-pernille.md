@@ -5,7 +5,7 @@ section: "documents"
 description: "When the widget&#x27;s own main.py (widgets/&lt;id&gt;/main.py in the App Group, the text the last send wrote) holds the bytes of one of the files that declare the id, the tap opens that file, whatever the Finder order and whether\u2026"
 ---
 <div class="crumbs" role="navigation" aria-label="Back"><a class="back" href="{{ '/documents/pywidget/design/' | relative_url }}">← Design &amp; Specs</a><a href="{{ '/documents/pywidget/t3763-f60e2092-pernille.html' | relative_url }}" rel="bookmark">Permanent link</a></div>
-<div class="page-head"><div class="kicker"><span class="kind grey">Review</span><span><span title="Our arithmetic estimate of what the idea would earn by day 30 (the $200 deadline) or day 90. It never raises a grade.">Day 30</span> · Fri Nov 20</span><span><code>pywidget/docs/reviews/t3763-f60e2092-pernille.md</code></span></div><h1>Review of f60e2092: T-3763, a widget tap opens the file the widget runs when two files declare its id</h1><div class="byline"><img class="avatar" src="{{ '/assets/portraits/pernille.svg' | relative_url }}" alt="Pernille" title="Pernille"><span>By <a href="{{ '/cast/pernille.html' | relative_url }}">Pernille</a>, Python runtime engineer</span></div></div>
+<div class="page-head"><div class="kicker"><span class="kind grey">Review</span><span>Day 36 · Thu Nov 26</span><span><code>pywidget/docs/reviews/t3763-f60e2092-pernille.md</code></span></div><h1>Review of f60e2092: T-3763, a widget tap opens the file the widget runs when two files declare its id</h1><div class="byline"><img class="avatar" src="{{ '/assets/portraits/pernille.svg' | relative_url }}" alt="Pernille" title="Pernille"><span>By <a href="{{ '/cast/pernille.html' | relative_url }}">Pernille</a>, Python runtime engineer</span></div></div>
 
 <style>.doc-body{overflow-wrap:break-word}.doc-src{overflow-wrap:anywhere}.tbl[data-n~="1"] tr>:nth-child(1),.tbl[data-n~="2"] tr>:nth-child(2),.tbl[data-n~="3"] tr>:nth-child(3),.tbl[data-n~="4"] tr>:nth-child(4),.tbl[data-n~="5"] tr>:nth-child(5),.tbl[data-n~="6"] tr>:nth-child(6),.tbl[data-n~="7"] tr>:nth-child(7),.tbl[data-n~="8"] tr>:nth-child(8),.tbl[data-n~="9"] tr>:nth-child(9),.tbl[data-n~="10"] tr>:nth-child(10),.tbl[data-n~="11"] tr>:nth-child(11),.tbl[data-n~="12"] tr>:nth-child(12){min-width:0;overflow-wrap:normal}.tbl[data-o="1"] tr>:nth-child(1),.tbl[data-o="2"] tr>:nth-child(2),.tbl[data-o="3"] tr>:nth-child(3),.tbl[data-o="4"] tr>:nth-child(4),.tbl[data-o="5"] tr>:nth-child(5),.tbl[data-o="6"] tr>:nth-child(6),.tbl[data-o="7"] tr>:nth-child(7),.tbl[data-o="8"] tr>:nth-child(8),.tbl[data-o="9"] tr>:nth-child(9),.tbl[data-o="10"] tr>:nth-child(10),.tbl[data-o="11"] tr>:nth-child(11),.tbl[data-o="12"] tr>:nth-child(12){position:sticky;right:0;overflow-wrap:normal;background:var(--page);box-shadow:-1px 0 var(--line),-9px 0 8px -8px var(--sh)}</style>
 <div class="doc-body" markdown="1">
@@ -107,6 +107,13 @@ T-4638 and is not repeated here.
   the case whenever the two files have different names); or have the send record the project as well and match
   both. Add a test with two originals, a stale main.py and a `.sent.json` naming the later one.
 - Board line: T-5314 (Idris, P2), shared with L2.
+- Fixed (T-5314, Idris, 2026-11-25): `pick` gains a step between the copy rule and Finder order. `scriptFile` reads
+  widgets/<id>/.sent.json (WidgetScriptSave.lastSent, the same spellings as main.py) and ranks each original by
+  `named(_:by:)`: 2 when its name is the record's `widget` and its size and times are still the ones listed (the
+  file last sent, whatever its project), 1 for the name alone (edited since), else 0. A copy always ranks 0, so the
+  record never outranks the copy rule, and main.py's bytes still come first. Tests:
+  `testAStaleMainPyOpensTheFileLastSent` (different names; two clock.py told apart by the listed size and times;
+  neither listed falls back to Finder order) and `testARecordNeverOutranksTheCopyRule`.
 
 ### L2 (Low): two cases the tests do not reach
 
@@ -116,6 +123,9 @@ T-4638 and is not repeated here.
   so swapping the two comparisons at :89-92 passes. Add one (Alpha/zeta.py and Beta/alpha.py, no main.py: Alpha's
   file opens).
 - Board line: the same line as L1.
+- Fixed (T-5314): `testANonUTF8FileIsSkipped` (a non-UTF-8 clock.py holding the id's bytes is skipped: Projects
+  alone, the readable file beside it) and `testProjectOrderComesBeforeFileOrder` (Alpha/zeta.py and Beta/alpha.py:
+  Alpha's opens).
 
 ## Checked and fine
 

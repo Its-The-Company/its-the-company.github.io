@@ -313,12 +313,18 @@ contents are unconfirmed, and Wrenna or Idris may grow the set.
 - **Gate:** `LauncherEditorGate.isOn` (`ios/App/Launcher/LauncherEditor.swift`): on in a build given
   `PYWIDGET_LAUNCHER`; in a Debug build only when launched with the `PW_LAUNCHER` environment variable (the UI test;
   `reset` also removes slots.json first). Release builds without the flag draw no Widgets group. The tap path
-  (T-2551) was never gated by a flag: no shipped widget makes a `pywidget://open` link, so nothing reaches it.
+  (T-2551) is gated by the same flag since T-4215: where it is off, `LauncherTapRoute.tap`
+  (`ios/App/LauncherTapHandling.swift`) leaves a `pywidget://open` link alone, with no sheet and nothing opened.
 - **Refusals:** `LauncherTarget.refusal(_:)` in `ios/Shared/LauncherSlots.swift`; `check` reads the same rules.
   `.unparsable` shows `bad.any`. On iOS 17+ `URL(string:)` percent-encodes rather than refuses, so it rarely fires.
-- **Store:** `save(Edit)` (name, url, symbol, hue), `delete(id)`, `reorder(ids)`, the 16 cap (`.full`). Every
-  write, the tap path's too, holds `launcher/slots.lock` (WidgetStateLock's bounded flock); a held lock is `.busy`
-  and shows `bad.write`.
+- **Store:** `save(Edit)` (name, url, symbol, hue), `delete(id)`, `reorder(ids)`, the 16 cap (`.full`), the file's
+  64 KiB cap (`.fileFull`, `bad.full`; T-4576). The list reads the file as `_launch.read_slots` does: an entry with
+  no name is skipped (set up from its tap with no name, it takes its id as a new slot does), and a missing or odd
+  hue is the one the widget draws (a whole number mod 12, else the slot's place mod 12). One case still differs: a
+  `name` that is not text (no writer makes one), which the list skips and `read_slots` draws as Python's `str()` of
+  it. The 2048-byte link cap holds for the typed text and for the stored, percent-encoded one. Every write, the tap
+  path's too, holds `launcher/slots.lock` (WidgetStateLock's bounded flock); a held lock is `.busy` and shows
+  `bad.write`.
 - **Known-app list:** `ios/App/Launcher/launcher-apps.json`, `{"format": 1, "symbols": [...], "apps": [{name, url,
   symbol, hue}]}`. Twelve entries (T-3674, Wrenna, 2026-11-12), each a link its maker documents on a public page,
   sources in `research/inbound/t3674-sources.md`; **none confirmed on a device yet** (T-3765, TestFlight). The Music
@@ -444,6 +450,7 @@ time. Typographic quotes and apostrophes are as they ship.
 | `bad.tryfail` | No app opened this link. The app may not be on this iPhone, or the link may be wrong. | after Try It, openURL reported false |
 | `bad.write` | PyWidget couldn’t save this app. Try again. | writeFailed (today's string, 'link' -> 'app') |
 | `bad.unreadable` | PyWidget couldn’t read your saved apps, so it saved nothing. Your apps are unchanged. | unreadableFile |
+| `bad.full` | Your saved apps take up too much room to save this. Delete an app, or use a shorter link. | fileFull: slots.json over 64 KiB (T-4576; draft, Maren to confirm) |
 | `bad.nogroup` | PyWidget can’t save apps on this device. | no App Group (today's string) |
 | `why.unknown` | “{name}” isn’t set up in PyWidget yet. Choose the app it opens. | Set Up App banner, .unknown |
 | `why.empty` | “{name}” has no link yet. Choose the app it opens. | banner, .empty |

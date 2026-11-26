@@ -161,7 +161,7 @@ an Investor asked for the frame counts and frame rates the budget really allows.
 </div>
 
 
-The component's limits (section 5) take their numbers from T-5640's `widget-animation-limits.md` "Limits" and from
+The component's limits (section 5) take their numbers from T-5640's [`widget-animation-limits.md`](widget-animation-limits.html) "Limits" and from
 nowhere else.
 
 ## 4. Recommended

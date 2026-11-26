@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-26T01:18:14.992431+00:00",
+ "at": "2026-11-26T01:21:20.678776+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -82,7 +82,7 @@
    "task": "[build] T-4191 large text steps",
    "model": "",
    "started": "2026-11-25T23:44:39.050Z",
-   "seconds": 5615,
+   "seconds": 5801,
    "finished": null
   },
   {
@@ -90,7 +90,7 @@
    "task": "[build] T-5796 second batch",
    "model": "",
    "started": "2026-11-26T00:11:05.709Z",
-   "seconds": 4029,
+   "seconds": 4214,
    "finished": null
   },
   {
@@ -98,20 +98,28 @@
    "task": "[build] T-4476 review fixes",
    "model": "",
    "started": "2026-11-26T01:04:10.810Z",
-   "seconds": 844,
+   "seconds": 1029,
    "finished": null
   },
+  {
+   "name": "pernille",
+   "task": "[build] T-5795 review fixes",
+   "model": "",
+   "started": "2026-11-26T01:19:16.080Z",
+   "seconds": 124,
+   "finished": null
+  }
+ ],
+ "who": "Idris x3, Pernille",
+ "recent": [
   {
    "name": "odalys",
    "task": "[review] T-5795 weather premade",
    "model": "",
    "started": "2026-11-26T01:11:00.639Z",
-   "seconds": 434,
-   "finished": null
-  }
- ],
- "who": "Idris x3, Odalys",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-26T01:19:02.158000+00:00"
+  },
   {
    "name": "pernille",
    "task": "[build] T-5795 weather chart premade",
@@ -135,14 +143,6 @@
    "started": "2026-11-25T23:52:18.482Z",
    "seconds": null,
    "finished": "2026-11-26T00:57:08.524000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[build] T-5883 usage limit alarm",
-   "model": "",
-   "started": "2026-11-25T23:53:56.907Z",
-   "seconds": null,
-   "finished": "2026-11-26T00:09:52.939000+00:00"
   }
  ],
  "queue": {
@@ -197,7 +197,7 @@
   "week_pct": 129.17,
   "usage_pct": 60.0,
   "work_pct": 98.3,
-  "read_at": "2026-11-26T01:18:00+00:00",
+  "read_at": "2026-11-26T01:21:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -259,7 +259,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-25T20:18:00-05:00",
+  "at": "2026-11-25T20:21:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -284,25 +284,25 @@
    "next": []
   },
   {
-   "name": "Odalys",
-   "state": "running",
-   "task": "[review] T-5795 weather premade",
-   "model": null,
-   "since": "2026-11-26T01:11:00.639Z",
-   "next": []
-  },
-  {
    "name": "Pernille",
-   "state": "next",
-   "task": "Pernille, P1, continuation of T-2609: after...",
+   "state": "running",
+   "task": "[build] T-5795 review fixes",
    "model": null,
-   "since": null,
+   "since": "2026-11-26T01:19:16.080Z",
    "next": []
   },
   {
    "name": "Ines",
    "state": "next",
    "task": "Ines, P2, from T-5470...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
+   "name": "Odalys",
+   "state": "next",
+   "task": "Odalys, P3, from T-4468: the city list...",
    "model": null,
    "since": null,
    "next": []
@@ -351,10 +351,10 @@
     "task": "T-4476"
    },
    {
-    "w": "Odalys",
-    "k": "review",
+    "w": "Pernille",
+    "k": "build",
     "t": "The 1.0 showcase premades are built and in the Gallery",
-    "at": "2026-11-26T01:11:00.639Z",
+    "at": "2026-11-26T01:19:16.080Z",
     "o": "c",
     "task": "T-5795"
    }
@@ -524,12 +524,12 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-26T01:18:05Z",
+  "at": "2026-11-26T01:21:00Z",
   "s": {
    "T-4181": [
-    "mergeq",
-    "1st to merge",
-    1795655885652
+    "mergetest",
+    "Xcode checks on the MacBook, 1st to merge",
+    1795655940208
    ],
    "T-4856": [
     "mergetest",
@@ -559,11 +559,11 @@
   }
  },
  "ln": {
-  "at": "2026-11-26T01:18:05Z",
+  "at": "2026-11-26T01:21:00Z",
   "mq": {
    "n": {
-    "checking": 0,
-    "inline": 1,
+    "checking": 1,
+    "inline": 0,
     "conflicted": 1,
     "failed": 0,
     "held": 1,
@@ -571,15 +571,24 @@
     "parked": 5
    },
    "m": {
-    "checking": null,
-    "inline": 0,
-    "conflicted": 1136,
+    "checking": 2,
+    "inline": null,
+    "conflicted": 1139,
     "failed": null,
-    "held": 2696,
+    "held": 2699,
     "retry": null,
-    "parked": 1787
+    "parked": 1790
    },
-   "cur": [],
+   "cur": [
+    [
+     [
+      "T-4181"
+     ],
+     "iPhone app tests",
+     "MacBook",
+     2
+    ]
+   ],
    "ld": [
     0,
     null
@@ -587,12 +596,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-26T01:17:17Z",
-    "ld": 7.48,
+    "at": "2026-11-26T01:20:34Z",
+    "ld": 5.25,
     "c": 8,
     "sb": 1,
     "dk": [
-     26.2,
+     28.4,
      228.3
     ],
     "ss": [
@@ -604,18 +613,18 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-26T01:15:20Z",
-    "ld": 7.28,
+    "at": "2026-11-26T01:18:26Z",
+    "ld": 14.98,
     "c": 12,
     "sb": 3,
     "dk": [
-     426.1,
+     425.4,
      926.4
     ],
     "sn": [
-     "itsthecompany-runner",
      "itsthecompany-runner-2",
-     "itsthecompany-runner-3"
+     "itsthecompany-runner-3",
+     "itsthecompany-runner-4"
     ]
    }
   }
@@ -646,11 +655,11 @@
      "open": true
     }
    },
-   "at": "2026-11-26T01:18:14+00:00"
+   "at": "2026-11-26T01:21:20+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-26T01:18:05+00:00"
+   "at": "2026-11-26T01:21:07+00:00"
   }
  },
  "operators": [
@@ -703,10 +712,10 @@
   "main": 4,
   "lanes": 2,
   "total": 6,
-  "at": "8:18 PM",
+  "at": "8:21 PM",
   "why": "",
-  "at_iso": "2026-11-26T01:18:00+00:00",
+  "at_iso": "2026-11-26T01:21:00+00:00",
   "started": "1:03 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 4, started 1:03 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 8:18 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 4, started 1:03 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 8:21 PM ET</p></section>"
  }
 }

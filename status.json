@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-26T21:22:55.953815+00:00",
+ "at": "2026-11-26T21:25:58.684910+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -82,7 +82,7 @@
    "task": "[build] T-4190 Ask to Buy order",
    "model": "opus",
    "started": "2026-11-26T19:36:17.023Z",
-   "seconds": 6398,
+   "seconds": 6581,
    "finished": null,
    "effort": "high"
   },
@@ -91,31 +91,47 @@
    "task": "[build] T-5894 premade page test order",
    "model": "opus",
    "started": "2026-11-26T20:25:04.046Z",
-   "seconds": 3471,
+   "seconds": 3654,
    "finished": null,
    "effort": "high"
+  },
+  {
+   "name": "idris",
+   "task": "[review] T-5900 gallery decisions",
+   "model": "opus",
+   "started": "2026-11-26T21:23:57.143Z",
+   "seconds": 121,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "pernille",
+   "task": "[review] T-4476 ADR-012 rev 10",
+   "model": "opus",
+   "started": "2026-11-26T21:24:31.729Z",
+   "seconds": 86,
+   "finished": null,
+   "effort": "high"
+  }
+ ],
+ "who": "Idris x3, Pernille",
+ "recent": [
+  {
+   "name": "idris",
+   "task": "[build] T-4476 ADR-012 rule b hole",
+   "model": "opus",
+   "started": "2026-11-26T21:19:14.158Z",
+   "seconds": null,
+   "finished": "2026-11-26T21:24:14.102000+00:00"
   },
   {
    "name": "maren",
    "task": "[design] T-5900 gallery tree choices",
    "model": "opus",
    "started": "2026-11-26T20:44:45.337Z",
-   "seconds": 2290,
-   "finished": null,
-   "effort": "high"
+   "seconds": null,
+   "finished": "2026-11-26T21:23:39.576000+00:00"
   },
-  {
-   "name": "idris",
-   "task": "[build] T-4476 ADR-012 rule b hole",
-   "model": "opus",
-   "started": "2026-11-26T21:19:14.158Z",
-   "seconds": 221,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Idris x3, Maren",
- "recent": [
   {
    "name": "pernille",
    "task": "[review] T-4476 ADR-012 rev 9",
@@ -131,22 +147,6 @@
    "started": "2026-11-26T21:13:14.196Z",
    "seconds": null,
    "finished": "2026-11-26T21:17:06.334000+00:00"
-  },
-  {
-   "name": "pernille",
-   "task": "[review] T-4476 ADR-012 rev 8",
-   "model": "opus",
-   "started": "2026-11-26T21:10:02.904Z",
-   "seconds": null,
-   "finished": "2026-11-26T21:12:58.900000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-4476 ADR-012 for A",
-   "model": "opus",
-   "started": "2026-11-26T20:50:09.848Z",
-   "seconds": null,
-   "finished": "2026-11-26T21:09:44.482000+00:00"
   }
  ],
  "queue": {
@@ -201,7 +201,7 @@
   "week_pct": 379.62,
   "usage_pct": 62.0,
   "work_pct": 98.8,
-  "read_at": "2026-11-26T21:22:00+00:00",
+  "read_at": "2026-11-26T21:26:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -251,7 +251,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-26T16:22:00-05:00",
+  "at": "2026-11-26T16:26:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -277,21 +277,13 @@
    "effort": "high"
   },
   {
-   "name": "Maren",
+   "name": "Pernille",
    "state": "running",
-   "task": "[design] T-5900 gallery tree choices",
+   "task": "[review] T-4476 ADR-012 rev 10",
    "model": "opus",
-   "since": "2026-11-26T20:44:45.337Z",
+   "since": "2026-11-26T21:24:31.729Z",
    "next": [],
    "effort": "high"
-  },
-  {
-   "name": "Pernille",
-   "state": "next",
-   "task": "Pernille, P1, continuation of T-2609: after...",
-   "model": null,
-   "since": null,
-   "next": []
   },
   {
    "name": "Ines",
@@ -305,6 +297,14 @@
    "name": "Wrenna",
    "state": "next",
    "task": "Read developer.apple.com \"Keeping a widget up to date\",...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
+   "name": "Maren",
+   "state": "next",
+   "task": "Maren, P2, from T-0306 (Simulator check of the L4...",
    "model": null,
    "since": null,
    "next": []
@@ -341,22 +341,22 @@
     "task": "T-5894"
    },
    {
-    "w": "Maren",
-    "k": "design",
+    "w": "Idris",
+    "k": "review",
     "t": "Decide the sparkline area in accented mode",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-26T20:44:45.337Z",
+    "at": "2026-11-26T21:23:57.143Z",
     "o": "c",
     "task": "T-5900"
    },
    {
-    "w": "Idris",
-    "k": "build",
+    "w": "Pernille",
+    "k": "review",
     "t": "Projects get one file, one ID and guarded outside code",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-26T21:19:14.158Z",
+    "at": "2026-11-26T21:24:31.729Z",
     "o": "c",
     "task": "T-4476"
    }
@@ -526,7 +526,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-26T21:22:43Z",
+  "at": "2026-11-26T21:25:58Z",
   "s": {
    "T-4192": [
     "mergetest",
@@ -577,7 +577,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-26T21:22:43Z",
+  "at": "2026-11-26T21:25:58Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -595,7 +595,7 @@
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 887
+    "parked": 891
    },
    "cur": [],
    "ld": [
@@ -605,12 +605,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-26T21:22:20Z",
-    "ld": 8.01,
+    "at": "2026-11-26T21:25:33Z",
+    "ld": 5.25,
     "c": 8,
     "sb": 1,
     "dk": [
-     22.6,
+     22.2,
      228.3
     ],
     "ss": [
@@ -664,11 +664,11 @@
      "open": true
     }
    },
-   "at": "2026-11-26T21:22:55+00:00"
+   "at": "2026-11-26T21:25:58+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-26T21:22:50+00:00"
+   "at": "2026-11-26T21:25:45+00:00"
   }
  },
  "operators": [
@@ -712,10 +712,10 @@
   "main": 4,
   "lanes": 1,
   "total": 5,
-  "at": "4:22 PM",
+  "at": "4:26 PM",
   "why": "",
-  "at_iso": "2026-11-26T21:22:00+00:00",
+  "at_iso": "2026-11-26T21:26:00+00:00",
   "started": "12:21 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 4, started 12:21 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 4:22 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 4, started 12:21 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 4:26 PM ET</p></section>"
  }
 }

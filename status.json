@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-26T07:00:09.203198+00:00",
+ "at": "2026-11-26T07:01:39.088713+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -76,8 +76,17 @@
   "landed": 1,
   "failed": 4
  },
- "workers": [],
- "who": "",
+ "workers": [
+  {
+   "name": "pernille",
+   "task": "[review] T-4476",
+   "model": "opus",
+   "started": "2026-11-26T07:00:13.872Z",
+   "seconds": 85,
+   "finished": null
+  }
+ ],
+ "who": "Pernille",
  "recent": [
   {
    "name": "idris",
@@ -120,19 +129,19 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 12.0,
+   "pct": 13.0,
    "resets_at": "2026-11-26T04:00:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-26T01:48:36.608917-05:00",
+   "read_at": "2026-11-26T02:00:23.614025-05:00",
    "source": "live",
-   "left": 88.0,
+   "left": 87.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 94.0,
    "resets_at": "2026-11-29T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-26T01:48:36.608917-05:00",
+   "read_at": "2026-11-26T02:00:23.614025-05:00",
    "source": "live",
    "left": 6.0,
    "left_words": "of your weekly allowance left"
@@ -144,7 +153,7 @@
    "read_at": "2026-11-26T01:29:22.341464-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-26T01:48:36.608917-05:00"
+  "read_at": "2026-11-26T02:00:23.614025-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -164,7 +173,7 @@
   "week_pct": 134.01,
   "usage_pct": 58.8,
   "work_pct": 98.6,
-  "read_at": "2026-11-26T07:00:00+00:00",
+  "read_at": "2026-11-26T07:01:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -250,7 +259,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-26T02:00:00-05:00",
+  "at": "2026-11-26T02:01:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -267,17 +276,17 @@
  },
  "lanes": [
   {
-   "name": "Idris",
-   "state": "next",
-   "task": "Idris, P2, from T-1282 F1 (not before TestFlight):...",
-   "model": null,
-   "since": null,
+   "name": "Pernille",
+   "state": "running",
+   "task": "[review] T-4476",
+   "model": "opus",
+   "since": "2026-11-26T07:00:13.872Z",
    "next": []
   },
   {
-   "name": "Pernille",
+   "name": "Idris",
    "state": "next",
-   "task": "Pernille, P1, continuation of T-2609: after...",
+   "task": "Idris, P2, from T-1282 F1 (not before TestFlight):...",
    "model": null,
    "since": null,
    "next": []
@@ -316,7 +325,17 @@
   }
  ],
  "tasks": {
-  "run": [],
+  "run": [
+   {
+    "w": "Pernille",
+    "k": "review",
+    "t": "Projects get one file, one ID and guarded outside code",
+    "m": "opus",
+    "at": "2026-11-26T07:00:13.872Z",
+    "o": "c",
+    "task": "T-4476"
+   }
+  ],
   "src": "plan",
   "open": [
    {
@@ -457,18 +476,12 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-26T06:59:55Z",
+  "at": "2026-11-26T07:01:33Z",
   "s": {
-   "T-4182": [
+   "T-4181": [
     "mergetest",
     "iPhone tests on the MacBook",
     null
-   ],
-   "T-4181": [
-    "merged",
-    "on main 1:11 AM ET",
-    1795673510000,
-    ""
    ],
    "T-4476": [
     "merged",
@@ -478,18 +491,16 @@
    ]
   },
   "nm": {
-   "T-4182": "A failing widget says so and can recover",
    "T-4181": "Widgets refresh on their own and by a tap",
    "T-4476": "Projects get one file, one ID and guarded outside code"
   },
   "wk": {
-   "T-4182": "Idris",
    "T-4181": "Idris",
    "T-4476": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-26T06:59:55Z",
+  "at": "2026-11-26T07:01:33Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -498,7 +509,7 @@
     "failed": 0,
     "held": 0,
     "retry": 0,
-    "parked": 14
+    "parked": 10
    },
    "m": {
     "checking": null,
@@ -507,7 +518,7 @@
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 25
+    "parked": 121
    },
    "cur": [],
    "ld": [
@@ -517,8 +528,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-26T06:59:35Z",
-    "ld": 7.04,
+    "at": "2026-11-26T07:00:44Z",
+    "ld": 5.74,
     "c": 8,
     "sb": 1,
     "dk": [
@@ -534,17 +545,16 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-26T06:54:32Z",
-    "ld": 11.85,
+    "at": "2026-11-26T07:00:10Z",
+    "ld": 5.89,
     "c": 12,
-    "sb": 3,
+    "sb": 2,
     "dk": [
-     407.8,
+     409.1,
      926.4
     ],
     "sn": [
-     "itsthecompany-runner",
-     "itsthecompany-runner-3",
+     "itsthecompany-runner-2",
      "itsthecompany-runner-4"
     ]
    }
@@ -576,11 +586,11 @@
      "open": true
     }
    },
-   "at": "2026-11-26T07:00:09+00:00"
+   "at": "2026-11-26T07:01:39+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-26T06:59:55+00:00"
+   "at": "2026-11-26T07:01:27+00:00"
   }
  },
  "operators": [
@@ -646,13 +656,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 0,
+  "main": 1,
   "lanes": 4,
-  "total": 4,
-  "at": "2:00 AM",
+  "total": 5,
+  "at": "2:01 AM",
   "why": "",
-  "at_iso": "2026-11-26T07:00:00+00:00",
+  "at_iso": "2026-11-26T07:01:00+00:00",
   "started": "1:29 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 0, started 1:29 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 2:00 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 1, started 1:29 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 2:01 AM ET</p></section>"
  }
 }

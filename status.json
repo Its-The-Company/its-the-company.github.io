@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-26T00:38:22.901672+00:00",
+ "at": "2026-11-26T00:41:36.782818+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -82,7 +82,7 @@
    "task": "[build] T-4191 large text steps",
    "model": "",
    "started": "2026-11-25T23:44:39.050Z",
-   "seconds": 3223,
+   "seconds": 3417,
    "finished": null
   },
   {
@@ -90,7 +90,7 @@
    "task": "[build] T-4476 Foundations actions",
    "model": "",
    "started": "2026-11-25T23:52:18.482Z",
-   "seconds": 2764,
+   "seconds": 2958,
    "finished": null
   },
   {
@@ -98,7 +98,7 @@
    "task": "[build] T-5795 weather chart premade",
    "model": "",
    "started": "2026-11-25T23:55:22.267Z",
-   "seconds": 2580,
+   "seconds": 2774,
    "finished": null
   },
   {
@@ -106,7 +106,7 @@
    "task": "[build] T-5796 second batch",
    "model": "",
    "started": "2026-11-26T00:11:05.709Z",
-   "seconds": 1637,
+   "seconds": 1831,
    "finished": null
   }
  ],
@@ -197,7 +197,7 @@
   "week_pct": 126.16,
   "usage_pct": 60.0,
   "work_pct": 98.3,
-  "read_at": "2026-11-26T00:38:00+00:00",
+  "read_at": "2026-11-26T00:41:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -271,7 +271,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-25T19:38:00-05:00",
+  "at": "2026-11-25T19:41:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -536,26 +536,19 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-26T00:38:22Z",
+  "at": "2026-11-26T00:41:19Z",
   "s": {
-   "T-0700": [
+   "T-4548": [
     "mergetest",
     "iPhone tests on the MacBook",
-    null
-   ],
-   "T-4191": [
-    "testing",
-    "Mac Mini \u00b7 test",
     null
    ]
   },
   "nm": {
-   "T-0700": "Use one check for being in the extension",
-   "T-4191": "VoiceOver and large text work on every screen"
+   "T-4548": "Read one widget action value strictly"
   },
   "wk": {
-   "T-0700": "Idris",
-   "T-4191": "Idris",
+   "T-4548": "Idris",
    "T-4550": "Pernille",
    "T-5309": "Idris",
    "T-5014": "Idris",
@@ -571,7 +564,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-26T00:38:22Z",
+  "at": "2026-11-26T00:41:19Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -585,11 +578,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 1096,
+    "conflicted": 1099,
     "failed": null,
-    "held": 2656,
+    "held": 2659,
     "retry": null,
-    "parked": 1421
+    "parked": 1424
    },
    "cur": [],
    "ld": [
@@ -599,36 +592,32 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-26T00:38:25Z",
-    "ld": 10.28,
+    "at": "2026-11-26T00:40:54Z",
+    "ld": 7.43,
     "c": 8,
-    "sb": 1,
+    "sb": 0,
     "dk": [
-     23.9,
+     24.2,
      228.3
     ],
     "ss": [
      172.6,
      953.7
     ],
-    "sn": [
-     "iPhone 17e"
-    ]
+    "sn": []
    },
    "macbook": {
-    "at": "2026-11-26T00:36:20Z",
-    "ld": 22.18,
+    "at": "2026-11-26T00:40:34Z",
+    "ld": 19.08,
     "c": 12,
-    "sb": 4,
+    "sb": 2,
     "dk": [
-     425.6,
+     429.7,
      926.4
     ],
     "sn": [
      "itsthecompany-runner",
-     "itsthecompany-runner-2",
-     "itsthecompany-runner-3",
-     "itsthecompany-runner-4"
+     "itsthecompany-runner-2"
     ]
    }
   }
@@ -659,11 +648,11 @@
      "open": true
     }
    },
-   "at": "2026-11-26T00:38:22+00:00"
+   "at": "2026-11-26T00:41:36+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-26T00:38:22+00:00"
+   "at": "2026-11-26T00:41:36+00:00"
   }
  },
  "operators": [
@@ -725,10 +714,10 @@
   "main": 4,
   "lanes": 3,
   "total": 7,
-  "at": "7:38 PM",
+  "at": "7:41 PM",
   "why": "",
-  "at_iso": "2026-11-26T00:38:00+00:00",
+  "at_iso": "2026-11-26T00:41:00+00:00",
   "started": "1:03 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 4, started 1:03 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 7:38 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 4, started 1:03 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 7:41 PM ET</p></section>"
  }
 }

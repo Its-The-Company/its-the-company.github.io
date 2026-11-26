@@ -40,7 +40,6 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 - T-5819 11-24: c7e24affaa in scratch T-4477-idris/wt (Builder one-way strict, lock (b), D 12.0 slot; release would be 07-12, not moved). Open: Pernille review, land. Lesson: check a scratch copy's HEAD against main first (it was 697 behind).
 
-- T-4185 11-26 (a): T-5314, T-4576, T-4906 on personal/a; Pernille review, merge. T-4638 scan landed (cc615cc3bb); tap-to-frame 206-540 ms (300 on one file) is the editor's open: done-when needs a decision. T-5283: a t5283-ipad Simulator now exists (not mine; made 11-25 10:56 PM). Lessons: Core `swift test` breaks quietly when a Shared file gains a dependency (WidgetID -> ProcessKind); build it after touching Shared/. xc.sh snapshots uncommitted paths for runner jobs.
 
 - T-5893 11-26: e83f525050 in scratch T-5893-idris/wt (location widget ID app.pywidget.location; ExtensionLinkTests 8/0 J-20261126-0017, host 4388/0). Open: Odalys review, land; Investors register the new ID. Lesson: an extension ID is the app ID plus exactly one part.
 
@@ -51,6 +50,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-4188 (merge point) and T-5796 re-reviews still open; detail and xc.sh lessons in archive.md.
 - T-5797 11-26 (b2): T-5640 harness + limits doc (partial). Finding: the mask loop does NOT move on the 17e Sim; the timer text ('7903:54:00') tail-truncates in the widget, so the ones digit never draws (font itself reaches it). Head-truncation trial (aside/ in scratch T-5797-idris, unit 2438/0) shows a frame but still static. T-5662 files, T-5831 drafts <span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">parked</span> in scratch aside/. Lessons: macOS awk -v compares as strings (use a+0); the coordinator's argv holds 'run_host.py', so pgrep needs the Python path.
 - T-4181 11-26 (a3): T-4405 f3aacaeffc, T-4406 17440be024, T-0793 slice 1 (BackgroundRefresh, not wired). No commit: T-4280 (T-4494 phone proof), T-1882 (no fields.json writer), T-2021 (forced-lane bench). T-2044 nap-order test in scratch T-4181-idris/t2044.py. Lesson: give background xc.sh a 3600000 ms timeout; the MacBook queue waits 15+ min.
+- T-4185 11-26 (a2 session): T-4570 committed (lock, 3 tests red without it). T-4638 needs a done-when decision (scan 37-62 ms, open 206-540). T-5283 diff + T-5016 diff parked in scratch T-4185-idris (iPad id= runs gated by T-5865 load/busy; board add for Maren's line refused, rule 14). Lessons: run host_keep with run_in_background and a long timeout (a 10-min <span title="A measured fact that holds a grade below a letter, however good the rest is.">cap</span> kills it); Core swift test after touching Shared/.
 {% endraw %}
 
 

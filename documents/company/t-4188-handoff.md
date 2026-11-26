@@ -1,16 +1,48 @@
 ---
 layout: "default"
-title: "T-4188 handoff (Idris, updated 2026-11-25)"
+title: "T-4188 handoff (Idris, updated 2026-11-26)"
 section: "documents"
-description: "T-0053 and T-0063 are on main (7db2936a61, a5c9b3fe69): not redone; feature_session.py landed T-4188 ticks them. Baseline, the session&#x27;s build-for-testing at 9d117bc72d: J-20261125-0838-land-chk-a5ab71-5-57212c, whole\u2026"
+description: "Baseline, the session&#x27;s build-for-testing at a57dd2807b: J-20261126-0346-land-chk-a5ab71-3-428d99, whole PyWidgetTests, 2456 run, 0 failures, 2 skipped (GalleryModesSnapshotTests, as before)."
 ---
 <div class="crumbs" role="navigation" aria-label="Back"><a class="back" href="{{ '/documents/operations/' | relative_url }}">← Operations</a><a href="{{ '/documents/company/t-4188-handoff.html' | relative_url }}" rel="bookmark">Permanent link</a></div>
-<div class="page-head"><div class="kicker"><span class="kind blue">Plan</span><span>Day 35 · Wed Nov 25</span><span><code>ops/plans/T-4188-handoff.md</code></span></div><h1>T-4188 handoff (Idris, updated 2026-11-25)</h1></div>
+<div class="page-head"><div class="kicker"><span class="kind blue">Plan</span><span>Day 36 · Thu Nov 26</span><span><code>ops/plans/T-4188-handoff.md</code></span></div><h1>T-4188 handoff (Idris, updated 2026-11-26)</h1></div>
 
 <style>.doc-body{overflow-wrap:break-word}.doc-src{overflow-wrap:anywhere}.tbl[data-n~="1"] tr>:nth-child(1),.tbl[data-n~="2"] tr>:nth-child(2),.tbl[data-n~="3"] tr>:nth-child(3),.tbl[data-n~="4"] tr>:nth-child(4),.tbl[data-n~="5"] tr>:nth-child(5),.tbl[data-n~="6"] tr>:nth-child(6),.tbl[data-n~="7"] tr>:nth-child(7),.tbl[data-n~="8"] tr>:nth-child(8),.tbl[data-n~="9"] tr>:nth-child(9),.tbl[data-n~="10"] tr>:nth-child(10),.tbl[data-n~="11"] tr>:nth-child(11),.tbl[data-n~="12"] tr>:nth-child(12){min-width:0;overflow-wrap:normal}.tbl[data-o="1"] tr>:nth-child(1),.tbl[data-o="2"] tr>:nth-child(2),.tbl[data-o="3"] tr>:nth-child(3),.tbl[data-o="4"] tr>:nth-child(4),.tbl[data-o="5"] tr>:nth-child(5),.tbl[data-o="6"] tr>:nth-child(6),.tbl[data-o="7"] tr>:nth-child(7),.tbl[data-o="8"] tr>:nth-child(8),.tbl[data-o="9"] tr>:nth-child(9),.tbl[data-o="10"] tr>:nth-child(10),.tbl[data-o="11"] tr>:nth-child(11),.tbl[data-o="12"] tr>:nth-child(12){position:sticky;right:0;overflow-wrap:normal;background:var(--page);box-shadow:-1px 0 var(--line),-9px 0 8px -8px var(--sh)}</style>
 <div class="doc-body" markdown="1">
 
 {% raw %}
+## Session 2026-11-26 (b3), from main a57dd2807b: T-4650, T-4651, T-4652 committed; T-3554, T-0543 no commit
+
+Baseline, the session's build-for-testing at a57dd2807b: J-20261126-0346-land-chk-a5ab71-3-428d99, whole PyWidgetTests,
+2456 run, 0 failures, 2 skipped (GalleryModesSnapshotTests, as before).
+- T-3554, T-0543: no commit, as in 11-25 (c). Re-checked on a57dd2807b: nothing in Swift purges a widget from `.trash`
+  (WidgetID.trashName and the library's id filter only; the installer's `.trash-*` is its own staging folder), so L4
+  still has nothing to hook; F7 still needs a real iPhone. Reviews of 0ca25f84f9 and 6ec7e29f14 still Odalys's.
+- T-4650 cd35908b91 (T-4597 M1): GalleryModel.runAll stops before a tile while a console run is pending
+  (PyBridge.appRunPending, injected as `consoleWaiting`); runShelf (the screen's .task, Allow, Try again) polls every
+  250 ms and runs the rest once it ends; a runAll asked during a pass makes the pass look again (`again`); rerunStale
+  stands down too. screens.md's GalleryView says so. 4 tests in PremadeSensorStallTests (two on the real bridge, two
+  with a fake runner). First try J-20261126-0358-land-chk-a5ab71-3-05b3c9 red for the test's own ordering (console run
+  queued before the preview); fixed. Green: J-20261126-0426-land-chk-a5ab71-1-27e6dc, 2460 run, 0 failures.
+- T-4651 f71b9de69f (T-4597 L1): the gallery-and-app-pass test requires a preview that waited more than 2 s behind a
+  widget run (queue times from the runner, run ids by runInfo context, RecordLog times and seqs). Two compile fails
+  on the runner (J-...0444-...34d9f9, J-...0449-...2004a9), whose kept lines hid the error; `XC_LOCAL=here ...
+  build-for-testing` builds on the Mac mini and shows it. Green: J-20261126-0459-land-chk-a5ab71-3-44f6d6, 2460/0.
+- T-4652 f8c21f9822 (T-4597 L2): text only. bridge-contract s1 v5.10 (10 s from the latest request; what can hold a preview
+  that long), the s7 `busy` row ("a preview whose queue limit ran out"; the tile's Failed), the v5.10 changelog row;
+  PyBridge.previewQueueSeconds's comment. Green: J-20261126-0515-land-chk-a5ab71-1-214a3a, whole PyWidgetTests, 2460
+  run, 0 failures, 2 skipped; host_keep 21 suites, 2194 tests on both interpreters, 0 failed.
+- Not done: none of the new tests has been seen red on a mutant yet. Worth one job: drop the
+  `if consoleWaiting() { stoodDown = true; return }` line and `again = true` (all four T-4650 tests should go red), and
+  run the gallery after the app pass in testT3552GalleryAndAppPassTogetherWithSensorsStalled (T-4651's assert should).
+  The Mac mini's load was 150 at 5:15 AM, past xc.sh's gate, so it could not run here.
+- Left out on purpose: TestWidgetsSection.runAll (GalleryView.swift, internal TestFlight builds only) still runs its
+  previews with no stand-down.
+- Closing checks at f8c21f9822: whole `-only-testing:PyWidgetTests` read from J-20261126-0515-land-chk-a5ab71-1-214a3a
+  (same tree); host_keep --task T-4188, 42 suite runs kept, 0 failed. `feature_session.py check`: MERGE POINT yes.
+- Open: Odalys's review of cd35908b91, f71b9de69f, f8c21f9822 (one review for the branch). Next session: T-4832,
+  T-4833, T-5850.
+
 ## Session 2026-11-25 (d), from main a19e52f3c9: T-5294 committed; T-3554, T-0543 no commit
 
 - T-5294 c255c03bc2: the scratch t5294/ files copied in (none of the six had moved on main since 41ef454488).

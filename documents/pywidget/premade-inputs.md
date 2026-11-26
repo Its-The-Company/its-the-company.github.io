@@ -226,6 +226,10 @@ contract:
 - **Hold.** Only the read, merge, write and rename: milliseconds. Never across a fetch, a sensor wait or an `await`.
   An app suspended while it holds a file lock in the App Group container is killed (`0xdead10cc`), so the Swift
   writer takes and releases the lock inside one synchronous block.
+- **The writers (T-4570).** Three take it: the Page (`PremadeSettingsFile.write`, 2 s), a Python run
+  (`_premade_lock.save`, 2 s), and a launcher premade's slot copy (`LauncherPremadeSlots.write`, 0.5 s, because it runs
+  while the launcher store holds `launcher/slots.lock` and that lock's own waiters give up after 0.5 s). The order is
+  always `slots.lock`, then `premade.json.lock`; no writer of `premade.json` takes `slots.lock`, so it cannot deadlock.
 - **Temp files.** Python names its temp file `.premade-<16 hex>`. A `.premade-*` file older than 60 s, seen while
   holding the lock, belongs to a killed writer; Python removes it. The Swift writer may use any other name.
 - **The widget lane.** `fcntl` is not on the lane's import list (`lane.py` `ALLOWED`), and the lane premades import

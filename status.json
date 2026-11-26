@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-26T15:13:00.078563+00:00",
+ "at": "2026-11-26T15:16:05.529395+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -91,20 +91,20 @@
    "task": "[build] T-4183 settle rebase conflict",
    "model": "opus",
    "started": "2026-11-26T14:50:49.006Z",
-   "seconds": 1331,
+   "seconds": 1516,
    "finished": null
-  },
+  }
+ ],
+ "who": "Idris",
+ "recent": [
   {
    "name": "idris",
    "task": "[build] T-4476 show imports, never run",
    "model": "opus",
    "started": "2026-11-26T15:08:42.480Z",
-   "seconds": 257,
-   "finished": null
-  }
- ],
- "who": "Idris x2",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-26T15:15:25.532000+00:00"
+  },
   {
    "name": "pernille",
    "task": "[review] T-4183",
@@ -174,7 +174,7 @@
   "week_pct": 155.91,
   "usage_pct": 61.6,
   "work_pct": 98.7,
-  "read_at": "2026-11-26T15:13:00+00:00",
+  "read_at": "2026-11-26T15:16:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -236,7 +236,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-26T10:13:00-05:00",
+  "at": "2026-11-26T10:16:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -311,15 +311,6 @@
     "at": "2026-11-26T14:50:49.006Z",
     "o": "c",
     "task": "T-4183"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "Projects get one file, one ID and guarded outside code",
-    "m": "opus",
-    "at": "2026-11-26T15:08:42.480Z",
-    "o": "c",
-    "task": "T-4476"
    }
   ],
   "src": "plan",
@@ -475,7 +466,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-26T15:12:47Z",
+  "at": "2026-11-26T15:16:05Z",
   "s": {
    "T-0892": [
     "mergetest",
@@ -487,30 +478,22 @@
     "on main 7:51 AM ET",
     1795697481000,
     "Idris"
-   ],
-   "T-4476": [
-    "merged",
-    "on main 2:06 AM ET",
-    1795676782000,
-    "Operator"
    ]
   },
   "nm": {
    "T-0892": "Make the first-widget flow test start clean",
-   "T-4182": "A failing widget says so and can recover",
-   "T-4476": "Projects get one file, one ID and guarded outside code"
+   "T-4182": "A failing widget says so and can recover"
   },
   "wk": {
    "T-0892": "Idris",
    "T-4182": "Idris",
-   "T-4476": "Idris",
    "T-4570": "Idris",
    "T-4405": "Idris",
    "T-4406": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-26T15:12:47Z",
+  "at": "2026-11-26T15:16:05Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -528,7 +511,7 @@
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 518
+    "parked": 521
    },
    "cur": [],
    "ld": [
@@ -538,12 +521,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-26T15:12:21Z",
-    "ld": 0.68,
+    "at": "2026-11-26T15:15:40Z",
+    "ld": 0.97,
     "c": 8,
     "sb": 1,
     "dk": [
-     22.1,
+     22.6,
      228.3
     ],
     "ss": [
@@ -555,12 +538,12 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-26T15:11:06Z",
-    "ld": 11.87,
+    "at": "2026-11-26T15:14:40Z",
+    "ld": 15.92,
     "c": 12,
     "sb": 3,
     "dk": [
-     392.7,
+     392.3,
      926.4
     ],
     "sn": [
@@ -597,11 +580,11 @@
      "open": true
     }
    },
-   "at": "2026-11-26T15:13:00+00:00"
+   "at": "2026-11-26T15:16:05+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-26T15:12:47+00:00"
+   "at": "2026-11-26T15:16:05+00:00"
   }
  },
  "operators": [
@@ -649,13 +632,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 2,
+  "main": 1,
   "lanes": 2,
-  "total": 4,
-  "at": "10:13 AM",
+  "total": 3,
+  "at": "10:16 AM",
   "why": "",
-  "at_iso": "2026-11-26T15:13:00+00:00",
+  "at_iso": "2026-11-26T15:16:00+00:00",
   "started": "8:47 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 2, started 8:47 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 10:13 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 1, started 8:47 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 10:16 AM ET</p></section>"
  }
 }

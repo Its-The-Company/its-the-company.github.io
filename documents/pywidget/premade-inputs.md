@@ -87,7 +87,7 @@ carries the same passage, and the brackets below follow it.
    (plan s4.5); the MTA's terms are read before any fetch (plan s4.4).
 2. **Habit tracker** (kept; Pro): gains Done today (s9 below).
 3. **Focus timer** (new; Pro): start, pause and skip buttons that run Python in the widget.
-4. **Next 24 hours** (new; no tag): a temperature and rain chart for a saved place, MET Norway data (L16).
+4. **Next 24 hours** (`weather.py`, new, built in T-4707, s3.8; no tag): a temperature and rain chart for a saved place, MET Norway data (L16).
 5. **Sky** (rework of Sunrise and sunset, s3.2; no tag): the sun's arc, twilight, moon phase.
 6. **Overlap clocks** (rework of World clocks, s3.3; no tag): working hours across zones and the shared hours.
 7. **Site status** (new; no tag): up or down and a 24-hour strip for sites the person names.
@@ -499,6 +499,67 @@ repositories need none, and a token is a secret the Page would have to hold (s7 
 The edit sheet has the launcher editor's Try It row, which runs the shortcut through the tile's own link
 (`pywidget://run?shortcut=`), so the person sees whether the name is right, and an Open Shortcuts row.
 
+### 3.8 Next 24 hours (`weather.py`; T-4707, Pernille, 2026-11-25)
+
+The 1.0 showcase set's first fetched premade (plan s2 row 4, free, no tag). Frames: `widgets/showcase/06-next_24_hours.jpg`
+(Maren, T-4703); the module draws that design with the person's forecast in place of its sample.
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 10: 3.8 Next 24 hours (weather.py; T-4707, Pernille, 2026-11-25), scrolls sideways" style="--tw:724px" markdown="1">
+
+| Field | Kind | Limits and checks |
+|---|---|---|
+| Place | `place` → `place` `{"name", "lat", "lon"}`, `zone: false`, `name_max` 20 | the saved-place search the Sun page has; no current location in 1.0; footer `page.wx.foot` |
+| Units | `choice` → `units` (`metric` or `imperial`), `default: "device"` | metric: degrees C and millimetres; imperial: degrees F and inches. MET Norway sends C and mm; the conversion is the premade's |
+
+</div>
+
+
+**What it draws.** Temperature is an accent line with a dot at now, rain is bars in `line.strong`, and the driest two-hour
+window is an `accent.soft` band behind both, named in words ("Driest 5–7 PM") so the band never carries it alone. The
+window is the least rain summed over two consecutive hours of the next 24; a tie goes to the sooner. A day with no
+rain says "Dry all day" and draws no band. Small and Medium carry the credit line "Data from MET Norway" (DRAFT for
+Maren) at caption2; Large adds High, Low and Rain rows; Lock Screen rectangular and inline carry none (see Open).
+
+**Where it fetches.** In PyWidget's run, never in the widget: the script uses `pywidget.http`, which the lane scan
+keeps out of the widget lane, so the premade is placed in the app lane and runs when PyWidget is open. That is also
+what the terms ask ("Applications on mobile devices must not retrieve new data as long as the application is not in
+use"). The widget draws what the last run saved: a timeline entry each hour moves the dot and the window with no run.
+
+**L16's conditions, where each is held** (`weather.py`, tests in `tests/widgets/test_premade_weather.py`):
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 11: 3.8 Next 24 hours (weather.py; T-4707, Pernille, 2026-11-25), scrolls sideways" style="--tw:640px" markdown="1">
+
+| Condition | How |
+|---|---|
+| a User-Agent naming PyWidget and the company site | `PyWidget-iOS/1.0 its-the-company.github.io`; no email, nothing personal |
+| cached, with If-Modified-Since | the answer, its Last-Modified and its Expires are kept in the premade's file; a later ask sends that Last-Modified word for word; a 304 keeps the forecast and moves only the clocks |
+| one fetch per forecast cycle | never before the answer's Expires, never within one hour of the last ask, and one to nine minutes after (the place fixes how many) so every phone does not ask on the hour |
+| the credit line | "Data from MET Norway" on Small, Medium and Large; in the Gallery page's "Uses" |
+| 429 | stops for an hour, or the Retry-After when longer; a 403 stops for six hours; a 5xx, a timeout (or any other failure once a request left the phone) or a body that is not a forecast, 30 minutes, and every one of these counts as an ask, so the hour's floor holds after it too; only Offline (nothing left the phone) asks again at the next run; the saved forecast stays on the widget |
+| coordinates | cut to four decimals (a fifth answers 403) |
+
+</div>
+
+
+**The terms page, re-read once for this line (2026-11-25, through `terms_guard`, one page, robots.txt followed).**
+https://api.met.no/doc/TermsOfService now carries "last revision 2026-11-05". Against the copy L16 read
+(`research/L16-raw/terms/metno_tos.html`), what is new or changed: the four-decimal coordinate rule and 403 for more
+digits; "Applications on mobile devices must not retrieve new data as long as the application is not in use";
+"Don't schedule many requests at the same time" and spread them; never repeat before Expires; the 20-requests-a-second
+ceiling is now stated as total traffic; AI-run use: "The Terms of Service constitute a legally binding agreement which
+must be read, understood and accepted by a human in authority before using our service." The last one is the
+Investors' to answer before the first request leaves a phone (see Open); no worker has called the API, and the tests use a
+saved forecast made up in its shape.
+
+**Open (for the Investors, Ines and Maren).** (1) The terms ask a human in authority to accept them; until an Investor
+has, the premade should not ship. (2) The Lock Screen families have no room for the credit line; L16 asks for it "on the
+widget": say whether the system families and the app are enough (frames gap 7). (3) The privacy text must say that the
+saved place's coordinates and the phone's IP address go to MET Norway's servers in Oslo and are logged there (L16,
+terms "Personal data"). (4) At real volume the terms ask for our own caching proxy: a server, the Investors' call (L16
+ceiling). (5) 12-hour times only, as the frames draw. (6) When T-0793's background refresh lands, each wake would run this premade with no one using the app: the terms' "must not retrieve new data as long as the application is not in use" then needs a fresh answer from the Investors before the premade is allowed in a background run; the floor and backoffs above hold either way.
+
 ## 4. The data shape (what Idris and Pernille build to)
 
 ### 4.1 The declaration each premade carries
@@ -548,7 +609,7 @@ Keys the Page owns; every other key is left as found. These are the keys each pr
 docstring), plus Countdown's `all_day` and the Habits `id` rule.
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 10: 4.2 What each Page writes to premade.json, scrolls sideways" style="--tw:557px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 12: 4.2 What each Page writes to premade.json, scrolls sideways" style="--tw:585px" markdown="1">
 
 | Premade | Keys | Example |
 |---|---|---|
@@ -559,6 +620,7 @@ docstring), plus Countdown's `all_day` and the Habits `id` rule.
 | Habits | `habits` | `{"habits": [{"id": "h3f9a0c21", "name": "Read", "done": ["2026-11-14", "2026-11-15"]}]}` |
 | GitHub | `repo` | `{"repo": "python/cpython"}` |
 | Shortcuts | `shortcuts` | `{"shortcuts": [{"name": "Morning run", "symbol": "figure.walk"}]}` |
+| Next 24 hours | `place`, `units` | `{"place": {"name": "Home", "lat": 59.9139, "lon": 10.7522}, "units": "metric"}` |
 
 </div>
 
@@ -571,7 +633,7 @@ by the build (Idris, T-4468); each follows the voice rule (approved.md section 8
 mixed already (straight in the four "couldn't" lines, curly in "hasn’t", "can’t"); the table copies the Swift exactly.
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 11: 5. Strings (DRAFT; no copy guide is approved), scrolls sideways" style="--tw:790px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 13: 5. Strings (DRAFT; no copy guide is approved), scrolls sideways" style="--tw:790px" markdown="1">
 
 | ID | String | Where |
 |---|---|---|
@@ -605,6 +667,7 @@ mixed already (straight in the four "couldn't" lines, curly in "hasn’t", "can�
 | `page.hb.del` | Delete “{name}”? Its check-ins are deleted too. | confirmation |
 | `page.gh.bad` | Enter it as owner/name, like python/cpython. | refusal |
 | `page.gh.foot` | Public repositories only. The widget asks GitHub for this repository’s numbers about every 15 minutes. | GitHub footer |
+| `page.wx.foot` | The widget asks MET Norway for this place’s forecast, when PyWidget is open. Its coordinates and this iPhone’s address are sent and logged there. | Next 24 hours footer (DRAFT, T-4707) |
 | `page.sc.foot` | Type the name exactly as it is in Shortcuts. PyWidget can’t see your shortcuts to check it. | Shortcuts footer |
 | `page.dup` | You already have one called “{name}”. | refusal; a list other than Countdown's events |
 | `page.full` | This list is full. Delete one to add another. | footer at a list's cap, where no cap-specific line exists |
@@ -654,7 +717,7 @@ For Pernille (Python, small):
 ## 8. Frames and QA
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 12: 8. Frames and QA, scrolls sideways" data-n="1" style="--tw:559px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 14: 8. Frames and QA, scrolls sideways" data-n="1" style="--tw:559px" markdown="1">
 
 | # | Frame | Shows |
 |---|---|---|
@@ -721,7 +784,7 @@ other days are still set in the Page.
 taps; ADR-011 s7 item 2). Each drawn instance carries `args` of numbers only (ADR-011 s1):
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 13: 9.2 Habit tracker: Done today, scrolls sideways" style="--tw:724px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 15: 9.2 Habit tracker: Done today, scrolls sideways" style="--tw:724px" markdown="1">
 
 | arg | value | why |
 |---|---|---|
@@ -749,7 +812,7 @@ before a change is N4 (ADR-011 s8), not a wrong mark.
 table, under "When the text grows". Pernille's render test and Idris's step-6 screenshots measure them.
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 14: 9.2 Habit tracker: Done today, scrolls sideways" style="--tw:898px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 16: 9.2 Habit tracker: Done today, scrolls sideways" style="--tw:898px" markdown="1">
 
 | Family | Buttons / cap | Layout with buttons | <span title="Whether we may and can build it: our rules and banned areas, and a first version Idris can finish by Day 22. A subject off the Investors&#x27; list is noted, not dropped.">Fit</span> (usable 375 pt phone) |
 |---|---|---|---|
@@ -786,7 +849,7 @@ subheadline 15 / 21 / 49 pt at Large / xxxLarge / AX5; not measured: Idris check
 and screenshots at the largest text size measure):
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 15: 9.2 Habit tracker: Done today, scrolls sideways" style="--tw:1280px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 17: 9.2 Habit tracker: Done today, scrolls sideways" style="--tw:1280px" markdown="1">
 
 | Text size | Medium (116 pt tall, 289 wide) | Large (292 pt tall) | Small (116 pt tall) |
 |---|---|---|---|
@@ -930,7 +993,7 @@ different weeks in the widget and the Page.
 ### 9.3 The eleven without a button
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 16: 9.3 The eleven without a button, scrolls sideways" style="--tw:839px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 18: 9.3 The eleven without a button, scrolls sideways" style="--tw:839px" markdown="1">
 
 | Premade | Why not in 1.0 | What would change it |
 |---|---|---|
@@ -955,7 +1018,7 @@ After ADR-011 steps 4, 5, 6a and 6 (the generic path: signing, the Python run, t
 here adds a Swift view; the habit button is an ordinary drawn `Button`.
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 17: 9.4 Build cost, for Idris (Commandment 13 reviewer), scrolls sideways" style="--tw:1044px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 19: 9.4 Build cost, for Idris (Commandment 13 reviewer), scrolls sideways" style="--tw:1044px" markdown="1">
 
 | Part | Who | Size | On the slot |
 |---|---|---|---|

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-26T09:28:39.846802+00:00",
+ "at": "2026-11-26T09:33:20.849925+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -8,10 +8,19 @@
   "coord": {
    "active": true,
    "started": 1795341309,
-   "restarts": 13,
-   "last_handoff": 1795674226
+   "restarts": 14,
+   "last_handoff": 1795685426
   },
   "flow": [
+   {
+    "t": "T-4776",
+    "steps": [
+     {
+      "s": "testq",
+      "at": 1795663012
+     }
+    ]
+   },
    {
     "t": "T-4185",
     "name": "Launcher widgets open the apps a person chose",
@@ -76,18 +85,17 @@
   "landed": 1,
   "failed": 4
  },
- "workers": [
+ "workers": [],
+ "who": "",
+ "recent": [
   {
    "name": "idris",
    "task": "[build] T-5796 refresh taps pin",
    "model": "opus",
    "started": "2026-11-26T07:06:58.763Z",
-   "seconds": 8501,
-   "finished": null
-  }
- ],
- "who": "Idris",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-26T09:30:00.453000+00:00"
+  },
   {
    "name": "pernille",
    "task": "[review] T-4476",
@@ -111,14 +119,6 @@
    "started": "2026-11-26T07:00:13.872Z",
    "seconds": null,
    "finished": "2026-11-26T07:02:31.307000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-4476 ADR-012 seventh round",
-   "model": "opus",
-   "started": "2026-11-26T06:56:48.090Z",
-   "seconds": null,
-   "finished": "2026-11-26T06:59:59.956000+00:00"
   }
  ],
  "queue": {
@@ -129,31 +129,31 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 0.0,
-   "resets_at": "2026-11-26T14:00:00.088760+00:00",
+   "pct": 1.0,
+   "resets_at": "2026-11-26T14:00:00.088797+00:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-26T04:14:22.463380-05:00",
+   "read_at": "2026-11-26T04:33:07.434643-05:00",
    "source": "usage",
-   "left": 100.0,
+   "left": 99.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 95.0,
-   "resets_at": "2026-11-29T07:00:00.088811+00:00",
+   "resets_at": "2026-11-29T07:00:00.088816+00:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-26T04:14:22.463380-05:00",
+   "read_at": "2026-11-26T04:33:07.434643-05:00",
    "source": "usage",
    "left": 5.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 33.0,
-   "resets_at": "2026-11-29T07:00:00.088949+00:00",
+   "resets_at": "2026-11-29T07:00:00.088945+00:00",
    "used_words": "of the Fable weekly allowance used",
-   "read_at": "2026-11-26T04:14:22.463380-05:00",
+   "read_at": "2026-11-26T04:33:07.434643-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-26T04:14:22.463380-05:00"
+  "read_at": "2026-11-26T04:33:07.434643-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -170,10 +170,10 @@
  },
  "next_tick": null,
  "personal": {
-  "week_pct": 135.44,
-  "usage_pct": 58.8,
+  "week_pct": 141.43,
+  "usage_pct": 59.8,
   "work_pct": 98.6,
-  "read_at": "2026-11-26T09:28:00+00:00",
+  "read_at": "2026-11-26T09:33:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -243,7 +243,7 @@
   }
  ],
  "disk": {
-  "free_gb": 37,
+  "free_gb": 35,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -252,14 +252,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-26T04:27:00-05:00",
+   "at": "2026-11-26T04:30:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-26T04:28:00-05:00",
+  "at": "2026-11-26T04:33:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -272,15 +272,15 @@
  "pool": {
   "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 8 (held: too few lands in 3 hours to judge a raise)",
   "n": 8,
-  "at": "2026-11-26T01:29:22.674225-05:00"
+  "at": "2026-11-26T04:33:07.829401-05:00"
  },
  "lanes": [
   {
    "name": "Idris",
-   "state": "running",
-   "task": "[build] T-5796 refresh taps pin",
-   "model": "opus",
-   "since": "2026-11-26T07:06:58.763Z",
+   "state": "next",
+   "task": "Idris, P2, from T-1282 F1 (not before TestFlight):...",
+   "model": null,
+   "since": null,
    "next": []
   },
   {
@@ -325,18 +325,7 @@
   }
  ],
  "tasks": {
-  "run": [
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "Internal TestFlight builds carry the test widgets",
-    "m": "opus",
-    "at": "2026-11-26T07:06:58.763Z",
-    "o": "c",
-    "task": "T-5796"
-   }
-  ],
-  "src": "plan",
+  "run": [],
   "open": [
    {
     "w": "Idris",
@@ -485,7 +474,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-26T09:28:25Z",
+  "at": "2026-11-26T09:33:20Z",
   "s": {
    "T-4185": [
     "mergetest",
@@ -497,29 +486,21 @@
     "on main 1:11 AM ET",
     1795673510000,
     ""
-   ],
-   "T-5796": [
-    "merged",
-    "on main 12:00 AM ET",
-    1795669204000,
-    "Operator"
    ]
   },
   "nm": {
    "T-4185": "Launcher widgets open the apps a person chose",
-   "T-4181": "Widgets refresh on their own and by a tap",
-   "T-5796": "Internal TestFlight builds carry the test widgets"
+   "T-4181": "Widgets refresh on their own and by a tap"
   },
   "wk": {
    "T-4185": "Idris",
    "T-4181": "Idris",
-   "T-5796": "Idris",
    "T-4707": "Pernille",
    "T-5889": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-26T09:28:25Z",
+  "at": "2026-11-26T09:33:20Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -537,7 +518,7 @@
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 173
+    "parked": 178
    },
    "cur": [],
    "ld": [
@@ -547,12 +528,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-26T09:28:26Z",
-    "ld": 8.68,
+    "at": "2026-11-26T09:33:21Z",
+    "ld": 8.58,
     "c": 8,
     "sb": 0,
     "dk": [
-     34.7,
+     36.8,
      228.3
     ],
     "ss": [
@@ -576,16 +557,16 @@
  },
  "hc": {
   "wait": {
-   "n": 8,
+   "n": 9,
    "limit": 20,
    "in_line": 0,
-   "parked": 8,
+   "parked": 9,
    "open": true,
    "mq": false,
-   "counted": "2026-11-26T09:17:12+00:00",
+   "counted": "2026-11-26T09:29:08+00:00",
    "by": {
     "app": {
-     "n": 7,
+     "n": 8,
      "limit": 20,
      "open": true
     },
@@ -600,20 +581,17 @@
      "open": true
     }
    },
-   "at": "2026-11-26T09:28:39+00:00"
+   "at": "2026-11-26T09:33:20+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-26T09:28:33+00:00"
+   "at": "2026-11-26T09:33:20+00:00"
   }
  },
  "operators": [
   {
    "w": "Operator",
-   "a": "Main plan",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
+   "a": "Main",
    "t": "Work session",
    "at": "2026-11-26T01:29:33-05:00"
   },
@@ -671,13 +649,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 1,
+  "main": 0,
   "lanes": 4,
-  "total": 5,
-  "at": "4:28 AM",
+  "total": 4,
+  "at": "4:33 AM",
   "why": "",
-  "at_iso": "2026-11-26T09:28:00+00:00",
+  "at_iso": "2026-11-26T09:33:00+00:00",
   "started": "1:29 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 1, started 1:29 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 4:28 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 0, started 1:29 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 4:33 AM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-26T06:41:46.236346+00:00",
+ "at": "2026-11-26T06:44:54.811294+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -82,20 +82,28 @@
    "task": "[build] T-5795 settle test conflict",
    "model": "opus",
    "started": "2026-11-26T06:30:30.262Z",
-   "seconds": 675,
+   "seconds": 864,
    "finished": null
   },
+  {
+   "name": "pernille",
+   "task": "[review] T-4476",
+   "model": "opus",
+   "started": "2026-11-26T06:44:21.641Z",
+   "seconds": 33,
+   "finished": null
+  }
+ ],
+ "who": "Pernille x2",
+ "recent": [
   {
    "name": "idris",
    "task": "[build] T-4476 ADR-012 fourth round",
    "model": "opus",
    "started": "2026-11-26T06:38:25.012Z",
-   "seconds": 201,
-   "finished": null
-  }
- ],
- "who": "Pernille, Idris",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-26T06:43:59.630000+00:00"
+  },
   {
    "name": "pernille",
    "task": "[review] T-4476",
@@ -165,7 +173,7 @@
   "week_pct": 134.01,
   "usage_pct": 58.8,
   "work_pct": 98.6,
-  "read_at": "2026-11-26T06:41:00+00:00",
+  "read_at": "2026-11-26T06:44:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -251,7 +259,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-26T01:41:00-05:00",
+  "at": "2026-11-26T01:44:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -277,10 +285,10 @@
   },
   {
    "name": "Idris",
-   "state": "running",
-   "task": "[build] T-4476 ADR-012 fourth round",
-   "model": "opus",
-   "since": "2026-11-26T06:38:25.012Z",
+   "state": "next",
+   "task": "Idris, P2, from T-1282 F1 (not before TestFlight):...",
+   "model": null,
+   "since": null,
    "next": []
   },
   {
@@ -328,11 +336,11 @@
     "task": "T-5795"
    },
    {
-    "w": "Idris",
-    "k": "build",
+    "w": "Pernille",
+    "k": "review",
     "t": "Projects get one file, one ID and guarded outside code",
     "m": "opus",
-    "at": "2026-11-26T06:38:25.012Z",
+    "at": "2026-11-26T06:44:21.641Z",
     "o": "c",
     "task": "T-4476"
    }
@@ -477,11 +485,11 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-26T06:41:29Z",
+  "at": "2026-11-26T06:44:47Z",
   "s": {
-   "T-5795": [
-    "testing",
-    "Mac Mini \u00b7 test",
+   "T-0725": [
+    "mergetest",
+    "iPhone tests on the MacBook",
     null
    ],
    "T-4476": [
@@ -489,19 +497,27 @@
     "on main 9:52 PM ET",
     1795661561000,
     "Idris"
+   ],
+   "T-5795": [
+    "merged",
+    "on main 9:35 PM ET",
+    1795660500000,
+    "Pernille"
    ]
   },
   "nm": {
-   "T-5795": "The 1.0 showcase premades are built and in the Gallery",
-   "T-4476": "Projects get one file, one ID and guarded outside code"
+   "T-0725": "Fix small faults in project export",
+   "T-4476": "Projects get one file, one ID and guarded outside code",
+   "T-5795": "The 1.0 showcase premades are built and in the Gallery"
   },
   "wk": {
-   "T-5795": "Pernille",
-   "T-4476": "Idris"
+   "T-0725": "Idris",
+   "T-4476": "Idris",
+   "T-5795": "Pernille"
   }
  },
  "ln": {
-  "at": "2026-11-26T06:41:29Z",
+  "at": "2026-11-26T06:44:47Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -519,7 +535,7 @@
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 101
+    "parked": 105
    },
    "cur": [],
    "ld": [
@@ -529,32 +545,32 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-26T06:41:31Z",
-    "ld": 9.14,
+    "at": "2026-11-26T06:44:24Z",
+    "ld": 6.56,
     "c": 8,
-    "sb": 1,
+    "sb": 0,
     "dk": [
-     21.5,
+     17.7,
      228.3
     ],
     "ss": [
      172.6,
      953.7
     ],
-    "sn": [
-     "iPhone 17e"
-    ]
+    "sn": []
    },
    "macbook": {
-    "at": "2026-11-26T06:38:13Z",
-    "ld": 7.04,
+    "at": "2026-11-26T06:43:52Z",
+    "ld": 3.78,
     "c": 12,
-    "sb": 0,
+    "sb": 1,
     "dk": [
-     413.2,
+     411.6,
      926.4
     ],
-    "sn": []
+    "sn": [
+     "itsthecompany-runner"
+    ]
    }
   }
  },
@@ -584,11 +600,11 @@
      "open": true
     }
    },
-   "at": "2026-11-26T06:41:46+00:00"
+   "at": "2026-11-26T06:44:54+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-26T06:41:46+00:00"
+   "at": "2026-11-26T06:44:54+00:00"
   }
  },
  "operators": [
@@ -656,10 +672,10 @@
   "main": 2,
   "lanes": 4,
   "total": 6,
-  "at": "1:41 AM",
+  "at": "1:44 AM",
   "why": "",
-  "at_iso": "2026-11-26T06:41:00+00:00",
+  "at_iso": "2026-11-26T06:44:00+00:00",
   "started": "1:29 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 2, started 1:29 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 1:41 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 2, started 1:29 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 1:44 AM ET</p></section>"
  }
 }

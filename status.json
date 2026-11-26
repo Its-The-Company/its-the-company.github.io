@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-26T14:08:34.351609+00:00",
+ "at": "2026-11-26T14:11:44.584488+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -91,7 +91,7 @@
    "task": "[build] T-4183 Gallery small fixes",
    "model": "opus",
    "started": "2026-11-26T13:48:47.348Z",
-   "seconds": 1187,
+   "seconds": 1377,
    "finished": null
   }
  ],
@@ -149,7 +149,7 @@
   "week_pct": 154.3,
   "usage_pct": 61.6,
   "work_pct": 98.7,
-  "read_at": "2026-11-26T14:08:00+00:00",
+  "read_at": "2026-11-26T14:11:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -235,7 +235,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-26T09:08:00-05:00",
+  "at": "2026-11-26T09:11:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -452,7 +452,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-26T14:08:34Z",
+  "at": "2026-11-26T14:11:32Z",
   "s": {
    "T-4182": [
     "mergetest",
@@ -464,6 +464,11 @@
     "Mac Mini \u00b7 test",
     null
    ],
+   "T-4183": [
+    "testq",
+    "1st for a Simulator",
+    1795702232900
+   ],
    "T-4181": [
     "merged",
     "on main 5:14 AM ET",
@@ -474,16 +479,18 @@
   "nm": {
    "T-4182": "A failing widget says so and can recover",
    "T-4185": "Launcher widgets open the apps a person chose",
+   "T-4183": "The Gallery shows, previews and opens every premade",
    "T-4181": "Widgets refresh on their own and by a tap"
   },
   "wk": {
    "T-4182": "Idris",
    "T-4185": "Idris",
+   "T-4183": "Idris",
    "T-4181": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-26T14:08:34Z",
+  "at": "2026-11-26T14:11:32Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -501,7 +508,7 @@
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 453
+    "parked": 456
    },
    "cur": [],
    "ld": [
@@ -511,12 +518,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-26T14:07:56Z",
-    "ld": 8.73,
+    "at": "2026-11-26T14:11:09Z",
+    "ld": 8.76,
     "c": 8,
     "sb": 1,
     "dk": [
-     27.2,
+     26.6,
      228.3
     ],
     "ss": [
@@ -570,11 +577,11 @@
      "open": true
     }
    },
-   "at": "2026-11-26T14:08:34+00:00"
+   "at": "2026-11-26T14:11:44+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-26T14:08:34+00:00"
+   "at": "2026-11-26T14:11:44+00:00"
   }
  },
  "operators": [
@@ -591,6 +598,8 @@
    "w": "Operator",
    "a": "Evan's Account",
    "sr": 1,
+   "m": "opus",
+   "e": "high",
    "t": "Work session \u2013 1 task",
    "at": "2026-11-26T08:17:56-05:00"
   },
@@ -598,6 +607,8 @@
    "w": "Operator",
    "a": "Evan's Account",
    "sr": 1,
+   "m": "opus",
+   "e": "high",
    "t": "Work session \u2013 1 task",
    "at": "2026-11-26T07:41:40-05:00"
   },
@@ -605,6 +616,8 @@
    "w": "Operator",
    "a": "Jeremy's Account",
    "sr": 1,
+   "m": "opus",
+   "e": "high",
    "t": "Work session \u2013 1 task",
    "at": "2026-11-26T09:02:36-05:00"
   },
@@ -612,6 +625,8 @@
    "w": "Operator",
    "a": "Jeremy's Account",
    "sr": 1,
+   "m": "opus",
+   "e": "high",
    "t": "Work session \u2013 1 task",
    "at": "2026-11-26T08:59:26-05:00"
   }
@@ -634,10 +649,10 @@
   "main": 1,
   "lanes": 4,
   "total": 5,
-  "at": "9:08 AM",
+  "at": "9:11 AM",
   "why": "",
-  "at_iso": "2026-11-26T14:08:00+00:00",
+  "at_iso": "2026-11-26T14:11:00+00:00",
   "started": "8:47 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 1, started 8:47 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 9:08 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 1, started 8:47 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 9:11 AM ET</p></section>"
  }
 }

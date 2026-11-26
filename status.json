@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-26T11:57:10.590841+00:00",
+ "at": "2026-11-26T12:00:12.059146+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -91,7 +91,7 @@
    "task": "[build] T-5796 finish TestFlight batch",
    "model": "opus",
    "started": "2026-11-26T09:34:46.191Z",
-   "seconds": 8544,
+   "seconds": 8725,
    "finished": null
   }
  ],
@@ -149,7 +149,7 @@
   "week_pct": 141.16,
   "usage_pct": 59.8,
   "work_pct": 98.6,
-  "read_at": "2026-11-26T11:57:00+00:00",
+  "read_at": "2026-11-26T12:00:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -219,7 +219,7 @@
   }
  ],
  "disk": {
-  "free_gb": 27,
+  "free_gb": 29,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -228,14 +228,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-26T06:50:00-05:00",
+   "at": "2026-11-26T06:57:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-26T06:57:00-05:00",
+  "at": "2026-11-26T07:00:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -473,17 +473,12 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-26T11:57:04Z",
+  "at": "2026-11-26T12:00:00Z",
   "s": {
-   "T-4188": [
+   "T-4185": [
     "mergetest",
     "Xcode checks on the MacBook, 1st to merge",
-    1795693804275
-   ],
-   "T-4185": [
-    "mergeq",
-    "2nd to merge",
-    1795693984275
+    1795694400348
    ],
    "T-2493": [
     "mergetest",
@@ -493,7 +488,7 @@
    "T-5796": [
     "testq",
     "1st for a Simulator",
-    1795692664275
+    1795692660348
    ],
    "T-4182": [
     "merged",
@@ -503,14 +498,12 @@
    ]
   },
   "nm": {
-   "T-4188": "Location, steps and notifications work in scripts and...",
    "T-4185": "Launcher widgets open the apps a person chose",
    "T-2493": "Keep locked premades out of the run log",
    "T-5796": "Internal TestFlight builds carry the test widgets",
    "T-4182": "A failing widget says so and can recover"
   },
   "wk": {
-   "T-4188": "Idris",
    "T-4185": "Idris",
    "T-2493": "Idris",
    "T-5796": "Idris",
@@ -523,34 +516,34 @@
   }
  },
  "ln": {
-  "at": "2026-11-26T11:57:04Z",
+  "at": "2026-11-26T12:00:00Z",
   "mq": {
    "n": {
     "checking": 1,
-    "inline": 1,
+    "inline": 0,
     "conflicted": 0,
     "failed": 0,
     "held": 0,
     "retry": 0,
-    "parked": 6
+    "parked": 7
    },
    "m": {
-    "checking": 7,
-    "inline": 4,
+    "checking": 0,
+    "inline": null,
     "conflicted": null,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 322
+    "parked": 325
    },
    "cur": [
     [
      [
-      "T-4188"
+      "T-4185"
      ],
-     "iPhone app tests",
+     "iPhone app tests, sent and waiting its turn",
      "MacBook",
-     7
+     0
     ]
    ],
    "ld": [
@@ -560,12 +553,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-26T11:56:39Z",
-    "ld": 1.24,
+    "at": "2026-11-26T11:59:36Z",
+    "ld": 1.27,
     "c": 8,
     "sb": 1,
     "dk": [
-     28.7,
+     28.4,
      228.3
     ],
     "ss": [
@@ -619,11 +612,11 @@
      "open": true
     }
    },
-   "at": "2026-11-26T11:57:10+00:00"
+   "at": "2026-11-26T12:00:12+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-26T11:57:04+00:00"
+   "at": "2026-11-26T12:00:12+00:00"
   }
  },
  "operators": [
@@ -692,10 +685,10 @@
   "main": 1,
   "lanes": 4,
   "total": 5,
-  "at": "6:57 AM",
+  "at": "7:00 AM",
   "why": "",
-  "at_iso": "2026-11-26T11:57:00+00:00",
+  "at_iso": "2026-11-26T12:00:00+00:00",
   "started": "4:33 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 1, started 4:33 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 6:57 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 1, started 4:33 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 7:00 AM ET</p></section>"
  }
 }

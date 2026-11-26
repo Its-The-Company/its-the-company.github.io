@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-26T04:39:33.558487+00:00",
+ "at": "2026-11-26T04:42:33.738233+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -92,7 +92,7 @@
    "task": "[build] T-4476 manifest decision record",
    "model": "opus",
    "started": "2026-11-26T04:22:41.811Z",
-   "seconds": 1011,
+   "seconds": 1191,
    "finished": null
   },
   {
@@ -100,7 +100,7 @@
    "task": "[build] T-5796 two review Lows",
    "model": "opus",
    "started": "2026-11-26T04:28:07.673Z",
-   "seconds": 685,
+   "seconds": 866,
    "finished": null
   }
  ],
@@ -191,7 +191,7 @@
   "week_pct": 131.52,
   "usage_pct": 58.8,
   "work_pct": 98.5,
-  "read_at": "2026-11-26T04:39:00+00:00",
+  "read_at": "2026-11-26T04:42:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -202,18 +202,6 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-25T23:34:52-05:00",
-    "n": "Evan",
-    "src": "plan-a"
-   },
-   {
-    "lane": "a3",
-    "task": "T-4185",
-    "w": "Idris",
-    "k": "build",
-    "t": "Launcher widgets open the apps a person chose",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-25T22:13:04-05:00",
     "n": "Evan",
     "src": "plan-a"
    }
@@ -253,7 +241,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-25T23:39:00-05:00",
+  "at": "2026-11-25T23:42:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -264,7 +252,7 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 8 (at its floor: load 22.7 a core is over 10)",
+  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 8 (held: too few lands in 3 hours to judge a raise)",
   "n": 8,
   "at": "2026-11-25T23:19:24.355533-05:00"
  },
@@ -484,9 +472,14 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-26T04:39:26Z",
+  "at": "2026-11-26T04:42:15Z",
   "s": {
-   "T-0725": [
+   "T-4185": [
+    "mergeq",
+    "1st to merge",
+    1795668135556
+   ],
+   "T-5630": [
     "mergetest",
     "iPhone tests on the MacBook",
     null
@@ -499,21 +492,23 @@
    ]
   },
   "nm": {
-   "T-0725": "Fix small faults in project export",
+   "T-4185": "Launcher widgets open the apps a person chose",
+   "T-5630": "Shortcuts settings sheet gets its Try It row",
    "T-4476": "Projects get one file, one ID and guarded outside code"
   },
   "wk": {
-   "T-0725": "Idris",
+   "T-4185": "Idris",
+   "T-5630": "Idris",
    "T-4476": "Idris",
    "T-4777": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-26T04:39:26Z",
+  "at": "2026-11-26T04:42:15Z",
   "mq": {
    "n": {
     "checking": 0,
-    "inline": 0,
+    "inline": 1,
     "conflicted": 1,
     "failed": 0,
     "held": 1,
@@ -522,12 +517,12 @@
    },
    "m": {
     "checking": null,
-    "inline": null,
-    "conflicted": 6,
+    "inline": 0,
+    "conflicted": 9,
     "failed": null,
-    "held": 6,
+    "held": 9,
     "retry": null,
-    "parked": 671
+    "parked": 674
    },
    "cur": [],
    "ld": [
@@ -537,12 +532,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-26T04:39:01Z",
-    "ld": 15.1,
+    "at": "2026-11-26T04:41:53Z",
+    "ld": 9.12,
     "c": 8,
     "sb": 1,
     "dk": [
-     21.5,
+     23.8,
      228.3
     ],
     "ss": [
@@ -554,17 +549,17 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-26T04:36:21Z",
-    "ld": 7.34,
+    "at": "2026-11-26T04:39:55Z",
+    "ld": 5.17,
     "c": 12,
     "sb": 2,
     "dk": [
-     416.6,
+     416.4,
      926.4
     ],
     "sn": [
-     "itsthecompany-runner",
-     "itsthecompany-runner-2"
+     "itsthecompany-runner-2",
+     "itsthecompany-runner-3"
     ]
    }
   }
@@ -595,11 +590,11 @@
      "open": true
     }
    },
-   "at": "2026-11-26T04:39:33+00:00"
+   "at": "2026-11-26T04:42:33+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-26T04:39:20+00:00"
+   "at": "2026-11-26T04:42:27+00:00"
   }
  },
  "operators": [
@@ -620,15 +615,6 @@
    "e": "high",
    "t": "Work session \u2013 1 task",
    "at": "2026-11-25T23:34:52-05:00"
-  },
-  {
-   "w": "Operator",
-   "a": "Evan's Account",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session",
-   "at": "2026-11-25T22:13:04-05:00"
   }
  ],
  "reply": {
@@ -649,12 +635,12 @@
  ],
  "agents_now": {
   "main": 2,
-  "lanes": 2,
-  "total": 4,
-  "at": "11:39 PM",
+  "lanes": 1,
+  "total": 3,
+  "at": "11:42 PM",
   "why": "",
-  "at_iso": "2026-11-26T04:39:00+00:00",
+  "at_iso": "2026-11-26T04:42:00+00:00",
   "started": "11:19 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 2, started 11:19 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 11:39 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 11:19 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 11:42 PM ET</p></section>"
  }
 }

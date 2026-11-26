@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-26T23:11:50.467466+00:00",
+ "at": "2026-11-26T23:14:53.845020+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -72,7 +72,7 @@
    "task": "[build] T-5894 premade page test order",
    "model": "opus",
    "started": "2026-11-26T20:25:04.046Z",
-   "seconds": 10006,
+   "seconds": 10189,
    "finished": null,
    "effort": "high"
   },
@@ -81,7 +81,7 @@
    "task": "[build] T-4476 format 2 manifest",
    "model": "opus",
    "started": "2026-11-26T22:42:59.531Z",
-   "seconds": 1730,
+   "seconds": 1914,
    "finished": null,
    "effort": "high"
   },
@@ -90,7 +90,7 @@
    "task": "[design] T-4190 Pro screen words",
    "model": "opus",
    "started": "2026-11-26T23:09:35.413Z",
-   "seconds": 135,
+   "seconds": 318,
    "finished": null,
    "effort": "high"
   }
@@ -133,24 +133,24 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 307,
+  "runnable_count": 308,
   "blocked_count": 0
  },
  "meter": {
   "five_hour": {
-   "pct": 15.0,
+   "pct": 16.0,
    "resets_at": "2026-11-26T21:30:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-26T18:11:41.156695-05:00",
+   "read_at": "2026-11-26T18:13:19.229398-05:00",
    "source": "live",
-   "left": 85.0,
+   "left": 84.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 9.0,
    "resets_at": "2026-11-29T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-26T18:11:41.156695-05:00",
+   "read_at": "2026-11-26T18:13:19.229398-05:00",
    "source": "live",
    "left": 91.0,
    "left_words": "of your weekly allowance left"
@@ -162,7 +162,7 @@
    "read_at": "2026-11-26T17:52:34.270647-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-26T18:11:41.156695-05:00"
+  "read_at": "2026-11-26T18:13:19.229398-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -182,20 +182,8 @@
   "week_pct": 607.4,
   "usage_pct": 62.0,
   "work_pct": 98.8,
-  "read_at": "2026-11-26T23:11:00+00:00",
+  "read_at": "2026-11-26T23:14:00+00:00",
   "running": [
-   {
-    "lane": "a2",
-    "task": "T-4182",
-    "w": "Idris",
-    "k": "build",
-    "t": "A failing widget says so and can recover",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-26T16:42:59-05:00",
-    "n": "Evan",
-    "src": "plan-a"
-   },
    {
     "lane": "b",
     "task": "T-4192",
@@ -244,7 +232,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-26T18:11:00-05:00",
+  "at": "2026-11-26T18:14:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -435,7 +423,7 @@
    }
   ],
   "count": {
-   "next": 307,
+   "next": 308,
    "wait": 0,
    "blocked": 0,
    "you": 0
@@ -509,11 +497,21 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-26T23:11:41Z",
+  "at": "2026-11-26T23:14:53Z",
   "s": {
+   "T-4182": [
+    "mergeq",
+    "1st to merge",
+    1795734833845
+   ],
    "T-4192": [
     "mergetest",
     "iPhone tests on the MacBook",
+    null
+   ],
+   "T-5894": [
+    "testing",
+    "Mac Mini \u00b7 test",
     null
    ],
    "T-4476": [
@@ -527,25 +525,21 @@
     "on main 5:06 PM ET",
     1795730812000,
     "Idris"
-   ],
-   "T-4182": [
-    "merged",
-    "on main 3:00 PM ET",
-    1795723216000,
-    "Idris"
    ]
   },
   "nm": {
+   "T-4182": "A failing widget says so and can recover",
    "T-4192": "Python in the app: smaller bundle, installable packages",
+   "T-5894": "Make the Sun page link test pass in any order",
    "T-4476": "Projects get one file, one ID and guarded outside code",
-   "T-4190": "Settings and Pro: buy, restore, themes",
-   "T-4182": "A failing widget says so and can recover"
+   "T-4190": "Settings and Pro: buy, restore, themes"
   },
   "wk": {
+   "T-4182": "Idris",
    "T-4192": "Idris",
+   "T-5894": "Idris",
    "T-4476": "Idris",
    "T-4190": "Idris",
-   "T-4182": "Idris",
    "T-5909": "Idris",
    "T-5907": "Idris",
    "T-5529": "Idris",
@@ -561,11 +555,11 @@
   }
  },
  "ln": {
-  "at": "2026-11-26T23:11:41Z",
+  "at": "2026-11-26T23:14:53Z",
   "mq": {
    "n": {
     "checking": 0,
-    "inline": 0,
+    "inline": 1,
     "conflicted": 0,
     "failed": 0,
     "held": 0,
@@ -574,12 +568,12 @@
    },
    "m": {
     "checking": null,
-    "inline": null,
+    "inline": 1,
     "conflicted": null,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 996
+    "parked": 1000
    },
    "cur": [],
    "ld": [
@@ -589,8 +583,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-26T23:11:21Z",
-    "ld": 7.24,
+    "at": "2026-11-26T23:14:16Z",
+    "ld": 4.86,
     "c": 8,
     "sb": 1,
     "dk": [
@@ -606,15 +600,16 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-26T23:09:41Z",
-    "ld": 1.8,
+    "at": "2026-11-26T23:13:13Z",
+    "ld": 1.97,
     "c": 12,
-    "sb": 1,
+    "sb": 2,
     "dk": [
-     375.5,
+     373.8,
      926.4
     ],
     "sn": [
+     "itsthecompany-runner",
      "itsthecompany-runner-2"
     ]
    }
@@ -646,11 +641,11 @@
      "open": true
     }
    },
-   "at": "2026-11-26T23:11:50+00:00"
+   "at": "2026-11-26T23:14:53+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-26T23:11:50+00:00"
+   "at": "2026-11-26T23:14:53+00:00"
   }
  },
  "operators": [
@@ -660,17 +655,8 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Inbox \u2013 Evan's 6:10 PM Message on GitHub",
-   "at": "2026-11-26T18:10:43-05:00"
-  },
-  {
-   "w": "Operator",
-   "a": "Evan's Account",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session \u2013 1 task",
-   "at": "2026-11-26T16:42:58-05:00"
+   "t": "Inbox \u2013 Jeremy's 6:13 PM Message on GitHub",
+   "at": "2026-11-26T18:14:07-05:00"
   },
   {
    "w": "Operator",
@@ -683,19 +669,19 @@
   }
  ],
  "reply": {
-  "sent": "2026-11-26T20:22:37Z",
-  "seconds": 91.0
+  "sent": "2026-11-26T23:12:41Z",
+  "seconds": 60.0
  },
  "inbox": [
   {
-   "id": "c7205314979",
+   "id": "c7205357609",
    "state": "received",
    "position": 1,
    "tasks": {
     "open": 0,
     "done": 0
    },
-   "title": "do it"
+   "title": "Neither of the Investors will be by..."
   }
  ],
  "trimmed": [
@@ -704,6 +690,7 @@
   "recent",
   "task_done",
   "fin_short",
+  "inbox_title",
   "task_title",
   "done_text",
   "fin_six",
@@ -712,12 +699,12 @@
  ],
  "agents_now": {
   "main": 3,
-  "lanes": 2,
-  "total": 5,
-  "at": "6:11 PM",
+  "lanes": 1,
+  "total": 4,
+  "at": "6:14 PM",
   "why": "",
-  "at_iso": "2026-11-26T23:11:00+00:00",
+  "at_iso": "2026-11-26T23:14:00+00:00",
   "started": "12:21 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 3, started 12:21 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 6:11 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 3, started 12:21 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 6:14 PM ET</p></section>"
  }
 }

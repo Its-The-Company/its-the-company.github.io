@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-26T08:45:33.708233+00:00",
+ "at": "2026-11-26T08:48:41.204653+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -82,7 +82,7 @@
    "task": "[build] T-5796 refresh taps pin",
    "model": "opus",
    "started": "2026-11-26T07:06:58.763Z",
-   "seconds": 5914,
+   "seconds": 6102,
    "finished": null
   }
  ],
@@ -173,7 +173,7 @@
   "week_pct": 135.44,
   "usage_pct": 58.8,
   "work_pct": 98.6,
-  "read_at": "2026-11-26T08:45:00+00:00",
+  "read_at": "2026-11-26T08:48:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -252,14 +252,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-26T03:40:00-05:00",
+   "at": "2026-11-26T03:46:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-26T03:45:00-05:00",
+  "at": "2026-11-26T03:48:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -270,7 +270,7 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 8 (held: too few lands in 3 hours to judge a raise)",
+  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 8 (at its floor: load 10.2 a core is over 10)",
   "n": 8,
   "at": "2026-11-26T01:29:22.674225-05:00"
  },
@@ -485,19 +485,19 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-26T08:45:18Z",
+  "at": "2026-11-26T08:48:41Z",
   "s": {
-   "T-4185": [
+   "T-4192": [
     "mergeq",
     "1st to merge",
-    1795681578666
+    1795682621204
    ],
-   "T-4192": [
-    "mergetest",
-    "Xcode checks on the MacBook, 2nd to merge",
-    1795681578666
+   "T-4185": [
+    "mergeq",
+    "2nd to merge",
+    1795682921204
    ],
-   "T-5640": [
+   "T-4188": [
     "mergetest",
     "iPhone tests on the MacBook",
     null
@@ -521,17 +521,17 @@
    ]
   },
   "nm": {
-   "T-4185": "Launcher widgets open the apps a person chose",
    "T-4192": "Python in the app: smaller bundle, installable packages",
-   "T-5640": "Animated test widgets that find the timer method's limits",
+   "T-4185": "Launcher widgets open the apps a person chose",
+   "T-4188": "Location, steps and notifications work in scripts and...",
    "T-0306": "Check the gallery trees in every widget family",
    "T-4181": "Widgets refresh on their own and by a tap",
    "T-5796": "Internal TestFlight builds carry the test widgets"
   },
   "wk": {
-   "T-4185": "Idris",
    "T-4192": "Idris",
-   "T-5640": "Idris",
+   "T-4185": "Idris",
+   "T-4188": "Idris",
    "T-0306": "Idris",
    "T-4181": "Idris",
    "T-5796": "Idris",
@@ -540,11 +540,11 @@
   }
  },
  "ln": {
-  "at": "2026-11-26T08:45:18Z",
+  "at": "2026-11-26T08:48:41Z",
   "mq": {
    "n": {
-    "checking": 1,
-    "inline": 1,
+    "checking": 0,
+    "inline": 2,
     "conflicted": 0,
     "failed": 0,
     "held": 0,
@@ -552,24 +552,15 @@
     "parked": 10
    },
    "m": {
-    "checking": 19,
-    "inline": 19,
+    "checking": null,
+    "inline": 2,
     "conflicted": null,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 225
+    "parked": 229
    },
-   "cur": [
-    [
-     [
-      "T-4192"
-     ],
-     "iPhone app tests",
-     "MacBook",
-     19
-    ]
-   ],
+   "cur": [],
    "ld": [
     0,
     null
@@ -577,12 +568,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-26T08:44:55Z",
-    "ld": 9.82,
+    "at": "2026-11-26T08:48:25Z",
+    "ld": 10.21,
     "c": 8,
     "sb": 1,
     "dk": [
-     17.7,
+     17.5,
      228.3
     ],
     "ss": [
@@ -594,12 +585,12 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-26T08:36:13Z",
-    "ld": 0.34,
+    "at": "2026-11-26T08:47:14Z",
+    "ld": 6.21,
     "c": 12,
     "sb": 0,
     "dk": [
-     414.9,
+     414.2,
      926.4
     ],
     "sn": []
@@ -632,11 +623,11 @@
      "open": true
     }
    },
-   "at": "2026-11-26T08:45:33+00:00"
+   "at": "2026-11-26T08:48:41+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-26T08:45:18+00:00"
+   "at": "2026-11-26T08:48:32+00:00"
   }
  },
  "operators": [
@@ -673,7 +664,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 1 task",
+   "t": "Work session",
    "at": "2026-11-26T01:39:53-05:00"
   },
   {
@@ -706,10 +697,10 @@
   "main": 1,
   "lanes": 4,
   "total": 5,
-  "at": "3:45 AM",
+  "at": "3:48 AM",
   "why": "",
-  "at_iso": "2026-11-26T08:45:00+00:00",
+  "at_iso": "2026-11-26T08:48:00+00:00",
   "started": "1:29 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 1, started 1:29 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 3:45 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 1, started 1:29 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 3:48 AM ET</p></section>"
  }
 }

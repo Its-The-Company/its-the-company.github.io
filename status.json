@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-26T00:10:35.756849+00:00",
+ "at": "2026-11-26T00:13:41.038643+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -82,7 +82,7 @@
    "task": "[build] T-4191 large text steps",
    "model": "",
    "started": "2026-11-25T23:44:39.050Z",
-   "seconds": 1556,
+   "seconds": 1741,
    "finished": null
   },
   {
@@ -90,7 +90,7 @@
    "task": "[build] T-4476 Foundations actions",
    "model": "",
    "started": "2026-11-25T23:52:18.482Z",
-   "seconds": 1097,
+   "seconds": 1282,
    "finished": null
   },
   {
@@ -98,11 +98,19 @@
    "task": "[build] T-5795 weather chart premade",
    "model": "",
    "started": "2026-11-25T23:55:22.267Z",
-   "seconds": 913,
+   "seconds": 1098,
+   "finished": null
+  },
+  {
+   "name": "idris",
+   "task": "[build] T-5796 second batch",
+   "model": "",
+   "started": "2026-11-26T00:11:05.709Z",
+   "seconds": 155,
    "finished": null
   }
  ],
- "who": "Idris x2, Pernille",
+ "who": "Idris x3, Pernille",
  "recent": [
   {
    "name": "odalys",
@@ -140,24 +148,24 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 346,
+  "runnable_count": 344,
   "blocked_count": 0
  },
  "meter": {
   "five_hour": {
-   "pct": 6.0,
+   "pct": 7.0,
    "resets_at": "2026-11-25T23:00:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-25T19:07:40.671080-05:00",
+   "read_at": "2026-11-25T19:12:41.491048-05:00",
    "source": "live",
-   "left": 94.0,
+   "left": 93.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 83.0,
    "resets_at": "2026-11-29T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-25T19:07:40.671080-05:00",
+   "read_at": "2026-11-25T19:12:41.491048-05:00",
    "source": "live",
    "left": 17.0,
    "left_words": "of your weekly allowance left"
@@ -169,7 +177,7 @@
    "read_at": "2026-11-25T19:02:34.922061-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-25T19:07:40.671080-05:00"
+  "read_at": "2026-11-25T19:12:41.491048-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -189,7 +197,7 @@
   "week_pct": 124.66,
   "usage_pct": 60.0,
   "work_pct": 98.3,
-  "read_at": "2026-11-26T00:10:00+00:00",
+  "read_at": "2026-11-26T00:13:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -251,7 +259,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-25T19:10:00-05:00",
+  "at": "2026-11-25T19:13:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -341,6 +349,14 @@
     "at": "2026-11-25T23:55:22.267Z",
     "o": "c",
     "task": "T-5795"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "Internal TestFlight builds carry the test widgets",
+    "at": "2026-11-26T00:11:05.709Z",
+    "o": "c",
+    "task": "T-5796"
    }
   ],
   "src": "plan",
@@ -419,29 +435,41 @@
   "done": [
    {
     "w": "Idris",
-    "t": "VoiceOver now reads the console as \"Console output\", reads the Pro screen's small headings as...",
-    "at": "2026-11-25T18:44:00-05:00"
+    "t": "A widget's buttons are now checked the same way whether Python builds them or someone writes the...",
+    "at": "2026-11-25T19:10:00-05:00"
    },
    {
     "w": "Idris",
-    "t": "At the largest text size, holding a key above the keyboard, or a tab, now shows it enlarged, so...",
-    "at": "2026-11-25T18:44:00-05:00"
+    "t": "A test that was meant to prove one specific refusal now fails if the app refuses for any other...",
+    "at": "2026-11-25T19:10:00-05:00"
    },
    {
-    "w": "Pernille",
-    "t": "Ines's showcase plan now names all three Pro features correctly, but it still says one Pro...",
-    "at": "2026-11-25T15:52:00-05:00"
+    "w": "Idris",
+    "t": "When a newer build of the app has been keeping a log of widget changes, this version now adds...",
+    "at": "2026-11-25T19:10:00-05:00"
    }
   ],
   "count": {
-   "next": 346,
+   "next": 344,
    "wait": 0,
    "blocked": 0,
    "you": 0
   },
   "fin": {
-   "n": 10,
+   "n": 13,
    "rows": [
+    [
+     "T-4550",
+     "Python contract and action..."
+    ],
+    [
+     "T-5309",
+     "Make the action refusal test..."
+    ],
+    [
+     "T-5014",
+     "Keep every widget state..."
+    ],
     [
      "T-1117",
      "Make the app's spoken labels..."
@@ -452,18 +480,6 @@
     ],
     [
      "T-5539",
-     "Check finished work before..."
-    ],
-    [
-     "T-5540",
-     "Check finished work before..."
-    ],
-    [
-     "T-5561",
-     "Check finished work before..."
-    ],
-    [
-     "T-5562",
      "Check finished work before..."
     ]
    ]
@@ -508,19 +524,22 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-26T00:10:35Z",
+  "at": "2026-11-26T00:13:29Z",
   "s": {
-   "T-5797": [
+   "T-4856": [
     "mergetest",
     "iPhone tests on the MacBook",
     null
    ]
   },
   "nm": {
-   "T-5797": "Widgets animate smoothly within what Apple allows"
+   "T-4856": "Refuse args numbers past 2**53 - 1 in Swift's reader"
   },
   "wk": {
-   "T-5797": "Idris",
+   "T-4856": "Idris",
+   "T-4550": "Pernille",
+   "T-5309": "Idris",
+   "T-5014": "Idris",
    "T-1117": "Idris",
    "T-1445": "Idris",
    "T-5539": "Pernille",
@@ -529,12 +548,11 @@
    "T-5562": "Odalys",
    "T-4139": "Idris",
    "T-0901": "Idris",
-   "T-5709": "Idris",
-   "T-5842": "Idris"
+   "T-5709": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-26T00:10:35Z",
+  "at": "2026-11-26T00:13:29Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -548,11 +566,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 1069,
+    "conflicted": 1071,
     "failed": null,
-    "held": 2628,
+    "held": 2631,
     "retry": null,
-    "parked": 1394
+    "parked": 1396
    },
    "cur": [],
    "ld": [
@@ -562,12 +580,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-26T00:09:52Z",
-    "ld": 4.18,
+    "at": "2026-11-26T00:13:04Z",
+    "ld": 3.21,
     "c": 8,
     "sb": 0,
     "dk": [
-     22.1,
+     22.3,
      228.3
     ],
     "ss": [
@@ -577,20 +595,18 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-26T00:07:37Z",
-    "ld": 31.15,
+    "at": "2026-11-26T00:12:01Z",
+    "ld": 25.75,
     "c": 12,
-    "sb": 5,
+    "sb": 3,
     "dk": [
-     426.4,
+     429.8,
      926.4
     ],
     "sn": [
      "itsthecompany-runner",
-     "itsthecompany-runner-2",
      "itsthecompany-runner-3",
-     "itsthecompany-runner-5",
-     "itsthecompany-runner-6"
+     "itsthecompany-runner-4"
     ]
    }
   }
@@ -603,7 +619,7 @@
    "parked": 6,
    "open": true,
    "mq": false,
-   "counted": "2026-11-26T00:02:34+00:00",
+   "counted": "2026-11-26T00:12:51+00:00",
    "by": {
     "app": {
      "n": 6,
@@ -621,11 +637,11 @@
      "open": true
     }
    },
-   "at": "2026-11-26T00:10:35+00:00"
+   "at": "2026-11-26T00:13:41+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-26T00:10:35+00:00"
+   "at": "2026-11-26T00:13:41+00:00"
   }
  },
  "operators": [
@@ -675,13 +691,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 3,
+  "main": 4,
   "lanes": 2,
-  "total": 5,
-  "at": "7:10 PM",
+  "total": 6,
+  "at": "7:13 PM",
   "why": "",
-  "at_iso": "2026-11-26T00:10:00+00:00",
+  "at_iso": "2026-11-26T00:13:00+00:00",
   "started": "1:03 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 3, started 1:03 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 7:10 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 4, started 1:03 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 7:13 PM ET</p></section>"
  }
 }

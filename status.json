@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-26T01:27:22.144266+00:00",
+ "at": "2026-11-26T01:30:27.505070+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -82,7 +82,7 @@
    "task": "[build] T-4191 large text steps",
    "model": "",
    "started": "2026-11-25T23:44:39.050Z",
-   "seconds": 6163,
+   "seconds": 6348,
    "finished": null
   },
   {
@@ -90,7 +90,7 @@
    "task": "[build] T-5796 second batch",
    "model": "",
    "started": "2026-11-26T00:11:05.709Z",
-   "seconds": 4576,
+   "seconds": 4761,
    "finished": null
   },
   {
@@ -98,7 +98,7 @@
    "task": "[build] T-4476 review fixes",
    "model": "",
    "started": "2026-11-26T01:04:10.810Z",
-   "seconds": 1391,
+   "seconds": 1576,
    "finished": null
   },
   {
@@ -106,7 +106,7 @@
    "task": "[build] T-5795 review fixes",
    "model": "",
    "started": "2026-11-26T01:19:16.080Z",
-   "seconds": 486,
+   "seconds": 671,
    "finished": null
   }
  ],
@@ -148,7 +148,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 344,
+  "runnable_count": 343,
   "blocked_count": 0
  },
  "meter": {
@@ -197,7 +197,7 @@
   "week_pct": 129.17,
   "usage_pct": 60.0,
   "work_pct": 98.3,
-  "read_at": "2026-11-26T01:27:00+00:00",
+  "read_at": "2026-11-26T01:30:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -252,14 +252,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-25T20:22:00-05:00",
+   "at": "2026-11-25T20:28:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-25T20:27:00-05:00",
+  "at": "2026-11-25T20:30:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -435,6 +435,11 @@
   "done": [
    {
     "w": "Idris",
+    "t": "In the Home Screen's tinted look, a widget's small \"stale\" clock and \"stopped\" badge now take...",
+    "at": "2026-11-25T20:29:00-05:00"
+   },
+   {
+    "w": "Idris",
     "t": "A widget's buttons are now checked the same way whether Python builds them or someone writes the...",
     "at": "2026-11-25T19:10:00-05:00"
    },
@@ -442,22 +447,21 @@
     "w": "Idris",
     "t": "A test that was meant to prove one specific refusal now fails if the app refuses for any other...",
     "at": "2026-11-25T19:10:00-05:00"
-   },
-   {
-    "w": "Idris",
-    "t": "When a newer build of the app has been keeping a log of widget changes, this version now adds...",
-    "at": "2026-11-25T19:10:00-05:00"
    }
   ],
   "count": {
-   "next": 344,
+   "next": 343,
    "wait": 0,
    "blocked": 0,
    "you": 0
   },
   "fin": {
-   "n": 13,
+   "n": 14,
    "rows": [
+    [
+     "T-1457",
+     "Match the corner glyphs to..."
+    ],
     [
      "T-4550",
      "Python contract and action..."
@@ -477,10 +481,6 @@
     [
      "T-1445",
      "Make navigation bars..."
-    ],
-    [
-     "T-5539",
-     "Check finished work before..."
     ]
    ]
   }
@@ -524,13 +524,8 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-26T01:27:05Z",
+  "at": "2026-11-26T01:30:12Z",
   "s": {
-   "T-4181": [
-    "mergetest",
-    "Xcode checks on the MacBook, 1st to merge",
-    1795655945129
-   ],
    "T-0894": [
     "mergetest",
     "iPhone tests on the MacBook",
@@ -538,12 +533,11 @@
    ]
   },
   "nm": {
-   "T-4181": "Widgets refresh on their own and by a tap",
    "T-0894": "Check the widget card at large text sizes"
   },
   "wk": {
-   "T-4181": "Idris",
    "T-0894": "Idris",
+   "T-1457": "Idris",
    "T-4550": "Pernille",
    "T-5309": "Idris",
    "T-5014": "Idris",
@@ -554,15 +548,14 @@
    "T-5561": "Pernille",
    "T-5562": "Odalys",
    "T-4139": "Idris",
-   "T-0901": "Idris",
-   "T-5709": "Idris"
+   "T-0901": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-26T01:27:05Z",
+  "at": "2026-11-26T01:30:12Z",
   "mq": {
    "n": {
-    "checking": 1,
+    "checking": 0,
     "inline": 0,
     "conflicted": 1,
     "failed": 0,
@@ -571,24 +564,15 @@
     "parked": 3
    },
    "m": {
-    "checking": 8,
+    "checking": null,
     "inline": null,
-    "conflicted": 1145,
+    "conflicted": 1148,
     "failed": null,
-    "held": 2705,
+    "held": 2708,
     "retry": null,
-    "parked": 1145
+    "parked": 1148
    },
-   "cur": [
-    [
-     [
-      "T-4181"
-     ],
-     "iPhone app tests",
-     "MacBook",
-     8
-    ]
-   ],
+   "cur": [],
    "ld": [
     0,
     null
@@ -596,12 +580,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-26T01:26:38Z",
-    "ld": 3.26,
+    "at": "2026-11-26T01:29:46Z",
+    "ld": 2.81,
     "c": 8,
     "sb": 1,
     "dk": [
-     28.3,
+     28.1,
      228.3
     ],
     "ss": [
@@ -654,11 +638,11 @@
      "open": true
     }
    },
-   "at": "2026-11-26T01:27:22+00:00"
+   "at": "2026-11-26T01:30:27+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-26T01:27:13+00:00"
+   "at": "2026-11-26T01:30:20+00:00"
   }
  },
  "operators": [
@@ -711,10 +695,10 @@
   "main": 4,
   "lanes": 2,
   "total": 6,
-  "at": "8:27 PM",
+  "at": "8:30 PM",
   "why": "",
-  "at_iso": "2026-11-26T01:27:00+00:00",
+  "at_iso": "2026-11-26T01:30:00+00:00",
   "started": "1:03 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 4, started 1:03 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 8:27 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 4, started 1:03 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 8:30 PM ET</p></section>"
  }
 }

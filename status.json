@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-26T05:19:24.210445+00:00",
+ "at": "2026-11-26T05:22:35.486033+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -92,20 +92,28 @@
    "task": "[build] T-5795 weather chart screenshot",
    "model": "opus",
    "started": "2026-11-26T04:51:14.099Z",
-   "seconds": 1690,
+   "seconds": 1881,
    "finished": null
   },
+  {
+   "name": "odalys",
+   "task": "[review] T-5893",
+   "model": "opus",
+   "started": "2026-11-26T05:21:51.381Z",
+   "seconds": 44,
+   "finished": null
+  }
+ ],
+ "who": "Pernille, Odalys",
+ "recent": [
   {
    "name": "idris",
    "task": "[build] T-5893 location widget ID",
    "model": "opus",
    "started": "2026-11-26T05:15:58.514Z",
-   "seconds": 205,
-   "finished": null
-  }
- ],
- "who": "Pernille, Idris",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-26T05:21:42.993000+00:00"
+  },
   {
    "name": "pernille",
    "task": "[review] T-4476 ADR-012 fixes",
@@ -129,14 +137,6 @@
    "started": "2026-11-26T04:48:11.373Z",
    "seconds": null,
    "finished": "2026-11-26T04:56:34.149000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[review] T-5796 after rebase",
-   "model": "opus",
-   "started": "2026-11-26T04:48:43.631Z",
-   "seconds": null,
-   "finished": "2026-11-26T04:49:30.046000+00:00"
   }
  ],
  "queue": {
@@ -147,19 +147,19 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 7.0,
+   "pct": 8.0,
    "resets_at": "2026-11-26T04:00:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-26T00:06:33.929416-05:00",
+   "read_at": "2026-11-26T00:22:31.385418-05:00",
    "source": "live",
-   "left": 93.0,
+   "left": 92.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 93.0,
    "resets_at": "2026-11-29T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-26T00:06:33.929416-05:00",
+   "read_at": "2026-11-26T00:22:31.385418-05:00",
    "source": "live",
    "left": 7.0,
    "left_words": "of your weekly allowance left"
@@ -171,7 +171,7 @@
    "read_at": "2026-11-25T23:52:18.234271-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-26T00:06:33.929416-05:00"
+  "read_at": "2026-11-26T00:22:31.385418-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -191,7 +191,7 @@
   "week_pct": 132.95,
   "usage_pct": 58.8,
   "work_pct": 98.5,
-  "read_at": "2026-11-26T05:19:00+00:00",
+  "read_at": "2026-11-26T05:22:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -270,14 +270,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-26T00:13:00-05:00",
+   "at": "2026-11-26T00:19:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-26T00:19:00-05:00",
+  "at": "2026-11-26T00:22:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -302,11 +302,19 @@
    "next": []
   },
   {
-   "name": "Idris",
+   "name": "Odalys",
    "state": "running",
-   "task": "[build] T-5893 location widget ID",
+   "task": "[review] T-5893",
    "model": "opus",
-   "since": "2026-11-26T05:15:58.514Z",
+   "since": "2026-11-26T05:21:51.381Z",
+   "next": []
+  },
+  {
+   "name": "Idris",
+   "state": "next",
+   "task": "Idris, P2, from T-1282 F1 (not before TestFlight):...",
+   "model": null,
+   "since": null,
    "next": []
   },
   {
@@ -321,14 +329,6 @@
    "name": "Wrenna",
    "state": "next",
    "task": "Read developer.apple.com \"Keeping a widget up to date\",...",
-   "model": null,
-   "since": null,
-   "next": []
-  },
-  {
-   "name": "Odalys",
-   "state": "next",
-   "task": "Odalys, P3, host-only, from...",
    "model": null,
    "since": null,
    "next": []
@@ -354,11 +354,11 @@
     "task": "T-5795"
    },
    {
-    "w": "Idris",
-    "k": "build",
+    "w": "Odalys",
+    "k": "review",
     "t": "Give the location widget an ID Apple accepts",
     "m": "opus",
-    "at": "2026-11-26T05:15:58.514Z",
+    "at": "2026-11-26T05:21:51.381Z",
     "o": "c",
     "task": "T-5893"
    }
@@ -528,7 +528,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-26T05:19:24Z",
+  "at": "2026-11-26T05:22:22Z",
   "s": {
    "T-3291": [
     "mergetest",
@@ -566,7 +566,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-26T05:19:24Z",
+  "at": "2026-11-26T05:22:22Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -580,11 +580,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 46,
+    "conflicted": 49,
     "failed": null,
-    "held": 46,
+    "held": 49,
     "retry": null,
-    "parked": 46
+    "parked": 49
    },
    "cur": [],
    "ld": [
@@ -594,12 +594,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-26T05:19:26Z",
-    "ld": 12.38,
+    "at": "2026-11-26T05:22:23Z",
+    "ld": 7.53,
     "c": 8,
-    "sb": 2,
+    "sb": 1,
     "dk": [
-     24.6,
+     24.8,
      228.3
     ],
     "ss": [
@@ -607,8 +607,7 @@
      953.7
     ],
     "sn": [
-     "iPhone 17e",
-     "pywidget-wk-check"
+     "iPhone 17e"
     ]
    },
    "macbook": {
@@ -653,11 +652,11 @@
      "open": true
     }
    },
-   "at": "2026-11-26T05:19:24+00:00"
+   "at": "2026-11-26T05:22:35+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-26T05:19:24+00:00"
+   "at": "2026-11-26T05:22:29+00:00"
   }
  },
  "operators": [
@@ -674,6 +673,8 @@
    "w": "Operator",
    "a": "Evan's Account",
    "sr": 1,
+   "m": "opus",
+   "e": "high",
    "t": "Work session \u2013 1 task",
    "at": "2026-11-25T23:34:52-05:00"
   },
@@ -681,6 +682,8 @@
    "w": "Operator",
    "a": "Evan's Account",
    "sr": 1,
+   "m": "opus",
+   "e": "high",
    "t": "Work session \u2013 1 task",
    "at": "2026-11-25T23:44:28-05:00"
   },
@@ -688,6 +691,8 @@
    "w": "Operator",
    "a": "Jeremy's Account",
    "sr": 1,
+   "m": "opus",
+   "e": "high",
    "t": "Work session \u2013 1 task",
    "at": "2026-11-25T23:51:01-05:00"
   },
@@ -695,6 +700,8 @@
    "w": "Operator",
    "a": "Jeremy's Account",
    "sr": 1,
+   "m": "opus",
+   "e": "high",
    "t": "Work session \u2013 1 task",
    "at": "2026-11-25T23:56:18-05:00"
   }
@@ -719,10 +726,10 @@
   "main": 2,
   "lanes": 4,
   "total": 6,
-  "at": "12:19 AM",
+  "at": "12:22 AM",
   "why": "",
-  "at_iso": "2026-11-26T05:19:00+00:00",
+  "at_iso": "2026-11-26T05:22:00+00:00",
   "started": "11:19 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 2, started 11:19 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 12:19 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 2, started 11:19 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 12:22 AM ET</p></section>"
  }
 }

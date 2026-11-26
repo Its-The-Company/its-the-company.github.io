@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-26T03:05:21.157084+00:00",
+ "at": "2026-11-26T03:08:23.814891+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -82,7 +82,7 @@
    "task": "[build] T-4191 large text steps",
    "model": "",
    "started": "2026-11-25T23:44:39.050Z",
-   "seconds": 12042,
+   "seconds": 12224,
    "finished": null
   },
   {
@@ -90,7 +90,7 @@
    "task": "[build] T-5796 review fixes",
    "model": "",
    "started": "2026-11-26T02:04:29.058Z",
-   "seconds": 3652,
+   "seconds": 3834,
    "finished": null
   }
  ],
@@ -181,20 +181,8 @@
   "week_pct": 136.67,
   "usage_pct": 60.0,
   "work_pct": 98.3,
-  "read_at": "2026-11-26T03:05:00+00:00",
+  "read_at": "2026-11-26T03:08:00+00:00",
   "running": [
-   {
-    "lane": "a",
-    "task": "T-4185",
-    "w": "Idris",
-    "k": "build",
-    "t": "Launcher widgets open the apps a person chose",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-25T20:31:19-05:00",
-    "n": "Evan",
-    "src": "plan-a"
-   },
    {
     "lane": "a2",
     "task": "T-5797",
@@ -206,19 +194,6 @@
     "at": "2026-11-25T18:53:29-05:00",
     "n": "Evan",
     "src": "plan-a"
-   },
-   {
-    "lane": "b2",
-    "task": "T-4776",
-    "w": "Idris",
-    "k": "build",
-    "t": "Register the probe font where the widget draws too",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-25T21:28:30-05:00",
-    "n": "Jeremy",
-    "d": 1,
-    "src": "plan-b"
    }
   ]
  },
@@ -256,7 +231,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-25T22:05:00-05:00",
+  "at": "2026-11-25T22:08:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -505,18 +480,25 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-26T03:05:01Z",
+  "at": "2026-11-26T03:08:16Z",
   "s": {
-   "T-4302": [
+   "T-4776": [
     "mergetest",
     "Xcode checks on the MacBook, 1st to merge",
-    1795661641305
+    1795662496844
+   ],
+   "T-4302": [
+    "mergetest",
+    "iPhone tests on the MacBook",
+    null
    ]
   },
   "nm": {
+   "T-4776": "Register the probe font where the widget draws too",
    "T-4302": "Pin own-widget saves not waiting on StoreKit"
   },
   "wk": {
+   "T-4776": "Idris",
    "T-4302": "Idris",
    "T-4548": "Idris",
    "T-4856": "Idris",
@@ -533,7 +515,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-26T03:05:01Z",
+  "at": "2026-11-26T03:08:16Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -545,22 +527,22 @@
     "parked": 3
    },
    "m": {
-    "checking": 11,
+    "checking": 0,
     "inline": null,
-    "conflicted": 1243,
+    "conflicted": 1246,
     "failed": null,
-    "held": 2803,
+    "held": 2806,
     "retry": null,
-    "parked": 1243
+    "parked": 1246
    },
    "cur": [
     [
      [
-      "T-4302"
+      "T-4776"
      ],
      "iPhone app tests",
      "MacBook",
-     11
+     0
     ]
    ],
    "ld": [
@@ -570,19 +552,21 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-26T03:04:29Z",
-    "ld": 2.14,
+    "at": "2026-11-26T03:07:51Z",
+    "ld": 10.07,
     "c": 8,
-    "sb": 0,
+    "sb": 1,
     "dk": [
-     23.7,
+     26.2,
      228.3
     ],
     "ss": [
      172.6,
      953.7
     ],
-    "sn": []
+    "sn": [
+     "pywidget-wk-check"
+    ]
    },
    "macbook": {
     "at": "2026-11-26T03:03:48Z",
@@ -627,11 +611,11 @@
      "open": true
     }
    },
-   "at": "2026-11-26T03:05:21+00:00"
+   "at": "2026-11-26T03:08:23+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-26T03:05:08+00:00"
+   "at": "2026-11-26T03:08:10+00:00"
   }
  },
  "operators": [
@@ -650,26 +634,8 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 1 task",
-   "at": "2026-11-25T20:31:18-05:00"
-  },
-  {
-   "w": "Operator",
-   "a": "Evan's Account",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session \u2013 1 task",
-   "at": "2026-11-25T18:53:29-05:00"
-  },
-  {
-   "w": "Operator",
-   "a": "Jeremy's Account",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
    "t": "Work session",
-   "at": "2026-11-25T21:28:30-05:00"
+   "at": "2026-11-25T18:53:29-05:00"
   }
  ],
  "reply": {
@@ -691,12 +657,12 @@
  ],
  "agents_now": {
   "main": 2,
-  "lanes": 3,
-  "total": 5,
-  "at": "10:05 PM",
+  "lanes": 1,
+  "total": 3,
+  "at": "10:08 PM",
   "why": "",
-  "at_iso": "2026-11-26T03:05:00+00:00",
+  "at_iso": "2026-11-26T03:08:00+00:00",
   "started": "1:03 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 2, started 1:03 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 10:05 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 1:03 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 10:08 PM ET</p></section>"
  }
 }

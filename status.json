@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-26T04:33:25.125340+00:00",
+ "at": "2026-11-26T04:36:28.766308+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -92,7 +92,7 @@
    "task": "[build] T-4476 manifest decision record",
    "model": "opus",
    "started": "2026-11-26T04:22:41.811Z",
-   "seconds": 643,
+   "seconds": 826,
    "finished": null
   },
   {
@@ -100,7 +100,7 @@
    "task": "[build] T-5796 two review Lows",
    "model": "opus",
    "started": "2026-11-26T04:28:07.673Z",
-   "seconds": 317,
+   "seconds": 501,
    "finished": null
   }
  ],
@@ -191,8 +191,20 @@
   "week_pct": 131.52,
   "usage_pct": 58.8,
   "work_pct": 98.5,
-  "read_at": "2026-11-26T04:33:00+00:00",
+  "read_at": "2026-11-26T04:36:00+00:00",
   "running": [
+   {
+    "lane": "a",
+    "task": "T-4181",
+    "w": "Idris",
+    "k": "build",
+    "t": "Widgets refresh on their own and by a tap",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-25T23:34:52-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
    {
     "lane": "a3",
     "task": "T-4185",
@@ -241,7 +253,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-25T23:33:00-05:00",
+  "at": "2026-11-25T23:36:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -403,6 +415,11 @@
   "done": [
    {
     "w": "Idris",
+    "t": "The check that keeps the free-Pro tester switch out of App Store builds can again see the switch...",
+    "at": "2026-11-25T23:33:00-05:00"
+   },
+   {
+    "w": "Idris",
     "t": "The app and its Python side now read a saved widget action (open a page, open the code, go home,...",
     "at": "2026-11-25T21:53:00-05:00"
    },
@@ -410,11 +427,6 @@
     "w": "Idris",
     "t": "A button's saved numbers now stop at 9007199254740991 in the app exactly as they do in Python,...",
     "at": "2026-11-25T21:53:00-05:00"
-   },
-   {
-    "w": "Idris",
-    "t": "In the Home Screen's tinted look, a widget's small \"stale\" clock and \"stopped\" badge now take...",
-    "at": "2026-11-25T20:29:00-05:00"
    }
   ],
   "count": {
@@ -424,8 +436,13 @@
    "you": 0
   },
   "fin": {
-   "n": 0,
-   "rows": []
+   "n": 1,
+   "rows": [
+    [
+     "T-4777",
+     "Make the tester-flag parser..."
+    ]
+   ]
   }
  },
  "qr": [
@@ -467,7 +484,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-26T04:33:25Z",
+  "at": "2026-11-26T04:36:10Z",
   "s": {
    "T-0725": [
     "mergetest",
@@ -487,29 +504,30 @@
   },
   "wk": {
    "T-0725": "Idris",
-   "T-4476": "Idris"
+   "T-4476": "Idris",
+   "T-4777": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-26T04:33:25Z",
+  "at": "2026-11-26T04:36:10Z",
   "mq": {
    "n": {
     "checking": 0,
     "inline": 0,
     "conflicted": 1,
     "failed": 0,
-    "held": 0,
+    "held": 1,
     "retry": 0,
-    "parked": 3
+    "parked": 6
    },
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 1331,
+    "conflicted": 3,
     "failed": null,
-    "held": null,
+    "held": 3,
     "retry": null,
-    "parked": 1331
+    "parked": 668
    },
    "cur": [],
    "ld": [
@@ -519,12 +537,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-26T04:33:25Z",
-    "ld": 39.68,
+    "at": "2026-11-26T04:35:23Z",
+    "ld": 29.96,
     "c": 8,
     "sb": 1,
     "dk": [
-     22.8,
+     21.6,
      228.3
     ],
     "ss": [
@@ -574,11 +592,11 @@
      "open": true
     }
    },
-   "at": "2026-11-26T04:33:25+00:00"
+   "at": "2026-11-26T04:36:28+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-26T04:33:17+00:00"
+   "at": "2026-11-26T04:36:17+00:00"
   }
  },
  "operators": [
@@ -590,6 +608,15 @@
    "e": "high",
    "t": "Work session",
    "at": "2026-11-25T23:19:40-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Evan's Account",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session \u2013 1 task",
+   "at": "2026-11-25T23:34:52-05:00"
   },
   {
    "w": "Operator",
@@ -611,6 +638,7 @@
   "queue_text",
   "recent",
   "task_done",
+  "fin_short",
   "task_title",
   "done_text",
   "lane_task",
@@ -618,12 +646,12 @@
  ],
  "agents_now": {
   "main": 2,
-  "lanes": 1,
-  "total": 3,
-  "at": "11:33 PM",
+  "lanes": 2,
+  "total": 4,
+  "at": "11:36 PM",
   "why": "",
-  "at_iso": "2026-11-26T04:33:00+00:00",
+  "at_iso": "2026-11-26T04:36:00+00:00",
   "started": "11:19 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 11:19 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 11:33 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 2, started 11:19 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 11:36 PM ET</p></section>"
  }
 }

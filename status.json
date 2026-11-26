@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-26T03:53:05.754855+00:00",
+ "at": "2026-11-26T03:55:59.221828+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -92,7 +92,7 @@
    "task": "[build] T-5796 name check fix",
    "model": "",
    "started": "2026-11-26T03:20:58.422Z",
-   "seconds": 1927,
+   "seconds": 2100,
    "finished": null
   }
  ],
@@ -183,7 +183,7 @@
   "week_pct": 138.18,
   "usage_pct": 60.0,
   "work_pct": 98.3,
-  "read_at": "2026-11-26T03:53:00+00:00",
+  "read_at": "2026-11-26T03:56:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -269,7 +269,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-25T22:53:00-05:00",
+  "at": "2026-11-25T22:56:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -510,11 +510,16 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-26T03:52:46Z",
+  "at": "2026-11-26T03:55:45Z",
   "s": {
    "T-5630": [
     "mergetest",
     "iPhone tests on the MacBook",
+    null
+   ],
+   "T-4185": [
+    "testing",
+    "Mac Mini \u00b7 test",
     null
    ],
    "T-4188": [
@@ -526,10 +531,12 @@
   },
   "nm": {
    "T-5630": "Shortcuts settings sheet gets its Try It row",
+   "T-4185": "Launcher widgets open the apps a person chose",
    "T-4188": "Location, steps and notifications work in scripts and..."
   },
   "wk": {
    "T-5630": "Idris",
+   "T-4185": "Idris",
    "T-4188": "Idris",
    "T-4548": "Idris",
    "T-4856": "Idris",
@@ -546,7 +553,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-26T03:52:46Z",
+  "at": "2026-11-26T03:55:45Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -560,11 +567,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 1291,
+    "conflicted": 1294,
     "failed": null,
-    "held": 2851,
+    "held": 2854,
     "retry": null,
-    "parked": 1291
+    "parked": 1294
    },
    "cur": [],
    "ld": [
@@ -574,12 +581,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-26T03:52:41Z",
-    "ld": 5.28,
+    "at": "2026-11-26T03:55:46Z",
+    "ld": 4.25,
     "c": 8,
     "sb": 0,
     "dk": [
-     29.8,
+     29.1,
      228.3
     ],
     "ss": [
@@ -631,11 +638,11 @@
      "open": true
     }
    },
-   "at": "2026-11-26T03:53:05+00:00"
+   "at": "2026-11-26T03:55:59+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-26T03:52:59+00:00"
+   "at": "2026-11-26T03:55:53+00:00"
   }
  },
  "operators": [
@@ -706,10 +713,10 @@
   "main": 1,
   "lanes": 4,
   "total": 5,
-  "at": "10:53 PM",
+  "at": "10:56 PM",
   "why": "",
-  "at_iso": "2026-11-26T03:53:00+00:00",
+  "at_iso": "2026-11-26T03:56:00+00:00",
   "started": "1:03 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 1, started 1:03 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 10:53 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 1, started 1:03 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 10:56 PM ET</p></section>"
  }
 }

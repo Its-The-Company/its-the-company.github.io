@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-26T21:47:31.880037+00:00",
+ "at": "2026-11-26T21:50:32.391586+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -82,7 +82,7 @@
    "task": "[build] T-4190 Ask to Buy order",
    "model": "opus",
    "started": "2026-11-26T19:36:17.023Z",
-   "seconds": 7874,
+   "seconds": 8055,
    "finished": null,
    "effort": "high"
   },
@@ -91,7 +91,7 @@
    "task": "[build] T-5894 premade page test order",
    "model": "opus",
    "started": "2026-11-26T20:25:04.046Z",
-   "seconds": 4947,
+   "seconds": 5128,
    "finished": null,
    "effort": "high"
   },
@@ -100,7 +100,7 @@
    "task": "[build] T-4476 Make It Mine clash",
    "model": "opus",
    "started": "2026-11-26T21:27:23.726Z",
-   "seconds": 1208,
+   "seconds": 1388,
    "finished": null,
    "effort": "high"
   },
@@ -109,7 +109,7 @@
    "task": "[research] T-5527 web view spike records",
    "model": "opus",
    "started": "2026-11-26T21:40:53.343Z",
-   "seconds": 398,
+   "seconds": 579,
    "finished": null,
    "effort": "high"
   }
@@ -201,7 +201,7 @@
   "week_pct": 455.55,
   "usage_pct": 62.0,
   "work_pct": 98.8,
-  "read_at": "2026-11-26T21:47:00+00:00",
+  "read_at": "2026-11-26T21:50:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -251,7 +251,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-26T16:47:00-05:00",
+  "at": "2026-11-26T16:50:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -525,16 +525,21 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-26T21:47:25Z",
+  "at": "2026-11-26T21:50:18Z",
   "s": {
    "T-4185": [
     "mergetest",
     "Xcode checks on the MacBook, 1st to merge",
-    1795729225258
+    1795729218090
    ],
    "T-0623": [
     "mergetest",
     "iPhone tests on the MacBook",
+    null
+   ],
+   "T-5894": [
+    "testing",
+    "Mac Mini \u00b7 test",
     null
    ],
    "T-4476": [
@@ -553,12 +558,14 @@
   "nm": {
    "T-4185": "Launcher widgets open the apps a person chose",
    "T-0623": "Fix the licence wording in Acknowledgements rows",
+   "T-5894": "Make the Sun page link test pass in any order",
    "T-4476": "Projects get one file, one ID and guarded outside code",
    "T-4182": "A failing widget says so and can recover"
   },
   "wk": {
    "T-4185": "Idris",
    "T-0623": "Idris",
+   "T-5894": "Idris",
    "T-4476": "Idris",
    "T-4182": "Idris",
    "T-5900": "Maren",
@@ -575,7 +582,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-26T21:47:25Z",
+  "at": "2026-11-26T21:50:18Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -587,13 +594,13 @@
     "parked": 6
    },
    "m": {
-    "checking": 7,
+    "checking": 10,
     "inline": null,
     "conflicted": null,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 912
+    "parked": 915
    },
    "cur": [
     [
@@ -602,7 +609,7 @@
      ],
      "iPhone app tests",
      "MacBook",
-     7
+     10
     ]
    ],
    "ld": [
@@ -612,19 +619,21 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-26T21:47:26Z",
-    "ld": 5.23,
+    "at": "2026-11-26T21:50:19Z",
+    "ld": 8.93,
     "c": 8,
-    "sb": 0,
+    "sb": 1,
     "dk": [
-     22.3,
+     22.1,
      228.3
     ],
     "ss": [
      172.6,
      953.7
     ],
-    "sn": []
+    "sn": [
+     "iPhone 17e"
+    ]
    },
    "macbook": {
     "at": "2026-11-26T21:45:45Z",
@@ -669,11 +678,11 @@
      "open": true
     }
    },
-   "at": "2026-11-26T21:47:31+00:00"
+   "at": "2026-11-26T21:50:32+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-26T21:47:31+00:00"
+   "at": "2026-11-26T21:50:18+00:00"
   }
  },
  "operators": [
@@ -717,10 +726,10 @@
   "main": 4,
   "lanes": 1,
   "total": 5,
-  "at": "4:47 PM",
+  "at": "4:50 PM",
   "why": "",
-  "at_iso": "2026-11-26T21:47:00+00:00",
+  "at_iso": "2026-11-26T21:50:00+00:00",
   "started": "12:21 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 4, started 12:21 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 4:47 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 4, started 12:21 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 4:50 PM ET</p></section>"
  }
 }

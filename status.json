@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-26T01:43:31.910328+00:00",
+ "at": "2026-11-26T01:46:39.999653+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -82,7 +82,7 @@
    "task": "[build] T-4191 large text steps",
    "model": "",
    "started": "2026-11-25T23:44:39.050Z",
-   "seconds": 7132,
+   "seconds": 7320,
    "finished": null
   },
   {
@@ -90,7 +90,7 @@
    "task": "[build] T-5796 second batch",
    "model": "",
    "started": "2026-11-26T00:11:05.709Z",
-   "seconds": 5546,
+   "seconds": 5734,
    "finished": null
   },
   {
@@ -98,20 +98,20 @@
    "task": "[build] T-4476 review fixes",
    "model": "",
    "started": "2026-11-26T01:04:10.810Z",
-   "seconds": 2361,
+   "seconds": 2549,
    "finished": null
-  },
+  }
+ ],
+ "who": "Idris x3",
+ "recent": [
   {
    "name": "pernille",
    "task": "[build] T-5795 review fixes",
    "model": "",
    "started": "2026-11-26T01:19:16.080Z",
-   "seconds": 1455,
-   "finished": null
-  }
- ],
- "who": "Idris x3, Pernille",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-26T01:46:28.969000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[review] T-5795 weather premade",
@@ -135,14 +135,6 @@
    "started": "2026-11-26T00:57:28.517Z",
    "seconds": null,
    "finished": "2026-11-26T01:03:46.681000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-4476 Foundations actions",
-   "model": "",
-   "started": "2026-11-25T23:52:18.482Z",
-   "seconds": null,
-   "finished": "2026-11-26T00:57:08.524000+00:00"
   }
  ],
  "queue": {
@@ -197,7 +189,7 @@
   "week_pct": 130.67,
   "usage_pct": 60.0,
   "work_pct": 98.3,
-  "read_at": "2026-11-26T01:43:00+00:00",
+  "read_at": "2026-11-26T01:46:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -271,7 +263,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-25T20:43:00-05:00",
+  "at": "2026-11-25T20:46:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -282,7 +274,7 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 8 (held: too few lands in 3 hours to judge a raise)",
+  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 8 (at its floor: load 17.5 a core is over 10)",
   "n": 8,
   "at": "2026-11-25T13:03:18.294078-05:00"
  },
@@ -297,10 +289,10 @@
   },
   {
    "name": "Pernille",
-   "state": "running",
-   "task": "[build] T-5795 review fixes",
+   "state": "next",
+   "task": "Pernille, P1, continuation of T-2609: after...",
    "model": null,
-   "since": "2026-11-26T01:19:16.080Z",
+   "since": null,
    "next": []
   },
   {
@@ -361,14 +353,6 @@
     "at": "2026-11-26T01:04:10.810Z",
     "o": "c",
     "task": "T-4476"
-   },
-   {
-    "w": "Pernille",
-    "k": "build",
-    "t": "The 1.0 showcase premades are built and in the Gallery",
-    "at": "2026-11-26T01:19:16.080Z",
-    "o": "c",
-    "task": "T-5795"
    }
   ],
   "src": "plan",
@@ -536,19 +520,9 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-26T01:43:31Z",
-  "s": {
-   "T-0894": [
-    "mergetest",
-    "iPhone tests on the MacBook",
-    null
-   ]
-  },
-  "nm": {
-   "T-0894": "Check the widget card at large text sizes"
-  },
+  "at": "2026-11-26T01:46:32Z",
+  "s": {},
   "wk": {
-   "T-0894": "Idris",
    "T-1457": "Idris",
    "T-4550": "Pernille",
    "T-5309": "Idris",
@@ -564,7 +538,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-26T01:43:31Z",
+  "at": "2026-11-26T01:46:32Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -578,11 +552,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 1161,
+    "conflicted": 1164,
     "failed": null,
-    "held": 2721,
+    "held": 2724,
     "retry": null,
-    "parked": 1161
+    "parked": 1164
    },
    "cur": [],
    "ld": [
@@ -592,10 +566,10 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-26T01:43:38Z",
-    "ld": 18.4,
+    "at": "2026-11-26T01:46:07Z",
+    "ld": 15.9,
     "c": 8,
-    "sb": 1,
+    "sb": 0,
     "dk": [
      26.0,
      228.3
@@ -604,26 +578,18 @@
      172.6,
      953.7
     ],
-    "sn": [
-     "pywidget-wk-check"
-    ]
+    "sn": []
    },
    "macbook": {
-    "at": "2026-11-26T01:35:00Z",
-    "ld": 13.65,
+    "at": "2026-11-26T01:45:54Z",
+    "ld": 11.29,
     "c": 12,
-    "sb": 5,
+    "sb": 0,
     "dk": [
-     423.2,
+     428.3,
      926.4
     ],
-    "sn": [
-     "itsthecompany-runner",
-     "itsthecompany-runner-2",
-     "itsthecompany-runner-3",
-     "itsthecompany-runner-4",
-     "itsthecompany-runner-5"
-    ]
+    "sn": []
    }
   }
  },
@@ -653,11 +619,11 @@
      "open": true
     }
    },
-   "at": "2026-11-26T01:43:31+00:00"
+   "at": "2026-11-26T01:46:39+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-26T01:43:31+00:00"
+   "at": "2026-11-26T01:46:39+00:00"
   }
  },
  "operators": [
@@ -716,13 +682,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 4,
+  "main": 3,
   "lanes": 3,
-  "total": 7,
-  "at": "8:43 PM",
+  "total": 6,
+  "at": "8:46 PM",
   "why": "",
-  "at_iso": "2026-11-26T01:43:00+00:00",
+  "at_iso": "2026-11-26T01:46:00+00:00",
   "started": "1:03 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 4, started 1:03 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 8:43 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 3, started 1:03 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 8:46 PM ET</p></section>"
  }
 }

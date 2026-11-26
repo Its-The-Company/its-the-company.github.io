@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-26T20:36:42.619522+00:00",
+ "at": "2026-11-26T20:39:43.651299+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -82,7 +82,7 @@
    "task": "[build] T-4190 Ask to Buy order",
    "model": "opus",
    "started": "2026-11-26T19:36:17.023Z",
-   "seconds": 3625,
+   "seconds": 3806,
    "finished": null,
    "effort": "high"
   },
@@ -91,7 +91,7 @@
    "task": "[build] T-5894 premade page test order",
    "model": "opus",
    "started": "2026-11-26T20:25:04.046Z",
-   "seconds": 698,
+   "seconds": 879,
    "finished": null,
    "effort": "high"
   },
@@ -100,7 +100,7 @@
    "task": "[review] T-5795 T-5001",
    "model": "opus",
    "started": "2026-11-26T20:35:26.242Z",
-   "seconds": 76,
+   "seconds": 257,
    "finished": null,
    "effort": "high"
   }
@@ -192,7 +192,7 @@
   "week_pct": 167.48,
   "usage_pct": 62.0,
   "work_pct": 98.8,
-  "read_at": "2026-11-26T20:36:00+00:00",
+  "read_at": "2026-11-26T20:39:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -254,7 +254,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-26T15:36:00-05:00",
+  "at": "2026-11-26T15:39:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -519,7 +519,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-26T20:36:23Z",
+  "at": "2026-11-26T20:39:35Z",
   "s": {
    "T-4192": [
     "mergetest",
@@ -555,7 +555,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-26T20:36:23Z",
+  "at": "2026-11-26T20:39:35Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -573,7 +573,7 @@
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 841
+    "parked": 844
    },
    "cur": [],
    "ld": [
@@ -583,12 +583,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-26T20:36:00Z",
-    "ld": 0.68,
+    "at": "2026-11-26T20:39:37Z",
+    "ld": 1.19,
     "c": 8,
     "sb": 1,
     "dk": [
-     23.4,
+     20.8,
      228.3
     ],
     "ss": [
@@ -600,37 +600,39 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-26T20:34:46Z",
-    "ld": 29.18,
+    "at": "2026-11-26T20:36:52Z",
+    "ld": 24.5,
     "c": 12,
-    "sb": 1,
+    "sb": 3,
     "dk": [
-     382.3,
+     380.4,
      926.4
     ],
     "sn": [
-     "itsthecompany-runner"
+     "itsthecompany-runner",
+     "itsthecompany-runner-2",
+     "itsthecompany-runner-3"
     ]
    }
   }
  },
  "hc": {
   "wait": {
-   "n": 7,
+   "n": 6,
    "limit": 20,
    "in_line": 0,
-   "parked": 7,
+   "parked": 6,
    "open": true,
    "mq": false,
-   "counted": "2026-11-26T20:28:59+00:00",
+   "counted": "2026-11-26T20:39:09+00:00",
    "by": {
     "app": {
-     "n": 6,
+     "n": 5,
      "limit": 20,
      "open": true
     },
     "other": {
-     "n": 2,
+     "n": 1,
      "limit": 20,
      "open": true
     },
@@ -640,11 +642,11 @@
      "open": true
     }
    },
-   "at": "2026-11-26T20:36:42+00:00"
+   "at": "2026-11-26T20:39:43+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-26T20:36:42+00:00"
+   "at": "2026-11-26T20:39:43+00:00"
   }
  },
  "operators": [
@@ -697,10 +699,10 @@
   "main": 3,
   "lanes": 2,
   "total": 5,
-  "at": "3:36 PM",
+  "at": "3:39 PM",
   "why": "",
-  "at_iso": "2026-11-26T20:36:00+00:00",
+  "at_iso": "2026-11-26T20:39:00+00:00",
   "started": "12:21 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 3, started 12:21 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 3:36 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 3, started 12:21 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 3:39 PM ET</p></section>"
  }
 }

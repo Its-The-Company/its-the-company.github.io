@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-26T21:53:33.368012+00:00",
+ "at": "2026-11-26T21:56:39.041364+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -79,19 +79,10 @@
  "workers": [
   {
    "name": "idris",
-   "task": "[build] T-4190 Ask to Buy order",
-   "model": "opus",
-   "started": "2026-11-26T19:36:17.023Z",
-   "seconds": 8236,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "idris",
    "task": "[build] T-5894 premade page test order",
    "model": "opus",
    "started": "2026-11-26T20:25:04.046Z",
-   "seconds": 5309,
+   "seconds": 5494,
    "finished": null,
    "effort": "high"
   },
@@ -100,13 +91,38 @@
    "task": "[build] T-4476 Make It Mine clash",
    "model": "opus",
    "started": "2026-11-26T21:27:23.726Z",
-   "seconds": 1569,
+   "seconds": 1755,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "pernille",
+   "task": "[review] T-5529 Pyodide pin",
+   "model": "opus",
+   "started": "2026-11-26T21:53:38.693Z",
+   "seconds": 180,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Idris x3",
+ "who": "Idris x2, Pernille",
  "recent": [
+  {
+   "name": "odalys",
+   "task": "[review] T-4190 batch 2",
+   "model": "opus",
+   "started": "2026-11-26T21:54:23.225Z",
+   "seconds": null,
+   "finished": "2026-11-26T21:56:12.274000+00:00"
+  },
+  {
+   "name": "idris",
+   "task": "[build] T-4190 Ask to Buy order",
+   "model": "opus",
+   "started": "2026-11-26T19:36:17.023Z",
+   "seconds": null,
+   "finished": "2026-11-26T21:53:59.581000+00:00"
+  },
   {
    "name": "idris",
    "task": "[research] T-5527 web view spike records",
@@ -122,28 +138,12 @@
    "started": "2026-11-26T19:31:55.314Z",
    "seconds": null,
    "finished": "2026-11-26T21:35:56.684000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[review] T-5900 gallery decisions",
-   "model": "opus",
-   "started": "2026-11-26T21:23:57.143Z",
-   "seconds": null,
-   "finished": "2026-11-26T21:28:17.365000+00:00"
-  },
-  {
-   "name": "pernille",
-   "task": "[review] T-4476 ADR-012 rev 10",
-   "model": "opus",
-   "started": "2026-11-26T21:24:31.729Z",
-   "seconds": null,
-   "finished": "2026-11-26T21:26:27.027000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 303,
+  "runnable_count": 304,
   "blocked_count": 0
  },
  "meter": {
@@ -192,7 +192,7 @@
   "week_pct": 455.55,
   "usage_pct": 62.0,
   "work_pct": 98.8,
-  "read_at": "2026-11-26T21:53:00+00:00",
+  "read_at": "2026-11-26T21:56:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -242,7 +242,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-26T16:53:00-05:00",
+  "at": "2026-11-26T16:56:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -261,19 +261,20 @@
   {
    "name": "Idris",
    "state": "running",
-   "task": "[build] T-4190 Ask to Buy order",
+   "task": "[build] T-5894 premade page test order",
    "model": "opus",
-   "since": "2026-11-26T19:36:17.023Z",
+   "since": "2026-11-26T20:25:04.046Z",
    "next": [],
    "effort": "high"
   },
   {
    "name": "Pernille",
-   "state": "next",
-   "task": "Pernille, P1, continuation of T-2609: after...",
-   "model": null,
-   "since": null,
-   "next": []
+   "state": "running",
+   "task": "[review] T-5529 Pyodide pin",
+   "model": "opus",
+   "since": "2026-11-26T21:53:38.693Z",
+   "next": [],
+   "effort": "high"
   },
   {
    "name": "Ines",
@@ -313,16 +314,6 @@
    {
     "w": "Idris",
     "k": "build",
-    "t": "Settings and Pro: buy, restore, themes",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-26T19:36:17.023Z",
-    "o": "c",
-    "task": "T-4190"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
     "t": "Make the Sun page link test pass in any order",
     "m": "opus",
     "e": "high",
@@ -339,6 +330,16 @@
     "at": "2026-11-26T21:27:23.726Z",
     "o": "c",
     "task": "T-4476"
+   },
+   {
+    "w": "Pernille",
+    "k": "review",
+    "t": "Log and pin the spike's Pyodide download",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-26T21:53:38.693Z",
+    "o": "c",
+    "task": "T-5529"
    }
   ],
   "src": "plan",
@@ -432,7 +433,7 @@
    }
   ],
   "count": {
-   "next": 303,
+   "next": 304,
    "wait": 0,
    "blocked": 0,
    "you": 0
@@ -506,7 +507,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-26T21:53:33Z",
+  "at": "2026-11-26T21:56:39Z",
   "s": {
    "T-0623": [
     "mergetest",
@@ -557,7 +558,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-26T21:53:33Z",
+  "at": "2026-11-26T21:56:39Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -575,7 +576,7 @@
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 918
+    "parked": 921
    },
    "cur": [],
    "ld": [
@@ -585,19 +586,21 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-26T21:53:33Z",
-    "ld": 6.11,
+    "at": "2026-11-26T21:56:44Z",
+    "ld": 12.91,
     "c": 8,
-    "sb": 0,
+    "sb": 1,
     "dk": [
-     22.2,
+     22.3,
      228.3
     ],
     "ss": [
      172.6,
      953.7
     ],
-    "sn": []
+    "sn": [
+     "iPhone 17e"
+    ]
    },
    "macbook": {
     "at": "2026-11-26T21:45:45Z",
@@ -642,11 +645,11 @@
      "open": true
     }
    },
-   "at": "2026-11-26T21:53:33+00:00"
+   "at": "2026-11-26T21:56:39+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-26T21:53:20+00:00"
+   "at": "2026-11-26T21:56:39+00:00"
   }
  },
  "operators": [
@@ -690,10 +693,10 @@
   "main": 3,
   "lanes": 1,
   "total": 4,
-  "at": "4:53 PM",
+  "at": "4:56 PM",
   "why": "",
-  "at_iso": "2026-11-26T21:53:00+00:00",
+  "at_iso": "2026-11-26T21:56:00+00:00",
   "started": "12:21 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 3, started 12:21 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 4:53 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 3, started 12:21 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 4:56 PM ET</p></section>"
  }
 }

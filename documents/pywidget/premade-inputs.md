@@ -88,7 +88,7 @@ carries the same passage, and the brackets below follow it.
 2. **Habit tracker** (kept; Pro): gains Done today (s9 below).
 3. **Focus timer** (new; Pro): start, pause and skip buttons that run Python in the widget.
 4. **Next 24 hours** (`weather.py`, new, built in T-4707, s3.8; no tag): a temperature and rain chart for a saved place, MET Norway data (L16).
-5. **Sky** (rework of Sunrise and sunset, s3.2; no tag): the sun's arc, twilight, moon phase.
+5. **Sky** (`sun.py`, rework of Sunrise and sunset, built in T-4708, s3.2; no tag): the sun's arc, twilight, moon phase, daylight gained.
 6. **Overlap clocks** (rework of World clocks, s3.3; no tag): working hours across zones and the shared hours.
 7. **Site status** (new; no tag): up or down and a 24-hour strip for sites the person names.
 8. **Flashcards** (new; Pro): Show answer, Again and Got it buttons, Leitner boxes run in the widget.
@@ -404,10 +404,34 @@ not sample data); the Events card holds only the add row. Refusals: a past date,
 `page.cd.full`. On add the app writes `set_at` (now), so the bar starts when the event was made; changing the date
 writes a new `set_at`.
 
-### 3.2 Sunrise and sunset (`sun.py`; frames 6 to 9)
+### 3.2 Sky, formerly Sunrise and sunset (`sun.py`; frames 6 to 9)
+
+Sky keeps Sun's id (`sun`), its file keys and this Page unchanged (T-4708), so a saved place and a placed widget
+carry over; only the widget's name, its Gallery caption and what it draws change. What it draws, from the place
+below and nothing else (no network, L16 "Go, local"):
+
+- **The arc:** dawn to dusk across the width, civil twilight as an `accent.soft` band under the horizon at each end,
+  the sun's path between sunrise and sunset with the part travelled and the dot at now in `status.warning`. The dot
+  moves by the 15-minute entries; the next sunrise or sunset and "in 2 hr" tick on their own, and each sunrise and
+  sunset has an entry of its own so the count never runs past its event.
+- **Polar day and night:** a day the sun never sets draws the arc across the whole day, <span title="A new, permitted reading that removes a cap. A lift rule is that reading, written down before we look.">lifted</span> off the horizon, and
+  says "Midnight sun / Up all day"; a day it never rises draws the twilight band alone (or the horizon alone when
+  the sun stays below civil twilight), and says "Polar night / No sunrise". The Lock Screen families say the same
+  words as a notice.
+- **The moon:** its phase drawn from the lit fraction (a `line.strong` ring, the lit part in `status.warning`), its
+  name for the local day, the percent lit, and in Large the next full moon (the next new moon on a full moon's day).
+- **Daylight:** today's hours of daylight and the change since yesterday ("2 min 29 s less than yesterday").
+- **Source:** a Python port, inside `sun.py`, of the company's almanac (H249, `research/hunt/H249-raw`, Meeus):
+  sunrise, sunset and civil twilight within 1 minute of USNO's 2027 tables on every day at six places, polar days
+  included, and the 49 phases of 2027 within 2 minutes (`tests/widgets/test_premade_sky.py`). The lit fraction is
+  exact at the four phases and interpolated between them.
+- **Families:** Small, Medium and Large (Maren's showcase sheet, [`widgets/showcase.md`](showcase.html) "Sky"), and Lock Screen
+  circular, rectangular and inline.
+
+The Page:
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 4: 3.2 Sunrise and sunset (sun.py; frames 6 to 9), scrolls sideways" style="--tw:718px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 4: 3.2 Sky, formerly Sunrise and sunset (sun.py; frames 6 to 9), scrolls sideways" style="--tw:718px" markdown="1">
 
 | Field | Kind | Limits and checks |
 |---|---|---|
@@ -1091,7 +1115,7 @@ and Large screenshots with hit areas outlined, plus Medium and Large at the larg
    here use 13. s3.5 is the stale one; I correct it with the frames.
 4. **Strings** are DRAFT, like every app string, until a copy guide is approved (C51).
 5. **Which text sizes a widget draws** (s9.2, "When the text grows"): ADR-011 s3 says Large to AX5, the renderer's
-   clamp says xxxLarge. Idris checks in the Simulator; the AX row of the table is built only if the clamp <span title="A new, permitted reading that removes a cap. A lift rule is that reading, written down before we look.">lifts</span>.
+   clamp says xxxLarge. Idris checks in the Simulator; the AX row of the table is built only if the clamp lifts.
 {% endraw %}
 
 </div>

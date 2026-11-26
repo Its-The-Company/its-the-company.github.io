@@ -60,6 +60,36 @@ This session resumed the 11-25 <span title="An idea that reaches B or better but
   `        WidgetLaneGuard.carryOut(decision, store: store, exit: exit, demoted: { $0.forEach(logReportDemotion) })\n`.
   Not committed: xc.sh refused for load (exit 75) for 20 minutes, so ExtensionLaneTests did not run at the settled tip.
 - Review: Pernille 7fb1686fd5, nothing blocking; the stale mutant is its one non-blocking finding.
+
+## Session 2026-11-26 8:16-9:10 AM ET (Idris, lane a2, from main d727ef2d05)
+
+- fc1673810f (T-4181): the stale mutant "guard-exit-leaves-ended-unset" now matches (find ends with `demoted:`);
+  applied and killed in J-20261126-0843-land-chk-a5ab71-1-558694.
+- T-0793 ecc981092e, slice 2 only: Shared/RefreshBatch.swift, the 4.3 batch bound as a pure rule (Core; 8 tests, 8 of 8
+  Core mutants killed in Core/mutants-t0793.json). Slice 1's mutants 2 and 3 in Tests/mutants-t0793.json: both killed
+  by hand. Still left on its line: BGTaskScheduler registration at launch and the Submitting conformer, Info.plist keys
+  (BGTaskSchedulerPermittedIdentifiers, UIBackgroundModes fetch), the run through WidgetWriter's pass calling
+  RefreshBatch (T3 too) and a stored count of deferrals in a row, the 5.3 expiry handler, the 7.2 loop breaker
+  (status.json `background`), `oom_guard`.
+- T-2044 d158a596fd: the owed-widget wait test asserts the order of naps and runs, no 1.4 s bound; mutant 3 of
+  bench/t2037-mutants.json killed. T-2046 14a2da6bf4: the early-ending test is ordered by turnsQueued and the nap
+  (LaneSteps); mutants 1 and 2 killed. Neither re-run at a high load.
+- Whole PyWidgetTests at 14a2da6b: 2511 run, 0 failed, 2 skipped (J-20261126-0829-land-chk-a5ab71-1-11dca8). Host 4388/0.
+- No commit: T-4280 and T-1882 unchanged from above (nothing writes fields.json yet; RunLogExport's three strings for
+  part 2 are already on main). T-2021: no bench records guard-to-clearMarker, and PYWIDGET_LANE_FORCED is only a
+  compilation condition that no scheme sets; the p95 needs that harness built and a quiet runner (a busy host measures
+  its queue). Not started.
+- xc_mutants.py passes -collect-test-diagnostics, which keeps a run on the Mac mini (exit 75 when it is busy). By hand:
+  plant, `xc.sh ... -only-testing:<test> test` through the runner, restore (scratch T-4181-idris/by_hand.py).
+
+## Review, 2026-11-26 ET (Operator, lane a2)
+
+- Pernille read d727ef2d05..51f461916a: nothing blocking. Non-blocking, for the next session:
+  1. Mutant 2 of bench/t2037-mutants.json ("flag never resets") cannot be killed by the T-2046 test (one burst, `queued`
+     never reaches 0); its <span title="A test written in advance. If it fires, we drop the idea.">kill</span> must come from the other two tests.
+  2. ecc981092e's subject says "5.1"; the rule is ADR-007 4.3, and the note's "5.3 expiry handler" is 4.3 too.
+  3. "queued-turn-runs-on-closed-lane" in Tests/mutants-t1852.json matches nothing (stale before this branch).
+  4. `RefreshBatch.budget(.infinity)` gives 5, not 20: defensible, not covered by the ADR.
 {% endraw %}
 
 </div>

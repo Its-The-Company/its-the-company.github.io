@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-26T06:05:01.329467+00:00",
+ "at": "2026-11-26T06:08:22.778301+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -92,7 +92,7 @@
    "task": "[build] T-5795 weather chart screenshot",
    "model": "opus",
    "started": "2026-11-26T04:51:14.099Z",
-   "seconds": 4427,
+   "seconds": 4628,
    "finished": null
   }
  ],
@@ -140,19 +140,19 @@
  "meter": {
   "five_hour": {
    "pct": 9.0,
-   "resets_at": "2026-11-26T08:59:59.774671+00:00",
+   "resets_at": "2026-11-26T04:00:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-26T00:58:11.115288-05:00",
-   "source": "usage",
+   "read_at": "2026-11-26T01:08:03.158540-05:00",
+   "source": "live",
    "left": 91.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 93.0,
-   "resets_at": "2026-11-29T06:59:59.774726+00:00",
+   "resets_at": "2026-11-29T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-26T00:58:11.115288-05:00",
-   "source": "usage",
+   "read_at": "2026-11-26T01:08:03.158540-05:00",
+   "source": "live",
    "left": 7.0,
    "left_words": "of your weekly allowance left"
   },
@@ -163,7 +163,7 @@
    "read_at": "2026-11-26T00:58:11.115288-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-26T00:58:11.115288-05:00"
+  "read_at": "2026-11-26T01:08:03.158540-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -183,7 +183,7 @@
   "week_pct": 132.95,
   "usage_pct": 58.8,
   "work_pct": 98.5,
-  "read_at": "2026-11-26T06:05:00+00:00",
+  "read_at": "2026-11-26T06:08:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -195,6 +195,7 @@
     "e": "high",
     "at": "2026-11-25T23:34:52-05:00",
     "n": "Evan",
+    "d": 1,
     "src": "plan-a"
    },
    {
@@ -269,7 +270,7 @@
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-26T01:05:00-05:00",
+  "at": "2026-11-26T01:08:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -511,9 +512,9 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-26T06:05:01Z",
+  "at": "2026-11-26T06:08:07Z",
   "s": {
-   "T-2836": [
+   "T-4192": [
     "mergetest",
     "iPhone tests on the MacBook",
     null
@@ -526,11 +527,11 @@
    ]
   },
   "nm": {
-   "T-2836": "Give a report demotion its demoted mark and row",
+   "T-4192": "Python in the app: smaller bundle, installable packages",
    "T-5795": "The 1.0 showcase premades are built and in the Gallery"
   },
   "wk": {
-   "T-2836": "Idris",
+   "T-4192": "Idris",
    "T-5795": "Pernille",
    "T-5893": "Idris",
    "T-5630": "Idris",
@@ -542,7 +543,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-26T06:05:01Z",
+  "at": "2026-11-26T06:08:07Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -556,11 +557,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 1423,
+    "conflicted": 1426,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 744
+    "parked": 747
    },
    "cur": [],
    "ld": [
@@ -570,12 +571,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-26T06:04:32Z",
-    "ld": 4.96,
+    "at": "2026-11-26T06:08:08Z",
+    "ld": 9.04,
     "c": 8,
     "sb": 0,
     "dk": [
-     22.1,
+     19.9,
      228.3
     ],
     "ss": [
@@ -585,16 +586,16 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-26T06:02:27Z",
-    "ld": 28.3,
+    "at": "2026-11-26T06:07:40Z",
+    "ld": 13.51,
     "c": 12,
     "sb": 2,
     "dk": [
-     410.7,
+     412.7,
      926.4
     ],
     "sn": [
-     "itsthecompany-runner-2",
+     "itsthecompany-runner",
      "itsthecompany-runner-5"
     ]
    }
@@ -608,7 +609,7 @@
    "parked": 7,
    "open": true,
    "mq": false,
-   "counted": "2026-11-26T05:56:35+00:00",
+   "counted": "2026-11-26T06:06:41+00:00",
    "by": {
     "app": {
      "n": 7,
@@ -626,11 +627,11 @@
      "open": true
     }
    },
-   "at": "2026-11-26T06:05:01+00:00"
+   "at": "2026-11-26T06:08:22+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-26T06:05:01+00:00"
+   "at": "2026-11-26T06:08:07+00:00"
   }
  },
  "operators": [
@@ -647,6 +648,8 @@
    "w": "Operator",
    "a": "Evan's Account",
    "sr": 1,
+   "m": "opus",
+   "e": "high",
    "t": "Work session",
    "at": "2026-11-25T23:34:52-05:00"
   },
@@ -654,6 +657,8 @@
    "w": "Operator",
    "a": "Evan's Account",
    "sr": 1,
+   "m": "opus",
+   "e": "high",
    "t": "Work session \u2013 1 task",
    "at": "2026-11-25T23:44:28-05:00"
   },
@@ -661,6 +666,8 @@
    "w": "Operator",
    "a": "Jeremy's Account",
    "sr": 1,
+   "m": "opus",
+   "e": "high",
    "t": "Work session \u2013 1 task",
    "at": "2026-11-26T00:56:27-05:00"
   },
@@ -668,6 +675,8 @@
    "w": "Operator",
    "a": "Jeremy's Account",
    "sr": 1,
+   "m": "opus",
+   "e": "high",
    "t": "Work session \u2013 1 task",
    "at": "2026-11-25T23:56:18-05:00"
   }
@@ -693,10 +702,10 @@
   "main": 1,
   "lanes": 4,
   "total": 5,
-  "at": "1:05 AM",
+  "at": "1:08 AM",
   "why": "",
-  "at_iso": "2026-11-26T06:05:00+00:00",
+  "at_iso": "2026-11-26T06:08:00+00:00",
   "started": "11:19 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 1, started 11:19 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 1:05 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 1, started 11:19 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 1:08 AM ET</p></section>"
  }
 }

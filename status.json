@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-26T17:30:50.872363+00:00",
+ "at": "2026-11-26T17:33:56.560680+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -91,7 +91,7 @@
    "task": "[build] T-4476 tap actions manifest",
    "model": "opus",
    "started": "2026-11-26T17:25:36.297Z",
-   "seconds": 314,
+   "seconds": 500,
    "finished": null,
    "effort": "high"
   },
@@ -100,7 +100,7 @@
    "task": "[build] T-4190 Settings Pro themes",
    "model": "opus",
    "started": "2026-11-26T17:25:48.856Z",
-   "seconds": 302,
+   "seconds": 487,
    "finished": null,
    "effort": "high"
   },
@@ -109,7 +109,7 @@
    "task": "[build] T-5795 Sky premade finish",
    "model": "opus",
    "started": "2026-11-26T17:25:59.464Z",
-   "seconds": 291,
+   "seconds": 477,
    "finished": null,
    "effort": "high"
   },
@@ -118,7 +118,7 @@
    "task": "[build] T-5856 watercolor new look",
    "model": "opus",
    "started": "2026-11-26T17:29:24.493Z",
-   "seconds": 86,
+   "seconds": 272,
    "finished": null,
    "effort": "high"
   }
@@ -133,19 +133,19 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 5.0,
+   "pct": 7.0,
    "resets_at": "2026-11-26T16:30:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-26T12:26:41.071134-05:00",
+   "read_at": "2026-11-26T12:32:29.743067-05:00",
    "source": "live",
-   "left": 95.0,
+   "left": 93.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 1.0,
    "resets_at": "2026-11-29T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-26T12:26:41.071134-05:00",
+   "read_at": "2026-11-26T12:32:29.743067-05:00",
    "source": "live",
    "left": 99.0,
    "left_words": "of your weekly allowance left"
@@ -157,7 +157,7 @@
    "read_at": "2026-11-26T12:21:25.548317-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-26T12:26:41.071134-05:00"
+  "read_at": "2026-11-26T12:32:29.743067-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -177,7 +177,7 @@
   "week_pct": 161.94,
   "usage_pct": 62.0,
   "work_pct": 98.8,
-  "read_at": "2026-11-26T17:30:00+00:00",
+  "read_at": "2026-11-26T17:33:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -235,7 +235,7 @@
   }
  ],
  "disk": {
-  "free_gb": 24,
+  "free_gb": 21,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -244,14 +244,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-26T12:26:00-05:00",
+   "at": "2026-11-26T12:33:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-26T12:30:00-05:00",
+  "at": "2026-11-26T12:33:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -502,9 +502,9 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-26T17:30:50Z",
+  "at": "2026-11-26T17:33:50Z",
   "s": {
-   "T-0793": [
+   "T-0892": [
     "mergetest",
     "iPhone tests on the MacBook",
     null
@@ -529,20 +529,20 @@
    ]
   },
   "nm": {
-   "T-0793": "Add background refresh for widgets in version 1.0",
+   "T-0892": "Make the first-widget flow test start clean",
    "T-4185": "Launcher widgets open the apps a person chose",
    "T-4181": "Widgets refresh on their own and by a tap",
    "T-4476": "Projects get one file, one ID and guarded outside code"
   },
   "wk": {
-   "T-0793": "Idris",
+   "T-0892": "Idris",
    "T-4185": "Idris",
    "T-4181": "Idris",
    "T-4476": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-26T17:30:50Z",
+  "at": "2026-11-26T17:33:50Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -560,7 +560,7 @@
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 656
+    "parked": 659
    },
    "cur": [],
    "ld": [
@@ -570,12 +570,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-26T17:30:04Z",
-    "ld": 5.43,
+    "at": "2026-11-26T17:33:25Z",
+    "ld": 3.67,
     "c": 8,
     "sb": 1,
     "dk": [
-     21.2,
+     21.0,
      228.3
     ],
     "ss": [
@@ -587,18 +587,19 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-26T17:29:35Z",
-    "ld": 7.29,
+    "at": "2026-11-26T17:33:12Z",
+    "ld": 26.72,
     "c": 12,
-    "sb": 3,
+    "sb": 4,
     "dk": [
-     388.3,
+     387.2,
      926.4
     ],
     "sn": [
-     "itsthecompany-runner",
      "itsthecompany-runner-2",
-     "itsthecompany-runner-3"
+     "itsthecompany-runner-3",
+     "itsthecompany-runner-4",
+     "itsthecompany-runner-5"
     ]
    }
   }
@@ -611,7 +612,7 @@
    "parked": 7,
    "open": true,
    "mq": false,
-   "counted": "2026-11-26T17:22:08+00:00",
+   "counted": "2026-11-26T17:32:26+00:00",
    "by": {
     "app": {
      "n": 6,
@@ -629,11 +630,11 @@
      "open": true
     }
    },
-   "at": "2026-11-26T17:30:50+00:00"
+   "at": "2026-11-26T17:33:56+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-26T17:30:43+00:00"
+   "at": "2026-11-26T17:33:44+00:00"
   }
  },
  "operators": [
@@ -692,10 +693,10 @@
   "main": 4,
   "lanes": 3,
   "total": 7,
-  "at": "12:30 PM",
+  "at": "12:33 PM",
   "why": "",
-  "at_iso": "2026-11-26T17:30:00+00:00",
+  "at_iso": "2026-11-26T17:33:00+00:00",
   "started": "12:21 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 4, started 12:21 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 12:30 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 4, started 12:21 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 12:33 PM ET</p></section>"
  }
 }

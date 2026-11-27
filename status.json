@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-27T10:54:09.130565+00:00",
+ "at": "2026-11-27T10:57:13.258917+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -62,7 +62,7 @@
    "task": "[build] T-4190 paywall batch two",
    "model": "opus",
    "started": "2026-11-27T06:04:32.961Z",
-   "seconds": 17376,
+   "seconds": 17560,
    "finished": null
   },
   {
@@ -70,7 +70,7 @@
    "task": "[build] T-5795 Sky premade rest",
    "model": "opus",
    "started": "2026-11-27T10:07:35.937Z",
-   "seconds": 2793,
+   "seconds": 2977,
    "finished": null
   }
  ],
@@ -112,7 +112,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 289,
+  "runnable_count": 287,
   "blocked_count": 0
  },
  "meter": {
@@ -161,21 +161,8 @@
   "week_pct": 30.31,
   "usage_pct": 53.8,
   "work_pct": 98.9,
-  "read_at": "2026-11-27T10:54:00+00:00",
-  "running": [
-   {
-    "lane": "b2",
-    "task": "T-5933",
-    "w": "Idris",
-    "k": "fix",
-    "t": "Tidy three small points from the package session review",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-27T05:49:37-05:00",
-    "n": "Jeremy",
-    "src": "plan-b"
-   }
-  ]
+  "read_at": "2026-11-27T10:57:00+00:00",
+  "running": []
  },
  "api_credits": [
   {
@@ -195,7 +182,7 @@
   }
  ],
  "disk": {
-  "free_gb": 14,
+  "free_gb": 15,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -204,14 +191,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-27T05:52:00-05:00",
+   "at": "2026-11-27T05:56:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 5,
-  "at": "2026-11-27T05:54:00-05:00",
+  "at": "2026-11-27T05:57:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -372,30 +359,38 @@
   ],
   "done": [
    {
+    "w": "Idris",
+    "t": "The test that taps a real Home Screen widget on iPad now waits for what it checks and always...",
+    "at": "2026-11-27T05:55:00-05:00"
+   },
+   {
+    "w": "Idris",
+    "t": "In Launcher Apps, a Shortcut name hiding an invisible character now shows its whole link, so a...",
+    "at": "2026-11-27T05:55:00-05:00"
+   },
+   {
     "w": "Maren",
     "t": "Home's Work panel now has a switch between finished tasks and commits on main; the graphs and...",
     "at": "2026-11-27T04:43:00-05:00"
-   },
-   {
-    "w": "Idris",
-    "t": "the Gallery's settings-Page checks on the Simulator now start from a known empty list and leave...",
-    "at": "2026-11-27T03:55:00-05:00"
-   },
-   {
-    "w": "Idris",
-    "t": "The checks that open a premade's settings page on the Simulator no longer tap blindly, and now...",
-    "at": "2026-11-27T03:55:00-05:00"
    }
   ],
   "count": {
-   "next": 289,
+   "next": 287,
    "wait": 0,
    "blocked": 0,
    "you": 0
   },
   "fin": {
-   "n": 11,
+   "n": 13,
    "rows": [
+    [
+     "T-5285",
+     "Tidy the real widget tap..."
+    ],
+    [
+     "T-5921",
+     "Close the launcher store's..."
+    ],
     [
      "T-5925",
      "Work panel switches between..."
@@ -411,14 +406,6 @@
     [
      "T-5317",
      "Second Habits tap moves to..."
-    ],
-    [
-     "T-5319",
-     "Small Habits focus edges..."
-    ],
-    [
-     "T-5926",
-     "Habits link test fits the..."
     ]
    ]
   }
@@ -462,33 +449,42 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-27T10:53:48Z",
+  "at": "2026-11-27T10:57:13Z",
   "s": {
    "T-4181": [
     "mergeq",
     "1st to merge",
-    1795776288397
-   ],
-   "T-4185": [
-    "mergetest",
-    "Xcode checks on the MacBook, 2nd to merge",
-    1795775928397
+    1795776313258
    ],
    "T-4192": [
     "mergeq",
+    "2nd to merge",
+    1795776493258
+   ],
+   "T-5933": [
+    "mergeq",
     "3rd to merge",
-    1795776528397
+    1795776913258
+   ],
+   "T-2040": [
+    "mergetest",
+    "iPhone tests on the MacBook",
+    null
    ]
   },
   "nm": {
    "T-4181": "Widgets refresh on their own and by a tap",
-   "T-4185": "Launcher widgets open the apps a person chose",
-   "T-4192": "Python in the app: smaller bundle, installable packages"
+   "T-4192": "Python in the app: smaller bundle, installable packages",
+   "T-5933": "Tidy three small points from the package session review",
+   "T-2040": "Investigate a paywall UI test that failed once"
   },
   "wk": {
    "T-4181": "Idris",
-   "T-4185": "Idris",
    "T-4192": "Idris",
+   "T-5933": "Idris",
+   "T-2040": "Idris",
+   "T-5285": "Idris",
+   "T-5921": "Idris",
    "T-5925": "Maren",
    "T-5269": "Idris",
    "T-5270": "Idris",
@@ -498,16 +494,15 @@
    "T-5918": "Odalys",
    "T-2549": "Idris",
    "T-4899": "Idris",
-   "T-5047": "Idris",
-   "T-4436": "Idris"
+   "T-5047": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-27T10:53:48Z",
+  "at": "2026-11-27T10:57:13Z",
   "mq": {
    "n": {
-    "checking": 1,
-    "inline": 2,
+    "checking": 0,
+    "inline": 3,
     "conflicted": 0,
     "failed": 0,
     "held": 0,
@@ -515,24 +510,15 @@
     "parked": 5
    },
    "m": {
-    "checking": 15,
-    "inline": 7,
+    "checking": null,
+    "inline": 9,
     "conflicted": null,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1343
+    "parked": 1346
    },
-   "cur": [
-    [
-     [
-      "T-4185"
-     ],
-     "iPhone app tests",
-     "MacBook",
-     15
-    ]
-   ],
+   "cur": [],
    "ld": [
     0,
     null
@@ -540,12 +526,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-27T10:53:49Z",
-    "ld": 3.3,
+    "at": "2026-11-27T10:57:12Z",
+    "ld": 3.37,
     "c": 8,
     "sb": 0,
     "dk": [
-     14.0,
+     14.8,
      228.3
     ],
     "ss": [
@@ -555,17 +541,15 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-27T10:42:05Z",
-    "ld": 17.83,
+    "at": "2026-11-27T10:55:38Z",
+    "ld": 8.39,
     "c": 12,
-    "sb": 3,
+    "sb": 1,
     "dk": [
-     370.9,
+     369.7,
      926.4
     ],
     "sn": [
-     "itsthecompany-runner",
-     "itsthecompany-runner-2",
      "itsthecompany-runner-3"
     ]
    }
@@ -573,21 +557,21 @@
  },
  "hc": {
   "wait": {
-   "n": 6,
+   "n": 8,
    "limit": 20,
-   "in_line": 1,
+   "in_line": 3,
    "parked": 5,
    "open": true,
    "mq": false,
-   "counted": "2026-11-27T10:43:45+00:00",
+   "counted": "2026-11-27T10:54:25+00:00",
    "by": {
     "app": {
-     "n": 3,
+     "n": 5,
      "limit": 20,
      "open": true
     },
     "other": {
-     "n": 3,
+     "n": 4,
      "limit": 20,
      "open": true
     },
@@ -597,11 +581,11 @@
      "open": true
     }
    },
-   "at": "2026-11-27T10:54:09+00:00"
+   "at": "2026-11-27T10:57:13+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-27T10:53:56+00:00"
+   "at": "2026-11-27T10:57:06+00:00"
   }
  },
  "operators": [
@@ -613,15 +597,6 @@
    "e": "high",
    "t": "Work session",
    "at": "2026-11-27T00:15:52-05:00"
-  },
-  {
-   "w": "Operator",
-   "a": "Jeremy's Account",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session \u2013 1 task",
-   "at": "2026-11-27T05:49:37-05:00"
   }
  ],
  "reply": {
@@ -643,12 +618,12 @@
  ],
  "agents_now": {
   "main": 2,
-  "lanes": 1,
-  "total": 3,
-  "at": "5:54 AM",
+  "lanes": 0,
+  "total": 2,
+  "at": "5:57 AM",
   "why": "",
-  "at_iso": "2026-11-27T10:54:00+00:00",
+  "at_iso": "2026-11-27T10:57:00+00:00",
   "started": "12:15 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 12:15 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 5:54 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 12:15 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 5:57 AM ET</p></section>"
  }
 }

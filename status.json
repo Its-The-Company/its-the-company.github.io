@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-27T18:16:17.447804+00:00",
+ "at": "2026-11-27T18:19:20.015503+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -62,20 +62,28 @@
    "task": "[build] T-4476 watch Gallery and project page",
    "model": "opus",
    "started": "2026-11-27T17:31:19.998Z",
-   "seconds": 2697,
+   "seconds": 2880,
    "finished": null
   },
+  {
+   "name": "odalys",
+   "task": "[tools] T-5944 stop false holds",
+   "model": "opus",
+   "started": "2026-11-27T18:16:28.425Z",
+   "seconds": 171,
+   "finished": null
+  }
+ ],
+ "who": "Idris, Odalys",
+ "recent": [
   {
    "name": "idris",
    "task": "[review] T-5795",
    "model": "opus",
    "started": "2026-11-27T18:12:33.635Z",
-   "seconds": 223,
-   "finished": null
-  }
- ],
- "who": "Idris x2",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-27T18:17:06.818000+00:00"
+  },
   {
    "name": "pernille",
    "task": "[build] T-5795 zero-width space trim",
@@ -99,14 +107,6 @@
    "started": "2026-11-27T17:37:32.820Z",
    "seconds": null,
    "finished": "2026-11-27T17:41:57.849000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "Diagnose Jeremy's account empty menu",
-   "model": "opus",
-   "started": "2026-11-27T17:37:21.784Z",
-   "seconds": null,
-   "finished": "2026-11-27T17:37:21.906Z"
   }
  ],
  "queue": {
@@ -117,19 +117,19 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 6.0,
+   "pct": 7.0,
    "resets_at": "2026-11-27T17:30:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-27T13:13:35.740059-05:00",
+   "read_at": "2026-11-27T13:18:22.827535-05:00",
    "source": "live",
-   "left": 94.0,
+   "left": 93.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 35.0,
    "resets_at": "2026-11-29T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-27T13:13:35.740059-05:00",
+   "read_at": "2026-11-27T13:18:22.827535-05:00",
    "source": "live",
    "left": 65.0,
    "left_words": "of your weekly allowance left"
@@ -141,7 +141,7 @@
    "read_at": "2026-11-27T12:52:29.039092-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-27T13:13:35.740059-05:00"
+  "read_at": "2026-11-27T13:18:22.827535-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -161,7 +161,7 @@
   "week_pct": 35.06,
   "usage_pct": 50.0,
   "work_pct": 99.0,
-  "read_at": "2026-11-27T18:16:00+00:00",
+  "read_at": "2026-11-27T18:19:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -204,14 +204,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-27T13:14:00-05:00",
+   "at": "2026-11-27T13:18:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 4,
-  "at": "2026-11-27T13:16:00-05:00",
+  "at": "2026-11-27T13:19:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -236,17 +236,17 @@
    "next": []
   },
   {
-   "name": "Pernille",
-   "state": "next",
-   "task": "Pernille, P1, continuation of T-2609: after...",
-   "model": null,
-   "since": null,
+   "name": "Odalys",
+   "state": "running",
+   "task": "[tools] T-5944 stop false holds",
+   "model": "opus",
+   "since": "2026-11-27T18:16:28.425Z",
    "next": []
   },
   {
-   "name": "Odalys",
+   "name": "Pernille",
    "state": "next",
-   "task": "Odalys, P0, from (Investor an Investor c7225261516, 1:13...",
+   "task": "Pernille, P1, continuation of T-2609: after...",
    "model": null,
    "since": null,
    "next": []
@@ -288,13 +288,13 @@
     "task": "T-4476"
    },
    {
-    "w": "Idris",
-    "k": "review",
-    "t": "The 1.0 showcase premades are built and in the Gallery",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Stop false holds keeping an account idle",
     "m": "opus",
-    "at": "2026-11-27T18:12:33.635Z",
-    "o": "c",
-    "task": "T-5795"
+    "at": "2026-11-27T18:16:28.425Z",
+    "o": "i",
+    "task": "T-5944"
    }
   ],
   "src": "plan",
@@ -446,7 +446,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-27T18:15:59Z",
+  "at": "2026-11-27T18:19:12Z",
   "s": {
    "T-4181": [
     "mergetest",
@@ -464,7 +464,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-27T18:15:59Z",
+  "at": "2026-11-27T18:19:12Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -482,7 +482,7 @@
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 883
+    "parked": 886
    },
    "cur": [],
    "ld": [
@@ -492,12 +492,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-27T18:15:39Z",
-    "ld": 1.12,
+    "at": "2026-11-27T18:19:13Z",
+    "ld": 0.99,
     "c": 8,
     "sb": 0,
     "dk": [
-     55.0,
+     54.6,
      228.3
     ],
     "ss": [
@@ -507,16 +507,17 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-27T18:15:04Z",
-    "ld": 9.38,
+    "at": "2026-11-27T18:17:37Z",
+    "ld": 6.66,
     "c": 12,
-    "sb": 1,
+    "sb": 2,
     "dk": [
-     356.4,
+     353.9,
      926.4
     ],
     "sn": [
-     "itsthecompany-runner"
+     "itsthecompany-runner",
+     "itsthecompany-runner-2"
     ]
    }
   }
@@ -547,11 +548,11 @@
      "open": true
     }
    },
-   "at": "2026-11-27T18:16:17+00:00"
+   "at": "2026-11-27T18:19:20+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-27T18:16:17+00:00"
+   "at": "2026-11-27T18:19:20+00:00"
   }
  },
  "operators": [
@@ -594,10 +595,10 @@
   "main": 2,
   "lanes": 1,
   "total": 3,
-  "at": "1:16 PM",
+  "at": "1:19 PM",
   "why": "",
-  "at_iso": "2026-11-27T18:16:00+00:00",
+  "at_iso": "2026-11-27T18:19:00+00:00",
   "started": "11:47 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 11:47 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 1:16 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 11:47 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 1:19 PM ET</p></section>"
  }
 }

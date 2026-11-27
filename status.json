@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-27T07:13:25.150108+00:00",
+ "at": "2026-11-27T07:16:27.680696+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -62,7 +62,7 @@
    "task": "[build] T-4478 Pages links state",
    "model": "opus",
    "started": "2026-11-27T05:41:43.084Z",
-   "seconds": 5502,
+   "seconds": 5684,
    "finished": null
   },
   {
@@ -70,7 +70,7 @@
    "task": "[build] T-4190 paywall batch two",
    "model": "opus",
    "started": "2026-11-27T06:04:32.961Z",
-   "seconds": 4132,
+   "seconds": 4314,
    "finished": null
   },
   {
@@ -78,7 +78,7 @@
    "task": "[build] T-4183 Habits focus edges",
    "model": "opus",
    "started": "2026-11-27T06:41:59.955Z",
-   "seconds": 1885,
+   "seconds": 2067,
    "finished": null
   },
   {
@@ -86,7 +86,7 @@
    "task": "[build] T-5926 review fixes",
    "model": "opus",
    "started": "2026-11-27T06:43:49.561Z",
-   "seconds": 1775,
+   "seconds": 1958,
    "finished": null
   }
  ],
@@ -128,7 +128,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 291,
+  "runnable_count": 290,
   "blocked_count": 0
  },
  "meter": {
@@ -177,7 +177,7 @@
   "week_pct": 25.68,
   "usage_pct": 53.9,
   "work_pct": 98.9,
-  "read_at": "2026-11-27T07:13:00+00:00",
+  "read_at": "2026-11-27T07:16:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -239,7 +239,7 @@
  "lock_in": {
   "on": false,
   "pool": 5,
-  "at": "2026-11-27T02:13:00-05:00",
+  "at": "2026-11-27T02:16:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -418,6 +418,11 @@
   ],
   "done": [
    {
+    "w": "Odalys",
+    "t": "Alarms and replies the Investors read now name the personal accounts Evan's and Jeremy's instead...",
+    "at": "2026-11-27T02:15:00-05:00"
+   },
+   {
     "w": "Idris",
     "t": "The guide now has current pictures of the Pro screen and of the Settings row that leads to it,...",
     "at": "2026-11-27T01:03:00-05:00"
@@ -426,22 +431,21 @@
     "w": "Idris",
     "t": "The automatic check that reads a code off a widget on the Home Screen, which failed on the test...",
     "at": "2026-11-27T01:03:00-05:00"
-   },
-   {
-    "w": "Idris",
-    "t": "The automatic check that a script's result really reaches a widget on the Home Screen now passes...",
-    "at": "2026-11-27T01:03:00-05:00"
    }
   ],
   "count": {
-   "next": 291,
+   "next": 290,
    "wait": 0,
    "blocked": 0,
    "you": 0
   },
   "fin": {
-   "n": 4,
+   "n": 5,
    "rows": [
+    [
+     "T-5918",
+     "Name the accounts Evan's and..."
+    ],
     [
      "T-2549",
      "Picture the Pro screen and..."
@@ -500,18 +504,8 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-27T07:13:25Z",
+  "at": "2026-11-27T07:16:21Z",
   "s": {
-   "T-0793": [
-    "mergetest",
-    "iPhone tests on the MacBook",
-    null
-   ],
-   "T-4183": [
-    "testing",
-    "Mac Mini \u00b7 test",
-    null
-   ],
    "T-4181": [
     "merged",
     "on main 12:12 AM ET",
@@ -532,18 +526,15 @@
    ]
   },
   "nm": {
-   "T-0793": "Add background refresh for widgets in version 1.0",
-   "T-4183": "The Gallery shows, previews and opens every premade",
    "T-4181": "Widgets refresh on their own and by a tap",
    "T-4185": "Launcher widgets open the apps a person chose",
    "T-4190": "Settings and Pro: buy, restore, themes"
   },
   "wk": {
-   "T-0793": "Idris",
-   "T-4183": "Idris",
    "T-4181": "Idris",
    "T-4185": "Idris",
    "T-4190": "Idris",
+   "T-5918": "Odalys",
    "T-2549": "Idris",
    "T-4899": "Idris",
    "T-5047": "Idris",
@@ -551,7 +542,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-27T07:13:25Z",
+  "at": "2026-11-27T07:16:21Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -569,7 +560,7 @@
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1123
+    "parked": 1126
    },
    "cur": [],
    "ld": [
@@ -579,8 +570,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-27T07:13:14Z",
-    "ld": 9.56,
+    "at": "2026-11-27T07:15:55Z",
+    "ld": 6.48,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -594,15 +585,19 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-27T07:04:06Z",
-    "ld": 8.54,
+    "at": "2026-11-27T07:15:01Z",
+    "ld": 35.64,
     "c": 12,
-    "sb": 0,
+    "sb": 3,
     "dk": [
-     358.8,
+     353.4,
      926.4
     ],
-    "sn": []
+    "sn": [
+     "itsthecompany-runner-3",
+     "itsthecompany-runner-4",
+     "itsthecompany-runner-5"
+    ]
    }
   }
  },
@@ -632,11 +627,11 @@
      "open": true
     }
    },
-   "at": "2026-11-27T07:13:25+00:00"
+   "at": "2026-11-27T07:16:27+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-27T07:13:14+00:00"
+   "at": "2026-11-27T07:16:21+00:00"
   }
  },
  "operators": [
@@ -688,10 +683,10 @@
   "main": 4,
   "lanes": 2,
   "total": 6,
-  "at": "2:13 AM",
+  "at": "2:16 AM",
   "why": "",
-  "at_iso": "2026-11-27T07:13:00+00:00",
+  "at_iso": "2026-11-27T07:16:00+00:00",
   "started": "12:15 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 4, started 12:15 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 2:13 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 4, started 12:15 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 2:16 AM ET</p></section>"
  }
 }

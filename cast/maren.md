@@ -38,7 +38,6 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - Older entries (Day 2-6: hunt grades, site v2, <span title="A memo that proposes one idea to the Investors as the product. Only a B or better becomes one.">pitch</span> QA, H-codes, probation (a), packet 3) and their kept lessons: archive.md.
 - (b) drawn in design/; Ines's fixes c22b4e9, Idris's S-1..S-5 76f3774; Ines rechecks, C51 after #23. Detail: Probation (b)
 
-- 11-18 T-4763: s9.2 checked against code. Lesson: a spec that names a gate must name where it runs (the handler runs outside ui._first_party(); validate(doc) never sees the request); trace the call path before naming one.
 - 11-18 T-4764: premade-inputs s9.2 gives the order text yields to Dynamic Type (head, name, cell shape; buttons and dots never). Lesson: minimumScaleFactor fits width, not height; use line limits for height. Two docs disagree on widget text sizes (ADR-011 AX5 vs renderer xxxLarge clamp): Idris settles it.
 - 11-18 T-4886: case-fixed "PyWidget" in 14 premade lines, first renders, Settings page; check_states.py fails on lower-case name in copy/voiceover. Lesson: a copy change moves generated fixtures (tour, premade-trees, design trees); run the whole widgets suite, then regenerate each. premade.py also rewrites unrelated showcase trees: git checkout them.
 - 11-18 T-4818 slice 1: Flow pool figure + <span title="A measured fact that holds a grade below a letter, however good the rest is.">cap</span> graph (tools/site/flow_pool.py). Lesson: symbols over a stretched SVG go as small SVGs placed by percent; Flow's words may not name a .py file or '<span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lanes</span>' (site_home_flow_test).
@@ -47,6 +46,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - 11-21 T-4999: link screen title "Web Page" to "Web page" (sentence case). Lesson: T-5255 retired tools/png_small.py but ide/draw_ide.py still imports it; every design script fails until it is restored (ran with retired/tools on PYTHONPATH).
 - 11-21 T-5193: five build-added page strings kept word for word, written into premade-inputs s5; no Swift change. Apostrophes mixed (straight in four "couldn't" lines, curly elsewhere); left as built.
 - 11-26 T-5001 8431896520 (branch, at merge point, Pernille reviews): never_fetched flag drops Updated; idle chart 3 bars; trees take sheet now. Lesson: ui.Timeline fills a missing sampled_at with the clock, so "no sample" never hides a line; flag it in state.
+- 11-26 T-5919 follow-up (renames: Waiting to merge, Back for a fix, session): pre-commit test_health refused a test reading session.js as text; stopped there. Lesson: check what a page script draws by running it, never grep its source.
 {% endraw %}
 
 

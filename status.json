@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-27T12:01:23.857294+00:00",
+ "at": "2026-11-27T12:04:27.878359+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -62,7 +62,7 @@
    "task": "[build] T-4190 paywall batch two",
    "model": "opus",
    "started": "2026-11-27T06:04:32.961Z",
-   "seconds": 21410,
+   "seconds": 21594,
    "finished": null
   },
   {
@@ -70,7 +70,7 @@
    "task": "[build] T-4478 Pages batch two",
    "model": "opus",
    "started": "2026-11-27T11:08:58.798Z",
-   "seconds": 3145,
+   "seconds": 3329,
    "finished": null
   },
   {
@@ -78,7 +78,7 @@
    "task": "[design] T-5936 Sky time zone",
    "model": "opus",
    "started": "2026-11-27T11:56:30.374Z",
-   "seconds": 293,
+   "seconds": 477,
    "finished": null
   }
  ],
@@ -120,7 +120,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 284,
+  "runnable_count": 286,
   "blocked_count": 0
  },
  "meter": {
@@ -169,7 +169,7 @@
   "week_pct": 31.48,
   "usage_pct": 53.8,
   "work_pct": 98.9,
-  "read_at": "2026-11-27T12:01:00+00:00",
+  "read_at": "2026-11-27T12:04:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -236,14 +236,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-27T07:00:00-05:00",
+   "at": "2026-11-27T07:01:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 4,
-  "at": "2026-11-27T07:01:00-05:00",
+  "at": "2026-11-27T07:04:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -254,7 +254,7 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Double Spread: past the week's halfway point with room left, so twice the even pace until the limit or the reset; the machine allows 8 (at its floor: load 15.2 a core is over 10)",
+  "why": "Double Spread: past the week's halfway point with room left, so twice the even pace until the limit or the reset; the machine allows 8 (held: too few lands in 3 hours to judge a raise)",
   "n": 4,
   "at": "2026-11-27T00:15:36.638824-05:00"
  },
@@ -429,7 +429,7 @@
    }
   ],
   "count": {
-   "next": 284,
+   "next": 286,
    "wait": 0,
    "blocked": 0,
    "you": 0
@@ -503,12 +503,13 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-27T12:01:10Z",
+  "at": "2026-11-27T12:04:27Z",
   "s": {
    "T-4181": [
-    "mergetest",
-    "iPhone tests on the MacBook",
-    null
+    "merged",
+    "on main 6:25 AM ET",
+    1795778704000,
+    "Pernille"
    ],
    "T-4478": [
     "merged",
@@ -547,7 +548,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-27T12:01:10Z",
+  "at": "2026-11-27T12:04:27Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -565,7 +566,7 @@
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1410
+    "parked": 1414
    },
    "cur": [],
    "ld": [
@@ -575,12 +576,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-27T12:00:24Z",
-    "ld": 13.5,
+    "at": "2026-11-27T12:03:43Z",
+    "ld": 8.83,
     "c": 8,
     "sb": 1,
     "dk": [
-     16.1,
+     15.6,
      228.3
     ],
     "ss": [
@@ -592,17 +593,15 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-27T11:56:22Z",
-    "ld": 5.12,
+    "at": "2026-11-27T12:01:34Z",
+    "ld": 2.53,
     "c": 12,
-    "sb": 1,
+    "sb": 0,
     "dk": [
-     366.9,
+     368.3,
      926.4
     ],
-    "sn": [
-     "itsthecompany-runner-4"
-    ]
+    "sn": []
    }
   }
  },
@@ -632,11 +631,11 @@
      "open": true
     }
    },
-   "at": "2026-11-27T12:01:23+00:00"
+   "at": "2026-11-27T12:04:27+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-27T12:01:17+00:00"
+   "at": "2026-11-27T12:04:16+00:00"
   }
  },
  "operators": [
@@ -698,10 +697,10 @@
   "main": 3,
   "lanes": 3,
   "total": 6,
-  "at": "7:01 AM",
+  "at": "7:04 AM",
   "why": "",
-  "at_iso": "2026-11-27T12:01:00+00:00",
+  "at_iso": "2026-11-27T12:04:00+00:00",
   "started": "12:15 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 3, started 12:15 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 7:01 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 3, started 12:15 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 7:04 AM ET</p></section>"
  }
 }

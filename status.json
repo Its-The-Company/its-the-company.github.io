@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-27T16:43:23.960438+00:00",
+ "at": "2026-11-27T16:46:27.634030+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -56,18 +56,17 @@
   "landed": 1,
   "failed": 4
  },
- "workers": [
+ "workers": [],
+ "who": "",
+ "recent": [
   {
    "name": "idris",
    "task": "[build] T-4476 stale result fix",
    "model": "opus",
    "started": "2026-11-27T15:42:45.188Z",
-   "seconds": 3638,
-   "finished": null
-  }
- ],
- "who": "Idris",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-27T16:46:17.399000+00:00"
+  },
   {
    "name": "idris",
    "task": "[build] T-4190 batch four",
@@ -91,14 +90,6 @@
    "started": "2026-11-27T15:41:14.878Z",
    "seconds": null,
    "finished": "2026-11-27T15:42:09.056000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-4476 review fixes",
-   "model": "opus",
-   "started": "2026-11-27T15:00:47.463Z",
-   "seconds": null,
-   "finished": "2026-11-27T15:40:58.569000+00:00"
   }
  ],
  "queue": {
@@ -153,7 +144,7 @@
   "week_pct": 38.47,
   "usage_pct": 53.8,
   "work_pct": 98.9,
-  "read_at": "2026-11-27T16:43:00+00:00",
+  "read_at": "2026-11-27T16:46:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -174,7 +165,7 @@
   }
  ],
  "disk": {
-  "free_gb": 12,
+  "free_gb": 13,
   "gate": "closed",
   "ssd": {
    "mounted": true,
@@ -183,14 +174,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions wait until 20 GB is free.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-27T11:42:00-05:00",
+   "at": "2026-11-27T11:43:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 4,
-  "at": "2026-11-27T11:43:00-05:00",
+  "at": "2026-11-27T11:46:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -208,10 +199,10 @@
  "lanes": [
   {
    "name": "Idris",
-   "state": "running",
-   "task": "[build] T-4476 stale result fix",
-   "model": "opus",
-   "since": "2026-11-27T15:42:45.188Z",
+   "state": "next",
+   "task": "Idris, P2, from T-1282 F1 (not before TestFlight):...",
+   "model": null,
+   "since": null,
    "next": []
   },
   {
@@ -256,17 +247,7 @@
   }
  ],
  "tasks": {
-  "run": [
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "Projects get one file, one ID and guarded outside code",
-    "m": "opus",
-    "at": "2026-11-27T15:42:45.188Z",
-    "o": "c",
-    "task": "T-4476"
-   }
-  ],
+  "run": [],
   "src": "plan",
   "open": [
    {
@@ -432,7 +413,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-27T16:43:12Z",
+  "at": "2026-11-27T16:46:07Z",
   "s": {},
   "wk": {
    "T-0273": "Idris",
@@ -450,7 +431,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-27T16:43:12Z",
+  "at": "2026-11-27T16:46:07Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -468,7 +449,7 @@
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 790
+    "parked": 793
    },
    "cur": [],
    "ld": [
@@ -478,12 +459,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-27T16:42:36Z",
-    "ld": 1.9,
+    "at": "2026-11-27T16:46:08Z",
+    "ld": 1.56,
     "c": 8,
     "sb": 1,
     "dk": [
-     11.6,
+     13.4,
      228.3
     ],
     "ss": [
@@ -533,11 +514,11 @@
      "open": true
     }
    },
-   "at": "2026-11-27T16:43:23+00:00"
+   "at": "2026-11-27T16:46:27+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-27T16:43:23+00:00"
+   "at": "2026-11-27T16:46:27+00:00"
   }
  },
  "operators": [
@@ -581,13 +562,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 1,
+  "main": 0,
   "lanes": 0,
-  "total": 1,
-  "at": "11:43 AM",
-  "why": "",
-  "at_iso": "2026-11-27T16:43:00+00:00",
+  "total": 0,
+  "at": "11:46 AM",
+  "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
+  "at_iso": "2026-11-27T16:46:00+00:00",
   "started": "12:15 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 12:15 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 11:43 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0, started 12:15 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 11:46 AM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
  }
 }

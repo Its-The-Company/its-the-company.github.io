@@ -277,6 +277,44 @@ This session resumed the 11-25 <span title="An idea that reaches B or better but
   3. No test that a joiner gets the stopped outcomes.
   4. BackgroundRefreshTask.swift:36 is over the line width.
   Her slice 5 points (1), (2), (4) stay open.
+
+## Session 2026-11-27 06:3x-07:5x ET (Idris, lane a2, from f037ca091d, one records commit behind main 7e333bbdb3)
+
+- Baseline at f037ca09: PyWidgetTests 2710/0/2 (J-20261127-0649-land-chk-a5ab71-6-1522fd).
+- T-0793 780eff7acd, slice 6 only: the 4.3 expiry marker for the run in flight. BackgroundBatch.Stop knows the batch's
+  run in flight (began/ended, from the writer's `queued`); the firing's cancel hands it to WidgetWriter.expire, which
+  lists it first (WidgetStatusStore.recordExpiry: `last_outcome` expired, `expired_runs`, this process's list), then
+  `stopExpired`: PyBridge.noteExpired (`backgrounded` on that run's marker and RunInfo only; a firing has no scene, so
+  the scene's line never came) and the stop <span title="Our grade scale, nine steps: D, D+, C-, C, C+, B-, B, B+, A. An idea&#x27;s ladder is the letter it reaches before any cap.">ladder</span>. The sink's existing listed check then writes the row `expired`. A
+  run queued after the cancel is expired as it is queued. Pernille's re-review items 1-4 done: the mutant entry names
+  the renamed test; the writer asks the stop just before it queues (an expiry during prune, Pro check or Python start
+  queues nothing; stopped `deferred` row); a joiner test (WidgetPasses.waiting, tests only); the line width.
+  Checks: unit 2716/0/2 (J-20261127-0719-land-chk-a5ab71-5-5985b0, same tree as the tip), LaneWarmWindowTests 6/0
+  (J-20261127-0747-...-012467), host 4470/0. 8 new mutants, all failed their tests (J-...0733-...-14939f,
+  J-...0737-...-1920a1, J-...0740-...-58b951; scratch by_hand_multi.py, batches in s6-batches.json).
+- Known, documented on Stop: a run that returns after its last check and before `ended` can still be listed; status.json
+  then says `expired` over its own outcome (no badge; row and tree stand). The expiry's reschedule is the start's
+  submit, which stays pending (fire's doc comment). Not fixed, existing: an expiry before `fire` stores its work task
+  would cancel nothing (iOS gives ~30 s, so not seen).
+- Not started: the 7.2 loop breaker. It needs a design call first: LoopBreaker.decide exists in Shared/WidgetStatus.swift
+  with no caller; where `background` is written (the sink and launch recovery both write rows) and who reads it (the
+  firing's filter, T3 `shortcut` runs, the extension's `system` runs?) are not settled by ADR-007 7.2. Then `oom_guard`.
+- No commit, rechecked: T-4280 (proof is T-4494 item 3, the Investors' iPhone); T-1882 (nothing writes fields.json yet);
+  T-2021 (no scheme sets PYWIDGET_LANE_FORCED; needs the forced-lane bench on a quiet runner); T-4433 and T-4435
+  (this Mac has only iOS 26.0 and 27.0 runtimes). MERGE POINT: no (1 of 6 steps; the other 5 wait on the above).
+- Next: Pernille reviews 780eff7acd. Her slice 5 points (1), (2), (4) stay open.
+
+## Pernille's review of slice 6, 2026-11-27 ET (Operator, lane a2)
+
+- Pernille read 780eff7acd and b7ccc16a15: nothing blocking; review record f4640fca19. The 8 new mutants each match
+  once and name a test that kills them; ADR-007 4.3 and 7.2 cited correctly.
+- Open, non-blocking, for the next slice:
+  1. Five new lines over 120 characters: BackgroundBatch.swift:10, WidgetWriter.swift's `waiting` doc comment, and
+     three lines in BackgroundBatchTests.swift.
+  2. If noteExpired runs while the run is still queued and the run then starts before stop(), its crash marker never
+     says `backgrounded` (recovery still finds it in expired_runs). Low.
+  3. From slice 5: a firing that joins a pass already running never expires that pass's run in flight. Low.
+- Next on T-0793: the 7.2 loop breaker needs a design call on where status.json `background` is written and read.
 {% endraw %}
 
 </div>

@@ -433,10 +433,34 @@ below and nothing else (no network, L16 "Go, local"):
   from the last one: by day they follow the arc, by night they run from sunset to the next sunrise (empty at sunset,
   nearly full at dawn), so they are never full all night. After a polar night the first sunrise's gauge counts from
   yesterday's midnight.
-- **Times are in the iPhone's zone (open):** the place field has no zone (`zone: false`), so every time and the
-  day's edges are the iPhone's own. A place in another zone reads on the phone's clock: in the first Simulator shot
-  Lisbon's 7:31 AM sunrise read "2:31 AM" from New York. Sunrise and sunset did the same. Showing a far place's own
-  times needs a zone on the place (the Page's `zone: true`, as Clocks has), a Page change for Maren and Ines.
+- **Sky shows times in the place's own time zone** (T-5936, Maren; Pernille's open point from T-4708): Lisbon's
+  sunrise reads "7:31 AM" on a phone in New York, as it would on a clock in Lisbon, and never both times at once.
+  Why: the widget is about that place's sky, so its sunrise is read as the place's 7:31, the way the Weather app
+  shows a far city's sunrise; "2:31 AM" reads as a sunrise in the dark. The phone's side is already on the widget,
+  because "in 2 hr" counts from now wherever the phone is. Two clocks will not fit the Lock Screen's circular gauge
+  (one time, four digits) or its inline line, and two times side by side make a glance into a sum.
+  Only Large names the place today (`sun.py:482`, beside "Sky"); Small, Medium and the Lock Screen draw no name
+  except on a polar day or night (`_rel`, `sun.py:432`, and the rectangular's notice, `sun.py:501`). So when the
+  place's zone is not the phone's, the name says whose clock it is: Small and Medium read "in 2 hr · Lisbon" under
+  the time (one line; the name is cut first), and the rectangular's footnote reads "Lisbon · Waxing crescent, 40%"
+  (one line; the moon's words are cut first). In the phone's own zone both stay as they are now. The circular and the inline line stay one time with no name: there is no room.
+  The place's zone sets the day too: the arc runs from that place's midnight to midnight, and today's daylight, the
+  moon's name for the day and the Large weekday are the place's. Use Current Location keeps the phone's zone (the
+  phone is there), and so does any place saved without a zone. VoiceOver says which clock when the two differ:
+  "Sunrise at 7:31 AM local time, in 2 hours 10 minutes, at Lisbon"; in the phone's own zone the words stay as
+  they are now.
+  **The code does not do this yet:** the place field has no zone (`zone: false`) and `read` uses the phone's zone
+  (`k.local_zone()`), so today Lisbon's 7:31 AM sunrise reads "2:31 AM" from New York (the first Simulator shot).
+  The change: the Page's place writes `zone` when its `cities.tsv` hit has one, but still lets a hit with no zone
+  be chosen (429 of the 7,342 have none, Lisburn among them; Clocks dims those, Sky must not lose them); `read`
+  takes the saved place's zone (`ZoneInfo`) as `tz` when it has one, else the phone's; every
+  `ui.Text(at, style="time")` passes `time_zone=` that zone's name (the renderer already applies a Text's zone):
+  the hero time in Small, Medium and Large (`_hero`, `sun.py:418`), the Sunrise, Sunset, Dawn and Dusk columns in
+  Medium and Large (`_col`, `sun.py:438`) and the Lock Screen rectangular's time (`sun.py:509`); the circular and
+  inline already format with `k.clock(at, tz)` and follow `read`'s zone unchanged; `_rel` (Small and Medium) and
+  the rectangular's footnote add the place's name when the zones differ; `describe` adds "local time" when the zone
+  is not the phone's; and the tests add Lisbon seen from New York (7:31 AM, the arc from Lisbon's midnight, the
+  name beside "in") beside the current New York case.
 - **Tests:** `tests/widgets/test_premade_sky.py` (the almanac against the H249 fixtures, the arc in day, polar day,
   twilight-only and dark cases, the Lock Screen gauge, the moon's lit side at Boston, London and Sydney after each
   quarter of 2027) and `PremadePageUITests/testSkySheetDrawsTheArcAndMoonForASavedPlace`, which saves New York into the
@@ -451,7 +475,7 @@ The Page:
 | Field | Kind | Limits and checks |
 |---|---|---|
 | Use Current Location | `toggle` → `use_current` | turning it on asks When In Use if never asked (that tap only); refused or off: the toggle goes back off and the footer shows `page.loc.off` with Open Settings (frame 9) |
-| Place | `place` (no zone) → `place` | the place used when there is no fix; reads `page.place.choose` until set |
+| Place | `place`, zone when known → `place` | the place used when there is no fix; reads `page.place.choose` until set; writes `zone` when the `cities.tsv` hit has one, and a hit with no zone stays choosable (Sky uses the phone's zone for it). The code still has `zone: false` until the change above |
 | · Name on Widget | inside the place: `text`, `max` 24 | the city's name by default |
 
 </div>

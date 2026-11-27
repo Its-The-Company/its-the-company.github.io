@@ -139,13 +139,12 @@ nothing outlined and no message. **Between taps** (every step from 6 on except 8
 7. From the background. Close the sheet with **Done**, go to the Home Screen (do not close the app), and tap **Run**.
    Check: the same as step 6.
 8. A second habit with the page still up. After step 7, leave the Habits page showing at Run and go to the Home
-   Screen without tapping Done. Tap **Walk**. What the tap should do: the page moves up to Walk and outlines it.
-   What the review found by reading the code (T-5192 M1, fixed by T-5317, open as of 2026-11-22): the page stays
-   where it was and nothing is outlined. Write down which you see.
+   Screen without tapping Done. Tap **Walk**. Check: the page shows again at Walk, on screen and outlined. (The
+   review found by reading the code, T-5192 M1, that the page stayed where it was with nothing outlined; fixed by
+   T-4641 and T-5317, 2026-11-27.) Write down which you see.
 9. The same, from the sheet's summary. Tap the page's Back button so the Habit tracker sheet shows, go to the Home
-   Screen, and tap **Read**. What the tap should do: the Habits page opens again at Read, outlined. What the review
-   found (the same M1): the sheet stays as it was and the page is not opened. Write down which you see, then tap
-   **Done**.
+   Screen, and tap **Read**. Check: the Habits page opens again at Read, outlined (the review found the sheet stayed
+   as it was, the same M1, fixed with step 8). Write down which you see, then tap **Done**.
 10. Reduce Motion. Turn on Settings, Accessibility, Motion, **Reduce Motion**. Tap **Run** on the widget. Check: the
     page shows Run with no scrolling movement (it jumps there), and the outline appears and goes after about a
     second and a half with no fade either way. The sheet's own arrival is iOS's and may cross-fade instead of
@@ -167,8 +166,10 @@ nothing outlined and no message. **Between taps** (every step from 6 on except 8
 On a Simulator, pywidget/ios/UITests/HabitsFocusUITests.swift (T-5542, 2026-11-23) does steps 4, 7 and 12 without a
 phone: it writes six habits into the file, opens `pywidget://widget/habits/open?habit=<Run's id>` from the Home Screen
 at Accessibility Large text, and checks that Run's row is on screen and outlined in the accent colour, then not; an id
-the file does not hold opens the page at the top, with Run below the screen and nothing outlined. Steps 5, 6, 8 to 11
-and the widget itself stay with the phone.
+the file does not hold opens the page at the top, with Run below the screen and nothing outlined. Its T-5317 test
+(2026-11-27) does steps 8 and 9 the same way: Run's link, then Walk's with the page still up (Walk on screen and
+outlined), then Back and Read's (the page opened again at Read, outlined). Steps 5, 6, 10, 11 and the widget itself,
+and steps 8 and 9 from a real widget's tap, stay with the phone.
 
 ## 6. GitHub repository: a repository (Pro in this build)
 

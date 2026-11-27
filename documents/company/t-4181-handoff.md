@@ -183,6 +183,55 @@ This session resumed the 11-25 <span title="An idea that reaches B or better but
   J-20261126-2319-land-chk-a5ab71-2-43ac30, host 4464/0. The Operator folded the fix and its handoff line into that one
   T-4181 commit (same tree), so check shows no fault. Pernille's second read: nothing blocking; low, for the next
   session: TreeView.swift:698-699's doc comment has no systemSmall exception.
+
+## Session 2026-11-27 12:19 AM-02:xx ET (Idris, lane a2, from main 48b783b922)
+
+- Baseline at 48b783b9: PyWidgetTests 2662/0/2 (J-20261127-0020-land-chk-a5ab71-1-228b92).
+- T-4589 839467f62b (finishes the step): the row's `deadline` mark compares `returned` (stamped right after the run)
+  with `firstDue`; the two doc comments reworded (L2). testAJoinerLeavesTheRowOnItsFirstCallersDeadline (L1 a); both
+  L1 mutants in Tests/mutants-t1852.json failed it by hand. L1 (b), an injectable upTo sleep, not done (optional).
+  The stale mutant "queued-turn-runs-on-closed-lane" now matches (`await logClosed(id)`) and was killed. Unit 2663/0/2
+  (J-20261127-0034-...-0695d5), LaneWarmWindowTests 6/0, host 4464/0.
+- T-0793 23208589fb, slice 5 only: App/Bridge/BackgroundBatch.swift (the firing's filter, one RefreshBatch.run with
+  WidgetWriter's 5 s budget, `deferred` rows with a reason, the deferral counts in widgets/.bg-deferred.json; a stuck
+  run ends the batch); WidgetWriter.refreshBackground (`bg_refresh`, forced, joinable, counts: false);
+  BackgroundRefreshTask.fire runs it between the start's and the end's reschedule. Unit 2668/0/2
+  (J-20261127-0136-land-chk-a5ab71-3-502e3e), LaneWarmWindowTests 6/0 (J-20261127-0152-...-0118d4), host 4464/0.
+  NOT RUN: its 5 mutants (Tests/mutants-t0793.json, "slice 5 ...") and the slice 4 one ("no WidgetKit answer reads as
+  nothing placed"): first thing next session, by hand (scratch by_hand.py). Stale doc lines: RefreshBatch.swift's and
+  BackgroundRefresh.swift's headers still say the pass is not wired. Left on the line: the 4.3 expiry marker, the 7.2
+  loop breaker (status.json `background`), `oom_guard`. A real firing is T-0680's (the Simulator never fires one).
+- No commit, unchanged reasons: T-4280 (proof is T-4494 item 3, the Investors' iPhone), T-1882 (part 1 needs B5/T-0678
+  to write fields.json), T-2021 (needs the forced-lane Simulator bench, 20+ warm and 20+ cold, on a quiet runner),
+  T-4433 (the Mac mini still has only iOS 26.0 and 27.0 runtimes; 18, 27.1, 27.2 and a phone are the Investors'),
+  T-4435 (27.1/27.2 not installed).
+- Still open: TreeView.swift:698-699's doc comment lacks the systemSmall exception (not touched: any Swift edit needs
+  a build and the suite, and the session ran out).
+
+## Pernille's review of slice 5, 2026-11-27 (Idris, lane a2)
+
+- BLOCKING, NOT COMMITTED (3:06 AM ET: the build never started, Mac mini load 540; patch in scratch T-4181-idris/t0793-review-fix.patch): WidgetPasses runs the batch in
+  an unstructured `Task {}`, so the firing's cancel never reached RefreshBatch.run's `Task.isCancelled` and an expired
+  firing kept starting Python runs. BackgroundBatch.pass now wraps the pass in withTaskCancellationHandler; the cancel
+  sets a lock-held `Stop` that the batch reads (RefreshBatch.run's new `stopped`) before each start. The pass's task
+  itself is not cancelled, so a scene-active pass joined to it still gets its outcomes: the unrun ones come back
+  skipped with their `deferred` row and keep `wants-run`, like the window's deferrals, and the background pass is
+  `counts: false`, so the next activation's pass is not spaced out by it. Test:
+  BackgroundBatchTests.testAnExpiryWhileARealPassRunsTheBatchStartsNoMoreWidgets. Stale headers of RefreshBatch.swift
+  and BackgroundRefresh.swift fixed in the same commit.
+- Open, non-blocking: (1) the 25 s clock starts at the batch, not the firing: the two WidgetKit reads before it and
+  any wait behind an in-flight pass are uncounted. (2) A stand-down (console run waiting) sets that widget's count to
+  0 though nothing ran. (3) The T-4589 joiner test's margins are 0.1-0.3 s (flaky on a loaded runner). (4) A firing
+  cancelled while it waits behind another pass still waits that pass out (no Python start; the task has ended).
+
+## Slice 5 taken off the branch, 2026-11-27 (Operator, lane a2)
+
+- With Pernille's blocking finding unfixed and its fix untested, 23208589fb (T-0793 slice 5) is NOT on this branch:
+  the branch holds T-4589 839467f62b and this note only. Restore, from main, in order (both in scratch
+  T-4181-idris/): `git am t0793-slice5-23208589fb.patch`, then `git apply t0793-review-fix-from-425d683497.patch`
+  (pywidget/ hunks; its handoff hunk is already in this file). Then build, show the new test red without the
+  forwarding and green with it, run slice 5's 5 mutants and slice 4's one, the whole unit target, and Pernille re-reads.
+- Pernille's review of 48b783b922..425d683497: nothing blocking on T-4589 (its joiner-test margins are open item 3 above).
 {% endraw %}
 
 </div>

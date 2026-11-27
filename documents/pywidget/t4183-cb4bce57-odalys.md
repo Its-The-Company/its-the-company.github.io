@@ -5,7 +5,7 @@ section: "documents"
 description: "The link, the route and the match are right and narrow. WidgetTapLink.focus (Shared/WidgetTapLink.swift:98-107) reads a focus only from /habits/open, only one habit parameter, 1 to 64 bytes of ASCII letters, digits, _\u2026"
 ---
 <div class="crumbs" role="navigation" aria-label="Back"><a class="back" href="{{ '/documents/pywidget/design/' | relative_url }}">← Design &amp; Specs</a><a href="{{ '/documents/pywidget/t4183-cb4bce57-odalys.html' | relative_url }}" rel="bookmark">Permanent link</a></div>
-<div class="page-head"><div class="kicker"><span class="kind grey">Review</span><span><span title="Our arithmetic estimate of what the idea would earn by day 30 (the $200 deadline) or day 90. It never raises a grade.">Day 30</span> · Fri Nov 20</span><span><code>pywidget/docs/reviews/t4183-cb4bce57-odalys.md</code></span></div><h1>Review of cb4bce57: T-4515, a Habits row's tap opens its Page at that habit</h1><div class="byline"><img class="avatar" src="{{ '/assets/portraits/odalys.svg' | relative_url }}" alt="Odalys" title="Odalys"><span>By <a href="{{ '/cast/odalys.html' | relative_url }}">Odalys</a>, Process and operations engineer</span></div></div>
+<div class="page-head"><div class="kicker"><span class="kind grey">Review</span><span>Day 37 · Fri Nov 27</span><span><code>pywidget/docs/reviews/t4183-cb4bce57-odalys.md</code></span></div><h1>Review of cb4bce57: T-4515, a Habits row's tap opens its Page at that habit</h1><div class="byline"><img class="avatar" src="{{ '/assets/portraits/odalys.svg' | relative_url }}" alt="Odalys" title="Odalys"><span>By <a href="{{ '/cast/odalys.html' | relative_url }}">Odalys</a>, Process and operations engineer</span></div></div>
 
 <style>.doc-body{overflow-wrap:break-word}.doc-src{overflow-wrap:anywhere}.tbl[data-n~="1"] tr>:nth-child(1),.tbl[data-n~="2"] tr>:nth-child(2),.tbl[data-n~="3"] tr>:nth-child(3),.tbl[data-n~="4"] tr>:nth-child(4),.tbl[data-n~="5"] tr>:nth-child(5),.tbl[data-n~="6"] tr>:nth-child(6),.tbl[data-n~="7"] tr>:nth-child(7),.tbl[data-n~="8"] tr>:nth-child(8),.tbl[data-n~="9"] tr>:nth-child(9),.tbl[data-n~="10"] tr>:nth-child(10),.tbl[data-n~="11"] tr>:nth-child(11),.tbl[data-n~="12"] tr>:nth-child(12){min-width:0;overflow-wrap:normal}.tbl[data-o="1"] tr>:nth-child(1),.tbl[data-o="2"] tr>:nth-child(2),.tbl[data-o="3"] tr>:nth-child(3),.tbl[data-o="4"] tr>:nth-child(4),.tbl[data-o="5"] tr>:nth-child(5),.tbl[data-o="6"] tr>:nth-child(6),.tbl[data-o="7"] tr>:nth-child(7),.tbl[data-o="8"] tr>:nth-child(8),.tbl[data-o="9"] tr>:nth-child(9),.tbl[data-o="10"] tr>:nth-child(10),.tbl[data-o="11"] tr>:nth-child(11),.tbl[data-o="12"] tr>:nth-child(12){position:sticky;right:0;overflow-wrap:normal;background:var(--page);box-shadow:-1px 0 var(--line),-9px 0 8px -8px var(--sh)}</style>
 <div class="doc-body" markdown="1">
@@ -121,6 +121,31 @@ check as written cannot show the scroll (M2).
 - `showFocus` sets `focusShown = true` before its waits (`SettingsPage.swift:346`); if the task is cancelled during
   the 1.5 s wait, `outlined` is never cleared, and if during the 350 ms wait, the focus is never shown. I found no
   path today that cancels it without also destroying the Page; clearing `outlined` in a `defer` would close it.
+
+## Fixes since (added by Idris)
+
+- M1, T-4641 and T-5317 (2026-11-27): a widget tap on the premade whose sheet is already up no longer sets `open` to
+  the same entry, which `.sheet(item:)` ignores. `GalleryTapAction.of` (T-4641 slice 1) sends it to the open sheet
+  instead (`GalleryPagePush`), and `GalleryDetailView` replaces its stack with the Page under a route of its own
+  (`GalleryDetailView.path(pushing:)`). That alone was not enough: run on the Simulator, the stack kept the Page's
+  State and its finished focus task under the new route, so Walk's tap left the Page at Run (runner job
+  J-20261127-0111, red). T-5317 gives the Page the route as its identity (`.id(route)` in the sheet's
+  `navigationDestination`), so each tap's Page is built new at its focus (J-20261127-0117, green), and adds the test,
+  `HabitsFocusUITests.testASecondHabitsTapWithThePageUpMovesToTheNewHabit`: Run's tap, then Walk's with the Page up
+  at Run (Walk on screen and outlined, where it was off screen at Run), then Back and Read's tap (the Page pushed
+  again, Read outlined). The phone check's s5 steps 8 and 9 say what the tap does now.
+- L1, T-5319 (2026-11-27), each edge:
+  - Two no-id habits sharing a first word: the Page gives every row of a list with an id rule that has none an id
+    once its focus is shown (`SettingsPageModel.giveRowIDs`, `SettingsKinds.withIDs`: new ids unique among the rows,
+    no row moved, nothing written when every row has one). The tap that opened the Page is still found among the rows
+    as they were read, and the widget's next run links each row by its own id. PremadeSettingsTests'
+    `testTwoNoIDHabitsSharingAFirstWordGetIDsAndEachIsFoundByItsOwn`.
+  - An empty or non-string id: habits.py now takes an id only when it is a non-empty string and links any other row
+    by its slug (test_premade_data's `test_a_row_links_by_its_id_else_by_its_slug`), and `PageFocus.of`'s slug pass
+    takes the same rows (`SettingsKinds.hasID`), so such a row is found, then given an id
+    (`testAHabitWithAnEmptyOrNonStringIDIsFoundBySlug`).
+  - `showFocus` cancelled: during the 350 ms wait it sets `focusShown` back, so the Page's next appearance shows the
+    focus; during the outline it clears `outlined`. (No test reaches a cancelled view task; read, as the review found.)
 {% endraw %}
 
 </div>

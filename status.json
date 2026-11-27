@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-27T15:17:24.841113+00:00",
+ "at": "2026-11-27T15:20:27.297566+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -62,15 +62,7 @@
    "task": "[build] T-4476 review fixes",
    "model": "opus",
    "started": "2026-11-27T15:00:47.463Z",
-   "seconds": 997,
-   "finished": null
-  },
-  {
-   "name": "maren",
-   "task": "[site] T-5940 app changes bars",
-   "model": "opus",
-   "started": "2026-11-27T15:06:29.801Z",
-   "seconds": 655,
+   "seconds": 1179,
    "finished": null
   },
   {
@@ -78,7 +70,7 @@
    "task": "[build] T-4190 batch three fixes",
    "model": "opus",
    "started": "2026-11-27T15:11:44.648Z",
-   "seconds": 340,
+   "seconds": 522,
    "finished": null
   },
   {
@@ -86,12 +78,28 @@
    "task": "[build] T-5939 grapheme cut fix",
    "model": "opus",
    "started": "2026-11-27T15:13:13.962Z",
-   "seconds": 250,
+   "seconds": 433,
+   "finished": null
+  },
+  {
+   "name": "ines",
+   "task": "[review] T-5940 app bars",
+   "model": "opus",
+   "started": "2026-11-27T15:19:40.787Z",
+   "seconds": 46,
    "finished": null
   }
  ],
- "who": "Idris x2, Maren, Pernille",
+ "who": "Idris x2, Pernille, Ines",
  "recent": [
+  {
+   "name": "maren",
+   "task": "[site] T-5940 app changes bars",
+   "model": "opus",
+   "started": "2026-11-27T15:06:29.801Z",
+   "seconds": null,
+   "finished": "2026-11-27T15:19:31.970000+00:00"
+  },
   {
    "name": "idris",
    "task": "[review] T-5939 again",
@@ -115,14 +123,6 @@
    "started": "2026-11-27T14:37:51.274Z",
    "seconds": null,
    "finished": "2026-11-27T15:10:58.319000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-4190 batch three",
-   "model": "opus",
-   "started": "2026-11-27T14:19:06.517Z",
-   "seconds": null,
-   "finished": "2026-11-27T15:08:23.861000+00:00"
   }
  ],
  "queue": {
@@ -177,7 +177,7 @@
   "week_pct": 36.14,
   "usage_pct": 53.8,
   "work_pct": 98.9,
-  "read_at": "2026-11-27T15:17:00+00:00",
+  "read_at": "2026-11-27T15:20:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -220,14 +220,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-27T10:15:00-05:00",
+   "at": "2026-11-27T10:20:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 4,
-  "at": "2026-11-27T10:17:00-05:00",
+  "at": "2026-11-27T10:20:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -252,19 +252,19 @@
    "next": []
   },
   {
-   "name": "Maren",
-   "state": "running",
-   "task": "[site] T-5940 app changes bars",
-   "model": "opus",
-   "since": "2026-11-27T15:06:29.801Z",
-   "next": []
-  },
-  {
    "name": "Pernille",
    "state": "running",
    "task": "[build] T-5939 grapheme cut fix",
    "model": "opus",
    "since": "2026-11-27T15:13:13.962Z",
+   "next": []
+  },
+  {
+   "name": "Ines",
+   "state": "running",
+   "task": "[review] T-5940 app bars",
+   "model": "opus",
+   "since": "2026-11-27T15:19:40.787Z",
    "next": []
   },
   {
@@ -276,17 +276,17 @@
    "next": []
   },
   {
-   "name": "Ines",
+   "name": "Odalys",
    "state": "next",
-   "task": "Ines with Wrenna, P3, from T-0902 (ADR-006 s13.5, s13.7...",
+   "task": "Odalys, P3, host-only, from...",
    "model": null,
    "since": null,
    "next": []
   },
   {
-   "name": "Odalys",
+   "name": "Maren",
    "state": "next",
-   "task": "Odalys, P3, host-only, from...",
+   "task": "Maren, P1, from T-2296 review M2...",
    "model": null,
    "since": null,
    "next": []
@@ -302,15 +302,6 @@
     "at": "2026-11-27T15:00:47.463Z",
     "o": "c",
     "task": "T-4476"
-   },
-   {
-    "w": "Maren",
-    "k": "site",
-    "t": "Daily app changes bars in the Work panel",
-    "m": "opus",
-    "at": "2026-11-27T15:06:29.801Z",
-    "o": "i",
-    "task": "T-5940"
    },
    {
     "w": "Idris",
@@ -329,6 +320,15 @@
     "at": "2026-11-27T15:13:13.962Z",
     "o": "c",
     "task": "T-5939"
+   },
+   {
+    "w": "Ines",
+    "k": "review",
+    "t": "Daily app changes bars in the Work panel",
+    "m": "opus",
+    "at": "2026-11-27T15:19:40.787Z",
+    "o": "c",
+    "task": "T-5940"
    }
   ],
   "src": "plan",
@@ -496,7 +496,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-27T15:17:06Z",
+  "at": "2026-11-27T15:20:14Z",
   "s": {
    "T-4552": [
     "mergetest",
@@ -532,7 +532,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-27T15:17:06Z",
+  "at": "2026-11-27T15:20:14Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -550,7 +550,7 @@
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 704
+    "parked": 707
    },
    "cur": [],
    "ld": [
@@ -560,12 +560,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-27T15:16:33Z",
-    "ld": 2.27,
+    "at": "2026-11-27T15:19:52Z",
+    "ld": 1.55,
     "c": 8,
     "sb": 1,
     "dk": [
-     14.1,
+     14.2,
      228.3
     ],
     "ss": [
@@ -577,12 +577,12 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-27T15:14:31Z",
-    "ld": 2.67,
+    "at": "2026-11-27T15:18:52Z",
+    "ld": 2.1,
     "c": 12,
     "sb": 0,
     "dk": [
-     361.5,
+     361.4,
      926.4
     ],
     "sn": []
@@ -615,11 +615,11 @@
      "open": true
     }
    },
-   "at": "2026-11-27T15:17:24+00:00"
+   "at": "2026-11-27T15:20:27+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-27T15:17:12+00:00"
+   "at": "2026-11-27T15:20:14+00:00"
   }
  },
  "operators": [
@@ -663,10 +663,10 @@
   "main": 4,
   "lanes": 1,
   "total": 5,
-  "at": "10:17 AM",
+  "at": "10:20 AM",
   "why": "",
-  "at_iso": "2026-11-27T15:17:00+00:00",
+  "at_iso": "2026-11-27T15:20:00+00:00",
   "started": "12:15 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 4, started 12:15 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 10:17 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 4, started 12:15 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 10:20 AM ET</p></section>"
  }
 }

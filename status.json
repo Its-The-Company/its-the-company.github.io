@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-27T22:03:03.736347+00:00",
+ "at": "2026-11-27T22:06:09.024478+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -62,7 +62,7 @@
    "task": "[build] T-5795 overlap clocks fixes",
    "model": "opus",
    "started": "2026-11-27T19:47:58.276Z",
-   "seconds": 8105,
+   "seconds": 8290,
    "finished": null
   },
   {
@@ -70,7 +70,7 @@
    "task": "[build] T-5945 two sessions per feature",
    "model": "opus",
    "started": "2026-11-27T20:15:56.824Z",
-   "seconds": 6426,
+   "seconds": 6612,
    "finished": null
   },
   {
@@ -78,7 +78,7 @@
    "task": "[build] T-4188 location, notifications steps",
    "model": "opus",
    "started": "2026-11-27T21:40:42.332Z",
-   "seconds": 1341,
+   "seconds": 1526,
    "finished": null
   },
   {
@@ -86,7 +86,7 @@
    "task": "[build] T-5890 T-4778 font probe tidy",
    "model": "opus",
    "started": "2026-11-27T21:41:34.130Z",
-   "seconds": 1289,
+   "seconds": 1474,
    "finished": null
   },
   {
@@ -94,7 +94,7 @@
    "task": "[build] T-4190 restore and theme tests",
    "model": "opus",
    "started": "2026-11-27T21:51:41.874Z",
-   "seconds": 681,
+   "seconds": 867,
    "finished": null
   },
   {
@@ -102,20 +102,28 @@
    "task": "[review] T-5924",
    "model": "opus",
    "started": "2026-11-27T21:52:49.283Z",
-   "seconds": 614,
+   "seconds": 799,
    "finished": null
   },
+  {
+   "name": "wrenna",
+   "task": "[build] T-5080 redact and fix",
+   "model": "opus",
+   "started": "2026-11-27T22:04:46.361Z",
+   "seconds": 82,
+   "finished": null
+  }
+ ],
+ "who": "Pernille, Odalys x2, Idris x3, Wrenna",
+ "recent": [
   {
    "name": "ines",
    "task": "[review] T-5080",
    "model": "opus",
    "started": "2026-11-27T22:02:01.220Z",
-   "seconds": 62,
-   "finished": null
-  }
- ],
- "who": "Pernille, Odalys x2, Idris x3, Ines",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-27T22:04:28.171000+00:00"
+  },
   {
    "name": "wrenna",
    "task": "[build] T-5080 L6 section",
@@ -139,14 +147,6 @@
    "started": "2026-11-27T21:52:35.442Z",
    "seconds": null,
    "finished": "2026-11-27T21:53:05.284000+00:00"
-  },
-  {
-   "name": "maren",
-   "task": "[build] T-5924 look picker page",
-   "model": "opus",
-   "started": "2026-11-27T21:19:37.669Z",
-   "seconds": null,
-   "finished": "2026-11-27T21:52:29.371000+00:00"
   }
  ],
  "queue": {
@@ -157,31 +157,31 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 36.0,
-   "resets_at": "2026-11-27T17:30:00-05:00",
+   "pct": 37.0,
+   "resets_at": "2026-11-27T22:30:00.119675+00:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-27T17:01:16.712138-05:00",
-   "source": "live",
-   "left": 64.0,
+   "read_at": "2026-11-27T17:04:08.857952-05:00",
+   "source": "usage",
+   "left": 63.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 39.0,
-   "resets_at": "2026-11-29T02:00:00-05:00",
+   "pct": 40.0,
+   "resets_at": "2026-11-29T07:00:00.119691+00:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-27T17:01:16.712138-05:00",
-   "source": "live",
-   "left": 61.0,
+   "read_at": "2026-11-27T17:04:08.857952-05:00",
+   "source": "usage",
+   "left": 60.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 0.0,
    "resets_at": "2026-11-29T07:00:00+00:00",
    "used_words": "of the Fable weekly allowance used",
-   "read_at": "2026-11-27T16:27:02.390169-05:00",
+   "read_at": "2026-11-27T17:04:08.857952-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-27T17:01:16.712138-05:00"
+  "read_at": "2026-11-27T17:04:08.857952-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -198,10 +198,10 @@
  },
  "next_tick": null,
  "personal": {
-  "week_pct": 36.54,
+  "week_pct": 38.46,
   "usage_pct": 49.0,
   "work_pct": 99.0,
-  "read_at": "2026-11-27T22:03:00+00:00",
+  "read_at": "2026-11-27T22:06:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -222,7 +222,7 @@
   }
  ],
  "disk": {
-  "free_gb": 43,
+  "free_gb": 45,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -231,14 +231,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-27T16:58:00-05:00",
+   "at": "2026-11-27T17:03:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 4,
-  "at": "2026-11-27T17:03:00-05:00",
+  "at": "2026-11-27T17:06:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -279,17 +279,17 @@
    "next": []
   },
   {
-   "name": "Ines",
+   "name": "Wrenna",
    "state": "running",
-   "task": "[review] T-5080",
+   "task": "[build] T-5080 redact and fix",
    "model": "opus",
-   "since": "2026-11-27T22:02:01.220Z",
+   "since": "2026-11-27T22:04:46.361Z",
    "next": []
   },
   {
-   "name": "Wrenna",
+   "name": "Ines",
    "state": "next",
-   "task": "Read developer.apple.com \"Keeping a widget up to date\",...",
+   "task": "Ines with Wrenna, P3, from T-0902 (ADR-006 s13.5, s13.7...",
    "model": null,
    "since": null,
    "next": []
@@ -360,11 +360,11 @@
     "task": "T-5924"
    },
    {
-    "w": "Ines",
-    "k": "review",
+    "w": "Wrenna",
+    "k": "build",
     "t": "Find a store app sharing user code in-app",
     "m": "opus",
-    "at": "2026-11-27T22:02:01.220Z",
+    "at": "2026-11-27T22:04:46.361Z",
     "o": "c",
     "task": "T-5080"
    }
@@ -534,12 +534,12 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-27T22:02:55Z",
+  "at": "2026-11-27T22:06:09Z",
   "s": {
    "T-4181": [
     "mergeq",
     "1st to merge",
-    1795816915721
+    1795816929024
    ],
    "T-4833": [
     "mergetest",
@@ -563,7 +563,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-27T22:02:55Z",
+  "at": "2026-11-27T22:06:09Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -576,12 +576,12 @@
    },
    "m": {
     "checking": null,
-    "inline": 1,
+    "inline": 4,
     "conflicted": null,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1110
+    "parked": 1113
    },
    "cur": [],
    "ld": [
@@ -591,12 +591,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-27T22:02:07Z",
-    "ld": 8.48,
+    "at": "2026-11-27T22:05:48Z",
+    "ld": 7.25,
     "c": 8,
     "sb": 0,
     "dk": [
-     45.3,
+     45.2,
      228.3
     ],
     "ss": [
@@ -606,18 +606,19 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-27T21:57:30Z",
-    "ld": 15.74,
+    "at": "2026-11-27T22:02:34Z",
+    "ld": 15.12,
     "c": 12,
-    "sb": 3,
+    "sb": 4,
     "dk": [
-     348.5,
+     345.9,
      926.4
     ],
     "sn": [
      "itsthecompany-runner",
      "itsthecompany-runner-2",
-     "itsthecompany-runner-3"
+     "itsthecompany-runner-3",
+     "itsthecompany-runner-4"
     ]
    }
   }
@@ -648,11 +649,11 @@
      "open": true
     }
    },
-   "at": "2026-11-27T22:03:03+00:00"
+   "at": "2026-11-27T22:06:09+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-27T22:02:55+00:00"
+   "at": "2026-11-27T22:06:02+00:00"
   }
  },
  "operators": [
@@ -686,10 +687,10 @@
   "main": 7,
   "lanes": 0,
   "total": 7,
-  "at": "5:03 PM",
+  "at": "5:06 PM",
   "why": "",
-  "at_iso": "2026-11-27T22:03:00+00:00",
+  "at_iso": "2026-11-27T22:06:00+00:00",
   "started": "2:44 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 7, started 2:44 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 5:03 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 7, started 2:44 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 5:06 PM ET</p></section>"
  }
 }

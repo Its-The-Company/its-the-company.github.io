@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-27T06:02:08.343373+00:00",
+ "at": "2026-11-27T06:05:13.637597+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -62,7 +62,7 @@
    "task": "[build] T-4183 Gallery Habits fixes",
    "model": "opus",
    "started": "2026-11-27T05:20:53.231Z",
-   "seconds": 2475,
+   "seconds": 2660,
    "finished": null
   },
   {
@@ -70,7 +70,7 @@
    "task": "[build] T-5919 Home site commit",
    "model": "opus",
    "started": "2026-11-27T05:21:48.644Z",
-   "seconds": 2419,
+   "seconds": 2604,
    "finished": null
   },
   {
@@ -78,7 +78,7 @@
    "task": "[build] T-5918 account names text",
    "model": "opus",
    "started": "2026-11-27T05:22:08.942Z",
-   "seconds": 2399,
+   "seconds": 2584,
    "finished": null
   },
   {
@@ -86,11 +86,19 @@
    "task": "[build] T-4478 Pages links state",
    "model": "opus",
    "started": "2026-11-27T05:41:43.084Z",
-   "seconds": 1225,
+   "seconds": 1410,
+   "finished": null
+  },
+  {
+   "name": "idris",
+   "task": "[build] T-4190 paywall batch two",
+   "model": "opus",
+   "started": "2026-11-27T06:04:32.961Z",
+   "seconds": 40,
    "finished": null
   }
  ],
- "who": "Idris x2, Maren, Odalys",
+ "who": "Idris x3, Maren, Odalys",
  "recent": [
   {
    "name": "general-purpose",
@@ -128,7 +136,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 294,
+  "runnable_count": 291,
   "blocked_count": 0
  },
  "meter": {
@@ -177,7 +185,7 @@
   "week_pct": 23.35,
   "usage_pct": 53.9,
   "work_pct": 98.9,
-  "read_at": "2026-11-27T06:02:00+00:00",
+  "read_at": "2026-11-27T06:05:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -232,14 +240,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-27T00:58:00-05:00",
+   "at": "2026-11-27T01:03:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 6,
-  "at": "2026-11-27T01:02:00-05:00",
+  "at": "2026-11-27T01:05:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -341,6 +349,15 @@
     "at": "2026-11-27T05:41:43.084Z",
     "o": "c",
     "task": "T-4478"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "Settings and Pro: buy, restore, themes",
+    "m": "opus",
+    "at": "2026-11-27T06:04:32.961Z",
+    "o": "c",
+    "task": "T-4190"
    }
   ],
   "src": "plan",
@@ -389,6 +406,13 @@
    },
    {
     "w": "Idris",
+    "k": "tools",
+    "t": "Fix the MacBook test jobs that keep failing",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Operator",
     "k": "fix",
     "t": "Fix a MacBook test job that failed",
     "s": "next",
@@ -396,15 +420,8 @@
    },
    {
     "w": "Idris",
-    "k": "build",
-    "t": "Fix the token test's No view for this size card",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
     "k": "tools",
-    "t": "Fix the MacBook test jobs that keep failing",
+    "t": "Clear the Xcode failures that hold main",
     "s": "next",
     "o": "c"
    },
@@ -419,29 +436,41 @@
   "done": [
    {
     "w": "Idris",
-    "t": "The widget's refresh arrow no longer offers a second, competing tap when it sits inside a link,...",
-    "at": "2026-11-27T00:19:00-05:00"
+    "t": "The guide now has current pictures of the Pro screen and of the Settings row that leads to it,...",
+    "at": "2026-11-27T01:03:00-05:00"
    },
    {
-    "w": "Pernille",
-    "t": "The automatic check of a person's first widget now starts from a clean Home Screen and proves...",
-    "at": "2026-11-27T00:11:00-05:00"
+    "w": "Idris",
+    "t": "The automatic check that reads a code off a widget on the Home Screen, which failed on the test...",
+    "at": "2026-11-27T01:03:00-05:00"
    },
    {
-    "w": "Pernille",
-    "t": "Moving projects in and out as zip files no longer loses unsaved text silently, freezes the...",
-    "at": "2026-11-27T00:11:00-05:00"
+    "w": "Idris",
+    "t": "The automatic check that a script's result really reaches a widget on the Home Screen now passes...",
+    "at": "2026-11-27T01:03:00-05:00"
    }
   ],
   "count": {
-   "next": 294,
+   "next": 291,
    "wait": 0,
    "blocked": 0,
    "you": 0
   },
   "fin": {
-   "n": 1,
+   "n": 4,
    "rows": [
+    [
+     "T-2549",
+     "Picture the Pro screen and..."
+    ],
+    [
+     "T-4899",
+     "Fix a MacBook test job that..."
+    ],
+    [
+     "T-5047",
+     "Fix the token test's No view..."
+    ],
     [
      "T-4436",
      "Tidy the refresh tap's small..."
@@ -488,7 +517,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-27T06:02:00Z",
+  "at": "2026-11-27T06:04:55Z",
   "s": {
    "T-4190": [
     "mergetest",
@@ -525,11 +554,14 @@
    "T-4181": "Idris",
    "T-5919": "Maren",
    "T-5918": "Odalys",
+   "T-2549": "Idris",
+   "T-4899": "Idris",
+   "T-5047": "Idris",
    "T-4436": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-27T06:02:00Z",
+  "at": "2026-11-27T06:04:55Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -547,7 +579,7 @@
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1051
+    "parked": 1054
    },
    "cur": [],
    "ld": [
@@ -557,12 +589,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-27T06:02:00Z",
-    "ld": 2.83,
+    "at": "2026-11-27T06:04:56Z",
+    "ld": 2.63,
     "c": 8,
     "sb": 0,
     "dk": [
-     18.0,
+     17.8,
      228.3
     ],
     "ss": [
@@ -613,11 +645,11 @@
      "open": true
     }
    },
-   "at": "2026-11-27T06:02:08+00:00"
+   "at": "2026-11-27T06:05:13+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-27T06:02:08+00:00"
+   "at": "2026-11-27T06:05:01+00:00"
   }
  },
  "operators": [
@@ -665,13 +697,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 4,
+  "main": 5,
   "lanes": 2,
-  "total": 6,
-  "at": "1:02 AM",
+  "total": 7,
+  "at": "1:05 AM",
   "why": "",
-  "at_iso": "2026-11-27T06:02:00+00:00",
+  "at_iso": "2026-11-27T06:05:00+00:00",
   "started": "12:15 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 4, started 12:15 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 1:02 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 5, started 12:15 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 1:05 AM ET</p></section>"
  }
 }

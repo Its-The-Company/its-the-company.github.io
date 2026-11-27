@@ -61,28 +61,29 @@ Behind it: examples are ordinary text files that ship inside the app. You can ed
 
 ## 2.5 The "more" menu
 
-The button with three dots opens a menu: Restart (starts Python afresh), Copy All (copies the console text), then, below a line, Acknowledgements and pywidget Pro.
+The button with three dots opens a menu: Restart (starts Python afresh), Copy All (copies the console text), on iPad Open in New Window, and, when the open file declares a widget, Activity (that widget's recent runs). Acknowledgements and PyWidget Pro are no longer in it; they are rows in Settings.
 
 <p class="guide-shots"><img src="app-guide-shots/console-more-menu-light.png" alt="The more menu, light" width="195" height="422" loading="lazy"> <img src="app-guide-shots/console-more-menu-dark.png" alt="The more menu, dark" width="195" height="422" loading="lazy"></p>
 
-This is a stopgap. The plan puts these in a Settings screen, which does not exist yet (section 5).
+The pictures are older than the menu and still show the two rows that moved to Settings.
 
-## 2.6 pywidget Pro
+## 2.6 PyWidget Pro
 
-The Pro screen explains what the one purchase unlocks: the premade widgets the build's flag file marks Pro, shown as chips: today only Habit tracker, on the Investors' list of November 18 (issue #324, option A). A box says what stays free: running any Python, the editor and console, projects and files, Shortcuts actions, the device features, your own widgets and the eleven free premades. A blue button ("Unlock Pro") buys it; the extra editor themes are decided as part of Pro but are not yet in the build or on this screen (T-0769, T-0272); a link ("Restore purchase", for people who bought before on another device or after reinstalling) brings an earlier purchase back.
+The Pro screen opens from the PyWidget Pro row in Settings. It explains what the one purchase unlocks, and it shows a row only for a part of Pro this copy of the app has (the build's flag file turns each part on). Today that is one row, for the premade widgets the flag file marks Pro, shown as chips: only Habit tracker, on the Investors' list of November 18 (issue #324, option A). The other twelve premades built today are free for everyone. On this build Habit tracker, without Pro, cannot be put on the Home Screen, its settings page does not open, a Shortcut cannot run it, and its Gallery page has no Get (the button that copies a premade's code into a new project), so the row says what buying opens: "Add the Pro premades. Put them on your Home Screen with your own settings, run them from Shortcuts, and get a copy of their code in Projects." A box headed "Always free" reads "Running any Python, internet from your scripts, the editor and console, projects and files, and Shortcuts actions." A button ("Unlock Pro" and the price) buys it, and a link ("Restore purchase", for people who bought before on another device or after reinstalling) brings an earlier purchase back. The extra editor themes are decided as part of Pro and their picker is built (T-0272), but the flag file keeps them off until the Investors approve them, so the screen has no themes row.
 
 <p class="guide-shots"><img src="app-guide-shots/pro-offer-light.png" alt="The Pro screen before buying, light" width="195" height="422" loading="lazy"> <img src="app-guide-shots/pro-offer-dark.png" alt="The Pro screen before buying, dark" width="195" height="422" loading="lazy"></p>
 
-After a purchase the screen says "Pro is active" with a green tick. Its line says the Pro premades are "open in the Gallery", and the Gallery does not exist yet (section 2.8). There is no button to it, because the app only shows that button where the Gallery can be reached:
+After a purchase the screen says "Pro is active" and "You can add the Pro premades to your Home Screen, run them from Shortcuts, and get a copy of their code in Projects.", with a button, "Open the Gallery", that leaves the Pro screen for the Gallery tab:
 
 <p class="guide-shots"><img src="app-guide-shots/pro-purchased-light.png" alt="The Pro screen after buying, light" width="195" height="422" loading="lazy"> <img src="app-guide-shots/pro-purchased-dark.png" alt="The Pro screen after buying, dark" width="195" height="422" loading="lazy"></p>
 
-Important: the price shown in the app today ($0.99) comes from a stand-in test price list. The Investors decided on 2026-10-30 (issue #87, option A, "approve 87 91"): Pro is one purchase at $14.99, with the 7 Pro premades and the 3 editor themes. That price is not in the app at HEAD; T-0769 puts it in after the alpha commit (2026-10-31 12:00 PM), and the price Apple charges is set in App Store Connect, which is not done. Behind it: the app asks Apple's own purchase system, which charges you and tells the app the result; the app unlocks Pro only when Apple's reply checks out as genuine and the purchase has not been refunded. In this build, the purchase works only against the test file; the real store listing does not exist until the Investors' Apple accounts are ready (membership due Day 7, 2026-10-28; Paid Apps Agreement Day 12, 2026-11-02).
+The four pictures above are older than these words; they show an earlier draft of the screen and are retaken with the next set of app pictures.
 
-About the Pro words, and why they are not changed now. Every word on the Pro screen is a draft that still needs the Investors' approval (the screen's word file says so on its first line). The style guide approved the app's two looks, not the Pro screen beyond its shared colours and type, so the Pro screen's look and words go to the Investors as one request, with pictures, before anything is sent to Apple (task T-0625: Maren drafts, Ines posts). "Gallery" itself is not new: it is the name of the premade <span title="The App Store results a buyer sees for a search phrase. The top 10 is the first ten, dated the day we read them.">shelf</span> in the approved mockups, so using it needs no new approval. Renaming it would be a new decision and would go in that request. The two sentences that run ahead of the build:
+What changes next. Under the Investors' rule of November 17 (issue #41), every premade will work for everyone, anyone will set its inputs, and only changing a Pro premade's design, layout or code will need Pro (T-5654). When that lands nothing is locked, and the screen switches by itself to "Edit the Pro premades. Change their layout and design, or open their code and make your own version.", the free box adds "every premade with your own settings", and the line after a purchase becomes "You can edit every premade." No words change by hand.
 
-- "The Pro premades are open in the Gallery" is true only once the Gallery is built (T-0191; not at HEAD, planned Days 16 to 20). The alpha on Day 10 is an internal test build, so the line stays for it. If the Gallery is moved to version 1.1 at its check (freeze row F6, 2 November), the line changes to one that does not name it, before the freeze. That is task T-0624, for Maren and Idris.
-- "Put every premade on your Home Screen" is true once a tap puts a widget on the Home Screen (T-0512, built 2026-10-29: the app now writes a placed Python widget's picture itself; what remains is T-0684) and Pro premades can be placed and locked again after a refund (T-0051). If Pro premades are cut from 1.0, the Pro screen drops this headline by itself, because it only shows the parts of Pro that the build switches on.
+The price on the screen comes from the App Store. In this build that is the test price list, set to $14.99, the price the Investors decided on 2026-10-30 (issue #87, option A); the price Apple charges is set in App Store Connect, which is the Investors' to do. Behind it: the app asks Apple's own purchase system, which charges you and tells the app the result; the app unlocks Pro only when Apple's reply checks out as genuine and the purchase has not been refunded. In this build, the purchase works only against the test file.
+
+About the Pro words. Every word on the Pro screen is a draft that still needs the Investors' approval (the screen's word file says so on its first line). They are written once, in the design script, and copied into the app by a script, so the design sheets and the app say the same thing. A check reads every string and refuses a countdown, a number, an urgency word, and a buy button that does not show its price. How the screen picks its words is on the App page, under Purchases (pywidget/docs/how-it-works/purchases.md).
 
 ## 2.7 Acknowledgements
 
@@ -98,12 +99,10 @@ Behind it: the list is produced automatically from the company's record of every
 
 ## 2.8 Screens not built yet
 
-These have no picture because the screens do not exist. Each is marked in section 5 with its task and date.
+These have no picture because the screens do not exist. Each is marked in section 5 with its task and date. The Gallery (thirteen premades with live previews; Habit tracker, the one Pro premade, previewed without Pro) and Settings are built now; their own sections of this tour are still to be written.
 
 - **Projects and Files**: folders of scripts, scripts that import each other, import and export of .py files and zips, opening a folder from the Files app. Task T-0355.
-- **The premade gallery**: a shelf of the 12 premade widgets with live previews, where the free ones can be added and Pro ones are previewed. T-0191.
 - **Widget preview beside the editor**: runs the script you are writing as a widget in every size. T-0192.
-- **Settings**: Acknowledgements, Pro and (only if the Investors approve) an editor theme picker will live here. Specified; T-0042 and T-0272.
 - **Pop-up questions from scripts**: alerts, text and number questions, forms, lists, a short toast message. T-0447.
 - **The full-screen run screen and Home Screen scripts**: turn a script into an icon on the Home Screen that runs it full screen. T-0449 (the design for it exists).
 - **Placing a widget from a tap**: see section 5, task T-0512, the most urgent open task.

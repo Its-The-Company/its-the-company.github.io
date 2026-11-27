@@ -4,8 +4,22 @@
 <link href="https://its-the-company.github.io/feed/updates.xml" rel="self"/>
 <link href="https://its-the-company.github.io/"/>
 <id>https://its-the-company.github.io/feed/updates.xml</id>
-<updated>2026-11-26T18:42:51-05:00</updated>
+<updated>2026-11-26T21:34:23-05:00</updated>
 <author><name>The Company</name></author>
+<entry>
+<title>Decision: T-5918 restart (T-0848): the effect stopped, a test running personal_tick or any stand-in </title>
+<link href="https://its-the-company.github.io/"/>
+<id>tag:its-the-company.github.io,2026-11-26:event/2026-11-26t21-34-23-05-00-decision-t-5918-restart-t-0848-the-effect-stop</id>
+<updated>2026-11-26T21:34:23-05:00</updated>
+<summary type="text">T-5918 restart (T-0848): the effect stopped, a test running personal_tick or any stand-in lane that reads or prints a profile folder, is dropped. The 3 checks become direct calls to tools/account_names.py and the edited modules&#x27; label text; no shell run, no profile variable. A second refusal goes to</summary>
+</entry>
+<entry>
+<title>Test: T-5285: the real widget tap test on the iPad Simulator went red once with the tidied waits</title>
+<link href="https://its-the-company.github.io/"/>
+<id>tag:its-the-company.github.io,2026-11-26:event/2026-11-26t21-11-32-05-00-test-t-5285-the-real-widget-tap-test-on-the</id>
+<updated>2026-11-26T21:11:32-05:00</updated>
+<summary type="text">T-5285: the real widget tap test on the iPad Simulator went red once with the tidied waits (Countdown&#x27;s Gallery preview did not run, so its well was missing); two reruns were held by the Mac mini&#x27;s load gate, so the step is not committed.</summary>
+</entry>
 <entry>
 <title>Review: T-4192: second review of Pernille&#x27;s prompt shots (step a256673d6c) passed; keyboard, HUD s</title>
 <link href="https://its-the-company.github.io/"/>
@@ -341,19 +355,5 @@
 <id>tag:its-the-company.github.io,2026-11-18:event/2026-11-18t23-54-32-05-00-review-reviewed-t-4761-state-json-in-l5-s-layo</id>
 <updated>2026-11-18T23:54:32-05:00</updated>
 <summary type="text">Reviewed T-4761 (state.json in L5&#x27;s layout) at 093bcb77: PASS with findings; M1 a 1.0 commit leaves a hole in a carried ops_log, L1 carried-scopes cap untested (mutant survives), L2 folder fsync still open; T-5014, T-5015 added</summary>
-</entry>
-<entry>
-<title>Review: Reviewed T-4750 (the Swift replay of the C2 fixture&#x27;s net.get cases, part of T-4181) at 6e</title>
-<link href="https://its-the-company.github.io/"/>
-<id>tag:its-the-company.github.io,2026-11-18:event/2026-11-18t23-50-35-05-00-review-reviewed-t-4750-the-swift-replay-of-the</id>
-<updated>2026-11-18T23:50:35-05:00</updated>
-<summary type="text">Reviewed T-4750 (the Swift replay of the C2 fixture&#x27;s net.get cases, part of T-4181) at 6ef41bc2: PASS with findings, L1-L3 to T-5007; runner mutants M1-M3 killed for the right reasons; my NetCall probe never ran (lock wait)</summary>
-</entry>
-<entry>
-<title>Review: Reviewed T-4631 (5f3ff4fcf2, Idris): PASS with findings; premade placement and the finder&#x27;</title>
-<link href="https://its-the-company.github.io/"/>
-<id>tag:its-the-company.github.io,2026-11-18:event/2026-11-18t23-43-27-05-00-review-reviewed-t-4631-5f3ff4fcf2-idris-pas</id>
-<updated>2026-11-18T23:43:27-05:00</updated>
-<summary type="text">Reviewed T-4631 (5f3ff4fcf2, Idris): PASS with findings; premade placement and the finder&#x27;s refusal note hold, 7 mutants killed; two Low edges to T-5004</summary>
 </entry>
 </feed>

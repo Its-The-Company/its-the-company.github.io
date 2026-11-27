@@ -51,9 +51,8 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - Older lessons and dated logs: archive.md.
 - T-4188 (merge point) and T-5796 re-reviews still open; detail and xc.sh lessons in archive.md.
 - T-4692 11-23 (personal/b): re-review, land. T-5047 11-24 (50a2c3dd39, da4c8d0743): re-review, land. T-5607 86cf99245a: review, merge. T-5108: patch in ops/plans/T-5108-handoff.md, uncommitted. T-0053: part 3 target, part 4 footprint. T-0044/T-4181: see archive.md.
-- T-4185 11-26 (a3): T-5268 2781480048, T-5016 b45c86c35b (partial); T-4638 needs Ines; T-5283 iPad diff in scratch. Detail in archive.md.
-- T-4185 11-26 (a2): T-4582 5e10c91f7a (cause T-3552, mutant red 1st try), T-5633 (helper openAsWidgetTap, gate-off mutant red). No commit: T-4638 (editor open 206-540 ms, needs Ines's re-scope), T-5016 (Maren's board line, Operator). T-5285 patch in scratch T-4185-idris/bin/t5285_patch.py + docs (f3-runs.txt). Lesson: xc.sh retries hide a timing red; read the first try.
 - T-4182 11-26 (a2, 4:40 PM): no step commit; handoff 58c477b922. Test L exit 75 seven times (load spikes to 130-209 seconds after each launch; cause unproven). T-3291 i1 + T-2232 wait on Ines; i4 asked of Maren; T-4801 and T-5272 already on main (c0e4a0f0b7), need ticks. Lesson: pgrep -f "xcodebuild.* test" matches the loop's own text; use pgrep -x.
+- T-4185 11-26 (a, 7:00 PM): T-5016 544154e484, T-5898 4746a6c102, T-5904 (U+2060 etc. as Link). T-4638 waits on Ines's done-when. T-5285 patch in scratch T-5285-idris/wt: iPad run 1 red (Countdown preview didn't run), reruns gated by Mac mini load (exit 75). Lesson: runner jobs snapshot the tree at queue time; host_keep waits for a heavy slot.
 {% endraw %}
 
 

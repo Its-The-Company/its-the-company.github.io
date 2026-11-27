@@ -397,7 +397,7 @@ ops/plans/app-features.md names it.
 |---|---|---|---|
 | 1 | Decide each premade list again for the six launchers: the Gallery shelf and its free shelf (catalog.json), the Pro tag (pro-flags.json, `ProGates`), and a Gallery page (where a tap outside the app boxes goes). s11b's table is the starting point; each row's "No" is changed or kept on purpose, and the tests that add the six as an exception (s11b's last paragraph) are changed with it. | Idris (T-4185) | this table; the release step's own board line when #192 passes |
 | 2 | Delete `LauncherPremade` in the same commit that moves the six into pro-flags.json. Otherwise `order + LauncherPremade.names` lists each launcher twice in Edit Widget (review t4185 N11; only the launcher-build half of LauncherPickerTests would see 12 against 6). Keep the ids `launcher-<name>` (N10). | Idris (T-4185) | this table |
-| 3 | Answer where a tap outside a launcher's app boxes goes: the Gallery's root, as now (`GalleryView.show(_:)` finds no page and opens nothing; `GalleryPushTests.testAnUnknownPremadeNameLeavesTheGalleryAtItsRoot` pins it), or Launcher Apps in Settings. | Maren | her own board line (not yet written: the 2026-11-26 add was refused, so the Operator places it) |
+| 3 | Answer where a tap outside a launcher's app boxes goes: the Gallery's root, as now (`GalleryView.show(_:)` finds no page and opens nothing; `GalleryPushTests.testAnUnknownPremadeNameLeavesTheGalleryAtItsRoot` pins it), or Launcher Apps in Settings. | Maren | her own board line, T-5908 ("Say where a tap outside a launcher's app boxes goes"); her answer and its reason go in this row |
 
 </div>
 

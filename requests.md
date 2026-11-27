@@ -4,7 +4,7 @@ title: "Issues"
 section: "requests"
 permalink: "/issues/"
 issues: "3"
-issues_at: "8:47 PM ET, Nov 26"
+issues_at: "9:47 PM ET, Nov 26"
 ---
 
 # Issues
@@ -15,10 +15,10 @@ issues_at: "8:47 PM ET, Nov 26"
 <p class="lead">3 open.</p>
 
 <p class="meta" id="needs-anon">Save your GitHub token (<a href="{{ '/connect.html' | relative_url }}">Connect</a>) to answer on each issue's page.</p>
-<div id="needs-root" data-repo="Its-The-Company/itsthecompany" data-view="{{ '/issues/view/' | relative_url }}" data-named="13 19 29 32 33 36 38 41 42 51 53 54 55 56 57 58 59 60" data-props="374" data-skip="39 41 325" data-rest="0"></div>
+<div id="needs-root" data-repo="Its-The-Company/itsthecompany" data-view="{{ '/issues/view/' | relative_url }}" data-named="13 19 29 32 33 36 38 41 42 51 53 54 55 56 57 58 59 60" data-props="" data-skip="39 41 325" data-rest="0"></div>
 <script>try{var d=document.documentElement,t=sessionStorage.getItem('company-chat-token')||localStorage.getItem('company-chat-token');if(t){d.classList.add('iq-wait');setTimeout(function(){d.classList.remove('iq-wait')},1e4)}}catch(e){}</script>
 
-<ul class="iq-list" data-group="open"><li class="ny iq-row" data-nums="374" id="i374"><span class="iq-dot off"></span><a class="iq-a" href="{{ '/issues/view/' | relative_url }}#374"><b class="iq-t">Proposal: allow the one internal TestFlight upload command (#363)</b><span class="iq-m"><span class="tag proposal">Proposal</span><span class="iq-num ref">#374</span></span></a><span class="iq-due"></span></li><li class="ny iq-row" data-nums="363" id="i363"><span class="iq-dot off"></span><a class="iq-a" href="{{ '/issues/view/' | relative_url }}#363"><b class="iq-t">Action: register the location widget's ID so the phone build can go up</b><span class="iq-d">Register the location widget's ID for the phone build?</span><span class="iq-m"><span class="tag urgent">Urgent</span><span class="iq-num ref">#363</span></span></a><span class="iq-due"></span></li><li class="ny iq-row" data-nums="90" id="i90"><span class="iq-dot off"></span><a class="iq-a" href="{{ '/issues/view/' | relative_url }}#90"><b class="iq-t">Decision: the app's public name, after one trademark search by you (by Mon <span class="nw">2026-11-02</span>, Day 12)</b><span class="iq-d">Which public name should the app have?</span><span class="iq-m"><span class="tag approval">Approval</span><span class="iq-num ref">#90</span></span></a><span class="iq-due"></span></li></ul>
+<ul class="iq-list" data-group="open"><li class="ny iq-row" data-nums="363" id="i363"><span class="iq-dot off"></span><a class="iq-a" href="{{ '/issues/view/' | relative_url }}#363"><b class="iq-t">Action: register the location widget's ID so the phone build can go up</b><span class="iq-d">Register the location widget's ID for the phone build?</span><span class="iq-m"><span class="tag urgent">Urgent</span><span class="iq-num ref">#363</span></span></a><span class="iq-due"></span></li><li class="ny iq-row" data-nums="375" id="i375"><span class="iq-dot off"></span><a class="iq-a" href="{{ '/issues/view/' | relative_url }}#375"><b class="iq-t">Dispatcher: personal account a stuck, taking no work</b><span class="iq-m"><span class="tag urgent">Urgent</span><span class="iq-num ref">#375</span></span></a><span class="iq-due"></span></li><li class="ny iq-row" data-nums="90" id="i90"><span class="iq-dot off"></span><a class="iq-a" href="{{ '/issues/view/' | relative_url }}#90"><b class="iq-t">Decision: the app's public name, after one trademark search by you (by Mon <span class="nw">2026-11-02</span>, Day 12)</b><span class="iq-d">Which public name should the app have?</span><span class="iq-m"><span class="tag approval">Approval</span><span class="iq-num ref">#90</span></span></a><span class="iq-due"></span></li></ul>
 
 <details class="ny-settled"><summary>Settled, nothing for you to do (1)</summary><p class="meta">Nothing for you to do. At 10:33 AM ET, at the end of a work session, the company's automatic file check put back the Claude Code settings file (.claude/settings.json). The change was the company's repair of this file after a web edit lost some of its characters, and pull request #207, merged at 2:53 PM ET, put the same text on GitHub.</p></details>
 

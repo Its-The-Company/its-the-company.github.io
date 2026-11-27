@@ -21,8 +21,8 @@ Status is taken from the task board on 2026-10-28; the dates were re-checked on 
 | What | What is missing | Task | Date |
 | --- | --- | --- | --- |
 | A tap puts a widget on the Home Screen | Built 2026-10-29 (T-0512, b0887819): placing a Python widget, changing what it shows, a tap on it, opening the app or Refresh Widgets makes the app run its script and write its picture. Left: the editor's save writes the widget's script and an unset Python widget has no script to run (T-0684, P0); the gallery's Add is T-0191 | T-0684 (P0) | 2026-11-02 |
-| Premade widgets | Code exists; 6 are due for the alpha, 12 by the freeze. Their pictures come from a test that is still being corrected. | T-0191, T-0511 | Day 10 to Day 21 (2026-11-11) |
-| Premade gallery | Not built | T-0191 | Days 16 to 20 (2026-11-06 to 2026-11-10) |
+| Premade widgets | Built: thirteen (twelve by the freeze, then the weather premade, T-4707). Their pictures come from a test that is still being corrected. | T-0191, T-0511 | Day 10 to Day 21 (2026-11-11) |
+| Premade gallery | Built: thirteen premades with live previews (part 2) | T-0191 | Days 16 to 20 (2026-11-06 to 2026-11-10) |
 | Widget preview beside the editor | Not built | T-0192 | Version 1.1 |
 | Projects and Files | Not built; floor: container projects and .py import and export, "open in place" to 1.1 if late | T-0355 | Freeze (Day 21) |
 | Pro placement and refund handling | Free users must not see Pro widgets placed; refunds must lock them again | T-0051 | Freeze |

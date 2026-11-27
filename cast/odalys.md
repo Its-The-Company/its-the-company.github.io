@@ -50,6 +50,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-5365 11-24: grep tests for sleep/elapsed FIRST (rule 1). Sleep->event in a "nothing written" check: event before `return` misses a late write.
 - T-5755 11-23: background runs die at 10 min unless given a timeout (land_xc_test under load). Old-vs-new proof: short copy (setup+section) in two git-archive dirs, ~2 min; rm -rf "$VAR" is refused, mkdir fresh.
 - T-4192 11-26: a UI shot of a prompt with a text field depends on the Simulator's minimized-keyboard state (T-0758) and on which tests ran first; the class idiom is raiseOnScreenKeyboard before save. Read a picture test for what the picture shows, not only pass/fail.
+- T-5917 11-26: a red in a suite run is mine only if it is green on HEAD; rerun just the reds from a git-archive copy of HEAD. rm of a $(...) path is refused: use the literal path.
 {% endraw %}
 
 

@@ -2,7 +2,7 @@
 layout: "default"
 title: "App guide, part 8: Lock Screen widgets"
 section: "documents"
-description: "Lock Screen widgets: what Apple provides, what pywidget adds, limits, and all twelve premade widgets."
+description: "Lock Screen widgets: what Apple provides, what pywidget adds, limits, and the premade widgets (twelve of the thirteen pictured)."
 ---
 <div class="crumbs" role="navigation" aria-label="Back"><a class="back" href="{{ '/documents/pywidget/app-guide/' | relative_url }}">← App Guide</a><a href="{{ '/documents/pywidget/app-guide-08-lock-screen.html' | relative_url }}" rel="bookmark">Permanent link</a></div>
 <div class="page-head"><div class="kicker"><span class="kind grey">Guide</span><span>Day 9 · Fri Oct 30</span><span><code>pywidget/app-guide-08-lock-screen.md</code></span></div><h1>App guide, part 8: Lock Screen widgets</h1><div class="byline"><img class="avatar" src="{{ '/assets/portraits/maren.svg' | relative_url }}" alt="Maren" title="Maren"><span>By <a href="{{ '/cast/maren.html' | relative_url }}">Maren</a>, Product and visual designer</span></div><p class="meta">Mockup screens are drawn; they go public after creative approval.</p></div>
@@ -39,16 +39,16 @@ Apple draws them **without colour**. The system turns the widget into shades of 
 - iOS rations refreshes, as on the Home Screen: Apple says a widget people view often typically gets reloads roughly every 15 to 60 minutes, though it varies, so a widget shows its last result and when it was made, not live data (section 4.1). Clocks and timers are the exception.
 - Nobody has yet seen them on a real iPhone. Device testing waits on the signing request (issue #100).
 
-## 8.4 All twelve premade widgets
+## 8.4 The premade widgets
 
-All twelve premade widgets offer at least one Lock Screen size (the `FAMILIES` line in each `pywidget/widgets/premade/*.py`). A cell says "not offered" where that premade does not list the size. There are 24 pictures.
+All thirteen premade widgets offer at least one Lock Screen size (the `FAMILIES` line in each `pywidget/widgets/premade/*.py`). The table shows twelve: the weather premade (Next 24 hours, rectangular and inline; T-4707) was built after these pictures were made and has no picture here yet. A cell says "not offered" where that premade does not list the size. There are 24 pictures.
 
 **What these pictures are (Commandment 33).** Each is a **Simulator render**: the app's own SwiftUI renderer, the one the widget extension uses, run in a test on the iPhone Simulator and saved as a PNG. They are not screenshots of a Lock Screen, and not photos of a phone. What is stand-in: the grey background (real Lock Screens show the wallpaper), the sizes (72 by 72 points, 160 by 72, 210 by 20; real sizes differ by iPhone model), and the data, which is each premade's saved example from `pywidget/tests/widgets/fixtures/premade-trees/` with a fixed clock of 31 October 2026, 9:41 AM. The render uses the "vibrant" mode, which is how Apple tints Lock Screen widgets, shown here in white on grey because the real tint comes from the wallpaper. Countdown and Day progress timers read the Mac's clock, not the fixed one, so their time text can differ from run to run. Each picture is saved at twice the size.
 
 The code that made them is the test `testLockScreenGuideRenders` in `pywidget/ios/Tests/PremadeSnapshotTests.swift`. It calls no image-making AI. To remake them: `tools/xc.sh -project PyWidget.xcodeproj -scheme PyWidget -destination "platform=iOS Simulator,name=iPhone 17e" test -only-testing:PyWidgetTests/PremadeSnapshotTests/testLockScreenGuideRenders`, run in `pywidget/ios/`. The pictures are in `pywidget/app-guide-shots/lockscreen/`.
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 1: 8.4 All twelve premade widgets, scrolls sideways" style="--tw:502px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 1: 8.4 The premade widgets, scrolls sideways" style="--tw:502px" markdown="1">
 
 | Premade | Circular | Rectangular | Inline |
 |---|---|---|---|

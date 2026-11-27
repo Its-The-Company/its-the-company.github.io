@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-27T01:14:01.231075+00:00",
+ "at": "2026-11-27T01:17:06.559034+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -72,7 +72,7 @@
    "task": "[build] T-5919 Home shows sessions",
    "model": "opus",
    "started": "2026-11-27T00:20:00.377Z",
-   "seconds": 3240,
+   "seconds": 3426,
    "finished": null
   },
   {
@@ -80,7 +80,7 @@
    "task": "[build] T-5894 tile accessibility fix",
    "model": "opus",
    "started": "2026-11-27T00:20:58.552Z",
-   "seconds": 3182,
+   "seconds": 3368,
    "finished": null
   },
   {
@@ -88,7 +88,7 @@
    "task": "[build] T-4190 review fixes",
    "model": "opus",
    "started": "2026-11-27T00:22:00.561Z",
-   "seconds": 3120,
+   "seconds": 3305,
    "finished": null
   },
   {
@@ -96,11 +96,19 @@
    "task": "[build] T-5917 release landed claims",
    "model": "opus",
    "started": "2026-11-27T00:20:08.005Z",
-   "seconds": 3233,
+   "seconds": 3418,
+   "finished": null
+  },
+  {
+   "name": "idris",
+   "task": "[build] T-4478 Pages signed links",
+   "model": "opus",
+   "started": "2026-11-27T01:15:29.170Z",
+   "seconds": 97,
    "finished": null
   }
  ],
- "who": "Maren x2, Idris, Odalys",
+ "who": "Maren x2, Idris x2, Odalys",
  "recent": [
   {
    "name": "pernille",
@@ -138,24 +146,24 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 309,
+  "runnable_count": 307,
   "blocked_count": 0
  },
  "meter": {
   "five_hour": {
-   "pct": 34.0,
+   "pct": 35.0,
    "resets_at": "2026-11-26T21:30:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-26T20:06:28.096920-05:00",
+   "read_at": "2026-11-26T20:15:12.382085-05:00",
    "source": "live",
-   "left": 66.0,
+   "left": 65.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 13.0,
    "resets_at": "2026-11-29T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-26T20:06:28.096920-05:00",
+   "read_at": "2026-11-26T20:15:12.382085-05:00",
    "source": "live",
    "left": 87.0,
    "left_words": "of your weekly allowance left"
@@ -167,7 +175,7 @@
    "read_at": "2026-11-26T19:48:07.582718-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-26T20:06:28.096920-05:00"
+  "read_at": "2026-11-26T20:15:12.382085-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -187,7 +195,7 @@
   "week_pct": 130.42,
   "usage_pct": 56.2,
   "work_pct": 98.8,
-  "read_at": "2026-11-27T01:14:00+00:00",
+  "read_at": "2026-11-27T01:17:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -230,14 +238,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-26T20:13:00-05:00",
+   "at": "2026-11-26T20:15:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-26T20:14:00-05:00",
+  "at": "2026-11-26T20:17:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -339,6 +347,15 @@
     "at": "2026-11-27T00:22:00.561Z",
     "o": "c",
     "task": "T-4190"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "A project shows a full-screen Page that answers taps",
+    "m": "opus",
+    "at": "2026-11-27T01:15:29.170Z",
+    "o": "c",
+    "task": "T-4478"
    }
   ],
   "src": "plan",
@@ -417,29 +434,38 @@
   "done": [
    {
     "w": "Idris",
+    "t": "A project's file that says what it makes, what it uses and where it came from can now be read...",
+    "at": "2026-11-26T20:14:00-05:00"
+   },
+   {
+    "w": "Idris",
+    "t": "A widget can now carry what a tap on it, and on each of its buttons, does in its project's file;...",
+    "at": "2026-11-26T20:14:00-05:00"
+   },
+   {
+    "w": "Idris",
     "t": "A code note and the app's how-it-works page now say correctly that a widget run that never...",
     "at": "2026-11-26T18:17:00-05:00"
-   },
-   {
-    "w": "Idris",
-    "t": "The Pro screen's automated tests now pass every run in any order. The test that restores a...",
-    "at": "2026-11-26T18:08:00-05:00"
-   },
-   {
-    "w": "Idris",
-    "t": "Making someone else's project your own no longer lets one of its widgets take over a widget of...",
-    "at": "2026-11-26T17:41:00-05:00"
    }
   ],
   "count": {
-   "next": 309,
+   "next": 307,
    "wait": 0,
    "blocked": 0,
    "you": 0
   },
   "fin": {
-   "n": 0,
-   "rows": []
+   "n": 2,
+   "rows": [
+    [
+     "T-5910",
+     "Read and write the format 2..."
+    ],
+    [
+     "T-4549",
+     "Store tap and button actions..."
+    ]
+   ]
   }
  },
  "qr": [
@@ -481,16 +507,11 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-27T01:14:01Z",
+  "at": "2026-11-27T01:17:06Z",
   "s": {
-   "T-4476": [
+   "T-4478": [
     "mergetest",
     "iPhone tests on the MacBook",
-    null
-   ],
-   "T-5894": [
-    "testing",
-    "Mac Mini \u00b7 test",
     null
    ],
    "T-5919": [
@@ -519,24 +540,24 @@
    ]
   },
   "nm": {
-   "T-4476": "Projects get one file, one ID and guarded outside code",
-   "T-5894": "Make the Sun page link test pass in any order",
+   "T-4478": "A project shows a full-screen Page that answers taps",
    "T-5919": "Show the three-session system on Home",
    "T-5917": "Release a lane's claim when its work merges",
    "T-4190": "Settings and Pro: buy, restore, themes",
    "T-4185": "Launcher widgets open the apps a person chose"
   },
   "wk": {
-   "T-4476": "Idris",
-   "T-5894": "Idris",
+   "T-4478": "Idris",
    "T-5919": "Maren",
    "T-5917": "Odalys",
    "T-4190": "Idris",
-   "T-4185": "Idris"
+   "T-4185": "Idris",
+   "T-5910": "Idris",
+   "T-4549": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-27T01:14:01Z",
+  "at": "2026-11-27T01:17:06Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -554,7 +575,7 @@
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1119
+    "parked": 1122
    },
    "cur": [],
    "ld": [
@@ -564,8 +585,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-27T01:14:02Z",
-    "ld": 2.67,
+    "at": "2026-11-27T01:16:37Z",
+    "ld": 2.1,
     "c": 8,
     "sb": 1,
     "dk": [
@@ -581,12 +602,12 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-27T01:04:25Z",
-    "ld": 0.72,
+    "at": "2026-11-27T01:16:08Z",
+    "ld": 0.38,
     "c": 12,
     "sb": 0,
     "dk": [
-     373.2,
+     373.0,
      926.4
     ],
     "sn": []
@@ -601,7 +622,7 @@
    "parked": 6,
    "open": true,
    "mq": false,
-   "counted": "2026-11-27T01:01:30+00:00",
+   "counted": "2026-11-27T01:15:22+00:00",
    "by": {
     "app": {
      "n": 5,
@@ -619,11 +640,11 @@
      "open": true
     }
    },
-   "at": "2026-11-27T01:14:01+00:00"
+   "at": "2026-11-27T01:17:06+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-27T01:13:54+00:00"
+   "at": "2026-11-27T01:17:00+00:00"
   }
  },
  "operators": [
@@ -656,19 +677,20 @@
   "queue_text",
   "recent",
   "task_done",
+  "fin_short",
   "task_title",
   "done_text",
   "lane_task",
   "task_next"
  ],
  "agents_now": {
-  "main": 4,
+  "main": 5,
   "lanes": 1,
-  "total": 5,
-  "at": "8:14 PM",
+  "total": 6,
+  "at": "8:17 PM",
   "why": "",
-  "at_iso": "2026-11-27T01:14:00+00:00",
+  "at_iso": "2026-11-27T01:17:00+00:00",
   "started": "7:15 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 4, started 7:15 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 8:14 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 5, started 7:15 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 8:17 PM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-27T14:25:30.017256+00:00",
+ "at": "2026-11-27T14:28:30.782449+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -62,7 +62,7 @@
    "task": "[build] T-5795 Sky place zone",
    "model": "opus",
    "started": "2026-11-27T12:52:47.951Z",
-   "seconds": 5562,
+   "seconds": 5742,
    "finished": null
   },
   {
@@ -70,7 +70,7 @@
    "task": "[build] T-4476 Foundations batch",
    "model": "opus",
    "started": "2026-11-27T13:30:38.183Z",
-   "seconds": 3291,
+   "seconds": 3472,
    "finished": null
   },
   {
@@ -78,7 +78,7 @@
    "task": "[build] T-4190 batch three",
    "model": "opus",
    "started": "2026-11-27T14:19:06.517Z",
-   "seconds": 383,
+   "seconds": 564,
    "finished": null
   }
  ],
@@ -125,19 +125,19 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 20.0,
+   "pct": 22.0,
    "resets_at": "2026-11-27T12:30:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-27T09:20:36.104734-05:00",
+   "read_at": "2026-11-27T09:28:26.836655-05:00",
    "source": "live",
-   "left": 80.0,
+   "left": 78.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 30.0,
    "resets_at": "2026-11-29T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-27T09:20:36.104734-05:00",
+   "read_at": "2026-11-27T09:28:26.836655-05:00",
    "source": "live",
    "left": 70.0,
    "left_words": "of your weekly allowance left"
@@ -149,7 +149,7 @@
    "read_at": "2026-11-27T09:15:27.448483-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-27T09:20:36.104734-05:00"
+  "read_at": "2026-11-27T09:28:26.836655-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -169,7 +169,7 @@
   "week_pct": 34.98,
   "usage_pct": 53.8,
   "work_pct": 98.9,
-  "read_at": "2026-11-27T14:25:00+00:00",
+  "read_at": "2026-11-27T14:28:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -224,14 +224,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-27T09:21:00-05:00",
+   "at": "2026-11-27T09:28:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 4,
-  "at": "2026-11-27T09:25:00-05:00",
+  "at": "2026-11-27T09:28:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -491,11 +491,16 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-27T14:25:30Z",
+  "at": "2026-11-27T14:28:24Z",
   "s": {
    "T-4552": [
     "mergetest",
     "iPhone tests on the MacBook",
+    null
+   ],
+   "T-4190": [
+    "testing",
+    "Mac Mini \u00b7 test",
     null
    ],
    "T-4181": [
@@ -513,11 +518,13 @@
   },
   "nm": {
    "T-4552": "Route a widget tap by its chosen action",
+   "T-4190": "Settings and Pro: buy, restore, themes",
    "T-4181": "Widgets refresh on their own and by a tap",
    "T-4185": "Launcher widgets open the apps a person chose"
   },
   "wk": {
    "T-4552": "Idris",
+   "T-4190": "Idris",
    "T-4181": "Idris",
    "T-4185": "Idris",
    "T-2040": "Idris",
@@ -535,7 +542,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-27T14:25:30Z",
+  "at": "2026-11-27T14:28:24Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -553,7 +560,7 @@
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1103
+    "parked": 1106
    },
    "cur": [],
    "ld": [
@@ -563,12 +570,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-27T14:25:30Z",
-    "ld": 1.23,
+    "at": "2026-11-27T14:27:36Z",
+    "ld": 1.2,
     "c": 8,
     "sb": 1,
     "dk": [
-     16.3,
+     16.4,
      228.3
     ],
     "ss": [
@@ -623,11 +630,11 @@
      "open": true
     }
    },
-   "at": "2026-11-27T14:25:30+00:00"
+   "at": "2026-11-27T14:28:30+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-27T14:25:18+00:00"
+   "at": "2026-11-27T14:28:24+00:00"
   }
  },
  "operators": [
@@ -680,10 +687,10 @@
   "main": 3,
   "lanes": 2,
   "total": 5,
-  "at": "9:25 AM",
+  "at": "9:28 AM",
   "why": "",
-  "at_iso": "2026-11-27T14:25:00+00:00",
+  "at_iso": "2026-11-27T14:28:00+00:00",
   "started": "12:15 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 3, started 12:15 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 9:25 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 3, started 12:15 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 9:28 AM ET</p></section>"
  }
 }

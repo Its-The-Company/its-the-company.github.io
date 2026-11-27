@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-27T12:35:04.227680+00:00",
+ "at": "2026-11-27T12:38:08.799360+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -62,7 +62,7 @@
    "task": "[build] T-4190 paywall batch two",
    "model": "opus",
    "started": "2026-11-27T06:04:32.961Z",
-   "seconds": 23431,
+   "seconds": 23615,
    "finished": null
   },
   {
@@ -70,7 +70,7 @@
    "task": "[build] T-4478 Pages batch two",
    "model": "opus",
    "started": "2026-11-27T11:08:58.798Z",
-   "seconds": 5165,
+   "seconds": 5350,
    "finished": null
   },
   {
@@ -78,7 +78,7 @@
    "task": "[design] T-5936 Sky time zone",
    "model": "opus",
    "started": "2026-11-27T11:56:30.374Z",
-   "seconds": 2313,
+   "seconds": 2498,
    "finished": null
   }
  ],
@@ -120,7 +120,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 286,
+  "runnable_count": 283,
   "blocked_count": 0
  },
  "meter": {
@@ -169,7 +169,7 @@
   "week_pct": 32.65,
   "usage_pct": 53.8,
   "work_pct": 98.9,
-  "read_at": "2026-11-27T12:35:00+00:00",
+  "read_at": "2026-11-27T12:38:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -203,7 +203,7 @@
     "t": "Python in the app: smaller bundle, installable packages",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-27T06:59:07-05:00",
+    "at": "2026-11-27T07:37:44-05:00",
     "n": "Jeremy",
     "src": "plan-b"
    }
@@ -243,7 +243,7 @@
  "lock_in": {
   "on": true,
   "pool": 4,
-  "at": "2026-11-27T07:35:00-05:00",
+  "at": "2026-11-27T07:38:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -413,30 +413,42 @@
   ],
   "done": [
    {
-    "w": "Pernille",
-    "t": "The Sky widget's Lock Screen gauge now fills from the last sunrise or sunset instead of sitting...",
-    "at": "2026-11-27T06:56:00-05:00"
+    "w": "Idris",
+    "t": "the build's Python size check no longer fails at random when leftover cache files from an...",
+    "at": "2026-11-27T07:36:00-05:00"
    },
    {
     "w": "Idris",
-    "t": "When a widget's data took too long, its run log now marks that against the first request's own",
-    "at": "2026-11-27T06:25:00-05:00"
+    "t": "the research note's launch-time comparison now sets like against like, so it no longer makes...",
+    "at": "2026-11-27T07:36:00-05:00"
    },
    {
     "w": "Idris",
-    "t": "A widget link that runs a function now carries a signature only this phone can make, so a web...",
-    "at": "2026-11-27T06:08:00-05:00"
+    "t": "you can no longer start a second project import while one is still running, and the Importing...",
+    "at": "2026-11-27T07:36:00-05:00"
    }
   ],
   "count": {
-   "next": 286,
+   "next": 283,
    "wait": 0,
    "blocked": 0,
    "you": 0
   },
   "fin": {
-   "n": 17,
+   "n": 20,
    "rows": [
+    [
+     "T-0553",
+     "Find why a stdlib size check..."
+    ],
+    [
+     "T-5685",
+     "Compare spike launch times..."
+    ],
+    [
+     "T-5897",
+     "Stop a second project import..."
+    ],
     [
      "T-4708",
      "Rework Sunrise and sunset..."
@@ -448,18 +460,6 @@
     [
      "T-4553",
      "Sign the links that run a..."
-    ],
-    [
-     "T-5015",
-     "Make a widget state save..."
-    ],
-    [
-     "T-5285",
-     "Tidy the real widget tap..."
-    ],
-    [
-     "T-5921",
-     "Close the launcher store's..."
     ]
    ]
   }
@@ -503,7 +503,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-27T12:34:58Z",
+  "at": "2026-11-27T12:37:54Z",
   "s": {
    "T-0591": [
     "mergetest",
@@ -540,6 +540,9 @@
    "T-4181": "Idris",
    "T-4478": "Idris",
    "T-4185": "Idris",
+   "T-0553": "Idris",
+   "T-5685": "Idris",
+   "T-5897": "Idris",
    "T-4708": "Pernille",
    "T-4589": "Idris",
    "T-4553": "Idris",
@@ -548,14 +551,11 @@
    "T-5921": "Idris",
    "T-5925": "Maren",
    "T-5269": "Idris",
-   "T-5270": "Idris",
-   "T-5317": "Idris",
-   "T-5319": "Idris",
-   "T-5926": "Idris"
+   "T-5270": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-27T12:34:58Z",
+  "at": "2026-11-27T12:37:54Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -573,7 +573,7 @@
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1444
+    "parked": 1447
    },
    "cur": [],
    "ld": [
@@ -583,12 +583,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-27T12:34:47Z",
-    "ld": 1.25,
+    "at": "2026-11-27T12:37:56Z",
+    "ld": 1.74,
     "c": 8,
     "sb": 1,
     "dk": [
-     16.1,
+     18.4,
      228.3
     ],
     "ss": [
@@ -623,7 +623,7 @@
    "parked": 5,
    "open": true,
    "mq": false,
-   "counted": "2026-11-27T12:26:46+00:00",
+   "counted": "2026-11-27T12:37:04+00:00",
    "by": {
     "app": {
      "n": 3,
@@ -641,11 +641,11 @@
      "open": true
     }
    },
-   "at": "2026-11-27T12:35:04+00:00"
+   "at": "2026-11-27T12:38:08+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-27T12:34:51+00:00"
+   "at": "2026-11-27T12:38:01+00:00"
   }
  },
  "operators": [
@@ -683,7 +683,7 @@
    "m": "opus",
    "e": "high",
    "t": "Work session \u2013 1 task",
-   "at": "2026-11-27T06:59:06-05:00"
+   "at": "2026-11-27T07:37:43-05:00"
   }
  ],
  "reply": {
@@ -707,10 +707,10 @@
   "main": 3,
   "lanes": 3,
   "total": 6,
-  "at": "7:35 AM",
+  "at": "7:38 AM",
   "why": "",
-  "at_iso": "2026-11-27T12:35:00+00:00",
+  "at_iso": "2026-11-27T12:38:00+00:00",
   "started": "12:15 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 3, started 12:15 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 7:35 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 3, started 12:15 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 7:38 AM ET</p></section>"
  }
 }

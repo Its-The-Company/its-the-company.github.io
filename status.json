@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-27T03:13:17.599483+00:00",
+ "at": "2026-11-27T03:16:20.627976+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -72,7 +72,7 @@
    "task": "[build] T-4478 Pages tap links",
    "model": "opus",
    "started": "2026-11-27T02:29:24.979Z",
-   "seconds": 2632,
+   "seconds": 2815,
    "finished": null
   },
   {
@@ -80,15 +80,7 @@
    "task": "[build] T-4190 Settings Pro themes",
    "model": "opus",
    "started": "2026-11-27T02:29:37.630Z",
-   "seconds": 2619,
-   "finished": null
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-4183 Gallery premade tests",
-   "model": "opus",
-   "started": "2026-11-27T02:29:50.138Z",
-   "seconds": 2607,
+   "seconds": 2802,
    "finished": null
   },
   {
@@ -96,7 +88,7 @@
    "task": "[build] T-5919 Home three sessions",
    "model": "opus",
    "started": "2026-11-27T02:30:35.377Z",
-   "seconds": 2562,
+   "seconds": 2745,
    "finished": null
   },
   {
@@ -104,12 +96,28 @@
    "task": "[build] T-5918 account names finish",
    "model": "opus",
    "started": "2026-11-27T02:30:26.922Z",
-   "seconds": 2570,
+   "seconds": 2753,
+   "finished": null
+  },
+  {
+   "name": "idris",
+   "task": "[build] T-4183 Gallery next steps",
+   "model": "opus",
+   "started": "2026-11-27T03:15:01.097Z",
+   "seconds": 79,
    "finished": null
   }
  ],
  "who": "Idris x3, Maren, Odalys",
  "recent": [
+  {
+   "name": "idris",
+   "task": "[build] T-4183 Gallery premade tests",
+   "model": "opus",
+   "started": "2026-11-27T02:29:50.138Z",
+   "seconds": null,
+   "finished": "2026-11-27T03:13:56.996000+00:00"
+  },
   {
    "name": "ines",
    "task": "[review] T-5922 again",
@@ -133,37 +141,29 @@
    "started": "2026-11-27T02:59:59.044Z",
    "seconds": null,
    "finished": "2026-11-27T03:03:04.007000+00:00"
-  },
-  {
-   "name": "maren",
-   "task": "[build] T-5922 new looks as HTML",
-   "model": "opus",
-   "started": "2026-11-27T02:41:58.328Z",
-   "seconds": null,
-   "finished": "2026-11-27T02:59:47.312000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 305,
+  "runnable_count": 304,
   "blocked_count": 0
  },
  "meter": {
   "five_hour": {
-   "pct": 8.0,
+   "pct": 9.0,
    "resets_at": "2026-11-27T02:30:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-26T22:09:40.808694-05:00",
+   "read_at": "2026-11-26T22:14:42.437821-05:00",
    "source": "live",
-   "left": 92.0,
+   "left": 91.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 17.0,
    "resets_at": "2026-11-29T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-26T22:09:40.808694-05:00",
+   "read_at": "2026-11-26T22:14:42.437821-05:00",
    "source": "live",
    "left": 83.0,
    "left_words": "of your weekly allowance left"
@@ -175,7 +175,7 @@
    "read_at": "2026-11-26T21:56:16.685853-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-26T22:09:40.808694-05:00"
+  "read_at": "2026-11-26T22:14:42.437821-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -195,7 +195,7 @@
   "week_pct": 25.79,
   "usage_pct": 54.2,
   "work_pct": 98.8,
-  "read_at": "2026-11-27T03:13:00+00:00",
+  "read_at": "2026-11-27T03:16:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -262,14 +262,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-26T22:09:00-05:00",
+   "at": "2026-11-26T22:16:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 5,
-  "at": "2026-11-26T22:13:00-05:00",
+  "at": "2026-11-26T22:16:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -355,15 +355,6 @@
     "task": "T-4190"
    },
    {
-    "w": "Idris",
-    "k": "build",
-    "t": "The Gallery shows, previews and opens every premade",
-    "m": "opus",
-    "at": "2026-11-27T02:29:50.138Z",
-    "o": "c",
-    "task": "T-4183"
-   },
-   {
     "w": "Odalys",
     "k": "build",
     "t": "Name the accounts Evan's and Jeremy's everywhere",
@@ -380,6 +371,15 @@
     "at": "2026-11-27T02:30:35.377Z",
     "o": "c",
     "task": "T-5919"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "The Gallery shows, previews and opens every premade",
+    "m": "opus",
+    "at": "2026-11-27T03:15:01.097Z",
+    "o": "c",
+    "task": "T-4183"
    }
   ],
   "src": "plan",
@@ -457,6 +457,11 @@
   ],
   "done": [
    {
+    "w": "Pernille",
+    "t": "When a widget's script is changed, a refresh that began on the old script can no longer put an...",
+    "at": "2026-11-26T22:14:00-05:00"
+   },
+   {
     "w": "Idris",
     "t": "A widget link that starts the app now shows the countdown preview; the earlier blank was a real...",
     "at": "2026-11-26T21:39:00-05:00"
@@ -465,22 +470,21 @@
     "w": "Idris",
     "t": "The tests that tap a launcher link now share one way of opening it, which waits longer for the...",
     "at": "2026-11-26T21:39:00-05:00"
-   },
-   {
-    "w": "Idris",
-    "t": "Opening the Sun widget's settings from the widget no longer leaves Sun's previews spinning...",
-    "at": "2026-11-26T21:16:00-05:00"
    }
   ],
   "count": {
-   "next": 305,
+   "next": 304,
    "wait": 0,
    "blocked": 0,
    "you": 0
   },
   "fin": {
-   "n": 2,
+   "n": 3,
    "rows": [
+    [
+     "T-0976",
+     "Ignore a run that started..."
+    ],
     [
      "T-4582",
      "Run countdown's preview when..."
@@ -531,14 +535,9 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-27T03:12:58Z",
+  "at": "2026-11-27T03:16:12Z",
   "s": {
    "T-4192": [
-    "mergetest",
-    "Xcode checks on the MacBook, 1st to merge",
-    1795748158156
-   ],
-   "T-5269": [
     "mergetest",
     "iPhone tests on the MacBook",
     null
@@ -582,7 +581,6 @@
   },
   "nm": {
    "T-4192": "Python in the app: smaller bundle, installable packages",
-   "T-5269": "Start the premade page UI tests from known files",
    "T-4185": "Launcher widgets open the apps a person chose",
    "T-5919": "Show the three-session system on Home",
    "T-5918": "Name the accounts Evan's and Jeremy's everywhere",
@@ -592,22 +590,22 @@
   },
   "wk": {
    "T-4192": "Idris",
-   "T-5269": "Idris",
    "T-4185": "Idris",
    "T-5919": "Maren",
    "T-5918": "Odalys",
    "T-4182": "Idris",
    "T-4190": "Idris",
    "T-4181": "Idris",
+   "T-0976": "Idris",
    "T-4582": "Idris",
    "T-5633": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-27T03:12:58Z",
+  "at": "2026-11-27T03:16:12Z",
   "mq": {
    "n": {
-    "checking": 1,
+    "checking": 0,
     "inline": 0,
     "conflicted": 0,
     "failed": 0,
@@ -616,24 +614,15 @@
     "parked": 6
    },
    "m": {
-    "checking": 17,
+    "checking": null,
     "inline": null,
     "conflicted": null,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1238
+    "parked": 1241
    },
-   "cur": [
-    [
-     [
-      "T-4192"
-     ],
-     "iPhone app tests",
-     "MacBook",
-     17
-    ]
-   ],
+   "cur": [],
    "ld": [
     0,
     null
@@ -641,12 +630,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-27T03:12:31Z",
-    "ld": 2.47,
+    "at": "2026-11-27T03:16:13Z",
+    "ld": 2.25,
     "c": 8,
     "sb": 1,
     "dk": [
-     21.9,
+     19.5,
      228.3
     ],
     "ss": [
@@ -658,18 +647,18 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-27T03:09:45Z",
-    "ld": 39.37,
+    "at": "2026-11-27T03:14:18Z",
+    "ld": 39.35,
     "c": 12,
     "sb": 4,
     "dk": [
-     362.6,
+     361.8,
      926.4
     ],
     "sn": [
      "itsthecompany-runner",
      "itsthecompany-runner-2",
-     "itsthecompany-runner-5",
+     "itsthecompany-runner-3",
      "itsthecompany-runner-6"
     ]
    }
@@ -701,11 +690,11 @@
      "open": true
     }
    },
-   "at": "2026-11-27T03:13:17+00:00"
+   "at": "2026-11-27T03:16:20+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-27T03:13:11+00:00"
+   "at": "2026-11-27T03:16:05+00:00"
   }
  },
  "operators": [
@@ -754,6 +743,7 @@
  "trimmed": [
   "lane_next",
   "queue_text",
+  "recent",
   "task_done",
   "fin_short",
   "task_title",
@@ -765,10 +755,10 @@
   "main": 5,
   "lanes": 3,
   "total": 8,
-  "at": "10:13 PM",
+  "at": "10:16 PM",
   "why": "",
-  "at_iso": "2026-11-27T03:13:00+00:00",
+  "at_iso": "2026-11-27T03:16:00+00:00",
   "started": "9:24 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>8</b> agents running now</p><p class=\"an-sub\">Main session 5, started 9:24 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 10:13 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>8</b> agents running now</p><p class=\"an-sub\">Main session 5, started 9:24 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 10:16 PM ET</p></section>"
  }
 }

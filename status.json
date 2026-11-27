@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-27T11:24:49.018074+00:00",
+ "at": "2026-11-27T11:27:51.770167+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -62,7 +62,7 @@
    "task": "[build] T-4190 paywall batch two",
    "model": "opus",
    "started": "2026-11-27T06:04:32.961Z",
-   "seconds": 19216,
+   "seconds": 19398,
    "finished": null
   },
   {
@@ -70,20 +70,28 @@
    "task": "[build] T-4478 Pages batch two",
    "model": "opus",
    "started": "2026-11-27T11:08:58.798Z",
-   "seconds": 950,
+   "seconds": 1132,
    "finished": null
   },
+  {
+   "name": "pernille",
+   "task": "[build] T-5795 Sky test fixes",
+   "model": "opus",
+   "started": "2026-11-27T11:26:34.412Z",
+   "seconds": 77,
+   "finished": null
+  }
+ ],
+ "who": "Idris x2, Pernille",
+ "recent": [
   {
    "name": "idris",
    "task": "[review] T-5795",
    "model": "opus",
    "started": "2026-11-27T11:22:55.786Z",
-   "seconds": 113,
-   "finished": null
-  }
- ],
- "who": "Idris x3",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-27T11:26:02.683000+00:00"
+  },
   {
    "name": "idris",
    "task": "[build] T-4478 review fixes",
@@ -107,14 +115,6 @@
    "started": "2026-11-27T10:48:18.159Z",
    "seconds": null,
    "finished": "2026-11-27T10:49:07.765000+00:00"
-  },
-  {
-   "name": "pernille",
-   "task": "[review] T-4478",
-   "model": "opus",
-   "started": "2026-11-27T10:07:03.486Z",
-   "seconds": null,
-   "finished": "2026-11-27T10:09:56.204000+00:00"
   }
  ],
  "queue": {
@@ -125,31 +125,31 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 23.0,
-   "resets_at": "2026-11-27T07:30:00-05:00",
+   "pct": 24.0,
+   "resets_at": "2026-11-27T12:30:00.427552+00:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-27T06:23:09.525764-05:00",
-   "source": "live",
-   "left": 77.0,
+   "read_at": "2026-11-27T06:25:53.951312-05:00",
+   "source": "usage",
+   "left": 76.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 26.0,
-   "resets_at": "2026-11-29T02:00:00-05:00",
+   "pct": 27.0,
+   "resets_at": "2026-11-29T07:00:00.427571+00:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-27T06:23:09.525764-05:00",
-   "source": "live",
-   "left": 74.0,
+   "read_at": "2026-11-27T06:25:53.951312-05:00",
+   "source": "usage",
+   "left": 73.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 0.0,
    "resets_at": "2026-11-29T07:00:00+00:00",
    "used_words": "of the Fable weekly allowance used",
-   "read_at": "2026-11-27T05:52:58.908547-05:00",
+   "read_at": "2026-11-27T06:25:53.951312-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-27T06:23:09.525764-05:00"
+  "read_at": "2026-11-27T06:25:53.951312-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -166,10 +166,10 @@
  },
  "next_tick": null,
  "personal": {
-  "week_pct": 30.31,
+  "week_pct": 31.48,
   "usage_pct": 53.8,
   "work_pct": 98.9,
-  "read_at": "2026-11-27T11:24:00+00:00",
+  "read_at": "2026-11-27T11:27:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -199,14 +199,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-27T06:23:00-05:00",
+   "at": "2026-11-27T06:25:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
-  "pool": 5,
-  "at": "2026-11-27T06:24:00-05:00",
+  "pool": 4,
+  "at": "2026-11-27T06:27:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -232,10 +232,10 @@
   },
   {
    "name": "Pernille",
-   "state": "next",
-   "task": "Pernille, P1, continuation of T-2609: after...",
-   "model": null,
-   "since": null,
+   "state": "running",
+   "task": "[build] T-5795 Sky test fixes",
+   "model": "opus",
+   "since": "2026-11-27T11:26:34.412Z",
    "next": []
   },
   {
@@ -292,11 +292,11 @@
     "task": "T-4478"
    },
    {
-    "w": "Idris",
-    "k": "review",
+    "w": "Pernille",
+    "k": "build",
     "t": "The 1.0 showcase premades are built and in the Gallery",
     "m": "opus",
-    "at": "2026-11-27T11:22:55.786Z",
+    "at": "2026-11-27T11:26:34.412Z",
     "o": "c",
     "task": "T-5795"
    }
@@ -377,6 +377,11 @@
   "done": [
    {
     "w": "Idris",
+    "t": "When a widget's data took too long, its run log now marks that against the first request's own",
+    "at": "2026-11-27T06:25:00-05:00"
+   },
+   {
+    "w": "Idris",
     "t": "A widget link that runs a function now carries a signature only this phone can make, so a web...",
     "at": "2026-11-27T06:08:00-05:00"
    },
@@ -384,11 +389,6 @@
     "w": "Idris",
     "t": "When a widget saves what a person did, the phone now makes sure the save itself is written to...",
     "at": "2026-11-27T06:08:00-05:00"
-   },
-   {
-    "w": "Idris",
-    "t": "The test that taps a real Home Screen widget on iPad now waits for what it checks and always...",
-    "at": "2026-11-27T05:55:00-05:00"
    }
   ],
   "count": {
@@ -398,8 +398,12 @@
    "you": 0
   },
   "fin": {
-   "n": 15,
+   "n": 16,
    "rows": [
+    [
+     "T-4589",
+     "Pin the lane's deadline mark..."
+    ],
     [
      "T-4553",
      "Sign the links that run a..."
@@ -419,10 +423,6 @@
     [
      "T-5925",
      "Work panel switches between..."
-    ],
-    [
-     "T-5269",
-     "Start the premade page UI..."
     ]
    ]
   }
@@ -466,27 +466,17 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-27T11:24:31Z",
+  "at": "2026-11-27T11:27:38Z",
   "s": {
-   "T-4181": [
-    "mergetest",
-    "Xcode checks on the MacBook, 1st to merge",
-    1795777771309
-   ],
    "T-4192": [
     "mergetest",
-    "Xcode checks on the MacBook, 2nd to merge",
-    1795777771309
+    "Xcode checks on the MacBook, 1st to merge",
+    1795778798654
    ],
    "T-5933": [
     "mergeq",
-    "3rd to merge",
-    1795776931309
-   ],
-   "T-2040": [
-    "mergetest",
-    "iPhone tests on the MacBook",
-    null
+    "2nd to merge",
+    1795776938654
    ],
    "T-4478": [
     "merged",
@@ -496,18 +486,15 @@
    ]
   },
   "nm": {
-   "T-4181": "Widgets refresh on their own and by a tap",
    "T-4192": "Python in the app: smaller bundle, installable packages",
    "T-5933": "Tidy three small points from the package session review",
-   "T-2040": "Investigate a paywall UI test that failed once",
    "T-4478": "A project shows a full-screen Page that answers taps"
   },
   "wk": {
-   "T-4181": "Idris",
    "T-4192": "Idris",
    "T-5933": "Idris",
-   "T-2040": "Idris",
    "T-4478": "Idris",
+   "T-4589": "Idris",
    "T-4553": "Idris",
    "T-5015": "Idris",
    "T-5285": "Idris",
@@ -518,15 +505,14 @@
    "T-5317": "Idris",
    "T-5319": "Idris",
    "T-5926": "Idris",
-   "T-5918": "Odalys",
-   "T-2549": "Idris"
+   "T-5918": "Odalys"
   }
  },
  "ln": {
-  "at": "2026-11-27T11:24:31Z",
+  "at": "2026-11-27T11:27:38Z",
   "mq": {
    "n": {
-    "checking": 2,
+    "checking": 1,
     "inline": 1,
     "conflicted": 0,
     "failed": 0,
@@ -535,30 +521,22 @@
     "parked": 5
    },
    "m": {
-    "checking": 15,
-    "inline": 29,
+    "checking": 1,
+    "inline": 32,
     "conflicted": null,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1374
+    "parked": 1377
    },
    "cur": [
-    [
-     [
-      "T-4181"
-     ],
-     "iPhone app tests",
-     "MacBook",
-     15
-    ],
     [
      [
       "T-4192"
      ],
      "iPhone app tests",
      "MacBook",
-     15
+     1
     ]
    ],
    "ld": [
@@ -568,8 +546,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-27T11:24:02Z",
-    "ld": 1.24,
+    "at": "2026-11-27T11:27:11Z",
+    "ld": 1.36,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -583,40 +561,35 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-27T11:10:29Z",
-    "ld": 17.12,
+    "at": "2026-11-27T11:26:52Z",
+    "ld": 11.93,
     "c": 12,
-    "sb": 4,
+    "sb": 0,
     "dk": [
-     367.4,
+     369.5,
      926.4
     ],
-    "sn": [
-     "itsthecompany-runner",
-     "itsthecompany-runner-2",
-     "itsthecompany-runner-4",
-     "itsthecompany-runner-5"
-    ]
+    "sn": []
    }
   }
  },
  "hc": {
   "wait": {
-   "n": 8,
+   "n": 7,
    "limit": 20,
-   "in_line": 3,
+   "in_line": 2,
    "parked": 5,
    "open": true,
    "mq": false,
-   "counted": "2026-11-27T11:15:00+00:00",
+   "counted": "2026-11-27T11:25:30+00:00",
    "by": {
     "app": {
-     "n": 6,
+     "n": 5,
      "limit": 20,
      "open": true
     },
     "other": {
-     "n": 3,
+     "n": 2,
      "limit": 20,
      "open": true
     },
@@ -626,11 +599,11 @@
      "open": true
     }
    },
-   "at": "2026-11-27T11:24:49+00:00"
+   "at": "2026-11-27T11:27:51+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-27T11:24:37+00:00"
+   "at": "2026-11-27T11:27:38+00:00"
   }
  },
  "operators": [
@@ -665,10 +638,10 @@
   "main": 3,
   "lanes": 0,
   "total": 3,
-  "at": "6:24 AM",
+  "at": "6:27 AM",
   "why": "",
-  "at_iso": "2026-11-27T11:24:00+00:00",
+  "at_iso": "2026-11-27T11:27:00+00:00",
   "started": "12:15 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 12:15 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 6:24 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 12:15 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 6:27 AM ET</p></section>"
  }
 }

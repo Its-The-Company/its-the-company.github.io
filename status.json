@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-27T15:08:08.498617+00:00",
+ "at": "2026-11-27T15:11:11.669445+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -59,26 +59,10 @@
  "workers": [
   {
    "name": "idris",
-   "task": "[build] T-4190 batch three",
-   "model": "opus",
-   "started": "2026-11-27T14:19:06.517Z",
-   "seconds": 2941,
-   "finished": null
-  },
-  {
-   "name": "pernille",
-   "task": "[build] T-5939 review fixes",
-   "model": "opus",
-   "started": "2026-11-27T14:37:51.274Z",
-   "seconds": 1817,
-   "finished": null
-  },
-  {
-   "name": "idris",
    "task": "[build] T-4476 review fixes",
    "model": "opus",
    "started": "2026-11-27T15:00:47.463Z",
-   "seconds": 441,
+   "seconds": 624,
    "finished": null
   },
   {
@@ -86,12 +70,44 @@
    "task": "[site] T-5940 app changes bars",
    "model": "opus",
    "started": "2026-11-27T15:06:29.801Z",
-   "seconds": 98,
+   "seconds": 281,
+   "finished": null
+  },
+  {
+   "name": "odalys",
+   "task": "[review] T-4190 batch three",
+   "model": "opus",
+   "started": "2026-11-27T15:08:48.844Z",
+   "seconds": 142,
+   "finished": null
+  },
+  {
+   "name": "idris",
+   "task": "[review] T-5939 again",
+   "model": "opus",
+   "started": "2026-11-27T15:11:08.996Z",
+   "seconds": 2,
    "finished": null
   }
  ],
- "who": "Idris x2, Pernille, Maren",
+ "who": "Idris x2, Maren, Odalys",
  "recent": [
+  {
+   "name": "pernille",
+   "task": "[build] T-5939 review fixes",
+   "model": "opus",
+   "started": "2026-11-27T14:37:51.274Z",
+   "seconds": null,
+   "finished": "2026-11-27T15:10:58.319000+00:00"
+  },
+  {
+   "name": "idris",
+   "task": "[build] T-4190 batch three",
+   "model": "opus",
+   "started": "2026-11-27T14:19:06.517Z",
+   "seconds": null,
+   "finished": "2026-11-27T15:08:23.861000+00:00"
+  },
   {
    "name": "pernille",
    "task": "[review] T-4476 tap routing",
@@ -107,22 +123,6 @@
    "started": "2026-11-27T13:30:38.183Z",
    "seconds": null,
    "finished": "2026-11-27T14:56:34.076000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[review] T-5795 Sky zone",
-   "model": "opus",
-   "started": "2026-11-27T14:34:03.205Z",
-   "seconds": null,
-   "finished": "2026-11-27T14:37:36.608000+00:00"
-  },
-  {
-   "name": "pernille",
-   "task": "[build] T-5795 Sky place zone",
-   "model": "opus",
-   "started": "2026-11-27T12:52:47.951Z",
-   "seconds": null,
-   "finished": "2026-11-27T14:33:41.606000+00:00"
   }
  ],
  "queue": {
@@ -133,21 +133,21 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 33.0,
+   "pct": 35.0,
    "resets_at": "2026-11-27T12:30:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-27T10:05:57.185389-05:00",
+   "read_at": "2026-11-27T10:11:00.042248-05:00",
    "source": "live",
-   "left": 67.0,
+   "left": 65.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 31.0,
+   "pct": 32.0,
    "resets_at": "2026-11-29T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-27T10:05:57.185389-05:00",
+   "read_at": "2026-11-27T10:11:00.042248-05:00",
    "source": "live",
-   "left": 69.0,
+   "left": 68.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
@@ -157,7 +157,7 @@
    "read_at": "2026-11-27T09:48:11.706719-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-27T10:05:57.185389-05:00"
+  "read_at": "2026-11-27T10:11:00.042248-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -177,7 +177,7 @@
   "week_pct": 36.14,
   "usage_pct": 53.8,
   "work_pct": 98.9,
-  "read_at": "2026-11-27T15:08:00+00:00",
+  "read_at": "2026-11-27T15:11:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -211,7 +211,7 @@
   }
  ],
  "disk": {
-  "free_gb": 18,
+  "free_gb": 16,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -220,14 +220,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-27T10:04:00-05:00",
+   "at": "2026-11-27T10:09:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 4,
-  "at": "2026-11-27T10:08:00-05:00",
+  "at": "2026-11-27T10:11:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -246,17 +246,9 @@
   {
    "name": "Idris",
    "state": "running",
-   "task": "[build] T-4190 batch three",
+   "task": "[build] T-4476 review fixes",
    "model": "opus",
-   "since": "2026-11-27T14:19:06.517Z",
-   "next": []
-  },
-  {
-   "name": "Pernille",
-   "state": "running",
-   "task": "[build] T-5939 review fixes",
-   "model": "opus",
-   "since": "2026-11-27T14:37:51.274Z",
+   "since": "2026-11-27T15:00:47.463Z",
    "next": []
   },
   {
@@ -265,6 +257,22 @@
    "task": "[site] T-5940 app changes bars",
    "model": "opus",
    "since": "2026-11-27T15:06:29.801Z",
+   "next": []
+  },
+  {
+   "name": "Odalys",
+   "state": "running",
+   "task": "[review] T-4190 batch three",
+   "model": "opus",
+   "since": "2026-11-27T15:08:48.844Z",
+   "next": []
+  },
+  {
+   "name": "Pernille",
+   "state": "next",
+   "task": "Pernille, P1, continuation of T-2609: after...",
+   "model": null,
+   "since": null,
    "next": []
   },
   {
@@ -282,36 +290,10 @@
    "model": null,
    "since": null,
    "next": []
-  },
-  {
-   "name": "Odalys",
-   "state": "next",
-   "task": "Odalys, P3, host-only, from...",
-   "model": null,
-   "since": null,
-   "next": []
   }
  ],
  "tasks": {
   "run": [
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "Settings and Pro: buy, restore, themes",
-    "m": "opus",
-    "at": "2026-11-27T14:19:06.517Z",
-    "o": "c",
-    "task": "T-4190"
-   },
-   {
-    "w": "Pernille",
-    "k": "build",
-    "t": "Sky shows a far place's own time",
-    "m": "opus",
-    "at": "2026-11-27T14:37:51.274Z",
-    "o": "c",
-    "task": "T-5939"
-   },
    {
     "w": "Idris",
     "k": "build",
@@ -329,6 +311,24 @@
     "at": "2026-11-27T15:06:29.801Z",
     "o": "i",
     "task": "T-5940"
+   },
+   {
+    "w": "Odalys",
+    "k": "review",
+    "t": "Settings and Pro: buy, restore, themes",
+    "m": "opus",
+    "at": "2026-11-27T15:08:48.844Z",
+    "o": "c",
+    "task": "T-4190"
+   },
+   {
+    "w": "Idris",
+    "k": "review",
+    "t": "Sky shows a far place's own time",
+    "m": "opus",
+    "at": "2026-11-27T15:11:08.996Z",
+    "o": "c",
+    "task": "T-5939"
    }
   ],
   "src": "plan",
@@ -496,17 +496,12 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-27T15:07:56Z",
+  "at": "2026-11-27T15:11:11Z",
   "s": {
    "T-4185": [
     "mergetest",
     "Xcode checks on the MacBook, 1st to merge",
-    1795791656243
-   ],
-   "T-4476": [
-    "testing",
-    "Mac Mini \u00b7 test",
-    null
+    1795791671669
    ],
    "T-4181": [
     "merged",
@@ -517,12 +512,10 @@
   },
   "nm": {
    "T-4185": "Launcher widgets open the apps a person chose",
-   "T-4476": "Projects get one file, one ID and guarded outside code",
    "T-4181": "Widgets refresh on their own and by a tap"
   },
   "wk": {
    "T-4185": "Idris",
-   "T-4476": "Idris",
    "T-4181": "Idris",
    "T-2040": "Idris",
    "T-0591": "Idris",
@@ -539,7 +532,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-27T15:07:56Z",
+  "at": "2026-11-27T15:11:11Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -551,13 +544,13 @@
     "parked": 7
    },
    "m": {
-    "checking": 7,
+    "checking": 10,
     "inline": null,
     "conflicted": null,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 695
+    "parked": 698
    },
    "cur": [
     [
@@ -566,7 +559,7 @@
      ],
      "iPhone app tests",
      "MacBook",
-     7
+     10
     ]
    ],
    "ld": [
@@ -576,12 +569,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-27T15:07:32Z",
-    "ld": 2.22,
+    "at": "2026-11-27T15:11:13Z",
+    "ld": 2.37,
     "c": 8,
     "sb": 1,
     "dk": [
-     17.1,
+     12.2,
      228.3
     ],
     "ss": [
@@ -593,12 +586,12 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-27T15:07:13Z",
-    "ld": 4.55,
+    "at": "2026-11-27T15:10:15Z",
+    "ld": 4.01,
     "c": 12,
     "sb": 1,
     "dk": [
-     358.6,
+     359.9,
      926.4
     ],
     "sn": [
@@ -633,11 +626,11 @@
      "open": true
     }
    },
-   "at": "2026-11-27T15:08:08+00:00"
+   "at": "2026-11-27T15:11:11+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-27T15:08:02+00:00"
+   "at": "2026-11-27T15:11:11+00:00"
   }
  },
  "operators": [
@@ -681,10 +674,10 @@
   "main": 4,
   "lanes": 1,
   "total": 5,
-  "at": "10:08 AM",
+  "at": "10:11 AM",
   "why": "",
-  "at_iso": "2026-11-27T15:08:00+00:00",
+  "at_iso": "2026-11-27T15:11:00+00:00",
   "started": "12:15 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 4, started 12:15 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 10:08 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 4, started 12:15 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 10:11 AM ET</p></section>"
  }
 }

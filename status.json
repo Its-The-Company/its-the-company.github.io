@@ -1,10 +1,10 @@
 {
  "schema": 1,
- "at": "2026-11-27T16:46:27.634030+00:00",
+ "at": "2026-11-27T16:50:23.471999+00:00",
  "session": {
   "active": true,
   "kind": "coord",
-  "started": "2026-11-27T00:15:52-05:00",
+  "started": "2026-11-27T11:47:17-05:00",
   "coord": {
    "active": true,
    "started": 1795341309,
@@ -15,14 +15,14 @@
   "done": [
    {
     "t": "T-5607",
-    "acct": "Personal b",
+    "acct": "Jeremy's account",
     "steps": [],
     "end": "landed",
     "end_at": 1795386667
    },
    {
     "t": "T-5399",
-    "acct": "Personal a",
+    "acct": "Evan's account",
     "steps": [],
     "end": "failed",
     "end_at": 1795380074,
@@ -30,7 +30,7 @@
    },
    {
     "t": "T-5399",
-    "acct": "Personal a",
+    "acct": "Evan's account",
     "steps": [],
     "end": "failed",
     "end_at": 1795367452,
@@ -38,7 +38,7 @@
    },
    {
     "t": "T-5399",
-    "acct": "Personal a",
+    "acct": "Evan's account",
     "steps": [],
     "end": "failed",
     "end_at": 1795365128,
@@ -46,7 +46,7 @@
    },
    {
     "t": "T-5399",
-    "acct": "Personal a",
+    "acct": "Evan's account",
     "steps": [],
     "end": "failed",
     "end_at": 1795344996,
@@ -58,40 +58,7 @@
  },
  "workers": [],
  "who": "",
- "recent": [
-  {
-   "name": "idris",
-   "task": "[build] T-4476 stale result fix",
-   "model": "opus",
-   "started": "2026-11-27T15:42:45.188Z",
-   "seconds": null,
-   "finished": "2026-11-27T16:46:17.399000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-4190 batch four",
-   "model": "opus",
-   "started": "2026-11-27T15:38:43.222Z",
-   "seconds": null,
-   "finished": "2026-11-27T16:02:05.179000+00:00"
-  },
-  {
-   "name": "pernille",
-   "task": "[build] T-5939 grapheme cut fix",
-   "model": "opus",
-   "started": "2026-11-27T15:13:13.962Z",
-   "seconds": null,
-   "finished": "2026-11-27T15:57:31.395000+00:00"
-  },
-  {
-   "name": "pernille",
-   "task": "[review] T-4476 again",
-   "model": "opus",
-   "started": "2026-11-27T15:41:14.878Z",
-   "seconds": null,
-   "finished": "2026-11-27T15:42:09.056000+00:00"
-  }
- ],
+ "recent": [],
  "queue": {
   "runnable": [],
   "blocked": [],
@@ -101,18 +68,18 @@
  "meter": {
   "five_hour": {
    "pct": 45.0,
-   "resets_at": "2026-11-27T17:30:00.347216+00:00",
+   "resets_at": "2026-11-27T17:30:00.469773+00:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-27T11:30:08.093180-05:00",
+   "read_at": "2026-11-27T11:47:04.197184-05:00",
    "source": "usage",
    "left": 55.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 33.0,
-   "resets_at": "2026-11-29T07:00:00.347246+00:00",
+   "resets_at": "2026-11-29T07:00:00.469793+00:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-27T11:30:08.093180-05:00",
+   "read_at": "2026-11-27T11:47:04.197184-05:00",
    "source": "usage",
    "left": 67.0,
    "left_words": "of your weekly allowance left"
@@ -121,10 +88,10 @@
    "pct": 0.0,
    "resets_at": "2026-11-29T07:00:00+00:00",
    "used_words": "of the Fable weekly allowance used",
-   "read_at": "2026-11-27T11:30:08.093180-05:00",
+   "read_at": "2026-11-27T11:47:04.197184-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-27T11:30:08.093180-05:00"
+  "read_at": "2026-11-27T11:47:04.197184-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -141,10 +108,10 @@
  },
  "next_tick": null,
  "personal": {
-  "week_pct": 38.47,
-  "usage_pct": 53.8,
-  "work_pct": 98.9,
-  "read_at": "2026-11-27T16:46:00+00:00",
+  "week_pct": 33.06,
+  "usage_pct": 50.0,
+  "work_pct": 99.0,
+  "read_at": "2026-11-27T16:50:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -174,14 +141,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions wait until 20 GB is free.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-27T11:43:00-05:00",
+   "at": "2026-11-27T11:47:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
-  "pool": 4,
-  "at": "2026-11-27T11:46:00-05:00",
+  "pool": 5,
+  "at": "2026-11-27T11:50:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -194,7 +161,7 @@
  "pool": {
   "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 8 (held: too few lands in 3 hours to judge a raise)",
   "n": 8,
-  "at": "2026-11-27T00:15:36.638824-05:00"
+  "at": "2026-11-27T11:47:04.680652-05:00"
  },
  "lanes": [
   {
@@ -345,33 +312,8 @@
    "you": 0
   },
   "fin": {
-   "n": 29,
-   "rows": [
-    [
-     "T-0273",
-     "Ask for an App Store rating..."
-    ],
-    [
-     "T-4790",
-     "Make the Settings strings..."
-    ],
-    [
-     "T-5940",
-     "Daily app changes bars in..."
-    ],
-    [
-     "T-2040",
-     "Investigate a paywall UI..."
-    ],
-    [
-     "T-0591",
-     "Ship only the Pro card words..."
-    ],
-    [
-     "T-5928",
-     "Settings Pro row tests read..."
-    ]
-   ]
+   "n": 0,
+   "rows": []
   }
  },
  "qr": [
@@ -413,25 +355,11 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-27T16:46:07Z",
-  "s": {},
-  "wk": {
-   "T-0273": "Idris",
-   "T-4790": "Idris",
-   "T-5940": "Maren",
-   "T-2040": "Idris",
-   "T-0591": "Idris",
-   "T-5928": "Idris",
-   "T-5934": "Idris",
-   "T-5936": "Maren",
-   "T-5513": "Ines",
-   "T-0553": "Idris",
-   "T-5685": "Idris",
-   "T-5897": "Idris"
-  }
+  "at": "2026-11-27T16:50:05Z",
+  "s": {}
  },
  "ln": {
-  "at": "2026-11-27T16:46:07Z",
+  "at": "2026-11-27T16:50:05Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -449,7 +377,7 @@
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 793
+    "parked": 797
    },
    "cur": [],
    "ld": [
@@ -459,12 +387,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-27T16:46:08Z",
-    "ld": 1.56,
+    "at": "2026-11-27T16:50:05Z",
+    "ld": 1.0,
     "c": 8,
     "sb": 1,
     "dk": [
-     13.4,
+     13.3,
      228.3
     ],
     "ss": [
@@ -514,11 +442,11 @@
      "open": true
     }
    },
-   "at": "2026-11-27T16:46:27+00:00"
+   "at": "2026-11-27T16:50:23+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-27T16:46:27+00:00"
+   "at": "2026-11-27T16:50:23+00:00"
   }
  },
  "operators": [
@@ -529,35 +457,20 @@
    "m": "opus",
    "e": "high",
    "t": "Work session",
-   "at": "2026-11-27T10:05:56-05:00"
+   "at": "2026-11-27T11:47:55-05:00"
   }
  ],
  "reply": {
-  "sent": "2026-11-27T15:04:52Z",
-  "seconds": 62.0
+  "sent": "2026-11-27T16:32:58Z",
+  "seconds": 896.0
  },
- "inbox": [
-  {
-   "id": "c7223390051",
-   "state": "received",
-   "position": 1,
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "Do a deep clean of the mac mini's..."
-  }
- ],
+ "inbox": [],
  "trimmed": [
   "lane_next",
   "queue_text",
-  "recent",
   "task_done",
-  "fin_short",
-  "inbox_title",
   "task_title",
   "done_text",
-  "fin_six",
   "lane_task",
   "task_next"
  ],
@@ -565,10 +478,10 @@
   "main": 0,
   "lanes": 0,
   "total": 0,
-  "at": "11:46 AM",
+  "at": "11:50 AM",
   "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
-  "at_iso": "2026-11-27T16:46:00+00:00",
-  "started": "12:15 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0, started 12:15 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 11:46 AM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
+  "at_iso": "2026-11-27T16:50:00+00:00",
+  "started": "11:47 AM",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0, started 11:47 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 11:50 AM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
  }
 }

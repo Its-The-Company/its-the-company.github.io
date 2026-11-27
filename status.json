@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-27T18:28:30.904340+00:00",
+ "at": "2026-11-27T18:31:37.028006+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -62,7 +62,7 @@
    "task": "[build] T-4476 watch Gallery and project page",
    "model": "opus",
    "started": "2026-11-27T17:31:19.998Z",
-   "seconds": 3430,
+   "seconds": 3617,
    "finished": null
   },
   {
@@ -70,7 +70,7 @@
    "task": "[tools] T-5944 stop false holds",
    "model": "opus",
    "started": "2026-11-27T18:16:28.425Z",
-   "seconds": 722,
+   "seconds": 908,
    "finished": null
   }
  ],
@@ -112,7 +112,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 277,
+  "runnable_count": 276,
   "blocked_count": 0
  },
  "meter": {
@@ -161,7 +161,7 @@
   "week_pct": 35.06,
   "usage_pct": 50.0,
   "work_pct": 99.0,
-  "read_at": "2026-11-27T18:28:00+00:00",
+  "read_at": "2026-11-27T18:31:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -195,7 +195,7 @@
   }
  ],
  "disk": {
-  "free_gb": 52,
+  "free_gb": 50,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -204,14 +204,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-27T13:24:00-05:00",
+   "at": "2026-11-27T13:29:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 4,
-  "at": "2026-11-27T13:28:00-05:00",
+  "at": "2026-11-27T13:31:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -372,6 +372,11 @@
   ],
   "done": [
    {
+    "w": "Pernille",
+    "t": "A Sky widget set to Lisbon on a New York iPhone now shows Lisbon's 7:31 AM sunrise instead of...",
+    "at": "2026-11-27T13:29:00-05:00"
+   },
+   {
     "w": "Idris",
     "t": "After a restore in Settings finds nothing or fails, buying Pro leaves no line saying there is no...",
     "at": "2026-11-27T12:30:00-05:00"
@@ -380,22 +385,21 @@
     "w": "Idris",
     "t": "The test that keeps Settings from showing a word typed into the code now also looks inside...",
     "at": "2026-11-27T12:30:00-05:00"
-   },
-   {
-    "w": "Idris",
-    "t": "The app now asks for an App Store rating at most once, and only right after something the person...",
-    "at": "2026-11-27T10:38:00-05:00"
    }
   ],
   "count": {
-   "next": 277,
+   "next": 276,
    "wait": 0,
    "blocked": 0,
    "you": 0
   },
   "fin": {
-   "n": 2,
+   "n": 3,
    "rows": [
+    [
+     "T-5939",
+     "Sky shows a far place's own time"
+    ],
     [
      "T-4635",
      "Clear the Settings restore..."
@@ -446,7 +450,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-27T18:28:21Z",
+  "at": "2026-11-27T18:31:37Z",
   "s": {
    "T-5795": [
     "mergetest",
@@ -467,12 +471,13 @@
   "wk": {
    "T-5795": "Pernille",
    "T-4181": "Idris",
+   "T-5939": "Pernille",
    "T-4635": "Idris",
    "T-5941": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-27T18:28:21Z",
+  "at": "2026-11-27T18:31:37Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -490,7 +495,7 @@
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 895
+    "parked": 898
    },
    "cur": [],
    "ld": [
@@ -500,12 +505,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-27T18:28:11Z",
-    "ld": 3.71,
+    "at": "2026-11-27T18:31:05Z",
+    "ld": 4.46,
     "c": 8,
     "sb": 0,
     "dk": [
-     52.2,
+     49.9,
      228.3
     ],
     "ss": [
@@ -537,7 +542,7 @@
    "parked": 9,
    "open": true,
    "mq": false,
-   "counted": "2026-11-27T18:20:09+00:00",
+   "counted": "2026-11-27T18:30:31+00:00",
    "by": {
     "app": {
      "n": 6,
@@ -555,11 +560,11 @@
      "open": true
     }
    },
-   "at": "2026-11-27T18:28:30+00:00"
+   "at": "2026-11-27T18:31:37+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-27T18:28:30+00:00"
+   "at": "2026-11-27T18:31:37+00:00"
   }
  },
  "operators": [
@@ -602,10 +607,10 @@
   "main": 2,
   "lanes": 1,
   "total": 3,
-  "at": "1:28 PM",
+  "at": "1:31 PM",
   "why": "",
-  "at_iso": "2026-11-27T18:28:00+00:00",
+  "at_iso": "2026-11-27T18:31:00+00:00",
   "started": "11:47 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 11:47 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 1:28 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 11:47 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 1:31 PM ET</p></section>"
  }
 }

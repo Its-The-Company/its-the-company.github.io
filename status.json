@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-27T16:59:29.461686+00:00",
+ "at": "2026-11-27T17:02:30.181940+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -56,8 +56,17 @@
   "landed": 1,
   "failed": 4
  },
- "workers": [],
- "who": "",
+ "workers": [
+  {
+   "name": "pernille",
+   "task": "[review] T-4476",
+   "model": "opus",
+   "started": "2026-11-27T17:02:29.754Z",
+   "seconds": 0,
+   "finished": null
+  }
+ ],
+ "who": "Pernille",
  "recent": [],
  "queue": {
   "runnable": [],
@@ -111,7 +120,7 @@
   "week_pct": 33.06,
   "usage_pct": 50.0,
   "work_pct": 99.0,
-  "read_at": "2026-11-27T16:59:00+00:00",
+  "read_at": "2026-11-27T17:02:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -148,7 +157,7 @@
  "lock_in": {
   "on": true,
   "pool": 5,
-  "at": "2026-11-27T11:59:00-05:00",
+  "at": "2026-11-27T12:02:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -165,17 +174,17 @@
  },
  "lanes": [
   {
-   "name": "Idris",
-   "state": "next",
-   "task": "Idris, P2, from T-1282 F1 (not before TestFlight):...",
-   "model": null,
-   "since": null,
+   "name": "Pernille",
+   "state": "running",
+   "task": "[review] T-4476",
+   "model": "opus",
+   "since": "2026-11-27T17:02:29.754Z",
    "next": []
   },
   {
-   "name": "Pernille",
+   "name": "Idris",
    "state": "next",
-   "task": "Pernille, P1, continuation of T-2609: after...",
+   "task": "Idris, P2, from T-1282 F1 (not before TestFlight):...",
    "model": null,
    "since": null,
    "next": []
@@ -214,7 +223,17 @@
   }
  ],
  "tasks": {
-  "run": [],
+  "run": [
+   {
+    "w": "Pernille",
+    "k": "review",
+    "t": "Projects get one file, one ID and guarded outside code",
+    "m": "opus",
+    "at": "2026-11-27T17:02:29.754Z",
+    "o": "c",
+    "task": "T-4476"
+   }
+  ],
   "src": "plan",
   "open": [
    {
@@ -355,11 +374,11 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-27T16:59:22Z",
+  "at": "2026-11-27T17:02:11Z",
   "s": {}
  },
  "ln": {
-  "at": "2026-11-27T16:59:22Z",
+  "at": "2026-11-27T17:02:11Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -377,7 +396,7 @@
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 806
+    "parked": 809
    },
    "cur": [],
    "ld": [
@@ -387,23 +406,23 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-27T16:59:23Z",
-    "ld": 1.02,
+    "at": "2026-11-27T17:02:12Z",
+    "ld": 1.22,
     "c": 8,
     "sb": 0,
     "dk": [
-     37.5,
+     45.5,
      228.3
     ],
     "ss": [
-     172.0,
+     161.3,
      953.7
     ],
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-27T16:30:05Z",
-    "ld": 1.42,
+    "at": "2026-11-27T17:00:40Z",
+    "ld": 0.11,
     "c": 12,
     "sb": 0,
     "dk": [
@@ -440,11 +459,11 @@
      "open": true
     }
    },
-   "at": "2026-11-27T16:59:29+00:00"
+   "at": "2026-11-27T17:02:30+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-27T16:59:16+00:00"
+   "at": "2026-11-27T17:02:18+00:00"
   }
  },
  "operators": [
@@ -473,13 +492,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 0,
+  "main": 1,
   "lanes": 0,
-  "total": 0,
-  "at": "11:59 AM",
-  "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
-  "at_iso": "2026-11-27T16:59:00+00:00",
+  "total": 1,
+  "at": "12:02 PM",
+  "why": "",
+  "at_iso": "2026-11-27T17:02:00+00:00",
   "started": "11:47 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0, started 11:47 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 11:59 AM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 11:47 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 12:02 PM ET</p></section>"
  }
 }

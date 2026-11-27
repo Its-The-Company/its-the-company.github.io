@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-27T17:54:42.502603+00:00",
+ "at": "2026-11-27T17:57:48.762307+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -62,7 +62,7 @@
    "task": "[build] T-4476 watch Gallery and project page",
    "model": "opus",
    "started": "2026-11-27T17:31:19.998Z",
-   "seconds": 1402,
+   "seconds": 1588,
    "finished": null
   },
   {
@@ -70,7 +70,7 @@
    "task": "[build] T-5795 zero-width space trim",
    "model": "opus",
    "started": "2026-11-27T17:45:22.836Z",
-   "seconds": 559,
+   "seconds": 745,
    "finished": null
   }
  ],
@@ -161,7 +161,7 @@
   "week_pct": 35.06,
   "usage_pct": 50.0,
   "work_pct": 99.0,
-  "read_at": "2026-11-27T17:54:00+00:00",
+  "read_at": "2026-11-27T17:58:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -223,7 +223,7 @@
  "lock_in": {
   "on": true,
   "pool": 4,
-  "at": "2026-11-27T12:54:00-05:00",
+  "at": "2026-11-27T12:58:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -458,9 +458,9 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-27T17:54:35Z",
+  "at": "2026-11-27T17:57:48Z",
   "s": {
-   "T-4552": [
+   "T-0793": [
     "mergetest",
     "iPhone tests on the MacBook",
     null
@@ -479,12 +479,12 @@
    ]
   },
   "nm": {
-   "T-4552": "Route a widget tap by its chosen action",
+   "T-0793": "Add background refresh for widgets in version 1.0",
    "T-4181": "Widgets refresh on their own and by a tap",
    "T-4185": "Launcher widgets open the apps a person chose"
   },
   "wk": {
-   "T-4552": "Idris",
+   "T-0793": "Idris",
    "T-4181": "Idris",
    "T-4185": "Idris",
    "T-4635": "Idris",
@@ -492,7 +492,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-27T17:54:35Z",
+  "at": "2026-11-27T17:57:48Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -510,7 +510,7 @@
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 861
+    "parked": 865
    },
    "cur": [],
    "ld": [
@@ -520,10 +520,10 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-27T17:54:25Z",
-    "ld": 2.81,
+    "at": "2026-11-27T17:57:58Z",
+    "ld": 8.3,
     "c": 8,
-    "sb": 0,
+    "sb": 1,
     "dk": [
      53.1,
      228.3
@@ -532,18 +532,22 @@
      152.7,
      953.7
     ],
-    "sn": []
+    "sn": [
+     "pywidget-wk-check"
+    ]
    },
    "macbook": {
-    "at": "2026-11-27T17:52:08Z",
-    "ld": 1.36,
+    "at": "2026-11-27T17:57:17Z",
+    "ld": 6.18,
     "c": 12,
-    "sb": 0,
+    "sb": 1,
     "dk": [
-     359.2,
+     357.8,
      926.4
     ],
-    "sn": []
+    "sn": [
+     "itsthecompany-runner"
+    ]
    }
   }
  },
@@ -573,11 +577,11 @@
      "open": true
     }
    },
-   "at": "2026-11-27T17:54:42+00:00"
+   "at": "2026-11-27T17:57:48+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-27T17:54:35+00:00"
+   "at": "2026-11-27T17:57:48+00:00"
   }
  },
  "operators": [
@@ -594,8 +598,6 @@
    "w": "Operator",
    "a": "Evan's Account",
    "sr": 1,
-   "m": "opus",
-   "e": "high",
    "t": "Work session \u2013 1 task",
    "at": "2026-11-27T12:03:57-05:00"
   },
@@ -603,8 +605,6 @@
    "w": "Operator",
    "a": "Evan's Account",
    "sr": 1,
-   "m": "opus",
-   "e": "high",
    "t": "Work session \u2013 1 task",
    "at": "2026-11-27T12:23:42-05:00"
   }
@@ -629,10 +629,10 @@
   "main": 2,
   "lanes": 2,
   "total": 4,
-  "at": "12:54 PM",
+  "at": "12:58 PM",
   "why": "",
-  "at_iso": "2026-11-27T17:54:00+00:00",
+  "at_iso": "2026-11-27T17:58:00+00:00",
   "started": "11:47 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 2, started 11:47 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 12:54 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 2, started 11:47 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 12:58 PM ET</p></section>"
  }
 }

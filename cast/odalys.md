@@ -42,8 +42,6 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 ## Lessons
 - T-4956 11-18: ticked lines leave the board for log/board-archive.md; a claim release writes a new slot, whose mtime is the release time.
-- T-5473 11-21 85e0b74e17: in a gate test, mutate each term by hand; a term the reader already enforces (ProConfig refuses gates on with no product) is an equivalent mutant, note it, no fix. A bundled() check must unwrap first, or nil (closed state) passes. App line add: no Base/By/Until, Done when 'test: land:xc; docs page ...'; reserve the ID first.
-- T-5457 11-21 4368b340bc: an empty pick is a tree test (git merge-tree --write-tree --merge-base c^ main c == main's tree); git cherry's patch-id says '+' for reapplied work. A Low left "for the task's next session" needs a line if that session never comes. A pywidget/ target makes a line "app": no Until. Another session may share the worktree: commit by path only.
 - T-5622/T-5624 11-22 2f370af682: 'no app line' at the comparison start was T-5530's exclusive allow-list hold (any open allow ID, e.g. the coordinator's own unblock fix, stops all app work; lane_take too), not the steps map; order --json now names it 'freeze'. Simulate with a patched read_json, main's merge count and a /tmp copy of .done_seen.json.
 - T-5620 11-22: personal_land.sh in a session runs road-check alone (<span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">ruling</span> c7088040339); land job replays after-sync each pass. Suites need T: run via tests/run.sh <suite>. board_tick Evidence: one path, rest in Detail:.
 - T-5722 11-23 2895cbadcc: reviewing a wall-clock -> count/ratio swap, put back the faults the OLD limit caught (pre-fix suite from git show c^:path) too: a probe with note=False passed the new note-count check, failed the old 1.5 s. Shared mini already at load 100-280: measure, don't add yes load. A queued tick with a wrong note: rm the untracked outbox file, tick again.
@@ -52,6 +50,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-4192 11-26: a UI shot of a prompt with a text field depends on the Simulator's minimized-keyboard state (T-0758) and on which tests ran first; the class idiom is raiseOnScreenKeyboard before save. Read a picture test for what the picture shows, not only pass/fail.
 - T-5917 11-26: a red in a suite run is mine only if it is green on HEAD; rerun just the reds from a git-archive copy of HEAD. rm of a $(...) path is refused: use the literal path.
 - T-5918 11-27 58bb457712: the shell is zsh: a $F list of paths is one word; list paths literally. Reds on HEAD: merge_limit_split, records, xc_inputs, supervisor, dispatch_tick (all pre-existing 11-27).
+- T-5944 11-27: check a diagnosis's 'on main by key' with land_dupes.keys_of first: a same-subject redo has a new author time (T-3792 9ec08e6329 vs ba2a62b354), no copy. parked_count.waiting_refs already cuts ticked and keyed commits. A copy reads done holds as live only with main's ops/runs/.waiting.json; order --json may write ops/runs/.done_seen.json.
 {% endraw %}
 
 

@@ -408,6 +408,45 @@ This session resumed the 11-25 <span title="An idea that reaches B or better but
      cannot see this. Fix it, or say it on the ADR-007 line.
   2. Add the T3 test to the slice-7 fix mutant's `tests` (Tests/mutants-t0793.json:290) and re-run that mutant: it was
      not re-run after its find changed.
+
+## Session 2026-11-27 14:0x-14:5x ET (Idris, lane a, from main 80dcd07806)
+
+- Baseline at 80dcd078: PyWidgetTests 2764/0/2 (J-20261127-1402-land-chk-a5ab71-6-346639).
+- T-0793 139dc53544, slice 9 only: Pernille's slice 8 Low 1 fixed (not just stated). WidgetPasses keeps the ids the last
+  full pass left out for the loop breaker (`WidgetWriter.leftOff`), set where the pass in flight is cleared (so a
+  joiner never reads before it is set); `leftOut(out, placed:)` hands a T1 the left-out widgets it has not run, once;
+  refreshPlaced runs them for any trigger outside the background side as a pass of its own (forced, not joined, not
+  counted). So Shortcut-then-open and a T1 joining a firing both restore. ADR-007 7.2 dated line for slice 9 (for
+  Pernille). Tests BackgroundBatchTests.testAT1SpacedOutByT3StillRunsTheWidgetT3LeftOutOnce and
+  WidgetWriterPassTests.testAJoinerOfAFiringIsHandedTheWidgetsItLeftOutOnce. Her Low 2 done: the slice 7 fix mutant
+  names the T3 test and was re-run (both tests red). 4 new mutants, all red by hand; job IDs in the commit.
+- Checks at the commit's tree: PyWidgetTests 2767/0/2 (J-20261127-1421-land-chk-a5ab71-5-551ee2), LaneWarmWindowTests
+  6/0 (J-20261127-1435-land-chk-a5ab71-3-041d5c), host 4548/0.
+- Mutants now go faster: scratch T-4181-idris/submit_multi.py plants a batch, submits, restores as soon as land_xc says
+  the snapshot is queued, then the next batch; the jobs run side by side on the runner (4 in about 6 min).
+- Known, minor: a T1 whose own pass stands down for a console run drops the left-out list (the next activation's full
+  pass runs everything anyway).
+- No commit, rechecked at 80dcd078: T-4280 (proof is T-4494 item 3, the Investors' iPhone); T-1882 (fields.json is only
+  named in doc comments, nothing writes it); T-2021 (no scheme sets PYWIDGET_LANE_FORCED; needs the forced-lane bench on
+  a quiet runner); T-4433 and T-4435 (this Mac has only iOS 26.0 and 27.0 runtimes; 18, 27.1, 27.2 and a phone are the
+  Investors').
+- Left on T-0793: the extension's `system` runs reading `background` and `oom_guard`; both need the design calls in the
+  12:2x section above (Pernille and Ines). Pernille's earlier lows (slice 7 (2) `leavesStatus` streak; slice 6 (2), (3);
+  slice 5 (1), (2), (4)) stay open.
+- Next: Pernille reviews 139dc53544.
+
+## Review, 2026-11-27 ET (Operator, lane a)
+
+- Pernille read main..76e8c0e877 (139dc53544 T-0793 slice 9 and the note): nothing blocking. Non-blocking, for the
+  next session:
+  1. WidgetWriter.swift:906-909, ADR-007:155: "handed out once" fails for joiners. Two T1s joining one T3 pass (two
+     iPad scenes) both find X as leftOff in the shared `out`, so X runs twice. Track what was handed out, or reword.
+  2. No test covers a T1 joining a counted T3. No mutant covers the move to `ended` (:930) or the
+     `out[$0] == nil || ...` filter (:909); moving the set back to the owner leaves every test green.
+  3. When the again-pass (:211) stands down, X is lost: put back the ids whose outcome is standDown, or say so on the
+     ADR line (her 11-27 Low 1 asked the same).
+  4. `ended` (:926): a pass a waiter let go no longer counts. Better, but not recorded in the ADR line.
+- lane_landcheck --task T-4181: green (host 4534/0 on 3.9 and 3.13).
 {% endraw %}
 
 </div>

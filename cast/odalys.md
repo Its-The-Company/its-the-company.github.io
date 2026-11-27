@@ -42,9 +42,6 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 ## Lessons
 - T-4956 11-18: ticked lines leave the board for log/board-archive.md; a claim release writes a new slot, whose mtime is the release time.
-- T-5397 11-21 a3f8fac2d5: board_tick add from a <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> wrote main's board directly (not the outbox); task_names_store add writes the lane's ops/task-names.tsv (commit it). test_health lint refuses a test that reads a tool's source as text: check behaviour (rig the reader to fail). Slices 4-6 hit guarded supervisor.sh/personal_tick.sh.
-- T-5406 11-21: tick after the final commit (its note cites the hash; an amend orphans it), outbox file in a second commit. board_tick add refuses a bare T-ID in text with no link.
-- T-5450 11-21: the red restart row was the fixture: an empty board just after a <span title="A numbered batch of planned work, with its own plan file.">refill</span> makes the governor queue (by design), so tick 2 never ran; '- [ ] x (waiting on #12)' counts for the governor, not runnable for the chain. run.sh shows only FAIL lines: debug to a /tmp file.
 - T-5473 11-21 85e0b74e17: in a gate test, mutate each term by hand; a term the reader already enforces (ProConfig refuses gates on with no product) is an equivalent mutant, note it, no fix. A bundled() check must unwrap first, or nil (closed state) passes. App line add: no Base/By/Until, Done when 'test: land:xc; docs page ...'; reserve the ID first.
 - T-5457 11-21 4368b340bc: an empty pick is a tree test (git merge-tree --write-tree --merge-base c^ main c == main's tree); git cherry's patch-id says '+' for reapplied work. A Low left "for the task's next session" needs a line if that session never comes. A pywidget/ target makes a line "app": no Until. Another session may share the worktree: commit by path only.
 - T-5622/T-5624 11-22 2f370af682: 'no app line' at the comparison start was T-5530's exclusive allow-list hold (any open allow ID, e.g. the coordinator's own unblock fix, stops all app work; lane_take too), not the steps map; order --json now names it 'freeze'. Simulate with a patched read_json, main's merge count and a /tmp copy of .done_seen.json.
@@ -52,6 +49,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-5722 11-23 2895cbadcc: reviewing a wall-clock -> count/ratio swap, put back the faults the OLD limit caught (pre-fix suite from git show c^:path) too: a probe with note=False passed the new note-count check, failed the old 1.5 s. Shared mini already at load 100-280: measure, don't add yes load. A queued tick with a wrong note: rm the untracked outbox file, tick again.
 - T-5365 11-24: grep tests for sleep/elapsed FIRST (rule 1). Sleep->event in a "nothing written" check: event before `return` misses a late write.
 - T-5755 11-23: background runs die at 10 min unless given a timeout (land_xc_test under load). Old-vs-new proof: short copy (setup+section) in two git-archive dirs, ~2 min; rm -rf "$VAR" is refused, mkdir fresh.
+- T-4192 11-26: a UI shot of a prompt with a text field depends on the Simulator's minimized-keyboard state (T-0758) and on which tests ran first; the class idiom is raiseOnScreenKeyboard before save. Read a picture test for what the picture shows, not only pass/fail.
 {% endraw %}
 
 

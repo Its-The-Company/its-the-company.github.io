@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-27T10:08:03.367413+00:00",
+ "at": "2026-11-27T10:11:06.228680+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -62,15 +62,7 @@
    "task": "[build] T-4190 paywall batch two",
    "model": "opus",
    "started": "2026-11-27T06:04:32.961Z",
-   "seconds": 14610,
-   "finished": null
-  },
-  {
-   "name": "pernille",
-   "task": "[review] T-4478",
-   "model": "opus",
-   "started": "2026-11-27T10:07:03.486Z",
-   "seconds": 59,
+   "seconds": 14793,
    "finished": null
   },
   {
@@ -78,12 +70,28 @@
    "task": "[build] T-5795 Sky premade rest",
    "model": "opus",
    "started": "2026-11-27T10:07:35.937Z",
-   "seconds": 27,
+   "seconds": 210,
+   "finished": null
+  },
+  {
+   "name": "idris",
+   "task": "[build] T-4478 review fixes",
+   "model": "opus",
+   "started": "2026-11-27T10:10:09.620Z",
+   "seconds": 56,
    "finished": null
   }
  ],
- "who": "Idris, Pernille x2",
+ "who": "Idris x2, Pernille",
  "recent": [
+  {
+   "name": "pernille",
+   "task": "[review] T-4478",
+   "model": "opus",
+   "started": "2026-11-27T10:07:03.486Z",
+   "seconds": null,
+   "finished": "2026-11-27T10:09:56.204000+00:00"
+  },
   {
    "name": "idris",
    "task": "[build] T-4478 Habits Done today",
@@ -107,14 +115,6 @@
    "started": "2026-11-27T07:24:51.690Z",
    "seconds": null,
    "finished": "2026-11-27T09:36:36.461000+00:00"
-  },
-  {
-   "name": "pernille",
-   "task": "[review] T-4183 fixes",
-   "model": "opus",
-   "started": "2026-11-27T08:42:48.061Z",
-   "seconds": null,
-   "finished": "2026-11-27T08:44:12.191000+00:00"
   }
  ],
  "queue": {
@@ -169,7 +169,7 @@
   "week_pct": 29.18,
   "usage_pct": 53.9,
   "work_pct": 98.9,
-  "read_at": "2026-11-27T10:08:00+00:00",
+  "read_at": "2026-11-27T10:11:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -243,7 +243,7 @@
  "lock_in": {
   "on": false,
   "pool": 5,
-  "at": "2026-11-27T05:08:00-05:00",
+  "at": "2026-11-27T05:11:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -270,9 +270,9 @@
   {
    "name": "Pernille",
    "state": "running",
-   "task": "[review] T-4478",
+   "task": "[build] T-5795 Sky premade rest",
    "model": "opus",
-   "since": "2026-11-27T10:07:03.486Z",
+   "since": "2026-11-27T10:07:35.937Z",
    "next": []
   },
   {
@@ -321,21 +321,21 @@
    },
    {
     "w": "Pernille",
-    "k": "review",
-    "t": "A project shows a full-screen Page that answers taps",
-    "m": "opus",
-    "at": "2026-11-27T10:07:03.486Z",
-    "o": "c",
-    "task": "T-4478"
-   },
-   {
-    "w": "Pernille",
     "k": "build",
     "t": "The 1.0 showcase premades are built and in the Gallery",
     "m": "opus",
     "at": "2026-11-27T10:07:35.937Z",
     "o": "c",
     "task": "T-5795"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "A project shows a full-screen Page that answers taps",
+    "m": "opus",
+    "at": "2026-11-27T10:10:09.620Z",
+    "o": "c",
+    "task": "T-4478"
    }
   ],
   "src": "plan",
@@ -503,7 +503,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-27T10:07:46Z",
+  "at": "2026-11-27T10:10:59Z",
   "s": {
    "T-4478": [
     "mergetest",
@@ -546,7 +546,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-27T10:07:46Z",
+  "at": "2026-11-27T10:10:59Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -564,7 +564,7 @@
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1297
+    "parked": 1300
    },
    "cur": [],
    "ld": [
@@ -574,12 +574,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-27T10:07:47Z",
-    "ld": 6.34,
+    "at": "2026-11-27T10:10:34Z",
+    "ld": 5.41,
     "c": 8,
     "sb": 1,
     "dk": [
-     14.9,
+     15.0,
      228.3
     ],
     "ss": [
@@ -634,11 +634,11 @@
      "open": true
     }
    },
-   "at": "2026-11-27T10:08:03+00:00"
+   "at": "2026-11-27T10:11:06+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-27T10:08:03+00:00"
+   "at": "2026-11-27T10:10:53+00:00"
   }
  },
  "operators": [
@@ -700,10 +700,10 @@
   "main": 3,
   "lanes": 3,
   "total": 6,
-  "at": "5:08 AM",
+  "at": "5:11 AM",
   "why": "",
-  "at_iso": "2026-11-27T10:08:00+00:00",
+  "at_iso": "2026-11-27T10:11:00+00:00",
   "started": "12:15 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 3, started 12:15 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 5:08 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 3, started 12:15 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 5:11 AM ET</p></section>"
  }
 }

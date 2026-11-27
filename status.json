@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-27T02:36:26.655044+00:00",
+ "at": "2026-11-27T02:39:31.686842+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -72,7 +72,7 @@
    "task": "[build] T-4478 Pages tap links",
    "model": "opus",
    "started": "2026-11-27T02:29:24.979Z",
-   "seconds": 421,
+   "seconds": 606,
    "finished": null
   },
   {
@@ -80,7 +80,7 @@
    "task": "[build] T-4190 Settings Pro themes",
    "model": "opus",
    "started": "2026-11-27T02:29:37.630Z",
-   "seconds": 409,
+   "seconds": 594,
    "finished": null
   },
   {
@@ -88,7 +88,7 @@
    "task": "[build] T-4183 Gallery premade tests",
    "model": "opus",
    "started": "2026-11-27T02:29:50.138Z",
-   "seconds": 396,
+   "seconds": 581,
    "finished": null
   },
   {
@@ -96,7 +96,7 @@
    "task": "[build] T-5919 Home three sessions",
    "model": "opus",
    "started": "2026-11-27T02:30:35.377Z",
-   "seconds": 351,
+   "seconds": 536,
    "finished": null
   },
   {
@@ -104,7 +104,7 @@
    "task": "[build] T-5918 account names finish",
    "model": "opus",
    "started": "2026-11-27T02:30:26.922Z",
-   "seconds": 359,
+   "seconds": 544,
    "finished": null
   }
  ],
@@ -113,24 +113,24 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 307,
+  "runnable_count": 305,
   "blocked_count": 0
  },
  "meter": {
   "five_hour": {
-   "pct": 1.0,
+   "pct": 2.0,
    "resets_at": "2026-11-27T02:30:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-26T21:34:27.248946-05:00",
+   "read_at": "2026-11-26T21:36:31.212512-05:00",
    "source": "live",
-   "left": 99.0,
+   "left": 98.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 16.0,
    "resets_at": "2026-11-29T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-26T21:34:27.248946-05:00",
+   "read_at": "2026-11-26T21:36:31.212512-05:00",
    "source": "live",
    "left": 84.0,
    "left_words": "of your weekly allowance left"
@@ -142,7 +142,7 @@
    "read_at": "2026-11-26T21:23:50.168607-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-26T21:34:27.248946-05:00"
+  "read_at": "2026-11-26T21:36:31.212512-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -162,7 +162,7 @@
   "week_pct": 38.69,
   "usage_pct": 54.2,
   "work_pct": 98.8,
-  "read_at": "2026-11-27T02:36:00+00:00",
+  "read_at": "2026-11-27T02:39:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -236,7 +236,7 @@
  "lock_in": {
   "on": true,
   "pool": 3,
-  "at": "2026-11-26T21:36:00-05:00",
+  "at": "2026-11-26T21:39:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -425,29 +425,38 @@
   "done": [
    {
     "w": "Idris",
-    "t": "Opening the Sun widget's settings from the widget no longer leaves Sun's previews spinning...",
-    "at": "2026-11-26T21:16:00-05:00"
+    "t": "A widget link that starts the app now shows the countdown preview; the earlier blank was a real...",
+    "at": "2026-11-26T21:39:00-05:00"
    },
    {
     "w": "Idris",
-    "t": "Two Gallery tiles, Habit tracker and Shortcuts launcher, were invisible to VoiceOver-style tools...",
-    "at": "2026-11-26T21:16:00-05:00"
+    "t": "The tests that tap a launcher link now share one way of opening it, which waits longer for the...",
+    "at": "2026-11-26T21:39:00-05:00"
    },
    {
-    "w": "Maren",
-    "t": "The app's guides now say what is true today: Habit tracker is the only premade that needs Pro,...",
-    "at": "2026-11-26T21:01:00-05:00"
+    "w": "Idris",
+    "t": "Opening the Sun widget's settings from the widget no longer leaves Sun's previews spinning...",
+    "at": "2026-11-26T21:16:00-05:00"
    }
   ],
   "count": {
-   "next": 307,
+   "next": 305,
    "wait": 0,
    "blocked": 0,
    "you": 0
   },
   "fin": {
-   "n": 0,
-   "rows": []
+   "n": 2,
+   "rows": [
+    [
+     "T-4582",
+     "Run countdown's preview when..."
+    ],
+    [
+     "T-5633",
+     "Harden the launcher tap..."
+    ]
+   ]
   }
  },
  "qr": [
@@ -489,12 +498,12 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-27T02:36:07Z",
+  "at": "2026-11-27T02:39:31Z",
   "s": {
    "T-4185": [
     "mergetest",
-    "Xcode checks on the MacBook, 1st to merge",
-    1795746547225
+    "iPhone tests on the MacBook",
+    null
    ],
    "T-5919": [
     "merged",
@@ -541,14 +550,16 @@
    "T-5918": "Odalys",
    "T-4182": "Idris",
    "T-4190": "Idris",
-   "T-4181": "Idris"
+   "T-4181": "Idris",
+   "T-4582": "Idris",
+   "T-5633": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-27T02:36:07Z",
+  "at": "2026-11-27T02:39:31Z",
   "mq": {
    "n": {
-    "checking": 1,
+    "checking": 0,
     "inline": 0,
     "conflicted": 0,
     "failed": 0,
@@ -557,24 +568,15 @@
     "parked": 6
    },
    "m": {
-    "checking": 7,
+    "checking": null,
     "inline": null,
     "conflicted": null,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1201
+    "parked": 1204
    },
-   "cur": [
-    [
-     [
-      "T-4185"
-     ],
-     "iPhone app tests",
-     "MacBook",
-     7
-    ]
-   ],
+   "cur": [],
    "ld": [
     0,
     null
@@ -582,12 +584,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-27T02:35:39Z",
-    "ld": 2.73,
+    "at": "2026-11-27T02:39:11Z",
+    "ld": 2.07,
     "c": 8,
     "sb": 1,
     "dk": [
-     20.5,
+     20.7,
      228.3
     ],
     "ss": [
@@ -617,13 +619,13 @@
  },
  "hc": {
   "wait": {
-   "n": 6,
+   "n": 7,
    "limit": 20,
-   "in_line": 0,
+   "in_line": 1,
    "parked": 6,
    "open": true,
    "mq": false,
-   "counted": "2026-11-27T02:26:55+00:00",
+   "counted": "2026-11-27T02:37:02+00:00",
    "by": {
     "app": {
      "n": 5,
@@ -631,7 +633,7 @@
      "open": true
     },
     "other": {
-     "n": 1,
+     "n": 2,
      "limit": 20,
      "open": true
     },
@@ -641,11 +643,11 @@
      "open": true
     }
    },
-   "at": "2026-11-27T02:36:26+00:00"
+   "at": "2026-11-27T02:39:31+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-27T02:36:26+00:00"
+   "at": "2026-11-27T02:39:31+00:00"
   }
  },
  "operators": [
@@ -655,8 +657,8 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session",
-   "at": "2026-11-26T21:24:14-05:00"
+   "t": "Inbox \u2013 Evan's 9:17 PM Message on GitHub",
+   "at": "2026-11-26T21:39:12-05:00"
   },
   {
    "w": "Operator",
@@ -682,8 +684,8 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Inbox \u2013 Evan's 9:17 PM Message on GitHub",
-   "at": "2026-11-26T21:20:49-05:00"
+   "t": "Work session \u2013 1 task",
+   "at": "2026-11-26T21:39:12-05:00"
   }
  ],
  "reply": {
@@ -706,6 +708,7 @@
   "lane_next",
   "queue_text",
   "task_done",
+  "fin_short",
   "inbox_title",
   "task_title",
   "done_text",
@@ -716,10 +719,10 @@
   "main": 5,
   "lanes": 3,
   "total": 8,
-  "at": "9:36 PM",
+  "at": "9:39 PM",
   "why": "",
-  "at_iso": "2026-11-27T02:36:00+00:00",
+  "at_iso": "2026-11-27T02:39:00+00:00",
   "started": "9:24 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>8</b> agents running now</p><p class=\"an-sub\">Main session 5, started 9:24 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 9:36 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>8</b> agents running now</p><p class=\"an-sub\">Main session 5, started 9:24 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 9:39 PM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-27T10:48:07.172913+00:00",
+ "at": "2026-11-27T10:51:08.815374+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -62,7 +62,7 @@
    "task": "[build] T-4190 paywall batch two",
    "model": "opus",
    "started": "2026-11-27T06:04:32.961Z",
-   "seconds": 17014,
+   "seconds": 17195,
    "finished": null
   },
   {
@@ -70,12 +70,20 @@
    "task": "[build] T-5795 Sky premade rest",
    "model": "opus",
    "started": "2026-11-27T10:07:35.937Z",
-   "seconds": 2431,
+   "seconds": 2612,
    "finished": null
   }
  ],
  "who": "Idris, Pernille",
  "recent": [
+  {
+   "name": "pernille",
+   "task": "[review] T-4478 fixes",
+   "model": "opus",
+   "started": "2026-11-27T10:48:18.159Z",
+   "seconds": null,
+   "finished": "2026-11-27T10:49:07.765000+00:00"
+  },
   {
    "name": "idris",
    "task": "[build] T-4478 review fixes",
@@ -99,20 +107,12 @@
    "started": "2026-11-27T08:56:02.464Z",
    "seconds": null,
    "finished": "2026-11-27T10:06:38.695000+00:00"
-  },
-  {
-   "name": "ines",
-   "task": "[review] T-5925",
-   "model": "opus",
-   "started": "2026-11-27T09:36:46.993Z",
-   "seconds": null,
-   "finished": "2026-11-27T09:38:33.079000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 287,
+  "runnable_count": 288,
   "blocked_count": 0
  },
  "meter": {
@@ -161,8 +161,21 @@
   "week_pct": 29.18,
   "usage_pct": 53.8,
   "work_pct": 98.9,
-  "read_at": "2026-11-27T10:48:00+00:00",
-  "running": []
+  "read_at": "2026-11-27T10:51:00+00:00",
+  "running": [
+   {
+    "lane": "b2",
+    "task": "T-5933",
+    "w": "Idris",
+    "k": "fix",
+    "t": "Tidy three small points from the package session review",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-27T05:49:37-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
+   }
+  ]
  },
  "api_credits": [
   {
@@ -198,7 +211,7 @@
  "lock_in": {
   "on": false,
   "pool": 5,
-  "at": "2026-11-27T05:48:00-05:00",
+  "at": "2026-11-27T05:51:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -375,7 +388,7 @@
    }
   ],
   "count": {
-   "next": 287,
+   "next": 288,
    "wait": 0,
    "blocked": 0,
    "you": 0
@@ -449,26 +462,33 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-27T10:47:45Z",
+  "at": "2026-11-27T10:50:48Z",
   "s": {
    "T-4181": [
     "mergeq",
     "1st to merge",
-    1795776285571
+    1795776288695
    ],
    "T-4185": [
     "mergetest",
     "Xcode checks on the MacBook, 2nd to merge",
-    1795775925571
+    1795775928695
+   ],
+   "T-4192": [
+    "mergeq",
+    "3rd to merge",
+    1795776528695
    ]
   },
   "nm": {
    "T-4181": "Widgets refresh on their own and by a tap",
-   "T-4185": "Launcher widgets open the apps a person chose"
+   "T-4185": "Launcher widgets open the apps a person chose",
+   "T-4192": "Python in the app: smaller bundle, installable packages"
   },
   "wk": {
    "T-4181": "Idris",
    "T-4185": "Idris",
+   "T-4192": "Idris",
    "T-5925": "Maren",
    "T-5269": "Idris",
    "T-5270": "Idris",
@@ -483,11 +503,11 @@
   }
  },
  "ln": {
-  "at": "2026-11-27T10:47:45Z",
+  "at": "2026-11-27T10:50:48Z",
   "mq": {
    "n": {
     "checking": 1,
-    "inline": 1,
+    "inline": 2,
     "conflicted": 0,
     "failed": 0,
     "held": 0,
@@ -495,13 +515,13 @@
     "parked": 5
    },
    "m": {
-    "checking": 9,
-    "inline": 3,
+    "checking": 12,
+    "inline": 4,
     "conflicted": null,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1337
+    "parked": 1340
    },
    "cur": [
     [
@@ -510,7 +530,7 @@
      ],
      "iPhone app tests",
      "MacBook",
-     9
+     12
     ]
    ],
    "ld": [
@@ -520,12 +540,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-27T10:47:42Z",
-    "ld": 3.45,
+    "at": "2026-11-27T10:50:23Z",
+    "ld": 3.2,
     "c": 8,
     "sb": 0,
     "dk": [
-     14.2,
+     14.1,
      228.3
     ],
     "ss": [
@@ -577,11 +597,11 @@
      "open": true
     }
    },
-   "at": "2026-11-27T10:48:07+00:00"
+   "at": "2026-11-27T10:51:08+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-27T10:47:53+00:00"
+   "at": "2026-11-27T10:51:02+00:00"
   }
  },
  "operators": [
@@ -593,6 +613,15 @@
    "e": "high",
    "t": "Work session",
    "at": "2026-11-27T00:15:52-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Jeremy's Account",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session \u2013 1 task",
+   "at": "2026-11-27T05:49:37-05:00"
   }
  ],
  "reply": {
@@ -614,12 +643,12 @@
  ],
  "agents_now": {
   "main": 2,
-  "lanes": 0,
-  "total": 2,
-  "at": "5:48 AM",
+  "lanes": 1,
+  "total": 3,
+  "at": "5:51 AM",
   "why": "",
-  "at_iso": "2026-11-27T10:48:00+00:00",
+  "at_iso": "2026-11-27T10:51:00+00:00",
   "started": "12:15 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 12:15 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 5:48 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 12:15 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 5:51 AM ET</p></section>"
  }
 }

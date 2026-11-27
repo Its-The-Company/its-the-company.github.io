@@ -41,7 +41,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 - T-5893 11-26: e83f525050 in scratch T-5893-idris/wt (location widget ID app.pywidget.location; ExtensionLinkTests 8/0 J-20261126-0017, host 4388/0). Open: Odalys review, land; Investors register the new ID. Lesson: an extension ID is the app ID plus exactly one part.
 
-- T-4183 11-26: settled on main ddbc366df6 in scratch T-4183-idris/wt (detached): 9bec59faa1 T-5035, 044d065078 T-4646, 01f654162e T-5012, 7be984c672 T-4641 slice 1. Host 4408/0, unit 2528/0 J-...0953-...5213d3, UI 24/0 J-...1006-...28a810, landcheck green. Open: land; T-4641 L3 (Maren's words), onRunQueue. Lesson: lane_settle refuses a detached copy; cherry-pick onto main by hand.
+- T-4183 11-26 (late): scratch T-4183-idris/wt (detached) holds T-5035, T-4646, T-5012, T-4641 slices 1-2, cherry-picked T-5894/T-5895 from main, and 968e39c6ac T-5269 (UI 31/0 J-...2152-...19d7b6, unit 2533/0, host 4408/0). Open: Odalys/Pernille review, land; T-5270, T-5317, T-5319, T-4641 L3 (Maren's words). Lesson: lane_settle refuses a detached copy; cherry-pick onto main by hand.
 
 - T-4190 11-26 (b2): in scratch T-4190-idris/wt, 8b2c9924d5 T-5906 + c04e4bbfd6 T-0623 lows; 995a216526 T-5909 (buy elsewhere with the app open; class 3x green on runner). Open: Odalys review, land. Lesson: a StoreKit clear made while the app is not running leaves the purchase in the app; clear with the app open.
 - T-4302 11-25 (b): own-widget save test in WidgetStepTimeoutTests (test only). Open: review, land.

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-27T23:49:49.224461+00:00",
+ "at": "2026-11-27T23:52:52.780072+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -62,7 +62,7 @@
    "task": "[build] T-5837 Home flow redo",
    "model": "opus",
    "started": "2026-11-27T22:49:52.350Z",
-   "seconds": 3596,
+   "seconds": 3780,
    "finished": null
   }
  ],
@@ -104,25 +104,25 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 268,
+  "runnable_count": 266,
   "blocked_count": 0
  },
  "meter": {
   "five_hour": {
-   "pct": 16.0,
-   "resets_at": "2026-11-27T22:30:00-05:00",
+   "pct": 17.0,
+   "resets_at": "2026-11-28T03:29:59.793839+00:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-27T18:44:48.157720-05:00",
-   "source": "live",
-   "left": 84.0,
+   "read_at": "2026-11-27T18:51:34.352359-05:00",
+   "source": "usage",
+   "left": 83.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 43.0,
-   "resets_at": "2026-11-29T02:00:00-05:00",
+   "resets_at": "2026-11-29T06:59:59.793857+00:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-27T18:44:48.157720-05:00",
-   "source": "live",
+   "read_at": "2026-11-27T18:51:34.352359-05:00",
+   "source": "usage",
    "left": 57.0,
    "left_words": "of your weekly allowance left"
   },
@@ -130,10 +130,10 @@
    "pct": 0.0,
    "resets_at": "2026-11-29T07:00:00+00:00",
    "used_words": "of the Fable weekly allowance used",
-   "read_at": "2026-11-27T18:17:35.677068-05:00",
+   "read_at": "2026-11-27T18:51:34.352359-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-27T18:44:48.157720-05:00"
+  "read_at": "2026-11-27T18:51:34.352359-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -150,10 +150,10 @@
  },
  "next_tick": null,
  "personal": {
-  "week_pct": 40.34,
+  "week_pct": 41.3,
   "usage_pct": 49.0,
   "work_pct": 99.0,
-  "read_at": "2026-11-27T23:49:00+00:00",
+  "read_at": "2026-11-27T23:52:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -183,14 +183,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-27T18:47:00-05:00",
+   "at": "2026-11-27T18:52:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 4,
-  "at": "2026-11-27T18:49:00-05:00",
+  "at": "2026-11-27T18:52:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -342,30 +342,38 @@
   ],
   "done": [
    {
-    "w": "Maren",
-    "t": "A site test assumed one app screen's explanation was up to date. It went out of date when that...",
-    "at": "2026-11-27T18:41:00-05:00"
+    "w": "Pernille",
+    "t": "The World clocks widget is now Overlap clocks: it draws each chosen city's working hours across...",
+    "at": "2026-11-27T18:50:00-05:00"
    },
    {
     "w": "Idris",
-    "t": "Two early test builds left the phone's last position inside the Distance widget's settings file,...",
-    "at": "2026-11-27T18:38:00-05:00"
+    "t": "A test that checks the widget still registers its font when it draws now reads the call in its...",
+    "at": "2026-11-27T18:50:00-05:00"
    },
    {
-    "w": "Odalys",
-    "t": "A second worker on the same feature can no longer wipe out the first worker's record of what...",
-    "at": "2026-11-27T18:35:00-05:00"
+    "w": "Maren",
+    "t": "A site test assumed one app screen's explanation was up to date. It went out of date when that...",
+    "at": "2026-11-27T18:41:00-05:00"
    }
   ],
   "count": {
-   "next": 268,
+   "next": 266,
    "wait": 0,
    "blocked": 0,
    "you": 0
   },
   "fin": {
-   "n": 11,
+   "n": 13,
    "rows": [
+    [
+     "T-4709",
+     "Rework World clocks into..."
+    ],
+    [
+     "T-5890",
+     "Tidy the probe font's three..."
+    ],
     [
      "T-5924",
      "Build the look picker page..."
@@ -381,14 +389,6 @@
     [
      "T-5080",
      "Find a store app sharing..."
-    ],
-    [
-     "T-5527",
-     "Correct the web view spike's..."
-    ],
-    [
-     "T-4791",
-     "Note the privacy row gap in..."
     ]
    ]
   }
@@ -432,14 +432,14 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-27T23:49:37Z",
+  "at": "2026-11-27T23:52:52Z",
   "s": {
    "T-4181": [
     "mergeq",
     "1st to merge",
-    1795823077780
+    1795823092780
    ],
-   "T-5890": [
+   "T-4190": [
     "mergetest",
     "iPhone tests on the MacBook",
     null
@@ -447,10 +447,12 @@
   },
   "nm": {
    "T-4181": "Widgets refresh on their own and by a tap",
-   "T-5890": "Tidy the probe font's three small review points"
+   "T-4190": "Settings and Pro: buy, restore, themes"
   },
   "wk": {
    "T-4181": "Idris",
+   "T-4190": "Idris",
+   "T-4709": "Pernille",
    "T-5890": "Idris",
    "T-5924": "Maren",
    "T-4833": "Idris",
@@ -461,12 +463,11 @@
    "T-2500": "Idris",
    "T-5049": "Idris",
    "T-0861": "Idris",
-   "T-5923": "Maren",
-   "T-5944": "Odalys"
+   "T-5923": "Maren"
   }
  },
  "ln": {
-  "at": "2026-11-27T23:49:37Z",
+  "at": "2026-11-27T23:52:52Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -479,12 +480,12 @@
    },
    "m": {
     "checking": null,
-    "inline": 5,
+    "inline": 8,
     "conflicted": null,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1216
+    "parked": 1220
    },
    "cur": [],
    "ld": [
@@ -494,12 +495,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-27T23:49:15Z",
-    "ld": 2.26,
+    "at": "2026-11-27T23:52:50Z",
+    "ld": 1.72,
     "c": 8,
     "sb": 0,
     "dk": [
-     48.4,
+     48.2,
      228.3
     ],
     "ss": [
@@ -509,12 +510,12 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-27T23:39:52Z",
-    "ld": 2.65,
+    "at": "2026-11-27T23:52:13Z",
+    "ld": 0.56,
     "c": 12,
     "sb": 0,
     "dk": [
-     355.8,
+     355.6,
      926.4
     ],
     "sn": []
@@ -547,11 +548,11 @@
      "open": true
     }
    },
-   "at": "2026-11-27T23:49:49+00:00"
+   "at": "2026-11-27T23:52:52+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-27T23:49:49+00:00"
+   "at": "2026-11-27T23:52:52+00:00"
   }
  },
  "operators": [
@@ -586,10 +587,10 @@
   "main": 1,
   "lanes": 0,
   "total": 1,
-  "at": "6:49 PM",
+  "at": "6:52 PM",
   "why": "",
-  "at_iso": "2026-11-27T23:49:00+00:00",
+  "at_iso": "2026-11-27T23:52:00+00:00",
   "started": "2:44 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 2:44 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 6:49 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 2:44 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 6:52 PM ET</p></section>"
  }
 }

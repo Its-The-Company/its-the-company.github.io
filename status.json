@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-27T05:19:00.411090+00:00",
+ "at": "2026-11-27T05:22:01.477257+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -56,13 +56,38 @@
   "landed": 1,
   "failed": 4
  },
- "workers": [],
- "who": "",
+ "workers": [
+  {
+   "name": "idris",
+   "task": "[build] T-4190 Settings Pro steps",
+   "model": "opus",
+   "started": "2026-11-27T05:20:42.375Z",
+   "seconds": 79,
+   "finished": null
+  },
+  {
+   "name": "idris",
+   "task": "[build] T-4183 Gallery Habits fixes",
+   "model": "opus",
+   "started": "2026-11-27T05:20:53.231Z",
+   "seconds": 68,
+   "finished": null
+  },
+  {
+   "name": "maren",
+   "task": "[build] T-5919 Home site commit",
+   "model": "opus",
+   "started": "2026-11-27T05:21:48.644Z",
+   "seconds": 12,
+   "finished": null
+  }
+ ],
+ "who": "Idris x2, Maren",
  "recent": [],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 294,
+  "runnable_count": 293,
   "blocked_count": 0
  },
  "meter": {
@@ -70,7 +95,7 @@
    "pct": 22.0,
    "resets_at": "2026-11-27T02:30:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-27T00:16:05.767804-05:00",
+   "read_at": "2026-11-27T00:20:53.429716-05:00",
    "source": "live",
    "left": 78.0,
    "left_words": "of your 5-hour allowance left"
@@ -79,7 +104,7 @@
    "pct": 20.0,
    "resets_at": "2026-11-29T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-27T00:16:05.767804-05:00",
+   "read_at": "2026-11-27T00:20:53.429716-05:00",
    "source": "live",
    "left": 80.0,
    "left_words": "of your weekly allowance left"
@@ -91,7 +116,7 @@
    "read_at": "2026-11-27T00:06:58.775821-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-27T00:16:05.767804-05:00"
+  "read_at": "2026-11-27T00:20:53.429716-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -111,8 +136,21 @@
   "week_pct": 25.15,
   "usage_pct": 53.9,
   "work_pct": 98.9,
-  "read_at": "2026-11-27T05:19:00+00:00",
-  "running": []
+  "read_at": "2026-11-27T05:22:00+00:00",
+  "running": [
+   {
+    "lane": "a2",
+    "task": "T-4181",
+    "w": "Idris",
+    "k": "build",
+    "t": "Widgets refresh on their own and by a tap",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-27T00:19:19-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   }
+  ]
  },
  "api_credits": [
   {
@@ -132,7 +170,7 @@
   }
  ],
  "disk": {
-  "free_gb": 19,
+  "free_gb": 16,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -141,14 +179,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-27T00:16:00-05:00",
+   "at": "2026-11-27T00:21:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 5,
-  "at": "2026-11-27T00:19:00-05:00",
+  "at": "2026-11-27T00:22:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -166,10 +204,18 @@
  "lanes": [
   {
    "name": "Idris",
-   "state": "next",
-   "task": "Idris, P2, from T-1282 F1 (not before TestFlight):...",
-   "model": null,
-   "since": null,
+   "state": "running",
+   "task": "[build] T-4190 Settings Pro steps",
+   "model": "opus",
+   "since": "2026-11-27T05:20:42.375Z",
+   "next": []
+  },
+  {
+   "name": "Maren",
+   "state": "running",
+   "task": "[build] T-5919 Home site commit",
+   "model": "opus",
+   "since": "2026-11-27T05:21:48.644Z",
    "next": []
   },
   {
@@ -203,18 +249,38 @@
    "model": null,
    "since": null,
    "next": []
-  },
-  {
-   "name": "Maren",
-   "state": "next",
-   "task": "Maren, P1, from T-2296 review M2...",
-   "model": null,
-   "since": null,
-   "next": []
   }
  ],
  "tasks": {
-  "run": [],
+  "run": [
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "Settings and Pro: buy, restore, themes",
+    "m": "opus",
+    "at": "2026-11-27T05:20:42.375Z",
+    "o": "c",
+    "task": "T-4190"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "The Gallery shows, previews and opens every premade",
+    "m": "opus",
+    "at": "2026-11-27T05:20:53.231Z",
+    "o": "c",
+    "task": "T-4183"
+   },
+   {
+    "w": "Maren",
+    "k": "build",
+    "t": "Show the three-session system on Home",
+    "m": "opus",
+    "at": "2026-11-27T05:21:48.644Z",
+    "o": "i",
+    "task": "T-5919"
+   }
+  ],
   "src": "plan",
   "open": [
    {
@@ -294,6 +360,11 @@
   ],
   "done": [
    {
+    "w": "Idris",
+    "t": "The widget's refresh arrow no longer offers a second, competing tap when it sits inside a link,...",
+    "at": "2026-11-27T00:19:00-05:00"
+   },
+   {
     "w": "Pernille",
     "t": "The automatic check of a person's first widget now starts from a clean Home Screen and proves...",
     "at": "2026-11-27T00:11:00-05:00"
@@ -302,22 +373,22 @@
     "w": "Pernille",
     "t": "Moving projects in and out as zip files no longer loses unsaved text silently, freezes the...",
     "at": "2026-11-27T00:11:00-05:00"
-   },
-   {
-    "w": "Pernille",
-    "t": "Renaming one project no longer risks wiping the reminder about rescued text in another project...",
-    "at": "2026-11-27T00:11:00-05:00"
    }
   ],
   "count": {
-   "next": 294,
+   "next": 293,
    "wait": 0,
    "blocked": 0,
    "you": 0
   },
   "fin": {
-   "n": 0,
-   "rows": []
+   "n": 1,
+   "rows": [
+    [
+     "T-4436",
+     "Tidy the refresh tap's small..."
+    ]
+   ]
   }
  },
  "qr": [
@@ -359,33 +430,44 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-27T05:19:00Z",
+  "at": "2026-11-27T05:21:52Z",
   "s": {
-   "T-4185": [
-    "mergetest",
-    "Xcode checks on the MacBook, 1st to merge",
-    1795756200411
+   "T-4181": [
+    "merged",
+    "on main 12:12 AM ET",
+    1795756337000,
+    "Pernille"
    ],
-   "T-5319": [
-    "mergetest",
-    "iPhone tests on the MacBook",
-    null
+   "T-5919": [
+    "merged",
+    "on main 6:37 PM ET",
+    1795736262000,
+    "Operator"
+   ],
+   "T-4190": [
+    "merged",
+    "on main 5:06 PM ET",
+    1795730812000,
+    "Idris"
    ]
   },
   "nm": {
-   "T-4185": "Launcher widgets open the apps a person chose",
-   "T-5319": "Small Habits focus edges from its review"
+   "T-4181": "Widgets refresh on their own and by a tap",
+   "T-5919": "Show the three-session system on Home",
+   "T-4190": "Settings and Pro: buy, restore, themes"
   },
   "wk": {
-   "T-4185": "Idris",
-   "T-5319": "Idris"
+   "T-4181": "Idris",
+   "T-5919": "Maren",
+   "T-4190": "Idris",
+   "T-4436": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-27T05:19:00Z",
+  "at": "2026-11-27T05:21:52Z",
   "mq": {
    "n": {
-    "checking": 1,
+    "checking": 0,
     "inline": 0,
     "conflicted": 0,
     "failed": 0,
@@ -394,24 +476,15 @@
     "parked": 5
    },
    "m": {
-    "checking": 9,
+    "checking": null,
     "inline": null,
     "conflicted": null,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1008
+    "parked": 1011
    },
-   "cur": [
-    [
-     [
-      "T-4185"
-     ],
-     "iPhone app tests",
-     "MacBook",
-     9
-    ]
-   ],
+   "cur": [],
    "ld": [
     0,
     null
@@ -419,12 +492,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-27T05:19:01Z",
-    "ld": 1.14,
+    "at": "2026-11-27T05:21:06Z",
+    "ld": 1.23,
     "c": 8,
     "sb": 0,
     "dk": [
-     16.4,
+     16.3,
      228.3
     ],
     "ss": [
@@ -434,18 +507,15 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-27T05:09:57Z",
-    "ld": 2.68,
+    "at": "2026-11-27T05:19:38Z",
+    "ld": 0.91,
     "c": 12,
-    "sb": 2,
+    "sb": 0,
     "dk": [
-     359.8,
+     362.9,
      926.4
     ],
-    "sn": [
-     "itsthecompany-runner-2",
-     "itsthecompany-runner-3"
-    ]
+    "sn": []
    }
   }
  },
@@ -475,11 +545,11 @@
      "open": true
     }
    },
-   "at": "2026-11-27T05:19:00+00:00"
+   "at": "2026-11-27T05:22:01+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-27T05:18:54+00:00"
+   "at": "2026-11-27T05:21:52+00:00"
   }
  },
  "operators": [
@@ -491,6 +561,15 @@
    "e": "high",
    "t": "Work session",
    "at": "2026-11-27T00:15:52-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Evan's Account",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session \u2013 1 task",
+   "at": "2026-11-27T00:19:19-05:00"
   }
  ],
  "reply": {
@@ -502,19 +581,20 @@
   "lane_next",
   "queue_text",
   "task_done",
+  "fin_short",
   "task_title",
   "done_text",
   "lane_task",
   "task_next"
  ],
  "agents_now": {
-  "main": 0,
-  "lanes": 0,
-  "total": 0,
-  "at": "12:19 AM",
-  "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
-  "at_iso": "2026-11-27T05:19:00+00:00",
+  "main": 3,
+  "lanes": 1,
+  "total": 4,
+  "at": "12:22 AM",
+  "why": "",
+  "at_iso": "2026-11-27T05:22:00+00:00",
   "started": "12:15 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0, started 12:15 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 12:19 AM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 3, started 12:15 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 12:22 AM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-27T07:22:38.904125+00:00",
+ "at": "2026-11-27T07:25:31.959997+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -62,7 +62,7 @@
    "task": "[build] T-4478 Pages links state",
    "model": "opus",
    "started": "2026-11-27T05:41:43.084Z",
-   "seconds": 6055,
+   "seconds": 6228,
    "finished": null
   },
   {
@@ -70,7 +70,7 @@
    "task": "[build] T-4190 paywall batch two",
    "model": "opus",
    "started": "2026-11-27T06:04:32.961Z",
-   "seconds": 4685,
+   "seconds": 4858,
    "finished": null
   },
   {
@@ -78,7 +78,7 @@
    "task": "[build] T-4183 Habits focus edges",
    "model": "opus",
    "started": "2026-11-27T06:41:59.955Z",
-   "seconds": 2438,
+   "seconds": 2612,
    "finished": null
   },
   {
@@ -86,11 +86,19 @@
    "task": "[build] T-5926 review fixes",
    "model": "opus",
    "started": "2026-11-27T06:43:49.561Z",
-   "seconds": 2329,
+   "seconds": 2502,
+   "finished": null
+  },
+  {
+   "name": "maren",
+   "task": "[site] T-5925 Work panel switch",
+   "model": "opus",
+   "started": "2026-11-27T07:24:51.690Z",
+   "seconds": 40,
    "finished": null
   }
  ],
- "who": "Idris x4",
+ "who": "Idris x4, Maren",
  "recent": [
   {
    "name": "ines",
@@ -177,7 +185,7 @@
   "week_pct": 25.68,
   "usage_pct": 53.9,
   "work_pct": 98.9,
-  "read_at": "2026-11-27T07:22:00+00:00",
+  "read_at": "2026-11-27T07:25:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -223,7 +231,7 @@
   }
  ],
  "disk": {
-  "free_gb": 20,
+  "free_gb": 19,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -232,14 +240,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-27T02:18:00-05:00",
+   "at": "2026-11-27T02:23:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 5,
-  "at": "2026-11-27T02:22:00-05:00",
+  "at": "2026-11-27T02:25:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -261,6 +269,14 @@
    "task": "[build] T-4478 Pages links state",
    "model": "opus",
    "since": "2026-11-27T05:41:43.084Z",
+   "next": []
+  },
+  {
+   "name": "Maren",
+   "state": "running",
+   "task": "[site] T-5925 Work panel switch",
+   "model": "opus",
+   "since": "2026-11-27T07:24:51.690Z",
    "next": []
   },
   {
@@ -291,14 +307,6 @@
    "name": "Odalys",
    "state": "next",
    "task": "Odalys, P3, host-only, from...",
-   "model": null,
-   "since": null,
-   "next": []
-  },
-  {
-   "name": "Maren",
-   "state": "next",
-   "task": "Maren, P1, from T-2296 review M2...",
    "model": null,
    "since": null,
    "next": []
@@ -341,6 +349,15 @@
     "at": "2026-11-27T06:43:49.561Z",
     "o": "c",
     "task": "T-5926"
+   },
+   {
+    "w": "Maren",
+    "k": "site",
+    "t": "Work panel switches between finished tasks and main commits",
+    "m": "opus",
+    "at": "2026-11-27T07:24:51.690Z",
+    "o": "i",
+    "task": "T-5925"
    }
   ],
   "src": "plan",
@@ -504,7 +521,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-27T07:22:38Z",
+  "at": "2026-11-27T07:25:31Z",
   "s": {
    "T-5926": [
     "testing",
@@ -549,7 +566,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-27T07:22:38Z",
+  "at": "2026-11-27T07:25:31Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -567,7 +584,7 @@
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1132
+    "parked": 1135
    },
    "cur": [],
    "ld": [
@@ -577,12 +594,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-27T07:22:41Z",
-    "ld": 17.29,
+    "at": "2026-11-27T07:25:05Z",
+    "ld": 13.68,
     "c": 8,
     "sb": 1,
     "dk": [
-     19.8,
+     19.3,
      228.3
     ],
     "ss": [
@@ -594,16 +611,17 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-27T07:19:36Z",
-    "ld": 23.58,
+    "at": "2026-11-27T07:23:10Z",
+    "ld": 16.83,
     "c": 12,
-    "sb": 4,
+    "sb": 5,
     "dk": [
-     351.3,
+     349.3,
      926.4
     ],
     "sn": [
      "itsthecompany-runner",
+     "itsthecompany-runner-2",
      "itsthecompany-runner-3",
      "itsthecompany-runner-4",
      "itsthecompany-runner-5"
@@ -637,11 +655,11 @@
      "open": true
     }
    },
-   "at": "2026-11-27T07:22:38+00:00"
+   "at": "2026-11-27T07:25:31+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-27T07:22:38+00:00"
+   "at": "2026-11-27T07:25:31+00:00"
   }
  },
  "operators": [
@@ -690,13 +708,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 4,
+  "main": 5,
   "lanes": 2,
-  "total": 6,
-  "at": "2:22 AM",
+  "total": 7,
+  "at": "2:25 AM",
   "why": "",
-  "at_iso": "2026-11-27T07:22:00+00:00",
+  "at_iso": "2026-11-27T07:25:00+00:00",
   "started": "12:15 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 4, started 12:15 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 2:22 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 5, started 12:15 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 2:25 AM ET</p></section>"
  }
 }

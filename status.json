@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-27T03:56:15.583344+00:00",
+ "at": "2026-11-27T03:59:24.967676+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -62,7 +62,7 @@
    "task": "[build] T-4478 Pages tap links",
    "model": "opus",
    "started": "2026-11-27T02:29:24.979Z",
-   "seconds": 5210,
+   "seconds": 5399,
    "finished": null
   },
   {
@@ -70,7 +70,7 @@
    "task": "[build] T-4190 Settings Pro themes",
    "model": "opus",
    "started": "2026-11-27T02:29:37.630Z",
-   "seconds": 5197,
+   "seconds": 5387,
    "finished": null
   },
   {
@@ -78,7 +78,7 @@
    "task": "[build] T-5919 Home three sessions",
    "model": "opus",
    "started": "2026-11-27T02:30:35.377Z",
-   "seconds": 5140,
+   "seconds": 5329,
    "finished": null
   },
   {
@@ -86,7 +86,7 @@
    "task": "[build] T-5918 account names finish",
    "model": "opus",
    "started": "2026-11-27T02:30:26.922Z",
-   "seconds": 5148,
+   "seconds": 5338,
    "finished": null
   },
   {
@@ -94,7 +94,7 @@
    "task": "[build] T-4183 Gallery next steps",
    "model": "opus",
    "started": "2026-11-27T03:15:01.097Z",
-   "seconds": 2474,
+   "seconds": 2663,
    "finished": null
   }
  ],
@@ -136,7 +136,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 304,
+  "runnable_count": 305,
   "blocked_count": 0
  },
  "meter": {
@@ -185,7 +185,7 @@
   "week_pct": 21.27,
   "usage_pct": 54.2,
   "work_pct": 98.8,
-  "read_at": "2026-11-27T03:56:00+00:00",
+  "read_at": "2026-11-27T03:59:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -247,7 +247,7 @@
  "lock_in": {
   "on": true,
   "pool": 6,
-  "at": "2026-11-26T22:56:00-05:00",
+  "at": "2026-11-26T22:59:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -399,6 +399,17 @@
    },
    {
     "w": "Idris",
+    "k": "build",
+    "t": "Habits link test fits the MacBook's taller phone",
+    "s": "next",
+    "o": "c",
+    "p": [
+     1,
+     1
+    ]
+   },
+   {
+    "w": "Idris",
     "k": "fix",
     "t": "Fix a MacBook test job that failed",
     "s": "next",
@@ -424,13 +435,6 @@
     "t": "Fix a MacBook test job that failed",
     "s": "next",
     "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "tools",
-    "t": "Clear the Xcode failures that hold main",
-    "s": "next",
-    "o": "c"
    }
   ],
   "done": [
@@ -451,7 +455,7 @@
    }
   ],
   "count": {
-   "next": 304,
+   "next": 305,
    "wait": 0,
    "blocked": 0,
    "you": 0
@@ -517,7 +521,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-27T03:56:15Z",
+  "at": "2026-11-27T03:59:15Z",
   "s": {
    "T-5270": [
     "mergetest",
@@ -576,7 +580,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-27T03:56:15Z",
+  "at": "2026-11-27T03:59:15Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -594,7 +598,7 @@
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1199
+    "parked": 1202
    },
    "cur": [],
    "ld": [
@@ -604,8 +608,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-27T03:56:20Z",
-    "ld": 7.52,
+    "at": "2026-11-27T03:58:27Z",
+    "ld": 11.08,
     "c": 8,
     "sb": 1,
     "dk": [
@@ -661,11 +665,11 @@
      "open": true
     }
    },
-   "at": "2026-11-27T03:56:15+00:00"
+   "at": "2026-11-27T03:59:24+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-27T03:56:15+00:00"
+   "at": "2026-11-27T03:59:15+00:00"
   }
  },
  "operators": [
@@ -682,6 +686,8 @@
    "w": "Operator",
    "a": "Evan's Account",
    "sr": 1,
+   "m": "opus",
+   "e": "high",
    "t": "Work session \u2013 1 task",
    "at": "2026-11-26T22:06:08-05:00"
   },
@@ -689,6 +695,8 @@
    "w": "Operator",
    "a": "Evan's Account",
    "sr": 1,
+   "m": "opus",
+   "e": "high",
    "t": "Work session",
    "at": "2026-11-26T20:27:39-05:00"
   }
@@ -735,10 +743,10 @@
   "main": 5,
   "lanes": 2,
   "total": 7,
-  "at": "10:56 PM",
+  "at": "10:59 PM",
   "why": "",
-  "at_iso": "2026-11-27T03:56:00+00:00",
+  "at_iso": "2026-11-27T03:59:00+00:00",
   "started": "9:24 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 5, started 9:24 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 10:56 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 5, started 9:24 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 10:59 PM ET</p></section>"
  }
 }

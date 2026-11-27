@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-27T15:49:37.384635+00:00",
+ "at": "2026-11-27T15:54:05.980823+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -62,7 +62,7 @@
    "task": "[build] T-5939 grapheme cut fix",
    "model": "opus",
    "started": "2026-11-27T15:13:13.962Z",
-   "seconds": 2183,
+   "seconds": 2452,
    "finished": null
   },
   {
@@ -70,7 +70,7 @@
    "task": "[build] T-4190 batch four",
    "model": "opus",
    "started": "2026-11-27T15:38:43.222Z",
-   "seconds": 654,
+   "seconds": 922,
    "finished": null
   },
   {
@@ -78,7 +78,7 @@
    "task": "[build] T-4476 stale result fix",
    "model": "opus",
    "started": "2026-11-27T15:42:45.188Z",
-   "seconds": 412,
+   "seconds": 680,
    "finished": null
   }
  ],
@@ -169,7 +169,7 @@
   "week_pct": 37.31,
   "usage_pct": 53.8,
   "work_pct": 98.9,
-  "read_at": "2026-11-27T15:49:00+00:00",
+  "read_at": "2026-11-27T15:54:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -203,7 +203,7 @@
   }
  ],
  "disk": {
-  "free_gb": 11,
+  "free_gb": 13,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -212,14 +212,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-27T10:46:00-05:00",
+   "at": "2026-11-27T10:51:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 4,
-  "at": "2026-11-27T10:49:00-05:00",
+  "at": "2026-11-27T10:54:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -479,7 +479,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-27T15:49:37Z",
+  "at": "2026-11-27T15:53:45Z",
   "s": {
    "T-4181": [
     "mergetest",
@@ -507,7 +507,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-27T15:49:37Z",
+  "at": "2026-11-27T15:53:45Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -525,7 +525,7 @@
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 736
+    "parked": 741
    },
    "cur": [],
    "ld": [
@@ -535,12 +535,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-27T15:49:12Z",
-    "ld": 5.13,
+    "at": "2026-11-27T15:53:46Z",
+    "ld": 2.56,
     "c": 8,
     "sb": 1,
     "dk": [
-     13.6,
+     13.2,
      228.3
     ],
     "ss": [
@@ -552,15 +552,20 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-27T15:49:09Z",
-    "ld": 1.88,
+    "at": "2026-11-27T15:50:55Z",
+    "ld": 17.29,
     "c": 12,
-    "sb": 0,
+    "sb": 4,
     "dk": [
-     360.8,
+     359.1,
      926.4
     ],
-    "sn": []
+    "sn": [
+     "itsthecompany-runner",
+     "itsthecompany-runner-2",
+     "itsthecompany-runner-3",
+     "itsthecompany-runner-4"
+    ]
    }
   }
  },
@@ -572,7 +577,7 @@
    "parked": 9,
    "open": true,
    "mq": false,
-   "counted": "2026-11-27T15:43:48+00:00",
+   "counted": "2026-11-27T15:53:52+00:00",
    "by": {
     "app": {
      "n": 6,
@@ -590,11 +595,11 @@
      "open": true
     }
    },
-   "at": "2026-11-27T15:49:37+00:00"
+   "at": "2026-11-27T15:54:05+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-27T15:49:31+00:00"
+   "at": "2026-11-27T15:54:05+00:00"
   }
  },
  "operators": [
@@ -638,10 +643,10 @@
   "main": 3,
   "lanes": 1,
   "total": 4,
-  "at": "10:49 AM",
+  "at": "10:54 AM",
   "why": "",
-  "at_iso": "2026-11-27T15:49:00+00:00",
+  "at_iso": "2026-11-27T15:54:00+00:00",
   "started": "12:15 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 3, started 12:15 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 10:49 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 3, started 12:15 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 10:54 AM ET</p></section>"
  }
 }

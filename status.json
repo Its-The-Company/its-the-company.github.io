@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-27T15:11:11.669445+00:00",
+ "at": "2026-11-27T15:14:19.808373+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -62,7 +62,7 @@
    "task": "[build] T-4476 review fixes",
    "model": "opus",
    "started": "2026-11-27T15:00:47.463Z",
-   "seconds": 624,
+   "seconds": 812,
    "finished": null
   },
   {
@@ -70,28 +70,44 @@
    "task": "[site] T-5940 app changes bars",
    "model": "opus",
    "started": "2026-11-27T15:06:29.801Z",
-   "seconds": 281,
+   "seconds": 470,
    "finished": null
+  },
+  {
+   "name": "idris",
+   "task": "[build] T-4190 batch three fixes",
+   "model": "opus",
+   "started": "2026-11-27T15:11:44.648Z",
+   "seconds": 155,
+   "finished": null
+  },
+  {
+   "name": "pernille",
+   "task": "[build] T-5939 grapheme cut fix",
+   "model": "opus",
+   "started": "2026-11-27T15:13:13.962Z",
+   "seconds": 65,
+   "finished": null
+  }
+ ],
+ "who": "Idris x2, Maren, Pernille",
+ "recent": [
+  {
+   "name": "idris",
+   "task": "[review] T-5939 again",
+   "model": "opus",
+   "started": "2026-11-27T15:11:08.996Z",
+   "seconds": null,
+   "finished": "2026-11-27T15:13:01.745000+00:00"
   },
   {
    "name": "odalys",
    "task": "[review] T-4190 batch three",
    "model": "opus",
    "started": "2026-11-27T15:08:48.844Z",
-   "seconds": 142,
-   "finished": null
+   "seconds": null,
+   "finished": "2026-11-27T15:11:30.494000+00:00"
   },
-  {
-   "name": "idris",
-   "task": "[review] T-5939 again",
-   "model": "opus",
-   "started": "2026-11-27T15:11:08.996Z",
-   "seconds": 2,
-   "finished": null
-  }
- ],
- "who": "Idris x2, Maren, Odalys",
- "recent": [
   {
    "name": "pernille",
    "task": "[build] T-5939 review fixes",
@@ -107,22 +123,6 @@
    "started": "2026-11-27T14:19:06.517Z",
    "seconds": null,
    "finished": "2026-11-27T15:08:23.861000+00:00"
-  },
-  {
-   "name": "pernille",
-   "task": "[review] T-4476 tap routing",
-   "model": "opus",
-   "started": "2026-11-27T14:57:14.728Z",
-   "seconds": null,
-   "finished": "2026-11-27T15:00:21.904000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-4476 Foundations batch",
-   "model": "opus",
-   "started": "2026-11-27T13:30:38.183Z",
-   "seconds": null,
-   "finished": "2026-11-27T14:56:34.076000+00:00"
   }
  ],
  "queue": {
@@ -177,7 +177,7 @@
   "week_pct": 36.14,
   "usage_pct": 53.8,
   "work_pct": 98.9,
-  "read_at": "2026-11-27T15:11:00+00:00",
+  "read_at": "2026-11-27T15:14:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -227,7 +227,7 @@
  "lock_in": {
   "on": true,
   "pool": 4,
-  "at": "2026-11-27T10:11:00-05:00",
+  "at": "2026-11-27T10:14:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -260,19 +260,11 @@
    "next": []
   },
   {
-   "name": "Odalys",
-   "state": "running",
-   "task": "[review] T-4190 batch three",
-   "model": "opus",
-   "since": "2026-11-27T15:08:48.844Z",
-   "next": []
-  },
-  {
    "name": "Pernille",
-   "state": "next",
-   "task": "Pernille, P1, continuation of T-2609: after...",
-   "model": null,
-   "since": null,
+   "state": "running",
+   "task": "[build] T-5939 grapheme cut fix",
+   "model": "opus",
+   "since": "2026-11-27T15:13:13.962Z",
    "next": []
   },
   {
@@ -287,6 +279,14 @@
    "name": "Ines",
    "state": "next",
    "task": "Ines with Wrenna, P3, from T-0902 (ADR-006 s13.5, s13.7...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
+   "name": "Odalys",
+   "state": "next",
+   "task": "Odalys, P3, host-only, from...",
    "model": null,
    "since": null,
    "next": []
@@ -313,20 +313,20 @@
     "task": "T-5940"
    },
    {
-    "w": "Odalys",
-    "k": "review",
+    "w": "Idris",
+    "k": "build",
     "t": "Settings and Pro: buy, restore, themes",
     "m": "opus",
-    "at": "2026-11-27T15:08:48.844Z",
+    "at": "2026-11-27T15:11:44.648Z",
     "o": "c",
     "task": "T-4190"
    },
    {
-    "w": "Idris",
-    "k": "review",
+    "w": "Pernille",
+    "k": "build",
     "t": "Sky shows a far place's own time",
     "m": "opus",
-    "at": "2026-11-27T15:11:08.996Z",
+    "at": "2026-11-27T15:13:13.962Z",
     "o": "c",
     "task": "T-5939"
    }
@@ -496,13 +496,8 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-27T15:11:11Z",
+  "at": "2026-11-27T15:14:19Z",
   "s": {
-   "T-4185": [
-    "mergetest",
-    "Xcode checks on the MacBook, 1st to merge",
-    1795791671669
-   ],
    "T-4181": [
     "merged",
     "on main 8:44 AM ET",
@@ -511,11 +506,9 @@
    ]
   },
   "nm": {
-   "T-4185": "Launcher widgets open the apps a person chose",
    "T-4181": "Widgets refresh on their own and by a tap"
   },
   "wk": {
-   "T-4185": "Idris",
    "T-4181": "Idris",
    "T-2040": "Idris",
    "T-0591": "Idris",
@@ -532,36 +525,27 @@
   }
  },
  "ln": {
-  "at": "2026-11-27T15:11:11Z",
+  "at": "2026-11-27T15:14:19Z",
   "mq": {
    "n": {
-    "checking": 1,
+    "checking": 0,
     "inline": 0,
     "conflicted": 0,
     "failed": 0,
     "held": 0,
     "retry": 0,
-    "parked": 7
+    "parked": 9
    },
    "m": {
-    "checking": 10,
+    "checking": null,
     "inline": null,
     "conflicted": null,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 698
+    "parked": 701
    },
-   "cur": [
-    [
-     [
-      "T-4185"
-     ],
-     "iPhone app tests",
-     "MacBook",
-     10
-    ]
-   ],
+   "cur": [],
    "ld": [
     0,
     null
@@ -569,12 +553,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-27T15:11:13Z",
-    "ld": 2.37,
+    "at": "2026-11-27T15:13:31Z",
+    "ld": 2.19,
     "c": 8,
     "sb": 1,
     "dk": [
-     12.2,
+     14.4,
      228.3
     ],
     "ss": [
@@ -586,32 +570,30 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-27T15:10:15Z",
-    "ld": 4.01,
+    "at": "2026-11-27T15:12:26Z",
+    "ld": 3.98,
     "c": 12,
-    "sb": 1,
+    "sb": 0,
     "dk": [
-     359.9,
+     361.5,
      926.4
     ],
-    "sn": [
-     "itsthecompany-runner"
-    ]
+    "sn": []
    }
   }
  },
  "hc": {
   "wait": {
-   "n": 8,
+   "n": 9,
    "limit": 20,
-   "in_line": 1,
-   "parked": 7,
+   "in_line": 0,
+   "parked": 9,
    "open": true,
    "mq": false,
-   "counted": "2026-11-27T15:02:31+00:00",
+   "counted": "2026-11-27T15:12:40+00:00",
    "by": {
     "app": {
-     "n": 5,
+     "n": 6,
      "limit": 20,
      "open": true
     },
@@ -626,11 +608,11 @@
      "open": true
     }
    },
-   "at": "2026-11-27T15:11:11+00:00"
+   "at": "2026-11-27T15:14:19+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-27T15:11:11+00:00"
+   "at": "2026-11-27T15:14:19+00:00"
   }
  },
  "operators": [
@@ -674,10 +656,10 @@
   "main": 4,
   "lanes": 1,
   "total": 5,
-  "at": "10:11 AM",
+  "at": "10:14 AM",
   "why": "",
-  "at_iso": "2026-11-27T15:11:00+00:00",
+  "at_iso": "2026-11-27T15:14:00+00:00",
   "started": "12:15 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 4, started 12:15 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 10:11 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 4, started 12:15 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 10:14 AM ET</p></section>"
  }
 }

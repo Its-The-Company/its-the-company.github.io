@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-27T17:27:04.416528+00:00",
+ "at": "2026-11-27T17:30:13.104841+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -58,24 +58,32 @@
  },
  "workers": [
   {
-   "name": "idris",
-   "task": "[build] T-4476 stale result fix",
-   "model": "opus",
-   "started": "2026-11-27T17:06:22.783Z",
-   "seconds": 1241,
-   "finished": null
-  },
-  {
    "name": "pernille",
    "task": "[build] T-5795 name cut fixes",
    "model": "opus",
    "started": "2026-11-27T17:08:33.824Z",
-   "seconds": 1110,
+   "seconds": 1299,
+   "finished": null
+  },
+  {
+   "name": "pernille",
+   "task": "[review] T-4476",
+   "model": "opus",
+   "started": "2026-11-27T17:28:12.178Z",
+   "seconds": 120,
    "finished": null
   }
  ],
- "who": "Idris, Pernille",
+ "who": "Pernille x2",
  "recent": [
+  {
+   "name": "idris",
+   "task": "[build] T-4476 stale result fix",
+   "model": "opus",
+   "started": "2026-11-27T17:06:22.783Z",
+   "seconds": null,
+   "finished": "2026-11-27T17:27:43.807000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[review] T-4190",
@@ -99,30 +107,23 @@
    "started": "2026-11-27T17:02:43.957Z",
    "seconds": null,
    "finished": "2026-11-27T17:09:16.713000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[review] T-5795",
-   "model": "opus",
-   "started": "2026-11-27T17:02:36.653Z",
-   "seconds": null,
-   "finished": "2026-11-27T17:07:23.103000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 278,
+  "runnable_count": 276,
   "blocked_count": 0
  },
  "meter": {
   "five_hour": {
-   "pct": 51.0,
-   "resets_at": "2026-11-27T12:30:00-05:00",
+   "pct": null,
+   "resets_at": null,
    "used_words": "of your 5-hour allowance used",
    "read_at": "2026-11-27T12:25:21.518956-05:00",
    "source": "live",
-   "left": 49.0,
+   "last_reset": "2026-11-27T12:30:00-05:00",
+   "left": null,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
@@ -161,7 +162,7 @@
   "week_pct": 34.06,
   "usage_pct": 50.0,
   "work_pct": 99.0,
-  "read_at": "2026-11-27T17:27:00+00:00",
+  "read_at": "2026-11-27T17:30:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -216,14 +217,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-27T12:25:00-05:00",
+   "at": "2026-11-27T12:28:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 4,
-  "at": "2026-11-27T12:27:00-05:00",
+  "at": "2026-11-27T12:30:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -240,19 +241,19 @@
  },
  "lanes": [
   {
-   "name": "Idris",
-   "state": "running",
-   "task": "[build] T-4476 stale result fix",
-   "model": "opus",
-   "since": "2026-11-27T17:06:22.783Z",
-   "next": []
-  },
-  {
    "name": "Pernille",
    "state": "running",
    "task": "[build] T-5795 name cut fixes",
    "model": "opus",
    "since": "2026-11-27T17:08:33.824Z",
+   "next": []
+  },
+  {
+   "name": "Idris",
+   "state": "next",
+   "task": "Idris, P2, from T-1282 F1 (not before TestFlight):...",
+   "model": null,
+   "since": null,
    "next": []
   },
   {
@@ -291,15 +292,6 @@
  "tasks": {
   "run": [
    {
-    "w": "Idris",
-    "k": "build",
-    "t": "Projects get one file, one ID and guarded outside code",
-    "m": "opus",
-    "at": "2026-11-27T17:06:22.783Z",
-    "o": "c",
-    "task": "T-4476"
-   },
-   {
     "w": "Pernille",
     "k": "build",
     "t": "The 1.0 showcase premades are built and in the Gallery",
@@ -307,6 +299,15 @@
     "at": "2026-11-27T17:08:33.824Z",
     "o": "c",
     "task": "T-5795"
+   },
+   {
+    "w": "Pernille",
+    "k": "review",
+    "t": "Projects get one file, one ID and guarded outside code",
+    "m": "opus",
+    "at": "2026-11-27T17:28:12.178Z",
+    "o": "c",
+    "task": "T-4476"
    }
   ],
   "src": "plan",
@@ -385,29 +386,38 @@
   "done": [
    {
     "w": "Idris",
-    "t": "The app now asks for an App Store rating at most once, and only right after something the person...",
-    "at": "2026-11-27T10:38:00-05:00"
+    "t": "After a restore in Settings finds nothing or fails, buying Pro leaves no line saying there is no...",
+    "at": "2026-11-27T12:30:00-05:00"
    },
    {
     "w": "Idris",
-    "t": "Every word on the Settings screen comes from the one table the designers write, and a test fails...",
-    "at": "2026-11-27T10:38:00-05:00"
+    "t": "The test that keeps Settings from showing a word typed into the code now also looks inside...",
+    "at": "2026-11-27T12:30:00-05:00"
    },
    {
-    "w": "Maren",
-    "t": "The Work panel on Home shows again how many app changes reached main each day, today and the six...",
-    "at": "2026-11-27T10:30:00-05:00"
+    "w": "Idris",
+    "t": "The app now asks for an App Store rating at most once, and only right after something the person...",
+    "at": "2026-11-27T10:38:00-05:00"
    }
   ],
   "count": {
-   "next": 278,
+   "next": 276,
    "wait": 0,
    "blocked": 0,
    "you": 0
   },
   "fin": {
-   "n": 0,
-   "rows": []
+   "n": 2,
+   "rows": [
+    [
+     "T-4635",
+     "Clear the Settings restore..."
+    ],
+    [
+     "T-5941",
+     "Close three gaps in the..."
+    ]
+   ]
   }
  },
  "qr": [
@@ -449,7 +459,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-27T17:27:04Z",
+  "at": "2026-11-27T17:29:59Z",
   "s": {
    "T-5939": [
     "mergetest",
@@ -477,11 +487,13 @@
   "wk": {
    "T-5939": "Pernille",
    "T-4181": "Idris",
-   "T-4185": "Idris"
+   "T-4185": "Idris",
+   "T-4635": "Idris",
+   "T-5941": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-27T17:27:04Z",
+  "at": "2026-11-27T17:29:59Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -499,7 +511,7 @@
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 834
+    "parked": 837
    },
    "cur": [],
    "ld": [
@@ -509,12 +521,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-27T17:27:05Z",
-    "ld": 8.88,
+    "at": "2026-11-27T17:29:36Z",
+    "ld": 8.39,
     "c": 8,
     "sb": 1,
     "dk": [
-     56.5,
+     56.2,
      228.3
     ],
     "ss": [
@@ -549,7 +561,7 @@
    "parked": 9,
    "open": true,
    "mq": false,
-   "counted": "2026-11-27T17:18:02+00:00",
+   "counted": "2026-11-27T17:28:17+00:00",
    "by": {
     "app": {
      "n": 6,
@@ -567,11 +579,11 @@
      "open": true
     }
    },
-   "at": "2026-11-27T17:27:04+00:00"
+   "at": "2026-11-27T17:30:13+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-27T17:27:04+00:00"
+   "at": "2026-11-27T17:30:05+00:00"
   }
  },
  "operators": [
@@ -613,6 +625,7 @@
   "queue_text",
   "recent",
   "task_done",
+  "fin_short",
   "task_title",
   "done_text",
   "lane_task",
@@ -622,10 +635,10 @@
   "main": 2,
   "lanes": 2,
   "total": 4,
-  "at": "12:27 PM",
+  "at": "12:30 PM",
   "why": "",
-  "at_iso": "2026-11-27T17:27:00+00:00",
+  "at_iso": "2026-11-27T17:30:00+00:00",
   "started": "11:47 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 2, started 11:47 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 12:27 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 2, started 11:47 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 12:30 PM ET</p></section>"
  }
 }

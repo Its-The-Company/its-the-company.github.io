@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-27T20:49:16.144207+00:00",
+ "at": "2026-11-27T20:52:20.437108+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -62,7 +62,7 @@
    "task": "[build] T-5795 overlap clocks fixes",
    "model": "opus",
    "started": "2026-11-27T19:47:58.276Z",
-   "seconds": 3677,
+   "seconds": 3862,
    "finished": null
   },
   {
@@ -70,15 +70,7 @@
    "task": "[build] T-5945 two sessions per feature",
    "model": "opus",
    "started": "2026-11-27T20:15:56.824Z",
-   "seconds": 1999,
-   "finished": null
-  },
-  {
-   "name": "maren",
-   "task": "[build] T-5923 look options",
-   "model": "opus",
-   "started": "2026-11-27T20:16:06.170Z",
-   "seconds": 1989,
+   "seconds": 2183,
    "finished": null
   },
   {
@@ -86,12 +78,20 @@
    "task": "[build] T-4190 paywall pictures, privacy, store",
    "model": "opus",
    "started": "2026-11-27T20:13:32.053Z",
-   "seconds": 2144,
+   "seconds": 2328,
    "finished": null
   }
  ],
- "who": "Pernille, Odalys, Maren, Idris",
+ "who": "Pernille, Odalys, Idris",
  "recent": [
+  {
+   "name": "maren",
+   "task": "[build] T-5923 look options",
+   "model": "opus",
+   "started": "2026-11-27T20:16:06.170Z",
+   "seconds": null,
+   "finished": "2026-11-27T20:52:11.773000+00:00"
+  },
   {
    "name": "maren",
    "task": "[build] Maren words for T-2500 and T-4641",
@@ -115,14 +115,6 @@
    "started": "2026-11-27T19:56:24.719Z",
    "seconds": null,
    "finished": "2026-11-27T20:00:33.346000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-4476 notice fix commit",
-   "model": "opus",
-   "started": "2026-11-27T19:47:48.045Z",
-   "seconds": null,
-   "finished": "2026-11-27T19:56:06.454000+00:00"
   }
  ],
  "queue": {
@@ -133,19 +125,19 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 24.0,
+   "pct": 25.0,
    "resets_at": "2026-11-27T17:30:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-27T15:39:03.573699-05:00",
+   "read_at": "2026-11-27T15:50:37.610799-05:00",
    "source": "live",
-   "left": 76.0,
+   "left": 75.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 37.0,
    "resets_at": "2026-11-29T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-27T15:39:03.573699-05:00",
+   "read_at": "2026-11-27T15:50:37.610799-05:00",
    "source": "live",
    "left": 63.0,
    "left_words": "of your weekly allowance left"
@@ -157,7 +149,7 @@
    "read_at": "2026-11-27T15:17:44.937848-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-27T15:39:03.573699-05:00"
+  "read_at": "2026-11-27T15:50:37.610799-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -177,7 +169,7 @@
   "week_pct": 35.57,
   "usage_pct": 49.0,
   "work_pct": 99.0,
-  "read_at": "2026-11-27T20:49:00+00:00",
+  "read_at": "2026-11-27T20:52:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -211,7 +203,7 @@
   }
  ],
  "disk": {
-  "free_gb": 51,
+  "free_gb": 50,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -220,14 +212,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-27T15:46:00-05:00",
+   "at": "2026-11-27T15:51:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 4,
-  "at": "2026-11-27T15:49:00-05:00",
+  "at": "2026-11-27T15:52:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -268,14 +260,6 @@
    "next": []
   },
   {
-   "name": "Maren",
-   "state": "running",
-   "task": "[build] T-5923 look options",
-   "model": "opus",
-   "since": "2026-11-27T20:16:06.170Z",
-   "next": []
-  },
-  {
    "name": "Wrenna",
    "state": "next",
    "task": "Read developer.apple.com \"Keeping a widget up to date\",...",
@@ -287,6 +271,14 @@
    "name": "Ines",
    "state": "next",
    "task": "Ines with Wrenna, P3, from T-0902 (ADR-006 s13.5, s13.7...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
+   "name": "Maren",
+   "state": "next",
+   "task": "Maren, P1, from T-2296 review M2...",
    "model": null,
    "since": null,
    "next": []
@@ -320,15 +312,6 @@
     "at": "2026-11-27T20:15:56.824Z",
     "o": "c",
     "task": "T-5945"
-   },
-   {
-    "w": "Maren",
-    "k": "build",
-    "t": "Add colour, font and panel-shape options to three looks",
-    "m": "opus",
-    "at": "2026-11-27T20:16:06.170Z",
-    "o": "c",
-    "task": "T-5923"
    }
   ],
   "src": "plan",
@@ -476,7 +459,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-27T20:49:09Z",
+  "at": "2026-11-27T20:52:06Z",
   "s": {
    "T-4181": [
     "merged",
@@ -494,7 +477,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-27T20:49:09Z",
+  "at": "2026-11-27T20:52:06Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -512,7 +495,7 @@
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1036
+    "parked": 1039
    },
    "cur": [],
    "ld": [
@@ -522,8 +505,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-27T20:48:44Z",
-    "ld": 4.62,
+    "at": "2026-11-27T20:51:55Z",
+    "ld": 3.86,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -557,7 +540,7 @@
    "parked": 9,
    "open": true,
    "mq": false,
-   "counted": "2026-11-27T20:39:49+00:00",
+   "counted": "2026-11-27T20:50:43+00:00",
    "by": {
     "app": {
      "n": 6,
@@ -575,11 +558,11 @@
      "open": true
     }
    },
-   "at": "2026-11-27T20:49:16+00:00"
+   "at": "2026-11-27T20:52:20+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-27T20:49:16+00:00"
+   "at": "2026-11-27T20:52:06+00:00"
   }
  },
  "operators": [
@@ -610,6 +593,7 @@
  "trimmed": [
   "lane_next",
   "queue_text",
+  "recent",
   "task_done",
   "fin_short",
   "task_title",
@@ -618,13 +602,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 4,
+  "main": 3,
   "lanes": 1,
-  "total": 5,
-  "at": "3:49 PM",
+  "total": 4,
+  "at": "3:52 PM",
   "why": "",
-  "at_iso": "2026-11-27T20:49:00+00:00",
+  "at_iso": "2026-11-27T20:52:00+00:00",
   "started": "2:44 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 4, started 2:44 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 3:49 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 3, started 2:44 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 3:52 PM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-27T14:01:06.528993+00:00",
+ "at": "2026-11-27T14:04:07.220893+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -62,7 +62,7 @@
    "task": "[build] T-5795 Sky place zone",
    "model": "opus",
    "started": "2026-11-27T12:52:47.951Z",
-   "seconds": 4098,
+   "seconds": 4279,
    "finished": null
   },
   {
@@ -70,20 +70,20 @@
    "task": "[build] T-4476 Foundations batch",
    "model": "opus",
    "started": "2026-11-27T13:30:38.183Z",
-   "seconds": 1828,
+   "seconds": 2009,
    "finished": null
-  },
+  }
+ ],
+ "who": "Pernille, Idris",
+ "recent": [
   {
    "name": "idris",
    "task": "[build] T-4190 last strings fix",
    "model": "opus",
    "started": "2026-11-27T13:57:31.491Z",
-   "seconds": 215,
-   "finished": null
-  }
- ],
- "who": "Pernille, Idris x2",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-27T14:04:05.953000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[review] T-4190 batch two again",
@@ -107,14 +107,6 @@
    "started": "2026-11-27T13:16:22.278Z",
    "seconds": null,
    "finished": "2026-11-27T13:18:36.290000+00:00"
-  },
-  {
-   "name": "pernille",
-   "task": "[review] T-4478 batch two again",
-   "model": "opus",
-   "started": "2026-11-27T13:17:23.112Z",
-   "seconds": null,
-   "finished": "2026-11-27T13:17:49.880000+00:00"
   }
  ],
  "queue": {
@@ -169,8 +161,20 @@
   "week_pct": 33.81,
   "usage_pct": 53.8,
   "work_pct": 98.9,
-  "read_at": "2026-11-27T14:01:00+00:00",
+  "read_at": "2026-11-27T14:04:00+00:00",
   "running": [
+   {
+    "lane": "a",
+    "task": "T-4185",
+    "w": "Idris",
+    "k": "build",
+    "t": "Launcher widgets open the apps a person chose",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-27T09:02:01-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
    {
     "lane": "a2",
     "task": "T-4181",
@@ -212,14 +216,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-27T09:00:00-05:00",
+   "at": "2026-11-27T09:01:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 4,
-  "at": "2026-11-27T09:01:00-05:00",
+  "at": "2026-11-27T09:04:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -303,15 +307,6 @@
     "at": "2026-11-27T13:30:38.183Z",
     "o": "c",
     "task": "T-4476"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "Settings and Pro: buy, restore, themes",
-    "m": "opus",
-    "at": "2026-11-27T13:57:31.491Z",
-    "o": "c",
-    "task": "T-4190"
    }
   ],
   "src": "plan",
@@ -479,19 +474,34 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-27T14:01:06Z",
+  "at": "2026-11-27T14:03:58Z",
   "s": {
    "T-4181": [
     "mergetest",
     "iPhone tests on the MacBook",
     null
+   ],
+   "T-5795": [
+    "testing",
+    "Mac Mini \u00b7 test",
+    null
+   ],
+   "T-4185": [
+    "merged",
+    "on main 5:55 AM ET",
+    1795776914000,
+    "Idris"
    ]
   },
   "nm": {
-   "T-4181": "Widgets refresh on their own and by a tap"
+   "T-4181": "Widgets refresh on their own and by a tap",
+   "T-5795": "The 1.0 showcase premades are built and in the Gallery",
+   "T-4185": "Launcher widgets open the apps a person chose"
   },
   "wk": {
    "T-4181": "Idris",
+   "T-5795": "Pernille",
+   "T-4185": "Idris",
    "T-5934": "Idris",
    "T-5936": "Maren",
    "T-5513": "Ines",
@@ -507,7 +517,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-27T14:01:06Z",
+  "at": "2026-11-27T14:03:58Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -525,7 +535,7 @@
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1079
+    "parked": 1082
    },
    "cur": [],
    "ld": [
@@ -535,12 +545,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-27T14:00:34Z",
-    "ld": 7.57,
+    "at": "2026-11-27T14:03:59Z",
+    "ld": 4.6,
     "c": 8,
     "sb": 1,
     "dk": [
-     14.5,
+     14.4,
      228.3
     ],
     "ss": [
@@ -569,21 +579,21 @@
  },
  "hc": {
   "wait": {
-   "n": 7,
+   "n": 8,
    "limit": 20,
-   "in_line": 1,
-   "parked": 6,
+   "in_line": 0,
+   "parked": 8,
    "open": true,
    "mq": false,
-   "counted": "2026-11-27T13:51:00+00:00",
+   "counted": "2026-11-27T14:01:06+00:00",
    "by": {
     "app": {
-     "n": 5,
+     "n": 6,
      "limit": 20,
      "open": true
     },
     "other": {
-     "n": 2,
+     "n": 3,
      "limit": 20,
      "open": true
     },
@@ -593,11 +603,11 @@
      "open": true
     }
    },
-   "at": "2026-11-27T14:01:06+00:00"
+   "at": "2026-11-27T14:04:07+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-27T14:01:06+00:00"
+   "at": "2026-11-27T14:03:58+00:00"
   }
  },
  "operators": [
@@ -609,6 +619,15 @@
    "e": "high",
    "t": "Work session",
    "at": "2026-11-27T00:15:52-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Evan's Account",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session \u2013 1 task",
+   "at": "2026-11-27T09:02:01-05:00"
   },
   {
    "w": "Operator",
@@ -638,13 +657,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 3,
-  "lanes": 1,
+  "main": 2,
+  "lanes": 2,
   "total": 4,
-  "at": "9:01 AM",
+  "at": "9:04 AM",
   "why": "",
-  "at_iso": "2026-11-27T14:01:00+00:00",
+  "at_iso": "2026-11-27T14:04:00+00:00",
   "started": "12:15 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 3, started 12:15 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 9:01 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 2, started 12:15 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 9:04 AM ET</p></section>"
  }
 }

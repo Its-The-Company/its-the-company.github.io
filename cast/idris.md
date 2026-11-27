@@ -48,7 +48,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - Older lessons and dated logs: archive.md.
 - T-4188 (merge point) and T-5796 re-reviews still open; detail and xc.sh lessons in archive.md.
 - T-4692, T-5047, T-5607, T-5108, T-0053, T-0044: open threads in archive.md.
-- T-4181 11-27 (a2): 17e8665241 slice 7 + 299c8913fa fix (T2 re-reads `background` after the launch pass). Open: Pernille re-review; T3/extension reads, oom_guard. Lesson: a pick made before launch recovery misses the last <span title="A test written in advance. If it fires, we drop the idea.">kill</span>; re-check after it.
+- T-4181 11-27 b (a2): 924ce8613e T-0793 slice 8 (T3 reads `background`; tap and <span title="The rule that decides whether an idea gets two blind graders now, waits (park), or stops.">T1</span> still run) + a1b4a81516 widths/note; unit 2763/0. Open: Pernille review; extension `system` read and oom_guard need design calls. Lesson: two commits of one step on a branch is a check FAULT; take the next slice next session.
 {% endraw %}
 
 

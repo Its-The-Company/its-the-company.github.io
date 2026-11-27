@@ -372,6 +372,42 @@ This session resumed the 11-25 <span title="An idea that reaches B or better but
   its T1 run that activation (WidgetWriter.swift:860 against :475); (2) `leavesStatus` rows still count in the next
   row's streak.
 - Still left on T-0793: T3's batch and the extension's `system` runs read `background`; `oom_guard`.
+
+## Session 2026-11-27 12:2x-13:3x ET (Idris, lane a2, from main db8652ae3f)
+
+- Baseline at db8652ae: PyWidgetTests 2762/0/2 (J-20261127-1224-land-chk-a5ab71-2-49e8d2).
+- T-0793 924ce8613e, slice 8 only: T3 reads `background`. WidgetWriter.readsBackground(trigger) is the loop breaker's
+  own background side (`bg_refresh`, `shortcut`); the slice 7 fix's re-read after the launch-log step asks it, so the
+  Refresh Widgets intent skips a demoted widget with no row. A tap (`intent`) and T1 still run it. ADR-007 7.2 dated
+  line for slice 8 (for Pernille). Test BackgroundBatchTests.testT3LeavesOutAWidgetTheLoopBreakerTookOffButATapAndT1StillRunIt;
+  2 new mutants killed by hand (J-20261127-1256-...-00b969, J-20261127-1301-...-034dc7); the slice 7 fix mutant's find
+  follows the new line (not re-run). Unit 2763/0/2 (J-20261127-1238-land-chk-a5ab71-1-20941d), LaneWarmWindowTests 6/0
+  (J-20261127-1251-...-1367b5), host 4524/0.
+- T-4181 (this commit): Pernille's slice 6 low (1), line widths, comments and test wraps only; also two of slice 8's
+  own lines. Unit 2763/0/2 at this tree (J-20261127-1307-land-chk-a5ab71-1-455c9f). Older over-width lines in
+  BackgroundBatchTests.swift (slice 5) left as they are.
+- Not started, needs a design call first (and a second T-0793 commit in one branch is a check FAULT, so it is the next
+  session's):
+  1. The extension's `system` runs reading `background`. Finding: for a `lane: widget` widget, every path that sets
+     `background=false` from extension runs already moves it out of the lane (a marker is `killed`, demoted at once; a
+     run past the 2.0 s budget is a time move). The case left is two kills of a lane widget in the app on `shortcut`
+     (T3 runs every placed widget): then the extension's own runs are not the loop. Whether the extension should still
+     skip it ("runs only on T1") is for Pernille and Ines; my lean is no code, an ADR line saying why.
+  2. `oom_guard` for the app's background batch (ADR-007 6: margin per widget at its start, refusal `oom_guard`, no
+     badge, the batch goes on). Open: the app records no per-widget peak above baseline (`peak_mb` is the lifetime peak,
+     only when a run raised it), so the need is 2 x 13.4 MB for every widget until one is kept; and "no badge" against
+     7.2's oom_guard_since rule (a background refusal must not start the 60 s badge clock).
+- No commit, rechecked at db8652ae: T-4280 (proof is T-4494 item 3, the Investors' iPhone); T-1882 (nothing writes
+  fields.json); T-2021 (no scheme sets PYWIDGET_LANE_FORCED; needs the forced-lane bench on a quiet runner); T-4433 and
+  T-4435 (the Mac mini has only iOS 26.0 and 27.0 runtimes; 18, 27.1, 27.2 and a phone are the Investors').
+- Next: Pernille reviews 924ce8613e and this commit.
+- Pernille's review of 924ce8613e and a1b4a81516 (11-27, lane a2): none blocking. Non-blocking, for the next session:
+  1. (Low, her 11-27 Low 1, now wider) T3's ids always match T1's, so a scene-active pass that joins a T3 pass gets
+     the demoted widget back as skipped (WidgetWriter.swift:873), and T3's `last` spaces a T1 within 30 s (:875):
+     Shortcut-then-open misses the T1 restore on that activation. The test uses a fresh WidgetPasses each time, so it
+     cannot see this. Fix it, or say it on the ADR-007 line.
+  2. Add the T3 test to the slice-7 fix mutant's `tests` (Tests/mutants-t0793.json:290) and re-run that mutant: it was
+     not re-run after its find changed.
 {% endraw %}
 
 </div>

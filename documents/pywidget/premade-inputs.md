@@ -160,7 +160,7 @@ Seven kinds cover all seven premades. Each maps one to one onto a phase C compon
 | `choice` | a segmented control under an eyebrow (two or three options) | the option's value | the premade's default shows selected when the key is absent |
 | `date` | a compact DatePicker row, and a "Time" toggle row that adds a time picker | ISO 8601 with the device zone's offset, plus `all_day` | date only: the picked date at 12:00 PM in the device zone (the tour's picker rule, `tests/fixtures/tour/make_tour_fixtures.py`) and `"all_day": true` (s6, Pernille item 1). With a time: that local time |
 | `symbol` | a row that pushes a 4-column grid of the premade's options | an SF Symbol name | only names in `options`; the first is the default |
-| `place` | a row that pushes **Choose a Place** (s2.4) | `{"name", "lat", "lon"}`, and `"zone"` when `zone: true` | lat and lon as `cities.tsv` gives them (2 decimals, about 1 km); a current location is rounded to 3 decimals (about 110 m) before it is written |
+| `place` | a row that pushes **Choose a Place** (s2.4) | `{"name", "lat", "lon"}`, and `"zone"` when `zone: true`, or with `zone_known: true` when the hit has one (Sky) | lat and lon as `cities.tsv` gives them (2 decimals, about 1 km); a current location is rounded to 3 decimals (about 110 m) before it is written |
 | `list` | a card of rows (symbol tile, name, detail, chevron) and an accent "Add …" row last; tap a row for its edit sheet; swipe to delete; Edit in the nav bar to reorder where `order: "manual"` | a JSON array of item objects | `min`, `max`; at `max` the add row is disabled and the footer says why; `unique` names a key compared case- and accent-folded; without `order: "manual"` the Page sorts by the key named in `sort` |
 
 </div>
@@ -306,7 +306,8 @@ Where the premade allows it, a **current location** is offered:
 - Clocks: none (a clock needs a zone, and the phone already shows its own).
 
 Clocks needs a zone: a hit with no zone in `cities.tsv` (for example Lisburn, United Kingdom) is dimmed with
-`page.place.nozone` and cannot be chosen.
+`page.place.nozone` and cannot be chosen. Sky (`zone_known: true`) writes the zone when the hit has one and never
+dims a hit without one (s3.2).
 
 Choosing a hit returns with the place filled, and puts the city's name in the item's Name field when that field is
 empty or still holds the name the sheet copied from an earlier pick (the person may change it: "Home", "Mum's").
@@ -449,34 +450,50 @@ below and nothing else (no network, L16 "Go, local"):
   phone is there), and so does any place saved without a zone. VoiceOver says which clock when the two differ:
   "Sunrise at 7:31 AM local time, in 2 hours 10 minutes, at Lisbon"; in the phone's own zone the words stay as
   they are now.
-  **The code does not do this yet:** the place field has no zone (`zone: false`) and `read` uses the phone's zone
-  (`k.local_zone()`), so today Lisbon's 7:31 AM sunrise reads "2:31 AM" from New York (the first Simulator shot).
-  The change: the Page's place writes `zone` when its `cities.tsv` hit has one, but still lets a hit with no zone
-  be chosen (429 of the 7,342 have none, Lisburn among them; Clocks dims those, Sky must not lose them); `read`
-  takes the saved place's zone (`ZoneInfo`) as `tz` when it has one, else the phone's; every
-  `ui.Text(at, style="time")` passes `time_zone=` that zone's name (the renderer already applies a Text's zone):
-  the hero time in Small, Medium and Large (`_hero`, `sun.py:418`), the Sunrise, Sunset, Dawn and Dusk columns in
-  Medium and Large (`_col`, `sun.py:438`) and the Lock Screen rectangular's time (`sun.py:509`); the circular and
-  inline already format with `k.clock(at, tz)` and follow `read`'s zone unchanged; `_rel` (Small and Medium) and
-  the rectangular's footnote add the place's name when the zones differ; `describe` adds "local time" when the zone
-  is not the phone's; and the tests add Lisbon seen from New York (7:31 AM, the arc from Lisbon's midnight, the
-  name beside "in") beside the current New York case.
+  **How the code does it (T-5939):** the Page's place (`zone_known: true`) writes `zone` when its `cities.tsv`
+  hit has one, and a hit with no zone is still chosen as before (429 of the 7,342 have none, Lisburn among them;
+  Clocks dims those, Sky does not). `read` takes the saved place's zone (`ZoneInfo`) as `tz` when it has one, else
+  the phone's (also for a zone this build does not know), and keeps the phone's as `here`. Every
+  `ui.Text(at, style="time")` passes `time_zone=` the place's zone name when it is not the phone's (the renderer
+  applies a Text's zone): the hero time in Small, Medium and Large (`_hero`), the Sunrise, Sunset, Dawn and Dusk
+  columns in Medium and Large (`_col`) and the Lock Screen rectangular's time; the circular and inline format with
+  `k.clock(at, tz)` in the same zone. The zones "differ" when the place's clock reads other than the phone's, now
+  or at the sunrise or sunset the widget names (`far`), so Lisbon seen from London reads as one clock. Then `_rel`
+  (Small and Medium) adds "· Lisbon" after "in 2 hr", the rectangular's footnote leads with "Lisbon ·", and
+  `describe` adds "local time". Tests: `PlaceZone` in `tests/widgets/test_premade_sky.py` (Lisbon from a New York
+  phone at 10 PM Thursday: 7:31 AM in every time, Lisbon's Friday and its midnight, the name in Small, Medium and
+  the rectangular and not in the circular or inline, the VoiceOver words; Use Current Location, a place with no
+  zone and a place in the phone's own zone draw as before), and the Page's write in
+  `PremadeSettingsTests.testSkyPlaceWritesNameTwoDecimalCoordsAndItsZoneWhenKnown`.
+- **Tree size (T-5939):** a run writes the whole timeline, 13 or 14 entries in six families, and the app refuses
+  a tree over 512 KB (`MAX_WIDGET_TREE_BYTES`). With the arc and moon coordinates written in full, New York came
+  within 5% of it, and Lisbon's name and zone took it over (536,558 bytes at 1:45 PM UTC: `TreeTooLarge`, so the
+  Gallery said "The preview didn't run."). The path coordinates are now kept to 4 places (0.04 pt on Large's arc,
+  under a pixel; nothing drawn moves), and the worst of four places, three dates and every 20 minutes is 456,659
+  bytes, 87% of the limit. Each byte of the name is drawn about 141 times, so 20 family emoji (20 characters, 500
+  bytes) took Lisbon's 5:20 PM UTC run to 524,339 (T-5939 review, Idris): the name is cut at 80 UTF-8 bytes too
+  (the row below), and at 80 bytes the same sweep's worst is Sydney's, 466,334 bytes (88.95%). `TreeSize` in
+  `test_premade_sky.py` holds those cases, an 80-byte and a 500-byte name among them, under 90%, and
+  `BridgeTests.testBundledPremadesRunFromTheBundleInTheAppProcess` runs Sky for Lisbon in the app's own Python at
+  the real time, as the Gallery does.
 - **Tests:** `tests/widgets/test_premade_sky.py` (the almanac against the H249 fixtures, the arc in day, polar day,
   twilight-only and dark cases, the Lock Screen gauge, the moon's lit side at Boston, London and Sydney after each
   quarter of 2027) and `PremadePageUITests/testSkySheetDrawsTheArcAndMoonForASavedPlace`, which saves New York into the
   premade's file and shoots the Gallery sheet with the Small and Medium arcs on the iPhone 17e Simulator:
-  `ops/site-checks/T-4708/t4708-sky-sheet-light.png`.
+  `ops/site-checks/T-4708/t4708-sky-sheet-light.png`; `testSkySheetDrawsLisbonInLisbonsOwnTimeOnANewYorkPhone` saves
+  Lisbon with its zone and shoots the same sheet on the New York Simulator:
+  `ops/site-checks/T-5939/t5939-sky-lisbon-from-new-york-light.png` (T-5939).
 
 The Page:
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 4: 3.2 Sky, formerly Sunrise and sunset (sun.py; frames 6 to 9), scrolls sideways" style="--tw:718px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 4: 3.2 Sky, formerly Sunrise and sunset (sun.py; frames 6 to 9), scrolls sideways" style="--tw:753px" markdown="1">
 
 | Field | Kind | Limits and checks |
 |---|---|---|
 | Use Current Location | `toggle` → `use_current` | turning it on asks When In Use if never asked (that tap only); refused or off: the toggle goes back off and the footer shows `page.loc.off` with Open Settings (frame 9) |
-| Place | `place`, zone when known → `place` | the place used when there is no fix; reads `page.place.choose` until set; writes `zone` when the `cities.tsv` hit has one, and a hit with no zone stays choosable (Sky uses the phone's zone for it). The code still has `zone: false` until the change above |
-| · Name on Widget | inside the place: `text`, `max` 24 | the city's name by default |
+| Place | `place`, `zone_known: true` → `place` | the place used when there is no fix; reads `page.place.choose` until set; writes `zone` when the `cities.tsv` hit has one, and a hit with no zone stays choosable (Sky uses the phone's zone for it) |
+| · Name on Widget | inside the place: `text`, `name_max` 20 | the city's name by default. 20, measured in T-4468 and the same as Weather's place: Large shows it whole; Small and Medium cut it first after "in 2 hr" and the rectangular cuts the moon's words after it, so 24 would add only letters that are cut (T-5939). Also at most 4 x `name_max` = 80 UTF-8 bytes, cut at a whole character (`SettingsKinds.placeName`, for every place name, Weather's too): 20 letters, accents, CJK or single emoji stay whole, 20 family emoji keep 3. `read` cuts a saved name over 80 bytes in the same way (`_premade.place_name`), so an older or hand-written file cannot take the tree over the limit. Both cut on whole characters (grapheme clusters, as Swift's `Character` counts them; Python's tables are measured from Swift, as the widget lane has no `unicodedata`; `pywidget/tools/grapheme_check.py` compares the two and records the count in `pywidget/docs/design/premade-grapheme-check.json`): never a family's last person, a skin tone, an accent, half a flag or a conjunct's virama, and the same strings give the same results (`test_premade_sky.TreeSize.CUTS`, `PremadeSettingsTests`). After the cut both drop white space at the end as Swift's `CharacterSet.whitespaces` has it (19 code points, U+200B among them; `_premade.trim_end`, and `grapheme_check.py` compares it with `trimmingCharacters(in: .whitespaces)` for every code point). Where they differ: the Page writes NFC and cuts at 20 characters before the bytes, and `read` cuts only the bytes as written, so a name the Page did not write can keep more characters in `read` (decomposed "é" x 30: 26 in `read`, 20 on the Page; U+FB2A x 27, which NFC splits in two: 26 and 20) or fewer ("ệ" decomposed into three code points x 20: 16 in `read`, all 20 on the Page) |
 
 </div>
 
@@ -588,7 +605,7 @@ The 1.0 showcase set's first fetched premade (plan s2 row 4, free, no tag). Fram
 
 | Field | Kind | Limits and checks |
 |---|---|---|
-| Place | `place` → `place` `{"name", "lat", "lon"}`, `zone: false`, `name_max` 20 | the saved-place search the Sun page has; no current location in 1.0; footer `page.wx.foot` |
+| Place | `place` → `place` `{"name", "lat", "lon"}`, `zone: false`, `name_max` 20 (and 80 UTF-8 bytes, s3.2) | the saved-place search the Sun page has; no current location in 1.0; footer `page.wx.foot` |
 | Units | `choice` → `units` (`metric` or `imperial`), `default: "device"` | metric: degrees C and millimetres; imperial: degrees F and inches. MET Norway sends C and mm; the conversion is the premade's |
 
 </div>
@@ -675,7 +692,7 @@ Sun's:
   "sections": [
     {"key": "use_current", "kind": "toggle", "label": "Use Current Location", "permission": "location.when_in_use",
      "footer": "page.sun.cur"},
-    {"key": "place", "kind": "place", "label": "Place", "zone": false, "name_max": 24, "footer": "page.local"}]
+    {"key": "place", "kind": "place", "label": "Place", "zone_known": true, "name_max": 20, "footer": "page.local"}]
 }
 ```
 

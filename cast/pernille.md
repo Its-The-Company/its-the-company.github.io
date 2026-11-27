@@ -48,6 +48,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-5939 session 11-27 (7d3525179b, merge point; review Idris): host green does not mean the app draws. A premade's whole timeline (13-14 entries x 6 families) must fit 512 KB (TreeTooLarge); measure ui.dumps(document) for the worst day, and run a premade in-app via BridgeTests at "now".
 - T-5939 review fix 11-27 (folded: 1906af73ee): a character <span title="A measured fact that holds a grade below a letter, however good the rest is.">cap</span> is not a byte cap; a name is drawn ~141x per timeline, so cap bytes too (4 x name_max). zsh does not split $FILES: commit by path with --pathspec-from-file.
 - T-5939 third review fix 11-27 (folded: 3d088a4a43): a count I cite must come from a script that writes a record (pywidget/tools/grapheme_check.py, its json); a hand-run "measured" number was unverifiable and wrong. Probe Swift for a whole property set (GB9c consonants), never copy a subset from the spec.
+- T-5939 re-review fix 11-27 (folded: 6d43d9b791): same lesson for CharacterSet.whitespaces (U+200B missed). Run a fork's plan with the copy's own tools/feature_session.py; the main one reads main's tree.
 {% endraw %}
 
 

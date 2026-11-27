@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-27T23:52:52.780072+00:00",
+ "at": "2026-11-27T23:55:56.049586+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -62,7 +62,7 @@
    "task": "[build] T-5837 Home flow redo",
    "model": "opus",
    "started": "2026-11-27T22:49:52.350Z",
-   "seconds": 3780,
+   "seconds": 3963,
    "finished": null
   }
  ],
@@ -110,19 +110,19 @@
  "meter": {
   "five_hour": {
    "pct": 17.0,
-   "resets_at": "2026-11-28T03:29:59.793839+00:00",
+   "resets_at": "2026-11-27T22:30:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-27T18:51:34.352359-05:00",
-   "source": "usage",
+   "read_at": "2026-11-27T18:54:53.571180-05:00",
+   "source": "live",
    "left": 83.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 43.0,
-   "resets_at": "2026-11-29T06:59:59.793857+00:00",
+   "resets_at": "2026-11-29T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-27T18:51:34.352359-05:00",
-   "source": "usage",
+   "read_at": "2026-11-27T18:54:53.571180-05:00",
+   "source": "live",
    "left": 57.0,
    "left_words": "of your weekly allowance left"
   },
@@ -133,7 +133,7 @@
    "read_at": "2026-11-27T18:51:34.352359-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-27T18:51:34.352359-05:00"
+  "read_at": "2026-11-27T18:54:53.571180-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -153,7 +153,7 @@
   "week_pct": 41.3,
   "usage_pct": 49.0,
   "work_pct": 99.0,
-  "read_at": "2026-11-27T23:52:00+00:00",
+  "read_at": "2026-11-27T23:55:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -190,7 +190,7 @@
  "lock_in": {
   "on": true,
   "pool": 4,
-  "at": "2026-11-27T18:52:00-05:00",
+  "at": "2026-11-27T18:55:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -432,12 +432,12 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-27T23:52:52Z",
+  "at": "2026-11-27T23:55:37Z",
   "s": {
    "T-4181": [
     "mergeq",
     "1st to merge",
-    1795823092780
+    1795823077837
    ],
    "T-4190": [
     "mergetest",
@@ -467,7 +467,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-27T23:52:52Z",
+  "at": "2026-11-27T23:55:37Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -480,12 +480,12 @@
    },
    "m": {
     "checking": null,
-    "inline": 8,
+    "inline": 11,
     "conflicted": null,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1220
+    "parked": 1222
    },
    "cur": [],
    "ld": [
@@ -495,8 +495,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-27T23:52:50Z",
-    "ld": 1.72,
+    "at": "2026-11-27T23:54:49Z",
+    "ld": 1.37,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -548,11 +548,11 @@
      "open": true
     }
    },
-   "at": "2026-11-27T23:52:52+00:00"
+   "at": "2026-11-27T23:55:56+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-27T23:52:52+00:00"
+   "at": "2026-11-27T23:55:50+00:00"
   }
  },
  "operators": [
@@ -587,10 +587,10 @@
   "main": 1,
   "lanes": 0,
   "total": 1,
-  "at": "6:52 PM",
+  "at": "6:55 PM",
   "why": "",
-  "at_iso": "2026-11-27T23:52:00+00:00",
+  "at_iso": "2026-11-27T23:55:00+00:00",
   "started": "2:44 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 2:44 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 6:52 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 2:44 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 6:55 PM ET</p></section>"
  }
 }

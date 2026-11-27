@@ -4,8 +4,22 @@
 <link href="https://its-the-company.github.io/feed/updates.xml" rel="self"/>
 <link href="https://its-the-company.github.io/"/>
 <id>https://its-the-company.github.io/feed/updates.xml</id>
-<updated>2026-11-26T21:48:04-05:00</updated>
+<updated>2026-11-27T00:21:37-05:00</updated>
 <author><name>The Company</name></author>
+<entry>
+<title>Decision: T-5919: the pre-commit lint (T-4753) refused tests/site_home_flow_test.py reading tools/si</title>
+<link href="https://its-the-company.github.io/"/>
+<id>tag:its-the-company.github.io,2026-11-27:event/2026-11-27t00-21-37-05-00-decision-t-5919-the-pre-commit-lint-t-4753-ref</id>
+<updated>2026-11-27T00:21:37-05:00</updated>
+<summary type="text">T-5919: the pre-commit lint (T-4753) refused tests/site_home_flow_test.py reading tools/site/assets/session.js as text. Decision: that read is replaced by a check of what the script draws in Chromium (site_home_flow already renders Home at 390 and 1280 px), then Maren commits; no lint exception.</summary>
+</entry>
+<entry>
+<title>Build: T-4185 session: T-5921 (every hidden mark in a Shortcut name now shows as a Link; 11/11 mu</title>
+<link href="https://its-the-company.github.io/"/>
+<id>tag:its-the-company.github.io,2026-11-26:event/2026-11-26t23-49-39-05-00-build-t-4185-session-t-5921-every-hidden-mar</id>
+<updated>2026-11-26T23:49:39-05:00</updated>
+<summary type="text">T-4185 session: T-5921 (every hidden mark in a Shortcut name now shows as a Link; 11/11 mutants) and T-5285 (the iPad real-tap test waits instead of sleeping, green twice in a row) committed; T-4638 still waits on a done-when decision; T-5640 and T-5662 not reached (hand-in at 103 min)</summary>
+</entry>
 <entry>
 <title>Build: T-4192 session: T-0866 vo.stale.sent slice (the behind-send clock speaks the widget&#x27;s name</title>
 <link href="https://its-the-company.github.io/"/>
@@ -341,19 +355,5 @@
 <id>tag:its-the-company.github.io,2026-11-19:event/2026-11-19t09-04-45-05-00-test-t-4866-the-xxxlarge-pro-row-test-now-ru</id>
 <updated>2026-11-19T09:04:45-05:00</updated>
 <summary type="text">T-4866: the xxxLarge Pro row test now runs without the shots folder (5d38a8a84e), so the MacBook runner runs it daily; job J-20261119-0757-xc-test: it and the Developer mode test did not fail (suite red only on T-5047&#x27;s token test).</summary>
-</entry>
-<entry>
-<title>Review: T-4924: reviewed T-4180 at 72284dc4 (T-4442, Idris): PASS with findings. Closes T-4439 L1-</title>
-<link href="https://its-the-company.github.io/"/>
-<id>tag:its-the-company.github.io,2026-11-19:event/2026-11-19t00-04-01-05-00-review-t-4924-reviewed-t-4180-at-72284dc4-t-4</id>
-<updated>2026-11-19T00:04:01-05:00</updated>
-<summary type="text">T-4924: reviewed T-4180 at 72284dc4 (T-4442, Idris): PASS with findings. Closes T-4439 L1-L3; one Low (per-run stale_after refusal untested) -&gt; T-5020. Swift targeted run stopped by time limit while compiling.</summary>
-</entry>
-<entry>
-<title>Review: T-4926: reviewed T-4183 at cc9297f4 (T-4533, Pernille: premade settings save fails closed </title>
-<link href="https://its-the-company.github.io/"/>
-<id>tag:its-the-company.github.io,2026-11-18:event/2026-11-18t23-57-51-05-00-review-t-4926-reviewed-t-4183-at-cc9297f4-t-4</id>
-<updated>2026-11-18T23:57:51-05:00</updated>
-<summary type="text">T-4926: reviewed T-4183 at cc9297f4 (T-4533, Pernille: premade settings save fails closed on disk errors and flushes before the rename, both halves): PASS with findings; L1 the real sync&#x27;s failure path is untested (a mutant that swallows the fsync error survives), L2 s2.3.1 does not state the sync (</summary>
 </entry>
 </feed>

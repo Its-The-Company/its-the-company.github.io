@@ -5,7 +5,7 @@ section: "documents"
 description: "This session resumed the 11-25 parked branch (parked/a/20261125-233308-38972) and did not start over."
 ---
 <div class="crumbs" role="navigation" aria-label="Back"><a class="back" href="{{ '/documents/operations/' | relative_url }}">← Operations</a><a href="{{ '/documents/company/t-4181-handoff.html' | relative_url }}" rel="bookmark">Permanent link</a></div>
-<div class="page-head"><div class="kicker"><span class="kind blue">Plan</span><span>Day 36 · Thu Nov 26</span><span><code>ops/plans/T-4181-handoff.md</code></span></div><h1>T-4181 handoff (Operator, from Idris's report, 2026-11-26 ET, <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> a)</h1></div>
+<div class="page-head"><div class="kicker"><span class="kind blue">Plan</span><span>Day 37 · Fri Nov 27</span><span><code>ops/plans/T-4181-handoff.md</code></span></div><h1>T-4181 handoff (Operator, from Idris's report, 2026-11-26 ET, <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> a)</h1></div>
 
 <style>.doc-body{overflow-wrap:break-word}.doc-src{overflow-wrap:anywhere}.tbl[data-n~="1"] tr>:nth-child(1),.tbl[data-n~="2"] tr>:nth-child(2),.tbl[data-n~="3"] tr>:nth-child(3),.tbl[data-n~="4"] tr>:nth-child(4),.tbl[data-n~="5"] tr>:nth-child(5),.tbl[data-n~="6"] tr>:nth-child(6),.tbl[data-n~="7"] tr>:nth-child(7),.tbl[data-n~="8"] tr>:nth-child(8),.tbl[data-n~="9"] tr>:nth-child(9),.tbl[data-n~="10"] tr>:nth-child(10),.tbl[data-n~="11"] tr>:nth-child(11),.tbl[data-n~="12"] tr>:nth-child(12){min-width:0;overflow-wrap:normal}.tbl[data-o="1"] tr>:nth-child(1),.tbl[data-o="2"] tr>:nth-child(2),.tbl[data-o="3"] tr>:nth-child(3),.tbl[data-o="4"] tr>:nth-child(4),.tbl[data-o="5"] tr>:nth-child(5),.tbl[data-o="6"] tr>:nth-child(6),.tbl[data-o="7"] tr>:nth-child(7),.tbl[data-o="8"] tr>:nth-child(8),.tbl[data-o="9"] tr>:nth-child(9),.tbl[data-o="10"] tr>:nth-child(10),.tbl[data-o="11"] tr>:nth-child(11),.tbl[data-o="12"] tr>:nth-child(12){position:sticky;right:0;overflow-wrap:normal;background:var(--page);box-shadow:-1px 0 var(--line),-9px 0 8px -8px var(--sh)}</style>
 <div class="doc-body" markdown="1">
@@ -153,6 +153,36 @@ This session resumed the 11-25 <span title="An idea that reaches B or better but
 - Pernille re-read 100d07129d: nothing blocking. The mutant's find string still matches, and it is now killed by
   ordering (hold(x) keeps `queued` at 2 or more until y's turn is queued); the <span title="What keeps an idea below the top: the cap that applies to it now.">hold</span> cannot deadlock (every wait capped
   at 2 s). Her two non-blocking points are in the open list above (the 2 of 2 record, the 2 s stall).
+
+## Session 2026-11-26 8:27-10:30 PM ET (Idris, lane a2, from main bd6dc016d5)
+
+- T-0793 5900c71724, slice 4 only: Shared/RefreshBatch.swift gains `run` (one ADR-007 4.3 batch over a run closure:
+  clock asked before each start, a run saying stop ends it, a cancelled task starts nothing more) and `deferredInARow`
+  (+1 for time, 0 when started, unchanged by a stop). Core 14/0; 6 new Core mutants, all killed (mutation_check.py in
+  scratch). Pernille's open item 1 done: `BackgroundRefresh.placedNow(nil)` (WidgetKit threw) submits at the floor and
+  cancels nothing. Item 2 done: the demotion-list mutant entry no longer names testPlacedNowWithNoAppGroupStillAsks.
+  NOT RUN: the new App mutant "slice 4 no WidgetKit answer reads as nothing placed" in Tests/mutants-t0793.json (one
+  build by hand). Still left on its line: WidgetWriter's pass calling `RefreshBatch.run` from the firing (rows
+  `deferred` for the rest, `bg_refresh` trigger), where the counts are kept, the end's second submit, the 4.3 expiry
+  marker, the 7.2 loop breaker, `oom_guard`.
+- T-4433 878fa7ebee, slice only: Lock Screen glyphs take no tap (`look == .circle` guard); tests updated; s10 has
+  the runtime table, every cell open. Left: the three checks. The Mac mini has iOS 26.0 (iPhone 17) and 27.0 only, so
+  the 26 column needs a local gate-<span title="A new, permitted reading that removes a cap. A lift rule is that reading, written down before we look.">lifted</span> Lock Screen UI run; 18, 27.1, 27.2 and the phone are the Investors'.
+- T-4436 (this commit): L1 (isExtension before taps off), L3 (`treeInLink` set by a linking Link, no tap inside),
+  L4 (no `.isButton` on the face, source pin), L5 (planned-entry tap hosted, T-0430 scan message, stale mark on an age
+  turn). L2 has nothing to change until taps off is wired; its fix is written on `treeTapsOff`'s doc comment.
+- No commit: T-4280, T-1882, T-2021 (unchanged reasons above). T-4435: (a) is on main for 27.1 and 27.0; 27.2 is
+  not installed and the Mac mini has no 27.1 device now, and (b) is a SpringBoard run on those runtimes.
+- Whole PyWidgetTests at the tip's tree (XC_TASK=T-4181): 2654 executed, 2 skipped (Gallery), 0 failed
+  (J-20261126-2209-land-chk-a5ab71-3-3154ff).
+- Still open from before: the stale mutant "queued-turn-runs-on-closed-lane" in Tests/mutants-t1852.json, the
+  ecc981092e "5.1" wording (4.3), not touched this session.
+- 2026-11-26 11:40 PM (Idris): Pernille's T-4436 L3 block fixed in c24b4f1 (a T-4181 review-fix commit, 3.2 item 7): systemSmall keeps the glyph's tap inside an
+  author's Link (s3.3). Red without the fix J-20261126-2255-land-chk-a5ab71-1-201d5b (systemSmall only), green and whole
+  PyWidgetTests 2654/0 J-20261126-2259-land-chk-a5ab71-1-029ae5 (same tree as the tip), UI LaneWarmWindowTests 6/0
+  J-20261126-2319-land-chk-a5ab71-2-43ac30, host 4464/0. The Operator folded the fix and its handoff line into that one
+  T-4181 commit (same tree), so check shows no fault. Pernille's second read: nothing blocking; low, for the next
+  session: TreeView.swift:698-699's doc comment has no systemSmall exception.
 {% endraw %}
 
 </div>

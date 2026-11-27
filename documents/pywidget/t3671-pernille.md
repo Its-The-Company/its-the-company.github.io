@@ -154,6 +154,19 @@ Counts: High 0, Medium 5, Low 6.
     app's StoreKit before the clear"). Those two classes alone are green with the fix (115617.log, 26/0) and without
     it (115024.log, 26/0), so the red is how they run inside the full target on this Simulator, not this change.
   - Not covered: Release and a real iPad (F4, T-4615).
+  - Where these files are (T-5285, from T-4943 L3, 2026-11-26): the six ops/runs logs above were written in account
+    b's working copy and are not in the repository. Their lines that this record quotes (the command, each COUNTS line,
+    the failure, the totals, the failing tests by class) are in
+    pywidget/docs/reviews/t4890-evidence/f3-runs.txt, each with its line number in the original log. SpringBoard's
+    "Scene is not suitable for primary role" lines, given above as the cause, are in none of the six logs (searched
+    2026-11-26) and in no file of the repository: they came from SpringBoard's log, which the run did not save. Until
+    a red run's SpringBoard log is kept, the cause rests on this record's words, not on a file.
+  - The test's smaller points (T-5285, from T-4943 L1 L2, Idris, 2026-11-26): its teardown is registered before the
+    widget is placed, the fixed sleeps for the Countdown redraw, the placed widget and the Countdown row are waits for
+    the widget's own state, and the page is named by its title (the wells draw only once the preview has run).
+    testRealWidgetTapGoesToAnOpenWindow then passed twice in a row on the iPad Simulator (283 s and 252 s), one run of
+    two iterations; its lines are in pywidget/docs/reviews/t4890-evidence/t5285-ipad-runs.txt. An earlier run that
+    day, before the title check, failed once on the well (the page was Countdown's, its preview had not run).
 
 - **The whole class, and the real tap in all three window modes (T-5283, from T-4943 M1, Idris, 2026-11-26).** iPad
   Simulator t5283-ipad (B8C8B5CD-D275-492B-A7B5-DFE7DD9817D3), iOS 27.0, Debug, main 1d3768ea24 plus the test changes.

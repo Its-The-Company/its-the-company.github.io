@@ -300,6 +300,22 @@ Frames: before tap (stale: read 1:52 PM, now 2:46 PM, stale after 45 min), pendi
 
 **Idris confirms in the Simulator (T-0678 item 2, iOS 18 and iOS 26 runtimes; write the answers and the runtime here):** (1) a tap on the refresh Button in accessoryRectangular, with the device unlocked and the Lock Screen still showing, runs the Refresh intent once [recall: Face ID unlocks without leaving the Lock Screen; the page does not say]; (2) what a tap on a locked device does: an unlock prompt or nothing, and whether the action then runs after unlock or is dropped (the page says only that it is not performed); (3) the system's pending look on the Lock Screen, if it has one. If (1) fails on either runtime, rectangular falls back to R0 below (no control) on that runtime and this paragraph says so. The sheet `states-refresh.png` still draws the Lock Screen row with no control (its "pending" cell is the before frame); `lock-refresh.png` supersedes that row for the control.
 
+**Status of the three checks (Idris, 2026-11-26 21:1x ET, T-4433 from Pernille's T-4418 M1).** Runtimes owed: the iOS 18, 26, 27.1 and 27.2 Simulators and one phone (iOS 27 is added because the intent is pinned to the app process there, `RefreshWidgetIntent` `allowedExecutionTargets` `.main`, so a locked tap may start the app in the background). **Until every cell below is answered, the build ships the gate:** `TreeRefreshButton.tap` returns `.none` for accessoryCircular and accessoryRectangular; the glyph still draws (`look` is `.glyph`) and the widget's own tap opens the app (`Tests/RefreshAgeRendererTests.swift` pins the rule and the hosted view).
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 8: 10. Refresh and age (T-1434, DRAFT C51, NOT APPROVED), scrolls sideways" style="--tw:1238px" markdown="1">
+
+| Check | iOS 18 Sim | iOS 26 Sim | iOS 27.1 Sim | iOS 27.2 Sim | Phone |
+|---|---|---|---|---|---|
+| (1) a tap after unlock runs the intent once | not run: no runtime | not run yet | not run: no runtime on the Mac mini | not run: no runtime | not run: the Investors' iPhone |
+| (2) a tap while locked: a prompt or nothing; runs after unlock or dropped | not run: no runtime | not run yet | not run: no runtime on the Mac mini | not run: no runtime | not run: the Investors' iPhone |
+| (3) the system's pending look | not run: no runtime | not run yet | not run: no runtime on the Mac mini | not run: no runtime | not run: the Investors' iPhone |
+
+</div>
+
+
+On 11-26 the Mac mini has the iOS 26.0 and 27.0 runtimes (`xcrun simctl list runtimes`; one iPhone 17 on 26.0), so the iOS 26 column is runnable here. Each check needs a build with the gate <span title="A new, permitted reading that removes a cap. A lift rule is that reading, written down before we look.">lifted</span> and a Lock Screen UI run (WidgetKitCheckTests' `placeLockWidgets` places the rectangular widget; tree.json's token read before and after a tap counts the runs); the MacBook runner's jobs build the branch as it is, so that run is local. Check (2) also needs the Simulator locked behind a passcode; if the Simulator cannot do that, (2) is the phone's alone.
+
 ### (a) The control: a named refresh, not `@widget.action`
 
 - **Authors get `ui.RefreshButton()`** (proposed, B1). It writes a Button whose action is the reserved name `pywidget.refresh`, with no entry in `actions` and no handler. The renderer maps it to T-0678's Refresh intent.
@@ -336,7 +352,7 @@ Frames: before tap (stale: read 1:52 PM, now 2:46 PM, stale after 45 min), pendi
   - **Worked examples** (now 2:46 PM; stand-in widgets, not premades):
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 8: (c) One age line, scrolls sideways" style="--tw:1314px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 9: (c) One age line, scrolls sideways" style="--tw:1314px" markdown="1">
 
 | Tree | Clocks that count | Line (medium; small shows the short form) | Stale clock | What a person reads |
 |---|---|---|---|---|
@@ -359,7 +375,7 @@ Frames: before tap (stale: read 1:52 PM, now 2:46 PM, stale after 45 min), pendi
 ### (d) What a refresh clears
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 9: (d) What a refresh clears, scrolls sideways" style="--tw:1187px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 10: (d) What a refresh clears, scrolls sideways" style="--tw:1187px" markdown="1">
 
 | After the tap | Error badge | Stale clock | Age line |
 |---|---|---|---|
@@ -380,7 +396,7 @@ Frames: before tap (stale: read 1:52 PM, now 2:46 PM, stale after 45 min), pendi
 3. **What run detail says for a refresh whose script ran but whose forced fetch failed (F2).** The row is `error` with T-1862's token as `error_type` (proposed `FetchFailed`); it has no file, line or traceback.
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 10: (d) What a refresh clears, scrolls sideways" style="--tw:724px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 11: (d) What a refresh clears, scrolls sideways" style="--tw:724px" markdown="1">
 
 | Key | Text | Where |
 |---|---|---|
@@ -401,7 +417,7 @@ The header then reads "Could not get new data", "Failed · From the widget". Why
 - **B4 (premades, owner of `widgets/premade.py`):** `stamp()` becomes `ui.Updated()` in the bottom row; the stale branch ("Last read", warning glyph) goes. Closes T-0469 with Idris's reshoot.
 - **B5 (runtime, Idris):** the refresh intent writes a failed run row when its forced fetch fails, so s1 row 4 shows the badge; scheduled reloads do not.
 
-Open: glyph names (Idris, [recall]); the Lock Screen tap after unlock and on a locked device, iOS 18 and 26 (Idris, Simulator, T-0678 item 2; the three points under the constraint paragraph); the system's pending look (Idris, Simulator, under T-0678); the small-widget short form is settled above (T-1797: A, plus the abbreviated weekday at xxxLarge); Lock Screen text growth past 13 pt (Idris); C51 with the next creative batch.
+Open: glyph names (Idris, [recall]); the Lock Screen tap after unlock and on a locked device, and the pending look, on iOS 18, 26, 27.1 and 27.2 and a phone (Idris, Simulator, T-4433, was T-0678 item 2; the table under the constraint paragraph; the Lock Screen tap is gated off until it is full); the system's pending look (Idris, Simulator, under T-0678); the small-widget short form is settled above (T-1797: A, plus the abbreviated weekday at xxxLarge); Lock Screen text growth past 13 pt (Idris); C51 with the next creative batch.
 
 ## 11. Why the picture stopped updating (T-3290, Maren, 2026-11-07; words DRAFT C51, NOT APPROVED)
 
@@ -412,7 +428,7 @@ Read at HEAD aa76a3bfe: Widget/PyWidget.swift `drawn` (:42-69), Shared/TreeView.
 **What draws a mark** (with a last good render; s1 rows 4 and 5, first match wins; taps-off, s3.3, stays above both):
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 11: 11. Why the picture stopped updating (T-3290, Maren, 2026-11-07; words DRAFT…, scrolls sideways" style="--tw:1206px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 12: 11. Why the picture stopped updating (T-3290, Maren, 2026-11-07; words DRAFT…, scrolls sideways" style="--tw:1206px" markdown="1">
 
 | `status.json` | Mark | VoiceOver (combined element, s7) | Tap (s2) |
 |---|---|---|---|
@@ -509,7 +525,7 @@ Ines, CEO
 **Card grammar.** Follows the Pro card (s3.2): centred, whole-widget, no corner slot, no name line (the id `new_widget` is never shown), `text.primary` headline, `text.secondary` caption and glyph. It is not a fault, so the glyph is `text.secondary`, never `status.warning` or `status.danger`. Glyph: `square.dashed` [recall, Idris confirms the name]; accented: the glyph alone is accentable; vibrant: white 1.0. Layout per family: ProCardView's `content` switch with the name line removed.
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 12: Ruling, 2026-10-31 12:25 ET (Maren, with Idris, T-0684 part b, F19): what a…, scrolls sideways" style="--tw:888px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 13: Ruling, 2026-10-31 12:25 ET (Maren, with Idris, T-0684 part b, F19): what a…, scrolls sideways" style="--tw:888px" markdown="1">
 
 | ID | Family | Copy (DRAFT, C51) |
 |---|---|---|

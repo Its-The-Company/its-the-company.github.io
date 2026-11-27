@@ -447,6 +447,42 @@ This session resumed the 11-25 <span title="An idea that reaches B or better but
      ADR line (her 11-27 Low 1 asked the same).
   4. `ended` (:926): a pass a waiter let go no longer counts. Better, but not recorded in the ADR line.
 - lane_landcheck --task T-4181: green (host 4534/0 on 3.9 and 3.13).
+
+## Session 2026-11-27 15:4x-16:5x ET (Idris, lane a, from main 6f89fd02aa)
+
+- T-0793 slice 10, Pernille's review of slice 9 (items 1 to 4, all done in code or on the ADR line):
+  1. "Handed out once" now holds for joiners: WidgetPasses keeps what is owed per widget (`leftOff: Set`), settled by
+     each pass's own task before its outcomes reach the caller or a joiner. `leftOut` hands only what is owed and
+     clears it, so the second of two joiners gets nothing. The shared `out` is no longer a source.
+  2. Tests: WidgetWriterPassTests.testTwoT1sJoiningACountedT3AreHandedTheWidgetItLeftOutOnce (two joiners of a counted
+     T3, then a spaced-out T1), testAPassLetGoThatEndsLaterStillOwesTheWidgetItLeftOut,
+     testAWidgetAT1StoodDownOnStaysOwedUntilAPassRunsIt. The settle in the pass's task replaces the set in `ended`, so
+     her ":930 moved to the owner" mutant no longer applies; its place is "a pass's outcomes owe nothing" (red).
+  3. The again-pass standing down (or let go) puts its ids back (`owe(_:)`);
+     BackgroundBatchTests.testAT1WhosePassOfTheLeftOutWidgetStoodDownLeavesItOwed on the real bridge with a console run.
+     A deferred outcome is not put back: the next activation's full pass runs it.
+  4. ADR-007 7.2 dated line for slice 10 records that a pass a waiter let go no longer counts.
+- Mutants: 2 slice 9 entries follow the new code, 1 dropped (its line is gone), 6 new; all 8 red on their named tests
+  (job IDs in the commit). Batches G and H first came back exit 75 (all 6 check slots busy), resubmitted.
+- Checks at the tree: PyWidgetTests 2805/0/2 (J-20261127-1553-land-chk-a5ab71-2-554d7d), LaneWarmWindowTests 6/0
+  (J-20261127-1629-land-chk-a5ab71-6-416378), host 4548/0. A first UI run was stopped: it started while mutant H was
+  planted.
+- No commit, unchanged since 14:0x: T-4280, T-1882, T-2021, T-4433, T-4435 (same reasons as above).
+- Next: Pernille reviews 423b2184e9 (slice 10).
+
+## Review, 2026-11-27 ET (Operator, lane a)
+
+- Pernille read main..a2cb617770 (423b2184e9 T-0793 slice 10 and the note): nothing blocking. The owed set lives on
+  the actor, settle runs inside the pass's own task before its value is read, and leftOut reads and clears it, so two
+  joiners cannot both be handed a widget. All 44 mutant finds match once; the 6 new ones name tests that kill them.
+  Non-blocking, for the next session:
+  1. ADR-007:162 says a widget whose again-pass is deferred is not owed because "the next activation's full pass runs
+     it". Deferred is busy or a timed-out step (WidgetWriter.swift:519, :607); inside T3's 30 s spacing the next T1 is
+     spaced out and handed nothing, so it waits past the spacing. Reword the ADR, or owe deferred ids too.
+  2. WidgetWriter.swift:216: an again-pass let go whose task ends before `owe` runs settles first, then `owe` puts the
+     widget back: one extra run.
+  3. WidgetWriter.swift:861: ids no longer placed never leave `leftOff`; one placed again gets one extra run.
+- lane_landcheck --task T-4181: green (host 4534/0 on 3.9 and 3.13).
 {% endraw %}
 
 </div>

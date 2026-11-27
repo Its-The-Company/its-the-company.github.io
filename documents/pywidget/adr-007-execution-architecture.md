@@ -182,6 +182,17 @@ The bridge's `status` maps to the widget's outcome (contract s11 A4): `ok` with 
   pass left out, and a T1 (any trigger outside the background side) runs, as a pass of its own after the one it got
   (forced, not counted), the left-out widgets it has not run: those its outcomes show left out and those the last
   full pass left out. Each is handed out once, so a second T1 within the spacing does not run it again.
+- **Dated line (Idris), 2026-11-27, T-0793 slice 10** (Pernille's review of slice 9, items 1 to 4). Slice 9's "handed
+  out once" did not hold for two T1s that joined one pass (two iPad scenes): both read the left-out widget from the
+  shared outcomes and ran it. WidgetPasses now keeps what is owed per widget, set by each pass's own task before its
+  outcomes reach anyone: a widget a pass left out is owed, one a pass ran (a tree written or not) is not, any other
+  outcome leaves it as it was. A T1 is handed only what is owed, and taking it clears it, so the second joiner gets
+  nothing. A pass a waiter let go still settles what it owes when it ends, as its runs happened. A widget handed out
+  whose T1 pass stood down for a console run (or was let go with no outcome) is owed again; one that pass deferred is
+  not, as the next activation's full pass runs it. A T1 whose own outcome for the widget is not a run (it stood down)
+  is not handed it, and it stays owed. Counting is unchanged: only a pass that is seen to end, is counted and did not
+  stand down sets the spacing; a pass a waiter let go no longer counts (slice 9). A widget a firing (T2, not counted)
+  left out is now owed too, so a T1 spaced out by an earlier pass runs it (T1 is its restore).
 - **`oom_guard` and the badge.** `oom_guard_since` is set by the first refusal and kept by later ones and by `deferred`; any outcome of a run that started clears it. A refusal reads as already under way, and badges at once, unless the old status is a fresh picture's (an outcome present and no `failing_since`); this covers a missing status and a refusal during a failure streak. Otherwise `showsBadge` is true for `oom_guard` when `ts` is at least 60 s after `oom_guard_since`, so one reload's refusals stay unbadged and the next reload's badge; the "already under way" fallback is `ts` minus 61 s (r1 11-03 7:51 PM item 2; 8:00 PM; 11-05 2:12 AM; 2:48 PM, rule D).
 - **The drawn badge** is the demotion read or `showsBadge`, never `showsBadge` alone (r1 11-05 7:55 PM item 7). The demotion read badges an id when the list does not read, or when the id is on the list and `widgets/<id>/lane-moved` is anything but exactly `memory`, `time` or `refused_import`. A size move draws no badge; a failure move, a missing reason and an unknown one do (chair line 4:58 PM ET 11-16, below).
 - **Chair line (Ines), 4:58 PM ET 11-16, T-4630** (from T-4518 H1, `docs/reviews/t4280-pernille.md`; part of T-4181). Row 4 badges only the failure moves. The app lane is the widget's fallback (s3 item 7), and a widget the size rule placed there is working as designed; drawing it as an error would put a badge on half the premades for good. The badge says a run failed or the lane stopped trusting the widget, nothing more.

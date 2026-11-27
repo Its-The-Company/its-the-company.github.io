@@ -22,10 +22,13 @@ Measured on 2026-11-21, iOS 27.0 Simulator (iPhone 17, private device `T0044-idr
    sendBeacon and EventSource to the unlisted host never reached the server, and each raised a
    `securitypolicyviolation`. From Python, a synchronous `XMLHttpRequest` raised `NetworkError` and nothing arrived.
 2. **CSP does not cover WebRTC, and neither does a WKContentRuleList.** With either wall in place,
-   RTCPeerConnection still sent STUN over UDP and TURN over TCP to the unlisted host, in every run.
+   RTCPeerConnection still sent STUN over UDP and TURN over TCP to the unlisted host: under CSP in runs 1, 2 and 6,
+   under the rule list in runs 2 and 6 (it crashed the runner in run 1, and runs 3-5 ran only the Pyodide tests).
 3. **A document-start removal script stops WebRTC**, in the main frame and in a fresh `about:blank` iframe, and
-   Python then sees `js.RTCPeerConnection` as `None`. That is the route for a shipping app. The private switch
-   (`_setPeerConnectionEnabled:`) also works, but it is SPI, so it is a 2.5.1 rejection risk and not a route.
+   Python then sees `js.RTCPeerConnection` as `None`. That is the candidate route for a shipping app, not yet a
+   proven one: it was tried in two frame kinds only, and against hostile marketplace code it stays a candidate until
+   the bypass set under "To finish" has been tried. The private switch (`_setPeerConnectionEnabled:`) also works, but
+   it is SPI, so it is a 2.5.1 rejection risk and not a route.
 4. **Pyodide needs `'wasm-unsafe-eval'` and does not need `'unsafe-eval'`.** It starts under
    `default-src 'none'; script-src 'self' 'unsafe-inline' 'wasm-unsafe-eval'; connect-src 'self'`. Without
    `'wasm-unsafe-eval'` it does not fail: `loadPyodide` stalls with no error and no violation event, for the full
@@ -55,7 +58,7 @@ Runs through `tools/xc.sh` (`XC_SIM_SETUP=0 XC_TASK=T-0044`, `-destination id=20
 |---|---|---|
 | 1 `xcodebuild-20261121-152759` | 9 tests, first compile | The rule-list test stopped the runner 3 times: the first WebKit call (`+[WKContentRuleListStore defaultStore]`) ran off the main thread and failed in `WebKit::runInitializationCode` (crash report). The UI tests read a label after `terminate()`. Both fixed: `compileRules` is `@MainActor`, and the label is read first |
 | 2 `xcodebuild-20261121-153351` | 9 tests (7 unit, 2 UI) | 9 passed |
-| 3-5 `...154127`, `...154704`, `...154955` | Pyodide tests | Start test passed in all; the CSP and walls tests timed out until the page got a watchdog and Python used a sync XHR (finding 7) |
+| 3-5 `...154127`, `...154704`, `...154955` | Pyodide tests | The start test ran in run 3 only, and passed. Run 4 ran 2 tests (CSP needs, walls) and run 5 ran 1 (walls); the CSP and walls tests timed out until the page got a watchdog and Python used a sync XHR (finding 7) |
 | 6 `xcodebuild-20261121-155147` | all 12 | **12 executed, 0 skipped, 0 failures** |
 
 </div>
@@ -80,7 +83,7 @@ Numbers below are from run 6, with runs 1, 2 and 3 in brackets where they exist.
 | ... holding 64 MiB of Wasm memory | 79.8 MiB (79.6, 79.4) |
 | ... plus 256 MiB (320 held) | 335.8 MiB (335.6, 335.4) |
 | ... plus 1,024 MiB (1,344 held) | 1,362.3 MiB (1,362.8, 1,361.1): the Simulator let it grow; a device's jetsam limit is not tested here |
-| Pyodide cold start, first view | `loadPyodide` 1,796 ms, first print 1,798 ms, 2,611 ms from `loadHTMLString` to the result (run 3: 1,210 / 1,215 / 1,832) |
+| Pyodide load in the start test, the third Pyodide page of run 6 (`testPyodideCSPNeeds` runs first and had already loaded Pyodide twice; the first loads of a run are in the strict-policy row below: 1,630 ms in run 6, 1,271 ms in run 4) | `loadPyodide` 1,796 ms, first print 1,798 ms, 2,611 ms from `loadHTMLString` to the result (run 3: 1,210 / 1,215 / 1,832) |
 | Pyodide, three more fresh views | load 1,359 / 2,030 / 1,290 ms; to result 2,081 / 2,687 / 1,925 ms (run 3: 1,058-1,115 / 1,606-1,666) |
 | Footprint after the cold load | 141.6 MiB (run 3: 147.1) |
 | ... after `sum(list(range(1_000_000)))` | 152.3 MiB (run 3: 153.6), result `499999500000` |
@@ -116,8 +119,14 @@ below as constants and refuses any other file before it compares npm's hashes (c
 `pywidget/tests/spikes/test_t0044_fetch_pyodide.py`). The software log row is in `log/software.md`. The file run here:
 
 - `pyodide-314.0.7.tgz`, 6,488,647 bytes, sha256 `66b7949e5a0cba2250b586d7e368bf12fb482800748d182c4618254b685ffaa0`,
-  sha512 `0YvXxEhfEdpLfb/XkM2BFAeMROq0iMUX2bzzH9pOttyMcWkwq+HbE5uyuGD82LN7y2q+SNvi/6V5JEsOlD2R1A==`, MPL-2.0,
-  14 files (`pyodide.asm.wasm` 9,598,218 bytes, `python_stdlib.zip` 2,545,637, `pyodide.asm.mjs` 1,250,344).
+  sha512 `0YvXxEhfEdpLfb/XkM2BFAeMROq0iMUX2bzzH9pOttyMcWkwq+HbE5uyuGD82LN7y2q+SNvi/6V5JEsOlD2R1A==`, MPL-2.0 (the
+  npm `license` field, which covers Pyodide's own code), 14 files (`pyodide.asm.wasm` 9,598,218 bytes,
+  `python_stdlib.zip` 2,545,637, `pyodide.asm.mjs` 1,250,344).
+
+MPL-2.0 is not the whole licence picture. The core also carries CPython's standard library (`python_stdlib.zip`,
+PSF-2.0) and a WebAssembly build of CPython and its C libraries, each under its own licence. That is fine for a spike,
+because nothing from Pyodide is distributed. A component licence audit has to happen before M2 ships anything
+(item 5 under "To finish").
 
 It is unpacked with `tar -C` into `T-0044-idris/core/` in the scratch folder, outside the repository. Nothing from
 Pyodide is committed or shipped. The test bundle reads it from `TEST_RUNNER_T0044_PYODIDE_DIR`. Without that variable
@@ -154,6 +163,12 @@ arrive. If a later WebKit closes either leak, those tests go red and the finding
 2. Finding 7: a minimal reproduction, then decide whether to report it to Pyodide. That report is outreach, so the
    Investors decide.
 3. If M2 goes ahead: replace the loopback server with a `WKURLSchemeHandler` and measure start time again that way.
+4. Before the removal script is called the route for a shipping app: try the bypass set against it. The test used the
+   main frame and one `createElement('iframe')` `about:blank` frame only. Still to try: a `srcdoc` iframe, a nested
+   iframe, an iframe navigated to a same-origin page (same-origin navigated frames), and a page that reads the globals
+   before or after a frame swap.
+5. Before M2 ships anything: a component licence audit of the Pyodide core (Pyodide's own code is MPL-2.0; the
+   CPython standard library, PSF-2.0, the wasm build of CPython and its C libraries carry their own licences).
 {% endraw %}
 
 </div>

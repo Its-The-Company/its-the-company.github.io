@@ -761,6 +761,8 @@ The Effect lines of the amendments.md entries the charter retired (2026-11-04 12
 - **2026-11-26 6:24 PM ET** ((private)): Account a is called Evan's account and account b Jeremy's account wherever an Investor reads it, never account a or b; internal ids may stay a and b. The fix is finished and its board line ticked, so it leaves the queue
 - **2026-11-26 6:35 PM ET** ((private)): Answering the recommendation on #325 (c7205512096, c7205537596): main runs 6 feature sessions at once (was 4); the Pages category (T-4478) moves from Jeremy's account's area to main's; Evan's and Jeremy's accounts stay at 2 sessions each
 - **2026-11-26 6:36 PM ET** ((private)): The company implements the site update: everything on Home shows how the system works now (three sessions, one per account: main's coordinator with its feature sessions, Evan's account and Jeremy's account each on their own area; tools/merge.sh as the one road to main; reviews before every merge)
+- **2026-11-27 5:23 PM ET** ((private)): Fixing what held work back on 11-27, restoring the pace of app changes, and using the main account's usage are P0: the main account's session fills its 6 places with app work first, and the fixes for what stops it (T-5945 two sessions on one feature, area moves) go ahead of other work
+- **2026-11-27 5:46 PM ET** ((private)): The 11-24 freeze on adding anything new to Home until the process work is done is lifted; the rest of that ruling (site work cut like process work) stands. T-5837 (Home shows the three-session flow's features, steps, merge turn, merges and largest hold; old pool, lane, Bottlenecks and Flow signals panels off) may start now, with flowchart mockup B (T-4010) as the task list
 {% endraw %}
 
 </div>

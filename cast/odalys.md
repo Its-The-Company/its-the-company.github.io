@@ -51,6 +51,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-5917 11-26: a red in a suite run is mine only if it is green on HEAD; rerun just the reds from a git-archive copy of HEAD. rm of a $(...) path is refused: use the literal path.
 - T-5918 11-27 58bb457712: the shell is zsh: a $F list of paths is one word; list paths literally. Reds on HEAD: merge_limit_split, records, xc_inputs, supervisor, dispatch_tick (all pre-existing 11-27).
 - T-5944 11-27: check a diagnosis's 'on main by key' with land_dupes.keys_of first: a same-subject redo has a new author time (T-3792 9ec08e6329 vs ba2a62b354), no copy. parked_count.waiting_refs already cuts ticked and keyed commits. A copy reads done holds as live only with main's ops/runs/.waiting.json; order --json may write ops/runs/.done_seen.json.
+- T-5945 11-27 050a4a9ee3: a 46-suite one-at-a-time run under load 30-240 hit the 2 h background limit at 43; split such a run or pick suites by what imports the change. personal_land_test 'lands: from main' with/without hook red seen, not yet proven on HEAD.
 {% endraw %}
 
 

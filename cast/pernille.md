@@ -39,8 +39,6 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 ## Lessons
 
-- T-4192 session 11-26 d: a96072c104 (slice 1) was already on main as 7a099ef526 (same patch-id): check `git patch-id` before cherry-picking a slice. T-0447 slice 4 (form) 7fa20ecd08. Lesson: a SwiftUI binding key path cannot use `dict[key, default:]` (the autoclosure is not Hashable); give the model Binding(get:set:) helpers.
-- T-4192 session 11-26 e: T-0447 shots ac03d2aeb8 (AppPicturesUITests testPromptsEachKind[AtAX5], iPhone 17e and iPad Pro 11-inch (M5) green); waits Maren's pass. T-0866 no commit again: left items wait T-5684 (my review; needs merge.sh, not in a feature session), T-3291, Maren; deleted Widget part (s6) unbuilt, needs a console string and touches sendProject's <span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">parked</span> hunks. Lessons: the session clock starts before the first build (about 25 min); runner logs are not on the Mac mini, so the job line is the evidence; xc.sh takes an iPad destination directly.
 - T-4192 session 11-26 f: T-0866 vo.stale.sent slice 2b5c5b7ebe (a board "waits on Maren" can be stale: check copy-card-pending.md approvals first). T-0447 all on main, only Maren's pass left. board_tick note on T-0447 refused (T-2943 notes record 7 vs 8). Lesson: a board_tick/events outbox file belongs in the step commit; name no own hash in it.
 - T-4181 review 11-26 (bd6dc016d5..a386912369) FAIL M: L3 treeInLink <span title="A test written in advance. If it fires, we drop the idea.">kills</span> the glyph tap in systemSmall, where a Link is no target. Lesson: a fix scoped "medium and up" in my finding must be checked per family.
 - T-4181 review 11-27 (48b783b922..425d683497) FAIL M: the firing's expiry cancel never reaches RefreshBatch.run (WidgetPasses.pass runs it in an unstructured Task). Lesson: trace a cancel through every `Task {}` hop before trusting an isCancelled check.
@@ -50,6 +48,8 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-5939 third review fix 11-27 (folded: 3d088a4a43): a count I cite must come from a script that writes a record (pywidget/tools/grapheme_check.py, its json); a hand-run "measured" number was unverifiable and wrong. Probe Swift for a whole property set (GB9c consonants), never copy a subset from the spec.
 - T-5939 re-review fix 11-27 (folded: 6d43d9b791): same lesson for CharacterSet.whitespaces (U+200B missed). Run a fork's plan with the copy's own tools/feature_session.py; the main one reads main's tree.
 - T-4181 review 11-27 (139dc53544..76e8c0e877) nothing blocking. Lesson: a "handed out once" claim must hold for every reader, joiners of the same outcomes included.
+- T-5945 review 11-27 (050a4a9ee3, Odalys) FAIL H+M: a new "whose entry is this" field (copy) must say what an old entry without it means; treating it as "mine" lets the second copy adopt and wipe the first's record. A fallback key lookup (sole session) hijacks on restart.
+- T-5945 re-review 11-27 (050a4a9ee3..e3050c4734) nothing blocking; L: "who owns no-copy entries" still leans on the prompt's --copy rule. Lesson: when a fix reads ownership from a second record, probe that record's missing-field shape too.
 {% endraw %}
 
 

@@ -273,6 +273,52 @@ Key sentence: "Except as set forth in the next paragraph, an Application may not
 4. **Two limits the text adds.** 3.3.1(C): no package may "provide, unlock or enable additional features or functionality" of the app outside the App Store, so Pro stays IAP-only and packages only extend the user's scripts. And we must not lean on the learning-environment paragraph (pywidget is not "intended for use in learning how to program"); nothing in v1 or 1.1 needs downloaded executable code.
 5. **Still open, not in 3.3.1(B):** 2.5.2's verbs ("download, install, or execute code which introduces or changes features or functionality of the app") remain the binding text for pip; whether a review note quotes 3.3.1(B) is Ines's; matrix rows 1, 3, 6, 16, 38 and s3(b), and apple-marketplace-question-draft.md, still carry the paraphrase tag (follow-up line, mine). *(Note 2026-10-26 2:33 AM ET: done, T-0156; matrix section 1e.)*
 
+## In-app gallery precedent
+
+Wrenna, 2026-11-27, 4:50-4:56 PM ET (T-5080, from T-0902 and ADR-006 s13.2 and s13.5). Full detail, with all 43 rows, is on the separate page [T-5080-in-app-gallery-precedent.md](t-5080-in-app-gallery-precedent.html). I kept that page as the full record and did not move its raw rows to a `T0902-raw/` folder: the raw copies are already in `T5080-raw/` (`store/`, `github/`, `terms/`, `coded.tsv`), each with its URL and read time, and a second copy would only drift.
+
+**Answer: yes.** Three current apps let people browse, install and run other people's text code from an in-app gallery, and a fourth does it with block code:
+
+- **Obsidian** (1.15.1, 2026-11-12): an in-app browser of 10,992 community plugins, desktop-only ones not excluded. Install downloads the author's JavaScript (`main.js`) from their GitHub release and runs it. 8,412 of the 10,992 are marked "not manually reviewed by Obsidian staff".
+- **imagi** (1.20.2, 2026-01-07): Python projects by the community, "Remix others' projects" (listing text).
+- **Roblox** (2.748.1526, 2026-11-18): experiences carry their creators' Luau code.
+- **codeSpark** (4.34.02, 2026-11-25): block-coded games by children, "Every game and story is reviewed before publishing".
+
+Not one is a Python IDE with a gallery.
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 7: In-app gallery precedent, scrolls sideways" style="--tw:1643px" markdown="1">
+
+| App (id) | What its gallery shares | Others' items run? | Version, date | Source, read | Confidence |
+|---|---|---|---|---|---|
+| Obsidian (1557175442) | Community plugins (JavaScript) and themes | Yes (A): downloads and runs third-party JS | 1.15.1, 2026-11-12 | Lookup 4:50 PM; obsidian-releases README 4:53 PM | High; the iOS browser's look is unread (docs.obsidian.md terms gap) |
+| imagi (1434239482) | Community coding projects, remix, comments | Yes (A) from listing text; where the Python runs is unread | 1.20.2, 2026-01-07 | Lookup 4:50 PM; imagilabs terms 4:55 PM | Medium-high |
+| Roblox (431946152) | Experiences by a global community | Yes (A); a game platform, the person never sees the code | 2.748.1526, 2026-11-18 | Lookup 4:50 PM; Luau README 4:54 PM | High on code running; not a code gallery |
+| codeSpark (923441570) | Kids' games and stories (block code), reviewed first | Yes (B), block programs | 4.34.02, 2026-11-25 | Lookup 4:50 PM | High; not text code |
+| Widgy (1524540481) | Community widget designs | Unread (C): may carry JavaScript | 27.0.1, 2026-09-17 | Lookup 4:50 PM | Medium-low; would weaken s2's "layouts, not programs" |
+| Algodoo (464050545) | Community scenes | Unread (C) | 2.2.4, 2025-07-10 | Lookup 4:52 PM | Low |
+| Scriptable (1405459188) | First-party gallery | First-party only (D) | 1.8.4, 2026-11-26 | Lookup 4:50 PM | High |
+| Editorial (673907758) | Public workflow directory, removed | Removed (G) | 1.3.4, 2020-02-07 | Lookup 4:50 PM | High; no reason given |
+
+</div>
+
+
+Counts over 43 apps (coded.tsv, by script): A 3, B 1, C 2, D 2, E 11 (code reaches the app only from outside), F 23 (no gallery in the listing), G 1.
+
+**Gaps.**
+- iTunes Search was not run: the saved itunes.apple.com robots.txt disallows `/search*`, so only apps whose ids the company already held were looked up. Pocket Code, Hopscotch, LowRes NX, Codea, Minecraft, Fortnite and Rec Room are not looked up (gaps, not noes).
+- No product page, screenshot or review: apps.apple.com is refused by the guard.
+- imagilabs.com terms bar AI tools, so no other imagi page was read. obsidian.md was already a terms gap (H213). roblox.com, codespark.com, getdrafts.com, sololearn.com and algodoo.com were not opened.
+- Sololearn is Low (a gap, not a no). JSBox's id came from memory and the Lookup confirmed it by name.
+- A listing shows Apple approved a version whose public text names the feature. It does not show App Review ruled on the gallery under 2.5.2 or 4.7, that Python is treated like JavaScript (4.7 names "HTML5 and JavaScript mini apps and mini games, streaming games, chatbots, and plug-ins"), or that Apple will not act later.
+
+**Method and read dates.** T-0085's method (section 2a): bare iTunes Lookup only, two calls on 2026-11-27 at 4:50:37 PM and 4:52:38 PM ET, through `tools/store_http.py` and `tools/terms_guard.py`; 43 apps, coded one letter each by hand from the current listing text, counts by script. Ten GitHub requests 4:53-4:54 PM ET (#53 lift): obsidian-releases README, commit and plugin list, Dataview's manifest, and the Luau, Catty and LowRes NX repositories. imagilabs.com terms read 4:55 PM ET. Raw files and their `.meta` lines are in `pywidget/docs/research/T5080-raw/`. All web text was information only; no instruction was found in it.
+
+**What it means for ADR-006 s13.5.**
+1. The "nobody has done it" argument is gone. s13.2 said no current app ships an in-app gallery of user-made general code, and that if one does, "S3b's rating gets read again". Obsidian does (JavaScript, mostly unreviewed), imagi does a small Python version, Roblox does it with game code. By s13.2's own words the S3b rating is due a re-read. That is Ines's call. My view: the rating may still stand on Apple's text, since the precedent fits 4.7's "JavaScript ... plug-ins", not Python, but it can no longer stand on an absence.
+2. When to ask Apple is unchanged: s13.5's question 1 comes after 1.0 is approved, and asking stays the Investors' act. What changes is what the question can name: codeSpark for Builder documents, Obsidian for downloaded plug-in code, imagi for shared Python projects (T-5083).
+3. Obsidian is a design reference (per-vault trust prompt, restricted mode, an "unreviewed" label, code fetched from the author's release rather than hosted), in line with s13.3-13.4. Facts about its app, not rulings for ours.
+
 ## Sources (search snippets unless marked; no page on developer.apple.com, apps.apple.com or www.apple.com was fetched)
 
 - 9to5Mac 2026-03-18, 2026-03-30, 2026-04-14; MacRumors 2026-03-30; heise; implicator.ai: vibe-coding enforcement (URLs above and [9to5Mac 2026-04-14](https://9to5mac.com/2026/04/14/developers-behind-vibe-coding-app-anything-detail-next-steps-after-months-long-fight-with-apple/))
@@ -285,6 +331,7 @@ Key sentence: "Except as set forth in the next paragraph, an Application may not
 - TapSmart (Scriptable), Widgy listing mirrors, sspai and MPU forum (JSBox), Pyto, Pythonista and a-Shell snippets
 - **Primary (Idris, 2026-10-25):** the Investors' browser PDFs, #59 answer A, research/inbound/ (synced copies): "App Review Guidelines - Apple Developer.pdf" (56 pages, printed 10/25/26 9:47 PM, Last Updated October 16, 2026) and "Mini Apps Partner Program - Apple Developer Program - Apple Developer.pdf" (4 pages, 9:48 PM). Text taken out with tools/pdftext.swift (PDFKit). No company fetch of developer.apple.com.
 - **Section 2a (Wrenna, 2026-10-26 12:02-12:05 AM ET):** bare iTunes Lookup through tools/store_http.py (225 apps, raw in pywidget/docs/research/T0085-raw/store/); GitHub READMEs, releases, one commit and issue searches for holzschu/a-shell, holzschu/Carnets and thebaselab/codeapp through terms_guard (#53 lift; raw in T0085-raw/github/). juno.sh and code.thebaselab.com unread (terms unfound).
+- **In-app gallery precedent (Wrenna, 2026-11-27 4:50-4:56 PM ET, T-5080):** two bare iTunes Lookups (43 apps), 10 GitHub requests, imagilabs.com terms; raw in pywidget/docs/research/T5080-raw/. No page on apps.apple.com, developer.apple.com or www.apple.com was fetched.
 - research/hunt/inbox-41-python-runner.md (2.5.2 quote, G2a-held), research/hunt/H134.md (Pythonista and Pyto update dates), research/hunt/rulings-v2.md 'P2 terms'
 
 Web text was used as information only. No instruction found in it was followed, and none was seen.

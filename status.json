@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-27T14:56:00.361051+00:00",
+ "at": "2026-11-27T14:59:00.581363+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -59,18 +59,10 @@
  "workers": [
   {
    "name": "idris",
-   "task": "[build] T-4476 Foundations batch",
-   "model": "opus",
-   "started": "2026-11-27T13:30:38.183Z",
-   "seconds": 5122,
-   "finished": null
-  },
-  {
-   "name": "idris",
    "task": "[build] T-4190 batch three",
    "model": "opus",
    "started": "2026-11-27T14:19:06.517Z",
-   "seconds": 2213,
+   "seconds": 2394,
    "finished": null
   },
   {
@@ -78,12 +70,28 @@
    "task": "[build] T-5939 review fixes",
    "model": "opus",
    "started": "2026-11-27T14:37:51.274Z",
-   "seconds": 1089,
+   "seconds": 1269,
+   "finished": null
+  },
+  {
+   "name": "pernille",
+   "task": "[review] T-4476 tap routing",
+   "model": "opus",
+   "started": "2026-11-27T14:57:14.728Z",
+   "seconds": 105,
    "finished": null
   }
  ],
- "who": "Idris x2, Pernille",
+ "who": "Idris, Pernille x2",
  "recent": [
+  {
+   "name": "idris",
+   "task": "[build] T-4476 Foundations batch",
+   "model": "opus",
+   "started": "2026-11-27T13:30:38.183Z",
+   "seconds": null,
+   "finished": "2026-11-27T14:56:34.076000+00:00"
+  },
   {
    "name": "idris",
    "task": "[review] T-5795 Sky zone",
@@ -107,14 +115,6 @@
    "started": "2026-11-27T14:04:13.720Z",
    "seconds": null,
    "finished": "2026-11-27T14:05:05.654000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-4190 last strings fix",
-   "model": "opus",
-   "started": "2026-11-27T13:57:31.491Z",
-   "seconds": null,
-   "finished": "2026-11-27T14:04:05.953000+00:00"
   }
  ],
  "queue": {
@@ -169,7 +169,7 @@
   "week_pct": 36.14,
   "usage_pct": 53.8,
   "work_pct": 98.9,
-  "read_at": "2026-11-27T14:56:00+00:00",
+  "read_at": "2026-11-27T14:59:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -215,7 +215,7 @@
   }
  ],
  "disk": {
-  "free_gb": 11,
+  "free_gb": 16,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -224,14 +224,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-27T09:54:00-05:00",
+   "at": "2026-11-27T09:58:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 4,
-  "at": "2026-11-27T09:56:00-05:00",
+  "at": "2026-11-27T09:59:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -250,9 +250,9 @@
   {
    "name": "Idris",
    "state": "running",
-   "task": "[build] T-4476 Foundations batch",
+   "task": "[build] T-4190 batch three",
    "model": "opus",
-   "since": "2026-11-27T13:30:38.183Z",
+   "since": "2026-11-27T14:19:06.517Z",
    "next": []
   },
   {
@@ -301,15 +301,6 @@
    {
     "w": "Idris",
     "k": "build",
-    "t": "Projects get one file, one ID and guarded outside code",
-    "m": "opus",
-    "at": "2026-11-27T13:30:38.183Z",
-    "o": "c",
-    "task": "T-4476"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
     "t": "Settings and Pro: buy, restore, themes",
     "m": "opus",
     "at": "2026-11-27T14:19:06.517Z",
@@ -324,6 +315,15 @@
     "at": "2026-11-27T14:37:51.274Z",
     "o": "c",
     "task": "T-5939"
+   },
+   {
+    "w": "Pernille",
+    "k": "review",
+    "t": "Projects get one file, one ID and guarded outside code",
+    "m": "opus",
+    "at": "2026-11-27T14:57:14.728Z",
+    "o": "c",
+    "task": "T-4476"
    }
   ],
   "src": "plan",
@@ -491,7 +491,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-27T14:55:48Z",
+  "at": "2026-11-27T14:59:00Z",
   "s": {
    "T-5939": [
     "mergetest",
@@ -535,7 +535,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-27T14:55:48Z",
+  "at": "2026-11-27T14:59:00Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -553,7 +553,7 @@
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 683
+    "parked": 686
    },
    "cur": [],
    "ld": [
@@ -563,12 +563,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-27T14:55:51Z",
-    "ld": 2.85,
+    "at": "2026-11-27T14:58:40Z",
+    "ld": 2.37,
     "c": 8,
     "sb": 1,
     "dk": [
-     13.2,
+     15.5,
      228.3
     ],
     "ss": [
@@ -580,8 +580,8 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-27T14:53:29Z",
-    "ld": 28.91,
+    "at": "2026-11-27T14:56:33Z",
+    "ld": 17.05,
     "c": 12,
     "sb": 1,
     "dk": [
@@ -620,11 +620,11 @@
      "open": true
     }
    },
-   "at": "2026-11-27T14:56:00+00:00"
+   "at": "2026-11-27T14:59:00+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-27T14:55:48+00:00"
+   "at": "2026-11-27T14:59:00+00:00"
   }
  },
  "operators": [
@@ -677,10 +677,10 @@
   "main": 3,
   "lanes": 2,
   "total": 5,
-  "at": "9:56 AM",
+  "at": "9:59 AM",
   "why": "",
-  "at_iso": "2026-11-27T14:56:00+00:00",
+  "at_iso": "2026-11-27T14:59:00+00:00",
   "started": "12:15 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 3, started 12:15 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 9:56 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 3, started 12:15 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 9:59 AM ET</p></section>"
  }
 }

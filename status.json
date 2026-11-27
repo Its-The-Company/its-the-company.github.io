@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-27T23:40:38.535463+00:00",
+ "at": "2026-11-27T23:43:42.331875+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -62,7 +62,7 @@
    "task": "[build] T-5837 Home flow redo",
    "model": "opus",
    "started": "2026-11-27T22:49:52.350Z",
-   "seconds": 3046,
+   "seconds": 3229,
    "finished": null
   }
  ],
@@ -104,7 +104,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 269,
+  "runnable_count": 268,
   "blocked_count": 0
  },
  "meter": {
@@ -153,7 +153,7 @@
   "week_pct": 40.34,
   "usage_pct": 49.0,
   "work_pct": 99.0,
-  "read_at": "2026-11-27T23:40:00+00:00",
+  "read_at": "2026-11-27T23:43:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -188,7 +188,7 @@
   }
  ],
  "disk": {
-  "free_gb": 49,
+  "free_gb": 46,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -197,14 +197,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-27T18:38:00-05:00",
+   "at": "2026-11-27T18:42:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 4,
-  "at": "2026-11-27T18:40:00-05:00",
+  "at": "2026-11-27T18:43:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -356,6 +356,11 @@
   ],
   "done": [
    {
+    "w": "Maren",
+    "t": "A site test assumed one app screen's explanation was up to date. It went out of date when that...",
+    "at": "2026-11-27T18:41:00-05:00"
+   },
+   {
     "w": "Idris",
     "t": "Two early test builds left the phone's last position inside the Distance widget's settings file,...",
     "at": "2026-11-27T18:38:00-05:00"
@@ -364,22 +369,21 @@
     "w": "Odalys",
     "t": "A second worker on the same feature can no longer wipe out the first worker's record of what...",
     "at": "2026-11-27T18:35:00-05:00"
-   },
-   {
-    "w": "Wrenna",
-    "t": "Three current iPhone apps already let people browse and run other people's code from an in-app...",
-    "at": "2026-11-27T17:13:00-05:00"
    }
   ],
   "count": {
-   "next": 269,
+   "next": 268,
    "wait": 0,
    "blocked": 0,
    "you": 0
   },
   "fin": {
-   "n": 10,
+   "n": 11,
    "rows": [
+    [
+     "T-5924",
+     "Build the look picker page..."
+    ],
     [
      "T-4833",
      "Clear old builds' location..."
@@ -399,10 +403,6 @@
     [
      "T-4791",
      "Note the privacy row gap in..."
-    ],
-    [
-     "T-2500",
-     "Settings cleanups: Copy..."
     ]
    ]
   }
@@ -446,7 +446,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-27T23:40:22Z",
+  "at": "2026-11-27T23:43:42Z",
   "s": {
    "T-5890": [
     "mergetest",
@@ -467,6 +467,7 @@
   "wk": {
    "T-5890": "Idris",
    "T-4181": "Idris",
+   "T-5924": "Maren",
    "T-4833": "Idris",
    "T-5945": "Odalys",
    "T-5080": "Wrenna",
@@ -480,7 +481,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-27T23:40:22Z",
+  "at": "2026-11-27T23:43:42Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -498,7 +499,7 @@
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1207
+    "parked": 1210
    },
    "cur": [],
    "ld": [
@@ -508,12 +509,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-27T23:40:15Z",
-    "ld": 5.62,
+    "at": "2026-11-27T23:43:18Z",
+    "ld": 4.66,
     "c": 8,
     "sb": 0,
     "dk": [
-     48.6,
+     46.3,
      228.3
     ],
     "ss": [
@@ -543,7 +544,7 @@
    "parked": 9,
    "open": true,
    "mq": false,
-   "counted": "2026-11-27T23:32:12+00:00",
+   "counted": "2026-11-27T23:42:24+00:00",
    "by": {
     "app": {
      "n": 6,
@@ -561,11 +562,11 @@
      "open": true
     }
    },
-   "at": "2026-11-27T23:40:38+00:00"
+   "at": "2026-11-27T23:43:42+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-27T23:40:38+00:00"
+   "at": "2026-11-27T23:43:30+00:00"
   }
  },
  "operators": [
@@ -609,10 +610,10 @@
   "main": 1,
   "lanes": 1,
   "total": 2,
-  "at": "6:40 PM",
+  "at": "6:43 PM",
   "why": "",
-  "at_iso": "2026-11-27T23:40:00+00:00",
+  "at_iso": "2026-11-27T23:43:00+00:00",
   "started": "2:44 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 1, started 2:44 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 6:40 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 1, started 2:44 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 6:43 PM ET</p></section>"
  }
 }

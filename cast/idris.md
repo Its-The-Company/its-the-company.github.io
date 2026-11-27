@@ -54,7 +54,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-4188 (merge point) and T-5796 re-reviews still open; detail and xc.sh lessons in archive.md.
 - T-4692, T-5047, T-5607, T-5108, T-0053, T-0044, T-4181: open threads in archive.md.
 - T-4185 11-26 (a, 23:xx): T-5921 6232f07d82 (11/11 mutants), T-5285 (iPad 2x green; well check -> nav title). T-5640 probe drafted (T-4185-idris/t5640/patch.py), not run. Lesson: a foreground Bash call is cut at 600 s; long xc.sh runs go in the background with an until-loop wait.
-- T-4478 11-27: scratch T-4478-idris/wt at 0a1ebd85ed (T-4553, T-4577, T-4556, T-5015 picked onto 906368cc1a); build green, full test job J-20261127-0405-land-chk-a5ab71-4-36f959 queued, no result by 5:05 AM. T-4705 blocked: no premade_op channel (Pernille's s9.4 row) on main. Lesson: a queued check's result is a row in ops/metrics/land_xc.jsonl; don't re-queue.
+- T-4478 11-27: scratch T-4478-idris/wt 8541fec6a2 (Pernille's M1 route(of:), M2 <i> bound 100, Lows) on 0a1ebd85ed; unit 2704/0 J-...0513-...285cc0, host 4468/0, mutant red. Open: re-review, land. T-4705 blocked: no premade_op channel on main. Lesson: a mutant's restore step needs an absolute path, then check the hash.
 {% endraw %}
 
 

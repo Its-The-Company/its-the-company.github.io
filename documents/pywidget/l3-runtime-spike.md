@@ -155,7 +155,7 @@ Idris, runs 8:10-8:21 AM ET, built from main at b52edd9c15 (this worktree, clean
 
 ### 9.1 Read the deltas, not the totals
 
-The host was loaded: load average 505 / 224 / 117 (1 / 5 / 15 min) at 8:10 AM, during the Release build, on 8 cores; 180 / 289 / 235 at 8:21 AM. Other sessions were building. "To entry" (process start to the bench's entry) was 2.0-3.6 s, against 0.3 s on 2026-10-25 (section 3) and 1.9-2.1 s on 11-02. That measures the machine. Compare rows with each other, and with section 3 only for memory and Python's own init.
+The host was loaded: load average 505 / 224 / 117 (1 / 5 / 15 min) at 8:10 AM, during the Release build, on 8 cores; 180 / 289 / 235 at 8:21 AM. Other sessions were building. "To entry" (process start to the bench's entry), both dates on the same basis, the four app rows of 6 cold launches each: the four row medians were 2.1-2.5 s today against 1.9-2.1 s on 11-02, and the range over all 24 launches was 2.0-3.6 s today against 1.8-2.4 s on 11-02 (11-02's raw lines at refs/archive/parked/b/20261102-084136-20620, `pywidget/ios/bench/t0213/`); section 3 had 0.3 s on 2026-10-25. Row by row the medians moved -0.04 to +0.56 s, and the slowest launch 2.4 -> 3.6 s. That measures the machine. Compare rows with each other, and with section 3 only for memory and Python's own init.
 
 ### 9.2 Release against Debug (app, zip, 6 cold launches each, medians, max in brackets)
 

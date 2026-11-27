@@ -232,6 +232,51 @@ This session resumed the 11-25 <span title="An idea that reaches B or better but
   (pywidget/ hunks; its handoff hunk is already in this file). Then build, show the new test red without the
   forwarding and green with it, run slice 5's 5 mutants and slice 4's one, the whole unit target, and Pernille re-reads.
 - Pernille's review of 48b783b922..425d683497: nothing blocking on T-4589 (its joiner-test margins are open item 3 above).
+
+## Session 2026-11-27 04:0x-5:30 AM ET (Idris, lane a2, from main 74a9479fa1)
+
+- T-0793 08ab0da964, slice 5 with Pernille's blocking fix folded in (restored with `git apply` of both scratch patches,
+  not `git am`, so nothing untested was committed). The new test
+  BackgroundBatchTests.testAnExpiryWhileARealPassRunsTheBatchStartsNoMoreWidgets is red with the cancel forwarding
+  removed ("run a", "run b", "run c"; J-20261127-0424-land-chk-a5ab71-2-15f7fa) and green with it. Mutants by hand
+  (scratch by_hand.py, now honouring XC_TASK), each failed its named test: slice 5's 5 (J-20261127-0439-...-58b4eb,
+  -0443-...-13e17f, -0447-...-136f7a, -0454-...-1148f9, -0458-...-30ebb2), slice 4's "no WidgetKit answer reads as
+  nothing placed" (J-20261127-0434-...-34939c), and 2 new ones for the fix in Tests/mutants-t0793.json ("the expiry
+  never reaches the pass's batch", "the batch ignores stopped"; J-...0424-...-15f7fa, J-20261127-0429-...-45d1f9).
+  ADR-007 section numbers in T-0793's own doc comments moved to the renumbered ADR (8f3db3bcd5: triggers 4.1, not 5.1).
+- T-4181 93e2233980: TreeRefreshButton's doc comment now states the systemSmall exception inside an author's Link
+  (Pernille's low on c24b4f1). Comment only.
+- Checks at the tip's tree: PyWidgetTests 2679 run, 0 failed, 2 skipped (Gallery), result.json complete
+  (J-20261127-0503-land-chk-a5ab71-2-2372c0); LaneWarmWindowTests 6/0 (J-20261127-0520-land-chk-a5ab71-2-31291c);
+  host 4468/0.
+- The ecc981092e "5.1" wording stands only in that commit's subject (not editable); no doc comment says "5.1 batch
+  bound". Still open, outside T-0793: about 12 other doc comments and test strings cite the pre-8f3db3bcd5 numbers
+  (ADR-007 5.1 for triggers, 5.3 for stuck runs): WidgetWriter.swift:232, WidgetWriterTests.swift:1078,
+  TreeTimelineTests.swift:200, RunLogRecorderTests.swift:273, RefreshScheduleTests.swift:8, WidgetStatus.swift:425,
+  RefreshSchedule.swift:3, TreeTimeline.swift:209, CrashMarker.swift:35, RunLogRecorder.swift:10 and :325,
+  RunRow.swift:293. One sweep commit by whoever owns those lines.
+- No commit, reasons rechecked at 74a9479fa1: T-4280 (proof is T-4494 item 3, the Investors' iPhone); T-1882 (no Swift
+  or runtime code writes fields.json yet); T-2021 (no scheme sets PYWIDGET_LANE_FORCED; needs the forced-lane bench
+  on a quiet runner); T-4433 and T-4435 (the Mac mini still has only iOS 26.0 and 27.0 runtimes).
+- Next: Pernille re-reads 08ab0da964 and 93e2233980. Then T-0793's next slice, the ADR-007 4.3 expiry marker
+  (`expired`, `deferred`, `backgrounded`, `expired_runs`), then the 7.2 loop breaker and `oom_guard`. Her slice 5
+  non-blocking points (1), (2), (4) above stay open. MERGE POINT not reached: 5 of 6 steps wait on things a session
+  lacks.
+
+## Pernille's re-review, 2026-11-27 ET (Operator, lane a2)
+
+- Pernille read main...57356ba4e4: nothing blocking. The expiry's cancel sets Stop and RefreshBatch.run reads
+  `stopped()` before each start; a joiner awaits the uncancelled pass task and gets the stopped outcomes; the new test
+  is red without `stop.set()` or `stopped()`; the other 14 mutant finds in Tests/mutants-t0793.json match once each.
+- Open, non-blocking, for the next slice:
+  1. Tests/mutants-t0793.json:44 names testAFiringSetsItsExpiryThenReschedulesThenEndsOnceWithSuccess, since renamed
+     (...RunsReschedules...); the entry's other test still kills the mutant.
+  2. An expiry during the running widget's prune, Pro check or Python start (each up to 15 s) still starts Python:
+     check `stopped` just before the start too (the closure at WidgetWriter.swift:280). "No Python start after an
+     expiry" above is too broad until then.
+  3. No test that a joiner gets the stopped outcomes.
+  4. BackgroundRefreshTask.swift:36 is over the line width.
+  Her slice 5 points (1), (2), (4) stay open.
 {% endraw %}
 
 </div>

@@ -46,6 +46,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-4192 session 11-26 f: T-0866 vo.stale.sent slice 2b5c5b7ebe (a board "waits on Maren" can be stale: check copy-card-pending.md approvals first). T-0447 all on main, only Maren's pass left. board_tick note on T-0447 refused (T-2943 notes record 7 vs 8). Lesson: a board_tick/events outbox file belongs in the step commit; name no own hash in it.
 - T-4181 review 11-26 (bd6dc016d5..a386912369) FAIL M: L3 treeInLink <span title="A test written in advance. If it fires, we drop the idea.">kills</span> the glyph tap in systemSmall, where a Link is no target. Lesson: a fix scoped "medium and up" in my finding must be checked per family.
 - T-4181 review 11-27 (48b783b922..425d683497) FAIL M: the firing's expiry cancel never reaches RefreshBatch.run (WidgetPasses.pass runs it in an unstructured Task). Lesson: trace a cancel through every `Task {}` hop before trusting an isCancelled check.
+- T-4181 re-review 11-27 (08ab0da964..57356ba4e4) nothing blocking. Lesson: grep every test a mutants file names; a renamed test leaves a stale entry.
 {% endraw %}
 
 

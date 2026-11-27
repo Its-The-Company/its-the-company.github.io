@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-27T06:48:49.973181+00:00",
+ "at": "2026-11-27T06:51:40.859032+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -58,19 +58,11 @@
  },
  "workers": [
   {
-   "name": "maren",
-   "task": "[build] T-5919 Home site commit",
-   "model": "opus",
-   "started": "2026-11-27T05:21:48.644Z",
-   "seconds": 5221,
-   "finished": null
-  },
-  {
    "name": "odalys",
    "task": "[build] T-5918 account names text",
    "model": "opus",
    "started": "2026-11-27T05:22:08.942Z",
-   "seconds": 5201,
+   "seconds": 5371,
    "finished": null
   },
   {
@@ -78,7 +70,7 @@
    "task": "[build] T-4478 Pages links state",
    "model": "opus",
    "started": "2026-11-27T05:41:43.084Z",
-   "seconds": 4026,
+   "seconds": 4197,
    "finished": null
   },
   {
@@ -86,7 +78,7 @@
    "task": "[build] T-4190 paywall batch two",
    "model": "opus",
    "started": "2026-11-27T06:04:32.961Z",
-   "seconds": 2657,
+   "seconds": 2827,
    "finished": null
   },
   {
@@ -94,7 +86,7 @@
    "task": "[build] T-4183 Habits focus edges",
    "model": "opus",
    "started": "2026-11-27T06:41:59.955Z",
-   "seconds": 410,
+   "seconds": 580,
    "finished": null
   },
   {
@@ -102,12 +94,28 @@
    "task": "[build] T-5926 review fixes",
    "model": "opus",
    "started": "2026-11-27T06:43:49.561Z",
-   "seconds": 300,
+   "seconds": 471,
+   "finished": null
+  },
+  {
+   "name": "ines",
+   "task": "[review] T-5919",
+   "model": "opus",
+   "started": "2026-11-27T06:51:10.649Z",
+   "seconds": 30,
    "finished": null
   }
  ],
- "who": "Maren, Odalys, Idris x4",
+ "who": "Odalys, Idris x4, Ines",
  "recent": [
+  {
+   "name": "maren",
+   "task": "[build] T-5919 Home site commit",
+   "model": "opus",
+   "started": "2026-11-27T05:21:48.644Z",
+   "seconds": null,
+   "finished": "2026-11-27T06:50:52.378000+00:00"
+  },
   {
    "name": "pernille",
    "task": "[review] T-5926",
@@ -131,14 +139,6 @@
    "started": "2026-11-27T05:55:53.641Z",
    "seconds": null,
    "finished": "2026-11-27T06:01:57.299000+00:00"
-  },
-  {
-   "name": "general-purpose",
-   "task": "Why personal accounts get no task",
-   "model": "opus",
-   "started": "2026-11-27T05:55:44.671Z",
-   "seconds": null,
-   "finished": "2026-11-27T05:55:44.726Z"
   }
  ],
  "queue": {
@@ -193,7 +193,7 @@
   "week_pct": 24.51,
   "usage_pct": 53.9,
   "work_pct": 98.9,
-  "read_at": "2026-11-27T06:48:00+00:00",
+  "read_at": "2026-11-27T06:51:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -255,7 +255,7 @@
  "lock_in": {
   "on": false,
   "pool": 5,
-  "at": "2026-11-27T01:48:00-05:00",
+  "at": "2026-11-27T01:51:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -271,14 +271,6 @@
   "at": "2026-11-27T00:15:36.638824-05:00"
  },
  "lanes": [
-  {
-   "name": "Maren",
-   "state": "running",
-   "task": "[build] T-5919 Home site commit",
-   "model": "opus",
-   "since": "2026-11-27T05:21:48.644Z",
-   "next": []
-  },
   {
    "name": "Odalys",
    "state": "running",
@@ -296,17 +288,17 @@
    "next": []
   },
   {
-   "name": "Pernille",
-   "state": "next",
-   "task": "Pernille, P1, continuation of T-2609: after...",
-   "model": null,
-   "since": null,
+   "name": "Ines",
+   "state": "running",
+   "task": "[review] T-5919",
+   "model": "opus",
+   "since": "2026-11-27T06:51:10.649Z",
    "next": []
   },
   {
-   "name": "Ines",
+   "name": "Pernille",
    "state": "next",
-   "task": "Ines, P2, from T-5470...",
+   "task": "Pernille, P1, continuation of T-2609: after...",
    "model": null,
    "since": null,
    "next": []
@@ -318,19 +310,18 @@
    "model": null,
    "since": null,
    "next": []
+  },
+  {
+   "name": "Maren",
+   "state": "next",
+   "task": "Maren, P1, from T-2296 review M2...",
+   "model": null,
+   "since": null,
+   "next": []
   }
  ],
  "tasks": {
   "run": [
-   {
-    "w": "Maren",
-    "k": "build",
-    "t": "Show the three-session system on Home",
-    "m": "opus",
-    "at": "2026-11-27T05:21:48.644Z",
-    "o": "i",
-    "task": "T-5919"
-   },
    {
     "w": "Odalys",
     "k": "build",
@@ -375,6 +366,15 @@
     "at": "2026-11-27T06:43:49.561Z",
     "o": "c",
     "task": "T-5926"
+   },
+   {
+    "w": "Ines",
+    "k": "review",
+    "t": "Show the three-session system on Home",
+    "m": "opus",
+    "at": "2026-11-27T06:51:10.649Z",
+    "o": "i",
+    "task": "T-5919"
    }
   ],
   "src": "plan",
@@ -534,12 +534,17 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-27T06:48:30Z",
+  "at": "2026-11-27T06:51:40Z",
   "s": {
    "T-4185": [
     "mergetest",
     "iPhone tests on the MacBook",
     null
+   ],
+   "T-4183": [
+    "testq",
+    "1st for a Simulator",
+    1795762240859
    ],
    "T-4181": [
     "merged",
@@ -568,6 +573,7 @@
   },
   "nm": {
    "T-4185": "Launcher widgets open the apps a person chose",
+   "T-4183": "The Gallery shows, previews and opens every premade",
    "T-4181": "Widgets refresh on their own and by a tap",
    "T-5919": "Show the three-session system on Home",
    "T-5918": "Name the accounts Evan's and Jeremy's everywhere",
@@ -575,6 +581,7 @@
   },
   "wk": {
    "T-4185": "Idris",
+   "T-4183": "Idris",
    "T-4181": "Idris",
    "T-5919": "Maren",
    "T-5918": "Odalys",
@@ -586,7 +593,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-27T06:48:30Z",
+  "at": "2026-11-27T06:51:40Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -604,7 +611,7 @@
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1098
+    "parked": 1101
    },
    "cur": [],
    "ld": [
@@ -614,12 +621,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-27T06:48:28Z",
-    "ld": 5.45,
+    "at": "2026-11-27T06:51:45Z",
+    "ld": 4.02,
     "c": 8,
     "sb": 1,
     "dk": [
-     12.8,
+     12.6,
      228.3
     ],
     "ss": [
@@ -631,20 +638,19 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-27T06:45:10Z",
-    "ld": 34.96,
+    "at": "2026-11-27T06:49:21Z",
+    "ld": 52.94,
     "c": 12,
-    "sb": 5,
+    "sb": 4,
     "dk": [
-     353.8,
+     353.5,
      926.4
     ],
     "sn": [
      "itsthecompany-runner",
      "itsthecompany-runner-2",
-     "itsthecompany-runner-3",
-     "itsthecompany-runner-4",
-     "itsthecompany-runner-5"
+     "itsthecompany-runner-5",
+     "itsthecompany-runner-6"
     ]
    }
   }
@@ -675,11 +681,11 @@
      "open": true
     }
    },
-   "at": "2026-11-27T06:48:49+00:00"
+   "at": "2026-11-27T06:51:40+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-27T06:48:37+00:00"
+   "at": "2026-11-27T06:51:40+00:00"
   }
  },
  "operators": [
@@ -731,10 +737,10 @@
   "main": 6,
   "lanes": 2,
   "total": 8,
-  "at": "1:48 AM",
+  "at": "1:51 AM",
   "why": "",
-  "at_iso": "2026-11-27T06:48:00+00:00",
+  "at_iso": "2026-11-27T06:51:00+00:00",
   "started": "12:15 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>8</b> agents running now</p><p class=\"an-sub\">Main session 6, started 12:15 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 1:48 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>8</b> agents running now</p><p class=\"an-sub\">Main session 6, started 12:15 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 1:51 AM ET</p></section>"
  }
 }

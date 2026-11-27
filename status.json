@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-27T02:27:20.036284+00:00",
+ "at": "2026-11-27T02:30:19.895648+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -66,8 +66,33 @@
   "landed": 1,
   "failed": 4
  },
- "workers": [],
- "who": "",
+ "workers": [
+  {
+   "name": "idris",
+   "task": "[build] T-4478 Pages tap links",
+   "model": "opus",
+   "started": "2026-11-27T02:29:24.979Z",
+   "seconds": 54,
+   "finished": null
+  },
+  {
+   "name": "idris",
+   "task": "[build] T-4190 Settings Pro themes",
+   "model": "opus",
+   "started": "2026-11-27T02:29:37.630Z",
+   "seconds": 42,
+   "finished": null
+  },
+  {
+   "name": "idris",
+   "task": "[build] T-4183 Gallery premade tests",
+   "model": "opus",
+   "started": "2026-11-27T02:29:50.138Z",
+   "seconds": 29,
+   "finished": null
+  }
+ ],
+ "who": "Idris x3",
  "recent": [],
  "queue": {
   "runnable": [],
@@ -77,20 +102,21 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 50.0,
-   "resets_at": "2026-11-27T02:29:59.813579+00:00",
+   "pct": null,
+   "resets_at": null,
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-26T21:23:50.168607-05:00",
-   "source": "usage",
-   "left": 50.0,
+   "read_at": "2026-11-26T21:29:14.535852-05:00",
+   "source": "live",
+   "last_reset": "2026-11-26T21:30:00-05:00",
+   "left": null,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 16.0,
-   "resets_at": "2026-11-29T06:59:59.813597+00:00",
+   "resets_at": "2026-11-29T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-26T21:23:50.168607-05:00",
-   "source": "usage",
+   "read_at": "2026-11-26T21:29:14.535852-05:00",
+   "source": "live",
    "left": 84.0,
    "left_words": "of your weekly allowance left"
   },
@@ -101,7 +127,7 @@
    "read_at": "2026-11-26T21:23:50.168607-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-26T21:23:50.168607-05:00"
+  "read_at": "2026-11-26T21:29:14.535852-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -121,20 +147,8 @@
   "week_pct": 38.69,
   "usage_pct": 54.2,
   "work_pct": 98.8,
-  "read_at": "2026-11-27T02:27:00+00:00",
+  "read_at": "2026-11-27T02:30:00+00:00",
   "running": [
-   {
-    "lane": "a",
-    "task": "T-4185",
-    "w": "Idris",
-    "k": "build",
-    "t": "Launcher widgets open the apps a person chose",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-26T18:15:19-05:00",
-    "n": "Evan",
-    "src": "plan-a"
-   },
    {
     "lane": "a2",
     "task": "T-4181",
@@ -191,7 +205,7 @@
   }
  ],
  "disk": {
-  "free_gb": 18,
+  "free_gb": 21,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -200,14 +214,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-26T21:25:00-05:00",
+   "at": "2026-11-26T21:29:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 3,
-  "at": "2026-11-26T21:27:00-05:00",
+  "at": "2026-11-26T21:30:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -225,10 +239,10 @@
  "lanes": [
   {
    "name": "Idris",
-   "state": "next",
-   "task": "Idris, P2, from T-1282 F1 (not before TestFlight):...",
-   "model": null,
-   "since": null,
+   "state": "running",
+   "task": "[build] T-4478 Pages tap links",
+   "model": "opus",
+   "since": "2026-11-27T02:29:24.979Z",
    "next": []
   },
   {
@@ -273,7 +287,35 @@
   }
  ],
  "tasks": {
-  "run": [],
+  "run": [
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "A project shows a full-screen Page that answers taps",
+    "m": "opus",
+    "at": "2026-11-27T02:29:24.979Z",
+    "o": "c",
+    "task": "T-4478"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "Settings and Pro: buy, restore, themes",
+    "m": "opus",
+    "at": "2026-11-27T02:29:37.630Z",
+    "o": "c",
+    "task": "T-4190"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "The Gallery shows, previews and opens every premade",
+    "m": "opus",
+    "at": "2026-11-27T02:29:50.138Z",
+    "o": "c",
+    "task": "T-4183"
+   }
+  ],
   "src": "plan",
   "open": [
    {
@@ -414,12 +456,28 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-27T02:27:13Z",
+  "at": "2026-11-27T02:30:12Z",
   "s": {
+   "T-4185": [
+    "mergetest",
+    "Xcode checks on the MacBook, 1st to merge",
+    1795746552086
+   ],
+   "T-4433": [
+    "mergetest",
+    "iPhone tests on the MacBook",
+    null
+   ],
    "T-4182": [
     "merged",
     "on main 6:16 PM ET",
     1795735016000,
+    "Idris"
+   ],
+   "T-4190": [
+    "merged",
+    "on main 5:06 PM ET",
+    1795730812000,
     "Idris"
    ],
    "T-4181": [
@@ -427,30 +485,28 @@
     "on main 3:13 PM ET",
     1795723983000,
     "Operator"
-   ],
-   "T-4185": [
-    "merged",
-    "on main 9:49 AM ET",
-    1795704592000,
-    "Idris"
    ]
   },
   "nm": {
+   "T-4185": "Launcher widgets open the apps a person chose",
+   "T-4433": "Confirm the Lock Screen refresh tap first",
    "T-4182": "A failing widget says so and can recover",
-   "T-4181": "Widgets refresh on their own and by a tap",
-   "T-4185": "Launcher widgets open the apps a person chose"
+   "T-4190": "Settings and Pro: buy, restore, themes",
+   "T-4181": "Widgets refresh on their own and by a tap"
   },
   "wk": {
+   "T-4185": "Idris",
+   "T-4433": "Idris",
    "T-4182": "Idris",
-   "T-4181": "Idris",
-   "T-4185": "Idris"
+   "T-4190": "Idris",
+   "T-4181": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-27T02:27:13Z",
+  "at": "2026-11-27T02:30:12Z",
   "mq": {
    "n": {
-    "checking": 0,
+    "checking": 1,
     "inline": 0,
     "conflicted": 0,
     "failed": 0,
@@ -459,15 +515,24 @@
     "parked": 6
    },
    "m": {
-    "checking": null,
+    "checking": 1,
     "inline": null,
     "conflicted": null,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1192
+    "parked": 1195
    },
-   "cur": [],
+   "cur": [
+    [
+     [
+      "T-4185"
+     ],
+     "iPhone app tests",
+     "MacBook",
+     1
+    ]
+   ],
    "ld": [
     0,
     null
@@ -475,12 +540,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-27T02:26:48Z",
-    "ld": 3.64,
+    "at": "2026-11-27T02:30:13Z",
+    "ld": 2.9,
     "c": 8,
     "sb": 1,
     "dk": [
-     18.4,
+     20.6,
      228.3
     ],
     "ss": [
@@ -492,15 +557,17 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-27T02:25:01Z",
-    "ld": 10.93,
+    "at": "2026-11-27T02:28:39Z",
+    "ld": 7.08,
     "c": 12,
-    "sb": 0,
+    "sb": 1,
     "dk": [
-     370.0,
+     368.5,
      926.4
     ],
-    "sn": []
+    "sn": [
+     "itsthecompany-runner"
+    ]
    }
   }
  },
@@ -530,11 +597,11 @@
      "open": true
     }
    },
-   "at": "2026-11-27T02:27:20+00:00"
+   "at": "2026-11-27T02:30:19+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-27T02:27:20+00:00"
+   "at": "2026-11-27T02:30:19+00:00"
   }
  },
  "operators": [
@@ -546,15 +613,6 @@
    "e": "high",
    "t": "Work session",
    "at": "2026-11-26T21:24:14-05:00"
-  },
-  {
-   "w": "Operator",
-   "a": "Evan's Account",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session",
-   "at": "2026-11-26T18:15:19-05:00"
   },
   {
    "w": "Operator",
@@ -611,13 +669,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 0,
-  "lanes": 4,
-  "total": 4,
-  "at": "9:27 PM",
+  "main": 3,
+  "lanes": 3,
+  "total": 6,
+  "at": "9:30 PM",
   "why": "",
-  "at_iso": "2026-11-27T02:27:00+00:00",
+  "at_iso": "2026-11-27T02:30:00+00:00",
   "started": "9:24 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 0, started 9:24 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 9:27 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 3, started 9:24 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 9:30 PM ET</p></section>"
  }
 }

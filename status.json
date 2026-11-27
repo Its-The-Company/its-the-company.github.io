@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-27T17:39:22.026548+00:00",
+ "at": "2026-11-27T17:42:27.817958+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -62,7 +62,7 @@
    "task": "[build] T-4476 watch Gallery and project page",
    "model": "opus",
    "started": "2026-11-27T17:31:19.998Z",
-   "seconds": 482,
+   "seconds": 667,
    "finished": null
   },
   {
@@ -70,20 +70,20 @@
    "task": "[review] T-5795",
    "model": "opus",
    "started": "2026-11-27T17:32:00.226Z",
-   "seconds": 441,
+   "seconds": 627,
    "finished": null
-  },
+  }
+ ],
+ "who": "Idris x2",
+ "recent": [
   {
    "name": "odalys",
    "task": "[ops] Jeremy's account empty menu",
    "model": "opus",
    "started": "2026-11-27T17:37:32.820Z",
-   "seconds": 109,
-   "finished": null
-  }
- ],
- "who": "Idris x2, Odalys",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-27T17:41:57.849000+00:00"
+  },
   {
    "name": "odalys",
    "task": "Diagnose Jeremy's account empty menu",
@@ -107,14 +107,6 @@
    "started": "2026-11-27T17:28:12.178Z",
    "seconds": null,
    "finished": "2026-11-27T17:30:53.678000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-4476 stale result fix",
-   "model": "opus",
-   "started": "2026-11-27T17:06:22.783Z",
-   "seconds": null,
-   "finished": "2026-11-27T17:27:43.807000+00:00"
   }
  ],
  "queue": {
@@ -169,7 +161,7 @@
   "week_pct": 34.06,
   "usage_pct": 50.0,
   "work_pct": 99.0,
-  "read_at": "2026-11-27T17:39:00+00:00",
+  "read_at": "2026-11-27T17:42:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -231,7 +223,7 @@
  "lock_in": {
   "on": true,
   "pool": 4,
-  "at": "2026-11-27T12:39:00-05:00",
+  "at": "2026-11-27T12:42:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -256,14 +248,6 @@
    "next": []
   },
   {
-   "name": "Odalys",
-   "state": "running",
-   "task": "[ops] Jeremy's account empty menu",
-   "model": "opus",
-   "since": "2026-11-27T17:37:32.820Z",
-   "next": []
-  },
-  {
    "name": "Pernille",
    "state": "next",
    "task": "Pernille, P1, continuation of T-2609: after...",
@@ -283,6 +267,14 @@
    "name": "Ines",
    "state": "next",
    "task": "Ines with Wrenna, P3, from T-0902 (ADR-006 s13.5, s13.7...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
+   "name": "Odalys",
+   "state": "next",
+   "task": "Odalys, P3, host-only, from...",
    "model": null,
    "since": null,
    "next": []
@@ -315,14 +307,6 @@
     "at": "2026-11-27T17:32:00.226Z",
     "o": "c",
     "task": "T-5795"
-   },
-   {
-    "w": "Odalys",
-    "k": "ops",
-    "t": "Jeremy's account empty menu",
-    "m": "opus",
-    "at": "2026-11-27T17:37:32.820Z",
-    "o": "c"
    }
   ],
   "src": "plan",
@@ -474,8 +458,13 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-27T17:38:31Z",
+  "at": "2026-11-27T17:42:27Z",
   "s": {
+   "T-0793": [
+    "mergetest",
+    "iPhone tests on the MacBook",
+    null
+   ],
    "T-4181": [
     "merged",
     "on main 11:30 AM ET",
@@ -490,10 +479,12 @@
    ]
   },
   "nm": {
+   "T-0793": "Add background refresh for widgets in version 1.0",
    "T-4181": "Widgets refresh on their own and by a tap",
    "T-4185": "Launcher widgets open the apps a person chose"
   },
   "wk": {
+   "T-0793": "Idris",
    "T-4181": "Idris",
    "T-4185": "Idris",
    "T-4635": "Idris",
@@ -501,7 +492,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-27T17:38:31Z",
+  "at": "2026-11-27T17:42:27Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -519,7 +510,7 @@
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 845
+    "parked": 849
    },
    "cur": [],
    "ld": [
@@ -529,12 +520,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-27T17:39:07Z",
-    "ld": 7.82,
+    "at": "2026-11-27T17:41:39Z",
+    "ld": 6.81,
     "c": 8,
     "sb": 1,
     "dk": [
-     55.6,
+     55.5,
      228.3
     ],
     "ss": [
@@ -546,8 +537,8 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-27T17:35:53Z",
-    "ld": 2.18,
+    "at": "2026-11-27T17:39:59Z",
+    "ld": 1.05,
     "c": 12,
     "sb": 0,
     "dk": [
@@ -584,11 +575,11 @@
      "open": true
     }
    },
-   "at": "2026-11-27T17:39:22+00:00"
+   "at": "2026-11-27T17:42:27+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-27T17:38:31+00:00"
+   "at": "2026-11-27T17:42:21+00:00"
   }
  },
  "operators": [
@@ -637,13 +628,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 3,
+  "main": 2,
   "lanes": 2,
-  "total": 5,
-  "at": "12:39 PM",
+  "total": 4,
+  "at": "12:42 PM",
   "why": "",
-  "at_iso": "2026-11-27T17:39:00+00:00",
+  "at_iso": "2026-11-27T17:42:00+00:00",
   "started": "11:47 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 3, started 11:47 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 12:39 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 2, started 11:47 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 12:42 PM ET</p></section>"
  }
 }

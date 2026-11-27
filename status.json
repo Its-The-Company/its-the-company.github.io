@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-27T14:16:23.140859+00:00",
+ "at": "2026-11-27T14:19:26.383072+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -62,7 +62,7 @@
    "task": "[build] T-5795 Sky place zone",
    "model": "opus",
    "started": "2026-11-27T12:52:47.951Z",
-   "seconds": 5015,
+   "seconds": 5198,
    "finished": null
   },
   {
@@ -70,11 +70,19 @@
    "task": "[build] T-4476 Foundations batch",
    "model": "opus",
    "started": "2026-11-27T13:30:38.183Z",
-   "seconds": 2744,
+   "seconds": 2928,
+   "finished": null
+  },
+  {
+   "name": "idris",
+   "task": "[build] T-4190 batch three",
+   "model": "opus",
+   "started": "2026-11-27T14:19:06.517Z",
+   "seconds": 19,
    "finished": null
   }
  ],
- "who": "Pernille, Idris",
+ "who": "Pernille, Idris x2",
  "recent": [
   {
    "name": "odalys",
@@ -112,7 +120,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 281,
+  "runnable_count": 278,
   "blocked_count": 0
  },
  "meter": {
@@ -161,7 +169,7 @@
   "week_pct": 34.98,
   "usage_pct": 53.8,
   "work_pct": 98.9,
-  "read_at": "2026-11-27T14:16:00+00:00",
+  "read_at": "2026-11-27T14:19:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -223,7 +231,7 @@
  "lock_in": {
   "on": true,
   "pool": 4,
-  "at": "2026-11-27T09:16:00-05:00",
+  "at": "2026-11-27T09:19:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -307,6 +315,15 @@
     "at": "2026-11-27T13:30:38.183Z",
     "o": "c",
     "task": "T-4476"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "Settings and Pro: buy, restore, themes",
+    "m": "opus",
+    "at": "2026-11-27T14:19:06.517Z",
+    "o": "c",
+    "task": "T-4190"
    }
   ],
   "src": "plan",
@@ -385,29 +402,41 @@
   "done": [
    {
     "w": "Idris",
-    "t": "A widget with more than 100 buttons of the same name is now refused with a message naming the...",
-    "at": "2026-11-27T08:30:00-05:00"
+    "t": "A test of the Pro screen's Restore purchase and legal links now waits for the screen to finish...",
+    "at": "2026-11-27T09:18:00-05:00"
    },
    {
-    "w": "Maren",
-    "t": "The design page now says Sky shows Lisbon's sunrise as Lisbon's 7:31 AM, not the phone's 2:31...",
-    "at": "2026-11-27T07:52:00-05:00"
+    "w": "Idris",
+    "t": "The app and its widgets now carry only the short words their cards show, not the designers'...",
+    "at": "2026-11-27T09:18:00-05:00"
    },
    {
-    "w": "Ines",
-    "t": "The person who decides on the package safety box ruled that its three newly found gaps, plus two...",
-    "at": "2026-11-27T07:39:00-05:00"
+    "w": "Idris",
+    "t": "The Pro row in Settings was checked to say \"Waiting for approval\" while a child's purchase waits...",
+    "at": "2026-11-27T09:18:00-05:00"
    }
   ],
   "count": {
-   "next": 281,
+   "next": 278,
    "wait": 0,
    "blocked": 0,
    "you": 0
   },
   "fin": {
-   "n": 23,
+   "n": 26,
    "rows": [
+    [
+     "T-2040",
+     "Investigate a paywall UI..."
+    ],
+    [
+     "T-0591",
+     "Ship only the Pro card words..."
+    ],
+    [
+     "T-5928",
+     "Settings Pro row tests read..."
+    ],
     [
      "T-5934",
      "Refuse a widget with 100..."
@@ -419,18 +448,6 @@
     [
      "T-5513",
      "Rule on the package..."
-    ],
-    [
-     "T-0553",
-     "Find why a stdlib size check..."
-    ],
-    [
-     "T-5685",
-     "Compare spike launch times..."
-    ],
-    [
-     "T-5897",
-     "Stop a second project import..."
     ]
    ]
   }
@@ -474,9 +491,9 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-27T14:16:11Z",
+  "at": "2026-11-27T14:19:26Z",
   "s": {
-   "T-4185": [
+   "T-4190": [
     "mergetest",
     "iPhone tests on the MacBook",
     null
@@ -486,15 +503,26 @@
     "on main 8:44 AM ET",
     1795787049000,
     ""
+   ],
+   "T-4185": [
+    "merged",
+    "on main 5:55 AM ET",
+    1795776914000,
+    "Idris"
    ]
   },
   "nm": {
-   "T-4185": "Launcher widgets open the apps a person chose",
-   "T-4181": "Widgets refresh on their own and by a tap"
+   "T-4190": "Settings and Pro: buy, restore, themes",
+   "T-4181": "Widgets refresh on their own and by a tap",
+   "T-4185": "Launcher widgets open the apps a person chose"
   },
   "wk": {
-   "T-4185": "Idris",
+   "T-4190": "Idris",
    "T-4181": "Idris",
+   "T-4185": "Idris",
+   "T-2040": "Idris",
+   "T-0591": "Idris",
+   "T-5928": "Idris",
    "T-5934": "Idris",
    "T-5936": "Maren",
    "T-5513": "Ines",
@@ -503,14 +531,11 @@
    "T-5897": "Idris",
    "T-4708": "Pernille",
    "T-4589": "Idris",
-   "T-4553": "Idris",
-   "T-5015": "Idris",
-   "T-5285": "Idris",
-   "T-5921": "Idris"
+   "T-4553": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-27T14:16:11Z",
+  "at": "2026-11-27T14:19:26Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -528,7 +553,7 @@
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1094
+    "parked": 1097
    },
    "cur": [],
    "ld": [
@@ -538,12 +563,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-27T14:15:51Z",
-    "ld": 2.21,
+    "at": "2026-11-27T14:19:04Z",
+    "ld": 1.65,
     "c": 8,
     "sb": 1,
     "dk": [
-     16.6,
+     16.5,
      228.3
     ],
     "ss": [
@@ -555,8 +580,8 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-27T14:15:06Z",
-    "ld": 9.31,
+    "at": "2026-11-27T14:18:09Z",
+    "ld": 8.24,
     "c": 12,
     "sb": 3,
     "dk": [
@@ -564,7 +589,7 @@
      926.4
     ],
     "sn": [
-     "itsthecompany-runner-2",
+     "itsthecompany-runner",
      "itsthecompany-runner-3",
      "itsthecompany-runner-4"
     ]
@@ -597,11 +622,11 @@
      "open": true
     }
    },
-   "at": "2026-11-27T14:16:23+00:00"
+   "at": "2026-11-27T14:19:26+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-27T14:16:17+00:00"
+   "at": "2026-11-27T14:19:19+00:00"
   }
  },
  "operators": [
@@ -651,13 +676,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 2,
+  "main": 3,
   "lanes": 2,
-  "total": 4,
-  "at": "9:16 AM",
+  "total": 5,
+  "at": "9:19 AM",
   "why": "",
-  "at_iso": "2026-11-27T14:16:00+00:00",
+  "at_iso": "2026-11-27T14:19:00+00:00",
   "started": "12:15 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 2, started 12:15 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 9:16 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 3, started 12:15 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 9:19 AM ET</p></section>"
  }
 }

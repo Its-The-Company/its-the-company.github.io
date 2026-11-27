@@ -41,7 +41,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 - T-5893 11-26: e83f525050 in scratch T-5893-idris/wt (location widget ID app.pywidget.location; ExtensionLinkTests 8/0 J-20261126-0017, host 4388/0). Open: Odalys review, land; Investors register the new ID. Lesson: an extension ID is the app ID plus exactly one part.
 
-- T-4183 11-26 (late): scratch T-4183-idris/wt (detached) holds T-5035, T-4646, T-5012, T-4641 slices 1-2, cherry-picked T-5894/T-5895 from main, and 968e39c6ac T-5269 (UI 31/0 J-...2152-...19d7b6, unit 2533/0, host 4408/0). Open: Odalys/Pernille review, land; T-5270, T-5317, T-5319, T-4641 L3 (Maren's words). Lesson: lane_settle refuses a detached copy; cherry-pick onto main by hand.
+- T-4183 11-27: scratch T-4183-idris/wt (detached) adds c564be772f T-5926 (Habits UI tests: XXXL text, scale from app.frame) and 99657009f8 T-5317 (.id(route) on the sheet's Page; HabitsFocus 3/0 J-...0117, mutant red). T-5319 WIP stashed as ../t5319-wip.patch, not run. Open: Odalys/Pernille review, land by cherry-pick; T-4641 L3. Lesson: a new NavigationStack route keeps the old view's State unless the view takes .id(route).
 
 - T-4190 11-26 (b2): in scratch T-4190-idris/wt, 8b2c9924d5 T-5906 + c04e4bbfd6 T-0623 lows; 995a216526 T-5909 (buy elsewhere with the app open; class 3x green on runner). Open: Odalys review, land. Lesson: a StoreKit clear made while the app is not running leaves the purchase in the app; clear with the app open. 11-27: T-4899 b383aa7dc3 (note only). T-2500 waits on Maren's spec read, T-2988 on the Investors' themes split. Lesson: J-...0202 "passed" was wrong (5 failing, exit 143); read result.json, never a handoff's word.
 - T-4302 11-25 (b): own-widget save test in WidgetStepTimeoutTests (test only). Open: review, land.
@@ -51,8 +51,6 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - Older lessons and dated logs: archive.md.
 - T-4188 (merge point) and T-5796 re-reviews still open; detail and xc.sh lessons in archive.md.
 - T-4692 11-23 (personal/b): re-review, land. T-5047 11-24 (50a2c3dd39, da4c8d0743): re-review, land. T-5607 86cf99245a: review, merge. T-5108: patch in ops/plans/T-5108-handoff.md, uncommitted. T-0053: part 3 target, part 4 footprint. T-0044/T-4181: see archive.md.
-- T-4182 11-26 (a2, 4:40 PM): no step commit; handoff 58c477b922. Test L exit 75 seven times (load spikes to 130-209 seconds after each launch; cause unproven). T-3291 i1 + T-2232 wait on Ines; i4 asked of Maren; T-4801 and T-5272 already on main (c0e4a0f0b7), need ticks. Lesson: pgrep -f "xcodebuild.* test" matches the loop's own text; use pgrep -x.
-- T-4181 11-26 (a2): d0ebe290da T-4436 L3 fix (systemSmall keeps the tap in a Link); check faults T-4436 in 2 commits, fold left to lead. Lesson: -only-testing takes the class, not the file (RefreshAgeRendererTests is an extension of TreeNodesTests).
 - T-4185 11-26 (a, 23:xx): T-5921 6232f07d82 (11/11 mutants), T-5285 (iPad 2x green; well check -> nav title). T-4638 still waits on Ines; T-5640 redraw probe drafted in scratch T-4185-idris/t5640/patch.py, not run; T-5662 waits on T-5640. Lesson: a foreground Bash call is cut at 600 s; long xc.sh runs go in the background with an until-loop wait.
 {% endraw %}
 

@@ -46,7 +46,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - 11-21 T-4999: link screen title "Web Page" to "Web page" (sentence case). Lesson: T-5255 retired tools/png_small.py but ide/draw_ide.py still imports it; every design script fails until it is restored (ran with retired/tools on PYTHONPATH).
 - 11-21 T-5193: five build-added page strings kept word for word, written into premade-inputs s5; no Swift change. Apostrophes mixed (straight in four "couldn't" lines, curly elsewhere); left as built.
 - 11-26 T-5001 8431896520 (branch, at merge point, Pernille reviews): never_fetched flag drops Updated; idle chart 3 bars; trees take sheet now. Lesson: ui.Timeline fills a missing sampled_at with the clock, so "no sample" never hides a line; flag it in state.
-- 11-26 T-5919 follow-up (renames: Waiting to merge, Back for a fix, session): pre-commit test_health refused a test reading session.js as text; stopped there. Lesson: check what a page script draws by running it, never grep its source.
+- 11-27 T-5919 follow-up 662ae9b400 (renames: Waiting to merge, Back for a fix, session): session.js checked in Chromium, not by its text. Lesson: check a page script by running it; site_t3187 red at 1280 on main too (live board row), not ours.
 {% endraw %}
 
 

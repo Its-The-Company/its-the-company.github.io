@@ -47,6 +47,8 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-4302 11-25 (b): own-widget save test in WidgetStepTimeoutTests (test only). Open: review, land.
 - T-4476 11-26: ADR-012 accepted (eefbcd4a72); T-5907 389c36dc9a (Make It Mine refuses a clashing id; unit 2603/0 J-...1645-...14689f, guard off red). Scratch T-4476-idris/wt. Open: Pernille review, land; Operator adds s10 lines. Lessons: a board line newer than the copy needs feature_session --features/--board from `git show main:`; a failed test's retry counts twice in the totals.
 
+- T-5926 11-27: scratch T-5926-idris/wt 08e4f44cfd + 7c91d65c12 (comments). HabitsFocus 2/0 on 18 Pro (J-20261127-0145-land-chk-a5ab71-2-0418a0) and 17e (Mac mini log 021930). Open: review, land. Lesson: XC_LOCAL=1 can still go to the MacBook as a check; XC_LOCAL=here keeps the run on this Mac.
+
 ## Lessons
 - Older lessons and dated logs: archive.md.
 - T-4188 (merge point) and T-5796 re-reviews still open; detail and xc.sh lessons in archive.md.

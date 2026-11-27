@@ -51,6 +51,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-5755 11-23: background runs die at 10 min unless given a timeout (land_xc_test under load). Old-vs-new proof: short copy (setup+section) in two git-archive dirs, ~2 min; rm -rf "$VAR" is refused, mkdir fresh.
 - T-4192 11-26: a UI shot of a prompt with a text field depends on the Simulator's minimized-keyboard state (T-0758) and on which tests ran first; the class idiom is raiseOnScreenKeyboard before save. Read a picture test for what the picture shows, not only pass/fail.
 - T-5917 11-26: a red in a suite run is mine only if it is green on HEAD; rerun just the reds from a git-archive copy of HEAD. rm of a $(...) path is refused: use the literal path.
+- T-5918 11-27 58bb457712: the shell is zsh: a $F list of paths is one word; list paths literally. Reds on HEAD: merge_limit_split, records, xc_inputs, supervisor, dispatch_tick (all pre-existing 11-27).
 {% endraw %}
 
 

@@ -292,7 +292,7 @@ function set(row,k,w,h){var c=row.querySelector('[data-w="'+k+'"]');if(!c)return
 var p=w&&typeof w.pct==='number'?w.pct:null,t=w?pace(w.resets_at,h):null,r=w&&w.resets_at?et(w.resets_at):'';
 i.style.width=(p===null?0:Math.max(0,Math.min(100,p)))+'%';i.className=p!==null&&p>=100?'hot':'';v.textContent=p===null?'–':Math.round(p)+'%';
 if(s){s.hidden=t===null;if(t!==null)s.style.left=t+'%'}
-if(n){n.className=p!==null&&p>=100?'meta lk-hotw':'meta';n.textContent=p===null?'no reading yet':w.resets_at&&Date.parse(w.resets_at)<=Date.now()?'reset due, not read yet':!r?(p>=100?'at its limit · ':'')+'reset time not known':p>=100?'at its limit · lane paused to '+r:'resets '+r}return p}
+if(n){n.className=p!==null&&p>=100?'meta lk-hotw':'meta';n.textContent=p===null?'no reading yet':w.resets_at&&Date.parse(w.resets_at)<=Date.now()?'reset due, not read yet':!r?(p>=100?'at its limit · ':'')+'reset time not known':p>=100?'at its limit · paused until '+r:'resets '+r}return p}
 function draw(st){var ms=(st.personal||{}).meters,m=st.meter||{},z=0;
 [].forEach.call(document.querySelectorAll('.lk-acct[data-acct]'),function(row){var a=row.getAttribute('data-acct');
 if(a==='main'){if(m.five_hour)set(row,'five',m.five_hour,5);if(m.weekly)set(row,'week',m.weekly,168);return}
@@ -312,7 +312,7 @@ S.onStatus.push(draw);if(S.status&&S.status())draw(S.status())});
 document.addEventListener('DOMContentLoaded',function(){var S=window.CompanySite,box=document.getElementById('lk-run');if(!box)return;
 var f={},L={};try{f=JSON.parse(box.getAttribute('data-faces')||'{}')}catch(e){}try{L=JSON.parse(box.getAttribute('data-life')||'{}')}catch(e){}
 var RUN=['coding','review','testq','testing','mergeq','simq','mergetest','parked','merging','merged'],ST=RUN.slice().reverse(),Q={testq:1,mergeq:1,simq:1,parked:1},
-LB={coding:'Coding',testq:'Test queue',testing:'Testing',review:'Review',mergeq:'Merge queue',mergetest:'Merge testing',parked:'Retry Queue',merging:'Merging',simq:'Simulator Queue',merged:'Merged'},
+LB={coding:'Coding',testq:'Test queue',testing:'Testing',review:'Review',mergeq:'Waiting to merge',mergetest:'Merge testing',parked:'Back for a fix',merging:'Merging',simq:'Simulator Queue',merged:'Merged'},
 M3=['mergeq','mergetest','merging'],EX={coding:M3,review:M3,testq:['testing'].concat(M3),testing:M3,mergeq:M3.slice(1),parked:M3,mergetest:['merging'],merging:[],simq:M3.slice(1),merged:[]};
 // T-4007 (JeremyFries, typed 2026-11-10: "the way that it lists the current step of the task ... (6 stages, shared by all
 // tasks, with totals summed) ... should be included in the full task list"): a card's step is shown as This Session
@@ -326,10 +326,10 @@ M3=['mergeq','mergetest','merging'],EX={coding:M3,review:M3,testq:['testing'].co
 var CK=['being_built','waiting_to_merge','mac_tests','sim_queue','iphone_tests','sent_back'],
 COL={coding:'being_built',review:'being_built',testq:'being_built',testing:'mac_tests',mergeq:'waiting_to_merge',merging:'mac_tests',simq:'sim_queue',mergetest:'iphone_tests',parked:'sent_back',merged:'merged'},
 // T-4595 (friesevan #41 c6924443937): the Merge Queue chip's title, so it and Now's split mean the same thing
-MQT='Ready, waiting its turn to land. Home’s “in the merge queue” counts these and the one landing now (under Testing).',
-CL={being_built:'Building',waiting_to_merge:'Merge Queue',mac_tests:'Testing',sim_queue:'Simulator Queue',iphone_tests:'Simulator',sent_back:'Retry Queue',merged:'Merged'},
+MQT='Ready, waiting its turn at the merge script: app changes go in one at a time. Home’s “in line for the merge script” counts these and the one merging now (under Testing).',
+CL={being_built:'Building',waiting_to_merge:'Waiting to merge',mac_tests:'Testing',sim_queue:'Simulator Queue',iphone_tests:'Simulator',sent_back:'Back for a fix',merged:'Merged'},
 MK={waiting_to_merge:'q',sim_queue:'q',sent_back:'f'},SN={review:'review',testq:'waiting for its own test run'},
-HW={coding:'Building',review:'Review',testq:'Waiting for its own test run',testing:'Testing',mergeq:'Merge Queue',merging:'Testing',simq:'Simulator Queue',mergetest:'Simulator',parked:'Retry Queue',merged:'Merged'};
+HW={coding:'Building',review:'Review',testq:'Waiting for its own test run',testing:'Testing',mergeq:'Waiting to merge',merging:'Testing',simq:'Simulator Queue',mergetest:'Simulator',parked:'Back for a fix',merged:'Merged'};
 var pic={};[].forEach.call(document.querySelectorAll('.lk-team a'),function(a){var m=/cast\/([^/.]+)\.html/.exec(a.getAttribute('href')||''),g=a.querySelector('img');if(m&&g)pic[m[1]]=g.getAttribute('src')});
 var fl='all',items=L.init||[],IN={};
 items.forEach(function(x){if(x.id)IN[x.id]=x});
@@ -374,7 +374,7 @@ var M=psm(x);return CK.map(function(k){var v=k===here?'now':been[k]&&k!=='sent_b
 if(m&&v!=='now')v={d:'was',b:'brief',s:'arrow'}[m[0]]||'';return v})}
 // T-4293 (friesevan #41 c6860226572): the build's marks (home_look add_passes, x.p) for the columns behind the card's
 // stage now, and the Simulator's two for work the board files outside App anywhere on the track (home_look pass_marks)
-var PSC=['waiting_to_merge','mac_tests','sim_queue','iphone_tests'],WHYS={"short": "{L}: passed through in {s}, less than the {g} s between two of Home's live readings, so the page may never have shown it.", "short_own": "{L}: passed through in {s}, less than the {g} s between two of Home's live readings, so the page may never have shown it. No test run of its own on the MacBook is on record before hand-in.", "lane": "{L}: passed through between two readings. Its land shows it was marked ready and took its turn, but no reading of the record caught it waiting.", "turn": "{L}: passed through between two readings. Its iPhone check ran, so it had its turn for a Simulator, but no reading of the record caught it waiting.", "main": "{L}: did not apply. Main-session work lands straight through the gate, which has no Merge Queue; a wait for the gate's turn shows here while it lasts and is not recorded.", "own": "{L}: skipped. It sent no test run of its own to the MacBook before hand-in, and no test run at its merge is on record.", "noxc": "{L}: did not apply. Its change touches no app code, so its merge ran no iPhone check.", "cat": "{L}: does not apply. The board files it under {c}, not App, and work outside the app gets no iPhone check.", "none": "{L}: not on record, and no record says why."},BRS=20;
+var PSC=['waiting_to_merge','mac_tests','sim_queue','iphone_tests'],WHYS={"short": "{L}: passed through in {s}, less than the {g} s between two of Home's live readings, so the page may never have shown it.", "short_own": "{L}: passed through in {s}, less than the {g} s between two of Home's live readings, so the page may never have shown it. No test run of its own on the MacBook is on record before hand-in.", "lane": "{L}: passed through between two readings. Its merge shows it was marked ready and took its turn, but no reading of the record caught it waiting.", "turn": "{L}: passed through between two readings. Its iPhone check ran, so it had its turn for a Simulator, but no reading of the record caught it waiting.", "main": "{L}: did not apply. This work went straight to main with no wait on record; a wait for its turn shows here while it lasts and is not recorded.", "own": "{L}: skipped. It sent no test run of its own to the MacBook before hand-in, and no test run at its merge is on record.", "noxc": "{L}: did not apply. Its change touches no app code, so its merge ran no iPhone check.", "cat": "{L}: does not apply. The board files it under {c}, not App, and work outside the app gets no iPhone check.", "none": "{L}: not on record, and no record says why."},BRS=20;
 function psm(x){var here=COL[x.s],o={},i=PSC.indexOf(here),p=x.p||{};
 PSC.forEach(function(k,j){var m=p[k];if(m&&m[1]==='cat'){if(k!==here)o[k]=m}else if(m&&x.s!=='parked'&&(here==='merged'||(i>j&&x.s!=='testing')))o[k]=m});
 if(sim(x)===false)['sim_queue','iphone_tests'].forEach(function(k){if(k!==here&&!o[k])o[k]=['s','cat']});return o}
@@ -585,7 +585,7 @@ function nw(t){return t&&Date.parse(t)>=B}
 function ag(id,t){var e=document.getElementById(id);if(e&&t){e.textContent=ago(t);e.title='read '+et(t)+' ET'}}
 function fig(h,lab,v){[].forEach.call(document.querySelectorAll('.lk-bub a[href="#'+h+'"] .lk-f > span'),function(s){var b=s.querySelector('b');if(b&&s.lastChild&&s.lastChild.nodeValue===lab)b.textContent=v})}
 function words(w){var r=w.n-w.in_line-w.parked,ln=document.getElementById('lk-now'),nr=ln&&ln.getAttribute('data-road')==='merge.sh';if([w.n,w.in_line,w.parked].some(function(x){return typeof x!=='number'}))return 'parts not recorded';
-return w.in_line.toLocaleString('en-US')+(nr?' in line for tools/merge.sh, ':' in the merge queue, ')+w.parked.toLocaleString('en-US')+(nr?' sent back for a fix':' sent back to retry')+(r>0?', '+r+' in neither part':r<0?' (the parts come to '+(w.in_line+w.parked)+', '+(-r)+' over the count)':'')}
+return w.in_line.toLocaleString('en-US')+(nr?' in line for the merge script, ':' in the merge queue, ')+w.parked.toLocaleString('en-US')+(nr?' sent back for a fix':' sent back to retry')+(r>0?', '+r+' in neither part':r<0?' (the parts come to '+(w.in_line+w.parked)+', '+(-r)+' over the count)':'')}
 // T-5454: the per-queue figures follow the same status (its by: merge_limit's queues of the same row); a queue the row
 // lacks reads "not known", and the count in both is app + other less the one count
 function qk(ln,w){var by=w.by,a,o,e;if(!by||typeof by!=='object')return;[].forEach.call(ln.querySelectorAll('.lk-nk[data-k]'),function(s){var q=by[s.getAttribute('data-k')]||{},b=s.querySelector('b'),i=s.querySelector('.lk-gg i'),u=s.querySelector('.lk-gg u'),m=s.querySelector('small'),top;

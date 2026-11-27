@@ -46,7 +46,7 @@ for (var n = el; n && n !== P; n = n.parentNode) if (n.tagName === 'DETAILS') n.
 el.scrollIntoView();
 }
 var COL = { coding: 1, review: 1, testq: 1, testing: 3, mergeq: 2, merging: 3, simq: 4, mergetest: 4, merged: 5 },
-WD = { coding: 'Building', review: 'Building', testq: 'Building', testing: 'Testing', mergeq: 'Merge Queue', merging: 'Testing',
+WD = { coding: 'Building', review: 'Building', testq: 'Building', testing: 'Testing', mergeq: 'Waiting to merge', merging: 'Testing',
 simq: 'Simulator Queue', mergetest: 'Simulator', merged: 'Merged' }, NOW = { a: 1, q: 1, m: 1, f: 1 };
 function span(m) { return m < 1 ? 'under 1 min' : m < 60 ? m + ' min' : m < 1440 ? Math.floor(m / 60) + ' h' + (m % 60 ? ' ' + m % 60 + ' min' : '') : Math.floor(m / 1440) + ' d' + (Math.floor(m / 60) % 24 ? ' ' + Math.floor(m / 60) % 24 + ' h' : ''); }
 function live(st) {

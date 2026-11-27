@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-27T22:18:39.287171+00:00",
+ "at": "2026-11-27T22:21:44.084419+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -62,7 +62,7 @@
    "task": "[build] T-5795 overlap clocks fixes",
    "model": "opus",
    "started": "2026-11-27T19:47:58.276Z",
-   "seconds": 9041,
+   "seconds": 9225,
    "finished": null
   },
   {
@@ -70,7 +70,7 @@
    "task": "[build] T-5945 two sessions per feature",
    "model": "opus",
    "started": "2026-11-27T20:15:56.824Z",
-   "seconds": 7362,
+   "seconds": 7547,
    "finished": null
   },
   {
@@ -78,7 +78,7 @@
    "task": "[build] T-4188 location, notifications steps",
    "model": "opus",
    "started": "2026-11-27T21:40:42.332Z",
-   "seconds": 2276,
+   "seconds": 2461,
    "finished": null
   },
   {
@@ -86,20 +86,28 @@
    "task": "[build] T-4190 restore and theme tests",
    "model": "opus",
    "started": "2026-11-27T21:51:41.874Z",
-   "seconds": 1617,
+   "seconds": 1802,
    "finished": null
   },
+  {
+   "name": "odalys",
+   "task": "[review] T-5924 again",
+   "model": "opus",
+   "started": "2026-11-27T22:19:27.262Z",
+   "seconds": 136,
+   "finished": null
+  }
+ ],
+ "who": "Pernille, Odalys x2, Idris x2",
+ "recent": [
   {
    "name": "maren",
    "task": "[build] T-5924 review fix",
    "model": "sonnet",
    "started": "2026-11-27T22:09:52.354Z",
-   "seconds": 526,
-   "finished": null
-  }
- ],
- "who": "Pernille, Odalys, Idris x2, Maren",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-27T22:18:40.805000+00:00"
+  },
   {
    "name": "pernille",
    "task": "[review] T-5890",
@@ -123,14 +131,6 @@
    "started": "2026-11-27T22:10:41.577Z",
    "seconds": null,
    "finished": "2026-11-27T22:12:56.876000+00:00"
-  },
-  {
-   "name": "wrenna",
-   "task": "[build] T-5080 redact and fix",
-   "model": "opus",
-   "started": "2026-11-27T22:04:46.361Z",
-   "seconds": null,
-   "finished": "2026-11-27T22:10:07.993000+00:00"
   }
  ],
  "queue": {
@@ -185,7 +185,7 @@
   "week_pct": 38.46,
   "usage_pct": 49.0,
   "work_pct": 99.0,
-  "read_at": "2026-11-27T22:18:00+00:00",
+  "read_at": "2026-11-27T22:21:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -215,14 +215,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-27T17:13:00-05:00",
+   "at": "2026-11-27T17:19:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 4,
-  "at": "2026-11-27T17:18:00-05:00",
+  "at": "2026-11-27T17:21:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -263,14 +263,6 @@
    "next": []
   },
   {
-   "name": "Maren",
-   "state": "running",
-   "task": "[build] T-5924 review fix",
-   "model": "sonnet",
-   "since": "2026-11-27T22:09:52.354Z",
-   "next": []
-  },
-  {
    "name": "Wrenna",
    "state": "next",
    "task": "Read developer.apple.com \"Keeping a widget up to date\",...",
@@ -282,6 +274,14 @@
    "name": "Ines",
    "state": "next",
    "task": "Ines with Wrenna, P3, from T-0902 (ADR-006 s13.5, s13.7...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
+   "name": "Maren",
+   "state": "next",
+   "task": "Maren, P1, from T-2296 review M2...",
    "model": null,
    "since": null,
    "next": []
@@ -326,11 +326,11 @@
     "task": "T-4190"
    },
    {
-    "w": "Maren",
-    "k": "build",
+    "w": "Odalys",
+    "k": "review",
     "t": "Build the look picker page in the site's App tab",
-    "m": "sonnet",
-    "at": "2026-11-27T22:09:52.354Z",
+    "m": "opus",
+    "at": "2026-11-27T22:19:27.262Z",
     "o": "c",
     "task": "T-5924"
    }
@@ -500,12 +500,12 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-27T22:18:24Z",
+  "at": "2026-11-27T22:21:37Z",
   "s": {
    "T-4181": [
     "mergetest",
     "Xcode checks on the MacBook, 1st to merge",
-    1795817364849
+    1795817377503
    ]
   },
   "nm": {
@@ -524,7 +524,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-27T22:18:24Z",
+  "at": "2026-11-27T22:21:37Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -536,13 +536,13 @@
     "parked": 9
    },
    "m": {
-    "checking": 9,
+    "checking": 12,
     "inline": null,
     "conflicted": null,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1125
+    "parked": 1128
    },
    "cur": [
     [
@@ -551,7 +551,7 @@
      ],
      "iPhone app tests",
      "MacBook",
-     9
+     12
     ]
    ],
    "ld": [
@@ -561,19 +561,21 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-27T22:18:04Z",
-    "ld": 11.27,
+    "at": "2026-11-27T22:21:11Z",
+    "ld": 23.68,
     "c": 8,
-    "sb": 0,
+    "sb": 1,
     "dk": [
-     49.9,
+     48.9,
      228.3
     ],
     "ss": [
      152.7,
      953.7
     ],
-    "sn": []
+    "sn": [
+     "pywidget-wk-check"
+    ]
    },
    "macbook": {
     "at": "2026-11-27T22:13:39Z",
@@ -618,11 +620,11 @@
      "open": true
     }
    },
-   "at": "2026-11-27T22:18:39+00:00"
+   "at": "2026-11-27T22:21:44+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-27T22:18:24+00:00"
+   "at": "2026-11-27T22:21:44+00:00"
   }
  },
  "operators": [
@@ -657,10 +659,10 @@
   "main": 5,
   "lanes": 0,
   "total": 5,
-  "at": "5:18 PM",
+  "at": "5:21 PM",
   "why": "",
-  "at_iso": "2026-11-27T22:18:00+00:00",
+  "at_iso": "2026-11-27T22:21:00+00:00",
   "started": "2:44 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 5, started 2:44 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 5:18 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 5, started 2:44 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 5:21 PM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-27T20:06:34.180136+00:00",
+ "at": "2026-11-27T20:09:39.657708+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -62,7 +62,7 @@
    "task": "[build] T-5795 overlap clocks fixes",
    "model": "opus",
    "started": "2026-11-27T19:47:58.276Z",
-   "seconds": 1115,
+   "seconds": 1301,
    "finished": null
   }
  ],
@@ -96,7 +96,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 276,
+  "runnable_count": 275,
   "blocked_count": 0
  },
  "meter": {
@@ -145,7 +145,7 @@
   "week_pct": 34.61,
   "usage_pct": 49.0,
   "work_pct": 99.0,
-  "read_at": "2026-11-27T20:06:00+00:00",
+  "read_at": "2026-11-27T20:09:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -182,7 +182,7 @@
  "lock_in": {
   "on": true,
   "pool": 4,
-  "at": "2026-11-27T15:06:00-05:00",
+  "at": "2026-11-27T15:09:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -215,14 +215,6 @@
    "next": []
   },
   {
-   "name": "Odalys",
-   "state": "next",
-   "task": "Odalys, P0, from (Investor an Investor c7225261516, 1:13...",
-   "model": null,
-   "since": null,
-   "next": []
-  },
-  {
    "name": "Wrenna",
    "state": "next",
    "task": "Read developer.apple.com \"Keeping a widget up to date\",...",
@@ -234,6 +226,14 @@
    "name": "Ines",
    "state": "next",
    "task": "Ines with Wrenna, P3, from T-0902 (ADR-006 s13.5, s13.7...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
+   "name": "Odalys",
+   "state": "next",
+   "task": "Odalys, P3, host-only, from...",
    "model": null,
    "since": null,
    "next": []
@@ -290,13 +290,6 @@
     "o": "c"
    },
    {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Stop false holds keeping an account idle",
-    "s": "next",
-    "o": "c"
-   },
-   {
     "w": "Idris",
     "k": "build",
     "t": "Widgets refresh on their own and by a tap",
@@ -330,9 +323,21 @@
     "t": "Fix a MacBook test job that failed",
     "s": "next",
     "o": "c"
+   },
+   {
+    "w": "Operator",
+    "k": "fix",
+    "t": "Fix the failed MacBook job for PyWidgetTests",
+    "s": "next",
+    "o": "c"
    }
   ],
   "done": [
+   {
+    "w": "Odalys",
+    "t": "The dispatcher no longer mistakes a note or a feature's own steps for something the feature...",
+    "at": "2026-11-27T15:09:00-05:00"
+   },
    {
     "w": "Pernille",
     "t": "A Sky widget set to Lisbon on a New York iPhone now shows Lisbon's 7:31 AM sunrise instead of...",
@@ -342,22 +347,22 @@
     "w": "Idris",
     "t": "After a restore in Settings finds nothing or fails, buying Pro leaves no line saying there is no...",
     "at": "2026-11-27T12:30:00-05:00"
-   },
-   {
-    "w": "Idris",
-    "t": "The test that keeps Settings from showing a word typed into the code now also looks inside...",
-    "at": "2026-11-27T12:30:00-05:00"
    }
   ],
   "count": {
-   "next": 276,
+   "next": 275,
    "wait": 0,
    "blocked": 0,
    "you": 0
   },
   "fin": {
-   "n": 0,
-   "rows": []
+   "n": 1,
+   "rows": [
+    [
+     "T-5944",
+     "Stop false holds keeping an..."
+    ]
+   ]
   }
  },
  "qr": [
@@ -399,12 +404,12 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-27T20:06:34Z",
+  "at": "2026-11-27T20:09:31Z",
   "s": {
    "T-4181": [
     "mergeq",
     "1st to merge",
-    1795809994180
+    1795809991134
    ],
    "T-4709": [
     "mergetest",
@@ -418,11 +423,12 @@
   },
   "wk": {
    "T-4181": "Idris",
-   "T-4709": "Pernille"
+   "T-4709": "Pernille",
+   "T-5944": "Odalys"
   }
  },
  "ln": {
-  "at": "2026-11-27T20:06:34Z",
+  "at": "2026-11-27T20:09:31Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -437,10 +443,10 @@
     "checking": null,
     "inline": null,
     "conflicted": null,
-    "failed": 294,
+    "failed": 297,
     "held": null,
     "retry": null,
-    "parked": 993
+    "parked": 996
    },
    "cur": [],
    "ld": [
@@ -450,8 +456,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-27T20:06:13Z",
-    "ld": 4.98,
+    "at": "2026-11-27T20:09:09Z",
+    "ld": 4.66,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -505,11 +511,11 @@
      "open": true
     }
    },
-   "at": "2026-11-27T20:06:34+00:00"
+   "at": "2026-11-27T20:09:39+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-27T20:06:25+00:00"
+   "at": "2026-11-27T20:09:31+00:00"
   }
  },
  "operators": [
@@ -519,30 +525,41 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Inbox \u2013 Evan's 3:05 PM Message on GitHub",
-   "at": "2026-11-27T15:06:31-05:00"
+   "t": "Inbox \u2013 Evan's 3:08 PM Message on GitHub",
+   "at": "2026-11-27T15:09:11-05:00"
   }
  ],
  "reply": {
-  "sent": "2026-11-27T18:13:31Z",
-  "seconds": 50.0
+  "sent": "2026-11-27T20:05:54Z",
+  "seconds": 106.0
  },
  "inbox": [
   {
-   "id": "c7227172137",
+   "id": "c7227214816",
    "state": "received",
    "position": 1,
    "tasks": {
     "open": 0,
     "done": 0
    },
-   "title": "We should also work on restoring 6..."
+   "title": "do it"
+  },
+  {
+   "id": "c7227219333",
+   "state": "received",
+   "position": 2,
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "What is the progress on the..."
   }
  ],
  "trimmed": [
   "lane_next",
   "queue_text",
   "task_done",
+  "fin_short",
   "inbox_title",
   "task_title",
   "done_text",
@@ -553,10 +570,10 @@
   "main": 1,
   "lanes": 0,
   "total": 1,
-  "at": "3:06 PM",
+  "at": "3:09 PM",
   "why": "",
-  "at_iso": "2026-11-27T20:06:00+00:00",
+  "at_iso": "2026-11-27T20:09:00+00:00",
   "started": "2:44 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 2:44 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 3:06 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 2:44 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 3:09 PM ET</p></section>"
  }
 }

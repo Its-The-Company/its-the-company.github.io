@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-27T18:07:12.121967+00:00",
+ "at": "2026-11-27T18:10:13.352251+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -62,7 +62,7 @@
    "task": "[build] T-4476 watch Gallery and project page",
    "model": "opus",
    "started": "2026-11-27T17:31:19.998Z",
-   "seconds": 2152,
+   "seconds": 2333,
    "finished": null
   },
   {
@@ -70,7 +70,7 @@
    "task": "[build] T-5795 zero-width space trim",
    "model": "opus",
    "started": "2026-11-27T17:45:22.836Z",
-   "seconds": 1309,
+   "seconds": 1490,
    "finished": null
   }
  ],
@@ -161,20 +161,8 @@
   "week_pct": 35.06,
   "usage_pct": 50.0,
   "work_pct": 99.0,
-  "read_at": "2026-11-27T18:07:00+00:00",
+  "read_at": "2026-11-27T18:10:00+00:00",
   "running": [
-   {
-    "lane": "a",
-    "task": "T-4185",
-    "w": "Idris",
-    "k": "build",
-    "t": "Launcher widgets open the apps a person chose",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-27T12:03:57-05:00",
-    "n": "Evan",
-    "src": "plan-a"
-   },
    {
     "lane": "a2",
     "task": "T-4181",
@@ -216,14 +204,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-27T13:05:00-05:00",
+   "at": "2026-11-27T13:09:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 4,
-  "at": "2026-11-27T13:07:00-05:00",
+  "at": "2026-11-27T13:10:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -458,7 +446,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-27T18:07:12Z",
+  "at": "2026-11-27T18:10:01Z",
   "s": {
    "T-5939": [
     "mergetest",
@@ -470,29 +458,21 @@
     "on main 11:30 AM ET",
     1795797013000,
     ""
-   ],
-   "T-4185": [
-    "merged",
-    "on main 5:55 AM ET",
-    1795776914000,
-    "Idris"
    ]
   },
   "nm": {
    "T-5939": "Sky shows a far place's own time",
-   "T-4181": "Widgets refresh on their own and by a tap",
-   "T-4185": "Launcher widgets open the apps a person chose"
+   "T-4181": "Widgets refresh on their own and by a tap"
   },
   "wk": {
    "T-5939": "Pernille",
    "T-4181": "Idris",
-   "T-4185": "Idris",
    "T-4635": "Idris",
    "T-5941": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-27T18:07:12Z",
+  "at": "2026-11-27T18:10:01Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -510,7 +490,7 @@
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 874
+    "parked": 877
    },
    "cur": [],
    "ld": [
@@ -520,33 +500,30 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-27T18:07:01Z",
-    "ld": 3.44,
+    "at": "2026-11-27T18:09:38Z",
+    "ld": 2.23,
     "c": 8,
-    "sb": 1,
+    "sb": 0,
     "dk": [
-     54.8,
+     55.2,
      228.3
     ],
     "ss": [
      152.7,
      953.7
     ],
-    "sn": [
-     "pywidget-wk-check"
-    ]
+    "sn": []
    },
    "macbook": {
-    "at": "2026-11-27T18:02:56Z",
-    "ld": 15.1,
+    "at": "2026-11-27T18:07:59Z",
+    "ld": 11.45,
     "c": 12,
-    "sb": 2,
+    "sb": 1,
     "dk": [
-     356.1,
+     356.6,
      926.4
     ],
     "sn": [
-     "itsthecompany-runner",
      "itsthecompany-runner-2"
     ]
    }
@@ -560,7 +537,7 @@
    "parked": 9,
    "open": true,
    "mq": false,
-   "counted": "2026-11-27T17:58:58+00:00",
+   "counted": "2026-11-27T18:09:19+00:00",
    "by": {
     "app": {
      "n": 6,
@@ -578,11 +555,11 @@
      "open": true
     }
    },
-   "at": "2026-11-27T18:07:12+00:00"
+   "at": "2026-11-27T18:10:13+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-27T18:07:12+00:00"
+   "at": "2026-11-27T18:10:13+00:00"
   }
  },
  "operators": [
@@ -594,15 +571,6 @@
    "e": "high",
    "t": "Work session",
    "at": "2026-11-27T12:36:09-05:00"
-  },
-  {
-   "w": "Operator",
-   "a": "Evan's Account",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session \u2013 1 task",
-   "at": "2026-11-27T12:03:57-05:00"
   },
   {
    "w": "Operator",
@@ -632,12 +600,12 @@
  ],
  "agents_now": {
   "main": 2,
-  "lanes": 2,
-  "total": 4,
-  "at": "1:07 PM",
+  "lanes": 1,
+  "total": 3,
+  "at": "1:10 PM",
   "why": "",
-  "at_iso": "2026-11-27T18:07:00+00:00",
+  "at_iso": "2026-11-27T18:10:00+00:00",
   "started": "11:47 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 2, started 11:47 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 1:07 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 11:47 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 1:10 PM ET</p></section>"
  }
 }

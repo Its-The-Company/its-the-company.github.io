@@ -48,6 +48,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-4181 review 11-27 (48b783b922..425d683497) FAIL M: the firing's expiry cancel never reaches RefreshBatch.run (WidgetPasses.pass runs it in an unstructured Task). Lesson: trace a cancel through every `Task {}` hop before trusting an isCancelled check.
 - T-4181 re-review 11-27 (08ab0da964..57356ba4e4) nothing blocking. Lesson: grep every test a mutants file names; a renamed test leaves a stale entry.
 - T-5939 session 11-27 (7d3525179b, merge point; review Idris): host green does not mean the app draws. A premade's whole timeline (13-14 entries x 6 families) must fit 512 KB (TreeTooLarge); measure ui.dumps(document) for the worst day, and run a premade in-app via BridgeTests at "now".
+- T-5939 review fix 11-27 (folded: 1906af73ee): a character <span title="A measured fact that holds a grade below a letter, however good the rest is.">cap</span> is not a byte cap; a name is drawn ~141x per timeline, so cap bytes too (4 x name_max). zsh does not split $FILES: commit by path with --pathspec-from-file.
 {% endraw %}
 
 

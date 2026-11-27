@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-27T03:10:16.802033+00:00",
+ "at": "2026-11-27T03:13:17.599483+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -72,7 +72,7 @@
    "task": "[build] T-4478 Pages tap links",
    "model": "opus",
    "started": "2026-11-27T02:29:24.979Z",
-   "seconds": 2451,
+   "seconds": 2632,
    "finished": null
   },
   {
@@ -80,7 +80,7 @@
    "task": "[build] T-4190 Settings Pro themes",
    "model": "opus",
    "started": "2026-11-27T02:29:37.630Z",
-   "seconds": 2439,
+   "seconds": 2619,
    "finished": null
   },
   {
@@ -88,7 +88,7 @@
    "task": "[build] T-4183 Gallery premade tests",
    "model": "opus",
    "started": "2026-11-27T02:29:50.138Z",
-   "seconds": 2426,
+   "seconds": 2607,
    "finished": null
   },
   {
@@ -96,7 +96,7 @@
    "task": "[build] T-5919 Home three sessions",
    "model": "opus",
    "started": "2026-11-27T02:30:35.377Z",
-   "seconds": 2381,
+   "seconds": 2562,
    "finished": null
   },
   {
@@ -104,20 +104,20 @@
    "task": "[build] T-5918 account names finish",
    "model": "opus",
    "started": "2026-11-27T02:30:26.922Z",
-   "seconds": 2389,
+   "seconds": 2570,
    "finished": null
-  },
+  }
+ ],
+ "who": "Idris x3, Maren, Odalys",
+ "recent": [
   {
    "name": "ines",
    "task": "[review] T-5922 again",
    "model": "opus",
    "started": "2026-11-27T03:08:51.695Z",
-   "seconds": 85,
-   "finished": null
-  }
- ],
- "who": "Idris x3, Maren, Odalys, Ines",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-27T03:10:25.506000+00:00"
+  },
   {
    "name": "maren",
    "task": "[build] T-5922 review fixes",
@@ -195,7 +195,7 @@
   "week_pct": 25.79,
   "usage_pct": 54.2,
   "work_pct": 98.8,
-  "read_at": "2026-11-27T03:10:00+00:00",
+  "read_at": "2026-11-27T03:13:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -269,7 +269,7 @@
  "lock_in": {
   "on": true,
   "pool": 5,
-  "at": "2026-11-26T22:10:00-05:00",
+  "at": "2026-11-26T22:13:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -310,17 +310,17 @@
    "next": []
   },
   {
-   "name": "Ines",
-   "state": "running",
-   "task": "[review] T-5922 again",
-   "model": "opus",
-   "since": "2026-11-27T03:08:51.695Z",
-   "next": []
-  },
-  {
    "name": "Pernille",
    "state": "next",
    "task": "Pernille, P1, continuation of T-2609: after...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
+   "name": "Ines",
+   "state": "next",
+   "task": "Ines, P2, from T-5470...",
    "model": null,
    "since": null,
    "next": []
@@ -380,15 +380,6 @@
     "at": "2026-11-27T02:30:35.377Z",
     "o": "c",
     "task": "T-5919"
-   },
-   {
-    "w": "Ines",
-    "k": "review",
-    "t": "Draw the new looks as live HTML, adding Pages",
-    "m": "opus",
-    "at": "2026-11-27T03:08:51.695Z",
-    "o": "c",
-    "task": "T-5922"
    }
   ],
   "src": "plan",
@@ -540,12 +531,12 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-27T03:09:59Z",
+  "at": "2026-11-27T03:12:58Z",
   "s": {
    "T-4192": [
     "mergetest",
     "Xcode checks on the MacBook, 1st to merge",
-    1795748159252
+    1795748158156
    ],
    "T-5269": [
     "mergetest",
@@ -613,7 +604,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-27T03:09:59Z",
+  "at": "2026-11-27T03:12:58Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -625,13 +616,13 @@
     "parked": 6
    },
    "m": {
-    "checking": 14,
+    "checking": 17,
     "inline": null,
     "conflicted": null,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1235
+    "parked": 1238
    },
    "cur": [
     [
@@ -640,7 +631,7 @@
      ],
      "iPhone app tests",
      "MacBook",
-     14
+     17
     ]
    ],
    "ld": [
@@ -650,12 +641,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-27T03:09:37Z",
-    "ld": 2.52,
+    "at": "2026-11-27T03:12:31Z",
+    "ld": 2.47,
     "c": 8,
     "sb": 1,
     "dk": [
-     19.1,
+     21.9,
      228.3
     ],
     "ss": [
@@ -667,17 +658,17 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-27T03:07:48Z",
-    "ld": 43.26,
+    "at": "2026-11-27T03:09:45Z",
+    "ld": 39.37,
     "c": 12,
     "sb": 4,
     "dk": [
-     362.4,
+     362.6,
      926.4
     ],
     "sn": [
      "itsthecompany-runner",
-     "itsthecompany-runner-4",
+     "itsthecompany-runner-2",
      "itsthecompany-runner-5",
      "itsthecompany-runner-6"
     ]
@@ -710,11 +701,11 @@
      "open": true
     }
    },
-   "at": "2026-11-27T03:10:16+00:00"
+   "at": "2026-11-27T03:13:17+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-27T03:10:16+00:00"
+   "at": "2026-11-27T03:13:11+00:00"
   }
  },
  "operators": [
@@ -771,13 +762,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 6,
+  "main": 5,
   "lanes": 3,
-  "total": 9,
-  "at": "10:10 PM",
+  "total": 8,
+  "at": "10:13 PM",
   "why": "",
-  "at_iso": "2026-11-27T03:10:00+00:00",
+  "at_iso": "2026-11-27T03:13:00+00:00",
   "started": "9:24 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>9</b> agents running now</p><p class=\"an-sub\">Main session 6, started 9:24 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 10:10 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>8</b> agents running now</p><p class=\"an-sub\">Main session 5, started 9:24 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 10:13 PM ET</p></section>"
  }
 }

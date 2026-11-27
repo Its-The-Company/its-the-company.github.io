@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-27T18:40:56.625846+00:00",
+ "at": "2026-11-27T18:44:02.835057+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -58,19 +58,11 @@
  },
  "workers": [
   {
-   "name": "idris",
-   "task": "[build] T-4476 watch Gallery and project page",
-   "model": "opus",
-   "started": "2026-11-27T17:31:19.998Z",
-   "seconds": 4176,
-   "finished": null
-  },
-  {
    "name": "odalys",
    "task": "[tools] T-5944 stop false holds",
    "model": "opus",
    "started": "2026-11-27T18:16:28.425Z",
-   "seconds": 1468,
+   "seconds": 1654,
    "finished": null
   },
   {
@@ -78,12 +70,28 @@
    "task": "[build] T-5795 Overlap clocks",
    "model": "opus",
    "started": "2026-11-27T18:31:52.527Z",
-   "seconds": 544,
+   "seconds": 730,
+   "finished": null
+  },
+  {
+   "name": "pernille",
+   "task": "[review] T-4476",
+   "model": "opus",
+   "started": "2026-11-27T18:41:34.216Z",
+   "seconds": 148,
    "finished": null
   }
  ],
- "who": "Idris, Odalys, Pernille",
+ "who": "Odalys, Pernille x2",
  "recent": [
+  {
+   "name": "idris",
+   "task": "[build] T-4476 watch Gallery and project page",
+   "model": "opus",
+   "started": "2026-11-27T17:31:19.998Z",
+   "seconds": null,
+   "finished": "2026-11-27T18:41:11.325000+00:00"
+  },
   {
    "name": "idris",
    "task": "[review] T-5795",
@@ -107,14 +115,6 @@
    "started": "2026-11-27T17:32:00.226Z",
    "seconds": null,
    "finished": "2026-11-27T17:44:20.903000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[ops] Jeremy's account empty menu",
-   "model": "opus",
-   "started": "2026-11-27T17:37:32.820Z",
-   "seconds": null,
-   "finished": "2026-11-27T17:41:57.849000+00:00"
   }
  ],
  "queue": {
@@ -125,19 +125,19 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 9.0,
+   "pct": 11.0,
    "resets_at": "2026-11-27T17:30:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-27T13:33:22.839632-05:00",
+   "read_at": "2026-11-27T13:43:49.753763-05:00",
    "source": "live",
-   "left": 91.0,
+   "left": 89.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 35.0,
    "resets_at": "2026-11-29T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-27T13:33:22.839632-05:00",
+   "read_at": "2026-11-27T13:43:49.753763-05:00",
    "source": "live",
    "left": 65.0,
    "left_words": "of your weekly allowance left"
@@ -149,7 +149,7 @@
    "read_at": "2026-11-27T13:25:01.093029-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-27T13:33:22.839632-05:00"
+  "read_at": "2026-11-27T13:43:49.753763-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -169,7 +169,7 @@
   "week_pct": 35.06,
   "usage_pct": 50.0,
   "work_pct": 99.0,
-  "read_at": "2026-11-27T18:41:00+00:00",
+  "read_at": "2026-11-27T18:44:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -199,14 +199,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-27T13:40:00-05:00",
+   "at": "2026-11-27T13:42:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 4,
-  "at": "2026-11-27T13:41:00-05:00",
+  "at": "2026-11-27T13:44:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -223,14 +223,6 @@
  },
  "lanes": [
   {
-   "name": "Idris",
-   "state": "running",
-   "task": "[build] T-4476 watch Gallery and project page",
-   "model": "opus",
-   "since": "2026-11-27T17:31:19.998Z",
-   "next": []
-  },
-  {
    "name": "Odalys",
    "state": "running",
    "task": "[tools] T-5944 stop false holds",
@@ -244,6 +236,14 @@
    "task": "[build] T-5795 Overlap clocks",
    "model": "opus",
    "since": "2026-11-27T18:31:52.527Z",
+   "next": []
+  },
+  {
+   "name": "Idris",
+   "state": "next",
+   "task": "Idris, P2, from T-1282 F1 (not before TestFlight):...",
+   "model": null,
+   "since": null,
    "next": []
   },
   {
@@ -274,15 +274,6 @@
  "tasks": {
   "run": [
    {
-    "w": "Idris",
-    "k": "build",
-    "t": "Projects get one file, one ID and guarded outside code",
-    "m": "opus",
-    "at": "2026-11-27T17:31:19.998Z",
-    "o": "c",
-    "task": "T-4476"
-   },
-   {
     "w": "Odalys",
     "k": "tools",
     "t": "Stop false holds keeping an account idle",
@@ -299,6 +290,15 @@
     "at": "2026-11-27T18:31:52.527Z",
     "o": "c",
     "task": "T-5795"
+   },
+   {
+    "w": "Pernille",
+    "k": "review",
+    "t": "Projects get one file, one ID and guarded outside code",
+    "m": "opus",
+    "at": "2026-11-27T18:41:34.216Z",
+    "o": "c",
+    "task": "T-4476"
    }
   ],
   "src": "plan",
@@ -454,12 +454,12 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-27T18:40:46Z",
+  "at": "2026-11-27T18:44:02Z",
   "s": {
    "T-4181": [
     "mergetest",
     "Xcode checks on the MacBook, 1st to merge",
-    1795804366320
+    1795804382835
    ],
    "T-4552": [
     "mergetest",
@@ -480,7 +480,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-27T18:40:46Z",
+  "at": "2026-11-27T18:44:02Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -492,13 +492,13 @@
     "parked": 9
    },
    "m": {
-    "checking": 8,
+    "checking": 11,
     "inline": null,
     "conflicted": null,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 908
+    "parked": 911
    },
    "cur": [
     [
@@ -507,7 +507,7 @@
      ],
      "iPhone app tests",
      "MacBook",
-     8
+     11
     ]
    ],
    "ld": [
@@ -517,8 +517,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-27T18:40:01Z",
-    "ld": 4.78,
+    "at": "2026-11-27T18:43:16Z",
+    "ld": 4.15,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -573,11 +573,11 @@
      "open": true
     }
    },
-   "at": "2026-11-27T18:40:56+00:00"
+   "at": "2026-11-27T18:44:02+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-27T18:40:46+00:00"
+   "at": "2026-11-27T18:44:02+00:00"
   }
  },
  "operators": [
@@ -611,10 +611,10 @@
   "main": 3,
   "lanes": 0,
   "total": 3,
-  "at": "1:41 PM",
+  "at": "1:44 PM",
   "why": "",
-  "at_iso": "2026-11-27T18:41:00+00:00",
+  "at_iso": "2026-11-27T18:44:00+00:00",
   "started": "11:47 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 11:47 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 1:41 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 11:47 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 1:44 PM ET</p></section>"
  }
 }

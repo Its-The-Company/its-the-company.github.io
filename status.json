@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-27T21:47:09.809521+00:00",
+ "at": "2026-11-27T21:50:38.616203+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -62,7 +62,7 @@
    "task": "[build] T-5795 overlap clocks fixes",
    "model": "opus",
    "started": "2026-11-27T19:47:58.276Z",
-   "seconds": 7151,
+   "seconds": 7360,
    "finished": null
   },
   {
@@ -70,7 +70,7 @@
    "task": "[build] T-5945 two sessions per feature",
    "model": "opus",
    "started": "2026-11-27T20:15:56.824Z",
-   "seconds": 5472,
+   "seconds": 5681,
    "finished": null
   },
   {
@@ -78,7 +78,7 @@
    "task": "[build] T-5924 look picker page",
    "model": "opus",
    "started": "2026-11-27T21:19:37.669Z",
-   "seconds": 1652,
+   "seconds": 1860,
    "finished": null
   },
   {
@@ -86,7 +86,7 @@
    "task": "[build] T-4188 location, notifications steps",
    "model": "opus",
    "started": "2026-11-27T21:40:42.332Z",
-   "seconds": 387,
+   "seconds": 596,
    "finished": null
   },
   {
@@ -94,7 +94,7 @@
    "task": "[build] T-5890 T-4778 font probe tidy",
    "model": "opus",
    "started": "2026-11-27T21:41:34.130Z",
-   "seconds": 335,
+   "seconds": 544,
    "finished": null
   },
   {
@@ -102,20 +102,28 @@
    "task": "[build] T-5080 store app code sharing",
    "model": "opus",
    "started": "2026-11-27T21:41:58.876Z",
-   "seconds": 310,
+   "seconds": 519,
    "finished": null
   },
+  {
+   "name": "pernille",
+   "task": "[review] T-5527",
+   "model": "opus",
+   "started": "2026-11-27T21:48:30.469Z",
+   "seconds": 128,
+   "finished": null
+  }
+ ],
+ "who": "Pernille x2, Odalys, Maren, Idris x2, Wrenna",
+ "recent": [
   {
    "name": "idris",
    "task": "[build] T-5527 spike records fix",
    "model": "sonnet",
    "started": "2026-11-27T21:42:05.394Z",
-   "seconds": 304,
-   "finished": null
-  }
- ],
- "who": "Pernille, Odalys, Maren, Idris x3, Wrenna",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-27T21:50:38.369000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[review] T-4190",
@@ -139,20 +147,12 @@
    "started": "2026-11-27T20:13:32.053Z",
    "seconds": null,
    "finished": "2026-11-27T21:17:56.658000+00:00"
-  },
-  {
-   "name": "ines",
-   "task": "[review] T-5923",
-   "model": "opus",
-   "started": "2026-11-27T20:52:27.708Z",
-   "seconds": null,
-   "finished": "2026-11-27T21:05:40.625000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 274,
+  "runnable_count": 271,
   "blocked_count": 0
  },
  "meter": {
@@ -201,7 +201,7 @@
   "week_pct": 36.54,
   "usage_pct": 49.0,
   "work_pct": 99.0,
-  "read_at": "2026-11-27T21:47:00+00:00",
+  "read_at": "2026-11-27T21:50:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -235,7 +235,7 @@
   }
  ],
  "disk": {
-  "free_gb": 46,
+  "free_gb": 45,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -244,14 +244,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-27T16:46:00-05:00",
+   "at": "2026-11-27T16:48:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 4,
-  "at": "2026-11-27T16:47:00-05:00",
+  "at": "2026-11-27T16:50:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -373,11 +373,11 @@
     "task": "T-5080"
    },
    {
-    "w": "Idris",
-    "k": "build",
+    "w": "Pernille",
+    "k": "review",
     "t": "Correct the web view spike's records",
-    "m": "sonnet",
-    "at": "2026-11-27T21:42:05.394Z",
+    "m": "opus",
+    "at": "2026-11-27T21:48:30.469Z",
     "o": "c",
     "task": "T-5527"
    }
@@ -457,30 +457,42 @@
   ],
   "done": [
    {
-    "w": "Idris+maren",
-    "t": "The Pro screen's pictures for the test build now show the price on the first screen at the...",
-    "at": "2026-11-27T16:20:00-05:00"
+    "w": "Idris",
+    "t": "The design spec and the app's screens page now say that an internal test build may have no...",
+    "at": "2026-11-27T16:50:00-05:00"
    },
    {
-    "w": "Maren",
-    "t": "The three new looks can now be tried in 14 colour sets, 5 fonts and 4 panel shapes, every one...",
-    "at": "2026-11-27T16:18:00-05:00"
+    "w": "Idris",
+    "t": "The design spec now says, in the designer's approved words, that the Settings Support row is not...",
+    "at": "2026-11-27T16:50:00-05:00"
    },
    {
-    "w": "Odalys",
-    "t": "The dispatcher no longer mistakes a note or a feature's own steps for something the feature...",
-    "at": "2026-11-27T15:09:00-05:00"
+    "w": "Idris",
+    "t": "A test of how the purchase tests wait now allows 5 seconds instead of 2, so a busy test machine...",
+    "at": "2026-11-27T16:50:00-05:00"
    }
   ],
   "count": {
-   "next": 274,
+   "next": 271,
    "wait": 0,
    "blocked": 0,
    "you": 0
   },
   "fin": {
-   "n": 3,
+   "n": 6,
    "rows": [
+    [
+     "T-4791",
+     "Note the privacy row gap in..."
+    ],
+    [
+     "T-2500",
+     "Settings cleanups: Copy..."
+    ],
+    [
+     "T-5049",
+     "Loosen the Pro store wait..."
+    ],
     [
      "T-0861",
      "Fix three red paywall..."
@@ -535,7 +547,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-27T21:47:09Z",
+  "at": "2026-11-27T21:50:38Z",
   "s": {
    "T-4190": [
     "mergetest",
@@ -556,13 +568,16 @@
   "wk": {
    "T-4190": "Idris",
    "T-4181": "Idris",
+   "T-4791": "Idris",
+   "T-2500": "Idris",
+   "T-5049": "Idris",
    "T-0861": "Idris",
    "T-5923": "Maren",
    "T-5944": "Odalys"
   }
  },
  "ln": {
-  "at": "2026-11-27T21:47:09Z",
+  "at": "2026-11-27T21:50:38Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -580,7 +595,7 @@
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1094
+    "parked": 1097
    },
    "cur": [],
    "ld": [
@@ -590,12 +605,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-27T21:47:22Z",
-    "ld": 4.26,
+    "at": "2026-11-27T21:50:03Z",
+    "ld": 4.94,
     "c": 8,
     "sb": 0,
     "dk": [
-     47.8,
+     45.2,
      228.3
     ],
     "ss": [
@@ -605,17 +620,17 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-27T21:41:39Z",
-    "ld": 60.73,
+    "at": "2026-11-27T21:48:16Z",
+    "ld": 19.35,
     "c": 12,
     "sb": 2,
     "dk": [
-     350.3,
+     348.8,
      926.4
     ],
     "sn": [
      "itsthecompany-runner",
-     "itsthecompany-runner-5"
+     "itsthecompany-runner-2"
     ]
    }
   }
@@ -646,11 +661,11 @@
      "open": true
     }
    },
-   "at": "2026-11-27T21:47:09+00:00"
+   "at": "2026-11-27T21:50:38+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-27T21:47:09+00:00"
+   "at": "2026-11-27T21:50:38+00:00"
   }
  },
  "operators": [
@@ -693,10 +708,10 @@
   "main": 7,
   "lanes": 1,
   "total": 8,
-  "at": "4:47 PM",
+  "at": "4:50 PM",
   "why": "",
-  "at_iso": "2026-11-27T21:47:00+00:00",
+  "at_iso": "2026-11-27T21:50:00+00:00",
   "started": "2:44 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>8</b> agents running now</p><p class=\"an-sub\">Main session 7, started 2:44 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 4:47 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>8</b> agents running now</p><p class=\"an-sub\">Main session 7, started 2:44 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 4:50 PM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-27T10:14:08.406269+00:00",
+ "at": "2026-11-27T10:16:53.456475+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -62,7 +62,7 @@
    "task": "[build] T-4190 paywall batch two",
    "model": "opus",
    "started": "2026-11-27T06:04:32.961Z",
-   "seconds": 14975,
+   "seconds": 15140,
    "finished": null
   },
   {
@@ -70,7 +70,7 @@
    "task": "[build] T-5795 Sky premade rest",
    "model": "opus",
    "started": "2026-11-27T10:07:35.937Z",
-   "seconds": 392,
+   "seconds": 557,
    "finished": null
   },
   {
@@ -78,7 +78,7 @@
    "task": "[build] T-4478 review fixes",
    "model": "opus",
    "started": "2026-11-27T10:10:09.620Z",
-   "seconds": 238,
+   "seconds": 403,
    "finished": null
   }
  ],
@@ -169,7 +169,7 @@
   "week_pct": 29.18,
   "usage_pct": 53.9,
   "work_pct": 98.9,
-  "read_at": "2026-11-27T10:14:00+00:00",
+  "read_at": "2026-11-27T10:17:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -243,7 +243,7 @@
  "lock_in": {
   "on": false,
   "pool": 5,
-  "at": "2026-11-27T05:14:00-05:00",
+  "at": "2026-11-27T05:17:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -503,7 +503,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-27T10:13:49Z",
+  "at": "2026-11-27T10:16:53Z",
   "s": {
    "T-4478": [
     "mergetest",
@@ -546,7 +546,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-27T10:13:49Z",
+  "at": "2026-11-27T10:16:53Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -564,7 +564,7 @@
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1303
+    "parked": 1306
    },
    "cur": [],
    "ld": [
@@ -574,32 +574,29 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-27T10:13:45Z",
-    "ld": 4.88,
+    "at": "2026-11-27T10:17:31Z",
+    "ld": 9.4,
     "c": 8,
-    "sb": 1,
     "dk": [
-     15.0,
+     17.5,
      228.3
     ],
     "ss": [
      172.5,
      953.7
-    ],
-    "sn": [
-     "pywidget-wk-check"
     ]
    },
    "macbook": {
-    "at": "2026-11-27T10:13:08Z",
-    "ld": 34.67,
+    "at": "2026-11-27T10:13:41Z",
+    "ld": 35.59,
     "c": 12,
-    "sb": 4,
+    "sb": 5,
     "dk": [
-     345.9,
+     345.6,
      926.4
     ],
     "sn": [
+     "itsthecompany-runner",
      "itsthecompany-runner-2",
      "itsthecompany-runner-3",
      "itsthecompany-runner-4",
@@ -634,11 +631,11 @@
      "open": true
     }
    },
-   "at": "2026-11-27T10:14:08+00:00"
+   "at": "2026-11-27T10:16:53+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-27T10:14:08+00:00"
+   "at": "2026-11-27T10:16:53+00:00"
   }
  },
  "operators": [
@@ -655,17 +652,13 @@
    "w": "Operator",
    "a": "Evan's Account",
    "sr": 1,
-   "m": "opus",
-   "e": "high",
    "t": "Work session \u2013 1 task",
-   "at": "2026-11-27T02:51:20-05:00"
+   "at": "2026-11-27T02:51:21-05:00"
   },
   {
    "w": "Operator",
    "a": "Evan's Account",
    "sr": 1,
-   "m": "opus",
-   "e": "high",
    "t": "Work session \u2013 1 task",
    "at": "2026-11-27T04:08:25-05:00"
   },
@@ -673,8 +666,6 @@
    "w": "Operator",
    "a": "Jeremy's Account",
    "sr": 1,
-   "m": "opus",
-   "e": "high",
    "t": "Work session \u2013 1 task",
    "at": "2026-11-27T03:57:13-05:00"
   }
@@ -700,10 +691,10 @@
   "main": 3,
   "lanes": 3,
   "total": 6,
-  "at": "5:14 AM",
+  "at": "5:17 AM",
   "why": "",
-  "at_iso": "2026-11-27T10:14:00+00:00",
+  "at_iso": "2026-11-27T10:17:00+00:00",
   "started": "12:15 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 3, started 12:15 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 5:14 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 3, started 12:15 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 5:17 AM ET</p></section>"
  }
 }

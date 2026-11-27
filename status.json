@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-27T03:04:08.678855+00:00",
+ "at": "2026-11-27T03:07:11.850800+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -72,7 +72,7 @@
    "task": "[build] T-4478 Pages tap links",
    "model": "opus",
    "started": "2026-11-27T02:29:24.979Z",
-   "seconds": 2083,
+   "seconds": 2266,
    "finished": null
   },
   {
@@ -80,7 +80,7 @@
    "task": "[build] T-4190 Settings Pro themes",
    "model": "opus",
    "started": "2026-11-27T02:29:37.630Z",
-   "seconds": 2071,
+   "seconds": 2254,
    "finished": null
   },
   {
@@ -88,7 +88,7 @@
    "task": "[build] T-4183 Gallery premade tests",
    "model": "opus",
    "started": "2026-11-27T02:29:50.138Z",
-   "seconds": 2058,
+   "seconds": 2241,
    "finished": null
   },
   {
@@ -96,7 +96,7 @@
    "task": "[build] T-5919 Home three sessions",
    "model": "opus",
    "started": "2026-11-27T02:30:35.377Z",
-   "seconds": 2013,
+   "seconds": 2196,
    "finished": null
   },
   {
@@ -104,7 +104,7 @@
    "task": "[build] T-5918 account names finish",
    "model": "opus",
    "started": "2026-11-27T02:30:26.922Z",
-   "seconds": 2021,
+   "seconds": 2204,
    "finished": null
   },
   {
@@ -112,7 +112,7 @@
    "task": "[build] T-5922 review fixes",
    "model": "opus",
    "started": "2026-11-27T03:03:22.906Z",
-   "seconds": 45,
+   "seconds": 228,
    "finished": null
   }
  ],
@@ -187,8 +187,20 @@
   "week_pct": 25.79,
   "usage_pct": 54.2,
   "work_pct": 98.8,
-  "read_at": "2026-11-27T03:04:00+00:00",
+  "read_at": "2026-11-27T03:07:00+00:00",
   "running": [
+   {
+    "lane": "a",
+    "task": "T-4185",
+    "w": "Idris",
+    "k": "build",
+    "t": "Launcher widgets open the apps a person chose",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-26T22:06:08-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
    {
     "lane": "a2",
     "task": "T-4181",
@@ -249,7 +261,7 @@
  "lock_in": {
   "on": true,
   "pool": 5,
-  "at": "2026-11-26T22:04:00-05:00",
+  "at": "2026-11-26T22:07:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -520,17 +532,23 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-27T03:04:01Z",
+  "at": "2026-11-27T03:07:11Z",
   "s": {
    "T-4192": [
     "mergetest",
     "Xcode checks on the MacBook, 1st to merge",
-    1795748161671
+    1795748171850
    ],
-   "T-4436": [
+   "T-5269": [
     "mergetest",
     "iPhone tests on the MacBook",
     null
+   ],
+   "T-4185": [
+    "merged",
+    "on main 9:39 PM ET",
+    1795747152000,
+    "Pernille"
    ],
    "T-5919": [
     "merged",
@@ -565,7 +583,8 @@
   },
   "nm": {
    "T-4192": "Python in the app: smaller bundle, installable packages",
-   "T-4436": "Tidy the refresh tap's small edges",
+   "T-5269": "Start the premade page UI tests from known files",
+   "T-4185": "Launcher widgets open the apps a person chose",
    "T-5919": "Show the three-session system on Home",
    "T-5918": "Name the accounts Evan's and Jeremy's everywhere",
    "T-4182": "A failing widget says so and can recover",
@@ -574,7 +593,8 @@
   },
   "wk": {
    "T-4192": "Idris",
-   "T-4436": "Idris",
+   "T-5269": "Idris",
+   "T-4185": "Idris",
    "T-5919": "Maren",
    "T-5918": "Odalys",
    "T-4182": "Idris",
@@ -585,7 +605,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-27T03:04:01Z",
+  "at": "2026-11-27T03:07:11Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -597,13 +617,13 @@
     "parked": 6
    },
    "m": {
-    "checking": 8,
+    "checking": 11,
     "inline": null,
     "conflicted": null,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1229
+    "parked": 1232
    },
    "cur": [
     [
@@ -612,7 +632,7 @@
      ],
      "iPhone app tests",
      "MacBook",
-     8
+     11
     ]
    ],
    "ld": [
@@ -622,12 +642,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-27T03:03:24Z",
-    "ld": 3.19,
+    "at": "2026-11-27T03:06:46Z",
+    "ld": 3.05,
     "c": 8,
     "sb": 1,
     "dk": [
-     19.6,
+     19.3,
      228.3
     ],
     "ss": [
@@ -639,18 +659,18 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-27T03:00:06Z",
-    "ld": 41.81,
+    "at": "2026-11-27T03:04:12Z",
+    "ld": 50.12,
     "c": 12,
     "sb": 5,
     "dk": [
-     362.6,
+     361.7,
      926.4
     ],
     "sn": [
      "itsthecompany-runner",
      "itsthecompany-runner-2",
-     "itsthecompany-runner-4",
+     "itsthecompany-runner-3",
      "itsthecompany-runner-5",
      "itsthecompany-runner-6"
     ]
@@ -683,11 +703,11 @@
      "open": true
     }
    },
-   "at": "2026-11-27T03:04:08+00:00"
+   "at": "2026-11-27T03:07:11+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-27T03:03:55+00:00"
+   "at": "2026-11-27T03:07:05+00:00"
   }
  },
  "operators": [
@@ -699,6 +719,15 @@
    "e": "high",
    "t": "Work session",
    "at": "2026-11-26T21:41:08-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Evan's Account",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session \u2013 1 task",
+   "at": "2026-11-26T22:06:08-05:00"
   },
   {
    "w": "Operator",
@@ -736,12 +765,12 @@
  ],
  "agents_now": {
   "main": 6,
-  "lanes": 2,
-  "total": 8,
-  "at": "10:04 PM",
+  "lanes": 3,
+  "total": 9,
+  "at": "10:07 PM",
   "why": "",
-  "at_iso": "2026-11-27T03:04:00+00:00",
+  "at_iso": "2026-11-27T03:07:00+00:00",
   "started": "9:24 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>8</b> agents running now</p><p class=\"an-sub\">Main session 6, started 9:24 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 10:04 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>9</b> agents running now</p><p class=\"an-sub\">Main session 6, started 9:24 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 10:07 PM ET</p></section>"
  }
 }

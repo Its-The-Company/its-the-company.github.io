@@ -154,6 +154,22 @@ The bridge's `status` maps to the widget's outcome (contract s11 A4): `ok` with 
 
 - **`killed` after an expiry.** Launch recovery for a marker whose `run_id` is in `expired_runs` writes nothing to `status.json`: no badge, the streak neither counts nor resets; the run row is `killed` with the "iOS closed PyWidget in the background" copy (r1 10-26 2:40 AM item 1). The list is trusted only for ids the expiration handler listed in this process; a <span title="A test written in advance. If it fires, we drop the idea.">kill</span> matched only by the file counts, and four in a row on background triggers demote (r1 11-03 9:09 PM Fix B, T-1765).
 - **Loop breaker.** Two `killed` or `stuck` in a row on background triggers set `background=false`; the widget runs only on T1 until a T1 run succeeds.
+- **Dated line (Idris), 2026-11-27, T-0793 slice 7** (where `background` is written and read; for Pernille's review).
+  Written: by RunLogRecorder, in the hold of every widget row it writes (a run's row, a lane turn, a run that never
+  started, launch recovery), after that row's status write: the widget's newest rows are read back (the last 64 KiB of
+  `runs.jsonl`) and `LoopBreaker.decide` sets `status.json` `background` to `false`, or removes it on a T1 `ok`. Only
+  `false` is ever written; a missing key, or anything that is not the JSON `false`, reads as true. Either process may
+  write it (the extension's `system` turns are background triggers). A streak that runs back past the 64 KiB counts
+  short and does not demote. Read, in 1.0 so far: T2 only, through `RefreshAsks.asks` (the firing's ids and the
+  reschedule's ask). Not read yet, each a later slice of T-0793 that needs its own line here: T3's batch (Refresh
+  Widgets from Shortcuts) and the extension's `system` runs of a `lane: widget` widget, which "runs only on T1" also
+  covers.
+- **Dated line (Idris), 2026-11-27, T-0793 slice 7 fix** (Pernille's review of 17e8665241, blocking). A firing picks
+  its widgets before this launch's pass (launch recovery, after the first Python start) records the last launch's kill,
+  so a second kill in a row demoted the widget only after the pick, and it ran and was killed a third time. Each T2
+  widget now reads `background` again after the launch-log step, before its run is queued; demoted, it is skipped with
+  no row, as one left out of the pick. The check is run by every row, of any kind, so history from before slice 7
+  counts at the next row; a lost restore write keeps the widget off background triggers until the next T1 `ok`.
 - **`oom_guard` and the badge.** `oom_guard_since` is set by the first refusal and kept by later ones and by `deferred`; any outcome of a run that started clears it. A refusal reads as already under way, and badges at once, unless the old status is a fresh picture's (an outcome present and no `failing_since`); this covers a missing status and a refusal during a failure streak. Otherwise `showsBadge` is true for `oom_guard` when `ts` is at least 60 s after `oom_guard_since`, so one reload's refusals stay unbadged and the next reload's badge; the "already under way" fallback is `ts` minus 61 s (r1 11-03 7:51 PM item 2; 8:00 PM; 11-05 2:12 AM; 2:48 PM, rule D).
 - **The drawn badge** is the demotion read or `showsBadge`, never `showsBadge` alone (r1 11-05 7:55 PM item 7). The demotion read badges an id when the list does not read, or when the id is on the list and `widgets/<id>/lane-moved` is anything but exactly `memory`, `time` or `refused_import`. A size move draws no badge; a failure move, a missing reason and an unknown one do (chair line 4:58 PM ET 11-16, below).
 - **Chair line (Ines), 4:58 PM ET 11-16, T-4630** (from T-4518 H1, `docs/reviews/t4280-pernille.md`; part of T-4181). Row 4 badges only the failure moves. The app lane is the widget's fallback (s3 item 7), and a widget the size rule placed there is working as designed; drawing it as an error would put a badge on half the premades for good. The badge says a run failed or the lane stopped trusting the widget, nothing more.

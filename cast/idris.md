@@ -52,6 +52,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-4188 (merge point) and T-5796 re-reviews still open; detail and xc.sh lessons in archive.md.
 - T-4692, T-5047, T-5607, T-5108, T-0053, T-0044: open threads in archive.md.
 - T-4478 11-27: scratch T-4478-idris/wt 8541fec6a2 (Pernille's M1 route(of:), M2 <i> bound 100, Lows) on 0a1ebd85ed; unit 2704/0 J-...0513-...285cc0, host 4468/0, mutant red. Open: re-review, land. T-4705 blocked: no premade_op channel on main. Lesson: a mutant's restore step needs an absolute path, then check the hash.
+- T-4181 11-27 (a2): 17e8665241 slice 7 + 299c8913fa fix (T2 re-reads `background` after the launch pass). Open: Pernille re-review; T3/extension reads, oom_guard. Lesson: a pick made before launch recovery misses the last <span title="A test written in advance. If it fires, we drop the idea.">kill</span>; re-check after it.
 {% endraw %}
 
 

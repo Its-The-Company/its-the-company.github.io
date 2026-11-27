@@ -315,6 +315,63 @@ This session resumed the 11-25 <span title="An idea that reaches B or better but
      says `backgrounded` (recovery still finds it in expired_runs). Low.
   3. From slice 5: a firing that joins a pass already running never expires that pass's run in flight. Low.
 - Next on T-0793: the 7.2 loop breaker needs a design call on where status.json `background` is written and read.
+
+## Session 2026-11-27 8:53-10:10 AM ET (Idris, lane a2, from main 15288f6d7b)
+
+- Baseline at 15288f6d: PyWidgetTests 2730/0/2 (J-20261127-0853-land-chk-a5ab71-5-358476).
+- T-0793 17e8665241, slice 7 only: the 7.2 loop breaker. The design call is a dated line in ADR-007 7.2 (for Pernille's
+  review): RunLogRecorder applies LoopBreaker.decide in the hold of every widget row it writes (run, lane turn, not
+  started, launch recovery), after the row's status write, from the newest 64 KiB of runs.jsonl
+  (RunLogStore.recentRows); status.json `background` is written only as `false` and removed on a <span title="The rule that decides whether an idea gets two blind graders now, waits (park), or stops.">T1</span> `ok`. T2 reads
+  it through BackgroundRefresh.widgets, so RefreshAsks.asks keeps the widget out of the firing and the ask.
+  testFourForgedExpiryKillsDemote now expects the fourth forged kill's `background=false` (the file otherwise
+  unchanged; three kills write nothing). 8 mutants in Tests/mutants-t0793.json, all failed their tests by hand
+  (scratch by_hand_multi.py, s7-batches.json; J-20261127-0936-...-384bb9, -0946-...-486d26, -0952-...-58856d,
+  -0956-...-07feb8). Checks: PyWidgetTests 2738/0/3 at the tip's tree (J-20261127-0936-land-chk-a5ab71-3-09ca0b;
+  the third skip is ProStoreTests/testAskToBuyDeclinedGrantsNothing, not in this change), LaneWarmWindowTests 6/0
+  (J-20261127-0959-land-chk-a5ab71-1-1985e6), host 4494/0.
+- Known limits, written in the code and the ADR line: a streak running back past 64 KiB counts short (no demotion);
+  history from before this build counts only once the next counted row arrives.
+- Left on T-0793: T3's batch (Refresh Widgets from Shortcuts) and the extension's `system` runs do not read
+  `background` yet (each needs its own ADR line), then `oom_guard`. A real firing is T-0680's.
+- No commit, rechecked at 15288f6d: T-4280 (proof is T-4494 item 3, the Investors' iPhone); T-1882 (no Swift or runtime
+  code writes fields.json); T-2021 (no scheme sets PYWIDGET_LANE_FORCED; needs the forced-lane bench on a quiet
+  runner); T-4433 and T-4435 (this Mac still has only iOS 26.0 and 27.0 runtimes).
+- Core `swift test` does not build at 15288f6d (WidgetBadge.swift: `SentStale` not in the package); not mine, not
+  touched. Pernille's slice 6 lows (1)-(3) and slice 5 points (1), (2), (4) stay open.
+- Next: Pernille reviews 17e8665241.
+
+## Session 2026-11-27 10:15-11:10 AM ET (Idris, lane a2, Pernille's review of 17e8665241)
+
+- Blocking fixed in 299c8913fa (a new commit, not an amend): a firing picked its widgets before the launch pass
+  (afterStart, inside each widget's refresh) recorded the last launch's kill, so a second kill demoted the widget only
+  after the pick and it ran a third time. Now, on bg_refresh, WidgetWriter.refresh reads `background` again
+  (BackgroundRefresh.background) after the launch-log step and before queueing, and skips a demoted widget with no row.
+  The pin is BackgroundBatchTests.testASecondKillTheLaunchPassFindsKeepsTheWidgetOutOfThatFiring. With the mutant it is
+  red: rows [killed, killed, deferred], a run queued. Green in J-20261127-1035-land-chk-a5ab71-1-550a73.
+- Her lows: (2) taken: RunLogRecorderTests.testARunThatNeverStartedChecksTheLoopBreaker plus a mutant. (3) and (4) are
+  now worded correctly in the ADR line and RunLogRecorder.applyLoopBreaker. A lost restore write waits for the next T1
+  `ok`, and old history counts at the next row of any kind. The behaviour itself is unchanged. (1) stays open: a
+  `leavesStatus` row still counts in the next row's streak.
+- The mutant "wants-run is not read" had been stale since 17e8665241. It is repointed. All three mutants failed their
+  tests together, with the sources restored and their hashes checked (J-20261127-1039-land-chk-a5ab71-1-3665b0).
+- Checks: host 4494/0, LaneWarmWindowTests 6/0 (J-...1043-...28a142), PyWidgetTests at 299c8913 2740/0/2
+  (J-20261127-1047-land-chk-a5ab71-1-3793ec).
+- Check: "FAULT T-0793 is in 2 commits (17e8665241, 299c8913fa)". Folding them is the Operator's call, since I was told
+  not to amend or rebase.
+- Next: Pernille re-reviews 299c8913fa.
+
+## Fold and re-review, 2026-11-27 11:20 AM ET (Operator, lane a2)
+
+- Folded with an identical tree: 17e8665241 and 299c8913fa are now one commit, 5231410274 (T-0793 slice 7, the
+  loop breaker with its fix; the message keeps both parts). The handoff commits 00118b1fe4 and 46553fe325 are now
+  3926fabeb6. The hashes in the two sections above are from before the fold.
+- `check`: MERGE POINT: yes (hand-in time, 134 minutes), so no further step started this session.
+- Pernille re-reviewed 15288f6d7b..3926fabeb6: blocking none. Lows still open: (1) in the race the firing's ids now
+  cover every placed widget, so a scene-active pass can join it, and the demoted widget comes back skipped and misses
+  its T1 run that activation (WidgetWriter.swift:860 against :475); (2) `leavesStatus` rows still count in the next
+  row's streak.
+- Still left on T-0793: T3's batch and the extension's `system` runs read `background`; `oom_guard`.
 {% endraw %}
 
 </div>

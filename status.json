@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-27T23:22:22.905141+00:00",
+ "at": "2026-11-27T23:25:27.168907+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -58,19 +58,11 @@
  },
  "workers": [
   {
-   "name": "pernille",
-   "task": "[build] T-5795 overlap clocks fixes",
-   "model": "opus",
-   "started": "2026-11-27T19:47:58.276Z",
-   "seconds": 12864,
-   "finished": null
-  },
-  {
    "name": "idris",
    "task": "[build] T-4190 restore and theme tests",
    "model": "opus",
    "started": "2026-11-27T21:51:41.874Z",
-   "seconds": 5441,
+   "seconds": 5625,
    "finished": null
   },
   {
@@ -78,12 +70,28 @@
    "task": "[build] T-5837 Home flow redo",
    "model": "opus",
    "started": "2026-11-27T22:49:52.350Z",
-   "seconds": 1950,
+   "seconds": 2134,
    "finished": null
   }
  ],
- "who": "Pernille, Idris, Maren",
+ "who": "Idris, Maren",
  "recent": [
+  {
+   "name": "idris",
+   "task": "[review] T-5795",
+   "model": "opus",
+   "started": "2026-11-27T23:23:02.568Z",
+   "seconds": null,
+   "finished": "2026-11-27T23:24:51.471000+00:00"
+  },
+  {
+   "name": "pernille",
+   "task": "[build] T-5795 overlap clocks fixes",
+   "model": "opus",
+   "started": "2026-11-27T19:47:58.276Z",
+   "seconds": null,
+   "finished": "2026-11-27T23:22:48.138000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[review] T-5924 again",
@@ -99,22 +107,6 @@
    "started": "2026-11-27T23:11:50.023Z",
    "seconds": null,
    "finished": "2026-11-27T23:17:34.518000+00:00"
-  },
-  {
-   "name": "maren",
-   "task": "[build] Maren rules Distance no-fix face",
-   "model": "opus",
-   "started": "2026-11-27T23:12:07.233Z",
-   "seconds": null,
-   "finished": "2026-11-27T23:14:02.231000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-4188 location, notifications steps",
-   "model": "opus",
-   "started": "2026-11-27T21:40:42.332Z",
-   "seconds": null,
-   "finished": "2026-11-27T23:11:35.384000+00:00"
   }
  ],
  "queue": {
@@ -125,20 +117,20 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 11.0,
-   "resets_at": "2026-11-28T03:30:00.366352+00:00",
+   "pct": 12.0,
+   "resets_at": "2026-11-27T22:30:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-27T18:17:35.677068-05:00",
-   "source": "usage",
-   "left": 89.0,
+   "read_at": "2026-11-27T18:24:30.698475-05:00",
+   "source": "live",
+   "left": 88.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 42.0,
-   "resets_at": "2026-11-29T07:00:00.366370+00:00",
+   "resets_at": "2026-11-29T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-27T18:17:35.677068-05:00",
-   "source": "usage",
+   "read_at": "2026-11-27T18:24:30.698475-05:00",
+   "source": "live",
    "left": 58.0,
    "left_words": "of your weekly allowance left"
   },
@@ -149,7 +141,7 @@
    "read_at": "2026-11-27T18:17:35.677068-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-27T18:17:35.677068-05:00"
+  "read_at": "2026-11-27T18:24:30.698475-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -169,7 +161,7 @@
   "week_pct": 40.34,
   "usage_pct": 49.0,
   "work_pct": 99.0,
-  "read_at": "2026-11-27T23:22:00+00:00",
+  "read_at": "2026-11-27T23:25:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -212,14 +204,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-27T18:21:00-05:00",
+   "at": "2026-11-27T18:24:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 4,
-  "at": "2026-11-27T18:22:00-05:00",
+  "at": "2026-11-27T18:25:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -230,19 +222,11 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 8 (at its floor: load 25.3 a core is over 10)",
+  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 8 (at its floor: load 17.2 a core is over 10)",
   "n": 8,
   "at": "2026-11-27T14:44:39.791191-05:00"
  },
  "lanes": [
-  {
-   "name": "Pernille",
-   "state": "running",
-   "task": "[build] T-5795 overlap clocks fixes",
-   "model": "opus",
-   "since": "2026-11-27T19:47:58.276Z",
-   "next": []
-  },
   {
    "name": "Idris",
    "state": "running",
@@ -257,6 +241,14 @@
    "task": "[build] T-5837 Home flow redo",
    "model": "opus",
    "since": "2026-11-27T22:49:52.350Z",
+   "next": []
+  },
+  {
+   "name": "Pernille",
+   "state": "next",
+   "task": "Pernille, P1, continuation of T-2609: after...",
+   "model": null,
+   "since": null,
    "next": []
   },
   {
@@ -286,15 +278,6 @@
  ],
  "tasks": {
   "run": [
-   {
-    "w": "Pernille",
-    "k": "build",
-    "t": "The 1.0 showcase premades are built and in the Gallery",
-    "m": "opus",
-    "at": "2026-11-27T19:47:58.276Z",
-    "o": "c",
-    "task": "T-5795"
-   },
    {
     "w": "Idris",
     "k": "build",
@@ -479,9 +462,9 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-27T23:22:13Z",
+  "at": "2026-11-27T23:25:27Z",
   "s": {
-   "T-5946": [
+   "T-5523": [
     "mergetest",
     "iPhone tests on the MacBook",
     null
@@ -494,9 +477,11 @@
    ]
   },
   "nm": {
+   "T-5523": "Make the theme row test read the shipped flag file",
    "T-4181": "Widgets refresh on their own and by a tap"
   },
   "wk": {
+   "T-5523": "Idris",
    "T-4181": "Idris",
    "T-5080": "Wrenna",
    "T-5527": "Idris",
@@ -509,7 +494,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-27T23:22:13Z",
+  "at": "2026-11-27T23:25:27Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -527,7 +512,7 @@
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1189
+    "parked": 1192
    },
    "cur": [],
    "ld": [
@@ -537,34 +522,33 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-27T23:21:48Z",
-    "ld": 24.58,
+    "at": "2026-11-27T23:25:06Z",
+    "ld": 16.26,
     "c": 8,
-    "sb": 1,
+    "sb": 0,
     "dk": [
-     44.5,
+     44.4,
      228.3
     ],
     "ss": [
      152.7,
      953.7
     ],
-    "sn": [
-     "pywidget-wk-check"
-    ]
+    "sn": []
    },
    "macbook": {
-    "at": "2026-11-27T23:17:48Z",
-    "ld": 10.95,
+    "at": "2026-11-27T23:24:28Z",
+    "ld": 12.58,
     "c": 12,
-    "sb": 2,
+    "sb": 3,
     "dk": [
-     354.4,
+     352.8,
      926.4
     ],
     "sn": [
      "itsthecompany-runner",
-     "itsthecompany-runner-2"
+     "itsthecompany-runner-2",
+     "itsthecompany-runner-3"
     ]
    }
   }
@@ -595,11 +579,11 @@
      "open": true
     }
    },
-   "at": "2026-11-27T23:22:22+00:00"
+   "at": "2026-11-27T23:25:27+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-27T23:22:22+00:00"
+   "at": "2026-11-27T23:25:14+00:00"
   }
  },
  "operators": [
@@ -640,13 +624,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 3,
+  "main": 2,
   "lanes": 1,
-  "total": 4,
-  "at": "6:22 PM",
+  "total": 3,
+  "at": "6:25 PM",
   "why": "",
-  "at_iso": "2026-11-27T23:22:00+00:00",
+  "at_iso": "2026-11-27T23:25:00+00:00",
   "started": "2:44 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 3, started 2:44 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 6:22 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 2:44 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 6:25 PM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-27T08:39:27.450272+00:00",
+ "at": "2026-11-27T08:42:28.142354+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -62,7 +62,7 @@
    "task": "[build] T-4190 paywall batch two",
    "model": "opus",
    "started": "2026-11-27T06:04:32.961Z",
-   "seconds": 9294,
+   "seconds": 9475,
    "finished": null
   },
   {
@@ -70,7 +70,7 @@
    "task": "[site] T-5925 Work panel switch",
    "model": "opus",
    "started": "2026-11-27T07:24:51.690Z",
-   "seconds": 4475,
+   "seconds": 4656,
    "finished": null
   },
   {
@@ -78,7 +78,7 @@
    "task": "[build] T-4183 review fixes",
    "model": "opus",
    "started": "2026-11-27T07:49:57.140Z",
-   "seconds": 2970,
+   "seconds": 3151,
    "finished": null
   }
  ],
@@ -169,7 +169,7 @@
   "week_pct": 28.01,
   "usage_pct": 53.9,
   "work_pct": 98.9,
-  "read_at": "2026-11-27T08:39:00+00:00",
+  "read_at": "2026-11-27T08:42:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -219,7 +219,7 @@
  "lock_in": {
   "on": false,
   "pool": 5,
-  "at": "2026-11-27T03:39:00-05:00",
+  "at": "2026-11-27T03:42:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -230,7 +230,7 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Double Spread: past the week's halfway point with room left, so twice the even pace until the limit or the reset; the machine allows 8 (at its floor: load 10.3 a core is over 10)",
+  "why": "Double Spread: past the week's halfway point with room left, so twice the even pace until the limit or the reset; the machine allows 8 (held: too few lands in 3 hours to judge a raise)",
   "n": 5,
   "at": "2026-11-27T00:15:36.638824-05:00"
  },
@@ -479,8 +479,13 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-27T08:39:27Z",
+  "at": "2026-11-27T08:42:10Z",
   "s": {
+   "T-5319": [
+    "mergetest",
+    "iPhone tests on the MacBook",
+    null
+   ],
    "T-4185": [
     "merged",
     "on main 9:39 PM ET",
@@ -495,10 +500,12 @@
    ]
   },
   "nm": {
+   "T-5319": "Small Habits focus edges from its review",
    "T-4185": "Launcher widgets open the apps a person chose",
    "T-4190": "Settings and Pro: buy, restore, themes"
   },
   "wk": {
+   "T-5319": "Idris",
    "T-4185": "Idris",
    "T-4190": "Idris",
    "T-5926": "Idris",
@@ -510,7 +517,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-27T08:39:27Z",
+  "at": "2026-11-27T08:42:10Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -528,7 +535,7 @@
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1209
+    "parked": 1211
    },
    "cur": [],
    "ld": [
@@ -538,8 +545,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-27T08:39:01Z",
-    "ld": 8.34,
+    "at": "2026-11-27T08:41:47Z",
+    "ld": 5.14,
     "c": 8,
     "sb": 1,
     "dk": [
@@ -555,8 +562,8 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-27T08:37:31Z",
-    "ld": 2.58,
+    "at": "2026-11-27T08:39:36Z",
+    "ld": 1.75,
     "c": 12,
     "sb": 0,
     "dk": [
@@ -569,16 +576,16 @@
  },
  "hc": {
   "wait": {
-   "n": 6,
+   "n": 5,
    "limit": 20,
    "in_line": 0,
-   "parked": 6,
+   "parked": 5,
    "open": true,
    "mq": false,
-   "counted": "2026-11-27T08:31:24+00:00",
+   "counted": "2026-11-27T08:41:34+00:00",
    "by": {
     "app": {
-     "n": 4,
+     "n": 3,
      "limit": 20,
      "open": true
     },
@@ -593,11 +600,11 @@
      "open": true
     }
    },
-   "at": "2026-11-27T08:39:27+00:00"
+   "at": "2026-11-27T08:42:28+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-27T08:39:15+00:00"
+   "at": "2026-11-27T08:42:16+00:00"
   }
  },
  "operators": [
@@ -640,10 +647,10 @@
   "main": 3,
   "lanes": 1,
   "total": 4,
-  "at": "3:39 AM",
+  "at": "3:42 AM",
   "why": "",
-  "at_iso": "2026-11-27T08:39:00+00:00",
+  "at_iso": "2026-11-27T08:42:00+00:00",
   "started": "12:15 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 3, started 12:15 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 3:39 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 3, started 12:15 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 3:42 AM ET</p></section>"
  }
 }

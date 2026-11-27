@@ -631,8 +631,8 @@ if(sw){sw.hidden=false;show()}});
 // T-5823 (friesevan #325 c7144608599, 4:11 PM 11-24): the Work panel's Completed work follows work_done.json, which
 // tools/site_live.py writes beside status.json during a session, at most every 15 minutes, with the function and the
 // steps the build draws it with (work_panel.panel_html, build.written_text). With a status, at most every 5 minutes, the
-// file is read; once its read time is newer than the page's, the two graphs (#mx-done, #mx-usd), their read line and the
-// Work bubble's 24-hour figure are replaced by its own. A failed or older read leaves them as they are.
+// file is read; once its read time is newer than the page's, the graphs (#mx-done, #mx-usd; T-5925: #mx-cm, #mx-cmusd),
+// their read line and the Work bubble's 24-hour figure are replaced by its own. A failed or older read leaves them as they are.
 document.addEventListener('DOMContentLoaded',function(){var S=window.CompanySite,sec=document.getElementById('bottlenecks'),np=document.getElementById('now-panel'),bx=document.getElementById('lk-run'),B=0,T=0,busy=0,url;
 if(!S||!S.onStatus||!sec||!np||!window.fetch||!window.DOMParser)return;
 try{B=JSON.parse(bx&&bx.getAttribute('data-life')||'{}').at||0}catch(e){}
@@ -640,7 +640,7 @@ url=String(np.getAttribute('data-status')||'').replace(/status\.json$/,'work_don
 function rl(r){var h=r.querySelector('h3.mx-s'),p=h&&h.previousElementSibling;return p&&p.matches('p.meta')?p:null}
 function swap(d){var at=Date.parse(d&&d.at),f,a,b;if(!(at>B)||typeof d.html!=='string'||!document.getElementById('mx-done'))return;
 f=new DOMParser().parseFromString(d.html,'text/html').getElementById('bottlenecks');if(!f||!f.querySelector('#mx-done'))return;
-['mx-done','mx-usd'].forEach(function(id){var o=document.getElementById(id),x=f.querySelector('#'+id);if(o&&x)o.replaceWith(document.importNode(x,true))});
+['mx-done','mx-usd','mx-cm','mx-cmusd'].forEach(function(id){var o=document.getElementById(id),x=f.querySelector('#'+id);if(o&&x)o.replaceWith(document.importNode(x,true))});
 a=rl(sec);b=rl(f);if(a&&b)a.replaceWith(document.importNode(b,true));
 if(typeof d.n24==='number')[].forEach.call(document.querySelectorAll('.lk-bub a[href="#bottlenecks"] .lk-f > span'),function(s){var e=s.querySelector('b');if(e&&s.lastChild&&s.lastChild.nodeValue==='done, 24 h')e.textContent=d.n24.toLocaleString('en-US')});
 B=at}

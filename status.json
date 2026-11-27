@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-27T09:06:54.785143+00:00",
+ "at": "2026-11-27T09:10:02.717732+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -62,7 +62,7 @@
    "task": "[build] T-4190 paywall batch two",
    "model": "opus",
    "started": "2026-11-27T06:04:32.961Z",
-   "seconds": 10941,
+   "seconds": 11129,
    "finished": null
   },
   {
@@ -70,7 +70,7 @@
    "task": "[site] T-5925 Work panel switch",
    "model": "opus",
    "started": "2026-11-27T07:24:51.690Z",
-   "seconds": 6123,
+   "seconds": 6311,
    "finished": null
   },
   {
@@ -78,7 +78,7 @@
    "task": "[build] T-4478 Habits Done today",
    "model": "opus",
    "started": "2026-11-27T08:56:02.464Z",
-   "seconds": 652,
+   "seconds": 840,
    "finished": null
   }
  ],
@@ -169,7 +169,7 @@
   "week_pct": 28.01,
   "usage_pct": 53.9,
   "work_pct": 98.9,
-  "read_at": "2026-11-27T09:07:00+00:00",
+  "read_at": "2026-11-27T09:10:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -180,6 +180,18 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-27T02:51:21-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a2",
+    "task": "T-4181",
+    "w": "Idris",
+    "k": "build",
+    "t": "Widgets refresh on their own and by a tap",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-27T04:08:25-05:00",
     "n": "Evan",
     "src": "plan-a"
    },
@@ -231,7 +243,7 @@
  "lock_in": {
   "on": false,
   "pool": 5,
-  "at": "2026-11-27T04:07:00-05:00",
+  "at": "2026-11-27T04:10:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -491,34 +503,43 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-27T09:06:54Z",
+  "at": "2026-11-27T09:09:56Z",
   "s": {
    "T-4192": [
     "mergetest",
     "iPhone tests on the MacBook",
     null
    ],
-   "T-4190": [
-    "testing",
-    "Mac Mini \u00b7 test",
-    null
+   "T-4181": [
+    "merged",
+    "on main 3:25 AM ET",
+    1795767926000,
+    "Idris"
    ],
    "T-4185": [
     "merged",
     "on main 9:39 PM ET",
     1795747152000,
     "Pernille"
+   ],
+   "T-4190": [
+    "merged",
+    "on main 5:06 PM ET",
+    1795730812000,
+    "Idris"
    ]
   },
   "nm": {
    "T-4192": "Python in the app: smaller bundle, installable packages",
-   "T-4190": "Settings and Pro: buy, restore, themes",
-   "T-4185": "Launcher widgets open the apps a person chose"
+   "T-4181": "Widgets refresh on their own and by a tap",
+   "T-4185": "Launcher widgets open the apps a person chose",
+   "T-4190": "Settings and Pro: buy, restore, themes"
   },
   "wk": {
    "T-4192": "Idris",
-   "T-4190": "Idris",
+   "T-4181": "Idris",
    "T-4185": "Idris",
+   "T-4190": "Idris",
    "T-5269": "Idris",
    "T-5270": "Idris",
    "T-5317": "Idris",
@@ -532,7 +553,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-27T09:06:54Z",
+  "at": "2026-11-27T09:09:56Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -550,7 +571,7 @@
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1236
+    "parked": 1239
    },
    "cur": [],
    "ld": [
@@ -560,12 +581,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-27T09:06:58Z",
-    "ld": 23.64,
+    "at": "2026-11-27T09:09:57Z",
+    "ld": 17.55,
     "c": 8,
-    "sb": 2,
+    "sb": 1,
     "dk": [
-     16.8,
+     16.6,
      228.3
     ],
     "ss": [
@@ -573,7 +594,6 @@
      953.7
     ],
     "sn": [
-     "iPhone 17e",
      "pywidget-wk-check"
     ]
    },
@@ -619,11 +639,11 @@
      "open": true
     }
    },
-   "at": "2026-11-27T09:06:54+00:00"
+   "at": "2026-11-27T09:10:02+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-27T09:06:54+00:00"
+   "at": "2026-11-27T09:10:02+00:00"
   }
  },
  "operators": [
@@ -642,8 +662,17 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
+   "t": "Work session",
+   "at": "2026-11-27T04:10:02-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Evan's Account",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
    "t": "Work session \u2013 1 task",
-   "at": "2026-11-27T02:51:20-05:00"
+   "at": "2026-11-27T04:08:25-05:00"
   },
   {
    "w": "Operator",
@@ -674,12 +703,12 @@
  ],
  "agents_now": {
   "main": 3,
-  "lanes": 2,
-  "total": 5,
-  "at": "4:07 AM",
+  "lanes": 3,
+  "total": 6,
+  "at": "4:10 AM",
   "why": "",
-  "at_iso": "2026-11-27T09:07:00+00:00",
+  "at_iso": "2026-11-27T09:10:00+00:00",
   "started": "12:15 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 3, started 12:15 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 4:07 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 3, started 12:15 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 4:10 AM ET</p></section>"
  }
 }

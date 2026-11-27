@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-27T01:46:08.090495+00:00",
+ "at": "2026-11-27T01:51:00.779828+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -72,15 +72,7 @@
    "task": "[build] T-5919 Home shows sessions",
    "model": "opus",
    "started": "2026-11-27T00:20:00.377Z",
-   "seconds": 5167,
-   "finished": null
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-5894 tile accessibility fix",
-   "model": "opus",
-   "started": "2026-11-27T00:20:58.552Z",
-   "seconds": 5109,
+   "seconds": 5460,
    "finished": null
   },
   {
@@ -88,7 +80,7 @@
    "task": "[build] T-5917 release landed claims",
    "model": "opus",
    "started": "2026-11-27T00:20:08.005Z",
-   "seconds": 5160,
+   "seconds": 5452,
    "finished": null
   },
   {
@@ -96,12 +88,36 @@
    "task": "[build] T-4478 Pages signed links",
    "model": "opus",
    "started": "2026-11-27T01:15:29.170Z",
-   "seconds": 1838,
+   "seconds": 2131,
+   "finished": null
+  },
+  {
+   "name": "idris",
+   "task": "[build] T-5894 settle rebase",
+   "model": "opus",
+   "started": "2026-11-27T01:50:45.727Z",
+   "seconds": 15,
    "finished": null
   }
  ],
- "who": "Maren, Idris x2, Odalys",
+ "who": "Maren, Odalys, Idris x2",
  "recent": [
+  {
+   "name": "pernille",
+   "task": "[review] T-5894",
+   "model": "opus",
+   "started": "2026-11-27T01:49:09.612Z",
+   "seconds": null,
+   "finished": "2026-11-27T01:50:08.280000+00:00"
+  },
+  {
+   "name": "idris",
+   "task": "[build] T-5894 tile accessibility fix",
+   "model": "opus",
+   "started": "2026-11-27T00:20:58.552Z",
+   "seconds": null,
+   "finished": "2026-11-27T01:48:51.793000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[review] T-4190",
@@ -117,22 +133,6 @@
    "started": "2026-11-27T00:22:00.561Z",
    "seconds": null,
    "finished": "2026-11-27T01:43:47.394000+00:00"
-  },
-  {
-   "name": "pernille",
-   "task": "[review] T-4476",
-   "model": "opus",
-   "started": "2026-11-27T00:56:52.552Z",
-   "seconds": null,
-   "finished": "2026-11-27T01:03:07.510000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-4476 review fixes",
-   "model": "opus",
-   "started": "2026-11-27T00:29:48.807Z",
-   "seconds": null,
-   "finished": "2026-11-27T00:56:35.362000+00:00"
   }
  ],
  "queue": {
@@ -187,7 +187,7 @@
   "week_pct": 86.95,
   "usage_pct": 56.2,
   "work_pct": 98.8,
-  "read_at": "2026-11-27T01:46:00+00:00",
+  "read_at": "2026-11-27T01:51:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -245,7 +245,7 @@
   }
  ],
  "disk": {
-  "free_gb": 20,
+  "free_gb": 21,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -254,14 +254,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-26T20:45:00-05:00",
+   "at": "2026-11-26T20:46:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 2,
-  "at": "2026-11-26T20:46:00-05:00",
+  "at": "2026-11-26T20:51:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -296,9 +296,9 @@
   {
    "name": "Idris",
    "state": "running",
-   "task": "[build] T-5894 tile accessibility fix",
+   "task": "[build] T-4478 Pages signed links",
    "model": "opus",
-   "since": "2026-11-27T00:20:58.552Z",
+   "since": "2026-11-27T01:15:29.170Z",
    "next": []
   },
   {
@@ -349,20 +349,20 @@
    {
     "w": "Idris",
     "k": "build",
-    "t": "Make the Sun page link test pass in any order",
-    "m": "opus",
-    "at": "2026-11-27T00:20:58.552Z",
-    "o": "c",
-    "task": "T-5894"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
     "t": "A project shows a full-screen Page that answers taps",
     "m": "opus",
     "at": "2026-11-27T01:15:29.170Z",
     "o": "c",
     "task": "T-4478"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "Make the Sun page link test pass in any order",
+    "m": "opus",
+    "at": "2026-11-27T01:50:45.727Z",
+    "o": "c",
+    "task": "T-5894"
    }
   ],
   "src": "plan",
@@ -514,7 +514,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-27T01:45:53Z",
+  "at": "2026-11-27T01:50:47Z",
   "s": {
    "T-5894": [
     "mergetest",
@@ -572,7 +572,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-27T01:45:53Z",
+  "at": "2026-11-27T01:50:47Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -590,7 +590,7 @@
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1151
+    "parked": 1156
    },
    "cur": [],
    "ld": [
@@ -600,35 +600,34 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-27T01:45:55Z",
-    "ld": 2.59,
+    "at": "2026-11-27T01:50:24Z",
+    "ld": 3.9,
     "c": 8,
-    "sb": 1,
+    "sb": 0,
     "dk": [
-     20.2,
+     20.7,
      228.3
     ],
     "ss": [
      172.6,
      953.7
     ],
-    "sn": [
-     "iPhone 17e"
-    ]
+    "sn": []
    },
    "macbook": {
-    "at": "2026-11-27T01:43:38Z",
-    "ld": 10.66,
+    "at": "2026-11-27T01:47:55Z",
+    "ld": 21.18,
     "c": 12,
-    "sb": 3,
+    "sb": 4,
     "dk": [
-     367.8,
+     364.8,
      926.4
     ],
     "sn": [
      "itsthecompany-runner",
-     "itsthecompany-runner-3",
-     "itsthecompany-runner-4"
+     "itsthecompany-runner-2",
+     "itsthecompany-runner-4",
+     "itsthecompany-runner-5"
     ]
    }
   }
@@ -659,11 +658,11 @@
      "open": true
     }
    },
-   "at": "2026-11-27T01:46:08+00:00"
+   "at": "2026-11-27T01:51:00+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-27T01:46:01+00:00"
+   "at": "2026-11-27T01:50:47+00:00"
   }
  },
  "operators": [
@@ -724,10 +723,10 @@
   "main": 4,
   "lanes": 3,
   "total": 7,
-  "at": "8:46 PM",
+  "at": "8:51 PM",
   "why": "",
-  "at_iso": "2026-11-27T01:46:00+00:00",
+  "at_iso": "2026-11-27T01:51:00+00:00",
   "started": "7:15 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 4, started 7:15 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 8:46 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 4, started 7:15 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 8:51 PM ET</p></section>"
  }
 }

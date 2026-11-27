@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-27T04:49:22.495435+00:00",
+ "at": "2026-11-27T04:54:32.065331+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -62,7 +62,7 @@
    "task": "[build] T-4478 Pages tap links",
    "model": "opus",
    "started": "2026-11-27T02:29:24.979Z",
-   "seconds": 8397,
+   "seconds": 8707,
    "finished": null
   },
   {
@@ -70,7 +70,7 @@
    "task": "[build] T-5918 account names finish",
    "model": "opus",
    "started": "2026-11-27T02:30:26.922Z",
-   "seconds": 8335,
+   "seconds": 8645,
    "finished": null
   },
   {
@@ -78,7 +78,7 @@
    "task": "[build] T-4183 Gallery next steps",
    "model": "opus",
    "started": "2026-11-27T03:15:01.097Z",
-   "seconds": 5661,
+   "seconds": 5970,
    "finished": null
   }
  ],
@@ -120,24 +120,24 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 305,
+  "runnable_count": 303,
   "blocked_count": 0
  },
  "meter": {
   "five_hour": {
-   "pct": 18.0,
+   "pct": 19.0,
    "resets_at": "2026-11-27T02:30:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-26T23:40:30.613060-05:00",
+   "read_at": "2026-11-26T23:50:38.649216-05:00",
    "source": "live",
-   "left": 82.0,
+   "left": 81.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 19.0,
    "resets_at": "2026-11-29T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-26T23:40:30.613060-05:00",
+   "read_at": "2026-11-26T23:50:38.649216-05:00",
    "source": "live",
    "left": 81.0,
    "left_words": "of your weekly allowance left"
@@ -149,7 +149,7 @@
    "read_at": "2026-11-26T23:34:10.778854-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-26T23:40:30.613060-05:00"
+  "read_at": "2026-11-26T23:50:38.649216-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -169,7 +169,7 @@
   "week_pct": 22.46,
   "usage_pct": 54.2,
   "work_pct": 98.8,
-  "read_at": "2026-11-27T04:49:00+00:00",
+  "read_at": "2026-11-27T04:54:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -212,14 +212,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-26T23:46:00-05:00",
+   "at": "2026-11-26T23:53:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 6,
-  "at": "2026-11-26T23:49:00-05:00",
+  "at": "2026-11-26T23:54:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -393,30 +393,38 @@
   ],
   "done": [
    {
-    "w": "Maren",
-    "t": "The drawn Page screen now matches the app as built (an Events heading, no Edit button, past...",
-    "at": "2026-11-26T22:19:00-05:00"
-   },
-   {
-    "w": "Pernille",
-    "t": "When a widget's script is changed, a refresh that began on the old script can no longer put an...",
-    "at": "2026-11-26T22:14:00-05:00"
+    "w": "Idris",
+    "t": "A test that checks how widgets take turns when they refresh together now controls the order...",
+    "at": "2026-11-26T23:52:00-05:00"
    },
    {
     "w": "Idris",
-    "t": "A widget link that starts the app now shows the countdown preview; the earlier blank was a real...",
-    "at": "2026-11-26T21:39:00-05:00"
+    "t": "The widget memory tests no longer pass only because the Simulator reports \"unknown\" free memory,...",
+    "at": "2026-11-26T23:52:00-05:00"
+   },
+   {
+    "w": "Maren",
+    "t": "The drawn Page screen now matches the app as built (an Events heading, no Edit button, past...",
+    "at": "2026-11-26T22:19:00-05:00"
    }
   ],
   "count": {
-   "next": 305,
+   "next": 303,
    "wait": 0,
    "blocked": 0,
    "you": 0
   },
   "fin": {
-   "n": 4,
+   "n": 6,
    "rows": [
+    [
+     "T-2047",
+     "Add a missing test for the..."
+    ],
+    [
+     "T-2099",
+     "Tidy the widget test..."
+    ],
     [
      "T-5922",
      "Draw the new looks as live..."
@@ -475,14 +483,9 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-27T04:49:10Z",
+  "at": "2026-11-27T04:54:21Z",
   "s": {
    "T-4181": [
-    "mergetest",
-    "Xcode checks on the MacBook, 1st to merge",
-    1795754410510
-   ],
-   "T-2549": [
     "mergetest",
     "iPhone tests on the MacBook",
     null
@@ -502,15 +505,15 @@
   },
   "nm": {
    "T-4181": "Widgets refresh on their own and by a tap",
-   "T-2549": "Picture the Pro screen and finish its word changes",
    "T-4185": "Launcher widgets open the apps a person chose",
    "T-5918": "Name the accounts Evan's and Jeremy's everywhere"
   },
   "wk": {
    "T-4181": "Idris",
-   "T-2549": "Idris",
    "T-4185": "Idris",
    "T-5918": "Odalys",
+   "T-2047": "Idris",
+   "T-2099": "Idris",
    "T-5922": "Maren",
    "T-0976": "Idris",
    "T-4582": "Idris",
@@ -518,10 +521,10 @@
   }
  },
  "ln": {
-  "at": "2026-11-27T04:49:10Z",
+  "at": "2026-11-27T04:54:21Z",
   "mq": {
    "n": {
-    "checking": 1,
+    "checking": 0,
     "inline": 0,
     "conflicted": 0,
     "failed": 0,
@@ -530,24 +533,15 @@
     "parked": 8
    },
    "m": {
-    "checking": 9,
+    "checking": null,
     "inline": null,
     "conflicted": null,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1252
+    "parked": 1257
    },
-   "cur": [
-    [
-     [
-      "T-4181"
-     ],
-     "iPhone app tests",
-     "MacBook",
-     9
-    ]
-   ],
+   "cur": [],
    "ld": [
     0,
     null
@@ -555,12 +549,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-27T04:49:11Z",
-    "ld": 0.86,
+    "at": "2026-11-27T04:54:25Z",
+    "ld": 3.98,
     "c": 8,
     "sb": 0,
     "dk": [
-     22.3,
+     19.7,
      228.3
     ],
     "ss": [
@@ -570,18 +564,16 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-27T04:45:02Z",
-    "ld": 23.3,
+    "at": "2026-11-27T04:50:32Z",
+    "ld": 21.15,
     "c": 12,
-    "sb": 4,
+    "sb": 2,
     "dk": [
-     358.4,
+     360.3,
      926.4
     ],
     "sn": [
-     "itsthecompany-runner",
-     "itsthecompany-runner-2",
-     "itsthecompany-runner-3",
+     "itsthecompany-runner-4",
      "itsthecompany-runner-5"
     ]
    }
@@ -589,21 +581,21 @@
  },
  "hc": {
   "wait": {
-   "n": 9,
+   "n": 8,
    "limit": 20,
-   "in_line": 1,
+   "in_line": 0,
    "parked": 8,
    "open": true,
    "mq": false,
-   "counted": "2026-11-27T04:42:47+00:00",
+   "counted": "2026-11-27T04:52:48+00:00",
    "by": {
     "app": {
-     "n": 7,
+     "n": 6,
      "limit": 20,
      "open": true
     },
     "other": {
-     "n": 3,
+     "n": 2,
      "limit": 20,
      "open": true
     },
@@ -613,11 +605,11 @@
      "open": true
     }
    },
-   "at": "2026-11-27T04:49:22+00:00"
+   "at": "2026-11-27T04:54:32+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-27T04:49:10+00:00"
+   "at": "2026-11-27T04:54:32+00:00"
   }
  },
  "operators": [
@@ -704,6 +696,16 @@
     "done": 0
    },
    "title": "I replied \u201capprove.\u201d You have every..."
+  },
+  {
+   "id": "c7210161209",
+   "state": "received",
+   "position": 7,
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "URGENT RESPOND NOW"
   }
  ],
  "trimmed": [
@@ -722,10 +724,10 @@
   "main": 3,
   "lanes": 1,
   "total": 4,
-  "at": "11:49 PM",
+  "at": "11:54 PM",
   "why": "",
-  "at_iso": "2026-11-27T04:49:00+00:00",
+  "at_iso": "2026-11-27T04:54:00+00:00",
   "started": "9:24 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 3, started 9:24 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 11:49 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 3, started 9:24 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 11:54 PM ET</p></section>"
  }
 }

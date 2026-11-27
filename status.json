@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-27T21:19:49.854277+00:00",
+ "at": "2026-11-27T21:22:51.916844+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -62,7 +62,7 @@
    "task": "[build] T-5795 overlap clocks fixes",
    "model": "opus",
    "started": "2026-11-27T19:47:58.276Z",
-   "seconds": 5511,
+   "seconds": 5693,
    "finished": null
   },
   {
@@ -70,15 +70,7 @@
    "task": "[build] T-5945 two sessions per feature",
    "model": "opus",
    "started": "2026-11-27T20:15:56.824Z",
-   "seconds": 3833,
-   "finished": null
-  },
-  {
-   "name": "odalys",
-   "task": "[review] T-4190",
-   "model": "opus",
-   "started": "2026-11-27T21:18:23.955Z",
-   "seconds": 85,
+   "seconds": 4015,
    "finished": null
   },
   {
@@ -86,12 +78,20 @@
    "task": "[build] T-5924 look picker page",
    "model": "opus",
    "started": "2026-11-27T21:19:37.669Z",
-   "seconds": 12,
+   "seconds": 194,
    "finished": null
   }
  ],
- "who": "Pernille, Odalys x2, Maren",
+ "who": "Pernille, Odalys, Maren",
  "recent": [
+  {
+   "name": "odalys",
+   "task": "[review] T-4190",
+   "model": "opus",
+   "started": "2026-11-27T21:18:23.955Z",
+   "seconds": null,
+   "finished": "2026-11-27T21:20:41.265000+00:00"
+  },
   {
    "name": "maren",
    "task": "[build] Maren reads T-0861 shots",
@@ -115,37 +115,29 @@
    "started": "2026-11-27T20:52:27.708Z",
    "seconds": null,
    "finished": "2026-11-27T21:05:40.625000+00:00"
-  },
-  {
-   "name": "maren",
-   "task": "[build] T-5923 look options",
-   "model": "opus",
-   "started": "2026-11-27T20:16:06.170Z",
-   "seconds": null,
-   "finished": "2026-11-27T20:52:11.773000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 275,
+  "runnable_count": 274,
   "blocked_count": 0
  },
  "meter": {
   "five_hour": {
-   "pct": 27.0,
+   "pct": 28.0,
    "resets_at": "2026-11-27T17:30:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-27T16:05:50.134492-05:00",
+   "read_at": "2026-11-27T16:20:02.807858-05:00",
    "source": "live",
-   "left": 73.0,
+   "left": 72.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 38.0,
    "resets_at": "2026-11-29T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-27T16:05:50.134492-05:00",
+   "read_at": "2026-11-27T16:20:02.807858-05:00",
    "source": "live",
    "left": 62.0,
    "left_words": "of your weekly allowance left"
@@ -157,7 +149,7 @@
    "read_at": "2026-11-27T15:52:50.749828-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-27T16:05:50.134492-05:00"
+  "read_at": "2026-11-27T16:20:02.807858-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -177,7 +169,7 @@
   "week_pct": 36.54,
   "usage_pct": 49.0,
   "work_pct": 99.0,
-  "read_at": "2026-11-27T21:19:00+00:00",
+  "read_at": "2026-11-27T21:22:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -211,7 +203,7 @@
   }
  ],
  "disk": {
-  "free_gb": 49,
+  "free_gb": 51,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -220,14 +212,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-27T16:18:00-05:00",
+   "at": "2026-11-27T16:19:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 4,
-  "at": "2026-11-27T16:19:00-05:00",
+  "at": "2026-11-27T16:22:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -311,15 +303,6 @@
     "at": "2026-11-27T20:15:56.824Z",
     "o": "c",
     "task": "T-5945"
-   },
-   {
-    "w": "Odalys",
-    "k": "review",
-    "t": "Settings and Pro: buy, restore, themes",
-    "m": "opus",
-    "at": "2026-11-27T21:18:23.955Z",
-    "o": "c",
-    "task": "T-4190"
    },
    {
     "w": "Maren",
@@ -406,6 +389,11 @@
   ],
   "done": [
    {
+    "w": "Idris+maren",
+    "t": "The Pro screen's pictures for the test build now show the price on the first screen at the...",
+    "at": "2026-11-27T16:20:00-05:00"
+   },
+   {
     "w": "Maren",
     "t": "The three new looks can now be tried in 14 colour sets, 5 fonts and 4 panel shapes, every one...",
     "at": "2026-11-27T16:18:00-05:00"
@@ -414,22 +402,21 @@
     "w": "Odalys",
     "t": "The dispatcher no longer mistakes a note or a feature's own steps for something the feature...",
     "at": "2026-11-27T15:09:00-05:00"
-   },
-   {
-    "w": "Pernille",
-    "t": "A Sky widget set to Lisbon on a New York iPhone now shows Lisbon's 7:31 AM sunrise instead of...",
-    "at": "2026-11-27T13:29:00-05:00"
    }
   ],
   "count": {
-   "next": 275,
+   "next": 274,
    "wait": 0,
    "blocked": 0,
    "you": 0
   },
   "fin": {
-   "n": 2,
+   "n": 3,
    "rows": [
+    [
+     "T-0861",
+     "Fix three red paywall..."
+    ],
     [
      "T-5923",
      "Add colour, font and..."
@@ -480,7 +467,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-27T21:19:49Z",
+  "at": "2026-11-27T21:22:38Z",
   "s": {
    "T-0793": [
     "mergetest",
@@ -501,12 +488,13 @@
   "wk": {
    "T-0793": "Idris",
    "T-4181": "Idris",
+   "T-0861": "Idris",
    "T-5923": "Maren",
    "T-5944": "Odalys"
   }
  },
  "ln": {
-  "at": "2026-11-27T21:19:49Z",
+  "at": "2026-11-27T21:22:38Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -524,7 +512,7 @@
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1067
+    "parked": 1069
    },
    "cur": [],
    "ld": [
@@ -534,12 +522,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-27T21:19:01Z",
-    "ld": 7.04,
+    "at": "2026-11-27T21:21:51Z",
+    "ld": 8.02,
     "c": 8,
     "sb": 0,
     "dk": [
-     48.5,
+     50.8,
      228.3
     ],
     "ss": [
@@ -569,7 +557,7 @@
    "parked": 9,
    "open": true,
    "mq": false,
-   "counted": "2026-11-27T21:11:20+00:00",
+   "counted": "2026-11-27T21:21:38+00:00",
    "by": {
     "app": {
      "n": 6,
@@ -587,11 +575,11 @@
      "open": true
     }
    },
-   "at": "2026-11-27T21:19:49+00:00"
+   "at": "2026-11-27T21:22:51+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-27T21:19:49+00:00"
+   "at": "2026-11-27T21:22:45+00:00"
   }
  },
  "operators": [
@@ -610,8 +598,8 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 1 task",
-   "at": "2026-11-27T15:46:39-05:00"
+   "t": "Work session",
+   "at": "2026-11-27T16:22:51-05:00"
   }
  ],
  "reply": {
@@ -631,13 +619,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 4,
+  "main": 3,
   "lanes": 1,
-  "total": 5,
-  "at": "4:19 PM",
+  "total": 4,
+  "at": "4:22 PM",
   "why": "",
-  "at_iso": "2026-11-27T21:19:00+00:00",
+  "at_iso": "2026-11-27T21:22:00+00:00",
   "started": "2:44 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 4, started 2:44 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 4:19 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 3, started 2:44 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 4:22 PM ET</p></section>"
  }
 }

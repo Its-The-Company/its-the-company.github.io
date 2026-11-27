@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-27T20:03:28.677453+00:00",
+ "at": "2026-11-27T20:06:34.180136+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -59,23 +59,23 @@
  "workers": [
   {
    "name": "pernille",
-   "task": "[review] T-5944",
-   "model": "opus",
-   "started": "2026-11-27T19:47:37.898Z",
-   "seconds": 950,
-   "finished": null
-  },
-  {
-   "name": "pernille",
    "task": "[build] T-5795 overlap clocks fixes",
    "model": "opus",
    "started": "2026-11-27T19:47:58.276Z",
-   "seconds": 930,
+   "seconds": 1115,
    "finished": null
   }
  ],
- "who": "Pernille x2",
+ "who": "Pernille",
  "recent": [
+  {
+   "name": "pernille",
+   "task": "[review] T-5944",
+   "model": "opus",
+   "started": "2026-11-27T19:47:37.898Z",
+   "seconds": null,
+   "finished": "2026-11-27T20:05:50.553000+00:00"
+  },
   {
    "name": "pernille",
    "task": "[review] T-4476",
@@ -145,21 +145,8 @@
   "week_pct": 34.61,
   "usage_pct": 49.0,
   "work_pct": 99.0,
-  "read_at": "2026-11-27T20:03:00+00:00",
-  "running": [
-   {
-    "lane": "a",
-    "task": "T-4181",
-    "w": "Idris",
-    "k": "build",
-    "t": "Widgets refresh on their own and by a tap",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-27T14:01:33-05:00",
-    "n": "Evan",
-    "src": "plan-a"
-   }
-  ]
+  "read_at": "2026-11-27T20:06:00+00:00",
+  "running": []
  },
  "api_credits": [
   {
@@ -179,7 +166,7 @@
   }
  ],
  "disk": {
-  "free_gb": 49,
+  "free_gb": 52,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -188,14 +175,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-27T15:01:00-05:00",
+   "at": "2026-11-27T15:06:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 4,
-  "at": "2026-11-27T15:03:00-05:00",
+  "at": "2026-11-27T15:06:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -214,9 +201,9 @@
   {
    "name": "Pernille",
    "state": "running",
-   "task": "[review] T-5944",
+   "task": "[build] T-5795 overlap clocks fixes",
    "model": "opus",
-   "since": "2026-11-27T19:47:37.898Z",
+   "since": "2026-11-27T19:47:58.276Z",
    "next": []
   },
   {
@@ -262,15 +249,6 @@
  ],
  "tasks": {
   "run": [
-   {
-    "w": "Pernille",
-    "k": "review",
-    "t": "Stop false holds keeping an account idle",
-    "m": "opus",
-    "at": "2026-11-27T19:47:37.898Z",
-    "o": "c",
-    "task": "T-5944"
-   },
    {
     "w": "Pernille",
     "k": "build",
@@ -421,37 +399,36 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-27T20:03:21Z",
+  "at": "2026-11-27T20:06:34Z",
   "s": {
+   "T-4181": [
+    "mergeq",
+    "1st to merge",
+    1795809994180
+   ],
    "T-4709": [
     "mergetest",
     "iPhone tests on the MacBook",
     null
-   ],
-   "T-4181": [
-    "merged",
-    "on main 1:44 PM ET",
-    1795805066000,
-    "Idris"
    ]
   },
   "nm": {
-   "T-4709": "Rework World clocks into Overlap clocks",
-   "T-4181": "Widgets refresh on their own and by a tap"
+   "T-4181": "Widgets refresh on their own and by a tap",
+   "T-4709": "Rework World clocks into Overlap clocks"
   },
   "wk": {
-   "T-4709": "Pernille",
-   "T-4181": "Idris"
+   "T-4181": "Idris",
+   "T-4709": "Pernille"
   }
  },
  "ln": {
-  "at": "2026-11-27T20:03:21Z",
+  "at": "2026-11-27T20:06:34Z",
   "mq": {
    "n": {
     "checking": 0,
     "inline": 0,
     "conflicted": 0,
-    "failed": 0,
+    "failed": 1,
     "held": 0,
     "retry": 0,
     "parked": 9
@@ -460,10 +437,10 @@
     "checking": null,
     "inline": null,
     "conflicted": null,
-    "failed": null,
+    "failed": 294,
     "held": null,
     "retry": null,
-    "parked": 990
+    "parked": 993
    },
    "cur": [],
    "ld": [
@@ -473,12 +450,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-27T20:03:22Z",
-    "ld": 4.66,
+    "at": "2026-11-27T20:06:13Z",
+    "ld": 4.98,
     "c": 8,
     "sb": 0,
     "dk": [
-     49.3,
+     51.7,
      228.3
     ],
     "ss": [
@@ -488,15 +465,17 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-27T19:57:59Z",
-    "ld": 3.52,
+    "at": "2026-11-27T20:05:40Z",
+    "ld": 1.25,
     "c": 12,
-    "sb": 0,
+    "sb": 1,
     "dk": [
-     355.4,
+     353.6,
      926.4
     ],
-    "sn": []
+    "sn": [
+     "itsthecompany-runner"
+    ]
    }
   }
  },
@@ -526,11 +505,11 @@
      "open": true
     }
    },
-   "at": "2026-11-27T20:03:28+00:00"
+   "at": "2026-11-27T20:06:34+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-27T20:03:14+00:00"
+   "at": "2026-11-27T20:06:25+00:00"
   }
  },
  "operators": [
@@ -540,41 +519,44 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session",
-   "at": "2026-11-27T14:44:52-05:00"
-  },
-  {
-   "w": "Operator",
-   "a": "Evan's Account",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session \u2013 1 task",
-   "at": "2026-11-27T14:01:33-05:00"
+   "t": "Inbox \u2013 Evan's 3:05 PM Message on GitHub",
+   "at": "2026-11-27T15:06:31-05:00"
   }
  ],
  "reply": {
   "sent": "2026-11-27T18:13:31Z",
   "seconds": 50.0
  },
- "inbox": [],
+ "inbox": [
+  {
+   "id": "c7227172137",
+   "state": "received",
+   "position": 1,
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "We should also work on restoring 6..."
+  }
+ ],
  "trimmed": [
   "lane_next",
   "queue_text",
   "task_done",
+  "inbox_title",
   "task_title",
   "done_text",
   "lane_task",
   "task_next"
  ],
  "agents_now": {
-  "main": 2,
-  "lanes": 1,
-  "total": 3,
-  "at": "3:03 PM",
+  "main": 1,
+  "lanes": 0,
+  "total": 1,
+  "at": "3:06 PM",
   "why": "",
-  "at_iso": "2026-11-27T20:03:00+00:00",
+  "at_iso": "2026-11-27T20:06:00+00:00",
   "started": "2:44 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 2:44 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 3:03 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 2:44 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 3:06 PM ET</p></section>"
  }
 }

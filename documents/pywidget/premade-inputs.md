@@ -420,13 +420,28 @@ below and nothing else (no network, L16 "Go, local"):
   words as a notice.
 - **The moon:** its phase drawn from the lit fraction (a `line.strong` ring, the lit part in `status.warning`), its
   name for the local day, the percent lit, and in Large the next full moon (the next new moon on a full moon's day).
+  It is drawn as the place sees it: north of the equator a waxing moon is lit on the right, south of it (Sydney)
+  on the left, and a waning moon the other way round (T-4708 review, Idris). Close to the equator the real lit side
+  turns toward the top or bottom; the disc keeps to the side its latitude's sign gives.
 - **Daylight:** today's hours of daylight and the change since yesterday ("2 min 29 s less than yesterday").
 - **Source:** a Python port, inside `sun.py`, of the company's almanac (H249, `research/hunt/H249-raw`, Meeus):
   sunrise, sunset and civil twilight within 1 minute of USNO's 2027 tables on every day at six places, polar days
   included, and the 49 phases of 2027 within 2 minutes (`tests/widgets/test_premade_sky.py`). The lit fraction is
   exact at the four phases and interpolated between them.
 - **Families:** Small, Medium and Large (Maren's showcase sheet, [`widgets/showcase.md`](showcase.html) "Sky"), and Lock Screen
-  circular, rectangular and inline.
+  circular, rectangular and inline. The circular and rectangular gauges fill toward the sunrise or sunset they name,
+  from the last one: by day they follow the arc, by night they run from sunset to the next sunrise (empty at sunset,
+  nearly full at dawn), so they are never full all night. After a polar night the first sunrise's gauge counts from
+  yesterday's midnight.
+- **Times are in the iPhone's zone (open):** the place field has no zone (`zone: false`), so every time and the
+  day's edges are the iPhone's own. A place in another zone reads on the phone's clock: in the first Simulator shot
+  Lisbon's 7:31 AM sunrise read "2:31 AM" from New York. Sunrise and sunset did the same. Showing a far place's own
+  times needs a zone on the place (the Page's `zone: true`, as Clocks has), a Page change for Maren and Ines.
+- **Tests:** `tests/widgets/test_premade_sky.py` (the almanac against the H249 fixtures, the arc in day, polar day,
+  twilight-only and dark cases, the Lock Screen gauge, the moon's lit side at Boston, London and Sydney after each
+  quarter of 2027) and `PremadePageUITests/testSkySheetDrawsTheArcAndMoonForASavedPlace`, which saves New York into the
+  premade's file and shoots the Gallery sheet with the Small and Medium arcs on the iPhone 17e Simulator:
+  `ops/site-checks/T-4708/t4708-sky-sheet-light.png`.
 
 The Page:
 

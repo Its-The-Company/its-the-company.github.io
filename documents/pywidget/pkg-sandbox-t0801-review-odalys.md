@@ -5,7 +5,7 @@ section: "documents"
 description: "Most of the bar is met, and well. Three things are not, and T-0299 does not lift on this review."
 ---
 <div class="crumbs" role="navigation" aria-label="Back"><a class="back" href="{{ '/documents/pywidget/design/' | relative_url }}">← Design &amp; Specs</a><a href="{{ '/documents/pywidget/pkg-sandbox-t0801-review-odalys.html' | relative_url }}" rel="bookmark">Permanent link</a></div>
-<div class="page-head"><div class="kicker"><span class="kind grey">Review</span><span>Day 31 · Sat Nov 21</span><span><code>pywidget/docs/reviews/pkg-sandbox-t0801-review-odalys.md</code></span></div><h1>T-0802: independent re-review of T-0801 (pkg_sandbox Mach default-deny), Odalys, 2026-11-21</h1></div>
+<div class="page-head"><div class="kicker"><span class="kind grey">Review</span><span>Day 37 · Fri Nov 27</span><span><code>pywidget/docs/reviews/pkg-sandbox-t0801-review-odalys.md</code></span></div><h1>T-0802: independent re-review of T-0801 (pkg_sandbox Mach default-deny), Odalys, 2026-11-21</h1></div>
 
 <style>.doc-body{overflow-wrap:break-word}.doc-src{overflow-wrap:anywhere}.tbl[data-n~="1"] tr>:nth-child(1),.tbl[data-n~="2"] tr>:nth-child(2),.tbl[data-n~="3"] tr>:nth-child(3),.tbl[data-n~="4"] tr>:nth-child(4),.tbl[data-n~="5"] tr>:nth-child(5),.tbl[data-n~="6"] tr>:nth-child(6),.tbl[data-n~="7"] tr>:nth-child(7),.tbl[data-n~="8"] tr>:nth-child(8),.tbl[data-n~="9"] tr>:nth-child(9),.tbl[data-n~="10"] tr>:nth-child(10),.tbl[data-n~="11"] tr>:nth-child(11),.tbl[data-n~="12"] tr>:nth-child(12){min-width:0;overflow-wrap:normal}.tbl[data-o="1"] tr>:nth-child(1),.tbl[data-o="2"] tr>:nth-child(2),.tbl[data-o="3"] tr>:nth-child(3),.tbl[data-o="4"] tr>:nth-child(4),.tbl[data-o="5"] tr>:nth-child(5),.tbl[data-o="6"] tr>:nth-child(6),.tbl[data-o="7"] tr>:nth-child(7),.tbl[data-o="8"] tr>:nth-child(8),.tbl[data-o="9"] tr>:nth-child(9),.tbl[data-o="10"] tr>:nth-child(10),.tbl[data-o="11"] tr>:nth-child(11),.tbl[data-o="12"] tr>:nth-child(12){position:sticky;right:0;overflow-wrap:normal;background:var(--page);box-shadow:-1px 0 var(--line),-9px 0 8px -8px var(--sh)}</style>
 <div class="doc-body" markdown="1">
@@ -134,6 +134,92 @@ mach-message-send and mach-task-special-port. They are unknown names or parent g
 T-0299 stays held. Pernille does not tick it on this review. N1 and N2 are one profile line each, with a test, and N3
 is one probe. They go to Ines for the one ruling. If she accepts any of them as held instead, the T-0299 lift line has to
 name it, along with job-creation and route A's launchd path.
+
+## Chair ruling on N1 to N3, 2026-11-27 7:05 AM ET (Ines, T-5513)
+
+Conclusion: **N1 and N2 are fixed, not held. N3 is fixed in the same change. T-0299's hold does not lift today.** One
+fix line for Pernille, T-5937, carries all three and two more denies from the chair's list below. A second line,
+T-5938, puts the reviewed profile into the copy the Investors' rule actually runs. T-0299 needs both. This replaces deeea6a0's lift condition; Odalys's verdict on T-0801 stands, and this does not reopen it.
+
+**What I rely on.** Odalys's libsandbox answers, as she recorded them, and the profile text. No lookup and no escape
+probe of mine. Each fix below is a line she compiled and did not run in the suite; that is Pernille's to run.
+
+**N1, libinfo as an XPC service name: fix.** The bar says every route is refused or written down as held. Route A was
+written down as "profile answers deny"; for the one allowed name it answers allow, and a package chooses its own
+service's identifier. Holding that by text would be writing down a hole I can close with one line. Add
+`(deny mach-lookup (xpc-service-name-regex #""))` after the allow line, both verbs, and the test she names: OPEN_NAME
+with filter 12 answers 1, as a global name answers 0. Route A's launchd path stays held by text, as deeea6a0 said it
+might: whether launchd asks the profile at all on that path is still not shown, and no test will build an .xpc to find
+out.
+
+**N2, mach-cross-domain-lookup and mach-register: fix.** Neither is known to reach anything, but a registered name could
+stand in for a service, and the cost is one line. `(deny mach-cross-domain-lookup mach-register)`, tested from outside
+with sandbox_check and the bare control, as for the task ports. If a real build needs either, it stops and comes to me.
+Not a quiet allow.
+
+**N3, the same-sandbox signal allow: fix, in the same change.** It is not a hole: without the line the box is stricter.
+On its own it would not hold the lift. It goes into T-5937 because it costs one probe in a commit Pernille is already
+making, and a second round for it alone would cost more than the probe. The probe forks a grandchild and sends it
+signal 0, which must answer open; mutant O1 must then die. The T-0738 test rules hold. If the probe cannot be built
+inside them, N3 is held by text and the lift line names it.
+
+**The chair's list (what `(allow default)` still leaves open).** Odalys asked for a ruling on the first two rows. I rule
+on all of them, so this list does not come back.
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 3: Chair ruling on N1 to N3, 2026-11-27 07:05 ET (Ines, T-5513), scrolls sideways" style="--tw:640px" markdown="1">
+
+| Open operation(s) | Ruling |
+|---|---|
+| network-inbound, network-bind | **Deny, in T-5937**, tested by sandbox_check with the bare control. It is the one two-way channel left, and with it the process-info row below stops being data that can only leave through the run dir. Fails closed: a build that needs a listening socket stops and comes to me |
+| hid-control | **Deny, in T-5937**, same test. Synthetic input is route G by another door, and whether the responsible app holds Post Event is not something I want the box to depend on |
+| iokit-open-user-client, iokit-open-service, iokit-set-properties, iokit-get-properties | **Held by text.** A blanket IOKit deny is likely to break ordinary libraries in ways nobody has measured; the TCC gate is the cover. The lift line names it |
+| sysctl-read, process-info-* | Accepted: data only, and with inbound denied it leaves only through the run dir (T-0800) |
+| appleevent-send, lsopen, the notification posts, authorization-right-obtain, camera, microphone | Accepted: each needs a Mach service the default refuses |
+| the four issue-extension operations | Accepted: no allow rule takes an extension filter |
+| ipc-posix-shm-*, ipc-posix-sem-create | Accepted: shared with our own user's processes, which the threat already runs as |
+| pseudo-tty, file-ioctl | Accepted: no controlling terminal, /dev/ttys* not writable |
+| process-fork, process-exec, the exec and code-generation rows, file-read-metadata and kin | Accepted: intended (same profile; B1) |
+| mach-priv-host-port, nvram, system-* and the rest that need root | Accepted: nothing our user holds |
+| socket-ioctl, socket-option-*, necp-client-open, process-codesigning*, qtn-exec, syscall-* | Accepted: no known reach past the denied network |
+
+</div>
+
+
+The remotepairingd pattern that duplicates `^com\.apple\.CoreDevice\.`: Low, no action. A redundant never-allow entry
+costs nothing.
+
+**A gap the review could not see: the copy that runs.** The Investors' settings rule (#79) runs
+`rules/pkg_sandbox.py`, not `tools/pkg_sandbox.py`. At this branch's HEAD, rules/pkg_sandbox.py still has the profile
+from before T-0801: named `(deny mach-lookup ...)` entries, no Mach default, no signal or task-port deny. T-0801 and
+T-5937 make tools/ right; they do not touch what a permitted run would use. rules/ is Investor-owned (charter 59), so
+the company proposes the change through the applier, as #330 did. T-5938 is that proposal: after T-5937 merges, Pernille
+writes the card for the reviewed profile, and the executable bit T-5235 asks for can go in the same apply. Until T-5938
+is applied, the <span title="What keeps an idea below the top: the cap that applies to it now.">hold</span> covers both copies: no real package runs through either. T-5235 alone must not be read as
+permission to run anything.
+
+**The other side, argued.** T-0299 has been open since 10-26, each round has found something, and nothing real runs
+until 1.1 anyway (natives by T-0287), so hold N1 and N2 by text and lift now. I don't accept it. The hold costs 1.0
+nothing, so lifting early buys nothing either. N1 and N2 are one line each, with tests. The lift would also be false
+about the copy that runs. A round that ends because I am tired of rounds is the wrong reason to end it.
+
+**The lift, so this ends.** T-0299 lifts when, and only when:
+1. T-5937 lands with `tests/run.sh pkg_sandbox_test.py` green, and Odalys's merge review for T-4192 confirms, by
+   sandbox_check against the real profile and the bare control: libinfo answers 1 as an XPC name and 0 as a global
+   name; mach-cross-domain-lookup, mach-register, network-inbound, network-bind and hid-control answer 1; mutant O1 is
+   killed. That merge review is the re-review the hold names. It checks this list, not the whole box again. Anything
+   new she finds goes on its own line, and I rule whether it holds the lift.
+2. T-5938 is applied: rules/pkg_sandbox.py carries the same profile, and its own run of the suite is green.
+
+Pernille ticks T-0299 then. Its done-note says the known routes are closed and names what is held by text:
+job-creation; route A's launchd path; the IOKit operations; and N3 if its probe could not be built. It is not proof
+that no route exists. Lifting it does not schedule a real package run; native builds are still 1.1 work.
+
+**What would make this fail:**
+- A real build needs network-bind, a cross-domain lookup or mach-register. It fails closed; it comes to me.
+- launchd never asks the profile on the XPC path. Then route A is open for every name, by text, and the lift says so.
+- `xpc-service-name-regex #""` also refuses a global name. The suite's libinfo cases show that one before it lands.
+- The applier refuses T-5938, as it refused #79 once. Then it is a mechanical stop, and the hold waits for it.
 {% endraw %}
 
 </div>

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-28T11:36:29.534360+00:00",
+ "at": "2026-11-28T11:39:34.150678+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -83,7 +83,7 @@
    "task": "[build] T-4183 screenshots run lock",
    "model": "opus",
    "started": "2026-11-28T04:27:26.477Z",
-   "seconds": 25743,
+   "seconds": 25927,
    "finished": null
   },
   {
@@ -91,7 +91,7 @@
    "task": "[review] T-5837 fourth pass",
    "model": "opus",
    "started": "2026-11-28T11:28:00.056Z",
-   "seconds": 509,
+   "seconds": 694,
    "finished": null
   },
   {
@@ -99,7 +99,7 @@
    "task": "[review] T-4183 Maren's session",
    "model": "opus",
    "started": "2026-11-28T11:34:05.299Z",
-   "seconds": 144,
+   "seconds": 328,
    "finished": null
   }
  ],
@@ -190,7 +190,7 @@
   "week_pct": 50.41,
   "usage_pct": 46.1,
   "work_pct": 99.0,
-  "read_at": "2026-11-28T11:36:00+00:00",
+  "read_at": "2026-11-28T11:39:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -252,7 +252,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-28T06:36:00-05:00",
+  "at": "2026-11-28T06:39:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -263,7 +263,7 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Double Spread: past the week's halfway point with room left, so twice the even pace until the limit or the reset; the machine allows 8 (held: too few lands in 3 hours to judge a raise)",
+  "why": "Double Spread: past the week's halfway point with room left, so twice the even pace until the limit or the reset; the machine allows 8 (at its floor: load 36.6 a core is over 10)",
   "n": 3,
   "at": "2026-11-27T21:13:47.067436-05:00"
  },
@@ -512,13 +512,12 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-28T11:36:09Z",
+  "at": "2026-11-28T11:39:34Z",
   "s": {
    "T-4181": [
-    "merged",
-    "on main 6:06 AM ET",
-    1795863988000,
-    "Pernille"
+    "mergetest",
+    "iPhone tests on the MacBook",
+    null
    ],
    "T-4183": [
     "merged",
@@ -549,7 +548,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-28T11:36:09Z",
+  "at": "2026-11-28T11:39:34Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -567,7 +566,7 @@
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1223
+    "parked": 1227
    },
    "cur": [],
    "ld": [
@@ -577,12 +576,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-28T11:35:52Z",
-    "ld": 19.74,
+    "at": "2026-11-28T11:38:46Z",
+    "ld": 36.86,
     "c": 8,
     "sb": 1,
     "dk": [
-     30.5,
+     30.6,
      228.3
     ],
     "ss": [
@@ -594,8 +593,8 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-28T11:35:39Z",
-    "ld": 5.51,
+    "at": "2026-11-28T11:37:44Z",
+    "ld": 3.66,
     "c": 12,
     "sb": 0,
     "dk": [
@@ -632,11 +631,11 @@
      "open": true
     }
    },
-   "at": "2026-11-28T11:36:29+00:00"
+   "at": "2026-11-28T11:39:34+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-28T11:36:22+00:00"
+   "at": "2026-11-28T11:39:20+00:00"
   }
  },
  "operators": [
@@ -689,10 +688,10 @@
   "main": 3,
   "lanes": 2,
   "total": 5,
-  "at": "6:36 AM",
+  "at": "6:39 AM",
   "why": "",
-  "at_iso": "2026-11-28T11:36:00+00:00",
+  "at_iso": "2026-11-28T11:39:00+00:00",
   "started": "9:13 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 3, started 9:13 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 6:36 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 3, started 9:13 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 6:39 AM ET</p></section>"
  }
 }

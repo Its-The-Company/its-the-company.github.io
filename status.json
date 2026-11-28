@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-28T11:15:15.906930+00:00",
+ "at": "2026-11-28T11:18:17.428958+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -83,7 +83,7 @@
    "task": "[build] T-4183 screenshots run lock",
    "model": "opus",
    "started": "2026-11-28T04:27:26.477Z",
-   "seconds": 24469,
+   "seconds": 24650,
    "finished": null
   },
   {
@@ -91,7 +91,7 @@
    "task": "[build] T-5837 stale chart check",
    "model": "fable",
    "started": "2026-11-28T06:15:09.969Z",
-   "seconds": 18005,
+   "seconds": 18187,
    "finished": null
   },
   {
@@ -99,7 +99,7 @@
    "task": "[build] T-4183 fixture gate shrinker",
    "model": "opus",
    "started": "2026-11-28T08:48:43.219Z",
-   "seconds": 8792,
+   "seconds": 8974,
    "finished": null
   }
  ],
@@ -146,19 +146,19 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 17.0,
+   "pct": 18.0,
    "resets_at": "2026-11-28T08:30:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-28T06:07:05.839208-05:00",
+   "read_at": "2026-11-28T06:17:14.557802-05:00",
    "source": "live",
-   "left": 83.0,
+   "left": 82.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 58.0,
    "resets_at": "2026-11-29T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-28T06:07:05.839208-05:00",
+   "read_at": "2026-11-28T06:17:14.557802-05:00",
    "source": "live",
    "left": 42.0,
    "left_words": "of your weekly allowance left"
@@ -170,7 +170,7 @@
    "read_at": "2026-11-28T05:53:34.054051-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-28T06:07:05.839208-05:00"
+  "read_at": "2026-11-28T06:17:14.557802-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -190,7 +190,7 @@
   "week_pct": 49.56,
   "usage_pct": 46.1,
   "work_pct": 99.0,
-  "read_at": "2026-11-28T11:15:00+00:00",
+  "read_at": "2026-11-28T11:18:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -252,7 +252,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-28T06:15:00-05:00",
+  "at": "2026-11-28T06:18:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -512,16 +512,11 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-28T11:14:57Z",
+  "at": "2026-11-28T11:18:04Z",
   "s": {
    "T-5952": [
     "mergetest",
     "iPhone tests on the MacBook",
-    null
-   ],
-   "T-0472": [
-    "testing",
-    "Mac Mini \u00b7 test",
     null
    ],
    "T-4181": [
@@ -539,13 +534,11 @@
   },
   "nm": {
    "T-5952": "Give the Projects screen one background",
-   "T-0472": "Fix the stale clock size on Lock Screen widgets",
    "T-4181": "Widgets refresh on their own and by a tap",
    "T-4183": "The Gallery shows, previews and opens every premade"
   },
   "wk": {
    "T-5952": "Idris",
-   "T-0472": "Idris",
    "T-4181": "Idris",
    "T-4183": "Idris",
    "T-4775": "Idris",
@@ -563,7 +556,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-28T11:14:57Z",
+  "at": "2026-11-28T11:18:04Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -581,7 +574,7 @@
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1202
+    "parked": 1205
    },
    "cur": [],
    "ld": [
@@ -591,12 +584,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-28T11:14:59Z",
-    "ld": 7.34,
+    "at": "2026-11-28T11:17:39Z",
+    "ld": 7.81,
     "c": 8,
     "sb": 0,
     "dk": [
-     35.6,
+     35.4,
      228.3
     ],
     "ss": [
@@ -606,17 +599,17 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-28T11:07:47Z",
-    "ld": 22.8,
+    "at": "2026-11-28T11:16:51Z",
+    "ld": 9.77,
     "c": 12,
     "sb": 2,
     "dk": [
-     341.1,
+     339.1,
      926.4
     ],
     "sn": [
      "itsthecompany-runner",
-     "itsthecompany-runner-5"
+     "itsthecompany-runner-2"
     ]
    }
   }
@@ -647,11 +640,11 @@
      "open": true
     }
    },
-   "at": "2026-11-28T11:15:15+00:00"
+   "at": "2026-11-28T11:18:17+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-28T11:15:15+00:00"
+   "at": "2026-11-28T11:18:04+00:00"
   }
  },
  "operators": [
@@ -704,10 +697,10 @@
   "main": 3,
   "lanes": 2,
   "total": 5,
-  "at": "6:15 AM",
+  "at": "6:18 AM",
   "why": "",
-  "at_iso": "2026-11-28T11:15:00+00:00",
+  "at_iso": "2026-11-28T11:18:00+00:00",
   "started": "9:13 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 3, started 9:13 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 6:15 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 3, started 9:13 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 6:18 AM ET</p></section>"
  }
 }

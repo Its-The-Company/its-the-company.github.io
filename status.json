@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-28T12:07:06.475046+00:00",
+ "at": "2026-11-28T12:10:10.258296+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -83,20 +83,28 @@
    "task": "[build] T-4183 screenshots run lock",
    "model": "opus",
    "started": "2026-11-28T04:27:26.477Z",
-   "seconds": 27579,
+   "seconds": 27763,
    "finished": null
   },
+  {
+   "name": "pernille",
+   "task": "[review] T-4183 gate check again",
+   "model": "opus",
+   "started": "2026-11-28T12:07:56.182Z",
+   "seconds": 134,
+   "finished": null
+  }
+ ],
+ "who": "Idris, Pernille",
+ "recent": [
   {
    "name": "maren",
    "task": "[build] T-4183 gate check fixes",
    "model": "fable",
    "started": "2026-11-28T11:42:20.266Z",
-   "seconds": 1486,
-   "finished": null
-  }
- ],
- "who": "Idris, Maren",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-28T12:07:43.612000+00:00"
+  },
   {
    "name": "maren",
    "task": "[build] T-5837 manifest rows fix",
@@ -120,14 +128,6 @@
    "started": "2026-11-28T11:34:05.299Z",
    "seconds": null,
    "finished": "2026-11-28T11:42:05.999000+00:00"
-  },
-  {
-   "name": "maren",
-   "task": "[build] T-4183 fixture gate shrinker",
-   "model": "opus",
-   "started": "2026-11-28T08:48:43.219Z",
-   "seconds": null,
-   "finished": "2026-11-28T11:33:39.517000+00:00"
   }
  ],
  "queue": {
@@ -139,19 +139,19 @@
  "meter": {
   "five_hour": {
    "pct": 26.0,
-   "resets_at": "2026-11-28T13:30:00.160419+00:00",
+   "resets_at": "2026-11-28T08:30:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-28T07:04:16.619304-05:00",
-   "source": "usage",
+   "read_at": "2026-11-28T07:07:42.089378-05:00",
+   "source": "live",
    "left": 74.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 60.0,
-   "resets_at": "2026-11-29T07:00:00.160456+00:00",
+   "resets_at": "2026-11-29T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-28T07:04:16.619304-05:00",
-   "source": "usage",
+   "read_at": "2026-11-28T07:07:42.089378-05:00",
+   "source": "live",
    "left": 40.0,
    "left_words": "of your weekly allowance left"
   },
@@ -162,7 +162,7 @@
    "read_at": "2026-11-28T07:04:16.619304-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-28T07:04:16.619304-05:00"
+  "read_at": "2026-11-28T07:07:42.089378-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -182,7 +182,7 @@
   "week_pct": 51.27,
   "usage_pct": 46.1,
   "work_pct": 99.0,
-  "read_at": "2026-11-28T12:07:00+00:00",
+  "read_at": "2026-11-28T12:10:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -192,7 +192,7 @@
     "t": "Widgets refresh on their own and by a tap",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-28T06:14:05-05:00",
+    "at": "2026-11-28T07:09:59-05:00",
     "n": "Evan",
     "src": "plan-a"
    }
@@ -216,7 +216,7 @@
   }
  ],
  "disk": {
-  "free_gb": 27,
+  "free_gb": 30,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -225,14 +225,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-28T07:03:00-05:00",
+   "at": "2026-11-28T07:08:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-28T07:07:00-05:00",
+  "at": "2026-11-28T07:10:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -257,19 +257,11 @@
    "next": []
   },
   {
-   "name": "Maren",
-   "state": "running",
-   "task": "[build] T-4183 gate check fixes",
-   "model": "fable",
-   "since": "2026-11-28T11:42:20.266Z",
-   "next": []
-  },
-  {
    "name": "Pernille",
-   "state": "next",
-   "task": "Pernille, P1, continuation of T-2609: after...",
-   "model": null,
-   "since": null,
+   "state": "running",
+   "task": "[review] T-4183 gate check again",
+   "model": "opus",
+   "since": "2026-11-28T12:07:56.182Z",
    "next": []
   },
   {
@@ -295,6 +287,14 @@
    "model": null,
    "since": null,
    "next": []
+  },
+  {
+   "name": "Maren",
+   "state": "next",
+   "task": "Maren, P1, from T-2296 review M2...",
+   "model": null,
+   "since": null,
+   "next": []
   }
  ],
  "tasks": {
@@ -309,11 +309,11 @@
     "task": "T-4183"
    },
    {
-    "w": "Maren",
-    "k": "build",
+    "w": "Pernille",
+    "k": "review",
     "t": "The Gallery shows, previews and opens every premade",
-    "m": "fable",
-    "at": "2026-11-28T11:42:20.266Z",
+    "m": "opus",
+    "at": "2026-11-28T12:07:56.182Z",
     "o": "c",
     "task": "T-4183"
    }
@@ -483,13 +483,13 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-28T12:06:46Z",
+  "at": "2026-11-28T12:10:10Z",
   "s": {
    "T-4181": [
     "merged",
-    "on main 6:06 AM ET",
-    1795863988000,
-    "Pernille"
+    "on main 7:07 AM ET",
+    1795867655000,
+    "Idris"
    ],
    "T-4183": [
     "merged",
@@ -520,7 +520,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-28T12:06:46Z",
+  "at": "2026-11-28T12:10:10Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -538,7 +538,7 @@
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1254
+    "parked": 1258
    },
    "cur": [],
    "ld": [
@@ -548,12 +548,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-28T12:06:22Z",
-    "ld": 8.39,
+    "at": "2026-11-28T12:09:45Z",
+    "ld": 6.13,
     "c": 8,
     "sb": 0,
     "dk": [
-     27.4,
+     27.7,
      228.3
     ],
     "ss": [
@@ -601,11 +601,11 @@
      "open": true
     }
    },
-   "at": "2026-11-28T12:07:06+00:00"
+   "at": "2026-11-28T12:10:10+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-28T12:06:53+00:00"
+   "at": "2026-11-28T12:10:00+00:00"
   }
  },
  "operators": [
@@ -625,7 +625,7 @@
    "m": "opus",
    "e": "high",
    "t": "Work session \u2013 1 task",
-   "at": "2026-11-28T06:14:05-05:00"
+   "at": "2026-11-28T07:09:58-05:00"
   }
  ],
  "reply": {
@@ -649,10 +649,10 @@
   "main": 2,
   "lanes": 1,
   "total": 3,
-  "at": "7:07 AM",
+  "at": "7:10 AM",
   "why": "",
-  "at_iso": "2026-11-28T12:07:00+00:00",
+  "at_iso": "2026-11-28T12:10:00+00:00",
   "started": "9:13 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 9:13 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 7:07 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 9:13 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 7:10 AM ET</p></section>"
  }
 }

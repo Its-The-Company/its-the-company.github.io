@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-28T05:46:16.785500+00:00",
+ "at": "2026-11-28T05:49:23.726039+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -83,7 +83,7 @@
    "task": "[build] T-4188 second location extension",
    "model": "opus",
    "started": "2026-11-28T03:56:16.118Z",
-   "seconds": 6600,
+   "seconds": 6787,
    "finished": null
   },
   {
@@ -91,7 +91,7 @@
    "task": "[build] T-4183 screenshots run lock",
    "model": "opus",
    "started": "2026-11-28T04:27:26.477Z",
-   "seconds": 4730,
+   "seconds": 4917,
    "finished": null
   },
   {
@@ -99,7 +99,7 @@
    "task": "[build] T-4476 failed save notice",
    "model": "opus",
    "started": "2026-11-28T04:32:31.121Z",
-   "seconds": 4425,
+   "seconds": 4612,
    "finished": null
   },
   {
@@ -107,7 +107,7 @@
    "task": "[build] T-5954 drop Fable cap",
    "model": "opus",
    "started": "2026-11-28T04:56:44.972Z",
-   "seconds": 2971,
+   "seconds": 3158,
    "finished": null
   },
   {
@@ -115,7 +115,7 @@
    "task": "[review] T-5837 third pass",
    "model": "opus",
    "started": "2026-11-28T05:22:02.092Z",
-   "seconds": 1454,
+   "seconds": 1641,
    "finished": null
   },
   {
@@ -123,7 +123,7 @@
    "task": "[build] T-4190 offline Restore test",
    "model": "fable",
    "started": "2026-11-28T05:23:58.664Z",
-   "seconds": 1338,
+   "seconds": 1525,
    "finished": null
   }
  ],
@@ -171,19 +171,19 @@
  "meter": {
   "five_hour": {
    "pct": 17.0,
-   "resets_at": "2026-11-28T08:29:59.720739+00:00",
+   "resets_at": "2026-11-28T03:30:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-28T00:46:09.563543-05:00",
-   "source": "usage",
+   "read_at": "2026-11-28T00:47:14.656757-05:00",
+   "source": "live",
    "left": 83.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 50.0,
-   "resets_at": "2026-11-29T06:59:59.720797+00:00",
+   "resets_at": "2026-11-29T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-28T00:46:09.563543-05:00",
-   "source": "usage",
+   "read_at": "2026-11-28T00:47:14.656757-05:00",
+   "source": "live",
    "left": 50.0,
    "left_words": "of your weekly allowance left"
   },
@@ -194,7 +194,7 @@
    "read_at": "2026-11-28T00:46:09.563543-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-28T00:46:09.563543-05:00"
+  "read_at": "2026-11-28T00:47:14.656757-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -214,7 +214,7 @@
   "week_pct": 42.75,
   "usage_pct": 46.1,
   "work_pct": 99.0,
-  "read_at": "2026-11-28T05:46:00+00:00",
+  "read_at": "2026-11-28T05:49:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -244,14 +244,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-28T00:46:00-05:00",
+   "at": "2026-11-28T00:49:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 4,
-  "at": "2026-11-28T00:46:00-05:00",
+  "at": "2026-11-28T00:49:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -262,7 +262,7 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Double Spread: past the week's halfway point with room left, so twice the even pace until the limit or the reset; the machine allows 8 (at its floor: load 17.8 a core is over 10)",
+  "why": "Double Spread: past the week's halfway point with room left, so twice the even pace until the limit or the reset; the machine allows 8 (at its floor: load 14.6 a core is over 10)",
   "n": 4,
   "at": "2026-11-27T21:13:47.067436-05:00"
  },
@@ -538,17 +538,12 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-28T05:46:16Z",
+  "at": "2026-11-28T05:49:07Z",
   "s": {
    "T-5955": [
     "mergetest",
     "iPhone tests on the MacBook",
     null
-   ],
-   "T-4181": [
-    "testq",
-    "1st for a Simulator",
-    1795844116785
    ],
    "T-5954": [
     "merged",
@@ -565,13 +560,11 @@
   },
   "nm": {
    "T-5955": "Steady the offline Restore UI test",
-   "T-4181": "Widgets refresh on their own and by a tap",
    "T-5954": "Drop the governor's weekly Fable cap",
    "T-4183": "The Gallery shows, previews and opens every premade"
   },
   "wk": {
    "T-5955": "Idris",
-   "T-4181": "Idris",
    "T-5954": "Odalys",
    "T-4183": "Idris",
    "T-5323": "Idris",
@@ -586,7 +579,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-28T05:46:16Z",
+  "at": "2026-11-28T05:49:07Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -604,7 +597,7 @@
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1573
+    "parked": 1576
    },
    "cur": [],
    "ld": [
@@ -614,12 +607,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-28T05:46:17Z",
-    "ld": 14.48,
+    "at": "2026-11-28T05:48:41Z",
+    "ld": 14.4,
     "c": 8,
     "sb": 1,
     "dk": [
-     36.4,
+     38.6,
      228.3
     ],
     "ss": [
@@ -671,11 +664,11 @@
      "open": true
     }
    },
-   "at": "2026-11-28T05:46:16+00:00"
+   "at": "2026-11-28T05:49:23+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-28T05:46:09+00:00"
+   "at": "2026-11-28T05:49:23+00:00"
   }
  },
  "operators": [
@@ -710,10 +703,10 @@
   "main": 6,
   "lanes": 0,
   "total": 6,
-  "at": "12:46 AM",
+  "at": "12:49 AM",
   "why": "",
-  "at_iso": "2026-11-28T05:46:00+00:00",
+  "at_iso": "2026-11-28T05:49:00+00:00",
   "started": "9:13 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 6, started 9:13 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 12:46 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 6, started 9:13 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 12:49 AM ET</p></section>"
  }
 }

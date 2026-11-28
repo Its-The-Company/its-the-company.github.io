@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-28T02:20:07.154667+00:00",
+ "at": "2026-11-28T02:23:10.279634+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -62,7 +62,7 @@
    "task": "[build] T-4188 location distance notifications",
    "model": "opus",
    "started": "2026-11-28T02:15:14.037Z",
-   "seconds": 293,
+   "seconds": 476,
    "finished": null
   },
   {
@@ -70,7 +70,7 @@
    "task": "[build] T-4190 Settings Pro tests",
    "model": "opus",
    "started": "2026-11-28T02:15:22.190Z",
-   "seconds": 284,
+   "seconds": 468,
    "finished": null
   },
   {
@@ -78,7 +78,7 @@
    "task": "[build] T-4183 Gallery premades release",
    "model": "opus",
    "started": "2026-11-28T02:15:30.840Z",
-   "seconds": 276,
+   "seconds": 459,
    "finished": null
   },
   {
@@ -86,7 +86,7 @@
    "task": "[build] T-4778 font probe rerun",
    "model": "opus",
    "started": "2026-11-28T02:15:39.792Z",
-   "seconds": 267,
+   "seconds": 450,
    "finished": null
   },
   {
@@ -94,25 +94,26 @@
    "task": "[build] T-5837 Home review fixes",
    "model": "opus",
    "started": "2026-11-28T02:15:49.354Z",
-   "seconds": 257,
+   "seconds": 440,
    "finished": null
-  },
+  }
+ ],
+ "who": "Idris x4, Maren",
+ "recent": [
   {
    "name": "maren",
    "task": "[build] T-5950 look picker inspiration",
    "model": "opus",
    "started": "2026-11-28T02:19:03.431Z",
-   "seconds": 63,
-   "finished": null
+   "seconds": null,
+   "finished": "2026-11-28T02:21:01.374000+00:00"
   }
  ],
- "who": "Idris x4, Maren x2",
- "recent": [],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 264,
-  "blocked_count": 0
+  "runnable_count": 263,
+  "blocked_count": 1
  },
  "meter": {
   "five_hour": {
@@ -160,7 +161,7 @@
   "week_pct": 39.33,
   "usage_pct": 46.1,
   "work_pct": 99.0,
-  "read_at": "2026-11-28T02:20:00+00:00",
+  "read_at": "2026-11-28T02:23:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -210,7 +211,7 @@
  "lock_in": {
   "on": true,
   "pool": 4,
-  "at": "2026-11-27T21:20:00-05:00",
+  "at": "2026-11-27T21:23:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -321,15 +322,6 @@
     "at": "2026-11-28T02:15:49.354Z",
     "o": "c",
     "task": "T-5837"
-   },
-   {
-    "w": "Maren",
-    "k": "build",
-    "t": "Add details vault ideas to the look picker",
-    "m": "opus",
-    "at": "2026-11-28T02:19:03.431Z",
-    "o": "c",
-    "task": "T-5950"
    }
   ],
   "src": "plan",
@@ -423,10 +415,10 @@
    }
   ],
   "count": {
-   "next": 264,
+   "next": 263,
    "wait": 0,
-   "blocked": 0,
-   "you": 0
+   "blocked": 1,
+   "you": 1
   },
   "fin": {
    "n": 1,
@@ -477,18 +469,12 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-28T02:20:00Z",
+  "at": "2026-11-28T02:22:50Z",
   "s": {
-   "T-4641": [
+   "T-4188": [
     "mergetest",
     "iPhone tests on the MacBook",
     null
-   ],
-   "T-5950": [
-    "merged",
-    "on main 9:18 PM ET",
-    1795832302000,
-    ""
    ],
    "T-4181": [
     "merged",
@@ -498,19 +484,17 @@
    ]
   },
   "nm": {
-   "T-4641": "Tidy the premade settings Page's smaller review points",
-   "T-5950": "Add details vault ideas to the look picker",
+   "T-4188": "Location, steps and notifications work in scripts and...",
    "T-4181": "Widgets refresh on their own and by a tap"
   },
   "wk": {
-   "T-4641": "Idris",
-   "T-5950": "Maren",
+   "T-4188": "Idris",
    "T-4181": "Idris",
    "T-5297": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-28T02:20:00Z",
+  "at": "2026-11-28T02:22:50Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -528,7 +512,7 @@
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1367
+    "parked": 1370
    },
    "cur": [],
    "ld": [
@@ -538,8 +522,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-28T02:19:31Z",
-    "ld": 1.56,
+    "at": "2026-11-28T02:22:50Z",
+    "ld": 1.39,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -553,16 +537,17 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-28T02:18:30Z",
-    "ld": 6.06,
+    "at": "2026-11-28T02:22:33Z",
+    "ld": 7.76,
     "c": 12,
-    "sb": 2,
+    "sb": 3,
     "dk": [
-     350.7,
+     350.1,
      926.4
     ],
     "sn": [
      "itsthecompany-runner",
+     "itsthecompany-runner-2",
      "itsthecompany-runner-3"
     ]
    }
@@ -576,7 +561,7 @@
    "parked": 9,
    "open": true,
    "mq": false,
-   "counted": "2026-11-28T02:12:22+00:00",
+   "counted": "2026-11-28T02:22:38+00:00",
    "by": {
     "app": {
      "n": 6,
@@ -594,11 +579,11 @@
      "open": true
     }
    },
-   "at": "2026-11-28T02:20:07+00:00"
+   "at": "2026-11-28T02:23:10+00:00"
   },
   "bl": {
-   "n": 0,
-   "at": "2026-11-28T02:20:00+00:00"
+   "n": 1,
+   "at": "2026-11-28T02:22:59+00:00"
   }
  },
  "operators": [
@@ -633,17 +618,18 @@
   "fin_short",
   "task_title",
   "done_text",
+  "task_open",
   "lane_task",
   "task_next"
  ],
  "agents_now": {
-  "main": 6,
+  "main": 5,
   "lanes": 1,
-  "total": 7,
-  "at": "9:20 PM",
+  "total": 6,
+  "at": "9:23 PM",
   "why": "",
-  "at_iso": "2026-11-28T02:20:00+00:00",
+  "at_iso": "2026-11-28T02:23:00+00:00",
   "started": "9:13 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 6, started 9:13 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 9:20 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 5, started 9:13 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 9:23 PM ET</p></section>"
  }
 }

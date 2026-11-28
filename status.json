@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-28T14:02:23.459791+00:00",
+ "at": "2026-11-28T14:05:29.531845+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -80,18 +80,10 @@
  "workers": [
   {
    "name": "idris",
-   "task": "[build] T-4183 fix run lock",
-   "model": "fable",
-   "started": "2026-11-28T13:09:22.193Z",
-   "seconds": 3181,
-   "finished": null
-  },
-  {
-   "name": "idris",
    "task": "[build] T-4188 location test run",
    "model": "",
    "started": "2026-11-28T13:09:32.138Z",
-   "seconds": 3171,
+   "seconds": 3357,
    "finished": null
   },
   {
@@ -99,7 +91,7 @@
    "task": "[build] T-4190 store and token fixes",
    "model": "",
    "started": "2026-11-28T13:09:41.239Z",
-   "seconds": 3162,
+   "seconds": 3348,
    "finished": null
   },
   {
@@ -107,12 +99,29 @@
    "task": "[review] T-5953",
    "model": "",
    "started": "2026-11-28T13:09:48.004Z",
-   "seconds": 3155,
+   "seconds": 3341,
+   "finished": null
+  },
+  {
+   "name": "pernille",
+   "task": "[review] T-4183",
+   "model": "",
+   "started": "2026-11-28T14:04:19.614Z",
+   "seconds": 69,
    "finished": null
   }
  ],
- "who": "Idris x3, Odalys",
- "recent": [],
+ "who": "Idris x2, Odalys, Pernille",
+ "recent": [
+  {
+   "name": "idris",
+   "task": "[build] T-4183 fix run lock",
+   "model": "fable",
+   "started": "2026-11-28T13:09:22.193Z",
+   "seconds": null,
+   "finished": "2026-11-28T14:03:26.174000+00:00"
+  }
+ ],
  "queue": {
   "runnable": [],
   "blocked": [],
@@ -121,19 +130,19 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 2.0,
+   "pct": 4.0,
    "resets_at": "2026-11-28T13:30:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-28T08:54:16.902212-05:00",
+   "read_at": "2026-11-28T09:04:34.248188-05:00",
    "source": "live",
-   "left": 98.0,
+   "left": 96.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 62.0,
    "resets_at": "2026-11-29T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-28T08:54:16.902212-05:00",
+   "read_at": "2026-11-28T09:04:34.248188-05:00",
    "source": "live",
    "left": 38.0,
    "left_words": "of your weekly allowance left"
@@ -145,7 +154,7 @@
    "read_at": "2026-11-28T08:43:00.846147-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-28T08:54:16.902212-05:00"
+  "read_at": "2026-11-28T09:04:34.248188-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -165,7 +174,7 @@
   "week_pct": 46.79,
   "usage_pct": 43.0,
   "work_pct": 99.0,
-  "read_at": "2026-11-28T14:02:00+00:00",
+  "read_at": "2026-11-28T14:05:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -199,7 +208,7 @@
   }
  ],
  "disk": {
-  "free_gb": 32,
+  "free_gb": 31,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -208,14 +217,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-28T08:58:00-05:00",
+   "at": "2026-11-28T09:04:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 4,
-  "at": "2026-11-28T09:02:00-05:00",
+  "at": "2026-11-28T09:05:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -234,9 +243,9 @@
   {
    "name": "Idris",
    "state": "running",
-   "task": "[build] T-4183 fix run lock",
-   "model": "fable",
-   "since": "2026-11-28T13:09:22.193Z",
+   "task": "[build] T-4188 location test run",
+   "model": null,
+   "since": "2026-11-28T13:09:32.138Z",
    "next": []
   },
   {
@@ -249,10 +258,10 @@
   },
   {
    "name": "Pernille",
-   "state": "next",
-   "task": "Pernille, P1, continuation of T-2609: after...",
+   "state": "running",
+   "task": "[review] T-4183",
    "model": null,
-   "since": null,
+   "since": "2026-11-28T14:04:19.614Z",
    "next": []
   },
   {
@@ -285,15 +294,6 @@
    {
     "w": "Idris",
     "k": "build",
-    "t": "The Gallery shows, previews and opens every premade",
-    "m": "fable",
-    "at": "2026-11-28T13:09:22.193Z",
-    "o": "c",
-    "task": "T-4183"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
     "t": "Location, steps and notifications work in scripts and widgets",
     "at": "2026-11-28T13:09:32.138Z",
     "o": "c",
@@ -314,6 +314,14 @@
     "at": "2026-11-28T13:09:48.004Z",
     "o": "c",
     "task": "T-5953"
+   },
+   {
+    "w": "Pernille",
+    "k": "review",
+    "t": "The Gallery shows, previews and opens every premade",
+    "at": "2026-11-28T14:04:19.614Z",
+    "o": "c",
+    "task": "T-4183"
    }
   ],
   "src": "plan",
@@ -456,7 +464,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-28T14:02:23Z",
+  "at": "2026-11-28T14:05:29Z",
   "s": {
    "T-5304": [
     "mergetest",
@@ -488,7 +496,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-28T14:02:23Z",
+  "at": "2026-11-28T14:05:29Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -506,7 +514,7 @@
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1370
+    "parked": 1373
    },
    "cur": [],
    "ld": [
@@ -516,12 +524,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-28T14:02:23Z",
-    "ld": 11.27,
+    "at": "2026-11-28T14:04:43Z",
+    "ld": 8.46,
     "c": 8,
     "sb": 1,
     "dk": [
-     31.9,
+     31.5,
      228.3
     ],
     "ss": [
@@ -574,15 +582,15 @@
      "open": true
     }
    },
-   "at": "2026-11-28T14:02:23+00:00"
+   "at": "2026-11-28T14:05:29+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-28T14:02:11+00:00"
+   "at": "2026-11-28T14:05:18+00:00"
   }
  },
  "fw": {
-  "at": 1795874518,
+  "at": 1795874641,
   "s": [
    [
     "main",
@@ -1003,7 +1011,7 @@
   "x": [
    "held",
    "T-4191",
-   3431,
+   3433,
    5
   ]
  },
@@ -1045,10 +1053,10 @@
   "main": 4,
   "lanes": 1,
   "total": 5,
-  "at": "9:02 AM",
+  "at": "9:05 AM",
   "why": "",
-  "at_iso": "2026-11-28T14:02:00+00:00",
+  "at_iso": "2026-11-28T14:05:00+00:00",
   "started": "8:06 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 4, started 8:06 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 9:02 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 4, started 8:06 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 9:05 AM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-28T13:53:14.711734+00:00",
+ "at": "2026-11-28T13:56:17.775151+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -83,7 +83,7 @@
    "task": "[build] T-4183 fix run lock",
    "model": "fable",
    "started": "2026-11-28T13:09:22.193Z",
-   "seconds": 2632,
+   "seconds": 2815,
    "finished": null
   },
   {
@@ -91,7 +91,7 @@
    "task": "[build] T-4188 location test run",
    "model": "",
    "started": "2026-11-28T13:09:32.138Z",
-   "seconds": 2622,
+   "seconds": 2805,
    "finished": null
   },
   {
@@ -99,7 +99,7 @@
    "task": "[build] T-4190 store and token fixes",
    "model": "",
    "started": "2026-11-28T13:09:41.239Z",
-   "seconds": 2613,
+   "seconds": 2796,
    "finished": null
   },
   {
@@ -107,7 +107,7 @@
    "task": "[review] T-5953",
    "model": "",
    "started": "2026-11-28T13:09:48.004Z",
-   "seconds": 2606,
+   "seconds": 2789,
    "finished": null
   }
  ],
@@ -122,19 +122,19 @@
  "meter": {
   "five_hour": {
    "pct": 2.0,
-   "resets_at": "2026-11-28T18:30:00.018723+00:00",
+   "resets_at": "2026-11-28T13:30:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-28T08:43:00.846147-05:00",
-   "source": "usage",
+   "read_at": "2026-11-28T08:54:16.902212-05:00",
+   "source": "live",
    "left": 98.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 62.0,
-   "resets_at": "2026-11-29T07:00:00.018745+00:00",
+   "resets_at": "2026-11-29T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-28T08:43:00.846147-05:00",
-   "source": "usage",
+   "read_at": "2026-11-28T08:54:16.902212-05:00",
+   "source": "live",
    "left": 38.0,
    "left_words": "of your weekly allowance left"
   },
@@ -145,7 +145,7 @@
    "read_at": "2026-11-28T08:43:00.846147-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-28T08:43:00.846147-05:00"
+  "read_at": "2026-11-28T08:54:16.902212-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -165,8 +165,21 @@
   "week_pct": 46.79,
   "usage_pct": 43.0,
   "work_pct": 99.0,
-  "read_at": "2026-11-28T13:53:00+00:00",
-  "running": []
+  "read_at": "2026-11-28T13:56:00+00:00",
+  "running": [
+   {
+    "lane": "a",
+    "task": "T-4182",
+    "w": "Idris",
+    "k": "build",
+    "t": "A failing widget says so and can recover",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-28T08:54:41-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   }
+  ]
  },
  "api_credits": [
   {
@@ -202,7 +215,7 @@
  "lock_in": {
   "on": false,
   "pool": 4,
-  "at": "2026-11-28T08:53:00-05:00",
+  "at": "2026-11-28T08:56:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -213,7 +226,7 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Double Spread: past the week's halfway point with room left, so twice the even pace until the limit or the reset; the machine allows 8 (held: too few lands in 3 hours to judge a raise)",
+  "why": "Double Spread: past the week's halfway point with room left, so twice the even pace until the limit or the reset; the machine allows 8 (at its floor: load 10.9 a core is over 10)",
   "n": 4,
   "at": "2026-11-28T08:06:40.676779-05:00"
  },
@@ -443,21 +456,11 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-28T13:53:14Z",
+  "at": "2026-11-28T13:56:00Z",
   "s": {
-   "T-4181": [
-    "mergeq",
-    "1st to merge",
-    1795873994711
-   ],
    "T-5304": [
     "mergetest",
     "iPhone tests on the MacBook",
-    null
-   ],
-   "T-4188": [
-    "testing",
-    "Mac Mini \u00b7 test",
     null
    ],
    "T-4183": [
@@ -474,26 +477,22 @@
    ]
   },
   "nm": {
-   "T-4181": "Widgets refresh on their own and by a tap",
    "T-5304": "Bound the run lock hold when Python hangs",
-   "T-4188": "Location, steps and notifications work in scripts and...",
    "T-4183": "The Gallery shows, previews and opens every premade",
    "T-5953": "Draw Home's Efficiency numbers as graphs"
   },
   "wk": {
-   "T-4181": "Idris",
    "T-5304": "Idris",
-   "T-4188": "Idris",
    "T-4183": "Idris",
    "T-5953": "Maren"
   }
  },
  "ln": {
-  "at": "2026-11-28T13:53:14Z",
+  "at": "2026-11-28T13:56:00Z",
   "mq": {
    "n": {
     "checking": 0,
-    "inline": 1,
+    "inline": 0,
     "conflicted": 0,
     "failed": 0,
     "held": 0,
@@ -502,12 +501,12 @@
    },
    "m": {
     "checking": null,
-    "inline": 0,
+    "inline": null,
     "conflicted": null,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1361
+    "parked": 1363
    },
    "cur": [],
    "ld": [
@@ -517,21 +516,19 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-28T13:53:03Z",
-    "ld": 11.37,
+    "at": "2026-11-28T13:55:12Z",
+    "ld": 9.22,
     "c": 8,
-    "sb": 1,
+    "sb": 0,
     "dk": [
-     29.9,
+     32.4,
      228.3
     ],
     "ss": [
      151.8,
      953.7
     ],
-    "sn": [
-     "pywidget-wk-check"
-    ]
+    "sn": []
    },
    "macbook": {
     "at": "2026-11-28T13:43:42Z",
@@ -572,15 +569,15 @@
      "open": true
     }
    },
-   "at": "2026-11-28T13:53:14+00:00"
+   "at": "2026-11-28T13:56:17+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-28T13:53:08+00:00"
+   "at": "2026-11-28T13:56:17+00:00"
   }
  },
  "fw": {
-  "at": 1795873904,
+  "at": 1795874148,
   "s": [
    [
     "main",
@@ -717,7 +714,7 @@
       1,
       1795871346,
       0,
-      0
+      1
      ],
      [
       "T-4857",
@@ -779,49 +776,42 @@
    ],
    [
     "a",
-    "T-4181/Idris",
+    "T-4182/Idris",
     "building",
-    1795867799,
+    1795874081,
     [
      [
-      "T-4280",
+      "T-3291",
       1,
-      1795867799,
+      1795874081,
       0,
       0
      ],
      [
-      "T-1882",
+      "T-2232",
       1,
-      1795867799,
+      1795874081,
       0,
       0
      ],
      [
-      "T-0793",
+      "T-4801",
       1,
-      1795867799,
+      1795874081,
       0,
       0
      ],
      [
-      "T-2021",
+      "T-5272",
       1,
-      1795867799,
+      1795874081,
       0,
       0
      ],
      [
-      "T-4433",
+      "T-5672",
       1,
-      1795867799,
-      0,
-      0
-     ],
-     [
-      "T-4435",
-      1,
-      1795867799,
+      1795874081,
       0,
       0
      ]
@@ -838,13 +828,14 @@
   "pr": 1,
   "q": [
    [
-    "T-4182",
+    "T-4181",
     [
-     "T-3291",
-     "T-2232",
-     "T-4801",
-     "T-5272",
-     "T-5672"
+     "T-4280",
+     "T-1882",
+     "T-0793",
+     "T-2021",
+     "T-4433",
+     "T-4435"
     ],
     0,
     ""
@@ -997,12 +988,17 @@
     "T-4183",
     1795870553,
     141
+   ],
+   [
+    "T-4181",
+    1795873999,
+    0
    ]
   ],
   "x": [
    "held",
    "T-4191",
-   3421,
+   3425,
    5
   ]
  },
@@ -1015,6 +1011,15 @@
    "e": "high",
    "t": "Work session",
    "at": "2026-11-28T08:06:52-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Evan's Account",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session \u2013 1 task",
+   "at": "2026-11-28T08:54:41-05:00"
   }
  ],
  "reply": {
@@ -1033,12 +1038,12 @@
  ],
  "agents_now": {
   "main": 4,
-  "lanes": 0,
-  "total": 4,
-  "at": "8:53 AM",
+  "lanes": 1,
+  "total": 5,
+  "at": "8:56 AM",
   "why": "",
-  "at_iso": "2026-11-28T13:53:00+00:00",
+  "at_iso": "2026-11-28T13:56:00+00:00",
   "started": "8:06 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 4, started 8:06 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 8:53 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 4, started 8:06 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 8:56 AM ET</p></section>"
  }
 }

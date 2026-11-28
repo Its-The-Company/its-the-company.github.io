@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-28T13:59:19.666037+00:00",
+ "at": "2026-11-28T14:02:23.459791+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -83,7 +83,7 @@
    "task": "[build] T-4183 fix run lock",
    "model": "fable",
    "started": "2026-11-28T13:09:22.193Z",
-   "seconds": 2997,
+   "seconds": 3181,
    "finished": null
   },
   {
@@ -91,7 +91,7 @@
    "task": "[build] T-4188 location test run",
    "model": "",
    "started": "2026-11-28T13:09:32.138Z",
-   "seconds": 2987,
+   "seconds": 3171,
    "finished": null
   },
   {
@@ -99,7 +99,7 @@
    "task": "[build] T-4190 store and token fixes",
    "model": "",
    "started": "2026-11-28T13:09:41.239Z",
-   "seconds": 2978,
+   "seconds": 3162,
    "finished": null
   },
   {
@@ -107,7 +107,7 @@
    "task": "[review] T-5953",
    "model": "",
    "started": "2026-11-28T13:09:48.004Z",
-   "seconds": 2971,
+   "seconds": 3155,
    "finished": null
   }
  ],
@@ -165,7 +165,7 @@
   "week_pct": 46.79,
   "usage_pct": 43.0,
   "work_pct": 99.0,
-  "read_at": "2026-11-28T13:59:00+00:00",
+  "read_at": "2026-11-28T14:02:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -215,7 +215,7 @@
  "lock_in": {
   "on": false,
   "pool": 4,
-  "at": "2026-11-28T08:59:00-05:00",
+  "at": "2026-11-28T09:02:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -456,7 +456,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-28T13:59:07Z",
+  "at": "2026-11-28T14:02:23Z",
   "s": {
    "T-5304": [
     "mergetest",
@@ -488,7 +488,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-28T13:59:07Z",
+  "at": "2026-11-28T14:02:23Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -506,7 +506,7 @@
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1366
+    "parked": 1370
    },
    "cur": [],
    "ld": [
@@ -516,19 +516,21 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-28T13:58:43Z",
-    "ld": 4.93,
+    "at": "2026-11-28T14:02:23Z",
+    "ld": 11.27,
     "c": 8,
-    "sb": 0,
+    "sb": 1,
     "dk": [
-     32.4,
+     31.9,
      228.3
     ],
     "ss": [
      151.8,
      953.7
     ],
-    "sn": []
+    "sn": [
+     "pywidget-wk-check"
+    ]
    },
    "macbook": {
     "at": "2026-11-28T13:58:01Z",
@@ -572,15 +574,15 @@
      "open": true
     }
    },
-   "at": "2026-11-28T13:59:19+00:00"
+   "at": "2026-11-28T14:02:23+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-28T13:59:12+00:00"
+   "at": "2026-11-28T14:02:11+00:00"
   }
  },
  "fw": {
-  "at": 1795874270,
+  "at": 1795874518,
   "s": [
    [
     "main",
@@ -820,7 +822,7 @@
      ]
     ],
     0,
-    0
+    1
    ]
   ],
   "mh": [
@@ -1001,7 +1003,7 @@
   "x": [
    "held",
    "T-4191",
-   3427,
+   3431,
    5
   ]
  },
@@ -1043,10 +1045,10 @@
   "main": 4,
   "lanes": 1,
   "total": 5,
-  "at": "8:59 AM",
+  "at": "9:02 AM",
   "why": "",
-  "at_iso": "2026-11-28T13:59:00+00:00",
+  "at_iso": "2026-11-28T14:02:00+00:00",
   "started": "8:06 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 4, started 8:06 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 8:59 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 4, started 8:06 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 9:02 AM ET</p></section>"
  }
 }

@@ -5,7 +5,7 @@ section: "documents"
 description: "This session resumed the 11-25 parked branch (parked/a/20261125-233308-38972) and did not start over."
 ---
 <div class="crumbs" role="navigation" aria-label="Back"><a class="back" href="{{ '/documents/operations/' | relative_url }}">← Operations</a><a href="{{ '/documents/company/t-4181-handoff.html' | relative_url }}" rel="bookmark">Permanent link</a></div>
-<div class="page-head"><div class="kicker"><span class="kind blue">Plan</span><span>Day 37 · Fri Nov 27</span><span><code>ops/plans/T-4181-handoff.md</code></span></div><h1>T-4181 handoff (Operator, from Idris's report, 2026-11-26 ET, <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> a)</h1></div>
+<div class="page-head"><div class="kicker"><span class="kind blue">Plan</span><span>Day 38 · Sat Nov 28</span><span><code>ops/plans/T-4181-handoff.md</code></span></div><h1>T-4181 handoff (Operator, from Idris's report, 2026-11-26 ET, <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> a)</h1></div>
 
 <style>.doc-body{overflow-wrap:break-word}.doc-src{overflow-wrap:anywhere}.tbl[data-n~="1"] tr>:nth-child(1),.tbl[data-n~="2"] tr>:nth-child(2),.tbl[data-n~="3"] tr>:nth-child(3),.tbl[data-n~="4"] tr>:nth-child(4),.tbl[data-n~="5"] tr>:nth-child(5),.tbl[data-n~="6"] tr>:nth-child(6),.tbl[data-n~="7"] tr>:nth-child(7),.tbl[data-n~="8"] tr>:nth-child(8),.tbl[data-n~="9"] tr>:nth-child(9),.tbl[data-n~="10"] tr>:nth-child(10),.tbl[data-n~="11"] tr>:nth-child(11),.tbl[data-n~="12"] tr>:nth-child(12){min-width:0;overflow-wrap:normal}.tbl[data-o="1"] tr>:nth-child(1),.tbl[data-o="2"] tr>:nth-child(2),.tbl[data-o="3"] tr>:nth-child(3),.tbl[data-o="4"] tr>:nth-child(4),.tbl[data-o="5"] tr>:nth-child(5),.tbl[data-o="6"] tr>:nth-child(6),.tbl[data-o="7"] tr>:nth-child(7),.tbl[data-o="8"] tr>:nth-child(8),.tbl[data-o="9"] tr>:nth-child(9),.tbl[data-o="10"] tr>:nth-child(10),.tbl[data-o="11"] tr>:nth-child(11),.tbl[data-o="12"] tr>:nth-child(12){position:sticky;right:0;overflow-wrap:normal;background:var(--page);box-shadow:-1px 0 var(--line),-9px 0 8px -8px var(--sh)}</style>
 <div class="doc-body" markdown="1">
@@ -590,6 +590,36 @@ This session resumed the 11-25 <span title="An idea that reaches B or better but
   2. :212: one T1 can now ask StoreKit up to 3 times (before the pass, in a pass that waited, in the restore), each up
      to a 15 s wait.
 - Still a design call, no ruling recorded: the extension's `system` runs reading `background`, and `oom_guard`.
+
+## Session 2026-11-27 23:1x-11-28 00:1x ET (Idris, lane a, from main 7fe381e169)
+
+- Baseline at 7fe381e1: PyWidgetTests 2823/0/2 (J-20261127-2312-land-chk-a5ab71-4-376159).
+- T-0793 a0a784ec54, slice 14 only: Pernille's slice 13 items 1 and 2. (1) New test
+  BridgeTests.testT0793ARestoreAfterAHungFirstReadDoesNotAskStoreKitAgain pins the restore after an unanswered first
+  read (StoreKit not asked again, Habit tracker deferred, never locked, still owed); its mutant (restore from
+  PassSteps()) is red for the right reason (2 asks, not 1), J-20261128-0001-land-chk-a5ab71-1-057bc3. (2) The bound
+  is stated in refreshPlaced's comment and an ADR-007 7.2 dated line: at most 3 StoreKit asks per T1, each up to 15 s.
+  No behaviour change.
+- Checks at the tree: host 4596/0; units 32/0, 14/0, 224/0; LaneWarmWindowTests 6/0 (job IDs in the commit).
+- No commit, rechecked at 7fe381e1: T-4280 (the Investors' iPhone, T-4494 item 3); T-1882 (nothing writes
+  fields.json); T-2021 (no scheme sets PYWIDGET_LANE_FORCED; the load here ran past 90 tonight); T-4433, T-4435
+  (only iOS 26.0 and 27.0 runtimes here).
+- Still no recorded ruling on the extension's `system` runs reading `background`, or on `oom_guard`.
+- Next: Pernille reviews a0a784ec54.
+
+## Session 2026-11-28 01:0x-01:3x ET (Idris, lane a, from main 4fc59b392b)
+
+- Pernille's review of a0a784ec54 (slice 14, ops/reviews/e2797a605f...): pass, no note. Nothing to act on.
+- Baseline at 4fc59b39: PyWidgetTests 2827/0/2 (J-20261128-0054-land-chk-a5ab71-2-14d95c, the packet's build job).
+- No commit, rechecked at 4fc59b39: T-4280 (proof is T-4494 item 3, the Investors' iPhone; T-4494 still open);
+  T-1882 (fields.json is named only in comments, docs and tests; nothing writes it); T-2021 (no scheme or config sets
+  PYWIDGET_LANE_FORCED, only `#if` guards; load here was 180 at 1:04 AM, so no quiet runner either); T-4433, T-4435 (only
+  iOS 26.0 and 27.0 runtimes here).
+- T-0793: no review items left, and what remains (the extension's `system` runs reading `background`; `oom_guard` for
+  the app's background batch, the 11-27 12:2x section's two questions) still has no recorded ruling, no memo, no board
+  line. Not built. It needs Ines to put both to Pernille and me as a recorded decision; until then T-4181 has nothing
+  buildable on this Mac.
+- Next: the ruling on those two questions, or the Investors' iPhone for T-4494 item 3.
 {% endraw %}
 
 </div>

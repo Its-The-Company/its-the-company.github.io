@@ -223,6 +223,13 @@ The bridge's `status` maps to the widget's outcome (contract s11 A4): `ok` with 
   until the next full T1 pass. The restore now reads the gates again at its first premade (one StoreKit read at most,
   none for the person's own widgets), unless StoreKit did not answer that first read, which is not waited twice
   (T-4277). The last sentence of the slice 12 line is reworded (it read "retried once a spaced-out T1").
+- **Dated line (Idris), 2026-11-27, T-0793 slice 14** (Pernille's review of slice 13, items 1 and 2; for her review).
+  No change to what the app does. A test now pins the restore after a StoreKit read that did not answer: StoreKit is
+  not asked again, the Pro premade is `deferred` (never `locked`) and stays owed. The cost, stated: one T1 asks
+  StoreKit at most three times (before its pass, in its pass if that waited behind another, in its restore), each
+  wait bounded by the 15 s step limit. A third ask needs the T1's pass to have waited and still leave the restore a
+  widget, which only a spaced-out T1's catch-up or a pass let go after `WidgetPasses.wait` without progress does; a
+  pass that waited and ran every placed widget hands the restore nothing, and a T1 that joined asks nothing in its pass.
 - **`oom_guard` and the badge.** `oom_guard_since` is set by the first refusal and kept by later ones and by `deferred`; any outcome of a run that started clears it. A refusal reads as already under way, and badges at once, unless the old status is a fresh picture's (an outcome present and no `failing_since`); this covers a missing status and a refusal during a failure streak. Otherwise `showsBadge` is true for `oom_guard` when `ts` is at least 60 s after `oom_guard_since`, so one reload's refusals stay unbadged and the next reload's badge; the "already under way" fallback is `ts` minus 61 s (r1 11-03 7:51 PM item 2; 8:00 PM; 11-05 2:12 AM; 2:48 PM, rule D).
 - **The drawn badge** is the demotion read or `showsBadge`, never `showsBadge` alone (r1 11-05 7:55 PM item 7). The demotion read badges an id when the list does not read, or when the id is on the list and `widgets/<id>/lane-moved` is anything but exactly `memory`, `time` or `refused_import`. A size move draws no badge; a failure move, a missing reason and an unknown one do (chair line 4:58 PM ET 11-16, below).
 - **Chair line (Ines), 4:58 PM ET 11-16, T-4630** (from T-4518 H1, `docs/reviews/t4280-pernille.md`; part of T-4181). Row 4 badges only the failure moves. The app lane is the widget's fallback (s3 item 7), and a widget the size rule placed there is working as designed; drawing it as an error would put a badge on half the premades for good. The badge says a run failed or the lane stopped trusting the widget, nothing more.

@@ -52,6 +52,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-5918 11-27 58bb457712: the shell is zsh: a $F list of paths is one word; list paths literally. Reds on HEAD: merge_limit_split, records, xc_inputs, supervisor, dispatch_tick (all pre-existing 11-27).
 - T-5944 11-27: check a diagnosis's 'on main by key' with land_dupes.keys_of first: a same-subject redo has a new author time (T-3792 9ec08e6329 vs ba2a62b354), no copy. parked_count.waiting_refs already cuts ticked and keyed commits. A copy reads done holds as live only with main's ops/runs/.waiting.json; order --json may write ops/runs/.done_seen.json.
 - T-5945 11-27 050a4a9ee3: a 46-suite one-at-a-time run under load 30-240 hit the 2 h background limit at 43; split such a run or pick suites by what imports the change. personal_land_test 'lands: from main' with/without hook red seen, not yet proven on HEAD.
+- T-5954 11-28 e373cf8d26: Fable gating lives in two places: governor fable_status (dollar <span title="A measured fact that holds a grade below a letter, however good the rest is.">cap</span>, now removed) and dispatch FABLE_WEEK_PCT 50% per account (Tenet 6, untouched). Name both when a ruling says "Fable cap".
 {% endraw %}
 
 

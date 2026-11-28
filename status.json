@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-28T06:41:46.593192+00:00",
+ "at": "2026-11-28T06:44:49.492487+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -83,7 +83,7 @@
    "task": "[build] T-4188 second location extension",
    "model": "opus",
    "started": "2026-11-28T03:56:16.118Z",
-   "seconds": 9930,
+   "seconds": 10113,
    "finished": null
   },
   {
@@ -91,7 +91,7 @@
    "task": "[build] T-4183 screenshots run lock",
    "model": "opus",
    "started": "2026-11-28T04:27:26.477Z",
-   "seconds": 8060,
+   "seconds": 8243,
    "finished": null
   },
   {
@@ -99,15 +99,7 @@
    "task": "[build] T-4476 failed save notice",
    "model": "opus",
    "started": "2026-11-28T04:32:31.121Z",
-   "seconds": 7755,
-   "finished": null
-  },
-  {
-   "name": "odalys",
-   "task": "[build] T-5954 drop Fable cap",
-   "model": "opus",
-   "started": "2026-11-28T04:56:44.972Z",
-   "seconds": 6301,
+   "seconds": 7938,
    "finished": null
   },
   {
@@ -115,7 +107,7 @@
    "task": "[build] T-5837 stale chart check",
    "model": "fable",
    "started": "2026-11-28T06:15:09.969Z",
-   "seconds": 1596,
+   "seconds": 1779,
    "finished": null
   },
   {
@@ -123,12 +115,20 @@
    "task": "[build] T-4190 tester Pro wording",
    "model": "opus",
    "started": "2026-11-28T06:37:31.114Z",
-   "seconds": 255,
+   "seconds": 438,
    "finished": null
   }
  ],
- "who": "Idris x3, Maren x2, Odalys",
+ "who": "Idris x3, Maren x2",
  "recent": [
+  {
+   "name": "odalys",
+   "task": "[build] T-5954 drop Fable cap",
+   "model": "opus",
+   "started": "2026-11-28T04:56:44.972Z",
+   "seconds": null,
+   "finished": "2026-11-28T06:44:48.326000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[review] T-5837 third pass",
@@ -152,14 +152,6 @@
    "started": "2026-11-28T05:23:58.664Z",
    "seconds": null,
    "finished": "2026-11-28T06:08:35.539000+00:00"
-  },
-  {
-   "name": "maren",
-   "task": "[build] T-5837 lk-sess id fix",
-   "model": "opus",
-   "started": "2026-11-28T04:25:59.842Z",
-   "seconds": null,
-   "finished": "2026-11-28T05:21:50.496000+00:00"
   }
  ],
  "queue": {
@@ -170,21 +162,21 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 26.0,
+   "pct": 27.0,
    "resets_at": "2026-11-28T03:30:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-28T01:33:23.797395-05:00",
+   "read_at": "2026-11-28T01:43:41.900935-05:00",
    "source": "live",
-   "left": 74.0,
+   "left": 73.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 51.0,
+   "pct": 52.0,
    "resets_at": "2026-11-29T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-28T01:33:23.797395-05:00",
+   "read_at": "2026-11-28T01:43:41.900935-05:00",
    "source": "live",
-   "left": 49.0,
+   "left": 48.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
@@ -194,7 +186,7 @@
    "read_at": "2026-11-28T01:19:48.219769-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-28T01:33:23.797395-05:00"
+  "read_at": "2026-11-28T01:43:41.900935-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -214,7 +206,7 @@
   "week_pct": 43.6,
   "usage_pct": 46.1,
   "work_pct": 99.0,
-  "read_at": "2026-11-28T06:41:00+00:00",
+  "read_at": "2026-11-28T06:44:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -248,7 +240,7 @@
   }
  ],
  "disk": {
-  "free_gb": 33,
+  "free_gb": 35,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -257,14 +249,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-28T01:38:00-05:00",
+   "at": "2026-11-28T01:43:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 4,
-  "at": "2026-11-28T01:41:00-05:00",
+  "at": "2026-11-28T01:44:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -275,7 +267,7 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Double Spread: past the week's halfway point with room left, so twice the even pace until the limit or the reset; the machine allows 8 (at its floor: load 14.3 a core is over 10)",
+  "why": "Double Spread: past the week's halfway point with room left, so twice the even pace until the limit or the reset; the machine allows 8 (at its floor: load 12.4 a core is over 10)",
   "n": 4,
   "at": "2026-11-27T21:13:47.067436-05:00"
  },
@@ -294,14 +286,6 @@
    "task": "[build] T-4476 failed save notice",
    "model": "opus",
    "since": "2026-11-28T04:32:31.121Z",
-   "next": []
-  },
-  {
-   "name": "Odalys",
-   "state": "running",
-   "task": "[build] T-5954 drop Fable cap",
-   "model": "opus",
-   "since": "2026-11-28T04:56:44.972Z",
    "next": []
   },
   {
@@ -324,6 +308,14 @@
    "name": "Ines",
    "state": "next",
    "task": "Ines with Wrenna, P3, from T-0902 (ADR-006 s13.5, s13.7...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
+   "name": "Odalys",
+   "state": "next",
+   "task": "Odalys, P3, host-only, from...",
    "model": null,
    "since": null,
    "next": []
@@ -357,15 +349,6 @@
     "at": "2026-11-28T04:32:31.121Z",
     "o": "c",
     "task": "T-4476"
-   },
-   {
-    "w": "Odalys",
-    "k": "build",
-    "t": "Drop the governor's weekly Fable cap",
-    "m": "opus",
-    "at": "2026-11-28T04:56:44.972Z",
-    "o": "i",
-    "task": "T-5954"
    },
    {
     "w": "Maren",
@@ -551,7 +534,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-28T06:41:46Z",
+  "at": "2026-11-28T06:44:43Z",
   "s": {
    "T-5850": [
     "mergetest",
@@ -601,7 +584,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-28T06:41:46Z",
+  "at": "2026-11-28T06:44:43Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -619,7 +602,7 @@
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1629
+    "parked": 1632
    },
    "cur": [],
    "ld": [
@@ -629,12 +612,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-28T06:41:47Z",
-    "ld": 13.92,
+    "at": "2026-11-28T06:44:43Z",
+    "ld": 11.1,
     "c": 8,
     "sb": 1,
     "dk": [
-     32.5,
+     37.1,
      228.3
     ],
     "ss": [
@@ -646,12 +629,12 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-28T06:37:42Z",
-    "ld": 3.99,
+    "at": "2026-11-28T06:41:46Z",
+    "ld": 3.17,
     "c": 12,
     "sb": 1,
     "dk": [
-     347.0,
+     346.9,
      926.4
     ],
     "sn": [
@@ -668,7 +651,7 @@
    "parked": 9,
    "open": true,
    "mq": false,
-   "counted": "2026-11-28T06:33:57+00:00",
+   "counted": "2026-11-28T06:44:11+00:00",
    "by": {
     "app": {
      "n": 6,
@@ -686,11 +669,11 @@
      "open": true
     }
    },
-   "at": "2026-11-28T06:41:46+00:00"
+   "at": "2026-11-28T06:44:49+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-28T06:41:40+00:00"
+   "at": "2026-11-28T06:44:43+00:00"
   }
  },
  "operators": [
@@ -731,13 +714,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 6,
+  "main": 5,
   "lanes": 1,
-  "total": 7,
-  "at": "1:41 AM",
+  "total": 6,
+  "at": "1:44 AM",
   "why": "",
-  "at_iso": "2026-11-28T06:41:00+00:00",
+  "at_iso": "2026-11-28T06:44:00+00:00",
   "started": "9:13 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 6, started 9:13 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 1:41 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 5, started 9:13 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 1:44 AM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-28T03:24:13.296237+00:00",
+ "at": "2026-11-28T03:27:17.381777+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -62,7 +62,7 @@
    "task": "[build] T-4190 Settings Pro tests",
    "model": "opus",
    "started": "2026-11-28T02:15:22.190Z",
-   "seconds": 4131,
+   "seconds": 4315,
    "finished": null
   },
   {
@@ -70,7 +70,7 @@
    "task": "[build] T-4183 Gallery premades release",
    "model": "opus",
    "started": "2026-11-28T02:15:30.840Z",
-   "seconds": 4122,
+   "seconds": 4306,
    "finished": null
   },
   {
@@ -78,7 +78,7 @@
    "task": "[build] T-5837 Home review fixes",
    "model": "opus",
    "started": "2026-11-28T02:15:49.354Z",
-   "seconds": 4103,
+   "seconds": 4288,
    "finished": null
   },
   {
@@ -86,7 +86,7 @@
    "task": "[build] T-5950 look picker inspiration",
    "model": "opus",
    "started": "2026-11-28T02:26:11.432Z",
-   "seconds": 3481,
+   "seconds": 3665,
    "finished": null
   }
  ],
@@ -177,21 +177,8 @@
   "week_pct": 40.18,
   "usage_pct": 46.1,
   "work_pct": 99.0,
-  "read_at": "2026-11-28T03:24:00+00:00",
-  "running": [
-   {
-    "lane": "a",
-    "task": "T-4181",
-    "w": "Idris",
-    "k": "build",
-    "t": "Widgets refresh on their own and by a tap",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-27T21:03:15-05:00",
-    "n": "Evan",
-    "src": "plan-a"
-   }
-  ]
+  "read_at": "2026-11-28T03:27:00+00:00",
+  "running": []
  },
  "api_credits": [
   {
@@ -227,7 +214,7 @@
  "lock_in": {
   "on": true,
   "pool": 4,
-  "at": "2026-11-27T22:24:00-05:00",
+  "at": "2026-11-27T22:27:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -238,7 +225,7 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 8 (at its floor: load 36.0 a core is over 10)",
+  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 8 (at its floor: load 21.1 a core is over 10)",
   "n": 8,
   "at": "2026-11-27T21:13:47.067436-05:00"
  },
@@ -488,8 +475,13 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-28T03:23:53Z",
+  "at": "2026-11-28T03:26:58Z",
   "s": {
+   "T-4181": [
+    "mergetest",
+    "Xcode checks on the MacBook, 1st to merge",
+    1795836418069
+   ],
    "T-5951": [
     "mergetest",
     "iPhone tests on the MacBook",
@@ -505,23 +497,17 @@
     "on main 9:25 PM ET",
     1795832750000,
     ""
-   ],
-   "T-4181": [
-    "merged",
-    "on main 8:46 PM ET",
-    1795830375000,
-    ""
    ]
   },
   "nm": {
+   "T-4181": "Widgets refresh on their own and by a tap",
    "T-4183": "The Gallery shows, previews and opens every premade",
-   "T-5950": "Add details vault ideas to the look picker",
-   "T-4181": "Widgets refresh on their own and by a tap"
+   "T-5950": "Add details vault ideas to the look picker"
   },
   "wk": {
+   "T-4181": "Idris",
    "T-4183": "Idris",
    "T-5950": "Maren",
-   "T-4181": "Idris",
    "T-5903": "Idris",
    "T-4832": "Idris",
    "T-4778": "Idris",
@@ -529,10 +515,10 @@
   }
  },
  "ln": {
-  "at": "2026-11-28T03:23:53Z",
+  "at": "2026-11-28T03:26:58Z",
   "mq": {
    "n": {
-    "checking": 0,
+    "checking": 1,
     "inline": 0,
     "conflicted": 0,
     "failed": 0,
@@ -541,15 +527,24 @@
     "parked": 9
    },
    "m": {
-    "checking": null,
+    "checking": 0,
     "inline": null,
     "conflicted": null,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1431
+    "parked": 1434
    },
-   "cur": [],
+   "cur": [
+    [
+     [
+      "T-4181"
+     ],
+     "iPhone app tests, sent and waiting its turn",
+     "MacBook",
+     0
+    ]
+   ],
    "ld": [
     0,
     null
@@ -557,12 +552,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-28T03:23:25Z",
-    "ld": 28.48,
+    "at": "2026-11-28T03:26:31Z",
+    "ld": 16.84,
     "c": 8,
     "sb": 0,
     "dk": [
-     34.0,
+     36.2,
      228.3
     ],
     "ss": [
@@ -612,11 +607,11 @@
      "open": true
     }
    },
-   "at": "2026-11-28T03:24:13+00:00"
+   "at": "2026-11-28T03:27:17+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-28T03:24:13+00:00"
+   "at": "2026-11-28T03:27:17+00:00"
   }
  },
  "operators": [
@@ -628,15 +623,6 @@
    "e": "high",
    "t": "Work session",
    "at": "2026-11-27T21:25:22-05:00"
-  },
-  {
-   "w": "Operator",
-   "a": "Evan's Account",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session",
-   "at": "2026-11-27T21:03:14-05:00"
   }
  ],
  "reply": {
@@ -657,12 +643,12 @@
  ],
  "agents_now": {
   "main": 4,
-  "lanes": 1,
-  "total": 5,
-  "at": "10:24 PM",
+  "lanes": 0,
+  "total": 4,
+  "at": "10:27 PM",
   "why": "",
-  "at_iso": "2026-11-28T03:24:00+00:00",
+  "at_iso": "2026-11-28T03:27:00+00:00",
   "started": "9:13 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 4, started 9:13 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 10:24 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 4, started 9:13 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 10:27 PM ET</p></section>"
  }
 }

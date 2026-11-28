@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-28T04:01:34.490338+00:00",
+ "at": "2026-11-28T04:04:36.656263+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -62,23 +62,7 @@
    "task": "[build] T-4190 Settings Pro tests",
    "model": "opus",
    "started": "2026-11-28T02:15:22.190Z",
-   "seconds": 6372,
-   "finished": null
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-4183 Gallery premades release",
-   "model": "opus",
-   "started": "2026-11-28T02:15:30.840Z",
-   "seconds": 6363,
-   "finished": null
-  },
-  {
-   "name": "maren",
-   "task": "[build] T-5837 Home review fixes",
-   "model": "opus",
-   "started": "2026-11-28T02:15:49.354Z",
-   "seconds": 6345,
+   "seconds": 6554,
    "finished": null
   },
   {
@@ -86,12 +70,44 @@
    "task": "[build] T-4188 second location extension",
    "model": "opus",
    "started": "2026-11-28T03:56:16.118Z",
-   "seconds": 318,
+   "seconds": 500,
+   "finished": null
+  },
+  {
+   "name": "pernille",
+   "task": "[review] T-4183",
+   "model": "opus",
+   "started": "2026-11-28T04:03:09.558Z",
+   "seconds": 87,
+   "finished": null
+  },
+  {
+   "name": "odalys",
+   "task": "[review] T-5837 again",
+   "model": "opus",
+   "started": "2026-11-28T04:04:07.390Z",
+   "seconds": 29,
    "finished": null
   }
  ],
- "who": "Idris x3, Maren",
+ "who": "Idris x2, Pernille, Odalys",
  "recent": [
+  {
+   "name": "maren",
+   "task": "[build] T-5837 Home review fixes",
+   "model": "opus",
+   "started": "2026-11-28T02:15:49.354Z",
+   "seconds": null,
+   "finished": "2026-11-28T04:03:50.790000+00:00"
+  },
+  {
+   "name": "idris",
+   "task": "[build] T-4183 Gallery premades release",
+   "model": "opus",
+   "started": "2026-11-28T02:15:30.840Z",
+   "seconds": null,
+   "finished": "2026-11-28T04:02:49.180000+00:00"
+  },
   {
    "name": "ines",
    "task": "[review] T-5950 again",
@@ -107,28 +123,12 @@
    "started": "2026-11-28T03:44:18.636Z",
    "seconds": null,
    "finished": "2026-11-28T03:50:25.741000+00:00"
-  },
-  {
-   "name": "ines",
-   "task": "[review] T-5950",
-   "model": "opus",
-   "started": "2026-11-28T03:29:05.313Z",
-   "seconds": null,
-   "finished": "2026-11-28T03:43:58.818000+00:00"
-  },
-  {
-   "name": "maren",
-   "task": "[build] T-5950 look picker inspiration",
-   "model": "opus",
-   "started": "2026-11-28T02:26:11.432Z",
-   "seconds": null,
-   "finished": "2026-11-28T03:28:46.055000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 260,
+  "runnable_count": 262,
   "blocked_count": 0
  },
  "meter": {
@@ -177,7 +177,7 @@
   "week_pct": 41.04,
   "usage_pct": 46.1,
   "work_pct": 99.0,
-  "read_at": "2026-11-28T04:01:00+00:00",
+  "read_at": "2026-11-28T04:04:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -214,7 +214,7 @@
  "lock_in": {
   "on": true,
   "pool": 4,
-  "at": "2026-11-27T23:01:00-05:00",
+  "at": "2026-11-27T23:04:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -239,19 +239,19 @@
    "next": []
   },
   {
-   "name": "Maren",
+   "name": "Pernille",
    "state": "running",
-   "task": "[build] T-5837 Home review fixes",
+   "task": "[review] T-4183",
    "model": "opus",
-   "since": "2026-11-28T02:15:49.354Z",
+   "since": "2026-11-28T04:03:09.558Z",
    "next": []
   },
   {
-   "name": "Pernille",
-   "state": "next",
-   "task": "Pernille, P1, continuation of T-2609: after...",
-   "model": null,
-   "since": null,
+   "name": "Odalys",
+   "state": "running",
+   "task": "[review] T-5837 again",
+   "model": "opus",
+   "since": "2026-11-28T04:04:07.390Z",
    "next": []
   },
   {
@@ -271,9 +271,9 @@
    "next": []
   },
   {
-   "name": "Odalys",
+   "name": "Maren",
    "state": "next",
-   "task": "Odalys, P3, host-only, from...",
+   "task": "Maren, P1, from T-2296 review M2...",
    "model": null,
    "since": null,
    "next": []
@@ -293,29 +293,29 @@
    {
     "w": "Idris",
     "k": "build",
-    "t": "The Gallery shows, previews and opens every premade",
-    "m": "opus",
-    "at": "2026-11-28T02:15:30.840Z",
-    "o": "c",
-    "task": "T-4183"
-   },
-   {
-    "w": "Maren",
-    "k": "build",
-    "t": "Home shows the new flow's work and bottlenecks",
-    "m": "opus",
-    "at": "2026-11-28T02:15:49.354Z",
-    "o": "c",
-    "task": "T-5837"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
     "t": "Location, steps and notifications work in scripts and widgets",
     "m": "opus",
     "at": "2026-11-28T03:56:16.118Z",
     "o": "c",
     "task": "T-4188"
+   },
+   {
+    "w": "Pernille",
+    "k": "review",
+    "t": "The Gallery shows, previews and opens every premade",
+    "m": "opus",
+    "at": "2026-11-28T04:03:09.558Z",
+    "o": "c",
+    "task": "T-4183"
+   },
+   {
+    "w": "Odalys",
+    "k": "review",
+    "t": "Home shows the new flow's work and bottlenecks",
+    "m": "opus",
+    "at": "2026-11-28T04:04:07.390Z",
+    "o": "c",
+    "task": "T-5837"
    }
   ],
   "src": "plan",
@@ -409,7 +409,7 @@
    }
   ],
   "count": {
-   "next": 260,
+   "next": 262,
    "wait": 0,
    "blocked": 0,
    "you": 0
@@ -479,19 +479,9 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-28T04:01:14Z",
-  "s": {
-   "T-3081": [
-    "mergetest",
-    "iPhone tests on the MacBook",
-    null
-   ]
-  },
-  "nm": {
-   "T-3081": "Add the Python frameworks' debug symbols to test builds"
-  },
+  "at": "2026-11-28T04:04:16Z",
+  "s": {},
   "wk": {
-   "T-3081": "Idris",
    "T-5950": "Maren",
    "T-5903": "Idris",
    "T-4832": "Idris",
@@ -500,7 +490,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-28T04:01:14Z",
+  "at": "2026-11-28T04:04:16Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -518,7 +508,7 @@
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1468
+    "parked": 1471
    },
    "cur": [],
    "ld": [
@@ -528,34 +518,30 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-28T04:00:26Z",
-    "ld": 19.63,
+    "at": "2026-11-28T04:03:29Z",
+    "ld": 24.02,
     "c": 8,
-    "sb": 1,
+    "sb": 0,
     "dk": [
-     36.1,
+     36.3,
      228.3
     ],
     "ss": [
      152.7,
      953.7
     ],
-    "sn": [
-     "pywidget-wk-check"
-    ]
+    "sn": []
    },
    "macbook": {
-    "at": "2026-11-28T03:59:27Z",
-    "ld": 1.42,
+    "at": "2026-11-28T04:02:28Z",
+    "ld": 1.85,
     "c": 12,
-    "sb": 1,
+    "sb": 0,
     "dk": [
-     350.0,
+     351.6,
      926.4
     ],
-    "sn": [
-     "itsthecompany-runner"
-    ]
+    "sn": []
    }
   }
  },
@@ -585,11 +571,11 @@
      "open": true
     }
    },
-   "at": "2026-11-28T04:01:34+00:00"
+   "at": "2026-11-28T04:04:36+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-28T04:01:22+00:00"
+   "at": "2026-11-28T04:04:36+00:00"
   }
  },
  "operators": [
@@ -623,10 +609,10 @@
   "main": 4,
   "lanes": 0,
   "total": 4,
-  "at": "11:01 PM",
+  "at": "11:04 PM",
   "why": "",
-  "at_iso": "2026-11-28T04:01:00+00:00",
+  "at_iso": "2026-11-28T04:04:00+00:00",
   "started": "9:13 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 4, started 9:13 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 11:01 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 4, started 9:13 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 11:04 PM ET</p></section>"
  }
 }

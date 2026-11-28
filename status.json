@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-28T06:47:56.236865+00:00",
+ "at": "2026-11-28T06:51:00.510143+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -83,7 +83,7 @@
    "task": "[build] T-4188 second location extension",
    "model": "opus",
    "started": "2026-11-28T03:56:16.118Z",
-   "seconds": 10300,
+   "seconds": 10484,
    "finished": null
   },
   {
@@ -91,7 +91,7 @@
    "task": "[build] T-4183 screenshots run lock",
    "model": "opus",
    "started": "2026-11-28T04:27:26.477Z",
-   "seconds": 8429,
+   "seconds": 8614,
    "finished": null
   },
   {
@@ -99,7 +99,7 @@
    "task": "[build] T-4476 failed save notice",
    "model": "opus",
    "started": "2026-11-28T04:32:31.121Z",
-   "seconds": 8125,
+   "seconds": 8309,
    "finished": null
   },
   {
@@ -107,7 +107,7 @@
    "task": "[build] T-5837 stale chart check",
    "model": "fable",
    "started": "2026-11-28T06:15:09.969Z",
-   "seconds": 1966,
+   "seconds": 2150,
    "finished": null
   },
   {
@@ -115,7 +115,7 @@
    "task": "[build] T-4190 tester Pro wording",
    "model": "opus",
    "started": "2026-11-28T06:37:31.114Z",
-   "seconds": 625,
+   "seconds": 809,
    "finished": null
   }
  ],
@@ -206,7 +206,7 @@
   "week_pct": 43.6,
   "usage_pct": 46.1,
   "work_pct": 99.0,
-  "read_at": "2026-11-28T06:47:00+00:00",
+  "read_at": "2026-11-28T06:51:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -240,7 +240,7 @@
   }
  ],
  "disk": {
-  "free_gb": 35,
+  "free_gb": 37,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -249,14 +249,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-28T01:43:00-05:00",
+   "at": "2026-11-28T01:48:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 4,
-  "at": "2026-11-28T01:47:00-05:00",
+  "at": "2026-11-28T01:51:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -267,7 +267,7 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Double Spread: past the week's halfway point with room left, so twice the even pace until the limit or the reset; the machine allows 8 (at its floor: load 12.4 a core is over 10)",
+  "why": "Double Spread: past the week's halfway point with room left, so twice the even pace until the limit or the reset; the machine allows 8 (held: too few lands in 3 hours to judge a raise)",
   "n": 4,
   "at": "2026-11-27T21:13:47.067436-05:00"
  },
@@ -534,7 +534,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-28T06:47:41Z",
+  "at": "2026-11-28T06:50:41Z",
   "s": {
    "T-5850": [
     "mergetest",
@@ -576,7 +576,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-28T06:47:41Z",
+  "at": "2026-11-28T06:50:41Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -594,7 +594,7 @@
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1634
+    "parked": 1637
    },
    "cur": [],
    "ld": [
@@ -604,12 +604,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-28T06:47:42Z",
-    "ld": 8.27,
+    "at": "2026-11-28T06:50:20Z",
+    "ld": 6.51,
     "c": 8,
     "sb": 1,
     "dk": [
-     37.3,
+     37.1,
      228.3
     ],
     "ss": [
@@ -621,16 +621,16 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-28T06:46:53Z",
-    "ld": 3.41,
+    "at": "2026-11-28T06:47:57Z",
+    "ld": 4.65,
     "c": 12,
     "sb": 2,
     "dk": [
-     344.9,
+     345.4,
      926.4
     ],
     "sn": [
-     "itsthecompany-runner",
+     "itsthecompany-runner-2",
      "itsthecompany-runner-3"
     ]
    }
@@ -662,11 +662,11 @@
      "open": true
     }
    },
-   "at": "2026-11-28T06:47:56+00:00"
+   "at": "2026-11-28T06:51:00+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-28T06:47:50+00:00"
+   "at": "2026-11-28T06:51:00+00:00"
   }
  },
  "operators": [
@@ -710,10 +710,10 @@
   "main": 5,
   "lanes": 1,
   "total": 6,
-  "at": "1:47 AM",
+  "at": "1:51 AM",
   "why": "",
-  "at_iso": "2026-11-28T06:47:00+00:00",
+  "at_iso": "2026-11-28T06:51:00+00:00",
   "started": "9:13 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 5, started 9:13 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 1:47 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 5, started 9:13 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 1:51 AM ET</p></section>"
  }
 }

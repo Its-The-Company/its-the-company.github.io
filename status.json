@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-28T00:01:57.663265+00:00",
+ "at": "2026-11-28T00:04:59.735071+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -8,8 +8,8 @@
   "coord": {
    "active": true,
    "started": 1795341309,
-   "restarts": 23,
-   "last_handoff": 1795808505
+   "restarts": 24,
+   "last_handoff": 1795824190
   },
   "flow": [],
   "done": [
@@ -62,7 +62,7 @@
    "task": "[build] T-5837 Home flow redo",
    "model": "opus",
    "started": "2026-11-27T22:49:52.350Z",
-   "seconds": 4325,
+   "seconds": 4507,
    "finished": null
   }
  ],
@@ -104,24 +104,24 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 266,
+  "runnable_count": 264,
   "blocked_count": 0
  },
  "meter": {
   "five_hour": {
-   "pct": 17.0,
+   "pct": 18.0,
    "resets_at": "2026-11-27T22:30:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-27T18:54:53.571180-05:00",
+   "read_at": "2026-11-27T19:04:07.742714-05:00",
    "source": "live",
-   "left": 83.0,
+   "left": 82.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 43.0,
    "resets_at": "2026-11-29T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-27T18:54:53.571180-05:00",
+   "read_at": "2026-11-27T19:04:07.742714-05:00",
    "source": "live",
    "left": 57.0,
    "left_words": "of your weekly allowance left"
@@ -133,7 +133,7 @@
    "read_at": "2026-11-27T18:51:34.352359-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-27T18:54:53.571180-05:00"
+  "read_at": "2026-11-27T19:04:07.742714-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -153,7 +153,7 @@
   "week_pct": 41.3,
   "usage_pct": 49.0,
   "work_pct": 99.0,
-  "read_at": "2026-11-28T00:01:00+00:00",
+  "read_at": "2026-11-28T00:05:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -174,7 +174,7 @@
   }
  ],
  "disk": {
-  "free_gb": 45,
+  "free_gb": 47,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -183,14 +183,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-27T18:57:00-05:00",
+   "at": "2026-11-27T19:04:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 4,
-  "at": "2026-11-27T19:01:00-05:00",
+  "at": "2026-11-27T19:05:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -342,30 +342,38 @@
   ],
   "done": [
    {
-    "w": "Pernille",
-    "t": "The World clocks widget is now Overlap clocks: it draws each chosen city's working hours across...",
-    "at": "2026-11-27T18:50:00-05:00"
+    "w": "Idris",
+    "t": "A person who already owns Pro and taps Restore with no connection is now told it failed, instead...",
+    "at": "2026-11-27T19:02:00-05:00"
    },
    {
     "w": "Idris",
-    "t": "A test that checks the widget still registers its font when it draws now reads the call in its...",
-    "at": "2026-11-27T18:50:00-05:00"
+    "t": "The test that keeps the editor theme row hidden now fails if the app's Pro settings file goes...",
+    "at": "2026-11-27T19:02:00-05:00"
    },
    {
-    "w": "Maren",
-    "t": "A site test assumed one app screen's explanation was up to date. It went out of date when that...",
-    "at": "2026-11-27T18:41:00-05:00"
+    "w": "Pernille",
+    "t": "The World clocks widget is now Overlap clocks: it draws each chosen city's working hours across...",
+    "at": "2026-11-27T18:50:00-05:00"
    }
   ],
   "count": {
-   "next": 266,
+   "next": 264,
    "wait": 0,
    "blocked": 0,
    "you": 0
   },
   "fin": {
-   "n": 13,
+   "n": 15,
    "rows": [
+    [
+     "T-5296",
+     "Keep Restore's failure line..."
+    ],
+    [
+     "T-5523",
+     "Make the theme row test read..."
+    ],
     [
      "T-4709",
      "Rework World clocks into..."
@@ -381,14 +389,6 @@
     [
      "T-4833",
      "Clear old builds' location..."
-    ],
-    [
-     "T-5945",
-     "Let one feature run two..."
-    ],
-    [
-     "T-5080",
-     "Find a store app sharing..."
     ]
    ]
   }
@@ -432,26 +432,21 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-28T00:01:51Z",
+  "at": "2026-11-28T00:04:46Z",
   "s": {
    "T-4181": [
-    "mergeq",
-    "1st to merge",
-    1795823091844
-   ],
-   "T-4190": [
     "mergetest",
-    "iPhone tests on the MacBook",
-    null
+    "Xcode checks on the MacBook, 1st to merge",
+    1795824166396
    ]
   },
   "nm": {
-   "T-4181": "Widgets refresh on their own and by a tap",
-   "T-4190": "Settings and Pro: buy, restore, themes"
+   "T-4181": "Widgets refresh on their own and by a tap"
   },
   "wk": {
    "T-4181": "Idris",
-   "T-4190": "Idris",
+   "T-5296": "Idris",
+   "T-5523": "Idris",
    "T-4709": "Pernille",
    "T-5890": "Idris",
    "T-5924": "Maren",
@@ -461,17 +456,15 @@
    "T-5527": "Idris",
    "T-4791": "Idris",
    "T-2500": "Idris",
-   "T-5049": "Idris",
-   "T-0861": "Idris",
-   "T-5923": "Maren"
+   "T-5049": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-28T00:01:51Z",
+  "at": "2026-11-28T00:04:46Z",
   "mq": {
    "n": {
-    "checking": 0,
-    "inline": 1,
+    "checking": 1,
+    "inline": 0,
     "conflicted": 0,
     "failed": 0,
     "held": 0,
@@ -479,15 +472,24 @@
     "parked": 9
    },
    "m": {
-    "checking": null,
-    "inline": 17,
+    "checking": 2,
+    "inline": null,
     "conflicted": null,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1229
+    "parked": 1232
    },
-   "cur": [],
+   "cur": [
+    [
+     [
+      "T-4181"
+     ],
+     "iPhone app tests, sent and waiting its turn",
+     "MacBook",
+     2
+    ]
+   ],
    "ld": [
     0,
     null
@@ -495,12 +497,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-28T00:01:06Z",
-    "ld": 1.03,
+    "at": "2026-11-28T00:04:23Z",
+    "ld": 1.08,
     "c": 8,
     "sb": 0,
     "dk": [
-     46.9,
+     47.0,
      228.3
     ],
     "ss": [
@@ -510,12 +512,12 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-27T23:52:13Z",
-    "ld": 0.56,
+    "at": "2026-11-28T00:02:25Z",
+    "ld": 0.44,
     "c": 12,
     "sb": 0,
     "dk": [
-     355.6,
+     355.4,
      926.4
     ],
     "sn": []
@@ -548,11 +550,11 @@
      "open": true
     }
    },
-   "at": "2026-11-28T00:01:57+00:00"
+   "at": "2026-11-28T00:04:59+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-28T00:01:57+00:00"
+   "at": "2026-11-28T00:04:46+00:00"
   }
  },
  "operators": [
@@ -587,10 +589,10 @@
   "main": 1,
   "lanes": 0,
   "total": 1,
-  "at": "7:01 PM",
+  "at": "7:05 PM",
   "why": "",
-  "at_iso": "2026-11-28T00:01:00+00:00",
+  "at_iso": "2026-11-28T00:05:00+00:00",
   "started": "2:44 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 2:44 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 7:01 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 2:44 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 7:05 PM ET</p></section>"
  }
 }

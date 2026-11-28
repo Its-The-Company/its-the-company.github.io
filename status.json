@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-28T00:29:27.373424+00:00",
+ "at": "2026-11-28T00:32:32.492472+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -62,7 +62,7 @@
    "task": "[build] T-5837 Home flow redo",
    "model": "opus",
    "started": "2026-11-27T22:49:52.350Z",
-   "seconds": 5975,
+   "seconds": 6160,
    "finished": null
   }
  ],
@@ -153,8 +153,21 @@
   "week_pct": 42.26,
   "usage_pct": 49.0,
   "work_pct": 99.0,
-  "read_at": "2026-11-28T00:29:00+00:00",
-  "running": []
+  "read_at": "2026-11-28T00:32:00+00:00",
+  "running": [
+   {
+    "lane": "a",
+    "task": "T-4181",
+    "w": "Idris",
+    "k": "build",
+    "t": "Widgets refresh on their own and by a tap",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-27T19:31:48-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   }
+  ]
  },
  "api_credits": [
   {
@@ -190,7 +203,7 @@
  "lock_in": {
   "on": true,
   "pool": 4,
-  "at": "2026-11-27T19:29:00-05:00",
+  "at": "2026-11-27T19:32:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -432,9 +445,20 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-28T00:29:14Z",
-  "s": {},
+  "at": "2026-11-28T00:32:25Z",
+  "s": {
+   "T-4181": [
+    "merged",
+    "on main 7:15 PM ET",
+    1795824904000,
+    ""
+   ]
+  },
+  "nm": {
+   "T-4181": "Widgets refresh on their own and by a tap"
+  },
   "wk": {
+   "T-4181": "Idris",
    "T-5296": "Idris",
    "T-5523": "Idris",
    "T-4709": "Pernille",
@@ -450,7 +474,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-28T00:29:14Z",
+  "at": "2026-11-28T00:32:25Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -468,7 +492,7 @@
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1256
+    "parked": 1259
    },
    "cur": [],
    "ld": [
@@ -478,12 +502,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-28T00:28:51Z",
-    "ld": 0.86,
+    "at": "2026-11-28T00:31:35Z",
+    "ld": 0.76,
     "c": 8,
     "sb": 0,
     "dk": [
-     46.4,
+     46.5,
      228.3
     ],
     "ss": [
@@ -507,13 +531,13 @@
  },
  "hc": {
   "wait": {
-   "n": 10,
+   "n": 9,
    "limit": 20,
-   "in_line": 1,
+   "in_line": 0,
    "parked": 9,
    "open": true,
    "mq": false,
-   "counted": "2026-11-28T00:11:46+00:00",
+   "counted": "2026-11-28T00:31:02+00:00",
    "by": {
     "app": {
      "n": 6,
@@ -521,7 +545,7 @@
      "open": true
     },
     "other": {
-     "n": 5,
+     "n": 4,
      "limit": 20,
      "open": true
     },
@@ -531,11 +555,11 @@
      "open": true
     }
    },
-   "at": "2026-11-28T00:29:27+00:00"
+   "at": "2026-11-28T00:32:32+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-28T00:29:27+00:00"
+   "at": "2026-11-28T00:32:25+00:00"
   }
  },
  "operators": [
@@ -547,19 +571,40 @@
    "e": "high",
    "t": "Work session",
    "at": "2026-11-27T18:40:08-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Evan's Account",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session \u2013 1 task",
+   "at": "2026-11-27T19:31:48-05:00"
   }
  ],
  "reply": {
   "sent": "2026-11-27T23:37:00Z",
   "seconds": 186.0
  },
- "inbox": [],
+ "inbox": [
+  {
+   "id": "c7230988131",
+   "state": "received",
+   "position": 1,
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "are we back to work and making up..."
+  }
+ ],
  "trimmed": [
   "lane_next",
   "queue_text",
   "recent",
   "task_done",
   "fin_short",
+  "inbox_title",
   "task_title",
   "done_text",
   "fin_six",
@@ -568,12 +613,12 @@
  ],
  "agents_now": {
   "main": 1,
-  "lanes": 0,
-  "total": 1,
-  "at": "7:29 PM",
+  "lanes": 1,
+  "total": 2,
+  "at": "7:32 PM",
   "why": "",
-  "at_iso": "2026-11-28T00:29:00+00:00",
+  "at_iso": "2026-11-28T00:32:00+00:00",
   "started": "2:44 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 2:44 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 7:29 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 1, started 2:44 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 7:32 PM ET</p></section>"
  }
 }

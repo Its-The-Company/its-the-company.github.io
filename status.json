@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-28T12:28:40.691042+00:00",
+ "at": "2026-11-28T12:31:44.974362+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -83,7 +83,7 @@
    "task": "[build] T-5953 Efficiency graphs",
    "model": "opus",
    "started": "2026-11-28T12:23:15.569Z",
-   "seconds": 325,
+   "seconds": 509,
    "finished": null
   },
   {
@@ -91,11 +91,19 @@
    "task": "[build] T-4183 run lock limit fix",
    "model": "fable",
    "started": "2026-11-28T12:24:33.327Z",
-   "seconds": 247,
+   "seconds": 431,
+   "finished": null
+  },
+  {
+   "name": "maren",
+   "task": "[build] T-4183 settle rebase",
+   "model": "opus",
+   "started": "2026-11-28T12:28:49.008Z",
+   "seconds": 175,
    "finished": null
   }
  ],
- "who": "Maren, Idris",
+ "who": "Maren x2, Idris",
  "recent": [
   {
    "name": "pernille",
@@ -182,7 +190,7 @@
   "week_pct": 51.27,
   "usage_pct": 46.1,
   "work_pct": 99.0,
-  "read_at": "2026-11-28T12:28:00+00:00",
+  "read_at": "2026-11-28T12:31:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -193,6 +201,18 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-28T07:09:59-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a2",
+    "task": "T-0472",
+    "w": "Idris",
+    "k": "build",
+    "t": "Fix the stale clock size on Lock Screen widgets",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-28T07:30:14-05:00",
     "n": "Evan",
     "src": "plan-a"
    }
@@ -225,14 +245,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-28T07:25:00-05:00",
+   "at": "2026-11-28T07:31:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-28T07:28:00-05:00",
+  "at": "2026-11-28T07:31:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -314,6 +334,15 @@
     "t": "The Gallery shows, previews and opens every premade",
     "m": "fable",
     "at": "2026-11-28T12:24:33.327Z",
+    "o": "c",
+    "task": "T-4183"
+   },
+   {
+    "w": "Maren",
+    "k": "build",
+    "t": "The Gallery shows, previews and opens every premade",
+    "m": "opus",
+    "at": "2026-11-28T12:28:49.008Z",
     "o": "c",
     "task": "T-4183"
    }
@@ -483,12 +512,23 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-28T12:28:22Z",
+  "at": "2026-11-28T12:31:44Z",
   "s": {
+   "T-5961": [
+    "mergetest",
+    "iPhone tests on the MacBook",
+    null
+   ],
    "T-4181": [
     "merged",
     "on main 7:07 AM ET",
     1795867655000,
+    "Idris"
+   ],
+   "T-0472": [
+    "merged",
+    "on main 6:49 AM ET",
+    1795866582000,
     "Idris"
    ],
    "T-4183": [
@@ -505,12 +545,16 @@
    ]
   },
   "nm": {
+   "T-5961": "Let the Core package build again",
    "T-4181": "Widgets refresh on their own and by a tap",
+   "T-0472": "Fix the stale clock size on Lock Screen widgets",
    "T-4183": "The Gallery shows, previews and opens every premade",
    "T-5953": "Draw Home's Efficiency numbers as graphs"
   },
   "wk": {
+   "T-5961": "Idris",
    "T-4181": "Idris",
+   "T-0472": "Idris",
    "T-4183": "Idris",
    "T-5953": "Maren",
    "T-5837": "Operator",
@@ -528,7 +572,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-28T12:28:22Z",
+  "at": "2026-11-28T12:31:44Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -546,7 +590,7 @@
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1276
+    "parked": 1279
    },
    "cur": [],
    "ld": [
@@ -556,8 +600,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-28T12:27:58Z",
-    "ld": 6.61,
+    "at": "2026-11-28T12:31:41Z",
+    "ld": 11.24,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -571,12 +615,12 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-28T12:22:40Z",
-    "ld": 0.66,
+    "at": "2026-11-28T12:28:48Z",
+    "ld": 0.37,
     "c": 12,
     "sb": 0,
     "dk": [
-     341.3,
+     341.2,
      926.4
     ],
     "sn": []
@@ -609,11 +653,11 @@
      "open": true
     }
    },
-   "at": "2026-11-28T12:28:40+00:00"
+   "at": "2026-11-28T12:31:44+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-28T12:28:40+00:00"
+   "at": "2026-11-28T12:31:39+00:00"
   }
  },
  "operators": [
@@ -634,6 +678,15 @@
    "e": "high",
    "t": "Work session \u2013 1 task",
    "at": "2026-11-28T07:09:58-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Evan's Account",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session \u2013 1 task",
+   "at": "2026-11-28T07:30:14-05:00"
   }
  ],
  "reply": {
@@ -654,13 +707,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 2,
-  "lanes": 1,
-  "total": 3,
-  "at": "7:28 AM",
+  "main": 3,
+  "lanes": 2,
+  "total": 5,
+  "at": "7:31 AM",
   "why": "",
-  "at_iso": "2026-11-28T12:28:00+00:00",
+  "at_iso": "2026-11-28T12:31:00+00:00",
   "started": "9:13 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 9:13 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 7:28 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 3, started 9:13 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 7:31 AM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-28T08:39:10.157042+00:00",
+ "at": "2026-11-28T08:43:32.741381+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -83,7 +83,7 @@
    "task": "[build] T-4183 screenshots run lock",
    "model": "opus",
    "started": "2026-11-28T04:27:26.477Z",
-   "seconds": 15103,
+   "seconds": 15366,
    "finished": null
   },
   {
@@ -91,7 +91,7 @@
    "task": "[build] T-5837 stale chart check",
    "model": "fable",
    "started": "2026-11-28T06:15:09.969Z",
-   "seconds": 8640,
+   "seconds": 8902,
    "finished": null
   }
  ],
@@ -182,8 +182,21 @@
   "week_pct": 47.88,
   "usage_pct": 46.1,
   "work_pct": 99.0,
-  "read_at": "2026-11-28T08:39:00+00:00",
-  "running": []
+  "read_at": "2026-11-28T08:43:00+00:00",
+  "running": [
+   {
+    "lane": "a",
+    "task": "T-4181",
+    "w": "Idris",
+    "k": "build",
+    "t": "Widgets refresh on their own and by a tap",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-28T03:43:21-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   }
+  ]
  },
  "api_credits": [
   {
@@ -212,14 +225,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-28T03:39:00-05:00",
+   "at": "2026-11-28T03:42:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-28T03:39:00-05:00",
+  "at": "2026-11-28T03:43:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -231,7 +244,7 @@
  "idle": null,
  "pool": {
   "why": "Double Spread: past the week's halfway point with room left, so twice the even pace until the limit or the reset; the machine allows 8 (held: too few lands in 3 hours to judge a raise)",
-  "n": 4,
+  "n": 3,
   "at": "2026-11-27T21:13:47.067436-05:00"
  },
  "lanes": [
@@ -470,12 +483,18 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-28T08:39:10Z",
+  "at": "2026-11-28T08:43:24Z",
   "s": {
    "T-4190": [
     "mergetest",
     "iPhone tests on the MacBook",
     null
+   ],
+   "T-4181": [
+    "merged",
+    "on main 1:07 AM ET",
+    1795846077000,
+    "Idris"
    ],
    "T-4183": [
     "merged",
@@ -486,10 +505,12 @@
   },
   "nm": {
    "T-4190": "Settings and Pro: buy, restore, themes",
+   "T-4181": "Widgets refresh on their own and by a tap",
    "T-4183": "The Gallery shows, previews and opens every premade"
   },
   "wk": {
    "T-4190": "Idris",
+   "T-4181": "Idris",
    "T-4183": "Idris",
    "T-5954": "Odalys",
    "T-5942": "Maren",
@@ -506,7 +527,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-28T08:39:10Z",
+  "at": "2026-11-28T08:43:24Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -524,7 +545,7 @@
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1396
+    "parked": 1400
    },
    "cur": [],
    "ld": [
@@ -534,12 +555,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-28T08:38:46Z",
-    "ld": 5.29,
+    "at": "2026-11-28T08:43:25Z",
+    "ld": 4.56,
     "c": 8,
     "sb": 1,
     "dk": [
-     36.2,
+     35.9,
      228.3
     ],
     "ss": [
@@ -567,16 +588,16 @@
  },
  "hc": {
   "wait": {
-   "n": 11,
+   "n": 8,
    "limit": 20,
    "in_line": 0,
-   "parked": 11,
+   "parked": 8,
    "open": true,
    "mq": false,
-   "counted": "2026-11-28T08:26:02+00:00",
+   "counted": "2026-11-28T08:42:34+00:00",
    "by": {
     "app": {
-     "n": 9,
+     "n": 6,
      "limit": 20,
      "open": true
     },
@@ -591,11 +612,11 @@
      "open": true
     }
    },
-   "at": "2026-11-28T08:39:10+00:00"
+   "at": "2026-11-28T08:43:32+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-28T08:38:58+00:00"
+   "at": "2026-11-28T08:43:24+00:00"
   }
  },
  "operators": [
@@ -607,6 +628,15 @@
    "e": "high",
    "t": "Work session",
    "at": "2026-11-27T23:55:27-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Evan's Account",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session \u2013 1 task",
+   "at": "2026-11-28T03:43:21-05:00"
   }
  ],
  "reply": {
@@ -628,12 +658,12 @@
  ],
  "agents_now": {
   "main": 2,
-  "lanes": 0,
-  "total": 2,
-  "at": "3:39 AM",
+  "lanes": 1,
+  "total": 3,
+  "at": "3:43 AM",
   "why": "",
-  "at_iso": "2026-11-28T08:39:00+00:00",
+  "at_iso": "2026-11-28T08:43:00+00:00",
   "started": "9:13 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 9:13 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 3:39 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 9:13 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 3:43 AM ET</p></section>"
  }
 }

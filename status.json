@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-28T04:57:09.860977+00:00",
+ "at": "2026-11-28T05:00:15.345647+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -62,7 +62,7 @@
    "task": "[build] T-4188 second location extension",
    "model": "opus",
    "started": "2026-11-28T03:56:16.118Z",
-   "seconds": 3653,
+   "seconds": 3839,
    "finished": null
   },
   {
@@ -70,7 +70,7 @@
    "task": "[build] T-5837 lk-sess id fix",
    "model": "opus",
    "started": "2026-11-28T04:25:59.842Z",
-   "seconds": 1870,
+   "seconds": 2055,
    "finished": null
   },
   {
@@ -78,7 +78,7 @@
    "task": "[build] T-4183 screenshots run lock",
    "model": "opus",
    "started": "2026-11-28T04:27:26.477Z",
-   "seconds": 1783,
+   "seconds": 1968,
    "finished": null
   },
   {
@@ -86,7 +86,7 @@
    "task": "[build] T-4476 failed save notice",
    "model": "opus",
    "started": "2026-11-28T04:32:31.121Z",
-   "seconds": 1478,
+   "seconds": 1664,
    "finished": null
   },
   {
@@ -94,20 +94,20 @@
    "task": "[build] T-5954 drop Fable cap",
    "model": "opus",
    "started": "2026-11-28T04:56:44.972Z",
-   "seconds": 24,
+   "seconds": 210,
    "finished": null
-  },
+  }
+ ],
+ "who": "Idris x2, Maren x2, Odalys",
+ "recent": [
   {
    "name": "odalys",
    "task": "[review] T-4190",
    "model": "opus",
    "started": "2026-11-28T04:57:03.599Z",
-   "seconds": 6,
-   "finished": null
-  }
- ],
- "who": "Idris x2, Maren x2, Odalys x2",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-28T04:59:55.631000+00:00"
+  },
   {
    "name": "idris",
    "task": "[build] T-4190 Settings Pro tests",
@@ -131,14 +131,6 @@
    "started": "2026-11-28T04:11:11.389Z",
    "seconds": null,
    "finished": "2026-11-28T04:11:46.261000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-4183 review fixes",
-   "model": "opus",
-   "started": "2026-11-28T04:06:19.084Z",
-   "seconds": null,
-   "finished": "2026-11-28T04:11:03.526000+00:00"
   }
  ],
  "queue": {
@@ -193,7 +185,7 @@
   "week_pct": 41.89,
   "usage_pct": 46.1,
   "work_pct": 99.0,
-  "read_at": "2026-11-28T04:57:00+00:00",
+  "read_at": "2026-11-28T05:00:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -241,14 +233,14 @@
   }
  },
  "lock_in": {
-  "on": true,
+  "on": false,
   "pool": 4,
-  "at": "2026-11-27T23:57:00-05:00",
-  "mode": "midnight",
+  "at": "2026-11-28T00:00:00-05:00",
+  "mode": null,
   "modes": {
-   "main": "midnight",
-   "a": "midnight",
-   "b": "midnight"
+   "main": "double-spread",
+   "a": "double-spread",
+   "b": "double-spread"
   }
  },
  "next_tick_why": "session",
@@ -354,15 +346,6 @@
     "at": "2026-11-28T04:56:44.972Z",
     "o": "i",
     "task": "T-5954"
-   },
-   {
-    "w": "Odalys",
-    "k": "review",
-    "t": "Settings and Pro: buy, restore, themes",
-    "m": "opus",
-    "at": "2026-11-28T04:57:03.599Z",
-    "o": "c",
-    "task": "T-4190"
    }
   ],
   "src": "plan",
@@ -530,7 +513,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-28T04:57:02Z",
+  "at": "2026-11-28T04:59:57Z",
   "s": {
    "T-5954": [
     "merged",
@@ -569,7 +552,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-28T04:57:02Z",
+  "at": "2026-11-28T04:59:57Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -587,7 +570,7 @@
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1524
+    "parked": 1527
    },
    "cur": [],
    "ld": [
@@ -597,10 +580,10 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-28T04:56:27Z",
-    "ld": 37.34,
+    "at": "2026-11-28T04:59:58Z",
+    "ld": 21.85,
     "c": 8,
-    "sb": 1,
+    "sb": 0,
     "dk": [
      34.0,
      228.3
@@ -609,9 +592,7 @@
      152.7,
      953.7
     ],
-    "sn": [
-     "iPhone 17e"
-    ]
+    "sn": []
    },
    "macbook": {
     "at": "2026-11-28T04:52:38Z",
@@ -652,11 +633,11 @@
      "open": true
     }
    },
-   "at": "2026-11-28T04:57:09+00:00"
+   "at": "2026-11-28T05:00:15+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-28T04:57:02+00:00"
+   "at": "2026-11-28T05:00:15+00:00"
   }
  },
  "operators": [
@@ -696,13 +677,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 6,
+  "main": 5,
   "lanes": 1,
-  "total": 7,
-  "at": "11:57 PM",
+  "total": 6,
+  "at": "12:00 AM",
   "why": "",
-  "at_iso": "2026-11-28T04:57:00+00:00",
+  "at_iso": "2026-11-28T05:00:00+00:00",
   "started": "9:13 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 6, started 9:13 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 11:57 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 5, started 9:13 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 12:00 AM ET</p></section>"
  }
 }

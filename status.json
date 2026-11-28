@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-28T03:11:09.054115+00:00",
+ "at": "2026-11-28T03:14:33.691858+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -62,7 +62,7 @@
    "task": "[build] T-4190 Settings Pro tests",
    "model": "opus",
    "started": "2026-11-28T02:15:22.190Z",
-   "seconds": 3346,
+   "seconds": 3551,
    "finished": null
   },
   {
@@ -70,7 +70,7 @@
    "task": "[build] T-4183 Gallery premades release",
    "model": "opus",
    "started": "2026-11-28T02:15:30.840Z",
-   "seconds": 3338,
+   "seconds": 3542,
    "finished": null
   },
   {
@@ -78,7 +78,7 @@
    "task": "[build] T-5837 Home review fixes",
    "model": "opus",
    "started": "2026-11-28T02:15:49.354Z",
-   "seconds": 3319,
+   "seconds": 3524,
    "finished": null
   },
   {
@@ -86,7 +86,7 @@
    "task": "[build] T-5950 look picker inspiration",
    "model": "opus",
    "started": "2026-11-28T02:26:11.432Z",
-   "seconds": 2697,
+   "seconds": 2902,
    "finished": null
   }
  ],
@@ -128,7 +128,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 263,
+  "runnable_count": 261,
   "blocked_count": 0
  },
  "meter": {
@@ -177,7 +177,7 @@
   "week_pct": 39.33,
   "usage_pct": 46.1,
   "work_pct": 99.0,
-  "read_at": "2026-11-28T03:11:00+00:00",
+  "read_at": "2026-11-28T03:14:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -227,7 +227,7 @@
  "lock_in": {
   "on": true,
   "pool": 4,
-  "at": "2026-11-27T22:11:00-05:00",
+  "at": "2026-11-27T22:14:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -407,29 +407,37 @@
   "done": [
    {
     "w": "Idris",
+    "t": "Leaving the Gallery tab while a preview is loading and coming back no longer leaves the tiles...",
+    "at": "2026-11-27T22:13:00-05:00"
+   },
+   {
+    "w": "Idris",
+    "t": "When a Distance widget's location check is too slow, it now says \"No recent location\" rather...",
+    "at": "2026-11-27T22:13:00-05:00"
+   },
+   {
+    "w": "Idris",
     "t": "The test build's widget now puts its font check result back if a test deleted it, so running the...",
     "at": "2026-11-27T22:00:00-05:00"
-   },
-   {
-    "w": "Idris",
-    "t": "The Restore test no longer depends on a one-second margin, the test-only delay is left out of...",
-    "at": "2026-11-27T21:19:00-05:00"
-   },
-   {
-    "w": "Idris",
-    "t": "A person who already owns Pro and taps Restore with no connection is now told it failed, instead...",
-    "at": "2026-11-27T19:02:00-05:00"
    }
   ],
   "count": {
-   "next": 263,
+   "next": 261,
    "wait": 0,
    "blocked": 0,
    "you": 0
   },
   "fin": {
-   "n": 2,
+   "n": 4,
    "rows": [
+    [
+     "T-5903",
+     "Redraw the gallery after a..."
+    ],
+    [
+     "T-4832",
+     "Record what Distance shows..."
+    ],
     [
      "T-4778",
      "Font probe UI check survives..."
@@ -480,9 +488,9 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-28T03:11:09Z",
+  "at": "2026-11-28T03:14:33Z",
   "s": {
-   "T-5323": [
+   "T-5951": [
     "mergetest",
     "iPhone tests on the MacBook",
     null
@@ -506,22 +514,22 @@
    ]
   },
   "nm": {
-   "T-5323": "Make the restore footer test wait and reopen",
    "T-4183": "The Gallery shows, previews and opens every premade",
    "T-5950": "Add details vault ideas to the look picker",
    "T-4181": "Widgets refresh on their own and by a tap"
   },
   "wk": {
-   "T-5323": "Idris",
    "T-4183": "Idris",
    "T-5950": "Maren",
    "T-4181": "Idris",
+   "T-5903": "Idris",
+   "T-4832": "Idris",
    "T-4778": "Idris",
    "T-5297": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-28T03:11:09Z",
+  "at": "2026-11-28T03:14:33Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -539,7 +547,7 @@
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1418
+    "parked": 1421
    },
    "cur": [],
    "ld": [
@@ -549,12 +557,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-28T03:11:03Z",
-    "ld": 38.08,
+    "at": "2026-11-28T03:14:36Z",
+    "ld": 40.1,
     "c": 8,
     "sb": 1,
     "dk": [
-     36.8,
+     34.5,
      228.3
     ],
     "ss": [
@@ -566,18 +574,15 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-28T03:00:20Z",
-    "ld": 10.68,
+    "at": "2026-11-28T03:13:08Z",
+    "ld": 1.2,
     "c": 12,
-    "sb": 2,
+    "sb": 0,
     "dk": [
-     349.1,
+     352.4,
      926.4
     ],
-    "sn": [
-     "itsthecompany-runner",
-     "itsthecompany-runner-5"
-    ]
+    "sn": []
    }
   }
  },
@@ -589,7 +594,7 @@
    "parked": 9,
    "open": true,
    "mq": false,
-   "counted": "2026-11-28T03:03:15+00:00",
+   "counted": "2026-11-28T03:13:41+00:00",
    "by": {
     "app": {
      "n": 6,
@@ -607,11 +612,11 @@
      "open": true
     }
    },
-   "at": "2026-11-28T03:11:09+00:00"
+   "at": "2026-11-28T03:14:33+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-28T03:11:09+00:00"
+   "at": "2026-11-28T03:14:33+00:00"
   }
  },
  "operators": [
@@ -654,10 +659,10 @@
   "main": 4,
   "lanes": 1,
   "total": 5,
-  "at": "10:11 PM",
+  "at": "10:14 PM",
   "why": "",
-  "at_iso": "2026-11-28T03:11:00+00:00",
+  "at_iso": "2026-11-28T03:14:00+00:00",
   "started": "9:13 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 4, started 9:13 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 10:11 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 4, started 9:13 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 10:14 PM ET</p></section>"
  }
 }

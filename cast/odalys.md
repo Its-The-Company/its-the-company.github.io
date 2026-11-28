@@ -42,9 +42,6 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 ## Lessons
 - T-4956 11-18: ticked lines leave the board for log/board-archive.md; a claim release writes a new slot, whose mtime is the release time.
-- T-5622/T-5624 11-22 2f370af682: 'no app line' at the comparison start was T-5530's exclusive allow-list hold (any open allow ID, e.g. the coordinator's own unblock fix, stops all app work; lane_take too), not the steps map; order --json now names it 'freeze'. Simulate with a patched read_json, main's merge count and a /tmp copy of .done_seen.json.
-- T-5620 11-22: personal_land.sh in a session runs road-check alone (<span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">ruling</span> c7088040339); land job replays after-sync each pass. Suites need T: run via tests/run.sh <suite>. board_tick Evidence: one path, rest in Detail:.
-- T-5722 11-23 2895cbadcc: reviewing a wall-clock -> count/ratio swap, put back the faults the OLD limit caught (pre-fix suite from git show c^:path) too: a probe with note=False passed the new note-count check, failed the old 1.5 s. Shared mini already at load 100-280: measure, don't add yes load. A queued tick with a wrong note: rm the untracked outbox file, tick again.
 - T-5365 11-24: grep tests for sleep/elapsed FIRST (rule 1). Sleep->event in a "nothing written" check: event before `return` misses a late write.
 - T-5755 11-23: background runs die at 10 min unless given a timeout (land_xc_test under load). Old-vs-new proof: short copy (setup+section) in two git-archive dirs, ~2 min; rm -rf "$VAR" is refused, mkdir fresh.
 - T-4192 11-26: a UI shot of a prompt with a text field depends on the Simulator's minimized-keyboard state (T-0758) and on which tests ran first; the class idiom is raiseOnScreenKeyboard before save. Read a picture test for what the picture shows, not only pass/fail.
@@ -52,7 +49,8 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-5918 11-27 58bb457712: the shell is zsh: a $F list of paths is one word; list paths literally. Reds on HEAD: merge_limit_split, records, xc_inputs, supervisor, dispatch_tick (all pre-existing 11-27).
 - T-5944 11-27: check a diagnosis's 'on main by key' with land_dupes.keys_of first: a same-subject redo has a new author time (T-3792 9ec08e6329 vs ba2a62b354), no copy. parked_count.waiting_refs already cuts ticked and keyed commits. A copy reads done holds as live only with main's ops/runs/.waiting.json; order --json may write ops/runs/.done_seen.json.
 - T-5945 11-27 050a4a9ee3: a 46-suite one-at-a-time run under load 30-240 hit the 2 h background limit at 43; split such a run or pick suites by what imports the change. personal_land_test 'lands: from main' with/without hook red seen, not yet proven on HEAD.
-- T-5954 11-28 e373cf8d26: Fable gating lives in two places: governor fable_status (dollar <span title="A measured fact that holds a grade below a letter, however good the rest is.">cap</span>, now removed) and dispatch FABLE_WEEK_PCT 50% per account (Tenet 6, untouched). Name both when a ruling says "Fable cap".
+- T-5954 11-28 e373cf8d26: Fable gating lives in two places: governor fable_status (dollar <span title="A measured fact that holds a grade below a letter, however good the rest is.">cap</span>, now removed) and dispatch FABLE_WEEK_PCT 50% per account (Tenet 6, untouched). Name both when a <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">ruling</span> says "Fable cap".
+- T-5954 11-28: bash reads a suite file as it runs: editing tests/x_test.sh while tests/run.sh runs it shifts the read offset ("unexpected EOF", a group's output lost). Edit between runs only; stage diagnostics as a separate run. `moved: command not found` at the eval'd board_stale in supervisor_test is pre-existing noise, not a red.
 {% endraw %}
 
 

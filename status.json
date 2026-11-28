@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-28T14:11:35.183315+00:00",
+ "at": "2026-11-28T14:14:38.470848+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -83,7 +83,7 @@
    "task": "[build] T-4188 location test run",
    "model": "",
    "started": "2026-11-28T13:09:32.138Z",
-   "seconds": 3723,
+   "seconds": 3906,
    "finished": null
   },
   {
@@ -91,7 +91,7 @@
    "task": "[build] T-4190 store and token fixes",
    "model": "",
    "started": "2026-11-28T13:09:41.239Z",
-   "seconds": 3713,
+   "seconds": 3897,
    "finished": null
   },
   {
@@ -99,7 +99,7 @@
    "task": "[review] T-5953",
    "model": "",
    "started": "2026-11-28T13:09:48.004Z",
-   "seconds": 3707,
+   "seconds": 3890,
    "finished": null
   }
  ],
@@ -133,18 +133,18 @@
    "pct": 4.0,
    "resets_at": "2026-11-28T13:30:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-28T09:04:34.248188-05:00",
+   "read_at": "2026-11-28T09:14:38.282825-05:00",
    "source": "live",
    "left": 96.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 62.0,
+   "pct": 63.0,
    "resets_at": "2026-11-29T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-28T09:04:34.248188-05:00",
+   "read_at": "2026-11-28T09:14:38.282825-05:00",
    "source": "live",
-   "left": 38.0,
+   "left": 37.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
@@ -154,7 +154,7 @@
    "read_at": "2026-11-28T08:43:00.846147-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-28T09:04:34.248188-05:00"
+  "read_at": "2026-11-28T09:14:38.282825-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -174,7 +174,7 @@
   "week_pct": 46.79,
   "usage_pct": 43.0,
   "work_pct": 99.0,
-  "read_at": "2026-11-28T14:11:00+00:00",
+  "read_at": "2026-11-28T14:14:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -224,7 +224,7 @@
  "lock_in": {
   "on": false,
   "pool": 4,
-  "at": "2026-11-28T09:11:00-05:00",
+  "at": "2026-11-28T09:14:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -456,16 +456,11 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-28T14:10:17Z",
+  "at": "2026-11-28T14:14:32Z",
   "s": {
-   "T-4182": [
+   "T-4858": [
     "mergetest",
     "iPhone tests on the MacBook",
-    null
-   ],
-   "T-4188": [
-    "testing",
-    "Mac Mini \u00b7 test",
     null
    ],
    "T-5953": [
@@ -476,18 +471,16 @@
    ]
   },
   "nm": {
-   "T-4182": "A failing widget says so and can recover",
-   "T-4188": "Location, steps and notifications work in scripts and...",
+   "T-4858": "Keep a slow store check from stalling tester widgets",
    "T-5953": "Draw Home's Efficiency numbers as graphs"
   },
   "wk": {
-   "T-4182": "Idris",
-   "T-4188": "Idris",
+   "T-4858": "Idris",
    "T-5953": "Maren"
   }
  },
  "ln": {
-  "at": "2026-11-28T14:10:17Z",
+  "at": "2026-11-28T14:14:32Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -505,7 +498,7 @@
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1378
+    "parked": 1382
    },
    "cur": [],
    "ld": [
@@ -515,33 +508,31 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-28T14:11:17Z",
-    "ld": 11.69,
+    "at": "2026-11-28T14:13:44Z",
+    "ld": 8.52,
     "c": 8,
-    "sb": 1,
+    "sb": 0,
     "dk": [
-     32.7,
+     33.2,
      228.3
     ],
     "ss": [
      151.8,
      953.7
     ],
-    "sn": [
-     "pywidget-wk-check"
-    ]
+    "sn": []
    },
    "macbook": {
-    "at": "2026-11-28T14:07:10Z",
-    "ld": 1.42,
+    "at": "2026-11-28T14:12:46Z",
+    "ld": 1.45,
     "c": 12,
     "sb": 1,
     "dk": [
-     337.9,
+     337.8,
      926.4
     ],
     "sn": [
-     "itsthecompany-runner-3"
+     "itsthecompany-runner"
     ]
    }
   }
@@ -572,15 +563,15 @@
      "open": true
     }
    },
-   "at": "2026-11-28T14:11:35+00:00"
+   "at": "2026-11-28T14:14:38+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-28T14:11:35+00:00"
+   "at": "2026-11-28T14:14:38+00:00"
   }
  },
  "fw": {
-  "at": 1795875011,
+  "at": 1795875254,
   "s": [
    [
     "main",
@@ -802,7 +793,7 @@
       1,
       1795874081,
       0,
-      0
+      1
      ],
      [
       "T-5272",
@@ -1001,7 +992,7 @@
   "x": [
    "held",
    "T-4191",
-   3439,
+   3444,
    6
   ]
  },
@@ -1043,10 +1034,10 @@
   "main": 3,
   "lanes": 1,
   "total": 4,
-  "at": "9:11 AM",
+  "at": "9:14 AM",
   "why": "",
-  "at_iso": "2026-11-28T14:11:00+00:00",
+  "at_iso": "2026-11-28T14:14:00+00:00",
   "started": "8:06 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 3, started 8:06 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 9:11 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 3, started 8:06 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 9:14 AM ET</p></section>"
  }
 }

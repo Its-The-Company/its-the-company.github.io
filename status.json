@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-28T01:33:57.191622+00:00",
+ "at": "2026-11-28T01:37:01.357874+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -62,7 +62,7 @@
    "task": "[build] T-5837 Home flow redo",
    "model": "opus",
    "started": "2026-11-27T22:49:52.350Z",
-   "seconds": 9844,
+   "seconds": 10029,
    "finished": null
   }
  ],
@@ -153,22 +153,8 @@
   "week_pct": 42.26,
   "usage_pct": 49.0,
   "work_pct": 99.0,
-  "read_at": "2026-11-28T01:34:00+00:00",
-  "running": [
-   {
-    "lane": "a",
-    "task": "T-4181",
-    "w": "Idris",
-    "k": "build",
-    "t": "Widgets refresh on their own and by a tap",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-27T19:31:48-05:00",
-    "n": "Evan",
-    "d": 1,
-    "src": "plan-a"
-   }
-  ]
+  "read_at": "2026-11-28T01:37:00+00:00",
+  "running": []
  },
  "api_credits": [
   {
@@ -204,7 +190,7 @@
  "lock_in": {
   "on": true,
   "pool": 4,
-  "at": "2026-11-27T20:34:00-05:00",
+  "at": "2026-11-27T20:37:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -446,13 +432,12 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-28T01:33:57Z",
+  "at": "2026-11-28T01:36:52Z",
   "s": {
    "T-4181": [
-    "merged",
-    "on main 7:15 PM ET",
-    1795824904000,
-    ""
+    "mergetest",
+    "Xcode checks on the MacBook, 1st to merge",
+    1795829752613
    ]
   },
   "nm": {
@@ -475,27 +460,36 @@
   }
  },
  "ln": {
-  "at": "2026-11-28T01:33:57Z",
+  "at": "2026-11-28T01:36:52Z",
   "mq": {
    "n": {
-    "checking": 0,
+    "checking": 1,
     "inline": 0,
     "conflicted": 0,
     "failed": 0,
     "held": 0,
     "retry": 0,
-    "parked": 9
+    "parked": 10
    },
    "m": {
-    "checking": null,
+    "checking": 1,
     "inline": null,
     "conflicted": null,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1321
+    "parked": 974
    },
-   "cur": [],
+   "cur": [
+    [
+     [
+      "T-4181"
+     ],
+     "iPhone app tests",
+     "MacBook",
+     1
+    ]
+   ],
    "ld": [
     0,
     null
@@ -503,12 +497,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-28T01:33:13Z",
-    "ld": 4.18,
+    "at": "2026-11-28T01:36:05Z",
+    "ld": 3.05,
     "c": 8,
     "sb": 0,
     "dk": [
-     43.1,
+     45.3,
      228.3
     ],
     "ss": [
@@ -556,11 +550,11 @@
      "open": true
     }
    },
-   "at": "2026-11-28T01:33:57+00:00"
+   "at": "2026-11-28T01:37:01+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-28T01:33:57+00:00"
+   "at": "2026-11-28T01:36:46+00:00"
   }
  },
  "operators": [
@@ -572,15 +566,6 @@
    "e": "high",
    "t": "Work session",
    "at": "2026-11-27T18:40:08-05:00"
-  },
-  {
-   "w": "Operator",
-   "a": "Evan's Account",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session",
-   "at": "2026-11-27T19:31:48-05:00"
   }
  ],
  "reply": {
@@ -624,12 +609,12 @@
  ],
  "agents_now": {
   "main": 1,
-  "lanes": 1,
-  "total": 2,
-  "at": "8:34 PM",
+  "lanes": 0,
+  "total": 1,
+  "at": "8:37 PM",
   "why": "",
-  "at_iso": "2026-11-28T01:34:00+00:00",
+  "at_iso": "2026-11-28T01:37:00+00:00",
   "started": "2:44 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 1, started 2:44 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 8:34 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 2:44 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 8:37 PM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-28T05:34:14.686971+00:00",
+ "at": "2026-11-28T05:37:13.214660+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -11,7 +11,28 @@
    "restarts": 25,
    "last_handoff": 1795831256
   },
-  "flow": [],
+  "flow": [
+   {
+    "t": "T-4181",
+    "name": "Widgets refresh on their own and by a tap",
+    "w": "Idris",
+    "acct": "Personal b",
+    "steps": [
+     {
+      "s": "claimed",
+      "at": 1795536622
+     },
+     {
+      "s": "worker",
+      "at": 1795536622
+     },
+     {
+      "s": "testq",
+      "at": 1795844108
+     }
+    ]
+   }
+  ],
   "done": [
    {
     "t": "T-5607",
@@ -62,7 +83,7 @@
    "task": "[build] T-4188 second location extension",
    "model": "opus",
    "started": "2026-11-28T03:56:16.118Z",
-   "seconds": 5878,
+   "seconds": 6057,
    "finished": null
   },
   {
@@ -70,7 +91,7 @@
    "task": "[build] T-4183 screenshots run lock",
    "model": "opus",
    "started": "2026-11-28T04:27:26.477Z",
-   "seconds": 4008,
+   "seconds": 4186,
    "finished": null
   },
   {
@@ -78,7 +99,7 @@
    "task": "[build] T-4476 failed save notice",
    "model": "opus",
    "started": "2026-11-28T04:32:31.121Z",
-   "seconds": 3703,
+   "seconds": 3882,
    "finished": null
   },
   {
@@ -86,7 +107,7 @@
    "task": "[build] T-5954 drop Fable cap",
    "model": "opus",
    "started": "2026-11-28T04:56:44.972Z",
-   "seconds": 2249,
+   "seconds": 2428,
    "finished": null
   },
   {
@@ -94,7 +115,7 @@
    "task": "[review] T-5837 third pass",
    "model": "opus",
    "started": "2026-11-28T05:22:02.092Z",
-   "seconds": 732,
+   "seconds": 911,
    "finished": null
   },
   {
@@ -102,7 +123,7 @@
    "task": "[build] T-4190 offline Restore test",
    "model": "fable",
    "started": "2026-11-28T05:23:58.664Z",
-   "seconds": 616,
+   "seconds": 794,
    "finished": null
   }
  ],
@@ -149,21 +170,21 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 14.0,
+   "pct": 15.0,
    "resets_at": "2026-11-28T03:30:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-28T00:32:09.718357-05:00",
+   "read_at": "2026-11-28T00:37:12.180727-05:00",
    "source": "live",
-   "left": 86.0,
+   "left": 85.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 49.0,
+   "pct": 50.0,
    "resets_at": "2026-11-29T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-28T00:32:09.718357-05:00",
+   "read_at": "2026-11-28T00:37:12.180727-05:00",
    "source": "live",
-   "left": 51.0,
+   "left": 50.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
@@ -173,7 +194,7 @@
    "read_at": "2026-11-28T00:10:54.352146-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-28T00:32:09.718357-05:00"
+  "read_at": "2026-11-28T00:37:12.180727-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -193,7 +214,7 @@
   "week_pct": 41.89,
   "usage_pct": 46.1,
   "work_pct": 99.0,
-  "read_at": "2026-11-28T05:34:00+00:00",
+  "read_at": "2026-11-28T05:37:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -230,7 +251,7 @@
  "lock_in": {
   "on": false,
   "pool": 4,
-  "at": "2026-11-28T00:34:00-05:00",
+  "at": "2026-11-28T00:37:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -241,7 +262,7 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Double Spread: past the week's halfway point with room left, so twice the even pace until the limit or the reset; the machine allows 8 (at its floor: load 32.8 a core is over 10)",
+  "why": "Double Spread: past the week's halfway point with room left, so twice the even pace until the limit or the reset; the machine allows 8 (at its floor: load 23.5 a core is over 10)",
   "n": 4,
   "at": "2026-11-27T21:13:47.067436-05:00"
  },
@@ -517,12 +538,12 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-28T05:33:56Z",
+  "at": "2026-11-28T05:36:53Z",
   "s": {
    "T-4181": [
     "mergetest",
-    "Xcode checks on the MacBook, 1st to merge",
-    1795843436348
+    "iPhone tests on the MacBook",
+    null
    ],
    "T-5954": [
     "merged",
@@ -558,10 +579,10 @@
   }
  },
  "ln": {
-  "at": "2026-11-28T05:33:56Z",
+  "at": "2026-11-28T05:36:53Z",
   "mq": {
    "n": {
-    "checking": 1,
+    "checking": 0,
     "inline": 0,
     "conflicted": 0,
     "failed": 0,
@@ -570,24 +591,15 @@
     "parked": 9
    },
    "m": {
-    "checking": 10,
+    "checking": null,
     "inline": null,
     "conflicted": null,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1561
+    "parked": 1564
    },
-   "cur": [
-    [
-     [
-      "T-4181"
-     ],
-     "iPhone app tests",
-     "MacBook",
-     10
-    ]
-   ],
+   "cur": [],
    "ld": [
     0,
     null
@@ -595,12 +607,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-28T05:33:20Z",
-    "ld": 30.27,
+    "at": "2026-11-28T05:36:26Z",
+    "ld": 24.88,
     "c": 8,
     "sb": 1,
     "dk": [
-     37.3,
+     36.6,
      228.3
     ],
     "ss": [
@@ -652,11 +664,11 @@
      "open": true
     }
    },
-   "at": "2026-11-28T05:34:14+00:00"
+   "at": "2026-11-28T05:37:13+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-28T05:34:02+00:00"
+   "at": "2026-11-28T05:37:06+00:00"
   }
  },
  "operators": [
@@ -691,10 +703,10 @@
   "main": 6,
   "lanes": 0,
   "total": 6,
-  "at": "12:34 AM",
+  "at": "12:37 AM",
   "why": "",
-  "at_iso": "2026-11-28T05:34:00+00:00",
+  "at_iso": "2026-11-28T05:37:00+00:00",
   "started": "9:13 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 6, started 9:13 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 12:34 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 6, started 9:13 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 12:37 AM ET</p></section>"
  }
 }

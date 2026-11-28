@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-28T07:57:22.979261+00:00",
+ "at": "2026-11-28T08:00:27.197404+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -83,7 +83,7 @@
    "task": "[build] T-4188 second location extension",
    "model": "opus",
    "started": "2026-11-28T03:56:16.118Z",
-   "seconds": 14466,
+   "seconds": 14651,
    "finished": null
   },
   {
@@ -91,7 +91,7 @@
    "task": "[build] T-4183 screenshots run lock",
    "model": "opus",
    "started": "2026-11-28T04:27:26.477Z",
-   "seconds": 12596,
+   "seconds": 12780,
    "finished": null
   },
   {
@@ -99,15 +99,7 @@
    "task": "[build] T-5837 stale chart check",
    "model": "fable",
    "started": "2026-11-28T06:15:09.969Z",
-   "seconds": 6133,
-   "finished": null
-  },
-  {
-   "name": "odalys",
-   "task": "[build] T-5954 supervisor suite reds",
-   "model": "fable",
-   "started": "2026-11-28T07:23:18.704Z",
-   "seconds": 2044,
+   "seconds": 6317,
    "finished": null
   },
   {
@@ -115,12 +107,20 @@
    "task": "[build] T-4190 widget line fix",
    "model": "opus",
    "started": "2026-11-28T07:41:06.146Z",
-   "seconds": 976,
+   "seconds": 1161,
    "finished": null
   }
  ],
- "who": "Idris x3, Maren, Odalys",
+ "who": "Idris x3, Maren",
  "recent": [
+  {
+   "name": "odalys",
+   "task": "[build] T-5954 supervisor suite reds",
+   "model": "fable",
+   "started": "2026-11-28T07:23:18.704Z",
+   "seconds": null,
+   "finished": "2026-11-28T07:58:59.966000+00:00"
+  },
   {
    "name": "ines",
    "task": "[review] T-4476 notice words again",
@@ -144,14 +144,6 @@
    "started": "2026-11-28T07:37:50.995Z",
    "seconds": null,
    "finished": "2026-11-28T07:40:53.025000+00:00"
-  },
-  {
-   "name": "ines",
-   "task": "[review] T-4476 notice words",
-   "model": "opus",
-   "started": "2026-11-28T07:36:44.188Z",
-   "seconds": null,
-   "finished": "2026-11-28T07:38:35.962000+00:00"
   }
  ],
  "queue": {
@@ -162,31 +154,31 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 39.0,
-   "resets_at": "2026-11-28T03:30:00-05:00",
+   "pct": 41.0,
+   "resets_at": "2026-11-28T08:30:00.416238+00:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-28T02:54:35.160210-05:00",
-   "source": "live",
-   "left": 61.0,
+   "read_at": "2026-11-28T02:59:22.005916-05:00",
+   "source": "usage",
+   "left": 59.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 54.0,
-   "resets_at": "2026-11-29T02:00:00-05:00",
+   "resets_at": "2026-11-29T07:00:00.416260+00:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-28T02:54:35.160210-05:00",
-   "source": "live",
+   "read_at": "2026-11-28T02:59:22.005916-05:00",
+   "source": "usage",
    "left": 46.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
-   "pct": 3.0,
-   "resets_at": "2026-11-29T07:00:00.267125+00:00",
+   "pct": 5.0,
+   "resets_at": "2026-11-29T07:00:00.416455+00:00",
    "used_words": "of the Fable weekly allowance used",
-   "read_at": "2026-11-28T02:28:35.851853-05:00",
+   "read_at": "2026-11-28T02:59:22.005916-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-28T02:54:35.160210-05:00"
+  "read_at": "2026-11-28T02:59:22.005916-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -203,10 +195,10 @@
  },
  "next_tick": null,
  "personal": {
-  "week_pct": 45.31,
+  "week_pct": 46.17,
   "usage_pct": 46.1,
   "work_pct": 99.0,
-  "read_at": "2026-11-28T07:57:00+00:00",
+  "read_at": "2026-11-28T08:00:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -227,7 +219,7 @@
   }
  ],
  "disk": {
-  "free_gb": 37,
+  "free_gb": 33,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -236,14 +228,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-28T02:55:00-05:00",
+   "at": "2026-11-28T02:59:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 4,
-  "at": "2026-11-28T02:57:00-05:00",
+  "at": "2026-11-28T03:00:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -254,7 +246,7 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Double Spread: past the week's halfway point with room left, so twice the even pace until the limit or the reset; the machine allows 8 (at its floor: load 12.0 a core is over 10)",
+  "why": "Double Spread: past the week's halfway point with room left, so twice the even pace until the limit or the reset; the machine allows 8 (held: too few lands in 3 hours to judge a raise)",
   "n": 4,
   "at": "2026-11-27T21:13:47.067436-05:00"
  },
@@ -273,14 +265,6 @@
    "task": "[build] T-5837 stale chart check",
    "model": "fable",
    "since": "2026-11-28T06:15:09.969Z",
-   "next": []
-  },
-  {
-   "name": "Odalys",
-   "state": "running",
-   "task": "[build] T-5954 supervisor suite reds",
-   "model": "fable",
-   "since": "2026-11-28T07:23:18.704Z",
    "next": []
   },
   {
@@ -303,6 +287,14 @@
    "name": "Ines",
    "state": "next",
    "task": "Ines with Wrenna, P3, from T-0902 (ADR-006 s13.5, s13.7...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
+   "name": "Odalys",
+   "state": "next",
+   "task": "Odalys, P3, host-only, from...",
    "model": null,
    "since": null,
    "next": []
@@ -336,15 +328,6 @@
     "at": "2026-11-28T06:15:09.969Z",
     "o": "c",
     "task": "T-5837"
-   },
-   {
-    "w": "Odalys",
-    "k": "build",
-    "t": "Drop the governor's weekly Fable cap",
-    "m": "fable",
-    "at": "2026-11-28T07:23:18.704Z",
-    "o": "c",
-    "task": "T-5954"
    },
    {
     "w": "Idris",
@@ -521,18 +504,12 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-28T07:57:22Z",
+  "at": "2026-11-28T08:00:07Z",
   "s": {
    "T-0556": [
     "mergetest",
     "iPhone tests on the MacBook",
     null
-   ],
-   "T-5954": [
-    "merged",
-    "on main 11:56 PM ET",
-    1795841767000,
-    ""
    ],
    "T-4183": [
     "merged",
@@ -543,12 +520,10 @@
   },
   "nm": {
    "T-0556": "Take the app pictures that were missing",
-   "T-5954": "Drop the governor's weekly Fable cap",
    "T-4183": "The Gallery shows, previews and opens every premade"
   },
   "wk": {
    "T-0556": "Idris",
-   "T-5954": "Odalys",
    "T-4183": "Idris",
    "T-5955": "Idris",
    "T-5323": "Idris",
@@ -563,7 +538,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-28T07:57:22Z",
+  "at": "2026-11-28T08:00:07Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -579,9 +554,9 @@
     "inline": null,
     "conflicted": null,
     "failed": null,
-    "held": 21,
+    "held": 24,
     "retry": null,
-    "parked": 1005
+    "parked": 1007
    },
    "cur": [],
    "ld": [
@@ -591,12 +566,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-28T07:56:37Z",
-    "ld": 10.01,
+    "at": "2026-11-28T08:00:12Z",
+    "ld": 8.02,
     "c": 8,
     "sb": 1,
     "dk": [
-     32.9,
+     32.5,
      228.3
     ],
     "ss": [
@@ -651,11 +626,11 @@
      "open": true
     }
    },
-   "at": "2026-11-28T07:57:22+00:00"
+   "at": "2026-11-28T08:00:27+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-28T07:57:22+00:00"
+   "at": "2026-11-28T08:00:07+00:00"
   }
  },
  "operators": [
@@ -687,13 +662,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 5,
+  "main": 4,
   "lanes": 0,
-  "total": 5,
-  "at": "2:57 AM",
+  "total": 4,
+  "at": "3:00 AM",
   "why": "",
-  "at_iso": "2026-11-28T07:57:00+00:00",
+  "at_iso": "2026-11-28T08:00:00+00:00",
   "started": "9:13 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 5, started 9:13 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 2:57 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 4, started 9:13 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 3:00 AM ET</p></section>"
  }
 }

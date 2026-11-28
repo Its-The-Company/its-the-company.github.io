@@ -184,6 +184,7 @@ No margins, so the slot changes:
 - accessoryCircular: 14 pt glyph in the top-trailing corner of the 72 pt square, outside the ring. **Unverified:** the square's corner may be clipped to the circle; if it is, the glyph moves to replace the label line. Idris checks in the Simulator.
 - accessoryRectangular: the user's content is laid out 18 pt narrower (142 pt), the 14 pt glyph at the top-trailing end.
 - accessoryInline: the leading symbol is replaced by the state glyph; the text stays.
+- **Note, 2026-11-28 (Idris, T-0472). Built.** The 72 pt square's corner is not clipped on the Simulator (T-0467), so the first circular option stands. Circular and rectangular: a 14 pt glyph flush in the top-trailing corner (centre 7 pt in; in circular its centre is outside the circle and no ink reaches the ring's middle, radius 33). Rectangular: the content gives up an 18 pt trailing strip while the slot holds a mark. Inline: WidgetKit draws no overlay there (T-0467 drew no clock at all), so every Image in the tree is dropped and the state glyph leads. The badge shares the slot and follows the same rules with its own glyph. Tests: `CardMarksTests`.
 
 ## 6. Locked premade tile (gallery)
 

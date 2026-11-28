@@ -46,7 +46,8 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - Older lessons and dated logs: archive.md.
 - T-4188 11-27 9:50 PM scratch T-4188-idris/wt: 60bd1aa924 T-4832, 2286eca3cc T-5903 (cherry-pick of 454bbf681c). T-5850 test X exit 75 twice (load 394 once the Simulator is booted). T-3554 (F7 needs an iPhone), T-0543 (L4 has no hook) are still no-commit. T-5796 re-review open; archive.md.
 - T-4692, T-5047, T-5607, T-5108, T-0053, T-0044: open threads in archive.md.
-- T-4181 11-28 (a): a0a784ec54 T-0793 slice 14 (Pernille's slice 13 items 1-2: hung-read restore test + 3-ask bound; mutant red J-...0001-...057bc3). Open: Pernille review; `system` read and oom_guard need a <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">ruling</span>. Lesson: never report a run's numbers before reading its output; XC_LOCAL=here can still go to the MacBook with dirty paths carried.
+- T-0472 11-28: 164abff245 partial (s5 slot per Lock family; 2833/0). Open: re-shoot WK_ONLY=testDLockScreenAccessories into scratch (script deletes wk-*.png), copy accessory+lock PNGs. Lesson: runner hides compile errors; build-for-testing generic/platform=iOS CODE_SIGNING_ALLOWED=NO shows them here.
+- T-4181 11-28 06:1x: T-4775/T-5018 on main (Pernille PASS). T-2021 forced-<span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> bench drafted, never ran (Mac mini load >40; a build setting can't go to the runner): scratch T-4181-idris/t2021/t2021-harness.patch, handoff note 9377a23234. Lesson: a note commit's subject must not name a step ID, or check counts it as that step.
 {% endraw %}
 
 

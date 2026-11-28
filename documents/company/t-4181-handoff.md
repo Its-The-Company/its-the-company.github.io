@@ -620,6 +620,75 @@ This session resumed the 11-25 <span title="An idea that reaches B or better but
   line. Not built. It needs Ines to put both to Pernille and me as a recorded decision; until then T-4181 has nothing
   buildable on this Mac.
 - Next: the ruling on those two questions, or the Investors' iPhone for T-4494 item 3.
+
+## Session 2026-11-28 03:4x-04:2x ET (Idris, lane a, from main 08c0002c31)
+
+- Resumed the 2:35 AM session that a signal stopped. Its two finished commits were on
+  refs/archive/parked/a/20261128-023542-91353, not on main; both cherry-picked cleanly, messages kept:
+  d8443a32cd (T-4775, was 0eb1e74ce2: a tap that lands after a run's row is written gets a run of its own) and
+  8e35d2dd5c (T-5018, was d1dd1d9f91: LaneRerunRuleTests pins the exact due moment; mutant in mutants-t4773.json).
+- `plan` did not refuse either step (with `--commit`; without it, it reads the clean tree and lists 0 files).
+- Checks at 8e35d2dd (after xcodegen): build-for-testing job ran the whole unit target, PyWidgetTests 2830/0/2
+  (J-20261128-0345-land-chk-a5ab71-4-18e57d); both plans' unit filters (ExtensionLaneTests, LaneRerunRuleTests and the
+  card's classes) were read from that job's run; LaneWarmWindowTests 6/0 (J-20261128-0359-land-chk-a5ab71-1-57bfbb);
+  host 4602/0 on 3.9 and 3.13 (tools/host_keep.py; a plain tests/run.sh was stopped at the 20 min tool limit, not red).
+- Not carried: c82bba0c94 (the parked uncommitted T-4836 draft of lane.py's lane_import wording, test_lane.py,
+  C2-device-api.md s1.7). It is user-facing and a draft until Maren reviews the words, and T-4836 is not this
+  session's step. It stays on the parked ref for T-4836's session.
+- No commit, rechecked at 08c0002c: T-4280 (proof is T-4494 item 3, the Investors' iPhone; T-4494 still open);
+  T-1882 (fields.json is named only in comments and tests; nothing writes it); T-2021 (no scheme or config sets
+  PYWIDGET_LANE_FORCED, only `#if` guards and bench notes; load 27-50 here, no quiet runner); T-4433, T-4435 (only
+  iOS 26.0 and 27.0 runtimes). T-0793: still no recorded ruling on the extension's `system` runs reading `background`
+  or on `oom_guard`.
+- check: MERGE POINT: no (2 of 6 steps on the branch, 4 still to take and all blocked).
+- Next: Pernille reviews d8443a32cd and 8e35d2dd5c at the merge point; the ruling, or the Investors' iPhone.
+
+## 2026-11-28 (c): Pernille's FIX FIRST on main..8e35d2dd (pywidget/docs/reviews/t4181-8e35d2dd-pernille.md)
+
+- M1: a tap queued behind a written turn now runs on its own clock. refresh(_:trigger:) calls a private
+  refresh(_:trigger:until:), and the queued tap passes its outer `mine` into it, so T-1851 judges the start, and T-2230
+  the `deadline` mark, against the tap's answer time. New test
+  testATapHeldPastItsClockBehindAWrittenTurnWritesLateAndRunsNothing (deadline 1 s, the written turn held 1.3 s past
+  the tap: the tap answers `.deadline`, one run only, a `late` row with reason no_time, no marker, a late mark).
+- L1: a second no-op seam, `tapBehind`, called when a tap has queued behind a written turn. The T-4775 test now holds
+  the turn until the tap is behind it, not for 300 ms, and asserts that it went behind.
+- L2: T-4775's red-first mutant, and an M1 mutant (fresh clock for the inner call), added to Tests/mutants-t4773.json.
+- L3: extension.md ("A tap that runs leaves a line marked as a tap", and the late case); fingerprint re-read and
+  stamped 24547129da53. PyWidget.swift's getTimeline doc says the ask is held between 15 min and 24 h after the last run.
+- Units 2831/0/2, J-20261128-0434-land-chk-a5ab71-4-15042e (xcodegen first).
+- Next: Pernille re-reviews this fix commit.
+- Fix commit 8507c64b9e. Mutants at that base, on the MacBook runner: all 7 in Tests/mutants-t4773.json KILLED
+  (J-20261128-0505-mut-idris-t4775-m1-1 to -7; -6 is T-4775's red-first, -7 the M1 fresh-clock mutant, 1 listed
+  test failing). The first local try of -7 waited (Mac mini load 392), no verdict.
+
+## Session 2026-11-28 06:1x-07:1x ET (Idris, lane a, from main bac7465d1e)
+
+- Pernille's re-review of 8507c64b9e passed (5bb422c812); T-4775 and T-5018 are on main. Nothing to act on.
+- No commit for any step. T-4280 (proof is T-4494 item 3, the Investors' iPhone; T-4494 still open); T-1882 (nothing
+  writes fields.json); T-0793 (ADR-007 has no T-5956 or oom_guard ruling; Ines's T-5956 and T-5957 still open);
+  T-4433, T-4435 (only iOS 26.0 and 27.0 runtimes here): as the Operator rechecked at 6:15 AM, not rebuilt.
+- T-2021: the forced-lane bench harness was built, but its UI test never ran, so it is not committed (the 45-minute
+  bound). Draft: scratch T-4181-idris/t2021/t2021-harness.patch (applies on bac7465d1e). It holds:
+  1. ExtensionLane.turn: under `#if PYWIDGET_LANE_FORCED && DEBUG`, the instant after the second T-1851 check and a
+     LaneBench `guard_to_clear_marker` line right after clearMarker/markStuck (seconds, turn_in_process from a process
+     counter, stuck, budget_stop = row outcome `timeout`). All 49 ExtensionLane mutant finds still match as before.
+  2. WidgetKitCheckTests.testYBudgetTurnTimingsInTheExtension (WK_LANE and WK_TIMING_N): test Q's tap widget, the
+     extension's copy swapped to `while True: pass`; each tap lifts T-4280's `time` move first (.lane-demoted.json and
+     lane-moved), warm taps then cold ones (extension pids killed before each tap). widgetkit_check.sh passes WK_TIMING_N.
+  3. scripts/lane_turn_timings.py: budget-stopped spans, cold = turn 1, nearest-rank p95, the higher p95 + 0.1 s, no
+     figure under n = 20 either side; 7 host tests in pywidget/tests/tooling/test_lane_turn_timings.py, green here.
+- Checks on the draft: the forced build (dd-lane, build-for-testing) exit 0 (ops/runs/xcodebuild-20261128-062520.log);
+  the plan's build job ran the whole unit target, PyWidgetTests 2832/0/2 (J-20261128-0636-land-chk-a5ab71-1-46594c).
+- Why it never ran: a forced build is a build setting, so the runner can't carry it (xc_route T-4566); it stays on the
+  Mac mini by Simulator id, which needs load under 40. widgetkit_check.sh exited 75 at 6:37 AM (load 577), and a watch
+  from 6:37 AM to 7:05 AM never saw both load1 and load5 under 40 (last 66.7 / 72.3).
+- Not yet known, for the first run: whether the cached tree's Refresh button stays tappable once the widget has had its
+  `time` move; whether lifting by deleting the list is enough mid-run; whether a SIGKILLed extension comes back for the
+  next tap (test L's kills suggest so). turnNeedsSeconds stays 2.5 s; set it only from that run's figures, then update
+  testTheADRsNumbers and the doc comment (path and n).
+- Next: on a quiet Mac mini, apply the patch, run
+  `WK_LANE=1 WK_TIMING_N=20 WK_ONLY=testYBudgetTurnTimingsInTheExtension scripts/widgetkit_check.sh <dir>`, then
+  `python3 scripts/lane_turn_timings.py <dir>/lane-bench.jsonl`.
 {% endraw %}
 
 </div>

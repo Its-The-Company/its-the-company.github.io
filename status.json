@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-28T07:28:49.138445+00:00",
+ "at": "2026-11-28T07:31:49.298035+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -83,7 +83,7 @@
    "task": "[build] T-4188 second location extension",
    "model": "opus",
    "started": "2026-11-28T03:56:16.118Z",
-   "seconds": 12753,
+   "seconds": 12933,
    "finished": null
   },
   {
@@ -91,7 +91,7 @@
    "task": "[build] T-4183 screenshots run lock",
    "model": "opus",
    "started": "2026-11-28T04:27:26.477Z",
-   "seconds": 10882,
+   "seconds": 11062,
    "finished": null
   },
   {
@@ -99,7 +99,7 @@
    "task": "[build] T-4476 failed save notice",
    "model": "opus",
    "started": "2026-11-28T04:32:31.121Z",
-   "seconds": 10578,
+   "seconds": 10758,
    "finished": null
   },
   {
@@ -107,7 +107,7 @@
    "task": "[build] T-5837 stale chart check",
    "model": "fable",
    "started": "2026-11-28T06:15:09.969Z",
-   "seconds": 4419,
+   "seconds": 4599,
    "finished": null
   },
   {
@@ -115,7 +115,7 @@
    "task": "[build] T-4190 tester Pro wording",
    "model": "opus",
    "started": "2026-11-28T06:37:31.114Z",
-   "seconds": 3078,
+   "seconds": 3258,
    "finished": null
   },
   {
@@ -123,7 +123,7 @@
    "task": "[build] T-5954 supervisor suite reds",
    "model": "fable",
    "started": "2026-11-28T07:23:18.704Z",
-   "seconds": 330,
+   "seconds": 510,
    "finished": null
   }
  ],
@@ -214,7 +214,7 @@
   "week_pct": 45.31,
   "usage_pct": 46.1,
   "work_pct": 99.0,
-  "read_at": "2026-11-28T07:28:00+00:00",
+  "read_at": "2026-11-28T07:31:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -264,7 +264,7 @@
  "lock_in": {
   "on": false,
   "pool": 4,
-  "at": "2026-11-28T02:28:00-05:00",
+  "at": "2026-11-28T02:31:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -551,16 +551,11 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-28T07:28:49Z",
+  "at": "2026-11-28T07:31:41Z",
   "s": {
    "T-4857": [
     "mergetest",
     "iPhone tests on the MacBook",
-    null
-   ],
-   "T-4183": [
-    "testing",
-    "Mac Mini \u00b7 test",
     null
    ],
    "T-4181": [
@@ -574,19 +569,25 @@
     "on main 11:56 PM ET",
     1795841767000,
     ""
+   ],
+   "T-4183": [
+    "merged",
+    "on main 11:26 PM ET",
+    1795839994000,
+    "Idris"
    ]
   },
   "nm": {
    "T-4857": "Correct old wording around the tester Pro switch",
-   "T-4183": "The Gallery shows, previews and opens every premade",
    "T-4181": "Widgets refresh on their own and by a tap",
-   "T-5954": "Drop the governor's weekly Fable cap"
+   "T-5954": "Drop the governor's weekly Fable cap",
+   "T-4183": "The Gallery shows, previews and opens every premade"
   },
   "wk": {
    "T-4857": "Idris",
-   "T-4183": "Idris",
    "T-4181": "Idris",
    "T-5954": "Odalys",
+   "T-4183": "Idris",
    "T-5955": "Idris",
    "T-5323": "Idris",
    "T-4867": "Idris",
@@ -600,7 +601,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-28T07:28:49Z",
+  "at": "2026-11-28T07:31:41Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -618,7 +619,7 @@
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1676
+    "parked": 1678
    },
    "cur": [],
    "ld": [
@@ -628,12 +629,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-28T07:28:14Z",
-    "ld": 4.42,
+    "at": "2026-11-28T07:31:17Z",
+    "ld": 7.51,
     "c": 8,
     "sb": 1,
     "dk": [
-     36.0,
+     35.7,
      228.3
     ],
     "ss": [
@@ -645,17 +646,18 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-28T07:21:49Z",
-    "ld": 14.4,
+    "at": "2026-11-28T07:28:58Z",
+    "ld": 5.19,
     "c": 12,
-    "sb": 3,
+    "sb": 4,
     "dk": [
-     342.2,
+     340.3,
      926.4
     ],
     "sn": [
      "itsthecompany-runner",
      "itsthecompany-runner-2",
+     "itsthecompany-runner-3",
      "itsthecompany-runner-4"
     ]
    }
@@ -687,11 +689,11 @@
      "open": true
     }
    },
-   "at": "2026-11-28T07:28:49+00:00"
+   "at": "2026-11-28T07:31:49+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-28T07:28:49+00:00"
+   "at": "2026-11-28T07:31:49+00:00"
   }
  },
  "operators": [
@@ -735,10 +737,10 @@
   "main": 6,
   "lanes": 1,
   "total": 7,
-  "at": "2:28 AM",
+  "at": "2:31 AM",
   "why": "",
-  "at_iso": "2026-11-28T07:28:00+00:00",
+  "at_iso": "2026-11-28T07:31:00+00:00",
   "started": "9:13 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 6, started 9:13 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 2:28 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 6, started 9:13 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 2:31 AM ET</p></section>"
  }
 }

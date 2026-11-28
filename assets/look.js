@@ -299,205 +299,8 @@ if(a==='main'){if(m.five_hour)set(row,'five',m.five_hour,5);if(m.weekly)set(row,
 if(!ms)return;var r=ms[a]||null,p=set(row,'five',r&&r.five,5);set(row,'week',r&&r.week,168);if(p!==null&&p>=100)z++});
 var pz=document.getElementById('lk-pz');if(pz&&ms){pz.hidden=false;pz.querySelector('b').textContent=z}}
 S.onStatus.push(draw);if(S.status&&S.status())draw(S.status())});
-// T-2667 (T-2469, friesevan #41 c6650882035): In flight (T-3284, was Running) follows every status, from lanes.js's sources
-// (the main account's tasks, then each personal row not done), and T-3284 item 3 adds every task the build saw in a queue,
-// a test, Parked or a merge (data-life's init). Each task's stage comes from the build's machine records, else Review for a
-// review task, else Coding. Each card's track is its history (steps(), hist_steps in home_look.py). Four cards (three at
-// 390) before Show more; the choice is kept in localStorage.
-// T-4007 (JeremyFries and friesevan, #41, 2026-11-10): In flight is the first part of the one list under Flow, Queued the
-// second. Every chip filters now (the Merging and Simulators panels they jumped to are off Home), and Queued is a chip
-// too: a stage chip shows that stage's cards alone, Queued the queued rows alone. The order is the sort the block above
-// keeps (K3.sort()); a card in the merge line says where its change stands beside its stage (x.g, merge_words in
-// home_look.py), and first, beside the stage, which retry it is on past a first try (x.y, flow.now()'s retry; T-3996).
-document.addEventListener('DOMContentLoaded',function(){var S=window.CompanySite,box=document.getElementById('lk-run');if(!box)return;
-var f={},L={};try{f=JSON.parse(box.getAttribute('data-faces')||'{}')}catch(e){}try{L=JSON.parse(box.getAttribute('data-life')||'{}')}catch(e){}
-var RUN=['coding','review','testq','testing','mergeq','simq','mergetest','parked','merging','merged'],ST=RUN.slice().reverse(),Q={testq:1,mergeq:1,simq:1,parked:1},
-LB={coding:'Coding',testq:'Test queue',testing:'Testing',review:'Review',mergeq:'Waiting to merge',mergetest:'Merge testing',parked:'Back for a fix',merging:'Merging',simq:'Simulator Queue',merged:'Merged'},
-M3=['mergeq','mergetest','merging'],EX={coding:M3,review:M3,testq:['testing'].concat(M3),testing:M3,mergeq:M3.slice(1),parked:M3,mergetest:['merging'],merging:[],simq:M3.slice(1),merged:[]};
-// T-4007 (JeremyFries, typed 2026-11-10: "the way that it lists the current step of the task ... (6 stages, shared by all
-// tasks, with totals summed) ... should be included in the full task list"): a card's step is shown as This Session
-// shows it: one row of stage columns shared by every card, (#lk-cols; no totals since c6797836020), and on each card
-// a track of marks under those columns (session_page.py's _track; cells() is col_cells in home_look.py). COL folds the
-// build's eight steps into the five of This Session's columns a listed task can be in (CK, its order; CL, its names);
-// MK is the mark where the task waits or was sent back; SN the step inside Being built that is not plain coding; HW
-// the same names for an open card's history in words.
-// T-4094: Simulator Queue between Testing and the Simulator; Retry Queue (was Sent Back) only for a task in its lane's
-// sent-back queue (home_look COLS, HL, retry_queue). T-4129: no Set aside stage.
-var CK=['being_built','waiting_to_merge','mac_tests','sim_queue','iphone_tests','sent_back'],
-COL={coding:'being_built',review:'being_built',testq:'being_built',testing:'mac_tests',mergeq:'waiting_to_merge',merging:'mac_tests',simq:'sim_queue',mergetest:'iphone_tests',parked:'sent_back',merged:'merged'},
-// T-4595 (friesevan #41 c6924443937): the Merge Queue chip's title, so it and Now's split mean the same thing
-MQT='Ready, waiting its turn at the merge script: app changes go in one at a time. Home’s “in line for the merge script” counts these and the one merging now (under Testing).',
-CL={being_built:'Building',waiting_to_merge:'Waiting to merge',mac_tests:'Testing',sim_queue:'Simulator Queue',iphone_tests:'Simulator',sent_back:'Back for a fix',merged:'Merged'},
-MK={waiting_to_merge:'q',sim_queue:'q',sent_back:'f'},SN={review:'review',testq:'waiting for its own test run'},
-HW={coding:'Building',review:'Review',testq:'Waiting for its own test run',testing:'Testing',mergeq:'Waiting to merge',merging:'Testing',simq:'Simulator Queue',mergetest:'Simulator',parked:'Back for a fix',merged:'Merged'};
-var pic={};[].forEach.call(document.querySelectorAll('.lk-team a'),function(a){var m=/cast\/([^/.]+)\.html/.exec(a.getAttribute('href')||''),g=a.querySelector('img');if(m&&g)pic[m[1]]=g.getAttribute('src')});
-var fl='all',items=L.init||[],IN={};
-items.forEach(function(x){if(x.id)IN[x.id]=x});
-// T-4313 (friesevan #41 c6862221970): Merged, its own part above In flight: MG its cards (home_look merged_cards; mgs()
-// from each status), ME how many finished this session past the rows the status names, mbox where they are drawn
-var MG=L.mg||[],ME=+L.me||0,mbox=document.getElementById('lk-mg');MG.forEach(function(x){if(x.id&&!IN[x.id])IN[x.id]=x});
-var CT={};Object.keys(L.cat||{}).forEach(function(k){String(L.cat[k]).split(' ').forEach(function(n){if(n)CT['T-'+n]=k})});  // T-3427: {label: "numbers"}
-function mk(p,t,c,x){var e=document.createElement(t);if(c)e.className=c;if(x)e.textContent=x;p.appendChild(e);return e}
-function cap(s){s=String(s||'');return s.charAt(0).toUpperCase()+s.slice(1)}
-// T-2401 (#41 c6648649825): the model and the effort a lane gives the task, 'Opus high', as home_look.level
-function lv(x){return x.m?[cap(x.m),x.e].filter(Boolean).join(' '):''}
-// T-3318: src_words in home_look.py; '' for an unknown source, never a guess. T-4320 (JeremyFries #41 c6866054849): a
-// personal account is "Evan's Account" (a) or "Jeremy's Account" (b): acn() is personal.py's account_words
-var OWN={a:'Evan',b:'Jeremy'};
-function acn(l,n){n=String(n||OWN[l]||'');return !n?'Account '+String(l).toUpperCase():/\baccount$/i.test(n)?n:n+"'s Account"}
-function sw(s,n){s=String(s||'');var k=/^(plan|key)-([a-z])$/.exec(s);return s==='plan'?'Main plan':s==='api'?'Company API credits':k?(k[1]==='key'?'Key '+k[2].toUpperCase():acn(k[2],n)):''}
-function nm(s){s=String(s||'').replace(/^\s*\[[^\]]*\]\s*/,'').replace(/^\s*T-\d+\s*[:,]?\s*/,'');s=cap(s);return s.length>160?s.slice(0,159).replace(/\s+\S*$/,'')+'…':s}
-var K3=window.CompanySite&&window.CompanySite.lk;  // T-3187: stars, search and open cards (the block above)
-function mins(n){return n>=1440?Math.floor(n/1440)+' d '+Math.floor(n%1440/60)+' h':n>=60?Math.floor(n/60)+' h '+(n%60)+' min':n+' min'}
-function mark(p,s){mk(p,'span',Q[s]||s==='queued'?'lk-qm':'lk-dot')}
-function steps(x){var p=(x.h||[]).map(function(h){return h.slice()}),c=Q[x.s]?'q':'a';
-if(!p.length&&x.s!=='coding'&&x.s!=='review')p=[['coding',null,'d','']];if(x.s==='coding'&&p.length&&p[p.length-1][2]==='f')c='a lb';
-p.push([x.s,x.min>=0?x.min:null,c,'']);var ex=EX[x.s].filter(function(e){return e!=='mergetest'||x.x}).map(function(e){return[e,null,'n','']});
-// T-4019: sent back goes round again: a fix to Coding, a retry to the merge line (home_look.hist_steps)
-if(x.s==='parked'){if(x.k==='retry'){if(ex.length)ex[0][2]='n r'}else ex.unshift(['coding',null,'n r',''])}return p.concat(ex)}
-function hist(c,x){var st=steps(x),k=st.filter(function(h){return h[2].charAt(0)!=='n'}).length,old=Math.max(0,k-6),ol=mk(c,'ol','lk-hist');
-ol.setAttribute('aria-label','Steps, now '+LB[x.s]);if(old)mk(ol,'li','e','+'+old+' earlier');
-var wd=[],nx=[];st.forEach(function(h,j){var li=mk(ol,'li',(h[2]+(j<old?' old':'')).trim(),LB[h[0]]),w=[h[1]==null?'':h[1]<1?'<1 min':mins(h[1]),h[3]].filter(Boolean).join(' · ');if(w)mk(li,'small','',w);
-li.title=LB[h[0]]+(w?' · '+w:'')+({f:' · failed',q:' · waiting now',n:' · expected'}[h[2]]||(h[2].indexOf('a')>=0?' · now':''));
-if(h[2].charAt(0)==='n')nx.push((h[2]==='n r'?'back to ':'')+LB[h[0]]);else wd.push((h[2].indexOf('lb')>=0?'back to ':'')+LB[h[0]]+(w?' '+w:''))});
-mk(c,'p','lk-hw meta',wd.join(' → ')+(nx.length?'; next: '+nx.join(', '):''))}
-// the track: "now" where the task is, "was" where this try has been (a try sent back: the try that failed), "" elsewhere
-function cells(x){var here=COL[x.s],h=x.h||[],f=[],cur,been={};h.forEach(function(s,i){if(s[2]==='f')f.push(i)});
-if(here==='being_built'||x.s==='testing')cur=[];else if(here==='sent_back'&&f.length)cur=h.slice(f.length>1?f[f.length-2]+1:0,f[f.length-1]+1);else cur=f.length?h.slice(f[f.length-1]+1):h;
-cur.forEach(function(s){if(COL[s[0]])been[COL[s[0]]]=1});if(here!=='being_built')been.being_built=1;
-if(here==='merged')been.waiting_to_merge=been.mac_tests=1;if(x.s!=='testing'&&(['mac_tests','sim_queue','iphone_tests','sent_back'].indexOf(here)>=0||been.mac_tests||been.iphone_tests))been.waiting_to_merge=1;
-if(here==='sim_queue')been.mac_tests=1;if(here==='iphone_tests'||been.iphone_tests)been.sim_queue=1;
-// c6797836020: a step the task does not need is blank in its own column (home_look col_cells, needs_sim); T-4094: the
-// Retry Queue is lit only for a task waiting in it now
-// T-4293: the records' marks for the stages behind it (psm) over the inferred ones: brief faint, arrow skipped
-var M=psm(x);return CK.map(function(k){var v=k===here?'now':been[k]&&k!=='sent_back'?'was':'',m=M[k];if(v===''&&k==='sent_back')return 'skip';
-if(m&&v!=='now')v={d:'was',b:'brief',s:'arrow'}[m[0]]||'';return v})}
-// T-4293 (friesevan #41 c6860226572): the build's marks (home_look add_passes, x.p) for the columns behind the card's
-// stage now, and the Simulator's two for work the board files outside App anywhere on the track (home_look pass_marks)
-var PSC=['waiting_to_merge','mac_tests','sim_queue','iphone_tests'],WHYS={"short": "{L}: passed through in {s}, less than the {g} s between two of Home's live readings, so the page may never have shown it.", "short_own": "{L}: passed through in {s}, less than the {g} s between two of Home's live readings, so the page may never have shown it. No test run of its own on the MacBook is on record before hand-in.", "lane": "{L}: passed through between two readings. Its merge shows it was marked ready and took its turn, but no reading of the record caught it waiting.", "turn": "{L}: passed through between two readings. Its iPhone check ran, so it had its turn for a Simulator, but no reading of the record caught it waiting.", "main": "{L}: did not apply. This work went straight to main with no wait on record; a wait for its turn shows here while it lasts and is not recorded.", "own": "{L}: skipped. It sent no test run of its own to the MacBook before hand-in, and no test run at its merge is on record.", "noxc": "{L}: did not apply. Its change touches no app code, so its merge ran no iPhone check.", "cat": "{L}: does not apply. The board files it under {c}, not App, and work outside the app gets no iPhone check.", "none": "{L}: not on record, and no record says why."},BRS=20;
-function psm(x){var here=COL[x.s],o={},i=PSC.indexOf(here),p=x.p||{};
-PSC.forEach(function(k,j){var m=p[k];if(m&&m[1]==='cat'){if(k!==here)o[k]=m}else if(m&&x.s!=='parked'&&(here==='merged'||(i>j&&x.s!=='testing')))o[k]=m});
-if(sim(x)===false)['sim_queue','iphone_tests'].forEach(function(k){if(k!==here&&!o[k])o[k]=['s','cat']});return o}
-// one plain line a stage passed quickly or skipped, neighbours with the same reason on one line (home_look why_lines)
-function andw(a){return a.length>1?a.slice(0,-1).join(', ')+' and '+a[a.length-1]:a[0]}
-function whys(x){var M=psm(x),o=[],l=null;CK.forEach(function(k){var m=M[k];if(!m||m[0]==='d'){l=null;return}
-if(l&&l[0]===m[0]&&l[1]===m[1]&&l[2]===m[2]){o[o.length-1][0].push(CL[k]);return}o.push([[CL[k]],m]);l=m});
-return o.map(function(a){var m=a[1],s=m[2];return String(WHYS[m[1]]||'').replace('{L}',andw(a[0])).replace('{s}',s==null?'':s<1?'under a second':s+' s').replace('{g}',BRS).replace('{c}',String(x.c||'').split(' \u00b7 ')[0]||'another category')})}
-function sim(x){if(x.x)return true;var c=String(x.c||'');return c?c.indexOf('App')===0:null}
-function track(c,x){var here=COL[x.s],t=mk(c,'span','ts-trk'),wd=[],nx=[];t.setAttribute('aria-hidden','true');
-var cs=cells(x);cs.forEach(function(v,j){var i=mk(t,'i');if(v==='now')i.className=MK[here]||'a';else if(v==='was')i.className='d';else if(v==='brief')i.className='b';
-else if(v==='arrow')i.className=cs[j+1]==='arrow'?'s':'s e';else if(v==='skip')i.className='o'});
-steps(x).forEach(function(h,j){var w=[h[1]==null?'':h[1]<1?'<1 min':mins(h[1]),h[3]].filter(Boolean).join(' · ');
-if(h[2].charAt(0)==='n')nx.push([CK.indexOf(COL[h[0]]),j,(h[2]==='n r'?'back to ':'')+HW[h[0]]]);else wd.push((h[2].indexOf('lb')>=0?'back to ':'')+HW[h[0]]+(w?' '+w:''))});
-nx.sort(function(a,b){return a[0]-b[0]||a[1]-b[1]});
-mk(c,'p','lk-hw meta',wd.join(' → ')+(nx.length?'; next: '+nx.map(function(n){return n[2]}).join(', '):''));
-whys(x).forEach(function(w){mk(c,'p','lk-hw meta lk-why',w)});if(x.b)mk(c,'p','lk-hw meta',x.b)}
-// T-4094 (c6804999684): beside the worker, the model and effort only in Building; any other stage says its own fact
-// (home_look fact()); an open card past Building names its build's worker, model and effort (past_html)
-function fact(x){return COL[x.s]==='being_built'?lv(x):x.s==='parked'?(x.f||''):(x.f||x.n||'')}
-// T-3950 (friesevan #41 c6755760889: "Individual tasks can be viewed in the simulator queue or merging panel by clicking
-// an associated link on the (expanded) task, instead"): the stage chips filter In flight and never scroll; an open card
-// whose change waits for or runs on a Simulator, or stands in the merge line, links to the task's own line on This
-// Session (data-sess), its stage columns and history, which session.js opens at #T-n. The link shows on an open card only.
-var GO={simq:'Simulator Queue',mergetest:'Simulator Queue',mergeq:'merge line',merging:'merge line'};
-function goto(c,x){var a,u=(document.getElementById('lk-all')||document.body).getAttribute('data-sess');if(!u||!x.id||!GO[x.s])return;
-a=mk(mk(c,'p','lk-sq meta'),'a','','Open '+x.id+' in the '+GO[x.s]+' on This Session');a.href=u+'#'+encodeURIComponent(x.id)}
-function past(c,x){if(COL[x.s]==='being_built')return;var w=(x.w||[]).filter(function(v){return v&&!/not recorded/.test(v)}).map(cap).join(', '),l=x.m&&!/not recorded/.test(x.m)?lv(x):'';
-mk(c,'p','lk-hw meta lk-past','Building: '+(w?'built by '+w:'worker not recorded')+(l?', '+l:', model not recorded'))}
-function card(x,p){var c=mk(p||box,'div','lk-card lk-run'),r=mk(c,'div','lk-r1'),fs=mk(r,'span','lk-faces'),t,m,rt,sc,col=COL[x.s];c.setAttribute('data-stage',x.s);c.setAttribute('data-col',col);
-c.setAttribute('data-id',x.id||x.t);if(K3&&K3.open(x.id||x.t))c.classList.add('lk-open');
-(x.w||[]).slice(0,2).forEach(function(w){var p=f[String(w).toLowerCase()],g;if(p&&pic[p]){g=mk(fs,'img');g.src=pic[p];g.alt='';g.width=g.height=40}});
-t=mk(r,'span','t');mk(t,'b','lk-tn',x.t);m=mk(t,'span','',[(x.w||[]).filter(Boolean).map(cap).join(', '),fact(x)].filter(Boolean).join(' · '));
-if(x.min>=0){if(m.textContent)m.appendChild(document.createTextNode(' · '));mk(m,'span','lk-nw',mins(x.min))}
-if(x.a){m.appendChild(document.createTextNode(' '));sc=mk(m,'span','lk-tag'+(x.sr?' lk-src':''),x.a);if(x.sr)sc.title='Runs on: '+x.a}
-if(x.c){sc=mk(m,'span','lk-cat',x.c);sc.title='Category: '+x.c}
-rt=mk(r,'span','lk-rt');if(x.id)mk(rt,'span','idb',x.id);if(x.n&&col==='being_built'&&x.n!==HN)mk(rt,'span','lk-nt',x.n);if(K3){K3.star(r,x.id);K3.aria(c)}
-track(c,x);past(c,x);goto(c,x);sc=mk(c,'span','lk-ch lk-stc');if(col==='waiting_to_merge')sc.title=MQT;mark(sc,x.s);sc.appendChild(document.createTextNode(CL[col]));
-m=[x.y>=1?'retry '+x.y:'',SN[x.s],x.n===HN?HN:'',x.g].filter(Boolean).join(' · ');if(m)mk(c,'span','lk-mg',m);if(K3)K3.lin(c,x.id)}
-// the worker a card sorts by: its first, a card with none recorded last
-function who(x){var w=String((x.w||[])[0]||'');return /not recorded/.test(w)?'':w}
-// 'def': starred, then moving work, then work waiting in a line, then held work (PC; T-4007, friesevan #41 c6772135629:
-// held work second let the moving cards fold behind Show more), each the last step first, then the longest in its step;
-// the work set aside, which Home listed in its Merging panel and not here, comes after the held marker (z). As
-// flight_key in home_look.py. 'first' follows the columns, left to right.
-var PC={testq:1,mergeq:1,simq:1,parked:2};
-// T-4094: the record a sort reads (K3.by); Stage is the column, left to right, then the step in it
-function rec(x){var k=CK.indexOf(COL[x.s]);return {stage:(k<0?CK.length:k)*100+RUN.indexOf(x.s),time:x.min>=0?x.min:null,cat:x.c||null,who:who(x)||null,
-created:K3&&K3.tnum?K3.tnum(x.id):null,requested:K3&&K3.rq?K3.rq(x.id):null,started:Date.parse(x.ps||'')||null,retries:x.y||0}}
-function order(a,b){var d=ST.indexOf(a.s)-ST.indexOf(b.s),fa=K3&&K3.fav(a.id)?1:0,fb=K3&&K3.fav(b.id)?1:0,sm=K3&&K3.sort?K3.sort():'def',z=(a.z||0)-(b.z||0);
-return (fb-fa)||(K3&&K3.by?K3.by(rec(a),rec(b)):0)||(sm==='stage'?0:(sm==='def'?(PC[a.s]||0)-(PC[b.s]||0):0)||z||d)||((b.min||0)-(a.min||0))}
-function hit(x){return !K3||K3.match([x.t,x.id,(x.w||[]).join(' '),LB[x.s],CL[COL[x.s]],x.n,x.a,x.g].map(function(s){return s||''}).join(' '))}
-// T-4313 (friesevan #41 c6862221970: "filtering tasks should update the totals displayed everywhere, both next to the
-// section header and on the Stage toggle buttons"): ok() is the search and the filters (category, Requested by); each
-// chip counts its tasks under them (a stage chip's count does not narrow the others), each part's header counts what
-// it shows, and All tasks counts what the chosen chip shows. With no search or filter the counts are as built: Merged's
-// includes the tasks past the rows the status names (ME), Queued's header the board's ready count (data-n).
-function ok(x){return hit(x)&&(!K3||!K3.catok||K3.catok(x.c,x.id))}
-function put(id,n){var e=document.getElementById(id);if(e)e.textContent=n}
-function render(){var flt=document.getElementById('lk-flt'),all={},cnt={},v,c,w,qn=K3&&K3.qn?K3.qn():0,on=!!(K3&&K3.fon&&K3.fon()),qv=on&&K3.qv?K3.qv():qn,
-pm=document.getElementById('lk-pm'),pf=document.getElementById('lk-pf'),pq=document.getElementById('lk-pq'),vf=items.filter(ok),vm=MG.filter(ok),nmg=on?vm.length:MG.length+ME,od;
-items.forEach(function(x){var k=COL[x.s];all[k]=(all[k]||0)+1});if(MG.length+ME)all.merged=MG.length+ME;
-vf.forEach(function(x){var k=COL[x.s];cnt[k]=(cnt[k]||0)+1});cnt.merged=nmg;cnt.queued=qv;
-if(fl!=='all'&&!(fl==='queued'?qn:all[fl]))fl='all';cnt.all=vf.length+qv+nmg;
-// the chips filter, each with its count as before T-3996 (T-4007, friesevan #41 c6772135629); T-4313: Merged among
-// them, and a chip opens the part it shows if it was folded
-if(flt){flt.textContent='';[['all','All']].concat(qn?[['queued','Queued']]:[]).concat(CK.concat(['merged']).filter(function(k){return all[k]}).map(function(k){return[k,CL[k]]})).forEach(function(c){
-var b=mk(flt,'button','lk-ch');b.type='button';if(c[0]==='waiting_to_merge')b.title=MQT;b.setAttribute('aria-pressed',fl===c[0]);b.onclick=function(){var d;fl=c[0];render();d=document.getElementById(fl==='queued'?'lk-qd':fl==='merged'?'lk-mgd':fl==='all'?'':'lk-fd');if(d)d.open=true};
-if(c[0]!=='all')mk(b,'span',c[0]==='queued'||MK[c[0]]?'lk-qm':'lk-dot');b.appendChild(document.createTextNode(c[1]+' '));mk(b,'small','',String(cnt[c[0]]||0))})}
-// one part alone under a chip; the columns left to right (the Stage sort, ascending) put Queued, which comes before the
-// first of them, on top and Merged, the last stage, at the bottom
-if(pm)pm.hidden=fl!=='all'&&fl!=='merged';if(pf)pf.hidden=fl==='queued'||fl==='merged';if(pq)pq.hidden=fl!=='all'&&fl!=='queued';
-od=(K3&&K3.sort&&K3.sort()==='stage'&&K3.dir&&K3.dir()>0?[pq,pf,pm]:[pm,pf,pq]).filter(Boolean);
-if(od.length>1&&od.every(function(e){return e.parentNode===od[0].parentNode})&&od.some(function(e,i){return i&&od[i-1].nextElementSibling!==e}))od.forEach(function(e){e.parentNode.appendChild(e)});
-var sq=!!(K3&&K3.q());box.textContent='';v=vf.filter(function(x){return fl==='all'||COL[x.s]===fl}).sort(order);v.forEach(function(x){card(x)});LKFT.group(box);
-if(!items.length)mk(box,'p','','Nothing in flight.');else if(!v.length&&(sq||on))mk(box,'p','meta','No task in flight matches.');
-if(mbox){mbox.textContent='';w=vm.slice().sort(order);w.forEach(function(x){card(x,mbox)});LKFT.group(mbox);
-if(!MG.length)mk(mbox,'p','','Nothing merged this session yet.');else if(!w.length)mk(mbox,'p','meta','No merged task matches.')}
-c=document.getElementById('lk-mg-m');if(c){c.hidden=!ME;c.textContent='and '+ME+' merged earlier this session, not listed here'}
-put('lk-run-n',v.length);put('lk-mg-n',nmg);c=document.getElementById('lk-q-n');if(c)c.textContent=on?qv:(c.getAttribute('data-n')||qv);
-put('lk-all-n',cnt[fl]);if(K3&&K3.cnt)K3.cnt()}
-// T-2833: the idle alarm (no work session for 15+ minutes while work is allowed) follows every status too.
-function idle(st){var q=st.idle,sf=document.getElementById('lk-sf'),ie=document.getElementById('lk-idle');if(sf&&!ie){ie=document.createElement('p');ie.id='lk-idle';ie.className='meta lk-idle';sf.insertBefore(ie,sf.firstChild)}
-if(ie){if(q&&q.why&&q.since){var mn=Math.max(0,Math.round((Date.now()-Date.parse(q.since))/6e4));ie.textContent='No work session for '+(mn>=60?Math.floor(mn/60)+' h '+(mn%60)+' m':mn+' min')+' while work is allowed: '+q.why+'.'+(q.healed&&q.healed.length?' Done: '+q.healed.join('; ')+'.':'');ie.hidden=false}else ie.hidden=true}}
-// T-4313: Merged's cards from each status: the cards at the Merged stage (U), then the tasks the status says finished this
-// session (tasks.fin, T-3190's list, newest first), each once, drawn as In flight's; a finished task's worker, model,
-// history and category are the build's when it saw the task (IN), its time since the merge the live stages' (LS)
-function mgs(st,u,LS,now){var d=(st.session||{}).active?(st.tasks||{}).fin:null,o=u.filter(function(x){return x.s==='merged'}),sn={};
-o.forEach(function(x){sn[x.id||x.t]=1});ME=d?Math.max(0,(+d.n||0)-(d.rows||[]).length):0;
-(d&&d.rows||[]).forEach(function(a){var id=String(a&&a[0]||''),b,v,m=-1;if(!id||sn[id])return;sn[id]=1;b=IN[id]||{};v=LS&&LS[id];
-if(v&&v[0]==='merged'&&v[2])m=Math.max(0,Math.round((now-v[2])/6e4));else if(b.s==='merged'&&b.min>=0)m=b.min+Math.max(0,Math.round((now-(L.at||now))/6e4));
-o.push({id:id,t:nm(a[1])||nm((L.nm||{})[id])||snm(st,id)||b.t||'Name not recorded',w:swk(st,id,b.w),m:b.m||'model not recorded',e:b.e||'',min:m,s:'merged',n:'',h:b.h||[],x:b.x,p:b.p,c:b.c||CT[id]||'',ps:b.ps||''})});
-return o}
-// T-4095 (friesevan #41 c6809316957): the status's stg, the live stages (live_stage.py, read every minute with the same rule
-// as the build, home_look stage_map), wins over the build's L.st once it is newer than the build; a stage it reads that
-// it no longer names has ended (LK). mg(): Merged holds for a row begun before the commit, of the commit's worker.
-function lv0(st){var g=st&&st.stg;return g&&g.s&&Date.parse(g.at)>=(L.at||0)?g.s:null}
-// T-4162 (friesevan #41 c6826068202): the status's stg.nm names each task it lists (live_stage.add_names, task_names);
-// the build's L.nm names only the tasks the build saw, so T-3807, handed out after it, read "Name not recorded".
-function snm(st,id){var g=st&&st.stg;return nm(g&&g.nm&&g.nm[id])}
-// T-4225 (friesevan #41 c6840224155): and stg.wk names each one's worker (live_stage.add_workers): a card the build had
-// not seen, T-4116 in its land at 7:38 PM 11-12, read "worker not recorded". w: the build's, kept when it names one.
-function swk(st,id,w){var g=st&&st.stg,k=g&&g.wk&&g.wk[id];return w&&w[0]&&!/not recorded/.test(w[0])||!k?w||['worker not recorded']:[k]}
-var LK={testq:1,testing:1,mergeq:1,simq:1,mergetest:1,merging:1,merged:1};
-// T-4308: a lane task its session has committed stays Building while the session runs (home_look HELD_NOTE)
-var HN='committed; it joins the merge line when its session ends';
-function sg(LS,id,r){var s=LS&&LS[id]||null,b=(L.st||{})[id],a;if(!s&&b&&!(LS&&LK[b[0]]))s=b;if(s&&s[0]==='merged'){a=Date.parse(r.at||'');if(!(a<s[2])||(s[3]&&r.w&&String(s[3]).toLowerCase()!==String(r.w).toLowerCase()))s=null}return s}
-function draw(st,isPub){var ml=S.lane.main(st,isPub),l=ml.concat(S.lane.rows(st)),seen={},u=[],now=Date.now(),o={},wk,ms=sw((st.tasks||{}).src),LS=lv0(st);
-l.forEach(function(r){var t=String(r.t||r.task||''),id=r.task||(t.match(/\bT-\d+/)||[''])[0],k=id||nm(t),s=sg(LS,id,r),m,b=IN[id]||{},ln=/^([ab])\d*$/.exec(r.lane||''),mn=ml.indexOf(r)>=0,rs=mn?ms:sw(r.src||(ln?'plan-'+ln[1]:''),r.n);if(s&&s[0]==='parked'&&r.at&&Date.parse(r.at)>s[2])s=[r.k==='review'?'review':'coding','Fix after a failed merge'];if(!s&&r.d)s=[r.k==='review'?'review':'coding',HN];if(r.w&&!r.d)o[String(r.w).toLowerCase()]=1;if(!k||seen[k])return;seen[k]=1;
-m=r.at?Math.round((now-Date.parse(r.at))/6e4):NaN;u.push({id:id,t:nm(r.t||r.task)||nm((L.nm||{})[id])||snm(st,id)||'Name not recorded',w:r.w?[r.w]:swk(st,id,b.w),m:r.m||b.m||'model not recorded',e:r.e&&r.m?r.e:r.m?'':b.e||'',min:m>=0?m:-1,s:s?s[0]:r.k==='review'?'review':'coding',n:s?s[1]:'',
-a:rs||(mn?'Main':ln?acn(ln[1]):''),sr:rs?1:0,h:b.h,x:b.x,p:b.p,c:b.c||CT[id]||'',g:b.g||'',y:b.y||0,ps:b.ps||''})});
-(L.init||[]).forEach(function(x){var v;if(x.s==='coding'||x.s==='review'||seen[x.id||x.t])return;if(LS&&x.id&&LK[x.s]){v=LS[x.id];if(!v||v[0]==='merged')return;x=Object.assign({},x,{s:v[0],n:v[1]})}if(x.id&&/^Name not recorded/i.test(x.t||'')&&snm(st,x.id))x=Object.assign({},x,{t:snm(st,x.id)});if(x.id)x=Object.assign({},x,{w:swk(st,x.id,x.w)});seen[x.id||x.t]=1;u.push(x)});  // T-3284 item 3
-if(LS)Object.keys(LS).forEach(function(id){var v=LS[id],b=IN[id]||{};if(seen[id]||v[0]==='merged')return;seen[id]=1;  // T-4095: a stage the build had not seen
-u.push({id:id,t:nm((L.nm||{})[id])||snm(st,id)||'Name not recorded',w:swk(st,id,b.w),m:b.m||'model not recorded',e:b.e||'',min:v[2]?Math.max(0,Math.round((now-v[2])/6e4)):-1,s:v[0],n:v[1],h:b.h,x:b.x,p:b.p,c:b.c||CT[id]||'',g:b.g||'',y:b.y||0,ps:b.ps||''})});
-MG=mgs(st,u,LS,now);items=u.filter(function(x){return x.s!=='merged'});if(K3&&K3.requeue)K3.requeue();render();wk=document.getElementById('lk-working');if(wk)wk.textContent=Object.keys(o).length+' working';idle(st)}
-// T-3316: a tree's link to an In flight card shows the whole list, then hands back the card
-// T-4313: and to a Merged card, in its own box (go() opens its part)
-if(K3){K3.has=function(i){return items.some(function(x){return K3.id(x.id)===i})};K3.hm=function(i){return MG.some(function(x){return K3.id(x.id)===i})};
-K3.all=function(){if(fl!=='all'){fl='all';render()}};K3.run=function(i){var b=K3.has(i)?box:K3.hm(i)?mbox:null;if(!b)return null;fl='all';render();
-return [].filter.call(b.querySelectorAll('.lk-run'),function(c){return K3.id(c.getAttribute('data-id'))===i})[0]||null}}
-render();if(K3)K3.on(render);if(S&&S.onStatus&&S.lane){S.onStatus.push(draw);if(S.status&&S.status())draw(S.status(),true)}});
-// T-2940: Blocked or waiting (T-3735) folds behind a button at the top of its list: rows past data-max carry lk-fold.
-// T-4287: Queued no longer folds; it scrolls in its box.
+// T-5837 (Odalys's review, 11-27): In flight's script (T-2667 to T-4747) left with the old task list; Sessions now's
+// redraw is tools/site/home_sessions.py JS, which also keeps the Team row's count of workers at work.
 // T-4232 (friesevan #41 c6841754758): Home's Mode block (mode_html), first on the page. Each account's mode follows the
 // live status (lock_in.modes, through lockin.js's S.modes). A token holder picks an account (All accounts first) and a
 // mode; a second tap within 5 seconds posts MODE <account> <mode> on the Chat issue through lockin.js's S.modeSet, the
@@ -586,19 +389,24 @@ function ag(id,t){var e=document.getElementById(id);if(e&&t){e.textContent=ago(t
 function fig(h,lab,v){[].forEach.call(document.querySelectorAll('.lk-bub a[href="#'+h+'"] .lk-f > span'),function(s){var b=s.querySelector('b');if(b&&s.lastChild&&s.lastChild.nodeValue===lab)b.textContent=v})}
 function words(w){var r=w.n-w.in_line-w.parked,ln=document.getElementById('lk-now'),nr=ln&&ln.getAttribute('data-road')==='merge.sh';if([w.n,w.in_line,w.parked].some(function(x){return typeof x!=='number'}))return 'parts not recorded';
 return w.in_line.toLocaleString('en-US')+(nr?' in line for the merge script, ':' in the merge queue, ')+w.parked.toLocaleString('en-US')+(nr?' sent back for a fix':' sent back to retry')+(r>0?', '+r+' in neither part':r<0?' (the parts come to '+(w.in_line+w.parked)+', '+(-r)+' over the count)':'')}
+// T-5837 (Odalys's review, 11-27): on the merge script's road the figure leaves out work sent back for a fix, as the
+// build's (home_flow.landing and now_words): it never says more is waiting than Sessions now's merge turn line
+function lw(w,nr){if(typeof w.n!=='number')return null;if(!nr||!w.n)return w.n;return typeof w.parked==='number'?Math.max(0,w.n-w.parked):null}
+function nwd(w,nr){var r;if(!nr)return words(w);if([w.n,w.in_line,w.parked].some(function(x){return typeof x!=='number'}))return 'parts not recorded';r=w.n-w.in_line-w.parked;
+return w.in_line.toLocaleString('en-US')+' in line for the merge script'+(r>0?', '+r+' in neither part':'')+'; '+w.parked.toLocaleString('en-US')+' sent back for a fix, not counted'}
 // T-5454: the per-queue figures follow the same status (its by: merge_limit's queues of the same row); a queue the row
 // lacks reads "not known", and the count in both is app + other less the one count
 function qk(ln,w){var by=w.by,a,o,e;if(!by||typeof by!=='object')return;[].forEach.call(ln.querySelectorAll('.lk-nk[data-k]'),function(s){var q=by[s.getAttribute('data-k')]||{},b=s.querySelector('b'),i=s.querySelector('.lk-gg i'),u=s.querySelector('.lk-gg u'),m=s.querySelector('small'),top;
 if(!b)return;if(typeof q.n!=='number'){b.textContent='not known';b.className='lk-nr';if(i)i.parentNode.hidden=true;return}b.textContent=q.n;b.className='';
 if(i&&u&&q.limit>0){i.parentNode.hidden=false;top=Math.max(q.n,q.limit)*1.15;i.style.width=(q.n/top*100).toFixed(0)+'%';u.style.left=(q.limit/top*100).toFixed(0)+'%';i.parentNode.className='lk-gg'+(q.n>=q.limit?' over':'')}if(m&&q.limit!=null)m.textContent='of '+q.limit});
 a=(by.app||{}).n;o=(by.other||{}).n;e=ln.querySelector('.lk-nb');if(e&&typeof a==='number'&&typeof o==='number'){e.textContent=Math.max(0,a+o-w.n)+' in both';e.hidden=a+o-w.n<=0}}
-function wait(w){var ln=document.getElementById('lk-now'),c,g,b,i,u,sm,top,when,old;if(!ln)return;c=ln.querySelector('.lk-nc');g=ln.querySelector('.lk-gate');
+function wait(w){var ln=document.getElementById('lk-now'),c,g,b,i,u,sm,top,when,old,nr,v;if(!ln)return;c=ln.querySelector('.lk-nc');g=ln.querySelector('.lk-gate');nr=ln.getAttribute('data-road')==='merge.sh';v=lw(w,nr);
 if(g){g.className='lk-gate '+(w.open?'ok':'held');g.textContent='';mk(g,'span','lk-wd',w.open?'New work open':'New work held');mk(g,'span','lk-ws',w.open?'Open':'Held').setAttribute('aria-hidden','true')}
-if(c&&typeof w.n==='number'){b=c.querySelector('b');if(b)b.textContent=w.n;sm=c.querySelector('.lk-np');if(sm)sm.textContent=words(w);
+if(c&&typeof w.n==='number'&&v!=null){b=c.querySelector('b');if(b)b.textContent=v;sm=c.querySelector('.lk-np');if(sm)sm.textContent=nwd(w,nr);
 i=c.querySelector('.lk-gg i');u=c.querySelector('.lk-gg u');if(i&&u&&w.limit>0){top=Math.max(w.n,w.limit)*1.15;i.style.width=(w.n/top*100).toFixed(0)+'%';u.style.left=(w.limit/top*100).toFixed(0)+'%';i.parentNode.className='lk-gg'+(w.n>=w.limit?' over':'')}
-sm=c.querySelector(':scope > small');if(sm&&w.limit!=null)sm.textContent='limit '+w.limit;qk(ln,w)}
+sm=c.querySelector(':scope > small');if(sm&&w.limit!=null)sm.textContent='limit '+w.limit+(nr?' counts both':'');qk(ln,w)}
 when=ln.querySelector('.lk-nwhen');if(when&&w.counted){old=Date.now()-Date.parse(w.counted)>18e5;when.className='lk-nwhen'+(old?' late':'');when.textContent='';mk(when,'span','lk-wd','counted ');
-when.appendChild(document.createTextNode(et(w.counted)+' ET, '+ago(w.counted)));ln.title=(typeof w.n==='number'?w.n+' tasks have finished work waiting to land: '+words(w)+(w.limit!=null?'; new work stops at '+w.limit:''):'The count of tasks waiting to land could not be read')+'. Counted '+et(w.counted)+' ET, read '+et(w.at)+' ET.'}}
+when.appendChild(document.createTextNode(et(w.counted)+' ET, '+ago(w.counted)));ln.title=(typeof w.n==='number'?w.n+' tasks have finished work '+(nr?'not on main':'waiting to land')+': '+words(w)+(w.limit!=null?'; new work stops at '+w.limit:''):'The count of tasks waiting to land could not be read')+'. Counted '+et(w.counted)+' ET, read '+et(w.at)+' ET.'}}
 function draw(st){var h=(st&&st.hc)||{},m=(st&&st.meter)||{},e;
 if(h.wait&&nw(h.wait.at))L.wait=h.wait;if(h.bl&&nw(h.bl.at))L.bl=h.bl;
 if(m.five_hour&&nw(m.five_hour.read_at))L.use=m;
@@ -662,3 +470,55 @@ if(!isNaN(x)){m.appendChild(document.createTextNode(' · '));mk(m,'span','lk-nw'
 if(r.a){m.appendChild(document.createTextNode(' '));a=mk(m,'span','lk-tag'+(r.sr?' lk-src':''),r.a);if(r.sr)a.title='Runs on: '+r.a}});
 if(!o.length)mk(box,'p','meta lk-opz','None running now.');n.textContent=o.length;sec.hidden=false}
 S.onStatus.push(draw);if(S.status&&S.status())draw(S.status())});
+
+// T-5837: Home's sessions block, redrawn from the live status's "fw" (tools/site/home_sessions.py body_html's rules)
+document.addEventListener('DOMContentLoaded',function(){var S=window.CompanySite,box=document.getElementById('ss-body'),sec=document.getElementById('lk-ss');
+if(!S||!S.onStatus||!box||!sec)return;var NM={},LN={};try{NM=JSON.parse(sec.getAttribute('data-nm')||'{}')}catch(e){}
+var ST=['Up next','Building','In review','Waiting to merge','Merging','Merged'],SW={building:'Building',review:'In review',waiting:'Waiting to merge',merging:'Merging',held:'Held'},
+AC=[['main','Main account']].concat(['a','b'].map(function(l){return [l,(NM.a||{})[l]||'Account '+l.toUpperCase()]})),HW={wait:'{n} has waited {m} for the merge turn',turn:'{n} has held the merge turn for {m}',held:'{n} has been held for {m}'};
+function e(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#x27;')}
+function clk(s){return new Date(s*1e3).toLocaleTimeString('en-US',{timeZone:'America/New_York',hour:'numeric',minute:'2-digit'}).replace(/[  ]/g,' ')+' ET'}
+function dtd(s){var p={};new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'short',month:'short',day:'numeric'}).formatToParts(new Date(s*1e3)).forEach(function(x){p[x.type]=x.value});return p.weekday+' '+p.month+' '+p.day+', '+clk(s)}
+// T-3163: a number is never shown without a name: the build's (data-nm), else the live status's (stg.nm), else the words
+function tn(i){return (NM.t||{})[i]||LN[i]||'Name not recorded'}
+function sp(m){m=Math.max(0,Math.floor(m));if(m<60)return m+' min';if(m<1440)return Math.floor(m/60)+' h'+(m%60?' '+(m%60)+' min':'');var d=Math.floor(m/1440),h=Math.floor(m%1440/60);return d+' day'+(d==1?'':'s')+(h?' '+h+' h':'')}
+function mn(a,b){return Math.floor((a-b)/60)}
+function fn(i){var f=(NM.f||{})[i];if(f)return (f[0]+' '+f[1]).trim();return i+' '+tn(i)}
+function wo(k){var p=k.split('/');return [p[0],p.slice(1).join('/')]}
+function pl(n,w,ws){return n+' '+(n==1?w:(ws||w+'s'))}
+function tl(t,at){if(!t)return 'Merge turn: not read.';var o,h=t[0],s=t[1],w=t[2],lk=t[3];
+if(h){var hn=h=='?'?'a merge run':fn(h);o=s?'Merge turn: '+hn+' has held it for '+sp(mn(at,s)):'Merge turn: '+hn+' holds it'}
+else if(lk){o='Merge turn: free; '+(lk[0]=='?'?'a merge with no app change':fn(lk[0]))+' is merging, '+sp(mn(at,lk[1]))+' so far'}else o='Merge turn: free';
+o+=w.length?'; waiting: '+w.map(function(x){return (x[0]=='?'?'a merge run':fn(x[0]))+(x[1]?' for '+sp(mn(at,x[1])):'')}).join(', '):'; nobody waiting';return o+'.'}
+function hl(x){if(!x)return 'Largest hold now: none.';var k=wo(x[1]),n=(x[1]==''||x[1]=='?')?'a merge run':fn(k[0])+(k[1]?' ('+k[1]+"'s session)":'');
+return 'Largest hold now: '+HW[x[0]].replace('{n}',n).replace('{m}',sp(x[2]))+'.'+(x[3]>1?' One of '+x[3]+' holds now.':'')}
+function row(r,at){var i=r[0],g=r[1],s=r[2],w;if(g==5)w=s?'merged '+clk(s):'merged';else if(g&&s)w=ST[g].toLowerCase()+' for '+sp(mn(at,s));else w=ST[g].toLowerCase();
+w+=(r[3]&&g<5?' · built':'')+(r[4]?' · '+pl(r[4],'test job')+' queued or running':'');
+return '<li class="ss-r"><span class="ss-n"><b>'+e(i)+'</b> '+e(tn(i))+'</span><span class="ss-t s'+g+'" role="img" aria-label="'+e(ST[g])+'"></span><small class="ss-w">'+e(w)+'</small></li>'}
+function qrow(i){return '<li class="ss-r"><span class="ss-n"><b>'+e(i)+'</b> '+e(tn(i))+'</span><span class="ss-t sq" role="img" aria-label="Queued"></span><small class="ss-w">queued</small></li>'}
+function cw(ss){if(!ss.length)return 'no feature in hand';var by={};ss.forEach(function(x){by[x[2]]=(by[x[2]]||0)+1});
+return pl(ss.length,'feature')+' in hand: '+Object.keys(SW).filter(function(k){return by[k]}).map(function(k){return by[k]+' '+SW[k].toLowerCase()}).join(', ')}
+function more(n){return n?'<li class="ss-r ss-0">and '+pl(n,'more step')+'</li>':''}
+function sess(x,at){var k=wo(x[1]),hd=SW[x[2]]+(x[3]?' for '+sp(mn(at,x[3])):''),rs=x[4].map(function(r){return row(r,at)}).join('')||'<li class="ss-r ss-0">No step in hand now.</li>';
+return '<div class="ss-f" data-k="'+e(x[1])+'"><p class="ss-fh"><b>'+e(fn(k[0]))+'</b>'+(k[1]?'<span class="ss-wk">'+e(k[1])+"'s session</span>":'')+'<span class="ss-st st-'+x[2]+'">'+e(hd)+'</span>'
++(x[6]?'<span class="ss-st">'+pl(x[6],'test job')+' queued or running</span>':'')+'</p><ol class="ss-steps">'+rs+more(x[5])+'</ol></div>'}
+function body(fw){var at=fw.at,o=['<p class="ss-asof">Read '+e(clk(at))+'.</p>','<p class="ss-line" id="ss-turn">'+e(tl(fw.t,at))+'</p>','<p class="ss-line ss-hold" id="ss-hold">'+e(hl(fw.x))+'</p>',
+'<div class="ss-key" aria-hidden="true"><span></span><span class="ss-kt">'+ST.map(function(s){return '<i>'+e(s)+'</i>'}).join('')+'</span><span></span></div>'],mh=fw.mh||[0,0,0];
+AC.forEach(function(a){var ss=(fw.s||[]).filter(function(x){return x[0]==a[0]}),nt='';
+if(a[0]=='main'&&!mh[0])nt='Its record of features in hand could not be read.';else if(a[0]=='main'&&mh[2])nt=mh[1]?'Its record of features in hand was last written '+dtd(mh[1])+', more than 6 hours ago.':'Its record of features in hand is not dated.';
+else if(a[0]!='main'&&!fw.pr)nt='Who is at work on it could not be read.';
+o.push('<div class="ss-acc" data-acct="'+a[0]+'"><h3>'+e(a[1])+'<small>'+e(cw(ss))+'</small></h3>'+(nt?'<p class="meta">'+e(nt)+'</p>':'')+ss.map(function(x){return sess(x,at)}).join('')+'</div>')});
+var q=fw.q,qs;if(q==null)qs='<p class="meta">The queue could not be read.</p>';else if(!q.length)qs='<p class="meta">No feature is queued.</p>';
+else qs=q.map(function(x,k){var f=(NM.f||{})[x[0]],ac='';AC.forEach(function(a){if(f&&f[2]==a[0])ac=a[1]});var rs=x[1].map(qrow).join('')+more(x[2]);
+return '<div class="ss-f ss-qf"><p class="ss-fh"><span class="ss-qn">'+(k+1)+'</span><b>'+e(fn(x[0]))+'</b>'+(ac?'<span class="ss-wk">'+e(ac)+'</span>':'')+(x[3]?'<span class="ss-st">waits for '+e(fn(x[3]))+' to finish</span>':'')+'</p>'+(rs?'<ol class="ss-steps">'+rs+'</ol>':'')+'</div>'}).join('');
+o.push('<div class="ss-acc ss-q"><h3>Queued next<small>in the order they start</small></h3>'+qs+'</div>');
+var ms=fw.m||[];if(ms.length)o.push('<div class="ss-acc ss-m"><h3>Merged today<small>'+pl(ms.length,'merge')+'</small></h3><ol class="ss-ml">'+ms.filter(function(x){return x[1]}).map(function(x){return '<li><span class="ss-mt">'+e(clk(x[1]))+'</span><span>'+e(fn(x[0]))+(x[2]>=60?'<small> waited '+e(sp(Math.floor(x[2]/60)))+' for the turn</small>':'')+'</span></li>'}).join('')+'</ol></div>');
+else o.push('<div class="ss-acc ss-m"><h3>Merged today<small>none yet</small></h3></div>');return o.join('')}
+function hfig(){var x=document.getElementById('ss-holdfig');return x}
+// the Team row's count of workers at work, which the old In flight list kept (home_look's build rule: each worker once,
+// over the main account's running tasks and the personal sessions not done)
+function wk(st,isPub){var e=document.getElementById('lk-working'),o={},l;if(!e||!st||!st.tasks)return;
+try{l=S.lane?S.lane.main(st,isPub).concat(S.lane.rows(st)):(st.tasks.run||[])}catch(x){l=st.tasks.run||[]}
+l.forEach(function(r){if(r&&r.w&&!r.d)o[String(r.w).toLowerCase()]=1});e.textContent=Object.keys(o).length+' working'}
+function draw(st,isPub){wk(st,isPub);if(st&&st.stg&&st.stg.nm)LN=st.stg.nm;var fw=st&&st.fw;if(!fw||!fw.at||(S.lastFw&&S.lastFw>fw.at))return;S.lastFw=fw.at;box.innerHTML=body(fw);var f=hfig();if(f)f.textContent=fw.x?sp(fw.x[2]):'none'}
+S.ssBody=body;S.onStatus.push(draw);if(S.status&&S.status())draw(S.status())});

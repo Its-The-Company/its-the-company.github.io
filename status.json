@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-28T13:22:34.442683+00:00",
+ "at": "2026-11-28T13:25:38.622538+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -83,7 +83,7 @@
    "task": "[build] T-4183 fix run lock",
    "model": "fable",
    "started": "2026-11-28T13:09:22.193Z",
-   "seconds": 792,
+   "seconds": 976,
    "finished": null
   },
   {
@@ -91,7 +91,7 @@
    "task": "[build] T-4188 location test run",
    "model": "",
    "started": "2026-11-28T13:09:32.138Z",
-   "seconds": 782,
+   "seconds": 966,
    "finished": null
   },
   {
@@ -99,7 +99,7 @@
    "task": "[build] T-4190 store and token fixes",
    "model": "",
    "started": "2026-11-28T13:09:41.239Z",
-   "seconds": 773,
+   "seconds": 957,
    "finished": null
   },
   {
@@ -107,7 +107,7 @@
    "task": "[review] T-5953",
    "model": "",
    "started": "2026-11-28T13:09:48.004Z",
-   "seconds": 766,
+   "seconds": 950,
    "finished": null
   }
  ],
@@ -165,7 +165,7 @@
   "week_pct": 46.79,
   "usage_pct": 43.0,
   "work_pct": 99.0,
-  "read_at": "2026-11-28T13:22:00+00:00",
+  "read_at": "2026-11-28T13:25:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -227,7 +227,7 @@
  "lock_in": {
   "on": false,
   "pool": 4,
-  "at": "2026-11-28T08:22:00-05:00",
+  "at": "2026-11-28T08:25:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -238,7 +238,7 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Double Spread: past the week's halfway point with room left, so twice the even pace until the limit or the reset; the machine allows 8 (at its floor: load 24.0 a core is over 10)",
+  "why": "Double Spread: past the week's halfway point with room left, so twice the even pace until the limit or the reset; the machine allows 8 (held: too few lands in 3 hours to judge a raise)",
   "n": 4,
   "at": "2026-11-28T08:06:40.676779-05:00"
  },
@@ -468,11 +468,11 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-28T13:22:34Z",
+  "at": "2026-11-28T13:25:21Z",
   "s": {
-   "T-4190": [
-    "mergetest",
-    "iPhone tests on the MacBook",
+   "T-5797": [
+    "testing",
+    "Mac Mini \u00b7 test",
     null
    ],
    "T-4183": [
@@ -495,20 +495,20 @@
    ]
   },
   "nm": {
-   "T-4190": "Settings and Pro: buy, restore, themes",
+   "T-5797": "Widgets animate smoothly within what Apple allows",
    "T-4183": "The Gallery shows, previews and opens every premade",
    "T-4181": "Widgets refresh on their own and by a tap",
    "T-5953": "Draw Home's Efficiency numbers as graphs"
   },
   "wk": {
-   "T-4190": "Idris",
+   "T-5797": "Idris",
    "T-4183": "Idris",
    "T-4181": "Idris",
    "T-5953": "Maren"
   }
  },
  "ln": {
-  "at": "2026-11-28T13:22:34Z",
+  "at": "2026-11-28T13:25:21Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -526,7 +526,7 @@
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1330
+    "parked": 1333
    },
    "cur": [],
    "ld": [
@@ -536,8 +536,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-28T13:21:44Z",
-    "ld": 12.26,
+    "at": "2026-11-28T13:24:35Z",
+    "ld": 7.51,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -551,18 +551,15 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-28T13:20:27Z",
-    "ld": 2.72,
+    "at": "2026-11-28T13:23:25Z",
+    "ld": 4.28,
     "c": 12,
-    "sb": 2,
+    "sb": 0,
     "dk": [
-     337.0,
+     340.2,
      926.4
     ],
-    "sn": [
-     "itsthecompany-runner-2",
-     "itsthecompany-runner-3"
-    ]
+    "sn": []
    }
   }
  },
@@ -574,7 +571,7 @@
    "parked": 5,
    "open": true,
    "mq": false,
-   "counted": "2026-11-28T13:12:49+00:00",
+   "counted": "2026-11-28T13:23:15+00:00",
    "by": {
     "app": {
      "n": 3,
@@ -592,15 +589,15 @@
      "open": true
     }
    },
-   "at": "2026-11-28T13:22:34+00:00"
+   "at": "2026-11-28T13:25:38+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-28T13:22:20+00:00"
+   "at": "2026-11-28T13:25:27+00:00"
   }
  },
  "fw": {
-  "at": 1795872086,
+  "at": 1795872333,
   "s": [
    [
     "main",
@@ -689,7 +686,7 @@
      ]
     ],
     0,
-    1
+    0
    ],
    [
     "main",
@@ -755,7 +752,7 @@
      ]
     ],
     3,
-    1
+    0
    ],
    [
     "main",
@@ -1061,7 +1058,7 @@
   "x": [
    "held",
    "T-4191",
-   3391,
+   3395,
    5
   ]
  },
@@ -1112,10 +1109,10 @@
   "main": 4,
   "lanes": 2,
   "total": 6,
-  "at": "8:22 AM",
+  "at": "8:25 AM",
   "why": "",
-  "at_iso": "2026-11-28T13:22:00+00:00",
+  "at_iso": "2026-11-28T13:25:00+00:00",
   "started": "8:06 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 4, started 8:06 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 8:22 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 4, started 8:06 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 8:25 AM ET</p></section>"
  }
 }

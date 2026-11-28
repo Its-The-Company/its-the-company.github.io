@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; base-uri 'none'; form-action 'none'">
+<meta name="robots" content="noindex">
+<title>The watercolor wash, live (proposal, not approved)</title>
+<!-- T-5860, Maren, 2026-11-26. Step 5 of ops/plans/new-look-directions.md. PROPOSAL ONLY: Paper and Studio stay the
+     app's look (creative/approved.md item 9) until the Investors approve a direction. Drawn in code by wash.js, a port
+     of pywidget/docs/design/new-look/wash.py; no image, no font file, no outside library, no network. -->
+<style>
+:root{--ground:#F8F3EC;--surface:#FFFDF9;--fill:#F0E7DC;--line:#E5D9CB;--text:#231C17;--text2:#6A5D52;
+  --accent:#A6452A;--on-accent:#FFFFFF}
+@media (prefers-color-scheme:dark){:root{--ground:#141210;--surface:#1F1C19;--fill:#2B2724;--line:#36312C;
+  --text:#F5EFE8;--text2:#B6AA9F;--accent:#F2A486;--on-accent:#2B140B}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{margin:0;background:var(--ground);color:var(--text);
+  font:17px/1.4 -apple-system,BlinkMacSystemFont,"SF Pro Text","SF Pro",system-ui,sans-serif}
+.page{max-width:430px;margin:0 auto;padding-bottom:calc(32px + env(safe-area-inset-bottom))}
+.wash{position:relative;overflow:hidden;background:var(--ground);width:100%}
+.wash canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
+.hero{position:relative}
+.hero .wash{aspect-ratio:393/250}
+.hero-text{position:absolute;left:20px;right:20px;top:calc(96px + env(safe-area-inset-top))}
+.card p.mark{margin:0 0 6px;font-size:13px;font-weight:600;color:var(--text2)}
+h1{margin:0;font-size:34px;line-height:41px;font-weight:800;letter-spacing:-.6px}
+.card{margin:0 16px;padding:16px;border-radius:20px;background:var(--surface);
+  box-shadow:0 8px 24px rgba(40,30,20,.10),0 1px 3px rgba(40,30,20,.08)}
+@media (prefers-color-scheme:dark){.card{box-shadow:0 0 0 1px rgba(255,255,255,.06)}}
+.card p{margin:0 0 14px}
+.row{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+button{font-family:inherit;font-size:17px;line-height:22px;font-weight:600;min-height:44px;padding:11px 22px;border:0;border-radius:22px;
+  background:var(--accent);color:var(--on-accent);cursor:pointer}
+button:disabled{background:var(--fill);color:var(--text2);cursor:default}
+button:focus-visible,.seg input:focus-visible+span{outline:3px solid var(--accent);outline-offset:2px}
+#state{font-size:15px;color:var(--text2)}
+.seg{margin:16px 0 0;padding:0;border:0}
+.seg legend{padding:0;margin-bottom:6px;font-size:13px;font-weight:600;color:var(--text2)}
+.seg div{display:flex;padding:2px;border-radius:10px;background:var(--fill)}
+.seg label{flex:1;position:relative}
+.seg input{position:absolute;opacity:0;inset:0;margin:0}
+.seg span{display:block;min-height:40px;padding:9px 0;border-radius:8px;text-align:center;font-size:15px;
+  font-weight:500;color:var(--text)}
+.seg input:checked+span{background:var(--surface);font-weight:600;box-shadow:0 1px 3px rgba(0,0,0,.12)}
+@media (prefers-color-scheme:dark){.seg input:checked+span{background:var(--line)}}
+h2{margin:28px 20px 10px;font-size:20px;line-height:25px;font-weight:700}
+.field .wash{aspect-ratio:393/330}
+.notes{margin:8px 20px 0;padding:0;list-style:none;font-size:15px;line-height:20px;color:var(--text2)}
+.notes li{margin:0 0 10px}
+.notes b{color:var(--text);font-weight:600}
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="hero">
+    <div class="wash" data-key="header:projects" data-w="393" data-h="250" data-fade="18,92" aria-hidden="true"><canvas></canvas></div>
+    <div class="hero-text">
+      <h1>The wash, live</h1>
+    </div>
+  </header>
+
+  <main>
+    <section class="card" aria-label="Controls">
+      <p class="mark">New look, watercolor · a proposal, not approved</p>
+      <p>The watercolor direction's wash, drawn by your browser from seed 5856, the same numbers as the stills. Each pool of pigment drifts, turns and swells a little, slowly.</p>
+      <div class="row">
+        <button id="pause" type="button">Pause</button>
+        <span id="state" role="status">Moving, slowly.</span>
+      </div>
+      <fieldset class="seg">
+        <legend>Palette</legend>
+        <div>
+          <label><input type="radio" name="palette" value="warm" checked><span>Warm</span></label>
+          <label><input type="radio" name="palette" value="cool"><span>Cool</span></label>
+          <label><input type="radio" name="palette" value="muted"><span>Muted</span></label>
+        </div>
+      </fieldset>
+    </section>
+
+    <h2>Behind the first run</h2>
+    <div class="field">
+      <div class="wash" data-key="firstrun:projects" data-w="393" data-h="330" data-fade="45,100" aria-hidden="true"><canvas></canvas></div>
+    </div>
+
+    <ul class="notes">
+      <li><b>Light or dark</b> follows your phone's setting.</li>
+      <li><b>Reduce Motion</b> (Settings, Accessibility, Motion) shows one still frame, the same as the stills, and nothing moves.</li>
+      <li><b>Drawn in code.</b> No picture, video or font file; nothing AI-made. The header and the field are the same crops of the same wash as the Projects and first-run stills.</li>
+      <li><b>A proposal, not approved.</b> The app keeps its look until the Investors choose a direction.</li>
+    </ul>
+  </main>
+</div>
+<script src="wash.js"></script>
+</body>
+</html>

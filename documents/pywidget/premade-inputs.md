@@ -89,7 +89,7 @@ carries the same passage, and the brackets below follow it.
 3. **Focus timer** (new; Pro): start, pause and skip buttons that run Python in the widget.
 4. **Next 24 hours** (`weather.py`, new, built in T-4707, s3.8; no tag): a temperature and rain chart for a saved place, MET Norway data (L16).
 5. **Sky** (`sun.py`, rework of Sunrise and sunset, built in T-4708, s3.2; no tag): the sun's arc, twilight, moon phase, daylight gained.
-6. **Overlap clocks** (rework of World clocks, s3.3; no tag): working hours across zones and the shared hours.
+6. **Overlap clocks** (`clocks.py`, rework of World clocks, built in T-4709, s3.3; no tag): working hours across zones and the shared hours.
 7. **Site status** (new; no tag): up or down and a 24-hour strip for sites the person names.
 8. **Flashcards** (new; Pro): Show answer, Again and Got it buttons, Leitner boxes run in the widget.
 9. **GitHub repository** (kept, s3.6; no tag): adds a star-history line.
@@ -148,7 +148,7 @@ Margins 16; 22 above an eyebrow, 6 below it, 6 above a footer. Accent only on th
 
 ### 2.2 Field kinds
 
-Seven kinds cover all seven premades. Each maps one to one onto a phase C component setting (s2.6).
+Seven kinds cover all seven premades; `time` (T-4709) is the eighth. Each maps one to one onto a phase C component setting (s2.6).
 
 
 <div class="tbl" role="region" tabindex="0" aria-label="Table 1: 2.2 Field kinds, scrolls sideways" style="--tw:1044px" markdown="1">
@@ -161,6 +161,7 @@ Seven kinds cover all seven premades. Each maps one to one onto a phase C compon
 | `date` | a compact DatePicker row, and a "Time" toggle row that adds a time picker | ISO 8601 with the device zone's offset, plus `all_day` | date only: the picked date at 12:00 PM in the device zone (the tour's picker rule, `tests/fixtures/tour/make_tour_fixtures.py`) and `"all_day": true` (s6, Pernille item 1). With a time: that local time |
 | `symbol` | a row that pushes a 4-column grid of the premade's options | an SF Symbol name | only names in `options`; the first is the default |
 | `place` | a row that pushes **Choose a Place** (s2.4) | `{"name", "lat", "lon"}`, and `"zone"` when `zone: true`, or with `zone_known: true` when the hit has one (Sky) | lat and lon as `cities.tsv` gives them (2 decimals, about 1 km); a current location is rounded to 3 decimals (about 110 m) before it is written |
+| `time` | a compact hour-and-minute DatePicker row (tapping it opens the system wheel); built in T-4709 inside a list item, for Overlap clocks | `"HH:MM"`, 24-hour, the wall clock the picker showed, in no zone | `default` (`"HH:MM"`, required by the catalog check) shows and is written when an item is added; the premade reads a missing or malformed value (`"9:00"`, `"24:00"`, `"+9:00"`) as that default. T-4704 adds it as a section row for Day phases, and its equal-start refusal |
 | `list` | a card of rows (symbol tile, name, detail, chevron) and an accent "Add …" row last; tap a row for its edit sheet; swipe to delete; Edit in the nav bar to reorder where `order: "manual"` | a JSON array of item objects | `min`, `max`; at `max` the add row is disabled and the footer says why; `unique` names a key compared case- and accent-folded; without `order: "manual"` the Page sorts by the key named in `sort` |
 
 </div>
@@ -501,22 +502,62 @@ The Page:
 Footer under the toggle: `page.sun.cur`. Empty (frame 6): the well shows the premade's own "No place set". Polar day
 and night are the premade's own states and need nothing here.
 
-### 3.3 World clocks (`clocks.py`)
+### 3.3 Overlap clocks, formerly World clocks (`clocks.py`; T-4709, Pernille, 2026-11-27)
+
+Plan T-4672 s2 row 6, free, no tag. Maren's frames: `widgets/showcase/08-overlap_clocks.jpg` (showcase.md "Overlap
+clocks"); the module draws that design. It keeps World clocks' id, `cities` key, Page and families (Small, Medium,
+Lock Screen rectangular and inline), so a placed widget and a saved list carry over; a saved place without hours works
+9 to 5.
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 5: 3.3 World clocks (clocks.py), scrolls sideways" style="--tw:659px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 5: 3.3 Overlap clocks, formerly World clocks (clocks.py; T-4709, Pernille…, scrolls sideways" style="--tw:746px" markdown="1">
 
 | Field | Kind | Limits and checks |
 |---|---|---|
-| Cities | `list`, `order: manual`, `min` 1, `max` 4 | the premade reads the first four, and an empty list falls back to its defaults, so the last city cannot be deleted (no delete action; footer `page.cl.min`) |
+| Places | `list`, `order: manual`, `min` 1, `max` 4 | the premade reads the first four, and an empty list falls back to its defaults, so the last place cannot be deleted (no delete action; footer `page.cl.min`) |
 | · City | `place`, `zone: true` | writes `zone`, the IANA name from `cities.tsv` line 1; a hit with no zone cannot be chosen |
-| · Name | `text`, required, `max` 32 (`NAME_MAX`) | the city's name by default |
+| · Name | `text`, required, `max` 11 | the city's name by default; `read` also cuts it at 4 x 11 = 44 UTF-8 bytes at a whole character (`_premade.place_name`, as Sky's 80, s3.2) |
+| · Work Starts | `time`, default `09:00` | the place's own wall clock |
+| · Work Ends | `time`, default `17:00`, footer `page.cl.hours` | an end before the start ends the next morning (a night shift); an end equal to the start is the whole day |
 
 </div>
 
 
-When the file has no `cities`, the Page lists the four defaults as real rows (London, Tokyo, Sydney, Los Angeles),
-which is what the widget shows. The first edit writes all four plus the change. Footer `page.cl.foot`.
+When the file has no `cities`, the Page lists the three defaults as real rows (New York, London, Berlin, 9:00 to
+5:00 PM), which is what the widget shows; on 27 October 2026 they share 9 AM to noon in New York. The first edit writes
+all three plus the change. Footer `page.cl.foot`.
+
+**How the overlap is worked out.** Each place's hours become instants for that place's own dates (the day before to
+the day after, in its zone), with `zoneinfo` giving each date its own offset; the shared hours are where every
+place's instants meet. So a date line needs no rule of its own (Apia and Pago Pago read the same clock a day apart and
+share all eight hours; Auckland's Saturday morning meets Honolulu's Friday), and on a change day the hours move with
+the clocks (New York and London share 9 AM to noon in New York on 7 March 2026, 9 AM to 1 PM on 8 March, when New
+York has moved and London has not). The bars cover the phone's own day, midnight to midnight, which is 23 or 25 hours
+long on a change day; each place's hours are `line.strong` cells and the shared part `accent` beside them, never
+stacked (Maren: stacking fell under 3:1).
+
+**Words.** "Shared hours / 9:00 AM–12:00 PM, in 39 min, 59 sec" before the next shared span (the count is a relative
+Text that ticks alone; per-minute entries replace it), "Shared now / to 12:00 PM" (Small: "Until 12:00 PM") during
+one, ending where the shared span really ends, past the phone's midnight if it runs on (10 PM to 4 AM reads "to 4:00
+AM"), and "Shared all day" (Small and Medium: "Shared now / All day") when every place works the whole day, so the
+span has no end to name (T-4709 review: it read "to 12:00 AM", where the three-day look cut it), "No shared hour /
+None today" when the places do not meet in the next three days. After today's span the words name tomorrow's, with its
+count. "All day" and "Shared all day" are DRAFT for Maren. Times are the phone's. The Lock Screen rectangular reads "Shared 9 AM–12 PM" over two
+places whose clocks are not the phone's; inline, "Shared from 9:00 AM". VoiceOver: "Shared hours 9 AM to 12 PM, in 40
+minutes. New York 8:20 AM, London 12:20 PM, Berlin 1:20 PM."
+
+**After the horizon** (World clocks' T-0519 entry, kept): the last entry shows each place's offset and no bars, as
+[`widgets/clocks-after-horizon.md`](clocks-after-horizon.html) describes.
+
+**Tests:** `tests/widgets/test_premade_overlap.py` (the date line, the daylight-saving change, no shared hour, the
+words, the bars, `read`, and the whole timeline's bytes under 75% of the tree limit with four 44-byte names and night
+shifts); `PremadeSettingsTests` (the `time` kind); `PremadePageUITests` (three places on the Simulator; the shot is
+`ops/site-checks/T-4709/t4709-overlap-clocks-light.png`).
+
+**Open.** (1) Every day is a working day: weekends are not on the Page. (2) The Gallery caption is DRAFT for Maren.
+(3) Maren's axis labels sit in four equal columns under the bar, so each starts a quarter of the bar along at
+any Medium width (T-4709 review; PremadeSnapshotTests reads them at 292 to 379 pt), shrinking to 70% before they
+crowd; on a change day a quarter of the bar is not six hours, so they are up to an hour off the bars.
 
 ### 3.4 Distance to a saved place (`distance.py`)
 
@@ -711,7 +752,7 @@ docstring), plus Countdown's `all_day` and the Habits `id` rule.
 |---|---|---|
 | Countdown | `events`, `pinned` | `{"events": [{"name": "Lisbon trip", "at": "2026-12-18T12:00:00-05:00", "all_day": true, "symbol": "airplane", "set_at": "2026-11-15T09:41:00-05:00"}], "pinned": "Lisbon trip"}` |
 | Sun | `use_current`, `place` | `{"place": {"name": "Lisbon", "lat": 38.72, "lon": -9.15}}` |
-| Clocks | `cities` | `{"cities": [{"name": "Lisbon", "zone": "Europe/Lisbon"}, {"name": "Tokyo", "zone": "Asia/Tokyo"}]}` |
+| Clocks | `cities` | `{"cities": [{"name": "Lisbon", "zone": "Europe/Lisbon", "start": "09:00", "end": "17:30"}, {"name": "Tokyo", "zone": "Asia/Tokyo", "start": "10:00", "end": "19:00"}]}` |
 | Distance | `places`, `units` | `{"places": [{"name": "Home", "symbol": "house.fill", "lat": 40.713, "lon": -74.006}], "units": "imperial"}` |
 | Habits | `habits` | `{"habits": [{"id": "h3f9a0c21", "name": "Read", "done": ["2026-11-14", "2026-11-15"]}]}` |
 | GitHub | `repo` | `{"repo": "python/cpython"}` |
@@ -760,6 +801,7 @@ mixed already (straight in the four "couldn't" lines, curly in "hasn’t", "can�
 | `page.sun.cur` | Uses where this iPhone was when PyWidget was last open, or the place below when it has no location. | Sun footer |
 | `page.cl.min` | A clock needs at least one city. | footer when one city is left |
 | `page.cl.foot` | Small and the Lock Screen show the first three. | Clocks footer |
+| `page.cl.hours` | In the place’s own time. An end before the start is the next morning; the same time is all day. | under Work Ends, in a place's sheet (DRAFT, T-4709) |
 | `page.hb.del` | Delete “{name}”? Its check-ins are deleted too. | confirmation |
 | `page.gh.bad` | Enter it as owner/name, like python/cpython. | refusal |
 | `page.gh.foot` | Public repositories only. The widget asks GitHub for this repository’s numbers about every 15 minutes. | GitHub footer |
@@ -1091,7 +1133,7 @@ different weeks in the widget and the Page.
 ### 9.3 The eleven without a button
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 18: 9.3 The eleven without a button, scrolls sideways" style="--tw:839px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 18: 9.3 The eleven without a button, scrolls sideways" style="--tw:958px" markdown="1">
 
 | Premade | Why not in 1.0 | What would change it |
 |---|---|---|
@@ -1104,7 +1146,7 @@ different weeks in the widget and the Page.
 | Storage | shows a figure | none |
 | Day progress | shows the clock | none |
 | Quote of the day | its caption promises one quote a day, and its list is not picked yet (`PERSON_PICKED = False`: three layout samples). "Another quote" over three samples would show the same lines | first candidate after 1.0, once the L16 list is picked |
-| World clocks | shows times | none |
+| Overlap clocks (World clocks until T-4709) | shows times and shared hours | none |
 | GitHub repository | a refresh is a network fetch, and GitHub is not a lane premade (it saves its cache through `_premade_lock`, s2.3.1), so the button would open pywidget on every tap | none |
 
 </div>

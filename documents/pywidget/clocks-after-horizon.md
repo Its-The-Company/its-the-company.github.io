@@ -38,7 +38,7 @@ Name keeps its current style. The offset takes the place of the time, same font 
 </div>
 
 
-VoiceOver (describe): `World clocks, times paused. London here, Tokyo +9h, Sydney +11h. Open pywidget for times.` With no cities, the existing "No cities" card.
+VoiceOver (describe): `Overlap clocks, times paused. New York −4h, London here, Berlin +1h. Open PyWidget for times.` (World clocks until T-4709.) With no places, the "No places" card.
 
 ## Build contract for Pernille
 - `plan()` returns `1 + HORIZON_MIN + 1` entries; the last is the offsets-only entry. Accented/vibrant modes lose nothing (offset text is widget_accentable like the time).

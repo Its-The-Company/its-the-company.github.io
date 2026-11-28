@@ -483,6 +483,41 @@ This session resumed the 11-25 <span title="An idea that reaches B or better but
      widget back: one extra run.
   3. WidgetWriter.swift:861: ids no longer placed never leave `leftOff`; one placed again gets one extra run.
 - lane_landcheck --task T-4181: green (host 4534/0 on 3.9 and 3.13).
+
+## Session 2026-11-27 17:4x-18:5x ET (Idris, lane a, from main d1d70555a5)
+
+- Baseline at d1d70555: PyWidgetTests 2805/0/2 (J-20261127-1741-land-chk-a5ab71-1-17a63e).
+- T-0793 b04710c96a, slice 11 only: Pernille's slice 10 items 1-3, all fixed in code. (1) A widget stays owed until a
+  pass runs it, so one the restore deferred (busy, a timed-out step) is handed to the next T1 inside T3's spacing.
+  (2) `owe` is gone: a handed-out widget is `handed` until the pass it was handed to settles, cleared in the same actor
+  turn as the settle, so a restore let go that later runs it is not put back. The restore is now
+  WidgetPasses.restore (refreshPlaced calls it), so the pass tests drive the shipped code. (3) A T1 drops owed ids no
+  longer placed; an empty WidgetKit read drops nothing. ADR-007 7.2 dated line for slice 11. 3 new tests in
+  WidgetWriterPassTests; BackgroundBatchTests' spaced-out test asserted slice 10's "deferred is dropped" and is now
+  ...LeftOutAndOwesItWhileDeferred. 6 new mutants, 4 entries updated; all 10 red by hand (job IDs in the commit;
+  batch -5-35316e mixed two `handed` mutants and masked one, re-run alone in J-20261127-1817-...-29cb26).
+- Checks at the commit's tree: PyWidgetTests 2808/0/2 (J-20261127-1822-land-chk-a5ab71-2-368226, result.json exit 0),
+  LaneWarmWindowTests 6/0 (J-20261127-1822-land-chk-a5ab71-3-572d78), host 4548/0.
+- Known, on the ADR line: a restore pass that never ends keeps its widgets `handed` for the process (the next full T1
+  pass still runs them).
+- No commit, rechecked at d1d70555: T-4280 (proof is T-4494 item 3, the Investors' iPhone); T-1882 (fields.json is only
+  named in doc comments and tests, nothing writes it); T-2021 (no scheme or config sets PYWIDGET_LANE_FORCED; needs the
+  forced-lane bench on a quiet runner); T-4433 and T-4435 (this Mac has only iOS 26.0 and 27.0 runtimes).
+- Not started, still a design call for Pernille and Ines (12:2x section): the extension's `system` runs reading
+  `background`, and `oom_guard`. No <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">ruling</span> recorded since, so no ADR line.
+- Next: Pernille reviews b04710c96a.
+
+## Review, 2026-11-27 ET (Operator, lane a)
+
+- Pernille read d1d70555a5..3ea7920ab3 (b04710c96a T-0793 slice 11 and the note): nothing blocking. leftOut marks
+  what it hands out; restore's forced pass clears the mark in the same actor turn as settle; deferred and stood-down
+  widgets stay owed; unplaced ids leave. Every mutant find matches once and names a test that kills it. Non-blocking,
+  for the next session:
+  1. WidgetWriter.swift:945/894: a restore waiting behind an in-flight pass that runs the same widget runs it again
+     (its ids are not rechecked against leftOff when its task starts). From slice 9: one extra run.
+  2. WidgetWriter.swift:957 with :467: a widget skipped as "locked" stays owed with no end; every spaced-out T1 starts
+     a forced restore pass of it. Cheap, but unbounded, and the ADR line does not say so.
+  3. The session note above says 4 mutant entries updated; the diff updates 6 (two are test renames only).
 {% endraw %}
 
 </div>

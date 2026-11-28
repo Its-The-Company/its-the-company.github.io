@@ -1,10 +1,10 @@
 {
  "schema": 1,
- "at": "2026-11-28T13:06:50.975360+00:00",
+ "at": "2026-11-28T13:09:53.217504+00:00",
  "session": {
-  "active": false,
-  "kind": "",
-  "started": null,
+  "active": true,
+  "kind": "coord",
+  "started": "2026-11-28T08:06:52-05:00",
   "coord": {
    "active": true,
    "started": 1795341309,
@@ -77,42 +77,42 @@
   "landed": 1,
   "failed": 4
  },
- "workers": [],
- "who": "",
- "recent": [
+ "workers": [
   {
-   "name": "maren",
-   "task": "[build] T-5953 Efficiency graphs",
-   "model": "opus",
-   "started": "2026-11-28T12:23:15.569Z",
-   "seconds": null,
-   "finished": "2026-11-28T12:58:57.524000+00:00"
+   "name": "idris",
+   "task": "[build] T-4183 fix run lock",
+   "model": "fable",
+   "started": "2026-11-28T13:09:22.193Z",
+   "seconds": 31,
+   "finished": null
   },
   {
    "name": "idris",
-   "task": "[build] T-4183 run lock limit fix",
-   "model": "fable",
-   "started": "2026-11-28T12:24:33.327Z",
-   "seconds": null,
-   "finished": "2026-11-28T12:58:57.471000+00:00"
+   "task": "[build] T-4188 location test run",
+   "model": "",
+   "started": "2026-11-28T13:09:32.138Z",
+   "seconds": 21,
+   "finished": null
   },
   {
-   "name": "maren",
-   "task": "[build] T-4183 settle rebase",
-   "model": "opus",
-   "started": "2026-11-28T12:28:49.008Z",
-   "seconds": null,
-   "finished": "2026-11-28T12:36:49.882000+00:00"
+   "name": "idris",
+   "task": "[build] T-4190 store and token fixes",
+   "model": "",
+   "started": "2026-11-28T13:09:41.239Z",
+   "seconds": 11,
+   "finished": null
   },
   {
-   "name": "pernille",
-   "task": "[review] T-4183 gate check third pass",
-   "model": "opus",
-   "started": "2026-11-28T12:26:49.676Z",
-   "seconds": null,
-   "finished": "2026-11-28T12:28:18.421000+00:00"
+   "name": "odalys",
+   "task": "[review] T-5953",
+   "model": "",
+   "started": "2026-11-28T13:09:48.004Z",
+   "seconds": 5,
+   "finished": null
   }
  ],
+ "who": "Idris x3, Odalys",
+ "recent": [],
  "queue": {
   "runnable": [],
   "blocked": [],
@@ -122,19 +122,19 @@
  "meter": {
   "five_hour": {
    "pct": 40.0,
-   "resets_at": "2026-11-28T13:30:00.285318+00:00",
+   "resets_at": "2026-11-28T08:30:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-28T08:06:40.348090-05:00",
-   "source": "usage",
+   "read_at": "2026-11-28T08:07:06.128562-05:00",
+   "source": "live",
    "left": 60.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 62.0,
-   "resets_at": "2026-11-29T07:00:00.285341+00:00",
+   "resets_at": "2026-11-29T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-28T08:06:40.348090-05:00",
-   "source": "usage",
+   "read_at": "2026-11-28T08:07:06.128562-05:00",
+   "source": "live",
    "left": 38.0,
    "left_words": "of your weekly allowance left"
   },
@@ -145,7 +145,7 @@
    "read_at": "2026-11-28T08:06:40.348090-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-28T08:06:40.348090-05:00"
+  "read_at": "2026-11-28T08:07:06.128562-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -160,12 +160,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-28T08:21:40-05:00",
+ "next_tick": null,
  "personal": {
   "week_pct": 46.79,
   "usage_pct": 43.0,
   "work_pct": 99.0,
-  "read_at": "2026-11-28T13:06:00+00:00",
+  "read_at": "2026-11-28T13:09:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -227,7 +227,7 @@
  "lock_in": {
   "on": false,
   "pool": 4,
-  "at": "2026-11-28T08:06:00-05:00",
+  "at": "2026-11-28T08:09:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -235,16 +235,28 @@
    "b": "double-spread"
   }
  },
- "next_tick_why": "last_tick",
+ "next_tick_why": "session",
  "idle": null,
- "pool": null,
+ "pool": {
+  "why": "Double Spread: past the week's halfway point with room left, so twice the even pace until the limit or the reset; the machine allows 8 (held: too few lands in 3 hours to judge a raise)",
+  "n": 4,
+  "at": "2026-11-28T08:06:40.676779-05:00"
+ },
  "lanes": [
   {
    "name": "Idris",
-   "state": "next",
-   "task": "Idris, P2, from T-1282 F1 (not before TestFlight):...",
+   "state": "running",
+   "task": "[build] T-4183 fix run lock",
+   "model": "fable",
+   "since": "2026-11-28T13:09:22.193Z",
+   "next": []
+  },
+  {
+   "name": "Odalys",
+   "state": "running",
+   "task": "[review] T-5953",
    "model": null,
-   "since": null,
+   "since": "2026-11-28T13:09:48.004Z",
    "next": []
   },
   {
@@ -272,14 +284,6 @@
    "next": []
   },
   {
-   "name": "Odalys",
-   "state": "next",
-   "task": "Odalys, P3, host-only, from...",
-   "model": null,
-   "since": null,
-   "next": []
-  },
-  {
    "name": "Maren",
    "state": "next",
    "task": "Maren, P1, from T-2296 review M2...",
@@ -289,7 +293,42 @@
   }
  ],
  "tasks": {
-  "run": [],
+  "run": [
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "The Gallery shows, previews and opens every premade",
+    "m": "fable",
+    "at": "2026-11-28T13:09:22.193Z",
+    "o": "c",
+    "task": "T-4183"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "Location, steps and notifications work in scripts and widgets",
+    "at": "2026-11-28T13:09:32.138Z",
+    "o": "c",
+    "task": "T-4188"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "Settings and Pro: buy, restore, themes",
+    "at": "2026-11-28T13:09:41.239Z",
+    "o": "c",
+    "task": "T-4190"
+   },
+   {
+    "w": "Odalys",
+    "k": "review",
+    "t": "Draw Home's Efficiency numbers as graphs",
+    "at": "2026-11-28T13:09:48.004Z",
+    "o": "c",
+    "task": "T-5953"
+   }
+  ],
+  "src": "plan",
   "open": [
    {
     "w": "Idris",
@@ -384,6 +423,10 @@
    "wait": 0,
    "blocked": 0,
    "you": 0
+  },
+  "fin": {
+   "n": 0,
+   "rows": []
   }
  },
  "qr": [
@@ -425,12 +468,18 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-28T13:06:50Z",
+  "at": "2026-11-28T13:09:33Z",
   "s": {
    "T-4578": [
     "mergetest",
     "iPhone tests on the MacBook",
     null
+   ],
+   "T-4183": [
+    "merged",
+    "on main 7:55 AM ET",
+    1795870548000,
+    "Maren"
    ],
    "T-4181": [
     "merged",
@@ -441,15 +490,17 @@
   },
   "nm": {
    "T-4578": "Make a breathing premade that gently loops",
+   "T-4183": "The Gallery shows, previews and opens every premade",
    "T-4181": "Widgets refresh on their own and by a tap"
   },
   "wk": {
    "T-4578": "Idris",
+   "T-4183": "Idris",
    "T-4181": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-28T13:06:50Z",
+  "at": "2026-11-28T13:09:33Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -467,7 +518,7 @@
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1314
+    "parked": 1317
    },
    "cur": [],
    "ld": [
@@ -477,8 +528,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-28T13:06:51Z",
-    "ld": 10.47,
+    "at": "2026-11-28T13:09:08Z",
+    "ld": 6.71,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -530,14 +581,489 @@
      "open": true
     }
    },
-   "at": "2026-11-28T13:06:50+00:00"
+   "at": "2026-11-28T13:09:53+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-28T13:06:50+00:00"
+   "at": "2026-11-28T13:09:53+00:00"
   }
  },
+ "fw": {
+  "at": 1795871335,
+  "s": [
+   [
+    "main",
+    "T-4191",
+    "held",
+    1795668612,
+    [],
+    0,
+    0
+   ],
+   [
+    "main",
+    "T-4476",
+    "held",
+    1795856402,
+    [
+     [
+      "T-5960",
+      5,
+      1795863381,
+      0,
+      0
+     ],
+     [
+      "T-5942",
+      5,
+      1795852930,
+      0,
+      0
+     ],
+     [
+      "T-5959",
+      5,
+      1795851546,
+      0,
+      0
+     ]
+    ],
+    0,
+    0
+   ],
+   [
+    "main",
+    "T-5795",
+    "held",
+    1795823449,
+    [],
+    0,
+    0
+   ],
+   [
+    "main",
+    "T-5796",
+    "held",
+    1795696491,
+    [],
+    0,
+    0
+   ],
+   [
+    "main",
+    "T-4183",
+    "held",
+    1795870673,
+    [
+     [
+      "T-5708",
+      0,
+      0,
+      0,
+      0
+     ],
+     [
+      "T-4648",
+      0,
+      0,
+      0,
+      0
+     ],
+     [
+      "T-4895",
+      0,
+      0,
+      0,
+      0
+     ]
+    ],
+    0,
+    0
+   ],
+   [
+    "main",
+    "T-4190",
+    "held",
+    1795855559,
+    [
+     [
+      "T-2987",
+      0,
+      0,
+      0,
+      0
+     ],
+     [
+      "T-2988",
+      0,
+      0,
+      0,
+      0
+     ],
+     [
+      "T-5050",
+      0,
+      0,
+      0,
+      0
+     ],
+     [
+      "T-5706",
+      0,
+      0,
+      0,
+      0
+     ],
+     [
+      "T-5803",
+      0,
+      0,
+      0,
+      0
+     ],
+     [
+      "T-4858",
+      0,
+      0,
+      0,
+      0
+     ],
+     [
+      "T-4857",
+      5,
+      1795855506,
+      0,
+      0
+     ],
+     [
+      "T-5683",
+      5,
+      1795843365,
+      0,
+      0
+     ]
+    ],
+    3,
+    0
+   ],
+   [
+    "main",
+    "T-4478",
+    "held",
+    1795786205,
+    [],
+    0,
+    0
+   ],
+   [
+    "main",
+    "T-4188",
+    "held",
+    1795853030,
+    [
+     [
+      "T-5850",
+      1,
+      1795853030,
+      1,
+      0
+     ],
+     [
+      "T-3554",
+      0,
+      0,
+      0,
+      0
+     ],
+     [
+      "T-0543",
+      0,
+      0,
+      0,
+      0
+     ]
+    ],
+    0,
+    0
+   ],
+   [
+    "a",
+    "T-4181/Idris",
+    "building",
+    1795867799,
+    [
+     [
+      "T-4280",
+      1,
+      1795867799,
+      0,
+      0
+     ],
+     [
+      "T-1882",
+      1,
+      1795867799,
+      0,
+      0
+     ],
+     [
+      "T-0793",
+      1,
+      1795867799,
+      0,
+      0
+     ],
+     [
+      "T-2021",
+      1,
+      1795867799,
+      0,
+      0
+     ],
+     [
+      "T-4433",
+      1,
+      1795867799,
+      0,
+      0
+     ],
+     [
+      "T-4435",
+      1,
+      1795867799,
+      0,
+      0
+     ]
+    ],
+    0,
+    0
+   ],
+   [
+    "a",
+    "T-5797/Idris",
+    "building",
+    1795870008,
+    [
+     [
+      "T-4578",
+      1,
+      1795870008,
+      0,
+      1
+     ],
+     [
+      "T-5640",
+      1,
+      1795870008,
+      0,
+      0
+     ],
+     [
+      "T-4579",
+      1,
+      1795870008,
+      0,
+      0
+     ],
+     [
+      "T-5662",
+      1,
+      1795870008,
+      0,
+      0
+     ],
+     [
+      "T-5829",
+      1,
+      1795870008,
+      0,
+      0
+     ]
+    ],
+    0,
+    0
+   ]
+  ],
+  "mh": [
+   1,
+   1795871249,
+   0
+  ],
+  "pr": 1,
+  "q": [
+   [
+    "T-4182",
+    [
+     "T-3291",
+     "T-2232",
+     "T-4801",
+     "T-5272",
+     "T-5672"
+    ],
+    0,
+    ""
+   ],
+   [
+    "T-4184",
+    [
+     "T-0866",
+     "T-0893",
+     "T-0790",
+     "T-0510",
+     "T-5634",
+     "T-4588"
+    ],
+    0,
+    ""
+   ],
+   [
+    "T-4185",
+    [
+     "T-4638"
+    ],
+    0,
+    ""
+   ],
+   [
+    "T-4192",
+    [
+     "T-5933"
+    ],
+    0,
+    ""
+   ],
+   [
+    "T-4193",
+    [
+     "T-1216"
+    ],
+    0,
+    ""
+   ],
+   [
+    "T-4186",
+    [],
+    0,
+    "T-4182"
+   ],
+   [
+    "T-4187",
+    [],
+    0,
+    "T-4183"
+   ],
+   [
+    "T-4189",
+    [],
+    0,
+    "T-4181"
+   ]
+  ],
+  "t": [
+   "",
+   0,
+   [],
+   null
+  ],
+  "m": [
+   [
+    "T-4190",
+    1795843367,
+    0
+   ],
+   [
+    "T-4181",
+    1795844106,
+    273
+   ],
+   [
+    "T-4181",
+    1795846079,
+    0
+   ],
+   [
+    "T-4190",
+    1795847754,
+    0
+   ],
+   [
+    "T-4476",
+    1795852935,
+    0
+   ],
+   [
+    "T-5954",
+    1795854096,
+    0
+   ],
+   [
+    "T-4190",
+    1795855509,
+    0
+   ],
+   [
+    "T-4476",
+    1795856369,
+    547
+   ],
+   [
+    "T-0306",
+    1795862628,
+    0
+   ],
+   [
+    "T-4181",
+    1795863990,
+    0
+   ],
+   [
+    "T-0472",
+    1795867346,
+    0
+   ],
+   [
+    "T-4181",
+    1795867658,
+    0
+   ],
+   [
+    "T-5837",
+    1795868537,
+    0
+   ],
+   [
+    "T-5961",
+    1795869562,
+    0
+   ],
+   [
+    "T-0472",
+    1795869892,
+    0
+   ],
+   [
+    "T-4183",
+    1795870553,
+    141
+   ]
+  ],
+  "x": [
+   "held",
+   "T-4191",
+   3378,
+   8
+  ]
+ },
  "operators": [
+  {
+   "w": "Operator",
+   "a": "Main plan",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session",
+   "at": "2026-11-28T08:06:52-05:00"
+  },
   {
    "w": "Operator",
    "a": "Evan's Account",
@@ -565,7 +1091,6 @@
  "trimmed": [
   "lane_next",
   "queue_text",
-  "recent",
   "task_done",
   "task_title",
   "done_text",
@@ -573,13 +1098,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 0,
+  "main": 4,
   "lanes": 2,
-  "total": 2,
-  "at": "8:06 AM",
+  "total": 6,
+  "at": "8:09 AM",
   "why": "",
-  "at_iso": "2026-11-28T13:06:00+00:00",
-  "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 8:06 AM ET</p></section>"
+  "at_iso": "2026-11-28T13:09:00+00:00",
+  "started": "8:06 AM",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 4, started 8:06 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 8:09 AM ET</p></section>"
  }
 }

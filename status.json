@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-28T11:39:34.150678+00:00",
+ "at": "2026-11-28T11:42:39.164691+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -83,7 +83,7 @@
    "task": "[build] T-4183 screenshots run lock",
    "model": "opus",
    "started": "2026-11-28T04:27:26.477Z",
-   "seconds": 25927,
+   "seconds": 26112,
    "finished": null
   },
   {
@@ -91,20 +91,28 @@
    "task": "[review] T-5837 fourth pass",
    "model": "opus",
    "started": "2026-11-28T11:28:00.056Z",
-   "seconds": 694,
+   "seconds": 879,
    "finished": null
   },
+  {
+   "name": "maren",
+   "task": "[build] T-4183 gate check fixes",
+   "model": "fable",
+   "started": "2026-11-28T11:42:20.266Z",
+   "seconds": 18,
+   "finished": null
+  }
+ ],
+ "who": "Idris, Odalys, Maren",
+ "recent": [
   {
    "name": "pernille",
    "task": "[review] T-4183 Maren's session",
    "model": "opus",
    "started": "2026-11-28T11:34:05.299Z",
-   "seconds": 328,
-   "finished": null
-  }
- ],
- "who": "Idris, Odalys, Pernille",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-28T11:42:05.999000+00:00"
+  },
   {
    "name": "maren",
    "task": "[build] T-4183 fixture gate shrinker",
@@ -128,14 +136,6 @@
    "started": "2026-11-28T08:34:36.192Z",
    "seconds": null,
    "finished": "2026-11-28T08:35:54.952000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-4476 checkmark fix",
-   "model": "fable",
-   "started": "2026-11-28T08:03:17.676Z",
-   "seconds": null,
-   "finished": "2026-11-28T08:34:24.274000+00:00"
   }
  ],
  "queue": {
@@ -146,19 +146,19 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 21.0,
+   "pct": 22.0,
    "resets_at": "2026-11-28T08:30:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-28T06:32:18.696038-05:00",
+   "read_at": "2026-11-28T06:42:29.357398-05:00",
    "source": "live",
-   "left": 79.0,
+   "left": 78.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 59.0,
    "resets_at": "2026-11-29T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-28T06:32:18.696038-05:00",
+   "read_at": "2026-11-28T06:42:29.357398-05:00",
    "source": "live",
    "left": 41.0,
    "left_words": "of your weekly allowance left"
@@ -170,7 +170,7 @@
    "read_at": "2026-11-28T06:28:59.152486-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-28T06:32:18.696038-05:00"
+  "read_at": "2026-11-28T06:42:29.357398-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -190,7 +190,7 @@
   "week_pct": 50.41,
   "usage_pct": 46.1,
   "work_pct": 99.0,
-  "read_at": "2026-11-28T11:39:00+00:00",
+  "read_at": "2026-11-28T11:42:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -236,7 +236,7 @@
   }
  ],
  "disk": {
-  "free_gb": 31,
+  "free_gb": 29,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -245,14 +245,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-28T06:35:00-05:00",
+   "at": "2026-11-28T06:40:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-28T06:39:00-05:00",
+  "at": "2026-11-28T06:42:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -263,7 +263,7 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Double Spread: past the week's halfway point with room left, so twice the even pace until the limit or the reset; the machine allows 8 (at its floor: load 36.6 a core is over 10)",
+  "why": "Double Spread: past the week's halfway point with room left, so twice the even pace until the limit or the reset; the machine allows 8 (at its floor: load 21.3 a core is over 10)",
   "n": 3,
   "at": "2026-11-27T21:13:47.067436-05:00"
  },
@@ -285,11 +285,19 @@
    "next": []
   },
   {
-   "name": "Pernille",
+   "name": "Maren",
    "state": "running",
-   "task": "[review] T-4183 Maren's session",
-   "model": "opus",
-   "since": "2026-11-28T11:34:05.299Z",
+   "task": "[build] T-4183 gate check fixes",
+   "model": "fable",
+   "since": "2026-11-28T11:42:20.266Z",
+   "next": []
+  },
+  {
+   "name": "Pernille",
+   "state": "next",
+   "task": "Pernille, P1, continuation of T-2609: after...",
+   "model": null,
+   "since": null,
    "next": []
   },
   {
@@ -304,14 +312,6 @@
    "name": "Ines",
    "state": "next",
    "task": "Ines with Wrenna, P3, from T-0902 (ADR-006 s13.5, s13.7...",
-   "model": null,
-   "since": null,
-   "next": []
-  },
-  {
-   "name": "Maren",
-   "state": "next",
-   "task": "Maren, P1, from T-2296 review M2...",
    "model": null,
    "since": null,
    "next": []
@@ -338,11 +338,11 @@
     "task": "T-5837"
    },
    {
-    "w": "Pernille",
-    "k": "review",
+    "w": "Maren",
+    "k": "build",
     "t": "The Gallery shows, previews and opens every premade",
-    "m": "opus",
-    "at": "2026-11-28T11:34:05.299Z",
+    "m": "fable",
+    "at": "2026-11-28T11:42:20.266Z",
     "o": "c",
     "task": "T-4183"
    }
@@ -512,7 +512,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-28T11:39:34Z",
+  "at": "2026-11-28T11:42:22Z",
   "s": {
    "T-4181": [
     "mergetest",
@@ -548,7 +548,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-28T11:39:34Z",
+  "at": "2026-11-28T11:42:22Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -566,7 +566,7 @@
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1227
+    "parked": 1230
    },
    "cur": [],
    "ld": [
@@ -576,21 +576,19 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-28T11:38:46Z",
-    "ld": 36.86,
+    "at": "2026-11-28T11:42:23Z",
+    "ld": 21.31,
     "c": 8,
-    "sb": 1,
+    "sb": 0,
     "dk": [
-     30.6,
+     31.5,
      228.3
     ],
     "ss": [
      151.8,
      953.7
     ],
-    "sn": [
-     "pywidget-wk-check"
-    ]
+    "sn": []
    },
    "macbook": {
     "at": "2026-11-28T11:37:44Z",
@@ -631,11 +629,11 @@
      "open": true
     }
    },
-   "at": "2026-11-28T11:39:34+00:00"
+   "at": "2026-11-28T11:42:39+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-28T11:39:20+00:00"
+   "at": "2026-11-28T11:42:31+00:00"
   }
  },
  "operators": [
@@ -688,10 +686,10 @@
   "main": 3,
   "lanes": 2,
   "total": 5,
-  "at": "6:39 AM",
+  "at": "6:42 AM",
   "why": "",
-  "at_iso": "2026-11-28T11:39:00+00:00",
+  "at_iso": "2026-11-28T11:42:00+00:00",
   "started": "9:13 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 3, started 9:13 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 6:39 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 3, started 9:13 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 6:42 AM ET</p></section>"
  }
 }

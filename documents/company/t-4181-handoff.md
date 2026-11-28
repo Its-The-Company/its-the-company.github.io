@@ -554,6 +554,42 @@ This session resumed the 11-25 <span title="An idea that reaches B or better but
   2. WidgetWriter.swift:209 with :239 and :976: if the T1's main pass waited and its restore did not, the restore uses
      gates read before that wait; a purchase in between reads as locked and now ends the debt until the next full T1.
   3. ADR-007:186: "retried once a spaced-out T1" is garbled.
+
+## Session 2026-11-27 21:0x-22:0x ET (Idris, lane a, from main 2f02b9e496)
+
+- Baseline at 2f02b9e4: PyWidgetTests 2820/0/2 (J-20261127-2104-land-chk-a5ab71-5-250f59).
+- T-0793 slice 13 only: Pernille's slice 12 items 1-3. (1) Wording: a widget a restore drops gets the last outcome the
+  passes it waited behind returned (a later `deferred` replaces a run; a pass let go returns none). Only the
+  foreground T1 restores and it drops its outcomes, so no code change; WidgetWriter.swift's comment and the slice 12
+  ADR line now say only what holds. (2) Fixed in code: refreshPlaced's restore reads the Pro gates again at its first
+  premade (runSteps with `waited: true`), unless StoreKit did not answer the first read; a purchase while the T1's
+  own pass waited or joined no longer reads as locked and ends a bought premade's debt. One StoreKit read at most; none
+  for the person's own widgets. (3) ADR-007's "retried once a spaced-out T1" reworded. ADR-007 7.2 dated line for
+  slice 13. 1 new test, BridgeTests.testT0793ARestoreAfterAJoinReadsTheGatesAgainAfterAPurchaseDuringTheWait.
+- Mutant: 1 new (Tests/mutants-t0793.json), planted alone, red on its test for the right reason (StoreKit read once,
+  not twice): J-20261127-2140-land-chk-a5ab71-2-255dd3.
+- Checks at the commit's tree: PyWidgetTests 2821/0/2 (the build-for-testing job, J-20261127-2118-land-chk-a5ab71-2-
+  11582c), plan unit filters in 3 batches of 14: 14/0 (J-20261127-2128-land-chk-a5ab71-4-331f4d), 14/0
+  (J-20261127-2129-land-chk-a5ab71-1-552bc5), the third read from the build job's run; LaneWarmWindowTests 6/0
+  (J-20261127-2145-land-chk-a5ab71-2-222b57), host 4594/0 on 3.9 and 3.13.
+- No commit, rechecked at 2f02b9e4: T-4280 (proof is T-4494 item 3, the Investors' iPhone); T-1882 (fields.json is
+  named only in docs, ADR-007 and the bound-fields design; nothing writes it); T-2021 (no scheme or config sets
+  PYWIDGET_LANE_FORCED, only docs and an evidence script name it; needs the forced-lane bench on a quiet runner);
+  T-4433 and T-4435 (only iOS 26.0 and 27.0 runtimes here).
+- Still a design call, no ruling recorded: the extension's `system` runs reading `background`, and `oom_guard`. Not
+  built. Asking Ines to put both to Pernille and me as a recorded decision, so slice 14 has something to build.
+- Next: Pernille reviews the slice 13 commit.
+
+## Review, 2026-11-27 ET (Operator, lane a)
+
+- Pernille read main..f1ab573098 (T-0793 slice 13): nothing blocking. The restore's gate re-read runs inside its own
+  task (no new actor await); the mutant's find matches once and its one test kills it; the ADR wording matches
+  `seen.merge`/`theirs`. Non-blocking, for the next session:
+  1. WidgetWriter.swift:214: no test pins the unanswered-read case on the restore path (a mutant that always uses
+     `PassSteps()` there would likely survive).
+  2. :212: one T1 can now ask StoreKit up to 3 times (before the pass, in a pass that waited, in the restore), each up
+     to a 15 s wait.
+- Still a design call, no ruling recorded: the extension's `system` runs reading `background`, and `oom_guard`.
 {% endraw %}
 
 </div>

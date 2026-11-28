@@ -38,7 +38,6 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - Older entries (Day 2-6: hunt grades, site v2, <span title="A memo that proposes one idea to the Investors as the product. Only a B or better becomes one.">pitch</span> QA, H-codes, probation (a), packet 3) and their kept lessons: archive.md.
 - (b) drawn in design/; Ines's fixes c22b4e9, Idris's S-1..S-5 76f3774; Ines rechecks, C51 after #23. Detail: Probation (b)
 
-- 11-18 T-4764: premade-inputs s9.2 gives the order text yields to Dynamic Type (head, name, cell shape; buttons and dots never). Lesson: minimumScaleFactor fits width, not height; use line limits for height. Two docs disagree on widget text sizes (ADR-011 AX5 vs renderer xxxLarge clamp): Idris settles it.
 - 11-18 T-4886: case-fixed "PyWidget" in 14 premade lines, first renders, Settings page; check_states.py fails on lower-case name in copy/voiceover. Lesson: a copy change moves generated fixtures (tour, premade-trees, design trees); run the whole widgets suite, then regenerate each. premade.py also rewrites unrelated showcase trees: git checkout them.
 - 11-18 T-4818 slice 1: Flow pool figure + <span title="A measured fact that holds a grade below a letter, however good the rest is.">cap</span> graph (tools/site/flow_pool.py). Lesson: symbols over a stretched SVG go as small SVGs placed by percent; Flow's words may not name a .py file or '<span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lanes</span>' (site_home_flow_test).
 - 11-19 T-5000 ef0cffe6bc: transit frames clock times only (no count-down); fmt_rel draws SwiftUI .relative ("3 min, 59 sec", counts up after). Lesson: any relative text needs a timeline entry at its date or it counts up; iOS has no self-stopping "in 4 min".
@@ -47,6 +46,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - 11-21 T-5193: five build-added page strings kept word for word, written into premade-inputs s5; no Swift change. Apostrophes mixed (straight in four "couldn't" lines, curly elsewhere); left as built.
 - 11-26 T-5001 8431896520 (branch, at merge point, Pernille reviews): never_fetched flag drops Updated; idle chart 3 bars; trees take sheet now. Lesson: ui.Timeline fills a missing sampled_at with the clock, so "no sample" never hides a line; flag it in state.
 - 11-27 T-5919 follow-up 662ae9b400 (renames: Waiting to merge, Back for a fix, session): session.js checked in Chromium, not by its text. Lesson: check a page script by running it; site_t3187 red at 1280 on main too (live board row), not ours.
+- 11-27 T-5950 ecba85e8b8 (copy, not landed): 11 details on /app/looks/ from details.so item names (<span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">ruling</span> c7232337947: names only, 8/10 pages, no copy). Lesson: Playwright evaluate in a sandboxed iframe makes later mouse moves log "Blocked script execution"; read it via the parent's contentDocument.
 {% endraw %}
 
 

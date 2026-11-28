@@ -52,6 +52,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-5945 re-review 11-27 (050a4a9ee3..e3050c4734) nothing blocking; L: "who owns no-copy entries" still leans on the prompt's --copy rule. Lesson: when a fix reads ownership from a second record, probe that record's missing-field shape too.
 - T-4778 review 11-27 (cdf7793f9d, Idris) pass, 2 L. Lesson: a "rewrite when missing" on a file two processes share lets whichever wakes first win; check it against the doc's "newest" claim.
 - T-4181 review 11-27 (51a9cd5095..c9a116234c, slice 12) nothing blocking. Lesson: a debt ended on a "locked" outcome is only as fresh as the gates read behind it.
+- T-4181 review 11-27 (2f02b9e496..f1ab573098, slice 13) nothing blocking. Lesson: a re-read moved to a new point is "one read at most" per pass only; count the worst case per trigger (a <span title="The rule that decides whether an idea gets two blind graders now, waits (park), or stops.">T1</span> can now ask StoreKit 3 times).
 {% endraw %}
 
 

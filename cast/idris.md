@@ -44,9 +44,9 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 ## Lessons
 - Older lessons and dated logs: archive.md.
-- T-4188 (merge point) and T-5796 re-reviews still open; detail and xc.sh lessons in archive.md.
+- T-4188 11-27 9:50 PM scratch T-4188-idris/wt: 60bd1aa924 T-4832, 2286eca3cc T-5903 (cherry-pick of 454bbf681c). T-5850 test X exit 75 twice (load 394 once the Simulator is booted). T-3554 (F7 needs an iPhone), T-0543 (L4 has no hook) are still no-commit. T-5796 re-review open; archive.md.
 - T-4692, T-5047, T-5607, T-5108, T-0053, T-0044: open threads in archive.md.
-- T-4181 11-27 f (a): 38e642ac62 T-0793 slice 12 (Pernille's slice 11 items 1-2); 2820/0 J-...1945-...570df2, 8 mutants red, each alone. Open: Pernille review; `system` read and oom_guard need design calls. Lesson: a mutant that falls back to this Mac leaves its build; rebuild before any test-without-building.
+- T-4181 11-27 g (a): f1ab573098 T-0793 slice 13 (Pernille's slice 12 items 1-3; restore rereads Pro gates); 2821/0 J-...2118-...11582c, mutant red. Open: Pernille review; `system` read and oom_guard need a recorded <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">ruling</span>. Lesson: an XC_LOCAL=1 build-for-testing job runs the whole suite; filters at that tree are read from it.
 {% endraw %}
 
 

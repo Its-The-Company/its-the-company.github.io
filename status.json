@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-28T12:54:55.380332+00:00",
+ "at": "2026-11-28T12:58:02.875171+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -83,7 +83,7 @@
    "task": "[build] T-5953 Efficiency graphs",
    "model": "opus",
    "started": "2026-11-28T12:23:15.569Z",
-   "seconds": 1899,
+   "seconds": 2087,
    "finished": null
   },
   {
@@ -91,7 +91,7 @@
    "task": "[build] T-4183 run lock limit fix",
    "model": "fable",
    "started": "2026-11-28T12:24:33.327Z",
-   "seconds": 1822,
+   "seconds": 2009,
    "finished": null
   }
  ],
@@ -133,7 +133,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 256,
+  "runnable_count": 253,
   "blocked_count": 0
  },
  "meter": {
@@ -182,7 +182,7 @@
   "week_pct": 52.12,
   "usage_pct": 46.1,
   "work_pct": 99.0,
-  "read_at": "2026-11-28T12:55:00+00:00",
+  "read_at": "2026-11-28T12:58:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -244,7 +244,7 @@
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-28T07:55:00-05:00",
+  "at": "2026-11-28T07:58:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -405,30 +405,42 @@
   ],
   "done": [
    {
-    "w": "Idris",
-    "t": "The Core test package builds again, so its 1067 quick tests can catch mistakes before they merge.",
-    "at": "2026-11-28T07:40:00-05:00"
+    "w": "Maren",
+    "t": "The widget button-limit check is now pinned by examples where the size-dependent part sits deep...",
+    "at": "2026-11-28T07:57:00-05:00"
    },
    {
     "w": "Maren",
-    "t": "The list of switched-off checks no longer points at a commit ID that will change when the work...",
-    "at": "2026-11-28T07:22:00-05:00"
+    "t": "A build meant only for our own testers can no longer be made by one stray setting in the project...",
+    "at": "2026-11-28T07:57:00-05:00"
    },
    {
-    "w": "Idris",
-    "t": "A refresh tap that has to wait behind a widget's finishing run no longer starts a run after iOS...",
-    "at": "2026-11-28T06:06:00-05:00"
+    "w": "Maren",
+    "t": "The script that shrinks the design pictures is back where the drawing scripts look for it, and...",
+    "at": "2026-11-28T07:57:00-05:00"
    }
   ],
   "count": {
-   "next": 256,
+   "next": 253,
    "wait": 0,
    "blocked": 0,
    "you": 0
   },
   "fin": {
-   "n": 19,
+   "n": 22,
    "rows": [
+    [
+     "T-5313",
+     "Pin nested family Whens in..."
+    ],
+    [
+     "T-4626",
+     "Let only the upload script..."
+    ],
+    [
+     "T-5544",
+     "Bring back the PNG shrinker..."
+    ],
     [
      "T-5961",
      "Let the Core package build again"
@@ -440,18 +452,6 @@
     [
      "T-4775",
      "Give a late tap its own run..."
-    ],
-    [
-     "T-5018",
-     "Test the exact moment a..."
-    ],
-    [
-     "T-0306",
-     "Check the gallery trees in..."
-    ],
-    [
-     "T-5959",
-     "Keep the When tapped..."
     ]
    ]
   }
@@ -495,7 +495,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-28T12:54:55Z",
+  "at": "2026-11-28T12:57:42Z",
   "s": {
    "T-4183": [
     "mergetest",
@@ -524,6 +524,9 @@
    "T-4183": "Idris",
    "T-4181": "Idris",
    "T-5953": "Maren",
+   "T-5313": "Pernille",
+   "T-4626": "Idris",
+   "T-5544": "Odalys",
    "T-5961": "Idris",
    "T-5837": "Operator",
    "T-4775": "Idris",
@@ -532,14 +535,11 @@
    "T-5959": "Idris",
    "T-4857": "Idris",
    "T-5954": "Odalys",
-   "T-5942": "Maren",
-   "T-5955": "Idris",
-   "T-5323": "Idris",
-   "T-4867": "Idris"
+   "T-5942": "Maren"
   }
  },
  "ln": {
-  "at": "2026-11-28T12:54:55Z",
+  "at": "2026-11-28T12:57:42Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -557,7 +557,7 @@
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1302
+    "parked": 1305
    },
    "cur": [],
    "ld": [
@@ -567,12 +567,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-28T12:55:04Z",
-    "ld": 21.27,
+    "at": "2026-11-28T12:57:16Z",
+    "ld": 26.02,
     "c": 8,
     "sb": 1,
     "dk": [
-     31.8,
+     31.7,
      228.3
     ],
     "ss": [
@@ -624,11 +624,11 @@
      "open": true
     }
    },
-   "at": "2026-11-28T12:54:55+00:00"
+   "at": "2026-11-28T12:58:02+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-28T12:54:55+00:00"
+   "at": "2026-11-28T12:58:02+00:00"
   }
  },
  "operators": [
@@ -681,10 +681,10 @@
   "main": 2,
   "lanes": 2,
   "total": 4,
-  "at": "7:55 AM",
+  "at": "7:58 AM",
   "why": "",
-  "at_iso": "2026-11-28T12:55:00+00:00",
+  "at_iso": "2026-11-28T12:58:00+00:00",
   "started": "9:13 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 2, started 9:13 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 7:55 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 2, started 9:13 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 7:58 AM ET</p></section>"
  }
 }

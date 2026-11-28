@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-28T02:17:00.394663+00:00",
+ "at": "2026-11-28T02:20:07.154667+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -62,7 +62,7 @@
    "task": "[build] T-4188 location distance notifications",
    "model": "opus",
    "started": "2026-11-28T02:15:14.037Z",
-   "seconds": 106,
+   "seconds": 293,
    "finished": null
   },
   {
@@ -70,7 +70,7 @@
    "task": "[build] T-4190 Settings Pro tests",
    "model": "opus",
    "started": "2026-11-28T02:15:22.190Z",
-   "seconds": 98,
+   "seconds": 284,
    "finished": null
   },
   {
@@ -78,7 +78,7 @@
    "task": "[build] T-4183 Gallery premades release",
    "model": "opus",
    "started": "2026-11-28T02:15:30.840Z",
-   "seconds": 89,
+   "seconds": 276,
    "finished": null
   },
   {
@@ -86,7 +86,7 @@
    "task": "[build] T-4778 font probe rerun",
    "model": "opus",
    "started": "2026-11-28T02:15:39.792Z",
-   "seconds": 80,
+   "seconds": 267,
    "finished": null
   },
   {
@@ -94,11 +94,19 @@
    "task": "[build] T-5837 Home review fixes",
    "model": "opus",
    "started": "2026-11-28T02:15:49.354Z",
-   "seconds": 71,
+   "seconds": 257,
+   "finished": null
+  },
+  {
+   "name": "maren",
+   "task": "[build] T-5950 look picker inspiration",
+   "model": "opus",
+   "started": "2026-11-28T02:19:03.431Z",
+   "seconds": 63,
    "finished": null
   }
  ],
- "who": "Idris x4, Maren",
+ "who": "Idris x4, Maren x2",
  "recent": [],
  "queue": {
   "runnable": [],
@@ -108,20 +116,20 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 30.0,
-   "resets_at": "2026-11-28T03:30:00.490964+00:00",
+   "pct": 31.0,
+   "resets_at": "2026-11-27T22:30:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-27T21:13:46.746196-05:00",
-   "source": "usage",
-   "left": 70.0,
+   "read_at": "2026-11-27T21:19:01.063002-05:00",
+   "source": "live",
+   "left": 69.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 46.0,
-   "resets_at": "2026-11-29T07:00:00.490984+00:00",
+   "resets_at": "2026-11-29T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-27T21:13:46.746196-05:00",
-   "source": "usage",
+   "read_at": "2026-11-27T21:19:01.063002-05:00",
+   "source": "live",
    "left": 54.0,
    "left_words": "of your weekly allowance left"
   },
@@ -132,7 +140,7 @@
    "read_at": "2026-11-27T21:13:46.746196-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-27T21:13:46.746196-05:00"
+  "read_at": "2026-11-27T21:19:01.063002-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -152,7 +160,7 @@
   "week_pct": 39.33,
   "usage_pct": 46.1,
   "work_pct": 99.0,
-  "read_at": "2026-11-28T02:17:00+00:00",
+  "read_at": "2026-11-28T02:20:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -195,14 +203,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-27T21:14:00-05:00",
+   "at": "2026-11-27T21:19:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 4,
-  "at": "2026-11-27T21:17:00-05:00",
+  "at": "2026-11-27T21:20:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -313,6 +321,15 @@
     "at": "2026-11-28T02:15:49.354Z",
     "o": "c",
     "task": "T-5837"
+   },
+   {
+    "w": "Maren",
+    "k": "build",
+    "t": "Add details vault ideas to the look picker",
+    "m": "opus",
+    "at": "2026-11-28T02:19:03.431Z",
+    "o": "c",
+    "task": "T-5950"
    }
   ],
   "src": "plan",
@@ -391,6 +408,11 @@
   "done": [
    {
     "w": "Idris",
+    "t": "The Restore test no longer depends on a one-second margin, the test-only delay is left out of...",
+    "at": "2026-11-27T21:19:00-05:00"
+   },
+   {
+    "w": "Idris",
     "t": "A person who already owns Pro and taps Restore with no connection is now told it failed, instead...",
     "at": "2026-11-27T19:02:00-05:00"
    },
@@ -398,11 +420,6 @@
     "w": "Idris",
     "t": "The test that keeps the editor theme row hidden now fails if the app's Pro settings file goes...",
     "at": "2026-11-27T19:02:00-05:00"
-   },
-   {
-    "w": "Pernille",
-    "t": "The World clocks widget is now Overlap clocks: it draws each chosen city's working hours across...",
-    "at": "2026-11-27T18:50:00-05:00"
    }
   ],
   "count": {
@@ -412,8 +429,13 @@
    "you": 0
   },
   "fin": {
-   "n": 0,
-   "rows": []
+   "n": 1,
+   "rows": [
+    [
+     "T-5297",
+     "Restore test hold and sheet..."
+    ]
+   ]
   }
  },
  "qr": [
@@ -455,12 +477,18 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-28T02:16:48Z",
+  "at": "2026-11-28T02:20:00Z",
   "s": {
-   "T-4188": [
+   "T-4641": [
     "mergetest",
     "iPhone tests on the MacBook",
     null
+   ],
+   "T-5950": [
+    "merged",
+    "on main 9:18 PM ET",
+    1795832302000,
+    ""
    ],
    "T-4181": [
     "merged",
@@ -470,16 +498,19 @@
    ]
   },
   "nm": {
-   "T-4188": "Location, steps and notifications work in scripts and...",
+   "T-4641": "Tidy the premade settings Page's smaller review points",
+   "T-5950": "Add details vault ideas to the look picker",
    "T-4181": "Widgets refresh on their own and by a tap"
   },
   "wk": {
-   "T-4188": "Idris",
-   "T-4181": "Idris"
+   "T-4641": "Idris",
+   "T-5950": "Maren",
+   "T-4181": "Idris",
+   "T-5297": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-28T02:16:48Z",
+  "at": "2026-11-28T02:20:00Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -497,7 +528,7 @@
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1364
+    "parked": 1367
    },
    "cur": [],
    "ld": [
@@ -507,12 +538,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-28T02:16:27Z",
-    "ld": 0.73,
+    "at": "2026-11-28T02:19:31Z",
+    "ld": 1.56,
     "c": 8,
     "sb": 0,
     "dk": [
-     42.4,
+     42.9,
      228.3
     ],
     "ss": [
@@ -522,19 +553,17 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-28T02:09:54Z",
-    "ld": 16.21,
+    "at": "2026-11-28T02:18:30Z",
+    "ld": 6.06,
     "c": 12,
-    "sb": 4,
+    "sb": 2,
     "dk": [
-     347.4,
+     350.7,
      926.4
     ],
     "sn": [
      "itsthecompany-runner",
-     "itsthecompany-runner-2",
-     "itsthecompany-runner-4",
-     "itsthecompany-runner-5"
+     "itsthecompany-runner-3"
     ]
    }
   }
@@ -565,11 +594,11 @@
      "open": true
     }
    },
-   "at": "2026-11-28T02:17:00+00:00"
+   "at": "2026-11-28T02:20:07+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-28T02:17:00+00:00"
+   "at": "2026-11-28T02:20:00+00:00"
   }
  },
  "operators": [
@@ -579,8 +608,8 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Inbox \u2013 Evan's 9:16 PM Message on GitHub",
-   "at": "2026-11-27T21:16:34-05:00"
+   "t": "Work session",
+   "at": "2026-11-27T21:19:49-05:00"
   },
   {
    "w": "Operator",
@@ -593,39 +622,28 @@
   }
  ],
  "reply": {
-  "sent": "2026-11-28T01:57:38Z",
-  "seconds": 108.0
+  "sent": "2026-11-28T02:19:06Z",
+  "seconds": 42.0
  },
- "inbox": [
-  {
-   "id": "c7232248391",
-   "state": "received",
-   "position": 1,
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "Please use the attached website for..."
-  }
- ],
+ "inbox": [],
  "trimmed": [
   "lane_next",
   "queue_text",
   "task_done",
-  "inbox_title",
+  "fin_short",
   "task_title",
   "done_text",
   "lane_task",
   "task_next"
  ],
  "agents_now": {
-  "main": 5,
+  "main": 6,
   "lanes": 1,
-  "total": 6,
-  "at": "9:17 PM",
+  "total": 7,
+  "at": "9:20 PM",
   "why": "",
-  "at_iso": "2026-11-28T02:17:00+00:00",
+  "at_iso": "2026-11-28T02:20:00+00:00",
   "started": "9:13 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 5, started 9:13 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 9:17 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 6, started 9:13 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 9:20 PM ET</p></section>"
  }
 }

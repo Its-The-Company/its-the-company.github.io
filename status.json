@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-28T07:16:22.747127+00:00",
+ "at": "2026-11-28T07:19:27.008864+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -83,7 +83,7 @@
    "task": "[build] T-4188 second location extension",
    "model": "opus",
    "started": "2026-11-28T03:56:16.118Z",
-   "seconds": 12006,
+   "seconds": 12190,
    "finished": null
   },
   {
@@ -91,7 +91,7 @@
    "task": "[build] T-4183 screenshots run lock",
    "model": "opus",
    "started": "2026-11-28T04:27:26.477Z",
-   "seconds": 10136,
+   "seconds": 10320,
    "finished": null
   },
   {
@@ -99,7 +99,7 @@
    "task": "[build] T-4476 failed save notice",
    "model": "opus",
    "started": "2026-11-28T04:32:31.121Z",
-   "seconds": 9831,
+   "seconds": 10015,
    "finished": null
   },
   {
@@ -107,7 +107,7 @@
    "task": "[build] T-5837 stale chart check",
    "model": "fable",
    "started": "2026-11-28T06:15:09.969Z",
-   "seconds": 3672,
+   "seconds": 3857,
    "finished": null
   },
   {
@@ -115,7 +115,7 @@
    "task": "[build] T-4190 tester Pro wording",
    "model": "opus",
    "started": "2026-11-28T06:37:31.114Z",
-   "seconds": 2331,
+   "seconds": 2515,
    "finished": null
   }
  ],
@@ -162,19 +162,19 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 30.0,
+   "pct": 31.0,
    "resets_at": "2026-11-28T03:30:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-28T02:03:52.750161-05:00",
+   "read_at": "2026-11-28T02:19:05.378964-05:00",
    "source": "live",
-   "left": 70.0,
+   "left": 69.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 52.0,
    "resets_at": "2026-11-29T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-28T02:03:52.750161-05:00",
+   "read_at": "2026-11-28T02:19:05.378964-05:00",
    "source": "live",
    "left": 48.0,
    "left_words": "of your weekly allowance left"
@@ -186,7 +186,7 @@
    "read_at": "2026-11-28T01:55:47.708807-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-28T02:03:52.750161-05:00"
+  "read_at": "2026-11-28T02:19:05.378964-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -206,7 +206,7 @@
   "week_pct": 44.46,
   "usage_pct": 46.1,
   "work_pct": 99.0,
-  "read_at": "2026-11-28T07:16:00+00:00",
+  "read_at": "2026-11-28T07:19:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -249,14 +249,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-28T02:14:00-05:00",
+   "at": "2026-11-28T02:16:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 4,
-  "at": "2026-11-28T02:16:00-05:00",
+  "at": "2026-11-28T02:19:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -267,7 +267,7 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Double Spread: past the week's halfway point with room left, so twice the even pace until the limit or the reset; the machine allows 8 (at its floor: load 14.7 a core is over 10)",
+  "why": "Double Spread: past the week's halfway point with room left, so twice the even pace until the limit or the reset; the machine allows 8 (held: too few lands in 3 hours to judge a raise)",
   "n": 4,
   "at": "2026-11-27T21:13:47.067436-05:00"
  },
@@ -534,7 +534,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-28T07:16:03Z",
+  "at": "2026-11-28T07:19:27Z",
   "s": {
    "T-4857": [
     "mergetest",
@@ -576,7 +576,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-28T07:16:03Z",
+  "at": "2026-11-28T07:19:27Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -594,7 +594,7 @@
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1663
+    "parked": 1666
    },
    "cur": [],
    "ld": [
@@ -604,8 +604,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-28T07:16:06Z",
-    "ld": 10.54,
+    "at": "2026-11-28T07:19:27Z",
+    "ld": 7.42,
     "c": 8,
     "sb": 1,
     "dk": [
@@ -665,11 +665,11 @@
      "open": true
     }
    },
-   "at": "2026-11-28T07:16:22+00:00"
+   "at": "2026-11-28T07:19:27+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-28T07:16:14+00:00"
+   "at": "2026-11-28T07:19:20+00:00"
   }
  },
  "operators": [
@@ -713,10 +713,10 @@
   "main": 5,
   "lanes": 1,
   "total": 6,
-  "at": "2:16 AM",
+  "at": "2:19 AM",
   "why": "",
-  "at_iso": "2026-11-28T07:16:00+00:00",
+  "at_iso": "2026-11-28T07:19:00+00:00",
   "started": "9:13 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 5, started 9:13 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 2:16 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 5, started 9:13 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 2:19 AM ET</p></section>"
  }
 }

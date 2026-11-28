@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-28T06:07:44.670916+00:00",
+ "at": "2026-11-28T06:10:48.146472+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -83,7 +83,7 @@
    "task": "[build] T-4188 second location extension",
    "model": "opus",
    "started": "2026-11-28T03:56:16.118Z",
-   "seconds": 7888,
+   "seconds": 8072,
    "finished": null
   },
   {
@@ -91,7 +91,7 @@
    "task": "[build] T-4183 screenshots run lock",
    "model": "opus",
    "started": "2026-11-28T04:27:26.477Z",
-   "seconds": 6018,
+   "seconds": 6201,
    "finished": null
   },
   {
@@ -99,7 +99,7 @@
    "task": "[build] T-4476 failed save notice",
    "model": "opus",
    "started": "2026-11-28T04:32:31.121Z",
-   "seconds": 5713,
+   "seconds": 5897,
    "finished": null
   },
   {
@@ -107,7 +107,7 @@
    "task": "[build] T-5954 drop Fable cap",
    "model": "opus",
    "started": "2026-11-28T04:56:44.972Z",
-   "seconds": 4259,
+   "seconds": 4443,
    "finished": null
   },
   {
@@ -115,20 +115,28 @@
    "task": "[review] T-5837 third pass",
    "model": "opus",
    "started": "2026-11-28T05:22:02.092Z",
-   "seconds": 2742,
+   "seconds": 2926,
    "finished": null
+  }
+ ],
+ "who": "Idris x2, Maren, Odalys x2",
+ "recent": [
+  {
+   "name": "odalys",
+   "task": "[review] T-4190 offline Restore",
+   "model": "opus",
+   "started": "2026-11-28T06:09:03.425Z",
+   "seconds": null,
+   "finished": "2026-11-28T06:10:06.299000+00:00"
   },
   {
    "name": "idris",
    "task": "[build] T-4190 offline Restore test",
    "model": "fable",
    "started": "2026-11-28T05:23:58.664Z",
-   "seconds": 2626,
-   "finished": null
-  }
- ],
- "who": "Idris x3, Maren, Odalys x2",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-28T06:08:35.539000+00:00"
+  },
   {
    "name": "maren",
    "task": "[build] T-5837 lk-sess id fix",
@@ -144,22 +152,6 @@
    "started": "2026-11-28T04:57:03.599Z",
    "seconds": null,
    "finished": "2026-11-28T04:59:55.631000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-4190 Settings Pro tests",
-   "model": "opus",
-   "started": "2026-11-28T02:15:22.190Z",
-   "seconds": null,
-   "finished": "2026-11-28T04:53:31.994000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[review] T-5837 again",
-   "model": "opus",
-   "started": "2026-11-28T04:04:07.390Z",
-   "seconds": null,
-   "finished": "2026-11-28T04:25:09.630000+00:00"
   }
  ],
  "queue": {
@@ -214,8 +206,21 @@
   "week_pct": 42.75,
   "usage_pct": 46.1,
   "work_pct": 99.0,
-  "read_at": "2026-11-28T06:07:00+00:00",
-  "running": []
+  "read_at": "2026-11-28T06:10:00+00:00",
+  "running": [
+   {
+    "lane": "a",
+    "task": "T-4181",
+    "w": "Idris",
+    "k": "build",
+    "t": "Widgets refresh on their own and by a tap",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-28T01:09:01-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   }
+  ]
  },
  "api_credits": [
   {
@@ -251,7 +256,7 @@
  "lock_in": {
   "on": false,
   "pool": 4,
-  "at": "2026-11-28T01:07:00-05:00",
+  "at": "2026-11-28T01:10:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -362,15 +367,6 @@
     "at": "2026-11-28T05:22:02.092Z",
     "o": "c",
     "task": "T-5837"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "Settings and Pro: buy, restore, themes",
-    "m": "fable",
-    "at": "2026-11-28T05:23:58.664Z",
-    "o": "c",
-    "task": "T-4190"
    }
   ],
   "src": "plan",
@@ -538,17 +534,12 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-28T06:07:28Z",
+  "at": "2026-11-28T06:10:48Z",
   "s": {
-   "T-5955": [
-    "mergetest",
-    "iPhone tests on the MacBook",
-    null
-   ],
    "T-4181": [
     "merged",
-    "on main 12:35 AM ET",
-    1795844104000,
+    "on main 1:07 AM ET",
+    1795846077000,
     "Idris"
    ],
    "T-5954": [
@@ -565,13 +556,11 @@
    ]
   },
   "nm": {
-   "T-5955": "Steady the offline Restore UI test",
    "T-4181": "Widgets refresh on their own and by a tap",
    "T-5954": "Drop the governor's weekly Fable cap",
    "T-4183": "The Gallery shows, previews and opens every premade"
   },
   "wk": {
-   "T-5955": "Idris",
    "T-4181": "Idris",
    "T-5954": "Odalys",
    "T-4183": "Idris",
@@ -587,7 +576,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-28T06:07:28Z",
+  "at": "2026-11-28T06:10:48Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -605,7 +594,7 @@
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1594
+    "parked": 1598
    },
    "cur": [],
    "ld": [
@@ -615,35 +604,30 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-28T06:07:06Z",
-    "ld": 21.19,
+    "at": "2026-11-28T06:10:24Z",
+    "ld": 12.48,
     "c": 8,
-    "sb": 1,
+    "sb": 0,
     "dk": [
-     35.0,
+     34.8,
      228.3
     ],
     "ss": [
      152.7,
      953.7
     ],
-    "sn": [
-     "iPhone 17e"
-    ]
+    "sn": []
    },
    "macbook": {
-    "at": "2026-11-28T06:06:12Z",
-    "ld": 7.17,
+    "at": "2026-11-28T06:07:10Z",
+    "ld": 5.95,
     "c": 12,
-    "sb": 2,
+    "sb": 0,
     "dk": [
-     346.0,
+     349.3,
      926.4
     ],
-    "sn": [
-     "itsthecompany-runner",
-     "itsthecompany-runner-3"
-    ]
+    "sn": []
    }
   }
  },
@@ -673,11 +657,11 @@
      "open": true
     }
    },
-   "at": "2026-11-28T06:07:44+00:00"
+   "at": "2026-11-28T06:10:48+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-28T06:07:28+00:00"
+   "at": "2026-11-28T06:10:42+00:00"
   }
  },
  "operators": [
@@ -696,8 +680,8 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session",
-   "at": "2026-11-28T00:52:56-05:00"
+   "t": "Work session \u2013 1 task",
+   "at": "2026-11-28T01:09:01-05:00"
   }
  ],
  "reply": {
@@ -718,13 +702,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 6,
-  "lanes": 0,
+  "main": 5,
+  "lanes": 1,
   "total": 6,
-  "at": "1:07 AM",
+  "at": "1:10 AM",
   "why": "",
-  "at_iso": "2026-11-28T06:07:00+00:00",
+  "at_iso": "2026-11-28T06:10:00+00:00",
   "started": "9:13 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 6, started 9:13 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 1:07 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 5, started 9:13 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 1:10 AM ET</p></section>"
  }
 }

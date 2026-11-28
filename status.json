@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-28T14:08:29.856671+00:00",
+ "at": "2026-11-28T14:11:35.183315+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -83,7 +83,7 @@
    "task": "[build] T-4188 location test run",
    "model": "",
    "started": "2026-11-28T13:09:32.138Z",
-   "seconds": 3537,
+   "seconds": 3723,
    "finished": null
   },
   {
@@ -91,7 +91,7 @@
    "task": "[build] T-4190 store and token fixes",
    "model": "",
    "started": "2026-11-28T13:09:41.239Z",
-   "seconds": 3528,
+   "seconds": 3713,
    "finished": null
   },
   {
@@ -99,7 +99,7 @@
    "task": "[review] T-5953",
    "model": "",
    "started": "2026-11-28T13:09:48.004Z",
-   "seconds": 3521,
+   "seconds": 3707,
    "finished": null
   }
  ],
@@ -174,7 +174,7 @@
   "week_pct": 46.79,
   "usage_pct": 43.0,
   "work_pct": 99.0,
-  "read_at": "2026-11-28T14:08:00+00:00",
+  "read_at": "2026-11-28T14:11:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -208,7 +208,7 @@
   }
  ],
  "disk": {
-  "free_gb": 31,
+  "free_gb": 33,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -217,14 +217,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-28T09:04:00-05:00",
+   "at": "2026-11-28T09:11:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 4,
-  "at": "2026-11-28T09:08:00-05:00",
+  "at": "2026-11-28T09:11:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -456,11 +456,16 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-28T14:08:18Z",
+  "at": "2026-11-28T14:10:17Z",
   "s": {
    "T-4182": [
     "mergetest",
     "iPhone tests on the MacBook",
+    null
+   ],
+   "T-4188": [
+    "testing",
+    "Mac Mini \u00b7 test",
     null
    ],
    "T-5953": [
@@ -472,15 +477,17 @@
   },
   "nm": {
    "T-4182": "A failing widget says so and can recover",
+   "T-4188": "Location, steps and notifications work in scripts and...",
    "T-5953": "Draw Home's Efficiency numbers as graphs"
   },
   "wk": {
    "T-4182": "Idris",
+   "T-4188": "Idris",
    "T-5953": "Maren"
   }
  },
  "ln": {
-  "at": "2026-11-28T14:08:18Z",
+  "at": "2026-11-28T14:10:17Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -498,7 +505,7 @@
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1376
+    "parked": 1378
    },
    "cur": [],
    "ld": [
@@ -508,12 +515,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-28T14:07:52Z",
-    "ld": 5.42,
+    "at": "2026-11-28T14:11:17Z",
+    "ld": 11.69,
     "c": 8,
     "sb": 1,
     "dk": [
-     33.1,
+     32.7,
      228.3
     ],
     "ss": [
@@ -547,7 +554,7 @@
    "parked": 5,
    "open": true,
    "mq": false,
-   "counted": "2026-11-28T13:59:10+00:00",
+   "counted": "2026-11-28T14:09:24+00:00",
    "by": {
     "app": {
      "n": 4,
@@ -565,15 +572,15 @@
      "open": true
     }
    },
-   "at": "2026-11-28T14:08:29+00:00"
+   "at": "2026-11-28T14:11:35+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-28T14:08:18+00:00"
+   "at": "2026-11-28T14:11:35+00:00"
   }
  },
  "fw": {
-  "at": 1795874886,
+  "at": 1795875011,
   "s": [
    [
     "main",
@@ -813,7 +820,7 @@
      ]
     ],
     0,
-    1
+    0
    ]
   ],
   "mh": [
@@ -994,7 +1001,7 @@
   "x": [
    "held",
    "T-4191",
-   3437,
+   3439,
    6
   ]
  },
@@ -1036,10 +1043,10 @@
   "main": 3,
   "lanes": 1,
   "total": 4,
-  "at": "9:08 AM",
+  "at": "9:11 AM",
   "why": "",
-  "at_iso": "2026-11-28T14:08:00+00:00",
+  "at_iso": "2026-11-28T14:11:00+00:00",
   "started": "8:06 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 3, started 8:06 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 9:08 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 3, started 8:06 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 9:11 AM ET</p></section>"
  }
 }

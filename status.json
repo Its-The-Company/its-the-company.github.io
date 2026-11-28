@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-28T05:25:02.911764+00:00",
+ "at": "2026-11-28T05:28:03.940110+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -62,7 +62,7 @@
    "task": "[build] T-4188 second location extension",
    "model": "opus",
    "started": "2026-11-28T03:56:16.118Z",
-   "seconds": 5326,
+   "seconds": 5507,
    "finished": null
   },
   {
@@ -70,7 +70,7 @@
    "task": "[build] T-4183 screenshots run lock",
    "model": "opus",
    "started": "2026-11-28T04:27:26.477Z",
-   "seconds": 3456,
+   "seconds": 3637,
    "finished": null
   },
   {
@@ -78,7 +78,7 @@
    "task": "[build] T-4476 failed save notice",
    "model": "opus",
    "started": "2026-11-28T04:32:31.121Z",
-   "seconds": 3151,
+   "seconds": 3332,
    "finished": null
   },
   {
@@ -86,7 +86,7 @@
    "task": "[build] T-5954 drop Fable cap",
    "model": "opus",
    "started": "2026-11-28T04:56:44.972Z",
-   "seconds": 1697,
+   "seconds": 1878,
    "finished": null
   },
   {
@@ -94,7 +94,7 @@
    "task": "[review] T-5837 third pass",
    "model": "opus",
    "started": "2026-11-28T05:22:02.092Z",
-   "seconds": 180,
+   "seconds": 361,
    "finished": null
   },
   {
@@ -102,7 +102,7 @@
    "task": "[build] T-4190 offline Restore test",
    "model": "fable",
    "started": "2026-11-28T05:23:58.664Z",
-   "seconds": 64,
+   "seconds": 245,
    "finished": null
   }
  ],
@@ -149,19 +149,19 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 12.0,
+   "pct": 13.0,
    "resets_at": "2026-11-28T03:30:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-28T00:21:54.829045-05:00",
+   "read_at": "2026-11-28T00:26:17.200971-05:00",
    "source": "live",
-   "left": 88.0,
+   "left": 87.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 49.0,
    "resets_at": "2026-11-29T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-28T00:21:54.829045-05:00",
+   "read_at": "2026-11-28T00:26:17.200971-05:00",
    "source": "live",
    "left": 51.0,
    "left_words": "of your weekly allowance left"
@@ -173,7 +173,7 @@
    "read_at": "2026-11-28T00:10:54.352146-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-28T00:21:54.829045-05:00"
+  "read_at": "2026-11-28T00:26:17.200971-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -193,7 +193,7 @@
   "week_pct": 41.89,
   "usage_pct": 46.1,
   "work_pct": 99.0,
-  "read_at": "2026-11-28T05:25:00+00:00",
+  "read_at": "2026-11-28T05:28:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -223,14 +223,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-28T00:22:00-05:00",
+   "at": "2026-11-28T00:27:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 4,
-  "at": "2026-11-28T00:25:00-05:00",
+  "at": "2026-11-28T00:28:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -241,7 +241,7 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Double Spread: past the week's halfway point with room left, so twice the even pace until the limit or the reset; the machine allows 8 (at its floor: load 25.8 a core is over 10)",
+  "why": "Double Spread: past the week's halfway point with room left, so twice the even pace until the limit or the reset; the machine allows 8 (at its floor: load 29.3 a core is over 10)",
   "n": 4,
   "at": "2026-11-27T21:13:47.067436-05:00"
  },
@@ -517,12 +517,12 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-28T05:24:38Z",
+  "at": "2026-11-28T05:27:50Z",
   "s": {
    "T-4181": [
     "mergetest",
     "Xcode checks on the MacBook, 1st to merge",
-    1795843418222
+    1795843430437
    ],
    "T-4183": [
     "testing",
@@ -557,7 +557,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-28T05:24:38Z",
+  "at": "2026-11-28T05:27:50Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -569,22 +569,22 @@
     "parked": 9
    },
    "m": {
-    "checking": 1,
+    "checking": 4,
     "inline": null,
     "conflicted": null,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1551
+    "parked": 1555
    },
    "cur": [
     [
      [
       "T-4181"
      ],
-     "iPhone app tests, sent and waiting its turn",
+     "iPhone app tests",
      "MacBook",
-     1
+     4
     ]
    ],
    "ld": [
@@ -594,8 +594,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-28T05:24:41Z",
-    "ld": 30.18,
+    "at": "2026-11-28T05:27:48Z",
+    "ld": 28.43,
     "c": 8,
     "sb": 1,
     "dk": [
@@ -611,8 +611,8 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-28T05:22:38Z",
-    "ld": 1.6,
+    "at": "2026-11-28T05:24:43Z",
+    "ld": 1.12,
     "c": 12,
     "sb": 0,
     "dk": [
@@ -649,11 +649,11 @@
      "open": true
     }
    },
-   "at": "2026-11-28T05:25:02+00:00"
+   "at": "2026-11-28T05:28:03+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-28T05:24:49+00:00"
+   "at": "2026-11-28T05:27:58+00:00"
   }
  },
  "operators": [
@@ -688,10 +688,10 @@
   "main": 6,
   "lanes": 0,
   "total": 6,
-  "at": "12:25 AM",
+  "at": "12:28 AM",
   "why": "",
-  "at_iso": "2026-11-28T05:25:00+00:00",
+  "at_iso": "2026-11-28T05:28:00+00:00",
   "started": "9:13 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 6, started 9:13 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 12:25 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 6, started 9:13 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 12:28 AM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-28T05:06:29.730842+00:00",
+ "at": "2026-11-28T05:09:34.738156+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -62,7 +62,7 @@
    "task": "[build] T-4188 second location extension",
    "model": "opus",
    "started": "2026-11-28T03:56:16.118Z",
-   "seconds": 4213,
+   "seconds": 4398,
    "finished": null
   },
   {
@@ -70,7 +70,7 @@
    "task": "[build] T-5837 lk-sess id fix",
    "model": "opus",
    "started": "2026-11-28T04:25:59.842Z",
-   "seconds": 2429,
+   "seconds": 2614,
    "finished": null
   },
   {
@@ -78,7 +78,7 @@
    "task": "[build] T-4183 screenshots run lock",
    "model": "opus",
    "started": "2026-11-28T04:27:26.477Z",
-   "seconds": 2343,
+   "seconds": 2528,
    "finished": null
   },
   {
@@ -86,7 +86,7 @@
    "task": "[build] T-4476 failed save notice",
    "model": "opus",
    "started": "2026-11-28T04:32:31.121Z",
-   "seconds": 2038,
+   "seconds": 2223,
    "finished": null
   },
   {
@@ -94,7 +94,7 @@
    "task": "[build] T-5954 drop Fable cap",
    "model": "opus",
    "started": "2026-11-28T04:56:44.972Z",
-   "seconds": 584,
+   "seconds": 769,
    "finished": null
   }
  ],
@@ -185,7 +185,7 @@
   "week_pct": 41.89,
   "usage_pct": 46.1,
   "work_pct": 99.0,
-  "read_at": "2026-11-28T05:06:00+00:00",
+  "read_at": "2026-11-28T05:09:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -235,7 +235,7 @@
  "lock_in": {
   "on": false,
   "pool": 4,
-  "at": "2026-11-28T00:06:00-05:00",
+  "at": "2026-11-28T00:09:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -246,7 +246,7 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Double Spread: past the week's halfway point with room left, so twice the even pace until the limit or the reset; the machine allows 8 (at its floor: load 17.7 a core is over 10)",
+  "why": "Double Spread: past the week's halfway point with room left, so twice the even pace until the limit or the reset; the machine allows 8 (at its floor: load 11.7 a core is over 10)",
   "n": 4,
   "at": "2026-11-27T21:13:47.067436-05:00"
  },
@@ -513,8 +513,13 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-28T05:06:05Z",
+  "at": "2026-11-28T05:09:26Z",
   "s": {
+   "T-0793": [
+    "mergetest",
+    "iPhone tests on the MacBook",
+    null
+   ],
    "T-5954": [
     "merged",
     "on main 11:56 PM ET",
@@ -535,11 +540,13 @@
    ]
   },
   "nm": {
+   "T-0793": "Add background refresh for widgets in version 1.0",
    "T-5954": "Drop the governor's weekly Fable cap",
    "T-4183": "The Gallery shows, previews and opens every premade",
    "T-4181": "Widgets refresh on their own and by a tap"
   },
   "wk": {
+   "T-0793": "Idris",
    "T-5954": "Odalys",
    "T-4183": "Idris",
    "T-4181": "Idris",
@@ -552,7 +559,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-28T05:06:05Z",
+  "at": "2026-11-28T05:09:26Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -570,7 +577,7 @@
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1533
+    "parked": 1536
    },
    "cur": [],
    "ld": [
@@ -580,12 +587,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-28T05:05:28Z",
-    "ld": 13.16,
+    "at": "2026-11-28T05:08:39Z",
+    "ld": 9.29,
     "c": 8,
     "sb": 0,
     "dk": [
-     38.0,
+     40.3,
      228.3
     ],
     "ss": [
@@ -595,8 +602,8 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-28T05:04:52Z",
-    "ld": 1.82,
+    "at": "2026-11-28T05:06:56Z",
+    "ld": 1.25,
     "c": 12,
     "sb": 0,
     "dk": [
@@ -633,11 +640,11 @@
      "open": true
     }
    },
-   "at": "2026-11-28T05:06:29+00:00"
+   "at": "2026-11-28T05:09:34+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-28T05:06:29+00:00"
+   "at": "2026-11-28T05:09:34+00:00"
   }
  },
  "operators": [
@@ -680,10 +687,10 @@
   "main": 5,
   "lanes": 1,
   "total": 6,
-  "at": "12:06 AM",
+  "at": "12:09 AM",
   "why": "",
-  "at_iso": "2026-11-28T05:06:00+00:00",
+  "at_iso": "2026-11-28T05:09:00+00:00",
   "started": "9:13 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 5, started 9:13 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 12:06 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 5, started 9:13 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 12:09 AM ET</p></section>"
  }
 }

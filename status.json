@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-28T11:12:13.184605+00:00",
+ "at": "2026-11-28T11:15:15.906930+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -83,7 +83,7 @@
    "task": "[build] T-4183 screenshots run lock",
    "model": "opus",
    "started": "2026-11-28T04:27:26.477Z",
-   "seconds": 24286,
+   "seconds": 24469,
    "finished": null
   },
   {
@@ -91,7 +91,7 @@
    "task": "[build] T-5837 stale chart check",
    "model": "fable",
    "started": "2026-11-28T06:15:09.969Z",
-   "seconds": 17823,
+   "seconds": 18005,
    "finished": null
   },
   {
@@ -99,7 +99,7 @@
    "task": "[build] T-4183 fixture gate shrinker",
    "model": "opus",
    "started": "2026-11-28T08:48:43.219Z",
-   "seconds": 8609,
+   "seconds": 8792,
    "finished": null
   }
  ],
@@ -190,8 +190,20 @@
   "week_pct": 49.56,
   "usage_pct": 46.1,
   "work_pct": 99.0,
-  "read_at": "2026-11-28T11:12:00+00:00",
+  "read_at": "2026-11-28T11:15:00+00:00",
   "running": [
+   {
+    "lane": "a",
+    "task": "T-4181",
+    "w": "Idris",
+    "k": "build",
+    "t": "Widgets refresh on their own and by a tap",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-28T06:14:05-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
    {
     "lane": "a2",
     "task": "T-0472",
@@ -233,14 +245,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-28T06:08:00-05:00",
+   "at": "2026-11-28T06:14:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-28T06:12:00-05:00",
+  "at": "2026-11-28T06:15:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -500,7 +512,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-28T11:12:13Z",
+  "at": "2026-11-28T11:14:57Z",
   "s": {
    "T-5952": [
     "mergetest",
@@ -512,6 +524,12 @@
     "Mac Mini \u00b7 test",
     null
    ],
+   "T-4181": [
+    "merged",
+    "on main 6:06 AM ET",
+    1795863988000,
+    "Pernille"
+   ],
    "T-4183": [
     "merged",
     "on main 11:26 PM ET",
@@ -522,11 +540,13 @@
   "nm": {
    "T-5952": "Give the Projects screen one background",
    "T-0472": "Fix the stale clock size on Lock Screen widgets",
+   "T-4181": "Widgets refresh on their own and by a tap",
    "T-4183": "The Gallery shows, previews and opens every premade"
   },
   "wk": {
    "T-5952": "Idris",
    "T-0472": "Idris",
+   "T-4181": "Idris",
    "T-4183": "Idris",
    "T-4775": "Idris",
    "T-5018": "Idris",
@@ -543,7 +563,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-28T11:12:13Z",
+  "at": "2026-11-28T11:14:57Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -561,7 +581,7 @@
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1200
+    "parked": 1202
    },
    "cur": [],
    "ld": [
@@ -571,12 +591,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-28T11:11:49Z",
-    "ld": 6.3,
+    "at": "2026-11-28T11:14:59Z",
+    "ld": 7.34,
     "c": 8,
     "sb": 0,
     "dk": [
-     35.7,
+     35.6,
      228.3
     ],
     "ss": [
@@ -627,11 +647,11 @@
      "open": true
     }
    },
-   "at": "2026-11-28T11:12:13+00:00"
+   "at": "2026-11-28T11:15:15+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-28T11:12:13+00:00"
+   "at": "2026-11-28T11:15:15+00:00"
   }
  },
  "operators": [
@@ -643,6 +663,15 @@
    "e": "high",
    "t": "Work session",
    "at": "2026-11-27T21:13:58-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Evan's Account",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session \u2013 1 task",
+   "at": "2026-11-28T06:14:05-05:00"
   },
   {
    "w": "Operator",
@@ -673,12 +702,12 @@
  ],
  "agents_now": {
   "main": 3,
-  "lanes": 1,
-  "total": 4,
-  "at": "6:12 AM",
+  "lanes": 2,
+  "total": 5,
+  "at": "6:15 AM",
   "why": "",
-  "at_iso": "2026-11-28T11:12:00+00:00",
+  "at_iso": "2026-11-28T11:15:00+00:00",
   "started": "9:13 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 3, started 9:13 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 6:12 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 3, started 9:13 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 6:15 AM ET</p></section>"
  }
 }

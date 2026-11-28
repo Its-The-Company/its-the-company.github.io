@@ -1,10 +1,10 @@
 {
  "schema": 1,
- "at": "2026-11-28T10:31:53.586680+00:00",
+ "at": "2026-11-28T10:34:52.388784+00:00",
  "session": {
   "active": true,
-  "kind": "coord",
-  "started": "2026-11-27T21:13:58-05:00",
+  "kind": "morning",
+  "started": "2026-11-28T05:32:08-05:00",
   "coord": {
    "active": true,
    "started": 1795341309,
@@ -79,65 +79,17 @@
  },
  "workers": [
   {
-   "name": "idris",
-   "task": "[build] T-4183 screenshots run lock",
-   "model": "opus",
-   "started": "2026-11-28T04:27:26.477Z",
-   "seconds": 21867,
-   "finished": null
-  },
-  {
    "name": "maren",
-   "task": "[build] T-5837 stale chart check",
-   "model": "fable",
-   "started": "2026-11-28T06:15:09.969Z",
-   "seconds": 15403,
-   "finished": null
-  },
-  {
-   "name": "maren",
-   "task": "[build] T-4183 fixture gate shrinker",
+   "task": "[report] morning",
    "model": "opus",
-   "started": "2026-11-28T08:48:43.219Z",
-   "seconds": 6190,
-   "finished": null
+   "started": "2026-11-28T10:32:41.513Z",
+   "seconds": 130,
+   "finished": null,
+   "effort": "medium"
   }
  ],
- "who": "Idris, Maren x2",
- "recent": [
-  {
-   "name": "pernille",
-   "task": "[review] T-4476 checkmark",
-   "model": "opus",
-   "started": "2026-11-28T08:34:36.192Z",
-   "seconds": null,
-   "finished": "2026-11-28T08:35:54.952000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-4476 checkmark fix",
-   "model": "fable",
-   "started": "2026-11-28T08:03:17.676Z",
-   "seconds": null,
-   "finished": "2026-11-28T08:34:24.274000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[review] T-4190 widget line again",
-   "model": "opus",
-   "started": "2026-11-28T08:25:01.758Z",
-   "seconds": null,
-   "finished": "2026-11-28T08:25:46.507000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-4190 widget line fix",
-   "model": "opus",
-   "started": "2026-11-28T07:41:06.146Z",
-   "seconds": null,
-   "finished": "2026-11-28T08:24:49.753000+00:00"
-  }
- ],
+ "who": "Maren",
+ "recent": [],
  "queue": {
   "runnable": [],
   "blocked": [],
@@ -190,7 +142,7 @@
   "week_pct": 48.73,
   "usage_pct": 46.1,
   "work_pct": 99.0,
-  "read_at": "2026-11-28T10:31:00+00:00",
+  "read_at": "2026-11-28T10:35:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -236,7 +188,7 @@
   }
  ],
  "disk": {
-  "free_gb": 30,
+  "free_gb": 29,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -245,14 +197,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-28T05:28:00-05:00",
+   "at": "2026-11-28T05:34:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-28T05:31:00-05:00",
+  "at": "2026-11-28T05:35:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -262,26 +214,23 @@
  },
  "next_tick_why": "session",
  "idle": null,
- "pool": {
-  "why": "Double Spread: past the week's halfway point with room left, so twice the even pace until the limit or the reset; the machine allows 8 (at its floor: load 44.2 a core is over 10)",
-  "n": 3,
-  "at": "2026-11-27T21:13:47.067436-05:00"
- },
+ "pool": null,
  "lanes": [
-  {
-   "name": "Idris",
-   "state": "running",
-   "task": "[build] T-4183 screenshots run lock",
-   "model": "opus",
-   "since": "2026-11-28T04:27:26.477Z",
-   "next": []
-  },
   {
    "name": "Maren",
    "state": "running",
-   "task": "[build] T-5837 stale chart check",
-   "model": "fable",
-   "since": "2026-11-28T06:15:09.969Z",
+   "task": "[report] morning",
+   "model": "opus",
+   "since": "2026-11-28T10:32:41.513Z",
+   "next": [],
+   "effort": "medium"
+  },
+  {
+   "name": "Idris",
+   "state": "next",
+   "task": "Idris, P2, from T-1282 F1 (not before TestFlight):...",
+   "model": null,
+   "since": null,
    "next": []
   },
   {
@@ -320,34 +269,15 @@
  "tasks": {
   "run": [
    {
-    "w": "Idris",
-    "k": "build",
-    "t": "The Gallery shows, previews and opens every premade",
-    "m": "opus",
-    "at": "2026-11-28T04:27:26.477Z",
-    "o": "c",
-    "task": "T-4183"
-   },
-   {
     "w": "Maren",
-    "k": "build",
-    "t": "Home shows the new flow's work and bottlenecks",
-    "m": "fable",
-    "at": "2026-11-28T06:15:09.969Z",
-    "o": "c",
-    "task": "T-5837"
-   },
-   {
-    "w": "Maren",
-    "k": "build",
-    "t": "The Gallery shows, previews and opens every premade",
+    "k": "report",
+    "t": "Morning",
     "m": "opus",
-    "at": "2026-11-28T08:48:43.219Z",
-    "o": "c",
-    "task": "T-4183"
+    "e": "medium",
+    "at": "2026-11-28T10:32:41.513Z",
+    "o": "c"
    }
   ],
-  "src": "plan",
   "open": [
    {
     "w": "Idris",
@@ -444,33 +374,8 @@
    "you": 0
   },
   "fin": {
-   "n": 14,
-   "rows": [
-    [
-     "T-5959",
-     "Keep the When tapped..."
-    ],
-    [
-     "T-4857",
-     "Correct old wording around..."
-    ],
-    [
-     "T-5954",
-     "Drop the governor's weekly..."
-    ],
-    [
-     "T-5942",
-     "Word the failed widget save..."
-    ],
-    [
-     "T-5955",
-     "Steady the offline Restore..."
-    ],
-    [
-     "T-5323",
-     "Make the restore footer test..."
-    ]
-   ]
+   "n": 0,
+   "rows": []
   }
  },
  "qr": [
@@ -512,7 +417,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-28T10:31:35Z",
+  "at": "2026-11-28T10:34:52Z",
   "s": {
    "T-0306": [
     "testing",
@@ -524,39 +429,19 @@
     "on main 1:07 AM ET",
     1795846077000,
     "Idris"
-   ],
-   "T-4183": [
-    "merged",
-    "on main 11:26 PM ET",
-    1795839994000,
-    "Idris"
    ]
   },
   "nm": {
    "T-0306": "Check the gallery trees in every widget family",
-   "T-4181": "Widgets refresh on their own and by a tap",
-   "T-4183": "The Gallery shows, previews and opens every premade"
+   "T-4181": "Widgets refresh on their own and by a tap"
   },
   "wk": {
    "T-0306": "Idris",
-   "T-4181": "Idris",
-   "T-4183": "Idris",
-   "T-5959": "Idris",
-   "T-4857": "Idris",
-   "T-5954": "Odalys",
-   "T-5942": "Maren",
-   "T-5955": "Idris",
-   "T-5323": "Idris",
-   "T-4867": "Idris",
-   "T-5683": "Idris",
-   "T-4641": "Idris",
-   "T-5950": "Maren",
-   "T-5903": "Idris",
-   "T-4832": "Idris"
+   "T-4181": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-28T10:31:35Z",
+  "at": "2026-11-28T10:34:52Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -574,7 +459,7 @@
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1159
+    "parked": 1162
    },
    "cur": [],
    "ld": [
@@ -584,12 +469,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-28T10:31:39Z",
-    "ld": 44.62,
+    "at": "2026-11-28T10:34:50Z",
+    "ld": 58.79,
     "c": 8,
     "sb": 2,
     "dk": [
-     29.4,
+     31.6,
      228.3
     ],
     "ss": [
@@ -640,22 +525,19 @@
      "open": true
     }
    },
-   "at": "2026-11-28T10:31:53+00:00"
+   "at": "2026-11-28T10:34:52+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-28T10:31:35+00:00"
+   "at": "2026-11-28T10:34:52+00:00"
   }
  },
  "operators": [
   {
    "w": "Operator",
-   "a": "Main plan",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session",
-   "at": "2026-11-27T23:55:27-05:00"
+   "a": "Main",
+   "t": "Morning report",
+   "at": "2026-11-28T05:32:08-05:00"
   },
   {
    "w": "Operator",
@@ -684,23 +566,20 @@
  "trimmed": [
   "lane_next",
   "queue_text",
-  "recent",
   "task_done",
-  "fin_short",
   "task_title",
   "done_text",
-  "fin_six",
   "lane_task",
   "task_next"
  ],
  "agents_now": {
-  "main": 3,
+  "main": 1,
   "lanes": 2,
-  "total": 5,
-  "at": "5:31 AM",
+  "total": 3,
+  "at": "5:35 AM",
   "why": "",
-  "at_iso": "2026-11-28T10:31:00+00:00",
-  "started": "9:13 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 3, started 9:13 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 5:31 AM ET</p></section>"
+  "at_iso": "2026-11-28T10:35:00+00:00",
+  "started": "5:32 AM",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 1, started 5:32 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 5:35 AM ET</p></section>"
  }
 }

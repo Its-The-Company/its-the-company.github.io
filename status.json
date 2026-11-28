@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-28T14:05:29.531845+00:00",
+ "at": "2026-11-28T14:08:29.856671+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -83,7 +83,7 @@
    "task": "[build] T-4188 location test run",
    "model": "",
    "started": "2026-11-28T13:09:32.138Z",
-   "seconds": 3357,
+   "seconds": 3537,
    "finished": null
   },
   {
@@ -91,7 +91,7 @@
    "task": "[build] T-4190 store and token fixes",
    "model": "",
    "started": "2026-11-28T13:09:41.239Z",
-   "seconds": 3348,
+   "seconds": 3528,
    "finished": null
   },
   {
@@ -99,20 +99,20 @@
    "task": "[review] T-5953",
    "model": "",
    "started": "2026-11-28T13:09:48.004Z",
-   "seconds": 3341,
+   "seconds": 3521,
    "finished": null
-  },
+  }
+ ],
+ "who": "Idris x2, Odalys",
+ "recent": [
   {
    "name": "pernille",
    "task": "[review] T-4183",
    "model": "",
    "started": "2026-11-28T14:04:19.614Z",
-   "seconds": 69,
-   "finished": null
-  }
- ],
- "who": "Idris x2, Odalys, Pernille",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-28T14:07:28.680000+00:00"
+  },
   {
    "name": "idris",
    "task": "[build] T-4183 fix run lock",
@@ -174,7 +174,7 @@
   "week_pct": 46.79,
   "usage_pct": 43.0,
   "work_pct": 99.0,
-  "read_at": "2026-11-28T14:05:00+00:00",
+  "read_at": "2026-11-28T14:08:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -224,7 +224,7 @@
  "lock_in": {
   "on": false,
   "pool": 4,
-  "at": "2026-11-28T09:05:00-05:00",
+  "at": "2026-11-28T09:08:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -258,10 +258,10 @@
   },
   {
    "name": "Pernille",
-   "state": "running",
-   "task": "[review] T-4183",
+   "state": "next",
+   "task": "Pernille, P1, continuation of T-2609: after...",
    "model": null,
-   "since": "2026-11-28T14:04:19.614Z",
+   "since": null,
    "next": []
   },
   {
@@ -314,14 +314,6 @@
     "at": "2026-11-28T13:09:48.004Z",
     "o": "c",
     "task": "T-5953"
-   },
-   {
-    "w": "Pernille",
-    "k": "review",
-    "t": "The Gallery shows, previews and opens every premade",
-    "at": "2026-11-28T14:04:19.614Z",
-    "o": "c",
-    "task": "T-4183"
    }
   ],
   "src": "plan",
@@ -464,18 +456,12 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-28T14:05:29Z",
+  "at": "2026-11-28T14:08:18Z",
   "s": {
-   "T-5304": [
+   "T-4182": [
     "mergetest",
     "iPhone tests on the MacBook",
     null
-   ],
-   "T-4183": [
-    "merged",
-    "on main 7:55 AM ET",
-    1795870548000,
-    "Maren"
    ],
    "T-5953": [
     "merged",
@@ -485,18 +471,16 @@
    ]
   },
   "nm": {
-   "T-5304": "Bound the run lock hold when Python hangs",
-   "T-4183": "The Gallery shows, previews and opens every premade",
+   "T-4182": "A failing widget says so and can recover",
    "T-5953": "Draw Home's Efficiency numbers as graphs"
   },
   "wk": {
-   "T-5304": "Idris",
-   "T-4183": "Idris",
+   "T-4182": "Idris",
    "T-5953": "Maren"
   }
  },
  "ln": {
-  "at": "2026-11-28T14:05:29Z",
+  "at": "2026-11-28T14:08:18Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -514,7 +498,7 @@
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1373
+    "parked": 1376
    },
    "cur": [],
    "ld": [
@@ -524,12 +508,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-28T14:04:43Z",
-    "ld": 8.46,
+    "at": "2026-11-28T14:07:52Z",
+    "ld": 5.42,
     "c": 8,
     "sb": 1,
     "dk": [
-     31.5,
+     33.1,
      228.3
     ],
     "ss": [
@@ -541,17 +525,16 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-28T13:58:01Z",
-    "ld": 1.64,
+    "at": "2026-11-28T14:07:10Z",
+    "ld": 1.42,
     "c": 12,
-    "sb": 2,
+    "sb": 1,
     "dk": [
-     336.4,
+     337.9,
      926.4
     ],
     "sn": [
-     "itsthecompany-runner",
-     "itsthecompany-runner-2"
+     "itsthecompany-runner-3"
     ]
    }
   }
@@ -582,15 +565,15 @@
      "open": true
     }
    },
-   "at": "2026-11-28T14:05:29+00:00"
+   "at": "2026-11-28T14:08:29+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-28T14:05:18+00:00"
+   "at": "2026-11-28T14:08:18+00:00"
   }
  },
  "fw": {
-  "at": 1795874641,
+  "at": 1795874886,
   "s": [
    [
     "main",
@@ -653,27 +636,27 @@
    [
     "main",
     "T-4183",
-    "building",
-    1795871345,
+    "held",
+    1795874856,
     [
      [
       "T-5708",
-      1,
-      1795871345,
+      0,
+      0,
       0,
       0
      ],
      [
       "T-4648",
-      1,
-      1795871345,
+      0,
+      0,
       0,
       0
      ],
      [
       "T-4895",
-      1,
-      1795871345,
+      0,
+      0,
       0,
       0
      ]
@@ -835,7 +818,7 @@
   ],
   "mh": [
    1,
-   1795871346,
+   1795874856,
    0
   ],
   "pr": 1,
@@ -1011,8 +994,8 @@
   "x": [
    "held",
    "T-4191",
-   3433,
-   5
+   3437,
+   6
   ]
  },
  "operators": [
@@ -1050,13 +1033,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 4,
+  "main": 3,
   "lanes": 1,
-  "total": 5,
-  "at": "9:05 AM",
+  "total": 4,
+  "at": "9:08 AM",
   "why": "",
-  "at_iso": "2026-11-28T14:05:00+00:00",
+  "at_iso": "2026-11-28T14:08:00+00:00",
   "started": "8:06 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 4, started 8:06 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 9:05 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 3, started 8:06 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 9:08 AM ET</p></section>"
  }
 }

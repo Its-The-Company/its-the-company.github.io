@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-28T12:19:27.117321+00:00",
+ "at": "2026-11-28T12:22:33.367573+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -83,11 +83,27 @@
    "task": "[build] T-4183 gate check brace form",
    "model": "fable",
    "started": "2026-11-28T12:10:36.887Z",
-   "seconds": 530,
+   "seconds": 716,
+   "finished": null
+  },
+  {
+   "name": "pernille",
+   "task": "[review] T-4183 Idris's batch",
+   "model": "opus",
+   "started": "2026-11-28T12:20:12.622Z",
+   "seconds": 140,
+   "finished": null
+  },
+  {
+   "name": "idris",
+   "task": "[build] T-5961 Core package build",
+   "model": "opus",
+   "started": "2026-11-28T12:20:54.374Z",
+   "seconds": 98,
    "finished": null
   }
  ],
- "who": "Maren",
+ "who": "Maren, Pernille, Idris",
  "recent": [
   {
    "name": "idris",
@@ -174,7 +190,7 @@
   "week_pct": 51.27,
   "usage_pct": 46.1,
   "work_pct": 99.0,
-  "read_at": "2026-11-28T12:19:00+00:00",
+  "read_at": "2026-11-28T12:22:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -217,14 +233,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-28T07:18:00-05:00",
+   "at": "2026-11-28T07:20:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-28T07:19:00-05:00",
+  "at": "2026-11-28T07:22:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -249,19 +265,19 @@
    "next": []
   },
   {
-   "name": "Idris",
-   "state": "next",
-   "task": "Idris, P2, from T-1282 F1 (not before TestFlight):...",
-   "model": null,
-   "since": null,
+   "name": "Pernille",
+   "state": "running",
+   "task": "[review] T-4183 Idris's batch",
+   "model": "opus",
+   "since": "2026-11-28T12:20:12.622Z",
    "next": []
   },
   {
-   "name": "Pernille",
-   "state": "next",
-   "task": "Pernille, P1, continuation of T-2609: after...",
-   "model": null,
-   "since": null,
+   "name": "Idris",
+   "state": "running",
+   "task": "[build] T-5961 Core package build",
+   "model": "opus",
+   "since": "2026-11-28T12:20:54.374Z",
    "next": []
   },
   {
@@ -299,6 +315,24 @@
     "at": "2026-11-28T12:10:36.887Z",
     "o": "c",
     "task": "T-4183"
+   },
+   {
+    "w": "Pernille",
+    "k": "review",
+    "t": "The Gallery shows, previews and opens every premade",
+    "m": "opus",
+    "at": "2026-11-28T12:20:12.622Z",
+    "o": "c",
+    "task": "T-4183"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "Let the Core package build again",
+    "m": "opus",
+    "at": "2026-11-28T12:20:54.374Z",
+    "o": "c",
+    "task": "T-5961"
    }
   ],
   "src": "plan",
@@ -376,6 +410,11 @@
   ],
   "done": [
    {
+    "w": "Maren",
+    "t": "The list of switched-off checks no longer points at a commit ID that will change when the work...",
+    "at": "2026-11-28T07:22:00-05:00"
+   },
+   {
     "w": "Idris",
     "t": "A refresh tap that has to wait behind a widget's finishing run no longer starts a run after iOS...",
     "at": "2026-11-28T06:06:00-05:00"
@@ -384,11 +423,6 @@
     "w": "Idris",
     "t": "A widget's script now has a test proving it runs again at the exact moment it is due, not a...",
     "at": "2026-11-28T06:06:00-05:00"
-   },
-   {
-    "w": "Idris+maren",
-    "t": "The fifteen example widget designs were drawn by the app's own renderer in every size and colour...",
-    "at": "2026-11-28T05:43:00-05:00"
    }
   ],
   "count": {
@@ -398,8 +432,12 @@
    "you": 0
   },
   "fin": {
-   "n": 17,
+   "n": 18,
    "rows": [
+    [
+     "T-5837",
+     "Home shows the new flow's..."
+    ],
     [
      "T-4775",
      "Give a late tap its own run..."
@@ -419,10 +457,6 @@
     [
      "T-4857",
      "Correct old wording around..."
-    ],
-    [
-     "T-5954",
-     "Drop the governor's weekly..."
     ]
    ]
   }
@@ -466,12 +500,18 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-28T12:19:27Z",
+  "at": "2026-11-28T12:22:23Z",
   "s": {
    "T-4181": [
     "mergetest",
     "iPhone tests on the MacBook",
     null
+   ],
+   "T-5961": [
+    "merged",
+    "on main 7:20 AM ET",
+    1795868414000,
+    ""
    ],
    "T-4183": [
     "merged",
@@ -482,11 +522,14 @@
   },
   "nm": {
    "T-4181": "Widgets refresh on their own and by a tap",
+   "T-5961": "Let the Core package build again",
    "T-4183": "The Gallery shows, previews and opens every premade"
   },
   "wk": {
    "T-4181": "Idris",
+   "T-5961": "Idris",
    "T-4183": "Idris",
+   "T-5837": "Operator",
    "T-4775": "Idris",
    "T-5018": "Idris",
    "T-0306": "Idris",
@@ -497,12 +540,11 @@
    "T-5955": "Idris",
    "T-5323": "Idris",
    "T-4867": "Idris",
-   "T-5683": "Idris",
-   "T-4641": "Idris"
+   "T-5683": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-28T12:19:27Z",
+  "at": "2026-11-28T12:22:23Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -520,7 +562,7 @@
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1267
+    "parked": 1270
    },
    "cur": [],
    "ld": [
@@ -530,12 +572,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-28T12:18:38Z",
-    "ld": 27.68,
+    "at": "2026-11-28T12:22:00Z",
+    "ld": 16.37,
     "c": 8,
     "sb": 0,
     "dk": [
-     29.7,
+     29.6,
      228.3
     ],
     "ss": [
@@ -583,11 +625,11 @@
      "open": true
     }
    },
-   "at": "2026-11-28T12:19:27+00:00"
+   "at": "2026-11-28T12:22:33+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-28T12:19:27+00:00"
+   "at": "2026-11-28T12:22:23+00:00"
   }
  },
  "operators": [
@@ -628,13 +670,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 1,
+  "main": 3,
   "lanes": 1,
-  "total": 2,
-  "at": "7:19 AM",
+  "total": 4,
+  "at": "7:22 AM",
   "why": "",
-  "at_iso": "2026-11-28T12:19:00+00:00",
+  "at_iso": "2026-11-28T12:22:00+00:00",
   "started": "9:13 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 1, started 9:13 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 7:19 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 3, started 9:13 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 7:22 AM ET</p></section>"
  }
 }

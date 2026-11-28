@@ -1,10 +1,10 @@
 {
  "schema": 1,
- "at": "2026-11-28T02:13:57.320587+00:00",
+ "at": "2026-11-28T02:17:00.394663+00:00",
  "session": {
   "active": true,
   "kind": "coord",
-  "started": "2026-11-27T20:47:59-05:00",
+  "started": "2026-11-27T21:13:58-05:00",
   "coord": {
    "active": true,
    "started": 1795341309,
@@ -56,42 +56,50 @@
   "landed": 1,
   "failed": 4
  },
- "workers": [],
- "who": "",
- "recent": [
+ "workers": [
+  {
+   "name": "idris",
+   "task": "[build] T-4188 location distance notifications",
+   "model": "opus",
+   "started": "2026-11-28T02:15:14.037Z",
+   "seconds": 106,
+   "finished": null
+  },
+  {
+   "name": "idris",
+   "task": "[build] T-4190 Settings Pro tests",
+   "model": "opus",
+   "started": "2026-11-28T02:15:22.190Z",
+   "seconds": 98,
+   "finished": null
+  },
+  {
+   "name": "idris",
+   "task": "[build] T-4183 Gallery premades release",
+   "model": "opus",
+   "started": "2026-11-28T02:15:30.840Z",
+   "seconds": 89,
+   "finished": null
+  },
   {
    "name": "idris",
    "task": "[build] T-4778 font probe rerun",
    "model": "opus",
-   "started": "2026-11-28T01:56:20.179Z",
-   "seconds": null,
-   "finished": "2026-11-28T02:11:20.883000+00:00"
+   "started": "2026-11-28T02:15:39.792Z",
+   "seconds": 80,
+   "finished": null
   },
   {
-   "name": "idris",
-   "task": "[build] T-4183 Gallery premade page",
+   "name": "maren",
+   "task": "[build] T-5837 Home review fixes",
    "model": "opus",
-   "started": "2026-11-28T01:55:21.684Z",
-   "seconds": null,
-   "finished": "2026-11-28T02:11:20.607000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-4188 location distance extension",
-   "model": "opus",
-   "started": "2026-11-28T01:54:07.981Z",
-   "seconds": null,
-   "finished": "2026-11-28T02:11:20.052000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-4190 Pro test fixes",
-   "model": "opus",
-   "started": "2026-11-28T01:54:37.675Z",
-   "seconds": null,
-   "finished": "2026-11-28T02:11:19.602000+00:00"
+   "started": "2026-11-28T02:15:49.354Z",
+   "seconds": 71,
+   "finished": null
   }
  ],
+ "who": "Idris x4, Maren",
+ "recent": [],
  "queue": {
   "runnable": [],
   "blocked": [],
@@ -144,7 +152,7 @@
   "week_pct": 39.33,
   "usage_pct": 46.1,
   "work_pct": 99.0,
-  "read_at": "2026-11-28T02:14:00+00:00",
+  "read_at": "2026-11-28T02:17:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -187,14 +195,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-27T21:11:00-05:00",
+   "at": "2026-11-27T21:14:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 4,
-  "at": "2026-11-27T21:14:00-05:00",
+  "at": "2026-11-27T21:17:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -212,10 +220,18 @@
  "lanes": [
   {
    "name": "Idris",
-   "state": "next",
-   "task": "Idris, P2, from T-1282 F1 (not before TestFlight):...",
-   "model": null,
-   "since": null,
+   "state": "running",
+   "task": "[build] T-4188 location distance notifications",
+   "model": "opus",
+   "since": "2026-11-28T02:15:14.037Z",
+   "next": []
+  },
+  {
+   "name": "Maren",
+   "state": "running",
+   "task": "[build] T-5837 Home review fixes",
+   "model": "opus",
+   "since": "2026-11-28T02:15:49.354Z",
    "next": []
   },
   {
@@ -249,18 +265,57 @@
    "model": null,
    "since": null,
    "next": []
-  },
-  {
-   "name": "Maren",
-   "state": "next",
-   "task": "Maren, P1, from T-2296 review M2...",
-   "model": null,
-   "since": null,
-   "next": []
   }
  ],
  "tasks": {
-  "run": [],
+  "run": [
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "Location, steps and notifications work in scripts and widgets",
+    "m": "opus",
+    "at": "2026-11-28T02:15:14.037Z",
+    "o": "c",
+    "task": "T-4188"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "Settings and Pro: buy, restore, themes",
+    "m": "opus",
+    "at": "2026-11-28T02:15:22.190Z",
+    "o": "c",
+    "task": "T-4190"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "The Gallery shows, previews and opens every premade",
+    "m": "opus",
+    "at": "2026-11-28T02:15:30.840Z",
+    "o": "c",
+    "task": "T-4183"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "Font probe UI check survives a rerun",
+    "m": "opus",
+    "at": "2026-11-28T02:15:39.792Z",
+    "o": "c",
+    "task": "T-4778"
+   },
+   {
+    "w": "Maren",
+    "k": "build",
+    "t": "Home shows the new flow's work and bottlenecks",
+    "m": "opus",
+    "at": "2026-11-28T02:15:49.354Z",
+    "o": "c",
+    "task": "T-5837"
+   }
+  ],
+  "src": "plan",
   "open": [
    {
     "w": "Idris",
@@ -400,7 +455,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-28T02:13:57Z",
+  "at": "2026-11-28T02:16:48Z",
   "s": {
    "T-4188": [
     "mergetest",
@@ -424,7 +479,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-28T02:13:57Z",
+  "at": "2026-11-28T02:16:48Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -442,7 +497,7 @@
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1361
+    "parked": 1364
    },
    "cur": [],
    "ld": [
@@ -452,12 +507,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-28T02:13:57Z",
-    "ld": 0.77,
+    "at": "2026-11-28T02:16:27Z",
+    "ld": 0.73,
     "c": 8,
     "sb": 0,
     "dk": [
-     42.9,
+     42.4,
      228.3
     ],
     "ss": [
@@ -510,19 +565,22 @@
      "open": true
     }
    },
-   "at": "2026-11-28T02:13:57+00:00"
+   "at": "2026-11-28T02:17:00+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-28T02:13:57+00:00"
+   "at": "2026-11-28T02:17:00+00:00"
   }
  },
  "operators": [
   {
    "w": "Operator",
-   "a": "Main",
-   "t": "Work session",
-   "at": "2026-11-27T20:59:27-05:00"
+   "a": "Main plan",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Inbox \u2013 Evan's 9:16 PM Message on GitHub",
+   "at": "2026-11-27T21:16:34-05:00"
   },
   {
    "w": "Operator",
@@ -538,25 +596,36 @@
   "sent": "2026-11-28T01:57:38Z",
   "seconds": 108.0
  },
- "inbox": [],
+ "inbox": [
+  {
+   "id": "c7232248391",
+   "state": "received",
+   "position": 1,
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "Please use the attached website for..."
+  }
+ ],
  "trimmed": [
   "lane_next",
   "queue_text",
-  "recent",
   "task_done",
+  "inbox_title",
   "task_title",
   "done_text",
   "lane_task",
   "task_next"
  ],
  "agents_now": {
-  "main": 0,
+  "main": 5,
   "lanes": 1,
-  "total": 1,
-  "at": "9:14 PM",
+  "total": 6,
+  "at": "9:17 PM",
   "why": "",
-  "at_iso": "2026-11-28T02:14:00+00:00",
-  "started": "8:47 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0, started 8:47 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 9:14 PM ET</p></section>"
+  "at_iso": "2026-11-28T02:17:00+00:00",
+  "started": "9:13 PM",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 5, started 9:13 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 9:17 PM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-28T03:04:02.795920+00:00",
+ "at": "2026-11-28T03:08:03.271274+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -62,7 +62,7 @@
    "task": "[build] T-4190 Settings Pro tests",
    "model": "opus",
    "started": "2026-11-28T02:15:22.190Z",
-   "seconds": 2920,
+   "seconds": 3161,
    "finished": null
   },
   {
@@ -70,7 +70,7 @@
    "task": "[build] T-4183 Gallery premades release",
    "model": "opus",
    "started": "2026-11-28T02:15:30.840Z",
-   "seconds": 2911,
+   "seconds": 3152,
    "finished": null
   },
   {
@@ -78,7 +78,7 @@
    "task": "[build] T-5837 Home review fixes",
    "model": "opus",
    "started": "2026-11-28T02:15:49.354Z",
-   "seconds": 2893,
+   "seconds": 3133,
    "finished": null
   },
   {
@@ -86,7 +86,7 @@
    "task": "[build] T-5950 look picker inspiration",
    "model": "opus",
    "started": "2026-11-28T02:26:11.432Z",
-   "seconds": 2271,
+   "seconds": 2511,
    "finished": null
   }
  ],
@@ -133,19 +133,19 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 37.0,
+   "pct": 38.0,
    "resets_at": "2026-11-27T22:30:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-27T21:54:40.387290-05:00",
+   "read_at": "2026-11-27T22:04:44.935307-05:00",
    "source": "live",
-   "left": 63.0,
+   "left": 62.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 46.0,
    "resets_at": "2026-11-29T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-27T21:54:40.387290-05:00",
+   "read_at": "2026-11-27T22:04:44.935307-05:00",
    "source": "live",
    "left": 54.0,
    "left_words": "of your weekly allowance left"
@@ -157,7 +157,7 @@
    "read_at": "2026-11-27T21:46:29.939903-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-27T21:54:40.387290-05:00"
+  "read_at": "2026-11-27T22:04:44.935307-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -177,7 +177,7 @@
   "week_pct": 39.33,
   "usage_pct": 46.1,
   "work_pct": 99.0,
-  "read_at": "2026-11-28T03:04:00+00:00",
+  "read_at": "2026-11-28T03:08:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -211,7 +211,7 @@
   }
  ],
  "disk": {
-  "free_gb": 38,
+  "free_gb": 40,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -220,14 +220,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-27T22:00:00-05:00",
+   "at": "2026-11-27T22:07:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 4,
-  "at": "2026-11-27T22:04:00-05:00",
+  "at": "2026-11-27T22:08:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -480,11 +480,16 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-28T03:04:02Z",
+  "at": "2026-11-28T03:08:03Z",
   "s": {
    "T-5323": [
     "mergetest",
     "iPhone tests on the MacBook",
+    null
+   ],
+   "T-4183": [
+    "testing",
+    "Mac Mini \u00b7 test",
     null
    ],
    "T-5950": [
@@ -502,11 +507,13 @@
   },
   "nm": {
    "T-5323": "Make the restore footer test wait and reopen",
+   "T-4183": "The Gallery shows, previews and opens every premade",
    "T-5950": "Add details vault ideas to the look picker",
    "T-4181": "Widgets refresh on their own and by a tap"
   },
   "wk": {
    "T-5323": "Idris",
+   "T-4183": "Idris",
    "T-5950": "Maren",
    "T-4181": "Idris",
    "T-4778": "Idris",
@@ -514,7 +521,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-28T03:04:02Z",
+  "at": "2026-11-28T03:08:03Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -532,7 +539,7 @@
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1411
+    "parked": 1415
    },
    "cur": [],
    "ld": [
@@ -542,19 +549,21 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-28T03:04:04Z",
-    "ld": 6.05,
+    "at": "2026-11-28T03:08:06Z",
+    "ld": 18.5,
     "c": 8,
-    "sb": 0,
+    "sb": 1,
     "dk": [
-     37.4,
+     39.7,
      228.3
     ],
     "ss": [
      152.7,
      953.7
     ],
-    "sn": []
+    "sn": [
+     "iPhone 17e"
+    ]
    },
    "macbook": {
     "at": "2026-11-28T03:00:20Z",
@@ -598,11 +607,11 @@
      "open": true
     }
    },
-   "at": "2026-11-28T03:04:02+00:00"
+   "at": "2026-11-28T03:08:03+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-28T03:04:02+00:00"
+   "at": "2026-11-28T03:08:03+00:00"
   }
  },
  "operators": [
@@ -619,10 +628,8 @@
    "w": "Operator",
    "a": "Evan's Account",
    "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session \u2013 1 task",
-   "at": "2026-11-27T21:03:14-05:00"
+   "t": "Work session",
+   "at": "2026-11-27T21:03:15-05:00"
   }
  ],
  "reply": {
@@ -645,10 +652,10 @@
   "main": 4,
   "lanes": 1,
   "total": 5,
-  "at": "10:04 PM",
+  "at": "10:08 PM",
   "why": "",
-  "at_iso": "2026-11-28T03:04:00+00:00",
+  "at_iso": "2026-11-28T03:08:00+00:00",
   "started": "9:13 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 4, started 9:13 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 10:04 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 4, started 9:13 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 10:08 PM ET</p></section>"
  }
 }

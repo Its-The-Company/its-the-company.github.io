@@ -518,6 +518,42 @@ This session resumed the 11-25 <span title="An idea that reaches B or better but
   2. WidgetWriter.swift:957 with :467: a widget skipped as "locked" stays owed with no end; every spaced-out T1 starts
      a forced restore pass of it. Cheap, but unbounded, and the ADR line does not say so.
   3. The session note above says 4 mutant entries updated; the diff updates 6 (two are test renames only).
+
+## Session 2026-11-27 19:3x-20:3x ET (Idris, lane a, from main 51a9cd5095)
+
+- Baseline at 51a9cd50: PyWidgetTests 2818/0/2 (J-20261127-1933-land-chk-a5ab71-1-008153).
+- T-0793 38e642ac62, slice 12 only: Pernille's slice 11 items 1 and 2, both fixed in code. (1) WidgetPasses.pass drops,
+  in the actor turn that starts its task, the handed ids no pass still owes (a firing it waited behind ran them) and
+  clears their `handed` mark; each gets that pass's outcome, and a restore with nothing left starts no pass. (2)
+  `settle` ends the debt for `locked` and `no script` (named WidgetWriter.locked / .noScript), so a lapsed-Pro widget
+  no longer starts a forced pass at every spaced-out T1. ADR-007 7.2 dated line for slice 12, with what stays owed and
+  its bound. 2 new tests in WidgetWriterPassTests. Item 3 (the slice 11 note said 4 mutant entries updated, the diff
+  updated 6, two of them test renames only): noted here, the slice 11 note stands corrected.
+- Mutants: 7 new, 1 slice 11 entry follows the code; each planted alone (one per job, so none masks another), all 8
+  red on their named tests (job IDs in the commit; H first came back exit 75, all 6 slots busy, resubmitted).
+- Checks at the commit's tree: PyWidgetTests 2820/0/2 (J-20261127-1945-land-chk-a5ab71-1-570df2), plan unit filters
+  268/0 on this Mac (ops/runs/xcodebuild-20261127-202453.log), LaneWarmWindowTests 6/0
+  (J-20261127-2014-land-chk-a5ab71-1-51b596), host 4594/0. A first local filtered run was red only because
+  test-without-building used the products mutant G had built here; rebuilt, then green.
+- Known, on the ADR line: a pass a waiter let go that runs the widget after the restore started still runs it twice
+  (only after 85 s with no progress).
+- No commit, rechecked at 51a9cd50: T-4280 (proof is T-4494 item 3, the Investors' iPhone); T-1882 (nothing writes
+  fields.json); T-2021 (no scheme or config sets PYWIDGET_LANE_FORCED; needs the forced-lane bench on a quiet runner,
+  and this Mac's load ran past 50 tonight); T-4433 and T-4435 (only iOS 26.0 and 27.0 runtimes here).
+- Still a design call, no ruling recorded: the extension's `system` runs reading `background`, and `oom_guard`.
+- Next: Pernille reviews 38e642ac62.
+
+## Review, 2026-11-27 ET (Operator, lane a)
+
+- Pernille read 51a9cd5095..c9a116234c (38e642ac62 T-0793 slice 12 and the note): nothing blocking. Nothing awaits
+  between the loop exit and `inFlight =`, so the recheck is one actor turn; no lost or doubled runs; every mutant's
+  find matches once and fails its named test; the note's counts and logs match. Non-blocking, for the next session:
+  1. WidgetWriter.swift:906,916 and ADR-007:180: "each gets the outcome of the pass that ran it" is not always true
+     (a later pass's `deferred` overwrites an earlier run; a let-go pass that settled the widget leaves no outcome).
+     Only the foreground T1 reaches restore and its result is dropped, so wording only.
+  2. WidgetWriter.swift:209 with :239 and :976: if the T1's main pass waited and its restore did not, the restore uses
+     gates read before that wait; a purchase in between reads as locked and now ends the debt until the next full T1.
+  3. ADR-007:186: "retried once a spaced-out T1" is garbled.
 {% endraw %}
 
 </div>

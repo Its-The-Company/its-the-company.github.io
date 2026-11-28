@@ -50,6 +50,8 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-4181 review 11-27 (139dc53544..76e8c0e877) nothing blocking. Lesson: a "handed out once" claim must hold for every reader, joiners of the same outcomes included.
 - T-5945 review 11-27 (050a4a9ee3, Odalys) FAIL H+M: a new "whose entry is this" field (copy) must say what an old entry without it means; treating it as "mine" lets the second copy adopt and wipe the first's record. A fallback key lookup (sole session) hijacks on restart.
 - T-5945 re-review 11-27 (050a4a9ee3..e3050c4734) nothing blocking; L: "who owns no-copy entries" still leans on the prompt's --copy rule. Lesson: when a fix reads ownership from a second record, probe that record's missing-field shape too.
+- T-4778 review 11-27 (cdf7793f9d, Idris) pass, 2 L. Lesson: a "rewrite when missing" on a file two processes share lets whichever wakes first win; check it against the doc's "newest" claim.
+- T-4181 review 11-27 (51a9cd5095..c9a116234c, slice 12) nothing blocking. Lesson: a debt ended on a "locked" outcome is only as fresh as the gates read behind it.
 {% endraw %}
 
 

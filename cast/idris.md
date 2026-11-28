@@ -46,7 +46,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - Older lessons and dated logs: archive.md.
 - T-4188 (merge point) and T-5796 re-reviews still open; detail and xc.sh lessons in archive.md.
 - T-4692, T-5047, T-5607, T-5108, T-0053, T-0044: open threads in archive.md.
-- T-4181 11-27 e (a): b04710c96a T-0793 slice 11 (Pernille's slice 10 items 1-3: owed until run, `handed` mark, restore()); unit 2808/0, 10 mutants red. Open: Pernille review; `system` read and oom_guard need design calls. Lesson: two mutants on the same state in one batch mask each other; a note commit's subject naming a step ID is a check FAULT.
+- T-4181 11-27 f (a): 38e642ac62 T-0793 slice 12 (Pernille's slice 11 items 1-2); 2820/0 J-...1945-...570df2, 8 mutants red, each alone. Open: Pernille review; `system` read and oom_guard need design calls. Lesson: a mutant that falls back to this Mac leaves its build; rebuild before any test-without-building.
 {% endraw %}
 
 

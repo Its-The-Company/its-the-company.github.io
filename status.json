@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-28T11:06:07.888452+00:00",
+ "at": "2026-11-28T11:09:08.006493+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -83,7 +83,7 @@
    "task": "[build] T-4183 screenshots run lock",
    "model": "opus",
    "started": "2026-11-28T04:27:26.477Z",
-   "seconds": 23921,
+   "seconds": 24101,
    "finished": null
   },
   {
@@ -91,7 +91,7 @@
    "task": "[build] T-5837 stale chart check",
    "model": "fable",
    "started": "2026-11-28T06:15:09.969Z",
-   "seconds": 17457,
+   "seconds": 17638,
    "finished": null
   },
   {
@@ -99,7 +99,7 @@
    "task": "[build] T-4183 fixture gate shrinker",
    "model": "opus",
    "started": "2026-11-28T08:48:43.219Z",
-   "seconds": 8244,
+   "seconds": 8424,
    "finished": null
   }
  ],
@@ -141,24 +141,24 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 259,
+  "runnable_count": 257,
   "blocked_count": 0
  },
  "meter": {
   "five_hour": {
-   "pct": 16.0,
+   "pct": 17.0,
    "resets_at": "2026-11-28T08:30:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-28T05:57:04.662878-05:00",
+   "read_at": "2026-11-28T06:07:05.839208-05:00",
    "source": "live",
-   "left": 84.0,
+   "left": 83.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 58.0,
    "resets_at": "2026-11-29T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-28T05:57:04.662878-05:00",
+   "read_at": "2026-11-28T06:07:05.839208-05:00",
    "source": "live",
    "left": 42.0,
    "left_words": "of your weekly allowance left"
@@ -170,7 +170,7 @@
    "read_at": "2026-11-28T05:53:34.054051-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-28T05:57:04.662878-05:00"
+  "read_at": "2026-11-28T06:07:05.839208-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -190,7 +190,7 @@
   "week_pct": 49.56,
   "usage_pct": 46.1,
   "work_pct": 99.0,
-  "read_at": "2026-11-28T11:06:00+00:00",
+  "read_at": "2026-11-28T11:09:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -224,7 +224,7 @@
   }
  ],
  "disk": {
-  "free_gb": 39,
+  "free_gb": 36,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -233,14 +233,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-28T06:02:00-05:00",
+   "at": "2026-11-28T06:08:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 3,
-  "at": "2026-11-28T06:06:00-05:00",
+  "at": "2026-11-28T06:09:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -410,30 +410,38 @@
   ],
   "done": [
    {
+    "w": "Idris",
+    "t": "A refresh tap that has to wait behind a widget's finishing run no longer starts a run after iOS...",
+    "at": "2026-11-28T06:06:00-05:00"
+   },
+   {
+    "w": "Idris",
+    "t": "A widget's script now has a test proving it runs again at the exact moment it is due, not a...",
+    "at": "2026-11-28T06:06:00-05:00"
+   },
+   {
     "w": "Idris+maren",
     "t": "The fifteen example widget designs were drawn by the app's own renderer in every size and colour...",
     "at": "2026-11-28T05:43:00-05:00"
-   },
-   {
-    "w": "Idris",
-    "t": "When what a widget's tap does can't be saved into the project, the checkmark now stays on the...",
-    "at": "2026-11-28T03:59:00-05:00"
-   },
-   {
-    "w": "Idris",
-    "t": "The tester switch's notes and tests now describe what it does today, and the line after Refresh...",
-    "at": "2026-11-28T03:45:00-05:00"
    }
   ],
   "count": {
-   "next": 259,
+   "next": 257,
    "wait": 0,
    "blocked": 0,
    "you": 0
   },
   "fin": {
-   "n": 15,
+   "n": 17,
    "rows": [
+    [
+     "T-4775",
+     "Give a late tap its own run..."
+    ],
+    [
+     "T-5018",
+     "Test the exact moment a..."
+    ],
     [
      "T-0306",
      "Check the gallery trees in..."
@@ -449,14 +457,6 @@
     [
      "T-5954",
      "Drop the governor's weekly..."
-    ],
-    [
-     "T-5942",
-     "Word the failed widget save..."
-    ],
-    [
-     "T-5955",
-     "Steady the offline Restore..."
     ]
    ]
   }
@@ -500,16 +500,16 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-28T11:06:00Z",
+  "at": "2026-11-28T11:08:49Z",
   "s": {
-   "T-4181": [
-    "mergetest",
-    "Xcode checks on the MacBook, 1st to merge",
-    1795863180684
-   ],
-   "T-5313": [
+   "T-5952": [
     "mergetest",
     "iPhone tests on the MacBook",
+    null
+   ],
+   "T-0472": [
+    "testing",
+    "Mac Mini \u00b7 test",
     null
    ],
    "T-4183": [
@@ -520,14 +520,16 @@
    ]
   },
   "nm": {
-   "T-4181": "Widgets refresh on their own and by a tap",
-   "T-5313": "Pin nested family Whens in the caps fixture",
+   "T-5952": "Give the Projects screen one background",
+   "T-0472": "Fix the stale clock size on Lock Screen widgets",
    "T-4183": "The Gallery shows, previews and opens every premade"
   },
   "wk": {
-   "T-4181": "Idris",
-   "T-5313": "Pernille",
+   "T-5952": "Idris",
+   "T-0472": "Idris",
    "T-4183": "Idris",
+   "T-4775": "Idris",
+   "T-5018": "Idris",
    "T-0306": "Idris",
    "T-5959": "Idris",
    "T-4857": "Idris",
@@ -537,16 +539,14 @@
    "T-5323": "Idris",
    "T-4867": "Idris",
    "T-5683": "Idris",
-   "T-4641": "Idris",
-   "T-5950": "Maren",
-   "T-5903": "Idris"
+   "T-4641": "Idris"
   }
  },
  "ln": {
-  "at": "2026-11-28T11:06:00Z",
+  "at": "2026-11-28T11:08:49Z",
   "mq": {
    "n": {
-    "checking": 1,
+    "checking": 0,
     "inline": 0,
     "conflicted": 0,
     "failed": 0,
@@ -555,24 +555,15 @@
     "parked": 7
    },
    "m": {
-    "checking": 13,
+    "checking": null,
     "inline": null,
     "conflicted": null,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1193
+    "parked": 1196
    },
-   "cur": [
-    [
-     [
-      "T-4181"
-     ],
-     "iPhone app tests",
-     "MacBook",
-     13
-    ]
-   ],
+   "cur": [],
    "ld": [
     0,
     null
@@ -580,12 +571,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-28T11:05:40Z",
-    "ld": 3.68,
+    "at": "2026-11-28T11:08:31Z",
+    "ld": 4.7,
     "c": 8,
     "sb": 0,
     "dk": [
-     38.3,
+     36.3,
      228.3
     ],
     "ss": [
@@ -595,19 +586,17 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-28T11:03:05Z",
-    "ld": 16.42,
+    "at": "2026-11-28T11:07:47Z",
+    "ld": 22.8,
     "c": 12,
-    "sb": 4,
+    "sb": 2,
     "dk": [
-     337.5,
+     341.1,
      926.4
     ],
     "sn": [
      "itsthecompany-runner",
-     "itsthecompany-runner-2",
-     "itsthecompany-runner-3",
-     "itsthecompany-runner-4"
+     "itsthecompany-runner-5"
     ]
    }
   }
@@ -638,11 +627,11 @@
      "open": true
     }
    },
-   "at": "2026-11-28T11:06:07+00:00"
+   "at": "2026-11-28T11:09:08+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-28T11:05:53+00:00"
+   "at": "2026-11-28T11:09:08+00:00"
   }
  },
  "operators": [
@@ -686,10 +675,10 @@
   "main": 3,
   "lanes": 1,
   "total": 4,
-  "at": "6:06 AM",
+  "at": "6:09 AM",
   "why": "",
-  "at_iso": "2026-11-28T11:06:00+00:00",
+  "at_iso": "2026-11-28T11:09:00+00:00",
   "started": "9:13 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 3, started 9:13 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 6:06 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 3, started 9:13 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 6:09 AM ET</p></section>"
  }
 }

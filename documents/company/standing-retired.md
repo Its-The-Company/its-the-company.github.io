@@ -143,6 +143,7 @@ Investors' words stay in log/<span title="The worker who reads both graders and 
 - (private) \| 2026-11-18 10:47 PM ET \| remove \| by T-5165 \| S258 Chat picker back: a task order carried by T-4295's own line, which cites the ruling
 - (private) \| 2026-11-18 11:58 PM ET \| edit \| into (private) by T-5165 \| S265 Midnight Lock In for 11-19 only: merged into the entry it narrows
 - (private) \| 2026-11-20 9:40 AM ET \| update \| by Odalys \| the time in the heading was written from memory, not from the clock; the words and effect are unchanged
+- (private) \| 2026-11-27 11:46 PM ET \| update \| by (private) \| rewritten by the 2026-11-27 11:51 PM ET ruling
 {% endraw %}
 
 </div>

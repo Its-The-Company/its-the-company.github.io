@@ -31,7 +31,7 @@ Benefits: the widget works with light and dark mode, large text and the Lock Scr
 
 Scripts can use these (ADR-001, "device modules"). Location, steps and notifications ask the person's permission through Apple's standard prompt the first time they are used; the app's explanatory sentences are written already.
 
-- **Location**, only while the app is in use. Text shown: your scripts and widgets read your location only when they ask for it; the app keeps the last reading on the device and never sends it anywhere.
+- **Location**, only while the app is in use. Text shown: PyWidget reads your location when a script or widget asks for it, or when you tap Use Current Location to save a place. The last reading and the places you save stay on this device, and PyWidget never sends them anywhere. A script you write decides what it does with your location.
 - **Steps, floors and distance** from the phone's motion sensors, for the last seven days. Same promise.
 - **Notifications**, local ones the script schedules. The prompt is not drawn in any picture yet because no screen asks for it.
 - **Clipboard**: iOS itself may ask before a script reads text copied in another app. **Files**: only places you pick. **Keychain**, the phone's locked store for passwords and keys, for example a service password a script needs.

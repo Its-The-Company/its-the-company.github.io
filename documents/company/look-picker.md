@@ -50,6 +50,20 @@ panel shapes at once.
    colours, font, panel shape, drawn live at phone size and usable on a phone; the choice kept in the address; the
    earlier still sets (watercolor included) and the moving wash shown too. Then a card on #325 linking it. Reviewer
    Odalys.
+4. **T-5950** Add details to the picker: ideas from details.so (an Investor #325 c7232248391, 9:16 PM ET 11-27), read
+   under the Investors' answer c7232337947 (9:24 PM ET 11-27: inspiration only; signed out, one page at a time, 5 s
+   apart, at most 10 pages, no copy kept, nothing copied). Eight pages of the ten read (the terms, the Vault twice, and its button,
+   page-transition, text-reveal, section-transition and UI-details lists), item names only; log and notes in
+   `research/inbound/t5950-details/terms-check.md`. Added to /app/looks/ under a Details tab, each off until turned on
+   and kept in the address as `details=<id>.<id>`: covers between screens (Shutter for Swiss and Blueprint, Columns
+   for Swiss, Ink pass for Risograph, Grid cells for Blueprint), titles arriving (Rising title, Swiss; Drafted title,
+   Blueprint; Ink settle, Risograph), button presses (Colour fill, Swiss and Risograph; Arrow reveal, Swiss and
+   Blueprint) and panel touches (<span title="A new, permitted reading that removes a cap. A lift rule is that reading, written down before we look.">Lift</span> on press, Risograph and Blueprint; Halftone dots, Risograph). Each is shown only
+   for the looks it fits, carries a one-line source note in the list under the picker, and is our own code; under
+   Reduce Motion nothing moves. Left out, and why: scramble text (noise to a screen reader), gradient sweep, wave
+   gradient and liquid glass (not print looks), slide text (needs a second copy of each label), ASCII cursor (no
+   cursor on a phone), parallax images (the mockups hold no photographs). Explorations only: Paper and Studio stay
+   the approved look (gate 2). Tested by tests/site_look_picker_test.py. Maren.
 
 ## Rules
 - Code-drawn only; no AI-generated images, no stock, nothing traced (the bans; Commandment 6).

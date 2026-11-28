@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-28T08:00:27.197404+00:00",
+ "at": "2026-11-28T08:03:32.937997+00:00",
  "session": {
   "active": true,
   "kind": "coord",
@@ -83,7 +83,7 @@
    "task": "[build] T-4188 second location extension",
    "model": "opus",
    "started": "2026-11-28T03:56:16.118Z",
-   "seconds": 14651,
+   "seconds": 14836,
    "finished": null
   },
   {
@@ -91,7 +91,7 @@
    "task": "[build] T-4183 screenshots run lock",
    "model": "opus",
    "started": "2026-11-28T04:27:26.477Z",
-   "seconds": 12780,
+   "seconds": 12966,
    "finished": null
   },
   {
@@ -99,7 +99,7 @@
    "task": "[build] T-5837 stale chart check",
    "model": "fable",
    "started": "2026-11-28T06:15:09.969Z",
-   "seconds": 6317,
+   "seconds": 6502,
    "finished": null
   },
   {
@@ -107,11 +107,19 @@
    "task": "[build] T-4190 widget line fix",
    "model": "opus",
    "started": "2026-11-28T07:41:06.146Z",
-   "seconds": 1161,
+   "seconds": 1346,
+   "finished": null
+  },
+  {
+   "name": "idris",
+   "task": "[build] T-4476 checkmark fix",
+   "model": "fable",
+   "started": "2026-11-28T08:03:17.676Z",
+   "seconds": 15,
    "finished": null
   }
  ],
- "who": "Idris x3, Maren",
+ "who": "Idris x4, Maren",
  "recent": [
   {
    "name": "odalys",
@@ -149,7 +157,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 263,
+  "runnable_count": 262,
   "blocked_count": 0
  },
  "meter": {
@@ -198,7 +206,7 @@
   "week_pct": 46.17,
   "usage_pct": 46.1,
   "work_pct": 99.0,
-  "read_at": "2026-11-28T08:00:00+00:00",
+  "read_at": "2026-11-28T08:03:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -228,14 +236,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-28T02:59:00-05:00",
+   "at": "2026-11-28T03:00:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 4,
-  "at": "2026-11-28T03:00:00-05:00",
+  "at": "2026-11-28T03:03:00-05:00",
   "mode": null,
   "modes": {
    "main": "double-spread",
@@ -337,6 +345,15 @@
     "at": "2026-11-28T07:41:06.146Z",
     "o": "c",
     "task": "T-4190"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "Projects get one file, one ID and guarded outside code",
+    "m": "fable",
+    "at": "2026-11-28T08:03:17.676Z",
+    "o": "c",
+    "task": "T-4476"
    }
   ],
   "src": "plan",
@@ -414,6 +431,11 @@
   ],
   "done": [
    {
+    "w": "Maren",
+    "t": "When PyWidget can't update a widget after you change what a tap on it does, it now tells you, in...",
+    "at": "2026-11-28T03:02:00-05:00"
+   },
+   {
     "w": "Idris",
     "t": "A test that checks what Settings says when someone who owns Pro taps Restore with no internet...",
     "at": "2026-11-28T01:36:00-05:00"
@@ -422,22 +444,21 @@
     "w": "Idris",
     "t": "The test for the Restore purchase message now waits for each screen to open before it checks,...",
     "at": "2026-11-28T00:23:00-05:00"
-   },
-   {
-    "w": "Idris",
-    "t": "The check that keeps test-only code out of App Store builds can no longer lose part of its list,...",
-    "at": "2026-11-28T00:23:00-05:00"
    }
   ],
   "count": {
-   "next": 263,
+   "next": 262,
    "wait": 0,
    "blocked": 0,
    "you": 0
   },
   "fin": {
-   "n": 10,
+   "n": 11,
    "rows": [
+    [
+     "T-5942",
+     "Word the failed widget save..."
+    ],
     [
      "T-5955",
      "Steady the offline Restore..."
@@ -457,10 +478,6 @@
     [
      "T-4641",
      "Tidy the premade settings..."
-    ],
-    [
-     "T-5950",
-     "Add details vault ideas to..."
     ]
    ]
   }
@@ -504,12 +521,18 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-28T08:00:07Z",
+  "at": "2026-11-28T08:03:32Z",
   "s": {
    "T-0556": [
     "mergetest",
     "iPhone tests on the MacBook",
     null
+   ],
+   "T-4476": [
+    "merged",
+    "on main 3:02 AM ET",
+    1795852931000,
+    "Maren"
    ],
    "T-4183": [
     "merged",
@@ -520,11 +543,14 @@
   },
   "nm": {
    "T-0556": "Take the app pictures that were missing",
+   "T-4476": "Projects get one file, one ID and guarded outside code",
    "T-4183": "The Gallery shows, previews and opens every premade"
   },
   "wk": {
    "T-0556": "Idris",
+   "T-4476": "Idris",
    "T-4183": "Idris",
+   "T-5942": "Maren",
    "T-5955": "Idris",
    "T-5323": "Idris",
    "T-4867": "Idris",
@@ -538,7 +564,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-28T08:00:07Z",
+  "at": "2026-11-28T08:03:32Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -554,9 +580,9 @@
     "inline": null,
     "conflicted": null,
     "failed": null,
-    "held": 24,
+    "held": 27,
     "retry": null,
-    "parked": 1007
+    "parked": 1011
    },
    "cur": [],
    "ld": [
@@ -566,8 +592,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-28T08:00:12Z",
-    "ld": 8.02,
+    "at": "2026-11-28T08:03:37Z",
+    "ld": 9.4,
     "c": 8,
     "sb": 1,
     "dk": [
@@ -626,11 +652,11 @@
      "open": true
     }
    },
-   "at": "2026-11-28T08:00:27+00:00"
+   "at": "2026-11-28T08:03:32+00:00"
   },
   "bl": {
    "n": 0,
-   "at": "2026-11-28T08:00:07+00:00"
+   "at": "2026-11-28T08:03:32+00:00"
   }
  },
  "operators": [
@@ -662,13 +688,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 4,
+  "main": 5,
   "lanes": 0,
-  "total": 4,
-  "at": "3:00 AM",
+  "total": 5,
+  "at": "3:03 AM",
   "why": "",
-  "at_iso": "2026-11-28T08:00:00+00:00",
+  "at_iso": "2026-11-28T08:03:00+00:00",
   "started": "9:13 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 4, started 9:13 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 3:00 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 5, started 9:13 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 3:03 AM ET</p></section>"
  }
 }
